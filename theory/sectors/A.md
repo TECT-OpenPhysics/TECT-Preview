@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-28-A13-FIXED-SHELL-LIPSCHITZ-METRIC-REGULARITY | phase modulation defeats a local distance-to-current error b |  |
 | NG-2026-07-28-A13-CENTERED-QUADRATIC-NULL-CONE-NORMALIZER | exact centering and finite unweighted tensor costs do not co |  |
 | NG-2026-07-28-A13-FULL-WICK-TENSOR-NORMALIZER | exact full-Wick centering retains a sharp null-cone domain |  |
 | NG-2026-07-28-A13-SEPARATED-INTERPOLATION-CROSS-SCORE-BUDGET | the baseline cancellation belongs to the complete endpoint |  |

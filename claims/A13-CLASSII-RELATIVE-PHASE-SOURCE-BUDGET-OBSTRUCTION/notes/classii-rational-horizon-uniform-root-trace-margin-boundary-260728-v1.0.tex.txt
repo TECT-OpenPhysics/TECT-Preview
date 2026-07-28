@@ -1,0 +1,685 @@
+% =============================================================================
+% Title: Rational horizon and uniform dyadic-root trace margin boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE AND METHOD BOUNDARY; SECTOR A OPEN
+% Result: A13-CLASSII-RATIONAL-HORIZON-UNIFORM-ROOT-TRACE-MARGIN-BOUNDARY
+% Ledger: R-117
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cZ}{\mathcal Z}
+
+\section{Purpose and scope firewall}
+
+R-116 reduced a same-root visit family to one endpoint square-minus-trace
+quotient and isolated a rational-homogeneous recession problem.  It also
+classified the R-082 active finite-Fourier nulls, but left open a
+cutoff-uniform near-null metric estimate.  The present result takes the
+stronger route: it proves a strict trace margin in every standardized
+canonical dyadic-root direction, so no null-set metric estimate is needed
+for the bare root's tail integrability.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{What is proved.}
+A full-horizon theorem extends the R-116 polynomial recession classifier to
+locally Lipschitz asymptotically quadratic maps, including the rational R-082
+row.  The positive floor converges uniformly to its degree-two horizon at
+rate $O(t^{-1})$.  For the homogeneous Pauli--Fierz frame, the exact joint
+trace constant is
+\[
+ \kappa_*={411\over2000P},\qquad P=4+10^{-12}.
+\]
+For the canonical full-production dyadic shell, every six-real standardized
+unit direction obeys
+\[
+ {10\over9}\tau_N^{\rm rec}(v)<{3\over40}<{2\over25},
+ \qquad
+ {20\over9}\tau_N^{\rm rec}(v)<{3\over20}<{4\over25}.
+\]
+Thus the frozen bare-root normalizers at both tilts have strictly positive
+leading Gaussian precision.  This covers all directions and hence all
+orthogonally projected null directions.  A same-shell phase modulation gives
+an exact fixed-cutoff failure of any local Lipschitz metric error bound.
+
+\textbf{What is not proved.}
+The trace theorem concerns the degree-two recession of one canonical shell
+with its matching covariance, fixed independent heat, and fixed orthogonal
+output projection.  It is not a raw finite-amplitude heat estimate, does not
+cover an old low carrier paired with cumulative high covariance, and does
+not itself identify the complete R-107/R-116 progressive or revisit packet.
+In particular it supplies finiteness, not a cutoff-summable sequence of
+log-normalizer constants.  The complete owner-preserving embedding, global
+one-use source/sextic aggregation, $\mathrm{OVERLAP}_{\rm src}$, Nelson
+estimate, removals, interacting measure, Sector-A closure, and tier promotion
+remain open.  A13 stays T4.
+}}
+\end{center}
+
+All production constants below come from the hash-pinned A1 production
+manifest.  The scalar quadratic symbol is used only as a safe lower bound on
+the full $3\times3$ internal symbol; the nonnegative family and locking mass
+matrix can only improve the estimates.
+
+\section{A full-horizon tail theorem for rational maps}
+
+Let $F:\R^n\to\R^m$ be locally Lipschitz with at most quadratic growth, let
+$\tau:\R^n\to\R$ be continuous with at most quadratic growth, and assume the
+uniform spherical limits, in the explicit sense
+\[
+ \sup_{|v|=1}\left\|{F(rv)\over r^2}-Q_\infty(v)\right\|
+ +\sup_{|v|=1}\left|{\tau(rv)\over r^2}-\tau_\infty(v)\right|
+ \longrightarrow0.                                \tag{2.1}
+\]
+The maps on the right are continuous.  Put
+\[
+ \cZ_\infty=\{v\in S^{n-1}:Q_\infty(v)=0\}.       \tag{2.2}
+\]
+For $v\in\cZ_\infty$, define the full horizon tangent image
+\[
+ \cT_F(v)=\left\{z:\begin{array}{l}
+  r_j\to\infty,\ v_j\to v,\ |v_j|=1,\\
+  F(r_jv_j)/r_j\to z
+ \end{array}\right\}.                              \tag{2.3}
+\]
+It can be empty and need not equal the range of a first derivative.  Given
+$b\in\R^m$, a linear map $A:\R^n\to\R^m$, and $q>0$, set
+\[
+ U_q(x)={1\over2}\left\{|x|^2-q\tau(x)
+          +q\|b+Ax+F(x)\|^2\right\}.               \tag{2.4}
+\]
+
+% evidence-anchor: theorem-2.1-full-rational-horizon-classifier
+\subsection*{Theorem 2.1 (full rational-horizon classifier)}
+
+With the convention $\inf\varnothing=+\infty$,
+\[
+ \boxed{
+ \liminf_{|x|\to\infty}{2U_q(x)\over|x|^2}
+ =\lambda_q:=
+ \inf_{\substack{v\in\cZ_\infty\\z\in\cT_F(v)}}
+ \{1-q\tau_\infty(v)+q\|Av+z\|^2\}.}             \tag{2.5}
+\]
+If $\lambda_q>0$, then $e^{-U_q}$ is integrable.  If $\lambda_q<0$ and
+there are $C,M,R_0<\infty$ such that
+\[
+ \operatorname{Lip}\bigl(U_q;\{R/2\le|x|\le2R\}\bigr)
+ \le CR^M\qquad(R\ge R_0),                          \tag{2.6}
+\]
+then $e^{-U_q}$ is not integrable.  The equality case $\lambda_q=0$ is not
+decided by recession alone.
+
+\emph{Proof.}
+Write $x_j=r_jv_j$.  If $2U_q(x_j)/r_j^2$ is bounded above, positivity of the
+last square in (2.4) makes $F(r_jv_j)/r_j$ bounded.  After a subsequence,
+$v_j\to v$ and $F(r_jv_j)/r_j\to z$.  Uniformity in (2.1) then forces
+$Q_\infty(v)=0$, while $b/r_j\to0$, and the subsequential limit is the
+quantity in braces in (2.5).  Conversely, every $z\in\cT_F(v)$ is realized
+by its defining sequence and gives the reverse inequality.  This proves
+(2.5).
+
+If $\lambda_q>0$, (2.5) gives $U_q(x)\ge c|x|^2$ outside a ball.  If
+$\lambda_q<0$, a realizing sequence has $U_q(x_j)\le-c|x_j|^2$.  A
+polynomial annular Lipschitz bound preserves this inequality, with a smaller
+$c$, on balls of radius comparable to
+$\min\{r_j,r_j^{2-M}\}$.  Passing to a separated subsequence, their volumes
+are only polynomially small while their exponential masses grow like
+$e^{cr_j^2}$, so the sum diverges.
+\hfill$\square$
+
+This theorem is deliberately formulated with $\cT_F(v)$ rather than
+$\operatorname{Ran}DF(v)$.  R-116 already showed that singular parabolic
+approaches can create horizon tangents outside the derivative range.
+
+\section{The R-082 positive-floor horizon}
+
+Write a state and tangent as
+\[
+ z=(u_1,u_2,\chi),\qquad y=(v_1,v_2,w),              \tag{3.1}
+\]
+and put
+\[
+ r=|u|^2,\quad \rho=r+|\chi|^2,\quad
+ dr=2\Re(u^*v),\quad
+ d\rho=2\Re(u^*v+\bar\chi w),\quad
+ h=u_1v_2-u_2v_1.                                  \tag{3.2}
+\]
+For $e>0$, the R-082 four-coordinate map is
+\[
+ \Xi_e(z,y)=\begin{pmatrix}
+ \sqrt{c_0}\,dr\\
+ \sqrt{c_1}\{dr-\alpha r(\rho+e)^{-1}d\rho\}\\
+ 2\sqrt{c_0+c_1}\Re h\\
+ 2\sqrt{c_0+c_1}\Im h
+ \end{pmatrix},                                    \tag{3.3}
+\]
+where
+\[
+ c_0={3\over250P},\qquad c_1={243\over8000P},
+ \qquad\alpha={5\over9}.                           \tag{3.4}
+\]
+At $e=0$, the ratio $\beta=r/\rho$ has no continuous value at $\rho=0$.
+Nevertheless the product
+$g_\beta=((1-\alpha\beta)u,-\alpha\beta\chi)$ and the complete map $\Xi_0$
+extend continuously by zero, because $|g_\beta|^2\le\rho$.
+
+% evidence-anchor: proposition-3.1-uniform-floor-horizon
+\subsection*{Proposition 3.1 (uniform positive-floor horizon)}
+
+For $t>0$,
+\[
+ \Xi_e(tz,ty)=t^2\Xi_{e/t^2}(z,y),                 \tag{3.5}
+\]
+and, uniformly in $z$,
+\[
+ \boxed{
+ \|t^{-2}\Xi_e(tz,ty)-\Xi_0(z,y)\|
+ \le\sqrt{c_1}\,\alpha{\sqrt e\over t}|y|.}       \tag{3.6}
+\]
+
+\emph{Proof.}
+Only the second row changes.  With $\delta=e/t^2$, its absolute difference
+is at most
+\[
+ \sqrt{c_1}\alpha{r\delta\over\rho(\rho+\delta)}
+ |d\rho|
+ \le2\sqrt{c_1}\alpha{\delta\sqrt\rho\over
+          \rho+\delta}|y|.                          \tag{3.7}
+\]
+The square of the normalized scalar factor is
+\[
+ {1\over\delta}\left({2\delta\sqrt\rho\over
+ \rho+\delta}\right)^2={4x\over(1+x)^2}\le1,
+ \qquad x={\rho\over\delta},                       \tag{3.8}
+\]
+because its defect from one is $(x-1)^2/(x+1)^2$.
+\hfill$\square$
+
+The bound is uniform in $z$ for the displayed tangent $y$.  After inserting
+a derivative $y=Dz$, its spherical $O(t^{-1})$ constant can depend on the
+finite cutoff.  Proposition 3.1 proves the horizon separately at every
+cutoff; it is not a cutoff-uniform horizon-regularity estimate.
+
+For fixed target heat $R$ independent of the fresh root, (3.6) and the
+linear frame bound below give dominated convergence:
+\[
+ \lim_{t\to\infty}t^{-2}P_\Sigma B_e(tz)=B_\infty(z).
+                                                               \tag{3.9}
+\]
+This is a recession statement.  The raw finite-amplitude estimate
+$P_\Sigma B_e(z)\lesssim|z|^2$ is false at $z=0$ whenever the heat has
+positive variance.
+
+\section{Sharp homogeneous frame trace}
+
+Let $Y_i$ be a proper circular complex Gaussian derivative with covariance
+$D_i=\E[Y_iY_i^*]$, and write $d_i=\|D_i\|_{\rm op}$.  Put
+$\beta=r/\rho$ and
+\[
+ g_\beta=((1-\alpha\beta)u,-\alpha\beta\chi).       \tag{4.1}
+\]
+Then
+\[
+ {|g_\beta|^2\over\rho}
+ =f(\beta):=\beta-\alpha(2-\alpha)\beta^2
+ =\beta-{65\over81}\beta^2.                       \tag{4.2}
+\]
+The separate rational row has maximum $81/260$, but optimizing all four
+rows jointly is sharper.
+
+% evidence-anchor: theorem-4.1-sharp-homogeneous-frame-trace
+\subsection*{Theorem 4.1 (sharp homogeneous frame trace constant)}
+
+For every $z$ and each spatial direction,
+\[
+ \E\|\Xi_0(z,Y_i)\|^2
+ \le d_i\rho K(\beta),                              \tag{4.3}
+\]
+where
+\[
+ K(\beta)=6(c_0+c_1)\beta
+           -2c_1{65\over81}\beta^2.                \tag{4.4}
+\]
+The function is increasing on $[0,1]$, and hence
+\[
+ \boxed{
+ \E\|\Xi_0(z,Y_i)\|^2
+ \le\kappa_*d_i\rho,
+ \qquad \kappa_*={411\over2000P}.}                 \tag{4.5}
+\]
+The constant is attained when $\chi=0$ and $D_i$ is scalar on the active
+doublet.
+
+\emph{Proof.}
+Proper complex covariance gives
+\[
+ \E(dr)^2=2u^*D_iu\le2d_ir,\qquad
+ \E\{2\Re(g_\beta^*Y_i)\}^2\le2d_i|g_\beta|^2.
+                                                               \tag{4.6}
+\]
+Also
+\[
+ \E|u_1(Y_i)_2-u_2(Y_i)_1|^2\le d_ir.              \tag{4.7}
+\]
+After multiplying by the four row weights, the sum is (4.3)--(4.4).
+Moreover
+\[
+ K'(1)=6(c_0+c_1)-4c_1{65\over81}>0,               \tag{4.8}
+\]
+and $K'$ decreases linearly, so $K$ is increasing.  Finally
+\[
+ K(1)=6c_0+\left(4+{32\over81}\right)c_1
+ ={411\over2000P}.                                  \tag{4.9}
+\]
+The covariance convention is
+$\Gamma_\R=\operatorname{realify}(D_i)/2$; (4.6) already contains this
+factor.  There is no additional Pauli, complex, or volume multiplier.
+\hfill$\square$
+
+\section{Canonical dyadic-root uniform trace margin}
+
+Let $L=16$, $V=L^3=4096$, $a=2\pi/L=\pi/8$, and
+\[
+ \Lambda_N=\{n\in\mathbb Z^3:N/2<\|n\|_\infty\le N\},
+ \qquad N=1,2,4,\ldots.                             \tag{5.1}
+\]
+The full production quadratic symbol is
+\[
+ A(n)=p(|k_n|^2)\Id+M,\qquad
+ p(s)=r_0+Zs+Ys^2,\qquad k_n=an,                    \tag{5.2}
+\]
+where $M\succeq0$, $r_0=0.4740336473$,
+$Z=-0.9252754126$, and $Y=1$.  Define safe scalar quantities
+\[
+ m_N=\min_{n\in\Lambda_N}p(|k_n|^2),               \tag{5.3}
+\]
+\[
+ d_N={2\over V}\sum_{n\in\Lambda_N}
+       {k_{n,i}^2\over p(|k_n|^2)}.                 \tag{5.4}
+\]
+Cube symmetry makes (5.4) independent of $i$, and operator monotonicity
+gives $D^{\mathbb C}_{N,i}\preceq d_N\Id$.
+
+For a unit vector $v$ in the six-real standardized shell coordinate, let
+$z_v$ be its physical field direction.  The deliberately conservative
+Parseval convention is
+\[
+ \int_{\T^3}\rho(z_v)\le{2\over m_N}.              \tag{5.5}
+\]
+The sharp convention can remove the factor two; retaining it makes the
+statement insensitive to the equivalent complex whitening normalization.
+
+% evidence-anchor: theorem-5.1-uniform-dyadic-root-recession-trace-margin
+\subsection*{Theorem 5.1 (uniform dyadic-root recession trace margin)}
+
+Let $\tau_N^{\rm rec}(v)$ be the sum over the three spatial derivatives of
+the degree-two recession trace of the frozen canonical R-082 root, possibly
+followed by a fixed orthogonal output projection.  Then, for every dyadic
+$N\ge1$ and every standardized unit direction $v$,
+\[
+ \boxed{
+ \tau_N^{\rm rec}(v)\le6\kappa_*{d_N\over m_N}.}    \tag{5.6}
+\]
+At the two tilts required by R-116,
+\[
+ \boxed{
+ {10\over9}\tau_N^{\rm rec}(v)<{3\over40}<{2\over25},
+ \qquad
+ {20\over9}\tau_N^{\rm rec}(v)<{3\over20}<{4\over25}.} \tag{5.7}
+\]
+Consequently the leading Gaussian precisions are greater than $37/40$ and
+$17/20$, respectively.
+
+\emph{Proof.}
+Sum (4.5) over three axes and use (5.5), obtaining (5.6).  Since $P>4$,
+\[
+ {10\over9}\,6\kappa_*<{137\over400}.              \tag{5.8}
+\]
+The exact rational finite-shell enclosure, using the independently certified
+$3.14159<\pi<3.14160$, is
+\[
+\begin{array}{c|c|c|c}
+N&\#\Lambda_N&m_N\text{ lower}&(10/9)\tau_N^{\rm rec}\text{ upper}\\ \hline
+1&26 &0.260000000009474940&0.006407024335204\\
+2&98 &0.283781194978547397&0.032596740075668\\
+4&604&1.11613025030910356 &0.013780340467900
+\end{array}                                         \tag{5.9}
+\]
+No floating-point comparison is used: the executable minimizes the convex
+rational polynomial on each rational $\pi^2$ interval and performs every
+sum as a fraction.
+
+For $N\ge8$, every shell frequency satisfies
+$|k_n|^2>a^2N^2/4\ge2|Z|/Y$, and therefore
+\[
+ p(|k_n|^2)\ge{Y\over2}|k_n|^4.                    \tag{5.10}
+\]
+Also $(2N+1)^3\le(17N/8)^3$.  Cube symmetry gives
+\[
+ d_N\le{4913\over96Va^2}N,
+ \qquad
+ m_N\ge{a^4N^4\over32},                            \tag{5.11}
+\]
+and hence
+\[
+ {d_N\over m_N}\le{4913\over3Va^6N^3}
+ \le{4913\over24\pi^6}\left({8\over N}\right)^3. \tag{5.12}
+\]
+At $N=8$, (5.8), (5.12), and $\pi>3.14159$ give the exact rational upper
+bound
+\[
+ {10\over9}\tau_N^{\rm rec}(v)
+ \le0.0729287992478\ldots <{3\over40}.              \tag{5.13}
+\]
+The right side decreases like $N^{-3}$.  This proves (5.7).
+\hfill$\square$
+
+% evidence-anchor: corollary-5.2-bare-root-normalizer-existence
+\subsection*{Corollary 5.2 (frozen bare-root normalizer existence)}
+
+For the canonical shell map with fixed independent heat and a fixed
+orthogonal output projection, positivity of the output square gives directly
+\[
+ U_q(x)\ge{1\over2}\{|x|^2-q\tau_N(x)\}.            \tag{5.14}
+\]
+The uniform trace horizon and (5.7) therefore give a positive quadratic
+lower bound outside a ball at $q=10/9$ and $q=20/9$.  Both fixed-cutoff
+conditional normalizers exist.  This direct argument also covers the
+$L^2(\mu_\Sigma;\R^4)$ heat-lifted output without invoking finite-dimensional
+compactness in Theorem 2.1.  It is an existence and leading-precision
+statement; it does not bound the log-normalizer by a summable shell sequence.
+
+\section{The metric route fails even at fixed cutoff}
+
+Set $\kappa=2\pi/L$ and work in the shell $\Lambda_8$.  With a fixed active
+polarization $e_1$ and a real amplitude $p>0$, define
+\[
+ u_t(x)=p e^{6i\kappa x_1}\{1+it\cos(\kappa x_1)\}e_1,
+ \qquad \chi_t=0.                                   \tag{6.1}
+\]
+Its Fourier indices $5,6,7$ all belong to the same shell.  Let $\cZ_8$ be
+the exact zero set of the full three-direction homogeneous current in this
+finite shell.  Directly,
+\[
+ r_t=p^2\{1+t^2\cos^2(\kappa x_1)\},\qquad
+ dr_t=-p^2\kappa t^2\sin(2\kappa x_1),\qquad h_t=0. \tag{6.2}
+\]
+Thus
+\[
+ \|\Xi_0(u_t,\partial u_t)\|_{L^2}^2
+ ={Vp^4\kappa^2t^4\over2}
+ \left\{c_0+c_1\left({4\over9}\right)^2\right\}, \tag{6.3}
+\]
+where the bracket equals $9/(500P)>0$.
+
+R-116 says that active finite-Fourier nulls are plane waves (with an
+independent singlet plane wave allowed).  Fourier orthogonality therefore
+gives, for small $t$,
+\[
+ \dist_{L^2}(u_t,\cZ_8)^2={Vp^2t^2\over2}.          \tag{6.4}
+\]
+The pure-singlet branch remains a fixed positive distance away.  Every norm
+on this fixed finite-dimensional shell is equivalent, so
+\[
+ {\dist(u_t,\cZ_8)\over
+   \|\Xi_0(u_t,\partial u_t)\|}\asymp {|t|\over t^2}
+ \longrightarrow\infty.                            \tag{6.5}
+\]
+The standardized unit-sphere path
+$\widehat u_t=u_t/\sqrt{1+t^2/2}$ differs from $u_t$ only by a radial
+$1+O(t^2)$ factor.  Homogeneity preserves the $O(|t|)$ distance versus
+$O(t^2)$ current separation, so the same conclusion holds in the R-116
+standardized sphere metric.
+
+% evidence-anchor: proposition-6.1-fixed-shell-metric-regularity-nogo
+\subsection*{Proposition 6.1 (fixed-shell metric-regularity no-go)}
+
+No local Lipschitz error bound
+\[
+ \dist(u,\cZ_8)\le C\|\Xi_0(u,\partial u)\|        \tag{6.6}
+\]
+holds near the active plane wave in (6.1).  Equivalently, for
+$\zeta=ip e^{6i\kappa x_1}\cos(\kappa x_1)e_1$,
+\[
+ DQ_\infty(v)\zeta=0,
+ \qquad Q_\infty(\zeta)\ne0.                       \tag{6.7}
+\]
+This retires the proposed metric route.  It is not a counterexample to the
+normalizer: Theorem 5.1 bypasses the null geometry with an all-direction
+trace margin.
+
+% evidence-anchor: owner-preserving-successor-and-the-two-remaining-burdens
+\section{Owner-preserving successor and the two remaining burdens}
+
+R-104 and R-116 give, for fixed reveal field, target heat, covariance, and
+contraction-closed projection, the exact same-root quotient
+\[
+ P_{j,C}={1\over2}(\|x_*\|^2-\|x_0\|^2)
+          -{1\over2}(t_*-t_0).                      \tag{7.1}
+\]
+Changing target heat requires the value-plus-heat edge or its compensator;
+it is not licensed by (7.1).  The complete R-104 expectation ledger is
+\[
+ \langle P^{\rm comp}\rangle
+ =\langle B_{\rm low}\rangle+L_{\rm low}
+  +\langle C_{\rm far}\rangle
+  +\langle\Delta W_{L\Sigma}\rangle
+  +\langle\Delta W_R\rangle
+  +\langle P_{\rm paid}\rangle.                    \tag{7.2}
+\]
+
+The owner multiplicities after quotienting are:
+\[
+\begin{array}{p{0.55\textwidth}|c}
+\text{Owner} & \text{Multiplicity}\\ \hline
+\text{conditional low object} &1\\
+\text{complete low object} &1\\
+\text{complete linear module (heat/trace/forest internal)} &1\\
+\text{future raw Wick (fixed-low raw Wick remains low)} &1\\
+unshifted rational coordinate &1\\
+shifted rational coordinate with terminal square &1\\
+paid difference &1\\
+Cartan FAR owner in REG only &1\\
+$q/r$, Schur, matrix, and R-063 forest payments beyond their owner &0\\
+obsolete base cubic and duplicate R-086 rows &0
+\end{array}                                         \tag{7.3}
+\]
+Owner-specific partial-Wick bookkeeping is essential as a diagnostic, not as
+a replacement owner: full Wick would delete the physical $\Sigma Q$ term.
+Fresh first chaos belongs inside the frozen whole-output determinant.  If a
+random-$W$ score is separated, R-116 requires both $q$ and $2q$ normalizers;
+Theorem 5.1 now supplies the bare canonical recession margin at both tilts.
+
+The remaining coherent endpoint term has the form
+\[
+ R_{\rm coh}(\xi)=
+ \Re\langle b+A\xi,R(\xi)\rangle
+ +{1\over2}\|R(\xi)\|^2-{1\over2}\delta\tau(\xi). \tag{7.4}
+\]
+One sufficient next route would identify the degree-two recession of the
+entire owner-preserving conditional packet with a fixed contraction of the
+canonical root covered by Theorem 5.1.  Such an identification is not claimed
+to be unique and may fail for revisit/future response.  The actual objective
+is a complete adapted signed-packet conditional normalizer retaining endpoint
+heat-trace differences, mixed predictable baselines, and the R-063 forest
+exactly once.
+
+Here is the precise conditional schema that would be sufficient after such a
+local theorem.  Let $(\mathcal F_j)_{j=0}^J$ be the root filtration and put
+\[
+ X_j=P_j^{\rm comp}+\eta_j\mathcal E_j
+                    +\zeta_j\mathcal Y_j.           \tag{7.5}
+\]
+Require $X_j$ to be $\mathcal F_j$-measurable, every earlier partial sum to be
+$\mathcal F_{j-1}$-measurable, and $\eta_j,\zeta_j\ge0$ to be deterministic or
+predictable.  Let $c_j$ be fixed in advance, either deterministic or
+$\mathcal F_{j-1}$-measurable, with $\sum_jc_j\le C$ pathwise.  If
+\[
+ \log\E\left[
+ e^{-qX_j}\mid\mathcal F_{j-1}\right]\le c_j,
+ \qquad q={10\over9},                               \tag{7.6}
+\]
+and the local charges obey the separate pathwise owner domination
+\[
+ \sum_j\eta_j\mathcal E_j
+ \le{9\over20}\sum_j\|h_j\|^2,
+ \qquad
+ \sum_j\zeta_j\mathcal Y_j
+ \le{3\over20}\|Z_K\|_6^6,                       \tag{7.7}
+\]
+then conditional iteration gives
+$\E e^{-q\sum_jX_j}\le e^C$.  The two global budgets become $1/2$ and
+$1/6$ after multiplication by $q$.  Coefficient sums alone do not imply
+(7.7) for different parent fields.  A common terminal sextic is future
+measurable and therefore must either be localized predictably or paid once
+outside the one-step tower; this is part of the open gate.
+
+A smallest direct signed target remains
+\[
+ \sum_j\E P_j^{\rm comp}
+ \ge-\eta\E\sum_j\|h_j\|^2
+      -\zeta\E\|Z_K\|_6^6-C,
+ \qquad 0\le\eta<{9\over20},\quad0\le\zeta<{3\over20}, \tag{7.8}
+\]
+together with the adapted exponential upgrade (7.5)--(7.7).
+
+Uniform strict precision alone does not make $\sum_jc_j$ finite.  A
+trace-only determinant bound can cost a positive constant on every shell,
+and R-110 already records the positive-density bounded-multiplicity
+nonsummability boundary.  The two remaining Sector-A burdens are therefore
+the legal complete adapted packet normalizer and, after it, quantitative
+summability with signed one-use owner aggregation.  Bare null-cone
+integrability is no longer the obstruction.
+
+\section{Proof-route evidence map}
+
+\begin{center}
+\begin{tabular}{p{0.25\textwidth}|p{0.18\textwidth}|p{0.43\textwidth}}
+Route & Verdict & Research-reusable reason\\ \hline
+polynomial-only recession & superseded & Theorem 2.1 uses the full horizon tangent image and covers the rational row\\
+floor treated as exactly homogeneous & repaired & (3.5)--(3.8) give the state-uniform fixed-cutoff $O(t^{-1})$ horizon error\\
+null-cone metric stability & failed & the same-shell phase fixture has distance $O(t)$ and current $O(t^2)$\\
+canonical same-shell all-direction trace & accepted & the sharp frame constant and scalar-symbol shell bounds give (5.7)\\
+pure scalar authority & rejected & the proof uses the full A1 production manifest and only discards a PSD internal mass\\
+raw heat trace bound & rejected & fixed heat disappears only after degree-two recession scaling\\
+state-dependent compression & excluded & only fixed orthogonal output projections contract the trace\\
+cumulative covariance on old carrier & excluded & $m_N$ and $D_N$ must come from the same fresh dyadic shell\\
+same-root visit-by-visit payment & superseded & the exact object is the endpoint quotient (7.1)\\
+trace margin implies summability & failed & strict per-shell precision does not imply $\sum_jc_j<\infty$\\
+owner-preserving supermartingale & open schema & prove measurability, the local conditional bound, and owner domination (7.5)--(7.7)
+\end{tabular}
+\end{center}
+
+The primary executable uses exact rational interval arithmetic, a tight
+Machin enclosure of $\pi$, termwise shell enumeration, and the joint frame
+constant.  The non-importing verifier instead uses a coarser
+$157/50<\pi<22/7$ enclosure, radius/axis multiplicities, and the six-real
+Frobenius identity.  They agree on every theorem-level inequality.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: ``The $81/260$ rational-row maximum is the joint
+      frame constant.''}  \textbf{VALID WITH MITIGATION.}  Maximizing rows
+      separately is safe but not sharp.  Joint optimization gives
+      $\kappa_*=411/(2000P)$ in (4.5).
+
+\item \textbf{Objection: ``A complex-to-real factor two is missing.''}
+      \textbf{DISMISSED.}  The covariance is
+      $\Gamma_\R=\operatorname{realify}(D)/2$; equations (4.6)--(4.7), three
+      axes, and the conservative factor two in (5.5) account for every factor.
+
+\item \textbf{Objection: ``The internal production mass can lower the
+      symbol.''}  \textbf{DISMISSED.}  It is a sum of a nonnegative family
+      diagonal and a nonnegative locking projection.  Dropping it makes both
+      (5.3) and (5.4) worse in the safe direction.
+
+\item \textbf{Objection: ``The finite-shell scan is floating-point
+      evidence.''}  \textbf{DISMISSED.}  Both executables first prove a
+      rational enclosure of $\pi$, minimize the convex symbol on rational
+      intervals, and compare exact fractions.  Printed decimals are display
+      values only.
+
+\item \textbf{Objection: ``The positive floor invalidates the homogeneous
+      row maximum.''}  \textbf{VALID WITH MITIGATION.}  The maximum is used
+      only for the degree-two horizon.  Proposition 3.1 proves uniform
+      convergence; no finite-amplitude floor claim is made.
+
+\item \textbf{Objection: ``Fixed target heat obeys the same raw trace
+      estimate.''}  \textbf{UPHELD AGAINST THAT WORDING.}  At zero state the
+      heat lift can be positive.  Only its radial recession is (3.9).
+
+\item \textbf{Objection: ``The null classification yields a metric error
+      bound.''}  \textbf{UPHELD AGAINST THAT ROUTE.}  Proposition 6.1 is an
+      explicit same-shell counterexample.  The accepted trace route does not
+      use metric regularity.
+
+\item \textbf{Objection: ``All-direction trace control automatically covers
+      arbitrary clusters.''}  \textbf{VALID WITH MITIGATION.}  Fixed
+      orthogonal projections contract the Hilbert norm.  Nonorthogonal,
+      duplicated, or state-dependent output selection is outside Theorem 5.1.
+
+\item \textbf{Objection: ``The doubled-tilt margin closes the complete
+      one-fresh-root packet.''}  \textbf{UPHELD AGAINST THAT CLAIM.}  The
+      complete adapted signed-packet conditional normalizer in Section 7 has
+      not been proved; a fixed contraction is only one possible route.
+
+\item \textbf{Objection: ``Small coefficient sums make the one-use tower
+      automatic.''}  \textbf{UPHELD AGAINST THAT CLAIM.}  Different parent
+      fields can share future information.  The measurability and pathwise
+      owner domination in (7.5)--(7.7) are separate load-bearing hypotheses.
+
+\item \textbf{Objection: ``Uniform normalizer existence is the needed
+      one-use estimate.''}  \textbf{UPHELD AGAINST THAT CLAIM.}  Sector A
+      needs a summable $c_j$ ledger and one global source/sextic spend as in
+      (7.5)--(7.7).  Strict tail precision alone is insufficient.
+
+\item \textbf{Objection: ``The horizon tangent proof automatically extends
+      to an infinite-dimensional output.''}  \textbf{UPHELD AGAINST THAT
+      WORDING.}  Theorem 2.1 uses compactness in $\R^m$.  Corollary 5.2 is
+      instead proved directly from the nonnegative output square and the
+      uniform trace horizon, so no Hilbert-output compactness is assumed.
+\end{enumerate}
+
+\section{Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-RATIONAL-HORIZON-UNIFORM-ROOT-TRACE-MARGIN-BOUNDARY
+Ledger: R-117.
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement: Theorems 2.1, 4.1, and 5.1; Propositions 3.1 and
+  6.1; Corollary 5.2; owner-preserving successor boundary (7.1)--(7.8).
+Scope: canonical same-shell full-production dyadic root; degree-two
+  recession; fixed independent heat; fixed orthogonal output projection;
+  fixed-cutoff normalizer existence.
+Dependencies: R-063, R-082, R-104, R-107, R-110, R-116 and the hash-pinned
+  A1 production manifest.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command:
+  E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_rational_horizon_uniform_root_trace_margin_boundary_verify.py
+Expected output: Integrated R-117 PASS; primary 42/42 and independent
+  36/36 children PASS, with all authority, source, note, PDF, and manifest
+  pins valid.
+Falsification gate: any failed horizon, frame-factor, shell-interval,
+  high-frequency, phase-modulation, child/source/note/PDF/manifest assertion;
+  any use beyond the stated same-shell recession scope.
+Tier before / after: T4 / T4.
+Open gates: A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION;
+  A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE.
+No-overclaim statement: No complete progressive/revisit packet estimate,
+  cutoff-summable log-normalizer, one-use source/sextic aggregation,
+  OVERLAP_src, Nelson estimate, removal limit, interacting measure,
+  Sector-A closure, or tier promotion is established.
+Next required action: prove a legal complete adapted conditional-packet
+  normalizer, potentially through a fixed canonical contraction; then prove
+  a summable c_j bound and aggregate source energy and terminal sextic once.
+\end{verbatim}

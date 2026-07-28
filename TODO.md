@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION)_
-  - R-116 proves the same-root endpoint quotient, partial-Wick owner firewall, optimized conditional-Holder composition, exact finite-dimensional parabolic-tangent recession classifier, and R-082 plane-wave null classification. Next: establish a cutoff/floor-uniform metric margin for the complete rational-homogeneous R-082 root, embed every owner exactly once in the full A1 one-fresh-root conditional cluster, then prove the separate one-use source/sextic aggregation.
+  - R-117 closes the rational-horizon and canonical q/2q bare-root trace-margin subgate and retires the fixed-shell Lipschitz metric route. Next: prove a legal complete adapted owner-preserving signed-packet conditional normalizer with nonnegative predictable coefficients and terminal-sextic localization or once-only payment; then obtain cutoff-summable c_j and aggregate source energy plus terminal sextic charge once. Sector A remains open.
   - _updated 2026-07-28_
 
 ## Next up

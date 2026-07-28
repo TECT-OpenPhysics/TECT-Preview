@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-117](#r-117) | Rational-horizon classifier, uniform canonical dyadic-root trace margin, and fixed-shell metric boundary | Scoped T4 analytic/exact/executed advance and method boundary: the exact full-horizon tangent classifier extends the finite-dimensional tail theorem from polynomial quadratic maps to locally Lipschitz asymptotically quadratic maps, including the rational R-082 row. The positive floor converges to the degree-two horizon at an explicit state-uniform fixed-cutoff rate. The homogeneous Pauli--Fierz frame has sharp joint constant `411/(2000P)`. Exact rational shell enumeration plus an analytic `N^-3` tail prove `(10/9) tau_N^rec<3/40` and `(20/9) tau_N^rec<3/20` for every standardized direction of the matching full-production dyadic shell, hence frozen bare-root normalizer existence at both tilts. A same-shell phase modulation has distance `O(t)` from the exact null set but current `O(t^2)`, disproving local Lipschitz metric regularity even at fixed cutoff. The result does not identify the complete adapted progressive/revisit packet, produce cutoff-summable log-normalizers, or aggregate source/sextic owners once. `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-116](#r-116) | One-fresh-root owner quotient, exact parabolic-tangent recession, and the centered null-cone boundary | Scoped T4 analytic/exact/executed advance and method boundary: every same-root visit packet with fixed reveal sigma-field, target heat, covariance, and contraction-closed projection telescopes to one endpoint square-minus-trace quotient, so internal visits and the fresh--future cross are owned exactly once. Full Wick ordering is only a diagnostic: the physical partial-Wick XY packet differs by the load-bearing Sigma Q owner. First chaos absorbs into the frozen whole-output determinant; actual conditional packets compose by optimized Holder; tilted random-W costs require a doubled-tilt normalizer. For finite-dimensional homogeneous quadratic output, the exact Gaussian tail classifier is lambda_q=inf_(v,z)[1-q tau(v)+q||Av+z||^2] over the common null cone and full parabolic tangent image. Positive lambda_q gives integrability, negative gives divergence, and equality depends on critical-stratum codimension. Exact centered and full-Wick tensor fixtures disprove universal centering-only and covariance-cost normalizers. The R-082 pointwise null set is classified; active finite-Fourier nulls are constant-polarization plane waves with an explicit real-linearized symbol, but no cutoff-uniform near-null metric bound follows. The plane-wave face is not a standalone legal production root. Full A1 progressive/revisit normalization, one-use source/sextic aggregation, OVERLAP_src, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-115](#r-115) | Four-moment Radau all-amplitude closure of the stationary scalar `k:2k` theorem | Scoped T4 analytic/exact/executed theorem: the original R-112 scalar gap is strict for every `c in [0,1]`, every amplitude `b>=0`, and every `tau>0`, with equality at `tau=0`. R-114 covers `b<=643/200`; on the complementary compact reciprocal-amplitude rectangle, a left three-node Gauss--Radau majorant, an exact all-tilt three-atom skew lemma, a complete outward Arb cover, and a structurally independent exact Bernstein/radical certificate prove decreasing proxy variance. This closes only the stationary scalar theorem. The full A1 one-fresh-root owner-preserving embedding, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-114](#r-114) | Support--two-moment closure of the scalar physical cone | Scoped T4 analytic/exact/executed theorem and method boundary: for the original R-112 stationary scalar `k:2k` packet, the exact gap is strict for every `c in [0,1]`, `tau>0`, and `0<=x<=643tau/200`, with equality at the origin. A sharp large-`b` floor and two non-importing exact implementations reconstruct 3,981 positive rational Bernstein coefficients. This closes the complete zero-amplitude axis and subsumes the R-113 Arb seed. The strict `b=x/tau>643/200` scalar residual, mixed all-`b` theorem, full A1 owner cluster, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -135,6 +136,60 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-117"></a>
+### R-117 -- Rational-horizon classifier, uniform canonical dyadic-root trace margin, and fixed-shell metric boundary
+
+**Result ID.**
+A13-CLASSII-RATIONAL-HORIZON-UNIFORM-ROOT-TRACE-MARGIN-BOUNDARY.
+
+**Full-horizon theorem.**  For a finite-dimensional locally Lipschitz map
+with uniform quadratic spherical horizon, the exact quadratic tail recession
+is the infimum of `1-q tau_infty(v)+q||Av+z||^2` over horizon-null directions
+and the full normalized tangent image.  Strict positivity gives Gaussian
+integrability; strict negativity gives divergence under a quantified
+polynomial annular Lipschitz bound; equality remains a critical-stratum
+problem.  The R-082 positive-floor map has a state-uniform fixed-cutoff
+`O(t^-1)` horizon error.  The ratio `r/rho` itself is not extended at zero;
+the complete current map extends continuously.
+
+**Canonical all-direction trace margin.**  In the homogeneous Pauli--Fierz
+frame, joint optimization of all four rows gives the sharp constant
+`kappa_*=411/(2000P)`.  For the matching full-production dyadic shell,
+operator monotonicity, conservative six-real Parseval normalization, exact
+rational interval enumeration at `N=1,2,4`, and an analytic `N^-3` tail from
+`N=8` prove
+`(10/9) tau_N^rec<3/40` and `(20/9) tau_N^rec<3/20` in every standardized
+direction.  Fixed independent heat changes only lower recession order, and a
+fixed orthogonal output projection contracts the bound.  Positivity of the
+output square then proves each frozen bare-root normalizer exists directly,
+without an infinite-dimensional horizon-compactness assumption.
+
+**Metric method no-go.**  The exact shell-eight field
+`u_t=exp(6 i kappa x_1)(1+i t cos(kappa x_1))e_1`, `chi=0`, uses only modes
+`5,6,7`.  Its distance to the active plane-wave null set is `O(|t|)`, whereas
+the full current is `O(t^2)`; standardized radial normalization preserves the
+gap.  Thus local Lipschitz metric regularity fails already at fixed cutoff.
+This is a proof-route no-go, not a normalizer counterexample.
+
+**Owner and publication boundary.**  The result retains R-104/R-116's exact
+same-root endpoint quotient and complete owner incidence.  It states the
+measurability, predictability, pathwise owner-domination, and summable-cost
+hypotheses a conditional supermartingale would need, but proves none of them
+for the complete adapted packet.  The canonical trace theorem does not cover
+nonorthogonal/state-dependent duplicated clusters, cumulative covariance on
+an old low carrier, or a raw finite-amplitude heat trace.  Complete
+progressive/revisit normalization, cutoff-summable costs, one-use
+source/sextic aggregation, `OVERLAP_src`, Nelson, removals, an interacting
+measure, and Sector A remain open at T4.
+
+**Where proved.**  Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-rational-horizon-uniform-root-trace-margin-boundary-260728-v1.0`,
+primary exact and non-importing independent certificates, and the integrated
+R-117 verifier.  Publication target: finite-dimensional Gaussian horizon
+criteria plus production-specific dyadic trace estimates and metric-boundary
+examples.
 
 <a id="r-116"></a>
 ### R-116 -- One-fresh-root owner quotient, exact parabolic-tangent recession, and the centered null-cone boundary

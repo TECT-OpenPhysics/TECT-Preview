@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-FIXED-SHELL-LIPSCHITZ-METRIC-REGULARITY](#ng-2026-07-28-a13-fixed-shell-lipschitz-metric-regularity) | derive the complete R-082 root trace margin from a local Lipschitz distance-to-null-set error bound, even first at fixed cutoff | in the legal shell `S_8`, the active phase-modulated field `u_t=exp(6 i kappa x_1)(1+i t cos(kappa x_1))e_1`, `chi=0`, has null-set distance `O(|t|)` but full homogeneous current `O(t^2)`; standardizing to the unit root sphere changes only a radial `1+O(t^2)` factor. Thus local Lipschitz metric regularity fails. This is a method no-go, not a normalizer counterexample: R-117 instead proves an all-direction canonical same-shell trace margin |
 | [NG-2026-07-28-A13-CENTERED-QUADRATIC-NULL-CONE-NORMALIZER](#ng-2026-07-28-a13-centered-quadratic-null-cone-normalizer) | infer a nonlinear root normalizer from exact centering, PSD tangent covariance, and finite unweighted covariance/double-divergence costs | for independent U,V, the exactly centered packet L=((2+U^2-V^2)^2-4(U^2+V^2))/2 has H=128 and K_W=1088, yet E exp(-qL) diverges for every q>=1/4 along a common-null-cone tube. A strict parabolic-tangent recession margin or a critical-stratum theorem is indispensable. This is an abstract trace-compatible tensor no-go, not an A1 production counterexample |
 | [NG-2026-07-28-A13-FULL-WICK-TENSOR-NORMALIZER](#ng-2026-07-28-a13-full-wick-tensor-normalizer) | repair the nonlinear root by replacing the physical partial-Wick owner with an abstract exactly centered full-Wick square and paying only its realized tangent-covariance cost | the two-output tensor R=(2 epsilon UV,2 kappa epsilon H2(V)) has exact full-Wick mean zero and finite covariance cost, but its normalizer has the sharp domain q epsilon^2<1/4. At q=10/9, kappa=1/100 and an explicit amplitude below the boundary give a Laplace lower bound above 9 while the proposed exponent is below 21/10. The fixture is abstract and does not embed a legal A1 row |
 | [NG-2026-07-28-A13-SEPARATED-INTERPOLATION-CROSS-SCORE-BUDGET](#ng-2026-07-28-a13-separated-interpolation-cross-score-budget) | bound the trace-corrected interpolation endpoint and its tilted cross-score as separate positive costs independent of the predictable baseline | the affine scalar A=C=1 endpoint increment contains a positive multiple of b^2 while its tangent covariance costs are baseline-independent; the negative resolvent baseline term cancels it only in the complete endpoint. The endpoint and cross-score must remain coupled |
@@ -162,6 +163,32 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-28-a13-fixed-shell-lipschitz-metric-regularity"></a>
+### NG-2026-07-28-A13-FIXED-SHELL-LIPSCHITZ-METRIC-REGULARITY -- phase modulation defeats a local distance-to-current error bound
+
+**Claim / route.**  Obtain the R-082 null-cone trace margin from a local
+Lipschitz estimate `dist(u,Z_N)<=C||Xi_0(u,du)||`, beginning at one fixed
+production cutoff and then seeking uniformity.
+
+**Failure mode.**  In the legal full shell `S_8`, set
+`u_t=exp(6 i kappa x_1)(1+i t cos(kappa x_1))e_1` and `chi=0`.  Its only
+Fourier indices are `5,6,7`.  Exact autocorrelation gives
+`dr=-kappa t^2 sin(2 kappa x_1)` and zero determinant row, so the current norm
+is a positive constant times `t^2`.  R-116's exact finite-Fourier null
+classification and Fourier orthogonality give distance `|t|/sqrt(2)` to
+leading order.  Radial standardization divides by `sqrt(1+t^2/2)` and
+preserves the order gap.  Therefore the ratio of distance to current diverges
+like `1/|t|`.
+
+**Evidence.**  R-117 proof note, Proposition 6.1; primary exact Fourier
+autocorrelation and unit-sphere checks 42/42; non-importing direct
+three-coefficient reconstruction 36/36; integrated manifest-pinned verifier.
+
+**Consequence.**  Exact plane-wave rigidity does not imply metric regularity,
+even at fixed cutoff.  This retires only the Lipschitz error-bound route.  It
+does not refute the canonical root normalizer or trace margin: R-117 proves
+the latter in every same-shell direction without using null geometry.
 
 <a id="ng-2026-07-28-a13-centered-quadratic-null-cone-normalizer"></a>
 ### NG-2026-07-28-A13-CENTERED-QUADRATIC-NULL-CONE-NORMALIZER -- exact centering and finite unweighted tensor costs do not control a common null cone

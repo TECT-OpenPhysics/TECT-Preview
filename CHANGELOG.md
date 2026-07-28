@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-117 rational horizon and uniform dyadic-root trace margin boundary] - 2026-07-28
+
+Accepted at T4: a full finite-dimensional rational-horizon classifier, uniform fixed-cutoff R-082 positive-floor horizon, the exact sharp joint Pauli--Fierz frame constant, and strict canonical all-direction dyadic-shell trace margins at q=10/9 and 2q=20/9. Both frozen bare-root normalizers therefore exist. A same-shell phase fixture disproves local Lipschitz metric regularity without affecting the trace route. Primary 42/42, independent 36/36, and integrated 40/40 pass; the ten-page PDF passed all-page Poppler QA. The legal complete adapted owner packet, cutoff-summable conditional log-normalizer ledger, one-use source/sextic aggregation, OVERLAP_src, Nelson, removals, interacting measure, and Sector-A closure remain open.
+
 ## [R-116: one-fresh-root owner quotient and null-cone boundary] - 2026-07-28
 
 Accepted at T4: exact same-root endpoint square-minus-trace quotient, partial-Wick Sigma-Q owner firewall, fresh first-chaos determinant absorption, optimized conditional-Holder composition, finite-dimensional polynomial quadratic parabolic-tangent recession classifier with critical codimension boundary, and exact R-082 finite-Fourier plane-wave null classification. Primary 30/30, independent 23/23, and integrated 27/27 pass. The rational-homogeneous cutoff/floor-uniform metric margin, full A1 progressive/revisit conditional embedding, one-use source/sextic aggregation, OVERLAP_src, Nelson, removals, interacting measure, and Sector-A closure remain open.

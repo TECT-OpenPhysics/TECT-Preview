@@ -1029,6 +1029,46 @@ the following structural results and proof-architecture boundaries hold.
     mixed scalar cover, full A1 owner cluster, one-use aggregation,
     `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
     open; tier stays T4.
+57. `A13-CLASSII-SCALAR-K2K-SUPPORT-TWO-MOMENT-CONE-CLOSURE` is R-114.
+    It proves the stationary scalar `k:2k` gap on the complete zero-amplitude
+    axis and on `0<=x/tau<=643/200` by a sharp support floor and an exact
+    support--two-moment Hermite--Bernoulli dichotomy. Two non-importing exact
+    implementations reconstruct all 3,981 positive Bernstein coefficients.
+    A witness just beyond the endpoint retires the same cubic proxy but does
+    not refute the target. The complementary amplitude half-line and every
+    production embedding and downstream Sector-A gate remain open at this
+    stage; tier stays T4.
+58. `A13-CLASSII-SCALAR-K2K-FOUR-MOMENT-RADAU-ALL-AMPLITUDE-CLOSURE` is
+    R-115. A left three-node Gauss--Radau majorant and packet-specific
+    all-tilt skew theorem close `x/tau>=643/200`, while R-114 covers the
+    complement. The original stationary scalar theorem is therefore strict
+    for every covariance shape, amplitude, and `tau>0`, with equality at
+    `tau=0`. A complete outward Arb cover and a structurally independent exact
+    Bernstein/radical proof certify the two routes. This is a scalar theorem,
+    not the full A1 adapted packet or one-use aggregation; tier stays T4.
+59. `A13-CLASSII-ONE-FRESH-ROOT-OWNER-QUOTIENT-WICK-NULLCONE-BOUNDARY` is
+    R-116. Same-root visits with one reveal field, target heat, covariance,
+    and contraction-closed projection descend exactly to one endpoint
+    square-minus-trace quotient. Partial Wick retains the physical `Sigma Q`
+    owner, first chaos is absorbed into the frozen determinant, and valid
+    packets compose by optimized conditional Holder. The finite-dimensional
+    polynomial parabolic-tangent recession classifier and exact R-082
+    plane-wave null classification are proved, while centered/full-Wick
+    abstract normalizer shortcuts fail. The rational production horizon,
+    adapted owner packet, and one-use aggregation remain open; tier stays T4.
+60. `A13-CLASSII-RATIONAL-HORIZON-UNIFORM-ROOT-TRACE-MARGIN-BOUNDARY` is
+    R-117. The full finite-dimensional rational-horizon tangent image gives
+    the exact quadratic tail classifier under explicit uniform spherical
+    limits and quantified annular Lipschitz growth on the negative side. The
+    R-082 positive floor converges uniformly to its fixed-cutoff horizon. The
+    sharp joint homogeneous Pauli--Fierz frame constant is `411/(2000P)`, and
+    exact shell arithmetic plus an analytic `N^-3` tail prove
+    `(10/9)tau_N^rec<3/40` and `(20/9)tau_N^rec<3/20` in every canonical
+    dyadic-root direction. Thus both frozen bare-root normalizers exist. A
+    same-shell phase path disproves local Lipschitz metric regularity without
+    refuting the trace route. The legal complete adapted owner packet and a
+    cutoff-summable one-use source/sextic ledger remain the two direct A13
+    burdens; downstream Sector-A gates remain open and tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -1092,6 +1132,8 @@ is a scoped T4 subproof and does not promote A13.
 | Scalar k:2k degenerate faces / projective boundary / compact-core reduction | Exact all-q theorem on `vw=0`; positive fixed-shape projective limit and first correction; algebraic high-q cutoff; sharp Bessel and factorized tails; three exact route no-gos | T4 analytic/exact/executed advance and method boundary; genuinely mixed all-q, uniform projective/local/face patching, full A1 embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Scalar k:2k covariance simplex / uniform projective / strict compact-core reduction | Closed covariance simplex; exact compact semialgebraic domain and analytic radial tail; uniform factored projective expansion through `D2`; existential large-amplitude theorem; exact origin and slice-wise face patches; negative exact `D3` method boundary | T4 analytic/exact/executed advance and method boundary; effective threshold, strict-core interval certificate, genuinely mixed all-q, full A1 embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Scalar k:2k effective boundaries / directed-rounding seed | Four explicit projective wedges; eight origin cones; quantitative covariance-face widths; sharper phase floors; exact zero-amplitude `tau>=13` theorem; two independent outward-rounded certificates for one strict mixed box; corrected residual-boundary and Bessel-surrogate scope | T4 analytic/exact/executed advance and method boundary; global mixed interval cover, genuinely mixed all-q, full A1 embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
+| Scalar k:2k support cone / all-amplitude closure | Exact support--two-moment cone through `643/200`; four-moment left Radau majorant; packet-specific all-tilt skew theorem; complete Arb and exact Bernstein/radical certificates | T4 analytic/exact/executed scalar theorem closed; full A1 adapted embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
+| One-fresh-root owner quotient / rational horizon / dyadic trace margin | Exact same-root endpoint quotient and owner firewall; full finite-dimensional rational-horizon classifier; uniform fixed-cutoff R-082 floor horizon; sharp joint frame constant; strict canonical q and 2q all-direction trace margins; fixed-shell metric no-go | T4 analytic/exact/executed advance and method boundary; legal complete adapted owner packet and cutoff-summable one-use source/sextic ledger remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1108,6 +1150,21 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   effective, sharpens the phase floor, and certifies one complete strict
   mixed Arb box. It does not cover the remaining rational compact set or
   embed the scalar normalizer as the full A1 production tensor.
+- R-114 and R-115 close that stationary scalar compact remainder for every
+  covariance shape, amplitude, and `tau>=0`; they do not perform the A1
+  adapted owner-preserving embedding.
+- R-116 and R-117 replace the obsolete near-null metric target by the exact
+  same-root endpoint quotient and a strict canonical all-direction recession
+  trace margin. R-117 is finite-cutoff for the R-082 floor horizon and uses a
+  finite-dimensional output only in its abstract compactness theorem; the
+  heat-lifted bare-root normalizer is proved separately by direct trace
+  coercivity. Fixed orthogonal output projections are allowed, but
+  state-dependent or duplicated output selections are outside its scope.
+- Strict fixed-shell normalizer existence is not a cutoff-summable conditional
+  log-normalizer estimate. The current direct burdens are a legal complete
+  adapted signed packet with nonnegative predictable allocations and
+  terminal-sextic localization or once-only payment, followed by one global
+  source/sextic spend.
 - Fixed positive `rho_regularizer=1e-12`.
 - Common entrywise-real-even scalar Fourier cutoffs.
 - Same-cutoff covariance-normal Wick subtraction.
@@ -1422,37 +1479,40 @@ Current subordinate order:
     replaces the fixed weight by the exact same-root double divergence and a
     chaos--Sobolev sufficient cost, while proving that static covariance norms
     miss current-root rotation. Its trace-corrected interpolation leaves a
-    tilted cross-score and a genuine mean-owner obligation. R-111 proves the
-    stationary scalar two-frequency `k:2k` inequality on both degenerate faces
-    for every `q`. R-112 then replaces the singular shape quotient by one
-    closed covariance simplex, proves an exact compact semialgebraic domain
-    and analytic tail, a factored simplex-uniform projective expansion through
-    the positive second correction, an existential large-amplitude theorem,
-    an origin cusp, and slice-wise face patches. The live scalar target is now
-    a directed-rounding certificate for the strict residual compact interior.
-    Even a complete scalar result would still require one adapted contraction-
-    closed production
-    cluster coupling the Cameron--Martin mean, realized covariance, trace,
-    mixed baseline, future feedback, rational recovery, and full raw forest
-    with every source and sextic owner retained once.
+    tilted cross-score and a genuine mean-owner obligation. R-111--R-115 close
+    the stationary scalar two-frequency `k:2k` theorem through exact face,
+    compactification, directed-rounding, support--moment, and four-moment
+    Radau arguments. R-116 then proves the exact same-root endpoint quotient
+    and owner firewall. R-117 extends the tail classifier to full
+    finite-dimensional rational horizons and proves strict canonical
+    all-direction q and 2q recession trace margins, so both frozen bare-root
+    normalizers exist. Its same-shell phase fixture retires the local
+    Lipschitz metric route. The live target is now the legal complete adapted
+    contraction-closed owner packet: it must couple Cameron--Martin mean,
+    realized covariance, trace, mixed baseline, future raw Wick, rational
+    recovery, random-W double divergence, and the full R-063 forest exactly
+    once, with nonnegative predictable allocations and the terminal sextic
+    localized predictably or paid once outside the one-step tower. A separate
+    cutoff-summable conditional cost ledger must then aggregate source energy
+    and terminal sextic charge once.
 
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_scalar_k2k_effective_boundary_interval_seed_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_rational_horizon_uniform_root_trace_margin_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `75/75`;
-- non-importing independent `64/64`;
-- manifest-pinned integrated `180/180` and aggregate `319/319` PASS;
-- exact projective wedges, origin cones, face margins and widths, phase
-  floors, endpoint-union square-root tests, and two strict outward-rounded
-  mixed-box upper sums, plus PDF/surface contracts and T4 firewalls;
-- explicit preservation of the open global mixed cover, mixed all-`q`, full
-  A1, one-use aggregation,
-  `OVERLAP_src`, Nelson, removal, measure, and Sector-A targets;
+- primary `42/42`;
+- non-importing independent `36/36`;
+- manifest-pinned integrated `40/40` PASS;
+- exact rational-horizon, positive-floor horizon, sharp frame, finite-shell,
+  analytic-tail, q/2q trace-margin, and phase-modulation assertions;
+- exact authority, source, result, note, PDF, and manifest pins;
+- explicit preservation of the open complete adapted owner packet,
+  cutoff-summable one-use aggregation, `OVERLAP_src`, Nelson, removal,
+  measure, and Sector-A targets;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -1460,7 +1520,34 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 ## Current evidence
 
-The latest R-113 subproof package is:
+The current R-117 package is:
+
+- `classii_rational_horizon_uniform_root_trace_margin_boundary_manifest.json`
+- `notes/classii-rational-horizon-uniform-root-trace-margin-boundary-260728-v1.0.tex.txt`
+- `notes/classii-rational-horizon-uniform-root-trace-margin-boundary-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_rational_horizon_uniform_root_trace_margin_boundary.py`
+- `../../codes/foundations/a13_classii_rational_horizon_uniform_root_trace_margin_boundary_independent.py`
+- `../../codes/foundations/a13_classii_rational_horizon_uniform_root_trace_margin_boundary_verify.py`
+- `runs/2026-07-28-primary-rational-horizon-uniform-root-trace-margin-boundary/result.json`
+- `runs/2026-07-28-independent-rational-horizon-uniform-root-trace-margin-boundary/result.json`
+- `runs/2026-07-28-integrated-rational-horizon-uniform-root-trace-margin-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-117`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-fixed-shell-lipschitz-metric-regularity`
+- `../../explorations/log.jsonl` (`EXP-000345`--`EXP-000350`)
+
+The immediate R-114--R-116 authority chain remains binding:
+
+- `classii_scalar_k2k_support_two_moment_cone_manifest.json`
+- `classii_scalar_k2k_four_moment_radau_all_amplitude_manifest.json`
+- `classii_one_fresh_root_owner_quotient_wick_nullcone_boundary_manifest.json`
+- `notes/classii-scalar-k2k-support-two-moment-cone-closure-260728-v1.0.tex.txt`
+- `notes/classii-scalar-k2k-four-moment-radau-all-amplitude-closure-260728-v1.0.tex.txt`
+- `notes/classii-one-fresh-root-owner-quotient-wick-nullcone-boundary-260728-v1.0.tex.txt`
+- `../../RESULTS-LEDGER.md#r-114`
+- `../../RESULTS-LEDGER.md#r-115`
+- `../../RESULTS-LEDGER.md#r-116`
+
+The R-113 subproof package is retained as predecessor evidence:
 
 - `classii_scalar_k2k_effective_boundary_interval_seed_manifest.json`
 - `notes/classii-scalar-k2k-effective-boundary-and-directed-rounding-seed-260728-v1.0.tex.txt`
@@ -2127,6 +2214,36 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     (4.10)--(4.11) and (6.5).** Those historical weighted/labelled-owner
     formulas remain non-load-bearing under R-088/R-103/R-105 and are neither
     proved nor required by the scalar calculation.
+101. **VALID WITH MITIGATION: the rational-horizon compactness theorem extends
+     automatically to Hilbert-valued heat output.** It does not. The abstract
+     theorem uses finite-output sequential compactness. The heat-lifted
+     bare-root normalizer is instead obtained directly from the nonnegative
+     output square and the strict trace horizon.
+102. **UPHELD AGAINST THE METRIC ROUTE: exact null classification yields a
+     local Lipschitz distance-to-current bound.** The R-117 same-shell phase
+     path has null-set distance `O(|t|)` and current `O(t^2)`, including after
+     standardized radial normalization. The metric route fails even at one
+     fixed shell; this is not a normalizer counterexample.
+103. **UPHELD AGAINST ONE-USE PROMOTION: strict normalizer precision on every
+     shell makes the log-normalizer costs summable.** A positive shellwise
+     cost is compatible with strict precision and has divergent sum. A
+     production-specific decaying or cancelling cost ledger remains required.
+104. **VALID WITH MITIGATION: the positive floor is exactly homogeneous.** The
+     ratio `r/rho` itself is undefined at the origin. The complete R-082 map
+     extends continuously there and converges uniformly to its degree-two
+     horizon at fixed cutoff, but no raw finite-amplitude heat trace estimate
+     or cutoff-uniform derivative bound is claimed.
+105. **UPHELD AGAINST AUTOMATIC CONDITIONAL ITERATION: coefficient sums alone
+     pay the global source and sextic owners.** The allocations must be
+     nonnegative and deterministic or predictable, the costs predeclared,
+     and both owner dominations pathwise. A common terminal sextic is future
+     measurable and must be localized predictably or paid once outside the
+     one-step tower.
+106. **VALID WITH MITIGATION: the canonical trace bound covers arbitrary
+     clusters or output selectors.** It covers matching same-shell covariance
+     with a fixed orthogonal output projection. State-dependent,
+     nonorthogonal, duplicated, cumulative-old-carrier, and complete adapted
+     selections remain outside R-117.
 
 ## Falsifier
 
@@ -2598,6 +2715,40 @@ or by promotion of the one seed box to a global mixed cover, mixed all-`q`
 theorem, full A1 cluster, one-use aggregation, `OVERLAP_src`, Nelson, removal,
 measure, Sector-A, or higher-tier theorem.
 
+The R-114 continuation is additionally falsified by failure of its sharp
+support floor, support--two-moment dichotomy, exact cone endpoint
+`643/200`, any of the 3,981 positive Bernstein coefficients, either
+non-importing reconstruction, the just-beyond-endpoint proxy witness, or any
+authority/source/note/PDF/manifest/run/exploration/public-surface pin; or by
+promotion beyond the stationary scalar cone stated in R-114.
+
+The R-115 continuation is additionally falsified by failure of the
+four-moment left Gauss--Radau majorant, any all-tilt three-atom skew sign,
+the zero-pending outward Arb cover, the independent Bernstein/radical proof,
+the R-114/R-115 amplitude partition, or any evidence pin; or by promotion of
+the closed stationary scalar theorem to a full A1 adapted packet or one-use
+aggregation.
+
+The R-116 continuation is additionally falsified by failure of the same-root
+endpoint quotient, partial-Wick owner firewall, first-chaos absorption,
+optimized conditional-Holder composition, finite-dimensional polynomial
+parabolic-tangent classifier, critical-codimension boundary, exact R-082 null
+classification, any registered centered/full-Wick/separated-interpolation
+method boundary, or any evidence pin; or by promotion to the rational
+production horizon or complete adapted packet proved only later or still open.
+
+The R-117 continuation is additionally falsified by failure of the uniform
+spherical horizon hypotheses or full tangent-image liminf formula; the
+quantified annular condition on the negative branch; the uniform positive-
+floor horizon; the sharp constant `411/(2000P)`; either exact finite-shell or
+analytic-tail bound; either q or 2q precision margin; the direct heat-lifted
+coercivity; the exact same-shell phase-modulation order separation; primary
+`42/42`, independent `36/36`, or integrated `40/40`; any authority, source,
+note, PDF, manifest, run, registry, exploration, taxonomy, or public-surface
+pin; or promotion to a complete adapted packet, cutoff-summable normalizer,
+one-use aggregation, `OVERLAP_src`, Nelson, removal, measure, Sector-A, or
+higher-tier theorem.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -3022,6 +3173,20 @@ historical R-085 weighted/labelled-owner formulas remain non-load-bearing. No
 mixed all-`q` scalar theorem, full A1 owner cluster, one-use source/sextic
 aggregation, `OVERLAP_src`, Nelson, removal, interacting measure, Sector-A
 closure, or T5--T7 promotion follows. Tier stays T4.
+
+R-114 and R-115 close the stationary scalar `k:2k` classifier only. R-116
+proves the exact same-root quotient, owner firewall, finite-dimensional
+polynomial recession theorem, and null classification only. R-117 extends the
+finite-dimensional recession theorem to rational horizons and proves strict
+canonical same-shell q and 2q trace margins, fixed-cutoff bare-root normalizer
+existence, and a fixed-shell metric no-go. The R-117 trace result concerns the
+degree-two horizon with matching same-shell covariance, fixed independent
+heat, and fixed orthogonal output projection; it is not a raw finite-amplitude
+heat estimate or an arbitrary cluster theorem. None of R-114--R-117 proves the
+legal complete adapted progressive/revisit owner packet, a cutoff-summable
+conditional log-normalizer ledger, or the once-only source/sextic aggregation.
+`OVERLAP_src`, Nelson, removal, interacting measure, Sector-A closure, and
+T5--T7 promotion remain open. Tier stays T4.
 
 ## History
 
@@ -3729,3 +3894,33 @@ closure, or T5--T7 promotion follows. Tier stays T4.
   and all-page Poppler visual QA. The global mixed interval cover, full A1
   cluster, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting
   measure, and Sector A remain open; tier stays T4.
+- 2026-07-28: Registered R-114. The sharp support floor and exact
+  support--two-moment dichotomy close the zero-amplitude axis and the cone
+  `0<=x/tau<=643/200`. Two non-importing exact implementations certify all
+  3,981 Bernstein coefficients. The complementary amplitude region, full A1
+  embedding, and one-use aggregation remained open; tier stayed T4.
+- 2026-07-28: Registered R-115. A four-moment left Gauss--Radau majorant and
+  packet-specific all-tilt skew theorem close the complementary half-line, so
+  the stationary scalar theorem is complete. A zero-pending outward Arb cover
+  and an independent exact Bernstein/radical proof certify the result. The
+  full A1 adapted embedding and one-use aggregation remained open; tier stayed
+  T4.
+- 2026-07-28: Registered R-116. Same-root visits descend to one endpoint
+  square-minus-trace quotient with the physical owner firewall intact. Fresh
+  first chaos absorbs into the frozen determinant, valid conditional packets
+  compose by optimized Holder, finite-dimensional polynomial quadratic tails
+  have an exact parabolic-tangent classifier, and the R-082 active nulls are
+  plane waves. Centered/full-Wick and related shortcuts are recorded as method
+  boundaries. Primary `30/30`, independent `23/23`, and integrated `27/27`
+  pass; the rational production horizon and full adapted packet remained open.
+- 2026-07-28: Registered R-117. The full finite-dimensional rational-horizon
+  theorem, uniform fixed-cutoff R-082 floor horizon, sharp frame constant, and
+  exact all-direction canonical q and 2q dyadic-root trace margins are proved.
+  Both frozen bare-root normalizers exist; a same-shell phase path disproves
+  local Lipschitz metric regularity without affecting that trace route.
+  `EXP-000345--EXP-000350` preserve the advances, failed routes, and exact two-
+  burden successor. Primary `42/42`, non-importing independent `36/36`, and
+  integrated `40/40` pass. The final ten-page PDF passes form, zero-overfull,
+  extraction, no-form, and all-page Poppler QA. The legal complete adapted
+  owner packet and cutoff-summable one-use source/sextic ledger remain open;
+  tier stays T4.
