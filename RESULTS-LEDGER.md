@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-118](#r-118) | Revisit quotient factorisation, operator Carleson extension, and signed-score boundary | Scoped T4 analytic/exact/executed advance and method boundary: a finite-visit selfadjoint quadratic form is fibre invariant exactly when it annihilates the endpoint-synthesis kernel, equivalently when it factors as `L* B L`; the corresponding form bound is equivalent to `-C L*L<=K<=C L*L`. The R-068 centered-form theorem extends without visit-count loss to spatially constant selfadjoint operator families satisfying `sum_r |K_r|<=K0 I`, with one global Young remainder raising both `K0` and the model norm to `3/(1-kappa)`. Exact terminal-only descent of the recombined selfadjoint form requires quotient factorisation; the termwise `K_r=L*B_rL` bridge is sufficient and is not asserted necessary. Two opposite visits disprove automatic replacement of the visit square-function sextic by the terminal sextic. Every scalar finite-dimensional Gaussian polynomial decomposes canonically into zero chaos, first chaos, and one double divergence. An exact two-visit Hermite quotient has mean `-epsilon^2` and a unique sign-changing scalar preimage, so a universal PSD random-`W` factorisation is false. R-102's nonzero curl remains an inherited isolated-current boundary. The complete adapted A1 low-chaos cancellation, trace/forest compatibility, vertical basicness, multiplier estimate, one-use ledger, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-117](#r-117) | Rational-horizon classifier, uniform canonical dyadic-root trace margin, and fixed-shell metric boundary | Scoped T4 analytic/exact/executed advance and method boundary: the exact full-horizon tangent classifier extends the finite-dimensional tail theorem from polynomial quadratic maps to locally Lipschitz asymptotically quadratic maps, including the rational R-082 row. The positive floor converges to the degree-two horizon at an explicit state-uniform fixed-cutoff rate. The homogeneous Pauli--Fierz frame has sharp joint constant `411/(2000P)`. Exact rational shell enumeration plus an analytic `N^-3` tail prove `(10/9) tau_N^rec<3/40` and `(20/9) tau_N^rec<3/20` for every standardized direction of the matching full-production dyadic shell, hence frozen bare-root normalizer existence at both tilts. A same-shell phase modulation has distance `O(t)` from the exact null set but current `O(t^2)`, disproving local Lipschitz metric regularity even at fixed cutoff. The result does not identify the complete adapted progressive/revisit packet, produce cutoff-summable log-normalizers, or aggregate source/sextic owners once. `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-116](#r-116) | One-fresh-root owner quotient, exact parabolic-tangent recession, and the centered null-cone boundary | Scoped T4 analytic/exact/executed advance and method boundary: every same-root visit packet with fixed reveal sigma-field, target heat, covariance, and contraction-closed projection telescopes to one endpoint square-minus-trace quotient, so internal visits and the fresh--future cross are owned exactly once. Full Wick ordering is only a diagnostic: the physical partial-Wick XY packet differs by the load-bearing Sigma Q owner. First chaos absorbs into the frozen whole-output determinant; actual conditional packets compose by optimized Holder; tilted random-W costs require a doubled-tilt normalizer. For finite-dimensional homogeneous quadratic output, the exact Gaussian tail classifier is lambda_q=inf_(v,z)[1-q tau(v)+q||Av+z||^2] over the common null cone and full parabolic tangent image. Positive lambda_q gives integrability, negative gives divergence, and equality depends on critical-stratum codimension. Exact centered and full-Wick tensor fixtures disprove universal centering-only and covariance-cost normalizers. The R-082 pointwise null set is classified; active finite-Fourier nulls are constant-polarization plane waves with an explicit real-linearized symbol, but no cutoff-uniform near-null metric bound follows. The plane-wave face is not a standalone legal production root. Full A1 progressive/revisit normalization, one-use source/sextic aggregation, OVERLAP_src, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-115](#r-115) | Four-moment Radau all-amplitude closure of the stationary scalar `k:2k` theorem | Scoped T4 analytic/exact/executed theorem: the original R-112 scalar gap is strict for every `c in [0,1]`, every amplitude `b>=0`, and every `tau>0`, with equality at `tau=0`. R-114 covers `b<=643/200`; on the complementary compact reciprocal-amplitude rectangle, a left three-node Gauss--Radau majorant, an exact all-tilt three-atom skew lemma, a complete outward Arb cover, and a structurally independent exact Bernstein/radical certificate prove decreasing proxy variance. This closes only the stationary scalar theorem. The full A1 one-fresh-root owner-preserving embedding, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -136,6 +137,55 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-118"></a>
+### R-118 -- Revisit quotient factorisation, operator Carleson extension, and signed-score boundary
+
+**Result ID.**
+A13-CLASSII-REVISIT-QUOTIENT-OPERATOR-CARLESON-SIGNED-SCORE-BOUNDARY.
+
+**Quotient and operator theorem.**  For a finite visit space, a selfadjoint
+quadratic form is constant on every endpoint-synthesis fibre if and only if it
+kills the synthesis kernel, if and only if it has the form `K=L* B L`.  The
+bound `|<v,Kv>|<=C||Lv||^2` is equivalent to
+`-C L*L<=K<=C L*L`.  If a finite family of spatially constant selfadjoint
+operators satisfies `sum_r |K_r|<=K0 I`, polar decomposition, differentiated
+duality, the sharp-cube maximal theorem, and the Hilbert-valued `H2` algebra
+extend R-068 without a visit-count loss.  At `kappa=1/10`, the interpolation
+powers are `11/20,3/20`, the Young gap is `3/10`, and the random-model and
+spectral-constant powers are `10/3`.  Exact terminal-only descent of the
+recombined selfadjoint form requires quotient factorisation.  The termwise
+condition `K_r=L*B_rL`, together with a uniform source-space synthesis bound,
+is a sufficient bridge to terminal ownership and is not proved necessary.
+
+**Canonical Gaussian range and signed boundary.**  A scalar Gaussian
+polynomial has the exact decomposition
+`F=E F+<E[xi F],xi>+delta^2 W_can/2`, with
+`W_can=2 sum_(k>=2) D^2F_k/[k(k-1)]`.  Thus a pure double divergence exists
+exactly when zero and first chaos vanish.  For the exact two-visit Hermite
+quotient, `F=epsilon^2(aH3+H4/2-1)`, so `E F=-epsilon^2` and the centered part
+has the unique scalar preimage
+`epsilon^2[(G+a)^2-(a^2+1)]`, which changes sign.  This retires a universal
+PSD random-`W` factorisation without producing an A1 counterexample.  R-102's
+curl `-40/729` proves that the isolated rational current is not itself a
+scalar endpoint primitive; missing square, trace, forest, and low companions
+may still cancel only in a future complete cluster theorem.
+
+**Production and publication boundary.**  R-104/R-116 endpoint invariance does
+not imply termwise owner factorisation.  The next production calculation must
+test the complete adapted residual's zero and first chaoses, construct its
+canonical signed coefficient, match the actual trace and R-063 forest, prove
+vertical basicness, and establish endpoint spectral/multiplier bounds before
+one global R-093 source-union Young step.  The complete adapted packet,
+progressive/revisit extension, one-use aggregation, `OVERLAP_src`, Nelson,
+removals, interacting measure, and Sector A remain open at T4.
+
+**Where proved.**  Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-revisit-quotient-operator-carleson-signed-score-boundary-260728-v1.0`,
+primary exact and non-importing independent certificates, and the integrated
+R-118 verifier.  Publication target: operator-valued Gaussian centered-form
+lemmas, quotient criteria, and signed second-divergence diagnostics.
 
 <a id="r-117"></a>
 ### R-117 -- Rational-horizon classifier, uniform canonical dyadic-root trace margin, and fixed-shell metric boundary

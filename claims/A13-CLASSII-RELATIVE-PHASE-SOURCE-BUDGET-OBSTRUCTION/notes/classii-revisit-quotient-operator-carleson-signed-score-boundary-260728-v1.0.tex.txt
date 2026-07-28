@@ -1,0 +1,602 @@
+% =============================================================================
+% Title: Revisit quotient factorisation, operator Carleson extension, and signed-score boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-REVISIT-QUOTIENT-OPERATOR-CARLESON-SIGNED-SCORE-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: scoped T4 analytic/exact/executed advance and method boundary; no tier action
+%
+% Revision history (cumulative):
+%   v1.0 (2026-07-28) first issue.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Div}{\operatorname{Div}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+
+\section*{1. Purpose and scope}
+
+This note executes the direct source-action successor selected after the
+R-117 loop audit.  Its purpose is to decide whether a visit-count-free
+operator-valued version of the R-068 centered-form estimate exists, and to
+state exactly what a complete adapted owner must satisfy before that estimate
+can be paid by one terminal sextic rather than by a visit square function.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{What is proved.}
+For a finite visit space, a selfadjoint quadratic form descends to the endpoint
+quotient if and only if it annihilates the synthesis kernel, equivalently if
+and only if it has the form $L^*BL$.  The R-068 centered-form theorem extends
+without a visit-count loss to spatially constant selfadjoint operator families
+whose absolute spectral variation is bounded.  If those operators factor
+through the endpoint synthesis with a uniformly bounded endpoint family, the
+analytic estimate uses the endpoint field rather than the visit square
+function.
+
+Every scalar Gaussian polynomial has a canonical decomposition into its zero
+chaos, first chaos, and one double divergence.  Thus a pure double-divergence
+representation exists exactly when the zero and first chaoses vanish.  An
+exact two-visit Hermite quotient has mean $-\epsilon^2$ and a unique
+sign-changing scalar preimage, disproving a universal positive-semidefinite
+random-$W$ factorisation.
+
+\medskip
+\textbf{What is not proved.}
+R-104 and R-116 prove quotient descent for the recombined endpoint packet in
+their fixed-environment scope; they do not prove that an isolated Hessian,
+trace, current, or forest owner descends.  No current result verifies the
+zero/first-chaos cancellation, vertical basicness, random-$W$ forest
+compatibility, or spatial multiplier bound for the full adapted production
+cluster.  The progressive/revisit extension, one-use aggregation,
+$\mathrm{OVERLAP}_{\rm src}$, Nelson estimate, removals, interacting measure,
+Sector-A closure, and tier promotion remain open.
+}}
+\end{center}
+
+The analytic theorem is finite-cutoff and uses the fixed $L=16$ torus and the
+sharp-cube maximal bounds already established in R-068/A12.  The Gaussian
+range theorem is finite dimensional and polynomial.  The Hermite fixture is
+an abstract contraction-connected output diagnostic, not an independently
+embedded A1 production root.
+
+\section*{2. The finite-visit quotient theorem}
+
+Let $V$ and $H$ be finite-dimensional real Hilbert spaces, let
+$L:V\to H$ be linear, and let $K=K^*:V\to V$.  Write
+
+\[
+ q_K(v)=\langle v,Kv\rangle .                            \tag{2.1}
+\]
+
+% evidence-anchor: finite-visit-quotient-theorem
+\subsection*{Theorem 2.1 (quadratic quotient factorisation)}
+
+The following statements are equivalent.
+
+\begin{enumerate}
+\item $q_K$ is constant on every fibre $v+\ker L$.
+\item $\ker L\subseteq\ker K$.
+\item There is a selfadjoint $B$ on $\Ran L$ such that
+\[
+                 K=L^*BL.                                \tag{2.2}
+\]
+\end{enumerate}
+
+For the Moore--Penrose inverse $L^\dagger$, the canonical quotient operator is
+
+\[
+ B=(L^\dagger)^*K L^\dagger\quad\hbox{on }\Ran L.       \tag{2.3}
+\]
+
+Moreover, for $C\ge0$, the form bound
+
+\[
+ |\langle v,Kv\rangle|\le C\|Lv\|^2\quad(v\in V)       \tag{2.4}
+\]
+
+is equivalent to a factorisation (2.2) with $\|B\|\le C$, equivalently
+
+\[
+              -C L^*L\le K\le C L^*L.                   \tag{2.5}
+\]
+
+\paragraph{Proof.}
+If $k\in\ker L$, fibre invariance applied to $v+tk$ says that
+
+\[
+ 2t\langle v,Kk\rangle+t^2\langle k,Kk\rangle=0
+ \quad\hbox{for every }v\in V,\ t\in\R .               \tag{2.6}
+\]
+
+The linear coefficient gives $Kk=0$.  Conversely, $Kk=0$ makes (2.6) zero.
+When $K$ kills $\ker L$, the form
+
+\[
+ \langle Lv,B Lw\rangle:=\langle v,Kw\rangle            \tag{2.7}
+\]
+
+is well defined and selfadjoint on $\Ran L$, and gives (2.2).  Formula (2.3)
+is the same construction in the orthogonal representative
+$(\ker L)^\perp$.  Finally (2.4) defines a bounded selfadjoint form on
+$\Ran L$ with norm at most $C$; the finite-dimensional representation theorem
+gives $B$.  The converse and (2.5) are immediate. \qed
+
+It is not enough to check only $q_K(k)=0$ on $\ker L$ for an indefinite form;
+the mixed polarisation in (2.6) is load-bearing.
+
+\section*{3. Fixed linear endpoints and the curvature boundary}
+
+Let $\Phi:H\to\R$ be $C^2$, let $A_0\in H$, and suppose that the visit
+dependence is genuinely through one fixed affine synthesis:
+
+\[
+                    F(v)=\Phi(A_0+Lv).                   \tag{3.1}
+\]
+
+Then
+
+\[
+ DF(v)=L^*D\Phi(A_0+Lv),\qquad
+ D^2F(v)=L^*D^2\Phi(A_0+Lv)L.                            \tag{3.2}
+\]
+
+Thus the full endpoint Hessian annihilates every closed revisit cycle.  This
+is the correct algebra behind the R-116 endpoint quotient when all objects
+being differentiated are functions of the same fixed endpoint data.
+
+The statement does not apply termwise to an adapted owner decomposition.  If
+$E:V\to H$ is nonlinear, then
+
+\[
+ D^2(\Phi\circ E)
+ =(DE)^*D^2\Phi(E)DE+D\Phi(E)\,D^2E.                    \tag{3.3}
+\]
+
+The curvature term contains the current Hessian, trace, and forest companions.
+If coefficients also depend on a vertical variable, their first and second
+vertical derivatives reappear as the $DW,D^2W$ forest.  Therefore an isolated
+owner factors only after one proves its full vertical basicness, or after the
+complete signed owner cancellation proves the same fact.  R-104/R-116 permit
+mean and covariance mass to exchange between owners, so endpoint invariance of
+their recombined scalar packet does not by itself establish termwise (2.2).
+
+\section*{4. Operator-valued centered-form theorem}
+
+Let $\cH$ be a real Hilbert space and let
+$a\in H^2(\T^3;\cH)$.  Let $K_r=K_r^*$ be a finite family of spatially
+constant operators satisfying the absolute spectral-variation bound
+
+\[
+                 \sum_r|K_r|\le K_0\Id_{\cH}.            \tag{4.1}
+\]
+
+With the R-068 sharp-cube projections, put
+
+\[
+ q_r(x)=\langle a(x),K_ra(x)\rangle_{\cH},\qquad
+ \Pi_K(a)=\sum_r S_{r-1}q_r,                             \tag{4.2}
+\]
+
+\[
+ X=\|a\|_{H^2(\T^3;\cH)}^2,\qquad
+ Y=\||a|_{\cH}\|_{L^6}^6.                              \tag{4.3}
+\]
+
+% evidence-anchor: operator-valued-centered-form-theorem
+\subsection*{Theorem 4.1 (visit-count-free operator R-068 extension)}
+
+There are constants depending on the fixed torus and sharp-cube system, but
+not on the number of operators, such that
+
+\[
+ \|\Pi_K(a)\|_2\le C_0K_0Y^{1/3},\qquad
+ \|\Pi_K(a)\|_{H^2}\le C_2K_0X.                        \tag{4.4}
+\]
+
+For $0<\kappa<1$, with $\theta=(1+\kappa)/2$,
+
+\[
+ \boxed{
+ \|\Pi_K(a)\|_{H^{1+\kappa}}
+ \le C_\kappa K_0 X^{(1+\kappa)/2}Y^{(1-\kappa)/6}.}   \tag{4.5}
+\]
+
+Consequently, if $M=\|Q\|_{H^{-1-\kappa}}$, then for every
+$\eta,\zeta>0$,
+
+\[
+\begin{aligned}
+ |\langle Q,\Pi_K(a)\rangle|
+ \le{}&\eta X+\zeta Y\\
+ &+C_\kappa K_0^{3/(1-\kappa)}
+ \eta^{-3(1+\kappa)/[2(1-\kappa)]}
+ \zeta^{-1/2}M^{3/(1-\kappa)} .
+\end{aligned}
+\tag{4.6}
+\]
+
+At the production value $\kappa=1/10$, the powers of
+$(X,Y,\hbox{Young gap})$ are $(11/20,3/20,3/10)$, and the random moment and
+$K_0$ powers are $10/3$; the negative $\eta$ and $\zeta$ powers are $11/6$
+and $1/2$.
+
+\paragraph{Proof.}
+For every $u,v\in\cH$, polar decomposition and Cauchy--Schwarz in the index
+$r$ give
+
+\[
+ \sum_r|\langle u,K_rv\rangle|
+ \le\left\langle u,\sum_r|K_r|u\right\rangle^{1/2}
+     \left\langle v,\sum_r|K_r|v\right\rangle^{1/2}
+ \le K_0\|u\|\|v\|.                                   \tag{4.7}
+\]
+
+For $g\in L^2$, selfadjointness of $S_r$, (4.7), the sharp-cube maximal
+theorem at $3/2$, and finite volume give
+
+\[
+ |\langle\Pi_K(a),g\rangle|
+ \le K_0\int |a|^2S_*|g|
+ \le C K_0\||a|^2\|_3\|g\|_2,                         \tag{4.8}
+\]
+
+which proves the first bound in (4.4).  For $|\alpha|\le2$, differentiate
+before dualising:
+
+\[
+ \partial^\alpha q_r
+ =\sum_{\beta\le\alpha}c_{\alpha,\beta}
+ \langle\partial^\beta a,
+ K_r\partial^{\alpha-\beta}a\rangle.                   \tag{4.9}
+\]
+
+Equation (4.7), the $L^2$ sharp-cube maximal theorem, and the Hilbert-valued
+three-dimensional $H^2$ algebra estimate prove the second bound in (4.4).
+This differentiated duality is essential; the generally unjustified shortcut
+$\sum_r\|q_r\|_{H^2}\lesssim X$ is not used.  Interpolation gives (4.5).
+Three-factor weighted Young with gap $(1-\kappa)/3$ gives (4.6). \qed
+
+Spatially varying $K_r(x)$ require a uniform multiplier bound at the same
+Sobolev order.  Uniform operator norm alone is insufficient: a constant visit
+multiplied by $e^{iMx}$ has fixed pointwise operator norm and an $H^2$ norm
+growing like $M^2$.
+
+\section*{5. Terminal ownership and the opposite-visit test}
+
+Suppose $L:\cH_{\rm visit}\to\cH_{\rm end}$ is the endpoint synthesis and
+
+\[
+ K_r=L^*B_rL,\qquad \sum_r|B_r|\le B_0\Id.             \tag{5.1}
+\]
+
+Then $q_r(a)=\langle La,B_rLa\rangle$, so Theorem 4.1 applies directly to
+the terminal aggregate $z=La$.  This is the sufficient bridge from the
+analytic visit theorem to a terminal-sextic one-use payment.  It still requires
+a cutoff-uniform source estimate for $\|z\|_{H^2}^2$ and the declared terminal
+$L^6$ bound.
+
+The condition is sharp at the quotient level.  With two visits,
+
+\[
+ L=(1,1),\qquad a=(f,-f),\qquad K_{\rm diag}=\Id_2,      \tag{5.2}
+\]
+
+one has
+
+\[
+ La=0,\qquad \langle a,K_{\rm diag}a\rangle=2|f|^2,
+ \qquad Y_{\rm visit}=8\|f\|_6^6.                       \tag{5.3}
+\]
+
+Thus a diagonal visit square cannot be paid by the zero terminal sextic.  The
+coherent endpoint matrix $L^*L$ does kill $(f,-f)$.  Likewise $m$ coherent
+visits $f/\sqrt m$ have fixed visit source energy and terminal square
+$m|f|^2$; a uniform source theorem therefore also needs a uniform synthesis
+bound.  These fixtures do not refute Theorem 4.1, whose $Y$ is explicitly the
+visit square-function sextic, or the complete signed action.
+
+\section*{6. Canonical Gaussian double-divergence range}
+
+Let $G\sim N(0,\Id_n)$ and let a scalar polynomial have Wiener-chaos expansion
+
+\[
+                         F=\sum_{k=0}^dF_k.              \tag{6.1}
+\]
+
+For a symmetric polynomial matrix $W$, use
+
+\[
+ \delta^2W
+ =G^TWG-\Tr W-2G\cdot\Div W+\Div^2W.                  \tag{6.2}
+\]
+
+\subsection*{Theorem 6.1 (canonical second-divergence decomposition)}
+
+Define
+
+\[
+ W_{\rm can}=2\sum_{k=2}^d{D^2F_k\over k(k-1)}.          \tag{6.3}
+\]
+
+Then
+
+\[
+ \boxed{
+ F=\E F+\langle\E[GF],G\rangle+{1\over2}\delta^2W_{\rm can}.} \tag{6.4}
+\]
+
+Hence $F=\delta^2W/2$ for some polynomial symmetric $W$ if and only if
+
+\[
+                        \E F=0,\qquad \E[GF]=0.          \tag{6.5}
+\]
+
+The right inverse (6.3) is canonical; in dimension greater than one it need
+not be the only tensor preimage.  In the scalar one-dimensional polynomial
+case it is unique.
+
+\paragraph{Proof.}
+On the $k$th homogeneous chaos,
+
+\[
+             \delta^2D^2F_k=k(k-1)F_k.                  \tag{6.6}
+\]
+
+The range of $\delta^2$ contains no chaos of degree zero or one.  Summing
+(6.6) proves (6.4)--(6.5).  In one dimension
+$\delta^2H_k=H_{k+2}$, which is injective on polynomials. \qed
+
+This theorem turns the proposed production identification into two explicit
+low-chaos tests before any positivity or exponential estimate is attempted.
+
+% evidence-anchor: universal-psd-random-w-double-divergence
+\section*{7. Exact score split and the two-visit mean debt}
+
+Let $R:\R^n\to\R^m$ be polynomial, let $x_0=b+AG$, and set
+
+\[
+ F=\langle x_0,R\rangle+{1\over2}\|R\|^2
+   -{1\over2}\delta\tau.                                \tag{7.1}
+\]
+
+For any symmetric polynomial $W$, define
+
+\[
+ \tau_W=\Tr W+2G\cdot\Div W-\Div^2W,\qquad
+ N_W=\langle x_0,R\rangle+{1\over2}\|R\|^2
+     -{1\over2}G^TWG.                                   \tag{7.2}
+\]
+
+Then the pointwise identity
+
+\[
+ \boxed{F={1\over2}\delta^2W+N_W
+             +{1\over2}(\tau_W-\delta\tau)}             \tag{7.3}
+\]
+
+holds without an estimate.  Thus trace/forest compatibility
+$\delta\tau=\tau_W$ and a favourable Schur remainder $N_W$ are distinct proof
+obligations.  Neither follows from static positivity of $W$.
+
+The smallest same-root diagnostic makes the obstruction exact.  Let $G$ now
+be scalar standard Gaussian, let $H_k$ be probabilists' Hermite polynomials,
+let $v$ be a unit output vector, and for $s=0,1/2,1$ set
+
+\[
+ x_s=\epsilon v\{aG+sH_2(G)\},\qquad
+ t_s=\epsilon^2(a+2sG)^2.                                \tag{7.4}
+\]
+
+The two R-116 visit packets telescope to
+
+\[
+\begin{aligned}
+ F_{2\rm v}
+ &={1\over2}(\|x_1\|^2-\|x_0\|^2)
+   -{1\over2}(t_1-t_0)\\
+ &=\epsilon^2\left(aH_3+{1\over2}H_4-1\right).
+\end{aligned}
+\tag{7.5}
+\]
+
+Therefore
+
+\[
+ \E F_{2\rm v}=-\epsilon^2,\qquad \E[GF_{2\rm v}]=0.   \tag{7.6}
+\]
+
+The centered part has the unique scalar polynomial preimage
+
+\[
+ W_{\rm can}=\epsilon^2(H_2+2aH_1)
+ =\epsilon^2\{(G+a)^2-(a^2+1)\},                         \tag{7.7}
+\]
+
+\[
+ F_{2\rm v}+\epsilon^2={1\over2}\delta^2W_{\rm can}.   \tag{7.8}
+\]
+
+The value of (7.7) at $G=-a$ is
+$-\epsilon^2(a^2+1)$, while it is positive for sufficiently large $|G|$.
+Thus the exact preimage is signed, and the remaining negative mean cannot be a
+double divergence.  This is the exact authority for
+\texttt{NG-2026-07-28-A13-UNIVERSAL-PSD-RANDOM-W-DOUBLE-DIVERGENCE} and
+strengthens the mean-debt diagnosis behind
+\texttt{NG-2026-07-28-A13-UNIVERSAL-NONLINEAR-TANGENT-SQUARE-FIRST-NORMALIZER}.
+It does not produce a legal A1 counterexample.
+
+\section*{8. Cartan homotopy does not remove the current defect}
+
+R-102 gives, for the isolated complete-$L$ rational current one-form
+$\omega$, the exact active/kernel fixture
+
+\[
+             \partial_y\omega_x-\partial_x\omega_y
+             =-{40\over729}\ne0.                        \tag{8.1}
+\]
+
+On a star-shaped chart the exact homotopy split is
+
+\[
+ \omega=\dd\Phi+\kappa,\qquad
+ \Phi(z)=\int_0^1\omega(tz)\cdot z\dd t,                \tag{8.2}
+\]
+
+\[
+ \kappa_i(z)=\sum_jz_j\int_0^1t
+  (\partial_j\omega_i-\partial_i\omega_j)(tz)\dd t.     \tag{8.3}
+\]
+
+Since $\dd\kappa=\dd\omega$, (8.1) implies
+$\kappa\not\equiv0$.  The current subowner is therefore not itself a scalar
+endpoint Hessian.  R-102's fixture omits the endpoint square, trace, forest,
+low, and other rows, so it does not refute a factorisation of a future fully
+recombined cluster.  It proves that such a result must use those companions,
+not silently discard the Cartan remainder.
+
+% evidence-anchor: production-successor
+\section*{9. Exact production successor}
+
+The new route is now a finite sequence of falsifiable checks on the smallest
+legal contraction-closed root cluster.
+
+\begin{enumerate}
+\item After the frozen affine determinant absorbs its declared first chaos,
+compute the zero and first Wiener chaoses of the complete adapted residual.
+Failure of either equality in (6.5) identifies the exact mean or linear debt.
+\item If both vanish, construct $W_{\rm can}$ by (6.3), rather than guessing a
+positive covariance weight.
+\item Match the actual heat, trace, mixed baseline, rational recovery, and
+R-063 forest against $\tau_{W_{\rm can}}$ in (7.3), retaining every owner once.
+\item Prove fibre invariance, equivalently vertical annihilation, for the
+recombined coefficient.  Termwise endpoint descent is not assumed.
+\item Prove the spectral-variation and spatial multiplier hypotheses of
+Theorem 4.1 after endpoint factorisation, together with a uniform synthesis
+bound from the R-093 source Hilbert space.
+\item Only then apply (4.6) once over the directed source union and use the
+centered determinant cost.  No shellwise or visitwise Young inequality is
+permitted.
+\end{enumerate}
+
+This replaces the vague request for a positive complete matrix by three sharp
+tests: low-chaos cancellation, quotient basicness, and operator variation.
+
+\section*{10. Executable verification}
+
+The primary exact SymPy implementation derives all quotient, exponent,
+opposite-visit, Hermite, preimage, and score-split identities symbolically.
+It passes 33/33 assertions.  A non-importing standard-library implementation
+reconstructs the matrix algebra, Hermite recurrence, Gaussian moments,
+subdivision cancellation, and Cartan homotopy with exact rational arithmetic;
+it passes 27/27 assertions.  The integrated verifier reruns both children,
+checks deterministic stored artefacts, pins all authorities, sources, note,
+PDF, manifest, and no-overclaim flags, and rejects a stale package.
+
+The two deterministic run artefacts are stored under the claim's
+\texttt{runs/} directory with the declared primary and independent package
+slugs.  Their exact paths and hashes are pinned by the package manifest.
+
+\section*{11. Failed routes and reusable conclusions}
+
+\begin{center}
+\begin{tabularx}{0.94\textwidth}{@{}>{\raggedright\arraybackslash}p{0.24\textwidth} >{\raggedright\arraybackslash}p{0.18\textwidth} Y@{}}
+\hline
+Route & Verdict & Reusable conclusion\\
+\hline
+Diagonal visit square & terminal-owner failure & Opposite visits
+are invisible at the endpoint but retain positive visit sextic mass.\\
+Universal PSD coefficient & failed & The exact Hermite
+preimage changes sign and a negative zero-chaos debt remains.\\
+Isolated current primitive & failed & R-102's nonzero curl survives as the
+Cartan homotopy term.\\
+Quotient algebra alone & boundary & It proves a criterion, not the
+adapted vertical cancellation or multiplier estimate.\\
+Operator R-068 extension & advanced & Spectral variation removes visit
+count. Exact fibre descent of the recombined form requires quotient
+factorisation; the termwise condition (5.1) is sufficient, not proved
+necessary.\\
+\hline
+\end{tabularx}
+\end{center}
+
+\section*{12. Devil's-advocate}
+
+\begin{enumerate}
+\item \textbf{Objection: R-116 endpoint descent already proves every owner
+factors.}  \textbf{UPHELD as false.}  It proves the recombined fixed-environment
+endpoint identity.  Mean, covariance, trace, and forest owners may exchange.
+
+\item \textbf{Objection: kernel inclusion follows from checking
+$q_K(k)=0$.}  \textbf{UPHELD as false for indefinite forms.}  The mixed
+polarisation in (2.6) must vanish for every base point.
+
+\item \textbf{Objection: the operator estimate pays the terminal sextic.}
+\textbf{UPHELD as unsupported without (5.1).}  Theorem 4.1 initially sees the
+visit square-function sextic.  Opposite visits separate the two quantities.
+
+\item \textbf{Objection: the Young remainder remains linear in $K_0$.}
+\textbf{UPHELD as false.}  The three-factor Young step raises both $K_0$ and
+$M$ to $3/(1-\kappa)$, equal to $10/3$ at $\kappa=1/10$.
+
+\item \textbf{Objection: exact double-divergence centering makes the coefficient
+PSD.}  \textbf{UPHELD as false.}  Formula (7.7) is the unique scalar preimage
+and changes sign.
+
+\item \textbf{Objection: the negative Hermite mean disproves the physical A1
+cluster.}  \textbf{DISMISSED.}  It is an abstract connected diagnostic.  A
+larger physical contraction-closed cluster may supply a cancelling mean owner.
+
+\item \textbf{Objection: Cartan homotopy integrates away the curl.}
+\textbf{UPHELD as false.}  Equation (8.3) retains the curvature; its exterior
+derivative is the original nonzero curl.
+
+\item \textbf{Objection: a pointwise bounded random coefficient preserves the
+$H^2$ estimate.}  \textbf{UPHELD as false.}  Spatial multiplier regularity and
+Gaussian $DW,D^2W$ forest compatibility are independent obligations.
+\end{enumerate}
+
+\section*{13. Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-REVISIT-QUOTIENT-OPERATOR-CARLESON-
+  SIGNED-SCORE-BOUNDARY (R-118).
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement: Theorems 2.1, 4.1, and 6.1; fixed-linear endpoint
+  chain rule (3.2); terminal factorisation boundary (5.1)-(5.3);
+  exact score split (7.3); Hermite mean/sign boundary (7.4)-(7.8);
+  and Cartan homotopy boundary (8.1)-(8.3).
+Scope: finite visit spaces; finite operator families; spatially constant
+  coefficients for Theorem 4.1; fixed L=16 sharp cubes; finite-dimensional
+  polynomial Gaussian range theorem; abstract fixtures are not A1 roots.
+Dependencies: R-063, R-068, R-093, R-102, R-104, R-107, R-110,
+  R-116, R-117.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command:
+  E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_revisit_quotient_operator_carleson_signed_score_
+  boundary_verify.py
+Expected output: Integrated R-118 PASS; primary 33/33 and independent
+  27/27 children PASS; all authority, source, note, PDF, manifest,
+  and stored-result pins valid.
+Falsification gate: any failed quotient equivalence, spectral exponent,
+  opposite-visit, Hermite, double-divergence, score-split, Cartan,
+  child/source/note/PDF/manifest assertion, or use beyond stated scope.
+Tier before / after: T4 / T4.
+No-overclaim statement: The universal PSD random-W representation is false,
+  but a production-specific positive complete-cluster representation remains
+  open. No complete adapted A1 packet, uniform endpoint multiplier,
+  progressive/revisit H_A,
+  one-use aggregation, OVERLAP_src, Nelson, removal, interacting measure,
+  Sector-A closure, or T5-T7 promotion is proved.
+Next required action: Compute the zero/first chaoses and canonical W of the
+  smallest legal adapted cluster, then prove its complete trace/forest
+  compatibility, vertical basicness, and endpoint operator variation.
+\end{verbatim}

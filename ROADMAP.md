@@ -331,13 +331,21 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   give strict all-direction canonical dyadic-root margins at q=10/9 and
   2q=20/9, so both frozen bare-root normalizers exist. A same-shell phase
   modulation simultaneously retires every local Lipschitz metric error-bound
-  route; the trace proof does not need one. The two direct A13 burdens are now
-  (i) a legal complete adapted signed-packet conditional normalizer with the
-  R-104/R-116 owners, predictability, terminal-sextic localization or once-only
-  payment, and every owner
-  retained exactly once, and (ii) a cutoff-summable log-normalizer ledger with
-  one-use source-energy and terminal-sextic aggregation. Strict per-shell
-  normalizer existence alone does not imply the second burden.
+  route; the trace proof does not need one. R-118 proves the exact finite-visit
+  quotient criterion `ker L subset ker K` iff `K=L* B L` and extends the R-068
+  centered-form estimate to spatially constant selfadjoint operator families
+  with bounded absolute spectral variation, without a visit-count loss. Its
+  exact opposite-visit and Hermite fixtures show separately that a diagonal
+  visit square does not automatically descend to the terminal sextic and that
+  a universal PSD random-`W` double-divergence owner is false. The viable direct
+  route is therefore finite: compute the zero and first Wiener chaoses of the
+  smallest legal complete adapted cluster; if they cancel, construct the
+  canonical signed preimage, match the actual trace and R-063 forest, prove
+  vertical basicness plus endpoint spectral/multiplier and synthesis bounds,
+  and invoke R-068 once over the R-093 directed source union. These production
+  identities, not another abstract positivity-first normalizer, are the two
+  direct A13 burdens. Strict per-shell normalizer existence alone does not
+  imply the second burden.
   `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
   remain open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
@@ -926,12 +934,17 @@ preserved in git/changelog rather than treated as current gates.
    constant, and strict canonical all-shell trace margins at q and 2q; the
    frozen bare-root normalizers therefore exist. Its exact same-shell phase
    fixture rules out local Lipschitz metric regularity without harming that
-   trace route. Continue with the legal complete adapted owner-preserving
-   signed packet, including predictability and terminal-sextic localization
-   or once-only payment, then
-   prove cutoff-summable conditional normalizer costs and aggregate source
-   energy and terminal sextic charge once. Do not mistake strict per-shell
-   normalizer existence for summability, and do not substitute a centered
+   trace route. R-118 supplies the finite-visit quotient theorem and a
+   visit-count-free operator-valued R-068 estimate under absolute spectral
+   variation. It also retires automatic diagonal-visit-to-terminal ownership
+   and universal PSD random-`W` factorisation. Continue by computing the zero
+   and first chaoses of the smallest legal complete adapted cluster; only if
+   they cancel, construct its canonical signed double-divergence coefficient,
+   match the trace and R-063 forest, prove vertical basicness and endpoint
+   spectral/multiplier plus source-synthesis bounds, and then spend source
+   energy and terminal sextic exactly once over the R-093 directed union. Do
+   not mistake strict per-shell normalizer existence for summability, and do
+   not substitute a centered
    abstract tensor, full-Wick tensor normalizer, derivative-range test, or
    standalone gauge plane wave for the production root.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for

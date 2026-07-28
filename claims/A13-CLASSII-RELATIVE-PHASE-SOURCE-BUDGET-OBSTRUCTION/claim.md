@@ -1069,6 +1069,21 @@ the following structural results and proof-architecture boundaries hold.
     refuting the trace route. The legal complete adapted owner packet and a
     cutoff-summable one-use source/sextic ledger remain the two direct A13
     burdens; downstream Sector-A gates remain open and tier stays T4.
+61. `A13-CLASSII-REVISIT-QUOTIENT-OPERATOR-CARLESON-SIGNED-SCORE-BOUNDARY`
+    is R-118. A finite-visit selfadjoint quadratic form descends to the
+    endpoint quotient exactly when it annihilates the synthesis kernel,
+    equivalently when it factors as `L* B L`. The R-068 centered-form theorem
+    extends without visit-count loss to spatially constant operator families
+    with bounded absolute spectral variation. Exact terminal-only descent of
+    the recombined selfadjoint form requires quotient factorization; the
+    termwise factorization plus uniform synthesis bridge is sufficient and is
+    not asserted necessary. Every
+    scalar Gaussian polynomial splits canonically into zero chaos, first
+    chaos, and one double divergence. The exact two-visit Hermite quotient has
+    mean `-epsilon^2` and a unique sign-changing scalar preimage, so universal
+    PSD random-`W` factorization is false. The complete adapted A1 low-chaos,
+    trace/forest, vertical-basicness, multiplier, and one-use estimates remain
+    open; tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -1520,7 +1535,24 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 ## Current evidence
 
-The current R-117 package is:
+The current R-118 package is:
+
+- `classii_revisit_quotient_operator_carleson_signed_score_boundary_manifest.json`
+- `notes/classii-revisit-quotient-operator-carleson-signed-score-boundary-260728-v1.0.tex.txt`
+- `notes/classii-revisit-quotient-operator-carleson-signed-score-boundary-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_revisit_quotient_operator_carleson_signed_score_boundary.py`
+- `../../codes/foundations/a13_classii_revisit_quotient_operator_carleson_signed_score_boundary_independent.py`
+- `../../codes/foundations/a13_classii_revisit_quotient_operator_carleson_signed_score_boundary_verify.py`
+- `runs/2026-07-28-primary-revisit-quotient-operator-carleson-signed-score-boundary/result.json`
+- `runs/2026-07-28-independent-revisit-quotient-operator-carleson-signed-score-boundary/result.json`
+- `runs/2026-07-28-integrated-revisit-quotient-operator-carleson-signed-score-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-118`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-universal-psd-random-w-double-divergence`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-universal-nonlinear-tangent-square-first-normalizer`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-full-hessian-cartan-chain-primitive`
+- `../../explorations/log.jsonl` (`EXP-000357`--`EXP-000363`)
+
+The immediate R-117 predecessor package remains binding:
 
 - `classii_rational_horizon_uniform_root_trace_margin_boundary_manifest.json`
 - `notes/classii-rational-horizon-uniform-root-trace-margin-boundary-260728-v1.0.tex.txt`
@@ -3182,8 +3214,12 @@ canonical same-shell q and 2q trace margins, fixed-cutoff bare-root normalizer
 existence, and a fixed-shell metric no-go. The R-117 trace result concerns the
 degree-two horizon with matching same-shell covariance, fixed independent
 heat, and fixed orthogonal output projection; it is not a raw finite-amplitude
-heat estimate or an arbitrary cluster theorem. None of R-114--R-117 proves the
-legal complete adapted progressive/revisit owner packet, a cutoff-summable
+heat estimate or an arbitrary cluster theorem. R-118 proves the abstract
+quotient criterion, visit-count-free operator R-068 extension, and canonical
+Gaussian second-divergence range, while its Hermite and Cartan audits retire a
+universal PSD coefficient and an isolated current primitive. None of
+R-114--R-118 proves the legal complete adapted progressive/revisit owner
+packet, its low-chaos and trace/forest compatibility, a cutoff-summable
 conditional log-normalizer ledger, or the once-only source/sextic aggregation.
 `OVERLAP_src`, Nelson, removal, interacting measure, Sector-A closure, and
 T5--T7 promotion remain open. Tier stays T4.
@@ -3924,3 +3960,15 @@ T5--T7 promotion remain open. Tier stays T4.
   extraction, no-form, and all-page Poppler QA. The legal complete adapted
   owner packet and cutoff-summable one-use source/sextic ledger remain open;
   tier stays T4.
+- 2026-07-28: Registered R-118. The finite-visit quotient theorem and the
+  operator-valued R-068 extension remove visit count under absolute spectral
+  variation. Exact terminal-only descent of the recombined selfadjoint form
+  requires quotient factorization; the termwise endpoint bridge is sufficient
+  and not proved necessary. The canonical Gaussian double-divergence theorem
+  turns the adapted identification into zero/first-chaos tests. An exact
+  two-visit Hermite quotient has negative mean and a unique signed preimage,
+  now owned by the dedicated universal-PSD negative result; R-102's curl
+  remains an inherited isolated-current boundary. Primary `33/33`, non-importing
+  independent `27/27`, and integrated `51/51` pass. The eight-page PDF passes
+  form, zero-overfull, extraction, no-form, and all-page Poppler QA. The full
+  adapted trace/forest factorization and one-use ledger remain open; tier T4.

@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [R-118 adversarial scope hardening and PSD no-go authority] - 2026-07-28
+
+Adversarial review narrowed the R-118 terminal statement: exact quotient factorisation is necessary for fibre-invariant descent of the recombined selfadjoint form, while the termwise K_r=L*B_rL condition with a uniform synthesis bound is a sufficient bridge and is not claimed necessary. The exact Hermite sign-changing-preimage theorem is promoted to its own negative authority, NG-2026-07-28-A13-UNIVERSAL-PSD-RANDOM-W-DOUBLE-DIVERGENCE; it refutes only a universal PSD representation, not production-specific cancellation or positive structure. EXP-000363 records the correction. The A13 status card and curated development arc are advanced from their stale R-117/R-108 frontiers to R-118, with both gates and tier unchanged.
+
+## [R-118 revisit quotient, operator Carleson, and signed-score boundary] - 2026-07-28
+
+R-118 proves the exact finite-visit quotient criterion, the corresponding two-sided form bound, and a visit-count-free operator-valued extension of R-068 under absolute spectral variation. It also proves the canonical Gaussian zero/first-chaos plus second-divergence decomposition. Exact opposite-visit and Hermite fixtures retire automatic visit-to-terminal ownership and universal PSD random-W factorisation without claiming an A1 counterexample. Primary 33/33, non-importing independent 27/27, and integrated 51/51 assertions pass; the eight-page proof PDF passes Poppler visual QA with zero overfull boxes. The remaining production route is low-chaos cancellation, canonical signed preimage, trace/R-063 forest compatibility, vertical basicness, endpoint spectral/multiplier and synthesis bounds, then one global R-068 step over the R-093 source union. Both A13 gates and Sector A remain open.
+
 ## [A13 proof-front loop audit and route reset after R-117] - 2026-07-28
 
 Audited R-094 through R-117 and found genuine local progress followed by a structural cycle at the unchanged complete-adapted-packet and one-use aggregation burdens. Selected the direct owner-complete source-action inequality as the primary architecture, isolated centered canonical det2 high-shell summability as a scoped support route, and imposed fold-first and sign-first stop rules on transport alternatives. Added EXP-000351 through EXP-000356; no claim tier or gate status changed.

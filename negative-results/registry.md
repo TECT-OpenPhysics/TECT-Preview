@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-UNIVERSAL-PSD-RANDOM-W-DOUBLE-DIVERGENCE](#ng-2026-07-28-a13-universal-psd-random-w-double-divergence) | represent every centered nonlinear revisit residual by a positive-semidefinite random second-divergence coefficient, with no signed coefficient or separate low-chaos owner | the exact scalar two-visit Hermite quotient has mean `-epsilon^2`; after centering, its unique `L2` preimage is `W_can=epsilon^2(H2+2aH1)=epsilon^2((G+a)^2-(a^2+1))`, which changes sign. This refutes only the universal PSD representation: a complete production cluster may cancel its low chaoses or have additional coupled owners |
 | [NG-2026-07-28-A13-FIXED-SHELL-LIPSCHITZ-METRIC-REGULARITY](#ng-2026-07-28-a13-fixed-shell-lipschitz-metric-regularity) | derive the complete R-082 root trace margin from a local Lipschitz distance-to-null-set error bound, even first at fixed cutoff | in the legal shell `S_8`, the active phase-modulated field `u_t=exp(6 i kappa x_1)(1+i t cos(kappa x_1))e_1`, `chi=0`, has null-set distance `O(|t|)` but full homogeneous current `O(t^2)`; standardizing to the unit root sphere changes only a radial `1+O(t^2)` factor. Thus local Lipschitz metric regularity fails. This is a method no-go, not a normalizer counterexample: R-117 instead proves an all-direction canonical same-shell trace margin |
 | [NG-2026-07-28-A13-CENTERED-QUADRATIC-NULL-CONE-NORMALIZER](#ng-2026-07-28-a13-centered-quadratic-null-cone-normalizer) | infer a nonlinear root normalizer from exact centering, PSD tangent covariance, and finite unweighted covariance/double-divergence costs | for independent U,V, the exactly centered packet L=((2+U^2-V^2)^2-4(U^2+V^2))/2 has H=128 and K_W=1088, yet E exp(-qL) diverges for every q>=1/4 along a common-null-cone tube. A strict parabolic-tangent recession margin or a critical-stratum theorem is indispensable. This is an abstract trace-compatible tensor no-go, not an A1 production counterexample |
 | [NG-2026-07-28-A13-FULL-WICK-TENSOR-NORMALIZER](#ng-2026-07-28-a13-full-wick-tensor-normalizer) | repair the nonlinear root by replacing the physical partial-Wick owner with an abstract exactly centered full-Wick square and paying only its realized tangent-covariance cost | the two-output tensor R=(2 epsilon UV,2 kappa epsilon H2(V)) has exact full-Wick mean zero and finite covariance cost, but its normalizer has the sharp domain q epsilon^2<1/4. At q=10/9, kappa=1/100 and an explicit amplitude below the boundary give a Laplace lower bound above 9 while the proposed exponent is below 21/10. The fixture is abstract and does not embed a legal A1 row |
@@ -163,6 +164,34 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-28-a13-universal-psd-random-w-double-divergence"></a>
+### NG-2026-07-28-A13-UNIVERSAL-PSD-RANDOM-W-DOUBLE-DIVERGENCE -- the canonical two-visit preimage is signed
+
+**Claim / route.**  After subtracting the declared frozen affine packet,
+represent every nonlinear same-root revisit residual as one positive-
+semidefinite random coefficient `W` through `delta^2 W/2`, possibly together
+with a nonnegative owner, without first identifying its zero and first Wiener
+chaoses.
+
+**Failure mode.**  For the exact two-visit scalar Hermite fixture
+`x_s=epsilon v(aG+sH2(G))`, `s=0,1/2,1`, the quotient residual is
+`F=epsilon^2(aH3+H4/2-1)`.  Hence `E F=-epsilon^2` and its first chaos
+vanishes.  The centered part has the unique scalar `L2` preimage
+`W_can=epsilon^2(H2+2aH1)=epsilon^2((G+a)^2-(a^2+1))`, which is negative at
+`G=-a` and positive for sufficiently large `|G|`.  The uncentered packet is
+not a pure double divergence at all, and its negative mean also excludes a
+double divergence plus a nonnegative remainder.
+
+**Evidence.**  R-118 proof note, Theorem 6.1 and the exact two-visit fixture in
+Section 7; primary symbolic audit `33/33`; non-importing standard-library
+audit `27/27`; integrated manifest-pinned verifier `51/51`.
+
+**Consequence.**  Universal PSD random-`W` factorisation is false.  This is an
+abstract one-root diagnostic, not an A1 production counterexample.  A legal
+complete adapted production cluster may cancel its zero and first chaoses,
+may use the canonical signed coefficient with its full trace/forest
+companions, or may possess additional coupled positive structure.
 
 <a id="ng-2026-07-28-a13-fixed-shell-lipschitz-metric-regularity"></a>
 ### NG-2026-07-28-A13-FIXED-SHELL-LIPSCHITZ-METRIC-REGULARITY -- phase modulation defeats a local distance-to-current error bound

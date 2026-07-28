@@ -684,6 +684,41 @@ endpoint theorem.
     it. `OVERLAP_src`, Nelson, removals, interacting-measure construction, and
     Sector A remain open at T4.
 
+50. **Square-first normalizers and the closed stationary scalar model.**
+    R-109--R-115 separate legal square-before-average conditioning from raw
+    adapted exponentiation, derive the exact random-`W` score/trace ledger,
+    and close the stationary scalar `k:2k` normalizer for every covariance
+    shape and amplitude.  The closure uses the actual packet's support and
+    four-moment Radau/skew geometry; centering-only, tangent-square-first,
+    generic moment-reserve, and coefficient-sign induction routes are retired.
+    These are scalar or frozen-root theorems, not a complete adapted A1
+    cluster or a one-use source/sextic aggregation.
+
+51. **Same-root quotient and rational-horizon trace margin.** R-116 proves
+    that a complete same-root visit packet descends only after the endpoint,
+    trace, and contraction-connected owners are recombined, and gives the
+    exact polynomial parabolic-tangent classifier. R-117 extends the classifier
+    to the full finite-dimensional rational horizon and proves strict
+    all-direction canonical dyadic-shell trace margins at `q` and `2q`, hence
+    frozen bare-root normalizer existence. A same-shell phase path retires the
+    proposed local Lipschitz metric route without affecting the trace theorem.
+    The legal adapted packet and summable one-use ledger remain open.
+
+52. **Visit quotient, operator Carleson, and signed-score boundary.** R-118
+    proves that exact fibre descent of one recombined selfadjoint visit form is
+    equivalent to kernel annihilation and `K=L* B L`, and extends R-068 to
+    spatially constant operator families under bounded absolute spectral
+    variation without a visit-count loss. The termwise endpoint condition is
+    only a sufficient terminal-payment bridge, not a proved necessity.
+    Gaussian chaos gives a canonical signed second-divergence coefficient;
+    the exact two-visit Hermite residual has negative mean and a unique
+    sign-changing preimage, formally retiring a universal PSD random-`W`
+    representation while leaving production-specific cancellation open. The
+    remaining route is now finite: test low chaoses, trace/forest matching,
+    vertical basicness, endpoint multiplier/synthesis, and then apply R-068
+    once over the directed source union. Both A13 gates and Sector A remain
+    open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.
