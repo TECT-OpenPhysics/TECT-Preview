@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-RANDOM-W-HS-ONLY-SCORE-TRANSFER](#ng-2026-07-28-a13-random-w-hs-only-score-transfer) | extend the fixed-predictable-PSD R-109 score-transfer cost to a same-root random PSD matrix using only its pathwise Hilbert--Schmidt size | a uniformly positive scalar weight has signed score of order `M` and double-divergence cost of order `M^4`, and a rotating rank-one projection has constant trace/HS/operator norms but the same derivative growth. Random `W` requires its full Gaussian double divergence, not a static HS norm |
+| [NG-2026-07-28-A13-UNIVERSAL-NONLINEAR-TANGENT-SQUARE-FIRST-NORMALIZER](#ng-2026-07-28-a13-universal-nonlinear-tangent-square-first-normalizer) | control every nonlinear diagonal packet by one quarter of its realized tangent-covariance square without first proving centering or paying the mean debt | for `Y=epsilon(G^2+aG-1)` the complete trace-corrected packet has mean `-epsilon^2`; at `q=10/9,a=1,epsilon=1/10`, Jensen gives `1/90` while the proposed square cost is only `73/32400`, leaving the exact violation `287/32400` |
+| [NG-2026-07-28-A13-CROSS-RESONANCE-POINTWISE-BASELINE-PAYMENT](#ng-2026-07-28-a13-cross-resonance-pointwise-baseline-payment) | close the physical `k:2k` complete cluster by a termwise nonnegative pointwise payment at each resonant pair | the sharp completion in this architecture needs `(9A^2/10+4w)R+vS`; its expectation contains `9A^2v/20`, whose three-dimensional production shell mass grows like `2^j`. The local completion is exact but its baseline cannot be summed globally |
 | [AUDIT-2026-07-28-A13-R108-REALIZED-COVARIANCE-FILTRATION](#audit-2026-07-28-a13-r108-realized-covariance-filtration) | R-108 realized-covariance square-first target schema | a current-root-dependent `||S_real||_HS^2` cannot appear raw as an `F_(j-1)` conditional-normalizer cost; its square must first be formed and then conditionally averaged, or replaced by a proved predictable envelope. An auxiliary-copy determinant instead creates an outer exponential moment of the random cost. R-108's exact identities and covariance-order verdict remain valid |
 | [NG-2026-07-28-A13-STEIN-SECOND-JET-EXPONENTIATION](#ng-2026-07-28-a13-stein-second-jet-exponentiation) | replace a raw R-063 Wick coordinate by its Gaussian-integration-by-parts derivative representative inside a conditional exponential normalizer | for `h_M=M^(-1/2)sin(MG)`, the centred derivative representative has log-Laplace asymptotic `|theta|M-(1/2)log(2pi|theta|M)+o(1)`, while the raw Wick coordinate has vanishing exponential scale. The exact score-transfer expectation bound remains valid |
 | [NG-2026-07-28-A13-PREDICTABLE-MULTIROW-BACKWARD-RESOLVENT](#ng-2026-07-28-a13-predictable-multirow-backward-resolvent) | substitute rowwise predictable future Gaussian maps into the jointly frozen global backward-resolvent determinant and treat the result as a density martingale | with `A1=1` and bounded `A2=1_{|xi1|>1}`, the candidate total mass is `erf(sqrt(19/18))+erfc(sqrt(29/38))=1.070433115292664...>1`; a bounded smooth `epsilon tanh(xi1)` row has the same strict small-amplitude defect. Jointly frozen multi-row and one-fresh-root past-measurable formulas remain exact |
@@ -147,6 +150,88 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-28-a13-random-w-hs-only-score-transfer"></a>
+### NG-2026-07-28-A13-RANDOM-W-HS-ONLY-SCORE-TRANSFER -- a same-root random PSD score weight is not controlled by its static HS norm
+
+**Failure mode:** extend the R-109 fixed-past score-transfer estimate to a
+same-root Gaussian-dependent symmetric PSD matrix `W(xi)` while charging only
+`||W||_HS^2`, its trace, its operator norm, or its rank.
+
+**Evidence:** for
+`h_M=M^(-1/2)sin(MG)` and
+`w_M^tau=1+tau epsilon cos(2MG)`, `0<epsilon<1`, the complete signed form is
+
+`F_M^tau=M[e^(-2M^2)+(tau epsilon/2)(1+e^(-8M^2))]`,
+
+while its exact double-divergence cost is asymptotic to
+`8 epsilon^2 M^4`.  The `tau=+1` branch violates every lower form whose
+right side sees only the bounded static size of `w_M^tau`.  More strongly,
+the two-dimensional rotating rank-one matrix
+
+`W_M^tau=(1/2)[[1+tau cos(2MG),sin(2MG)],[sin(2MG),1-tau cos(2MG)]]`
+
+is pathwise a projection with trace, HS norm, and operator norm all equal to
+one, but its signed form is asymptotic to `tau M/4` and
+`E(delta^2 W_M^tau)^2=2M^4(1+e^(-8M^2))+4M^2+2`.
+
+**Consequence:** the legal random-weight theorem must retain
+`delta_xi^2 W=xi^T W xi-Tr W-2 xi dot div W+div^2 W`, or a proved bound for
+its Gaussian chaos--Sobolev norm.  This is not a counterexample to the fixed-
+past R-109 theorem, a random-weight estimate with derivative budget, the full
+production signed cluster, `OVERLAP_src`, or Nelson.
+
+<a id="ng-2026-07-28-a13-universal-nonlinear-tangent-square-first-normalizer"></a>
+### NG-2026-07-28-A13-UNIVERSAL-NONLINEAR-TANGENT-SQUARE-FIRST-NORMALIZER -- a nonlinear tangent-covariance square does not pay an uncentred diagonal mean
+
+**Failure mode:** infer a universal square-first conditional normalizer for a
+nonlinear diagonal packet from the realized tangent covariance alone, without
+first proving that the complete trace correction centers the packet or adding
+an explicit predictable mean payment.
+
+**Evidence:** let `G` be standard Gaussian and
+`Y=epsilon(G^2+aG-1)`.  The complete trace-corrected packet
+
+`L=(epsilon^2/2)[(G^2+aG-1)^2-(2G+a)^2]`
+
+has `E L=-epsilon^2`, whereas its tangent covariance square has expectation
+`epsilon^4(a^4+24a^2+48)`.  Therefore Jensen gives
+`log E exp(-qL)>=q epsilon^2`.  At `q=10/9`, `a=1`, and
+`epsilon=1/10`, this lower bound is `1/90`, but the proposed cost
+`(q^2/4)E S_real^2` is `73/32400`; the exact gap is `287/32400>0`.
+
+**Consequence:** trace compatibility and centering are load-bearing owner
+conditions.  The exact trace-corrected diagonal interpolation remains valid,
+but its endpoint needs a genuine owner-preserving centering identity plus a
+tilted cross-score ledger.  This abstract fixture is not a production/Nelson
+counterexample and does not refute a square-first theorem with the mean debt
+explicitly paid.
+
+<a id="ng-2026-07-28-a13-cross-resonance-pointwise-baseline-payment"></a>
+### NG-2026-07-28-A13-CROSS-RESONANCE-POINTWISE-BASELINE-PAYMENT -- the sharp local k:2k completion spends a nonsummable baseline
+
+**Failure mode:** close each physical resonant `k:2k` complete-output packet
+by adding an independent nonnegative pointwise payment and then sum those
+payments over production shells.
+
+**Evidence:** with constant mode `A`, variance parameters `v,w`, and radial
+variables `R,S`, the worst cross phase gives the exact sharp completion
+
+`(9/10)A^2R+10RS+6AC=10R(sqrt(S)-3|A|/10)^2>=0`.
+
+Thus the local payment
+`D_pay=(9A^2/10+4w)R+vS` is sufficient, and `9/10` is sharp within this
+termwise architecture.  But
+`E D_pay=9A^2v/20+5vw/2`.  For production covariance
+`v_k` of order `|k|^-2`, the `A^2v_k` term has three-dimensional dyadic shell
+mass of order `2^j` and diverges.  By contrast, the covariance-square floor
+has shell exponent `-3` and the square-first baseline has exponent `-1`.
+
+**Consequence:** termwise or bounded-multiplicity positive-density pair
+completion is retired.  The bare signed all-`q` complete `k:2k` normalizer,
+sparser grouping, larger contraction-closed signed clusters, and a global
+determinant/cancellation architecture remain live; no full production or
+Sector-A counterexample is claimed.
 
 <a id="audit-2026-07-28-a13-r108-realized-covariance-filtration"></a>
 ### AUDIT-2026-07-28-A13-R108-REALIZED-COVARIANCE-FILTRATION -- a realized covariance square must be conditioned before pre-root iteration

@@ -937,6 +937,33 @@ the following structural results and proof-architecture boundaries hold.
     no-multiplicity global payment, `OVERLAP_src`, Nelson, removals,
     interacting-measure construction, and Sector A remain open; tier stays
     T4.
+53. `A13-CLASSII-RANDOM-W-SKOROHOD-DIAGONAL-CROSSMODE-BOUNDARY` is R-110.
+    For a symmetric same-root Gaussian-dependent PSD matrix `W` in the domain
+    of the Gaussian double divergence, the complete signed second jet is
+    exactly `(1/2)E[||h||^2 delta^2W]` and
+    `E<h,Dh(Wxi-div W)>`. Its Young-optimized conditional cost is
+    `q^2 E[(delta^2W)^2]/(128 sqrt(eta zeta))`; the full chaos--Sobolev norm
+    is sufficient, and fixed `W` recovers R-109 exactly. Uniformly positive
+    scalar weights and rotating rank-one projections prove that static PSD,
+    trace, operator, rank, or HS data cannot replace the derivative cost.
+    A trace-compatible diagonal coupling has the exact derivative
+    `Phi'(rho)=q^2 E_(nu_rho)Gamma_rho` and an explicit decoupled endpoint,
+    but an exact nonlinear fixture shows that realized tangent-covariance
+    square alone misses an order-`epsilon^2` mean debt. In the stationary
+    scalar two-frequency `k:2k` whole-output model, the exact packet is
+    centered and
+    `H-2 Var(P)=(v^4+16v^2w^2+16w^4)/4>0` when `v+w>0`; the third moment is
+    favorable on the right small-`q` side. Four declared points retain
+    positive margins at quadrature orders 24 and 48, but this is neither a
+    convergence claim nor an all-`q` theorem. The architecture-sharp `9/10`
+    pointwise payment is locally exact but recreates a nonsummable
+    positive-density bounded-multiplicity production baseline. No full A1
+    embedding of the scalar model is asserted. `EXP-000298--EXP-000304`
+    preserve all advanced, failed, and inconclusive routes. The bare all-`q`
+    scalar-model inequality, owner-preserving trace/mean and tilted-score
+    ledger, adapted production cluster, `OVERLAP_src`, Nelson, removals,
+    interacting-measure construction, and Sector A remain open; tier stays
+    T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -996,6 +1023,7 @@ is a scoped T4 subproof and does not promote A13.
 | Coherent output cluster / predictable-baseline boundary | Exact likelihood-tilt entropy production, jointly frozen backward-resolvent martingale, one-fresh-root past-measurable whole-output determinant, rowwise-predictable global-normalizer no-go, output trace allocation and singleton-output no-go, sequential determinant boundary, direct predictable-baseline action, covariance-mass invariance, adapted second-jet and carrier-KL no-gos, and parked convexified-divergence route | T4 analytic/exact/executed boundary; adapted complete-cluster/matrix-Carleson estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Complete-cluster quotient / covariance-order / Carleson frontier | Historical-versus-direct Cartan contract audit; exact rational subdivision quotient; quotient-safe endpoint conditional identity and CM minimization; complete-cluster signed normal form; bare average-before-square deficit with explicit repair tradeoff; absolute arbitrary-selector future-feedback HS/PSD one-sextic no-go; exact `q=10/9` budget | T4 analytic/exact/executed synthesis and method boundary; square-before-average remains viable only on one fixture, while the uniform signed complete-cluster estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Square-first pair normalizer / signed score transfer / filtration boundary | Global conditional Bennett normalizer; all-amplitude one-pair square-before-average bound and fresh-pair supermartingale; realized-covariance filtration repair; selector-independent centered quartic floor and divergent full-pair baseline boundary; fixed-predictable-PSD signed score transfer; exponential Stein-substitution no-go | T4 analytic/exact/executed advance and method boundary; adapted cross-mode production cluster, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
+| Random-W Skorohod / trace-corrected diagonal / scalar k:2k frontier | Exact double-divergence assembly and Young-optimized moment form; static covariance-norm no-go; chaos--Sobolev sufficient gate; exact trace-corrected interpolation and nonlinear mean-debt no-go; stationary scalar k:2k exact moments, strict right-small-q margin, two-order finite falsifiers, and architecture-sharp but globally nonsummable pointwise payment | T4 analytic/exact/executed advance and method boundary; no full A1 embedding or bare all-q scalar theorem, and the adapted complete production cluster, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1008,6 +1036,8 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
 - Fixed `L=16` torus.
 - Three complex fields in the A7 six-real convention.
 - A1 production symbol and coefficients.
+- R-110 Section 5 is only a stationary scalar two-frequency cross-output
+  model; no embedding as the full A1 production tensor is asserted.
 - Fixed positive `rho_regularizer=1e-12`.
 - Common entrywise-real-even scalar Fourier cutoffs.
 - Same-cutoff covariance-normal Wick subtraction.
@@ -1318,8 +1348,18 @@ Current subordinate order:
     diverges, and physical cross-mode resonances prevent tensorization.
     Complete signed second-jet score transfer is available only for a fixed
     past-measurable PSD operator, and the resulting Stein representative
-    cannot replace the raw Wick forest inside an exponential estimate. The
-    live target is therefore still one adapted contraction-closed production
+    cannot replace the raw Wick forest inside an exponential estimate. R-110
+    replaces the fixed weight by the exact same-root double divergence and a
+    chaos--Sobolev sufficient cost, while proving that static covariance norms
+    miss current-root rotation. Its trace-corrected interpolation leaves a
+    tilted cross-score and a genuine mean-owner obligation. In the stationary
+    scalar two-frequency `k:2k` model the complete packet has a strict right-
+    small-`q` margin, but the bare all-`q` inequality remains open and the
+    architecture-sharp pointwise repair is globally nonsummable under the
+    declared production allocation. No full A1 embedding of that scalar model
+    is asserted. The live target is therefore first the bare all-`q` scalar
+    signed cluster theorem or a decisive counterexample, and then one adapted
+    contraction-closed production
     cluster coupling the Cameron--Martin mean, realized covariance, trace,
     mixed baseline, future feedback, rational recovery, and full raw forest
     with every source and sextic owner retained once.
@@ -1327,21 +1367,22 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_square_first_pair_score_transfer_filtration_boundary_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_random_w_skorohod_diagonal_crossmode_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `39/39`;
-- standard-library independent `93/93`;
-- manifest-pinned integrated `106/106` and aggregate `238/238` PASS;
-- conditional Bennett normalizer, exact all-amplitude one-pair square-first
-  theorem and fresh-pair supermartingale, realized-covariance filtration
-  repair, selector-independent quartic floor and full-pair boundary,
-  fixed-predictable-PSD score transfer, exponential Stein-substitution no-go,
-  PDF/surface contracts, and T4 firewalls;
+- primary `40/40`;
+- standard-library independent `49/49`;
+- manifest-pinned integrated `111/111` and aggregate `200/200` PASS;
+- random-W double-divergence and chaos--Sobolev contracts, exact trace-
+  corrected interpolation, static-covariance and nonlinear-mean-debt no-gos,
+  stationary scalar `k:2k` exact moments and right-small-`q` margin, two-order
+  finite-falsifier sign stability, architecture-sharp but nonsummable
+  pointwise payment, PDF/surface contracts, and T4 firewalls;
 - explicit preservation of the open uniform signed complete-cluster,
-  `OVERLAP_src`, Nelson, removal, measure, and Sector-A targets;
+  bare all-`q` scalar model, full A1 embedding, `OVERLAP_src`, Nelson,
+  removal, measure, and Sector-A targets;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -1351,20 +1392,21 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_square_first_pair_score_transfer_filtration_boundary_manifest.json`
-- `notes/classii-square-first-pair-score-transfer-filtration-boundary-260728-v1.0.tex.txt`
-- `notes/classii-square-first-pair-score-transfer-filtration-boundary-260728-v1.0.pdf`
-- `../../codes/foundations/a13_classii_square_first_pair_score_transfer_filtration_boundary.py`
-- `../../codes/foundations/a13_classii_square_first_pair_score_transfer_filtration_boundary_independent.py`
-- `../../codes/foundations/a13_classii_square_first_pair_score_transfer_filtration_boundary_verify.py`
-- `runs/2026-07-28-primary-square-first-pair-score-transfer-filtration-boundary/result.json`
-- `runs/2026-07-28-independent-square-first-pair-score-transfer-filtration-boundary/result.json`
-- `runs/2026-07-28-integrated-square-first-pair-score-transfer-filtration-boundary/result.json`
-- `../../RESULTS-LEDGER.md#r-109`
-- `../../negative-results/registry.md#audit-2026-07-28-a13-r108-realized-covariance-filtration`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-stein-second-jet-exponentiation`
-- `../../explorations/log.jsonl` (`EXP-000291`--`EXP-000297`)
-- R-105--R-108 remain pinned by the R-109 authority chain.
+- `classii_random_w_skorohod_diagonal_crossmode_boundary_manifest.json`
+- `notes/classii-random-w-skorohod-diagonal-crossmode-boundary-260728-v1.0.tex.txt`
+- `notes/classii-random-w-skorohod-diagonal-crossmode-boundary-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_random_w_skorohod_diagonal_crossmode_boundary.py`
+- `../../codes/foundations/a13_classii_random_w_skorohod_diagonal_crossmode_boundary_independent.py`
+- `../../codes/foundations/a13_classii_random_w_skorohod_diagonal_crossmode_boundary_verify.py`
+- `runs/2026-07-28-primary-random-w-skorohod-diagonal-crossmode-boundary/result.json`
+- `runs/2026-07-28-independent-random-w-skorohod-diagonal-crossmode-boundary/result.json`
+- `runs/2026-07-28-integrated-random-w-skorohod-diagonal-crossmode-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-110`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-random-w-hs-only-score-transfer`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-universal-nonlinear-tangent-square-first-normalizer`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-cross-resonance-pointwise-baseline-payment`
+- `../../explorations/log.jsonl` (`EXP-000298`--`EXP-000304`)
+- R-063 and R-104--R-109 remain pinned by the R-110 authority chain.
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -1940,6 +1982,28 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     but the audited inward linear flow has a positive remainder of the wrong
     discard sign. A production-specific domination is unproved, so the route
     is parked rather than promoted.
+91. **DISMISSED: positivity or fixed rank of a same-root random `W` makes the
+    R-109 static HS cost valid.** A uniformly positive scalar weight and a
+    rotating rank-one projection retain bounded static matrix invariants but
+    have signed forms of order `M`; the correct double-divergence cost is of
+    order `M^4`.
+92. **UPHELD AGAINST INTERPOLATION CLOSURE: exact trace transport gives the
+    diagonal normalizer a sign.** It gives only
+    `Phi'(rho)=q^2 E_(nu_rho)Gamma_rho`. The tilted cross-score has no sign,
+    and an exact nonlinear fixture proves that an unowned negative mean debt
+    defeats tangent-covariance square alone.
+93. **UPHELD AGAINST FULL-PRODUCTION OR ALL-`q` PROMOTION: the scalar `k:2k`
+    moment margin proves the physical A1 cluster.** The calculation is a
+    stationary scalar two-frequency model with no claimed full A1 embedding,
+    and `H>2 Var(P)` controls only the right-small-`q` expansion.
+94. **VALID WITH MITIGATION: the finite quadrature is not converged.** Only
+    positive sign at both orders 24 and 48 is asserted. No numerical margin,
+    convergence rate, or global infimum is a theorem; the all-`q` route stays
+    open.
+95. **UPHELD AGAINST GLOBAL POINTWISE PAYMENT: the sharp local `9/10`
+    completion can be summed.** Its expected baseline has three-dimensional
+    shell mass `2^j` under positive-density bounded-multiplicity allocation.
+    Sparse or larger signed clusters remain possible.
 
 ## Falsifier
 
@@ -2355,6 +2419,22 @@ operator results to an adapted cross-mode production-cluster theorem,
 `OVERLAP_src`, Nelson, removals, an interacting measure, Sector-A closure, or
 a higher tier.
 
+The R-110 continuation is additionally falsified by failure of either random-
+`W` double-divergence identity, the Young-optimized form constant, the fixed-
+`W` specialization, or the chaos--Sobolev multiplier; either oscillatory
+scalar or rotating-projector formula and its static-norm boundary; the exact
+trace transport, Price derivative, decoupled endpoint, or nonlinear mean-
+debt fixture and `287/32400` gap; any stationary scalar `k:2k` packet,
+whole-output covariance, mean, variance, third moment, strict right-small-`q`
+margin, architecture-relative `9/10` payment, shell exponent, or two-order
+finite-falsifier sign assertion; any R-110 source, note, PDF, manifest, run,
+registry, exploration, assertion count, or public-surface pin including
+`EXP-000298--EXP-000304`; or any promotion of the scalar model to a full A1
+embedding, its local margin or finite scans to a bare all-`q` theorem, the
+pointwise payment to a summable production owner, or R-110 to an adapted
+complete-cluster, `OVERLAP_src`, Nelson, removal, measure, Sector-A, or higher-
+tier theorem.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -2723,6 +2803,22 @@ resonances prevent pairwise tensorization. The R-108 filtration audit repairs
 the legal conditional order without withdrawing its algebraic identities,
 and Gaussian score transfer is expectation-only, not a pathwise substitution
 inside an exponential estimate. R-109 proves no adapted production-cluster
+identification, uniform complete-cluster lower bound, `OVERLAP_src`, Nelson
+estimate, cutoff/floor removal, interacting measure, Sector-A closure, or
+T5--T7 promotion. Tier stays T4.
+
+R-110 proves the random-`W` identities only under its declared symmetry,
+double-divergence-domain, integrability, and cylindrical approximation
+hypotheses. Its `X/Y` cost is an abstract quadratic/sixth-moment form bound,
+not an established production source/sextic identification. The diagonal
+interpolation is an identity with two still-unbounded gates, not a sign
+theorem. The `k:2k` calculation is a stationary scalar two-frequency model,
+not a full A1 embedding; its moment margin is right-small-`q` only, and the
+two quadrature orders give finite sign-stability evidence without a
+convergence or all-`q` claim. The `9/10` coefficient is sharp only within the
+displayed pointwise architecture, whose nonsummability verdict concerns the
+declared positive-density bounded-multiplicity production allocation. R-110
+proves no bare all-`q` scalar-model normalizer, adapted production-cluster
 identification, uniform complete-cluster lower bound, `OVERLAP_src`, Nelson
 estimate, cutoff/floor removal, interacting measure, Sector-A closure, or
 T5--T7 promotion. Tier stays T4.
@@ -3369,3 +3465,21 @@ T5--T7 promotion. Tier stays T4.
   ten-page PDF passes form, zero-overfull, extraction, and all-page Poppler
   visual QA. The adapted production cluster, `OVERLAP_src`, Nelson, removals,
   interacting-measure construction, and Sector A remain open; tier stays T4.
+- 2026-07-28: Registered R-110. The fixed-predictable score transfer is
+  extended to an exact same-root random-`W` double-divergence identity with a
+  Young-optimized moment-form cost and a chaos--Sobolev sufficient gate;
+  static matrix norms alone fail on uniformly positive and rotating-projector
+  fixtures. Exact trace correction gives a diagonal-to-decoupled interpolation
+  and isolates the tilted cross-score, while a nonlinear fixture records the
+  missing mean owner. The stationary scalar two-frequency `k:2k` model has
+  exact whole-output moments and a strict right-small-`q` margin. Four finite
+  points retain positive margins at orders 24 and 48, but the bare all-`q`
+  inequality remains open, and the architecture-sharp local payment is
+  globally nonsummable under the declared production allocation.
+  `EXP-000298--EXP-000304` preserve all route decisions. Primary `40/40`,
+  non-importing standard-library independent `49/49`, integrated `111/111`,
+  and aggregate `200/200` checks are manifest-pinned. The final twelve-page
+  PDF passes form, zero-overfull, extraction, and all-page Poppler visual QA.
+  No full A1 embedding of the scalar model, adapted production-cluster bound,
+  `OVERLAP_src`, Nelson, removals, interacting-measure construction, or
+  Sector A closure follows; tier stays T4.

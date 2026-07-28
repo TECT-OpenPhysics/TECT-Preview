@@ -149,6 +149,22 @@ Cameron--Martin mean, realized covariance, trace, baseline, rational recovery,
 all visits, and the random-W R-063 forest with source energy and one terminal
 sextic paid once. `OVERLAP_src`, Nelson, removals, the interacting measure,
 and Sector A remain open.
+R-110 replaces the fixed score weight by the exact same-root Gaussian double
+divergence and supplies a dimension-free chaos--Sobolev sufficient gate. It
+also derives the exact trace-corrected diagonal interpolation, while exact
+fixtures retire static covariance-norm control and any universal uncentred
+nonlinear tangent-square normalizer. In the stationary scalar two-frequency
+`k:2k` whole-output model, exact moments give a strict right-small-`q`
+square-first margin; four finite points have positive margins at quadrature
+orders 24 and 48, but neither convergence nor the bare all-`q` inequality is
+proved. The architecture-sharp pointwise repair is nonsummable under the
+declared positive-density bounded-multiplicity production allocation. No full
+A1 embedding of the scalar model is asserted. The next local theorem is the
+bare all-`q` scalar signed cluster or a certified counterexample; any surviving
+mechanism must then be lifted with owner-preserving trace/mean, random-W
+forest, rational recovery, visit, source, and one-terminal-sextic ledgers.
+`OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A remain
+open.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the declared no-revisit one-shot class, reduces far feedback to

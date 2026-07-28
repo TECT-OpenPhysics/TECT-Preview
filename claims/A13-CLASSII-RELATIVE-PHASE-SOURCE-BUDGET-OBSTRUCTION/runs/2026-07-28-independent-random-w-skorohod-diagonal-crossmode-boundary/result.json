@@ -1,0 +1,463 @@
+{
+  "assertion_names": [
+    "constants::random-W q constant",
+    "constants::fixed-W q constant",
+    "interpolation::trace cancellation rho=0.0",
+    "interpolation::trace cancellation rho=0.2",
+    "interpolation::trace cancellation rho=0.75",
+    "interpolation::trace cancellation rho=1.0",
+    "random_w::double-divergence quadrature",
+    "random_w::one-divergence quadrature",
+    "random_w_nogo::oscillatory score tau=1",
+    "random_w_nogo::oscillatory score cost tau=1",
+    "random_w_nogo::oscillatory score tau=-1",
+    "random_w_nogo::oscillatory score cost tau=-1",
+    "random_w_nogo::uniform positive lower eigenvalue",
+    "mean_debt::mean",
+    "mean_debt::covariance square",
+    "mean_debt::Jensen lower",
+    "mean_debt::square cost",
+    "mean_debt::violation",
+    "cross_cluster::mean A=0.0 v=1.0 w=0.0",
+    "cross_cluster::variance A=0.0 v=1.0 w=0.0",
+    "cross_cluster::third moment A=0.0 v=1.0 w=0.0",
+    "cross_cluster::whole-output HS A=0.0 v=1.0 w=0.0",
+    "cross_cluster::leading margin A=0.0 v=1.0 w=0.0",
+    "cross_cluster::mean A=0.75 v=1.2 w=0.4",
+    "cross_cluster::variance A=0.75 v=1.2 w=0.4",
+    "cross_cluster::third moment A=0.75 v=1.2 w=0.4",
+    "cross_cluster::whole-output HS A=0.75 v=1.2 w=0.4",
+    "cross_cluster::leading margin A=0.75 v=1.2 w=0.4",
+    "cross_cluster::mean A=2.0 v=0.3 w=1.7",
+    "cross_cluster::variance A=2.0 v=0.3 w=1.7",
+    "cross_cluster::third moment A=2.0 v=0.3 w=1.7",
+    "cross_cluster::whole-output HS A=2.0 v=0.3 w=1.7",
+    "cross_cluster::leading margin A=2.0 v=0.3 w=1.7",
+    "cross_payment::completion A=0.5 sqrtS=0.0",
+    "cross_payment::completion A=0.5 sqrtS=0.1",
+    "cross_payment::completion A=0.5 sqrtS=0.15",
+    "cross_payment::completion A=0.5 sqrtS=2.0",
+    "cross_payment::completion A=1.0 sqrtS=0.0",
+    "cross_payment::completion A=1.0 sqrtS=0.1",
+    "cross_payment::completion A=1.0 sqrtS=0.3",
+    "cross_payment::completion A=1.0 sqrtS=2.0",
+    "cross_payment::completion A=3.0 sqrtS=0.0",
+    "cross_payment::completion A=3.0 sqrtS=0.1",
+    "cross_payment::completion A=3.0 sqrtS=0.8999999999999999",
+    "cross_payment::completion A=3.0 sqrtS=2.0",
+    "cross_payment::9/10 coefficient is sharp",
+    "cross_payment::baseline shell exponent",
+    "cross_payment::floor shell exponent",
+    "cross_payment::square-first shell exponent"
+  ],
+  "assertions": [
+    {
+      "actual": "25/2592",
+      "expected": "25/2592",
+      "group": "constants",
+      "name": "random-W q constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "25/1296",
+      "expected": "25/1296",
+      "group": "constants",
+      "name": "fixed-W q constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "interpolation",
+      "name": "trace cancellation rho=0.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "interpolation",
+      "name": "trace cancellation rho=0.2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "interpolation",
+      "name": "trace cancellation rho=0.75",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "interpolation",
+      "name": "trace cancellation rho=1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5045742429720121e-12",
+      "expected": "0",
+      "group": "random_w",
+      "name": "double-divergence quadrature",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.105427357601002e-15",
+      "expected": "0",
+      "group": "random_w",
+      "name": "one-divergence quadrature",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.30000004568994026",
+      "expected": "0.30000004568993927",
+      "group": "random_w_nogo",
+      "name": "oscillatory score tau=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "30.84000001218311",
+      "expected": "30.840000012183992",
+      "group": "random_w_nogo",
+      "name": "oscillatory score cost tau=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-0.29999995431006127",
+      "expected": "-0.29999995431006077",
+      "group": "random_w_nogo",
+      "name": "oscillatory score tau=-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "30.839999987815876",
+      "expected": "30.83999998781602",
+      "group": "random_w_nogo",
+      "name": "oscillatory score cost tau=-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.8",
+      "expected": ">0",
+      "group": "random_w_nogo",
+      "name": "uniform positive lower eigenvalue",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/100",
+      "expected": "-1/100",
+      "group": "mean_debt",
+      "name": "mean",
+      "status": "PASS"
+    },
+    {
+      "actual": "73/10000",
+      "expected": "73/10000",
+      "group": "mean_debt",
+      "name": "covariance square",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/90",
+      "expected": "1/90",
+      "group": "mean_debt",
+      "name": "Jensen lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "73/32400",
+      "expected": "73/32400",
+      "group": "mean_debt",
+      "name": "square cost",
+      "status": "PASS"
+    },
+    {
+      "actual": "287/32400",
+      "expected": "287/32400",
+      "group": "mean_debt",
+      "name": "violation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "cross_cluster",
+      "name": "mean A=0.0 v=1.0 w=0.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5",
+      "expected": "0.5",
+      "group": "cross_cluster",
+      "name": "variance A=0.0 v=1.0 w=0.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.75",
+      "expected": "3.75",
+      "group": "cross_cluster",
+      "name": "third moment A=0.0 v=1.0 w=0.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.25",
+      "expected": "1.25",
+      "group": "cross_cluster",
+      "name": "whole-output HS A=0.0 v=1.0 w=0.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.25",
+      "expected": "0.25",
+      "group": "cross_cluster",
+      "name": "leading margin A=0.0 v=1.0 w=0.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.220446049250313e-16",
+      "expected": "0",
+      "group": "cross_cluster",
+      "name": "mean A=0.75 v=1.2 w=0.4",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.195206250000002",
+      "expected": "8.195206250000002",
+      "group": "cross_cluster",
+      "name": "variance A=0.75 v=1.2 w=0.4",
+      "status": "PASS"
+    },
+    {
+      "actual": "132.78200971874998",
+      "expected": "132.78200971874998",
+      "group": "cross_cluster",
+      "name": "third moment A=0.75 v=1.2 w=0.4",
+      "status": "PASS"
+    },
+    {
+      "actual": "17.9328125",
+      "expected": "17.932812500000004",
+      "group": "cross_cluster",
+      "name": "whole-output HS A=0.75 v=1.2 w=0.4",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5424000000000007",
+      "expected": "1.5424000000000002",
+      "group": "cross_cluster",
+      "name": "leading margin A=0.75 v=1.2 w=0.4",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.552713678800501e-15",
+      "expected": "0",
+      "group": "cross_cluster",
+      "name": "mean A=2.0 v=0.3 w=1.7",
+      "status": "PASS"
+    },
+    {
+      "actual": "454.76005",
+      "expected": "454.76005",
+      "group": "cross_cluster",
+      "name": "variance A=2.0 v=0.3 w=1.7",
+      "status": "PASS"
+    },
+    {
+      "actual": "42141.0095675",
+      "expected": "42141.00956749998",
+      "group": "cross_cluster",
+      "name": "third moment A=2.0 v=0.3 w=1.7",
+      "status": "PASS"
+    },
+    {
+      "actual": "943.9709249999999",
+      "expected": "943.9709250000001",
+      "group": "cross_cluster",
+      "name": "whole-output HS A=2.0 v=0.3 w=1.7",
+      "status": "PASS"
+    },
+    {
+      "actual": "34.45082500000012",
+      "expected": "34.450824999999995",
+      "group": "cross_cluster",
+      "name": "leading margin A=2.0 v=0.3 w=1.7",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.225",
+      "expected": "0.22499999999999998",
+      "group": "cross_payment",
+      "name": "completion A=0.5 sqrtS=0.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.024999999999999967",
+      "expected": "0.024999999999999988",
+      "group": "cross_payment",
+      "name": "completion A=0.5 sqrtS=0.1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0.0",
+      "group": "cross_payment",
+      "name": "completion A=0.5 sqrtS=0.15",
+      "status": "PASS"
+    },
+    {
+      "actual": "34.225",
+      "expected": "34.225",
+      "group": "cross_payment",
+      "name": "completion A=0.5 sqrtS=2.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9",
+      "expected": "0.8999999999999999",
+      "group": "cross_payment",
+      "name": "completion A=1.0 sqrtS=0.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3999999999999999",
+      "expected": "0.3999999999999999",
+      "group": "cross_payment",
+      "name": "completion A=1.0 sqrtS=0.1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0.0",
+      "group": "cross_payment",
+      "name": "completion A=1.0 sqrtS=0.3",
+      "status": "PASS"
+    },
+    {
+      "actual": "28.9",
+      "expected": "28.9",
+      "group": "cross_payment",
+      "name": "completion A=1.0 sqrtS=2.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.1",
+      "expected": "8.099999999999998",
+      "group": "cross_payment",
+      "name": "completion A=3.0 sqrtS=0.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.3999999999999995",
+      "expected": "6.399999999999999",
+      "group": "cross_payment",
+      "name": "completion A=3.0 sqrtS=0.1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.552713678800501e-15",
+      "expected": "0.0",
+      "group": "cross_payment",
+      "name": "completion A=3.0 sqrtS=0.8999999999999999",
+      "status": "PASS"
+    },
+    {
+      "actual": "12.100000000000001",
+      "expected": "12.100000000000001",
+      "group": "cross_payment",
+      "name": "completion A=3.0 sqrtS=2.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-0.009999999999999787",
+      "expected": "<0",
+      "group": "cross_payment",
+      "name": "9/10 coefficient is sharp",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "cross_payment",
+      "name": "baseline shell exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3",
+      "expected": "-3",
+      "group": "cross_payment",
+      "name": "floor shell exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1",
+      "expected": "-1",
+      "group": "cross_payment",
+      "name": "square-first shell exponent",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 49,
+  "assertions_total": 49,
+  "results": {
+    "cross_samples": [
+      {
+        "A": 0.0,
+        "leading_margin": 0.25,
+        "third_moment": 3.75,
+        "trace_terms": 4,
+        "v": 1.0,
+        "variance": 0.5,
+        "w": 0.0,
+        "whole_output_hs_square": 1.25
+      },
+      {
+        "A": 0.75,
+        "leading_margin": 1.5424000000000007,
+        "third_moment": 132.78200971874998,
+        "trace_terms": 5,
+        "v": 1.2,
+        "variance": 8.195206250000002,
+        "w": 0.4,
+        "whole_output_hs_square": 17.9328125
+      },
+      {
+        "A": 2.0,
+        "leading_margin": 34.45082500000012,
+        "third_moment": 42141.0095675,
+        "trace_terms": 5,
+        "v": 0.3,
+        "variance": 454.76005,
+        "w": 1.7,
+        "whole_output_hs_square": 943.9709249999999
+      }
+    ],
+    "mean_debt": {
+      "covariance_square": "73/10000",
+      "jensen": "1/90",
+      "mean": "-1/100",
+      "square_cost": "73/32400",
+      "violation": "287/32400"
+    },
+    "q_fixed_cost": "25/1296",
+    "q_random_cost": "25/2592",
+    "shell_exponents": {
+      "covariance_floor": -3,
+      "pointwise_baseline": 1,
+      "square_first_baseline": -1
+    }
+  },
+  "results_sha256": "6f6c4478b0054736c23d1b30482dbd683af839383046b8882a40aa0f41ddebd4",
+  "route_verdicts": {
+    "physical_k2k_bare_all_q": "open",
+    "physical_k2k_moments": "pass",
+    "pointwise_payment": "nonsummable",
+    "random_W_HS_only_extension": "fail",
+    "random_W_double_divergence": "pass",
+    "sector_A": "open",
+    "trace_corrected_interpolation": "pass",
+    "universal_nonlinear_square_first": "fail"
+  },
+  "schema": "tect/a13-random-w-skorohod-diagonal-crossmode-boundary-independent/1.0",
+  "status": "PASS",
+  "version": "1.0.0"
+}

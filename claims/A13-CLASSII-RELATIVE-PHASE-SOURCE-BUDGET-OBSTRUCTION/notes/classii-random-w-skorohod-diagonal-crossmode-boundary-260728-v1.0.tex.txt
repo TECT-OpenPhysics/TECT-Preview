@@ -1,0 +1,889 @@
+% =============================================================================
+% Title: Random-covariance Skorohod completion, trace-corrected diagonal
+%        interpolation, and a stationary scalar cross-mode frontier
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: scoped T4 analytic/exact/executed advance; Sector A remains open
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\HS}{\mathfrak S_2}
+
+\section*{Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{The random-covariance second jet and the diagonal interpolation are
+now exact, and the first stationary scalar cross-mode model has a strict square-first
+variance margin.  The production lower form is not closed.}
+
+For a symmetric current-root-dependent covariance $W(\xi)$, the complete
+second jet is one double Gaussian divergence $\delta_\xi^2W$.  Its
+Young-optimized abstract quadratic/sixth-moment form cost is controlled by
+$K_W=\E[(\delta_\xi^2W)^2\mid\cF_{\rm past}]$, not by the pathwise trace,
+operator norm, or Hilbert--Schmidt norm of $W$.  A uniformly positive scalar
+covariance and a rank-one rotating projector prove that this distinction is
+load-bearing.  Identification of these abstract moments with the production
+source and terminal-sextic owners remains open.
+
+The diagonal current $b+A\xi+R(\xi)$ admits an exact trace-corrected
+interpolation to its decoupled endpoint.  Its derivative is one tilted
+cross-score containing the differentiated trace forest.  A scalar Hermite
+fixture proves that a universal nonlinear square-first normalizer is false
+unless its negative mean debt is first cancelled or explicitly paid.
+
+For the smallest stationary scalar two-frequency $k{:}2k$ whole-output
+model, the exact
+covariance $S_X$, packet $P$, variance, third moment, and
+$H=\E\|S_X\|_{\HS}^2$ are computed.  The identity
+$H-2\Var(P)=(v^4+16v^2w^2+16w^4)/4$ gives strict small-$q$ room when
+$v+w>0$.  A sharp pointwise payment proves a related normalizer, but that
+payment reintroduces the nonsummable $A^2|k|^{-2}$ baseline.  The bare
+all-$q$ complete-cluster inequality remains a live, unproved target.
+
+No statement below proves the adapted production cluster, the one-use
+source-action lower bound, $\mathrm{OVERLAP}_{\rm src}$, Nelson, any removal,
+an interacting measure, or Sector-A closure.  A13 remains T4.
+}}
+\end{center}
+
+The scope is finite cutoff and fixed positive density floor.  The random-$W$
+and owner questions use the A1/R-063/R-107 production conventions, while
+Section 5 is a stationary scalar two-frequency model and is not asserted to
+be an embedded full A1 production cluster.
+All conditional differentiations below are cylindrical and justified first
+for smooth data.  The random-$W$ theorem assumes $W$ lies in the conditional
+domain of $\delta^2$, the displayed products are integrable, and Gaussian
+boundary terms vanish.  Its Sobolev corollary uses the full tensor norms of
+$DW$ and $D^2W$, including both matrix and Malliavin indices.
+
+\section{Complete random-$W$ score transfer}
+
+Condition on $\cF_{\rm past}$.  Let $\xi\sim N(0,\Id_d)$, let $H$ be a real
+Hilbert space, let $h:\R^d\to H$, and let
+$W:\R^d\to\operatorname{Sym}_d$ be positive semidefinite.  Put
+\[
+ (\operatorname{div}W)_i=\sum_j\partial_jW_{ij},\qquad
+ \operatorname{div}^2W=\sum_{i,j}\partial_{ij}W_{ij}.       \tag{1.1}
+\]
+The current-root Gaussian divergence and its second iterate are
+\[
+ (\delta_\xi W)_i=(W\xi-\operatorname{div}W)_i,              \tag{1.2}
+\]
+\[
+ \boxed{
+ \delta_\xi^2W
+ =\xi^TW\xi-\Tr W-2\xi\cdot\operatorname{div}W
+   +\operatorname{div}^2W.}                                 \tag{1.3}
+\]
+
+Define the complete signed second jet
+\[
+ \mathfrak F_W(h)=\E_\xi\left[
+ \|D_\xi h\,W^{1/2}\|_{\HS}^2
+ +\langle h,\Tr_{\R^d}(W D_\xi^2h)\rangle
+ \mid\cF_{\rm past}\right].                                \tag{1.4}
+\]
+
+% evidence-anchor: theorem-1.1-random-w-double-divergence-score-transfer
+\subsection*{Theorem 1.1 (random-covariance double-divergence transfer)}
+
+Under the preceding domain and integrability assumptions,
+\[
+ \boxed{
+ \mathfrak F_W(h)
+ ={1\over2}\E_\xi[\|h\|^2\delta_\xi^2W
+                   \mid\cF_{\rm past}].}                    \tag{1.5}
+\]
+Equivalently,
+\[
+ \boxed{
+ \mathfrak F_W(h)=\E_\xi[
+ \langle h,D_\xi h(W\xi-\operatorname{div}W)\rangle
+ \mid\cF_{\rm past}].}                                     \tag{1.6}
+\]
+
+\emph{Proof.}
+For $g=\|h\|^2$,
+\[
+ {1\over2}\partial_{ij}g
+ =\langle\partial_i h,\partial_jh\rangle
+  +\langle h,\partial_{ij}h\rangle.                          \tag{1.7}
+\]
+Contract (1.7) with $W_{ij}$ and use twice the adjoint relation between
+$D_\xi$ and $\delta_\xi$.  This proves (1.5).  Applying the adjoint relation
+once proves (1.6). \hfill$\square$
+
+The naive frozen-coefficient comparator is
+\[
+ {1\over2}\E_\xi[
+ \|h\|^2(\xi^TW\xi-\Tr W)\mid\cF_{\rm past}].              \tag{1.8}
+\]
+It is not obtained by actually freezing a random $W$.  The exact correction
+between (1.5) and (1.8) is
+\[
+ \boxed{
+ \mathcal R_W(h)=\E_\xi\left[
+ \|h\|^2\left\{-\xi\cdot\operatorname{div}W
+ +{1\over2}\operatorname{div}^2W\right\}
+ \mid\cF_{\rm past}\right].}                               \tag{1.9}
+\]
+Thus the $DW,D^2W$ forest is not deleted; it is assembled into one raw
+double-divergence coordinate.
+
+% evidence-anchor: theorem-1.2-random-w-young-optimized-form-bound
+\subsection*{Theorem 1.2 (Young-optimized conditional form cost)}
+
+Let
+\[
+ K_W=\E_\xi[(\delta_\xi^2W)^2\mid\cF_{\rm past}],\quad
+ X=\E_\xi[\|h\|^2\mid\cF_{\rm past}],\quad
+ Y=\E_\xi[\|h\|^6\mid\cF_{\rm past}].                     \tag{1.10}
+\]
+Then
+\[
+ \boxed{
+ |\mathfrak F_W(h)|\le {1\over2}K_W^{1/2}X^{1/4}Y^{1/4}.}   \tag{1.11}
+\]
+For every $q,\eta,\zeta>0$,
+\[
+ \boxed{
+ -{q\over2}\mathfrak F_W(h)
+ \ge-\eta X-\zeta Y
+ -{q^2K_W\over128\sqrt{\eta\zeta}}.}                       \tag{1.12}
+\]
+
+\emph{Proof.}
+Equation (1.5), Cauchy--Schwarz, and
+$\E\|h\|^4\le X^{1/2}Y^{1/2}$ give (1.11).  Apply the optimized scalar inequality
+\[
+ A x^{1/4}y^{1/4}
+ \le\eta x+\zeta y+{A^2\over8\sqrt{\eta\zeta}}             \tag{1.13}
+\]
+with $A=qK_W^{1/2}/4$. \hfill$\square$
+
+If $W$ is strict-past measurable, then
+\[
+ K_W=2\|W\|_{\HS}^2.                                       \tag{1.14}
+\]
+At $q=10/9$, the random-score coefficient in (1.12) is $25/2592$;
+(1.14) recovers the R-109 coefficient $25/1296$ exactly.
+
+\subsection*{Corollary 1.3 (dimension-free chaos--Sobolev sufficient cost)}
+
+Write the conditional chaos expansion
+\[
+ W=\sum_{n\ge0}I_n(f_n),\qquad
+ f_n\in(\R^d)^{\odot n}\otimes(\R^d)^{\odot2}.             \tag{1.15}
+\]
+Full symmetrisation of the $n+2$ indices does not increase norm.  Since
+\[
+ (n+1)(n+2)=n(n-1)+4n+2,                                    \tag{1.16}
+\]
+one obtains
+\[
+ \boxed{
+ K_W\le\E_\xi[
+ \|D^2W\|^2+4\|DW\|^2+2\|W\|^2
+ \mid\cF_{\rm past}].}                                    \tag{1.17}
+\]
+The norms in (1.17) are full tensor Hilbert norms.  Equality holds in one
+dimension and whenever every chaos kernel is symmetric across all slots.
+
+This is a sufficient production gate, not an accepted production estimate.
+An arbitrary Boue--Dupuis control has only the declared source energy; no
+uniform $DW,D^2W$ budget may be assumed.
+
+\section{Static covariance norms do not control current-root rotation}
+
+% evidence-anchor: proposition-2.1-uniformly-positive-random-w-nogo
+\subsection*{Proposition 2.1 (uniformly positive scalar no-go)}
+
+Let $G\sim N(0,1)$, $0<\epsilon<1$, $\tau\in\{+1,-1\}$, and
+\[
+ h_M(G)=M^{-1/2}\sin(MG),\qquad
+ w_M^\tau(G)=1+\tau\epsilon\cos(2MG).                       \tag{2.1}
+\]
+Then $1-\epsilon\le w_M^\tau\le1+\epsilon$, but
+\[
+ \boxed{
+ \mathfrak F_{w_M^\tau}(h_M)
+ =M\left[e^{-2M^2}+{\tau\epsilon\over2}(1+e^{-8M^2})\right]
+ \sim {\tau\epsilon\over2}M.}                              \tag{2.2}
+\]
+Meanwhile
+\[
+ X_M={1-e^{-2M^2}\over2M}\longrightarrow0,                 \tag{2.3}
+\]
+\[
+ Y_M={10-15e^{-2M^2}+6e^{-8M^2}-e^{-18M^2}\over32M^3}
+ \longrightarrow0.                                         \tag{2.4}
+\]
+The correct score cost is
+\[
+ \boxed{
+ \begin{aligned}
+ K_{w_M^\tau}={}&2+4\tau\epsilon e^{-2M^2}\cr
+ &+\epsilon^2\{1+8M^2+8M^4
+ +(1-8M^2+8M^4)e^{-8M^2}\},
+ \end{aligned}}                                             \tag{2.5}
+\]
+and hence $K_{w_M^\tau}\sim8\epsilon^2M^4$.
+
+For the lower bound on $-(q/2)\mathfrak F$, the $\tau=+1$ branch is the
+counterexample; the negative branch is useful only for auditing a two-sided
+or absolute estimate.  Thus current-root PSD, a uniform scalar lower bound,
+and bounded trace/operator/HS norms do not replace $K_W$.
+
+% evidence-anchor: proposition-2.2-rotating-projector-nogo
+\subsection*{Proposition 2.2 (rank-one rotating-projector no-go)}
+
+For $\xi=(G,H)\sim N(0,\Id_2)$ set
+\[
+ W_M^\tau={1\over2}
+ \begin{pmatrix}
+ 1+\tau\cos(2MG)&\sin(2MG)\cr
+ \sin(2MG)&1-\tau\cos(2MG)
+ \end{pmatrix}.                                             \tag{2.6}
+\]
+Pathwise,
+\[
+ (W_M^\tau)^2=W_M^\tau,\quad W_M^\tau\succeq0,\quad
+ \operatorname{rank}W_M^\tau=1,\quad
+ \Tr W_M^\tau=\|W_M^\tau\|_{\HS}
+ =\|W_M^\tau\|_{\rm op}=1.                                \tag{2.7}
+\]
+Nevertheless,
+\[
+ \mathfrak F_{W_M^\tau}(h_M)
+ =M\left[{1\over2}e^{-2M^2}
+ +{\tau\over4}(1+e^{-8M^2})\right]
+ \sim {\tau M\over4},                                      \tag{2.8}
+\]
+\[
+ K_{W_M^\tau}=2M^4(1+e^{-8M^2})+4M^2+2.                    \tag{2.9}
+\]
+The missing datum is rotation of the eigenspace, not any eigenvalue or
+static matrix norm.
+
+For a square-first covariance $W=AA^T$, write its columns as $a_\alpha$.
+The exact product expansion is
+\[
+ \begin{aligned}
+ \delta_\xi^2(AA^T)=\sum_\alpha\big[&
+ (\xi\cdot a_\alpha)^2-\|a_\alpha\|^2
+ -2\xi\cdot\{(Da_\alpha)a_\alpha
+              +a_\alpha\operatorname{div}a_\alpha\}\cr
+ &+2a_\alpha\cdot D(\operatorname{div}a_\alpha)
+ +\Tr[(Da_\alpha)^2]+(\operatorname{div}a_\alpha)^2
+ \big].
+ \end{aligned}                                             \tag{2.10}
+\]
+Neither PSD nor the notation $AA^T$ gives a sign.  Also
+$\Tr[(Da)^2]$ equals $\|Da\|_{\HS}^2$ only for symmetric $Da$.
+
+The failure in Propositions 2.1--2.2 is registered as
+\[
+ \texttt{NG-2026-07-28-A13-RANDOM-W-HS-ONLY-SCORE-TRANSFER}. \tag{2.11}
+\]
+
+\section{Trace-corrected diagonal-to-decoupled interpolation}
+
+Condition again on the strict past.  Let $X,X'$ be independent standard
+Gaussians in $\R^d$, let
+\[
+ Z_\rho=\rho X+\sqrt{1-\rho^2}\,X',\qquad0\le\rho\le1,       \tag{3.1}
+\]
+and set
+\[
+ y(x,z)=b+Ax+R(z),\qquad S=AA^*.                             \tag{3.2}
+\]
+Write $a_i=Ae_i$, $r_i=\partial_iR$, and
+\[
+ c(z)=\Tr(A^*DR(z))=\sum_i\langle a_i,r_i(z)\rangle.        \tag{3.3}
+\]
+
+The family of traces is compatible precisely when an actual decoupled
+trace/forest $\delta_0$ satisfies
+\[
+ \boxed{\delta_\tau=\delta_0+2c},                            \tag{3.4}
+\]
+and one transports
+\[
+ \delta_\rho=\delta_0+2\rho c.                              \tag{3.5}
+\]
+The physical use of (3.4) is a theorem obligation: $\delta_0$ may not be
+defined formally after deleting R-063 owners.
+
+Define
+\[
+ \ell_\rho(x,z)={1\over2}\|y(x,z)\|^2-{1\over2}\Tr S
+                 -{1\over2}\delta_\rho(z),                  \tag{3.6}
+\]
+\[
+ \Phi(\rho)=\log\E_{\gamma_\rho}e^{-q\ell_\rho},           \tag{3.7}
+\]
+where $\gamma_\rho$ is the joint Gaussian law of $(X,Z_\rho)$.
+For Theorem 3.1, take $q\ge0$, assume $R$ and $\delta_0$ are cylindrical
+$C^3$ functions, and assume the exponential moments of $\ell_\rho$ together
+with every derivative appearing in (3.8)--(3.15) are finite uniformly on
+$0\le\rho\le1$.  The identities are first proved under these hypotheses;
+standard approximation may be used only when it preserves these bounds.
+
+% evidence-anchor: theorem-3.1-trace-corrected-diagonal-interpolation
+\subsection*{Theorem 3.1 (exact diagonal interpolation)}
+
+Let
+\[
+ p_\rho=A^*y,\qquad
+ s_\rho=DR^*y-{1\over2}\nabla\delta_\rho,\qquad
+ \Gamma_\rho=p_\rho\cdot s_\rho.                            \tag{3.8}
+\]
+Then
+\[
+ \boxed{{d\over d\rho}\E_{\gamma_\rho}\ell_\rho=0},       \tag{3.9}
+\]
+and, for the tilted probability law
+\[
+ d\nu_\rho={e^{-q\ell_\rho}\over
+                   \E_{\gamma_\rho}e^{-q\ell_\rho}}
+             d\gamma_\rho,                                 \tag{3.10}
+\]
+one has
+\[
+ \boxed{\Phi'(\rho)=q^2\E_{\nu_\rho}\Gamma_\rho.}          \tag{3.11}
+\]
+In components,
+\[
+ \Gamma_\rho=\sum_j\langle y,a_j\rangle
+ \left\{\langle y,r_j\rangle
+ -{1\over2}\partial_j\delta_0
+ -\rho\sum_i\langle a_i,r_{ij}\rangle\right\}.             \tag{3.12}
+\]
+
+At the decoupled endpoint, with $K_q=(\Id+qS)^{-1}$,
+\[
+ \boxed{
+ \begin{aligned}
+ \Phi(0)={}&-{1\over2}\log\det{}_2(\Id+qS)\cr
+ &+\log\E_z\exp\left\{{q\over2}\delta_0(z)
+ -{q\over2}\langle b+R(z),K_q(b+R(z))\rangle\right\}.
+ \end{aligned}}                                             \tag{3.13}
+\]
+Consequently,
+\[
+ \boxed{\Phi(1)=\Phi(0)+q^2\int_0^1
+                  \E_{\nu_\rho}\Gamma_\rho\,d\rho.}       \tag{3.14}
+\]
+
+\emph{Proof.}
+Price's formula gives
+\[
+ {d\over d\rho}\E_{\gamma_\rho}f
+ =\E_{\gamma_\rho}\sum_i\partial_{x_i}\partial_{z_i}f.
+                                                                    \tag{3.15}
+\]
+Here $\partial_\rho\ell_\rho=-c$ and
+$\sum_i\partial_{x_i}\partial_{z_i}\ell_\rho=c$, proving (3.9).
+Applying the same operator to $e^{-q\ell_\rho}$ cancels both linear trace
+terms and leaves $q^2\Gamma_\rho e^{-q\ell_\rho}$, proving (3.11).
+At $\rho=0$, integrate the independent $X$ square to obtain (3.13), then
+integrate (3.11). \hfill$\square$
+
+The theorem converts the diagonal problem to two explicit gates:
+\[
+ \log\E\exp\left\{{q\over2}\delta_0
+ -{q\over2}\langle b+R,K_q(b+R)\rangle\right\}\le r_0,     \tag{3.16}
+\]
+\[
+ \int_0^1\E_{\nu_\rho}\Gamma_\rho\,d\rho\le G.           \tag{3.17}
+\]
+If both costs are predictable, then
+\[
+ \Phi(1)\le{q^2\over4}\|S\|_{\HS}^2+r_0+q^2G.             \tag{3.18}
+\]
+No accepted authority proves (3.16)--(3.17) for the production cluster.
+In particular, (3.12) differentiates the decoupled trace and mixed trace and
+therefore exposes the second-/third-jet forest rather than removing it.
+
+\section{A nonlinear square-first normalizer needs a mean-debt owner}
+
+% evidence-anchor: proposition-4.1-nonlinear-square-first-mean-debt-nogo
+\subsection*{Proposition 4.1 (exact trace-compatible mean-debt no-go)}
+
+Let $G\sim N(0,1)$ and
+\[
+ b=0,\qquad A=a\varepsilon,\qquad
+ R(G)=\varepsilon(G^2-1).                                  \tag{4.1}
+\]
+The diagonal current and its realized tangent covariance are
+\[
+ Y(G)=\varepsilon(G^2+aG-1),\qquad
+ S_{\rm real}(G)=\varepsilon^2(2G+a)^2.                     \tag{4.2}
+\]
+The trace difference has the exact transport
+\[
+ \delta_\tau=4\varepsilon^2G^2+4a\varepsilon^2G
+ =\delta_0+2c,                                             \tag{4.3}
+\]
+where $\delta_0=4\varepsilon^2G^2$ and
+$c=2a\varepsilon^2G$.  Nevertheless the diagonal packet is
+\[
+ L_{\rm full}={\varepsilon^2\over2}
+ \{(G^2+aG-1)^2-(2G+a)^2\},                                \tag{4.4}
+\]
+and exact moments give
+\[
+ \boxed{\E L_{\rm full}=-\varepsilon^2},                   \tag{4.5}
+\]
+\[
+ \boxed{\E S_{\rm real}^2
+ =\varepsilon^4(a^4+24a^2+48).}                            \tag{4.6}
+\]
+By Jensen,
+\[
+ \log\E e^{-qL_{\rm full}}\ge q\varepsilon^2.             \tag{4.7}
+\]
+Hence the universal extension
+\[
+ \log\E e^{-qL_{\rm full}}
+ \le{q^2\over4}\E S_{\rm real}^2                          \tag{4.8}
+\]
+is false whenever
+\[
+ 0<\varepsilon^2<{4\over q(a^4+24a^2+48)}.                 \tag{4.9}
+\]
+At $q=10/9$, $a=1$, and $\varepsilon=1/10$, the two sides obey
+\[
+ \log\E e^{-qL_{\rm full}}\ge {1\over90},\qquad
+ {q^2\over4}\E S_{\rm real}^2={73\over32400},             \tag{4.10}
+\]
+with exact violation margin $287/32400$.
+
+More generally, any inequality with an extra remainder $r$ requires
+\[
+ \boxed{
+ r\ge-q\E L_{\rm full}
+ -{q^2\over4}\E\|S_{\rm real}\|_{\HS}^2.}                \tag{4.11}
+\]
+An $O(\varepsilon^2)$ negative mean cannot be paid by an
+$O(\varepsilon^4)$ covariance-square cost.  The production theorem must
+cancel this mean through its complete mean/covariance/forest packet or pay it
+from an explicit source/sextic owner.
+
+This failure is registered as
+\[
+ \texttt{NG-2026-07-28-A13-UNIVERSAL-NONLINEAR-TANGENT-SQUARE-FIRST-NORMALIZER}.
+                                                                    \tag{4.12}
+\]
+It is an abstract complete-trace method no-go, not a production-action
+counterexample.
+
+\section{The smallest stationary scalar cross-output model}
+
+Work on the normalized circle with $k=1$ and
+\[
+ X(x)=A+a\cos x+b\sin x+c\cos2x+d\sin2x,                    \tag{5.1}
+\]
+where $(a,b)\sim N(0,v\Id_2)$, $(c,d)\sim N(0,w\Id_2)$, and
+the pairs are independent.  Put
+\[
+ z={a-ib\over2},\quad u={c-id\over2},\quad
+ R=|z|^2,\quad S=|u|^2,\quad C=\operatorname{Re}(z^2\bar u),
+ \quad\gamma=v+4w.                                          \tag{5.2}
+\]
+Assume first that $v,w>0$.  Then $2R/v$ and $2S/w$ are independent unit
+exponentials and
+$|C|\le R\sqrt S$.
+All polynomial moment identities below extend continuously to $v,w\ge0$;
+the zero-variance endpoints are interpreted by that extension, not by
+dividing by $v$ or $w$.  This is a stationary scalar two-frequency model for
+the first cross-output obstruction.  No full A1 embedding is claimed here.
+
+For $J=X\partial_xX$, the positive output coefficients are
+\[
+ {\widehat J(1)\over i}=Az+\bar zu,\quad
+ {\widehat J(2)\over i}=z^2+2Au,\quad
+ {\widehat J(3)\over3i}=zu,\quad
+ {\widehat J(4)\over2i}=u^2.                                \tag{5.3}
+\]
+All conjugate outputs and their cross covariances are retained.
+
+Let $G$ be an independent copy of the random Fourier part and set
+$Y_X=X\partial_xG$.  If
+\[
+ x_0=A,\quad x_{\pm1}=z,\bar z,\quad
+ x_{\pm2}=u,\bar u,\qquad
+ q_{\pm1}=v/2,\quad q_{\pm2}=w/2,                            \tag{5.4}
+\]
+the realized whole-output covariance is
+\[
+ \boxed{
+ S_X(n,m)=\sum_{r=\pm1,\pm2}r^2q_r
+ x_{n-r}\overline{x_{m-r}}.}                                \tag{5.5}
+\]
+In particular,
+\[
+ \Tr S_X=\gamma(A^2+2R+2S).                                 \tag{5.6}
+\]
+
+% evidence-anchor: theorem-5.1-complete-k2k-packet-moments
+\subsection*{Theorem 5.1 (exact complete $k{:}2k$ packet and square margin)}
+
+The complete covariance-normal packet
+\[
+ P={1\over2}\{\|J\|_2^2-\Tr S_X\}                          \tag{5.7}
+\]
+is exactly
+\[
+ \boxed{
+ \begin{aligned}
+ P={}&A^2R+4A^2S-\frac{\gamma A^2}{2}+6AC\cr
+ &+R^2+10RS+4S^2-\gamma(R+S).
+ \end{aligned}}                                             \tag{5.8}
+\]
+It is centered.  Moreover, with
+\[
+ H=\E\|S_X\|_{\HS}^2,                                      \tag{5.9}
+\]
+one has
+\[
+ \boxed{
+ \begin{aligned}
+ H={}&A^4\left({v^2\over2}+8w^2\right)\cr
+ &+A^2(v^3+10v^2w+16vw^2+16w^3)\cr
+ &+{5\over4}v^4+v^3w+25v^2w^2+16vw^3+20w^4,
+ \end{aligned}}                                             \tag{5.10}
+\]
+\[
+ \boxed{
+ \begin{aligned}
+ \Var(P)={1\over4}\{&A^4v^2+16A^4w^2
+ +2A^2v^3+20A^2v^2w\cr
+ &+32A^2vw^2+32A^2w^3
+ +2v^4+2v^3w\cr
+ &+42v^2w^2+32vw^3+32w^4\}.
+ \end{aligned}}                                             \tag{5.11}
+\]
+The square-first leading margin is the positive identity
+\[
+ \boxed{
+ H-2\Var(P)={v^4+16v^2w^2+16w^4\over4}.}                   \tag{5.12}
+\]
+It is strict when $v+w>0$ and zero only for the degenerate cluster.
+
+\emph{Proof.}
+Fourier convolution gives (5.3), and Parseval gives (5.8).  Write the four
+columns of the map $G\mapsto X\partial_xG$ as $\ell_r$; then
+\[
+ S_X=\sum_r\ell_r\otimes\ell_r,\qquad
+ \|S_X\|_{\HS}^2=\sum_{r,s}|\langle\ell_r,\ell_s\rangle|^2. \tag{5.13}
+\]
+Wick expansion gives (5.10)--(5.11), and subtraction gives (5.12).
+The primary certificate derives the Gram matrix by exact trigonometric
+integration; the independent certificate reconstructs it from Fourier
+convolution without importing the primary. \hfill$\square$
+
+For $q\downarrow0$ from the right,
+\[
+ \log\E e^{-qP}={q^2\over2}\Var(P)-{q^3\over6}\E P^3+O(q^4).
+                                                                    \tag{5.14}
+\]
+All coefficients in the exact polynomial $\E P^3$ are positive for
+$A^2,v,w\ge0$.  Thus (5.12) and the cubic term both favor the live target
+\[
+ \boxed{
+ \log\E e^{-qP}\stackrel{?}{\le}{q^2\over4}H,\qquad q\ge0.} \tag{5.15}
+\]
+This is only a one-sided small-$q$ conclusion.  A positive exponential
+moment of $P$ need not exist, so no two-sided analytic neighborhood is being
+claimed.  Four declared finite points have positive margins at both
+$24\times24$ and $48\times48$ Gauss--Laguerre/Bessel orders in the primary
+JSON.  This is only a two-order sign-stability check: the numerical margins
+are not claimed exact or converged, and the finite scan does not prove
+(5.15).
+
+\section{Sharp pointwise payment and its summability obstruction}
+
+Define the artificial positive cluster payment
+\[
+ \mathfrak D_{\rm pay}
+ =\left({9\over10}A^2+4w\right)R+vS.                        \tag{6.1}
+\]
+It is not identified with a canonical production source or sextic owner.
+Let
+\[
+ Q_v(A,R)=A^2(R-v/2)+R^2-vR.                                \tag{6.2}
+\]
+
+% evidence-anchor: theorem-6.1-sharp-pointwise-cross-payment
+\subsection*{Theorem 6.1 (one-payment cross-resonance bound)}
+
+Pointwise,
+\[
+ P+\mathfrak D_{\rm pay}\ge Q_v(A,R)+4Q_w(A,S).              \tag{6.3}
+\]
+Indeed, the difference is bounded below by
+\[
+ {9\over10}A^2R+10RS+6AC
+ \ge10R\left(\sqrt S-{3|A|\over10}\right)^2\ge0.           \tag{6.4}
+\]
+The coefficient $9/10$ is sharp within this pointwise architecture.
+
+For every $q\ge0$, the one-pair floor and centered exponential calculation give
+\[
+ \log\E e^{-qQ_v(A,R)}
+ \le {qv^2\over4}+t-\log(1+t),\qquad
+ t={qA^2v\over2}.                                           \tag{6.5}
+\]
+Since $R,S$ are independent, (6.3)--(6.5) imply
+\[
+ \boxed{
+ \begin{aligned}
+ \log\E e^{-q(P+\mathfrak D_{\rm pay})}
+ \le{}&q\left({v^2\over4}+w^2\right)\cr
+ &+\{t_1-\log(1+t_1)\}
+  +\{t_2-\log(1+t_2)\},
+ \end{aligned}}                                             \tag{6.6}
+\]
+where $t_1=qA^2v/2$ and $t_2=2qA^2w$.  Consequently,
+\[
+ \boxed{
+ \log\E e^{-q(P+\mathfrak D_{\rm pay})}
+ \le q\left({v^2\over4}+w^2\right)
+ +q^2A^4\left({v^2\over8}+2w^2\right).}                    \tag{6.7}
+\]
+
+The theorem is exact but unusable as a termwise three-dimensional production
+payment.  Since
+\[
+ \E\mathfrak D_{\rm pay}
+ ={9\over20}A^2v+{5\over2}vw,                               \tag{6.8}
+\]
+the physical $k$ packet contains
+\[
+ k^2A^2v_k\asymp A^2\langle k\rangle^{-2}.                  \tag{6.9}
+\]
+Its three-dimensional shell mass grows as $2^j$.  By contrast,
+\[
+ k^2v_k^2,\ k^2v_kw_k:\ 2^{-3j},\qquad
+ k^4A^4v_k^2:\ 2^{-j},                                      \tag{6.10}
+\]
+and the remaining displayed covariance-square terms decay still faster.
+
+Thus the pointwise coefficient $9/10$ cannot be reduced, and the resulting
+baseline cannot be summed over every pair, or over a positive-density subset
+of every shell, with bounded multiplicity.  This does not exclude a sparse
+selection or a larger contraction-connected signed cluster.  The failure is
+registered as
+\[
+ \texttt{NG-2026-07-28-A13-CROSS-RESONANCE-POINTWISE-BASELINE-PAYMENT}.
+                                                                    \tag{6.11}
+\]
+
+\section{Proof-route evidence map}
+
+\begin{center}
+\begin{tabular}{p{0.27\textwidth}p{0.18\textwidth}p{0.45\textwidth}}
+\hline
+Route & Verdict & Reusable conclusion \\
+\hline
+Random-$W$ Gaussian score & proved & The entire derivative forest is
+$\delta_\xi^2W$ and costs $K_W/(128\sqrt{\eta\zeta})$.\\
+Static PSD/trace/HS control & failed & Uniformly positive scalar and fixed
+rank-one projector fixtures retain an unbounded signed score.\\
+Chaos--Sobolev payment & conditional & It is dimension free and exact in one
+dimension, but arbitrary admissible controls have no declared Malliavin
+derivative budget.\\
+Trace-corrected diagonal interpolation & proved & The mixed trace cancels
+only when $\delta_\rho=\delta_0+2\rho\Tr(A^*DR)$; the remaining tilted
+cross-score contains the differentiated forest.\\
+Universal realized-covariance square cost & failed & A negative
+$O(\varepsilon^2)$ mean debt cannot be paid by an $O(\varepsilon^4)$ square.\\
+Stationary scalar $k{:}2k$ model & advanced & Exact whole-output $H$ has
+strict second-order room and the third-order coefficient is favorable.\\
+Bare all-$q$ $k{:}2k$ normalizer & open & Local expansion and finite
+falsifiers pass; neither a proof nor a counterexample is known.\\
+Pointwise cross payment & proved but retired globally & Its sharp $9/10$
+baseline coefficient recreates the nonsummable $|k|^{-2}$ loss.\\
+Full production cluster & open & Cameron--Martin mean, trace, rational
+recovery, visits, R-063 forest, source, and terminal sextic remain coupled.\\
+\hline
+\end{tabular}
+\end{center}
+
+The append-only exploration ledger records the exact questions, findings,
+boundaries, and revisit conditions.  This table is a researcher-facing map,
+not private search reasoning.
+
+\section{Devil's-advocate audit}
+
+\begin{enumerate}
+\item \textbf{Objection: PSD of $W$ makes the random correction favorable.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  Propositions 2.1--2.2 keep all static
+matrix invariants fixed while the current-root eigenspace rotation produces
+either sign.  The lower-form counterexample is the positive-score branch.
+
+\item \textbf{Objection: the $DW,D^2W$ terms may be estimated separately.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  R-107 already shows that separated
+second-jet companions grow quadratically while their signed sum cancels.
+Theorem 1.1 packages them before estimation; (1.17) is only a sufficient
+cost when those full tensor norms are genuinely available.
+
+\item \textbf{Objection: (1.5) licenses replacing the Wick forest inside an
+exponential normalizer.}
+
+\textbf{DISMISSED.}  Theorem 1.1 is an expectation/form identity.  R-109's
+oscillatory exponential no-go remains binding.
+
+\item \textbf{Objection: transporting the trace proves the diagonal
+normalizer.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  Trace transport only cancels the linear
+Price term.  The tilted cross-score (3.12) has no sign, and Proposition 4.1
+shows that a negative mean debt can dominate the covariance-square cost.
+
+\item \textbf{Objection: $H>2\Var(P)$ proves (5.15) for every $q$.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  It proves only the right small-$q$
+coefficient.  The finite quadrature points are falsifiers, not a theorem.
+
+\item \textbf{Objection: Theorem 6.1 closes the physical cross mode.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  Its artificial payment contains the
+sharp baseline term $(9/10)A^2R$, whose shell mass grows as $2^j$.  It is a
+method boundary, not a production payment.
+
+\item \textbf{Objection: the scalar and $k{:}2k$ fixtures refute Nelson.}
+
+\textbf{DISMISSED.}  They omit production-specific companions or isolate a
+method architecture.  The complete source action and the live bare cluster
+route are not refuted.
+
+\item \textbf{Objection: a Fourier/Parseval sign or conjugate-output factor
+could create the positive margin.}
+
+\textbf{DISMISSED.}  The primary route retains the $\pm1,\pm2$ inputs and all
+conjugate outputs before exact trigonometric integration.  The independent
+route reconstructs the current, trace, and whole-output Gram matrix from a
+separate Fourier-polynomial engine.  Both give the same mean, variance,
+third moment, $H$, and factor in (5.12).
+
+\item \textbf{Objection: the shell verdict mixes dimensions or homogeneity.}
+
+\textbf{DISMISSED WITH THE DECLARED MODEL SCOPE.}  Equations (6.8)--(6.10)
+compare quantities after the same derivative/covariance scaling.  The
+three-dimensional lattice count contributes $2^{3j}$, turning the displayed
+$|k|^{-2}$ baseline into $2^j$, while the covariance-square and square-first
+terms have exponents $-3$ and $-1$.  No scalar-circle calculation is being
+promoted to a full A1 tensor identity.
+
+\item \textbf{Objection: the finite quadrature is neither converged nor a
+proof.}
+
+\textbf{VALID WITH MITIGATION.}  Each declared point is evaluated at orders
+24 and 48, and only positivity of both margins is asserted.  The values are
+not used as theorem constants, no convergence rate or global infimum is
+claimed, and the all-$q$ route stays open.
+
+\item \textbf{Objection: hard-coded formulas could mask a shared algebraic
+error.}
+
+\textbf{DISMISSED FOR THE CLAIMED CERTIFICATES.}  The primary script derives
+the packet and moments symbolically.  The standard-library independent script
+does not import it and instead performs Fourier convolution and Gaussian
+polynomial expectation.  The verifier compares only independently generated
+outputs and separately pins every source and result hash.
+
+\item \textbf{Objection: degenerate limits contradict the formulas.}
+
+\textbf{DISMISSED.}  The fixed-$W$ limit gives
+$K_W=2\|W\|_{\HS}^2$; $q\downarrow0$ gives the right-sided expansion (5.14);
+the independent samples include $A=0$ and $w=0$; and the exact polynomial
+identities extend continuously to $v=0$ or $w=0$.  Strictness in (5.12) is
+claimed only when $v+w>0$.
+\end{enumerate}
+
+\section{Authorities and scope firewall}
+
+The load-bearing authorities are R-063 (balanced Taylor/Wick forest and
+deterministic-shift reconstruction), R-104 (lossless fixed-chart owner
+assembly), R-105 (one-pair and physical cross-mode boundary), R-107
+(coherent whole-output covariance and same-root residual), R-108 (complete
+cluster normal form and covariance-order audit), and R-109 (all-amplitude
+one-pair square-first normalizer and fixed-$W$ score transfer).
+
+Proved here are Theorems 1.1--1.2, Corollary 1.3, Propositions 2.1--2.2,
+Theorem 3.1, Proposition 4.1, Theorem 5.1, and Theorem 6.1.  Not proved are
+the production identification of $\delta_\xi^2W$ with a predictable
+no-multiplicity R-063 atom, a cutoff-uniform $K_W$ shell ledger for arbitrary
+controls, the all-$q$ bare $k{:}2k$ bound (5.15), tensorization to the full
+field, the adapted complete-cluster lower form, $\mathrm{OVERLAP}_{\rm src}$,
+Nelson, removals, an interacting measure, Sector-A closure, or a higher tier.
+
+\section{Executable verification}
+
+The primary certificate uses exact symbolic differentiation, Gaussian
+moments, trigonometric integration, whole-output Gram reconstruction, and a
+declared finite Gauss--Laguerre/Bessel falsifier.  The independent certificate
+imports neither primary code nor symbolic/scientific array libraries.  It
+reconstructs the current and trace from Fourier convolution, evaluates
+Gaussian moments with a separate polynomial engine, and checks the random-$W$
+fixtures through direct Gaussian quadrature.
+
+The manifest-pinned reproduction command, exact child/integrated contracts,
+and PDF QA boundary are recorded in the result footer below.
+
+\section*{Result footer}
+
+\begingroup\small
+\begin{verbatim}
+Result ID: A13-CLASSII-RANDOM-W-SKOROHOD-DIAGONAL-CROSSMODE-BOUNDARY
+Claim:     A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Ledger ID: R-110
+Status:    T4 ANALYTIC/EXACT/EXECUTED ADVANCE AND METHOD BOUNDARY;
+           NELSON AND SECTOR A OPEN
+Scope:     Finite cutoff, fixed positive floor; conditional cylindrical
+           random-W form, exact diagonal interpolation, and the smallest
+           stationary scalar two-frequency k:2k output model; no full A1
+           embedding of that scalar model is asserted.
+Precise statement: the random-W second jet equals one double Gaussian
+           divergence and has the Young-optimized K_W form cost; trace-compatible
+           diagonal interpolation leaves one explicit tilted cross-score;
+           the scalar k:2k model has a strict small-q square-first margin,
+           while its architecture-sharp pointwise repair is nonsummable for
+           positive-density bounded-multiplicity production allocation.
+Dependencies: R-063, R-104, R-105, R-107, R-108, R-109.
+Evidence grade: ANALYTIC/EXACT/EXECUTED; TWO NON-IMPORTING ROUTES.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe `
+           codes/foundations/a13_classii_random_w_skorohod_diagonal_crossmode_boundary_verify.py
+Expected output:
+           primary 40/40; independent 49/49; integrated 111/111;
+           aggregate 200/200; PASS.
+Negative records:
+           NG-2026-07-28-A13-RANDOM-W-HS-ONLY-SCORE-TRANSFER;
+           NG-2026-07-28-A13-UNIVERSAL-NONLINEAR-TANGENT-SQUARE-FIRST-NORMALIZER;
+           NG-2026-07-28-A13-CROSS-RESONANCE-POINTWISE-BASELINE-PAYMENT.
+Falsification gate: failure of any double-divergence, chaos multiplier,
+           oscillatory/projector, interpolation, mean-debt, Fourier packet,
+           whole-output covariance, moment, payment, shell, independent,
+           hash, PDF, ledger, count, or scope assertion.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement:
+           the bare all-q k:2k bound, full adapted production cluster,
+           OVERLAP_src, Nelson, removals, measure, and Sector A remain open.
+Next required action: prove or falsify the bare all-q complete k:2k
+           square-first inequality, then identify its contraction-connected
+           extension with the owner-preserving R-063 forest and a one-use
+           source/sextic ledger without the pointwise baseline payment.
+\end{verbatim}
+\endgroup

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-110 random-W Skorohod and stationary scalar cross-mode boundary] - 2026-07-28
+
+R-110 proves the exact same-root random-W double-divergence assembly, its Young-optimized conditional moment-form cost and chaos--Sobolev sufficient gate, and the exact trace-corrected diagonal interpolation. Exact fixtures retire static covariance-norm control and a universal uncentred nonlinear tangent-square normalizer. In a stationary scalar two-frequency k:2k whole-output model, exact moments give the strict right-small-q margin H-2Var(P)=(v^4+16v^2w^2+16w^4)/4; four finite points retain positive margins at quadrature orders 24 and 48, without a convergence or all-q claim. The architecture-sharp pointwise repair is locally exact but nonsummable under the declared positive-density bounded-multiplicity production allocation. Primary 40/40, independent 49/49, integrated 111/111, and aggregate 200/200 pass. No full A1 embedding, bare all-q scalar theorem, adapted production-cluster bound, OVERLAP_src, Nelson, removals, interacting measure, or Sector-A closure is proved; tier remains T4.
+
 ## [R-109 square-first pair normalizer and score-transfer filtration boundary] - 2026-07-28
 
 R-109 proves the all-amplitude exact one-pair square-before-average normalizer and legal fresh-pair supermartingale, repairs the R-108 realized-covariance filtration order, proves the selector-independent centered quartic floor and fixed-predictable-PSD signed second-jet score-transfer form bound, and records the divergent full-pair direct floor plus exponential Stein-substitution no-go. Primary 39/39, independent 93/93, integrated 106/106, and aggregate 238/238 are pinned. The adapted production cluster, OVERLAP_src, Nelson, removals, interacting measure, and Sector A remain open at T4.

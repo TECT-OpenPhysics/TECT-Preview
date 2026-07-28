@@ -45,6 +45,9 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-28-A13-RANDOM-W-HS-ONLY-SCORE-TRANSFER | a same-root random PSD score weight is not controlled by its | extend the R-109 fixed-past score-transfer estimate to a |
+| NG-2026-07-28-A13-UNIVERSAL-NONLINEAR-TANGENT-SQUARE-FIRST-NORMALIZER | a nonlinear tangent-covariance square does not pay an uncent | infer a universal square-first conditional normalizer for a |
+| NG-2026-07-28-A13-CROSS-RESONANCE-POINTWISE-BASELINE-PAYMENT | the sharp local k:2k completion spends a nonsummable baselin | close each physical resonant `k:2k` complete-output packet |
 | AUDIT-2026-07-28-A13-R108-REALIZED-COVARIANCE-FILTRATION | a realized covariance square must be conditioned before pre- |  |
 | NG-2026-07-28-A13-STEIN-SECOND-JET-EXPONENTIATION | Stein expectation transfer does not survive exponentiation |  |
 | NG-2026-07-28-A13-PREDICTABLE-MULTIROW-BACKWARD-RESOLVENT | rowwise predictability does not freeze a backward Gaussian r |  |

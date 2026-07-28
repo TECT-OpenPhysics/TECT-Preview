@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-110](#r-110) | Random-covariance Skorohod completion, trace-corrected diagonal interpolation, and a stationary scalar cross-mode frontier | Scoped T4 analytic/exact/executed advance and method boundary: for a symmetric same-root Gaussian-dependent PSD matrix `W` in the domain of the double divergence, the complete signed second jet equals both `E[||h||^2 delta^2W]/2` and `E<h,Dh(Wxi-div W)>`. It has the Young-optimized form cost `q^2 E[(delta^2W)^2]/(128 sqrt(eta zeta))`, bounded by the declared chaos--Sobolev norm of `W`; fixed `W` recovers R-109 exactly. Static HS/trace/rank control fails even for uniformly positive scalar weights and rotating rank-one projections. A trace-compatible diagonal coupling has the exact interpolation derivative `Phi'(rho)=q^2 E_nu Gamma_rho` and an explicit decoupled endpoint, but a nonlinear Gaussian fixture shows that tangent-covariance square alone cannot pay an uncentred mean debt. For the stationary scalar two-frequency `k:2k` whole-output model, exact mean, variance, third moment, and covariance square give the strict right-small-`q` margin `H-2 Var(P)=(v^4+16v^2w^2+16w^4)/4`; four declared points have positive margins at quadrature orders 24 and 48, but neither convergence nor the bare all-`q` inequality is proved. The architecture-sharp local pointwise completion needs a `9A^2v/20` expected baseline whose three-dimensional positive-density bounded-multiplicity production shell mass grows like `2^j`, so that payment cannot globalize. No full A1 embedding of the scalar model is asserted. The adapted production cluster, owner-preserving trace/mean and tilted cross-score ledger, bare all-`q` scalar-model estimate, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain open |
 | [R-109](#r-109) | Square-first pair normalizer, signed score transfer, and filtration boundary | Scoped T4 analytic/exact/executed advance and method boundary: a centered random variable with upper floor `beta` and second moment at most `8 beta^2` obeys the all-`q` Bennett bound `log E exp(qZ)<=5q^2 beta^2`. Consequently the exact contraction-closed one-pair packet `P=lambda sigma^4(T^2-2T)/4`, `T~Exp(1)`, satisfies the square-before-average estimate `log E exp(-qP)<=(q^2/4)E||S_real||_HS^2` at every amplitude, and sequential fresh pairs form a nonnegative predictable-cost supermartingale. The R-108 covariance square is legal only inside a past conditional expectation; revealing the root and applying an auxiliary-copy determinant produces an outer exponential cost and normalizes a decoupled packet. The pure quartic selector has a pathwise summable floor in the diagonal submodel, but the full pair has a linearly divergent baseline floor and physical cross-mode resonances, so determinant cancellation remains necessary. For fixed past-measurable PSD `W`, the complete signed second jet transfers exactly to the centered Gaussian quadratic score and costs `q^2||W||_HS^2/(64 sqrt(eta zeta))`; at `q=10/9` the coefficient is `25/1296`, and the production derivative-covariance shell squares are summable. Replacing the raw Wick coordinate by this Stein derivative representative inside an exponential is false: an oscillatory family has derivative log-Laplace cost growing linearly while the raw Wick exponential cost tends to zero. The adapted production `W`, Cameron--Martin/covariance/forest coupling, no-multiplicity global ledger, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain open |
 | [R-108](#r-108) | Complete-cluster quotient, conditional covariance, and the nonvacuous Carleson frontier | Scoped T4 analytic/exact/executed synthesis and method boundary: the historical weighted R-085 Cartan bridge is stronger than the exact R-084 target; R-088's corrected sufficient bridge is unweighted and needs only positive spatial gain, but its sequential production estimate remains open. The historical rational `F_6.5` and visitwise fixed-chart `K_R` change sign under a representation-preserving subdivision, whereas the complete endpoint is invariant. That quotient-safe complete endpoint has an exact conditional mean/covariance identity and exact Cameron--Martin minimization, with no sign. Every contraction-closed output cluster likewise has an exact signed mean/covariance normal form. On the exact one-pair cluster, a bare average-before-square covariance ledger supplies `3/32` against the required `1/4` leading coefficient; square-before-average supplies `5/16` and survives this test. The average-first route can survive only with the explicit nonlinear/sextic remainder tradeoff. An oscillatory future-feedback selector has bounded source energy and sextic but an unbounded positive tangent HS square, while the complete signed second jet cancels. Thus only an absolute arbitrary-selector future-feedback PSD/Carleson ledger paid solely by source energy and one terminal sextic is retired, not every PSD construction or the signed complete source action. The remaining theorem is a cutoff/chart/control/subdivision-uniform signed complete-cluster lower bound, or a legally normalized square-before-average conditional determinant implying it. `OVERLAP_src`, Nelson, removals, an interacting measure, and Sector A remain open |
 | [R-107](#r-107) | Coherent output clusters, frozen likelihood, and the adapted predictable-baseline boundary | Scoped T4 analytic/exact/executed advance and method boundary: the exact endpoint likelihood tilt has positive entropy production and a root-martingale variance decomposition, but it returns the same unknown free-energy difference. Jointly frozen coherent-output Gaussian rows have an exact backward-resolvent density martingale, and one fresh root with a past-measurable map has the whole-output `det2` formula with mixed baseline. Rowwise predictability does not license one global frozen determinant: a bounded two-root fixture has exact total mass `1.070433115292664...>1`, with a smooth `tanh` companion. The coefficient trace has an exact positive output allocation, yet a one-pair fixture has expected singleton packets `-sigma^4/4,+sigma^4/8,+sigma^4/8`, so only a contraction-connected output cluster is legal. Independently normalized outputs lose linearly growing determinant slack; sequential Schur is mandatory. The direct action is exactly the complete predictable-baseline sum plus one terminal sextic and one source-energy payment, and covariance mass against one deterministic predictable PSD weight is subdivision invariant. Exact adapted-sine and carrier-information fixtures retire termwise second-jet/forest estimates and a pure carrier-KL diagonal bridge. The remaining theorem is one subdivision-invariant adapted complete-cluster or equivalent predictable-baseline matrix-Carleson estimate with every owner retained once. `OVERLAP_src`, Nelson, removals, an interacting measure, and Sector A remain open |
@@ -128,6 +129,92 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-110"></a>
+### R-110 -- Random-covariance Skorohod completion, trace-corrected diagonal interpolation, and a stationary scalar cross-mode frontier
+
+**Result ID.**
+`A13-CLASSII-RANDOM-W-SKOROHOD-DIAGONAL-CROSSMODE-BOUNDARY`.
+
+**Random covariance.** Condition on the strict past, let `xi` be standard
+Gaussian, let `W(xi)` be symmetric PSD and in the domain of the Gaussian
+double divergence, and write
+
+`delta^2 W=xi^T W xi-Tr W-2 xi dot div W+div^2 W`.
+
+For every sufficiently regular vector-valued `h`, the complete signed second
+jet satisfies
+
+`F_W(h)=E[||Dh W^(1/2)||_HS^2+<h,Tr(WD^2h)>]`
+
+`=(1/2)E[||h||^2 delta^2W]=E[<h,Dh(Wxi-div W)>]`.
+
+If `K_W=E[(delta^2W)^2]`, `X=E||h||^2`, and `Y=E||h||^6`, then
+
+`-(q/2)F_W(h)>=-eta X-zeta Y-q^2 K_W/(128 sqrt(eta zeta))`.
+
+For fixed `W`, `K_W=2||W||_HS^2`, recovering R-109 and its `25/1296`
+coefficient at `q=10/9`.  In the random case,
+
+`K_W<=E[||D^2W||^2+4||DW||^2+2||W||^2]`,
+
+with full tensor norms.  Exact oscillatory scalar and rotating rank-one
+projection families prove that trace, HS norm, operator norm, rank, and PSD
+alone cannot replace this derivative cost.
+
+**Trace-corrected diagonal interpolation.** For independent standard
+Gaussians `X,X'`, `Z_rho=rho X+sqrt(1-rho^2)X'`,
+`y=b+AX+R(Z_rho)`, `S=AA*`, and
+`c(z)=Tr(A*DR(z))`, trace compatibility requires
+
+`delta_rho=delta_0+2rho c`.
+
+With
+`ell_rho=||y||^2/2-Tr(S)/2-delta_rho/2`, the mean is constant and the
+log-Laplace interpolation is exact:
+
+`Phi'(rho)=q^2 E_(nu_rho) Gamma_rho`.
+
+The decoupled endpoint is an explicit `det_2(I+qS)` resolvent formula.  This
+is an identity, not a sign theorem: a one-dimensional nonlinear fixture has
+mean debt `-epsilon^2` and at `q=10/9,a=1,epsilon=1/10` violates the bare
+tangent-square normalizer by exactly `287/32400`.
+
+**Stationary scalar cross-mode model.** On the normalized circle let
+
+`X=A+a cos x+b sin x+c cos 2x+d sin 2x`,
+
+with `(a,b)` of variance `v` and `(c,d)` of variance `w`.  This is a
+stationary scalar two-frequency model; no full A1 embedding is asserted.  The
+complete whole-output packet has exact mean zero.  Its exact variance and whole-output
+covariance-square expectation obey
+
+`H-2 Var(P)=(v^4+16v^2w^2+16w^4)/4>0`
+
+for `v+w>0`, and its third moment is a polynomial with strictly positive
+coefficients.  Hence the square-first target has the correct strict right-
+small-`q` expansion.  Four declared Gauss--Laguerre/Bessel points have
+positive margins at orders 24 and 48; this two-order sign check is regression
+evidence, not a convergence claim or an all-`q` proof.
+
+The architecture-sharp local phase completion uses
+`D_pay=(9A^2/10+4w)R+vS` and
+`9A^2R/10+10RS+6AC=10R(sqrt(S)-3|A|/10)^2`.  Its expectation contains
+`9A^2v/20`, whose production shell mass grows like `2^j`.  Therefore this
+termwise positive payment cannot close the global three-dimensional ledger.
+
+**Boundary.** R-110 does not prove the bare all-`q` scalar `k:2k`
+normalizer, embed that scalar model into the full A1 tensor, identify the full
+adapted production cluster, establish the
+owner-preserving trace/mean and tilted cross-score ledger, or prove
+`OVERLAP_src`, Nelson, removals, an interacting measure, or Sector-A closure.
+Tier remains T4.
+
+**Proof and reproduction.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-random-w-skorohod-diagonal-crossmode-boundary-260728-v1.0.tex.txt`,
+manifest `classii_random_w_skorohod_diagonal_crossmode_boundary_manifest.json`,
+and the primary, independent, and integrated R-110 executables.
 
 <a id="r-109"></a>
 ### R-109 -- Square-first pair normalizer, signed score transfer, and filtration boundary
