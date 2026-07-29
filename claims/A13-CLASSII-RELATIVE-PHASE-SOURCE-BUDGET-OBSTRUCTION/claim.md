@@ -1100,6 +1100,24 @@ the following structural results and proof-architecture boundaries hold.
     loss. Production low-chaos cancellation, trace/forest reconstruction,
     spatial multiplier/synthesis, and one-use aggregation remain open; tier
     stays T4.
+63. `A13-CLASSII-COVARIANCE-HORIZONTAL-SYNTHESIS-STATIONARY-LOW-CHAOS-CARTAN-HESSIAN-BOUNDARY`
+    is R-120. The complete A1 six-current coefficient diagonalizes with
+    `c0=3/(250P)`, `c1=243/(8000P)`, and `alpha=5/9`. The realized covariance
+    quotient controls the physical endpoint by
+    `||L_pi h||_H2^2 <= (M_R^2/c_sym)||h||_S^2`; in the contractive family
+    `M_R^2/c_sym=9.22811176850986...`. The sharp endpoint bridge has constant
+    `32`, so the fixed-matrix R-118 form can spend source energy and both
+    endpoint sextics once. A conditional variable-matrix extension has exact
+    remainder powers `K0^(3/2) K_le2^(11/6)` at `kappa=1/10`. The complete
+    common-real-even stationary six-row raw-current packet satisfies the
+    R-119 zero/first-chaos identities. Linear terminal Hessians are exact and
+    flat; the rational raw-`Q` Hessian is selfadjoint and flattens into 21
+    fixed matrices with absolute sum `(7/2)I`. A genuine Cartan curvature
+    remains. Both implementations reproduce the R-102 checksum `-40/729`;
+    the required `+40/729` companion is not observed. Adapted `D0,D1`, the
+    complete trace/heat/low/R-063 owner, Cartan cancellation or absorption,
+    one-use aggregation, and all downstream global gates remain open; tier
+    stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -1166,6 +1184,7 @@ is a scoped T4 subproof and does not promote A13.
 | Scalar k:2k support cone / all-amplitude closure | Exact support--two-moment cone through `643/200`; four-moment left Radau majorant; packet-specific all-tilt skew theorem; complete Arb and exact Bernstein/radical certificates | T4 analytic/exact/executed scalar theorem closed; full A1 adapted embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | One-fresh-root owner quotient / rational horizon / dyadic trace margin | Exact same-root endpoint quotient and owner firewall; full finite-dimensional rational-horizon classifier; uniform fixed-cutoff R-082 floor horizon; sharp joint frame constant; strict canonical q and 2q all-direction trace margins; fixed-shell metric no-go | T4 analytic/exact/executed advance and method boundary; legal complete adapted owner packet and cutoff-summable one-use source/sextic ledger remain open |
 | Legal adapted score-trace / terminal quotient-Hessian frontier | Minimal two-block/two-visit strict-triangular chart; exact zero/first-chaos trace criteria; strict bare-heat no-go; one-pair and covariance-face PSD diagnostics; automatic global terminal-Hessian quotient and lossless realized quotient norm | T4 analytic/exact/executed advance and method boundary; production low-chaos identities, full trace/forest reconstruction, spatial multiplier/synthesis, and once-only source/sextic aggregation remain open |
+| Covariance-horizontal synthesis / stationary low-chaos / Cartan-Hessian boundary | Exact six-current diagonalization; lossless covariance quotient and physical `H2` bridge; sharp endpoint `L6` constant `32`; conditional variable-matrix remainder; stationary six-row raw-current zero/first-chaos cancellation; exact linear and rational Hessians; fixed 21-matrix inventory; independently reproduced Cartan checksum | T4 analytic/exact/executed advance and method boundary; adapted `D0,D1`, complete trace/heat/low/R-063 owner reconstruction, the missing `+40/729` companion, Cartan cancellation or absorption, and once-only source/sextic aggregation remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1197,6 +1216,12 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   adapted signed packet with nonnegative predictable allocations and
   terminal-sextic localization or once-only payment, followed by one global
   source/sextic spend.
+- R-120 closes the covariance-horizontal `H2`/endpoint-`L6` synthesis step for
+  the fixed-matrix R-118 form and proves the common-real-even stationary
+  six-row raw-current low-chaos identities. Its variable-matrix conclusion is
+  conditional on summed bilinear multiplier derivatives through order two.
+  It does not supply the adapted trace/heat/low/R-063 forest, the missing
+  rational Cartan companion, or the once-only global aggregation.
 - Fixed positive `rho_regularizer=1e-12`.
 - Common entrywise-real-even scalar Fourier cutoffs.
 - Same-cutoff covariance-normal Wick subtraction.
@@ -1531,20 +1556,21 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_rational_horizon_uniform_root_trace_margin_boundary_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_covariance_horizontal_synthesis_stationary_low_chaos_cartan_hessian_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `42/42`;
-- non-importing independent `36/36`;
-- manifest-pinned integrated `40/40` PASS;
-- exact rational-horizon, positive-floor horizon, sharp frame, finite-shell,
-  analytic-tail, q/2q trace-margin, and phase-modulation assertions;
+- primary `68/68`;
+- non-importing independent `59/59`;
+- manifest-pinned integrated `99/99` PASS;
+- exact coefficient diagonalization, covariance-horizontal synthesis, sharp
+  endpoint `L6`, variable-multiplier powers, stationary six-row low-chaos,
+  linear/rational Hessian, 21-generator, and Cartan-checksum assertions;
 - exact authority, source, result, note, PDF, and manifest pins;
-- explicit preservation of the open complete adapted owner packet,
-  cutoff-summable one-use aggregation, `OVERLAP_src`, Nelson, removal,
-  measure, and Sector-A targets;
+- explicit preservation of the open adapted `D0,D1`, complete owner and
+  missing-companion gates, one-use aggregation, `OVERLAP_src`, Nelson,
+  removal, measure, and Sector-A targets;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -1552,7 +1578,21 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 ## Current evidence
 
-The current R-119 package is:
+The current R-120 package is:
+
+- `classii_covariance_horizontal_synthesis_stationary_low_chaos_cartan_hessian_boundary_manifest.json`
+- `notes/classii-covariance-horizontal-synthesis-stationary-low-chaos-cartan-hessian-boundary-260729-v1.0.tex.txt`
+- `notes/classii-covariance-horizontal-synthesis-stationary-low-chaos-cartan-hessian-boundary-260729-v1.0.pdf`
+- `../../codes/foundations/a13_classii_covariance_horizontal_synthesis_stationary_low_chaos_cartan_hessian_boundary.py`
+- `../../codes/foundations/a13_classii_covariance_horizontal_synthesis_stationary_low_chaos_cartan_hessian_boundary_independent.py`
+- `../../codes/foundations/a13_classii_covariance_horizontal_synthesis_stationary_low_chaos_cartan_hessian_boundary_verify.py`
+- `runs/2026-07-29-primary-covariance-horizontal-synthesis-stationary-low-chaos-cartan-hessian/result.json`
+- `runs/2026-07-29-independent-covariance-horizontal-synthesis-stationary-low-chaos-cartan-hessian/result.json`
+- `runs/2026-07-29-integrated-covariance-horizontal-synthesis-stationary-low-chaos-cartan-hessian/result.json`
+- `../../RESULTS-LEDGER.md#r-120`
+- `../../explorations/log.jsonl` (`EXP-000371`--`EXP-000375`)
+
+The immediate R-119 predecessor package remains binding:
 
 - `classii_legal_adapted_cluster_score_trace_terminal_hessian_frontier_manifest.json`
 - `notes/classii-legal-adapted-cluster-score-trace-terminal-hessian-frontier-260729-v1.0.tex.txt`
@@ -2308,6 +2348,28 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
      with a fixed orthogonal output projection. State-dependent,
      nonorthogonal, duplicated, cumulative-old-carrier, and complete adapted
      selections remain outside R-117.
+107. **DISMISSED: the covariance-horizontal bridge closes the A13 one-use
+     theorem.** It closes the fixed-matrix source-to-endpoint `H2`/`L6`
+     synthesis only. The adapted scalar coefficients and their once-only
+     conditional aggregation are separate open gates.
+108. **UPHELD AGAINST ADAPTED PROMOTION: stationary real-even parity proves
+     production low-chaos cancellation.** Future feedback destroys the
+     value--derivative independence and global parity used by R-120. The
+     adapted `D0,D1` coefficients must be reconstructed explicitly.
+109. **VALID WITH MITIGATION: flattening the rational Hessian into 21 fixed
+     matrices removes all variable-coefficient difficulty.** The matrix
+     inventory is fixed, but its scalar coefficients remain spatially varying
+     and adapted; the multiplier theorem requires their summed derivatives
+     through order two.
+110. **UPHELD AGAINST FORMAL-EXACTNESS INFERENCE: the missing `+40/729`
+     companion may be inserted because the complete terminal action is
+     exact.** R-120 independently reproduces only the isolated `-40/729`
+     owner. The opposite checksum must be derived from the complete rational
+     square/trace/heat/low/R-063 forest, not assumed.
+111. **VALID WITH MITIGATION: selfadjoint rational Hessians have no Cartan
+     boundary.** Selfadjointness controls the zeroth-order Hessian form. The
+     first-order curvature `-(alpha/d) dm_A wedge d rho` survives and still
+     needs exact cancellation or a direct form bound.
 
 ## Falsifier
 
@@ -3253,9 +3315,14 @@ universal PSD coefficient and an isolated current primitive. R-119 reconstructs
 the minimal legal adapted chart, gives exact low-chaos trace criteria and the
 strict bare-heat no-go, proves scoped positive diagnostics, and moves global
 vertical basicness to the terminal-Hessian chain rule and lossless quotient
-norm. None of R-114--R-119 proves the coefficient-level complete production
-low-chaos cancellation, full trace/forest reconstruction, a cutoff-summable
-conditional log-normalizer ledger, or the once-only source/sextic aggregation.
+norm. R-120 closes the covariance-horizontal `H2`/endpoint-`L6` synthesis for
+the fixed-matrix form, proves the stationary complete six-row raw-current
+zero/first-chaos identities, and gives exact linear/rational Hessian and
+21-generator formulas. It also confirms that the rational Cartan owner and
+the `+40/729` companion remain unresolved. None of R-114--R-120 proves the
+adapted coefficient-level `D0,D1` cancellations, full trace/heat/low/R-063
+forest reconstruction, a cutoff-summable conditional log-normalizer ledger,
+or the once-only source/sextic aggregation.
 `OVERLAP_src`, Nelson, removal, interacting measure, Sector-A closure, and
 T5--T7 promotion remain open. Tier stays T4.
 
@@ -4022,3 +4089,19 @@ T5--T7 promotion remain open. Tier stays T4.
   QA. Production low-chaos cancellation, trace/forest reconstruction,
   spatial multiplier/synthesis, one-use aggregation, `OVERLAP_src`, Nelson,
   removals, interacting measure, and Sector A remain open; tier stays T4.
+- 2026-07-29: Registered R-120. The complete A1 coefficient diagonalizes into
+  six fixed currents, and the realized covariance quotient plus A8 coercivity
+  gives the physical `H2` bridge with contractive constant
+  `9.22811176850986...`; the sharp two-endpoint `L6` constant is `32`. A
+  conditional variable-matrix theorem pins the multiplier remainder powers.
+  Common-real-even stationary parity proves zero/first-chaos cancellation for
+  all six raw-current rows. The linear and rational Hessians are exact, with
+  the latter flattened into 21 fixed matrices of absolute sum `(7/2)I`, but a
+  genuine Cartan curvature remains. Both implementations reproduce
+  `-40/729`; the required `+40/729` companion is not observed.
+  `EXP-000371--EXP-000375` preserve all five route decisions. Primary `68/68`,
+  non-importing independent `59/59`, and integrated `99/99` pass. The final
+  ten-page PDF passes form, zero-overfull, extraction, no-form, and all-page
+  Poppler visual QA. Adapted `D0,D1`, complete owner reconstruction, Cartan
+  cancellation or absorption, one-use aggregation, and every downstream
+  global gate remain open; tier stays T4.

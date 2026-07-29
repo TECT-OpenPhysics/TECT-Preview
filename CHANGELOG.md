@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-120 covariance-horizontal synthesis and Cartan-Hessian boundary] - 2026-07-29
+
+Registered R-120 after five parallel proof-route rounds. The package proves the complete A1 six-current diagonalization, the covariance-horizontal H2 and sharp endpoint-L6 bridges, a conditional order-two variable-multiplier theorem, stationary common-real-even six-row raw-current zero/first-chaos cancellation, and exact linear/rational Hessian inventories. Primary 68/68, independent 59/59, and integrated 99/99 pass. Both implementations reproduce -40/729; the missing +40/729 complete-owner companion, adapted D0/D1, Cartan cancellation or absorption, one-use aggregation, and all downstream global gates remain open at T4. The ten-page PDF passed form, overfull, extraction, no-form, and all-page Poppler visual QA.
+
 ## [R-119 legal adapted score-trace and terminal-Hessian frontier] - 2026-07-29
 
 Registered R-119 at T4 after a five-round parallel proof sprint. The minimum genuine adapted test is two-block/two-visit; exact aggregate zero/first-chaos trace identities and a strict bare-heat no-go are proved. A one-pair canonical coefficient and both stationary scalar covariance faces are PSD without a mixed-interior or full-A1 claim. The complete terminal-action Hessian factors through endpoint synthesis with a lossless realized quotient norm. Primary 45/45, independent 28/28, integrated 90/90, and the final ten-page Poppler-inspected PDF pass. Production coefficient cancellation, trace/R-063 forest reconstruction, spatial multiplier/synthesis, one-use, Nelson, and Sector A remain open.

@@ -1,0 +1,724 @@
+% =============================================================================
+% Title: Covariance-horizontal synthesis, stationary low-chaos cancellation,
+%        and the rational Cartan-Hessian boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-COVARIANCE-HORIZONTAL-SYNTHESIS-STATIONARY-LOW-CHAOS-
+%         CARTAN-HESSIAN-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-29; this version issued 2026-07-29
+% Status: scoped T4 analytic/exact/executed advance and sharp open boundary;
+%         no tier action
+%
+% Revision history (cumulative):
+%   v1.0 (2026-07-29) first issue.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Contr}{\operatorname{Contr}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cW}{\mathcal W}
+
+\section*{1. Purpose and scope}
+
+R-119 isolated four questions after the legal two-block/two-visit chart had
+been reconstructed: whether the realized covariance quotient controls the
+physical endpoint norms, whether the R-118 quadratic multiplier theorem
+survives spatially varying matrices, whether the production low chaoses
+actually cancel, and whether the terminal Hessian reduces to fixed
+selfadjoint quadratic forms.  This note attacks those questions in five
+coordinated rounds.
+
+\begin{enumerate}
+\item diagonalize the complete six-current A1 coefficient in the fixed
+six-real Pauli frame;
+\item identify the covariance quotient with an $H^2$ endpoint bound and an
+exact $L^6$ bridge;
+\item extend the R-118 multiplier estimate through two spatial derivatives;
+\item evaluate zero and first chaos for both the one-pair diagnostic and the
+complete uncontrolled stationary six-row A1 raw-current packet;
+\item differentiate the linear and rational terminal currents, flatten the
+zeroth-order rational Hessian, and audit the surviving Cartan owner.
+\end{enumerate}
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{R-120 conclusion.}
+The covariance-horizontal synthesis problem from R-119 is solved.  For every
+temporally faithful R-104 chart, the realized quotient norm controls the
+$H^2$ endpoint with the A8 coercivity constant and controls the endpoint
+$L^6$ difference with the sharp two-term constant $32$.  The source energy
+and the terminal sextic can therefore be spent once in the R-118 estimate.
+
+The R-118 estimate also extends to spatially varying selfadjoint matrices
+whose summed bilinear derivatives through order two are bounded.  At
+$\kappa=1/10$ its optimized remainder has the exact coefficient powers
+$K_0^{3/2}K_{\le2}^{11/6}$.
+
+At every fixed cutoff and positive floor, the complete uncontrolled
+stationary six-row A1 raw-current packet satisfies both R-119 zero/first-
+chaos identities.  This includes all three linear and all three rational
+current rows, but not a trace/heat/low/R-063 forest or adapted future
+feedback.
+
+The linear rows have an exact square--Laplacian--trace Hessian and no Cartan
+curvature.  The rational raw-covariance Hessian has an exact selfadjoint
+formula and a fixed $21$-matrix flattening, but the rational current retains
+a genuine first-order Cartan block.  The required companion curl $+40/729$
+has not been observed.  The adapted coefficients $D_0,D_1$, complete
+trace/R-063 forest reconstruction, Cartan cancellation or absorption,
+one-use global production inequality, $\mathrm{OVERLAP}_{\rm src}$, Nelson,
+removals, interacting measure, and Sector-A closure remain open.  Tier T4 is
+unchanged.
+}}
+\end{center}
+
+All positive statements below are finite-cutoff, fixed-positive-floor
+statements in the A1 six-real convention unless a theorem explicitly states
+an abstract Hilbert-space form.
+
+\section*{2. Round one: exact six-current production frame}
+
+Let $S_A=S_A^*$, $A=1,2,3$, be the fixed six-real embedded Pauli generators,
+and write
+\[
+ m_A(u)=u^TS_Au,\qquad \rho(u)=u^Tu,\qquad
+ d=\rho+e,\qquad q_A=\frac{m_A}{d},
+\]
+where $e>0$ is the rational floor.  The A1 coefficient block is built from
+the two one-forms
+\[
+ J_A=\dd m_A,
+ \qquad K_A=\dd m_A-q_A\dd\rho.
+\]
+Its scalar weights are
+\[
+ a=\frac9{500P},\qquad b=\frac3{400P},\qquad
+ c=\frac3{320P},\qquad P=4+10^{-12}.
+\]
+
+\subsection*{Theorem 2.1 (exact positive diagonalization)}
+
+Set
+\[
+ c_0=\frac3{250P},\qquad c_1=\frac{243}{8000P},
+ \qquad \alpha=\frac59,
+\]
+and
+\[
+ L_A=(1-\alpha)J_A+\alpha K_A
+     =\dd m_A-\alpha q_A\dd\rho.
+\]
+Then, identically,
+\[
+ aJ_A^2+2bJ_AK_A+cK_A^2=c_0J_A^2+c_1L_A^2.       \tag{2.1}
+\]
+Indeed,
+\[
+ c_0+c_1(1-\alpha)^2=a,\qquad
+ c_1\alpha(1-\alpha)=b,\qquad c_1\alpha^2=c.       \tag{2.2}
+\]
+Consequently the complete covariance coefficient is
+\[
+ B(u)=\sum_{A=1}^3
+ \left(c_0p_Ap_A^T+c_1\ell_A\ell_A^T\right),       \tag{2.3}
+\]
+where
+\[
+ p_A=2S_Au,\qquad \ell_A=2(S_A-\alpha q_A\Id)u.    \tag{2.4}
+\]
+This is an exact six-current factorization; it is not a scalar-row proxy.
+
+The fixed generators obey $S_A^2=P_{\rm dbl}$ on the active doublet and are
+selfadjoint.  Hence
+\[
+ \sum_{A=1}^3|S_A|=3P_{\rm dbl}\preceq3\Id,        \tag{2.5}
+\]
+and the complete linear-row envelope is
+\[
+ 4(c_0+c_1)=\frac{339}{2000P}.                      \tag{2.6}
+\]
+These constants are derived from the A1 manifest rather than inserted from a
+downstream fit.
+
+\section*{3. Round two: covariance-horizontal endpoint synthesis}
+
+Let $\cS=\bigoplus_k\cS_k$ be the source Cameron--Martin space of a fixed
+R-104/R-093 chart and let
+\[
+ L_\pi h=\sum_k S_kh_k,\qquad
+ C_J=L_\pi L_\pi^*=\sum_kS_kS_k^*.                 \tag{3.1}
+\]
+For $z\in\Ran L_\pi$, define the realized quotient norm
+\[
+ \|z\|_{q,L_\pi}^2=\|C_J^{\dagger/2}z\|^2.        \tag{3.2}
+\]
+
+\subsection*{Theorem 3.1 (lossless quotient and physical $H^2$ control)}
+
+For every source realization $h$ and $z=L_\pi h$,
+\[
+ \|z\|_{q,L_\pi}^2
+ =\|P_{(\Ker L_\pi)^\perp}h\|_{\cS}^2
+ \le \|h\|_{\cS}^2.                               \tag{3.3}
+\]
+For the regulated A1 covariance, mode by mode,
+\[
+ C_J(k)=|r_J(k)|^2\mathcal A(k)^{-1},\qquad
+ \mathcal A(k)\succeq c_{\rm sym}\langle k\rangle^4\Id,
+ \qquad |r_J(k)|\le M_R.                            \tag{3.4}
+\]
+It follows on $\Ran C_J$ that
+\[
+ \boxed{
+ \|L_\pi h\|_{H^2}^2
+ \le \frac{M_R^2}{c_{\rm sym}}
+       \|L_\pi h\|_{q,L_\pi}^2
+ \le \frac{M_R^2}{c_{\rm sym}}\|h\|_{\cS}^2.}    \tag{3.5}
+\]
+For the certified contractive regulator family,
+\[
+ M_R=1,\qquad c_{\rm sym}=0.10836453058711468\ldots,
+ \qquad C_{\rm CM}=c_{\rm sym}^{-1}
+ =9.22811176850986\ldots.                           \tag{3.6}
+\]
+
+\paragraph{Proof.}
+The Moore--Penrose identity in (3.3) is the standard polar-decomposition
+identity for $L_\pi$.  It is used only to evaluate the quotient norm; the
+control is not replaced by a noncausal minimal representative.  On a Fourier
+mode in the covariance range, (3.4) gives
+\[
+ C_J(k)^\dagger\succeq
+ \frac{c_{\rm sym}}{M_R^2}\langle k\rangle^4\Id.
+\]
+Summation over modes proves (3.5).  The statement is independent of the
+number of visits and of overlap among their ranges. \hfill$\square$
+
+\subsection*{Lemma 3.2 (sharp two-endpoint $L^6$ bridge)}
+
+Writing $Z_h=X_J+z$,
+\[
+ \boxed{
+ \|z\|_6^6\le32\left(\|Z_h\|_6^6+\|X_J\|_6^6\right).} \tag{3.7}
+\]
+This is the pointwise inequality $|a-b|^6\le2^5(|a|^6+|b|^6)$, integrated
+over space.  Equality is attained for $b=-a$, so $32$ cannot be reduced in
+this two-term inequality.
+
+\subsection*{Corollary 3.3 (once-only R-118 payment for fixed matrices)}
+
+Let $A_0=M_R^2/c_{\rm sym}$.  Substituting (3.5)--(3.7) into the R-118
+operator-valued quadratic estimate gives, for fixed selfadjoint generators
+with $\sum_r|K_r|\preceq K_0\Id$,
+\[
+\begin{split}
+ |\langle Q,\Pi_Kz\rangle|
+ \le{}&\varepsilon\|h\|_{\cS}^2
+ +\varepsilon_6\bigl(\|Z_h\|_6^6+\|X_J\|_6^6\bigr)\\
+ &+C\sqrt{32}\,K_0^{10/3}A_0^{11/6}
+ \varepsilon^{-11/6}\varepsilon_6^{-1/2}
+ \|Q\|_{H^{-11/10}}^{10/3}.
+\end{split}                                         \tag{3.8}
+\]
+Thus horizontal synthesis itself produces neither an inverse singular-value
+loss nor a visit-count loss.  Equation (3.8) is a component theorem, not yet
+the complete production inequality: the owner-complete $Q$ and generator
+decomposition must still be proved.
+
+\subsection*{Method boundary 3.4}
+
+Quotient geometry without covariance coercivity does not imply (3.5).  For
+$L_Nt=te_N$, with $e_N$ an $L^2$-normalized Fourier mode,
+\[
+ \|e_N\|_{q,L_N}=1,\qquad \|e_N\|_{H^2}^2=\langle N\rangle^4.
+\]
+The A8 symbol lower bound is therefore load-bearing.
+
+\section*{4. Round three: spatially varying multiplier theorem}
+
+For selfadjoint matrix fields $K_r(x)$ assume, for every multi-index
+$|\gamma|\le2$,
+\[
+ \sup_x\sum_r
+ |\langle v,\partial^\gamma K_r(x)w\rangle|
+ \le K_\gamma\|v\|\|w\|,                           \tag{4.1}
+\]
+and put
+\[
+ K_{\le2}=K_0+\sum_{1\le|\gamma|\le2}K_\gamma.
+\]
+Let $X=\|a\|_{H^2}^2$ and $Y=\|a\|_6^6$.
+
+\subsection*{Theorem 4.1 (two-derivative multiplier extension)}
+
+The centered quadratic output $\Pi_K(a)$ satisfies
+\[
+ \|\Pi_K(a)\|_2\le CK_0Y^{1/3},
+ \qquad
+ \|\Pi_K(a)\|_{H^2}\le CK_{\le2}X.                \tag{4.2}
+\]
+For $\kappa=1/10$, interpolation at
+$\theta=(1+\kappa)/2=11/20$ yields
+\[
+ \|\Pi_K(a)\|_{H^{11/10}}
+ \le C K_0^{9/20}K_{\le2}^{11/20}
+ X^{11/20}Y^{3/20}.                                 \tag{4.3}
+\]
+Consequently, for $Q\in H^{-11/10}$ and all $\eta,\zeta>0$,
+\[
+\boxed{
+\begin{split}
+ |\langle Q,\Pi_K(a)\rangle|
+ \le{}&\eta X+\zeta Y\\
+ &+C K_0^{3/2}K_{\le2}^{11/6}
+ \eta^{-11/6}\zeta^{-1/2}
+ \|Q\|_{H^{-11/10}}^{10/3}.
+\end{split}}                                        \tag{4.4}
+\]
+For spatially constant matrices, $K_{\le2}=K_0$ and the coefficient in the
+remainder becomes $K_0^{10/3}$, exactly recovering R-118.
+
+\paragraph{Proof.}
+The $L^2$ estimate follows from the pointwise spectral bound, Holder, and the
+same sharp-maximal centering used in R-118.  Differentiating the quadratic
+output twice assigns at most two derivatives among $a$, the second copy of
+$a$, and $K_r$.  The summed bilinear bounds (4.1), the algebra property of
+the finite-cutoff smooth representative, and the R-118 square-function
+argument give the second estimate in (4.2).  Real interpolation gives (4.3).
+Duality against $Q$, followed by the same two-parameter Young optimization as
+R-118, multiplies the interpolation exponents by $10/3$:
+\[
+ \frac9{20}\frac{10}3=\frac32,\qquad
+ \frac{11}{20}\frac{10}3=\frac{11}6.
+\]
+This proves (4.4). \hfill$\square$
+
+The order-two hypothesis cannot be deleted.  With constant $a$ and
+$K_N(x)=\cos(Nx_1)\Id$, the pointwise operator norm stays bounded while the
+$H^2$ norm of the quadratic output grows like $N^2$.  This is an abstract
+method counterfixture, not a production counterexample.
+
+\section*{5. Round four: stationary production low chaoses}
+
+R-119 reduces zero/first-chaos cancellation to two aggregate identities.  If
+$Y=b+A\xi+R$, with $R$ orthogonal to zero and first chaos, and $\delta\tau$
+denotes the complete trace owner, define
+\[
+ D_0=\E\delta\tau-\E\|R\|^2,                        \tag{5.1}
+\]
+\[
+ D_1=\E D\delta\tau
+ -2\Contr(A,\E D^2R)-2\E[(DR)^*R].                 \tag{5.2}
+\]
+The low chaoses vanish exactly when $D_0=D_1=0$.
+
+\subsection*{Proposition 5.1 (exact one-pair production checksum)}
+
+For the actual first linear row, let
+\[
+ z=\frac\sigma2(\xi-i\eta),\qquad
+ \xi,\eta\sim N(0,1),\qquad
+ \lambda_1=4c_0=\frac6{125P}.
+\]
+The square-minus-trace diagnostic is
+\[
+ \cP=\frac{\lambda_1\sigma^4}{16}
+ \left[(\xi^2+\eta^2)^2-4(\xi^2+\eta^2)\right].   \tag{5.3}
+\]
+Its exact Hermite expansion is
+\[
+ \cP_2=\frac{\lambda_1\sigma^4}{4}
+ \{H_2(\xi)+H_2(\eta)\},                           \tag{5.4}
+\]
+\[
+ \cP_4=\frac{\lambda_1\sigma^4}{16}
+ \{H_4(\xi)+H_4(\eta)+2H_2(\xi)H_2(\eta)\}.      \tag{5.5}
+\]
+Therefore $\Pi_0\cP=\Pi_1\cP=0$.  Equivalently,
+\[
+ \E\tau=\E\|Y\|^2=\lambda_1\sigma^4,
+ \qquad \E D\tau=2\E[(DY)^*Y]=0.                  \tag{5.6}
+\]
+
+\subsection*{Theorem 5.2 (stationary six-row A1 raw-current pass)}
+
+Let $U$ be the complete fixed-cutoff stationary A1 Gaussian field with a
+common entrywise-real-even scalar regulator.  For each spatial direction put
+\[
+ Y_i=C(U)\partial_iU,\qquad
+ \tau_i=\Tr\bigl(C(U)^TC(U)\Gamma_i\bigr),          \tag{5.7}
+\]
+where $C$ contains all six rows in (2.3) and $\Gamma_i$ is the derivative
+covariance.  Then the complete stationary packet satisfies both R-119
+low-chaos identities:
+\[
+ \E\tau=\E\|Y\|^2,\qquad
+ \E D\tau=2\E[(DY)^*Y]=0.                           \tag{5.8}
+\]
+
+\paragraph{Proof.}
+Real-even stationarity gives
+\[
+ \E[U\otimes\partial_iU]=0.
+\]
+Because the pair is jointly Gaussian, $U$ and $\partial_iU$ are independent.
+Conditioning on $U$ therefore proves
+\[
+ \E[\|Y_i\|^2\mid U]
+ =\Tr\bigl(C(U)^TC(U)\Gamma_i\bigr)=\tau_i.        \tag{5.9}
+\]
+Every $q_A$ is even and every coefficient row is odd, so
+$C(-U)=-C(U)$.  Under simultaneous sign reversal of the complete Gaussian
+root, both $Y_i$ and $\tau_i$ are even.  Hence their zero/first-chaos
+decompositions have $b=0$, $A=0$, $\E D\tau=0$, and
+$\E[(DY)^*Y]=0$; the last two integrands are odd.  Summing over directions
+and rows proves (5.8). \hfill$\square$
+
+This result includes all six raw-current rows, including the rational rows.
+It is stronger than the one-pair checksum, but it is not an owner-complete
+trace/heat/low/R-063 forest theorem and is deliberately not stated for an
+adapted triangular shift.
+
+\subsection*{Adapted boundary 5.3}
+
+In the legal two-block chart, the second control is $h_2(\xi_1)$.  The root-one
+chain rule then contains owner families of the form
+\[
+ DB[Dh_2],\quad D^2B[DX,Dh_2],\quad
+ D^2B[Dh_2,Dh_2],\quad DB[D^2h_2].                 \tag{5.10}
+\]
+Neither stationary independence nor global parity determines their sum.
+R-104 proves that some strict-triangular factorization exists, but it does not
+specify canonical coefficient-level $S_1,S_2,h_1,h_2$; R-063 controls
+deterministic $H^2$ translations, not this adapted random shift.  Therefore
+the production values of (5.1)--(5.2) remain open.  This is now the minimal
+low-chaos target: no higher-chaos expansion is needed until $D_0,D_1$ are
+computed.
+
+\section*{6. Round five: linear terminal Hessian}
+
+For the linear rows define
+\[
+ \mu_A=2u^TS_Az,\qquad n_A=z^TS_Az.
+\]
+The covariance-normal linear functional is
+\[
+ V_L^{\rm ren}(u)=\frac{c_0}{2}\sum_{A,i}\int
+ \left\{(\partial_i m_A)^2
+ -4(S_Au)^T\Gamma_i(S_Au)\right\}.                 \tag{6.1}
+\]
+
+\subsection*{Theorem 6.1 (exact linear-row Hessian)}
+
+For every smooth cylindrical direction $z$,
+\[
+\boxed{
+\begin{split}
+ D^2V_L^{\rm ren}(u)[z,z]
+ ={}&c_0\sum_A\|\nabla\mu_A\|_2^2
+ -2c_0\sum_A\langle\Delta m_A,n_A\rangle\\
+ &-4c_0\sum_{A,i}\int(S_Az)^T\Gamma_i(S_Az).
+\end{split}}                                       \tag{6.2}
+\]
+The first line is a positive square plus a fixed-selfadjoint centered
+quadratic coefficient; the second line is exactly the once-owned covariance
+trace.  Since $J_A=\dd m_A$ is exact, its exterior curvature vanishes.  The
+linear rows cannot supply a rational Cartan companion.
+
+The Taylor remainder of the quartic current uses
+\[
+ \int_0^1(1-t)3t^2\dd t=\frac14,                   \tag{6.3}
+\]
+and its mixed quadratic products split with powers $1/2+1/2=1$.  These
+checks prevent a hidden factor-two or extra sextic payment.
+
+\section*{7. General current Hessian and rational Cartan survivor}
+
+Let $\theta=f(u)\cdot\dd u$ be a one-form and set
+\[
+ j_i=\theta(\partial_i u),\quad \sigma=\theta(z),
+ \quad \tau=D\theta[z](z),\quad \Omega=\dd\theta.
+\]
+The first variation has the invariant form
+\[
+ \dot j_i=\partial_i\sigma+\Omega(z,\partial_i u). \tag{7.1}
+\]
+
+\subsection*{Theorem 7.1 (current-Hessian identity)}
+
+On the torus,
+\[
+\begin{split}
+ D^2\frac12\sum_i\|j_i\|_2^2
+ =\sum_i\int\{&|\partial_i\sigma+\Omega(z,\partial_i u)|^2
+ -(\partial_i j_i)\tau\\
+ &+j_i[(D_z\Omega)(z,\partial_i u)
+       +\Omega(z,\partial_i z)]\}.
+\end{split}                                                    \tag{7.2}
+\]
+The covariance-normal trace contributes exactly
+\[
+ -\sum_i\int\left\{(Df[z])^T\Gamma_iDf[z]
+ +(D^2f[z,z])^T\Gamma_i f\right\}.                 \tag{7.3}
+\]
+Equations (7.2)--(7.3) retain all sign and factor information before any
+analytic estimate.
+
+For the rational row
+\[
+ \theta_A=\dd m_A-\alpha q_A\dd\rho,
+\]
+the curvature is
+\[
+\boxed{
+ \Omega_A=\dd\theta_A
+ =-\frac\alpha d\,\dd m_A\wedge\dd\rho.}           \tag{7.4}
+\]
+Thus the terminal Hessian contains the first-order Cartan block
+\[
+ \cC_A(z)=\sum_i\int j_{A,i}
+ \left[(D_z\Omega_A)(z,\partial_i u)
+       +\Omega_A(z,\partial_i z)\right].            \tag{7.5}
+\]
+It vanishes on special radial loci but is generically nonzero.  No
+zeroth-order fixed-matrix theorem can silently replace (7.5).
+
+\section*{8. Rational raw-covariance Hessian and fixed basis}
+
+Define
+\[
+ T_A=S_A-\alpha q_A\Id,\qquad
+ r_A=(S_A-q_A\Id)u,\qquad
+ g_A=\nabla q_A=\frac{2r_A}{d},                     \tag{8.1}
+\]
+\[
+ H_A=D^2q_A=\frac{2(S_A-q_A\Id)}d
+ -\frac4{d^2}(u\otimes r_A+r_A\otimes u),          \tag{8.2}
+\]
+and
+\[
+ F_A=T_A-\alpha u\otimes g_A.                      \tag{8.3}
+\]
+For a symmetric rough matrix $Q$, set
+\[
+ w_A=QT_Au,\qquad \beta_A=u^TQT_Au.
+\]
+
+\subsection*{Theorem 8.1 (exact rational zeroth-order Hessian)}
+
+The rational raw-$Q$ contribution satisfies
+\[
+ \frac12D^2B_R(u)[z,z]:Q
+ =c_1\sum_Az^T\cK_A(Q)z,                            \tag{8.4}
+\]
+where
+\[
+\boxed{
+ \cK_A(Q)=4F_A^TQF_A-4\alpha\beta_AH_A
+ -4\alpha(g_A\otimes w_A+w_A\otimes g_A).}         \tag{8.5}
+\]
+Each $\cK_A(Q)$ is selfadjoint.  Formula (8.5) is obtained by differentiating
+$4c_1(T_Au)^TQ(T_Au)$ twice; no derived coefficient is pasted.
+
+Every symmetric six-real matrix has the fixed expansion in
+\[
+ K_{pp}=e_pe_p^T,\qquad
+ K_{pq}=\frac12(e_pe_q^T+e_qe_p^T),\quad p<q.       \tag{8.6}
+\]
+There are $6\cdot7/2=21$ such matrices, and
+\[
+ \boxed{\sum_{p\le q}|K_{pq}|=\frac72\Id.}         \tag{8.7}
+\]
+Hence the matrix direction of the zeroth-order rational Hessian is flattened
+with a cutoff- and visit-independent absolute spectral constant.
+
+This does not finish the production multiplier estimate.  The scalar
+coefficients in (8.5) depend on $u,q_A,g_A,H_A,Q$ and are random under an
+adapted translation.  R-063's deterministic-translation estimate does not
+yet certify the derivative bounds (4.1), and the separate first-order block
+(7.5) is untouched by (8.6)--(8.7).
+
+\section*{9. Cartan checksum and exact surviving frontier}
+
+The R-102 active/kernel fixture has isolated rational curl
+\[
+ \partial_y\omega_x-\partial_x\omega_y=-\frac{40}{729}. \tag{9.1}
+\]
+Complete terminal-action exactness therefore requires the complementary
+owner sum to contribute
+\[
+ \operatorname{curl}\omega_{\rm companion}=+\frac{40}{729}. \tag{9.2}
+\]
+The three linear rows have zero curvature and cannot provide (9.2).  The
+companion must be reconstructed from the remaining rational terminal square,
+covariance trace, heat, low-output terms, and the R-063 Wick forest, each
+owned exactly once.  R-120 reproduces (9.1) and derives the requirement
+(9.2); it does not report the companion as observed.
+
+The new frontier is therefore smaller than the R-119 checklist:
+\begin{enumerate}
+\item reconstruct the legal two-block/two-visit rational owner sum at
+coefficient level;
+\item compute only $D_0,D_1$ from (5.1)--(5.2), including every family in
+(5.10);
+\item on the R-102 slice, verify the independent checksum (9.2);
+\item either cancel the Cartan block (7.5) inside that complete owner or prove
+a direct one-use bound for it;
+\item certify (4.1) for the residual scalar multipliers, then invoke
+(3.8)/(4.4) once;
+\item only after that run the global A13 one-use, $\mathrm{OVERLAP}_{\rm src}$,
+Nelson, and removal gates.
+\end{enumerate}
+
+\section*{10. Evidence map: successful and failed routes}
+
+\begin{enumerate}
+\item \textbf{Covariance quotient route -- advanced and closed at this
+layer.}  R-092/R-104 quotient geometry plus A8 symbol coercivity proves
+(3.5); (3.7) supplies the missing terminal sextic bridge.  Revisit count and
+range overlap introduce no new constant.
+
+\item \textbf{Spatially constant multiplier route -- retained.}  R-118 and
+Corollary 3.3 give the exact once-only estimate for fixed matrices.
+
+\item \textbf{Spatially varying multiplier route -- conditionally advanced.}
+Theorem 4.1 proves the analytic extension under (4.1).  Production
+coefficients have not yet been shown to satisfy those derivative bounds.
+
+\item \textbf{One-pair low-chaos route -- passed but diagnostic.}
+Proposition 5.1 is an actual A1 linear row and catches normalization errors;
+it is not the whole adapted cluster.
+
+\item \textbf{Complete stationary six-row raw-current route -- passed.}
+Theorem 5.2 includes the rational rows.  It does not reconstruct the
+trace/heat/low/R-063 forest.  Its independence/parity mechanism is destroyed
+by general adapted future feedback, so it cannot close $D_0,D_1$.
+
+\item \textbf{Fixed-matrix Hessian route -- partly successful.}  The linear
+rows close exactly, and the zeroth-order rational block has the $21$-matrix
+flattening.  The Cartan block is first order and survives.
+
+\item \textbf{Isolated-current primitive route -- failed previously and not
+revived.}  The nonzero curl (9.1) prevents a primitive for the isolated
+rational current.  Only a complete-owner companion can repair it.
+
+\item \textbf{Stationary-to-adapted parity transfer -- rejected.}  The
+families (5.10) are genuine and have not been assigned coefficients.  A
+stationary pass is evidence for signs and conventions, not a proof of the
+adapted packet.
+\end{enumerate}
+
+\section*{11. Executable verification}
+
+The primary SymPy certificate reconstructs the A1 diagonalization from its
+upstream constants, the fixed Pauli identities, a nonorthogonal covariance
+quotient fixture, the A8 coercivity constant, the sharp $L^6$ bridge, all
+multiplier exponents, the exact one-pair Hermite split, stationary
+parity/conditional trace, the linear Hessian and trace factor, rational
+curvature, the R-102 curl, three exact raw-$Q$ Hessian fixtures, the fixed
+$21$-matrix absolute sum, and the adapted chain-rule families.  It passes
+68/68 assertions.
+
+A non-importing standard-library certificate uses exact rational arithmetic
+and a separate matrix implementation.  It independently reconstructs the
+production constants and realified generators, covariance quotient,
+Gaussian moments, all six coefficient-row parities, multiplier exponents,
+linear completion, rational Hessian, the R-102 curl, the explicitly assembled
+fixed basis, and the adapted chain rule.  Its exact assertion count is pinned
+by the manifest; the present package passes 59/59.  The integrated verifier reruns both
+children into temporary outputs, compares deterministic payloads, validates
+every authority/source/note/PDF hash and contract field, and fails closed on
+stale evidence.
+
+\section*{12. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: quotient unitarity alone proves the $H^2$ bound.}
+\textbf{UPHELD as false.}  Method boundary 3.4 has unit quotient norm and
+unbounded $H^2$ norm.  The A8 coercivity constant is essential.
+
+\item \textbf{Objection: the Moore--Penrose representative violates
+causality.}  \textbf{DISMISSED.}  It is used only to identify the quotient
+norm.  Equation (3.3) bounds the causal supplied control $h$ by orthogonal
+projection and never replaces $h$ in the dynamics.
+
+\item \textbf{Objection: a pointwise spectral bound controls a varying
+multiplier in $H^2$.}  \textbf{UPHELD as false.}  The oscillatory
+$K_N(x)$ fixture forces derivative growth.  Bounds through order two in
+(4.1) are load-bearing.
+
+\item \textbf{Objection: the stationary A1 pass proves adapted low-chaos
+cancellation.}  \textbf{UPHELD as false.}  Adapted $h_2(\xi_1)$ generates
+the four unresolved chain-rule families (5.10).  The exact remaining data are
+$D_0,D_1$, not a generic parity statement.
+
+\item \textbf{Objection: the one-pair computation hides the rational rows.}
+\textbf{VALID-with-mitigation.}  Proposition 5.1 is explicitly diagnostic.
+Theorem 5.2 separately covers the stationary six-row raw-current packet,
+including rational rows, by conditional Gaussianity and parity; it does not
+claim the adapted trace/heat/low/R-063 forest.
+
+\item \textbf{Objection: the $21$-matrix basis removes every rational
+Hessian difficulty.}  \textbf{UPHELD as false.}  It flattens only the
+zeroth-order matrix direction.  The adapted scalar multipliers and the
+first-order Cartan block remain.
+
+\item \textbf{Objection: terminal-action exactness guarantees the
+$+40/729$ companion without computation.}  \textbf{VALID-with-mitigation.}
+It makes (9.2) a necessary checksum, but cannot validate owner signs or
+multiplicities.  The companion is deliberately recorded as required and not
+observed.
+
+\item \textbf{Objection: derived constants or factors may be hardcoded.}
+\textbf{VALID-with-mitigation.}  Both children read the A1/A8 upstream
+artefacts, derive $c_0,c_1,\alpha,c_{\rm sym}$, and reconstruct all exponent
+relations.  The independent child uses exact Gaussian moment and matrix
+routines.  Decimal values appear only as regression oracles after derivation.
+
+\item \textbf{Objection: the result closes either A13 gate or Sector A.}
+\textbf{DISMISSED.}  The adapted owner reconstruction, $D_0,D_1$, Cartan
+companion/bound, complete one-use inequality, $\mathrm{OVERLAP}_{\rm src}$,
+Nelson, and removals remain open.  Tier stays T4.
+\end{enumerate}
+
+\section*{13. Result footer}
+
+\begingroup
+\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-COVARIANCE-HORIZONTAL-SYNTHESIS-STATIONARY-
+  LOW-CHAOS-CARTAN-HESSIAN-BOUNDARY (R-120).
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement: Thm. 2.1; Thm. 3.1, Lem. 3.2, Cor. 3.3;
+  Thm. 4.1; Prop. 5.1, Thm. 5.2, boundary 5.3; Thms. 6.1, 7.1,
+  8.1; checksum (9.1)-(9.2); frontier and evidence map.
+Scope: fixed finite cutoff and positive rational floor; A1 six-real frame;
+  stationary complete low-chaos result is not an adapted result.
+Dependencies: A1, A8, R-063,068,082,089,092,102,104,107,116,118,119.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_covariance_horizontal_synthesis_stationary_
+  low_chaos_cartan_hessian_boundary_verify.py
+Expected output: R-120 PASS; child and integrated counts pinned by manifest;
+  all hashes and no-overclaim boundaries valid.
+Falsification gate: any failed coefficient, covariance, multiplier, chaos,
+  Hessian, Cartan, basis, adapted-boundary, hash, or PDF assertion.
+Tier before / after: T4 / T4.
+No-overclaim statement: adapted D0/D1, Cartan companion, complete one-use,
+  OVERLAP_src, Nelson, removals, measure, Sector-A/T5-T7 remain open.
+Next required action: reconstruct the complete two-block rational owner sum,
+  compute D0,D1, and test the independent +40/729 companion checksum.
+\end{verbatim}
+\endgroup

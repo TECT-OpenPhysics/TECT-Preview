@@ -337,17 +337,20 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   with bounded absolute spectral variation, without a visit-count loss. Its
   exact opposite-visit and Hermite fixtures show separately that a diagonal
   visit square does not automatically descend to the terminal sextic and that
-  a universal PSD random-`W` double-divergence owner is false. R-119 now
+  a universal PSD random-`W` double-divergence owner is false. R-119
   reconstructs the minimum genuine two-block/two-visit adapted test and proves
-  the exact aggregate zero/first-chaos trace criteria. Bare Jacobian heat alone
-  leaves a strict nonlinear mean debt; the one-pair canonical coefficient and
-  both stationary scalar covariance faces are PSD without a mixed-interior or
-  full-A1 claim. The complete terminal-action Hessian factors automatically
-  through endpoint synthesis, and the realized quotient norm has no inverse
-  singular-value loss. Continue by reconstructing the complete production
-  terminal Hessian with fixed A1 generator matrices, verifying the low-chaos
-  identities and trace/R-063 forest checksum, proving uniform spatial
-  multiplier and H2/L6-stable synthesis bounds, and invoking R-118 once over
+  the exact aggregate zero/first-chaos trace criteria. R-120 now diagonalizes
+  the complete A1 six-current coefficient, closes the covariance-horizontal
+  `H2`/endpoint-`L6` synthesis for the fixed-matrix R-118 form, proves the
+  conditional order-two variable-multiplier remainder, and proves stationary
+  common-real-even low-chaos cancellation for all six raw-current rows. Its
+  exact linear/rational Hessian inventory reduces the zeroth-order matrix
+  burden to 21 fixed generators, but a genuine first-order Cartan block
+  survives. Both implementations reproduce `-40/729`; the required
+  `+40/729` complete-owner companion is not observed. Continue by
+  reconstructing the complete rational owner on the R-119 adapted chart,
+  computing its `D0,D1` coefficients, and either cancelling that checksum or
+  directly bounding the surviving Cartan form before invoking R-120 once over
   the R-093 directed source union. Strict per-shell normalizer existence alone
   does not imply this once-only global burden.
   `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
@@ -942,14 +945,18 @@ preserved in git/changelog rather than treated as current gates.
    visit-count-free operator-valued R-068 estimate under absolute spectral
    variation. It also retires automatic diagonal-visit-to-terminal ownership
    and universal PSD random-`W` factorisation. R-119 reconstructs the minimum
-   legal two-block/two-visit adapted test, proves the exact aggregate low-chaos
-   trace criteria and strict bare-heat no-go, and shows that the complete
-   terminal-action Hessian factors through endpoint synthesis with a lossless
-   realized quotient norm. Continue by reconstructing that production Hessian
-   with fixed A1 generator matrices, verifying the low-chaos identities and
-   complete trace/R-063 forest checksum, proving spatial multiplier and
-   H2/L6-stable synthesis bounds, and then spending source energy and terminal
-   sextic exactly once over the R-093 directed union. Do
+   legal two-block/two-visit adapted test and gives the exact low-chaos trace
+   criteria and strict bare-heat no-go. R-120 diagonalizes the complete A1
+   coefficient, proves the covariance-horizontal `H2`/endpoint-`L6` bridge,
+   pins the conditional variable-multiplier remainder, proves stationary
+   six-row raw-current low-chaos cancellation, and flattens the rational
+   Hessian into 21 fixed generators. The adapted `D0,D1` owner and first-order
+   Cartan curvature remain: `-40/729` is reproduced, while its required
+   `+40/729` companion is not observed. Continue by reconstructing the full
+   rational square/trace/heat/low/R-063 owner on the R-119 chart, testing the
+   companion, and cancelling or directly bounding the Cartan form before
+   spending source energy and terminal sextic exactly once over the R-093
+   directed union. Do
    not mistake strict per-shell normalizer existence for summability, and do
    not substitute a centered
    abstract tensor, full-Wick tensor normalizer, derivative-range test, or

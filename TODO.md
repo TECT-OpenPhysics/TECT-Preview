@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION)_
-  - R-119 completes the five-round legal-chart/score-trace/terminal-Hessian checkpoint: exact low-chaos criteria and bare-heat no-go are proved, global quotient basicness is automatic, while production coefficient cancellation, trace/R-063 forest reconstruction, spatial multiplier/H2-L6 synthesis, and one-use aggregation remain next.
+  - R-120 closes fixed-matrix covariance-horizontal H2/L6 synthesis and the stationary six-row raw-current low-chaos test. Next reconstruct the full rational R_Q+M_U+K_R owner on the R-119 two-block/two-visit chart, compute adapted D0,D1, test the missing +40/729 companion, then cancel or directly bound the surviving Cartan form before one global source/sextic spend. OVERLAP_src, Nelson, removals, measure, and Sector A remain open.
   - _updated 2026-07-29_
 
 ## Next up
