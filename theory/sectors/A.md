@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-29-A13-R119-R120-CARTAN-COMPANION-INFERENCE | path-space exactness does not require a local opposite curl |  |
+| NG-2026-07-29-A13-FIRST-ORDER-HMINUS-11-10-CARTAN-REUSE | zeroth-order rough regularity cannot pay a first-order Carta |  |
 | NG-2026-07-29-A13-BARE-JACOBIAN-HEAT-LOW-CHAOS-CANCELLATION | bare heat leaves a strict nonlinear mean debt |  |
 | NG-2026-07-28-A13-UNIVERSAL-PSD-RANDOM-W-DOUBLE-DIVERGENCE | the canonical two-visit preimage is signed |  |
 | NG-2026-07-28-A13-FIXED-SHELL-LIPSCHITZ-METRIC-REGULARITY | phase modulation defeats a local distance-to-current error b |  |

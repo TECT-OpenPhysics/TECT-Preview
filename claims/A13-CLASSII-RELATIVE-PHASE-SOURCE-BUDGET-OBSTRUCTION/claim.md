@@ -1113,11 +1113,27 @@ the following structural results and proof-architecture boundaries hold.
     R-119 zero/first-chaos identities. Linear terminal Hessians are exact and
     flat; the rational raw-`Q` Hessian is selfadjoint and flattens into 21
     fixed matrices with absolute sum `(7/2)I`. A genuine Cartan curvature
-    remains. Both implementations reproduce the R-102 checksum `-40/729`;
-    the required `+40/729` companion is not observed. Adapted `D0,D1`, the
+    remains. Both implementations reproduce the R-102 checksum `-40/729`.
+    R-121 later supersedes only the inference that scalar exactness requires
+    a local `+40/729` companion. Adapted `D0,D1`, the
     complete trace/heat/low/R-063 owner, Cartan cancellation or absorption,
     one-use aggregation, and all downstream global gates remain open; tier
     stays T4.
+64. `A13-CLASSII-CARTAN-PATHSPACE-EXACTNESS-FIXED-SKEW-SOBOLEV-BOUNDARY`
+    is R-121. The complete rational owner telescopes exactly over the legal
+    two-visit chart, but path-space scalar exactness does not imply closure of
+    an extracted target-space current coefficient. The exact R-102 currents
+    have repository curls `-40/729`, `2720/729`, and `2680/729`, and the
+    normalized affine path ellipse has equal mixed Hessians `20/729`. Thus
+    the mandatory arithmetic-companion inference is retired while the
+    isolated chain-primitive no-go remains. For fixed skew matrices and
+    `0<=s<1`, the direct first-order form has coefficient moment `2/(1-s)`.
+    At `s=3/5`, the moment five theorem has powers
+    `X^(7/10)Y^(1/10)` and Young cost `eta^(-7/2)zeta^(-1/2)`. R-071 supplies
+    this only for unshifted stationary currents. A sharp fixture rules out
+    reuse of `H^(-11/10)`. Adapted `D0,D1`, the adapted fifth `H^(-3/5)`
+    moment/forest, one-use aggregation, and all downstream global gates
+    remain open; tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -1184,7 +1200,8 @@ is a scoped T4 subproof and does not promote A13.
 | Scalar k:2k support cone / all-amplitude closure | Exact support--two-moment cone through `643/200`; four-moment left Radau majorant; packet-specific all-tilt skew theorem; complete Arb and exact Bernstein/radical certificates | T4 analytic/exact/executed scalar theorem closed; full A1 adapted embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | One-fresh-root owner quotient / rational horizon / dyadic trace margin | Exact same-root endpoint quotient and owner firewall; full finite-dimensional rational-horizon classifier; uniform fixed-cutoff R-082 floor horizon; sharp joint frame constant; strict canonical q and 2q all-direction trace margins; fixed-shell metric no-go | T4 analytic/exact/executed advance and method boundary; legal complete adapted owner packet and cutoff-summable one-use source/sextic ledger remain open |
 | Legal adapted score-trace / terminal quotient-Hessian frontier | Minimal two-block/two-visit strict-triangular chart; exact zero/first-chaos trace criteria; strict bare-heat no-go; one-pair and covariance-face PSD diagnostics; automatic global terminal-Hessian quotient and lossless realized quotient norm | T4 analytic/exact/executed advance and method boundary; production low-chaos identities, full trace/forest reconstruction, spatial multiplier/synthesis, and once-only source/sextic aggregation remain open |
-| Covariance-horizontal synthesis / stationary low-chaos / Cartan-Hessian boundary | Exact six-current diagonalization; lossless covariance quotient and physical `H2` bridge; sharp endpoint `L6` constant `32`; conditional variable-matrix remainder; stationary six-row raw-current zero/first-chaos cancellation; exact linear and rational Hessians; fixed 21-matrix inventory; independently reproduced Cartan checksum | T4 analytic/exact/executed advance and method boundary; adapted `D0,D1`, complete trace/heat/low/R-063 owner reconstruction, the missing `+40/729` companion, Cartan cancellation or absorption, and once-only source/sextic aggregation remain open |
+| Covariance-horizontal synthesis / stationary low-chaos / Cartan-Hessian boundary | Exact six-current diagonalization; lossless covariance quotient and physical `H2` bridge; sharp endpoint `L6` constant `32`; conditional variable-matrix remainder; stationary six-row raw-current zero/first-chaos cancellation; exact linear and rational Hessians; fixed 21-matrix inventory; independently reproduced Cartan checksum | T4 analytic/exact/executed advance and method boundary; adapted `D0,D1`, complete trace/heat/low/R-063 owner reconstruction, Cartan cancellation or absorption, and once-only source/sextic aggregation remain open; the old mandatory-companion inference is corrected by R-121 |
+| Cartan path-space exactness / fixed-skew Sobolev boundary | Exact two-visit owner telescope; exact three-current curl audit; normalized `20/729` symmetric path Hessian; canonical skew wedge and absolute-operator inventories; fixed-skew `s<1` theorem with moment five at `s=3/5`; sharp `H^{-11/10}` first-order reuse no-go | T4 analytic/exact/executed correction and advance; adapted `D0,D1`, adapted fifth `H^{-3/5}` moment/forest, direct one-use aggregation, and all global gates remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1556,20 +1573,20 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_covariance_horizontal_synthesis_stationary_low_chaos_cartan_hessian_boundary_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_cartan_pathspace_exactness_fixed_skew_sobolev_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `68/68`;
-- non-importing independent `59/59`;
-- manifest-pinned integrated `99/99` PASS;
-- exact coefficient diagonalization, covariance-horizontal synthesis, sharp
-  endpoint `L6`, variable-multiplier powers, stationary six-row low-chaos,
-  linear/rational Hessian, 21-generator, and Cartan-checksum assertions;
+- primary `78/78`;
+- non-importing independent `64/64`;
+- manifest-pinned integrated `125/125` PASS;
+- exact two-visit owner telescope, three-current curl separation, symmetric
+  `20/729` path Hessian, canonical skew-wedge identities, the fixed-skew
+  moment-five theorem, and the `H^(-11/10)` first-order reuse no-go;
 - exact authority, source, result, note, PDF, and manifest pins;
-- explicit preservation of the open adapted `D0,D1`, complete owner and
-  missing-companion gates, one-use aggregation, `OVERLAP_src`, Nelson,
+- explicit preservation of the open adapted `D0,D1`, adapted fifth
+  `H^(-3/5)` moment/forest, one-use aggregation, `OVERLAP_src`, Nelson,
   removal, measure, and Sector-A targets;
 - exit code zero.
 
@@ -1578,7 +1595,24 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 ## Current evidence
 
-The current R-120 package is:
+The current R-121 package is:
+
+- `classii_cartan_pathspace_exactness_fixed_skew_sobolev_boundary_manifest.json`
+- `notes/classii-cartan-pathspace-exactness-fixed-skew-sobolev-boundary-260729-v1.0.tex.txt`
+- `notes/classii-cartan-pathspace-exactness-fixed-skew-sobolev-boundary-260729-v1.0.pdf`
+- `../../codes/foundations/a13_classii_cartan_pathspace_exactness_fixed_skew_sobolev_boundary.py`
+- `../../codes/foundations/a13_classii_cartan_pathspace_exactness_fixed_skew_sobolev_boundary_independent.py`
+- `../../codes/foundations/a13_classii_cartan_pathspace_exactness_fixed_skew_sobolev_boundary_verify.py`
+- `runs/2026-07-29-primary-cartan-pathspace-exactness-fixed-skew-sobolev-boundary/result.json`
+- `runs/2026-07-29-independent-cartan-pathspace-exactness-fixed-skew-sobolev-boundary/result.json`
+- `runs/2026-07-29-integrated-cartan-pathspace-exactness-fixed-skew-sobolev-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-121`
+- `../../negative-results/registry.md#audit-2026-07-29-a13-r119-r120-cartan-companion-inference`
+- `../../negative-results/registry.md#ng-2026-07-29-a13-first-order-hminus-11-10-cartan-reuse`
+- `../../explorations/log.jsonl` (`EXP-000376`--`EXP-000380`)
+
+The immediate R-120 predecessor package remains binding, subject to the
+R-121 correction of its mandatory-companion inference:
 
 - `classii_covariance_horizontal_synthesis_stationary_low_chaos_cartan_hessian_boundary_manifest.json`
 - `notes/classii-covariance-horizontal-synthesis-stationary-low-chaos-cartan-hessian-boundary-260729-v1.0.tex.txt`
@@ -2361,15 +2395,24 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
      inventory is fixed, but its scalar coefficients remain spatially varying
      and adapted; the multiplier theorem requires their summed derivatives
      through order two.
-110. **UPHELD AGAINST FORMAL-EXACTNESS INFERENCE: the missing `+40/729`
-     companion may be inserted because the complete terminal action is
-     exact.** R-120 independently reproduces only the isolated `-40/729`
-     owner. The opposite checksum must be derived from the complete rational
-     square/trace/heat/low/R-063 forest, not assumed.
+110. **UPHELD AGAINST THE OLD FORMAL-EXACTNESS INFERENCE: scalar exactness
+     forces a local `+40/729` companion.** R-121 proves this implication
+     false. The actual `K_R`, `M_U`, and recombined current curls are
+     `-40/729`, `2720/729`, and `2680/729`, while the path Hessian remains
+     symmetric. Any cancellation must be derived before owner projection.
 111. **VALID WITH MITIGATION: selfadjoint rational Hessians have no Cartan
      boundary.** Selfadjointness controls the zeroth-order Hessian form. The
      first-order curvature `-(alpha/d) dm_A wedge d rho` survives and still
      needs exact cancellation or a direct form bound.
+112. **VALID WITH MITIGATION: `(5/2)I` is the coefficient-index skew
+     constant.** It is the absolute-operator sum. The canonical direct-sum
+     wedge constant is `1/2`; R-121 states the norm convention explicitly.
+113. **DISMISSED: the R-120 `H^{-11/10}` rough class pays the first-order
+     Cartan form.** The exact R-121 frequency family diverges as `N^(1/10)`.
+     Arbitrary-budget form absorption requires order strictly below one.
+114. **UPHELD AGAINST ADAPTED PROMOTION: R-071 already supplies the production
+     fifth moment.** It supplies every finite moment for the unshifted
+     stationary fixed-floor current, not for the adapted translated forest.
 
 ## Falsifier
 
@@ -3318,11 +3361,16 @@ vertical basicness to the terminal-Hessian chain rule and lossless quotient
 norm. R-120 closes the covariance-horizontal `H2`/endpoint-`L6` synthesis for
 the fixed-matrix form, proves the stationary complete six-row raw-current
 zero/first-chaos identities, and gives exact linear/rational Hessian and
-21-generator formulas. It also confirms that the rational Cartan owner and
-the `+40/729` companion remain unresolved. None of R-114--R-120 proves the
-adapted coefficient-level `D0,D1` cancellations, full trace/heat/low/R-063
-forest reconstruction, a cutoff-summable conditional log-normalizer ledger,
-or the once-only source/sextic aggregation.
+21-generator formulas. R-121 corrects the later R-119/R-120 inference that
+path-space scalar exactness forces a local `+40/729` current companion. It
+proves the exact two-visit owner telescope, separates the local current curls
+`-40/729`, `2720/729`, and `2680/729`, and proves the fixed-skew `s<1`
+Sobolev theorem with moment five at `s=3/5`. It also proves that the R-120
+zero-order `H^(-11/10)` class cannot pay the first-order Cartan form from the
+available `H2/L6` data. None of R-114--R-121 proves the adapted
+coefficient-level `D0,D1` cancellations, the adapted fifth `H^(-3/5)`
+moment/forest, a cutoff-summable conditional log-normalizer ledger, or the
+once-only source/sextic aggregation.
 `OVERLAP_src`, Nelson, removal, interacting measure, Sector-A closure, and
 T5--T7 promotion remain open. Tier stays T4.
 
@@ -4105,3 +4153,19 @@ T5--T7 promotion remain open. Tier stays T4.
   Poppler visual QA. Adapted `D0,D1`, complete owner reconstruction, Cartan
   cancellation or absorption, one-use aggregation, and every downstream
   global gate remain open; tier stays T4.
+- 2026-07-29: Registered R-121. The exact two-visit rational owner telescopes
+  to endpoint two minus endpoint zero, with the target heat internal and the
+  R-063 endpoint forest owned once. A direct normalized audit gives current
+  curls `-40/729`, `2720/729`, and `2680/729`, while the affine path-space
+  mixed Hessians agree at `20/729`; scalar path-space exactness therefore does
+  not force a local `+40/729` companion. The canonical skew direct-sum
+  constant is `1/2`, distinct from the `(5/2)I` absolute-operator sum. For
+  fixed skew and `0<=s<1`, the first-order form has coefficient moment
+  `2/(1-s)`; at `s=3/5` this is moment five with Young powers `7/2` and `1/2`.
+  An exact high-frequency family rules out reuse of the zero-order
+  `H^(-11/10)` class. `EXP-000376--EXP-000380` record the advanced and failed
+  routes. Primary `78/78`, non-importing independent `64/64`, and integrated
+  `125/125` pass. The final eight-page PDF passes form, zero-overfull,
+  extraction, no-form, and all-page Poppler visual QA. Adapted `D0,D1`, the
+  adapted fifth `H^(-3/5)` moment/forest, one-use aggregation, and every
+  downstream global gate remain open; tier stays T4.

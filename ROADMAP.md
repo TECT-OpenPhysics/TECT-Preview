@@ -339,20 +339,21 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   visit square does not automatically descend to the terminal sextic and that
   a universal PSD random-`W` double-divergence owner is false. R-119
   reconstructs the minimum genuine two-block/two-visit adapted test and proves
-  the exact aggregate zero/first-chaos trace criteria. R-120 now diagonalizes
-  the complete A1 six-current coefficient, closes the covariance-horizontal
-  `H2`/endpoint-`L6` synthesis for the fixed-matrix R-118 form, proves the
-  conditional order-two variable-multiplier remainder, and proves stationary
-  common-real-even low-chaos cancellation for all six raw-current rows. Its
-  exact linear/rational Hessian inventory reduces the zeroth-order matrix
-  burden to 21 fixed generators, but a genuine first-order Cartan block
-  survives. Both implementations reproduce `-40/729`; the required
-  `+40/729` complete-owner companion is not observed. Continue by
-  reconstructing the complete rational owner on the R-119 adapted chart,
-  computing its `D0,D1` coefficients, and either cancelling that checksum or
-  directly bounding the surviving Cartan form before invoking R-120 once over
-  the R-093 directed source union. Strict per-shell normalizer existence alone
-  does not imply this once-only global burden.
+  the exact aggregate zero/first-chaos trace criteria. R-120 diagonalizes the
+  complete A1 six-current coefficient, closes the covariance-horizontal
+  `H2`/endpoint-`L6` synthesis for the fixed-matrix R-118 form, and isolates a
+  genuine first-order Cartan block. R-121 now proves the complete two-visit
+  rational-owner telescope and corrects the inference that scalar path-space
+  exactness forces a local `+40/729` companion: the exact local current curls
+  are `-40/729`, `2720/729`, and `2680/729`, while the path mixed Hessians
+  agree at `20/729`. Its fixed-skew theorem pays every deterministic
+  `H^(-s)` coefficient with `0<=s<1`; at `s=3/5` the exact requirement is a
+  fifth H^{-3/5} moment. A sharp high-frequency fixture rules out reusing the
+  R-120 zero-order `H^(-11/10)` class for this first-order form. Continue by
+  computing the actual adapted `D0,D1` endpoint kernels and the adapted fifth
+  `H^(-3/5)` current/forest moment, then apply the R-120/R-121 form bound once
+  over the R-093 directed source union. Strict per-shell normalizer existence
+  alone does not imply this once-only global burden.
   `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
   remain open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
@@ -950,13 +951,15 @@ preserved in git/changelog rather than treated as current gates.
    coefficient, proves the covariance-horizontal `H2`/endpoint-`L6` bridge,
    pins the conditional variable-multiplier remainder, proves stationary
    six-row raw-current low-chaos cancellation, and flattens the rational
-   Hessian into 21 fixed generators. The adapted `D0,D1` owner and first-order
-   Cartan curvature remain: `-40/729` is reproduced, while its required
-   `+40/729` companion is not observed. Continue by reconstructing the full
-   rational square/trace/heat/low/R-063 owner on the R-119 chart, testing the
-   companion, and cancelling or directly bounding the Cartan form before
-   spending source energy and terminal sextic exactly once over the R-093
-   directed union. Do
+   Hessian into 21 fixed generators. R-121 proves the complete rational-owner
+   telescope and retires the mandatory local `+40/729` companion inference:
+   path-space exactness does not descend to current closure. It proves direct
+   fixed-skew payment for every order below one and shows that the production
+   order `s=3/5` requires a fifth `H^(-3/5)` coefficient moment, while the
+   zero-order `H^(-11/10)` class cannot be reused. Continue by computing the
+   actual adapted `D0,D1` kernels and adapted fifth-moment forest, then spend
+   source energy and terminal sextic exactly once over the R-093 directed
+   union. Do
    not mistake strict per-shell normalizer existence for summability, and do
    not substitute a centered
    abstract tensor, full-Wick tensor normalizer, derivative-range test, or

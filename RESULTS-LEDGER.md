@@ -19,7 +19,8 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-120](#r-120) | Covariance-horizontal synthesis, stationary low-chaos cancellation, and the rational Cartan-Hessian boundary | Scoped T4 analytic/exact/executed advance and method boundary: the complete A1 six-current coefficient diagonalizes with `c0=3/(250P)`, `c1=243/(8000P)`, and `alpha=5/9`. For every temporally faithful source chart, the realized covariance quotient controls the physical `H2` endpoint with `M_R^2/c_sym`; the sharp two-endpoint `L6` constant is `32`, so source energy and the terminal sextic can be spent once in the fixed-matrix R-118 estimate. Under summed bilinear multiplier-derivative bounds through order two, the variable-matrix remainder has powers `K0^(3/2) K_le2^(11/6)` at `kappa=1/10`. The complete common-real-even stationary six-row raw-current packet satisfies the R-119 zero/first-chaos identities, but this is not an adapted trace/heat/low/R-063 forest theorem. The linear rows have an exact square--Laplacian--trace Hessian and zero curvature. The rational raw-`Q` Hessian is selfadjoint and flattens into 21 fixed matrices with absolute sum `(7/2)I`, while a genuine first-order Cartan block survives. The R-102 curl `-40/729` is independently reproduced; `+40/729` is required but not observed. Adapted `D0,D1`, complete owner reconstruction, Cartan cancellation or absorption, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
+| [R-121](#r-121) | Cartan path-space exactness correction and the fixed-skew Sobolev one-use boundary | Scoped T4 analytic/exact/executed correction and advance: the complete two-visit rational owner telescopes pathwise to its endpoints, but exactness of that scalar on jet/path space does not force a projected target-space current one-form to be closed. On the exact R-102 slice the `K_R`, `M_U`, and recombined current curls are `-40/729`, `2720/729`, and `2680/729`; the normalized path ellipse has a symmetric mixed Hessian `20/729`. Thus the old mandatory `+40/729` companion inference is superseded while the isolated chain-primitive no-go is retained. For a fixed-skew first-order form paired with `H^{-s}`, `0<=s<1`, the deterministic powers are `X^((1+3s)/4)Y^((1-s)/4)` and the coefficient moment is `2/(1-s)`. At `s=3/5` the moment is five and the Young powers are `eta^{-7/2}zeta^{-1/2}`. R-071 supplies this only for unshifted stationary currents. An exact high-frequency fixture rules out reuse of the zeroth-order `H^{-11/10}` class. Adapted `D0,D1`, the adapted fifth `H^{-3/5}` moment/forest, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
+| [R-120](#r-120) | Covariance-horizontal synthesis, stationary low-chaos cancellation, and the rational Cartan-Hessian boundary | Scoped T4 analytic/exact/executed advance and method boundary: the complete A1 six-current coefficient diagonalizes with `c0=3/(250P)`, `c1=243/(8000P)`, and `alpha=5/9`. For every temporally faithful source chart, the realized covariance quotient controls the physical `H2` endpoint with `M_R^2/c_sym`; the sharp two-endpoint `L6` constant is `32`, so source energy and the terminal sextic can be spent once in the fixed-matrix R-118 estimate. Under summed bilinear multiplier-derivative bounds through order two, the variable-matrix remainder has powers `K0^(3/2) K_le2^(11/6)` at `kappa=1/10`. The complete common-real-even stationary six-row raw-current packet satisfies the R-119 zero/first-chaos identities, but this is not an adapted trace/heat/low/R-063 forest theorem. The linear rows have an exact square--Laplacian--trace Hessian and zero curvature. The rational raw-`Q` Hessian is selfadjoint and flattens into 21 fixed matrices with absolute sum `(7/2)I`, while a genuine first-order Cartan block survives. The R-102 curl `-40/729` is independently reproduced. R-121 later supersedes only R-120's inference that scalar exactness requires an unobserved local `+40/729` companion. Adapted `D0,D1`, complete owner reconstruction, Cartan cancellation or absorption, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-119](#r-119) | Legal adapted cluster, score-trace cancellation, and terminal-Hessian frontier | Scoped T4 analytic/exact/executed advance and method boundary: the smallest genuinely adapted strict-triangular test uses two independent source blocks and two visits; the complete square-minus-trace packet telescopes to its endpoints with the trace owned once. For `Y=b+Axi+R`, with `R` orthogonal to zero and first chaos, exact aggregate mean-trace and derivative-trace identities are necessary and sufficient for zero/first-chaos cancellation; the kernel formula includes affine-quadratic and every adjacent-chaos contraction. Bare Jacobian heat leaves the strict debt `-1/2 sum_(n>=2)(n-1)n!||r_n||^2`, so low/output/R-063 companions are mandatory. The R-107 one-pair canonical `W` is strictly PSD with cost `2sigma^8`, and both R-115 covariance faces are PSD; the mixed interior is not claimed. At fixed cutoff and floor, the complete terminal-action Hessian factors automatically through endpoint synthesis, while the realized quotient source norm removes inverse singular-value and visit-count loss. The actual production A1 low-chaos identities, trace/forest reconstruction, spatial multiplier/synthesis estimate, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-118](#r-118) | Revisit quotient factorisation, operator Carleson extension, and signed-score boundary | Scoped T4 analytic/exact/executed advance and method boundary: a finite-visit selfadjoint quadratic form is fibre invariant exactly when it annihilates the endpoint-synthesis kernel, equivalently when it factors as `L* B L`; the corresponding form bound is equivalent to `-C L*L<=K<=C L*L`. The R-068 centered-form theorem extends without visit-count loss to spatially constant selfadjoint operator families satisfying `sum_r |K_r|<=K0 I`, with one global Young remainder raising both `K0` and the model norm to `3/(1-kappa)`. Exact terminal-only descent of the recombined selfadjoint form requires quotient factorisation; the termwise `K_r=L*B_rL` bridge is sufficient and is not asserted necessary. Two opposite visits disprove automatic replacement of the visit square-function sextic by the terminal sextic. Every scalar finite-dimensional Gaussian polynomial decomposes canonically into zero chaos, first chaos, and one double divergence. An exact two-visit Hermite quotient has mean `-epsilon^2` and a unique sign-changing scalar preimage, so a universal PSD random-`W` factorisation is false. R-102's nonzero curl remains an inherited isolated-current boundary. The complete adapted A1 low-chaos cancellation, trace/forest compatibility, vertical basicness, multiplier estimate, one-use ledger, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-117](#r-117) | Rational-horizon classifier, uniform canonical dyadic-root trace margin, and fixed-shell metric boundary | Scoped T4 analytic/exact/executed advance and method boundary: the exact full-horizon tangent classifier extends the finite-dimensional tail theorem from polynomial quadratic maps to locally Lipschitz asymptotically quadratic maps, including the rational R-082 row. The positive floor converges to the degree-two horizon at an explicit state-uniform fixed-cutoff rate. The homogeneous Pauli--Fierz frame has sharp joint constant `411/(2000P)`. Exact rational shell enumeration plus an analytic `N^-3` tail prove `(10/9) tau_N^rec<3/40` and `(20/9) tau_N^rec<3/20` for every standardized direction of the matching full-production dyadic shell, hence frozen bare-root normalizer existence at both tilts. A same-shell phase modulation has distance `O(t)` from the exact null set but current `O(t^2)`, disproving local Lipschitz metric regularity even at fixed cutoff. The result does not identify the complete adapted progressive/revisit packet, produce cutoff-summable log-normalizers, or aggregate source/sextic owners once. `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -140,6 +141,51 @@ policy in `governance/development-history.md`.
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
+<a id="r-121"></a>
+### R-121 -- Cartan path-space exactness correction and the fixed-skew Sobolev one-use boundary
+
+**Result ID.**
+A13-CLASSII-CARTAN-PATHSPACE-EXACTNESS-FIXED-SKEW-SOBOLEV-BOUNDARY.
+
+**Owner telescope and correction.**  On every legal two-visit R-119 chart
+with one common target heat, the recombined rational owner satisfies
+`sum_k(R_Q,k+M_U,k+K_R,k)=B_2:Q_2/2-B_0:Q_0/2` pathwise.  The intermediate
+endpoint cancels, heat remains internal, and the covariance trace and R-063
+endpoint forests occur once.  Nevertheless scalar exactness on full jet/path
+space does not imply closure of a projected target-space current coefficient.
+On the normalized R-102 slice, the repository curls of `L e1`, `B_T e1`, and
+`B_1 e1` are `-40/729`, `2720/729`, and `2680/729`.  The affine-jet path
+ellipse has equal mixed Hessians `20/729`.  R-121 therefore supersedes only
+the R-119/R-120 mandatory `+40/729` companion inference; the isolated
+`-40/729` chain-primitive no-go and all other predecessor results remain.
+
+**Fixed-skew theorem.**  For fixed skew matrices and vector coefficient
+`Q in H^{-s}(ell2)`, `0<=s<1`, the first-order payload obeys
+`||z^T A dz||_Hs <= C_s C_sk X^((1+3s)/4)Y^((1-s)/4)`.  Weighted Young has
+slack `(1-s)/2`, coefficient moment `2/(1-s)`, eta power
+`(1+3s)/(2(1-s))`, and zeta power `1/2`.  At `s=3/5` this is moment five,
+`eta^{-7/2}zeta^{-1/2}`.  For the canonical six-real skew basis the direct-sum
+wedge constant is `1/2`, while the distinct absolute-operator inventory is
+`sum|A_pq|=(5/2)I`.  R-071 supplies every required moment only for the
+unshifted stationary fixed-floor current.
+
+**Sharp boundary.**  The normalized fixture
+`z_N=(1,N^{-2}sin(Nx))`, `Q_N=N^s cos(Nx)` has bounded `H2`, `L6`, and
+`H^{-s}` norms but pairing `-N^(s-1)/2`.  It diverges at `s=11/10`, proving
+that R-120's zeroth-order rough class cannot be reused for the first-order
+Cartan block.  The remaining production gate is an owner-complete adapted
+Taylor/forest reconstruction or equivalent uniform fifth `H^{-3/5}` moment,
+together with direct computation of adapted `D0,D1`.  One-use aggregation,
+`OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain open
+at T4.
+
+**Where proved.**  Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-cartan-pathspace-exactness-fixed-skew-sobolev-boundary-260729-v1.0`,
+primary exact `78/78`, non-importing independent `64/64`, and integrated
+certificates.  Publication target: path-space Cartan correction and
+fixed-skew Sobolev form lemmas.
+
 <a id="r-120"></a>
 ### R-120 -- Covariance-horizontal synthesis, stationary low-chaos cancellation, and the rational Cartan-Hessian boundary
 
@@ -179,13 +225,13 @@ adapted and spatially varying, and the rational current also retains the
 genuine first-order curvature
 `Omega_A=-(alpha/d) dm_A wedge d rho`, outside the zeroth-order flattening.
 
-**Checksum and frontier.**  The R-102 isolated rational curl `-40/729` is
-reproduced in both implementations.  Complete terminal-action exactness
-requires the remaining rational square, trace, heat, low, and R-063 forest
-owners to supply `+40/729`, but that companion is not observed.  The shortest
-remaining route is to reconstruct that complete two-block/two-visit owner,
-compute only the adapted `D0,D1` low-chaos coefficients, verify the companion,
-and either cancel or directly bound the Cartan block before invoking the
+**Checksum and frontier (historically corrected by R-121).**  The R-102
+isolated rational curl `-40/729` is reproduced in both implementations.
+R-121 proves that terminal scalar exactness does not require a local
+`+40/729` companion and supplies the actual owner-current curls.  The
+remaining route is to compute adapted `D0,D1`, reconstruct the adapted
+Cartan coefficient into the fixed-skew `H^{-3/5}` fifth-moment class or find
+an independently derived operator cancellation, and then invoke the
 horizontal/multiplier theorem once.  Complete one-use aggregation,
 `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain open
 at T4.

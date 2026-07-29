@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-29-A13-R119-R120-CARTAN-COMPANION-INFERENCE](#audit-2026-07-29-a13-r119-r120-cartan-companion-inference) | R-119/R-120 inference that exactness of the complete terminal scalar forces the omitted projected local current to have curl `+40/729` | exactness of a scalar differential on jet/path space does not imply target-space closure of one extracted coefficient. On the R-102 slice the actual `K_R`, `M_U`, and recombined current curls are `-40/729`, `2720/729`, and `2680/729`, while the normalized path ellipse has equal mixed Hessians `20/729`. R-121 supersedes only the mandatory-companion inference; the observed isolated curl and chain-primitive no-go remain valid |
+| [NG-2026-07-29-A13-FIRST-ORDER-HMINUS-11-10-CARTAN-REUSE](#ng-2026-07-29-a13-first-order-hminus-11-10-cartan-reuse) | reuse the R-120 zeroth-order `H^{-11/10}` rough-coefficient class for the surviving first-order Cartan form using only `H2` and `L6` field budgets | `z_N=(1,N^{-2}sin(Nx))` and `Q_N=N^s cos(Nx)` have uniformly bounded `H2`, `L6`, and `H^{-s}` norms, but their fixed-skew pairing is `-N^(s-1)/2`; at `s=11/10` it diverges as `N^(1/10)`. Absolute first-order pairing is sharp at `s=1`, and arbitrary-budget Young absorption requires `s<1`. The live production target is an adapted fifth `H^{-3/5}` moment or equivalent signed cancellation |
 | [NG-2026-07-29-A13-BARE-JACOBIAN-HEAT-LOW-CHAOS-CANCELLATION](#ng-2026-07-29-a13-bare-jacobian-heat-low-chaos-cancellation) | cancel the zero and first Wiener chaoses of a nonlinear complete endpoint residual using only the bare Jacobian heat `2 Re Tr(A*DR)+||DR||_HS^2` after affine absorption | for `R=sum_(n>=2) I_n(r_n)`, the residual mean is exactly `-1/2 sum_(n>=2)(n-1)n!||r_n||^2`, strictly negative for every `R!=0`; separate exact fixtures show that mean centering also does not remove the affine-quadratic or adjacent-chaos first-chaos debts. The complete low/output/trace/R-063 forest companions are mandatory. This is a route no-go, not an A1 counterexample |
 | [NG-2026-07-28-A13-UNIVERSAL-PSD-RANDOM-W-DOUBLE-DIVERGENCE](#ng-2026-07-28-a13-universal-psd-random-w-double-divergence) | represent every centered nonlinear revisit residual by a positive-semidefinite random second-divergence coefficient, with no signed coefficient or separate low-chaos owner | the exact scalar two-visit Hermite quotient has mean `-epsilon^2`; after centering, its unique `L2` preimage is `W_can=epsilon^2(H2+2aH1)=epsilon^2((G+a)^2-(a^2+1))`, which changes sign. This refutes only the universal PSD representation: a complete production cluster may cancel its low chaoses or have additional coupled owners |
 | [NG-2026-07-28-A13-FIXED-SHELL-LIPSCHITZ-METRIC-REGULARITY](#ng-2026-07-28-a13-fixed-shell-lipschitz-metric-regularity) | derive the complete R-082 root trace margin from a local Lipschitz distance-to-null-set error bound, even first at fixed cutoff | in the legal shell `S_8`, the active phase-modulated field `u_t=exp(6 i kappa x_1)(1+i t cos(kappa x_1))e_1`, `chi=0`, has null-set distance `O(|t|)` but full homogeneous current `O(t^2)`; standardizing to the unit root sphere changes only a radial `1+O(t^2)` factor. Thus local Lipschitz metric regularity fails. This is a method no-go, not a normalizer counterexample: R-117 instead proves an all-direction canonical same-shell trace margin |
@@ -165,6 +167,63 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-29-a13-r119-r120-cartan-companion-inference"></a>
+### AUDIT-2026-07-29-A13-R119-R120-CARTAN-COMPANION-INFERENCE -- path-space exactness does not require a local opposite curl
+
+**Claim / route.**  R-119 Section 6, R-120 Section 9, and the matching
+EXP-000370/EXP-000375 route text inferred that exactness of the complete
+terminal scalar on path or jet space forces the omitted projected local
+field-space current to provide repository curl `+40/729`, opposite to the
+isolated R-102 value.
+
+**Failure mode.**  A scalar first-order path functional has an exact
+differential and symmetric Hessian even when its target one-form is not
+closed.  On the exact R-102 slice, the actual owner-current curls are
+`curl(L e1)=-40/729`, `curl(B_T e1)=2720/729`, and
+`curl(B_1 e1)=2680/729`.  The affine-jet normalized ellipse has equal mixed
+Hessians `20/729`, directly exhibiting scalar Hessian symmetry with nonzero
+local curl.  Coefficient extraction from the full `(U,G)` jet differential is
+not a chain map to the target exterior derivative.
+
+**Evidence.**  R-121 proof note, Theorems 2.1 and 4.1 and Proposition 3.1;
+primary exact symbolic audit `78/78`; non-importing exact Fraction-jet audit
+`64/64`; integrated manifest-pinned verifier; final all-page PDF inspection.
+
+**Consequence.**  The mandatory `+40/729` companion search is retired.  This
+supersedes only that inference and does not mutate the historical R-119/R-120
+artefacts.  The observed isolated `-40/729`, its chain-primitive no-go, the
+legal adapted chart, covariance-horizontal synthesis, stationary low-chaos
+theorem, and Hessian inventories remain valid.  A fully derived
+Euler--Lagrange cancellation remains possible, and direct Cartan control is
+the live alternative.
+
+<a id="ng-2026-07-29-a13-first-order-hminus-11-10-cartan-reuse"></a>
+### NG-2026-07-29-A13-FIRST-ORDER-HMINUS-11-10-CARTAN-REUSE -- zeroth-order rough regularity cannot pay a first-order Cartan form
+
+**Claim / route.**  Insert the R-120 zeroth-order coefficient class
+`H^{-11/10}` unchanged into the surviving first-order fixed-skew Cartan form
+and pay it from only the covariance-horizontal `H2` and endpoint `L6`
+budgets.
+
+**Failure mode.**  On a normalized one-dimensional torus embedded in the
+three-torus, set `z_N=(1,N^{-2}sin(Nx))`, use the fixed skew matrix
+`J=((0,-1),(1,0))`, and set `Q_N=N^s cos(Nx)`.  The `H2` and `L6` norms of
+`z_N` and the `H^{-s}` norm of `Q_N` stay uniformly bounded, but
+`<Q_N,z_N^T J partial_x z_N>=-N^(s-1)/2`.  At `s=11/10` this diverges as
+`N^(1/10)`.  At `s=1` the deterministic Young gap is zero.
+
+**Evidence.**  R-121 proof note, Theorem 5.2 and Section 7; two independent
+exact executables derive the exponent, bounded budgets, and divergence;
+integrated verifier and paired PDF.
+
+**Consequence.**  Absolute first-order pairing from these three norms is
+sharp at `s=1`, and arbitrary-budget one-use absorption requires `s<1`.  At
+`s=3/5`, the fixed-skew theorem has slack `1/5` and needs moment five.  R-071
+supplies that moment only for the unshifted stationary current; the adapted
+production fifth `H^{-3/5}` moment or an equivalent signed/operator
+cancellation remains the exact gate.  This is a method no-go, not a
+production or Nelson counterexample.
 
 <a id="ng-2026-07-29-a13-bare-jacobian-heat-low-chaos-cancellation"></a>
 ### NG-2026-07-29-A13-BARE-JACOBIAN-HEAT-LOW-CHAOS-CANCELLATION -- bare heat leaves a strict nonlinear mean debt

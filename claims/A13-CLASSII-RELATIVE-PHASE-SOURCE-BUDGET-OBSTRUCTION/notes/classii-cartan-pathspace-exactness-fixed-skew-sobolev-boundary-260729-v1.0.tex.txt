@@ -1,0 +1,603 @@
+% =============================================================================
+% Title: Cartan path-space exactness correction and the fixed-skew Sobolev
+%        one-use boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-CARTAN-PATHSPACE-EXACTNESS-FIXED-SKEW-SOBOLEV-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-29; this version issued 2026-07-29
+% Status: scoped T4 analytic/exact/executed correction and advance;
+%         no A13 gate and no Sector-A closure
+%
+% Revision history (cumulative):
+%   v1.0 (2026-07-29) first issue.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+
+\section*{1. Purpose and scope}
+
+R-119 and R-120 left a rational first-order Cartan term and proposed a
+checksum: the isolated R-102 current has repository curl $-40/729$, so the
+unwritten remainder of the complete terminal owner was said to be required
+to provide $+40/729$.  The present note audits that implication before
+spending more proof effort on an arithmetic companion search.
+
+The audit finds a category error.  Exactness of the differential of a scalar
+functional on path or jet space does not imply that a target-space one-form
+appearing as one local coefficient is closed.  The complete rational owner
+does telescope exactly, but its recombined local current is itself not
+closed.  There is therefore no structurally mandatory $+40/729$ local
+companion.  The observed $-40/729$ and its chain-primitive no-go remain
+valid.
+
+The correction unlocks a different analytic route.  A fixed-skew Cartan form
+paired with an $H^{-s}$ coefficient has positive deterministic Young slack
+for every $0\le s<1$.  At $s=3/5$ it requires only a fifth coefficient
+moment, improving the older R-071 Cartan payment on any branch already
+reduced to its unshifted stationary one-form current.  A sharp high-frequency
+fixture proves that the R-120 zeroth-order $H^{-11/10}$ coefficient class
+cannot be reused for this first-order form.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{R-121 conclusion.}
+At fixed cutoff, positive floor, and one common legal target heat, the
+two-visit rational owner $\cR_Q+\cM_U+\cK_R$ telescopes pathwise to its two
+terminal endpoints.  Target heat is internal, the covariance trace occurs
+once, and the intermediate raw-Wick/forest endpoint cancels after complete
+recombination.
+
+On the normalized R-102 slice, the repository curls of the $\cK_R$ current,
+the $\cM_U$ current, and their recombined current are respectively
+$-40/729$, $2720/729$, and $2680/729$.  Thus neither the observed owner nor
+global scalar exactness supplies the alleged $+40/729$ local companion.
+
+For fixed skew matrices and $0\le s<1$, the surviving Cartan form obeys a
+one-use estimate with coefficient moment $2/(1-s)$.  At $s=3/5$ the powers
+are $X^{7/10}Y^{1/10}$, the slack is $1/5$, and the required moment is $5$.
+The adapted production current is not yet reconstructed in that class.
+
+Adapted $D_0,D_1$, an adapted R-063 forest theorem or equivalent fifth
+$H^{-3/5}$ moment, the complete one-use aggregation, $\mathrm{OVERLAP}_{\rm
+src}$, Nelson, removals, interacting measure, and Sector-A closure remain
+open.  Tier stays T4.
+}}
+\end{center}
+
+R-121 supersedes only the local-companion inference in R-119 Section 6,
+R-120 Section 9, and the matching parts of EXP-000370 and EXP-000375.  The
+historical notes and certificates remain immutable evidence of what was
+tested.  All other R-119/R-120 results survive this correction.
+
+\section*{2. Exact two-visit rational owner}
+
+Fix one spatial derivative index and a legal R-119 two-block/two-visit chart.
+For $k=1,2$, write
+\[
+ U_k=U_{k-1}+a_k,\qquad
+ G_k=G_{k-1}+d_k,\qquad d_k=D_i a_k,                 \tag{2.1}
+\]
+where $a_2=S_2h_2(\xi_1)$ is strict-past for the second block.  At one common
+deterministic or legally predictable target heat and covariance, put
+\[
+ B_k=(P_{\Sigma_{\rm tar}}B_R)(U_k),\qquad
+ Q_k=G_k^{\otimes2}-\Gamma_i.                       \tag{2.2}
+\]
+Define the left Taylor coefficient and its exact remainder by
+\[
+ T_k=B_{k-1}+DB_{k-1}[a_k]
+       +\frac12D^2B_{k-1}[a_k,a_k],\qquad
+ L_k=B_k-T_k.                                       \tag{2.3}
+\]
+The three rational owner coordinates are
+\[
+ \cR_{Q,k}=\frac12(B_k-B_{k-1}):Q_{k-1},            \tag{2.4}
+\]
+\[
+ \cM_{U,k}=G_{k-1}^{T}T_kd_k,                       \tag{2.5}
+\]
+\[
+ \cK_{R,k}=G_{k-1}^{T}L_kd_k
+             +\frac12d_k^TB_kd_k.                  \tag{2.6}
+\]
+
+\subsection*{Theorem 2.1 (exact two-visit owner telescope)}
+
+Pathwise at every finite cutoff,
+\[
+ \boxed{
+ \sum_{k=1}^2(\cR_{Q,k}+\cM_{U,k}+\cK_{R,k})
+ =\frac12B_2:Q_2-\frac12B_0:Q_0.}                  \tag{2.7}
+\]
+Equivalently,
+\[
+ \boxed{
+ \frac12(G_2^TB_2G_2-G_0^TB_0G_0)
+ -\frac12(B_2-B_0):\Gamma_i.}                      \tag{2.8}
+\]
+
+\paragraph{Proof.}
+Since $G_k=G_{k-1}+d_k$,
+\[
+ Q_k=Q_{k-1}+G_{k-1}\otimes d_k+d_k\otimes G_{k-1}
+       +d_k\otimes d_k.                            \tag{2.9}
+\]
+Therefore
+\[
+\begin{split}
+ \frac12B_k:Q_k-\frac12B_{k-1}:Q_{k-1}
+ ={}&\frac12(B_k-B_{k-1}):Q_{k-1}\\
+ &+G_{k-1}^TB_kd_k+\frac12d_k^TB_kd_k.
+\end{split}                                         \tag{2.10}
+\]
+Using $B_k=T_k+L_k$, the right side is exactly (2.4)--(2.6).
+Summing (2.10) cancels $B_1:Q_1/2$ and proves (2.7).  No independence or
+conditioning is used.  Thus adapted dependence of $a_2$ does not affect the
+finite-cutoff algebra; it matters only when conditional expectation, Wiener
+projection, or continuum reconstruction is subsequently taken.
+\hfill$\square$
+
+\subsection*{Proposition 2.2 (once-only owner incidence)}
+
+The terminal derivative square is endpoint two minus endpoint zero, once.
+The covariance-normal trace is $-(B_2-B_0):\Gamma_i/2$, once.  Target heat is
+already internal to $P_{\Sigma_{\rm tar}}B_R$ and is not appended as another
+owner.  The two surviving endpoint raw-Wick objects are reconstructed once;
+the intermediate endpoint has multiplicity zero after recombination.
+
+Consequently the R-063 $P_3/P_1$ and
+$P_4/P_2^{\rm cross}/\Sigma Q/P_0^{\rm cross}$ families, together with the
+Taylor $\cR_3$ family, are coordinates of the two endpoint reconstructions,
+not repairs that may be appended per visit.  The accepted R-063 continuum
+theorem remains deterministic-shift only.  Equation (2.7) does not silently
+promote it to adapted $h_2(\xi_1)$.
+
+The covariance-normal trace in (2.8) and the R-119 root-output trace
+$\delta\tau$ are also distinct objects until a coefficient-level identity
+relates them.  This distinction is load-bearing for $D_0,D_1$ below.
+
+\section*{3. Exact normalized owner-current audit}
+
+Use the R-102 active/kernel slice with repository curl convention
+\[
+ \operatorname{curl}_{\rm repo}(v)
+ =\partial_yv_x-\partial_xv_y.                     \tag{3.1}
+\]
+Set $\alpha=5/9$, $d=1+x^2+y^2$, and
+\[
+ g(x,y)=\left(x-\alpha\frac{x^3}{d},
+              -\alpha\frac{x^2y}{d}\right),
+ \qquad B=4gg^T.                                   \tag{3.2}
+\]
+For $a=c=e_1$, define
+\[
+ B_0=B(x,y),\quad B_1=B(x+1,y),\quad
+ B_T=B_0+\partial_xB_0+\frac12\partial_x^2B_0,
+ \quad L=B_1-B_T.                                  \tag{3.3}
+\]
+At $(x,y)=(1,1)$, exact rational differentiation gives
+\[
+ B_0=\frac1{729}\begin{pmatrix}1936&-440\\-440&100\end{pmatrix},
+ \quad
+ B_1=\frac1{729}\begin{pmatrix}4624&-1360\\-1360&400\end{pmatrix},           \tag{3.4}
+\]
+\[
+ L=\frac1{2187}\begin{pmatrix}80&520\\520&-300\end{pmatrix}.                 \tag{3.5}
+\]
+
+\subsection*{Proposition 3.1 (three owner-current curls)}
+
+The current coefficients and curls are
+\[
+ \omega_K=Le_1=\frac1{2187}(80,520)^T,
+ \qquad \operatorname{curl}_{\rm repo}\omega_K=-\frac{40}{729},              \tag{3.6}
+\]
+\[
+ \omega_M=B_Te_1=\frac1{2187}(13792,-4600)^T,
+ \qquad \operatorname{curl}_{\rm repo}\omega_M=\frac{2720}{729},            \tag{3.7}
+\]
+\[
+ \omega_{M+K}=B_1e_1=\frac1{729}(4624,-1360)^T,
+ \qquad \operatorname{curl}_{\rm repo}\omega_{M+K}=\frac{2680}{729}.        \tag{3.8}
+\]
+More explicitly,
+\[
+ \partial_y(\omega_K)_x=-\frac{4480}{6561},\qquad
+ \partial_x(\omega_K)_y=-\frac{4120}{6561},                                \tag{3.9}
+\]
+\[
+ \partial_y(\omega_M)_x=\frac{20800}{6561},\qquad
+ \partial_x(\omega_M)_y=-\frac{3680}{6561}.                                \tag{3.10}
+\]
+Thus $\omega_M$ is not an arithmetic $+40/729$ companion, and even the
+recombined coefficient $\omega_{M+K}=\omega_M+\omega_K$ is not closed.  The
+standard $dx\wedge dy$ orientation is the negative of (3.1), so the isolated
+standard exterior coefficient is $+40/729$; this convention change does not
+alter the conclusion.
+
+The R-102 $-40/729$ observation still proves that the isolated $Le_1$ cannot
+be a target-space chain primitive.  What fails is only the additional claim
+that another local owner must carry its arithmetic opposite.
+
+\section*{4. Path-space exactness does not imply target-space closure}
+
+Let $\theta$ be a smooth one-form on a finite-dimensional target and let $u$
+be a smooth loop.  Define the scalar first-order functional
+\[
+ I[u]=\int_{\T}\theta_{u(t)}(\partial_tu(t))\dd t.                              \tag{4.1}
+\]
+
+\subsection*{Theorem 4.1 (path-space exactness lemma)}
+
+The differential $DI$ is an exact one-form on loop space by construction,
+even when $d\theta\ne0$ on the target.  For fixed variations $z,w$,
+\[
+ DI[u]z=\int_{\T}(d\theta)_u(z,\partial_tu)\dd t,                              \tag{4.2}
+\]
+\[
+ D^2I[u](z,w)=\int_{\T}
+ \left[(D_wd\theta)_u(z,\partial_tu)+(d\theta)_u(z,\partial_tw)\right]\dd t. \tag{4.3}
+\]
+Although (4.3) is not manifestly symmetric, the difference under
+$z\leftrightarrow w$ vanishes by $d(d\theta)=0$ and integration by parts on
+the torus.  Hence symmetry of the scalar Hessian does not force
+$d\theta=0$.
+
+\paragraph{Explicit falsifying example.}
+Take
+\[
+ \theta=-\frac y2\dd x+\frac x2\dd y,
+ \qquad d\theta=\dd x\wedge\dd y,                  \tag{4.4}
+\]
+and $u(t)=(\cos t,\sin t)$.  Then $I[u]=\pi$.  For
+$z=(\cos t,0)$ and $w=(0,\sin t)$, direct integration gives
+\[
+ D^2I[u](z,w)=D^2I[u](w,z)=\pi.                    \tag{4.5}
+\]
+Thus a nonclosed target one-form produces a perfectly exact path-space
+differential and a symmetric scalar Hessian.
+
+There is also a production-specific version.  Let $z_0=(1,1)$,
+$\omega=Le_1$, use normalized Haar measure on the loop parameter, and set
+\[
+ u_{\varepsilon,\delta}(t)=z_0+\varepsilon e_1\cos t
+                         +\delta e_2\sin t.         \tag{4.6}
+\]
+For $I(\varepsilon,\delta)=\langle\omega(u)\cdot\partial_tu\rangle$, the
+affine jet of $\omega$ at $z_0$ gives exactly
+\[
+ I_{\rm aff}(\varepsilon,\delta)
+ =\frac12\left(\partial_x\omega_y-\partial_y\omega_x\right)
+   \varepsilon\delta
+ =\frac{20}{729}\varepsilon\delta.                \tag{4.7}
+\]
+Hence both mixed derivative orders equal $20/729$, while the repository curl
+is $-40/729$.  This directly falsifies the old implication on the actual
+R-102 jet, not merely on the illustrative form (4.4).
+
+Apply this to the endpoint scalar
+\[
+ \cE(U,G)=\frac12B(U):(G^{\otimes2}-\Gamma).        \tag{4.8}
+\]
+The complete owner is the scalar difference
+$\cE(U_2,G_2)-\cE(U_0,G_0)$.  Extracting one coefficient linear in $G$ and
+then taking the target exterior derivative is not a chain map from the full
+$(U,G)$ differential.  Equations (3.6)--(3.8) are an exact production-specific
+witness.  This proves the R-121 correction.
+
+\section*{5. Fixed-skew first-order Sobolev theorem}
+
+Let $A_\nu^*=-A_\nu$ be a fixed finite family of real matrices.  Put
+\[
+ \mathbf F(z)_{\nu i}=z^TA_\nu\partial_i z,
+ \qquad
+ \cC_Q(z)=\sum_{\nu,i}\langle Q_{\nu i},
+                                  \mathbf F(z)_{\nu i}\rangle.                \tag{5.1}
+\]
+The coefficient norm is the vector-valued norm
+\[
+ M_s=\|\mathbf Q\|_{H^{-s}(\ell^2)},\qquad 0\le s<1.                          \tag{5.2}
+\]
+Let $C_{\rm sk}$ denote the fixed-family constant in the vector-valued
+pointwise skew estimate.  For the canonical six-real basis
+\[
+ A_{pq}=\frac12(E_{pq}-E_{qp}),\qquad 1\le p<q\le6,                            \tag{5.3}
+\]
+the exact wedge identity is
+\[
+ \sum_{p<q}|z^TA_{pq}v|^2
+ =\frac14\left(|z|^2|v|^2-(z\cdot v)^2\right),                                \tag{5.4}
+\]
+so one may take the algebraic $\ell^2$ constant $C_{\rm sk}=1/2$ before the
+universal Sobolev product constant.  Separately,
+\[
+ \sum_{p<q}|A_{pq}|=\frac52\Id_6.                                             \tag{5.5}
+\]
+Equation (5.5) is an absolute-operator inventory, not the coefficient-index
+$\ell^2$ constant in (5.4); conflating them would produce a norm-convention
+error.
+
+Write
+\[
+ X=\|z\|_{H^2}^2,\qquad Y=\|z\|_6^6.                                        \tag{5.6}
+\]
+
+\subsection*{Lemma 5.1 (two endpoint product estimates)}
+
+In three dimensions,
+\[
+ \|\mathbf F(z)\|_{L^2(\ell^2)}
+ \le C C_{\rm sk}\|z\|_6\|\nabla z\|_3
+ \le C C_{\rm sk}X^{1/4}Y^{1/4},                                             \tag{5.7}
+\]
+and
+\[
+ \|\mathbf F(z)\|_{H^1(\ell^2)}
+ \le C C_{\rm sk}X.                                                          \tag{5.8}
+\]
+
+\paragraph{Proof.}
+Equation (5.7) uses (5.4), Holder, and the three-dimensional
+Gagliardo--Nirenberg inequality
+$\|\nabla z\|_3\le C\|D^2z\|_2^{1/2}\|z\|_6^{1/2}$, with harmless lower
+Fourier modes absorbed in $H^2$.  Differentiating (5.1) gives products of
+$\nabla z$ with itself and of $z$ with $D^2z$.  The embeddings
+$H^2\hookrightarrow L^\infty$ and $H^2\hookrightarrow W^{1,4}$ prove (5.8).
+\hfill$\square$
+
+\subsection*{Theorem 5.2 (sharp fixed-skew Sobolev one-use boundary)}
+
+Complex interpolation of (5.7)--(5.8) gives
+\[
+ \boxed{
+ \|\mathbf F(z)\|_{H^s(\ell^2)}
+ \le C_sC_{\rm sk}
+ X^{(1+3s)/4}Y^{(1-s)/4},\qquad0\le s<1.}                                     \tag{5.9}
+\]
+The two deterministic exponents sum to $(1+s)/2$, leaving Young slack
+$(1-s)/2$.  Vector-valued duality and weighted Young therefore give, for
+every $\eta,\zeta>0$,
+\[
+\boxed{
+ |\cC_Q(z)|\le\eta X+\zeta Y
+ +C_s C_{\rm sk}^{2/(1-s)}
+ \eta^{-(1+3s)/(2(1-s))}\zeta^{-1/2}
+ M_s^{2/(1-s)}.}                                                             \tag{5.10}
+\]
+
+At $s=3/5$,
+\[
+ \boxed{
+ |\cC_Q(z)|\le\eta X+\zeta Y
+ +C C_{\rm sk}^{5}\eta^{-7/2}\zeta^{-1/2}M_{3/5}^{5}.}                       \tag{5.11}
+\]
+The exact ledger is
+\[
+ (X\hbox{-power},Y\hbox{-power},\hbox{slack})
+ =\left(\frac7{10},\frac1{10},\frac15\right),                               \tag{5.12}
+\]
+and the coefficient moment is five.
+
+\subsection*{Corollary 5.3 (covariance-horizontal form)}
+
+Let
+\[
+ A_0=\frac{M_R^2}{c_{\rm sym}},\quad
+ S=\|h\|_{\cS}^2,\quad T=\|Z_h\|_6^6,
+ \quad B=\|X_J\|_6^6.                                                        \tag{5.13}
+\]
+R-120 gives $X\le A_0S$ and $Y\le32(T+B)$.  Choosing
+$\eta=\varepsilon/A_0$ and $\zeta=\varepsilon_6/32$ in (5.11) yields
+\[
+\boxed{
+ |\cC_Q(z)|\le\varepsilon S+\varepsilon_6(T+B)
+ +C\sqrt{32}\,C_{\rm sk}^{5}A_0^{7/2}
+ \varepsilon^{-7/2}\varepsilon_6^{-1/2}M_{3/5}^{5}.}                         \tag{5.14}
+\]
+Thus a cutoff-, chart-, visit-, and control-uniform fifth moment of the
+correct reconstructed $H^{-3/5}$ Cartan coefficient would close this
+component with one source/sextic payment.
+
+\section*{6. What R-071 already pays and what it does not}
+
+R-071 proves, for an unshifted common real-even stationary Gaussian field
+$U$ and every finite $p$,
+\[
+ \Theta(U)\partial_iU
+ \in L^p(\Omega;H^{-1/2-\delta}).                   \tag{6.1}
+\]
+Taking $\delta=1/10$ gives the fifth $H^{-3/5}$ moment required by (5.11).
+Therefore every R-120 Cartan branch that is algebraically reduced to a finite
+sum of unshifted R-071 currents paired with fixed skew matrices is now
+directly payable.  The deterministic interpolation sharpens the old R-071
+$45/4$ Cartan moment arithmetic to moment $5$ on this fixed-skew form.
+
+This is not yet the adapted production theorem.  The raw coefficient there
+is evaluated along $u=X+tz$ and has the schematic form
+\[
+ \widetilde\Theta(X+tz)\partial_i(X+tz).            \tag{6.2}
+\]
+R-063 proves its finite forest for deterministic translation; R-075 records
+that arbitrary adapted substitution need not preserve that finite forest.
+Neither authority supplies a control-uniform fifth $H^{-3/5}$ moment for
+(6.2).  The minimal honest additional input is an owner-complete adapted
+Cartan Taylor/forest identity reducing (6.2) to the unshifted R-071 current
+plus explicitly controlled translated corrections, or an equivalent direct
+uniform fifth-moment theorem.
+
+\section*{7. Sharp failure of the rough first-order reuse route}
+
+Work on a normalized one-dimensional torus embedded in $\T^3$, let
+\[
+ J=\begin{pmatrix}0&-1\\1&0\end{pmatrix},\qquad
+ z_N=(1,N^{-2}\sin Nx),\qquad Q_N=N^s\cos Nx.       \tag{7.1}
+\]
+Then $\|z_N\|_{H^2}$ and $\|z_N\|_6$ are bounded uniformly in $N$, while
+\[
+ \|Q_N\|_{H^{-s}}^2
+ =\frac{N^{2s}}{2(1+N^2)^s}\le\frac12.             \tag{7.2}
+\]
+But
+\[
+ \langle Q_N,z_N^TJ\partial_xz_N\rangle
+ =-\frac12N^{s-1}.                                  \tag{7.3}
+\]
+For $s=11/10$, (7.3) diverges as $N^{1/10}$.  Hence an absolute first-order
+Cartan bound from only $H^2$, $L^6$, and $H^{-11/10}$ norms is impossible.
+At $s=1$ the positive Young slack vanishes; for $s<1$ it is exactly
+$(1-s)/2$.  This proves that the R-120 zeroth-order coefficient class and the
+present first-order class have different sharp Sobolev boundaries.
+
+\section*{8. Adapted low-chaos coefficients remain independent}
+
+Let the complete root-one output be
+\[
+ Y=b+A\xi_1+R,\qquad
+ R=\sum_{n\ge2}I_n(r_n),\qquad
+ \delta\tau=\sum_{n\ge0}I_n(t_n).                  \tag{8.1}
+\]
+The exact R-119 reductions are
+\[
+ \boxed{D_0=t_0-\sum_{n\ge2}n!\|r_n\|^2,}          \tag{8.2}
+\]
+\[
+ \boxed{
+ (D_1)_i=(t_1)_i
+ -4\sum_j\langle Ae_j,r_2(i,j)\rangle
+ -2\sum_{n\ge3}n!\langle r_{n-1},r_n(\cdot,i)\rangle.}                       \tag{8.3}
+\]
+For the adapted endpoint,
+\[
+ V=D_{\xi_1}Z_*=S_1+S_2Dh_2,\qquad
+ W=D_{\xi_1}^2Z_*=S_2D^2h_2,                         \tag{8.4}
+\]
+so
+\[
+ D_{\xi_1}^2B(Z_*)=D^2B(Z_*)[V,V]+DB(Z_*)[W]        \tag{8.5}
+\]
+contains the four independent families
+\[
+ D^2B[S_1,S_1],\quad
+ 2D^2B[S_1,S_2Dh_2],\quad
+ D^2B[S_2Dh_2,S_2Dh_2],\quad
+ DB[S_2D^2h_2].                                     \tag{8.6}
+\]
+The current authorities do not specify the needed adapted kernels of $h_2$
+or the corresponding trace/forest kernels $t_0,t_1$.  Thus (8.2)--(8.3)
+cannot yet be evaluated.
+
+The independence is falsifiable in the scalar diagnostic
+\[
+ R=\alpha H_2+\beta H_3,\qquad
+ \delta\tau=q_0+q_1G.                              \tag{8.7}
+\]
+Exact Gaussian moments give
+\[
+ D_0=q_0-(2\alpha^2+6\beta^2),\qquad
+ D_1=q_1-(4a\alpha+12\alpha\beta).                 \tag{8.8}
+\]
+The owner telescope in Section 2 holds for arbitrary $q_0,q_1$, so it cannot
+force either expression in (8.8) to vanish.  This is a method counterexample,
+not an A1 production counterexample.
+
+\section*{9. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection:} scalar terminal exactness makes every extracted
+current coefficient closed.  \textbf{Disposition: UPHELD AGAINST THE OLD
+INFERENCE.}  Theorem 4.1 and (3.8) give an explicit counterexample.
+
+\item \textbf{Objection:} $\cM_U$ is the missing $+40/729$ companion.
+\textbf{Disposition: DISMISSED.}  Its exact repository curl is $2720/729$.
+
+\item \textbf{Objection:} $5/2$ is automatically the sharp coefficient-index
+constant for the canonical skew basis.  \textbf{Disposition: VALID WITH
+CORRECTION.}  It is the absolute-operator sum.  The canonical $\ell^2$ wedge
+constant is $1/2$; the theorem states its norm convention explicitly.
+
+\item \textbf{Objection:} the R-120 $H^{-11/10}$ model class can be inserted
+unchanged into the first-order Cartan form.  \textbf{Disposition: DISMISSED.}
+The exact family (7.1) diverges as $N^{1/10}$.
+
+\item \textbf{Objection:} R-071 already proves the adapted coefficient moment.
+\textbf{Disposition: VALID BOUNDARY.}  R-071 is unshifted stationary; R-063
+and R-075 prevent an automatic adapted finite-forest transfer.
+
+\item \textbf{Objection:} the pathwise owner telescope proves $D_0=D_1=0$.
+\textbf{Disposition: DISMISSED.}  Equation (8.8) varies with independent
+trace data while the telescope remains unchanged.
+\end{enumerate}
+
+\section*{10. Corrected proof route and exact remaining gate}
+
+The arithmetic companion search is retired.  The shortest noncyclic route is
+now parallel but sharply separated:
+
+\begin{enumerate}
+\item reconstruct the complete adapted endpoint Wiener kernels entering
+$t_0,t_1,r_2$ and the adjacent-chaos contractions in (8.2)--(8.3);
+\item derive an owner-complete Cartan Taylor/forest identity that places the
+surviving coefficient in $L^5(\Omega;H^{-3/5})$, or prove the equivalent
+uniform fifth-moment statement directly;
+\item apply (5.14) once over the R-120 covariance-horizontal synthesis and
+then assemble the remaining R-118 zeroth-order owner without duplicating
+source energy or terminal sextic budgets.
+\end{enumerate}
+
+An exact Euler--Lagrange cancellation of the complete endpoint scalar remains
+possible, but it must be derived before projection into current, trace, and
+forest coordinates.  No local opposite curl may be inserted as a checksum.
+
+\section*{11. Result footer}
+
+The primary exact symbolic executable independently derives the three current
+curls, the generic symmetric two-visit identity, the path-space example, the
+canonical skew identities, every Sobolev/Young exponent, the high-frequency
+growth exponent, and the scalar $D_0,D_1$ diagnostic.  A non-importing
+standard-library executable uses exact bivariate Fraction jets, three
+rational two-visit fixtures, independent Gaussian polynomial moments, and
+independent skew-basis arithmetic.  The integrated verifier reruns both,
+pins all authorities and source hashes, checks the paired PDF, and enforces
+the correction and no-overclaim surfaces.
+
+R-121 does not prove adapted $D_0,D_1$ cancellation, an adapted R-063 forest,
+a production fifth $H^{-3/5}$ moment, Cartan cancellation, the full one-use
+source/sextic inequality, $\mathrm{OVERLAP}_{\rm src}$, Nelson, removal of
+cutoff or floor, construction of an interacting measure, Sector-A closure,
+or any T5--T7 promotion.
+
+\begingroup
+\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-CARTAN-PATHSPACE-EXACTNESS-FIXED-SKEW-
+  SOBOLEV-BOUNDARY (R-121).
+Precise statement: Thm. 2.1; Props. 3.1-3.2; Thm. 4.1;
+  Lem. 5.1 and Thm. 5.2; Prop. 6.1; Thm. 7.1; Sec. 8.
+Scope: fixed finite cutoff and positive rational floor; deterministic
+  fixed-skew theorem; adapted production moment remains open.
+Dependencies: A1, R-063, R-071, R-075, R-102, R-119, R-120.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_cartan_pathspace_exactness_fixed_skew_
+  sobolev_boundary_verify.py
+Expected output: R-121 PASS 125/125; primary 78/78; independent
+  64/64; all hash, PDF, route, registry, and no-overclaim gates pass.
+Falsification gate: any failed telescope, curl, path-Hessian, skew,
+  Sobolev, high-frequency, authority, result, PDF, or surface assertion.
+Tier before / after: T4 / T4.
+No-overclaim statement: adapted D0/D1, adapted fifth H^{-3/5}
+  moment/forest, one-use, Nelson, removals, measure, Sector A remain open.
+Next required action: compute the actual adapted endpoint Wiener kernels
+  and fifth H^{-3/5} current/forest moment, then spend the form once.
+\end{verbatim}
+\endgroup
