@@ -1134,6 +1134,24 @@ the following structural results and proof-architecture boundaries hold.
     reuse of `H^(-11/10)`. Adapted `D0,D1`, the adapted fifth `H^(-3/5)`
     moment/forest, one-use aggregation, and all downstream global gates
     remain open; tier stays T4.
+65. `A13-CLASSII-DERIVATIVE-FREE-LOW-CHAOS-ADAPTED-FIFTH-MOMENT-CARTAN-BOUNDARY`
+    is R-122. The actual finite-cutoff endpoint kernels admit exact
+    derivative-free law formulas:
+    `r2=E[R tensor (xi tensor xi-I)]/2`,
+    `D0=E Theta-||A||_HS^2-E||R||^2`, and
+    `D1=E[xi Theta]-2 Contr(A,E[R tensor (xi tensor xi-I)])
+    -E[xi||R||^2]`. A bounded legal linear-row pair has the same source cost
+    and `A,r2,t0,D0` but opposite nonzero `D1`, so the production cancellation
+    still requires the complete law. The graph-null sequence `sin(nxi)/n`
+    retires feedback-derivative graph closure. A coherent-amplitude family has
+    bounded source `H2` and terminal `L6` budgets but divergent quadratic
+    current fifth `H^(-3/5)` moment; the active rational A1 coefficient has
+    nonzero quadratic ray `128/27`. Formal selfadjointness does not cancel the
+    Cartan coefficient: on the R-102 slice the Cartan and square-cross pieces
+    reinforce to `2680J/729`. The surviving route is one derivative-free,
+    correlation-preserving complete-owner expectation estimate before
+    absolute values. Production cancellation, one-use aggregation, and all
+    downstream global gates remain open; tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -1202,6 +1220,7 @@ is a scoped T4 subproof and does not promote A13.
 | Legal adapted score-trace / terminal quotient-Hessian frontier | Minimal two-block/two-visit strict-triangular chart; exact zero/first-chaos trace criteria; strict bare-heat no-go; one-pair and covariance-face PSD diagnostics; automatic global terminal-Hessian quotient and lossless realized quotient norm | T4 analytic/exact/executed advance and method boundary; production low-chaos identities, full trace/forest reconstruction, spatial multiplier/synthesis, and once-only source/sextic aggregation remain open |
 | Covariance-horizontal synthesis / stationary low-chaos / Cartan-Hessian boundary | Exact six-current diagonalization; lossless covariance quotient and physical `H2` bridge; sharp endpoint `L6` constant `32`; conditional variable-matrix remainder; stationary six-row raw-current zero/first-chaos cancellation; exact linear and rational Hessians; fixed 21-matrix inventory; independently reproduced Cartan checksum | T4 analytic/exact/executed advance and method boundary; adapted `D0,D1`, complete trace/heat/low/R-063 owner reconstruction, Cartan cancellation or absorption, and once-only source/sextic aggregation remain open; the old mandatory-companion inference is corrected by R-121 |
 | Cartan path-space exactness / fixed-skew Sobolev boundary | Exact two-visit owner telescope; exact three-current curl audit; normalized `20/729` symmetric path Hessian; canonical skew wedge and absolute-operator inventories; fixed-skew `s<1` theorem with moment five at `s=3/5`; sharp `H^{-11/10}` first-order reuse no-go | T4 analytic/exact/executed correction and advance; adapted `D0,D1`, adapted fifth `H^{-3/5}` moment/forest, direct one-use aggregation, and all global gates remain open |
+| Derivative-free low-chaos / adapted fifth-moment / Cartan boundary | Exact law-only `r2,D0,D1`; bounded legal `D1` identifiability fixture; feedback-derivative graph no-go; coherent-amplitude isolated fifth-moment nontransfer; active A1 `128/27` quadratic ray; exact R-102 Cartan/square reinforcement; optimal correlation-preserving quartic-to-sextic boundary | T4 analytic/exact/executed advance and method boundary; complete six-row law evaluation, signed one-use form, and all global gates remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1573,21 +1592,22 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_cartan_pathspace_exactness_fixed_skew_sobolev_boundary_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_derivative_free_low_chaos_adapted_fifth_moment_cartan_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `78/78`;
-- non-importing independent `64/64`;
-- manifest-pinned integrated `125/125` PASS;
-- exact two-visit owner telescope, three-current curl separation, symmetric
-  `20/729` path Hessian, canonical skew-wedge identities, the fixed-skew
-  moment-five theorem, and the `H^(-11/10)` first-order reuse no-go;
+- primary `82/82`;
+- non-importing independent `57/57`;
+- manifest-pinned integrated `122/122` PASS;
+- exact derivative-free `r2,D0,D1`, bounded owner identifiability, feedback
+  graph boundary, coherent-amplitude fifth-moment nontransfer, active A1
+  `128/27` rational ray, R-102 Cartan/square reinforcement, and the optimal
+  correlation-preserving quartic-to-sextic boundary;
 - exact authority, source, result, note, PDF, and manifest pins;
-- explicit preservation of the open adapted `D0,D1`, adapted fifth
-  `H^(-3/5)` moment/forest, one-use aggregation, `OVERLAP_src`, Nelson,
-  removal, measure, and Sector-A targets;
+- explicit preservation of the open production `D0,D1` cancellation,
+  complete signed one-use aggregation, `OVERLAP_src`, Nelson, removal,
+  measure, and Sector-A targets;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -1595,7 +1615,24 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 ## Current evidence
 
-The current R-121 package is:
+The current R-122 package is:
+
+- `classii_derivative_free_low_chaos_adapted_fifth_moment_cartan_boundary_manifest.json`
+- `notes/classii-derivative-free-low-chaos-adapted-fifth-moment-cartan-boundary-260729-v1.0.tex.txt`
+- `notes/classii-derivative-free-low-chaos-adapted-fifth-moment-cartan-boundary-260729-v1.0.pdf`
+- `../../codes/foundations/a13_classii_derivative_free_low_chaos_adapted_fifth_moment_cartan_boundary.py`
+- `../../codes/foundations/a13_classii_derivative_free_low_chaos_adapted_fifth_moment_cartan_boundary_independent.py`
+- `../../codes/foundations/a13_classii_derivative_free_low_chaos_adapted_fifth_moment_cartan_boundary_verify.py`
+- `runs/2026-07-29-primary-derivative-free-low-chaos-adapted-fifth-moment-cartan-boundary/result.json`
+- `runs/2026-07-29-independent-derivative-free-low-chaos-adapted-fifth-moment-cartan-boundary/result.json`
+- `runs/2026-07-29-integrated-derivative-free-low-chaos-adapted-fifth-moment-cartan-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-122`
+- `../../negative-results/registry.md#ng-2026-07-29-a13-feedback-derivative-graph-closure`
+- `../../negative-results/registry.md#ng-2026-07-29-a13-adapted-cartan-fifth-moment-graph-transfer`
+- `../../negative-results/registry.md#ng-2026-07-29-a13-selfadjointness-cartan-cancellation`
+- `../../explorations/log.jsonl` (`EXP-000381`--`EXP-000385`)
+
+The immediate R-121 predecessor package remains binding:
 
 - `classii_cartan_pathspace_exactness_fixed_skew_sobolev_boundary_manifest.json`
 - `notes/classii-cartan-pathspace-exactness-fixed-skew-sobolev-boundary-260729-v1.0.tex.txt`
@@ -3367,10 +3404,15 @@ proves the exact two-visit owner telescope, separates the local current curls
 `-40/729`, `2720/729`, and `2680/729`, and proves the fixed-skew `s<1`
 Sobolev theorem with moment five at `s=3/5`. It also proves that the R-120
 zero-order `H^(-11/10)` class cannot pay the first-order Cartan form from the
-available `H2/L6` data. None of R-114--R-121 proves the adapted
-coefficient-level `D0,D1` cancellations, the adapted fifth `H^(-3/5)`
-moment/forest, a cutoff-summable conditional log-normalizer ledger, or the
-once-only source/sextic aggregation.
+available `H2/L6` data. R-122 reconstructs the finite-cutoff `D0,D1` defects
+by exact endpoint-law moments, but does not prove that the complete production
+values vanish. Its coherent-amplitude theorem rejects only a standalone
+adapted fifth-moment inference from the current graph budgets, and its exact
+Jacobi audit rejects only automatic Cartan cancellation. The
+correlation-preserving quartic-to-sextic inequality is a route boundary, not
+the complete signed A1 estimate. None of R-114--R-122 proves the complete
+six-row cancellation, a cutoff-summable conditional log-normalizer ledger,
+or the once-only source/sextic aggregation.
 `OVERLAP_src`, Nelson, removal, interacting measure, Sector-A closure, and
 T5--T7 promotion remain open. Tier stays T4.
 
@@ -4169,3 +4211,16 @@ T5--T7 promotion remain open. Tier stays T4.
   extraction, no-form, and all-page Poppler visual QA. Adapted `D0,D1`, the
   adapted fifth `H^(-3/5)` moment/forest, one-use aggregation, and every
   downstream global gate remain open; tier stays T4.
+- 2026-07-29: Registered R-122. The actual finite-cutoff low-chaos defects now
+  have exact derivative-free endpoint-law formulas, while a bounded legal
+  pair proves that common source/lower-kernel data does not identify `D1`.
+  Exact feedback-graph, coherent-amplitude, and Jacobi fixtures retire the
+  derivative-by-derivative graph route, standalone adapted fifth-moment
+  transfer, and automatic Cartan cancellation. The active rational A1 ray is
+  `128/27`, and the R-102 Cartan/square pieces reinforce to `2680J/729`.
+  `EXP-000381--EXP-000385` preserve all five route decisions. Primary
+  `82/82` and non-importing independent `57/57` pass; the integrated count and
+  final PDF are pinned by the R-122 manifest. The surviving route is one
+  correlation-preserving signed complete-owner estimate. Production
+  cancellation, one-use aggregation, and every downstream global gate remain
+  open; tier stays T4.

@@ -719,6 +719,23 @@ endpoint theorem.
     once over the directed source union. Both A13 gates and Sector A remain
     open at T4.
 
+53. **Legal adapted endpoint law and the correlation-preserving Cartan
+    frontier.** R-119--R-122 replace the informal future-feedback discussion
+    by one legal two-root/two-visit endpoint law, its complete once-owned trace,
+    and exact zero/first-chaos defects. R-120 supplies the six-row production
+    frame and covariance-horizontal source synthesis; R-121 corrects the
+    projected path-space exactness inference and isolates the fixed-skew
+    Sobolev payment. R-122 reconstructs the actual low-chaos defects directly
+    from the joint endpoint law, so feedback derivatives are unnecessary for
+    identification. It also records three independent method boundaries: the
+    endpoint graph does not control feedback derivatives, source energy plus
+    one sextic does not imply the separated adapted fifth current moment, and
+    formal Hessian selfadjointness does not cancel the Cartan first-order
+    coefficient. The surviving route keeps the current, score, trace,
+    low-chaos, and R-063 forest owners correlated until a complete signed
+    estimate is formed. That estimate, both A13 gates, and Sector A remain
+    open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

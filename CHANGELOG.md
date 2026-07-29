@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-122 derivative-free low-chaos and adapted Cartan moment boundary] - 2026-07-29
+
+Registered the scoped T4 R-122 checkpoint: exact derivative-free D0/D1 reconstruction, bounded identifiability and feedback-graph boundaries, adapted fifth-moment nontransfer, the nonzero A1 rational Cartan coherent ray, exact Jacobi/Cartan noncancellation, and the surviving correlation-preserving route. Primary, independent, and integrated checks pass 82/82, 57/57, and 122/122. The eight-page PDF passed form, overflow, extraction, and full visual QA. Production cancellation, complete one-use, both A13 gates, and Sector A remain open.
+
 ## [A13 R-121 Cartan path-space correction and fixed-skew Sobolev boundary] - 2026-07-29
 
 Registered R-121 as a scoped T4 correction and advance. The complete legal two-visit rational owner telescopes exactly. Exact local current curls are -40/729, 2720/729, and 2680/729 while the normalized affine path mixed Hessians both equal 20/729, so scalar path-space exactness does not force a local +40/729 companion. For fixed skew and 0<=s<1 the first-order form requires coefficient moment 2/(1-s); at s=3/5 this is moment five with eta and zeta powers 7/2 and 1/2. A sharp high-frequency family rejects reuse of H^(-11/10). Primary 78/78, independent 64/64, integrated 125/125, and the eight-page PDF QA pass. Adapted D0,D1, the adapted fifth H^(-3/5) moment/forest, one-use aggregation, and Sector A remain open.

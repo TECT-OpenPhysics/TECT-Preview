@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-122](#r-122) | Derivative-free low-chaos reconstruction and the adapted Cartan fifth-moment boundary | Scoped T4 analytic/exact/executed advance and method boundary: for the complete finite-cutoff conditional endpoint output, `r2`, `D0`, and `D1` have exact law-only formulas using `E[R tensor (xi tensor xi-I)]`, `E[xi Theta]`, and `E[xi||R||^2]`; no feedback derivatives or termwise adjacent-chaos expansion are required. A bounded legal linear-row pair has identical source cost and `A,r2,t0,D0` but opposite nonzero `D1`, so the complete production law must still be evaluated. The graph-null sequence `sin(nxi)/n` rules out derivative-by-derivative closure. A coherent lognormal amplitude has bounded source `H2` and terminal `L6` budgets but divergent quadratic-current `L^5(H^{-3/5})`; the active A1 rational Cartan coefficient has nonzero normalized quadratic ray `128/27`. Formal selfadjointness does not cancel Cartan: on the R-102 slice `1360J/729+1320J/729=2680J/729`. The correlation-preserving quartic-to-sextic Young inequality identifies the surviving signed complete-owner route. Production `D0,D1` cancellation, the complete one-use bound, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-121](#r-121) | Cartan path-space exactness correction and the fixed-skew Sobolev one-use boundary | Scoped T4 analytic/exact/executed correction and advance: the complete two-visit rational owner telescopes pathwise to its endpoints, but exactness of that scalar on jet/path space does not force a projected target-space current one-form to be closed. On the exact R-102 slice the `K_R`, `M_U`, and recombined current curls are `-40/729`, `2720/729`, and `2680/729`; the normalized path ellipse has a symmetric mixed Hessian `20/729`. Thus the old mandatory `+40/729` companion inference is superseded while the isolated chain-primitive no-go is retained. For a fixed-skew first-order form paired with `H^{-s}`, `0<=s<1`, the deterministic powers are `X^((1+3s)/4)Y^((1-s)/4)` and the coefficient moment is `2/(1-s)`. At `s=3/5` the moment is five and the Young powers are `eta^{-7/2}zeta^{-1/2}`. R-071 supplies this only for unshifted stationary currents. An exact high-frequency fixture rules out reuse of the zeroth-order `H^{-11/10}` class. Adapted `D0,D1`, the adapted fifth `H^{-3/5}` moment/forest, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-120](#r-120) | Covariance-horizontal synthesis, stationary low-chaos cancellation, and the rational Cartan-Hessian boundary | Scoped T4 analytic/exact/executed advance and method boundary: the complete A1 six-current coefficient diagonalizes with `c0=3/(250P)`, `c1=243/(8000P)`, and `alpha=5/9`. For every temporally faithful source chart, the realized covariance quotient controls the physical `H2` endpoint with `M_R^2/c_sym`; the sharp two-endpoint `L6` constant is `32`, so source energy and the terminal sextic can be spent once in the fixed-matrix R-118 estimate. Under summed bilinear multiplier-derivative bounds through order two, the variable-matrix remainder has powers `K0^(3/2) K_le2^(11/6)` at `kappa=1/10`. The complete common-real-even stationary six-row raw-current packet satisfies the R-119 zero/first-chaos identities, but this is not an adapted trace/heat/low/R-063 forest theorem. The linear rows have an exact square--Laplacian--trace Hessian and zero curvature. The rational raw-`Q` Hessian is selfadjoint and flattens into 21 fixed matrices with absolute sum `(7/2)I`, while a genuine first-order Cartan block survives. The R-102 curl `-40/729` is independently reproduced. R-121 later supersedes only R-120's inference that scalar exactness requires an unobserved local `+40/729` companion. Adapted `D0,D1`, complete owner reconstruction, Cartan cancellation or absorption, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-119](#r-119) | Legal adapted cluster, score-trace cancellation, and terminal-Hessian frontier | Scoped T4 analytic/exact/executed advance and method boundary: the smallest genuinely adapted strict-triangular test uses two independent source blocks and two visits; the complete square-minus-trace packet telescopes to its endpoints with the trace owned once. For `Y=b+Axi+R`, with `R` orthogonal to zero and first chaos, exact aggregate mean-trace and derivative-trace identities are necessary and sufficient for zero/first-chaos cancellation; the kernel formula includes affine-quadratic and every adjacent-chaos contraction. Bare Jacobian heat leaves the strict debt `-1/2 sum_(n>=2)(n-1)n!||r_n||^2`, so low/output/R-063 companions are mandatory. The R-107 one-pair canonical `W` is strictly PSD with cost `2sigma^8`, and both R-115 covariance faces are PSD; the mixed interior is not claimed. At fixed cutoff and floor, the complete terminal-action Hessian factors automatically through endpoint synthesis, while the realized quotient source norm removes inverse singular-value and visit-count loss. The actual production A1 low-chaos identities, trace/forest reconstruction, spatial multiplier/synthesis estimate, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -140,6 +141,57 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-122"></a>
+### R-122 -- Derivative-free low-chaos reconstruction and the adapted Cartan fifth-moment boundary
+
+**Result ID.**
+A13-CLASSII-DERIVATIVE-FREE-LOW-CHAOS-ADAPTED-FIFTH-MOMENT-CARTAN-BOUNDARY.
+
+**Derivative-free endpoint theorem.**  Let `Phi_h` be the contraction-closed
+conditional endpoint output with heat retained, `Y=Phi_h-E Phi_h`,
+`A=E[Y tensor xi]`, `R=Y-Axi`, and `Theta_h` the once-owned raw trace.  At
+finite cutoff,
+`r2=E[R tensor (xi tensor xi-I)]/2`,
+`D0=E Theta_h-||A||_HS^2-E||R||^2`, and
+`D1=E[xi Theta_h]-2 Contr(A,E[R tensor (xi tensor xi-I)])
+-E[xi||R||^2]`.  These are exact law-only identities and remove every
+`Dh_2,D^2h_2` family from the identification problem.  A bounded legal
+first-linear-row `a sin xi +/- d cos xi` pair has the same source cost and
+the same `A,r2,t0,D0` but opposite nonzero `D1`, so reconstruction is not
+cancellation and coarse budgets do not identify the answer.
+
+**Fifth-moment boundary.**  The graph-null sequence `sin(nxi)/n` has
+nonvanishing first and divergent second Malliavin derivatives, ruling out a
+derivative-by-derivative graph limit.  More sharply, for
+`A_t=exp(txi-3t^2)` and `z_t=A_t(cos x_1,sin x_1)`, source `H2` energy is
+`3e^(-4t^2)` and terminal `L6` sextic is one, whereas the quadratic-current
+fifth `H^{-3/5}` moment is `c_J^5e^(20t^2)`.  Smooth bounded caps retain the
+obstruction.  On the active A1 rational doublet ray
+`phi=(2+cos x,sin x)`, the normalized Cartan subcoefficient tends to
+`128/27` at `x=pi/2`, so the coefficient-first obstruction reaches the
+production survivor.  A separate fifth moment would require new exponential
+Cameron--Martin or `L^(5/2)` predictable-bracket data.
+
+**Cartan and surviving route.**  The complete Jacobi operator is formally
+selfadjoint through the skew completion
+`A_i partial_i+(partial_i A_i)/2`, not through `A_i=0`; covariance trace is
+zeroth order.  On the R-102 slice, Cartan `1360J/729` and square-cross
+`1320J/729` reinforce to `2680J/729`, and the endpoint difference remains
+`400J/243`.  Automatic cancellation is false.  Retaining coefficient and
+payload correlation instead gives the exact coherent inequality
+`cH^4<=zeta H^6+4c^3/(27zeta^2)`.  The live target is therefore a
+derivative-free, signed, complete-owner expectation estimate before absolute
+values, with source energy and terminal sextic each spent once.  That full
+estimate, production `D0,D1` cancellation, `OVERLAP_src`, Nelson, removals,
+the measure, and Sector A remain open at T4.
+
+**Where proved.**  Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-derivative-free-low-chaos-adapted-fifth-moment-cartan-boundary-260729-v1.0`,
+primary exact `82/82`, non-importing independent `57/57`, and integrated
+certificates.  Publication target: Gaussian endpoint-law reconstruction,
+adapted moment nontransfer, and Jacobi--Cartan boundary lemmas.
 
 <a id="r-121"></a>
 ### R-121 -- Cartan path-space exactness correction and the fixed-skew Sobolev one-use boundary

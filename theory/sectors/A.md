@@ -45,6 +45,9 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-29-A13-FEEDBACK-DERIVATIVE-GRAPH-CLOSURE | graph convergence does not control feedback derivatives |  |
+| NG-2026-07-29-A13-ADAPTED-CARTAN-FIFTH-MOMENT-GRAPH-TRANSFER | source and sextic budgets do not imply the isolated fifth cu |  |
+| NG-2026-07-29-A13-SELFADJOINTNESS-CARTAN-CANCELLATION | selfadjoint completion retains a nonzero skew first-order co |  |
 | AUDIT-2026-07-29-A13-R119-R120-CARTAN-COMPANION-INFERENCE | path-space exactness does not require a local opposite curl |  |
 | NG-2026-07-29-A13-FIRST-ORDER-HMINUS-11-10-CARTAN-REUSE | zeroth-order rough regularity cannot pay a first-order Carta |  |
 | NG-2026-07-29-A13-BARE-JACOBIAN-HEAT-LOW-CHAOS-CANCELLATION | bare heat leaves a strict nonlinear mean debt |  |

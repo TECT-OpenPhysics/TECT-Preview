@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-29-A13-FEEDBACK-DERIVATIVE-GRAPH-CLOSURE](#ng-2026-07-29-a13-feedback-derivative-graph-closure) | pass the four adapted endpoint chain-rule families separately to the R-075 graph limit by treating control `L2/H2` plus terminal `L6` convergence as Malliavin-Sobolev convergence | `h_n(xi)=sin(nxi)/n` converges to zero in the graph coordinates, but `E|Dh_n|^2 -> 1/2` and `E|D^2h_n|^2 -> infinity`. The derivative-by-derivative route is not graph-closable. R-122 repairs identification by exact derivative-free endpoint-law formulas for `D0,D1`; production cancellation remains open |
+| [NG-2026-07-29-A13-ADAPTED-CARTAN-FIFTH-MOMENT-GRAPH-TRANSFER](#ng-2026-07-29-a13-adapted-cartan-fifth-moment-graph-transfer) | infer a standalone adapted `L^5(H^{-3/5})` current/forest coefficient from the existing quadratic source-energy and terminal-sextic graph budgets | for `A_t=exp(txi-3t^2)` and `z_t=A_t(cos x_1,sin x_1)`, the source `H2` second moment is `3e^{-4t^2}` and the terminal `L6` sixth moment is one, while the quadratic current fifth moment is `c_J^5e^{20t^2}`. Smooth bounded caps retain the divergence. The A1 rational Cartan subcoefficient has a nonzero quadratic coherent ray `128/27`. This rejects coefficient-first transfer, not a complete signed one-use estimate |
+| [NG-2026-07-29-A13-SELFADJOINTNESS-CARTAN-CANCELLATION](#ng-2026-07-29-a13-selfadjointness-cartan-cancellation) | remove the surviving first-order Cartan block from scalar exactness, endpoint telescoping, formal selfadjointness, torus integration, or the covariance trace alone | the Jacobi operator completes as `-partial(B partial)+A_i partial_i+(partial_i A_i)/2+S`, with skew `A_i` generally nonzero. On the normalized R-102 slice, the Cartan and square-cross pieces are `1360J/729` and `1320J/729`, reinforcing to `2680J/729`; even the two-endpoint difference is `400J/243`. A separately proved projected or expectation-level cancellation remains possible |
 | [AUDIT-2026-07-29-A13-R119-R120-CARTAN-COMPANION-INFERENCE](#audit-2026-07-29-a13-r119-r120-cartan-companion-inference) | R-119/R-120 inference that exactness of the complete terminal scalar forces the omitted projected local current to have curl `+40/729` | exactness of a scalar differential on jet/path space does not imply target-space closure of one extracted coefficient. On the R-102 slice the actual `K_R`, `M_U`, and recombined current curls are `-40/729`, `2720/729`, and `2680/729`, while the normalized path ellipse has equal mixed Hessians `20/729`. R-121 supersedes only the mandatory-companion inference; the observed isolated curl and chain-primitive no-go remain valid |
 | [NG-2026-07-29-A13-FIRST-ORDER-HMINUS-11-10-CARTAN-REUSE](#ng-2026-07-29-a13-first-order-hminus-11-10-cartan-reuse) | reuse the R-120 zeroth-order `H^{-11/10}` rough-coefficient class for the surviving first-order Cartan form using only `H2` and `L6` field budgets | `z_N=(1,N^{-2}sin(Nx))` and `Q_N=N^s cos(Nx)` have uniformly bounded `H2`, `L6`, and `H^{-s}` norms, but their fixed-skew pairing is `-N^(s-1)/2`; at `s=11/10` it diverges as `N^(1/10)`. Absolute first-order pairing is sharp at `s=1`, and arbitrary-budget Young absorption requires `s<1`. The live production target is an adapted fifth `H^{-3/5}` moment or equivalent signed cancellation |
 | [NG-2026-07-29-A13-BARE-JACOBIAN-HEAT-LOW-CHAOS-CANCELLATION](#ng-2026-07-29-a13-bare-jacobian-heat-low-chaos-cancellation) | cancel the zero and first Wiener chaoses of a nonlinear complete endpoint residual using only the bare Jacobian heat `2 Re Tr(A*DR)+||DR||_HS^2` after affine absorption | for `R=sum_(n>=2) I_n(r_n)`, the residual mean is exactly `-1/2 sum_(n>=2)(n-1)n!||r_n||^2`, strictly negative for every `R!=0`; separate exact fixtures show that mean centering also does not remove the affine-quadratic or adjacent-chaos first-chaos debts. The complete low/output/trace/R-063 forest companions are mandatory. This is a route no-go, not an A1 counterexample |
@@ -167,6 +170,84 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-29-a13-feedback-derivative-graph-closure"></a>
+### NG-2026-07-29-A13-FEEDBACK-DERIVATIVE-GRAPH-CLOSURE -- graph convergence does not control feedback derivatives
+
+**Claim / route.**  Expand the actual adapted endpoint through all separate
+`Dh_2` and `D^2h_2` chain-rule families and pass each family to the R-075
+control-`L2`/spatial-`H2` plus terminal-`L6` graph limit.
+
+**Failure mode.**  For a standard Gaussian `xi`, the bounded smooth controls
+`h_n(xi)=sin(nxi)/n` satisfy
+`E h_n^2=(1-e^(-2n^2))/(2n^2)->0` and `E|h_n|^6->0`, while
+`E|Dh_n|^2=(1+e^(-2n^2))/2->1/2` and
+`E|D^2h_n|^2=n^2(1-e^(-2n^2))/2->infinity`.  Thus the graph topology is not a
+Malliavin-Sobolev topology and cannot close the separated chain-rule packet.
+
+**Evidence.**  R-122 proof note, Section 3; primary symbolic audit and the
+non-importing standard-library audit; integrated manifest-pinned verifier and
+paired PDF.
+
+**Consequence.**  The derivative-by-derivative graph route is retired.  This
+does not make the endpoint defects undefined and does not refute graph
+recovery itself.  R-122 Theorem 2.1 gives exact derivative-free endpoint-law
+formulas for `D0,D1`; their complete production values and cancellation remain
+open.
+
+<a id="ng-2026-07-29-a13-adapted-cartan-fifth-moment-graph-transfer"></a>
+### NG-2026-07-29-A13-ADAPTED-CARTAN-FIFTH-MOMENT-GRAPH-TRANSFER -- source and sextic budgets do not imply the isolated fifth current moment
+
+**Claim / route.**  Infer the standalone adapted
+`L^5(Omega;H^(-3/5))` coefficient required by the R-121 separated fixed-skew
+Young step from the existing quadratic source-energy and terminal-sextic graph
+coordinates.
+
+**Failure mode.**  On the normalized torus take
+`A_t=exp(txi-3t^2)`, `z_t=A_t(cos x_1,sin x_1)`, and
+`J(v)=v_1 partial_1 v_2`.  Exact Gaussian moments give
+`E||z_t||_H2^2=3e^(-4t^2)`, `E||z_t||_6^6=1`, and
+`E||J(z_t)||_H^(-3/5)^5=c_J^5e^(20t^2)`.  Smooth bounded caps preserve
+uniform second/sixth budgets and an unbounded tenth-moment subsequence.  On
+the active A1 doublet ray `phi=(2+cos x,sin x)`, the surviving rational Cartan
+subcoefficient satisfies `lim_(H->infinity) H^(-2)j_H omega_H=128/27` at
+`x=pi/2`, so the same quadratic coherent-amplitude obstruction is present in
+the production coefficient-first route.
+
+**Evidence.**  R-122 proof note, Theorem 4.2 and Section 5; primary exact
+symbolic audit `82/82`; independent stdlib audit `57/57`; integrated verifier
+and all-page PDF inspection.
+
+**Consequence.**  A separate adapted fifth moment needs new data, such as a
+positive Cameron--Martin-square exponential moment or an `L^(5/2)`
+predictable-bracket bound.  The finding is not an A1, Nelson, or one-use
+counterexample: complete current, square, trace, low, score, and R-063 forest
+owners may cancel or be estimated jointly before absolute values.
+
+<a id="ng-2026-07-29-a13-selfadjointness-cartan-cancellation"></a>
+### NG-2026-07-29-A13-SELFADJOINTNESS-CARTAN-CANCELLATION -- selfadjoint completion retains a nonzero skew first-order coefficient
+
+**Claim / route.**  Infer that the first-order Cartan block vanishes from
+exactness of the terminal scalar, endpoint telescoping, formal selfadjointness
+of its Hessian, torus integration by parts, or the covariance-normal trace.
+
+**Failure mode.**  The complete Jacobi operator has the exact form
+`-partial_i(B partial_i)+A_i partial_i+(partial_i A_i)/2+S`, where
+`A_i=C_i^T-C_i` is skew and `S` is symmetric.  Selfadjointness uses the
+`(partial_i A_i)/2` completion and does not imply `A_i=0`; the covariance
+trace enters only the zeroth-order symmetric term.  For the normalized R-102
+coefficient `B=4gg^T` at `u_2=(2,1),G=e_1`, the Cartan piece is
+`1360J/729` and the square-cross piece is `1320J/729`.  They reinforce to
+`A_2=2680J/729`.  At `u_0=(1,1)`, `A_0=1480J/729`, so even the endpoint
+difference is `400J/243`.
+
+**Evidence.**  R-122 proof note, Section 6; two independent exact rational
+derivations; integrated verifier and paired PDF.
+
+**Consequence.**  Automatic cancellation by these structural principles is
+retired.  A production-specific identity after full control projection or an
+expectation-level signed owner cancellation remains possible and is part of
+the correlation-preserving successor route.
 
 <a id="audit-2026-07-29-a13-r119-r120-cartan-companion-inference"></a>
 ### AUDIT-2026-07-29-A13-R119-R120-CARTAN-COMPANION-INFERENCE -- path-space exactness does not require a local opposite curl

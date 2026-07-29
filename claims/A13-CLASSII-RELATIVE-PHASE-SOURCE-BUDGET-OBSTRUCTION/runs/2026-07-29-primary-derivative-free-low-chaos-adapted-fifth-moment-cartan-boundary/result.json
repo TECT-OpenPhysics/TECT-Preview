@@ -1,0 +1,882 @@
+{
+  "assertions": [
+    {
+      "actual": "2*(p**2 + 3*q**2 + 12*r**2)",
+      "expected": "2*p**2 + 6*q**2 + 24*r**2",
+      "group": "low_chaos",
+      "name": "residual_energy",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*p",
+      "expected": "2*p",
+      "group": "low_chaos",
+      "name": "quadratic_score",
+      "status": "PASS"
+    },
+    {
+      "actual": "12*q*(p + 4*r)",
+      "expected": "12*p*q + 48*q*r",
+      "group": "low_chaos",
+      "name": "adjacent_score",
+      "status": "PASS"
+    },
+    {
+      "actual": "-affine**2 - 2*p**2 - 6*q**2 - 24*r**2 + theta0",
+      "expected": "-affine**2 - 2*p**2 - 6*q**2 - 24*r**2 + theta0",
+      "group": "low_chaos",
+      "name": "D0_law",
+      "status": "PASS"
+    },
+    {
+      "actual": "-4*affine*p - 12*p*q - 48*q*r + theta1",
+      "expected": "-4*affine*p - 12*p*q - 48*q*r + theta1",
+      "group": "low_chaos",
+      "name": "D1_law",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "low_chaos",
+      "name": "D1_derivative_free_equivalence",
+      "status": "PASS"
+    },
+    {
+      "actual": "theta1",
+      "expected": "theta1",
+      "group": "low_chaos",
+      "name": "stein_theta",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*p",
+      "expected": "2*p",
+      "group": "low_chaos",
+      "name": "stein_second",
+      "status": "PASS"
+    },
+    {
+      "actual": "12*q*(p + 4*r)",
+      "expected": "12*q*(p + 4*r)",
+      "group": "low_chaos",
+      "name": "stein_square",
+      "status": "PASS"
+    },
+    {
+      "actual": "p",
+      "expected": "p",
+      "group": "low_chaos",
+      "name": "r2_from_law",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "graph",
+      "name": "h_L2_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "graph",
+      "name": "h_L6_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "group": "graph",
+      "name": "Dh_L2_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "oo",
+      "expected": "oo",
+      "group": "graph",
+      "name": "D2h_L2_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "nonzero",
+      "group": "graph",
+      "name": "graph_does_not_control_Dh",
+      "status": "PASS"
+    },
+    {
+      "actual": "oo",
+      "expected": "diverges",
+      "group": "graph",
+      "name": "graph_does_not_control_D2h",
+      "status": "PASS"
+    },
+    {
+      "actual": "a*exp(-1/2)",
+      "expected": "a*exp(-1/2)",
+      "group": "owner_fixture",
+      "name": "plus_mean_xh",
+      "status": "PASS"
+    },
+    {
+      "actual": "(-2*a**2 + E*a**2 + 2*d**2 + exp(2)/2)*exp(-2)",
+      "expected": "a**2*(-2*exp(-2) + exp(-1)) + 2*d**2*exp(-2) + 1/2",
+      "group": "owner_fixture",
+      "name": "plus_D0",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*a*d*kappa**2*exp(-2)",
+      "expected": "2*a*d*kappa**2*exp(-2)",
+      "group": "owner_fixture",
+      "name": "plus_t1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2*a*d*kappa**2*exp(-2)",
+      "expected": "-2*a*d*kappa**2*exp(-2)",
+      "group": "owner_fixture",
+      "name": "plus_xi_R_squared",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*a*d*kappa**2*exp(-2)",
+      "expected": "4*a*d*kappa**2*exp(-2)",
+      "group": "owner_fixture",
+      "name": "plus_D1",
+      "status": "PASS"
+    },
+    {
+      "actual": "a*kappa*exp(-1/2)/2",
+      "expected": "a*kappa*exp(-1/2)/2",
+      "group": "owner_fixture",
+      "name": "plus_r2_ec",
+      "status": "PASS"
+    },
+    {
+      "actual": "a*exp(-1/2)",
+      "expected": "a*exp(-1/2)",
+      "group": "owner_fixture",
+      "name": "minus_mean_xh",
+      "status": "PASS"
+    },
+    {
+      "actual": "(-2*a**2 + E*a**2 + 2*d**2 + exp(2)/2)*exp(-2)",
+      "expected": "a**2*(-2*exp(-2) + exp(-1)) + 2*d**2*exp(-2) + 1/2",
+      "group": "owner_fixture",
+      "name": "minus_D0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2*a*d*kappa**2*exp(-2)",
+      "expected": "-2*a*d*kappa**2*exp(-2)",
+      "group": "owner_fixture",
+      "name": "minus_t1",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*a*d*kappa**2*exp(-2)",
+      "expected": "2*a*d*kappa**2*exp(-2)",
+      "group": "owner_fixture",
+      "name": "minus_xi_R_squared",
+      "status": "PASS"
+    },
+    {
+      "actual": "-4*a*d*kappa**2*exp(-2)",
+      "expected": "-4*a*d*kappa**2*exp(-2)",
+      "group": "owner_fixture",
+      "name": "minus_D1",
+      "status": "PASS"
+    },
+    {
+      "actual": "a*kappa*exp(-1/2)/2",
+      "expected": "a*kappa*exp(-1/2)/2",
+      "group": "owner_fixture",
+      "name": "minus_r2_ec",
+      "status": "PASS"
+    },
+    {
+      "actual": "a**2*(1 - exp(-2))/2 + d**2*(exp(-2) + 1)/2",
+      "expected": "a**2*(1 - exp(-2))/2 + d**2*(exp(-2) + 1)/2",
+      "group": "owner_fixture",
+      "name": "same_source_cost",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "owner_fixture",
+      "name": "same_D0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "owner_fixture",
+      "name": "opposite_D1",
+      "status": "PASS"
+    },
+    {
+      "actual": "p**2*t**2/2 - 3*p*t**2",
+      "expected": "p*t**2*(p - 6)/2",
+      "group": "fifth_moment",
+      "name": "lognormal_general_exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "-4*t**2",
+      "expected": "-4*t**2",
+      "group": "fifth_moment",
+      "name": "A_second_exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "fifth_moment",
+      "name": "A_sixth_exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "20*t**2",
+      "expected": "20*t**2",
+      "group": "fifth_moment",
+      "name": "A_tenth_exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "3",
+      "expected": 3,
+      "group": "fifth_moment",
+      "name": "profile_H2_squared",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "fifth_moment",
+      "name": "profile_L6_sixth",
+      "status": "PASS"
+    },
+    {
+      "actual": "5**(2/5)/40 + 1/4",
+      "expected": ">0",
+      "group": "fifth_moment",
+      "name": "current_norm_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "fifth_moment",
+      "name": "source_energy_vanishes",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "fifth_moment",
+      "name": "terminal_sextic_fixed",
+      "status": "PASS"
+    },
+    {
+      "actual": "oo",
+      "expected": "oo",
+      "group": "fifth_moment",
+      "name": "current_fifth_diverges",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/(2*(holder_r - 1))",
+      "expected": "1/(2*holder_r - 2)",
+      "group": "conditional",
+      "name": "CM_Holder_exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "8",
+      "expected": 8,
+      "group": "conditional",
+      "name": "chaos3_factor_p5",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": 16,
+      "group": "conditional",
+      "name": "chaos4_factor_p5",
+      "status": "PASS"
+    },
+    {
+      "actual": 1048576,
+      "expected": 1048576,
+      "group": "conditional",
+      "name": "chaos4_fifth_power",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/2",
+      "expected": "5/2",
+      "group": "conditional",
+      "name": "BDG_bracket_power",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/9",
+      "expected": "5/9",
+      "group": "production",
+      "name": "alpha",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/1000000000000",
+      "expected": ">0",
+      "group": "production",
+      "name": "positive_floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*cos(x) + 5",
+      "expected": "4*cos(x) + 5",
+      "group": "production",
+      "name": "ray_rho",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*cos(x)**2 + 4*cos(x) + 3",
+      "expected": "4*cos(x) + cos(2*x) + 4",
+      "group": "production",
+      "name": "ray_m",
+      "status": "PASS"
+    },
+    {
+      "actual": "-8/3",
+      "expected": "-8/3",
+      "group": "production",
+      "name": "j_ray_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "-16/9",
+      "expected": "-16/9",
+      "group": "production",
+      "name": "omega_ray_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "128/27",
+      "expected": "128/27",
+      "group": "production",
+      "name": "cartan_coefficient_ray_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "128/27",
+      "expected": "nonzero",
+      "group": "production",
+      "name": "cartan_ray_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "production",
+      "name": "profile_avoids_floor_singularity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "-2680/729"
+        ],
+        [
+          "2680/729",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "-2680/729"
+        ],
+        [
+          "2680/729",
+          "0"
+        ]
+      ],
+      "group": "cartan_operator",
+      "name": "A2",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "-1480/729"
+        ],
+        [
+          "1480/729",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "-1480/729"
+        ],
+        [
+          "1480/729",
+          "0"
+        ]
+      ],
+      "group": "cartan_operator",
+      "name": "A0",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "-400/243"
+        ],
+        [
+          "400/243",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "-400/243"
+        ],
+        [
+          "400/243",
+          "0"
+        ]
+      ],
+      "group": "cartan_operator",
+      "name": "endpoint_difference",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "68/27"
+        ],
+        [
+          "-20/27"
+        ]
+      ],
+      "expected": [
+        "68/27",
+        "-20/27"
+      ],
+      "group": "cartan_operator",
+      "name": "f2",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "62/81"
+        ],
+        [
+          "40/81"
+        ]
+      ],
+      "expected": [
+        "62/81",
+        "40/81"
+      ],
+      "group": "cartan_operator",
+      "name": "ell2",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "-20/27"
+        ],
+        [
+          "20/27",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "-20/27"
+        ],
+        [
+          "20/27",
+          "0"
+        ]
+      ],
+      "group": "cartan_operator",
+      "name": "omega2",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "-1360/729"
+        ],
+        [
+          "1360/729",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "-1360/729"
+        ],
+        [
+          "1360/729",
+          "0"
+        ]
+      ],
+      "group": "cartan_operator",
+      "name": "cartan_piece",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "-440/243"
+        ],
+        [
+          "440/243",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "-440/243"
+        ],
+        [
+          "440/243",
+          "0"
+        ]
+      ],
+      "group": "cartan_operator",
+      "name": "square_piece",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "-2680/729"
+        ],
+        [
+          "2680/729",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "-2680/729"
+        ],
+        [
+          "2680/729",
+          "0"
+        ]
+      ],
+      "group": "cartan_operator",
+      "name": "pieces_reinforce",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "-2680/729"
+        ],
+        [
+          "2680/729",
+          "0"
+        ]
+      ],
+      "expected": "nonzero",
+      "group": "cartan_operator",
+      "name": "A2_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*pi",
+      "expected": "3*pi",
+      "group": "cartan_operator",
+      "name": "loop_energy_second",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*pi",
+      "expected": "2*pi",
+      "group": "cartan_operator",
+      "name": "loop_square",
+      "status": "PASS"
+    },
+    {
+      "actual": "pi",
+      "expected": "pi",
+      "group": "cartan_operator",
+      "name": "loop_cartan",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*pi",
+      "expected": "3*pi",
+      "group": "cartan_operator",
+      "name": "loop_completion",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*c/(3*zeta)",
+      "expected": "stationary",
+      "group": "joint_young",
+      "name": "positive_critical_is_stationary",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "2*c/(3*zeta)"
+      ],
+      "expected": "2*c/(3*zeta)",
+      "group": "joint_young",
+      "name": "critical_list_contains_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*c**3/(27*zeta**2)",
+      "expected": "4*c**3/(27*zeta**2)",
+      "group": "joint_young",
+      "name": "maximum",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2*c",
+      "expected": "<0",
+      "group": "joint_young",
+      "name": "second_derivative_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "c A^4 <= zeta A^6 + 4c^3/(27zeta^2)",
+      "expected": true,
+      "group": "joint_young",
+      "name": "quartic_paid_by_sextic",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "adapted_D0_D1_law_representation",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "production_D0_D1_cancellation",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "standalone_adapted_fifth_moment_from_L2_L6",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "automatic_cartan_cancellation",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "complete_signed_one_use",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "overlap_src",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "nelson",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "sector_a_closure",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 82,
+  "assertions_total": 82,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "diagnostics": {
+    "adapted_fifth_moment": {
+      "amplitude": "A_t=exp(t xi-3t^2)",
+      "conditional_CM_factor": "exp(||h||_CM^2/(2(r-1)))",
+      "missing_predictable_bracket_power": "5/2",
+      "model_current_Hminus_3_over_5_squared": "5**(2/5)/40 + 1/4",
+      "moments": {
+        "E_A_10": "exp(20*t**2)",
+        "E_A_2": "exp(-4*t**2)",
+        "E_A_6": "1"
+      },
+      "profile_H2_squared": "3",
+      "profile_L6_sixth": "1"
+    },
+    "bounded_owner_identifiability": {
+      "boundary": "source cost and common A,r2,t0,D0 do not identify t1, adjacent chaos, or D1",
+      "common_D0_over_kappa_squared": "a**2*(-2*exp(-2) + exp(-1)) + 2*d**2*exp(-2) + 1/2",
+      "controls": "h_+(xi)=a sin xi+d cos xi; h_-(xi)=a sin xi-d cos xi",
+      "rows": {
+        "minus": {
+          "D0_over_kappa_squared": "(-2*a**2 + E*a**2 + 2*d**2 + exp(2)/2)*exp(-2)",
+          "D1": "-4*a*d*kappa**2*exp(-2)",
+          "E_xi_R_squared": "2*a*d*kappa**2*exp(-2)",
+          "r2_ec": "a*kappa*exp(-1/2)/2",
+          "t1": "-2*a*d*kappa**2*exp(-2)"
+        },
+        "plus": {
+          "D0_over_kappa_squared": "(-2*a**2 + E*a**2 + 2*d**2 + exp(2)/2)*exp(-2)",
+          "D1": "4*a*d*kappa**2*exp(-2)",
+          "E_xi_R_squared": "-2*a*d*kappa**2*exp(-2)",
+          "r2_ec": "a*kappa*exp(-1/2)/2",
+          "t1": "2*a*d*kappa**2*exp(-2)"
+        }
+      },
+      "source_cost": "a**2*(1 - exp(-2))/2 + d**2*(exp(-2) + 1)/2"
+    },
+    "complete_cartan_operator": {
+      "A0": [
+        [
+          "0",
+          "-1480/729"
+        ],
+        [
+          "1480/729",
+          "0"
+        ]
+      ],
+      "A2": [
+        [
+          "0",
+          "-2680/729"
+        ],
+        [
+          "2680/729",
+          "0"
+        ]
+      ],
+      "A2_minus_A0": [
+        [
+          "0",
+          "-400/243"
+        ],
+        [
+          "400/243",
+          "0"
+        ]
+      ],
+      "cartan_piece": [
+        [
+          "0",
+          "-1360/729"
+        ],
+        [
+          "1360/729",
+          "0"
+        ]
+      ],
+      "covariance_trace_changes_first_order_A": false,
+      "selfadjoint_completion": "A_i partial_i + (partial_i A_i)/2; selfadjointness does not imply A_i=0",
+      "square_cross_piece": [
+        [
+          "0",
+          "-440/243"
+        ],
+        [
+          "440/243",
+          "0"
+        ]
+      ]
+    },
+    "correlation_preserving_boundary": {
+      "full_production_bound": false,
+      "inequality": "c A^4 <= zeta A^6 + 4 c^3/(27 zeta^2)",
+      "interpretation": "retain coefficient-payload correlation before Young"
+    },
+    "derivative_free_low_chaos": {
+      "fixture": {
+        "D0": "-affine**2 - 2*p**2 - 6*q**2 - 24*r**2 + theta0",
+        "D1": "-4*affine*p - 12*p*q - 48*q*r + theta1",
+        "adjacent_score": "12*q*(p + 4*r)",
+        "quadratic_score": "2*p",
+        "residual_energy": "2*(p**2 + 3*q**2 + 12*r**2)"
+      },
+      "law_only_formulas": {
+        "D0": "E[Theta] - ||A||_HS^2 - E[||R||^2]",
+        "D1": "E[xi Theta] - 2 Contr(A,E[R tensor (xi tensor xi-I)]) - E[xi ||R||^2]",
+        "r2": "E[R tensor (xi tensor xi-I)]/2"
+      },
+      "uses_feedback_derivatives": false
+    },
+    "feedback_graph": {
+      "E_D2h2": "n**2*(1 - exp(-2*n**2))/2",
+      "E_Dh2": "1/2 + exp(-2*n**2)/2",
+      "E_h2": "(1 - exp(-2*n**2))/(2*n**2)",
+      "E_h6": "(10 - 15*exp(-2*n**2) + 6*exp(-8*n**2) - exp(-18*n**2))/(32*n**6)",
+      "boundary": "R-075 graph convergence does not imply Malliavin-Sobolev convergence",
+      "feedback": "h_n(xi)=sin(n xi)/n"
+    },
+    "production_rational_ray": {
+      "coefficient_over_amplitude_squared_limit_at_pi_over_2": "128/27",
+      "implication": "the surviving production Cartan coefficient has a nonzero quadratic coherent ray",
+      "j_over_amplitude_squared_limit_at_pi_over_2": "-8/3",
+      "m": "4*cos(x) + cos(2*x) + 4",
+      "omega_limit_at_pi_over_2": "-16/9",
+      "profile": "phi(x)=(2+cos x,sin x)",
+      "rho": "4*cos(x) + 5"
+    },
+    "scope": {
+      "adapted_D0_D1_law_representation": true,
+      "automatic_cartan_cancellation": false,
+      "complete_signed_one_use": false,
+      "nelson": false,
+      "overlap_src": false,
+      "production_D0_D1_cancellation": false,
+      "sector_a_closure": false,
+      "standalone_adapted_fifth_moment_from_L2_L6": false
+    }
+  },
+  "no_overclaim": "R-122 proves a derivative-free finite-cutoff D0/D1 representation, rejects derivative-by-derivative graph closure and a standalone adapted fifth-moment inference from the existing L2/L6 budgets, and rejects automatic Cartan cancellation. It does not prove the complete signed one-use bound, Nelson, removals, an interacting measure, or Sector-A closure.",
+  "package_version": "1.0.0",
+  "result_id": "A13-CLASSII-DERIVATIVE-FREE-LOW-CHAOS-ADAPTED-FIFTH-MOMENT-CARTAN-BOUNDARY",
+  "schema": "tect/a13-derivative-free-low-chaos-adapted-fifth-moment-cartan-primary/1.0",
+  "status": "PASS"
+}

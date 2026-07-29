@@ -349,11 +349,19 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   agree at `20/729`. Its fixed-skew theorem pays every deterministic
   `H^(-s)` coefficient with `0<=s<1`; at `s=3/5` the exact requirement is a
   fifth H^{-3/5} moment. A sharp high-frequency fixture rules out reusing the
-  R-120 zero-order `H^(-11/10)` class for this first-order form. Continue by
-  computing the actual adapted `D0,D1` endpoint kernels and the adapted fifth
-  `H^(-3/5)` current/forest moment, then apply the R-120/R-121 form bound once
-  over the R-093 directed source union. Strict per-shell normalizer existence
-  alone does not imply this once-only global burden.
+  R-120 zero-order `H^(-11/10)` class for this first-order form. R-122 now
+  reconstructs the actual finite-cutoff `D0,D1` defects by derivative-free
+  endpoint-law moments. A bounded legal pair proves that source cost and the
+  lower kernels do not determine `D1`. Exact graph-null and coherent-amplitude
+  fixtures rule out, respectively, feedback-derivative graph closure and a
+  standalone adapted fifth `H^(-3/5)` moment inferred from source `L2` plus
+  terminal `L6`. The active rational A1 coefficient has nonzero quadratic ray
+  `128/27`, and the R-102 Jacobi audit shows that Cartan and square-cross
+  coefficients reinforce rather than cancel. Continue by constructing the
+  complete six-row endpoint law and proving one correlation-preserving signed
+  current/square/trace/low/score/R-063 form estimate before absolute values,
+  spending the R-093 directed source union and terminal sextic once. Strict
+  per-shell normalizer existence alone does not imply this global burden.
   `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
   remain open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
@@ -956,9 +964,15 @@ preserved in git/changelog rather than treated as current gates.
    path-space exactness does not descend to current closure. It proves direct
    fixed-skew payment for every order below one and shows that the production
    order `s=3/5` requires a fifth `H^(-3/5)` coefficient moment, while the
-   zero-order `H^(-11/10)` class cannot be reused. Continue by computing the
-   actual adapted `D0,D1` kernels and adapted fifth-moment forest, then spend
-   source energy and terminal sextic exactly once over the R-093 directed
+   zero-order `H^(-11/10)` class cannot be reused. R-122 replaces the
+   feedback-derivative expansion by exact law-only `D0,D1` formulas and proves
+   that the existing source/sextic graph coordinates do not imply the isolated
+   fifth moment. Formal selfadjointness also does not cancel the production
+   Cartan coefficient. The live route is a derivative-free,
+   correlation-preserving complete-owner expectation estimate; on coherent
+   rays the joint quartic is paid by the sextic even though the separated
+   tenth-amplitude datum diverges. Construct that six-row signed packet and
+   spend source energy and terminal sextic exactly once over the R-093 directed
    union. Do
    not mistake strict per-shell normalizer existence for summability, and do
    not substitute a centered

@@ -1,0 +1,582 @@
+% =============================================================================
+% Title: Derivative-free low-chaos reconstruction and the adapted Cartan
+%        fifth-moment boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-DERIVATIVE-FREE-LOW-CHAOS-ADAPTED-FIFTH-MOMENT-
+%         CARTAN-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-29; this version issued 2026-07-29
+% Status: scoped T4 analytic/exact/executed advance and method boundary;
+%         no A13 gate and no Sector-A closure
+%
+% Revision history (cumulative):
+%   v1.0 (2026-07-29) first issue.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Contr}{\operatorname{Contr}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cR}{\mathcal R}
+
+\section*{1. Purpose and scope}
+
+R-121 reduced the surviving first-order payment to an adapted fifth
+$H^{-3/5}$ coefficient moment, but left two questions entangled: whether the
+actual zero/first Wiener defects require differentiating the feedback, and
+whether source energy plus the terminal sextic automatically supplies that
+fifth moment.  The present five-round audit separates them.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{R-122 conclusion.}
+At fixed cutoff and positive floor, the actual endpoint defects $D_0,D_1$
+have exact derivative-free formulas in terms of the joint law of the
+complete endpoint output and its once-owned trace.  No $Dh_2$, $D^2h_2$,
+Fa\`a di Bruno forest, or termwise adjacent-chaos expansion is needed to
+identify them.  This is a real reconstruction advance, not a proof that
+they vanish.
+
+The R-075 graph topology does not control feedback derivatives.  More
+decisively, an exact coherent-amplitude family has uniformly bounded source
+$L^2$ and terminal $L^6$ budgets while its quadratic $H^{-3/5}$ current has
+divergent fifth moment.  The surviving rational A1 Cartan coefficient has a
+nonzero quadratic coherent ray.  Thus a standalone adapted fifth-moment
+inference from the existing two budgets is false.
+
+Formal selfadjointness of the complete endpoint Hessian does not cancel the
+first-order Cartan coefficient.  On the normalized R-102 slice, the Cartan
+piece $1360J/729$ and square-cross piece $1320J/729$ reinforce to
+$2680J/729$.
+
+The surviving route is derivative-free and correlation-preserving: retain
+the current, score, trace, low-chaos, and R-063 forest owners in one signed
+expectation before applying Young.  R-122 does not prove that complete
+estimate.  Both A13 gates, $\mathrm{OVERLAP}_{\rm src}$, Nelson, removals,
+the interacting measure, and Sector-A closure remain open.  Tier stays T4.
+}}
+\end{center}
+
+The five rounds are: endpoint reconstruction, identifiability/topology,
+adapted fifth moment, complete Euler--Lagrange cancellation, and synthesis of
+the shortest surviving route.  Failed methods are recorded because they
+remove recurrent ambiguity rather than because they refute A13.
+
+\section*{2. Round one: the actual derivative-free endpoint kernels}
+
+Use the legal R-119 two-root/two-visit chart.  Let $\xi=\xi_1$ and
+$\eta=\xi_2$ be independent fresh Gaussian blocks and write
+\[
+ Z_*=S_1(\xi+h_1)+S_2(\eta+h_2(\xi)).                \tag{2.1}
+\]
+For one root and one contraction-closed output cluster, define the complete
+conditional endpoint current
+\[
+ \Phi_h(\xi)(r)=\Pi_{\cC}\E_\eta[
+   \Xi_\Sigma(Z_*,\partial Z_*)(r)\mid\xi].          \tag{2.2}
+\]
+The heat variable $r$ remains a coordinate in the output Hilbert space; it
+is not averaged away in (2.2).  Put
+\[
+ b=\E\Phi_h,\qquad Y=\Phi_h-b,\qquad
+ A=\E[Y\otimes\xi],\qquad R=Y-A\xi.                 \tag{2.3}
+\]
+Then $R$ is orthogonal to zero and first chaos.
+
+Let $\Theta_h(\xi)$ denote the once-owned complete trace.  In the R-119
+notation it is the live $P_1\tau_{*,1,\cC}$ coordinate,
+\[
+ \Theta_h(\xi)=\E_\eta\!\left[
+ \sum_{i,n\in\cC}\int
+ \E_{G_1}\left|
+ \widehat{C_*(\cdot,r)\partial_iG_1}(n)
+ \right|^2\mu_\Sigma(\dd r)\,\middle|\,\xi\right]. \tag{2.4}
+\]
+This is the safe trace owner.  Its R-063 forest is an alternative expansion,
+not an extra term.
+
+\subsection*{Theorem 2.1 (derivative-free $D_0,D_1$ reconstruction)}
+
+Assume the displayed moments are finite and put
+$H_2(\xi)=\xi\otimes\xi-\Id$.  Then
+\[
+ r_2=\frac12\E[R\otimes H_2(\xi)],\qquad
+ t_0=\E\Theta_h-\|A\|_{\rm HS}^2,
+ \qquad t_1=\E[\xi\Theta_h],                         \tag{2.5}
+\]
+and the R-119 aggregate low-chaos defects are
+\[
+ \boxed{D_0=\E\Theta_h-\|A\|_{\rm HS}^2-\E\|R\|^2,} \tag{2.6}
+\]
+\[
+ \boxed{D_1=\E[\xi\Theta_h]
+ -2\Contr\!\left(A,\E[R\otimes H_2(\xi)]\right)
+ -\E[\xi\|R\|^2].}                                  \tag{2.7}
+\]
+Here
+$(\Contr(A,T))_i=\sum_j\langle Ae_j,T(i,j)\rangle$.
+
+\paragraph{Proof.}
+At finite cutoff, Gaussian integration by parts gives
+\[
+ \E[R\otimes H_2(\xi)]=\E D^2R,qquad
+ \E[\xi_i\|R\|^2]=2\E\langle D_iR,R\rangle.        \tag{2.8}
+\]
+Consequently
+\[
+ \sum_{n\ge3}n!\langle r_{n-1},r_n(\cdot,i)\rangle
+ =\frac12\E[\xi_i\|R\|^2].                         \tag{2.9}
+\]
+Insert (2.8)--(2.9) into R-119 (3.9)--(3.10), using
+$\delta\tau=\Theta_h-\|A\|_{\rm HS}^2$.  This proves
+(2.5)--(2.7). \qed
+
+The right sides of (2.6)--(2.7) use only the endpoint law.  Gaussian
+integration by parts proves the identity, but evaluating it does not require
+differentiating the feedback map.  Passing to a limiting graph still needs
+uniform integrability of the listed products.
+
+\section*{3. Round two: identifiability and graph topology}
+
+The derivative-free representation prevents a false inference in the other
+direction: chart geometry and source cost do not determine its values.
+Consider the normalized circle basis
+\[
+ e_0=1,\quad e_s=\sqrt2\sin x,\quad e_c=\sqrt2\cos x,
+ \quad e_{s2}=\sqrt2\sin2x,
+\]
+and the legal bounded first-linear-row fixture
+\[
+ u_h=\xi e_s+(\eta+h(\xi))e_0,qquad
+ J_h=\kappa u_h\partial_xu_h,qquad \kappa=2\sqrt{c_0}. \tag{3.1}
+\]
+Its complete row cluster is
+\[
+ Y_h=\kappa\left[(\xi h-\E\xi h)e_c
+ +\frac{H_2(\xi)}{\sqrt2}e_{s2}\right],\qquad
+ \Theta_h=\kappa^2\left(\frac{\xi^2}{2}+h^2+1\right). \tag{3.2}
+\]
+
+Take
+\[
+ h_\pm(\xi)=a\sin\xi\pm d\cos\xi.                  \tag{3.3}
+\]
+Both controls are bounded, smooth, and strict-past.  They have the same cost
+\[
+ \E h_\pm^2=\frac{a^2(1-e^{-2})}{2}
+             +\frac{d^2(1+e^{-2})}{2},              \tag{3.4}
+\]
+the same $A=0$, $r_2$, $t_0$, and $D_0$, with
+\[
+ r_2=\kappa\left[\frac{ae^{-1/2}}2e_c
+                  +\frac1{\sqrt2}e_{s2}\right],     \tag{3.5}
+\]
+\[
+ \frac{D_0}{\kappa^2}=\frac12+a^2(e^{-1}-2e^{-2})
+                         +2d^2e^{-2}.                \tag{3.6}
+\]
+Nevertheless
+\[
+ t_{1,\pm}=\pm2\kappa^2ad e^{-2},\qquad
+ \frac12\E[\xi\|R_\pm\|^2]=\mp\kappa^2ad e^{-2}, \tag{3.7}
+\]
+and hence
+\[
+                         D_{1,\pm}=\pm4\kappa^2ad e^{-2}. \tag{3.8}
+\]
+Thus even the source cost together with $A,r_2,t_0,D_0$ does not identify
+the first-chaos trace, adjacent-chaos contraction, or $D_1$.
+
+There is also a topology obstruction to the old derivative-by-derivative
+route.  For $\xi\sim N(0,1)$ set
+\[
+                         h_n(\xi)=\frac{\sin(n\xi)}n. \tag{3.9}
+\]
+Then
+\[
+ \E h_n^2=\frac{1-e^{-2n^2}}{2n^2}\longrightarrow0, \tag{3.10}
+\]
+\[
+ \E|h_n|^6=\frac{10-15e^{-2n^2}+6e^{-8n^2}-e^{-18n^2}}
+                  {32n^6}\longrightarrow0,           \tag{3.11}
+\]
+whereas
+\[
+ \E|Dh_n|^2=\frac{1+e^{-2n^2}}2\longrightarrow\frac12,
+ \qquad
+ \E|D^2h_n|^2=\frac{n^2(1-e^{-2n^2})}{2}\longrightarrow\infty. \tag{3.12}
+\]
+Therefore R-075 graph convergence cannot justify separate limits of the four
+$Dh_2,D^2h_2$ chain-rule families.  This is a method no-go, not a failure of
+(2.6)--(2.7); the law formulas are precisely the repair.
+
+\section*{4. Round three: the exact adapted fifth-moment boundary}
+
+R-071 gives, for an unshifted stationary Gaussian field and common fixed
+floor, every finite
+$L^p(\Omega;H^{-1/2-\delta})$ moment of its smooth one-form current.  Taking
+$\delta=1/10$ includes $L^5(H^{-3/5})$.  R-063 permits a deterministic
+Cameron--Martin translation with its complete forest retained, but gives no
+uniform random-shift integrability.  R-075 passes a graph limit only after
+the adapted current bound and identification are already supplied.
+
+\subsection*{Proposition 4.1 (a valid conditional shifted theorem)}
+
+Let $U$ be a fresh R-071 Gaussian field, let $h$ be measurable with respect
+to a past sigma-field $\cG$, and assume that $U$ is conditionally independent
+of $\cG$.  For every $r>1$,
+\[
+ \E[\|J(U+h)\|_{H^{-3/5}}^5\mid\cG]
+ \le \|J(U)\|_{L^{5r}(H^{-3/5})}^5
+ \exp\!\left(\frac{\|h\|_{\rm CM}^2}{2(r-1)}\right). \tag{4.1}
+\]
+
+\paragraph{Proof.}
+Apply H\"older to the Cameron--Martin density
+$L_h=\exp(\langle h,U\rangle-\|h\|_{\rm CM}^2/2)$ with conjugate exponent
+$r'=r/(r-1)$.  Its required norm is
+\[
+ (\E L_h^{r'})^{1/r'}
+ =\exp\!\left(\frac{\|h\|_{\rm CM}^2}{2(r-1)}\right). \qed
+\]
+
+Thus a positive exponential moment of $\|h\|_{\rm CM}^2$ is sufficient.
+The R-093 progressive/revisit union supplies only quadratic source energy and
+does not meet this hypothesis; same-root later feedback is not conditionally
+fresh.
+
+For an owner-complete fresh forest of chaos order at most four, the $p=5$
+hypercontractive factors are $4^{3/2}=8$ and $4^2=16$.  Hilbert BDG then
+reduces the fifth moment to the missing bracket datum
+\[
+ \E\left(\sum_k\E_{k-1}\|D_k\|_{H^{-3/5}}^2\right)^{5/2}<\infty, \tag{4.2}
+\]
+up to the BDG constant and the worst fifth-power factor
+$16^5=2^{20}$.  Neither (4.2) nor an equivalent tenth coherent-amplitude
+bound is presently available.
+
+\subsection*{Theorem 4.2 (coherent-amplitude graph nontransfer)}
+
+On normalized $\T^3$, let $\xi\sim N(0,1)$ and
+\[
+ A_t=e^{t\xi-3t^2},\qquad
+ z_t=A_t(\cos x_1,\sin x_1),\qquad
+ J(v)=v_1\partial_1v_2.                              \tag{4.3}
+\]
+For every $p>0$,
+\[
+                         \E A_t^p=e^{p(p-6)t^2/2}.    \tag{4.4}
+\]
+Consequently
+\[
+ \E\|z_t\|_{H^2}^2=3e^{-4t^2}\longrightarrow0,
+ \qquad \E\|z_t\|_6^6=1,                           \tag{4.5}
+\]
+but, since $J(z_t)=A_t^2\cos^2x_1$,
+\[
+ \E\|J(z_t)\|_{H^{-3/5}}^5=c_J^5e^{20t^2}
+ \longrightarrow\infty,                            \tag{4.6}
+\]
+where
+\[
+ c_J^2=\|\cos^2x_1\|_{H^{-3/5}}^2
+      =\frac14+\frac18\,5^{-3/5}>0.                 \tag{4.7}
+\]
+
+Smooth caps $0\le\chi_N(s)\le s$ can be chosen to agree with $s$ below
+$N$.  For each $t$, choose $N(t)$ large enough to retain at least one half of
+the tenth moment.  The capped amplitudes are bounded smooth Gaussian
+cylinders, their second and sixth moments do not increase, and (4.6) still
+diverges along a sequence.  Hence existing graph budgets do not imply the
+standalone fifth current moment even on bounded cylindrical cores. \qed
+
+\section*{5. The production rational coefficient has the same quadratic ray}
+
+The preceding theorem is not merely an arbitrary scalar integrability trick.
+Use the active A1 doublet generator $S=\operatorname{diag}(1,-1)$ and the
+profile
+\[
+ \phi(x)=(2+\cos x,\sin x),\quad
+ \rho_\phi=5+4\cos x,\quad
+ m_\phi=4+4\cos x+\cos2x.                            \tag{5.1}
+\]
+For $u_H=H\phi$, the R-120 rational one-form is
+\[
+ \theta=\dd m-\alpha\frac{m}{\rho+e}\dd\rho,
+ \qquad \alpha=\frac59.                             \tag{5.2}
+\]
+Write $j_H=\theta(u_H)(\partial_xu_H)$ and let $\omega_H$ be the scalar
+coefficient of its curvature.  Directly,
+\[
+ \frac{j_H}{H^2}\longrightarrow
+ m_\phi'-\alpha\frac{m_\phi}{\rho_\phi}\rho_\phi',
+ \qquad
+ \omega_H\longrightarrow
+ -\frac{8\alpha(2+\cos x)\sin x}{\rho_\phi}.        \tag{5.3}
+\]
+At $x=\pi/2$ these limits are
+\[
+ -\frac83,\qquad -\frac{16}{9},\qquad
+ \boxed{\lim_{H\to\infty}\frac{j_H\omega_H}{H^2}=\frac{128}{27}\ne0.} \tag{5.4}
+\]
+Because $\rho_\phi\ge1$, convergence holds smoothly and the limiting
+coefficient is a nonzero $H^{-3/5}$ function.  Therefore the corresponding
+production Cartan subcoefficient grows quadratically along this coherent
+ray, and the capped lognormal construction applies to a coefficient-first
+fifth-moment estimate.
+
+This does not refute the complete signed A1 Hessian.  The $D_z\Omega$ term,
+square, trace, low-chaos, and R-063 forest owners can remain correlated and
+can cancel or be paid jointly.  It refutes only the black-box inference that
+their isolated adapted coefficient automatically lies in
+$L^5(H^{-3/5})$ from the two existing graph budgets.
+
+\section*{6. Round four: complete Euler--Lagrange selfadjointness}
+
+The remaining proposed shortcut was that the complete scalar endpoint
+Hessian might cancel the first-order Cartan block automatically.  Let
+\[
+ \cE[U]=\frac12\sum_i\int B(U):
+  (G_i\otimes G_i-\Gamma_i),\qquad G_i=\partial_iU,  \tag{6.1}
+\]
+with $B=B^T$, and define
+\[
+ Q_i=G_i\otimes G_i-\Gamma_i,qquad
+ (C_i)_{ac}=\partial_cB_{ab}G_i^b.                  \tag{6.2}
+\]
+The unintegrated symmetric Hessian is
+\[
+ \begin{split}
+ H_U(h,k)=\sum_i\int\{&
+ (\partial_i h)^TB\partial_i k
+ +(\partial_i k)^TC_i h+(\partial_i h)^TC_i k\\
+ &+\tfrac12D^2B[h,k]:Q_i\}.
+ \end{split}                                        \tag{6.3}
+\]
+After integration by parts its Jacobi operator is
+\[
+ \cL_Uh=-\sum_i\partial_i(B\partial_i h)
+          +\sum_i(A_i\partial_i h+V_i h),           \tag{6.4}
+\]
+where
+\[
+ A_i=C_i^T-C_i,qquad
+ (A_i)_{dc}=(\partial_dB_{cb}-\partial_cB_{db})G_i^b. \tag{6.5}
+\]
+The exact adjoint relation is
+\[
+ A_i^T=-A_i,qquad V_i-V_i^T=\partial_iA_i.          \tag{6.6}
+\]
+Thus
+\[
+ \boxed{\cL_U=-\partial_i(B\partial_i)
+ +A_i\partial_i+\frac12\partial_iA_i+S_i,qquad S_i=S_i^T.} \tag{6.7}
+\]
+Selfadjointness is achieved by the skew first-order completion, not by
+$A_i=0$.  The covariance trace $\Gamma_i$ appears only in the symmetric
+zeroth-order term and cannot alter $A_i$.
+
+\subsection*{Theorem 6.1 (exact normalized R-102 noncancellation)}
+
+On the R-102 active slice use
+\[
+ g=\left(x-\frac59\frac{x^3}{1+x^2+y^2},
+ -\frac59\frac{x^2y}{1+x^2+y^2}\right),qquad
+ B=4gg^T,qquad J=\begin{pmatrix}0&-1\\1&0\end{pmatrix}. \tag{6.8}
+\]
+At $u_2=(2,1)$ and $G=e_1$,
+\[
+                         A_2=\frac{2680}{729}J.       \tag{6.9}
+\]
+Factor $B=ff^T$ with $f=2g$.  Then
+\[
+ f=\frac1{27}(68,-20),\qquad
+ \ell=(Df)^TG=\frac1{81}(62,40),\qquad
+ \Omega=\frac{20}{27}J,                             \tag{6.10}
+\]
+and the full first-order coefficient splits as
+\[
+ A_2=j\Omega+\ell\otimes f-f\otimes\ell
+ =\frac{1360}{729}J+\frac{1320}{729}J
+ =\frac{2680}{729}J.                                \tag{6.11}
+\]
+The two contributions reinforce.  At $u_0=(1,1)$,
+\[
+ A_0=\frac{1480}{729}J,qquad
+ A_2-A_0=\frac{400}{243}J\ne0.                      \tag{6.12}
+\]
+Thus even co-varying both endpoints does not cancel the coefficient; in the
+actual fixed-$U_0$ problem all of $A_2$ remains.
+
+As a convention-independent check, take
+$\theta=(-y/2)\dd x+(x/2)\dd y$ and
+$u(t)=(\cos t,\sin t)$ on $[0,2\pi]$.  Along the radial variation $z=u$,
+\[
+ \cE((1+s)u)=\frac\pi4(1+s)^4,qquad
+ \cE''(0)=3\pi=2\pi+\pi,                            \tag{6.13}
+\]
+where $2\pi$ is the square term and $\pi$ is the Cartan term.  The latter is
+nonzero and necessary for the symmetric Hessian.
+
+The theorem rules out cancellation inferred solely from scalar exactness,
+endpoint telescoping, formal selfadjointness, torus integration, or the
+covariance trace.  It does not rule out a separately proved identity after
+the full control projection or an expectation-level owner cancellation.
+
+\section*{7. Round five: correlation-preserving boundary}
+
+The failure of the isolated fifth moment reveals where the old proof spends
+too much.  Along a coherent amplitude ray, the current coefficient and its
+fixed-skew payload both scale as $H^2$.  Their joint signed pairing therefore
+scales as $H^4$, not as the tenth power introduced by taking a separate
+fifth coefficient moment.  For $x=H^2$ and $c,\zeta>0$,
+\[
+ \boxed{c x^2\le\zeta x^3+\frac{4c^3}{27\zeta^2}.}   \tag{7.1}
+\]
+Indeed the maximum of $cx^2-\zeta x^3$ occurs at
+$x=2c/(3\zeta)$.  Hence the terminal sextic can pay the correlated coherent
+amplitude after the coefficient and payload have been multiplied.
+
+Equation (7.1) is not the full A13 theorem.  It is a sharp route boundary:
+separating the coefficient before Young can demand a false tenth-amplitude
+datum, whereas retaining the complete signed owner can remain within the
+existing sextic scale.  The next target is therefore a derivative-free form
+estimate of the schematic type
+\[
+ \left|\E\int\cP_{\rm complete}(h)\right|
+ \le \eta\E\|L_\pi h\|_{H^2}^2
+    +\zeta\E\|Z_h\|_6^6+C_{\eta,\zeta},             \tag{7.2}
+\]
+where $\cP_{\rm complete}$ contains the current, square, trace, finite-low,
+score, and R-063 forest owners before absolute values.  It must be uniform
+in cutoff, chart, visit, and revisit and must spend the R-093 directed source
+union and terminal sextic only once.
+
+Two alternatives remain logically valid but require genuinely new data:
+the conditional Cameron--Martin exponential moment in (4.1), or the
+$L^{5/2}$ predictable-bracket estimate in (4.2).  Neither follows from the
+current authorities.
+
+\section*{8. Devil's-advocate}
+
+\begin{enumerate}
+\item \textbf{Objection:} (2.6)--(2.7) prove $D_0=D_1=0$.
+\textbf{Disposition: DISMISSED.}  They reconstruct the defects.  The bounded
+fixture (3.3)--(3.8) gives opposite nonzero $D_1$ with identical lower data.
+
+\item \textbf{Objection:} the $h_n$ sequence refutes endpoint graph recovery.
+\textbf{Disposition: DISMISSED.}  It refutes only recovery of feedback
+derivatives from the R-075 graph topology.  The derivative-free law route
+survives, subject to uniform integrability.
+
+\item \textbf{Objection:} Theorem 4.2 is an A1 or one-use counterexample.
+\textbf{Disposition: DISMISSED.}  It is a counterexample to a separated
+coefficient-moment inference.  Complete signed owners may remain correlated.
+
+\item \textbf{Objection:} the coherent amplitude is unbounded and therefore
+illegal.  \textbf{Disposition: DISMISSED.}  Smooth bounded caps preserve
+uniform second/sixth budgets and an unbounded subsequence of tenth moments.
+
+\item \textbf{Objection:} formal selfadjointness forces the first-order
+coefficient to vanish.  \textbf{Disposition: DISMISSED.}  Equations
+(6.6)--(6.7) show the exact skew completion, and (6.11) is nonzero.
+
+\item \textbf{Objection:} the covariance trace can cancel $A_i$.
+\textbf{Disposition: DISMISSED.}  It enters only the symmetric zeroth-order
+Hessian.  The independent rational-jet executable verifies this separation.
+
+\item \textbf{Objection:} (7.1) closes the production one-use theorem.
+\textbf{Disposition: UPHELD AS A BOUNDARY.}  It closes only the coherent
+amplitude scaling test.  Spatial multipliers, signs, owner completeness,
+same-root Jensen defects, and uniform aggregation remain to be proved.
+
+\item \textbf{Objection:} exact fractions were copied as conclusions.
+\textbf{Disposition: DISMISSED.}  The primary route derives $\alpha$ from the
+A1 manifest and differentiates the rational coefficient symbolically.  The
+non-importing route uses an independent exact rational first-jet algebra.
+The displayed fractions are explicit test oracles in both audits.
+\end{enumerate}
+
+\section*{9. Evidence map and next checkpoint}
+
+The successful chain is
+\[
+ \text{R-119 endpoint law}
+ \Longrightarrow \text{derivative-free (2.6)--(2.7)}
+ \Longrightarrow \text{complete-law evaluation target}.       \tag{9.1}
+\]
+The failed chains are
+\[
+ \text{R-075 graph}\not\Longrightarrow Dh,D^2h,                 \tag{9.2}
+\]
+\[
+ L^2\text{ source}+L^6\text{ terminal}
+ \not\Longrightarrow L^5(H^{-3/5})\text{ isolated current},    \tag{9.3}
+\]
+\[
+ \text{scalar Hessian selfadjointness}
+ \not\Longrightarrow \text{Cartan cancellation}.              \tag{9.4}
+\]
+The surviving arrow is
+\[
+ \text{complete derivative-free signed owner}
+ \Longrightarrow \text{correlation-preserving form estimate (7.2)}, \tag{9.5}
+\]
+and (9.5) is a target, not yet a theorem.
+
+The next checkpoint must construct $\Phi_h,\Theta_h$ after summing all six A1
+rows and all required current/trace/low/rational/R-063 companions, then
+evaluate (2.6)--(2.7) and estimate the complete form without isolating a
+fifth coefficient moment.  A failure must identify the precise surviving
+signed defect, not reopen any of (9.2)--(9.4).
+
+\section*{10. Result footer}
+
+The primary executable checks 82 exact symbolic assertions: law/derivative
+equivalence, the bounded owner fixture, graph topology, coherent amplitude,
+conditional sufficient conditions, the production rational ray, complete
+R-102 Cartan reinforcement, and the optimal joint Young constant.  The
+non-importing standard-library executable checks 57 assertions using exact
+Gaussian polynomials, exact rational first jets, independent characteristic
+arithmetic, and separate scope gates.  The integrated verifier reruns both,
+pins all authorities and hashes, checks the paired PDF and public surfaces,
+and enforces every no-overclaim boundary.
+
+R-122 proves no production $D_0,D_1$ cancellation, uniform complete signed
+one-use form, $\mathrm{OVERLAP}_{\rm src}$, Nelson estimate, cutoff or floor
+removal, interacting measure, Sector-A closure, or T5--T7 promotion.
+
+\begingroup
+\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-DERIVATIVE-FREE-LOW-CHAOS-ADAPTED-FIFTH-
+  MOMENT-CARTAN-BOUNDARY (R-122).
+Precise statement: Thm. 2.1; Sec. 3; Props. 4.1 and Thm. 4.2;
+  Eqs. (5.1)-(5.4); Thm. 6.1; Eq. (7.1).
+Scope: fixed finite cutoff and positive rational floor; conditional
+  fresh-shift theorem only; full progressive/revisit estimate open.
+Dependencies: A1, R-063, R-071, R-075, R-102, R-119, R-120, R-121.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_derivative_free_low_chaos_adapted_
+  fifth_moment_cartan_boundary_verify.py
+Expected output: R-122 PASS 122/122; primary
+  82/82; independent 57/57; all hash, PDF, route, registry, and
+  no-overclaim gates pass.
+Falsification gate: any failed low-chaos, owner-fixture, graph,
+  moment, rational-ray, Cartan, Young, authority, PDF, or surface check.
+Tier before / after: T4 / T4.
+No-overclaim statement: production cancellation, complete one-use,
+  OVERLAP_src, Nelson, removals, measure, and Sector A remain open.
+Next required action: evaluate the complete derivative-free endpoint law
+  and prove the correlation-preserving signed owner estimate once.
+\end{verbatim}
+\endgroup
