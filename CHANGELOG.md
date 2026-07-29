@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-123 six-row trace excess and direct-action boundary] - 2026-07-30
+
+Registered scoped T4 R-123 after ten proof rounds: fixed six-row endpoint and owner law, exact Lambda collapse of D0/D1, direct-action target D0-||b||^2, bounded full-six-row fixture, one legal adapted-row expectation theorem, and the multiplicity-free R-093 directed-infimum criterion. Primary and non-importing independent contracts pass 47/47 and 42/42; the integrated target is 118/118. The ten-page PDF passed form checks, zero-overfull extraction checks, and complete visual QA. Three method no-gos are registered. Full production trace excess, both A13 gates, downstream global theorems, and Sector A remain open.
+
 ## [R-122 derivative-free low-chaos and adapted Cartan moment boundary] - 2026-07-29
 
 Registered the scoped T4 R-122 checkpoint: exact derivative-free D0/D1 reconstruction, bounded identifiability and feedback-graph boundaries, adapted fifth-moment nontransfer, the nonzero A1 rational Cartan coherent ray, exact Jacobi/Cartan noncancellation, and the surviving correlation-preserving route. Primary, independent, and integrated checks pass 82/82, 57/57, and 122/122. The eight-page PDF passed form, overflow, extraction, and full visual QA. Production cancellation, complete one-use, both A13 gates, and Sector A remain open.

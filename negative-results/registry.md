@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER](#ng-2026-07-30-a13-stationary-six-row-to-adapted-low-chaos-transfer) | infer adapted `D0=D1=0` from R-120 stationary value-derivative independence, six-row parity, row diagonalisation, or lower endpoint kernels | a bounded full-six-row finite-root fixture has explicit nonzero `D0,D1`, while its direct packet stays positive; R-122's legal `h_+/-` pair also flips `D1` with identical lower data. This retires the stationary-to-adapted inference, not the complete adapted production cancellation |
+| [NG-2026-07-30-A13-RAW-SIX-CURRENT-HESSIAN-POSITIVITY](#ng-2026-07-30-a13-raw-six-current-hessian-positivity) | assign the isolated full raw six-current/phase-pair Hessian to a nonnegative owner before trace/heat/low/forest/sextic completion | on the active real doublet, `u_H=H(2+cos x)e1` in direction `z=(2-cos x)e1` gives normalized unit-frequency Hessian `-117 H^2/(500P)+3e/(100P)+O_e(H^-2)<0`; the full action is not tested |
+| [NG-2026-07-30-A13-FIXED-PROFILE-CORRELATION-YOUNG-CUTOFF-UNIFORMITY](#ng-2026-07-30-a13-fixed-profile-correlation-young-cutoff-uniformity) | promote correlation-first scalar quartic-to-sextic Young absorption to arbitrary cutoff-uniform source/sextic allocations without a spatial/root gain | `z=A(cos Nx,sin Nx)` yields `cA^4N^2` against `eta A^2N^4+zeta A^6+C`; uniformity forces `eta zeta>=c^2/4`. Correlation removes the separated fifth-moment loss but does not by itself close the spatial production theorem |
 | [NG-2026-07-29-A13-FEEDBACK-DERIVATIVE-GRAPH-CLOSURE](#ng-2026-07-29-a13-feedback-derivative-graph-closure) | pass the four adapted endpoint chain-rule families separately to the R-075 graph limit by treating control `L2/H2` plus terminal `L6` convergence as Malliavin-Sobolev convergence | `h_n(xi)=sin(nxi)/n` converges to zero in the graph coordinates, but `E|Dh_n|^2 -> 1/2` and `E|D^2h_n|^2 -> infinity`. The derivative-by-derivative route is not graph-closable. R-122 repairs identification by exact derivative-free endpoint-law formulas for `D0,D1`; production cancellation remains open |
 | [NG-2026-07-29-A13-ADAPTED-CARTAN-FIFTH-MOMENT-GRAPH-TRANSFER](#ng-2026-07-29-a13-adapted-cartan-fifth-moment-graph-transfer) | infer a standalone adapted `L^5(H^{-3/5})` current/forest coefficient from the existing quadratic source-energy and terminal-sextic graph budgets | for `A_t=exp(txi-3t^2)` and `z_t=A_t(cos x_1,sin x_1)`, the source `H2` second moment is `3e^{-4t^2}` and the terminal `L6` sixth moment is one, while the quadratic current fifth moment is `c_J^5e^{20t^2}`. Smooth bounded caps retain the divergence. The A1 rational Cartan subcoefficient has a nonzero quadratic coherent ray `128/27`. This rejects coefficient-first transfer, not a complete signed one-use estimate |
 | [NG-2026-07-29-A13-SELFADJOINTNESS-CARTAN-CANCELLATION](#ng-2026-07-29-a13-selfadjointness-cartan-cancellation) | remove the surviving first-order Cartan block from scalar exactness, endpoint telescoping, formal selfadjointness, torus integration, or the covariance trace alone | the Jacobi operator completes as `-partial(B partial)+A_i partial_i+(partial_i A_i)/2+S`, with skew `A_i` generally nonzero. On the normalized R-102 slice, the Cartan and square-cross pieces are `1360J/729` and `1320J/729`, reinforcing to `2680J/729`; even the two-endpoint difference is `400J/243`. A separately proved projected or expectation-level cancellation remains possible |
@@ -170,6 +173,90 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-30-a13-stationary-six-row-to-adapted-low-chaos-transfer"></a>
+### NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER -- stationary six-row parity does not transfer to arbitrary adapted controls
+
+**Claim / route.**  Infer the adapted identities `D0=D1=0` from the R-120
+stationary six-row value--derivative independence and parity theorem, from
+fixed-row diagonalisation, or from source cost and lower endpoint kernels.
+
+**Failure mode.**  In the fixed six-row frame, take independent standard
+Gaussians `xi,zeta`, `A(xi)=a+beta sin(t xi)`,
+`w=(A+tau zeta)e1`, and `y=xi e2`.  Only one Pauli pair survives.  With
+`s=c0+c1`,
+
+`D0=4 s beta^2 t^2 (exp(-t^2)-2 exp(-2t^2))` and
+`D1=8 s a beta t(t^2-1) exp(-t^2/2)`.
+
+At `t=2` both are generically nonzero, while
+`E P_comp=16 s beta^2 exp(-8)>0`.  Independently, R-122's bounded legal
+`h_+/-` pair has identical source cost and lower kernels but opposite nonzero
+`D1`.
+
+**Evidence.**  R-123 proof note, Sections 3--6; exact symbolic primary audit;
+non-importing Gaussian-quadrature audit; paired PDF and integrated verifier.
+
+**Consequence.**  Stationary value--derivative independence,
+fixed-row parity, and lower marginal data do not prove adapted cancellation.
+This does not show that the owner-complete heat-lifted production aggregate
+has nonzero `D0` or `D1`.  The direct R-093 expected action needs only the
+aggregate `D0-||b||^2` trace excess after complete ownership.
+
+<a id="ng-2026-07-30-a13-raw-six-current-hessian-positivity"></a>
+### NG-2026-07-30-A13-RAW-SIX-CURRENT-HESSIAN-POSITIVITY -- the isolated raw six-current Hessian is indefinite
+
+**Claim / route.**  Assign the complete raw six-current or phase-paired
+current Hessian to a nonnegative owner before adding the covariance trace,
+heat, low, R-063 forest, and terminal-sextic companions.
+
+**Failure mode.**  On the active real doublet set
+`u_H(x)=H(2+cos x)e1`, `z(x)=(2-cos x)e1`, and keep the rational floor
+`e>0`.  All off-diagonal Pauli rows vanish.  For normalized Haar measure and
+unit phase frequency, the surviving linear/rational pair gives
+
+`D^2 E_cur(u_H)[z,z] = -117 H^2/(500P) + 3e/(100P) + O_e(H^-2) < 0`
+
+for large finite `H`.  With the repository's unnormalised `T_L^3` integral
+and legal mode `k=2 pi n/L`, the displayed expansion is multiplied by
+`L^3 |k|^2`.
+
+**Evidence.**  R-123 proof note, Section 9.1; two independent derivations;
+symbolic coefficient audit; independent torus quadrature and finite-difference
+audit; paired PDF and integrated verifier.
+
+**Consequence.**  Raw-current Hessian positivity and phase-pair
+positivity are false.  This is not a counterexample to the complete
+trace/heat/low/forest/sextic action, `OVERLAP_src`, or Nelson.
+
+<a id="ng-2026-07-30-a13-fixed-profile-correlation-young-cutoff-uniformity"></a>
+### NG-2026-07-30-A13-FIXED-PROFILE-CORRELATION-YOUNG-CUTOFF-UNIFORMITY -- correlation alone does not supply arbitrary cutoff-uniform Young allocations
+
+**Claim / route.**  Promote the fixed-profile correlated quartic-to-sextic
+Young inequality to a cutoff-uniform production estimate with arbitrarily
+small source and sextic allocations, without a spatial/root gain or signed
+cancellation.
+
+**Failure mode.**  For a fixed skew matrix and
+`z_{A,N}=A(cos Nx,sin Nx)`, the correlated current-payload scale is
+`c A^4 N^2`, while the model budgets scale as `X=A^2 N^4` and `Y=A^6`.
+A uniform inequality
+
+`c A^4 N^2 <= eta A^2 N^4 + zeta A^6 + C`
+
+forces `eta zeta >= c^2/4`: set `A^2=kN^2`, divide by `kN^6`, minimise
+`eta/k+zeta k`, and let `N` tend to infinity.
+
+**Evidence.**  R-123 proof note, Sections 9.2--9.3; exact algebraic primary
+audit; independent numerical threshold audit; paired PDF and integrated
+verifier.
+
+**Consequence.**  Correlation-first assembly remains strictly
+better than coefficient-first Holder--the coherent amplitude loses an exact
+factor `exp(24t^2)` under separation--but arbitrary cutoff-uniform absorption
+still needs a production spatial gain, a sufficiently large fixed budget
+product, or a signed cancellation.  The circle is a fixed-skew diagnostic,
+not an A1 or Nelson counterexample.
 
 <a id="ng-2026-07-29-a13-feedback-derivative-graph-closure"></a>
 ### NG-2026-07-29-A13-FEEDBACK-DERIVATIVE-GRAPH-CLOSURE -- graph convergence does not control feedback derivatives

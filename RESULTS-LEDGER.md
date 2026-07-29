@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-123](#r-123) | Six-row trace-excess reduction and the direct source-action correlation boundary | Scoped T4 analytic/exact/executed advance and method boundary: for a fully assembled contraction-closed six-row endpoint `Phi` with once-owned trace `Theta`, `Lambda=Theta-||Phi-E_0 Phi||^2` gives `D0=E_0 Lambda` and `D1=E_0[xi Lambda]`, while the direct complete packet has conditional expectation `(||E_0 Phi||^2-D0)/2`. Thus the direct R-093 expected-action route needs one aggregate bound for `D0-||b||^2`, not `D1=0`. A bounded full-six-row fixture has nonzero `D0,D1` but positive direct packet. One genuine legal adapted linear row obeys an exact expectation identity and a source/sixth-moment bound with coefficient `kappa^2=6/(125P)`. A uniform aggregate trace-excess inequality with allocations below `9/20` and `3/20` passes through the R-093 directed chart infimum without a chart-count factor, provided every within-chart owner is recombined and all constants are cutoff/chart/control/refinement uniform. Exact audits retire stationary-to-adapted low-chaos transfer, raw six-current Hessian positivity, and fixed-profile correlation-only cutoff-uniform Young absorption. The stationary-subtracted owner-complete rational/Cartan/forest trace-excess estimate, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-122](#r-122) | Derivative-free low-chaos reconstruction and the adapted Cartan fifth-moment boundary | Scoped T4 analytic/exact/executed advance and method boundary: for the complete finite-cutoff conditional endpoint output, `r2`, `D0`, and `D1` have exact law-only formulas using `E[R tensor (xi tensor xi-I)]`, `E[xi Theta]`, and `E[xi||R||^2]`; no feedback derivatives or termwise adjacent-chaos expansion are required. A bounded legal linear-row pair has identical source cost and `A,r2,t0,D0` but opposite nonzero `D1`, so the complete production law must still be evaluated. The graph-null sequence `sin(nxi)/n` rules out derivative-by-derivative closure. A coherent lognormal amplitude has bounded source `H2` and terminal `L6` budgets but divergent quadratic-current `L^5(H^{-3/5})`; the active A1 rational Cartan coefficient has nonzero normalized quadratic ray `128/27`. Formal selfadjointness does not cancel Cartan: on the R-102 slice `1360J/729+1320J/729=2680J/729`. The correlation-preserving quartic-to-sextic Young inequality identifies the surviving signed complete-owner route. Production `D0,D1` cancellation, the complete one-use bound, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-121](#r-121) | Cartan path-space exactness correction and the fixed-skew Sobolev one-use boundary | Scoped T4 analytic/exact/executed correction and advance: the complete two-visit rational owner telescopes pathwise to its endpoints, but exactness of that scalar on jet/path space does not force a projected target-space current one-form to be closed. On the exact R-102 slice the `K_R`, `M_U`, and recombined current curls are `-40/729`, `2720/729`, and `2680/729`; the normalized path ellipse has a symmetric mixed Hessian `20/729`. Thus the old mandatory `+40/729` companion inference is superseded while the isolated chain-primitive no-go is retained. For a fixed-skew first-order form paired with `H^{-s}`, `0<=s<1`, the deterministic powers are `X^((1+3s)/4)Y^((1-s)/4)` and the coefficient moment is `2/(1-s)`. At `s=3/5` the moment is five and the Young powers are `eta^{-7/2}zeta^{-1/2}`. R-071 supplies this only for unshifted stationary currents. An exact high-frequency fixture rules out reuse of the zeroth-order `H^{-11/10}` class. Adapted `D0,D1`, the adapted fifth `H^{-3/5}` moment/forest, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-120](#r-120) | Covariance-horizontal synthesis, stationary low-chaos cancellation, and the rational Cartan-Hessian boundary | Scoped T4 analytic/exact/executed advance and method boundary: the complete A1 six-current coefficient diagonalizes with `c0=3/(250P)`, `c1=243/(8000P)`, and `alpha=5/9`. For every temporally faithful source chart, the realized covariance quotient controls the physical `H2` endpoint with `M_R^2/c_sym`; the sharp two-endpoint `L6` constant is `32`, so source energy and the terminal sextic can be spent once in the fixed-matrix R-118 estimate. Under summed bilinear multiplier-derivative bounds through order two, the variable-matrix remainder has powers `K0^(3/2) K_le2^(11/6)` at `kappa=1/10`. The complete common-real-even stationary six-row raw-current packet satisfies the R-119 zero/first-chaos identities, but this is not an adapted trace/heat/low/R-063 forest theorem. The linear rows have an exact square--Laplacian--trace Hessian and zero curvature. The rational raw-`Q` Hessian is selfadjoint and flattens into 21 fixed matrices with absolute sum `(7/2)I`, while a genuine first-order Cartan block survives. The R-102 curl `-40/729` is independently reproduced. R-121 later supersedes only R-120's inference that scalar exactness requires an unobserved local `+40/729` companion. Adapted `D0,D1`, complete owner reconstruction, Cartan cancellation or absorption, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -141,6 +142,96 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-123"></a>
+### R-123 -- Six-row trace-excess reduction and the direct source-action correlation boundary
+
+**Result ID.**
+A13-CLASSII-SIX-ROW-TRACE-EXCESS-DIRECT-ACTION-CORRELATION-BOUNDARY.
+
+**Exact conditional reduction.**  Condition on the strict past.  Let `Phi`
+be a fully assembled contraction-closed six-row endpoint, let `Theta` be its
+once-owned complete covariance trace, let `b=E_0 Phi`, and set
+`Y=Phi-b`.  Then
+
+`Lambda=Theta-||Y||^2`, `D0=E_0 Lambda`, and `D1=E_0[xi Lambda]`.
+
+The complete square-minus-trace packet satisfies
+
+`E_0 P_comp = (||b||^2-D0)/2`.
+
+Therefore the direct R-093 expected source action does not require `D1=0`.
+Its exact scalar target is the aggregate trace excess
+`D0-||b||^2=E_0 Theta-E_0||Phi||^2` after all roots, visits, rows, low terms,
+score terms, rational terms, heat terms, and R-063 forest owners have been
+assembled exactly once.  A determinant, conditional normalizer, or pure
+double-divergence route still needs its own first-chaos and domain controls.
+
+**Uniform sufficient condition.**  If, uniformly in cutoff, canonical
+temporally faithful chart, control, dimension, visit count, block count, and
+representation-preserving subdivision,
+
+`sum E[D0-||b||^2] <= 2 eta E sum ||h_k||^2 + 2 zeta E||Z_K||_6^6 + 2C`,
+
+then R-107 gives source-action reserves `9/20-eta` and `3/20-zeta`.  For
+`eta<9/20` and `zeta<3/20`, the R-093 directed-chart infimum has the same
+lower bound with no chart-count multiplier.  This statement requires full
+within-chart recombination, endpoint-kernel descent such as `K=L*BL`, the
+R-118/R-120 multiplier hypotheses, uniform rough moments and endpoint
+bridges, legal strict-past heat, and one chart-independent additive constant.
+It is a conditional criterion; R-123 does not prove its production
+hypothesis.
+
+**Exact finite-root tests.**  In a bounded full-six-row fixture with
+`A(xi)=a+beta sin(t xi)`, only one Pauli pair survives.  At `t=2`, both
+`D0=16s beta^2(e^-4-2e^-8)` and `D1=48s a beta e^-2` are generically nonzero,
+but `E P_comp=16s beta^2e^-8>0`.  Thus adapted low-chaos cancellation is not
+automatic and nonzero defects do not imply a bad direct packet.
+
+For R-122's genuine first-linear-row chart and arbitrary strict-past `h`,
+
+`E P_row=(kappa^2/2)E[(xi^2-1)h^2]`,
+`kappa^2=6/(125P)`.
+
+For smooth data this equals `kappa^2 E[(h')^2+h h'']`, and R-109 gives
+
+`|E P_row| <= kappa^2 X^(1/4)Y^(1/4)/sqrt(2)`
+
+with optimized lower-bound remainder `kappa^4/(16 sqrt(eta zeta))`.  This
+closes one legal row at expectation level only; identifying and summing its
+spatial sextic owner remains a production duty.
+
+**Method boundaries.**  The scalar Hermite audit shows that exchange,
+Clark--Ocone, OU Stein, score-compatible, and raw derivative traces have
+different first-chaos weights, so none may replace the production trace
+without a new identity.  The raw six-current Hessian is indefinite:
+`u_H=H(2+cos x)e1` in direction `(2-cos x)e1` gives normalized unit-frequency
+coefficient `-117H^2/(500P)+3e/(100P)+O_e(H^-2)`.  Correlation-first assembly
+avoids the exact `e^(24t^2)` separated-amplitude loss, but the spatial circle
+scaling forces `eta zeta>=c^2/4` for a uniform quartic/source/sextic Young
+bound.  These are scoped route no-gos, not full-action counterexamples.
+
+**Proof / evidence.**
+
+- claim: `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`;
+- note: `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-six-row-trace-excess-direct-action-correlation-boundary-260730-v1.0.tex.txt`;
+- primary: `codes/foundations/a13_classii_six_row_trace_excess_direct_action_boundary.py`;
+- independent: `codes/foundations/a13_classii_six_row_trace_excess_direct_action_boundary_independent.py`;
+- integrated verifier: `codes/foundations/a13_classii_six_row_trace_excess_direct_action_boundary_verify.py`;
+- manifest: `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_six_row_trace_excess_direct_action_boundary_manifest.json`;
+- negative boundaries: `NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER`, `NG-2026-07-30-A13-RAW-SIX-CURRENT-HESSIAN-POSITIVITY`, and `NG-2026-07-30-A13-FIXED-PROFILE-CORRELATION-YOUNG-CUTOFF-UNIFORMITY`.
+
+**Reuse scope.**  Exact conditional Hilbert endpoint algebra, scalar
+Gaussian low-chaos analysis, bounded finite-root diagnostics, and a uniform
+directed-infimum implication at fixed positive floor.  The production
+trace-excess hypothesis, cutoff-uniform one-use estimate, and downstream
+global theorems remain open.
+
+**Honest tier.**  T4 (analytic/exact/executed advance and method boundary).
+
+**Publication target.**  A methods note on conditional trace excess,
+replica variance, and expectation-level one-use estimates for adapted
+Gaussian current packets.
 
 <a id="r-122"></a>
 ### R-122 -- Derivative-free low-chaos reconstruction and the adapted Cartan fifth-moment boundary

@@ -1152,6 +1152,23 @@ the following structural results and proof-architecture boundaries hold.
     correlation-preserving complete-owner expectation estimate before
     absolute values. Production cancellation, one-use aggregation, and all
     downstream global gates remain open; tier stays T4.
+66. `A13-CLASSII-SIX-ROW-TRACE-EXCESS-DIRECT-ACTION-CORRELATION-BOUNDARY`
+    is R-123. In the fixed R-120 six-row frame, the complete conditional
+    endpoint and once-owned trace reduce to one scalar mismatch
+    `Lambda=Theta-||Phi-E_0Phi||^2`, with exact identities
+    `D0=E_0 Lambda`, `D1=E_0[xi Lambda]`, and
+    `E_0 P_comp=(||E_0Phi||^2-D0)/2`. Thus the direct R-093 expected-action
+    route needs one aggregate upper bound on `D0-||b||^2`, not `D1=0`.
+    A uniform trace-excess estimate with allocations below `9/20` and `3/20`
+    passes through the R-093 chart infimum without a chart-count factor, but
+    its production hypothesis remains open. A bounded full-six-row fixture
+    has nonzero `D0,D1` and a positive packet, while one genuine adapted
+    linear row is paid exactly from source `L2` and one sixth moment. Exact
+    audits retire stationary-to-adapted low-chaos transfer, raw six-current
+    Hessian positivity, and fixed-profile correlation-only cutoff-uniform
+    Young absorption. The live target is the stationary-subtracted,
+    owner-complete rational/Cartan/forest trace-excess estimate. Every global
+    gate remains open; tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -1220,7 +1237,8 @@ is a scoped T4 subproof and does not promote A13.
 | Legal adapted score-trace / terminal quotient-Hessian frontier | Minimal two-block/two-visit strict-triangular chart; exact zero/first-chaos trace criteria; strict bare-heat no-go; one-pair and covariance-face PSD diagnostics; automatic global terminal-Hessian quotient and lossless realized quotient norm | T4 analytic/exact/executed advance and method boundary; production low-chaos identities, full trace/forest reconstruction, spatial multiplier/synthesis, and once-only source/sextic aggregation remain open |
 | Covariance-horizontal synthesis / stationary low-chaos / Cartan-Hessian boundary | Exact six-current diagonalization; lossless covariance quotient and physical `H2` bridge; sharp endpoint `L6` constant `32`; conditional variable-matrix remainder; stationary six-row raw-current zero/first-chaos cancellation; exact linear and rational Hessians; fixed 21-matrix inventory; independently reproduced Cartan checksum | T4 analytic/exact/executed advance and method boundary; adapted `D0,D1`, complete trace/heat/low/R-063 owner reconstruction, Cartan cancellation or absorption, and once-only source/sextic aggregation remain open; the old mandatory-companion inference is corrected by R-121 |
 | Cartan path-space exactness / fixed-skew Sobolev boundary | Exact two-visit owner telescope; exact three-current curl audit; normalized `20/729` symmetric path Hessian; canonical skew wedge and absolute-operator inventories; fixed-skew `s<1` theorem with moment five at `s=3/5`; sharp `H^{-11/10}` first-order reuse no-go | T4 analytic/exact/executed correction and advance; adapted `D0,D1`, adapted fifth `H^{-3/5}` moment/forest, direct one-use aggregation, and all global gates remain open |
-| Derivative-free low-chaos / adapted fifth-moment / Cartan boundary | Exact law-only `r2,D0,D1`; bounded legal `D1` identifiability fixture; feedback-derivative graph no-go; coherent-amplitude isolated fifth-moment nontransfer; active A1 `128/27` quadratic ray; exact R-102 Cartan/square reinforcement; optimal correlation-preserving quartic-to-sextic boundary | T4 analytic/exact/executed advance and method boundary; complete six-row law evaluation, signed one-use form, and all global gates remain open |
+| Derivative-free low-chaos / adapted fifth-moment / Cartan boundary | Exact law-only `r2,D0,D1`; bounded legal `D1` identifiability fixture; feedback-derivative graph no-go; coherent-amplitude isolated fifth-moment nontransfer; active A1 `128/27` quadratic ray; exact R-102 Cartan/square reinforcement; optimal correlation-preserving quartic-to-sextic boundary | T4 analytic/exact/executed advance and method boundary; R-123 supplies the six-row trace-excess reduction, while the production estimate and all global gates remain open |
+| Six-row trace excess / direct source action / correlation boundary | Fixed six-row endpoint and owner firewall; exact `Lambda` collapse of `D0,D1`; direct packet target `D0-||b||^2`; replica trace excess; bounded full-six-row noncancellation with positive packet; one legal adapted row theorem; multiplicity-free directed-infimum criterion; raw-Hessian and cutoff-uniform correlation boundaries | T4 analytic/exact/executed advance and method boundary; the stationary-subtracted owner-complete production trace-excess estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1592,22 +1610,23 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_derivative_free_low_chaos_adapted_fifth_moment_cartan_boundary_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_six_row_trace_excess_direct_action_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `82/82`;
-- non-importing independent `57/57`;
-- manifest-pinned integrated `122/122` PASS;
-- exact derivative-free `r2,D0,D1`, bounded owner identifiability, feedback
-  graph boundary, coherent-amplitude fifth-moment nontransfer, active A1
-  `128/27` rational ray, R-102 Cartan/square reinforcement, and the optimal
-  correlation-preserving quartic-to-sextic boundary;
+- primary `47/47`;
+- non-importing independent `42/42`;
+- manifest-pinned integrated `118/118` PASS;
+- exact fixed six-row coefficient and owner law, scalar trace-excess collapse,
+  direct packet target `D0-||b||^2`, bounded full-six-row fixture, legal
+  arbitrary-control first-linear-row expectation theorem, five canonical
+  trace audits, raw-current Hessian boundary, coherent-amplitude correlation
+  gain, cutoff-uniform frequency-allocation boundary, and R-093 directed-union
+  implication;
 - exact authority, source, result, note, PDF, and manifest pins;
-- explicit preservation of the open production `D0,D1` cancellation,
-  complete signed one-use aggregation, `OVERLAP_src`, Nelson, removal,
-  measure, and Sector-A targets;
+- explicit preservation of the open owner-complete production trace-excess
+  estimate, `OVERLAP_src`, Nelson, removal, measure, and Sector-A targets;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -1615,7 +1634,24 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 ## Current evidence
 
-The current R-122 package is:
+The current R-123 package is:
+
+- `classii_six_row_trace_excess_direct_action_boundary_manifest.json`
+- `notes/classii-six-row-trace-excess-direct-action-correlation-boundary-260730-v1.0.tex.txt`
+- `notes/classii-six-row-trace-excess-direct-action-correlation-boundary-260730-v1.0.pdf`
+- `../../codes/foundations/a13_classii_six_row_trace_excess_direct_action_boundary.py`
+- `../../codes/foundations/a13_classii_six_row_trace_excess_direct_action_boundary_independent.py`
+- `../../codes/foundations/a13_classii_six_row_trace_excess_direct_action_boundary_verify.py`
+- `runs/2026-07-30-primary-six-row-trace-excess-direct-action-boundary/result.json`
+- `runs/2026-07-30-independent-six-row-trace-excess-direct-action-boundary/result.json`
+- `runs/2026-07-30-integrated-six-row-trace-excess-direct-action-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-123`
+- `../../negative-results/registry.md#ng-2026-07-30-a13-stationary-six-row-to-adapted-low-chaos-transfer`
+- `../../negative-results/registry.md#ng-2026-07-30-a13-raw-six-current-hessian-positivity`
+- `../../negative-results/registry.md#ng-2026-07-30-a13-fixed-profile-correlation-young-cutoff-uniformity`
+- `../../explorations/log.jsonl` (`EXP-000386`--`EXP-000395`)
+
+The immediate R-122 predecessor package remains binding:
 
 - `classii_derivative_free_low_chaos_adapted_fifth_moment_cartan_boundary_manifest.json`
 - `notes/classii-derivative-free-low-chaos-adapted-fifth-moment-cartan-boundary-260729-v1.0.tex.txt`
@@ -1632,7 +1668,7 @@ The current R-122 package is:
 - `../../negative-results/registry.md#ng-2026-07-29-a13-selfadjointness-cartan-cancellation`
 - `../../explorations/log.jsonl` (`EXP-000381`--`EXP-000385`)
 
-The immediate R-121 predecessor package remains binding:
+The immediate R-121 predecessor package also remains binding:
 
 - `classii_cartan_pathspace_exactness_fixed_skew_sobolev_boundary_manifest.json`
 - `notes/classii-cartan-pathspace-exactness-fixed-skew-sobolev-boundary-260729-v1.0.tex.txt`
@@ -3410,9 +3446,17 @@ values vanish. Its coherent-amplitude theorem rejects only a standalone
 adapted fifth-moment inference from the current graph budgets, and its exact
 Jacobi audit rejects only automatic Cartan cancellation. The
 correlation-preserving quartic-to-sextic inequality is a route boundary, not
-the complete signed A1 estimate. None of R-114--R-122 proves the complete
-six-row cancellation, a cutoff-summable conditional log-normalizer ledger,
-or the once-only source/sextic aggregation.
+the complete signed A1 estimate. R-123 constructs the fixed six-row endpoint
+law, compresses the complete low-chaos data into
+`Lambda=Theta-||Phi-E_0Phi||^2`, and proves that direct expected action needs
+only the aggregate `D0-||b||^2` trace excess. It proves the exact uniform
+directed-infimum implication and one genuine adapted linear-row expectation
+bound, while bounded six-row, raw-Hessian, and frequency-scaling fixtures
+retire three shortcuts. It does not prove the stationary-subtracted
+owner-complete rational/Cartan/forest trace-excess hypothesis. None of
+R-114--R-123 proves that cutoff-uniform production inequality, a
+cutoff-summable conditional log-normalizer ledger, or the once-only global
+source/sextic aggregation.
 `OVERLAP_src`, Nelson, removal, interacting measure, Sector-A closure, and
 T5--T7 promotion remain open. Tier stays T4.
 
@@ -4224,3 +4268,20 @@ T5--T7 promotion remain open. Tier stays T4.
   correlation-preserving signed complete-owner estimate. Production
   cancellation, one-use aggregation, and every downstream global gate remain
   open; tier stays T4.
+- 2026-07-30: Registered R-123 after ten proof rounds. The fixed six-row
+  endpoint and once-owned trace reduce to
+  `Lambda=Theta-||Phi-E_0Phi||^2`; `D0=E_0Lambda`,
+  `D1=E_0[xi Lambda]`, and the direct packet is
+  `(||E_0Phi||^2-D0)/2`. Thus the direct R-093 route drops the unnecessary
+  first-chaos-cancellation burden and asks for one stationary-subtracted
+  owner-complete aggregate trace-excess estimate. A bounded full-six-row
+  fixture has nonzero defects but positive packet, and one genuine adapted
+  linear row closes at expectation level from source `L2` and one sixth
+  moment. `EXP-000386--EXP-000395` record all advanced, failed, and scoped
+  routes. Three new negative results retire stationary-to-adapted low-chaos
+  transfer, raw six-current Hessian positivity, and fixed-profile
+  correlation-only cutoff-uniform Young absorption. Primary `47/47`,
+  non-importing independent `42/42`, and integrated `118/118` pass. The
+  ten-page PDF passes form, zero-overfull, extraction, no-form, and all-page
+  Poppler visual QA. The production trace-excess hypothesis and every
+  downstream global gate remain open; tier stays T4.

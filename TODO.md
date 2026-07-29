@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION)_
-  - R-122 gives exact derivative-free endpoint-law formulas for adapted D0,D1 and proves that source cost/lower kernels do not identify D1. It retires feedback-derivative graph closure, standalone adapted fifth H^(-3/5) moment transfer from source L2 plus terminal L6, and automatic Cartan cancellation; the active rational ray is 128/27 and the R-102 Cartan/square pieces reinforce. Next construct the complete six-row Phi_h,Theta_h law packet and prove one correlation-preserving signed current/square/trace/low/score/R-063 estimate before absolute values, spending the R-093 source union and terminal sextic once. OVERLAP_src, Nelson, removals, measure, and Sector A remain open.
+  - R-123 reconstructs the fixed six-row endpoint law and collapses the complete low-chaos data to Lambda=Theta-||Phi-E_0Phi||^2. Direct R-093 action needs the aggregate trace excess D0-||b||^2, not D1=0. A bounded six-row fixture has nonzero defects but positive packet, and one legal adapted row closes at expectation level. Next prove the stationary-subtracted owner-complete rational/Cartan/forest trace-excess inequality uniformly in cutoff, chart, control, visits, and refinement with eta<9/20 and zeta<3/20, preserving ||b||^2 and all signs. OVERLAP_src, Nelson, removals, the measure, and Sector A remain open.
   - _updated 2026-07-29_
 
 ## Next up

@@ -1,0 +1,701 @@
+% =============================================================================
+% Title: Six-row trace excess, direct source action, and the correlation boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-SIX-ROW-TRACE-EXCESS-DIRECT-ACTION-CORRELATION-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-30; this version issued 2026-07-30
+% Status: scoped T4 analytic/exact/executed advance and method boundary;
+%         no A13 gate and no Sector-A closure
+%
+% Revision history (cumulative):
+%   v1.0 (2026-07-30) first issue.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Contr}{\operatorname{Contr}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cT}{\mathfrak T}
+
+\section*{1. Purpose and scope}
+
+R-122 left the A13 proof at a precise fork.  One route tried to cancel both
+low chaoses of every adapted root and then exponentiate a double divergence.
+The other route retained the complete signed endpoint and asked only for the
+expected R-093 source action.  Ten proof rounds were used to compare these
+routes after reconstructing the fixed six-row coefficient law and retaining
+all owner multiplicities.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{R-123 conclusion.}
+Conditionally on the strict past, let $\Phi$ be a fully assembled
+contraction-closed six-row endpoint output, let $\Theta$ be its once-owned
+complete covariance trace, let $b=\E_0\Phi$, and put $Y=\Phi-b$.  The one
+scalar mismatch
+\[
+                 \Lambda=\Theta-\|Y\|^2
+\]
+contains both R-122 low-chaos defects:
+\[
+                 D_0=\E_0\Lambda,
+       \qquad    D_1=\E_0[\xi\Lambda].
+\]
+More importantly, the direct complete packet obeys
+\[
+ \E_0\cP_{\rm comp}
+ =\frac12\|b\|^2-\frac12D_0.
+\]
+Thus the direct R-093 expected source-action route does not require
+$D_1=0$.  Its exact irreducible target is one aggregate upper bound for
+$D_0-\|b\|^2$ after all six rows, roots, visits, traces, low terms, score
+terms, rational terms, and R-063 forest owners have been recombined.
+
+A bounded full-six-row finite-root fixture has nonzero $D_0$ and $D_1$ but a
+strictly positive direct packet.  A genuine legal first-linear-row fixture
+admits an expectation bound from source $L^2$ and one sixth moment with no
+feedback derivatives and no fifth coefficient moment.  These are real
+advances, but they are not the full production estimate.
+
+Three shortcuts are retired.  Stationary six-row parity does not transfer to
+arbitrary adapted controls.  The isolated raw six-current Hessian is
+indefinite.  Correlation-before-Holder removes an exponential amplitude loss,
+but without spatial gain it cannot provide arbitrary cutoff-uniform Young
+allocations.  The complete cutoff/chart/control-uniform trace-excess estimate,
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, the interacting measure, and
+Sector-A closure remain open.  Tier stays T4.
+}}
+\end{center}
+
+The result is expectation-level and finite-cutoff.  A conditional
+log-normalizer, determinant, or pure double-divergence route still needs the
+first-chaos information and the relevant domain hypotheses.  No formula below
+permits rowwise positive parts, duplicated forests, or per-chart constants.
+
+\section*{2. Round one: fixed six-row endpoint law and owner incidence}
+
+Let $S_A=S_A^*$, $A=1,2,3$, be the fixed six-real Pauli generators.  For
+$w\in\R^6$, a positive density floor $e$, and a tangent $v$, write
+\[
+ \rho(w)=|w|^2,\qquad m_A(w)=w^TS_Aw,\qquad
+ q_A(w)=\frac{m_A(w)}{\rho(w)+e},                  \tag{2.1}
+\]
+\[
+ P_A(w;v)=2(S_Aw)^Tv,\qquad
+ L_A(w;v)=2\{(S_A-\alpha q_A(w)\Id)w\}^Tv,        \tag{2.2}
+\]
+where the A1 manifest gives
+\[
+ P=M_X^2+\varepsilon_m=4+10^{-12},\qquad
+ c_0=\frac3{250P},\qquad c_1=\frac{243}{8000P},
+ \qquad\alpha=\frac59.                            \tag{2.3}
+\]
+Define the fixed orthogonal six-row map
+\[
+ C_6(w)v=
+ \big(\sqrt{c_0}P_A(w;v),\sqrt{c_1}L_A(w;v)\big)_{A=1}^3.
+                                                               \tag{2.4}
+\]
+Then the complete raw covariance coefficient is exactly
+\[
+ B(w)=C_6(w)^TC_6(w)
+ =\sum_{A=1}^3\{c_0p_Ap_A^T+c_1\ell_A\ell_A^T\}. \tag{2.5}
+\]
+This is the R-120 fixed coordinate.  A state-dependent rank compression may
+be used only after the conditional covariance has been formed; it is not a
+replacement for (2.4).
+
+On the legal R-119 two-block chart set
+\[
+ Z_*=S_1(\xi+h_1)+S_2(\eta+h_2(\xi)),\qquad
+ W_r=Z_*+r,\qquad V_i=\partial_iZ_*.               \tag{2.6}
+\]
+For a contraction-closed output cluster $\cC$, the heat coordinate $r$ stays
+inside the output Hilbert space and the six-row endpoint is
+\[
+ \Phi_{h,\cC}(\xi)=
+ \left(\Pi_{\cC}\E_\eta[
+ \widehat{C_6(W_r)V_i}(n)\mid\xi]\right)_{i,n\in\cC}.
+                                                               \tag{2.7}
+\]
+The covariance-normal trace is
+\[
+ \Theta_{h,\cC}(\xi)=
+ \E_{\eta,G_1}\sum_{i,n\in\cC}\int
+ \left|\Pi_{\cC}
+ \widehat{C_6(W_r)\partial_iG_1}(n)\right|^2
+ \mu_\Sigma(\dd r)\,\Big|\,\xi .                \tag{2.8}
+\]
+Here $G_1$ is the fresh covariance tangent.  Formula (2.8) is the primitive
+trace owner.  The R-063 Wick forest is an alternative expansion of the same
+endpoint reconstruction and must not be added a second time.
+
+The owner-incidence audit used in all later rounds is:
+\[
+\begin{array}{c|c}
+\text{owner family}&\text{net incidence}\cr\hline
+\text{current/nonlinear cross}&+1\cr
+\text{nonlinear square}&+1/2\cr
+\text{safe covariance trace}&-1/2\cr
+\text{affine Hilbert--Schmidt rebate}&+1/2\cr
+\text{heat internal expansion or R-063 alternative forest}&0\text{ extra}\cr
+\text{intermediate visit endpoint}&0\cr
+R_Q+M_U+K_R\text{ rational aggregate}&1\text{ total}\cr
+\text{conditional low and complete low}&1\text{ each}\cr
+\text{paid difference}&1\cr
+\text{Cartan FAR}&1\text{ REG copy}\cr
+\text{duplicate }q/r,\text{ Schur, R-076, or R-086 payment}&0.
+\end{array}                                                       \tag{2.9}
+\]
+The table is an ownership firewall, not a positivity statement.
+
+\section*{3. Round two: scalar trace-excess collapse}
+
+Condition on the strict past $\cG$ and write $\E_0=\E[\,\cdot\mid\cG]$.
+For one fully owned cluster define
+\[
+ b=\E_0\Phi,\qquad Y=\Phi-b,\qquad
+ A=\E_0[Y\otimes\xi],\qquad R=Y-A\xi.             \tag{3.1}
+\]
+Thus $R$ is orthogonal to zero and first Gaussian chaos.  R-122 wrote
+\[
+ D_0=\E_0\Theta-\|A\|_{\rm HS}^2-\E_0\|R\|^2,   \tag{3.2}
+\]
+\[
+ D_1=\E_0[\xi\Theta]
+ -2\Contr\!\left(A,\E_0[R\otimes H_2(\xi)]\right)
+ -\E_0[\xi\|R\|^2].                              \tag{3.3}
+\]
+Since
+\[
+ \E_0\|Y\|^2=\|A\|_{\rm HS}^2+\E_0\|R\|^2,   \tag{3.4}
+\]
+and
+\[
+ \E_0[\xi\|Y\|^2]
+ =2\Contr\!\left(A,\E_0[R\otimes H_2(\xi)]\right)
+  +\E_0[\xi\|R\|^2],                             \tag{3.5}
+\]
+the derivative-free scalar
+\[
+                   \boxed{\Lambda=\Theta-\|Y\|^2}               \tag{3.6}
+\]
+gives the exact collapse
+\[
+                   \boxed{D_0=\E_0\Lambda,
+                          \qquad D_1=\E_0[\xi\Lambda].}          \tag{3.7}
+\]
+No $Dh$, $D^2h$, or termwise Hermite expansion appears in (3.7).
+
+Let $(\xi',\Phi',\Theta')$ be a conditionally independent copy and let
+$\Lambda'=\Theta'-\|\Phi'-b\|^2$.  Then
+\[
+ \boxed{D_0=\E_0\Theta-\frac12\E_0\|\Phi-\Phi'\|^2,}              \tag{3.8}
+\]
+\[
+ \boxed{D_1=\frac12\E_0[(\xi-\xi')(\Lambda-\Lambda')].}         \tag{3.9}
+\]
+Thus $D_0$ is a conditional trace excess over replica variance, while $D_1$
+is the root covariance of that mismatch.
+
+\section*{4. Round three: direct action removes the first-chaos burden}
+
+The complete square-minus-trace packet is
+\[
+ \cP_{\rm comp}=\frac12\|\Phi\|^2-\frac12\Theta.
+                                                               \tag{4.1}
+\]
+Using $\Phi=b+Y$, $\E_0Y=0$, and (3.7),
+\[
+ \boxed{\E_0\cP_{\rm comp}
+ =\frac12\|b\|^2-\frac12D_0
+ =-\frac12\E_0[\Theta-\|\Phi\|^2].}             \tag{4.2}
+\]
+The load-bearing scalar is therefore
+\[
+ \boxed{D_0-\|b\|^2=\E_0\Theta-\E_0\|\Phi\|^2.}                \tag{4.3}
+\]
+The positive $\|b\|^2$ reserve cannot be discarded.  Later feedback is not
+being ignored: it must already be inside the contraction-closed $\Phi$ and
+once-owned $\Theta$ before (4.2) is used.
+
+For comparison, the R-119 coherent residual has
+\[
+ \Pi_0\cR_{\rm coh}=-\frac12D_0,
+ \qquad
+ \Pi_1\cR_{\rm coh}=-\frac12\langle D_1,\xi\rangle.             \tag{4.4}
+\]
+For finite Gaussian polynomials, or under a separately proved closed
+double-divergence domain,
+\[
+ \cR_{\rm coh}=-\frac12D_0-\frac12\langle D_1,\xi\rangle
+                +\frac12\delta^2W_{\rm can}.                   \tag{4.5}
+\]
+The coefficient $W_{\rm can}$ may change sign.  Hence (4.5) is useful for
+bookkeeping but supplies neither a positive coefficient nor an exponential
+estimate.  The direct expectation (4.2) is strictly weaker and needs no
+$D_1=0$.
+
+\section*{5. Round four: symmetry, exchange, and trace substitutes}
+
+The weakest root reflection assumption that kills the first defect is
+\[
+                         \Lambda(-\xi)=\Lambda(\xi).             \tag{5.1}
+\]
+It implies $D_1=0$ but says nothing about $D_0$.  The R-120 stationary theorem
+has the stronger mechanism: conditionally independent centered Gaussian
+value and derivative, plus fixed-row parity, give both the variance identity
+and reflection.  Same-root adapted feedback destroys those hypotheses, so
+the stationary argument cannot be transferred to the R-093 source union.
+
+Canonical variance representatives also fail to reproduce both low chaoses
+in general.  For a real scalar finite polynomial
+\[
+ Y=\sum_{n\ge1}c_nH_n(G),\qquad \E H_n(G)^2=n!,                 \tag{5.2}
+\]
+the following table gives the mean weight on $n!c_n^2$ and the first-chaos
+weight on $n!c_nc_{n+1}$:
+\[
+\begin{array}{c|c|c}
+\text{representative}&\text{mean weight}&\text{first weight}\cr\hline
+\frac12\E'[(Y-Y')^2\mid G]&1&n+1\cr
+\text{Clark--Ocone bracket, }G=B_1&1&2n\cr
+\langle DY,-DL^{-1}Y\rangle&1&2n+1\cr
+\Theta_{\rm sc}&1&2(n+1)\cr
+\|DY\|^2&n&2n(n+1).
+\end{array}                                                       \tag{5.3}
+\]
+The table is one-dimensional and uses probabilists' unnormalised Hermites.
+The Clark row depends on the displayed Brownian realisation.  It is a method
+audit, not a production trace identity.
+
+For $Y=\varepsilon(aH_1+H_2)$, the required pair is
+\[
+ (\text{mean},\text{first})
+ =\varepsilon^2(a^2+2,4a).                         \tag{5.4}
+\]
+Exchange and Clark give first coefficient $2a$, the OU trace gives $3a$, the
+score-compatible trace gives $4a$, and the raw derivative gives mean
+$a^2+4$.  No canonical substitution matches both entries without an
+additional production identity.
+
+The raw derivative mean debt has the exact OU-replica formula
+\[
+ \E\|DY\|^2-\Var(Y)
+ =\frac12\int_0^1\E\|DY(G)-DY(G_\rho)\|^2\dd\rho
+ =\sum_{n\ge2}(n-1)n!c_n^2,                        \tag{5.5}
+\]
+where $G_\rho=\rho G+\sqrt{1-\rho^2}G'$.  R-122's
+$h_N(G)=\sin(NG)/N$ makes its value and sixth-moment budgets vanish while the
+derivative defect stays of order one.  A derivative-secant replacement
+therefore cannot close A13.
+
+\section*{6. Round five: a bounded full-six-row noncancellation fixture}
+
+Let $\xi,\zeta$ be independent standard Gaussians and take the active real
+doublet fixture
+\[
+ A(\xi)=a+\beta\sin(t\xi),\qquad
+ w=(A(\xi)+\tau\zeta)e_1,\qquad y=\xi e_2.          \tag{6.1}
+\]
+Only the $S_1$ pair in (2.4) survives, with $q_1=0$ and $L_1=P_1$.  Put
+\[
+ s=c_0+c_1=\frac{339}{8000P}.                       \tag{6.2}
+\]
+Then
+\[
+ \Phi=2(A+\tau\zeta)\xi(\sqrt{c_0},\sqrt{c_1}),
+ \qquad
+ \Theta=4s(A^2+\tau^2).                            \tag{6.3}
+\]
+Gaussian characteristic differentiation gives
+\[
+ \|b\|^2=4s\beta^2t^2e^{-t^2},                    \tag{6.4}
+\]
+\[
+ D_0=4s\beta^2t^2(e^{-t^2}-2e^{-2t^2}),            \tag{6.5}
+\]
+\[
+ D_1=8sa\beta t(t^2-1)e^{-t^2/2},                  \tag{6.6}
+\]
+and nevertheless
+\[
+ \boxed{\E\cP_{\rm comp}=4s\beta^2t^2e^{-2t^2}>0}              \tag{6.7}
+\]
+when $\beta t\ne0$.  At $t=2$,
+\[
+ D_0=16s\beta^2(e^{-4}-2e^{-8}),\quad
+ D_1=48sa\beta e^{-2},\quad
+ \E\cP_{\rm comp}=16s\beta^2e^{-8}.              \tag{6.8}
+\]
+The independent heat cancels from (6.4)--(6.8).  Thus automatic adapted
+$D_0,D_1$ cancellation is false even in the fixed six-row coordinate, but
+nonzero defects do not imply a bad direct packet.  This is a bounded
+finite-root coefficient/derivative fixture, not a spatial Cameron--Martin
+production theorem.
+
+\section*{7. Round six: exact legal first-linear-row expectation theorem}
+
+For the R-122 normalized circle fixture and any strict-past scalar control
+$h(\xi)$, the complete first-linear-row output is
+\[
+ \Phi_h=\kappa\left[
+ \frac{\xi^2}{\sqrt2}e_{s2}+\xi h(\xi)e_c\right],
+ \qquad
+ \Theta_h=\kappa^2\left(\frac{\xi^2}{2}+h^2+1\right),           \tag{7.1}
+\]
+with
+\[
+                     \kappa^2=4c_0=\frac6{125P}.                \tag{7.2}
+\]
+The exact pointwise packet is
+\[
+ \cP_{\rm row}
+ =\frac{\kappa^2}{4}(\xi^4-\xi^2-2)
+  +\frac{\kappa^2}{2}(\xi^2-1)h^2.               \tag{7.3}
+\]
+The first polynomial has zero expectation but may not be deleted inside an
+exponential.  At expectation level,
+\[
+ \boxed{
+ \E\cP_{\rm row}
+ =\frac{\kappa^2}{2}\E[(\xi^2-1)h^2].}             \tag{7.4}
+\]
+For smooth $C^2$ data with the displayed integrability, Gaussian integration
+by parts gives the equivalent score form
+\[
+ \boxed{
+ \E\cP_{\rm row}
+ =\kappa^2\E\{(h')^2+hh''\}.}                      \tag{7.5}
+\]
+The derivative-free form (7.4) needs only $h\in L^6(\gamma)$; this also
+gives $\xi h\in L^2$.
+
+The exact mean debt is
+\[
+ D_0(h)=\kappa^2\left\{\frac12+\E h^2-\Var(\xi h)\right\},      \tag{7.6}
+\]
+so
+\[
+ D_0(h)-D_0(0)
+ \le\kappa^2\E h^2,
+ \qquad \kappa^2\simeq0.012<\frac9{20}.            \tag{7.7}
+\]
+This closes the mean debt of this one genuine adapted row from source cost,
+without $Dh$, $D^2h$, $D_1$, or a fifth coefficient moment.
+
+R-109 with fixed scalar $W=1$ gives, for
+$X=\E h^2$ and $Y=\E|h|^6$,
+\[
+ |\E\cP_{\rm row}|
+ \le\frac{\kappa^2}{\sqrt2}X^{1/4}Y^{1/4}.         \tag{7.8}
+\]
+Therefore for every $\eta,\zeta>0$,
+\[
+ \boxed{
+ \E\cP_{\rm row}
+ \ge-\eta X-\zeta Y
+ -\frac{\kappa^4}{16\sqrt{\eta\zeta}}.}           \tag{7.9}
+\]
+The denominator is $16$.  R-109's denominator $64$ applies to
+$-q\mathfrak F_W/2$, not to $\kappa^2\mathfrak F_1$ in (7.5).
+
+For $h_\pm=a\sin\xi\pm d\cos\xi$,
+\[
+ \E\cP_{{\rm row},\pm}=\kappa^2e^{-2}(a^2-d^2),
+ \qquad D_{1,\pm}=\pm4\kappa^2ad e^{-2}.            \tag{7.10}
+\]
+The direct expectation ignores the sign which flips $D_1$.  Identifying the
+single $Y$ in (7.9) with the canonical spatial terminal sextic, and summing
+the constant without shell or visit multiplicity, remain production duties.
+
+\section*{8. Round seven: multiplicity-free directed-union criterion}
+
+R-107 gives the exact expected source action on each temporally faithful
+chart:
+\[
+ \cA_J(h)=\sum_{k,\cC}\E\cP^{\rm comp}_{k,\cC}
+ +\frac9{20}\E\sum_k\|h_k\|^2
+ +\frac3{20}\E\|Z_K\|_6^6.                        \tag{8.1}
+\]
+Consequently the aggregate hypothesis
+\[
+ \boxed{
+ \sum_{k,\cC}\E[D_{0,k,\cC}-\|b_{k,\cC}\|^2]
+ \le2\eta\E\sum_k\|h_k\|^2
+    +2\zeta\E\|Z_K\|_6^6+2C}                    \tag{8.2}
+\]
+implies
+\[
+ \boxed{
+ \cA_J(h)\ge
+ \left(\frac9{20}-\eta\right)\E\sum_k\|h_k\|^2
+ +\left(\frac3{20}-\zeta\right)\E\|Z_K\|_6^6-C.}              \tag{8.3}
+\]
+Here $b$ may be strict-past random, so the outer expectation in (8.2) is
+essential.  The useful range is $\eta<9/20$ and $\zeta<3/20$.
+
+Let $\cT_J$ be R-093's directed union of canonical temporally faithful source
+charts.  If (8.3) holds with the same $C,\eta,\zeta$ for every chart and
+control, taking the infimum over $\cT_J$ creates no chart-count factor.  This
+does not remove multiplicity already created inside a chart.  The safe
+uniformity checklist is:
+\begin{enumerate}
+\item recombine every row, root, visit, and owner before absolute values;
+\item require invariance under representation-preserving subdivision;
+\item require the endpoint form to descend through the synthesis kernel,
+      for example $K_\pi=L_\pi^*B_\pi L_\pi$;
+\item use R-118 absolute spectral variation, or R-120 multiplier derivatives
+      through spatial order two, not operator norm alone;
+\item keep the $H^2$ synthesis, endpoint $L^6$ bridge, rough $10/3$ moment,
+      and Gaussian baseline uniform in cutoff and chart;
+\item forbid constants per row, root, visit, block, or refinement depth;
+\item retain strict-past auxiliary information and legal heat disintegration;
+\item distinguish the fixed-$J$ R-093 equality from the separate
+      cutoff-uniform Nelson bound.
+\end{enumerate}
+No chart need attain the infimum.  A uniform lower bound for every chart
+passes directly to it.
+
+\section*{9. Round eight: exact counterexamples and correlation boundary}
+
+\subsection*{9.1 Raw six-current Hessian positivity is false}
+
+On the active real doublet use normalized Haar measure and unit phase
+frequency, and set
+\[
+ u_H(x)=H(2+\cos x)e_1,\qquad z(x)=(2-\cos x)e_1.  \tag{9.1}
+\]
+All off-diagonal Pauli rows vanish.  The surviving diagonal linear/rational
+pair has energy
+\[
+ E_{\rm cur}(U)=2\int U^2\left[
+ c_0+c_1\left(1-\frac59\frac{U^2}{U^2+e}\right)^2
+ \right](U')^2\dd x.                               \tag{9.2}
+\]
+Since
+\[
+ c_0+c_1(4/9)^2=\frac9{500P},                      \tag{9.3}
+\]
+and
+\[
+ \left\langle(6\cos^2x-8)\sin^2x\right\rangle=-\frac{13}{4},   \tag{9.4}
+\]
+one obtains
+\[
+ \boxed{
+ D^2E_{\rm cur}(u_H)[z,z]
+ =-\frac{117}{500P}H^2+\frac{3e}{100P}+O_e(H^{-2})<0}            \tag{9.5}
+\]
+for large finite $H$.  With the repository's unnormalised
+$\T_L^3$ integral and a legal mode $k=2\pi n/L$, multiply (9.5) by
+$L^3|k|^2$.  This disproves raw-current/phase-pair Hessian positivity.  It is
+not a counterexample to the complete trace/heat/low/forest/sextic action.
+
+\subsection*{9.2 Correlation eliminates an exponential Holder loss}
+
+For the R-122 coherent amplitude
+\[
+                         A_t=e^{t\xi-3t^2},                         \tag{9.6}
+\]
+one has
+\[
+                         \E A_t^p=e^{p(p-6)t^2/2}.                  \tag{9.7}
+\]
+Coefficient-first extraction of a quadratic current in $L^5$ requests
+\[
+                         \E A_t^{10}=e^{20t^2},                    \tag{9.8}
+\]
+whereas the actual correlated quadratic-coefficient/quadratic-payload product
+uses
+\[
+                         \E A_t^4=e^{-4t^2}.                        \tag{9.9}
+\]
+Thus separated Holder loses the exact factor $e^{24t^2}$.  Smooth bounded
+caps preserve the separation.  This proves that correlation-first assembly
+is materially sharper, not that it closes the spatial theorem.
+
+\subsection*{9.3 Fixed-profile Young is not cutoff-uniform}
+
+For a fixed skew matrix $J$ and
+\[
+ z_{A,N}=A(\cos Nx,\sin Nx),\qquad
+ z_{A,N}^TJ\partial_xz_{A,N}=-A^2N,                \tag{9.10}
+\]
+the correlated quartic scale is $cA^4N^2$, while the available model scales
+are
+\[
+                         X\asymp A^2N^4,\qquad Y=A^6.             \tag{9.11}
+\]
+A uniform estimate
+\[
+ cA^4N^2\le\eta A^2N^4+\zeta A^6+C                \tag{9.12}
+\]
+forces
+\[
+                         \boxed{\eta\zeta\ge c^2/4.}              \tag{9.13}
+\]
+Indeed set $A^2=kN^2$, divide by $kN^6$, minimise
+$\eta/k+\zeta k=2\sqrt{\eta\zeta}$, and let $N\to\infty$.
+Therefore arbitrary small allocations still require a production
+spatial/root gain, a sufficiently large fixed budget product, or a signed
+cancellation.  The circle is a fixed-skew diagnostic, not an A1 or Nelson
+counterexample.
+
+\section*{10. Round nine: strongest valid theorem after ten-route synthesis}
+
+The preceding rounds yield the following exact conditional theorem.
+
+\subsection*{Theorem 10.1 (complete trace-excess reduction)}
+
+At fixed cutoff and positive floor, assume that one legal strict-past root
+cluster has been assembled into a contraction-closed $\Phi$ and a once-owned
+$\Theta$, with all later-feedback and R-063 owners included exactly once.
+Then (3.7)--(4.3) hold.  In particular, its direct expected contribution is
+bounded below if and only if its signed trace excess
+$\E_0\Theta-\E_0\|\Phi\|^2$ is bounded above.  No first-chaos cancellation is
+needed for this expectation statement.
+
+\subsection*{Corollary 10.2 (uniform directed-union sufficient condition)}
+
+If the fully aggregated production family satisfies (8.2) with constants
+uniform in cutoff, chart, control, dimension, visit count, block count, and
+representation-preserving refinement, with $\eta<9/20$ and $\zeta<3/20$,
+then (8.3) holds uniformly and the R-093 infimum has a finite lower bound.
+This is exactly the remaining Nelson-level burden, not a proof that its
+hypothesis holds.
+
+\subsection*{Corollary 10.3 (one legal adapted row)}
+
+For the first-linear-row fixture (7.1), (7.4), (7.6), and (7.9) hold.  This
+one row is paid at expectation level from source $L^2$ and one sixth moment.
+It supplies a successful prototype for the direct route but does not identify
+the complete rational/Cartan/forest aggregate.
+
+The irreducible successor is now smaller than the R-122 target:
+\[
+ \boxed{
+ \text{prove (8.2) for the stationary-subtracted, owner-complete six-row
+ rational/Cartan/forest aggregate.}}                                \tag{10.1}
+\]
+Computing or cancelling $D_1$ is deferred unless the direct expected-action
+route fails and a conditional exponential method becomes necessary.
+
+\section*{11. Round ten: Devil's-advocate review and proof-roadmap map}
+
+\begin{enumerate}
+\item \textbf{Objection: $D_1=0$ is always necessary.}
+\textbf{DISMISSED for direct expectation; VALID for stronger routes.}
+Equation (4.2) removes it after complete ownership.  Determinant and pure
+double-divergence routes still see (4.4).
+
+\item \textbf{Objection: bounding $D_0$ alone is enough.}
+\textbf{UPHELD AGAINST THE CLAIM.}  The exact target is
+$D_0-\|b\|^2$.  The bounded six-row fixture (6.8) shows why the mean reserve
+is load-bearing.
+
+\item \textbf{Objection: the six rows may be bounded separately and summed.}
+\textbf{UPHELD AGAINST THE CLAIM.}  Rowwise positive parts and Young
+inequalities discard signed cross-owner reserves and can introduce row,
+visit, or shell multiplicity.  Equations (2.9) and (8.2) apply only after
+complete aggregation.
+
+\item \textbf{Objection: R-120 stationary parity proves the adapted result.}
+\textbf{UPHELD AGAINST THE CLAIM.}  Same-root feedback destroys
+value--derivative independence and can mix parity.  Equations (6.5)--(6.6)
+give an exact bounded noncancellation fixture.
+
+\item \textbf{Objection: correlation-first Holder closes the spatial bound.}
+\textbf{UPHELD AGAINST THE CLAIM.}  It removes the exact $e^{24t^2}$ loss,
+but (9.13) proves that arbitrary cutoff-uniform allocations still need spatial
+gain or cancellation.
+
+\item \textbf{Objection: (9.5) refutes A13.}
+\textbf{DISMISSED.}  It refutes only positivity of the isolated raw-current
+Hessian.  The complete trace, heat, low, forest, and sextic action was not
+inserted.
+
+\item \textbf{Objection: the R-093 directed union removes every multiplicity.}
+\textbf{UPHELD AGAINST THE CLAIM.}  It removes chart-count multiplicity only
+after one chart-independent estimate.  It cannot repair losses already
+created inside a chart or a constant that grows with refinement.
+
+\item \textbf{Objection: a fixed-cutoff bound is Nelson.}
+\textbf{UPHELD AGAINST THE CLAIM.}  R-093 identifies the fixed-$J$ infimum.
+Uniformity in $J$ is a separate required theorem.
+\end{enumerate}
+
+The ten-round evidence map is:
+\[
+\begin{array}{c|l|l}
+\text{round}&\text{route verdict}&\text{reusable endpoint}\cr\hline
+1&\text{advanced}&\text{fixed six-row law and owner firewall}\cr
+2&\text{advanced}&\Lambda\text{ collapses }D_0,D_1\cr
+3&\text{advanced}&\text{direct action uses }D_0-\|b\|^2\cr
+4&\text{mixed}&\text{symmetry and canonical traces are scoped only}\cr
+5&\text{advanced}&\text{bounded six-row noncancellation, positive packet}\cr
+6&\text{advanced}&\text{one legal row paid from }L^2/L^6\cr
+7&\text{advanced}&\text{uniform chart infimum has no chart-count factor}\cr
+8&\text{failed shortcuts}&\text{raw Hessian and fixed-profile Young no-gos}\cr
+9&\text{advanced}&\text{trace-excess theorem and exact sufficient criterion}\cr
+10&\text{scoped}&\text{stationary-subtracted complete aggregate remains open}.
+\end{array}                                                       \tag{11.1}
+\]
+The proof route should not return to coefficient-first fifth moments,
+automatic stationary parity, raw Hessian positivity, derivative-secant
+closure, or per-chart budget summation unless a stated hypothesis has changed.
+
+\section*{12. Result footer}
+
+The primary executable derives the A1 coefficients from the production
+manifest and checks the scalar collapse, action constants, full-six-row
+fixture, arbitrary-control row, five trace representatives, OU replica debt,
+raw-Hessian coefficient, lognormal exponents, frequency boundary, and scope
+flags.  The non-importing standard-library executable independently uses
+Gaussian Simpson quadrature, torus quadrature, finite differences, and exact
+rational coefficient arithmetic.  The integrated verifier reruns both,
+checks their stored JSON artifacts, pins all source/note/PDF hashes, and
+checks the claim, result, failure, exploration, roadmap, task, and changelog
+surfaces.
+
+R-123 does not prove (8.2) for the full production aggregate.  It proves no
+$\mathrm{OVERLAP}_{\rm src}$, Nelson estimate, cutoff or floor removal,
+interacting measure, Sector-A closure, or T5--T7 promotion.
+
+\begingroup
+\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-SIX-ROW-TRACE-EXCESS-DIRECT-ACTION-
+  CORRELATION-BOUNDARY (R-123).
+Precise statement: Eqs. (2.1)-(2.9), Thm. 10.1, Cor. 10.2,
+  Cor. 10.3, and the exact boundaries in Secs. 5, 6, and 9.
+Scope: fixed finite cutoff and positive rational floor; exact conditional
+  endpoint and bounded finite-root statements; complete uniform production
+  trace-excess estimate open.
+Dependencies: A1; R-063, R-083, R-093, R-103, R-104, R-107,
+  R-109, R-118, R-119, R-120, R-121, R-122.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_six_row_trace_excess_direct_action_
+  boundary_verify.py
+Expected output: R-123 integrated PASS; primary and independent child
+  counts, all hashes, PDF, exploration, registry, and surface checks pass.
+Falsification gate: any failed coefficient, trace-excess, direct-action,
+  six-row fixture, row, Hermite, Hessian, correlation, directed-union,
+  authority, PDF, or public-surface check.
+Tier before / after: T4 / T4.
+No-overclaim statement: the complete cutoff-uniform production estimate,
+  OVERLAP_src, Nelson, removals, measure, and Sector A remain open.
+Next required action: stationary-subtract the owner-complete six-row
+  rational/Cartan/forest aggregate and prove Eq. (8.2) once.
+\end{verbatim}
+\endgroup

@@ -349,19 +349,20 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   agree at `20/729`. Its fixed-skew theorem pays every deterministic
   `H^(-s)` coefficient with `0<=s<1`; at `s=3/5` the exact requirement is a
   fifth H^{-3/5} moment. A sharp high-frequency fixture rules out reusing the
-  R-120 zero-order `H^(-11/10)` class for this first-order form. R-122 now
+  R-120 zero-order `H^(-11/10)` class for this first-order form. R-122
   reconstructs the actual finite-cutoff `D0,D1` defects by derivative-free
-  endpoint-law moments. A bounded legal pair proves that source cost and the
-  lower kernels do not determine `D1`. Exact graph-null and coherent-amplitude
-  fixtures rule out, respectively, feedback-derivative graph closure and a
-  standalone adapted fifth `H^(-3/5)` moment inferred from source `L2` plus
-  terminal `L6`. The active rational A1 coefficient has nonzero quadratic ray
-  `128/27`, and the R-102 Jacobi audit shows that Cartan and square-cross
-  coefficients reinforce rather than cancel. Continue by constructing the
-  complete six-row endpoint law and proving one correlation-preserving signed
-  current/square/trace/low/score/R-063 form estimate before absolute values,
-  spending the R-093 directed source union and terminal sextic once. Strict
-  per-shell normalizer existence alone does not imply this global burden.
+  endpoint-law moments and records the fifth-moment and Cartan-cancellation
+  boundaries. R-123 now reconstructs the fixed six-row map directly from A1,
+  keeps the complete endpoint `Phi` and once-owned trace `Theta`, and collapses
+  both defects to `Lambda=Theta-||Phi-E_0Phi||^2`. Its direct packet identity
+  shows that R-093 needs the aggregate trace excess `D0-||b||^2`, not `D1=0`.
+  A uniform bound with allocations `eta<9/20` and `zeta<3/20` passes through
+  the directed chart infimum without a chart-count factor. The next target is
+  the stationary-subtracted owner-complete rational/Cartan/R-063 forest
+  estimate, uniform in cutoff, chart, control, visits, and representation-
+  preserving refinement, while retaining the signed mixed bracket and the
+  `||b||^2` reserve. Strict per-shell normalizer existence alone does not imply
+  this global burden.
   `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
   remain open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
@@ -968,12 +969,14 @@ preserved in git/changelog rather than treated as current gates.
    feedback-derivative expansion by exact law-only `D0,D1` formulas and proves
    that the existing source/sextic graph coordinates do not imply the isolated
    fifth moment. Formal selfadjointness also does not cancel the production
-   Cartan coefficient. The live route is a derivative-free,
-   correlation-preserving complete-owner expectation estimate; on coherent
-   rays the joint quartic is paid by the sextic even though the separated
-   tenth-amplitude datum diverges. Construct that six-row signed packet and
-   spend source energy and terminal sextic exactly once over the R-093 directed
-   union. Do
+   Cartan coefficient. R-123 constructs the fixed six-row conditional endpoint
+   law and proves that the direct expected-action route is governed by
+   `D0-||b||^2`, with no need to impose `D1=0`. Its legal-row theorem and
+   bounded six-row fixture distinguish expectation-level payment from
+   conditional-normalizer cancellation, while its raw-Hessian and correlation
+   audits rule out two more shortcuts. Prove the stationary-subtracted complete
+   rational/Cartan/forest trace-excess inequality with source and sextic paid
+   exactly once over the R-093 directed union. Do
    not mistake strict per-shell normalizer existence for summability, and do
    not substitute a centered
    abstract tensor, full-Wick tensor normalizer, derivative-range test, or
