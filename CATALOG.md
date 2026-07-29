@@ -6,7 +6,7 @@
 
 Generated: 2026-07-29
 
-**2853 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
+**2854 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -1694,6 +1694,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/main-line-synthesis-260612-260613-v1.5.tex.txt` | — | 2026-06-12 | 2026-06-13 | v1.5 | ACTIVE | `47105f72b6b4` |
 | `theory/main-line-synthesis-260612-v1.0.pdf` | — | 2026-06-12 | 2026-06-12 | v1.0 | ACTIVE | `5e731b216579` |
 | `theory/main-line-synthesis-260612-v1.0.tex.txt` | — | 2026-06-12 | 2026-06-12 | v1.0 | SUPERSEDED | `7f2fa5ed42cb` |
+| `theory/registered-results-synthesis-260729-v1.0.md` | — | 2026-07-29 | 2026-07-29 | v1.0 | ACTIVE | `093730833891` |
 
 ## Migrated legacy notes (immutable)
 
@@ -2746,7 +2747,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `verification/README.md` | — | — | — | — | ACTIVE | `da6f8dc0c475` |
-| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `50981117cee1` |
+| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `5456ac1cf16d` |
 | `verification/requirements.txt` | — | — | — | — | ACTIVE | `101e9e176f7a` |
 | `verification/scripts/build_catalog.py` | — | — | — | — | ACTIVE | `c35c7327b5ed` |
 | `verification/scripts/build_dossier.py` | — | — | — | v1.0.1 | ACTIVE | `0606af696b63` |
@@ -2861,7 +2862,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `7f2740428029` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `98be2f5c5100` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `cbc464a9ef8c` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `d6547c66d810` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -2880,7 +2881,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `e6a78572ec0b` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `d85dabd4ce8e` |
 | `explorations/log.jsonl` | — | — | — | — | ACTIVE | `41e97a0b864d` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
@@ -2924,7 +2925,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/sector-a-claim-taxonomy-and-subproof-plan-260722.md` | — | — | — | — | ACTIVE | `515c895f0a44` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `7784fbab38fd` |
 | `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `137c26ea5f80` |
-| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `40838aa14d73` |
+| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `e817aed11a11` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `528697935e4a` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |
