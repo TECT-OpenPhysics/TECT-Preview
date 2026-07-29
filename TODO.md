@@ -8,8 +8,8 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION)_
-  - Post-R-118 direct source-action frontier: first compute the zero and first Wiener chaoses of the smallest legal complete adapted cluster after frozen first-chaos absorption. If both vanish, construct W_can by the canonical second-divergence formula; then prove actual trace/R-063 forest compatibility, quotient vertical basicness, endpoint spectral/multiplier variation, and a uniform R-093 source-space synthesis bound before one global R-068 Young step. The operator extension is proved; universal PSD W and automatic diagonal visit-terminal identification are retired. Exact descent is necessary only for the recombined selfadjoint form; the termwise L*B_rL bridge is sufficient, not proved necessary. Complete adapted ownership, one-use, OVERLAP_src, Nelson, removals, interacting measure, and Sector A remain open. See EXP-000357--EXP-000363.
-  - _updated 2026-07-28_
+  - R-119 completes the five-round legal-chart/score-trace/terminal-Hessian checkpoint: exact low-chaos criteria and bare-heat no-go are proved, global quotient basicness is automatic, while production coefficient cancellation, trace/R-063 forest reconstruction, spatial multiplier/H2-L6 synthesis, and one-use aggregation remain next.
+  - _updated 2026-07-29_
 
 ## Next up
 

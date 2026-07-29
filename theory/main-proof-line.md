@@ -340,7 +340,19 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   signed R-078 paid difference is bounded under the R-096 collar, and the
   separate R-086 `Q` orientations and `T_G^<=` charge are refunded. Seven
   modules close complete regular `H_N`; eight close regular `REG`, while the
-  terminal square remains reserved. Progressive/revisit `H_A`,
+  terminal square remains reserved. R-104--R-118 then assemble fixed charts,
+  isolate the coherent output-cluster and quotient boundaries, close the
+  stationary scalar model and frozen rational-root horizons, and provide the
+  visit-count-free operator centered-form theorem. R-119 reconstructs the
+  minimum genuine two-block/two-visit adapted test and proves the exact
+  aggregate zero/first-chaos trace criteria. Bare Jacobian heat alone leaves
+  a strict nonlinear mean debt, while the complete terminal-action Hessian
+  factors automatically through endpoint synthesis and the realized quotient
+  norm has no inverse singular-value loss. The remaining direct theorem is a
+  complete production terminal-Hessian reconstruction satisfying those
+  low-chaos identities, the trace/R-063 forest checksum, uniform spatial
+  multiplier and H2/L6 synthesis bounds, and one global R-118 Young payment.
+  Progressive/revisit `H_A`,
   `OVERLAP_src`, Nelson, and Sector A remain open.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.

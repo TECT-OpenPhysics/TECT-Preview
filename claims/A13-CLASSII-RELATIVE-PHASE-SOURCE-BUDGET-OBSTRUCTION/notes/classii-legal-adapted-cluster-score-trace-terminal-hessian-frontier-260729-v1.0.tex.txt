@@ -1,0 +1,743 @@
+% =============================================================================
+% Title: Legal adapted cluster, score-trace cancellation, and terminal-Hessian frontier
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-LEGAL-ADAPTED-CLUSTER-SCORE-TRACE-TERMINAL-HESSIAN-FRONTIER
+% Version: v1.0 -- first issued 2026-07-29; this version issued 2026-07-29
+% Status: scoped T4 analytic/exact/executed advance and method boundary; no tier action
+%
+% Revision history (cumulative):
+%   v1.0 (2026-07-29) first issue.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Div}{\operatorname{Div}}
+\newcommand{\Contr}{\operatorname{Contr}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cU}{\mathcal U}
+
+\section*{1. Purpose and scope}
+
+\subsection*{Five-round strategy}
+
+R-118 reduced the adapted A13 problem to a finite checklist but did not
+instantiate the legal production chart or decide whether its low Wiener
+chaoses cancel.  This note carries out five coordinated proof rounds:
+
+\begin{enumerate}
+\item reconstruct the smallest genuinely adapted strict-triangular source
+chart and its legal output-cluster rule;
+\item derive the exact zero/first-chaos score--trace criterion after frozen
+affine absorption;
+\item test bare heat, canonical random-$W$, and scalar-model routes;
+\item move from termwise owner basicness to the global terminal Hessian and
+the realized quotient norm;
+\item synthesize the surviving route and record every failed or unresolved
+branch as a reusable decision.
+\end{enumerate}
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{What is proved.}
+The smallest genuinely adapted strict-triangular test needs two independent
+source blocks and two visits; one root and two visits remain the smaller
+algebraic R-116 quotient fixture.  The complete two-visit square-minus-trace
+packet telescopes exactly to its endpoints and owns the trace once.
+
+For a finite-dimensional Gaussian endpoint
+$Y=b+A\xi+R$, with $R$ orthogonal to zero and first chaos, the residual
+\[
+ \cR=\operatorname{Re}\langle b+A\xi,R\rangle
+       +\frac12\|R\|^2-\frac12\delta\tau
+\]
+has explicit zero and first Wiener projections.  Their vanishing is
+equivalent to two exact aggregate trace identities.  In chaos kernels these
+identities expose both the affine--quadratic contraction and every adjacent-
+chaos contraction.  A bare Jacobian heat
+$\delta\tau=2\operatorname{Re}\Tr(A^*DR)+\|DR\|_{\rm HS}^2$
+leaves the strict mean debt
+$-\frac12\sum_{n\ge2}(n-1)n!\|r_n\|^2$ whenever $R\ne0$.
+
+The R-107 one-pair diagnostic nevertheless has an exact strictly positive
+canonical $W$ and cost $2\sigma^8$.  The R-115 scalar canonical coefficient
+is proved positive semidefinite on both covariance faces.  No mixed-interior
+claim is made.
+
+At fixed cutoff and positive floor, the Hessian of the complete renormalized
+terminal action factors automatically through endpoint synthesis.  The
+quotient source norm makes this factorization unitary on the horizontal
+space, with no inverse singular-value or visit-count loss.  Thus global
+vertical basicness is a chain-rule theorem; production reconstruction and
+spatial multiplier control, not another termwise primitive, are the remaining
+analytic burden.
+
+\medskip
+\textbf{What is not proved.}
+The actual coefficient-level A1 complete cluster has not yet been shown to
+satisfy the two low-chaos identities.  The diagnostic cluster
+$\{0,\pm2k\}$ is not declared to be a complete production cluster.  The
+mixed interior of the R-115 canonical $W$, the full trace/R-063 forest
+reconstruction, spatial $H^2/L^6$ quotient compatibility, multiplier
+variation, one-use source/sextic aggregation, $\mathrm{OVERLAP}_{\rm src}$,
+Nelson, removals, interacting measure, Sector-A closure, and tier promotion
+remain open.
+}}
+\end{center}
+
+The authorities used are R-063 for the coefficient forest, R-068 for the
+centered-form payment, R-082 for the production current, R-093 for directed
+source union, R-102 for the isolated-current curl, R-104 for fixed-chart
+assembly, R-107 for the coherent output cluster, R-108 for its signed normal
+form, R-115 for the stationary scalar theorem, and R-116--R-118 for endpoint
+quotients, trace horizons, and Gaussian range.
+
+\section*{2. Round one: the legal adapted production chart}
+
+Let $E_1,E_2$ be independent finite Gaussian source blocks, with
+$\xi_j\sim N(0,\Id_{E_j})$ and covariance-root maps $S_j$.  Let
+$h_1$ be measurable with respect to the strict past before either new block,
+and let $h_2=h_2(\xi_1)$ be measurable after the first reveal but before the
+second.  The minimal genuinely adapted chart is
+
+\[
+ \begin{split}
+ Z_0&=S_1\xi_1+S_2\xi_2,\\
+ Z_1&=Z_0+S_1h_1,\\
+ Z_*&=Z_1+S_2h_2(\xi_1).
+ \end{split}                                             \tag{2.1}
+\]
+
+One fresh root with two visits is enough for the algebraic R-116 endpoint
+quotient.  It is not enough to test genuinely future feedback: a second
+independent reveal block is needed so that a later legal visit can depend on
+the first fresh root while remaining strict-past for its own root.  This is a
+minimality statement about the filtration pattern, not a canonical claim
+about the real dimension of a covariance factorization.
+
+For each endpoint $H\in\{0,1,*\}$ form the full production current
+
+\[
+ \mathcal J_H
+ =\bigl(\Xi_\Sigma(Z_H,\partial_iZ_H)\bigr)_{i=1}^3,
+ \qquad
+ x_H=\Pi_{\mathcal C}d_1\mathcal J_H .                  \tag{2.2}
+\]
+
+Here $d_1$ is the root-one martingale difference and $\Pi_{\mathcal C}$ is
+not an arbitrary singleton projection.  Put a graph on retained output
+modes and connect two modes whenever they share a coordinate of the same
+fresh root, are joined by an R-063 contraction, or have a realized nonzero
+off-diagonal conditional covariance.  A legal $\mathcal C$ is a union of
+connected components.  In the scalar linear-row diagnostic this rule gives
+$\{0,+2k,-2k\}$.  The rational $r/(\rho+e)$ row can generate all retained
+even harmonics, so the full production component may be much larger.
+
+The current used in (2.2) is the R-082 full four-row current.  For
+$\Psi=(u_1,u_2,\chi)$ and $\dot\Psi=(v_1,v_2,w)$, write
+
+\[
+ \begin{gathered}
+ r=|u|^2,\quad \rho=r+|\chi|^2,\quad d=\rho+e,\\
+ \dot r=2\operatorname{Re}(u^*v),\qquad
+ \dot\rho=2\operatorname{Re}(u^*v+\bar\chi w),\\
+ h=u_1v_2-u_2v_1,
+ \end{gathered}
+\]
+
+and
+
+\[
+ \Xi(\Psi,\dot\Psi)=
+ \begin{pmatrix}
+ \sqrt{c_0}\,\dot r\\
+ \sqrt{c_1}\left(\dot r-\frac59\frac r d\dot\rho\right)\\
+ 2\sqrt{c_0+c_1}\operatorname{Re}h\\
+ 2\sqrt{c_0+c_1}\operatorname{Im}h
+ \end{pmatrix},
+ \quad
+ c_0=\frac3{250P},\quad c_1=\frac{243}{8000P}.          \tag{2.3}
+\]
+
+The heat lift is $\Xi_\Sigma(z,y)(r')=C(z+r')y$; averaging $C$ before
+squaring is not the same operation.
+
+\subsection*{Proposition 2.1 (complete two-visit telescope)}
+
+Let $t_H$ denote the once-owned trace scalar at endpoint $H$.  With
+$a=x_0$, $f=x_1-x_0$, and $\iota=x_*-x_1$, the legal packet is
+
+\[
+ \begin{split}
+ F_{\rm 2v}={}&\operatorname{Re}\langle a,f\rangle
+ +\frac12\|f\|^2
+ +\operatorname{Re}\langle a+f,\iota\rangle
+ +\frac12\|\iota\|^2\\
+ &-\frac12\{(t_1-t_0)+(t_*-t_1)\}\\
+ ={}&\frac12(\|x_*\|^2-\|x_0\|^2)-\frac12(t_*-t_0).
+ \end{split}                                                   \tag{2.4}
+\]
+
+\paragraph{Proof.}
+Expand the two squares.  The $f$--$\iota$ cross is generated exactly once
+by $\langle a+f,\iota\rangle$; all intermediate $\|x_1\|^2$ and $t_1$
+terms cancel.  This is an identity before expectation. \qed
+
+The raw $t_H$ is the safe owner.  Expanding its coefficient curvature by
+R-063 produces the $P_3/P_1$ and
+$P_4/P_2^{\rm cross}/\Sigma Q/P_0^{\rm cross}/\mathcal R_3$ forest.
+That forest is an alternative realization of the same trace increment and
+must not be added a second time.
+
+\section*{3. Round two: exact score--trace cancellation}
+
+Condition on all strict-past data.  Let $\xi$ be a standard Gaussian vector
+in a finite-dimensional real Hilbert space $E$, and let $H$ be a finite
+output Hilbert space.  Decompose the complete endpoint output canonically as
+
+\[
+ Y=b+A\xi+R,
+ \qquad \E R=0,
+ \qquad \E(R\otimes\xi)=0.                              \tag{3.1}
+\]
+
+The affine packet is handled by the frozen whole-output determinant.  Put
+
+\[
+ \delta\tau=\tau-\|A\|_{\rm HS}^2,
+ \qquad
+ \cR=\operatorname{Re}\langle b+A\xi,R\rangle
+       +\frac12\|R\|^2-\frac12\delta\tau .             \tag{3.2}
+\]
+
+\subsection*{Theorem 3.1 (aggregate zero and first chaos)}
+
+The zero and first Wiener projections of (3.2) are
+
+\[
+ \Pi_0\cR
+ =\frac12\bigl(\E\|R\|^2-\E\delta\tau\bigr),          \tag{3.3}
+\]
+
+\[
+ \Pi_1\cR=\langle m,\xi\rangle,
+ \qquad
+ m=\E\left[(DR)^*Y-\frac12D\delta\tau\right].          \tag{3.4}
+\]
+
+Consequently $\Pi_0\cR=\Pi_1\cR=0$ if and only if
+
+\[
+ \boxed{\E\delta\tau=\E\|R\|^2},                     \tag{3.5}
+\]
+
+\[
+ \boxed{\E D\delta\tau
+ =2\Contr(A,\E D^2R)+2\E[(DR)^*R]}.                    \tag{3.6}
+\]
+
+\paragraph{Proof.}
+The two orthogonality conditions in (3.1) delete the expectation of both
+$\langle b,R\rangle$ and $\langle A\xi,R\rangle$, proving (3.3).  Gaussian
+integration by parts gives the first-chaos coefficient as $\E D\cR$.
+Differentiating (3.2) yields
+
+\[
+ D\cR=A^*R+(DR)^*Y-\frac12D\delta\tau.                 \tag{3.7}
+\]
+
+The expectation of $A^*R$ vanishes, which proves (3.4).  Expanding
+$(DR)^*Y$ and integrating the affine term by parts gives (3.6). \qed
+
+This calculation needs aggregated physical-space objects
+$Y,R,DR,\tau,D\tau$, not a separate Fourier expansion of every output mode.
+It does, however, need the actual production coefficients and all companions.
+
+\subsection*{Corollary 3.2 (chaos-kernel form)}
+
+Write
+
+\[
+ R=\sum_{n\ge2}I_n(r_n),
+ \qquad
+ \delta\tau=\sum_{n\ge0}I_n(t_n),                     \tag{3.8}
+\]
+
+with symmetric kernels and the convention
+$\E\|I_n(r_n)\|^2=n!\|r_n\|^2$.  Then (3.5)--(3.6) are equivalent to
+
+\[
+ t_0=\sum_{n\ge2}n!\|r_n\|^2,                         \tag{3.9}
+\]
+
+\[
+ (t_1)_i
+ =4\sum_j\langle Ae_j,r_2(i,j)\rangle
+  +2\sum_{n\ge3}n!\langle r_{n-1},r_n(\,cdot\,,i)\rangle .
+                                                               \tag{3.10}
+\]
+
+The second sum is the adjacent-chaos debt.  It is invisible if one inspects
+only the affine--quadratic contraction.
+
+\subsection*{Proposition 3.3 (score representation)}
+
+Let $u=A^*R$ and define
+
+\[
+ S=\delta\tau-2\operatorname{Re}\langle b,R\rangle
+       -\|R\|^2-2\operatorname{Re}\Tr(A^*DR).           \tag{3.11}
+\]
+
+Then
+
+\[
+                       \cR=\delta(u)-\frac12S.          \tag{3.12}
+\]
+
+Indeed $\delta(A^*R)=\langle A\xi,R\rangle-\Tr(A^*DR)$.
+Formula (3.12) shows why a signed score route remains natural, while
+(3.5)--(3.6) show that its low chaoses cannot be assumed away.
+
+\section*{4. Round three: exact failed routes and positive diagnostics}
+
+\subsection*{Theorem 4.1 (bare Jacobian heat no-go)}
+
+Suppose $R$ has no zero or first chaos and use only the bare Jacobian heat
+
+\[
+ \delta\tau_{\rm bare}
+ =2\operatorname{Re}\Tr(A^*DR)+\|DR\|_{\rm HS}^2.       \tag{4.1}
+\]
+
+Then the residual (3.2) has
+
+\[
+ \boxed{\Pi_0\cR_{\rm bare}
+ =-\frac12\sum_{n\ge2}(n-1)n!\|r_n\|^2}.               \tag{4.2}
+\]
+
+In particular it is strictly negative for every nonlinear $R\ne0$.
+
+\paragraph{Proof.}
+Orthogonality kills the affine cross in expectation.  The Gaussian derivative
+isometry gives
+
+\[
+ \E\|R\|^2=\sum_{n\ge2}n!\|r_n\|^2,
+ \qquad
+ \E\|DR\|_{\rm HS}^2=\sum_{n\ge2}n\,n!\|r_n\|^2,
+\]
+
+and $\E\Tr(A^*DR)=0$.  Substitute in (3.3). \qed
+
+Thus the output, low, and R-063 forest companions are not optional cosmetic
+terms.  They must supply the exact missing debts if the complete A1 packet is
+to cancel.
+
+Two one-dimensional fixtures separate the two low-chaos equations.  With
+$A=1$, $R=\epsilon H_2$, and
+$\delta\tau=2\epsilon^2$, the mean vanishes but
+
+\[
+                       \Pi_1\cR=2\epsilon H_1.          \tag{4.3}
+\]
+
+With $A=0$, $R=\alpha H_2+\beta H_3$, and
+$\delta\tau=2\alpha^2+6\beta^2$, the mean again vanishes but
+
+\[
+                       \Pi_1\cR=6\alpha\beta H_1.       \tag{4.4}
+\]
+
+These are method counterfixtures, not A1 counterexamples.
+
+\subsection*{Proposition 4.2 (one-pair PSD coefficient)}
+
+For a standard two-dimensional Gaussian $x=(x_1,x_2)$, let
+$s=|x|^2$ and
+
+\[
+ P_\sigma=\frac{\sigma^4}{16}(s^2-4s).                 \tag{4.5}
+\]
+
+With $H_2(u)=u^2-1$ and $H_4(u)=u^4-6u^2+3$, exact expansion gives
+
+\[
+ \begin{aligned}
+ P_{sigma,2}&=\frac{\sigma^4}{4}\{H_2(x_1)+H_2(x_2)\},\\
+ P_{\sigma,4}&=\frac{\sigma^4}{16}
+ \{H_4(x_1)+H_4(x_2)+2H_2(x_1)H_2(x_2)\},\\
+ P_\sigma&=P_{\sigma,2}+P_{\sigma,4}.
+ \end{aligned}
+\]
+
+The R-118 canonical chaos inverse
+$W_\sigma=D^2P_{\sigma,2}+D^2P_{\sigma,4}/6$ therefore gives
+
+\[
+ W_\sigma(x)=\frac{\sigma^4}{24}
+              \{2xx^T+(s+8)\Id_2\}                    \tag{4.6}
+\]
+
+satisfies
+
+\[
+ \delta^2W_\sigma=2P_\sigma,
+ \qquad
+ \E(\delta^2W_\sigma)^2=2\sigma^8.                    \tag{4.7}
+\]
+
+Its tangential and radial eigenvalues are respectively
+
+\[
+ \lambda_{\rm tan}=\frac{\sigma^4(s+8)}{24},
+ \qquad
+ \lambda_{\rm rad}=\frac{\sigma^4(3s+8)}{24}.          \tag{4.8}
+\]
+
+Hence $W_\sigma$ is strictly positive for $\sigma>0$.  The displayed chaos
+split proves canonicality, direct differentiation proves (4.7), and the fourth
+radial Gaussian moment gives the stated cost.  This
+explains why the R-107 one-pair output cluster is a useful positive diagnostic
+even though universal PSD representation was refuted by R-118.  It does not
+identify the complete rational production cluster.
+
+\subsection*{Proposition 4.3 (stationary scalar boundary faces)}
+
+For the R-115 scalar model, the canonical coefficient is
+
+\[
+ W=D^2F_2+\frac13D^2F_3+\frac16D^2F_4.                 \tag{4.9}
+\]
+
+On the covariance face $c=0$, the $x$ block vanishes and the $y$ block has
+
+\[
+ \lambda_{\rm tan}^{(0)}=\frac{48b+|y|^2+8}{96},
+ \qquad
+ \lambda_{\rm rad}^{(0)}=\frac{48b+3|y|^2+8}{96}.      \tag{4.10}
+\]
+
+On $c=1$, the $y$ block vanishes and the $x$ block has
+
+\[
+ \lambda_{\rm tan}^{(1)}=\frac{12b+|x|^2+8}{24},
+ \qquad
+ \lambda_{\rm rad}^{(1)}=\frac{12b+3|x|^2+8}{24}.      \tag{4.11}
+\]
+
+Both nonzero blocks are strictly positive for $b\ge0$.  The formulas follow
+by differentiating $F_2$ and the radial fourth-chaos polynomial.  The mixed
+interior $0<c<1$ includes the cubic cross block $D^2F_3/3$; no exact global
+Gram or Schur proof has been obtained.  Numerical reconnaissance is therefore
+not promoted to evidence.
+
+\section*{5. Round four: global terminal Hessian and quotient geometry}
+
+Fix a finite cutoff, positive rational floor, and one R-104 source chart.
+Let $\mathcal S_\pi$ be its finite cylindrical source space and define
+
+\[
+ \begin{aligned}
+ L_\pi h&=\sum_kS_kh_k,\\
+ Z_h&=S_\pi\xi+L_\pi h,\\
+ \cU_{J,\pi}(h)&=\E V_J^{\rm ren}(Z_h).
+ \end{aligned}                                         \tag{5.1}
+\]
+
+\subsection*{Theorem 5.1 (global terminal-Hessian factorization)}
+
+For cylindrical directions $u,v$,
+
+\[
+ D\cU(h)[u]=\E DV_J^{\rm ren}(Z_h)[L_\pi u],           \tag{5.2}
+\]
+
+\[
+ \boxed{D^2\cU(h)[u,v]
+ =\E D^2V_J^{\rm ren}(Z_h)[L_\pi u,L_\pi v]}.          \tag{5.3}
+\]
+
+Therefore
+
+\[
+ \Ker L_\pi\subseteq\Ker D^2\cU(h),
+ \qquad
+ D^2\cU(h)=L_\pi^*B_{J,h}L_\pi                      \tag{5.4}
+\]
+
+as a quadratic form on the realized endpoint range.  Moreover
+
+\[
+ \cU(h)-\cU(0)
+ =D\cU(0)[h]
+  +\int_0^1(1-t)D^2\cU(th)[h,h]\dd t.                 \tag{5.5}
+\]
+
+\paragraph{Proof.}
+At fixed cutoff and positive floor, $V_J^{\rm ren}$ is a smooth
+finite-dimensional function with integrable polynomial/rational derivatives.
+Differentiate (5.1) under the Gaussian expectation.  Since $Z_h$ depends
+affinely on $h$, no second derivative of the synthesis map appears, proving
+(5.2)--(5.4).  Apply the scalar integral Taylor formula to
+$t\mapsto\cU(th)$ for (5.5). \qed
+
+This theorem changes the route diagnosis.  The complete terminal action is
+globally vertically basic without separately proving that each current,
+trace, or forest owner is basic.  Termwise owners can still fail basicness;
+only their complete recombination is covered by (5.3).
+
+\subsection*{Theorem 5.2 (realized quotient source norm)}
+
+For a bounded linear $L:\mathcal S\to E$, define on $\Ran L$
+
+\[
+ \|z\|_{q,L}=\inf_{Lh=z}\|h\|_{\mathcal S}            \tag{5.6}
+\]
+
+and complete this range to $\mathcal Z_L$.  If $N=\Ker L$, then
+
+\[
+ \|Lh\|_{q,L}=\|P_{N^\perp}h\|_{\mathcal S},
+ \qquad
+ U_L:N^\perp\to\mathcal Z_L,\qquad U_Lh=Lh             \tag{5.7}
+\]
+
+is unitary.  If a symmetric form $K$ kills $N$, its quotient transport is
+
+\[
+ B=U_L(K|_{N^\perp})U_L^{-1},
+ \qquad
+ \|B\|=\|K|_{N^\perp}\|.                              \tag{5.8}
+\]
+
+Absolute operator variation is preserved under the same unitary conjugation.
+Thus the algebraic quotient introduces no Moore--Penrose, small-singular-value,
+cutoff, or visit-count constant.
+
+\paragraph{Proof.}
+Every fibre has the unique minimum-norm representative in $N^\perp$, which
+proves (5.7).  Formula (5.8) is unitary conjugation. \qed
+
+The limitation is analytic: the quotient need not commute with spatial
+derivatives or sharp cubes.  R-104 covariance-root maps smooth spatially.
+Using R-118's $H^2/L^6$ estimate still requires either commutation or a
+uniformly $H^2/L^6$-stable horizontal synthesis theorem.
+
+\section*{6. Cartan checksum and owner completeness}
+
+The global one-form $D\cU$ is exact, so its total curl vanishes.  R-102's
+isolated rational-current fixture has
+
+\[
+ \partial_y\omega_x-\partial_x\omega_y=-\frac{40}{729}. \tag{6.1}
+\]
+
+Consequently the complete trace, heat, low, and R-063 forest companions must
+contribute
+
+\[
+ \partial_y\omega_x^{\rm comp}
+ -\partial_x\omega_y^{\rm comp}=+\frac{40}{729}         \tag{6.2}
+\]
+
+on the same fixture if the owner inventory is complete.  Equation (6.2) is a
+required checksum derived from global exactness.  It is not presented as an
+observed reconstruction and does not prove that a conditional subcluster or
+its canonical $W$ is separately basic.
+
+\section*{7. Round five: synthesized one-use frontier}
+
+The shortest surviving theorem target is now global.  For
+$z=L_\pi h$, seek an owner-complete decomposition
+
+\[
+ \begin{split}
+ D^2V_J^{\rm ren}(X+tz)[z,z]
+ ={}&\langle Q_J,\Pi_{K_{J,t,h}}z\rangle
+     +R^+_{J,t,h}+R^{\rm sum}_{J,t,h},
+ \end{split}                                           \tag{7.1}
+\]
+
+such that
+
+\[
+ R^+\ge0,
+ \qquad
+ \int_0^1\E|R^{\rm sum}_{J,t,h}|\dd t\le C,           \tag{7.2}
+\]
+
+\[
+ \sum_r|K_{J,t,h,r}|\le K_0\Id,
+ \qquad
+ \sup_J\E\|Q_J\|_{H^{-11/10}}^{10/3}<\infty,          \tag{7.3}
+\]
+
+\[
+ \|z\|_{H^2}^2\le C_{\rm CM}\|h\|_{\mathcal S}^2,
+ \qquad
+ \|z\|_6^6\le C\{\|Z_h\|_6^6+\|X\|_6^6\}.          \tag{7.4}
+\]
+
+If (7.1)--(7.4) hold with spatially constant fixed A1 generator matrices,
+R-118 gives one global Young step
+
+\[
+ |\langle Q,\Pi_Kz\rangle|
+ \le \eta X+\zeta Y
+ +C K_0^{10/3}\eta^{-11/6}\zeta^{-1/2}
+       \|Q\|_{H^{-11/10}}^{10/3}.                       \tag{7.5}
+\]
+
+This spends source energy and the terminal sextic once.  If $K_r=K_r(x)$ is
+spatially varying, a pointwise spectral bound is insufficient; at least the
+multiplier variation
+
+\[
+ \sum_r|\langle u,\partial^\alpha K_r(x)v\rangle|
+ \le K_\alpha\|u\|\|v\|,
+ \qquad |\alpha|\le2                                  \tag{7.6}
+\]
+
+must be proved.  The rough R-063 coefficient jets should therefore remain in
+$Q_J$, while the $K_r$ should be assembled from fixed production generator
+matrices whenever possible.
+
+\section*{8. Evidence map: routes, verdicts, and successor}
+
+\begin{center}
+\begin{tabularx}{0.95\textwidth}{@{}>{\raggedright\arraybackslash}p{0.20\textwidth} >{\raggedright\arraybackslash}p{0.16\textwidth} Y@{}}
+\hline
+Route & Verdict & Reusable conclusion / successor\\
+\hline
+Legal two-block chart & advanced & Two blocks and two visits are the minimum
+genuine adapted test; retain the contraction-connected whole output.\\
+Low-chaos score--trace & advanced & Equations (3.5)--(3.6), or
+(3.9)--(3.10), are the exact production falsifiers.\\
+Bare Jacobian heat & failed & Equation (4.2) leaves a strict nonlinear mean
+debt; complete low/output/forest companions are mandatory.\\
+One-pair canonical $W$ & advanced, diagnostic & It is strictly PSD with cost
+$2\sigma^8$, but $\{0,\pm2k\}$ is not the rational production cluster.\\
+R-115 canonical $W$ & partial & Both covariance faces are PSD.  Mixed interior
+remains unproved and is not promoted from numerical reconnaissance.\\
+Termwise primitives & deprioritized & R-102 curl blocks the isolated current;
+global exactness requires companion curl $+40/729$.\\
+Global terminal Hessian & advanced, preferred & Quotient factorization is
+automatic for the complete terminal action; reconstruct (7.1) and prove
+(7.3)--(7.6).\\
+Raw spatial multiplier & boundary & Pointwise spectral control alone does not
+preserve the $H^2$ estimate.\\
+\hline
+\end{tabularx}
+\end{center}
+
+This map prevents three repetitions: testing an illegal singleton output,
+assuming low-chaos cancellation from endpoint telescoping, and searching for
+an isolated current primitive after the nonzero-curl fixture.
+
+\section*{9. Executable verification}
+
+The primary SymPy certificate derives the two-visit telescope, the general
+$H_2/H_3$ score--trace formulas, both counterfixtures, the bare-heat debt,
+the bivariate canonical coefficient from its chaos split and its cost, both
+scalar boundary faces, the directly differentiated terminal-Hessian quotient,
+and the inherited Cartan checksum.  It
+passes 45/45 assertions.
+
+A non-importing standard-library implementation reconstructs the same
+conclusions from exact rational univariate and multivariate polynomial
+routines, including independently reconstructed chaos inverses, face Hessians,
+and the Hessian of the composed endpoint potential.  It passes 28/28
+assertions.  The integrated verifier reruns both children, compares
+deterministic artefacts, checks every authority/source/note/PDF hash, validates
+the route and no-overclaim surfaces, and fails closed on stale output.
+
+\section*{10. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: the chart (2.1) proves the full A1 cluster is only
+$\{0,\pm2k\}$.}  \textbf{UPHELD as false.}  That set belongs to the scalar
+linear-row diagnostic.  Rational output harmonics and realized covariance
+connections may force the whole retained output component.
+
+\item \textbf{Objection: endpoint telescoping proves low-chaos cancellation.}
+\textbf{UPHELD as false.}  Equations (4.3)--(4.4) exhibit independent first-
+chaos debts after exact mean centering.  The production trace must satisfy
+both (3.5) and (3.6).
+
+\item \textbf{Objection: the Jacobian heat is the trace, so it must cancel.}
+\textbf{UPHELD as false.}  Equation (4.2) is strictly negative for every
+nonlinear residual.  Additional low/output/R-063 companions are load-bearing.
+
+\item \textbf{Objection: R-118's signed universal counterfixture rules out a
+positive production coefficient.}  \textbf{DISMISSED.}  Proposition 4.2 is
+an exact positive diagnostic.  Positivity is packet-specific, not universal.
+
+\item \textbf{Objection: positive covariance faces prove the mixed R-115
+interior by continuity.}  \textbf{UPHELD as false.}  Boundary positivity has
+no uniform gap in inactive directions, and the cubic cross block appears in
+the interior.  A Gram/Schur proof is still required.
+
+\item \textbf{Objection: Theorem 5.1 proves every local owner is vertically
+basic.}  \textbf{UPHELD as false.}  It proves only the fully recombined global
+action.  Owner exchange and the $\pm40/729$ curl checksum remain essential.
+
+\item \textbf{Objection: the quotient norm automatically gives the physical
+$H^2/L^6$ bounds.}  \textbf{UPHELD as false.}  The unitary quotient is in
+source geometry.  Spatial derivative and sharp-cube compatibility are a
+separate synthesis theorem.
+
+\item \textbf{Objection: pointwise $\sum_r|K_r(x)|\le K_0\Id$ is enough.}
+\textbf{UPHELD as false.}  Differentiated $H^2$ estimates see derivatives of
+$K_r(x)$; (7.6) or an equivalent multiplier theorem is necessary.
+
+\item \textbf{Objection: the executable constants may be pasted or hide a
+sign, factor, convention, or scaling error.}  \textbf{VALID-with-mitigation.}
+The primary child derives the one-pair coefficient from its $H_2/H_4$ split
+and differentiates $V(Lh)$ directly.  The non-importing child reconstructs the
+chaos inverse, both face Hessians, and the composed Hessian with exact rational
+polynomials.  The $\sigma^4/\sigma^8$ homogeneities and $\sigma\downarrow0$,
+$b=0$ limits agree.  This is fixed-cutoff evidence; no cutoff convergence is
+inferred.
+
+\item \textbf{Objection: R-119 closes either A13 gate or Sector A.}
+\textbf{DISMISSED.}  It narrows the gates and removes one global algebraic
+uncertainty.  The production identities and uniform analytic estimate remain
+open, so the tier stays T4.
+\end{enumerate}
+
+\section*{11. Result footer}
+
+\begingroup
+\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-LEGAL-ADAPTED-CLUSTER-SCORE-TRACE-
+  TERMINAL-HESSIAN-FRONTIER (R-119).
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement: Prop. 2.1; Thm. 3.1, Cor. 3.2, Prop. 3.3; Thm. 4.1,
+  Props. 4.2-4.3; Thms. 5.1-5.2; checksum (6.1)-(6.2);
+  conditional one-use target (7.1)-(7.6).
+Scope: fixed finite cutoff/floor and cylindrical Gaussian source charts;
+  complete-terminal-action quotient; diagnostics are not full A1.
+Dependencies: R-063,068,082,093,102,104,107,108,115,116,118.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_legal_adapted_cluster_score_trace_
+  terminal_hessian_frontier_verify.py
+Expected output: R-119 PASS 90/90; children 45/45 and 28/28; all pins valid.
+Falsification gate: any failed telescope, projection, chaos coefficient,
+  bare-heat/W/face/quotient/checksum/hash assertion, or use beyond scope.
+Tier before / after: T4 / T4.
+No-overclaim statement: full A1, mixed PSD, forest, spatial synthesis,
+  one-use, OVERLAP_src, Nelson, removals, measure, Sector-A/T5-T7 remain open.
+Next required action: prove (7.1)-(7.6) for fixed A1 generators; use R-118 once.
+\end{verbatim}
+\endgroup

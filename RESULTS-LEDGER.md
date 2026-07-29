@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-119](#r-119) | Legal adapted cluster, score-trace cancellation, and terminal-Hessian frontier | Scoped T4 analytic/exact/executed advance and method boundary: the smallest genuinely adapted strict-triangular test uses two independent source blocks and two visits; the complete square-minus-trace packet telescopes to its endpoints with the trace owned once. For `Y=b+Axi+R`, with `R` orthogonal to zero and first chaos, exact aggregate mean-trace and derivative-trace identities are necessary and sufficient for zero/first-chaos cancellation; the kernel formula includes affine-quadratic and every adjacent-chaos contraction. Bare Jacobian heat leaves the strict debt `-1/2 sum_(n>=2)(n-1)n!||r_n||^2`, so low/output/R-063 companions are mandatory. The R-107 one-pair canonical `W` is strictly PSD with cost `2sigma^8`, and both R-115 covariance faces are PSD; the mixed interior is not claimed. At fixed cutoff and floor, the complete terminal-action Hessian factors automatically through endpoint synthesis, while the realized quotient source norm removes inverse singular-value and visit-count loss. The actual production A1 low-chaos identities, trace/forest reconstruction, spatial multiplier/synthesis estimate, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-118](#r-118) | Revisit quotient factorisation, operator Carleson extension, and signed-score boundary | Scoped T4 analytic/exact/executed advance and method boundary: a finite-visit selfadjoint quadratic form is fibre invariant exactly when it annihilates the endpoint-synthesis kernel, equivalently when it factors as `L* B L`; the corresponding form bound is equivalent to `-C L*L<=K<=C L*L`. The R-068 centered-form theorem extends without visit-count loss to spatially constant selfadjoint operator families satisfying `sum_r |K_r|<=K0 I`, with one global Young remainder raising both `K0` and the model norm to `3/(1-kappa)`. Exact terminal-only descent of the recombined selfadjoint form requires quotient factorisation; the termwise `K_r=L*B_rL` bridge is sufficient and is not asserted necessary. Two opposite visits disprove automatic replacement of the visit square-function sextic by the terminal sextic. Every scalar finite-dimensional Gaussian polynomial decomposes canonically into zero chaos, first chaos, and one double divergence. An exact two-visit Hermite quotient has mean `-epsilon^2` and a unique sign-changing scalar preimage, so a universal PSD random-`W` factorisation is false. R-102's nonzero curl remains an inherited isolated-current boundary. The complete adapted A1 low-chaos cancellation, trace/forest compatibility, vertical basicness, multiplier estimate, one-use ledger, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-117](#r-117) | Rational-horizon classifier, uniform canonical dyadic-root trace margin, and fixed-shell metric boundary | Scoped T4 analytic/exact/executed advance and method boundary: the exact full-horizon tangent classifier extends the finite-dimensional tail theorem from polynomial quadratic maps to locally Lipschitz asymptotically quadratic maps, including the rational R-082 row. The positive floor converges to the degree-two horizon at an explicit state-uniform fixed-cutoff rate. The homogeneous Pauli--Fierz frame has sharp joint constant `411/(2000P)`. Exact rational shell enumeration plus an analytic `N^-3` tail prove `(10/9) tau_N^rec<3/40` and `(20/9) tau_N^rec<3/20` for every standardized direction of the matching full-production dyadic shell, hence frozen bare-root normalizer existence at both tilts. A same-shell phase modulation has distance `O(t)` from the exact null set but current `O(t^2)`, disproving local Lipschitz metric regularity even at fixed cutoff. The result does not identify the complete adapted progressive/revisit packet, produce cutoff-summable log-normalizers, or aggregate source/sextic owners once. `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-116](#r-116) | One-fresh-root owner quotient, exact parabolic-tangent recession, and the centered null-cone boundary | Scoped T4 analytic/exact/executed advance and method boundary: every same-root visit packet with fixed reveal sigma-field, target heat, covariance, and contraction-closed projection telescopes to one endpoint square-minus-trace quotient, so internal visits and the fresh--future cross are owned exactly once. Full Wick ordering is only a diagnostic: the physical partial-Wick XY packet differs by the load-bearing Sigma Q owner. First chaos absorbs into the frozen whole-output determinant; actual conditional packets compose by optimized Holder; tilted random-W costs require a doubled-tilt normalizer. For finite-dimensional homogeneous quadratic output, the exact Gaussian tail classifier is lambda_q=inf_(v,z)[1-q tau(v)+q||Av+z||^2] over the common null cone and full parabolic tangent image. Positive lambda_q gives integrability, negative gives divergence, and equality depends on critical-stratum codimension. Exact centered and full-Wick tensor fixtures disprove universal centering-only and covariance-cost normalizers. The R-082 pointwise null set is classified; active finite-Fourier nulls are constant-polarization plane waves with an explicit real-linearized symbol, but no cutoff-uniform near-null metric bound follows. The plane-wave face is not a standalone legal production root. Full A1 progressive/revisit normalization, one-use source/sextic aggregation, OVERLAP_src, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -137,6 +138,53 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-119"></a>
+### R-119 -- Legal adapted cluster, score-trace cancellation, and terminal-Hessian frontier
+
+**Result ID.**
+A13-CLASSII-LEGAL-ADAPTED-CLUSTER-SCORE-TRACE-TERMINAL-HESSIAN-FRONTIER.
+
+**Legal chart and exact cancellation test.**  The smallest genuinely adapted
+strict-triangular source test has two independent source blocks and two visits;
+the one-root two-visit packet remains the smaller algebraic quotient fixture.
+The complete square-minus-trace packet telescopes exactly to its endpoints,
+with the fresh--future cross and trace each owned once.  For the canonical
+endpoint decomposition `Y=b+Axi+R`, with `R` orthogonal to zero and first
+chaos, the nonlinear residual has zero and first chaos exactly when
+`E delta_tau=E||R||^2` and
+`E D delta_tau=2 Contr(A,E D^2R)+2E[(DR)*R]`.  In chaos kernels the second
+identity contains both the affine--quadratic contraction and every adjacent-
+chaos contraction.
+
+**No-go and positive diagnostics.**  Bare Jacobian heat alone leaves
+`-1/2 sum_(n>=2)(n-1)n!||r_n||^2`, strictly negative for a nonlinear
+remainder; the complete low/output/R-063 forest companions are mandatory.
+The R-107 one-pair diagnostic has the strictly positive canonical coefficient
+`W=sigma^4[2xx^T+(|x|^2+8)I]/24` and exact cost
+`E(delta^2W)^2=2sigma^8`.  The R-115 canonical coefficient is PSD on both
+covariance faces.  No mixed-interior PSD theorem and no identification of
+`{0,+/-2k}` with the full rational production cluster are asserted.
+
+**Global terminal route.**  At fixed cutoff and positive floor, the Hessian of
+the complete renormalized terminal action factors through endpoint synthesis
+by the affine chain rule.  The realized quotient source norm makes horizontal
+synthesis unitary, so this algebraic transport has no inverse singular-value,
+cutoff, or visit-count loss.  Termwise owners need not be basic.  R-102's
+isolated curl `-40/729` instead gives the required companion checksum
+`+40/729`.  The surviving target is a complete terminal-Hessian reconstruction
+with fixed A1 generator matrices, rough R-063 data retained in the negative-
+Sobolev factor, and uniform spatial multiplier/synthesis bounds before one
+global R-118 Young step.  Production low-chaos cancellation, one-use
+aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A
+remain open at T4.
+
+**Where proved.**  Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-legal-adapted-cluster-score-trace-terminal-hessian-frontier-260729-v1.0`,
+primary exact and non-importing independent certificates, and the integrated
+R-119 verifier.  Publication target: Gaussian score--trace cancellation,
+terminal quotient-Hessian, and adapted source-action method lemmas.
 
 <a id="r-118"></a>
 ### R-118 -- Revisit quotient factorisation, operator Carleson extension, and signed-score boundary

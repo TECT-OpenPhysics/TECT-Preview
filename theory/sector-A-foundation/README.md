@@ -277,7 +277,17 @@ moment-matched one-reveal `H_N` subcases, while exact covariance/entropy union
  residual, one signed R-078 paid difference is bounded under the R-096
  collar, and the separate R-086 `Q` orientations and `T_G^<=` charge are
  refunded. Seven modules close complete regular `H_N`; eight close regular
- `REG`, while the terminal square remains reserved. Progressive/revisit
+ `REG`, while the terminal square remains reserved. R-104--R-118 then supply
+ fixed-chart assembly, coherent-cluster quotient boundaries, the stationary
+ scalar closure, frozen rational-root horizons, and the visit-count-free
+ operator centered-form theorem. R-119 reconstructs the minimum genuine
+ two-block/two-visit adapted test, proves the exact aggregate zero/first-chaos
+ trace criteria and strict bare-heat no-go, and moves complete-action vertical
+ basicness to the global terminal-Hessian chain rule with a lossless realized
+ quotient norm. The remaining direct burden is the production terminal-
+ Hessian reconstruction, complete trace/R-063 forest checksum, and uniform
+ spatial multiplier/H2/L6 synthesis estimate before one global R-118 payment.
+ Progressive/revisit
  `H_A`, `OVERLAP_src`, Nelson, and Sector A remain open.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.

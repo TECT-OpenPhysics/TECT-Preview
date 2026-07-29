@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-119 legal adapted score-trace and terminal-Hessian frontier] - 2026-07-29
+
+Registered R-119 at T4 after a five-round parallel proof sprint. The minimum genuine adapted test is two-block/two-visit; exact aggregate zero/first-chaos trace identities and a strict bare-heat no-go are proved. A one-pair canonical coefficient and both stationary scalar covariance faces are PSD without a mixed-interior or full-A1 claim. The complete terminal-action Hessian factors through endpoint synthesis with a lossless realized quotient norm. Primary 45/45, independent 28/28, integrated 90/90, and the final ten-page Poppler-inspected PDF pass. Production coefficient cancellation, trace/R-063 forest reconstruction, spatial multiplier/synthesis, one-use, Nelson, and Sector A remain open.
+
 ## [R-118 adversarial scope hardening and PSD no-go authority] - 2026-07-28
 
 Adversarial review narrowed the R-118 terminal statement: exact quotient factorisation is necessary for fibre-invariant descent of the recombined selfadjoint form, while the termwise K_r=L*B_rL condition with a uniform synthesis bound is a sufficient bridge and is not claimed necessary. The exact Hermite sign-changing-preimage theorem is promoted to its own negative authority, NG-2026-07-28-A13-UNIVERSAL-PSD-RANDOM-W-DOUBLE-DIVERGENCE; it refutes only a universal PSD representation, not production-specific cancellation or positive structure. EXP-000363 records the correction. The A13 status card and curated development arc are advanced from their stale R-117/R-108 frontiers to R-118, with both gates and tier unchanged.

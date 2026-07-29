@@ -1084,6 +1084,22 @@ the following structural results and proof-architecture boundaries hold.
     PSD random-`W` factorization is false. The complete adapted A1 low-chaos,
     trace/forest, vertical-basicness, multiplier, and one-use estimates remain
     open; tier stays T4.
+62. `A13-CLASSII-LEGAL-ADAPTED-CLUSTER-SCORE-TRACE-TERMINAL-HESSIAN-FRONTIER`
+    is R-119. The smallest genuinely adapted strict-triangular test uses two
+    independent source blocks and two visits; its complete square-minus-trace
+    packet telescopes to the endpoints with the trace owned once. For
+    `Y=b+Axi+R`, exact aggregate mean-trace and derivative-trace identities are
+    necessary and sufficient for zero/first-chaos cancellation, including the
+    affine-quadratic and adjacent-chaos debts. Bare Jacobian heat leaves the
+    strict negative mean `-1/2 sum_(n>=2)(n-1)n!||r_n||^2`. The R-107 one-pair
+    canonical coefficient is strictly PSD with cost `2sigma^8`, and the R-115
+    coefficient is PSD on both covariance faces; no mixed-interior or full-A1
+    identification is asserted. The Hessian of the complete fixed-cutoff
+    terminal action factors automatically through endpoint synthesis, and the
+    realized quotient norm introduces no inverse singular-value or visit-count
+    loss. Production low-chaos cancellation, trace/forest reconstruction,
+    spatial multiplier/synthesis, and one-use aggregation remain open; tier
+    stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -1149,6 +1165,7 @@ is a scoped T4 subproof and does not promote A13.
 | Scalar k:2k effective boundaries / directed-rounding seed | Four explicit projective wedges; eight origin cones; quantitative covariance-face widths; sharper phase floors; exact zero-amplitude `tau>=13` theorem; two independent outward-rounded certificates for one strict mixed box; corrected residual-boundary and Bessel-surrogate scope | T4 analytic/exact/executed advance and method boundary; global mixed interval cover, genuinely mixed all-q, full A1 embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Scalar k:2k support cone / all-amplitude closure | Exact support--two-moment cone through `643/200`; four-moment left Radau majorant; packet-specific all-tilt skew theorem; complete Arb and exact Bernstein/radical certificates | T4 analytic/exact/executed scalar theorem closed; full A1 adapted embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | One-fresh-root owner quotient / rational horizon / dyadic trace margin | Exact same-root endpoint quotient and owner firewall; full finite-dimensional rational-horizon classifier; uniform fixed-cutoff R-082 floor horizon; sharp joint frame constant; strict canonical q and 2q all-direction trace margins; fixed-shell metric no-go | T4 analytic/exact/executed advance and method boundary; legal complete adapted owner packet and cutoff-summable one-use source/sextic ledger remain open |
+| Legal adapted score-trace / terminal quotient-Hessian frontier | Minimal two-block/two-visit strict-triangular chart; exact zero/first-chaos trace criteria; strict bare-heat no-go; one-pair and covariance-face PSD diagnostics; automatic global terminal-Hessian quotient and lossless realized quotient norm | T4 analytic/exact/executed advance and method boundary; production low-chaos identities, full trace/forest reconstruction, spatial multiplier/synthesis, and once-only source/sextic aggregation remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1535,7 +1552,22 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 ## Current evidence
 
-The current R-118 package is:
+The current R-119 package is:
+
+- `classii_legal_adapted_cluster_score_trace_terminal_hessian_frontier_manifest.json`
+- `notes/classii-legal-adapted-cluster-score-trace-terminal-hessian-frontier-260729-v1.0.tex.txt`
+- `notes/classii-legal-adapted-cluster-score-trace-terminal-hessian-frontier-260729-v1.0.pdf`
+- `../../codes/foundations/a13_classii_legal_adapted_cluster_score_trace_terminal_hessian_frontier.py`
+- `../../codes/foundations/a13_classii_legal_adapted_cluster_score_trace_terminal_hessian_frontier_independent.py`
+- `../../codes/foundations/a13_classii_legal_adapted_cluster_score_trace_terminal_hessian_frontier_verify.py`
+- `runs/2026-07-29-primary-legal-adapted-cluster-score-trace-terminal-hessian-frontier/result.json`
+- `runs/2026-07-29-independent-legal-adapted-cluster-score-trace-terminal-hessian-frontier/result.json`
+- `runs/2026-07-29-integrated-legal-adapted-cluster-score-trace-terminal-hessian-frontier/result.json`
+- `../../RESULTS-LEDGER.md#r-119`
+- `../../negative-results/registry.md#ng-2026-07-29-a13-bare-jacobian-heat-low-chaos-cancellation`
+- `../../explorations/log.jsonl` (`EXP-000364`--`EXP-000370`)
+
+The immediate R-118 predecessor package remains binding:
 
 - `classii_revisit_quotient_operator_carleson_signed_score_boundary_manifest.json`
 - `notes/classii-revisit-quotient-operator-carleson-signed-score-boundary-260728-v1.0.tex.txt`
@@ -3217,9 +3249,12 @@ heat, and fixed orthogonal output projection; it is not a raw finite-amplitude
 heat estimate or an arbitrary cluster theorem. R-118 proves the abstract
 quotient criterion, visit-count-free operator R-068 extension, and canonical
 Gaussian second-divergence range, while its Hermite and Cartan audits retire a
-universal PSD coefficient and an isolated current primitive. None of
-R-114--R-118 proves the legal complete adapted progressive/revisit owner
-packet, its low-chaos and trace/forest compatibility, a cutoff-summable
+universal PSD coefficient and an isolated current primitive. R-119 reconstructs
+the minimal legal adapted chart, gives exact low-chaos trace criteria and the
+strict bare-heat no-go, proves scoped positive diagnostics, and moves global
+vertical basicness to the terminal-Hessian chain rule and lossless quotient
+norm. None of R-114--R-119 proves the coefficient-level complete production
+low-chaos cancellation, full trace/forest reconstruction, a cutoff-summable
 conditional log-normalizer ledger, or the once-only source/sextic aggregation.
 `OVERLAP_src`, Nelson, removal, interacting measure, Sector-A closure, and
 T5--T7 promotion remain open. Tier stays T4.
@@ -3972,3 +4007,18 @@ T5--T7 promotion remain open. Tier stays T4.
   independent `27/27`, and integrated `51/51` pass. The eight-page PDF passes
   form, zero-overfull, extraction, no-form, and all-page Poppler QA. The full
   adapted trace/forest factorization and one-use ledger remain open; tier T4.
+- 2026-07-29: Registered R-119. The minimum genuine adapted test is a
+  two-block/two-visit strict-triangular chart, and its complete packet
+  telescopes exactly. Exact aggregate score--trace identities characterize
+  zero/first-chaos cancellation, while bare Jacobian heat leaves a strict
+  nonlinear mean debt. The one-pair canonical coefficient and both stationary
+  scalar covariance faces are PSD, without a mixed-interior or full-A1 claim.
+  The complete terminal-action Hessian factors through endpoint synthesis and
+  the realized quotient norm carries no inverse singular-value loss.
+  `EXP-000364--EXP-000370` preserve the five-round advances, failure, partial
+  route, and synthesis. Primary `45/45`, non-importing independent `28/28`,
+  and integrated `90/90` pass. The final ten-page PDF
+  passes form, zero-overfull, extraction, no-form, and all-page Poppler visual
+  QA. Production low-chaos cancellation, trace/forest reconstruction,
+  spatial multiplier/synthesis, one-use aggregation, `OVERLAP_src`, Nelson,
+  removals, interacting measure, and Sector A remain open; tier stays T4.

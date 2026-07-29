@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-29-A13-BARE-JACOBIAN-HEAT-LOW-CHAOS-CANCELLATION](#ng-2026-07-29-a13-bare-jacobian-heat-low-chaos-cancellation) | cancel the zero and first Wiener chaoses of a nonlinear complete endpoint residual using only the bare Jacobian heat `2 Re Tr(A*DR)+||DR||_HS^2` after affine absorption | for `R=sum_(n>=2) I_n(r_n)`, the residual mean is exactly `-1/2 sum_(n>=2)(n-1)n!||r_n||^2`, strictly negative for every `R!=0`; separate exact fixtures show that mean centering also does not remove the affine-quadratic or adjacent-chaos first-chaos debts. The complete low/output/trace/R-063 forest companions are mandatory. This is a route no-go, not an A1 counterexample |
 | [NG-2026-07-28-A13-UNIVERSAL-PSD-RANDOM-W-DOUBLE-DIVERGENCE](#ng-2026-07-28-a13-universal-psd-random-w-double-divergence) | represent every centered nonlinear revisit residual by a positive-semidefinite random second-divergence coefficient, with no signed coefficient or separate low-chaos owner | the exact scalar two-visit Hermite quotient has mean `-epsilon^2`; after centering, its unique `L2` preimage is `W_can=epsilon^2(H2+2aH1)=epsilon^2((G+a)^2-(a^2+1))`, which changes sign. This refutes only the universal PSD representation: a complete production cluster may cancel its low chaoses or have additional coupled owners |
 | [NG-2026-07-28-A13-FIXED-SHELL-LIPSCHITZ-METRIC-REGULARITY](#ng-2026-07-28-a13-fixed-shell-lipschitz-metric-regularity) | derive the complete R-082 root trace margin from a local Lipschitz distance-to-null-set error bound, even first at fixed cutoff | in the legal shell `S_8`, the active phase-modulated field `u_t=exp(6 i kappa x_1)(1+i t cos(kappa x_1))e_1`, `chi=0`, has null-set distance `O(|t|)` but full homogeneous current `O(t^2)`; standardizing to the unit root sphere changes only a radial `1+O(t^2)` factor. Thus local Lipschitz metric regularity fails. This is a method no-go, not a normalizer counterexample: R-117 instead proves an all-direction canonical same-shell trace margin |
 | [NG-2026-07-28-A13-CENTERED-QUADRATIC-NULL-CONE-NORMALIZER](#ng-2026-07-28-a13-centered-quadratic-null-cone-normalizer) | infer a nonlinear root normalizer from exact centering, PSD tangent covariance, and finite unweighted covariance/double-divergence costs | for independent U,V, the exactly centered packet L=((2+U^2-V^2)^2-4(U^2+V^2))/2 has H=128 and K_W=1088, yet E exp(-qL) diverges for every q>=1/4 along a common-null-cone tube. A strict parabolic-tangent recession margin or a critical-stratum theorem is indispensable. This is an abstract trace-compatible tensor no-go, not an A1 production counterexample |
@@ -164,6 +165,41 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-29-a13-bare-jacobian-heat-low-chaos-cancellation"></a>
+### NG-2026-07-29-A13-BARE-JACOBIAN-HEAT-LOW-CHAOS-CANCELLATION -- bare heat leaves a strict nonlinear mean debt
+
+**Claim / route.**  After absorbing the affine endpoint packet into the frozen
+whole-output determinant, use only the bare Jacobian heat
+`delta_tau=2 Re Tr(A*DR)+||DR||_HS^2` to cancel the zero and first Wiener
+chaoses of the nonlinear residual
+`Re<b+Axi,R>+||R||^2/2-delta_tau/2`.
+
+**Failure mode.**  If `R=sum_(n>=2) I_n(r_n)` has no zero or first chaos,
+Gaussian orthogonality and the Malliavin derivative isometry give
+
+`E||R||^2=sum_(n>=2)n!||r_n||^2`,
+
+`E||DR||_HS^2=sum_(n>=2)n n!||r_n||^2`,
+
+and `E Tr(A*DR)=0`.  Hence the residual mean is exactly
+
+`-1/2 sum_(n>=2)(n-1)n!||r_n||^2`,
+
+which is strictly negative for every nonlinear `R!=0`.  Mean centering is not
+enough for first chaos either: `A=1,R=epsilon H2` leaves coefficient
+`2epsilon`, while `A=0,R=alpha H2+beta H3` leaves `6alpha beta`.
+
+**Evidence.**  R-119 proof note, Theorem 4.1 and equations (4.3)--(4.4);
+primary exact symbolic audit `45/45`; non-importing exact rational audit
+`28/28`; integrated manifest-pinned verifier.
+
+**Consequence.**  The bare-heat cancellation route is false.  The complete
+low, output, trace, heat, and R-063 forest companions must supply the exact
+aggregate debts in R-119 equations (3.5)--(3.6).  This is a general Gaussian
+method no-go, not a counterexample to the production A1 packet, whose complete
+coefficients have not yet been shown either to satisfy or violate those
+identities.
 
 <a id="ng-2026-07-28-a13-universal-psd-random-w-double-divergence"></a>
 ### NG-2026-07-28-A13-UNIVERSAL-PSD-RANDOM-W-DOUBLE-DIVERGENCE -- the canonical two-visit preimage is signed

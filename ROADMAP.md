@@ -337,15 +337,19 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   with bounded absolute spectral variation, without a visit-count loss. Its
   exact opposite-visit and Hermite fixtures show separately that a diagonal
   visit square does not automatically descend to the terminal sextic and that
-  a universal PSD random-`W` double-divergence owner is false. The viable direct
-  route is therefore finite: compute the zero and first Wiener chaoses of the
-  smallest legal complete adapted cluster; if they cancel, construct the
-  canonical signed preimage, match the actual trace and R-063 forest, prove
-  vertical basicness plus endpoint spectral/multiplier and synthesis bounds,
-  and invoke R-068 once over the R-093 directed source union. These production
-  identities, not another abstract positivity-first normalizer, are the two
-  direct A13 burdens. Strict per-shell normalizer existence alone does not
-  imply the second burden.
+  a universal PSD random-`W` double-divergence owner is false. R-119 now
+  reconstructs the minimum genuine two-block/two-visit adapted test and proves
+  the exact aggregate zero/first-chaos trace criteria. Bare Jacobian heat alone
+  leaves a strict nonlinear mean debt; the one-pair canonical coefficient and
+  both stationary scalar covariance faces are PSD without a mixed-interior or
+  full-A1 claim. The complete terminal-action Hessian factors automatically
+  through endpoint synthesis, and the realized quotient norm has no inverse
+  singular-value loss. Continue by reconstructing the complete production
+  terminal Hessian with fixed A1 generator matrices, verifying the low-chaos
+  identities and trace/R-063 forest checksum, proving uniform spatial
+  multiplier and H2/L6-stable synthesis bounds, and invoking R-118 once over
+  the R-093 directed source union. Strict per-shell normalizer existence alone
+  does not imply this once-only global burden.
   `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
   remain open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
@@ -937,12 +941,15 @@ preserved in git/changelog rather than treated as current gates.
    trace route. R-118 supplies the finite-visit quotient theorem and a
    visit-count-free operator-valued R-068 estimate under absolute spectral
    variation. It also retires automatic diagonal-visit-to-terminal ownership
-   and universal PSD random-`W` factorisation. Continue by computing the zero
-   and first chaoses of the smallest legal complete adapted cluster; only if
-   they cancel, construct its canonical signed double-divergence coefficient,
-   match the trace and R-063 forest, prove vertical basicness and endpoint
-   spectral/multiplier plus source-synthesis bounds, and then spend source
-   energy and terminal sextic exactly once over the R-093 directed union. Do
+   and universal PSD random-`W` factorisation. R-119 reconstructs the minimum
+   legal two-block/two-visit adapted test, proves the exact aggregate low-chaos
+   trace criteria and strict bare-heat no-go, and shows that the complete
+   terminal-action Hessian factors through endpoint synthesis with a lossless
+   realized quotient norm. Continue by reconstructing that production Hessian
+   with fixed A1 generator matrices, verifying the low-chaos identities and
+   complete trace/R-063 forest checksum, proving spatial multiplier and
+   H2/L6-stable synthesis bounds, and then spending source energy and terminal
+   sextic exactly once over the R-093 directed union. Do
    not mistake strict per-shell normalizer existence for summability, and do
    not substitute a centered
    abstract tensor, full-Wick tensor normalizer, derivative-range test, or
