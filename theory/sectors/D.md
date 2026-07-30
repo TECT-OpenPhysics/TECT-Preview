@@ -30,6 +30,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-31-A13-UNWEIGHTED-RATIONAL-D2-FLOOR-UNIFORMITY | separated rational second derivatives are not floor-uniform |  |
 | NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER | stationary six-row parity does not transfer to arbitrary ada |  |
 | NG-2026-07-29-A13-FEEDBACK-DERIVATIVE-GRAPH-CLOSURE | graph convergence does not control feedback derivatives |  |
 | NG-2026-07-28-A13-K2K-ALL-ORDER-PROJECTIVE-COEFFICIENT-POSITIVITY | the third exact projective coefficient changes sign | expand the exact covariance-simplex logarithmic gap in |

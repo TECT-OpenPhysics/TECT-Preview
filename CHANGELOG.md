@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [A13 R-130 result-footer and eleven-page PDF correction] - 2026-07-31
+
+Append-only correction to the preceding R-130 event: the proof-evidence-map gate required the complete structured result footer. Adding the eleven mandatory footer labels expanded the final certificate from ten to eleven pages. The source now passes the note form gate with zero overfull boxes; rendered pages one through nine are hash-identical to the earlier inspection, and the changed pages ten and eleven were directly reinspected with no clipping, overlap, broken glyph, malformed display, or unintended blank page. This supersedes only the earlier ten-page description. The mathematical scope, primary 58/58 and independent 90/90 child contracts, exploration set EXP-000469--EXP-000482, two negative results, T4 tier, and all open production/Nelson/Sector-A boundaries are unchanged.
+
+## [A13 R-130 terminal Xi, conormal Gram, and balanced-low response boundary] - 2026-07-31
+
+R-130 records the exact post-recombined Xi common-terminal and matching-trace recode, the finite-cylinder physical-response-before-pullback order with the vertical source-cost firewall, exact frozen-Q six-row Gram envelopes, the sharp constant-one balanced bridge, a centered-heat direct-low candidate, and complete-Gram PSD Schur ownership. It also promotes the separated rational D2 floor-uniformity failure and the automatic strict-gap/refinement failure to the negative registry. Primary 58/58 and independent 90/90 executable checks pass. The ten-page PDF is source-rebuilt with zero overfull boxes, recursively security-audited, pagewise text/render matched, and manually inspected on all pages. EXP-000469--EXP-000482 preserve advances, failures, inconclusive diagnostics, boundaries, evidence, and revisit conditions. The result remains T4: production-uniform response, complete C_mix/C_far/c_bal, historical R-079 low equivalence, matching energy, a strict gap, absolute anchor, both A13 gates, OVERLAP_src, Nelson, removals, the interacting measure, and Sector-A closure remain open.
+
 ## [A13 R-129 verifier hardening deterministic-result correction] - 2026-07-30
 
 The release watcher exposed a reproducibility defect after the PDF hardening: successful rebuild assertions stored a random TemporaryDirectory path, so every verifier run changed the tracked integrated result and made the catalog stale. The PASS artefact now stores only deterministic derived values; terminal failure diagnostics remain available without entering the tracked result. EXP-000468 records the failure and repair. Two consecutive full runs produced the identical integrated-result SHA-256 e305d7cc9db9348118b31b3d02b5a1df606fd8e27f3716333e0c11c27f4b5b8b before the final exploration-contract increment. The final frozen contract is integrated 348/348 and aggregate 436/436; mathematical scope and T4 tier are unchanged.

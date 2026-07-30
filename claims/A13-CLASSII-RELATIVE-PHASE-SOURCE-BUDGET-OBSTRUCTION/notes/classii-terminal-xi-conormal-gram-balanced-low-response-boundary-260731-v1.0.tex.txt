@@ -1,0 +1,737 @@
+% =============================================================================
+% Title: Post-recombined terminal coordinate, fixed-six-row conormal Gram envelopes, sharp balanced bridge, and the direct-low response boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-TERMINAL-XI-CONORMAL-GRAM-BALANCED-LOW-RESPONSE-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-31; this version issued 2026-07-31
+% Status: scoped T4 analytic/exact/executed advance; both A13 gates and Sector A remain open
+% =============================================================================
+
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+
+R-129 isolated the legal aggregate reverse and the shifted-Douglas acceptance
+criterion, but left the owner-complete production response, forward constants,
+balanced coefficient, low block, and common terminal open.  R-130 advances
+five parts of that frontier.
+
+\begin{enumerate}
+\item After the complete current has been recombined, the R-082 four-row
+coordinate $\Xi$ admits an exact common-terminal Doob and once-owned trace
+recode.
+\item The R-123 action owner has a canonical finite-cylinder response: form
+the physical bilinear form first and pull it back to predictable source space
+second.  The executable proves this order on finite matrices; it does not
+construct a cutoff-uniform A1 response.
+\item The fixed six-row A1 Gram has explicit pointwise first- and
+second-variation envelopes, with every factor of two fixed.
+\item The deterministic balanced bridge
+\[
+ \int |z|^2|\nabla z|^2
+ \leq \|\Delta z\|_2\|z\|_6^3                         \tag{1.1}
+\]
+has sharp constant one.
+\item A centered-heat direct-low packet admits a finite lower bound after one
+global Young inequality, while its relation to the historical R-079 low
+owners remains unproved.
+\end{enumerate}
+
+The scope is fixed finite cutoff, fixed density floor
+$e=10^{-12}>0$, one fixed R-093/R-104 temporally faithful chart, a fixed
+conditional law, a fixed filtration, and an owner-complete
+post-recombined terminal packet.  R-130 proves neither a bounded bare-$L^2$
+production response uniform in cutoff, floor, chart, control, filtration,
+visit, shell, or refinement depth, nor complete $C_{\rm mix}$,
+$C_{\rm far}$, or $c_{\rm bal}$ data.  It does not close the historical
+R-079 low owners, a strict augmented gap, the production common-terminal
+matching-energy theorem, the absolute anchor, $\mathrm{OVERLAP}_{\rm src}$,
+Nelson, removals, the interacting measure, Sector A, or any T5--T7 claim.
+
+\section*{2. Owner and coordinate firewall}
+
+The argument uses the following incidence rules.
+
+\begin{center}
+\begin{tabular}{p{0.27\linewidth}p{0.65\linewidth}}
+\hline
+Object & Ownership rule\\
+\hline
+$\cP_{\rm comp}$ & Current-square/trace packet, once after exhaustive
+recombination.\\
+Future variance & Once through
+$q_{\rm comp}=q_{\rm CN}-q_{\rm fut}/2$; it is not a favorable reserve for
+the smaller action owner.\\
+R-063 forest & Alternate coordinate for the primitive trace, never an
+additional payment.\\
+Heat & Internal to $P_\Sigma B=\E_r[C^TC]$; $C$ is not averaged before
+squaring.\\
+Six rows and $\Xi$ & Two representations of one energy, not two owners.\\
+Cartan block & Aggregated once; the full-cross factor is $2680/729$.\\
+Sextic and source cost & Each used once.  The source cost $9I/10$ stays
+outside a physical pullback with vertical kernel.\\
+Forward and reverse & One adjoint/symmetrized owner, not two reserves.\\
+$\Delta C_b$, $\Delta\Gamma_r$ & Distinct synthesis and Wick-trace data.\\
+Direct low & Not addable to R-079 conditional or complete low without an
+equivalence theorem.\\
+\hline
+\end{tabular}
+\end{center}
+
+No root, visit, shell, or refinement-depth count may enter a production
+constant.  The older local $40/729$ checksum does not cancel the live
+$2680/729$ full-cross Cartan owner.
+
+\section*{3. The post-recombined $\Xi$ terminal}
+
+For
+$\Psi=(u_1,u_2,\chi)$ and $\dot\Psi=(v_1,v_2,w)$ put
+\[
+ r=|u|^2,\qquad \rho=r+|\chi|^2,\qquad d=\rho+e,
+\]
+\[
+ \dot r=2\Rea(u^*v),\qquad
+ \dot\rho=2\Rea(u^*v+\bar\chi w),\qquad
+ h=u_1v_2-u_2v_1.                                    \tag{3.1}
+\]
+The exact R-082 coordinate is
+\[
+ \boxed{
+ \Xi(\Psi,\dot\Psi)=
+ \begin{pmatrix}
+ \sqrt{c_0}\,\dot r\\
+ \sqrt{c_1}\left(\dot r-\alpha{r\over d}\dot\rho\right)\\
+ 2\sqrt{c_0+c_1}\Rea h\\
+ 2\sqrt{c_0+c_1}\Im h
+ \end{pmatrix},}                                     \tag{3.2}
+\]
+where
+\[
+ P=4+10^{-12},\qquad
+ \alpha={5\over9},\qquad
+ c_0={3\over250P},\qquad c_1={243\over8000P}.        \tag{3.3}
+\]
+The first row is $\dot r$, not $\dot\rho$, and the second row contains
+$r/d$, not $\rho/d$.  The Pauli completeness relations give
+\[
+ \sum_AJ_A^2=\dot r^2+4|h|^2,
+\quad
+ \sum_AL_A^2=\left(\dot r-\alpha{r\over d}\dot\rho\right)^2+4|h|^2,
+                                                               \tag{3.4}
+\]
+so (3.2) is a global norm recoding, including $u=0$.
+
+Let $\Xi_*,\Xi_0$ be one fixed terminal pair, let $P_\ell$ be the low
+conditional projection, and let $d_j$ be the increments of one fixed
+filtration.  Put
+\[
+                         R_j=d_j(\Xi_*-\Xi_0).
+\]
+Martingale orthogonality yields
+\[
+\begin{split}
+{1\over2}\E(\|\Xi_*\|^2-\|\Xi_0\|^2)
+={}&{1\over2}\E(\|P_\ell\Xi_*\|^2-\|P_\ell\Xi_0\|^2)\\
+&+\sum_j\left\{
+ \E\ip{d_j\Xi_0}{R_j}+{1\over2}\E\|R_j\|^2\right\}.
+\end{split}                                                    \tag{3.5}
+\]
+If the once-owned covariance partition is
+\[
+                 \Gamma=\Gamma_\ell+\sum_j\Delta\Gamma_j,    \tag{3.6}
+\]
+trace linearity gives the exact square-minus-trace version of (3.5).
+The primary four-atom fixture and an independent eight-atom,
+three-coordinate, four-level fixture check reconstruction, pairwise
+orthogonality, total and coordinate-shell Pythagoras, relative recoding, and
+trace linearity.
+
+\subsection*{Boundary 3.1: this is not a legacy-root transport theorem}
+
+The compression from the fixed six rows to $\Xi$ depends on the state.
+Conditional expectation therefore need not commute with it.  An arbitrary
+legacy collection of root blocks does not acquire one common terminal merely
+because its terminal norms agree.  The independent tower fixture has
+\[
+ \phi_1=(-1,-1,1,1),\qquad \phi_2=(0,2,4,6),
+\]
+but
+\[
+                  \E[\phi_2\mid\mathcal F_1]=(1,1,5,5)\ne\phi_1. \tag{3.7}
+\]
+The legal repair is to recombine the complete terminal first and rerun Doob
+directly in $\Xi$ space.
+
+\subsection*{Boundary 3.2: matching trace is not matching energy}
+
+Let $C(z)$ and $c$ be $\cA$-measurable, put $B=C^TC$, and for a fresh
+derivative $G$ define
+\[
+ \mu=\E[G\mid\cA],\qquad \Sigma_c=\Cov(G\mid\cA).
+\]
+Then
+\[
+\begin{split}
+\E\left[{1\over2}|C(z)(G+c)|^2
+-{1\over2}\Tr(B(z)\Gamma)\mid\cA\right]
+={}&{1\over2}|C(z)(c+\mu)|^2\\
+&+{1\over2}\Tr[B(z)(\Sigma_c-\Gamma)].
+\end{split}                                            \tag{3.8}
+\]
+The nonnegative matching-energy specialization requires
+$\mu=0$ and $\Sigma_c=\Gamma$.  Later feedback can change either quantity,
+leaving a signed covariance defect.
+
+The correct heat lift is
+\[
+ \Xi_\Sigma(z,y)(r')=C(z+r')y,
+ \qquad
+ \|\Xi_\Sigma(z,y)\|^2=y^T(P_\Sigma B)(z)y.          \tag{3.9}
+\]
+In general
+\[
+ P_\Sigma B-(P_\Sigma C)^T(P_\Sigma C)
+ =\E[(C-P_\Sigma C)^T(C-P_\Sigma C)]\succeq0,        \tag{3.10}
+\]
+and the independent nonzero Gram-gap fixture verifies that the difference
+cannot be dropped.
+
+\section*{4. The physical response must precede pullback}
+
+At fixed conditional law the R-123 action owner is
+\[
+ \cP_{\rm comp}=-{1\over2}\cT,
+ \qquad q_{\rm comp}=q_{\rm CN}-{1\over2}q_{\rm fut}. \tag{4.1}
+\]
+Combining R-128 and R-129 gives the exact bilinear identity
+\[
+\boxed{
+q_{\rm comp}(H,K)=
+\Rea\ip{\E_f\dot J_H}{\E_f\dot J_K}
++\Rea\ip{\Phi}{\E_f\ddot J_{H,K}}
+-{1\over2}D^2\Theta[H,K].}                            \tag{4.2}
+\]
+Thus the conditional-mean terms which canceled in $q_{\rm CN}$ return when
+the actual smaller action owner is reconstructed.
+
+On a finite physical cylinder define the bilinear form
+\[
+ \beta_{{\rm comp},h}(z,w)
+ =\sum_{\rm owners}\E q_{{\rm comp},h}(Z_h)[z,w].     \tag{4.3}
+\]
+For predictable synthesis $L_{\rm pred}$, first take the physical Riesz
+response
+\[
+ A_{{\rm comp},h}u
+ =\bigl(\beta_{{\rm comp},h}(\,\cdot\,,L_{\rm pred}u)\bigr)^\sharp,
+\]
+and only then pull back:
+\[
+                         H_{{\rm comp},h}=L_{\rm pred}^*A_{{\rm comp},h}.
+                                                               \tag{4.4}
+\]
+In finite matrices, $A=q_{m comp}L$ and $H=L^*q_{m comp}L$.
+The two executable routes use different dimensions and rational matrices;
+both verify the action identity, selfadjoint pullback, vertical kernel, and
+orthogonal physical-shell forward/reverse sums.
+
+Every physical pullback annihilates $\Ker L$.  In the primary fixture
+\[
+ L=\begin{pmatrix}1&0&1\\0&1&-1\end{pmatrix},
+ \qquad v=(-1,1,1)^T\in\Ker L,
+\]
+one has
+\[
+ v^THv=0,
+ \qquad v^T{9\over10}Iv={27\over10}.                 \tag{4.5}
+\]
+The source cost cannot be hidden inside the physical response.  Moreover,
+(4.3)--(4.4) may initially define only a cylindrical or densely defined
+form.  R-130 supplies no cutoff/chart-uniform bounded bare-$L^2$ extension.
+
+\section*{5. Exact fixed-six-row conormal Gram envelopes}
+
+Let $S_A$ be the three embedded real Pauli generators and put
+\[
+ q_A(u)={u^TS_Au\over |u|^2+e},\qquad
+ T_A=S_A-\alpha q_AI,
+\]
+\[
+ p_A=2S_Au,\qquad \ell_A=2T_Au.                       \tag{5.1}
+\]
+Define
+\[
+ C_6(u)v=
+ \bigl(\sqrt{c_0}\,p_A\!\cdot v,
+       \sqrt{c_1}\,\ell_A\!\cdot v\bigr)_{A=1}^3,
+ \qquad B_e=C_6^TC_6.                                 \tag{5.2}
+\]
+The A1 coefficients diagonalize exactly:
+\[
+ a=c_0+c_1(1-\alpha)^2,
+ \quad b=c_1\alpha(1-\alpha),
+ \quad c=c_1\alpha^2,                                 \tag{5.3}
+\]
+and hence
+\[
+ B_e(u)\preceq\beta_{\rm op}|u|^2I,
+ \qquad \beta_{\rm op}=4(a+2b+c)={339\over2000P}.    \tag{5.4}
+\]
+
+\subsection*{Theorem 5.1 (pointwise Gram envelopes)}
+
+For every frozen real symmetric pointwise matrix $Q$,
+\[
+ |D(B_e:Q)[a]|
+ \le L_6\|Q\|_{\rm op}|u||a|,                        \tag{5.5}
+\]
+\[
+ \left|{1\over2}D^2(B_e:Q)[a,a]\right|
+ \le H_6\|Q\|_{\rm op}|a|^2,                        \tag{5.6}
+\]
+where
+\[
+ L_{\rm lin}=24c_0={36\over125P},
+ \quad
+ L_{\rm rat}=3c_1{3808\over81}={1071\over250P},
+ \quad
+ \boxed{L_6={1143\over250P}},                        \tag{5.7}
+\]
+and
+\[
+ H_{\rm lin}=12c_0={18\over125P},
+\]
+\[
+ H_{\rm rat}
+ =3c_1\left({4624+5600+2240\over81}\right)
+ ={7011\over500P},
+ \qquad
+ \boxed{H_6={7083\over500P}}.                       \tag{5.8}
+\]
+
+For the rational row set
+\[
+ R_A=(S_A-q_AI)u,
+ \qquad \nabla q_A={2R_A\over d},
+\]
+\[
+ D^2q_A={2(S_A-q_AI)\over d}
+ -{4(uR_A^T+R_Au^T)\over d^2},
+ \qquad
+ F_A=T_A-\alpha u(\nabla q_A)^T.                     \tag{5.9}
+\]
+If $w_A=Q(T_Au)$ and $\beta_A=u^TQ(T_Au)$, the exact half-Hessian matrix of
+$\ell_A^TQ\ell_A$ is
+\[
+\boxed{
+ K_A(Q)=4F_A^TQF_A
+ -4\alpha\beta_A D^2q_A
+ -4\alpha(\nabla q_Aw_A^T+w_A\nabla q_A^T).}         \tag{5.10}
+\]
+The elementary chain
+\[
+ |T_Au|\le{14\over9}|u|,
+ \quad |u||\nabla q_A|\le4,
+ \quad \|F_A\|\le{34\over9},
+ \quad |u|^2\|D^2q_A\|\le20                         \tag{5.11}
+\]
+produces the three terms
+$4624/81$, $5600/81$, and $2240/81$.  The primary route checks (5.10)
+symbolically on a two-real slice.  The independent route derives the quotient
+with exact second-order jet arithmetic on a different three-real fixture and
+checks independent frozen rational oracles.
+
+For the physical energy $E=(B_e:Q)/2$, the force, Hessian, and Taylor
+remainder constants are, respectively,
+\[
+ {L_6\over2}={1143\over500P},
+ \qquad H_6={7083\over500P},
+ \qquad {H_6\over2}={7083\over1000P}.                \tag{5.12}
+\]
+This factor firewall is part of the theorem.  If $Q=Q(u)$, the derivatives
+of $Q$ must be added.  Pointwise bounds (5.5)--(5.6) do not themselves imply
+a spatial multiplier, shell-decay, or uniform response theorem.
+
+\section*{6. A floor-uniform separated rational $H^2$ no-go}
+
+Let
+\[
+ F_e(s)={s^3\over s^2+e},\qquad G_e(x)=F_e(\sin x)
+\]
+on the normalized circle.  Its boundary profile
+\[
+ f(y)={y^3\over1+y^2}
+\]
+satisfies
+\[
+ f''(y)={2y(3-y^2)\over(1+y^2)^3},
+ \qquad
+ \int_{\mathbb R}|f''(y)|^2\dd y={3\pi\over4}.       \tag{6.1}
+\]
+The two zero layers of $\sin x$ give
+\[
+ \boxed{
+ \lim_{e\downarrow0}e^{1/2}
+ \|G_e''\|_{L^2(\mathbb T,\dd x/(2\pi))}^2={3\over4}}, \tag{6.2}
+\]
+and therefore
+\[
+                    \|G_e''\|_2\sim{\sqrt3\over2}e^{-1/4}. \tag{6.3}
+\]
+The primary route derives (6.1) exactly.  The independent route uses an
+adaptive boundary-rescaled Simpson calculation down to $e=10^{-6}$ and
+checks both coefficients.
+
+Equations (6.2)--(6.3) rule out a floor-uniform estimate obtained by
+separating the rational coefficient and bounding $D^2C$ in unweighted
+$H^2$.  They do not refute the complete Gram route: the cancellation between
+$C\,D^2C$ and $(DC)^2$ inside $D^2(C^TC)$ is load-bearing.
+
+\section*{7. The sharp balanced bridge and its present boundary}
+
+For periodic vector-valued $z$, integration by parts gives
+\[
+ -\int |z|^2z\cdot\Delta z
+ =\int |z|^2|\nabla z|^2
+ +2\sum_i\int(z\cdot\partial_i z)^2.                 \tag{7.1}
+\]
+Cauchy--Schwarz proves (1.1).  The constant is sharp: for
+\[
+                         z=A(\cos Nx,\sin Nx)          \tag{7.2}
+\]
+both sides equal $A^4N^2$.  The independent route also checks (7.2) by a
+4096-point vector-circle integration and verifies that a constant below one
+fails.
+
+Let
+\[
+ A_0={M_R^2\over c_{\rm sym}},
+ \qquad C_{\rm br}=\sqrt{32A_0}.                      \tag{7.3}
+\]
+The A1/A8 bridge converts the mixed term to
+\[
+ c_{\rm bal}\int|z|^2|\nabla z|^2
+ \le c_{\rm bal}C_{\rm br}\sqrt{XY},                 \tag{7.4}
+\]
+up to the already recorded Gaussian baseline constant.  It is payable by
+$\eta X+\zeta Y$ if
+\[
+                     c_{\rm bal}C_{\rm br}\le2\sqrt{\eta\zeta}. \tag{7.5}
+\]
+The reserve data are read from the R-103 executable authority, not copied as
+untracked literals:
+\[
+ \eta_{\rm av}={197\over440}-{3\over125P},
+ \qquad \zeta_{\rm av}={3\over25}.                   \tag{7.6}
+\]
+The independently recomputed values are
+\[
+ C_{\rm br}=17.1842828361\ldots,
+ \qquad
+ c_{\rm bal,max}
+ ={2\sqrt{\eta_{\rm av}\zeta_{\rm av}}\over C_{\rm br}}
+ =0.0267957744\ldots.                                \tag{7.7}
+\]
+
+The live full-cross Cartan factor is read from the R-124 executable authority.
+Its oriented half is
+\[
+ c_{\rm Cartan}^{\rm or}
+ ={1\over2}{2680\over729}c_1
+ ={67\over1200P}=0.0139583333\ldots,                 \tag{7.8}
+\]
+and
+\[
+ {c_{\rm Cartan}^{\rm or}\over c_{\rm bal,max}}
+ =0.5209154659\ldots<1.                               \tag{7.9}
+\]
+In the full-cross convention both the coefficient and the acceptance
+denominator double, so the ratio is unchanged.  This is only a local
+viability diagnostic.  It is not a global upper bound on the complete
+production $c_{\rm bal}$; $C_{\rm mix}$, $C_{\rm far}$, $R_0$, $S_0$, and
+same-channel spending can change the available ceiling.
+
+\section*{8. A centered-heat direct-low candidate}
+
+Let
+\[
+ \gamma_\ell(x)=\sum_i\Tr\Gamma_{\ell,i}(x,x),
+ \qquad g_\ell=\|\gamma_\ell\|_\infty,
+\]
+and let
+\[
+ s_\Sigma^2(x)=\E_r|r(x)|^2
+\]
+for a deterministic or strict-past centered heat.  For
+\[
+ Q_\ell(Z)={1\over2}\|\Phi_\ell(Z)\|^2
+ -{1\over2}\Theta_\ell(Z),                           \tag{8.1}
+\]
+discard only the positive mean square.  The operator inequality (5.4), heat
+centering
+\[
+ \E_r|Z+r|^2=|Z|^2+s_\Sigma^2,                       \tag{8.2}
+\]
+and the once-owned trace give
+\[
+ Q_\ell(Z)\ge
+ -{\beta_{\rm op}\over2}g_\ell\|Z\|_2^2
+ -C_{\Sigma,\ell},                                   \tag{8.3}
+\]
+where
+\[
+ C_{\Sigma,\ell}
+ ={\beta_{\rm op}\over2}
+ \int\gamma_\ell(x)s_\Sigma^2(x)\dd x.             \tag{8.4}
+\]
+For volume $V$ and $Y=\|Z\|_6^6$,
+\[
+ \|Z\|_2^2\le V^{2/3}Y^{1/3}.                       \tag{8.5}
+\]
+Set
+\[
+                  a_\ell={\beta_{\rm op}\over2}g_\ell V^{2/3}.
+\]
+The sharp scalar maximization gives, for every $\zeta>0$,
+\[
+ a_\ell Y^{1/3}
+ \le\zeta Y+{2a_\ell^{3/2}\over3\sqrt{3\zeta}},     \tag{8.6}
+\]
+and hence
+\[
+ \boxed{
+ \E Q_\ell
+ \ge-\zeta\E Y
+ -{2a_\ell^{3/2}\over3\sqrt{3\zeta}}
+ -C_{\Sigma,\ell}.}                                  \tag{8.7}
+\]
+On the $16^3$ torus,
+\[
+ {a_\ell\over g_\ell}={2712\over125P}=5.423999\ldots. \tag{8.8}
+\]
+The primary route checks the centered heat, trace operator factor, finite
+volume Holder equality case, and Young maximizer.  The independent route
+checks the cubic volume and the global scalar maximum on a deterministic
+grid.
+
+The conditional hypothesis in (8.2) fails for anticipative heat.  More
+importantly, (8.7) is a new direct-low candidate after terminal
+recombination.  It is not an identification with the R-079 conditional or
+complete-low owners and does not supply their $D,K,R_0,S_0$ data or the
+absolute baseline.
+
+\section*{9. Complete-square Gram Schur and two exact failures}
+
+Let a complete positive square have the form
+\[
+                         \|Wx+T\ell\|^2.
+\]
+Its Gram blocks are
+\[
+ M_2=W^*W,\qquad K=W^*T,\qquad D=T^*T.               \tag{9.1}
+\]
+When $D$ is invertible,
+\[
+ \boxed{
+ M_2-KD^{-1}K^*=W^*(I-P_T)W\succeq0.}               \tag{9.2}
+\]
+Thus the Douglas range relation for the internal low coupling is automatic.
+For noninvertible $D$, the same statement uses the reduced solution or
+closed-range formulation.
+
+Semidefiniteness is not a strict gap.  If
+$\Ran W\subseteq\Ran T$, the right side of (9.2) is zero.  The primary
+rank-one fixture realizes zero exactly; the independent route uses different
+three-dimensional $T,W$, obtains a positive Schur fixture with determinant
+$75/2$, and then a distinct rank-one $W_0$ with zero Schur complement.
+
+Nor is a childwise square refinement invariant:
+\[
+                         1^2+(-1)^2=2>(1-1)^2=0.      \tag{9.3}
+\]
+The independent route repeats the obstruction with children $2,-2$ and
+also checks the cross factor in the full block expansion.  Children must be
+aggregated before the terminal quotient; a complete square alone does not
+give the strict augmented gap required by A13.
+
+\section*{10. Proof-search evidence map}
+
+The reusable proof decisions are summarized below.  Each substantive verdict
+also has an append-only exploration-ledger entry; the two broad no-go families
+are promoted to the negative registry.
+
+\begin{center}
+\begin{tabular}{p{0.34\linewidth}p{0.16\linewidth}p{0.40\linewidth}}
+\hline
+Route & Verdict & Boundary or revisit condition\\
+\hline
+Post-recombined $\Xi$ Doob recode & advanced & Fixed terminal pair,
+filtration, and trace partition only.\\
+Legacy roots share the $\Xi$ terminal & failed & Recombine first and rerun
+Doob.\\
+Matching trace implies matching energy & failed & Revisit only with
+$\mu=0$, $\Sigma_c=\Gamma$.\\
+Average $C$ before squaring heat & failed & Retain $P_\Sigma(C^TC)$.\\
+Finite response before pullback & advanced & Uniform production extension
+open.\\
+Hide $9I/10$ in physical response & failed & Source owner remains separate.\\
+Pointwise six-row envelopes & advanced & Multiplier and shell estimates
+open.\\
+Separated floor-uniform rational $H^2$ & failed & Retain complete Gram
+cancellation.\\
+Sharp balanced bridge & advanced & Complete global $c_{\rm bal}$ open.\\
+Local Cartan budget & viable diagnostic & Compute all global owners before
+acceptance.\\
+Centered-heat direct low & conditional advance & Prove owner equivalence and
+absolute anchor.\\
+Complete Gram gives PSD Schur & advanced & Strict gap needs quantitative
+transversality.\\
+Complete Gram gives strict gap & failed & Rank-one alignment has zero gap.\\
+Childwise refinement squares & failed & Aggregate before quotient.\\
+\hline
+\end{tabular}
+\end{center}
+
+The main strategic consequence is narrow.  The common-terminal coordinate,
+response order, pointwise Gram calculus, sharp balanced bridge, and direct-low
+candidate are now fixed.  The next proof must estimate the complete
+owner response in the production spatial norms, calculate the global
+$C_{\rm mix}$, $C_{\rm far}$, and $c_{\rm bal}$ without double spending,
+and prove a transverse low gap or an equivalent absolute anchor.  Repeating
+legacy rootwise compression, separated rational $H^2$, or childwise square
+refinement cannot close those gates.
+
+\section*{11. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: the $\Xi$ identity transports every R-079 root
+block.  UPHELD against that inference.}  The compression is state-dependent;
+only a new post-recombined Doob decomposition is valid.
+\item \textbf{Objection: matching trace gives a positive matching-energy
+packet.  UPHELD.}  Equation (3.8) retains a signed covariance defect unless
+$\mu=0$ and $\Sigma_c=\Gamma$.
+\item \textbf{Objection: the finite response fixture constructs the A1
+production response.  UPHELD.}  It certifies the order of construction and
+kernel/source firewall only; the uniform production form estimate is open.
+\item \textbf{Objection: pointwise Gram constants imply the shell bound.
+UPHELD.}  Spatial multipliers, heat, chart derivatives, and shell decay still
+have to be controlled.
+\item \textbf{Objection: the separated $H^2$ divergence refutes the complete
+Gram route.  DISMISSED.}  The no-go targets $D^2C$ alone, while Theorem 5.1
+keeps the cancellation in $D^2(C^TC)$.
+\item \textbf{Objection: the local Cartan ratio closes $c_{\rm bal}$.
+UPHELD.}  It is one local owner and not the global coefficient.
+\item \textbf{Objection: the direct-low bound closes R-079 low.
+UPHELD.}  Owner identification, matching energy, $D,K,R_0,S_0$, and the
+absolute baseline remain missing.
+\item \textbf{Objection: a complete Gram square gives a strict gap.
+UPHELD.}  Rank-one alignment makes the Schur complement zero.
+\item \textbf{Objection: the source cost belongs to the physical pullback.
+UPHELD.}  The pullback vanishes on $\Ker L$ while $9I/10$ does not.
+\item \textbf{Objection: forward and reverse create two reserves.
+UPHELD.}  They are one true-adjoint owner.
+\item \textbf{Objection: R-130 closes A13 or Sector A.  DISMISSED.}  Both
+A13 gates, the production response, global balanced/low closure, and the
+subsequent Nelson chain remain open.
+\end{enumerate}
+
+\section*{12. Executed evidence and reproduction}
+
+The primary route uses SymPy exact algebra and reads A1, A8, R-103, and R-124
+upstream evidence directly.  It derives all reported constants and writes an
+atomic JSON result.  The independent route uses only the Python standard
+library, does not import or read the primary result, and uses different exact
+jet, eight-atom terminal, physical-response, heat-Gram, Schur, adaptive-floor,
+vector-circle, and global-Young fixtures.
+
+Run
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe \
+  codes/foundations/a13_classii_terminal_xi_conormal_gram_balanced_low_response_boundary.py
+
+E:\Dev\TECT.venv\Scripts\python.exe \
+  codes/foundations/a13_classii_terminal_xi_conormal_gram_balanced_low_response_boundary_independent.py
+\end{verbatim}
+The frozen child outputs are
+\begin{verbatim}
+R-130 primary PASS: 58/58
+R-130 independent PASS: 90/90
+\end{verbatim}
+The integrated verifier additionally checks authority and file hashes,
+semantic scopes, generated surfaces, exploration and negative records,
+source-to-PDF rebuilding, zero overfull boxes, extracted page identity,
+hash-pinned 130-DPI Poppler renders, recursive PDF security including
+associated and embedded files, all-page visual inspection, and deterministic
+JSON output.
+
+\section*{13. Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-TERMINAL-XI-CONORMAL-GRAM-BALANCED-LOW-
+  RESPONSE-BOUNDARY (R-130).
+Precise statement: fixed post-recombined Xi terminal and matching-trace
+  recode in Section 3; finite-cylinder physical-response-before-pullback
+  construction in Section 4; exact frozen-Q six-row Gram envelopes in
+  Theorem 5.1; separated rational D2 floor no-go in Section 6; sharp
+  constant-one balanced bridge in Section 7; centered-heat direct-low
+  candidate in Section 8; complete-Gram PSD Schur identity and exact
+  strict-gap/refinement failures in Section 9.
+Scope: fixed finite cutoff and positive floor; fixed temporally faithful
+  chart, conditional law, filtration, terminal pair, and once-owned
+  covariance partition; finite matrices for the response fixtures; frozen
+  pointwise Q for the six-row derivative envelopes.
+Dependencies: A1, A8; R-079, R-082, R-103, R-104, R-120, R-121, R-123,
+  R-124, R-128, and R-129.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_terminal_xi_conormal_gram_balanced_low_
+  response_boundary_verify.py
+Expected output: R-130 integrated PASS; primary 58/58 and independent 90/90;
+  manifest, PDF, exploration, negative-result, and generated-surface gates
+  pass with deterministic integrated JSON.
+Falsification gate: failure of the Xi/Fierz recode or trace partition; heat
+  Gram inequality; response action, adjoint, or kernel fixture; L6 or H6
+  envelope; rational zero-layer asymptotic; balanced constant-one identity;
+  centered-heat low bound; Schur identity or zero-gap/refinement fixtures;
+  any authority/hash, PDF, exploration, registry, or public-surface check.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no arbitrary legacy-root transport, unconditional
+  matching energy, uniform production response, spatial multiplier/shell
+  theorem, complete C_mix/C_far/c_bal, historical R-079 low closure, strict
+  gap, absolute anchor, OVERLAP_src, Nelson, removal, interacting measure,
+  Sector-A closure, or T5--T7 result follows.
+Next required action: prove A13-CLASSII-OWNER-COMPLETE-TRACE-EXCESS-PHYSICAL-
+  RESPONSE-FORWARD-BALANCED-LOW-BOUND, including the uniform complete response,
+  C_mix, C_far, global c_bal, matching energy, low transversality or D/K/R0/S0,
+  and the absolute anchor before invoking R-129 coanalysis.
+Proof complete: false.  Sector A closed: false.
+\end{verbatim}
+
+\paragraph{No-overclaim footer.}
+R-130 proves a fixed post-recombination common-terminal coordinate, an
+abstract finite-cylinder response-before-pullback construction and kernel
+firewall, exact fixed-six-row pointwise Gram envelopes, a sharp deterministic
+balanced inequality, and a centered-heat direct-low candidate.  It does not
+prove a cutoff-, floor-, chart-, control-, filtration-, visit-, shell-, or
+refinement-uniform bounded production response; complete $C_{\rm mix}$,
+$C_{\rm far}$, or $c_{\rm bal}$; historical R-079 low-owner closure; a
+strict augmented gap; the production common-terminal matching-energy theorem
+or absolute anchor; $\mathrm{OVERLAP}_{\rm src}$; Nelson; removals; an
+interacting measure; Sector-A closure; or T5--T7 promotion.
+
+\endgroup

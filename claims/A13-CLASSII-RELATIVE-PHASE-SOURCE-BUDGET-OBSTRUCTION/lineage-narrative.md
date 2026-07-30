@@ -815,6 +815,29 @@ endpoint theorem.
     prove `C_mix`, `C_far`, `c_bal`, `D,K,R0,S0`, the absolute anchor, and the
     common terminal once. Both A13 gates and Sector A remain open at T4.
 
+58. **Post-recombined terminal, conormal Gram, balanced, and direct-low
+    boundary.** R-130 reruns the complete current in the exact R-082 `Xi`
+    coordinate and proves one fixed-filtration common-terminal square and
+    trace recode after recombination. The state-dependent compression does
+    not transport arbitrary legacy root blocks, matching trace does not imply
+    matching energy under feedback, and heat remains `E[C^T C]` rather than
+    `(E C)^T(E C)`. The R-123 action owner has a canonical finite-cylinder
+    physical response before predictable pullback, but the executable matrix
+    theorem is not a uniform A1 response estimate; its vertical kernel keeps
+    the source cost separate. Exact six-row Gram calculus gives pointwise
+    constants `L6=1143/(250P)` and `H6=7083/(500P)`. A scalar zero-layer
+    proves that separated rational second derivatives are not floor-uniform,
+    directing the proof back to the complete Gram cancellation. The sharp
+    vector balanced bridge has constant one, and the local Cartan coefficient
+    passes the present old-budget diagnostic with ratio `0.520915...`, but the
+    complete global coefficient is still unknown. A centered-heat direct-low
+    candidate and PSD complete-Gram Schur formula advance the low channel,
+    while rank-one alignment and child cancellation rule out an automatic
+    strict gap or refinement theorem. The live successor is the uniform
+    owner-complete production response with `C_mix`, `C_far`, global
+    `c_bal`, matching energy, low transversality or `D,K,R0,S0`, and an
+    absolute anchor. Both A13 gates and Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

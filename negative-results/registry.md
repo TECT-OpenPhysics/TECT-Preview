@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-31-A13-UNWEIGHTED-RATIONAL-D2-FLOOR-UNIFORMITY](#ng-2026-07-31-a13-unweighted-rational-d2-floor-uniformity) | obtain a floor-uniform production estimate by separating the rational coefficient and bounding its unweighted second spatial derivative | for `F_e(s)=s^3/(s^2+e)` and `G_e(x)=F_e(sin x)`, `sqrt(e)||G_e''||_2^2 -> 3/4`, hence `||G_e''||_2 ~ (sqrt(3)/2)e^(-1/4)`. The no-go targets separated `D2 C`, not the cancellation retained in `D2(C^T C)` |
+| [NG-2026-07-31-A13-COMPLETE-LOW-SQUARE-STRICT-GAP-REFINEMENT](#ng-2026-07-31-a13-complete-low-square-strict-gap-refinement) | infer a strict augmented low gap or childwise refinement invariance solely from a complete positive Gram square | the exact Schur complement is `W^*(I-P_T)W>=0` but vanishes when `Ran W` lies in `Ran T`; independently, child squares `1^2+(-1)^2=2` collapse to terminal square zero. Aggregate before quotient and prove quantitative transversality separately |
 | [AUDIT-2026-07-30-A13-COVARIANCE-NORMAL-DOMINANCE-ACTION-DIRECTION](#audit-2026-07-30-a13-covariance-normal-dominance-action-direction) | use `E_CN=P_comp+V/2>=P_comp` to lower-bound the R-123 direct action owner or to delete the future variance in a secant | the inequality points from the smaller action packet to the larger covariance-normal endpoint. The exact R-125 constant-translation owner has `V=T=4s`, hence `E_CN=0` but `P_comp=-2s`; an endpoint difference can also have `Delta E_CN=-1/2` and `Delta P_comp=0` |
 | [NG-2026-07-30-A13-SEPARATE-VARIANCE-TRACE-HESSIAN-NORM-NECESSITY](#ng-2026-07-30-a13-separate-variance-trace-hessian-norm-necessity) | require separate uniform norm bounds for `H_V` and `H_T` before any direct signed covariance-normal Hessian estimate can close | the Gaussian family `V_n=(n+1)z^2`, `T_n=nz^2` has Hessians `2n+2` and `2n`, while `E_CN=(V_n-T_n)/2=z^2/2` has Hessian one. Separate bounds are sufficient but not logically necessary; the direct production signed bound remains open |
 | [NG-2026-07-30-A13-CONDITIONAL-POINCARE-PARAMETER-SEMICONVEXITY](#ng-2026-07-30-a13-conditional-poincare-parameter-semiconvexity) | differentiate a conditional Gaussian Poincare inequality to obtain a uniform external-parameter Hessian bound | `J_N(z,eta)=cos(Nz)eta` attains Poincare equality for every `z`, but its variance has second `z` derivative `-2N^2` at zero. Source-variable coercivity does not imply parameter semiconvexity |
@@ -191,6 +193,52 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-31-a13-unweighted-rational-d2-floor-uniformity"></a>
+### NG-2026-07-31-A13-UNWEIGHTED-RATIONAL-D2-FLOOR-UNIFORMITY -- separated rational second derivatives are not floor-uniform
+
+**Claim / route.**  Prove the production spatial multiplier estimate by
+separating the rational coefficient map `C_e` from its complete Gram and
+bounding `D2 C_e` uniformly in the density floor in unweighted `H2`.
+
+**Failure mode.**  On the normalized circle let
+`F_e(s)=s^3/(s^2+e)` and `G_e(x)=F_e(sin x)`.  The boundary profile
+`f(y)=y^3/(1+y^2)` has
+`f''(y)=2y(3-y^2)/(1+y^2)^3` and exact integral
+`integral_R |f''|^2=3pi/4`.  The two zero layers give
+`sqrt(e)||G_e''||_2^2 -> 3/4`, hence
+`||G_e''||_2 ~ (sqrt(3)/2)e^(-1/4)`.
+
+**Evidence.**  R-130 proof note, Section 6; exact SymPy derivation; independent
+adaptive boundary-rescaled quadrature at floors `1e-2`, `1e-4`, and `1e-6`.
+
+**Consequence.**  A coefficientwise unweighted `H2` estimate cannot be the
+floor-uniform production proof.  This does not refute the complete Gram
+route: the cancellation between `C D2C` and `(DC)^2` inside `D2(C^T C)` is
+retained by R-130 Theorem 5.1.
+
+<a id="ng-2026-07-31-a13-complete-low-square-strict-gap-refinement"></a>
+### NG-2026-07-31-A13-COMPLETE-LOW-SQUARE-STRICT-GAP-REFINEMENT -- a complete Gram square supplies no automatic strict gap or child refinement
+
+**Claim / route.**  Infer the strict augmented low gap and subdivision
+invariance directly from the fact that all low blocks arise from one complete
+positive square `||Wx+T ell||^2`.
+
+**Failure mode.**  Its exact Schur complement is
+`W^*(I-P_T)W>=0`, but it is identically zero whenever
+`Ran W` is contained in `Ran T`.  Primary and independent rational fixtures
+realize both a positive semidefinite Schur block and a rank-one zero block.
+Separately, child values `1,-1` have square sum two while their terminal sum
+has square zero; the independent `2,-2` fixture repeats the failure.
+
+**Evidence.**  R-130 proof note, Section 9; primary exact matrix audit;
+independent three-dimensional Gram, cross-factor, rank-one, and refinement
+audits.
+
+**Consequence.**  Complete-square structure proves the Douglas range
+relation and semidefiniteness only.  A strict A13 low gap requires quantitative
+transversality or an equivalent anchor, and child packets must be aggregated
+before the terminal quotient.
 
 <a id="audit-2026-07-30-a13-covariance-normal-dominance-action-direction"></a>
 ### AUDIT-2026-07-30-A13-COVARIANCE-NORMAL-DOMINANCE-ACTION-DIRECTION -- covariance-normal dominance has the wrong direction for the R-123 action

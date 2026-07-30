@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-130](#r-130) | Post-recombined terminal coordinate, conormal Gram envelopes, sharp balanced bridge, and direct-low response boundary | Scoped T4 analytic/exact/executed advance. After exhaustive current recombination, the R-082 `Xi` coordinate admits an exact fixed-filtration Doob and matching once-owned trace recode, but not arbitrary legacy-root transport or matching energy without `mu=0` and `Sigma_c=Gamma`. The R-123 action owner has a canonical response-before-pullback construction on finite cylinders; exact kernel fixtures keep the `9I/10` source cost outside the physical pullback, while a uniform production response remains open. The fixed six-row Gram obeys pointwise constants `L6=1143/(250P)` and `H6=7083/(500P)`, with physical force `L6/2`, Hessian `H6`, and Taylor remainder `H6/2`. A scalar boundary layer proves that separated rational `D2C` is not floor-uniform. The sharp deterministic balanced bridge has constant one; the local Cartan diagnostic is `0.520915...` of the old-budget ceiling, but no global `c_bal` upper bound follows. A centered-heat direct-low candidate and complete-Gram PSD Schur theorem are proved, while historical R-079 low-owner equivalence, a strict gap, childwise refinement, production `C_mix/C_far/c_bal`, the absolute anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-129](#r-129) | Endpoint trace-excess direction, shell coanalysis legal reverse, and the shifted-Douglas gap boundary | Scoped T4 analytic/exact/executed advance and route correction. The exact identity `E_CN=P_comp+V/2>=P_comp` holds only at an absolute conditional endpoint and has the wrong direction for lower-bounding the smaller R-123 action owner; exact endpoint and secant fixtures prevent that bypass. Direct covariance-normal differentiation cancels every conditional-mean derivative, and a Gaussian family proves that separate `H_V` and `H_T` norm bounds are not logically necessary if a direct signed bound is proved. For an owner-complete physical response `A`, orthogonal physical-shell analysis `R=C L_pred` and response analysis `F=C A` give `H=R^*F=F^*R`; the true aggregate reverse is legal, shell-count-free, and has the forward norm without assuming temporal covariance/shell commutation. It is not a swapped-label geometric band, and pullback costs `||L_pred||`. The shifted-Douglas theorem gives an exact prescribed-gap criterion and the norm threshold `k^2<d m_2`, with `m_2=0.0239601163...` only in the R-128 zero-diagonal specialization. Production response identification, forward constants, balanced/low/anchor data, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-128](#r-128) | Owner-complete source pullback, covariance-normal force repair, and the strict-margin frontier | Scoped T4 analytic/exact/executed correction and advance: differentiating the exact R-104 renormalized-interaction owner identity on a fixed smooth temporally faithful chart gives the recombined legal control covector and common Hessian, with pullback conjugacy under fixed bounded linear refinements; R-119 remains the prior authority for common control-Hessian factorisation. Bounded smooth fixtures separate control-shift from Malliavin differentiation and expose both feedback Jacobian and connection terms. The complete R-125 covariance-normal force is `(g_V-g_T)/2`, not the naked R-126 trace-excess force; the sextic and source-cost derivatives are included explicitly. Rootwise adaptation does not imply a common terminal, and one-sided projection does not supply a reverse adjoint. Reallocating half of the flexible R-103 debts gives the conditional zero-diagonal threshold `0.9780518670...` and margin `0.0239601163...` at the old R-126 budget, but no general margin follows before adverse diagonal blocks are absorbed. Full force completion and full Hessian payment would double-spend the source square. The production root/shell intertwiner, corrected covariance-normal operator bound, balanced/low matrix, absolute anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-127](#r-127) | Predictable-source Riesz geometry, weighted Schur improvement, and the low-margin boundary | Scoped T4 analytic/exact/executed advance: on a fixed temporally faithful chart the legal source adjoint is blockwise `E[S_b^*G|F_(b-1)]`, the physical quotient Riesz vector is `sum_b S_b E[S_b^*G|F_(b-1)]`, and its source norm is bounded with sharp constant one by `E<G,C_JG>`. A two-block fixture gives an exact factor-two error for the unrestricted replacement `C_JG`. At `q=10/9` source completion costs exactly `5/9` times the legal force square. Weighted Schur improves the collar-one mixed coefficient from `2/sqrt(45)` to `1/sqrt(14)` and the far coefficient from `8/sqrt(16065)` to `sqrt(224/223)/16`; the `3.445813...` threshold is mixed-only and same-channel far terms still add by triangle. The augmented low/injected Loewner criterion proves that saturation admits only the weighted cancellation `b sqrt(zeta)+c sqrt(eta)=0`; otherwise strict margin or a constant payment is required. A constant-gauge argument shows normalized Gibbs/Doob data cannot determine the absolute low anchor. The complete production source-Hessian identification and unified forward/legal-reverse/balanced/low bound remain open, as do `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector-A closure |
@@ -148,6 +149,87 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-130"></a>
+### R-130 -- Post-recombined terminal coordinate, conormal Gram envelopes, sharp balanced bridge, and direct-low response boundary
+
+**Result ID.**
+A13-CLASSII-TERMINAL-XI-CONORMAL-GRAM-BALANCED-LOW-RESPONSE-BOUNDARY.
+
+**Post-recombined terminal.**  The exact R-082 coordinate is
+
+`Xi=(sqrt(c0) dr, sqrt(c1)(dr-alpha r/d drho), 2sqrt(c0+c1) Re h, 2sqrt(c0+c1) Im h)`.
+
+For one fixed terminal pair, filtration, and once-owned covariance partition,
+martingale Pythagoras gives an exact relative square and trace recode.  The
+state-dependent compression does not transport arbitrary legacy root blocks.
+Matching trace is automatic after fixing the same Gamma partition, whereas a
+nonnegative matching-energy packet additionally requires conditional fresh
+mean zero and `Sigma_c=Gamma`; later feedback leaves a signed covariance
+defect.  Heat acts on `E[C^T C]`, not `(E C)^T(E C)`.
+
+**Response before pullback.**  At fixed conditional law,
+`q_comp=q_CN-q_fut/2`, so the R-123 action Hessian restores the
+conditional-mean terms canceled in the covariance-normal owner.  On a finite
+physical cylinder, form its bilinear response `A` first and then
+`H=L_pred^*A`.  Two different exact matrix routes verify pullback symmetry,
+physical-shell forward/reverse coanalysis, and a vertical kernel on which the
+physical response vanishes while `9I/10` is positive.  This certifies the
+construction order and source-cost firewall, not a cutoff/chart-uniform A1
+bounded response.
+
+**Six-row Gram calculus.**  For frozen symmetric pointwise `Q`, the full A1
+Gram satisfies
+
+`|D(B:Q)[a]| <= L6 ||Q||op |u||a|`,
+
+`|(1/2)D2(B:Q)[a,a]| <= H6 ||Q||op |a|^2`,
+
+with `L6=1143/(250P)` and `H6=7083/(500P)`.  For physical energy
+`(B:Q)/2`, the force, Hessian, and Taylor-remainder constants are `L6/2`,
+`H6`, and `H6/2`.  The constants are derived from the quotient Jacobian and
+Hessian chain; an independent exact Jet2 route uses a different three-real
+fixture.  State-dependent `Q` derivatives and spatial multiplier/shell bounds
+remain outside this theorem.
+
+**Balanced and floor boundaries.**  Integration by parts proves the sharp
+constant-one inequality
+
+`integral |z|^2 |grad z|^2 <= ||Delta z||2 ||z||6^3`,
+
+with equality for `z=A(cos Nx,sin Nx)`.  At the R-103 old-budget reserves,
+the oriented acceptance ceiling is `0.0267957744...`; the local R-124 Cartan
+diagnostic is `0.0139583333...`, ratio `0.5209154659...`.  This is a viability
+diagnostic, not a global production `c_bal` bound.  Separately,
+`F_e(s)=s^3/(s^2+e)` gives
+`sqrt(e)||D2(F_e(sin x))||2^2 -> 3/4`, ruling out a separated unweighted
+floor-uniform rational `D2C` route without refuting the complete Gram
+cancellation.
+
+**Direct low and complete Gram.**  Under centered deterministic or
+strict-past heat, the direct low packet obeys
+
+`E Q_low >= -zeta E||Z||6^6 - 2 a_low^(3/2)/(3 sqrt(3 zeta)) - C_Sigma,low`,
+
+with `a_low/g_low=2712/(125P)` on the `16^3` torus.  This packet is not yet
+identified with the historical R-079 low owners.  A complete square gives the
+exact PSD Schur complement `W^*(I-P_T)W`, but rank-one alignment makes it
+zero and child squares do not preserve a terminal cancellation.  Strict gap,
+refinement, absolute anchor, production `C_mix/C_far/c_bal`,
+`OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure
+remain open.
+
+**Proven in.**  A13 proof note
+`classii-terminal-xi-conormal-gram-balanced-low-response-boundary-260731-v1.0`.
+
+**Reuse scope.**  Post-recombined Hilbert martingale coordinates, quotient
+Gram derivative bounds, sharp vector balanced interpolation, low-channel
+Schur diagnostics, and proof-route firewalls.
+
+**Tier:** T4 within the fixed-cutoff/fixed-floor/fixed-chart scope.
+
+**Publication target:** methods/proof-boundary note after the production
+response theorem is resolved.
 
 <a id="r-129"></a>
 ### R-129 -- Endpoint trace-excess direction, shell coanalysis legal reverse, and the shifted-Douglas gap boundary

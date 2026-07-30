@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-31-A13-UNWEIGHTED-RATIONAL-D2-FLOOR-UNIFORMITY | separated rational second derivatives are not floor-uniform |  |
+| NG-2026-07-31-A13-COMPLETE-LOW-SQUARE-STRICT-GAP-REFINEMENT | a complete Gram square supplies no automatic strict gap or c |  |
 | AUDIT-2026-07-30-A13-COVARIANCE-NORMAL-DOMINANCE-ACTION-DIRECTION | covariance-normal dominance has the wrong direction for the  |  |
 | NG-2026-07-30-A13-SEPARATE-VARIANCE-TRACE-HESSIAN-NORM-NECESSITY | separate Hessian norms are not logically necessary for a sig |  |
 | NG-2026-07-30-A13-CONDITIONAL-POINCARE-PARAMETER-SEMICONVEXITY | source Poincare does not control an external parameter Hessi |  |

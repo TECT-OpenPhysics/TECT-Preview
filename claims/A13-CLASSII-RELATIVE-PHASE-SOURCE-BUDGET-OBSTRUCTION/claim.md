@@ -4479,3 +4479,28 @@ T5--T7 promotion remain open. Tier stays T4.
   response, `C_mix`, `C_far`, `c_bal`, low `D,K,R0,S0`, absolute anchor,
   common-terminal bridge, `OVERLAP_src`, Nelson, removals, interacting
   measure, and Sector A remain open; tier stays T4.
+- 2026-07-31: Registered
+  `A13-CLASSII-TERMINAL-XI-CONORMAL-GRAM-BALANCED-LOW-RESPONSE-BOUNDARY`
+  (R-130). The exact R-082 `Xi` coordinate now gives a common-terminal Doob
+  and once-owned matching-trace recode after exhaustive current
+  recombination. It does not transport arbitrary legacy root blocks, and
+  matching energy remains conditional on zero fresh mean and covariance
+  matching. The R-123 action response has a canonical physical-before-source
+  pullback order on finite cylinders; independent kernel fixtures keep the
+  `9I/10` source cost outside that pullback. The fixed six-row Gram has exact
+  pointwise envelopes `L6=1143/(250P)` and `H6=7083/(500P)`, with the physical
+  force/Hessian/Taylor factors fixed. A boundary layer formally retires
+  separated floor-uniform rational `D2C` shelling without refuting the
+  complete Gram cancellation. The sharp balanced bridge has constant one;
+  the live local Cartan diagnostic is `0.520915...` of the old-budget ceiling,
+  but no global `c_bal` bound follows. A centered-heat direct-low candidate
+  and complete-Gram PSD Schur identity are proved, while exact rank-one and
+  child-cancellation fixtures rule out an automatic strict gap or childwise
+  refinement. `EXP-000469--EXP-000482` preserve every advance, failure,
+  inconclusive diagnostic, boundary, and next action; two new formal no-gos
+  record the broad reusable failures. Primary `58/58` and substantively
+  independent standard-library `90/90` checks pass. The uniform production
+  response, `C_mix`, `C_far`, complete `c_bal`, historical R-079 low-owner
+  equivalence, strict low gap, matching energy, absolute anchor,
+  `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
+  open; tier stays T4.
