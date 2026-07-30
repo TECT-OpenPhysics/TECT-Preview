@@ -752,6 +752,28 @@ endpoint theorem.
     every covariance, forest, Cartan, low, and mean owner kept inside
     expectation. Both A13 gates and Sector A remain open at T4.
 
+55. **Predictable-source Riesz geometry and the augmented low-margin
+    frontier.** R-127 computes the legal blockwise source adjoint and quotient
+    Cameron--Martin Riesz vector exactly. A two-block filtration fixture
+    prevents the predictable projections from being collapsed into `C_JG`,
+    while the `q=10/9` completion fixes the adverse force-square coefficient
+    at `5/9`. A weighted triangular Schur theorem improves the mixed and far
+    R-126 aggregation constants without claiming orthogonality or proving the
+    production block prototypes. Extending the Loewner matrix by the
+    low/injected channel shows that saturation is compatible only with an
+    exact weighted cancellation; otherwise a strict margin or a uniform
+    constant payment is required. Final adversarial review makes the margin
+    sign-symmetric, states both block and affine low-channel tests with
+    Douglas reduced solutions, pins the inherited operator budget to R-126, and
+    replaces a shallow PDF action check by resolved-object inspection. The common-terminal middle is only a
+    coordinate, legal predictability gives no reverse sign, and normalized
+    Gibbs--Doob information has an additive-gauge blind spot. The coherent
+    residual interpolation retains the absolute linear anchor and exposes a
+    root-summed integrated variance-minus-curvature target. The next theorem
+    must identify the complete R-093 endpoint derivative as one admissible
+    source Hessian before using reverse adjointness, weighted shell bounds, or
+    the R-093 chart union. Both A13 gates and Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

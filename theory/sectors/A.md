@@ -45,6 +45,9 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-30-A13-UNRESTRICTED-PREDICTABLE-COVARIANCE-COLLAPSE | blockwise predictability cannot collapse to the unrestricted |  |
+| NG-2026-07-30-A13-LOEWNER-SATURATION-LOW-COUPLING | the saturated two-channel budget cannot absorb a generic low |  |
+| NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR | normalized relative data cannot supply the absolute low anch |  |
 | NG-2026-07-30-A13-UNRESTRICTED-REVERSE-BAND-EXTENSION | forward decay does not extend coefficient-blindly to an unre |  |
 | NG-2026-07-30-A13-NAIVE-PRIMITIVE-TRACE-FOREST-IDENTIFICATION | conditional future variance separates primitive trace from t |  |
 | NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION | replica variance does not automatically dominate the trace s |  |

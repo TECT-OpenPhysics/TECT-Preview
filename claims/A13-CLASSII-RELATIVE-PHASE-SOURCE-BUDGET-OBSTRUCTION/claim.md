@@ -4392,3 +4392,31 @@ T5--T7 promotion remain open. Tier stays T4.
   production forward/legal-reverse/balanced/low block estimate,
   `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
   open; tier stays T4.
+- 2026-07-30: Registered
+  `A13-CLASSII-PREDICTABLE-SOURCE-RIESZ-WEIGHTED-SCHUR-LOW-MARGIN-BOUNDARY`
+  (R-127). On every fixed temporally faithful chart, the legal source adjoint
+  is blockwise `E[S_b^*G|F_(t_(b-1))]`; its physical quotient Riesz vector and
+  norm are exact, with sharp conditional-Jensen upper constant one. A
+  two-block fixture proves that the unrestricted covariance collapse `C_JG`
+  is wrong by an exact factor two. The `q=10/9` source completion costs `5/9`
+  of the legal force square. Weighted triangular Schur improves the mixed and
+  far R-126 constants to `sqrt(8/7)` and `sqrt(224/223)` after their external
+  dyadic factors; the advertised `3.445813...` value is a collar-one
+  mixed-only ceiling, and same-channel far terms still add by triangle. The
+  augmented low/injected Loewner theorem shows that two-channel saturation
+  leaves room only for `b sqrt(zeta)+c sqrt(eta)=0`; a generic coupling needs
+  strict margin or a constant payment. A constant-gauge no-go prevents
+  normalized Gibbs/Doob data from supplying the absolute low anchor, while a
+  coherent residual interpolation identifies the exact live integrated
+  variance-minus-curvature target with its linear anchor retained. Three
+  formal negative results and `EXP-000421--EXP-000435` preserve every
+  advanced, failed, inconclusive, synthesized, and final-audit route. The
+  final adversarial pass repaired the one-sided strict-margin premise to
+  `|a|`, replaced both unrestricted Moore--Penrose shorthands by Douglas
+  reduced solutions, pinned the inherited operator budget to the R-126 result,
+  and made PDF JavaScript inspection traverse the resolved object graph.
+  Primary `52/52` and non-importing independent `60/60` pass; the integrated
+  contract and visually reviewed ten-page PDF are manifest-pinned. The common production
+  source-Hessian identification, projected-force bound, unified
+  forward/legal-reverse/balanced/low estimate, `OVERLAP_src`, Nelson,
+  removals, interacting measure, and Sector A remain open; tier stays T4.

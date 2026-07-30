@@ -1,0 +1,725 @@
+% =============================================================================
+% Title: Predictable-source Riesz geometry, weighted Schur improvement, and the low-margin boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-PREDICTABLE-SOURCE-RIESZ-WEIGHTED-SCHUR-LOW-MARGIN-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-30; this version issued 2026-07-30
+% Status: scoped T4 analytic/exact/executed advance; the production estimate and both A13 gates remain open
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+
+R-126 differentiates the complete R-125 variance-minus-forest endpoint and
+extracts its six-row spatial Euler force.  It also states the causal firewall:
+that raw force is generally one filtration level too late and is not itself a
+legal source-space Riesz vector.  This note resolves the abstract source
+geometry exactly and then asks how far it advances the production bound.
+
+There are five proved advances.
+\begin{enumerate}
+\item The adjoint of a temporally faithful source map is computed on the
+      predictable subspace.  Conditional expectation occurs separately in
+      every covariance block.  The quotient Cameron--Martin Riesz vector and
+      its norm are therefore explicit.
+\item A two-block finite fixture shows that replacing this blockwise formula
+      by the unrestricted covariance expression $C_JG$ creates an exact
+      factor-two error.
+\item A weighted Schur argument improves both R-126 Hilbert--Schmidt shell
+      constants.  At the first collar the mixed coefficient decreases from
+      $0.2981423969\ldots$ to $0.2672612419\ldots$.
+\item The two-channel Loewner test is extended by the low/injected channel.
+      At saturation, a noncancelling low coupling has no finite constant
+      payment.  A strict operator margin is therefore mandatory unless the
+      complete endpoint supplies an exact weighted cancellation.
+\item Normalized Gibbs--Doob information is shown unable to determine an
+      absolute endpoint boundary because it is invariant under a constant
+      gauge.  A coherent residual interpolation gives the exact replacement
+      curvature coordinate, but its linear low/injected anchor must remain.
+\end{enumerate}
+
+These statements do not identify the complete R-126 force with a bounded
+production source vector.  In particular, R-125 does not yet prove that the
+probability-root/spatial-shell decomposition is the block decomposition of
+one common terminal source Hessian.  No production forward/legal-reverse/
+balanced/low estimate, $\mathrm{OVERLAP}_{\rm src}$, Nelson estimate, cutoff
+or floor removal, interacting measure, Sector-A closure, or tier promotion is
+claimed.  The host claim remains T4.
+
+The setting is a fixed finite cutoff, fixed positive floor, and a fixed
+R-093/R-104 temporally faithful chart.  All Hilbert spaces below are real; the
+complex formulation is obtained by inserting adjoints and real parts.
+
+\section*{2. Exact predictable-source adjoint and quotient Riesz vector}
+
+Let the chart have time blocks $b=1,\ldots,B$.  Put
+\[
+ \cS_{\pi}^{\rm pred}
+ =\bigoplus_{b=1}^{B}
+ L^2(\Omega,\F_{t_{b-1}};\cS_b),
+ \qquad
+ L_\pi h=\sum_{b=1}^{B}S_bh_b,                       \tag{2.1}
+\]
+where $S_b=(\Delta C_b)^{1/2}$ and $S_b$ is measurable at the
+corresponding strict-past boundary.  The physical Cameron--Martin space is
+the completion of $\Ran L_\pi$ in the quotient norm
+\[
+ \|u\|_{q,L_\pi}
+ =\inf\{\|h\|_{\cS_\pi}:L_\pi h=u\}.                 \tag{2.2}
+\]
+
+\subsection*{Theorem 2.1 (legal source adjoint)}
+
+For every square-integrable physical dual field $G$,
+\[
+ \boxed{
+ (L_{\pi,{\rm pred}}^*G)_b
+ =\E[S_b^*G\mid\F_{t_{b-1}}].}                       \tag{2.3}
+\]
+
+\paragraph{Proof.}
+For predictable $h_b$, conditional expectation and strict-past
+measurability give
+\[
+\begin{aligned}
+ \E\ip{G}{L_\pi h}
+ &=\sum_b\E\ip{S_b^*G}{h_b}\\
+ &=\sum_b\E\ip{\E[S_b^*G\mid\F_{t_{b-1}}]}{h_b}.
+\end{aligned}                                                \tag{2.4}
+\]
+This is precisely the defining adjoint identity on the closed predictable
+source subspace. \hfill$\square$
+
+Write
+\[
+ g_b(G)=\E[S_b^*G\mid\F_{t_{b-1}}].                  \tag{2.5}
+\]
+Since $g=L_{\pi,{\rm pred}}^*G$ belongs to
+$\overline{\Ran L_{\pi,{\rm pred}}^*}=(\Ker L_\pi)^\perp$, the physical
+quotient Riesz vector is
+\[
+ \boxed{
+ \cR_\pi^{\rm CM}(G)
+ =L_\pi g
+ =\sum_b S_b\E[S_b^*G\mid\F_{t_{b-1}}],}             \tag{2.6}
+\]
+and its quotient norm is exact:
+\[
+ \|\cR_\pi^{\rm CM}(G)\|_{q,L_\pi}
+ =\|g(G)\|_{\cS_\pi}.                                \tag{2.7}
+\]
+
+Let $C_J=\sum_bS_bS_b^*$.  Conditional Jensen gives the sharp general
+upper bound
+\[
+\begin{aligned}
+ \|g(G)\|_{\cS_\pi}^2
+ &=\sum_b\E\|\E[S_b^*G\mid\F_{t_{b-1}}]\|^2\\
+ &\leq\sum_b\E\|S_b^*G\|^2
+ =\E\ip{G}{C_JG}.
+\end{aligned}                                                \tag{2.8}
+\]
+The constant in (2.8) is one.  The inequality need not be equality because
+predictability removes a different future component in every block.
+
+Combining (2.8) with the R-120 dual covariance coercivity gives, within that
+theorem's declared symbol class,
+\[
+ \|g(G)\|_{\cS_\pi}
+ \leq \sqrt{M_R^2/c_{\rm sym}}\,\|G\|_{H^{-2}},
+ \qquad
+ \sqrt{M_R^2/c_{\rm sym}}
+ =3.0377807308\ldots .                                  \tag{2.9}
+\]
+This is an abstract dual bound.  It becomes a production estimate only after
+the complete R-126 force is proved to lie in the R-120 dual symbol class with
+uniform constants.
+
+\subsection*{Counterfixture 2.2 (the unrestricted covariance collapse)}
+
+Take two scalar blocks with $S_1=S_2=1$.  Let $\F_{t_0}$ be trivial,
+$\F_{t_1}=\sigma(\xi)$, and $\xi=\pm1$ with equal probability.  For
+$G=\xi$,
+\[
+ g_1=\E\xi=0,
+ \qquad
+ g_2=\E[\xi\mid\sigma(\xi)]=\xi.                       \tag{2.10}
+\]
+Consequently
+\[
+ \cR_\pi^{\rm CM}(G)=\xi,
+ \qquad
+ C_JG=2\xi.                                              \tag{2.11}
+\]
+The legal quotient norm squared is one, while
+$\E\ip{G}{C_JG}=2$.  Thus the upper bound (2.8) is correct, but the identity
+$\cR_\pi^{\rm CM}(G)=C_JG$ is false.  Moving the predictable projection
+outside the covariance-block sum loses its time label and creates an exact
+factor-two error in this smallest fixture.
+
+\section*{3. Straight homotopies and the source completion cost}
+
+Let $\mathfrak F$ be a differentiable expected endpoint functional with
+physical gradient $G(Z)$, and let
+\[
+ Z_t=X_J+tL_\pi h,
+ \qquad
+ \overline G_h=\int_0^1G(Z_t)\dd t.                       \tag{3.1}
+\]
+Then the fundamental theorem of calculus and Theorem 2.1 give
+\[
+ \mathfrak F(Z_1)-\mathfrak F(Z_0)
+ =\sum_b\E\ip{h_b}{g_b(h)},
+ \qquad
+ g_b(h)=\E[S_b^*\overline G_h\mid\F_{t_{b-1}}].          \tag{3.2}
+\]
+Moreover,
+\[
+ \|g(h)\|_{\cS_\pi}^2
+ \leq\int_0^1
+ \E\ip{G(Z_t)}{C_JG(Z_t)}\dd t.                          \tag{3.3}
+\]
+Same-root visits may represent the line integral in (3.2), but the terminal
+displacement must be compressed before taking the quotient norm.  A sum of
+visit squares is not representation invariant.
+
+At the production value $q=10/9$, the source cross has the exact completion
+\[
+ \boxed{
+ \ip{h}{g}+{9\over20}\|h\|^2
+ ={9\over20}\left\|h+{10\over9}g\right\|^2
+ -{5\over9}\|g\|^2.}                                    \tag{3.4}
+\]
+Hence the adverse force-square coefficient is exactly $5/9$.  No argument
+that uses the source energy only can spend a smaller universal coefficient
+after the same cross term has been isolated.
+
+\section*{4. The production interface and the common-Hessian requirement}
+
+For probability root $r$, same-root visit $v$, and output shell $m$, R-126
+gives the complete six-row Euler force
+\[
+\begin{aligned}
+ G_r(W)=2\sum_{a=1}^{6}\sum_i\{&
+ \E_{f,r}[(Dc_a)^T\Delta\Gamma_{r,i}c_a]
+ +\bar c_{a,r}\,\partial_i\Phi_{a,i,r}\\
+ &+\Phi_{a,i,r}
+ \E_{f,r}[(Dc_a-Dc_a^T)\partial_iW]\}.
+\end{aligned}                                                \tag{4.1}
+\]
+Here
+$\E_{f,r}=\E[\,\cdot\mid\F_{r-1}\vee\sigma(\xi_r)]$.
+Rows, output clusters, heat, the once-owned covariance, the R-063 forest, and
+the Cartan contribution must be assembled before the output projection
+$\Pi_m$.  Only after this future conditioning is complete may the source
+projection $\E[\,\cdot\mid\F_{t_{b-1}}]$ be applied.
+
+If $A_{r,v;b}$ is the exact derivative of the endpoint with respect to source
+block $b$, the candidate legal source coordinate is
+\[
+ g_b=\sum_{r,v,m}\int_0^1
+ \E[A_{r,v;b}^*\Pi_mG_r(W_{r,v,t})
+       \mid\F_{t_{b-1}}]\dd t.                            \tag{4.2}
+\]
+Formula (4.2) is the correct incidence pattern, not yet a proved production
+identity.  Same-root subdivision must first compress to the common terminal
+displacement.
+
+The obstruction can also be stated at Hessian level.  For
+$\Phi=\E_f[c(W)^TV]$, define
+\[
+\begin{aligned}
+ \dot\Phi[H]
+ &=\E_f[(Dc\,H)^TV+c^T\partial H],\\
+ \ddot\Phi[H,K]
+ &=\E_f[(D^2c[H,K])^TV
+       +(Dc\,H)^T\partial K+(Dc\,K)^T\partial H].
+\end{aligned}                                                \tag{4.3}
+\]
+For the R-126 total symbol,
+\[
+\begin{aligned}
+ D^2\cT_r[H,K]
+ ={}&\sum_i\E_f\int D^2B[H,K]:\Delta\Gamma_{r,i}\dd x\\
+ &-2\sum_{a,i}\Rea\int
+ \{\dot\Phi_{a,i}[H]\overline{\dot\Phi_{a,i}[K]}
+   +\Phi_{a,i}\overline{\ddot\Phi_{a,i}[H,K]}\}\dd x.
+\end{aligned}                                                \tag{4.4}
+\]
+The pulled source Hessian
+\[
+ \Pi_{\rm ad}L_\pi^*D^2\cT_rL_\pi\Pi_{\rm ad}             \tag{4.5}
+\]
+is quotient-basic and selfadjoint once (4.5) is genuinely one common
+endpoint/source-space object.  The Cartan coefficient survives in the
+selfadjoint first-order form
+\[
+ A_i\partial_i+{1\over2}\partial_iA_i,
+ \qquad A_i^*=-A_i,                                       \tag{4.6}
+\]
+including the registered $2680/729$ recombined coefficient.  Formal
+selfadjointness does not make a rectangular probability-root/spatial-shell
+reverse band the adjoint of the forward band.  That conclusion requires the
+missing common-terminal source--source factorization.
+
+\section*{5. A weighted Schur theorem for triangular shell kernels}
+
+\subsection*{Theorem 5.1 (weighted triangular Schur bound)}
+
+Let $0<d\leq1/2$ and $q^2<1-d$.  On nonnegative indices define
+\[
+ B_{pj}=d^j q^{p-j}{\bf1}_{\{j\leq p\}}.                   \tag{5.1}
+\]
+Then
+\[
+ \boxed{
+ \|B\|_{\ell^2\to\ell^2}
+ \leq\left(1-{q^2\over1-d}\right)^{-1/2}.}                \tag{5.2}
+\]
+
+\paragraph{Proof.}
+Use Schur weights $w_j=t^j$ with $t=q/(1-d)$.  The normalized row sum is
+\[
+ R_p={1\over w_p}\sum_{j\leq p}B_{pj}w_j
+ =\sum_{j=0}^p d^j(1-d)^{p-j}.                             \tag{5.3}
+\]
+It obeys $R_0=1$ and
+\[
+ R_{p+1}=(1-d)^{p+1}+dR_p\leq(1-d)+d=1                   \tag{5.4}
+\]
+by induction.  The normalized column sum is
+\[
+ {1\over w_j}\sum_{p\geq j}B_{pj}w_p
+ ={d^j\over1-qt}
+ \leq {1\over1-q^2/(1-d)}.                               \tag{5.5}
+\]
+The weighted Schur test gives the square root of the product of (5.4) and
+(5.5), which is (5.2). \hfill$\square$
+
+\subsection*{Corollary 5.2 (mixed production prototype)}
+
+Suppose the as-yet-unproved production blocks satisfy
+\[
+ \|A_{{\rm mix},mr}\|
+ \leq C_{\rm mix}2^{r-2m},
+ \qquad r\geq j_0,\quad m\geq r+C.                       \tag{5.6}
+\]
+Put $r=j_0+j$ and $m=j_0+C+p$; then $j\leq p$ and (5.6) is
+the kernel (5.1) with $d=1/2$, $q=1/4$, multiplied by
+$C_{\rm mix}2^{-j_0-2C}$.  Therefore
+\[
+ \boxed{
+ \|A_{\rm mix}\|
+ \leq C_{\rm mix}2^{-j_0-2C}\sqrt{8/7}.}                 \tag{5.7}
+\]
+At $C=1$, the coefficient is
+\[
+ {1\over4}\sqrt{8/7}
+ ={1\over\sqrt{14}}
+ =0.267261241912424\ldots,                                \tag{5.8}
+\]
+strictly below the R-126 Hilbert--Schmidt coefficient
+$2/\sqrt{45}=0.298142396999972\ldots$.
+
+The retained R-126 operator budget is
+\[
+ K_{\rm bud}=0.920932333907528\ldots .                    \tag{5.9}
+\]
+Thus the collar-one mixed-only ceiling, when no other same-block channel
+spends the budget, improves from
+\[
+ C_{\rm mix}2^{-j_0}
+ <{\sqrt{45}\over2}K_{\rm bud}
+ =3.08890095194215\ldots                                  \tag{5.10}
+\]
+to
+\[
+ \boxed{
+ C_{\rm mix}2^{-j_0}
+ <\sqrt{14}K_{\rm bud}
+ =3.44581326988407\ldots .}                               \tag{5.11}
+\]
+This is an $11.5546702\ldots\%$ improvement in the admissible mixed
+coefficient.  If a far block occupies the same source and target channels,
+the sufficient triangle condition is instead
+\[
+ {\sqrt{8/7}\over4}C_{\rm mix}2^{-j_0}
+ +{\sqrt{224/223}\over16}C_{\rm far}2^{-3j_0}
+ \leq K_{\rm bud},                                        \tag{5.12}
+\]
+or one must verify the complete signed block-Loewner matrix directly.
+
+\subsection*{Corollary 5.3 (far production prototype)}
+
+If instead
+\[
+ \|A_{{\rm far},mr}\|
+ \leq C_{\rm far}2^{r-4m},                                \tag{5.13}
+\]
+the same indexing gives $d=1/8$ and $q=1/16$.  Hence
+\[
+ \boxed{
+ \|A_{\rm far}\|
+ \leq C_{\rm far}2^{-3j_0-4C}\sqrt{224/223}.}             \tag{5.14}
+\]
+At $C=1$ its coefficient is
+$0.0626399777789193\ldots$, below the old Hilbert--Schmidt value
+$8/\sqrt{16065}=0.0631174757774868\ldots$.
+
+These are conditional operator theorems: they improve the aggregation once
+the block estimates (5.6) or (5.13) are proved.  They do not prove those
+production estimates.  Mixed and far blocks occupying the same source and
+target channels add by the triangle inequality; no quadrature is used without
+an orthogonality theorem.
+
+\section*{6. The augmented low/injected Loewner criterion}
+
+Let $X,Y,H$ be Hilbert spaces.  Assume that $R=R^*$ on $X$, $S=S^*$ on
+$Y$, and $L=L^*$ on $H$ are bounded, and that
+$A:Y\to X$, $B:H\to X$, and $C:H\to Y$ are bounded.  Let the adverse real
+quadratic form be
+\[
+\begin{aligned}
+ q(x,y,\ell)={}&\ip{x}{Rx}+\Rea\ip{x}{Ay}+\ip{y}{Sy}\\
+ &+2\Rea\ip{x}{B\ell}+2\Rea\ip{y}{C\ell}
+ +\ip{\ell}{L\ell}.
+\end{aligned}                                                \tag{6.1}
+\]
+The source and sextic payments $2\eta\|x\|^2+2\zeta\|y\|^2$ dominate
+(6.1) for every $(x,y,\ell)$ if and only if
+\[
+ \boxed{
+ \begin{pmatrix}
+ 2\eta I-R&-A/2&-B\\
+ -A^*/2&2\zeta I-S&-C\\
+ -B^*&-C^*&-L
+ \end{pmatrix}\succeq0.}                                 \tag{6.2}
+\]
+Put $D=-L$ and
+\[
+ M_2=\begin{pmatrix}2\eta I-R&-A/2\\-A^*/2&2\zeta I-S\end{pmatrix},
+ \qquad K=\binom{B}{C}.                                   \tag{6.3}
+\]
+The bounded-operator Schur complement says that (6.2) is equivalent to
+\[
+ D\succeq0,
+ \qquad \Ran K^*\subseteq\Ran D^{1/2},
+ \qquad M_2-X_D^*X_D\succeq0,                              \tag{6.4}
+\]
+where $X_D$ is the Douglas reduced solution of
+$D^{1/2}X_D=K^*$.  If $D$ has closed range, then
+$X_D=(D^\dagger)^{1/2}K^*$ and the last condition is equivalently
+$M_2-KD^\dagger K^*\succeq0$.  Thus (6.4) does not silently assume a
+bounded Moore--Penrose inverse when the range is not closed.
+Thus an unbudgeted low block must have $L\preceq0$.  If $L=0$, positivity
+of every two-by-two principal compression forces $B=C=0$.  An unsigned low
+term cannot merely be declared ``retained''; it requires a negative reserve,
+an explicit constant budget, or exact cancellation.
+
+For the affine scalar low remainder, write
+\[
+ M_0=\begin{pmatrix}2\eta I-R&-A/2\\-A^*/2&2\zeta I-S\end{pmatrix},
+ \qquad d=\binom bc.                                      \tag{6.5}
+\]
+The residual
+\[
+ \ip{z}{M_0z}-2\Rea\ip{d}{z}+C_0-\ell                  \tag{6.6}
+\]
+is nonnegative for every $z=(x,y)$ if and only if
+\[
+ M_0\succeq0,
+ \quad d\in\Ran M_0^{1/2},
+ \quad C_0-\ell\geq\|x_d\|^2,                            \tag{6.7}
+\]
+where $x_d$ is the Douglas reduced solution of $M_0^{1/2}x_d=d$.
+If $M_0$ has closed range, then
+$\|x_d\|^2=\ip{d}{M_0^\dagger d}$.
+When $R=S=0$, all variables are scalar, $\eta,\zeta>0$, and
+$a^2<16\eta\zeta$,
+\[
+ C_{0,\min}-\ell
+ ={2\zeta b^2+abc+2\eta c^2
+   \over4\eta\zeta-a^2/4}.                               \tag{6.8}
+\]
+
+At the two-channel saturation $a=4\sqrt{\eta\zeta}$, the null vector is
+$(\sqrt\zeta,\sqrt\eta)$.  The constant in (6.7) is finite precisely when
+\[
+ \boxed{b\sqrt\zeta+c\sqrt\eta=0.}                       \tag{6.9}
+\]
+Therefore saturating the old two-by-two Loewner budget leaves no room for a
+generic low/injected affine coupling.
+
+If
+\[
+ |a|\leq(1-\theta)4\sqrt{\eta\zeta},
+ \qquad0<\theta\leq1,                                     \tag{6.10}
+\]
+then
+\[
+\begin{aligned}
+ \lambda_{\min}(M_0)
+ &=\eta+\zeta-\sqrt{(\eta-\zeta)^2+a^2/4}\\
+ &\geq {2\eta\zeta(2\theta-\theta^2)\over\eta+\zeta}.
+\end{aligned}                                                \tag{6.11}
+\]
+The last line follows from the determinant lower bound and
+$\lambda_{\max}(M_0)\leq\Tr M_0$.  This gives a quantitative place to pay a
+uniform dual norm for the low/injected remainder, if such a production norm
+is proved.
+
+\section*{7. The common-terminal middle is a coordinate, not a reserve}
+
+Under the R-079 common-terminal and matching-trace hypotheses, write
+\[
+ f_j=d_j(J_j-J_0),
+ \qquad i_j=d_j(J_*-J_j),
+ \qquad m_j=f_j+i_j=d_j(J_*-J_0).                          \tag{7.1}
+\]
+Then the sum of the forward and injected blocks is
+\[
+ F_j+I_j
+ =\E\left[\ip{d_jJ_0}{m_j}+{1\over2}\|m_j\|^2\right]
+ -{1\over2}\E\Delta\tau_j^{*0}.                          \tag{7.2}
+\]
+It depends only on the two endpoints and not on the chosen middle $J_j$.
+
+Choosing the artificial Doob middle
+$\widetilde J_j=J_0+P_j(J_*-J_0)$ can make a displayed reverse coordinate
+zero.  Restoring the low block returns the full endpoint difference
+$\E[W(A_*)-W(A_0)]$.  The Nelson burden has only moved coordinates.
+
+Predictability also gives no sign.  Let $G$ be a revealed scalar random
+variable and put
+\[
+ J_0=0,
+ \quad J_1=\tanh G,
+ \quad J_*=(1+c)\tanh G.                                  \tag{7.3}
+\]
+The second insertion $c\tanh G$ is strict-past after the first reveal, yet
+\[
+ I_1=\E[\tanh^2G]\left(c+{c^2\over2}\right).              \tag{7.4}
+\]
+It is positive for $c>0$ and negative for $-2<c<0$.  This is an abstract
+legal filtration fixture, not a full A1 production counterexample.
+
+\section*{8. The normalized Gibbs--Doob absolute-anchor no-go}
+
+For an endpoint energy $L$, normalized Gibbs laws depend on
+\[
+ {e^{-qL}\over\E e^{-qL}}.                                \tag{8.1}
+\]
+Replacing $L$ by $L+C$ leaves (8.1), all normalized conditional laws, Doob
+increments, conditional variances, and relative entropies unchanged.  The
+absolute free energy
+\[
+ \Phi(L)=-{1\over q}\log\E e^{-qL}                        \tag{8.2}
+\]
+instead satisfies
+\[
+ \Phi(L+C)=\Phi(L)+C.                                     \tag{8.3}
+\]
+Therefore no theorem using only normalized Gibbs--Doob or entropy data can
+bound the absolute low/free-energy endpoint.  An absolute anchor from the
+low/injected ledger is logically indispensable.  Thermodynamic integration
+and the KL chain rule reproduce the same endpoint gap and do not supply an
+independent reserve.
+
+\section*{9. A coherent residual interpolation}
+
+The gauge obstruction suggests interpolating the complete residual before
+normalization.  Fix the base measure and stabilizer throughout the
+interpolation, and take $R$ and $\delta\tau$ independent of $s$.  Let
+\[
+ Y=b+A\xi+R,
+ \qquad Y_s=b+A\xi+sR,
+ \qquad \tau_s=\Tr(AA^*)+s\delta\tau,                     \tag{9.1}
+\]
+and define
+\[
+ P_s={\|Y_s\|^2-\tau_s\over2},
+ \qquad
+ \Psi(s)=\log\int e^{-qP_s}\dd\lambda.                   \tag{9.2}
+\]
+With $\mu_s$ the normalized tilted law,
+\[
+ \dot P_s=\Rea\ip{Y_s}{R}-{\delta\tau\over2},
+ \qquad
+ \ddot P_s=\|R\|^2,                                      \tag{9.3}
+\]
+and direct differentiation gives
+\[
+ \boxed{
+ \Psi''(s)
+ =q^2\operatorname{Var}_{\mu_s}(\dot P_s)
+ -q\E_{\mu_s}\|R\|^2.}                                  \tag{9.4}
+\]
+The exact integral Taylor formula is
+\[
+ \Psi(1)-\Psi(0)
+ =\Psi'(0)+\int_0^1(1-s)\Psi''(s)\dd s,
+ \qquad
+ \Psi'(0)=-q\E_{\mu_0}\dot P_0.                         \tag{9.5}
+\]
+The linear anchor in (9.5) is generically nonzero.  It must be summed with
+the complete low/injected endpoint before any variance argument.  The live
+production target is therefore a root-summed integrated
+variance-minus-curvature estimate for the fully assembled cluster/forest/
+Cartan packet, with the absolute anchor retained once.
+
+\section*{10. Evidence map and successor lemma}
+
+The proof-route decisions are as follows.
+\begin{center}
+\begin{tabular}{p{0.25\textwidth}p{0.16\textwidth}p{0.48\textwidth}}
+Route & Verdict & Reusable reason \\
+\hline
+Unrestricted $C_JG$ collapse & failed & Predictable projection is blockwise;
+the two-block fixture has exact factor two. \\
+Weighted Schur aggregation & advanced & Time-triangular weights improve both
+mixed and far constants without orthogonality. \\
+Saturated two-channel Loewner & failed generically & A noncancelling low
+coupling is outside the saturated matrix range. \\
+Eliminate the reverse middle & inconclusive & The common-terminal endpoint is
+independent of the chosen middle. \\
+Normalized Gibbs/entropy anchor & failed & Constant gauges preserve normalized
+data and shift absolute free energy. \\
+Coherent residual curvature & live & The exact variance-minus-curvature
+identity retains the required first-order anchor. \\
+\end{tabular}
+\end{center}
+
+The smallest noncyclic successor is now precise:
+\[
+ \boxed{
+ P_{\rm pred}L_\pi^*
+ D(\hbox{complete R-093 endpoint action})
+ =g_{\rm low/inj}^{\rm adm}
+ +\sum_{r,m}g_{r,m}^{\rm adm}.}                            \tag{10.1}
+\]
+It must be proved with the $\Delta C/\Delta\Gamma$ normalization, heat,
+exhaustive clusters, R-063 forest, rational multipliers, $2680/729$ Cartan,
+trace and covariance each exactly once, and invariance under
+representation-preserving refinement.  The resulting augmented Loewner
+matrix must have either the strict margin (6.11) or the exact cancellation
+(6.9).  Only then may the R-093 directed chart union be invoked toward
+$\mathrm{OVERLAP}_{\rm src}$ and Nelson.
+
+\section*{11. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection:} $C_JG$ already has the right covariance units, so
+      inserting every conditional projection is cosmetic.
+      \textbf{UPHELD against the shortcut.}  Counterfixture 2.2 produces
+      $C_JG=2\cR_\pi^{\rm CM}(G)$.  Equation (2.6), not $C_JG$, is the legal
+      Riesz identity.
+\item \textbf{Objection:} the improved Schur constants may hide a changed
+      shell normalization.  \textbf{DISMISSED.}  The factors
+      $2^{-j_0-2C}$ and $2^{-3j_0-4C}$ are taken outside before applying the
+      dimensionless kernels $(d,q)=(1/2,1/4)$ and $(1/8,1/16)$.  At $C=1$
+      they are compared with the R-126 constants in the same normalization.
+\item \textbf{Objection:} far and mixed improvements may be combined in
+      quadrature.  \textbf{UPHELD unless orthogonality is separately proved.}
+      Shared source/target channels require the triangle inequality.
+\item \textbf{Objection:} the old two-channel saturation already spends the
+      exact available budget, so the low term can be kept outside the matrix.
+      \textbf{UPHELD against that separation.}  Equations (6.7)--(6.9) show
+      that a generic low coupling has infinite affine cost at saturation.
+\item \textbf{Objection:} normalized Doob squares or KL production supply the
+      missing absolute constant.  \textbf{DISMISSED.}  The constant-gauge
+      transformation leaves all those data fixed while shifting (8.2).
+\item \textbf{Objection:} formal selfadjointness identifies the legal reverse
+      band automatically.  \textbf{UPHELD as a missing hypothesis.}  It is
+      valid only after the rectangular blocks are shown to arise from the
+      single source Hessian (4.5).
+\item \textbf{Objection:} the executable hardcodes upstream derived reserves.
+      \textbf{UPHELD against the draft and repaired.}  Both routes read the
+      exact operator budget from the manifest-pinned R-126 primary result;
+      all new radicals are derived from it, with decimals used only as
+      labelled regression intervals.
+\item \textbf{Objection:} finite matrix checks prove the infinite Schur
+      theorem only numerically.  \textbf{DISMISSED.}  Equations (5.3)--(5.5)
+      are the analytic infinite-dimensional proof; finite matrices are only
+      executable regression fixtures.
+\item \textbf{Objection:} the strict-margin premise may be one-sided in the
+      mixed scalar $a$.  \textbf{UPHELD against the draft and repaired.}
+      Equation (6.10) uses $|a|$, and both executable routes test invariance
+      under $a\mapsto-a$.
+\item \textbf{Objection:} Moore--Penrose formulas are automatically bounded
+      for every positive diagonal block.  \textbf{UPHELD against the draft
+      and repaired.}  Both (6.4) and (6.7) use bounded Douglas reduced
+      solutions; the Moore--Penrose forms are asserted only for closed range.
+\end{enumerate}
+
+\section*{12. Reproducibility}
+
+Primary exact audit:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_predictable_source_riesz_weighted_schur_
+  low_margin_boundary.py
+\end{verbatim}
+
+Non-importing independent audit:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_predictable_source_riesz_weighted_schur_
+  low_margin_boundary_independent.py
+\end{verbatim}
+
+Integrated authority, PDF, and public-surface audit:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_predictable_source_riesz_weighted_schur_
+  low_margin_boundary_verify.py
+\end{verbatim}
+
+\section*{13. Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-PREDICTABLE-SOURCE-RIESZ-WEIGHTED-
+  SCHUR-LOW-MARGIN-BOUNDARY (R-127).
+Precise statement: Theorems 2.1 and 5.1; source completion in Section 3;
+  common-Hessian boundary in Section 4; augmented Loewner criterion in
+  Section 6; Gibbs gauge and coherent curvature boundaries in Sections 8-9.
+Scope: fixed finite cutoff and positive floor; fixed R-093/R-104
+  temporally faithful chart; square-integrable predictable source blocks;
+  fixed base measure/stabilizer and s-independent residual data in Section 9;
+  production shell applications conditional on their stated block prototypes.
+Dependencies: A1; R-079, R-093, R-104, R-120, R-121, R-125, R-126.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_predictable_source_riesz_weighted_
+  schur_low_margin_boundary_verify.py
+Expected output: R-127 integrated PASS; primary 52/52, independent 60/60,
+  manifest, PDF, exploration, negative, and public-surface gates pass.
+Falsification gate: any failed predictable-adjoint or quotient identity,
+  factor-two fixture, q=10/9 completion, Schur domain/constant, exponent
+  relabel, augmented Loewner/range/strict-margin test, gauge or curvature
+  identity, authority/hash, PDF, exploration, or public-surface check.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no complete production source-Hessian
+  identification, projected-force norm, unified forward/legal-reverse/
+  balanced/low closure, OVERLAP_src, Nelson, removals, interacting measure,
+  Sector-A closure, or T5-T7 follows.
+Next required action: prove the common complete-endpoint/source-Hessian
+  identity with every owner present once, then prove its augmented
+  forward/legal-reverse/balanced/low Loewner bound before chart union.
+\end{verbatim}
+
+\endgroup

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-127](#r-127) | Predictable-source Riesz geometry, weighted Schur improvement, and the low-margin boundary | Scoped T4 analytic/exact/executed advance: on a fixed temporally faithful chart the legal source adjoint is blockwise `E[S_b^*G|F_(b-1)]`, the physical quotient Riesz vector is `sum_b S_b E[S_b^*G|F_(b-1)]`, and its source norm is bounded with sharp constant one by `E<G,C_JG>`. A two-block fixture gives an exact factor-two error for the unrestricted replacement `C_JG`. At `q=10/9` source completion costs exactly `5/9` times the legal force square. Weighted Schur improves the collar-one mixed coefficient from `2/sqrt(45)` to `1/sqrt(14)` and the far coefficient from `8/sqrt(16065)` to `sqrt(224/223)/16`; the `3.445813...` threshold is mixed-only and same-channel far terms still add by triangle. The augmented low/injected Loewner criterion proves that saturation admits only the weighted cancellation `b sqrt(zeta)+c sqrt(eta)=0`; otherwise strict margin or a constant payment is required. A constant-gauge argument shows normalized Gibbs/Doob data cannot determine the absolute low anchor. The complete production source-Hessian identification and unified forward/legal-reverse/balanced/low bound remain open, as do `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector-A closure |
 | [R-126](#r-126) | Total-symbol Euler force, low-injected baseline transport, and the block-Loewner boundary | Scoped T4 analytic/exact/executed advance: the R-125 variance-minus-forest symbol has an exact finite-cutoff directional derivative and, for predictable variations, a periodic Euler force containing trace, derivative injection, rational zero-order multipliers, and the nonzero Cartan skew once. The raw force still requires `F_(k-1)` projection and the actual Cameron-Martin/source Riesz map. R-079 gives an exact low/injected baseline-transport equivalence with `E W_J(A0)` and all mean reserves retained; it is conditional on the missing production common-terminal/matching-trace identification and gives no sign. The exact block-Loewner criterion keeps diagonal reserves and the mixed operator together. Forward mixed sums have constants `64/45` and `8/sqrt(45)`, while the full mixed secant cannot inherit the positive atom's quadratic gap. An anticipative fixed-shell fixture refutes only an unrestricted coefficient-blind reverse-band extension. The unified production forward/legal-reverse/balanced/low estimate, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-125](#r-125) | Conditional-variance/forest bridge, stationary-baseline residual, and the root-shell operator boundary | Scoped T4 analytic/exact/executed advance: at finite cutoff the covariance-normal endpoint equals the conditional stopped-current packet plus one half of the future conditional variance, so the R-124 secant is exactly `Psi=Delta V_fut-Delta F_063^ad`. The future-variance rebate is indispensable; an exact production-frame constant-translation fixture falsifies its omission. A smooth cylindrical partial-Wick identity gives the finite-cutoff adapted forest coordinate, while the production stationary quantity is exposed as `sum E V_0-sum E F_063,0^ad` and remains unsigned. A common-terminal Doob lemma makes only the low-plus-root aggregate nonpositive; root-only `C_0=0` additionally requires a nonnegative complete-low atom, and neither hypothesis is established for the actual production currents. A correlated Hilbert-operator lemma gives the sufficient far-tail threshold `K_far=8 C_* 2^(-3j_0)/sqrt(16065)` and the sharp mixed criterion `||A||<=4 sqrt(eta zeta)`, but the production factorisation, balanced band, stationary-baseline bound, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-124](#r-124) | Stationary-polarized trace defect, replica closure, and the correlated root-shell boundary | Scoped T4 analytic/exact/executed theorem and route synthesis: for `S_u=D0_u-||E_0 Phi_u||^2=E_0(Theta_u-||Phi_u||^2)`, the controlled-minus-stationary difference is the exact symmetric secant `E_0[DeltaTheta-Re<Phi_h+Phi_0,DeltaPhi>]`, equivalently the signed cross minus the favorable square. Moving-endpoint secants telescope under every representation-preserving same-root visit subdivision; fixed-baseline subvisit splitting is false. Conditional replicas and Hermite expansion give an exact square representation but no automatic sign. On the genuine first-linear row, `Delta S=kappa^2 E[(1-xi^2)h^2]<=kappa^2 E h^2`, `kappa^2=6/(125P)`, so the action allocation is `3/(125P)`, with a sharp finite-Hermite improvement and no sextic or feedback-derivative payment. Exact resonance, rare-event, covariant-Hessian, and OU audits close or retire four recurring bypasses. The owner-complete coefficient identity, cutoff-uniform correlated signed root-shell estimate, and separate stationary-baseline sum bound remain open, as do `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector-A closure |
@@ -145,6 +146,102 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-127"></a>
+### R-127 -- Predictable-source Riesz geometry, weighted Schur improvement, and the low-margin boundary
+
+**Result ID.**
+A13-CLASSII-PREDICTABLE-SOURCE-RIESZ-WEIGHTED-SCHUR-LOW-MARGIN-BOUNDARY.
+
+**Predictable source geometry.**  For a fixed R-093/R-104 temporally faithful
+chart,
+
+`S_pred=direct_sum_b L2(Omega,F_(t_(b-1));S_b)`,
+`L_pi h=sum_b S_b h_b`, and `S_b=(Delta C_b)^(1/2)`.
+
+The exact legal adjoint and physical quotient Riesz vector are
+
+`(L_(pi,pred)^*G)_b=E[S_b^*G|F_(t_(b-1))]`,
+
+`R_pi^CM(G)=sum_b S_b E[S_b^*G|F_(t_(b-1))]`.
+
+The quotient norm is the source norm of this adjoint, and conditional Jensen
+gives the sharp bound
+
+`||R_pi^CM(G)||_(q,L_pi)^2<=E<G,C_JG>`, `C_J=sum_b S_bS_b^*`.
+
+The two-block fixture `S_1=S_2=1`, trivial `F_0`,
+`F_1=sigma(xi)`, and `G=xi` has legal vector `xi` but unrestricted
+`C_JG=2xi`.  Predictable projections cannot be moved outside the covariance
+sum.  At `q=10/9`, exact completion of the source cross leaves the adverse
+coefficient `5/9`.
+
+**Common-Hessian boundary.**  R-126's exact source candidate has incidence
+
+`g_b=sum_(r,v,m) int_0^1 E[A_(r,v;b)^* Pi_m G_r(W_(r,v,t))|F_(t_(b-1))]dt`.
+
+The complete pulled Hessian is selfadjoint and quotient-basic only after the
+root/shell blocks are proved to arise from one common endpoint/source-space
+Hessian.  Formal selfadjointness of the surviving `2680/729` Cartan form does
+not identify the legal reverse band with the forward adjoint.
+
+**Weighted Schur improvement.**  For
+`B_(p,j)=d^j q^(p-j) 1_(j<=p)`, `0<d<=1/2`, and `q^2<1-d`,
+
+`||B||<=1/sqrt(1-q^2/(1-d))`.
+
+Consequently a mixed prototype `C_mix 2^(r-2m)` has norm at most
+`C_mix 2^(-j0-2C)sqrt(8/7)`, while a far prototype
+`C_far 2^(r-4m)` has norm at most
+`C_far 2^(-3j0-4C)sqrt(224/223)`.  At collar one the respective coefficients
+are `0.267261241912424...` and `0.0626399777789193...`, both strictly below
+the R-126 Hilbert--Schmidt constants.  The new
+`sqrt(14)K_bud=3.44581326988407...` ceiling is mixed-only; same-channel far
+and mixed contributions require triangle addition or the full signed matrix.
+
+**Augmented low/injected Loewner theorem.**  Payment by
+`2 eta ||x||^2+2 zeta ||y||^2` is equivalent to positivity of
+
+`[[2eta I-R,-A/2,-B],[-A*/2,2zeta I-S,-C],[-B*,-C*,-L]]`.
+
+For bounded selfadjoint diagonal blocks and bounded couplings, put `D=-L`.
+The general Schur condition is `D>=0`, range compatibility, and
+`M_2-X_D^*X_D>=0`, where `D^(1/2)X_D=[B*,C*]` is the Douglas reduced
+solution.  Only when `D` has closed range does this become
+`M_2-[B;C]D^dagger[B*,C*]>=0`; the affine completion uses the analogous
+reduced-solution norm and specializes to its pseudoinverse quadratic form
+only at closed range.  At the saturated two-channel boundary
+`a=4sqrt(eta zeta)`, finite affine low cost is possible exactly when
+`b sqrt(zeta)+c sqrt(eta)=0`.  Otherwise a strict matrix margin or explicit
+constant payment is necessary.
+
+**Absolute-anchor and curvature boundary.**  The transformation `L -> L+C`
+preserves normalized Gibbs laws, conditional Doob data, variances, and
+relative entropies but sends `Phi(L) -> Phi(L)+C`; normalized relative data
+alone cannot provide the absolute low/free-energy anchor.  For the coherent
+residual interpolation `Y_s=b+Axi+sR`, fixed base measure and stabilizer, and
+`tau_s=Tr(AA*)+s delta_tau`,
+
+`Psi''(s)=q^2 Var_(mu_s)(dot P_s)-q E_(mu_s)||R||^2`.
+
+Its generally nonzero linear anchor `Psi'(0)` must be recombined with the
+complete low/injected endpoint.
+
+**Scope.**  Fixed finite cutoff, fixed positive floor, fixed temporally
+faithful chart, square-integrable predictable source blocks, and the declared
+R-120 dual symbol class where that bound is invoked.  The shell estimates are
+conditional on the production block prototypes.  No complete production
+source-Hessian identification, projected-force norm, unified
+forward/legal-reverse/balanced/low estimate, `OVERLAP_src`, Nelson bound,
+removal, interacting measure, Sector-A closure, or higher tier is proved.
+
+**Evidence.**  Proof note and PDF
+`classii-predictable-source-riesz-weighted-schur-low-margin-boundary-260730-v1.0`;
+primary exact audit 52/52; non-importing independent audit 60/60; integrated
+authority, manifest, PDF, exploration, negative-result, and public-surface
+contract; EXP-000421--EXP-000435; and the three R-127 negative results.
+
+**Tier:** T4.  Both A13 gates remain open.
 
 <a id="r-126"></a>
 ### R-126 -- Total-symbol Euler force, low-injected baseline transport, and the block-Loewner boundary

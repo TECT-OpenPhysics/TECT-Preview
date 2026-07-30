@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-30-A13-UNRESTRICTED-PREDICTABLE-COVARIANCE-COLLAPSE](#ng-2026-07-30-a13-unrestricted-predictable-covariance-collapse) | replace the legal blockwise predictable source Riesz vector by the unrestricted physical covariance expression `C_JG` | with two scalar blocks `S_1=S_2=1`, trivial first past, second past `sigma(xi)`, and `G=xi`, the legal source adjoint is `(0,xi)` and its physical Riesz vector is `xi`, whereas `C_JG=2xi`. Predictable projections retain their block labels and cannot be moved outside the covariance sum |
+| [NG-2026-07-30-A13-LOEWNER-SATURATION-LOW-COUPLING](#ng-2026-07-30-a13-loewner-saturation-low-coupling) | saturate the two-channel source/sextic Loewner budget and retain a generic low/injected affine coupling outside the matrix | at `a=4sqrt(eta zeta)` the paid matrix has null vector `(sqrt(zeta),sqrt(eta))`; finite affine cost requires `b sqrt(zeta)+c sqrt(eta)=0`. For `eta=4/9`, `zeta=9/16`, coupling `(1,0)`, and unit low diagonal, the augmented determinant is exactly `-9/8` |
+| [NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR](#ng-2026-07-30-a13-normalized-gibbs-doob-absolute-anchor) | derive the absolute low/free-energy endpoint from normalized Gibbs laws, Doob increments, conditional variances, or relative entropy alone | adding a constant `C` to the endpoint energy preserves every normalized relative datum but shifts the absolute free energy by `C`. The route needs an external absolute low/injected anchor; this does not refute the pinned production normalization or any anchored endpoint theorem |
 | [NG-2026-07-30-A13-UNRESTRICTED-REVERSE-BAND-EXTENSION](#ng-2026-07-30-a13-unrestricted-reverse-band-extension) | extend a forward root/shell decay kernel coefficient-blindly to an unrestricted reverse band using only the source `H2` cost | at fixed spatial shell `m0`, the anticipative family `a^(J)=2^(-2m0) phi(xi_J)e_(m0)` has constant `H2` scale while bare reverse weights `2^(J-4m0)` and `2^(J-2m0)` diverge. This refutes only the unrestricted anticipative extension; it is not a legal progressive-control or complete signed production counterexample |
 | [NG-2026-07-30-A13-NAIVE-PRIMITIVE-TRACE-FOREST-IDENTIFICATION](#ng-2026-07-30-a13-naive-primitive-trace-forest-identification) | identify the conditionally averaged R-123 primitive trace directly with the R-063 covariance-normal forest while omitting conditional future variance | a deterministic constant-translation fixture has zero covariance-normal/forest mean but `Theta=V_fut=4s`, `s=339/(8000P)`; the naive identity gives `0=-2s` and misses exactly `2s=339/(4000P)`. The future-variance rebate is indispensable even before adaptation |
 | [NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION](#ng-2026-07-30-a13-replica-variance-automatic-trace-domination) | infer nonpositivity of the stationary trace secant from replica variance alone | the bounded legal row `h=d cos(t xi)` has `S_h-S_0=2 kappa^2 d^2 t^2 exp(-2t^2)>0`; replicas expose a favourable square but do not dominate the signed trace/current cross |
@@ -176,6 +179,71 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-30-a13-unrestricted-predictable-covariance-collapse"></a>
+### NG-2026-07-30-A13-UNRESTRICTED-PREDICTABLE-COVARIANCE-COLLAPSE -- blockwise predictability cannot collapse to the unrestricted covariance
+
+**Claim / route.**  Replace the legal predictable source adjoint
+`g_b=E[S_b^*G|F_(t_(b-1))]` and physical Riesz vector `sum_b S_b g_b` by the
+unrestricted covariance expression `C_JG`, with `C_J=sum_bS_bS_b^*`.
+
+**Failure mode.**  Use two scalar blocks `S_1=S_2=1`, let the first strict
+past be trivial, let the second strict past be `sigma(xi)`, and take
+`xi=+/-1` equiprobably and `G=xi`.  Then `g_1=0`, `g_2=xi`, so the legal
+physical vector is `xi`; the unrestricted expression is `C_JG=2xi`.
+The legal quotient norm squared is one, while the unrestricted covariance
+energy is two.
+
+**Evidence.**  R-127 proof note, Theorem 2.1 and Counterfixture 2.2; primary
+exact source audit and non-importing independent finite-law audit.
+
+**Consequence.**  Conditional Jensen still gives the valid sharp upper bound
+`||g||^2<=E<G,C_JG>`, but it is not an identity.  Every production source
+block must retain its own strict-past conditional projection before the
+covariance increments are summed.  This is not a no-go for a correctly
+projected production force.
+
+<a id="ng-2026-07-30-a13-loewner-saturation-low-coupling"></a>
+### NG-2026-07-30-A13-LOEWNER-SATURATION-LOW-COUPLING -- the saturated two-channel budget cannot absorb a generic low coupling
+
+**Claim / route.**  Spend the complete source/sextic two-channel Loewner
+budget at `a=4sqrt(eta zeta)` and leave a generic low/injected affine coupling
+outside the paid matrix without an additional constant.
+
+**Failure mode.**  The saturated matrix has null vector
+`(sqrt(zeta),sqrt(eta))`.  Generalized Schur completion gives a finite affine
+cost only when `b sqrt(zeta)+c sqrt(eta)=0`.  At `eta=4/9`, `zeta=9/16`,
+`a=2`, coupling `(b,c)=(1,0)`, and unit low diagonal, the full augmented
+matrix has determinant `-9/8` and is not positive semidefinite.
+
+**Evidence.**  R-127 proof note, Section 6; exact primary determinant,
+Moore--Penrose range, and strict-margin audits; non-importing determinant and
+affine-cost audits.
+
+**Consequence.**  The production proof must preserve a strict two-channel
+operator margin, prove the exact weighted cancellation, or pay a uniform
+low/injected dual norm.  The result does not say that the completely
+recombined production low endpoint has a nonzero coupling.
+
+<a id="ng-2026-07-30-a13-normalized-gibbs-doob-absolute-anchor"></a>
+### NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR -- normalized relative data cannot supply the absolute low anchor
+
+**Claim / route.**  Bound the absolute low/free-energy endpoint using only
+normalized Gibbs laws, Doob increments, conditional variances, KL production,
+or other relative information derived from those normalized laws.
+
+**Failure mode.**  Replacing `L` by `L+C` leaves
+`exp(-qL)/E exp(-qL)` and every conditional normalized law unchanged.  Hence
+Doob increments, conditional variances, and relative entropies are unchanged,
+whereas `Phi(L)=-(1/q)log E exp(-qL)` obeys `Phi(L+C)=Phi(L)+C`.
+
+**Evidence.**  R-127 proof note, Section 8; symbolic constant-gauge and
+normalized-law checks; non-importing two-atom gauge audit.
+
+**Consequence.**  A complete proof must retain an absolute low/injected
+anchor, such as the linear term in the coherent residual interpolation.  This
+does not refute the pinned A1/A8 normalization, an independently anchored
+endpoint theorem, or the complete production packet.
 
 <a id="ng-2026-07-30-a13-naive-primitive-trace-forest-identification"></a>
 ### NG-2026-07-30-A13-UNRESTRICTED-REVERSE-BAND-EXTENSION -- forward decay does not extend coefficient-blindly to an unrestricted reverse band

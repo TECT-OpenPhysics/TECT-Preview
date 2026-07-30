@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-127 predictable-source Riesz, weighted Schur, and low-margin boundary] - 2026-07-30
+
+Registered scoped T4 R-127 under the existing A13 host. The primary exact audit passes 52/52 and the non-importing independent audit passes 60/60. The final ten-page PDF passes standard form, zero-overfull, no-form, no-JavaScript, and all-page Poppler visual QA. Exact chartwise predictable-source geometry, q=10/9 completion, conditional weighted-Schur improvements, the augmented low/injected Loewner criterion, and the additive-gauge absolute-anchor boundary are established only in their declared scopes. The complete production source-Hessian identification, projected-force bound, unified forward/legal-reverse/balanced/low estimate, OVERLAP_src, Nelson, removals, the interacting measure, and Sector-A closure remain open.
+
 ## [A13 R-126 total-symbol Euler force and low-injected Loewner boundary] - 2026-07-30
 
 Registered scoped T4 R-126. The primary verifier passes 32/32 assertions and the independent verifier passes 22/22. The ten-page proof PDF passes form, overfull-box, no-form, and all-page visual QA. The exact derivative, causal projection/Riesz qualification, low/injected transport identity, forward shell sums, and block-Loewner criterion are established only at their declared scope. Production common-terminal identification, the unified forward/legal-reverse/balanced/low operator estimate, OVERLAP_src, Nelson, removals, the interacting measure, and Sector-A closure remain open.
