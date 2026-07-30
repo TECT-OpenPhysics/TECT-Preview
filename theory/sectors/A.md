@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-31-A13-DIAGONAL-HEAT-SEXTIC-TO-MIXED-RESPONSE | diagonal heat and sextic do not imply mixed-response coerciv |  |
+| NG-2026-07-31-A13-LAW-FREE-MIXED-RESPONSE-FLOOR-UNIFORMITY | complete six-row algebra alone is not floor-uniform over arb |  |
 | NG-2026-07-31-A13-DIAGONAL-GRAM-TO-MIXED-CONDITIONAL-RESPONSE | diagonal sample Grams do not determine the mixed conditional |  |
 | NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY | bounded frozen coefficients supply no automatic dyadic off-d |  |
 | NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY | one fixed heat law does not uniformly fill the Xi singlet de |  |

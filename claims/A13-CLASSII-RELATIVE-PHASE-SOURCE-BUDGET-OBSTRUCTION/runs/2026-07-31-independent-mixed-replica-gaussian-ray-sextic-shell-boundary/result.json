@@ -1,0 +1,228 @@
+{
+  "assertions": [
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "inputs",
+      "name": "upstream_pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/9",
+      "expected": "5/9",
+      "group": "inputs",
+      "name": "alpha",
+      "status": "PASS"
+    },
+    {
+      "actual": "4000000000001/1000000000000",
+      "expected": "4000000000001/1000000000000",
+      "group": "inputs",
+      "name": "p_mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "313/100",
+      "expected": "313/100",
+      "group": "replica",
+      "name": "polarization",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<1e-11",
+      "group": "fierz",
+      "name": "mixed_formulas",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.08474999999997881,
+      "expected": ">0.00087890625",
+      "group": "diagonal_heat",
+      "name": "compact_v",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0008929099428823553,
+      "expected": ">0.00087890625",
+      "group": "diagonal_heat",
+      "name": "compact_w",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/10240",
+      "expected": "9/10240",
+      "group": "diagonal_heat",
+      "name": "global_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.85722573273506e-17,
+      "expected": "<1e-14",
+      "group": "mixed_boundary",
+      "name": "origin_mean_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=0.03125",
+      "group": "diagonal_heat",
+      "name": "fixture_ball_9",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.005900000000000001,
+      "expected": "<=0.03125",
+      "group": "diagonal_heat",
+      "name": "fixture_ball_10",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0119,
+      "expected": "<=0.03125",
+      "group": "diagonal_heat",
+      "name": "fixture_ball_11",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.16662920028555317,
+      "expected": ">=-1e-12",
+      "group": "diagonal_heat",
+      "name": "finite_fixture_lower_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4210854715202004e-14,
+      "expected": "<1e-10",
+      "group": "floor_warning",
+      "name": "jet_matches_closed_form",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        -0.059691358024691374,
+        -0.09158132841944099,
+        -0.11386691842186987,
+        -0.12146653344325174
+      ],
+      "expected": "all negative",
+      "group": "floor_warning",
+      "name": "negative_samples",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.12146653344325174,
+      "expected": "within 0.02 of -10/81",
+      "group": "floor_warning",
+      "name": "scaled_limit_approach",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.7653207581934909,
+      "expected": ">0",
+      "group": "gaussian_ray",
+      "name": "margin_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.7653207581934909,
+      "expected": ">0.75",
+      "group": "gaussian_ray",
+      "name": "margin_above_three_quarters",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.7653207581934908,
+      "expected": ">=0.7653207581934909",
+      "group": "gaussian_ray",
+      "name": "completed_square_samples",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/6",
+      "expected": "7/6",
+      "group": "shell",
+      "name": "known_square",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/12",
+      "expected": "<2",
+      "group": "shell",
+      "name": "known_too_slow_mix",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/12",
+      "expected": "<4",
+      "group": "shell",
+      "name": "known_too_slow_far",
+      "status": "PASS"
+    },
+    {
+      "actual": 1048576,
+      "expected": 1048576,
+      "group": "shell",
+      "name": "gamma_four_offset",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 23,
+  "assertions_total": 23,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "diagnostics": {
+    "diagonal_heat_sextic": {
+      "compact_v": 0.08474999999997881,
+      "compact_w": 0.0008929099428823553,
+      "finite_fixture_lower_residual": 0.16662920028555317,
+      "global_constant": 0.00087890625,
+      "radius": "1/32"
+    },
+    "fierz_max_residual": 0.0,
+    "floor_warning": {
+      "jet_closed_max_residual": 1.4210854715202004e-14,
+      "scaled_samples": [
+        -0.059691358024691374,
+        -0.09158132841944099,
+        -0.11386691842186987,
+        -0.12146653344325174
+      ]
+    },
+    "gaussian_ray": {
+      "negative_constant": 0.13408173695704922,
+      "negative_quadratic": 0.10370673695705683,
+      "source_sextic_margin": 0.7653207581934909
+    },
+    "inputs": {
+      "alpha": "5/9",
+      "c0": "12000000000/4000000000001",
+      "c1": "30375000000/4000000000001",
+      "floor": "1/1000000000000"
+    },
+    "mixed_origin_mean_residual": 4.85722573273506e-17,
+    "replica": {
+      "lhs": "313/100",
+      "rhs": "313/100"
+    }
+  },
+  "no_overclaim": "Independent checks cover the scoped R-132 representation, comparison, counterfixtures, and scalar Gaussian ray only. They prove no production owner-complete response or Sector A closure.",
+  "package_version": "1.0.0",
+  "result_id": "A13-CLASSII-MIXED-REPLICA-GAUSSIAN-RAY-SEXTIC-SHELL-BOUNDARY",
+  "schema": "tect/a13-mixed-replica-gaussian-ray-sextic-shell-boundary-independent/1.0",
+  "scope": {
+    "absolute_anchor": false,
+    "diagonal_rademacher_heat_sextic_bound_proved": true,
+    "diagonal_to_mixed_promotion_rejected": true,
+    "law_free_floor_uniformity_rejected": true,
+    "mixed_pauli_fierz_identity_proved": true,
+    "mixed_replica_representation_proved": true,
+    "production_c_bal": false,
+    "production_c_far": false,
+    "production_c_mix": false,
+    "production_owner_complete_form_constructed": false,
+    "sector_a_closed": false,
+    "standard_gaussian_ray_score_bound_proved": true
+  },
+  "status": "PASS"
+}

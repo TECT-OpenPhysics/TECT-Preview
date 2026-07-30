@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-31-A13-DIAGONAL-HEAT-SEXTIC-TO-MIXED-RESPONSE](#ng-2026-07-31-a13-diagonal-heat-sextic-to-mixed-response) | promote a globally coercive diagonal heat-Gram plus terminal-sextic comparison to the square-of-conditional-mean physical response | at the zero background the symmetric 64-atom law has `Xi(-A,V)=-Xi(A,V)`, hence `E Xi=0` for every tangent while the diagonal mean-square is strictly positive; the unshifted sextic Hessian also vanishes there |
+| [NG-2026-07-31-A13-LAW-FREE-MIXED-RESPONSE-FLOOR-UNIFORMITY](#ng-2026-07-31-a13-law-free-mixed-response-floor-uniformity) | infer a floor-uniform mixed current--trace response from complete six-row algebra without using the actual conditional law | on the exact rational active ray with floor `delta^2` and conditional law `{delta,1}/2`, the recombined Hessian is negative and equals `-10 c1/(81 delta)+O(1)`; the standard-Gaussian score-transfer ray remains uniformly controlled, so production-law structure is the necessary next input |
 | [NG-2026-07-31-A13-UNWEIGHTED-RATIONAL-D2-FLOOR-UNIFORMITY](#ng-2026-07-31-a13-unweighted-rational-d2-floor-uniformity) | obtain a floor-uniform production estimate by separating the rational coefficient and bounding its unweighted second spatial derivative | for `F_e(s)=s^3/(s^2+e)` and `G_e(x)=F_e(sin x)`, `sqrt(e)||G_e''||_2^2 -> 3/4`, hence `||G_e''||_2 ~ (sqrt(3)/2)e^(-1/4)`. The no-go targets separated `D2 C`, not the cancellation retained in `D2(C^T C)` |
 | [NG-2026-07-31-A13-COMPLETE-LOW-SQUARE-STRICT-GAP-REFINEMENT](#ng-2026-07-31-a13-complete-low-square-strict-gap-refinement) | infer a strict augmented low gap or childwise refinement invariance solely from a complete positive Gram square | the exact Schur complement is `W^*(I-P_T)W>=0` but vanishes when `Ran W` lies in `Ran T`; independently, child squares `1^2+(-1)^2=2` collapse to terminal square zero. Aggregate before quotient and prove quantitative transversality separately |
 | [AUDIT-2026-07-30-A13-COVARIANCE-NORMAL-DOMINANCE-ACTION-DIRECTION](#audit-2026-07-30-a13-covariance-normal-dominance-action-direction) | use `E_CN=P_comp+V/2>=P_comp` to lower-bound the R-123 direct action owner or to delete the future variance in a secant | the inequality points from the smaller action packet to the larger covariance-normal endpoint. The exact R-125 constant-translation owner has `V=T=4s`, hence `E_CN=0` but `P_comp=-2s`; an endpoint difference can also have `Delta E_CN=-1/2` and `Delta P_comp=0` |
@@ -197,6 +199,56 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-07-31-a13-diagonal-heat-sextic-to-mixed-response"></a>
+### NG-2026-07-31-A13-DIAGONAL-HEAT-SEXTIC-TO-MIXED-RESPONSE -- diagonal heat and sextic do not imply mixed-response coercivity
+
+**Claim / route.**  Use the global positive lower bound for the diagonal
+comparison `E_A ||Xi(z+A,V)||^2+Q_6(z)[V,V]` as a lower bound for the actual
+square-of-conditional-mean response after the once-owned sextic is added.
+
+**Failure mode.**  At `z=0`, every output of `Xi(A,V)` is odd under the
+simultaneous sign reversal `A -> -A`: its radial and wedge numerators are odd
+and its rational denominator is even.  The symmetric 64-atom product law
+therefore has `E_A Xi(A,V)=0` for every tangent.  The diagonal mean-square is
+strictly positive and obeys the R-132 compact lower bound, but the actual
+square of the conditional mean is zero.  The unshifted terminal-sextic Hessian
+also vanishes at `z=0`.
+
+**Evidence.**  R-132 proof note, Sections 5--6; primary exact 64-atom symbolic
+mean and coefficient audit; independent direct atom enumeration.
+
+**Consequence.**  The diagonal heat--sextic theorem is a valid comparison
+result but not a production owner.  Promotion requires a legal
+square-before-average realized cluster, a complete mixed-replica/trace/forest
+identity, or the separately owned source or low channels.  This strengthens,
+but does not replace, the R-131 diagonal-Gram information no-go.
+
+<a id="ng-2026-07-31-a13-law-free-mixed-response-floor-uniformity"></a>
+### NG-2026-07-31-A13-LAW-FREE-MIXED-RESPONSE-FLOOR-UNIFORMITY -- complete six-row algebra alone is not floor-uniform over arbitrary conditional laws
+
+**Claim / route.**  Derive a floor-uniform lower Hessian bound for the
+recombined mixed current--trace response from the exact six-row Fierz
+cancellation, with no quantitative hypothesis on the conditional law.
+
+**Failure mode.**  Put `e=delta^2`, `u=s e_1`, `V=e_1`, and
+`f_delta(s)=s-(5/9)s^3/(s^2+delta^2)`.  Give `s` the conditional law
+`{delta,1}/2`, translate both atoms by the same control parameter, and use
+the matching trace covariance.  The linear-row Hessian is zero.  The exact
+rational-row Hessian is
+`-5 c1 (delta-1)^2 p(delta)/(324 delta (1+delta^2)^4)`, where
+`p(delta)=7delta^7+188delta^6+61delta^5+100delta^4+57delta^3+
+40delta^2+3delta+8`.  It is negative for `0<delta<1` and equals
+`-10 c1/(81delta)+O(1)` as the floor vanishes.
+
+**Evidence.**  R-132 proof note, Section 7; primary exact SymPy factorization
+and limit; independent second-order dual-number differentiation.
+
+**Consequence.**  A production proof must use the actual conditional Gaussian
+or Gibbs law, a small-ball/cross-replica estimate, or another signed owner
+cancellation.  The fixture is not a production counterexample.  R-132's
+standard-Gaussian scalar ray instead has a floor-uniform source--sextic margin
+above `3/4`, so law-specific score transfer remains viable.
 
 <a id="ng-2026-07-31-a13-diagonal-gram-to-mixed-conditional-response"></a>
 ### NG-2026-07-31-A13-DIAGONAL-GRAM-TO-MIXED-CONDITIONAL-RESPONSE -- diagonal sample Grams do not determine the mixed conditional response

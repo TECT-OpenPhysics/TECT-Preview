@@ -1,0 +1,355 @@
+{
+  "assertions": [
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "inputs",
+      "name": "upstream_pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/9",
+      "expected": "5/9",
+      "group": "inputs",
+      "name": "alpha",
+      "status": "PASS"
+    },
+    {
+      "actual": "12000000000/4000000000001",
+      "expected": "12000000000/4000000000001",
+      "group": "inputs",
+      "name": "c0",
+      "status": "PASS"
+    },
+    {
+      "actual": "30375000000/4000000000001",
+      "expected": "30375000000/4000000000001",
+      "group": "inputs",
+      "name": "c1",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/1000000000000",
+      "expected": "1/1000000000000",
+      "group": "inputs",
+      "name": "floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "313/100",
+      "expected": "313/100",
+      "group": "replica",
+      "name": "polarization",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "replica",
+      "name": "weights_normalized",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "group": "fierz",
+      "name": "all_exact_fixtures",
+      "status": "PASS"
+    },
+    {
+      "actual": "42375000000*JJ/4000000000001 - 16875000000*JM*tau_prime/4000000000001 - 16875000000*MJ*tau/4000000000001 + 9375000000*MM*tau*tau_prime/4000000000001",
+      "expected": "42375000000*JJ/4000000000001 - 16875000000*JM*tau_prime/4000000000001 - 16875000000*MJ*tau/4000000000001 + 9375000000*MM*tau*tau_prime/4000000000001",
+      "group": "fierz",
+      "name": "mixed_six_row_split",
+      "status": "PASS"
+    },
+    {
+      "actual": "972000000000/452000000000113",
+      "expected": "972000000000/452000000000113",
+      "group": "diagonal_heat",
+      "name": "c_full",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(3)/2 + 6031250000001/1000000000000",
+      "expected": "sqrt(3)/2 + 6031250000001/1000000000000",
+      "group": "diagonal_heat",
+      "name": "denominator",
+      "status": "PASS"
+    },
+    {
+      "actual": "339000000000/4000000000001",
+      "expected": "339000000000/4000000000001",
+      "group": "diagonal_heat",
+      "name": "compact_v",
+      "status": "PASS"
+    },
+    {
+      "actual": "79202083333359066666666668800000000000000000000000000000000000/63742557014100577247814729963029744470078934678819797569444444457 - 12866666666668800000000000000000000000000000000000000000000000*sqrt(3)/63742557014100577247814729963029744470078934678819797569444444457",
+      "expected": "19200000000000/(452000000000113*(sqrt(3)/2 + 6031250000001/1000000000000)**2)",
+      "group": "diagonal_heat",
+      "name": "compact_w",
+      "status": "PASS"
+    },
+    {
+      "actual": "339000000000/4000000000001",
+      "expected": "9/10240",
+      "group": "diagonal_heat",
+      "name": "compact_v_above_sextic",
+      "status": "PASS"
+    },
+    {
+      "actual": "79202083333359066666666668800000000000000000000000000000000000/63742557014100577247814729963029744470078934678819797569444444457 - 12866666666668800000000000000000000000000000000000000000000000*sqrt(3)/63742557014100577247814729963029744470078934678819797569444444457",
+      "expected": "> 9/10240",
+      "group": "diagonal_heat",
+      "name": "compact_w_above_sextic",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/10240",
+      "expected": "9/10240",
+      "group": "diagonal_heat",
+      "name": "raw_global_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "2317901184000758626560000062985600000000000000000000000000000000000/3786757876950699418829494080336317344231975828720020824905600000741393 - 101150208000016796160000000000000000000000000000000000000000000000*sqrt(30)/3786757876950699418829494080336317344231975828720020824905600000741393",
+      "expected": "> 1/2250",
+      "group": "diagonal_heat",
+      "name": "half_compact_w_above_sextic",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2250",
+      "expected": "1/2250",
+      "group": "diagonal_heat",
+      "name": "half_global_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "ui1**2*vi1**2 + 2*ui1*ui2*vi1*vi2 + 2*ui1*ur1*vi1*vr1 + 2*ui1*ur2*vi1*vr2 + ui2**2*vi2**2 + 2*ui2*ur1*vi2*vr1 + 2*ui2*ur2*vi2*vr2 + ur1**2*vr1**2 + 2*ur1*ur2*vr1*vr2 + ur2**2*vr2**2 + vi1**2 + vi2**2 + vr1**2 + vr2**2",
+      "expected": "vi1**2 + vi2**2 + vr1**2 + vr2**2 + (ui1*vi1 + ui2*vi2 + ur1*vr1 + ur2*vr2)**2",
+      "group": "rademacher",
+      "name": "a_second_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "ui1**4 + 2*ui1**2*ui2**2 + 2*ui1**2*ur1**2 + 2*ui1**2*ur2**2 + 12*ui1**2 + ui2**4 + 2*ui2**2*ur1**2 + 2*ui2**2*ur2**2 + 12*ui2**2 + ur1**4 + 2*ur1**2*ur2**2 + 12*ur1**2 + ur2**4 + 12*ur2**2 + 16",
+      "expected": "12*ui1**2 + 12*ui2**2 + 12*ur1**2 + 12*ur2**2 + (ui1**2 + ui2**2 + ur1**2 + ur2**2)**2 + 16",
+      "group": "rademacher",
+      "name": "radius_fourth_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "ui1**2*vi2**2 + ui1**2*vr2**2 - 2*ui1*ui2*vi1*vi2 - 2*ui1*ui2*vr1*vr2 - 2*ui1*ur2*vi1*vr2 + 2*ui1*ur2*vi2*vr1 + ui2**2*vi1**2 + ui2**2*vr1**2 + 2*ui2*ur1*vi1*vr2 - 2*ui2*ur1*vi2*vr1 + ur1**2*vi2**2 + ur1**2*vr2**2 - 2*ur1*ur2*vi1*vi2 - 2*ur1*ur2*vr1*vr2 + ur2**2*vi1**2 + ur2**2*vr1**2 + 2*vi1**2 + 2*vi2**2 + 2*vr1**2 + 2*vr2**2",
+      "expected": "2*vi1**2 + 2*vi2**2 + 2*vr1**2 + 2*vr2**2 + (-ui1*vi2 + ui2*vi1 + ur1*vr2 - ur2*vr1)**2 + (ui1*vr2 - ui2*vr1 + ur1*vi2 - ur2*vi1)**2",
+      "group": "rademacher",
+      "name": "wedge_second_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "group": "mixed_boundary",
+      "name": "rademacher_mean_xi_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "9*rho*(rho + 4*xv**2)/10",
+      "expected": "9*rho^2/10 + 18*rho*xv^2/5",
+      "group": "sextic",
+      "name": "hessian_formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "mixed_boundary",
+      "name": "origin_sextic_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5*(delta - 1)**2*(7*delta**7 + 188*delta**6 + 61*delta**5 + 100*delta**4 + 57*delta**3 + 40*delta**2 + 3*delta + 8)/(324*delta*(delta**2 + 1)**4)",
+      "expected": "-5*(delta - 1)**2*(7*delta**7 + 188*delta**6 + 61*delta**5 + 100*delta**4 + 57*delta**3 + 40*delta**2 + 3*delta + 8)/(324*delta*(delta**2 + 1)**4)",
+      "group": "floor_warning",
+      "name": "exact_hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "-967/8100",
+      "expected": "<0",
+      "group": "floor_warning",
+      "name": "negative_for_0_delta_1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-10/81",
+      "expected": "-10/81",
+      "group": "floor_warning",
+      "name": "inverse_floor_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "4/9",
+      "expected": "in (0,1)",
+      "group": "gaussian_ray",
+      "name": "value_multiplier_range",
+      "status": "PASS"
+    },
+    {
+      "actual": "129370792500068355000000009/160000000000080000000000010 - 489280500000121500000000*sqrt(2)/16000000000008000000000001",
+      "expected": ">0",
+      "group": "gaussian_ray",
+      "name": "margin_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "129370792500068355000000009/160000000000080000000000010 - 489280500000121500000000*sqrt(2)/16000000000008000000000001",
+      "expected": ">3/4",
+      "group": "gaussian_ray",
+      "name": "margin_above_three_quarters",
+      "status": "PASS"
+    },
+    {
+      "actual": "9*y**2/2 - y*(121500000000*sqrt(2)/4000000000001 + 243000000000/4000000000001) - 121500000000*sqrt(2)/4000000000001 + 32355000000009/40000000000010",
+      "expected": "9*y**2/2 - 243000000000*y/4000000000001 - 121500000000*sqrt(2)*y/4000000000001 - 121500000000*sqrt(2)/4000000000001 + 32355000000009/40000000000010",
+      "group": "gaussian_ray",
+      "name": "quartic_completion",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/6",
+      "expected": "7/6",
+      "group": "shell",
+      "name": "known_square_exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/12",
+      "expected": "<2",
+      "group": "shell",
+      "name": "known_amplitude_too_slow_mix",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/12",
+      "expected": "<4",
+      "group": "shell",
+      "name": "known_amplitude_too_slow_far",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": 4,
+      "group": "shell",
+      "name": "gamma_four_far_compatible",
+      "status": "PASS"
+    },
+    {
+      "actual": 1048576,
+      "expected": 1048576,
+      "group": "shell",
+      "name": "support_offset_cost",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 36,
+  "assertions_total": 36,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "diagnostics": {
+    "diagonal_heat_sextic": {
+      "boundary": "diagonal mean-square only; not square of conditional mean",
+      "compact_v": "339000000000/4000000000001",
+      "compact_w": "79202083333359066666666668800000000000000000000000000000000000/63742557014100577247814729963029744470078934678819797569444444457 - 12866666666668800000000000000000000000000000000000000000000000*sqrt(3)/63742557014100577247814729963029744470078934678819797569444444457",
+      "denominator": "sqrt(3)/2 + 6031250000001/1000000000000",
+      "global_constant": "9/10240",
+      "half_global_constant": "1/2250",
+      "half_radius": "1/45",
+      "radius": "1/32"
+    },
+    "inputs": {
+      "alpha": "5/9",
+      "c0": "12000000000/4000000000001",
+      "c1": "30375000000/4000000000001",
+      "floor": "1/1000000000000",
+      "p_mass": "4000000000001/1000000000000"
+    },
+    "law_free_floor_warning": {
+      "hessian_over_c1": "-5*(delta - 1)**2*(7*delta**7 + 188*delta**6 + 61*delta**5 + 100*delta**4 + 57*delta**3 + 40*delta**2 + 3*delta + 8)/(324*delta*(delta**2 + 1)**4)",
+      "production_counterexample": false,
+      "scaled_limit": "-10/81"
+    },
+    "mixed_cancellation": {
+      "mean_xi_at_origin": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "sextic_at_origin": 0
+    },
+    "mixed_fierz": {
+      "floor_dependence": "tau and tau_prime only",
+      "formula": "42375000000*JJ/4000000000001 - 16875000000*JM*tau_prime/4000000000001 - 16875000000*MJ*tau/4000000000001 + 9375000000*MM*tau*tau_prime/4000000000001"
+    },
+    "replica": {
+      "finite_fixture_lhs": "313/100",
+      "finite_fixture_rhs": "313/100"
+    },
+    "shell": {
+      "known_amplitude_exponent": "7/12",
+      "known_gamma": "7/12",
+      "known_square_exponent": "7/6",
+      "required_far_exponent": 4,
+      "required_mix_exponent": 2,
+      "successor_gamma": "4",
+      "support_offset_cost": 1048576
+    },
+    "standard_gaussian_ray": {
+      "floor_uniform": true,
+      "negative_constant": "121500000000*sqrt(2)/4000000000001 + 364500000000/4000000000001",
+      "negative_quadratic": "121500000000*sqrt(2)/4000000000001 + 243000000000/4000000000001",
+      "production_full_response": false,
+      "source_sextic_margin": "129370792500068355000000009/160000000000080000000000010 - 489280500000121500000000*sqrt(2)/16000000000008000000000001",
+      "source_sextic_margin_decimal": 0.7653207581934908
+    }
+  },
+  "no_overclaim": "R-132 proves an exact mixed-replica representation, a mixed Pauli--Fierz identity, a diagonal Rademacher heat--sextic comparison, a law-free floor warning, and a floor-uniform standard-Gaussian scalar-ray source--sextic bound. It does not construct or bound the owner-complete production response, prove C_mix, C_far, c_bal, the absolute anchor, Nelson, or Sector A closure.",
+  "package_version": "1.0.0",
+  "result_id": "A13-CLASSII-MIXED-REPLICA-GAUSSIAN-RAY-SEXTIC-SHELL-BOUNDARY",
+  "schema": "tect/a13-mixed-replica-gaussian-ray-sextic-shell-boundary-primary/1.0",
+  "scope": {
+    "absolute_anchor": false,
+    "diagonal_rademacher_heat_sextic_bound_proved": true,
+    "diagonal_to_mixed_promotion_rejected": true,
+    "law_free_floor_uniformity_rejected": true,
+    "mixed_pauli_fierz_identity_proved": true,
+    "mixed_replica_representation_proved": true,
+    "production_c_bal": false,
+    "production_c_far": false,
+    "production_c_mix": false,
+    "production_owner_complete_form_constructed": false,
+    "sector_a_closed": false,
+    "standard_gaussian_ray_score_bound_proved": true
+  },
+  "status": "PASS"
+}

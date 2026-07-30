@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-132](#r-132) | Common-heat mixed replicas, Gaussian-ray source--sextic margin, and the shell-exponent boundary | Scoped T4 analytic/exact/executed advance and route correction. The fixed-law physical response has an exact common-heat paired-replica formula, and the complete six-row mixed Pauli--Fierz contraction is `c0 JJ+c1(JJ-alpha tau' JM-alpha tau MJ+alpha^2 tau tau' MM)`, with every floor denominator confined to `tau,tau'`. A 64-atom heat plus terminal sextic gives the diagonal comparison constant `9/10240`, but exact origin cancellation shows that this does not control the square of the conditional mean. An equal two-point rational-ray law has Hessian `-10 c1/(81 delta)+O(1)`, rejecting law-free floor uniformity without constituting a production counterexample. Standard-Gaussian score transfer instead gives a floor-uniform once-owned scalar-ray margin `m_G=0.76532075819349...>3/4`. R-083 polynomial vanishing remains narrow and R-091's `gamma=7/12` amplitude tail is too slow for the mixed/far targets; a complete `gamma=4` one-use estimate or stronger joint signed cancellation remains open, together with production `C_mix/C_far/c_bal`, low constants, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure |
 | [R-131](#r-131) | Owner-conditioned physical response, mixed-Gram information, shell-decay boundary, and stratified transversality | Scoped T4 analytic/exact/executed advance and route pruning. Given an owner-complete finite physical form, orthogonal shell coanalysis gives the exact endpoint factorization `R^*F=H` and preserves the response norm, so it creates no decay. The deterministic current-square component has the floor-uniform `H2` form coefficient `46959/(2000P)`. Opposite rotations prove that diagonal sample Grams do not determine mixed conditional response, while dyadic cosine multipliers force prototype mixed/far constants to grow as `2^(2m-r-1)` and `2^(4m-r-1)`; frozen-`Q` constants also miss `DQ`. The exact two/three-channel acceptance margins are retained. The Xi radial coefficient Gram has an active-stratum lower bound proportional to `lambda^2`, but a phase-invisible fixture rejects full-tangent coercivity after only the common-phase quotient and the radial coefficient degenerates at the pure-singlet transition. Any fixed finite-doublet-second-moment heat law also loses uniform transversality on large singlet rays. Production owner-complete response construction, `C_mix/C_far/c_bal`, low constants, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-130](#r-130) | Post-recombined terminal coordinate, conormal Gram envelopes, sharp balanced bridge, and direct-low response boundary | Scoped T4 analytic/exact/executed advance. After exhaustive current recombination, the R-082 `Xi` coordinate admits an exact fixed-filtration Doob and matching once-owned trace recode, but not arbitrary legacy-root transport or matching energy without `mu=0` and `Sigma_c=Gamma`. The R-123 action owner has a canonical response-before-pullback construction on finite cylinders; exact kernel fixtures keep the `9I/10` source cost outside the physical pullback, while a uniform production response remains open. The fixed six-row Gram obeys pointwise constants `L6=1143/(250P)` and `H6=7083/(500P)`, with physical force `L6/2`, Hessian `H6`, and Taylor remainder `H6/2`. A scalar boundary layer proves that separated rational `D2C` is not floor-uniform. The sharp deterministic balanced bridge has constant one; the local Cartan diagnostic is `0.520915...` of the old-budget ceiling, but no global `c_bal` upper bound follows. A centered-heat direct-low candidate and complete-Gram PSD Schur theorem are proved, while historical R-079 low-owner equivalence, a strict gap, childwise refinement, production `C_mix/C_far/c_bal`, the absolute anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-129](#r-129) | Endpoint trace-excess direction, shell coanalysis legal reverse, and the shifted-Douglas gap boundary | Scoped T4 analytic/exact/executed advance and route correction. The exact identity `E_CN=P_comp+V/2>=P_comp` holds only at an absolute conditional endpoint and has the wrong direction for lower-bounding the smaller R-123 action owner; exact endpoint and secant fixtures prevent that bypass. Direct covariance-normal differentiation cancels every conditional-mean derivative, and a Gaussian family proves that separate `H_V` and `H_T` norm bounds are not logically necessary if a direct signed bound is proved. For an owner-complete physical response `A`, orthogonal physical-shell analysis `R=C L_pred` and response analysis `F=C A` give `H=R^*F=F^*R`; the true aggregate reverse is legal, shell-count-free, and has the forward norm without assuming temporal covariance/shell commutation. It is not a swapped-label geometric band, and pullback costs `||L_pred||`. The shifted-Douglas theorem gives an exact prescribed-gap criterion and the norm threshold `k^2<d m_2`, with `m_2=0.0239601163...` only in the R-128 zero-diagonal specialization. Production response identification, forward constants, balanced/low/anchor data, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -150,6 +151,71 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-132"></a>
+### R-132 -- Common-heat mixed replicas, Gaussian-ray source--sextic margin, and the shell-exponent boundary
+
+**Result ID.**
+A13-CLASSII-MIXED-REPLICA-GAUSSIAN-RAY-SEXTIC-SHELL-BOUNDARY.
+
+**Exact response coordinate.**  Recombine all same-root visits, condition on
+the strict past and retained root, and keep heat common between two
+conditionally independent future replicas.  Polarizing the current square
+and its Gaussian trace probe then gives the exact fixed-law physical response
+before source pullback.  For the rational six-row frame, summing all rows
+before absolute values gives
+
+`c0 JJ+c1(JJ-alpha tau' JM-alpha tau MJ+alpha^2 tau tau' MM)`.
+
+All density-floor denominators occur only in `tau,tau'`; the signed four-term
+rational combination, trace, forest, heat, visit, and output-cluster owners
+must therefore remain intact in any production estimate.
+
+**Diagonal and law boundaries.**  For the full six-real-coordinate 64-atom
+product-Rademacher heat, an exact compact Schur estimate patched with the
+once-owned terminal sextic gives the global diagonal comparison constant
+`9/10240`; the audited half-normalized form gives `1/2250`.  This is not a
+physical mixed-response bound: at the zero background,
+`Xi(-A,V)=-Xi(A,V)`, hence `E Xi=0` for every tangent while the diagonal
+mean-square is positive, and `Q6(0)=0`.  Moreover, on the rational active ray
+with floor `delta^2`, the equal two-point conditional law `{delta,1}/2` has
+recombined Hessian
+
+`-10 c1/(81 delta)+O(1)`.
+
+This rejects a law-free floor-uniform inference but is not a production A1
+counterexample because the abstract two-point law has not been realized by
+the production conditional field.
+
+**Positive Gaussian repair and shell audit.**  For a standard-Gaussian
+conditional scalar ray, transferring both translation derivatives to the
+Gaussian scores and using `|f_delta(x)|<=|x|` gives the floor-uniform
+once-owned source--sextic margin
+
+`m_G=9/10-4c1(3+sqrt(2))-[4c1(2+sqrt(2))]^2/18`
+`=0.76532075819349...>3/4`.
+
+This is a reduced one-ray theorem, not a full spatial owner or anchor.  R-083
+still gives stopped polynomial FAR vanishing only in its narrower hypotheses.
+R-091's accepted `gamma=7/12` square tail gives amplitude exponent `7/12`,
+too slow for the required mixed exponent two and far exponent four.  A
+complete `gamma=4` square estimate would yield compatible far amplitude
+decay, with the five-shell offset costing `2^20`.
+
+**Proven in.**  A13 proof note
+`classii-mixed-replica-gaussian-ray-sextic-shell-boundary-260731-v1.0`;
+primary 36/36, non-importing standard-library independent 23/23, and
+integrated 70/70 audits.
+
+**Reuse scope.**  Common-heat replica polarization, mixed Pauli--Fierz
+cancellation, the diagonal-to-mixed and law-free-floor firewalls, Gaussian
+score-transfer repair, and the exact shell-exponent successor criterion.
+
+**Tier:** T4 at fixed finite cutoff and positive floor.  Production
+owner-complete response construction, `C_mix`, `C_far`, `c_bal`, low
+`D/K/R0/S0`, matching energy, a strict augmented gap, the absolute anchor,
+both A13 gates, `OVERLAP_src`, Nelson, removals, the interacting measure, and
+Sector-A closure remain open.
 
 <a id="r-131"></a>
 ### R-131 -- Owner-conditioned physical response, mixed-Gram information, shell-decay boundary, and stratified transversality

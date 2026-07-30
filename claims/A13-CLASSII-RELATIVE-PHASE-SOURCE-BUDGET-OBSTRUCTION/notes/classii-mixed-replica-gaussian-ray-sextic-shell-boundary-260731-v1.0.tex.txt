@@ -1,0 +1,518 @@
+% =============================================================================
+% Title: Mixed-replica polarization, diagonal heat--sextic comparison, Gaussian-ray repair, and shell boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-MIXED-REPLICA-GAUSSIAN-RAY-SEXTIC-SHELL-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-31; this version issued 2026-07-31
+% Status: scoped T4 analytic/exact/executed advance; both A13 gates and Sector A remain open
+% =============================================================================
+
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+
+R-131 left two apparently separate problems.  First, diagonal sample Grams
+do not determine the mixed conditional response.  Second, a fixed heat law
+does not by itself give a state-uniform $\Xi$ gap along large singlet rays,
+although the once-owned terminal sextic grows strongly there.  R-132 resolves
+the exact algebraic relation between these issues and identifies one
+production-relevant positive model.
+
+\begin{enumerate}
+\item The complete square-of-conditional-mean term and trace term admit an
+exact two-future-replica polarization, provided the heat variable is kept
+common and same-root visits are recombined first.
+\item The mixed six-row contraction has an exact Pauli--Fierz formula.  Every
+floor denominator is localized to the two rational scalars $\tau,\tau'$, so
+the polynomial and rational shell problems can be distinguished without
+splitting the owner.
+\item The diagonal heat Gram plus the once-owned sextic is globally coercive.
+For the exact 64-atom product-Rademacher comparison law, the raw diagonal form
+has the explicit constant $9/10240$.  A half-normalized comparison still has
+the exact constant $1/2250$.
+\item That diagonal theorem cannot be promoted to the physical mixed response:
+at the origin the same symmetric law has $\E\Xi=0$ and zero sextic Hessian.
+This is an exact square-before-average boundary, not a numerical shortfall.
+\item An exact two-point rational-ray law makes the mixed current--trace
+Hessian diverge like $-10c_1/(81\delta)$.  Hence no law-free floor-uniform
+theorem is possible from the six-row algebra alone.
+\item In contrast, a standard-Gaussian rational-ray packet has a
+floor-uniform score-transfer bound.  The source and terminal sextic, each
+used once, leave an explicit positive margin exceeding $3/4$ on that entire
+scalar ray.  This proves that production-law information can repair the
+two-point obstruction and selects the next route.
+\end{enumerate}
+
+The result is T4.  It proves no owner-complete production response, no
+cutoff-, chart-, control-, filtration-, visit-, output-, or
+refinement-uniform $C_{\rm mix}$, $C_{\rm far}$, or $c_{\rm bal}$, no complete
+low block, matching energy, strict shifted-Douglas gap, absolute anchor,
+$\mathrm{OVERLAP}_{\rm src}$, Nelson estimate, removal theorem, interacting
+measure, or Sector-A closure.
+
+\section*{2. One-use owner and conditioning firewall}
+
+Fix a finite cutoff, positive floor, one temporally faithful chart, and one
+conditional law.  Condition on the strict past and retained root.  Recombine
+all visits of that root before polarization, and let the orthogonal output
+clusters satisfy $\sum_{\cC}P_{\cC}=I$.  The heat variable $r$ is common to
+the two future replicas.  It remains an $L^2(\mu_\Sigma)$ coordinate and is
+neither independently replicated nor averaged before squaring.
+
+The accepted coordinate equalities are
+\[
+\begin{split}
+q_{\rm comp}
+&=D^2\sum_{k,\cC}\E\cP^{\rm comp}_{k,\cC}
+ =-{1\over2}D^2\sum_k\E\mathcal T_k\\
+&={1\over2}D^2\sum_k\E
+ \{\mathcal F^{\rm ad}_{063,k}-\mathcal V_{{\rm fut},k}\}.       \qquad\text{(2.1)}
+\end{split}
+\]
+The R-063 forest and future variance in the last line are alternate
+coordinates for the same primitive trace owner, not additional reserves.
+The conditional and complete low pieces occur once each.  The rational
+$\mathcal R_Q,\mathcal M_U,\mathcal K_R$ pieces occur once.  The regular
+Cartan FAR square and the live rational curl $2680/729$ are distinct owners
+and occur once.  Heat stays internal.  Source and terminal sextic are appended
+once only after the physical response is formed.
+
+Consequently the fixed-chart action Hessian has the form
+\[
+D^2\mathcal A_J(h)[u,v]
+ ={9\over10}\ip{u}{v}
+ +q_{\rm comp}(L_{\rm pred}u,L_{\rm pred}v)
+ +q_6(Z;L_{\rm pred}u,L_{\rm pred}v).                \qquad\text{(2.2)}
+\]
+The source term remains outside the physical pullback.  None of the
+comparisons below moves it inside or spends it twice.
+
+\section*{3. Exact mixed-replica response representation}
+
+For owner $k$, cluster $\cC$, and spatial direction $i$, put
+\[
+ X_f=P_{\cC}C_6(W_{f,r})\partial_iW_{f,r},\qquad
+ Y_{f,g}=P_{\cC}C_6(W_{f,r})\partial_iG'_{k,g},       \qquad\text{(3.1)}
+\]
+where $f,f'$ are conditionally independent copies of the complete future,
+and $G'_k$ is the independent Gaussian trace probe with the prescribed
+covariance.  For fixed-law physical variations $z,w$, define
+\[
+\begin{split}
+X_{f;z}&=P_{\cC}\{DC_6(W_f)[z_f]\partial_iW_f
+                 +C_6(W_f)\partial_i z_f\},\\
+X_{f;zw}&=P_{\cC}\{D^2C_6(W_f)[z_f,w_f]\partial_iW_f
+ +DC_6(W_f)[z_f]\partial_iw_f
+ +DC_6(W_f)[w_f]\partial_i z_f\},                  \qquad\text{(3.2)}
+\end{split}
+\]
+and define $Y_{f,g;z},Y_{f,g;zw}$ by the same coefficient derivatives with
+the trace probe held fixed.
+
+\paragraph{Theorem 3.1 (paired-replica polarization).}
+Under the firewall above,
+\[
+\boxed{\begin{split}
+q_{\rm comp}(z,w)=\sum_{k,\cC,i}\E_r\E\big[&
+ \E_{f,f'}\Rea\{\ip{X_{f;z}}{X_{f';w}}
+                    +\ip{X_f}{X_{f';zw}}\}\\
+&-\E_{f,g}\Rea\{\ip{Y_{f,g;z}}{Y_{f,g;w}}
+ +\ip{Y_{f,g}}{Y_{f,g;zw}}\}\big].          \qquad\text{(3.3)}
+\end{split}}\]
+
+Indeed,
+\[
+ \|\E_fX_f\|^2=\E_{f,f'}\Rea\ip{X_f}{X_{f'}},       \qquad\text{(3.4)}
+\]
+and differentiating one half of (3.4) produces four product-rule terms.
+Replica exchange pairs them into the two terms displayed in (3.3).  The trace
+probe has the identical calculation.  Thus (3.3) is an exact representation
+of the R-131 physical form.  It is not a lower bound: the mixed contractions
+may have either sign and require the full joint law.
+
+\section*{4. Mixed Pauli--Fierz algebra}
+
+For the doublet Pauli matrices $\sigma_A$, put
+\[
+ m_A(u)=u^\dagger\sigma_Au,\qquad
+ j_A(u,v)=2\Rea(u^\dagger\sigma_Av),                 \qquad\text{(4.1)}
+\]
+\[
+ \tau={2\Rea(u^\dagger v+\bar\chi w)
+             \over |u|^2+|\chi|^2+e},\qquad
+ \ell_A=j_A-\alpha\tau m_A,\quad \alpha={5\over9}. \qquad\text{(4.2)}
+\]
+For two replicas define $\mathrm{JJ},\mathrm{JM},\mathrm{MJ},\mathrm{MM}$
+by summing the corresponding Pauli products.  Completeness gives
+\[
+\boxed{
+\ip{C_6(u)v}{C_6(u')v'}
+=c_0\mathrm{JJ}+c_1\{\mathrm{JJ}-\alpha\tau'\mathrm{JM}
+-\alpha\tau\mathrm{MJ}+\alpha^2\tau\tau'\mathrm{MM}\}.}       \qquad\text{(4.3)}
+\]
+The invariant contractions are
+\[
+\begin{split}
+\mathrm{MM}&=2|\ip{u}{u'}|^2-|u|^2|u'|^2,\\
+\mathrm{JM}&=4\Rea\{\ip{v}{u'}\ip{u'}{u}\}
+             -2|u'|^2\Rea\ip{u}{v},\\
+\mathrm{MJ}&=\mathrm{JM}\text{ with primed and unprimed variables exchanged},\\
+\mathrm{JJ}&=2\Rea\{2\ip{u}{v'}\ip{u'}{v}
+ -\ip{u}{v}\ip{u'}{v'}+2\ip{u}{u'}\ip{v'}{v}
+ -\ip{u}{v}\ip{v'}{u'}\}.
+\end{split}                                                     \qquad\text{(4.4)}
+\]
+On the diagonal these reduce to the R-130 radial-plus-wedge norm.  Formula
+(4.3) is the cancellation obtained only after all Pauli rows are summed.
+Every floor denominator is confined to $\tau,\tau'$, but it has not
+disappeared.
+
+If the four raw polynomial inputs are $Q_r$-supported, the audited raw
+$\mathrm{JJ},\mathrm{JM},\mathrm{MJ},\mathrm{MM}$ products are supported in
+$Q_{r+2}$, so the corresponding raw projection vanishes for $m\ge r+4$.
+This is a localization candidate.  Common heat, replica conditioning, trace,
+forest, and all visits still have to be intertwined before it becomes a
+production stopped-response theorem.
+
+\section*{5. Diagonal heat--sextic comparison}
+
+Write $z=(u,\chi)$, $V=(v,w)$, $\rho=|u|^2+|\chi|^2$, and
+\[
+{1\over4}\|\Xi(z,V)\|^2
+=c_0a^2+c_1\{(1-\lambda)a-\lambda s\}^2
++(c_0+c_1)|h|^2,                                   \qquad\text{(5.1)}
+\]
+where $a=\Rea(u^\dagger v)$, $s=\Rea(\bar\chi w)$,
+$h=u_1v_2-u_2v_1$, and
+$\lambda=\alpha|u|^2/(\rho+e)$.  The once-owned terminal sextic is
+$F_6=3\rho^3/20$, with exact Hessian
+\[
+ Q_6(z)[V,V]
+ ={9\over10}\rho^2\|V\|^2
+ +{18\over5}\rho\{\Rea\ip{z}{V}\}^2.             \qquad\text{(5.2)}
+\]
+
+For a full-support heat law $\mu$ with finite second moment, define the
+diagonal comparison form
+\[
+ G_\mu(z)[V,V]=\int\|\Xi(z+A,V)\|^2\,\mu(\mathrm dA).             \qquad\text{(5.3)}
+\]
+If (5.3) vanishes, continuity and full support imply
+$\Xi(z+A,V)=0$ for every $A$.  Varying the doublet in the first row gives
+$v=0$.  With $v=0$, varying a nonzero doublet and then the singlet in the
+second row gives $w=0$.  Thus $G_\mu(z)$ is positive definite pointwise.
+Continuity gives a positive minimum $m_{\mu,R}$ on every compact ball
+$\rho\le R$, while (5.2) gives $9R^2/10$ outside.  Hence
+\[
+ G_\mu(z)+Q_6(z)\succeq
+ \min\{m_{\mu,R},9R^2/10\}I.                       \qquad\text{(5.4)}
+\]
+This is a diagonal theorem, not yet the mixed response theorem (3.3).
+
+\subsection*{The exact 64-atom comparison}
+
+Let every one of the six real heat coordinates be an independent sign.
+On $\rho\le R$, set
+\[
+ D_R=(\sqrt R+\sqrt6)^2+e.                          \qquad\text{(5.5)}
+\]
+The wedge moment is
+\[
+ \E|h_A|^2=|h|^2+2|v|^2.                            \qquad\text{(5.6)}
+\]
+Using the wedge row for $v$ leaves the complete radial pair for the Schur
+bound.  Since
+\[
+ {c_0c_1\over c_0+c_1}={243\over28250P},\qquad
+ \E|u+U|^4=|u|^4+12|u|^2+16,                       \qquad\text{(5.7)}
+\]
+independence of doublet and singlet signs yields
+\[
+\boxed{
+ \E_A\|\Xi(z+A,V)\|^2
+ \ge {339\over1000P}|v|^2
+ +{96\over565P D_R^2}|w|^2,\qquad \rho\le R.}      \qquad\text{(5.8)}
+\]
+At $R=1/32$,
+\[
+ D_R={193\over32}+{\sqrt3\over2}+10^{-12},          \qquad\text{(5.9)}
+\]
+and both coefficients in (5.8) exceed $9/10240$.  Together with (5.2),
+\[
+\boxed{
+ \E_A\|\Xi(z+A,V)\|^2+Q_6(z)[V,V]
+ \ge {9\over10240}\|V\|^2.}                       \qquad\text{(5.10)}
+\]
+Even if the diagonal comparison is halved, choosing $R=1/45$ gives the
+conservative exact corollary
+\[
+ {1\over2}\E_A\|\Xi(z+A,V)\|^2+Q_6(z)[V,V]
+ \ge {1\over2250}\|V\|^2.                         \qquad\text{(5.11)}
+\]
+Neither (5.10) nor (5.11) identifies a legal production owner.
+
+\section*{6. Exact square-before-average boundary}
+
+The response in (3.3) contains $\|\E_f\dot J_V\|^2$, whereas (5.3) is
+$\E_f\|\dot J_V\|^2$.  Jensen has the wrong direction for the required
+lower bound.  At $z=0$ and for the symmetric 64-atom law,
+\[
+                  \Xi(-A,V)=-\Xi(A,V)               \qquad\text{(6.1)}
+\]
+for every $V$, because the rational denominator is even while all four
+outputs are odd.  Therefore
+\[
+ \E_A\Xi(A,V)=0,\qquad Q_6(0)[V,V]=0,               \qquad\text{(6.2)}
+\]
+although (5.8) is strictly positive.  The diagonal-to-mixed promotion is
+therefore false even after the sextic is appended.  A square-before-average
+realized owner, a matching trace--forest identity, or the separately owned
+source/low channels are indispensable.
+
+\section*{7. Law-free floor-uniformity fails}
+
+Set $e=\delta^2$, $u=se_1$, $V=e_1$, and
+\[
+ f_\delta(s)=s-{5\over9}{s^3\over s^2+\delta^2}.     \qquad\text{(7.1)}
+\]
+The only active rows are $2\sqrt{c_0}s$ and
+$2\sqrt{c_1}f_\delta(s)$.  Give $s$ the equal-weight conditional law
+$\{\delta,1\}$ and vary both atoms by $s\mapsto s+t$.  With the matching
+trace covariance, the recombined packet is
+\[
+ \cP^{\rm comp}=-{1\over2}\Var(C_6(u)V).             \qquad\text{(7.2)}
+\]
+The linear-row Hessian vanishes.  Direct differentiation of the rational row
+gives
+\[
+\boxed{\begin{split}
+{\mathrm d^2\over\mathrm dt^2}\cP^{\rm comp}\big|_{t=0}
+=-{5c_1(\delta-1)^2\over324\delta(1+\delta^2)^4}
+(&7\delta^7+188\delta^6+61\delta^5+100\delta^4\\
+ &+57\delta^3+40\delta^2+3\delta+8).
+                                                               \qquad\text{(7.3)}
+\end{split}}\]
+Every displayed polynomial coefficient is positive, and
+\[
+ {\mathrm d^2\over\mathrm dt^2}\cP^{\rm comp}\big|_{t=0}
+ =-{10c_1\over81\delta}+O(1).                       \qquad\text{(7.4)}
+\]
+Thus current/trace recombination and all-row Fierz cancellation do not imply
+a law-free floor-uniform response bound.  This two-point conditional law has
+not been realized as the production law, so (7.3) is a method no-go rather
+than a production counterexample.
+
+\section*{8. Standard-Gaussian score transfer repairs the scalar ray}
+
+Let $X$ be standard Gaussian and keep the same $f_\delta$.  Define
+\[
+ P_\delta(t)=-{1\over2}\Var\{C_6((X+t)e_1)e_1\}
+              =-2c_1\Var\{f_\delta(X+t)\}+\hbox{constant}.       \qquad\text{(8.1)}
+\]
+The linear-row variance is translation independent.  Since $0<\alpha<1$,
+\[
+                  |f_\delta(x)|\le |x|              \qquad\text{(8.2)}
+\]
+uniformly in $\delta>0$.  Put
+$m(t)=\E f_\delta(X+t)$, $q(t)=\E f_\delta(X+t)^2$.  Gaussian score transfer
+uses values rather than the singular pointwise second derivative:
+\[
+\begin{split}
+m'&=\E[Xf_\delta(X+t)],\qquad
+m''=\E[(X^2-1)f_\delta(X+t)],\\
+q''&=\E[(X^2-1)f_\delta(X+t)^2],\\
+\Var(f_\delta(X+t))''&=q''-2(m')^2-2mm''.          \qquad\text{(8.3)}
+\end{split}
+\]
+Using (8.2), Cauchy--Schwarz, $\E X^2=1$, $\E X^4=3$, and
+$\E(X^2-1)^2=2$ gives
+\[
+ |\Var(f_\delta(X+t))''|
+ \le 6+2\sqrt2+(4+2\sqrt2)t^2.                    \qquad\text{(8.4)}
+\]
+Consequently
+\[
+ P_\delta''(t)\ge-A-Bt^2,\quad
+ A=4c_1(3+\sqrt2),\quad B=4c_1(2+\sqrt2).           \qquad\text{(8.5)}
+\]
+
+The source Hessian is $9/10$.  The once-owned terminal sextic contributes
+$(9/2)\E(X+t)^4\ge(9/2)t^4$.  Completing the square in $y=t^2$ yields
+\[
+\begin{split}
+{9\over10}+P_\delta''(t)+{9\over2}\E(X+t)^4
+&\ge {9\over10}-A-By+{9\over2}y^2\\
+&\ge \boxed{m_G:={9\over10}-A-{B^2\over18}}
+  >{3\over4}.                                      \qquad\text{(8.6)}
+\end{split}
+\]
+The exact executed value is $m_G=0.7653207581\ldots$.  The estimate is
+uniform in the floor $e=\delta^2$ and uses source and sextic once.  It is an
+actual square-of-mean/current--trace scalar Gaussian packet, not the diagonal
+comparison of Section 5.  It remains one real active ray and contains no
+spatial shell, chart, low, random-forest, or full A1 owner theorem.
+
+\section*{9. What the inherited shell structure supplies}
+
+There is real structure beyond a bounded multiplier, but it is presently
+narrower than the owner-complete mixed response.
+
+\begin{itemize}
+\item Under the exact R-083 stopped polynomial hypotheses, the six-row
+stopped-FAR contribution vanishes for collar $C\ge3$.  If a future
+owner-complete mixed-replica intertwiner preserves those hypotheses, that
+submodule contributes $C_{\rm far}=0$.
+\item R-087/R-091 give finite support of the rational Cartan principal jet
+and
+\[
+ \mathcal H_C(C)\le
+ 2^{-2\gamma(C-5)}\mathcal B_\gamma^{\rm out}.       \qquad\text{(9.1)}
+\]
+At the proved $\gamma=7/12$, the square exponent is $7/6$ and the amplitude
+exponent is $7/12$.  This is slower than both the R-131 mixed target exponent
+$2$ and far target exponent $4$.
+\item A new one-use $\gamma=4$ estimate for the complete mixed rational
+combination would give amplitude decay $2^{-4(C-5)}$, compatible with the
+far target.  Rewriting it as $2^{-4C}$ costs the fixed offset $2^{20}$.
+No such $\mathcal B_4^{\rm out}$ theorem is presently proved.
+\end{itemize}
+
+The correct next shell calculation keeps the signed combination
+\[
+ \mathrm{JJ}-\alpha\tau'\mathrm{JM}
+ -\alpha\tau\mathrm{MJ}+\alpha^2\tau\tau'\mathrm{MM}             \qquad\text{(9.2)}
+\]
+intact, proves the stopped polynomial intertwiner, and computes the leading
+far paracomposition jets of all $\tau$ terms jointly.  Termwise commutator
+cancellation is not an admissible assumption.
+
+\section*{10. Proof-search evidence map}
+
+The append-only exploration ledger contains the full reusable route records
+EXP-000496--EXP-000503.  This table is only a compact view.
+
+\begin{center}
+\begin{tabular}{p{0.31\linewidth}p{0.16\linewidth}p{0.43\linewidth}}
+\hline
+Route & Verdict & Exact boundary or next condition\\
+\hline
+Paired replica polarization & advanced & Exact representation; common heat
+and full joint future law are mandatory.\\
+Mixed Pauli--Fierz sum & advanced & Floor is confined to $\tau,\tau'$ but
+does not cancel.\\
+Diagonal heat plus sextic & advanced & Global diagonal constants
+$9/10240$ and $1/2250$; not a mixed response.\\
+Diagonal-to-mixed promotion & failed & Symmetric origin has $\E\Xi=0$ and
+$Q_6(0)=0$.\\
+Law-free floor uniformity & failed & Exact two-point ray diverges as
+$-10c_1/(81\delta)$.\\
+Gaussian score-transfer ray & advanced & Source--sextic margin $m_G>3/4$;
+extend to full production conditional Gaussian owners.\\
+Inherited shell decay & inconclusive & $\gamma=7/12$ is too slow; prove a
+complete signed $\gamma=4$ bound or a stronger cancellation.\\
+Owner synthesis audit & inconclusive & Low, matching energy, shell constants,
+and the absolute anchor remain missing.\\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{11. Devil's-advocate review}
+
+\paragraph{Objection 1: (5.10) closes the physical response.  UPHELD.}
+It does not.  Section 6 gives an exact fixture where the diagonal mean-square
+is positive but the square of the conditional mean and sextic both vanish.
+The theorem is labelled diagonal throughout.
+
+\paragraph{Objection 2: the two-point divergence disproves production.
+VALID WITH MITIGATION.}
+It disproves a law-free theorem.  The conditional two-point law and its
+global spatial compatibility are not production authorities.  Section 8
+shows that standard-Gaussian score transfer has a floor-uniform positive
+source--sextic scalar-ray margin.
+
+\paragraph{Objection 3: the source has been spent twice.  DISMISSED.}
+The diagonal theorem spends no source.  The Gaussian-ray theorem uses the
+$9/10$ source once and the $3/20$ terminal sextic once in the same reduced
+action Hessian.  Neither is added as a second reserve to (2.1).
+
+\paragraph{Objection 4: common heat may be independently replicated.
+UPHELD.}
+Doing so changes the Hilbert coordinate and the owner.  Theorem 3.1 keeps the
+heat common.  Any future implementation which independently replicates it
+does not instantiate R-132.
+
+\paragraph{Objection 5: the known Cartan tail already gives $C_{\rm far}$.
+UPHELD.}
+Its amplitude exponent $7/12$ is too slow, and it covers a narrower module.
+The missing owner-complete intertwiner and $\gamma=4$ one-use estimate are
+stated explicitly.
+
+\paragraph{Objection 6: the scalar Gaussian margin is the absolute anchor.
+UPHELD.}
+It is a reduced conditional ray with no full low block, chart union, spatial
+response, or Gibbs normalization.  It selects a route but is not the R-127
+absolute anchor.
+
+\section*{12. Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-MIXED-REPLICA-GAUSSIAN-RAY-SEXTIC-
+  SHELL-BOUNDARY (R-132).
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement: The complete conditional response has an exact common-heat paired-
+  replica representation and exact mixed Pauli--Fierz formula.  A diagonal
+  Rademacher heat--sextic comparison is globally coercive, but an exact
+  symmetric-origin fixture blocks diagonal-to-mixed promotion.  A two-point
+  rational ray rejects law-free floor uniformity, while standard-Gaussian
+  score transfer gives a floor-uniform scalar source--sextic margin above 3/4.
+Scope: fixed finite cutoff and positive floor; exact conditional algebra;
+  artificial 64-atom diagonal comparison; abstract two-point method no-go;
+  standard-Gaussian one-real-ray positive theorem.
+Dependencies: A1; R-063, R-083, R-087, R-091, R-104, R-123, R-125,
+  R-128, R-129, R-130, and R-131.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_mixed_replica_gaussian_ray_sextic_
+  shell_boundary_verify.py
+Expected output: R-132 integrated PASS; primary and standard-library
+  independent children PASS; PDF and generated-surface gates PASS.
+Falsification gate: failure of replica polarization; any mixed Fierz
+  contraction; Rademacher moment or compact coefficient; 9/10240 or 1/2250
+  comparison; origin odd cancellation; two-point rational Hessian or
+  -10/81 scaled limit; Gaussian score identity, bound, or m_G>3/4;
+  shell-exponent audit; any pinned authority, executable, JSON, exploration,
+  negative, PDF, manifest, or public-surface assertion.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: the diagonal comparison is not the physical mixed
+  response; the two-point law is not a production counterexample; the
+  Gaussian ray is not a full spatial owner or absolute anchor; production
+  constants, both A13 gates, and Sector-A closure remain open.
+Proof complete: false.  Sector A closed: false.
+Next required action: prove a production-conditional Gaussian mixed-replica
+  score/small-ball theorem for the complete signed six-row owner, preserving
+  common heat, trace, forest, visits, low, rational and Cartan terms once;
+  prove the stopped polynomial intertwiner and a complete rational gamma=4
+  far estimate or stronger cancellation; then compute C_mix, C_far, c_bal,
+  D, K, R0, S0, matching energy, and the shifted-Douglas absolute anchor.
+\end{verbatim}
+
+\paragraph{No-overclaim footer.}
+R-132 proves exact replica and mixed-Fierz representations, two diagonal
+heat--sextic comparison constants, an exact promotion obstruction, a
+law-free floor no-go, and a floor-uniform positive standard-Gaussian scalar
+ray.  It does not construct or bound the owner-complete production response;
+prove production $C_{\rm mix}$, $C_{\rm far}$, $c_{\rm bal}$, low constants,
+matching energy, or an absolute anchor; close either A13 gate; establish
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, an interacting measure, or
+Sector A; or promote any claim to T5--T7.
+
+\endgroup

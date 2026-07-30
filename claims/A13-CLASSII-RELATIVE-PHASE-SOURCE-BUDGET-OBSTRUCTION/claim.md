@@ -4537,3 +4537,36 @@ T5--T7 promotion remain open. Tier stays T4.
   `C_mix`, `C_far`, `c_bal`, low `D/K/R0/S0`, matching energy, the strict
   augmented gap, absolute anchor, both A13 gates, `OVERLAP_src`, Nelson,
   removals, interacting measure, and Sector A remain open; tier stays T4.
+- 2026-07-31: Registered
+  `A13-CLASSII-MIXED-REPLICA-GAUSSIAN-RAY-SEXTIC-SHELL-BOUNDARY`
+  (R-132). After recombining all same-root visits and keeping heat common,
+  the fixed-law current-square and Gaussian trace-probe Hessians have an
+  exact paired-replica representation. Summing all six rows before absolute
+  values gives the mixed Pauli--Fierz invariant
+  `c0 JJ+c1(JJ-alpha tau' JM-alpha tau MJ+alpha^2 tau tau' MM)`;
+  every density-floor denominator is confined to `tau,tau'`. A full-coordinate
+  64-atom heat law plus the once-owned terminal sextic gives an exact global
+  diagonal comparison constant `9/10240` (and `1/2250` under the audited
+  half normalization), but the same symmetric law has `E Xi=0` at the origin
+  and `Q6(0)=0`. Thus diagonal mean-square coercivity cannot be promoted to
+  the square-of-conditional-mean physical response. On the actual rational
+  active ray, the equal two-point conditional law `{delta,1}/2` has
+  recombined Hessian `-10 c1/(81 delta)+O(1)`, rejecting any law-free
+  floor-uniform theorem without constituting a production A1 counterexample.
+  In contrast, standard-Gaussian score transfer proves the once-owned
+  source--sextic scalar-ray margin
+  `m_G=0.76532075819349...>3/4` uniformly in the floor. The stopped-shell
+  audit keeps R-083 polynomial vanishing in its narrow scope, while R-091's
+  `gamma=7/12` square tail yields amplitude decay `7/12`, too slow for the
+  required mixed exponent two and far exponent four; a complete `gamma=4`
+  one-use estimate would be far-compatible with offset cost `2^20`.
+  `EXP-000496--EXP-000503` preserve every substantive route decision,
+  including both failures, their boundaries, evidence, and revisit
+  conditions; two reusable failures are promoted to the negative registry.
+  Primary `36/36`, non-importing standard-library independent `23/23`, and
+  integrated `70/70` checks pass. The eight-page PDF passes rebuild, form,
+  zero-overfull, extraction, security, and all-page Poppler visual QA.
+  Production owner-complete response construction, `C_mix`, `C_far`,
+  `c_bal`, low `D/K/R0/S0`, matching energy, a strict augmented gap, the
+  absolute anchor, both A13 gates, `OVERLAP_src`, Nelson, removals,
+  interacting measure, and Sector A remain open; tier stays T4.
