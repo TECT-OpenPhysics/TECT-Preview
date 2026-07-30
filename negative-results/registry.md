@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-30-A13-NAIVE-PRIMITIVE-TRACE-FOREST-IDENTIFICATION](#ng-2026-07-30-a13-naive-primitive-trace-forest-identification) | identify the conditionally averaged R-123 primitive trace directly with the R-063 covariance-normal forest while omitting conditional future variance | a deterministic constant-translation fixture has zero covariance-normal/forest mean but `Theta=V_fut=4s`, `s=339/(8000P)`; the naive identity gives `0=-2s` and misses exactly `2s=339/(4000P)`. The future-variance rebate is indispensable even before adaptation |
 | [NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION](#ng-2026-07-30-a13-replica-variance-automatic-trace-domination) | infer nonpositivity of the stationary trace secant from replica variance alone | the bounded legal row `h=d cos(t xi)` has `S_h-S_0=2 kappa^2 d^2 t^2 exp(-2t^2)>0`; replicas expose a favourable square but do not dominate the signed trace/current cross |
 | [NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER](#ng-2026-07-30-a13-stationary-six-row-to-adapted-low-chaos-transfer) | infer adapted `D0=D1=0` from R-120 stationary value-derivative independence, six-row parity, row diagonalisation, or lower endpoint kernels | a bounded full-six-row finite-root fixture has explicit nonzero `D0,D1`, while its direct packet stays positive; R-122's legal `h_+/-` pair also flips `D1` with identical lower data. This retires the stationary-to-adapted inference, not the complete adapted production cancellation |
 | [NG-2026-07-30-A13-RAW-SIX-CURRENT-HESSIAN-POSITIVITY](#ng-2026-07-30-a13-raw-six-current-hessian-positivity) | assign the isolated full raw six-current/phase-pair Hessian to a nonnegative owner before trace/heat/low/forest/sextic completion | on the active real doublet, `u_H=H(2+cos x)e1` in direction `z=(2-cos x)e1` gives normalized unit-frequency Hessian `-117 H^2/(500P)+3e/(100P)+O_e(H^-2)<0`; the full action is not tested |
@@ -174,6 +175,43 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-30-a13-naive-primitive-trace-forest-identification"></a>
+### NG-2026-07-30-A13-NAIVE-PRIMITIVE-TRACE-FOREST-IDENTIFICATION -- conditional future variance separates primitive trace from the forest
+
+**Claim / route.**  After conditional future averaging, identify the R-123
+primitive trace directly with the R-063 covariance-normal forest,
+equivalently use
+
+`E_f E_u^CN=1/2 sum_C(||Phi_(u,C)||^2-Theta_(u,C))`
+
+without a conditional-variance term.
+
+**Failure mode.**  Take trivial past, one future `eta~N(0,1)`, no heat, one
+full output cluster, base `w_0=0`, terminal `w_1=e_1`, derivative
+`V=eta e_2`, and covariance `Gamma=e_2 e_2^T`.  Only the `S_1` pair survives.
+With `s=c0+c1=339/(8000P)`, the exact quantities are
+
+`J_1=2 eta(sqrt(c0),sqrt(c1))`,
+`Phi_1=0`, `Theta_1=4s`, and `V_(fut,1)=4s`.
+
+The covariance-normal endpoint and deterministic R-063 forest both have mean
+`E[2s(eta^2-1)]=0`.  The corrected bridge is
+`0=1/2(0-4s)+1/2(4s)`.  The naive identity instead gives `0=-2s` and misses
+exactly `2s=339/(4000P)`.
+
+**Evidence.**  R-125 proof note, Section 5, Eqs. (5.1)--(5.5); exact primary
+and non-importing independent executable audits; paired PDF and integrated
+verifier.
+
+**Consequence.**  Conditional averaging splits unaveraged current energy
+into endpoint mean-square plus future variance.  The variance rebate is
+load-bearing even for a deterministic translation already inside R-063's
+scope.  This falsifies only the naive primitive-trace/forest identification;
+it does not refute the corrected R-125 bridge, the finite-cutoff adapted
+partial-Wick coordinate, or a complete signed production estimate.  The
+adapted continuum forest, production root-shell factorisation, balanced band,
+and stationary-baseline bound remain open.
 
 <a id="ng-2026-07-30-a13-replica-variance-automatic-trace-domination"></a>
 ### NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION -- replica variance does not automatically dominate the trace secant

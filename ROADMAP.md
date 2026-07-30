@@ -365,13 +365,22 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   disproves automatic sign domination. The genuine first-linear row closes
   sharply with source allocation `3/(125P)`, no sextic payment, and no
   feedback derivative, with a strictly smaller finite-Hermite coefficient.
-  The next target is not another coordinate: construct the coefficient-level
-  identity linking the R-121 rational endpoint, R-123 primitive trace, and
-  adapted R-063 forest exactly once. Then prove the correlated signed
-  root-shell estimate with every root and shell sum inside expectation and a
-  separate cutoff-uniform owner-complete stationary-baseline sum bound,
-  retaining the `2680/729` connection and the `||b||^2` reserve. Strict
-  per-shell normalizer existence alone does not imply this global burden.
+  R-125 now closes that finite-cutoff coefficient bridge: conditional
+  Pythagoras inserts the indispensable future-variance rebate and gives
+  `Psi=Delta V_fut-Delta F063_ad`. Its smooth cylindrical partial-Wick
+  identity reconstructs the adapted forest algebra exactly, but not its
+  cutoff-uniform analytic bound. The stationary baseline is reduced to the
+  exact variance-minus-forest residual. A common-terminal Doob hypothesis
+  makes only the low-plus-root aggregate nonpositive; root-only `C_0=0`
+  additionally requires a nonnegative complete-low atom, and neither condition
+  is established for the actual production currents. The abstract far-tail operator theorem
+  supplies `K_far=8 C_* 2^(-3j_0)/sqrt(16065)` and the sharp mixed threshold
+  `||A||<=4 sqrt(eta zeta)`. The next target is to factor the complete signed
+  production symbol, prove its far decay and balanced-band bound below the
+  applicable threshold with every root and shell sum inside expectation, and
+  separately bound the owner-complete stationary residual, retaining the
+  `2680/729` connection and the `||b||^2` reserve. Strict per-shell normalizer
+  existence alone does not imply this global burden.
   `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
   remain open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
@@ -988,12 +997,18 @@ preserved in git/changelog rather than treated as current gates.
    replica/Hermite normal form. Its sharp genuine first-linear-row theorem uses
    action allocation `3/(125P)` and no sextic or feedback derivative, while a
    cosine fixture proves that replica variance alone has no automatic sign.
-   Construct the coefficient-level identity linking the R-121 rational
-   endpoint, R-123 primitive trace, and adapted R-063 forest exactly once.
-   Then prove the correlated signed root-shell estimate with source and sextic
-   paid exactly once over the R-093 directed union, all root and shell sums
-   retained inside expectation, and a separate cutoff-uniform owner-complete
-   stationary-baseline sum bound. Do
+    R-125 closes the finite-cutoff coefficient identity as
+    `Psi=Delta V_fut-Delta F063_ad`, proves the smooth cylindrical adapted
+    partial-Wick algebra, exposes the exact stationary variance-minus-forest
+    residual, and gives a sharp conditional root-shell operator threshold.
+    The variance-free primitive-trace/forest identification is false. Next
+    factor the complete signed production symbol and prove its far decay and
+    balanced coefficient-dominant band below the applicable operator threshold,
+    with source and sextic paid exactly once over the R-093 directed union and
+    all root and shell sums retained inside expectation. Separately prove the
+    cutoff-uniform owner-complete stationary-baseline residual bound; the
+    common-terminal low-plus-root diagnostic needs a nonnegative complete-low
+    atom even for root-only `C_0=0` and is not yet a production theorem. Do
    not mistake strict per-shell normalizer existence for summability, and do
    not substitute a centered
    abstract tensor, full-Wick tensor normalizer, derivative-range test, or

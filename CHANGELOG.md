@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-125 conditional-variance forest bridge and root-shell operator boundary] - 2026-07-30
+
+Registered the exact finite-cutoff bridge Psi=Delta V_fut-Delta F063_ad, the indispensable variance-rebate counterfixture, smooth cylindrical adapted partial-Wick algebra, the exact root-only stationary residual, and the conditional far-operator threshold. Append-only follow-up audits corrected two tempting overclaims: the common-terminal Doob identity controls the low-plus-root aggregate rather than the root-only R-124 baseline unless the complete-low stationary atom is nonnegative, and root covariance owners must remain distinct from same-root visit indices. The production factorisation, far and balanced-band bounds, stationary-baseline sign, OVERLAP_src, Nelson, removals, interacting measure, and Sector-A closure remain open at T4.
+
 ## [A13 R-124 stationary-polarized trace defect and replica root-shell boundary] - 2026-07-30
 
 Registered scoped T4 R-124 after ten proof rounds. The package proves exact stationary polarization, moving-endpoint subdivision invariance, the replica/Hermite secant form, and the sharp legal-row source allocation kappa^2/2=3/(125P). A bounded cosine control disproves automatic replica trace domination. Critical Cartan regularity, separated rough moments, covariant-Hessian positivity, and generic OU/Follmer bypasses remain unavailable. Strengthened primary and non-importing independent checks pass 55/55 each. The coefficient identity, correlated root-shell estimate, separate stationary-baseline sum bound, and every downstream global gate remain open.

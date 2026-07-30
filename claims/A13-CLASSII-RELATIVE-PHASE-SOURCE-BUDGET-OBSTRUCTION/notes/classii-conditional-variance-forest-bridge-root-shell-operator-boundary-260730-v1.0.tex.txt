@@ -1,0 +1,660 @@
+% =============================================================================
+% Title: Conditional-variance/forest bridge, stationary-baseline residual, and the root-shell operator boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-CONDITIONAL-VARIANCE-FOREST-BRIDGE-ROOT-SHELL-OPERATOR-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-30; this version issued 2026-07-30
+% Status: scoped T4 analytic/exact/executed advance and sharp conditional boundary; no A13 gate closure
+%
+% Revision history (cumulative):
+%   v1.0 (2026-07-30) first issue.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Forest}{\mathrm F}
+
+\section*{1. Purpose and scope}
+
+R-124 isolated one coefficient-level gate: match the R-121 covariance-normal
+endpoint, the R-123 primitive trace, and the R-063 forest exactly once before
+attempting a correlated root-shell estimate.  Three independent proof routes
+were run against that gate.  Their common conclusion corrects the proposed
+three-object equality: conditional future averaging creates a load-bearing
+variance rebate.  Omitting it fails on a deterministic production fixture.
+
+The corrected identity is exact at finite cutoff.  It also exposes the exact
+owner-resolved stationary-baseline residual and a sufficient common-terminal
+Doob criterion under which the complete low-plus-root aggregate is
+nonpositive.  A root-only upper bound additionally needs a nonnegative
+complete-low stationary atom.  The production middle-current family is root
+dependent, so neither extra hypothesis nor the required stationary-baseline
+upper bound is proved here.  Individual stationary atoms need not vanish or
+have one sign.
+
+A separate Hilbert-matrix lemma gives a sharp quantitative acceptance test for
+the remaining correlated root-shell operator.  It uses all root and shell
+sums inside expectation and requires no separated fifth moment, no
+$10/3$ moment, and no BMO estimate.  The production total-symbol
+factorisation and its decay are not proved.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{R-125 conclusion.}
+At fixed cutoff, positive floor, common legal heat and covariance, and an
+orthogonal exhaustive contraction-closed output partition, each fixed root
+owner $k$, after recombining its same-root visits $v$, satisfies
+\[
+ \Psi_k=\Delta\cV_{{\rm fut},k}
+ -2\E_{f,k}\sum_{v\in\mathcal V(k)}
+ (\mathcal R_{Q,k,v}+\mathcal M_{U,k,v}+\mathcal K_{R,k,v})
+ =\Delta\cV_{{\rm fut},k}-\Delta\Forest_{063,k}^{\rm ad}.
+\]
+After one owner sum, the complete R-124 secant is
+\[
+ \Psi:=\sum_k\E\Psi_k
+ =\sum_k\E\Delta\cV_{{\rm fut},k}
+ -\sum_k\E\Delta\Forest_{063,k}^{\rm ad}.
+\]
+The variance term is indispensable.  The $2680/729$ Cartan connection remains
+inside the covariance-normal endpoint.
+
+At the stationary endpoint the exact residual is
+\[
+ B_{J,\pi}:=\sum_{k,\cC}\E S_{0,k,\cC}
+ =\sum_{k,\cC}\E\cV_{0,k,\cC}
+  -\sum_k\E\Forest^{\rm ad}_{063,0,k},
+\]
+up to the explicit complement leakage when the output partition is not
+exhaustive.  A common-terminal Doob lemma makes the complete low-plus-root
+aggregate nonpositive; the root-only bound additionally requires a
+nonnegative complete-low stationary atom.  Neither condition is proved for
+the actual $k$-dependent production currents.  Thus the R-124
+stationary-baseline bound remains open.
+
+For a fully recombined far operator with
+$\|A_{kj}\|\le C_*2^{j-4k}$, the Hilbert--Schmidt test gives
+$K_{\rm far}=8C_*2^{-3j_0}/\sqrt{16065}$.  The check
+$K_{\rm far}<4\sqrt{\eta\zeta}$ is sufficient for the R-124 budget.
+The actual production factorisation, adapted continuum forest bound, balanced
+band estimate, $\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, the interacting
+measure, and Sector-A closure remain open.  Tier stays T4.
+}}
+\end{center}
+
+\section*{2. Conditional six-row setup}
+
+Let $\mathcal G$ be the strict past, retain the current root $\xi$, and put
+\[
+ \mathcal H=\mathcal G\vee\sigma(\xi),\qquad
+ \E_f=\E[\,\cdot\mid\mathcal H].                       \tag{2.1}
+\]
+Thus $\E_f$ integrates only legal future variables.  The heat dummy $r$
+remains a coordinate of $L^2(\mu_\Sigma)$; it is not averaged away before the
+output norm is formed.  Let $G_{\rm own}'$ be independent of the past,
+the current and future roots, and the heat dummy, with the once-owned
+covariance packet $\Gamma_{\rm own}$.  Sections 2--4 fix one root owner; its
+owner index is suppressed and $v$ denotes same-root visits.  Across the low
+and root owners,
+\[
+ \Gamma_{\rm target}=\Gamma_\ell+\sum_k\Delta\Gamma_k.           \tag{2.1a}
+\]
+Full covariance means retaining every off-diagonal entry inside each owned
+packet, not repeating $\Gamma_{\rm target}$ at every root or visit.
+
+For endpoint $u\in\{0,h\}$, let
+\[
+ J_u=C_6(W_{u,r})V_u                                      \tag{2.2}
+\]
+denote the unaveraged full six-row current, with all later feedback already
+inside $W_u,V_u$ before squaring.  Let $\{P_\cC\}$ be mutually orthogonal
+contraction-closed output projections satisfying
+\[
+ P_\cC P_{\mathcal D}=0\quad(\cC\ne\mathcal D),\qquad
+ \sum_\cC P_\cC=I.                                      \tag{2.3}
+\]
+Define
+\[
+ \Phi_{u,\cC}=\E_f[P_\cC J_u],                           \tag{2.4}
+\]
+\[
+ \Theta_{u,\cC}
+ =\E_{f,G_{\rm own}'}\|P_\cC C_6(W_{u,r})
+   \partial G_{\rm own}'\|^2,                           \tag{2.5}
+\]
+and the conditional future variance
+\[
+ \cV_u=\sum_\cC\E_f
+ \|P_\cC J_u-\Phi_{u,\cC}\|^2.                         \tag{2.6}
+\]
+
+The A1 coefficients in the R-120/R-123 convention are
+\[
+ c_0={3\over250P},\qquad c_1={243\over8000P},
+ \qquad\alpha={5\over9},\qquad P=4+10^{-12},             \tag{2.7}
+\]
+and the fixed six-row frame obeys
+\[
+                     B=C_6^*C_6.                         \tag{2.8}
+\]
+Equation (2.8), not a state-dependent rank compression, is the bridge used
+below.
+
+\section*{3. Exact conditional-variance/covariance-normal bridge}
+
+\subsection*{Theorem 3.1 (primitive trace and future-variance rebate)}
+
+Under (2.1)--(2.8), at each endpoint
+\[
+ \sum_\cC\Theta_{u,\cC}
+ =\E_f\sum_i\int (P_\Sigma B)(U_u):
+   (\Gamma_{\rm own})_i\,\dd x,                         \tag{3.1}
+\]
+and
+\[
+ \E_f\sum_i\int (P_\Sigma B)(U_u):V_{u,i}^{\otimes2}\,\dd x
+ =\sum_\cC\|\Phi_{u,\cC}\|^2+\cV_u.                  \tag{3.2}
+\]
+Consequently the covariance-normal endpoint $\cE_u^{\rm CN}$ satisfies
+\[
+ \boxed{
+ \E_f\cE_u^{\rm CN}
+ =\frac12\sum_\cC
+   (\|\Phi_{u,\cC}\|^2-\Theta_{u,\cC})
+  +\frac12\cV_u.}                                      \tag{3.3}
+\]
+
+\paragraph{Proof.}
+The orthogonal resolution (2.3), Parseval, and (2.8) give
+\[
+ \sum_\cC\E_{f,G_{\rm own}'}
+ \|P_\cC C_6(W)\partial G_{\rm own}'\|^2
+ =\E_f\Tr(C_6(W)\Gamma_{\rm own}C_6(W)^*)
+ =\E_f B(W):\Gamma_{\rm own}.
+\]
+Heat integration and the spatial derivative sum give (3.1).  Conditional
+Pythagoras gives
+\[
+ \E_f\|P_\cC J_u\|^2
+ =\|\Phi_{u,\cC}\|^2
+  +\E_f\|P_\cC J_u-\Phi_{u,\cC}\|^2.
+\]
+Summing proves (3.2), and subtracting (3.1) from (3.2) proves (3.3).
+\hfill$\square$
+
+For the moving-endpoint secant define
+\[
+ \Psi_\cC=\Delta\Theta_\cC
+ -\operatorname{Re}\langle
+ \Phi_{h,\cC}+\Phi_{0,\cC},\Delta\Phi_\cC\rangle.     \tag{3.4}
+\]
+For the fixed root owner of Sections 2--4, R-121 gives the complete
+moving-endpoint visit telescope.  Taking the difference of (3.3) therefore
+yields
+\[
+ \boxed{
+ \E_f\sum_v(\mathcal R_{Q,v}+\mathcal M_{U,v}+\mathcal K_{R,v})
+ ={1\over2}\left(\Delta\cV-\sum_\cC\Psi_\cC\right).}  \tag{3.5}
+\]
+Equivalently,
+\[
+ \boxed{
+ \sum_\cC\Psi_\cC
+ =\Delta\cV
+ -2\E_f\sum_v(\mathcal R_{Q,v}+\mathcal M_{U,v}+\mathcal K_{R,v}).}
+                                                               \tag{3.6}
+\]
+Every intermediate visit endpoint cancels.  Thus (3.6) has no visit-count
+factor and descends through every legal representation-preserving same-root
+subdivision.
+
+If (2.3) is not exhaustive, (3.5) gains $\Delta\mathcal L/2$, where
+\[
+ \mathcal L_u=
+ \E_f\langle J_u,(I-\sum P_\cC)J_u\rangle
+ -\E_{f,G_{\rm own}'}
+  \langle T_u,(I-\sum P_\cC)T_u\rangle.               \tag{3.7}
+\]
+Contraction closure alone does not make (3.7) vanish.
+
+\section*{4. Finite-cutoff adapted partial-Wick coordinate}
+
+Let $Y_\lambda$ be fresh-root linear coordinates and put
+\[
+ Q_{\lambda\mu}=Y_\lambda Y_\mu-\Gamma_{\lambda\mu}.  \tag{4.1}
+\]
+For a smooth cylindrical symmetric coefficient $F_{\lambda\mu}$, directional
+Malliavin derivatives give the exact identity
+\[
+ \boxed{
+ F:Q=\sum_{\lambda,\mu}\left[
+ F_{\lambda\mu}\diamond_jQ_{\lambda\mu}
+ +Y_\lambda D_\mu F_{\lambda\mu}
+ +Y_\mu D_\lambda F_{\lambda\mu}
+ -D_\lambda D_\mu F_{\lambda\mu}\right].}           \tag{4.2}
+\]
+Indeed, apply $F\diamond_jY=FY-D_YF$ twice and use Wick associativity.
+
+For visit $v$, take $F=B_v-B_{v-1}$ and define
+\[
+ \Forest_{RQ,v}^{\rm ad}
+ =(B_v-B_{v-1}):Q_{v-1}=2\mathcal R_{Q,v}.             \tag{4.3}
+\]
+Then (3.6) becomes the fully owner-resolved finite-cutoff formula
+\[
+ \boxed{
+ \sum_\cC\Psi_\cC
+ =\Delta\cV
+ -\E_f\sum_v\Forest_{RQ,v}^{\rm ad}
+ -2\E_f\sum_v(\mathcal M_{U,v}+\mathcal K_{R,v}).}    \tag{4.4}
+\]
+Writing the fixed-root complete covariance-normal endpoint without its outer
+$1/2$ as $\Forest_{063,u}^{\rm ad}$ gives the compact version
+\[
+ \boxed{\Psi=\Delta\cV-\Delta\Forest_{063}^{\rm ad}.}       \tag{4.5}
+\]
+
+For $F=B(Z_*)$, chain rule gives
+\[
+ D_jF=DB(Z_*)[D_jZ_*],                                  \tag{4.6}
+\]
+\[
+ D_j^2F=D^2B(Z_*)[D_jZ_*,D_jZ_*]+DB(Z_*)[D_j^2Z_*].     \tag{4.7}
+\]
+Thus adapted $Dh,D^2h$ families are visible explicitly.  This proves an
+algebraic coordinate at finite cutoff; it does not prove their continuum
+root-shell bounds.
+
+The deterministic R-063 forest is recovered exactly.  If $Z,Y$ are jointly
+Gaussian, $\E Z^2=\sigma$, $\E Y^2=\gamma$, $\E ZY=k$, and
+$Q=Y^2-\gamma$, (4.2) gives
+\[
+ ZQ=:ZYY:+2kY,                                          \tag{4.8}
+\]
+\[
+ Z^2Q=:ZZYY:+\sigma Q+4k:ZY:+2k^2.                     \tag{4.9}
+\]
+Hence the $\Sigma Q$ term and every lower contraction remain.  When $h$ is
+deterministic, dyadic Taylor regrouping yields R-063's
+$P_3/P_1$, $P_4/P_2^{\rm cross}/\Sigma Q/P_0^{\rm cross}$, and remainder
+chart.  For adapted $h$, the top Wick factor may have arbitrary chaos order;
+the registered finite-forest theorem and its hypercontractive estimates do
+not transfer automatically.
+
+\section*{5. Exact counterfixture to the naive identification}
+
+Take trivial past, one future $\eta\sim N(0,1)$, no heat, one full output
+cluster, base $w_0=0$, terminal $w_1=e_1$, derivative
+\[
+ V=\eta e_2,\qquad\Gamma=e_2e_2^T.                     \tag{5.1}
+\]
+This is a deterministic constant translation, already inside R-063's scope.
+Only the $S_1$ pair survives.  With
+\[
+ s=c_0+c_1={339\over8000P},                             \tag{5.2}
+\]
+one has
+\[
+ J_1=2\eta(\sqrt{c_0},\sqrt{c_1}),\quad
+ \Phi_1=0,\quad\Theta_1=4s,\quad\cV_1=4s.             \tag{5.3}
+\]
+The covariance-normal endpoint and deterministic R-063 forest both have
+mean zero:
+\[
+ \E[2s(\eta^2-1)]=0.                                   \tag{5.4}
+\]
+Formula (3.5) reads $0=(4s-4s)/2$.  The naive equality without conditional
+variance would instead give $0=-2s$ and miss exactly
+\[
+                       2s={339\over4000P}.              \tag{5.5}
+\]
+Therefore the variance rebate is necessary even before adaptation.  This
+fires the naive primitive-trace/forest identification route, not the corrected
+bridge.
+
+\section*{6. Owner-resolved stationary-baseline residual}
+
+After every representation-preserving same-root visit has been recombined,
+the stationary current is a root family $J_{0,k}$, not in general the
+projections of one common terminal current.  Root $k$ uses its once-owned
+covariance increment $\Delta\Gamma_k$, while the complete-low covariance
+$\Gamma_\ell$ remains a distinct owner:
+\[
+ \Gamma_\ell+\sum_k\Delta\Gamma_k=\Gamma_{\rm target}.          \tag{6.1}
+\]
+A same-root subdivision creates no new covariance owner: it keeps
+$\Delta\Gamma_k$ fixed and sums only moving-endpoint differences.  Repeating
+$\Gamma_{\rm target}$ at each root, or adding $\Delta\Gamma_k$ as a fresh
+primitive trace at each same-root subvisit, duplicates the trace.  Let
+\[
+ \Phi_{0,k,\cC}=\E_f[P_\cC J_{0,k}],\qquad
+ \cV_{0,k,\cC}=\E_f\|P_\cC J_{0,k}-\Phi_{0,k,\cC}\|^2,          \tag{6.2}
+\]
+and let $\Theta_{0,k,\cC}$ use an independent derivative with covariance
+$\Delta\Gamma_k$.  Define the actual stationary atom by
+\[
+ S_{0,k,\cC}=\Theta_{0,k,\cC}-\|\Phi_{0,k,\cC}\|^2.             \tag{6.3}
+\]
+
+\subsection*{Proposition 6.1 (exact production residual)}
+
+For an exhaustive orthogonal output partition, Theorem 3.1 applied root by
+root gives
+\[
+ \boxed{
+ S_{0,k,\cC}
+ =\cV_{0,k,\cC}-2\E_f\cE^{\rm CN}_{0,k,\cC}.}                  \tag{6.4}
+\]
+Define the full, visit-recombined, no-outer-half root reconstruction by
+\[
+ \Forest^{\rm ad}_{063,0,k}:=2\E_f\cE^{\rm CN}_{0,k}.             \tag{6.4a}
+\]
+Under the exhaustive orthogonal partition this equals
+$2\sum_\cC\E_f\cE^{\rm CN}_{0,k,\cC}$.  The complete stationary quantity is
+therefore
+\[
+ \boxed{
+ B_{J,\pi}:=\sum_{k,\cC}\E S_{0,k,\cC}
+ =\sum_{k,\cC}\E\cV_{0,k,\cC}
+  -\sum_k\E\Forest^{\rm ad}_{063,0,k}.}                    \tag{6.5}
+\]
+Here $J_{0,k}$ is visit recombined and $\cE^{\rm CN}_{0,k}$ uses the same
+once-owned $\Delta\Gamma_k$ as $\Theta_{0,k}$.  For a nonexhaustive partition,
+the exact formula is
+\[
+ B_{J,\pi}=\sum_{k,\cC}\E\cV_{0,k,\cC}
+ -\sum_k\E\Forest^{\rm ad}_{063,0,k}
+ +\sum_k\E\mathcal L_{0,k}.                            \tag{6.5a}
+\]
+Formula (6.5) or (6.5a) identifies the precise residual; it does not determine
+its sign or give a cutoff-uniform upper bound.
+
+\subsection*{Lemma 6.2 (conditional common-terminal low-plus-root diagnostic)}
+
+Assume additionally that there is one stationary terminal current $J_0$ such
+that the complete low output and all centered root/cluster outputs form an
+orthogonal exhaustive Doob decomposition, and that the once-owned low and
+root traces form the matching covariance partition.  Put
+\[
+ b_{0,k,\cC}=\E[\Phi_{0,k,\cC}\mid\cF_{k-1}],\qquad
+ Y_{0,k,\cC}=\Phi_{0,k,\cC}-b_{0,k,\cC}.              \tag{6.6}
+\]
+The two additional energy identities are
+\[
+ \E\|J_0\|^2=\sum_\cC\E\|Y_{0,\ell,\cC}\|^2
+ +\sum_{k,\cC}\E\|Y_{0,k,\cC}\|^2,                 \tag{6.7}
+\]
+\[
+ \E\|J_0\|^2=\sum_\cC\E\Theta_{0,\ell,\cC}
+ +\sum_{k,\cC}\E\Theta_{0,k,\cC}.                   \tag{6.8}
+\]
+Then, with $b_{0,\ell,\cC}=0$,
+\[
+ \sum_\cC\E D_{0,\ell,\cC}+
+ \sum_{k,\cC}\E D_{0,k,\cC}=0,                     \tag{6.9}
+\]
+and
+\[
+ B^{\rm full}_{J,\pi}:=\sum_\cC\E S_{0,\ell,\cC}+B_{J,\pi}
+ =-\sum_{k,\cC}\E\|b_{0,k,\cC}\|^2\le0.           \tag{6.10}
+\]
+Equivalently,
+\[
+ B_{J,\pi}=-\sum_{k,\cC}\E\|b_{0,k,\cC}\|^2
+ -\sum_\cC\E S_{0,\ell,\cC}.                         \tag{6.11}
+\]
+Thus the displayed common-terminal hypotheses alone do not imply the
+root-only R-124 bound $B_{J,\pi}\le0$ or $C_0=0$.  That corollary additionally
+requires $\sum_\cC\E S_{0,\ell,\cC}\ge0$, including the special case of
+equality.  Neither the common-terminal identification nor this complete-low
+sign is proved for production, so R-124 equation (7.3) remains open.
+
+Under the additional hypotheses of Lemma 6.2, neither atom need vanish or
+have one sign.  The following common-terminal fixture has
+$S_{0,\ell}=0$ and is diagnostic only; it is not the production
+stationary-baseline theorem.  Let $u_k,v_k$ be
+independent $N(0,1/N)$ variables,
+$U=\sum u_k$, $V=\sum v_k$, $J=UV$, and reveal the first $k$ pairs.  With
+$\Theta_k=1/N$,
+\[
+ \E\|\Phi_k\|^2={k^2\over N^2},\quad
+ \E\|b_k\|^2={(k-1)^2\over N^2},\quad
+ \E\|Y_k\|^2={2k-1\over N^2}.                        \tag{6.12}
+\]
+Therefore
+\[
+ \sum_{k=1}^N D_{0,k}=0,qquad
+ \sum_{k=1}^N S_{0,k}
+ =-{(N-1)(2N-1)\over6N}\le0.                         \tag{6.13}
+\]
+At $N=2$, the two $S_0$ atoms are $1/4$ and $-1/2$; only their diagnostic
+aggregate is $-1/4$.  Positive-part or absolute-value summation destroys this
+conditional cancellation and therefore cannot prove the production bound.
+
+\section*{7. Square-first Clark--Ocone coordinate}
+
+At finite cutoff, apply martingale representation only after every visit has
+been synthesized into the terminal endpoint.  If
+\[
+ J_u-\Phi_u=\int_0^1 U_u(t)\,\dd B_t,                  \tag{7.1}
+\]
+then It\^o isometry gives
+\[
+ \cV_u=\E_f\int_0^1\|U_u(t)\|_{\rm HS}^2\,\dd t.     \tag{7.2}
+\]
+Writing $\delta U=U_h-U_0$, equations (4.4)--(4.5) become
+\[
+ \boxed{
+ \Psi=\E_f\int_0^1
+ \{2\operatorname{Re}\langle U_0,\delta U\rangle
+       +\|\delta U\|^2\}\,\dd t
+ -\Delta\Forest_{063}^{\rm ad}.}                  \tag{7.3}
+\]
+This preserves the mixed covariance inside expectation.  Applying
+Clark--Ocone visitwise would lose quotient safety and reopen the R-118
+opposite-visit obstruction.
+
+\section*{8. Correlated root-shell operator criterion}
+
+\subsection*{Theorem 8.1 (far-tail Hilbert operator budget)}
+
+Suppose that only after complete cluster, owner, variance, and forest
+recombination, the adverse far term has the form
+\[
+ T_{\rm far}=\E\operatorname{Re}
+ \sum_{j\ge j_0}\sum_{k>j}\langle x_k,A_{kj}y_j\rangle, \tag{8.1}
+\]
+where, pathwise,
+\[
+ \sum_k\|x_k\|^2\le X,\qquad
+ \sum_j\|y_j\|^2\le Y,                                \tag{8.2}
+\]
+and
+\[
+ \|A_{kj}\|_{\rm op}\le C_*2^{j-4k}.                 \tag{8.3}
+\]
+Then
+\[
+ \|A\|_{\rm op}\le K_{\rm far}
+ :={8C_*\over\sqrt{16065}}2^{-3j_0},                  \tag{8.4}
+\]
+and, for every $\eta_f>0$,
+\[
+ \boxed{
+ T_{\rm far}\le2\eta_f\E X
+ +{K_{\rm far}^2\over8\eta_f}\E Y.}                 \tag{8.5}
+\]
+
+\paragraph{Proof.}
+The scalar dominating matrix has
+\[
+ \begin{split}
+ \|A\|_{\rm op}^2
+ &\le\sum_{j\ge j_0}\sum_{k>j}C_*^2 2^{2j-8k}\\
+ &={64C_*^2\over16065}2^{-6j_0}.
+ \end{split}                                           \tag{8.6}
+\]
+Equations (8.1)--(8.2), Cauchy in the combined root-shell Hilbert space, and
+one scalar Young inequality prove (8.5). \hfill$\square$
+
+For an actual total operator, the sharp mixed-form criterion is
+\[
+                    \|A\|_{\rm op}\le4\sqrt{\eta\zeta}.          \tag{8.7}
+\]
+Since (8.4) is a Hilbert--Schmidt upper bound, the check
+$K_{\rm far}<4\sqrt{\eta\zeta}$ is sufficient, not necessary.  The full
+R-124 trace budgets give
+\[
+ 4\sqrt{{9\over20}{3\over20}}={3\sqrt3\over5}.        \tag{8.8}
+\]
+At action normalization the corresponding coefficient is
+$3\sqrt3/10$.  Retaining the disjoint R-103 debts and the R-124 legal-row
+source allocation gives the stricter trace threshold
+\[
+ 4\sqrt{\left({197\over440}-{3\over125P}\right){3\over25}}
+ =0.92093233\ldots.                                    \tag{8.9}
+\]
+
+The decay (8.3) is not a theorem for the production symbol.  R-093's
+$2^{j-4k}$ law is diagnostic, and R-074 forbids importing it into an
+unsubtracted coefficient.  The missing analytic theorem must establish
+(8.2)--(8.3) for the complete signed symbol
+\[
+                 \Delta\cV-\Delta\Forest_{063}^{\rm ad}     \tag{8.10}
+\]
+and treat the balanced coefficient-dominant band separately.
+
+\section*{9. Route map and evidence summary}
+
+The parallel routes now have the following reusable verdicts.
+\begin{enumerate}
+\item \textbf{Advanced:} the primitive trace, stopped output, conditional
+variance, and covariance-normal endpoint obey the exact bridge (3.3)--(3.6).
+\item \textbf{Failed:} primitive trace and forest cannot be identified after
+conditional averaging without the variance rebate; (5.1)--(5.5) is an exact
+production counterfixture.
+\item \textbf{Advanced:} the smooth cylindrical adapted partial-Wick identity
+(4.2) is exact at finite cutoff and reduces to R-063 in deterministic scope.
+\item \textbf{Boundary:} arbitrary adapted chaos, $Dh,D^2h$, the continuum
+root-shell bounds, and the fifth $H^{-3/5}$ moment are not supplied by R-063.
+\item \textbf{Advanced conditionally:} Lemma 6.2 gives a nonpositive
+low-plus-root aggregate under an additional common-terminal Doob and matching
+trace-partition hypothesis.  A root-only upper bound also requires a
+nonnegative complete-low stationary atom.  The exact production residual is
+(6.5); its bound remains open.
+\item \textbf{Advanced conditionally:} Theorem 8.1 supplies an explicit
+operator threshold with no separated rough moment.
+\item \textbf{Open:} prove the production square ledgers and total-symbol
+decay for (8.10), plus a signed balanced-band theorem.
+\end{enumerate}
+
+The exact multiplicity ledger is: every $R_Q,M_U,K_R$ owner once;
+intermediate visit endpoints zero; primitive mean-square, trace, and variance
+rebate once with their displayed half coefficients; heat internal; appended
+forest zero; later-feedback crosses inside $J$ before squaring; complete low
+once; paid and REG Cartan owners unchanged.  The R-121 curls remain
+\[
+ -{40\over729},\qquad {2720\over729},\qquad {2680\over729}.       \tag{9.1}
+\]
+No $+40/729$ companion is introduced.
+
+\section*{10. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: the primitive trace is already the R-063 forest.}
+\textbf{UPHELD AGAINST THE CLAIM.}  Conditional averaging changes current
+energy into mean-square plus variance.  Equation (5.5) measures the exact
+missing half-variance.
+
+\item \textbf{Objection: contraction closure makes the output partition
+complete.}  \textbf{UPHELD AGAINST THE CLAIM.}  Orthogonality and exhaustivity
+are separate hypotheses; otherwise the leakage (3.7) remains.
+
+\item \textbf{Objection: (4.2) is the adapted R-063 continuum theorem.}
+\textbf{UPHELD AGAINST THE CLAIM.}  It is finite-cutoff algebra.  Arbitrary
+chaos and $Dh,D^2h$ lack the required uniform model bounds.
+
+\item \textbf{Objection: stationarity makes every baseline atom zero.}
+\textbf{UPHELD AGAINST THE CLAIM.}  The $N=2$ fixture has atoms $1/4$ and
+$-1/2$.  Only the low-plus-root aggregate in the common-terminal diagnostic
+is automatically nonpositive; no production root-only sign is proved.
+
+\item \textbf{Objection: the complete low block may be omitted because it is
+finite.}  \textbf{DISMISSED.}  Omitting it breaks the
+conditional Doob identity and can leave a positive root $D_0$ residual.  This
+does not establish the production baseline bound.
+
+\item \textbf{Objection: the Hilbert--Schmidt constant is the sharp production
+constant.}  \textbf{UPHELD AGAINST THE CLAIM.}  It is a sufficient majorant.
+Sharpness belongs to the actual total operator norm, which is not computed.
+
+\item \textbf{Objection: R-093 already proves the decay in (8.3).}
+\textbf{UPHELD AGAINST THE CLAIM.}  Its law is diagnostic.  The production
+variance-minus-forest total symbol has not been factorised.
+
+\item \textbf{Objection: R-125 closes controlled-shell one-use, Nelson, or
+Sector A.}  \textbf{UPHELD AS AN OVERCLAIM.}  The production correlated
+operator and balanced band remain open.  Tier stays T4.
+\end{enumerate}
+
+\section*{11. Executable verification}
+
+The primary exact executable derives the A1 constants from the manifest,
+checks output Gram traces, conditional Pythagoras, every factor of two in the
+bridge, the deterministic production counterfixture, the exact baseline
+residual, conditional common-terminal low-plus-root criterion, and signed $N$-root
+diagnostic fixture, Clark--Ocone checks, the three Cartan
+curls, the geometric-series constant, and every budget threshold.  The
+non-importing standard-library executable uses a different rational frame,
+four-atom conditional law, three-visit telescope, finite dyadic sums, direct
+optimization, and several independent stationary root counts.  The integrated
+verifier reruns both, pins all source and authority hashes, checks the note and
+PDF, and enforces the negative-result, exploration, claim, roadmap, theorem-map,
+and no-overclaim surfaces.
+
+\section*{12. Result footer}
+
+\begingroup
+\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-CONDITIONAL-VARIANCE-FOREST-BRIDGE-
+  ROOT-SHELL-OPERATOR-BOUNDARY (R-125).
+Precise statement: Theorems 3.1 and 8.1; exact Proposition 6.1;
+  conditional Lemma 6.2; finite-cutoff adapted partial-Wick identity
+  (4.2); counterfixture (5.1)-(5.5).
+Scope: fixed finite cutoff and positive floor; common legal heat,
+  covariance, reveal field, and orthogonal exhaustive output partition;
+  bounded smooth cylindrical controls for adapted algebra; common-terminal
+  Doob and matching trace-partition hypotheses only for Lemma 6.2, with a
+  nonnegative complete-low atom additionally required for root-only C0=0;
+  the production stationary baseline is excluded.
+Dependencies: A1; R-063, R-074, R-079, R-093, R-103, R-104,
+  R-118, R-119, R-120, R-121, R-123, R-124.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_conditional_variance_forest_bridge_
+  root_shell_operator_boundary_verify.py
+Expected output: R-125 integrated PASS; primary and independent
+  child counts, hashes, PDF, exploration, negative, and public surfaces pass.
+Falsification gate: any failed Gram/trace/variance identity, factor of two,
+  production counterfixture, exact baseline residual, conditional
+  common-terminal low/Doob criterion, dyadic sum,
+  budget threshold, authority/hash/PDF, or scope check.
+Tier before / after: T4 / T4.
+No-overclaim statement: no adapted continuum forest bound, production
+  root-shell factorization, production stationary-baseline bound or
+  production C0=0, balanced-band bound, OVERLAP_src, Nelson, removals,
+  interacting measure, Sector-A closure, or T5-T7 follows.
+Next required action: factor the complete signed total symbol
+  Delta V_fut-Delta F063_ad inside expectation, prove its far operator
+  norm below the applicable threshold, close the balanced band, and
+  separately prove the owner-complete production stationary-baseline bound.
+\end{verbatim}
+\endgroup

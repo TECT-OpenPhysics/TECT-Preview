@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-125](#r-125) | Conditional-variance/forest bridge, stationary-baseline residual, and the root-shell operator boundary | Scoped T4 analytic/exact/executed advance: at finite cutoff the covariance-normal endpoint equals the conditional stopped-current packet plus one half of the future conditional variance, so the R-124 secant is exactly `Psi=Delta V_fut-Delta F_063^ad`. The future-variance rebate is indispensable; an exact production-frame constant-translation fixture falsifies its omission. A smooth cylindrical partial-Wick identity gives the finite-cutoff adapted forest coordinate, while the production stationary quantity is exposed as `sum E V_0-sum E F_063,0^ad` and remains unsigned. A common-terminal Doob lemma makes only the low-plus-root aggregate nonpositive; root-only `C_0=0` additionally requires a nonnegative complete-low atom, and neither hypothesis is established for the actual production currents. A correlated Hilbert-operator lemma gives the sufficient far-tail threshold `K_far=8 C_* 2^(-3j_0)/sqrt(16065)` and the sharp mixed criterion `||A||<=4 sqrt(eta zeta)`, but the production factorisation, balanced band, stationary-baseline bound, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-124](#r-124) | Stationary-polarized trace defect, replica closure, and the correlated root-shell boundary | Scoped T4 analytic/exact/executed theorem and route synthesis: for `S_u=D0_u-||E_0 Phi_u||^2=E_0(Theta_u-||Phi_u||^2)`, the controlled-minus-stationary difference is the exact symmetric secant `E_0[DeltaTheta-Re<Phi_h+Phi_0,DeltaPhi>]`, equivalently the signed cross minus the favorable square. Moving-endpoint secants telescope under every representation-preserving same-root visit subdivision; fixed-baseline subvisit splitting is false. Conditional replicas and Hermite expansion give an exact square representation but no automatic sign. On the genuine first-linear row, `Delta S=kappa^2 E[(1-xi^2)h^2]<=kappa^2 E h^2`, `kappa^2=6/(125P)`, so the action allocation is `3/(125P)`, with a sharp finite-Hermite improvement and no sextic or feedback-derivative payment. Exact resonance, rare-event, covariant-Hessian, and OU audits close or retire four recurring bypasses. The owner-complete coefficient identity, cutoff-uniform correlated signed root-shell estimate, and separate stationary-baseline sum bound remain open, as do `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector-A closure |
 | [R-123](#r-123) | Six-row trace-excess reduction and the direct source-action correlation boundary | Scoped T4 analytic/exact/executed advance and method boundary: for a fully assembled contraction-closed six-row endpoint `Phi` with once-owned trace `Theta`, `Lambda=Theta-||Phi-E_0 Phi||^2` gives `D0=E_0 Lambda` and `D1=E_0[xi Lambda]`, while the direct complete packet has conditional expectation `(||E_0 Phi||^2-D0)/2`. Thus the direct R-093 expected-action route needs one aggregate bound for `D0-||b||^2`, not `D1=0`. A bounded full-six-row fixture has nonzero `D0,D1` but positive direct packet. One genuine legal adapted linear row obeys an exact expectation identity and a source/sixth-moment bound with coefficient `kappa^2=6/(125P)`. A uniform aggregate trace-excess inequality with allocations below `9/20` and `3/20` passes through the R-093 directed chart infimum without a chart-count factor, provided every within-chart owner is recombined and all constants are cutoff/chart/control/refinement uniform. Exact audits retire stationary-to-adapted low-chaos transfer, raw six-current Hessian positivity, and fixed-profile correlation-only cutoff-uniform Young absorption. The stationary-subtracted owner-complete rational/Cartan/forest trace-excess estimate, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-122](#r-122) | Derivative-free low-chaos reconstruction and the adapted Cartan fifth-moment boundary | Scoped T4 analytic/exact/executed advance and method boundary: for the complete finite-cutoff conditional endpoint output, `r2`, `D0`, and `D1` have exact law-only formulas using `E[R tensor (xi tensor xi-I)]`, `E[xi Theta]`, and `E[xi||R||^2]`; no feedback derivatives or termwise adjacent-chaos expansion are required. A bounded legal linear-row pair has identical source cost and `A,r2,t0,D0` but opposite nonzero `D1`, so the complete production law must still be evaluated. The graph-null sequence `sin(nxi)/n` rules out derivative-by-derivative closure. A coherent lognormal amplitude has bounded source `H2` and terminal `L6` budgets but divergent quadratic-current `L^5(H^{-3/5})`; the active A1 rational Cartan coefficient has nonzero normalized quadratic ray `128/27`. Formal selfadjointness does not cancel Cartan: on the R-102 slice `1360J/729+1320J/729=2680J/729`. The correlation-preserving quartic-to-sextic Young inequality identifies the surviving signed complete-owner route. Production `D0,D1` cancellation, the complete one-use bound, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -143,6 +144,135 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-125"></a>
+### R-125 -- Conditional-variance/forest bridge, stationary-baseline residual, and the root-shell operator boundary
+
+**Result ID.**
+A13-CLASSII-CONDITIONAL-VARIANCE-FOREST-BRIDGE-ROOT-SHELL-OPERATOR-BOUNDARY.
+
+**Exact conditional-variance bridge.**  At fixed cutoff and positive floor,
+condition on the strict past plus retained root.  Assume common legal heat and
+once-owned covariance, and mutually orthogonal, exhaustive,
+contraction-closed output projections `P_C`.  For the unaveraged six-row
+current `J_u`, put `Phi_(u,C)=E_f[P_C J_u]` and
+
+`V_u=sum_C E_f||P_C J_u-Phi_(u,C)||^2`.
+
+The fixed-frame identity `B=C6^* C6`, Parseval, and conditional Pythagoras
+give
+
+`E_f E_u^CN=1/2 sum_C(||Phi_(u,C)||^2-Theta_(u,C))+1/2 V_u`.
+
+For fixed root owner `k`, combining this with the R-121 moving-endpoint visit
+telescope yields
+
+`sum_C Psi_(k,C)=Delta V_k`
+`-2 E_(f,k) sum_(v in V(k))(R_(Q,k,v)+M_(U,k,v)+K_(R,k,v))`
+`=Delta V_k-Delta F_(063,k)^ad`.
+
+Summing the root owners once gives the complete R-124 secant
+`Psi=sum_k E Delta V_k-sum_k E Delta F_(063,k)^ad`.
+
+Every intermediate same-root visit endpoint cancels, so the identity has no
+visit-count factor.  A nonexhaustive output partition leaves the explicit
+complement leakage; contraction closure alone does not remove it.
+
+**Finite-cutoff adapted forest coordinate.**  For fresh-root coordinates
+`Y_lambda`, `Q_(lambda,mu)=Y_lambda Y_mu-Gamma_(lambda,mu)`, and a smooth
+cylindrical symmetric coefficient `F`, the exact partial-Wick identity is
+
+`F:Q=sum_(lambda,mu)[F_(lambda,mu) diamond_j Q_(lambda,mu)`
+`+Y_lambda D_mu F_(lambda,mu)+Y_mu D_lambda F_(lambda,mu)`
+`-D_lambda D_mu F_(lambda,mu)]`.
+
+For same-root visit `v`,
+`F_(RQ,v)^ad=(B_v-B_(v-1)):Q_(v-1)=2R_(Q,v)`.  Writing the fixed-root complete
+covariance-normal endpoint without its outer factor `1/2` as `F_063,u^ad`
+gives
+
+`Psi=Delta V-Delta F_063^ad`.
+
+The coordinate retains the `2680/729` recombined Cartan connection and every
+zeroth-order multiplier.  In deterministic Gaussian scope it reduces to
+`ZQ=:ZYY:+2kY` and
+`Z^2Q=:ZZYY:+sigma Q+4k:ZY:+2k^2`.  For adapted controls, arbitrary chaos and
+the explicit `Dh,D^2h` chain-rule families remain; R-063's deterministic
+finite-forest estimates do not transfer automatically.
+
+**Variance-rebate necessity and stationary residual.**  A deterministic
+constant-translation fixture has `s=c0+c1=339/(8000P)`,
+`J_1=2 eta(sqrt(c0),sqrt(c1))`, `Phi_1=0`, and
+`Theta_1=V_1=4s`, while the covariance-normal endpoint and deterministic
+R-063 forest both have mean zero.  Omitting the variance would assert
+`0=-2s` and miss exactly `2s=339/(4000P)`.  Thus primitive trace and forest
+cannot be identified after conditional averaging without the future-variance
+rebate.
+
+The exact owner-resolved stationary quantity is
+
+`B_(J,pi)=sum_(k,C) E S_(0,k,C)`
+`=sum_(k,C) E V_(0,k,C)-sum_k E F_(063,0,k)^ad`.
+
+Each trace uses its once-owned root covariance increment, whose root/low sum
+is the target covariance; repeating the full covariance at each root or visit
+is illegal.  Under the additional hypothesis that all stationary outputs
+arise from one common terminal Doob decomposition with the matching covariance
+partition and complete low block, the low-plus-root aggregate is
+`sum_C E S_(0,ell,C)+B_(J,pi)=-sum_(k,C)E||b_(0,k,C)||^2<=0`.
+Equivalently, the root-only residual equals the right side minus the
+complete-low stationary atom.  A root-only upper bound zero additionally
+requires that low atom to be nonnegative.  The production currents depend on
+the root, heat, and owner index, and neither the common-terminal hypothesis
+nor the complete-low sign is proved.
+
+**Correlated root-shell criterion.**  Suppose only after complete owner,
+cluster, variance, and forest recombination that
+
+`T_far=E Re sum_(j>=j0) sum_(k>j)<x_k,A_(k,j)y_j>`,
+
+with pathwise square ledgers `sum_k||x_k||^2<=X`,
+`sum_j||y_j||^2<=Y`, and `||A_(k,j)||_op<=C_* 2^(j-4k)`.  Then
+
+`||A||_op<=K_far=8 C_* 2^(-3j0)/sqrt(16065)`
+
+and `T_far<=2 eta_f E X+K_far^2 E Y/(8 eta_f)`.  For the actual total
+operator the sharp mixed-form criterion is `||A||_op<=4 sqrt(eta zeta)`.
+The unrestricted R-124 threshold is `3 sqrt(3)/5` at trace scale and
+`3 sqrt(3)/10` at action scale.  After the disjoint R-103 debts and legal-row
+source allocation, the trace threshold is
+`4 sqrt((197/440-3/(125P))(3/25))=0.92093233...`.
+
+This criterion keeps all root and shell sums inside expectation and uses no
+separated fifth moment, `10/3` moment, or BMO estimate.  R-093's
+`2^(j-4k)` scaling is diagnostic only: the production factorisation, square
+ledgers, and balanced coefficient-dominant band estimate remain open.
+
+**Proof / evidence.**
+
+- claim: `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`;
+- note: `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-conditional-variance-forest-bridge-root-shell-operator-boundary-260730-v1.0.tex.txt`;
+- primary: `codes/foundations/a13_classii_conditional_variance_forest_bridge_root_shell_operator_boundary.py`;
+- independent: `codes/foundations/a13_classii_conditional_variance_forest_bridge_root_shell_operator_boundary_independent.py`;
+- integrated verifier: `codes/foundations/a13_classii_conditional_variance_forest_bridge_root_shell_operator_boundary_verify.py`;
+- manifest: `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_conditional_variance_forest_bridge_root_shell_operator_boundary_manifest.json`;
+- new negative boundary: `NG-2026-07-30-A13-NAIVE-PRIMITIVE-TRACE-FOREST-IDENTIFICATION`.
+
+**Reuse scope.**  Exact finite-cutoff conditional-variance/covariance-normal
+bridge, representation-invariant owner quotient, smooth cylindrical adapted
+partial-Wick coordinate, exact stationary residual, conditional
+common-terminal diagnostic, and abstract correlated Hilbert-operator budget.
+The adapted continuum forest estimate, production root-shell factorisation,
+balanced-band estimate, owner-complete stationary-baseline bound,
+`OVERLAP_src`, Nelson estimate, removals, interacting measure, Sector-A
+closure, and every higher tier remain open.
+
+**Honest tier.**  T4 (analytic/exact/executed advance and conditional
+operator boundary).
+
+**Publication target.**  A methods note on conditional variance/forest
+bridges, adapted partial-Wick coordinates, and correlated root-shell operator
+criteria.
 
 <a id="r-124"></a>
 ### R-124 -- Stationary-polarized trace defect, replica closure, and the correlated root-shell boundary

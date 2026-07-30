@@ -4351,3 +4351,25 @@ T5--T7 promotion remain open. Tier stays T4.
   reviewed ten-page PDF are pinned by the R-124 manifest. The coefficient
   identity, correlated root-shell estimate, separate stationary-baseline sum
   bound, and every downstream global gate remain open; tier stays T4.
+- 2026-07-30: Registered
+  `A13-CLASSII-CONDITIONAL-VARIANCE-FOREST-BRIDGE-ROOT-SHELL-OPERATOR-BOUNDARY`
+  (R-125). At fixed cutoff, conditional Pythagoras and `B=C6^*C6` identify
+  the indispensable future-variance rebate and give the exact owner-summed
+  secant `Delta V_fut-Delta F063_ad` after same-root visits are recombined.
+  A deterministic production-frame fixture disproves the variance-free
+  primitive-trace/forest identification by the exact amount `339/(4000P)`.
+  Smooth cylindrical partial-Wick algebra reconstructs the adapted forest at
+  finite cutoff, while the exact root-only stationary residual remains
+  unsigned: the common-terminal Doob lemma controls only the low-plus-root
+  aggregate, and root-only `C0=0` additionally needs a nonnegative
+  complete-low stationary atom. A separate correlated Hilbert-operator
+  theorem gives `K_far=8 C_* 2^(-3j0)/sqrt(16065)` and the sufficient sharp
+  mixed-form threshold `||A||<=4sqrt(eta zeta)`. `EXP-000406--EXP-000413`
+  retain all advances, failures, boundaries, and append-only corrections.
+  Primary `51/51`, non-importing independent `39/39`, integrated `164/164`,
+  and aggregate `254/254` checks are manifest-pinned; the ten-page PDF passes
+  form, zero-overfull, extraction, no-form, and all-page Poppler visual QA.
+  The cutoff-uniform adapted forest, production total-symbol factorisation,
+  far and balanced-band production bounds, root-only stationary-baseline
+  sign, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A
+  remain open; tier stays T4.
