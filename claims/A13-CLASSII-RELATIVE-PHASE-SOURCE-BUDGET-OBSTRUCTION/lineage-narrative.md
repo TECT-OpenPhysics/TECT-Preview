@@ -892,6 +892,26 @@ endpoint theorem.
 
 62. **Terminal Gaussian jet threshold, sharp fixed-law action, and aggregate collar boundary.** R-134 sharpens the six-row Pauli estimate to `alpha^2 c1=3/(320P)`. After the exhaustive output-cluster sum is placed in one orthogonal direct sum under each recombined root-spatial owner, the exact R-125 bridge gives `Forest_063/2-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2/2` with no root or visit multiplicity. A covariance-normal Gaussian shows that paying `A^2+B_e^2` separately is cutoff-divergent. Under pointwise `Gamma>=lambda I_6`, exact six-real negative moments control pointwise second and third quotient jets. The embedded production Pauli fourth jet has a positive-floor fixed-cone logarithmic divergence. A high-frequency unit-covariance Gaussian field proves that pointwise ellipticity alone does not control spatial fractional norms, so `gamma=7/12` is only an exponent window under the separate R-092 joint spatial hypotheses. Conditional on the still-missing owner-preserving R-087-self-atom to R-088-sequential-atom transfer and one-use ledger, exact summation gives square constants `0.6588816258726145` and `0.28592888585547915`. `EXP-000514--EXP-000524` preserve the reusable successes, failures, audit corrections, boundaries, and revisit conditions, including the distinction between exact moment data and uniform finite-moment caps. Both A13 gates and Sector A remain open at T4.
 
+63. **Variance-retained trace excess, sequential Cartan spatial transfer, and
+    the directed-refinement terminal boundary.** R-135 restores the exact
+    R-125 future-variance rebate inside each recombined owner and uses the
+    scaled one-owner fixture to show that the R-134 scalar covariance envelope
+    cannot itself be the closure theorem. The correct target is the complete-
+    low R-123 aggregate trace excess. The R-087 three-channel paraproduct proof
+    applies directly to the uncentred R-088 sequential atom, with margins
+    `1/15`, `4/15`, and `16/15`; under the still-missing legal centring,
+    complete owner intertwiner, and once-owned sequential `q` ledger, exact
+    summation retains the `gamma=7/12` square constant
+    `0.658881625872614...`. An exact self-to-sequential homotopy explains why
+    endpoint equality gives no termwise domination, while the direct spatial
+    reproof bypasses that comparison. The accepted extracted-`Z^6` rare-event
+    no-go remains only an envelope failure. Finally, terminal-tail covariance
+    tends to zero along the full R-093 directed temporal union, ruling out a
+    refinement-uniform independent last-block ellipticity floor. The live
+    successor is fixed-chart aggregate smoothing or a shell-weighted inverse-
+    covariance and joint-spatial `q` ledger, followed by one finite-collar
+    headroom check. Both A13 gates and Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

@@ -4634,3 +4634,30 @@ T5--T7 promotion remain open. Tier stays T4.
   matching energy, strict gap, absolute anchor, both A13 gates,
   `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
   open; tier stays T4.
+- 2026-07-31: Registered
+  `A13-CLASSII-VARIANCE-RETAINED-SEQUENTIAL-ATOM-REFINEMENT-BOUNDARY`
+  (R-135). The exact R-125 owner retains one half of the adapted R-063 forest
+  minus one half of the conditional future variance, and the complete-low
+  R-123 trace excess is the live aggregate target. A scaled exact one-owner
+  fixture sends the R-134 scalar covariance surrogate to minus infinity,
+  formally retiring rebate erasure without claiming a complete torus
+  production counterexample. The R-087 three-channel paraproduct proof reruns
+  directly on the uncentred R-088 sequential atom; at `alpha=2/5`, `s=2/3`
+  its margins are `1/15`, `4/15`, and `16/15`. Conditional legal centring and
+  one use of each `q_k^seq` retain the `gamma=7/12` square constant
+  `0.6588816258726145`, but the centred owner intertwiner and q sum remain
+  open. The exact self/sequential mixed-Hessian homotopy shows why endpoint
+  equality gives no termwise domination; the direct spatial proof bypasses
+  that comparison. The accepted extracted-`Z^6` no-go remains an envelope
+  failure only. A representation-preserving split and the physical terminal-
+  tail limit rule out refinement-uniform ellipticity of a labelled final
+  source block, redirecting the proof to fixed-chart aggregate smoothing or a
+  shell-weighted inverse-covariance and joint-spatial ledger.
+  `EXP-000525--EXP-000532` record the successful, failed, conditional, and successor
+  routes; two new formal no-gos are registered. Primary `69/69`, non-importing
+  independent `73/73`, integrated `142/142`, and aggregate `284/284` pass;
+  PDF visual QA and release evidence are pinned in the R-135 manifest. The
+  production trace-excess bound, one-use ledger, finite-collar headroom, low
+  and matching data, strict gap, absolute anchor, both A13 gates,
+  `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
+  open; tier stays T4.

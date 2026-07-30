@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-31-A13-COVARIANCE-ENVELOPE-REBATE-ERASURE](#ng-2026-07-31-a13-covariance-envelope-rebate-erasure) | lower-bound the R-134 scalar surrogate `Forest_063-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2` by source and sextic budgets after replacing the exact conditional variance | the scaled one-owner R-125 Pauli fixture has zero expected forest but `Q_e=nu^2(sqrt(339/(2000P))+sqrt(3e/(320P)))^2`, so the surrogate tends to minus infinity although the exact owner retains the compensating future-variance coordinate |
+| [NG-2026-07-31-A13-REFINEMENT-UNIFORM-LAST-BLOCK-ELLIPTICITY](#ng-2026-07-31-a13-refinement-uniform-last-block-ellipticity) | reserve the final independent temporal source increment as a uniformly full-rank six-real Gaussian over every R-093 directed refinement | a representation-preserving split may give the last block covariance `epsilon I_6` with unchanged total covariance `I_6`; more generally the physical tail covariance tends to zero as the last cut approaches one, so no positive refinement-uniform eigenvalue floor survives |
 | [NG-2026-07-31-A13-ELLIPTIC-GAUSSIAN-D4-FLOOR-UNIFORMITY](#ng-2026-07-31-a13-elliptic-gaussian-d4-floor-uniformity) | use a uniformly elliptic six-real terminal Gaussian to obtain a density-floor-uniform L2 fourth rational quotient jet | for the embedded Pauli generator S3=diag(1,1,-1,-1,0,0), the positive-floor axis derivative is 24r(e+2r^2)/(e+r^2)^3 and is at least 9/r^3 for r>=sqrt(e); continuity supplies a fixed open cone, so the squared six-dimensional Gaussian integral diverges logarithmically |
 | [NG-2026-07-31-A13-POINTWISE-ELLIPTICITY-SPATIAL-FRACTIONAL-TRANSFER](#ng-2026-07-31-a13-pointwise-ellipticity-spatial-fractional-transfer) | infer a spatial fractional whole-product estimate from a pointwise six-real covariance lower bound alone | zeta_N^a(x)=G_a cos(Nx)+H_a sin(Nx) has covariance I_6 at every point while every positive spatial fractional norm grows like N^sigma; joint value-gradient and spatial moment data are separate hypotheses |
 | [NG-2026-07-31-A13-SEPARATE-FLOOR-WEIGHTED-CURRENT-ENERGY-ABSORPTION](#ng-2026-07-31-a13-separate-floor-weighted-current-energy-absorption) | pay the zero-floor weighted current energy and floor remainder separately by cutoff-uniform source and terminal-sextic budgets | the zero-control covariance-normal Gaussian has bounded value sixth moment and zero source cost but E|W|^2|grad W|^2 of order Lambda; the R-063 forest must remain coupled to cancel this derivative divergence |
@@ -206,6 +208,67 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-07-31-a13-covariance-envelope-rebate-erasure"></a>
+### NG-2026-07-31-A13-COVARIANCE-ENVELOPE-REBATE-ERASURE -- a scalar norm envelope destroys the future-variance rebate
+
+**Claim / route.**  Use the valid R-134 inequality
+`2 sum_o E P_comp,o >= F-Q_e`, where
+`Q_e=(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2`, and then prove a
+cutoff-uniform lower bound for `F-Q_e` from source energy and one terminal
+sextic alone.
+
+**Failure mode.**  Scale the exact one-owner, one-exhaustive-cluster R-125
+fixture by `nu>0`: `W=e_1`, `V=nu eta e_2`, and
+`Gamma=nu^2 e_2 e_2^T`.  Then
+`Phi=0`, `Theta=Var_f(X)=beta_op nu^2`, and the expected adapted R-063
+forest is zero.  Moreover `A^2=nu^2` and `B_e^2=e nu^2`, so
+`F-Q_e=-nu^2(sqrt(339/(2000P))+sqrt(3e/(320P)))^2`, which tends to minus
+infinity.  The failure already occurs with one owner and one cluster; it is
+not a multiplicity defect.
+
+**Evidence.**  R-125 Theorem 3.1, equations (4.5) and (5.1)--(5.5); R-134
+equations (2.2), (4.1)--(4.4), and (11.4); the R-135 proof note and two
+independent executable scaled-fixture checks.
+
+**Consequence.**  R-134 equation (4.3) remains a valid lower surrogate, but
+its former equation (11.4) is too strong as the canonical successor.  The
+live theorem must retain the actual conditional variance, its covariance
+with the floor remainder, and the complete-low/stationary owner, preferably
+in the R-123 aggregate trace-excess coordinate.  This is a method no-go, not
+a counterexample to the complete production action, `OVERLAP_src`, or
+Nelson.
+
+<a id="ng-2026-07-31-a13-refinement-uniform-last-block-ellipticity"></a>
+### NG-2026-07-31-A13-REFINEMENT-UNIFORM-LAST-BLOCK-ELLIPTICITY -- a labelled final source increment has no directed-refinement covariance floor
+
+**Claim / route.**  In every temporally faithful source chart and every
+R-093 directed refinement, reserve the labelled final independent source
+increment as a six-real Gaussian with covariance at least
+`lambda_* I_6`, where `lambda_*>0` is uniform in the chart and refinement.
+
+**Failure mode.**  Even total covariance `I_6` admits the
+representation-preserving decomposition
+`Delta C_1=(1-epsilon)I_6`, `Delta C_2=epsilon I_6`.  The terminal law is
+unchanged while the last-block minimum eigenvalue is `epsilon->0`.  In the
+continuous R-104 source factorisation, the only physical terminal Gaussian
+tail independent of `F_s` is `Y_s=int_s^1 J_t dW_t`; at a point its covariance
+has trace `int_s^1 ||J_t^*E_x^*||_HS^2 dt`, which tends to zero by absolute
+continuity as `s` tends to one.  The R-134 negative-moment and jet costs then
+blow up like `epsilon^(-1)` and `epsilon^(-2)`.
+
+**Evidence.**  R-104 equations (2.1)--(2.7), its representation-preserving
+subdivision boundary and directed source union; R-125 strict-past/current-
+root conditioning; R-134 equations (6.2)--(7.7); the R-135 proof note and two
+independent covariance-refinement checks.
+
+**Consequence.**  A nonzero final increment cannot be both independent and
+uniformly elliptic for every owner and every cofinal directed refinement.
+Fixed-chart terminal packets, pre-conditioning aggregate smoothing, and
+shell-dependent standardized covariance estimates remain viable.  The
+production successor must use a once-owned weighted shell ledger carrying
+inverse covariance, value-gradient, increment, and regression costs rather
+than a uniform last-block eigenvalue.
 
 <a id="ng-2026-07-31-a13-elliptic-gaussian-d4-floor-uniformity"></a>
 ### NG-2026-07-31-A13-ELLIPTIC-GAUSSIAN-D4-FLOOR-UNIFORMITY -- six-real ellipticity is critical at the fourth rational jet

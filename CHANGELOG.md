@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-135 variance-retained sequential atoms and directed-refinement boundary] - 2026-07-31
+
+Registered the exact complete-owner variance firewall and the complete-low R-123 trace-excess target; proved direct R-087 spatial transfer to the uncentred R-088 sequential atom, a conditional nonorthogonal variance sum, and the exact self-to-sequential homotopy; registered scaled covariance-envelope erasure and refinement-uniform terminal-ellipticity no-gos; retained the existing extracted-Z6 no-go; identified fixed-chart and shell-weighted successors. Primary 69/69, independent 73/73, integrated 142/142, aggregate 284/284. The claim remains T4; legal centring, the owner intertwiner, once-owned q ledger, full signed trace-excess estimate, headroom, A13, and Sector A remain open.
+
 ## [A13 R-134 final moment-cap scope and PDF reference correction] - 2026-07-31
 
 Append-only final correction after the pre-commit adversarial audit. In the R-134 two-point family the exact mean E S=(1+delta)/2 determines delta, so the family does not prove an impossibility theorem from exact moment values supplied as full data. The proof note and evidence-map row now state the supported result: uniform upper caps on the mean magnitude, covariance, third moment, or any bounded finite list of positive moments, together with bounded source and sextic totals, do not control the inverse-floor fixed-law Hessian. This narrows the prose without weakening the registered R-132 law-free conditional-law no-go or any R-134 action, jet, or shell result. The fourth-jet adversarial objection now cites the logarithmic integral in equation (7.8). EXP-000524 records the exact-data-versus-uniform-cap distinction, evidence, boundary, and reuse rule. The rebuilt PDF, executable counts, all-page visual QA, hashes, and release gates are pinned in the final R-134 manifest. A13 and Sector A remain open at T4.

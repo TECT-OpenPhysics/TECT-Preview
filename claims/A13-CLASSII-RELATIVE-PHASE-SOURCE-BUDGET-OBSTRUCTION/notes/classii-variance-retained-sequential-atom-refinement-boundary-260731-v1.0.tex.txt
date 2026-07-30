@@ -1,0 +1,1112 @@
+% =============================================================================
+% Title: Variance-retained sequential atoms, self-to-sequential homotopy, and the directed-refinement terminal boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-VARIANCE-RETAINED-SEQUENTIAL-ATOM-REFINEMENT-BOUNDARY
+% Ledger: R-135
+% Version: v1.0 -- first issued 2026-07-31; this version issued 2026-07-31
+% Status: REGISTERED scoped T4 ANALYTIC/EXACT/EXECUTED advance and no-go boundary; no A13 gate closure
+% New negatives: NG-2026-07-31-A13-COVARIANCE-ENVELOPE-REBATE-ERASURE; NG-2026-07-31-A13-REFINEMENT-UNIFORM-LAST-BLOCK-ELLIPTICITY
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\cY}{\mathcal Y}
+\newcommand{\Forest}{\mathrm F}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+
+R-134 left two obligations adjacent but logically distinct.  The first was an
+owner-preserving passage from the R-087 self atom to the R-088 sequential
+atom, with the conditional future variance and the R-063 forest retained.
+The second was a terminal Gaussian reservation with enough joint spatial data
+to support the conditional $\gamma=7/12$ route.  This note audits both
+obligations against R-104, R-125, and the directed source union.
+
+The conclusions are deliberately asymmetric.
+\begin{enumerate}
+\item The R-125 future-variance rebate gives the exact owner coordinate.  It
+must remain inside the sequential atom sum; replacing it by an uncentred
+second-moment envelope can erase an exact cancellation before any shell
+estimate is attempted.
+\item R-088 gives an exact sequential physical-shell atom.  The R-087 spatial
+proof reruns directly on that atom because its band-limited coefficient path
+has exactly the same three-channel integrand.  This proves the uncentred
+far-output atom estimate, but not the centred conditioning step or the
+once-owned $\sum_k q_k^{\rm seq}$ bound.
+\item R-087 self atoms and R-088 sequential atoms are two path decompositions
+of the same endpoint.  An exact two-parameter homotopy identifies their
+termwise difference.  Equality of the total sums does not give termwise
+domination, but that comparison is unnecessary for the direct spatial reproof;
+the remaining production obstruction is the centred owner conversion and
+summability of the sequential atom costs.
+\item The extracted translated-model $Z^6$ route still fails on the accepted
+predictable rare event.  The failure is an envelope no-go, not a
+counterexample to the exact sequential atom.
+\item A nonzero Gaussian block cannot remain independent and uniformly
+six-real elliptic for every chart in the full R-093 directed temporal
+refinement union.  Its terminal-tail covariance converges to zero as the last
+mesh interval shrinks.  This is a structural no-go for the refinement-uniform
+last-block architecture, not merely an absent estimate.
+\item The viable successor is therefore fixed-chart or shell-weighted: keep a
+finite unrevealed aggregate when its chart-dependent covariance is elliptic,
+or absorb shell-dependent inverse-covariance and spatial costs into a
+once-owned $q_k$ ledger.  Neither successor is proved for the complete
+production owners here.
+\end{enumerate}
+
+The scope is one fixed finite cutoff, one positive density floor, one common
+legal heat, and one declared R-093/R-104 temporally faithful chart unless a
+statement explicitly quantifies over refinements.  All
+representation-preserving same-root visits are recombined.  Output clusters
+are contraction closed, orthogonal, and exhaustive.  The source energy and
+terminal sextic remain outside the owner identity and may be appended only
+once after all owners are summed.
+
+The binding authorities are R-087, R-088, R-091, R-092, R-104, R-116,
+R-119, R-123, R-125, R-129, R-133, and R-134.  No statement below changes their tiers or
+promotes R-135 beyond its registered scoped T4 authority.
+
+\section*{2. Exact owner identity and the variance firewall}
+
+Fix a recombined root--spatial owner $o$.  Let $\cC$ range over its exhaustive
+orthogonal output family and let
+\[
+ X_o=\bigl(P_{\cC}C_{6,e_{o,\cC}}(W_{o,\cC})
+                 V_{o,\cC}\bigr)_{\cC}
+ \in\bigoplus_{\cC}\cH_{\cC}.                         \tag{2.1}
+\]
+Condition on the retained legal data and integrate only the declared future;
+write this conditional expectation as $\E_f$.  Put
+\[
+ \Phi_o=\E_fX_o,
+ \qquad
+ \cV_o=\E_f\|X_o-\Phi_o\|^2.                          \tag{2.2}
+\]
+R-125 conditional Pythagoras and the once-owned trace probe give
+\[
+ \E_f\|X_o\|^2=\|\Phi_o\|^2+\cV_o.                   \tag{2.3}
+\]
+After the complete visit telescope and the adapted forest reconstruction, the
+compact owner identity is
+\[
+ \boxed{
+ \cP_{{\rm comp},o}
+ ={1\over2}\Forest_{063,o}^{\rm ad}
+  -{1\over2}\Var_f(X_o).}                              \tag{2.4}
+\]
+Equivalently, for the moving endpoint,
+\[
+ \boxed{
+ \Psi_o=\Delta\cV_o-\Delta\Forest_{063,o}^{\rm ad}.}   \tag{2.5}
+\]
+The factor $1/2$ in (2.4) is load bearing.  The cluster direct sum must be
+formed before the variance is taken.  No forest share is allocated to one
+cluster, and no copy of the target covariance is allocated to one visit.
+
+The elementary identity
+\[
+ \Var_f(X_o)=\E_f\|X_o\|^2-\|\E_fX_o\|^2              \tag{2.6}
+\]
+exhibits the first rebate.  Replacing the variance by the uncentred second
+moment gives the weaker lower bound
+\[
+ \cP_{{\rm comp},o}
+ \ge {1\over2}\Forest_{063,o}^{\rm ad}
+     -{1\over2}\E_f\|X_o\|^2,                         \tag{2.7}
+\]
+and discards the positive term $\|\E_fX_o\|^2/2$.  That discarded term is not
+a spare reserve: it is the conditional-mean coordinate paired with the
+primitive trace in the exact R-125 bridge.
+
+Let $\mathcal O_{\rm full}$ include every recombined root owner together with
+the complete-low/stationary owner required by R-123, and let $\Theta_o$ denote
+the once-owned primitive trace paired with $\Phi_o$.  With
+\[
+ \mathfrak F_{\rm full}
+ =\sum_{o\in\mathcal O_{\rm full}}\E\Forest_{063,o}^{\rm ad},
+ \qquad
+ \mathfrak V_{e,\rm full}
+ =\sum_{o\in\mathcal O_{\rm full}}\E\Var_f(X_o),
+\]
+the exact aggregate coordinate is
+\[
+ \boxed{
+ 2\sum_{o\in\mathcal O_{\rm full}}\E\cP_{{\rm comp},o}
+ =\mathfrak F_{\rm full}-\mathfrak V_{e,\rm full}.}     \tag{2.8}
+\]
+The minimal live target is therefore the R-123 trace-excess estimate
+\[
+ \boxed{
+ \sum_{o\in\mathcal O_{\rm full}}
+ \E\{\Theta_o-\|\Phi_o\|^2\}
+ \le 2\eta X_{\rm src}+2\zeta Y_6+2C,}
+ \qquad
+ \eta<{9\over20},\quad \zeta<{3\over20}.               \tag{2.9}
+\]
+Only after the full owner aggregation may this be written equivalently as
+\[
+ \boxed{
+ \mathfrak F_{\rm full}-\mathfrak V_{e,\rm full}
+ \ge-2\eta X_{\rm src}-2\zeta Y_6-2C.}                 \tag{2.10}
+\]
+The action reserve would then be
+\[
+ \boxed{
+ \mathcal A_J(h)
+ \ge\left({9\over20}-\eta\right)X_{\rm src}
+    +\left({3\over20}-\zeta\right)Y_6-C,}              \tag{2.11}
+\]
+with only the nonnegative R-104 Douglas slack added in the physical
+progressive action.  A floor split must retain
+$\Var_f(X_0+R_e)=\Var_fX_0+2\Cov_f(X_0,R_e)+\Var_fR_e$.
+Silently absorbing the low owner into the root-only R-063 symbol changes the
+meaning of the established forest and is not allowed.
+
+\section*{3. Envelope--rebate erasure counterfixtures}
+
+\subsection*{3.1 The primitive-trace fixture}
+
+Take trivial past, one future $\eta\sim N(0,1)$, one full output cluster, no
+heat, base $w_0=0$, terminal $w_1=e_1$, and derivative
+\[
+ V=\eta e_2,
+ \qquad \Gamma=e_2e_2^T.                               \tag{3.1}
+\]
+With
+\[
+ s=c_0+c_1={339\over8000P},                             \tag{3.2}
+\]
+the complete six-row calculation is
+\[
+ J_1=2\eta(\sqrt{c_0},\sqrt{c_1}),
+ \qquad \Phi_1=0,
+ \qquad \Theta_1=4s,
+ \qquad \cV_1=4s.                                      \tag{3.3}
+\]
+The covariance-normal endpoint and its deterministic R-063 forest both have
+mean zero:
+\[
+ \E\{2s(\eta^2-1)\}=0.                                 \tag{3.4}
+\]
+The correct bridge reads $0=(4s-4s)/2$.  Deleting the conditional variance
+would give the false value $-2s$ and miss exactly
+\[
+ 2s={339\over4000P}.                                    \tag{3.5}
+\]
+Thus even a deterministic translation needs the variance rebate.  This is a
+counterfixture to rebate erasure, not to (2.4).
+
+\subsection*{3.2 The scaled R-125 scalar-envelope fixture}
+
+Scale the exact one-owner, one-exhaustive-cluster R-125 fixture by
+$\nu>0$:
+\[
+ \beta_{\rm op}=4(c_0+c_1)={339\over2000P}.              \tag{3.6a}
+\]
+\[
+ W=e_1,
+ \qquad V_\nu=\nu\eta e_2,
+ \qquad \Gamma_\nu=\nu^2e_2e_2^T.                       \tag{3.6}
+\]
+The six-row Pauli frame gives
+\[
+ X_\nu=2\nu\eta(\sqrt{c_0},\sqrt{c_1}),
+ \quad \Phi_\nu=0,
+ \quad \Theta_\nu=\Var_f(X_\nu)=\beta_{\rm op}\nu^2,\tag{3.7}
+\]
+and hence
+\[
+ \E\Forest_{063}^{\rm ad}=0,
+ \qquad
+ \E\cP_{\rm comp}=-{\beta_{\rm op}\over2}\nu^2.       \tag{3.8}
+\]
+Equivalently, the exact R-123 coordinate on this fixture is
+\[
+ \E\{\Theta_\nu-\|\Phi_\nu\|^2\}
+ =\beta_{\rm op}\nu^2=-2\E\cP_{\rm comp}.              \tag{3.8a}
+\]
+For the R-134 scalar envelope,
+\[
+ A^2=\nu^2,
+ \qquad B_e^2=e\nu^2,                                   \tag{3.9}
+\]
+and hence
+$Q_e=\nu^2(\sqrt{339/(2000P)}+\sqrt{3e/(320P)})^2$,
+so that
+\[
+ \boxed{
+ \mathfrak F-Q_e
+ =-\nu^2\left(
+ \sqrt{339\over2000P}+\sqrt{3e\over320P}
+ \right)^2\longrightarrow-\infty.}                    \tag{3.10}
+\]
+Thus R-134's valid lower surrogate cannot itself be uniformly lower bounded
+from the root-owner scalar norms.  This refutes that successor architecture,
+not the complete torus production action: the fixture does not impose the
+full spatial law or include the complete-low/stationary owner which appears
+in (2.8)--(2.10).
+
+\subsection*{3.3 The completed-square trace fixture}
+
+Let
+\[
+ A_\eta=B_1+2\eta\Id,
+ \quad K_\eta=LA_\eta^{-1}L,
+ \quad M_\eta=L-K_\eta,
+ \quad Q=GG^T-\Gamma,
+ \quad D_\eta={1\over2}K_\eta:\Gamma.                  \tag{3.11}
+\]
+R-088 records the pointwise null identity
+\[
+ \boxed{
+ {1\over2}G^TK_\eta G
+ -{1\over2}K_\eta:Q-D_\eta=0.}                        \tag{3.12}
+\]
+It is the same firewall in completed-square coordinates: the square
+variance, Wick contraction, and trace debt are one packet.
+
+For a fixed target dimension six, take
+\[
+ B_1=0,
+ \quad L=\ell\Id_6,
+ \quad c=0,
+ \quad \Gamma_N=\rho_N\Id_6,
+ \quad \E G=0,
+ \quad \Cov(G)=\Gamma_N,
+ \quad \rho_N\uparrow\infty.                          \tag{3.13}
+\]
+The original packet has $\E\cP=0$, whereas the isolated debt is
+\[
+ D_{\eta,N}={\ell^2\over4\eta}\Tr\Gamma_N
+ ={6\rho_N\ell^2\over4\eta}.                          \tag{3.14}
+\]
+The expected retained-square variance equals (3.14) exactly.  Any absolute
+envelope which keeps the debt and erases its variance companion manufactures
+a cutoff-divergent loss from a zero-mean packet.
+
+\section*{4. Exact sequential Cartan atom}
+
+Fix a production generator $A$ and probability root $j$.  Write
+\[
+ \Phi=\Phi_{A,j},
+ \qquad \cC_\Phi(z)=\Phi(z)^TDz,                        \tag{4.1}
+\]
+and let the physical control shells be
+\[
+ A^{(k)}=A^{(\ell)}+\sum_{r=j_0}^ka_r,
+ \qquad B_{j,k}=w_j+A^{(k-1)}.                          \tag{4.2}
+\]
+The sequential endpoint increment is
+\[
+ \Theta_{A,j,k}
+ =\cC_\Phi(B_{j,k}+a_k)-\cC_\Phi(B_{j,k}),             \tag{4.3}
+\]
+and telescopes exactly:
+\[
+ \sum_{k=j_0}^j\Theta_{A,j,k}
+ =\cC_\Phi(w_j+A^{(j)})
+  -\cC_\Phi(w_j+A^{(\ell)}).                           \tag{4.4}
+\]
+Since $a_k$ is strict-past for the fresh root $j$, its fresh-root derivative
+vanishes.  Differentiating (4.3) in a fresh Cameron--Martin direction $v$
+gives the complete three-channel atom
+\[
+ \boxed{\begin{aligned}
+ T_{A,j,k}[v]={}&
+ \{D\Phi(B_{j,k}+a_k)-D\Phi(B_{j,k})\}[v]^TDB_{j,k}\\
+ &+D\Phi(B_{j,k}+a_k)[v]^TDa_k\\
+ &+\{\Phi(B_{j,k}+a_k)-\Phi(B_{j,k})\}^TDv.
+ \end{aligned}}                                        \tag{4.5}
+\]
+Equivalently,
+\[
+ \begin{aligned}
+ T_{A,j,k}[v]=\int_0^1\{&
+ D^2\Phi(B_{j,k}+ra_k)[a_k,v]^TD(B_{j,k}+ra_k)\\
+ &+D\Phi(B_{j,k}+ra_k)[v]^TDa_k\\
+ &+D\Phi(B_{j,k}+ra_k)[a_k]^TDv\}\,dr .
+ \end{aligned}                                         \tag{4.6}
+\]
+Therefore
+\[
+ \sum_{k=j_0}^jT_{A,j,k}
+ =\mathbb D_j\{\cC_\Phi(w_j+A^{(j)})
+                 -\cC_\Phi(w_j+A^{(\ell)})\}.         \tag{4.7}
+\]
+Every future physical control shell is absent from the coefficient path of
+the $k$th atom.  With the R-081 bounds
+$\|D\Phi\|_\infty\le3$ and
+$\|D^2\Phi\|_\infty\le M_{e,2}$,
+\[
+ |T_{A,j,k}[v]|
+ \le M_{e,2}|a_k||v||DB_{j,k}|
+      +3|v||Da_k|+3|a_k||Dv|.                           \tag{4.8}
+\]
+For a root basis satisfying
+\[
+ \sum_h|v_h|^2\le\kappa_02^{-j},
+ \qquad
+ \sum_h|Dv_h|^2\le\kappa_12^j,                        \tag{4.9}
+\]
+one obtains the pointwise envelope
+\[
+ \sum_h|T_{A,j,k}[v_h]|^2
+ \le C_e\{2^{-j}|a_k|^2|DB_{j,k}|^2
+          +2^{-j}|Da_k|^2+2^j|a_k|^2\}.                \tag{4.10}
+\]
+Equations (4.5)--(4.10) are exact or fixed-floor local estimates.  They do
+not by themselves make distinct $k$ atoms orthogonal.
+
+\section*{4A. Direct transfer of the R-087 spatial theorem}
+
+The coefficient path
+\[
+ u_{j,k,r}^{\rm seq}=B_{j,k}+ra_k                         \tag{4A.1}
+\]
+is $Q_j$-supported, and the three terms in (4.6) are exactly the three
+R-087 remainder channels.  The R-087 proof therefore applies to the
+sequential atom itself; no self-to-sequential square comparison is used.
+For $1/3<\alpha<1/2$ and $1/2<s<3\alpha-1/2$, define
+\[
+ W_k^{\rm seq}
+ =\sup_{j\ge k}\sum_A\E\int_0^1
+ \bigl(1+\|B_{j,k}+ra_k\|_{\mathcal C^\alpha}\bigr)^6
+ \bigl(\|a_k\|_2^2+\|Da_k\|_2^2\bigr)\,dr,             \tag{4A.2}
+\]
+\[
+ q_k^{\rm seq}=C_e2^{-(6\alpha-1)k}W_k^{\rm seq}.       \tag{4A.3}
+\]
+
+\subsection*{Theorem 4A.1 (sequential Cartan spatial atom)}
+
+For every $m\ge j+5$,
+\[
+ \boxed{
+ \sum_A\int_0^\infty e^{-2t}
+ \E\|\Pi_mP_t^{(j)}T_{A,j,k}\|_{\rm HS}^2dt
+ \le2^{-2s(m-k)}q_k^{\rm seq}.}                         \tag{4A.4}
+\]
+Indeed, Jensen in $r$, conditional OU contraction, and the R-087 paraproduct
+estimates leave the positive exponent margins
+\[
+ (6\alpha-1)-2s,
+ \qquad 4\alpha-2s,
+ \qquad 6\alpha-2s.                                     \tag{4A.5}
+\]
+At $\alpha=2/5$ and $s=7/12$, the two critical margins are $7/30$ and
+$13/30$.  At the R-134 aggregate exponent $s=2/3$, all three margins are
+\[
+ {1\over15},\qquad {4\over15},\qquad {16\over15},        \tag{4A.6}
+\]
+respectively.  This proves the uncentred spatial estimate only.  It neither
+proves $\sum_kq_k^{\rm seq}<\infty$ nor identifies the complete centred
+R-125 owner current with the projected atom family.
+
+\section*{5. Variance-retained sequential summation}
+
+Let $\cY_{A,j,k,t}$ be the exhaustive output-cluster direct sum of the legal
+projection of $P_t^{(j)}T_{A,j,k}$.  Define its conditionally centred form
+\[
+ \widetilde\cY_{A,j,k,t}
+ =\cY_{A,j,k,t}-\E_f\cY_{A,j,k,t}.                      \tag{5.1}
+\]
+Whenever the deterministic spatial and OU operators commute with the legal
+future conditioning,
+\[
+ \E\|\Pi_m\widetilde\cY_{A,j,k,t}\|^2
+ \le \E\|\Pi_m\cY_{A,j,k,t}\|^2.                      \tag{5.2}
+\]
+If that commutation has not been established, the centred estimate below
+must be assumed directly.
+
+\subsection*{Theorem 5.1 (conditional variance sequential atom theorem)}
+
+Assume that for some $s>0$, every $k\le j$, and every $m\ge j+5$,
+\[
+ \sum_A\int_0^\infty e^{-2t}
+ \E\|\Pi_m\widetilde\cY_{A,j,k,t}\|^2\,dt
+ \le2^{-2s(m-k)}q_k,                                   \tag{5.3}
+\]
+where $q_k\ge0$ is deterministic and
+\[
+ \sum_kq_k\le Q.                                       \tag{5.4}
+\]
+For $0<\gamma<s$, define the variance-retained output ledger
+\[
+ \cB_{\gamma}^{\rm var}
+ :=\sum_{A,j}\sum_{m\ge j+5}2^{2\gamma(m-j-5)}
+   \int_0^\infty e^{-2t}
+   \E\Var_f\!\left(\Pi_m\sum_{k\le j}
+                 \cY_{A,j,k,t}\right)dt.               \tag{5.5}
+\]
+Then
+\[
+ \boxed{
+ \cB_{\gamma}^{\rm var}
+ \le {2^{-10s}\over
+ (1-2^{-s})^2(1-2^{-2(s-\gamma)})}\,Q.}                \tag{5.6}
+\]
+
+\emph{Proof.}
+Conditional Pythagoras gives
+\[
+ \Var_f\!\left(\Pi_m\sum_{k\le j}\cY_k\right)
+ =\E_f\left\|\Pi_m\sum_{k\le j}\widetilde\cY_k
+       \right\|^2.                                     \tag{5.7}
+\]
+For fixed $j,m,t$, weighted Cauchy--Schwarz gives
+\[
+ \left\|\sum_{k\le j}\Pi_m\widetilde\cY_k\right\|^2
+ \le{1\over1-2^{-s}}
+     \sum_{k\le j}2^{s(j-k)}
+     \|\Pi_m\widetilde\cY_k\|^2.                     \tag{5.8}
+\]
+Insert (5.3), use Tonelli, and put $r=j-k$ and $d=m-j\ge5$.
+The $r$ series contributes $(1-2^{-s})^{-1}$, while
+\[
+ \sum_{d\ge5}2^{2\gamma(d-5)}2^{-2sd}
+ ={2^{-10s}\over1-2^{-2(s-\gamma)}}.                   \tag{5.9}
+\]
+Equations (5.4), (5.8), and (5.9) prove (5.6). \hfill$\square$
+
+At
+\[
+ s={2\over3},
+ \qquad \gamma={7\over12},                             \tag{5.10}
+\]
+the square constant is
+\[
+ \boxed{
+ C_{2/3,7/12}^{\rm var}
+ ={2^{-20/3}\over
+ (1-2^{-2/3})^2(1-2^{-1/6})}
+ =0.658881625872614\ldots .}                            \tag{5.11}
+\]
+No cross-$k$ orthogonality is used, and each $q_k$ is spent once.  The theorem
+does not prove (5.4) or the identification of the complete R-125 owner current
+with the projected R-088 atom sum.  Theorem 4A.1 supplies the uncentred spatial
+version of (5.3) with $q_k=q_k^{\rm seq}$.  The centred version follows from
+(5.2) only after the legal conditioning commutation is certified; otherwise it
+remains a separate production input.  The once-owned $q_k^{\rm seq}$ sum and
+owner intertwiner remain open.
+
+\section*{6. Self atoms versus sequential atoms: an exact homotopy}
+
+R-087 and R-088 atomise the same endpoint along different paths.  The
+difference can be located without guessing a sign.
+
+Let $E$ and $H$ be finite-dimensional real Hilbert spaces, let
+$F:E\to H$ be $C^2$, and let
+\[
+ a=\sum_{k=1}^Ka_k,
+ \qquad p_{k-1}=\sum_{r<k}a_r.                          \tag{6.1}
+\]
+Define the straight-path self atoms and polygonal sequential atoms by
+\[
+ M_k=\int_0^1DF(ra)[a_k]\,dr,                           \tag{6.2}
+\]
+\[
+ T_k=\int_0^1DF(p_{k-1}+ra_k)[a_k]\,dr.                \tag{6.3}
+\]
+Both decompositions telescope:
+\[
+ \boxed{
+ \sum_kM_k=F(a)-F(0)=\sum_kT_k.}                        \tag{6.4}
+\]
+For the exact termwise difference put
+\[
+ H_k(r)=p_{k-1}+ra_k-ra
+       =(1-r)p_{k-1}-r\sum_{q>k}a_q,                    \tag{6.5}
+\]
+\[
+ \Gamma_k(r,\tau)=ra+\tau H_k(r).                      \tag{6.6}
+\]
+The fundamental theorem of calculus in $\tau$ gives
+\[
+ \boxed{
+ T_k-M_k
+ =\int_0^1\!\int_0^1
+ D^2F(\Gamma_k(r,\tau))[H_k(r),a_k]\,d\tau\,dr.}      \tag{6.7}
+\]
+Summing (6.7) gives zero by (6.4), but no summand has a fixed sign.
+
+For the production comparison take
+\[
+ F(A)=\mathbb D_j\cC_{\Phi_{A,j}}(w_j+A),              \tag{6.8}
+\]
+with the finite-low shift absorbed into the origin.  Then (6.2) is the R-087
+self atom and (6.3) is the R-088 sequential atom.  Equation (6.5) shows the
+precise trade: the sequential path removes future controls from its $k$th
+coefficient, while the self-to-sequential homotopy contains past-prefix and
+future-tail mixed Hessian terms.  Consequently
+\[
+ \sum_k\|T_k\|^2\lesssim\sum_k\|M_k\|^2               \tag{6.9}
+\]
+does not follow from endpoint exactness.  A proof of (6.9), a weighted
+variant, or any later attempt to compare the two decompositions must estimate
+the strip (6.7) with the R-125 variance and forest owners retained.  Theorem
+4A.1 does not require (6.9): it proves the sequential spatial estimate directly
+from the common three-channel integrand.  The remaining burden is to sum its
+actual $q_k^{\rm seq}$ costs and intertwine the legally centred full owners.
+
+\section*{7. Extracted-$Z^6$ rare-event no-go}
+
+The R-087 straight-path spatial estimate introduced
+\[
+ q_k^{\rm mod}
+ =C_e2^{-(6\alpha-1)k}
+  \sup_{j\ge k}\sum_A\E\int_0^1
+  Z_{j,r}^6\{\|a_k\|_2^2+\|Da_k\|_2^2\}\,dr.          \tag{7.1}
+\]
+The R-088 direct-root theorem needs only $\sum_kq_k$, but this particular
+extraction still fails.  Put $N=2^k$, choose
+$E\in\cF_{k-1}$ with $\mathbb P(E)=p=N^{-6}$, and set
+\[
+ h_k=N^3\mathbf1_Ee_N,
+ \qquad a_k=K_kh_k=N\mathbf1_Ee_N.                     \tag{7.2}
+\]
+Then
+\[
+ \E X\asymp\E Y\asymp\E\sqrt{XY}\asymp1,            \tag{7.3}
+\]
+whereas, with $\beta=6\alpha-1$,
+\[
+ \boxed{
+ q_k^{\rm mod}
+ \asymp N^{-\beta}pN^{6(1+\alpha)}N^4
+ =N^5=p^{-5/6}.}                                       \tag{7.4}
+\]
+The older $2^k$-weighted extraction grows as $N^6=p^{-1}$.  Thus neither the
+weighted nor unweighted theorem converts this $Z^6$ envelope into a one-use
+ledger.
+
+This fixture does not evaluate the exact atom (4.5).  Indeed, the exact scalar
+production saturation analysed in R-091 has a fixed-gap quantity of order
+$N^{-4}$ on the same rare event.  Therefore (7.4) proves only
+\[
+ \text{extracted translated-model }Z^6\text{ majorants are too coarse};
+                                                               \tag{7.5}
+\]
+it neither falsifies nor proves the expectation-inside sequential estimate
+(5.3).
+
+\section*{8. Conditioning, rank, and spatial regularity}
+
+For a jointly Gaussian finite-dimensional pair $(Z,Y)$,
+\[
+ \boxed{
+ \Cov(Z\mid Y)
+ =\Gamma_Z-\Gamma_{ZY}\Gamma_Y^\dagger\Gamma_{YZ}.}    \tag{8.1}
+\]
+If $Y=AZ$, then
+\[
+ \Cov(Z\mid AZ)
+ =\Gamma_Z^{1/2}
+  (\Id-P_{\Ran(\Gamma_Z^{1/2}A^*)})
+  \Gamma_Z^{1/2}.                                      \tag{8.2}
+\]
+Thus independent conditioning preserves covariance, while noiseless
+observation can remove rank, including all of it when $A=\Id$.
+
+For a Gaussian field $\zeta$ with covariance kernel $K$, a finite Gaussian
+observation $Y$ gives
+\[
+ \E[\zeta(x)\mid Y]
+ =m(x)+K_{\zeta Y}(x)K_Y^\dagger(Y-\E Y),              \tag{8.3}
+\]
+\[
+ K_{\mid Y}(x,y)
+ =K(x,y)-K_{\zeta Y}(x)K_Y^\dagger K_{Y\zeta}(y).      \tag{8.4}
+\]
+Consequently
+\[
+ \Cov(\partial_i\zeta(x)\mid Y)
+ =\partial_{x_i}\partial_{y_i}K_{\mid Y}(x,y)|_{y=x}, \tag{8.5}
+\]
+\[
+ \E[|\zeta(x)-\zeta(y)|^2\mid Y]
+ =\Tr\{K_{\mid Y}(x,x)+K_{\mid Y}(y,y)
+                  -2K_{\mid Y}(x,y)\}.                \tag{8.6}
+\]
+The residual covariance decreases as a quadratic form, but its smallest
+eigenvalue can collapse and the regression mean contains the pseudoinverse
+$K_Y^\dagger$.  Conditioning on a nonlinear same-root coefficient need not
+leave a Gaussian conditional law, so (8.1)--(8.6) then require a separate
+affine representation theorem.
+
+The sharp spatial diagnostic is
+\[
+ \zeta_N^a(x)=G_a\cos(Nx)+H_a\sin(Nx),
+ \qquad a=1,\ldots,6,                                  \tag{8.7}
+\]
+with independent standard $G_a,H_a$.  It has
+\[
+ K_N(x,y)=\cos(N(x-y))\Id_6,
+ \qquad K_N(x,x)=\Id_6,                                \tag{8.8}
+\]
+but its $W^{\sigma,3}$ norm grows as $N^\sigma$.  After conditioning on
+$G=(G_a)$,
+\[
+ \E[\zeta_N(x)\mid G]=G\cos(Nx),
+ \qquad
+ \Cov(\zeta_N(x)\mid G)=\sin^2(Nx)\Id_6,              \tag{8.9}
+\]
+\[
+ \Cov(\partial_x\zeta_N(x)\mid G)
+ =N^2\cos^2(Nx)\Id_6.                                  \tag{8.10}
+\]
+Hence $\inf_x\lambda_{\min}=0$ after conditioning despite exact unit
+pointwise covariance before conditioning.  R-116 additionally forbids
+splitting the production sine/cosine and polarization partners into an
+artificial standalone root; they must remain in one legal conditional
+cluster.  The complete pair still proves that pointwise ellipticity alone
+does not imply a spatial fractional estimate.
+
+\section*{9. Directed-refinement terminal no-go}
+
+R-104 starts from a finite temporal partition and defines
+\[
+ \Delta C_k=\int_{I_k}J_tJ_t^*\,dt,
+ \qquad S_k=\Delta C_k^{1/2},
+ \qquad X_J\stackrel{\rm law}=\sum_kS_k\xi_k.           \tag{9.1}
+\]
+Singular $\Delta C_k$ are allowed.  Let a refinement have final cut $s<1$.
+The Gaussian source component independent of $\cF_s$ and contained in the
+physical terminal source is
+\[
+ Y_s=\int_s^1J_t\,dW_t,
+ \qquad C_s=\Cov(Y_s)=\int_s^1J_tJ_t^*\,dt.             \tag{9.2}
+\]
+Let $E_x:H_J\to\mathbb R^6$ be point evaluation at fixed cutoff and put
+\[
+ \Gamma_s(x)=E_xC_sE_x^*.                               \tag{9.3}
+\]
+
+\subsection*{Theorem 9.1 (no refinement-uniform last innovation)}
+
+For every fixed cutoff and point,
+\[
+ \boxed{
+ \lambda_{\min}\Gamma_s(x)
+ \le{1\over6}\Tr\Gamma_s(x)
+ ={1\over6}\int_s^1\|J_t^*E_x^*\|_{\rm HS}^2\,dt
+ \longrightarrow0\quad(s\uparrow1).}                 \tag{9.4}
+\]
+Therefore no $\lambda_*>0$ can satisfy
+\[
+ \Gamma_s(x)\succeq\lambda_*\Id_6                    \tag{9.5}
+\]
+uniformly in the R-093 directed temporal refinements.  If the integrand in
+(9.4) is bounded by $M_{J,x}^2$, then
+\[
+ \lambda_{\min}\Gamma_s(x)
+ \le{1-s\over6}M_{J,x}^2.                               \tag{9.6}
+\]
+
+\emph{Proof.}
+The trace bound is elementary.  The final integral tends to zero by absolute
+continuity of the finite-cutoff covariance integral. \hfill$\square$
+
+There is also an invariant Gaussian-Hilbert-space formulation.  A Gaussian
+linear functional independent of every $\cF_s$, $s<1$, must have a source
+kernel supported in
+\[
+ \bigcap_{s<1}(s,1]=\{1\},                              \tag{9.7}
+\]
+which is null for the time covariance measure; the functional is therefore
+zero in $L^2$.  Freezing a positive-length last interval avoids (9.4) only by
+removing late predictable controls and is not cofinal in the full progressive
+core.
+
+The increasing sharp-cube root filtration gives the same obstruction in
+discrete form.  The accepted production value-root estimate is
+\[
+ \Tr\Sigma_j^{\rm val}(x)\le\kappa_02^{-j}.             \tag{9.8}
+\]
+For the future tail
+\[
+ \Gamma_{>j}^{\rm val}(x)=\sum_{r>j}\Sigma_r^{\rm val}(x),
+\]
+one has
+\[
+ \lambda_{\min}\Gamma_{>j}^{\rm val}(x)
+ \le{\kappa_0\over6}2^{-j},
+ \qquad \Gamma_{>J}^{\rm val}=0.                       \tag{9.9}
+\]
+Moreover, for a centred packet $Z_j$ and $q>0$, Jensen gives
+\[
+ \E|Z_j|^{-q}
+ \ge(\E|Z_j|^2)^{-q/2}.                                \tag{9.10}
+\]
+At the R-134 inverse orders $q=9/4$ and $q=9/2$, a value covariance of scale
+$2^{-j}$ therefore carries growth $2^{9j/8}$ and $2^{9j/4}$, respectively.
+The sharp R-134 upper constants are
+\[
+ C_{6,9/4}={\Gamma(15/8)\over2^{17/8}},
+ \qquad
+ C_{6,9/2}={\Gamma(3/4)\over2^{13/4}}.                 \tag{9.11}
+\]
+Full rank at each fixed $j$ cannot turn these shell-dependent constants into
+an owner-uniform one.
+
+Finally, the current R-125 conditioning retains the current root and
+integrates only legal future variables.  For the maximal root there is no
+future block, so its future conditional covariance is zero.  Re-integrating
+that retained root, reordering a low block to the end, or adding a fresh
+independent coordinate changes the owner disintegration or source chart and
+requires a new theorem.  R-104 explicitly claims no invariance under such a
+change of reveal order or fresh coordinates.
+
+\section*{10. Fixed-chart and weighted successors}
+
+\subsection*{10.1 Fixed-chart aggregate packet}
+
+For one declared chart choose a tail set $T$ which remains unrevealed at the
+conditioning under consideration and put
+\[
+ \zeta_T=\sum_{r\in T}S_r\xi_r,
+ \qquad
+ \Gamma_T(x,y)=\sum_{r\in T}E_xS_rS_r^*E_y^*.          \tag{10.1}
+\]
+An aggregate may restore rank even when its summands are singular, since
+\[
+ \Ker\!\left(\sum_{r\in T}S_rS_r^*\right)
+ =\bigcap_{r\in T}\Ker S_r^*.                           \tag{10.2}
+\]
+Define the chart-dependent quantities
+\[
+ \lambda_{J,\pi,T}
+ =\inf_x\lambda_{\min}\Gamma_T(x,x),                   \tag{10.3}
+\]
+\[
+ Q_{J,\pi,T}
+ =\sum_o\E\,\mathfrak R_o(\zeta_T)^2,                 \tag{10.4}
+\]
+where the exact R-092/R-134 functional is
+\[
+ \mathfrak R_o
+ =N_{+,o}\|Da_o\|_6
+ +\{D_{\sigma,o}+D_{\infty,o}(N_{+,o}+N_{-,o})\}
+   \|Dx_o\|_6.                                         \tag{10.5}
+\]
+If $\lambda_{J,\pi,T}>0$, the packet is independent of the conditioning,
+the required value--gradient regression and Fubini/Jensen bounds hold, and
+(10.4) is finite, then the R-134 fractional theorem applies on that fixed
+chart.  Its second- and third-jet bounds are
+\[
+ \E\|D^2F_S\|^2\le{49\over\lambda_{J,\pi,T}},
+ \qquad
+ \E\|D^3F_S\|^2\le{3249\over2\lambda_{J,\pi,T}^2}.    \tag{10.6}
+\]
+This construction covers only owners whose legal sigma-fields precede the
+whole set $T$.  It is neither an every-owner construction nor stable under
+directed refinement.
+
+\subsection*{10.2 Weighted production successor}
+
+The refinement-stable replacement is not a common positive lower bound.  It
+is a once-owned family $q_k$ which absorbs the actual shell covariance,
+value--gradient regression, spatial increments, owner conversion, and the
+centred sequential atom.  The exact sufficient target is (5.3)--(5.4), or a
+direct integrated estimate of (5.5), with
+\[
+ s>{7\over12}.                                          \tag{10.7}
+\]
+A natural shell-standardised input would have the form
+\[
+ c_-2^{-k}\Id_6\preceq\Gamma_k(x,x)
+ \preceq c_+2^{-k}\Id_6,                               \tag{10.8}
+\]
+\[
+ \E|2^{k/2}(\zeta_k(x)-\zeta_k(y))|^r
+ \le C_r\min\{1,(2^k|x-y|)^r\},                       \tag{10.9}
+\]
+together with a uniform standardised value--gradient regression estimate.
+Equations (10.8)--(10.9) are a proposed sufficient data package, not a theorem
+of this note.  The lower matrix bound, the owner intertwiner, and the legally
+centred sequential owner estimate must be proved from the production symbol
+without splitting the legal quadrature/polarisation cluster; the uncentred
+spatial atom estimate itself is already Theorem 4A.1.
+
+\section*{11. Conditional collar headroom}
+
+Suppose the variance-retained sequential theorem supplies a one-use $Q$ and
+let
+\[
+ C_{\rm var}=C_{2/3,7/12}^{\rm var}.                    \tag{11.1}
+\]
+After the exact R-091 output-gap extraction, an owner conversion constant
+$\Lambda_{\rm own}$ gives the conditional tail amplitude
+\[
+ a_{\rm tail}(C)
+ \le M2^{-7(C-5)/12},
+ \qquad
+ M=\Lambda_{\rm own}\sqrt{C_{\rm var}Q}.               \tag{11.2}
+\]
+Let the source and sextic diagonal margins be $e_0,f_0>0$, let a low block
+satisfy $D\succeq d\Id$, and let its coupling norm be $k$.  Put
+\[
+ \sigma_0={k^2\over d}<\min(e_0,f_0),                  \tag{11.3}
+\]
+\[
+ a_*=2\sqrt{(e_0-\sigma_0)(f_0-\sigma_0)}.             \tag{11.4}
+\]
+The exact fixed-collar acceptance condition is
+\[
+ \boxed{
+ a_0(C)+M2^{-7(C-5)/12}<a_*.}                          \tag{11.5}
+\]
+If a separate theorem gives $a_0(C)\le a_0<a_*$ and
+$h_*=a_*-a_0>0$, then the smallest sufficient integer is
+\[
+ C_{\min}
+ =\max\left\{5,
+ \left\lfloor5+{12\over7}\log_2{M\over h_*}\right\rfloor+1
+ \right\}.                                             \tag{11.6}
+\]
+The floor-plus-one enforces strictness.  Tail decay does not create the
+missing headroom: if
+\[
+ a_*(C)-a_0(C)={M\over2}2^{-7(C-5)/12},                \tag{11.7}
+\]
+then (11.5) fails for every $C$.
+
+\section*{12. Route map}
+
+\begin{center}
+\begin{tabular}{p{0.28\textwidth}p{0.18\textwidth}p{0.44\textwidth}}
+\hline
+Route & Verdict & Exact boundary or successor\\
+\hline
+R-125 owner coordinate & exact & Forest minus conditional future variance,
+with the exhaustive cluster sum formed first.\\
+R-123 aggregate target & exact coordinate, open estimate & Include complete
+low/stationary ownership and bound (2.9), equivalently (2.10), before spending
+source and sextic once.\\
+Uncentred second moment & failed method & It erases $\|\E_fX\|^2/2$; the
+primitive fixture (3.1)--(3.5) misses exactly $339/(4000P)$.\\
+R-134 scalar covariance envelope & failed successor & The scaled fixture
+(3.6)--(3.10) sends $\mathfrak F-Q_e$ to minus infinity.\\
+Separated completion debt & failed method & The pointwise null identity
+(3.12) makes square variance and debt one packet; (3.13)--(3.14) diverges
+only after separation.\\
+R-088 sequential atom & exact with spatial transfer & The three channels and
+endpoint telescope are exact; Theorem 4A.1 directly proves the uncentred
+far-output estimate, while the $q_k^{\rm seq}$ sum remains open.\\
+Centred sequential summation & conditional advance & Theorem 5.1 gives the
+exact $0.658881625872614\ldots$ square constant under (5.3)--(5.4).\\
+R-087 self to R-088 sequential & direct spatial proof, no comparison & The
+homotopy strip (6.7) has no termwise sign, but the direct three-channel reproof
+in Theorem 4A.1 bypasses that comparison.\\
+Extracted $Z^6$ ledger & failed method & The predictable rare branch grows
+$N^5$ unweighted and $N^6$ weighted; it does not test the exact atom.\\
+Uniform last source block & ruled out over the directed union & Terminal-tail
+covariance tends to zero by (9.4); the maximal retained owner has zero future
+covariance.\\
+Fixed-chart aggregate & conditional only & Several unrevealed blocks may
+restore rank, with chart-dependent $\lambda_{J,\pi,T}$ and joint spatial cost.\\
+Shell-weighted successor & open, preferred subtheorem & Prove (5.3)--(5.4)
+with shell-dependent covariance and joint value--gradient data inside $q_k$;
+this feeds but does not replace the complete R-123 signed trace-excess target.\\
+Fixed-collar Schur step & conditional only & Requires (11.5), including a
+separately certified positive near/balanced headroom.\\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{13. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: The exact owner identity makes the complete packet
+nonnegative.  UPHELD as an overclaim.}
+Equation (2.4) fixes ownership and factors.  It supplies no sign for the
+forest-minus-variance combination.
+
+\item \textbf{Objection: Nonnegativity of the R-125 covariance-normal endpoint
+closes the smaller R-123 action owner.  DISMISSED.}
+R-129 gives $\cE_{\rm CN}=\cP_{\rm comp}+\cV/2$, in the wrong direction for
+lower-bounding $\cP_{\rm comp}$.  On the scaled fixture
+$\E\cE_{\rm CN}=0$ while
+$\E\cP_{\rm comp}=-\beta_{\rm op}\nu^2/2<0$.
+
+\item \textbf{Objection: Conditional variance may be replaced by the second
+moment because the latter is larger.  DISMISSED as a closure method.}
+The replacement is a formally valid weaker lower bound, but it deletes the
+mean rebate.  Equations (3.1)--(3.5) show that the deleted amount is already
+load bearing in a deterministic translation.
+
+\item \textbf{Objection: The completed-square debt is positive and may be
+paid separately.  DISMISSED.}
+Equation (3.12) is pointwise.  The divergent debt in (3.14) is cancelled by the
+retained-square variance while the original packet has zero mean.
+
+\item \textbf{Objection: R-087 already proves the sequential atom because the
+two atom sums have the same endpoint.  VALID WITH CORRECTION.}
+The spatial conclusion does transfer, but not from endpoint equality:
+Theorem 4A.1 reruns the R-087 paraproduct proof on the identical three-channel
+sequential integrand.  The totals agree by (6.4), while the termwise defect
+(6.7) has no sign.  Neither argument proves the once-owned $q_k^{\rm seq}$ sum
+or the complete centred owner intertwiner.
+
+\item \textbf{Objection: Sequential atomisation makes different physical
+shells orthogonal.  DISMISSED.}
+The telescope occurs before the Hilbert--Schmidt square.  Theorem 5.1 uses
+weighted Cauchy--Schwarz and assumes no cross-shell orthogonality.
+
+\item \textbf{Objection: The rare-event fixture refutes the exact
+$\gamma=7/12$ Cartan atom.  DISMISSED.}
+It evaluates the extracted $Z^6$ majorant.  R-091's saturated scalar current
+has the opposite, decaying scale on that fixture.  The complete legally
+centred vector/multimode owner intertwiner and its $q_k^{\rm seq}$ sum remain
+open.
+
+\item \textbf{Objection: Every fixed R-104 chart has a last block, so a
+refinement-uniform ellipticity constant may be chosen.  DISMISSED.}
+Equation (9.4) sends the last-block covariance to zero as the final mesh
+interval shrinks.  A fixed last interval is not cofinal for progressive
+controls, and adding or reordering roots changes the chart.
+
+\item \textbf{Objection: Pointwise six-real ellipticity supplies all spatial
+data.  DISMISSED.}
+The field (8.7) has covariance $\Id_6$ at every point and fractional norm of
+order $N^\sigma$.  Conditioning can also make its pointwise lower eigenvalue
+zero as in (8.9).
+
+\item \textbf{Objection: Theorem 5.1 closes controlled-shell one-use.
+UPHELD as an overclaim.}
+The uncentred production spatial atom is now Theorem 4A.1, but the legal
+centred conditioning step, once-owned $q_k^{\rm seq}$ sum, owner conversion,
+and exact R-125/R-088 intertwiner are not conclusions of Theorem 5.1.
+
+\item \textbf{Objection: A sufficiently large collar always closes the final
+matrix.  DISMISSED.}
+Equation (11.7) is a legal shrinking-headroom profile which defeats every
+collar.  A positive $h_*$ or one verified finite collar is separate data.
+\end{enumerate}
+
+\section*{14. Remaining theorem, open gates, and no-overclaim statement}
+
+The Nelson-level target remains the complete-low R-123 signed trace-excess
+bound (2.9), equivalently (2.10).  The smallest honest analytic successor
+toward that target is one of the following two production subtheorems.
+\begin{enumerate}
+\item Upgrade Theorem 4A.1 to the legally centred expectation-inside bound
+(5.3), with all output clusters, same-root visits, trace covariance, future
+variance, R-063 forest, rational and Cartan rows, low block, and owner
+conversion retained, and prove the once-owned sum (5.4).
+\item Bypass per-atom bounds and estimate the complete variance-retained
+output ledger (5.5) directly, again without extracting a translated-model
+$Z^6$ factor or separating the forest-current cancellation.
+\end{enumerate}
+Either route must use a fixed-chart aggregate or a shell-weighted joint
+value--gradient/increment/regression theorem; Theorem 9.1 rules out a common
+refinement-uniform last innovation.  Afterward one still must certify the
+complete R-123 trace-excess inequality, near/balanced headroom (11.5), the low
+matrix, matching energy, strict gap, and absolute anchor before applying the
+R-129 collar mechanism.
+
+The following remain open without qualification:
+\begin{itemize}
+\item \texttt{A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE} (T-050);
+\item \texttt{A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION};
+\item the complete signed forest-current lower bound;
+\item the complete owner-to-projected-sequential-atom intertwiner;
+\item the legal centred-conditioning step and one-use $q_k^{\rm seq}$ ledger;
+\item $\mathrm{OVERLAP}_{\rm src}$ and the $q=10/9$ Nelson bound;
+\item the interacting measure, cutoff/floor/volume removals, and Sector-A
+closure.
+\end{itemize}
+
+No claim is made that this note proves a production covariance lower bound,
+a cutoff/chart/control/refinement-uniform spatial estimate, a complete
+owner-intertwining theorem, a strict augmented gap, or either A13 gate.  The
+directed-refinement theorem is a no-go for one proposed proof architecture;
+it is not a counterexample to the complete signed action or to Nelson.
+
+\section*{15. Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID:                A13-CLASSII-VARIANCE-RETAINED-SEQUENTIAL-ATOM-
+                          REFINEMENT-BOUNDARY (R-135).
+Claim:                    A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-
+                          OBSTRUCTION.
+Precise statement:        The complete recombined owner is exactly one half
+                          the adapted R-063 forest minus one half the
+                          conditional future variance; the complete-low R-123
+                          trace excess is the live aggregate target. The R-087 spatial proof
+                          applies directly to the uncentred R-088 sequential
+                          atom; at alpha=2/5 and s=2/3 its three margins are
+                          1/15, 4/15, and 16/15. A centred sequential atom
+                          hypothesis sums with square constant
+                          0.658881625872614... at s=2/3 and gamma=7/12.
+                          R-087 self atoms and R-088 sequential atoms have an
+                          exact mixed-Hessian homotopy defect, so equality of
+                          endpoint sums gives no termwise domination. The
+                          extracted-Z6 route fails on the predictable rare
+                          branch. No nonzero terminal source block can remain
+                          independent and uniformly six-real elliptic over
+                          the full directed temporal-refinement union because
+                          its tail covariance tends to zero.
+Scope:                   Fixed finite cutoff, positive floor, common legal
+                          heat, one declared temporally faithful chart,
+                          recombined same-root visits, and an exhaustive
+                          contraction-closed orthogonal output family. The
+                          refinement no-go quantifies over the R-093 directed
+                          temporal union.
+Dependencies:            R-087, R-088, R-091, R-092, R-104, R-116, R-119,
+                          R-123, R-125, R-129, R-133, and R-134.
+Evidence grade:          ANALYTIC/EXACT/EXECUTED with primary, non-importing
+                          independent, and integrated executable checks, a
+                          rendered PDF, visual QA, manifest, and release gate.
+Reproduction command:    E:\Dev\TECT.venv\Scripts\python.exe
+                          codes/foundations/a13_classii_variance_retained_
+                          sequential_atom_refinement_boundary_verify.py
+Expected output:          R-135 integrated PASS: 142/142 integrated;
+                          aggregate 284/284, with primary 69/69 and
+                          non-importing independent 73/73 children PASS;
+                          PDF and generated-surface gates PASS.
+Negative boundary:       The R-134 root-owner scalar covariance envelope is
+                          unbounded below on the scaled R-125 fixture, and
+                          refinement-uniform independent last-block ellipticity
+                          is impossible in the full directed temporal union.
+                          Both are method no-gos, not counterexamples to the
+                          complete production action. Authorities are
+                          NG-2026-07-31-A13-COVARIANCE-ENVELOPE-REBATE-ERASURE
+                          and NG-2026-07-31-A13-REFINEMENT-UNIFORM-LAST-BLOCK-
+                          ELLIPTICITY; the extracted-Z6 route reuses its 2026-07-25 no-go.
+Falsification gate:      Any failed owner factor, variance identity,
+                          sequential telescope, homotopy formula, geometric
+                          constant, covariance-tail limit, or scope firewall.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No centred owner intertwiner, q-ledger, signed
+                          forest-current bound, headroom, A13 gate, Nelson
+                          theorem, measure theorem, removal limit, or Sector-A
+                          closure is proved.
+Proof complete:          false. Sector A closed: false.
+Next required action:    Prove the legal centred-conditioning/owner
+                          intertwiner and once-owned shell-weighted q-ledger,
+                          or a direct integrated substitute; prove the full
+                          R-123 trace-excess bound, then certify one finite
+                          collar's near/balanced headroom.
+\end{verbatim}
+\endgroup
+
+\endgroup

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-135](#r-135) | Variance-retained trace excess, sequential Cartan spatial transfer, and terminal-refinement boundary | Scoped T4 analytic/exact/executed advance and route correction. The exact R-125 owner retains one half of the adapted forest minus one half of the conditional future variance; the correct aggregate target is the complete-low R-123 trace excess. Replacing the variance rebate by the R-134 scalar norm envelope loses a load-bearing cancellation and is unbounded below on the scaled one-owner R-125 fixture. The R-087 three-channel spatial proof reruns directly on the uncentred R-088 sequential atom, with production-exponent margins `1/15`, `4/15`, and `16/15`. A legally centred variance-retained atom hypothesis would sum at `gamma=7/12` with square constant `0.658881625872614...`, but the centred owner intertwiner and once-owned `q_k^seq` sum remain open. The exact self/sequential homotopy gives no termwise domination, and the accepted extracted-`Z^6` majorant no-go does not refute the exact atom. No nonzero labelled final source block remains independent and uniformly six-real elliptic over the full R-093 directed refinement union; the successor must use fixed-chart aggregate smoothing or a shell-weighted covariance/spatial ledger. Headroom, both A13 gates, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-134](#r-134) | Terminal Gaussian jet threshold, floor-stable fixed-law action, and conditional gamma-7/12 aggregate-collar boundary | Scoped T4 analytic/exact/executed advance and adversarial correction. Complete Pauli summation gives the sharp floor residual `||C6e-C60||<=alpha sqrt(c1 e)|v|`, `alpha^2 c1=3/(320P)`. After exhaustive clusters are placed in one direct sum under each root-spatial owner, R-125 gives the root/visit-free action lower bound `Forest_063/2-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2/2`; separate payment is cutoff-divergent. Pointwise six-real ellipticity gives exact negative moments and D2/D3 quotient-jet costs, while the embedded Pauli D4 jet diverges logarithmically on a fixed cone. Pointwise ellipticity alone does not imply spatial fractional control. The gamma-7/12 geometric constants are exact only after assuming the missing joint spatial data, owner-preserving R-087-to-R-088 atom transfer, and one-use ledger. Headroom, low data, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-133](#r-133) | Affine Gaussian score transfer, predictable-feedback boundary, polynomial-response collar, and positive-gamma aggregate criterion | Scoped T4 analytic/exact/executed advance and route correction. A genuinely affine conditional Gaussian block has an exact derivative-free common-heat Hermite-score representation for the complete current--trace owner, with one-copy cost `D_Gamma` and paired cost `4D_Gamma`; common heat scores only the synchronous replica direction. The exact predictable-chart score is `delta^2(sym(a tensor b))-delta(d)`, but bounded triangular tanh feedback makes its inverse-Jacobian cost diverge under the currently declared finite-energy data. R-083 gives a conditional polynomial physical-response zero only at safe collar `C=4` after root-tower and covariance/forest matching. The exact periodic rational boundary layer scales as `b^7 e^(-3/2)` at fourth order, so the existing sixth-amplitude `gamma=4` route fails without constituting a literal production `B_4^out` counterexample. The exact low-coupled acceptance threshold is `a<2sqrt((e-k^2/d)(f-k^2/d))`; any proved positive-gamma aggregate tail can fit fixed headroom, but the one-use `gamma=7/12` tail, collar-uniform non-tail headroom, production constants, low data, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-132](#r-132) | Common-heat mixed replicas, Gaussian-ray source--sextic margin, and the shell-exponent boundary | Scoped T4 analytic/exact/executed advance and route correction. The fixed-law physical response has an exact common-heat paired-replica formula, and the complete six-row mixed Pauli--Fierz contraction is `c0 JJ+c1(JJ-alpha tau' JM-alpha tau MJ+alpha^2 tau tau' MM)`, with every floor denominator confined to `tau,tau'`. A 64-atom heat plus terminal sextic gives the diagonal comparison constant `9/10240`, but exact origin cancellation shows that this does not control the square of the conditional mean. An equal two-point rational-ray law has Hessian `-10 c1/(81 delta)+O(1)`, rejecting law-free floor uniformity without constituting a production counterexample. Standard-Gaussian score transfer instead gives a floor-uniform once-owned scalar-ray margin `m_G=0.76532075819349...>3/4`. R-083 polynomial vanishing remains narrow and R-091's `gamma=7/12` amplitude tail is too slow for the mixed/far targets; a complete `gamma=4` one-use estimate or stronger joint signed cancellation remains open, together with production `C_mix/C_far/c_bal`, low constants, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure |
@@ -153,6 +154,72 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-135"></a>
+### R-135 -- Variance-retained trace excess, sequential Cartan spatial transfer, and terminal-refinement boundary
+
+**Result ID.**
+A13-CLASSII-VARIANCE-RETAINED-SEQUENTIAL-ATOM-REFINEMENT-BOUNDARY.
+
+**Exact owner firewall and corrected target.**  For each recombined
+root--spatial owner, after forming the exhaustive output-cluster direct sum,
+R-125 gives
+`P_comp,o=Forest_063,o^ad/2-Var_f(X_o)/2`.  After the complete-low/stationary
+owner is included, the smallest live closure statement is the R-123 aggregate
+trace-excess inequality
+`sum_o E[Theta_o-||Phi_o||^2] <= 2 eta X_src+2 zeta Y_6+2C`, with
+`eta<9/20` and `zeta<3/20`; equivalently, and only for this full owner set,
+`F_full-V_e,full >= -2 eta X_src-2 zeta Y_6-2C`.
+
+**Failed scalar envelope.**  On the scaled exact one-owner R-125 fixture
+`W=e_1`, `V_nu=nu eta e_2`, one has `Phi=0`,
+`Theta=Var_f(X)=beta_op nu^2`, `E Forest_063^ad=0`, and
+`E P_comp=-beta_op nu^2/2`.  The R-134 norm surrogate is
+`F-Q_e=-nu^2(sqrt(339/(2000P))+sqrt(3e/(320P)))^2`, hence tends to minus
+infinity.  This rules out rebate erasure from the root-owner scalar envelope;
+it is not a counterexample to the complete torus production action because the
+fixture neither imposes the full spatial law nor includes the complete-low
+owner.
+
+**Sequential spatial advance and conditional sum.**  The R-088 coefficient
+path `B_(j,k)+r a_k` is `Q_j`-supported and its three differentiated-current
+channels are exactly the R-087 integrand.  Re-running the R-087 paraproduct
+argument proves the uncentred R-088 far-output atom estimate with
+`q_k^seq=C_e 2^(-(6 alpha-1)k)W_k^seq`.  At `alpha=2/5`, `s=2/3`, the three
+positive margins are `1/15`, `4/15`, and `16/15`; at `s=7/12` the two critical
+margins are `7/30` and `13/30`.  Conditional on legal centring and
+`sum_k q_k^seq<=Q`, nonorthogonal summation retains the exact square constant
+`0.658881625872614...`.  Neither the centring/owner intertwiner nor the
+once-owned `q_k^seq` sum is proved.
+
+**Homotopy and refinement boundaries.**  The exact two-parameter homotopy
+between R-087 self atoms and R-088 sequential atoms contains a signed mixed
+past/future Hessian strip, so equality of endpoint sums supplies no termwise
+square domination; the direct spatial reproof does not need that comparison.
+The accepted extracted-`Z^6` rare-event majorant still grows as `N^5`
+unweighted and `N^6` under the old ledger, without refuting the exact atom.
+Finally, a refinement-preserving split
+`I_6=(1-epsilon)I_6+epsilon I_6` sends the last-block eigenvalue to zero, and
+the physical R-104 terminal-tail covariance also tends to zero as its cut
+approaches one.  Thus refinement-uniform last-block ellipticity is impossible;
+fixed-chart aggregate smoothing and shell-weighted inverse-covariance plus
+joint-spatial costs remain viable.
+
+**Where proved.**  Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, the R-135 note, primary
+and non-importing independent executables, integrated verifier, manifest, JSON
+artefacts, `EXP-000525--EXP-000532`, and two new formal negative results.  The
+older extracted-model failure reuses its existing negative authority.
+
+**Reuse scope.**  Fixed finite cutoff, positive density floor, one common legal
+heat, one declared temporally faithful chart, recombined same-root visits, and
+an exhaustive contraction-closed orthogonal output family.  The last-block
+no-go quantifies over the R-093 directed temporal refinement union.
+
+**Tier.**  T4 remains T4.  The complete centred owner intertwiner, the
+once-owned shell ledger, positive finite-collar near/balanced headroom, low and
+matching data, strict gap, absolute anchor, both A13 gates, `OVERLAP_src`,
+Nelson, removals, interacting measure, and Sector-A closure remain open.
 
 <a id="r-134"></a>
 ### R-134 -- Terminal Gaussian jet threshold, floor-stable fixed-law action, and conditional gamma-7/12 aggregate-collar boundary
