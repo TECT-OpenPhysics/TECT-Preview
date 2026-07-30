@@ -357,12 +357,21 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   both defects to `Lambda=Theta-||Phi-E_0Phi||^2`. Its direct packet identity
   shows that R-093 needs the aggregate trace excess `D0-||b||^2`, not `D1=0`.
   A uniform bound with allocations `eta<9/20` and `zeta<3/20` passes through
-  the directed chart infimum without a chart-count factor. The next target is
-  the stationary-subtracted owner-complete rational/Cartan/R-063 forest
-  estimate, uniform in cutoff, chart, control, visits, and representation-
-  preserving refinement, while retaining the signed mixed bracket and the
-  `||b||^2` reserve. Strict per-shell normalizer existence alone does not imply
-  this global burden.
+  the directed chart infimum without a chart-count factor. R-124 now puts the
+  controlled-minus-stationary trace excess in an exact symmetric secant,
+  proves its moving-endpoint invariance under legal representation-preserving
+  same-root subdivision, and gives the exact replica/Hermite normal form.
+  Replica variance supplies only the centered square; a bounded cosine row
+  disproves automatic sign domination. The genuine first-linear row closes
+  sharply with source allocation `3/(125P)`, no sextic payment, and no
+  feedback derivative, with a strictly smaller finite-Hermite coefficient.
+  The next target is not another coordinate: construct the coefficient-level
+  identity linking the R-121 rational endpoint, R-123 primitive trace, and
+  adapted R-063 forest exactly once. Then prove the correlated signed
+  root-shell estimate with every root and shell sum inside expectation and a
+  separate cutoff-uniform owner-complete stationary-baseline sum bound,
+  retaining the `2680/729` connection and the `||b||^2` reserve. Strict
+  per-shell normalizer existence alone does not imply this global burden.
   `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
   remain open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
@@ -974,9 +983,17 @@ preserved in git/changelog rather than treated as current gates.
    `D0-||b||^2`, with no need to impose `D1=0`. Its legal-row theorem and
    bounded six-row fixture distinguish expectation-level payment from
    conditional-normalizer cancellation, while its raw-Hessian and correlation
-   audits rule out two more shortcuts. Prove the stationary-subtracted complete
-   rational/Cartan/forest trace-excess inequality with source and sextic paid
-   exactly once over the R-093 directed union. Do
+   audits rule out two more shortcuts. R-124 proves the exact stationary-
+   polarized secant, moving-endpoint visit-subdivision invariance, and the
+   replica/Hermite normal form. Its sharp genuine first-linear-row theorem uses
+   action allocation `3/(125P)` and no sextic or feedback derivative, while a
+   cosine fixture proves that replica variance alone has no automatic sign.
+   Construct the coefficient-level identity linking the R-121 rational
+   endpoint, R-123 primitive trace, and adapted R-063 forest exactly once.
+   Then prove the correlated signed root-shell estimate with source and sextic
+   paid exactly once over the R-093 directed union, all root and shell sums
+   retained inside expectation, and a separate cutoff-uniform owner-complete
+   stationary-baseline sum bound. Do
    not mistake strict per-shell normalizer existence for summability, and do
    not substitute a centered
    abstract tensor, full-Wick tensor normalizer, derivative-range test, or

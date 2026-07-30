@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION | replica variance does not automatically dominate the trace s |  |
 | NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER | stationary six-row parity does not transfer to arbitrary ada |  |
 | NG-2026-07-30-A13-RAW-SIX-CURRENT-HESSIAN-POSITIVITY | the isolated raw six-current Hessian is indefinite |  |
 | NG-2026-07-30-A13-FIXED-PROFILE-CORRELATION-YOUNG-CUTOFF-UNIFORMITY | correlation alone does not supply arbitrary cutoff-uniform Y |  |

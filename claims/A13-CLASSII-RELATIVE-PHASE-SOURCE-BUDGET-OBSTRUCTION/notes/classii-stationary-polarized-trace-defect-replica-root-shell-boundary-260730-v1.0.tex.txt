@@ -1,0 +1,710 @@
+% =============================================================================
+% Title: Stationary-polarized trace defect, replica closure, and the correlated
+%        root-shell boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-STATIONARY-POLARIZED-TRACE-DEFECT-REPLICA-ROOT-SHELL-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-30; this version issued 2026-07-30
+% Status: scoped T4 analytic/exact/executed structural advance and route boundary;
+%         no A13 gate and no Sector-A closure
+%
+% Revision history (cumulative):
+%   v1.0 (2026-07-30) first issue.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cS}{\mathcal S}
+
+\section*{1. Purpose and scope: round one prior-cycle correction}
+
+R-123 reduced the direct R-093 source-action problem to the signed trace
+excess
+\[
+ S_h=D_{0,h}-\|b_h\|^2
+     =\E_0\{\Theta_h-\|\Phi_h\|^2\},                 \tag{1.1}
+\]
+after all six rows, contraction-connected outputs, later-feedback terms,
+visits, covariance traces, low owners, rational owners, and the R-063 forest
+have been assembled exactly once.  The remaining question was whether
+stationary subtraction and a different global coordinate yield a genuinely
+smaller, refinement-safe theorem rather than another reformulation of the
+same obstruction.
+
+Ten proof rounds were run with the earlier R-094--R-123 loop audit kept in
+view.  The main correction is imposed at the start.  R-121 supersedes the old
+R-119 Section 6 arithmetic-companion inference.  In repository curl
+convention,
+\[
+ \operatorname{curl}\omega_K=-{40\over729},\qquad
+ \operatorname{curl}\omega_M={2720\over729},\qquad
+ \operatorname{curl}\omega_{M+K}={2680\over729}.       \tag{1.2}
+\]
+There is no structurally required $+40/729$ current.  The surviving
+connection must be retained in the complete endpoint scalar.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{R-124 conclusion.}
+Stationary subtraction has an exact conditional symmetric-secant form.  It
+telescopes pathwise under every representation-preserving same-root visit
+subdivision, provided each subvisit uses its moving endpoint and the reveal
+field, heat, covariance, and contraction-closed projection are unchanged.
+The formula exposes two favourable negative squares but does not give them a
+sign after their load-bearing mixed covariance is separated.
+
+For a scalar fresh root, conditional replicas give an exact Hermite secant
+theorem.  On the genuine R-123 first-linear-row cluster this closes the trace
+defect with the sharp unrestricted source coefficient
+$\kappa^2=6/(125P)$, so the action uses only
+$\eta_{\rm row}=\kappa^2/2=3/(125P)<9/20$, no sextic payment, and no
+feedback derivatives.  Finite Hermite degree gives a strictly smaller sharp
+coefficient.  This is a real positive theorem, but replica symmetrisation
+alone does not bound the full rational/Cartan/forest secant.
+
+Four broad bypasses are now decisively excluded or parked.  The surviving
+Cartan block cannot reuse the zeroth-order $H^{-11/10}$ coefficient class.
+Expected source and sextic budgets do not imply the separated $10/3$ or fifth
+moments demanded by coefficient-first Carleson/BMO estimates.  A covariant
+connection square leaves a negative acceleration owner.  Generic OU/Follmer
+rewritings expose or restate the trace debt rather than cancel it.
+
+The next noncyclic theorem is therefore a coefficient-level, owner-complete,
+correlated signed root-shell estimate for the stationary secant itself,
+together with a separate cutoff-uniform sum bound for its owner-complete
+stationary baseline.  The cutoff-uniform production inequality,
+$\mathrm{OVERLAP}_{\rm src}$, Nelson,
+removals, the interacting measure, and Sector-A closure remain open.  Tier
+stays T4.
+}}
+\end{center}
+
+\section*{2. Round two: exact conditional stationary polarization}
+
+Let $\cG$ be the strict-past sigma-field and let $H$ be a finite or separable
+real or complex Hilbert space.  Assume
+\[
+ \Phi_u\in L^2(\Omega;H),\qquad
+ \Theta_u\in L^1(\Omega),\qquad u\in\{0,h\}.
+\]
+Write $\E_0=\E[\,\cdot\mid\cG]$ and define
+\[
+ b_u=\E_0\Phi_u,\qquad Y_u=\Phi_u-b_u,               \tag{2.1}
+\]
+\[
+ D_{0,u}=\E_0\{\Theta_u-\|Y_u\|^2\},\qquad
+ S_u=D_{0,u}-\|b_u\|^2.                              \tag{2.2}
+\]
+Then
+\[
+ \boxed{S_u=\E_0\{\Theta_u-\|\Phi_u\|^2\}.}         \tag{2.3}
+\]
+Put
+\[
+ \Delta\Phi=\Phi_h-\Phi_0,\qquad
+ \Delta\Theta=\Theta_h-\Theta_0.                    \tag{2.4}
+\]
+
+\subsection*{Theorem 2.1 (stationary-polarized trace secant)}
+
+Almost surely,
+\[
+ \boxed{
+ S_h-S_0=\E_0\left[
+ \Delta\Theta-\operatorname{Re}
+ \langle\Phi_h+\Phi_0,\Delta\Phi\rangle\right].}    \tag{2.5}
+\]
+Equivalently,
+\[
+ \boxed{
+ S_h-S_0=\E_0\left[
+ \Delta\Theta-2\operatorname{Re}
+ \langle\Phi_0,\Delta\Phi\rangle-\|\Delta\Phi\|^2
+ \right].}                                           \tag{2.6}
+\]
+
+\paragraph{Proof.}
+The real polarization identity gives
+\[
+ \|\Phi_h\|^2-\|\Phi_0\|^2
+ =\operatorname{Re}\langle\Phi_h+\Phi_0,
+                          \Phi_h-\Phi_0\rangle
+ =2\operatorname{Re}\langle\Phi_0,\Delta\Phi\rangle
+  +\|\Delta\Phi\|^2.                                \tag{2.7}
+\]
+Subtract (2.3) at $u=0$ from (2.3) at $u=h$ and use (2.7).
+No derivative of $h$ is taken. \hfill$\square$
+
+The symmetric quantity
+\[
+ \Psi_{h\mid0}=\Delta\Theta-\operatorname{Re}
+       \langle\Phi_h+\Phi_0,\Delta\Phi\rangle        \tag{2.8}
+\]
+is the smallest two-coordinate endpoint form.  Formula (2.6) is preferable
+for estimates because its last term is a favourable negative square.
+
+With $\Delta b=b_h-b_0$ and $\Delta Y=Y_h-Y_0$, the exact centered form is
+\[
+\begin{aligned}
+ S_h-S_0={}&\E_0\Delta\Theta
+ -2\operatorname{Re}\langle b_0,\Delta b\rangle
+ -\|\Delta b\|^2\\
+ &-2\operatorname{Re}\E_0\langle Y_0,\Delta Y\rangle
+ -\E_0\|\Delta Y\|^2.
+\end{aligned}                                        \tag{2.9}
+\]
+The mixed centered covariance in the second line is load-bearing.  Replacing
+it by conditional means is illegal because $\Phi_0$ is not generally
+$\cG$-measurable.
+
+R-120 proves $S_0=0$ only for its uncontrolled raw six-row stationary scope.
+It does not prove rootwise cancellation of the owner-complete
+rational/Cartan/forest baseline.  Thus $S_0$ remains in (2.5) until a global
+owner-complete stationary identity or uniform baseline bound is proved.
+
+\section*{3. Round three: exact visit-subdivision quotient}
+
+Consider a legal same-root chain
+\[
+ (\Phi_0,\Theta_0),(\Phi_1,\Theta_1),\ldots,
+ (\Phi_L,\Theta_L),                                  \tag{3.1}
+\]
+and put
+\[
+ \Delta_\ell\Phi=\Phi_\ell-\Phi_{\ell-1},\qquad
+ \Delta_\ell\Theta=\Theta_\ell-\Theta_{\ell-1},   \tag{3.2}
+\]
+\[
+ \Psi_\ell=\Delta_\ell\Theta-\operatorname{Re}
+ \langle\Phi_\ell+\Phi_{\ell-1},
+                  \Delta_\ell\Phi\rangle.           \tag{3.3}
+\]
+
+\subsection*{Theorem 3.1 (moving-endpoint subdivision invariance)}
+
+Pathwise,
+\[
+ \boxed{
+ \sum_{\ell=1}^L\Psi_\ell
+ =\Theta_L-\Theta_0-
+  \bigl(\|\Phi_L\|^2-\|\Phi_0\|^2\bigr).}          \tag{3.4}
+\]
+
+\paragraph{Proof.}
+Both the trace differences and the squared-norm differences telescope in
+(3.3). \hfill$\square$
+
+This is the R-116 endpoint quotient in the stationary-subtracted coordinate.
+For two increments $f$ and $\iota$, the moving-baseline form contains
+\[
+ -2\operatorname{Re}\langle\Phi_0,f\rangle-\|f\|^2
+ -2\operatorname{Re}\langle\Phi_0+f,\iota\rangle
+ -\|\iota\|^2,                                      \tag{3.5}
+\]
+so the $f$--$\iota$ cross appears exactly once.  Reusing the fixed
+$\Phi_0$ in the second subvisit drops
+\[
+ -2\operatorname{Re}\langle f,\iota\rangle.          \tag{3.6}
+\]
+
+The production use of Theorem 3.1 requires the same fresh root and reveal
+sigma-field, the same target heat and covariance, the same
+contraction-closed projection, and no newly available child control.  A
+refinement that reveals a new independent coordinate is a new chart, not a
+representation-preserving subdivision.  R-104's broader chart invariance is
+safe only after complete owner/root/visit aggregation and outer expectation.
+
+Full covariance is also mandatory.  For redundant coefficients
+$(1/2,1/2)$ and covariance matrix with every entry equal to one, the true
+trace is one, whereas diagonal-only accounting gives $1/2$.
+
+\section*{4. Round four: owner-complete incidence and the surviving connection}
+
+For the legal R-119 two-block/two-visit chart, let the fixed R-120 six-row
+endpoint and primitive trace be
+\[
+ \Phi_{H,\cC}=\left(\Pi_\cC\E_{\rm future}
+       \widehat{C_6(W_{H,r})V_{H,i}}(n)\right)_{i,n\in\cC},  \tag{4.1}
+\]
+\[
+ \Theta_{H,\cC}=\E_{{\rm future},G}
+ \sum_{i,n\in\cC}\int
+ \left|\Pi_\cC\widehat{C_6(W_{H,r})\partial_iG}(n)\right|^2
+ \mu_\Sigma(\dd r).                                  \tag{4.2}
+\]
+Every $\cC$ is contraction closed.  Controlled and stationary endpoints use
+the same heat/covariance coupling.
+
+The endpoint pair in Theorem 2.1 represents production only after retaining:
+all six rows; all contraction-connected outputs; the primitive trace once or
+the R-063 forest expansion once, never both; every later-feedback cross; the
+full $R_Q+M_U+K_R$ rational endpoint; the conditional and complete low
+owners; the paid difference; and one REG Cartan FAR incidence.  The outer
+expectation is essential when the strict-past baseline is random.
+
+R-121 proves the rational endpoint identity
+\[
+\sum_k(R_{Q,k}+M_{U,k}+K_{R,k})
+ ={1\over2}B_L:Q_L-{1\over2}B_0:Q_0.                 \tag{4.3}
+\]
+R-121 states the two-visit case.  The displayed finite-$L$ form follows by
+successively applying that identity to adjacent endpoint pairs; every
+intermediate $B_\ell:Q_\ell$ occurs once with each sign and telescopes.
+This is pathwise and subdivision invariant after recombination.  Its
+covariance-normal trace and the R-123 primitive $\Theta$ remain distinct
+until a coefficient-level identity relates them.  Appending the R-063 forest
+to both would double count the same owner.
+
+The exact R-121 curl values (1.2) show that stationary polarization does not
+cancel the Cartan block.  It places the surviving $2680/729$ connection in
+the correct endpoint scalar.  Any future reconstruction that inserts a
+$+40/729$ current fails this checksum.
+
+\section*{5. Round five: critical resonance blocks zeroth-order reuse}
+
+R-120 controls a zeroth-order variable multiplier against an
+$H^{-11/10}$ coefficient.  The surviving first-order Cartan form has a
+different sharp boundary.  On a normalized one-dimensional torus embedded
+in $\T^3$, take
+\[
+ z_N=(1,N^{-2}\sin Nx),\qquad Q_N=N^s\cos Nx,         \tag{5.1}
+\]
+and pair against the fixed skew generator.  Then
+\[
+ \|z_N\|_{H^2}^2={3\over2}+{1\over2N^2}+{1\over2N^4},\qquad
+ \|Q_N\|_{H^{-s}}^2={N^{2s}\over2(1+N^2)^s}\le{1\over2}, \tag{5.2}
+\]
+while
+\[
+ \langle Q_N,z_N^TJ\partial_xz_N\rangle
+ =-{1\over2}N^{s-1}.                                  \tag{5.3}
+\]
+The $L^6$ norm of $z_N$ is uniformly bounded.  At $s=11/10$, (5.3)
+diverges as $N^{1/10}$.  Thus the R-120 zeroth-order coefficient class cannot
+control the R-121 first-order connection.
+
+R-063 does contain balanced stationary Gaussian-jet gains, but only for its
+declared stationary/deterministic-translation scope.  It does not identify
+the same-root adapted total symbol.  Critical-face vanishing, support-only
+separation, or a universal input-leaf cancellation is therefore not an
+available production theorem.
+
+\section*{6. Round six: rare-event obstruction to separated Carleson moments}
+
+Let $E$ be a predictable event of probability $p=N^{-6}$ and let the future
+bracket be
+\[
+                         B_N=N^6\mathbf1_E.           \tag{6.1}
+\]
+Then
+\[
+ \E B_N=1,
+ \qquad \E B_N^{5/3}=N^4,
+ \qquad \E B_N^{5/2}=N^9.                            \tag{6.2}
+\]
+The first divergence defeats deriving the R-120 $10/3$ rough input from
+expected source/sextic budgets; the second defeats the separated fifth
+moment needed by the R-121 Cartan estimate.  This is the same failure class
+as the registered weighted-Doob and translated-model rare-event no-gos, now
+applied to the R-123 trace-excess successor.
+
+Equation (6.2) is a method obstruction, not a counterexample to the complete
+production packet.  It says that expectation must remain inside the exact
+correlated signed root-shell object.  An essential-supremum BMO norm or a
+coefficient-first positive moment cannot be inferred from the available
+expected budgets.
+
+\section*{7. Round seven: the signed aggregate route and its acceptance test}
+
+For a full chart $\pi$, define the stationary secant only after complete
+within-chart aggregation:
+\[
+ \mathfrak S_{J,\pi}(h)
+ =\sum_{k,\cC}\E\left[
+ \Delta\Theta_{k,\cC}
+ -\operatorname{Re}\langle
+ \Phi_{h,k,\cC}+\Phi_{0,k,\cC},
+ \Delta\Phi_{k,\cC}\rangle\right].                 \tag{7.1}
+\]
+By Theorems 2.1 and 3.1 this is exactly the difference of the R-123 trace
+excesses and has no visit-count or representation-depth factor.
+
+The next sufficient estimate is
+\[
+ \boxed{
+ \mathfrak S_{J,\pi}(h)
+ \le2\eta\E\sum_k\|h_k\|^2
+   +2\zeta\E\|Z_K\|_6^6+2C_{\rm corr},}             \tag{7.2}
+\]
+with $\eta<9/20$, $\zeta<3/20$, and constants uniform in cutoff, chart,
+control, dimension, block count, visit count, and representation-preserving
+refinement.  The global owner-complete stationary baseline must separately
+satisfy
+\[
+ \sum_{k,\cC}\E S_{0,k,\cC}\le 2C_0.               \tag{7.3}
+\]
+Then (7.2) yields the original R-123 controlled trace-excess target with
+additive constant $2(C_{\rm corr}+C_0)$.  R-093's Gaussian centering may be
+invoked only after the full owner sum, not rootwise from R-120.
+
+Calling (7.2) a ``signed Carleson estimate'' does not prove it.  A valid proof
+must first construct the coefficient-level identity that:
+\begin{enumerate}
+\item matches the R-121 $B:Q$ endpoint with the R-123 primitive-trace
+      allocation;
+\item expands the adapted R-063 forest exactly once;
+\item retains the $2680/729$ connection and the R-120 zeroth-order
+      multipliers in one quotient-basic total symbol;
+\item produces a spatial/root gain inside the correlated expectation, before
+      any positive part or separate rough moment.
+\end{enumerate}
+Without these four items, a conventional Carleson theorem either invokes
+false separated moments from Section 6 or merely renames the open inequality
+(7.2).
+
+\section*{8. Round eight: replica/Hermite normal form}
+
+Condition on the strict past and take one scalar fresh root.  For a finite
+Hermite endpoint law write
+\[
+ \Phi_h=\sum_{n=0}^M f_n^hH_n(\xi),\qquad
+ \theta_h=\E_0\Theta_h,                              \tag{8.1}
+\]
+with probabilists' unnormalised Hermites,
+$\E H_n^2=n!$.  Let $\Phi_h'$ be a conditionally independent replica.
+Then
+\[
+ {1\over2}\E_0\|\Phi_h-\Phi_h'\|^2
+ =\sum_{n=1}^Mn!\|f_n^h\|^2,                         \tag{8.2}
+\]
+and
+\[
+ \boxed{S_h=\theta_h-\sum_{n=0}^Mn!\|f_n^h\|^2.}    \tag{8.3}
+\]
+For $g_n=f_n^h-f_n^0$,
+\[
+ \boxed{
+ S_h-S_0=\theta_h-\theta_0
+ -2\sum_{n=0}^Mn!\operatorname{Re}\langle f_n^0,g_n\rangle
+ -\sum_{n=0}^Mn!\|g_n\|^2.}                         \tag{8.4}
+\]
+Thus replicas supply precisely the $n\ge1$ centred-variance part of the last
+favourable square.  The $n=0$ term is instead the conditional-mean reserve
+from stationary polarization.  Neither part controls the signed
+trace/current cross in the first line.  For the full six-row cluster,
+replica symmetrisation alone is an exact restatement of (7.1).
+
+\section*{9. Round nine: sharp legal first-linear-row theorem}
+
+For the R-123 normalized legal first-linear row,
+\[
+ \Phi_h=\kappa\left\{{\xi^2\over\sqrt2}e_{s2}
+                      +\xi h(\xi)e_c\right\},
+ \qquad
+ \Theta_h=\kappa^2\left({\xi^2\over2}+h^2+1\right), \tag{9.1}
+\]
+where
+\[
+ P=4+10^{-12},\qquad
+ \kappa^2={6\over125P}.                              \tag{9.2}
+\]
+The stationary and control output coordinates are orthogonal.  Hence
+\[
+ \boxed{
+ S_h-S_0=\kappa^2\E[(1-\xi^2)h^2]
+ \le\kappa^2\E h^2.}                                 \tag{9.3}
+\]
+The corresponding action allocation is
+\[
+ \boxed{
+ \eta_{\rm row}={\kappa^2\over2}={3\over125P}
+ \simeq0.006< {9\over20}.}                            \tag{9.4}
+\]
+No sextic payment, $Dh$, or $D^2h$ is used.
+
+There is also a sharp finite-degree theorem.  If
+$h=\sum_{n=0}^Ma_nH_n$, then
+\[
+ \E[(\xi^2-1)h^2]
+ =2\sum_{n=0}^Mn\,n!a_n^2
+ +2\sum_{n=0}^{M-2}(n+2)!a_na_{n+2}.                 \tag{9.5}
+\]
+Let $\mu_M$ be the smallest eigenvalue of the parity-tridiagonal matrix
+\[
+ A_{nn}=2n+1,\qquad
+ A_{n,n+2}=\sqrt{(n+1)(n+2)}.                         \tag{9.6}
+\]
+Indeed, for the normalized basis $e_n=H_n/\sqrt{n!}$,
+\[
+ \xi e_n=\sqrt{n+1}\,e_{n+1}+\sqrt n\,e_{n-1},
+\]
+and hence
+\[
+ \xi^2e_n=\sqrt{(n+1)(n+2)}\,e_{n+2}
+ +(2n+1)e_n+\sqrt{n(n-1)}\,e_{n-2}.                 \tag{9.6a}
+\]
+Thus $A$ represents multiplication by $\xi^2$ on the degree-$M$ Hermite
+space, while $A-I$ represents the quadratic form in (9.5).
+Rayleigh--Ritz gives
+\[
+ \boxed{
+ S_h-S_0\le\kappa^2(1-\mu_M)\E h^2.}                \tag{9.7}
+\]
+Under $y=\xi^2/2$, its even and odd blocks are the Jacobi matrices for
+$2y$ with Laguerre weights $y^{-1/2}e^{-y}$ and $y^{1/2}e^{-y}$.
+Consequently their characteristic polynomials are the corresponding monic
+multiples of $L_d^{-1/2}(\lambda/2)$ and
+$L_d^{1/2}(\lambda/2)$.  For odd $M$, monotonicity of Laguerre zeros in the
+parameter puts the even minimum first.  For even $M$, the derivative identity
+$(L_d^{-1/2})'=-L_{d-1}^{1/2}$ and strict zero interlacing give the same
+ordering.  Therefore
+\[
+ \mu_M=2z_{\min}\left(L_{\lfloor M/2\rfloor+1}^{-1/2}\right)>0. \tag{9.8}
+\]
+In particular, $M=0,1$ gives coefficient zero, while
+\[
+ \mu_2=\mu_3=3-\sqrt6,\qquad
+ 1-\mu_2=1-\mu_3=\sqrt6-2.                           \tag{9.9}
+\]
+
+The unrestricted coefficient $\kappa^2$ is sharp.  Smooth Gaussian bumps
+$h_a(\xi)=e^{-a\xi^2}$ satisfy
+\[
+ {\E[(1-\xi^2)h_a^2]\over\E h_a^2}
+ ={4a\over1+4a}\longrightarrow1.                    \tag{9.10}
+\]
+Scaling the bump amplitude to zero makes its homogeneous sextic/source ratio
+tend to zero, so no homogeneous sextic correction uniformly improves the
+source coefficient below $\kappa^2$.
+
+The old derivative-secant obstruction disappears on this row.  For
+\[
+ h_N(\xi)={\sin(N\xi)\over N},                        \tag{9.11}
+\]
+one has
+\[
+ \E h_N^2={1-e^{-2N^2}\over2N^2},                    \tag{9.12}
+\]
+\[
+ \E|h_N|^6={10-15e^{-2N^2}+6e^{-8N^2}-e^{-18N^2}
+             \over32N^6},                            \tag{9.13}
+\]
+\[
+ S_{h_N}-S_0=-2\kappa^2e^{-2N^2},\qquad
+ D_0(h_N)-D_0(0)=\kappa^2(e^{-N^2}-2e^{-2N^2}).       \tag{9.14}
+\]
+Replica/secant control sees the bounded law, not the growing derivative.
+
+Automatic nonpositivity is nevertheless false.  For the bounded smooth law
+$h=d\cos(t\xi)$,
+\[
+ \boxed{S_h-S_0=2\kappa^2d^2t^2e^{-2t^2}>0.}         \tag{9.15}
+\]
+This is the exact evidence for
+\texttt{NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION}.
+It refutes only automatic replica domination, not the source-paid theorem
+(9.3) or the full A1 objective.
+
+\section*{10. Round ten: covariant-Hessian and OU/Follmer fallbacks}
+
+\subsection*{10.1 Covariant connection-square audit}
+
+For the scalar current ray write
+\[
+ E(U)={1\over2}\int g(U)U_x^2,\qquad
+ \Gamma(U)={g'(U)\over2g(U)},\qquad
+ \nabla_xz=z_x+\Gamma(U)U_xz.                        \tag{10.1}
+\]
+Direct differentiation gives the exact identity
+\[
+ \boxed{
+ D^2E(U)[z,z]=\int g(U)|\nabla_xz|^2
+              +DE(U)[\Gamma(U)z^2].}                 \tag{10.2}
+\]
+The second term is the connection acceleration owner and has no fixed sign.
+For the homogeneous leading coefficient $g(U)=4CU^2$, with normalized Haar
+measure,
+\[
+ U=H(2+\cos x),\qquad z=2-\cos x,                    \tag{10.3}
+\]
+one obtains exactly
+\[
+ \int g|\nabla_xz|^2=2CH^2,\qquad
+ DE[\Gamma z^2]=-15CH^2,\qquad
+ D^2E=-13CH^2.                                       \tag{10.4}
+\]
+For the A1 large-amplitude coefficient
+\[
+ C=c_0+c_1(4/9)^2={9\over500P},                      \tag{10.5}
+\]
+this is the R-123 leading term
+$-117H^2/(500P)$, with bounded positive-floor corrections.  The ray is
+one-dimensional and has zero Riemann curvature.  A connection square alone
+therefore cannot restore positivity; the negative term moves into
+acceleration.  A pure square can apply at a critical base $DE=0$ or along a
+target-geodesic variation, neither of which is available for arbitrary
+adapted production controls.
+
+\subsection*{10.2 Exact OU Hessian representation}
+
+Let the higher-chaos residual be
+\[
+ R=\sum_{n\ge2}I_n(r_n),\qquad P_sI_n=e^{-ns}I_n.     \tag{10.6}
+\]
+Then
+\[
+ \E\|D^2I_n(r_n)\|_{\rm HS}^2
+ =n(n-1)n!\|r_n\|^2.                                 \tag{10.7}
+\]
+Consequently the R-119 bare zero-chaos debt has the exact form
+\[
+ \boxed{
+ \Pi_0\mathcal R_{\rm bare}
+ =-{1\over2}\sum_{n\ge2}(n-1)n!\|r_n\|^2
+ =-\int_0^\infty\E\|D^2P_sR\|_{\rm HS}^2\dd s.}    \tag{10.8}
+\]
+For $R=H_2/2-H_3/3+H_4/4$, both sides equal $-19/6$.
+OU integration exposes a nonpositive curvature energy, strictly negative
+when $R\ne0$; it does not cancel it.  Low/output/R-063 companions remain
+mandatory.
+
+The total Gibbs thermodynamic/Follmer identity is still the unknown endpoint
+difference, as registered by the total-time-integration no-go.  A generic
+all-law pointwise estimate would again force the nonintegrable coefficient
+$b(t)\ge3/t$.  Only a genuinely Gibbs-specific, root-local, time-integrated
+signed estimate remains as a fallback after the direct correlated secant
+route, not as a replacement for it.
+
+\section*{11. Ten-round synthesis: strongest theorem and noncyclic roadmap}
+
+The ten-round evidence map is
+\[
+\begin{array}{c|l|l}
+\text{round}&\text{verdict}&\text{reusable conclusion}\cr\hline
+1&\text{corrected}&+40/729\text{ search retired; }2680/729\text{ retained}\cr
+2&\text{advanced}&\text{exact conditional stationary secant}\cr
+3&\text{advanced}&\text{moving-endpoint subdivision quotient}\cr
+4&\text{advanced}&\text{owner firewall and trace distinction}\cr
+5&\text{failed shortcut}&H^{-11/10}\text{ cannot pay first-order Cartan}\cr
+6&\text{failed shortcut}&\text{separated rough moments fail on rare events}\cr
+7&\text{scoped}&\text{four acceptance tests for a signed root-shell theorem}\cr
+8&\text{mixed}&\text{replicas give a square but leave the signed secant}\cr
+9&\text{advanced}&\text{sharp legal-row source theorem}\cr
+10&\text{mixed}&\text{covariant/OU identities expose, not remove, the debt}.
+\end{array}                                                   \tag{11.1}
+\]
+
+The proof programme has therefore advanced in three concrete ways.  It has a
+minimal refinement-invariant target, an exactly closed nontrivial adapted
+row with a sharp source constant, and decisive stop tests excluding the
+separated-moment implementations that would otherwise repeat the prior
+cycle.  The next work item is not another local coordinate or positive
+normalizer.  It is the coefficient-level reconstruction listed after (7.2),
+followed by one correlated signed root-shell estimate with all sums inside
+expectation and the separate uniform stationary-baseline bound (7.3).
+
+If that reconstruction fails, the failure must identify a concrete mismatch
+between the R-121 rational endpoint and the R-123 primitive trace, or a
+non-summable surviving total symbol.  Only then should the Gibbs-specific
+time-integrated fallback be resumed.  Replica, covariant connection, generic
+Follmer, BMO, and coefficient-first Carleson routes are not to be reopened
+without a new hypothesis that defeats their displayed stop tests.
+
+\section*{12. Executable verification}
+
+The primary SymPy executable derives the A1 constants from the production
+manifest and checks stationary polarization, complex Hilbert polarization,
+conditional cells, centered covariance, replicas, subdivision, full
+covariance, Hermite forms and sharp constants, the legal-row fixtures, all
+three R-121 curls, critical regularity, rare events, covariant Hessian, and
+the OU identity.  It passes 55/55 assertions.
+
+The non-importing independent executable uses standard-library exact
+Fractions, monomial Gaussian moments, a bivariate rational jet, Simpson
+Gaussian quadrature, direct rare-event enumeration, and alias-free torus
+quadrature.  It independently passes 55/55 assertions.  The integrated
+verifier reruns both children, checks deterministic stored artefacts, pins
+all authorities, checks the note, PDF, manifest, exploration records,
+negative authority, and public surfaces, and rejects a stale package.
+
+\section*{13. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: stationary subtraction proves the full baseline is
+zero.}  \textbf{UPHELD AGAINST THE CLAIM.}  R-120 proves that only for its raw
+uncontrolled six-row scope.  The owner-complete baseline stays until global
+aggregation.
+
+\item \textbf{Objection: visit invariance permits a fixed stationary baseline
+at every subvisit.}  \textbf{UPHELD AGAINST THE CLAIM.}  Equation (3.6) is the
+missing cross.  Every subvisit must use its moving endpoint.
+
+\item \textbf{Objection: replicas make the trace defect nonpositive.}
+\textbf{UPHELD AGAINST THE CLAIM.}  Equation (9.15) is strictly positive.
+Replicas supply a negative square, not domination of the trace secant.
+
+\item \textbf{Objection: the legal-row coefficient can be made uniformly
+smaller by a sextic term.}  \textbf{UPHELD AGAINST THE CLAIM.}  Gaussian bumps
+approach the sharp coefficient and amplitude scaling removes the homogeneous
+sextic correction.
+
+\item \textbf{Objection: the R-120 $H^{-11/10}$ moment pays Cartan as well.}
+\textbf{UPHELD AGAINST THE CLAIM.}  Equation (5.3) diverges at that regularity.
+
+\item \textbf{Objection: expected budgets imply the required BMO or rough
+moments.}  \textbf{UPHELD AGAINST THE CLAIM.}  Equation (6.2) keeps the mean
+fixed while both separated moments diverge.
+
+\item \textbf{Objection: a Levi--Civita connection repairs raw-Hessian
+positivity.}  \textbf{UPHELD AGAINST THE CLAIM.}  The acceleration owner in
+(10.4) is $-15CH^2$ and dominates the $2CH^2$ connection square.
+
+\item \textbf{Objection: the OU identity is the missing cancellation.}
+\textbf{UPHELD AGAINST THE CLAIM.}  Equation (10.8) is nonpositive and exactly
+equals the existing bare debt.  It is a diagnostic representation.
+\end{enumerate}
+
+\section*{14. Result footer}
+
+\begingroup
+\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-STATIONARY-POLARIZED-TRACE-DEFECT-
+  REPLICA-ROOT-SHELL-BOUNDARY (R-124).
+Precise statement: Theorem 2.1, Theorem 3.1, Eqs. (8.2)-(8.4),
+  sharp legal-row Eqs. (9.3)-(9.10), and the exact method boundaries
+  in Sections 4-7 and 10.
+Scope: fixed finite cutoff and positive rational floor for the A13
+  production interpretation; abstract Hilbert conditional identities;
+  scalar finite-Hermite and legal-row sharp theorem; homogeneous
+  covariant-Hessian fixture; no cutoff-uniform production estimate.
+Dependencies: A1; R-063, R-093, R-104, R-108, R-116,
+  R-118, R-119, R-120, R-121, R-122, R-123.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_stationary_polarized_trace_defect_replica_root_shell_
+  boundary_verify.py
+Expected output: R-124 integrated PASS; primary 55/55 and independent
+  55/55 children PASS; all authority, source, note, PDF, manifest,
+  exploration, negative-result, and public-surface checks pass.
+Falsification gate: any failed polarization, conditional, subdivision,
+  covariance, Hermite, legal-row, curl, critical, rare-event, covariant,
+  OU, child/source/note/PDF/manifest, or scope assertion.
+Tier before / after: T4 / T4.
+No-overclaim statement: R-124 does not prove the owner-complete
+  cutoff-uniform correlated root-shell estimate, OVERLAP_src, Nelson,
+  removals, the interacting measure, Sector-A closure, or T5-T7.
+Next required action: construct the coefficient-level identity linking
+  the R-121 rational endpoint, R-123 primitive trace, and adapted R-063
+  forest exactly once, then prove Eqs. (7.2)--(7.3) with root and shell
+  sums retained inside the signed expectation.
+\end{verbatim}
+\endgroup

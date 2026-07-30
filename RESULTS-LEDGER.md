@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-124](#r-124) | Stationary-polarized trace defect, replica closure, and the correlated root-shell boundary | Scoped T4 analytic/exact/executed theorem and route synthesis: for `S_u=D0_u-||E_0 Phi_u||^2=E_0(Theta_u-||Phi_u||^2)`, the controlled-minus-stationary difference is the exact symmetric secant `E_0[DeltaTheta-Re<Phi_h+Phi_0,DeltaPhi>]`, equivalently the signed cross minus the favorable square. Moving-endpoint secants telescope under every representation-preserving same-root visit subdivision; fixed-baseline subvisit splitting is false. Conditional replicas and Hermite expansion give an exact square representation but no automatic sign. On the genuine first-linear row, `Delta S=kappa^2 E[(1-xi^2)h^2]<=kappa^2 E h^2`, `kappa^2=6/(125P)`, so the action allocation is `3/(125P)`, with a sharp finite-Hermite improvement and no sextic or feedback-derivative payment. Exact resonance, rare-event, covariant-Hessian, and OU audits close or retire four recurring bypasses. The owner-complete coefficient identity, cutoff-uniform correlated signed root-shell estimate, and separate stationary-baseline sum bound remain open, as do `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector-A closure |
 | [R-123](#r-123) | Six-row trace-excess reduction and the direct source-action correlation boundary | Scoped T4 analytic/exact/executed advance and method boundary: for a fully assembled contraction-closed six-row endpoint `Phi` with once-owned trace `Theta`, `Lambda=Theta-||Phi-E_0 Phi||^2` gives `D0=E_0 Lambda` and `D1=E_0[xi Lambda]`, while the direct complete packet has conditional expectation `(||E_0 Phi||^2-D0)/2`. Thus the direct R-093 expected-action route needs one aggregate bound for `D0-||b||^2`, not `D1=0`. A bounded full-six-row fixture has nonzero `D0,D1` but positive direct packet. One genuine legal adapted linear row obeys an exact expectation identity and a source/sixth-moment bound with coefficient `kappa^2=6/(125P)`. A uniform aggregate trace-excess inequality with allocations below `9/20` and `3/20` passes through the R-093 directed chart infimum without a chart-count factor, provided every within-chart owner is recombined and all constants are cutoff/chart/control/refinement uniform. Exact audits retire stationary-to-adapted low-chaos transfer, raw six-current Hessian positivity, and fixed-profile correlation-only cutoff-uniform Young absorption. The stationary-subtracted owner-complete rational/Cartan/forest trace-excess estimate, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-122](#r-122) | Derivative-free low-chaos reconstruction and the adapted Cartan fifth-moment boundary | Scoped T4 analytic/exact/executed advance and method boundary: for the complete finite-cutoff conditional endpoint output, `r2`, `D0`, and `D1` have exact law-only formulas using `E[R tensor (xi tensor xi-I)]`, `E[xi Theta]`, and `E[xi||R||^2]`; no feedback derivatives or termwise adjacent-chaos expansion are required. A bounded legal linear-row pair has identical source cost and `A,r2,t0,D0` but opposite nonzero `D1`, so the complete production law must still be evaluated. The graph-null sequence `sin(nxi)/n` rules out derivative-by-derivative closure. A coherent lognormal amplitude has bounded source `H2` and terminal `L6` budgets but divergent quadratic-current `L^5(H^{-3/5})`; the active A1 rational Cartan coefficient has nonzero normalized quadratic ray `128/27`. Formal selfadjointness does not cancel Cartan: on the R-102 slice `1360J/729+1320J/729=2680J/729`. The correlation-preserving quartic-to-sextic Young inequality identifies the surviving signed complete-owner route. Production `D0,D1` cancellation, the complete one-use bound, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-121](#r-121) | Cartan path-space exactness correction and the fixed-skew Sobolev one-use boundary | Scoped T4 analytic/exact/executed correction and advance: the complete two-visit rational owner telescopes pathwise to its endpoints, but exactness of that scalar on jet/path space does not force a projected target-space current one-form to be closed. On the exact R-102 slice the `K_R`, `M_U`, and recombined current curls are `-40/729`, `2720/729`, and `2680/729`; the normalized path ellipse has a symmetric mixed Hessian `20/729`. Thus the old mandatory `+40/729` companion inference is superseded while the isolated chain-primitive no-go is retained. For a fixed-skew first-order form paired with `H^{-s}`, `0<=s<1`, the deterministic powers are `X^((1+3s)/4)Y^((1-s)/4)` and the coefficient moment is `2/(1-s)`. At `s=3/5` the moment is five and the Young powers are `eta^{-7/2}zeta^{-1/2}`. R-071 supplies this only for unshifted stationary currents. An exact high-frequency fixture rules out reuse of the zeroth-order `H^{-11/10}` class. Adapted `D0,D1`, the adapted fifth `H^{-3/5}` moment/forest, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -142,6 +143,98 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-124"></a>
+### R-124 -- Stationary-polarized trace defect, replica closure, and the correlated root-shell boundary
+
+**Result ID.**
+A13-CLASSII-STATIONARY-POLARIZED-TRACE-DEFECT-REPLICA-ROOT-SHELL-BOUNDARY.
+
+**Exact stationary-polarized theorem.**  Condition on the strict past and let
+`Phi_u` be a square-integrable Hilbert-valued endpoint with once-owned
+integrable trace `Theta_u`.  Put `b_u=E_0 Phi_u` and
+`S_u=D0_u-||b_u||^2=E_0(Theta_u-||Phi_u||^2)`.  Then
+
+`S_h-S_0=E_0[DeltaTheta-Re<Phi_h+Phi_0,DeltaPhi>]`
+
+and, equivalently,
+
+`S_h-S_0=E_0[DeltaTheta-2Re<Phi_0,DeltaPhi>-||DeltaPhi||^2]`.
+
+No derivative of the control is used.  Along any legal same-root chain, the
+moving-endpoint secants telescope pathwise to the endpoint difference.
+Therefore the coordinate is invariant under representation-preserving visit
+subdivision.  Reusing the fixed stationary endpoint at every subvisit drops
+all pairwise increment crosses and is invalid.  Production use additionally
+requires common reveal sigma-field, target heat and covariance, unchanged
+contraction-closed projection, no newly available child control, all six
+rows, every contraction-connected output, all visits and later-feedback
+crosses, the primitive trace or R-063 forest exactly once, the complete
+rational endpoint, and the outer expectation.
+
+**Replica and Hermite normal form.**  A conditionally independent replica
+gives the centered variance as half a replica square.  For probabilists'
+Hermites, `Phi_h=sum f_n^h H_n` and `theta_h=E_0 Theta_h` give
+
+`S_h=theta_h-sum n!||f_n^h||^2`.
+
+Thus replicas expose the centered `n>=1` square; the `n=0` square is the
+separate conditional-mean reserve.  Neither dominates the signed
+trace/current secant.  The bounded smooth control `h=d cos(t xi)` has
+`Delta S=2 kappa^2 d^2 t^2 exp(-2t^2)>0`, so automatic replica domination is
+false.
+
+**Sharp legal-row theorem.**  On the genuine R-123 first-linear row,
+`P=M_X^2+epsilon_m=4+10^-12` and `kappa^2=6/(125P)`.  For every bounded
+square-integrable fresh-root control,
+
+`Delta S=kappa^2 E[(1-xi^2)h^2] <= kappa^2 E h^2`.
+
+The corresponding action allocation is
+`eta_row=kappa^2/2=3/(125P)<9/20`; no sextic payment, `Dh`, or `D^2h` is
+used.  If `h` has Hermite degree at most `M`, the sharp coefficient improves
+to `kappa^2(1-mu_M)`, where `mu_M` is the smallest eigenvalue of the
+parity-tridiagonal multiplication-by-`xi^2` matrix.  For `M=2,3`,
+`mu_M=3-sqrt(6)`.  Gaussian bumps prove that the unrestricted coefficient
+`kappa^2` is sharp.
+
+**Noncyclic route boundary.**  Four recurring bypasses are now decisively
+excluded or parked.  The surviving first-order Cartan form cannot reuse the
+R-120 `H^(-11/10)` zeroth-order class.  Expected source and sextic budgets do
+not imply the separated `10/3` or fifth moments: a rare-event family keeps
+the mean fixed while those moments diverge.  A Levi--Civita connection square
+does not repair the raw-current Hessian because its acceleration owner has
+the opposite larger sign.  The exact OU Hessian integral is a representation
+of the existing negative higher-chaos debt, not its cancellation.  The next
+route must first build a coefficient-level identity matching the R-121
+rational endpoint to the R-123 primitive trace and adapted R-063 forest
+exactly once, and only then estimate the fully correlated signed root-shell
+sum before positive parts or separated moments.  The owner-complete
+stationary baseline must also have a separate cutoff-uniform sum bound.
+
+**Proof / evidence.**
+
+- claim: `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`;
+- note: `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-stationary-polarized-trace-defect-replica-root-shell-boundary-260730-v1.0.tex.txt`;
+- primary: `codes/foundations/a13_classii_stationary_polarized_trace_defect_replica_root_shell_boundary.py`;
+- independent: `codes/foundations/a13_classii_stationary_polarized_trace_defect_replica_root_shell_boundary_independent.py`;
+- integrated verifier: `codes/foundations/a13_classii_stationary_polarized_trace_defect_replica_root_shell_boundary_verify.py`;
+- manifest: `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_stationary_polarized_trace_defect_replica_root_shell_boundary_manifest.json`;
+- new negative boundary: `NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION`;
+- retained boundaries: `AUDIT-2026-07-29-A13-R119-R120-CARTAN-COMPANION-INFERENCE`, `NG-2026-07-29-A13-FIRST-ORDER-HMINUS-11-10-CARTAN-REUSE`, `NG-2026-07-29-A13-BARE-JACOBIAN-HEAT-LOW-CHAOS-CANCELLATION`, `NG-2026-07-28-A13-ALL-LAW-POINTWISE-RELATIVE-BRACKET`, and `NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY`.
+
+**Reuse scope.**  Exact conditional Hilbert polarization, replica variance,
+Hermite trace coordinates, representation-preserving endpoint subdivision,
+finite-degree Gaussian spectral improvement, and a sharp scalar legal-row
+source theorem at fixed positive floor.  The owner-complete cutoff-uniform
+production estimate, stationary-baseline sum bound, and all downstream
+global theorems remain open.
+
+**Honest tier.**  T4 (analytic/exact/executed theorem and method boundary).
+
+**Publication target.**  A methods note on stationary-polarized trace
+secants, replica/Hermite coordinates, and correlated one-use Gaussian
+root-shell estimates.
 
 <a id="r-123"></a>
 ### R-123 -- Six-row trace-excess reduction and the direct source-action correlation boundary

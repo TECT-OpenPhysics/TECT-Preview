@@ -1169,6 +1169,29 @@ the following structural results and proof-architecture boundaries hold.
     Young absorption. The live target is the stationary-subtracted,
     owner-complete rational/Cartan/forest trace-excess estimate. Every global
     gate remains open; tier stays T4.
+67. `A13-CLASSII-STATIONARY-POLARIZED-TRACE-DEFECT-REPLICA-ROOT-SHELL-BOUNDARY`
+    is R-124. With `S_u=D0_u-||E_0Phi_u||^2`, the exact conditional
+    controlled-minus-stationary difference is
+    `E_0[DeltaTheta-Re<Phi_h+Phi_0,DeltaPhi>]`, equivalently the signed
+    baseline cross plus the favourable negative increment square. The
+    moving-endpoint form telescopes under every legal representation-
+    preserving same-root visit subdivision; fixed-stationary-baseline reuse
+    at each subvisit is false. Conditional replicas give the centered
+    `n>=1` variance square, while the `n=0` square is the separate mean
+    reserve. Hermite coordinates give an exact normal form but no automatic
+    sign. On the genuine R-123 first-linear row,
+    `Delta S=kappa^2 E[(1-xi^2)h^2]<=kappa^2 E h^2`, with
+    `kappa^2=6/(125P)` and action allocation
+    `3/(125P)<9/20`; no sextic or feedback derivative is used, finite Hermite
+    degree improves the sharp coefficient, and Gaussian bumps prove the
+    unrestricted coefficient sharp. A bounded cosine control disproves
+    automatic replica domination. Critical-resonance, rare-event,
+    covariant-Hessian, OU, and generic Follmer audits prevent reopening the
+    prior bypasses. The live successor is an exact coefficient identity
+    linking the R-121 rational endpoint, R-123 primitive trace, and adapted
+    R-063 forest once, followed by the correlated signed root-shell estimate
+    and a separate cutoff-uniform stationary-baseline sum bound. Every global
+    gate remains open; tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -1239,6 +1262,7 @@ is a scoped T4 subproof and does not promote A13.
 | Cartan path-space exactness / fixed-skew Sobolev boundary | Exact two-visit owner telescope; exact three-current curl audit; normalized `20/729` symmetric path Hessian; canonical skew wedge and absolute-operator inventories; fixed-skew `s<1` theorem with moment five at `s=3/5`; sharp `H^{-11/10}` first-order reuse no-go | T4 analytic/exact/executed correction and advance; adapted `D0,D1`, adapted fifth `H^{-3/5}` moment/forest, direct one-use aggregation, and all global gates remain open |
 | Derivative-free low-chaos / adapted fifth-moment / Cartan boundary | Exact law-only `r2,D0,D1`; bounded legal `D1` identifiability fixture; feedback-derivative graph no-go; coherent-amplitude isolated fifth-moment nontransfer; active A1 `128/27` quadratic ray; exact R-102 Cartan/square reinforcement; optimal correlation-preserving quartic-to-sextic boundary | T4 analytic/exact/executed advance and method boundary; R-123 supplies the six-row trace-excess reduction, while the production estimate and all global gates remain open |
 | Six-row trace excess / direct source action / correlation boundary | Fixed six-row endpoint and owner firewall; exact `Lambda` collapse of `D0,D1`; direct packet target `D0-||b||^2`; replica trace excess; bounded full-six-row noncancellation with positive packet; one legal adapted row theorem; multiplicity-free directed-infimum criterion; raw-Hessian and cutoff-uniform correlation boundaries | T4 analytic/exact/executed advance and method boundary; the stationary-subtracted owner-complete production trace-excess estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
+| Stationary-polarized trace secant / replica legal-row closure / correlated root-shell boundary | Exact stationary secant and moving-endpoint subdivision invariance; replica/Hermite normal form; sharp unrestricted and finite-degree legal-row source coefficients; replica-dominance no-go; critical Cartan, separated-moment, covariant-Hessian, and OU/Follmer stop tests | T4 analytic/exact/executed advance and method boundary; the coefficient-level owner-complete correlated root-shell estimate, separate stationary-baseline sum bound, and all global gates remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1610,23 +1634,24 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_six_row_trace_excess_direct_action_boundary_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_stationary_polarized_trace_defect_replica_root_shell_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `47/47`;
-- non-importing independent `42/42`;
-- manifest-pinned integrated `118/118` PASS;
-- exact fixed six-row coefficient and owner law, scalar trace-excess collapse,
-  direct packet target `D0-||b||^2`, bounded full-six-row fixture, legal
-  arbitrary-control first-linear-row expectation theorem, five canonical
-  trace audits, raw-current Hessian boundary, coherent-amplitude correlation
-  gain, cutoff-uniform frequency-allocation boundary, and R-093 directed-union
-  implication;
+- primary `55/55`;
+- non-importing independent `55/55`;
+- manifest-pinned integrated `140/140` PASS;
+- exact conditional stationary polarization, moving-endpoint subdivision
+  invariance, replica/Hermite normal form, normalized Hermite--Laguerre matrix
+  theorem, sharp unrestricted and finite-degree legal-row source bounds,
+  exact sine/cosine fixtures, all three R-121 curl checksums, critical
+  regularity and rare-event stops, direct covariant-Hessian decomposition,
+  and exact OU higher-chaos representation;
 - exact authority, source, result, note, PDF, and manifest pins;
-- explicit preservation of the open owner-complete production trace-excess
-  estimate, `OVERLAP_src`, Nelson, removal, measure, and Sector-A targets;
+- explicit preservation of the open coefficient identity, correlated
+  root-shell estimate, stationary-baseline sum bound, `OVERLAP_src`, Nelson,
+  removal, measure, and Sector-A targets;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -1634,7 +1659,22 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 ## Current evidence
 
-The current R-123 package is:
+The current R-124 package is:
+
+- `classii_stationary_polarized_trace_defect_replica_root_shell_boundary_manifest.json`
+- `notes/classii-stationary-polarized-trace-defect-replica-root-shell-boundary-260730-v1.0.tex.txt`
+- `notes/classii-stationary-polarized-trace-defect-replica-root-shell-boundary-260730-v1.0.pdf`
+- `../../codes/foundations/a13_classii_stationary_polarized_trace_defect_replica_root_shell_boundary.py`
+- `../../codes/foundations/a13_classii_stationary_polarized_trace_defect_replica_root_shell_boundary_independent.py`
+- `../../codes/foundations/a13_classii_stationary_polarized_trace_defect_replica_root_shell_boundary_verify.py`
+- `runs/2026-07-30-primary-stationary-polarized-trace-defect-replica-root-shell-boundary/result.json`
+- `runs/2026-07-30-independent-stationary-polarized-trace-defect-replica-root-shell-boundary/result.json`
+- `runs/2026-07-30-integrated-stationary-polarized-trace-defect-replica-root-shell-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-124`
+- `../../negative-results/registry.md#ng-2026-07-30-a13-replica-variance-automatic-trace-domination`
+- `../../explorations/log.jsonl` (`EXP-000396`--`EXP-000405`)
+
+The immediate R-123 predecessor package remains binding:
 
 - `classii_six_row_trace_excess_direct_action_boundary_manifest.json`
 - `notes/classii-six-row-trace-excess-direct-action-correlation-boundary-260730-v1.0.tex.txt`
@@ -3453,8 +3493,17 @@ only the aggregate `D0-||b||^2` trace excess. It proves the exact uniform
 directed-infimum implication and one genuine adapted linear-row expectation
 bound, while bounded six-row, raw-Hessian, and frequency-scaling fixtures
 retire three shortcuts. It does not prove the stationary-subtracted
-owner-complete rational/Cartan/forest trace-excess hypothesis. None of
-R-114--R-123 proves that cutoff-uniform production inequality, a
+owner-complete rational/Cartan/forest trace-excess hypothesis. R-124 now
+places that difference in the exact conditional stationary-polarized secant,
+proves moving-endpoint visit-subdivision invariance, gives the replica/Hermite
+normal form, and closes the genuine first-linear row with the sharp source
+allocation `3/(125P)`. Its cosine, critical-resonance, rare-event,
+covariant-Hessian, OU, and Follmer audits prevent the prior failed routes from
+being reopened. The next gate is the coefficient identity linking the R-121
+rational endpoint, R-123 primitive trace, and adapted R-063 forest exactly
+once, followed by the correlated signed root-shell estimate and the separate
+uniform owner-complete stationary-baseline sum bound. None of R-114--R-124
+proves that cutoff-uniform production inequality, a
 cutoff-summable conditional log-normalizer ledger, or the once-only global
 source/sextic aggregation.
 `OVERLAP_src`, Nelson, removal, interacting measure, Sector-A closure, and
@@ -4285,3 +4334,20 @@ T5--T7 promotion remain open. Tier stays T4.
   ten-page PDF passes form, zero-overfull, extraction, no-form, and all-page
   Poppler visual QA. The production trace-excess hypothesis and every
   downstream global gate remain open; tier stays T4.
+- 2026-07-30: Registered R-124 after ten parallel route audits with the prior
+  cycle correction retained. The controlled-minus-stationary trace excess is
+  now an exact conditional symmetric secant and telescopes under every legal
+  moving-endpoint same-root subdivision. Replica/Hermite coordinates expose
+  the centered variance square while preserving the separate mean reserve.
+  The genuine first-linear row closes with sharp unrestricted action
+  allocation `3/(125P)`, no sextic payment, and no feedback derivative;
+  finite Hermite degree improves the coefficient. A bounded cosine law
+  registers the new automatic-replica-domination no-go. Critical resonance,
+  rare events, the covariant acceleration owner, the exact OU debt, and
+  generic Follmer circularity close or park the recurring bypasses.
+  `EXP-000396--EXP-000405` preserve every corrected, advanced, failed,
+  inconclusive, and parked route. Strengthened primary and non-importing
+  independent verifiers pass `55/55` each; the integrated count and visually
+  reviewed ten-page PDF are pinned by the R-124 manifest. The coefficient
+  identity, correlated root-shell estimate, separate stationary-baseline sum
+  bound, and every downstream global gate remain open; tier stays T4.

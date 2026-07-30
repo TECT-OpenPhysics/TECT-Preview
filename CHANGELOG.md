@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-124 stationary-polarized trace defect and replica root-shell boundary] - 2026-07-30
+
+Registered scoped T4 R-124 after ten proof rounds. The package proves exact stationary polarization, moving-endpoint subdivision invariance, the replica/Hermite secant form, and the sharp legal-row source allocation kappa^2/2=3/(125P). A bounded cosine control disproves automatic replica trace domination. Critical Cartan regularity, separated rough moments, covariant-Hessian positivity, and generic OU/Follmer bypasses remain unavailable. Strengthened primary and non-importing independent checks pass 55/55 each. The coefficient identity, correlated root-shell estimate, separate stationary-baseline sum bound, and every downstream global gate remain open.
+
 ## [R-123 six-row trace excess and direct-action boundary] - 2026-07-30
 
 Registered scoped T4 R-123 after ten proof rounds: fixed six-row endpoint and owner law, exact Lambda collapse of D0/D1, direct-action target D0-||b||^2, bounded full-six-row fixture, one legal adapted-row expectation theorem, and the multiplicity-free R-093 directed-infimum criterion. Primary and non-importing independent contracts pass 47/47 and 42/42; the integrated target is 118/118. The ten-page PDF passed form checks, zero-overfull extraction checks, and complete visual QA. Three method no-gos are registered. Full production trace excess, both A13 gates, downstream global theorems, and Sector A remain open.

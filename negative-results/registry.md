@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION](#ng-2026-07-30-a13-replica-variance-automatic-trace-domination) | infer nonpositivity of the stationary trace secant from replica variance alone | the bounded legal row `h=d cos(t xi)` has `S_h-S_0=2 kappa^2 d^2 t^2 exp(-2t^2)>0`; replicas expose a favourable square but do not dominate the signed trace/current cross |
 | [NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER](#ng-2026-07-30-a13-stationary-six-row-to-adapted-low-chaos-transfer) | infer adapted `D0=D1=0` from R-120 stationary value-derivative independence, six-row parity, row diagonalisation, or lower endpoint kernels | a bounded full-six-row finite-root fixture has explicit nonzero `D0,D1`, while its direct packet stays positive; R-122's legal `h_+/-` pair also flips `D1` with identical lower data. This retires the stationary-to-adapted inference, not the complete adapted production cancellation |
 | [NG-2026-07-30-A13-RAW-SIX-CURRENT-HESSIAN-POSITIVITY](#ng-2026-07-30-a13-raw-six-current-hessian-positivity) | assign the isolated full raw six-current/phase-pair Hessian to a nonnegative owner before trace/heat/low/forest/sextic completion | on the active real doublet, `u_H=H(2+cos x)e1` in direction `z=(2-cos x)e1` gives normalized unit-frequency Hessian `-117 H^2/(500P)+3e/(100P)+O_e(H^-2)<0`; the full action is not tested |
 | [NG-2026-07-30-A13-FIXED-PROFILE-CORRELATION-YOUNG-CUTOFF-UNIFORMITY](#ng-2026-07-30-a13-fixed-profile-correlation-young-cutoff-uniformity) | promote correlation-first scalar quartic-to-sextic Young absorption to arbitrary cutoff-uniform source/sextic allocations without a spatial/root gain | `z=A(cos Nx,sin Nx)` yields `cA^4N^2` against `eta A^2N^4+zeta A^6+C`; uniformity forces `eta zeta>=c^2/4`. Correlation removes the separated fifth-moment loss but does not by itself close the spatial production theorem |
@@ -173,6 +174,25 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-30-a13-replica-variance-automatic-trace-domination"></a>
+### NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION -- replica variance does not automatically dominate the trace secant
+
+**Claim / route.**  Infer `S_h-S_0<=0` from replica symmetrisation or the
+favourable negative replica square alone.
+
+**Failure mode.**  For the bounded smooth legal first-linear-row control
+`h=d cos(t xi)`,
+
+`S_h-S_0=2 kappa^2 d^2 t^2 exp(-2t^2)>0`.
+
+**Evidence.**  R-124 proof note, Section 9, Eq. (9.15); primary and
+non-importing independent executable audits; paired ten-page PDF and
+integrated verifier.
+
+**Consequence.**  Automatic replica trace domination is false.  This does
+not refute the sharp source-paid bound in Eq. (9.3), the full correlated
+owner-complete estimate, or the A1 objective.
 
 <a id="ng-2026-07-30-a13-stationary-six-row-to-adapted-low-chaos-transfer"></a>
 ### NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER -- stationary six-row parity does not transfer to arbitrary adapted controls

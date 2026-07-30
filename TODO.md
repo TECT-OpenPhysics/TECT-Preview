@@ -8,8 +8,8 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION)_
-  - R-123 reconstructs the fixed six-row endpoint law and collapses the complete low-chaos data to Lambda=Theta-||Phi-E_0Phi||^2. Direct R-093 action needs the aggregate trace excess D0-||b||^2, not D1=0. A bounded six-row fixture has nonzero defects but positive packet, and one legal adapted row closes at expectation level. Next prove the stationary-subtracted owner-complete rational/Cartan/forest trace-excess inequality uniformly in cutoff, chart, control, visits, and refinement with eta<9/20 and zeta<3/20, preserving ||b||^2 and all signs. OVERLAP_src, Nelson, removals, the measure, and Sector A remain open.
-  - _updated 2026-07-29_
+  - R-124 proves the exact stationary-polarized trace secant, moving-endpoint subdivision invariance, replica/Hermite normal form, and a sharp source-only theorem for the genuine legal first-linear row. Automatic replica trace domination is false. Next construct the coefficient-level identity linking the R-121 rational endpoint, R-123 primitive trace, and adapted R-063 forest exactly once; then prove the correlated signed root-shell estimate with all root and shell sums inside expectation plus a separate cutoff-uniform owner-complete stationary-baseline sum bound. OVERLAP_src, Nelson, removals, the interacting measure, and Sector A remain open.
+  - _updated 2026-07-30_
 
 ## Next up
 
