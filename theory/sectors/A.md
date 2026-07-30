@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-30-A13-UNRESTRICTED-REVERSE-BAND-EXTENSION | forward decay does not extend coefficient-blindly to an unre |  |
 | NG-2026-07-30-A13-NAIVE-PRIMITIVE-TRACE-FOREST-IDENTIFICATION | conditional future variance separates primitive trace from t |  |
 | NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION | replica variance does not automatically dominate the trace s |  |
 | NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER | stationary six-row parity does not transfer to arbitrary ada |  |

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-126 total-symbol Euler force and low-injected Loewner boundary] - 2026-07-30
+
+Registered scoped T4 R-126. The primary verifier passes 32/32 assertions and the independent verifier passes 22/22. The ten-page proof PDF passes form, overfull-box, no-form, and all-page visual QA. The exact derivative, causal projection/Riesz qualification, low/injected transport identity, forward shell sums, and block-Loewner criterion are established only at their declared scope. Production common-terminal identification, the unified forward/legal-reverse/balanced/low operator estimate, OVERLAP_src, Nelson, removals, the interacting measure, and Sector-A closure remain open.
+
 ## [A13 R-125 conditional-variance forest bridge and root-shell operator boundary] - 2026-07-30
 
 Registered the exact finite-cutoff bridge Psi=Delta V_fut-Delta F063_ad, the indispensable variance-rebate counterfixture, smooth cylindrical adapted partial-Wick algebra, the exact root-only stationary residual, and the conditional far-operator threshold. Append-only follow-up audits corrected two tempting overclaims: the common-terminal Doob identity controls the low-plus-root aggregate rather than the root-only R-124 baseline unless the complete-low stationary atom is nonnegative, and root covariance owners must remain distinct from same-root visit indices. The production factorisation, far and balanced-band bounds, stationary-baseline sign, OVERLAP_src, Nelson, removals, interacting measure, and Sector-A closure remain open at T4.

@@ -4373,3 +4373,22 @@ T5--T7 promotion remain open. Tier stays T4.
   far and balanced-band production bounds, root-only stationary-baseline
   sign, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A
   remain open; tier stays T4.
+- 2026-07-30: Registered
+  `A13-CLASSII-TOTAL-SYMBOL-EULER-LOW-INJECTED-LOEWNER-BOUNDARY`
+  (R-126). The complete R-125 variance-minus-forest endpoint now has an exact
+  directional derivative and periodic Euler force with covariance trace,
+  derivative injection, rational multipliers, and the surviving Cartan skew
+  retained once. Adversarial review separates that force from the legal
+  control-space object: strict-past projection, the actual Cameron-Martin
+  source Riesz map, and range descent are mandatory. Exact forward mixed-shell
+  sums and a block-Loewner criterion fix the root/shell acceptance constants.
+  The complete mixed secant has a slower linear scale, and a new negative
+  result retires only an unrestricted anticipative reverse-band extension.
+  Under an additional production common-terminal/matching-trace hypothesis,
+  the root baseline transports exactly into the low/injected R-079 block with
+  `E W_J(A0)` and every mean reserve retained; this is an equivalence, not a
+  sign proof. `EXP-000414--EXP-000420` preserve the derivative, causal,
+  scale, reverse, Loewner, baseline, and synthesis decisions. The unified
+  production forward/legal-reverse/balanced/low block estimate,
+  `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
+  open; tier stays T4.

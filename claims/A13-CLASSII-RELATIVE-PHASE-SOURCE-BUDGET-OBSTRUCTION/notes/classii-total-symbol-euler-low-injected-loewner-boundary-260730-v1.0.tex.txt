@@ -1,0 +1,659 @@
+% =============================================================================
+% Title: Total-symbol Euler force, low-injected baseline transport, and block-Loewner boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-TOTAL-SYMBOL-EULER-LOW-INJECTED-LOEWNER-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-30; this version issued 2026-07-30
+% Status: scoped T4 analytic/exact/executed advance and causal/operator boundary; no A13 gate closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cW}{\mathcal W}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+
+R-125 identifies the exact fixed-root total symbol
+\[
+ \cT_k=\mathcal V_{{\rm fut},k}
+       -\mathcal F^{\rm ad}_{063,k}                         \tag{1.1}
+\]
+after all same-root visits have been recombined and the covariance owner
+$\Delta\Gamma_k$ is used once.  It does not display the directional force of
+that symbol.  It also leaves two apparently separate tasks: estimate the
+controlled secant and bound the root-only stationary baseline.
+
+This note performs four proof-first audits of that boundary.
+\begin{enumerate}
+\item It differentiates (1.1) as one complete signed endpoint and gives its
+      periodic Euler force.  The derivative contains the covariance trace,
+      current variation, derivative injection, and the surviving Cartan skew
+      exactly once.
+\item It distinguishes this Euler force from the predictable Cameron--Martin
+      Riesz representative actually available to a legal control.
+\item It transports the R-079 low, injected, and future blocks with every
+      predictable-mean reserve and the generally nonzero finite-low reference
+      $\E\cW_J(A^0)$ retained.
+\item It replaces a scalar off-diagonal norm slogan by the exact block-Loewner
+      acceptance condition and computes the forward mixed-shell sums.  It also
+      records why neither the strong quadratic gap nor an unrestricted reverse
+      extension is available.
+\end{enumerate}
+
+The result is a finite-cutoff structural theorem, not the production one-use
+bound.  It does not prove a forward, reverse, balanced, or low multiplier
+estimate for the actual projected force.  It does not prove the production
+common-terminal identification used by the low/root diagnostic.  It proves no
+$\mathrm{OVERLAP}_{\rm src}$, Nelson estimate, cutoff or floor removal,
+interacting measure, Sector-A closure, or tier promotion.  The host claim
+remains T4.
+
+Throughout Sections 2--5 the cutoff and positive floor are fixed.  The heat
+law, output projection, covariance owner, and conditioning are fixed while an
+endpoint is varied.  Coefficients are smooth bounded cylindrical objects, the
+covariance matrices are deterministic symmetric positive semidefinite owners,
+and all spatial integrations are over the torus.  Complex rows require
+adjoints and real parts; the displayed proof uses the repository's six-real
+coordinate.
+
+\section*{2. The once-owned total trace-excess symbol}
+
+Fix a probability root $k$ and suppress its already recombined visit index.
+Let
+\[
+ B(W)=C_6(W)^TC_6(W)=\sum_{a=1}^{6}c_a(W)c_a(W)^T,             \tag{2.1}
+\]
+where $c_a$ denotes one real row vector.  For the spatial directions put
+\[
+ V_i=\partial_iW,
+ \qquad
+ \Phi_{a,i}(W)=\E_f[c_a(W)^TV_i],
+ \qquad
+ \bar c_a(W)=\E_fc_a(W).                                    \tag{2.2}
+\]
+Here $\E_f$ is exactly the R-125 future/heat conditioning: it may retain the
+current root.  Define
+\[
+ \boxed{
+ \cT_k(W)=
+ \sum_i\E_f\int B(W):\Delta\Gamma_{k,i}\dd x
+ -\sum_{a,i}\int |\Phi_{a,i}(W)|^2\dd x.}                    \tag{2.3}
+\]
+
+Under the R-125 exhaustive orthogonal cluster resolution, retained heat
+coordinate, and once-owned covariance hypotheses, (2.3) is the cluster sum
+of
+\[
+ S_{k,\cC}(W)=\Theta_{k,\cC}(W)-\|\Phi_{k,\cC}(W)\|^2.
+                                                                    \tag{2.4}
+\]
+The R-125 variance/forest bridge then gives
+\[
+ \cT_k(W)=\mathcal V_{{\rm fut},k}(W)
+           -\mathcal F^{\rm ad}_{063,k}(W).                   \tag{2.5}
+\]
+If the output resolution is not exhaustive, the explicit R-125 complement
+leakage must be added.  Contraction closure alone does not imply (2.5).
+
+\subsection*{Theorem 2.1 (exact directional derivative)}
+
+Let $W_t=W+tH$ and $V_{i,t}=V_i+t\partial_iH$.  The direction $H$ may still
+belong to the retained finite-dimensional law; no force factorization is
+claimed at this stage.  Then
+\[
+\boxed{
+\begin{aligned}
+ D\cT_k(W)[H]
+={}&\sum_i\E_f\int DB(W)[H]:\Delta\Gamma_{k,i}\dd x\\
+ &-2\sum_{a,i}\Rea\int \Phi_{a,i}(W)\,
+ \E_f\bigl[(Dc_a(W)H)^TV_i+c_a(W)^T\partial_iH\bigr]\dd x.
+\end{aligned}}                                                \tag{2.6}
+\]
+
+\paragraph{Proof.}
+The covariance owner is fixed, so only $B(W)$ varies in the first term of
+(2.3).  The product rule gives
+\[
+ {\dd\over\dd t}\Phi_{a,i}(W_t)\big|_{t=0}
+ =\E_f[(Dc_a(W)H)^TV_i+c_a(W)^T\partial_iH].                  \tag{2.7}
+\]
+Differentiate the Hilbert norm square and take its real polarization.  This
+gives (2.6).  No forest atom, coefficient derivative, or covariance trace has
+been estimated separately. \hfill$\square$
+
+For a legal moving visit $W_{k,v,t}=W_{k,v-1}+t a_{k,v}$, summing (2.6)
+gives the exact endpoint telescope
+\[
+ \cT_k(W_{k,V})-\cT_k(W_{k,0})
+ =\sum_v\int_0^1D\cT_k(W_{k,v,t})[a_{k,v}]\dd t.              \tag{2.8}
+\]
+A terminal straight homotopy is equally valid.  A visit-square majorant is
+not invariant: two visits $a,-a$ have zero terminal displacement but positive
+sum of visit squares.  Thus (2.8), not an arbitrary visitwise square, is the
+quotient-safe coordinate.
+
+\section*{3. Periodic Euler force and the causal Riesz correction}
+
+Assume now that $H$ is measurable with respect to the sigma-field retained
+outside $\E_f$, so it can be pulled through that conditional expectation.
+Using $DB[H]=\sum_a\{(Dc_aH)c_a^T+c_a(Dc_aH)^T\}$ and periodic integration
+by parts in the derivative-injection term yields the following.
+
+\subsection*{Theorem 3.1 (Euler-force factorization)}
+
+Under the hypotheses above,
+\[
+ D\cT_k(W)[H]=\int H\cdot G_k(W)\dd x,                       \tag{3.1}
+\]
+where
+\[
+\boxed{
+\begin{aligned}
+G_k={}&2\sum_{a,i}\Bigl\{
+ \E_f[(Dc_a)^T\Delta\Gamma_{k,i}c_a]
+ +\partial_i(\Phi_{a,i}\bar c_a)
+ -\Phi_{a,i}\E_f[(Dc_a)^TV_i]
+ \Bigr\}\\
+={}&2\sum_{a,i}\Bigl\{
+ \E_f[(Dc_a)^T\Delta\Gamma_{k,i}c_a]
+ +\bar c_a\,\partial_i\Phi_{a,i}
+ +\Phi_{a,i}\E_f[(Dc_a-Dc_a^T)V_i]
+ \Bigr\}.
+\end{aligned}}                                               \tag{3.2--3.3}
+\]
+
+\paragraph{Proof.}
+The trace variation is
+\[
+ DB[H]:\Delta\Gamma_{k,i}
+ =2\sum_a H^T(Dc_a)^T\Delta\Gamma_{k,i}c_a.                 \tag{3.4}
+\]
+The current-coefficient variation gives the last term of (3.2).  Periodic
+integration by parts sends
+\[
+ -2\Phi_{a,i}\bar c_a^T\partial_iH
+ \quad\hbox{to}\quad
+ 2H^T\partial_i(\Phi_{a,i}\bar c_a).                        \tag{3.5}
+\]
+Finally $\partial_i\bar c_a=\E_f[Dc_aV_i]$, which converts the first line of
+(3.2) into its second line. \hfill$\square$
+
+\subsection*{3.1 Curl convention}
+
+For the coefficient one-form $\vartheta_a=c_a(W)^T\dd W$, the repository
+exterior-curvature convention is
+\[
+ \Omega_a(H,V)=H^T(Dc_a^T-Dc_a)V.                            \tag{3.6}
+\]
+The last term in (3.3) is therefore
+\[
+ -2\Phi_{a,i}\E_f[\Omega_a(\,\cdot\,,V_i)],                 \tag{3.7}
+\]
+not $+2\Phi\Omega$.  Calling $Dc_a-Dc_a^T$ itself the registered curl would
+reverse the sign of the R-121 $2680/729$ Cartan audit.
+
+For the three linear rows, $Dc_a=2\sqrt{c_0}S_A$ is symmetric and (3.7)
+vanishes.  For the three rational rows, R-120 writes
+\[
+ Dc_a=2\sqrt{c_1}F_A,
+ \qquad F_A=T_A-\alpha W\otimes g_A,
+ \qquad \alpha={5\over9},                                   \tag{3.8}
+\]
+so the skew part survives.  R-121's normalized owner audit is
+\[
+ -{40\over729}+{2720\over729}={2680\over729}.                \tag{3.9}
+\]
+Equation (3.3) retains this owner; it does not cancel it.  The zeroth-order
+rational part still uses the R-120 fixed 21-matrix basis with its random
+scalar multipliers and spatial derivatives through order two.
+
+\subsection*{3.2 Euler force is not yet an admissible Riesz vector}
+
+The object $G_k$ is a distributional Euler force in the unweighted spatial
+duality.  In a standard inhomogeneous $H^2$ metric its formal Riesz
+representative is
+\[
+ R_k^{H^2}=(1-\Delta)^{-2}G_k.                               \tag{3.10}
+\]
+For the actual quotient Cameron--Martin metric, the covariance/source map and
+its range projection must be used instead.
+
+There is a second causal correction.  Because $\E_f$ can retain root $k$,
+$G_k$ is generally $\F_k$-measurable, whereas a legal shell-$k$ source is
+$\F_{k-1}$-measurable.  After the outer expectation,
+\[
+ \E\ip{H_k}{G_k}=\E\ip{H_k}{P_{k-1}G_k}.                    \tag{3.11}
+\]
+Thus the admissible candidate has the schematic form
+\[
+ R_{k,{\rm adm}}
+ =\mathcal R_{{\rm CM},k}\,P_{k-1}G_k,                      \tag{3.12}
+\]
+followed by the chart/source range projection.  Choosing $H_k=-G_k$ without
+(3.11)--(3.12) is anticipative and illegal.  Moreover, a negative-gradient
+direction would prove only existence of one descent direction, not the
+uniform bound required for every Boue--Dupuis control.
+
+\section*{4. Root/shell coordinates and the two forward scales}
+
+To remove the index ambiguity, let $r\ge j_0$ denote the probability root and
+let $m$ denote the spatial output shell.  The forward future region is
+\[
+                        m\ge r+C.                             \tag{4.1}
+\]
+R-093 and R-094 distinguish two scales.  The positive quadratic curvature
+atom can have the strong prototype $2^{r-4m}$.  The complete mixed secant has
+a linear prototype $2^{r-2m}$.  The exact Hermite fixture has
+\[
+ -2\gamma\epsilon t+4\gamma\epsilon^2t^2,                   \tag{4.2}
+\]
+so a nonzero linear term prevents promotion of the complete mixed symbol to a
+quadratic scale without a new signed cancellation.  R-125's abstract
+$2^{j-4k}$ lemma remains correct in its own root/shell naming convention; it
+is a conditional theorem, not the production factorization.
+
+\subsection*{Lemma 4.1 (forward mixed geometric sum)}
+
+Suppose, after the total symbol and all matrix channels have been assembled,
+one has the declared block estimate
+\[
+ \|A^{\rm mix}_{r,m}\|
+ \le C_{\rm mix}2^{r-2m},
+ \qquad m\ge r+C.                                           \tag{4.3}
+\]
+Then its scalar-kernel square sum is
+\[
+ \sum_{r\ge j_0}\sum_{m\ge r+C}2^{2r-4m}
+ ={64\over45}2^{-4C}2^{-2j_0}.                               \tag{4.4}
+\]
+Its Hilbert--Schmidt majorant is therefore
+\[
+ K_{\rm mix}
+ \le {8C_{\rm mix}\over\sqrt{45}}2^{-2C}2^{-j_0}.             \tag{4.5}
+\]
+At $C=1$, $K_{\rm mix}\le2C_{\rm mix}2^{-j_0}/\sqrt{45}$.
+
+For comparison, the positive prototype has the exact $\ell^1$ scalar sum
+\[
+ \sum_{r\ge j_0}\sum_{m\ge r+C}2^{r-4m}
+ ={128\over105}2^{-4C}2^{-3j_0}.                             \tag{4.6}
+\]
+
+\paragraph{Proof.}
+Sum first in $m$.  The ratios are $2^{-4}$ for both inner sums and
+$2^{-2}$, respectively $2^{-3}$, for the outer sums.  Their products give
+$64/45$ and $128/105$. \hfill$\square$
+
+Equations (4.3)--(4.6) are acceptance tests.  This note does not prove (4.3)
+for the production force.  If far and mixed contributions hit the same
+matrix block, the safe combination is
+\[
+ \|A_{\rm far}+A_{\rm mix}\|
+ \le K_{\rm far}+K_{\rm mix}.                               \tag{4.7}
+\]
+Quadrature $\sqrt{K_{\rm far}^2+K_{\rm mix}^2}$ requires disjoint matrix
+support or orthogonal domain/range channels with zero cross terms.
+
+\section*{5. Exact block-Loewner acceptance condition}
+
+Let $R=R^*$ and $S=S^*$ collect signed diagonal reserves that remain in the
+same two-channel block as a mixed operator $A$.  The desired upper payment is
+\[
+ \ip{x}{Rx}+\Rea\ip{x}{Ay}+\ip{y}{Sy}
+ \le2\eta\|x\|^2+2\zeta\|y\|^2.                            \tag{5.1}
+\]
+
+\subsection*{Theorem 5.1 (block-Loewner criterion)}
+
+Equation (5.1) holds for all $x,y$ if and only if
+\[
+ \boxed{
+ \begin{pmatrix}
+ 2\eta\Id-R&-A/2\\
+ -A^*/2&2\zeta\Id-S
+ \end{pmatrix}\succeq0.}                                   \tag{5.2}
+\]
+For $R=S=0$, this is equivalent to
+\[
+                         \boxed{\|A\|\le4\sqrt{\eta\zeta}.} \tag{5.3}
+\]
+If the adverse form is $2\Rea\ip{x}{Ay}$, the threshold is instead
+$2\sqrt{\eta\zeta}$.
+
+\paragraph{Proof.}
+Subtract the left side of (5.1) from the right side and write the resulting
+quadratic form on $x\oplus y$.  This is exactly the matrix in (5.2).  With
+$R=S=0$, its Schur complement is nonnegative exactly when
+$A^*A\preceq16\eta\zeta\Id$. \hfill$\square$
+
+Weighted or singular reserves require the corresponding generalized Schur
+complement, including kernel/range compatibility.  One may not replace them
+by scalar $\eta,\zeta$ before the production matrix has been assembled.
+
+For the disjoint R-103 debts and the R-124 legal-row source allocation, the
+trace-scale scalar budget is
+\[
+ K_{\rm bud}=4\sqrt{
+ \left({197\over440}-{3\over125P}\right){3\over25}}
+ =0.92093233\ldots,
+ \qquad P=4+10^{-12}.                                      \tag{5.4}
+\]
+Combining (4.5) with (5.4) at $C=1$ would be sufficient if
+\[
+ C_{\rm mix}2^{-j_0}
+ <{\sqrt{45}\over2}K_{\rm bud}
+ =3.08890\ldots.                                           \tag{5.5}
+\]
+Again, (5.5) is not asserted for production.
+
+\section*{6. The unrestricted reverse-band boundary}
+
+Fix a spatial shell $m_0$ and consider the normalized family
+\[
+ a^{(J)}=2^{-2m_0}\phi(\xi_J)e_{m_0},\qquad J\longrightarrow\infty, \tag{6.1}
+\]
+where $\phi$ is smooth bounded and centered.  Its model $H^2$ scale is
+\[
+ 2^{4m_0}\|a^{(J)}\|_2^2\asymp\|\phi\|_2^2,                 \tag{6.2}
+\]
+whereas coefficient-blind reverse weights $2^{J-4m_0}$ and
+$2^{J-2m_0}$ diverge.  Hence no source-cost-only theorem may extend the
+forward kernels to an unrestricted reverse band.
+
+This is a method boundary with narrow scope.  For $J>m_0$, (6.1) reads future
+information and is not a legal strict-past production control.  It does not
+refute the legal filtration, and it does not evaluate the complete signed
+variance-minus-forest/Cartan symbol.  It is therefore not a production
+divergence counterexample.  It forbids only the coefficient-blind anticipative
+extension; the legal reverse contribution must be derived from the actual
+causal projection in (3.11)--(3.12).
+
+\section*{7. The balanced band remains critical}
+
+In bounded bandwidth the deterministic prototype is
+\[
+ \int|z|^2|\nabla z|^2
+ \le C_{\rm GN}^2
+ \|z\|_{H^2}\,\|z\|_6^3
+ =C_{\rm GN}^2\sqrt{XY}.                                    \tag{7.1}
+\]
+For $z_{A,N}=A(\cos Nx,\sin Nx)$,
+\[
+ X\asymp A^2N^4,qquad Y=A^6,qquad
+ \int|z|^2|\nabla z|^2\asymp A^4N^2=\sqrt{XY}.              \tag{7.2}
+\]
+Thus a bounded root/shell collar creates no scaling slack by itself.  The
+R-121 curl $2680/729$ also forbids replacing the complete balanced current by
+a scalar primitive.  The production balanced theorem must keep the trace,
+future variance, forest, rational zero-order multipliers, Cartan block, and
+mean reserve in the same Loewner matrix before taking positive parts.
+
+\section*{8. Low-injected stationary-baseline transport}
+
+The root-only baseline of R-124 is not automatically signed.  Nevertheless,
+R-079 gives an exact way to transport it without introducing an independent
+symbol, provided the production root family is first identified with the
+R-079 common-terminal Doob family and the low/root trace partition matches.
+These are hypotheses here, not consequences of R-125.
+
+Let $e\in\{0,j,*\}$ denote the common reference, middle, and terminal
+endpoints.  For each root/output owner put
+\[
+ \Phi^e_{j,\cC}=b^e_{j,\cC}+Y^e_{j,\cC},
+ \qquad b^e_{j,\cC}=P_{j-1}P_\cC\mathcal J_e,
+ \qquad Y^e_{j,\cC}=d_jP_\cC\mathcal J_e,                  \tag{8.1}
+\]
+\[
+ D^e_{j,\cC}=\Theta^e_{j,\cC}-\|Y^e_{j,\cC}\|^2,
+ \qquad
+ S^e_{j,\cC}=D^e_{j,\cC}-\|b^e_{j,\cC}\|^2.              \tag{8.2}
+\]
+The low owner has $Y^e_{\ell,\cC}=P_\ell P_\cC\mathcal J_e$ and
+$b^e_{\ell,\cC}=0$.
+
+\subsection*{Theorem 8.1 (R-079 sign ledger)}
+
+Under the common-terminal, exhaustive-output, and matching once-owned trace
+hypotheses,
+\[
+ \sum_\cC\E(D^j_{j,\cC}-D^0_{j,\cC})=-2\mathfrak F_j,      \tag{8.3}
+\]
+\[
+ \sum_\cC\E(D^*_{j,\cC}-D^j_{j,\cC})=-2\mathfrak I_j,     \tag{8.4}
+\]
+and
+\[
+ \sum_\cC\E(D^*_{\ell,\cC}-D^0_{\ell,\cC})
+ =-2\mathfrak L_\ell.                                      \tag{8.5}
+\]
+Consequently
+\[
+ \boxed{
+ D_*^{\rm full}-D_0^{\rm full}
+ =-2\left\{\mathfrak L_\ell+
+       \sum_j(\mathfrak F_j+\mathfrak I_j)\right\},}       \tag{8.6}
+\]
+and, with $M_e=\sum_{j,\cC}\E\|b^e_{j,\cC}\|^2$,
+\[
+ \boxed{
+ S_*^{\rm full}-S_0^{\rm full}
+ =-2\left\{\mathfrak L_\ell+
+       \sum_j(\mathfrak F_j+\mathfrak I_j)\right\}
+ -(M_*-M_0).}                                               \tag{8.7}
+\]
+
+\paragraph{Proof.}
+R-079 defines $f_j=d_j(\mathcal J_j-\mathcal J_0)$ and
+$i_j=d_j(\mathcal J_*-\mathcal J_j)$.  Expanding the two Hilbert squares in
+its definitions of $\mathfrak F_j$ and $\mathfrak I_j$ gives (8.3) and
+(8.4), with the minus sign because $D$ is trace minus energy.  The low
+polarization gives (8.5).  Summation gives (8.6); subtracting predictable
+mean squares gives (8.7). \hfill$\square$
+
+The same hypotheses imply
+\[
+ D_e^{\rm full}
+ =\E\Theta_e^{\rm tot}-\E\|\mathcal J_e\|^2
+ =-2\E\cW_J(A^e).                                          \tag{8.8}
+\]
+Therefore
+\[
+ \boxed{S_0^{\rm full}=-2\E\cW_J(A^0)-M_0.}                \tag{8.9}
+\]
+The finite-low reference $A^0=A_{<j_0}$ is generally controlled.
+R-120 proves $\E\cW_J(0)=0$ only in its raw uncontrolled stationary scope;
+it does not permit deleting $\E\cW_J(A^0)$ from (8.9).
+
+For the middle/root baseline define
+\[
+ B_{\rm mid}=\sum_{j,\cC}\E S^j_{j,\cC},qquad
+ B_\ell^0=\sum_\cC\E S^0_{\ell,\cC}.                      \tag{8.10}
+\]
+Equations (8.3) and (8.9) cancel the reference root predictable means and
+give the sharp transport identity
+\[
+ \boxed{
+ B_{\rm mid}
+ =-B_\ell^0-2\E\cW_J(A^0)
+  -2\sum_j\mathfrak F_j
+  -\sum_{j,\cC}\E\|b^j_{j,\cC}\|^2.}                     \tag{8.11}
+\]
+Thus
+\[
+ B_{\rm mid}\le2C_0                                       \tag{8.12}
+\]
+is equivalent, under the stated bridge hypotheses, to
+\[
+ \boxed{
+ B_\ell^0+2\E\cW_J(A^0)+2\sum_j\mathfrak F_j
+ +\sum_{j,\cC}\E\|b^j_{j,\cC}\|^2\ge-2C_0.}              \tag{8.13}
+\]
+
+Equation (8.13) removes a separately named baseline symbol only by coupling
+it to the injected block, finite-low endpoint, and favorable middle mean
+reserve.  It does not prove their sign.  Estimating the recombined complete
+endpoint instead is algebraically valid, but the R-093 directed-chart theorem
+shows that a uniform estimate of that endpoint is the original Nelson burden,
+not a bypass.
+
+Three low objects remain distinct:
+\begin{enumerate}
+\item $B_\ell^0$, the current/trace low atom in (8.10);
+\item $\mathfrak L_\ell$, the R-079 conditional low-current endpoint
+      difference containing $P_\ell\mathcal J_*$;
+\item the R-079 complete low safe endpoint, equation (4.6) of that authority.
+\end{enumerate}
+No two may be renamed as each other.
+
+\section*{9. Smallest noncyclic successor}
+
+The exact total symbol is now explicit enough to state one unified successor
+instead of alternating between coefficient-first moments and an independent
+baseline sign.
+
+First form $G_k$ in (3.3) with every six-row output, covariance owner, future
+variance, adapted R-063 forest, rational multiplier, and the $2680/729$ Cartan
+owner present.  Then apply the predictable projection and actual
+Cameron--Martin Riesz/source map in (3.11)--(3.12).  Decompose only this
+admissible total force into
+\[
+ G^{\rm adm}=G^{\rm fwd}+G^{\rm rev}+G^{\rm bal}+G^{\rm low}. \tag{9.1}
+\]
+The required theorem must:
+\begin{enumerate}
+\item prove the forward and legal reverse square ledgers from the quotient
+      source norm, with no visit or chart multiplicity;
+\item keep the linear mixed scale separate from the positive quadratic atom;
+\item assemble every same-block contribution before applying the Loewner test
+      (5.2), using triangle rather than unproved quadrature;
+\item prove the critical balanced aggregate with the finite-low and injected
+      transport (8.13) retained;
+\item be uniform in cutoff, floor, chart, control, dimension, output cluster,
+      same-root subdivision, and representation-preserving refinement.
+\end{enumerate}
+
+If this single theorem meets the remaining R-103/R-124 budget, R-093 can be
+invoked over the directed chart union.  Neither the theorem nor its hypotheses
+are proved here.
+
+\section*{10. Evidence and route decisions}
+
+The primary executable performs an exact finite-atom differentiation of
+(2.3), an exact trigonometric torus check of both forms in (3.2)--(3.3), the
+R-079 sign ledger including nonzero $\cW_J(A^0)$, the block-Loewner boundary,
+the two geometric sums, the production budget interval, the R-121 owner curl,
+the linear mixed-secant obstruction, and the unrestricted reverse-band scale.
+The independent standard-library executable uses polynomial arithmetic,
+periodic quadrature exact for the chosen trigonometric fixture, a different
+low/root rational fixture, and separate scalar-matrix checks.
+
+The reusable route verdicts are:
+\begin{enumerate}
+\item \textbf{Advanced:} the R-125 total symbol has the exact derivative
+      (2.6) and predictable Euler coordinate (3.3).
+\item \textbf{Corrected:} $G_k$ is not yet the legal Riesz vector; predictability
+      and the actual CM/source map are load-bearing.
+\item \textbf{Boundary:} the full mixed secant has a linear scale; the strong
+      quadratic gap belongs only to the declared positive atom unless a new
+      cancellation is proved.
+\item \textbf{Advanced conditionally:} (4.4)--(5.5) give exact acceptance
+      constants after a production block estimate exists.
+\item \textbf{Failed method:} a coefficient-blind forward kernel cannot be
+      extended to an unrestricted anticipative reverse band.  This is not a
+      legal production-control counterexample.
+\item \textbf{Advanced conditionally:} (8.11)--(8.13) merge the root baseline
+      with low and injected owners, but only under the missing production
+      common-terminal/matching-trace identification and with no sign gained.
+\item \textbf{Open:} the unified admissible-force estimate in Section 9.
+\end{enumerate}
+
+\section*{11. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: the derivative (2.6) already proves a favorable
+sign.} \textbf{UPHELD AGAINST THE CLAIM.}  A directional derivative has no
+sign or convexity.  The required result is a uniform bound for every legal
+control.
+
+\item \textbf{Objection: choose the control to be minus the force.}
+\textbf{UPHELD AGAINST THE CLAIM.}  The raw force can be $\F_k$-measurable;
+the legal direction is $\F_{k-1}$-measurable.  Equations (3.11)--(3.12) and
+the source range are mandatory.
+
+\item \textbf{Objection: (3.3) cancels the Cartan block.}
+\textbf{UPHELD AGAINST THE CLAIM.}  The row curl convention has the opposite
+matrix order.  R-121's nonzero $2680/729$ owner survives.
+
+\item \textbf{Objection: every far term enjoys $2^{r-4m}$.}
+\textbf{UPHELD AGAINST THE CLAIM.}  The R-094 mixed secant has the nonzero
+linear term (4.2).  Only the positive quadratic atom has the stronger
+prototype without a new cancellation.
+
+\item \textbf{Objection: far and mixed Hilbert--Schmidt constants may always
+be added in quadrature.} \textbf{UPHELD AGAINST THE CLAIM.}  Shared matrix
+blocks have cross terms.  Equation (4.7) is the safe rule unless orthogonality
+is proved.
+
+\item \textbf{Objection: the reverse fixture disproves the production
+filtration.} \textbf{DISMISSED.}  The fixture is anticipative.  It refutes
+only an unrestricted coefficient-blind reverse extension.
+
+\item \textbf{Objection: low-retained recombination proves $C_0=0$.}
+\textbf{UPHELD AGAINST THE CLAIM.}  Equation (8.13) still contains the
+finite-low endpoint, injected block, and the missing common-terminal
+identification.  It is an equivalence, not a sign theorem.
+
+\item \textbf{Objection: $\E\cW_J(A^0)=0$ by stationarity.}
+\textbf{UPHELD AGAINST THE CLAIM.}  R-120 proves the statement only for the
+raw uncontrolled endpoint.  R-079's $A^0$ retains finite-low control.
+
+\item \textbf{Objection: the abstract Loewner threshold is the production
+constant.} \textbf{UPHELD AGAINST THE CLAIM.}  The matrix $A$, its diagonal
+reserves, kernel compatibility, and its uniform norm remain to be constructed
+from the complete production symbol.
+\end{enumerate}
+
+\section*{12. Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-TOTAL-SYMBOL-EULER-LOW-INJECTED-
+  LOEWNER-BOUNDARY (R-126).
+Precise statement: Theorems 2.1, 3.1, 5.1, and 8.1; Lemma 4.1;
+  unrestricted reverse-band and balanced-band boundaries in Sections 6-7.
+Scope: fixed finite cutoff and positive floor; fixed common legal heat,
+  conditioning, output projection, and symmetric once-owned covariance;
+  exhaustive orthogonal cluster resolution for identification with R-125;
+  smooth bounded cylindrical coefficients; periodic torus; predictable
+  direction for the Euler-force factorization; common-terminal/matching-trace
+  hypotheses only for Section 8.
+Dependencies: A1; R-063, R-074, R-079, R-093, R-094, R-103,
+  R-104, R-118, R-120, R-121, R-123, R-124, R-125.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_total_symbol_euler_low_injected_
+  loewner_boundary_verify.py
+Expected output: R-126 integrated PASS; primary and independent children,
+  note/PDF, manifest, exploration, negative, and public-surface gates pass.
+Falsification gate: any failed total-symbol derivative, factor of two,
+  transpose/curl sign, causal projection scope, R-079 sign or W(A0) owner,
+  geometric factor, Loewner threshold, reverse-fixture scope, authority/hash,
+  PDF, or public-surface check.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no production admissible-force operator estimate,
+  forward/reverse/balanced/low closure, common-terminal production theorem,
+  stationary-baseline sign, OVERLAP_src, Nelson, removals, interacting
+  measure, Sector-A closure, or T5-T7 follows.
+Next required action: construct the predictable CM/source-projected total
+  force, prove one unified forward/reverse/balanced/low block-Loewner estimate
+  with the low/injected transport retained, then invoke the R-093 directed
+  chart union only if the production budget is met.
+\end{verbatim}
+
+\endgroup

@@ -1,0 +1,240 @@
+{
+  "assertions": [
+    {
+      "actual": "518/25",
+      "expected": "518/25",
+      "group": "directional",
+      "name": "polynomial_derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": "352/25",
+      "expected": "nonzero",
+      "group": "directional",
+      "name": "nonzero_trace_derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": "518/25",
+      "expected": "differs from trace-only",
+      "group": "directional",
+      "name": "nonzero_mean_derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.842170943040401e-14,
+      "expected": "absolute error < 1e-11",
+      "group": "euler",
+      "name": "numeric_periodic_pairing",
+      "status": "PASS"
+    },
+    {
+      "actual": 12.5663706143592,
+      "expected": 12.566370614359172,
+      "group": "euler",
+      "name": "numeric_exact_value",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.9999874501411488,
+      "expected": "positive",
+      "group": "euler",
+      "name": "skew_present",
+      "status": "PASS"
+    },
+    {
+      "actual": "-26/25",
+      "expected": "-26/25",
+      "group": "low_recombination",
+      "name": "raw_nonzero_reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "-23755/19404",
+      "expected": "-23755/19404",
+      "group": "low_recombination",
+      "name": "middle_injected",
+      "status": "PASS"
+    },
+    {
+      "actual": "4/9",
+      "expected": "nonzero",
+      "group": "low_recombination",
+      "name": "reference_term_load_bearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "128/105",
+      "expected": "128/105",
+      "group": "shells",
+      "name": "positive_factor",
+      "status": "PASS"
+    },
+    {
+      "actual": "64/45",
+      "expected": "64/45",
+      "group": "shells",
+      "name": "mixed_square_factor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0/1",
+      "expected": 0,
+      "group": "loewner",
+      "name": "boundary_determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "-27/154",
+      "expected": "negative",
+      "group": "loewner",
+      "name": "above_boundary_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9209323339075279,
+      "expected": "0.92 < K < 0.93",
+      "group": "budget",
+      "name": "operator_interval",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.0889009519421506,
+      "expected": "3.08 < limit < 3.10",
+      "group": "budget",
+      "name": "mixed_limit_interval",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/1",
+        "1/1",
+        "1/1"
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "group": "unrestricted_reverse_band",
+      "name": "fixed_source_cost",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        64,
+        1024,
+        16384
+      ],
+      "expected": "strictly increasing",
+      "group": "unrestricted_reverse_band",
+      "name": "divergent_weight",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": 16,
+      "group": "unrestricted_reverse_band",
+      "name": "gap_four_ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "32/15",
+        "16/3",
+        "176/15"
+      ],
+      "expected": "strictly increasing",
+      "group": "mixed_secant",
+      "name": "quadratic_ratio_grows",
+      "status": "PASS"
+    },
+    {
+      "actual": 3,
+      "expected": 3,
+      "group": "cartan",
+      "name": "authority_parsed",
+      "status": "PASS"
+    },
+    {
+      "actual": "2680/729",
+      "expected": "2680/729",
+      "group": "cartan",
+      "name": "recombined",
+      "status": "PASS"
+    },
+    {
+      "actual": "2680/729",
+      "expected": "nonzero",
+      "group": "cartan",
+      "name": "nonzero",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 22,
+  "assertions_total": 22,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "diagnostics": {
+    "cartan": {
+      "curls": [
+        "-40/729",
+        "2720/729",
+        "2680/729"
+      ]
+    },
+    "directional": {
+      "derivative": "518/25",
+      "predicted": "518/25",
+      "total_symbol_polynomial": [
+        "283/150",
+        "518/25",
+        "1754/75",
+        "-62/5",
+        "-674/25"
+      ],
+      "trace_derivative": "352/25"
+    },
+    "euler": {
+      "direct": 12.5663706143592,
+      "force": 12.566370614359172,
+      "skew_L1": 3.9999874501411488
+    },
+    "low_recombination": {
+      "F": [
+        "-2/11",
+        "3/14"
+      ],
+      "W_A0": "4/9",
+      "middle": "-23755/19404",
+      "raw": "-26/25"
+    },
+    "shell_loewner": {
+      "mixed_limit": 3.0889009519421506,
+      "mixed_secant_ratios": [
+        "32/15",
+        "16/3",
+        "176/15"
+      ],
+      "mixed_square_factor": "64/45",
+      "operator_budget": 0.9209323339075279,
+      "positive_factor": "128/105",
+      "reverse_weights": [
+        64,
+        1024,
+        16384
+      ]
+    }
+  },
+  "independence": "standard-library implementation; imports neither primary verifier nor its output",
+  "package_version": "1.0.0",
+  "result_id": "A13-CLASSII-TOTAL-SYMBOL-EULER-LOW-INJECTED-LOEWNER-BOUNDARY",
+  "schema": "tect/a13-total-symbol-euler-low-injected-loewner-boundary-independent/1.0",
+  "scope": {
+    "exact_algebra_checked_independently": true,
+    "periodic_euler_force_checked_independently": true,
+    "production_operator_estimate_proved": false,
+    "sector_a_closed": false
+  },
+  "status": "PASS"
+}

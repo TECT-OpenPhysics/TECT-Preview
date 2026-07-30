@@ -1,0 +1,276 @@
+#!/usr/bin/env python3
+"""Integrated verifier for the scoped R-126 A13 checkpoint."""
+
+from __future__ import annotations
+
+__version__ = "1.0.0"
+__first_issued__ = "2026-07-30"
+__version_issued__ = "2026-07-30"
+
+import argparse
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+from typing import Any
+
+from pypdf import PdfReader
+
+
+REPO = Path(__file__).resolve().parents[2]
+CLAIM = "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+RESULT_ID = "A13-CLASSII-TOTAL-SYMBOL-EULER-LOW-INJECTED-LOEWNER-BOUNDARY"
+SCHEMA = "tect/a13-total-symbol-euler-low-injected-loewner-boundary-integrated/1.0"
+CLAIM_DIR = REPO / "claims" / CLAIM
+PRIMARY = REPO / "codes/foundations/a13_classii_total_symbol_euler_low_injected_loewner_boundary.py"
+INDEPENDENT = REPO / "codes/foundations/a13_classii_total_symbol_euler_low_injected_loewner_boundary_independent.py"
+MANIFEST = CLAIM_DIR / "classii_total_symbol_euler_low_injected_loewner_boundary_manifest.json"
+PRIMARY_OUTPUT = CLAIM_DIR / "runs/2026-07-30-primary-total-symbol-euler-low-injected-loewner-boundary/result.json"
+INDEPENDENT_OUTPUT = CLAIM_DIR / "runs/2026-07-30-independent-total-symbol-euler-low-injected-loewner-boundary/result.json"
+DEFAULT_OUTPUT = CLAIM_DIR / "runs/2026-07-30-integrated-total-symbol-euler-low-injected-loewner-boundary/result.json"
+
+
+def atomic_json(path: Path, payload: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    descriptor, temporary = tempfile.mkstemp(prefix=f".{path.name}.", suffix=".tmp", dir=path.parent)
+    try:
+        with os.fdopen(descriptor, "w", encoding="utf-8", newline="\n") as stream:
+            json.dump(payload, stream, indent=2, sort_keys=True)
+            stream.write("\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(temporary, path)
+    except BaseException:
+        try:
+            os.unlink(temporary)
+        except FileNotFoundError:
+            pass
+        raise
+
+
+def digest(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+class Audit:
+    def __init__(self) -> None:
+        self.rows: list[dict[str, Any]] = []
+
+    def check(self, group: str, name: str, condition: bool, actual: Any, expected: Any) -> None:
+        self.rows.append(
+            {
+                "group": group,
+                "name": name,
+                "status": "PASS" if bool(condition) else "FAIL",
+                "actual": actual,
+                "expected": expected,
+            }
+        )
+
+    def finish(self, primary: dict[str, Any], independent: dict[str, Any]) -> dict[str, Any]:
+        passed = sum(row["status"] == "PASS" for row in self.rows)
+        aggregate_total = len(self.rows) + primary["assertions_total"] + independent["assertions_total"]
+        aggregate_passed = passed + primary["assertions_passed"] + independent["assertions_passed"]
+        return {
+            "schema": SCHEMA,
+            "package_version": __version__,
+            "claim_id": CLAIM,
+            "result_id": RESULT_ID,
+            "status": "PASS" if passed == len(self.rows) else "FAIL",
+            "assertions_total": len(self.rows),
+            "assertions_passed": passed,
+            "assertions_failed": len(self.rows) - passed,
+            "assertions": self.rows,
+            "children": {
+                "primary": {
+                    "status": primary["status"],
+                    "assertions": primary["assertions_total"],
+                    "path": str(PRIMARY_OUTPUT.relative_to(REPO)).replace("\\", "/"),
+                },
+                "independent": {
+                    "status": independent["status"],
+                    "assertions": independent["assertions_total"],
+                    "path": str(INDEPENDENT_OUTPUT.relative_to(REPO)).replace("\\", "/"),
+                },
+            },
+            "aggregate": {
+                "status": "PASS" if aggregate_passed == aggregate_total else "FAIL",
+                "assertions_total": aggregate_total,
+                "assertions_passed": aggregate_passed,
+                "assertions_failed": aggregate_total - aggregate_passed,
+            },
+            "scope": {
+                "total_symbol_derivative_proved": True,
+                "predictable_euler_force_proved": True,
+                "causal_riesz_map_firewall_proved": True,
+                "block_loewner_criterion_proved": True,
+                "conditional_low_injected_transport_proved": True,
+                "production_projected_force_bound_proved": False,
+                "production_common_terminal_proved": False,
+                "overlap_src_proved": False,
+                "nelson_proved": False,
+                "sector_a_closed": False,
+            },
+            "no_overclaim": (
+                "R-126 is a finite-cutoff structural checkpoint. It proves no production "
+                "projected-force norm, forward/legal-reverse/balanced/low closure, production "
+                "common-terminal theorem, stationary-baseline sign, OVERLAP_src, Nelson, "
+                "removal, interacting measure, or Sector A closure."
+            ),
+        }
+
+
+def run_child(path: Path) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        [sys.executable, str(path)],
+        cwd=REPO,
+        capture_output=True,
+        text=True,
+        timeout=180,
+    )
+
+
+def load_json(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    arguments = parser.parse_args()
+    audit = Audit()
+
+    primary_run = run_child(PRIMARY)
+    independent_run = run_child(INDEPENDENT)
+    audit.check("children", "primary_exit", primary_run.returncode == 0, primary_run.returncode, 0)
+    audit.check("children", "independent_exit", independent_run.returncode == 0, independent_run.returncode, 0)
+    audit.check("children", "primary_output_exists", PRIMARY_OUTPUT.is_file(), PRIMARY_OUTPUT.is_file(), True)
+    audit.check("children", "independent_output_exists", INDEPENDENT_OUTPUT.is_file(), INDEPENDENT_OUTPUT.is_file(), True)
+    if not PRIMARY_OUTPUT.is_file() or not INDEPENDENT_OUTPUT.is_file():
+        print(primary_run.stdout, primary_run.stderr)
+        print(independent_run.stdout, independent_run.stderr)
+        return 1
+    primary = load_json(PRIMARY_OUTPUT)
+    independent = load_json(INDEPENDENT_OUTPUT)
+    audit.check("children", "primary_status", primary.get("status") == "PASS", primary.get("status"), "PASS")
+    audit.check("children", "independent_status", independent.get("status") == "PASS", independent.get("status"), "PASS")
+    audit.check("children", "primary_result_id", primary.get("result_id") == RESULT_ID, primary.get("result_id"), RESULT_ID)
+    audit.check("children", "independent_result_id", independent.get("result_id") == RESULT_ID, independent.get("result_id"), RESULT_ID)
+    audit.check("children", "primary_count", primary.get("assertions_total") == 32, primary.get("assertions_total"), 32)
+    audit.check("children", "independent_count", independent.get("assertions_total") == 22, independent.get("assertions_total"), 22)
+    independent_source = INDEPENDENT.read_text(encoding="utf-8")
+    audit.check("children", "non_importing_independent", "import a13_classii_total_symbol_euler" not in independent_source, "primary import absent", "primary import absent")
+
+    audit.check("manifest", "exists", MANIFEST.is_file(), MANIFEST.is_file(), True)
+    if not MANIFEST.is_file():
+        print("R-126 integrated BLOCKED: manifest missing")
+        return 1
+    manifest = load_json(MANIFEST)
+    audit.check("manifest", "schema", manifest.get("schema") == "tect/a13-total-symbol-euler-low-injected-loewner-boundary-manifest/1.0", manifest.get("schema"), "tect/a13-total-symbol-euler-low-injected-loewner-boundary-manifest/1.0")
+    audit.check("manifest", "result_id", manifest.get("result_id") == RESULT_ID, manifest.get("result_id"), RESULT_ID)
+    audit.check("manifest", "ledger_id", manifest.get("result_ledger_id") == "R-126", manifest.get("result_ledger_id"), "R-126")
+
+    for name, entry in manifest.get("authorities", {}).items():
+        path = REPO / entry["path"]
+        audit.check("authority", f"{name}_exists", path.is_file(), path.is_file(), True)
+        if path.is_file():
+            audit.check("authority", f"{name}_sha256", digest(path) == entry["sha256"], digest(path), entry["sha256"])
+
+    for name, entry in manifest.get("files", {}).items():
+        path = REPO / entry["path"]
+        audit.check("files", f"{name}_exists", path.is_file(), path.is_file(), True)
+        if path.is_file() and entry.get("sha256"):
+            audit.check("files", f"{name}_sha256", digest(path) == entry["sha256"], digest(path), entry["sha256"])
+
+    note_path = REPO / manifest["files"]["note"]["path"]
+    pdf_path = REPO / manifest["files"]["pdf"]["path"]
+    note = note_path.read_text(encoding="utf-8")
+    for phrase in (
+        "Total-symbol Euler force",
+        "Euler force is not yet an admissible Riesz vector",
+        "The unrestricted reverse-band boundary",
+        "Low-injected stationary-baseline transport",
+        "No-overclaim statement",
+    ):
+        audit.check("note", f"phrase_{phrase[:18]}", phrase in note, phrase in note, True)
+
+    reader = PdfReader(str(pdf_path))
+    fields = reader.get_fields() or {}
+    extracted = "\n".join((page.extract_text() or "") for page in reader.pages)
+    audit.check("pdf", "pages", len(reader.pages) == 10, len(reader.pages), 10)
+    audit.check("pdf", "no_form", not fields, sorted(fields), [])
+    audit.check("pdf", "title_text", "Total-symbol Euler force" in extracted, "Total-symbol Euler force" in extracted, True)
+    audit.check("pdf", "footer_text", "R-126" in extracted and "Sector-A closure" in extracted, "R-126" in extracted and "Sector-A closure" in extracted, True)
+    pdf_contract = manifest["verification"]["pdf"]
+    audit.check("pdf", "size", pdf_path.stat().st_size == pdf_contract["size_bytes"], pdf_path.stat().st_size, pdf_contract["size_bytes"])
+    audit.check("pdf", "visual_qa", pdf_contract.get("visual_qa") == "PASS", pdf_contract.get("visual_qa"), "PASS")
+    audit.check("pdf", "overfull", pdf_contract.get("overfull_hbox_count") == 0, pdf_contract.get("overfull_hbox_count"), 0)
+
+    status = load_json(CLAIM_DIR / "status.json")
+    audit.check("claim", "statement", status["statement"].startswith("R-126 advances A13"), status["statement"][:22], "R-126 advances A13")
+    audit.check("claim", "reproduction", status["reproduction"]["command"].endswith("a13_classii_total_symbol_euler_low_injected_loewner_boundary_verify.py"), status["reproduction"]["command"], "R-126 verifier")
+    audit.check("claim", "tier_unchanged", status["tier"] == "T4", status["tier"], "T4")
+    audit.check("claim", "gates_open", set(status["open_gates"]) == {"A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION", "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"}, status["open_gates"], "both A13 gates")
+
+    surfaces = {
+        "result_summary": REPO / "RESULTS-LEDGER.md",
+        "negative": REPO / "negative-results/registry.md",
+        "exploration": REPO / "explorations/log.jsonl",
+        "todo": REPO / "todo/todo.json",
+        "claim_history": CLAIM_DIR / "claim.md",
+        "narrative": CLAIM_DIR / "lineage-narrative.md",
+        "changelog": REPO / "changelog/log.jsonl",
+        "claims_generated": REPO / "CLAIMS.md",
+        "index_generated": CLAIM_DIR / "INDEX.md",
+        "lineage_generated": CLAIM_DIR / "LINEAGE.md",
+        "proof_map": REPO / "theory/proof-evidence-map.md",
+    }
+    needles = {
+        "result_summary": "R-126",
+        "negative": "NG-2026-07-30-A13-UNRESTRICTED-REVERSE-BAND-EXTENSION",
+        "exploration": "EXP-000420",
+        "todo": "R-126 differentiates",
+        "claim_history": "A13-CLASSII-TOTAL-SYMBOL-EULER-LOW-INJECTED-LOEWNER-BOUNDARY",
+        "narrative": "Total-symbol Euler force and the unified causal/Loewner frontier",
+        "changelog": "R-126",
+        "claims_generated": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "index_generated": "R-126 advances A13",
+        "lineage_generated": "Total-symbol Euler force",
+        "proof_map": "R-126",
+    }
+    for name, path in surfaces.items():
+        audit.check("surfaces", f"{name}_exists", path.is_file(), path.is_file(), True)
+        if path.is_file():
+            present = needles[name] in path.read_text(encoding="utf-8")
+            audit.check("surfaces", f"{name}_content", present, present, True)
+
+    exploration_lines = [json.loads(line) for line in (REPO / "explorations/log.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+    exploration_ids = {record["id"] for record in exploration_lines}
+    for identifier in manifest.get("exploration_ids", []):
+        audit.check("explorations", identifier, identifier in exploration_ids, identifier in exploration_ids, True)
+
+    negative = (REPO / "negative-results/registry.md").read_text(encoding="utf-8")
+    for identifier in manifest.get("negative_results", []):
+        audit.check("negatives", identifier, f"### {identifier}" in negative, f"### {identifier}" in negative, True)
+
+    payload = audit.finish(primary, independent)
+    atomic_json(arguments.output, payload)
+    print(
+        f"R-126 integrated {payload['status']} "
+        f"{payload['assertions_passed']}/{payload['assertions_total']}; "
+        f"primary {primary['assertions_passed']}/{primary['assertions_total']}; "
+        f"independent {independent['assertions_passed']}/{independent['assertions_total']}; "
+        f"aggregate {payload['aggregate']['assertions_passed']}/{payload['aggregate']['assertions_total']}"
+    )
+    if payload["status"] != "PASS":
+        for row in payload["assertions"]:
+            if row["status"] == "FAIL":
+                print(f"FAIL {row['group']}::{row['name']} actual={row['actual']!r} expected={row['expected']!r}")
+    return 0 if payload["status"] == "PASS" else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

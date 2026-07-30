@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-126](#r-126) | Total-symbol Euler force, low-injected baseline transport, and the block-Loewner boundary | Scoped T4 analytic/exact/executed advance: the R-125 variance-minus-forest symbol has an exact finite-cutoff directional derivative and, for predictable variations, a periodic Euler force containing trace, derivative injection, rational zero-order multipliers, and the nonzero Cartan skew once. The raw force still requires `F_(k-1)` projection and the actual Cameron-Martin/source Riesz map. R-079 gives an exact low/injected baseline-transport equivalence with `E W_J(A0)` and all mean reserves retained; it is conditional on the missing production common-terminal/matching-trace identification and gives no sign. The exact block-Loewner criterion keeps diagonal reserves and the mixed operator together. Forward mixed sums have constants `64/45` and `8/sqrt(45)`, while the full mixed secant cannot inherit the positive atom's quadratic gap. An anticipative fixed-shell fixture refutes only an unrestricted coefficient-blind reverse-band extension. The unified production forward/legal-reverse/balanced/low estimate, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-125](#r-125) | Conditional-variance/forest bridge, stationary-baseline residual, and the root-shell operator boundary | Scoped T4 analytic/exact/executed advance: at finite cutoff the covariance-normal endpoint equals the conditional stopped-current packet plus one half of the future conditional variance, so the R-124 secant is exactly `Psi=Delta V_fut-Delta F_063^ad`. The future-variance rebate is indispensable; an exact production-frame constant-translation fixture falsifies its omission. A smooth cylindrical partial-Wick identity gives the finite-cutoff adapted forest coordinate, while the production stationary quantity is exposed as `sum E V_0-sum E F_063,0^ad` and remains unsigned. A common-terminal Doob lemma makes only the low-plus-root aggregate nonpositive; root-only `C_0=0` additionally requires a nonnegative complete-low atom, and neither hypothesis is established for the actual production currents. A correlated Hilbert-operator lemma gives the sufficient far-tail threshold `K_far=8 C_* 2^(-3j_0)/sqrt(16065)` and the sharp mixed criterion `||A||<=4 sqrt(eta zeta)`, but the production factorisation, balanced band, stationary-baseline bound, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-124](#r-124) | Stationary-polarized trace defect, replica closure, and the correlated root-shell boundary | Scoped T4 analytic/exact/executed theorem and route synthesis: for `S_u=D0_u-||E_0 Phi_u||^2=E_0(Theta_u-||Phi_u||^2)`, the controlled-minus-stationary difference is the exact symmetric secant `E_0[DeltaTheta-Re<Phi_h+Phi_0,DeltaPhi>]`, equivalently the signed cross minus the favorable square. Moving-endpoint secants telescope under every representation-preserving same-root visit subdivision; fixed-baseline subvisit splitting is false. Conditional replicas and Hermite expansion give an exact square representation but no automatic sign. On the genuine first-linear row, `Delta S=kappa^2 E[(1-xi^2)h^2]<=kappa^2 E h^2`, `kappa^2=6/(125P)`, so the action allocation is `3/(125P)`, with a sharp finite-Hermite improvement and no sextic or feedback-derivative payment. Exact resonance, rare-event, covariant-Hessian, and OU audits close or retire four recurring bypasses. The owner-complete coefficient identity, cutoff-uniform correlated signed root-shell estimate, and separate stationary-baseline sum bound remain open, as do `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector-A closure |
 | [R-123](#r-123) | Six-row trace-excess reduction and the direct source-action correlation boundary | Scoped T4 analytic/exact/executed advance and method boundary: for a fully assembled contraction-closed six-row endpoint `Phi` with once-owned trace `Theta`, `Lambda=Theta-||Phi-E_0 Phi||^2` gives `D0=E_0 Lambda` and `D1=E_0[xi Lambda]`, while the direct complete packet has conditional expectation `(||E_0 Phi||^2-D0)/2`. Thus the direct R-093 expected-action route needs one aggregate bound for `D0-||b||^2`, not `D1=0`. A bounded full-six-row fixture has nonzero `D0,D1` but positive direct packet. One genuine legal adapted linear row obeys an exact expectation identity and a source/sixth-moment bound with coefficient `kappa^2=6/(125P)`. A uniform aggregate trace-excess inequality with allocations below `9/20` and `3/20` passes through the R-093 directed chart infimum without a chart-count factor, provided every within-chart owner is recombined and all constants are cutoff/chart/control/refinement uniform. Exact audits retire stationary-to-adapted low-chaos transfer, raw six-current Hessian positivity, and fixed-profile correlation-only cutoff-uniform Young absorption. The stationary-subtracted owner-complete rational/Cartan/forest trace-excess estimate, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -144,6 +145,115 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-126"></a>
+### R-126 -- Total-symbol Euler force, low-injected baseline transport, and the block-Loewner boundary
+
+**Result ID.**
+A13-CLASSII-TOTAL-SYMBOL-EULER-LOW-INJECTED-LOEWNER-BOUNDARY.
+
+**Exact total-symbol derivative.**  Under the R-125 exhaustive-output,
+retained-heat, and once-owned-covariance hypotheses, define
+
+`T_k(W)=sum_i E_f int B(W):DeltaGamma_(k,i)-sum_(a,i) int |Phi_(a,i)(W)|^2`,
+
+where `B=sum_a c_a c_a^T`, `V_i=partial_i W`, and
+`Phi_(a,i)=E_f[c_a(W)^T V_i]`.  For `W_t=W+tH`,
+
+`D T_k(W)[H]=sum_i E_f int DB(W)[H]:DeltaGamma_(k,i)`
+
+`-2 sum_(a,i) Re int Phi_(a,i) E_f[(Dc_a H)^T V_i+c_a^T partial_i H]`.
+
+This is the directional derivative of the complete R-125
+`V_fut-F_063^ad` symbol.  Same-root visits telescope only through the moving
+endpoint; visit-square majorants are not quotient invariant.
+
+**Euler force and causal correction.**  For a direction measurable outside
+the retained future expectation, periodic integration by parts gives
+
+`D T_k(W)[H]=int H.G_k`,
+
+`G_k=2 sum_(a,i){E_f[(Dc_a)^T DeltaGamma_(k,i)c_a]`
+
+`+bar(c_a) partial_i Phi_(a,i)`
+
+`+Phi_(a,i) E_f[(Dc_a-Dc_a^T)V_i]}`.
+
+The last term is the negative of the repository exterior-curvature
+orientation and retains R-121's `-40/729+2720/729=2680/729` owner.  `G_k`
+is an Euler/distributional force, not the legal control-space Riesz vector.
+Because it can be `F_k`-measurable, the admissible candidate requires
+`P_(k-1)G_k`, the actual Cameron-Martin/source Riesz map, and its range
+projection.
+
+**Forward mixed and block-Loewner criteria.**  With probability root `r`,
+spatial shell `m>=r+C`, and a declared mixed block
+`||A_mix(r,m)||<=C_mix 2^(r-2m)`,
+
+`sum_(r,m)2^(2r-4m)=(64/45)2^(-4C)2^(-2j0)`,
+
+`K_mix<=(8C_mix/sqrt(45))2^(-2C)2^(-j0)`.
+
+The positive prototype separately has
+`sum_(r,m)2^(r-4m)=(128/105)2^(-4C)2^(-3j0)`.  For signed diagonal blocks
+`R,S`, the mixed payment is exact iff
+
+`[[2eta I-R,-A/2],[-A*/2,2zeta I-S]]>=0`.
+
+At `R=S=0`, this is `||A||<=4sqrt(eta zeta)`.  Same-block far and mixed
+terms combine by triangle unless channel orthogonality is proved.
+
+**Low/injected baseline transport.**  Conditional on a production
+common-terminal Doob family and matching once-owned low/root trace partition,
+R-079 gives
+
+`D_*^full-D_0^full=-2{L_low+sum_j(F_j+I_j)}`,
+
+`S_*^full-S_0^full=-2{L_low+sum_j(F_j+I_j)}-(M_*-M_0)`,
+
+and for the middle/root baseline
+
+`B_mid=-B_low^0-2E W_J(A0)-2sum_j F_j-sum_(j,C)E||b_(j,j,C)||^2`.
+
+Thus `B_mid<=2C0` is equivalent to one low/injected lower bound with all
+owners retained.  It is not a sign theorem: `A0` generally contains finite-low
+control, and the production common-terminal identification is still open.
+
+**Method boundaries.**  The complete mixed secant has a nonzero linear
+prototype and cannot inherit the positive quadratic atom's strong gap without
+a new cancellation.  A fixed-spatial-shell anticipative family has bounded
+source scale and divergent bare reverse weights; it refutes only an
+unrestricted coefficient-blind reverse-band extension, not the legal
+strict-past production filtration or the complete signed A1 symbol.  The
+balanced band remains critical.
+
+**Proof / evidence.**
+
+- claim: `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`;
+- note: `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-total-symbol-euler-low-injected-loewner-boundary-260730-v1.0.tex.txt`;
+- primary: `codes/foundations/a13_classii_total_symbol_euler_low_injected_loewner_boundary.py`;
+- independent: `codes/foundations/a13_classii_total_symbol_euler_low_injected_loewner_boundary_independent.py`;
+- integrated verifier: `codes/foundations/a13_classii_total_symbol_euler_low_injected_loewner_boundary_verify.py`;
+- manifest: `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_total_symbol_euler_low_injected_loewner_boundary_manifest.json`;
+- negative result:
+  `NG-2026-07-30-A13-UNRESTRICTED-REVERSE-BAND-EXTENSION`.
+
+**Reuse scope.**  Finite-cutoff differentiation of Gram
+trace-minus-conditioned-current energy; periodic Euler-force extraction;
+causal Riesz-map firewall; low/injected Doob sign ledger; matrix-valued
+mixed-form acceptance; and root/shell index audits.
+
+**Tier.**  T4 inside the fixed-cutoff/fixed-floor hypotheses above; the host
+claim remains T4.
+
+**Publication target.**  Sector-A constructive-measure methods and negative
+routes companion.
+
+**No-overclaim boundary.**  R-126 does not prove the production admissible
+force estimate, a forward/legal-reverse/balanced/low block bound, the
+production common-terminal theorem, root-only stationary-baseline sign,
+`OVERLAP_src`, Nelson, removals, an interacting measure, or Sector-A closure.
+
 
 <a id="r-125"></a>
 ### R-125 -- Conditional-variance/forest bridge, stationary-baseline residual, and the root-shell operator boundary

@@ -736,6 +736,22 @@ endpoint theorem.
     estimate is formed. That estimate, both A13 gates, and Sector A remain
     open at T4.
 
+54. **Total-symbol Euler force and the unified causal/Loewner frontier.**
+    R-125's variance-minus-forest endpoint is differentiated without splitting
+    its owners. R-126 extracts the exact periodic Euler force, retains the
+    rational Cartan skew, and adds two load-bearing corrections: a legal source
+    sees the strict-past projection followed by the actual Cameron-Martin
+    source Riesz map, and the root-only baseline can be transported into the
+    low/injected endpoint only under a still-unproved production
+    common-terminal/matching-trace identification. Exact forward mixed-shell
+    sums and a block-Loewner criterion replace an ambiguous scalar threshold.
+    The full mixed secant retains a slower linear scale, and an anticipative
+    fixed-shell fixture retires only an unrestricted coefficient-blind reverse
+    extension, not the legal production filtration. The next proof unit is one
+    unified predictable forward/legal-reverse/balanced/low block estimate with
+    every covariance, forest, Cartan, low, and mean owner kept inside
+    expectation. Both A13 gates and Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

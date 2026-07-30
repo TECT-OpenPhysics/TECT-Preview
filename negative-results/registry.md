@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-30-A13-UNRESTRICTED-REVERSE-BAND-EXTENSION](#ng-2026-07-30-a13-unrestricted-reverse-band-extension) | extend a forward root/shell decay kernel coefficient-blindly to an unrestricted reverse band using only the source `H2` cost | at fixed spatial shell `m0`, the anticipative family `a^(J)=2^(-2m0) phi(xi_J)e_(m0)` has constant `H2` scale while bare reverse weights `2^(J-4m0)` and `2^(J-2m0)` diverge. This refutes only the unrestricted anticipative extension; it is not a legal progressive-control or complete signed production counterexample |
 | [NG-2026-07-30-A13-NAIVE-PRIMITIVE-TRACE-FOREST-IDENTIFICATION](#ng-2026-07-30-a13-naive-primitive-trace-forest-identification) | identify the conditionally averaged R-123 primitive trace directly with the R-063 covariance-normal forest while omitting conditional future variance | a deterministic constant-translation fixture has zero covariance-normal/forest mean but `Theta=V_fut=4s`, `s=339/(8000P)`; the naive identity gives `0=-2s` and misses exactly `2s=339/(4000P)`. The future-variance rebate is indispensable even before adaptation |
 | [NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION](#ng-2026-07-30-a13-replica-variance-automatic-trace-domination) | infer nonpositivity of the stationary trace secant from replica variance alone | the bounded legal row `h=d cos(t xi)` has `S_h-S_0=2 kappa^2 d^2 t^2 exp(-2t^2)>0`; replicas expose a favourable square but do not dominate the signed trace/current cross |
 | [NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER](#ng-2026-07-30-a13-stationary-six-row-to-adapted-low-chaos-transfer) | infer adapted `D0=D1=0` from R-120 stationary value-derivative independence, six-row parity, row diagonalisation, or lower endpoint kernels | a bounded full-six-row finite-root fixture has explicit nonzero `D0,D1`, while its direct packet stays positive; R-122's legal `h_+/-` pair also flips `D1` with identical lower data. This retires the stationary-to-adapted inference, not the complete adapted production cancellation |
@@ -177,6 +178,39 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
 
 <a id="ng-2026-07-30-a13-naive-primitive-trace-forest-identification"></a>
+### NG-2026-07-30-A13-UNRESTRICTED-REVERSE-BAND-EXTENSION -- forward decay does not extend coefficient-blindly to an unrestricted reverse band
+
+**Claim / route.**  Starting from a forward root/spatial-shell kernel, extend
+the same coefficient decay to every reverse pair and pay the result solely
+from the terminal source `H2` norm, without using the legal filtration or the
+complete variance-minus-forest/Cartan symbol.
+
+**Failure mode.**  Fix one normalized spatial shell `m0` and let
+
+`a^(J)=2^(-2m0) phi(xi_J)e_(m0)`, `J -> infinity`,
+
+with `phi` smooth bounded and centered.  The model source scale is constant:
+
+`2^(4m0)||a^(J)||_2^2 = ||phi||_2^2`.
+
+The coefficient-blind reverse weights instead contain `2^(J-4m0)` for the
+strong positive prototype and `2^(J-2m0)` for the mixed prototype, both of
+which diverge.  Choosing `phi` with nonzero first correlation makes the bare
+mixed diagnostic nontrivial.
+
+**Evidence.**  R-126 proof note, Sections 4 and 6; exact primary and
+non-importing independent reverse-scale checks; R-093/R-094 factor-scope
+audit.
+
+**Consequence.**  A forward triangular block law cannot be reflected across
+the root/shell diagonal without proving a new causal cancellation or
+covariance-weighted quotient theorem.  The fixture is deliberately
+anticipative when `J>m0`, so it does not refute the legal strict-past
+production filtration and is not a divergence counterexample for the complete
+signed A1 symbol.  The production forward, legal reverse, balanced, and low
+operator bounds all remain open.
+
+
 ### NG-2026-07-30-A13-NAIVE-PRIMITIVE-TRACE-FOREST-IDENTIFICATION -- conditional future variance separates primitive trace from the forest
 
 **Claim / route.**  After conditional future averaging, identify the R-123
