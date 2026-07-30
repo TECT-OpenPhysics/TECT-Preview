@@ -31,7 +31,6 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
-| NG-2026-07-25-A13-FULL-FRAME-CONDITIONAL-POSITIVITY | no fixed derivative payment makes the raw endpoint positive | Choose one fixed `eta>0` and infer universal conditional |
 | AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION | proof-map semantic association and portability defects | The first pre-commit generator scanned entire free-form |
 | NG-2026-legacy-ordered-vacuum | fixed ordered BCC vacuum as ground state | fluctuation restoration |
 | R-2026-legacy-rh-overclaim | estimator-only Reading-H claim above T5 | controlled error bound missing |

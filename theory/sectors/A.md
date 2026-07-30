@@ -45,6 +45,9 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-31-A13-ELLIPTIC-GAUSSIAN-D4-FLOOR-UNIFORMITY | six-real ellipticity is critical at the fourth rational jet |  |
+| NG-2026-07-31-A13-POINTWISE-ELLIPTICITY-SPATIAL-FRACTIONAL-TRANSFER | pointwise anti-concentration does not control spatial oscill |  |
+| NG-2026-07-31-A13-SEPARATE-FLOOR-WEIGHTED-CURRENT-ENERGY-ABSORPTION | separate absolute action payments destroy the covariance-nor |  |
 | AUDIT-2026-07-31-A13-R132-POLYNOMIAL-RESPONSE-INTERTWINER-SCOPE | stopped-current support is not the complete physical respons |  |
 | NG-2026-07-31-A13-PREDICTABLE-SCORE-FINITE-ENERGY-TRANSFER | affine Gaussian scores do not extend from triangularity and  |  |
 | NG-2026-07-31-A13-GAMMA-FOUR-SIXTH-AMPLITUDE-ROUTE | the joint rational boundary layer needs a seventh amplitude  |  |

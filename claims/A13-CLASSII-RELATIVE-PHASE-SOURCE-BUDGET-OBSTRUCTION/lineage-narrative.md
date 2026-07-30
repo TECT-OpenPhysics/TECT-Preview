@@ -889,6 +889,9 @@ endpoint theorem.
     one-use `gamma=7/12` tail and collar-uniform non-tail bound are now the
     smallest honest successor. Both A13 gates and Sector A remain open at T4.
 
+
+62. **Terminal Gaussian jet threshold, sharp fixed-law action, and aggregate collar boundary.** R-134 sharpens the six-row Pauli estimate to `alpha^2 c1=3/(320P)`. After the exhaustive output-cluster sum is placed in one orthogonal direct sum under each recombined root-spatial owner, the exact R-125 bridge gives `Forest_063/2-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2/2` with no root or visit multiplicity. A covariance-normal Gaussian shows that paying `A^2+B_e^2` separately is cutoff-divergent. Under pointwise `Gamma>=lambda I_6`, exact six-real negative moments control pointwise second and third quotient jets. The embedded production Pauli fourth jet has a positive-floor fixed-cone logarithmic divergence. A high-frequency unit-covariance Gaussian field proves that pointwise ellipticity alone does not control spatial fractional norms, so `gamma=7/12` is only an exponent window under the separate R-092 joint spatial hypotheses. Conditional on the still-missing owner-preserving R-087-self-atom to R-088-sequential-atom transfer and one-use ledger, exact summation gives square constants `0.6588816258726145` and `0.28592888585547915`. `EXP-000514--EXP-000524` preserve the reusable successes, failures, audit corrections, boundaries, and revisit conditions, including the distinction between exact moment data and uniform finite-moment caps. Both A13 gates and Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

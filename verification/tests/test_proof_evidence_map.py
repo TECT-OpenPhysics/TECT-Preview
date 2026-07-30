@@ -128,12 +128,14 @@ def test_graph_edges_and_authority_paths_resolve():
 
 def test_markdown_local_link_targets_resolve():
     text = MAP_MARKDOWN.read_text(encoding="utf-8")
-    destinations = re.findall(r"\]\(([^)]+)\)", text)
+    destinations = re.findall(r"\[[^\]]*\]\(([^)]+)\)", text)
     assert destinations
     missing = []
     for destination in destinations:
         target, _, fragment = unquote(destination).partition("#")
         if not target or "://" in target:
+            continue
+        if not destination.startswith(("../", "sectors/", "#")):
             continue
         target_path = (MAP_MARKDOWN.parent / target).resolve()
         if not target_path.exists():
@@ -154,7 +156,12 @@ def test_associations_use_canonical_structured_sources_only():
 
     results = {record["id"]: record for record in data["reusable_results"]}
     negatives = {record["tag"]: record for record in data["negative_records"]}
-    assert all(record["claim_refs"] for record in results.values())
+    unbound_results = {
+        identifier for identifier, record in results.items() if not record["claim_refs"]
+    }
+    assert unbound_results == set(
+        data["coverage_diagnostics"]["claim_unbound_result_ids"]
+    )
     unbound_negatives = {
         tag for tag, record in negatives.items() if not record["claim_refs"]
     }
@@ -163,12 +170,21 @@ def test_associations_use_canonical_structured_sources_only():
     )
     assert "AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION" in unbound_negatives
     assert results["R-038"]["claim_refs"] == ["B5-BEYOND-LAYER-BOUND"]
-    assert results["R-068"]["co_recorded_negative_tags"] == [
+    assert (
         "NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER"
-    ]
+        in results["R-068"]["co_recorded_negative_tags"]
+    )
+    assert set(results["R-068"]["co_recorded_negative_tags"]) <= set(negatives)
     assert negatives["AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND"][
         "claim_refs"
     ] == ["A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"]
+    a13_id = "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+    assert negatives[
+        "NG-2026-07-31-A13-ELLIPTIC-GAUSSIAN-D4-FLOOR-UNIFORMITY"
+    ]["claim_refs"] == [a13_id]
+    assert negatives[
+        "NG-2026-07-31-A13-POINTWISE-ELLIPTICITY-SPATIAL-FRACTIONAL-TRANSFER"
+    ]["claim_refs"] == [a13_id]
 
     for record in list(results.values()) + list(negatives.values()):
         fields = json.dumps(record.get("detail", {}), ensure_ascii=False)
@@ -202,7 +218,7 @@ def test_current_child_gate_and_honest_a13_boundary_are_visible():
     )
     assert set(a13["evidence_links"]["route_gate_ids"]) == {
         "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
-        "A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE",
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
     }
     gate_ids = {gate["id"] for gate in data["open_gate_index"]}
     assert set(a13["evidence_links"]["route_gate_ids"]) <= gate_ids

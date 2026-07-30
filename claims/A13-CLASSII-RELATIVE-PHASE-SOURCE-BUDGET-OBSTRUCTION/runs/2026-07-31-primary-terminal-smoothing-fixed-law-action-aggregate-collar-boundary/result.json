@@ -1,0 +1,434 @@
+{
+  "assertions": [
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "inputs",
+      "name": "r132_pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "inputs",
+      "name": "r133_pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/9",
+      "expected": "5/9",
+      "group": "inputs",
+      "name": "alpha",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/12",
+      "expected": "7/12",
+      "group": "inputs",
+      "name": "gamma",
+      "status": "PASS"
+    },
+    {
+      "actual": "169500000000/4000000000001",
+      "expected": "169500000000/4000000000001",
+      "group": "inputs",
+      "name": "beta_operator",
+      "status": "PASS"
+    },
+    {
+      "actual": "e*(e - rho)**2/(e + rho)**2",
+      "expected": "e*(-e + rho)**2/(e + rho)**2",
+      "group": "fixed_law_action",
+      "name": "row_remainder_square_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "9375000000/4000000000001",
+      "expected": "9375000000/4000000000001",
+      "group": "fixed_law_action",
+      "name": "six_row_remainder_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "ua**4 + 2*ua**2*ub**2 + 2*ua**2*uc**2 + 2*ua**2*ud**2 + ub**4 + 2*ub**2*uc**2 + 2*ub**2*ud**2 + uc**4 + 2*uc**2*ud**2 + ud**4",
+      "expected": "(ua**2 + ub**2 + uc**2 + ud**2)**2",
+      "group": "fixed_law_action",
+      "name": "pauli_fierz_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "62500000*(1808*A**2 - 120*sqrt(113)*A*B*sqrt(e) + 225*B**2*e)/4000000000001",
+      "expected": "6250000*(4*sqrt(4520000000001130)*A - 15*sqrt(40000000000010)*B*sqrt(e))**2/16000000000008000000000001",
+      "group": "fixed_law_action",
+      "name": "young_square_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "-10/81",
+      "expected": "-10/81",
+      "group": "finite_moment_no_go",
+      "name": "scaled_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "9*delta**4/4 + 63/20",
+      "expected": "9*delta**4/4 + 63/20",
+      "group": "finite_moment_no_go",
+      "name": "source_sextic_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "(1 - delta)**2/4",
+      "expected": "(delta - 1)**2/4",
+      "group": "finite_moment_no_go",
+      "name": "variance",
+      "status": "PASS"
+    },
+    {
+      "actual": "-937.498476563437504",
+      "expected": "< -900",
+      "group": "finite_moment_no_go",
+      "name": "production_floor_large_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "3"
+      ],
+      "expected": "contains 3",
+      "group": "density_repair",
+      "name": "derivative_ratio_critical",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/8",
+      "expected": "9/8",
+      "group": "density_repair",
+      "name": "derivative_ratio_max",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/8",
+      "expected": "3/8",
+      "group": "density_repair",
+      "name": "fprime_lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "25/18",
+      "expected": "25/18",
+      "group": "density_repair",
+      "name": "fpp_l1",
+      "status": "PASS"
+    },
+    {
+      "actual": "5*sqrt(3)/6",
+      "expected": "5*sqrt(3)/6",
+      "group": "density_repair",
+      "name": "sfpp_l1",
+      "status": "PASS"
+    },
+    {
+      "actual": "25/256",
+      "expected": "25/256",
+      "group": "density_repair",
+      "name": "fprime_variance_ceiling",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/4",
+      "expected": "1/4",
+      "group": "six_real_smoothing",
+      "name": "q2_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/8",
+      "expected": "1/8",
+      "group": "six_real_smoothing",
+      "name": "q4_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "oo",
+      "expected": "oo",
+      "group": "six_real_smoothing",
+      "name": "q6_pole",
+      "status": "PASS"
+    },
+    {
+      "actual": "14",
+      "expected": 14,
+      "group": "quotient_jets",
+      "name": "d2_pointwise_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "114",
+      "expected": 114,
+      "group": "quotient_jets",
+      "name": "d3_pointwise_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "49",
+      "expected": 49,
+      "group": "quotient_jets",
+      "name": "d2_l2_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "3249/2",
+      "expected": "3249/2",
+      "group": "quotient_jets",
+      "name": "d3_l2_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "derivative": "-24*(2*u + 5)/(u + 1)**4",
+        "positive_floor_scaled": "24*(u + 2)/(u + 1)**3",
+        "zero_floor": "48/r**3"
+      },
+      "expected": {
+        "derivative": "negative",
+        "positive_floor_min_on_u_0_1": 9,
+        "zero_floor": "48/r**3"
+      },
+      "group": "quotient_jets",
+      "name": "fourth_jet_witness",
+      "status": "PASS"
+    },
+    {
+      "actual": -1,
+      "expected": -1,
+      "group": "quotient_jets",
+      "name": "six_dimensional_radial_exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/12",
+      "expected": "< 2/3",
+      "group": "fractional_route",
+      "name": "gamma_below_sigma",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/3",
+      "expected": "< 3/4",
+      "group": "fractional_route",
+      "name": "sigma_below_theta",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "group": "fractional_route",
+      "name": "holder_pair",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/4",
+      "expected": "9/4",
+      "group": "fractional_route",
+      "name": "first_negative_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/2",
+      "expected": "9/2",
+      "group": "fractional_route",
+      "name": "second_negative_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/2",
+      "expected": "< 6",
+      "group": "fractional_route",
+      "name": "moments_subcritical",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "fractional_growth": "N**(2/3)",
+        "point_covariance": "1"
+      },
+      "expected": {
+        "fractional_growth": "infinite",
+        "point_covariance": 1
+      },
+      "group": "fractional_route",
+      "name": "pointwise_ellipticity_not_spatial_control",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/12",
+      "expected": "> 0",
+      "group": "aggregate_shell",
+      "name": "strict_exponent_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.658881625872614681",
+      "expected": "0.6588816258726145",
+      "group": "aggregate_shell",
+      "name": "b_constant_numeric",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.811715236935105636",
+      "expected": "0.811715236935106",
+      "group": "aggregate_shell",
+      "name": "b_amplitude_numeric",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.285928885855479118",
+      "expected": "0.28592888585547915",
+      "group": "aggregate_shell",
+      "name": "direct_constant_numeric",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.534723186195885018",
+      "expected": "0.534723186195885",
+      "group": "aggregate_shell",
+      "name": "direct_amplitude_numeric",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "aggregate_shell",
+      "name": "eta_stationary_at_s",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "> 1",
+      "group": "headroom",
+      "name": "adversarial_headroom_fails",
+      "status": "PASS"
+    },
+    {
+      "actual": "Lambda**4/(Lambda**4 + 2*Lambda**2 + 1)",
+      "expected": "Lambda**4/(Lambda**2 + 1)**2",
+      "group": "separate_absorption",
+      "name": "gradient_integrand",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "separate_absorption",
+      "name": "linear_asymptotic_slope",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 44,
+  "assertions_total": 44,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "diagnostics": {
+    "aggregate_shell": {
+      "conditional_B_amplitude_decimal": "0.811715236935105636",
+      "conditional_B_constant": "2**(1/3)/(128*(1 - 2**(1/3)/2)**2*(1 - 2**(5/6)/2))",
+      "conditional_B_constant_decimal": "0.658881625872614681",
+      "direct_fixed_collar_amplitude_decimal": "0.534723186195885018",
+      "direct_fixed_collar_constant": "2**(1/6)/(64*(1 - 2**(5/12)/2)**2*(1 - 2**(5/6)/4))",
+      "direct_fixed_collar_constant_decimal": "0.285928885855479118",
+      "production_atom_hypothesis": false,
+      "production_q_ledger": false
+    },
+    "density_repair": {
+      "fpp_l1": "25/18",
+      "fprime_interval": [
+        "3/8",
+        1
+      ],
+      "s_fpp_l1": "5*sqrt(3)*delta/6",
+      "variance_fprime_ceiling": "25/256"
+    },
+    "finite_moment_no_go": {
+      "all_positive_moments_bounded_by_one": true,
+      "delta": "1/1000000",
+      "production_counterexample": false,
+      "q_comp": "-937.498476563437504",
+      "scaled_limit_over_c1": "-10/81",
+      "source_plus_sextic": "12600000000000000000000009/4000000000000000000000000"
+    },
+    "fixed_law_action": {
+      "hessian_promotion": false,
+      "owner_identity": "P_comp = Forest_063_ad/2 - Var(C6e(W)V)/2",
+      "remainder_norm_squared_coefficient": "9375000000/4000000000001",
+      "variance_bound": "sd(C6e(W)V) <= sqrt(beta_op) A + alpha sqrt(c1) B_e"
+    },
+    "fractional_route": {
+      "holder_q": "6",
+      "p": "3",
+      "p_theta": "9/4",
+      "pointwise_ellipticity_alone_controls_spatial_fractional_norm": false,
+      "production_joint_value_gradient_hypotheses": false,
+      "production_uniform_terminal_ellipticity": false,
+      "sigma": "2/3",
+      "theta": "3/4",
+      "two_p_theta": "9/2"
+    },
+    "inputs": {
+      "alpha": "5/9",
+      "beta_operator": "169500000000/4000000000001",
+      "c0": "12000000000/4000000000001",
+      "c1": "30375000000/4000000000001",
+      "gamma": "7/12",
+      "p_mass": "4000000000001/1000000000000"
+    },
+    "remaining": {
+      "absolute_anchor": false,
+      "near_balanced_headroom": false,
+      "signed_forest_lower_bound": false,
+      "terminal_disintegration_owner_intertwining": false,
+      "terminal_innovation_uniform_full_rank": false,
+      "weighted_current_energy_once": false
+    },
+    "separate_absorption": {
+      "asymptotic_slope": 1,
+      "gradient_energy_primitive": "(Lambda + (2*Lambda - 3*atan(Lambda))*(Lambda**2 + 1))/(2*(Lambda**2 + 1))",
+      "signed_covariance_normal_combination_required": true,
+      "standalone_A2_plus_eB2_absorption": false
+    },
+    "six_real_smoothing": {
+      "constant_formula": "Gamma(3-q/2)/2^(1+q/2)",
+      "d2f_l2_over_lambda": "49",
+      "d3f_l2_over_lambda_squared": "3249/2",
+      "d4_positive_floor_axis": "24*r*(e + 2*r**2)/(e + r**2)**3",
+      "d4_scaled_axis_min_for_e_le_r2": 9,
+      "d4_witness": "48/r**3",
+      "q2": "1/4",
+      "q4": "1/8",
+      "q6": "logarithmically divergent"
+    }
+  },
+  "no_overclaim": "R-134 proves action-level, anti-concentration, jet-threshold, and conditional geometric-summation lemmas. It does not prove a production-uniform terminal innovation, a signed forest lower bound, the one-use atom hypotheses, near/balanced headroom, the absolute anchor, either A13 gate, or Sector A.",
+  "package_version": "1.0.0",
+  "result_id": "A13-CLASSII-TERMINAL-SMOOTHING-FIXED-LAW-ACTION-AGGREGATE-COLLAR-BOUNDARY",
+  "schema": "tect/a13-terminal-smoothing-fixed-law-action-aggregate-collar-boundary-primary/1.0",
+  "scope": {
+    "absolute_anchor": false,
+    "bounded_finite_moments_hessian_rescue_rejected": true,
+    "collar_uniform_headroom": false,
+    "conditional_one_use_square_summation_proved": true,
+    "fixed_collar_direct_summation_proved_conditionally": true,
+    "fixed_law_six_row_action_bridge_proved": true,
+    "floor_uniform_fourth_quotient_jet_rejected": true,
+    "floor_uniform_second_and_third_quotient_jets_proved_conditionally": true,
+    "fractional_gamma_7_12_window_proved_under_joint_spatial_hypotheses": true,
+    "pointwise_ellipticity_alone_spatial_transfer_rejected": true,
+    "production_joint_value_gradient_hypotheses": false,
+    "production_one_use_q_ledger": false,
+    "production_signed_forest_bound": false,
+    "production_terminal_ellipticity": false,
+    "sector_a_closed": false,
+    "six_real_negative_moment_theorem_proved": true
+  },
+  "status": "PASS"
+}

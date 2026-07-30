@@ -20,8 +20,10 @@ Changelog:
         increment 2: gather-by-reference instead of physical nesting).
   1.0.1 (2026-07-23) link scaffold claims without a generated INDEX.md to
         claim.md, eliminating broken dossier targets.
+  1.0.2 (2026-07-31) anchor modern negative tags at their primary claim family;
+        mathematical D2/D4/B4 tokens no longer create cross-sector links.
 """
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 import argparse, json, os, re, sys, tempfile
 from pathlib import Path
@@ -98,7 +100,25 @@ def load_predictions():
     return rows
 
 
-SEC_REF_RE = re.compile(r"\b([A-F]\d+)")
+SEC_REF_RE = re.compile(r"\b([A-F]\d+[A-Z]?)\b")
+PRIMARY_TAG_REF_RE = re.compile(
+    r"^(?:R|F|NG|AUDIT)-\d{4}-\d{2}-\d{2}-"
+    r"([A-F]\d+[A-Z]?)(?=-|$)"
+)
+
+
+def negative_references(tag, branch, body):
+    """Return explicit claim IDs and safe family references for one record."""
+    prose = " ".join([branch] + list(body))
+    claims = sorted(set(CLAIM_RE.findall(prose)))
+    primary = PRIMARY_TAG_REF_RE.match(tag)
+    if primary:
+        refs = {primary.group(1)}
+    else:
+        # Compatibility for legacy records lacking a date/family namespace.
+        refs = {match.group(1) for match in SEC_REF_RE.finditer(" ".join([tag, prose]))}
+    refs |= {claim.split("-", 1)[0] for claim in claims}
+    return claims, refs
 
 
 def load_negatives(prefix2sector):
@@ -115,10 +135,8 @@ def load_negatives(prefix2sector):
     def flush(c):
         if not c:
             return
-        text = " ".join([c["tag"], c["branch"]] + c.pop("body"))
-        claims = sorted(set(CLAIM_RE.findall(text)))
-        refs = {m.group(1) for m in SEC_REF_RE.finditer(text)}
-        refs |= {x.split("-", 1)[0] for x in claims}
+        body = c.pop("body")
+        claims, refs = negative_references(c["tag"], c["branch"], body)
         c["claims"] = claims
         c["sectors"] = sorted({prefix2sector[r] for r in refs if r in prefix2sector})
         out.append(c)

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-134](#r-134) | Terminal Gaussian jet threshold, floor-stable fixed-law action, and conditional gamma-7/12 aggregate-collar boundary | Scoped T4 analytic/exact/executed advance and adversarial correction. Complete Pauli summation gives the sharp floor residual `||C6e-C60||<=alpha sqrt(c1 e)|v|`, `alpha^2 c1=3/(320P)`. After exhaustive clusters are placed in one direct sum under each root-spatial owner, R-125 gives the root/visit-free action lower bound `Forest_063/2-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2/2`; separate payment is cutoff-divergent. Pointwise six-real ellipticity gives exact negative moments and D2/D3 quotient-jet costs, while the embedded Pauli D4 jet diverges logarithmically on a fixed cone. Pointwise ellipticity alone does not imply spatial fractional control. The gamma-7/12 geometric constants are exact only after assuming the missing joint spatial data, owner-preserving R-087-to-R-088 atom transfer, and one-use ledger. Headroom, low data, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-133](#r-133) | Affine Gaussian score transfer, predictable-feedback boundary, polynomial-response collar, and positive-gamma aggregate criterion | Scoped T4 analytic/exact/executed advance and route correction. A genuinely affine conditional Gaussian block has an exact derivative-free common-heat Hermite-score representation for the complete current--trace owner, with one-copy cost `D_Gamma` and paired cost `4D_Gamma`; common heat scores only the synchronous replica direction. The exact predictable-chart score is `delta^2(sym(a tensor b))-delta(d)`, but bounded triangular tanh feedback makes its inverse-Jacobian cost diverge under the currently declared finite-energy data. R-083 gives a conditional polynomial physical-response zero only at safe collar `C=4` after root-tower and covariance/forest matching. The exact periodic rational boundary layer scales as `b^7 e^(-3/2)` at fourth order, so the existing sixth-amplitude `gamma=4` route fails without constituting a literal production `B_4^out` counterexample. The exact low-coupled acceptance threshold is `a<2sqrt((e-k^2/d)(f-k^2/d))`; any proved positive-gamma aggregate tail can fit fixed headroom, but the one-use `gamma=7/12` tail, collar-uniform non-tail headroom, production constants, low data, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-132](#r-132) | Common-heat mixed replicas, Gaussian-ray source--sextic margin, and the shell-exponent boundary | Scoped T4 analytic/exact/executed advance and route correction. The fixed-law physical response has an exact common-heat paired-replica formula, and the complete six-row mixed Pauli--Fierz contraction is `c0 JJ+c1(JJ-alpha tau' JM-alpha tau MJ+alpha^2 tau tau' MM)`, with every floor denominator confined to `tau,tau'`. A 64-atom heat plus terminal sextic gives the diagonal comparison constant `9/10240`, but exact origin cancellation shows that this does not control the square of the conditional mean. An equal two-point rational-ray law has Hessian `-10 c1/(81 delta)+O(1)`, rejecting law-free floor uniformity without constituting a production counterexample. Standard-Gaussian score transfer instead gives a floor-uniform once-owned scalar-ray margin `m_G=0.76532075819349...>3/4`. R-083 polynomial vanishing remains narrow and R-091's `gamma=7/12` amplitude tail is too slow for the mixed/far targets; a complete `gamma=4` one-use estimate or stronger joint signed cancellation remains open, together with production `C_mix/C_far/c_bal`, low constants, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure |
 | [R-131](#r-131) | Owner-conditioned physical response, mixed-Gram information, shell-decay boundary, and stratified transversality | Scoped T4 analytic/exact/executed advance and route pruning. Given an owner-complete finite physical form, orthogonal shell coanalysis gives the exact endpoint factorization `R^*F=H` and preserves the response norm, so it creates no decay. The deterministic current-square component has the floor-uniform `H2` form coefficient `46959/(2000P)`. Opposite rotations prove that diagonal sample Grams do not determine mixed conditional response, while dyadic cosine multipliers force prototype mixed/far constants to grow as `2^(2m-r-1)` and `2^(4m-r-1)`; frozen-`Q` constants also miss `DQ`. The exact two/three-channel acceptance margins are retained. The Xi radial coefficient Gram has an active-stratum lower bound proportional to `lambda^2`, but a phase-invisible fixture rejects full-tangent coercivity after only the common-phase quotient and the radial coefficient degenerates at the pure-singlet transition. Any fixed finite-doublet-second-moment heat law also loses uniform transversality on large singlet rays. Production owner-complete response construction, `C_mix/C_far/c_bal`, low constants, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -152,6 +153,72 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-134"></a>
+### R-134 -- Terminal Gaussian jet threshold, floor-stable fixed-law action, and conditional gamma-7/12 aggregate-collar boundary
+
+**Result ID.**
+A13-CLASSII-TERMINAL-SMOOTHING-FIXED-LAW-ACTION-AGGREGATE-COLLAR-BOUNDARY.
+
+**Sharp action-level floor decomposition.**  Complete Pauli summation gives
+`||C_(6,e)(w)v-C_(6,0)(w)v|| <= alpha sqrt(c1 e)|v|` with the sharp
+coefficient `alpha^2 c1=3/(320P)`.  The R-125 bridge is a post-cluster
+identity: `o` indexes a recombined root-spatial owner and its exhaustive
+orthogonal output family is one direct-sum vector.  With
+`A^2=sum_(o,C) E|W_(o,C)|^2|V_(o,C)|^2`,
+`B_e^2=sum_(o,C)e_(o,C)E|V_(o,C)|^2`, and
+`F=sum_o E Forest_(063,o)^ad`, one Minkowski inequality proves
+`sum_o E P_(comp,o)>=F/2-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2/2`.
+There is no cluster allocation of the forest and no root or visit factor.
+
+**Pointwise six-real smoothing and the critical boundary.**  If
+`X=m+Gamma^(1/2)G` and `Gamma>=lambda I_6`, then for `0<q<6`,
+`E(e+|X|^2)^(-q/2)<=Gamma(3-q/2)lambda^(-q/2)/2^(1+q/2)`.
+Thus `C_(6,2)=1/4`, `C_(6,4)=1/8`,
+`E||D2F_S||^2<=49/lambda`, and
+`E||D3F_S||^2<=3249/(2lambda^2)`.  For the embedded Pauli
+`S3=diag(1,1,-1,-1,0,0)`, the positive-floor fourth axis derivative is
+`24r(e+2r^2)/(e+r^2)^3`, at least `9/r^3` for `r>=sqrt(e)`; compact angular
+continuity supplies a fixed open cone, hence logarithmic `L2` divergence.
+
+**Spatial scope correction.**  Pointwise ellipticity is not a spatial
+regularity theorem.  The exact field
+`zeta_N^a(x)=G_a cos(Nx)+H_a sin(Nx)` has covariance `I_6` at every point but
+fractional norm of order `N^sigma`.  The `gamma=7/12` exponent window is
+available only after separately assuming the R-092 joint value-gradient,
+increment, regression, Fubini, and Jensen data uniformly for all owners.
+
+**Conditional aggregate shell theorem.**  If `0<=k<=j`, `m>=j+5`, the
+R-088 sequential atoms obey
+`E_(jmk)<=2^(-2s(m-k))q_k`, and `sum_k q_k<=Q`, then
+`B_gamma^out<=2^(-10s)Q/[(1-2^-s)^2(1-2^(-2(s-gamma)))]` for `0<gamma<s`.
+At `(s,gamma)=(2/3,7/12)` the square and amplitude constants are
+`0.6588816258726145` and `0.811715236935106`; the direct fixed-collar values
+are `0.28592888585547915` and `0.534723186195885`.  R-087 already proves an
+expectation-inside estimate for its self atom.  The owner-preserving transfer
+to every R-088 sequential atom and the once-owned `q_k` sum remain unproved.
+
+**Adversarial boundaries.**  The exact two-point source-plus-sextic value is
+`63/20+(9/4)delta^4`, not exactly `3.15`.  The density and quotient-jet
+constants are derived in both executables rather than pasted.  Separate
+`A^2+B_e^2` absorption is cutoff-divergent, and the narrow absolute terminal
+packet does not remove past covariance or earlier-root feedback.
+
+**Where proved.**  Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, the R-134 note, three
+executable audits, manifest, JSON artefacts, `EXP-000514--EXP-000524`, and
+three formal negative results.
+
+**Reuse scope.**  Sharp complete-frame floor removal; post-cluster direct-sum
+action algebra; pointwise six-real anti-concentration and quotient-jet
+thresholds; conditional geometric shell summation; and the recorded method
+boundaries.  No pointwise-to-spatial promotion is allowed.
+
+**Tier:** T4 at fixed finite cutoff and positive floor.  Production terminal
+reservation and joint spatial data, signed forest-current, R-087-to-R-088 atom
+transfer, one-use ledger, near/balanced headroom, low matrix, matching energy,
+strict gap, absolute anchor, both A13 gates, `OVERLAP_src`, Nelson, removals,
+the interacting measure, and Sector-A closure remain open.
 
 <a id="r-133"></a>
 ### R-133 -- Affine Gaussian score transfer, predictable-feedback boundary, polynomial-response collar, and positive-gamma aggregate criterion

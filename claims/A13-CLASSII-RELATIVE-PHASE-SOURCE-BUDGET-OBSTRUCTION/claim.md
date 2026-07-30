@@ -4608,3 +4608,29 @@ T5--T7 promotion remain open. Tier stays T4.
   a strict augmented gap, the absolute anchor, both A13 gates,
   `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
   open; tier stays T4.
+- 2026-07-31: Registered
+  `A13-CLASSII-TERMINAL-SMOOTHING-FIXED-LAW-ACTION-AGGREGATE-COLLAR-BOUNDARY`
+  (R-134). Summing all three rational Pauli rows before estimating gives the
+  sharp floor residual `||C6e-C60||<=alpha sqrt(c1 e)|v|`, with
+  `alpha^2 c1=3/(320P)`. The exhaustive output clusters are placed in one
+  orthogonal direct sum under each recombined root-spatial owner before the
+  R-125 half-factor is used, giving a root/visit-free action lower bound by
+  `Forest_063/2-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2/2`. Separate
+  `A^2+B_e^2` payment is cutoff-divergent. Under `Gamma>=lambda I_6`, sharp
+  negative moments give pointwise quotient-jet costs `49/lambda` and
+  `3249/(2lambda^2)`. The embedded production Pauli `S3` fourth jet has a
+  positive-floor fixed-cone logarithmic divergence. Pointwise ellipticity
+  alone does not control spatial fractional norms; `gamma=7/12` is only a
+  viable exponent window under the separate R-092 joint spatial hypotheses.
+  Conditional on the still-missing R-087-self-atom to R-088-sequential-atom
+  transfer and one-use `q_k` ledger, the exact aggregate square constant is
+  `0.6588816258726145` and the direct fixed-collar constant is
+  `0.28592888585547915`. `EXP-000514--EXP-000524` record the advances,
+  failures, corrections, boundaries, evidence, and revisit conditions; three
+  formal no-gos are registered. Primary `44/44` and non-importing independent
+  `35/35` pass; integrated, PDF, and release counts are pinned in the R-134
+  manifest. Production terminal reservation and joint spatial data, signed
+  forest-current theorem, atom transfer, one-use ledger, headroom, low data,
+  matching energy, strict gap, absolute anchor, both A13 gates,
+  `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
+  open; tier stays T4.

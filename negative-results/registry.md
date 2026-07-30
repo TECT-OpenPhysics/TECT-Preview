@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-31-A13-ELLIPTIC-GAUSSIAN-D4-FLOOR-UNIFORMITY](#ng-2026-07-31-a13-elliptic-gaussian-d4-floor-uniformity) | use a uniformly elliptic six-real terminal Gaussian to obtain a density-floor-uniform L2 fourth rational quotient jet | for the embedded Pauli generator S3=diag(1,1,-1,-1,0,0), the positive-floor axis derivative is 24r(e+2r^2)/(e+r^2)^3 and is at least 9/r^3 for r>=sqrt(e); continuity supplies a fixed open cone, so the squared six-dimensional Gaussian integral diverges logarithmically |
+| [NG-2026-07-31-A13-POINTWISE-ELLIPTICITY-SPATIAL-FRACTIONAL-TRANSFER](#ng-2026-07-31-a13-pointwise-ellipticity-spatial-fractional-transfer) | infer a spatial fractional whole-product estimate from a pointwise six-real covariance lower bound alone | zeta_N^a(x)=G_a cos(Nx)+H_a sin(Nx) has covariance I_6 at every point while every positive spatial fractional norm grows like N^sigma; joint value-gradient and spatial moment data are separate hypotheses |
+| [NG-2026-07-31-A13-SEPARATE-FLOOR-WEIGHTED-CURRENT-ENERGY-ABSORPTION](#ng-2026-07-31-a13-separate-floor-weighted-current-energy-absorption) | pay the zero-floor weighted current energy and floor remainder separately by cutoff-uniform source and terminal-sextic budgets | the zero-control covariance-normal Gaussian has bounded value sixth moment and zero source cost but E|W|^2|grad W|^2 of order Lambda; the R-063 forest must remain coupled to cancel this derivative divergence |
 | [AUDIT-2026-07-31-A13-R132-POLYNOMIAL-RESPONSE-INTERTWINER-SCOPE](#audit-2026-07-31-a13-r132-polynomial-response-intertwiner-scope) | promote the R-083 stopped polynomial-current zero directly to the R-132 owner-complete physical response at collar three | the paired response has one extra product-support step, a positive common-heat Gram, and the R-125 future-variance/forest residual; zero far response is conditional at safe collar four on a root intertwiner and covariance/forest matching |
 | [NG-2026-07-31-A13-PREDICTABLE-SCORE-FINITE-ENERGY-TRANSFER](#ng-2026-07-31-a13-predictable-score-finite-energy-transfer) | extend affine Gaussian score transfer to all finite-energy predictable controls using triangularity or determinant one | the bounded smooth strict-triangular family `h_N=(0,a tanh(N xi_1))` has uniformly bounded source amplitude and terminal moments while `E||J_hN^-1 e_1||^2` grows at least linearly in `N` |
 | [NG-2026-07-31-A13-GAMMA-FOUR-SIXTH-AMPLITUDE-ROUTE](#ng-2026-07-31-a13-gamma-four-sixth-amplitude-route) | derive a complete rational gamma-four shell ledger from the joint Pauli--Fierz coefficient algebra and the existing sixth-amplitude or extracted `Z^6` budget | the exact joint rational boundary layer has fourth-order sharp-Fourier surrogate proportional to `b^7 e^(-3/2)`, while the once-owned sextic is proportional to `b^6`; gamma four requires a seventh amplitude moment in this route |
@@ -203,6 +206,88 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-07-31-a13-elliptic-gaussian-d4-floor-uniformity"></a>
+### NG-2026-07-31-A13-ELLIPTIC-GAUSSIAN-D4-FLOOR-UNIFORMITY -- six-real ellipticity is critical at the fourth rational jet
+
+**Claim / route.**  Add a uniformly nondegenerate six-real Gaussian terminal
+innovation and use negative moments to restore a density-floor-uniform
+`L2` bound for the fourth derivative of the normalized production quotient.
+
+**Failure mode.**  Take the embedded production Pauli generator
+`S_3=diag(1,1,-1,-1,0,0)` and the plane
+`x=(r,0,y,0,0,0)`.  At zero floor the first quotient component is
+`F_1=r(r^2-y^2)/(r^2+y^2)`, so
+`partial_y^4 F_1(r,0)=48/r^3`.  At positive floor the exact derivative is
+`24 r(e+2r^2)/(e+r^2)^3`; for `r>=sqrt(e)` its product with `r^3` is at
+least nine.  Joint continuity in the scale ratio `e/r^2` and the angular
+variable supplies one fixed open cone and a uniform lower bound `c r^-3`.
+The squared six-dimensional Gaussian integral on that cone therefore
+contains `c^2 integral_(sqrt(e))^1 r^5 r^-6 dr`, which grows like
+`log(1/e)`.
+
+**Evidence.**  R-134 proof note, Sections 6--8; primary exact fourth-jet and
+radial-exponent checks; independent series-coefficient and logarithmic-growth
+checks; R-092 normalized quotient identity.
+
+**Consequence.**  Uniform six-real ellipticity does give sharp negative
+moments below order six and therefore floor-uniform pointwise `D2` and `D3`
+quotient jets.  It does not give a floor-uniform `L2` fourth jet.  This rejects
+only the elliptic-Gaussian fourth-jet repair; the fractional exponent window
+remains live under the separate joint spatial hypotheses, as do complete
+signed cancellations and other non-`D4` architectures.
+
+<a id="ng-2026-07-31-a13-pointwise-ellipticity-spatial-fractional-transfer"></a>
+### NG-2026-07-31-A13-POINTWISE-ELLIPTICITY-SPATIAL-FRACTIONAL-TRANSFER -- pointwise anti-concentration does not control spatial oscillation
+
+**Claim / route.**  Use only a pointwise conditional covariance lower bound
+`Gamma(x)>=lambda I_6` for a terminal Gaussian field to infer a uniform
+spatial `W^(sigma,p)` coefficient estimate and hence the R-092 whole-product
+bound.
+
+**Failure mode.**  On the torus let `G_a,H_a`, `1<=a<=6`, be independent
+standard Gaussians and set
+`zeta_N^a(x)=G_a cos(Nx)+H_a sin(Nx)`.  At every point the six components are
+independent with covariance exactly `I_6`, uniformly in `N`.  In contrast,
+translation or Fourier scaling gives a positive fractional seminorm of order
+`N^sigma` for every `sigma>0`.  The value-gradient and derivative moments
+therefore grow although pointwise anti-concentration is unchanged.
+
+**Evidence.**  R-134 proof note, Section 8; primary symbolic covariance and
+fractional-growth check; non-importing independent frequency-growth check;
+R-092 whole-product right side and R-104 terminal-scope audit.
+
+**Consequence.**  The six-real negative-moment theorem controls inverse
+denominators only.  A spatial fractional conclusion additionally requires
+owner-uniform joint value-gradient moments, regression/increment estimates,
+and the Fubini/Jensen conditions appearing in the R-092 right side.  This is
+not a counterexample to the production terminal field if those additional
+data are proved.
+
+<a id="ng-2026-07-31-a13-separate-floor-weighted-current-energy-absorption"></a>
+### NG-2026-07-31-A13-SEPARATE-FLOOR-WEIGHTED-CURRENT-ENERGY-ABSORPTION -- separate absolute action payments destroy the covariance-normal cancellation
+
+**Claim / route.**  After writing `C_(6,e)=C_(6,0)+R_e`, bound the weighted
+zero-floor energy `A^2=E integral |W|^2|grad W|^2` and the floor remainder
+`B_e^2=e E integral |grad W|^2` separately by a cutoff-uniform constant plus
+source and once-owned terminal sextic.
+
+**Failure mode.**  For the zero-control cutoff Gaussian with production
+covariance comparable to `<k>^-4 I` in three dimensions, real-even covariance
+makes `W_Lambda(x)` and `grad W_Lambda(x)` independent.  The value variance
+and sixth moment stay bounded, while the gradient variance and hence `A^2`
+grow linearly in `Lambda`; `B_e^2` grows like `e Lambda`.  The source cost is
+zero.  Thus no cutoff-independent separate absorption can hold.
+
+**Evidence.**  R-134 proof note, Sections 3--4 and 11; primary exact radial
+primitive and asymptotic-slope checks; independent continuum-slope check;
+R-063 same-regulator covariance-normal reconstruction; R-125 forest bridge.
+
+**Consequence.**  The sharp floor decomposition and owner-direct-sum action
+inequality remain valid.  The next theorem must estimate the signed
+`Forest_063-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2` combination before absolute
+values, with source and sextic used once.  This is a method no-go, not a
+counterexample to the complete covariance-normal action or Nelson theorem.
 
 <a id="audit-2026-07-31-a13-r132-polynomial-response-intertwiner-scope"></a>
 ### AUDIT-2026-07-31-A13-R132-POLYNOMIAL-RESPONSE-INTERTWINER-SCOPE -- stopped-current support is not the complete physical response

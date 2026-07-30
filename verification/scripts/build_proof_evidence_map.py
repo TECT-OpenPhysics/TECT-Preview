@@ -12,7 +12,7 @@ Usage:
     python verification/scripts/build_proof_evidence_map.py --self-test
 """
 
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 
 import argparse
 import hashlib
@@ -609,6 +609,10 @@ def attach_negative_claim_references(
 ) -> None:
     known, families = claim_reference_context(cards)
     tag_family = re.compile(r"(?:^|-)([A-F]\d+[A-Z]?)(?=-|$)")
+    primary_tag_family = re.compile(
+        r"^(?:R|F|NG|AUDIT)-\d{4}-\d{2}-\d{2}-"
+        r"([A-F]\d+[A-Z]?)(?=-|$)"
+    )
     leading_family = re.compile(r"^\s*`?([A-F]\d+[A-Z]?)(?=\s|/|`|-)")
     parenthetical = re.compile(r"\(([^()]*)\)")
     slash_families = re.compile(
@@ -631,7 +635,11 @@ def attach_negative_claim_references(
             if identifier in known
         }
         basis = {identifier: "structured_exact" for identifier in refs}
-        structural_families = set(tag_family.findall(str(record["tag"])))
+        tag = str(record["tag"])
+        primary = primary_tag_family.match(tag)
+        structural_families = (
+            {primary.group(1)} if primary else set(tag_family.findall(tag))
+        )
         for value in (record.get("branch", ""), record.get("detail_title", "")):
             match = leading_family.match(collapse(value))
             if match:
