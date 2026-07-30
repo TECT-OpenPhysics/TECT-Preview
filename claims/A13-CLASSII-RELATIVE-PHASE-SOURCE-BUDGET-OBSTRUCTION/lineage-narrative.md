@@ -838,6 +838,26 @@ endpoint theorem.
     `c_bal`, matching energy, low transversality or `D,K,R0,S0`, and an
     absolute anchor. Both A13 gates and Sector A remain open at T4.
 
+59. **Owner-conditioned physical response and the mixed-Gram shell
+    boundary.** R-131 factors any supplied finite-cylinder owner-complete
+    physical form exactly as `R=C L_pred` and
+    `F=C(Q_comp+Q_6)L_pred`, with the source Hessian kept outside the
+    pullback, and proves one floor-uniform deterministic current-square
+    `H^2` component. The proof search then separates four unavailable
+    inferences by exact counterfixtures: diagonal sample Grams do not recover
+    the mixed conditional Gram, bounded multipliers alone do not yield mixed
+    or far shell decay, a natural common-phase-horizontal quotient does not
+    identify the full `Xi` tangent metric, and no fixed heat law with finite
+    doublet second moment is uniformly transverse along large pure-singlet
+    rays. The surviving positive results are the exact conditional
+    three-channel acceptance simplex and an active-stratum lower bound for the
+    `Xi` radial coefficient pair; neither is a full production response
+    theorem. The fixed heat obstruction redirects the live route toward a
+    mixed-replica sextic transversal response, with production `C_mix`,
+    `C_far`, `c_bal`, low data, matching energy, a strict augmented gap, and
+    an absolute anchor still unproved. Both A13 gates and Sector A remain open
+    at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

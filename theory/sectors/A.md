@@ -45,6 +45,10 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-31-A13-DIAGONAL-GRAM-TO-MIXED-CONDITIONAL-RESPONSE | diagonal sample Grams do not determine the mixed conditional |  |
+| NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY | bounded frozen coefficients supply no automatic dyadic off-d |  |
+| NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY | one fixed heat law does not uniformly fill the Xi singlet de |  |
+| NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION | one common-phase quotient does not turn the Xi coefficient s |  |
 | NG-2026-07-31-A13-UNWEIGHTED-RATIONAL-D2-FLOOR-UNIFORMITY | separated rational second derivatives are not floor-uniform |  |
 | NG-2026-07-31-A13-COMPLETE-LOW-SQUARE-STRICT-GAP-REFINEMENT | a complete Gram square supplies no automatic strict gap or c |  |
 | AUDIT-2026-07-30-A13-COVARIANCE-NORMAL-DOMINANCE-ACTION-DIRECTION | covariance-normal dominance has the wrong direction for the  |  |

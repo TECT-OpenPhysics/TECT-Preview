@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-131](#r-131) | Owner-conditioned physical response, mixed-Gram information, shell-decay boundary, and stratified transversality | Scoped T4 analytic/exact/executed advance and route pruning. Given an owner-complete finite physical form, orthogonal shell coanalysis gives the exact endpoint factorization `R^*F=H` and preserves the response norm, so it creates no decay. The deterministic current-square component has the floor-uniform `H2` form coefficient `46959/(2000P)`. Opposite rotations prove that diagonal sample Grams do not determine mixed conditional response, while dyadic cosine multipliers force prototype mixed/far constants to grow as `2^(2m-r-1)` and `2^(4m-r-1)`; frozen-`Q` constants also miss `DQ`. The exact two/three-channel acceptance margins are retained. The Xi radial coefficient Gram has an active-stratum lower bound proportional to `lambda^2`, but a phase-invisible fixture rejects full-tangent coercivity after only the common-phase quotient and the radial coefficient degenerates at the pure-singlet transition. Any fixed finite-doublet-second-moment heat law also loses uniform transversality on large singlet rays. Production owner-complete response construction, `C_mix/C_far/c_bal`, low constants, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-130](#r-130) | Post-recombined terminal coordinate, conormal Gram envelopes, sharp balanced bridge, and direct-low response boundary | Scoped T4 analytic/exact/executed advance. After exhaustive current recombination, the R-082 `Xi` coordinate admits an exact fixed-filtration Doob and matching once-owned trace recode, but not arbitrary legacy-root transport or matching energy without `mu=0` and `Sigma_c=Gamma`. The R-123 action owner has a canonical response-before-pullback construction on finite cylinders; exact kernel fixtures keep the `9I/10` source cost outside the physical pullback, while a uniform production response remains open. The fixed six-row Gram obeys pointwise constants `L6=1143/(250P)` and `H6=7083/(500P)`, with physical force `L6/2`, Hessian `H6`, and Taylor remainder `H6/2`. A scalar boundary layer proves that separated rational `D2C` is not floor-uniform. The sharp deterministic balanced bridge has constant one; the local Cartan diagnostic is `0.520915...` of the old-budget ceiling, but no global `c_bal` upper bound follows. A centered-heat direct-low candidate and complete-Gram PSD Schur theorem are proved, while historical R-079 low-owner equivalence, a strict gap, childwise refinement, production `C_mix/C_far/c_bal`, the absolute anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-129](#r-129) | Endpoint trace-excess direction, shell coanalysis legal reverse, and the shifted-Douglas gap boundary | Scoped T4 analytic/exact/executed advance and route correction. The exact identity `E_CN=P_comp+V/2>=P_comp` holds only at an absolute conditional endpoint and has the wrong direction for lower-bounding the smaller R-123 action owner; exact endpoint and secant fixtures prevent that bypass. Direct covariance-normal differentiation cancels every conditional-mean derivative, and a Gaussian family proves that separate `H_V` and `H_T` norm bounds are not logically necessary if a direct signed bound is proved. For an owner-complete physical response `A`, orthogonal physical-shell analysis `R=C L_pred` and response analysis `F=C A` give `H=R^*F=F^*R`; the true aggregate reverse is legal, shell-count-free, and has the forward norm without assuming temporal covariance/shell commutation. It is not a swapped-label geometric band, and pullback costs `||L_pred||`. The shifted-Douglas theorem gives an exact prescribed-gap criterion and the norm threshold `k^2<d m_2`, with `m_2=0.0239601163...` only in the R-128 zero-diagonal specialization. Production response identification, forward constants, balanced/low/anchor data, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-128](#r-128) | Owner-complete source pullback, covariance-normal force repair, and the strict-margin frontier | Scoped T4 analytic/exact/executed correction and advance: differentiating the exact R-104 renormalized-interaction owner identity on a fixed smooth temporally faithful chart gives the recombined legal control covector and common Hessian, with pullback conjugacy under fixed bounded linear refinements; R-119 remains the prior authority for common control-Hessian factorisation. Bounded smooth fixtures separate control-shift from Malliavin differentiation and expose both feedback Jacobian and connection terms. The complete R-125 covariance-normal force is `(g_V-g_T)/2`, not the naked R-126 trace-excess force; the sextic and source-cost derivatives are included explicitly. Rootwise adaptation does not imply a common terminal, and one-sided projection does not supply a reverse adjoint. Reallocating half of the flexible R-103 debts gives the conditional zero-diagonal threshold `0.9780518670...` and margin `0.0239601163...` at the old R-126 budget, but no general margin follows before adverse diagonal blocks are absorbed. Full force completion and full Hessian payment would double-spend the source square. The production root/shell intertwiner, corrected covariance-normal operator bound, balanced/low matrix, absolute anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -149,6 +150,70 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-131"></a>
+### R-131 -- Owner-conditioned physical response, mixed-Gram information, shell-decay boundary, and stratified transversality
+
+**Result ID.**
+A13-CLASSII-OWNER-COMPLETE-PHYSICAL-RESPONSE-MIXED-GRAM-SHELL-BOUNDARY.
+
+**Conditional response and deterministic component.**  Once an
+owner-complete finite physical Riesz form `Q_comp+Q6` is supplied, orthogonal
+shell coanalysis of `L_pred` and `(Q_comp+Q6)L_pred` gives exactly
+`R^*F=L_pred^*(Q_comp+Q6)L_pred` and preserves the response analysis norm.
+The source Hessian `9I/10` remains outside the physical kernel.  Separately,
+the deterministic current-square component has the floor-uniform form bound
+
+`|D2 E_cur(u)[z,w]| <= C_(H2->Linf)^2 [46959/(2000P)] ||u||_H2^2 ||z||_H2 ||w||_H2`.
+
+This does not construct or uniformly bound the complete production response.
+
+**Mixed-Gram and shell boundaries.**  Opposite rotations have constant
+sample Grams but conditional-mean-square curvature `-2`, proving that
+diagonal Gram derivatives cannot recover the mixed replica response.
+Multiplication by `cos((2^m-2^r)x)` has unit supremum and transfers mode
+`2^r` to `2^m` with coefficient `1/2`, forcing prototype constants
+`C_mix>=2^(2m-r-1)` and `C_far>=2^(4m-r-1)`.  Consecutive-shell executable
+witnesses verify growth ratios four and sixteen.  These are inference no-gos,
+not production counterexamples; complete-owner spatial cancellation remains
+viable.
+
+**Acceptance and transversality.**  For residual diagonals
+`e=2eta-r0`, `f=2zeta-s0` and full cross norm `a`, the exact two-channel
+margin is
+
+`m2=(e+f-sqrt((e-f)^2+a^2))/2`.
+
+If `D>=dI` and the low coupling has norm `k`, then `k^2<d m2` gives
+
+`mu3=(m2+d-sqrt((m2-d)^2+4k^2))/2>0`.
+
+The Xi radial Gram has determinant `c0 c1 lambda^2` and, on the physical
+domain `0<=lambda<=5/9`, lower eigenvalue at least
+`c0 c1 lambda^2/(c0+c1)`.  This is sharp in order and therefore degenerates
+at the pure-singlet transition.  This is a radial coefficient-pair bound,
+not a full-tangent metric theorem: `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i`
+is common-phase horizontal with `a=s=h=0` but weighted tangent norm two.
+A fixed heat law with finite doublet second moment also has vanishing averaged
+transverse response along large singlet rays by dominated convergence.  The
+explicit 64-atom full-coordinate product Rademacher heat is positive at each
+finite amplitude and collapses to four distinct response values because its
+doublet radius is fixed.  The once-owned sextic ray Hessian is `(9/2)T^4`.
+
+**Proven in.**  A13 proof note
+`classii-owner-complete-physical-response-mixed-gram-shell-boundary-260731-v1.0`;
+primary 69/69 and non-importing standard-library independent 61/61 audits.
+
+**Reuse scope.**  Conditional response factorization, deterministic
+current-square form control, mixed-Gram information firewalls, dyadic
+multiplier counterfixtures, exact acceptance matrices, and stratified
+radial-coefficient transversality diagnostics, together with the explicit
+common-phase full-tangent identification no-go.
+
+**Tier:** T4 at fixed finite cutoff and positive floor.  Production
+`C_mix`, `C_far`, `c_bal`, low `D/K/R0/S0`, matching energy, the absolute
+anchor, both A13 gates, `OVERLAP_src`, Nelson, removals, the interacting
+measure, and Sector-A closure remain open.
 
 <a id="r-130"></a>
 ### R-130 -- Post-recombined terminal coordinate, conormal Gram envelopes, sharp balanced bridge, and direct-low response boundary

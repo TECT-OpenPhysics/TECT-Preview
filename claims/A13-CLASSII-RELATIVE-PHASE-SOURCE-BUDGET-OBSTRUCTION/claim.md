@@ -4504,3 +4504,36 @@ T5--T7 promotion remain open. Tier stays T4.
   equivalence, strict low gap, matching energy, absolute anchor,
   `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
   open; tier stays T4.
+- 2026-07-31: Registered
+  `A13-CLASSII-OWNER-COMPLETE-PHYSICAL-RESPONSE-MIXED-GRAM-SHELL-BOUNDARY`
+  (R-131). Given an owner-complete finite physical form, orthogonal shell
+  coanalysis now factors the endpoint exactly as `R^*F=H` and preserves the
+  response analysis norm; this is a conditional factorization and does not
+  construct the production form. The deterministic current-square component
+  has a floor-uniform `H2` Hessian form coefficient `46959/(2000P)`. Opposite
+  rotations prove that diagonal sample Grams cannot determine the mixed
+  conditional response. Exact dyadic cosine witnesses at modes `2^r` and
+  `2^m` prove that bounded frozen coefficients do not imply the required
+  mixed/far shell decay; consecutive output shells force constant-growth
+  ratios four and sixteen, and separate state-dependent fixtures show that
+  frozen-`Q` envelopes do not control `DQ`. The complete two-channel and
+  low-coupled acceptance margins are fixed exactly. The `Xi` radial
+  coefficient Gram has an active-stratum lower bound proportional to
+  `lambda^2` on the production domain, but a common-phase-horizontal
+  counterfixture shows that it is not a full-tangent metric theorem, and the
+  radial coefficient degenerates at the pure-singlet transition. Dominated
+  convergence proves that any one fixed heat law with finite doublet second
+  moment also loses uniform transversality on large singlet rays; the explicit
+  64-atom full-coordinate product Rademacher fixture is positive at every
+  finite amplitude. The once-owned sextic ray
+  Hessian `(9/2)T^4` identifies a promising complement but is not yet coupled
+  to the complete response, low block, matching energy, or absolute anchor.
+  `EXP-000483--EXP-000495` preserve the complete owner audit, positive
+  components, failed inferences, inconclusive diagnostics, corrected draft
+  defects, boundaries, and revisit conditions. Four formal no-gos promote
+  the reusable mixed-Gram, bounded-multiplier, phase-horizontal-metric, and
+  fixed-heat failures. Primary and non-importing standard-library independent
+  checks pass. Production owner-complete response construction,
+  `C_mix`, `C_far`, `c_bal`, low `D/K/R0/S0`, matching energy, the strict
+  augmented gap, absolute anchor, both A13 gates, `OVERLAP_src`, Nelson,
+  removals, interacting measure, and Sector A remain open; tier stays T4.

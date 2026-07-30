@@ -1,0 +1,682 @@
+% =============================================================================
+% Title: Owner-conditioned physical response, mixed-Gram information, shell-decay boundary, and stratified transversality
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-OWNER-COMPLETE-PHYSICAL-RESPONSE-MIXED-GRAM-SHELL-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-31; this version issued 2026-07-31
+% Status: scoped T4 analytic/exact/executed advance; both A13 gates and Sector A remain open
+% =============================================================================
+
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+
+R-130 fixed the post-recombined terminal coordinate, the order ``physical
+response first, predictable pullback second'', the pointwise six-row Gram
+envelopes, the sharp deterministic balanced bridge, and a direct-low
+candidate.  It did not construct the owner-complete production response or
+the shell constants required by T-050.  R-131 tests that frontier from four
+independent directions.
+
+\begin{enumerate}
+\item It writes the exact finite-cylinder Hessian response after all owners
+have been assembled and proves the orthogonal coanalysis identity
+$R^*F=H_{\rm endpoint}$.  This is a conditional factorization theorem: an
+owner-complete physical form is an input, not a result of the matrix fixture.
+\item It extracts a floor-uniform $H^2$ form bound for the deterministic
+current-square component, with exact coefficient
+$46959/(2000P)$ before the Sobolev embedding constant.
+\item It proves that diagonal sample Grams and bounded pointwise multipliers
+do not determine the mixed conditional response or the required dyadic shell
+decay.  These are method no-go results, not counterexamples to the production
+theorem.
+\item It derives the exact two-channel and low-coupled acceptance formulas,
+an active-stratum lower bound for the radial coefficient Gram of $\Xi$, the
+common-phase full-tangent identification no-go, and a fixed-heat
+non-uniformity theorem.  These identify a viable successor route while
+showing why neither $\Xi$ nor a fixed heat alone supplies a global gap.
+\end{enumerate}
+
+The result is T4 at fixed finite cutoff and positive floor.  It proves no
+production $C_{\rm mix}$, $C_{\rm far}$, $c_{\rm bal}$, $R_0$, $S_0$, $d$,
+$k$, matching-energy theorem, absolute anchor, strict augmented gap,
+$\mathrm{OVERLAP}_{\rm src}$, Nelson estimate, removal theorem, interacting
+measure, Sector-A closure, or T5--T7 promotion.
+
+\section*{2. One-use owner ledger}
+
+The R-123 action owner, after all current, trace, heat, forest, rational,
+Cartan, and low coordinates have been assembled, is
+\[
+ \boxed{
+ \cA_J(h)=
+ \sum_{k,\cC}\E\,\cP^{\rm comp}_{k,\cC}
+ +{9\over20}\E\sum_k\|h_k\|^2
+ +{3\over20}\E\|Z_K\|_6^6,}                       \qquad\text{(2.1)}
+\]
+\[
+ \boxed{\cP_{\rm comp}={1\over2}\|\Phi\|^2
+                 -{1\over2}\Theta.}                \qquad\text{(2.2)}
+\]
+The source coefficient $9/20$ therefore produces the Hessian coefficient
+$9/10$.  The terminal sextic coefficient $3/20$ occurs once after terminal
+aggregation.  Heat is internal to $P_\Sigma(C^TC)$, and the R-063 forest is
+an alternate expansion of the same trace owner.  Neither is an additional
+positive reserve.
+
+For the A1 Class-II coefficients, put
+\[
+ P=M_X^2+\varepsilon_m=4+10^{-12},                  \qquad\text{(2.3)}
+\]
+\[
+ a={c_{JJ}\alpha_X^2\over P},\qquad
+ b={c_{JK}\alpha_X\beta_X\over P},\qquad
+ c={c_{KK}\beta_X^2\over P}.                       \qquad\text{(2.4)}
+\]
+Completing the square from the manifest inputs, rather than pasting derived
+constants, gives
+\[
+ \alpha={c\over b+c}={5\over9},\qquad
+ c_1={(b+c)^2\over c}={243\over8000P},\qquad
+ c_0=a-{b^2\over c}={3\over250P}.                  \qquad\text{(2.5)}
+\]
+Thus
+\[
+ \beta_{\rm op}=4(c_0+c_1)={339\over2000P}.         \qquad\text{(2.6)}
+\]
+
+There are two distinct Cartan quantities.  The controlled regular FAR square
+has coefficient
+\[
+                     4\alpha^2c_1={3\over80P},      \qquad\text{(2.7)}
+\]
+and occurs once only on the R-103 regular no-revisit class.  The live local
+rational curl is
+\[
+ -{40\over729}+{2720\over729}={2680\over729},       \qquad\text{(2.8)}
+\]
+so the oriented energy coefficient is
+\[
+ c_C={1\over2}{2680\over729}c_1={67\over1200P},     \qquad\text{(2.9)}
+\]
+and the doubled full-cross coefficient is $67/(600P)$.  Equations (2.7) and
+(2.9) are not two copies of one owner.
+
+\section*{3. Conditional finite-cylinder response theorem}
+
+Let $z,w$ be cylindrical physical variations and let $E_f$ be the fixed
+conditional expectation associated with the assembled packet.  Differentiating
+(2.2) before any source pullback gives the complete physical bilinear form
+\[
+\begin{split}
+ \beta_{\rm comp}(z,w)=\sum_{k,\cC}\E\bigl\{
+ &\Rea\ip{E_f\dot J_z}{E_f\dot J_w}
+ +\Rea\ip{\Phi}{E_f\ddot J_{z,w}}\\
+ &\hspace{27mm}-{1\over2}D^2\Theta[z,w]\bigr\}.
+\end{split}                                           \qquad\text{(3.1)}
+\]
+Let $Q_{\rm comp}$ be its physical Riesz representative, let $Q_6$ be the
+Hessian of the once-owned terminal sextic, and let $L_{\rm pred}$ be the
+physical synthesis of a predictable source.  Then
+\[
+ D^2\cA_J(h)= {9\over10}I
+ +L_{\rm pred}^*(Q_{\rm comp}+Q_6)L_{\rm pred}.      \qquad\text{(3.2)}
+\]
+The source term is outside the physical pullback.  If
+$v\in\Ker L_{\rm pred}$, the second term in (3.2) vanishes while
+\[
+                      \ip{v}{(9/10)Iv}={9\over10}\|v\|^2. \qquad\text{(3.3)}
+\]
+
+Let $\mathfrak Cx=(\Pi_mx)_m$ be orthogonal shell coanalysis, and define
+\[
+ R=\mathfrak C L_{\rm pred},\qquad
+ F=\mathfrak C(Q_{\rm comp}+Q_6)L_{\rm pred}.       \qquad\text{(3.4)}
+\]
+Since $\sum_m\Pi_m=I$ on the finite cylinder,
+\[
+ \boxed{R^*F
+ =L_{\rm pred}^*\Bigl(\sum_m\Pi_m\Bigr)
+ (Q_{\rm comp}+Q_6)L_{\rm pred}
+ =H_{\rm endpoint}.}                                \qquad\text{(3.5)}
+\]
+The reverse expression is the adjoint of the same owner, not a second
+reserve.  Moreover
+\[
+ \|F\|_{\ell^2_m}^2
+ =\|(Q_{\rm comp}+Q_6)L_{\rm pred}\|^2.             \qquad\text{(3.6)}
+\]
+Thus orthogonal shell analysis preserves the full response norm; it creates
+no off-diagonal decay by itself.
+
+The primary exact matrix fixture takes an arbitrary symmetric
+$Q_{\rm comp}$, a positive $Q_6$, and a synthesis with one vertical kernel.
+Writing $A=(Q_{\rm comp}+Q_6)L_{\rm pred}$, it checks (3.2)--(3.6), including
+$F^*F=A^*A$.  The arbitrary fixture proves
+the factorization once an owner-complete form is supplied.  It does not
+construct the production $Q_{\rm comp}$ or prove that it is uniformly
+bounded in cutoff, floor, chart, control, filtration, visit, or shell.
+
+\section*{4. A floor-uniform deterministic current-square component}
+
+Consider only the deterministic current-square energy
+\[
+ E_{\rm cur}(u)={1\over2}\int\sum_i
+ \ip{D_i u}{B_e(u)D_i u}\,\dd x.                   \qquad\text{(4.1)}
+\]
+R-130 proved the pointwise complete-Gram contraction envelopes
+\[
+ \|B_e(u)\|\leq\beta_{\rm op}|u|^2,
+\quad
+ \|DB_e(u)[z]\|\leq L_6|u||z|,
+\quad
+ {1\over2}|D^2(B_e:Q)(u)[z,z]|
+ \leq H_6\|Q\|_{\rm op}|z|^2                    \qquad\text{(4.2)}
+\]
+with
+\[
+ L_6={1143\over250P},\qquad H_6={7083\over500P}.   \qquad\text{(4.3)}
+\]
+These constants are imported from the independently verified R-130
+authority.  They are not reconstructed from hidden hardcoded frame numbers.
+
+Differentiating (4.1) twice in a diagonal direction gives the three exact
+multiplicities
+\[
+\begin{split}
+ |D^2E_{\rm cur}(u)[z,z]|
+ \leq\int\{&\beta_{\rm op}|u|^2|Dz|^2
+ +2L_6|u||z||Du||Dz|\\
+ &+H_6|z|^2|Du|^2\}\,\dd x.                       \qquad\text{(4.4)}
+\end{split}
+\]
+The $H^2(\mathbb T^3)\hookrightarrow L^\infty$ embedding and Cauchy give
+\[
+ \boxed{
+ |D^2E_{\rm cur}(u)[z,w]|
+ \leq C_{H^2\to L^\infty}^2 K_{\rm diag}
+ \|u\|_{H^2}^2\|z\|_{H^2}\|w\|_{H^2},}           \qquad\text{(4.5)}
+\]
+where polarization is used for $z,w$ and
+\[
+ K_{\rm diag}=\beta_{\rm op}+2L_6+H_6
+ ={46959\over2000P}.                                \qquad\text{(4.6)}
+\]
+This is a genuine floor-uniform component theorem.  It includes neither the
+conditional mixed Gram, the trace, heat, forest, rational, Cartan, low, nor
+chart-response derivatives.  Consequently (4.5) is not the production
+$C_{\rm mix}$ or $C_{\rm far}$ theorem.
+
+\section*{5. Diagonal Gram data do not determine the mixed response}
+
+For a random frame $C_f$ and payload $V_f$, the conditional mean square is
+the replica expression
+\[
+ \left\|\E_f C_fV_f\right\|^2
+ =\E_{f,f'}\ip{V_f}{C_f^*C_{f'}V_{f'}}.             \qquad\text{(5.1)}
+\]
+It depends on the mixed Gram $C_f^*C_{f'}$, not only on the diagonal sample
+Gram $C_f^*C_f$.
+
+On a two-point probability space set
+\[
+ C_+(t)=\begin{pmatrix}\cos t&-\sin t\\
+                        \sin t& \cos t\end{pmatrix},
+ \qquad C_-(t)=C_+(-t).                              \qquad\text{(5.2)}
+\]
+Every sample satisfies
+\[
+                         C_\pm(t)^*C_\pm(t)=I,       \qquad\text{(5.3)}
+\]
+so all derivatives of the diagonal Gram vanish.  But
+\[
+ \E C_f(t)=\cos t\,I,
+ \qquad \|\E C_f(t)v\|^2=\cos^2t\,\|v\|^2,        \qquad\text{(5.4)}
+\]
+and hence, for $\|v\|=1$,
+\[
+ {\dd^2\over\dd t^2}\|\E C_f(t)v\|^2\big|_{t=0}=-2. \qquad\text{(5.5)}
+\]
+The independent verifier repeats the separation with rational rotations
+having entries $4/5$ and $3/5$.  Therefore no argument using only the R-130
+diagonal Gram constants can determine the mixed conditional response.  A
+production proof must retain the full conditional replica Gram, including
+trace, heat, forest, rational, Cartan, and paid owners before absolute values.
+
+This is the formal no-go
+\texttt{NG-2026-07-31-A13-DIAGONAL-GRAM-TO-MIXED-CONDITIONAL-RESPONSE}.
+It refutes an inference from incomplete data, not the desired production
+estimate itself.
+
+\section*{6. Bounded multipliers do not imply dyadic shell decay}
+
+Let $r<m$, set $n_r=2^r$, $n_m=2^m$, and put
+\[
+ Q_{m,r}(x)=\cos((n_m-n_r)x),\qquad \|Q_{m,r}\|_\infty=1. \qquad\text{(6.1)}
+\]
+Here $\Pi_j$ is the Laurent-coordinate projection onto the single mode
+$e^{in_jx}$ in this prototype.  It is not an assertion about which boundary
+mode a particular smooth production Littlewood--Paley window assigns to
+shell $j$; equivalently, the two modes may be moved into any chosen interior
+lattice coordinates of two separated windows.
+Multiplication of $e^{in_rx}$ by $Q_{m,r}$ has Fourier coefficient $1/2$
+at $n_m$.  Thus
+\[
+                  \|\Pi_mM_{Q_{m,r}}\Pi_r\|\geq{1\over2}. \qquad\text{(6.2)}
+\]
+If pointwise boundedness alone implied prototype estimates
+\[
+ \|\Pi_mM_Q\Pi_r\|\leq C_{\rm mix}2^{r-2m},
+ \qquad
+ \|\Pi_mM_Q\Pi_r\|\leq C_{\rm far}2^{r-4m},        \qquad\text{(6.3)}
+\]
+then (6.2) would force
+\[
+ C_{\rm mix}\geq2^{2m-r-1},
+ \qquad C_{\rm far}\geq2^{4m-r-1}.                 \qquad\text{(6.4)}
+\]
+For the executed test $r=3,m=19$, these are $2^{34}$ and $2^{72}$.
+They diverge with $m$.  The selected shell coefficient $1/2$ must not be
+confused with the multiplier supremum $1$.
+
+Frozen coefficient derivatives also miss state dependence.  With
+$B(u)=u^2$ and $Q_n(u)=\sin(2\pi n u)$,
+\[
+ {\dd\over\dd u}\{u^2Q_n(u)\}\big|_{u=1}=2\pi n,  \qquad\text{(6.5)}
+\]
+while the frozen-$Q$ $B$ derivatives are unchanged.  The independent route
+uses a bounded rational alternative to reach the same conclusion.  Thus
+$L_6,H_6$ alone do not control $DQ$ or the shell variation of a complete
+state-dependent response.
+
+This is the formal no-go
+\texttt{NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY}.  A
+production-specific paraproduct, commutator, or complete-Gram cancellation
+theorem may still supply the missing decay.
+
+\section*{7. Exact conditional acceptance simplex}
+
+Let the remaining source and sextic diagonals after all once-owned charges be
+\[
+                    e=2\eta-r_0,
+ \qquad             f=2\zeta-s_0.                  \qquad\text{(7.1)}
+\]
+If $a$ is the full cross norm after all owners have been assembled, and
+$e,f\geq0$, the two-channel matrix is positive semidefinite when
+\[
+                         a\leq2\sqrt{ef}.            \qquad\text{(7.2)}
+\]
+It is positive definite when $e,f>0$ and the inequality is strict; equality
+in (7.2) gives zero lower margin.
+Its exact lower margin is
+\[
+ m_2={e+f-\sqrt{(e-f)^2+a^2}\over2}.                \qquad\text{(7.3)}
+\]
+For a low block $D\succeq dI$ coupled with norm $k$, a strict sufficient
+condition is
+\[
+                          k^2<dm_2,                 \qquad\text{(7.4)}
+\]
+and the resulting three-channel margin is
+\[
+ \mu_3={m_2+d-\sqrt{(m_2-d)^2+4k^2}\over2}>0.       \qquad\text{(7.5)}
+\]
+An affine absolute anchor additionally needs the Douglas range condition and
+the reduced-solution cost.  Semidefiniteness alone is insufficient.
+
+The complete cross majorant must have the convention
+\[
+\begin{split}
+ a\leq{}&2C_{\rm br}|c_{\rm bal}|\\
+ &+\ell\left[
+ \sqrt{8/7}\,C_{\rm mix}2^{-j_0-2C}
+ +\sqrt{224/223}\,C_{\rm far}2^{-3j_0-4C}\right]
+ +a_{\rm residual},                                 \qquad\text{(7.6)}
+\end{split}
+\]
+where $\ell=1$ only if the reported constants already include the legal
+source pullback.  Otherwise the R-129 factor $\|L_{\rm pred}\|$ is still
+required.
+
+For the old zero-diagonal diagnostic, recompute the symbol constant exactly
+from A1:
+\[
+ c_{\rm sym}={26000000000947494031
+ \over239930905990000000000},
+ \qquad A_0=c_{\rm sym}^{-1},
+ \qquad C_{\rm br}=\sqrt{32A_0}.                    \qquad\text{(7.7)}
+\]
+The rounded A8 JSON value is used only as a tolerance check.  With
+\[
+ \eta_0={197\over440}-2c_0,
+ \quad \zeta_0={3\over25},
+ \quad K_0=4\sqrt{\eta_0\zeta_0},                  \qquad\text{(7.8)}
+\]
+the local Cartan cross is
+\[
+ A_C^{\rm eff}=2C_{\rm br}c_C=0.4797278958\ldots,
+ \quad K_0=0.9209323339\ldots .                    \qquad\text{(7.9)}
+\]
+It occupies $0.5209154659\ldots$ of that diagnostic ceiling and leaves
+$0.4412044381\ldots$.  At collar $C=1$ the remaining checksum is
+\[
+ 0.2672612419\,C_{\rm mix}2^{-j_0}
+ +0.06263997778\,C_{\rm far}2^{-3j_0}
+ \leq0.4412044381.                                  \qquad\text{(7.10)}
+\]
+This is a viability filter only.  The production constants and all
+same-channel debts remain unknown, and the old source/sextic reserves cannot
+be spent once to complete a force and again to pay its Hessian.
+
+\section*{8. Stratified $\Xi$ transversality}
+
+Write
+\[
+ a=\Rea(u^*v),\qquad s=\Rea(\bar\chi w),\qquad
+ h=u_1v_2-u_2v_1,                                   \qquad\text{(8.1)}
+\]
+\[
+ r=|u|^2,\qquad \rho=r+|\chi|^2,\qquad
+ d=\rho+\varepsilon_\rho,
+ \qquad \lambda={\alpha r\over d}.                \qquad\text{(8.2)}
+\]
+Because $0\leq\lambda\leq\alpha=5/9<1$, the exact R-130 coordinate gives
+\[
+ {1\over4}\|\Xi\|^2
+ =c_0a^2+c_1\{(1-\lambda)a-\lambda s\}^2
+ +(c_0+c_1)|h|^2.                                   \qquad\text{(8.3)}
+\]
+The radial $(a,s)$ Gram is
+\[
+ G_\lambda=
+ \begin{pmatrix}
+ c_0+c_1(1-\lambda)^2&-c_1\lambda(1-\lambda)\\
+ -c_1\lambda(1-\lambda)&c_1\lambda^2
+ \end{pmatrix}.                                     \qquad\text{(8.4)}
+\]
+Its trace and determinant are
+\[
+ T_\lambda=c_0+c_1\{(1-\lambda)^2+\lambda^2\},
+ \qquad \det G_\lambda=c_0c_1\lambda^2.           \qquad\text{(8.5)}
+\]
+The eigenvalues are
+\[
+ \lambda_\pm={T_\lambda\pm
+ \sqrt{T_\lambda^2-4c_0c_1\lambda^2}\over2}.       \qquad\text{(8.6)}
+\]
+On $0\leq\lambda\leq1$,
+$T_\lambda\leq c_0+c_1$.  Since $G_\lambda\succeq0$,
+\[
+ \boxed{
+ \lambda_-(G_\lambda)
+ ={\det G_\lambda\over\lambda_+(G_\lambda)}
+ \geq{c_0c_1\over c_0+c_1}\lambda^2.}             \qquad\text{(8.7)}
+\]
+(8.7) is a quantitative lower bound for the radial coefficient pair $(a,s)$,
+and (8.3) separately retains the wedge channel $(c_0+c_1)|h|^2$.  It is not
+a coercive estimate for the full tangent norm under only the natural common
+phase-horizontal condition
+$\Im(u^*v+\bar\chi w)=0$, which is real-metric orthogonality to
+$(iu,i\chi)$.  Indeed, with
+$u=(1,0)$, $\chi=1$, $v=(i,0)$, and $w=-i$, one has $a=s=h=0$ while
+$r|v|^2+|\chi|^2|w|^2=2$.  Thus the tempting full-norm identification is
+false; only the explicitly displayed coefficient seminorm is controlled.
+This is recorded as
+\texttt{NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION}.
+The radial spectral order itself is sharp because
+\[
+ \lim_{\lambda\downarrow0}{\lambda_-(G_\lambda)\over\lambda^2}
+ ={c_0c_1\over c_0+c_1}.                            \qquad\text{(8.8)}
+\]
+At a pure singlet, the coefficient decays like $r^2/d^2$.  Hence neither
+(8.7) nor the wedge channel extends to a state-uniform positive metric gap
+for the full tangent space.  The radial calculation sharpens the stratified
+coefficient geometry but does not revive the retired global
+metric-error-bound route.
+
+\section*{9. Fixed heat cannot supply a uniform transverse gap}
+
+Take the background $(u,\chi)=(0,T)$ and the aligned singlet variation
+$(v,w)=(0,1)$.  Add a fixed heat sample $(U,X)$ and put $R=|U|^2$.  The
+relevant $\Xi$ output is
+\[
+ 4c_1\alpha^2R^2
+ {\{\Rea(T+X)\}^2\over
+  \{R+|T+X|^2+\varepsilon_\rho\}^2}.                \qquad\text{(9.1)}
+\]
+For every fixed heat sample this tends to zero as $T\to\infty$.  If
+$y=|T+X|^2$, then
+\[
+ {R^2y\over(R+y+\varepsilon_\rho)^2}
+ \leq{R^2\over4(R+\varepsilon_\rho)}\leq{R\over4}, \qquad\text{(9.2)}
+\]
+because
+\[
+ (R+\varepsilon_\rho+y)^2-4(R+\varepsilon_\rho)y
+ =(y-R-\varepsilon_\rho)^2.                         \qquad\text{(9.3)}
+\]
+Thus dominated convergence applies to any fixed heat with finite doublet
+second moment, and the averaged contribution also tends to zero.  The
+executed 64-atom product Rademacher law has zero mean and identity covariance
+in all six real heat coordinates.  Its four doublet signs give the constant
+radius $R=4$ and integrate out, so (9.1) collapses to four distinct singlet
+values, each with multiplicity sixteen.  Its response is positive at every
+finite $T$ but has the exact asymptotic
+\[
+ \lim_{T\to\infty}T^2H(T)=4c_1\alpha^2R^2.          \qquad\text{(9.4)}
+\]
+
+This proves
+\texttt{NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY}.
+It does not exclude state-dependent or scale-adapted heat, nor a coupled
+source-sextic-response argument.  Indeed the once-owned sextic has aligned
+ray Hessian
+\[
+ {\dd^2\over\dd t^2}{3\over20}(T+t)^6\big|_{t=0}
+ ={9\over2}T^4.                                      \qquad\text{(9.5)}
+\]
+This supplies large-amplitude curvature, but its complete interaction with
+the mixed response, low block, covariance defect, and absolute anchor has not
+been proved.
+
+\section*{10. Proof-search evidence map}
+
+Every substantive route below is recorded in the append-only exploration
+ledger as EXP-000483--EXP-000495.  The table is a compact view, not a
+replacement for the exact question, finite checks, evidence, boundary, and
+revisit condition in those records.
+
+\begin{center}
+\begin{tabular}{p{0.34\linewidth}p{0.16\linewidth}p{0.40\linewidth}}
+\hline
+Route & Verdict & Boundary or next condition\\
+\hline
+Complete owner census & advanced & Use (2.1) once; no heat/forest/source or
+Cartan duplication.\\
+Physical response then pullback & advanced conditionally & Production
+$Q_{\rm comp}$ and uniform norm still missing.\\
+Deterministic current $H^2$ form & advanced & Component only; coefficient is
+$46959/(2000P)$.\\
+Diagonal Gram controls mixed response & failed & Retain $C_f^*C_{f'}$.\\
+Bounded multiplier gives shell decay & failed & Need production spatial
+regularity or cancellation.\\
+Frozen-$Q$ envelopes control $DQ$ & failed & Differentiate the full response.\\
+Two/three-channel acceptance & advanced conditionally & Supply
+$C_{\rm mix},C_{\rm far},c_{\rm bal},R_0,S_0,d,k$.\\
+Local Cartan old-budget test & viable diagnostic & Not a global operator
+bound; no budget reuse.\\
+$\Xi$ radial coefficient-pair coercivity & advanced & Degenerates
+quadratically in $\lambda$; wedge retained separately.\\
+Common-phase quotient gives full-tangent coercivity & failed & A
+phase-invisible tangent has coefficient seminorm zero and weighted norm two.\\
+$\Xi$ gives a global gap & failed & Pure-singlet transition has quartic
+energy decay.\\
+Fixed heat gives uniform fill & failed & Any fixed law vanishes on large
+singlet rays.\\
+Sextic repairs the complement & inconclusive & Prove the complete coupled
+three-channel form and anchor.\\
+\hline
+\end{tabular}
+\end{center}
+
+The route pruning is material.  Repeating diagonal-Gram differentiation,
+bounded-multiplier shelling, or fixed-heat transversality cannot close T-050.
+The live route is an owner-complete mixed-replica multiplier theorem with a
+state- and scale-adapted transverse complement, followed by the exact
+acceptance matrix (7.3)--(7.5) and the R-129 shifted-Douglas anchor.
+
+\section*{11. Devil's-advocate review and corrected draft defects}
+
+\begin{enumerate}
+\item \textbf{Objection: the finite matrix fixture constructs the production
+owner-complete response.  UPHELD.}  It proves only the conditional
+factorization (3.5); production owner completeness and uniform boundedness
+remain open.
+\item \textbf{Objection: the first Fourier fixture used shell labels as
+Fourier frequencies.  VALID WITH MITIGATION.}  The released fixture uses
+the actual modes $2^r,2^m$ and shift $2^m-2^r$.
+\item \textbf{Objection: the selected coefficient $1/2$ was called the
+multiplier supremum.  VALID WITH MITIGATION.}  The released text separates
+the shell coefficient $1/2$ from $\|Q\|_\infty=1$.
+\item \textbf{Objection: the $\Xi$ lower bound was stated for all
+$\lambda\geq0$.  VALID WITH MITIGATION.}  Equation (8.7) is restricted to
+$0\leq\lambda\leq1$, and production has $\lambda\leq5/9$.
+\item \textbf{Objection: the A8 rounded $c_{\rm sym}$ was treated as exact.
+VALID WITH MITIGATION.}  The released programs recompute (7.7) from A1 and
+use A8 only as a decimal regression.
+\item \textbf{Objection: derived A1 coefficients and R-130 frame constants
+were hardcoded.  VALID WITH MITIGATION.}  The released programs derive
+$a,b,c,\alpha,c_0,c_1$ from A1 and import hash-pinned $L_6,H_6$ from R-130.
+\item \textbf{Objection: diagonal Gram regularity controls the conditional
+mean square.  UPHELD against the inference.}  Equations (5.2)--(5.5) give an
+exact counterfixture.
+\item \textbf{Objection: a bounded complete coefficient already has dyadic
+decay.  UPHELD against the inference.}  Equation (6.2) saturates a distant
+shell with coefficient $1/2$.
+\item \textbf{Objection: (4.5) is the missing complete production response.
+UPHELD.}  It is only the deterministic current-square component.
+\item \textbf{Objection: the local Cartan ratio proves global acceptance.
+UPHELD.}  It omits the complete mixed, far, same-channel, and low owners.
+\item \textbf{Objection: the $\Xi$ radial coefficient bound controls the
+full tangent norm after only the natural common-phase quotient.  UPHELD.}
+The explicit phase-invisible fixture after (8.7) has $a=s=h=0$ but nonzero
+tangent norm, and the sharp radial coefficient in (8.8) also vanishes as
+$\lambda^2$.
+\item \textbf{Objection: any fixed finite-moment heat restores a uniform gap.
+UPHELD against the claim.}  Dominated convergence proves the fixed-law
+failure in Section 9.
+\item \textbf{Objection: the sextic ray Hessian closes the complement.
+UPHELD as an objection to closure.}  It is promising but has not been coupled
+to the complete response, low block, and anchor.
+\item \textbf{Objection: the source and sextic may be reused after force
+completion.  UPHELD against reuse.}  Their coefficients are imported from
+the one-use R-103 budget, and the source Hessian stays outside the physical
+kernel.
+\item \textbf{Objection: R-131 closes A13 or Sector A.  DISMISSED.}  The
+listed production constants, matching energy, anchor, and downstream Nelson
+chain remain open.
+\end{enumerate}
+
+\section*{12. Executed evidence and reproduction}
+
+The primary program uses SymPy exact algebra.  It reads A1 and the accepted
+R-103, R-124, and R-130 evidence, derives every new constant from those
+sources, checks the conditional response identity, exact counterfixtures,
+acceptance polynomials, $\Xi$ spectrum, and heat boundary, and writes its JSON
+atomically.  The independent program uses only the Python standard library;
+it does not import or read the R-131 primary output.  It uses rational matrix
+and rotation algebra, a Laurent-mode fixture, an exact bounded rational state
+multiplier, stable eigenvalues, and a 64-atom heat covariance audit with a
+collapsed four-value response.
+
+Run
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe \
+  codes/foundations/a13_classii_owner_complete_physical_response_mixed_gram_shell_boundary.py
+
+E:\Dev\TECT.venv\Scripts\python.exe \
+  codes/foundations/a13_classii_owner_complete_physical_response_mixed_gram_shell_boundary_independent.py
+\end{verbatim}
+The child outputs are
+\begin{verbatim}
+R-131 primary PASS: 69/69
+R-131 independent PASS: 61/61
+\end{verbatim}
+The integrated verifier reruns both children, checks cross-route constants,
+authority and file hashes, exact exploration and negative records, note/PDF
+pairing, PDF security and text, rendered-page identity, generated public
+surfaces, and the explicit false scope flags.
+
+\section*{13. Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-OWNER-COMPLETE-PHYSICAL-RESPONSE-MIXED-GRAM-
+  SHELL-BOUNDARY (R-131).
+Precise statement: the action owner and one-use coefficients are fixed in
+  Section 2; Section 3 proves the finite-cylinder response factorization
+  conditional on an owner-complete physical form; Section 4 proves the
+  deterministic current-square H2 component bound with coefficient
+  46959/(2000P); Sections 5 and 6 prove the diagonal-Gram and bounded-
+  multiplier inference no-gos; Section 7 proves the conditional acceptance
+  simplex; Section 8 proves the stratified Xi radial coefficient bound and
+  the natural phase-horizontal full-norm no-go; Section 9 proves fixed-heat
+  non-uniformity and records the sextic complement.
+Scope: fixed finite cutoff and positive floor; conditional owner-complete
+  finite physical form for the factorization; deterministic current-square
+  component for the H2 bound; method counterfixtures for mixed Gram and shell
+  inference; production Xi range 0<=lambda<=5/9.
+Dependencies: A1, A8; R-103, R-120, R-121, R-123, R-124, R-128, R-129,
+  and R-130.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_owner_complete_physical_response_mixed_
+  gram_shell_boundary_verify.py
+Expected output: R-131 integrated PASS; primary 69/69 and independent 61/61;
+  manifest, PDF, exploration, negative-result, and generated-surface gates
+  pass with deterministic integrated JSON.
+Falsification gate: failure of the A1 completed-square coefficients; R-103
+  source/sextic one-use factors; R-130 L6/H6 import; conditional R*F response
+  identity; deterministic H2 coefficient; rotation or dyadic Fourier
+  counterfixture; bounded rational derivative fixture; acceptance polynomial;
+  Xi radial spectrum/domain certificate or common-phase full-norm
+  counterfixture; 64-atom product-heat covariance and collapsed response;
+  heat domination/asymptotic; any authority/hash, PDF, exploration, registry,
+  or public-surface check.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no construction or uniform bound of the production
+  owner-complete response, C_mix, C_far, c_bal, R0, S0, d, k, matching energy,
+  absolute anchor, strict augmented gap, OVERLAP_src, Nelson, removal,
+  interacting measure, Sector-A closure, or T5--T7 result follows.
+Next required action: prove an owner-complete mixed-replica spatial multiplier
+  theorem retaining trace, heat, forest, rational, Cartan, and low owners;
+  combine it with a state/scale-adapted transverse source-sextic complement;
+  compute the full acceptance matrix and apply the R-129 shifted-Douglas
+  anchor without double spending.
+Proof complete: false.  Sector A closed: false.
+\end{verbatim}
+
+\paragraph{No-overclaim footer.}
+R-131 proves a conditional finite-cylinder factorization, one deterministic
+current-square $H^2$ component bound, four scoped no-gos, an exact conditional
+acceptance simplex, stratified $\Xi$ radial-coefficient coercivity, and
+fixed-heat non-uniformity.
+It does not construct or uniformly bound the owner-complete production
+response; prove complete $C_{\rm mix}$, $C_{\rm far}$, $c_{\rm bal}$, low
+constants, full-tangent $\Xi$ coercivity, matching energy, or an anchor;
+close either A13 gate; establish
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, an interacting measure, or
+Sector A; or promote any claim to T5--T7.
+
+\endgroup

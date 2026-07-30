@@ -193,6 +193,107 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+| [NG-2026-07-31-A13-DIAGONAL-GRAM-TO-MIXED-CONDITIONAL-RESPONSE](#ng-2026-07-31-a13-diagonal-gram-to-mixed-conditional-response) | infer the complete conditional response from diagonal sample-Gram derivatives | opposite rotations have constant diagonal Gram but conditional-mean-square curvature -2, so the mixed replica Gram is indispensable |
+| [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
+| [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
+| [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-07-31-a13-diagonal-gram-to-mixed-conditional-response"></a>
+### NG-2026-07-31-A13-DIAGONAL-GRAM-TO-MIXED-CONDITIONAL-RESPONSE -- diagonal sample Grams do not determine the mixed conditional response
+
+**Claim / route.**  Derive the owner-complete conditional response and its
+Hessian from the R-130 pointwise bounds on the diagonal sample Gram
+`C_f^* C_f`, without retaining the two-replica kernel `C_f^* C_f'`.
+
+**Failure mode.**  On a two-point space take `C_+(t)` and `C_-(t)` to be
+rotations by `+t` and `-t`.  Each diagonal Gram is exactly the identity for
+all `t`, so all of its derivatives vanish.  However, the conditional mean is
+`cos(t) I`, and the squared norm of its action on a unit vector is
+`cos(t)^2`, whose second derivative at zero is `-2`.  An independent rational
+rotation fixture with entries `4/5` and `3/5` gives the same information
+separation without trigonometric symbolic algebra.
+
+**Evidence.**  R-131 proof note, Section 5; primary exact rotation and
+replica audit; independent rational-matrix audit.
+
+**Consequence.**  Diagonal Gram regularity cannot determine the mixed
+conditional response.  The production proof must retain the full replica
+Gram with trace, heat, forest, rational, Cartan, and paid owners before
+absolute values.  This is an inference no-go, not a production counterexample.
+
+<a id="ng-2026-07-31-a13-bounded-multiplier-to-shell-decay"></a>
+### NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY -- bounded frozen coefficients supply no automatic dyadic off-diagonal decay
+
+**Claim / route.**  Deduce the required `C_mix` and `C_far` shell estimates
+from a uniform pointwise bound on a frozen complete coefficient, with no
+additional spatial regularity or commutator cancellation.
+
+**Failure mode.**  For shell labels `r<m`, let the input Fourier mode be
+`n_r=2^r`, the output mode `n_m=2^m`, and
+`Q_(m,r)(x)=cos((n_m-n_r)x)`.  Then `||Q_(m,r)||_infinity=1`, but multiplication
+transfers the input to the output with coefficient `1/2`.  Prototype mixed
+and far bounds force respectively
+`C_mix>=2^(2m-r-1)` and `C_far>=2^(4m-r-1)`.  Executed witnesses at consecutive
+output shells verify growth ratios four and sixteen.  Separately, bounded
+state-dependent multipliers can have arbitrarily large first derivatives,
+which frozen-`Q` Gram envelopes do not see.
+
+**Evidence.**  R-131 proof note, Section 6; exact Laurent-mode primary and
+independent audits at `r=3`, `m=19,20`; distinct state-derivative fixtures.
+
+**Consequence.**  Pointwise boundedness and frozen-Gram derivative constants
+alone cannot yield production shell decay.  A production-specific
+paraproduct, commutator, coefficient-Sobolev, or complete-owner cancellation
+theorem remains viable.
+
+<a id="ng-2026-07-31-a13-fixed-heat-uniform-transversality"></a>
+### NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY -- one fixed heat law does not uniformly fill the Xi singlet degeneration
+
+**Claim / route.**  Repair the pure-singlet degeneration of the Xi Gram by
+convolving once with an arbitrary fixed heat law having finite doublet second
+moment, and infer a state-uniform positive transverse gap.
+
+**Failure mode.**  At background `(u,chi)=(0,T)` with aligned singlet tangent,
+the heat-sample contribution is
+`4 c1 alpha^2 R^2 Re(T+X)^2/(R+|T+X|^2+e)^2`, where `R=|U|^2`.  It tends to
+zero pointwise as `T` grows and is dominated by `c1 alpha^2 R`; dominated
+convergence therefore makes its fixed-law average vanish.  A 64-atom
+six-real-coordinate product Rademacher heat has identity covariance and is
+positive at each finite amplitude but decays like `T^(-2)` with the exact
+scaled limit recorded by R-131.  Its constant doublet radius reduces the
+executed response average to four distinct singlet values, each occurring
+with multiplicity sixteen.
+
+**Evidence.**  R-131 proof note, Section 9; exact SymPy asymptotic and
+domination identity; independent 64-atom covariance audit and collapsed
+four-value response evaluation.
+
+**Consequence.**  Fixed heat alone cannot provide the global transverse gap.
+State- or scale-adapted heat and a coupled source-sextic-response theorem are
+not refuted; the once-owned sextic has aligned ray Hessian `(9/2)T^4`.
+
+<a id="ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification"></a>
+### NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION -- one common-phase quotient does not turn the Xi coefficient seminorm into the full tangent norm
+
+**Claim / route.**  Upgrade the R-131 radial `(a,s)` Gram and wedge channel
+to a lower bound for the complete weighted tangent norm by imposing only the
+natural common-phase horizontal condition.
+
+**Failure mode.**  Take `u=(1,0)`, `chi=1`, `v=(i,0)`, and `w=-i`.  The
+imaginary phase components cancel, so
+`Im(u^*v+conj(chi)w)=0`, the real-metric horizontal condition for the single
+common phase `(iu,i chi)`.  Nevertheless `a=Re(u^*v)=0`,
+`s=Re(conj(chi)w)=0`, and `h=u_1v_2-u_2v_1=0`, while
+`|u|^2|v|^2+|chi|^2|w|^2=2`.  Thus the Xi coefficient seminorm vanishes on a
+nonzero common-phase-horizontal tangent.
+
+**Evidence.**  R-131 proof note, Section 8; exact primary and independent
+phase-invisible fixtures; adversarial review correction EXP-000495.
+
+**Consequence.**  R-131 proves the exact radial coefficient-pair spectrum
+and retains the wedge channel, but not full-tangent coercivity after only one
+phase quotient.  A quotient by both invisible phase directions or a separate
+source, sextic, heat, or low channel remains possible and is not refuted.
 
 <a id="ng-2026-07-31-a13-unweighted-rational-d2-floor-uniformity"></a>
 ### NG-2026-07-31-A13-UNWEIGHTED-RATIONAL-D2-FLOOR-UNIFORMITY -- separated rational second derivatives are not floor-uniform
