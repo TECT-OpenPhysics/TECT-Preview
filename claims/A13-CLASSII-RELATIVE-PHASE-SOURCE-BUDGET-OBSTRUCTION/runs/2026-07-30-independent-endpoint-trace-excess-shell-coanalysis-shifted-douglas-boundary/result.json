@@ -1,0 +1,703 @@
+{
+  "assertions": [
+    {
+      "actual": "63/200",
+      "expected": "63/200",
+      "group": "endpoint",
+      "name": "pythagoras",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/25",
+      "expected": "9/25",
+      "group": "endpoint",
+      "name": "dominance_remainder",
+      "status": "PASS"
+    },
+    {
+      "actual": "-14/13",
+      "expected": "0",
+      "group": "endpoint_scope",
+      "name": "owner_direction",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "0",
+        "-14/13"
+      ],
+      "expected": [
+        0,
+        "-14/13"
+      ],
+      "group": "endpoint_scope",
+      "name": "owner_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0,
+      "expected": 1,
+      "group": "separate_norm",
+      "name": "signed_uniform_n_1",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0,
+      "expected": 1,
+      "group": "separate_norm",
+      "name": "signed_uniform_n_7",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0,
+      "expected": 1,
+      "group": "separate_norm",
+      "name": "signed_uniform_n_50",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        14,
+        100
+      ],
+      "expected": "strict growth",
+      "group": "separate_norm",
+      "name": "separate_growth",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0,
+      "expected": 1.0,
+      "group": "poincare",
+      "name": "equality_n_1",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0,
+      "expected": 1.0,
+      "group": "poincare",
+      "name": "equality_n_10",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0,
+      "expected": 1.0,
+      "group": "poincare",
+      "name": "equality_n_100",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          1,
+          -2
+        ],
+        [
+          10,
+          -200
+        ],
+        [
+          100,
+          -20000
+        ]
+      ],
+      "expected": "strict quadratic growth",
+      "group": "poincare",
+      "name": "hessian_unbounded_scan",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.9082682265892903,
+        80.0,
+        8000.0
+      ],
+      "expected": "strict growth",
+      "group": "entropy_score",
+      "name": "ratio_growth",
+      "status": "PASS"
+    },
+    {
+      "actual": 8807.970779778823,
+      "expected": "> 1000",
+      "group": "entropy_score",
+      "name": "quadratic_scale",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4142135623730951,
+      "expected": 1.4142135623730951,
+      "group": "gaussian_score",
+      "name": "parallel_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ]
+      ],
+      "expected": [
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ]
+      ],
+      "group": "temporal",
+      "name": "plus_projection",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1/2",
+          "-1/2"
+        ],
+        [
+          "-1/2",
+          "1/2"
+        ]
+      ],
+      "expected": [
+        [
+          "1/2",
+          "-1/2"
+        ],
+        [
+          "-1/2",
+          "1/2"
+        ]
+      ],
+      "group": "temporal",
+      "name": "minus_projection",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "group": "temporal",
+      "name": "total_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1/2",
+          "0"
+        ],
+        [
+          "1/2",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "group": "temporal",
+      "name": "block_noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "2"
+        ],
+        [
+          "2",
+          "5"
+        ]
+      ],
+      "expected": [
+        [
+          "1",
+          "2"
+        ],
+        [
+          "2",
+          "5"
+        ]
+      ],
+      "group": "coanalysis",
+      "name": "parseval",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          3.0,
+          1.0
+        ],
+        [
+          1.0,
+          2.0
+        ]
+      ],
+      "expected": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "group": "response",
+      "name": "pullback",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          3.0,
+          1.0
+        ],
+        [
+          1.0,
+          2.0
+        ]
+      ],
+      "expected": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "group": "response",
+      "name": "forward_factorization",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          3.0,
+          1.0
+        ],
+        [
+          1.0,
+          2.0
+        ]
+      ],
+      "expected": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "group": "response",
+      "name": "reverse_factorization",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "-1"
+        ],
+        [
+          "0",
+          "-1"
+        ]
+      ],
+      "group": "coanalysis_scope",
+      "name": "swapped_cell_not_adjoint",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "expected": "both nonzero",
+      "group": "coanalysis_scope",
+      "name": "not_source_shell_local",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "expected": "nonzero",
+      "group": "refinement_scope",
+      "name": "cell_not_basic",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "group": "refinement_scope",
+      "name": "aggregate_basic",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1/2",
+          "1"
+        ],
+        [
+          "1",
+          "5/2"
+        ]
+      ],
+      "expected": [
+        [
+          "1",
+          "2"
+        ],
+        [
+          "2",
+          "5"
+        ]
+      ],
+      "group": "frame_scope",
+      "name": "partition_not_parseval",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "group": "ambient_scope",
+      "name": "same_pulled",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/4",
+      "expected": "1/2",
+      "group": "ambient_scope",
+      "name": "different_split",
+      "status": "PASS"
+    },
+    {
+      "actual": "16441/79380",
+      "expected": "16441/79380",
+      "group": "douglas",
+      "name": "scalar_determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "7/10",
+        "13/100",
+        "16441/79380"
+      ],
+      "expected": "positive",
+      "group": "douglas",
+      "name": "scalar_fixture_positive_minors",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "13/18",
+      "group": "desired_gap",
+      "name": "diagonal_one",
+      "status": "PASS"
+    },
+    {
+      "actual": "3",
+      "expected": "13/18",
+      "group": "desired_gap",
+      "name": "diagonal_two",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "2419/81",
+      "group": "desired_gap",
+      "name": "cross_squared",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.02396011633137279065503763425831399461105270923705500998928385676601471223412338",
+      "expected": "positive",
+      "group": "half_debt",
+      "name": "margin_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.01183655696462787128733873653463921854124205578110148993129566437874834749388085",
+      "expected": "positive",
+      "group": "half_debt",
+      "name": "inside_gap_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "0E-79",
+      "expected": "zero to 1e-70",
+      "group": "half_debt",
+      "name": "edge_gap_zero",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 38,
+  "assertions_total": 38,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "diagnostics": {
+    "endpoint": {
+      "covariance_normal": "63/200",
+      "phi": "3/5",
+      "r123_owner_fixture": {
+        "covariance_normal": "0",
+        "trace_packet": "-14/13"
+      },
+      "trace_excess": "9/100",
+      "trace_packet": "-9/200",
+      "variance": "18/25"
+    },
+    "response_factorization": {
+      "ambient_splits": [
+        "1/4",
+        "1/2"
+      ],
+      "geometric_reverse_scope": {
+        "source_shell": [
+          [
+            "1"
+          ],
+          [
+            "1"
+          ]
+        ],
+        "t_one_two": [
+          [
+            "0",
+            "-1"
+          ],
+          [
+            "0",
+            "-1"
+          ]
+        ],
+        "t_two_one": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      },
+      "quotient_scope": {
+        "aggregate_on_kernel": [
+          [
+            "0"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "cell_on_kernel": [
+          [
+            "1"
+          ],
+          [
+            "1"
+          ]
+        ]
+      },
+      "response": [
+        [
+          3.0,
+          1.0
+        ],
+        [
+          -5.0,
+          0.0
+        ]
+      ],
+      "response_hessian": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "smooth_frame_gram": [
+        [
+          "1/2",
+          "1"
+        ],
+        [
+          "1",
+          "5/2"
+        ]
+      ],
+      "temporal_minus": [
+        [
+          "1/2",
+          "-1/2"
+        ],
+        [
+          "-1/2",
+          "1/2"
+        ]
+      ],
+      "temporal_plus": [
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ]
+      ]
+    },
+    "shifted_douglas": {
+      "desired_gap": {
+        "a": "1",
+        "d": "5",
+        "e": "4",
+        "f": "3",
+        "k": "1",
+        "mu": "1/2",
+        "tau": "13/18"
+      },
+      "half_debt": {
+        "edge_gap": "0E-79",
+        "inside_gap": "0.01183655696462787128733873653463921854124205578110148993129566437874834749388085",
+        "margin": "0.02396011633137279065503763425831399461105270923705500998928385676601471223412338"
+      },
+      "scalar_determinant": "16441/79380",
+      "scalar_matrix": [
+        [
+          "7/10",
+          "-1/10",
+          "-1/7"
+        ],
+        [
+          "-1/10",
+          "1/5",
+          "1/9"
+        ],
+        [
+          "-1/7",
+          "1/9",
+          "5/3"
+        ]
+      ]
+    },
+    "shortcut_countermodels": {
+      "fisher_entropy_ratios": [
+        0.9082682265892903,
+        80.0,
+        8000.0
+      ],
+      "poincare": [
+        [
+          1,
+          -2
+        ],
+        [
+          10,
+          -200
+        ],
+        [
+          100,
+          -20000
+        ]
+      ]
+    }
+  },
+  "no_overclaim": "This independent audit checks R-129 finite algebra and conditional acceptance criteria. It does not transfer covariance-normal dominance to the lower R-123 owner and proves no production forward, balanced, low, Nelson, or Sector-A theorem.",
+  "package_version": "1.0.0",
+  "result_id": "A13-CLASSII-ENDPOINT-TRACE-EXCESS-SHELL-COANALYSIS-SHIFTED-DOUGLAS-BOUNDARY",
+  "schema": "tect/a13-endpoint-trace-excess-shell-coanalysis-shifted-douglas-boundary-independent/1.0",
+  "scope": {
+    "analytic_shortcut_countermodels_checked": true,
+    "balanced_low_anchor_proved": false,
+    "direct_signed_hessian_fixture_checked": true,
+    "endpoint_owner_direction_checked": true,
+    "nelson_proved": false,
+    "non_importing_independent_route": true,
+    "overlap_src_proved": false,
+    "production_forward_decay_proved": false,
+    "response_map_shell_coanalysis_checked": true,
+    "sector_a_closed": false,
+    "shifted_douglas_thresholds_checked": true
+  },
+  "status": "PASS"
+}

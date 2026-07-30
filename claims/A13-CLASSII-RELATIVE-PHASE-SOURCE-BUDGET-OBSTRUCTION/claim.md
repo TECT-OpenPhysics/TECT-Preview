@@ -4447,3 +4447,35 @@ T5--T7 promotion remain open. Tier stays T4.
   intertwiner, corrected covariance-normal operator bound, balanced/low
   closure, absolute anchor, `OVERLAP_src`, Nelson, removals, interacting
   measure, and Sector A remain open; tier stays T4.
+- 2026-07-30: Registered
+  `A13-CLASSII-ENDPOINT-TRACE-EXCESS-SHELL-COANALYSIS-SHIFTED-DOUGLAS-BOUNDARY`
+  (R-129). Conditional Pythagoras gives the exact absolute-endpoint identity
+  `E_CN=P_comp+V/2>=P_comp`, but the R-123 action owner is the smaller
+  `P_comp`; an exact constant-translation fixture and a subtraction fixture
+  therefore retire the attempted future-variance action bypass. Direct
+  differentiation at fixed conditional law cancels every conditional-mean
+  derivative while retaining the signed derivative-Gram/current-curvature
+  remainder. Exact countermodels reject differentiated Poincare,
+  entropy-only second-score control, temporal-increment shell intertwining,
+  and swapped-label reverse inference; the Gaussian second-score route is
+  parked because its sharp `sqrt(2)` estimate requires an unavailable
+  endpoint `L2` moment. The positive repair performs orthogonal shell
+  analysis after physical synthesis: for the still-unproved owner-complete
+  response `A`, `R=C L_pred` and `F=C A` give
+  `H=R^*F=F^*R`. Thus a proved physical forward estimate transfers to the
+  true predictable aggregate adjoint without a temporal-shell commutator or
+  shell-count loss, while pullback retains the factor `||L_pred||`. The exact
+  shifted-Douglas theorem supplies prescribed-gap and norm-level
+  three-channel criteria; `0.0239601163...` remains only a zero-diagonal or
+  already-paid specialization. Six formal audit/no-go entries and
+  `EXP-000451--EXP-000468` preserve every advance, failure, parked route,
+  boundary, revisit condition, hostile PDF-packaging repair, and deterministic
+  result correction. The hardened
+  verifier recompiles the note, checks zero overfull boxes, matches extracted
+  text and hash-pinned 130-DPI renders, and rejects `/AF` and `/EF` embedded-
+  file routes. Primary `50/50` and non-importing
+  independent `38/38` pass; the integrated contract and visually reviewed
+  eleven-page PDF are manifest-pinned. The owner-complete production physical
+  response, `C_mix`, `C_far`, `c_bal`, low `D,K,R0,S0`, absolute anchor,
+  common-terminal bridge, `OVERLAP_src`, Nelson, removals, interacting
+  measure, and Sector A remain open; tier stays T4.

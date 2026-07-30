@@ -6,6 +6,12 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-30-A13-COVARIANCE-NORMAL-DOMINANCE-ACTION-DIRECTION](#audit-2026-07-30-a13-covariance-normal-dominance-action-direction) | use `E_CN=P_comp+V/2>=P_comp` to lower-bound the R-123 direct action owner or to delete the future variance in a secant | the inequality points from the smaller action packet to the larger covariance-normal endpoint. The exact R-125 constant-translation owner has `V=T=4s`, hence `E_CN=0` but `P_comp=-2s`; an endpoint difference can also have `Delta E_CN=-1/2` and `Delta P_comp=0` |
+| [NG-2026-07-30-A13-SEPARATE-VARIANCE-TRACE-HESSIAN-NORM-NECESSITY](#ng-2026-07-30-a13-separate-variance-trace-hessian-norm-necessity) | require separate uniform norm bounds for `H_V` and `H_T` before any direct signed covariance-normal Hessian estimate can close | the Gaussian family `V_n=(n+1)z^2`, `T_n=nz^2` has Hessians `2n+2` and `2n`, while `E_CN=(V_n-T_n)/2=z^2/2` has Hessian one. Separate bounds are sufficient but not logically necessary; the direct production signed bound remains open |
+| [NG-2026-07-30-A13-CONDITIONAL-POINCARE-PARAMETER-SEMICONVEXITY](#ng-2026-07-30-a13-conditional-poincare-parameter-semiconvexity) | differentiate a conditional Gaussian Poincare inequality to obtain a uniform external-parameter Hessian bound | `J_N(z,eta)=cos(Nz)eta` attains Poincare equality for every `z`, but its variance has second `z` derivative `-2N^2` at zero. Source-variable coercivity does not imply parameter semiconvexity |
+| [NG-2026-07-30-A13-ENTROPY-SECOND-SCORE-CONTROL](#ng-2026-07-30-a13-entropy-second-score-control) | control the conditional Fisher or second Gaussian score from normalized entropy or Doob data alone | `rho_N=1+epsilon sin(Nx)` has entropy at most `epsilon^2/2`, while its Fisher information is at least `epsilon^2 N^2(1+exp(-2N^2))/(2(1+epsilon))`. The second score is not bounded by the registered relative data |
+| [NG-2026-07-30-A13-TOTAL-COVARIANCE-TEMPORAL-SHELL-INTERTWINING](#ng-2026-07-30-a13-total-covariance-temporal-shell-intertwining) | infer `[Delta C_b,Pi_m]=0` for every temporal chart block from Fourier diagonality of the total covariance | the orthogonal increments `P_+` and `P_-` sum to the identity but each fails to commute with `Pi=diag(1,0)`. Total spectral covariance does not identify the temporal factorization; R-129 instead uses physical-shell analysis followed by legal source coanalysis |
+| [NG-2026-07-30-A13-SWAPPED-GEOMETRIC-REVERSE-BAND-ADJOINT](#ng-2026-07-30-a13-swapped-geometric-reverse-band-adjoint) | identify the true adjoint orientation of a proved shell/source cell with a distinct swapped-label geometric reverse cell | an exact two-dimensional orthogonal-shell fixture has `T_21=0` but `T_12!=0`, so `T_21^*=0!=T_12`. Shell coanalysis supplies the adjoint of the same aggregate region, not reflection into an unproved lower band |
 | [AUDIT-2026-07-30-A13-R127-R119-CONTROL-HESSIAN-AUTHORITY](#audit-2026-07-30-a13-r127-r119-control-hessian-authority) | R-127 successor wording that treated the common fixed-chart control Hessian as a new missing theorem | R-119 Theorem 5.1 already proves `D_h^2 U=L_pi^* B L_pi`, selfadjointness, vertical basicness, and quotient descent. R-128 reuses that authority and limits its new result to differentiating the recombined R-104 owner equality, refinement naturality, and the repaired force boundary |
 | [AUDIT-2026-07-30-A13-R126-COVARIANCE-NORMAL-FORCE-OMISSION](#audit-2026-07-30-a13-r126-covariance-normal-force-omission) | use the R-126 trace-excess derivative alone as the force of the complete R-125 covariance-normal endpoint | `E_CN=(V-T)/2=(E_f||J||^2-Theta)/2`, so `g_CN=(g_V-g_T)/2` and `H_CN=(H_V-H_T)/2`. The fixture `J_z=z(1+eta)`, `Phi=z`, `Theta=z^2` has `T=0` but `E_CN=z^2/2`, proving that the naked trace-excess force omits the future-variance derivative |
 | [NG-2026-07-30-A13-CONTROL-MALLIAVIN-DERIVATIVE-CONFLATION](#ng-2026-07-30-a13-control-malliavin-derivative-conflation) | identify the fixed-law control-shift Hessian with the Gaussian/Malliavin source Hessian in the presence of adapted feedback | for bounded smooth `h_2=alpha tanh(xi_1)` and `F(z)=z^2/2`, the control Hessian at the origin is `[[1,1],[1,1]]`, while the Malliavin Hessian at `alpha=1` is `[[4,2],[2,1]]`; a squared-tanh linear-endpoint fixture separately gives a nonzero feedback-connection term |
@@ -185,6 +191,121 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-30-a13-covariance-normal-dominance-action-direction"></a>
+### AUDIT-2026-07-30-A13-COVARIANCE-NORMAL-DOMINANCE-ACTION-DIRECTION -- covariance-normal dominance has the wrong direction for the R-123 action
+
+**Claim / route.**  Use the positive future variance in
+`E_CN=P_comp+V/2>=P_comp` to lower-bound the R-123 direct action owner, or
+drop it after taking an endpoint difference.
+
+**Failure mode.**  The action owner is the smaller quantity
+`P_comp=-T/2`, not `E_CN`.  In the exact R-125 constant-translation direction
+`V=T=4s`, so `E_CN=0` while `P_comp=-2s`.  Independently,
+`J_0=eta`, `J_h=0`, and `Theta_0=Theta_h=0` give
+`Delta E_CN=-1/2` but `Delta P_comp=0`.  Positivity at each endpoint does not
+sign a secant.
+
+**Evidence.**  R-125 Theorem 3.1 and its constant-translation fixture; R-129
+proof note, Theorem 2.1; primary symbolic and independent rational audits.
+
+**Consequence.**  R-123 Eq. (8.2) remains the direct Nelson-level burden.
+The covariance-normal identity is retained, but it cannot be used to delete
+the future variance when recovering the smaller action packet.
+
+<a id="ng-2026-07-30-a13-separate-variance-trace-hessian-norm-necessity"></a>
+### NG-2026-07-30-A13-SEPARATE-VARIANCE-TRACE-HESSIAN-NORM-NECESSITY -- separate Hessian norms are not logically necessary for a signed difference
+
+**Claim / route.**  Require uniform bounds for `H_V` and `H_T` separately as
+a necessary prerequisite for every covariance-normal Hessian argument.
+
+**Failure mode.**  For independent standard Gaussians and the exact family
+`J_(n,z)=(sqrt(n) z eta_0,z eta_1)`, with replica trace `Theta=nz^2`, one has
+`V_n=(n+1)z^2`, `T_n=nz^2`, and `E_CN=z^2/2`.  The separate Hessians are
+`2n+2` and `2n`, while the signed Hessian is identically one.
+
+**Evidence.**  R-129 proof note, Eqs. (3.4)--(3.6); primary symbolic family;
+independent exact multi-`n` audit.
+
+**Consequence.**  Separate estimates remain a sufficient route, not a
+necessary one.  A direct owner-complete signed curvature estimate may exploit
+the cancellation, but no production-uniform such estimate is yet proved.
+
+<a id="ng-2026-07-30-a13-conditional-poincare-parameter-semiconvexity"></a>
+### NG-2026-07-30-A13-CONDITIONAL-POINCARE-PARAMETER-SEMICONVEXITY -- source Poincare does not control an external parameter Hessian
+
+**Claim / route.**  Differentiate a conditional Gaussian Poincare upper bound
+to obtain uniform semiconvexity in the control or endpoint parameter.
+
+**Failure mode.**  For `J_N(z,eta)=cos(Nz)eta`, Gaussian Poincare is an
+equality: `Var(J_N)=E|D_eta J_N|^2=cos^2(Nz)`.  Nevertheless its second
+`z` derivative at zero is `-2N^2`.
+
+**Evidence.**  R-129 proof note, Eqs. (4.1)--(4.3); exact primary derivation;
+independent frequency scan.
+
+**Consequence.**  Parameter derivatives require a direct signed production
+identity or additional regularity.  This abstract fixture is not an A1
+counterexample.
+
+<a id="ng-2026-07-30-a13-entropy-second-score-control"></a>
+### NG-2026-07-30-A13-ENTROPY-SECOND-SCORE-CONTROL -- bounded relative entropy does not bound the conditional second score
+
+**Claim / route.**  Use normalized Gibbs entropy, Doob orthogonality, or a KL
+bound alone to control the Fisher and second-score terms created by two
+Gaussian integrations by parts.
+
+**Failure mode.**  For standard Gaussian measure and
+`rho_N=1+epsilon sin(Nx)`, `0<epsilon<1`, one has
+`Ent(rho_N)<=epsilon^2/2`, whereas
+`I(rho_N)>=epsilon^2 N^2(1+exp(-2N^2))/(2(1+epsilon))`.
+The Fisher information diverges quadratically at uniformly bounded entropy.
+
+**Evidence.**  R-129 proof note, Eqs. (4.6)--(4.8); primary asymptotic audit;
+independent frequency scan.
+
+**Consequence.**  A Gibbs second-score route needs an additional registered
+Fisher/curvature theorem and is circular when that score already contains the
+force and Hessian being estimated.
+
+<a id="ng-2026-07-30-a13-total-covariance-temporal-shell-intertwining"></a>
+### NG-2026-07-30-A13-TOTAL-COVARIANCE-TEMPORAL-SHELL-INTERTWINING -- total Fourier covariance does not diagonalize every temporal increment
+
+**Claim / route.**  Infer shell commutation for every temporal covariance
+increment from the Fourier-multiplier form of the total covariance `C_J`.
+
+**Failure mode.**  The projections
+`P_+=(1/2)[[1,1],[1,1]]` and
+`P_-=(1/2)[[1,-1],[-1,1]]` are positive orthogonal increments whose sum is
+the identity.  The total commutes with `Pi=diag(1,0)`, while neither increment
+does.  Their positive square roots are themselves, so the source synthesis
+also fails the proposed blockwise intertwiner.
+
+**Evidence.**  R-129 proof note, Section 5; exact primary and independent
+matrix audits; R-120 total-covariance symbol and R-104 temporal factorization.
+
+**Consequence.**  A blockwise spectral covariance path would be an additional
+hypothesis.  R-129 avoids it by applying physical-shell analysis after the
+source synthesis and the true predictable coanalysis afterward.
+
+<a id="ng-2026-07-30-a13-swapped-geometric-reverse-band-adjoint"></a>
+### NG-2026-07-30-A13-SWAPPED-GEOMETRIC-REVERSE-BAND-ADJOINT -- the true adjoint orientation is not a swapped geometric cell
+
+**Claim / route.**  Reflect a proved forward root/output-shell block into a
+distinct reverse geometric band merely by swapping its two labels.
+
+**Failure mode.**  With orthogonal source and shell coordinates,
+`L=2^(-1/2)[[1,1],[1,-1]]`, and
+`B=[[0,1],[1,-1]]`, the exact cells
+`T_mb=L^* Pi_m B L E_b` obey `T_21=0` and `T_12!=0`.  Thus
+`T_21^*=0!=T_12` even though the complete pulled Hessian is selfadjoint.
+
+**Evidence.**  R-129 proof note, Eqs. (6.14)--(6.15); primary symbolic and
+independent rational audits.
+
+**Consequence.**  Shell coanalysis gives the legal adjoint of the same proved
+aggregate region with the same norm.  A distinct lower geometric band still
+needs its own production identification or symmetry theorem.
 
 <a id="audit-2026-07-30-a13-r127-r119-control-hessian-authority"></a>
 ### AUDIT-2026-07-30-A13-R127-R119-CONTROL-HESSIAN-AUTHORITY -- the fixed-chart control Hessian was already an R-119 theorem

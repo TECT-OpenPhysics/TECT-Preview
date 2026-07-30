@@ -795,6 +795,26 @@ endpoint theorem.
     corrected full source-shell matrix with balanced, low, absolute-anchor,
     and common-terminal bounds. Both A13 gates and Sector A remain open at T4.
 
+57. **Endpoint direction, physical-shell coanalysis, and the exact low-gap
+    frontier.** R-129 corrects the tempting but wrong future-variance shortcut:
+    the covariance-normal endpoint dominates the smaller R-123 action packet,
+    so it cannot lower-bound that packet, and subtraction destroys the
+    variance sign. Direct signed differentiation cancels conditional-mean
+    derivatives but leaves the production current-curvature estimate open.
+    Poincare differentiation, entropy-only second-score control, temporal
+    increment shell commutation, and swapped geometric reverse labels are
+    retired by exact fixtures; the Gaussian score route is parked at its
+    missing endpoint moment. The surviving structural repair keeps shells in
+    the physical analysis space. An owner-complete response `A` with
+    selfadjoint pullback factors as `H=R^*F=F^*R`, so its proved forward bound
+    gives the legal predictable aggregate reverse with no shell-count loss,
+    while the source pullback factor remains explicit. A shifted-Douglas
+    theorem then gives the exact prescribed three-channel gap once the
+    production forward, balanced, diagonal, low, and anchor data exist. The
+    live successor must construct that owner-complete physical response and
+    prove `C_mix`, `C_far`, `c_bal`, `D,K,R0,S0`, the absolute anchor, and the
+    common terminal once. Both A13 gates and Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

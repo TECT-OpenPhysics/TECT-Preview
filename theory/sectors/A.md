@@ -45,6 +45,12 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-30-A13-COVARIANCE-NORMAL-DOMINANCE-ACTION-DIRECTION | covariance-normal dominance has the wrong direction for the  |  |
+| NG-2026-07-30-A13-SEPARATE-VARIANCE-TRACE-HESSIAN-NORM-NECESSITY | separate Hessian norms are not logically necessary for a sig |  |
+| NG-2026-07-30-A13-CONDITIONAL-POINCARE-PARAMETER-SEMICONVEXITY | source Poincare does not control an external parameter Hessi |  |
+| NG-2026-07-30-A13-ENTROPY-SECOND-SCORE-CONTROL | bounded relative entropy does not bound the conditional seco |  |
+| NG-2026-07-30-A13-TOTAL-COVARIANCE-TEMPORAL-SHELL-INTERTWINING | total Fourier covariance does not diagonalize every temporal |  |
+| NG-2026-07-30-A13-SWAPPED-GEOMETRIC-REVERSE-BAND-ADJOINT | the true adjoint orientation is not a swapped geometric cell |  |
 | AUDIT-2026-07-30-A13-R127-R119-CONTROL-HESSIAN-AUTHORITY | the fixed-chart control Hessian was already an R-119 theorem |  |
 | AUDIT-2026-07-30-A13-R126-COVARIANCE-NORMAL-FORCE-OMISSION | trace excess alone is not the complete covariance-normal for |  |
 | NG-2026-07-30-A13-CONTROL-MALLIAVIN-DERIVATIVE-CONFLATION | adapted feedback separates the two Hessians |  |

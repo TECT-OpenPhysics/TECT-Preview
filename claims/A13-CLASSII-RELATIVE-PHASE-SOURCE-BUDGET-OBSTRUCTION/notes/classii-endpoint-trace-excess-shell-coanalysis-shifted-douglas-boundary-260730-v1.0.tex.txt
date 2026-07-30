@@ -1,0 +1,808 @@
+% =============================================================================
+% Title: Endpoint trace-excess direction, shell coanalysis legal reverse, and the shifted-Douglas gap boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-ENDPOINT-TRACE-EXCESS-SHELL-COANALYSIS-SHIFTED-DOUGLAS-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-30; this version issued 2026-07-30
+% Status: scoped T4 analytic/exact/executed advance and route correction; the production forward/balanced/low bound and both A13 gates remain open
+% =============================================================================
+
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+
+R-128 left the production root/shell intertwiner, corrected
+covariance-normal operator bound, and augmented balanced/low gap open.  A
+fresh multi-route audit produces two structural advances and one important
+route correction.
+
+First, the positive conditional future variance has a precise but one-sided
+role.  It makes the covariance-normal endpoint larger than the R-123 direct
+trace packet.  It therefore does \emph{not} lower-bound that smaller packet
+and does not bypass the R-123 trace-excess burden.  This corrects the initially
+tempting successor inference before it enters the claim card.
+
+Second, a source-space shell projection is unnecessary for the legal reverse.
+An orthogonal physical shell analysis, followed by the legal predictable
+source coanalysis, factors the common source Hessian as
+\[
+                         H=R^*F=F^*R.                    \tag{1.1}
+\]
+Once the owner-complete physical response $F$ and its forward block estimate
+are proved, the aggregate reverse is its true adjoint with exactly the same
+operator norm.  This construction neither assumes nor needs
+$[\Delta C_b,\Pi_m]=0$.
+
+Third, the R-127 augmented Douglas criterion admits an exact shifted version
+which tests a prescribed positive gap $\mu$.  It yields a simple norm-level
+three-channel sufficient condition and makes the remaining low-channel budget
+quantitative.
+
+The scope is fixed finite cutoff, fixed positive rational floor, one fixed
+R-093/R-104 temporally faithful chart, its bounded predictable source map,
+exhaustive orthogonal spatial Fourier shells including the low shell, and a
+bounded owner-complete physical response on the cylindrical core.  The
+conditional law is fixed when the direct covariance-normal derivative is
+taken.  No production-uniform forward decay, complete balanced estimate, low
+anchor, common-terminal/matching-trace theorem, $\mathrm{OVERLAP}_{\rm src}$,
+Nelson estimate, removal, interacting measure, or Sector-A closure is claimed.
+
+\section*{2. Exact endpoint direction and the failed action transfer}
+
+For one exhaustive owner-complete conditional packet put
+\[
+ \Phi=\E_fJ,
+ \qquad
+ \cV=\E_f\|J-\Phi\|^2,
+ \qquad
+ \cT=\Theta-\|\Phi\|^2.                                \tag{2.1}
+\]
+The R-123 direct trace packet and the R-125 covariance-normal endpoint are
+\[
+ \cP_{\rm comp}=-{1\over2}\cT,
+ \qquad
+ \cE_{\rm CN}={1\over2}(\cV-\cT).                      \tag{2.2}
+\]
+Conditional Pythagoras gives
+\[
+ \boxed{
+ \cE_{\rm CN}
+ ={1\over2}(\E_f\|J\|^2-\Theta)
+ =\cP_{\rm comp}+{1\over2}\cV
+ \geq\cP_{\rm comp}.}                                 \tag{2.3}
+\]
+
+Equation (2.3) is an absolute conditional-endpoint identity.  Its direction
+does not give a lower bound on $\cP_{\rm comp}$ from a lower bound on
+$\cE_{\rm CN}$.  The R-125 constant-translation owner makes the issue exact:
+for $s>0$,
+\[
+ \cV=4s,
+ \qquad
+ \cT=4s,
+ \qquad
+ \boxed{\cE_{\rm CN}=0,
+ \qquad \cP_{\rm comp}=-2s.}                            \tag{2.4}
+\]
+Thus the larger endpoint can be harmless while the actual R-123 packet is
+strictly negative.
+
+The endpoint comparison is also not stable under subtraction.  With
+$J_0=\eta$, $J_h=0$, $\E\eta=0$, $\E\eta^2=1$, and
+$\Theta_0=\Theta_h=0$,
+\[
+ \Delta\cE_{\rm CN}=-{1\over2},
+ \qquad
+ \Delta\cP_{\rm comp}=0.                               \tag{2.5}
+\]
+Hence neither a moving-endpoint secant nor a stationary subtraction may drop
+$\Delta\cV$ by positivity.
+
+\subsection*{Theorem 2.1 (endpoint-direction firewall)}
+
+At an absolute conditional endpoint, (2.3) holds.  It supplies no lower bound
+for the R-123 action owner $\cP_{\rm comp}$ and no signed statement for an
+endpoint difference.  The production Nelson route therefore still requires
+the aggregate R-123 estimate
+\[
+ \boxed{
+ \sum_{k,\mathcal C}
+ \E[\Theta_{k,\mathcal C}-\|\Phi_{k,\mathcal C}\|^2]
+ \leq2\eta X+2\zeta Y+2C,
+ \quad \eta<{9\over20},\quad\zeta<{3\over20}.}          \tag{2.6}
+\]
+R-129 verifies only the direction and the acceptance range.  It does not
+prove the production hypothesis (2.6).
+
+\section*{3. Direct signed covariance-normal differentiation}
+
+Although future-variance positivity does not repair the R-123 action, the
+algebraic Hessian audit still removes an unnecessary methodological
+restriction.  At a fixed conditional law, assume $J$ and $\Theta$ are $C^2$
+and differentiation commutes with $\E_f$.  Write
+\[
+ \dot J_H=DJ[H],
+ \qquad
+ \ddot J_{H,K}=D^2J[H,K].                               \tag{3.1}
+\]
+Then
+\[
+ \boxed{
+ D\cE_{\rm CN}[H]
+ =\Rea\E_f\ip{J}{\dot J_H}-{1\over2}D\Theta[H],}       \tag{3.2}
+\]
+and
+\[
+ \boxed{
+ D^2\cE_{\rm CN}[H,K]
+ =\Rea\E_f\{\ip{\dot J_H}{\dot J_K}
+              +\ip{J}{\ddot J_{H,K}}\}
+  -{1\over2}D^2\Theta[H,K].}                           \tag{3.3}
+\]
+All derivatives of $\Phi=\E_fJ$ cancel.  Formula (3.3) retains the full
+nonnegative derivative Gram on the diagonal and one signed curvature
+remainder.  It does not by itself bound that remainder.
+
+The loss from separately estimating $D^2\cV$ and $D^2\cT$ can be arbitrarily
+large.  Let $\eta_0,\eta_1,\eta_0^\circ$ be independent standard Gaussians and
+put
+\[
+ J_{n,z}=(\sqrt n\,z\eta_0,z\eta_1),
+ \qquad
+ J_{n,z}^\circ=(\sqrt n\,z\eta_0^\circ,0),
+ \qquad
+ \Theta_{n,z}=nz^2.                                     \tag{3.4}
+\]
+Then
+\[
+ \cV_{n,z}=(n+1)z^2,
+ \qquad
+ \cT_{n,z}=nz^2,
+ \qquad
+ \cE_{{\rm CN},n}(z)={z^2\over2},                      \tag{3.5}
+\]
+so
+\[
+ D^2\cV_n=2n+2,
+ \qquad
+ D^2\cT_n=2n,
+ \qquad
+ \boxed{D^2\cE_{{\rm CN},n}=1.}                        \tag{3.6}
+\]
+Thus separate uniform norm bounds are not logically necessary \emph{if} a
+direct owner-complete signed estimate is proved.  The fixture is
+methodological and is not an A1 production counterexample.
+
+\section*{4. Analytic shortcuts tested and rejected}
+
+\subsection*{4.1 Conditional Poincare does not give parameter semiconvexity}
+
+For a standard Gaussian $\eta$ and
+\[
+                         J_N(z,\eta)=\cos(Nz)\eta,       \tag{4.1}
+\]
+the Gaussian Poincare inequality is an equality:
+\[
+ \Var(J_N)=\cos^2(Nz)=\E|D_\eta J_N|^2.                 \tag{4.2}
+\]
+Nevertheless
+\[
+                         {\dd^2\over\dd z^2}\Var(J_N)(0)
+                         =-2N^2.                         \tag{4.3}
+\]
+Differentiating a Poincare upper bound therefore cannot supply a uniform
+parameter Hessian bound.  This is an abstract diagnostic, not a production
+counterexample.
+
+\subsection*{4.2 Gaussian second score is exact but moment-expensive}
+
+For deterministic or strict-past $u,v$ and sufficiently integrable $F$,
+second Gaussian integration by parts gives
+\[
+ \E D_\xi^2F[u,v]
+ =\E[(\ip{\xi}{u}\ip{\xi}{v}-\ip{u}{v})F].             \tag{4.4}
+\]
+The score has exact $L^2$ norm
+\[
+ \sqrt{\|u\|^2\|v\|^2+\ip{u}{v}^2}
+ \leq\sqrt2\|u\|\|v\|,                               \tag{4.5}
+\]
+and $\sqrt2$ is sharp for parallel vectors.  The route removes explicit
+feedback jets only after complete Gaussian integration, but it demands an
+$L^2$ endpoint bound.  On the R-122 coherent-amplitude family the relevant
+current-square endpoint reaches the eighth moment
+$\E A_t^8=e^{8t^2}$.  No registered source/sextic graph budget controls that
+separated moment uniformly.  The route is therefore parked unless a complete
+signed endpoint supplies the missing cancellation before Cauchy--Schwarz.
+
+\subsection*{4.3 Entropy does not control the second score}
+
+Let $\gamma$ be the standard Gaussian law on $\mathbb R$ and
+\[
+ \rho_N(x)=1+\epsilon\sin(Nx),
+ \qquad 0<\epsilon<1.                                   \tag{4.6}
+\]
+Then $\int\rho_N\dd\gamma=1$ and the elementary inequality
+$(1+u)\log(1+u)\leq u+u^2$ gives
+\[
+ \operatorname{Ent}_\gamma(\rho_N)\leq{\epsilon^2\over2}.  \tag{4.7}
+\]
+The Fisher information instead obeys
+\[
+ I_\gamma(\rho_N)
+ =\epsilon^2N^2\E_\gamma
+   {\cos^2(NX)\over1+\epsilon\sin(NX)}
+ \geq{\epsilon^2N^2(1+e^{-2N^2})\over2(1+\epsilon)}.   \tag{4.8}
+\]
+It diverges quadratically.  Normalized entropy and Doob orthogonality cannot
+control the conditional Fisher or second-score terms; for a Gibbs density
+those terms contain the force and Hessian being sought and the argument is
+circular.
+
+\subsection*{4.4 A rational second derivative is not separately floor-uniform}
+
+For a homogeneous rational A1 row, scaling the floor $e>0$ at
+$u=\sqrt e\,v$ gives
+\[
+ c_e(\sqrt e\,v)=\sqrt e\,c_1(v),
+ \quad
+ Dc_e(\sqrt e\,v)=Dc_1(v),
+ \quad
+ D^2c_e(\sqrt e\,v)=e^{-1/2}D^2c_1(v).                 \tag{4.9}
+\]
+An unweighted $D^2c$ supremum is therefore not floor-uniform.  The complete
+products $cD^2c$ and $(Dc)^2$ are scale-neutral and must remain inside the
+signed owner-complete Hessian.
+
+\section*{5. Total covariance does not intertwine temporal increments}
+
+R-120 proves that the total regulated covariance $C_J$ is a Fourier
+multiplier.  That fact does not imply that each temporal increment in an
+arbitrary faithful chart commutes with a spatial shell.  Let
+\[
+ P=\begin{pmatrix}1&0\\0&0\end{pmatrix},
+ \quad
+ \Delta C_1=P_+
+ ={1\over2}\begin{pmatrix}1&1\\1&1\end{pmatrix},
+ \quad
+ \Delta C_2=P_-
+ ={1\over2}\begin{pmatrix}1&-1\\-1&1\end{pmatrix}.    \tag{5.1}
+\]
+Both $P_\pm$ are orthogonal projections,
+$P_++P_-=I$, and the total covariance commutes with $P$.  However
+\[
+ P_+P={1\over2}\begin{pmatrix}1&0\\1&0\end{pmatrix}
+ \ne
+ {1\over2}\begin{pmatrix}1&1\\0&0\end{pmatrix}=PP_+. \tag{5.2}
+\]
+Since $(\Delta C_b)^{1/2}=\Delta C_b$, the block synthesis does not
+intertwine the componentwise source shell.  This fires the temporal-increment
+commutation no-go below.  It does not refute a separately pinned canonical
+spectral covariance path.  More importantly, Section 6 avoids the assumption
+entirely.
+
+\section*{6. Shell analysis/coanalysis legal-reverse theorem}
+
+Let
+\[
+ \cS_\pi^{\rm pred}
+ =\bigoplus_{b=1}^B
+ L^2(\Omega,\F_{t_{b-1}};\cS_b),
+ \qquad
+ Lh=\sum_bS_bh_b                                        \tag{6.1}
+\]
+be the R-127 predictable source map into the physical Hilbert space
+$\mathcal X$.  Its legal adjoint is
+\[
+ (L_{\rm pred}^*G)_b
+ =\E[S_b^*G\mid\F_{t_{b-1}}].                           \tag{6.2}
+\]
+Let $\{\Pi_m\}_{m\geq\ell}$ be an exhaustive mutually orthogonal
+deterministic spatial Fourier-shell resolution, including the low shell.
+Put
+\[
+ \mathcal Y=\bigoplus_m\Ran\Pi_m,
+ \qquad
+ \mathcal Cz=(\Pi_mz)_m.                                \tag{6.3}
+\]
+Then $\mathcal C$ is an isometry and $\mathcal C^*\mathcal C=I$.
+
+Assume that the fully recombined physical Hessian response has been defined
+as a bounded map
+\[
+                         A:\cS_\pi^{\rm pred}\to\mathcal X,  \tag{6.4}
+\]
+and that its legal source pullback
+\[
+                         H=L^*A                           \tag{6.5}
+\]
+is selfadjoint.  This is an assumption on the owner-complete response, not a
+claim that the R-126 displayed force has already been identified with it.
+Define
+\[
+                         R=\mathcal CL,
+ \qquad
+                         F=\mathcal CA.                  \tag{6.6}
+\]
+
+\subsection*{Theorem 6.1 (physical-shell analysis and legal source coanalysis)}
+
+Under (6.1)--(6.6),
+\[
+ \boxed{R^*F=L^*A=H,
+ \qquad F^*R=A^*L=H.}                                   \tag{6.7}
+\]
+Moreover
+\[
+ \boxed{\|Rh\|_{\mathcal Y}^2
+       =\sum_m\|\Pi_mLh\|^2
+       =\|Lh\|^2,}
+ \qquad
+ \|R\|=\|L\|,                                         \tag{6.8}
+\]
+and for $y=(y_m)_m\in\mathcal Y$,
+\[
+ \boxed{
+ \left\|\sum_mL^*\Pi_my_m\right\|
+ \leq\|L\|\left(\sum_m\|y_m\|^2\right)^{1/2}.}       \tag{6.9}
+\]
+Every receiving source block in (6.9) contains the conditional expectation
+in (6.2), so the coanalysis is predictable and legal.
+
+\emph{Proof.}
+The isometry gives
+$R^*F=L^*\mathcal C^*\mathcal CA=L^*A=H$.
+Taking adjoints and using $H=H^*$ gives $F^*R=H$.
+Parseval proves (6.8), and the adjoint operator norm proves (6.9).
+No commutator between $S_b$ and $\Pi_m$ occurs. \hfill$\square$
+
+Let $E_b$ be the temporal source projections.  The rectangular forward cells
+and the corresponding pulled cells are
+\[
+ F_{mb}=\Pi_mAE_b,
+ \qquad
+ T_{mb}=L^*\Pi_mAE_b.                                   \tag{6.10}
+\]
+Their true adjoints are
+\[
+ F_{mb}^*=E_bA^*\Pi_m,
+ \qquad
+ T_{mb}^*=E_bA^*\Pi_mL.                                 \tag{6.11}
+\]
+The second orientation is predictable because it ends in a source block; it
+need not equal an unproved swapped-label geometric cell.  Strong summation
+gives
+\[
+ \sum_{m,b}T_{mb}=H,
+ \qquad
+ \sum_{m,b}T_{mb}^*=H.                                  \tag{6.12}
+\]
+The quadratic owner is written once as
+\[
+ \Rea\ip{Rh}{Fh}
+ ={1\over2}\ip{h}{(R^*F+F^*R)h}
+ =\ip{h}{Hh}.                                           \tag{6.13}
+\]
+Writing both full sums without the factor $1/2$ would double the owner.
+
+The distinction between a true adjoint orientation and a swapped geometric
+label is exact.  Take
+\[
+ L=2^{-1/2}\begin{pmatrix}1&1\\1&-1\end{pmatrix},
+ \qquad \Pi_i=E_i,
+ \qquad B=\begin{pmatrix}0&1\\1&-1\end{pmatrix}.        \tag{6.14}
+\]
+For $T_{mb}=L^*\Pi_mBLE_b$, direct multiplication gives
+$T_{21}=0$ while $T_{12}\ne0$.  Hence
+\[
+                         T_{21}^*=0\ne T_{12}.           \tag{6.15}
+\]
+The theorem controls the adjoint of a proved forward region.  It does not
+reflect that region into a distinct lower geometric band by exchanging
+indices.  Likewise $L^*\Pi_1e_1=2^{-1/2}(1,1)$ occupies both source
+coordinates, so source-shell localization must not be asserted after
+coanalysis.  Weighted Schur is executed in the orthogonal physical shell
+space before applying $R^*$.
+
+\subsection*{Corollary 6.2 (forward estimate transfers to the aggregate reverse)}
+
+If an owner-complete weighted Schur argument proves
+\[
+                         \|F\|\leq K_F,                 \tag{6.16}
+\]
+then
+\[
+ \boxed{\|F^*\|=\|F\|\leq K_F,
+ \qquad \|H\|\leq\|L\|K_F.}                            \tag{6.17}
+\]
+The currently available uniform upper bound is
+$\|L_{\rm pred}\|^2\leq\|C_J\|$; equality is not automatic because the
+blockwise conditional expectations can contract the source adjoint.
+
+Equation (6.17) does not import an old physical forward constant unchanged
+after pullback.  The scalar fixture
+\[
+ Lx=(2x,0),
+ \qquad \Pi=\operatorname{diag}(1,0),
+ \qquad A=L                                              \tag{6.18}
+\]
+has physical forward norm $2$ and pulled norm $4$.  The synthesis factor is
+real and must be budgeted or removed by a normalized quotient theorem.
+
+Nor does the source Hessian alone canonically determine a shell split.  Let
+\[
+ Lx={x\over\sqrt2}(1,1),
+ \qquad B_1=I,
+ \qquad B_2=\operatorname{diag}(2,0).                   \tag{6.19}
+\]
+Then $L^*B_1L=L^*B_2L=1$, but for
+$\Pi=\operatorname{diag}(1,0)$,
+\[
+ L^*\Pi B_1L={1\over2},
+ \qquad
+ L^*\Pi B_2L=1.                                        \tag{6.20}
+\]
+The new theorem therefore requires the owner-complete physical response
+$A$, not merely an abstract pulled Hessian $H$.
+
+For smooth Littlewood--Paley cutoffs, (6.3) must be replaced by explicit
+analysis/coanalysis frame bounds and a dual reconstruction.  A partition of
+unity alone is not Parseval: the scalar choice
+$\Pi_1=\Pi_2=I/2$ has $\sum_m\Pi_m=I$ but
+$\sum_m\Pi_m^*\Pi_m=I/2$.  The theorem uses the already admitted orthogonal
+Fourier-shell convention.
+
+There is also a quotient/refinement boundary.  For
+$L(h_1,h_2)=h_1+h_2$, the vector $(1,-1)$ lies in $\Ker L$, but neither
+$L^*LE_1$ nor $L^*LE_2$ kills it.  Only their sum does.  Individual temporal
+cells are refinement-basic only under an extra condition such as
+$E_b\Ker L\subseteq\Ker L$; otherwise children must be aggregated before a
+quotient or representation-preserving refinement assertion is made.
+
+\section*{7. Exact shifted-Douglas uniform-gap theorem}
+
+Use the R-128 full-cross convention and put
+\[
+ E=2\eta I-R_0,
+ \qquad
+ F_0=2\zeta I-S_0,
+ \qquad
+ D=-L_0,                                                \tag{7.1}
+\]
+\[
+ M_2=\begin{pmatrix}E&-A_{\rm eff}/2\\
+                    -A_{\rm eff}^*/2&F_0\end{pmatrix},
+ \qquad
+ K=\binom BC,
+ \qquad
+ \mathcal M=\begin{pmatrix}M_2&-K\\-K^*&D\end{pmatrix}. \tag{7.2}
+\]
+
+\subsection*{Theorem 7.1 (shifted Douglas criterion)}
+
+For $\mu\geq0$, define
+\[
+                         D_\mu=D-\mu I.                 \tag{7.3}
+\]
+Then
+\[
+ \boxed{\mathcal M\succeq\mu I}                        \tag{7.4}
+\]
+if and only if
+\[
+ \boxed{
+ D_\mu\succeq0,
+ \quad
+ \Ran K^*\subseteq\Ran D_\mu^{1/2},
+ \quad
+ M_2-\mu I-X_\mu^*X_\mu\succeq0,}                    \tag{7.5}
+\]
+where $X_\mu$ is the Douglas reduced solution of
+\[
+                         D_\mu^{1/2}X_\mu=K^*.          \tag{7.6}
+\]
+A Moore--Penrose expression may be used only after closed range is proved.
+
+\emph{Proof.}
+Subtract $\mu I$ from the three-channel matrix and apply the bounded-operator
+Douglas--Schur theorem to the lower-right block $D_\mu$. \hfill$\square$
+
+\subsection*{Corollary 7.2 (norm-level three-channel gap)}
+
+Assume
+\[
+ E\succeq eI,
+ \quad F_0\succeq fI,
+ \quad \|A_{\rm eff}\|\leq a,
+ \quad D\succeq dI,
+ \quad \|K\|\leq k.                                    \tag{7.7}
+\]
+The two-channel lower bound is
+\[
+ m_2={e+f-\sqrt{(e-f)^2+a^2}\over2}.                    \tag{7.8}
+\]
+If
+\[
+                         a^2<4ef,
+ \qquad                 k^2<dm_2,                      \tag{7.9}
+\]
+then
+\[
+ \boxed{
+ \mathcal M\succeq\mu_3I,
+ \qquad
+ \mu_3={m_2+d-\sqrt{(m_2-d)^2+4k^2}\over2}>0.}         \tag{7.10}
+\]
+This follows by first replacing $M_2$ by $m_2I$ and then taking the least
+eigenvalue of the remaining scalar two-by-two matrix.
+
+For a desired $0\leq\mu<d$, put
+\[
+                         \tau_\mu
+ =\mu+{k^2\over d-\mu}.                                 \tag{7.11}
+\]
+The explicit sufficient conditions
+\[
+ e>\tau_\mu,
+ \qquad f>\tau_\mu,
+ \qquad a<2\sqrt{(e-\tau_\mu)(f-\tau_\mu)}             \tag{7.12}
+\]
+imply (7.4).
+
+At the R-128 zero-diagonal half-debt specialization,
+\[
+                         m_2
+ =0.02396011633137279\ldots .                            \tag{7.13}
+\]
+Consequently a low reserve $D\succeq dI$ and coupling $\|K\|\leq k$ satisfy
+the simple sufficient threshold
+\[
+                         \boxed{k^2<d\,m_2.}             \tag{7.14}
+\]
+The number (7.13) is not a general production margin: it assumes
+$R_0=S_0=0$ or that those adverse diagonal debts were already absorbed.
+
+In the scalar three-channel case the exact Schur determinant reads
+\[
+ \boxed{
+ \left(2\eta-{b^2\over d}\right)
+\left(2\zeta-{c^2\over d}\right)
+ >\left({a\over2}+{bc\over d}\right)^2.}               \tag{7.15}
+\]
+Together with $d>0$ and the two Schur diagonal conditions
+\[
+ 2\eta-{b^2\over d}\geq0,
+ \qquad
+ 2\zeta-{c^2\over d}\geq0,                              \tag{7.16}
+\]
+the non-strict version of (7.15) is the scalar PSD criterion; strict
+diagonals and strict (7.15) give positive definiteness.  The determinant
+exhibits the correlation between the two low couplings; separate triangle
+payments can be strictly worse.
+
+\section*{8. Strongest current production criterion}
+
+The exact live burden remains (2.6).  The available pieces may be organized,
+conditionally, as follows.  Let
+\[
+ X=\E\sum_k\|h_k\|^2,
+ \qquad Y=\E\|Z_K\|_6^6,
+ \qquad \kappa^2={6\over125P}.                          \tag{8.1}
+\]
+R-123's one genuine adapted row gives
+\[
+ \cT_{\rm row}
+ \leq2\eta_rX+2\zeta_rY
+ +{\kappa^4\over8\sqrt{\eta_r\zeta_r}}.               \tag{8.2}
+\]
+If the still-unproved owner-complete physical response has forward constants
+$C_{\rm mix},C_{\rm far}$ in the R-127 hypotheses, the sharp registered
+aggregation factor is
+\[
+ K_{\rm tri}
+ =\sqrt{8\over7}\,C_{\rm mix}2^{-j_0-2C}
+ +\sqrt{224\over223}\,C_{\rm far}2^{-3j_0-4C}.          \tag{8.3}
+\]
+For any $\eta_t>0$ its two-channel Young payment is
+\[
+ \cT_{\rm tri}
+ \leq2\eta_tX+{K_{\rm tri}^2\over8\eta_t}Y.           \tag{8.4}
+\]
+Equivalently $K_{\rm tri}\leq4\sqrt{\eta_t\zeta_t}$.
+These are acceptance tests after the production block theorem, not values of
+the missing constants.
+
+The balanced collar is scaling-critical.  If its action-normalized complete
+coefficient is $c_{\rm bal}$, the circle fixture forces
+\[
+                         \eta_b\zeta_b\geq{c_{\rm bal}^2\over4}. \tag{8.5}
+\]
+The production $c_{\rm bal}$ is not registered.  The low block must satisfy
+Theorem 7.1, including its range condition, and the absolute low/injected
+anchor remains required.
+
+Thus even after the legal-reverse repair the missing data are concrete:
+\[
+ \boxed{
+ C_{\rm mix},\ C_{\rm far},\ c_{\rm bal},\
+ R_0,\ S_0,\ d,\ k,
+ \quad\hbox{and the absolute low/common-terminal owner}.}        \tag{8.6}
+\]
+Every value must be obtained after all six rows, visits, output clusters,
+heat, rational multipliers, R-063 forest terms, and the $2680/729$ Cartan
+block have been assembled once.  No per-row, per-root, per-shell, or
+refinement-depth constant may be introduced.
+
+\section*{9. Evidence-map roadmap}
+
+The route decisions in this checkpoint are:
+\begin{center}
+\begin{tabular}{p{0.27\textwidth}|p{0.16\textwidth}|p{0.47\textwidth}}
+Route & Verdict & Reusable boundary\\ \hline
+$\cE_{\rm CN}\geq\cP_{\rm comp}$
+ & advanced identity
+ & absolute endpoint only\\
+Transfer that bound to R-123 action
+ & failed
+ &$\cP_{\rm comp}$ is the smaller owner\\
+Direct signed CN Hessian
+ & advanced algebra
+ & mean derivatives cancel; production bound open\\
+Separate $H_{\cV},H_{\cT}$ necessity
+ & failed
+ & the $n$-fixture has bounded signed difference\\
+Differentiate conditional Poincare
+ & failed
+ & parameter Hessian grows as $N^2$\\
+Gaussian second score
+ & parked
+ &$\sqrt2$ is sharp; endpoint $L^2$ is unavailable\\
+Entropy/Doob second-score control
+ & failed
+ & bounded entropy, divergent Fisher information\\
+Total-covariance shell intertwiner
+ & failed
+ &$C_J$ says nothing blockwise\\
+Physical shell analysis/source coanalysis
+ & advanced conditionally
+ & legal reverse follows from the forward response\\
+Shifted Douglas gap
+ & advanced
+ & exact $\mu$-criterion and norm corollary.
+\end{tabular}
+\end{center}
+
+Substantive route decisions, including the unsuccessful first interpretation
+of future-variance positivity, are preserved in the append-only exploration
+ledger.  The exact broad false implications are promoted to the negative
+registry.  Token-by-token private search is not recorded; the reusable
+question, finite check, finding, boundary, evidence, and revisit condition are.
+
+\section*{10. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: positive future variance can be discarded from the
+R-123 action.}  \textbf{UPHELD against the claim.}  Equation (2.4) fixes the
+direction: the action owner is $\cP_{\rm comp}=\cE_{\rm CN}-\cV/2$, so the
+variance is adverse when recovering that owner.
+
+\item \textbf{Objection: the absolute endpoint identity also holds for a
+secant.}  \textbf{UPHELD against the claim.}  Equation (2.5) gives an exact
+counterexample.  R-125's complement leakage must also be retained when the
+output resolution is not exhaustive.
+
+\item \textbf{Objection: the direct signed Hessian closes production because
+the conditional mean disappears.}  \textbf{UPHELD against the overclaim.}
+The derivative Gram and the signed $J\ddot J-D^2\Theta/2$ remainder remain.
+
+\item \textbf{Objection: conditional Poincare bounds the variance Hessian.}
+\textbf{UPHELD against the claim.}  Equations (4.1)--(4.3) separate the
+Gaussian derivative coordinate from the external parameter derivative.
+
+\item \textbf{Objection: total Fourier-diagonal covariance makes every
+temporal source block Fourier diagonal.}  \textbf{UPHELD against the claim.}
+The $P_\pm$ decomposition has total identity covariance and noncommuting
+increments.
+
+\item \textbf{Objection: Theorem 6.1 silently assumes the temporal
+commutator.}  \textbf{DISMISSED.}  It applies $\Pi_m$ only after $L$ and uses
+$L^*\Pi_m$ as the true legal coanalysis.  No projector is moved through
+$S_b$.
+
+\item \textbf{Objection: the coanalysis makes the old forward constants
+production constants.}  \textbf{UPHELD against the overclaim.}  The forward
+response $A$, its complete ownership, and its physical block constants remain
+unproved; pullback also costs $\|L\|$ unless normalized.
+
+\item \textbf{Objection: forward and reverse are two favorable owners.}
+\textbf{UPHELD against the claim.}  Equation (6.13) counts the symmetrized
+pair once.  Adding both complete sums without $1/2$ doubles $H$.
+
+\item \textbf{Objection: $m_2=0.0239601\ldots$ pays any low block.}
+\textbf{UPHELD against the claim.}  It is a zero-diagonal or already-paid
+specialization.  The production $D,K,R_0,S_0$ and Douglas range condition are
+still missing.
+
+\item \textbf{Objection: R-129 closes an A13 gate.}
+\textbf{DISMISSED.}  It closes only a structural legal-reverse mechanism
+conditional on the physical response and supplies acceptance criteria.  The
+forward, balanced, low, anchor, $\mathrm{OVERLAP}_{\rm src}$, and Nelson
+burdens remain.
+\end{enumerate}
+
+\section*{11. Reproduction commands}
+
+Primary symbolic and exact audit:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_endpoint_trace_excess_shell_coanalysis_
+  shifted_douglas_boundary.py
+\end{verbatim}
+
+Non-importing standard-library audit:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_endpoint_trace_excess_shell_coanalysis_
+  shifted_douglas_boundary_independent.py
+\end{verbatim}
+
+Integrated authority, PDF, exploration, registry, and public-surface audit:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_endpoint_trace_excess_shell_coanalysis_
+  shifted_douglas_boundary_verify.py
+\end{verbatim}
+
+\section*{12. Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-ENDPOINT-TRACE-EXCESS-SHELL-COANALYSIS-
+  SHIFTED-DOUGLAS-BOUNDARY (R-129).
+Precise statement: endpoint direction and transfer firewall in Theorem 2.1;
+  direct signed Hessian in Eqs. (3.2)-(3.6); analytic shortcut boundaries in
+  Section 4; temporal increment no-go in Section 5; shell analysis/coanalysis
+  Theorem 6.1 and Corollary 6.2; shifted-Douglas Theorem 7.1 and Corollary 7.2;
+  production acceptance map in Section 8.
+Scope: fixed cutoff and floor; fixed temporally faithful chart and conditional
+  law; bounded predictable source synthesis; exhaustive orthogonal spatial
+  shells; bounded owner-complete physical response on the cylindrical core.
+Dependencies: A1; R-093, R-103, R-104, R-119, R-120, R-122--R-128.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_endpoint_trace_excess_shell_coanalysis_
+  shifted_douglas_boundary_verify.py
+Expected output: R-129 integrated PASS; primary and independent assertion
+  counts, manifest, PDF, exploration, negative, and public-surface gates pass.
+Falsification gate: failure of endpoint Pythagoras or owner direction; direct
+  signed derivative cancellation; separate-norm, Poincare, entropy/Fisher,
+  temporal-increment, response-factorization, pullback-factor, or ambient-
+  split fixture; shifted Douglas identity, low threshold, authority/hash,
+  PDF, exploration, registry, or public-surface check.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no transfer of E_CN dominance to the R-123 action; no
+  production physical response, forward block constants, balanced/low closure,
+  absolute anchor, common terminal, OVERLAP_src, Nelson, removal, interacting
+  measure, Sector-A closure, or T5--T7 follows.
+Next required action: prove A13-CLASSII-OWNER-COMPLETE-TRACE-EXCESS-PHYSICAL-
+  RESPONSE-FORWARD-BALANCED-LOW-BOUND, including C_mix, C_far, c_bal, the full
+  diagonal/low Douglas data, and the absolute owner once.
+\end{verbatim}
+
+\endgroup

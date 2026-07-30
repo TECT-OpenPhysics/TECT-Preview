@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-129](#r-129) | Endpoint trace-excess direction, shell coanalysis legal reverse, and the shifted-Douglas gap boundary | Scoped T4 analytic/exact/executed advance and route correction. The exact identity `E_CN=P_comp+V/2>=P_comp` holds only at an absolute conditional endpoint and has the wrong direction for lower-bounding the smaller R-123 action owner; exact endpoint and secant fixtures prevent that bypass. Direct covariance-normal differentiation cancels every conditional-mean derivative, and a Gaussian family proves that separate `H_V` and `H_T` norm bounds are not logically necessary if a direct signed bound is proved. For an owner-complete physical response `A`, orthogonal physical-shell analysis `R=C L_pred` and response analysis `F=C A` give `H=R^*F=F^*R`; the true aggregate reverse is legal, shell-count-free, and has the forward norm without assuming temporal covariance/shell commutation. It is not a swapped-label geometric band, and pullback costs `||L_pred||`. The shifted-Douglas theorem gives an exact prescribed-gap criterion and the norm threshold `k^2<d m_2`, with `m_2=0.0239601163...` only in the R-128 zero-diagonal specialization. Production response identification, forward constants, balanced/low/anchor data, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-128](#r-128) | Owner-complete source pullback, covariance-normal force repair, and the strict-margin frontier | Scoped T4 analytic/exact/executed correction and advance: differentiating the exact R-104 renormalized-interaction owner identity on a fixed smooth temporally faithful chart gives the recombined legal control covector and common Hessian, with pullback conjugacy under fixed bounded linear refinements; R-119 remains the prior authority for common control-Hessian factorisation. Bounded smooth fixtures separate control-shift from Malliavin differentiation and expose both feedback Jacobian and connection terms. The complete R-125 covariance-normal force is `(g_V-g_T)/2`, not the naked R-126 trace-excess force; the sextic and source-cost derivatives are included explicitly. Rootwise adaptation does not imply a common terminal, and one-sided projection does not supply a reverse adjoint. Reallocating half of the flexible R-103 debts gives the conditional zero-diagonal threshold `0.9780518670...` and margin `0.0239601163...` at the old R-126 budget, but no general margin follows before adverse diagonal blocks are absorbed. Full force completion and full Hessian payment would double-spend the source square. The production root/shell intertwiner, corrected covariance-normal operator bound, balanced/low matrix, absolute anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-127](#r-127) | Predictable-source Riesz geometry, weighted Schur improvement, and the low-margin boundary | Scoped T4 analytic/exact/executed advance: on a fixed temporally faithful chart the legal source adjoint is blockwise `E[S_b^*G|F_(b-1)]`, the physical quotient Riesz vector is `sum_b S_b E[S_b^*G|F_(b-1)]`, and its source norm is bounded with sharp constant one by `E<G,C_JG>`. A two-block fixture gives an exact factor-two error for the unrestricted replacement `C_JG`. At `q=10/9` source completion costs exactly `5/9` times the legal force square. Weighted Schur improves the collar-one mixed coefficient from `2/sqrt(45)` to `1/sqrt(14)` and the far coefficient from `8/sqrt(16065)` to `sqrt(224/223)/16`; the `3.445813...` threshold is mixed-only and same-channel far terms still add by triangle. The augmented low/injected Loewner criterion proves that saturation admits only the weighted cancellation `b sqrt(zeta)+c sqrt(eta)=0`; otherwise strict margin or a constant payment is required. A constant-gauge argument shows normalized Gibbs/Doob data cannot determine the absolute low anchor. The complete production source-Hessian identification and unified forward/legal-reverse/balanced/low bound remain open, as do `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector-A closure |
 | [R-126](#r-126) | Total-symbol Euler force, low-injected baseline transport, and the block-Loewner boundary | Scoped T4 analytic/exact/executed advance: the R-125 variance-minus-forest symbol has an exact finite-cutoff directional derivative and, for predictable variations, a periodic Euler force containing trace, derivative injection, rational zero-order multipliers, and the nonzero Cartan skew once. The raw force still requires `F_(k-1)` projection and the actual Cameron-Martin/source Riesz map. R-079 gives an exact low/injected baseline-transport equivalence with `E W_J(A0)` and all mean reserves retained; it is conditional on the missing production common-terminal/matching-trace identification and gives no sign. The exact block-Loewner criterion keeps diagonal reserves and the mixed operator together. Forward mixed sums have constants `64/45` and `8/sqrt(45)`, while the full mixed secant cannot inherit the positive atom's quadratic gap. An anticipative fixed-shell fixture refutes only an unrestricted coefficient-blind reverse-band extension. The unified production forward/legal-reverse/balanced/low estimate, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -147,6 +148,99 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-129"></a>
+### R-129 -- Endpoint trace-excess direction, shell coanalysis legal reverse, and the shifted-Douglas gap boundary
+
+**Result ID.**
+A13-CLASSII-ENDPOINT-TRACE-EXCESS-SHELL-COANALYSIS-SHIFTED-DOUGLAS-BOUNDARY.
+
+**Endpoint-direction correction.**  For a fully assembled conditional owner,
+put `V=E_f||J-E_fJ||^2`, `T=Theta-||E_fJ||^2`, and let the R-123 action owner
+be `P_comp=-T/2`.  The R-125 covariance-normal endpoint obeys
+
+`E_CN=(V-T)/2=P_comp+V/2>=P_comp`.
+
+This identity has the wrong direction for obtaining a lower bound on the
+smaller action owner.  The exact R-125 constant-translation direction has
+`V=T=4s`, hence `E_CN=0` but `P_comp=-2s`.  Positivity also cannot be
+subtracted: `J_0=eta`, `J_h=0`, and zero trace give
+`Delta E_CN=-1/2` but `Delta P_comp=0`.  Thus the R-123 aggregate trace-excess
+criterion with allocations below `9/20` and `3/20` remains the live
+Nelson-level burden.
+
+**Direct signed Hessian.**  At fixed conditional law,
+
+`D^2 E_CN[H,K]=Re E_f(<dot J_H,dot J_K>+<J,ddot J_HK>)-D^2Theta[H,K]/2`.
+
+Every derivative of the conditional mean cancels.  The Gaussian family
+`V_n=(n+1)z^2`, `T_n=nz^2` has separate Hessians `2n+2` and `2n`, while the
+signed covariance-normal Hessian is one.  Separate norm bounds are therefore
+sufficient but not logically necessary if a direct owner-complete signed
+estimate is proved.  Conditional Poincare, entropy-only second-score control,
+and unweighted floor-uniform rational second derivatives are separately
+retired by exact counterfamilies; the sharp Gaussian second-score route is
+parked at its missing endpoint `L2` moment.
+
+**Shell analysis/coanalysis legal reverse.**  Let `L=L_pred` be the legal
+predictable source synthesis, let `Cz=(Pi_m z)_m` be the exhaustive orthogonal
+physical Fourier-shell analysis, and let `A` be the bounded owner-complete
+physical Hessian response with selfadjoint pulled Hessian `H=L^*A`.  Put
+`R=C L` and `F=C A`.  Then
+
+`H=R^*F=F^*R`, `||R||=||L||`, and `||F^*||=||F||`.
+
+The source coanalysis is legal blockwise because
+`(L^*G)_b=E[S_b^*G|F_(t_(b-1))]`.  No commutator
+`[Delta C_b,Pi_m]` is required, and the shell sum has no shell-count factor.
+If weighted Schur proves the owner-complete physical forward bound
+`||F||<=K_F`, the aggregate reverse has the same `K_F` and
+`||H||<=||L_pred|| K_F`, with
+`||L_pred||^2<=||C_J||`.  The true adjoint orientation is not generally a
+swapped-label geometric cell; an exact two-dimensional fixture has
+`T_21=0` and `T_12!=0`.  Coanalysis is not source-shell localized, individual
+temporal cells need not descend through `ker L`, smooth partitions of unity
+are not Parseval without frame data, and forward plus reverse must be
+symmetrized with `1/2` to avoid doubling the owner.
+
+**Shifted-Douglas gap.**  With the R-128 full-cross matrix
+`M=[[M_2,-K],[-K^*,D]]`, one has `M>=mu I` exactly when
+`D_mu=D-mu I>=0`, `Ran K^* subset Ran D_mu^(1/2)`, and
+`M_2-mu I-X_mu^*X_mu>=0`, where `D_mu^(1/2)X_mu=K^*` is the Douglas reduced
+solution.  If `E>=eI`, `F>=fI`, `||A_eff||<=a`, `D>=dI`, and `||K||<=k`, put
+
+`m_2=(e+f-sqrt((e-f)^2+a^2))/2`.
+
+The conditions `a^2<4ef` and `k^2<d m_2` give the explicit gap
+
+`mu_3=(m_2+d-sqrt((m_2-d)^2+4k^2))/2>0`.
+
+For a prescribed `mu<d`, the sufficient two-channel threshold is
+`tau_mu=mu+k^2/(d-mu)` with
+`e,f>tau_mu` and `a<2sqrt((e-tau_mu)(f-tau_mu))`.  The R-128 half-debt value
+`m_2=0.02396011633137279...` applies only after zeroing or already absorbing
+the adverse diagonal blocks; actual production `D,K,R,S` remain unknown.
+
+**Scope.**  Fixed finite cutoff and positive floor; fixed R-093/R-104 chart
+and conditional law; bounded predictable source synthesis; exhaustive
+orthogonal physical Fourier shells; bounded owner-complete physical response
+on the cylindrical core.  No production response identification, forward
+mixed/far constants, balanced coefficient, low reserve/coupling, common
+terminal, absolute anchor, `OVERLAP_src`, Nelson theorem, removal, interacting
+measure, Sector-A closure, or higher tier is proved.
+
+**Evidence.**  Proof note and PDF
+`classii-endpoint-trace-excess-shell-coanalysis-shifted-douglas-boundary-260730-v1.0`;
+primary exact audit `50/50`; non-importing independent audit `38/38`; integrated
+authority, manifest, rebuilt-source/PDF-text/render identity, resolved-object
+PDF security including `/AF` and `/EF`, semantic authority/result, manifest
+scope/no-overclaim, exploration, negative-result, structured-event, and
+public-surface audit `348/348` (aggregate `436/436`); the
+`EXP-000451--EXP-000468` route, hostile-packaging batch, and deterministic-
+result correction; and its six formal
+audit/no-go authorities.
+
+**Tier:** T4.  Both A13 gates remain open.
 
 <a id="r-128"></a>
 ### R-128 -- Owner-complete source pullback, covariance-normal force repair, and the strict-margin frontier

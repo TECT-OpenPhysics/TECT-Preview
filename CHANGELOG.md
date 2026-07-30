@@ -5,6 +5,22 @@ not pillar counts.
 
 ---
 
+## [A13 R-129 verifier hardening deterministic-result correction] - 2026-07-30
+
+The release watcher exposed a reproducibility defect after the PDF hardening: successful rebuild assertions stored a random TemporaryDirectory path, so every verifier run changed the tracked integrated result and made the catalog stale. The PASS artefact now stores only deterministic derived values; terminal failure diagnostics remain available without entering the tracked result. EXP-000468 records the failure and repair. Two consecutive full runs produced the identical integrated-result SHA-256 e305d7cc9db9348118b31b3d02b5a1df606fd8e27f3716333e0c11c27f4b5b8b before the final exploration-contract increment. The final frozen contract is integrated 348/348 and aggregate 436/436; mathematical scope and T4 tier are unchanged.
+
+## [A13 R-129 verifier hardening final contract freeze] - 2026-07-30
+
+Append-only correction to the preceding R-129 verifier-hardening event: after adding semantic authority/result-ID checks, manifest evidence/scope/proof/no-overclaim checks, declared-key consistency, and structured latest-event checks, the frozen final contract is integrated 342/342 and aggregate 430/430, not the earlier interim 313/313 and 401/401. The source-rebuild, zero-overfull, extracted-page, hash-pinned 130-DPI render, and AF/EF security repairs are unchanged. Mathematical scope and T4 tier remain unchanged.
+
+## [A13 R-129 verifier hardening: source-render binding and AF/EF security] - 2026-07-30
+
+Hostile packaging review found two false-positive paths in the first integrated contract even though the current R-129 artefacts were consistent. The verifier now recompiles the exact source in an isolated internal temporary directory, derives zero overfull boxes, compares every extracted page, renders both rebuilt and pinned PDFs at 130 DPI, requires page-hash identity, and binds the exact manually inspected render hashes in the manifest. The recursive PDF security walk now rejects catalog /AF and Filespec /EF embedded-file routes in addition to name-tree and annotation paths. EXP-000466--EXP-000467 preserve the defects, repairs, limits, and future shared-gate action. Hardened integrated 313/313 and aggregate 401/401 pass; mathematical scope and T4 tier are unchanged.
+
+## [A13 R-129 endpoint direction, shell coanalysis, and shifted-Douglas boundary] - 2026-07-30
+
+Registered R-129 at T4. The exact endpoint identity E_CN=P_comp+V/2 has the wrong direction for lower-bounding the smaller R-123 action owner, and endpoint subtraction has no variance sign. Direct signed differentiation cancels conditional-mean derivatives. Exact countermodels record the limits of Poincare differentiation, entropy-only score control, temporal-increment shell intertwining, smooth-frame and quotient shortcuts, and swapped geometric reverse labels. The positive repair gives H=R^*F=F^*R through orthogonal physical-shell analysis and predictable source coanalysis, conditional on an owner-complete production response and its forward estimate; pullback retains ||L_pred||. The exact shifted-Douglas theorem supplies prescribed-gap acceptance criteria. Primary 50/50 and independent 38/38 pass; the eleven-page PDF passed form, zero-overfull, security, extraction, and all-page visual review. Production C_mix, C_far, c_bal, low D/K/R0/S0, absolute anchor, common terminal, OVERLAP_src, Nelson, removals, interacting measure, and Sector A remain open.
+
 ## [A13 R-128 metadata correction: structured evidence links] - 2026-07-30
 
 Append-only metadata correction for event 20260730-a13-r-128-register-owner-pullback-and-covarianc. This event adds the omitted structured negative-result, note, script, and keyword links; it does not change the mathematical scope or tier of R-128.
