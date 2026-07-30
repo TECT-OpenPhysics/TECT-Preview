@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-128](#r-128) | Owner-complete source pullback, covariance-normal force repair, and the strict-margin frontier | Scoped T4 analytic/exact/executed correction and advance: differentiating the exact R-104 renormalized-interaction owner identity on a fixed smooth temporally faithful chart gives the recombined legal control covector and common Hessian, with pullback conjugacy under fixed bounded linear refinements; R-119 remains the prior authority for common control-Hessian factorisation. Bounded smooth fixtures separate control-shift from Malliavin differentiation and expose both feedback Jacobian and connection terms. The complete R-125 covariance-normal force is `(g_V-g_T)/2`, not the naked R-126 trace-excess force; the sextic and source-cost derivatives are included explicitly. Rootwise adaptation does not imply a common terminal, and one-sided projection does not supply a reverse adjoint. Reallocating half of the flexible R-103 debts gives the conditional zero-diagonal threshold `0.9780518670...` and margin `0.0239601163...` at the old R-126 budget, but no general margin follows before adverse diagonal blocks are absorbed. Full force completion and full Hessian payment would double-spend the source square. The production root/shell intertwiner, corrected covariance-normal operator bound, balanced/low matrix, absolute anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-127](#r-127) | Predictable-source Riesz geometry, weighted Schur improvement, and the low-margin boundary | Scoped T4 analytic/exact/executed advance: on a fixed temporally faithful chart the legal source adjoint is blockwise `E[S_b^*G|F_(b-1)]`, the physical quotient Riesz vector is `sum_b S_b E[S_b^*G|F_(b-1)]`, and its source norm is bounded with sharp constant one by `E<G,C_JG>`. A two-block fixture gives an exact factor-two error for the unrestricted replacement `C_JG`. At `q=10/9` source completion costs exactly `5/9` times the legal force square. Weighted Schur improves the collar-one mixed coefficient from `2/sqrt(45)` to `1/sqrt(14)` and the far coefficient from `8/sqrt(16065)` to `sqrt(224/223)/16`; the `3.445813...` threshold is mixed-only and same-channel far terms still add by triangle. The augmented low/injected Loewner criterion proves that saturation admits only the weighted cancellation `b sqrt(zeta)+c sqrt(eta)=0`; otherwise strict margin or a constant payment is required. A constant-gauge argument shows normalized Gibbs/Doob data cannot determine the absolute low anchor. The complete production source-Hessian identification and unified forward/legal-reverse/balanced/low bound remain open, as do `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector-A closure |
 | [R-126](#r-126) | Total-symbol Euler force, low-injected baseline transport, and the block-Loewner boundary | Scoped T4 analytic/exact/executed advance: the R-125 variance-minus-forest symbol has an exact finite-cutoff directional derivative and, for predictable variations, a periodic Euler force containing trace, derivative injection, rational zero-order multipliers, and the nonzero Cartan skew once. The raw force still requires `F_(k-1)` projection and the actual Cameron-Martin/source Riesz map. R-079 gives an exact low/injected baseline-transport equivalence with `E W_J(A0)` and all mean reserves retained; it is conditional on the missing production common-terminal/matching-trace identification and gives no sign. The exact block-Loewner criterion keeps diagonal reserves and the mixed operator together. Forward mixed sums have constants `64/45` and `8/sqrt(45)`, while the full mixed secant cannot inherit the positive atom's quadratic gap. An anticipative fixed-shell fixture refutes only an unrestricted coefficient-blind reverse-band extension. The unified production forward/legal-reverse/balanced/low estimate, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-125](#r-125) | Conditional-variance/forest bridge, stationary-baseline residual, and the root-shell operator boundary | Scoped T4 analytic/exact/executed advance: at finite cutoff the covariance-normal endpoint equals the conditional stopped-current packet plus one half of the future conditional variance, so the R-124 secant is exactly `Psi=Delta V_fut-Delta F_063^ad`. The future-variance rebate is indispensable; an exact production-frame constant-translation fixture falsifies its omission. A smooth cylindrical partial-Wick identity gives the finite-cutoff adapted forest coordinate, while the production stationary quantity is exposed as `sum E V_0-sum E F_063,0^ad` and remains unsigned. A common-terminal Doob lemma makes only the low-plus-root aggregate nonpositive; root-only `C_0=0` additionally requires a nonnegative complete-low atom, and neither hypothesis is established for the actual production currents. A correlated Hilbert-operator lemma gives the sufficient far-tail threshold `K_far=8 C_* 2^(-3j_0)/sqrt(16065)` and the sharp mixed criterion `||A||<=4 sqrt(eta zeta)`, but the production factorisation, balanced band, stationary-baseline bound, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -146,6 +147,86 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-128"></a>
+### R-128 -- Owner-complete source pullback, covariance-normal force repair, and the strict-margin frontier
+
+**Result ID.**
+A13-CLASSII-OWNER-COMPLETE-SOURCE-PULLBACK-COVARIANCE-NORMAL-FORCE-BOUNDARY.
+
+**Differentiated owner theorem.**  On one fixed finite-cutoff, positive-floor,
+smooth temporally faithful R-104 chart, put
+`E_(J,pi)(h)=E V_J^ren(S_pi xi+L_pi h)`.  Differentiating the exact recombined
+R-104 scalar owner identity once and twice gives
+
+`P_pred L_pi^* D E_J = g_low/inj^adm + sum_alpha g_alpha^adm`,
+
+`P_pred L_pi^* D^2 E_J L_pi P_pred = H_low/inj^adm + sum_alpha H_alpha^adm`.
+
+The sums range only over active top-level R-104 owners; forest and Schur
+coordinates are internal alternatives, not extra summands.  The common
+Hessian is selfadjoint and annihilates `ker L_pi`.  R-119 Theorem 5.1 remains
+the authority for the abstract control-Hessian factorisation; R-128 does not
+recount it.  For a fixed bounded linear representation-preserving refinement
+`iota`, the exact naturality is
+`g_pi(h)=iota^*g_pi'(iota h)` and
+`H_pi(h)=iota^*H_pi'(iota h)iota`.
+
+**Derivative firewall.**  Fixed-law control variation holds the predictable
+feedback function fixed, whereas Gaussian/Malliavin source differentiation
+also differentiates that feedback.  The bounded smooth fixture
+`h_2=alpha tanh(xi_1)` with quadratic endpoint has control Hessian
+`[[1,1],[1,1]]` and source Hessian `[[4,2],[2,1]]` at the origin and
+`alpha=1`.  The bounded fixture
+`h_2=(beta/2)tanh(xi_1)^2` with a linear endpoint has zero control Hessian but
+source `11` entry `beta`, isolating the connection term.
+
+**Covariance-normal force correction.**  With
+`V=E_f||J-E_f J||^2` and `T=Theta-||E_f J||^2`, the complete R-125 endpoint is
+
+`E_CN=(V-T)/2=(E_f||J||^2-Theta)/2`.
+
+Consequently `g_CN=(g_V-g_T)/2` and `H_CN=(H_V-H_T)/2`.  The exact fixture
+`J_z=z(1+eta)`, `Phi_z=z`, `Theta_z=z^2` has `T_z=0` but
+`E_CN,z=z^2/2`, so the naked R-126 trace-excess force omits a nonzero
+derivative.  The full R-093 endpoint additionally contributes the sextic
+covector `(9/10)|Z|^4 Z` and its nonnegative Hessian; the full source action
+also contributes `(9/10)h` and `(9/10)I` from source cost.
+
+**Terminal, reverse, and allocation firewalls.**  Separately adapted root
+means need not satisfy the tower condition for one common terminal.  A
+one-sided projection `PH` of a selfadjoint Hessian need not be selfadjoint;
+reverse adjointness is available only after proving two-sided blocks
+`Q_m H Q_r`, or an equivalent production intertwiner.  In the full cross-form
+convention `A_eff=2T`.  The covariance-normal half-sum norm bound uses the
+factor `1/2` only when both input constants are already full `A_eff` norms.
+
+R-103 permits flexible positive form allocations.  Keeping the R-124 row cost
+and assigning half of the displayed R-103 debts gives threshold
+`0.9780518670016728...`; in the zero-diagonal specialization, or after every
+adverse diagonal debt is absorbed, an operator at the old R-126 budget leaves
+margin `0.0239601163313728...`.  This is an acceptance calculation, not a
+production matrix theorem.  Completing the full source force costs `5/9` and
+uses the whole `9/20` source square, so it cannot be combined with a second
+full direct-Hessian payment.  A declared partial split or the direct Taylor
+route is required.
+
+**Scope.**  Fixed finite cutoff and positive floor; fixed R-104 chart,
+Gaussian law, and filtration; bounded smooth cylindrical-simple predictable
+core; predictable fresh-root-independent heat; exhaustive clusters and
+once-owned covariance where the R-125 bridge is used.  No production
+root/shell intertwiner, cutoff-uniform covariance-normal bound, balanced/low
+matrix closure, absolute anchor, `OVERLAP_src`, Nelson, removal, interacting
+measure, Sector-A closure, or higher tier is proved.
+
+**Evidence.**  Proof note and PDF
+`classii-owner-complete-source-pullback-covariance-normal-force-boundary-260730-v1.0`;
+primary exact audit `43/43`; non-importing independent audit `32/32`;
+integrated authority, manifest, PDF-security, exploration, negative-result,
+and public-surface contract; `EXP-000436--EXP-000450`; and the six R-128 audit
+or no-go authorities.
+
+**Tier:** T4.  Both A13 gates remain open.
 
 <a id="r-127"></a>
 ### R-127 -- Predictable-source Riesz geometry, weighted Schur improvement, and the low-margin boundary

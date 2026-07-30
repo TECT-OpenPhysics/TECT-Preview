@@ -1,0 +1,761 @@
+{
+  "assertions": [
+    {
+      "actual": [
+        [
+          "1039/420"
+        ],
+        [
+          "-12/35"
+        ],
+        [
+          "179/84"
+        ]
+      ],
+      "expected": [
+        [
+          "1039/420"
+        ],
+        [
+          "-12/35"
+        ],
+        [
+          "179/84"
+        ]
+      ],
+      "group": "owner",
+      "name": "gradient_recombines",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "3",
+          "0",
+          "3"
+        ],
+        [
+          "0",
+          "5",
+          "5"
+        ],
+        [
+          "3",
+          "5",
+          "8"
+        ]
+      ],
+      "expected": [
+        [
+          "3",
+          "0",
+          "3"
+        ],
+        [
+          "0",
+          "5",
+          "5"
+        ],
+        [
+          "3",
+          "5",
+          "8"
+        ]
+      ],
+      "group": "owner",
+      "name": "hessian_recombines",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "3",
+          "0",
+          "3"
+        ],
+        [
+          "0",
+          "5",
+          "5"
+        ],
+        [
+          "3",
+          "5",
+          "8"
+        ]
+      ],
+      "expected": [
+        [
+          "3",
+          "0",
+          "3"
+        ],
+        [
+          "0",
+          "5",
+          "5"
+        ],
+        [
+          "3",
+          "5",
+          "8"
+        ]
+      ],
+      "group": "owner",
+      "name": "common_hessian_selfadjoint",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "group": "owner",
+      "name": "vertical_is_synthesis_kernel",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "group": "owner",
+      "name": "vertical_is_hessian_kernel",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1"
+        ]
+      ],
+      "expected": [
+        [
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1"
+        ]
+      ],
+      "group": "refinement",
+      "name": "synthesis_intertwining",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1039/420"
+        ],
+        [
+          "-12/35"
+        ],
+        [
+          "179/84"
+        ]
+      ],
+      "expected": [
+        [
+          "1039/420"
+        ],
+        [
+          "-12/35"
+        ],
+        [
+          "179/84"
+        ]
+      ],
+      "group": "refinement",
+      "name": "gradient_pullback",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "3",
+          "0",
+          "3"
+        ],
+        [
+          "0",
+          "5",
+          "5"
+        ],
+        [
+          "3",
+          "5",
+          "8"
+        ]
+      ],
+      "expected": [
+        [
+          "3",
+          "0",
+          "3"
+        ],
+        [
+          "0",
+          "5",
+          "5"
+        ],
+        [
+          "3",
+          "5",
+          "8"
+        ]
+      ],
+      "group": "refinement",
+      "name": "hessian_conjugacy",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "firewall",
+      "name": "control_hessian_rank_one",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "4",
+          "2"
+        ],
+        [
+          "2",
+          "1"
+        ]
+      ],
+      "expected": [
+        [
+          "4",
+          "2"
+        ],
+        [
+          "2",
+          "1"
+        ]
+      ],
+      "group": "firewall",
+      "name": "malliavin_hessian_at_alpha_one",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "4",
+          "2"
+        ],
+        [
+          "2",
+          "1"
+        ]
+      ],
+      "expected": "not control Hessian",
+      "group": "firewall",
+      "name": "derivatives_differ",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "4",
+          "2"
+        ],
+        [
+          "2",
+          "1"
+        ]
+      ],
+      "expected": "J_h^T J_h",
+      "group": "firewall",
+      "name": "malliavin_feedback_jacobian",
+      "status": "PASS"
+    },
+    {
+      "actual": "beta",
+      "expected": "beta",
+      "group": "firewall",
+      "name": "bounded_feedback_second_jet",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "firewall",
+      "name": "connection_term_control_hessian_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "beta",
+      "expected": "beta",
+      "group": "firewall",
+      "name": "connection_term_malliavin_hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "-(21*s - 10*t + 35*z)**4/9003750 - (21*s - 10*t + 35*z)**2/2450 + (22050*s - 10500*t + 36750*z - 11*(21*s - 10*t + 35*z)**2)**2/2701125000 + (22050*s - 10500*t + 36750*z - (21*s - 10*t + 35*z)**2)**2/2701125000",
+      "expected": "-(21*s - 10*t + 35*z)**4/10804500 - (21*s - 10*t + 35*z)**2/2450 + (3675*s - 1750*t + 6125*z - (21*s - 10*t + 35*z)**2)**2/37515625",
+      "group": "variance",
+      "name": "conditional_pythagoras",
+      "status": "PASS"
+    },
+    {
+      "actual": "z*(11*z - 30)*(11*z - 15)/375",
+      "expected": "z*(11*z - 30)*(11*z - 15)/375",
+      "group": "variance",
+      "name": "first_variation",
+      "status": "PASS"
+    },
+    {
+      "actual": "-242*z**2/875 + 132*z/175 - 12/35",
+      "expected": "-242*z**2/875 + 132*z/175 - 12/35",
+      "group": "variance",
+      "name": "second_variation",
+      "status": "PASS"
+    },
+    {
+      "actual": "-9*s/25 + 6*t/35 - 3*z/5 - 2*(21*s - 10*t + 35*z)**3/214375 - (21*s - 10*t + 35*z - 525)*(22050*s - 10500*t + 36750*z - (21*s - 10*t + 35*z)**2)/32156250 - (231*s - 110*t + 385*z - 525)*(22050*s - 10500*t + 36750*z - 11*(21*s - 10*t + 35*z)**2)/32156250",
+      "expected": "-9*s/25 + 6*t/35 - 3*z/5 - 2*(21*s - 10*t + 35*z)**3/214375 - (21*s - 10*t + 35*z - 525)*(22050*s - 10500*t + 36750*z - (21*s - 10*t + 35*z)**2)/32156250 - (231*s - 110*t + 385*z - 525)*(22050*s - 10500*t + 36750*z - 11*(21*s - 10*t + 35*z)**2)/32156250",
+      "group": "variance",
+      "name": "covariance_normal_half_difference_gradient",
+      "status": "PASS"
+    },
+    {
+      "actual": "1602*s**2/21875 - 2136*s*t/30625 + 1068*s*z/4375 + 216*s/875 + 712*t**2/42875 - 712*t*z/6125 - 144*t/1225 + 178*z**2/875 + 72*z/175 - 6/35",
+      "expected": "1602*s**2/21875 - 2136*s*t/30625 + 1068*s*z/4375 + 216*s/875 + 712*t**2/42875 - 712*t*z/6125 - 144*t/1225 + 178*z**2/875 + 72*z/175 - 6/35",
+      "group": "variance",
+      "name": "covariance_normal_half_difference_hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "z",
+      "expected": "z",
+      "group": "variance_fixture",
+      "name": "phi",
+      "status": "PASS"
+    },
+    {
+      "actual": "z**2",
+      "expected": "z**2",
+      "group": "variance_fixture",
+      "name": "variance",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "variance_fixture",
+      "name": "trace_excess_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "z**2/2",
+      "expected": "z**2/2",
+      "group": "variance_fixture",
+      "name": "covariance_normal_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "0",
+        "z"
+      ],
+      "expected": [
+        0,
+        "z"
+      ],
+      "group": "variance_fixture",
+      "name": "naked_force_incomplete",
+      "status": "PASS"
+    },
+    {
+      "actual": "-32761/11812500",
+      "expected": "-32761/11812500",
+      "group": "sextic",
+      "name": "gradient",
+      "status": "PASS"
+    },
+    {
+      "actual": "-8507/7087500",
+      "expected": "-8507/7087500",
+      "group": "sextic",
+      "name": "hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/10",
+      "expected": "9/10",
+      "group": "source_cost",
+      "name": "gradient_coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/10",
+      "expected": "9/10",
+      "group": "source_cost",
+      "name": "hessian_coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "-1": "-2",
+        "1": "2"
+      },
+      "expected": {
+        "-1": "-2",
+        "1": "2"
+      },
+      "group": "tower",
+      "name": "conditional_phi_two",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "-1": "-2",
+        "1": "2"
+      },
+      "expected": "not phi_one",
+      "group": "tower",
+      "name": "common_terminal_inference_fails",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "expected": "not one-sided projection",
+      "group": "projection",
+      "name": "one_sided_not_selfadjoint",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "group": "projection",
+      "name": "two_sided_blocks_are_adjoints",
+      "status": "PASS"
+    },
+    {
+      "actual": "62/99",
+      "expected": "62/99",
+      "group": "projection",
+      "name": "oriented_block_effective_factor_two",
+      "status": "PASS"
+    },
+    {
+      "actual": "4000000000001/1000000000000",
+      "expected": "4000000000001/1000000000000",
+      "group": "budget",
+      "name": "r124_mass_matches_a1",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(1026220800000516595200000065010)/1100000000000275",
+      "expected": "sqrt(1026220800000516595200000065010)/1100000000000275",
+      "group": "budget",
+      "name": "old_budget_reconstructed",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*sqrt(82308864000041433216000005214)/880000000000220",
+      "expected": "> sqrt(1026220800000516595200000065010)/1100000000000275",
+      "group": "budget",
+      "name": "half_debt_budget_improves",
+      "status": "PASS"
+    },
+    {
+      "actual": "10170400000002569/17600000000004400 - sqrt(95037189760048027713600006067801)/17600000000004400",
+      "expected": "positive",
+      "group": "budget",
+      "name": "strict_margin_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "10170400000002569/17600000000004400 - sqrt(95037189760048027713600006067801)/17600000000004400",
+      "expected": "between 0.023 and 0.025",
+      "group": "budget",
+      "name": "strict_margin_regression",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*sqrt(47360000000023840000000003)/20000000000005",
+      "expected": "> 3*sqrt(82308864000041433216000005214)/880000000000220",
+      "group": "budget",
+      "name": "limiting_budget_exceeds_half",
+      "status": "PASS"
+    },
+    {
+      "actual": "h*(20*g + 9*h)/20",
+      "expected": "h*(20*g + 9*h)/20",
+      "group": "allocation",
+      "name": "partial_completion_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/9",
+      "expected": "5/9",
+      "group": "allocation",
+      "name": "full_completion_adverse_cost",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "allocation",
+      "name": "full_completion_leaves_no_source_square",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 43,
+  "assertions_total": 43,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "diagnostics": {
+    "budgets": {
+      "half_debt": {
+        "budget": "3*sqrt(82308864000041433216000005214)/880000000000220",
+        "eta": "311776000000079/704000000000176",
+        "strict_margin_at_old_budget": "10170400000002569/17600000000004400 - sqrt(95037189760048027713600006067801)/17600000000004400",
+        "zeta": "27/200"
+      },
+      "limiting_budget": "3*sqrt(47360000000023840000000003)/20000000000005",
+      "mass": "4000000000001/1000000000000",
+      "old": {
+        "budget": "sqrt(1026220800000516595200000065010)/1100000000000275",
+        "eta": "777440000000197/1760000000000440",
+        "zeta": "3/25"
+      },
+      "partial_completion_adverse": "5/(9*lam)",
+      "row_cost": "24000000000/4000000000001"
+    },
+    "control_malliavin": {
+      "alpha_one": [
+        [
+          "4",
+          "2"
+        ],
+        [
+          "2",
+          "1"
+        ]
+      ],
+      "bounded_control_hessian": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1"
+        ]
+      ],
+      "bounded_malliavin_hessian": [
+        [
+          "(alpha + 1)**2",
+          "alpha + 1"
+        ],
+        [
+          "alpha + 1",
+          "1"
+        ]
+      ],
+      "bounded_nonlinear_connection": "beta"
+    },
+    "covariance_normal": {
+      "covariance_normal": "z**2*(-89*z**2 - 360*z + 450)/900",
+      "fixture": {
+        "covariance_normal": "z**2/2",
+        "phi": "z",
+        "trace_excess": "0",
+        "variance": "z**2"
+      },
+      "trace_excess": "z**3*(299*z + 60)/900",
+      "variance": "z**2*(11*z - 30)**2/900"
+    },
+    "owner_pullback": {
+      "common_hessian": [
+        [
+          "3",
+          "0",
+          "3"
+        ],
+        [
+          "0",
+          "5",
+          "5"
+        ],
+        [
+          "3",
+          "5",
+          "8"
+        ]
+      ],
+      "refinement_injection": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "synthesis": [
+        [
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1"
+        ]
+      ],
+      "vertical_kernel": [
+        [
+          "1"
+        ],
+        [
+          "1"
+        ],
+        [
+          "-1"
+        ]
+      ]
+    },
+    "sextic_source_cost": {
+      "sextic_gradient": "-32761/11812500",
+      "sextic_hessian": "-8507/7087500",
+      "source_cost_hessian": "9/10"
+    },
+    "tower_projection": {
+      "effective_cross_operator": [
+        [
+          "2",
+          "4"
+        ],
+        [
+          "-2",
+          "6"
+        ]
+      ],
+      "one_sided_projection": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "phi_one": {
+        "-1": "-1",
+        "1": "1"
+      },
+      "tower_conditional": {
+        "-1": "-2",
+        "1": "2"
+      }
+    }
+  },
+  "no_overclaim": "R-128 proves fixed-chart differentiated owner naturality, corrects the naked trace-excess force to the covariance-normal force, separates control and Malliavin derivatives, and derives a conditional zero-diagonal strict-margin reallocation. It proves no production root-shell intertwiner, uniform covariance-normal, balanced, or low bound, OVERLAP_src, Nelson theorem, removal, measure, or Sector-A closure.",
+  "package_version": "1.0.0",
+  "result_id": "A13-CLASSII-OWNER-COMPLETE-SOURCE-PULLBACK-COVARIANCE-NORMAL-FORCE-BOUNDARY",
+  "schema": "tect/a13-owner-complete-source-pullback-covariance-normal-force-boundary-primary/1.0",
+  "scope": {
+    "balanced_and_low_uniform_bounds_proved": false,
+    "control_shift_and_malliavin_source_derivatives_separated": true,
+    "covariance_normal_force_corrected_by_future_variance": true,
+    "nelson_proved": false,
+    "overlap_src_proved": false,
+    "production_covariance_normal_operator_bound_proved": false,
+    "production_root_shell_intertwiner_proved": false,
+    "r104_owner_identity_differentiated_on_fixed_smooth_chart": true,
+    "r119_control_shift_hessian_authority_reused_not_duplicated": true,
+    "refinement_pullback_naturality_proved_for_fixed_bounded_linear_maps": true,
+    "sector_a_closed": false,
+    "sextic_and_source_cost_derivatives_included": true,
+    "strict_margin_is_zero_diagonal_or_absorbed_debt_specialization": true
+  },
+  "status": "PASS"
+}

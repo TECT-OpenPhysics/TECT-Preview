@@ -774,6 +774,27 @@ endpoint theorem.
     source Hessian before using reverse adjointness, weighted shell bounds, or
     the R-093 chart union. Both A13 gates and Sector A remain open at T4.
 
+56. **Owner-complete pullback and the corrected covariance-normal force
+    frontier.** R-128 audits the R-127 successor against prior authorities and
+    reuses R-119's fixed-chart control-Hessian theorem rather than registering
+    it twice. Differentiating the exact recombined R-104
+    renormalized-interaction identity gives the legal owner covector and
+    common Hessian, with exact conjugacy under fixed bounded linear
+    refinements. Bounded smooth fixtures separate control-shift from
+    Malliavin-source differentiation and expose both the feedback Jacobian
+    and connection term. The R-125 covariance-normal force is repaired to
+    `(g_V-g_T)/2`; a zero-trace-excess fixture proves that the naked R-126
+    force is incomplete. The endpoint ledger adds the sextic and source-cost
+    derivatives explicitly and keeps the R-063 forest as an alternate
+    coordinate, not an extra owner. Tower and one-sided-projection fixtures
+    show that a production common terminal and two-sided root/shell
+    intertwiner are separate theorems. Flexible R-103 allocations expose a
+    positive scalar margin only after adverse diagonal debts are absorbed,
+    while the source-allocation identity forbids paying full force completion
+    and the full Hessian from the same square. The live successor is the
+    corrected full source-shell matrix with balanced, low, absolute-anchor,
+    and common-terminal bounds. Both A13 gates and Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

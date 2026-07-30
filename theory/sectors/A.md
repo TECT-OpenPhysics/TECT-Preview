@@ -45,6 +45,12 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-30-A13-R127-R119-CONTROL-HESSIAN-AUTHORITY | the fixed-chart control Hessian was already an R-119 theorem |  |
+| AUDIT-2026-07-30-A13-R126-COVARIANCE-NORMAL-FORCE-OMISSION | trace excess alone is not the complete covariance-normal for |  |
+| NG-2026-07-30-A13-CONTROL-MALLIAVIN-DERIVATIVE-CONFLATION | adapted feedback separates the two Hessians |  |
+| NG-2026-07-30-A13-ROOTWISE-COMMON-TERMINAL-INFERENCE | rootwise adapted means need not form one martingale |  |
+| NG-2026-07-30-A13-ONE-SIDED-SHELL-PROJECTION-ADJOINT | selfadjointness does not survive one-sided shell projection |  |
+| AUDIT-2026-07-30-A13-FORCE-COMPLETION-HESSIAN-DOUBLE-SPEND | the source square can be allocated only once |  |
 | NG-2026-07-30-A13-UNRESTRICTED-PREDICTABLE-COVARIANCE-COLLAPSE | blockwise predictability cannot collapse to the unrestricted |  |
 | NG-2026-07-30-A13-LOEWNER-SATURATION-LOW-COUPLING | the saturated two-channel budget cannot absorb a generic low |  |
 | NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR | normalized relative data cannot supply the absolute low anch |  |

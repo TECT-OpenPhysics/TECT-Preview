@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [A13 R-128 metadata correction: structured evidence links] - 2026-07-30
+
+Append-only metadata correction for event 20260730-a13-r-128-register-owner-pullback-and-covarianc. This event adds the omitted structured negative-result, note, script, and keyword links; it does not change the mathematical scope or tier of R-128.
+
+## [A13 R-128: register owner pullback and covariance-normal force repair] - 2026-07-30
+
+Registered R-128 at T4. The fixed-chart R-104 renormalized-interaction owner identity now differentiates to the recombined legal control covector and common Hessian, with fixed bounded linear refinement conjugacy and R-119 retained as prior Hessian authority. Bounded tanh fixtures separate control-shift and Malliavin Jacobian/connection derivatives. The complete R-125 covariance-normal force is repaired to the future-variance minus trace-excess half difference; sextic and source-cost derivatives are explicit. Six audit/no-go authorities and EXP-000436--EXP-000450 record the authority, force, terminal, reverse, diagonal-margin, cross-factor, and source-allocation decisions. Primary 43/43 and independent 32/32 pass. The production root/shell intertwiner, full augmented balanced/low matrix, absolute anchor, common-terminal bridge, OVERLAP_src, Nelson, removals, interacting measure, and Sector-A closure remain open.
+
 ## [A13 R-127 predictable-source Riesz, weighted Schur, and low-margin boundary] - 2026-07-30
 
 Registered scoped T4 R-127 under the existing A13 host. The primary exact audit passes 52/52 and the non-importing independent audit passes 60/60. The final ten-page PDF passes standard form, zero-overfull, no-form, no-JavaScript, and all-page Poppler visual QA. Exact chartwise predictable-source geometry, q=10/9 completion, conditional weighted-Schur improvements, the augmented low/injected Loewner criterion, and the additive-gauge absolute-anchor boundary are established only in their declared scopes. The complete production source-Hessian identification, projected-force bound, unified forward/legal-reverse/balanced/low estimate, OVERLAP_src, Nelson, removals, the interacting measure, and Sector-A closure remain open.

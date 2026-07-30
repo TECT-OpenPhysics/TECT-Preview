@@ -4420,3 +4420,30 @@ T5--T7 promotion remain open. Tier stays T4.
   source-Hessian identification, projected-force bound, unified
   forward/legal-reverse/balanced/low estimate, `OVERLAP_src`, Nelson,
   removals, interacting measure, and Sector A remain open; tier stays T4.
+- 2026-07-30: Registered
+  `A13-CLASSII-OWNER-COMPLETE-SOURCE-PULLBACK-COVARIANCE-NORMAL-FORCE-BOUNDARY`
+  (R-128). Differentiating the exact R-104 renormalized-interaction owner
+  identity on a fixed smooth temporally faithful chart gives the recombined
+  legal control covector and common Hessian, and fixed bounded linear
+  representation-preserving refinements act by pullback conjugacy. R-119
+  remains the prior authority for abstract control-Hessian factorisation.
+  Bounded smooth tanh and squared-tanh fixtures separate control-shift from
+  Malliavin differentiation and test both the feedback Jacobian and the
+  second-feedback-derivative connection term. The complete R-125
+  covariance-normal force is `(g_V-g_T)/2`, not the naked R-126 trace-excess
+  force; an exact cluster fixture has `T=0` but `E_CN=z^2/2`. The sextic and,
+  for the full action, source-cost derivatives are included explicitly.
+  Rootwise adapted means do not automatically form one common terminal, and
+  a one-sided projected Hessian does not provide a reverse adjoint. The
+  half-debt R-103 reallocation gives threshold `0.9780518670...` and margin
+  `0.0239601163...` only in the zero-diagonal specialization or after adverse
+  diagonal debts are absorbed; it is not a production matrix bound. Full
+  force completion and full direct-Hessian payment would double-spend the
+  source square. Six formal audit/no-go entries and
+  `EXP-000436--EXP-000450` preserve the successful, failed, corrected,
+  inconclusive, and promoted routes. Primary `43/43` and non-importing
+  independent `32/32` pass; the integrated contract and visually reviewed
+  eleven-page PDF are manifest-pinned. The production root/shell
+  intertwiner, corrected covariance-normal operator bound, balanced/low
+  closure, absolute anchor, `OVERLAP_src`, Nelson, removals, interacting
+  measure, and Sector A remain open; tier stays T4.

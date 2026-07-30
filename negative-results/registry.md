@@ -6,6 +6,12 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-30-A13-R127-R119-CONTROL-HESSIAN-AUTHORITY](#audit-2026-07-30-a13-r127-r119-control-hessian-authority) | R-127 successor wording that treated the common fixed-chart control Hessian as a new missing theorem | R-119 Theorem 5.1 already proves `D_h^2 U=L_pi^* B L_pi`, selfadjointness, vertical basicness, and quotient descent. R-128 reuses that authority and limits its new result to differentiating the recombined R-104 owner equality, refinement naturality, and the repaired force boundary |
+| [AUDIT-2026-07-30-A13-R126-COVARIANCE-NORMAL-FORCE-OMISSION](#audit-2026-07-30-a13-r126-covariance-normal-force-omission) | use the R-126 trace-excess derivative alone as the force of the complete R-125 covariance-normal endpoint | `E_CN=(V-T)/2=(E_f||J||^2-Theta)/2`, so `g_CN=(g_V-g_T)/2` and `H_CN=(H_V-H_T)/2`. The fixture `J_z=z(1+eta)`, `Phi=z`, `Theta=z^2` has `T=0` but `E_CN=z^2/2`, proving that the naked trace-excess force omits the future-variance derivative |
+| [NG-2026-07-30-A13-CONTROL-MALLIAVIN-DERIVATIVE-CONFLATION](#ng-2026-07-30-a13-control-malliavin-derivative-conflation) | identify the fixed-law control-shift Hessian with the Gaussian/Malliavin source Hessian in the presence of adapted feedback | for bounded smooth `h_2=alpha tanh(xi_1)` and `F(z)=z^2/2`, the control Hessian at the origin is `[[1,1],[1,1]]`, while the Malliavin Hessian at `alpha=1` is `[[4,2],[2,1]]`; a squared-tanh linear-endpoint fixture separately gives a nonzero feedback-connection term |
+| [NG-2026-07-30-A13-ROOTWISE-COMMON-TERMINAL-INFERENCE](#ng-2026-07-30-a13-rootwise-common-terminal-inference) | infer a single common terminal martingale from separately legal rootwise adapted means | `Phi_1=xi_1` and `Phi_2=2xi_1+xi_2` are individually adapted, but `E[Phi_2|F_1]=2xi_1 != Phi_1`. The common-terminal tower condition is an additional production theorem, not a consequence of rootwise adaptation |
+| [NG-2026-07-30-A13-ONE-SIDED-SHELL-PROJECTION-ADJOINT](#ng-2026-07-30-a13-one-sided-shell-projection-adjoint) | infer a legal reverse block by taking the adjoint of a one-sided projected common Hessian | for selfadjoint `H=[[0,1],[1,0]]` and `P=diag(1,0)`, `(PH)^*=HP != PH`. Adjoint reverse symmetry is automatic only for two-sided blocks `Q_m H Q_r` of one common source-space shell resolution, or after proving an equivalent intertwiner |
+| [AUDIT-2026-07-30-A13-FORCE-COMPLETION-HESSIAN-DOUBLE-SPEND](#audit-2026-07-30-a13-force-completion-hessian-double-spend) | combine the full `5/9` force-completion loss with the full direct-Hessian source budget | completing `<h,g>+(9/20)||h||^2` at full strength consumes the entire displayed source square. A legal combined route must declare a partial split `lambda`, or use the direct Taylor-Hessian route and pay the source budget only once |
 | [NG-2026-07-30-A13-UNRESTRICTED-PREDICTABLE-COVARIANCE-COLLAPSE](#ng-2026-07-30-a13-unrestricted-predictable-covariance-collapse) | replace the legal blockwise predictable source Riesz vector by the unrestricted physical covariance expression `C_JG` | with two scalar blocks `S_1=S_2=1`, trivial first past, second past `sigma(xi)`, and `G=xi`, the legal source adjoint is `(0,xi)` and its physical Riesz vector is `xi`, whereas `C_JG=2xi`. Predictable projections retain their block labels and cannot be moved outside the covariance sum |
 | [NG-2026-07-30-A13-LOEWNER-SATURATION-LOW-COUPLING](#ng-2026-07-30-a13-loewner-saturation-low-coupling) | saturate the two-channel source/sextic Loewner budget and retain a generic low/injected affine coupling outside the matrix | at `a=4sqrt(eta zeta)` the paid matrix has null vector `(sqrt(zeta),sqrt(eta))`; finite affine cost requires `b sqrt(zeta)+c sqrt(eta)=0`. For `eta=4/9`, `zeta=9/16`, coupling `(1,0)`, and unit low diagonal, the augmented determinant is exactly `-9/8` |
 | [NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR](#ng-2026-07-30-a13-normalized-gibbs-doob-absolute-anchor) | derive the absolute low/free-energy endpoint from normalized Gibbs laws, Doob increments, conditional variances, or relative entropy alone | adding a constant `C` to the endpoint energy preserves every normalized relative datum but shifts the absolute free energy by `C`. The route needs an external absolute low/injected anchor; this does not refute the pinned production normalization or any anchored endpoint theorem |
@@ -179,6 +185,133 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-30-a13-r127-r119-control-hessian-authority"></a>
+### AUDIT-2026-07-30-A13-R127-R119-CONTROL-HESSIAN-AUTHORITY -- the fixed-chart control Hessian was already an R-119 theorem
+
+**Claim / route.**  Treat R-127's proposed common fixed-chart source-Hessian
+identity as a new missing successor theorem.
+
+**Failure mode.**  R-119 Theorem 5.1 already proves on its stated cylindrical
+core that the complete control-shift Hessian factors as
+`D_h^2 U=L_pi^* B L_pi`; it also proves selfadjointness, annihilation of the
+vertical synthesis kernel, and quotient descent.  Re-registering that result
+would duplicate an existing authority and obscure the genuinely missing
+production estimate.
+
+**Evidence.**  R-119 proof note, Theorem 5.1; R-128 proof note, Sections 1--2;
+primary owner-pullback and refinement-conjugacy audit; exploration
+`EXP-000436`.
+
+**Consequence.**  R-128 reuses R-119 and proves only the differentiated
+recombination of the R-104 once-owned scalar identity, its refinement
+naturality, and the corrected force boundary.  The production root/shell
+intertwiner and cutoff-uniform form bound remain open.
+
+<a id="audit-2026-07-30-a13-r126-covariance-normal-force-omission"></a>
+### AUDIT-2026-07-30-A13-R126-COVARIANCE-NORMAL-FORCE-OMISSION -- trace excess alone is not the complete covariance-normal force
+
+**Claim / route.**  Use the derivative of the R-126 trace excess
+`T=Theta-||Phi||^2` as the force of the complete R-125 covariance-normal
+endpoint.
+
+**Failure mode.**  The complete endpoint is
+`E_CN=(V-T)/2=(E_f||J||^2-Theta)/2`.  Therefore its covector and Hessian are
+`g_CN=(g_V-g_T)/2` and `H_CN=(H_V-H_T)/2`.  For
+`J_z=z(1+eta)`, `E eta=0`, `E eta^2=1`, `Phi_z=z`, and `Theta_z=z^2`, one has
+`T_z=0` but `E_CN=z^2/2`, so the naked trace-excess derivative misses a
+nonzero force and Hessian.
+
+**Evidence.**  R-128 proof note, Theorem 4.1 and Counterfixture 4.2; exact
+primary symbolic derivatives; non-importing rational audit; explorations
+`EXP-000439`--`EXP-000440`.
+
+**Consequence.**  Every successor must carry the future-variance derivative
+or use the equivalent complete expression before estimating the force.  This
+is an authority repair, not a full A1 counterexample.
+
+<a id="ng-2026-07-30-a13-control-malliavin-derivative-conflation"></a>
+### NG-2026-07-30-A13-CONTROL-MALLIAVIN-DERIVATIVE-CONFLATION -- adapted feedback separates the two Hessians
+
+**Claim / route.**  Identify differentiation with respect to a fixed-law
+predictable control shift with Gaussian/Malliavin differentiation of the
+underlying source.
+
+**Failure mode.**  For two scalar blocks with bounded smooth
+`h_2=alpha tanh(xi_1)`, `Z=xi_1+alpha tanh(xi_1)+xi_2`, and
+`F(z)=z^2/2`, the control-shift Hessian at the origin is
+`[[1,1],[1,1]]`, whereas the source Hessian at `alpha=1` is
+`[[4,2],[2,1]]`.  The latter contains the feedback derivative of `h_2`; the
+former holds the predictable coefficient fixed while varying the control.
+For `h_2=(beta/2)tanh(xi_1)^2` and a linear endpoint, the control Hessian is
+zero while the source `11` entry is `beta`, isolating the connection term.
+
+**Evidence.**  R-128 proof note, Section 3; exact symbolic and independent
+finite-dimensional fixtures; explorations `EXP-000438` and `EXP-000447`.
+
+**Consequence.**  R-119/R-128 control-shift identities cannot be substituted
+for Malliavin chain rules without separately proving the feedback terms.  The
+fixture is a derivative-coordinate no-go, not an A1 or Nelson counterexample.
+
+<a id="ng-2026-07-30-a13-rootwise-common-terminal-inference"></a>
+### NG-2026-07-30-A13-ROOTWISE-COMMON-TERMINAL-INFERENCE -- rootwise adapted means need not form one martingale
+
+**Claim / route.**  Infer one common terminal current from separately legal
+adapted rootwise conditional means.
+
+**Failure mode.**  With `F_1=sigma(xi_1)`,
+`F_2=sigma(xi_1,xi_2)`, `Phi_1=xi_1`, and
+`Phi_2=2xi_1+xi_2`, both coordinates are adapted, but
+`E[Phi_2|F_1]=2xi_1 != Phi_1`.  Hence no terminal `J` can satisfy
+`Phi_j=E[J|F_j]` for this family.
+
+**Evidence.**  R-128 proof note, Section 6; primary and independent two-atom
+tower audits; exploration `EXP-000441`.
+
+**Consequence.**  The common-terminal and matching low/root trace partition
+must be proved for the production family before invoking the R-126 transport.
+This is a logical obstruction, not a production counterexample.
+
+<a id="ng-2026-07-30-a13-one-sided-shell-projection-adjoint"></a>
+### NG-2026-07-30-A13-ONE-SIDED-SHELL-PROJECTION-ADJOINT -- selfadjointness does not survive one-sided shell projection
+
+**Claim / route.**  Obtain a reverse root/shell estimate for free by taking
+the adjoint of a one-sided spatial projection of a selfadjoint common
+Hessian.
+
+**Failure mode.**  For `H=[[0,1],[1,0]]` and `P=diag(1,0)`,
+`(PH)^*=HP != PH`.  By contrast, two-sided blocks
+`PH(I-P)` and `(I-P)HP` are adjoints.
+
+**Evidence.**  R-128 proof note, Section 6; exact primary and independent
+matrix audits; original route `EXP-000443` and scoped-verdict correction
+`EXP-000448`.
+
+**Consequence.**  A successor must prove the production identification
+`A_mr=Q_m H_pi Q_r` for one common source-space shell resolution, or an
+equivalent intertwiner.  Only then does the legal reverse equal the forward
+adjoint.
+
+<a id="audit-2026-07-30-a13-force-completion-hessian-double-spend"></a>
+### AUDIT-2026-07-30-A13-FORCE-COMPLETION-HESSIAN-DOUBLE-SPEND -- the source square can be allocated only once
+
+**Claim / route.**  Combine the full force-completion penalty `5/9` with the
+full direct-Hessian source allocation as if both used independent copies of
+the coefficient `9/20`.
+
+**Failure mode.**  Completing
+`<h,g>+c||h||^2` with `c=9/20` consumes the entire source square.  The exact
+partial identity uses a declared `0<lambda<=1`, leaving only
+`(1-lambda)c||h||^2` after paying the force penalty
+`||g||^2/(4 lambda c)`.  At `lambda=1`, nothing remains for a second Hessian
+payment.
+
+**Evidence.**  R-128 proof note, Section 9; exact primary and independent
+allocation audits; explorations `EXP-000445`--`EXP-000446`.
+
+**Consequence.**  Use the direct Taylor-Hessian route and pay the augmented
+source/sextic/low matrix once, or declare an explicit partial completion
+split.  No argument may combine both full allocations.
 
 <a id="ng-2026-07-30-a13-unrestricted-predictable-covariance-collapse"></a>
 ### NG-2026-07-30-A13-UNRESTRICTED-PREDICTABLE-COVARIANCE-COLLAPSE -- blockwise predictability cannot collapse to the unrestricted covariance

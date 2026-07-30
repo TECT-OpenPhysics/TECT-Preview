@@ -1,0 +1,806 @@
+% =============================================================================
+% Title: Differentiated complete-owner control-shift naturality, covariance-normal force repair, and the strict-margin frontier
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-OWNER-COMPLETE-SOURCE-PULLBACK-COVARIANCE-NORMAL-FORCE-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-30; this version issued 2026-07-30
+% Status: scoped T4 analytic/exact/executed advance; the production uniform form bound and both A13 gates remain open
+% =============================================================================
+
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+
+R-127 ended with a proposed common source-Hessian identity.  An authority
+audit changes the correct description of that successor.  R-119 Theorem 5.1
+already proves the complete fixed-chart \emph{control-shift} Hessian
+factorisation
+\[
+ D_h^2\mathcal U_{J,\pi}(h)
+ =L_\pi^*B_{J,h}L_\pi,                                  \tag{1.1}
+\]
+including selfadjointness, vertical basicness, and quotient descent.  R-104
+already proves the exact once-owned scalar endpoint identity on every fixed
+temporally faithful chart.  The present result does not register (1.1) a
+second time.  It supplies the missing link and repairs the explicit force:
+
+\begin{enumerate}
+\item differentiate the recombined R-104 owner equality once and twice and
+      combine it with the legal R-127 predictable adjoint;
+\item distinguish this control variation from Gaussian/Malliavin source
+      differentiation, which carries feedback derivatives;
+\item correct the naked R-126 trace-excess force to the complete R-125
+      covariance-normal force;
+\item state the exact refinement conjugacy and the source-block condition
+      under which a legal reverse is genuinely the forward adjoint;
+\item exhibit a conditional strict-margin rebudgeting route and forbid
+      double spending between force completion and direct Hessian payment.
+\end{enumerate}
+
+The scope is fixed finite cutoff, fixed positive rational floor, one R-104
+temporally faithful chart, bounded smooth cylindrical-simple predictable
+controls, a fixed Gaussian base law and filtration, predictable fresh-root
+independent heat wherever R-104 disintegration is used, exhaustive
+orthogonal output clusters, and once-owned covariance packets.  All
+differentiation is on the fixed cylindrical core.  No cutoff-, chart-,
+control-, revisit-, or refinement-uniform production form estimate is
+claimed.
+
+\section*{2. Differentiated complete-owner control pullback}
+
+Let
+\[
+ \cS_\pi^{\rm pred}
+ =\bigoplus_{b=1}^B
+ L^2(\Omega,\F_{t_{b-1}};\cS_b),
+ \qquad
+ L_\pi h=\sum_bS_bh_b,
+ \qquad S_b=(\Delta C_b)^{1/2},                         \tag{2.1}
+\]
+and
+\[
+ Z_h=S_\pi\xi+L_\pi h.                                 \tag{2.2}
+\]
+Put \(\mathcal E_J:=V_J^{\rm ren}\) and
+\(\mathcal E_{J,\pi}(h):=\E\mathcal E_J(Z_h)\).  This is the recombined
+R-104 renormalized-interaction endpoint, not yet the R-093 sextic stabilizer
+or source-cost square.  R-104 gives, on the same fixed chart, an exact scalar
+identity
+\[
+ \mathcal E_{J,\pi}(h)
+ =C_{J,\pi}+\mathcal O_{\rm low/inj}(h)
+  +\sum_\alpha\mathcal O_\alpha(h),                    \tag{2.3}
+\]
+where \(\alpha\) ranges only over the active top-level R-104 owner summands.
+Root, output, row, and heat labels decorate those summands; forest and Schur
+coordinates are internal alternative representations and are not additional
+\(\alpha\)-terms.  The constant contains only the fixed baseline.  Every
+owner in (2.3) has the R-104 multiplicity.
+
+% evidence-anchor: theorem-2.1-differentiated-complete-owner-pullback
+\subsection*{Theorem 2.1 (differentiated complete-owner pullback)}
+
+On the declared cylindrical core, (2.3) may be differentiated once and
+twice.  Its legal source gradient is
+\[
+ \boxed{
+ (\nabla_h\mathcal E_{J,\pi}(h))_b
+ =\E\!\left[S_b^*D\mathcal E_J(Z_h)
+             \mid\F_{t_{b-1}}\right].}                \tag{2.4}
+\]
+If
+\[
+ g_{\rm low/inj}^{\rm adm}:=\nabla_h\mathcal O_{\rm low/inj},
+ \qquad
+ g_\alpha^{\rm adm}:=\nabla_h\mathcal O_\alpha,      \tag{2.5}
+\]
+then
+\[
+ \boxed{
+ P_{\rm pred}L_\pi^*D\mathcal E_J(Z_h)
+ =g_{\rm low/inj}^{\rm adm}+\sum_\alpha g_\alpha^{\rm adm}.}
+                                                               \tag{2.6}
+\]
+The common owner-complete control Hessian is
+\[
+ \boxed{
+ H_\pi(h):=P_{\rm pred}L_\pi^*D^2\mathcal E_J(Z_h)
+               L_\pi P_{\rm pred}
+ =H_{\rm low/inj}^{\rm adm}+\sum_\alpha H_\alpha^{\rm adm}.}
+                                                               \tag{2.7}
+\]
+It is selfadjoint and
+\[
+                    \Ker L_\pi\subseteq\Ker H_\pi(h). \tag{2.8}
+\]
+
+\paragraph{Proof.}
+At fixed cutoff and positive floor every displayed endpoint is a smooth
+finite-dimensional rational/polynomial function with integrable derivatives
+on the bounded cylindrical core.  R-104 proves (2.3) for every \(h\) in that
+core, rather than at one selected value.  Differentiation under the fixed
+Gaussian expectation is therefore valid.  For predictable \(k_b\),
+\[
+\begin{aligned}
+ D_h\mathcal E_{J,\pi}(h)[k]
+ &=\E\ip{D\mathcal E_J(Z_h)}{L_\pi k}\\
+ &=\sum_b\E\ip{
+  \E[S_b^*D\mathcal E_J(Z_h)\mid\F_{t_{b-1}}]}{k_b},
+\end{aligned}                                             \tag{2.9}
+\]
+which proves (2.4).  Differentiating the scalar equality (2.3) gives
+(2.6).  A second derivative gives (2.7).  Symmetry follows either from the
+scalar Hessian or directly from the symmetry of \(D^2\mathcal E_J\).  If
+\(L_\pi k=0\), both slots in (2.7) vanish, proving (2.8). \hfill\(\square\)
+
+The theorem is the differentiated R-104 owner incidence, not a new proof of
+the R-119 abstract terminal Hessian.  It also does not license an
+independently guessed force for one owner: the right side of (2.6) consists
+of derivatives of the exact scalar owner functionals.
+
+\subsection*{Corollary 2.2 (refinement conjugacy)}
+
+Let \(\iota:\cS_\pi^{\rm pred}\to\cS_{\pi'}^{\rm pred}\) be a fixed bounded
+linear admissible representation-preserving refinement map satisfying
+\[
+ L_{\pi'}\iota=L_\pi,
+ \qquad
+ \mathcal E_{J,\pi}=\mathcal E_{J,\pi'}\circ\iota.     \tag{2.10}
+\]
+Then
+\[
+ \boxed{
+ g_\pi(h)=\iota^*g_{\pi'}(\iota h),
+ \qquad
+ H_\pi(h)=\iota^*H_{\pi'}(\iota h)\iota.}            \tag{2.11}
+\]
+This is the exact derivative form of R-104 recombined-total invariance.
+Labelled owner derivatives need not agree.  Equality of quotient norms
+requires the corresponding isometric identification of admissible source
+spaces; a refinement that admits new controls is a new chart.
+
+\section*{3. Control-shift versus Malliavin-source firewall}
+
+The phrase ``derivative with respect to source block'' has two meanings.  In
+the fixed-law control variation used by Theorem 2.1,
+\[
+ h\longmapsto h+t k,
+ \qquad
+ D_hZ_h[k]=L_\pi k.                                    \tag{3.1}
+\]
+Every triangular feedback function is held fixed as an element of the
+predictable control space.  This is the derivative in R-127's legal adjoint.
+
+For a Gaussian source translation, the later feedback functions move.  If
+\[
+ Z_h(\xi)=\sum_bS_b\{\xi_b+h_b(\xi_{<b})\},            \tag{3.2}
+\]
+then
+\[
+ D_{\xi_b}Z_h
+ =S_b+\sum_{c>b}S_cD_bh_c.                             \tag{3.3}
+\]
+Writing \(J_h=I+D_\xi h\), the complete formulas are
+\[
+ D_\xi(F\circ Z_h)=J_h^*L_\pi^*DF(Z_h),                \tag{3.4}
+\]
+\[
+\begin{aligned}
+ D_\xi^2(F\circ Z_h)[u,v]
+ ={}&D^2F(Z_h)[L_\pi J_hu,L_\pi J_hv]\\
+ &+DF(Z_h)[L_\pi D_\xi^2h[u,v]].
+\end{aligned}                                           \tag{3.5}
+\]
+The last line is the feedback-connection term.  R-119 control-Hessian
+selfadjointness does not remove it.
+
+% evidence-anchor: counterfixture-3.1-control-malliavin-conflation
+\subsection*{Counterfixture 3.1 (the two source derivatives differ)}
+
+Take two scalar blocks and the bounded smooth predictable feedback
+\[
+ h_2(\xi_1)=\alpha\tanh\xi_1,
+ \qquad
+ Z=\xi_1+\alpha\tanh\xi_1+\xi_2,
+ \qquad F(z)={z^2\over2}.                              \tag{3.6}
+\]
+At \(\xi_1=\xi_2=0\), the control-shift Hessian and Gaussian-source Hessian
+are respectively
+\[
+ H_{\rm ctl}=\begin{pmatrix}1&1\\1&1\end{pmatrix},
+ \qquad
+ H_{\rm Mall}=\begin{pmatrix}(1+\alpha)^2&1+\alpha\\
+                         1+\alpha&1\end{pmatrix}.       \tag{3.7}
+\]
+At \(\alpha=1\),
+\[
+ H_{\rm ctl}=\begin{pmatrix}1&1\\1&1\end{pmatrix},
+ \qquad
+ H_{\rm Mall}=\begin{pmatrix}4&2\\2&1\end{pmatrix}.  \tag{3.8}
+\]
+Thus the two derivatives cannot be interchanged.  This fires
+\texttt{NG-2026-07-30-A13-CONTROL-MALLIAVIN-DERIVATIVE-CONFLATION}.
+The connection term in (3.5) is independently nonzero in the bounded smooth
+fixture
+\[
+ \widetilde h_2(\xi_1)={\beta\over2}\tanh^2\xi_1,
+ \qquad \widetilde F(z)=z.                            \tag{3.9}
+\]
+At the origin its control-shift Hessian is zero, while
+\(D_{\xi_1}^2(\widetilde F\circ Z)=\beta\).  Thus both the feedback Jacobian
+and feedback-connection mechanisms are tested inside the declared bounded
+cylindrical class.  This is a coordinate no-go, not an A1 or Nelson
+counterexample.
+
+\section*{4. Covariance-normal force and the missing future variance}
+
+Fix one root and one exhaustive output cluster and suppress their labels.
+With R-125 notation set
+\[
+ \Phi=\E_fJ,
+ \qquad R=J-\Phi,
+ \qquad \cV=\E_f\|R\|^2,
+ \qquad \cT=\Theta-\|\Phi\|^2.                        \tag{4.1}
+\]
+The covariance-normal endpoint is
+\[
+\boxed{
+ \cE^{\rm CN}
+ ={1\over2}(\|\Phi\|^2-\Theta)+{1\over2}\cV
+ ={1\over2}(\cV-\cT)
+ ={1\over2}(\E_f\|J\|^2-\Theta).}                   \tag{4.2}
+\]
+R-126 differentiates \(\cT\).  Equation (4.2) shows that its Euler force is
+not, by itself, the derivative of \(\cE^{\rm CN}\).
+
+Write
+\[
+ \dot J_H=DJ[H],
+ \qquad \ddot J_{H,K}=D^2J[H,K].                       \tag{4.3}
+\]
+
+% evidence-anchor: theorem-4.1-covariance-normal-force-repair
+\subsection*{Theorem 4.1 (future-variance and covariance-normal calculus)}
+
+The exact first and second future-variance derivatives are
+\[
+ D\cV[H]
+ =2\Rea\E_f\ip{R}{\dot J_H},                           \tag{4.4}
+\]
+\[
+\boxed{
+\begin{aligned}
+ D^2\cV[H,K]
+ =2\Rea\{&\E_f\ip{\dot J_H}{\dot J_K}
+ -\ip{\E_f\dot J_H}{\E_f\dot J_K}\\
+ &+\E_f\ip{R}{\ddot J_{H,K}}\}.
+\end{aligned}}                                          \tag{4.5}
+\]
+In particular,
+\[
+ D^2\cV[H,H]
+ =2\E_f\|\dot J_H-\E_f\dot J_H\|^2
+ +2\Rea\E_f\ip{R}{\ddot J_{H,H}}.                    \tag{4.6}
+\]
+The covariance-normal endpoint obeys
+\[
+\boxed{
+ D\cE^{\rm CN}[H]
+ =\Rea\E_f\ip{J}{\dot J_H}-{1\over2}D\Theta[H]
+ ={1\over2}(D\cV-D\cT)[H],}                           \tag{4.7}
+\]
+\[
+\boxed{
+\begin{aligned}
+ D^2\cE^{\rm CN}[H,K]
+ ={}&\Rea\E_f\{\ip{\dot J_H}{\dot J_K}
+                 +\ip{J}{\ddot J_{H,K}}\}\\
+ &-{1\over2}D^2\Theta[H,K]
+ ={1\over2}(D^2\cV-D^2\cT)[H,K].
+\end{aligned}}                                          \tag{4.8}
+\]
+
+\paragraph{Proof.}
+Differentiate \(\cV=\E_f\|J\|^2-\|\E_fJ\|^2\) under the fixed
+conditional law.  The first derivative gives (4.4); a second derivative
+gives the three terms in (4.5).  Completing the centered square gives (4.6).
+Differentiate either of the equal expressions in (4.2) for (4.7)--(4.8).
+\hfill\(\square\)
+
+For the production current \(J=c(W)^T\partial_iW\),
+\[
+ \dot J_H=(Dc\,H)^T\partial_iW+c^T\partial_iH,         \tag{4.9}
+\]
+\[
+ \ddot J_{H,K}
+ =(D^2c[H,K])^T\partial_iW
+ +(Dc\,H)^T\partial_iK+(Dc\,K)^T\partial_iH.          \tag{4.10}
+\]
+Every R-120 rational multiplier remains inside \(c,Dc,D^2c\), and the
+R-121 Cartan owner remains inside the skew part once.
+
+Let \(g_{\cV,r,m}^{\rm adm}\) and \(g_{\cT,r,m}^{\rm adm}\) be the legal
+source pullbacks of the two derivatives after exhaustive owner assembly.
+The corrected production coordinate is
+\[
+ \boxed{
+ g_{r,m}^{\rm CN,adm}
+ ={1\over2}\{g_{\cV,r,m}^{\rm adm}
+              -g_{\cT,r,m}^{\rm adm}\},
+ \qquad
+ H_{r,m}^{\rm CN,adm}
+ ={1\over2}\{H_{\cV,r,m}^{\rm adm}
+              -H_{\cT,r,m}^{\rm adm}\}.}             \tag{4.11}
+\]
+For an affine terminal control incidence, the block formula is
+\[
+ (g_{r,m}^{\rm CN,adm})_b
+ =\E\!\left[S_b^*G_{r,m}^{\rm CN}
+             \mid\F_{t_{b-1}}\right].                 \tag{4.12}
+\]
+For a more general owner coordinate, \(S_b\) is replaced by the explicitly
+proved \emph{control-shift} incidence.  It must not be replaced by the
+Malliavin derivative (3.3).
+
+% evidence-anchor: counterfixture-4.2-naked-trace-force
+\subsection*{Counterfixture 4.2 (naked trace-excess force is incomplete)}
+
+Let \(\eta\) be centered with variance one and put
+\[
+ J_z=z(1+\eta),
+ \qquad \Phi_z=z,
+ \qquad \Theta_z=z^2,
+ \qquad \cV_z=z^2.                                    \tag{4.13}
+\]
+Then
+\[
+ \E J_z^2=2z^2=\Phi_z^2+\cV_z,
+ \qquad \cT_z=0,
+ \qquad \cE_z^{\rm CN}={z^2\over2}.                  \tag{4.14}
+\]
+Thus \(D\cT=D^2\cT=0\) while
+\[
+ D\cE^{\rm CN}[H]=zH,
+ \qquad D^2\cE^{\rm CN}[H,K]=HK.                     \tag{4.15}
+\]
+This fires
+\texttt{AUDIT-2026-07-30-A13-R126-COVARIANCE-NORMAL-FORCE-OMISSION}.
+The corrected half-difference (4.11) is exact.  The fixture is an abstract
+conditional cluster, not a full A1 counterexample.
+
+\section*{5. Complete endpoint, stabilizer, cost, and owner ledger}
+
+If ``complete R-093 endpoint'' means
+\[
+ G_J(Z)=V_J^{\rm ren}(Z)+{3\over20}\int|Z|^6,          \tag{5.1}
+\]
+then the sextic covector is part of the endpoint derivative:
+\[
+ G_6(Z)={9\over10}|Z|^4Z,
+ \qquad
+ (g_6)_b=\E[S_b^*G_6(Z)\mid\F_{t_{b-1}}].             \tag{5.2}
+\]
+Its Hessian is the nonnegative form
+\[
+ D^2S_6(Z)[H,K]
+ ={9\over10}\E\int\{|Z|^4H\mathbin\cdot K
+ +4|Z|^2(Z\mathbin\cdot H)(Z\mathbin\cdot K)\}.     \tag{5.3}
+\]
+If instead the full source action is differentiated,
+\[
+ \mathcal A_J(h)=\E G_J(Z_h)
+ +{9\over20}\E\sum_b\|h_b\|^2,                       \tag{5.4}
+\]
+then the source cost additionally contributes
+\[
+ \nabla\mathcal A_{\rm cost}={9\over10}h,
+ \qquad D^2\mathcal A_{\rm cost}={9\over10}I.         \tag{5.5}
+\]
+R-127 equation (10.1) is complete only after the endpoint/action convention
+and these terms are declared.
+
+The once-owned derivative ledger is:
+\begin{center}
+\begin{tabular}{p{0.28\linewidth}p{0.62\linewidth}}
+\hline
+Object & Derivative ownership rule\\
+\hline
+\(\Delta C_b\) & Once through \(S_b=(\Delta C_b)^{1/2}\) in the legal source pullback.\\
+\(\Delta\Gamma_r\) & Once in the root trace; it is not identified with \(\Delta C_b\).\\
+Heat & Internal to the fixed or predictable conditional endpoint; no appended heat owner.\\
+Output clusters & One exhaustive orthogonal resolution before recombination.\\
+Mean and future variance & Once each through \(\|\Phi\|^2+\cV=\E_f\|J\|^2\).\\
+R-063 forest & Alternate coordinate for the covariance-normal endpoint; zero extra multiplicity.\\
+Rational multipliers & Once inside \(c,Dc,D^2c\), including spatial derivatives through order two.\\
+Cartan & Once in the rational skew block, with recombined checksum \(2680/729\).\\
+Low/injected/paid & Retain the distinct R-079/R-104 owners; no renaming of the three low objects.\\
+Sextic & Once in the endpoint derivative (5.2)--(5.3).\\
+Source cost & Once outside the endpoint derivative when the full action (5.4) is used.\\
+\hline
+\end{tabular}
+\end{center}
+
+Appending the R-063 forest to the already reconstructed current-minus-trace
+endpoint duplicates it.  Cancelling the R-121 \(2680/729\) block from scalar
+exactness is likewise invalid; global exactness says the complete companion
+curl is present, not that the isolated rational Cartan coefficient vanishes.
+
+\section*{6. Common terminal and legal reverse firewalls}
+
+The corrected fixed-chart control Hessian does not prove that an arbitrary
+root family is one R-079 common-terminal martingale.  Let
+\[
+ \F_1=\sigma(\xi_1),
+ \qquad \F_2=\sigma(\xi_1,\xi_2),
+ \qquad \Phi_1=\xi_1,
+ \qquad \Phi_2=2\xi_1+\xi_2.                            \tag{6.1}
+\]
+Each coordinate has a legal predictable mean and innovation, but
+\[
+ \E[\Phi_2\mid\F_1]=2\xi_1\ne\Phi_1.                   \tag{6.2}
+\]
+The tower condition rules out one terminal \(J\) with
+\(\Phi_j=\E[J\mid\F_j]\).  This fires
+\texttt{NG-2026-07-30-A13-ROOTWISE-COMMON-TERMINAL-INFERENCE}.
+It is a logical obstruction, not a production counterexample.  The actual
+common-terminal and matching low/root trace partition must be proved before
+using the R-126 low/injected transport.
+
+For temporal source projections \(E_b\), the common Hessian blocks
+\[
+ H_{bc}=E_bH_\pi E_c                                  \tag{6.3}
+\]
+satisfy
+\[
+                         H_{bc}^*=H_{cb}.               \tag{6.4}
+\]
+Thus a legal reverse is free once a production forward block is genuinely a
+two-sided compression of this common source Hessian.
+
+This does not follow from a one-sided spatial output projection.  With
+\[
+ H=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+ \qquad P=\begin{pmatrix}1&0\\0&0\end{pmatrix},        \tag{6.5}
+\]
+one has
+\[
+                         (PH)^*=HP\ne PH.               \tag{6.6}
+\]
+The valid two-sided blocks are \(PH(I-P)\) and its adjoint
+\((I-P)HP\).  This fires
+\texttt{NG-2026-07-30-A13-ONE-SIDED-SHELL-PROJECTION-ADJOINT}.
+For the R-126 probability-root \(r\) and spatial-output \(m\) labels, a
+successor must prove
+\[
+                         A_{mr}=Q_mH_\pi Q_r            \tag{6.7}
+\]
+for one common source-space shell resolution, or an explicit intertwiner
+with the same consequence.  Only then is \(A_{rm}=A_{mr}^*\).
+
+\section*{7. Corrected augmented Loewner target}
+
+Put every cross term in the single form convention
+\[
+                  \Rea\ip{x}{A_{\rm eff}y}.             \tag{7.1}
+\]
+If \(T\) is one oriented Hessian half-block and the quadratic form contains
+\(2\Rea\ip{x}{Ty}\), then \(A_{\rm eff}=2T\).  The factor cannot be guessed
+after estimating one orientation.
+
+For source, sextic, and low channels define
+\[
+ E=2\eta I-R,
+ \qquad F=2\zeta I-S,
+ \qquad D=-L,                                          \tag{7.2}
+\]
+\[
+ M_2=\begin{pmatrix}E&-A_{\rm eff}/2\\
+                    -A_{\rm eff}^*/2&F\end{pmatrix},
+ \qquad K=\binom BC.                                   \tag{7.3}
+\]
+R-127's bounded-operator criterion says that complete domination is
+equivalent to
+\[
+ \boxed{
+ D\succeq0,
+ \qquad \Ran K^*\subseteq\Ran D^{1/2},
+ \qquad M_2-X_D^*X_D\succeq0,}                         \tag{7.4}
+\]
+where \(D^{1/2}X_D=K^*\) is the Douglas reduced solution.  A
+Moore--Penrose expression is permitted only after closed range is proved.
+
+For one root/shell pair define the oriented blocks and their full cross-form
+operators by
+\[
+ T_{mr}^{\cV}=Q_mH_\cV Q_r,
+ \quad T_{mr}^{\cT}=Q_mH_\cT Q_r,
+ \quad T_{mr}^{\rm CN}={T_{mr}^{\cV}-T_{mr}^{\cT}\over2},
+ \quad A_{\rm eff}^{\bullet}=2T_{mr}^{\bullet}.       \tag{7.5}
+\]
+The operator inserted into (7.3) must now be assembled from
+\[
+                  H_{\rm CN}={1\over2}(H_\cV-H_\cT),   \tag{7.6}
+\]
+plus the declared sextic/source-cost pieces.  An R-126 bound for
+\(H_\cT\) does not bound (7.6).  If \(K_\cV\) and \(K_\cT\) denote norms of
+the full cross-form operators \(A_{\rm eff}^{\cV}\) and
+\(A_{\rm eff}^{\cT}\), then without a signed cancellation the comparable
+same-channel majorant is only
+\[
+                  K_{\rm CN}\le {K_\cV+K_\cT\over2}.   \tag{7.7}
+\]
+For oriented-block norms the factor \(1/2\) is absent after conversion to the
+full \(A_{\rm eff}\) convention.  No uniform production \(K_\cV\) is
+registered.
+
+Conditionally on genuine production block estimates, R-127 gives
+\[
+ K_{\rm tri}
+ =\sqrt{8/7}\,C_{\rm mix}2^{-j_0-2C}
+ +\sqrt{224/223}\,C_{\rm far}2^{-3j_0-4C}.             \tag{7.8}
+\]
+Shared channels add by triangle.  Equation (7.8) is an acceptance test, not
+a production estimate for the corrected Hessian.
+
+\section*{8. A conditional strict-margin rebudgeting route}
+
+The R-103 regular theorem holds for every positive pair of form allocations.
+Its displayed debts
+\[
+                         {1\over440},\qquad {3\over100} \tag{8.1}
+\]
+are a conservative choice, not a rigid identity.  Keep the fixed R-124 row
+cost \(3/(125P)\), where \(P=4+10^{-12}\), and choose half of (8.1):
+\[
+ \eta_h={9\over20}-{3\over125P}-{1\over880},
+ \qquad
+ \zeta_h={3\over20}-{3\over200}={27\over200}.          \tag{8.2}
+\]
+The following computation is the scalar \(R=S=0\) specialization of
+(7.2)--(7.4), equivalently the case in which every adverse diagonal debt has
+already been absorbed into \(\eta_h,\zeta_h\).  In the general operator
+matrix, the required hypothesis is a lower bound for the full \(M_2\), not a
+bound on \(A_{\rm eff}\) alone.  Under this specialization the corresponding
+two-channel threshold is
+\[
+ K_h=4\sqrt{\eta_h\zeta_h}
+ =0.9780518670016728\ldots .                            \tag{8.3}
+\]
+The old R-126 acceptance budget is
+\[
+ K_0=4\sqrt{\left({197\over440}-{3\over125P}\right)
+                    {3\over25}}
+ =0.9209323339075279\ldots .                            \tag{8.4}
+\]
+If the \emph{complete corrected non-low production form}, after the declared
+diagonal debts have been absorbed, were proved to satisfy
+\(\|A_{\rm eff}\|\le K_0\), then (8.2) would leave the exact
+eigenmargin
+\[
+\begin{aligned}
+ \mu_h={}&\eta_h+\zeta_h
+ -\sqrt{(\eta_h-\zeta_h)^2+K_0^2/4}\\
+ ={}&0.02396011633137279\ldots>0.
+\end{aligned}                                           \tag{8.5}
+\]
+An affine low vector \(d\) could then be paid at cost at most
+\(\|d\|^2/\mu_h\).  A quadratic low block with \(D\succeq d_0I\) would fit
+if its reduced-solution loss is strictly below \(\mu_h\).
+
+The limiting scalar threshold as the flexible debts tend to zero is
+\[
+ 4\sqrt{\left({9\over20}-{3\over125P}\right){3\over20}}
+ =1.032279032045117\ldots .                             \tag{8.6}
+\]
+Thus exact low cancellation is not arithmetically necessary.  The route is
+strictly conditional: R-103's estimates are for the regular graph class and
+R-104 proves that their visitwise quantitative use does not automatically
+temporalise.  Equations (8.2)--(8.6) do not supply the missing production
+operator or low norm.
+
+\section*{9. Source-allocation firewall}
+
+At source coefficient \(c=9/20\), R-127's full completion is
+\[
+ \ip{h}{g}+c\|h\|^2
+ =c\left\|h+{g\over2c}\right\|^2-{1\over4c}\|g\|^2,
+ \qquad {1\over4c}={5\over9}.                           \tag{9.1}
+\]
+It uses the whole displayed source square.  To expose the allocation, for
+\(0<\lambda\le1\) write
+\[
+\boxed{
+\begin{aligned}
+ \ip{h}{g}+c\|h\|^2
+ ={}&\lambda c\left\|h+{g\over2\lambda c}\right\|^2
+ +(1-\lambda)c\|h\|^2\\
+ &-{1\over4\lambda c}\|g\|^2.
+\end{aligned}}                                          \tag{9.2}
+\]
+At \(\lambda=1\), no source square remains for a second Hessian payment.
+Combining the \(5/9\) loss in (9.1) with the full direct-Hessian source
+budget is therefore a double spend.  This fires
+\texttt{AUDIT-2026-07-30-A13-FORCE-COMPLETION-HESSIAN-DOUBLE-SPEND}.
+
+The clean active route is the direct Taylor formula already registered in
+R-119:
+\[
+ \mathcal E(Z_0+u)-\mathcal E(Z_0)
+ =D\mathcal E(Z_0)[u]
+ +\int_0^1(1-t)D^2\mathcal E(Z_0+tu)[u,u]\dd t.        \tag{9.3}
+\]
+A Hessian bound \(2\eta X+2\zeta Y\) integrates to
+\(\eta X+\zeta Y\).  The low affine anchor is then paid once through the
+same augmented matrix.  The force-square route remains an exact alternative
+if an explicit \(\lambda\)-split is declared.
+
+\section*{10. Evidence map and smallest successor}
+
+The recorded route decisions are:
+\begin{center}
+\begin{tabular}{p{0.25\linewidth}p{0.15\linewidth}p{0.49\linewidth}}
+\hline
+Route & Verdict & Reusable conclusion\\
+\hline
+New common control Hessian & duplicate & R-119 already owns it; cite rather than recount.\\
+Differentiate R-104 total & advanced & Gives exact legal owner covector/Hessian after recombination.\\
+Control equals Malliavin derivative & failed & Feedback Jacobian and connection term survive.\\
+Naked R-126 force & failed & Complete force is \((g_\cV-g_\cT)/2\).\\
+Append the forest & failed & Forest is an internal alternate coordinate, not a second force.\\
+Rootwise common terminal & failed & Tower compatibility is independent and necessary.\\
+Automatic one-sided reverse adjoint & failed; production intertwiner open & Use two-sided common-source blocks or prove an intertwiner.\\
+Half-debt rebudgeting & advanced conditionally & Creates strict scalar margin if the production form meets the old budget.\\
+Full force plus full Hessian payment & failed & The same source square would be spent twice.\\
+Unified corrected Schur gap & live & Requires production variance, intertwiner, balanced, low, and anchor bounds.\\
+\hline
+\end{tabular}
+\end{center}
+
+These decisions and the bounded-fixture, one-sided-verdict, diagonal-scope,
+cross-factor, and formal-promotion audits are registered as
+\texttt{EXP-000436--EXP-000450}.
+
+The smallest noncyclic successor is
+\[
+ \boxed{\texttt{A13-CLASSII-PRODUCTION-AUGMENTED-SOURCE-HESSIAN-
+ UNIFORM-SCHUR-GAP}.}                                  \tag{10.1}
+\]
+It must, uniformly in cutoff, floor, chart, control, homotopy time, visits,
+output resolution, and representation-preserving refinement:
+\begin{enumerate}
+\item identify the production root/shell blocks as two-sided compressions of
+      the corrected common covariance-normal control Hessian;
+\item prove the future-variance and trace-excess block constants in the same
+      form convention, including balanced and Cartan channels;
+\item establish (7.4) with a strict positive margin or a proved range
+      cancellation, and bound the Douglas reduced solution;
+\item prove the absolute low/injected anchor and the R-079 common-terminal,
+      matching-trace bridge;
+\item retain \(\Delta C\), \(\Delta\Gamma\), all six rows, heat, exhaustive
+      clusters, R-063 forest, rational multipliers, \(2680/729\) Cartan,
+      mean, sextic, and source cost exactly once.
+\end{enumerate}
+
+Only after this theorem may the R-093 directed chart union be invoked toward
+\(\mathrm{OVERLAP}_{\rm src}\) and the \(q=10/9\) Nelson bound.
+
+\section*{11. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection:} R-128 republishes R-119's common Hessian.
+      \textbf{DISMISSED.}  Equation (1.1) is explicitly cited as prior
+      authority.  The new result is differentiated R-104 owner incidence and
+      the covariance-normal correction.
+\item \textbf{Objection:} differentiating an expectation identity could move
+      the law or filtration.  \textbf{VALID WITH SCOPE.}  The theorem fixes
+      both.  A moving Gibbs law would add a score covariance and is outside
+      Theorem 2.1.
+\item \textbf{Objection:} source block means Gaussian source, so (2.4) misses
+      feedback derivatives.  \textbf{UPHELD against that reading.}  Section
+      3 names (2.4) the control-shift derivative and gives bounded smooth
+      exact fixtures for both the feedback Jacobian and connection term.
+\item \textbf{Objection:} refinement conjugacy holds for any nonlinear map.
+      \textbf{UPHELD against that claim.}  Corollary 2.2 assumes a fixed
+      bounded linear refinement and evaluates the refined objects at
+      \(\iota h\); otherwise a \(D^2\iota\) chain-rule term appears.
+\item \textbf{Objection:} R-126's \(\cT\)-force already contains the forest,
+      so no variance force is needed.  \textbf{DISMISSED.}  Equations
+      (4.2) and (4.14)--(4.15) show an exact missing derivative.
+\item \textbf{Objection:} the future-variance correction may be added and the
+      R-063 forest appended as well.  \textbf{UPHELD as duplication.}  The
+      forest is the alternate endpoint coordinate in R-125/R-104.
+\item \textbf{Objection:} source Hessian selfadjointness proves the geometric
+      reverse band.  \textbf{UPHELD only after (6.7).}  One-sided output
+      projection fails by (6.5)--(6.6).
+\item \textbf{Objection:} the half-debt arithmetic closes the low channel.
+      \textbf{DISMISSED.}  It supplies only a conditional scalar margin;
+      it assumes \(R=S=0\), or that those diagonal debts were already
+      absorbed.  Production form and low reduced-solution bounds are missing.
+\item \textbf{Objection:} the old \(K_0\) bounds the corrected operator.
+      \textbf{DISMISSED.}  It is an acceptance budget.  The missing
+      \(H_\cV\) must be included in (7.6)--(7.7).
+\item \textbf{Objection:} the \(5/9\) force loss and direct Hessian reserve
+      are independent.  \textbf{UPHELD as double spending.}  Equation (9.2)
+      displays the common source owner.
+\item \textbf{Objection:} the executable pastes the new decimal margin.
+      \textbf{DISMISSED.}  Both routes load the R-103, R-124, and A1 upstream
+      inputs and derive every threshold; decimals are labelled regression
+      intervals.
+\end{enumerate}
+
+\section*{12. Reproducibility}
+
+Primary exact audit:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_owner_complete_source_pullback_
+  covariance_normal_force_boundary.py
+\end{verbatim}
+
+Non-importing independent audit:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_owner_complete_source_pullback_
+  covariance_normal_force_boundary_independent.py
+\end{verbatim}
+
+Integrated authority, PDF, exploration, registry, and public-surface audit:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_owner_complete_source_pullback_
+  covariance_normal_force_boundary_verify.py
+\end{verbatim}
+
+\section*{13. Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-OWNER-COMPLETE-SOURCE-PULLBACK-
+  COVARIANCE-NORMAL-FORCE-BOUNDARY (R-128).
+Precise statement: Theorem 2.1 and Corollary 2.2; derivative firewall in
+  Section 3; Theorem 4.1 and Counterfixture 4.2; owner ledger in Section 5;
+  reverse/source-block firewall in Section 6; conditional strict-margin and
+  allocation firewalls in Sections 8-9.
+Scope: fixed finite cutoff and positive floor; fixed R-104 chart, Gaussian
+  law, and filtration; bounded smooth cylindrical-simple predictable core;
+  predictable fresh-root-independent heat; exhaustive clusters and
+  once-owned covariance where the R-125 bridge is used.
+Dependencies: A1; R-079, R-093, R-103, R-104, R-119--R-127.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_owner_complete_source_pullback_
+  covariance_normal_force_boundary_verify.py
+Expected output: R-128 integrated PASS; primary and independent assertion
+  counts, manifest, PDF, exploration, negative, and public-surface gates pass.
+Falsification gate: failure of differentiated owner recombination, legal
+  control adjoint, refinement conjugacy, control/Malliavin fixture,
+  future-variance or covariance-normal derivatives, naked-force fixture,
+  sextic/source-cost factors, tower or projection fixtures, rebudgeting,
+  partial completion, authority/hash, PDF, exploration, registry, or
+  public-surface check.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no production root/shell intertwiner, corrected
+  covariance-normal operator bound, balanced/low closure, absolute anchor,
+  OVERLAP_src, Nelson, removals, interacting measure, Sector-A closure, or
+  T5--T7 follows.
+Next required action: prove A13-CLASSII-PRODUCTION-AUGMENTED-SOURCE-HESSIAN-
+  UNIFORM-SCHUR-GAP for the corrected covariance-normal common control
+  Hessian, with the common-terminal/matching-trace bridge and absolute low
+  anchor included.
+\end{verbatim}
+
+\endgroup
