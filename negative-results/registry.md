@@ -6,6 +6,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-31-A13-R132-POLYNOMIAL-RESPONSE-INTERTWINER-SCOPE](#audit-2026-07-31-a13-r132-polynomial-response-intertwiner-scope) | promote the R-083 stopped polynomial-current zero directly to the R-132 owner-complete physical response at collar three | the paired response has one extra product-support step, a positive common-heat Gram, and the R-125 future-variance/forest residual; zero far response is conditional at safe collar four on a root intertwiner and covariance/forest matching |
+| [NG-2026-07-31-A13-PREDICTABLE-SCORE-FINITE-ENERGY-TRANSFER](#ng-2026-07-31-a13-predictable-score-finite-energy-transfer) | extend affine Gaussian score transfer to all finite-energy predictable controls using triangularity or determinant one | the bounded smooth strict-triangular family `h_N=(0,a tanh(N xi_1))` has uniformly bounded source amplitude and terminal moments while `E||J_hN^-1 e_1||^2` grows at least linearly in `N` |
+| [NG-2026-07-31-A13-GAMMA-FOUR-SIXTH-AMPLITUDE-ROUTE](#ng-2026-07-31-a13-gamma-four-sixth-amplitude-route) | derive a complete rational gamma-four shell ledger from the joint Pauli--Fierz coefficient algebra and the existing sixth-amplitude or extracted `Z^6` budget | the exact joint rational boundary layer has fourth-order sharp-Fourier surrogate proportional to `b^7 e^(-3/2)`, while the once-owned sextic is proportional to `b^6`; gamma four requires a seventh amplitude moment in this route |
+| [AUDIT-2026-07-31-A13-R132-GAMMA-FOUR-SUCCESSOR-SCOPE](#audit-2026-07-31-a13-r132-gamma-four-successor-scope) | treat a complete gamma-four estimate as the necessary next condition for shell acceptance | gamma four is neither available from the current sixth-amplitude route nor logically necessary for a fixed strict collar: any proved aggregate positive-gamma tail, including gamma `7/12`, can fit the exact three-channel headroom, but cannot be relabelled as the old uniform exponents |
 | [NG-2026-07-31-A13-DIAGONAL-HEAT-SEXTIC-TO-MIXED-RESPONSE](#ng-2026-07-31-a13-diagonal-heat-sextic-to-mixed-response) | promote a globally coercive diagonal heat-Gram plus terminal-sextic comparison to the square-of-conditional-mean physical response | at the zero background the symmetric 64-atom law has `Xi(-A,V)=-Xi(A,V)`, hence `E Xi=0` for every tangent while the diagonal mean-square is strictly positive; the unshifted sextic Hessian also vanishes there |
 | [NG-2026-07-31-A13-LAW-FREE-MIXED-RESPONSE-FLOOR-UNIFORMITY](#ng-2026-07-31-a13-law-free-mixed-response-floor-uniformity) | infer a floor-uniform mixed current--trace response from complete six-row algebra without using the actual conditional law | on the exact rational active ray with floor `delta^2` and conditional law `{delta,1}/2`, the recombined Hessian is negative and equals `-10 c1/(81 delta)+O(1)`; the standard-Gaussian score-transfer ray remains uniformly controlled, so production-law structure is the necessary next input |
 | [NG-2026-07-31-A13-UNWEIGHTED-RATIONAL-D2-FLOOR-UNIFORMITY](#ng-2026-07-31-a13-unweighted-rational-d2-floor-uniformity) | obtain a floor-uniform production estimate by separating the rational coefficient and bounding its unweighted second spatial derivative | for `F_e(s)=s^3/(s^2+e)` and `G_e(x)=F_e(sin x)`, `sqrt(e)||G_e''||_2^2 -> 3/4`, hence `||G_e''||_2 ~ (sqrt(3)/2)e^(-1/4)`. The no-go targets separated `D2 C`, not the cancellation retained in `D2(C^T C)` |
@@ -199,6 +203,119 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="audit-2026-07-31-a13-r132-polynomial-response-intertwiner-scope"></a>
+### AUDIT-2026-07-31-A13-R132-POLYNOMIAL-RESPONSE-INTERTWINER-SCOPE -- stopped-current support is not the complete physical response
+
+**Claim / route.**  Use R-083's exact stopped polynomial-current zero at
+collar `C=3` as an owner-complete R-132 paired-response zero with no further
+root, heat, covariance, or forest hypothesis.
+
+**Failure mode.**  The polynomial response has the owner decomposition
+`q_poly=q_R083_stop+q_Sigma,+-D2(Delta V_fut^L-Delta F063^(L,ad))/2`.
+R-083 kills only the first coordinate.  The positive common-heat Gram is
+`2(c0+c1)=339/(4000P)` on an exact Fourier-pair fixture.  R-083's adapted
+Hermite fixture separately has covariance-normal mean
+`-8(c0+c1)lambda^2=-339 lambda^2/(1000P)`.  Moreover a stopped current is
+supported in `Q_(n+1)`, whereas its paired response is supported in
+`Q_(n+2)`, so the repository's safe support convention advances from collar
+three to collar four.
+
+**Evidence.**  R-133 proof note, Section 8; R-083 Theorems 3.1 and 7.1 and
+its Section-8 adapted fixture; R-125 future-variance/forest bridge; primary
+and independent R-133 support and exact-constant checks.
+
+**Consequence.**  A zero polynomial far-response theorem is valid
+conditionally at `C>=4` after same-root visit recombination, one compatible
+R-083 changing-current tower, exhaustive contraction-closed outputs, common
+legal heat, and shellwise covariance/forest matching with no complement
+leakage.  Those production hypotheses remain open.  This audit corrects the
+R-132 successor wording; it does not withdraw R-083.
+
+<a id="ng-2026-07-31-a13-predictable-score-finite-energy-transfer"></a>
+### NG-2026-07-31-A13-PREDICTABLE-SCORE-FINITE-ENERGY-TRANSFER -- affine Gaussian scores do not extend from triangularity and finite energy alone
+
+**Claim / route.**  Transfer both physical control derivatives to Gaussian
+scores on every smooth finite predictable chart, then bound the resulting
+score by the declared source-energy and terminal-moment coordinates using
+only strict triangularity or `det(I+D h)=1`.
+
+**Failure mode.**  The exact predictable score is
+`delta^2(sym(a tensor b))-delta(d)`, where
+`a=(I+D h)^(-1)u`, `b=(I+D h)^(-1)v`, and
+`d=(I+D h)^(-1)D2h[a,b]`.  For independent standard Gaussians take the
+bounded smooth strict-triangular feedback
+`h_N=(0,a tanh(N xi_1))`, `0<a<1`.  Its source amplitude and every fixed
+terminal polynomial moment are uniformly bounded, while
+`(I+D h_N)^(-1)e_1=(1,-aN sech^2(N xi_1))` and
+`E||(I+D h_N)^(-1)e_1||^2 >=
+1+2a^2 phi(1) sech^4(1) N`.
+
+**Evidence.**  R-133 proof note, Sections 6--7; exact polynomial connection
+fixture in two independent executables; direct deterministic quadrature of
+the bounded-tanh family.
+
+**Consequence.**  The affine score identity remains valid and useful on
+genuine conditional Gaussian mean-shift blocks.  The finite-energy
+production successor must instead prove a blockwise/direct fixed-law signed
+score--forest estimate, or add and justify inverse-Jacobian/Malliavin
+regularity.  This strengthens the R-128 control-versus-Malliavin firewall and
+is not a counterexample to the physical fixed-law Hessian.
+
+<a id="ng-2026-07-31-a13-gamma-four-sixth-amplitude-route"></a>
+### NG-2026-07-31-A13-GAMMA-FOUR-SIXTH-AMPLITUDE-ROUTE -- the joint rational boundary layer needs a seventh amplitude moment
+
+**Claim / route.**  Obtain the R-132 proposed complete rational
+`gamma=4` shell estimate from the joint six-row Pauli--Fierz coefficient
+algebra plus the existing deterministic sixth-amplitude or extracted `Z^6`
+one-use budget.
+
+**Failure mode.**  On the complete one-real Pauli slice,
+`f_e(s)=s-(5/9)s^3/(s^2+e)` and the joint diagonal Gram is
+`4p^2[c0 s^2+c1 f_e(s)^2]`.  After its polynomial and constant pieces are
+removed, the exact remainder is
+`e[-5/(27(1+z^2))-25/(81(1+z^2)^2)]`, `z=s/sqrt(e)`.
+For `s=b cos(Nx)`, `p=sin(Nx)`, the R-091-normalized sharp fourth-order
+surrogate has unshifted asymptotic
+`(2062375 pi/729)c1^2 b^7 e^(-3/2)`, whereas the once-owned sextic is
+`3 pi b^6/32`.  Their ratio is asymptotic to
+`445473 b/(16000 P^2 e^(3/2))`.  More generally the boundary layer costs
+amplitude `b^(2 gamma-1)`, so a sixth-amplitude budget reaches at most
+`gamma=7/2`.
+
+**Evidence.**  R-133 proof note, Section 9; primary exact rational identity,
+line integral, and asymptotic constants; non-importing fourth-jet integration
+and sample-point checks.
+
+**Consequence.**  Retire only deterministic/current-coefficient derivations
+of `gamma=4` from the existing sixth-amplitude majorants.  The fixture is not
+literal `B_4^out`, which additionally contains OU, probability-root,
+output-multiplier, trace, forest, expectation, and production-law structure.
+A complete signed production cancellation remains logically possible.
+
+<a id="audit-2026-07-31-a13-r132-gamma-four-successor-scope"></a>
+### AUDIT-2026-07-31-A13-R132-GAMMA-FOUR-SUCCESSOR-SCOPE -- fixed-collar acceptance does not require the old uniform far exponent
+
+**Claim / route.**  Treat a new complete `gamma=4` estimate as necessary
+before the R-131 two-channel/low-coupled acceptance matrix can be used.
+
+**Failure mode.**  If `sigma=k^2/d<min(e,f)`, the exact strict acceptance
+threshold is `a<2 sqrt((e-sigma)(f-sigma))`.  Therefore any aggregate tail
+`M 2^(-gamma(C-5))` with `gamma>0` fits a fixed positive headroom at a
+sufficiently large collar.  At the accepted `gamma=7/12`, one may choose
+`C>5+(12/7)log2(M/headroom)`.  However relabelling this tail as the old
+`2^(-4C)` or `2^(-2C)` prototypes creates effective constants growing as
+`2^((41/12)C+35/12)` or `2^((17/12)C+35/12)`.
+
+**Evidence.**  R-133 proof note, Section 10; exact symbolic factorization and
+independent numerical threshold checks; R-091 lossless aggregate output-gap
+ledger.
+
+**Consequence.**  Replace the `gamma=4 or stronger cancellation` successor
+wording by an aggregate fixed-collar route: prove one-use control of
+`B_(7/12)^out` or another positive-gamma tail, control the collar-dependent
+near/balanced contribution, and test the exact strict headroom.  Neither that
+one-use bound nor the headroom is presently proved.
 
 <a id="ng-2026-07-31-a13-diagonal-heat-sextic-to-mixed-response"></a>
 ### NG-2026-07-31-A13-DIAGONAL-HEAT-SEXTIC-TO-MIXED-RESPONSE -- diagonal heat and sextic do not imply mixed-response coercivity

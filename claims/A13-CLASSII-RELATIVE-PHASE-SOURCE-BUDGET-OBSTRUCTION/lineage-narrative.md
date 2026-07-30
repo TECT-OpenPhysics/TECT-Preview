@@ -858,6 +858,37 @@ endpoint theorem.
     an absolute anchor still unproved. Both A13 gates and Sector A remain open
     at T4.
 
+60. **Common-heat replica response, scalar Gaussian repair, and shell-
+    exponent boundary.** R-132 gives the exact fixed-law paired-replica
+    current--trace response with common heat and the complete mixed six-row
+    Pauli--Fierz invariant. A 64-atom diagonal heat--sextic comparison is
+    positive, but exact symmetric-origin cancellation prevents promotion to
+    the square of the conditional mean. A two-point rational law rejects a
+    law-free floor-uniform theorem without realizing a production A1
+    counterexample, while one standard-Gaussian scalar ray has a genuine
+    source--sextic margin above three quarters. The accepted R-091
+    `gamma=7/12` tail does not supply the old mixed/far exponents. The route
+    therefore moved to complete Gaussian score transfer plus a stronger shell
+    estimate, with both A13 gates and Sector A still open at T4.
+
+61. **Affine score transfer, feedback divergence, periodic rational boundary,
+    and aggregate collar repair.** R-133 proves the exact derivative-free
+    Hermite-score identity on affine conditional Gaussian blocks, with
+    one-copy cost `D_Gamma` and paired cost `4D_Gamma`. Common heat sees only
+    the synchronous replica direction. On smooth finite predictable charts,
+    the exact connection-corrected score is
+    `delta^2(sym(a tensor b))-delta(d)`; bounded triangular tanh feedback
+    proves that the currently declared finite-energy data do not control its
+    inverse-Jacobian cost. The R-083 polynomial response vanishes only
+    conditionally at safe collar `C=4` after root-tower and covariance/forest
+    matching. Exact Fourier coefficients for the actual periodic carrier
+    show a `b^7 e^(-3/2)` fourth-order rational boundary, rejecting the
+    existing sixth-amplitude `gamma=4` route without refuting literal
+    production `B_4^out`. The exact low-coupled threshold shows that any
+    proved positive-gamma aggregate tail can fit a fixed strict headroom; the
+    one-use `gamma=7/12` tail and collar-uniform non-tail bound are now the
+    smallest honest successor. Both A13 gates and Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

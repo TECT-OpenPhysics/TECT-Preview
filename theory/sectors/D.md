@@ -30,6 +30,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-31-A13-R132-POLYNOMIAL-RESPONSE-INTERTWINER-SCOPE | stopped-current support is not the complete physical respons |  |
+| NG-2026-07-31-A13-PREDICTABLE-SCORE-FINITE-ENERGY-TRANSFER | affine Gaussian scores do not extend from triangularity and  |  |
 | NG-2026-07-31-A13-UNWEIGHTED-RATIONAL-D2-FLOOR-UNIFORMITY | separated rational second derivatives are not floor-uniform |  |
 | NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER | stationary six-row parity does not transfer to arbitrary ada |  |
 | NG-2026-07-29-A13-FEEDBACK-DERIVATIVE-GRAPH-CLOSURE | graph convergence does not control feedback derivatives |  |

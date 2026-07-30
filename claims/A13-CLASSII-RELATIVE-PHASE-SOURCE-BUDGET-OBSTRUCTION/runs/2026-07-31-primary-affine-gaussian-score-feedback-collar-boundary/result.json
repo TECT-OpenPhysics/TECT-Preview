@@ -1,0 +1,376 @@
+{
+  "assertions": [
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "inputs",
+      "name": "upstream_pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/9",
+      "expected": "5/9",
+      "group": "inputs",
+      "name": "alpha",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/12",
+      "expected": "7/12",
+      "group": "inputs",
+      "name": "gamma",
+      "status": "PASS"
+    },
+    {
+      "actual": "42375000000/4000000000001",
+      "expected": "42375000000/4000000000001",
+      "group": "inputs",
+      "name": "c_s",
+      "status": "PASS"
+    },
+    {
+      "actual": "169500000000/4000000000001",
+      "expected": "169500000000/4000000000001",
+      "group": "inputs",
+      "name": "beta_op",
+      "status": "PASS"
+    },
+    {
+      "actual": "-40/3",
+      "expected": "-40/3",
+      "group": "affine_score",
+      "name": "paired_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-35/3",
+      "expected": "-35/3",
+      "group": "affine_score",
+      "name": "single_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5/6",
+      "expected": "-5/6",
+      "group": "affine_score",
+      "name": "combined_owner_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "score_cost",
+      "name": "single_centered",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "score_cost",
+      "name": "pair_centered",
+      "status": "PASS"
+    },
+    {
+      "actual": "97/12",
+      "expected": "97/12",
+      "group": "score_cost",
+      "name": "single_l2",
+      "status": "PASS"
+    },
+    {
+      "actual": "97/3",
+      "expected": "97/3",
+      "group": "score_cost",
+      "name": "pair_l2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-359/27",
+      "expected": "-359/27",
+      "group": "replica_split",
+      "name": "operator_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "13/2",
+      "expected": "13/2",
+      "group": "replica_split",
+      "name": "common_variance",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/2",
+      "expected": "5/2",
+      "group": "replica_split",
+      "name": "relative_variance",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "replica_split",
+      "name": "common_relative_orthogonal",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "feedback",
+      "name": "nonlinear_physical_hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "feedback",
+      "name": "linear_physical_hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*lam**2",
+      "expected": "2*lam**2",
+      "group": "feedback",
+      "name": "connection_is_load_bearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*lam**2",
+      "expected": "2*lam**2",
+      "group": "feedback",
+      "name": "connection_cancels",
+      "status": "PASS"
+    },
+    {
+      "actual": "|a tanh(Nx)|<=a",
+      "expected": "uniform in N",
+      "group": "feedback",
+      "name": "bounded_feedback_amplitude",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(2)*a**2*exp(-1/2)/(sqrt(pi)*cosh(1)**4)",
+      "expected": ">0",
+      "group": "feedback",
+      "name": "inverse_cost_lower_coefficient_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "oo",
+      "expected": "oo",
+      "group": "feedback",
+      "name": "inverse_cost_diverges",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": 2,
+      "group": "polynomial_support",
+      "name": "current_offset_three",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": 2,
+      "group": "polynomial_support",
+      "name": "response_offset_four",
+      "status": "PASS"
+    },
+    {
+      "actual": 5,
+      "expected": ">4",
+      "group": "polynomial_support",
+      "name": "cartan_offset_five",
+      "status": "PASS"
+    },
+    {
+      "actual": "84750000000/4000000000001",
+      "expected": "84750000000/4000000000001",
+      "group": "polynomial_support",
+      "name": "common_heat_gram",
+      "status": "PASS"
+    },
+    {
+      "actual": "-339000000000/4000000000001",
+      "expected": "-339000000000/4000000000001",
+      "group": "polynomial_support",
+      "name": "adapted_covariance_defect",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5*(3*z**2 + 8)/(81*(z**2 + 1)**2)",
+      "expected": "-5/(27*(z**2 + 1)) - 25/(81*(z**2 + 1)**2)",
+      "group": "gamma_four",
+      "name": "rational_remainder",
+      "status": "PASS"
+    },
+    {
+      "actual": "2062375*pi/23328",
+      "expected": "2062375*pi/23328",
+      "group": "gamma_four",
+      "name": "boundary_integral",
+      "status": "PASS"
+    },
+    {
+      "actual": "2610193359375000000000000*pi/16000000000008000000000001",
+      "expected": "2610193359375000000000000*pi/16000000000008000000000001",
+      "group": "gamma_four",
+      "name": "full_gram_asymptotic",
+      "status": "PASS"
+    },
+    {
+      "actual": "27842062500000000000000000/16000000000008000000000001",
+      "expected": "27842062500000000000000000/16000000000008000000000001",
+      "group": "gamma_four",
+      "name": "sextic_ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "oo",
+      "expected": "oo",
+      "group": "gamma_four",
+      "name": "ratio_unbounded",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*(e0 - sigma)*(f0 - sigma)",
+      "expected": "(4*e0 - 4*sigma)*(f0 - sigma)",
+      "group": "collar",
+      "name": "threshold_factorization",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/10 - sqrt(39)/20",
+      "expected": ">1/10",
+      "group": "collar",
+      "name": "strict_equivalence_inside",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/10",
+      "expected": "1/10",
+      "group": "collar",
+      "name": "boundary_equality",
+      "status": "PASS"
+    },
+    {
+      "actual": "41/12",
+      "expected": "41/12",
+      "group": "collar",
+      "name": "far_relabel_growth",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/12",
+      "expected": "17/12",
+      "group": "collar",
+      "name": "mix_relabel_growth",
+      "status": "PASS"
+    },
+    {
+      "actual": "35/12",
+      "expected": "35/12",
+      "group": "collar",
+      "name": "offset_exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "collar",
+      "name": "strict_collar_equality_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "2**(5/12)/2",
+      "expected": "<1",
+      "group": "collar",
+      "name": "strict_collar_next_integer",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/(2 - 2**(5/12))",
+      "expected": ">1 finite",
+      "group": "collar",
+      "name": "geometric_cost_finite",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 42,
+  "assertions_total": 42,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "diagnostics": {
+    "affine_score": {
+      "pair_score_l2_squared": "97/3",
+      "paired_direct": "-40/3",
+      "paired_score": "-40/3",
+      "raw_complete_frame_envelope": "169500000000/4000000000001",
+      "single_score_l2_squared": "97/12",
+      "trace_direct": "-35/3",
+      "trace_score": "-35/3"
+    },
+    "aggregate_collar": {
+      "far_effective_growth_exponent": "41/12",
+      "geometric_sum_cost": "2/(2 - 2**(5/12))",
+      "known_gamma": "7/12",
+      "minimum_integer_example": 18,
+      "mix_effective_growth_exponent": "17/12",
+      "offset_exponent": "35/12",
+      "threshold": "2*sqrt((e-sigma)*(f-sigma))"
+    },
+    "feedback": {
+      "bounded_tanh_inverse_lower_coefficient": "sqrt(2)*a**2*exp(-1/2)/(sqrt(pi)*cosh(1)**4)",
+      "connection": "2*lam*y",
+      "exact_score": "4*lam**2*x**2*y**2 - 4*lam**2*x**2 - 4*lam*x**2*y + 2*lam*y + x**2 - 1"
+    },
+    "gamma_four": {
+      "H4_integral": "2062375*pi/23328",
+      "gram_asymptotic_coefficient": "2610193359375000000000000*pi/16000000000008000000000001",
+      "ratio_coefficient": "27842062500000000000000000/16000000000008000000000001",
+      "scaled_remainder": "-5/(27*(z**2 + 1)) - 25/(81*(z**2 + 1)**2)",
+      "sextic_coefficient": "3*pi/32",
+      "surrogate_offset_factor": "1/1099511627776"
+    },
+    "inputs": {
+      "alpha": "5/9",
+      "c0": "12000000000/4000000000001",
+      "c1": "30375000000/4000000000001",
+      "c_s": "42375000000/4000000000001",
+      "known_gamma": "7/12",
+      "p_mass": "4000000000001/1000000000000"
+    },
+    "polynomial_response": {
+      "adapted_covariance_defect_at_lambda_one": "-339000000000/4000000000001",
+      "cartan_principal_offset": 5,
+      "common_heat_gram": "84750000000/4000000000001",
+      "current_safety_offset": 3,
+      "response_safety_offset": 4
+    },
+    "replica_split": {
+      "common_relative_cross": "0",
+      "common_second_moment": "13/2",
+      "mean": "2",
+      "relative_second_moment": "5/2",
+      "variance": "5"
+    }
+  },
+  "no_overclaim": "R-133 proves exact score, feedback, support, obstruction, and conditional collar lemmas. It does not control the complete signed production score owner, prove a one-use B_gamma bound, construct production shell constants or an absolute anchor, or close Sector A.",
+  "package_version": "1.0.0",
+  "result_id": "A13-CLASSII-AFFINE-GAUSSIAN-SCORE-FEEDBACK-COLLAR-BOUNDARY",
+  "schema": "tect/a13-affine-gaussian-score-feedback-collar-boundary-primary/1.0",
+  "scope": {
+    "absolute_anchor": false,
+    "affine_gaussian_score_identity_proved": true,
+    "aggregate_positive_gamma_collar_criterion_proved": true,
+    "conditional_polynomial_response_zero_proved": true,
+    "finite_energy_global_score_transfer_from_declared_data_rejected": true,
+    "predictable_feedback_score_identity_proved_on_cylindrical_core": true,
+    "production_c_bal": false,
+    "production_c_far": false,
+    "production_c_mix": false,
+    "production_one_use_bound": false,
+    "sector_a_closed": false,
+    "sixth_amplitude_gamma_four_route_rejected": true
+  },
+  "status": "PASS"
+}

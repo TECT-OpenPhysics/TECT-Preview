@@ -1,0 +1,365 @@
+{
+  "assertions": [
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "inputs",
+      "name": "upstream_pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "42375000000/4000000000001",
+      "expected": "42375000000/4000000000001",
+      "group": "inputs",
+      "name": "c_s",
+      "status": "PASS"
+    },
+    {
+      "actual": "169500000000/4000000000001",
+      "expected": "169500000000/4000000000001",
+      "group": "inputs",
+      "name": "raw_envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "16",
+      "expected": "16",
+      "group": "affine_score",
+      "name": "pair_unit",
+      "status": "PASS"
+    },
+    {
+      "actual": "-40/3",
+      "expected": "-40/3",
+      "group": "affine_score",
+      "name": "pair_scaled",
+      "status": "PASS"
+    },
+    {
+      "actual": "14",
+      "expected": "14",
+      "group": "affine_score",
+      "name": "trace_unit",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5/6",
+      "expected": "-5/6",
+      "group": "affine_score",
+      "name": "combined_owner_with_outer_half",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "score_cost",
+      "name": "single_centered",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "score_cost",
+      "name": "pair_centered",
+      "status": "PASS"
+    },
+    {
+      "actual": "97/12",
+      "expected": "97/12",
+      "group": "score_cost",
+      "name": "single_l2",
+      "status": "PASS"
+    },
+    {
+      "actual": "97/3",
+      "expected": "97/3",
+      "group": "score_cost",
+      "name": "pair_l2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "feedback",
+      "name": "nonlinear_hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "feedback",
+      "name": "linear_hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "8/9",
+      "expected": "8/9",
+      "group": "feedback",
+      "name": "uncorrected_debt",
+      "status": "PASS"
+    },
+    {
+      "actual": "8/9",
+      "expected": "8/9",
+      "group": "feedback",
+      "name": "connection_payment",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.255950443228044,
+        1.5266575851850894,
+        2.061178021364987,
+        3.126353616703524
+      ],
+      "expected": "strictly increasing",
+      "group": "feedback",
+      "name": "bounded_tanh_growth",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.489233260404901,
+      "expected": ">2",
+      "group": "feedback",
+      "name": "bounded_tanh_uncontrolled",
+      "status": "PASS"
+    },
+    {
+      "actual": 3,
+      "expected": "safety offset 3",
+      "group": "polynomial_support",
+      "name": "current_offset",
+      "status": "PASS"
+    },
+    {
+      "actual": 4,
+      "expected": "safety offset 4",
+      "group": "polynomial_support",
+      "name": "response_offset",
+      "status": "PASS"
+    },
+    {
+      "actual": "84750000000/4000000000001",
+      "expected": "84750000000/4000000000001",
+      "group": "polynomial_support",
+      "name": "common_heat",
+      "status": "PASS"
+    },
+    {
+      "actual": "-339000000000/4000000000001",
+      "expected": "-339000000000/4000000000001",
+      "group": "polynomial_support",
+      "name": "adapted_defect",
+      "status": "PASS"
+    },
+    {
+      "actual": 9.354030476083942e-16,
+      "expected": "<2e-14",
+      "group": "gamma_four",
+      "name": "remainder_samples",
+      "status": "PASS"
+    },
+    {
+      "actual": 277.7410043277262,
+      "expected": 277.7410043272998,
+      "group": "gamma_four",
+      "name": "h4_integral",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.5125102676418658,
+      "expected": 0.5125102676410789,
+      "group": "gamma_four",
+      "name": "asymptotic_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.7401289062491299,
+      "expected": 1.7401289062491299,
+      "group": "gamma_four",
+      "name": "sextic_ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.6660339022792064e-05,
+      "expected": ">0",
+      "group": "gamma_four",
+      "name": "periodic_far_harmonics_reinforce",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.004387082558906519,
+        0.0007031626723221773,
+        0.0001757628321565896
+      ],
+      "expected": "strictly decreasing",
+      "group": "gamma_four",
+      "name": "periodic_asymptotic_errors_decrease",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0001757628321566,
+      "expected": "relative error <2e-4",
+      "group": "gamma_four",
+      "name": "periodic_asymptotic_last",
+      "status": "PASS"
+    },
+    {
+      "actual": 7,
+      "expected": 7,
+      "group": "gamma_four",
+      "name": "seventh_amplitude",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/2",
+      "expected": "<4",
+      "group": "gamma_four",
+      "name": "sixth_budget_threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.38775010008008004,
+      "expected": ">0.1",
+      "group": "collar",
+      "name": "inside",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.09999999999999998,
+      "expected": 0.1,
+      "group": "collar",
+      "name": "boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0,
+      "expected": 1.0,
+      "group": "collar",
+      "name": "equality_not_strict",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.667419927085017,
+      "expected": "<1",
+      "group": "collar",
+      "name": "next_integer_strict",
+      "status": "PASS"
+    },
+    {
+      "actual": "41/12",
+      "expected": "41/12",
+      "group": "collar",
+      "name": "far_growth_exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/12",
+      "expected": "17/12",
+      "group": "collar",
+      "name": "mix_growth_exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "35/12",
+      "expected": "35/12",
+      "group": "collar",
+      "name": "offset_exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.006794698297,
+      "expected": ">1 finite",
+      "group": "collar",
+      "name": "geometric_cost",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 38,
+  "assertions_total": 38,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "diagnostics": {
+    "aggregate_collar": {
+      "a_star": 1.1832159566199232,
+      "far_growth_exponent": "41/12",
+      "geometric_cost": 3.006794698297,
+      "mix_growth_exponent": "17/12",
+      "offset_exponent": "35/12",
+      "strict_integer_example": 18
+    },
+    "feedback": {
+      "inverse_costs_N_2_4_8_16": [
+        1.255950443228044,
+        1.5266575851850894,
+        2.061178021364987,
+        3.126353616703524
+      ],
+      "lambda": "2/3"
+    },
+    "gamma_four": {
+      "H4_integral_exact_float": 277.7410043272998,
+      "H4_integral_numeric": 277.7410043277262,
+      "gram_asymptotic": 0.5125102676410789,
+      "periodic_carrier_amplitudes": [
+        20.0,
+        50.0,
+        100.0
+      ],
+      "periodic_carrier_normalized_ratios": [
+        1.0043870825589065,
+        1.0007031626723222,
+        1.0001757628321566
+      ],
+      "periodic_carrier_relative_errors": [
+        0.004387082558906519,
+        0.0007031626723221773,
+        0.0001757628321565896
+      ],
+      "remainder_max_error": 9.354030476083942e-16,
+      "sextic_ratio_coefficient": 1.7401289062491299
+    },
+    "inputs": {
+      "alpha": "5/9",
+      "c0": "12000000000/4000000000001",
+      "c1": "30375000000/4000000000001",
+      "c_s": "42375000000/4000000000001",
+      "gamma": "7/12",
+      "p_mass": "4000000000001/1000000000000"
+    },
+    "polynomial_response": {
+      "adapted_defect": "-339000000000/4000000000001",
+      "common_heat_gram": "84750000000/4000000000001",
+      "current_offset": 3,
+      "response_offset": 4
+    },
+    "score": {
+      "combined_owner_with_outer_half": "-5/6",
+      "combined_unhalved": "-5/3",
+      "pair_l2_squared": "97/3",
+      "pair_unit": "16",
+      "single_l2_squared": "97/12",
+      "trace_unit": "14"
+    }
+  },
+  "no_overclaim": "Independent checks cover only R-133's exact and conditional identities, counterfamilies, and collar criterion. They prove no production one-use estimate or Sector A closure.",
+  "package_version": "1.0.0",
+  "result_id": "A13-CLASSII-AFFINE-GAUSSIAN-SCORE-FEEDBACK-COLLAR-BOUNDARY",
+  "schema": "tect/a13-affine-gaussian-score-feedback-collar-boundary-independent/1.0",
+  "scope": {
+    "absolute_anchor": false,
+    "affine_gaussian_score_identity_proved": true,
+    "aggregate_positive_gamma_collar_criterion_proved": true,
+    "conditional_polynomial_response_zero_proved": true,
+    "finite_energy_global_score_transfer_from_declared_data_rejected": true,
+    "predictable_feedback_score_identity_proved_on_cylindrical_core": true,
+    "production_c_bal": false,
+    "production_c_far": false,
+    "production_c_mix": false,
+    "production_one_use_bound": false,
+    "sector_a_closed": false,
+    "sixth_amplitude_gamma_four_route_rejected": true
+  },
+  "status": "PASS"
+}

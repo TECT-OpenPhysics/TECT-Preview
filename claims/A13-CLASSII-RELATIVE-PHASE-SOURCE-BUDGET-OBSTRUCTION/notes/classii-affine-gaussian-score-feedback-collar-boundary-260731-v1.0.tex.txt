@@ -1,0 +1,802 @@
+% =============================================================================
+% Title: Affine Gaussian score transfer, predictable-feedback divergence, polynomial-response support, and aggregate collar boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-AFFINE-GAUSSIAN-SCORE-FEEDBACK-COLLAR-BOUNDARY
+% Version: v1.0 -- first issued 2026-07-31; this version issued 2026-07-31
+% Status: scoped T4 analytic/exact/executed advance and route correction; both A13 gates and Sector A remain open
+% =============================================================================
+
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\cW}{\mathcal W}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+
+R-132 selected Gaussian score transfer and a complete $\gamma=4$ shell
+estimate as its apparent successor.  R-133 audits both suggestions against
+the complete owner and changes the route in two precise ways.
+
+\begin{enumerate}
+\item For a genuinely affine conditional Gaussian future block, the complete
+current--trace response has an exact common-heat Hermite-score formula.  It
+removes every derivative of $C_6$, including differentiated floor
+denominators, while retaining the raw signed six-row Pauli--Fierz kernel.
+\item A general predictable feedback chart is not affine in the Gaussian
+sources.  Its exact score contains an inverse feedback Jacobian, a Gaussian
+double divergence, and the R-128 connection term.  The declared finite-energy
+control class does not control those quantities.
+\item Common heat scores only the replica-synchronous direction.  The
+replica-relative derivative remains explicit and carries exactly one half of
+the conditional variation variance.
+\item R-083 kills the stopped polynomial current, not the complete polynomial
+physical response.  A response-level zero theorem is conditional on a root
+intertwiner and covariance/forest matching and uses the safe collar $C=4$,
+not the current-level collar $C=3$.
+\item The full joint rational row has a nonzero boundary layer.  A scalar
+sharp-Fourier surrogate for $\cB_4^{\rm out}$ grows like
+$b^7e^{-3/2}$, whereas the once-owned sextic grows like $b^6$.  Therefore
+the existing sixth-amplitude deterministic/current-coefficient route cannot
+prove $\gamma=4$.
+\item A $\gamma=4$ theorem is not logically necessary for fixed-collar
+three-channel acceptance.  Any proved aggregate tail with $\gamma>0$ can be
+made smaller than a fixed strict headroom.  In particular, a still-unproved
+one-use bound for R-091's accepted $\gamma=7/12$ ledger would suffice after
+an explicit collar choice, provided the non-tail contribution remains below
+the exact shifted threshold.
+\end{enumerate}
+
+The result is T4 at fixed finite cutoff and positive density floor.  It does
+not prove the complete production score-weighted owner estimate, a one-use
+$\cB_{7/12}^{\rm out}$ bound, production $C_{\rm mix}$, $C_{\rm far}$,
+$c_{\rm bal}$, low $D/K/R_0/S_0$, matching energy, a strict augmented gap,
+the absolute anchor, $\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, an
+interacting measure, or Sector-A closure.
+
+\section*{2. Owner and conditioning firewall}
+
+Fix one finite temporally faithful chart, one positive floor, one root after
+all representation-preserving same-root visits have been recombined, one
+member of an exhaustive deterministic output family, and one spatial
+derivative direction.  Every use of ``complete'' below retains the entire
+contraction-closed cluster sum before shelling.  The heat variable $r$ is
+common to both future replicas and is
+integrated once outside the replica expectation.  It is not independently
+replicated.  The trace probe is independent and once owned.
+
+R-132 identifies the direct physical current--trace response as
+\[
+ q_{\rm comp}
+ =-{1\over2}D^2\cT
+ ={1\over2}D^2(\cF_{063}^{\rm ad}-\cV_{\rm fut}).       \tag{2.1}
+\]
+The R-063 forest and future variance are alternate coordinates for this same
+owner.  Low, paid, rational, Cartan, heat, trace, and forest pieces are not
+added again after (2.1).  The fixed-chart action Hessian is
+\[
+ D^2\cA_J(h)[u,v]
+ ={9\over10}\ip{u}{v}
+ +q_{\rm comp}(L_\pi u,L_\pi v)
+ +q_6(Z_h;L_\pi u,L_\pi v).                         \tag{2.2}
+\]
+The source term stays outside the physical response and is used once.
+
+\section*{3. Exact affine common-heat Gaussian score theorem}
+
+Condition on the strict past and retained root.  First fix one owner tuple
+$(k,\cC,i)$ and suppress its indices.  Let its complete future block be
+affine,
+\[
+ W_{f,r}=\overline W_r+S\xi_f,
+ \qquad \xi_f,\xi_{f'}\stackrel{\rm iid}{\sim}N(0,I),             \tag{3.1}
+\]
+and put
+\[
+ X_f=P_{\cC}C_6(W_{f,r})\partial_iW_{f,r},
+ \qquad
+ K=\Rea\ip{X_f}{X_{f'}}.                              \tag{3.2}
+\]
+For the independent once-owned trace probe $G'_k$, put
+\[
+ T=\E_g\|P_{\cC}C_6(W_{f,r})\partial_iG'_{k,g}\|^2.  \tag{3.3}
+\]
+Let the physical variations be genuine Gaussian mean shifts
+\[
+ z=Sa,\qquad w=Sb.                                    \tag{3.4}
+\]
+Define the one- and two-copy Hermite scores
+\[
+ H^{(1)}_{a,b}(\xi)
+ =(a\cdot\xi)(b\cdot\xi)-a\cdot b,                  \tag{3.5}
+\]
+\[
+ H^{(2)}_{a,b}(\xi,\xi')
+ =[a\cdot(\xi+\xi')][b\cdot(\xi+\xi')]-2a\cdot b. \tag{3.6}
+\]
+
+\paragraph{Theorem 3.1 (affine mixed-replica score identity).}
+Under the firewall above, suppose first that the same conditional Gaussian
+source coordinate realizes all owner tuples and that $a,b$ are its common
+shift directions.  Then
+\[
+ \boxed{
+ q_{\rm comp}(Sa,Sb)
+ ={1\over2}\sum_{k,\cC,i}\E_r\E\left[
+ H^{(2)}_{a,b}K-H^{(1)}_{a,b}T\right].}              \tag{3.7}
+\]
+
+\paragraph{Proof.}
+Both future replicas receive the same mean shift.  For a two-parameter shift
+$h=ta+ub$, the product Gaussian density ratio is
+\[
+ \exp\{h\cdot(\xi+\xi')-|h|^2\},                    \tag{3.8}
+\]
+whose mixed second derivative in directions $a,b$ is (3.6).  The one-copy
+density ratio has second score (3.5).  Apply these two identities to
+$\frac12\E_{f,f'}K-\frac12\E_fT$, keeping $r$ fixed, and then integrate
+the common heat once.  This is exactly (2.1). \hfill$\square$
+
+If different owner tuples use different affine source coordinates, the
+single-owner identity preceding the sum remains exact with indexed
+$S_{k\cC i},a_{k\cC i},b_{k\cC i}$; (3.7) then means the sum of those
+ownerwise identities.  It does not identify distinct conditional laws or
+replace the exhaustive cluster sum by one selected output.
+
+No $DC_6$ or $D^2C_6$ occurs in (3.7).  The raw signed kernel remains
+\[
+ c_0\mathrm{JJ}
+ +c_1\{\mathrm{JJ}-\alpha\tau'\mathrm{JM}
+ -\alpha\tau\mathrm{MJ}+\alpha^2\tau\tau'\mathrm{MM}\}.       \tag{3.9}
+\]
+Thus the denominators in $\tau,\tau'$ are not cancelled, but they are not
+differentiated.  The complete row sum has the raw floor-independent envelope
+\[
+ \|C_6(W)V\|^2
+ \le\beta_{\rm op}|W|^2|V|^2,
+ \qquad
+ \beta_{\rm op}=4(c_0+c_1)={339\over2000P}.          \tag{3.10}
+\]
+This envelope belongs to the complete row expression.  Separating $\tau$
+before applying it can recreate false inverse-floor losses.  The live
+$2680/729$ Cartan owner remains encoded in (3.7).
+
+\section*{4. Exact covariance cost}
+
+Let a physical affine Gaussian have covariance $\Gamma$.  For
+$z,w\in\Ran\Gamma^{1/2}$ define
+\[
+ \kappa(z,w)=\ip{z}{\Gamma^\dagger w},
+ \qquad
+ D_\Gamma(z,w)
+ =\kappa(z,z)\kappa(w,w)+\kappa(z,w)^2.              \tag{4.1}
+\]
+In physical variables the scores are
+\[
+ s_z=\ip{\Gamma^\dagger z}{W-\overline W},           \tag{4.2}
+\]
+\[
+ H^{(1)}_{z,w}=s_zs_w-\kappa(z,w),                   \tag{4.3}
+\]
+\[
+ H^{(2)}_{z,w}=(s_z+s'_z)(s_w+s'_w)-2\kappa(z,w).    \tag{4.4}
+\]
+Wick's formula gives the exact costs
+\[
+ \boxed{
+ \|H^{(1)}_{z,w}\|_2^2=D_\Gamma(z,w),
+ \qquad
+ \|H^{(2)}_{z,w}\|_2^2=4D_\Gamma(z,w).}             \tag{4.5}
+\]
+Consequently, in the common-coordinate setting of Theorem 3.1,
+\[
+ \boxed{
+ |q_{\rm comp}(z,w)|
+ \le D_\Gamma(z,w)^{1/2}
+ \sum_{k,\cC,i}\E_r
+ \left(\|K\|_2+{1\over2}\|T\|_2\right).}          \tag{4.6}
+\]
+For owner-dependent affine coordinates the precise replacement is the
+ownerwise sum
+\[
+ \sum_{k,\cC,i}\E_r\left[
+ D_{\Gamma_{k\cC i,r}}(z,w)^{1/2}
+ \left(\|K\|_2+{1\over2}\|T\|_2\right)\right],    \tag{4.6a}
+\]
+with the physical directions and covariance interpreted in that owner's
+coordinate.  No common covariance may be pulled outside this sum unless it
+is actually shared by all owners.
+
+The range condition is load-bearing.  Outside
+$\Ran\Gamma^{1/2}$ the translated and original Gaussian laws are singular.
+Even inside the range, for
+\[
+ \Gamma_\varepsilon=\operatorname{diag}(1,\varepsilon^2),
+ \qquad z=e_2,                                       \tag{4.7}
+\]
+one has $\kappa(z,z)=\varepsilon^{-2}$.  No physical $L^2$ estimate hides
+this inverse.  In source coordinates $z=Sa$, the minimum cost is the square
+of the projection of $a$ onto $(\ker S)^\perp$.
+
+\section*{5. Common and relative replica directions}
+
+The affine theorem has the same direction on both replicas.  General
+feedback does not.  The following identity locates the difference exactly.
+Let $A\sim N(0,\Sigma)$ be common heat and let
+$\Phi(A+x,A+y)$ be smooth.  For two replica directions $p,q$, write
+\[
+ c={p+q\over2},\qquad d={p-q\over2},
+ \qquad
+ \nabla_-:=\nabla_x-\nabla_y.                        \tag{5.1}
+\]
+Then
+\[
+ p\cdot\nabla_x+q\cdot\nabla_y
+ =c\cdot\nabla_A+d\cdot\nabla_-.                    \tag{5.2}
+\]
+For two direction pairs $(p_z,q_z),(p_w,q_w)$, Gaussian integration by
+parts gives
+\[
+\begin{aligned}
+ \E_A L_zL_w\Phi={}&
+ \E_A[H_\Sigma(c_z,c_w;A)\Phi]\\
+ &+\E_A[S_\Sigma(c_z;A)d_w\cdot\nabla_-\Phi]\\
+ &+\E_A[S_\Sigma(c_w;A)d_z\cdot\nabla_-\Phi]\\
+ &+\E_A[(d_z\cdot\nabla_-)(d_w\cdot\nabla_-)\Phi]
+\end{aligned}                                                   \tag{5.3}
+\]
+where
+\[
+ S_\Sigma(c;A)=\ip{\Sigma^\dagger c}{A},             \tag{5.4}
+\]
+\[
+ H_\Sigma(c,w;A)=S_\Sigma(c;A)S_\Sigma(w;A)
+ -\ip{c}{\Sigma^\dagger w}.                          \tag{5.5}
+\]
+
+For iid conditional replica directions $p,p'$ in any Hilbert metric,
+\[
+ \E\left\|{p+p'\over2}\right\|^2
+ =\|\E p\|^2+{1\over2}\Var(p),                      \tag{5.6}
+\]
+\[
+ \E\left\|{p-p'\over2}\right\|^2
+ ={1\over2}\Var(p),
+ \qquad
+ \E\ip{p+p'}{p-p'}=0.                               \tag{5.7}
+\]
+Thus common heat transfers the synchronous direction.  The unsmoothed
+relative derivative is localized to one half of the conditional variation
+variance.  In the affine mean-shift theorem $p=p'$ and it vanishes.  In a
+predictable feedback chart it is an additional owner, not a free
+cancellation.
+
+\section*{6. Exact predictable-feedback divergence theorem}
+
+On a smooth finite triangular source chart write
+\[
+ Z_h(\xi)=L_\pi\{\xi+h(\xi)\},
+ \qquad J_h=I+D_\xi h.                               \tag{6.1}
+\]
+For legal fixed-law control directions $u,v$, put
+\[
+ a=J_h^{-1}u,
+ \qquad b=J_h^{-1}v,
+ \qquad d=J_h^{-1}D_\xi^2h[a,b].                    \tag{6.2}
+\]
+For standard Gaussian divergence define
+\[
+ \delta(a)=\xi\cdot a-\operatorname{div}a,           \tag{6.3}
+\]
+and for a matrix field $M$ define
+\[
+ \delta^2(M)=\xi^TM\xi-\Tr M
+ -2\xi\cdot\operatorname{div}M
+ +\operatorname{div}^2M.                             \tag{6.4}
+\]
+
+\paragraph{Theorem 6.1 (feedback-corrected score).}
+Assume that $J_h$ is pointwise invertible and that $h,u,v,F$, together with
+the fields in (6.2)--(6.4), lie in a Gaussian--Sobolev/integrability core on
+which both adjunctions below are valid.  Then, for every such smooth
+cylindrical scalar owner $F$,
+\[
+ \boxed{
+ \E D^2F(Z_h)[L_\pi u,L_\pi v]
+ =\E F(Z_h)\left[
+ \delta^2(\operatorname{sym}(a\otimes b))-\delta(d)\right].}   \tag{6.5}
+\]
+
+\paragraph{Proof.}
+Since $J_ha=u$ and $J_hb=v$,
+\[
+ D_\xi^2(F\circ Z_h)[a,b]
+ =D^2F(Z_h)[L_\pi u,L_\pi v]
+ +DF(Z_h)[L_\pi D^2h[a,b]].                         \tag{6.6}
+\]
+The definition of $d$ gives
+\[
+ D_\xi(F\circ Z_h)[d]
+ =DF(Z_h)[L_\pi D^2h[a,b]].                          \tag{6.7}
+\]
+Apply Gaussian adjunction twice to (6.6) and once to (6.7). \hfill$\square$
+
+For the replica kernel, apply (6.5) on the product Gaussian space.  For the
+trace use one copy.  Thus (3.7) remains exact after replacing $H^{(2)}$ and
+$H^{(1)}$ by the corresponding product- and single-space scores
+\[
+ \mathfrak S_{u,v}=\delta^2(\operatorname{sym}(a\otimes b))-\delta(d). \tag{6.8}
+\]
+The coefficient derivatives disappear, but the price is $J_h^{-1}$,
+derivatives of $a,b$ inside $\delta^2$, and the feedback connection $d$.
+After expansion, up to third Gaussian derivatives of $h$ and second
+Gaussian derivatives of $u,v$ can occur.
+These are not among the declared finite-energy graph coordinates.
+
+The connection term is not cosmetic.  On the exact triangular chart
+\[
+ Z_h(x,y)=(x,y+\lambda x^2),
+ \qquad u=v=e_1,                                      \tag{6.9}
+\]
+the owner $F(z)=z_2^2/2$ has physical Hessian zero.  The naked double
+divergence contributes $2\lambda^2$, and $-\delta(d)$ cancels exactly the
+same amount.  The primary and independent executables reconstruct this
+identity by separate exact polynomial algebras.
+
+\section*{7. Finite-energy score-transfer no-go and sufficient gate}
+
+Let $X,Y$ be independent standard Gaussians and take the bounded smooth
+strict-triangular feedback
+\[
+ h_N(X,Y)=(0,a\tanh(NX)),\qquad 0<a<1.               \tag{7.1}
+\]
+Its amplitude and every fixed terminal polynomial moment are uniformly
+bounded.  Nevertheless
+\[
+ J_{h_N}^{-1}e_1
+ =(1,-aN\operatorname{sech}^2(NX)),                  \tag{7.2}
+\]
+and for $N\ge1$,
+\[
+ \boxed{
+ \E\|J_{h_N}^{-1}e_1\|^2
+ \ge1+2a^2\varphi(1)\operatorname{sech}^4(1)N.}     \tag{7.3}
+\]
+Indeed restrict to $|X|\le N^{-1}$, where the Gaussian density is at least
+$\varphi(1)$ and $\operatorname{sech}^4(NX)$ is at least
+$\operatorname{sech}^4(1)$.  Thus bounded predictable source amplitude,
+triangularity, and determinant one do not control the score norm.  This is a
+method no-go for global source translation, not a counterexample to the
+physical fixed-law Hessian.
+
+The exact remaining sufficient estimate is now visible.  Since
+\[
+ q_6(Z;H,H)\ge{9\over10}\E\int|Z|^4|H|^2,           \tag{7.4}
+\]
+a production theorem would follow if the complete signed score-weighted raw
+owner satisfied
+\[
+ {1\over2}\sum\left(
+ \|\mathfrak S^{(2)}_{u,u}\|_2\|K\|_2
+ +\|\mathfrak S^{(1)}_{u,u}\|_2\|T\|_2\right)
+ \le a_0\|u\|^2+b_0\E\int|Z|^4|L_\pi u|^2           \tag{7.5}
+\]
+with
+\[
+ a_0<{9\over10},\qquad b_0<{9\over10}.              \tag{7.6}
+\]
+R-132 proves such a margin only on its standard-Gaussian scalar ray.  No
+complete production theorem presently supplies (7.5).
+
+\section*{8. Polynomial response support and the noncommuting square}
+
+R-083 proves that a stopped polynomial current is zero beyond its safe
+collar $C=3$.  The complete response contains two additional coordinates.
+Restricted to the three linear Pauli--Fierz rows, the owner bookkeeping is
+\[
+ q_{\rm poly}
+ =q_{\rm R083\ stop}+q_{\Sigma,+}
+ -{1\over2}D^2(\Delta\cV_{\rm fut}^L
+                 -\Delta\cF_{063}^{L,\rm ad}).       \tag{8.1}
+\]
+Here $q_{\Sigma,+}\succeq0$ is the common-heat Gram lift.  The last term is
+the exact R-125 future-variance/forest residual.  R-083 kills only the first
+term.
+
+\paragraph{Theorem 8.1 (conditional stopped-polynomial response zero).}
+Assume all of the following after same-root visit recombination.
+\begin{enumerate}
+\item Differentiation is at fixed law, cutoff, floor, heat, covariance owner,
+filtration, and output projections.
+\item The aggregate is a genuine R-083 predictable changing-current tower
+with the same moving endpoint and both predictable drifts.
+\item Endpoints, first and second physical variations, drift fields, and
+owned derivative probes through the stop $n$ are supported in $Q_n$.
+\item Common heat is centered, deterministic or strict-past/fresh-root
+independent, and spatially stationary.
+\item Output projections are exhaustive, deterministic, mutually orthogonal,
+commute with the physical shell cut, and are summed in contraction-closed
+clusters before shelling.
+\item The shellwise linear covariance/forest residual in (8.1) vanishes;
+equivalently one may impose the sufficient matching conditions
+$K_j=0$, $\mu=0$, $V=\Gamma_{\rm own}$ with no complement leakage.
+\end{enumerate}
+Then the complete paired polynomial-response symbol is supported in
+$Q_{n+2}$ and
+\[
+ \boxed{\Pi_mQ_{\rm poly,n}=0\qquad(m\ge n+4).}       \tag{8.2}
+\]
+Consequently the conditional polynomial far constant is zero for $C\ge4$.
+
+\paragraph{Proof.}
+R-083 gives the current tower and cancels the matched residual.  A polynomial
+current is quadratic, so it is supported in $Q_{n+1}$.  The paired response
+contracts two current/variation factors and is supported in $Q_{n+2}$.
+The safe projector convention places its threshold one further dyadic step
+away, giving $m\ge n+4$. \hfill$\square$
+
+The offsets are therefore
+\[
+ C_{\rm current}=3,
+ \qquad C_{\rm response}=4,
+ \qquad C_{\rm Cartan\ principal}=5.                 \tag{8.3}
+\]
+They must not be interchanged.
+
+Neither the root intertwiner nor the shellwise covariance/forest matching is
+known in production.  The exact common-heat fixture gives
+\[
+ q_{\Sigma,+}=2(c_0+c_1)={339\over4000P}>0,           \tag{8.4}
+\]
+even though averaging the heat before squaring gives zero.  Independently,
+R-083's adapted Hermite fixture gives
+\[
+ \E\cW=-8(c_0+c_1)\lambda^2
+ =-{339\over1000P}\lambda^2<0.                       \tag{8.5}
+\]
+Thus there is no literal full-owner-to-stopped-current equality.  Equations
+(8.4)--(8.5) are method boundaries, not a production FAR counterexample.
+
+\section*{9. Joint rational boundary layer and the $\gamma=4$ no-go}
+
+On the one-real Pauli slice let
+\[
+ u=se_1,\qquad v=pe_1,\qquad \chi=w=0,               \tag{9.1}
+\]
+and define
+\[
+ f_e(s)=s-{5\over9}{s^3\over s^2+e}.                 \tag{9.2}
+\]
+The complete diagonal six-row Gram is
+\[
+ G=4p^2\{c_0s^2+c_1f_e(s)^2\}.                      \tag{9.3}
+\]
+This is the joint row sum; no $JJ,JM,MJ,MM$ piece has been bounded
+separately.  After removing its polynomial and constant principal pieces,
+\[
+ R_e(s):=f_e(s)^2-{16\over81}s^2-{40\over81}e
+ =eH(s/\sqrt e),                                     \tag{9.4}
+\]
+where
+\[
+ \boxed{
+ H(z)=-{5\over27(1+z^2)}-{25\over81(1+z^2)^2}.}      \tag{9.5}
+\]
+Thus joint cancellation improves but does not remove the floor boundary
+layer.
+
+Take $\mathbb T=\mathbb R/(2\pi\mathbb Z)$ with
+\[
+ \widehat g(k)={1\over2\pi}\int_0^{2\pi}g(x)e^{-ikx}\,dx,
+ \qquad \|g\|_2^2=2\pi\sum_{k\in\mathbb Z}|\widehat g(k)|^2.       \tag{9.6}
+\]
+For $N=2^j$, set
+\[
+ s(x)=b\cos(Nx),\qquad p(x)=\sin(Nx).                \tag{9.7}
+\]
+Put $\delta=\sqrt e/b$, $\kappa=\operatorname{arsinh}\delta$, and
+$c=\sqrt{1+\delta^2}$.  For $n\ge2$, the exact coefficient at mode $2n$
+of $4c_1R_e(b\cos x)$ is
+\[
+ a_n=4c_1e(-1)^{n+1}e^{-2n\kappa}
+ \left\{{5\delta\over27c}
+ +{25\delta^2\over81c^2}\left(n+\coth(2\kappa)\right)\right\}.   \tag{9.8}
+\]
+Multiplication by $\sin^2x$ gives
+\[
+ g_n={1\over2}a_n-{1\over4}(a_{n-1}+a_{n+1}),         \tag{9.9}
+\]
+the full Gram coefficient at mode $2n$ once $n\ge3$, because every
+polynomial piece ends at mode four.  Adjacent $a_n$ have opposite signs, so
+$(-1)^{n+1}g_n>0$; every far even harmonic survives.  With $y=Nx$, the
+sharp region $|k|>16N$ is $n\ge9$, and Parseval gives the exact identity
+\[
+ N^{-8}\|\partial_x^4P_{|k|>16N}G\|_2^2
+ =4\pi\sum_{n\ge9}(2n)^8|g_n|^2.                    \tag{9.10}
+\]
+There are two zeros of $\cos y$ per carrier period, hence $2N$ zeros on
+$\mathbb T$; the change $y=Nx$ accounts for all of them.  Blowing up those
+zeros gives the exact line integral
+\[
+ \int_{\mathbb R}|H^{(4)}(z)|^2\,dz
+ ={2062375\pi\over23328}.                            \tag{9.11}
+\]
+It follows that
+\[
+ \boxed{
+ \lim_{b\to\infty}{e^{3/2}\over b^7}N^{-8}
+ \|\partial_x^4P_{|k|>16N}G\|_2^2
+ ={2062375\pi\over729}c_1^2.}                       \tag{9.12}
+\]
+The independent executable evaluates the exact series (9.10) at
+$e=1$, $b=20,50,100$; after division by the right asymptotic scale its
+ratios are $1.00438708256\ldots$, $1.00070316267\ldots$, and
+$1.00017576283\ldots$.
+
+Define the R-091-normalized sharp surrogate
+\[
+ \mathfrak B_4^\#
+ :=2^{-40}N^{-8}\|\partial_x^4P_{|k|>16N}G\|_2^2.   \tag{9.13}
+\]
+The factor $2^{-40}$ is the exact shift from $m-j$ to $m-j-5$ at
+$\gamma=4$.  A smooth Littlewood--Paley ledger is comparable to (9.13) with
+partition constants, but is not literally identical to it.
+
+For a generous comparison with the available once-owned sixth-amplitude
+majorant, use the sextic potential value on the state profile (not the
+terminal sextic Hessian in direction $p$):
+\[
+ {3\over20}\int_0^{2\pi}s^6\,dx={3\pi\over32}b^6.   \tag{9.14}
+\]
+Therefore
+\[
+ {2^{40}\mathfrak B_4^\#\over(3/20)\int s^6}
+ \sim {445473\over16000P^2}{b\over e^{3/2}}.         \tag{9.15}
+\]
+At the production $P=4+10^{-12}$, the derived coefficient is
+$1.740128906249\ldots$.  The ratio is unbounded even at fixed positive
+$e$.  More generally the boundary layer scales as
+\[
+ N^{-2\gamma}\||D|^\gamma P_{\rm far}G\|_2^2
+ \asymp b^{2\gamma-1}e^{5/2-\gamma}.                \tag{9.16}
+\]
+A sixth-amplitude budget can cover at most $\gamma\le7/2$; $\gamma=4$
+requires a seventh amplitude moment.
+
+This fires a precisely scoped method no-go.  It rejects deriving
+$\gamma=4$ from the complete Pauli--Fierz coefficient algebra plus the
+existing sixth-amplitude/$Z^6$ majorants.  It is not a literal counterexample
+to $\cB_4^{\rm out}$, which also contains the OU operator, probability-root
+difference, output multiplier, expectations, root sum, trace, forest, and
+the production conditional law.  A complete signed production cancellation
+remains possible.
+
+No Gaussian-smoothing conclusion is used here.  Convolution in the scalar
+state variable $s$ is not the production OU/common-heat operation, so it
+cannot be invoked as a repair without a separate owner-preserving theorem.
+
+\section*{10. Exact aggregate collar-to-gap theorem}
+
+R-131 writes the remaining source and sextic diagonals as $e,f>0$, the full
+cross norm as $a$, a low block as $D\succeq dI$, and its coupling norm as
+$k$.  Put
+\[
+ \sigma={k^2\over d}.                                \tag{10.1}
+\]
+Assume $\sigma<\min(e,f)$.  The exact two-channel lower margin is
+\[
+ m_2(a)={e+f-\sqrt{(e-f)^2+a^2}\over2}.              \tag{10.2}
+\]
+
+\paragraph{Theorem 10.1 (collar headroom criterion).}
+The strict low-coupled condition $k^2<dm_2(a)$ is equivalent to
+\[
+ \boxed{
+ a<a_*:=2\sqrt{(e-\sigma)(f-\sigma)}.}               \tag{10.3}
+\]
+
+\paragraph{Proof.}
+The condition is $m_2(a)>\sigma$.  Since
+$\sigma<\min(e,f)$, both sides remain positive while squaring.  The exact
+factorization is
+\[
+ (e+f-2\sigma)^2-(e-f)^2
+ =4(e-\sigma)(f-\sigma).                             \tag{10.4}
+\]
+This proves (10.3). \hfill$\square$
+
+Suppose a complete aggregate shell theorem supplies, for integer $C\ge5$,
+\[
+ a(C)\le a_0(C)+M2^{-\gamma(C-5)},
+ \qquad \gamma>0.                                    \tag{10.5}
+\]
+Then strict acceptance at collar $C$ follows from
+\[
+ a_0(C)+M2^{-\gamma(C-5)}<a_*.                       \tag{10.6}
+\]
+If $a_0(C)\le a_0<a_*$ uniformly and $h_*=a_*-a_0$, an integer collar
+satisfying
+\[
+ C>5+{1\over\gamma}\log_2{M\over h_*}               \tag{10.7}
+\]
+closes the strict matrix gap.  If $e,f,d,k$ vary with the collar, $a_*$ here
+must be replaced by a strictly positive collar-uniform lower bound.  For
+R-091's accepted $\gamma=7/12$,
+\[
+ C>5+{12\over7}\log_2{M\over h_*}.                  \tag{10.8}
+\]
+If the tail comes from
+\[
+ \cH_C(C)\le2^{-2\gamma(C-5)}\cB_\gamma^{\rm out}, \tag{10.9}
+\]
+then one may take $M=\sqrt{\cB_\gamma^{\rm out}}$ after the exact operator
+and owner conversion has been proved.
+
+This is a route correction, not closure.  R-091 does not prove the required
+one-use bound for $\cB_{7/12}^{\rm out}$, and $a_0(C)$ may depend adversely
+on the collar through the near/balanced band.  Moreover the aggregate tail
+cannot be relabelled as the old uniform $2^{-4C}$ or $2^{-2C}$ constants:
+\[
+ M2^{-7(C-5)/12}\,2^{4C}
+ =M2^{(41/12)C+35/12},                               \tag{10.10}
+\]
+\[
+ M2^{-7(C-5)/12}\,2^{2C}
+ =M2^{(17/12)C+35/12}.                               \tag{10.11}
+\]
+Both grow with $C$.  The new route is a fixed-collar aggregate acceptance
+test, not a proof of the old entrywise exponents.  Summing disjoint collar
+amplitudes costs the finite geometric factor
+\[
+ (1-2^{-7/12})^{-1}.                                 \tag{10.12}
+\]
+
+\section*{11. Proof-search evidence map}
+
+The append-only ledger records EXP-000504--EXP-000513.  The compact map is:
+
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.16\linewidth}p{0.44\linewidth}}
+\hline
+Route & Verdict & Exact boundary or next condition\\
+\hline
+Affine Gaussian score & advanced & Exact complete current--trace identity;
+raw signed rows and common heat retained.\\
+Score covariance cost & advanced conditionally & Requires Cameron--Martin
+range and the covariance pseudoinverse.\\
+Common/relative replicas & advanced & Common heat scores the synchronous
+part; relative variance remains by (5.7).\\
+Predictable score transfer & advanced on core & Exact double divergence and
+connection; finite-energy extension is unavailable.\\
+Global source translation & failed & Bounded tanh feedback has divergent
+inverse-Jacobian score cost.\\
+R-083 to physical response & corrected & Conditional zero uses $C=4$ and
+requires root intertwining plus covariance/forest matching.\\
+$\gamma=4$ coefficient route & failed & Joint rational boundary layer needs
+seventh amplitude moment.\\
+Aggregate $\gamma=7/12$ collar & advanced conditionally & Any positive
+gamma can fit a fixed strict headroom; one-use ledger and balanced collar
+remain open.\\
+Owner synthesis & inconclusive & Production score ledger, low data, matching
+energy, and absolute anchor remain missing.\\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{12. Devil's-advocate review}
+
+\paragraph{Objection 1: Theorem 3.1 is the production Hessian theorem.
+UPHELD.}
+It is exact only for an affine conditional Gaussian mean shift.  Theorem 6.1
+shows the additional inverse-Jacobian, divergence, and connection costs for
+general predictable feedback.
+
+\paragraph{Objection 2: Gaussian score transfer cancels the rational floor.
+UPHELD.}
+It removes derivatives of the floor coefficient.  The raw $\tau,\tau'$
+denominators and the signed rational/Cartan owner remain inside the score
+expectation.
+
+\paragraph{Objection 3: Triangularity controls the inverse Jacobian.
+UPHELD.}
+Triangularity gives determinant one and pointwise invertibility.  The bounded
+tanh family (7.1) makes the relevant inverse norm grow linearly in $N$.
+
+\paragraph{Objection 4: R-083 already gives zero polynomial physical
+response at $C=3$.  UPHELD.}
+It gives zero stopped current.  The paired response has one additional
+product support step, common-heat Gram, and the covariance/forest residual.
+The conditional response theorem uses $C=4$ and stronger hypotheses.
+
+\paragraph{Objection 5: The boundary-layer family disproves production.
+VALID WITH MITIGATION.}
+It disproves the deterministic/current-coefficient sixth-amplitude route to
+$\gamma=4$.  It does not instantiate every OU, trace, forest, conditional-law,
+and root owner in literal $\cB_4^{\rm out}$.
+
+\paragraph{Objection 6: $\gamma=7/12$ now closes the shell theorem.
+UPHELD.}
+Theorem 10.1 is conditional on a one-use bound for
+$\cB_{7/12}^{\rm out}$ and on collar-uniform non-tail headroom.  Both remain
+open.
+
+\paragraph{Objection 7: The old $C_{\rm far}$ may be reported after choosing
+one large collar.  UPHELD.}
+Equations (10.10)--(10.11) show that the corresponding effective old constants
+grow with the collar.  Only the aggregate fixed-collar residual is justified.
+
+\section*{13. Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-AFFINE-GAUSSIAN-SCORE-FEEDBACK-COLLAR-
+  BOUNDARY (R-133).
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement: The complete current--trace owner has an exact
+  derivative-free common-heat Hermite-score representation on affine
+  conditional Gaussian future blocks. General predictable charts have the
+  exact corrected score delta^2(sym(a tensor b))-delta(d), whose inverse-
+  Jacobian/divergence cost is not controlled by finite source energy. R-083
+  gives a conditional polynomial physical-response zero only at safe collar
+  C=4 with root-intertwining and covariance/forest matching. The complete
+  rational diagonal boundary layer rejects the existing sixth-amplitude
+  gamma=4 route. Any positive aggregate gamma, including the accepted 7/12,
+  is conditionally sufficient for a fixed strict collar headroom.
+Scope: fixed finite cutoff and positive floor; affine conditional Gaussian
+  blocks; smooth finite triangular cylindrical charts; conditional
+  polynomial response theorem; scalar sharp-Fourier rational surrogate;
+  exact deterministic three-channel collar algebra.
+Dependencies: A1; R-083, R-087, R-091, R-104, R-109, R-123, R-125,
+  R-128, R-129, R-130, R-131, and R-132.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_affine_gaussian_score_feedback_
+  collar_boundary_verify.py
+Expected output: R-133 integrated PASS; primary 42/42 and non-importing
+  standard-library independent 38/38 children PASS; PDF and generated-
+  surface gates PASS.
+Falsification gate: failure of either Hermite score identity or L2 cost;
+  common/relative decomposition; feedback connection identity; bounded-tanh
+  inverse-cost lower bound; support offsets 3/4/5; common-heat or adapted-
+  covariance fixture; rational remainder; H-four integral, exact periodic
+  far-series normalization, or asymptotic;
+  sixth-versus-seventh amplitude boundary; collar factorization; any pinned
+  authority, executable, JSON, exploration, negative/audit, PDF, manifest,
+  or public-surface assertion.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no complete production score-weighted owner,
+  one-use B_(7/12)^out, production shell constants, low matrix, matching
+  energy, strict gap, absolute anchor, either A13 gate, Nelson theorem,
+  interacting measure, or Sector-A closure is proved.
+Proof complete: false. Sector A closed: false.
+Next required action: avoid global source-translation estimates. Prove a
+  blockwise or direct fixed-law complete signed score/forest estimate that
+  controls the replica-relative and covariance/forest residuals with source
+  and sextic used once. Establish an aggregate one-use B_(7/12)^out bound,
+  control the near/balanced collar contribution, then apply the exact
+  threshold a<2 sqrt((e-k^2/d)(f-k^2/d)) and the R-129 anchor once.
+\end{verbatim}
+
+\paragraph{No-overclaim footer.}
+R-133 proves exact affine and predictable-core score identities, exact score
+costs, a conditional polynomial-response support theorem, a precisely scoped
+$\gamma=4$ coefficient-route no-go, and an exact positive-$\gamma$ aggregate
+collar criterion.  It does not prove a finite-energy production score bound,
+production shell constants, a strict augmented form, the absolute anchor,
+either A13 gate, $\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, an
+interacting measure, Sector A, or any T5--T7 promotion.
+
+\endgroup

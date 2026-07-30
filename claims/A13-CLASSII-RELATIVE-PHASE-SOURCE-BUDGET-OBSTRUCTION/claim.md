@@ -4570,3 +4570,41 @@ T5--T7 promotion remain open. Tier stays T4.
   `c_bal`, low `D/K/R0/S0`, matching energy, a strict augmented gap, the
   absolute anchor, both A13 gates, `OVERLAP_src`, Nelson, removals,
   interacting measure, and Sector A remain open; tier stays T4.
+- 2026-07-31: Registered
+  `A13-CLASSII-AFFINE-GAUSSIAN-SCORE-FEEDBACK-COLLAR-BOUNDARY`
+  (R-133). On a genuinely affine conditional Gaussian future block, the
+  complete common-heat current--trace response has an exact derivative-free
+  Hermite-score formula. Its one-copy score norm is
+  `D_Gamma=kappa(z,z)kappa(w,w)+kappa(z,w)^2`, and the paired score costs
+  exactly `4D_Gamma`; the outer one-half in the response owner is checked
+  independently. Common heat scores only the replica-synchronous direction,
+  leaving one half of the conditional tangent variance in the relative
+  replica coordinate. On a smooth finite predictable chart, the corrected
+  score is `delta^2(sym(a tensor b))-delta(d)`. The connection is
+  load-bearing, and a bounded strict-triangular tanh family has inverse-
+  Jacobian cost growing linearly with frequency, so current finite source
+  energy does not justify a global score transfer. R-083 gives a conditional
+  stopped-polynomial physical-response zero only at safe collar `C=4`, after
+  same-root tower intertwining and shellwise covariance/forest matching; the
+  common-heat Gram `339/(4000P)` and adapted defect
+  `-339 lambda^2/(1000P)` show why no unconditional identification holds.
+  The complete rational diagonal remainder has
+  `integral |H''''|^2=2062375*pi/23328` and fourth-order boundary amplitude
+  `b^7 e^(-3/2)`, so the existing sixth-amplitude route cannot prove
+  `gamma=4`. This is not a literal counterexample to the production
+  `B_4^out`. The exact low-coupled matrix threshold is
+  `a<2sqrt((e-k^2/d)(f-k^2/d))`; hence any proved aggregate positive-gamma
+  tail can fit a fixed strict headroom. For the accepted `gamma=7/12`, the
+  sufficient collar is `C>5+(12/7)log2(M/h)`, but neither the required
+  one-use tail nor collar-uniform near/balanced headroom is proved.
+  `EXP-000504--EXP-000513` record all reusable advances, corrections,
+  failures, exact boundaries, evidence, and revisit conditions. Two no-gos
+  and two scope audits are promoted to the negative registry. Primary
+  `42/42`, non-importing standard-library independent `38/38`, integrated
+  `167/167`, and aggregate `247/247` pass. The final eleven-page PDF passes
+  deterministic rebuild, form, zero-overfull, extraction, recursive
+  security, Poppler rendering, and direct all-page visual QA.
+  Production one-use, `C_mix/C_far/c_bal`, low `D/K/R0/S0`, matching energy,
+  a strict augmented gap, the absolute anchor, both A13 gates,
+  `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
+  open; tier stays T4.

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-133](#r-133) | Affine Gaussian score transfer, predictable-feedback boundary, polynomial-response collar, and positive-gamma aggregate criterion | Scoped T4 analytic/exact/executed advance and route correction. A genuinely affine conditional Gaussian block has an exact derivative-free common-heat Hermite-score representation for the complete current--trace owner, with one-copy cost `D_Gamma` and paired cost `4D_Gamma`; common heat scores only the synchronous replica direction. The exact predictable-chart score is `delta^2(sym(a tensor b))-delta(d)`, but bounded triangular tanh feedback makes its inverse-Jacobian cost diverge under the currently declared finite-energy data. R-083 gives a conditional polynomial physical-response zero only at safe collar `C=4` after root-tower and covariance/forest matching. The exact periodic rational boundary layer scales as `b^7 e^(-3/2)` at fourth order, so the existing sixth-amplitude `gamma=4` route fails without constituting a literal production `B_4^out` counterexample. The exact low-coupled acceptance threshold is `a<2sqrt((e-k^2/d)(f-k^2/d))`; any proved positive-gamma aggregate tail can fit fixed headroom, but the one-use `gamma=7/12` tail, collar-uniform non-tail headroom, production constants, low data, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-132](#r-132) | Common-heat mixed replicas, Gaussian-ray source--sextic margin, and the shell-exponent boundary | Scoped T4 analytic/exact/executed advance and route correction. The fixed-law physical response has an exact common-heat paired-replica formula, and the complete six-row mixed Pauli--Fierz contraction is `c0 JJ+c1(JJ-alpha tau' JM-alpha tau MJ+alpha^2 tau tau' MM)`, with every floor denominator confined to `tau,tau'`. A 64-atom heat plus terminal sextic gives the diagonal comparison constant `9/10240`, but exact origin cancellation shows that this does not control the square of the conditional mean. An equal two-point rational-ray law has Hessian `-10 c1/(81 delta)+O(1)`, rejecting law-free floor uniformity without constituting a production counterexample. Standard-Gaussian score transfer instead gives a floor-uniform once-owned scalar-ray margin `m_G=0.76532075819349...>3/4`. R-083 polynomial vanishing remains narrow and R-091's `gamma=7/12` amplitude tail is too slow for the mixed/far targets; a complete `gamma=4` one-use estimate or stronger joint signed cancellation remains open, together with production `C_mix/C_far/c_bal`, low constants, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure |
 | [R-131](#r-131) | Owner-conditioned physical response, mixed-Gram information, shell-decay boundary, and stratified transversality | Scoped T4 analytic/exact/executed advance and route pruning. Given an owner-complete finite physical form, orthogonal shell coanalysis gives the exact endpoint factorization `R^*F=H` and preserves the response norm, so it creates no decay. The deterministic current-square component has the floor-uniform `H2` form coefficient `46959/(2000P)`. Opposite rotations prove that diagonal sample Grams do not determine mixed conditional response, while dyadic cosine multipliers force prototype mixed/far constants to grow as `2^(2m-r-1)` and `2^(4m-r-1)`; frozen-`Q` constants also miss `DQ`. The exact two/three-channel acceptance margins are retained. The Xi radial coefficient Gram has an active-stratum lower bound proportional to `lambda^2`, but a phase-invisible fixture rejects full-tangent coercivity after only the common-phase quotient and the radial coefficient degenerates at the pure-singlet transition. Any fixed finite-doublet-second-moment heat law also loses uniform transversality on large singlet rays. Production owner-complete response construction, `C_mix/C_far/c_bal`, low constants, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-130](#r-130) | Post-recombined terminal coordinate, conormal Gram envelopes, sharp balanced bridge, and direct-low response boundary | Scoped T4 analytic/exact/executed advance. After exhaustive current recombination, the R-082 `Xi` coordinate admits an exact fixed-filtration Doob and matching once-owned trace recode, but not arbitrary legacy-root transport or matching energy without `mu=0` and `Sigma_c=Gamma`. The R-123 action owner has a canonical response-before-pullback construction on finite cylinders; exact kernel fixtures keep the `9I/10` source cost outside the physical pullback, while a uniform production response remains open. The fixed six-row Gram obeys pointwise constants `L6=1143/(250P)` and `H6=7083/(500P)`, with physical force `L6/2`, Hessian `H6`, and Taylor remainder `H6/2`. A scalar boundary layer proves that separated rational `D2C` is not floor-uniform. The sharp deterministic balanced bridge has constant one; the local Cartan diagnostic is `0.520915...` of the old-budget ceiling, but no global `c_bal` upper bound follows. A centered-heat direct-low candidate and complete-Gram PSD Schur theorem are proved, while historical R-079 low-owner equivalence, a strict gap, childwise refinement, production `C_mix/C_far/c_bal`, the absolute anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -151,6 +152,98 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-133"></a>
+### R-133 -- Affine Gaussian score transfer, predictable-feedback boundary, polynomial-response collar, and positive-gamma aggregate criterion
+
+**Result ID.**
+A13-CLASSII-AFFINE-GAUSSIAN-SCORE-FEEDBACK-COLLAR-BOUNDARY.
+
+**Exact affine score coordinate.**  After all same-root visits are recombined,
+fix the conditional past/root and keep heat common between two iid future
+replicas.  On a genuinely affine conditional Gaussian block
+`W=bar W+S xi`, a Cameron--Martin mean shift `z=Sa`, `w=Sb` moves both
+replicas while leaving the once-owned trace probe unshifted.  The complete
+current--trace response is exactly one half of the paired Hermite-score
+current kernel minus the single-copy Hermite-score trace kernel.  No
+`DC6` or `D2C6` remains, while the raw signed Pauli--Fierz rows, the
+`tau,tau'` denominators, common heat, trace, forest, visits, and exhaustive
+cluster sum remain inside the same owner.  With
+
+`D_Gamma(z,w)=kappa(z,z)kappa(w,w)+kappa(z,w)^2`,
+
+the one-copy score has squared norm `D_Gamma` and the paired score has squared
+norm `4D_Gamma`.  The covariance range and pseudoinverse are load-bearing.
+Common/relative replica decomposition shows that common heat scores only the
+synchronous direction; one half of conditional tangent variance remains in
+the relative coordinate.
+
+**Predictable feedback and stopped polynomial boundary.**  On a smooth
+finite triangular source chart, legal fixed-law directions have the exact
+corrected score
+
+`delta^2(sym(a tensor b))-delta(d)`,
+
+where `a=J_h^(-1)u`, `b=J_h^(-1)v`, and
+`d=J_h^(-1)D2h[a,b]`.  The connection term cancels an exact `2 lambda^2`
+defect.  A bounded strict-triangular tanh family has uniformly bounded source
+amplitude and fixed terminal moments but inverse-Jacobian cost growing at
+least linearly with frequency.  Thus the currently declared finite-energy
+data do not imply a global score-transfer estimate.  Separately, the R-083
+stopped current intertwines with the complete polynomial physical response
+only under a common root tower, common legal heat, exhaustive
+contraction-closed outputs, and shellwise covariance/forest matching.  Under
+those conditions the response is supported in `Q_(n+2)` and vanishes at the
+safe collar `C=4`, not the current-level collar `C=3`.  The exact common-heat
+Gram is `339/(4000P)` and the inherited adapted covariance defect is
+`-339 lambda^2/(1000P)`, so no unconditional identification is available.
+
+**Rational boundary and repaired collar route.**  On the actual periodic
+carrier `s=b cos(Nx)`, `p=sin(Nx)`, the complete rational remainder is
+
+`H(z)=-5/[27(1+z^2)]-25/[81(1+z^2)^2]`.
+
+Its exact fourth-jet integral is `2062375*pi/23328`.  Exact Fourier
+coefficients and the sharp far sum give
+
+`lim e^(3/2)b^(-7)N^(-8)||d_x^4 P_far G||_2^2`
+`=(2062375*pi/729)c1^2`.
+
+The independent standard-library audit evaluates the actual periodic far
+series at three amplitudes and converges to the same coefficient.  Since the
+available sextic value budget grows only as `b^6`, the existing
+sixth-amplitude route cannot prove `gamma=4`; this is a method no-go, not a
+literal counterexample to the production `B_4^out`.  For source/sextic
+diagonals `e,f>0`, low block `D>=dI`, coupling `k`, and cross norm `a`, strict
+three-channel acceptance is exactly
+
+`a<2sqrt((e-k^2/d)(f-k^2/d))`.
+
+Therefore any proved aggregate tail with positive exponent fits a fixed
+strict collar headroom.  At `gamma=7/12`, a sufficient integer collar obeys
+`C>5+(12/7)log2(M/h)`.  This does not recover the old entrywise mixed/far
+exponents: the effective relabelled constants grow with exponents `17/12`
+and `41/12`.  The production one-use tail and collar-uniform near/balanced
+headroom remain open.
+
+**Proven in.**  A13 proof note
+`classii-affine-gaussian-score-feedback-collar-boundary-260731-v1.0`;
+primary 42/42, non-importing standard-library independent 38/38, integrated
+167/167, and aggregate 247/247 audits pass.  The final eleven-page PDF passes
+deterministic rebuild, form, zero-overfull, extraction, recursive security,
+Poppler rendering, and direct all-page visual QA.
+
+**Reuse scope.**  Affine common-heat score transfer, exact score covariance
+costs, common/relative replica separation, the feedback connection identity,
+the finite-energy transfer no-go, the conditional `C=4` response support
+theorem, the sixth-amplitude `gamma=4` method boundary, and the exact
+positive-gamma aggregate collar threshold.
+
+**Tier:** T4 at fixed finite cutoff and positive floor.  The production
+score--forest one-use estimate, root/covariance/forest intertwiner,
+`B_(7/12)^out`, `C_mix/C_far/c_bal`, low `D/K/R0/S0`, matching energy, strict
+augmented gap, absolute anchor, both A13 gates, `OVERLAP_src`, Nelson,
+removals, the interacting measure, and Sector-A closure remain open.
 
 <a id="r-132"></a>
 ### R-132 -- Common-heat mixed replicas, Gaussian-ray source--sextic margin, and the shell-exponent boundary

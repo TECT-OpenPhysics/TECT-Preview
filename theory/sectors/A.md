@@ -45,6 +45,10 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-31-A13-R132-POLYNOMIAL-RESPONSE-INTERTWINER-SCOPE | stopped-current support is not the complete physical respons |  |
+| NG-2026-07-31-A13-PREDICTABLE-SCORE-FINITE-ENERGY-TRANSFER | affine Gaussian scores do not extend from triangularity and  |  |
+| NG-2026-07-31-A13-GAMMA-FOUR-SIXTH-AMPLITUDE-ROUTE | the joint rational boundary layer needs a seventh amplitude  |  |
+| AUDIT-2026-07-31-A13-R132-GAMMA-FOUR-SUCCESSOR-SCOPE | fixed-collar acceptance does not require the old uniform far |  |
 | NG-2026-07-31-A13-DIAGONAL-HEAT-SEXTIC-TO-MIXED-RESPONSE | diagonal heat and sextic do not imply mixed-response coerciv |  |
 | NG-2026-07-31-A13-LAW-FREE-MIXED-RESPONSE-FLOOR-UNIFORMITY | complete six-row algebra alone is not floor-uniform over arb |  |
 | NG-2026-07-31-A13-DIAGONAL-GRAM-TO-MIXED-CONDITIONAL-RESPONSE | diagonal sample Grams do not determine the mixed conditional |  |
