@@ -4771,3 +4771,33 @@ T5--T7 promotion remain open. Tier stays T4.
   intertwiner, positive graph margin, low/matching/gap/anchor data, both A13
   gates, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A
   remain open at T4.
+- 2026-07-31: Registered
+  `A13-CLASSII-PREDICTABLE-TRIANGULAR-MIXED-GRAM-SOURCE-GRAPH-FESHBACH-BOUNDARY`
+  (R-140) as a scoped analytic/exact/executed advance and quantitative route
+  boundary. A predictable owner-complete triangular response with norm
+  `Lambda_C` is paid by the terminal Cameron--Martin source innovations
+  exactly once. For `beta=7/5`, `s=2/3`, and `gamma=7/12`, the exact scalar
+  Hilbert--Schmidt sum has strict margins `7/60` and `1/12`, but the naive
+  positive current-only diagnostics give source-Hessian debts
+  `1.0555903880...` at `C=5` and `0.4651162138...` at `C=6`, both above the
+  conditional zero-low/tail headroom `0.1004343434...`. Thus summability is
+  not the obstruction, while the positive diagonal constant is too coarse.
+  The R-102 innovation product and covariance difference must remain with the
+  primitive trace, future variance, forest, and mean/low endpoint in one
+  signed mixed Gram. A common predictable stopping multiplier preserves the
+  R-139 telescope but supplies no bad-set packing. The exact source-metric
+  graph--Feshbach identity retains the semidefinite low-kernel cross and gives
+  the sharp norm-data Hessian gap
+  `e-Lambda_C^2-sigma-(a0+tau)^2/[4(f-sigma)]`; radial Taylor contributes
+  only half that gap to the action. An absolute terminal Sobolev envelope is
+  UV-infeasible already at zero control, while stationary-subtracted signature
+  polarization repairs the algebra without proving the missing production
+  norms. `EXP-000559--EXP-000567` preserve every advance, failed route,
+  parked route, fixture correction, boundary, and revisit condition. The
+  primary `65/65`, non-importing independent `69/69`, and integrated
+  `385/385` checks pass; the integrated result embeds all `134` child rows
+  exactly once and adds `251` integrator-only checks. The
+  production owner-complete mixed-Gram envelope, uniform `Lambda_C`, low
+  compatibility and constants, positive source-graph margin, matching,
+  absolute anchor, both A13 gates, `OVERLAP_src`, Nelson, removals,
+  interacting measure, and Sector A remain open at T4.

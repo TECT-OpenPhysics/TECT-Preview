@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-140](#r-140) | Predictable triangular mixed-Gram one-use theorem and source-graph Feshbach boundary | Scoped T4 analytic/exact/executed advance and quantitative boundary. An owner-complete predictable triangular response with norm `Lambda_C` is paid by the Cameron--Martin source exactly once; the registered exponents `beta=7/5`, `s=2/3`, `gamma=7/12` give strict margins `7/60` and `1/12` and an exact Hilbert--Schmidt scalar sum. However the naive positive current-only diagnostic gives source-Hessian debts `1.05559...` at `C=5` and `0.465116...` at `C=6`, both above the conditional zero-low/tail headroom `0.100434...`, so signed owner-complete mixed-Gram cancellation is still necessary. Predictable stopping preserves the endpoint telescope but supplies no bad-set packing. The exact source-metric graph--Feshbach identity retains the semidefinite low-kernel cross and yields the sharp norm-data gap `e-Lambda_C^2-sigma-(a0+tau)^2/[4(f-sigma)]`. An absolute terminal Sobolev envelope is UV-infeasible at zero control; stationary-subtracted signature polarization is the viable repair. No production mixed-Gram envelope, positive graph gap, matching/anchor data, A13 gate, Nelson theorem, or Sector-A closure is proved |
 | [R-139](#r-139) | Signed future endpoint telescope and production-graph robust-complement boundary | Scoped T4 analytic/exact/executed advance and method boundary. Summing every future insertion owner before applying the reveal weight gives the exact terminal-minus-prefix identity `sum_e omega_e=K^N-K^prefix`, so the insertion shell and the R-138 factor `2^(2 gamma(k-r))` disappear from the complete signed future branch. With `K=-E D0/2`, the desired lower bound is exactly one weighted upper bound for the terminal-minus-prefix trace excess. The complete owner requires the mean/low reserve once; R-063 forest is an alternate trace coordinate, not an extra reserve. A moving wedge mask leaves an internal variation sum, and tail decay alone cannot create strict shifted-Douglas headroom. The exact robust ambient condition and its weaker production-graph pullback are proved. R-139 proves no production weighted trace-excess estimate, positive graph margin, complete low/matching/gap/anchor data, A13 gate, Nelson theorem, or Sector-A closure |
 | [R-138](#r-138) | Scale-graded raw direct transfer, signed future last insertion, and reveal reanchoring boundary | Scoped T4 analytic/exact/executed advance and method boundary. Under an explicit `Q_r`-supported raw coefficient path, legal conditional/OU/projection commutations, and a complete-owner intertwiner, the R-087 paracomposition proof gives the raw direct six-row far estimate. The only nonlinear far row has exact coefficient `8(5/9)^2(243/(8000P))=3/(40P)`, including the R-084 outer OU factor two; at `rho=2/5`, `s=2/3`, the margins are `1/15`, `4/15`, and `16/15`. A bounded-`C^(2/5)` earlier high prefix proves that chronology alone does not give the spatial grade. For the future triangle, the complete R-079 current--trace energy has an exact signed fixed-chart last-insertion telescope. Bare R-135 reindexing fails because reveal reanchoring creates `2^(2 gamma(k-r))`, equal to `128` at `gamma=7/12`, gap six, and leaves `r+5<=m<k+5` outside insertion-FAR geometry. R-138 gives the sharp direct and gap-weighted future scalar charge criteria and the conditional finite-collar threshold, but proves no production owner/grade intertwiner, charge sum, signed near/forest lower form, positive headroom, A13 gate, Nelson theorem, or Sector-A closure |
 | [R-137](#r-137) | Complete raw direct-future Doob split and the spatial one-use boundary | Scoped T4 exact/executed index audit and route correction. Give each physical insertion shell its chronological rank `t(k)`. Applying a forward reveal to the complete R-136 raw endpoint telescope produces both the direct `t(k)<=r` triangle and the future-feedback `t(k)>r` triangle. The latter's six-row current is the exact R-079 two-channel connection; the two-root fixture has physical-prefix energy two, terminal energy five, and missing correction three. R-084 supplies an exact derivative-free projected Doob norm with constant one but no spatial decay. The existing R-131 bounded-multiplier fixture forces a sharp-projector diagnostic charge `q_r>=64` at gap six, and the exact Gram/Loewner criterion shows that bookkeeping direct sums do not orthogonalize physical `k` columns: coherent unit columns require diagonal trace at least `N^2`. R-137 reuses R-063, R-079, R-084, R-087, R-088, R-102, R-104, R-123, R-125, R-131, R-134, R-135, and R-136; it proves neither the production raw spatial estimate nor a once-owned `q_k` sum. Both A13 gates, headroom, low/matching/gap/anchor data, Nelson, and Sector A remain open |
@@ -158,6 +159,76 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-140"></a>
+### R-140 -- Predictable triangular mixed-Gram one-use theorem and source-graph Feshbach boundary
+
+**Result ID.**
+`A13-CLASSII-PREDICTABLE-TRIANGULAR-MIXED-GRAM-SOURCE-GRAPH-FESHBACH-BOUNDARY`.
+
+**Predictable triangular one-use theorem.**  For future predictable source
+blocks `h_k`, collect `x_r=(d_r h_k)_(k>r)`.  If the complete R-139 response
+factorizes before squaring as
+`d_r(J^N-J^prefix)_m=sum_(k>r) T_(r,m,k)d_r h_k` and the weighted triangular
+operator from `x_r` to outputs `m>=r+C` has essential norm at most
+`Lambda_C`, then its total weighted square is at most
+`Lambda_C^2 sum_k E||h_k-P_l h_k||^2`.  Martingale orthogonality is used once
+at each terminal source block.  No insertion reanchoring and no repeated
+source payment occurs.  More generally, the same conclusion holds for an
+owner-complete signed quadratic trace-excess form `Q_r^C<=Lambda_C^2 I`.
+
+**Exact triangular sum and quantitative boundary.**  For the normalized
+block envelope with source decay `beta`, output decay `s`, reveal weight
+`gamma`, and collar `C`, the scalar Hilbert--Schmidt sum is an exact three-
+region geometric series.  At `beta=7/5`, `s=2/3`, `gamma=7/12`, its strict
+margins are `7/60` and `1/12`, with squared majorants
+`H_5=56.2981540291704...` and `H_6=24.8061980695711...`.  Multiplication by
+the registered squared-energy coefficient `3/(40P)` gives source-Hessian
+debts `1.0555903880...` and `0.4651162138...`; even the latter exceeds the
+conditional zero-low/tail headroom `0.1004343434...`.  Thus exponent
+summability is available but the naive positive current-only constant is too
+large.  A smaller signed owner-complete mixed Gram is indispensable.
+
+**Whole-product and stopping firewalls.**  In the R-102 identity, the two
+predictable paraproducts can enter the triangular theorem, but
+`m(d_rH,d_rc)` and the product-covariance difference must stay with the
+primitive trace, future variance, forest, and mean/low endpoint in one signed
+form.  Paying this residual separately duplicates an owner.  A bounded common
+`F_(r-1)`-predictable multiplier commutes exactly with the R-139 endpoint
+telescope, including stopped indicators, but stopping creates no Carleson or
+BMO payment and is therefore parked.
+
+**Source-metric graph--Feshbach theorem.**  On the production graph
+`u -> (u,Vu,Lambda u)`, completing the semidefinite low square gives the exact
+two-channel form minus its reduced-solution square, plus the low mismatch
+square, minus an explicit kernel cross.  The kernel term vanishes only under
+graph-Douglas compatibility.  Optimizing a tail `||T||<=tau` gives exactly
+`tau||u||||Vu||`.  With `D>=dI`, `E>=eI`, `F>=fI`, `||K||<=k`,
+`||A0||<=a0`, and `sigma=k^2/d`, the sharp norm-data source gap is
+`e-Lambda_C^2-sigma-(a0+tau)^2/[4(f-sigma)]`.  Only the source diagonal is
+shifted; an aligned scalar graph and rank-one tail attain the criterion.
+This is Hessian slack, and radial Taylor contributes only its one-half to the
+action.
+
+**Absolute-envelope audit and repair.**  Exhaustive R-125 output coanalysis
+and R-067 stationary injection show that an absolute terminal Sobolev trace
+envelope grows at least linearly in cutoff, and a diagonal fixture grows like
+`2^(4J/3)` at regularity `2/3`.  The route discards the stationary signed
+energy--injection and trace--variance--forest cancellation.  Subtracting the
+common zero-control endpoint before signature polarization gives the exact
+repair `D_C<=2 sqrt(A_st A_sec)+A_ctl`, but the weighted stationary and secant
+production norms remain unproved.  The failure is recorded as an exploration
+under existing negative authority rather than a duplicate negative result.
+
+**Where proved.**  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`;
+the R-140 note, primary and non-importing independent executables, integrated
+verifier, manifest and JSON artefacts; and `EXP-000559--EXP-000567`.
+
+**Tier and boundary.**  T4 remains T4.  No cutoff/chart/refinement-uniform
+production mixed-Gram envelope, production `Lambda_C`, low compatibility,
+positive graph margin, complete matching or absolute anchor, A13 gate,
+`OVERLAP_src`, Nelson theorem, removal, interacting measure, or Sector-A
+closure is proved.
 
 <a id="r-139"></a>
 ### R-139 -- Signed future endpoint telescope and production-graph robust-complement boundary

@@ -1,0 +1,636 @@
+% =============================================================================
+% Title: Predictable triangular mixed-Gram one-use theorem and source-graph Feshbach boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-PREDICTABLE-TRIANGULAR-MIXED-GRAM-SOURCE-GRAPH-FESHBACH-BOUNDARY
+% Ledger: R-140
+% Version: v1.0 -- first issued 2026-07-31; this version issued 2026-07-31
+% Status: scoped T4 exact/conditional/executed advance; no A13 gate closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cY}{\mathcal Y}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+
+R-139 changed the future problem from a sum of separated positive insertion
+cells to one complete signed terminal-minus-prefix trace-excess secant.  This
+removes the R-138 reveal-to-insertion reanchoring factor, but it does not by
+itself estimate the resulting production response.  The present checkpoint
+isolates the smallest analytic theorem that would estimate it without using
+the Cameron--Martin source more than once.
+
+The first result is a predictable triangular coanalysis--Hardy theorem.  It
+combines every future source block before taking the output square and then
+uses martingale orthogonality once, at the source endpoint.  The production
+exponents already make the associated scalar triangular majorant
+Hilbert--Schmidt.  Consequently exponent arithmetic is no longer the active
+obstruction.  The missing production input is an owner-complete conditional
+mixed-Gram envelope for the actual R-102 whole-product response, including
+its product-covariance, trace, variance, forest, and mean/low coordinates
+inside one signed form.
+
+The second result is an exact source-metric graph--Feshbach identity.  It
+keeps the R-131 canonical source coordinate outside the physical pullback,
+retains the low-block kernel defect when the low diagonal is semidefinite,
+and gives a sharp scalar norm-data source-gap criterion.  It is deliberately
+weaker than R-139 ambient positivity: the desired gap is measured only in
+the source norm on the actual production graph.
+
+Everything here is finite-cutoff, fixed-floor, fixed-chart, and conditional
+on the displayed operator hypotheses.  No cutoff-, chart-, cluster-, visit-,
+control-, or refinement-uniform production mixed-Gram estimate is proved.
+The old number $K_0$ is used only as a conditional diagnostic and is not a
+proved bound for the production cross operator.  No complete low theorem,
+matching theorem, strict production gap, absolute anchor,
+$\mathrm{OVERLAP}_{\rm src}$, Nelson bound, removal, interacting measure,
+Sector-A closure, or tier promotion follows.
+
+\section*{2. Predictable future-source coordinate}
+
+Fix a finite filtration $(\F_r)_{r=\ell}^{N}$ and finite-dimensional Hilbert
+spaces $H_k$ and $Y_m$.  Let
+\[
+ h_k\in L^2(\F_{k-1};H_k),\qquad k>\ell,
+ \quad d_r=P_r-P_{r-1}.                              \tag{2.1}
+\]
+For every reveal $r$, collect all still-future source innovations in
+\[
+ x_r=(d_rh_k)_{k>r}\in\bigoplus_{k>r}H_k.            \tag{2.2}
+\]
+Let $T_{r,m,k}:H_k\to Y_m$ be $\F_{r-1}$-predictable.  The load-bearing
+production factorisation sought after R-139 is
+\[
+ d_r\bigl(J^N-J^{n(r)}\bigr)_m
+       =\sum_{k>r}T_{r,m,k}d_rh_k.                   \tag{2.3}
+\]
+The equality is an owner-complete statement: the response on its left must
+already contain the same-root recombination and the whole R-102 product
+residual.  Factorwise paraproduct identities are not substitutes for (2.3).
+
+For collar $C\ge5$ and weight exponent $\gamma>0$, define
+\[
+ (A_r^Cx)_m={\bf1}_{\{m\ge r+C\}}
+ 2^{\gamma(m-r-C)}\sum_{k>r}T_{r,m,k}x_k.            \tag{2.4}
+\]
+The norm is from the future-source direct sum to the output-shell direct sum.
+
+% evidence-anchor: theorem-3.1-predictable-triangular-one-use
+\section*{3. The predictable triangular one-use theorem}
+
+\textbf{Theorem 3.1.}  Assume (2.3) and
+\[
+ \operatorname*{ess\,sup}_{r,\omega}\|A_r^C(\omega)\|
+       \le\Lambda_C.                                \tag{3.1}
+\]
+Then
+\[
+\begin{split}
+ &\sum_r\sum_{m\ge r+C}2^{2\gamma(m-r-C)}
+ \E\left\|\sum_{k>r}T_{r,m,k}d_rh_k\right\|^2\\
+ &\hspace{18mm}\le \Lambda_C^2
+   \sum_r\sum_{k>r}\E\|d_rh_k\|^2\\
+ &\hspace{18mm}=\Lambda_C^2\sum_k
+   \E\|h_k-P_\ell h_k\|^2
+ \le\Lambda_C^2 X_{\rm src}.
+\end{split}                                           \tag{3.2}
+\]
+
+\textbf{Proof.}  Apply (3.1) pointwise to $x_r$, integrate, and sum over
+$r$.  Exchange the two finite source sums.  Since $h_k$ is
+$\F_{k-1}$-measurable, the increments $d_rh_k$, $\ell<r<k$, are orthogonal;
+therefore
+\[
+ \sum_{\ell<r<k}\E\|d_rh_k\|^2
+       =\E\|h_k-P_\ell h_k\|^2.                    \tag{3.3}
+\]
+This is the only Doob-square use.  No insertionwise positive square and no
+factor $2^{2\gamma(k-r)}$ is introduced. \hfill$\square$
+
+The same proof applies directly to the full signed trace-excess when it has
+an owner-complete quadratic representation
+\[
+ S_C=\sum_r\E\ip{x_r}{Q_r^Cx_r},\qquad
+             Q_r^C\preceq\Lambda_C^2\Id.            \tag{3.4}
+\]
+Then $S_C\le\Lambda_C^2X_{\rm src}$ and R-139 gives
+\[
+ \mathfrak I_{\mathrm{fut}}^C\ge-{\Lambda_C^2\over2}X_{\rm src}.
+                                                               \tag{3.5}
+\]
+Thus $\Lambda_C^2$ is an adverse source-Hessian debt, not a new positive
+reserve.  The radial Taylor action receives its one-half, not a second copy.
+
+\section*{4. Exact scalar triangular majorant}
+
+Put $a=k-r\ge1$, $d=m-r-C\ge0$, $\delta=C-5$, and suppose the block envelope
+has the production exponents
+\[
+ \|T_{r,m,k}\|\le C_*2^{-\beta a/2}
+ \begin{cases}
+ 2^{-s(d-a+\delta)},&d\ge a-\delta,\\
+ 1,&d<a-\delta.
+ \end{cases}                                         \tag{4.1}
+\]
+The harmless translation from $2^{-\beta k/2}$ to $2^{-\beta(k-r)/2}$ is
+part of the normalized source-block hypothesis; production must prove it,
+not infer it from this scalar calculation.  Set
+\[
+ q=2^{2\gamma},\quad u=2^{-(\beta-2\gamma)},\quad
+ v=2^{-\beta},\quad \rho=2^{-2(s-\gamma)},
+ \quad z=2^{-(\beta-2s)}.                            \tag{4.2}
+\]
+When $\beta/2>\gamma$ and $s>\gamma$, the squared Hilbert--Schmidt majorant
+$H_C=\|A_r^C\|_{\rm HS}^2/C_*^2$ is finite.  At $C=5$ it is exactly
+\[
+ \boxed{H_5=
+ {u/(1-u)-v/(1-v)\over q-1}
+ +{u\over(1-u)(1-\rho)}.}                            \tag{4.3}
+\]
+For $\delta\ge0$ the exact decomposition into near, newly-far low columns,
+and far high columns is
+\[
+\begin{split}
+ H_C={}&{q^{-\delta}u^{\delta+1}/(1-u)
+                 -v^{\delta+1}/(1-v)\over q-1}\\
+ &+{2^{-2s\delta}\over1-\rho}\sum_{a=1}^{\delta}z^a
+ +{2^{-2\gamma\delta}u^{\delta+1}
+                 \over(1-\rho)(1-u)}.
+\end{split}                                           \tag{4.4}
+\]
+The middle sum is zero for $\delta=0$.  Formula (4.4) follows by summing
+$d<a-\delta$, then $a\le\delta$, then $a>\delta$; it is not a fitted
+constant.
+
+For the registered values
+\[
+ \beta={7\over5},\qquad s={2\over3},\qquad
+ \gamma={7\over12},                                  \tag{4.5}
+\]
+the two strict margins are
+\[
+ {\beta\over2}-\gamma={7\over60},
+ \qquad s-\gamma={1\over12}.                         \tag{4.6}
+\]
+The executable evaluates $H_5=56.2981540\ldots$ and
+$H_6=24.806198\ldots$ independently from finite double sums.  If, only as a
+diagnostic, one sets $C_*=1$ and multiplies by the R-084/R-138 normalized
+six-row coefficient $3/(40P)$, $P=4+10^{-12}$, the action half-debts are
+approximately $0.5278$ at $C=5$ and $0.2326$ at $C=6$.  These numbers do not
+certify the production $C_*$, the whole mixed Gram, or either A13 gate.  In
+fact the corresponding source-Hessian debts are $1.05559\ldots$ and
+$0.465116\ldots$, both larger than the zero-low/tail conditional headroom
+$0.100434\ldots$ in Section 9.  Thus the naive positive current-only scalar
+majorant is summable but quantitatively too coarse even at $C=6$.  A smaller
+production mixed-Gram constant or signed trace/variance/forest cancellation
+is indispensable.
+
+\section*{5. The R-102 whole-product firewall}
+
+For bilinear multiplication $m(H,c)=Hc$, R-102 proves
+\[
+\begin{split}
+ d_rm(H,c)={}&m(d_rH,P_{r-1}c)+m(P_{r-1}H,d_rc)
+              +m(d_rH,d_rc)\\
+ &+\operatorname{Cov}_r^m(H,c)
+       -\operatorname{Cov}_{r-1}^m(H,c).
+\end{split}                                           \tag{5.1}
+\]
+The first two terms are predictable paraproducts and are compatible with
+Theorem 3.1 after their production block bounds are proved.  The last line
+together with $m(d_rH,d_rc)$ is a signed innovation.  It must remain with the
+primitive trace, R-125 future variance, R-063 forest coordinate, and
+predictable mean/low endpoint inside the single form $Q_r^C$ of (3.4).
+Paying it by a second independent $\Lambda^2$ estimate would duplicate an
+owner.  R-087 expectation-wise atom bounds do not yet imply this conditional
+owner-complete mixed-Gram statement.
+
+This identifies the exact production gap:
+\[
+ \boxed{\begin{aligned}
+ &\text{prove (2.3) or (3.4) for the complete R-102 product residual,}\\
+ &\text{uniformly in the declared production parameters.}
+ \end{aligned}}                                                     \tag{5.2}
+\]
+The strict exponent margins (4.6) show that the scalar summation of such an
+envelope is available; they do not construct the envelope.
+
+% evidence-anchor: theorem-6.1-predictable-stopping
+\section*{6. Predictable stopping preserves the endpoint telescope}
+
+Let $\widehat K_{r,m}^q$ be the R-139 conditional endpoint energy and let
+$\widehat\omega_{e,r,m}=\widehat K_{r,m}^e-\widehat K_{r,m}^{e-1}$.
+If $\sigma_{r,m}$ is bounded and $\F_{r-1}$-predictable, and the same
+multiplier is used for every future insertion $e>n(r)$, then
+\[
+ \sum_{e>n(r)}\E[\sigma_{r,m}\widehat\omega_{e,r,m}]
+ =\E[\sigma_{r,m}(\widehat K_{r,m}^N
+                        -\widehat K_{r,m}^{n(r)})].     \tag{6.1}
+\]
+In particular, a predictable stopped multiplier such as
+$\sigma_{r,m}={\bf1}_{\{\tau_m\ge r\}}$ is legal.  This does not contradict
+the R-139 wedge no-go, which concerns an insertion-dependent mask $\chi_e$.
+Stopping alone creates no good-cell payment; a source/sextic Carleson or BMO
+packing theorem for the stopped bad set is still absent.
+
+% evidence-anchor: theorem-7.1-source-graph-feshbach
+\section*{7. Exact source-metric graph--Feshbach theorem}
+
+Let $\cS,\cY,\cL$ be finite-dimensional Hilbert spaces.  Let $E,F$ be
+self-adjoint, $D\succeq0$, and let
+$A_0:\cY\to\cS$, $B:\cL\to\cS$, $C_0:\cL\to\cY$.  Write
+\[
+ M_2=\begin{pmatrix}E&-A_0/2\\-A_0^*/2&F\end{pmatrix},
+ \qquad K=\binom{B}{C_0}.                              \tag{7.1}
+\]
+For production tangents $V:\cS\to\cY$ and
+$\Lambda:\cS\to\cL$, put
+\[
+ Zu=(u,Vu),\qquad \widehat Gu=(u,Vu,\Lambda u).        \tag{7.2}
+\]
+Let $P_0$ project onto $\Ker D$, $P_+=\Id-P_0$, and let $W$ be the reduced
+solution
+\[
+ D^{1/2}W=P_+K^*Z.                                    \tag{7.3}
+\]
+Define
+\[
+ N=P_0K^*Z,\qquad \Delta=D^{1/2}\Lambda-W,
+ \qquad \Lambda_0=P_0\Lambda.                        \tag{7.4}
+\]
+
+\textbf{Theorem 7.1.}  For
+\[
+ \mathcal M(T)=
+ \begin{pmatrix}
+ E&-(A_0+T)/2&-B\\
+ -(A_0+T)^*/2&F&-C_0\\
+ -B^*&-C_0^*&D
+ \end{pmatrix},                                      \tag{7.5}
+\]
+one has the exact zero-tail identity
+\[
+\begin{split}
+ \ip{\widehat Gu}{\mathcal M(0)\widehat Gu}
+ ={}&\ip{Zu}{M_2Zu}-\|Wu\|^2+\|\Delta u\|^2\\
+ &-2\Rea\ip{Nu}{\Lambda_0u}.
+\end{split}                                           \tag{7.6}
+\]
+Consequently, for every $T:\cY\to\cS$ with $\|T\|\le\tau$,
+\[
+ \ip{\widehat Gu}{\mathcal M(T)\widehat Gu}
+       \ge\mu\|u\|^2                               \tag{7.7}
+\]
+for every $u$ if and only if the right side of (7.6) satisfies
+\[
+ \ip{Zu}{M_2Zu}-\|Wu\|^2+\|\Delta u\|^2
+ -2\Rea\ip{Nu}{\Lambda_0u}
+ \ge\tau\|u\|\|Vu\|+\mu\|u\|^2.                 \tag{7.8}
+\]
+The product term is sharp, attained pointwise by an aligned rank-one tail.
+
+\textbf{Proof.}  Expand the low cross as
+$-2\Rea\ip{K^*Zu}{\Lambda u}+\|D^{1/2}\Lambda u\|^2$.
+Complete the square on $P_+\cL$ and retain the $P_0\cL$ cross.  This gives
+(7.6).  The tail contribution is $-\Rea\ip{u}{TVu}$; optimizing it over the
+operator-norm ball gives exactly $-\tau\|u\|\|Vu\|$. \hfill$\square$
+
+If the graph-Douglas compatibility
+\[
+ K^*Z(\cS)\subseteq\Ran D^{1/2}                       \tag{7.9}
+\]
+holds, then $N=0$.  Without (7.9), deleting the last term of (7.6) is false.
+The executable includes a semidefinite fixture in which the true value is
+$-15$ while the formula with the kernel cross omitted gives $15$.
+
+\section*{8. Sharp scalar source-gap corollary}
+
+Assume now
+\[
+ D\succeq d\Id,\quad E\succeq e\Id,\quad F\succeq f\Id,
+ \quad\|K\|\le k,\quad\|A_0\|\le a_0,
+ \quad \sigma={k^2\over d}.                          \tag{8.1}
+\]
+If $f>\sigma$, then (7.8) is implied by
+\[
+ \boxed{\mu_{\rm src}
+ =e-\sigma-{(a_0+\tau)^2\over4(f-\sigma)}>0.}        \tag{8.2}
+\]
+Indeed, discard $\|\Delta u\|^2$ and use
+\[
+ (e-\sigma)\|u\|^2+(f-\sigma)\|Vu\|^2
+       -(a_0+\tau)\|u\|\|Vu\|.                    \tag{8.3}
+\]
+Minimization in $\|Vu\|/\|u\|$ gives (8.2).  Equivalently,
+\[
+ a_0+\tau<2\sqrt{(e-\sigma)(f-\sigma)}.              \tag{8.4}
+\]
+For a prescribed source gap $\mu$, only the source diagonal is shifted:
+\[
+ a_0+\tau\le2\sqrt{(e-\sigma-\mu)(f-\sigma)}.       \tag{8.5}
+\]
+Shifting $F$ or $D$ by $\mu$ would demand the stronger ambient gap and is
+not equivalent to (7.7).  The elementary identity
+\[
+ 4x^2+9y^2-6xy=3x^2+(3y-x)^2                       \tag{8.6}
+\]
+has source gap $3$ but fails after subtracting $3$ from both diagonals.
+
+Within the norm-data class, (8.2) is sharp.  Take scalar aligned $A_0,T$,
+choose $K$ and $D$ so the Schur loss is $\sigma$, put
+\[
+ Vu={a_0+\tau\over2(f-\sigma)}u,                    \tag{8.7}
+\]
+and choose $\Lambda u$ as the low Schur minimizer.  Equality is attained;
+at $\mu_{\rm src}=0$ there is a kernel.  This is a sharpness fixture, not a
+counterexample to a production estimate with stronger structural data.
+
+% evidence-anchor: section-9-derived-headroom-diagnostic
+\section*{9. Once-owned debt composition and diagnostics}
+
+R-131 pins the source Hessian as
+\[
+ D^2\mathcal A_J(h)={9\over10}\Id
+ +L_{\rm pred}^*(Q_{\rm comp}+Q_6)L_{\rm pred}.       \tag{9.1}
+\]
+Thus a source-metric estimate is the correct weaker target.  Reusing the
+R-128 half-debt diagnostic, let
+\[
+ P=4+10^{-12},\quad
+ \eta_h={9\over20}-{3\over125P}-{1\over880},
+ \quad\zeta_h={27\over200},                           \tag{9.2}
+\]
+\[
+ e=2\eta_h,\qquad f=2\zeta_h,\qquad
+ K_0=4\sqrt{\left({197\over440}-{3\over125P}\right){3\over25}}.
+                                                               \tag{9.3}
+\]
+Here $e,f$ are valid only after the declared diagonal debts have already
+been absorbed.  Also $a_0=K_0$ below is a conditional test input, not a
+proved production inequality.
+
+At $\sigma=\tau=0$, (8.2) gives
+\[
+ \mu_{\rm src}=0.1004343434\ldots .                  \tag{9.4}
+\]
+The zero-tail source-gap equation has its first low-loss root at
+$\sigma=0.0239601163\ldots$.  Taking half that diagnostic loss and the test
+tail $\tau=0.02$ leaves
+\[
+ \mu_{\rm src}=0.0159126895\ldots.                   \tag{9.5}
+\]
+These are headroom diagnostics only.  The production values of
+$a_0,d,k,\tau$ and all residual diagonal forms remain unproved.
+
+Combining Theorem 3.1 with (8.2) uses the future debt exactly once:
+\[
+ \boxed{\mu_{\rm src}(C)=e-\Lambda_C^2-\sigma
+       -{(a_0+\tau_C)^2\over4(f-\sigma)}.}            \tag{9.6}
+\]
+Thus the zero-low/tail diagnostic would require
+$\Lambda_C^2<0.1004343434\ldots$, whereas the illustrative loss/tail point
+would require $\Lambda_C^2<0.0159126895\ldots$.  Neither inequality is
+currently a production theorem.  Moreover, $\mu_{\rm src}$ is Hessian slack;
+radial Taylor contributes only $\mu_{\rm src}\|h\|^2/2$ to the action.  The
+additive R-123 constant is separate anchor bookkeeping and never enters
+(7.6)--(9.6).
+
+\section*{10. Ownership, hostile fixtures, and rejected shortcuts}
+
+The verification package checks all of the following independently.
+\begin{enumerate}
+\item $R^*F=F^*R=H$ for a self-adjoint endpoint owner, while adding both
+directions gives $2H$.  The Hessian convention takes the half-symmetrization
+and owns $H$ once.
+\item A positive-$D$ rational fixture gives the same direct and completed-
+square value, $62$.
+\item A semidefinite-$D$ fixture gives $-15$ only when the kernel cross in
+(7.6) is retained.
+\item The source-only shift fixture (8.6) rejects an accidental ambient
+shift.
+\item An aligned rank-one tail attains the product in (7.8), and the scalar
+Schur minimizer attains (8.2).
+\item Finite triangular sums converge to (4.3)--(4.4), so the strict margins
+in (4.6), rather than rounded decimal output, drive convergence.
+\end{enumerate}
+
+Several routes are therefore parked rather than silently forgotten.
+Insertion-dependent wedge stopping still leaves the R-139 internal variation
+sum.  A predictable stopping time preserves the telescope but supplies no
+bad-set packing.  Estimating only the two predictable terms in (5.1) deletes
+the product covariance.  Estimating that residual separately pays the same
+owner twice.  Shifting all graph channels by a source gap proves a different,
+stronger statement.  Finally, an absolute diagonal spatial envelope may
+discard the stationary current--trace cancellation; it cannot replace the
+signed complete mixed Gram unless its ultraviolet source sum is proved.
+
+\subsection*{10.1 Absolute-envelope hostile audit and signed repair}
+
+The last warning can be made exact.  Exhaustive R-125 output coanalysis and
+the R-067 injection convention give, at zero control,
+\[
+ \sum_m\E\Theta^0_{r,m}=2\E\mathcal I_r^0.            \tag{10.1}
+\]
+R-067 proves a scale-zero shell injection of order one whose terminal raw
+energy is cancelled only in the signed stationary energy--injection packet.
+Therefore an absolute terminal envelope satisfies
+\[
+ Q_{\sigma,J}^{\Theta,0}
+ =\sum_{r,m}2^{2\sigma m}\E\Theta^0_{r,m}
+ \ge2\sum_{r=r_0}^{J}\E\mathcal I_r^0
+ \gtrsim J-r_0+1.                                    \tag{10.2}
+\]
+In the scale-local diagonal fixture $m=r+C+3$ with
+$\Theta_{r,m}=\theta_0>0$, it grows exactly as
+\[
+ Q_{\sigma,J}^{\Theta,0}
+ =\theta_0\,2^{2\sigma(C+3)}
+ {2^{2\sigma(J+1)}-1\over2^{2\sigma}-1}.             \tag{10.3}
+\]
+At $\sigma=2/3$ this is exponential in $J$.  Thus the previously considered
+absolute terminal $H^\sigma$ envelope is production-infeasible unless a new
+subtraction is retained.  This is covered by existing stationary/absolute-
+value boundaries and does not warrant a duplicate negative-result ID.
+
+There is a valid signed repair.  On a common heat/fresh-trace lift write
+$Z^q=(U^q,\Phi^q)$ with $\|U^q\|^2=\Theta^q$ and
+$S(U,V)=(U,-V)$.  For the common zero-control endpoint $Z^{\rm st}$ put
+$\widetilde Z^q=Z^q-Z^{\rm st}$.  The secant polarizes exactly as
+\[
+\begin{split}
+ \mathcal D_C={}&2\Rea\ip{Z^{\rm st}}
+  {S(\widetilde Z^*-\widetilde Z^p)}_w\\
+ &+\Rea\ip{\widetilde Z^*+\widetilde Z^p}
+  {S(\widetilde Z^*-\widetilde Z^p)}_w.
+\end{split}                                           \tag{10.4}
+\]
+For arbitrary $\rho_{r,m}>0$, define
+\[
+ A_{\rm st}=\sum w\rho^{-1}\E\|Z^{\rm st}\|^2,
+ \quad A_{\rm sec}=\sum w\rho\E
+       \|\widetilde Z^*-\widetilde Z^p\|^2,          \tag{10.5}
+\]
+\[
+ A_{\rm ctl}=\sum w\E(\|\widetilde Z^*\|^2
+                         +\|\widetilde Z^p\|^2).
+\]
+Cauchy--Schwarz and the parallelogram identity give
+\[
+ \boxed{\mathcal D_C\le2\sqrt{A_{\rm st}A_{\rm sec}}
+                         +A_{\rm ctl}}
+ \le\varepsilon A_{\rm sec}+\varepsilon^{-1}A_{\rm st}
+                         +A_{\rm ctl}.                \tag{10.6}
+\]
+Choosing $\rho_{r,m}=2^{2\sigma r}$ makes a scale-zero stationary shell
+summable, while the positive regularity weight falls on a secant that
+vanishes at zero control.  However, production bounds for the weighted
+stationary FAR norm and the control secant remain open, so (10.6) is a route
+repair rather than a closure.
+
+The hostile audit also corrects an earlier abstract fixture: taking
+$P_r=P_{r-1}=I$ forces the centered reveal innovation to vanish and is not a
+nontrivial R-139 owner.  A filtration-consistent algebra fixture uses
+independent Rademacher variables $\xi_r$, $m_r=r+C+3$,
+$J^{p(r)}=\xi_re_{m_r}$, $J^*=0$, and $\Theta=0$.  Then $b=0$,
+$Y=\xi_re_{m_r}$, $D_0^{p(r)}=-1$, $D_0^*=0$, and the weighted sum is
+$M2^{7/2}$.  It deliberately omits common-terminal contraction and therefore
+tests the algebra only; it is not a production counterexample.
+
+\section*{11. What has advanced and what remains open}
+
+The durable advance is a non-circular division of labour.
+\begin{enumerate}
+\item Production analysis must prove one predictable owner-complete
+mixed-Gram operator bound $Q_r^C\preceq\Lambda_C^2\Id$, including the R-102
+whole-product residual and all trace/variance/forest/mean-low owners once.
+\item The scalar shell sum is then automatic from (4.4); its registered
+exponents have strict margins.
+\item The resulting $\Lambda_C^2$ is subtracted once from the source diagonal
+in (9.6).
+\item Low and tail data enter the exact graph--Feshbach identity (7.6) and the
+source-gap test (7.8), not a duplicated ambient budget.
+\item Only after a positive production value of (9.6) is certified may the
+R-136 radial Taylor route address matching and the absolute anchor.
+\end{enumerate}
+
+The smallest successor remains inside A13 and T-050: prove the production
+conditional mixed-Gram envelope (5.2), with explicit uniform $C_*$ and
+low-kernel compatibility, then evaluate (9.6).  If it fails, the exact
+failure must identify which signed residual or graph parameter saturates the
+budget.  No new claim card is warranted.
+
+\section*{12. Devil's-advocate audit}
+
+\begin{enumerate}
+\item \textbf{Objection:} Hilbert--Schmidt summability proves the production
+operator bound.  \textbf{UPHELD as an overclaim.}  It sums an assumed block
+envelope and does not construct that envelope.
+\item \textbf{Objection:} R-087 already supplies the required conditional
+mixed Gram.  \textbf{UPHELD as an overclaim.}  Its expectation-wise atoms do
+not retain the whole R-102 product covariance inside one predictable form.
+\item \textbf{Objection:} predictability is cosmetic.  \textbf{DISMISSED.}
+It is the firewall preventing an anticipative response from adapting to
+$d_rh_k$ before the one-use source orthogonality is applied.
+\item \textbf{Objection:} predictable stopping closes bad cells.
+\textbf{UPHELD as an overclaim.}  Equation (6.1) preserves cancellation but
+proves no Carleson/BMO packing.
+\item \textbf{Objection:} the low kernel term can be omitted by continuity.
+\textbf{DISMISSED.}  The exact semidefinite fixture changes the value from
+$-15$ to $15$ if it is deleted.
+\item \textbf{Objection:} a source gap shifts every diagonal.
+\textbf{DISMISSED.}  Equation (8.6) is a counterfixture; only $E$ is shifted
+for the source-norm statement.
+\item \textbf{Objection:} $K_0$ is the production $a_0$.
+\textbf{UPHELD as an overclaim.}  It is an old acceptance ceiling used only
+to measure conditional headroom.
+\item \textbf{Objection:} positive $\mu_{\rm src}$ proves a Nelson/action
+margin.  \textbf{UPHELD as an overclaim.}  Radial integration halves the
+Hessian slack, while matching and the absolute anchor remain open.
+\item \textbf{Objection:} the R-123 additive constant can enlarge Feshbach
+headroom.  \textbf{DISMISSED.}  An additive anchor constant does not alter a
+homogeneous quadratic operator inequality.
+\item \textbf{Objection:} the two strict exponent margins close T-050.
+\textbf{UPHELD as an overclaim.}  The production mixed-Gram constant and both
+A13 gates are still missing.
+\end{enumerate}
+
+\section*{13. Result footer and reproduction}
+
+Primary certificate:
+{\scriptsize
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe `
+  (Get-Item codes/foundations/*mixed_gram_source_graph_feshbach_boundary.py)
+\end{verbatim}
+}
+
+Independent certificate:
+{\scriptsize
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe `
+  (Get-Item codes/foundations/*mixed_gram*boundary_independent.py)
+\end{verbatim}
+}
+
+Integrated verification:
+{\scriptsize
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe `
+  (Get-Item codes/foundations/*mixed_gram*boundary_verify.py)
+\end{verbatim}
+}
+
+Result ID:
+\texttt{A13-CLASSII-PREDICTABLE-TRIANGULAR-MIXED-GRAM-SOURCE-GRAPH-}
+\texttt{FESHBACH-BOUNDARY}.  Ledger ID: R-140.  Tier remains T4.
+
+\textbf{No-overclaim statement.}  R-140 proves a conditional one-use
+triangular theorem, exact scalar summability, a predictable stopping
+identity, and exact source-graph Feshbach identities and sharp norm-data
+criteria.  It does not prove the production mixed-Gram hypothesis, any
+uniform production constant, a positive production graph gap, matching,
+anchor, either A13 gate, Nelson, removal, interacting measure, or Sector-A
+closure.
+
+\begin{verbatim}
+Result ID: A13-CLASSII-PREDICTABLE-TRIANGULAR-MIXED-GRAM-
+  SOURCE-GRAPH-FESHBACH-BOUNDARY.
+Ledger ID: R-140.
+Precise statement: Theorems 3.1 and 7.1; exact scalar sums (4.3)-(4.6);
+  predictable stopping identity (6.1); source-gap criterion (8.2);
+  once-debited formula (9.6); stationary subtraction (10.4)-(10.6).
+Scope: fixed finite cutoff and positive floor; fixed temporally faithful
+  chart; finite-dimensional Hilbert spaces; displayed predictability,
+  factorization, operator-envelope, graph, and low-range hypotheses only.
+Dependencies: A1; R-063, R-067, R-079, R-087, R-099, R-102, R-103,
+  R-104, R-123, R-125, R-128, R-129, R-131, R-133, R-136, R-139.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_predictable_triangular_mixed_gram_
+  source_graph_feshbach_boundary_verify.py
+Expected output: R-140 integrated PASS; primary 65/65, independent
+  69/69, note/PDF, manifest, exploration, authority, and public gates pass.
+Falsification gate: any failed one-use identity, scalar geometric sum,
+  normalization or headroom comparison, stopping telescope, positive or
+  semidefinite Feshbach fixture, source-only shift, sharpness fixture,
+  stationary subtraction, authority/hash, PDF, or public-surface check.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no production owner-complete mixed-Gram bound,
+  uniform Lambda_C, low compatibility, positive source-graph margin,
+  matching, absolute anchor, A13 gate, OVERLAP_src, Nelson estimate,
+  removal, interacting measure, Sector-A closure, or T5-T7 claim follows.
+Next required action: prove or falsify the complete R-102 predictable
+  mixed-Gram envelope and production low compatibility, then insert only
+  proved constants in (9.6) before matching, radial Taylor, and the anchor.
+\end{verbatim}
+
+\endgroup

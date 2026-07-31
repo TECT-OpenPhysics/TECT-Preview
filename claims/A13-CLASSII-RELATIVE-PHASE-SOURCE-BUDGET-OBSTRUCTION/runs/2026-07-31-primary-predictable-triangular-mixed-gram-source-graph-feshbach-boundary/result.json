@@ -1,0 +1,565 @@
+{
+  "assertions": {
+    "failed": 0,
+    "passed": 65,
+    "rows": [
+      {
+        "actual": "7/5",
+        "expected": "7/5",
+        "group": "hs",
+        "name": "beta derived from alpha",
+        "status": "PASS"
+      },
+      {
+        "actual": "7/60",
+        "expected": "7/60",
+        "group": "hs",
+        "name": "causal Schur margin",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/12",
+        "expected": "1/12",
+        "group": "hs",
+        "name": "output Schur margin",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(7, 60), Fraction(1, 12))",
+        "expected": "positive",
+        "group": "hs",
+        "name": "both Schur margins strict",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.0",
+        "expected": "<=1e-12",
+        "group": "hs",
+        "name": "C5 general and special closed forms agree",
+        "status": "PASS"
+      },
+      {
+        "actual": "56.2981540291704",
+        "expected": ">0",
+        "group": "hs",
+        "name": "C5 closed form positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "24.806198069571057",
+        "expected": ">0",
+        "group": "hs",
+        "name": "C6 closed form positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "(24.806198069571057, 56.2981540291704)",
+        "expected": "C6<C5",
+        "group": "hs",
+        "name": "collar six improves raw HS square",
+        "status": "PASS"
+      },
+      {
+        "actual": "56.2981540291704",
+        "expected": "near+far_low+far_high",
+        "group": "hs",
+        "name": "C5 near/far decomposition",
+        "status": "PASS"
+      },
+      {
+        "actual": "24.806198069571057",
+        "expected": "near+far_low+far_high",
+        "group": "hs",
+        "name": "C6 near/far decomposition",
+        "status": "PASS"
+      },
+      {
+        "actual": "[29.77088877920247, 47.89587528458852, 55.67295551594507, 56.29554038581016, 56.298153988973695]",
+        "expected": "strictly increasing",
+        "group": "hs",
+        "name": "C5 finite truncations monotone",
+        "status": "PASS"
+      },
+      {
+        "actual": "[13.882568037336808, 21.414850705044692, 24.55691473295737, 24.80516034584449, 24.806198053618896]",
+        "expected": "strictly increasing",
+        "group": "hs",
+        "name": "C6 finite truncations monotone",
+        "status": "PASS"
+      },
+      {
+        "actual": "4.019670285515531e-08",
+        "expected": ">0",
+        "group": "hs",
+        "name": "C5 finite truncations stay below closed form",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.595216048144721e-08",
+        "expected": ">0",
+        "group": "hs",
+        "name": "C6 finite truncations stay below closed form",
+        "status": "PASS"
+      },
+      {
+        "actual": "4.019670285515531e-08",
+        "expected": "<=1e-07",
+        "group": "hs",
+        "name": "C5 truncation converges to closed form",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.595216048144721e-08",
+        "expected": "<=1e-07",
+        "group": "hs",
+        "name": "C6 truncation converges to closed form",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "martingale",
+        "name": "h2 Doob Pythagoras",
+        "status": "PASS"
+      },
+      {
+        "actual": "13",
+        "expected": "13",
+        "group": "martingale",
+        "name": "h3 Doob Pythagoras",
+        "status": "PASS"
+      },
+      {
+        "actual": "6",
+        "expected": "6",
+        "group": "martingale",
+        "name": "h4 Doob Pythagoras",
+        "status": "PASS"
+      },
+      {
+        "actual": "{2: Fraction(1, 1), 3: Fraction(13, 1), 4: Fraction(6, 1)}",
+        "expected": "{2: Fraction(1, 1), 3: Fraction(13, 1), 4: Fraction(6, 1)}",
+        "group": "martingale",
+        "name": "fixture variances",
+        "status": "PASS"
+      },
+      {
+        "actual": "20",
+        "expected": "20",
+        "group": "martingale",
+        "name": "one-use innovation total",
+        "status": "PASS"
+      },
+      {
+        "actual": "34",
+        "expected": "34",
+        "group": "martingale",
+        "name": "source L2 total",
+        "status": "PASS"
+      },
+      {
+        "actual": "20",
+        "expected": "<=34",
+        "group": "martingale",
+        "name": "one-use source domination",
+        "status": "PASS"
+      },
+      {
+        "actual": "5",
+        "expected": "5",
+        "group": "martingale",
+        "name": "contracted direct-sum response",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(0, 1), Fraction(1, 1)]",
+        "expected": "[Fraction(0, 1), Fraction(1, 1)]",
+        "group": "stopping",
+        "name": "survival mask is nonconstant",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/2",
+        "expected": "3/2",
+        "group": "stopping",
+        "name": "predictable stopped owner telescope",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/2",
+        "expected": "3/2",
+        "group": "stopping",
+        "name": "stopped endpoint exact value",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "3",
+        "group": "stopping",
+        "name": "stopped and complement recover complete endpoint",
+        "status": "PASS"
+      },
+      {
+        "actual": "17",
+        "expected": "17",
+        "group": "feshbach_spd",
+        "name": "M2 fixture form",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(1, 1), Fraction(2, 1)]",
+        "expected": "[Fraction(1, 1), Fraction(2, 1)]",
+        "group": "feshbach_spd",
+        "name": "Douglas reduced solution",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(5, 1), Fraction(-5, 1)]",
+        "expected": "[Fraction(5, 1), Fraction(-5, 1)]",
+        "group": "feshbach_spd",
+        "name": "completed low displacement",
+        "status": "PASS"
+      },
+      {
+        "actual": "62",
+        "expected": "62",
+        "group": "feshbach_spd",
+        "name": "direct graph form",
+        "status": "PASS"
+      },
+      {
+        "actual": "62",
+        "expected": "62",
+        "group": "feshbach_spd",
+        "name": "SPD Feshbach identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "7",
+        "expected": "7",
+        "group": "feshbach_semidefinite",
+        "name": "semidefinite M2 fixture form",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(0, 1), Fraction(3, 1)]",
+        "expected": "[Fraction(0, 1), Fraction(3, 1)]",
+        "group": "feshbach_semidefinite",
+        "name": "kernel range defect exposed",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(1, 1), Fraction(0, 1)]",
+        "expected": "[Fraction(1, 1), Fraction(0, 1)]",
+        "group": "feshbach_semidefinite",
+        "name": "semidefinite reduced solution",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(3, 1), Fraction(0, 1)]",
+        "expected": "[Fraction(3, 1), Fraction(0, 1)]",
+        "group": "feshbach_semidefinite",
+        "name": "semidefinite completed displacement",
+        "status": "PASS"
+      },
+      {
+        "actual": "-30",
+        "expected": "-30",
+        "group": "feshbach_semidefinite",
+        "name": "kernel defect exact",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(15, 1), Fraction(-15, 1))",
+        "expected": "(Fraction(15, 1), Fraction(-15, 1))",
+        "group": "feshbach_semidefinite",
+        "name": "omitting kernel defect flips fixture sign",
+        "status": "PASS"
+      },
+      {
+        "actual": "-15",
+        "expected": "-15",
+        "group": "feshbach_semidefinite",
+        "name": "semidefinite Feshbach identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(37, 1), Fraction(37, 1))",
+        "expected": "37",
+        "group": "source_shift",
+        "name": "source completion identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "27",
+        "expected": ">0",
+        "group": "source_shift",
+        "name": "unshifted source graph SPD",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "source_shift",
+        "name": "source-only shift reaches PSD boundary",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3",
+        "expected": "-3",
+        "group": "source_shift",
+        "name": "shifting both blocks is indefinite",
+        "status": "PASS"
+      },
+      {
+        "actual": "5",
+        "expected": "5",
+        "group": "tail",
+        "name": "tail operator norm",
+        "status": "PASS"
+      },
+      {
+        "actual": "30",
+        "expected": "30",
+        "group": "tail",
+        "name": "rank-one tail attains product bound",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "scalar",
+        "name": "low Schur cost",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "group": "scalar",
+        "name": "sharp minimizing ratio",
+        "status": "PASS"
+      },
+      {
+        "actual": "7/2",
+        "expected": "7/2",
+        "group": "scalar",
+        "name": "sharp source margin",
+        "status": "PASS"
+      },
+      {
+        "actual": "14",
+        "expected": "14",
+        "group": "scalar",
+        "name": "scalar equality attained",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(0, 1), Fraction(0, 1)]",
+        "expected": "[Fraction(0, 1), Fraction(0, 1)]",
+        "group": "scalar",
+        "name": "canonical low choice has zero Feshbach displacement",
+        "status": "PASS"
+      },
+      {
+        "actual": "1590880000000403/15840000000003960",
+        "expected": ">0",
+        "group": "ceiling",
+        "name": "conditional headroom positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.05711953309414486",
+        "expected": ">0",
+        "group": "ceiling",
+        "name": "conditional cross tail room positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.02396011633137285",
+        "expected": "in (0,0.27)",
+        "group": "ceiling",
+        "name": "sigma ceiling lies in low interval",
+        "status": "PASS"
+      },
+      {
+        "actual": "-5.551115123125783e-17",
+        "expected": "<=1e-12",
+        "group": "ceiling",
+        "name": "sigma ceiling solves sharp equation",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/50",
+        "expected": "1/50",
+        "group": "ceiling",
+        "name": "TEST_ORACLE tail is exact one fiftieth",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.015912689545308",
+        "expected": ">0",
+        "group": "ceiling",
+        "name": "illustrative low-tail Lambda ceiling positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.46511621380434104",
+        "expected": "<1.055590388046681",
+        "group": "ceiling",
+        "name": "C6 improves the C5 energy debt",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.055590388046681",
+        "expected": ">0.10043434343434376",
+        "group": "ceiling",
+        "name": "C5 violates zero-low-tail ceiling",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.46511621380434104",
+        "expected": ">0.10043434343434376",
+        "group": "ceiling",
+        "name": "C6 violates zero-low-tail ceiling",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.055590388046681",
+        "expected": ">0.015912689545308",
+        "group": "ceiling",
+        "name": "C5 fails stronger illustrative ceiling",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.46511621380434104",
+        "expected": ">0.015912689545308",
+        "group": "ceiling",
+        "name": "C6 fails stronger illustrative ceiling",
+        "status": "PASS"
+      },
+      {
+        "actual": "-0.44920352425903304",
+        "expected": "<0",
+        "group": "ceiling",
+        "name": "C6 Hessian ceiling gap is negative",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.46511621380434104",
+        "expected": "0.46511621380434104",
+        "group": "ceiling",
+        "name": "action debt is half Hessian debt",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.21030552946146733",
+        "expected": ">0",
+        "group": "ceiling",
+        "name": "action source margin remains positive in diagnostic",
+        "status": "PASS"
+      }
+    ],
+    "total": 65
+  },
+  "computed": {
+    "P_input": "4000000000001/1000000000000",
+    "action_half_debt_c6": 0.23255810690217052,
+    "action_source_margin_c6": 0.21030552946146733,
+    "alpha": "2/5",
+    "beta": "7/5",
+    "both_diagonal_shift_determinant": "-3",
+    "causal_margin": "7/60",
+    "conditional_test_input_a0": 0.9209323339075279,
+    "conditional_test_input_a0_squared": "4664640000001182/5500000000001375",
+    "eta_h": "311776000000079/704000000000176",
+    "gamma": "7/12",
+    "hessian_ceiling_gap_c6": -0.44920352425903304,
+    "hs_c5_components": {
+      "far_high": 52.212500524035285,
+      "far_low": 0.0,
+      "near": 4.085653505135113,
+      "q_ratio": 2.244924096618746,
+      "rho_ratio": 0.8908987181403393,
+      "total": 56.2981540291704,
+      "u_ratio": 0.8506671609508557,
+      "v_ratio": 0.37892914162759955
+    },
+    "hs_c5_truncations": {
+      "12": 29.77088877920247,
+      "192": 56.298153988973695,
+      "24": 47.89587528458852,
+      "48": 55.67295551594507,
+      "96": 56.29554038581016
+    },
+    "hs_c6_components": {
+      "far_high": 19.78483800580328,
+      "far_low": 3.4731868880791343,
+      "near": 1.5481731756886414,
+      "q_ratio": 2.244924096618746,
+      "rho_ratio": 0.8908987181403393,
+      "total": 24.806198069571057,
+      "u_ratio": 0.8506671609508557,
+      "v_ratio": 0.37892914162759955
+    },
+    "hs_c6_truncations": {
+      "12": 13.882568037336808,
+      "192": 24.806198053618896,
+      "24": 21.414850705044692,
+      "48": 24.55691473295737,
+      "96": 24.80516034584449
+    },
+    "lambda_c5_squared": 1.055590388046681,
+    "lambda_c6_squared": 0.46511621380434104,
+    "martingale_total_innovation": "20",
+    "martingale_total_source_l2": "34",
+    "martingale_variances": {
+      "2": "1",
+      "3": "13",
+      "4": "6"
+    },
+    "output_margin": "1/12",
+    "rank_one_tail_pairing": "30",
+    "response_energy_coefficient": "75000000000/4000000000001",
+    "s": "2/3",
+    "scalar_sharp_margin": "7/2",
+    "semidefinite_feshbach_direct": "-15",
+    "semidefinite_kernel_defect": "-30",
+    "sextic_f": "27/100",
+    "sigma_ceiling": 0.02396011633137285,
+    "source_e": "311776000000079/352000000000088",
+    "source_only_shift_determinant": "0",
+    "spd_feshbach_direct": "62",
+    "stopped_endpoint": "3/2",
+    "tail_room": 0.05711953309414486,
+    "test_lambda_ceiling": 0.1261455094139621,
+    "test_lambda_squared_ceiling": 0.015912689545308,
+    "test_oracle_sigma": 0.011980058165686425,
+    "test_oracle_tail_tau": "1/50",
+    "zero_low_tail_lambda_ceiling": 0.316913779180306,
+    "zero_low_tail_lambda_squared_ceiling": "1590880000000403/15840000000003960",
+    "zeta_h": "27/200"
+  },
+  "result_id": "A13-CLASSII-PREDICTABLE-TRIANGULAR-MIXED-GRAM-SOURCE-GRAPH-FESHBACH-BOUNDARY",
+  "schema": "tect/a13-predictable-triangular-mixed-gram-source-graph-feshbach-boundary-primary/1.0",
+  "scope": {
+    "a13_gate_closed": false,
+    "conditional_a0_is_production_bound": false,
+    "conditional_scalar_headroom_diagnostic": true,
+    "finite_truncation_convergence": true,
+    "nelson": false,
+    "one_use_martingale_orthogonality": true,
+    "predictable_stopping_telescope": true,
+    "predictable_triangular_hs_closed_form": true,
+    "production_graph_margin": false,
+    "production_predictable_mixed_gram_envelope": false,
+    "r102_product_covariance_residual_closed": false,
+    "rank_one_tail_attainment": true,
+    "sector_a_closed": false,
+    "semidefinite_kernel_defect_identity": true,
+    "source_only_gap_shift": true,
+    "spd_graph_feshbach_identity": true,
+    "test_oracle_tail_is_production_bound": false
+  },
+  "status": "PASS",
+  "version": "1.0.0"
+}

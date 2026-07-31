@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
-  - R-139 exact checkpoint: complete signed future insertions telescope to the reveal-weighted terminal-minus-prefix endpoint before reanchoring; the live target is the weighted complete-owner D0 trace-excess secant with mean/low restored once, in parallel with a positive non-tail margin on the actual production graph. Wedge-only telescope and tail-only headroom routes are formally rejected. Both A13 gates remain open.
+  - R-140 exact checkpoint: the predictable triangular source response is one-use and the beta=7/5, s=2/3, gamma=7/12 scalar majorant is summable, but the naive positive current-only C=5/C=6 debts 1.0555903880/0.4651162138 exceed conditional zero-low/tail source headroom 0.1004343434. The R-102 product-covariance, trace, variance, forest, and mean/low owners must remain in one signed mixed Gram. The exact source-graph Feshbach formula is e-Lambda_C^2-sigma-(a0+tau_C)^2/[4(f-sigma)], with the semidefinite low-kernel cross retained. Absolute terminal Sobolev payment fails; stationary subtraction repairs the coordinate but lacks production bounds. Both A13 gates remain open. Next session: prove or falsify the production mixed-Gram envelope and low compatibility before matching and anchor work.
   - _updated 2026-07-31_
 
 ## Next up

@@ -1000,6 +1000,30 @@ endpoint theorem.
     matching, strict-gap, and anchor data. Both A13 gates and Sector A remain
     open at T4.
 
+68. **Predictable triangular mixed Gram and source-graph Feshbach
+    boundary.** R-140 collects every still-future source innovation at a
+    reveal into one direct-sum vector and proves that a predictable triangular
+    response norm uses the terminal source energy exactly once. The registered
+    exponents `beta=7/5`, `s=2/3`, and `gamma=7/12` give strict geometric
+    margins `7/60` and `1/12`; nevertheless the positive current-only scalar
+    majorant produces source-Hessian debts `1.05559...` and `0.465116...` at
+    collars five and six, exceeding the conditional zero-low/tail headroom
+    `0.100434...`. The full R-102 product-covariance innovation must therefore
+    remain with trace, variance, forest, and mean/low owners in a smaller
+    signed mixed Gram. Predictable stopping preserves the endpoint telescope
+    but has no bad-set packing. Exact graph--Feshbach completion on the actual
+    production tangent retains the semidefinite low-kernel cross and reduces
+    the source Hessian gap to
+    `e-Lambda_C^2-sigma-(a0+tau)^2/[4(f-sigma)]`, with only half entering the
+    radial action. A hostile audit rejects an absolute terminal Sobolev
+    envelope through the zero-control stationary injection and repairs its
+    algebra by subtracting the common stationary lift before signature
+    polarization. Production bounds for that repaired secant are still
+    absent. The live successor is one cutoff/chart/refinement-uniform
+    owner-complete mixed-Gram theorem, quantitative low compatibility, and a
+    positive value of the once-debited source-gap formula. Both A13 gates and
+    Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

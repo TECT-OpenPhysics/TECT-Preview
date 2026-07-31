@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-140 predictable triangular mixed-Gram and source-graph Feshbach boundary] - 2026-07-31
+
+Registered R-140 as a scoped T4 checkpoint. It proves a conditional predictable triangular one-use theorem, exact scalar exponent summability, a predictable stopping identity, and an exact source-metric graph-Feshbach theorem with the semidefinite low-kernel cross retained. The naive positive current-only C=5/C=6 debts exceed conditional source headroom, and an absolute terminal Sobolev envelope is UV-infeasible; the live successor is a smaller signed owner-complete R-102 mixed-Gram envelope plus production low compatibility. Both A13 gates and Sector A remain open.
+
 ## [A13 R-139 signed future endpoint and graph-complement checkpoint] - 2026-07-31
 
 Registered R-139. The complete signed future insertion sum telescopes before reveal weighting, removing the insertion-shell reanchoring factor and reducing the open future estimate to one weighted terminal-minus-prefix complete-owner trace-excess bound. Mean, future variance, forest, and low ownership are repaired. A moving wedge mask and tail-only strict-headroom inference are formally rejected. The exact robust ambient and production-graph complement criteria are proved; the production weighted estimate, positive graph margin, both A13 gates, Nelson, and Sector-A closure remain open at T4.
