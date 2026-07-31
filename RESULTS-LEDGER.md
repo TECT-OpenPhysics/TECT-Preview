@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-137](#r-137) | Complete raw direct-future Doob split and the spatial one-use boundary | Scoped T4 exact/executed index audit and route correction. Give each physical insertion shell its chronological rank `t(k)`. Applying a forward reveal to the complete R-136 raw endpoint telescope produces both the direct `t(k)<=r` triangle and the future-feedback `t(k)>r` triangle. The latter's six-row current is the exact R-079 two-channel connection; the two-root fixture has physical-prefix energy two, terminal energy five, and missing correction three. R-084 supplies an exact derivative-free projected Doob norm with constant one but no spatial decay. The existing R-131 bounded-multiplier fixture forces a sharp-projector diagnostic charge `q_r>=64` at gap six, and the exact Gram/Loewner criterion shows that bookkeeping direct sums do not orthogonalize physical `k` columns: coherent unit columns require diagonal trace at least `N^2`. R-137 reuses R-063, R-079, R-084, R-087, R-088, R-102, R-104, R-123, R-125, R-131, R-134, R-135, and R-136; it proves neither the production raw spatial estimate nor a once-owned `q_k` sum. Both A13 gates, headroom, low/matching/gap/anchor data, Nelson, and Sector A remain open |
 | [R-136](#r-136) | Common-heat replica variance, raw sequential owners, and the post-heat boundary | Scoped T4 analytic/exact/executed filtration and owner advance. Conditional centring contracts after deterministic or retained-measurable operators, but the literal deterministic-target-heat R-088 post-heat atom is already retained-field measurable and has zero R-125 future residual. Equal post-heat conditional means can have raw future variances zero and one, so mean-only recovery is formally rejected. Keeping the heat coordinate common while conditionally replicating only the legal future gives `Var_f(X_o)=E_(f,f')||X_o^f-X_o^(f')||^2/2` and `P_comp,o=Forest_063,o^ad/2-E_(f,f')||X_o^f-X_o^(f')||^2/4`. The complete raw owner telescopes pathwise in each replica when the low endpoint and all replica-specific later feedback are retained. Forward Doob/OU transposition is reused from general martingale theory and R-102, not reclaimed. Ambient product-space PSD is sufficient but not necessary on an abstract production-tangent graph; this is a route clarification only. The raw projected spatial atom estimate, once-owned `q_k` sum, forest-current lower bound, headroom, low/matching/gap/anchor data, both A13 gates, Nelson, and Sector A remain open |
 | [R-135](#r-135) | Variance-retained trace excess, sequential Cartan spatial transfer, and terminal-refinement boundary | Scoped T4 analytic/exact/executed advance and route correction. The exact R-125 owner retains one half of the adapted forest minus one half of the conditional future variance; the correct aggregate target is the complete-low R-123 trace excess. Replacing the variance rebate by the R-134 scalar norm envelope loses a load-bearing cancellation and is unbounded below on the scaled one-owner R-125 fixture. The R-087 three-channel spatial proof reruns directly on the uncentred R-088 sequential atom, with production-exponent margins `1/15`, `4/15`, and `16/15`. A legally centred variance-retained atom hypothesis would sum at `gamma=7/12` with square constant `0.658881625872614...`, but the centred owner intertwiner and once-owned `q_k^seq` sum remain open. The exact self/sequential homotopy gives no termwise domination, and the accepted extracted-`Z^6` majorant no-go does not refute the exact atom. No nonzero labelled final source block remains independent and uniformly six-real elliptic over the full R-093 directed refinement union; the successor must use fixed-chart aggregate smoothing or a shell-weighted covariance/spatial ledger. Headroom, both A13 gates, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-134](#r-134) | Terminal Gaussian jet threshold, floor-stable fixed-law action, and conditional gamma-7/12 aggregate-collar boundary | Scoped T4 analytic/exact/executed advance and adversarial correction. Complete Pauli summation gives the sharp floor residual `||C6e-C60||<=alpha sqrt(c1 e)|v|`, `alpha^2 c1=3/(320P)`. After exhaustive clusters are placed in one direct sum under each root-spatial owner, R-125 gives the root/visit-free action lower bound `Forest_063/2-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2/2`; separate payment is cutoff-divergent. Pointwise six-real ellipticity gives exact negative moments and D2/D3 quotient-jet costs, while the embedded Pauli D4 jet diverges logarithmically on a fixed cone. Pointwise ellipticity alone does not imply spatial fractional control. The gamma-7/12 geometric constants are exact only after assuming the missing joint spatial data, owner-preserving R-087-to-R-088 atom transfer, and one-use ledger. Headroom, low data, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -155,6 +156,65 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-137"></a>
+### R-137 -- Complete raw direct-future Doob split and the spatial one-use boundary
+
+**Result ID.**
+A13-CLASSII-RAW-DOOB-TRIANGLE-SPATIAL-CARLESON-BOUNDARY.
+
+**Exact all-insertion reveal split.**  Assign every physical insertion shell
+its chronological rank `t(k)`.  Apply a forward-filtration increment to the
+finite complete raw telescope of R-136 and partition the insertion set at the
+reveal root `r`.  The result contains the low atom, the direct triangle
+`t(k)<=r`, and the future-feedback triangle `t(k)>r`.  Under termwise root
+Sobolev-domain hypotheses, a parallel finite linear identity holds after
+`D_r P_r`.  The future
+triangle is not deleted by insertion order: later controls can depend on the
+already revealed root.  For the six-row current coordinate it contains both
+`[C6(W*)-C6(Wr)]V_r` and `C6(W*)D(A*-A^[<=r])`.  These are the R-079
+connection channels, not new copies of them.  Trace curvature, forest, low,
+rational, Cartan, and other signed-owner companions remain separate ownership
+obligations.  In the exact two-root fixture,
+physical-prefix energy is two, terminal energy is five, and the omitted
+cross-plus-square correction is three.
+
+**Derivative-free and spatial boundaries.**  R-084's root-OU identity rewrites
+the projected raw Doob increment with exact normalization one, removing the
+need for an explicit termwise derivative estimate of terminal feedback.  It
+does not generate a spatial exponent.  The existing R-131 bounded-multiplier
+fixture has selected coefficient `1/2`, sharp-projector energy `1/4`, and at
+`m-r=6`, `s=2/3` forces the diagnostic charge `q_r>=64`; this is an inference
+no-go, not a production-current or smooth-projector counterexample.  For physical insertion columns with Gram
+matrix `G`, a diagonal deterministic charge is valid exactly when
+`G<=diag(q)`.  Coherent unit columns force `sum q_k>=N^2`, so owner, visit,
+cluster, reveal, and row direct sums cannot be cited as physical cross-`k`
+orthogonality.  R-135's weighted nonorthogonal sum remains available only
+after individual raw spatial charges and their once-owned sum are proved.
+
+**Where proved.**  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`,
+the R-137 note, primary and non-importing independent executables, integrated
+ verifier, manifest, JSON artefacts, and `EXP-000540--EXP-000545`.  The
+ integrated `263/263` result embeds all 114 child rows and adds 149
+ integrator-only rows; no additive child recount is made.  The two
+method boundaries reuse
+`NG-2026-07-25-A13-ROOT-ORTHOGONALITY-ONE-USE` and
+`NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY`; no duplicate negative
+result is created.
+
+**Reuse scope.**  Fixed finite cutoff and positive floor; one finite
+temporally faithful strict-past chart with explicit `t(k)`; square-integrable complete owners; recombined same-root
+visits; exhaustive output clusters; common heat; and root Sobolev statements
+only where explicitly declared.  R-063, R-079, R-084, R-087, R-088, R-102,
+R-104, R-123, R-125, R-131, R-134, R-135, and R-136 retain their prior theorem
+ownership.
+
+**Tier and boundary.**  T4 remains T4.  Production owner realization, raw
+spatial decay for both triangles, future-triangle last-insertion ownership, a
+deterministic nonnegative once-owned `q_k` sum, the signed forest-current lower
+bound, positive collar headroom, complete low and matching data, strict gap,
+absolute anchor, both A13 gates, `OVERLAP_src`, Nelson, removals, an interacting
+measure, and Sector-A closure remain open.
 
 <a id="r-136"></a>
 ### R-136 -- Common-heat replica variance, raw sequential owners, and the post-heat boundary

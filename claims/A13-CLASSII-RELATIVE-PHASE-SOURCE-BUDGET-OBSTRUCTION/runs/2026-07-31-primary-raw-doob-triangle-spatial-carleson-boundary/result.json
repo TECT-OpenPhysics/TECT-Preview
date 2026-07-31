@@ -1,0 +1,462 @@
+{
+  "assertions": {
+    "failed": 0,
+    "passed": 60,
+    "rows": [
+      {
+        "actual": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "expected": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "group": "triangle",
+        "name": "direct Doob increment",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "expected": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "group": "triangle",
+        "name": "future Doob connection",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-2, 1), (-1, 1): Fraction(-2, 1), (1, -1): Fraction(2, 1), (1, 1): Fraction(2, 1)}",
+        "expected": "{(-1, -1): Fraction(-2, 1), (-1, 1): Fraction(-2, 1), (1, -1): Fraction(2, 1), (1, 1): Fraction(2, 1)}",
+        "group": "triangle",
+        "name": "complete Doob increment",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-2, 1), (-1, 1): Fraction(-2, 1), (1, -1): Fraction(2, 1), (1, 1): Fraction(2, 1)}",
+        "expected": "{(-1, -1): Fraction(-2, 1), (-1, 1): Fraction(-2, 1), (1, -1): Fraction(2, 1), (1, 1): Fraction(2, 1)}",
+        "group": "triangle",
+        "name": "prefix plus connection",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "triangle",
+        "name": "future triangle is nonzero",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "expected": "not terminal",
+        "group": "triangle",
+        "name": "prefix-only ledger is incomplete",
+        "status": "PASS"
+      },
+      {
+        "actual": "6",
+        "expected": "6",
+        "group": "connection",
+        "name": "current endpoint",
+        "status": "PASS"
+      },
+      {
+        "actual": "70",
+        "expected": "70",
+        "group": "connection",
+        "name": "terminal endpoint",
+        "status": "PASS"
+      },
+      {
+        "actual": "15",
+        "expected": "15",
+        "group": "connection",
+        "name": "coefficient channel",
+        "status": "PASS"
+      },
+      {
+        "actual": "49",
+        "expected": "49",
+        "group": "connection",
+        "name": "derivative channel",
+        "status": "PASS"
+      },
+      {
+        "actual": "64",
+        "expected": "64",
+        "group": "connection",
+        "name": "two channels reconstruct endpoint",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "expected": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "group": "feedback",
+        "name": "direct current increment",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "expected": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "group": "feedback",
+        "name": "future connection increment",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-2, 1), (-1, 1): Fraction(-2, 1), (1, -1): Fraction(2, 1), (1, 1): Fraction(2, 1)}",
+        "expected": "{(-1, -1): Fraction(-2, 1), (-1, 1): Fraction(-2, 1), (1, -1): Fraction(2, 1), (1, 1): Fraction(2, 1)}",
+        "group": "feedback",
+        "name": "first terminal increment",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "feedback",
+        "name": "physical prefix energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "5",
+        "expected": "5",
+        "group": "feedback",
+        "name": "terminal energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "feedback",
+        "name": "cross contribution",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "feedback",
+        "name": "connection square",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "3",
+        "group": "feedback",
+        "name": "missing correction",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "ou",
+        "name": "normalized chaos 1",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "ou",
+        "name": "normalized chaos 2",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "ou",
+        "name": "normalized chaos 3",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "ou",
+        "name": "normalized chaos 4",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "ou",
+        "name": "normalized chaos 5",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "ou",
+        "name": "normalized chaos 6",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "ou",
+        "name": "OU gives norm not spatial gain",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "group": "spatial_nogo",
+        "name": "selected Fourier coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4",
+        "expected": "1/4",
+        "group": "spatial_nogo",
+        "name": "projected OU energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "8",
+        "expected": "8",
+        "group": "spatial_nogo",
+        "name": "gap exponent integral",
+        "status": "PASS"
+      },
+      {
+        "actual": "64",
+        "expected": "64",
+        "group": "spatial_nogo",
+        "name": "required q at gap six",
+        "status": "PASS"
+      },
+      {
+        "actual": "64",
+        "expected": ">1",
+        "group": "spatial_nogo",
+        "name": "bounded multiplier cannot be uniform",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "gram",
+        "name": "coherent 2 boundary PSD direction",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2",
+        "expected": "negative",
+        "group": "gram",
+        "name": "coherent 2 subcritical failure",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(1, 1), 4)",
+        "expected": "(1, 4)",
+        "group": "gram",
+        "name": "coherent 2 reciprocal and trace",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "gram",
+        "name": "coherent 3 boundary PSD direction",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3",
+        "expected": "negative",
+        "group": "gram",
+        "name": "coherent 3 subcritical failure",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(1, 1), 9)",
+        "expected": "(1, 9)",
+        "group": "gram",
+        "name": "coherent 3 reciprocal and trace",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "gram",
+        "name": "coherent 5 boundary PSD direction",
+        "status": "PASS"
+      },
+      {
+        "actual": "-5",
+        "expected": "negative",
+        "group": "gram",
+        "name": "coherent 5 subcritical failure",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(1, 1), 25)",
+        "expected": "(1, 25)",
+        "group": "gram",
+        "name": "coherent 5 reciprocal and trace",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "group": "gram",
+        "name": "two-column physical merge",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "gram",
+        "name": "two-column separate squares",
+        "status": "PASS"
+      },
+      {
+        "actual": "(4, 2)",
+        "expected": "different",
+        "group": "gram",
+        "name": "cross-k orthogonality false",
+        "status": "PASS"
+      },
+      {
+        "actual": "10",
+        "expected": "10",
+        "group": "gram",
+        "name": "owner direct sum energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "16",
+        "expected": "16",
+        "group": "gram",
+        "name": "owner physical merge is not bookkeeping",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/15",
+        "expected": "1/15",
+        "group": "post_heat",
+        "name": "first margin",
+        "status": "PASS"
+      },
+      {
+        "actual": "4/15",
+        "expected": "4/15",
+        "group": "post_heat",
+        "name": "second margin",
+        "status": "PASS"
+      },
+      {
+        "actual": "16/15",
+        "expected": "16/15",
+        "group": "post_heat",
+        "name": "third margin",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "post_heat",
+        "name": "leading OU factor doubles q",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "production_owner_realization",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "raw_spatial_decay",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "future_triangle_q_assignment",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "one_use_q_sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "signed_forest_current_bound",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "positive_headroom",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "low_matching_gap_anchor",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "a13_gate_closed",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "overlap_src_nelson",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "sector_a_closed",
+        "status": "PASS"
+      },
+      {
+        "actual": "60",
+        "expected": "60",
+        "group": "contracts",
+        "name": "primary assertion count",
+        "status": "PASS"
+      }
+    ],
+    "total": 60
+  },
+  "computed": {
+    "coherent_three_minimal_trace": 9,
+    "feedback_correction": 3,
+    "margins": [
+      "1/15",
+      "4/15",
+      "16/15"
+    ],
+    "modulation_projected_energy": "1/4",
+    "modulation_required_q_gap_6": "64",
+    "physical_prefix_energy": 2,
+    "terminal_energy": 5
+  },
+  "result_id": "A13-CLASSII-RAW-DOOB-TRIANGLE-SPATIAL-CARLESON-BOUNDARY",
+  "schema": "tect/a13-raw-doob-triangle-spatial-carleson-boundary-primary/1.0",
+  "scope": {
+    "a13_gate_closed": false,
+    "all_k_raw_triangle": true,
+    "bounded_multiplier_spatial_inference_rejected": true,
+    "cross_k_bookkeeping_orthogonality_rejected": true,
+    "future_triangle_last_insertion_bound": false,
+    "low_matching_gap_anchor": false,
+    "ou_identity_reused": true,
+    "overlap_src_nelson": false,
+    "positive_headroom": false,
+    "production_one_use_q_sum": false,
+    "production_owner_realization": false,
+    "production_raw_spatial_decay": false,
+    "sector_a_closed": false,
+    "signed_forest_current_bound": false
+  },
+  "status": "PASS",
+  "version": "1.0.0"
+}

@@ -4688,3 +4688,33 @@ T5--T7 promotion remain open. Tier stays T4.
   positive headroom, complete low and matching data, strict gap, absolute
   anchor, both A13 gates, `OVERLAP_src`, Nelson, removals, interacting measure,
   and Sector A remain open; tier stays T4.
+- 2026-07-31: Registered
+  `A13-CLASSII-RAW-DOOB-TRIANGLE-SPATIAL-CARLESON-BOUNDARY` (R-137) as a
+  scoped exact/executed index audit and route correction. Every physical
+  insertion shell is assigned its chronological rank `t(k)`. Applying a
+  forward reveal increment to the complete finite R-136 raw telescope gives
+  both a direct `t(k)<=r` triangle and a future-feedback `t(k)>r` triangle.
+  The latter can be nonzero; in the six-row current coordinate it is the
+  R-079 coefficient plus derivative-feedback connection, while trace, forest,
+  low, rational, Cartan, and other signed-owner companions remain separate.
+  R-084 gives an exact derivative-free projected Doob norm but no spatial
+  exponent. The existing bounded-multiplier diagnostic has sharp carrier
+  coefficient `1/2`, energy `1/4`, and gap-six charge floor `64`; it is not a
+  smooth-projector production counterexample. The exact Gram/Loewner criterion
+  shows that coherent physical `k` columns require diagonal trace at least
+  `N^2`, so bookkeeping direct sums do not prove the one-use ledger. The
+  pre-release audit replaced scalar arithmetic by a nonzero future Doob
+  fixture, repaired an independent future column killed by `d_1`, typed the
+  chronological order, restricted the Sobolev and smooth-cylinder formulas,
+  and split the successor into an R-135-compatible last-insertion branch or a
+  direct integrated signed substitute. `EXP-000540--EXP-000545` preserve all
+  successful, failed, and corrected routes; no duplicate negative was created.
+  Primary `60/60`, independent `54/54`, and integrated `263/263` pass. The
+  integrated result already embeds the 114 child rows and has 149
+  integrator-only rows, so `263` is the unique package count rather than an
+  additive `377`; deterministic PDF, automated text/security/render checks,
+  manual all-page visual QA, and release evidence are pinned in the R-137
+  manifest. Production owner realization, raw spatial decay, the future
+  assignment theorem, once-owned `q_k` sum, signed forest-current bound,
+  headroom, low/matching/gap/anchor data, both A13 gates, `OVERLAP_src`,
+  Nelson, removals, interacting measure, and Sector A remain open at T4.

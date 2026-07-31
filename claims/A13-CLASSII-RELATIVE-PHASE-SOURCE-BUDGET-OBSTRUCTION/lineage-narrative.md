@@ -934,6 +934,29 @@ endpoint theorem.
     headroom plus complete low/matching/gap/anchor data. Both A13 gates and
     Sector A remain open at T4.
 
+65. **Complete raw direct-future Doob split and the spatial one-use
+    boundary.** R-137 assigns every physical insertion shell its chronological
+    rank `t(k)` and applies each forward reveal increment to the finite complete
+    R-136 raw telescope. The exact result contains the low atom, a direct
+    `t(k)<=r` triangle, and a future-feedback `t(k)>r` triangle. A two-root
+    filtration fixture proves that the future triangle can be nonzero. Its
+    six-row current is the R-079 coefficient plus derivative-feedback
+    connection; trace curvature and the forest, low, rational, Cartan, and
+    other signed-owner companions remain separate ownership obligations.
+    R-084's OU formula is reused as an exact derivative-free projected Doob
+    norm and supplies no spatial gain. The R-131 bounded-multiplier diagnostic
+    and the exact Gram/Loewner test retire two shortcuts: bounded coefficients
+    do not create the dyadic exponent, and bookkeeping direct sums do not make
+    physical insertion columns orthogonal. The adversarial audit corrected an
+    untyped `k<=r` draft, a scalar non-filtration witness, a future column that
+    vanished under `d_1`, termwise Sobolev hypotheses, and an overbroad use of
+    R-135. The live successor is
+    `A13-CLASSII-COMPLETE-RAW-DOOB-DIRECT-FUTURE-SPATIAL-ONE-USE-BOUND`: prove
+    the direct spatial estimate and either a compatible unique last-insertion
+    transpose for the future triangle or a direct integrated signed substitute,
+    then one deterministic once-owned `q` ledger and a finite-collar headroom
+    test. Both A13 gates and Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

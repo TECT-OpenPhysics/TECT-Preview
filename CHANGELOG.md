@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Correct R-137 audit accounting and chronological hypotheses] - 2026-07-31
+
+Independent pre-release audit found that the integrated verifier already embeds all primary and independent rows, so the prior additive aggregate count double-counted 114 assertions. The corrected integrated package has 263 unique assertions: 114 embedded child rows and 149 integrator-only rows. The audit also defined A^[<=r] on the common chronological clock, restored the exact termwise/grouped Sobolev hypothesis in the devil review, corrected the insertion-order wording, and replaced hardcoded derived summaries by computed child values. No mathematical scope, tier, gate, or successor changes.
+
+## [R-137 complete raw direct-future Doob split and spatial one-use boundary] - 2026-07-31
+
+Registered the exact chronologically typed direct/future split of the finite R-136 raw telescope, a nonzero future Doob fixture, the reused R-084 derivative-free OU coordinate, and the Gram/Loewner and bounded-multiplier shortcut boundaries. Adversarial review repaired the draft filtration witness, insertion/reveal typing, Sobolev and mixed-derivative scope, future-shell geometry, and R-135 applicability. No new negative result, gate closure, tier promotion, production spatial estimate, once-owned q ledger, headroom, Nelson theorem, or Sector-A closure is claimed.
+
 ## [A13 R-136 random-operator L2-admissibility correction] - 2026-07-31
 
 Append-only pre-release scope correction: the exact random-operator commutator defect is registered only for admissible Q whose displayed products and conditional expectations are square-integrable. Mere Q in L1 is insufficient because it does not ensure QZ is integrable for Z in L2. EXP-000539 corrects the broader phrase in EXP-000533. The deterministic and retained-measurable bounded contraction, four-atom fixture, post-heat no-go, replica identity, raw telescope, counts, tier, gates, and successor are unchanged.
