@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-31-A13-WEDGE-ONLY-FUTURE-TELESCOPE](#ng-2026-07-31-a13-wedge-only-future-telescope) | obtain a terminal-minus-prefix future identity after retaining only a moving insertion-dependent wedge mask | discrete summation by parts leaves the internal variation `sum_e(chi_e-chi_(e+1))K_e`; alternating endpoints make this term grow while the terminal difference is zero, and a coherent far/near fixture exposes the same cancellation double-spend |
+| [NG-2026-07-31-A13-TAIL-ONLY-SHIFTED-DOUGLAS-HEADROOM](#ng-2026-07-31-a13-tail-only-shifted-douglas-headroom) | infer a strict shifted-Douglas or production-graph gap from an arbitrarily small collar tail alone | with `A0=2sqrt(ef)`, zero tail, and zero low coupling, the balanced two-channel block has an exact kernel for every tail bound; an independent low-coupled fixture shows that balanced headroom alone also does not force a gap |
 | [NG-2026-07-31-A13-CHRONOLOGY-ONLY-SPATIAL-GRADE](#ng-2026-07-31-a13-chronology-only-spatial-grade) | infer the R-087 raw direct shell decay from chronological precedence, bounded positive-floor derivatives, and the three-channel identity without a spatial-grade intertwiner | a deterministic earlier prefix at shell `N=2^M` has uniformly bounded `C^(2/5)` norm but makes the exact low-insertion direct atom energy grow as `N^(6/5)`, while the claimed `s=2/3` right side decays as `N^(-4/3)` |
 | [NG-2026-07-31-A13-BARE-LAST-INSERTION-R135-REANCHORING](#ng-2026-07-31-a13-bare-last-insertion-r135-reanchoring) | invoke the R-135 reveal-weighted future ledger from finite Fubini, an insertion-anchored FAR estimate, and an unweighted `sum_k q_k` alone | reveal-to-insertion reanchoring creates `2^(2 gamma(k-r))`, equal to 128 at `gamma=7/12`, `k-r=6`, and leaves the wedge `r+5<=m<k+5` outside insertion-FAR geometry |
 | [NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY](#ng-2026-07-31-a13-postheat-mean-only-future-variance-recovery) | recover the R-125 future variance by future-centring the literal post-heat R-088 atom, or from that atom's conditional mean alone | the post-heat atom is already retained-field measurable and has zero future residual; raw currents `X_0=0` and `X_1=Y` have the same post-heat conditional mean zero but future variances zero and one |
@@ -211,6 +213,65 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-07-31-a13-wedge-only-future-telescope"></a>
+### NG-2026-07-31-A13-WEDGE-ONLY-FUTURE-TELESCOPE -- a moving wedge mask leaves internal endpoint variation
+
+**Failure mode.**  Apply the complete signed future endpoint telescope only
+to the insertion-dependent wedge cells and infer that the masked sum depends
+solely on terminal and prefix endpoints.
+
+For scalar endpoint coordinates `K_e` and masks `chi_e`, exact discrete
+summation by parts gives
+`sum_(e=a)^N chi_e(K_e-K_(e-1))`
+`=chi_N K_N-chi_a K_(a-1)+sum_(e=a)^(N-1)(chi_e-chi_(e+1))K_e`.
+Only a constant complete-future mask removes the internal variation.  If
+`K_e` alternates between zero and one and `chi_e` selects the positive
+increments, the masked sum grows with the number of insertions although the
+terminal endpoint returns to its initial value.  Independently, coherent
+vectors `y_F=u`, `y_N=-u` have zero complete half-energy, positive far square
+`||u||^2/2`, and cancelling near cross owner `-||u||^2/2`.
+
+**Evidence.**  R-139 proof-note Section 6; independent alternating-mask and
+coherent far/near fixtures in both R-139 executables.
+
+**Consequence.**  This rejects a wedge-only endpoint telescope and separate
+payment of the positive far square.  It does not reject the complete signed
+future terminal-minus-prefix identity, a direct estimate of that complete
+owner, or a future decomposition supplied with an independently proved bound
+for its internal variation and near cross.
+
+**Revisit condition.**  Revisit a masked split only after proving that the
+production mask is constant along the endpoint sequence or after controlling
+the exact variation term together with its once-owned near/forest companion.
+
+<a id="ng-2026-07-31-a13-tail-only-shifted-douglas-headroom"></a>
+### NG-2026-07-31-A13-TAIL-ONLY-SHIFTED-DOUGLAS-HEADROOM -- a vanishing collar tail does not create a strict gap
+
+**Failure mode.**  Deduce a strictly positive shifted-Douglas or
+production-graph margin solely from a collar estimate `||T_C||<=tau_C` with
+`tau_C` arbitrarily small.
+
+In one dimension take positive diagonal blocks `E=e`, `F=f`, `D=d`, set the
+low couplings to zero, choose `A0=2sqrt(ef)`, and take `T_C=0`.  Every positive
+tail bound is satisfied, but the balanced two-channel block has kernel vector
+`(sqrt(f),sqrt(e))`.  Taking `A0>2sqrt(ef)` even destroys positive
+semidefiniteness.  Separately, `E=F=D=1`, `A0=T_C=C=0`, and `B=1` leaves a
+low-coupled kernel, so balanced headroom without low transversality is also
+insufficient.
+
+**Evidence.**  R-139 proof-note Sections 8--10; exact determinant and kernel
+checks in two independently implemented executables.
+
+**Consequence.**  This is logical non-identifiability from tail data, not a
+counterexample to the production operator.  Tail decay can preserve a
+previously proved strict complement but cannot manufacture it.  Production
+must establish either the exact robust reduced-Schur inequality or its weaker
+pullback on the actual tangent graph, including the low block.
+
+**Revisit condition.**  Revisit collar acceptance after a uniform positive
+non-tail production-graph margin and the complete low/matching/anchor data are
+proved independently of the decaying tail.
 
 <a id="ng-2026-07-31-a13-chronology-only-spatial-grade"></a>
 ### NG-2026-07-31-A13-CHRONOLOGY-ONLY-SPATIAL-GRADE -- temporal precedence is not a Fourier support theorem

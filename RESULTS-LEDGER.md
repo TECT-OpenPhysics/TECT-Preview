@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-139](#r-139) | Signed future endpoint telescope and production-graph robust-complement boundary | Scoped T4 analytic/exact/executed advance and method boundary. Summing every future insertion owner before applying the reveal weight gives the exact terminal-minus-prefix identity `sum_e omega_e=K^N-K^prefix`, so the insertion shell and the R-138 factor `2^(2 gamma(k-r))` disappear from the complete signed future branch. With `K=-E D0/2`, the desired lower bound is exactly one weighted upper bound for the terminal-minus-prefix trace excess. The complete owner requires the mean/low reserve once; R-063 forest is an alternate trace coordinate, not an extra reserve. A moving wedge mask leaves an internal variation sum, and tail decay alone cannot create strict shifted-Douglas headroom. The exact robust ambient condition and its weaker production-graph pullback are proved. R-139 proves no production weighted trace-excess estimate, positive graph margin, complete low/matching/gap/anchor data, A13 gate, Nelson theorem, or Sector-A closure |
 | [R-138](#r-138) | Scale-graded raw direct transfer, signed future last insertion, and reveal reanchoring boundary | Scoped T4 analytic/exact/executed advance and method boundary. Under an explicit `Q_r`-supported raw coefficient path, legal conditional/OU/projection commutations, and a complete-owner intertwiner, the R-087 paracomposition proof gives the raw direct six-row far estimate. The only nonlinear far row has exact coefficient `8(5/9)^2(243/(8000P))=3/(40P)`, including the R-084 outer OU factor two; at `rho=2/5`, `s=2/3`, the margins are `1/15`, `4/15`, and `16/15`. A bounded-`C^(2/5)` earlier high prefix proves that chronology alone does not give the spatial grade. For the future triangle, the complete R-079 current--trace energy has an exact signed fixed-chart last-insertion telescope. Bare R-135 reindexing fails because reveal reanchoring creates `2^(2 gamma(k-r))`, equal to `128` at `gamma=7/12`, gap six, and leaves `r+5<=m<k+5` outside insertion-FAR geometry. R-138 gives the sharp direct and gap-weighted future scalar charge criteria and the conditional finite-collar threshold, but proves no production owner/grade intertwiner, charge sum, signed near/forest lower form, positive headroom, A13 gate, Nelson theorem, or Sector-A closure |
 | [R-137](#r-137) | Complete raw direct-future Doob split and the spatial one-use boundary | Scoped T4 exact/executed index audit and route correction. Give each physical insertion shell its chronological rank `t(k)`. Applying a forward reveal to the complete R-136 raw endpoint telescope produces both the direct `t(k)<=r` triangle and the future-feedback `t(k)>r` triangle. The latter's six-row current is the exact R-079 two-channel connection; the two-root fixture has physical-prefix energy two, terminal energy five, and missing correction three. R-084 supplies an exact derivative-free projected Doob norm with constant one but no spatial decay. The existing R-131 bounded-multiplier fixture forces a sharp-projector diagnostic charge `q_r>=64` at gap six, and the exact Gram/Loewner criterion shows that bookkeeping direct sums do not orthogonalize physical `k` columns: coherent unit columns require diagonal trace at least `N^2`. R-137 reuses R-063, R-079, R-084, R-087, R-088, R-102, R-104, R-123, R-125, R-131, R-134, R-135, and R-136; it proves neither the production raw spatial estimate nor a once-owned `q_k` sum. Both A13 gates, headroom, low/matching/gap/anchor data, Nelson, and Sector A remain open |
 | [R-136](#r-136) | Common-heat replica variance, raw sequential owners, and the post-heat boundary | Scoped T4 analytic/exact/executed filtration and owner advance. Conditional centring contracts after deterministic or retained-measurable operators, but the literal deterministic-target-heat R-088 post-heat atom is already retained-field measurable and has zero R-125 future residual. Equal post-heat conditional means can have raw future variances zero and one, so mean-only recovery is formally rejected. Keeping the heat coordinate common while conditionally replicating only the legal future gives `Var_f(X_o)=E_(f,f')||X_o^f-X_o^(f')||^2/2` and `P_comp,o=Forest_063,o^ad/2-E_(f,f')||X_o^f-X_o^(f')||^2/4`. The complete raw owner telescopes pathwise in each replica when the low endpoint and all replica-specific later feedback are retained. Forward Doob/OU transposition is reused from general martingale theory and R-102, not reclaimed. Ambient product-space PSD is sufficient but not necessary on an abstract production-tangent graph; this is a route clarification only. The raw projected spatial atom estimate, once-owned `q_k` sum, forest-current lower bound, headroom, low/matching/gap/anchor data, both A13 gates, Nelson, and Sector A remain open |
@@ -157,6 +158,79 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-139"></a>
+### R-139 -- Signed future endpoint telescope and production-graph robust-complement boundary
+
+**Result ID.**
+`A13-CLASSII-SIGNED-FUTURE-ENDPOINT-GRAPH-COMPLEMENT-BOUNDARY`.
+
+**Complete signed future endpoint theorem.**  On a fixed finite temporally
+faithful chart, let `P_r=E[.|F_r]`, `d_r=P_r-P_(r-1)`, and let `Pi_m` be the
+same deterministic orthogonal output projection in every endpoint.  For
+endpoint `q`, set `Y^q_(r,m)=Pi_m d_r J^q`, retain the once-owned primitive
+trace `Theta^q_(r,m)`, and define
+`K^q_(r,m)=E(||Y^q_(r,m)||^2-Theta^q_(r,m))/2`.  The owner of future
+insertion `e` is exactly `K^e_(r,m)-K^(e-1)_(r,m)`.  Hence summing all future
+insertions first gives
+`sum_(e>n(r)) omega_(e,r,m)=K^N_(r,m)-K^(n(r))_(r,m)`.  The reveal weight
+`2^(2 gamma(m-r-C))` is then applied to this endpoint difference; no insertion
+shell `k` remains and no reveal-to-insertion reanchoring factor occurs.  This
+bypasses, and does not retract, the R-138 no-go for a separated positive
+insertion-FAR route.
+
+**Trace-excess and owner correction.**  With the R-123 coordinate
+`D0^q_(r,m)=E[Theta^q_(r,m)-||Y^q_(r,m)||^2|F_(r-1)]`, one has exactly
+`K^q_(r,m)=-E D0^q_(r,m)/2`.  Therefore the future lower bound is equivalent
+to one signed weighted upper bound on `D0^N-D0^prefix`, with the source,
+sextic, and constant budgets doubled.  The complete R-125/R-063 coordinate is
+`K=(Forest_063^ad-Var_f X-||b||^2)/2`, where
+`b=Pi_m P_(r-1)J`.  Thus the mean/low owner must be restored exactly once,
+future variance cannot be deleted, and the forest cannot be counted as an
+additional reserve.  The exact R-123 fixture has positive complete packet but
+negative centered `K`, so the registered complete-packet theorem cannot be
+applied to centered future `D0` alone.
+
+**Wedge-only boundary.**  For a moving insertion mask `chi_e`, summation by
+parts gives
+`sum_e chi_e(K_e-K_(e-1))=chi_N K_N-chi_a K_(a-1)` plus the internal variation
+`sum_e(chi_e-chi_(e+1))K_e`.  Alternating endpoints make this variation grow
+while the terminal difference vanishes.  Coherent far/near vectors likewise
+show that paying a positive far square separately double-spends the cancelling
+near cross.  This establishes
+`NG-2026-07-31-A13-WEDGE-ONLY-FUTURE-TELESCOPE`.
+
+**Robust complement theorem.**  For the three-block selfadjoint matrix with
+tail perturbation `T`, eliminate the shifted low block `D_mu=D-mu I` by the
+Douglas reduced solution `D_mu^(1/2)X_mu=K^*` and put
+`S_mu=M_(2,0)-mu I-X_mu^*X_mu`.  Subject to the standard positive-semidefinite
+and range hypotheses, `M(T)>=mu I` for every `||T||<=tau` if and only if
+`<(x,y),S_mu(x,y)>=tau||x||||y||` for every `x,y`.  On the actual production
+graph `G`, the narrower exact robust target is the corresponding pullback
+quadratic inequality on `Gu`; ambient positivity is unnecessary.  The scalar
+norm test `a0+tau<2 sqrt((e-k^2/d)(f-k^2/d))` is only a conservative
+corollary.
+
+**Strict-gap boundary and reused Riesz theorem.**  Taking
+`A0=2sqrt(ef)`, zero tail, and zero low coupling leaves an exact kernel, so
+tail decay alone cannot create strict headroom.  A separate low-coupled fixture
+has the same conclusion.  This establishes
+`NG-2026-07-31-A13-TAIL-ONLY-SHIFTED-DOUGLAS-HEADROOM` as a logical
+non-identifiability result, not a production counterexample.  The physical
+response factorization and its forward/legal-reverse one-owner convention are
+reused from R-128/R-129/R-131 with the predictable projection retained; R-139
+does not claim a second Riesz theorem.
+
+**Where proved.**  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`;
+the R-139 note, primary and independent standard-library executables,
+integrated verifier, manifest and JSON artefacts; `EXP-000552--EXP-000558`;
+and the two named negative results.
+
+**Tier and boundary.**  T4 remains T4.  No cutoff/chart/refinement-uniform
+production weighted trace-excess estimate, mean/low owner intertwiner,
+positive production-graph margin, complete low or matching data, strict gap,
+absolute anchor, A13 gate, `OVERLAP_src`, Nelson theorem, removal, interacting
+measure, or Sector-A closure is proved.
 
 <a id="r-138"></a>
 ### R-138 -- Scale-graded raw direct transfer, signed future last insertion, and reveal reanchoring boundary

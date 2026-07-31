@@ -1,0 +1,664 @@
+% =============================================================================
+% Title: Signed future terminal trace excess, robust graph complement, and tail-only headroom boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-SIGNED-FUTURE-ENDPOINT-GRAPH-COMPLEMENT-BOUNDARY
+% Ledger: R-139
+% Version: v1.0 -- first issued 2026-07-31; this version issued 2026-07-31
+% Status: scoped T4 analytic/exact/executed advance and method boundary; no A13 gate closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cX}{\mathcal X}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Forest}{\mathfrak F}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+
+R-138 proved two exact but apparently competing facts. Its complete
+future current--trace block telescopes as a signed last-insertion owner, while
+moving an insertion-anchored positive FAR estimate back to the reveal weight
+costs $2^{2\gamma(k-r)}$ and leaves a reveal-FAR/insertion-near wedge. The
+present result resolves the choice of coordinates before attempting another
+positive estimate.
+
+The correct future operation is to sum \emph{all} future insertion endpoints
+while the reveal root and output shell remain fixed. The insertion label then
+disappears exactly. The reveal-FAR future block becomes one weighted
+terminal-minus-prefix trace-excess secant, so the R-138 causal reanchoring
+factor is absent. This does not retract the R-138 no-go: the factor remains
+mandatory for a strategy which first separates nonnegative insertion-FAR
+cells.
+
+The endpoint reduction also exposes two further obligations. First, the
+centered Doob current is not the complete R-123 packet: its predictable mean,
+future variance, and R-063 forest coordinate must be restored exactly once.
+Second, tail decay cannot create the strict balanced/low headroom required by
+R-129. The present note gives the exact robust shifted-Douglas complement
+criterion, first in the ambient finite-dimensional space and then on the
+actual production tangent graph.
+
+The result is fixed finite cutoff, fixed positive floor, and fixed legal
+temporally faithful chart. Same-root visits and equal-time children are
+recombined before the formulas are used. Output projections are deterministic,
+mutually orthogonal, contraction-closed, and exhaustive unless an explicit
+R-125 complement leakage is retained. Heat satisfies the R-104 legal
+disintegration hypothesis. All physical and source spaces in the operator
+theorems are finite-dimensional; the bounded-operator statements therefore
+have no hidden closed-range issue.
+
+No cutoff-, floor-, chart-, control-, filtration-, revisit-, cluster-, or
+refinement-uniform production trace-excess estimate is proved. No positive
+production graph margin, complete low/matching theorem, absolute anchor,
+$\mathrm{OVERLAP}_{\rm src}$, Nelson estimate, removal, interacting measure,
+Sector-A closure, or tier promotion follows.
+
+\section*{2. Complete root/output endpoint coordinate}
+
+Let $e=1,\ldots,N$ be the ordered control insertion events on a fixed chart,
+and let $J^{(e)}$ and $B^{(e)}=C_6(W^{(e)})^*C_6(W^{(e)})$ be the corresponding
+fully recombined current and trace coefficient. Put
+\[
+ P_r=\E[\,\cdot\mid\F_r],\qquad d_r=P_r-P_{r-1},              \tag{2.1}
+\]
+and let $n(r)$ be the last insertion event at or before reveal $r$. Let
+$\{\Pi_m\}$ be the declared orthogonal physical-output resolution. Since
+$\Pi_m$ is deterministic, it commutes with $P_r$ and $d_r$.
+
+For endpoint $q\in\{0,\ldots,N\}$ define
+\[
+ \Phi_{r,m}^{q}=\Pi_mP_rJ^{(q)},\qquad
+ b_{r,m}^{q}=\Pi_mP_{r-1}J^{(q)},                       \tag{2.2}
+\]
+\[
+ Y_{r,m}^{q}=\Phi_{r,m}^{q}-b_{r,m}^{q}
+             =\Pi_md_rJ^{(q)}.                         \tag{2.3}
+\]
+The once-owned projected primitive trace is
+\[
+ \Theta_{r,m}^{q}
+ =\E_{f_r,G_r'}\left[
+   \left\|\Pi_mC_6(W^{(q)})\partial G_r'\right\|^2
+   \mathrel{\big|}\mathcal F_r\right],                    \tag{2.4}
+\]
+where $f_r$ is the legal future beyond reveal $r$ and $G_r'$ has exactly the
+owner covariance $\Delta\Gamma_r$.  Equivalently, the legal future average
+is $P_r$ applied to the fresh-trace expectation.  This conditioning is
+load-bearing for the R-125 bridge below.  There is no fresh trace packet at a
+same-root subvisit. Define the centered energy coordinate
+\[
+ \boxed{
+ K_{r,m}^{q}:={1\over2}\E
+       \left(\|Y_{r,m}^{q}\|^2-\Theta_{r,m}^{q}\right).}      \tag{2.5}
+\]
+
+The spatialized future insertion owner is
+\[
+\begin{split}
+ \omega_{e,r,m}:={}&\E\Rea\ip{Y_{r,m}^{e-1}}
+       {Y_{r,m}^{e}-Y_{r,m}^{e-1}}
+ +{1\over2}\E\|Y_{r,m}^{e}-Y_{r,m}^{e-1}\|^2\\
+ &-{1\over2}\E(\Theta_{r,m}^{e}-\Theta_{r,m}^{e-1}),
+ \qquad r<t_e.
+\end{split}                                             \tag{2.6}
+\]
+This is R-138 equation (6.3) after one deterministic output projection. The
+current cross, current square, and trace increment remain one signed owner.
+
+\section*{3. Signed future terminal-minus-prefix theorem}
+
+% evidence-anchor: theorem-3.1-signed-future-terminal-prefix
+\subsection*{Theorem 3.1 (endpoint-first future telescope)}
+
+Under the hypotheses of Section 2,
+\[
+ \boxed{\omega_{e,r,m}=K_{r,m}^{e}-K_{r,m}^{e-1}.}             \tag{3.1}
+\]
+Consequently
+\[
+ \boxed{
+ \sum_{e>n(r)}\omega_{e,r,m}
+   =K_{r,m}^{N}-K_{r,m}^{n(r)}.}                              \tag{3.2}
+\]
+For a collar $C\ge5$ and reveal weight
+\[
+ w_{r,m}^{(\gamma,C)}
+ =2^{2\gamma(m-r-C)}\mathbf 1_{\{m\ge r+C\}},               \tag{3.3}
+\]
+the complete weighted future branch is therefore
+\[
+ \boxed{
+ \mathfrak I_{\rm fut}^{(\gamma,C)}
+ =\sum_{r>\ell}\sum_{m\ge r+C}
+ w_{r,m}^{(\gamma,C)}
+ \bigl(K_{r,m}^{N}-K_{r,m}^{n(r)}\bigr).}                    \tag{3.4}
+\]
+No physical insertion label $k$ occurs in (3.4), and hence no factor
+$2^{2\gamma(k-r)}$ occurs.
+
+\paragraph{Proof.}
+For $x=Y_{r,m}^{e-1}$ and
+$y=Y_{r,m}^{e}-Y_{r,m}^{e-1}$, polarization gives
+\[
+ \Rea\ip{x}{y}+{1\over2}\|y\|^2
+ ={1\over2}(\|x+y\|^2-\|x\|^2).                      \tag{3.5}
+\]
+Subtract the matching primitive-trace increment. This is exactly (3.1).
+The finite sum over every $e>n(r)$ cancels each intermediate endpoint and
+proves (3.2). The weight (3.3) depends only on the fixed pair $(r,m)$, so it
+may multiply the already telescoped identity. Summing in $(r,m)$ proves
+(3.4). \hfill$\square$
+
+Equation (3.4) is invariant under a representation-preserving subdivision
+which preserves the filtration, reveal order, admissible terminal and prefix
+controls, and output resolution. The individual $\omega_{e,r,m}$ need not be
+invariant. A new root, a changed reveal order, or an enlarged admissible
+source space is a different chart and is not covered by this assertion.
+
+\section*{4. Exact weighted trace-excess target}
+
+Since $Y_{r,m}^{q}=\Pi_md_rJ^{(q)}$ is a Doob increment, its strict-past mean
+vanishes. Define the R-123 centered trace excess
+\[
+ D_{0;r,m}^{q}
+ =\E\left[
+   \Theta_{r,m}^{q}-\|Y_{r,m}^{q}\|^2
+   \mid\F_{r-1}\right].                                  \tag{4.1}
+\]
+Then
+\[
+ \boxed{K_{r,m}^{q}=-{1\over2}\E D_{0;r,m}^{q}.}            \tag{4.2}
+\]
+Combining (3.4) and (4.2) gives
+\[
+ \boxed{
+ \mathfrak I_{\rm fut}^{(\gamma,C)}
+ =-{1\over2}\sum_{r>\ell}\sum_{m\ge r+C}
+ w_{r,m}^{(\gamma,C)}
+ \E\bigl(D_{0;r,m}^{N}-D_{0;r,m}^{n(r)}\bigr).}             \tag{4.3}
+\]
+Thus the desired lower bound
+\[
+ \mathfrak I_{\rm fut}^{(\gamma,C)}
+ \ge-\eta X_{\rm src}-\zeta Y_6-C_0                         \tag{4.4}
+\]
+is exactly equivalent to
+\[
+ \boxed{
+ \sum_{r>\ell}\sum_{m\ge r+C}w_{r,m}^{(\gamma,C)}
+ \E\bigl(D_{0;r,m}^{N}-D_{0;r,m}^{n(r)}\bigr)
+ \le2\eta X_{\rm src}+2\zeta Y_6+2C_0.}                    \tag{4.5}
+\]
+No absolute value and no eventwise positive square appears in (4.5).
+
+Theorem 3.1 is an exact reduction, not a proof of (4.5). Existing R-102
+regular no-revisit estimates do not contain the weighted complete trace and
+forest. R-123 proves that the full production target is a trace-excess bound,
+but it does not establish this endpoint secant uniformly.
+
+\section*{5. Mean, future variance, forest, and low ownership}
+
+The complete R-123 packet uses $\Phi=b+Y$, not the centered $Y$ alone. The
+R-125 bridge, in the no-outer-half forest convention, is
+\[
+ \Forest_{063,q}^{\rm ad}
+ =\|\Phi_q\|^2-\Theta_q+\Var_fX_q.                   \tag{5.1}
+\]
+Orthogonality of $b_q$ and $Y_q$ gives
+\[
+ \boxed{
+ \mathcal P_{{\rm comp},q}
+ ={1\over2}\E(\Forest_{063,q}^{\rm ad}-\Var_fX_q),}          \tag{5.2}
+\]
+\[
+ \boxed{
+ K_q={1\over2}\E(
+ \Forest_{063,q}^{\rm ad}-\Var_fX_q-\|b_q\|^2).}            \tag{5.3}
+\]
+Equivalently,
+\[
+ \boxed{
+ \E D_{0,q}=\E(
+ \Var_fX_q+\|b_q\|^2-\Forest_{063,q}^{\rm ad}).}            \tag{5.4}
+\]
+The corresponding conditional statement places
+$\E[\,\cdot\mid\mathcal F_{r-1}]$ around the entire right-hand side; (5.4)
+is the scalar expected coordinate used in the weighted theorem.
+Therefore a future estimate for $K$ alone is not yet an estimate for the
+complete packet. The same weighted endpoint difference of the predictable
+mean must be returned from its low/injected owner:
+\[
+ \boxed{
+ \mathfrak I_{\rm fut}^{(\gamma,C)}
+ +{1\over2}\sum_{r,m}w_{r,m}^{(\gamma,C)}
+   \E\Delta\|b_{r,m}\|^2
+ =-{1\over2}\sum_{r,m}w_{r,m}^{(\gamma,C)}
+   \E\Delta(D_0-\|b\|^2).}                              \tag{5.5}
+\]
+By (5.1), the right side is also one half of the weighted endpoint difference
+of $\Forest_{063}^{\rm ad}-\Var_fX$. These are alternate coordinates of one
+owner. The forest is never an additional reserve.
+
+The mean is load-bearing. In the bounded R-123 six-row fixture, with
+$s=339/(8000P)$, $t=2$, and $A(\xi)=a+\beta\sin(2\xi)$,
+\[
+ \|b\|^2=16s\beta^2e^{-4},                                \tag{5.6}
+\]
+\[
+ D_0=16s\beta^2(e^{-4}-2e^{-8})>0,                       \tag{5.7}
+\]
+\[
+ \E\mathcal P_{\rm comp}=16s\beta^2e^{-8}>0,              \tag{5.8}
+\]
+but
+\[
+ \boxed{K=-{1\over2}D_0<0.}                               \tag{5.9}
+\]
+Thus positivity of the complete packet does not imply positivity of its
+future-centered coordinate. This is a coordinate counterfixture, not a
+counterexample to (4.5) for the production aggregate.
+
+The still-missing production theorem is an intertwiner matching the weighted
+$b$-difference in (5.5) with exactly one R-079 low/injected owner, without a
+root, visit, output, or refinement multiplicity.
+
+\section*{6. Why a wedge-only telescope is impossible}
+
+Let $k_e$ be the physical grade of insertion $e$ and mask only the
+reveal-FAR/insertion-near wedge by
+\[
+ \chi_e(r,m)=\mathbf 1_{\{r+C\le m<k_e+C\}}.                 \tag{6.1}
+\]
+For any endpoint sequence $K_e$ finite summation by parts gives
+\[
+\begin{split}
+ \sum_{e=a}^{N}\chi_e(K_e-K_{e-1})
+ ={}&\chi_NK_N-\chi_aK_{a-1}\\
+ &+\sum_{e=a}^{N-1}(\chi_e-\chi_{e+1})K_e.
+\end{split}                                             \tag{6.2}
+\]
+The last sum vanishes for the complete mask $\chi_e\equiv1$, but not for a
+moving wedge. If $K_e$ alternates $0,1,0,1,\ldots,0$ and the mask selects
+only rising increments, the terminal difference is zero while the masked sum
+grows linearly with the number of rises. This establishes
+\texttt{NG-2026-07-31-A13-WEDGE-ONLY-FUTURE-TELESCOPE}. It is a finite
+algebraic method no-go, not a production-action counterexample.
+
+The same obstruction appears as a cross-owner. With trace zero and
+$y_F=u$, $y_N=-u$,
+\[
+ {1\over2}\|y_F+y_N\|^2=0,                              \tag{6.3}
+\]
+while the positive far square is $\|u\|^2/2$ and the cross-retaining near
+owner is $-\|u\|^2/2$. Spending the far square separately consumes a
+cancellation which the near owner still needs. A legal positive split would
+require a new Bessel, Loewner, or causal Schur theorem for the complete
+production columns.
+
+\section*{7. Physical Riesz response: reused theorem and projector firewall}
+
+R-128--R-131 already contain the canonical physical response. It must not
+be registered again. The notation needs one firewall. Let
+$P_{\rm pred}$ be the orthogonal predictable source projection and define the
+actual synthesis
+\[
+ M_\pi=L_\pi P_{\rm pred}:\bar\cS_\pi\longrightarrow\cX.     \tag{7.1}
+\]
+If the fully recombined physical Hessian has bounded selfadjoint Riesz
+representative $B_h$, put
+\[
+ A_\pi=B_hM_\pi,\qquad H_\pi=M_\pi^*B_hM_\pi.               \tag{7.2}
+\]
+Then
+\[
+ \boxed{M_\pi^*A_\pi=A_\pi^*M_\pi=H_\pi=H_\pi^*.}           \tag{7.3}
+\]
+In ambient notation the legal identities are
+\[
+ \boxed{
+ P_{\rm pred}L_\pi^*A_\pi
+ =A_\pi^*L_\pi P_{\rm pred}=H_\pi.}                        \tag{7.4}
+\]
+The shorter formula without $P_{\rm pred}$ is valid only when $L_\pi$ already
+denotes the restricted predictable map.
+
+For orthogonal shell analysis $\cC z=(\Pi_m z)_m$, set
+$R=\cC M_\pi$ and $F=\cC A_\pi$. R-129/R-131 give
+\[
+ R^*F=F^*R=H_\pi.                                         \tag{7.5}
+\]
+Let $\{E_b\}$ be an exhaustive orthogonal resolution of the predictable
+source space, so $E_bE_{b'}=\delta_{bb'}E_b$ and $\sum_bE_b=\Id$.  Define
+\[
+ T_{mb}=M_\pi^*\Pi_mA_\pi E_b,\qquad
+ K_{mb}={1\over2}(T_{mb}+T_{mb}^*).                       \tag{7.6}
+\]
+Then
+\[
+ \boxed{H_\pi=\sum_{m,b}K_{mb}.}                           \tag{7.7}
+\]
+This is the nonduplicating forward/legal-reverse ledger. The true adjoint
+has coefficient $1/2$ and is not a second geometric owner.
+
+Finite spatial cutoff alone does not prove that $B_hM_\pi$ extends boundedly
+in the production norm. For example, multiplication by $\xi^2$ is finite on
+every bounded Gaussian cylinder but unbounded on $L^2(\gamma)$: normalized
+indicators of $\{|\xi|>n\}$ have quadratic form at least $n^2$. The missing
+analytic hypothesis is the cutoff/chart/refinement-uniform bounded forward
+response, not the algebraic reverse.
+
+\section*{8. Exact robust shifted-Douglas complement}
+
+Let $X,Y,L$ be finite-dimensional real Hilbert spaces. Let
+\[
+ \mathcal M(T)=
+ \begin{pmatrix}
+ E&-(A_0+T)/2&-B\\
+ -(A_0+T)^*/2&F&-C\\
+ -B^*&-C^*&D
+ \end{pmatrix},                                      \tag{8.1}
+\]
+where $T:Y\to X$ is the tail response and $A_0$ contains every balanced,
+near, and future-wedge cross which is not in that tail. Put
+\[
+ K=\binom BC,\qquad
+ M_{2,0}=\begin{pmatrix}E&-A_0/2\\-A_0^*/2&F\end{pmatrix}.  \tag{8.2}
+\]
+Fix a desired gap $\mu\ge0$, set $D_\mu=D-\mu\Id$, and assume
+\[
+ D_\mu\succeq0,\qquad \Ran K^*\subseteq\Ran D_\mu^{1/2}.    \tag{8.3}
+\]
+Let $D_\mu^{1/2}X_\mu=K^*$ be the Douglas reduced solution and define
+\[
+ S_\mu=M_{2,0}-\mu\Id-X_\mu^*X_\mu.                       \tag{8.4}
+\]
+
+% evidence-anchor: theorem-8.1-robust-complement
+\subsection*{Theorem 8.1 (robust complement criterion)}
+
+For $\tau\ge0$, the following are equivalent:
+\[
+ \mathcal M(T)\succeq\mu\Id
+ \quad\hbox{for every }T:Y\to X\hbox{ with }\|T\|\le\tau, \tag{8.5}
+\]
+and
+\[
+ \boxed{
+ \ip{(x,y)}{S_\mu(x,y)}
+ \ge\tau\|x\|\|y\|
+ \quad\hbox{for every }x\in X,\ y\in Y.}                  \tag{8.6}
+\]
+
+\paragraph{Proof.}
+Shift (8.1) by $\mu\Id$ and apply the finite-dimensional Douglas/Schur
+criterion to the low block. The remaining tail contribution to the reduced
+quadratic form is $-\Rea\ip{x}{Ty}$. For every $\|T\|\le\tau$,
+\[
+ |\Rea\ip{x}{Ty}|\le\tau\|x\|\|y\|,                       \tag{8.7}
+\]
+so (8.6) is sufficient. Conversely, for fixed nonzero $x,y$, the rank-one
+map sending $y/\|y\|$ to $\tau x/\|x\|$ attains the right side of (8.7).
+Thus robustness for every such $T$ implies (8.6). \hfill$\square$
+
+For one known tail $T_C$, the still weaker exact condition is simply the
+positivity of (8.4) after subtracting its symmetrized tail block. The scalar
+R-133/R-138 headroom follows as a conservative corollary. If
+\[
+ E\succeq e\Id,\quad F\succeq f\Id,\quad D\succeq d\Id,
+ \quad\|K\|\le k,\quad\|A_0\|\le a_0,                     \tag{8.8}
+\]
+then, for the zero-gap case $\mu=0$, with $\sigma=k^2/d$, the condition
+\[
+ \boxed{
+ a_0+\tau<2\sqrt{(e-\sigma)(f-\sigma)}}                    \tag{8.9}
+\]
+is sufficient when $e,f>\sigma$. It is not the weakest condition because it
+replaces the reduced low operator by the scalar bound $\sigma\Id$.
+For a prescribed gap $\mu>0$, the corresponding sufficient conditions are
+\[
+ d>\mu,\qquad
+ \sigma_\mu={k^2\over d-\mu},\qquad
+ e-\mu>\sigma_\mu,\quad f-\mu>\sigma_\mu,                  \tag{8.10}
+\]
+and
+\[
+ \boxed{
+ a_0+\tau<
+ 2\sqrt{(e-\mu-\sigma_\mu)(f-\mu-\sigma_\mu)}.}           \tag{8.11}
+\]
+
+\section*{9. Tail-only and low-only strict-gap no-go}
+
+No estimate $\|T_C\|\le\tau_C$ with $\tau_C\downarrow0$ can by itself imply
+a strict gap. Take $X=Y=L=\mathbb R$, $B=C=0$, $D=d>0$, and
+\[
+ E=e>0,\qquad F=f>0,\qquad A_0=2\sqrt{ef},\qquad T_C=0.      \tag{9.1}
+\]
+Every tail estimate holds with charge zero, but
+\[
+ \begin{pmatrix}e&-\sqrt{ef}\\-\sqrt{ef}&f\end{pmatrix}
+ \binom{\sqrt f}{\sqrt e}=0.                               \tag{9.2}
+\]
+Choosing $A_0>2\sqrt{ef}$ even destroys semidefiniteness. This establishes
+\texttt{NG-2026-07-31-A13-TAIL-ONLY-SHIFTED-DOUGLAS-HEADROOM}. It is a
+logical non-identifiability theorem, not a production counterexample.
+
+Low transversality is independent. With
+\[
+ E=F=D=1,\qquad A_0=T_C=C=0,\qquad B=1,                     \tag{9.3}
+\]
+the full matrix has kernel vector $(1,0,1)$. Hence a positive balanced
+margin cannot replace the complete low range and Schur conditions.
+
+\section*{10. Exact production-graph version}
+
+The ambient criterion may be stronger than needed. Let the actual
+source-to-channel tangent map be
+\[
+ G_{t,h}u=(X_{t,h}u,Y_{t,h}u,L_{t,h}u).                    \tag{10.1}
+\]
+Let $\mathcal M_0(C)$ contain every once-owned non-tail, balanced, wedge,
+diagonal, and low block. The tail enters only through
+$-\Rea\ip{X_{t,h}u}{T_CY_{t,h}u}$.
+
+% evidence-anchor: theorem-10.1-production-graph-robustness
+\subsection*{Theorem 10.1 (graph-robust complement)}
+
+If $\|T_C\|\le\tau_C$, then
+\[
+ \boxed{
+ \ip{G_{t,h}u}{\mathcal M_0(C)G_{t,h}u}
+ \ge\tau_C\|X_{t,h}u\|\|Y_{t,h}u\|+\mu\|u\|^2}           \tag{10.2}
+\]
+for every legal chart, Taylor point $t$, base control $h$, and source
+direction $u$ implies
+\[
+ G_{t,h}^*\mathcal M(T_C)G_{t,h}\succeq\mu\Id.             \tag{10.3}
+\]
+If robustness is required for every tail operator of norm at most $\tau_C$,
+(10.2) is also necessary.
+
+\paragraph{Proof.}
+The tail quadratic form has absolute value at most the product on the right
+of (10.2), proving sufficiency. For necessity at a fixed $u$, choose the
+rank-one tail which attains that product, exactly as in Theorem 8.1.
+\hfill$\square$
+
+The graph theorem is the smallest operator target presently visible. It
+does not demand positivity in directions which no legal production source can
+reach. It nevertheless keeps all complete owners and requires one uniform
+$\mu>0$. The affine baseline $P(0)+DP(0)[h]$ and the absolute low anchor are
+not consequences of a Hessian graph inequality and remain separate payments.
+
+\section*{11. Smallest non-circular successor}
+
+The active successor remains
+\texttt{A13-CLASSII-COMPLETE-RAW-DOOB-DIRECT-FUTURE-}
+\texttt{SPATIAL-ONE-USE-BOUND};
+R-139 narrows its future and complement coordinates rather than creating a
+new claim card.  
+The R-138 future fork may now be shortened. At one fixed collar $C_0\ge5$:
+\begin{enumerate}
+\item prove the complete weighted endpoint trace-excess secant
+\[
+ \sum_{r,m}w_{r,m}^{(\gamma,C_0)}
+ \E\Delta(D_0-\|b\|^2)
+ \le2\eta X_{\rm src}+2\zeta Y_6+2C_0',              \tag{11.1}
+\]
+with the mean/low owner, future variance, and forest each used once;
+\item identify its physical response with the R-131 canonical response and
+prove one tail norm $\|T_{\rm tail}(C_0)\|\le\tau_{C_0}$;
+\item prove the single production-graph complement inequality (10.2), rather
+than separately guessing $C_{\rm mix},C_{\rm far},c_{\rm bal},R_0,S_0,d,k$;
+\item spend the remaining strict margin on the finite-low affine baseline and
+absolute anchor exactly once.
+\end{enumerate}
+
+Equation (11.1) is the analytic burden. Theorem 3.1 removes only an
+unnecessary causal-depth tax; it does not supply the weighted secant bound.
+Theorems 8.1 and 10.1 identify the exact acceptance test; they do not supply
+positive production headroom.
+
+The entropy/Boue--Dupuis restatement is not a successor. The R-087/R-093
+CORE equality already identifies the uniform source-union lower bound with
+the open $q=10/9$ Nelson moment. Replacing (11.1) by that moment would be
+circular.
+
+\section*{12. Proof and failure map}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.17\linewidth}p{0.40\linewidth}}
+\hline
+Route & Verdict & Reusable endpoint or boundary\\
+\hline
+Complete insertion sum at fixed $(r,m)$ & proved exactly &
+$K^N_{r,m}-K^{n(r)}_{r,m}$; no $k-r$ factor\\
+Weighted future trace excess & reduced exactly &
+Equation (4.5); production estimate open\\
+Centered future $D_0$ alone & rejected &
+Restore weighted $b$, variance, forest, and low owner\\
+Wedge-only endpoint telescope & failed &
+Moving mask leaves internal variation (6.2)\\
+Positive far square as reserve & failed &
+Cross-retaining near owner cancels it\\
+Canonical physical Riesz response & already R-131 &
+Use restricted predictable synthesis $M=L P_{\rm pred}$\\
+Forward plus legal reverse & exact one owner &
+$\frac12(T+T^*)$, not two payments\\
+Tail decay creates headroom & failed &
+Balanced and low zero-gap fixtures preserve every tail bound\\
+Ambient robust complement & proved exactly &
+Theorem 8.1\\
+Production-graph complement & proved exactly as criterion &
+Theorem 10.1; uniform positive margin open\\
+Entropy restart & circular &
+Already the open $q=10/9$ Nelson objective\\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{13. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: R-139 disproves the R-138 reanchoring factor.}
+\textbf{DISMISSED.} The factor is exact for a separated insertion-FAR
+positive ledger. R-139 avoids that ledger by summing the complete signed
+future endpoint first.
+
+\item \textbf{Objection: the future branch is now proved.}
+\textbf{UPHELD AGAINST THE CLAIM.} The exact remaining estimate is (4.5),
+or the complete-owner form (11.1). No authority presently proves it
+uniformly.
+
+\item \textbf{Objection: $D_0$ is the full R-123 packet.}
+\textbf{UPHELD AGAINST THE CLAIM.} Equations (5.2)--(5.5) and the R-123
+fixture show that the predictable mean is load-bearing.
+
+\item \textbf{Objection: the R-063 forest may be added to improve the sign.}
+\textbf{UPHELD AGAINST THE CLAIM.} It is the alternative coordinate in
+(5.1), not a new reserve.
+
+\item \textbf{Objection: the wedge can be telescoped separately.}
+\textbf{UPHELD AGAINST THE CLAIM.} Equation (6.2) leaves the mask-variation
+sum; the alternating endpoint fixture makes it grow.
+
+\item \textbf{Objection: R-139 newly constructs the physical Riesz response.}
+\textbf{DISMISSED.} R-128--R-131 already do so conditionally. Section 7
+only records the predictable-projection notation and the still-open bounded
+production extension.
+
+\item \textbf{Objection: a tail estimate eventually gives strict positivity.}
+\textbf{UPHELD AGAINST THE CLAIM.} The zero-tail balanced fixture (9.1)
+has zero gap at every collar.
+
+\item \textbf{Objection: balanced positivity makes the low block harmless.}
+\textbf{UPHELD AGAINST THE CLAIM.} Fixture (9.3) has a low-induced kernel.
+
+\item \textbf{Objection: ambient positivity is necessary.}
+\textbf{DISMISSED.} Only the source graph is physical. Theorem 10.1 states
+the exact robust graph criterion, but does not claim the graph inequality.
+
+\item \textbf{Objection: the graph Hessian proves the absolute action bound.}
+\textbf{UPHELD AGAINST THE CLAIM.} The affine finite-low baseline and
+absolute anchor still require one separate payment.
+\end{enumerate}
+
+\section*{14. Executed evidence}
+
+The primary executable checks an exact five-endpoint signed telescope, the
+reveal-weight factor, the $-1/2$ trace-excess sign, forest/variance/mean
+ownership, the R-123 sign fixture, a masked-wedge counterfixture, coherent
+far/near cancellation, balanced and low zero-gap fixtures, the robust scalar
+condition, graph compression, and the predictable-projection firewall. The
+independent standard-library executable uses different endpoint, forest,
+mask, balanced, low, and robust-complement fixtures and imports no primary
+code. The integrated verifier reruns both, checks authority and public
+surface pins, rebuilds the PDF deterministically, performs text/security
+checks, and renders every page through Poppler.
+
+\section*{15. Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-SIGNED-FUTURE-ENDPOINT-GRAPH-
+  COMPLEMENT-BOUNDARY.
+Ledger ID: R-139.
+Precise statement: Theorems 3.1, 8.1, and 10.1; exact trace-excess and
+  owner identities (4.3)-(5.5); masked-wedge and tail-only boundaries.
+Scope: fixed finite cutoff and positive floor; fixed temporally faithful
+  chart; recombined visits/equal-time children; exhaustive orthogonal
+  deterministic output resolution; legal R-104 heat; finite-dimensional
+  operator spaces; bounded canonical physical response only where stated.
+Dependencies: A1; R-063, R-079, R-087, R-093, R-102, R-104, R-123,
+  R-125, R-128, R-129, R-131, R-133, R-135, R-136, R-137, R-138.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_signed_future_endpoint_graph_
+  complement_boundary_verify.py
+Expected output: R-139 integrated PASS; primary, independent, note/PDF,
+  manifest, exploration, negative, authority, and public-surface gates pass.
+Falsification gate: any failed endpoint telescope, sign or factor-one-half,
+  mean/variance/forest incidence, mask variation, coherent cross, robust
+  complement equivalence, predictable projection, graph restriction,
+  authority/hash, PDF, or public-surface check.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no production weighted trace-excess secant,
+  complete mean/low intertwiner, bounded uniform response, tail norm,
+  positive graph complement margin, low/matching theorem, absolute anchor,
+  A13 gate, OVERLAP_src, Nelson estimate, removal, interacting measure,
+  Sector-A closure, or T5-T7 claim follows.
+Next required action: at one fixed collar prove the complete-owner weighted
+  Delta(D0-||b||^2) production estimate, its canonical tail response, and
+  the single strict graph-complement inequality; then pay the affine low
+  baseline and absolute anchor once before invoking R-129/R-093.
+\end{verbatim}
+
+\endgroup

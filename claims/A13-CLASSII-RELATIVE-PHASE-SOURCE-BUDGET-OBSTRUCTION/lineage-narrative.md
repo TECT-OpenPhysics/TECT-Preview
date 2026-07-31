@@ -977,6 +977,29 @@ endpoint theorem.
     total and genuinely positive collar headroom. Both A13 gates and Sector A
     remain open at T4.
 
+67. **Signed future endpoint telescope and production-graph robust-complement
+    boundary.** R-139 sums all complete future insertion owners before the
+    reveal weight is applied.  Every owner is `K_e-K_(e-1)`, so the insertion
+    sequence telescopes exactly to `K_N-K_prefix`; the physical insertion
+    shell and R-138 reveal-to-insertion factor disappear.  With
+    `K=-E D0/2`, the live analytic target is one weighted terminal-minus-prefix
+    trace-excess bound.  The R-125/R-063 bridge shows that the corresponding
+    mean/low endpoint must be restored once and that future variance and the
+    forest are alternate complete-owner coordinates, not disposable or extra
+    reserves.  A moving wedge mask leaves an internal Abel-variation term,
+    while a coherent far/near fixture forbids separate payment of the positive
+    far square.  The exact shifted-Douglas theorem identifies the robust
+    ambient complement and the still weaker pullback needed only on the actual
+    production tangent graph.  Saturated balanced and low fixtures prove that
+    arbitrarily small tail cannot manufacture strict headroom.  The canonical
+    physical Riesz response is reused from R-128/R-129/R-131 with its
+    predictable-projection firewall.  The live successor is therefore to
+    prove the weighted complete-owner trace-excess secant, including the
+    mean/low coordinate once, and a positive non-tail production-graph margin
+    at one fixed collar before inserting the tail and certifying low,
+    matching, strict-gap, and anchor data. Both A13 gates and Sector A remain
+    open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

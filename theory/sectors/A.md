@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-31-A13-WEDGE-ONLY-FUTURE-TELESCOPE | a moving wedge mask leaves internal endpoint variation |  |
+| NG-2026-07-31-A13-TAIL-ONLY-SHIFTED-DOUGLAS-HEADROOM | a vanishing collar tail does not create a strict gap |  |
 | NG-2026-07-31-A13-CHRONOLOGY-ONLY-SPATIAL-GRADE | temporal precedence is not a Fourier support theorem |  |
 | NG-2026-07-31-A13-BARE-LAST-INSERTION-R135-REANCHORING | future reveal weights cannot be relabelled for free |  |
 | NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY | post-heat means do not determine raw future variance |  |

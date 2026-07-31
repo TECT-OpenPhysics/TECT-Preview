@@ -4744,3 +4744,30 @@ T5--T7 promotion remain open. Tier stays T4.
   positive headroom, low/matching/gap/anchor data, both A13 gates,
   `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
   open at T4.
+- 2026-07-31: Registered
+  `A13-CLASSII-SIGNED-FUTURE-ENDPOINT-GRAPH-COMPLEMENT-BOUNDARY` (R-139) as
+  a scoped analytic/exact/executed advance and route correction.  At fixed
+  reveal/output coordinates, each complete future insertion owner is exactly
+  `K_e-K_(e-1)`, so summing all future insertions before applying the reveal
+  weight gives `K_N-K_prefix`.  The insertion shell and the R-138 factor
+  `2^(2 gamma(k-r))` disappear without replacing signed owners by positive
+  cells.  Since `K=-E D0/2`, the future lower bound becomes one weighted
+  terminal-minus-prefix trace-excess upper bound with factor two.  The
+  complete R-125/R-063 coordinate is
+  `(Forest_063^ad-Var_f X-||b||^2)/2`, so the mean/low reserve must be returned
+  once and the forest is not an extra reserve.  Exact alternating-mask and
+  coherent far/near fixtures register the wedge-only telescope no-go.  The
+  shifted-Douglas elimination gives the exact robust ambient condition and
+  its weaker production-graph pullback; balanced and low kernel fixtures show
+  that tail decay alone cannot create a strict gap.  R-128/R-129/R-131 supply
+  the already registered physical Riesz factorization, with the predictable
+  projection and exhaustive orthogonal source resolution retained.  The
+  hostile audit corrected the legal-future trace conditioning, expected-D0
+  typing, positive-gap scalar denominator, source-resolution hypothesis,
+  actual reveal weight, derived fixture values, projected-adjoint arithmetic,
+  and assertion accounting.  `EXP-000552--EXP-000558` preserve the successful,
+  failed, corrected, and successor routes; two method no-gos are separately
+  registered.  The production weighted trace-excess estimate, mean/low owner
+  intertwiner, positive graph margin, low/matching/gap/anchor data, both A13
+  gates, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A
+  remain open at T4.

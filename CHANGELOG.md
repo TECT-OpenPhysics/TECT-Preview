@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-139 signed future endpoint and graph-complement checkpoint] - 2026-07-31
+
+Registered R-139. The complete signed future insertion sum telescopes before reveal weighting, removing the insertion-shell reanchoring factor and reducing the open future estimate to one weighted terminal-minus-prefix complete-owner trace-excess bound. Mean, future variance, forest, and low ownership are repaired. A moving wedge mask and tail-only strict-headroom inference are formally rejected. The exact robust ambient and production-graph complement criteria are proved; the production weighted estimate, positive graph margin, both A13 gates, Nelson, and Sector-A closure remain open at T4.
+
 ## [A13 R-138 scale-graded direct and signed-future reanchoring boundary] - 2026-07-31
 
 Registered R-138 as a scoped T4 conditional analytic/exact/executed advance. Under explicit spatial-grade, legal commutation, and complete-owner hypotheses, the direct raw R-087 paracomposition has six-row factor 3/(40P) and margins 1/15, 4/15, and 16/15 at rho=2/5, s=2/3. A smooth rational high-prefix fixture disproves chronology-only spatial grading. The future R-079 current--trace block has an exact signed fixed-chart last-insertion telescope; positive-square replacement loses cancellation. Reveal-to-insertion reanchoring costs 2^(2 gamma(k-r)), equals 128 at gap six, and leaves a signed future near wedge. Sharp scalar charge and conditional collar criteria isolate the remaining production task. The production scale-grade/owner intertwiner, deterministic one-use total, signed near/balanced and forest-current bounds, positive headroom, both A13 gates, Nelson, and Sector A remain open.
