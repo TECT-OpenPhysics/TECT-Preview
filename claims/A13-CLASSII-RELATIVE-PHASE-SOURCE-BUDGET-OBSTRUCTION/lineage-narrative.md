@@ -912,6 +912,28 @@ endpoint theorem.
     covariance and joint-spatial `q` ledger, followed by one finite-collar
     headroom check. Both A13 gates and Sector A remain open at T4.
 
+64. **Common-heat replica variance, raw sequential owners, and the post-heat
+    boundary.** R-136 separates current-root Doob centring from the R-125
+    future residual. Conditional centring contracts after deterministic or
+    retained-measurable operators, but the literal deterministic-target-heat
+    R-088 post-heat atom is already retained-field measurable and therefore
+    has zero future residual. A two-point fixture formally rules out recovery
+    of raw future variance from that conditional mean alone. Keeping the heat
+    coordinate common and replicating only the legal future gives the exact
+    replica variance and owner-half formulas. Before future heat, the complete
+    raw owner telescopes separately in each replica only with the complete low
+    endpoint and replica-specific later feedback retained. The original
+    forward Doob/OU coordinate is reused, not reclaimed from R-102, and the
+    R-079 two-root fixture shows that freezing future feedback deletes an
+    exact energy correction three. Ambient product PSD is only a sufficient
+    test after restriction to an abstract tangent graph, but that observation
+    proves no production graph inequality. The live successor is the common-
+    heat raw-current sequential one-use bound: construct every complete raw
+    reveal atom, prove its projected spatial estimate and a once-owned
+    deterministic nonnegative `q_k` ledger, and then certify finite-collar
+    headroom plus complete low/matching/gap/anchor data. Both A13 gates and
+    Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

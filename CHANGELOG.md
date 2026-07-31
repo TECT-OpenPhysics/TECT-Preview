@@ -5,6 +5,18 @@ not pillar counts.
 
 ---
 
+## [A13 R-136 random-operator L2-admissibility correction] - 2026-07-31
+
+Append-only pre-release scope correction: the exact random-operator commutator defect is registered only for admissible Q whose displayed products and conditional expectations are square-integrable. Mere Q in L1 is insufficient because it does not ensure QZ is integrable for Z in L2. EXP-000539 corrects the broader phrase in EXP-000533. The deterministic and retained-measurable bounded contraction, four-atom fixture, post-heat no-go, replica identity, raw telescope, counts, tier, gates, and successor are unchanged.
+
+## [A13 R-136 structured evidence-reference correction] - 2026-07-31
+
+Append-only metadata correction for the preceding R-136 event: this event pins T-050, EXP-000533 through EXP-000538, the formal post-heat mean-only no-go, the final manifest, source note, deterministic eleven-page PDF, and all three verification scripts in structured searchable fields. It changes no theorem statement, scope, tier, assertion count, or open gate.
+
+## [A13 R-136 common-heat replica raw sequential owner boundary] - 2026-07-31
+
+Registered the exact conditional-centring and random-operator-defect boundary, the deterministic post-heat zero-residual and mean-only variance-recovery no-go, the common-heat replica owner identities, and the complete raw per-replica endpoint telescope with recomputed feedback. Forward Doob and OU are reused from prior authority; the R-079 connection correction remains load-bearing and graph compression is only an abstract route boundary. EXP-000533 through EXP-000538 record the successful, failed, reused, conditional, and successor routes. Primary 71/71, independent 71/71, integrated 225/225, aggregate 367/367, and deterministic eleven-page PDF QA pass. Tier remains T4; both A13 gates and Sector A remain open.
+
 ## [A13 R-135 variance-retained sequential atoms and directed-refinement boundary] - 2026-07-31
 
 Registered the exact complete-owner variance firewall and the complete-low R-123 trace-excess target; proved direct R-087 spatial transfer to the uncentred R-088 sequential atom, a conditional nonorthogonal variance sum, and the exact self-to-sequential homotopy; registered scaled covariance-envelope erasure and refinement-uniform terminal-ellipticity no-gos; retained the existing extracted-Z6 no-go; identified fixed-chart and shell-weighted successors. Primary 69/69, independent 73/73, integrated 142/142, aggregate 284/284. The claim remains T4; legal centring, the owner intertwiner, once-owned q ledger, full signed trace-excess estimate, headroom, A13, and Sector A remain open.

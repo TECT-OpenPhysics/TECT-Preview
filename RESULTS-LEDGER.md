@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-136](#r-136) | Common-heat replica variance, raw sequential owners, and the post-heat boundary | Scoped T4 analytic/exact/executed filtration and owner advance. Conditional centring contracts after deterministic or retained-measurable operators, but the literal deterministic-target-heat R-088 post-heat atom is already retained-field measurable and has zero R-125 future residual. Equal post-heat conditional means can have raw future variances zero and one, so mean-only recovery is formally rejected. Keeping the heat coordinate common while conditionally replicating only the legal future gives `Var_f(X_o)=E_(f,f')||X_o^f-X_o^(f')||^2/2` and `P_comp,o=Forest_063,o^ad/2-E_(f,f')||X_o^f-X_o^(f')||^2/4`. The complete raw owner telescopes pathwise in each replica when the low endpoint and all replica-specific later feedback are retained. Forward Doob/OU transposition is reused from general martingale theory and R-102, not reclaimed. Ambient product-space PSD is sufficient but not necessary on an abstract production-tangent graph; this is a route clarification only. The raw projected spatial atom estimate, once-owned `q_k` sum, forest-current lower bound, headroom, low/matching/gap/anchor data, both A13 gates, Nelson, and Sector A remain open |
 | [R-135](#r-135) | Variance-retained trace excess, sequential Cartan spatial transfer, and terminal-refinement boundary | Scoped T4 analytic/exact/executed advance and route correction. The exact R-125 owner retains one half of the adapted forest minus one half of the conditional future variance; the correct aggregate target is the complete-low R-123 trace excess. Replacing the variance rebate by the R-134 scalar norm envelope loses a load-bearing cancellation and is unbounded below on the scaled one-owner R-125 fixture. The R-087 three-channel spatial proof reruns directly on the uncentred R-088 sequential atom, with production-exponent margins `1/15`, `4/15`, and `16/15`. A legally centred variance-retained atom hypothesis would sum at `gamma=7/12` with square constant `0.658881625872614...`, but the centred owner intertwiner and once-owned `q_k^seq` sum remain open. The exact self/sequential homotopy gives no termwise domination, and the accepted extracted-`Z^6` majorant no-go does not refute the exact atom. No nonzero labelled final source block remains independent and uniformly six-real elliptic over the full R-093 directed refinement union; the successor must use fixed-chart aggregate smoothing or a shell-weighted covariance/spatial ledger. Headroom, both A13 gates, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-134](#r-134) | Terminal Gaussian jet threshold, floor-stable fixed-law action, and conditional gamma-7/12 aggregate-collar boundary | Scoped T4 analytic/exact/executed advance and adversarial correction. Complete Pauli summation gives the sharp floor residual `||C6e-C60||<=alpha sqrt(c1 e)|v|`, `alpha^2 c1=3/(320P)`. After exhaustive clusters are placed in one direct sum under each root-spatial owner, R-125 gives the root/visit-free action lower bound `Forest_063/2-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2/2`; separate payment is cutoff-divergent. Pointwise six-real ellipticity gives exact negative moments and D2/D3 quotient-jet costs, while the embedded Pauli D4 jet diverges logarithmically on a fixed cone. Pointwise ellipticity alone does not imply spatial fractional control. The gamma-7/12 geometric constants are exact only after assuming the missing joint spatial data, owner-preserving R-087-to-R-088 atom transfer, and one-use ledger. Headroom, low data, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-133](#r-133) | Affine Gaussian score transfer, predictable-feedback boundary, polynomial-response collar, and positive-gamma aggregate criterion | Scoped T4 analytic/exact/executed advance and route correction. A genuinely affine conditional Gaussian block has an exact derivative-free common-heat Hermite-score representation for the complete current--trace owner, with one-copy cost `D_Gamma` and paired cost `4D_Gamma`; common heat scores only the synchronous replica direction. The exact predictable-chart score is `delta^2(sym(a tensor b))-delta(d)`, but bounded triangular tanh feedback makes its inverse-Jacobian cost diverge under the currently declared finite-energy data. R-083 gives a conditional polynomial physical-response zero only at safe collar `C=4` after root-tower and covariance/forest matching. The exact periodic rational boundary layer scales as `b^7 e^(-3/2)` at fourth order, so the existing sixth-amplitude `gamma=4` route fails without constituting a literal production `B_4^out` counterexample. The exact low-coupled acceptance threshold is `a<2sqrt((e-k^2/d)(f-k^2/d))`; any proved positive-gamma aggregate tail can fit fixed headroom, but the one-use `gamma=7/12` tail, collar-uniform non-tail headroom, production constants, low data, matching energy, anchor, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -154,6 +155,67 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-136"></a>
+### R-136 -- Common-heat replica variance, raw sequential owners, and the post-heat boundary
+
+**Result ID.**
+A13-CLASSII-COMMON-HEAT-REPLICA-RAW-SEQUENTIAL-OWNER-BOUNDARY.
+
+**Conditional-centering and post-heat boundary.**  If `P_H` is conditional
+expectation and `C_H=I-P_H`, then every deterministic bounded operator, and
+every bounded `H`-measurable operator, satisfies
+`E||L C_H Y||^2=E||LY||^2-E||P_H(LY)||^2<=E||LY||^2`.  For an admissible
+random operator whose displayed products and conditional expectations are
+square-integrable, the exact defect is
+`C_H(QZ)-Q C_H Z=Q P_H Z-P_H(QZ)`, so no commutation may be assumed without
+an extra hypothesis.  The literal R-088 atom uses deterministic target heat,
+retained `w_j`, and predictable `a_k`, hence is `F_j`-measurable and its R-125
+future residual is exactly zero.  This does not make the raw future variance
+zero: under a trivial retained sigma-field, `X_0=0` and a future Rademacher
+`X_1=Y` have the same conditional mean but variances zero and one.
+
+**Common-heat replica owner and raw telescope.**  Keep the target-heat Hilbert
+coordinate, retained variables, output family, and trace covariance common;
+conditionally replicate only the legal future.  For every complete recombined
+owner,
+`Var_f(X_o)=E_(f,f')||X_o^f-X_o^(f')||^2/2` and therefore
+`P_comp,o=Forest_063,o^ad/2-E_(f,f')||X_o^f-X_o^(f')||^2/4`.
+Before future heat, fix a finite prefix `k_0<K`, recompute every later control
+inside its own replica, and define each sequential atom by consecutive endpoint
+differences.  Then the complete owner, including its low endpoint, telescopes
+pathwise in each replica; subtracting the two telescopes gives the exact raw
+replica-difference coordinate with no conditional-expectation commutator.
+Freezing later feedback changes the endpoint and is not a legal substitute.
+
+**Prior coordinate and graph route.**  Forward-filtration Doob orthogonality
+and the current-root OU resolvent rewrite the same future variance by reveal
+coordinates.  Generic Doob transposition is old, and R-102 already uses its
+cross-Doob/Fubini form in a narrower regular rational class, so R-136 claims no
+novelty for transposition itself.  The R-079 fixture
+`J_0=0`, `J_1=xi_1`, `J_*=2xi_1+xi_2` has physical-prefix energy two and
+fixed-terminal energy five; the omitted cross-plus-square connection is three.
+Finally, positivity of the full R-127 product matrix is only sufficient after
+restriction to a tangent graph: `Tu=(u,u,u)` and
+`M=diag(1,1,-1)` give `T^*MT=1` although `M` is indefinite.  This abstract
+fixture does not prove a production graph inequality or falsify R-127/R-129.
+
+**Where proved.**  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`,
+the R-136 note, primary and non-importing independent executables, integrated
+verifier, manifest, JSON artefacts, `EXP-000533--EXP-000539`, and
+`NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY`.
+
+**Reuse scope.**  Fixed finite cutoff and positive floor; deterministic R-088
+target heat for the post-heat degeneracy; one legal retained sigma-field per
+owner; common target heat in the replica Hilbert coordinate; recombined
+same-root visits; exhaustive orthogonal output clusters; and finite raw paths
+whose feedback is recomputed separately in both replicas.
+
+**Tier.**  T4 remains T4.  The production raw spatial intertwiner, once-owned
+`q_k` ledger, signed forest-current lower bound, positive finite-collar
+headroom, complete low and matching data, strict gap, absolute anchor, both
+A13 gates, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A
+closure remain open.
 
 <a id="r-135"></a>
 ### R-135 -- Variance-retained trace excess, sequential Cartan spatial transfer, and terminal-refinement boundary

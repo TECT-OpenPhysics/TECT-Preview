@@ -1,0 +1,531 @@
+{
+  "assertions": {
+    "failed": 0,
+    "passed": 71,
+    "rows": [
+      {
+        "actual": "((Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)))",
+        "expected": "((Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)))",
+        "group": "matrix",
+        "name": "P0 symmetric",
+        "status": "PASS"
+      },
+      {
+        "actual": "((Fraction(1, 2), Fraction(1, 2), Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(1, 2), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 2), Fraction(1, 2)))",
+        "expected": "((Fraction(1, 2), Fraction(1, 2), Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(1, 2), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 2), Fraction(1, 2)))",
+        "group": "matrix",
+        "name": "P1 symmetric",
+        "status": "PASS"
+      },
+      {
+        "actual": "((Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)))",
+        "expected": "((Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)))",
+        "group": "matrix",
+        "name": "P0 idempotent",
+        "status": "PASS"
+      },
+      {
+        "actual": "((Fraction(1, 2), Fraction(1, 2), Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(1, 2), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 2), Fraction(1, 2)))",
+        "expected": "((Fraction(1, 2), Fraction(1, 2), Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(1, 2), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 2), Fraction(1, 2)))",
+        "group": "matrix",
+        "name": "P1 idempotent",
+        "status": "PASS"
+      },
+      {
+        "actual": "((Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)))",
+        "expected": "((Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(1, 4), Fraction(1, 4)))",
+        "group": "matrix",
+        "name": "nested projections",
+        "status": "PASS"
+      },
+      {
+        "actual": "((Fraction(1, 4), Fraction(1, 4), Fraction(-1, 4), Fraction(-1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(-1, 4), Fraction(-1, 4)), (Fraction(-1, 4), Fraction(-1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(-1, 4), Fraction(-1, 4), Fraction(1, 4), Fraction(1, 4)))",
+        "expected": "((Fraction(1, 4), Fraction(1, 4), Fraction(-1, 4), Fraction(-1, 4)), (Fraction(1, 4), Fraction(1, 4), Fraction(-1, 4), Fraction(-1, 4)), (Fraction(-1, 4), Fraction(-1, 4), Fraction(1, 4), Fraction(1, 4)), (Fraction(-1, 4), Fraction(-1, 4), Fraction(1, 4), Fraction(1, 4)))",
+        "group": "matrix",
+        "name": "current increment idempotent",
+        "status": "PASS"
+      },
+      {
+        "actual": "((Fraction(1, 2), Fraction(-1, 2), Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1), Fraction(-1, 2), Fraction(1, 2)))",
+        "expected": "((Fraction(1, 2), Fraction(-1, 2), Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1), Fraction(-1, 2), Fraction(1, 2)))",
+        "group": "matrix",
+        "name": "future residual idempotent",
+        "status": "PASS"
+      },
+      {
+        "actual": "((Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)))",
+        "expected": "((Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)))",
+        "group": "matrix",
+        "name": "future residual kills retained range",
+        "status": "PASS"
+      },
+      {
+        "actual": "((Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)))",
+        "expected": "((Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)))",
+        "group": "matrix",
+        "name": "current and future ranges orthogonal",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(-1, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(1, 1))",
+        "expected": "(Fraction(-1, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(1, 1))",
+        "group": "filtration",
+        "name": "P1 x=x",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))",
+        "expected": "(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))",
+        "group": "filtration",
+        "name": "P1 y=0",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(-1, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(1, 1))",
+        "expected": "(Fraction(-1, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(1, 1))",
+        "group": "filtration",
+        "name": "d1 x=x",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))",
+        "expected": "(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))",
+        "group": "filtration",
+        "name": "future x=0",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(-1, 1), Fraction(1, 1), Fraction(-1, 1), Fraction(1, 1))",
+        "expected": "(Fraction(-1, 1), Fraction(1, 1), Fraction(-1, 1), Fraction(1, 1))",
+        "group": "filtration",
+        "name": "future y=y",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "centring",
+        "name": "projected energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "centring",
+        "name": "retained energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "centring",
+        "name": "centred energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "centring",
+        "name": "Pythagoras",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(-1, 2), Fraction(-1, 2), Fraction(-1, 2), Fraction(-1, 2))",
+        "expected": "(Fraction(-1, 2), Fraction(-1, 2), Fraction(-1, 2), Fraction(-1, 2))",
+        "group": "commutator",
+        "name": "exact random-projection defect",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4",
+        "expected": "1/4",
+        "group": "commutator",
+        "name": "defect square",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(-13, 10), Fraction(-13, 10), Fraction(17, 10), Fraction(17, 10))",
+        "expected": "(Fraction(-13, 10), Fraction(-13, 10), Fraction(17, 10), Fraction(17, 10))",
+        "group": "post_heat",
+        "name": "future expectation fixes atom",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))",
+        "expected": "(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))",
+        "group": "post_heat",
+        "name": "future-centred atom is zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "9/4",
+        "expected": "9/4",
+        "group": "post_heat",
+        "name": "current-root part survives",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))",
+        "expected": "(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))",
+        "group": "mean_only_nogo",
+        "name": "means agree",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "mean_only_nogo",
+        "name": "first variance",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "mean_only_nogo",
+        "name": "second variance",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(1, 1), Fraction(2, 1))",
+        "expected": "(1, 2)",
+        "group": "replica",
+        "name": "conditional mean",
+        "status": "PASS"
+      },
+      {
+        "actual": "7",
+        "expected": "7",
+        "group": "replica",
+        "name": "second moment",
+        "status": "PASS"
+      },
+      {
+        "actual": "5",
+        "expected": "5",
+        "group": "replica",
+        "name": "mixed replica equals mean square",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "replica",
+        "name": "replica-difference variance",
+        "status": "PASS"
+      },
+      {
+        "actual": "7",
+        "expected": "7",
+        "group": "replica",
+        "name": "second moment split",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "group": "owner",
+        "name": "forest coordinate",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "owner",
+        "name": "owner coordinate",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "owner",
+        "name": "replica owner identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "((Fraction(0, 1), Fraction(5, 1)), (Fraction(8, 1), Fraction(13, 1)))",
+        "expected": "((Fraction(0, 1), Fraction(5, 1)), (Fraction(8, 1), Fraction(13, 1)))",
+        "group": "raw_telescope",
+        "name": "endpoint evaluations",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(0, 1), Fraction(5, 1))",
+        "expected": "(0, 5)",
+        "group": "raw_telescope",
+        "name": "minus endpoint",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(8, 1), Fraction(13, 1))",
+        "expected": "(8, 13)",
+        "group": "raw_telescope",
+        "name": "plus endpoint",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(8, 1), Fraction(8, 1))",
+        "expected": "(8, 8)",
+        "group": "raw_telescope",
+        "name": "replica difference",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(2, 1), Fraction(2, 1))",
+        "expected": "(2, 2)",
+        "group": "raw_telescope",
+        "name": "low difference is retained",
+        "status": "PASS"
+      },
+      {
+        "actual": "{-1: (Fraction(3, 1), Fraction(8, 1)), 1: (Fraction(5, 1), Fraction(10, 1))}",
+        "expected": "different from recomputed feedback",
+        "group": "raw_telescope",
+        "name": "frozen feedback changes endpoints",
+        "status": "PASS"
+      },
+      {
+        "actual": "14",
+        "expected": "14",
+        "group": "doob",
+        "name": "owner total",
+        "status": "PASS"
+      },
+      {
+        "actual": "14",
+        "expected": "14",
+        "group": "doob",
+        "name": "reveal total",
+        "status": "PASS"
+      },
+      {
+        "actual": "14",
+        "expected": "14",
+        "group": "doob",
+        "name": "transpose equality",
+        "status": "PASS"
+      },
+      {
+        "actual": "16",
+        "expected": "!=10",
+        "group": "doob",
+        "name": "false scalar owner merge rejected",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(-1, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(1, 1))",
+        "expected": "(Fraction(-1, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(1, 1))",
+        "group": "feedback",
+        "name": "first physical increment",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(-1, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(1, 1))",
+        "expected": "(Fraction(-1, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(1, 1))",
+        "group": "feedback",
+        "name": "future connection increment",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(-2, 1), Fraction(-2, 1), Fraction(2, 1), Fraction(2, 1))",
+        "expected": "(Fraction(-2, 1), Fraction(-2, 1), Fraction(2, 1), Fraction(2, 1))",
+        "group": "feedback",
+        "name": "terminal first increment splits",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "feedback",
+        "name": "physical energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "5",
+        "expected": "5",
+        "group": "feedback",
+        "name": "terminal energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "3",
+        "group": "feedback",
+        "name": "connection correction",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "ou",
+        "name": "chaos 1 factor",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "ou",
+        "name": "chaos 2 factor",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "ou",
+        "name": "chaos 3 factor",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "ou",
+        "name": "chaos 7 factor",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.031249999999999604",
+        "expected": ">0",
+        "group": "ou",
+        "name": "smooth connection is nonzero",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(1, 1), Fraction(1, 1), Fraction(-1, 1))",
+        "expected": "minimum -1",
+        "group": "graph",
+        "name": "ambient form indefinite",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "graph",
+        "name": "abstract compressed form positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "((Fraction(1, 1), Fraction(1, 1), Fraction(-1, 1)), Fraction(1, 1))",
+        "expected": "indefinite/positive",
+        "group": "graph",
+        "name": "ambient PSD not necessary",
+        "status": "PASS"
+      },
+      {
+        "actual": "151/884",
+        "expected": "151/884",
+        "group": "taylor",
+        "name": "quadratic Taylor equality",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/20",
+        "expected": "3/20",
+        "group": "taylor",
+        "name": "source margin",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/40",
+        "expected": "3/40",
+        "group": "taylor",
+        "name": "sextic margin",
+        "status": "PASS"
+      },
+      {
+        "actual": "5/9",
+        "expected": "5/9",
+        "group": "taylor",
+        "name": "force completion",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "raw_spatial_intertwiner",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "one_use_q_ledger",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "signed_forest_current_bound",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "positive_headroom",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "complete_low_anchor",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "a13_gate_closed",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "nelson",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "sector_a_closed",
+        "status": "PASS"
+      },
+      {
+        "actual": "71",
+        "expected": "71",
+        "group": "contracts",
+        "name": "independent assertion count",
+        "status": "PASS"
+      }
+    ],
+    "total": 71
+  },
+  "computed": {
+    "feedback_correction": "3",
+    "graph_form": "1",
+    "matrix_rank_surrogates": {
+      "D1_trace": "1",
+      "P0_trace": "1",
+      "P1_trace": "2",
+      "future_trace": "2"
+    },
+    "owner_reveal_total": "14",
+    "owner_trace_excess": "1",
+    "replica_pair_difference": "4",
+    "replica_variance": "2"
+  },
+  "result_id": "A13-CLASSII-COMMON-HEAT-REPLICA-RAW-SEQUENTIAL-OWNER-BOUNDARY",
+  "schema": "tect/a13-common-heat-replica-raw-sequential-owner-boundary-independent/1.0",
+  "scope": {
+    "imports_primary": false,
+    "independent_standard_library": true,
+    "production_one_use_q_ledger": false,
+    "production_raw_spatial_intertwiner": false,
+    "sector_a_closed": false
+  },
+  "status": "PASS",
+  "version": "1.0.0"
+}

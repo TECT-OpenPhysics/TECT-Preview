@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY](#ng-2026-07-31-a13-postheat-mean-only-future-variance-recovery) | recover the R-125 future variance by future-centring the literal post-heat R-088 atom, or from that atom's conditional mean alone | the post-heat atom is already retained-field measurable and has zero future residual; raw currents `X_0=0` and `X_1=Y` have the same post-heat conditional mean zero but future variances zero and one |
 | [NG-2026-07-31-A13-COVARIANCE-ENVELOPE-REBATE-ERASURE](#ng-2026-07-31-a13-covariance-envelope-rebate-erasure) | lower-bound the R-134 scalar surrogate `Forest_063-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2` by source and sextic budgets after replacing the exact conditional variance | the scaled one-owner R-125 Pauli fixture has zero expected forest but `Q_e=nu^2(sqrt(339/(2000P))+sqrt(3e/(320P)))^2`, so the surrogate tends to minus infinity although the exact owner retains the compensating future-variance coordinate |
 | [NG-2026-07-31-A13-REFINEMENT-UNIFORM-LAST-BLOCK-ELLIPTICITY](#ng-2026-07-31-a13-refinement-uniform-last-block-ellipticity) | reserve the final independent temporal source increment as a uniformly full-rank six-real Gaussian over every R-093 directed refinement | a representation-preserving split may give the last block covariance `epsilon I_6` with unchanged total covariance `I_6`; more generally the physical tail covariance tends to zero as the last cut approaches one, so no positive refinement-uniform eigenvalue floor survives |
 | [NG-2026-07-31-A13-ELLIPTIC-GAUSSIAN-D4-FLOOR-UNIFORMITY](#ng-2026-07-31-a13-elliptic-gaussian-d4-floor-uniformity) | use a uniformly elliptic six-real terminal Gaussian to obtain a density-floor-uniform L2 fourth rational quotient jet | for the embedded Pauli generator S3=diag(1,1,-1,-1,0,0), the positive-floor axis derivative is 24r(e+2r^2)/(e+r^2)^3 and is at least 9/r^3 for r>=sqrt(e); continuity supplies a fixed open cone, so the squared six-dimensional Gaussian integral diverges logarithmically |
@@ -208,6 +209,43 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-07-31-a13-postheat-mean-only-future-variance-recovery"></a>
+### NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY -- post-heat means do not determine raw future variance
+
+**Failure mode.**  Commute future conditional centring through the deterministic
+spatial and current-root OU operators in the literal R-088 post-heat atom, or
+otherwise recover the R-125 future-variance rebate from that atom's retained
+conditional mean alone.
+
+At root `j`, R-088 uses the coefficient
+`Phi_(A,j)=P_(Sigma_(j+1:J))F_A`, the retained current
+`w_j=U_(j-1)+g_j`, and predictable controls `a_k`, `k<=j`.  Its complete
+three-channel atom is therefore `F_j`-measurable.  Deterministic spatial
+projections and the current-root OU semigroup preserve that measurability, so
+`(I-E_f) Pi_m P_t^(j) T_(A,j,k)=0`.  This is not the R-125 raw future
+variance.  With a trivial retained sigma-field and a future Rademacher `Y`, the
+two raw currents `X_0=0` and `X_1=Y` have the same conditional mean zero while
+`Var_f(X_0)=0` and `Var_f(X_1)=1`.  Hence no rule using only the post-heat
+conditional mean, or deterministic transforms of it, recovers future variance
+for every raw current.
+
+**Evidence.**  R-136 proof-note Sections 2--5; exact primary 71/71 and
+non-importing independent 71/71 checks; integrated 225/225 verifier; aggregate
+367/367; the
+four-atom conditional-projection and two-point mean-only fixtures.
+
+**Consequence.**  This is a method no-go, not a counterexample to
+R-088, R-125, a raw-current lift, or the production action.  The legal repair
+is to retain the common heat and replicate the unaveraged future, telescope the
+complete raw owner separately in each replica, and only then apply spatial and
+root-OU estimates.  Later feedback must be recomputed in each replica; freezing
+it deletes the load-bearing R-079 connection channel.
+
+**Revisit condition.**  Revisit mean-only recovery only if an additional
+sufficient statistic is proved to determine the complete conditional second
+moment.  Otherwise continue with
+`A13-CLASSII-COMMON-HEAT-REPLICA-RAW-CURRENT-SEQUENTIAL-ONE-USE-BOUND`.
 
 <a id="ng-2026-07-31-a13-covariance-envelope-rebate-erasure"></a>
 ### NG-2026-07-31-A13-COVARIANCE-ENVELOPE-REBATE-ERASURE -- a scalar norm envelope destroys the future-variance rebate

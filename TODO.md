@@ -8,8 +8,8 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
-  - R-135 retains the exact R-125 future variance and complete-low R-123 trace-excess target, reruns the R-087 spatial proof on uncentred R-088 sequential atoms, proves the exact self/sequential homotopy and a conditional gamma=7/12 sum, and rules out both the scalar covariance envelope and refinement-uniform last-block ellipticity. Next: prove the legal centred owner-to-sequential intertwiner and once-owned shell-weighted q ledger, or a direct integrated substitute, using fixed-chart aggregate or shell-dependent inverse-covariance and joint spatial data; then certify one finite collar's near/balanced headroom, low/matching/gap/anchor. Both A13 gates and Sector A remain open.
-  - _updated 2026-07-30_
+  - R-136 proves the conditional-centring boundary, deterministic-target-heat post-heat zero residual, mean-only variance no-go, common-heat replica owner identity, raw per-replica endpoint telescope with recomputed feedback, and the R-079 connection correction; forward Doob/OU is reused and graph compression is only an abstract route clarification. Next: prove A13-CLASSII-COMMON-HEAT-REPLICA-RAW-CURRENT-SEQUENTIAL-ONE-USE-BOUND by constructing the complete raw reveal atoms, proving the projected root-OU spatial estimate at s=2/3 and a deterministic nonnegative once-owned q_k sum without frozen feedback or multiplicity, then certify finite-collar headroom and complete low/matching/gap/anchor data. Both A13 gates and Sector A remain open.
+  - _updated 2026-07-31_
 
 ## Next up
 

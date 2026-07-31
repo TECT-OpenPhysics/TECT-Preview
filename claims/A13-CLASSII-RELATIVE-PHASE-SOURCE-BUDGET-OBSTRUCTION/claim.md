@@ -4661,3 +4661,30 @@ T5--T7 promotion remain open. Tier stays T4.
   and matching data, strict gap, absolute anchor, both A13 gates,
   `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
   open; tier stays T4.
+- 2026-07-31: Registered
+  `A13-CLASSII-COMMON-HEAT-REPLICA-RAW-SEQUENTIAL-OWNER-BOUNDARY`
+  (R-136). Conditional centring is contractive after deterministic or
+  retained-measurable operators, with an exact commutator defect for admissible
+  random operators whose displayed products and conditional expectations are
+  square-integrable. The literal deterministic-target-heat R-088 post-heat
+  atom is already retained-field measurable, so its R-125 future residual is
+  exactly zero. A two-point fixture proves that its conditional mean cannot
+  recover the raw future variance, registering one method no-go. Keeping heat
+  common while replicating only the legal future gives the exact replica
+  variance and R-125 owner-half formulas. Before future heat, the complete raw
+  owner telescopes pathwise in each replica when the low endpoint and all
+  replica-specific later feedback are retained; freezing feedback changes the
+  endpoint. Forward Doob/OU transposition is reused from prior authority rather
+  than reclaimed. The derived R-079 fixture retains the connection correction
+  three, while an abstract graph fixture shows that ambient product PSD is not
+  necessary after range compression without asserting a production graph
+  theorem. `EXP-000533--EXP-000539` record the successful, failed, reused,
+  conditional, successor, and pre-release scope-correction routes. Primary
+  `71/71`, non-importing
+  independent `71/71`, integrated `225/225`, and aggregate `367/367` pass;
+  deterministic PDF rebuild, all-page visual QA, security checks, and release
+  evidence are pinned in the R-136 manifest. The production raw spatial
+  intertwiner, once-owned `q_k` ledger, signed forest-current lower bound,
+  positive headroom, complete low and matching data, strict gap, absolute
+  anchor, both A13 gates, `OVERLAP_src`, Nelson, removals, interacting measure,
+  and Sector A remain open; tier stays T4.

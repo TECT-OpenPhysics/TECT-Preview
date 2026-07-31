@@ -1,0 +1,741 @@
+% =============================================================================
+% Title: Common-heat replica variance, raw sequential owners, and the post-heat boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-COMMON-HEAT-REPLICA-RAW-SEQUENTIAL-OWNER-BOUNDARY
+% Ledger: R-136
+% Version: v1.0 -- first issued 2026-07-31; this version issued 2026-07-31
+% Status: REGISTERED scoped T4 ANALYTIC/EXACT/EXECUTED advance and no-go boundary; no A13 gate closure
+% New negative: NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cJ}{\mathcal J}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\Forest}{\mathrm F}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+
+R-135 left a seemingly small operator question between its proved uncentred
+R-088 atom estimate and its conditional variance summation: could one commute
+legal future conditioning through the spatial and root-OU operators and then
+centre the R-088 atom?  The operator contraction is valid, but an index audit
+shows that this is not the production bridge.  The literal R-088 atom has
+already been averaged over roots later than its current root.  It is therefore
+measurable at the retained sigma-field and its future-centred part is zero.
+The missing issue is information loss, not a difficult commutator.
+
+This note makes five exact advances and one route correction.
+\begin{enumerate}
+\item It proves the Hilbert conditional-centring contraction, records the
+exact random-operator commutator, and distinguishes current-root Doob
+centring from future-owner centring.
+\item It proves that the post-heat R-088 sequential atom belongs to the
+retained sigma-field.  Future-centring it is identically zero.  A two-point
+fixture proves that post-heat mean data cannot recover future variance.
+\item It puts the R-125 future variance into a common-heat two-replica form.
+The heat dummy is a common Hilbert coordinate; only the legal future is
+replicated.
+\item It gives the exact pathwise raw sequential telescope in each replica
+and then subtracts the two telescopes.  This is the correct algebraic owner
+intertwiner before future heat averaging.  It keeps the complete low endpoint
+and recalculates all later feedback in each replica.
+\item It rewrites the same variance by the original forward-filtration Doob
+increments and the root OU resolvent.  The generic Hilbert identity and the
+regular R-102 cross-Doob transpose are prior authorities; they are reused and
+not advertised as a new R-136 theorem.
+\item It records that full product-space Douglas--Loewner positivity is only
+a sufficient acceptance test on the actual production tangent graph.  A
+graph-compressed direct Taylor estimate is a weaker live route and spends the
+source and sextic squares once.  This observation does not repair the missing
+raw spatial estimate.
+\end{enumerate}
+
+The scope is one finite product chart, one finite cutoff, one positive floor,
+one legal retained sigma-field per owner, deterministic R-088 target heat for
+the post-heat degeneracy, common heat in the replica Hilbert coordinate, and an
+orthogonal exhaustive output-cluster direct sum.  Same-root visits are
+recombined before a variance, replica difference, or shell norm is formed.
+The result does not prove the production raw-current spatial atom bound, the
+once-owned $q_k$ sum, the signed forest-current inequality, positive collar
+headroom, the complete-low anchor, either A13 gate, Nelson, or Sector A.
+
+The binding authorities are R-079, R-084, R-088, R-099, R-102, R-104,
+R-119, R-123, R-125, R-127, R-128, R-129, R-132, and R-135.  The new negative is a
+method no-go only.  No prior result changes tier or scope.
+
+\section*{2. Two orthogonal centring directions}
+
+Let
+\[
+ \cF_{j-1}\subset\cF_j\subset\cF_J,
+ \qquad P_jX=\E[X\mid\cF_j].                         \tag{2.1}
+\]
+There are two different projections adjacent to $P_j$:
+\[
+ d_j=P_j-P_{j-1},\qquad R_j=\Id-P_j.                 \tag{2.2}
+\]
+The first extracts the current-root innovation.  The second removes the
+retained data and extracts the entire future residual.  Orthogonal projection
+algebra gives
+\[
+ d_j^2=d_j,\qquad R_j^2=R_j,\qquad d_jR_j=R_jd_j=0. \tag{2.3}
+\]
+R-084 applies the Gaussian OU resolvent to a $d_j$ current-root innovation.
+R-125 defines its future variance by $R_j$ after retaining the current root.
+These are orthogonal coordinates and cannot be renamed as each other.
+
+\subsection*{Theorem 2.1 (conditional-centring contraction)}
+
+Let $P_{\cH}=\E[\,\cdot\mid\cH]$ on a Hilbert-valued $L^2$ space and put
+$C_{\cH}=\Id-P_{\cH}$.  If $L$ is a deterministic bounded contraction, or a
+bounded operator measurable with respect to $\cH$, then
+\[
+ P_{\cH}(LY)=LP_{\cH}Y,
+ \qquad C_{\cH}(LY)=LC_{\cH}Y.                       \tag{2.4}
+\]
+Consequently
+\[
+ \boxed{
+ \E\|LC_{\cH}Y\|^2
+ =\E\|LY\|^2-\E\|P_{\cH}(LY)\|^2
+ \le \E\|LY\|^2.}                                  \tag{2.5}
+\]
+
+\emph{Proof.}
+Bochner conditional expectation commutes with a deterministic bounded linear
+map.  An $\cH$-measurable bounded multiplier may likewise be pulled out.
+Conditional expectation is the orthogonal projection onto
+$L^2(\cH;\cK)$, so its range and kernel obey Pythagoras.  This proves
+(2.4)--(2.5). \hfill$\square$
+
+For a random operator $Q$ for which every displayed product and conditional
+expectation is square-integrable (in particular, for essentially bounded
+$Q$), the exact defect is
+\[
+ \boxed{
+ C_{\cH}(QZ)-QC_{\cH}Z
+ =Q P_{\cH}Z-P_{\cH}(QZ).}                            \tag{2.6}
+\]
+Thus a future-dependent output multiplier need not commute with future
+conditioning and cannot be moved through it without an additional
+measurability or commutation hypothesis.  A current-root-dependent multiplier
+may commute with future conditioning and still fail to commute with the
+current-root OU semigroup.
+Deterministic spatial Fourier projections are safe for both probability
+operations.  In R-135 equation (5.1), the OU and output operations have
+already been applied before the variable is centred, so (2.5) needs no OU
+commutator at all.
+
+The four-point audit makes the boundary exact.  Let $X,Y$ be independent
+Rademachers, retain $X$, put $Q={\bf1}_{\{Y=1\}}$, and set $Z=Y$.  Then
+\[
+ C_{\cH}(QZ)=Y/2,\qquad QC_{\cH}Z=Q,
+ \qquad C_{\cH}(QZ)-QC_{\cH}Z=-1/2,                 \tag{2.7}
+\]
+so the squared commutator norm is $1/4$.
+
+\section*{3. The literal R-088 future-centred atom vanishes}
+
+Fix root $j$.  R-088 uses
+\[
+ \Phi_{A,j}=P_{\Sigma_{j+1:J}}F_A,
+ \qquad w_j=U_{j-1}+g_j,                             \tag{3.1}
+\]
+and predictable control shells $a_k$, $k\le j$.  In this section write
+$\Phi=\Phi_{A,j}$ and use the R-088 prefix convention
+$B_{j,k}=w_j+A^{(k-1)}$, where $A^{(k-1)}$ is the sum of the already inserted
+predictable controls before shell $k$.  Its exact atom is the three-channel
+derivative
+\[
+\begin{split}
+ T_{A,j,k}[v]={}&
+ \{D\Phi(B_{j,k}+a_k)-D\Phi(B_{j,k})\}[v]^TDB_{j,k}\\
+ &+D\Phi(B_{j,k}+a_k)[v]^TDa_k\\
+ &+\{\Phi(B_{j,k}+a_k)-\Phi(B_{j,k})\}^TDv .
+\end{split}                                           \tag{3.2}
+\]
+The future heat in (3.1) is already a deterministic coefficient function.
+$w_j$ is $\cF_j$-measurable, and every $a_k$, $k\le j$, is
+$\cF_{j-1}$-measurable.  Therefore
+\[
+ T_{A,j,k}\in L^2(\cF_j;\cK).                       \tag{3.3}
+\]
+Current-root OU evolution and deterministic spatial or output projection
+preserve $\cF_j$-measurability.  If R-125's legal future expectation is
+$\E_f=P_j$, then
+\[
+ \boxed{
+ \E_fT_{A,j,k}=T_{A,j,k},\qquad
+ (\Id-\E_f)\Pi_mP_t^{(j)}T_{A,j,k}=0.}              \tag{3.4}
+\]
+
+Equation (3.4) does not falsify R-135 Theorem 5.1.  That theorem is a correct
+conditional summation lemma for a genuinely future-random atom family.  It
+shows instead that the literal post-heat R-088 atom is not that family.  The
+remaining bridge is an information and owner-index problem, not the
+contraction (2.5).
+
+\subsection*{Theorem 3.1 (post-heat mean-only information loss)}
+
+Let the retained sigma-field be trivial and let $Y=\pm1$ with equal
+probability.  Put
+\[
+ X_0=0,\qquad X_1=Y.                                 \tag{3.5}
+\]
+Then
+\[
+ \E_fX_0=\E_fX_1=0,
+ \qquad \Var_f(X_0)=0,
+ \qquad \Var_f(X_1)=1.                               \tag{3.6}
+\]
+Hence no rule depending only on the post-heat conditional mean, or on
+deterministic transforms of that mean, recovers future variance for every
+raw current.
+
+This is
+\texttt{NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY}.
+It does not refute a raw-current lift, a two-replica lift, a common-terminal
+Doob decomposition, the complete production action, or Sector A.
+
+\section*{4. Common-heat replica completion of the R-125 owner}
+
+Fix one complete owner $o$ after visits and exhaustive output clusters have
+been recombined.  Let
+\[
+ X_o^f\in\cK_o
+ =L^2(\mu_{\Sigma};\bigoplus_{\cC}\cH_{o,\cC})       \tag{4.1}
+\]
+be its unaveraged six-row current.  The coordinate $r$ of
+$L^2(\mu_{\Sigma})$ is the common heat dummy.  Let $f,f'$ be conditionally
+independent copies of the legal future given the retained sigma-field.  The
+heat dummy, retained variables, output family, and trace covariance are the
+same in both copies.
+
+\subsection*{Theorem 4.1 (paired-replica variance and owner identity)}
+
+For every square-integrable owner current,
+\[
+ \boxed{
+ \begin{aligned}
+ \|\E_fX_o^f\|^2
+ &=\E_{f,f'}\operatorname{Re}\ip{X_o^f}{X_o^{f'}},\\
+ \cV_o
+ &=\E_f\|X_o^f-\E_fX_o^f\|^2\\
+ &={1\over2}\E_{f,f'}\|X_o^f-X_o^{f'}\|^2.
+ \end{aligned}}                                      \tag{4.2}
+\]
+If $\Theta_o$ is the once-owned primitive trace and
+\[
+ \Forest_{063,o}^{\rm ad}=\E_f\|X_o^f\|^2-\Theta_o, \tag{4.3}
+\]
+then the R-123 direct owner is
+\[
+ \boxed{
+ \begin{aligned}
+ \cP_{{\rm comp},o}
+ &=\frac12(\|\E_fX_o^f\|^2-\Theta_o)\\
+ &=\frac12\Forest_{063,o}^{\rm ad}
+   -\frac14\E_{f,f'}\|X_o^f-X_o^{f'}\|^2.
+ \end{aligned}}                                      \tag{4.4}
+\]
+
+\emph{Proof.}
+Conditional independence gives the first line of (4.2).  Expanding the
+replica difference gives twice the conditional second moment minus twice the
+conditional mean square, which is twice the variance.  Substitution into the
+R-125 identity
+$2\cP_{{\rm comp},o}=\Forest_{063,o}^{\rm ad}-\cV_o$
+proves (4.4). \hfill$\square$
+
+The factor $1/4$ in (4.4) is the product of the owner half and the replica
+half.  Common heat is load bearing.  Independently replicating the heat dummy
+would add a heat variance that does not belong to the R-125 future owner.
+Freezing later feedback in one or both replicas would remove part of the raw
+current and is likewise illegal.
+
+The exact vector fixture used by both executables has future samples
+\[
+ X^-=(0,3),\qquad X^+=(2,1).                           \tag{4.5}
+\]
+Its mean-square, variance, and second moment are $5$, $2$, and $7$.
+With $\Theta=3$, the forest is $4$ and both forms of (4.4) give
+$\cP_{\rm comp}=1$.
+
+\section*{5. The raw sequential replica telescope}
+
+The replica identity becomes useful only before future heat has discarded
+the raw path.  Fix integers $k_0<K$.  For each replica $q\in\{f,f'\}$, let
+$X_o^q[A]$ denote the complete owner current evaluated with all legal field
+and control feedback of that replica.  For $k_0\le k\le K$, let
+\[
+ A^{(k),q}=A^{(k_0),q}+\sum_{k_0<s\le k}a_s^q.        \tag{5.1}
+\]
+Every future control is recomputed from the history of its own replica.  Put
+\[
+ Y_{o,k_0}^q=X_o^q[A^{(k_0),q}],
+ \qquad
+ Y_{o,k}^q=X_o^q[A^{(k),q}]-X_o^q[A^{(k-1),q}],
+ \quad k_0<k\le K.                                   \tag{5.2}
+\]
+
+\subsection*{Theorem 5.1 (raw owner-to-sequential intertwiner)}
+
+At every finite cutoff, with $X_o^q:=X_o^q[A^{(K),q}]$,
+\[
+ \boxed{
+ X_o^q=Y_{o,k_0}^q+\sum_{k_0<k\le K}Y_{o,k}^q,}      \tag{5.3}
+\]
+and therefore
+\[
+ \boxed{
+ X_o^f-X_o^{f'}
+ =(Y_{o,k_0}^f-Y_{o,k_0}^{f'})
+  +\sum_{k_0<k\le K}(Y_{o,k}^f-Y_{o,k}^{f'}).}       \tag{5.4}
+\]
+For every deterministic bounded operator $L$ applied identically in both
+replicas,
+\[
+ \boxed{
+ \Var_f(LX_o)
+ ={1\over2}\E_{f,f'}\left\|
+ L\left[(Y_{o,k_0}^f-Y_{o,k_0}^{f'})
+ +\sum_{k_0<k\le K}(Y_{o,k}^f-Y_{o,k}^{f'})\right]\right\|^2.} \tag{5.5}
+\]
+
+\emph{Proof.}
+Equation (5.3) is the pathwise endpoint telescope in a fixed replica.
+Subtract the two exact telescopes and then apply Theorem 4.1 to $LX_o$.
+No conditional-expectation commutator is used. \hfill$\square$
+
+For one raw atom the same calculation gives
+\[
+ {1\over2}\E\|L(Y_{o,k}^f-Y_{o,k}^{f'})\|^2
+ =\E\Var_f(LY_{o,k})
+ \le\E\|LY_{o,k}\|^2.                               \tag{5.6}
+\]
+Thus a valid uncentred spatial estimate for the \emph{raw complete atoms}
+would pass to their replica variance with no extra constant.  R-135 proves
+the corresponding estimate only for the post-heat R-088 physical atom.
+Identifying the raw atoms in (5.2) with an R-088-type connection-complete
+family is the remaining production theorem, not a consequence of (5.6).
+
+The complete-low atom in (5.4) may vanish only when it is genuinely the same
+in both futures.  It cannot be dropped by naming it a baseline.  Output
+clusters and visits must be recombined before (5.2); otherwise one replica
+variance is spuriously repeated over subowners.
+
+\section*{6. Forward-filtration Doob coordinates and prior scope}
+
+For comparison, let $\tau(o)$ be the retained root of owner $o$ and set
+\[
+ M_{o,r}=P_rX_o,
+ \qquad \Delta_{o,r}=M_{o,r}-M_{o,r-1}.              \tag{6.1}
+\]
+Hilbert martingale orthogonality gives
+\[
+ \boxed{
+ \E[\|X_o-M_{o,\tau(o)}\|^2\mid\cF_{\tau(o)}]
+ =\sum_{r>\tau(o)}
+ \E[\|\Delta_{o,r}\|^2\mid\cF_{\tau(o)}].}        \tag{6.2}
+\]
+After expectation and owner summation,
+\[
+ \boxed{
+ \sum_o\E\cV_o
+ =\sum_r\E\left\|
+ \bigoplus_{\tau(o)<r}\Delta_{o,r}\right\|^2.}     \tag{6.3}
+\]
+The direct sum in (6.3) is bookkeeping.  It asserts no new physical
+orthogonality among different owners.
+
+If root $r$ is Gaussian and $M_{o,r}$ is in the root Sobolev domain, R-084's
+OU-resolvent identity gives, for deterministic $\Pi_m$,
+\[
+ \boxed{
+ \E\|\Pi_m\Delta_{o,r}\|^2
+ =2\int_0^\infty e^{-2t}
+ \E\|\Pi_mP_t^{(r)}D_rM_{o,r}\|_{\rm HS}^2\dd t.}   \tag{6.4}
+\]
+Equations (6.2)--(6.4) use the original forward filtration.  They are not a
+reverse-time reveal and do not change adapted controls.
+
+R-079 already proves the fixed-terminal decomposition
+\[
+ f_j=d_j(\cJ_j-\cJ_0),\qquad
+ i_j=d_j(\cJ_*-\cJ_j),\qquad
+ f_j+i_j=d_j(\cJ_*-\cJ_0),                            \tag{6.5}
+\]
+including both coefficient and derivative-feedback channels.  R-102 already
+uses a cross-Doob finite-Fubini transpose for its narrower regular rational
+future-insertion current.  R-136 therefore claims no novelty for Doob
+transposition itself.  Its new connection is that the R-125 future variance
+and owner half factor admit the common-heat raw-replica telescope (4.4)--(5.5).
+
+R-084's predictable-root formula cannot be applied by substituting terminal
+$A^*$: that introduces feedback derivatives.  R-099 gives an exact
+derivative-free Doob--Hardy ledger for the control coordinate $d_jA^*$, but
+does not control the complete nonlinear six-row multiplier.  These authorities
+narrow the next task without closing it.
+
+\section*{7. The future-feedback connection is load bearing}
+
+The smallest two-root energy fixture makes the missing channel quantitative.
+Let $\xi_1,\xi_2$ be independent centred unit-variance variables, put
+\[
+ \cJ_0=0,\qquad \cJ_1=\xi_1,\qquad
+ \cJ_*=2\xi_1+\xi_2.                                  \tag{7.1}
+\]
+The physical-prefix increments have energies $1$ and $1$, total $2$.  The
+fixed terminal has Doob energies $4$ and $1$, total $5$.  At the first root,
+$f_1=\xi_1$ and $i_1=\xi_1$, so the omitted square correction is
+\[
+ 2\E\ip{f_1}{i_1}+\E\|i_1\|^2=2+1=3.                \tag{7.2}
+\]
+This reuses the filtration issue registered in
+\path{NG-2026-07-30-A13-ROOTWISE-COMMON-TERMINAL-INFERENCE}; it is not a
+new production counterexample.
+
+A smooth Gaussian diagnostic also prevents deletion of the connection by
+formal predictability.  For independent standard Gaussians $\xi,\eta$, let
+\[
+ h_n(\xi)={\sin(n\xi)\over n},
+ \qquad X_n=\eta+h_n(\xi).                             \tag{7.3}
+\]
+At the first reveal $M_1=h_n(\xi)$ and $D_1M_1=\cos(n\xi)$.  The exact
+OU-resolvent value is
+\[
+ \Var(h_n)
+ ={1-e^{-2n^2}\over2n^2}>0.                           \tag{7.4}
+\]
+Freezing later feedback would replace the nonzero connection by zero.  This
+is a filtration diagnostic and an instance of the existing feedback
+derivative graph boundary, not an A1 action counterexample.
+
+\section*{8. Minimal production one-use interface}
+
+The correct root index for a raw variance atom is its reveal root $r$, not
+only the starting owner $\tau(o)$.  Suppose that the complete derivative in
+(6.4) is decomposed, after owner and cluster recombination, as
+\[
+ D_rM_{o,r}
+ =D_rM_{o,r}^{\rm low}
+  +\sum_{A,k\le r}\widehat T_{o,A,r,k}
+  +R_{o,r}^{\rm conn}.                                \tag{8.1}
+\]
+Every coefficient, derivative-feedback, six-row, rational, Cartan, trace,
+forest, heat, and low term must have exactly one owner.  Define the reveal
+direct sum
+\[
+ \widehat{\cT}_{r,k}
+\]
+only after all active owners and exhaustive clusters are placed inside it.
+
+Fix $s=2/3$ and $\gamma=7/12$, and let $(q_k)_k$ be a deterministic
+nonnegative sequence.  One sufficient spatial interface is
+\[
+ 2\int_0^\infty e^{-2t}
+ \E\|\Pi_mP_t^{(r)}\widehat{\cT}_{r,k}\|_{\rm HS}^2\dd t
+ \le2^{-2s(m-k)}q_k,
+ \qquad m\ge r+5,                                    \tag{8.2}
+\]
+with
+\[
+ \sum_kq_k\le Q.                                     \tag{8.3}
+\]
+The factor two in (8.2) is the OU factor and may be absorbed into $q_k$.
+Under (8.2)--(8.3), the R-135 nonorthogonal summation applies with its same
+geometric constant
+\[
+ C_{2/3,7/12}^{\rm var}=0.658881625872614\ldots.      \tag{8.4}
+\]
+No claim is made that (8.1)--(8.3) hold in production.  The R-135 post-heat
+atom estimate does not prove them, and ownerwise $q_{o,k}$ costs may not be
+summed and then multiplied by an owner count.
+
+The exact successor is therefore
+\[
+ \boxed{
+ \texttt{A13-CLASSII-COMMON-HEAT-REPLICA-RAW-CURRENT-}
+ \texttt{SEQUENTIAL-ONE-USE-BOUND}.}                  \tag{8.5}
+\]
+It must first prove (8.1) with both R-079 feedback channels and the low atom,
+then prove (8.2)--(8.3), and only then test finite-collar headroom.
+
+\section*{9. Production-graph compression and direct Taylor}
+
+R-127's three-channel Douglas matrix is necessary and sufficient when its
+source, sextic, and low variables range independently over the full product
+space.  Production variations need not fill that product.  At a fixed chart
+and base point, let
+\[
+ T_{t,h}u=(X_{t,h}u,Y_{t,h}u,L_{t,h}u).               \tag{9.1}
+\]
+The exact graph condition is
+\[
+ T_{t,h}^*\cM_{t,h}T_{t,h}\succeq0.                  \tag{9.2}
+\]
+Full $\cM_{t,h}\succeq0$ implies (9.2), but the converse is false.  The
+minimal scalar fixture
+\[
+ Tu=(u,u,u),\qquad \cM=\operatorname{diag}(1,1,-1)   \tag{9.3}
+\]
+has an ambient negative eigenvalue while
+\[
+ T^*\cM T=1>0.                                       \tag{9.4}
+\]
+This does not falsify R-127 or R-129; their universal product-space scope is
+correct.  It prevents the full Douglas range and low-sign conditions from
+being treated as logically necessary for a direct production-graph proof.
+
+R-119 and R-128 already supply the exact Taylor architecture.  If a complete
+owner $P$ obeys on every radial segment, where
+$\cS_{\rm src}(h)\ge0$ and $\cS_6(h)\ge0$ are respectively the
+once-owned source and sextic quadratic functionals (not the components
+$X_{t,h}$ and $Y_{t,h}$ of (9.1)),
+\[
+ D^2P(th)[h,h]\ge-2\eta\cS_{\rm src}(h)
+                    -2\zeta\cS_6(h)-2C,               \tag{9.5}
+\]
+then
+\[
+ P(h)\ge P(0)+DP(0)[h]-\eta\cS_{\rm src}(h)
+                         -\zeta\cS_6(h)-C.             \tag{9.6}
+\]
+If the absolute/linear anchor costs
+$\eta_0\cS_{\rm src}+\zeta_0\cS_6+C_0$, the action
+margins are
+\[
+ {9\over20}-\eta-\eta_0,
+ \qquad {3\over20}-\zeta-\zeta_0.                   \tag{9.7}
+\]
+The half in (9.6) comes from $\int_0^1(1-t)\dd t=1/2$; the source and
+sextic squares are spent once.  By contrast, full force completion costs
+$5/9$ and consumes the displayed $9/20$ source square before any second
+Hessian payment.  Direct Taylor does not make $DP(0)$, the complete-low term,
+or the absolute anchor free.
+
+The graph observation is a route clarification only.  It cannot replace the
+raw owner construction in Sections 4--8.
+
+\section*{10. Proof, failure, and successor map}
+
+\begin{center}
+\begin{tabular}{p{0.24\linewidth}p{0.18\linewidth}p{0.47\linewidth}}
+Route & Verdict & Reusable conclusion\\ \hline
+Conditional centring contraction & proved & Deterministic or retained-data
+operators contract future-centred energy; admissible random operators have
+the exact defect (2.6).\\
+Post-heat R-088 future centring & failed method & The literal atom is
+$\cF_j$-measurable, so its R-125 future residual is zero.\\
+Mean-only variance recovery & formal no-go & Equal post-heat means can have
+future variances zero and one.\\
+Common-heat replica owner & proved & Equations (4.2)--(4.4) preserve the
+R-125 variance and owner half exactly.\\
+Raw sequential replica telescope & proved algebraically & Equations
+(5.3)--(5.5) retain low and later feedback before future heat.\\
+R-088 spatial transfer to raw atoms & open & R-135 controls the post-heat
+physical atom, not the connection-complete raw family.\\
+Forward Doob transpose & reused & Generic Hilbert orthogonality and R-102
+already own the transpose principle; R-136 uses it only as a coordinate.\\
+Product Douglas necessity & rejected as necessity & Full product PSD is
+sufficient; the production graph may be positive with an indefinite ambient
+matrix.\\
+Direct graph Taylor & active conditional route & It avoids source double
+spending but still needs the owner Hessian and absolute/low anchor.\\
+Production one-use and headroom & open & Prove (8.1)--(8.3), then certify a
+finite collar and the complete low/matching/gap/anchor data.\\
+\end{tabular}
+\end{center}
+
+The proof-search and audit records are EXP-000533--EXP-000539.  They record
+the operator success, post-heat failure, replica/raw telescope, Doob scope
+audit, graph route, selected successor, and pre-release $L^2$-admissibility
+correction separately so that none must be inferred from a later prose
+summary.
+
+\section*{11. Devil's-advocate review}
+
+\paragraph{Objection 1: Theorem 2.1 closes the R-135 owner intertwiner.}
+\textbf{UPHELD against that inference.}  It closes only an operator
+contraction.  Equation (3.4) shows that the literal post-heat atom has zero
+future-centred part and therefore carries no R-125 future variance.
+
+\paragraph{Objection 2: Zero future residual of the post-heat atom proves the
+production future variance is zero.}
+\textbf{DISMISSED.}  The raw terminal current contains unaveraged future
+fields and later feedback.  The two-point fixture (3.5)--(3.6) separates its
+variance from the identical post-heat mean.
+
+\paragraph{Objection 3: Two replicas duplicate the heat and trace.}
+\textbf{VALID with mitigation.}  The heat dummy, retained variables, output
+family, and trace covariance are common.  Only the legal future is replicated.
+Equation (4.4) uses the primitive trace once.
+
+\paragraph{Objection 4: The future-Doob transpose is a new R-136 result.}
+\textbf{VALID correction.}  Generic martingale orthogonality is old, and
+R-102 already contains a production cross-Doob/Fubini transpose in its
+narrow regular rational class.  R-136 claims only the new R-125
+common-heat raw-replica owner connection.
+
+\paragraph{Objection 5: The R-135 uncentred estimate transfers immediately
+to the raw atoms by (5.6).}
+\textbf{UPHELD against immediate transfer.}  Equation (5.6) is constant-free
+only after the same raw atom has an uncentred estimate.  The R-135 atom has
+future heat already applied and omits the terminal feedback connection.
+
+\paragraph{Objection 6: The physical R-088 atom and terminal atom differ only
+by harmless notation.}
+\textbf{DISMISSED.}  The two-root fixture has energies two and five; the
+missing cross-plus-square correction is exactly three.  R-079 independently
+retains coefficient and derivative-feedback channels.
+
+\paragraph{Objection 7: The graph fixture invalidates the Douglas criterion.}
+\textbf{DISMISSED.}  R-127's criterion is exact for all independent product
+variables.  The fixture addresses necessity after restriction to
+$\Ran T_{t,h}$ and creates no new negative authority.
+
+\paragraph{Objection 8: Direct Taylor provides the missing absolute anchor.}
+\textbf{UPHELD against that inference.}  It avoids double spending but leaves
+$P(0)+DP(0)[h]$, the complete low block, and the absolute normalization to be
+proved and paid once.
+
+\paragraph{Objection 9: R-136 closes controlled-shell one-use or Sector A.}
+\textbf{UPHELD against closure.}  No production proof of (8.1)--(8.3), signed
+forest-current bound, headroom, low/matching data, strict gap, anchor, A13
+gate, Nelson estimate, or Sector-A endpoint is present.
+
+\section*{12. Executable verification}
+
+Run from the repository root with the repository environment:
+\begin{verbatim}
+$py = 'E:\Dev\TECT.venv\Scripts\python.exe'
+& $py `
+  codes/foundations/a13_classii_common_heat_replica_raw_sequential_owner_boundary.py
+
+& $py `
+  codes/foundations/a13_classii_common_heat_replica_raw_sequential_owner_boundary_independent.py
+
+& $py `
+  codes/foundations/a13_classii_common_heat_replica_raw_sequential_owner_boundary_verify.py
+\end{verbatim}
+Expected output is primary $71/71$, non-importing standard-library
+independent $71/71$, and integrated $225/225$ PASS.  The aggregate contract is
+$367/367$.  The independent route constructs the conditional-expectation
+matrices directly and does not import the primary implementation.
+
+The executables check filtration projection algebra, conditional Pythagoras,
+the random-operator commutator, post-heat measurability, the mean-only no-go,
+paired-replica mean/variance/second-moment identities, the owner factor,
+the raw replica telescope, owner/reveal direct-sum accounting, the exact
+future-feedback energy gap, Gaussian OU chaos factors, graph compression,
+direct Taylor budgets, upstream manifests, source independence, and every
+scope firewall stated above.
+
+The proof PDF is built from this exact source by
+\begin{verbatim}
+$note = 'claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/' +
+  'notes/classii-common-heat-replica-raw-sequential-owner-boundary-' +
+  '260731-v1.0.tex.txt'
+& $py verification/scripts/build_note_pdf.py $note
+\end{verbatim}
+Deterministic rebuild, extraction, security, form, nonblank-page, glyph, and
+all-page visual checks are pinned in the R-136 manifest.
+
+\section*{13. Remaining theorem and no-overclaim statement}
+
+The next production theorem must:
+\begin{enumerate}
+\item construct the complete raw pre-heat atoms in (8.1), including the low
+atom, exhaustive clusters, all same-root visits, both R-079 feedback channels,
+all six rows, rational and Cartan companions, trace, forest, and common heat;
+\item prove the projected raw atom estimate (8.2) without replacing the
+saturated current by the rejected extracted-$Z^6$ envelope;
+\item prove the once-owned sum (8.3) without owner, reveal, visit, or cluster
+multiplicity;
+\item compare the resulting far tail with independently certified finite
+near/balanced headroom;
+\item prove the complete-low and matching-energy data, strict graph or
+Douglas gap, and absolute anchor, spending source and sextic once;
+\item only then apply R-129 and continue through the remaining A13 gates.
+\end{enumerate}
+
+R-136 is a scoped T4 exact filtration, replica, raw-telescope, and method
+boundary result.  It proves no production one-use estimate, no positive
+headroom, no A13 gate, no Nelson estimate, no interacting measure, no removal
+limit, and no Sector-A closure.
+
+\section*{14. Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID:               A13-CLASSII-COMMON-HEAT-REPLICA-RAW-
+                         SEQUENTIAL-OWNER-BOUNDARY (R-136).
+Claim:                   A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-
+                         OBSTRUCTION.
+Precise statement:       Conditional centring contracts after deterministic
+                         or retained-measurable operators, but the literal
+                         post-heat R-088 atom is retained-field measurable and
+                         has zero R-125 future residual. Common-heat future
+                         replicas recover the exact conditional variance and
+                         owner half. The complete raw owner telescopes
+                         pathwise in each replica only when the low endpoint
+                         and replica-specific later feedback are retained.
+                         Forward Doob/OU coordinates are reused; ambient
+                         product PSD is sufficient but not graph-necessary.
+Scope:                   Fixed finite cutoff and positive floor; one legal
+                         retained sigma-field per owner; deterministic R-088
+                         target heat for the zero-residual statement; common
+                         heat for the two-replica Hilbert coordinate;
+                         complete same-root and exhaustive-output recombination;
+                         finite raw sequential paths with feedback recomputed
+                         separately in both future replicas.
+Dependencies:            R-079, R-084, R-088, R-099, R-102, R-104, R-119,
+                         R-123, R-125, R-127, R-128, R-129, R-132, and R-135.
+Evidence grade:          ANALYTIC/EXACT/EXECUTED with primary, non-importing
+                         independent, and integrated executable checks, a
+                         rendered PDF, visual QA, manifest, and release gate.
+Reproduction command:   E:\Dev\TECT.venv\Scripts\python.exe
+                         codes/foundations/a13_classii_common_heat_replica_
+                         raw_sequential_owner_boundary_verify.py
+Expected output:         R-136 integrated 225/225 PASS with primary 71/71,
+                         non-importing independent 71/71, and aggregate
+                         367/367 pinned by the manifest;
+                         PDF and generated-surface gates PASS.
+Negative boundary:      Post-heat conditional means do not determine raw
+                         future variance. The literal post-heat atom cannot be
+                         future-centred into the missing R-125 coordinate.
+Falsification gate:     Any failed projection, commutator, replica factor,
+                         raw endpoint telescope, feedback correction, graph
+                         compression, authority pin, or scope firewall.
+Tier before / after:    T4 / T4; no promotion.
+No-overclaim statement: No production raw spatial intertwiner, one-use q sum,
+                         signed forest-current bound, positive headroom,
+                         low/matching/gap/anchor data, A13 gate, Nelson theorem,
+                         measure theorem, removal limit, or Sector-A closure
+                         is proved.
+Proof complete:         false. Sector A closed: false.
+New negative:           NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-
+                         FUTURE-VARIANCE-RECOVERY.
+Explorations:           EXP-000533--EXP-000539.
+Next required action:   Prove A13-CLASSII-COMMON-HEAT-REPLICA-RAW-CURRENT-
+                         SEQUENTIAL-ONE-USE-BOUND, then certify finite-collar
+                         headroom and the complete low/gap/anchor data.
+\end{verbatim}
+\endgroup
+
+\endgroup

@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY | post-heat means do not determine raw future variance |  |
 | NG-2026-07-31-A13-COVARIANCE-ENVELOPE-REBATE-ERASURE | a scalar norm envelope destroys the future-variance rebate |  |
 | NG-2026-07-31-A13-REFINEMENT-UNIFORM-LAST-BLOCK-ELLIPTICITY | a labelled final source increment has no directed-refinement |  |
 | NG-2026-07-31-A13-ELLIPTIC-GAUSSIAN-D4-FLOOR-UNIFORMITY | six-real ellipticity is critical at the fourth rational jet |  |

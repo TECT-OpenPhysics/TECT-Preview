@@ -1,0 +1,531 @@
+{
+  "assertions": {
+    "failed": 0,
+    "passed": 71,
+    "rows": [
+      {
+        "actual": "{(-1, -1): Fraction(0, 1), (-1, 1): Fraction(0, 1), (1, -1): Fraction(0, 1), (1, 1): Fraction(0, 1)}",
+        "expected": "{(-1, -1): Fraction(0, 1), (-1, 1): Fraction(0, 1), (1, -1): Fraction(0, 1), (1, 1): Fraction(0, 1)}",
+        "group": "filtration",
+        "name": "P0 kills first root",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "expected": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "group": "filtration",
+        "name": "P1 retains first root",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(0, 1), (-1, 1): Fraction(0, 1), (1, -1): Fraction(0, 1), (1, 1): Fraction(0, 1)}",
+        "expected": "{(-1, -1): Fraction(0, 1), (-1, 1): Fraction(0, 1), (1, -1): Fraction(0, 1), (1, 1): Fraction(0, 1)}",
+        "group": "filtration",
+        "name": "P1 kills future root",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "expected": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "group": "filtration",
+        "name": "P1 idempotent",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(0, 1), (-1, 1): Fraction(0, 1), (1, -1): Fraction(0, 1), (1, 1): Fraction(0, 1)}",
+        "expected": "{(-1, -1): Fraction(0, 1), (-1, 1): Fraction(0, 1), (1, -1): Fraction(0, 1), (1, 1): Fraction(0, 1)}",
+        "group": "filtration",
+        "name": "P0 after P1 equals P0",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "filtration",
+        "name": "current-root increment is nonzero",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "filtration",
+        "name": "future residual kills retained data",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "centring",
+        "name": "deterministic projection energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "centring",
+        "name": "retained mean energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "centring",
+        "name": "conditional Pythagoras",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "<=2",
+        "group": "centring",
+        "name": "centring is contractive",
+        "status": "PASS"
+      },
+      {
+        "actual": "6",
+        "expected": "6",
+        "group": "centring",
+        "name": "unused Hilbert coordinate is nontrivial",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-1, 2), (-1, 1): Fraction(-1, 2), (1, -1): Fraction(-1, 2), (1, 1): Fraction(-1, 2)}",
+        "expected": "{(-1, -1): Fraction(-1, 2), (-1, 1): Fraction(-1, 2), (1, -1): Fraction(-1, 2), (1, 1): Fraction(-1, 2)}",
+        "group": "commutator",
+        "name": "future multiplier defect",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4",
+        "expected": "1/4",
+        "group": "commutator",
+        "name": "future multiplier defect norm",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-13, 10), (-1, 1): Fraction(-13, 10), (1, -1): Fraction(17, 10), (1, 1): Fraction(17, 10)}",
+        "expected": "{(-1, -1): Fraction(-13, 10), (-1, 1): Fraction(-13, 10), (1, -1): Fraction(17, 10), (1, 1): Fraction(17, 10)}",
+        "group": "post_heat",
+        "name": "post-heat atom is retained",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "post_heat",
+        "name": "post-heat future centring vanishes",
+        "status": "PASS"
+      },
+      {
+        "actual": "9/4",
+        "expected": "9/4",
+        "group": "post_heat",
+        "name": "current-root centring remains nonzero",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(0, 1), (-1, 1): Fraction(0, 1), (1, -1): Fraction(0, 1), (1, 1): Fraction(0, 1)}",
+        "expected": "{(-1, -1): Fraction(0, 1), (-1, 1): Fraction(0, 1), (1, -1): Fraction(0, 1), (1, 1): Fraction(0, 1)}",
+        "group": "mean_only_nogo",
+        "name": "post-heat means coincide",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "mean_only_nogo",
+        "name": "zero-current variance",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "mean_only_nogo",
+        "name": "future-current variance",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(0, 1), Fraction(1, 1))",
+        "expected": "different",
+        "group": "mean_only_nogo",
+        "name": "variance data separate",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(1, 1), Fraction(2, 1))",
+        "expected": "(1, 2)",
+        "group": "replica",
+        "name": "replica mean",
+        "status": "PASS"
+      },
+      {
+        "actual": "5",
+        "expected": "5",
+        "group": "replica",
+        "name": "mean square",
+        "status": "PASS"
+      },
+      {
+        "actual": "7",
+        "expected": "7",
+        "group": "replica",
+        "name": "second moment",
+        "status": "PASS"
+      },
+      {
+        "actual": "5",
+        "expected": "5",
+        "group": "replica",
+        "name": "paired mean polarization",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "replica",
+        "name": "half replica difference is variance",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "replica",
+        "name": "variance value",
+        "status": "PASS"
+      },
+      {
+        "actual": "7",
+        "expected": "7",
+        "group": "replica",
+        "name": "Pythagoras in replica coordinates",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "group": "owner",
+        "name": "forest value",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "owner",
+        "name": "trace-excess owner",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "owner",
+        "name": "forest-minus-variance owner",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "owner",
+        "name": "replica owner coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "{-1: (Fraction(0, 1), Fraction(5, 1)), 1: (Fraction(8, 1), Fraction(13, 1))}",
+        "expected": "{-1: (Fraction(0, 1), Fraction(5, 1)), 1: (Fraction(8, 1), Fraction(13, 1))}",
+        "group": "raw_telescope",
+        "name": "pathwise endpoint evaluations",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(0, 1), Fraction(5, 1))",
+        "expected": "(0, 5)",
+        "group": "raw_telescope",
+        "name": "minus replica endpoint",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(8, 1), Fraction(13, 1))",
+        "expected": "(8, 13)",
+        "group": "raw_telescope",
+        "name": "plus replica endpoint",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(8, 1), Fraction(8, 1))",
+        "expected": "(Fraction(8, 1), Fraction(8, 1))",
+        "group": "raw_telescope",
+        "name": "replica difference telescopes",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(2, 1), Fraction(2, 1))",
+        "expected": "(2, 2)",
+        "group": "raw_telescope",
+        "name": "low replica difference retained",
+        "status": "PASS"
+      },
+      {
+        "actual": "{-1: (Fraction(3, 1), Fraction(8, 1)), 1: (Fraction(5, 1), Fraction(10, 1))}",
+        "expected": "different from recomputed feedback",
+        "group": "raw_telescope",
+        "name": "frozen feedback changes endpoint",
+        "status": "PASS"
+      },
+      {
+        "actual": "5",
+        "expected": "5",
+        "group": "doob",
+        "name": "owner A terminal variance",
+        "status": "PASS"
+      },
+      {
+        "actual": "9",
+        "expected": "9",
+        "group": "doob",
+        "name": "owner B future variance",
+        "status": "PASS"
+      },
+      {
+        "actual": "14",
+        "expected": "14",
+        "group": "doob",
+        "name": "owner sum equals reveal transpose",
+        "status": "PASS"
+      },
+      {
+        "actual": "10",
+        "expected": "10",
+        "group": "doob",
+        "name": "direct-sum reveal energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "16",
+        "expected": "!=10",
+        "group": "doob",
+        "name": "physical scalar merging would be false",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "expected": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "group": "feedback",
+        "name": "first physical increment",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "expected": "{(-1, -1): Fraction(-1, 1), (-1, 1): Fraction(-1, 1), (1, -1): Fraction(1, 1), (1, 1): Fraction(1, 1)}",
+        "group": "feedback",
+        "name": "future connection increment",
+        "status": "PASS"
+      },
+      {
+        "actual": "{(-1, -1): Fraction(-2, 1), (-1, 1): Fraction(-2, 1), (1, -1): Fraction(2, 1), (1, 1): Fraction(2, 1)}",
+        "expected": "{(-1, -1): Fraction(-2, 1), (-1, 1): Fraction(-2, 1), (1, -1): Fraction(2, 1), (1, 1): Fraction(2, 1)}",
+        "group": "feedback",
+        "name": "terminal first increment splits",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "feedback",
+        "name": "physical-prefix energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "5",
+        "expected": "5",
+        "group": "feedback",
+        "name": "full terminal energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "3",
+        "group": "feedback",
+        "name": "missing connection correction",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "3",
+        "group": "feedback",
+        "name": "future-feedback channel is nonzero",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "ou",
+        "name": "chaos-one OU factor",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "ou",
+        "name": "chaos-two OU factor",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.05555555470944557",
+        "expected": ">0",
+        "group": "ou",
+        "name": "smooth feedback variance is positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.05555555470944557",
+        "expected": "<1/18",
+        "group": "ou",
+        "name": "smooth feedback variance below one over eighteen",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1, 1, -1)",
+        "expected": "one negative eigenvalue",
+        "group": "graph",
+        "name": "product matrix is indefinite",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "graph",
+        "name": "abstract graph is strictly positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "((1, 1, -1), 1)",
+        "expected": "indefinite product and positive graph",
+        "group": "graph",
+        "name": "full product PSD is not graph-necessary",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "taylor",
+        "name": "Taylor half-weight",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/20",
+        "expected": "3/20",
+        "group": "taylor",
+        "name": "positive source margin fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/40",
+        "expected": "3/40",
+        "group": "taylor",
+        "name": "positive sextic margin fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": "5/9",
+        "expected": "5/9",
+        "group": "taylor",
+        "name": "full force completion coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4",
+        "expected": "1/4",
+        "group": "taylor",
+        "name": "force completion consumes displayed source square",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "raw_spatial_intertwiner",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "one_use_q_ledger",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "signed_forest_current_bound",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "positive_headroom",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "complete_low_anchor",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "a13_gate_closed",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "nelson",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "sector_a_closed",
+        "status": "PASS"
+      },
+      {
+        "actual": "71",
+        "expected": "71",
+        "group": "contracts",
+        "name": "primary assertion count",
+        "status": "PASS"
+      }
+    ],
+    "total": 71
+  },
+  "computed": {
+    "graph_compressed_value": 1,
+    "owner_reveal_total": 14,
+    "owner_trace_excess": "1",
+    "physical_only_energy": 2,
+    "post_heat_future_residual": "0",
+    "replica_mean_square": "5",
+    "replica_second_moment": "7",
+    "replica_variance": "2",
+    "sextic_margin_fixture": "3/40",
+    "source_margin_fixture": "3/20",
+    "terminal_energy": 5
+  },
+  "result_id": "A13-CLASSII-COMMON-HEAT-REPLICA-RAW-SEQUENTIAL-OWNER-BOUNDARY",
+  "schema": "tect/a13-common-heat-replica-raw-sequential-owner-boundary-primary/1.0",
+  "scope": {
+    "common_heat_replica_identity": true,
+    "post_heat_mean_only_no_go": true,
+    "production_one_use_q_ledger": false,
+    "production_raw_spatial_intertwiner": false,
+    "raw_replica_telescope": true,
+    "sector_a_closed": false
+  },
+  "status": "PASS",
+  "version": "1.0.0"
+}
