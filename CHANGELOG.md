@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-138 scale-graded direct and signed-future reanchoring boundary] - 2026-07-31
+
+Registered R-138 as a scoped T4 conditional analytic/exact/executed advance. Under explicit spatial-grade, legal commutation, and complete-owner hypotheses, the direct raw R-087 paracomposition has six-row factor 3/(40P) and margins 1/15, 4/15, and 16/15 at rho=2/5, s=2/3. A smooth rational high-prefix fixture disproves chronology-only spatial grading. The future R-079 current--trace block has an exact signed fixed-chart last-insertion telescope; positive-square replacement loses cancellation. Reveal-to-insertion reanchoring costs 2^(2 gamma(k-r)), equals 128 at gap six, and leaves a signed future near wedge. Sharp scalar charge and conditional collar criteria isolate the remaining production task. The production scale-grade/owner intertwiner, deterministic one-use total, signed near/balanced and forest-current bounds, positive headroom, both A13 gates, Nelson, and Sector A remain open.
+
 ## [Correct R-137 audit accounting and chronological hypotheses] - 2026-07-31
 
 Independent pre-release audit found that the integrated verifier already embeds all primary and independent rows, so the prior additive aggregate count double-counted 114 assertions. The corrected integrated package has 263 unique assertions: 114 embedded child rows and 149 integrator-only rows. The audit also defined A^[<=r] on the common chronological clock, restored the exact termwise/grouped Sobolev hypothesis in the devil review, corrected the insertion-order wording, and replaced hardcoded derived summaries by computed child values. No mathematical scope, tier, gate, or successor changes.

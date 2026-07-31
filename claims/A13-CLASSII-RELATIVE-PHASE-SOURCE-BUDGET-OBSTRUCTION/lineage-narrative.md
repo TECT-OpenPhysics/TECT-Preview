@@ -957,6 +957,26 @@ endpoint theorem.
     then one deterministic once-owned `q` ledger and a finite-collar headroom
     test. Both A13 gates and Sector A remain open at T4.
 
+66. **Scale-graded direct transfer, signed future transpose, and reanchoring
+    boundary.** R-138 proves the raw direct R-087 paracomposition under
+    explicit spatial-grade, legal commutation, and complete-owner hypotheses,
+    with six-row factor `3/(40P)` and the exact `1/15`, `4/15`, and `16/15`
+    margins at `rho=2/5`, `s=2/3`. An exact smooth rational high-prefix family
+    proves that chronology alone cannot provide the missing spatial grade.
+    For the future triangle, the fixed-chart R-079 current--trace block has an
+    exact signed last-insertion telescope; opposite scalar increments have
+    owners `1/2,-1/2`, so a positive-square replacement is illegal. Moving
+    the R-135 reveal weight to the insertion costs `2^(2 gamma(k-r))`, gives
+    factor `128` at gap six, and leaves a reveal-FAR/insertion-near signed
+    wedge. Sharp scalar charge and conditional collar criteria now isolate the
+    remaining production obligation. The live successor remains
+    `A13-CLASSII-COMPLETE-RAW-DOOB-DIRECT-FUTURE-SPATIAL-ONE-USE-BOUND`: prove
+    the production scale-grade/complete-owner intertwiner, then either a
+    causally weighted future ledger plus its signed near wedge or a direct
+    whole-signed-owner estimate, followed by one deterministic once-owned
+    total and genuinely positive collar headroom. Both A13 gates and Sector A
+    remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

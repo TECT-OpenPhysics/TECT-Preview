@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-31-A13-CHRONOLOGY-ONLY-SPATIAL-GRADE](#ng-2026-07-31-a13-chronology-only-spatial-grade) | infer the R-087 raw direct shell decay from chronological precedence, bounded positive-floor derivatives, and the three-channel identity without a spatial-grade intertwiner | a deterministic earlier prefix at shell `N=2^M` has uniformly bounded `C^(2/5)` norm but makes the exact low-insertion direct atom energy grow as `N^(6/5)`, while the claimed `s=2/3` right side decays as `N^(-4/3)` |
+| [NG-2026-07-31-A13-BARE-LAST-INSERTION-R135-REANCHORING](#ng-2026-07-31-a13-bare-last-insertion-r135-reanchoring) | invoke the R-135 reveal-weighted future ledger from finite Fubini, an insertion-anchored FAR estimate, and an unweighted `sum_k q_k` alone | reveal-to-insertion reanchoring creates `2^(2 gamma(k-r))`, equal to 128 at `gamma=7/12`, `k-r=6`, and leaves the wedge `r+5<=m<k+5` outside insertion-FAR geometry |
 | [NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY](#ng-2026-07-31-a13-postheat-mean-only-future-variance-recovery) | recover the R-125 future variance by future-centring the literal post-heat R-088 atom, or from that atom's conditional mean alone | the post-heat atom is already retained-field measurable and has zero future residual; raw currents `X_0=0` and `X_1=Y` have the same post-heat conditional mean zero but future variances zero and one |
 | [NG-2026-07-31-A13-COVARIANCE-ENVELOPE-REBATE-ERASURE](#ng-2026-07-31-a13-covariance-envelope-rebate-erasure) | lower-bound the R-134 scalar surrogate `Forest_063-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2` by source and sextic budgets after replacing the exact conditional variance | the scaled one-owner R-125 Pauli fixture has zero expected forest but `Q_e=nu^2(sqrt(339/(2000P))+sqrt(3e/(320P)))^2`, so the surrogate tends to minus infinity although the exact owner retains the compensating future-variance coordinate |
 | [NG-2026-07-31-A13-REFINEMENT-UNIFORM-LAST-BLOCK-ELLIPTICITY](#ng-2026-07-31-a13-refinement-uniform-last-block-ellipticity) | reserve the final independent temporal source increment as a uniformly full-rank six-real Gaussian over every R-093 directed refinement | a representation-preserving split may give the last block covariance `epsilon I_6` with unchanged total covariance `I_6`; more generally the physical tail covariance tends to zero as the last cut approaches one, so no positive refinement-uniform eigenvalue floor survives |
@@ -209,6 +211,68 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-07-31-a13-chronology-only-spatial-grade"></a>
+### NG-2026-07-31-A13-CHRONOLOGY-ONLY-SPATIAL-GRADE -- temporal precedence is not a Fourier support theorem
+
+**Failure mode.**  Infer the R-087-type direct raw estimate from
+`t(k)<=r`, the positive-floor coefficient derivative bounds, and the exact
+three-channel algebra, without proving that the whole raw prefix/path is
+`Q_r`-supported or assigning the atom to its maximal spatial grade.
+
+On the spatial circle take `F_e(x)=x^3/(x^2+e)`, so
+`F_e''(sqrt(e))=1/(2sqrt(e))`.  Let
+`B_N=sqrt(e)+xi+delta N^(-rho) cos(Nx)`, `rho=2/5`, with constant fresh-root
+direction and a small constant low insertion.  The exact direct channel is
+`[F_e'(B_N+a)-F_e'(B_N)] D B_N`.  Its selected shell-`N` squared norm is at
+least `c_e a^2 delta^2 N^(2-2rho)` on a fixed positive-probability root
+event, while the `C^rho` prefix moments remain uniform.  At `s=2/3`, the
+claimed low-shell right side has power `N^(-4/3)`; their ratio grows as
+`N^(38/15)`.
+
+**Evidence.**  R-138 proof-note Sections 3--5; the exact primary and
+independent exponent certificates; the positive-floor quotient derivative
+and bounded-`C^(2/5)` high-prefix fixture.
+
+**Consequence.**  This is a method no-go, not a complete production-action
+counterexample.  The R-138 direct theorem remains valid under its explicit
+`Q_r` support, owner-intertwining, and commutation hypotheses.  Production
+must prove a chronology-to-spatial-grade intertwiner or reassign each raw
+atom to a unique maximal spatial grade before declaring its charge.
+
+**Revisit condition.**  Revisit the direct production transfer after the
+complete R-123/R-125 owner has been shown to possess the required aligned
+support or an equivalent scale-local decomposition.
+
+<a id="ng-2026-07-31-a13-bare-last-insertion-r135-reanchoring"></a>
+### NG-2026-07-31-A13-BARE-LAST-INSERTION-R135-REANCHORING -- future reveal weights cannot be relabelled for free
+
+**Failure mode.**  Swap the finite future sums, prove an insertion-anchored
+estimate for `m>=k+5`, and then invoke R-135 with only the old unweighted
+`sum_k q_k` condition.
+
+For a future cell `r<k`, multiplication by the reveal-anchored weight gives
+`2^(2gamma(m-r-5)) 2^(-2s(m-k))`
+`=2^(-10gamma) 2^(2gamma(k-r)) 2^(-2(s-gamma)(m-k))`.
+The causal factor grows rather than decays.  At `s=2/3`, `gamma=7/12`, and
+`k-r=6`, it equals `2^7=128`.  In addition, the cells
+`r+5<=m<k+5` are FAR relative to the reveal but near or balanced relative to
+the insertion, so an insertion-FAR estimate does not cover them.
+
+**Evidence.**  R-138 proof-note Sections 6--8; exact finite-Fubini and affine
+exponent checks in the two independent executables; signed insertion
+fixtures `1,-1` and `1,1`.
+
+**Consequence.**  This rejects an inference, not the production theorem,
+R-102, R-135, or a future last-insertion strategy with additional data.  A
+separated nonnegative route needs a gap-weighted causal charge such as
+`sum_(r<k) 2^(2gamma(k-r))q_(r,k)`, plus a signed estimate of the uncovered
+near wedge.  The alternative is a direct estimate of the complete signed
+current--trace--forest last-insertion owner.
+
+**Revisit condition.**  Revisit R-135 transfer only after proving the
+gap-weighted future charge, or after an owner-preserving theorem legitimately
+moves the final weight from reveal root `r` to insertion shell `k`.
 
 <a id="ng-2026-07-31-a13-postheat-mean-only-future-variance-recovery"></a>
 ### NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY -- post-heat means do not determine raw future variance

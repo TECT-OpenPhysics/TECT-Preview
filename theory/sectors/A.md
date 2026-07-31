@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-31-A13-CHRONOLOGY-ONLY-SPATIAL-GRADE | temporal precedence is not a Fourier support theorem |  |
+| NG-2026-07-31-A13-BARE-LAST-INSERTION-R135-REANCHORING | future reveal weights cannot be relabelled for free |  |
 | NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY | post-heat means do not determine raw future variance |  |
 | NG-2026-07-31-A13-COVARIANCE-ENVELOPE-REBATE-ERASURE | a scalar norm envelope destroys the future-variance rebate |  |
 | NG-2026-07-31-A13-REFINEMENT-UNIFORM-LAST-BLOCK-ELLIPTICITY | a labelled final source increment has no directed-refinement |  |

@@ -4718,3 +4718,29 @@ T5--T7 promotion remain open. Tier stays T4.
   assignment theorem, once-owned `q_k` sum, signed forest-current bound,
   headroom, low/matching/gap/anchor data, both A13 gates, `OVERLAP_src`,
   Nelson, removals, interacting measure, and Sector A remain open at T4.
+- 2026-07-31: Registered
+  `A13-CLASSII-SCALE-GRADED-DIRECT-FUTURE-REANCHORING-BOUNDARY` (R-138) as
+  a scoped conditional analytic/exact/executed advance and route correction.
+  Under explicit spatial-grade, legal commutation, and complete-owner
+  hypotheses, the raw R-087 paracomposition gives the direct Cartan estimate
+  with six-row factor `3/(40P)`; at `rho=2/5`, `s=2/3` its margins are
+  `1/15`, `4/15`, and `16/15`.  An exact smooth rational high-prefix family
+  shows that chronology alone cannot imply this estimate: the ratio grows as
+  `N^(38/15)`.  The future R-079 current--trace block has an exact fixed-chart
+  signed last-insertion telescope, but scalar increments `1,-1` have owners
+  `1/2,-1/2`, so positive-square replacement destroys cancellation.
+  Reveal-to-insertion reanchoring costs `2^(2 gamma(k-r))`, equal to `128` at
+  gap six, and leaves a reveal-FAR/insertion-near signed wedge.  The sharp
+  scalar charge criterion and conditional collar threshold identify the
+  remaining burden without certifying positive headroom.  `EXP-000546`--
+  `EXP-000551` preserve the successful routes, both rejected shortcuts,
+  scope boundaries, and successor conditions; the two inference failures are
+  separately registered in the negative-results ledger.  Primary `65/65`
+  and independent `48/48` pass; integrated `292/292` embeds all 113 child
+  rows and adds 179 integrator-only checks.  It performs deterministic PDF,
+  security, rendering, authority, exploration, and public-surface checks.
+  The production scale-grade/owner intertwiner, direct and
+  future one-use charge sum, signed near/balanced and forest-current bounds,
+  positive headroom, low/matching/gap/anchor data, both A13 gates,
+  `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
+  open at T4.

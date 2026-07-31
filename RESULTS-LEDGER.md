@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-138](#r-138) | Scale-graded raw direct transfer, signed future last insertion, and reveal reanchoring boundary | Scoped T4 analytic/exact/executed advance and method boundary. Under an explicit `Q_r`-supported raw coefficient path, legal conditional/OU/projection commutations, and a complete-owner intertwiner, the R-087 paracomposition proof gives the raw direct six-row far estimate. The only nonlinear far row has exact coefficient `8(5/9)^2(243/(8000P))=3/(40P)`, including the R-084 outer OU factor two; at `rho=2/5`, `s=2/3`, the margins are `1/15`, `4/15`, and `16/15`. A bounded-`C^(2/5)` earlier high prefix proves that chronology alone does not give the spatial grade. For the future triangle, the complete R-079 current--trace energy has an exact signed fixed-chart last-insertion telescope. Bare R-135 reindexing fails because reveal reanchoring creates `2^(2 gamma(k-r))`, equal to `128` at `gamma=7/12`, gap six, and leaves `r+5<=m<k+5` outside insertion-FAR geometry. R-138 gives the sharp direct and gap-weighted future scalar charge criteria and the conditional finite-collar threshold, but proves no production owner/grade intertwiner, charge sum, signed near/forest lower form, positive headroom, A13 gate, Nelson theorem, or Sector-A closure |
 | [R-137](#r-137) | Complete raw direct-future Doob split and the spatial one-use boundary | Scoped T4 exact/executed index audit and route correction. Give each physical insertion shell its chronological rank `t(k)`. Applying a forward reveal to the complete R-136 raw endpoint telescope produces both the direct `t(k)<=r` triangle and the future-feedback `t(k)>r` triangle. The latter's six-row current is the exact R-079 two-channel connection; the two-root fixture has physical-prefix energy two, terminal energy five, and missing correction three. R-084 supplies an exact derivative-free projected Doob norm with constant one but no spatial decay. The existing R-131 bounded-multiplier fixture forces a sharp-projector diagnostic charge `q_r>=64` at gap six, and the exact Gram/Loewner criterion shows that bookkeeping direct sums do not orthogonalize physical `k` columns: coherent unit columns require diagonal trace at least `N^2`. R-137 reuses R-063, R-079, R-084, R-087, R-088, R-102, R-104, R-123, R-125, R-131, R-134, R-135, and R-136; it proves neither the production raw spatial estimate nor a once-owned `q_k` sum. Both A13 gates, headroom, low/matching/gap/anchor data, Nelson, and Sector A remain open |
 | [R-136](#r-136) | Common-heat replica variance, raw sequential owners, and the post-heat boundary | Scoped T4 analytic/exact/executed filtration and owner advance. Conditional centring contracts after deterministic or retained-measurable operators, but the literal deterministic-target-heat R-088 post-heat atom is already retained-field measurable and has zero R-125 future residual. Equal post-heat conditional means can have raw future variances zero and one, so mean-only recovery is formally rejected. Keeping the heat coordinate common while conditionally replicating only the legal future gives `Var_f(X_o)=E_(f,f')||X_o^f-X_o^(f')||^2/2` and `P_comp,o=Forest_063,o^ad/2-E_(f,f')||X_o^f-X_o^(f')||^2/4`. The complete raw owner telescopes pathwise in each replica when the low endpoint and all replica-specific later feedback are retained. Forward Doob/OU transposition is reused from general martingale theory and R-102, not reclaimed. Ambient product-space PSD is sufficient but not necessary on an abstract production-tangent graph; this is a route clarification only. The raw projected spatial atom estimate, once-owned `q_k` sum, forest-current lower bound, headroom, low/matching/gap/anchor data, both A13 gates, Nelson, and Sector A remain open |
 | [R-135](#r-135) | Variance-retained trace excess, sequential Cartan spatial transfer, and terminal-refinement boundary | Scoped T4 analytic/exact/executed advance and route correction. The exact R-125 owner retains one half of the adapted forest minus one half of the conditional future variance; the correct aggregate target is the complete-low R-123 trace excess. Replacing the variance rebate by the R-134 scalar norm envelope loses a load-bearing cancellation and is unbounded below on the scaled one-owner R-125 fixture. The R-087 three-channel spatial proof reruns directly on the uncentred R-088 sequential atom, with production-exponent margins `1/15`, `4/15`, and `16/15`. A legally centred variance-retained atom hypothesis would sum at `gamma=7/12` with square constant `0.658881625872614...`, but the centred owner intertwiner and once-owned `q_k^seq` sum remain open. The exact self/sequential homotopy gives no termwise domination, and the accepted extracted-`Z^6` majorant no-go does not refute the exact atom. No nonzero labelled final source block remains independent and uniformly six-real elliptic over the full R-093 directed refinement union; the successor must use fixed-chart aggregate smoothing or a shell-weighted covariance/spatial ledger. Headroom, both A13 gates, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -156,6 +157,78 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-138"></a>
+### R-138 -- Scale-graded raw direct transfer, signed future last insertion, and reveal reanchoring boundary
+
+**Result ID.**
+`A13-CLASSII-SCALE-GRADED-DIRECT-FUTURE-REANCHORING-BOUNDARY`.
+
+**Scale-graded direct theorem.**  On an aligned cell `k<=r`, assume the
+complete raw path, insertion, and fresh-root directions are `Q_r`-supported,
+the insertion is `Q_k`-supported, the R-087 covariance powers hold, and the
+complete-owner/conditioning intertwiner identifies the raw three-channel
+atom.  The order-two R-087 paracomposition works before target heat because
+the positive floor already supplies the coefficient derivatives and heat only
+contracts them.  For `1/3<rho<1/2`, `1/2<s<3rho-1/2`, and `m>=r+5`, the raw
+Cartan atom has charge
+`q_k^Cart=C_e 2^(-(6rho-1)k)W_k^raw`.  The linear Pauli--Fierz rows vanish in
+the far projection; the nonlinear rows contribute, including the raw OU
+factor two,
+`8(5/9)^2(243/(8000P))=3/(40P)`.  At `rho=2/5`, `s=2/3`, the exponent margins
+are `1/15`, `4/15`, and `16/15` and the squared decay is
+`2^(-4(m-k)/3)`.
+
+**Chronology/spatial-grade boundary.**  Chronological precedence does not
+imply the support hypothesis.  For `F_e(x)=x^3/(x^2+e)`, an earlier raw
+prefix `sqrt(e)+xi+delta N^(-2/5)cos(Nx)` has uniformly bounded
+`C^(2/5)` moments, but the exact low-insertion derivative channel has shell
+energy at least `c_e a^2 delta^2 N^(6/5)`.  The claimed `s=2/3` low-shell
+right side decays as `N^(-4/3)`, so the ratio grows as `N^(38/15)`.  This
+establishes `NG-2026-07-31-A13-CHRONOLOGY-ONLY-SPATIAL-GRADE`, an inference
+no-go rather than a production-action counterexample.
+
+**Signed future transpose.**  On each fixed finite ordered chart, let
+`delta_e J=J^(e)-J^(e-1)` and `delta_e B=B^(e)-B^(e-1)`.  Finite Fubini and
+the cumulative-energy identity transpose the complete R-079 future block to
+the signed last-insertion owner
+`E Re<Q_e J^(e-1),Q_e delta_e J>+E||Q_e delta_e J||^2/2`
+`-E int delta_e B:Gamma_e^-/2`, where
+`Q_e=P_(t_e-1)-P_ell` and
+`Gamma_e^-=sum_(ell<r<t_e)DeltaGamma_r`.  The coordinate is exact and
+derivative-free but chart-dependent and signed: increments `1,-1` have
+owners `1/2,-1/2`, while `1,1` have `1/2,3/2`.
+
+**Reveal reanchoring boundary.**  For a future cell `r<k`, an
+insertion-anchored FAR estimate acquires
+`2^(2gamma(k-r))` when placed in the R-135 reveal weight.  At
+`s=2/3`, `gamma=7/12`, gap six, this is `128`.  The cells
+`r+5<=m<k+5` are reveal-FAR but insertion-near and remain uncovered.  This
+establishes `NG-2026-07-31-A13-BARE-LAST-INSERTION-R135-REANCHORING`.  A
+separated route needs the gap-weighted charge
+`sum_(r<k)2^(2gamma(k-r))q_(r,k)` plus a signed near-wedge theorem; a direct
+route may instead estimate the complete signed owner.
+
+**Sharp criteria and collar.**  After complete same-`k` recombination, the
+minimal direct scalar charge is the supremum of the preweighted cell energies,
+and its sum is the necessary-and-sufficient scalar Carleson cost for the
+R-135 weighted-Cauchy route.  The separated future analogue includes the
+causal factor above.  Conditional on an actually proved compatible total
+`Q`, the R-134 fixed-collar condition is
+`Q<h_C^2 2^(7(C-5)/6)/(Lambda_own^2 D_(7/12))`, with
+`D_(7/12)=0.285928885855479...`.  R-138 proves neither `Q` nor positive
+`h_C`.
+
+**Where proved.**  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`;
+the R-138 note, primary and independent standard-library executables,
+integrated verifier, manifest and JSON artefacts; `EXP-000546--EXP-000551`;
+and the two named negative results.
+
+**Tier and boundary.**  T4 remains T4.  No production scale-grade or
+complete-owner intertwiner, deterministic once-owned charge sum, signed
+future near/forest lower form, positive finite-collar headroom, complete low
+or matching data, strict gap, absolute anchor, A13 gate, `OVERLAP_src`,
+Nelson theorem, removal, interacting measure, or Sector-A closure is proved.
 
 <a id="r-137"></a>
 ### R-137 -- Complete raw direct-future Doob split and the spatial one-use boundary
