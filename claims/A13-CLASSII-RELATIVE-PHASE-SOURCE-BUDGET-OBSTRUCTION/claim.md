@@ -4801,3 +4801,35 @@ T5--T7 promotion remain open. Tier stays T4.
   compatibility and constants, positive source-graph margin, matching,
   absolute anchor, both A13 gates, `OVERLAP_src`, Nelson, removals,
   interacting measure, and Sector A remain open at T4.
+- 2026-07-31: Registered
+  `A13-CLASSII-PROJECTED-FORCE-GLOBAL-DOOB-SIGNED-GRAM-ADAPTIVE-COLLAR-QUOTIENT-BOUNDARY`
+  (R-141) as a scoped analytic/exact/conditional/executed coordinate advance
+  and route boundary. The actual finite-chart action force is
+  `g_comp=-g_T/2=g_CN-g_V/2`; the covariance-normal future-variance force
+  cancels and is not charged again. Predictable projection gives one
+  self-adjoint chart Hessian, whose legal reverse is already its adjoint.
+  After exhaustive R-125 contraction/root/visit recombination, the actual
+  common trace feature, raw current, and centered residual form the canonical
+  signature `Z=(U,J,R)`, with
+  `E<Z,SZ>=Theta-||Phi||^2=V-Forest_063^ad` in the complete aggregate. A
+  same-norm arbitrary lift is insufficient because it does not determine
+  mixed endpoint correlations. Conditional endpoint sum/difference maps give
+  the exact signed Gram `[A+*SA-+A-*SA+]/2`; the sole action half occurs
+  after this Gram. Global Doob conjugation pays the source norm once while
+  retaining off-diagonal reveal blocks and the R-102 product covariance. The
+  exact source-null quotient and low-kernel tests give the conditional gap
+  `e-Lambda_C^2-sigma-kappa0-(a0+tau_C)^2/[4(f-sigma)]`. The positive-analysis
+  collar shift gives diagnostic first collars `C=8` and `C=10`, but moves
+  coherent three- and five-layer finite bands; it supplies no signed-Gram
+  monotonicity. Identical magnitude data can pass or fail only through signed
+  low correlation. `EXP-000568--EXP-000577` preserve every advance, failed
+  shortcut, audit correction, boundary, and revisit condition; no duplicate
+  negative result is created. Primary `89/89` and non-importing independent
+  `111/111` checks pass; integrated `394/394` embeds all `200` child rows
+  exactly once and adds `194` integrator-only checks. The deterministic
+  nine-page PDF audit is pinned in the R-141 manifest. Production common-feature
+  factorisation, a uniform signed upper Loewner bound, finite-band and low
+  compatibility estimates, a positive graph gap, matching, the absolute
+  anchor, both A13 gates, `OVERLAP_src`, Nelson, removals, interacting
+  measure, and Sector A remain open at T4. Research pauses at this checkpoint
+  at the operator's request.

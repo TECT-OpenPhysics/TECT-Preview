@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-141](#r-141) | Projected force, global Doob signed Gram, adaptive collar, and quotient boundary | Scoped T4 analytic/exact/conditional/executed advance. The actual finite-chart action force is `g_comp=-g_T/2=g_CN-g_V/2`, so future variance is not charged again; predictable projection gives one self-adjoint Hessian whose legal reverse is already its adjoint. After exhaustive R-125 recombination, the actual common trace feature, raw current, and centered residual form the canonical signature `Z=(U,J,R)`, `S=diag(+,-,+)`, with `E<Z,SZ>=Theta-||Phi||^2=V-Forest_ad` in the complete aggregate. A conditional two-sided factorisation gives the exact signed Gram `[A+*SA-+A-*SA+]/2`; alternatively, global Doob conjugation spends source norm once while retaining cross-reveal blocks. The exact source-null quotient and low-kernel tests yield `mu_src=e-Lambda_C^2-sigma-kappa0-(a0+tau_C)^2/[4(f-sigma)]`. Positive-analysis collar shift gives diagnostic first collars `C=8` and `C=10`, but moves coherent three- and five-layer finite bands. Signed-correlation fixtures prove magnitude data cannot decide positivity. No production factorisation, uniform Loewner bound, positive graph gap, matching/anchor data, A13 gate, Nelson theorem, or Sector-A closure is proved |
 | [R-140](#r-140) | Predictable triangular mixed-Gram one-use theorem and source-graph Feshbach boundary | Scoped T4 analytic/exact/executed advance and quantitative boundary. An owner-complete predictable triangular response with norm `Lambda_C` is paid by the Cameron--Martin source exactly once; the registered exponents `beta=7/5`, `s=2/3`, `gamma=7/12` give strict margins `7/60` and `1/12` and an exact Hilbert--Schmidt scalar sum. However the naive positive current-only diagnostic gives source-Hessian debts `1.05559...` at `C=5` and `0.465116...` at `C=6`, both above the conditional zero-low/tail headroom `0.100434...`, so signed owner-complete mixed-Gram cancellation is still necessary. Predictable stopping preserves the endpoint telescope but supplies no bad-set packing. The exact source-metric graph--Feshbach identity retains the semidefinite low-kernel cross and yields the sharp norm-data gap `e-Lambda_C^2-sigma-(a0+tau)^2/[4(f-sigma)]`. An absolute terminal Sobolev envelope is UV-infeasible at zero control; stationary-subtracted signature polarization is the viable repair. No production mixed-Gram envelope, positive graph gap, matching/anchor data, A13 gate, Nelson theorem, or Sector-A closure is proved |
 | [R-139](#r-139) | Signed future endpoint telescope and production-graph robust-complement boundary | Scoped T4 analytic/exact/executed advance and method boundary. Summing every future insertion owner before applying the reveal weight gives the exact terminal-minus-prefix identity `sum_e omega_e=K^N-K^prefix`, so the insertion shell and the R-138 factor `2^(2 gamma(k-r))` disappear from the complete signed future branch. With `K=-E D0/2`, the desired lower bound is exactly one weighted upper bound for the terminal-minus-prefix trace excess. The complete owner requires the mean/low reserve once; R-063 forest is an alternate trace coordinate, not an extra reserve. A moving wedge mask leaves an internal variation sum, and tail decay alone cannot create strict shifted-Douglas headroom. The exact robust ambient condition and its weaker production-graph pullback are proved. R-139 proves no production weighted trace-excess estimate, positive graph margin, complete low/matching/gap/anchor data, A13 gate, Nelson theorem, or Sector-A closure |
 | [R-138](#r-138) | Scale-graded raw direct transfer, signed future last insertion, and reveal reanchoring boundary | Scoped T4 analytic/exact/executed advance and method boundary. Under an explicit `Q_r`-supported raw coefficient path, legal conditional/OU/projection commutations, and a complete-owner intertwiner, the R-087 paracomposition proof gives the raw direct six-row far estimate. The only nonlinear far row has exact coefficient `8(5/9)^2(243/(8000P))=3/(40P)`, including the R-084 outer OU factor two; at `rho=2/5`, `s=2/3`, the margins are `1/15`, `4/15`, and `16/15`. A bounded-`C^(2/5)` earlier high prefix proves that chronology alone does not give the spatial grade. For the future triangle, the complete R-079 current--trace energy has an exact signed fixed-chart last-insertion telescope. Bare R-135 reindexing fails because reveal reanchoring creates `2^(2 gamma(k-r))`, equal to `128` at `gamma=7/12`, gap six, and leaves `r+5<=m<k+5` outside insertion-FAR geometry. R-138 gives the sharp direct and gap-weighted future scalar charge criteria and the conditional finite-collar threshold, but proves no production owner/grade intertwiner, charge sum, signed near/forest lower form, positive headroom, A13 gate, Nelson theorem, or Sector-A closure |
@@ -159,6 +160,76 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-141"></a>
+### R-141 -- Projected force, global Doob signed Gram, adaptive collar, and quotient boundary
+
+**Result ID.**
+`A13-CLASSII-PROJECTED-FORCE-GLOBAL-DOOB-SIGNED-GRAM-ADAPTIVE-COLLAR-QUOTIENT-BOUNDARY`.
+
+**Complete finite-chart projected force.**  The actual action owner is
+`P_comp=-T/2`, hence `g_comp=-g_T/2`.  Returning from the covariance-normal
+coordinate gives the same result as `g_CN-g_V/2`; the variance force cancels
+and is not appended again.  The legal source force is `9h/10` plus the
+past-conditional pullback of `G_6-g_T/2`, with all low/injected owners once.
+Its derivative is one self-adjoint projected Hessian.  The physical pullback
+kills the source-null kernel while the explicit source cost does not; legal
+reverse is the adjoint of the same owner and has no second charge.
+
+**Canonical complete signature and signed Gram.**  After exhaustive R-125
+contraction/root/visit recombination, use the actual common covariance/trace
+feature `U`, raw current `J`, and centered residual `R=J-Phi`.  With
+`S=diag(+I,-I,+I)`, the complete aggregate obeys
+`E<Z,SZ>=Theta-||Phi||^2=V-Forest_063^ad=D0-||b||^2`.  An arbitrary same-norm
+trace lift is insufficient because it does not determine mixed endpoint
+correlations.  If the weighted endpoint sum and difference factor through
+`A+` and `A-`, the exact self-adjoint Gram is
+`Q=[A+* S A-+A-* S A+]/2`; the future action contributes `-Q/2`, with no
+extra half.  Only the upper Loewner edge is adverse.
+
+**Global Doob and quotient firewalls.**  Mapping every adapted source block
+to its low projection and legal martingale innovations is an exact source
+isometry.  Conjugating the whole Hessian by this map retains all off-diagonal
+reveal blocks and the R-102 product covariance; it does not diagonalize a
+random terminal Hessian.  Splitting the chart tangent into `ker S` and its
+orthogonal complement gives the exact one-sided source-null test:
+`D0=-H00>=0`, `Ran H01 subset Ran D0^(1/2)`, and
+`H11+H10 D0^dagger H01<=Lambda_C^2 A1`.  For the low kernel, exact common-
+feature compatibility has `K*Z=L*R`; a residual kernel cross bounded by
+`kappa0` changes the sharp conditional source gap to
+`e-Lambda_C^2-sigma-kappa0-(a0+tau_C)^2/[4(f-sigma)]`.  Radial Taylor retains
+only half this Hessian gap in the action.
+
+**Adaptive collar and signed finite-band boundary.**  The positive triangular
+analysis satisfies exactly
+`A_(C+q)=2^(-gamma q) P_(m>=r+C+q) A_C`.  At the registered exponents and
+diagnostic `C_*=1`, the exact tail debt is `0.0868338538314814` at `C=8` and
+`0.0156257696038541` at `C=10`; these are the first collars below the two
+conditional headrooms.  But `C=8` moves layers `5,6,7` into a coherent finite
+band, while `C=10` moves all layers `5,...,9`.  The choice must be predictable
+and fixed across insertion endpoints.  Operator Schur controls a band by its
+row/column sums, not the quadrature of layer norms, and the legal reverse is
+already included.  Positive-analysis collar contraction does not imply
+monotonicity for an indefinite signed Gram.
+
+**Signed-correlation boundary.**  Two three-channel matrices with identical
+diagonals and absolute cross data have Schur determinants
+`0.0224213739509...` and `-0.0144159194054...`, and opposite signs of their
+least eigenvalues.  Therefore magnitude-only mixed/far/balanced/low constants
+cannot certify the production graph gap.  This specializes existing
+R-127/R-131 and low-kernel boundaries; no duplicate negative-result ID is
+created.
+
+**Where proved.**  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`;
+the R-141 note, deterministic PDF, primary and non-importing independent
+certificates, integrated verifier, manifest and JSON artefacts; and
+`EXP-000568--EXP-000577`.
+
+**Tier and boundary.**  T4 remains T4.  No production common-feature
+factorisation, uniform signed upper Loewner bound, coherent finite-band or low
+compatibility estimate, positive graph gap, matching, absolute anchor, A13
+gate, `OVERLAP_src`, Nelson theorem, removal, interacting measure, or Sector-A
+closure is proved.
 
 <a id="r-140"></a>
 ### R-140 -- Predictable triangular mixed-Gram one-use theorem and source-graph Feshbach boundary

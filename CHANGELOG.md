@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-141 projected force, global Doob signed Gram, adaptive collar, and quotient boundary] - 2026-07-31
+
+Registered R-141 at T4. The complete finite-chart force cancels the covariance-normal variance coordinate; the canonical actual-feature signature and global Doob conjugation retain the full signed owner and cross-reveal blocks. Exact source-null and low-kernel criteria add kappa0 to the sharp source-gap formula. Positive-analysis diagnostics first fit at C=8 and C=10 but move coherent finite bands, and signed correlation remains decisive. No production factorisation, uniform Loewner bound, positive graph gap, A13 gate, or Sector-A closure is claimed. Research pauses after this verified checkpoint at the operator's request.
+
 ## [A13 R-140 predictable triangular mixed-Gram and source-graph Feshbach boundary] - 2026-07-31
 
 Registered R-140 as a scoped T4 checkpoint. It proves a conditional predictable triangular one-use theorem, exact scalar exponent summability, a predictable stopping identity, and an exact source-metric graph-Feshbach theorem with the semidefinite low-kernel cross retained. The naive positive current-only C=5/C=6 debts exceed conditional source headroom, and an absolute terminal Sobolev envelope is UV-infeasible; the live successor is a smaller signed owner-complete R-102 mixed-Gram envelope plus production low compatibility. Both A13 gates and Sector A remain open.

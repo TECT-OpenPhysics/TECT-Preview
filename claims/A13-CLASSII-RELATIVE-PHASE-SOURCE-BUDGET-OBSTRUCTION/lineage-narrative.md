@@ -1024,6 +1024,29 @@ endpoint theorem.
     positive value of the once-debited source-gap formula. Both A13 gates and
     Sector A remain open at T4.
 
+69. **Complete projected force, canonical signature, global Doob Gram,
+    adaptive collar, and quotient boundary.** R-141 assembles the actual
+    finite-chart force `g_comp=-g_T/2` and shows that returning from the
+    covariance-normal coordinate cancels the future-variance force. The legal
+    predictable projection and its reverse are one self-adjoint Hessian owner.
+    After exhaustive R-125 recombination, the actual pinned common trace
+    feature, raw current, and centered residual give the canonical signature
+    `Z=(U,J,R)`, `S=diag(+,-,+)`. A conditional two-sided endpoint
+    factorisation yields the exact signed mixed Gram, while global Doob
+    conjugation spends source norm once without discarding cross-reveal blocks
+    or the R-102 product covariance. The existing quotient-Douglas machinery
+    now gives the exact source-null range test and the low-kernel penalty
+    `kappa0`, so the conditional source gap is
+    `e-Lambda_C^2-sigma-kappa0-(a0+tau_C)^2/[4(f-sigma)]`. The exact positive-
+    analysis collar shift first fits the diagnostic headrooms at `C=8` and
+    `C=10`, but moves coherent three- and five-layer bands. A signed-
+    correlation fixture proves that magnitude data cannot decide their
+    positivity. The live successor is one actual common-heat paired-replica/
+    global-Doob signed matrix calculation, including the predictable endpoint-
+    fixed collar and low kernel, before matching and the absolute anchor. Both
+    A13 gates and Sector A remain open at T4; research pauses at this verified
+    checkpoint at the operator's request.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

@@ -1,0 +1,2872 @@
+{
+  "assertion_accounting": {
+    "embedded_child_assertions": 200,
+    "integrator_only_assertions": 194,
+    "unique_package_assertions": 394
+  },
+  "assertions": {
+    "failed": 0,
+    "passed": 394,
+    "rows": [
+      {
+        "actual": "[Fraction(-2, 1), Fraction(10, 1), Fraction(-6, 1)]",
+        "expected": "[Fraction(-2, 1), Fraction(10, 1), Fraction(-6, 1)]",
+        "group": "primary:force",
+        "name": "covariance-normal force",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(-4, 1), Fraction(3, 1), Fraction(-5, 1)]",
+        "expected": "[Fraction(-4, 1), Fraction(3, 1), Fraction(-5, 1)]",
+        "group": "primary:force",
+        "name": "variance cancellation",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(-4, 1), Fraction(3, 1), Fraction(-5, 1)]",
+        "expected": "[Fraction(-4, 1), Fraction(3, 1), Fraction(-5, 1)]",
+        "group": "primary:force",
+        "name": "complete force is minus trace half",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(-2, 1), Fraction(10, 1), Fraction(-6, 1)]",
+        "expected": "[Fraction(-4, 1), Fraction(3, 1), Fraction(-5, 1)]",
+        "group": "primary:force",
+        "name": "variance cannot be appended again",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(1, 1), Fraction(-2, 1)], [Fraction(-2, 1), Fraction(5, 1)]]",
+        "expected": "[[Fraction(1, 1), Fraction(-2, 1)], [Fraction(-2, 1), Fraction(5, 1)]]",
+        "group": "primary:force",
+        "name": "covariance-normal Hessian",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(-2, 1), Fraction(-1, 2)], [Fraction(-1, 2), Fraction(1, 1)]]",
+        "expected": "[[Fraction(-2, 1), Fraction(-1, 2)], [Fraction(-1, 2), Fraction(1, 1)]]",
+        "group": "primary:force",
+        "name": "complete Hessian",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(-11, 10), Fraction(-1, 2)], [Fraction(-1, 2), Fraction(19, 10)]]",
+        "expected": "[[Fraction(-11, 10), Fraction(-1, 2)], [Fraction(-1, 2), Fraction(19, 10)]]",
+        "group": "primary:force",
+        "name": "production source coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(-11, 10), Fraction(-1, 2)], [Fraction(-1, 2), Fraction(19, 10)]]",
+        "expected": "symmetric",
+        "group": "primary:force",
+        "name": "production Hessian selfadjoint",
+        "status": "PASS"
+      },
+      {
+        "actual": "-0.11321715328369143",
+        "expected": "finite",
+        "group": "primary:projected_force",
+        "name": "chart 1 finite action",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.0966513278716219, 0.2750119672823015]",
+        "expected": "[0.0966513278808594, 0.2750119672851562]",
+        "group": "primary:projected_force",
+        "name": "chart 1 gradient",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[0.9948653442382817, 0.028392065429687308], [0.028392065429687308, 1.340752392578125]]",
+        "expected": "symmetric",
+        "group": "primary:projected_force",
+        "name": "chart 1 Hessian symmetric",
+        "status": "PASS"
+      },
+      {
+        "actual": "-0.07251333697509761",
+        "expected": "finite",
+        "group": "primary:projected_force",
+        "name": "chart 2 finite action",
+        "status": "PASS"
+      },
+      {
+        "actual": "[-0.0520134880374612, 0.42062508533863285]",
+        "expected": "[-0.05201348803710941, 0.4206250853271485]",
+        "group": "primary:projected_force",
+        "name": "chart 2 gradient",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[3.099440246582031, -1.2683932922363281], [-1.2683932922363281, 1.5060844512939453]]",
+        "expected": "symmetric",
+        "group": "primary:projected_force",
+        "name": "chart 2 Hessian symmetric",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "group": "primary:projected_force",
+        "name": "trivial-past projection",
+        "status": "PASS"
+      },
+      {
+        "actual": "43/10",
+        "expected": "43/10",
+        "group": "primary:projected_force",
+        "name": "first projected force",
+        "status": "PASS"
+      },
+      {
+        "actual": "{-1: Fraction(-3, 1), 1: Fraction(15, 1)}",
+        "expected": "{-1: Fraction(-3, 1), 1: Fraction(15, 1)}",
+        "group": "primary:projected_force",
+        "name": "second conditional projection",
+        "status": "PASS"
+      },
+      {
+        "actual": "{-1: Fraction(-69, 20), 1: Fraction(309, 20)}",
+        "expected": "{-1: Fraction(-69, 20), 1: Fraction(309, 20)}",
+        "group": "primary:projected_force",
+        "name": "second projected forces",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(-7, 1), Fraction(17, 1), Fraction(15, 1))",
+        "expected": "raw differs; projection fixed",
+        "group": "primary:projected_force",
+        "name": "raw future dependence removed",
+        "status": "PASS"
+      },
+      {
+        "actual": "13",
+        "expected": "13",
+        "group": "primary:signature",
+        "name": "mean plus innovation",
+        "status": "PASS"
+      },
+      {
+        "actual": "18",
+        "expected": "18",
+        "group": "primary:signature",
+        "name": "raw-current Pythagoras",
+        "status": "PASS"
+      },
+      {
+        "actual": "12",
+        "expected": "12",
+        "group": "primary:signature",
+        "name": "forest coordinate",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "primary:signature",
+        "name": "prefix trace deficit",
+        "status": "PASS"
+      },
+      {
+        "actual": "-7",
+        "expected": "-7",
+        "group": "primary:signature",
+        "name": "three-coordinate signature",
+        "status": "PASS"
+      },
+      {
+        "actual": "-7",
+        "expected": "-7",
+        "group": "primary:signature",
+        "name": "trace minus mean coordinate",
+        "status": "PASS"
+      },
+      {
+        "actual": "-7",
+        "expected": "-7",
+        "group": "primary:signature",
+        "name": "variance minus forest coordinate",
+        "status": "PASS"
+      },
+      {
+        "actual": "-7",
+        "expected": "-7",
+        "group": "primary:signature",
+        "name": "conditional mean return",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1",
+        "expected": "-1",
+        "group": "primary:signature",
+        "name": "future owner",
+        "status": "PASS"
+      },
+      {
+        "actual": "7/2",
+        "expected": "7/2",
+        "group": "primary:signature",
+        "name": "complete action owner",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(7, 2), Fraction(7, 2))",
+        "expected": "7/2",
+        "group": "primary:signature",
+        "name": "future plus mean returned once",
+        "status": "PASS"
+      },
+      {
+        "actual": "-12",
+        "expected": "-7",
+        "group": "primary:signature",
+        "name": "variance omission mutation",
+        "status": "PASS"
+      },
+      {
+        "actual": "-19",
+        "expected": "-7",
+        "group": "primary:signature",
+        "name": "forest duplication mutation",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(2, 1), Fraction(0, 1)], [Fraction(3, 1), Fraction(1, 1)]]",
+        "expected": "[[Fraction(2, 1), Fraction(0, 1)], [Fraction(3, 1), Fraction(1, 1)]]",
+        "group": "primary:mixed_gram",
+        "name": "left polarization",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(2, 1), Fraction(3, 1)], [Fraction(0, 1), Fraction(1, 1)]]",
+        "expected": "[[Fraction(2, 1), Fraction(3, 1)], [Fraction(0, 1), Fraction(1, 1)]]",
+        "group": "primary:mixed_gram",
+        "name": "right polarization",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(2, 1), Fraction(3, 2)], [Fraction(3, 2), Fraction(1, 1)]]",
+        "expected": "[[Fraction(2, 1), Fraction(3, 2)], [Fraction(3, 2), Fraction(1, 1)]]",
+        "group": "primary:mixed_gram",
+        "name": "half-symmetrized Gram",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(20, 1), Fraction(20, 1))",
+        "expected": "20",
+        "group": "primary:mixed_gram",
+        "name": "secant identity [Fraction(1, 1), Fraction(3, 1)]",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(3, 1), Fraction(3, 1))",
+        "expected": "3",
+        "group": "primary:mixed_gram",
+        "name": "secant identity [Fraction(-2, 1), Fraction(1, 1)]",
+        "status": "PASS"
+      },
+      {
+        "actual": "40",
+        "expected": "40",
+        "group": "primary:mixed_gram",
+        "name": "missing half duplicates owner",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(2001, 20), Fraction(0, 1)], [Fraction(0, 1), Fraction(0, 1)]]",
+        "expected": "PSD",
+        "group": "primary:mixed_gram",
+        "name": "upper Loewner ignores helpful negative direction",
+        "status": "PASS"
+      },
+      {
+        "actual": "100",
+        "expected": "1/20",
+        "group": "primary:mixed_gram",
+        "name": "absolute norm would overpay",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(1, 1), Fraction(0, 1)], [Fraction(0, 1), Fraction(1, 1)]]",
+        "expected": "[[Fraction(1, 1), Fraction(0, 1)], [Fraction(0, 1), Fraction(1, 1)]]",
+        "group": "primary:doob",
+        "name": "rational Doob isometry",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(-6, 25), Fraction(-67, 25)], [Fraction(-67, 25), Fraction(-19, 25)]]",
+        "expected": "symmetric",
+        "group": "primary:doob",
+        "name": "global Gram selfadjoint",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(2, 1), Fraction(1, 1)], [Fraction(1, 1), Fraction(-3, 1)]]",
+        "expected": "[[Fraction(2, 1), Fraction(1, 1)], [Fraction(1, 1), Fraction(-3, 1)]]",
+        "group": "primary:doob",
+        "name": "global Gram reconstructs Hessian",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "primary:doob",
+        "name": "quadratic form preserved",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2323/625",
+        "expected": "1",
+        "group": "primary:doob",
+        "name": "off-diagonal reveal blocks survive",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(0, 1), Fraction(0, 1)]",
+        "expected": "[Fraction(0, 1), Fraction(0, 1)]",
+        "group": "primary:quotient",
+        "name": "kernel vector",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]",
+        "expected": "[Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]",
+        "group": "primary:quotient",
+        "name": "physical Hessian kills source null",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(5, 1), Fraction(-4, 1)]",
+        "expected": "[Fraction(5, 1), Fraction(-4, 1)]",
+        "group": "primary:quotient",
+        "name": "quotient source equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "67",
+        "expected": "67",
+        "group": "primary:quotient",
+        "name": "quotient Hessian form equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(9, 1), Fraction(0, 1))",
+        "expected": "positive over zero",
+        "group": "primary:quotient",
+        "name": "positive source-null mutation impossible",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1",
+        "expected": "<=0",
+        "group": "primary:quotient",
+        "name": "weak kernel block nonpositive",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(-1, 1), Fraction(1, 2))",
+        "expected": "cross lies in range",
+        "group": "primary:quotient",
+        "name": "weak range condition",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(1, 1), Fraction(-1, 2)], [Fraction(-1, 2), Fraction(1, 4)]]",
+        "expected": "rank-one PSD",
+        "group": "primary:quotient",
+        "name": "weak reduced bound one quarter",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4",
+        "expected": "<0 for every finite bound",
+        "group": "primary:quotient",
+        "name": "zero kernel forces zero cross",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/2",
+        "expected": "-1/2",
+        "group": "primary:low_kernel",
+        "name": "PSD low diagonal insufficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/2",
+        "expected": "3/2",
+        "group": "primary:low_kernel",
+        "name": "kernel cross penalty",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "primary:low_kernel",
+        "name": "penalty repairs lower bound",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(2, 1)], [Fraction(0, 1)]]",
+        "expected": "[[Fraction(2, 1)], [Fraction(0, 1)]]",
+        "group": "primary:low_kernel",
+        "name": "common-feature Douglas range",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "primary:low_kernel",
+        "name": "common-feature kills low kernel",
+        "status": "PASS"
+      },
+      {
+        "actual": "10.778126471501519",
+        "expected": "10.778126471501523",
+        "group": "primary:collar",
+        "name": "C7 closed sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.20208987134060297",
+        "expected": "0.202089871340603",
+        "group": "primary:collar",
+        "name": "C7 source debt",
+        "status": "PASS"
+      },
+      {
+        "actual": "4.6311388710135",
+        "expected": "4.631138871013502",
+        "group": "primary:collar",
+        "name": "C8 closed sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.08683385383148143",
+        "expected": "0.0868338538314814",
+        "group": "primary:collar",
+        "name": "C8 source debt",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.971947657656302",
+        "expected": "1.971947657656302",
+        "group": "primary:collar",
+        "name": "C9 closed sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.03697401858104642",
+        "expected": "0.0369740185810464",
+        "group": "primary:collar",
+        "name": "C9 source debt",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.8333743788724295",
+        "expected": "0.83337437887243",
+        "group": "primary:collar",
+        "name": "C10 closed sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.015625769603854145",
+        "expected": "0.0156257696038541",
+        "group": "primary:collar",
+        "name": "C10 source debt",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0.20208987134060297, 0.10043434343434376, 0.08683385383148143)",
+        "expected": "C7 > headroom > C8",
+        "group": "primary:collar",
+        "name": "C8 first zero-low-tail collar",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0.03697401858104642, 0.0159126895, 0.015625769603854145)",
+        "expected": "C9 > headroom > C10",
+        "group": "primary:collar",
+        "name": "C10 first illustrative collar",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.0754657505306702",
+        "expected": "derived 1.07546575053067",
+        "group": "primary:collar",
+        "name": "C8 envelope threshold",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.0091392217831208",
+        "expected": "derived 1.00913922178312",
+        "group": "primary:collar",
+        "name": "C10 envelope threshold",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.09330189019289342",
+        "expected": "<0.10043434343434376",
+        "group": "primary:collar",
+        "name": "C5-to-C8 exact shift bound",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.008246799906614696",
+        "expected": "<0.0159126895",
+        "group": "primary:collar",
+        "name": "C5-to-C11 illustrative shift bound",
+        "status": "PASS"
+      },
+      {
+        "actual": "3.552713678800501e-15",
+        "expected": "<=2e-11",
+        "group": "primary:collar",
+        "name": "cellwise collar shift identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "([[Fraction(0, 1), Fraction(0, 1)], [Fraction(0, 1), Fraction(1, 1)]], [[Fraction(10, 1), Fraction(0, 1)], [Fraction(0, 1), Fraction(1, 1)]], [[Fraction(-10, 1), Fraction(0, 1)], [Fraction(0, 1), Fraction(0, 1)]])",
+        "expected": "removing negative shell increases upper eigenvalue",
+        "group": "primary:collar",
+        "name": "signed collar monotonicity mutation",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/4",
+        "expected": "3/4",
+        "group": "primary:band",
+        "name": "three-layer row sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/4",
+        "expected": "3/4",
+        "group": "primary:band",
+        "name": "three-layer column sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "9/2",
+        "expected": "9/2",
+        "group": "primary:band",
+        "name": "Schur bound attained by constant vector",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.75",
+        "expected": "0.44876373392787533",
+        "group": "primary:band",
+        "name": "quadrature shortcut fails",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/2",
+        "expected": "3/2",
+        "group": "primary:band",
+        "name": "full cross factor two",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "double-count mutation",
+        "group": "primary:band",
+        "name": "legal reverse not charged twice",
+        "status": "PASS"
+      },
+      {
+        "actual": "-0.014415919405423278",
+        "expected": "<0",
+        "group": "primary:correlation",
+        "name": "adverse-correlation determinant fails",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.02242137395087787",
+        "expected": ">0",
+        "group": "primary:correlation",
+        "name": "favorable-correlation determinant passes",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0.02, -0.02, -0.014415919405423278, 0.02242137395087787)",
+        "expected": "same magnitude; opposite verdict",
+        "group": "primary:correlation",
+        "name": "same magnitude data differ only by signed correlation",
+        "status": "PASS"
+      },
+      {
+        "actual": "171/1024",
+        "expected": "171/1024",
+        "group": "primary:correlation",
+        "name": "rational pass determinant",
+        "status": "PASS"
+      },
+      {
+        "actual": "-61/1024",
+        "expected": "-61/1024",
+        "group": "primary:correlation",
+        "name": "rational fail determinant",
+        "status": "PASS"
+      },
+      {
+        "actual": "563/360",
+        "expected": "563/360",
+        "group": "primary:graph",
+        "name": "conditional margin before kernel penalty",
+        "status": "PASS"
+      },
+      {
+        "actual": "23/360",
+        "expected": "23/360",
+        "group": "primary:graph",
+        "name": "kernel penalty enters once",
+        "status": "PASS"
+      },
+      {
+        "actual": "23/720",
+        "expected": "23/720",
+        "group": "primary:graph",
+        "name": "action receives half source margin",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(-2, 1), Fraction(10, 1), Fraction(-6, 1)]",
+        "expected": "[Fraction(-2, 1), Fraction(10, 1), Fraction(-6, 1)]",
+        "group": "independent:force_algebra",
+        "name": "covariance-normal value",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(-4, 1), Fraction(3, 1), Fraction(-5, 1)]",
+        "expected": "[Fraction(-4, 1), Fraction(3, 1), Fraction(-5, 1)]",
+        "group": "independent:force_algebra",
+        "name": "two complete-force routes agree",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(-4, 1), Fraction(3, 1), Fraction(-5, 1)]",
+        "expected": "[Fraction(-4, 1), Fraction(3, 1), Fraction(-5, 1)]",
+        "group": "independent:force_algebra",
+        "name": "complete-force value",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(-2, 1), Fraction(10, 1), Fraction(-6, 1)]",
+        "expected": "[Fraction(-4, 1), Fraction(3, 1), Fraction(-5, 1)]",
+        "group": "independent:force_algebra",
+        "name": "extra variance is a mutation",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(1, 1), Fraction(-2, 1)], [Fraction(-2, 1), Fraction(5, 1)]]",
+        "expected": "[[Fraction(1, 1), Fraction(-2, 1)], [Fraction(-2, 1), Fraction(5, 1)]]",
+        "group": "independent:force_algebra",
+        "name": "Hessian covariance-normal",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(-2, 1), Fraction(-1, 2)], [Fraction(-1, 2), Fraction(1, 1)]]",
+        "expected": "[[Fraction(-2, 1), Fraction(-1, 2)], [Fraction(-1, 2), Fraction(1, 1)]]",
+        "group": "independent:force_algebra",
+        "name": "Hessian complete",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(-11, 10), Fraction(-1, 2)], [Fraction(-1, 2), Fraction(19, 10)]]",
+        "expected": "[[Fraction(-11, 10), Fraction(-1, 2)], [Fraction(-1, 2), Fraction(19, 10)]]",
+        "group": "independent:force_algebra",
+        "name": "Hessian production",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(-11, 10), Fraction(-1, 2)], [Fraction(-1, 2), Fraction(19, 10)]]",
+        "expected": "symmetric",
+        "group": "independent:force_algebra",
+        "name": "Hessian symmetric",
+        "status": "PASS"
+      },
+      {
+        "actual": "9/10",
+        "expected": "9/10",
+        "group": "independent:force_algebra",
+        "name": "source cost exactly nine tenths",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "independent:projected_force",
+        "name": "endpoint mean",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "group": "independent:projected_force",
+        "name": "first pullback mean",
+        "status": "PASS"
+      },
+      {
+        "actual": "43/10",
+        "expected": "43/10",
+        "group": "independent:projected_force",
+        "name": "first production force",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3",
+        "expected": "-3",
+        "group": "independent:projected_force",
+        "name": "conditional a minus",
+        "status": "PASS"
+      },
+      {
+        "actual": "15",
+        "expected": "15",
+        "group": "independent:projected_force",
+        "name": "conditional a plus",
+        "status": "PASS"
+      },
+      {
+        "actual": "{-1: Fraction(-69, 20), 1: Fraction(309, 20)}",
+        "expected": "{-1: Fraction(-69, 20), 1: Fraction(309, 20)}",
+        "group": "independent:projected_force",
+        "name": "second production forces",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(-7, 1), Fraction(17, 1), Fraction(15, 1))",
+        "expected": "raw differs but legal projection fixed",
+        "group": "independent:projected_force",
+        "name": "raw future mutation",
+        "status": "PASS"
+      },
+      {
+        "actual": "13",
+        "expected": "13",
+        "group": "independent:signature_owner",
+        "name": "Phi energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "18",
+        "expected": "18",
+        "group": "independent:signature_owner",
+        "name": "raw-current energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "12",
+        "expected": "12",
+        "group": "independent:signature_owner",
+        "name": "forest energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "group": "independent:signature_owner",
+        "name": "D0",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(-7, 1), Fraction(-7, 1), Fraction(-7, 1), Fraction(-7, 1)]",
+        "expected": "all -7",
+        "group": "independent:signature_owner",
+        "name": "all signature coordinates agree",
+        "status": "PASS"
+      },
+      {
+        "actual": "-7",
+        "expected": "-7",
+        "group": "independent:signature_owner",
+        "name": "signature value",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1",
+        "expected": "-1",
+        "group": "independent:signature_owner",
+        "name": "future owner",
+        "status": "PASS"
+      },
+      {
+        "actual": "7/2",
+        "expected": "7/2",
+        "group": "independent:signature_owner",
+        "name": "complete action owner",
+        "status": "PASS"
+      },
+      {
+        "actual": "7/2",
+        "expected": "7/2",
+        "group": "independent:signature_owner",
+        "name": "mean returned once",
+        "status": "PASS"
+      },
+      {
+        "actual": "7/2",
+        "expected": "7/2",
+        "group": "independent:signature_owner",
+        "name": "future action factor",
+        "status": "PASS"
+      },
+      {
+        "actual": "-12",
+        "expected": "-7",
+        "group": "independent:signature_owner",
+        "name": "variance omission",
+        "status": "PASS"
+      },
+      {
+        "actual": "-19",
+        "expected": "-7",
+        "group": "independent:signature_owner",
+        "name": "forest duplication",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1",
+        "expected": "7/2",
+        "group": "independent:signature_owner",
+        "name": "missing mean return",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(1, 1), Fraction(1, 1))",
+        "expected": "1",
+        "group": "independent:signature_owner",
+        "name": "same lift norm",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(1, 1), Fraction(0, 1))",
+        "expected": "different",
+        "group": "independent:signature_owner",
+        "name": "different mixed trace cross",
+        "status": "PASS"
+      },
+      {
+        "actual": "([Fraction(2, 1), Fraction(-9, 1)], [Fraction(4, 1), Fraction(-11, 1)])",
+        "expected": "different cells; same complete sum",
+        "group": "independent:signature_owner",
+        "name": "forest coordinate only aggregate",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(2, 1), Fraction(0, 1)], [Fraction(3, 1), Fraction(1, 1)]]",
+        "expected": "[[Fraction(2, 1), Fraction(0, 1)], [Fraction(3, 1), Fraction(1, 1)]]",
+        "group": "independent:mixed_gram",
+        "name": "left mixed matrix",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(2, 1), Fraction(3, 1)], [Fraction(0, 1), Fraction(1, 1)]]",
+        "expected": "[[Fraction(2, 1), Fraction(3, 1)], [Fraction(0, 1), Fraction(1, 1)]]",
+        "group": "independent:mixed_gram",
+        "name": "right is adjoint",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(2, 1), Fraction(3, 2)], [Fraction(3, 2), Fraction(1, 1)]]",
+        "expected": "[[Fraction(2, 1), Fraction(3, 2)], [Fraction(3, 2), Fraction(1, 1)]]",
+        "group": "independent:mixed_gram",
+        "name": "signed Gram",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(20, 1), Fraction(20, 1))",
+        "expected": "20",
+        "group": "independent:mixed_gram",
+        "name": "polarization fixture [Fraction(1, 1), Fraction(3, 1)]",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(3, 1), Fraction(3, 1))",
+        "expected": "3",
+        "group": "independent:mixed_gram",
+        "name": "polarization fixture [Fraction(-2, 1), Fraction(1, 1)]",
+        "status": "PASS"
+      },
+      {
+        "actual": "40",
+        "expected": "40",
+        "group": "independent:mixed_gram",
+        "name": "factor two mutation",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/20",
+        "expected": "1/20",
+        "group": "independent:mixed_gram",
+        "name": "one-sided upper value",
+        "status": "PASS"
+      },
+      {
+        "actual": "100",
+        "expected": "100",
+        "group": "independent:mixed_gram",
+        "name": "absolute norm distinct",
+        "status": "PASS"
+      },
+      {
+        "actual": "5",
+        "expected": "5",
+        "group": "independent:doob_isometry",
+        "name": "h2 energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "30",
+        "expected": "30",
+        "group": "independent:doob_isometry",
+        "name": "h3 energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "independent:doob_isometry",
+        "name": "h2 reconstruction",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "independent:doob_isometry",
+        "name": "h3 reconstruction",
+        "status": "PASS"
+      },
+      {
+        "actual": "5",
+        "expected": "5",
+        "group": "independent:doob_isometry",
+        "name": "h2 Pythagoras",
+        "status": "PASS"
+      },
+      {
+        "actual": "30",
+        "expected": "30",
+        "group": "independent:doob_isometry",
+        "name": "h3 Pythagoras",
+        "status": "PASS"
+      },
+      {
+        "actual": "35",
+        "expected": "35",
+        "group": "independent:doob_isometry",
+        "name": "total source energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "35",
+        "expected": "35",
+        "group": "independent:doob_isometry",
+        "name": "total Doob energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "116",
+        "expected": "116",
+        "group": "independent:doob_isometry",
+        "name": "terminal form direct",
+        "status": "PASS"
+      },
+      {
+        "actual": "19",
+        "expected": "19",
+        "group": "independent:doob_isometry",
+        "name": "terminal low block",
+        "status": "PASS"
+      },
+      {
+        "actual": "22",
+        "expected": "22",
+        "group": "independent:doob_isometry",
+        "name": "terminal reveal one block",
+        "status": "PASS"
+      },
+      {
+        "actual": "75",
+        "expected": "75",
+        "group": "independent:doob_isometry",
+        "name": "terminal reveal two block",
+        "status": "PASS"
+      },
+      {
+        "actual": "116",
+        "expected": "116",
+        "group": "independent:doob_isometry",
+        "name": "global blocks reconstruct terminal form",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(3, 1), Fraction(0, 1), Fraction(3, 1)], [Fraction(0, 1), Fraction(5, 1), Fraction(5, 1)], [Fraction(3, 1), Fraction(5, 1), Fraction(8, 1)]]",
+        "expected": "derived matrix",
+        "group": "independent:quotient",
+        "name": "physical Hessian matrix",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(0, 1), Fraction(0, 1)]",
+        "expected": "[Fraction(0, 1), Fraction(0, 1)]",
+        "group": "independent:quotient",
+        "name": "kernel source null",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]",
+        "expected": "[Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]",
+        "group": "independent:quotient",
+        "name": "kernel Hessian null",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(5, 1), Fraction(2, 1)]",
+        "expected": "[Fraction(5, 1), Fraction(2, 1)]",
+        "group": "independent:quotient",
+        "name": "coset source equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(95, 1), Fraction(95, 1))",
+        "expected": "95",
+        "group": "independent:quotient",
+        "name": "coset physical form equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(14, 1), Fraction(69, 1))",
+        "expected": "(Fraction(14, 1), Fraction(69, 1))",
+        "group": "independent:quotient",
+        "name": "ambient source costs differ",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(1, 1), Fraction(0, 1), Fraction(1, 1)], [Fraction(0, 1), Fraction(1, 1), Fraction(1, 1)]]",
+        "expected": "[[Fraction(1, 1), Fraction(0, 1), Fraction(1, 1)], [Fraction(0, 1), Fraction(1, 1), Fraction(1, 1)]]",
+        "group": "independent:quotient",
+        "name": "refined synthesis conjugacy",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(3, 1), Fraction(0, 1), Fraction(3, 1)], [Fraction(0, 1), Fraction(5, 1), Fraction(5, 1)], [Fraction(3, 1), Fraction(5, 1), Fraction(8, 1)]]",
+        "expected": "[[Fraction(3, 1), Fraction(0, 1), Fraction(3, 1)], [Fraction(0, 1), Fraction(5, 1), Fraction(5, 1)], [Fraction(3, 1), Fraction(5, 1), Fraction(8, 1)]]",
+        "group": "independent:quotient",
+        "name": "refined Hessian conjugacy",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(1, 1), Fraction(-1, 2)], [Fraction(-1, 2), Fraction(1, 4)]]",
+        "expected": "rank-one remainder",
+        "group": "independent:quotient",
+        "name": "weak Schur remainder",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "independent:quotient",
+        "name": "weak Schur determinant",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4",
+        "expected": "<0",
+        "group": "independent:quotient",
+        "name": "zero-kernel cross fails ceiling 1",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4",
+        "expected": "<0",
+        "group": "independent:quotient",
+        "name": "zero-kernel cross fails ceiling 100",
+        "status": "PASS"
+      },
+      {
+        "actual": "[5, 6, 7]",
+        "expected": "[5, 6, 7]",
+        "group": "independent:collar_shift",
+        "name": "C8 moves three layers",
+        "status": "PASS"
+      },
+      {
+        "actual": "[5, 6, 7, 8, 9]",
+        "expected": "[5, 6, 7, 8, 9]",
+        "group": "independent:collar_shift",
+        "name": "C10 moves five layers",
+        "status": "PASS"
+      },
+      {
+        "actual": "-7/4",
+        "expected": "-7/4",
+        "group": "independent:collar_shift",
+        "name": "C5-to-C8 weight exponent",
+        "status": "PASS"
+      },
+      {
+        "actual": "-7/2",
+        "expected": "-7/2",
+        "group": "independent:collar_shift",
+        "name": "C5-to-C8 squared exponent",
+        "status": "PASS"
+      },
+      {
+        "actual": "-35/12",
+        "expected": "-35/12",
+        "group": "independent:collar_shift",
+        "name": "C5-to-C10 weight exponent",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(-1, 1), Fraction(9, 1))",
+        "expected": "deleting -10 increases upper value",
+        "group": "independent:collar_shift",
+        "name": "signed-shell monotonicity fails",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(0, 1), Fraction(1, 1))",
+        "expected": "(Fraction(0, 1), Fraction(1, 1))",
+        "group": "independent:collar_shift",
+        "name": "moving insertion mask breaks telescope",
+        "status": "PASS"
+      },
+      {
+        "actual": "3.552713678800501e-15",
+        "expected": "<=3e-10",
+        "group": "independent:collar_diagnostic",
+        "name": "C7 direct-versus-closed",
+        "status": "PASS"
+      },
+      {
+        "actual": "8.881784197001252e-16",
+        "expected": "<=3e-10",
+        "group": "independent:collar_diagnostic",
+        "name": "C8 direct-versus-closed",
+        "status": "PASS"
+      },
+      {
+        "actual": "4.440892098500626e-16",
+        "expected": "<=3e-10",
+        "group": "independent:collar_diagnostic",
+        "name": "C9 direct-versus-closed",
+        "status": "PASS"
+      },
+      {
+        "actual": "2.220446049250313e-16",
+        "expected": "<=3e-10",
+        "group": "independent:collar_diagnostic",
+        "name": "C10 direct-versus-closed",
+        "status": "PASS"
+      },
+      {
+        "actual": "10.778126471501519",
+        "expected": "10.778126471501523",
+        "group": "independent:collar_diagnostic",
+        "name": "C7 H",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.20208987134060297",
+        "expected": "0.202089871340603",
+        "group": "independent:collar_diagnostic",
+        "name": "C7 debt",
+        "status": "PASS"
+      },
+      {
+        "actual": "4.6311388710135",
+        "expected": "4.631138871013502",
+        "group": "independent:collar_diagnostic",
+        "name": "C8 H",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.08683385383148143",
+        "expected": "0.0868338538314814",
+        "group": "independent:collar_diagnostic",
+        "name": "C8 debt",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.971947657656302",
+        "expected": "1.971947657656302",
+        "group": "independent:collar_diagnostic",
+        "name": "C9 H",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.03697401858104642",
+        "expected": "0.0369740185810464",
+        "group": "independent:collar_diagnostic",
+        "name": "C9 debt",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.8333743788724295",
+        "expected": "0.83337437887243",
+        "group": "independent:collar_diagnostic",
+        "name": "C10 H",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.015625769603854145",
+        "expected": "0.0156257696038541",
+        "group": "independent:collar_diagnostic",
+        "name": "C10 debt",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0.20208987134060297, 0.10043434343434376, 0.08683385383148143)",
+        "expected": "C8",
+        "group": "independent:collar_diagnostic",
+        "name": "first zero-low collar",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0.03697401858104642, 0.0159126895, 0.015625769603854145)",
+        "expected": "C10",
+        "group": "independent:collar_diagnostic",
+        "name": "first small-headroom collar",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.0754657505306702",
+        "expected": "derived",
+        "group": "independent:collar_diagnostic",
+        "name": "C8 C-star threshold",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.0091392217831208",
+        "expected": "derived",
+        "group": "independent:collar_diagnostic",
+        "name": "C10 C-star threshold",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/4",
+        "expected": "3/4",
+        "group": "independent:collar_schur",
+        "name": "row sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/4",
+        "expected": "3/4",
+        "group": "independent:collar_schur",
+        "name": "column sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.75",
+        "expected": "0.75",
+        "group": "independent:collar_schur",
+        "name": "Schur square root",
+        "status": "PASS"
+      },
+      {
+        "actual": "6",
+        "expected": "6",
+        "group": "independent:collar_schur",
+        "name": "constant vector saturates",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.44876373392787533",
+        "expected": "0.75",
+        "group": "independent:collar_schur",
+        "name": "quadrature smaller than coherent sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/2",
+        "expected": "3/2",
+        "group": "independent:collar_schur",
+        "name": "full cross",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "wrong doubled reverse",
+        "group": "independent:collar_schur",
+        "name": "reverse double-count mutation",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.02242137395087787",
+        "expected": "in registered interval",
+        "group": "independent:correlation",
+        "name": "favorable determinant",
+        "status": "PASS"
+      },
+      {
+        "actual": "-0.014415919405423278",
+        "expected": "in registered interval",
+        "group": "independent:correlation",
+        "name": "adverse determinant",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.02039619657361802",
+        "expected": "positive registered interval",
+        "group": "independent:correlation",
+        "name": "favorable least eigenvalue",
+        "status": "PASS"
+      },
+      {
+        "actual": "-0.012325853403833631",
+        "expected": "negative registered interval",
+        "group": "independent:correlation",
+        "name": "adverse least eigenvalue",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "independent:correlation",
+        "name": "same magnitude data",
+        "status": "PASS"
+      },
+      {
+        "actual": "171/1024",
+        "expected": "171/1024",
+        "group": "independent:correlation",
+        "name": "exact pass determinant",
+        "status": "PASS"
+      },
+      {
+        "actual": "-61/1024",
+        "expected": "-61/1024",
+        "group": "independent:correlation",
+        "name": "exact fail determinant",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/2",
+        "expected": "-1/2",
+        "group": "independent:low_kernel",
+        "name": "low-kernel graph fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/2",
+        "expected": "3/2",
+        "group": "independent:low_kernel",
+        "name": "kernel penalty",
+        "status": "PASS"
+      },
+      {
+        "actual": "563/360",
+        "expected": "563/360",
+        "group": "independent:low_kernel",
+        "name": "unpenalized margin",
+        "status": "PASS"
+      },
+      {
+        "actual": "23/360",
+        "expected": "23/360",
+        "group": "independent:low_kernel",
+        "name": "penalized margin",
+        "status": "PASS"
+      },
+      {
+        "actual": "23/720",
+        "expected": "23/720",
+        "group": "independent:low_kernel",
+        "name": "action half margin",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "independent:firewall",
+        "name": "no numerical-library import",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "independent:firewall",
+        "name": "no relative import",
+        "status": "PASS"
+      },
+      {
+        "actual": "['__future__', 'argparse', 'ast', 'fractions', 'json', 'math', 'os', 'pathlib', 'tempfile', 'typing']",
+        "expected": "no primary import",
+        "group": "independent:firewall",
+        "name": "primary module not imported",
+        "status": "PASS"
+      },
+      {
+        "actual": "codes\\foundations\\a13_classii_projected_force_global_doob_signed_gram_adaptive_collar_quotient_boundary.py",
+        "expected": "file",
+        "group": "independent:firewall",
+        "name": "primary exists for cross-check",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0, '')",
+        "expected": "0",
+        "group": "children",
+        "name": "primary exits zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0, '')",
+        "expected": "0",
+        "group": "children",
+        "name": "independent exits zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-31-primary-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary/result.json",
+        "expected": "file",
+        "group": "children",
+        "name": "primary output exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-31-independent-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary/result.json",
+        "expected": "file",
+        "group": "children",
+        "name": "independent output exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "group": "children",
+        "name": "primary status",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-PROJECTED-FORCE-GLOBAL-DOOB-SIGNED-GRAM-ADAPTIVE-COLLAR-QUOTIENT-BOUNDARY",
+        "expected": "A13-CLASSII-PROJECTED-FORCE-GLOBAL-DOOB-SIGNED-GRAM-ADAPTIVE-COLLAR-QUOTIENT-BOUNDARY",
+        "group": "children",
+        "name": "primary result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "children",
+        "name": "primary rows all pass",
+        "status": "PASS"
+      },
+      {
+        "actual": "89",
+        "expected": "89",
+        "group": "children",
+        "name": "primary row count self-consistent",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "group": "children",
+        "name": "independent status",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-PROJECTED-FORCE-GLOBAL-DOOB-SIGNED-GRAM-ADAPTIVE-COLLAR-QUOTIENT-BOUNDARY",
+        "expected": "A13-CLASSII-PROJECTED-FORCE-GLOBAL-DOOB-SIGNED-GRAM-ADAPTIVE-COLLAR-QUOTIENT-BOUNDARY",
+        "group": "children",
+        "name": "independent result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "children",
+        "name": "independent rows all pass",
+        "status": "PASS"
+      },
+      {
+        "actual": "111",
+        "expected": "111",
+        "group": "children",
+        "name": "independent row count self-consistent",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "independence",
+        "name": "independent has no relative import",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "independence",
+        "name": "independent avoids numerical libraries",
+        "status": "PASS"
+      },
+      {
+        "actual": "['__future__', 'argparse', 'ast', 'fractions', 'json', 'math', 'os', 'pathlib', 'tempfile', 'typing']",
+        "expected": "no primary",
+        "group": "independence",
+        "name": "independent does not import primary",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0.20208987134060297, 0.20208987134060297)",
+        "expected": "within 2e-12",
+        "group": "cross",
+        "name": "C7 debt agreement",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0.08683385383148143, 0.08683385383148143)",
+        "expected": "within 2e-12",
+        "group": "cross",
+        "name": "C8 debt agreement",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0.03697401858104642, 0.03697401858104642)",
+        "expected": "within 2e-12",
+        "group": "cross",
+        "name": "C9 debt agreement",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0.015625769603854145, 0.015625769603854145)",
+        "expected": "within 2e-12",
+        "group": "cross",
+        "name": "C10 debt agreement",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1.0754657505306702, 1.0754657505306702)",
+        "expected": "within 2e-12",
+        "group": "cross",
+        "name": "C8 threshold agreement",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1.0091392217831208, 1.0091392217831208)",
+        "expected": "within 2e-12",
+        "group": "cross",
+        "name": "C10 threshold agreement",
+        "status": "PASS"
+      },
+      {
+        "actual": "('23/360', '23/360')",
+        "expected": "equal",
+        "group": "cross",
+        "name": "source margin agreement",
+        "status": "PASS"
+      },
+      {
+        "actual": "('23/720', '23/720')",
+        "expected": "equal",
+        "group": "cross",
+        "name": "action half agreement",
+        "status": "PASS"
+      },
+      {
+        "actual": "(-0.014415919405423278, -0.014415919405423278)",
+        "expected": "both negative",
+        "group": "cross",
+        "name": "adverse correlation sign",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0.02242137395087787, 0.02242137395087787)",
+        "expected": "both positive",
+        "group": "cross",
+        "name": "favorable correlation sign",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "primary production_two_sided_factorization false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "independent production_two_sided_factorization false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "primary production_low_compatibility false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "independent production_low_compatibility false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "primary a13_gate_closed false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "independent a13_gate_closed false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "primary nelson false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "independent nelson false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "primary sector_a_closed false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "independent sector_a_closed false",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "ledger id",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "purpose section",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "canonical lift",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "signed Gram theorem",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "source-null theorem",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "collar theorem",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "devil audit",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "stop boundary",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "no overclaim",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0, '')",
+        "expected": "0",
+        "group": "pdf",
+        "name": "first build exits zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "FORM-CHECK: PASS (banner fields, sections, footer, filename consistency)\nOVERFULL-HBOX: 0\nPDF: claims\\A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION\\notes\\classii-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary-260731-v1.0.pdf (102 KB) \u2014 intermediates discarded\n",
+        "expected": "FORM-CHECK: PASS",
+        "group": "pdf",
+        "name": "first form check",
+        "status": "PASS"
+      },
+      {
+        "actual": "FORM-CHECK: PASS (banner fields, sections, footer, filename consistency)\nOVERFULL-HBOX: 0\nPDF: claims\\A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION\\notes\\classii-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary-260731-v1.0.pdf (102 KB) \u2014 intermediates discarded\n",
+        "expected": "OVERFULL-HBOX: 0",
+        "group": "pdf",
+        "name": "first zero overfull",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary-260731-v1.0.pdf",
+        "expected": "file",
+        "group": "pdf",
+        "name": "PDF exists after first build",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0, '')",
+        "expected": "0",
+        "group": "pdf",
+        "name": "second build exits zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "FORM-CHECK: PASS (banner fields, sections, footer, filename consistency)\nOVERFULL-HBOX: 0\nPDF: claims\\A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION\\notes\\classii-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary-260731-v1.0.pdf (102 KB) \u2014 intermediates discarded\n",
+        "expected": "FORM-CHECK: PASS",
+        "group": "pdf",
+        "name": "second form check",
+        "status": "PASS"
+      },
+      {
+        "actual": "FORM-CHECK: PASS (banner fields, sections, footer, filename consistency)\nOVERFULL-HBOX: 0\nPDF: claims\\A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION\\notes\\classii-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary-260731-v1.0.pdf (102 KB) \u2014 intermediates discarded\n",
+        "expected": "OVERFULL-HBOX: 0",
+        "group": "pdf",
+        "name": "second zero overfull",
+        "status": "PASS"
+      },
+      {
+        "actual": "('7b2eef3c899cd04dfa4aecd84b5055511d810c58e0de8ce3d9ec809c3eef57e9', '7b2eef3c899cd04dfa4aecd84b5055511d810c58e0de8ce3d9ec809c3eef57e9')",
+        "expected": "equal",
+        "group": "pdf",
+        "name": "deterministic rebuild",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "pdf",
+        "name": "not encrypted",
+        "status": "PASS"
+      },
+      {
+        "actual": "9",
+        "expected": ">=6",
+        "group": "pdf",
+        "name": "at least six pages",
+        "status": "PASS"
+      },
+      {
+        "actual": "[2511, 1881, 2359, 1687, 1966, 2085, 2559, 2772, 2523]",
+        "expected": ">=20 each",
+        "group": "pdf",
+        "name": "all pages nonblank",
+        "status": "PASS"
+      },
+      {
+        "actual": "{'replacement_glyph': False, 'literal_qquad': False}",
+        "expected": "{'replacement_glyph': False, 'literal_qquad': False}",
+        "group": "pdf",
+        "name": "no replacement glyph or literal spacing command",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "pdf",
+        "name": "result id extracts",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "pdf",
+        "name": "ledger id extracts",
+        "status": "PASS"
+      },
+      {
+        "actual": "scope tokens",
+        "expected": "present",
+        "group": "pdf",
+        "name": "scope boundary extracts",
+        "status": "PASS"
+      },
+      {
+        "actual": "None",
+        "expected": "None",
+        "group": "pdf",
+        "name": "no form fields",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "pdf",
+        "name": "no unsafe actions",
+        "status": "PASS"
+      },
+      {
+        "actual": "destination-array",
+        "expected": "safe",
+        "group": "pdf",
+        "name": "safe open action",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "pdf",
+        "name": "no widgets",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0, '')",
+        "expected": "0",
+        "group": "pdf",
+        "name": "Poppler render exits zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "9",
+        "expected": "9",
+        "group": "pdf",
+        "name": "rendered page count",
+        "status": "PASS"
+      },
+      {
+        "actual": "[271786, 215965, 266179, 209210, 232554, 236362, 278218, 315756, 212526]",
+        "expected": "positive each",
+        "group": "pdf",
+        "name": "rendered pages nonempty",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000568 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "['A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION']",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "exploration",
+        "name": "EXP-000568 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000568 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Estimate the whole projected Hessian in one signed source coordinate rather than bounding force components separately.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000568 next action",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000569 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "['A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION']",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "exploration",
+        "name": "EXP-000569 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000569 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Construct the actual production common-feature endpoint pair and retain it through the mixed Gram.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000569 next action",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000570 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "['A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION']",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "exploration",
+        "name": "EXP-000570 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000570 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Build or falsify A-plus and A-minus for the entire R-102 paired-replica Hessian before taking magnitudes.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000570 next action",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000571 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "['A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION']",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "exploration",
+        "name": "EXP-000571 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000571 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Keep product covariance and the low coordinate inside a global signed Gram.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000571 next action",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000572 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "['A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION']",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "exploration",
+        "name": "EXP-000572 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000572 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Estimate the complete paired-replica Q_global directly, preserving every off-diagonal block until the signed spectral test.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000572 next action",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000573 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "['A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION']",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "exploration",
+        "name": "EXP-000573 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000573 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Verify these kernel and range conditions for the actual global signed Gram.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000573 next action",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000574 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "['A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION']",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "exploration",
+        "name": "EXP-000574 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000574 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Choose any adaptive collar predictably and endpoint-independently, then estimate its full coherent three- or five-layer signed band.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000574 next action",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000575 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "['A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION']",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "exploration",
+        "name": "EXP-000575 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000575 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Evaluate one owner-complete signed finite-band Gram with a predictable endpoint-fixed collar.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000575 next action",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000576 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "['A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION']",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "exploration",
+        "name": "EXP-000576 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000576 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Compute the actual signed finite-band and low cross blocks before any scalar absolute-value budget.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000576 next action",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000577 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "['A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION']",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "exploration",
+        "name": "EXP-000577 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000577 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "After the requested research stop, construct or falsify the full production signed Gram and insert only verified constants into the exact quotient/low formula.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000577 next action",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_balanced_coefficient_jet_continuum_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-063 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION",
+        "expected": "A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION",
+        "group": "authority",
+        "name": "R-063 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-063 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_full_hessian_laplace_wick_future_feedback_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-102 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-FULL-HESSIAN-LAPLACE-WICK-FUTURE-FEEDBACK-BOUNDARY",
+        "expected": "A13-CLASSII-FULL-HESSIAN-LAPLACE-WICK-FUTURE-FEEDBACK-BOUNDARY",
+        "group": "authority",
+        "name": "R-102 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-102 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_revisit_quotient_operator_carleson_signed_score_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-118 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-REVISIT-QUOTIENT-OPERATOR-CARLESON-SIGNED-SCORE-BOUNDARY",
+        "expected": "A13-CLASSII-REVISIT-QUOTIENT-OPERATOR-CARLESON-SIGNED-SCORE-BOUNDARY",
+        "group": "authority",
+        "name": "R-118 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-118 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_conditional_variance_forest_bridge_root_shell_operator_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-125 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-CONDITIONAL-VARIANCE-FOREST-BRIDGE-ROOT-SHELL-OPERATOR-BOUNDARY",
+        "expected": "A13-CLASSII-CONDITIONAL-VARIANCE-FOREST-BRIDGE-ROOT-SHELL-OPERATOR-BOUNDARY",
+        "group": "authority",
+        "name": "R-125 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-125 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_total_symbol_euler_low_injected_loewner_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-126 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-TOTAL-SYMBOL-EULER-LOW-INJECTED-LOEWNER-BOUNDARY",
+        "expected": "A13-CLASSII-TOTAL-SYMBOL-EULER-LOW-INJECTED-LOEWNER-BOUNDARY",
+        "group": "authority",
+        "name": "R-126 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-126 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_predictable_source_riesz_weighted_schur_low_margin_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-127 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-PREDICTABLE-SOURCE-RIESZ-WEIGHTED-SCHUR-LOW-MARGIN-BOUNDARY",
+        "expected": "A13-CLASSII-PREDICTABLE-SOURCE-RIESZ-WEIGHTED-SCHUR-LOW-MARGIN-BOUNDARY",
+        "group": "authority",
+        "name": "R-127 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-127 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_owner_complete_source_pullback_covariance_normal_force_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-128 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-OWNER-COMPLETE-SOURCE-PULLBACK-COVARIANCE-NORMAL-FORCE-BOUNDARY",
+        "expected": "A13-CLASSII-OWNER-COMPLETE-SOURCE-PULLBACK-COVARIANCE-NORMAL-FORCE-BOUNDARY",
+        "group": "authority",
+        "name": "R-128 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-128 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_endpoint_trace_excess_shell_coanalysis_shifted_douglas_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-129 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-ENDPOINT-TRACE-EXCESS-SHELL-COANALYSIS-SHIFTED-DOUGLAS-BOUNDARY",
+        "expected": "A13-CLASSII-ENDPOINT-TRACE-EXCESS-SHELL-COANALYSIS-SHIFTED-DOUGLAS-BOUNDARY",
+        "group": "authority",
+        "name": "R-129 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-129 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_terminal_xi_conormal_gram_balanced_low_response_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-130 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-TERMINAL-XI-CONORMAL-GRAM-BALANCED-LOW-RESPONSE-BOUNDARY",
+        "expected": "A13-CLASSII-TERMINAL-XI-CONORMAL-GRAM-BALANCED-LOW-RESPONSE-BOUNDARY",
+        "group": "authority",
+        "name": "R-130 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-130 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_owner_complete_physical_response_mixed_gram_shell_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-131 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-OWNER-COMPLETE-PHYSICAL-RESPONSE-MIXED-GRAM-SHELL-BOUNDARY",
+        "expected": "A13-CLASSII-OWNER-COMPLETE-PHYSICAL-RESPONSE-MIXED-GRAM-SHELL-BOUNDARY",
+        "group": "authority",
+        "name": "R-131 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-131 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_mixed_replica_gaussian_ray_sextic_shell_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-132 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-MIXED-REPLICA-GAUSSIAN-RAY-SEXTIC-SHELL-BOUNDARY",
+        "expected": "A13-CLASSII-MIXED-REPLICA-GAUSSIAN-RAY-SEXTIC-SHELL-BOUNDARY",
+        "group": "authority",
+        "name": "R-132 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-132 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_common_heat_replica_raw_sequential_owner_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-136 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-COMMON-HEAT-REPLICA-RAW-SEQUENTIAL-OWNER-BOUNDARY",
+        "expected": "A13-CLASSII-COMMON-HEAT-REPLICA-RAW-SEQUENTIAL-OWNER-BOUNDARY",
+        "group": "authority",
+        "name": "R-136 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-136 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_signed_future_endpoint_graph_complement_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-139 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-SIGNED-FUTURE-ENDPOINT-GRAPH-COMPLEMENT-BOUNDARY",
+        "expected": "A13-CLASSII-SIGNED-FUTURE-ENDPOINT-GRAPH-COMPLEMENT-BOUNDARY",
+        "group": "authority",
+        "name": "R-139 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-139 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_predictable_triangular_mixed_gram_source_graph_feshbach_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-140 manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-PREDICTABLE-TRIANGULAR-MIXED-GRAM-SOURCE-GRAPH-FESHBACH-BOUNDARY",
+        "expected": "A13-CLASSII-PREDICTABLE-TRIANGULAR-MIXED-GRAM-SOURCE-GRAPH-FESHBACH-BOUNDARY",
+        "group": "authority",
+        "name": "R-140 result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "authority",
+        "name": "R-140 claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_projected_force_global_doob_signed_gram_adaptive_collar_quotient_boundary_manifest.json",
+        "expected": "file",
+        "group": "manifest",
+        "name": "manifest exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "tect/a13-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary-manifest/1.0",
+        "expected": "*-manifest/1.0",
+        "group": "manifest",
+        "name": "schema",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "manifest",
+        "name": "claim id",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-PROJECTED-FORCE-GLOBAL-DOOB-SIGNED-GRAM-ADAPTIVE-COLLAR-QUOTIENT-BOUNDARY",
+        "expected": "A13-CLASSII-PROJECTED-FORCE-GLOBAL-DOOB-SIGNED-GRAM-ADAPTIVE-COLLAR-QUOTIENT-BOUNDARY",
+        "group": "manifest",
+        "name": "result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-141",
+        "expected": "R-141",
+        "group": "manifest",
+        "name": "ledger id",
+        "status": "PASS"
+      },
+      {
+        "actual": "(False, False, 'PASS (9 pages rendered at 130 dpi and inspected; no clipping, overlap, malformed equations, or literal spacing-command artefacts)')",
+        "expected": "(False, False, 'PASS*')",
+        "group": "manifest",
+        "name": "proof incomplete and manual visual QA pinned",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "manifest",
+        "name": "exploration ids",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "manifest",
+        "name": "authority set",
+        "status": "PASS"
+      },
+      {
+        "actual": "codes/foundations/a13_classii_projected_force_global_doob_signed_gram_adaptive_collar_quotient_boundary.py",
+        "expected": "codes/foundations/a13_classii_projected_force_global_doob_signed_gram_adaptive_collar_quotient_boundary.py",
+        "group": "manifest",
+        "name": "primary path",
+        "status": "PASS"
+      },
+      {
+        "actual": "7b2d28c758993935e251b938b3c388840c3108d00dc036227655e41be9bb2b15",
+        "expected": "7b2d28c758993935e251b938b3c388840c3108d00dc036227655e41be9bb2b15",
+        "group": "manifest",
+        "name": "primary hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "codes/foundations/a13_classii_projected_force_global_doob_signed_gram_adaptive_collar_quotient_boundary_independent.py",
+        "expected": "codes/foundations/a13_classii_projected_force_global_doob_signed_gram_adaptive_collar_quotient_boundary_independent.py",
+        "group": "manifest",
+        "name": "independent path",
+        "status": "PASS"
+      },
+      {
+        "actual": "e4d8491af348b5f686bd382b0b06ddb723b31db77aff09e99ab96a17d93c7bc7",
+        "expected": "e4d8491af348b5f686bd382b0b06ddb723b31db77aff09e99ab96a17d93c7bc7",
+        "group": "manifest",
+        "name": "independent hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "codes/foundations/a13_classii_projected_force_global_doob_signed_gram_adaptive_collar_quotient_boundary_verify.py",
+        "expected": "codes/foundations/a13_classii_projected_force_global_doob_signed_gram_adaptive_collar_quotient_boundary_verify.py",
+        "group": "manifest",
+        "name": "verifier path",
+        "status": "PASS"
+      },
+      {
+        "actual": "b838e39b5aac0873d5365bdd217c413fd5b5fa798937ff69a0b342af51ee9cb4",
+        "expected": "b838e39b5aac0873d5365bdd217c413fd5b5fa798937ff69a0b342af51ee9cb4",
+        "group": "manifest",
+        "name": "verifier hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary-260731-v1.0.tex.txt",
+        "expected": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary-260731-v1.0.tex.txt",
+        "group": "manifest",
+        "name": "note path",
+        "status": "PASS"
+      },
+      {
+        "actual": "be82504e10144f82e2e6ebcefc3e347cfd9b14af03c47335b26b1fb242a041f6",
+        "expected": "be82504e10144f82e2e6ebcefc3e347cfd9b14af03c47335b26b1fb242a041f6",
+        "group": "manifest",
+        "name": "note hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary-260731-v1.0.pdf",
+        "expected": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary-260731-v1.0.pdf",
+        "group": "manifest",
+        "name": "pdf path",
+        "status": "PASS"
+      },
+      {
+        "actual": "7b2eef3c899cd04dfa4aecd84b5055511d810c58e0de8ce3d9ec809c3eef57e9",
+        "expected": "7b2eef3c899cd04dfa4aecd84b5055511d810c58e0de8ce3d9ec809c3eef57e9",
+        "group": "manifest",
+        "name": "pdf hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-31-primary-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary/result.json",
+        "expected": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-31-primary-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary/result.json",
+        "group": "manifest",
+        "name": "primary_result path",
+        "status": "PASS"
+      },
+      {
+        "actual": "94536ae47cde41ee9075a86078e39c25efb796da640fb0a5f2aa44aedf12053b",
+        "expected": "94536ae47cde41ee9075a86078e39c25efb796da640fb0a5f2aa44aedf12053b",
+        "group": "manifest",
+        "name": "primary_result hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-31-independent-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary/result.json",
+        "expected": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-31-independent-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary/result.json",
+        "group": "manifest",
+        "name": "independent_result path",
+        "status": "PASS"
+      },
+      {
+        "actual": "d3fa50e50f4c605824834fb4483a857780cba69e40c91f3a6999165f44b27e4d",
+        "expected": "d3fa50e50f4c605824834fb4483a857780cba69e40c91f3a6999165f44b27e4d",
+        "group": "manifest",
+        "name": "independent_result hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "89",
+        "expected": "89",
+        "group": "manifest",
+        "name": "primary count",
+        "status": "PASS"
+      },
+      {
+        "actual": "111",
+        "expected": "111",
+        "group": "manifest",
+        "name": "independent count",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "manifest",
+        "name": "negative list empty",
+        "status": "PASS"
+      },
+      {
+        "actual": "RESULTS-LEDGER.md",
+        "expected": "file",
+        "group": "surface",
+        "name": "result ledger file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "result ledger",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+        "expected": "file",
+        "group": "surface",
+        "name": "claim status file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "claim status",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/claim.md",
+        "expected": "file",
+        "group": "surface",
+        "name": "claim chronology file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "claim chronology",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/lineage-narrative.md",
+        "expected": "file",
+        "group": "surface",
+        "name": "lineage narrative file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "lineage narrative",
+        "status": "PASS"
+      },
+      {
+        "actual": "governance/sector-a-theorem-map.json",
+        "expected": "file",
+        "group": "surface",
+        "name": "theorem map file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "theorem map",
+        "status": "PASS"
+      },
+      {
+        "actual": "todo/todo.json",
+        "expected": "file",
+        "group": "surface",
+        "name": "task ledger file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "task ledger",
+        "status": "PASS"
+      },
+      {
+        "actual": "CHANGELOG.md",
+        "expected": "file",
+        "group": "surface",
+        "name": "changelog file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "changelog",
+        "status": "PASS"
+      },
+      {
+        "actual": "theory/proof-evidence-map.md",
+        "expected": "file",
+        "group": "surface",
+        "name": "proof evidence map file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "proof evidence map",
+        "status": "PASS"
+      },
+      {
+        "actual": "CATALOG.md",
+        "expected": "file",
+        "group": "surface",
+        "name": "catalog file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "catalog",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "aggregation",
+        "name": "child identities unique",
+        "status": "PASS"
+      },
+      {
+        "actual": "{'embedded_runtime': 200, 'embedded_manifest': 200, 'integrator_only_manifest': 194, 'integrated_manifest': 394, 'unique_manifest': 394}",
+        "expected": "{'embedded_runtime': 200, 'embedded_manifest': 200, 'integrator_only_manifest': 194, 'integrated_manifest': 394, 'unique_manifest': 394}",
+        "group": "aggregation",
+        "name": "child and manifest counts dynamic",
+        "status": "PASS"
+      }
+    ],
+    "total": 394
+  },
+  "authority_hashes": {
+    "R-063": "3ef0a619df679f28624711f153bfb13bdd538f91f664da8664b2e7063ff3b67e",
+    "R-102": "2bc0f9542d1835958f98f43dc82de6591edd6702bd04e28cec05add12610dc72",
+    "R-118": "41e388424695b38d186e12261fba17fcfe60098ff3f2e3158711d9592c2809d3",
+    "R-125": "64d0d5ee851a49c5f85994f71616b4d51def2bca701abea6d006a578d8d44e2f",
+    "R-126": "48c521918532962bbf23405c6f89114dd2e7a0e61d0a92bb89c201ed806a3a92",
+    "R-127": "e335d24c37792872081e10d7a1826d41d7785536924d7c585d5de1f381d2251c",
+    "R-128": "f53e63763d7cf983d425a0d2cee0d60cd3c86e0d78e5cef7e3abd73938edcb1e",
+    "R-129": "b95a695946339c729ad6175988a9774f790b2f347cb5fc0ad2269fcb22205d45",
+    "R-130": "4ebb3a9fc55383898fb43005c242020f987bfc04c5dd9cf5bd9cda70503e33f4",
+    "R-131": "58091a9eef99d5a43e298f6ecb1f3d7187893da66e85d7c2547165851b939601",
+    "R-132": "dfbcfc8f37f15b808bce4f7e04b30ed473b047815f980530a7df8fab8bcec0de",
+    "R-136": "5b844c23b6acab430c6e2f2b4cbd339eb28f559f02d7817c01a749d58ed88dd9",
+    "R-139": "3648dea61a3a9646abd99374978b1fdd9acf717b402ccee2a8a0f6f61202d6f4",
+    "R-140": "971a966bf72a04af10dec65e7850384e628c5215bbe75092fe6cb93033fb4144"
+  },
+  "children": {
+    "independent": {
+      "assertions": 111,
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-31-independent-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary/result.json",
+      "sha256": "d3fa50e50f4c605824834fb4483a857780cba69e40c91f3a6999165f44b27e4d",
+      "stdout": "R-141 independent PASS: 111/111\n"
+    },
+    "primary": {
+      "assertions": 89,
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-31-primary-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary/result.json",
+      "sha256": "94536ae47cde41ee9075a86078e39c25efb796da640fb0a5f2aa44aedf12053b",
+      "stdout": "R-141 primary PASS: 89/89\n"
+    }
+  },
+  "cross_computed": {
+    "action_margin": "23/720",
+    "collar_debts": {
+      "10": 0.015625769603854145,
+      "11": 0.006562066485306256,
+      "5": 1.055590388046681,
+      "6": 0.46511621380434104,
+      "7": 0.20208987134060297,
+      "8": 0.08683385383148143,
+      "9": 0.03697401858104642
+    },
+    "correlation_determinants": {
+      "adverse": -0.014415919405423278,
+      "favorable": 0.02242137395087787
+    },
+    "cstar10": 1.0091392217831208,
+    "cstar8": 1.0754657505306702,
+    "penalized_source_margin": "23/360"
+  },
+  "manifest_sha256": "c2b4a5d70214666632369f12ee477c9c7151d2912a3280dc930b77ed8a88dccc",
+  "pdf_audit": {
+    "all_pages_nonblank": true,
+    "deterministic_rebuild": true,
+    "dpi": 130,
+    "form_check": true,
+    "open_action": "destination-array",
+    "overfull_hbox_count": 0,
+    "page_sha256": [
+      "3debd9c7b8252977b1ba45c87d185515b4ac449f84caa9974e800c5302ec4894",
+      "a9338c612fc90f51acb31adb183a2f74c966d305bb44200d2d5b402a8ca04b23",
+      "91a9573acab4079419f368d3434f32e8720c24131cc7e3413859a158c9b6cd62",
+      "74be8c728d060901f970d41c866f94819317821692c485721eee366877c0c44d",
+      "799cdcd03082e1fe065e521f5cb50b660a4830f2902b28a76fbe88a1d5bc2cb0",
+      "ad31c3e9ea5e76a766844905977912b244e0278c1a395d674fec48282886b96b",
+      "734e1d3ca9d7fa6286fa94b1fe68afa1af26fea65c7fc881537bc427155ac5ab",
+      "87f10b2b8f1ba691466840b9c1c64ea5baeb4ecf9d3d02dbc72c4453ff1547c0",
+      "f5252f2f111633320b262fca3aa2c56d3d0278bac0581a2d1e07514c820f9d4a"
+    ],
+    "pages": 9,
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary-260731-v1.0.pdf",
+    "rendered_pages": 9,
+    "renderer": "Poppler pdftoppm",
+    "security_findings": [],
+    "sha256": "7b2eef3c899cd04dfa4aecd84b5055511d810c58e0de8ce3d9ec809c3eef57e9",
+    "size_bytes": 105087,
+    "widget_count": 0
+  },
+  "result_id": "A13-CLASSII-PROJECTED-FORCE-GLOBAL-DOOB-SIGNED-GRAM-ADAPTIVE-COLLAR-QUOTIENT-BOUNDARY",
+  "schema": "tect/a13-projected-force-global-doob-signed-gram-adaptive-collar-quotient-boundary-integrated/1.0",
+  "scope": {
+    "a13_gate_closed": false,
+    "canonical_complete_signature": true,
+    "conditional_signed_gram": true,
+    "finite_chart_projected_force": true,
+    "global_doob_conjugation": true,
+    "nelson": false,
+    "positive_analysis_collar_shift": true,
+    "positive_graph_gap": false,
+    "production_factorization": false,
+    "production_uniform_loewner": false,
+    "sector_a_closed": false,
+    "source_null_and_low_kernel_tests": true
+  },
+  "source_hashes": {
+    "independent": "e4d8491af348b5f686bd382b0b06ddb723b31db77aff09e99ab96a17d93c7bc7",
+    "primary": "7b2d28c758993935e251b938b3c388840c3108d00dc036227655e41be9bb2b15",
+    "verifier": "b838e39b5aac0873d5365bdd217c413fd5b5fa798937ff69a0b342af51ee9cb4"
+  },
+  "status": "PASS",
+  "version": "1.0.0"
+}

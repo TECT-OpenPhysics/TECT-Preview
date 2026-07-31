@@ -1,0 +1,656 @@
+% =============================================================================
+% Title: Projected force, global Doob signed Gram, adaptive collar, and quotient boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-PROJECTED-FORCE-GLOBAL-DOOB-SIGNED-GRAM-ADAPTIVE-COLLAR-QUOTIENT-BOUNDARY
+% Ledger: R-141
+% Version: v1.0 -- first issued 2026-07-31; this version issued 2026-07-31
+% Status: scoped T4 analytic/exact/conditional/executed advance; no A13 gate closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cX}{\mathcal X}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+
+R-140 proved that the production exponents make the positive triangular
+analysis summable, but its current-only constants were too large for the
+conditional source headroom.  It therefore left a precise structural task:
+keep the complete R-102 product covariance, primitive trace, R-125 future
+variance, R-063 forest, and mean/low coordinate in one signed response before
+taking absolute values.
+
+The present checkpoint advances that task in four ways.  First, it writes the
+actual finite-chart projected force of the complete action owner and shows
+that the covariance-normal variance force cancels rather than being charged
+again.  Second, it gives a canonical three-coordinate signature for the
+complete trace/mean/current/variance owner after exhaustive R-125
+recombination.  Third, it conjugates the whole finite-chart Hessian to a
+global Doob source coordinate without deleting off-diagonal reveal blocks and
+states the exact source-null quotient and low-kernel acceptance criteria.
+Fourth, it proves the exact positive-analysis collar shift, computes the
+$C=8$ and $C=10$ diagnostics, and identifies the coherent finite-band price
+of moving the collar.
+
+The projected-force formula is an explicit assembly of R-126--R-129, not a
+claim that a new physical force has been bounded.  The quotient criterion is
+an application of the R-118/R-129/R-140 Douglas machinery, not a second
+Douglas theorem.  The new durable coordinate is the complete canonical
+signature and its global Doob signed-Gram placement.
+
+Everything is at finite cutoff, positive floor, and a fixed temporally
+faithful chart.  The two-sided production factorisation, its uniform upper
+Loewner constant, the production common trace feature, finite-collar blocks,
+low compatibility, and a positive graph gap remain unproved.  No matching,
+absolute anchor, A13 gate, $\mathrm{OVERLAP}_{\rm src}$, Nelson estimate,
+removal, interacting measure, Sector-A closure, or tier promotion follows.
+
+\section*{2. Exact finite-chart production projected force}
+
+Let $\pi$ be a finite temporally faithful source chart and
+\[
+ Z_h=S_\pi\xi+L_\pi h .                              \tag{2.1}
+\]
+The complete action owner is
+\[
+ \cA_\pi(h)=\sum_\alpha\E\,\cP_{{\rm comp},\alpha}(Z_h)
+ +{9\over20}\|h\|_{\cS_\pi}^2
+ +{3\over20}\E\|Z_{K,h}\|_6^6,                    \tag{2.2}
+\]
+where every exhaustive low/injected scalar owner is included once and
+\[
+ \cP_{\rm comp}={1\over2}\|\Phi\|^2-{1\over2}\Theta
+               =-{1\over2}\mathcal T .              \tag{2.3}
+\]
+If $G_{\mathcal T}$ denotes the R-126 Euler force of the complete
+trace-excess owner, then
+\[
+ G_{\rm comp}=-{1\over2}G_{\mathcal T}.              \tag{2.4}
+\]
+Equivalently, if $G_{\mathcal V}$ is the future-variance coordinate and
+$G_{\rm CN}=(G_{\mathcal V}-G_{\mathcal T})/2$, then
+\[
+ G_{\rm CN}-{1\over2}G_{\mathcal V}
+ =-{1\over2}G_{\mathcal T}.                          \tag{2.5}
+\]
+Thus the variance force disappears when the covariance-normal coordinate is
+returned to the smaller action owner.  Appending it again would duplicate an
+owner.
+
+Put
+\[
+ G_6(Z)={9\over10}|Z|^4Z,\quad
+ G_{\rm end}=G_6-{1\over2}\sum_\alpha G_{\mathcal T,\alpha}.
+                                                               \tag{2.6}
+\]
+The legal projected force is
+\[
+ \boxed{
+ (g_\pi^{\rm prod}(h))_b={9\over10}h_b+
+ \E\left[S_b^*G_{\rm end}(Z_h)\mid\F_{t_{b-1}}\right].}
+                                                               \tag{2.7}
+\]
+The conditional expectation is the orthogonal projection to the predictable
+source block.  Differentiating on the finite chart gives
+\[
+ \boxed{
+ Dg_\pi^{\rm prod}(h)={9\over10}\Id+
+ P_{\rm pred}L_\pi^*(Q_{\rm comp}+Q_6)L_\pi P_{\rm pred}.}
+                                                               \tag{2.8}
+\]
+It is self-adjoint.  The physical pullback in (2.8) kills $\Ker L_\pi$;
+the explicit source cost $9\Id/10$ does not.  Under a
+representation-preserving refinement $\iota$,
+\[
+ g_\pi(h)=\iota^*g_{\pi'}(\iota h),\quad
+ H_\pi(h)=\iota^*H_{\pi'}(\iota h)\iota.             \tag{2.9}
+\]
+Forward and legal reverse are therefore the two adjoint faces of one Hessian
+owner.  The reverse has constant one and is not a second charge.
+
+The executable certificate differentiates (2.2) on two unrelated polynomial
+charts and checks (2.7) by exact Rademacher conditional expectation.  These
+checks establish the finite-chart algebra only; they give no uniform norm.
+
+\section*{3. Canonical complete signature owner}
+
+At a fixed complete endpoint $q$, let
+\[
+ \Phi_q=\E_fJ_q,\quad R_q=J_q-\Phi_q,\quad
+ V_q=\E_f\|R_q\|^2.                                 \tag{3.1}
+\]
+Choose the \emph{actual common covariance/trace factor} $U_q$ in one pinned
+feature space, with
+\[
+ \E_f\|U_q\|^2=\Theta_q.                             \tag{3.2}
+\]
+The word ``actual'' is essential.  An arbitrary vector with the same norm
+does not determine $\ip{U_N}{U_p}$ and cannot determine the mixed Gram; that
+shortcut is excluded by the R-131 diagonal-Gram information boundary.
+
+Define
+\[
+ \mathbf Z_q=(U_q,J_q,R_q),\quad
+ \mathrm S=\operatorname{diag}(\Id,-\Id,\Id).        \tag{3.3}
+\]
+Then the pointwise complete signature identity is
+\[
+ \boxed{
+ \E_f\ip{\mathbf Z_q}{\mathrm S\mathbf Z_q}
+ =\Theta_q-\E_f\|J_q\|^2+V_q
+ =\Theta_q-\|\Phi_q\|^2.}                           \tag{3.4}
+\]
+Writing $\Phi=b+Y$ relative to the previous reveal gives
+\[
+ \E_{r-1}\ip{\mathbf Z_q}{\mathrm S\mathbf Z_q}
+ =D_{0,q}-\|b_q\|^2.                                \tag{3.5}
+\]
+
+Only after the exhaustive contraction-closed output sum, fixed-root
+ownership, and same-root visit telescope of R-125 may the alternate forest
+coordinate be inserted:
+\[
+ \sum_{r,m}w_{r,m}^C\E\Delta_{N,p}
+ \ip{\mathbf Z}{\mathrm S\mathbf Z}
+ =\sum_{r,m}w_{r,m}^C\E\Delta_{N,p}
+       (V-\mathrm{Forest}_{063}^{\rm ad}).           \tag{3.6}
+\]
+Equation (3.6) is a complete aggregate identity, not an arbitrary
+cell-by-cell equality.
+
+Let the common value in (3.6) be $S_C^{\rm full}$.  The R-139 future action
+and the returned mean/low owner obey
+\[
+ \boxed{
+ \mathfrak I_{\rm fut}^C+{1\over2}\sum_{r,m}w_{r,m}^C
+     \E\Delta_{N,p}\|b\|^2=-{1\over2}S_C^{\rm full}.}
+                                                               \tag{3.7}
+\]
+The primitive trace appears once, the raw current once, the future variance
+once, and the mean is returned once.  The forest is an alternate coordinate
+with multiplicity zero; it is never appended as an extra reserve.
+
+The exact audit fixture
+\[
+ \|b\|^2=9,\quad\E\|Y\|^2=4,\quad\Theta=6,\quad V=5
+                                                               \tag{3.8}
+\]
+has $\|\Phi\|^2=13$, $\E\|J\|^2=18$,
+$\mathrm{Forest}=12$, and signature $-7$.  Its future owner is $-1$, while
+returning $\|b\|^2/2$ gives $7/2=-(-7)/2=\cP_{\rm comp}$.  Omitting variance
+gives $-12$ and duplicating the forest gives $-19$, so both mutations are
+detected.
+
+\section*{4. Conditional two-sided signed mixed Gram}
+
+Let $\widehat x_r=(\ell_r,x_r)$ contain the once-owned low coordinate and all
+still-future source innovations at reveal $r$.  Suppose predictable common-
+feature operators satisfy
+\[
+ W_C^{1/2}(\mathbf Z_N-\mathbf Z_p)=A_r^-\widehat x_r,
+ \quad
+ W_C^{1/2}(\mathbf Z_N+\mathbf Z_p)=A_r^+\widehat x_r. \tag{4.1}
+\]
+This is the missing production factorisation: it must contain the complete
+R-102 product residual and the canonical trace lift of Section 3.
+
+% evidence-anchor: theorem-4.1-two-sided-signed-mixed-gram
+\textbf{Theorem 4.1.}  Under (4.1), define
+\[
+ Q_r^C={1\over2}\left[(A_r^+)^*\mathrm SA_r^-
+                     +(A_r^-)^*\mathrm SA_r^+\right]. \tag{4.2}
+\]
+Then $Q_r^C$ is self-adjoint and
+\[
+ S_C^{\rm full}=\sum_r\E\ip{\widehat x_r}{Q_r^C\widehat x_r}. \tag{4.3}
+\]
+If, for a positive source/low metric $G_r$,
+\[
+ Q_r^C\preceq\Lambda_C^2G_r,\quad
+ \sum_r\E\ip{\widehat x_r}{G_r\widehat x_r}
+       \le X_{\rm src}+X_{\rm low},                 \tag{4.4}
+\]
+then
+\[
+ \mathfrak I_{\rm fut}^C+\hbox{mean/low return}
+ \ge-{\Lambda_C^2\over2}(X_{\rm src}+X_{\rm low}). \tag{4.5}
+\]
+
+\textbf{Proof.}  Polarisation gives
+\[
+ \Delta\ip{\mathbf Z}{\mathrm S\mathbf Z}
+ =\Rea\ip{\mathbf Z_N+\mathbf Z_p}
+              {\mathrm S(\mathbf Z_N-\mathbf Z_p)}.
+\]
+Substitute (4.1); the skew-adjoint part vanishes on the quadratic diagonal,
+which yields (4.2)--(4.3).  Apply the one-sided Loewner bound and then (3.7).
+There is no additional factor $1/2$ inside $Q_r^C$: the only action half is
+already displayed in (3.7). \hfill$\square$
+
+Only the upper Loewner edge is adverse.  For example,
+$\operatorname{diag}(-100,1/20)\preceq(1/20)\Id$ even though its absolute
+operator norm is $100$.  Replacing (4.4) by an absolute norm can therefore
+destroy the cancellation that R-140 requires.
+
+\section*{5. Global Doob-coordinate conjugation}
+
+For predictable source blocks $h_k\in L^2(\F_{k-1};H_k)$ define
+\[
+ \mathcal Dh=\bigl((P_\ell h_k)_k,
+             (d_rh_k)_{\ell<r<k}\bigr).             \tag{5.1}
+\]
+Martingale Pythagoras gives the exact source isometry
+\[
+ \|\mathcal Dh\|^2=\sum_k\E\|h_k\|^2.              \tag{5.2}
+\]
+Let $H$ be the complete bounded self-adjoint finite-chart Hessian form.  On
+$\Ran\mathcal D$ put
+\[
+ Q_{\rm glob}=\mathcal D H\mathcal D^*,             \tag{5.3}
+\]
+and extend it by zero on the orthogonal complement.  Then
+\[
+ \boxed{\ip{h}{Hh}=\ip{\mathcal Dh}{Q_{\rm glob}\mathcal Dh}.} \tag{5.4}
+\]
+
+Equation (5.4) is a conjugation, not a reveal-diagonalisation theorem.  A
+random terminal Hessian need not commute with martingale projections, so
+$Q_{\rm glob}$ generally retains $r\ne s$ reveal blocks.  The R-102
+coefficient-current product covariance also remains inside these blocks.
+Deleting them is an unsupported positive-cell replacement.  Forward, legal
+reverse, balanced, and low terms are blocks of this one global self-adjoint
+form.
+
+This global route is weaker in appearance but safer than demanding a
+separate per-reveal factorisation.  A uniform upper Loewner estimate for
+$Q_{\rm glob}$ would suffice.  R-141 constructs the coordinate and firewall;
+it does not prove that estimate.
+
+\section*{6. Exact source-null quotient and low-kernel tests}
+
+Let $S:\cU\to\cX$ be source synthesis and split
+\[
+ \cU=\Ker S\oplus(\Ker S)^\perp,\quad
+ A_1=(S^*S)|_{(\Ker S)^\perp}>0.                    \tag{6.1}
+\]
+Write the complete signed Hessian in blocks
+\[
+ H_C=\begin{pmatrix}H_{00}&H_{01}\\H_{10}&H_{11}\end{pmatrix}. \tag{6.2}
+\]
+
+% evidence-anchor: theorem-6.1-source-null-quotient
+\textbf{Theorem 6.1.}  In finite dimension, a finite $\Lambda_C$ with
+\[
+ H_C\preceq\Lambda_C^2S^*S                         \tag{6.3}
+\]
+exists exactly when
+\[
+ D_0=-H_{00}\succeq0,\quad
+ \Ran H_{01}\subseteq\Ran D_0^{1/2},               \tag{6.4}
+\]
+and
+\[
+ H_{11}+H_{10}D_0^\dagger H_{01}
+       \preceq\Lambda_C^2A_1.                      \tag{6.5}
+\]
+In Hilbert space, (6.4)--(6.5) use the closed-range/reduced-solution form.
+
+\textbf{Proof.}  Subtract (6.2) from the right side of (6.3) and apply the
+positive semidefinite block-matrix criterion to
+\[
+ \begin{pmatrix}
+ D_0&-H_{01}\\-H_{10}&\Lambda_C^2A_1-H_{11}
+ \end{pmatrix}.                                     \tag{6.6}
+\]
+The range condition and Schur complement are precisely (6.4)--(6.5).
+\hfill$\square$
+
+If $H_{00}=0$, (6.4) forces $H_{01}=0$.  A clean stronger structural form is
+\[
+ H_C=S^*\widetilde H_CS,\quad
+ \widetilde H_C\preceq\Lambda_C^2\Id.              \tag{6.7}
+\]
+The executable quotient fixture adds a positive rank-one form on $\Ker S$;
+the source metric stays zero there, so no finite constant can dominate the
+mutation.
+
+For the low block let $D=L^*L\succeq0$.  The constructive common-feature
+condition
+\[
+ K^*Z=L^*R                                             \tag{6.8}
+\]
+implies $P_{\Ker D}K^*Z=0$ and hence exact low compatibility.  More generally,
+on the production graph let
+\[
+ N=P_{\Ker D}K^*,\quad \Lambda_0=P_{\Ker D}\Lambda,
+\quad
+ C_{\ker}=N^*\Lambda_0+\Lambda_0^*N\preceq\kappa_0\Id. \tag{6.9}
+\]
+The kernel cross then costs at most $\kappa_0$ in the source diagonal.  With
+source diagonal $e$, companion diagonal $f$, low Schur cost $\sigma$, base
+cross $a_0$, and residual tail $\tau_C$, the exact conditional margin is
+\[
+ \boxed{
+ \mu_{\rm src}=e-\Lambda_C^2-\sigma-\kappa_0
+ -{(a_0+\tau_C)^2\over4(f-\sigma)}.}                \tag{6.10}
+\]
+Exact compatibility has $\kappa_0=0$.  Radial Taylor contributes only
+$\mu_{\rm src}/2$ to the action.
+
+The fixture $D=\operatorname{diag}(1,0)$ with a unit kernel cross has graph
+form $1-2t$; at $t=3/4$ it is $-1/2$.  Its exact penalty is
+$\kappa_0=3/2$.  Thus $D\succeq0$ alone does not imply compatibility.
+
+\section*{7. Exact positive-analysis collar shift}
+
+For the R-140 positive triangular analysis operator
+\[
+ (A_r^Cx)_m={\bf1}_{\{m\ge r+C\}}
+ 2^{\gamma(m-r-C)}\sum_{k>r}T_{r,m,k}x_k,           \tag{7.1}
+\]
+the collar dependence is exact.
+
+% evidence-anchor: theorem-7.1-positive-collar-shift
+\textbf{Theorem 7.1.}  For every integer $q\ge0$,
+\[
+ \boxed{A_r^{C+q}=2^{-\gamma q}
+ P_{\{m\ge r+C+q\}}A_r^C.}                         \tag{7.2}
+\]
+Consequently
+\[
+ \|A_r^{C+q}\|\le2^{-\gamma q}\|A_r^C\|,
+ \quad
+ \Lambda_{C+q}^2\le2^{-2\gamma q}\Lambda_C^2.     \tag{7.3}
+\]
+
+\textbf{Proof.}  On the surviving rows the weight changes by
+$2^{-\gamma q}$; the projection deletes all other rows. \hfill$\square$
+
+This theorem applies only to a positive analysis norm.  It does not imply a
+Loewner monotonicity for an indefinite signed $Q_C$: removing a negative
+shell can increase the upper eigenvalue.
+
+At
+\[
+ \beta={7\over5},\quad s={2\over3},\quad
+ \gamma={7\over12},\quad P=4+10^{-12},              \tag{7.4}
+\]
+the exact R-140 scalar sum gives
+\[
+\begin{array}{c|c|c}
+C&H_C&{3H_C\over40P}\\ \hline
+7&10.778126471501523&0.202089871340603\\
+8&4.631138871013502&0.0868338538314814\\
+9&1.971947657656302&0.0369740185810464\\
+10&0.833374378872430&0.0156257696038541
+\end{array}                                          \tag{7.5}
+\]
+Under the diagnostic normalization $C_*=1$, $C=8$ is the first integer below
+the zero-low/tail headroom $0.1004343434\ldots$, with
+\[
+ C_*<1.07546575053067.                               \tag{7.6}
+\]
+For the illustrative smaller headroom $0.0159126895$, $C=10$ is first, with
+\[
+ C_*<1.00913922178312.                               \tag{7.7}
+\]
+The debt scales as $C_*^2$, not $C_*$.  These are diagnostics because no
+production value of $C_*$ has been proved.
+
+\section*{8. What the larger collar costs}
+
+Changing $C=5$ to $C=8$ moves offsets $5,6,7$ into a finite collar.  Changing
+to $C=10$ moves all five offsets $5,\ldots,9$.  They do not disappear.
+For the oriented complete collar blocks $T_{mr}$ put
+\[
+ R_B=\sup_m\sum_r\|T_{mr}\|,\quad
+ S_B=\sup_r\sum_m\|T_{mr}\|.                       \tag{8.1}
+\]
+Operator-valued Schur gives
+\[
+ \boxed{\|T_B\|\le\sqrt{R_BS_B}.}                  \tag{8.2}
+\]
+If the moved layers obey $\|T_{r+q,r}\|\le b_q$, then
+\[
+ \|T_B\|\le\sum_{q\in B}b_q,\quad
+ a_B^{\rm full}\le2\sum_{q\in B}b_q.              \tag{8.3}
+\]
+The factor two converts the oriented block to the full-cross Hessian
+convention.  Its adjoint is the legal reverse already present in the same
+owner; adding it again would double count.
+
+The exact cyclic-band fixture $b_5=1/6$, $b_6=1/4$, $b_7=1/3$ has row and
+column sums $3/4$, and the constant vector attains $\|T_B\|=3/4$.  Therefore
+the square-root-of-squares shortcut is false for coherent layers.
+
+Using only the R-130 local Cartan diagnostic,
+\[
+ c_{\rm Cartan}^{\rm or}={67\over1200P},\quad
+ C_{\rm br}=17.1842828361\ldots,                    \tag{8.4}
+\]
+one layer would have the crude full-cross size
+\[
+ 2c_{\rm Cartan}^{\rm or}C_{\rm br}
+       =0.479727895841\ldots.                       \tag{8.5}
+\]
+Paying three layers by a triangle gives $1.43918368752\ldots$, already above
+the old diagnostic $K_0=0.920932333908\ldots$.  This is not a production
+counterexample: it shows that a layerwise absolute triangle is too crude and
+that one signed finite-band/mixed-replica Gram must be evaluated.
+
+An adaptive $C=8/10$ choice is legal only when it is $\F_{r-1}$-measurable and
+constant across every insertion endpoint in the R-139 telescope.  Otherwise
+a moving-mask variation term returns.  A $C=10$ branch also needs separate
+production bounds for offsets $8,9$; a three-layer theorem is insufficient.
+
+\section*{9. Signed correlation is indispensable}
+
+Let
+\[
+ E=0.8857272727272757,\quad F=0.27,
+ \quad a=0.9209323339075279,
+ \quad d=1,\quad b={1\over\sqrt{50}}.               \tag{9.1}
+\]
+Consider
+\[
+ M_+=\begin{pmatrix}E&a/2&b\\a/2&F&b\\b&b&1\end{pmatrix},
+ \quad
+ M_-=\begin{pmatrix}E&a/2&b\\a/2&F&-b\\b&-b&1\end{pmatrix}. \tag{9.2}
+\]
+The matrices have identical diagonal and magnitude data.  Eliminating the
+low coordinate gives
+\[
+ \Delta_+=(E-1/50)(F-1/50)-(a/2-1/50)^2
+          =0.0224213739509\ldots,                   \tag{9.3}
+\]
+\[
+ \Delta_-=(E-1/50)(F-1/50)-(a/2+1/50)^2
+          =-0.0144159194054\ldots.                  \tag{9.4}
+\]
+Their least eigenvalues are respectively
+$0.02039620\ldots$ and $-0.01232585\ldots$.  Thus the same
+$E,F,a,d,|b|,|c|$ data pass or fail solely through the signed correlation.
+Magnitude-only budgets cannot certify the graph gap.
+
+This fixture specializes the existing R-127/R-131 information boundary.
+The low-kernel fixture specializes R-127/R-140, and failure of signed collar
+monotonicity specializes the R-139/R-140 cancellation firewall.  No new
+negative-result ID is created; the route decisions are preserved in the
+exploration ledger.
+
+\section*{10. Combined conditional acceptance theorem}
+
+The preceding pieces can now be stated without hidden duplication.
+
+% evidence-anchor: theorem-10.1-conditional-production-acceptance
+\textbf{Theorem 10.1.}  Fix a finite production chart.  Assume:
+\begin{enumerate}
+\item the actual common covariance/trace features and exhaustive R-125 owner
+recombination give (3.4)--(3.7);
+\item the complete action secant has either the predictable factorisation
+(4.1) or a global Doob-coordinate upper Loewner bound, with source debt
+$\Lambda_C^2$;
+\item every moved collar layer is retained in the same signed Hessian and the
+adaptive collar is predictable and endpoint-fixed;
+\item the source-null conditions (6.4)--(6.5) and the low-kernel estimate
+(6.9) hold; and
+\item the production values satisfy $f>\sigma$ and $\mu_{\rm src}>0$ in
+(6.10).
+\end{enumerate}
+Then the complete finite-chart Hessian has source-graph gap
+$\mu_{\rm src}$, and the radial action has source contribution at least
+$\mu_{\rm src}/2$.
+
+\textbf{Proof.}  The signed owner is represented once by (4.3) or (5.4).
+The one-sided source debt is removed from the source diagonal.  The source-
+null and low-kernel blocks are eliminated by Theorem 6.1 and (6.9), while the
+remaining two-channel cross is completed sharply.  This gives (6.10).
+Integrating the Hessian along the radial Taylor path supplies the factor
+$1/2$. \hfill$\square$
+
+The theorem is conditional because assumptions 1--4 have not been proved
+with production-uniform constants.  The diagnostics in Section 7 do not
+verify assumption 5.
+
+\section*{11. Evidence map and successor route}
+
+The proof map is now narrower than after R-140:
+\begin{enumerate}
+\item R-126/R-128 supply the exact physical force and pullback; Section 2
+assembles the actual complete action force without variance duplication.
+\item R-125/R-063 and Section 3 supply one canonical complete signature after
+exhaustive recombination.
+\item R-102's product covariance must be retained inside the two-sided or
+global signed Gram of Sections 4--5; an $x_r$-only coefficient factorisation
+is known to fail.
+\item R-118/R-129/R-140 reduce acceptance to the exact source-null and low-
+kernel tests of Section 6.
+\item The positive tail can be reduced by $C=8$ or $C=10$, but Section 8
+requires the corresponding coherent three- or five-layer signed band.
+\item The decisive successor is therefore to construct the actual common-
+heat paired-replica feature maps for the entire R-102 Hessian, compute the
+global signed Gram before absolute values, and evaluate the full source,
+companion, finite-band, and low matrix.  If it fails, its adverse signed
+eigenvector identifies the saturating owner.  If it passes, matching and the
+absolute anchor become the next gates.
+\end{enumerate}
+
+This checkpoint stops here.  It has replaced several looping scalar routes
+by one exact operator target, but it has not closed T-050 or Sector A.
+
+\section*{12. Devil's-advocate audit}
+
+\begin{enumerate}
+\item \textbf{Objection:} any $U_q$ with norm $\Theta_q^{1/2}$ defines the
+signature Gram.  \textbf{UPHELD as an overclaim.}  Norms do not determine
+mixed endpoint correlations; the actual pinned common feature is required.
+\item \textbf{Objection:} $V-\mathrm{Forest}$ holds cellwise.
+\textbf{UPHELD as an overclaim.}  It is licensed only after the complete
+R-125 contraction/root/visit recombination.
+\item \textbf{Objection:} Doob isometry makes the Hessian reveal-diagonal.
+\textbf{UPHELD as an overclaim.}  It diagonalises the source norm only; the
+global conjugated Hessian retains off-diagonal reveal blocks.
+\item \textbf{Objection:} the legal reverse costs another copy.
+\textbf{DISMISSED.}  It is the adjoint block of the same self-adjoint Hessian.
+\item \textbf{Objection:} the signature Gram needs a second factor $1/2$.
+\textbf{DISMISSED.}  Polarisation fixes (4.2); the action half occurs once in
+(3.7).
+\item \textbf{Objection:} a large negative eigenvalue enlarges the adverse
+debt.  \textbf{DISMISSED.}  Only the upper Loewner edge enters the lower
+action bound.
+\item \textbf{Objection:} positive semidefinite $D$ removes the low kernel.
+\textbf{DISMISSED.}  The $1-2t$ fixture is negative at $t=3/4$.
+\item \textbf{Objection:} increasing the collar monotonically improves any
+signed Gram.  \textbf{UPHELD as an overclaim.}  The shift theorem is for the
+positive analysis operator only.
+\item \textbf{Objection:} $C=10$ costs the same three layers as $C=8$.
+\textbf{DISMISSED.}  It moves offsets $5,\ldots,9$ and needs a five-layer
+bound.
+\item \textbf{Objection:} the $C=8/C=10$ numbers prove headroom.
+\textbf{UPHELD as an overclaim.}  They assume diagnostic $C_*=1$ and omit the
+production signed finite band and low blocks.
+\item \textbf{Objection:} magnitude-only Schur data suffice.
+\textbf{DISMISSED.}  The matrices (9.2) have identical magnitude data and
+opposite positivity verdicts.
+\item \textbf{Objection:} a positive conditional $\mu_{\rm src}$ would close
+Sector A.  \textbf{UPHELD as an overclaim.}  Matching, the absolute anchor,
+Nelson, and removal would still remain.
+\end{enumerate}
+
+\section*{13. Result footer and reproduction}
+
+Primary certificate:
+{\scriptsize
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe `
+  codes/foundations/a13_classii_projected_force_global_doob_signed_gram_`
+  adaptive_collar_quotient_boundary.py
+\end{verbatim}
+}
+
+Independent certificate:
+{\scriptsize
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe `
+  codes/foundations/a13_classii_projected_force_global_doob_signed_gram_`
+  adaptive_collar_quotient_boundary_independent.py
+\end{verbatim}
+}
+
+Integrated verification:
+{\scriptsize
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe `
+  codes/foundations/a13_classii_projected_force_global_doob_signed_gram_`
+  adaptive_collar_quotient_boundary_verify.py
+\end{verbatim}
+}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-PROJECTED-FORCE-GLOBAL-DOOB-SIGNED-GRAM-
+  ADAPTIVE-COLLAR-QUOTIENT-BOUNDARY.
+Ledger ID: R-141.
+Precise statement: finite-chart projected force (2.7)-(2.9); canonical
+  complete signature (3.4)-(3.7); conditional signed Gram Theorem 4.1;
+  global Doob conjugation (5.4); source-null Theorem 6.1; low-kernel gap
+  (6.10); positive collar Theorem 7.1; conditional Theorem 10.1.
+Scope: finite cutoff, positive floor, fixed temporally faithful chart;
+  complete R-125 recombination; displayed common-feature, factorisation,
+  quotient, low-kernel, collar, and production-constant hypotheses only.
+Dependencies: A1; R-063, R-102, R-118, R-125, R-126, R-127, R-128,
+  R-129, R-130, R-131, R-132, R-136, R-139, R-140.
+Evidence grade: ANALYTIC, EXACT, CONDITIONAL, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_projected_force_global_doob_signed_gram_
+  adaptive_collar_quotient_boundary_verify.py
+Expected output: R-141 integrated PASS; primary and independent rows,
+  deterministic note/PDF, manifest, exploration, authority, and public
+  surface gates pass.
+Falsification gate: any failed force cancellation, conditional projection,
+  signature multiplicity, mixed polarization, global Doob conjugation,
+  quotient/range, low-kernel, collar shift/threshold/band, signed-correlation,
+  authority/hash, PDF, or public-surface check.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no production common-feature factorisation, uniform
+  upper Loewner constant, finite-band or low compatibility, positive graph
+  gap, matching, anchor, A13 gate, OVERLAP_src, Nelson estimate, removal,
+  interacting measure, Sector-A closure, or T5-T7 claim follows.
+Next required action: after this requested stop, construct or falsify the
+  complete common-heat paired-replica/global-Doob signed Gram, retain the
+  coherent C=8 or C=10 finite band and low kernel, and evaluate (6.10) before
+  matching and the absolute anchor.
+\end{verbatim}
+
+\endgroup
