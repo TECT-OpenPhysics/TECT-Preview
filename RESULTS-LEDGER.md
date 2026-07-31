@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-142](#r-142) | Innovation-compressed common feature, SU(2) fibre/covariance split, and signed collar band | Scoped T4 analytic/exact/conditional/executed advance. Common-future centering compresses the complete mixed-endpoint signature exactly from `(U,J,R)` with sign `(+,-,+)` to `(U,Phi)` with sign `(+,-)`; a shared covariance-square-root probe pins the actual fixed-chart trace feature, and the exact Hessian retains the favorable `D Phi^* D Phi` product covariance and both connection terms. The coefficient-exact SU(2) fibre Gram has four active modes, two phase kernels, transverse eigenvalue `339 r^2/(2000P)`, and a closed radial block. The registered A1 family-lock covariance is not SU(2)-invariant but splits into a scalar principal sea plus a positive anisotropic remainder four derivative-covariance powers smoother. A legal scalar two-root/two-visit chart has minimum at least `m_G=0.7653207581...` and covariance direction at least `21.08325...`; nevertheless the exact moved C8/C10 rational scalar-slice bands have finite-cutoff negative directions. The full non-Toeplitz production common-heat/trace/forest/low cross-reveal matrix, its Loewner edge, T-050, and Sector-A closure remain open |
 | [R-141](#r-141) | Projected force, global Doob signed Gram, adaptive collar, and quotient boundary | Scoped T4 analytic/exact/conditional/executed advance. The actual finite-chart action force is `g_comp=-g_T/2=g_CN-g_V/2`, so future variance is not charged again; predictable projection gives one self-adjoint Hessian whose legal reverse is already its adjoint. After exhaustive R-125 recombination, the actual common trace feature, raw current, and centered residual form the canonical signature `Z=(U,J,R)`, `S=diag(+,-,+)`, with `E<Z,SZ>=Theta-||Phi||^2=V-Forest_ad` in the complete aggregate. A conditional two-sided factorisation gives the exact signed Gram `[A+*SA-+A-*SA+]/2`; alternatively, global Doob conjugation spends source norm once while retaining cross-reveal blocks. The exact source-null quotient and low-kernel tests yield `mu_src=e-Lambda_C^2-sigma-kappa0-(a0+tau_C)^2/[4(f-sigma)]`. Positive-analysis collar shift gives diagnostic first collars `C=8` and `C=10`, but moves coherent three- and five-layer finite bands. Signed-correlation fixtures prove magnitude data cannot decide positivity. No production factorisation, uniform Loewner bound, positive graph gap, matching/anchor data, A13 gate, Nelson theorem, or Sector-A closure is proved |
 | [R-140](#r-140) | Predictable triangular mixed-Gram one-use theorem and source-graph Feshbach boundary | Scoped T4 analytic/exact/executed advance and quantitative boundary. An owner-complete predictable triangular response with norm `Lambda_C` is paid by the Cameron--Martin source exactly once; the registered exponents `beta=7/5`, `s=2/3`, `gamma=7/12` give strict margins `7/60` and `1/12` and an exact Hilbert--Schmidt scalar sum. However the naive positive current-only diagnostic gives source-Hessian debts `1.05559...` at `C=5` and `0.465116...` at `C=6`, both above the conditional zero-low/tail headroom `0.100434...`, so signed owner-complete mixed-Gram cancellation is still necessary. Predictable stopping preserves the endpoint telescope but supplies no bad-set packing. The exact source-metric graph--Feshbach identity retains the semidefinite low-kernel cross and yields the sharp norm-data gap `e-Lambda_C^2-sigma-(a0+tau)^2/[4(f-sigma)]`. An absolute terminal Sobolev envelope is UV-infeasible at zero control; stationary-subtracted signature polarization is the viable repair. No production mixed-Gram envelope, positive graph gap, matching/anchor data, A13 gate, Nelson theorem, or Sector-A closure is proved |
 | [R-139](#r-139) | Signed future endpoint telescope and production-graph robust-complement boundary | Scoped T4 analytic/exact/executed advance and method boundary. Summing every future insertion owner before applying the reveal weight gives the exact terminal-minus-prefix identity `sum_e omega_e=K^N-K^prefix`, so the insertion shell and the R-138 factor `2^(2 gamma(k-r))` disappear from the complete signed future branch. With `K=-E D0/2`, the desired lower bound is exactly one weighted upper bound for the terminal-minus-prefix trace excess. The complete owner requires the mean/low reserve once; R-063 forest is an alternate trace coordinate, not an extra reserve. A moving wedge mask leaves an internal variation sum, and tail decay alone cannot create strict shifted-Douglas headroom. The exact robust ambient condition and its weaker production-graph pullback are proved. R-139 proves no production weighted trace-excess estimate, positive graph margin, complete low/matching/gap/anchor data, A13 gate, Nelson theorem, or Sector-A closure |
@@ -160,6 +161,66 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-142"></a>
+### R-142 -- Innovation-compressed common feature, SU(2) fibre/covariance split, and signed collar band
+
+**Result ID.**
+`A13-CLASSII-INNOVATION-COMPRESSED-COMMON-FEATURE-SU2-COVARIANCE-SIGNED-COLLAR-BAND-BOUNDARY`.
+
+**Exact two-feature owner.**  For one common future conditional projection,
+`Phi=P_f J` and `R=(I-P_f)J` give the mixed-endpoint identity
+`E_f[-<J_q,J_p>+<R_q,R_p>]= -<Phi_q,Phi_p>`.  Hence the complete
+R-141 signature compresses exactly from `(U,J,R)` to `(U,Phi)`.  The actual
+fixed-chart trace feature is pinned by the shared covariance-square-root
+probe `U_q=P_C C6(W_q) Gamma^(1/2) zeta`, including singular `Gamma`, rather
+than an arbitrary equal-norm lift.  The complete owner Hessian is
+`D Phi^*D Phi+<Phi,D2 Phi>-D U^*D U-<U,D2 U>`: the R-102 product covariance
+is favorable and retained, while both second-jet connections remain.
+
+**Fibre and covariance geometry.**  The coefficient-exact six-row SU(2)
+fibre Gram has two transverse eigenvalues `339 r^2/(2000P)`, a closed
+two-by-two radial block with determinant
+`16 c0 c1 alpha^2 t^2 r^2 s^2`, and two exact phase kernels.  Pairwise
+relative gauges leave one spectator plus a three-channel block, but generic
+multi-reveal Berry/Cartan holonomy prevents a single global spectator.  The
+registered A1 family-lock mass has commutator norm squared `3/200` with
+`T3`, so stationary SU(2) invariance is false.  Nevertheless
+`(aI+M)^-1=(a+mu3)^-1 I+R`, with `R>=0` and exact norm
+`(mu3-mu1)/[(a+mu1)(a+mu3)]`; under fourth-order kinetic growth its
+derivative covariance is `O(|k|^-6)` versus the scalar principal
+`O(|k|^-2)`.
+
+**Adapted scalar chart and signed band.**  On the coefficient-exact active
+scalar two-root/two-visit chart, the translation block has least eigenvalue
+at least `m_G=0.7653207581934908...>3/4`, and the covariance direction is at
+least
+`1686660000000423/80000000000020=21.083250000000017...`.
+This rejects the simplest affine covariance feedback as the obstruction but
+does not control transverse or radial-singlet modes.  Independently, the
+exact R-133 rational coefficients imply `(-1)^(n+1)g_n>0`; the moved C8 band
+is `n=9..64`, the moved C10 band is `n=9..256`, and both weighted symbols are
+strictly negative at `y=pi/2`.  Fejer localization gives finite-cutoff
+negative directions for these coefficient-exact scalar-slice subblocks, not
+for the complete owner.
+
+**Where proved.**  Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`; note
+`classii-innovation-compressed-common-feature-su2-covariance-signed-collar-band-boundary-260731-v1.0`;
+primary, non-importing independent, and integrated certificates; manifest
+and JSON run artefacts; `EXP-000578--EXP-000584`.
+
+**Reuse scope.**  Conditional Hilbert-space covariance owners with a common
+projection; singular Gaussian trace-factor lifts; Hopf-fibre Gram analysis;
+scalar-principal positive covariance splitting; and signed finite Fourier
+band diagnostics.  The full production matrix, source-null/low estimate,
+positive graph gap, matching, anchor, A13 gates, Nelson theorem, interacting
+measure, and Sector-A closure are excluded.
+
+**Tier.** T4.
+
+**Publication target.**  constructive-field-theory methods note after the
+owner-preserving cross-reveal matrix is assembled.
 
 <a id="r-141"></a>
 ### R-141 -- Projected force, global Doob signed Gram, adaptive collar, and quotient boundary

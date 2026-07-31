@@ -1,0 +1,482 @@
+{
+  "assertions": {
+    "failed": 0,
+    "passed": 50,
+    "rows": [
+      {
+        "actual": "-1",
+        "expected": "-1",
+        "group": "compression",
+        "name": "mixed conditional covariance decomposition",
+        "status": "PASS"
+      },
+      {
+        "actual": "-7/2",
+        "expected": "-7/2",
+        "group": "compression",
+        "name": "signed J residual compression",
+        "status": "PASS"
+      },
+      {
+        "actual": "([Fraction(0, 1), Fraction(0, 1)], [Fraction(0, 1), Fraction(0, 1)])",
+        "expected": "([Fraction(0, 1), Fraction(0, 1)], [Fraction(0, 1), Fraction(0, 1)])",
+        "group": "compression",
+        "name": "both residuals centered",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "trace_feature",
+        "name": "singular covariance rank retained",
+        "status": "PASS"
+      },
+      {
+        "actual": "10",
+        "expected": "10",
+        "group": "trace_feature",
+        "name": "mixed trace equals shared-probe feature",
+        "status": "PASS"
+      },
+      {
+        "actual": "17",
+        "expected": "17",
+        "group": "trace_feature",
+        "name": "diagonal trace equals feature norm",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[-6*h1**2 - h2**2 - 2*h2 + 2, -2*h1*h2 - 2*h1 + 2*h2 - 1], [-2*h1*h2 - 2*h1 + 2*h2 - 1, -h1**2 + 2*h1 + 6*h2**2]])",
+        "expected": "Matrix([[-6*h1**2 - h2**2 - 2*h2 + 2, -2*h1*h2 - 2*h1 + 2*h2 - 1], [-2*h1*h2 - 2*h1 + 2*h2 - 1, -h1**2 + 2*h1 + 6*h2**2]])",
+        "group": "hessian",
+        "name": "two-feature Hessian identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "((2*h2 + 1)**2, 4*h2**2 + 3)",
+        "expected": "nonnegative determinant and trace",
+        "group": "hessian",
+        "name": "favorable mean-square sign",
+        "status": "PASS"
+      },
+      {
+        "actual": "169500000000/4000000000001",
+        "expected": "169500000000/4000000000001",
+        "group": "su2",
+        "name": "transverse coefficient exact",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.001512828939073142, 0.04540985844607742, 0.08305499999997924, 0.08305499999997924]",
+        "expected": "two copies of 0.08305499999997924",
+        "group": "su2",
+        "name": "two transverse eigenvalues",
+        "status": "PASS"
+      },
+      {
+        "actual": "98802571392000000000000000000/1438229776000719114888000089889361",
+        "expected": "98802571392000000000000000000/1438229776000719114888000089889361",
+        "group": "su2",
+        "name": "radial determinant formula",
+        "status": "PASS"
+      },
+      {
+        "actual": "98802571392000000000000000000/1438229776000719114888000089889361",
+        "expected": ">0",
+        "group": "su2",
+        "name": "generic radial determinant positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.001512828939073142, 0.04540985844607742, 0.08305499999997924, 0.08305499999997924]",
+        "expected": "all positive",
+        "group": "su2",
+        "name": "active block positive definite",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.08305499999997924",
+        "expected": "332220000000/4000000000001",
+        "group": "su2",
+        "name": "sharp transverse upper edge",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.0, 0.0, 0.001512828939073142, 0.04540985844607742, 0.08305499999997924, 0.08305499999997924]",
+        "expected": "two zeros",
+        "group": "su2",
+        "name": "two exact phase kernels",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "group": "su2",
+        "name": "generic full rank four",
+        "status": "PASS"
+      },
+      {
+        "actual": "113/48",
+        "expected": "113/48",
+        "group": "su2",
+        "name": "transverse to scalar radial ratio",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[1/10, -1/20, -1/20], [-1/20, 13/100, -1/20], [-1/20, -1/20, 17/100]])",
+        "expected": "Matrix([[1/10, -1/20, -1/20], [-1/20, 13/100, -1/20], [-1/20, -1/20, 17/100]])",
+        "group": "covariance",
+        "name": "mass derived from family and lock inputs",
+        "status": "PASS"
+      },
+      {
+        "actual": "mu**3 - 2*mu**2/5 + 223*mu/5000 - 3/3125",
+        "expected": "mu**3 - 2*mu**2/5 + 223*mu/5000 - 3/3125",
+        "group": "covariance",
+        "name": "mass characteristic polynomial",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.028116172335115406, 0.16519715288082726, 0.20668667478405736]",
+        "expected": "positive",
+        "group": "covariance",
+        "name": "mass strictly positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.028116172335115406, 0.16519715288082726, 0.20668667478405736]",
+        "expected": "strict",
+        "group": "covariance",
+        "name": "mass eigenvalue ordering",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[0, 1/10, 1/20], [-1/10, 0, -1/20], [-1/20, 1/20, 0]])",
+        "expected": "nonzero",
+        "group": "covariance",
+        "name": "SU2 breaking commutator",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.015000000000000003",
+        "expected": "3/200",
+        "group": "covariance",
+        "name": "commutator norm squared",
+        "status": "PASS"
+      },
+      {
+        "actual": "[3.6244875808788205e-17, 0.08825943567045749, 0.47846850003035113]",
+        "expected": "PSD",
+        "group": "covariance",
+        "name": "remainder PSD at a=1/2",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.47846850003035113",
+        "expected": "0.4784685000303512",
+        "group": "covariance",
+        "name": "remainder norm formula at a=1/2",
+        "status": "PASS"
+      },
+      {
+        "actual": "[1.1469360144751523e-16, 0.014598860981652246, 0.06846987751538788]",
+        "expected": "PSD",
+        "group": "covariance",
+        "name": "remainder PSD at a=3/2",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.06846987751538788",
+        "expected": "0.06846987751538777",
+        "group": "covariance",
+        "name": "remainder norm formula at a=3/2",
+        "status": "PASS"
+      },
+      {
+        "actual": "[1.219855523344992e-17, 0.0008034792121359057, 0.003525617135889111]",
+        "expected": "PSD",
+        "group": "covariance",
+        "name": "remainder PSD at a=7",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.003525617135889111",
+        "expected": "0.003525617135889086",
+        "group": "covariance",
+        "name": "remainder norm formula at a=7",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.7653207581934909",
+        "expected": ">3/4",
+        "group": "scalar_chart",
+        "name": "translation lower bound above three quarters",
+        "status": "PASS"
+      },
+      {
+        "actual": "1686660000000423/80000000000020",
+        "expected": "1686660000000423/80000000000020",
+        "group": "scalar_chart",
+        "name": "covariance-score exact lower numerator",
+        "status": "PASS"
+      },
+      {
+        "actual": "21.083250000000017",
+        "expected": ">21.08",
+        "group": "scalar_chart",
+        "name": "covariance direction strongly positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "group": "scalar_chart",
+        "name": "Hermite score majorant",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]]",
+        "expected": "I3",
+        "group": "scalar_chart",
+        "name": "source chart orthonormal",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.0, 0.5, 1.0]",
+        "expected": "rank 2",
+        "group": "scalar_chart",
+        "name": "physical synthesis has translation kernel",
+        "status": "PASS"
+      },
+      {
+        "actual": "{5: (9, 16), 6: (17, 32), 7: (33, 64), 8: (65, 128), 9: (129, 256)}",
+        "expected": "{5: (9, 16), 6: (17, 32), 7: (33, 64), 8: (65, 128), 9: (129, 256)}",
+        "group": "band",
+        "name": "dyadic shell ranges",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "band",
+        "name": "alternating g_n sign through C10",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "band",
+        "name": "sign-stripped coefficient identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1.3179687656625998e-05",
+        "expected": "<0",
+        "group": "band",
+        "name": "C8 signed symbol negative at pi over two",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1.3179687662958883e-05",
+        "expected": "<0",
+        "group": "band",
+        "name": "C10 signed symbol negative at pi over two",
+        "status": "PASS"
+      },
+      {
+        "actual": "(124410, 64090, 32538)",
+        "expected": "2114970",
+        "group": "band",
+        "name": "three-layer coherent output divisibility",
+        "status": "PASS"
+      },
+      {
+        "actual": "(124410, 64090, 32538)",
+        "expected": "(124410, 64090, 32538)",
+        "group": "band",
+        "name": "coherent carrier values",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "full_production_common_feature_matrix_assembled false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "uniform_production_loewner_bound false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "scalar_chart_extends_to_transverse_su2 false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "coefficient_band_is_full_owner_counterexample false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "positive_production_graph_gap false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "a13_gate_closed false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "nelson false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "sector_a_closed false",
+        "status": "PASS"
+      }
+    ],
+    "total": 50
+  },
+  "computed": {
+    "band_ranges": {
+      "5": [
+        9,
+        16
+      ],
+      "6": [
+        17,
+        32
+      ],
+      "7": [
+        33,
+        64
+      ],
+      "8": [
+        65,
+        128
+      ],
+      "9": [
+        129,
+        256
+      ]
+    },
+    "c10_symbol_pi_over_two": -1.3179687662958883e-05,
+    "c8_symbol_pi_over_two": -1.3179687656625998e-05,
+    "coherent_carriers": [
+      124410,
+      64090,
+      32538
+    ],
+    "coherent_output": 2114970,
+    "commutator_norm_squared": 0.015000000000000003,
+    "covariance_remainder_norms": {
+      "1/2": 0.47846850003035113,
+      "3/2": 0.06846987751538788,
+      "7": 0.003525617135889111
+    },
+    "innovation_mean_cross": "7/2",
+    "innovation_raw_cross": "-1",
+    "innovation_residual_cross": "-9/2",
+    "mass_eigenvalues": [
+      0.028116172335115406,
+      0.16519715288082726,
+      0.20668667478405736
+    ],
+    "mass_matrix": [
+      [
+        "1/10",
+        "-1/20",
+        "-1/20"
+      ],
+      [
+        "-1/20",
+        "13/100",
+        "-1/20"
+      ],
+      [
+        "-1/20",
+        "-1/20",
+        "17/100"
+      ]
+    ],
+    "scalar_covariance_lower_bound": "1686660000000423/80000000000020",
+    "scalar_translation_lower_bound": 0.7653207581934909,
+    "su2_audit_point": {
+      "floor": "1/9",
+      "r": "7/5",
+      "s": "3/4",
+      "t": "7056/9481"
+    },
+    "su2_full_eigenvalues": [
+      0.0,
+      0.0,
+      0.001512828939073142,
+      0.04540985844607742,
+      0.08305499999997924,
+      0.08305499999997924
+    ],
+    "su2_radial_determinant": "98802571392000000000000000000/1438229776000719114888000089889361",
+    "su2_transverse_eigenvalue": "332220000000/4000000000001",
+    "trace_cross": "10",
+    "two_feature_hessian": "Matrix([[-6*h1**2 - h2**2 - 2*h2 + 2, -2*h1*h2 - 2*h1 + 2*h2 - 1], [-2*h1*h2 - 2*h1 + 2*h2 - 1, -h1**2 + 2*h1 + 6*h2**2]])"
+  },
+  "inputs": {
+    "P": "4000000000001/1000000000000",
+    "alpha": "5/9",
+    "c0": "12000000000/4000000000001",
+    "c1": "30375000000/4000000000001",
+    "family_masses": [
+      "0",
+      "3/100",
+      "7/100"
+    ],
+    "lock": "3/20",
+    "lock_vector": [
+      "1",
+      "1",
+      "1"
+    ],
+    "source_floor": "9/10"
+  },
+  "result_id": "A13-CLASSII-INNOVATION-COMPRESSED-COMMON-FEATURE-SU2-COVARIANCE-SIGNED-COLLAR-BAND-BOUNDARY",
+  "schema": "tect/a13-innovation-compressed-common-feature-su2-covariance-signed-collar-band-boundary-primary/1.0",
+  "scope": {
+    "a13_gate_closed": false,
+    "canonical_actual_trace_feature_fixed_chart": true,
+    "coefficient_band_is_full_owner_counterexample": false,
+    "coefficient_exact_c8_c10_negative_band_direction": true,
+    "coefficient_exact_su2_fibre_block": true,
+    "finite_cutoff_positive_floor": true,
+    "fixed_chart_innovation_compression": true,
+    "full_production_common_feature_matrix_assembled": false,
+    "legal_scalar_two_root_two_visit_chart": true,
+    "nelson": false,
+    "positive_production_graph_gap": false,
+    "production_family_lock_covariance_split": true,
+    "scalar_chart_extends_to_transverse_su2": false,
+    "sector_a_closed": false,
+    "two_feature_hessian": true,
+    "uniform_production_loewner_bound": false
+  },
+  "status": "PASS",
+  "version": "1.0.0"
+}

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-142 innovation compression, SU2 covariance split, and signed collar band] - 2026-07-31
+
+Registered R-142 at T4. Common-future centering compresses the complete mixed-endpoint owner from (U,J,R) to the actual two-feature (U,Phi) Hessian, and a shared covariance-square-root probe pins mixed trace correlations while retaining the favorable R-102 product covariance. The exact SU2 fibre block, registered A1 scalar-principal covariance split, floor-uniform legal scalar chart, and adverse C8/C10 scalar-slice bands are certified. The full non-Toeplitz production cross-reveal matrix, both A13 gates, and Sector A remain open.
+
 ## [R-141 projected force, global Doob signed Gram, adaptive collar, and quotient boundary] - 2026-07-31
 
 Registered R-141 at T4. The complete finite-chart force cancels the covariance-normal variance coordinate; the canonical actual-feature signature and global Doob conjugation retain the full signed owner and cross-reveal blocks. Exact source-null and low-kernel criteria add kappa0 to the sharp source-gap formula. Positive-analysis diagnostics first fit at C=8 and C=10 but move coherent finite bands, and signed correlation remains decisive. No production factorisation, uniform Loewner bound, positive graph gap, A13 gate, or Sector-A closure is claimed. Research pauses after this verified checkpoint at the operator's request.

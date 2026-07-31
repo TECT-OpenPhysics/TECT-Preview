@@ -4833,3 +4833,39 @@ T5--T7 promotion remain open. Tier stays T4.
   anchor, both A13 gates, `OVERLAP_src`, Nelson, removals, interacting
   measure, and Sector A remain open at T4. Research pauses at this checkpoint
   at the operator's request.
+- 2026-07-31: Registered
+  `A13-CLASSII-INNOVATION-COMPRESSED-COMMON-FEATURE-SU2-COVARIANCE-SIGNED-COLLAR-BAND-BOUNDARY`
+  (R-142) as a scoped analytic/exact/conditional/executed coordinate advance
+  and route selection.  Common-future centering compresses the complete
+  mixed-endpoint signature exactly from `(U,J,R)` to `(U,Phi)`; the actual
+  fixed-chart trace feature is pinned by a shared covariance-square-root
+  Gaussian probe, including singular covariance owners.  The complete
+  two-feature Hessian retains the favorable R-102 product covariance inside
+  `D Phi^*D Phi` and retains both second-jet connections.  The
+  coefficient-exact SU(2) fibre Gram has four active modes, two phase
+  kernels, transverse eigenvalue `339 r^2/(2000P)`, and a closed radial
+  block.  The registered A1 family-lock covariance is not SU(2)-invariant:
+  its commutator norm squared is `3/200`.  Nevertheless it splits exactly
+  into a scalar principal covariance plus a positive anisotropic remainder
+  whose derivative covariance is four high-frequency powers smoother.  A
+  legal coefficient-exact active scalar two-root/two-visit chart has least
+  translation eigenvalue at least `m_G=0.7653207581934908...>3/4` and
+  covariance eigenvalue at least `21.083250000000017...`, so the simplest
+  affine covariance feedback is not the obstruction.  Conversely, the
+  exact R-133 rational coefficient produces finite-cutoff negative
+  directions in the moved C8 band `n=9..64` and C10 band `n=9..256`.
+  These are scalar-slice subblocks, not complete-owner counterexamples.
+  `EXP-000578--EXP-000584` preserve the exact advances, rejected symmetry
+  and scalar extrapolations, signed-band boundary, and next falsifiable
+  matrix.  Primary `50/50` and non-importing independent `46/46` checks
+  pass; integrated `251/251` embeds all `96` child rows exactly once and
+  adds `155` authority, exploration, PDF, scope, aggregation, and
+  public-surface checks.  Deterministic PDF rebuild, security/text checks,
+  Poppler all-page rendering, and manual nine-page visual QA are pinned in
+  the manifest.
+  The next object is the non-Toeplitz `q=5,6,7` common-feature cross matrix
+  on all four active fibre channels, with the smoother anisotropic and
+  returned low blocks retained.  The full production matrix, uniform
+  Loewner edge, source-null/low compatibility, positive graph gap, matching,
+  anchor, both A13 gates, `OVERLAP_src`, Nelson, removals, interacting
+  measure, and Sector A remain open at T4.

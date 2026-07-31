@@ -1,0 +1,379 @@
+{
+  "assertions": {
+    "failed": 0,
+    "passed": 46,
+    "rows": [
+      {
+        "actual": "-34/3",
+        "expected": "-34/3",
+        "group": "compression",
+        "name": "independent mixed compression",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(0, 1), Fraction(0, 1)]",
+        "expected": "[Fraction(0, 1), Fraction(0, 1)]",
+        "group": "compression",
+        "name": "q residual centered",
+        "status": "PASS"
+      },
+      {
+        "actual": "[Fraction(0, 1), Fraction(0, 1)]",
+        "expected": "[Fraction(0, 1), Fraction(0, 1)]",
+        "group": "compression",
+        "name": "p residual centered",
+        "status": "PASS"
+      },
+      {
+        "actual": "-49",
+        "expected": "-49",
+        "group": "trace_feature",
+        "name": "shared singular probe cross",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.50461201275931e-08",
+        "expected": "<3e-7",
+        "group": "hessian",
+        "name": "feature formula agrees with finite difference",
+        "status": "PASS"
+      },
+      {
+        "actual": "(4.0474711582305645e-08, 1.50461201275931e-08)",
+        "expected": "second smaller",
+        "group": "hessian",
+        "name": "finite difference refines",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[1.6745, -2.1054], [-2.1054, 1.1077000000000001]]",
+        "expected": "symmetric",
+        "group": "hessian",
+        "name": "analytic Hessian symmetric",
+        "status": "PASS"
+      },
+      {
+        "actual": "137330578300781250000000000000/1935648016000967824008000120978001",
+        "expected": "137330578300781250000000000000/1935648016000967824008000120978001",
+        "group": "su2",
+        "name": "independent radial determinant",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.001542680962415841, 0.0459901411010233]",
+        "expected": "positive",
+        "group": "su2",
+        "name": "radial eigenvalues positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.0459901411010233",
+        "expected": "320460937500/4000000000001",
+        "group": "su2",
+        "name": "radial edge below transverse",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.0, 0.0, 0.001542680962415841, 0.0459901411010233, 0.08011523437497997, 0.08011523437497997]",
+        "expected": "two zeros",
+        "group": "su2",
+        "name": "two phase zeros",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.0, 0.0, 0.001542680962415841, 0.0459901411010233, 0.08011523437497997, 0.08011523437497997]",
+        "expected": "four positive",
+        "group": "su2",
+        "name": "four active positive modes",
+        "status": "PASS"
+      },
+      {
+        "actual": "113/48",
+        "expected": "113/48",
+        "group": "su2",
+        "name": "transverse radial asymptotic ratio",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(1, 10), Fraction(-1, 20), Fraction(-1, 20)], [Fraction(-1, 20), Fraction(13, 100), Fraction(-1, 20)], [Fraction(-1, 20), Fraction(-1, 20), Fraction(17, 100)]]",
+        "expected": "[[Fraction(1, 10), Fraction(-1, 20), Fraction(-1, 20)], [Fraction(-1, 20), Fraction(13, 100), Fraction(-1, 20)], [Fraction(-1, 20), Fraction(-1, 20), Fraction(17, 100)]]",
+        "group": "covariance",
+        "name": "mass independently derived",
+        "status": "PASS"
+      },
+      {
+        "actual": "2/5",
+        "expected": "2/5",
+        "group": "covariance",
+        "name": "characteristic trace coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "223/5000",
+        "expected": "223/5000",
+        "group": "covariance",
+        "name": "characteristic quadratic coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/3125",
+        "expected": "3/3125",
+        "group": "covariance",
+        "name": "characteristic determinant",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.02811617233511543, 0.16519715288082726, 0.20668667478405736]",
+        "expected": "positive",
+        "group": "covariance",
+        "name": "three positive mass eigenvalues",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.4",
+        "expected": "2/5",
+        "group": "covariance",
+        "name": "mass trace from eigenvalues",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.02811617233511543, 0.16519715288082726, 0.20668667478405736]",
+        "expected": "three pinned intervals",
+        "group": "covariance",
+        "name": "mass eigenvalue intervals",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.015000000000000003",
+        "expected": "3/200",
+        "group": "covariance",
+        "name": "commutator norm squared independent",
+        "status": "PASS"
+      },
+      {
+        "actual": "[-1.575605923380772e-17, 0.04738643589005394, 0.23988083611083538]",
+        "expected": "PSD",
+        "group": "covariance",
+        "name": "remainder PSD a=0.75",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.23988083611083538",
+        "expected": "0.23988083611083533",
+        "group": "covariance",
+        "name": "remainder norm a=0.75",
+        "status": "PASS"
+      },
+      {
+        "actual": "[2.2499254567209297e-17, 0.005751367312444167, 0.026096045979835947]",
+        "expected": "PSD",
+        "group": "covariance",
+        "name": "remainder PSD a=2.5",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.026096045979835947",
+        "expected": "0.026096045979835943",
+        "group": "covariance",
+        "name": "remainder norm a=2.5",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.7653207581934909",
+        "expected": "(0.7653,0.7654)",
+        "group": "scalar_chart",
+        "name": "mG numerical interval",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.7653207581934909",
+        "expected": ">0.75",
+        "group": "scalar_chart",
+        "name": "mG above three quarters",
+        "status": "PASS"
+      },
+      {
+        "actual": "1686660000000423/80000000000020",
+        "expected": "1686660000000423/80000000000020",
+        "group": "scalar_chart",
+        "name": "lambda c exact",
+        "status": "PASS"
+      },
+      {
+        "actual": "21.083250000000017",
+        "expected": ">21",
+        "group": "scalar_chart",
+        "name": "lambda c positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "scalar_chart",
+        "name": "signed score identity moment",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "group": "scalar_chart",
+        "name": "score absolute majorant",
+        "status": "PASS"
+      },
+      {
+        "actual": "(9, 16)",
+        "expected": "(9, 16)",
+        "group": "band",
+        "name": "range q5",
+        "status": "PASS"
+      },
+      {
+        "actual": "(33, 64)",
+        "expected": "(33, 64)",
+        "group": "band",
+        "name": "range q7",
+        "status": "PASS"
+      },
+      {
+        "actual": "(129, 256)",
+        "expected": "(129, 256)",
+        "group": "band",
+        "name": "range q9",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "band",
+        "name": "alternating sign independent floor",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "band",
+        "name": "sign-stripped identity independent",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1.548900550338494e-05",
+        "expected": "<0",
+        "group": "band",
+        "name": "unweighted C8 symbol negative",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1.5489005503384942e-05",
+        "expected": "<0",
+        "group": "band",
+        "name": "unweighted C10 symbol negative",
+        "status": "PASS"
+      },
+      {
+        "actual": "[124410, 64090, 32538]",
+        "expected": "2114970",
+        "group": "band",
+        "name": "coherent three-layer common mode",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "full_production_matrix false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "uniform_production_bound false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "scalar_to_full_su2 false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "band_to_full_owner_counterexample false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "a13_gate_closed false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "nelson false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "sector_a_closed false",
+        "status": "PASS"
+      }
+    ],
+    "total": 46
+  },
+  "computed": {
+    "c10_symbol_pi_over_two": -1.5489005503384942e-05,
+    "c8_symbol_pi_over_two": -1.548900550338494e-05,
+    "coherent_carriers": [
+      124410,
+      64090,
+      32538
+    ],
+    "commutator_norm_squared": 0.015000000000000003,
+    "compression_lhs": "-34/3",
+    "compression_rhs": "-34/3",
+    "covariance_remainder_norms": {
+      "0.75": 0.23988083611083538,
+      "2.5": 0.026096045979835947
+    },
+    "feature_hessian": [
+      [
+        1.6745,
+        -2.1054
+      ],
+      [
+        -2.1054,
+        1.1077000000000001
+      ]
+    ],
+    "mass_eigenvalues": [
+      0.02811617233511543,
+      0.16519715288082726,
+      0.20668667478405736
+    ],
+    "scalar_covariance_lower_bound": "1686660000000423/80000000000020",
+    "scalar_translation_lower_bound": 0.7653207581934909,
+    "su2_radial_determinant": "137330578300781250000000000000/1935648016000967824008000120978001",
+    "su2_transverse_eigenvalue": "320460937500/4000000000001"
+  },
+  "result_id": "A13-CLASSII-INNOVATION-COMPRESSED-COMMON-FEATURE-SU2-COVARIANCE-SIGNED-COLLAR-BAND-BOUNDARY",
+  "schema": "tect/a13-innovation-compressed-common-feature-su2-covariance-signed-collar-band-boundary-independent/1.0",
+  "scope": {
+    "a13_gate_closed": false,
+    "band_to_full_owner_counterexample": false,
+    "full_production_matrix": false,
+    "nelson": false,
+    "scalar_to_full_su2": false,
+    "sector_a_closed": false,
+    "uniform_production_bound": false
+  },
+  "status": "PASS",
+  "version": "1.0.0"
+}

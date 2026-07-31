@@ -1,0 +1,636 @@
+% =============================================================================
+% Title: Innovation-compressed common feature, SU(2) fibre/covariance split, and signed collar band
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-INNOVATION-COMPRESSED-COMMON-FEATURE-SU2-COVARIANCE-SIGNED-COLLAR-BAND-BOUNDARY
+% Ledger: R-142
+% Version: v1.0 -- first issued 2026-07-31; this version issued 2026-07-31
+% Status: scoped T4 analytic/exact/conditional/executed advance; no A13 gate closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+\hypertarget{section-1-purpose}{}
+
+R-141 reduced the controlled-shell programme to the actual common-heat
+paired-replica/global-Doob signed Hessian, with the R-102 product covariance,
+primitive trace, R-125 variance/forest coordinate, returned mean/low owner,
+and coherent $C=8$ or $C=10$ band kept together.  The present checkpoint
+opens that matrix rather than adding another scalar absolute-value budget.
+
+There are four durable advances.
+
+\begin{enumerate}
+\item The complete mixed-endpoint signature $(U,J,R)$ compresses exactly to
+      two features $(U,\Phi)$, where $\Phi=\E_fJ$.  The R-102 product
+      covariance is retained inside $D\Phi$ and $D^2\Phi$.
+\item The actual covariance/trace feature $U$ is pinned by a shared Gaussian
+      trace probe, including singular covariance factors.  This repairs the
+      equal-norm-lift information gap left open in R-131 and R-141.
+\item The six-row A1 coefficient has an exact $SU(2)$ fibre block, while the
+      registered A1 family-lock Gaussian block has a scalar principal
+      covariance plus a positive anisotropic remainder four spatial powers
+      smoother at high frequency.
+\item A coefficient-exact legal scalar adapted chart is uniformly positive,
+      but the exact moved $C=8/C=10$ rational collar band has a negative
+      finite-cutoff direction.  These facts isolate, rather than decide, the
+      missing cross-channel production cancellation.
+\end{enumerate}
+
+All statements are at positive floor and finite cutoff.  The trace feature
+and Hessian identities are fixed-chart owner identities.  The scalar chart
+is a coefficient-exact active scalar packet, not the full A1 heat law.  The
+negative collar direction is an A1 coefficient-exact deterministic
+scalar-slice subblock, not a counterexample to the complete owner.  No
+cutoff/chart/control/visit/refinement-uniform upper Loewner bound, source-null
+and low-kernel production estimate, positive graph gap, matching, absolute
+anchor, A13 gate, Nelson theorem, removal, interacting measure, Sector-A
+closure, or tier promotion is claimed.
+
+\section*{2. Exact mixed-endpoint innovation compression}
+\hypertarget{section-2-innovation-compression}{}
+
+Fix one completely recombined owner and one common future conditional
+projection $P_f=\E[\cdot\mid\cF_f]$.  At every endpoint $q$, put
+\[
+ \Phi_q=P_fJ_q,\qquad R_q=(\Id-P_f)J_q.              \tag{2.1}
+\]
+For arbitrary endpoints $q,p$, orthogonality to the same conditional
+subspace gives
+\[
+ \E_f\ip{J_q}{J_p}
+ =\ip{\Phi_q}{\Phi_p}+\E_f\ip{R_q}{R_p}.             \tag{2.2}
+\]
+Consequently,
+\[
+ \boxed{\;
+ \E_f\{-\ip{J_q}{J_p}+\ip{R_q}{R_p}\}
+ =-\ip{\Phi_q}{\Phi_p}. \;}                         \tag{2.3}
+\]
+Thus the R-141 signature
+\[
+ (U,J,R),\qquad S_3=\operatorname{diag}(+\Id,-\Id,+\Id)
+\]
+has the exact compressed mixed kernel
+\[
+ K(q,p)=\E_f\ip{U_q}{U_p}-\ip{\Phi_q}{\Phi_p}
+       =\E_f\ip{F_q}{S_2F_p},                       \tag{2.4}
+\]
+where
+\[
+ F_q=(U_q,\Phi_q),\qquad S_2=\operatorname{diag}(+\Id,-\Id).
+\]
+This is a recombination, not a deletion.  In particular, the innovation
+product identified in R-102 becomes part of the derivatives of $\Phi$.
+Using different projections at $q$ and $p$, or applying (2.3) pointwise
+before future expectation, is invalid.
+
+\subsection*{2.1 Canonical actual trace feature}
+\hypertarget{canonical-actual-trace-feature}{}
+
+Let an owner be indexed by the derivative direction $i$, output cluster
+$\mathcal C$, heat coordinate $r$, and retained future $f$.  Let
+$\Gamma_o$ be its positive semidefinite covariance factor, possibly
+singular.  On an auxiliary standard Gaussian probe $\zeta_o$, define
+\[
+ G'_o=\Gamma_o^{1/2}\zeta_o
+\]
+and use the \emph{same} heat, owner, output space, future coupling, and probe
+at both endpoints:
+\[
+ U_{q,o}
+ =P_{\mathcal C}C_6(W_o^{f,r}(q))G'_o.              \tag{2.5}
+\]
+Then
+\[
+\begin{aligned}
+ \E_\zeta\|U_q\|^2
+ &=\sum_o\E\Tr\!\left[
+   P_{\mathcal C}C_6(W_q)\Gamma_o
+   C_6(W_q)^*P_{\mathcal C}\right]=\Theta_q,\\
+ \E_\zeta\ip{U_q}{U_p}
+ &=\sum_o\E\Tr\!\left[
+   P_{\mathcal C}C_6(W_q)\Gamma_o
+   C_6(W_p)^*P_{\mathcal C}\right].
+\end{aligned}\tag{2.6}
+\]
+Equation (2.6) pins the mixed trace correlation.  Independent probes at the
+two endpoints would erase it; an arbitrary lift having only the correct
+diagonal norm would leave it undetermined.
+
+\subsection*{2.2 Exact complete Hessian}
+\hypertarget{two-feature-hessian}{}
+
+For the fixed-chart complete owner,
+\[
+ \cP_{\rm comp}(h)
+ ={1\over2}\|\Phi(h)\|^2-{1\over2}\|U(h)\|^2.        \tag{2.7}
+\]
+Its exact bilinear Hessian is
+\[
+\boxed{\begin{aligned}
+ Q_{\rm comp}[z,w]
+={}&\ip{D\Phi[z]}{D\Phi[w]}
+   +\ip{\Phi}{D^2\Phi[z,w]}\\
+ &-\ip{DU[z]}{DU[w]}
+   -\ip{U}{D^2U[z,w]} .
+\end{aligned}}\tag{2.8}\]
+The product-covariance square $D\Phi^*D\Phi$ is favorable in the action.
+The adverse pieces are the trace square and connection together with the
+two second-jet connection terms; none may be dropped.  Formula (2.8) is the
+R-132 paired-replica Hessian written in the compressed current coordinate.
+
+Both $U$ and $\Phi$ factor through the physical endpoint.  Hence every
+physical first or second derivative with one argument in $\Ker L_\pi$
+vanishes.  The explicit source Hessian $9\Id/10$ still fills that kernel.
+This proves physical source-null factorisation of the compressed owner, but
+not the low-coordinate compatibility or a uniform quotient bound.
+
+\section*{3. The first legal finite matrix}
+\hypertarget{section-3-finite-matrix}{}
+
+The smallest nontrivial adapted chart uses independent standard Gaussians
+$\xi_1,\xi_2$ and two visits,
+\[
+ h_1=a,\qquad h_2(\xi_1)=b+c\xi_1,
+\]
+\[
+ Z_\theta=S_1(\xi_1+a)+S_2(\xi_2+b+c\xi_1),
+ \qquad \theta=(a,b,c).                             \tag{3.1}
+\]
+The source basis $(1,0),(0,1),(0,\xi_1)$ is orthonormal.  The physical
+tangents are
+\[
+ z_1=S_1,\qquad z_2=S_2,\qquad z_3=\xi_1S_2.         \tag{3.2}
+\]
+Let $F=(U,\Phi)$ be the direct sum over all owners.  The complete owner block
+is
+\[
+ C_{pq}
+ =-\ip{F_p}{S_2F_q}-\ip{F}{S_2F_{pq}},              \tag{3.3}
+\]
+while the terminal sextic block is
+\[
+ S_{pq}={9\over10}\E\!\int\!
+ \left\{|Z|^4z_p\!\cdot z_q+
+ 4|Z|^2(Z\!\cdot z_p)(Z\!\cdot z_q)\right\}.         \tag{3.4}
+\]
+Therefore the exact finite-chart action matrix is
+\[
+ \boxed{\ H_{pq}={9\over10}\delta_{pq}+C_{pq}+S_{pq}.\ }       \tag{3.5}
+\]
+The global source-Doob coordinate is already diagonal in (3.1), so the
+source metric is $\Id_3$.  By contrast, the physical synthesis metric is
+\[
+ L_\pi^*L_\pi=
+ \begin{pmatrix}
+ \ip{S_1}{S_1}&\ip{S_1}{S_2}&0\\
+ \ip{S_2}{S_1}&\ip{S_2}{S_2}&0\\
+ 0&0&\ip{S_2}{S_2}
+ \end{pmatrix}.                                     \tag{3.6}
+\]
+This distinction explains why a physical synthesis kernel still receives
+the explicit $9/10$ source cost.
+
+Equations (3.1)--(3.6) are a complete assembly recipe, not a production
+numerical spectrum.  The present repository authorities do not yet contain
+all production $U,\Phi$ jets, cross-Grams, trace partitions, Fourier blocks,
+output projectors, adapted feedback, and returned low blocks needed to fill
+every entry.  Inventing those entries would be a false numerical closure.
+
+\section*{4. Exact $SU(2)$ fibre block}
+\hypertarget{section-4-su2-fibre}{}
+
+Use the production Class-II coefficients
+\[
+ P=4+10^{-12},\qquad \alpha={5\over9},\qquad
+ c_0={3\over250P},\qquad c_1={243\over8000P}.        \tag{4.1}
+\]
+Write $z=(\psi,\chi)\in\mathbb C^2\oplus\mathbb C$.  Rotate one fibre
+endpoint to $\psi=(r,0)$, choose $\chi=s\ge0$, and set
+\[
+ d=r^2+s^2+e,\qquad t={r^2\over d}.                  \tag{4.2}
+\]
+In the active tangent coordinates $(x_1,x_2,x_r,x_s)$, the full six-row
+coefficient map is
+\[
+C_0=2\begin{pmatrix}
+\sqrt{c_0}r&0&0&0\\
+0&\sqrt{c_0}r&0&0\\
+0&0&\sqrt{c_0}r&0\\
+\sqrt{c_1}r&0&0&0\\
+0&\sqrt{c_1}r&0&0\\
+0&0&\sqrt{c_1}r(1-\alpha t)&-\sqrt{c_1}\alpha ts
+\end{pmatrix}.                                      \tag{4.3}
+\]
+The doublet and singlet phase directions are exact zero columns.  The Gram
+$B=C_0^*C_0$ has two transverse eigenvalues
+\[
+ \boxed{\ \lambda_T=4(c_0+c_1)r^2={339\over2000P}r^2\ }        \tag{4.4}
+\]
+and radial block
+\[
+B_{\rm rad}=4\begin{pmatrix}
+r^2[c_0+c_1(1-\alpha t)^2]&
+-c_1\alpha t(1-\alpha t)rs\\
+-c_1\alpha t(1-\alpha t)rs&
+c_1\alpha^2t^2s^2
+\end{pmatrix}.                                      \tag{4.5}
+\]
+If the inner entries of (4.5) are $A,C,D$, its eigenvalues and determinant
+are
+\[
+ \lambda_\pm=2\{A+D\pm[(A-D)^2+4C^2]^{1/2}\},       \tag{4.6}
+\]
+\[
+ \det B_{\rm rad}
+ =16c_0c_1\alpha^2t^2r^2s^2.                        \tag{4.7}
+\]
+Thus the generic rank is four, with two exact phase kernels and additional
+degeneracy at $r=0$ or $s=0$.  Moreover,
+\[
+ \boxed{\quad
+ 0\preceq B(z)\preceq4(c_0+c_1)r^2\Id
+ \preceq {339\over2000P}\rho\,\Id .\quad}            \tag{4.8}
+\]
+Equality is attained by either transverse direction.  There is no uniform
+positive lower bound.
+
+The geometric content of (4.3) is a weighted $S^2$ sigma model plus a
+two-dimensional radial metric.  A moving Bloch frame introduces a skew
+Cartan/Berry connection; it reorganises the self-adjoint Jacobi operator but
+does not remove it.  Pairwise endpoint gauge reduction leaves one spectator
+channel and an explicit $3$-by-$3$ block.  A generic graph of three or more
+reveals cannot use one such gauge on every edge unless all Bloch directions
+lie on one great circle.
+
+This also identifies a strict scope firewall.  On the scalar ray
+$\psi=(Z,0),\chi=0$ and $t\to1$, the ratio between a transverse coefficient
+and the tested radial coefficient is
+\[
+ {c_0+c_1\over c_0+c_1(1-\alpha)^2}
+ ={339\over144}={113\over48}>2.35.                  \tag{4.9}
+\]
+Consequently, positivity of the scalar chart below cannot certify the
+transverse or radial-singlet production blocks.
+
+\section*{5. Registered A1 covariance: scalar sea plus smoother anisotropy}
+\hypertarget{section-5-covariance-split}{}
+
+The registered A1 production parameter set has family masses
+$(0,3/100,7/100)$, lock $3/20$, and normalized lock vector $(1,1,1)$.
+The corresponding internal Gaussian mass block is therefore
+\[
+M=\begin{pmatrix}
+1/10&-1/20&-1/20\\
+-1/20&13/100&-1/20\\
+-1/20&-1/20&17/100
+\end{pmatrix}.                                      \tag{5.1}
+\]
+Its characteristic polynomial is
+\[
+ {25000\mu^3-10000\mu^2+1115\mu-24\over25000},      \tag{5.2}
+\]
+with eigenvalues
+\[
+\begin{aligned}
+\mu_1&=0.0281161723351\ldots,\\
+\mu_2&=0.165197152881\ldots,\\
+\mu_3&=0.206686674784\ldots.
+\end{aligned}\tag{5.3}
+\]
+For $T_3=\operatorname{diag}(1,-1,0)$,
+\[
+[M,T_3]=\begin{pmatrix}
+0&1/10&1/20\\
+-1/10&0&-1/20\\
+-1/20&1/20&0
+\end{pmatrix},\qquad
+\|[M,T_3]\|_{\rm op}^2={3\over200}.                 \tag{5.4}
+\]
+The stationary production covariance is therefore not $SU(2)$ invariant.
+
+For every scalar kinetic eigenvalue $a_k\ge0$, however, there is an exact
+positive split
+\[
+ C(k)=(a_k\Id+M)^{-1}
+      =\gamma_0(k)\Id+R(k),\qquad
+ \gamma_0(k)={1\over a_k+\mu_3},\quad R(k)\succeq0, \tag{5.5}
+\]
+with sharp norm
+\[
+ \boxed{\quad
+ \|R(k)\|
+ ={\,\mu_3-\mu_1\,\over
+ (a_k+\mu_1)(a_k+\mu_3)}.\quad}                     \tag{5.6}
+\]
+When the already registered fourth-order high-frequency premise
+$a_k\asymp|k|^4$ is used,
+\[
+ k_i^2\gamma_0(k)=O(|k|^{-2}),\qquad
+ k_i^2R(k)=O(|k|^{-6}).                             \tag{5.7}
+\]
+Thus the symmetry-breaking derivative covariance is four powers smoother
+than the scalar divergent sea.  This selects a concrete successor: keep the
+scalar principal sea in the exact common feature, estimate the positive
+anisotropic high-shell remainder with the stronger collar, and retain its
+finite low modes in the exact low graph.  Equation (5.7) is not yet an
+owner-preserving intertwiner and does not prove a $\gamma=4$ production
+estimate.
+
+\section*{6. Coefficient-exact legal scalar adapted chart}
+\hypertarget{section-6-scalar-chart}{}
+
+Set $S_1=S_2=1/\sqrt2$ in the active R-132 scalar packet and use zero common
+heat.  Then
+\[
+ Z_c={(1+c)\xi_1+\xi_2+a+b\over\sqrt2},\qquad
+ \mu={a+b\over\sqrt2},\qquad
+ v(c)=1+c+{c^2\over2}.                              \tag{6.1}
+\]
+For $e=\delta^2$, define
+\[
+ f_\delta(x)=x-{5\over9}{x^3\over x^2+\delta^2},
+ \qquad |f_\delta(x)|\le|x|.                        \tag{6.2}
+\]
+The two active six-row outputs are
+\[
+ C_6(xe_1)e_1
+ =(2\sqrt{c_0}x,\;2\sqrt{c_1}f_\delta(x)).          \tag{6.3}
+\]
+The matching trace owner gives exactly
+\[
+ \cP_{\rm comp}
+ ={1\over2}\|\Phi\|^2-{1\over2}\Theta
+ =-{1\over2}\operatorname{Var}(C_6(Z_c)e_1).        \tag{6.4}
+\]
+Hence the restricted action is
+\[
+\cA_\delta
+={9\over20}(a^2+b^2+c^2)
+-2c_0v(c)-2c_1Q_\delta(\mu,v(c))
+{3\over20}\E Z_c^6,                                \tag{6.5}
+\]
+where
+\[
+ Q_\delta(\mu,v)
+ =\operatorname{Var}f_\delta(\mu+\sqrt v\,X).
+\]
+
+At $\mu=0,c=0$, parity kills the translation--covariance cross entries.
+The Hessian is
+\[
+H_\delta=
+\begin{pmatrix}
+9/10+\kappa_\delta/2&\kappa_\delta/2&0\\
+\kappa_\delta/2&9/10+\kappa_\delta/2&0\\
+0&0&\lambda_c
+\end{pmatrix}.                                      \tag{6.6}
+\]
+The translation eigenvectors are $(1,-1,0)/\sqrt2$ and
+$(1,1,0)/\sqrt2$.  Their eigenvalues are $9/10$ and
+$9/10+\kappa_\delta$, with the floor-uniform R-132 bound
+\[
+ {9\over10}+\kappa_\delta\ge m_G
+ ={9\over10}-4c_1(3+\sqrt2)
+ -{[4c_1(2+\sqrt2)]^2\over18}
+ =0.7653207581934908\ldots>{3\over4}.               \tag{6.7}
+\]
+
+For $q(v)=\E f_\delta(\sqrt vX)^2$, the normalized variance scores at $v=1$
+give
+\[
+ q'(1)+q''(1)
+ ={1\over4}\E[(X^4-4X^2+1)f_\delta(X)^2]\le4.       \tag{6.8}
+\]
+Here the second score is $(\partial_v^2p_v)/p_v$, not
+$\partial_v^2\log p_v$.  Using $v'(0)=v''(0)=1$ and
+$\E X^2=1,\E X^6=15$, (6.8) yields
+\[
+\begin{aligned}
+\lambda_c
+&={9\over10}+{81\over4}-2c_0
+  -2c_1\{q'(1)+q''(1)\}\\
+&\ge {9\over10}+{81\over4}-2c_0-8c_1\\
+&={1686660000000423\over80000000000020}
+ =21.083250000000017\ldots .
+\end{aligned}\tag{6.9}
+\]
+Thus the simplest affine covariance feedback is not the obstruction on this
+legal scalar chart.  The parity decoupling in (6.6) need not survive a
+nonzero translation or general adapted feedback, and (4.9) prevents any
+extension from this scalar packet to the full $SU(2)$ production field.
+
+\section*{7. Exact signed $C=8/C=10$ coefficient band}
+\hypertarget{section-7-signed-band}{}
+
+The R-133 one-real Pauli slice takes
+\[
+ s=b\cos(Nx),\qquad p=\sin(Nx),\qquad
+ f_e(s)=s-{5\over9}{s^3\over s^2+e}.                \tag{7.1}
+\]
+After removing the polynomial and constant principal pieces, the exact
+rational coefficient is, for $n\ge2$,
+\[
+\begin{aligned}
+a_n={}&4c_1e(-1)^{n+1}e^{-2n\kappa}
+\left\{ {5\delta\over27c}
++{25\delta^2\over81c^2}
+ [n+\coth(2\kappa)]\right\},\\
+&\delta={\sqrt e\over b},\qquad
+\kappa=\operatorname{arsinh}\delta,\qquad
+c=\sqrt{1+\delta^2}.
+\end{aligned}\tag{7.2}
+\]
+The coefficient after multiplication by $p^2$ is
+\[
+ g_n={a_n\over2}-{a_{n-1}+a_{n+1}\over4},\qquad
+ (-1)^{n+1}g_n>0\quad(n\ge3).                       \tag{7.3}
+\]
+Indeed, if $a_n=(-1)^{n+1}A_n$ with $A_n>0$, then
+\[
+ (-1)^{n+1}g_n={A_n\over2}+{A_{n-1}+A_{n+1}\over4}>0.          \tag{7.4}
+\]
+
+The physical output mode is $2nN$.  For shell gap $q=m-j$,
+\[
+ 2^{q-2}<n\le2^{q-1}.                               \tag{7.5}
+\]
+Therefore
+\[
+\begin{array}{c|ccccc}
+q&5&6&7&8&9\\ \hline
+n&9\!:\!16&17\!:\!32&33\!:\!64&65\!:\!128&129\!:\!256 .
+\end{array}                                         \tag{7.6}
+\]
+Thus $C=8$ moves $n=9,\ldots,64$, while $C=10$ moves
+$n=9,\ldots,256$.  With any positive endpoint-fixed collar weights $w_q$,
+\[
+ G_{B,C}(y)
+ =2\sum_{q=5}^{C-3}w_q
+   \sum_{n\in I_q}g_n\cos(2ny).                     \tag{7.7}
+\]
+At $y=\pi/2$, $\cos(2ny)=(-1)^n$, and (7.4) gives
+\[
+ \boxed{\quad
+ G_{B,C}(\pi/2)
+ =-2\sum_{q=5}^{C-3}w_q\sum_{n\in I_q}|g_n|<0,
+ \qquad C=8,10.\quad}                               \tag{7.8}
+\]
+Fejer-localized finite Fourier tangents turn (7.8) into a finite-cutoff
+negative quadratic direction for this coefficient-exact scalar-slice band.
+The three rational layers can also align at one output:
+\[
+ 2114970=17(124410)=33(64090)=65(32538).             \tag{7.9}
+\]
+Hence a quadrature or independent-layer shortcut is false even for the
+actual rational row.
+
+This negative direction is not a full-owner counterexample.  It omits the
+common-future replica, the favorable R-102 product covariance inside
+$D\Phi$, the canonical trace probe, R-125 variance/forest recombination,
+returned mean/low, adapted feedback, and all cross-reveal blocks.  The
+complete $C=8$ or $C=10$ owner is non-Toeplitz and its sign remains
+undetermined.
+
+\section*{8. Evidence map and route decision}
+\hypertarget{section-8-evidence-map}{}
+
+\begin{center}
+\begin{tabular}{p{0.22\linewidth}p{0.29\linewidth}p{0.37\linewidth}}
+\hline
+Route & Verified finding & Boundary / decision\\
+\hline
+Three-feature owner &
+$(U,J,R)$ compresses exactly to $(U,\Phi)$ &
+Keep $D\Phi,D^2\Phi$; do not re-add raw-current covariance.\\
+Equal-norm trace lift &
+Insufficient for mixed endpoints &
+Use the shared covariance square-root probe (2.5).\\
+$SU(2)$ fibre reduction &
+Exact $2+2$ active block and two phase kernels &
+Berry/Cartan holonomy prevents a global pairwise gauge.\\
+Stationary symmetry &
+Broken by the registered family-lock mass &
+Split scalar principal covariance from positive smoother anisotropy.\\
+Scalar adapted feedback &
+Minimum at least $m_G>3/4$ and $\lambda_c>21.08$ &
+Reject it as the simplest obstruction; do not extrapolate transversely.\\
+Moved collar band &
+Exact negative $C=8/C=10$ scalar-slice direction &
+Full owner still undecided; assemble signed cross blocks.\\
+\hline
+\end{tabular}
+\end{center}
+
+The decisive next object is no longer an unspecified large Gram.  For the
+scalar-principal covariance, assemble the four active fibre channels of
+(4.3) with the common features $(U,\Phi)$, all cross reveals, and the
+returned low block.  Add the smoother anisotropic covariance remainder as a
+separate positive feature, retaining its finite low modes exactly.  On the
+first three moved layers $q=5,6,7$, compute the non-Toeplitz generalized
+eigenvalue matrix
+\[
+ (R_{m,q}^{\pm})^*S_2R_{m,q'}^{\mp},
+ \qquad q,q'\in\{5,6,7\},                           \tag{8.1}
+\]
+including the $X_z,X_{zw}$ and $U_z,U_{zw}$ connections.  A positive
+source-quotient edge advances the route; a negative edge returns an
+owner-resolved adverse eigenvector.  This is falsifiable and does not assume
+the desired inequality.
+
+\section*{9. Devil's-advocate audit}
+\hypertarget{section-9-devils-advocate}{}
+
+\begin{enumerate}
+\item \textbf{Objection:} Compression (2.3) deletes the load-bearing R-102
+product covariance.\\
+\textbf{DISMISSED.}  The covariance is moved into the favorable
+$D\Phi^*D\Phi$ term and the $\Phi$ second jet in (2.8).  Both primary and
+independent certificates retain the full Hessian connection.
+
+\item \textbf{Objection:} A vector with norm $\Theta^{1/2}$ already defines
+the trace feature.\\
+\textbf{UPHELD against that shortcut.}  It does not define mixed endpoint
+correlations.  The shared probe (2.5)--(2.6) is required and is checked on a
+singular covariance.
+
+\item \textbf{Objection:} The $SU(2)$ rotation proves a global scalar
+reduction.\\
+\textbf{UPHELD.}  The registered family-lock mass has the nonzero
+commutator (5.4), multi-reveal Berry holonomy remains, and the transverse
+coefficient can exceed the scalar radial one by $113/48$.
+
+\item \textbf{Objection:} The large value in (6.9) closes the production
+Hessian.\\
+\textbf{UPHELD.}  It certifies only the centered coefficient-exact active
+scalar two-root/two-visit chart.  Transverse, singlet-radial, translated,
+adapted-feedback, low, and cross-reveal blocks are absent.
+
+\item \textbf{Objection:} The negative symbol (7.8) refutes T-050.\\
+\textbf{UPHELD.}  It is a deterministic coefficient/Hessian subblock.  The
+complete signed owner contains favorable covariance and trace/forest/low
+cross terms that are not present in the slice.
+
+\item \textbf{Objection:} The covariance split (5.5) supplies the missing
+owner intertwiner automatically.\\
+\textbf{UPHELD.}  It is an exact stationary spectral split.  Its propagation
+through heat, output projection, owner partition, adaptation, and refinement
+is the next theorem, not a consequence of spectral calculus alone.
+
+\item \textbf{Objection:} The production A1 parameter source is already a
+full physical closure.\\
+\textbf{VALID with mitigation.}  Only the registered discrete parameter and
+family-lock block are used.  The source manifest's own external-audit and
+continuum limitations remain unchanged.
+\end{enumerate}
+
+\section*{10. Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-INNOVATION-COMPRESSED-COMMON-FEATURE-
+  SU2-COVARIANCE-SIGNED-COLLAR-BAND-BOUNDARY.
+Ledger ID: R-142.
+Precise statement: exact innovation compression (2.3)-(2.4), actual
+  shared-probe trace feature (2.5)-(2.6), complete two-feature Hessian
+  (2.8), legal finite matrix (3.5), SU(2) fibre block (4.3)-(4.8),
+  registered A1 covariance split (5.5)-(5.7), scalar-chart bounds
+  (6.7)-(6.9), and negative C8/C10 scalar-slice symbols (7.8).
+Scope: finite cutoff, positive floor, fixed temporally faithful chart;
+  coefficient-exact active scalar packet and deterministic rational
+  scalar-slice band only where stated.
+Dependencies: A1-PRODUCTION-FUNCTIONAL-REALISATION; R-102, R-125,
+  R-131, R-132, R-133, R-141.
+Evidence grade: ANALYTIC, EXACT, CONDITIONAL, EXECUTED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_innovation_compressed_common_feature_
+  su2_covariance_signed_collar_band_boundary_verify.py
+Expected output: R-142 integrated PASS; primary 50/50 and independent
+  46/46; deterministic note/PDF, manifest, exploration, authority,
+  all-page rendering, and public-surface gates pass.
+Falsification gate: any failed mixed-centering, shared-trace, Hessian,
+  SU(2) block, mass/covariance, scalar-score, band-sign, authority/hash,
+  PDF, exploration, or public-surface assertion.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no full production common-heat matrix, uniform
+  Loewner bound, source-null/low compatibility, full-owner counterexample,
+  positive graph gap, matching, anchor, A13 gate, OVERLAP_src, Nelson,
+  removal, interacting measure, Sector-A closure, or T5-T7 claim follows.
+Next required action: assemble the non-Toeplitz q=5,6,7 four-channel
+  U/Phi cross-reveal matrix with anisotropic and returned-low blocks,
+  then compute its generalized source eigenpairs before extending to C10.
+\end{verbatim}
+
+\endgroup
