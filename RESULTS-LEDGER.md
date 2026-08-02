@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-146](#r-146) | Relative zero-control anchor, endpoint-first anisotropic payment, and canonical-covariance scalar-sign boundary | Scoped T4 analytic/exact/conditional/executed/audited advance and no-go. At every registered finite cutoff and chart, the R-104 zero-control law and A7 normalization give the exact relative identity `E Vren_J(Z_h)=-[T_(J,pi)(h)-T_(J,pi)(0)]`; no separate absolute anchor is needed on this direct route. Completing the owner telescope before splitting the terminal covariance charges the anisotropic endpoint by `(1/100)Y6+24` with zero Cameron--Martin source loss, leaving the full-field scalar-trace residual windows `eta<5/11`, `zeta<13/50`. A fixed-cutoff canonical square root of the total covariance gives an equivalent endpoint-payoff Boue--Dupuis variational chart and exact positive temporal increment split. Strict-past independent scalar innovations have nonpositive signed defect, but an exact same-root Gaussian fixture has positive defect with ratio tending to one, so covariance normalization alone cannot close the remaining scalar sea. The old owner/filtration chart, common-terminal tower, complete scalar signed residual, T-050, A13, Nelson, phase selection, and Sector A remain open |
 | [R-145](#r-145) | Weighted trace-excess criterion and terminal anisotropic covariance sextic reduction | Scoped T4 analytic/exact/executed/audited advance. Writing the renormalised action as `Vren=a_pi-T_pi`, the exact T-050 implication only requires `T_pi<=eta X+zeta Y6+B` with `eta<5/11`, `zeta<27/100`, and `a_pi>=-C0`; a strict global complete-feature contraction is sufficient but not necessary. For the registered A1 family-lock covariance, exact Sturm isolation, lattice counting, and the fourth-order kinetic lower bound give complex anisotropic Fourier sum at most `7807039549231/6201562500` and six-real pointwise derivative trace at most `7807039549231/12700800000000`. At abstract terminal total-covariance level, the anisotropic owner is therefore bounded by `(1/100)Y6+24` for regulator bound one. The R-129 window `eta<9/20`, `zeta<3/20` remains valid but nonsharp. No temporally faithful transfer of the terminal split, scalar principal-sea signed estimate, complete low/anchor bound, T-050, A13, Nelson theorem, or Sector-A closure is proved |
 | [R-144](#r-144) | Uniform affine-residual Douglas one-use theorem and production-data boundary | Scoped T4 analytic/exact/conditional/executed/audited advance. If the complete feature action is `A=a+(||Y||^2-||U||^2)/2`, `U=CY+E`, `||C||<=rho<sigma<1`, `||E||<=M`, and `a>=-C0` uniformly, then `||U||^2<=sigma^2||Y||^2+sigma^2 M^2/(sigma^2-rho^2)` with a sharp residual constant. For the R-143 complete feature this gives strict one-use coefficients `(9/20)sigma^2` and `(3/20)sigma^2` simultaneously, so exact returned-low cancellation and complete second jets are unnecessary on this global route. Independently, a positive reduced/source-low effective Hessian gap with reduced origin-force and anchor bounds is sufficient: for chosen `p=11/10`, `9/20<1/(2p)=5/11` with margin `1/220`, while `3/20<gamma/6=27/100` with margin `3/25`. Hostile pre-registration audits corrected both the draft threshold comparison and the R-142 fibre Schur coefficient. Exact phase-cycle, returned-low, and equal-first-jet fixtures prove that the registered local q567/core data do not determine the production sign. The canonical temporal/common-output/low chart, production contraction or reduced Hessian gap, residual/force/anchor bounds, T-050, and Sector-A closure remain open |
 | [R-143](#r-143) | Corrected q=5,6,7 feature contraction and common-noise anisotropy tail | Scoped T4 analytic/exact/conditional/executed/audited advance. The R-142 `(17,33,65)` collision is corrected from a half-output q567 label to a physical-output q678 witness; the exact replacement `(10,20,40)` with carriers `(4M,2M,M)` has common output `80M`, gaps `(5,6,7)`, and one rational-coefficient sign. The complete recombined core is `2A=||Y||^2-||U||^2`, with source and sextic included once, and finite-family positivity is equivalent to one Douglas mixed-Gram contraction. A positive-diagonal/mixed-negative fixture proves diagonal tests insufficient; exact residual and source-null Feshbach formulas isolate the adverse coordinate. The A1 covariance has an exact common-endpoint scalar-plus-anisotropic probe factor, and certified rational mass intervals yield explicit high-shell derivative-trace bounds with diagnostic first included shells `N=27` and `N=49`. Missing production U/Phi jets, cross reveals, low blocks, and owner intertwiners prevent a production matrix verdict, T-050, or Sector-A closure |
@@ -164,6 +165,54 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-146"></a>
+### R-146 -- Relative zero-control anchor, endpoint-first anisotropic payment, and canonical-covariance scalar-sign boundary
+
+- **Statement.**  At every registered finite cutoff `J` and admissible chart
+  `pi`, R-145 writes the renormalised action as
+  `E Vren_J(Z_h)=a_(J,pi)-T_(J,pi)(h)`.  R-104 identifies the zero-control law
+  with the A7-normalized free field, hence
+  `a_(J,pi)=T_(J,pi)(0)` and exactly
+  `E Vren_J(Z_h)=-[T_(J,pi)(h)-T_(J,pi)(0)]`.  If the complete owner is
+  telescoped first and only its terminal covariance is then split, positivity
+  gives an anisotropic endpoint charge `(1/100)Y6+24` and source coefficient
+  zero.  The residual full-field scalar-trace target therefore has the strict
+  acceptance windows `eta<5/11` and `zeta<13/50`.  At a fixed cutoff, a
+  canonical square root of the total covariance produces the same terminal
+  law and, by R-087, the same endpoint-payoff Boue--Dupuis value; its temporal
+  increments split positively.  For a predictable coefficient depending only
+  on the strict past, an independent scalar innovation has signed defect
+  `-||Au||^2<=0`.  This sign does not survive same-root coefficient dependence:
+  the exact fixture `A_t(g)=g exp(-t g^2/2)` has defect
+  `2(t-1)/(1+2t)^(5/2)>0` for `t>1`, with defect-to-trace ratio tending to one.
+- **Where proved.**  Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-canonical-covariance-relative-anchor-anisotropic-temporal-reduction-260802-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_canonical_covariance_relative_anchor_anisotropic_temporal_reduction_manifest.json`,
+  and the primary, non-importing independent, and integrated executable
+  certificates listed there.
+- **Reuse scope.**  The relative anchor is finite-cutoff and chartwise; it
+  removes an unnecessary absolute-anchor task only for the direct relative
+  expectation.  The endpoint anisotropic payment applies after complete-owner
+  telescoping to the registered total covariance.  The canonical covariance
+  construction is a fixed-cutoff endpoint-law variational normal form, not an
+  equivalence of the old visit, forest, future, low, or predictable-control
+  coordinates.  The scalar sign lemma requires strict-past measurability and
+  independence of the fresh innovation.
+- **Audit boundary.**  The result is phase-neutral: it neither selects BCC nor
+  any other modulated or uniform vacuum.  It proves no separate uniform bound
+  on `a_(J,pi)` or `T_(J,pi)(0)`.  The same-root fixture blocks automatic scalar
+  cancellation but does not disprove a production-specific signed estimate
+  using the common-terminal tower, forest, future-variance, balanced-cross, or
+  returned-low structure.  Those structures, the complete scalar residual,
+  T-050, both A13 gates, `OVERLAP_src`, Nelson, removals, the interacting
+  measure, physical phase selection, and Sector A remain open.
+- **Tier / publication target.**  Scoped T4
+  analytic/exact/conditional/executed/audited advance plus method no-go;
+  suitable as a relative-normalization and Gaussian innovation lemma after
+  external review, not as a constructive-measure or vacuum-selection theorem.
 
 <a id="r-145"></a>
 ### R-145 -- Weighted trace-excess criterion and terminal anisotropic covariance sextic reduction

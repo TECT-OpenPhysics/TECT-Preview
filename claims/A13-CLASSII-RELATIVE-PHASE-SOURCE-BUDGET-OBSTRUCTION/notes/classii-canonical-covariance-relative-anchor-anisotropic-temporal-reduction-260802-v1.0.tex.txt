@@ -1,0 +1,589 @@
+% =============================================================================
+% Title: Relative anchor, endpoint-first anisotropy, and canonical covariance
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-CANONICAL-COVARIANCE-RELATIVE-ANCHOR-ANISOTROPIC-TEMPORAL-REDUCTION
+% Ledger: R-146
+% Version: v1.0 -- first issued 2026-08-02; this version issued 2026-08-02
+% Status: scoped T4 analytic/exact/executed advance; T-050 and Sector A open
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+\hypertarget{section-1-result}{ }
+
+The objective of this note is not to manufacture a preferred spatial phase.
+It asks what follows from the registered finite-cutoff action and covariance,
+independently of whether a later physical minimizer is BCC, another modulated
+state, uniform, disordered, or absent. No phase-selection statement is used
+or obtained.
+
+R-145 leaves three apparent burdens on the direct T-050 trace-excess route:
+an absolute chart anchor, temporal transport of the anisotropic terminal
+covariance, and the scalar-principal signed owner. Two can be removed without
+changing the action.
+
+First, A7 fixes the zero-control additive normalization and R-104 identifies
+the zero-control terminal law. Therefore the R-145 identity is exactly
+relative and no separate absolute chart-anchor estimate is needed. Second,
+one must telescope the complete owner before splitting the endpoint
+covariance. The anisotropic term is then bounded by
+\[
+ {1\over100}Y_6(h)+24                                      \tag{1.1}
+\]
+with zero source loss. This is not a blockwise temporal transfer.
+
+Third, R-087 permits a distinct fixed-cutoff Boue--Dupuis problem built from
+the constant Brownian factor of the same endpoint covariance. Its temporal
+covariance increments are proportional and hence admit an exact positive
+scalar-principal/anisotropic split. The variational value is unchanged, but
+the old chart's visit, low, trace, and forest owners are not transported.
+They must be reconstructed in the new chart.
+
+Finally, strict-past scalar common-noise rows have an exact nonpositive
+conditional defect. A bounded same-root coefficient supplies an exact
+positive counterfixture, so canonical covariance alone does not close the
+scalar sea. The remaining analytic target is the complete contemporaneous
+scalar signed relative owner with future variance, forest, and returned low
+retained once.
+
+Thus R-146 is a genuine reduction, not T-050 closure. A13, Nelson, removal,
+the interacting measure, every phase question, and Sector A remain open.
+
+\section*{2. Zero-control relative-anchor theorem}
+\hypertarget{section-2-relative-anchor}{ }
+% audit-id: AUDIT-2026-08-02-A13-ZERO-CONTROL-RELATIVE-ANCHOR
+
+Fix a cutoff \(J\) and a temporally faithful chart \(\pi\). R-145 gives the
+complete identity
+\[
+ \E V_J^{\rm ren}(Z_h)=a_{J,\pi}-\cT_{J,\pi}(h),
+ \qquad
+ \cT_{J,\pi}(h)
+ ={1\over2}\{\|\cU_\pi(h)\|^2-\|\Phi_\pi(h)\|^2\},          \tag{2.1}
+\]
+where \(a_{J,\pi}\) is independent of \(h\). R-104 supplies
+\[
+ Z_\pi(0)\stackrel{\rm law}=X_J,                            \tag{2.2}
+\]
+and the A7 covariance-normal definition supplies the external centering
+\[
+ \E V_J^{\rm ren}(X_J)=0.                                  \tag{2.3}
+\]
+
+% evidence-anchor: theorem-2.1-relative-anchor
+\textbf{Theorem 2.1 (exact relative anchor).}
+Under (2.1)--(2.3),
+\[
+ \boxed{
+ a_{J,\pi}=\cT_{J,\pi}(0),\qquad
+ \E V_J^{\rm ren}(Z_h)
+ =-[\cT_{J,\pi}(h)-\cT_{J,\pi}(0)].
+ }                                                           \tag{2.4}
+\]
+
+\textit{Proof.}
+Set \(h=0\) in (2.1), use (2.2) to replace the terminal law by \(X_J\),
+and then use (2.3). This gives \(0=a_{J,\pi}-\cT_{J,\pi}(0)\).
+Substitution into (2.1) proves (2.4). \hfill\(\square\)
+
+Consequently a uniform relative estimate
+\[
+ \cT_{J,\pi}(h)-\cT_{J,\pi}(0)
+ \leq \eta X(h)+\zeta Y_6(h)+B,                             \tag{2.5}
+\]
+with
+\[
+ \eta<{5\over11},\qquad \zeta<{27\over100},                \tag{2.6}
+\]
+implies the direct T-050 lower bound with constant \(B\). No additional
+assumption \(a_{J,\pi}\geq-C_0\) is required on this relative route.
+
+This does not refute
+NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR.
+Normalized laws are invariant under \(V\mapsto V+c\) and cannot discover
+the constant \(c\). Here the external A7 covariance-normal convention has
+already fixed that gauge through (2.3). Also, (2.4) does not prove that
+\(\cT_{J,\pi}(0)\) or \(a_{J,\pi}\) is separately bounded uniformly in
+cutoff or chart; the subtraction occurs before the limiting estimate.
+
+\section*{3. Complete endpoint-first anisotropic payment}
+\hypertarget{section-3-endpoint-anisotropy}{ }
+% audit-id: AUDIT-2026-08-02-A13-R146-OUTPUT-PROJECTION-OMISSION
+
+Let the registered terminal covariance split be
+\[
+ \Gamma_J=\Gamma_{0,J}+\Gamma_{R,J},\qquad
+ \Gamma_{R,J}\succeq0.                                     \tag{3.1}
+\]
+The point is to apply (3.1) only after the R-070/R-104 complete signed owner
+has telescoped to the endpoint. Let \(P\) be the registered R-145
+orthogonal output projection. For an endpoint \(W\), define
+\[
+ T_{\rm an}(W)
+ ={1\over2}\E\int
+ \Tr\{P C_6(W)\Gamma_{R,J}C_6(W)^*P\}\,dx
+ \geq0.                                                     \tag{3.2}
+\]
+Linearity of the terminal covariance trace gives
+\[
+ \cT_{J,\pi}(h)=\cT^{(0)}_{J,\pi}(h)+T_{\rm an}(Z_h).        \tag{3.3}
+\]
+Here \(\cT^{(0)}\) is the full endpoint residual with the scalar-principal
+covariance; it is not a separately proved scalar law. Equation (3.3) is made
+after complete recombination and asserts no positive anisotropic allocation
+to an individual temporal visit.
+
+% evidence-anchor: theorem-3.1-endpoint-first
+\textbf{Theorem 3.1 (endpoint-first anisotropic reduction).}
+At regulator bound one, the R-145 terminal theorem and (3.2)--(3.3) imply
+\[
+ \boxed{
+ \Delta\cT_{J,\pi}
+ \leq \Delta\cT^{(0)}_{J,\pi}
+       +{1\over100}Y_6(h)+24,
+ \qquad
+ \Delta\cT(h)=\cT(h)-\cT(0).
+ }                                                           \tag{3.4}
+\]
+The added source coefficient is exactly zero.
+
+\textit{Proof.}
+Subtract (3.3) at zero control:
+\[
+ \Delta\cT
+ =\Delta\cT^{(0)}+T_{\rm an}(Z_h)-T_{\rm an}(Z_0)
+ \leq\Delta\cT^{(0)}+T_{\rm an}(Z_h),                       \tag{3.5}
+\]
+because \(T_{\rm an}(Z_0)\geq0\). R-145 gives
+\[
+ T_{\rm an}(Z_h)\leq {1\over100}Y_6(h)+24.                  \tag{3.6}
+\]
+Combining (3.5) and (3.6) proves (3.4). \hfill\(\square\)
+
+The scalar-principal remainder therefore retains the exact windows
+\[
+ \boxed{
+ \eta_{\rm sc}<{5\over11},\qquad
+ \zeta_{\rm sc}<{27\over100}-{1\over100}={13\over50}.
+ }                                                           \tag{3.7}
+\]
+No source headroom is spent on anisotropy, and the constant 24 is paid once
+at the complete endpoint.
+
+\section*{4. Arbitrary blockwise anisotropic transport is unavailable}
+\hypertarget{section-4-temporal-nogo}{ }
+
+R-129 already shows that total Fourier diagonality does not make arbitrary
+temporal increments commute with a shell projector. A stronger obstruction
+shows that even a positive suballocation of a fixed anisotropic remainder
+need not exist.
+
+Put
+\[
+ P_+={1\over2}\begin{pmatrix}1&1\\1&1\end{pmatrix},\qquad
+ P_-={1\over2}\begin{pmatrix}1&-1\\-1&1\end{pmatrix},
+ \qquad P_++P_-=\Id_2,                                      \tag{4.1}
+\]
+and request a decomposition of
+\[
+ R=\begin{pmatrix}1&0\\0&0\end{pmatrix}                    \tag{4.2}
+\]
+as \(R=R_++R_-\) with \(0\preceq R_\pm\preceq P_\pm\).
+The elementary dominance lemma is: if \(0\preceq A\preceq P\) and \(P\)
+is an orthogonal projection, then for \(x\in\Ker P\),
+\(\ip{x}{Ax}=0\); hence \(A^{1/2}x=0\), so
+\(\operatorname{Ran}A\subseteq\operatorname{Ran}P\).
+Since \(P_\pm\) have rank one, this support inclusion forces
+\[
+ R_\pm=a_\pm P_\pm,\qquad 0\leq a_\pm\leq1.                 \tag{4.3}
+\]
+But both diagonal entries of \(a_+P_++a_-P_-\) equal
+\((a_++a_-)/2\), whereas the diagonal entries of \(R\) are one and zero.
+No such decomposition exists.
+
+This proves
+NG-2026-08-02-A13-ARBITRARY-TEMPORAL-ANISOTROPIC-POSITIVE-SUBALLOCATION.
+It refutes the method, not the full action bound. The legal repair is
+Theorem 3.1: telescope first, split once, and use the favourable zero-control
+term.
+
+\section*{5. Canonical covariance as an exact alternative chart}
+\hypertarget{section-5-canonical-covariance}{ }
+
+Fix \(J\) and write an arbitrary endpoint factorization as
+\[
+ X_J=\int_0^T K_J(t)\,dB_t,\qquad
+ C_J=\int_0^T K_J(t)K_J(t)^*\,dt.                            \tag{5.1}
+\]
+Define on a fresh canonical Brownian space
+\[
+ K_{\rm can}(t)=T^{-1/2}C_J^{1/2},\qquad
+ \widetilde X_J=\int_0^T K_{\rm can}(t)\,d\widetilde B_t.   \tag{5.2}
+\]
+Then
+\[
+ \widetilde X_J\stackrel{\rm law}=X_J\sim N(0,C_J).         \tag{5.3}
+\]
+
+% evidence-anchor: theorem-5.1-canonical-bd
+\textbf{Theorem 5.1 (fixed-cutoff canonical covariance normal form).}
+Let \(G_J\) obey the fixed-cutoff continuity, lower-bound, and local
+polynomial-envelope hypotheses of R-087 Theorem 8.1. For every \(q>0\),
+\[
+ -{1\over q}\log\E e^{-qG_J(X_J)}
+ =\inf_{v\in\cA_{cs}}\E\left[
+ G_J\left(\widetilde X_J+
+ {C_J^{1/2}\over\sqrt T}\int_0^Tv_t\,dt\right)
+ +{1\over2q}\int_0^T\|v_t\|^2dt\right].                    \tag{5.4}
+\]
+At the Nelson exponent \(q=10/9\), the cost coefficient is \(9/20\).
+
+\textit{Proof.}
+Equation (5.3) makes the left side equal to the original endpoint value.
+Apply R-087 Theorem 8.1 to the deterministic factor \(K_{\rm can}\).
+Its restriction to bounded smooth cylindrical-simple controls is exact.
+This proves (5.4). \hfill\(\square\)
+
+For a deterministic partition \(I_b=(t_{b-1},t_b]\), put
+\(\tau_b=|I_b|/T\). The field increment covariance is exactly
+\[
+ \Delta C_b=\tau_bC_J.                                      \tag{5.5}
+\]
+If \(C_J=C_{0,J}+R_J\) with \(C_{0,J},R_J\succeq0\), an expanded Brownian
+space gives the rectangular factor
+\[
+ K_{\rm rect}=T^{-1/2}
+ [\,C_{0,J}^{1/2}\quad R_J^{1/2}\,],                        \tag{5.6}
+\]
+and hence the exact positive split
+\[
+ \Delta C_b=\tau_bC_{0,J}+\tau_bR_J.                        \tag{5.7}
+\]
+No false identity
+\(C_J^{1/2}=C_{0,J}^{1/2}+R_J^{1/2}\) is used. In the A1
+translation-invariant cutoff, these covariance operators and Fourier shell
+projections are simultaneous multipliers, so
+\[
+ [\Delta C_b,\Pi_m]=0,\qquad
+ \Delta C_{b,m}=\tau_b\Pi_mC_J\Pi_m.                        \tag{5.8}
+\]
+
+For a blockwise constant control \(v_t=u_b\) on \(I_b\), put
+\(h_b=\sqrt{\tau_bT}\,u_b\). Then
+\[
+ \int_0^T\|v_t\|^2dt=\sum_b\|h_b\|^2,\qquad
+ \int_0^TK_{\rm can}v_tdt
+ =C_J^{1/2}\sum_b\sqrt{\tau_b}\,h_b.                        \tag{5.9}
+\]
+Thus every tail \(S\) obeys
+\[
+ \left\|C_J^{1/2}\sum_{b\in S}\sqrt{\tau_b}h_b\right\|^2
+ \leq\|C_J\|_{\rm op}
+ \left(\sum_{b\in S}\tau_b\right)
+ \sum_{b\in S}\|h_b\|^2.                                   \tag{5.10}
+\]
+The primary and independent certificates verify this normalization on
+decimal and rational fixtures. A source in \(\Ker C_J\) costs energy but
+produces no endpoint displacement, so it is zero at the infimum and may be
+removed by the range quotient.
+
+Theorem 5.1 preserves the complete endpoint variational value. It does not
+identify a control from the old chart with one in the new chart, and does not
+preserve individual reveal, trace, forest, or returned-low terms. The
+original arbitrary-chart T-050 theorem is therefore not proved. A new uniform
+lower bound established directly in (5.4), however, would imply the
+fixed-cutoff Nelson estimate by the exact R-087 variational equality.
+
+\section*{6. Scalar common-noise sign and its exact boundary}
+\hypertarget{section-6-scalar}{ }
+
+Let \(\cF_{\rm past}\) be a strict-past sigma-field. Conditionally on it,
+let \(A\) and \(u\) be fixed, let \(g\sim N(0,\Gamma)\), and let
+\(\zeta\sim N(0,\Id)\) be independent. Define
+\[
+ U=A\Gamma^{1/2}\zeta,\qquad \Phi=A(g+u).                    \tag{6.1}
+\]
+
+% evidence-anchor: lemma-6.1-predictable-scalar
+\textbf{Lemma 6.1 (strict-past scalar common-noise sign).}
+\[
+ \boxed{
+ \E[\|U\|^2-\|\Phi\|^2\mid\cF_{\rm past}]
+ =-\|Au\|^2\leq0.
+ }                                                           \tag{6.2}
+\]
+
+\textit{Proof.}
+Both Gaussian squares have the same conditional covariance trace
+\(\Tr(A\Gamma A^*)\). The shifted current square has the additional term
+\(\|Au\|^2\), and its mixed Gaussian term has conditional mean zero.
+\hfill\(\square\)
+
+For two endpoints using the same Gaussian and probe, the corresponding
+polarized identity is
+\[
+ \E\ip{U_q}{U_p}-\E\ip{\Phi_q}{\Phi_p}
+ =-\ip{A_qu_q}{A_pu_p}.                                     \tag{6.3}
+\]
+Equation (6.3) is exact, but a mixed inner product has no sign by itself.
+Only a legally recombined diagonal or an established adjoint owner may use
+it as a sign statement.
+
+The strict-past hypothesis is load-bearing. Let independent
+\(g,\zeta\sim N(0,1)\), and for \(t>0\) define the bounded smooth coefficient
+\[
+ A_t(g)=g e^{-tg^2/2},\qquad U=A_t(g)\zeta,\qquad
+ \Phi=A_t(g)g.                                              \tag{6.4}
+\]
+Gaussian differentiation gives
+\[
+ \E\|U\|^2=(1+2t)^{-3/2},\qquad
+ \E\|\Phi\|^2=3(1+2t)^{-5/2},                              \tag{6.5}
+\]
+and therefore
+\[
+ \boxed{
+ \E(\|U\|^2-\|\Phi\|^2)
+ ={2(t-1)\over(1+2t)^{5/2}}>0\quad(t>1).
+ }                                                           \tag{6.6}
+\]
+Relative to the trace square, the defect is
+\[
+ {2(t-1)\over1+2t}\longrightarrow1.                        \tag{6.7}
+\]
+At \(t=2\) this ratio is exactly \(2/5\). This proves
+NG-2026-08-02-A13-CANONICAL-COVARIANCE-AUTOMATIC-SCALAR-CANCELLATION.
+It is a counterexample to the inference from covariance equality, not a
+counterexample to the complete production action.
+
+Canonical proportional covariance also does not manufacture a common
+terminal martingale. With independent centered roots \(\xi_1,\xi_2\),
+\[
+ \Phi_1=\xi_1,\qquad \Phi_2=2\xi_1+\xi_2,\qquad
+ \E[\Phi_2\mid\cF_1]=2\xi_1\ne\Phi_1.                      \tag{6.8}
+\]
+Thus the R-125 common-terminal hypothesis remains a separate theorem.
+
+\section*{7. Exact remaining target and two honest routes}
+\hypertarget{section-7-roadmap}{ }
+
+After Theorems 2.1 and 3.1, the old-chart direct route has one global target:
+\[
+ \Delta\cT^{(0)}_{J,\pi}(h)
+ \leq \eta_{\rm sc}X(h)+\zeta_{\rm sc}Y_6(h)+B,
+ \quad
+ \eta_{\rm sc}<{5\over11},\quad
+ \zeta_{\rm sc}<{13\over50}.                               \tag{7.1}
+\]
+Here \(\cT^{(0)}\) retains the full endpoint field and all scalar-principal
+trace, current, future-variance, forest, and low effects; it is not a
+coefficient-frozen scalar model. If (7.1) holds, Theorems 2.1 and 3.1 give
+\[
+ \E V_J^{\rm ren}(Z_h)
+ \geq-\eta_{\rm sc}X(h)
+      -(\zeta_{\rm sc}+1/100)Y_6(h)-(B+24),                 \tag{7.2}
+\]
+which is exactly inside the R-145 T-050 window.
+
+The complete low cannot be estimated separately on the full progressive
+revisit class: the registered revisit fixture has quartic separated-low
+loss, quadratic source cost, and fixed terminal sextic. Cancellation must
+remain inside the signed relative owner.
+
+The canonical alternative begins from Theorem 5.1 and follows this
+fail-closed sequence:
+\begin{enumerate}
+\item construct one complete terminal current in the canonical chart;
+\item define candidate Doob rows by conditional expectation of that terminal;
+\item verify the tower identity root by root and reject the route if (6.8)
+or any owner-incidence test fails;
+\item rederive the R-063 forest, R-125 future variance, trace partition, and
+returned low directly in this chart, with no import of individual old owners;
+\item remove the strict-past scalar diagonal by Lemma 6.1;
+\item retain the contemporaneous coefficient, balanced cross, future
+variance, forest, and low in one signed residual and prove its lower bound;
+\item invoke R-087 only after the complete lower bound is uniform in cutoff.
+\end{enumerate}
+
+Schematically, the final scalar obligation has the form
+\[
+ \mathfrak R_{\rm sc}
+ =\E_f\int\{2\Re\ip{U_0}{\delta U}+\|\delta U\|^2\}\,dt
+ -\Delta {\rm Forest}_{063}^{\rm sc}
+ +L_{\rm future/mean/low},                                  \tag{7.3}
+\]
+followed by
+\[
+ \mathfrak R_{\rm sc}
+ \leq \eta_{\rm sc}X+\zeta_{\rm sc}Y_6+B.                  \tag{7.4}
+\]
+Equation (7.3) names the owner-complete reconstruction target; it is not
+asserted as a proved production identity in the new chart.
+
+A separate canonical-prefix estimate would have diagnostic source
+coefficient
+\[
+ 4\beta_{\rm op}g_R
+ ={882195469063103\over8467200000000000}
+ =0.1041897521\ldots                                       \tag{7.5}
+\]
+and a Young integer ceiling 67 at sextic allocation \(1/100\). It is not a
+registered theorem because no exact production stage-owner tower has been
+proved. The production result is the endpoint-first coefficient zero and
+constant 24 in Theorem 3.1.
+
+\section*{8. Proof and failure map}
+\hypertarget{section-8-map}{ }
+
+\begin{center}
+\begin{tabular}{p{0.25\linewidth}p{0.17\linewidth}p{0.48\linewidth}}
+\hline
+Object or route & Verdict & Evidence and next condition \\
+\hline
+Separate absolute chart anchor & Removed on direct relative route &
+A7 centering plus R-104 zero-control law gives Theorem 2.1; no separate
+uniform bound on \(a_{J,\pi}\) is claimed. \\
+Endpoint anisotropic owner & Proved and paid &
+Telescope complete owner first; use positivity at zero and R-145 once;
+cost \(0\cdot X+(1/100)Y_6+24\). \\
+Arbitrary temporal positive anisotropic split & Failed method &
+The rank-one \(P_\pm\) fixture cannot allocate \(R={\rm diag}(1,0)\). \\
+Canonical endpoint covariance chart & Exact alternative &
+Same Gaussian endpoint law and R-087 CORE; increments are \(\tau_bC_J\).
+Individual old owners are not preserved. \\
+Strict-past scalar common-noise diagonal & Proved favourable &
+Lemma 6.1 gives \(-\|Au\|^2\). \\
+Automatic same-root scalar cancellation & Failed inference &
+The bounded coefficient (6.4) has positive defect approaching the full trace. \\
+Common-terminal Doob family & Open &
+Must be constructed and tower-tested; rootwise adaptation is insufficient. \\
+Complete scalar forest/future/low residual & Open, sole direct burden &
+Prove (7.1) in the old chart or reconstruct and bound (7.3)--(7.4) in the
+canonical chart. \\
+Physical phase or BCC selection & Outside result &
+No minimizer comparison, Hessian phase test, or reference-vacuum ranking is
+performed. \\
+T-050, Nelson, Sector A & Open &
+Require the complete scalar signed bound and the registered downstream gates. \\
+\hline
+\end{tabular}
+\end{center}
+
+The table is one dependency map, not ten independent claims. Successful,
+failed, and open routes are retained together so later work does not repeat
+an illegal temporal split or an automatic scalar-cancellation claim.
+
+\section*{9. Devil's-advocate and code-discipline review}
+\hypertarget{section-9-adversarial}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: Theorem 2.1 contradicts the absolute-anchor no-go.
+DISMISSED.}
+The no-go concerns normalized data without an external additive convention.
+A7 supplies that convention. No separate uniform zero-control trace bound
+is inferred.
+
+\item \textbf{Objection: The endpoint-first proof secretly transfers the
+anisotropic covariance through time. DISMISSED.}
+All temporal owners are recombined first. Only the terminal covariance trace
+is split, and the zero-control term is discarded in the favourable direction.
+
+\item \textbf{Objection: Every positive temporal increment admits a positive
+anisotropic subincrement. UPHELD against the shortcut.}
+Equations (4.1)--(4.3) give an exact rank-one counterexample.
+
+\item \textbf{Objection: Equal endpoint covariance preserves every old
+owner. UPHELD against the shortcut.}
+It preserves the Gaussian endpoint law and variational value only.
+Filtration-dependent visit, forest, future-variance, and low terms must be
+rebuilt.
+
+\item \textbf{Objection: Proportional increments imply a common-terminal
+Doob family. UPHELD against the shortcut.}
+Equation (6.8) separates covariance normalization from the tower property.
+
+\item \textbf{Objection: Canonical covariance makes the complete scalar sea
+nonpositive. UPHELD against the shortcut.}
+The strict-past lemma is valid, while (6.4)--(6.7) show a positive same-root
+defect. The forest/low recombination is indispensable.
+
+\item \textbf{Objection: The diagnostic coefficient and ceiling in (7.5)
+are a production bound. DISMISSED.}
+They are explicitly non-production diagnostics. The registered endpoint
+theorem has source coefficient zero and integer constant 24.
+
+\item \textbf{Objection: A factor \(1/2\), realification multiplicity, or
+source normalization may have been lost. MITIGATED.}
+The endpoint definition retains the outer \(1/2\); the primary and independent
+scripts separately derive the R-145 constants, \(h_b=\sqrt{\tau_bT}u_b\),
+the rational tail inequality, and exact thresholds. Numbers are computed
+from A1/R-145 authorities, not pasted as proof outputs.
+
+\item \textbf{Objection: The argument assumes invertible covariance.
+DISMISSED.}
+The positive square root exists for singular covariance. Kernel controls
+produce no shift, retain positive cost, and are removed at the infimum.
+
+\item \textbf{Objection: This result favors BCC or any other phase.
+DISMISSED.}
+No phase ansatz or energy ranking enters any proof. The result is entirely
+phase-neutral.
+
+\item \textbf{Objection: These reductions close T-050. DISMISSED.}
+The complete contemporaneous scalar signed owner and its future/forest/low
+coordinates remain open. T-050, Nelson, and Sector A therefore remain open.
+\end{enumerate}
+
+Limit checks are explicit: zero anisotropic remainder makes Theorem 3.1
+trivial; a one-block canonical partition gives \(\Delta C=C_J\); a kernel
+source has zero displacement; \(u=0\) saturates Lemma 6.1; and the same-root
+counterfixture changes sign exactly at \(t=1\). The proof is finite-cutoff;
+no cutoff, floor, or volume limit is inferred.
+
+\section*{10. Result footer}
+\hypertarget{section-10-verification}{ }
+
+The primary and non-importing independent certificates separately reconstruct
+the exact constants and fixtures. The integrated verifier reruns both, pins
+SHA-256 authorities, checks public surfaces, and verifies the rendered PDF.
+
+Dependencies: A1, A7, R-070, R-087, R-104, R-125, R-129, R-145.
+
+Reproduction command:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_canonical_covariance_relative_anchor_anisotropic_temporal_reduction_verify.py
+\end{verbatim}
+
+\begingroup
+\begin{verbatim}
+Result ID: A13-CLASSII-CANONICAL-COVARIANCE-RELATIVE-ANCHOR-
+ ANISOTROPIC-TEMPORAL-REDUCTION; Ledger ID: R-146.
+Precise statement: relative anchor; endpoint anisotropy <= (1/100)Y6+24 with
+ zero source; canonical endpoint-payoff covariance chart; strict-past scalar
+ sign, but no automatic same-root cancellation.
+Scope: fixed cutoff/A1/A7/R-087; endpoint-only split; no old-owner transport.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Expected output: integrated PASS; primary 88/88; independent 95/95.
+Falsification gate: any hash, sign, factor, covariance/cost, Gaussian, PDF,
+ scope, public-surface, or release check fails.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no old-owner transfer, complete scalar/low/forest/
+ future owner, phase selection, T-050, A13, Nelson, measure, or Sector A.
+Proof complete: false; T-050 closed: false; Sector A closed: false.
+Next required action: tower-test the canonical owner and bound its scalar
+ residual inside source 5/11 and sextic 13/50, or abandon this chart route.
+\end{verbatim}
+\endgroup
+
+\endgroup

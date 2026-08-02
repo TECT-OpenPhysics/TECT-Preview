@@ -45,6 +45,10 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-08-02-A13-R146-OUTPUT-PROJECTION-OMISSION | restore the registered endpoint owner |  |
+| AUDIT-2026-08-02-A13-ZERO-CONTROL-RELATIVE-ANCHOR | the direct R-145 route is exactly relative |  |
+| NG-2026-08-02-A13-ARBITRARY-TEMPORAL-ANISOTROPIC-POSITIVE-SUBALLOCATION | a terminal positive remainder need not split under arbitrary |  |
+| NG-2026-08-02-A13-CANONICAL-COVARIANCE-AUTOMATIC-SCALAR-CANCELLATION | equal covariance does not control a same-root coefficient |  |
 | AUDIT-2026-08-02-A13-R129-TRACE-EXCESS-ACCEPTANCE-WINDOW | R-129 positive-action window is sufficient but nonsharp for  | The R-129 successor language treated `eta<9/20` and |
 | NG-2026-08-02-A13-LOCAL-STENCIL-PRODUCTION-SIGN-NONIDENTIFIABILITY | local packet data do not determine the complete action sign |  |
 | AUDIT-2026-08-02-A13-R144-FIBRE-SCHUR-COEFFICIENT-CORRECTION | the draft fibre reconstruction omitted the Schur term |  |

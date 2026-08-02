@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [A13 R-146 pre-release output-projection audit] - 2026-08-02
+
+Hostile pre-release review found that draft R-146 Eq. (3.2) omitted the orthogonal output projection used by the registered R-145 anisotropic owner. Restored Tr(P C6 Gamma_R C6* P), pinned the corrected formula in the integrated verifier, and recorded EXP-000614. Because P is orthogonal, all registered constants and phase-neutral scope are unchanged; the defective draft was never committed or released.
+
+## [A13 R-146 relative anchor and canonical-covariance temporal reduction] - 2026-08-02
+
+Registered the phase-neutral R-146 package. The R-104 zero-control law and A7 normalization give an exact finite-cutoff relative trace-excess identity, eliminating a separate absolute-anchor task on the direct route. Endpoint-first splitting pays the terminal anisotropic remainder by (1/100)Y6+24 with zero source loss and leaves eta<5/11, zeta<13/50 for the full-field scalar-trace residual. A canonical total-covariance square root gives a fixed-cutoff endpoint-payoff variational normal form with positive proportional increments. Strict-past scalar innovations have favorable sign, but an exact same-root fixture rules out automatic covariance-only cancellation. T-050, A13, phase selection, Nelson, and Sector A remain open.
+
 ## [A13 R-145 weighted trace-excess and terminal anisotropic covariance reduction] - 2026-08-02
 
 Registered R-145 at T4. The exact direct T-050 acceptance criterion is eta<5/11 and zeta<27/100; R-129 remains valid but nonsharp. Exact A1 mass and lattice arithmetic gives six-real pointwise anisotropic derivative trace at most 7807039549231/12700800000000 and the abstract terminal owner bound (1/100)Y6+24 for regulator bound one. The result is terminal-only: temporal-owner transfer, scalar principal signed sea, complete low/anchor, T-050, A13, Nelson, and Sector A remain open. Added T-052 for the already-recorded same-backend flat-versus-BCC energy and coupled-star Hessian diagnostic without duplicating EXP-000590--EXP-000592.

@@ -6,6 +6,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-08-02-A13-R146-OUTPUT-PROJECTION-OMISSION](#audit-2026-08-02-a13-r146-output-projection-omission) | omit the registered R-145 orthogonal output projection from the draft R-146 anisotropic endpoint trace | hostile pre-release review found that draft Eq. (3.2) displayed `Tr(C6 Gamma_R C6*)` instead of the exact registered owner `Tr(P C6 Gamma_R C6* P)`; the note and verifier were repaired before release, with constants and theorem scope unchanged |
+| [AUDIT-2026-08-02-A13-ZERO-CONTROL-RELATIVE-ANCHOR](#audit-2026-08-02-a13-zero-control-relative-anchor) | retain a separate uniform absolute chart-anchor gate after the complete R-145 trace-excess identity is evaluated at zero control | A7 external centering and the R-104 zero-control law give a_pi=T_pi(0) and E Vren(Z_h)=-[T_pi(h)-T_pi(0)]; this removes the separate anchor only on the direct relative route and does not bound either term separately |
+| [NG-2026-08-02-A13-ARBITRARY-TEMPORAL-ANISOTROPIC-POSITIVE-SUBALLOCATION](#ng-2026-08-02-a13-arbitrary-temporal-anisotropic-positive-suballocation) | split a positive terminal anisotropic covariance remainder into positive pieces dominated by arbitrary temporal covariance increments | the rank-one projectors P_+ and P_- sum to I, but every dominated positive piece is a scalar multiple of its projector, so their sum has equal diagonals and cannot equal diag(1,0) |
+| [NG-2026-08-02-A13-CANONICAL-COVARIANCE-AUTOMATIC-SCALAR-CANCELLATION](#ng-2026-08-02-a13-canonical-covariance-automatic-scalar-cancellation) | infer nonpositive scalar trace excess from a canonical endpoint covariance or shared Gaussian covariance alone | the bounded same-root coefficient A_t(g)=g exp(-t g^2/2) has defect 2(t-1)/(1+2t)^(5/2)>0 for t>1, with trace-relative ratio tending to one; only the strict-past fresh-noise diagonal has the exact favourable sign |
 | [AUDIT-2026-08-02-A13-R129-TRACE-EXCESS-ACCEPTANCE-WINDOW](#audit-2026-08-02-a13-r129-trace-excess-acceptance-window) | treat the R-129 positive-augmented-action window `eta<9/20`, `zeta<3/20` as the full direct T-050 trace-excess acceptance range | R-129 remains valid but nonsharp for T-050: after subtracting the one-use stabilizers, `Vren=a_pi-T_pi`, so the direct thresholds are `eta<5/11`, `zeta<27/100`, with exact extra headroom `1/220` and `3/25` |
 | [NG-2026-08-02-A13-LOCAL-STENCIL-PRODUCTION-SIGN-NONIDENTIFIABILITY](#ng-2026-08-02-a13-local-stencil-production-sign-nonidentifiability) | infer the full action-signed production verdict from a local q567 fibre stencil, diagonal/edge magnitudes, a positive high core, and base/first feature jets | exact gauge-inequivalent q567 completions have inertias `(12+,0-)` and `(8+,4-)`; identical-magnitude returned-low completions have determinants `171/1024` and `-61/1024`; and equal base/first jets have full action Hessians `29/10` and `-11/10` |
 | [AUDIT-2026-08-02-A13-R144-FIBRE-SCHUR-COEFFICIENT-CORRECTION](#audit-2026-08-02-a13-r144-fibre-schur-coefficient-correction) | identify the draft q567 tensor fixture with the registered R-142 active fibre after setting `c0=a` | R-142 requires the Schur-completed coefficient `c0=a-b^2/c=3/(250P)`; the corrected fibre stays positive rank four, so the opposite tensor inertias are unchanged |
@@ -218,6 +222,87 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="audit-2026-08-02-a13-r146-output-projection-omission"></a>
+### AUDIT-2026-08-02-A13-R146-OUTPUT-PROJECTION-OMISSION -- restore the registered endpoint owner
+
+**Failure mode.** Omit the R-145 orthogonal output projection `P` when
+restating the anisotropic terminal trace in the pre-release R-146 note.
+
+**Evidence.** R-145 Eq. (5.3) defines the registered owner with
+`Tr(P C6(W) Gamma_R C6(W)^* P)`.  Hostile review found that draft R-146
+Eq. (3.2) instead displayed the unprojected trace.  Because R-146 invokes the
+R-145 payment without redefining `C6`, the two formulas were not literally the
+same owner.
+
+**Consequence.** R-146 Eq. (3.2) now includes both copies of `P`, and the
+integrated verifier pins the corrected formula token.  Orthogonal projection
+only decreases the positive trace, so the registered `(1/100)Y6+24` payment,
+zero source loss, remaining `13/50` sextic window, and all scope boundaries are
+unchanged.  The defective draft was never committed or released.
+
+<a id="audit-2026-08-02-a13-zero-control-relative-anchor"></a>
+### AUDIT-2026-08-02-A13-ZERO-CONTROL-RELATIVE-ANCHOR -- the direct R-145 route is exactly relative
+
+**Failure mode.** Treat the chart constant a_(J,pi) as an independent
+uniform lower-bound obligation after R-145 has established
+E V_J^ren(Z_h)=a_(J,pi)-T_(J,pi)(h).
+
+**Evidence.** R-104 gives Z_pi(0) the law of the A7 Gaussian field X_J,
+and A7 fixes the external covariance-normal centering
+E V_J^ren(X_J)=0. Evaluating the R-145 identity at zero control therefore
+gives a_(J,pi)=T_(J,pi)(0) and, for every admissible control,
+E V_J^ren(Z_h)=-[T_(J,pi)(h)-T_(J,pi)(0)].
+
+**Consequence.** The direct T-050 route needs only a uniform relative
+trace-excess bound. This does not retract
+NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR: normalized data
+remain blind to additive constants, while A7 is an external absolute
+normalization. No separate uniform bound on a_(J,pi) or T_(J,pi)(0) is
+proved, and T-050 remains open.
+
+<a id="ng-2026-08-02-a13-arbitrary-temporal-anisotropic-positive-suballocation"></a>
+### NG-2026-08-02-A13-ARBITRARY-TEMPORAL-ANISOTROPIC-POSITIVE-SUBALLOCATION -- a terminal positive remainder need not split under arbitrary temporal increments
+
+**Failure mode.** Given positive temporal increments P_+, P_- with
+P_++P_-=I and a positive terminal anisotropic remainder R<=I, infer
+positive pieces 0<=R_+<=P_+, 0<=R_-<=P_- satisfying R_++R_-=R.
+
+**Evidence.** Let P_+ and P_- be the rank-one orthogonal projectors onto
+(1,1) and (1,-1), and let R=diag(1,0). If 0<=A<=P for an orthogonal
+projection P, then A vanishes on Ker P, so Ran A lies in Ran P.
+Rank one therefore forces R_+=a_+P_+ and R_-=a_-P_- with
+0<=a_+,a_-<=1. Both diagonal entries of their sum equal
+(a_++a_-)/2, which cannot equal the unequal diagonal of R.
+
+**Consequence.** Terminal covariance positivity cannot be transported
+visitwise through an arbitrary temporal chart. R-146 instead telescopes the
+complete owner to the endpoint, splits there once, and uses the favourable
+zero-control anisotropic term. The no-go does not falsify the full signed
+action estimate or the deliberately chosen canonical proportional chart.
+
+<a id="ng-2026-08-02-a13-canonical-covariance-automatic-scalar-cancellation"></a>
+### NG-2026-08-02-A13-CANONICAL-COVARIANCE-AUTOMATIC-SCALAR-CANCELLATION -- equal covariance does not control a same-root coefficient
+
+**Failure mode.** Infer that the scalar trace-current defect is nonpositive
+merely because trace and current are represented with the same endpoint
+covariance, including when the coefficient depends on the contemporaneous
+Gaussian root.
+
+**Evidence.** For independent standard Gaussians g,zeta, take the bounded
+smooth coefficient A_t(g)=g exp(-t g^2/2), with
+U=A_t(g)zeta and Phi=A_t(g)g. Exact Gaussian moments give
+E|U|^2=(1+2t)^(-3/2), E|Phi|^2=3(1+2t)^(-5/2), and defect
+2(t-1)/(1+2t)^(5/2)>0 for t>1. Its ratio to E|U|^2 is
+2(t-1)/(1+2t), which tends to one. In contrast, if the coefficient and
+shift are strict-past measurable, conditional covariance matching gives the
+exact diagonal defect -|Au|^2<=0.
+
+**Consequence.** Canonical covariance removes only the strict-past
+fresh-noise scalar diagonal. The same-root coefficient must remain coupled
+to future variance, the R-063 forest, balanced cross terms, and returned low
+inside one signed residual. This fixture refutes automatic cancellation, not
+the complete production action, any physical phase, or T-050.
 
 <a id="audit-2026-08-02-a13-r129-trace-excess-acceptance-window"></a>
 ### AUDIT-2026-08-02-A13-R129-TRACE-EXCESS-ACCEPTANCE-WINDOW -- R-129 positive-action window is sufficient but nonsharp for direct T-050 trace excess

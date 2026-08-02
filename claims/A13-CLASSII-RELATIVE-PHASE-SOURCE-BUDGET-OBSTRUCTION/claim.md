@@ -4999,3 +4999,60 @@ T5--T7 promotion remain open. Tier stays T4.
   exploration, aggregation, and public-surface checks.  T-050, both A13
   gates, `OVERLAP_src`, Nelson, removals, the
   interacting measure, and Sector A remain open at T4.
+- 2026-08-02: Registered
+  `A13-CLASSII-CANONICAL-COVARIANCE-RELATIVE-ANCHOR-ANISOTROPIC-TEMPORAL-REDUCTION`
+  (R-146) as a phase-neutral scoped
+  analytic/exact/conditional/executed/audited advance and method no-go.  At
+  every registered finite cutoff and admissible chart, R-145 gives
+  `E Vren_J(Z_h)=a_(J,pi)-T_(J,pi)(h)`.  The R-104 zero-control law is the
+  A7-normalized free-field law, whose renormalised expectation is zero.
+  Consequently `a_(J,pi)=T_(J,pi)(0)` and exactly
+  `E Vren_J(Z_h)=-[T_(J,pi)(h)-T_(J,pi)(0)]`.  The direct relative route
+  therefore needs no separate absolute anchor; this does not prove a uniform
+  bound on either term separately and does not contradict the additive-
+  constant no-go for normalized Gibbs representations.
+
+  R-146 completes the production owner telescope before splitting only the
+  terminal total covariance.  Positivity then yields
+  `Delta T<=Delta T^(0)+T_an(h)-T_an(0)<=Delta T^(0)+T_an(h)`.  R-145 pays
+  the last term by `(1/100)Y6+24`, with exactly zero Cameron--Martin source
+  loss.  The remaining object `Delta T^(0)` is the full-field scalar-trace
+  residual, not a pure scalar law, and its strict acceptance windows are
+  `eta<5/11` and `zeta<13/50`.  An exact rank-one two-slice fixture proves
+  that an arbitrary positive temporal suballocation of the anisotropic
+  covariance need not exist, so endpoint-first ordering is load-bearing.
+
+  At fixed cutoff, choosing a canonical square root of the total covariance
+  produces the same terminal Gaussian law and, by R-087, the same endpoint-
+  payoff Boue--Dupuis value.  Proportional temporal increments are positive
+  and exact.  This is a new variational normal form, not an equivalence of the
+  old visit, forest, future, low, or predictable-control coordinates; those
+  owners must be reconstructed before transfer.  Conditional on the strict
+  past, an independent scalar innovation with predictable coefficient has
+  signed defect `-||Au||^2<=0`.  But the exact same-root fixture
+  `A_t(g)=g exp(-t g^2/2)` has defect
+  `2(t-1)/(1+2t)^(5/2)>0` for `t>1`, and its ratio to the positive trace tends
+  to one.  Thus covariance normalization alone cannot close the contemporaneous
+  scalar sea; a production-specific common-terminal/forest/future/low identity
+  is still required.
+
+  `EXP-000608--EXP-000614` record every successful, failed, and repaired route.
+  `AUDIT-2026-08-02-A13-R146-OUTPUT-PROJECTION-OMISSION` records the hostile
+  pre-release repair that restored the registered orthogonal output projection
+  in Eq. (3.2), without changing the payment or scope.
+  `AUDIT-2026-08-02-A13-ZERO-CONTROL-RELATIVE-ANCHOR` repairs the anchor
+  authority, while
+  `NG-2026-08-02-A13-ARBITRARY-TEMPORAL-ANISOTROPIC-POSITIVE-SUBALLOCATION`
+  and
+  `NG-2026-08-02-A13-CANONICAL-COVARIANCE-AUTOMATIC-SCALAR-CANCELLATION`
+  preserve the two exact method boundaries.  Primary `88/88` and
+  non-importing independent `95/95` certificates pass and agree on every
+  exact value.  Integrated `370/370` embeds all `183` child rows exactly once
+  and adds `187` authority, audit, exploration, PDF, scope, aggregation, and
+  public-surface checks.  The manifest pins deterministic eight-page PDF
+  rebuild, security, text extraction, all-page rendering, and manual visual QA.  No
+  BCC, uniform, or other phase is selected.  The common-terminal tower,
+  complete same-root scalar signed residual, old owner reconstruction,
+  low/forest/future closure, T-050, both A13 gates, `OVERLAP_src`, Nelson,
+  removals, interacting measure, physical phase selection, and Sector A
+  remain open at T4.
