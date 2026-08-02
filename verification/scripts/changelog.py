@@ -40,8 +40,11 @@ Changelog:
   1.0.0 (2026-06-09) first issue. JSONL source + generated MD + FTS5 query cache.
   1.0.1 (2026-07-20) honor --body when a non-interactive caller exposes an
         empty stdin stream; previously such calls silently emitted blank bodies.
+  1.0.2 (2026-08-02) decode git-show output explicitly as UTF-8 and make the
+        verification gate fail closed when the committed source is unavailable,
+        undecodable, or malformed.
 """
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 import argparse, json, os, re, shutil, sqlite3, sys, tempfile
 from pathlib import Path
@@ -83,18 +86,39 @@ def _parse_lines(text):
     return entries, bad
 
 
-def _git_head_entries():
+def _git_head_entries(strict=False):
     """Entries from the committed log.jsonl (git HEAD) -- the recovery source that
-    Drive working-tree corruption cannot touch. [] if git/blob unavailable."""
+    Drive working-tree corruption cannot touch.  Recovery callers receive [] if
+    git/blob is unavailable; the verification gate uses strict=True and fails
+    closed instead."""
     import subprocess
     try:
         out = subprocess.run(["git", "show", "HEAD:changelog/log.jsonl"],
-                             capture_output=True, text=True, cwd=str(REPO), timeout=30)
+                             capture_output=True, text=True, encoding="utf-8",
+                             errors="strict", cwd=str(REPO), timeout=30)
         if out.returncode != 0:
+            if strict:
+                detail = (out.stderr or "").strip()
+                raise RuntimeError(
+                    f"git show HEAD:changelog/log.jsonl exited {out.returncode}"
+                    + (f": {detail}" if detail else "")
+                )
             return []
-        ents, _ = _parse_lines(out.stdout)
+        ents, bad = _parse_lines(out.stdout)
+        if bad:
+            if strict:
+                raise RuntimeError(
+                    f"git HEAD changelog contains unparseable line(s) at {bad}"
+                )
+            return []
         return ents
-    except Exception:
+    except Exception as exc:
+        if strict:
+            if isinstance(exc, RuntimeError):
+                raise
+            raise RuntimeError(
+                f"cannot read git HEAD changelog as UTF-8: {exc}"
+            ) from exc
         return []
 
 
@@ -313,7 +337,11 @@ def cmd_verify(args):
     entries, bad = _parse_lines(text)
     if bad:
         problems.append(f"{len(bad)} unparseable line(s) at {bad} (truncation/corruption)")
-    head = _git_head_entries()
+    try:
+        head = _git_head_entries(strict=True)
+    except RuntimeError as exc:
+        head = []
+        problems.append(f"committed changelog audit unavailable: {exc}")
     cur_ids = {e.get("id") for e in entries}
     lost = [e.get("id") for e in head if e.get("id") not in cur_ids]
     if lost:

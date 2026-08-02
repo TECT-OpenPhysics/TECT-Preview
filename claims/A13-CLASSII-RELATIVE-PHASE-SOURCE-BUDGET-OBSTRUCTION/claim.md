@@ -4963,6 +4963,7 @@ T5--T7 promotion remain open. Tier stays T4.
   and residual/anchor data or complete Hessian/Feshbach/force/anchor data,
   T-050, both A13 gates, `OVERLAP_src`, Nelson, removals, interacting measure,
   and Sector A remain open at T4.
+
 - 2026-08-02: Registered
   `A13-CLASSII-WEIGHTED-TRACE-EXCESS-ANISOTROPIC-COVARIANCE-SEXTIC-REDUCTION`
   (R-145) as a scoped analytic/exact/executed/audited advance.  Returning to
@@ -5182,3 +5183,82 @@ T5--T7 promotion remain open. Tier stays T4.
   no PDE replacement follows, and the complete owner sign, global-noise bound,
   T-050, both A13 gates, `OVERLAP_src`, Nelson, removals, interacting measure,
   and Sector A remain open at T4.
+
+- 2026-08-02: Registered
+  `A13-CLASSII-CROSS-SYNTHESIS-STEIN-OWNER-FULL-INTERNAL-COMPANION-BOUNDARY`
+  (R-149) as a phase-neutral fixed-cutoff T4 analytic/exact/executed/audited
+  owner theorem and production-data boundary.  For each strict-past owner,
+  the conditional smaller owner is
+  `E[Pcomp_o|F_(o-)]=(beta_o+||b_o||^2-bar_tau_o)/2`.  Only after imposing
+  the complete R-125 common-heat, once-owned-covariance, recombined-visit,
+  exhaustive-output or complement-retention, and R-063 forest-incidence
+  hypotheses does the weighted aggregate become
+  `Pcomp=(Forest_ad-Vfuture)/2`.  Its raw/covariance-normal coordinate is
+  `Rraw=Pcomp+Vfuture/2=Forest_ad/2`.  Thus forest and future variance are
+  alternate coordinates rather than additional reserves; source and terminal
+  sextic remain once-owned.
+
+  For affine same-root field and current variables `W=w+Xg` and `V=v+Yg`,
+  with `K=XY*`, `Gamma_v=YY*`, and `B=C*C`, two Gaussian integrations by
+  parts give the exact raw square-minus-trace identity
+  `2 E Rraw=E[v_m B_mn v_n+2v_m K_an partial_a B_mn
+  +K_am K_bn partial_ab B_mn]`.  Sufficient Gaussian integrability through
+  two coefficient derivatives is assumed.  This formula is not production
+  `Pcomp` unless the future reveal is exhaustive and `Vfuture=0`.
+
+  The dependence on `K` is nonidentifiable from endpoint marginals.  For a
+  positive diagonal two-dimensional Gram, identity and coordinate-swap
+  current syntheses have identical field and current marginals
+  `epsilon I`, but their exact full-reveal unhalved owners are
+  `epsilon E[(G^2-1)/(1+epsilon G^2)]<0` and `2epsilon^2>0` for every
+  `epsilon>0`.  The first sign follows from strict antitone covariance.
+  Therefore endpoint field and current covariances alone cannot determine
+  even the owner sign.
+
+  The real active-spectator radial coefficient energy remains an exact affine
+  saddle: `H11>0`, `H22<0`, and its determinant is strictly negative for
+  every nonzero radius.  It is neither a physical control Hessian nor an
+  invariant internal plane.  In a separately declared full complex
+  three-component same-root co-synthesis, R-149 restores all three Pauli
+  generators and all six `P+L` rows and uses the registered covariance
+  `Gamma=diag(C(a),C(a))`.  Here `C(a)=(aI+M)^(-1)` is the covariance of
+  each real coordinate; A6 gives complex covariance `2C`, and A7 gives
+  `(1/2)realify(2C)=diag(C,C)`.  The exact leading tensor is
+  `3N(a,rho)/[160P(2rho+1)^4d_den(a)^2]`, where
+  `d_den(a)=25000a^3+10000a^2+1115a+24`, and all twenty-five coefficients
+  of `N` are strictly positive.  The nonlinear `L` contribution can be negative,
+  so the complete six-row packet is load-bearing.
+
+  The adverse radial sign does not survive in that separately declared full
+  co-synthesis, but both the rows and the cross-synthesis rank have changed.
+  The calculation therefore identifies no causal repairing companion and is
+  not a production spatial-current theorem.  The physical synthesis
+  `K=Sx Sv*`, exhaustive spatial and output projectors, heat, visits, adapted
+  feedback, complement and historical low, forest/future incidence, balanced
+  response, source lift, and terminal relative secant remain unconstructed.
+  For the canonical endpoint displacement `v=(1,0,-1)`, the source checksum
+  `9v^T(aI+M)v/10=9(200a+37)/1000` applies only after declaring the lift
+  `h=C(a)^(-1/2)v`.
+
+  Hostile review rejected an attempted extra factor one half in the six-real
+  covariance: it would apply the A7 conversion twice and spuriously divide the
+  tensor by four.  This correction is preserved as
+  `AUDIT-2026-08-02-A13-R149-REAL-COVARIANCE-DOUBLE-HALVING`.  The exact
+  same-marginal no-go and radial-slice scope repair are preserved as
+  `NG-2026-08-02-A13-ENDPOINT-MARGINALS-DETERMINE-FRESH-OWNER` and
+  `AUDIT-2026-08-02-A13-RADIAL-SLICE-NEGATIVE-AS-FULL-INTERNAL-OWNER`.
+  `EXP-000632--EXP-000639` record phase neutrality, every successful and
+  failed route, the raw-versus-Pcomp correction, and the reduced production
+  target.
+
+  Primary `48/48` and non-importing independent `23/23` certificates pass.
+  Integrated verification passes `199/199`, embedding all `71` child rows
+  exactly once and adding `128` exact-owner, finite-epsilon, covariance-
+  convention, tensor, source-lift, authority, exploration, negative-result,
+  deterministic-PDF, scope, and aggregation checks.  The manifest pins
+  deterministic SHA-256 rebuilding, strict parsing, security and text checks,
+  Poppler rendering, and manual inspection of all eight pages.  No BCC,
+  uniform, or other phase is selected or excluded, no PDE replacement follows,
+  and the production cross synthesis, complete owner sign, T-050, both A13
+  gates, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A
+  remain open at T4.

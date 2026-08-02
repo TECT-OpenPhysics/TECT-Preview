@@ -45,6 +45,9 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-02-A13-ENDPOINT-MARGINALS-DETERMINE-FRESH-OWNER | endpoint marginals do not determine the fresh owner |  |
+| AUDIT-2026-08-02-A13-RADIAL-SLICE-NEGATIVE-AS-FULL-INTERNAL-OWNER | a radial coefficient saddle is not the full internal owner |  |
+| AUDIT-2026-08-02-A13-R149-REAL-COVARIANCE-DOUBLE-HALVING | do not apply the complex-to-real factor twice |  |
 | NG-2026-08-02-A13-R147-EXACT-CANONICAL-ACTIVE-SPECTATOR-LIFT | rank-one line cannot be appended unchanged to the canonical  |  |
 | NG-2026-08-02-A13-ACTIVE-SPECTATOR-JET-OWNER-COMPLETION | diagonal coefficient energy does not determine the complete  |  |
 | AUDIT-2026-08-02-A13-R147-ABSOLUTE-DEFECT-AS-RELATIVE-HESSIAN | differentiate the shifted owner twice |  |

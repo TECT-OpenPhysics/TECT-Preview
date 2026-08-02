@@ -1,0 +1,592 @@
+{
+  "assertions": [
+    {
+      "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "group": "metadata",
+      "name": "claim id",
+      "status": "PASS"
+    },
+    {
+      "actual": "A13-CLASSII-CROSS-SYNTHESIS-STEIN-OWNER-FULL-INTERNAL-COMPANION-BOUNDARY",
+      "expected": "A13-CLASSII-CROSS-SYNTHESIS-STEIN-OWNER-FULL-INTERNAL-COMPANION-BOUNDARY",
+      "group": "metadata",
+      "name": "result id",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-149",
+      "expected": "R-149",
+      "group": "metadata",
+      "name": "ledger id",
+      "status": "PASS"
+    },
+    {
+      "actual": "T4",
+      "expected": "T4",
+      "group": "metadata",
+      "name": "tier remains T4",
+      "status": "PASS"
+    },
+    {
+      "actual": "forest_sum/2 - future_sum/2",
+      "expected": "forest_sum/2 - future_sum/2",
+      "group": "owner-bookkeeping",
+      "name": "aggregate Pcomp is half forest-minus-future",
+      "status": "PASS"
+    },
+    {
+      "actual": "forest_sum/2",
+      "expected": "forest_sum/2",
+      "group": "owner-bookkeeping",
+      "name": "aggregate covariance-normal future cancellation",
+      "status": "PASS"
+    },
+    {
+      "actual": "-forest_sum + future_sum",
+      "expected": "V-Forest",
+      "group": "owner-bookkeeping",
+      "name": "aggregate R-125 signature bridge retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "1128593117/30481920",
+      "expected": "1128593117/30481920",
+      "group": "stein-raw",
+      "name": "direct Gaussian raw square-minus-trace equals cross-synthesis formula",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1/6",
+          "9/8"
+        ],
+        [
+          "-11/9",
+          "-1/12"
+        ]
+      ],
+      "expected": "X Y^T",
+      "group": "stein-raw",
+      "name": "field-current cross synthesis",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "expected": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "group": "nonidentifiability",
+      "name": "field covariance unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "expected": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "group": "nonidentifiability",
+      "name": "current covariance unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2",
+      "expected": "<0",
+      "group": "nonidentifiability",
+      "name": "identity cross owner negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": ">0",
+      "group": "nonidentifiability",
+      "name": "swapped cross owner positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "-2",
+        "2"
+      ],
+      "expected": "opposite",
+      "group": "nonidentifiability",
+      "name": "same marginals opposite signs",
+      "status": "PASS"
+    },
+    {
+      "actual": "-epsilon*(x_nonnegative - y_nonnegative)**2/((epsilon*x_nonnegative + 1)*(epsilon*y_nonnegative + 1))",
+      "expected": "-epsilon*(x_nonnegative - y_nonnegative)**2/((epsilon*x_nonnegative + 1)*(epsilon*y_nonnegative + 1))",
+      "group": "nonidentifiability",
+      "name": "identity exact raw sign by strict antitone covariance",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*epsilon**2",
+      "expected": ">0",
+      "group": "nonidentifiability",
+      "name": "exchange exact raw sign for every positive epsilon",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/10",
+        "21/2000",
+        "3/3125"
+      ],
+      "expected": "all positive",
+      "group": "registered-input",
+      "name": "A1 mass positive by Sylvester",
+      "status": "PASS"
+    },
+    {
+      "actual": "E[Psi_n Psi_n^dagger]=2 A(k)^-1; the factor 2 is load-bearing",
+      "expected": "contains 2 A(k)^-1",
+      "group": "registered-input",
+      "name": "A6 complex covariance factor two",
+      "status": "PASS"
+    },
+    {
+      "actual": "Gamma_Lambda,i=(1/2) realify(D_Lambda,i), where D_Lambda,i=E[partial_i Psi_Lambda partial_i Psi_Lambda^dagger]",
+      "expected": "contains (1/2) realify",
+      "group": "registered-input",
+      "name": "A7 half-realification convention",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/9",
+      "expected": "5/9",
+      "group": "registered-input",
+      "name": "R-147 alpha loaded",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/(250*P)",
+      "expected": "3/(250P)",
+      "group": "registered-input",
+      "name": "R-147 P coefficient loaded",
+      "status": "PASS"
+    },
+    {
+      "actual": "243/(8000*P)",
+      "expected": "243/(8000P)",
+      "group": "registered-input",
+      "name": "R-147 L coefficient loaded",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "6*R**2/(125*P) + 3*R**2*(13*R**2 + 9*e)**2/(2000*P*(2*R**2 + e)**2)",
+          "3*R**4*(-13*R**2 - 9*e)/(400*P*(2*R**2 + e)**2)"
+        ],
+        [
+          "3*R**4*(-13*R**2 - 9*e)/(400*P*(2*R**2 + e)**2)",
+          "3*R**6/(80*P*(2*R**2 + e)**2)"
+        ]
+      ],
+      "expected": [
+        [
+          "4*R**2*(243*(-5*R**2/(9*(2*R**2 + e)) + 1)**2/(8000*P) + 3/(250*P))",
+          "-27*R**4*(-5*R**2/(9*(2*R**2 + e)) + 1)/(400*P*(2*R**2 + e))"
+        ],
+        [
+          "-27*R**4*(-5*R**2/(9*(2*R**2 + e)) + 1)/(400*P*(2*R**2 + e))",
+          "3*R**6/(80*P*(2*R**2 + e)**2)"
+        ]
+      ],
+      "group": "six-row",
+      "name": "R-142 radial Gram recovered",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "339*R**2/(2000*P)",
+        "339*R**2/(2000*P)"
+      ],
+      "expected": "339*R**2/(2000*P)",
+      "group": "six-row",
+      "name": "two transverse eigenvalues",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "group": "six-row",
+      "name": "two phase kernels",
+      "status": "PASS"
+    },
+    {
+      "actual": "160*P*(2*rho + 1)**4*(25000*a**3 + 10000*a**2 + 1115*a + 24)**2",
+      "expected": "160*P*(2*rho + 1)**4*(25000*a**3 + 10000*a**2 + 1115*a + 24)**2",
+      "group": "full-internal",
+      "name": "exact positive tensor denominator",
+      "status": "PASS"
+    },
+    {
+      "actual": 25,
+      "expected": 25,
+      "group": "full-internal",
+      "name": "numerator has twenty-five monomials",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "34800000000",
+        "329600000000",
+        "513700000000",
+        "299400000000",
+        "67800000000",
+        "41736000000",
+        "212652000000",
+        "297744000000",
+        "168768000000",
+        "38646000000",
+        "15500240000",
+        "52815580000",
+        "64406160000",
+        "34734420000",
+        "8003790000",
+        "2547660000",
+        "6531756000",
+        "6689376000",
+        "3280296000",
+        "738681000",
+        "167968324",
+        "368965068",
+        "323181116",
+        "138377892",
+        "28354299"
+      ],
+      "expected": "all >0",
+      "group": "full-internal",
+      "name": "every numerator coefficient strictly positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4,
+        4
+      ],
+      "expected": [
+        4,
+        4
+      ],
+      "group": "full-internal",
+      "name": "degrees four by four",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*(348*rho**4 + 3296*rho**3 + 5137*rho**2 + 2994*rho + 678)/(1000*P*(2*rho + 1)**4)",
+      "expected": "3*(348*rho**4 + 3296*rho**3 + 5137*rho**2 + 2994*rho + 678)/(1000*P*(2*rho + 1)**4)",
+      "group": "full-internal",
+      "name": "registered-convention high-kinetic checksum",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0975321681312125986",
+      "expected": ">0",
+      "group": "full-internal",
+      "name": "full tensor positive at hostile fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.117105274897997329",
+      "expected": ">0",
+      "group": "full-internal",
+      "name": "linear packet positive at hostile fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "-0.0195731067667847305",
+      "expected": "<0",
+      "group": "full-internal",
+      "name": "nonlinear packet can be negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0975321681312125986",
+      "expected": "0.0975321681312125986",
+      "group": "full-internal",
+      "name": "complete packet remains positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "10*(a + 1/10)*(2500*a**2 + 750*a + 49)/(25000*a**3 + 10000*a**2 + 1115*a + 24) - 5*(50*a + 9)/(4*(25000*a**3 + 10000*a**2 + 1115*a + 24)) - 5*(50*a + 11)/(4*(25000*a**3 + 10000*a**2 + 1115*a + 24))",
+          "25*(a + 1/10)*(50*a + 11)/(25000*a**3 + 10000*a**2 + 1115*a + 24) - 25*(20*a + 3)/(8*(25000*a**3 + 10000*a**2 + 1115*a + 24)) - 5*(2000*a**2 + 540*a + 29)/(8*(25000*a**3 + 10000*a**2 + 1115*a + 24))",
+          "25*(a + 1/10)*(50*a + 9)/(25000*a**3 + 10000*a**2 + 1115*a + 24) - 25*(20*a + 3)/(8*(25000*a**3 + 10000*a**2 + 1115*a + 24)) - 5*(2000*a**2 + 460*a + 21)/(8*(25000*a**3 + 10000*a**2 + 1115*a + 24))"
+        ],
+        [
+          "25*(a + 13/100)*(50*a + 11)/(25000*a**3 + 10000*a**2 + 1115*a + 24) - 5*(50*a + 9)/(4*(25000*a**3 + 10000*a**2 + 1115*a + 24)) - (2500*a**2 + 750*a + 49)/(2*(25000*a**3 + 10000*a**2 + 1115*a + 24))",
+          "25*(a + 13/100)*(2000*a**2 + 540*a + 29)/(2*(25000*a**3 + 10000*a**2 + 1115*a + 24)) - 25*(20*a + 3)/(8*(25000*a**3 + 10000*a**2 + 1115*a + 24)) - 5*(50*a + 11)/(4*(25000*a**3 + 10000*a**2 + 1115*a + 24))",
+          "125*(a + 13/100)*(20*a + 3)/(2*(25000*a**3 + 10000*a**2 + 1115*a + 24)) - 5*(50*a + 9)/(4*(25000*a**3 + 10000*a**2 + 1115*a + 24)) - 5*(2000*a**2 + 460*a + 21)/(8*(25000*a**3 + 10000*a**2 + 1115*a + 24))"
+        ],
+        [
+          "25*(a + 17/100)*(50*a + 9)/(25000*a**3 + 10000*a**2 + 1115*a + 24) - 5*(50*a + 11)/(4*(25000*a**3 + 10000*a**2 + 1115*a + 24)) - (2500*a**2 + 750*a + 49)/(2*(25000*a**3 + 10000*a**2 + 1115*a + 24))",
+          "125*(a + 17/100)*(20*a + 3)/(2*(25000*a**3 + 10000*a**2 + 1115*a + 24)) - 5*(50*a + 11)/(4*(25000*a**3 + 10000*a**2 + 1115*a + 24)) - 5*(2000*a**2 + 540*a + 29)/(8*(25000*a**3 + 10000*a**2 + 1115*a + 24))",
+          "25*(a + 17/100)*(2000*a**2 + 460*a + 21)/(2*(25000*a**3 + 10000*a**2 + 1115*a + 24)) - 25*(20*a + 3)/(8*(25000*a**3 + 10000*a**2 + 1115*a + 24)) - 5*(50*a + 9)/(4*(25000*a**3 + 10000*a**2 + 1115*a + 24))"
+        ]
+      ],
+      "expected": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "group": "source",
+      "name": "canonical endpoint covariance inverse",
+      "status": "PASS"
+    },
+    {
+      "actual": "9*(200*a + 37)/1000",
+      "expected": "9(200a+37)/1000",
+      "group": "source",
+      "name": "active-spectator source Hessian strictly positive",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "old_owner_aggregate_one_use_cancellation_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "affine_gaussian_raw_square_minus_trace_formula_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "endpoint_marginal_covariance_nonidentifiability_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "full_internal_same_root_tensor_positive_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "production_spatial_cross_synthesis_identified",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "raw_diagnostic_identified_with_production_pcomp",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "r125_incidence_hypotheses_discharged_for_new_chart",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "old_chart_owner_transport_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "complete_owner_sign_determined",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "physical_phase_selected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "t050_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "sector_a_closed",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 48,
+  "assertions_total": 48,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "derived": {
+    "full_internal_numerator": "34800000000*a**4*rho**4 + 329600000000*a**4*rho**3 + 513700000000*a**4*rho**2 + 299400000000*a**4*rho + 67800000000*a**4 + 41736000000*a**3*rho**4 + 212652000000*a**3*rho**3 + 297744000000*a**3*rho**2 + 168768000000*a**3*rho + 38646000000*a**3 + 15500240000*a**2*rho**4 + 52815580000*a**2*rho**3 + 64406160000*a**2*rho**2 + 34734420000*a**2*rho + 8003790000*a**2 + 2547660000*a*rho**4 + 6531756000*a*rho**3 + 6689376000*a*rho**2 + 3280296000*a*rho + 738681000*a + 167968324*rho**4 + 368965068*rho**3 + 323181116*rho**2 + 138377892*rho + 28354299",
+    "full_internal_numerator_coefficients": [
+      "34800000000",
+      "329600000000",
+      "513700000000",
+      "299400000000",
+      "67800000000",
+      "41736000000",
+      "212652000000",
+      "297744000000",
+      "168768000000",
+      "38646000000",
+      "15500240000",
+      "52815580000",
+      "64406160000",
+      "34734420000",
+      "8003790000",
+      "2547660000",
+      "6531756000",
+      "6689376000",
+      "3280296000",
+      "738681000",
+      "167968324",
+      "368965068",
+      "323181116",
+      "138377892",
+      "28354299"
+    ],
+    "full_internal_sample": {
+      "P": "4",
+      "a": "1",
+      "linear_P": "0.117105274897997329",
+      "nonlinear_L": "-0.0195731067667847305",
+      "rho": "1",
+      "total": "0.0975321681312125986"
+    },
+    "full_internal_tensor": "3*(34800000000*a**4*rho**4 + 329600000000*a**4*rho**3 + 513700000000*a**4*rho**2 + 299400000000*a**4*rho + 67800000000*a**4 + 41736000000*a**3*rho**4 + 212652000000*a**3*rho**3 + 297744000000*a**3*rho**2 + 168768000000*a**3*rho + 38646000000*a**3 + 15500240000*a**2*rho**4 + 52815580000*a**2*rho**3 + 64406160000*a**2*rho**2 + 34734420000*a**2*rho + 8003790000*a**2 + 2547660000*a*rho**4 + 6531756000*a*rho**3 + 6689376000*a*rho**2 + 3280296000*a*rho + 738681000*a + 167968324*rho**4 + 368965068*rho**3 + 323181116*rho**2 + 138377892*rho + 28354299)/(160*P*(2*rho + 1)**4*(25000*a**3 + 10000*a**2 + 1115*a + 24)**2)",
+    "high_kinetic_tensor_checksum": "3*(348*rho**4 + 3296*rho**3 + 5137*rho**2 + 2994*rho + 678)/(1000*P*(2*rho + 1)**4)",
+    "mass": [
+      [
+        "1/10",
+        "-1/20",
+        "-1/20"
+      ],
+      [
+        "-1/20",
+        "13/100",
+        "-1/20"
+      ],
+      [
+        "-1/20",
+        "-1/20",
+        "17/100"
+      ]
+    ],
+    "mass_leading_minors": [
+      "1/10",
+      "21/2000",
+      "3/3125"
+    ],
+    "raw_formula_fixture_differential": "1128593117/30481920",
+    "raw_formula_fixture_direct": "1128593117/30481920",
+    "same_marginal_sign_flip": {
+      "exchange_exact_unhalved": "2*epsilon**2",
+      "identity_exact_unhalved": "epsilon*Cov(G^2,(1+epsilon*G^2)^-1)<0",
+      "leading_exchange": "2",
+      "leading_identity": "-2"
+    },
+    "source_hessian_active_minus_spectator": "9*(200*a + 37)/1000"
+  },
+  "no_overclaim": "R-149 proves exact fixed-cutoff aggregate owner bookkeeping under the registered R-125 incidence hypotheses, an affine-Gaussian raw/covariance-normal square-minus-trace identity, an exact full-reveal same-marginal sign-reversal counterfixture, and strict positivity of a separately declared full-internal same-root six-row tensor. The raw identity equals production Pcomp only when the future projection is exhaustive and Vfuture=0. The positive tensor assumes field and current co-synthesis K=Gamma and omits the production spatial derivative/quadrature relation, exhaustive spatial/output projection, heat, visits, adapted feedback, R-063 forest incidence, future variance, balanced response, returned low, source synthesis, and terminal relative secant. It does not determine the production owner sign, prove a physical control Hessian, select or exclude BCC, a uniform state, or any other phase, justify PDE replacement, close T-050 or either A13 gate, prove Nelson or removals, construct the interacting measure, or close Sector A.",
+  "package_version": "1.0.0",
+  "result_id": "A13-CLASSII-CROSS-SYNTHESIS-STEIN-OWNER-FULL-INTERNAL-COMPANION-BOUNDARY",
+  "schema": "tect/a13-cross-synthesis-stein-owner-full-internal-companion-boundary-primary/1.0",
+  "scope": {
+    "a13_gate_closed": false,
+    "affine_gaussian_raw_square_minus_trace_formula_proved": true,
+    "complete_owner_sign_determined": false,
+    "endpoint_marginal_covariance_nonidentifiability_proved": true,
+    "full_internal_same_root_tensor_positive_proved": true,
+    "nelson_proved": false,
+    "old_chart_owner_transport_proved": false,
+    "old_owner_aggregate_one_use_cancellation_proved": true,
+    "physical_phase_selected": false,
+    "production_spatial_cross_synthesis_identified": false,
+    "r125_incidence_hypotheses_discharged_for_new_chart": false,
+    "radial_truncation_negative_as_full_owner_rejected": true,
+    "raw_diagnostic_identified_with_production_pcomp": false,
+    "sector_a_closed": false,
+    "t050_closed": false
+  },
+  "status": "PASS"
+}

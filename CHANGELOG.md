@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Changelog verification: UTF-8 fail-closed HEAD audit] - 2026-08-02
+
+Fixed a Windows locale integrity defect in changelog.py v1.0.2. The committed git blob is now decoded explicitly as UTF-8, and verify fails closed if git show is unavailable, nonzero, undecodable, or contains malformed JSONL instead of silently treating HEAD as empty. Direct verification passes with 470 committed entries contained in 471 current entries, and an injected UnicodeDecodeError mutant is rejected. This is a release-integrity repair and changes no theory claim or tier.
+
+## [R-149: cross-synthesis raw owner and full-internal companion boundary] - 2026-08-02
+
+Registered the exact R-125 aggregate one-use bookkeeping, the affine-Gaussian raw/covariance-normal owner formula, an exact same-marginal opposite-sign counterfixture for every positive covariance scale, and the strictly positive separately declared full-complex six-row same-root tensor. Adversarial review corrected the raw-versus-Pcomp scope, rejected a second covariance halving, and prevented the radial-to-full comparison from being described as causal. Primary 48/48, independent 23/23, and integrated 199/199 checks pass; the deterministic eight-page PDF was rendered and inspected. The physical spatial cross synthesis, production owner sign, all phase selection, PDE replacement, T-050, A13, Nelson, and Sector A remain open.
+
 ## [R-148: canonical fresh-final rank obstruction and coefficient-parameter boundary] - 2026-08-02
 
 Registered phase-neutral R-148 after hostile review. The exact rank-one fresh R-147 innovation cannot be inserted unchanged as a nonzero R-146 proportional canonical final block, while no rank-one necessity is claimed for adapted past and a new full-rank chart remains possible. A separately declared last-root coefficient chart gives an exact pointwise small-noise mismatch, coefficient-background parameter derivatives rather than a physical control Hessian, and a rational diagonal-non-identifiability witness. The result does not transport the registered production owners, select or exclude BCC or any other phase, require PDE replacement, close T-050, or close Sector A.

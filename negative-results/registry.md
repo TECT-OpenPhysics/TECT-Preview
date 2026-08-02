@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-02-A13-ENDPOINT-MARGINALS-DETERMINE-FRESH-OWNER](#ng-2026-08-02-a13-endpoint-marginals-determine-fresh-owner) | infer the fresh raw/full-reveal square-minus-trace owner from the endpoint field and current marginal covariances alone | identical field and current marginals admit cross syntheses whose exact unhalved owners have opposite signs for every positive covariance scale; the joint field-current cross synthesis `K=S_xS_v*` is indispensable |
+| [AUDIT-2026-08-02-A13-RADIAL-SLICE-NEGATIVE-AS-FULL-INTERNAL-OWNER](#audit-2026-08-02-a13-radial-slice-negative-as-full-internal-owner) | identify the real active-spectator radial saddle or its covariance contraction with the full internal or physical production owner | the radial Hessian is indefinite, but restoring all three complex components and all six rows gives a strictly positive A6/A7-normalized declared full-internal tensor; neither calculation supplies the physical spatial cross synthesis or complete owner |
+| [AUDIT-2026-08-02-A13-R149-REAL-COVARIANCE-DOUBLE-HALVING](#audit-2026-08-02-a13-r149-real-covariance-double-halving) | divide `diag(C,C)` by two after defining `C=(aI+M)^(-1)` as each real-coordinate covariance | writing the A6 complex covariance locally as `Sigma_C:=D_A6=2C`, A7 gives `Gamma_R=(1/2)realify(Sigma_C)=diag(C,C)`; a second halving spuriously divides the tensor by four and was rejected before registration |
 | [NG-2026-08-02-A13-R147-EXACT-CANONICAL-ACTIVE-SPECTATOR-LIFT](#ng-2026-08-02-a13-r147-exact-canonical-active-spectator-lift) | use the exact R-147 rank-one fresh scalar innovation unchanged as a nonzero R-146 proportional-covariance final block | the registered covariance restriction is positive definite, so every nonzero canonical block has rank two while the fresh line innovation has rank one; this says nothing about the necessary rank of an adapted past |
 | [NG-2026-08-02-A13-ACTIVE-SPECTATOR-JET-OWNER-COMPLETION](#ng-2026-08-02-a13-active-spectator-jet-owner-completion) | reconstruct the complete forest, future, balanced, low, or spatial owner from the active-spectator diagonal coefficient energy alone | a rational `q`-dependent orthogonal gauge preserves every diagonal norm but changes an endpoint cross-Gram from one to zero and first-jet energy from zero to four |
 | [AUDIT-2026-08-02-A13-R147-ABSOLUTE-DEFECT-AS-RELATIVE-HESSIAN](#audit-2026-08-02-a13-r147-absolute-defect-as-relative-hessian) | identify the R-147 absolute coefficient curvature or the coefficient-background parameter Hessian with a physical deterministic-control Hessian | with the current prefactor held fixed, the parameter gradient uses `f'''` and its Hessian uses `f''''`; no source synthesis is specified, so a physical control lift may add further derivative terms |
@@ -229,6 +232,78 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-02-a13-endpoint-marginals-determine-fresh-owner"></a>
+### NG-2026-08-02-A13-ENDPOINT-MARGINALS-DETERMINE-FRESH-OWNER -- endpoint marginals do not determine the fresh owner
+
+**Failure mode.** Infer the fresh raw/full-reveal square-minus-trace owner,
+its sign, or its
+predictable trace-bracket matching condition solely from the endpoint field
+covariance `Gamma_x` and current covariance `Gamma_v`.
+
+**Evidence.** For `B(w)=diag((1+w_1^2)^(-1),1+w_1^2)`, take `X=I_2` and
+compare `Y_+=I_2` with `Y_-=[[0,1],[1,0]]`, scaling both syntheses by
+`sqrt(epsilon)`. Both constructions have identical field and current
+marginals `epsilon I_2`. Under full reveal, their exact unhalved owners are
+`epsilon E[(G^2-1)/(1+epsilon G^2)]<0` and `2epsilon^2>0` for every
+`epsilon>0`. The first sign is strict antitone covariance; the small-noise
+leading contractions are `-2` and `+2`.
+
+**Consequence.** The joint field-current cross synthesis `K=S_xS_v*` is
+independent, load-bearing data. The R-146 endpoint covariance normal form
+alone cannot determine the R-125/R-141 owner. A successor must pin the
+physical field and derivative/quadrature syntheses before assigning an owner
+sign. This is a method no-go, not a no-go for the complete action, any phase,
+or the current PDE.
+
+<a id="audit-2026-08-02-a13-radial-slice-negative-as-full-internal-owner"></a>
+### AUDIT-2026-08-02-A13-RADIAL-SLICE-NEGATIVE-AS-FULL-INTERNAL-OWNER -- a radial coefficient saddle is not the full internal owner
+
+**Failure mode.** Promote the indefinite Hessian of the real active-spectator
+radial-column coefficient, or a contraction of that Hessian with an endpoint
+covariance, to the full six-real internal owner, a physical control Hessian,
+or a production instability.
+
+**Evidence.** The radial coefficient Hessian has `H_11>0`, `H_22<0`, and
+strictly negative determinant for every `R>0`, but its gradient is nonzero and
+a physical lift contributes the missing connection term `grad f . D^2z`.
+The radial plane is not invariant under the registered mass matrix.
+Independently, restoring all three complex components, all three realified
+Pauli generators, all six `P+L` rows, and the registered covariance
+`Gamma=diag(C(a),C(a))` gives the strictly positive declared same-root tensor
+`3N(a,rho)/[160P(2rho+1)^4d_den(a)^2]`, whose twenty-five numerator
+coefficients are positive.
+
+**Consequence.** The radial calculation validly rejects global affine
+coefficient convexity, but it neither proves physical instability nor
+determines the full internal owner. Conversely, the adverse sign does not
+survive in the declared full co-synthesis, but that comparison changes both
+the rows and cross-synthesis rank and identifies no causal companion; it
+does not prove the production spatial owner without `K=S_xS_v*`, heat,
+projectors, incidence, feedback, complement/low leakage, source, and terminal
+sextic. No stability, phase, BCC, PDE-replacement, T-050, A13, Nelson, or
+Sector-A conclusion follows.
+
+<a id="audit-2026-08-02-a13-r149-real-covariance-double-halving"></a>
+### AUDIT-2026-08-02-A13-R149-REAL-COVARIANCE-DOUBLE-HALVING -- do not apply the complex-to-real factor twice
+
+**Failure mode.** After defining `C(a)=(aI+M)^(-1)` as the covariance of
+each real and imaginary coordinate, replace the six-real covariance
+`diag(C,C)` by `(1/2)diag(C,C)` and divide the R-149 tensor by four.
+
+**Evidence.** A6 pins `E[Psi Psi*]=D_A6=2A^(-1)`; within R-149 this complex
+covariance is denoted `Sigma_C:=D_A6`, while each real and imaginary
+coordinate has covariance `A^(-1)`. A7 pins
+`Gamma_R=(1/2)realify(Sigma_C)`. With `C=A^(-1)`, these identities give exactly
+`Gamma_R=diag(C,C)`. The proposed additional factor `1/2` repeats the A7
+conversion. The primary and independent symbolic tensors both scale
+quadratically in `Gamma`, exposing the spurious factor four.
+
+**Consequence.** The original denominator `160P(2rho+1)^4d_den(a)^2` is retained;
+the action's outer `1/2` remains separate. Future covariance audits must state
+whether the covariance matrix in use is `Sigma_C` (complex) or
+`C=A^(-1)` (per real coordinate) before realification. This correction changes no sign,
+phase verdict, T-050 status, or Sector-A status.
 
 <a id="ng-2026-08-02-a13-r147-exact-canonical-active-spectator-lift"></a>
 ### NG-2026-08-02-A13-R147-EXACT-CANONICAL-ACTIVE-SPECTATOR-LIFT -- rank-one line cannot be appended unchanged to the canonical prefix

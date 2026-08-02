@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-149](#r-149) | Cross-synthesis Stein owner, radial-slice boundary, and full-internal companion positivity | Scoped T4 analytic/exact/executed/audited owner identity and scope correction. For an affine same-root field/current pair `W=w+Xg`, `V=v+Yg`, the exact raw/covariance-normal square-minus-trace owner depends on the cross synthesis `K=XY*`, not only on the endpoint marginals `Gamma_x=XX*` and `Gamma_v=YY*`; an exact full-reveal fixture with identical marginals gives opposite owner signs for every positive covariance scale. The real active-spectator radial coefficient energy is an affine saddle, so global coefficient convexity is unavailable, but that slice is neither a physical control Hessian nor the full internal owner. In a separately declared co-synthesis with all three complex components, all three Pauli generators, all six coefficient rows, and the registered A6/A7 six-real covariance `Gamma=diag(C(a),C(a))`, where the complex covariance is `2C(a)`, the tensor is strictly positive for every `a>=0`, `R>=0`, `e>0`, and `P>0`. The adverse radial sign does not survive there, but the calculation changes both rows and cross-synthesis rank and isolates no causal companion. The physical spatial cross synthesis, heat, projectors, owner incidence, adapted feedback, complement/low leakage, relative source and sextic, T-050, every phase verdict, and Sector A remain open |
 | [R-148](#r-148) | Canonical fresh-prefix rank obstruction, active-spectator lift boundary, and coefficient-parameter Hessian correction | Scoped T4 analytic/exact/executed/audited rank/lift and parameter-derivative boundary. The registered active-spectator covariance restriction is positive definite, so every nonzero R-146 proportional canonical block has rank two and cannot equal the rank-one fresh final innovation of the exact R-147 line. This excludes only the unchanged fresh block, not a new full-rank chart or a corrected adapted past. In a separately declared last-root coefficient chart, at each fixed adverse point the exact trace-bracket mismatch is positive for sufficiently small noise. With the current prefactor held fixed, the coefficient-background parameter gradient uses `f'''` and its Hessian uses `f''''`; the small-noise curvature is positive but the gradient is nonzero. No physical control Hessian is identified. Diagonal coefficient energy does not identify the complete owner. T-050, every phase verdict, and Sector A remain open |
 | [R-147](#r-147) | Canonical signed common terminal, predictable trace-bracket defect, and affine-collinear production boundary | Scoped T4 analytic/exact/executed/audited advance and method boundary. The actual R-141/R-142 signed terminal feature has an exact fixed-cutoff canonical Doob telescope, conditional signed-remainder recursion, and continuous martingale-bracket representation. Representation-universal owner transport requires the whole projection nest; endpoint law alone does not determine reveal energies. Under the full registered R-125/R-063 incidence, the exact conditional residual is `E[r_o[p,q]|F_(o-)]=bar_tau_o[p,q]-beta_o[p,q]-<b_p,b_q>`, so equality to the specific defect-free predictable mean Gram is equivalent to `bar_tau=beta`. The A1/R-075 `P+L` coefficient pair has uniform affine-collinear curvature at least `2223/(25000P)` and a strict favourable Gaussian defect, but an active-spectator direction loses convexity above `R^2/e=-1/12+5sqrt(154)/132`. The complete non-collinear forest/future/balanced/low/sextic owner, T-050, phase selection, and Sector A remain open |
 | [R-146](#r-146) | Relative zero-control anchor, endpoint-first anisotropic payment, and canonical-covariance scalar-sign boundary | Scoped T4 analytic/exact/conditional/executed/audited advance and no-go. At every registered finite cutoff and chart, the R-104 zero-control law and A7 normalization give the exact relative identity `E Vren_J(Z_h)=-[T_(J,pi)(h)-T_(J,pi)(0)]`; no separate absolute anchor is needed on this direct route. Completing the owner telescope before splitting the terminal covariance charges the anisotropic endpoint by `(1/100)Y6+24` with zero Cameron--Martin source loss, leaving the full-field scalar-trace residual windows `eta<5/11`, `zeta<13/50`. A fixed-cutoff canonical square root of the total covariance gives an equivalent endpoint-payoff Boue--Dupuis variational chart and exact positive temporal increment split. Strict-past independent scalar innovations have nonpositive signed defect, but an exact same-root Gaussian fixture has positive defect with ratio tending to one, so covariance normalization alone cannot close the remaining scalar sea. The old owner/filtration chart, common-terminal tower, complete scalar signed residual, T-050, A13, Nelson, phase selection, and Sector A remain open |
@@ -167,6 +168,78 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-149"></a>
+### R-149 -- Cross-synthesis Stein owner, radial-slice boundary, and full-internal companion positivity
+
+- **Statement.**  Let `g~N(0,I_d)`, `W=w+Xg`, `V=v+Yg`, `K=XY*`, and
+  `B(W)=C(W)*C(W)`.  For the fresh primitive trace
+  `Theta=Tr(C(W) Gamma_v C(W)*)`, with `Gamma_v=YY*`, two Gaussian
+  integrations by parts give
+  `2 E R_raw=E[v_m B_mn v_n+2 v_m K_an partial_a B_mn
+  +K_am K_bn partial_ab B_mn]`.  In particular, when `v=0`,
+  `2 E R_raw=E[K_am K_bn partial_ab B_mn]`.  Thus the raw/covariance-normal
+  owner is determined
+  by the joint field-current cross synthesis `K`, not by the two endpoint
+  marginal covariances alone.  In the registered old owner coordinate and
+  under the complete R-125 incidence hypotheses, the weighted aggregate has
+  `P_comp=(Forest_ad-V_future)/2` and
+  `R_raw=P_comp+V_future/2=Forest_ad/2`; forest and future are alternate
+  coordinates, not additional reserves.
+- **Exact nonidentifiability boundary.**  For
+  `B(w)=diag((1+w_1^2)^(-1),1+w_1^2)`, `X=I_2`, and respectively
+  `Y_+=I_2` and `Y_-=[[0,1],[1,0]]`, scale both syntheses by
+  `sqrt(epsilon)`.  Both field and current marginals are `epsilon I_2`, while
+  the exact full-reveal unhalved owners are
+  `epsilon E[(G^2-1)/(1+epsilon G^2)]<0` and `2epsilon^2>0` for every
+  `epsilon>0`.  Consequently the R-146 endpoint covariance normal form alone
+  cannot determine the R-125/R-141 fresh owner.
+- **Radial-slice boundary.**  The exact Hessian of the retained real
+  active-spectator radial-column energy at `(R,R)` has `H_11>0`, `H_12>0`,
+  `H_22<0`, and
+  `det H=-9R^4(3908R^4+4718R^2e+1787e^2)/[50000P^2(2R^2+e)^4]<0`
+  for `R>0`.  This rules out a proof by global affine coefficient convexity.
+  It is not a physical control Hessian: the coefficient gradient is nonzero,
+  a physical lift contributes `grad f . D^2z`, and the radial slice is not an
+  invariant full-internal owner.
+- **Full-internal companion theorem.**  Realify `z in C^3`, retain all three
+  Pauli generators and all six `P+L` rows, and use the registered covariance
+  `Gamma=diag(C(a),C(a))`, where `C(a)=(aI+M)^(-1)` is each real-coordinate
+  covariance and the A6 complex covariance is `2C(a)`.  At background
+  `(R,0,R,0,0,0)`, the declared same-root co-synthesis tensor
+  `T=Gamma_am Gamma_bn partial_ab B_mn` equals
+  `3N(a,rho)/[160P(2rho+1)^4d_den(a)^2]`, with `rho=R^2/e` and
+  `d_den(a)=25000a^3+10000a^2+1115a+24`.  Every coefficient of `N` in
+  `a>=0`, `rho>=0` is strictly positive; hence `T>0` for all `a>=0`,
+  `R>=0`, `e>0`, and `P>0`.  The action carries the additional outer factor
+  `1/2`.  The nonlinear `L` contribution is not separately positive, so all
+  six rows are load-bearing.  The adverse radial sign does not survive in
+  this separately declared co-synthesis, but the comparison changes both
+  rows and cross-synthesis rank and does not identify a causal companion.
+- **Where proved.**  Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-cross-synthesis-stein-owner-full-internal-companion-boundary-260802-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_cross_synthesis_stein_owner_full_internal_companion_boundary_manifest.json`,
+  and the primary, non-importing independent, and integrated executable
+  certificates listed there.
+- **Reuse scope.**  The cross-synthesis identity is a reusable finite-
+  dimensional affine-Gaussian owner formula.  The positivity theorem applies
+  only to the declared full-internal same-root co-synthesis
+  `K=Gamma_x=Gamma_v=Gamma`.  It corrects the radial-only inference but does
+  not identify the physical derivative/quadrature synthesis `K=S_xS_v*`.
+- **Audit boundary.**  The result does not determine the production spatial
+  owner, polarized relative secant, common heat, exhaustive output/spatial
+  projections, root/visit incidence, adapted feedback, forest/low
+  compatibility, complement leakage, or relative source and terminal sextic.
+  It proves no physical control Hessian, stability or instability, T-050 or
+  A13 closure, Nelson theorem, removal, interacting measure, BCC preference
+  or exclusion, other phase selection, PDE replacement, or Sector-A closure.
+- **Tier / publication target.**  Scoped T4 analytic/exact/executed/audited
+  affine-Gaussian owner and full-internal companion theorem; reusable after
+  external review of the realification, A6/A7 covariance convention, both
+  Stein integrations, tensor indices, and all twenty-five positive
+  coefficients.  It is not a production-action or phase theorem.
 
 <a id="r-148"></a>
 ### R-148 -- Canonical fresh-prefix rank obstruction, active-spectator lift boundary, and coefficient-parameter Hessian correction

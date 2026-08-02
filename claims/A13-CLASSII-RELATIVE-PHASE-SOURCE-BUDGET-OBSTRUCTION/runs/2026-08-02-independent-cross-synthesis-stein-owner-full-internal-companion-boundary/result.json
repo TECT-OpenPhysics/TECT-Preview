@@ -1,0 +1,309 @@
+{
+  "assertions": [
+    {
+      "actual": "A13-CLASSII-CROSS-SYNTHESIS-STEIN-OWNER-FULL-INTERNAL-COMPANION-BOUNDARY",
+      "expected": "A13-CLASSII-CROSS-SYNTHESIS-STEIN-OWNER-FULL-INTERNAL-COMPANION-BOUNDARY",
+      "group": "metadata",
+      "name": "result id",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-149",
+      "expected": "R-149",
+      "group": "metadata",
+      "name": "ledger id",
+      "status": "PASS"
+    },
+    {
+      "actual": "152326500811/35006580000",
+      "expected": "152326500811/35006580000",
+      "group": "stein-raw",
+      "name": "independent raw direct-versus-differential identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "expected": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "group": "nonidentifiability",
+      "name": "same field marginal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "expected": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "group": "nonidentifiability",
+      "name": "same current marginal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "-2",
+        "2"
+      ],
+      "expected": "negative, positive",
+      "group": "nonidentifiability",
+      "name": "opposite tensor signs",
+      "status": "PASS"
+    },
+    {
+      "actual": "-epsilon*(x_nonnegative - y_nonnegative)**2/((epsilon*x_nonnegative + 1)*(epsilon*y_nonnegative + 1))",
+      "expected": "-epsilon*(x_nonnegative - y_nonnegative)**2/((epsilon*x_nonnegative + 1)*(epsilon*y_nonnegative + 1))",
+      "group": "nonidentifiability",
+      "name": "independent strict-antitone covariance kernel",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*epsilon**2",
+      "expected": ">0",
+      "group": "nonidentifiability",
+      "name": "independent exchange exact raw sign",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/(250*P)",
+      "expected": "3/(250P)",
+      "group": "registered-input",
+      "name": "independent Schur P coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "243/(8000*P)",
+      "expected": "243/(8000P)",
+      "group": "registered-input",
+      "name": "independent completed-square L coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/9",
+      "expected": "5/9",
+      "group": "registered-input",
+      "name": "independent alpha reconstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": 25,
+      "expected": 25,
+      "group": "full-internal",
+      "name": "independent twenty-five coefficients",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "34800000000",
+        "329600000000",
+        "513700000000",
+        "299400000000",
+        "67800000000",
+        "41736000000",
+        "212652000000",
+        "297744000000",
+        "168768000000",
+        "38646000000",
+        "15500240000",
+        "52815580000",
+        "64406160000",
+        "34734420000",
+        "8003790000",
+        "2547660000",
+        "6531756000",
+        "6689376000",
+        "3280296000",
+        "738681000",
+        "167968324",
+        "368965068",
+        "323181116",
+        "138377892",
+        "28354299"
+      ],
+      "expected": "all >0",
+      "group": "full-internal",
+      "name": "independent all-positive coefficients",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4,
+        4
+      ],
+      "expected": [
+        4,
+        4
+      ],
+      "group": "full-internal",
+      "name": "independent bidegree",
+      "status": "PASS"
+    },
+    {
+      "actual": "160*P*(2*rho + 1)**4*(25000*a**3 + 10000*a**2 + 1115*a + 24)**2",
+      "expected": "160*P*(2*rho + 1)**4*(25000*a**3 + 10000*a**2 + 1115*a + 24)**2",
+      "group": "full-internal",
+      "name": "independent exact positive denominator",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*(348*rho**4 + 3296*rho**3 + 5137*rho**2 + 2994*rho + 678)/(1000*P*(2*rho + 1)**4)",
+      "expected": "3*(348*rho**4 + 3296*rho**3 + 5137*rho**2 + 2994*rho + 678)/(1000*P*(2*rho + 1)**4)",
+      "group": "full-internal",
+      "name": "independent high-kinetic checksum",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0975321681312125986",
+      "expected": ">0",
+      "group": "full-internal",
+      "name": "hostile total positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "-0.0195731067667847305",
+      "expected": "<0",
+      "group": "full-internal",
+      "name": "hostile nonlinear split negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0975321681312125986",
+      "expected": "0.0975321681312125986",
+      "group": "full-internal",
+      "name": "load-bearing recombination",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "production synthesis remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "phase remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "T050 remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "raw diagnostic not production Pcomp",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 23,
+  "assertions_total": 23,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "derived": {
+    "full_internal_coefficients": [
+      "34800000000",
+      "329600000000",
+      "513700000000",
+      "299400000000",
+      "67800000000",
+      "41736000000",
+      "212652000000",
+      "297744000000",
+      "168768000000",
+      "38646000000",
+      "15500240000",
+      "52815580000",
+      "64406160000",
+      "34734420000",
+      "8003790000",
+      "2547660000",
+      "6531756000",
+      "6689376000",
+      "3280296000",
+      "738681000",
+      "167968324",
+      "368965068",
+      "323181116",
+      "138377892",
+      "28354299"
+    ],
+    "full_internal_numerator": "34800000000*a**4*rho**4 + 329600000000*a**4*rho**3 + 513700000000*a**4*rho**2 + 299400000000*a**4*rho + 67800000000*a**4 + 41736000000*a**3*rho**4 + 212652000000*a**3*rho**3 + 297744000000*a**3*rho**2 + 168768000000*a**3*rho + 38646000000*a**3 + 15500240000*a**2*rho**4 + 52815580000*a**2*rho**3 + 64406160000*a**2*rho**2 + 34734420000*a**2*rho + 8003790000*a**2 + 2547660000*a*rho**4 + 6531756000*a*rho**3 + 6689376000*a*rho**2 + 3280296000*a*rho + 738681000*a + 167968324*rho**4 + 368965068*rho**3 + 323181116*rho**2 + 138377892*rho + 28354299",
+    "full_internal_tensor": "3*(34800000000*a**4*rho**4 + 329600000000*a**4*rho**3 + 513700000000*a**4*rho**2 + 299400000000*a**4*rho + 67800000000*a**4 + 41736000000*a**3*rho**4 + 212652000000*a**3*rho**3 + 297744000000*a**3*rho**2 + 168768000000*a**3*rho + 38646000000*a**3 + 15500240000*a**2*rho**4 + 52815580000*a**2*rho**3 + 64406160000*a**2*rho**2 + 34734420000*a**2*rho + 8003790000*a**2 + 2547660000*a*rho**4 + 6531756000*a*rho**3 + 6689376000*a*rho**2 + 3280296000*a*rho + 738681000*a + 167968324*rho**4 + 368965068*rho**3 + 323181116*rho**2 + 138377892*rho + 28354299)/(160*P*(2*rho + 1)**4*(25000*a**3 + 10000*a**2 + 1115*a + 24)**2)",
+    "gaussian_raw_identity_differential": "152326500811/35006580000",
+    "gaussian_raw_identity_direct": "152326500811/35006580000",
+    "high_kinetic_tensor_checksum": "3*(348*rho**4 + 3296*rho**3 + 5137*rho**2 + 2994*rho + 678)/(1000*P*(2*rho + 1)**4)",
+    "hostile_split": {
+      "L": "-0.0195731067667847305",
+      "P": "0.117105274897997329",
+      "total": "0.0975321681312125986"
+    },
+    "same_marginal_signs": {
+      "exchange_exact_unhalved": "2*epsilon**2",
+      "identity_exact_unhalved": "epsilon*Cov(G^2,(1+epsilon*G^2)^-1)<0",
+      "leading": [
+        "-2",
+        "2"
+      ]
+    }
+  },
+  "no_overclaim": "R-149 proves exact fixed-cutoff aggregate owner bookkeeping under the registered R-125 incidence hypotheses, an affine-Gaussian raw/covariance-normal square-minus-trace identity, an exact full-reveal same-marginal sign-reversal counterfixture, and strict positivity of a separately declared full-internal same-root six-row tensor. The raw identity equals production Pcomp only when the future projection is exhaustive and Vfuture=0. The positive tensor assumes field and current co-synthesis K=Gamma and omits the production spatial derivative/quadrature relation, exhaustive spatial/output projection, heat, visits, adapted feedback, R-063 forest incidence, future variance, balanced response, returned low, source synthesis, and terminal relative secant. It does not determine the production owner sign, prove a physical control Hessian, select or exclude BCC, a uniform state, or any other phase, justify PDE replacement, close T-050 or either A13 gate, prove Nelson or removals, construct the interacting measure, or close Sector A.",
+  "package_version": "1.0.0",
+  "result_id": "A13-CLASSII-CROSS-SYNTHESIS-STEIN-OWNER-FULL-INTERNAL-COMPANION-BOUNDARY",
+  "schema": "tect/a13-cross-synthesis-stein-owner-full-internal-companion-boundary-independent/1.0",
+  "scope": {
+    "a13_gate_closed": false,
+    "affine_gaussian_raw_square_minus_trace_formula_proved": true,
+    "complete_owner_sign_determined": false,
+    "endpoint_marginal_covariance_nonidentifiability_proved": true,
+    "full_internal_same_root_tensor_positive_proved": true,
+    "nelson_proved": false,
+    "old_chart_owner_transport_proved": false,
+    "old_owner_aggregate_one_use_cancellation_proved": true,
+    "physical_phase_selected": false,
+    "production_spatial_cross_synthesis_identified": false,
+    "r125_incidence_hypotheses_discharged_for_new_chart": false,
+    "radial_truncation_negative_as_full_owner_rejected": true,
+    "raw_diagnostic_identified_with_production_pcomp": false,
+    "sector_a_closed": false,
+    "t050_closed": false
+  },
+  "status": "PASS"
+}
