@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-A13-NONLINEAR-SHIFTED-STATE-PULLBACK-SOURCE-CONVEXITY](#ng-2026-08-03-a13-nonlinear-shifted-state-pullback-source-convexity) | infer a global intrinsic production gap by treating the `9/10` Cameron--Martin source reserve as a positive controller-coordinate Hessian after nonlinear shifted-state substitution | for `chi(t,s)=(tP xi_p,sP(xi_2p+tP xi_p))` with a rank-one projection `P`, the source cost is `9(t^2+s^2+t^2s^2)/20`; at `t=s=R` its parameter Hessian has eigenvalue `9(1-R^2)/10`, equal to `-27/10` at `R=2`, while the intrinsic tangent source Gram remains positive. The failure is chart curvature, not an intrinsic production or T-050 counterexample |
 | [NG-2026-08-03-A13-NONDEGENERATE-GAUSSIAN-PAST-CURRENT-DETERMINISTIC-LINFTY-COLLAR](#ng-2026-08-03-a13-nondegenerate-gaussian-past-current-deterministic-linfty-collar) | close the R-152 or R-153 absolute past-current collar by a fixed almost-sure threshold, or weaken it to an averaged multiplier required for every predictable direction | one uncancelled derivative-active Gaussian past coefficient has unbounded support, forcing positive-probability violation of every finite absolute collar; event-localized predictable controls make the all-directions weighted inequality equivalent to the fiberwise threshold, so only a signed owner completion or a genuinely restricted control class can continue this route |
 | [NG-2026-08-03-A13-LINEAR-PAIR-TESTS-DO-NOT-IMPLY-NONLINEAR-PREDICTABLE-GAP](#ng-2026-08-03-a13-linear-pair-tests-do-not-imply-nonlinear-predictable-gap) | infer the full nonlinear predictable-control Hessian gap from the R-151 averaged linear family `phi=H xi_1` and an ordinary bounded smoothness class | the exact criterion is the almost-sure conditional form bound `K>=-4I/5`; the smooth translated-bump fixture for `K(X)=-X^2/5` passes every linear Gaussian test with loss `3/5` but gives negative augmented curvature, so the inference fails without a conditional operator or weighted form theorem |
 | [NG-2026-08-03-A13-PAIRWISE-LOCAL-GAPS-DO-NOT-IMPLY-MULTIROOT-GLOBAL-GAP](#ng-2026-08-03-a13-pairwise-local-gaps-do-not-imply-multiroot-global-gap) | aggregate positive pairwise local source gaps into a global interacting-root gap after making the source incidences orthogonal | the exact rational two-edge matrix has both local gaps `3/20>7/50` but global eigenvalues `-1/20,7/20`; one-use source bookkeeping does not diagonalize endpoint, sextic, or low cross-root Hessians, so the fully recombined production matrix is indispensable |
@@ -242,6 +243,41 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-a13-nonlinear-shifted-state-pullback-source-convexity"></a>
+### NG-2026-08-03-A13-NONLINEAR-SHIFTED-STATE-PULLBACK-SOURCE-CONVEXITY -- nonlinear controller coordinates destroy the apparent source Hessian reserve
+
+**Failure mode.**  Substitute a nonlinear shifted-state controller chart into
+the Cameron--Martin norm and continue to count its intrinsic `9/10` source
+metric as a globally positive controller-parameter Hessian.  This silently
+deletes the source-gradient/chart-acceleration connection.
+
+**Exact witness.**  Let `P` be a rank-one orthogonal projection and use the
+legal predictable chart
+`chi(t,s)=(t P xi_p,s P(xi_2p+t P xi_p))`.  Its source cost, tangent source
+Gram, and parameter Hessian on `t=s=R` are
+
+```
+C(t,s) = 9(t^2+s^2+t^2 s^2)/20,
+G_R = [[1+R^2,R^2],[R^2,1+R^2]],
+D2 C_R = (9/10)[[1+R^2,2R^2],[2R^2,1+R^2]].
+```
+
+The source Gram eigenvalues are `1` and `1+2R^2`, whereas the parameter
+Hessian eigenvalues are `9(1-R^2)/10` and `9(1+3R^2)/10`.  At `R=2` the
+adverse eigenvalue is exactly `-27/10` while the metric remains positive.
+The missing term is the exact connection
+`(9/10)<BA,GK+LH>_HS`.
+
+**Consequence.**  Global T-050 analysis must use affine interpolation in the
+actual physical source space, or retain the projected-force/controller
+connection in a nonlinear pullback.  The witness is not a counterexample to
+the intrinsic production Hessian, the R-156 fixed-cutoff local neighbourhood,
+or T-050.  It also gives no phase, BCC, vacuum, or PDE verdict.
+
+**Evidence.**  R-156 note Sections 2 and 6; primary 29/29 and independent
+21/21 exact certificates; manifest
+`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_shifted_state_nonzero_neighborhood_gap_boundary_manifest.json`.
 
 <a id="ng-2026-08-03-a13-nondegenerate-gaussian-past-current-deterministic-linfty-collar"></a>
 ### NG-2026-08-03-A13-NONDEGENERATE-GAUSSIAN-PAST-CURRENT-DETERMINISTIC-LINFTY-COLLAR -- absolute Gaussian past-current collars cannot close the full predictable class

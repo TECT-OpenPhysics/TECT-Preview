@@ -5655,3 +5655,43 @@ T5--T7 promotion remain open. Tier stays T4.
   only the minimum direct A13 successor while advancing T-054 phase-neutral
   evidence and T-052 early candidate rejection in parallel; spend T-053 only
   on surviving candidates.
+
+- 2026-08-03: Registered
+  `A13-CLASSII-SHIFTED-STATE-NONZERO-NEIGHBORHOOD-GAP-BOUNDARY` (R-156).
+  The actual two-stage predictable chart is
+  `chi(A,B)=(A xi_p,B(xi_2p+A xi_p))`.  In directions `(H,G)` and `(K,L)`,
+  its tangent Gram and mixed acceleration are exactly
+  `<H,K>_HS+<G,L>_HS+<GA+BH,LA+BK>_HS` and `(0,(GK+LH)xi_p)`.
+
+  Differentiating the one R-141 production scalar gives the intrinsic source
+  Hessian `9I/10+P_pred L^*(Q_comp+Q_6)L P_pred` plus, only for the nonlinear
+  controller pullback, one pairing of the projected force with the chart
+  acceleration.  The R-153 endpoint/current and global PSD sextic forms are
+  retained once.  Forward and legal reverse are adjoints of the same block,
+  balanced is their symmetric cross, and no independent production low
+  coordinate is declared.
+
+  R-155 gives the pure-dyadic origin gap `>147/1000`.  The exact headroom over
+  `1/10` is `47/1000`; fixed-cutoff positive-floor smoothness and the
+  polynomial chart therefore give some `delta>0` such that
+  `||A||_HS+||B||_HS<delta` retains both the controller-pullback and intrinsic
+  tangent-image gaps above `1/10`.  The radius is existential.  A half-
+  headroom comparison leaves `247/2000>1/10`.
+
+  The aligned rank-one source cost `9(t^2+s^2+t^2s^2)/20` has controller-
+  Hessian eigenvalue `9(1-R^2)/10` on `t=s=R`, equal to `-27/10` at `R=2`,
+  while the tangent Gram remains positive.  This exact no-go retires global
+  nonlinear-pullback source convexity and an invented-low completion only;
+  it is not an intrinsic production or T-050 counterexample.
+
+  `EXP-000677--EXP-000679` record the exact chart/operator, local-continuation,
+  and failed coordinate-convexity/low routes.  Primary `29/29` and independent
+  `21/21` exact audits pass.  Integrated verification passes `145/145`,
+  embedding all `50` child rows once and adding `95` parity, exact-oracle,
+  authority, artifact, PDF, security/text/render, public-surface, exploration,
+  negative-result, scope, and aggregation checks.  The deterministic five-
+  page PDF passed full visual QA.  No numerical or cutoff/floor/chart-uniform radius, general
+  nonlinear/revisit T-050 or A13 closure, phase/PDE verdict, Nelson theorem,
+  interacting measure, or Sector-A closure follows.  Quantitative intrinsic-
+  operator variation or a genuine intrinsic counterexample is the next direct
+  step; T-054/T-052 continue the phase-neutral model tournament in parallel.

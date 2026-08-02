@@ -1202,6 +1202,30 @@ endpoint theorem.
     minimum direct A13 successor while advancing phase-neutral T-054 and
     candidate-rejection T-052 in parallel.
 
+78. **Shifted-state intrinsic Hessian and nonzero-neighbourhood gap
+    boundary.** R-156 instantiates the minimum recursive successor required by
+    R-155: `chi(A,B)=(A xi_p,B(xi_2p+A xi_p))`.  Its exact tangent Gram is
+    `||H||_HS^2+||G||_HS^2+||GA+BH||_HS^2`, and its mixed controller
+    acceleration is `(GK+LH)xi_p`.  Differentiating the one R-141 production
+    scalar separates the intrinsic Hessian from exactly one projected-force
+    connection; the endpoint/current, trace, global sextic, forward/legal-
+    reverse, and balanced owners are retained once.  The actual source-Doob
+    low is a reparameterisation of the source and supplies no independent
+    Feshbach reserve.  The R-155 pure-dyadic origin gap `147/1000` leaves exact
+    headroom `47/1000` over `1/10`.  Fixed-cutoff smoothness and polynomiality
+    of the chart therefore give some existential nonzero coefficient
+    neighbourhood with both pullback and intrinsic tangent-image gaps above
+    `1/10`.  An aligned rank-one restriction has controller-Hessian
+    eigenvalue `9(1-R^2)/10`, equal to `-27/10` at `R=2`, while its tangent
+    source metric remains positive.  This retires global nonlinear-pullback
+    source convexity, not intrinsic convexity or T-050.  Primary `29/29`,
+    independent `21/21`, and integrated `145/145` audits pass.  No numerical or
+    uniform radius, general nonlinear/revisit estimate, phase/PDE verdict,
+    Nelson theorem, measure, or Sector-A closure follows at T4.  The next
+    direct step is quantitative intrinsic-operator variation or a genuine
+    intrinsic counterexample; T-054/T-052 remain the primary phase-neutral
+    candidate-selection route in parallel.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

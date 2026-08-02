@@ -1,0 +1,345 @@
+% =============================================================================
+% Title: Shifted-state intrinsic Hessian and nonzero-neighbourhood gap boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-SHIFTED-STATE-NONZERO-NEIGHBORHOOD-GAP-BOUNDARY
+% Ledger: R-156
+% Version: v1.0 -- first issued 2026-08-03; this version issued 2026-08-03
+% Status: scoped T4 analytic/exact/executed/audited advance; no T-050 closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\HS}{\mathrm{HS}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope: the first nonzero shifted-state neighbourhood}
+\hypertarget{section-1-result}{ }
+
+R-155 proves, at the zero-control origin of a pure dyadic fixed-law affine
+family and with $v=(H,G)$, the exact lower bound
+\[
+ D^2\cA(0)[v,v]>{147\over1000}
+       (\|H\|_{\HS}^2+\|G\|_{\HS}^2).                    \tag{1.1}
+\]
+R-156 instantiates the smallest genuinely recursive predictable chart and
+extends (1.1), by finite-dimensional continuity, to some nonzero coefficient
+neighbourhood.  Let $\xi_p$ and $\xi_{2p}$ be independent whitened both-sign
+raw roots and define
+\[
+ \chi(A,B)=\bigl(A\xi_p,\ B(\xi_{2p}+A\xi_p)\bigr).       \tag{1.2}
+\]
+The first component is revealed at $2p$ and the second at $4p$; hence
+\[
+ h_{2p}\in\mathcal F_p\quad\hbox{and}\quad
+ h_{4p}\in\mathcal F_{2p}.                              \tag{1.3}
+\]
+
+At the registered fixed finite cutoff, positive floor, covariance-matched
+common-even background and exact nonaliased torus integration, there exists
+some $\delta>0$ such that
+\[
+ \|A\|_{\HS}+\|B\|_{\HS}<\delta                         \tag{1.4}
+\]
+implies, for every nonzero coefficient direction $v=(H,G)$,
+\[
+ \boxed{
+ D^2(\cA\circ\chi)_{A,B}[v,v]>
+ {1\over10}(\|H\|_{\HS}^2+\|G\|_{\HS}^2).}             \tag{1.5}
+\]
+The corresponding intrinsic physical-source Hessian, restricted to the
+tangent image of $D\chi_{A,B}$, also remains above $1/10$ in its induced
+source Gram metric after possibly decreasing $\delta$.
+
+The radius in (1.4) is existential.  R-156 supplies no numerical value and
+no radius uniform in the cutoff, floor, refinement, chart, or realised
+Gaussian past.  It does not prove global finite-amplitude convexity, arbitrary
+predictable nonlinear/revisit feedback, T-050, A13, Nelson, an interacting
+measure, any phase, lattice, vacuum, BCC, or PDE verdict, or Sector-A closure.
+
+\section*{2. Exact shifted-state differential and source geometry}
+\hypertarget{section-2-chart}{ }
+
+For directions $v=(H,G)$ and $w=(K,L)$, direct differentiation of (1.2)
+gives
+\[
+\begin{aligned}
+ k_v=D\chi_{A,B}v
+ &=\bigl(H\xi_p,\ G\xi_{2p}+(GA+BH)\xi_p\bigr),\\
+ D^2\chi_{A,B}[v,w]
+ &=\bigl(0,(GK+LH)\xi_p\bigr).
+\end{aligned}                                           \tag{2.1}
+\]
+The physical composition order is fixed.  Exchanging the two Hessian
+arguments makes $GK+LH$ reappear; it does not replace either product by an
+illegitimate label-swapped composition.
+
+Whitened independence gives the intrinsic tangent Gram
+\[
+\boxed{
+ \cG_{A,B}(v,w)=
+ \ip{H}{K}_{\HS}+\ip{G}{L}_{\HS}
+ +\ip{GA+BH}{LA+BK}_{\HS}.}                            \tag{2.2}
+\]
+In particular,
+\[
+ \cG_{A,B}(v,v)=
+ \|H\|_{\HS}^2+\|G\|_{\HS}^2+\|GA+BH\|_{\HS}^2>0      \tag{2.3}
+\]
+for $v\ne0$.  There is no extra low variable in (2.1); all three summands
+are coordinates of the same predictable source tangent.
+
+The Cameron--Martin part of the scalar action is
+\[
+ \cC(A,B)={9\over20}
+  \left(\|A\|_{\HS}^2+\|B\|_{\HS}^2+\|BA\|_{\HS}^2\right).           \tag{2.4}
+\]
+Its controller-coordinate Hessian is
+\[
+\boxed{
+ D^2\cC(A,B)[v,w]={9\over10}\left[
+ \cG_{A,B}(v,w)+\ip{BA}{GK+LH}_{\HS}\right].}          \tag{2.5}
+\]
+The second term in (2.5) is a gradient--chart-acceleration connection.  It
+is absent from the intrinsic affine physical-source Hessian and vanishes at
+$A=B=0$.  Thus the positive $9/10$ intrinsic source metric may not be copied
+unchanged into a nonlinear controller-coordinate Hessian away from the
+origin.
+
+\section*{3. One production scalar, projected force, and all owners once}
+\hypertarget{section-3-hessian}{ }
+
+On a fixed predictable chart $\pi$, R-141 writes the complete production
+action as one scalar
+\[
+ \cA_\pi(h)=\sum_\alpha\E\,\mathcal P_{{\rm comp},\alpha}(Z_h)
+ +{9\over20}\|h\|_{\mathcal S_\pi}^2
+ +{3\over20}\E\|Z_{K,h}\|_6^6.                         \tag{3.1}
+\]
+Its projected force and intrinsic source Hessian are
+\[
+\begin{aligned}
+ g_\pi^{\rm prod}
+ &= {9\over10}h+P_{\rm pred}L_\pi^*G_{\rm end},\\
+ H_\pi(h)
+ &= {9\over10}I+P_{\rm pred}L_\pi^*
+       (Q_{\rm comp}+Q_6)L_\pi P_{\rm pred}.
+\end{aligned}                                             \tag{3.2}
+\]
+Consequently the complete pullback Hessian is exactly
+\[
+\boxed{
+ D^2(\cA_\pi\circ\chi)_{A,B}[v,w]
+ =\ip{k_v}{H_\pi(h_{A,B})k_w}
+ +\E\ip{(g_\pi^{\rm prod})_{4p}}{(GK+LH)\xi_p}.}         \tag{3.3}
+\]
+The second term is the unique controller-coordinate connection.  It already
+contains the source, endpoint, sextic and trace first variations; adding
+them again as separate reserves would double count the same scalar action.
+
+For the intrinsic affine physical interpolation
+\[
+ h=h_{A,B}+t k_v+s k_w,                                  \tag{3.4}
+\]
+there is no chart acceleration, and (3.3) reduces to
+\[
+ D^2\cA_\pi(h_{A,B})[k_v,k_w]
+ =\ip{k_v}{H_\pi(h_{A,B})k_w}.                           \tag{3.5}
+\]
+The production current still has its genuine internal second jet; it is not
+controller curvature.  In the R-153 conditional notation $W=m+X$,
+$n_i=\partial_i m$, $z=L_\pi k_v$, $w=L_\pi k_w$,
+$u_{i,z}=\partial_i z$, the A7 block is
+\[
+\boxed{
+\begin{aligned}
+ K_E[z,w]=\int\sum_i\bigg[&
+ u_{i,z}^{T}\overline B\,u_{i,w}
+ +u_{i,z}^{T}\overline{DB[w]},n_i
+ +u_{i,w}^{T}\overline{DB[z]},n_i\\
+ &+{1\over2}\Tr\!\left(
+  \overline{D^2B[z,w]}(n_in_i^T-\Gamma_{<,i})\right)
+ \bigg]dx .
+\end{aligned}}                                           \tag{3.6}
+\]
+The sixth-power contribution is the single global form
+\[
+ K_6[z,w]={9\over10}\int\E\left[
+ |W|^4z\cdot w+4|W|^2(W\cdot z)(W\cdot w)\right]dx,       \tag{3.7}
+\]
+which is positive semidefinite on the diagonal.  Equations (3.2), (3.6),
+and (3.7) are one source payment, one complete endpoint/current owner, and
+one sextic owner.  Forward and reverse entries are adjoints of the same
+bilinear Hessian.
+
+\section*{4. Two-block acceptance and why no new low is allowed}
+\hypertarget{section-4-schur}{ }
+
+For the two affine source blocks, write the complete intrinsic Hessian and
+source metric as $M$ and $\cG$.  The target is
+\[
+ N=M-{1\over10}\cG\succeq0\quad\hbox{and}\quad
+ N=\begin{pmatrix}E&C\\C^*&F\end{pmatrix}.              \tag{4.1}
+\]
+The forward block is $C$; its sole legal reverse is $C^*$.  The balanced
+term is the real symmetric cross $2\operatorname{Re}\ip{x}{Cy}$, not a
+third reserve.
+
+If $F>0$, exact block congruence gives
+\[
+ N\succeq0\quad\Longleftrightarrow\quad
+ F>0\quad\hbox{and}\quad E-CF^{-1}C^*\succeq0.        \tag{4.2}
+\]
+For semidefinite $F$, (4.2) requires the Douglas range condition and a
+reduced solution of $F^{1/2}X=C^*$.  A free Schur minimisation is legitimate
+only if the lower coordinate is an actual independent variable and its
+stationary minimiser exists.  No such variable occurs in (1.2).  The
+R-141 source-Doob low component is an isometric reparameterisation of $h$,
+while historical mean, forest, future-variance and returned-low expressions
+are owner decompositions already contained in $Q_{\rm comp}$.  R-156
+therefore adds no independent low/Feshbach block.
+
+\section*{5. Continuation proof and the exact global boundary}
+\hypertarget{section-5-continuation}{ }
+
+At fixed cutoff and positive floor, (3.1) is a smooth function on a finite
+dimensional coefficient space, and (1.2) is polynomial.  Hence both
+\[
+ (A,B)\longmapsto D^2(\cA\circ\chi)_{A,B},\quad
+ (A,B)\longmapsto\bigl(D\chi_{A,B}^*H_\pi D\chi_{A,B},
+                         \cG_{A,B}\bigr)                    \tag{5.1}
+\]
+are continuous.  At $A=B=0$, the projected-force connection in (3.3)
+vanishes by the R-155 stationary translation/Fourier cancellation, and
+$\cG_{0,0}=I$.  The exact headroom over the desired target is
+\[
+ {147\over1000}-{1\over10}={47\over1000}.                 \tag{5.2}
+\]
+Continuity in operator norm therefore supplies a ball on which the change
+is, for example, less than half of (5.2).  On that ball the retained lower
+bound is at least
+\[
+ {147\over1000}-{47\over2000}={247\over2000}>{1\over10}.  \tag{5.3}
+\]
+This proves (1.5), after shrinking once more for the intrinsic generalised
+eigenvalue statement.
+
+The argument cannot be applied to the general factor-three R-155 family:
+its registered origin gap is only
+\[
+ {7\over250}<{1\over10}.                                  \tag{5.4}
+\]
+Nor does compactness produce a usable uniform radius when the cutoff,
+floor, chart, or dimension changes.  R-153 separately shows why a
+deterministic fibrewise collar cannot be uniform over an unbounded
+nondegenerate Gaussian past.
+
+\section*{6. Nonlinear pullback curvature no-go}
+\hypertarget{section-6-nogo}{ }
+
+Take an aligned rank-one projection with
+$\|H\|_{\HS}^2=\|G\|_{\HS}^2=\|GH\|_{\HS}^2=1$, and put
+$A=tH$, $B=sG$.  Then
+\[
+ \cC(t,s)={9\over20}(t^2+s^2+t^2s^2),                    \tag{6.1}
+\]
+\[
+ D^2\cC={9\over10}
+ \begin{pmatrix}1+s^2&2ts\\2ts&1+t^2\end{pmatrix}.      \tag{6.2}
+\]
+On $t=s=R$, the tangent source Gram and controller Hessian have eigenvalues
+\[
+ \operatorname{spec}\cG_R=\{1,1+2R^2\},\quad
+ \operatorname{spec}D^2\cC_R=
+ \left\{{9\over10}(1-R^2),{9\over10}(1+3R^2)\right\}.   \tag{6.3}
+\]
+At $R=2$, these are respectively $\{1,9\}$ and
+$\{-27/10,117/10\}$.  Thus even a convex Cameron--Martin norm becomes
+indefinite in large nonlinear controller coordinates.  This is not a
+counterexample to intrinsic production convexity or to T-050.  It falsifies
+only the route that treats nonlinear pullback curvature as if it were the
+intrinsic $9/10$ source reserve.
+
+\section*{7. Devil's-advocate review}
+\hypertarget{section-7-review}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: continuity is being used to claim a global nonlinear
+theorem.} \textbf{UPHELD AS A BOUNDARY.}  The theorem is existential and
+local at one fixed cutoff, floor and two-stage chart.  No numerical or
+uniform radius is claimed.
+
+\item \textbf{Objection: the negative eigenvalue in Section 6 disproves
+production convexity.} \mbox{\textbf{DISMISSED.}}  It is exactly the
+gradient--chart-acceleration term in (2.5).  The intrinsic source metric in
+(2.3) remains positive definite.
+
+\item \textbf{Objection: the source, endpoint, sextic and connection may be
+estimated as four independent reserves.} \textbf{DISMISSED.}  They are
+derivatives of the one scalar (3.1).  Equation (3.3) owns the full connection
+once, and (3.6)--(3.7) own the intrinsic endpoint and sextic forms once.
+
+\item \textbf{Objection: balanced and legal reverse are two new payments.}
+\textbf{DISMISSED.}  They are the cross term and adjoint orientation of the
+same self-adjoint Hessian block.
+
+\item \textbf{Objection: a low/Feshbach variable can be inferred from prior
+owner names.} \textbf{UPHELD AS PROHIBITED.}  No independent low coordinate
+is defined in the production chart.  A Schur complement may analyse the two
+actual source blocks but may not invent a new reserve.
+
+\item \textbf{Objection: the result supports BCC or the current PDE.}
+\textbf{UPHELD AS PROHIBITED.}  R-156 is phase-neutral local Hessian
+mathematics.  It neither favours nor rejects BCC, a uniform state, another
+modulated state, another functional, or another equation.
+\end{enumerate}
+
+\section*{8. Reproduction, route decision, and Result footer}
+\hypertarget{section-8-reproduction}{ }
+
+From the repository root, run
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_shifted_state_nonzero_neighborhood_gap_boundary.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_shifted_state_nonzero_neighborhood_gap_boundary_independent.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_shifted_state_nonzero_neighborhood_gap_boundary_verify.py
+\end{verbatim}
+
+R-156 is the minimum nonlinear/revisit successor requested by R-155.  It
+establishes a real nonzero neighbourhood, identifies the complete intrinsic
+two-block target, and retires both nonlinear-coordinate source convexity and
+an invented independent-low completion.  The remaining T-050 question is
+quantitative and uniform: obtain a production bound on the intrinsic
+operator over the required predictable charts, or produce a genuine
+counterexample.  In parallel, the phase-neutral T-054/T-052 model tournament
+should reject unsupported candidate equations early.  Truth, not a preferred
+phase or PDE, remains the selection rule.
+
+\begin{verbatim}
+Result ID: A13-CLASSII-SHIFTED-STATE-NONZERO-NEIGHBORHOOD-GAP-
+  BOUNDARY (R-156).
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement: The pure-dyadic shifted-state chart has an existential
+  nonzero fixed-cutoff coefficient neighbourhood with Hessian gap >1/10.
+Scope: Fixed cutoff/floor, exact torus, two-stage predictable shifted-state
+  chart, intrinsic and pullback Hessians separated, existential radius.
+Dependencies: A1, A7, R-131, R-141, R-153, R-155, and Sections 1--5.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_shifted_state_nonzero_neighborhood_gap_
+  boundary_verify.py
+Expected output: Integrated verifier PASS; primary 29/29; independent 21/21.
+Falsification gate: Any chart differential, source geometry, one-scalar
+  chain rule, exact continuity margin, authority, record, or PDF gate fails.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: No numerical/uniform radius, global nonlinear/revisit,
+  T-050/A13, Nelson/measure, phase/PDE, or Sector-A result follows.
+Next required action: Quantitative intrinsic operator test plus T-054/T-052.
+\end{verbatim}
+
+\endgroup

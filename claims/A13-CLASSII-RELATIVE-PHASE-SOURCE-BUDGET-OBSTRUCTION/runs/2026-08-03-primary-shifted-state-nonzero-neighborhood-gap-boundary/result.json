@@ -1,0 +1,492 @@
+{
+  "assertions": [
+    {
+      "actual": "R-131",
+      "expected": "R-131",
+      "group": "authority",
+      "name": "R-131 manifest ledger",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-141",
+      "expected": "R-141",
+      "group": "authority",
+      "name": "R-141 manifest ledger",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-153",
+      "expected": "R-153",
+      "group": "authority",
+      "name": "R-153 manifest ledger",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-155",
+      "expected": "R-155",
+      "group": "authority",
+      "name": "R-155 manifest ledger",
+      "status": "PASS"
+    },
+    {
+      "actual": "69eb64bce6bad228e9cd250fec4ef47b6b5372cdc64d2cf335b410aed6f40b8e",
+      "expected": "69eb64bce6bad228e9cd250fec4ef47b6b5372cdc64d2cf335b410aed6f40b8e",
+      "group": "authority",
+      "name": "R-155 primary result hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "147/1000",
+      "expected": "147/1000",
+      "group": "continuation",
+      "name": "imported pure-dyadic origin gap",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "9*a/10 + 9*d*s**2/10",
+          "9*d*s*t/5"
+        ],
+        [
+          "9*d*s*t/5",
+          "9*b/10 + 9*d*t**2/10"
+        ]
+      ],
+      "expected": [
+        [
+          "9*a/10 + 9*d*s**2/10",
+          "9*d*s*t/5"
+        ],
+        [
+          "9*d*s*t/5",
+          "9*b/10 + 9*d*t**2/10"
+        ]
+      ],
+      "group": "source",
+      "name": "nonlinear chart source Hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "a*b + a*d*t**2 + b*d*s**2 - 3*d**2*s**2*t**2",
+      "expected": "a*b + a*d*t**2 + b*d*s**2 - 3*d**2*s**2*t**2",
+      "group": "source",
+      "name": "source Hessian determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          [
+            "0"
+          ],
+          [
+            "0"
+          ]
+        ],
+        [
+          [
+            "0"
+          ],
+          [
+            "0"
+          ]
+        ]
+      ],
+      "expected": "zero residuals",
+      "group": "curvature",
+      "name": "aligned-ray Hessian eigenvectors",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "R**2 + 1",
+          "R**2"
+        ],
+        [
+          "R**2",
+          "R**2 + 1"
+        ]
+      ],
+      "expected": [
+        "1",
+        "2*R**2 + 1"
+      ],
+      "group": "curvature",
+      "name": "aligned-ray tangent metric eigenvectors",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "eigenvalues": [
+          "-27/10",
+          "117/10"
+        ],
+        "matrix": [
+          [
+            "9/2",
+            "36/5"
+          ],
+          [
+            "36/5",
+            "9/2"
+          ]
+        ]
+      },
+      "expected": "one negative eigenvalue",
+      "group": "curvature",
+      "name": "rank-one ray R=2 indefinite",
+      "status": "PASS"
+    },
+    {
+      "actual": "-9*(R - 1)*(R + 1)/10",
+      "expected": "-infinity",
+      "group": "curvature",
+      "name": "adverse generalized eigenvalue unbounded below",
+      "status": "PASS"
+    },
+    {
+      "actual": "35",
+      "expected": "35",
+      "group": "chart",
+      "name": "exact tangent Gram identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "68",
+      "expected": ">0",
+      "group": "chart",
+      "name": "tangent Gram is strictly positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "5",
+          "0"
+        ],
+        [
+          "3",
+          "3"
+        ]
+      ],
+      "expected": [
+        [
+          "5",
+          "0"
+        ],
+        [
+          "3",
+          "3"
+        ]
+      ],
+      "group": "chart",
+      "name": "mixed chart acceleration symmetric",
+      "status": "PASS"
+    },
+    {
+      "actual": "459/10",
+      "expected": "459/10",
+      "group": "chart",
+      "name": "source pullback chain rule",
+      "status": "PASS"
+    },
+    {
+      "actual": "153/10",
+      "expected": "153/10",
+      "group": "chart",
+      "name": "base source cost fixture finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "887/75",
+      "expected": "887/75",
+      "group": "projected-force",
+      "name": "one-scalar pullback Hessian chain rule",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "2",
+          "-1"
+        ],
+        [
+          "2",
+          "1"
+        ]
+      ],
+      "expected": [
+        [
+          "2",
+          "-1"
+        ],
+        [
+          "2",
+          "1"
+        ]
+      ],
+      "group": "owner",
+      "name": "legal reverse is the adjoint",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "9/10",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "-1/10",
+          "-1",
+          "1"
+        ],
+        [
+          "2",
+          "-1",
+          "-1/10",
+          "1"
+        ],
+        [
+          "2",
+          "1",
+          "1",
+          "39/10"
+        ]
+      ],
+      "expected": "symmetric",
+      "group": "owner",
+      "name": "complete two-block Hessian self-adjoint",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "3/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "expected": [
+        [
+          "3/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "group": "schur",
+      "name": "exact block congruence",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "expected": ">0",
+      "group": "schur",
+      "name": "positive lower block",
+      "status": "PASS"
+    },
+    {
+      "actual": "3",
+      "expected": "3",
+      "group": "schur",
+      "name": "Schur complement determinant fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "low",
+      "name": "no independent low coordinate declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "V**2*b2*w*z/2 + V*W*b2*uw*z + V*W*b2*uz*w + V*b1*uw*z + V*b1*uz*w + W**2*b2*uw*uz/2 + W*b1*uw*uz + b0*uw*uz - b2*gamma*w*z/2",
+      "expected": "V**2*b2*w*z/2 + V*W*b2*uw*z + V*W*b2*uz*w + V*b1*uw*z + V*b1*uz*w + W**2*b2*uw*uz/2 + W*b1*uw*uz + b0*uw*uz - b2*gamma*w*z/2",
+      "group": "endpoint",
+      "name": "complete conditional A7 mixed Hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "18*i**2*r/5 + 9*n*r**2/10",
+      "expected": ">=0",
+      "group": "sextic",
+      "name": "full sextic Hessian is PSD",
+      "status": "PASS"
+    },
+    {
+      "actual": "47/1000",
+      "expected": "47/1000",
+      "group": "continuation",
+      "name": "strict headroom above T-050 target",
+      "status": "PASS"
+    },
+    {
+      "actual": "247/2000",
+      "expected": ">1/10",
+      "group": "continuation",
+      "name": "continuity perturbation retains target",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/250",
+      "expected": "<1/10",
+      "group": "boundary",
+      "name": "general factor-three gap cannot seed 1/10 continuation",
+      "status": "PASS"
+    }
+  ],
+  "authority_hashes": {
+    "R-131": "58091a9eef99d5a43e298f6ecb1f3d7187893da66e85d7c2547165851b939601",
+    "R-141": "c2b4a5d70214666632369f12ee477c9c7151d2912a3280dc930b77ed8a88dccc",
+    "R-153": "12ea504048fa0a196a837ea054663a45d77f44ee07ef2c1474d6fa204c6f29d0",
+    "R-155": "81025579c6ac518e4e4474a60a21da508ee842400194cf52beb45a8c4ec8b4f5"
+  },
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "diagnostics": {
+    "aligned_ray_adverse_generalized_eigenvalue": "-9*(R - 1)*(R + 1)/10",
+    "aligned_ray_hessian": [
+      [
+        "9*R**2/10 + 9/10",
+        "9*R**2/5"
+      ],
+      [
+        "9*R**2/5",
+        "9*R**2/10 + 9/10"
+      ]
+    ],
+    "aligned_ray_hessian_eigenvalues": [
+      "-9*(R - 1)*(R + 1)/10",
+      "9*(3*R**2 + 1)/10"
+    ],
+    "aligned_ray_metric": [
+      [
+        "R**2 + 1",
+        "R**2"
+      ],
+      [
+        "R**2",
+        "R**2 + 1"
+      ]
+    ],
+    "aligned_ray_metric_eigenvalues": [
+      "1",
+      "2*R**2 + 1"
+    ],
+    "chosen_continuity_perturbation_allowance": "47/2000",
+    "continuation_headroom": "47/1000",
+    "fixture_source_pullback_mixed_hessian": "459/10",
+    "fixture_tangent_gram": "35",
+    "general_factor_three_gap": "7/250",
+    "origin_pure_dyadic_gap": "147/1000",
+    "retained_gap_under_allowance": "247/2000",
+    "schur_fixture": [
+      [
+        "3/2",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "source_cost_scalar": "9*a*t**2/20 + 9*b*s**2/20 + 9*d*s**2*t**2/20",
+    "source_hessian_determinant_reduced": "a*b + a*d*t**2 + b*d*s**2 - 3*d**2*s**2*t**2",
+    "source_hessian_scalar": [
+      [
+        "9*a/10 + 9*d*s**2/10",
+        "9*d*s*t/5"
+      ],
+      [
+        "9*d*s*t/5",
+        "9*b/10 + 9*d*t**2/10"
+      ]
+    ],
+    "target_gap": "1/10"
+  },
+  "inputs": {
+    "R-131": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_owner_complete_physical_response_mixed_gram_shell_boundary_manifest.json",
+    "R-141": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_projected_force_global_doob_signed_gram_adaptive_collar_quotient_boundary_manifest.json",
+    "R-153": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_production_strict_past_conditional_hessian_weighted_collar_boundary_manifest.json",
+    "R-155": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_affine_source_reuse_factor_three_global_gap_boundary_manifest.json"
+  },
+  "issued": "2026-08-03",
+  "no_overclaim": "R-156 proves an existential nonzero coefficient neighbourhood above 1/10 only for the fixed-cutoff, positive-floor, exact-torus pure-dyadic two-stage shifted-state chart, by continuity from R-155. It derives the intrinsic one-scalar production Hessian and keeps controller-coordinate curvature separate. It supplies no numerical radius and no cutoff-, floor-, refinement-, chart-, or Gaussian-past-fibre-uniform estimate. It does not prove global finite-amplitude convexity, general predictable nonlinear/revisit feedback, T-050 or A13 closure, Nelson, an interacting measure, any phase, lattice, vacuum, BCC, or PDE verdict, or Sector-A closure.",
+  "result_id": "A13-CLASSII-SHIFTED-STATE-NONZERO-NEIGHBORHOOD-GAP-BOUNDARY",
+  "result_ledger_id": "R-156",
+  "schema": "tect/a13-shifted-state-nonzero-neighborhood-gap-boundary-primary/1.0",
+  "scope": {
+    "a13_closed": false,
+    "controller_pullback_connection_retained": true,
+    "cutoff_floor_or_chart_uniform_radius": false,
+    "exact_nonaliased_torus": true,
+    "existential_radius_only": true,
+    "finite_cutoff_positive_floor": true,
+    "gaussian_past_fiberwise_uniform_gap": false,
+    "general_predictable_nonlinear_or_revisit_feedback": false,
+    "global_finite_amplitude_convexity": false,
+    "independent_low_coordinate": false,
+    "nonzero_coefficient_neighborhood": true,
+    "one_scalar_action_intrinsic_hessian": true,
+    "predictable_reveal_order": true,
+    "pure_dyadic_two_stage_shifted_state_chart": true,
+    "sector_a_closed": false,
+    "t050_closed": false
+  },
+  "summary": {
+    "failed": 0,
+    "passed": 29,
+    "total": 29
+  },
+  "version": "1.0.0"
+}

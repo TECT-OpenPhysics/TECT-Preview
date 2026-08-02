@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-156](#r-156) | Shifted-state intrinsic Hessian and nonzero-neighbourhood gap boundary | Scoped T4 analytic/exact/executed/audited local theorem and coordinate-curvature boundary. For the predictable chart `chi(A,B)=(A xi_p,B(xi_2p+A xi_p))`, the exact intrinsic tangent Gram is `||H||_HS^2+||G||_HS^2+||GA+BH||_HS^2`, while the pullback Hessian additionally contains one projected-force pairing with controller acceleration `GK+LH`. One scalar production Hessian owns source, endpoint/current, sextic, forward/legal-reverse, and balanced blocks once; no independent low variable exists. Continuity from the R-155 pure-dyadic `147/1000` origin gap gives some fixed-cutoff nonzero coefficient neighbourhood with gap `>1/10`, using exact headroom `47/1000`. The rank-one source-cost restriction has eigenvalue `9(1-R^2)/10`, disproving global nonlinear-coordinate source convexity without refuting intrinsic convexity. No numerical/uniform radius, general nonlinear/revisit T-050, phase/PDE selection, or Sector-A closure follows |
 | [R-155](#r-155) | Affine source-reuse factor-three endpoint and global origin gap | Scoped T4 analytic/exact/executed/audited origin-Hessian theorem. For any finite retained family of distinct antipodal raw source classes, the fixed-law controls `h_[2p]=H_p xi_[p]` may reuse a target later as a source. Injective doubling and raw-source independence keep the source Gram diagonal and make all distinct-source mixed covariance second jets vanish. Factor-two reuse adds no covariance-normal endpoint edge; the complete mixed endpoint/loss graph still has only factor-three paths, while the terminal sextic Hessian is retained as one global PSD form. Exact Sturm and independent Fraction/Bernstein certificates give `D2 A(0)[H,H]>(7/250) sum ||H_p||_HS^2`; pure dyadic families satisfy the sharper `147/1000` bound. Nonzero past, nonlinear/revisit feedback, finite amplitude, T-050, A13, phase/PDE selection, and Sector A remain open |
 | [R-154](#r-154) | Disjoint multipair factor-three resonance graph and origin-Hessian gap | Scoped T4 analytic/exact/executed/audited multipair theorem. For any finite retained family of mutually disjoint antipodal source/target classes with affine predictable controls `h_[2p]=H_p xi_[p]`, direct polarization of the complete covariance-normal A7 endpoint shows that mixed blocks survive only on `[q]=[3p]` or `[p]=[3q]`. The resulting graph is a union of finite paths. Exact diagonal and edge envelopes, rational Sturm chains, and an independent dyadic Bernstein audit give one global block-row bound strictly above `(1/40) sum ||H_p||_F^2` after the `9/10` source Hessian is paid once and the whole global PSD sixth-power Hessian is dropped. Nonzero past, overlapping/revisited roots, nonlinear feedback, arbitrary progressive controls, T-050, A13, phase/PDE selection, and Sector A remain open |
 | [R-153](#r-153) | Production strict-past conditional Hessian and weighted-collar boundary | Scoped T4 analytic/exact/executed/audited conditional theorem and method boundary. For the retained final fresh root, strict-past conditioning and the common-even Gaussian covariance split cancel the future-current covariance exactly against its A7 trace component, leaving the past covariance with a minus sign. The first variation, full bilinear Hessian, positive-semidefinite sixth-power Hessian, `9/10` source Hessian, chart connection, and form threshold `K_E+K_6>=-4I/5` are exact on the actual incidences. Spatial Cauchy gives a conditional `L2_x` collar, and the A1 control-generated mean obeys the exact gradient constant `2.033300406...<41/20`. A nondegenerate derivative-active Gaussian past has unbounded absolute-collar support; event localization prevents an all-predictable-direction averaged collar from weakening the fiberwise condition. The complete progressive owner, production Loewner gap, T-050, A13, phase/PDE selection, and Sector A remain open |
@@ -174,6 +175,50 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-156"></a>
+### R-156 -- Shifted-state intrinsic Hessian and nonzero-neighbourhood gap boundary
+
+- **Actual predictable chart.**  For independent raw roots `xi_p,xi_2p`, set
+  `chi(A,B)=(A xi_p,B(xi_2p+A xi_p))`.  Its tangent in direction `(H,G)` is
+  `(H xi_p,G xi_2p+(GA+BH)xi_p)` and its mixed acceleration in directions
+  `(H,G),(K,L)` is `(0,(GK+LH)xi_p)`.  The exact intrinsic source Gram is
+  `<H,K>_HS+<G,L>_HS+<GA+BH,LA+BK>_HS`.
+- **One scalar and owner completeness.**  Differentiating the R-141 production
+  scalar gives the intrinsic source Hessian
+  `9I/10+P_pred L^*(Q_comp+Q_6)L P_pred`.  The nonlinear controller pullback
+  adds exactly one pairing of the projected force with `(GK+LH)xi_p`.
+  Forward and legal reverse are adjoints of the same block, balanced is their
+  symmetric cross, and the R-153 endpoint/current and global PSD sextic forms
+  are included once.  The R-141 source-Doob low is a reparameterisation of the
+  source, not an independent low/Feshbach reserve.
+- **Nonzero neighbourhood.**  R-155 gives the pure-dyadic origin lower gap
+  `>147/1000`.  At fixed cutoff and floor the action is smooth on a finite
+  coefficient space and `chi` is polynomial.  The exact headroom above the
+  `1/10` target is `47/1000`; operator continuity therefore supplies some
+  `delta>0` for which `||A||_HS+||B||_HS<delta` retains both the pullback and
+  intrinsic tangent-image gaps above `1/10`.  The radius is existential.
+- **Coordinate-curvature no-go.**  On an aligned rank-one restriction,
+  `C(t,s)=9(t^2+s^2+t^2s^2)/20`.  At `t=s=R`, its controller Hessian has
+  eigenvalues `9(1-R^2)/10` and `9(1+3R^2)/10`; at `R=2` the first is
+  `-27/10` although the tangent source Gram remains positive.  This refutes
+  global nonlinear-pullback source convexity, not intrinsic production
+  convexity or T-050.
+- **Where proved.**  Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-shifted-state-nonzero-neighborhood-gap-boundary-260803-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_shifted_state_nonzero_neighborhood_gap_boundary_manifest.json`,
+  and the primary, non-importing independent, and integrated certificates
+  pinned there.
+- **Audit boundary.**  No numerical radius, cutoff/floor/refinement/chart
+  uniformity, realised-Gaussian-past fibrewise collar, general predictable
+  nonlinear/revisit gap, global finite-amplitude convexity, T-050 or A13
+  closure, Nelson, measure, phase, lattice, vacuum, BCC, PDE, or Sector-A
+  conclusion follows.
+- **Tier / publication target.**  Scoped T4
+  analytic/exact/executed/audited local continuation and coordinate-geometry
+  theorem; constructive-field-theory methods note after independent review.
 
 <a id="r-155"></a>
 ### R-155 -- Affine source-reuse factor-three endpoint and global origin gap

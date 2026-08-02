@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-156 shifted-state nonzero-neighbourhood gap boundary] - 2026-08-03
+
+Registered R-156. The actual predictable chart chi(A,B)=(A xi_p,B(xi_2p+A xi_p)) has an exact intrinsic source Gram and one projected-force/controller connection obtained from a single production scalar. Continuity from the R-155 pure-dyadic 147/1000 origin gap leaves 47/1000 headroom and proves an existential fixed-cutoff nonzero coefficient neighbourhood above 1/10. An exact rank-one R=2 witness gives nonlinear parameter-Hessian eigenvalue -27/10 while the tangent source metric stays positive, retiring global nonlinear-pullback source convexity and an invented-low completion only. Primary 29/29 and independent 21/21 pass; the deterministic five-page PDF passed full visual QA. T-050, A13, phase/PDE selection, and Sector A remain open; T-054/T-052 stay the primary model-selection path.
+
 ## [R-155 affine source-reuse factor-three global gap] - 2026-08-03
 
 Registered A13-CLASSII-AFFINE-SOURCE-REUSE-FACTOR-THREE-GLOBAL-GAP-BOUNDARY (R-155). The fixed-law affine zero-control Gaussian is defined once on the source/target union; injective doubling and distinct raw-source independence keep the source Gram diagonal and make all mixed covariance second jets zero. Factor-two reuse adds no endpoint edge. Exact Sturm and independent Fraction/Bernstein certificates prove a global origin-Hessian gap above 7/250 and a sharper 147/1000 pure-dyadic corollary, with the sextic Hessian retained as one global PSD form. The shifted-state companion is audited separately only at the stationary all-zero origin. Nonzero past, general nonlinear/revisit feedback, T-050/A13 closure, phase/PDE verdicts, Nelson, and Sector A remain open. Keep the minimum direct successor while T-054/T-052 advance in parallel.
