@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Pre-A evidence-first model-selection charter registered] - 2026-08-02
+
+Registered the operator-directed T0 Pre-A charter. Strong empirical constraints, their weak interpretations, and frozen holdouts must precede equation selection; the current production functional is one candidate alongside structurally different alternatives. T-052 is retained as its candidate-specific phase diagnostic, while T-053 becomes a shared boundary discriminator. EXP-000624 records that Pre-A is logically prior to physical interpretation but does not revoke conditional Sector-A mathematics, change any tier, select or retire an equation, or automatically replace active A13/T-050 work. T-054 owns the evidence register, candidate manifests, common discriminator matrix, robustness audit, and honest shortlist or non-selection outcome.
+
 ## [A13 R-147 canonical signed common terminal and production boundary] - 2026-08-02
 
 Registered the phase-neutral scoped T4 R-147 package. The actual fixed-cutoff R-141/R-142 terminal feature has an exact canonical signed Doob telescope, conditional recursion, continuous bracket form, and reveal-grid compression. Owner transport still requires the registered tower, incidence, and predictable trace-bracket conditions; equal endpoint law and centering are insufficient. The retained A1/R-075 P+L pair has affine-collinear curvature at least 2223/(25000P), while an exact active-spectator direction disproves global pair convexity above the stated threshold. The complete owner, T-050, A13, phase selection, Nelson, and Sector A remain open.

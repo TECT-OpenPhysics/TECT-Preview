@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 5 · Done (recent) 44
+Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 6 · Done (recent) 44
 
 ## In progress
 
@@ -41,6 +41,9 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 5 · Done (recent) 44
   - _updated 2026-08-02_
 - **T-053** Boundary-mode structural programme: common massless speed and critical property activation  _(owner: Codex; claim: E2-HBAR-ORIGIN)_
   - T0 cross-sector research seed. Use strategy/boundary-massless-mode-criticality-seed-260802.md to test whether a preregistered TECT boundary simultaneously yields the correct zero-mode count, a symmetry- or fixed-point-protected common limiting speed, compact phase winding, and critical scaling. Derive the full kinetic tensor and spectra on both sides; determine nu and z; require winding and charge/action scales before identifying hbar or e; freeze inputs before any alpha or mass-ratio comparison. Stop or narrow if equal speeds require separate tuning, regulator removal splits them, z=1 is unstable, topology is absent, or constants are inserted. Bears also on C2, C6, D2, and F1; no theorem or tier action.
+  - _updated 2026-08-02_
+- **T-054** Pre-A evidence register and candidate-functional tournament  _(owner: Codex)_
+  - Implement strategy/pre-a-evidence-first-model-selection-charter-260802.md. Build a primary-source evidence register that separates observables, uncertainties, weak constraints, and candidate interpretations; freeze discovery and holdout sets; register M0/M1 plus at least two structurally distinct candidate manifests; construct the common discriminator matrix; then run T-053 across candidates and treat T-052 only as the M1 phase-selection branch. No equation is privileged, no fitted output is counted as a prediction, and a justified shortlist or non-selection is a valid result. This task is logically prior to physical interpretation of Sector A but does not revoke conditional Sector-A mathematics or automatically replace active T-050.
   - _updated 2026-08-02_
 
 ## Done (recent)

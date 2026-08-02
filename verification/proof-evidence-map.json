@@ -7,7 +7,7 @@
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
     "RESULTS-LEDGER.md": "f5240b54405e8ac9281743a84e9a8cc4feb5ab71fcd86bda8d9b76daf22e5966",
-    "changelog/log.jsonl": "028afd136fec29e2b3426b69784dfba1ddd5292803d98d12beab0a4c23b66fa0",
+    "changelog/log.jsonl": "571cdaf631cc4681d5ce2723dc6744e15379df66a1dfba7c6d45997052584b70",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,9 +58,9 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "96860763e26315b221fa0aa11e4ed557a3dd0f5cb3dd1bab92d73b291d3eb013",
-    "explorations/log.jsonl": "fef23359af0e423dcd739757c91e9b7eb6bb66db5e42de3adb37e18a2f7a6c9e",
+    "explorations/log.jsonl": "ce96a1d3ad51773452d87ab46a0f154bdefb37dd0fb0ce59e204eb899297c403",
     "negative-results/registry.md": "347ed2914d3e0212dcbd850b321124e142cb8e53334d5520432bc96d0767560a",
-    "todo/todo.json": "43537f755aedafb23c6ce911b460291323d99dac3434b5b0eda17a88110ba722"
+    "todo/todo.json": "ee3dbde776912f030f3a6dacc5fa7d7523261b8f447fce55ff023e9407d667c7"
   },
   "coverage": {
     "status_cards": 49,
@@ -68,17 +68,17 @@
     "refuted_claims": 1,
     "reusable_results": 147,
     "negative_records": 219,
-    "proof_explorations": 623,
+    "proof_explorations": 624,
     "exploration_verdicts": {
-      "advanced": 350,
+      "advanced": 351,
       "failed": 199,
       "inconclusive": 56,
       "parked": 18
     },
     "process_grade_lessons": 3,
-    "accepted_events": 468,
-    "tasks": 53,
-    "live_tasks": 9,
+    "accepted_events": 469,
+    "tasks": 54,
+    "live_tasks": 10,
     "completed_tasks": 44,
     "open_gates": 18,
     "current_route_gates": 18,
@@ -2312,6 +2312,19 @@
       "updated": "2026-08-02",
       "blocked_by": [],
       "status_normalized": "backlog"
+    },
+    {
+      "id": "T-054",
+      "title": "Pre-A evidence register and candidate-functional tournament",
+      "status": "backlog",
+      "owner": "Codex",
+      "claim": null,
+      "gate": null,
+      "note": "Implement strategy/pre-a-evidence-first-model-selection-charter-260802.md. Build a primary-source evidence register that separates observables, uncertainties, weak constraints, and candidate interpretations; freeze discovery and holdout sets; register M0/M1 plus at least two structurally distinct candidate manifests; construct the common discriminator matrix; then run T-053 across candidates and treat T-052 only as the M1 phase-selection branch. No equation is privileged, no fitted output is counted as a prediction, and a justified shortlist or non-selection is a valid result. This task is logically prior to physical interpretation of Sector A but does not revoke conditional Sector-A mathematics or automatically replace active T-050.",
+      "created": "2026-08-02",
+      "updated": "2026-08-02",
+      "blocked_by": [],
+      "status_normalized": "backlog"
     }
   ],
   "open_gate_index": [
@@ -2944,16 +2957,18 @@
         "negative_tags": [],
         "exploration_ids": [
           "EXP-000589",
-          "EXP-000591"
+          "EXP-000591",
+          "EXP-000624"
         ],
-        "latest_exploration_id": "EXP-000591",
+        "latest_exploration_id": "EXP-000624",
         "accepted_event_ids": [
           "20260717-register-p1-production-functional-variational-a",
           "20260717-close-p1-reference-functional-variational-scaff",
           "20260717-close-a1-production-functional-p1-at-scoped-t4",
-          "20260717-promote-a1-production-functional-backend-to-sco"
+          "20260717-promote-a1-production-functional-backend-to-sco",
+          "20260802-pre-a-evidence-first-model-selection-charter-re"
         ],
-        "latest_event_id": "20260717-promote-a1-production-functional-backend-to-sco",
+        "latest_event_id": "20260802-pre-a-evidence-first-model-selection-charter-re",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -6187,9 +6202,10 @@
           "AUDIT-2026-07-19-A5-BUNDLE-NOTE-PDF-COMPLETENESS"
         ],
         "exploration_ids": [
-          "EXP-000590"
+          "EXP-000590",
+          "EXP-000624"
         ],
-        "latest_exploration_id": "EXP-000590",
+        "latest_exploration_id": "EXP-000624",
         "accepted_event_ids": [
           "20260718-p5-branch-aware-sector-a-synthesis-prepared-for",
           "20260719-enact-operator-confirmed-a5-branch-aware-synthe",
@@ -6200,9 +6216,10 @@
           "20260720-bundle-coverage-prefers-the-current-claim-tier",
           "20260720-align-sector-a-a1-a5-and-roadmap-records-2026-0",
           "20260722-rename-historical-bundle-paths-under-the-256-ch",
-          "20260729-add-deduplicated-registered-results-synthesis-2"
+          "20260729-add-deduplicated-registered-results-synthesis-2",
+          "20260802-pre-a-evidence-first-model-selection-charter-re"
         ],
-        "latest_event_id": "20260729-add-deduplicated-registered-results-synthesis-2",
+        "latest_event_id": "20260802-pre-a-evidence-first-model-selection-charter-re",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -8968,13 +8985,15 @@
         "result_ids": [],
         "negative_tags": [],
         "exploration_ids": [
-          "EXP-000623"
+          "EXP-000623",
+          "EXP-000624"
         ],
-        "latest_exploration_id": "EXP-000623",
+        "latest_exploration_id": "EXP-000624",
         "accepted_event_ids": [
-          "20260802-boundary-and-massless-mode-criticality-research"
+          "20260802-boundary-and-massless-mode-criticality-research",
+          "20260802-pre-a-evidence-first-model-selection-charter-re"
         ],
-        "latest_event_id": "20260802-boundary-and-massless-mode-criticality-research",
+        "latest_event_id": "20260802-pre-a-evidence-first-model-selection-charter-re",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -9206,16 +9225,18 @@
         "result_ids": [],
         "negative_tags": [],
         "exploration_ids": [
-          "EXP-000623"
+          "EXP-000623",
+          "EXP-000624"
         ],
-        "latest_exploration_id": "EXP-000623",
+        "latest_exploration_id": "EXP-000624",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
           "20260623-operator-review2-a2v12-b4-open-c6-blocked",
-          "20260802-boundary-and-massless-mode-criticality-research"
+          "20260802-boundary-and-massless-mode-criticality-research",
+          "20260802-pre-a-evidence-first-model-selection-charter-re"
         ],
-        "latest_event_id": "20260802-boundary-and-massless-mode-criticality-research",
+        "latest_event_id": "20260802-pre-a-evidence-first-model-selection-charter-re",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "C6-BCC-PREMISE-BLOCKED"
@@ -9331,13 +9352,15 @@
           "F-2026-04-30-flat-cartan"
         ],
         "exploration_ids": [
-          "EXP-000623"
+          "EXP-000623",
+          "EXP-000624"
         ],
-        "latest_exploration_id": "EXP-000623",
+        "latest_exploration_id": "EXP-000624",
         "accepted_event_ids": [
-          "20260802-boundary-and-massless-mode-criticality-research"
+          "20260802-boundary-and-massless-mode-criticality-research",
+          "20260802-pre-a-evidence-first-model-selection-charter-re"
         ],
-        "latest_event_id": "20260802-boundary-and-massless-mode-criticality-research",
+        "latest_event_id": "20260802-pre-a-evidence-first-model-selection-charter-re",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -9675,15 +9698,17 @@
           "NG-2026-legacy-classical-hbar"
         ],
         "exploration_ids": [
-          "EXP-000623"
+          "EXP-000623",
+          "EXP-000624"
         ],
-        "latest_exploration_id": "EXP-000623",
+        "latest_exploration_id": "EXP-000624",
         "accepted_event_ids": [
           "20260609-reviewer-facing-comprehensive-proof-unit-index",
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
-          "20260802-boundary-and-massless-mode-criticality-research"
+          "20260802-boundary-and-massless-mode-criticality-research",
+          "20260802-pre-a-evidence-first-model-selection-charter-re"
         ],
-        "latest_event_id": "20260802-boundary-and-massless-mode-criticality-research",
+        "latest_event_id": "20260802-pre-a-evidence-first-model-selection-charter-re",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -10107,12 +10132,15 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
-        "exploration_ids": [],
-        "latest_exploration_id": "",
-        "accepted_event_ids": [
-          "20260609-toe-completeness-audit-ledger-18-29-claims-ever"
+        "exploration_ids": [
+          "EXP-000624"
         ],
-        "latest_event_id": "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
+        "latest_exploration_id": "EXP-000624",
+        "accepted_event_ids": [
+          "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
+          "20260802-pre-a-evidence-first-model-selection-charter-re"
+        ],
+        "latest_event_id": "20260802-pre-a-evidence-first-model-selection-charter-re",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "GAP-4"
@@ -50443,6 +50471,57 @@
       "task_id": "T-053",
       "title": "Protected common speed and critical activation form a reusable boundary programme",
       "verdict": "parked"
+    },
+    {
+      "boundary": "This is a T0 strategy and route-selection record. It does not establish that the universe cooled into a rigid condensate, does not identify light with a fluctuation or mass with a defect, does not select or retire any equation, does not change a claim tier, and does not automatically replace active A13/T-050 work.",
+      "claim_ids": [
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "A5-SECTOR-A-SYNTHESIS",
+        "C2-LORENTZ-EMERGENT",
+        "C6-SPACETIME-SIGNATURE",
+        "D2-GAUGE-FORCING",
+        "E2-HBAR-ORIGIN",
+        "F3-INFLATION-CMB"
+      ],
+      "decision_reason": "Without an equation-neutral selection layer, completing Sector A can establish only an internally controlled conditional theory and any later comparison risks fitting observations with assumptions already embedded in the kernel. The recorded Pre-A tournament makes the founding ontology falsifiable and allows alternative equations to be tested on the same evidence.",
+      "evidence_refs": [
+        "strategy/pre-a-evidence-first-model-selection-charter-260802.md#section-2-why-a-pre-a-layer-is-needed",
+        "strategy/pre-a-evidence-first-model-selection-charter-260802.md#section-7-common-tournament-and-anti-fitting-rules",
+        "strategy/pre-a-evidence-first-model-selection-charter-260802.md#section-8-entry-and-exit-conditions",
+        "strategy/boundary-massless-mode-criticality-seed-260802.md#section-4-falsifier-first-programme",
+        "claims/F3-INFLATION-CMB/claim.md#no-overclaim"
+      ],
+      "finding": "Pre-A is logically prior to physical interpretation, though not to the validity of already established conditional Sector-A mathematics. The present equation is one candidate, not an axiom. A common evidence freeze, candidate manifest, discriminator matrix, robustness audit, and holdout prediction are required before a candidate is handed to a physical Sector-A programme; a justified shortlist or non-selection is an acceptable result.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [],
+      "id": "EXP-000624",
+      "method": [
+        "Separate mathematical closure of a fixed functional from empirical selection of that functional.",
+        "Decompose the founding cooling-transition-wave-defect ontology into independently falsifiable arrows.",
+        "Define an evidence intake that separates measured observables, weak constraints, candidate interpretations, discovery data, and holdout data.",
+        "Register the current production functional alongside a low-energy baseline and structurally different local, compact-gauge, geometric, and nonlocal candidate families.",
+        "Place T-052 as the current-functional phase diagnostic and T-053 as a shared cross-candidate boundary discriminator."
+      ],
+      "next_action": "Execute T-054 by building Pre-A Evidence Register v0.1 from primary sources, freezing discovery and holdout observables, registering M0/M1 and at least two structurally different candidate manifests, and publishing the common discriminator matrix before interpreting T-052 or T-053 as support for a microscopic law.",
+      "provenance": "contemporaneous",
+      "question": "Must TECT freeze strong empirical constraints and compare structurally different candidate equations before treating completion of the present Sector-A functional as a physical foundation?",
+      "recorded_at": "2026-08-02T12:09:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000623",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-02",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Pre-A separates physical model selection from conditional Sector-A mathematics",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -66939,6 +67018,57 @@
         "R-142": "explicit_result_id",
         "R-147": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260802-pre-a-evidence-first-model-selection-charter-re",
+      "date": "2026-08-02",
+      "header": "[Pre-A evidence-first model-selection charter registered] - 2026-08-02",
+      "claim_ids": [
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "A5-SECTOR-A-SYNTHESIS",
+        "C2-LORENTZ-EMERGENT",
+        "C6-SPACETIME-SIGNATURE",
+        "D2-GAUGE-FORCING",
+        "E2-HBAR-ORIGIN",
+        "F3-INFLATION-CMB"
+      ],
+      "keywords": [
+        "Pre-A",
+        "Sector-A",
+        "candidate-functional",
+        "evidence-first",
+        "falsifier",
+        "holdout",
+        "model-selection"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-evidence-first-model-selection-charter-260802.md"
+      ],
+      "scripts": [],
+      "raw": "## [Pre-A evidence-first model-selection charter registered] - 2026-08-02\n\nRegistered the operator-directed T0 Pre-A charter. Strong empirical constraints, their weak interpretations, and frozen holdouts must precede equation selection; the current production functional is one candidate alongside structurally different alternatives. T-052 is retained as its candidate-specific phase diagnostic, while T-053 becomes a shared boundary discriminator. EXP-000624 records that Pre-A is logically prior to physical interpretation but does not revoke conditional Sector-A mathematics, change any tier, select or retire an equation, or automatically replace active A13/T-050 work. T-054 owns the evidence register, candidate manifests, common discriminator matrix, robustness audit, and honest shortlist or non-selection outcome.\n\n",
+      "claim_refs": [
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "A5-SECTOR-A-SYNTHESIS",
+        "C2-LORENTZ-EMERGENT",
+        "C6-SPACETIME-SIGNATURE",
+        "D2-GAUGE-FORCING",
+        "E2-HBAR-ORIGIN",
+        "F3-INFLATION-CMB"
+      ],
+      "claim_ref_basis": {
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION": "explicit_claim_ids",
+        "A5-SECTOR-A-SYNTHESIS": "explicit_claim_ids",
+        "C2-LORENTZ-EMERGENT": "explicit_claim_ids",
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids",
+        "D2-GAUGE-FORCING": "explicit_claim_ids",
+        "E2-HBAR-ORIGIN": "explicit_claim_ids",
+        "F3-INFLATION-CMB": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [],
+      "result_ids": [],
+      "linked_result_ids": [],
+      "result_link_basis": {}
     }
   ],
   "all_tasks": [
@@ -67635,6 +67765,19 @@
       "claim": "E2-HBAR-ORIGIN",
       "gate": null,
       "note": "T0 cross-sector research seed. Use strategy/boundary-massless-mode-criticality-seed-260802.md to test whether a preregistered TECT boundary simultaneously yields the correct zero-mode count, a symmetry- or fixed-point-protected common limiting speed, compact phase winding, and critical scaling. Derive the full kinetic tensor and spectra on both sides; determine nu and z; require winding and charge/action scales before identifying hbar or e; freeze inputs before any alpha or mass-ratio comparison. Stop or narrow if equal speeds require separate tuning, regulator removal splits them, z=1 is unstable, topology is absent, or constants are inserted. Bears also on C2, C6, D2, and F1; no theorem or tier action.",
+      "created": "2026-08-02",
+      "updated": "2026-08-02",
+      "blocked_by": [],
+      "status_normalized": "backlog"
+    },
+    {
+      "id": "T-054",
+      "title": "Pre-A evidence register and candidate-functional tournament",
+      "status": "backlog",
+      "owner": "Codex",
+      "claim": null,
+      "gate": null,
+      "note": "Implement strategy/pre-a-evidence-first-model-selection-charter-260802.md. Build a primary-source evidence register that separates observables, uncertainties, weak constraints, and candidate interpretations; freeze discovery and holdout sets; register M0/M1 plus at least two structurally distinct candidate manifests; construct the common discriminator matrix; then run T-053 across candidates and treat T-052 only as the M1 phase-selection branch. No equation is privileged, no fitted output is counted as a prediction, and a justified shortlist or non-selection is a valid result. This task is logically prior to physical interpretation of Sector A but does not revoke conditional Sector-A mathematics or automatically replace active T-050.",
       "created": "2026-08-02",
       "updated": "2026-08-02",
       "blocked_by": [],
@@ -70738,6 +70881,12 @@
         "id": "event:20260802-boundary-and-massless-mode-criticality-research",
         "kind": "accepted_event",
         "label": "[Boundary and massless-mode criticality research seed registered] - 2026-08-02",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260802-pre-a-evidence-first-model-selection-charter-re",
+        "kind": "accepted_event",
+        "label": "[Pre-A evidence-first model-selection charter registered] - 2026-08-02",
         "authority": "CHANGELOG.md"
       },
       {
@@ -74485,6 +74634,12 @@
         "authority": "explorations/log.jsonl"
       },
       {
+        "id": "exploration:EXP-000624",
+        "kind": "proof_exploration",
+        "label": "Pre-A separates physical model selection from conditional Sector-A mathematics",
+        "authority": "explorations/log.jsonl"
+      },
+      {
         "id": "gate:A1-KERNEL-CONV",
         "kind": "hypothesis",
         "label": "A1-KERNEL-CONV",
@@ -77344,6 +77499,12 @@
         "id": "task:T-053",
         "kind": "task",
         "label": "Boundary-mode structural programme: common massless speed and critical property activation",
+        "authority": "todo/todo.json"
+      },
+      {
+        "id": "task:T-054",
+        "kind": "task",
+        "label": "Pre-A evidence register and candidate-functional tournament",
         "authority": "todo/todo.json"
       }
     ],
@@ -85146,6 +85307,48 @@
         "from": "event:20260802-boundary-and-massless-mode-criticality-research",
         "relation": "records",
         "to": "claim:F1-COSMO-DARK-SECTOR",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260802-pre-a-evidence-first-model-selection-charter-re",
+        "relation": "records",
+        "to": "claim:A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260802-pre-a-evidence-first-model-selection-charter-re",
+        "relation": "records",
+        "to": "claim:A5-SECTOR-A-SYNTHESIS",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260802-pre-a-evidence-first-model-selection-charter-re",
+        "relation": "records",
+        "to": "claim:C2-LORENTZ-EMERGENT",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260802-pre-a-evidence-first-model-selection-charter-re",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260802-pre-a-evidence-first-model-selection-charter-re",
+        "relation": "records",
+        "to": "claim:D2-GAUGE-FORCING",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260802-pre-a-evidence-first-model-selection-charter-re",
+        "relation": "records",
+        "to": "claim:E2-HBAR-ORIGIN",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260802-pre-a-evidence-first-model-selection-charter-re",
+        "relation": "records",
+        "to": "claim:F3-INFLATION-CMB",
         "basis": "explicit_claim_ids"
       },
       {
@@ -113037,6 +113240,60 @@
         "basis": "structured_task_id"
       },
       {
+        "from": "exploration:EXP-000624",
+        "relation": "assesses",
+        "to": "claim:A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000624",
+        "relation": "assesses",
+        "to": "claim:A5-SECTOR-A-SYNTHESIS",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000624",
+        "relation": "assesses",
+        "to": "claim:C2-LORENTZ-EMERGENT",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000624",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000624",
+        "relation": "assesses",
+        "to": "claim:D2-GAUGE-FORCING",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000624",
+        "relation": "assesses",
+        "to": "claim:E2-HBAR-ORIGIN",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000624",
+        "relation": "assesses",
+        "to": "claim:F3-INFLATION-CMB",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000624",
+        "relation": "continues",
+        "to": "exploration:EXP-000623",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000624",
+        "relation": "records_task",
+        "to": "task:T-054",
+        "basis": "structured_task_id"
+      },
+      {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
         "relation": "bears_on",
         "to": "claim:B1-RH-ENUM",
@@ -131923,6 +132180,57 @@
           "D2-GAUGE-FORCING": "explicit_claim_ids",
           "E2-HBAR-ORIGIN": "explicit_claim_ids",
           "F1-COSMO-DARK-SECTOR": "explicit_claim_ids"
+        },
+        "unresolved_claim_ids": [],
+        "result_ids": [],
+        "linked_result_ids": [],
+        "result_link_basis": {}
+      },
+      "20260802-pre-a-evidence-first-model-selection-charter-re": {
+        "id": "20260802-pre-a-evidence-first-model-selection-charter-re",
+        "date": "2026-08-02",
+        "header": "[Pre-A evidence-first model-selection charter registered] - 2026-08-02",
+        "claim_ids": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "C2-LORENTZ-EMERGENT",
+          "C6-SPACETIME-SIGNATURE",
+          "D2-GAUGE-FORCING",
+          "E2-HBAR-ORIGIN",
+          "F3-INFLATION-CMB"
+        ],
+        "keywords": [
+          "Pre-A",
+          "Sector-A",
+          "candidate-functional",
+          "evidence-first",
+          "falsifier",
+          "holdout",
+          "model-selection"
+        ],
+        "negative_results": [],
+        "notes": [
+          "strategy/pre-a-evidence-first-model-selection-charter-260802.md"
+        ],
+        "scripts": [],
+        "raw": "## [Pre-A evidence-first model-selection charter registered] - 2026-08-02\n\nRegistered the operator-directed T0 Pre-A charter. Strong empirical constraints, their weak interpretations, and frozen holdouts must precede equation selection; the current production functional is one candidate alongside structurally different alternatives. T-052 is retained as its candidate-specific phase diagnostic, while T-053 becomes a shared boundary discriminator. EXP-000624 records that Pre-A is logically prior to physical interpretation but does not revoke conditional Sector-A mathematics, change any tier, select or retire an equation, or automatically replace active A13/T-050 work. T-054 owns the evidence register, candidate manifests, common discriminator matrix, robustness audit, and honest shortlist or non-selection outcome.\n\n",
+        "claim_refs": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "C2-LORENTZ-EMERGENT",
+          "C6-SPACETIME-SIGNATURE",
+          "D2-GAUGE-FORCING",
+          "E2-HBAR-ORIGIN",
+          "F3-INFLATION-CMB"
+        ],
+        "claim_ref_basis": {
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION": "explicit_claim_ids",
+          "A5-SECTOR-A-SYNTHESIS": "explicit_claim_ids",
+          "C2-LORENTZ-EMERGENT": "explicit_claim_ids",
+          "C6-SPACETIME-SIGNATURE": "explicit_claim_ids",
+          "D2-GAUGE-FORCING": "explicit_claim_ids",
+          "E2-HBAR-ORIGIN": "explicit_claim_ids",
+          "F3-INFLATION-CMB": "explicit_claim_ids"
         },
         "unresolved_claim_ids": [],
         "result_ids": [],
