@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-02-A13-LOCAL-STENCIL-PRODUCTION-SIGN-NONIDENTIFIABILITY](#ng-2026-08-02-a13-local-stencil-production-sign-nonidentifiability) | infer the full action-signed production verdict from a local q567 fibre stencil, diagonal/edge magnitudes, a positive high core, and base/first feature jets | exact gauge-inequivalent q567 completions have inertias `(12+,0-)` and `(8+,4-)`; identical-magnitude returned-low completions have determinants `171/1024` and `-61/1024`; and equal base/first jets have full action Hessians `29/10` and `-11/10` |
+| [AUDIT-2026-08-02-A13-R144-FIBRE-SCHUR-COEFFICIENT-CORRECTION](#audit-2026-08-02-a13-r144-fibre-schur-coefficient-correction) | identify the draft q567 tensor fixture with the registered R-142 active fibre after setting `c0=a` | R-142 requires the Schur-completed coefficient `c0=a-b^2/c=3/(250P)`; the corrected fibre stays positive rank four, so the opposite tensor inertias are unchanged |
+| [AUDIT-2026-08-02-A13-R144-SEXTIC-THRESHOLD-CORRECTION](#audit-2026-08-02-a13-r144-sextic-threshold-correction) | require a separate sextic reserve after proving a positive source Hessian gap | the pre-registration R-144 draft compared `epsilon_6=3/20` with the stabilizer coefficient `3/20`, but the canonical T-050 threshold is `gamma/6=27/100`; the retained coefficient already has strict margin `3/25` |
 | [AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO](#audit-2026-08-02-a13-r142-q567-physical-output-factor-two) | use the R-142 integer collision `(17,33,65)` as a `q=5,6,7` common-output witness | the displayed `2114970` is `nN`, while the physical mode is `2nN=4229940`; sharp shell membership gives gaps `(6,7,8)`, so the witness is superseded only in its q567 label and replaced by the dyadic same-sign family `(10,20,40)` with carriers `(4M,2M,M)` |
 | [NG-2026-07-31-A13-WEDGE-ONLY-FUTURE-TELESCOPE](#ng-2026-07-31-a13-wedge-only-future-telescope) | obtain a terminal-minus-prefix future identity after retaining only a moving insertion-dependent wedge mask | discrete summation by parts leaves the internal variation `sum_e(chi_e-chi_(e+1))K_e`; alternating endpoints make this term grow while the terminal difference is zero, and a coherent far/near fixture exposes the same cancellation double-spend |
 | [NG-2026-07-31-A13-TAIL-ONLY-SHIFTED-DOUGLAS-HEADROOM](#ng-2026-07-31-a13-tail-only-shifted-douglas-headroom) | infer a strict shifted-Douglas or production-graph gap from an arbitrarily small collar tail alone | with `A0=2sqrt(ef)`, zero tail, and zero low coupling, the balanced two-channel block has an exact kernel for every tail bound; an independent low-coupled fixture shows that balanced headroom alone also does not force a gap |
@@ -214,6 +217,85 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-02-a13-local-stencil-production-sign-nonidentifiability"></a>
+### NG-2026-08-02-A13-LOCAL-STENCIL-PRODUCTION-SIGN-NONIDENTIFIABILITY -- local packet data do not determine the complete action sign
+
+**Claim / route.**  Promote a q567 three-layer/four-active-channel stencil,
+its diagonal fibre blocks and edge magnitudes, a positive 12-coordinate high
+core, and the base/first `U/Phi` jets to the sign of the complete
+reveal/visit/source/phase/anisotropic-low/returned-low production Hessian.
+
+**Failure mode.**  Three exact indistinguishability pairs preserve the stated
+input data while reversing the verdict.  First,
+`L_+=diag(1)+(3/4)(offdiag)` is positive with spectrum
+`(5/2,1/4,1/4)`, whereas changing one layer edge sign gives spectrum
+`(7/4,7/4,-1/2)`.  Tensoring either matrix with the registered positive
+rank-four R-142 fibre Gram gives inertias `(12+,0-)` and `(8+,4-)`; the
+triangle edge-sign product is gauge invariant.  Second, the positive core
+`[[1,29/32],[29/32,1]] direct-sum I_10` admits unit-low couplings
+`(1/4,+/-1/4,0,...)` with the same entrywise magnitudes but determinants
+`171/1024` and `-61/1024`.  Third, `U(t)=t` and
+`Phi_+/-=1+t+/-t^2` have the same base and first jet, while their action
+Hessians are `2` and `-2`, or `29/10` and `-11/10` after the exact source
+Hessian is added.
+
+**Evidence.**  R-144 proof note, Sections 4--8; primary symbolic/exact
+certificate; non-importing standard-library `Fraction` certificate.  The
+certificates also check the forward/legal-reverse factor-two mutation and the
+source-null graph-low range failure.
+
+**Consequence.**  A local stencil is a legal falsification fixture but is not
+a production sign certificate.  The next production object must declare the
+temporal source domain and common-output owner map, retain signed q/reveal and
+returned-low crosses, and provide either a uniform complete-feature
+contraction with bounded residual or every base/first/cross-second jet for the
+action Hessian.  This no-go rejects an inference from missing data; it is not
+a production counterexample and does not falsify T-050.
+
+<a id="audit-2026-08-02-a13-r144-fibre-schur-coefficient-correction"></a>
+### AUDIT-2026-08-02-A13-R144-FIBRE-SCHUR-COEFFICIENT-CORRECTION -- the draft fibre reconstruction omitted the Schur term
+
+**Failure mode.**  The pre-registration R-144 certificates initially set the
+active-fibre coefficient `c0=a`, where
+`a=cJJ alpha_X^2/P`.  R-142 and R-143 instead define the completed radial
+coefficient `c0=a-b^2/c`, with
+`b=cJK alpha_X beta_X/P` and `c=cKK beta_X^2/P`.
+
+**Evidence.**  Direct substitution of the A1 production manifest gives
+`c0=3/(250P)`, not `9/(500P)`.  Both corrected R-144 certificates derive the
+Schur complement from the upstream coefficients and assert that exact value.
+The corrected fibre remains positive with rank four; tensoring with the two
+three-layer completions therefore still gives inertias `(12+,0-)` and
+`(8+,4-)`.
+
+**Consequence.**  The q567 phase-cycle non-identifiability theorem and its
+negative-result verdict survive, but only the corrected certificates may call
+their tensor factor the registered R-142 fibre.  This was caught before
+release; no earlier registered theorem is changed.
+
+<a id="audit-2026-08-02-a13-r144-sextic-threshold-correction"></a>
+### AUDIT-2026-08-02-A13-R144-SEXTIC-THRESHOLD-CORRECTION -- the draft Hessian route used the wrong sextic threshold
+
+**Failure mode.**  The pre-registration R-144 draft derived the source-Hessian
+bound with sextic loss `epsilon_6=3/20`, then compared that value with the
+stabilizer coefficient `3/20` and incorrectly required an additional positive
+sextic reserve before T-050.
+
+**Evidence.**  The canonical T-050 gate in `claims/GATES.md` requires
+`epsilon_6<gamma/6`, with the A1 value `gamma/6=27/100`.  Exact rational
+recomputation gives
+`3/20<27/100` and margin `27/100-3/20=3/25`.  Independent hostile review found
+the mismatch before R-144 was release-gated; the corrected primary and
+standard-library certificates assert the canonical comparison directly.
+
+**Consequence.**  R-144 Theorem 3.1 is corrected to a second conditional
+T-050 sufficient route: a cutoff/chart/refinement/control-uniform positive
+source Hessian/Feshbach gap, origin-force bound, and absolute anchor suffice,
+with no extra sextic reserve.  The production hypotheses remain unproved, so
+T-050, A13, Nelson, and Sector A remain open.  The false draft verdict is
+preserved by `EXP-000594` and `EXP-000600`; append-only correction records
+supersede those parts without rewriting history.
 
 <a id="audit-2026-08-02-a13-r142-q567-physical-output-factor-two"></a>
 ### AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO -- R-142 coherence fixture used a half-output and the wrong moved layers

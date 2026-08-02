@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Register R-144 uniform Douglas one-use and reduced-Hessian boundary] - 2026-08-02
+
+Proves the sharp conditional affine-residual complete-feature lower bound and an alternative conditional reduced-action strong-convexity route. Corrects the T-050 threshold comparison and the R-142 fibre Schur coefficient under hostile audit. Exact phase-cycle, returned-low, legal-reverse, and second-jet fixtures delimit what the current local data can decide. No production chart or uniform branch hypotheses are supplied; T-050 and Sector A remain open.
+
 ## [A13 R-143 corrected q567 feature contraction and anisotropy-tail boundary] - 2026-08-02
 
 Audited the R-142 coherence fixture, restored the physical factor two, and reclassified it as q678. Added an exact even dyadic q567 family, the raw-signature/action sign firewall, a one-use complete feature with finite-family Douglas and source-null Feshbach criteria, and safe analytic high-shell anisotropy tails. Recorded separate PDE/BCC gate failures without reviving retired B3 authority. The production reveal/visit/q/channel matrix and both A13 gates remain open at T4.

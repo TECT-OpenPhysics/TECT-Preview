@@ -45,6 +45,9 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-02-A13-LOCAL-STENCIL-PRODUCTION-SIGN-NONIDENTIFIABILITY | local packet data do not determine the complete action sign |  |
+| AUDIT-2026-08-02-A13-R144-FIBRE-SCHUR-COEFFICIENT-CORRECTION | the draft fibre reconstruction omitted the Schur term |  |
+| AUDIT-2026-08-02-A13-R144-SEXTIC-THRESHOLD-CORRECTION | the draft Hessian route used the wrong sextic threshold |  |
 | AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO | R-142 coherence fixture used a half-output and the wrong mov |  |
 | NG-2026-07-31-A13-WEDGE-ONLY-FUTURE-TELESCOPE | a moving wedge mask leaves internal endpoint variation |  |
 | NG-2026-07-31-A13-TAIL-ONLY-SHIFTED-DOUGLAS-HEADROOM | a vanishing collar tail does not create a strict gap |  |

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-144](#r-144) | Uniform affine-residual Douglas one-use theorem and production-data boundary | Scoped T4 analytic/exact/conditional/executed/audited advance. If the complete feature action is `A=a+(||Y||^2-||U||^2)/2`, `U=CY+E`, `||C||<=rho<sigma<1`, `||E||<=M`, and `a>=-C0` uniformly, then `||U||^2<=sigma^2||Y||^2+sigma^2 M^2/(sigma^2-rho^2)` with a sharp residual constant. For the R-143 complete feature this gives strict one-use coefficients `(9/20)sigma^2` and `(3/20)sigma^2` simultaneously, so exact returned-low cancellation and complete second jets are unnecessary on this global route. Independently, a positive reduced/source-low effective Hessian gap with reduced origin-force and anchor bounds is sufficient: for chosen `p=11/10`, `9/20<1/(2p)=5/11` with margin `1/220`, while `3/20<gamma/6=27/100` with margin `3/25`. Hostile pre-registration audits corrected both the draft threshold comparison and the R-142 fibre Schur coefficient. Exact phase-cycle, returned-low, and equal-first-jet fixtures prove that the registered local q567/core data do not determine the production sign. The canonical temporal/common-output/low chart, production contraction or reduced Hessian gap, residual/force/anchor bounds, T-050, and Sector-A closure remain open |
 | [R-143](#r-143) | Corrected q=5,6,7 feature contraction and common-noise anisotropy tail | Scoped T4 analytic/exact/conditional/executed/audited advance. The R-142 `(17,33,65)` collision is corrected from a half-output q567 label to a physical-output q678 witness; the exact replacement `(10,20,40)` with carriers `(4M,2M,M)` has common output `80M`, gaps `(5,6,7)`, and one rational-coefficient sign. The complete recombined core is `2A=||Y||^2-||U||^2`, with source and sextic included once, and finite-family positivity is equivalent to one Douglas mixed-Gram contraction. A positive-diagonal/mixed-negative fixture proves diagonal tests insufficient; exact residual and source-null Feshbach formulas isolate the adverse coordinate. The A1 covariance has an exact common-endpoint scalar-plus-anisotropic probe factor, and certified rational mass intervals yield explicit high-shell derivative-trace bounds with diagnostic first included shells `N=27` and `N=49`. Missing production U/Phi jets, cross reveals, low blocks, and owner intertwiners prevent a production matrix verdict, T-050, or Sector-A closure |
 | [R-142](#r-142) | Innovation-compressed common feature, SU(2) fibre/covariance split, and signed collar band | Scoped T4 analytic/exact/conditional/executed advance. Common-future centering compresses the complete mixed-endpoint signature exactly from `(U,J,R)` with sign `(+,-,+)` to `(U,Phi)` with sign `(+,-)`; a shared covariance-square-root probe pins the actual fixed-chart trace feature, and the exact Hessian retains the favorable `D Phi^* D Phi` product covariance and both connection terms. The coefficient-exact SU(2) fibre Gram has four active modes, two phase kernels, transverse eigenvalue `339 r^2/(2000P)`, and a closed radial block. The registered A1 family-lock covariance is not SU(2)-invariant but splits into a scalar principal sea plus a positive anisotropic remainder four derivative-covariance powers smoother. A legal scalar two-root/two-visit chart has minimum at least `m_G=0.7653207581...` and covariance direction at least `21.08325...`; nevertheless the exact moved C8/C10 rational scalar-slice bands have finite-cutoff negative directions. The full non-Toeplitz production common-heat/trace/forest/low cross-reveal matrix, its Loewner edge, T-050, and Sector-A closure remain open |
 | [R-141](#r-141) | Projected force, global Doob signed Gram, adaptive collar, and quotient boundary | Scoped T4 analytic/exact/conditional/executed advance. The actual finite-chart action force is `g_comp=-g_T/2=g_CN-g_V/2`, so future variance is not charged again; predictable projection gives one self-adjoint Hessian whose legal reverse is already its adjoint. After exhaustive R-125 recombination, the actual common trace feature, raw current, and centered residual form the canonical signature `Z=(U,J,R)`, `S=diag(+,-,+)`, with `E<Z,SZ>=Theta-||Phi||^2=V-Forest_ad` in the complete aggregate. A conditional two-sided factorisation gives the exact signed Gram `[A+*SA-+A-*SA+]/2`; alternatively, global Doob conjugation spends source norm once while retaining cross-reveal blocks. The exact source-null quotient and low-kernel tests yield `mu_src=e-Lambda_C^2-sigma-kappa0-(a0+tau_C)^2/[4(f-sigma)]`. Positive-analysis collar shift gives diagnostic first collars `C=8` and `C=10`, but moves coherent three- and five-layer finite bands. Signed-correlation fixtures prove magnitude data cannot decide positivity. No production factorisation, uniform Loewner bound, positive graph gap, matching/anchor data, A13 gate, Nelson theorem, or Sector-A closure is proved |
@@ -162,6 +163,68 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-144"></a>
+### R-144 -- Uniform affine-residual Douglas one-use theorem and production-data boundary
+
+**Result ID.**
+`A13-CLASSII-UNIFORM-DOUGLAS-ONE-USE-PROJECTED-FORCE-LOW-COMPLETION-BOUNDARY`.
+
+**Sharp global theorem.**  Let the owner-complete action be
+`A=a+(||Y||^2-||U||^2)/2`, where `Y` is the R-143 complete feature containing
+`Phi`, `sqrt(9/10)h`, and `sqrt(3/10)|Z|^2Z` exactly once.  If
+`U=CY+E`, `||C||<=rho<sigma<1`, `||E||<=M`, and `a>=-C0` uniformly, then
+`||U||^2<=sigma^2||Y||^2+sigma^2 M^2/(sigma^2-rho^2)`.  The residual
+constant is sharp under norm data alone.  Subtracting the already included
+stabilizers gives source and sextic losses `(9/20)sigma^2` and
+`(3/20)sigma^2`, both strictly below their one-use thresholds.  Thus exact
+returned-low vanishing and complete second jets are not necessary on this
+global branch; a bounded exact residual suffices.
+
+**Projected-force alternative.**  The exact R-141 projected force and the full
+action-signed Hessian are retained with one source payment and one legal
+reverse/adjoint.  A uniform reduced/source-low effective Hessian gap plus a
+reduced origin-force bound improves the source loss to
+`max(0,9/20-(1-theta)mu/2)<9/20<5/11=1/(2p)` for chosen `p=11/10`, with base
+margin `1/220`, and leaves the sextic loss at `3/20<gamma/6=27/100`, with
+exact margin `3/25`.  The local Hessian branch is therefore a second
+sufficient route once its Douglas reduced-solution/Feshbach gap,
+origin-force bound, and absolute anchor are proved uniformly on the same
+reduced action.  Hostile pre-registration audits corrected the first draft's
+threshold comparison and its omitted R-142 fibre Schur term.
+
+**Information boundary.**  The production matrix acts on the declared
+predictable source chart plus genuine low variables, not on a formal product
+of every reveal, visit, q, phase, and channel label.  Exact fixtures show
+that q567 layer completions with the same diagonal and edge magnitudes have
+inertias `(12+,0-)` and `(8+,4-)`; equal-magnitude returned-low completions
+have determinants `171/1024` and `-61/1024`; and features with equal base and
+first jets have full action Hessians `29/10` and `-11/10`.  These prove
+non-identifiability from the registered partial data, not a negative
+production direction.
+
+**Where proved.**  Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`; note
+`classii-uniform-douglas-one-use-projected-force-low-completion-boundary-260802-v1.0`;
+primary, non-importing independent, and integrated certificates; manifest and
+JSON run artefacts; `EXP-000593--EXP-000602`;
+`NG-2026-08-02-A13-LOCAL-STENCIL-PRODUCTION-SIGN-NONIDENTIFIABILITY`;
+`AUDIT-2026-08-02-A13-R144-SEXTIC-THRESHOLD-CORRECTION`; and
+`AUDIT-2026-08-02-A13-R144-FIBRE-SCHUR-COEFFICIENT-CORRECTION`.
+
+**Reuse scope.**  Uniform Hilbert-space feature inequalities with bounded
+affine residuals, one-use budget extraction, projected-force radial
+convexity, source/low pullback typing, endpoint polarization, and exact
+non-identifiability fixtures.  No canonical production chart, uniform
+production contraction, residual or anchor bound, positive production
+Hessian/force/anchor bounds, legal adverse action vector, T-050, A13 gate, Nelson
+theorem, interacting measure, or Sector-A closure is supplied.
+
+**Tier.** T4.
+
+**Publication target.**  constructive-field-theory methods note after the
+canonical production chart and either global or local branch data are
+registered.
 
 <a id="r-143"></a>
 ### R-143 -- Corrected q=5,6,7 feature contraction and common-noise anisotropy tail

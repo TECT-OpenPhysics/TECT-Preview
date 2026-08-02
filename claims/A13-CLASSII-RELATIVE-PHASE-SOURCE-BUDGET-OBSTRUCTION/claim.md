@@ -4923,3 +4923,43 @@ T5--T7 promotion remain open. Tier stays T4.
   contraction/Loewner edge, source-null/low compatibility, positive graph
   gap, matching, absolute anchor, both A13 gates, `OVERLAP_src`, Nelson,
   removals, interacting measure, and Sector A remain open at T4.
+- 2026-08-02: Registered
+  `A13-CLASSII-UNIFORM-DOUGLAS-ONE-USE-PROJECTED-FORCE-LOW-COMPLETION-BOUNDARY`
+  (R-144) as a scoped analytic/exact/conditional/executed/audited advance and
+  production-data boundary.  For the owner-complete feature action
+  `A=a+(||Y||^2-||U||^2)/2`, a common-output decomposition `U=CY+E` with
+  uniform `||C||<=rho<sigma<1`, `||E||<=M`, and `a>=-C0` gives the sharp
+  bound `||U||^2<=sigma^2||Y||^2+sigma^2 M^2/(sigma^2-rho^2)`.  Since the
+  R-143 feature contains the source and sextic coordinates exactly once, the
+  resulting losses are `(9/20)sigma^2` and `(3/20)sigma^2`, both strict.
+  This makes exact returned-low cancellation and complete second jets
+  unnecessary on the preferred global branch.  A separate radial
+  projected-force theorem shows that a positive reduced/source-low effective
+  Hessian gap improves the source coefficient while the retained source base
+  `9/20<5/11=1/(2p)` for chosen `p=11/10` has margin `1/220` and the sextic
+  coefficient `3/20<gamma/6=27/100` has margin `3/25`.  Together with uniform
+  reduced origin-force and absolute-anchor bounds, the local branch is a
+  second sufficient route.  Hostile pre-registration audits corrected both
+  the draft threshold comparison and the omitted R-142 fibre Schur term
+  `c0=a-b^2/c=3/(250P)`.
+
+  The source/low pullback is type-corrected: source-null is a subspace, and
+  reveal/visit/q/channel labels are independent coordinates only when the
+  canonical chart declares them as such.  Endpoint polarization is exact,
+  while finite nonlinear secants are averaged Hessians and refinement
+  preserves congruence rather than spectra.  Exact q567 phase-cycle,
+  returned-low, and equal-first-jet fixtures give opposite signs from the
+  same registered partial data; these are recorded under
+  `NG-2026-08-02-A13-LOCAL-STENCIL-PRODUCTION-SIGN-NONIDENTIFIABILITY` as an
+  inference no-go, not a production counterexample.  `EXP-000593--EXP-000602`
+  preserve the two proof branches, all failure boundaries, and both append-only
+  corrections.  The corrections are registered as
+  `AUDIT-2026-08-02-A13-R144-SEXTIC-THRESHOLD-CORRECTION` and
+  `AUDIT-2026-08-02-A13-R144-FIBRE-SCHUR-COEFFICIENT-CORRECTION`.  Primary
+  `61/61` and non-importing independent `56/56` certificates pass; integrated
+  `313/313` embeds all `117` child rows exactly once and adds `196` authority,
+  threshold, audit, exploration, PDF, scope, aggregation, and public-surface
+  checks.  The canonical temporal/common-output/low production chart, uniform contraction
+  and residual/anchor data or complete Hessian/Feshbach/force/anchor data,
+  T-050, both A13 gates, `OVERLAP_src`, Nelson, removals, interacting measure,
+  and Sector A remain open at T4.

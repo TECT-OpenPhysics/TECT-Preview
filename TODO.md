@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
-  - R-143 checkpoint: corrected the R-142 q567 witness to q678, supplied an exact q567 family, reduced each finite complete-feature family to Douglas/Feshbach tests, and bounded the common-noise anisotropy tail. Next register the temporally faithful reveal/visit/q/channel production chart, retain exact low modes, and compute the generalized edge plus source-null lift. Sector A remains open.
+  - R-144 proves two conditional sufficient routes without closing T-050. Preferred Branch A: register the canonical temporal/common-output/conditional-low/returned-low chart and prove uniform U=CY+E contraction, bounded exact residual, and anchor. Alternative Branch B: on the same C2 reduced action prove the Douglas reduced-solution compatibility, a uniform reduced/source-low effective Hessian gap after the reduced tail, reduced origin-force bound, and anchor. Exact local completion fixtures show current q567/core data cannot decide the production sign. T-050, A13, Nelson, and Sector A remain open.
   - _updated 2026-08-02_
 
 ## Next up

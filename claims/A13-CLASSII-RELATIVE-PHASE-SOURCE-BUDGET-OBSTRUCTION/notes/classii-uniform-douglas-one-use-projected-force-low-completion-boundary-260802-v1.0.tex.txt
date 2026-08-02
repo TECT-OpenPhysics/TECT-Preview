@@ -1,0 +1,720 @@
+% =============================================================================
+% Title: Uniform Douglas one-use, projected force, and low-completion boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-UNIFORM-DOUGLAS-ONE-USE-PROJECTED-FORCE-LOW-COMPLETION-BOUNDARY
+% Ledger: R-144
+% Version: v1.0 -- first issued 2026-08-02; this version issued 2026-08-02
+% Status: scoped T4 analytic/exact/conditional/executed advance; no A13 gate closure
+% Audit: AUDIT-2026-08-02-A13-R144-SEXTIC-THRESHOLD-CORRECTION
+% Audit: AUDIT-2026-08-02-A13-R144-FIBRE-SCHUR-COEFFICIENT-CORRECTION
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\cY}{\mathcal Y}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+\hypertarget{section-1-result}{ }
+
+R-143 put the complete fixed-chart action into the one-use feature form
+\[
+ \cY_\pi(h)=\Phi_\pi(h)
+ \oplus\sqrt{9\over10}\,h
+ \oplus\sqrt{3\over10}\,|Z_{K,h}|^2Z_{K,h},
+ \qquad
+ 2\cA_\pi(h)=\|\cY_\pi(h)\|^2-\|\cU_\pi(h)\|^2.       \tag{1.1}
+\]
+The missing production contraction was previously phrased as an exact map
+from $\cY$ to $\cU$.  The first new result of R-144 is that exactness is not
+necessary.  A strict common-output contraction plus a uniformly bounded
+returned-low residual already gives both strict one-use coefficients, with a
+sharp residual constant.  It is therefore one sufficient route to
+T-050 and does not require second differentiation of every production
+feature.
+
+The second result separates that route from the projected-force Hessian
+alternative.  A positive reduced/source-low effective Hessian gap improves the $9/20$ source
+coefficient, while the retained sextic loss $3/20$ is already strictly below
+the canonical T-050 threshold $\gamma/6=27/100$.  Thus the reduced effective gap,
+origin-force bound, and absolute anchor form a second sufficient route.  This
+comparison was corrected during hostile pre-registration review: the first
+draft incorrectly compared $3/20$ with itself rather than with $\gamma/6$.
+
+The third result makes the remaining matrix request type-correct and
+falsifiable.  The Hessian domain is the declared predictable source chart
+plus genuine low auxiliaries.  The $q$, fibre, reveal, and visit labels enter
+that domain only when the chart declares independent tangent directions;
+otherwise they label maps into a common physical feature space.  Exact
+phase-cycle, returned-low, and equal-first-jet fixtures prove that the current
+local data do not determine the production sign.
+
+All conclusions are at fixed finite cutoff and positive floor, except for
+explicitly uniform hypotheses.  No production chart, common-output
+contraction, bounded residual, absolute anchor, positive Hessian gap,
+origin-force bound, T-050 closure, A13 gate, Nelson estimate, removal,
+interacting measure, Sector-A closure, or tier promotion is asserted.
+
+\section*{2. Sharp affine-residual complete-feature theorem}
+\hypertarget{section-2-affine-residual}{ }
+
+Let the owner-complete action, including its absolute normalization, be
+\[
+ \cA_{J,\pi}(h)=a_{J,\pi}
+ +{1\over2}\{\|\cY_{J,\pi}(h)\|^2
+                    -\|\cU_{J,\pi}(h)\|^2\}.          \tag{2.1}
+\]
+The feature $\cY$ is exactly (1.1): its source and sextic coordinates are
+already present and may not be paid again.  Assume that, on the complete
+production feature span, there is one linear common-output map $C_{J,\pi}$
+and residual $E_{J,\pi}(h)$ such that
+\[
+ \cU_{J,\pi}(h)=C_{J,\pi}\cY_{J,\pi}(h)+E_{J,\pi}(h). \tag{2.2}
+\]
+
+% evidence-anchor: theorem-2.1-affine-residual-douglas
+\textbf{Theorem 2.1 (sharp affine-residual Douglas bound).}
+Suppose there are constants
+\[
+ 0\leq\rho<\sigma<1,\qquad M<\infty,\qquad C_0<\infty                \tag{2.3}
+\]
+uniform in cutoff, chart, refinement, and admissible $h$, with
+\[
+ \|C_{J,\pi}\|\leq\rho,
+ \qquad \|E_{J,\pi}(h)\|\leq M,
+ \qquad a_{J,\pi}\geq-C_0.                          \tag{2.4}
+\]
+Then
+\[
+\boxed{
+ \cA_{J,\pi}(h)\geq
+ -C_0-{\sigma^2M^2\over2(\sigma^2-\rho^2)}
+ +{1-\sigma^2\over2}\|\cY_{J,\pi}(h)\|^2.}        \tag{2.5}
+\]
+The residual coefficient in (2.5) is sharp under norm data alone.
+
+\textit{Proof.}
+Put $y=\|\cY\|$ and $m=\|E\|$.  The triangle inequality and
+$\|C\|\leq\rho$ give $\|\cU\|\leq\rho y+m$.  For
+$\delta=\sigma^2-\rho^2>0$,
+\[
+\begin{split}
+ &\sigma^2y^2+{\sigma^2\over\delta}m^2-(\rho y+m)^2\\
+ &\hspace{20mm}={1\over\delta}(\delta y-\rho m)^2\geq0.
+\end{split}                                                          \tag{2.6}
+\]
+Substitution in (2.1) proves (2.5).  Equality in (2.6) occurs at
+$y=\rho m/\delta$, proving sharpness. \hfill$\square$
+
+Write
+\[
+ X(h)=\E\sum_k\|h_k\|_2^2,
+ \qquad Y_6(h)=\E\|Z_{K,h}\|_6^6.                  \tag{2.7}
+\]
+Since
+\[
+ \|\cY(h)\|^2=\|\Phi(h)\|^2+{9\over10}X(h)
+                                  +{3\over10}Y_6(h),                  \tag{2.8}
+\]
+subtracting the stabilizers from (2.5) gives the exact consequence
+\[
+\boxed{
+ \begin{split}
+ \E V_J^{\rm ren}(Z_h)\geq{}&
+ -{9\over20}\sigma^2X(h)-{3\over20}\sigma^2Y_6(h)\\
+ &+{1-\sigma^2\over2}\|\Phi(h)\|^2
+ -C_0-{\sigma^2M^2\over2(\sigma^2-\rho^2)}.
+ \end{split}}                                                        \tag{2.9}
+\]
+Choose the comparison exponent $p=11/10$ and retain the Nelson
+exponent $q=10/9$.  Then $q-p=1/90$ and
+\[
+ \epsilon_v={9\over20}\sigma^2<{9\over20}={1\over2q}
+ <{5\over11}={1\over2p},
+ \qquad {5\over11}-{9\over20}={1\over220},
+ \qquad
+ \epsilon_6={3\over20}\sigma^2<{3\over20}<{\gamma\over6}.         \tag{2.10}
+\]
+where the A1 value is $\gamma=81/50$ and $\gamma/6=27/100$.
+
+% evidence-anchor: corollary-2.2-t050-sufficient-condition
+\textbf{Corollary 2.2.}
+The uniform hypotheses (2.1)--(2.4), on the full R-093 directed chart union,
+are sufficient for the controlled-shell one-use inequality T-050.  They have
+not been proved for the production features.  If $E=0$, one may let
+$\sigma\downarrow\rho$ and recover the exact R-143 contraction coefficients.
+
+The bounded residual is useful for the actual research interface: a
+returned-low column need not vanish or be absorbed into a second source
+payment.  It may remain as $E$, provided its complete Hilbert norm has a
+cutoff/chart-uniform bound.  A residual which grows with $h$ or the cutoff
+does not meet (2.4).
+
+\section*{3. Global feature route versus Hessian fallback}
+\hypertarget{section-3-force}{ }
+
+The exact projected production force from R-141 is
+\[
+ \bigl(g_\pi^{\rm prod}(h)\bigr)_b
+ ={9\over10}h_b+
+ \E\left[S_b^*\left\{
+ {9\over10}|Z_h|^4Z_h-{1\over2}\sum_\alpha
+ G_{{\cal T},\alpha}(Z_h)
+ \right\}\middle|\mathcal F_{t_{b-1}}\right].       \tag{3.1}
+\]
+The covariance-normal future-variance force cancels when the actual action
+owner is restored and is not appended again.
+
+If $i,j$ are declared source/low chart directions, the action-signed Hessian
+is
+\[
+\begin{split}
+ H_{ij}={}&{9\over10}G^{\rm src}_{ij}
+ +\Re\ip{\Phi_i}{\Phi_j}+\Re\ip{\Phi}{\Phi_{ij}}\\
+ &-\Re\ip{U_i}{U_j}-\Re\ip{U}{U_{ij}}+S^{(6)}_{ij}.
+\end{split}                                                          \tag{3.2}
+\]
+There is no extra factor two in (3.2).  If a computation starts from the raw
+signature $K=\|U\|^2-\|\Phi\|^2$, it must first use
+\[
+ D^2\cP_{\rm comp}=-{1\over2}D^2K.                  \tag{3.3}
+\]
+
+% evidence-anchor: theorem-3.1-source-gap-boundary
+\textbf{Theorem 3.1 (source-gap sufficient condition).}
+Let $\cA^{\rm red}_{J,\pi}(h)$ be a $C^2$ complete action on a source domain
+star-shaped about zero.  It must equal the action pulled back to the exact
+admissible low graph, including every graph connection term.  If the low is
+an independent variable eliminated stationarily, it is instead the attained
+$C^2$ reduced action after the null-range and regularity hypotheses that make
+the stationary reduction attained and $C^2$, not
+the bare source--source principal block.  Write
+$g^{\rm red}=D\cA^{\rm red}$.
+Equip every declared source chart with
+$\|h\|_{\rm src}^2=X(h)$ and use its realified six-real Hilbert pairing.
+Assume that the same constants
+$\mu>0$, $B_g<\infty$, and $C_0<\infty$ work uniformly in cutoff, chart,
+representation-preserving refinement, and admissible control.  For every
+declared source direction $v$ and every $t\in[0,1]$, require
+\[
+ D^2\cA^{\rm red}(th)[v,v]\geq\mu\|v\|_{\rm src}^2,
+                                                        \tag{3.4}
+\]
+and
+\[
+ \|g^{\rm red}(0)\|_{\rm src,*}^2\leq B_g,
+ \qquad \cA^{\rm red}(0)\geq-C_0.                 \tag{3.5}
+\]
+Then for every $0<\theta<1$,
+\[
+\boxed{
+ \E V_J^{\rm ren}(Z_h)\geq
+ -\left\{{9\over20}-{(1-\theta)\mu\over2}\right\}X(h)
+ -{3\over20}Y_6(h)-C_0-{B_g\over2\theta\mu}.}      \tag{3.6}
+\]
+All quantities in (3.6), including $Z_h$ and $Y_6(h)$, are evaluated on the
+same reduced low graph used to define $\cA^{\rm red}$.
+
+\textit{Proof.}
+Strong convexity gives
+$\cA^{\rm red}(h)\geq\cA^{\rm red}(0)
++\Re\ip{g^{\rm red}(0)}{h}+\mu X(h)/2$.
+The dual Young bound
+\[
+ \Re\ip{g^{\rm red}(0)}{h}\geq-{\theta\mu\over2}X(h)
+                         -{B_g\over2\theta\mu}      \tag{3.7}
+\]
+and subtraction of the two stabilizers prove (3.6). \hfill$\square$
+
+Equation (3.6) gives a strict source coefficient and the sextic coefficient
+$3/20$.  For $p=11/10$, the source comparison is
+\[
+ \max\left\{0,{9\over20}-{(1-\theta)\mu\over2}\right\}
+ <{9\over20}<{5\over11}={1\over2p},
+ \qquad {5\over11}-{9\over20}={1\over220}.           \tag{3.8}
+\]
+The canonical sextic comparison is
+\[
+ {\gamma\over6}={27\over100},
+ \qquad {3\over20}<{27\over100},
+ \qquad {27\over100}-{3\over20}={3\over25}.       \tag{3.9}
+\]
+Consequently (3.4)--(3.5), uniformly on the full directed chart union, are
+already sufficient for T-050.  No additional sextic reserve is required.
+If the displayed source coefficient is negative, discard the favorable
+positive multiple of $X$ and take
+\[
+ \epsilon_v=\max\left\{0,{9\over20}-{(1-\theta)\mu\over2}\right\}
+ <{9\over20}<{5\over11}={1\over2p},
+ \qquad \epsilon_6={3\over20}<{27\over100}.       \tag{3.10}
+\]
+The unproved production inputs are the positive reduced/source-low Feshbach gap,
+the origin-force bound, and the absolute anchor.
+
+This comparison leaves two efficient sufficient routes.  The global theorem
+in Section 2 creates both margins and makes second jets optional.  The local
+route (3.2) is equally valid if the common-output contraction fails or cannot
+be proved, provided its reduced source gap, origin force, and anchor are uniform.
+
+\section*{4. Type-correct source, packet, and low domains}
+\hypertarget{section-4-domain}{ }
+
+For a fixed temporally faithful chart,
+\[
+ \cS_\pi^{\rm pred}
+ =\bigoplus_bL^2(\Omega,\mathcal F_{t_{b-1}};\cS_b),
+ \qquad L_\pi h=\sum_bS_bh_b.                       \tag{4.1}
+\]
+Let $\ell$ be a genuinely independent returned-low coordinate and write the
+physical positive feature as
+\[
+ P(x,\ell)=\Phi(x,\ell)
+       \oplus\sqrt{3\over10}|Z(x,\ell)|^2Z(x,\ell). \tag{4.2}
+\]
+With
+\[
+ E(x,\ell)={1\over2}\{\|P(x,\ell)\|^2-\|U(x,\ell)\|^2\},
+ \qquad T=\operatorname{diag}(L_\pi,\Id_\ell),       \tag{4.3}
+\]
+the full action is
+\[
+ \cA(h,\ell)={9\over20}\|h\|^2+E(T(h,\ell)),       \tag{4.4}
+\]
+and hence
+\[
+\boxed{
+ D^2\cA=
+ \begin{pmatrix}{9\over10}\Id&0\\0&0\end{pmatrix}
+ +T^*(D^2E)T.}                                      \tag{4.5}
+\]
+In physical/low blocks $Q=D^2E$, this means
+\begin{equation}
+ \begin{aligned}
+ H_{hh}={9\over10}\Id+L_\pi^*Q_{xx}L_\pi,&
+ H_{h\ell}=L_\pi^*Q_{x\ell},\\
+ H_{\ell h}=Q_{\ell x}L_\pi,&H_{\ell\ell}=Q_{\ell\ell}.
+ \end{aligned}                                      \tag{4.6}
+\end{equation}
+For $n\in\Ker L_\pi$,
+\[
+ D^2\cA[(n,0),(m,k)]={9\over10}\Re\ip{n}{m}.       \tag{4.7}
+\]
+Thus $\Ker L_\pi$ carries exactly $9\Id/10$ and decouples after the
+orthogonal split
+\[
+ \cS_\pi=\Ker L_\pi\oplus(\Ker L_\pi)^\perp.       \tag{4.8}
+\]
+It is a subspace, not an extra coordinate.  If instead the low is graph-tied,
+$\ell=\Lambda h$, the synthesis is $(L_\pi,\Lambda)$; (4.7) requires
+$\Lambda(\Ker L_\pi)=0$.  A nonlinear $\Lambda$ also has connection terms.
+
+For the R-143 $q=(5,6,7)$ family, three gaps times four active fibre modes
+give a 12-coordinate local stencil only after a chart declares those tangent
+directions.  Adding the two phase directions gives 18 fibre coordinates per
+declared temporal coordinate.  The R-142 two-root/two-visit scalar chart has
+three source coordinates, so a formal tensor chart would have 54 packet
+coordinates, 36 active and 18 phase.  This is not a production dimension:
+the tensor independence and cross blocks have not been registered.
+
+No canonical production temporal index set is registered here.  The future
+chart must define every root, visit, reveal time, source atom, and filtration
+constraint explicitly, after same-root visits have been telescoped before
+owner formation.  Its $q$/channel/reveal pieces may be maps from that declared
+source domain into one common output.  Replacing the common output by an
+artificial direct sum deletes their cross Gram and changes the form.  This is
+a specification requirement, not an asserted production coordinate formula.
+
+\section*{5. Endpoint secants and refinement}
+\hypertarget{section-5-secant}{ }
+
+For two complete endpoints $q=(h,\ell)$ and $q_0=(h_0,\ell_0)$, exact
+polarization gives
+\[
+\begin{split}
+ 2\{\cA(q)-\cA(q_0)\}={}&{9\over10}
+ (\|h\|^2-\|h_0\|^2)\\
+ &+\Re\ip{P(q)+P(q_0)}{P(q)-P(q_0)}\\
+ &-\Re\ip{U(q)+U(q_0)}{U(q)-U(q_0)}.
+\end{split}                                                          \tag{5.1}
+\]
+This is an exact derivative-free endpoint route and retains baseline/low
+crosses.  It can replace the jet route when a uniform global contraction such
+as Theorem 2.1 is proved.
+
+It must not be confused with a finite-step local Hessian.  Define the symmetric
+difference by
+$\Delta_{\varepsilon v}E(x)=E(x+\varepsilon v)-E(x-\varepsilon v)$.
+For a smooth functional $E$,
+\[
+ {\Delta_{\varepsilon v}\Delta_{\eta w}E(x)
+   \over4\varepsilon\eta}
+ ={1\over4\varepsilon\eta}
+ \int_{-\varepsilon}^{\varepsilon}
+ \int_{-\eta}^{\eta}D^2E(x+sv+tw)[v,w]\,dt\,ds.     \tag{5.2}
+\]
+Only a limit or a certified Hessian-variation remainder turns (5.2) into the
+local value at $x$.
+
+If a representation-preserving refinement has a linear isometric source
+embedding $\iota$ and $\cA_\pi=\cA_{\pi'}\circ I$, then
+\[
+ D^2\cA_\pi=I^*D^2\cA_{\pi'}I.                      \tag{5.3}
+\]
+Without isometry the source-cost defect is
+\[
+ {9\over10}(\Id-\iota^*\iota).                      \tag{5.4}
+\]
+A nonlinear refinement has the additional chain-rule connection
+$D\cA_{\pi'}\,D^2I$.  Congruence, not equality of matrix spectra, is the
+invariant statement.
+
+\section*{6. Exact q567 phase-cycle non-identifiability}
+\hypertarget{section-6-phase}{ }
+
+Let $B$ be the exact positive rank-four R-142 active fibre Gram at its
+registered audit point.  The executable reconstruction uses the R-142 Schur
+coefficient
+\[
+ a={c_{JJ}\alpha_X^2\over P},\quad
+ b={c_{JK}\alpha_X\beta_X\over P},\quad
+ c={c_{KK}\beta_X^2\over P},\quad
+ c_0=a-{b^2\over c}={3\over250P},                 \tag{6.0}
+\]
+not the uncompleted diagonal coefficient $a$.  A hostile pre-registration
+audit caught and corrected that omitted Schur term before release.  Consider
+\[
+ L_+=\begin{pmatrix}
+ 1&3/4&3/4\\3/4&1&3/4\\3/4&3/4&1
+ \end{pmatrix},
+ \qquad
+ L_-=\begin{pmatrix}
+ 1&3/4&3/4\\3/4&1&-3/4\\3/4&-3/4&1
+ \end{pmatrix}.                                     \tag{6.1}
+\]
+They have the same diagonal and the same magnitude on every edge, but
+\[
+ \operatorname{spec}L_+=\{5/2,1/4,1/4\},
+ \qquad
+ \operatorname{spec}L_-=\{7/4,7/4,-1/2\}.           \tag{6.2}
+\]
+Their determinants are $5/32$ and $-49/32$.  The products of the three edge
+signs are $27/64$ and $-27/64$.  Under layer sign gauges
+$s_{ij}\mapsto d_id_js_{ij}$ this cycle product is invariant, so the two
+completions are not gauge-equivalent.  Consequently
+\[
+ \operatorname{inertia}(L_+\otimes B)=(12,0,0),
+ \qquad
+ \operatorname{inertia}(L_-\otimes B)=(8,4,0).       \tag{6.3}
+\]
+
+There is an even smaller mixed-only obstruction.  With
+\[
+ G_Y=\Id_3,
+ \qquad G_U={3\over8}{\bf1}{\bf1}^T,                \tag{6.4}
+\]
+every diagonal margin is $5/8>0$, but
+\[
+ \operatorname{spec}(G_Y-G_U)=\{1,1,-1/8\},
+ \qquad \rho_*^2={9\over8}.                         \tag{6.5}
+\]
+Tensoring with $B$ yields four adverse active-fibre directions.  These are
+information-theoretic completions, not production counterdirections.  They
+prove that diagonal fibre data and edge magnitudes cannot decide the signed
+common-output block.
+
+\section*{7. Returned low and legal reverse}
+\hypertarget{section-7-low}{ }
+
+Even a fully known positive 12-coordinate core does not decide the augmented
+low sign.  Embed
+\[
+ A_{12}=\begin{pmatrix}1&29/32\\29/32&1\end{pmatrix}
+          \oplus\Id_{10},
+ \qquad \det A_{12}^{(2)}={183\over1024}>0.          \tag{7.1}
+\]
+Couple one returned-low coordinate by
+\[
+ v_+=(1/4,1/4,0,\ldots,0),
+ \qquad v_-=(1/4,-1/4,0,\ldots,0),                 \tag{7.2}
+\]
+and give it unit diagonal.  The two 13-coordinate completions have identical
+core, diagonals, and entrywise magnitudes, while
+\[
+ \det H_+={171\over1024}>0,
+ \qquad \det H_-=-{61\over1024}<0.                 \tag{7.3}
+\]
+This is the exact R-141 signed-low fixture embedded in the proposed core.
+
+Forward and legal reverse are one self-adjoint off-diagonal owner.  The entry
+$29/32$ in (7.1) already represents their symmetric block.  Charging it a
+second time replaces it by $29/16$ and mutates the determinant to
+\[
+ 1-(29/16)^2=-{585\over256}.                         \tag{7.4}
+\]
+Thus the unified matrix must contain the adjoint once, not assign a second
+budget to ``reverse.''  Balanced and low are other blocks of the same form,
+not independent opportunities to reuse source or sextic reserves.
+
+\section*{8. Base and first jets do not determine the Hessian}
+\hypertarget{section-8-jets}{ }
+
+Let
+\[
+ U(t)=t,
+ \qquad \Phi_\pm(t)=1+t\pm t^2,
+ \qquad K_\pm(t)=U(t)^2-\Phi_\pm(t)^2.              \tag{8.1}
+\]
+The two features have the same base and first jet.  Nevertheless
+\[
+ K_+''(0)=-4,
+ \qquad K_-''(0)=4,                                 \tag{8.2}
+\]
+and the action owner $\cP_{\rm comp}=-K/2$ has
+\[
+ \cP_+''(0)=2,
+ \qquad \cP_-''(0)=-2.                              \tag{8.3}
+\]
+After the source-stabilizer Hessian $9/10$ is added, the signs remain opposite:
+\[
+ H_{\cA,+}={29\over10},
+ \qquad H_{\cA,-}=-{11\over10}.                    \tag{8.4}
+\]
+The unit signed feature-chord quadratic values are $3$ and $-1$, not the local Hessians $2$ and
+$-2$.  Hence a finite endpoint chord is not a substitute for the connection
+terms $\ip{\Phi}{\Phi_{ij}}-\ip{U}{U_{ij}}$.  The alternatives are precise:
+prove the global feature theorem of Section 2, or supply the full cross-second
+jets and use (3.2).
+
+Sections 6--8 are registered together as
+\texttt{NG-2026-08-02-A13-LOCAL-STENCIL-}\allowbreak
+\texttt{PRODUCTION-SIGN-NONIDENTIFIABILITY}.
+The no-go rejects an inference from incomplete data; it does not reject the
+production action or T-050.
+
+\section*{9. Unified production decision theorem}
+\hypertarget{section-9-decision}{ }
+
+The current proof tree now has two nonduplicative branches.
+
+\textbf{Branch A: global complete-feature route.}
+Register one canonical temporal chart and common-output owner map, including
+the conditional/complete low distinction and the shared covariance probe.
+Prove (2.2)--(2.4) uniformly.  This directly gives (2.9), both strict margins,
+and T-050.  No $U/\Phi$ second jets are needed on this branch.
+
+\textbf{Branch B: local action route.}
+If Branch A fails or is unavailable, register
+\[
+ Y_0,U_0,\qquad Y_i,U_i,
+ \qquad Y_{ij},U_{ij}                                \tag{9.1}
+\]
+with the same future projection, output cluster, owner partition, and shared
+probe.  Assemble (3.2), with the exact anisotropic finite-low and returned-low
+blocks.  For stationary elimination, type $H_{00}$ as the eliminated
+low/danger block and $H_{11}$ as the source block.  Uniformly at every point
+of the reduced graph and for every cutoff, cylindrical chart, and
+representation-preserving refinement, check
+\[
+ H_{00}\succeq0,
+ \qquad \Ran H_{01}\subseteq\Ran H_{00}^{1/2},      \tag{9.2}
+\]
+and let $W$ be the Douglas reduced solution
+\[
+ H_{00}^{1/2}W=H_{01},
+ \qquad H_{\rm eff}=H_{11}-W^*W.                    \tag{9.3}
+\]
+This is the bounded-Hilbert-space reduced-solution form of the exact R-140
+finite-dimensional graph--Feshbach algebra.  On a finite cylindrical chart it
+agrees with $H_{11}-H_{10}H_{00}^{\dagger}H_{01}$; no unbounded pseudoinverse
+is used on the full predictable $L^2$ source space.  Require uniformly
+$H_{\rm eff}\succeq\mu_{\rm finite}G_{\rm src}$.
+To feed Theorem 3.1, the stationary infimum must define the same $C^2$ reduced
+action (for example through an attained minimizer with a regular stationary
+graph), and the uniform cylindrical estimates must extend to the declared
+source domain.  Add the transformed analytic tail only after
+the finite block.  Here $H_{\rm tail}$ must already be the
+reduced/pulled-back source tail, rather than an unevaluated ambient mixed
+block.  Prove one uniform
+$\mu=\mu_{\rm finite}-\|H_{\rm tail}\|>0$, so that, relative to the source
+metric $G_{\rm src}$ defining $X(h)$,
+\[
+ H_{\rm eff}+H_{\rm tail}\succeq\mu G_{\rm src}.       \tag{9.4}
+\]
+on the entire reduced graph.  If low is instead a prescribed
+nonlinear graph, replace (9.3) by the full pullback Hessian, including the
+$D\cA\,D^2\Lambda$ connection term.  In either case the force bound and
+anchor in (3.5) must be those of the same reduced action.  These hypotheses
+give (3.4), hence T-050 because both $9/20<5/11$ and
+$3/20<\gamma/6$.  A nonpositive edge must be lifted
+through (9.3) and checked as a legal action direction; it is not enough that a
+Douglas feature test failed.
+
+The minimal machine-readable production object is therefore:
+\begin{enumerate}
+\item the reveal order, visits, source blocks, bases, and synthesis $L_\pi$;
+\item full q567 Fourier vectors, real-even normalization, phases, and common
+      output-cluster assignments;
+\item one owner roster for covariance root, future projection, heat
+      coordinate, output, channel, and shared trace probe;
+\item either the complete endpoint maps $(\cY,\cU)$ on the admissible graph,
+      or every base, first, and cross-second jet;
+\item independent conditional-low and complete returned-low maps, or the
+      exact graph law tying them to $h$;
+\item the anisotropic finite-low block, complement gap, transformed tail, and
+      representation-preserving refinement embeddings;
+\item a uniform contraction/residual/anchor certificate for Branch A, or a
+      Hessian/Feshbach/origin-force/anchor certificate for Branch B.
+\end{enumerate}
+
+This unifies forward, legal reverse, balanced, and low.  They are block labels
+inside one self-adjoint complete-owner object.  Primitive trace, future
+variance, R-063 forest, predictable mean, and returned low remain alternate or
+signed coordinates with their registered multiplicities; none becomes a new
+positive reserve merely by appearing in the matrix.
+
+\section*{10. Route ledger and consequences}
+\hypertarget{section-10-roadmap}{ }
+
+\begin{center}
+\begin{tabular}{p{0.24\textwidth}p{0.15\textwidth}p{0.51\textwidth}}
+\hline
+Route & Verdict & Consequence\\
+\hline
+Exact global contraction $\cU=C\cY$ & conditional advance & R-143 criterion; R-144 translates it to both strict T-050 coefficients.\\
+Strict contraction plus bounded low residual & new conditional advance & Theorem 2.1; exact low cancellation is unnecessary, and the residual cost is sharp.\\
+Positive reduced/source-low effective Hessian gap with force and anchor & conditional advance & Improves $\epsilon_v$ and retains $\epsilon_6=3/20<27/100$ with margin $3/25$.\\
+Draft sextic/source threshold comparison & corrected audit & T-050 uses $\epsilon_6<\gamma/6$ and $\epsilon_v<1/(2p)$, not an extra $3/20$ sextic reserve.\\
+Uncompleted fibre coefficient $a$ & corrected audit & The registered R-142 fibre uses $c_0=a-b^2/c=3/(250P)$.\\
+Finite endpoint secant equals local Hessian & rejected & It is an averaged Hessian; use a limit/remainder or the global feature route.\\
+Treat 12 q567 active entries as the full production matrix & rejected & Temporal, phase, signed common-output, anisotropic-low, and returned-low data remain undeclared.\\
+Infer sign from diagonal/magnitude data & rejected & Opposite phase-cycle and returned-low completions preserve those data.\\
+Count legal reverse separately & rejected & It doubles one self-adjoint owner and can flip the verdict spuriously.\\
+Use base and first jets only & rejected & The exact $\Phi_\pm$ fixture has opposite true Hessians.\\
+\hline
+\end{tabular}
+\end{center}
+
+The two hostile corrections are registered as
+\texttt{AUDIT-2026-08-02-A13-R144-SEXTIC-THRESHOLD-}\allowbreak
+\texttt{CORRECTION} and
+\texttt{AUDIT-2026-08-02-A13-R144-FIBRE-SCHUR-}\allowbreak
+\texttt{COEFFICIENT-CORRECTION}; their append-only route corrections are
+\texttt{EXP-000601} and \texttt{EXP-000602}.
+
+The result is genuine forward progress but not a numerical production verdict.
+It removes two unnecessary burdens from the main route: exact low residual
+vanishing and mandatory second jets.  It also exposes the Hessian route as a
+second sufficient condition after correcting the sextic-threshold comparison.
+What remains is not an unspecified larger
+matrix; it is the declared common-output/low object in Section 9.
+
+\section*{11. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: Theorem 2.1 proves the production contraction.}
+\textbf{UPHELD against that claim.}  It is a sharp implication from uniform
+production hypotheses.  No such $C$, $M$, or $C_0$ is registered.
+
+\item \textbf{Objection: a bounded residual can be any omitted owner.}
+\textbf{UPHELD.}  The residual must be the exact difference
+$\cU-C\cY$ after complete owner recombination, and its Hilbert norm must be
+uniform.  A separately estimated duplicate is illegal.
+
+\item \textbf{Objection: reduced source convexity closes T-050.}
+\textbf{VALID WITH MITIGATION.}  Uniform positive reduced source convexity closes the
+source coefficient, and $3/20<\gamma/6$ already closes the sextic coefficient.
+The production gap, origin-force bound, and absolute anchor are still absent.
+
+\item \textbf{Objection: the source-null direction always decouples from low.}
+\textbf{VALID WITH MITIGATION.}  It decouples for an independent low after the
+orthogonal kernel split.  A graph-tied low requires
+$\Lambda(\Ker L_\pi)=0$, and nonlinear graphs add connection terms.
+
+\item \textbf{Objection: endpoint polarization eliminates second jets in all
+local calculations.} \textbf{UPHELD.}  It eliminates them for a global
+feature inequality or exact endpoint comparison, not for a finite-step local
+Hessian without a remainder estimate.
+
+\item \textbf{Objection: the adverse phase-cycle and low fixtures refute
+production positivity.} \textbf{UPHELD.}  They prove non-identifiability from
+the currently registered partial data only.  They are not legal production
+directions.
+
+\item \textbf{Objection: 12 active q567 channels determine the source
+dimension.} \textbf{UPHELD.}  They determine a local stencil only after a
+chart declares independent source tangents; common-output feature labels can
+share one smaller domain.
+
+\item \textbf{Objection: R-144 closes A13 or Sector A.}
+\textbf{DISMISSED.}  Both A13 gates, T-050, $\mathrm{OVERLAP}_{\rm src}$,
+Nelson, removals, the interacting measure, and Sector A remain open at T4.
+\end{enumerate}
+
+\section*{12. Result footer}
+
+The primary certificate derives the A1 fibre coefficients from the production
+manifest, proves the sharp residual square symbolically, checks both one-use
+coefficients, the Hessian T-050 margin, source/low pullback, endpoint
+polarization, central-secant limit, refinement congruence, actual rank-four
+fibre phase-cycle inertia, returned-low completions, legal-reverse factor, and
+second-jet fixture.  Run
+\begin{verbatim}
+$script = "codes/foundations/" +
+ "a13_classii_uniform_douglas_one_use_" +
+ "projected_force_low_completion_boundary.py"
+E:\Dev\TECT.venv\Scripts\python.exe $script
+\end{verbatim}
+The independent certificate uses only the Python standard library and exact
+\texttt{Fraction} arithmetic.  Run
+\begin{verbatim}
+$script = "codes/foundations/" +
+ "a13_classii_uniform_douglas_one_use_" +
+ "projected_force_low_completion_boundary_independent.py"
+E:\Dev\TECT.venv\Scripts\python.exe $script
+\end{verbatim}
+The expected outputs are respectively \texttt{R-144 primary: 61/61 PASS}
+and \texttt{R-144 independent: 56/56 PASS}.  The integrated verifier reruns
+both certificates, pins every authority including the canonical T-050 gate,
+checks the negative and exploration ledgers and public surfaces, rebuilds and
+renders this PDF deterministically, and enforces the no-overclaim flags.
+
+\begin{verbatim}
+Result ID: A13-CLASSII-UNIFORM-DOUGLAS-ONE-USE-PROJECTED-FORCE-
+  LOW-COMPLETION-BOUNDARY.
+Ledger ID: R-144.
+Precise statement: sharp affine-residual complete-feature implication;
+  alternative C2 reduced-action Hessian implication; exact phase-cycle,
+  returned-low, legal-reverse, and equal-first-jet information boundaries.
+Scope: fixed finite cutoff and positive floor for exact chart identities;
+  uniform only under the explicit hypotheses of Theorem 2.1 or Theorem 3.1.
+Dependencies: A1; R-093, R-104, R-130, R-140--R-143; claims/GATES.md.
+Evidence grade: ANALYTIC, EXACT, CONDITIONAL, EXECUTED, AUDITED.
+Audit status: two hostile corrections registered with EXP-000593--EXP-000602.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_uniform_douglas_one_use_projected_force_
+  low_completion_boundary_verify.py
+Expected output: integrated 313/313 PASS after primary 61/61 and non-importing
+  independent 56/56, exact cross-checks, deterministic PDF rebuild,
+  exploration/negative/authority/manifest, all-page render, and generated
+  public-surface checks pass.
+Falsification gate: any failed sharp-square identity, T-050 threshold bridge,
+  reduced-action hypothesis, exact fixture, authority/hash, deterministic PDF,
+  public-surface, or no-overclaim check.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no canonical production chart or uniform Branch-A or
+  Branch-B hypotheses, legal adverse production direction, T-050 closure,
+  A13 closure, Nelson theorem, interacting measure, or Sector-A closure follows.
+Next required action: register the canonical temporal/common-output/
+  conditional-low/returned-low chart; test Branch A first and Branch B on the
+  same reduced action if Branch A is unavailable.
+\end{verbatim}
+
+\endgroup
