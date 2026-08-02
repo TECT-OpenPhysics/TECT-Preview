@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-03-A13-LINEAR-PAIR-TESTS-DO-NOT-IMPLY-NONLINEAR-PREDICTABLE-GAP | averaged linear tests do not control the conditional nonline |  |
+| NG-2026-08-03-A13-PAIRWISE-LOCAL-GAPS-DO-NOT-IMPLY-MULTIROOT-GLOBAL-GAP | local gaps do not globalize across interacting roots |  |
 | NG-2026-08-03-A13-INDEPENDENT-FOREST-BALANCED-OWNER-FABRICATION | fixed-terminal owner coordinates are not independent reserve |  |
 | AUDIT-2026-08-03-A13-R125-MUTABLE-SURFACE-PINNING | separate immutable proof evidence from live routing |  |
 | NG-2026-08-02-A13-ZERO-CONTROL-FUTURE-VARIANCE-DOMINATION | the production future variance exceeds its raw endpoint budg |  |

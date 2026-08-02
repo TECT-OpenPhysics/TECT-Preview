@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-152](#r-152) | Affine-past curvature and nonlinear/multi-root globalization boundary | Scoped T4 analytic/exact/executed/audited theorem and method boundary. In the enlarged fixed-mean R-151 chart, arbitrary field mean with zero current mean preserves endpoint loss below `19/25` and augmented curvature above `7/50`; an almost-sure declared past-current collar `C_past<=1/25` preserves curvature above `1/10`. The exact nonlinear gate is the conditional complete-form bound `K>=-4I/5`, and the exact finite multi-root gate is `M>=mu G`. Smooth-bump and rational two-edge fixtures prove that averaged linear tests and positive pairwise gaps do not imply those gates. The collar, production `K` and global production `M` remain absent; T-050, A13, phase/PDE selection, and Sector A remain open |
 | [R-151](#r-151) | Direct two-root endpoint Hessian and uniform local source gap | Scoped T4 analytic/exact/executed/audited local theorem and owner-coordinate no-go. In the full `12x12` sign/internal linear feedback chart `h2=t H xi1` for simultaneous antipodal roots `+/-p` and `+/-2p`, with nonzero admissible dual-lattice `p` and all four modes retained, zero strict past, and a stationary common-even background, the exact complete endpoint has zero first variation and, for `H != 0`, Hessian loss strictly below `4/5 ||H||_F^2`. The radial certificate holds for every `x=|p|^2>=0`. The source Hessian is exactly `9/10 ||H||_F^2` and the sixth-power Hessian is nonnegative, yielding a strict augmented local gap above `1/10 ||H||_F^2`. Forest, balanced, future, trace, and low coordinates may audit the fixed terminal owner but cannot be added as independent reserves. Non-lattice or unretained momenta, nonzero past means, nonlinear feedback, multi-root aggregation, T-050, phase/PDE selection, and Sector A remain open |
 | [R-150](#r-150) | Production antipodal last-insertion zero-cross boundary | Scoped T4 analytic/exact/executed/audited production-cylinder theorem and method boundary. For the actual A1 `L=16` Fourier pairs `+/-k` and `+/-2k`, with the full three-family lock covariance, a simultaneous antipodal pair has exact same-point field-current cross synthesis zero, while its two-point kernel and Fourier-coefficient cross synthesis are nonzero. R-149 therefore makes the conditional absolute final full-output/full-reveal endpoint atom nonnegative and permits zero source/sextic suballocation for that atom only. A constant-Gram fixture gives a negative relative endpoint secant, separate Fourier projections give expected packets `-1/2` and `+1/2`, and an earlier-root future-feedback fixture gives exact unhalved owner `-sqrt(6)/8`. The relative secant, earlier feedback connection, complete two-root forest/balanced/low/source/sextic owner, T-050, every phase verdict, and Sector A remain open |
 | [R-149](#r-149) | Cross-synthesis Stein owner, radial-slice boundary, and full-internal companion positivity | Scoped T4 analytic/exact/executed/audited owner identity and scope correction. For an affine same-root field/current pair `W=w+Xg`, `V=v+Yg`, the exact raw/covariance-normal square-minus-trace owner depends on the cross synthesis `K=XY*`, not only on the endpoint marginals `Gamma_x=XX*` and `Gamma_v=YY*`; an exact full-reveal fixture with identical marginals gives opposite owner signs for every positive covariance scale. The real active-spectator radial coefficient energy is an affine saddle, so global coefficient convexity is unavailable, but that slice is neither a physical control Hessian nor the full internal owner. In a separately declared co-synthesis with all three complex components, all three Pauli generators, all six coefficient rows, and the registered A6/A7 six-real covariance `Gamma=diag(C(a),C(a))`, where the complex covariance is `2C(a)`, the tensor is strictly positive for every `a>=0`, `R>=0`, `e>0`, and `P>0`. The adverse radial sign does not survive there, but the calculation changes both rows and cross-synthesis rank and isolates no causal companion. The physical spatial cross synthesis, heat, projectors, owner incidence, adapted feedback, complement/low leakage, relative source and sextic, T-050, every phase verdict, and Sector A remain open |
@@ -170,6 +171,64 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-152"></a>
+### R-152 -- Affine-past curvature and nonlinear/multi-root globalization boundary
+
+- **Statement.**  In the retained admissible antipodal `p:2p` chart, condition
+  on the strict past and write fixed field/current means `m,n` plus the
+  centered R-151 future.  Direct differentiation of the complete endpoint
+  leaves the primitive trace outside the spatial-index sum and gives the exact
+  current-mean correction coefficients `2,1,1/2`.  On the enlarged
+  field/current class, arbitrary `m` with `n=0` preserves endpoint loss
+  strictly below `19/25` and augmented curvature strictly above `7/50` for
+  every nonzero linear `H`.  Production normally also has `n_i=partial_i m`,
+  and no first-variation cancellation is inferred.
+- **Conditional collar.**  With `lambda_2=lambda_min A(2p)`, the exact
+  R-130 `L6,H6` envelopes give a pathwise conditional coefficient
+  `C_past`.  If `C_past<=1/25` almost surely, the augmented curvature is
+  strictly above `1/10 ||H||_F^2`.  Exact Sturm certificates give
+  `lambda_2^(-1)<125/36` and `|p|/lambda_2<4/3`, hence the displayed
+  momentum-uniform sufficient collar.  The registered hypotheses do not
+  supply this collar.
+- **Nonlinear gate.**  For a bounded predictable simple fixed-law direction
+  on the declared form core, let `K(xi_1)` be the complete conditional
+  endpoint-plus-sixth-power Hessian excluding source cost.  The augmented
+  lower bound `A''>=1/10 E|phi|^2` for every such direction is equivalent to
+  `K>=-4I/5` almost surely.  R-151 tests only `phi=H xi_1`; a translated smooth
+  bump for the logical multiplication form `K(X)=-X^2/5` passes every linear
+  Gaussian test but gives negative augmented curvature.  This is not an A1
+  production counterexample.
+- **Multi-root gate.**  At the finite cylindrical/root-coordinate matrix
+  level, let `J` be the actual source incidence, `G=J*J`, and
+  `M=E+(9/10)G+S+L` the fully recombined action Hessian.  Globalization
+  requires `M>=mu G`, tested by generalized eigenvalues or the finite
+  kernel-Schur criterion.  Even with `G=I`, the rational endpoint matrix with
+  diagonal `-3/4` and off-diagonal `-1/5` has local augmented gaps
+  `3/20>7/50` but global eigenvalues `-1/20,7/20`.  Thus one-use source
+  orthogonality does not delete cross-root endpoint, sextic, or low blocks.
+- **Where proved.**  Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-affine-past-nonlinear-multiroot-globalization-boundary-260803-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_affine_past_nonlinear_multiroot_globalization_boundary_manifest.json`,
+  and the primary, non-importing standard-library independent, and integrated
+  certificates listed there.
+- **Reuse scope.**  The positive curvature result is conditional on the
+  retained finite-cutoff chart and either zero current mean or the displayed
+  almost-sure collar.  The nonlinear equivalence requires the complete
+  conditional operator and a declared form domain.  The multi-root criterion
+  is exact for finite matrices; infinite-dimensional extensions need domain
+  and closed-range hypotheses.
+- **Audit boundary.**  R-152 supplies neither first-variation cancellation at
+  nonzero past, an unconditional nonlinear production gap, the production
+  conditional operator, nor the owner-complete global production Hessian.  It
+  closes the promised bounded review, not T-050 or A13.  It proves no Nelson
+  theorem, removal, interacting measure, phase preference or exclusion, PDE
+  validation or replacement, or Sector-A closure.
+- **Tier / publication target.**  Scoped T4 analytic/exact/executed/audited
+  lemma package; constructive-field-theory methods note after independent
+  review.
 
 <a id="r-151"></a>
 ### R-151 -- Direct two-root endpoint Hessian and uniform local source gap

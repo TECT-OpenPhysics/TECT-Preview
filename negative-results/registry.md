@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-A13-LINEAR-PAIR-TESTS-DO-NOT-IMPLY-NONLINEAR-PREDICTABLE-GAP](#ng-2026-08-03-a13-linear-pair-tests-do-not-imply-nonlinear-predictable-gap) | infer the full nonlinear predictable-control Hessian gap from the R-151 averaged linear family `phi=H xi_1` and an ordinary bounded smoothness class | the exact criterion is the almost-sure conditional form bound `K>=-4I/5`; the smooth translated-bump fixture for `K(X)=-X^2/5` passes every linear Gaussian test with loss `3/5` but gives negative augmented curvature, so the inference fails without a conditional operator or weighted form theorem |
+| [NG-2026-08-03-A13-PAIRWISE-LOCAL-GAPS-DO-NOT-IMPLY-MULTIROOT-GLOBAL-GAP](#ng-2026-08-03-a13-pairwise-local-gaps-do-not-imply-multiroot-global-gap) | aggregate positive pairwise local source gaps into a global interacting-root gap after making the source incidences orthogonal | the exact rational two-edge matrix has both local gaps `3/20>7/50` but global eigenvalues `-1/20,7/20`; one-use source bookkeeping does not diagonalize endpoint, sextic, or low cross-root Hessians, so the fully recombined production matrix is indispensable |
 | [NG-2026-08-03-A13-INDEPENDENT-FOREST-BALANCED-OWNER-FABRICATION](#ng-2026-08-03-a13-independent-forest-balanced-owner-fabrication) | construct separate forest, balanced/Schur, trace, future, and low quadratic reserves after fixing one terminal scalar and filtration, then add them to the complete A7 endpoint Hessian | the Doob increments are unique and these objects are alternate expansions or estimates of the same square-minus-trace owner; the direct Gaussian endpoint Hessian already contains every covariance and cross-synthesis response once, so independent addition double counts rather than completes the owner |
 | [AUDIT-2026-08-03-A13-R125-MUTABLE-SURFACE-PINNING](#audit-2026-08-03-a13-r125-mutable-surface-pinning) | treat exact July 30 wording in the evolving A13 status, T-050 route, and Sector-A frontier as immutable R-125 theorem evidence | the frozen R-125 mathematics still reruns, but five live-surface rows become stale after valid successor progress; preserve the historical package and validate current routing with a separate structural companion audit |
 | [NG-2026-08-02-A13-ZERO-CONTROL-FUTURE-VARIANCE-DOMINATION](#ng-2026-08-02-a13-zero-control-future-variance-domination) | prove the earlier-root absolute comparison `V1<=Q1` from the production covariance ordering and full six-row Gram structure | at zero control the averaged difference is exactly the negative coefficient-smoothing variance `-E||(C6-E2 C6)D1^(1/2)||_HS^2<0`; rootwise endpoint positivity is retired, while the relative event-complete action and its forest/low/source/sextic companions remain open |
@@ -239,6 +241,61 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-a13-linear-pair-tests-do-not-imply-nonlinear-predictable-gap"></a>
+### NG-2026-08-03-A13-LINEAR-PAIR-TESTS-DO-NOT-IMPLY-NONLINEAR-PREDICTABLE-GAP -- averaged linear tests do not control the conditional nonlinear operator
+
+**Failure mode.** Infer a uniform Hessian gap for every bounded predictable
+nonlinear direction from the R-151 averaged family
+`phi(xi_1)=H xi_1`, even after adding an ordinary bounded smoothness condition.
+
+**Evidence.** In the Euclidean source metric, let `K(x)=-x^2/5` on its natural
+multiplication-form domain.  A linear direction loses only
+`(1/5) E[X^4]=3/5<4/5`.  For a fixed smooth bump translated to the interval
+`(R-1,R+1)`, the ordinary `C^3` norm is independent of `R`, while the
+normalized conditional-owner quotient is at most `-(R-1)^2/5`.  At `R=4`,
+source plus owner curvature is at most `9/10-9/5=-9/10`.  The exact full-form
+criterion is instead `K(xi_1)>=-4I/5` almost surely, with a declared form
+domain.  See the R-152 note Section 4 and its exact primary and independent
+fixtures.
+
+**Consequence.** Retire the inference from the finite averaged linear family
+to all nonlinear predictable controls.  Reopen it only with the production
+conditional operator, an almost-sure lower bound, or an explicitly weighted
+closed-form theorem.
+
+**Boundary.** The fixture is an unbounded logical multiplication form, not an
+A1 production counterexample and not a no-go for a stronger Gaussian-Sobolev
+or norm-relative hypothesis.  It proves neither physical instability nor a
+phase or PDE verdict, and it does not close T-050, A13, Nelson, or Sector A.
+
+**Registered.** 2026-08-03.
+
+<a id="ng-2026-08-03-a13-pairwise-local-gaps-do-not-imply-multiroot-global-gap"></a>
+### NG-2026-08-03-A13-PAIRWISE-LOCAL-GAPS-DO-NOT-IMPLY-MULTIROOT-GLOBAL-GAP -- local gaps do not globalize across interacting roots
+
+**Failure mode.** Sum positive pairwise local gaps after assigning orthogonal
+one-use source coordinates, without computing the endpoint, sixth-power, and
+low cross-root Hessians of the same complete action.
+
+**Evidence.** With source Gram `G=I`, no sextic or low term, and endpoint
+matrix `E=[[-3/4,-1/5],[-1/5,-3/4]]`, the augmented diagonal gaps are both
+`9/10-3/4=3/20>7/50`.  Nevertheless the fully recombined matrix has exact
+eigenvalues `-1/20` and `7/20`.  Thus even perfectly orthogonal source
+incidence does not eliminate adverse cross-root response.  See the R-152 note
+Section 5 and both exact executable fixtures.
+
+**Consequence.** Require the actual production matrix
+`M=E+(9/10)G+S+L` and test `M>=mu G`, using the finite-matrix
+generalized-eigenvalue or kernel-Schur criterion.  Pairwise certification is
+only local evidence.
+
+**Boundary.** This rational matrix is a logical non-implication fixture, not
+the uncomputed production matrix and not a TECT counterexample.  It does not
+select a phase, validate or reject a PDE, close T-050 or A13, prove Nelson, or
+close Sector A.
+
+**Registered.** 2026-08-03.
 
 <a id="ng-2026-08-03-a13-independent-forest-balanced-owner-fabrication"></a>
 ### NG-2026-08-03-A13-INDEPENDENT-FOREST-BALANCED-OWNER-FABRICATION -- fixed-terminal owner coordinates are not independent reserves

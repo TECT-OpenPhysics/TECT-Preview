@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-152 affine-past curvature and nonlinear/multi-root globalization boundary] - 2026-08-03
+
+Registered the conditional affine-past curvature theorem and exact nonlinear/multi-root acceptance boundaries. A fixed past field mean with zero current mean retains endpoint loss below 19/25 and gap above 7/50; an almost-sure declared past-current collar preserves gap above 1/10. Exact fixtures show that linear and pairwise tests do not imply the required nonlinear or global operators. R-152 closes the bounded review, not T-050; A13 remains T4 and primary phase-neutral physical-model work moves to T-054.
+
 ## [R-151 release audit: derived factors and torus-scope repair] - 2026-08-03
 
 Post-registration release audit repaired three issues before commit. The primary and independent executables now derive the mixed, cross-synthesis, owner, and covariance-normalized factors from named dimensions, symmetrizations, polarization, root multipliers, and antipodal multiplicity; the independent route reconstructs the A1 mass matrix, and both import hash-pinned R-130 H6 results. The integrated verifier independently reconstructs the factor chain, normalizes machine-dependent PDF diagnostics, requires the exact benign first-page /Fit OpenAction with default-deny external actions, and refuses a stale catalog after writing its deterministic result. The analytic note now sums the spatial-gradient index explicitly. EXP-000660 corrects the theorem domain: the radial Sturm certificate holds for every x>=0, while the torus chart requires a nonzero admissible dual-lattice p with +/-p and +/-2p retained; strict quadratic inequalities are for H!=0. The five-page PDF was rebuilt and all pages were reinspected. These repairs do not change the exact 4/5 loss, 9/10 source Hessian, 1/10 local gap, or the open status of T-050, A13, every phase/PDE verdict, Nelson, and Sector A.

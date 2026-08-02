@@ -5384,3 +5384,85 @@ T5--T7 promotion remain open. Tier stays T4.
   nonlinear lift; absent an owner-complete global mechanism, primary physical
   model selection moves to T-054/T-052 without revoking this conditional
   mathematics.
+
+- 2026-08-03: Registered
+  `A13-CLASSII-AFFINE-PAST-NONLINEAR-MULTIROOT-GLOBALIZATION-BOUNDARY`
+  (R-152) as the predeclared bounded successor to R-151.  Conditioning on the
+  strict past gives `W_t=m+X+tZ` and `V_t,i=n_i+Y_i+tU_i`.  Direct
+  differentiation of the one complete covariance-normal endpoint keeps the
+  primitive trace outside the spatial-index sum and yields the exact
+  current-mean correction
+  `2 U_i* DB[Z] n_i + n_i* D2B[Z,Z] Y_i
+  +(1/2)n_i*D2B[Z,Z]n_i`.  The coefficient chain is therefore `2,1,1/2`,
+  with no additional owner created.
+
+  On the enlarged fixed-mean field/current class, arbitrary conditional field
+  mean `m` with zero current mean `n` retains the R-130 global coefficient
+  envelope.  An exact strengthened rational Sturm certificate gives endpoint
+  Hessian loss strictly below `19/25 ||H||_F^2`, hence augmented curvature
+  strictly above `7/50 ||H||_F^2` for every nonzero linear `H`.  Production
+  normally also obeys `n_i=partial_i m`, so this enlarged algebraic statement
+  does not assert that every pair `(m,n)` is production-realizable.  It also
+  proves curvature only: a nonzero mean need not preserve the R-151
+  first-variation cancellation.
+
+  For nonzero past current mean, the exact three-term correction is controlled
+  pathwise by `C_past`.  If `C_past<=1/25` almost surely, the augmented
+  curvature remains strictly above `1/10 ||H||_F^2`.  The proof derives
+  `lambda_2^(-1)<125/36` and `|p|/lambda_2<4/3`, giving the momentum-uniform
+  sufficient collar coefficients `1524 sqrt(3)/125`, `787 sqrt(3)/16`, and
+  `787/32`.  No registered hypothesis supplies the needed bounds on the
+  conditional current mean and field/current second moments.  For a
+  past-dependent `H`, an averaged collar alone is insufficient unless it
+  controls the weighted form `E[C_past ||H||_F^2]`.
+
+  For a legal bounded predictable simple fixed-law direction `phi(xi1)`, let
+  `K(xi1)` be the complete conditional endpoint-plus-sixth-power Hessian,
+  excluding source cost, on the declared form core.  Then the bound
+  `A''[phi,phi]>=1/10 E|phi|^2` for every such direction is equivalent to the
+  almost-sure conditional form inequality `K>=-4I/5`.  R-151 tests only
+  `phi=H xi1` in averaged expectation and does not imply this.  The logical
+  multiplication-form fixture `K(X)=-X^2/5` loses only `3/5` on every linear
+  Gaussian test, while a fixed smooth bump translated to `R=4` has augmented
+  curvature at most `-9/10`.  This is an unbounded logical form fixture, not
+  the A1 production operator and not a production counterexample.  Curved
+  control parametrizations and Gaussian-source differentiation retain their
+  separate R-128/R-133 connection terms.
+
+  At the finite cylindrical/root-coordinate matrix level, the actual source
+  incidence is `J`, its Gram is `G=J*J`, and the owner-complete global target
+  is `M=E+(9/10)G+S+L>=mu G`.  If `G` is positive this is a generalized-
+  eigenvalue test; if it is singular the finite kernel-Schur conditions are
+  exact.  Infinite-dimensional extensions additionally need declared form
+  domains and closed-range compatibility.  Even with orthogonal source
+  incidence `G=I`, the exact endpoint matrix with diagonal `-3/4` and
+  off-diagonal `-1/5` gives both local gaps `3/20>7/50` but global eigenvalues
+  `-1/20,7/20`.  Thus one-use source coordinates do not delete endpoint,
+  sixth-power, or low cross-root Hessians.
+
+  The two failed shortcut routes are registered as
+  `NG-2026-08-03-A13-LINEAR-PAIR-TESTS-DO-NOT-IMPLY-NONLINEAR-PREDICTABLE-GAP`
+  and
+  `NG-2026-08-03-A13-PAIRWISE-LOCAL-GAPS-DO-NOT-IMPLY-MULTIROOT-GLOBAL-GAP`.
+  `EXP-000661--EXP-000665` preserve the affine-past advance, missing collar,
+  nonlinear non-implication, multi-root non-implication, and the predeclared
+  route-parking decision.
+
+  Primary `32/32` and non-importing standard-library independent `26/26`
+  exact certificates pass.  Integrated verification passes `203/203`,
+  embedding all `58` child rows exactly once and adding `145` integrator-only
+  parity, exact-oracle, authority-hash, artifact, note-scope, deterministic-
+  PDF, security/text/render, public-surface, exploration, scope, and
+  aggregation checks.  The manifest pins the eight-page PDF and manual
+  inspection of every rendered page.
+
+  R-152 reaches the bounded post-R-151 stop condition: no registered theorem
+  supplies the past-current collar, the production conditional operator `K`,
+  or the fully recombined production matrix `M`.  It closes neither T-050 nor
+  A13 and proves no Nelson theorem, removal, interacting measure, phase
+  preference or exclusion, PDE validation or replacement, or Sector-A
+  closure.  R-151/R-152 remain reusable scoped T4 mathematics.  T-050 is
+  parked until actual production `M` or a derived past-current/conditional-
+  operator theorem appears; primary phase-neutral physical-model work moves
+  to T-054, with T-052 only the M1 current-functional branch and T-053 applied
+  only to candidates surviving the common comparison rules.

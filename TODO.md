@@ -3,12 +3,12 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 1 · Next up 2 · Blocked 2 · Backlog 5 · Done (recent) 44
+Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 6 · Done (recent) 44
 
 ## In progress
 
-- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
-  - R-151 proves a strict radial origin-Hessian gap above 1/10 for every x>=0 in the complete 144-real-coordinate zero-past linear p:2p endpoint chart; on the torus the theorem applies only to nonzero admissible dual-lattice p with +/-p and +/-2p retained, and to H!=0. Exact endpoint loss is below 4/5, source Hessian is 9/10, and the terminal sixth-power Hessian is nonnegative. EXP-000657--EXP-000659 retire independently fabricated forest/balanced/low reserves, derive the one complete Gaussian covariance Hessian, and certify the A1/Sturm gap; EXP-000660 records the post-audit lattice-retention and H!=0 scope correction. T-050 remains open because non-lattice or unretained modes, nonzero strict-past means, nonlinear feedback, interacting-root aggregation, historical low matching, and the full directed source union are not covered. Perform one bounded lift to nonzero affine past and legal nonlinear feedback, then test owner-complete multi-root aggregation without source reuse. If no global mechanism emerges, preserve A13 as conditional mathematics and move primary physical-model effort to T-054/T-052. No phase or PDE verdict follows.
+- **T-054** Pre-A evidence register and candidate-functional tournament  _(owner: Codex)_
+  - Primary phase-neutral physical-model route after the completed R-152 bounded A13 review. Freeze primary-source discovery and holdout evidence, register M0/M1 plus at least two structurally distinct candidate functionals, and build the common discriminator matrix. T-052 remains only M1 and T-053 applies only to survivors. A justified shortlist or non-selection is valid. A13/T-050 remains separate open conditional mathematics.
   - _updated 2026-08-02_
 
 ## Next up
@@ -16,9 +16,6 @@ Counts: In progress 1 · Next up 2 · Blocked 2 · Backlog 5 · Done (recent) 44
 - **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
-- **T-054** Pre-A evidence register and candidate-functional tournament  _(owner: Codex)_
-  - Next phase-neutral physical-model priority after the bounded R-151 A13 pass. Implement strategy/pre-a-evidence-first-model-selection-charter-260802.md: freeze primary-source discovery and holdout evidence, register M0/M1 plus at least two structurally distinct candidate functionals, and build the common discriminator matrix before running T-053. T-052 is only the M1 phase-selection branch. R-151 remains conditional local mathematics and gives no preference to BCC, a uniform state, another modulation, or the current PDE. A justified shortlist or non-selection is a valid result.
-  - _updated 2026-08-02_
 
 ## Blocked
 
@@ -36,6 +33,9 @@ Counts: In progress 1 · Next up 2 · Blocked 2 · Backlog 5 · Done (recent) 44
   - _updated 2026-06-12_
 - **T-045** A6: decide full-field bare concentration with partition-function tube bounds and tightness  _(owner: unassigned; claim: A6-CLASSII-K-COMPOSITE-DEFINITION; gate: A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION)_
   - _updated 2026-07-20_
+- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
+  - R-152 completes the bounded post-R-151 lift. It proves a conditional affine-past curvature theorem, but the full nonlinear predictable gap is equivalent to an unproved conditional operator bound and pairwise local gaps do not imply the global multi-root inequality. T-050 remains open and is parked, not closed or blocked. Reopen only when the actual owner-complete production Hessian M, or a derived past-current/conditional-operator theorem, is available. R-151/R-152 select no phase and validate or replace no PDE.
+  - _updated 2026-08-02_
 - **T-051** Reconcile stale Sector-A claim cards with the five-family theorem map  _(owner: Codex)_
   - One substantive claim card per turn. Correct stale next_action/open-gate text in A10, A9, A11, A12, A6, A5, and A4 without changing valid tiers or immutable IDs; regenerate all ledgers after each card.
   - _updated 2026-07-22_

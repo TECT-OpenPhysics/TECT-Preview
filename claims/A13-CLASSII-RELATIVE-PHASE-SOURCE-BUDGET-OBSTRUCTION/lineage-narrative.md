@@ -1118,6 +1118,29 @@ endpoint theorem.
     no owner-complete global mechanism, the primary physical-model track moves
     to the phase-neutral T-054/T-052 tournament.
 
+74. **Affine-past curvature, nonlinear conditional gate, and multi-root
+    globalization boundary.** R-152 performs the bounded lift promised by
+    R-151.  Conditioning on a fixed strict past gives one exact endpoint
+    Hessian with the primitive trace outside the spatial-index sum and the
+    current-mean correction factors `2,1,1/2`.  On the enlarged field/current
+    class, arbitrary field mean with zero current mean retains endpoint loss
+    below `19/25` and augmented curvature above `7/50`; a declared almost-sure
+    collar `C_past<=1/25` retains curvature above `1/10`.  Production normally
+    also has `n_i=partial_i m`, the collar is not derived, and first-variation
+    cancellation is not proved.  For nonlinear predictable directions the
+    exact complete-form gate is `K>=-4I/5` almost surely; a smooth translated-
+    bump multiplication-form fixture proves that the R-151 averaged linear
+    tests do not imply it.  At the finite multi-root matrix level the exact
+    global target is `M=E+(9/10)G+S+L>=mu G`; an exact rational two-edge
+    fixture has local gaps `3/20>7/50` but global eigenvalue `-1/20`, so source
+    orthogonality and pairwise gaps do not suffice.  The fixtures are logical
+    non-implications, not production or PDE counterexamples.  No registered
+    hypothesis supplies the collar, production conditional operator, or
+    owner-complete global matrix, so the bounded A13 pass reaches its declared
+    stopping boundary.  R-151/R-152 remain scoped T4 mathematics; T-050 and
+    A13 stay open and parked, while primary phase-neutral model selection moves
+    to T-054 with T-052 only the M1 branch and T-053 reserved for survivors.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.
