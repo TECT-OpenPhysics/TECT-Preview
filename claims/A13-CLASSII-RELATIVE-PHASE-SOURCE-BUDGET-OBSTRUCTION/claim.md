@@ -5597,3 +5597,61 @@ T5--T7 promotion remain open. Tier stays T4.
   derives its complete covariance second jet before testing nonzero past or
   nonlinear feedback.  T-054 remains the separate primary phase-neutral
   model-selection route.
+
+- 2026-08-03: Registered
+  `A13-CLASSII-AFFINE-SOURCE-REUSE-FACTOR-THREE-GLOBAL-GAP-BOUNDARY`
+  (R-155).  Let `P` be any finite family of distinct nonzero retained
+  antipodal raw source classes and retain every doubled target, without
+  requiring `P` and `2P` to be disjoint.  The zero-control Gaussian is defined
+  once on their union.  In the R-128 fixed-law chart
+  `h_[2p]=t_p H_p xi_[p]`, multiplication by two is injective and distinct raw
+  innovations are independent.  Consequently the source Gram stays diagonal,
+  the Cameron--Martin Hessian is paid once as `(9/10) sum ||H_p||_HS^2`, and
+  every distinct-source mixed covariance second jet vanishes.  This does not
+  call whole overlapping pair blocks independent.
+
+  The first endpoint response has carrier-derived support
+  `{+/-p,+/-3p}`.  The response for the reused factor-two source has support
+  `{+/-2p,+/-6p}`, so `D2_[p,2p] R(0)=0`; the legal reverse is the adjoint of
+  that same zero block, not a second control or payment.  The complete mixed
+  covariance-normal endpoint/loss graph therefore retains only the R-154
+  factor-three paths.  The full Hessian additionally contains the diagonal
+  source form and one undecomposed global positive-semidefinite sextic form;
+  no sparse graph is asserted for individual sextic mixed entries.
+
+  Exact rational Sturm certificates prove the sharpened no-parent row loss
+  `L(x)+E(x)<109/125`, while the imported and rechecked parent row remains
+  below `201/1000`.  A non-importing standard-library implementation proves
+  the same half-line inequalities with exact Fraction Bernstein covers.
+  Hence, for every nonzero direction on every declared finite chart,
+  `D2 A(0)[H,H]>(7/250) sum_p ||H_p||_HS^2`.  If `P` is a pure dyadic family
+  with no extra vertices, three is not a power of two, the factor-three graph
+  is empty, the global diagonal loss is below `753/1000`, and the sharper gap
+  is `147/1000`.
+
+  A separately declared controlled-state chain
+  `eta_2p=xi_2p+tH xi_p`, `eta_4p=xi_4p+sG eta_2p` has the single bilinear
+  connection `S_4p G H xi_p` with support `{+/-3p,+/-5p}`.  Its source-reuse
+  term starts at `t^2 s^2`, and the endpoint and sextic first-variation
+  connections vanish only at the centered stationary common-even
+  covariance-matched, exactly integrated all-zero-control origin.  A
+  one-parameter path contributes twice the one bilinear connection; it does
+  not reverse `GH` to `HG`.
+
+  `EXP-000674--EXP-000676` preserve the generic source index calculation,
+  exact global and pure-dyadic certificates, recursive connection boundary,
+  and route decision.  Primary `49/49` and independent `44/44` audits pass.
+  Integrated verification passes `200/200`, embeds all `93` child
+  rows once, rebuilds the deterministic five-page PDF, and checks every
+  authority, artifact, generated surface, security/text/render contract, and
+  manual visual-QA pin.
+
+  R-155 is fixed-cutoff, positive-floor, covariance-matched, affine, and local
+  at zero control.  It covers neither nonzero past nor general
+  nonlinear/revisit feedback or finite-amplitude convexity.  It closes neither
+  T-050 nor A13, supplies no independent low/Feshbach owner, selects or
+  excludes no BCC, uniform, or other phase, validates or replaces no PDE, and
+  proves no Nelson theorem, interacting measure, or Sector-A closure.  Keep
+  only the minimum direct A13 successor while advancing T-054 phase-neutral
+  evidence and T-052 early candidate rejection in parallel; spend T-053 only
+  on surviving candidates.

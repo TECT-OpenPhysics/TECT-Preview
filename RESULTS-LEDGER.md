@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-155](#r-155) | Affine source-reuse factor-three endpoint and global origin gap | Scoped T4 analytic/exact/executed/audited origin-Hessian theorem. For any finite retained family of distinct antipodal raw source classes, the fixed-law controls `h_[2p]=H_p xi_[p]` may reuse a target later as a source. Injective doubling and raw-source independence keep the source Gram diagonal and make all distinct-source mixed covariance second jets vanish. Factor-two reuse adds no covariance-normal endpoint edge; the complete mixed endpoint/loss graph still has only factor-three paths, while the terminal sextic Hessian is retained as one global PSD form. Exact Sturm and independent Fraction/Bernstein certificates give `D2 A(0)[H,H]>(7/250) sum ||H_p||_HS^2`; pure dyadic families satisfy the sharper `147/1000` bound. Nonzero past, nonlinear/revisit feedback, finite amplitude, T-050, A13, phase/PDE selection, and Sector A remain open |
 | [R-154](#r-154) | Disjoint multipair factor-three resonance graph and origin-Hessian gap | Scoped T4 analytic/exact/executed/audited multipair theorem. For any finite retained family of mutually disjoint antipodal source/target classes with affine predictable controls `h_[2p]=H_p xi_[p]`, direct polarization of the complete covariance-normal A7 endpoint shows that mixed blocks survive only on `[q]=[3p]` or `[p]=[3q]`. The resulting graph is a union of finite paths. Exact diagonal and edge envelopes, rational Sturm chains, and an independent dyadic Bernstein audit give one global block-row bound strictly above `(1/40) sum ||H_p||_F^2` after the `9/10` source Hessian is paid once and the whole global PSD sixth-power Hessian is dropped. Nonzero past, overlapping/revisited roots, nonlinear feedback, arbitrary progressive controls, T-050, A13, phase/PDE selection, and Sector A remain open |
 | [R-153](#r-153) | Production strict-past conditional Hessian and weighted-collar boundary | Scoped T4 analytic/exact/executed/audited conditional theorem and method boundary. For the retained final fresh root, strict-past conditioning and the common-even Gaussian covariance split cancel the future-current covariance exactly against its A7 trace component, leaving the past covariance with a minus sign. The first variation, full bilinear Hessian, positive-semidefinite sixth-power Hessian, `9/10` source Hessian, chart connection, and form threshold `K_E+K_6>=-4I/5` are exact on the actual incidences. Spatial Cauchy gives a conditional `L2_x` collar, and the A1 control-generated mean obeys the exact gradient constant `2.033300406...<41/20`. A nondegenerate derivative-active Gaussian past has unbounded absolute-collar support; event localization prevents an all-predictable-direction averaged collar from weakening the fiberwise condition. The complete progressive owner, production Loewner gap, T-050, A13, phase/PDE selection, and Sector A remain open |
 | [R-152](#r-152) | Affine-past curvature and nonlinear/multi-root globalization boundary | Scoped T4 analytic/exact/executed/audited theorem and method boundary. In the enlarged fixed-mean R-151 chart, arbitrary field mean with zero current mean preserves endpoint loss below `19/25` and augmented curvature above `7/50`; an almost-sure declared past-current collar `C_past<=1/25` preserves curvature above `1/10`. The exact nonlinear gate is the conditional complete-form bound `K>=-4I/5`, and the exact finite multi-root gate is `M>=mu G`. Smooth-bump and rational two-edge fixtures prove that averaged linear tests and positive pairwise gaps do not imply those gates. The collar, production `K` and global production `M` remain absent; T-050, A13, phase/PDE selection, and Sector A remain open |
@@ -173,6 +174,52 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-155"></a>
+### R-155 -- Affine source-reuse factor-three endpoint and global origin gap
+
+- **Canonical chart.**  Let `P` be any finite set of distinct nonzero retained
+  dual-lattice classes modulo sign, retain every `[2p]`, and define the base
+  Gaussian once on `P union 2P`.  In the R-128 fixed-law chart
+  `h_[2p]=t_p H_p xi_[p]`, the control always reads the raw innovation, not an
+  already shifted state.  Multiplication by two is injective on antipodal
+  classes; distinct raw sources are independent.  Therefore all off-diagonal
+  source Gram entries and distinct-source mixed covariance second jets vanish,
+  even when a target is later reused as a source.
+- **Complete endpoint and gap.**  The first response support is derived as
+  `{2 epsilon-epsilon': epsilon,epsilon' in {+1,-1}}p={+/-p,+/-3p}`.
+  Its factor-two counterpart is `{+/-2p,+/-6p}`, so source-target reuse adds
+  neither a forward endpoint block nor a separate reverse payment.  The legal
+  reverse is only the adjoint of the same zero block.  The complete mixed
+  covariance-normal endpoint/loss graph retains only factor-three paths.  The
+  full Hessian additionally contains the `9/10` diagonal source form and one
+  undecomposed global PSD sextic form.  Sharpened exact half-line certificates
+  give
+  `D2 A(0)[H,H]>(7/250) sum_p ||H_p||_HS^2` for every nonzero direction.
+  If `P` is a pure dyadic family with no extra vertices, no factor-three edge
+  exists and the sharper bound is `147/1000`.
+- **Recursive companion.**  A separately declared controlled-state chain
+  `eta_2p=xi_2p+tH xi_p`, `eta_4p=xi_4p+sG eta_2p` has bilinear connection
+  `S_4p G H xi_p` with derived support `{+/-3p,+/-5p}`.  Its endpoint and
+  sextic first-variation connections vanish only at the centered stationary
+  covariance-matched, exactly integrated all-zero-control origin.  This is not
+  a nonlinear-feedback or finite-amplitude theorem.
+- **Where proved.**  Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-affine-source-reuse-factor-three-global-gap-boundary-260803-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_affine_source_reuse_factor_three_global_gap_boundary_manifest.json`,
+  and the primary, non-importing independent, and integrated certificates
+  pinned there.
+- **Audit boundary.**  R-155 is fixed-cutoff, positive-floor, affine,
+  covariance-matched, and local at zero control.  It does not cover nonzero
+  past, general nonlinear/revisit feedback, finite-amplitude convexity,
+  aliasing, a genuine independent low/Feshbach coordinate, cutoff/floor
+  removal, T-050 or A13 closure, Nelson, an interacting measure, any
+  phase/PDE verdict, or Sector-A closure.
+- **Tier / publication target.**  Scoped T4
+  analytic/exact/executed/audited source-incidence and origin-Hessian method;
+  constructive-field-theory methods note after independent review.
 
 <a id="r-154"></a>
 ### R-154 -- Disjoint multipair factor-three resonance graph and origin-Hessian gap

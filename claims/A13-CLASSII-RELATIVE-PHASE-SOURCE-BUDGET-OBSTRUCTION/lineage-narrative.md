@@ -1179,6 +1179,29 @@ endpoint theorem.
     low owner, finite-amplitude convexity, T-050, A13, phase/PDE conclusions,
     Nelson, and Sector A remain open at T4.
 
+77. **Affine source-reuse factor-three endpoint and global origin gap.**
+    R-155 removes the pairwise source-target-disjointness hypothesis from the
+    canonical fixed-law affine origin chart without duplicating a shared
+    Gaussian.  The zero-control law is defined once on `P union 2P`; injective
+    doubling and independence of distinct raw source directions make the
+    source Gram diagonal and every off-diagonal covariance second jet zero.
+    The factor-two response supports `{+/-p,+/-3p}` and
+    `{+/-2p,+/-6p}` are disjoint, so reuse adds no endpoint edge and the legal
+    reverse is only the adjoint of the same zero block.  The complete mixed
+    endpoint/loss graph still has only factor-three paths, while the terminal
+    sextic Hessian is kept as one global PSD form rather than assigned that
+    graph.  Sharpened exact Sturm and independent Fraction/Bernstein
+    certificates give a uniform origin gap above `7/250`; a pure dyadic source
+    family has no factor-three edge and a sharper `147/1000` gap.  A separate
+    shifted-state companion exposes the bilinear `S_4p G H xi_p` connection,
+    whose first-variation contributions vanish only at the centered
+    stationary covariance-matched exactly integrated all-zero origin.
+    Nonzero past, general nonlinear/revisit feedback, finite amplitude, a
+    genuine low owner, T-050, A13, every phase/PDE verdict, Nelson, and Sector
+    A remain open at T4.  The bounded research portfolio now retains only the
+    minimum direct A13 successor while advancing phase-neutral T-054 and
+    candidate-rejection T-052 in parallel.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

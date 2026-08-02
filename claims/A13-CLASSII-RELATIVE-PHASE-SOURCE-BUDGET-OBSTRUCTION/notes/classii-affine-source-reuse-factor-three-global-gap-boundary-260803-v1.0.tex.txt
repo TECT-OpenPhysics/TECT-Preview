@@ -1,0 +1,358 @@
+% =============================================================================
+% Title: Affine source-reuse factor-three endpoint and global origin gap
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-AFFINE-SOURCE-REUSE-FACTOR-THREE-GLOBAL-GAP-BOUNDARY
+% Ledger: R-155
+% Version: v1.0 -- first issued 2026-08-03; this version issued 2026-08-03
+% Status: scoped T4 analytic/exact/executed/audited advance; no T-050 closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\HS}{\mathrm{HS}}
+
+\section*{1. Purpose and scope: affine source reuse at the origin}
+\hypertarget{section-1-result}{ }
+
+R-154 proved a global origin-Hessian gap after requiring all source and
+target classes to be pairwise disjoint.  R-155 removes exactly that
+restriction for the fixed-law affine innovation chart.  Let $\mathcal P$ be
+any finite set of distinct nonzero retained dual-lattice momentum classes
+modulo sign.  Retain every doubled class $[2p]$, but allow
+$\mathcal P\cap2\mathcal P\ne\varnothing$.  Define the zero-control
+Gaussian law once on the union $\mathcal P\cup2\mathcal P$: one whitened
+raw innovation $\xi_{[r]}$ is attached to each antipodal class $[r]$.
+There is no duplicate Gaussian when a target is later reused as a source.
+
+Order the roots predictably and use the R-128 fixed-law convention
+\[
+ h_{[2p]}=t_pH_p\xi_{[p]},\quad H_p\in\mathbb R^{12\times12}.           \tag{1.1}
+\]
+The feedback functions in (1.1) are held fixed during the control
+variation; in particular, the already shifted state at $[p]$ is not inserted
+in place of the raw $\xi_{[p]}$.
+
+At the centered stationary common-even covariance-matched A1/A6/A7 law,
+with fixed finite cutoff, positive floor, exact nonaliased torus integration,
+and the registered scalar regulator envelopes, the complete action Hessian
+obeys
+\[
+ \boxed{
+ D^2\cA(0)[H,H]>{7\over250}
+       \sum_{[p]\in\mathcal P}\|H_p\|_{\HS}^2,\quad H\ne0 .}           \tag{1.2}
+\]
+For the pure dyadic source-reuse family
+$\mathcal P\subset\{[2^jp_0]:j\in\mathbb Z\}$, with no extra vertices,
+the sharper bound is
+\[
+ \boxed{
+ D^2\cA(0)[H,H]>{147\over1000}
+       \sum_{[p]\in\mathcal P}\|H_p\|_{\HS}^2.}                       \tag{1.3}
+\]
+
+The graph assertion below concerns the complete mixed covariance-normal
+endpoint/loss Hessian.  The full Hessian is the diagonal Cameron--Martin
+form plus that endpoint Hessian plus one global positive-semidefinite sextic
+form.  No sparsity is asserted for individual sextic mixed entries.
+
+R-155 is an origin-only theorem for a canonical affine chart.  It does not
+cover nonzero past, nonlinear or revisit feedback, finite-amplitude
+convexity, aliasing, an independent historical low coordinate, cutoff or
+floor removal, T-050 or A13 closure, Nelson, an interacting measure, any
+phase/PDE verdict, or Sector-A closure.
+
+\section*{2. General source-target reuse algebra}
+\hypertarget{section-2-source}{ }
+
+The field and current along (1.1) are affine:
+\[
+ W_t=W_0+\sum_p t_pS_{2p}H_p\xi_p,\quad
+ V_{t,i}=V_{0,i}+\sum_p t_pD_{2p,i}H_p\xi_p.           \tag{2.1}
+\]
+Multiplication by two is injective on the torsion-free dual lattice, also
+after quotienting by antipodes:
+\[
+ [2p]=[2q]\Longrightarrow 2p=\pm2q
+ \Longrightarrow p=\pm q\Longrightarrow[p]=[q].                     \tag{2.2}
+\]
+Thus distinct controls have distinct target blocks.  More importantly,
+their raw source innovations are independent even when $[2p]$ is itself a
+member of $\mathcal P$.  Pair blocks are not called independent: they share
+a class in that case.  What remains independent are the distinct raw source
+directions entering (2.1).
+
+For arbitrary $p,q\in\mathcal P$, whitened independence and (2.2) give the
+index identity
+\[
+ \E\langle H_p\xi_p,H_q\xi_q\rangle
+ =\delta_{[p],[q]}\langle H_p,H_q\rangle_{\HS},                         \tag{2.3}
+\]
+in the distinct doubled target blocks.  Hence the complete source cost is
+\[
+ \cA_{\rm CM}(t)={9\over20}\sum_p t_p^2\|H_p\|_{\HS}^2,\quad
+ D^2\cA_{\rm CM}(0)={9\over10}\sum_p\|H_p\|_{\HS}^2.                 \tag{2.4}
+\]
+It is paid once.  Source-target reuse creates no second payment and no
+off-diagonal source Gram entry.
+
+Because (2.1) is affine and the raw sources are distinct, every mixed second
+covariance jet for $p\ne q$ vanishes:
+\[
+ C_{pq}=Q_{pq}=K_{pq,i}=0.                                               \tag{2.5}
+\]
+This conclusion would fail for a chart whose second control reads a shifted
+state.  That different chart is treated separately in Section 6.
+
+\section*{3. Complete mixed endpoint and legal adjoint}
+\hypertarget{section-3-endpoint}{ }
+
+Let $C=\operatorname{Cov}(W)$,
+$Q=\sum_i\operatorname{Cov}(V_i)$, and
+$K_i=\operatorname{Cov}(W,V_i)$.  The first jets are exactly the R-151
+expressions
+\[
+\begin{aligned}
+ C_p&=S_{2p}H_pS_p^*+S_pH_p^*S_{2p}^*,\\
+ Q_p&=\sum_i(D_{2p,i}H_pD_{p,i}^*+D_{p,i}H_p^*D_{2p,i}^*),\\
+ K_{p,i}&=S_{2p}H_pD_{p,i}^*+S_pH_p^*D_{2p,i}^* .
+\end{aligned}                                                            \tag{3.1}
+\]
+At $Q(0)=Q_{\rm A7}$ and $K_i(0)=0$, differentiation of the one A7 scalar
+gives, for two distinct controls,
+\[
+\boxed{
+\begin{aligned}
+D^2_{pq}\cR(0)=\int\!\bigg\{&{1\over2}\Tr(Q_{pq}\overline B)\\
+&+{1\over4}[(Q_p)_{mn}(C_q)_{ab}+(Q_q)_{mn}(C_p)_{ab}]
+ \overline T_{abmn}\\
+&+{1\over2}\sum_i[(K_{p,i})_{am}(K_{q,i})_{bn}
+ +(K_{q,i})_{am}(K_{p,i})_{bn}]\overline T_{abmn}\bigg\}dx .
+\end{aligned}}                                                            \tag{3.2}
+\]
+The $Q_{pq}$ term is displayed because it is required in a general curved or
+recursive chart.  It vanishes by (2.5) in the canonical fixed-law chart.
+
+Equation (3.2) contains both orientations already.  The legal adjoint is
+$D^2_{qp}\cR=(D^2_{pq}\cR)^*$; it is not a second reverse control, and it
+does not change the physical composition order.  In particular, for
+$q=2p$ both the forward block and its legal adjoint are zero by the Fourier
+calculation below.
+
+\section*{4. Factor-two overlap is silent; factor-three remains}
+\hypertarget{section-4-fourier}{ }
+
+The support of every first response in (3.1) is derived from the target and
+source carriers:
+\[
+ \{2\epsilon-\epsilon':\epsilon,\epsilon'\in\{-1,1\}\}p
+ =\{\pm p,\pm3p\}.                                                        \tag{4.1}
+\]
+For the reused source $q=2p$, the second response has support
+$\{\pm2p,\pm6p\}$, disjoint from (4.1).  Exact torus integration therefore
+gives
+\[
+                         D^2_{p,2p}\cR(0)=0.                             \tag{4.2}
+\]
+For arbitrary distinct classes, cancellation between two copies of (4.1)
+leaves only
+\[
+                         [q]=[3p]\quad\hbox{or}\quad[p]=[3q].            \tag{4.3}
+\]
+Consequently the complete mixed endpoint/loss graph is again a union of
+finite factor-three paths.  Source-target overlap by a factor two creates no
+new endpoint edge.  This is not a claim that the complete origin Hessian is
+sparse: the terminal sextic Hessian remains one undecomposed global PSD form.
+
+The complete mixed coefficient and R-130/R-151 envelopes are unchanged from
+R-154.  The $Q$--$C$ and $K$--$K$ contributions at a factor-three edge are
+$240$ and $324$; antipodal normalization gives
+\[
+                         4(240+324)=2256.                                \tag{4.4}
+\]
+Writing
+\[
+ f(x)=x^2+Zx+r+{7\over250},\quad x=|p|^2,                                \tag{4.5}
+\]
+the diagonal loss and one child-edge norm obey
+\[
+ L(x)={624(7083/2000)x\over4096f(x)f(4x)},\quad
+ E(x)={2256(7083/2000)x\over
+ 4096\sqrt{f(x)f(4x)f(9x)f(36x)}}.                                      \tag{4.6}
+\]
+
+\section*{5. Sharpened exact row certificates}
+\hypertarget{section-5-gap}{ }
+
+Every nonzero lattice mode has $x>3/20$.  For a vertex without a
+factor-three parent, the sharpened target is
+\[
+                         L(x)+E(x)<{109\over125}.                         \tag{5.1}
+\]
+Put $A=624(7083/2000)/4096$, $D=2256(7083/2000)/4096$,
+$F_{14}=f(x)f(4x)$, and $F_{936}=f(9x)f(36x)$.  The exact sign guard is
+\[
+                  {109\over125}F_{14}-Ax>0.                              \tag{5.2}
+\]
+After (5.2), squaring (5.1) reduces to positivity of
+\[
+ \left\{{109\over125}F_{14}-Ax\right\}^2F_{936}
+      -D^2x^2F_{14}.                                                      \tag{5.3}
+\]
+The polynomial in (5.3) has degree twelve.  Its rational Sturm chain has
+length thirteen, six sign variations both at $3/20$ and at positive
+infinity, and a positive lower value.  Thus it has no half-line root.
+
+An independent standard-library implementation uses exact Fraction
+arithmetic, compactifies the half-line, and proves positivity by Bernstein
+coefficients on
+\[
+ [0,1/64], [1/64,1/32], [1/32,1/16], [1/16,1/8],
+ [1/8,1/4], [1/4,1/2], [1/2,1].                                         \tag{5.4}
+\]
+The parent-row certificates imported from and rechecked against R-154 give
+\[
+ L(x)+E(x)+E(x/9)<{1\over30}+{1\over1000}+{1\over6}
+ ={201\over1000},                                                        \tag{5.5}
+\]
+so that row has margin $699/1000$ and is not the worst case.  Combining
+(2.4), (5.1), and (5.5), and dropping the complete global sextic Hessian as
+one PSD form, proves (1.2):
+\[
+                         {9\over10}-{109\over125}={7\over250}.            \tag{5.6}
+\]
+
+For a pure dyadic family, three is not a power of two; hence (4.3) produces
+no edge at all.  A separate quartic Sturm certificate and independent
+Bernstein cover prove $L(x)<753/1000$ for all $x\ge0$, and therefore
+\[
+                         {9\over10}-{753\over1000}={147\over1000},        \tag{5.7}
+\]
+which is (1.3).  This is an envelope certificate, not an assertion about an
+uncomputed exact tensor eigenvalue.
+
+\section*{6. Separate controlled-state recursive companion}
+\hypertarget{section-6-recursive}{ }
+
+For clarity, R-155 also audits a different, explicitly declared chart:
+\[
+ \eta_{2p}=\xi_{2p}+tH\xi_p,\quad
+ \eta_{4p}=\xi_{4p}+sG\eta_{2p}.                                        \tag{6.1}
+\]
+Then
+\[
+ W_{t,s}=W_0+tS_{2p}H\xi_p+sS_{4p}G\xi_{2p}
+             +tsS_{4p}GH\xi_p.                                         \tag{6.2}
+\]
+The bilinear chart connection is
+$z_{\rm conn}=S_{4p}GH\xi_p$.  On a single-parameter diagonal path the
+second derivative contains $2z_{\rm conn}$; that factor two is not a second
+connection block and never reverses $GH$ to $HG$.
+
+The connection response has the derived support
+\[
+ \{4\epsilon-\epsilon':\epsilon,\epsilon'\in\{-1,1\}\}p
+ =\{\pm3p,\pm5p\}.                                                       \tag{6.3}
+\]
+The source cost is
+\[
+ {9\over20}\left(t^2\|H\|_{\HS}^2+s^2\|G\|_{\HS}^2
+                  +t^2s^2\|GH\|_{\HS}^2\right),                       \tag{6.4}
+\]
+so its origin Hessian remains diagonal.  In (3.2) the connection contributes
+$\frac12\int\Tr(Q_{ts}\overline B)dx$, but (6.3) makes it zero at this
+centered stationary covariance-matched, translation-invariant, common-even,
+exactly integrated zero-control origin.  Gaussian integration by parts and
+the same support make the sextic first-variation connection zero there.
+
+These vanishings are not a nonlinear-feedback theorem.  Away from the
+declared origin, with nonzero past, covariance mismatch, aliasing, or a
+general revisit law, the connection terms must be retained and re-estimated.
+
+\section*{7. Devil's-advocate review}
+\hypertarget{section-7-review}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: a reused class receives two independent Gaussians.}
+\textbf{DISMISSED.}  The base law is defined once on
+$\mathcal P\cup2\mathcal P$.  Reuse changes incidence, not the raw variable.
+
+\item \textbf{Objection: overlap destroys the source Gram.}
+\textbf{DISMISSED IN THE FIXED-LAW CHART.}  Equation (2.3) uses distinct raw
+sources and injective doubled targets.  It does not assert independence of
+whole overlapping pair blocks.
+
+\item \textbf{Objection: factor two creates a hidden forward or reverse
+edge.}  \textbf{DISMISSED.}  The derived supports in (4.1)--(4.2) are
+disjoint.  The only legal reverse is the adjoint of the same zero block.
+
+\item \textbf{Objection: the factor-three graph describes every sextic mixed
+entry.}  \textbf{UPHELD AS A WORDING CORRECTION.}  The graph describes only
+the complete mixed endpoint/loss Hessian.  The global sextic Hessian is kept
+as one PSD form and then dropped wholesale.
+
+\item \textbf{Objection: a seven-root numerical chain proves an arbitrary
+finite theorem.}  \textbf{DISMISSED AFTER REPAIR.}  Both executables now use
+the generic two-index injection/independence algebra; carrier supports are
+derived, not assigned.  The proof of the arbitrary-finite quantifier is the
+index calculation (2.2)--(2.5) plus the degree-two path row estimate.
+
+\item \textbf{Objection: the recursive companion proves nonlinear or
+finite-amplitude reuse.}  \textbf{UPHELD AS A BOUNDARY.}  Section 6 is a
+separate two-control all-zero-origin audit.  Its higher-order $t^2s^2$ source
+term is precisely where genuine reuse first appears beyond the Hessian.
+
+\item \textbf{Objection: this favours BCC or validates the current PDE.}
+\textbf{UPHELD AS PROHIBITED.}  R-155 is phase-neutral Hessian mathematics.
+It neither selects nor excludes BCC, a uniform condensate, another modulated
+state, metastability, or any effective equation.
+\end{enumerate}
+
+\section*{8. Reproduction, route decision, and Result footer}
+\hypertarget{section-8-reproduction}{ }
+
+From the repository root, run
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_affine_source_reuse_factor_three_global_gap_boundary.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_affine_source_reuse_factor_three_global_gap_boundary_independent.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_affine_source_reuse_factor_three_global_gap_boundary_verify.py
+\end{verbatim}
+
+R-155 is a real but deliberately bounded advance.  It removes the affine
+origin theorem's source-target-disjointness hypothesis and shows that pure
+factor-two reuse is silent at second order.  It does not make the direct
+T-050 route the sole research priority.  The next direct A13 step, if taken,
+must instantiate nonzero past or genuinely nonlinear/revisit feedback from
+one scalar production action.  In parallel, T-054 should freeze the
+phase-neutral evidence and candidate-equation comparison; T-052 may reject
+models early, and T-053 should be spent only on survivors.  Truth, not BCC or
+any preselected PDE, is the selection criterion.
+
+\begin{verbatim}
+Result ID: A13-CLASSII-AFFINE-SOURCE-REUSE-FACTOR-THREE-GLOBAL-GAP-
+  BOUNDARY (R-155).
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement: Affine source-reuse charts have gap >7/250; pure dyadic
+  families have gap >147/1000, both in the summed HS source norm.
+Scope: Fixed cutoff/floor, centered stationary covariance-matched common-even
+  base, exact torus, distinct raw sources, affine origin Hessian.
+Dependencies: A1, A7, R-128, R-130, R-151, R-154, and Sections 1--3.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_affine_source_reuse_factor_three_global_gap_
+  boundary_verify.py
+Expected output: Integrated 200/200 PASS; primary 49/49; independent 44/44.
+Falsification gate: Any incidence, support, coefficient, exact certificate,
+  PSD ownership, authority, executable, record, or PDF gate fails.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: No nonzero-past, general nonlinear/revisit, finite-
+  amplitude, T-050/A13, Nelson/measure, phase/PDE, or Sector-A result follows.
+Next required action: Minimum direct A13 successor plus T-054/T-052 in parallel.
+\end{verbatim}
+
+\endgroup
