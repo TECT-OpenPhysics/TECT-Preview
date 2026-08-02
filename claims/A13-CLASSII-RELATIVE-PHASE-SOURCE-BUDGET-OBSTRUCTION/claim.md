@@ -5548,3 +5548,52 @@ T5--T7 promotion remain open. Tier stays T4.
   direct T-050 matrix route remains parked until an actual owner-complete
   predictable production chart exists; T-054 remains the primary
   phase-neutral model-selection route, with T-052 only its M1 branch.
+
+- 2026-08-03: Registered
+  `A13-CLASSII-DISJOINT-MULTIPAIR-FACTOR-THREE-RESONANCE-GAP-BOUNDARY`
+  (R-154) as the first genuine restricted multi-root aggregation beyond the
+  R-151 pair theorem and the R-152 pairwise-to-global warning.  Let `P` be a
+  finite family of nonzero admissible momentum classes modulo sign, require
+  every `[p]` and `[2p]` class to be pairwise disjoint and retained, reveal
+  each source before its target, and set `h_[2p]=H_p xi_[p]`.  At the centered
+  stationary common-even covariance-matched zero-control law, direct
+  polarization of the one complete A7 endpoint gives the exact mixed block
+  with coefficients `1/4` for the two `Q-C` orientations and `1/2` for the
+  two `K-K` orientations.
+
+  Every first response has Fourier support `{+/-p,+/-3p}`.  Distinct mixed
+  blocks therefore vanish unless `[q]=[3p]` or `[p]=[3q]`.  The actual
+  resonance graph has at most one parent and one child per vertex and is a
+  union of finite paths.  This derives the cross-root owner rather than
+  summing local pair gaps.
+
+  R-130/R-151 give the diagonal radial loss factor `624` and the factor-three
+  edge factor `2256=4(240+324)`.  Exact rational Sturm certificates prove
+  `L(x)+E(x)<7/8` above the nonzero lattice floor.  If a vertex has a parent,
+  lattice arithmetic gives `x>27/20` and the stronger row bound
+  `L(x)+E(x)+E(x/9)<201/1000`.  A separate non-importing implementation
+  compactifies each half-line and verifies positive rational Bernstein
+  coefficients on dyadic covers.  After paying the `9/10` source Hessian once
+  and dropping the whole global positive-semidefinite sixth-power Hessian,
+  the single global block-row estimate is
+  `D2 A(0)[H,H]>(1/40) sum_p ||H_p||_F^2`.
+
+  `EXP-000671--EXP-000673` preserve the mixed-owner derivation, exact global
+  row certificate, and bounded successor decision.  Primary `34/34` and
+  independent `26/26` exact audits pass.  Integrated verification passes
+  `157/157`, embedding all `60` child rows once and adding `97` integrator-
+  only checks for coefficient parity and authority hashes,
+  rebuilds the deterministic five-page PDF, performs security/text/render
+  checks, and audits all public surfaces.  All five rendered pages pass
+  manual visual QA.
+
+  R-154 is finite-cutoff, positive-floor, affine, and local at zero control.
+  It does not cover nonzero past, overlapping or revisited roots, nonlinear
+  feedback, finite-amplitude convexity, arbitrary progressive controls, a
+  historical complete-low owner, or cutoff/floor removal.  It closes neither
+  T-050 nor A13, selects or excludes no phase, validates or replaces no PDE,
+  and proves no Nelson theorem, interacting measure, or Sector-A closure.
+  The next direct chart permits one overlapping source/target chain and
+  derives its complete covariance second jet before testing nonzero past or
+  nonlinear feedback.  T-054 remains the separate primary phase-neutral
+  model-selection route.

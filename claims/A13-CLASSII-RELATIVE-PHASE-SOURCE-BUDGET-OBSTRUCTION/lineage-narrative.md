@@ -1163,6 +1163,22 @@ endpoint theorem.
     forest/low/balanced completion, cross-root sextic aggregation, T-050,
     A13, every phase/PDE verdict, and Sector A remain open at T4.
 
+76. **Disjoint multipair factor-three resonance graph and origin-Hessian
+    gap.** R-154 reopens one restricted multi-root chart without repeating the
+    R-152 pairwise-to-global error.  For a finite family whose antipodal
+    source and target classes `[p],[2p]` are all disjoint, direct polarization
+    of the complete covariance-normal endpoint derives every cross block.
+    Fourier selection leaves only `[q]=[3p]` or `[p]=[3q]`, so the true
+    resonance graph is a union of finite paths.  R-130/R-151 envelope
+    constants give the exact radial diagonal factor `624` and edge factor
+    `2256`; rational Sturm certificates and an independent dyadic Bernstein
+    audit prove a single global block-row gap strictly above `1/40` after the
+    source is paid once and the whole PSD sextic form is dropped.  This is a
+    fixed-cutoff zero-control affine origin-Hessian theorem.  Nonzero past,
+    source reuse, overlapping/revisited roots, nonlinear feedback, a genuine
+    low owner, finite-amplitude convexity, T-050, A13, phase/PDE conclusions,
+    Nelson, and Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

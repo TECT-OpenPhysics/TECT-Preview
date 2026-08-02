@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-154 disjoint multipair factor-three resonance gap] - 2026-08-03
+
+Registered A13-CLASSII-DISJOINT-MULTIPAIR-FACTOR-THREE-RESONANCE-GAP-BOUNDARY (R-154). Direct polarization of the complete A7 endpoint on finite mutually disjoint affine p:2p controls leaves only factor-three cross-root edges. Exact rational Sturm certificates and an independent dyadic Bernstein audit prove one global origin-Hessian block-row gap above 1/40 with source paid once and the entire global PSD sextic form dropped. The result is fixed-cutoff, positive-floor, zero-past, affine, and local at the origin; overlapping/source-reusing roots, nonlinear feedback, T-050/A13 closure, phase/PDE verdicts, Nelson, and Sector A remain open.
+
 ## [R-153 exact strict-past conditional Hessian and Gaussian absolute-collar boundary] - 2026-08-03
 
 Identified the exact final-fresh-root conditional A7 endpoint after future-current/trace cancellation, derived its first and bilinear second variations plus source, sixth-power, connection, and form factors, proved a spatial L2 collar and exact A1 control-mean gradient constant below 41/20, and registered the Gaussian-support and predictable-localization obstruction to any deterministic absolute collar. The complete progressive owner and production Loewner bound remain absent; T-050, A13, phase/PDE selection, and Sector A remain open.

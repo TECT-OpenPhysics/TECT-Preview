@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-154](#r-154) | Disjoint multipair factor-three resonance graph and origin-Hessian gap | Scoped T4 analytic/exact/executed/audited multipair theorem. For any finite retained family of mutually disjoint antipodal source/target classes with affine predictable controls `h_[2p]=H_p xi_[p]`, direct polarization of the complete covariance-normal A7 endpoint shows that mixed blocks survive only on `[q]=[3p]` or `[p]=[3q]`. The resulting graph is a union of finite paths. Exact diagonal and edge envelopes, rational Sturm chains, and an independent dyadic Bernstein audit give one global block-row bound strictly above `(1/40) sum ||H_p||_F^2` after the `9/10` source Hessian is paid once and the whole global PSD sixth-power Hessian is dropped. Nonzero past, overlapping/revisited roots, nonlinear feedback, arbitrary progressive controls, T-050, A13, phase/PDE selection, and Sector A remain open |
 | [R-153](#r-153) | Production strict-past conditional Hessian and weighted-collar boundary | Scoped T4 analytic/exact/executed/audited conditional theorem and method boundary. For the retained final fresh root, strict-past conditioning and the common-even Gaussian covariance split cancel the future-current covariance exactly against its A7 trace component, leaving the past covariance with a minus sign. The first variation, full bilinear Hessian, positive-semidefinite sixth-power Hessian, `9/10` source Hessian, chart connection, and form threshold `K_E+K_6>=-4I/5` are exact on the actual incidences. Spatial Cauchy gives a conditional `L2_x` collar, and the A1 control-generated mean obeys the exact gradient constant `2.033300406...<41/20`. A nondegenerate derivative-active Gaussian past has unbounded absolute-collar support; event localization prevents an all-predictable-direction averaged collar from weakening the fiberwise condition. The complete progressive owner, production Loewner gap, T-050, A13, phase/PDE selection, and Sector A remain open |
 | [R-152](#r-152) | Affine-past curvature and nonlinear/multi-root globalization boundary | Scoped T4 analytic/exact/executed/audited theorem and method boundary. In the enlarged fixed-mean R-151 chart, arbitrary field mean with zero current mean preserves endpoint loss below `19/25` and augmented curvature above `7/50`; an almost-sure declared past-current collar `C_past<=1/25` preserves curvature above `1/10`. The exact nonlinear gate is the conditional complete-form bound `K>=-4I/5`, and the exact finite multi-root gate is `M>=mu G`. Smooth-bump and rational two-edge fixtures prove that averaged linear tests and positive pairwise gaps do not imply those gates. The collar, production `K` and global production `M` remain absent; T-050, A13, phase/PDE selection, and Sector A remain open |
 | [R-151](#r-151) | Direct two-root endpoint Hessian and uniform local source gap | Scoped T4 analytic/exact/executed/audited local theorem and owner-coordinate no-go. In the full `12x12` sign/internal linear feedback chart `h2=t H xi1` for simultaneous antipodal roots `+/-p` and `+/-2p`, with nonzero admissible dual-lattice `p` and all four modes retained, zero strict past, and a stationary common-even background, the exact complete endpoint has zero first variation and, for `H != 0`, Hessian loss strictly below `4/5 ||H||_F^2`. The radial certificate holds for every `x=|p|^2>=0`. The source Hessian is exactly `9/10 ||H||_F^2` and the sixth-power Hessian is nonnegative, yielding a strict augmented local gap above `1/10 ||H||_F^2`. Forest, balanced, future, trace, and low coordinates may audit the fixed terminal owner but cannot be added as independent reserves. Non-lattice or unretained momenta, nonzero past means, nonlinear feedback, multi-root aggregation, T-050, phase/PDE selection, and Sector A remain open |
@@ -172,6 +173,53 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-154"></a>
+### R-154 -- Disjoint multipair factor-three resonance graph and origin-Hessian gap
+
+- **Production chart.**  Let `P` be a finite set of nonzero admissible
+  dual-lattice momentum classes modulo sign.  Require the whole collection
+  `{[p],[2p]:[p] in P}` to be pairwise disjoint and retained, reveal every
+  source before its target, and use the actual affine predictable controls
+  `h_[2p]=H_p xi_[p]` with independent whitened 12-real both-sign roots.
+  The theorem is evaluated at zero control in the centered stationary
+  common-even covariance-matched A1/A6/A7 law.
+- **Complete mixed owner.**  Direct polarization of the single reduced A7
+  endpoint gives coefficients `1/4` for each `Q-C` orientation and `1/2` for
+  each `K-K` orientation.  Because `Q(0)=Q_A7`, `K(0)=0`, and distinct pair
+  roots are independent, no mixed covariance-curvature term is omitted.
+  Every first response has Fourier support `{+/-p,+/-3p}`; after spatial
+  integration and antipodal identification, distinct blocks survive only
+  when `[q]=[3p]` or `[p]=[3q]`.  The resonance graph has at most one parent
+  and one child per vertex and is a union of finite paths.
+- **Global gap.**  The exact diagonal loss is
+  `L(x)=624(7083/2000)x/[4096 f(x)f(4x)]`; each edge from `[p]` to `[3p]` has
+  norm below
+  `E(x)=2256(7083/2000)x/[4096 sqrt(f(x)f(4x)f(9x)f(36x))]`.
+  Exact rational Sturm certificates prove `L+E<7/8` above the nonzero lattice
+  floor.  A vertex with a factor-three parent lies above `27/20`, where
+  `L<1/30`, `E(x)<1/1000`, and `E(x/9)<1/6`.  An independent non-importing
+  implementation verifies the same half-line inequalities by dyadic
+  Bernstein covers.  Paying the diagonal `9/10` Cameron--Martin Hessian once,
+  dropping the complete global PSD sixth-power Hessian, and applying one
+  block-row estimate yields
+  `D2 A(0)[H,H]>(1/40) sum_p ||H_p||_F^2` for every nonzero chart direction.
+- **Where proved.**  Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-disjoint-multipair-factor-three-resonance-gap-boundary-260803-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_disjoint_multipair_factor_three_resonance_gap_boundary_manifest.json`,
+  and the primary, non-importing independent, and integrated certificates
+  listed there.
+- **Audit boundary.**  R-154 is a fixed-cutoff, positive-floor,
+  zero-control origin-Hessian theorem on a disjoint affine family.  It is not
+  finite-amplitude convexity and does not cover nonzero past, overlapping or
+  revisited roots, nonlinear feedback, arbitrary progressive controls, a
+  historical complete-low owner, cutoff/floor removal, T-050 or A13 closure,
+  Nelson, an interacting measure, any phase/PDE verdict, or Sector-A closure.
+- **Tier / publication target.**  Scoped T4
+  analytic/exact/executed/audited multipair-Hessian method; constructive-field-
+  theory methods note after independent review.
 
 <a id="r-153"></a>
 ### R-153 -- Production strict-past conditional Hessian and weighted-collar boundary

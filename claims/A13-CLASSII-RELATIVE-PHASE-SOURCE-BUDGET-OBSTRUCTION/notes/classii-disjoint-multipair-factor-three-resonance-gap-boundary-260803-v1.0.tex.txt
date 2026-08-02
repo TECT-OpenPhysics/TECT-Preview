@@ -1,0 +1,363 @@
+% =============================================================================
+% Title: Disjoint multipair factor-three resonance graph and origin-Hessian gap
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-DISJOINT-MULTIPAIR-FACTOR-THREE-RESONANCE-GAP-BOUNDARY
+% Ledger: R-154
+% Version: v1.0 -- first issued 2026-08-03; this version issued 2026-08-03
+% Status: scoped T4 analytic/exact/executed/audited multipair advance; no T-050 closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\HS}{\mathrm{HS}}
+\newcommand{\op}{\mathrm{op}}
+
+\section*{1. Purpose and scope: a restricted global Hessian really closes}
+\hypertarget{section-1-result}{ }
+
+R-151 proves a positive origin-Hessian gap for one adapted antipodal
+$p:2p$ pair.  R-152 correctly warns that positive pairwise gaps cannot be
+summed without the cross-root action Hessian.  The present result computes
+that cross-root Hessian on the first finite production family for which no
+source is reused.
+
+Let $\mathcal P$ be a finite set of nonzero admissible dual-lattice momentum
+classes modulo $p\sim-p$.  Require the whole collection
+\[
+ \{[p],[2p]:[p]\in\mathcal P\}                       \tag{1.1}
+\]
+to be pairwise disjoint and retained by the cutoff.  Reveal every source
+$[p]$ before its target $[2p]$ and set
+\[
+ h_{[2p]}=t_pH_p\xi_{[p]},\qquad H_p\in\mathbb R^{12\times12},             \tag{1.2}
+\]
+with every other control zero.  The $\xi_{[p]}$ are independent whitened
+both-sign roots.  Work at $t=0$ in the exact centered stationary common-even
+covariance-matched A1/A6/A7 law, with common-even scalar regulator
+multipliers of modulus at most one.
+
+For the one complete covariance-normal A7 endpoint, the Cameron--Martin
+source cost, and the terminal sixth power, the origin Hessian satisfies
+\[
+ \boxed{
+ D^2\cA(0)[H,H]>{1\over40}
+       \sum_{[p]\in\mathcal P}\|H_p\|_{\HS}^2,\qquad H\ne0 .}
+                                                               \tag{1.3}
+\]
+This is one global block-row inequality after every endpoint cross block has
+been retained.  It is not an inference from separate two-pair tests.
+
+The theorem is finite-cutoff, positive-floor, fixed-law, affine, and local at
+the zero control.  It excludes nonzero revealed past, overlapping pairs,
+root reuse, nonlinear or revisit feedback, finite-amplitude convexity, a
+historical complete-low owner, and cutoff or floor removal.  T-050, A13,
+Nelson, phase selection, every PDE verdict, and Sector A remain open.
+
+\section*{2. One scalar endpoint and all covariance responses}
+\hypertarget{section-2-owner}{ }
+
+For each $[p]\in\mathcal P$, let $S_p,S_{2p}$ be the R-151 six-real
+both-sign synthesis maps and put $D_{p,i}=\partial_iS_p$.  At one spatial
+point the field and current paths are
+\[
+ W_t=W_0+\sum_p t_pS_{2p}H_p\xi_p,\qquad
+ V_{t,i}=V_{0,i}+\sum_p t_pD_{2p,i}H_p\xi_p.         \tag{2.1}
+\]
+The disjointness in (1.1) makes all controlled source blocks independent.
+At the covariance-matched common-even base,
+\[
+ Q(0)=Q_{\rm A7},\qquad K_i(0)=\operatorname{Cov}(W_0,V_{0,i})=0.          \tag{2.2}
+\]
+
+Write $C=\operatorname{Cov}(W)$,
+$Q=\sum_i\operatorname{Cov}(V_i)$, and
+$K_i=\operatorname{Cov}(W,V_i)$.  The first responses in direction $H_p$
+are
+\[
+\begin{aligned}
+ C_p&=S_{2p}H_pS_p^*+S_pH_p^*S_{2p}^*,\\
+ Q_p&=\sum_i(D_{2p,i}H_pD_{p,i}^*+D_{p,i}H_p^*D_{2p,i}^*),\\
+ K_{p,i}&=S_{2p}H_pD_{p,i}^*+S_pH_p^*D_{2p,i}^* .
+\end{aligned}                                      \tag{2.3}
+\]
+There is no mixed second covariance response between distinct $p,q$ because
+their Gaussian roots are independent.  The diagonal second response
+$Q_{2,p}\succeq0$ remains in the diagonal block and is never discarded with
+a negative sign.
+
+Let $B(w)=C_6(w)^*C_6(w)$ and
+$\overline T_{abmn}(C)=\E_C\partial_{ab}B_{mn}(W)$.  The exact reduced
+endpoint is the same scalar as R-151:
+\[
+2\cR(t)=\int\!\left\{
+ \Tr[(Q(t)-Q_{\rm A7})\overline B(C(t))]
+ +\sum_i(K_i(t))_{am}(K_i(t))_{bn}\overline T_{abmn}(C(t))
+\right\}dx .                                         \tag{2.4}
+\]
+For $p\ne q$, direct polarization gives the complete mixed block
+\[
+\boxed{
+\begin{aligned}
+D^2_{pq}\cR(0)=\int\!\bigg\{&{1\over4}
+ [(Q_p)_{mn}(C_q)_{ab}+(Q_q)_{mn}(C_p)_{ab}]\overline T_{abmn}\\
+&+{1\over2}\sum_i[(K_{p,i})_{am}(K_{q,i})_{bn}
+ +(K_{q,i})_{am}(K_{p,i})_{bn}]\overline T_{abmn}\bigg\}dx .
+\end{aligned}}\tag{2.5}
+\]
+The coefficients $1/4$ and $1/2$ polarize back to the R-151 diagonal
+coefficients.  There is no omitted $C_pC_q$ coefficient-curvature term
+because $Q(0)-Q_{\rm A7}=0$, and no omitted derivative of $\overline T$
+because $K(0)=0$.  These cancellations are scope hypotheses, not generic
+identities away from the declared base.
+
+Equation (2.5) is already self-adjoint: $D^2_{qp}\cR=(D^2_{pq}\cR)^*$.
+The legal reverse is this adjoint face, not a second payment.  Forest, future
+variance, balanced, trace, and returned-mean formulae are alternate
+coordinates or estimates of (2.4); none is appended as an extra reserve.
+
+\section*{3. Fourier selection produces a factor-three path graph}
+\hypertarget{section-3-graph}{ }
+
+Every entry of $C_p,Q_p,K_{p,i}$ has spatial Fourier support
+\[
+                       \{\pm p,\pm3p\}.             \tag{3.1}
+\]
+The baseline covariance is stationary, so $\overline T(C(0))$ is independent
+of $x$.  Spatial integration in (2.5) therefore vanishes unless a frequency
+in $\{\pm p,\pm3p\}$ cancels one in $\{\pm q,\pm3q\}$.  Because (1.1)
+removes $[q]=[p]$, the only distinct possibilities are
+\[
+                  [q]=[3p]\quad\hbox{or}\quad[p]=[3q].                   \tag{3.2}
+\]
+
+Join two vertices of $\mathcal P$ exactly when (3.2) holds.  Orient each edge
+from the smaller norm to the larger norm.  A vertex has at most one child
+$[3p]$ and at most one parent $[p/3]$.  The norm grows by the strict factor
+three along every oriented edge, so no cycle exists.  Each finite component
+is consequently a path.  This sparse graph is derived from the complete
+mixed owner; it is not an assumed source orthogonality of the endpoint.
+
+\section*{4. Exact off-diagonal owner bound}
+\hypertarget{section-4-edge}{ }
+
+For $\|H_p\|_{\HS}=1$ set
+\[
+ a_p=\|S_p\|_{\op},\quad b_p=\|S_{2p}\|_{\op},\quad
+ d_p=|p|a_p,\quad e_p=2|p|b_p.                     \tag{4.1}
+\]
+Then
+\[
+ \|C_p\|_{\op}\le2a_pb_p,\quad
+ \|Q_p\|_{\op}\le2d_pe_p,\quad
+ \|K_p\|_{\HS}\le b_pd_p+a_pe_p=3|p|a_pb_p.       \tag{4.2}
+\]
+R-130 gives
+\[
+ \left\|{1\over2}D^2(B:Q)\right\|_{\op}
+ \le H_6\|Q\|_{\op},\qquad H_6<{7083\over2000}.   \tag{4.3}
+\]
+Using the six-real nuclear bound in the $Q$--$C$ part of (2.5) and the
+polarized R-151 $K$--$K$ bound gives
+\[
+ |D^2_{pq}\cR(0)|\le H_6\{24(|p|^2+|q|^2)
+        +108|p||q|\}a_pb_pa_qb_q\,\|H_p\|_{\HS}\|H_q\|_{\HS}.           \tag{4.4}
+\]
+For $[q]=[3p]$, the two braces contribute $240+324=564$.
+
+Let
+\[
+ f(x)=x^2+Zx+r+{7\over250},\qquad x=|p|^2.          \tag{4.5}
+\]
+The two antipodal signs imply
+\[
+ a_p^2\le{2\over Vf(x)},\qquad b_p^2\le{2\over Vf(4x)}.                 \tag{4.6}
+\]
+After spatial integration, every edge from $[p]$ to $[3p]$ therefore has
+block norm strictly below
+\[
+ E(x)={2256(7083/2000)x\over
+ V\sqrt{f(x)f(4x)f(9x)f(36x)}} .                   \tag{4.7}
+\]
+There is no missing factor two in (4.7).  The full quadratic form contains
+$2D^2_{pq}\cR[H_p,H_q]$, and
+$2\|H_p\|\|H_q\|\le\|H_p\|^2+\|H_q\|^2$ charges the edge weight once to
+each incident row.
+
+The R-151 diagonal block, including its nonnegative $Q_{2,p}$ term, obeys
+\[
+ D^2_{pp}\cR(0)>-L(x)\|H_p\|_{\HS}^2,\qquad
+ L(x)={624(7083/2000)x\over Vf(x)f(4x)}.            \tag{4.8}
+\]
+
+\section*{5. Rational half-line certificates}
+\hypertarget{section-5-certificates}{ }
+
+Here $V=4096$.  Put
+\[
+ A={624(7083/2000)\over4096},\qquad
+ D={2256(7083/2000)\over4096},\quad
+ F_{14}=f(x)f(4x),\quad F_{936}=f(9x)f(36x).         \tag{5.1}
+\]
+The elementary bound $\pi>31/10$ gives every nonzero dual-lattice mode
+\[
+ x=(2\pi/16)^2|n|^2>{3\over20}.                    \tag{5.2}
+\]
+If $[p]$ has a factor-three parent, then $p=3q$ for another nonzero lattice
+mode and hence $x>27/20$.
+
+For a vertex without a parent it suffices to prove
+\[
+                         L(x)+E(x)<{7\over8}.        \tag{5.3}
+\]
+The R-151 certificate $L<4/5$ gives the required sign guard
+$(7/8)F_{14}-Ax>0$.  Squaring (5.3) is therefore equivalent to positivity of
+the degree-twelve rational polynomial
+\[
+ P_0(x)=\{(7/8)F_{14}-Ax\}^2F_{936}-D^2x^2F_{14}.  \tag{5.4}
+\]
+Its exact Sturm chain has length thirteen.  At $3/20$ and positive infinity
+the sign variations are both six; the lower-end value is positive.  Thus it
+has no root on $[3/20,\infty)$ and (5.3) holds strictly.
+
+For a vertex with a parent, exact rational certificates give
+\[
+ L(x)<{1\over30},\qquad E(x)<{1\over1000}\quad(x\ge27/20),\qquad
+ E(y)<{1\over6}\quad(y\ge3/20).                    \tag{5.5}
+\]
+The three cleared polynomials have degrees $4,8,8$ respectively, are positive
+at their rational lower endpoints, and have equal Sturm variations at the
+lower endpoint and positive infinity: $1,2,3$ respectively.  Hence no one has
+a root on its declared half-line.
+
+An independent implementation does not reuse a Sturm chain.  It maps
+$x=a+y/(1-y)$, multiplies by $(1-y)^d$, and verifies exact positive Bernstein
+coefficients on dyadic covers.  The degree-twelve cover is
+\[
+[0,1/16],\ [1/16,1/8],\ [1/8,1/4],\ [1/4,1/2],\ [1/2,1],                \tag{5.6}
+\]
+while the other certificates need at most four intervals.  All arithmetic in
+both implementations is rational.
+
+\section*{6. One global block-row estimate}
+\hypertarget{section-6-gap}{ }
+
+The Cameron--Martin Hessian is diagonal because every source root is used
+once:
+\[
+ D^2\cA_{\rm CM}(0)[H,H]={9\over10}
+       \sum_p\|H_p\|_{\HS}^2.                      \tag{6.1}
+\]
+The complete terminal sixth-power Hessian is the single form
+\[
+ {9\over10}\int\E\left[
+ |W_0|^4|z_H|^2+4|W_0|^2(W_0\!\cdot z_H)^2\right]dx\succeq0,           \tag{6.2}
+\]
+where $z_H=\sum_pS_{2p}H_p\xi_p$.  We drop (6.2) in its entirety.  No
+diagonal sextic payment is retained while deleting its mixed blocks.
+
+For a graph vertex $[p]$, charge (4.7) once for each incident edge.  If it has
+no parent, (5.3) gives the row margin
+\[
+ {9\over10}-L(x)-E(x)>{1\over40}.                  \tag{6.3}
+\]
+If it has a parent, include both the possible child edge $E(x)$ and the parent
+edge $E(x/9)$.  Equations (5.5) give
+\[
+ L(x)+E(x)+E(x/9)<{1\over30}+{1\over1000}+{1\over6}
+ ={201\over1000},                                  \tag{6.4}
+\]
+so its margin is greater than $699/1000$, in particular greater than $1/40$.
+Summing the block-row inequalities over every finite path proves (1.3).
+
+This is precisely the global Loewner/Gershgorin step that R-152 required.
+The proof never replaces it by a collection of positive $2\times2$ tests.
+
+\section*{7. Devil's-advocate review}
+\hypertarget{section-7-review}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: pairwise positivity is being summed again.}
+\textbf{DISMISSED.}  Equation (2.5) derives every mixed block from the one
+scalar endpoint.  Equations (3.2) and (6.3)--(6.4) prove one global block-row
+bound on the resulting matrix.
+
+\item \textbf{Objection: the mixed Hessian omits covariance-curvature or
+$K$-derivative terms.}  \textbf{VALID WITH SCOPE MITIGATION.}  Their absence
+uses exactly $Q(0)=Q_{\rm A7}$, $K(0)=0$, independent disjoint roots, and an
+affine fixed-law chart.  Weakening any of those hypotheses requires the
+additional terms and is outside R-154.
+
+\item \textbf{Objection: the $2256$ edge coefficient misses the quadratic
+off-diagonal factor two.}  \textbf{DISMISSED.}  The factor is
+$4\times(240+324)$: four is the antipodal covariance normalization.  The
+quadratic factor two is paid by $2ab\le a^2+b^2$, once on each endpoint row.
+
+\item \textbf{Objection: mixed sixth-power entries need not be positive.}
+\textbf{DISMISSED.}  No individual entry is assigned a sign.  The complete
+global sixth-power Hessian (6.2) is positive semidefinite and is dropped as
+one form.
+
+\item \textbf{Objection: the result supplies the historical complete-low
+owner or arbitrary predictable feedback.}  \textbf{UPHELD AS A BOUNDARY.}
+The minimal full-output chart declares no independent low coordinate, and it
+is linear, disjoint, and evaluated only at the origin.  No Feshbach block,
+nonlinear connection, or full T-050 conclusion is claimed.
+\end{enumerate}
+
+\section*{8. Reproduction, route decision, and Result footer}
+\hypertarget{section-8-reproduction}{ }
+
+From the repository root, run
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_disjoint_multipair_factor_three_resonance_gap_boundary.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_disjoint_multipair_factor_three_resonance_gap_boundary_independent.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_disjoint_multipair_factor_three_resonance_gap_boundary_verify.py
+\end{verbatim}
+
+R-154 is a genuine advance beyond R-151/R-152: a nontrivial finite family of
+actual cross-root blocks is now evaluated and aggregated without source
+reuse.  The next honest direct step is to relax exactly one load-bearing
+restriction at a time: first permit one overlapping source/target chain and
+derive its full covariance second jet; then test nonzero past or nonlinear
+feedback.  A genuine independent low variable enters only if it is declared
+by that same scalar action.  The phase-neutral T-054 route remains separate;
+R-154 is evidence about a restricted action Hessian, not evidence for BCC or
+for any alternative phase.
+
+\begin{verbatim}
+Result ID: A13-CLASSII-DISJOINT-MULTIPAIR-FACTOR-THREE-RESONANCE-GAP-
+  BOUNDARY (R-154).
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement: On every declared finite disjoint affine p:2p chart, the
+  complete mixed endpoint has only factor-three edges and the augmented
+  zero-control origin Hessian is strictly above (1/40) sum ||H_p||_F^2.
+Scope: Fixed cutoff and floor, nonzero retained dual-lattice modes, pairwise-
+  disjoint antipodal source/target classes, centered stationary common-even
+  covariance-matched base, affine one-shot controls, and origin Hessian only.
+Dependencies: A1, A7, R-130, R-151--R-153, and Sections 1--2 hypotheses.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_disjoint_multipair_factor_three_resonance_
+  gap_boundary_verify.py
+Expected output: Integrated 157/157 PASS including primary 34/34,
+  independent 26/26, all 60 embedded child rows, 97 integrator-only checks,
+  and every artifact/PDF/generated-surface gate.
+Falsification gate: Failure of the mixed coefficients, Fourier support,
+  factor 2256, any Sturm or Bernstein half-line certificate, source/sextic
+  ownership, authority hash, executable/JSON/PDF, exploration, or surface pin.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: No nonzero-past, overlapping/revisit, nonlinear or
+  full progressive theorem; no T-050/A13, Nelson/measure, phase/PDE verdicts, or
+  Sector-A conclusion follows.
+Next required action: Derive one overlapping source/target affine chain from
+  the same scalar action before testing nonzero past or nonlinear feedback;
+  add low/Feshbach only when a genuine independent low coordinate exists.
+\end{verbatim}
+
+\endgroup
