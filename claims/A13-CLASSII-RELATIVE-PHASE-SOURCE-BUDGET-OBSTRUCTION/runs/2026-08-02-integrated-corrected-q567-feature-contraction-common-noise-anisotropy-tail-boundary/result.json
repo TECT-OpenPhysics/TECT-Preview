@@ -1,0 +1,1846 @@
+{
+  "assertion_accounting": {
+    "embedded_child_assertions": 92,
+    "integrator_only_assertions": 160,
+    "unique_package_assertions": 252
+  },
+  "assertions": {
+    "failed": 0,
+    "passed": 252,
+    "rows": [
+      {
+        "actual": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "expected": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "group": "primary:authority",
+        "name": "A1 manifest is production claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "4000000000001/1000000000000",
+        "expected": "4000000000001/1000000000000",
+        "group": "primary:coefficients",
+        "name": "P derived from A1 inputs",
+        "status": "PASS"
+      },
+      {
+        "actual": "12000000000/4000000000001",
+        "expected": "12000000000/4000000000001",
+        "group": "primary:coefficients",
+        "name": "c0 exact",
+        "status": "PASS"
+      },
+      {
+        "actual": "30375000000/4000000000001",
+        "expected": "30375000000/4000000000001",
+        "group": "primary:coefficients",
+        "name": "c1 exact",
+        "status": "PASS"
+      },
+      {
+        "actual": "5/9",
+        "expected": "5/9",
+        "group": "primary:coefficients",
+        "name": "alpha exact",
+        "status": "PASS"
+      },
+      {
+        "actual": "(5, 6, 7)",
+        "expected": "(5, 6, 7)",
+        "group": "primary:coherence",
+        "name": "correct harmonics occupy q=5,6,7",
+        "status": "PASS"
+      },
+      {
+        "actual": "(327680, 327680, 327680)",
+        "expected": "one output",
+        "group": "primary:coherence",
+        "name": "correct physical outputs collide",
+        "status": "PASS"
+      },
+      {
+        "actual": "327680",
+        "expected": "327680",
+        "group": "primary:coherence",
+        "name": "physical factor two retained",
+        "status": "PASS"
+      },
+      {
+        "actual": "(14, 13, 12)",
+        "expected": "(14, 13, 12)",
+        "group": "primary:coherence",
+        "name": "root shells are dyadic",
+        "status": "PASS"
+      },
+      {
+        "actual": "(5, 6, 7)",
+        "expected": "(5, 6, 7)",
+        "group": "primary:coherence",
+        "name": "correct shell gaps",
+        "status": "PASS"
+      },
+      {
+        "actual": "(10, 20, 40)",
+        "expected": "all even",
+        "group": "primary:coherence",
+        "name": "even family has common sign",
+        "status": "PASS"
+      },
+      {
+        "actual": "[(10, (5, 6, 7), 1), (12, (5, 6, 7), 1), (14, (5, 6, 7), 1), (16, (5, 6, 7), 1)]",
+        "expected": "t=10,12,14,16 all legal and coherent",
+        "group": "primary:coherence",
+        "name": "full legal even family",
+        "status": "PASS"
+      },
+      {
+        "actual": "(4229940, 4229940, 4229940)",
+        "expected": "one physical output",
+        "group": "primary:r142_audit",
+        "name": "old integer collision remains arithmetically real",
+        "status": "PASS"
+      },
+      {
+        "actual": "4229940",
+        "expected": "4229940",
+        "group": "primary:r142_audit",
+        "name": "old physical output restores factor two",
+        "status": "PASS"
+      },
+      {
+        "actual": "(6, 7, 8)",
+        "expected": "(6, 7, 8)",
+        "group": "primary:r142_audit",
+        "name": "old harmonics are q=6,7,8",
+        "status": "PASS"
+      },
+      {
+        "actual": "(6, 7, 8)",
+        "expected": "(6, 7, 8)",
+        "group": "primary:r142_audit",
+        "name": "old physical shell gaps are q=6,7,8",
+        "status": "PASS"
+      },
+      {
+        "actual": "2114970 present",
+        "expected": "superseded label located",
+        "group": "primary:r142_audit",
+        "name": "old note contains superseded half-output label",
+        "status": "PASS"
+      },
+      {
+        "actual": "{10: -1.183171571438116e-05, 20: -3.640874669774275e-07, 40: -2.288423816291403e-10}",
+        "expected": "all < 0",
+        "group": "primary:coherence",
+        "name": "corrected band coefficients all negative",
+        "status": "PASS"
+      },
+      {
+        "actual": "{10: -1.183171571438116e-05, 20: -3.640874669774275e-07, 40: -2.288423816291403e-10}",
+        "expected": "(-1)^(n+1) g_n > 0",
+        "group": "primary:coherence",
+        "name": "registered parity sign formula",
+        "status": "PASS"
+      },
+      {
+        "actual": "-5*t**2/2",
+        "expected": "-5*t**2/2",
+        "group": "primary:sign_firewall",
+        "name": "Pcomp equals negative half raw signature",
+        "status": "PASS"
+      },
+      {
+        "actual": "-5",
+        "expected": "-5",
+        "group": "primary:sign_firewall",
+        "name": "Hessian sign and factor conversion",
+        "status": "PASS"
+      },
+      {
+        "actual": "(10, -5)",
+        "expected": "raw > 0 and action < 0",
+        "group": "primary:sign_firewall",
+        "name": "positive raw edge is action-adverse",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.45",
+        "expected": "0.45",
+        "group": "primary:feature",
+        "name": "source coefficient spent exactly once",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.15",
+        "expected": "0.15",
+        "group": "primary:feature",
+        "name": "sextic coefficient spent exactly once",
+        "status": "PASS"
+      },
+      {
+        "actual": "10.5",
+        "expected": "10.5",
+        "group": "primary:feature",
+        "name": "complete feature energy identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.4375 0.4375]",
+        "expected": ">0",
+        "group": "primary:douglas",
+        "name": "diagonal endpoint energies pass",
+        "status": "PASS"
+      },
+      {
+        "actual": "[-0.125  1.   ]",
+        "expected": "minimum < 0",
+        "group": "primary:douglas",
+        "name": "mixed Gram nevertheless fails",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.125",
+        "expected": "1.125",
+        "group": "primary:douglas",
+        "name": "generalized contraction edge detects failure",
+        "status": "PASS"
+      },
+      {
+        "actual": "[1.05 1.55]",
+        "expected": "minimum > 0",
+        "group": "primary:douglas",
+        "name": "passing mixed Gram is positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.2778361813707624",
+        "expected": "<1",
+        "group": "primary:douglas",
+        "name": "passing contraction constant is strict",
+        "status": "PASS"
+      },
+      {
+        "actual": "7/4",
+        "expected": "7/4",
+        "group": "primary:douglas",
+        "name": "exact contraction residual identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.0",
+        "expected": "0.0",
+        "group": "primary:feshbach",
+        "name": "source-null range condition",
+        "status": "PASS"
+      },
+      {
+        "actual": "2.5",
+        "expected": "2.5",
+        "group": "primary:feshbach",
+        "name": "exact effective block",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.25",
+        "expected": "1.25",
+        "group": "primary:feshbach",
+        "name": "sharp generalized source gap",
+        "status": "PASS"
+      },
+      {
+        "actual": "2.5",
+        "expected": "2.5",
+        "group": "primary:feshbach",
+        "name": "lifted vector realizes Schur value",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.0",
+        "expected": ">0",
+        "group": "primary:feshbach",
+        "name": "kernel-cross failure is detected",
+        "status": "PASS"
+      },
+      {
+        "actual": "[-1.  2.]",
+        "expected": "minimum < 0",
+        "group": "primary:feshbach",
+        "name": "negative null block is detected",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.0",
+        "expected": "0.0",
+        "group": "primary:covariance",
+        "name": "mass block symmetric",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.02811617 0.16519715 0.20668667]",
+        "expected": "0 < mu1 < mu2 < mu3",
+        "group": "primary:covariance",
+        "name": "mass eigenvalues positive and ordered",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1, 1, 1)",
+        "expected": "(1, 1, 1)",
+        "group": "primary:covariance",
+        "name": "exact Sturm intervals isolate all three masses",
+        "status": "PASS"
+      },
+      {
+        "actual": "221/1000",
+        "expected": "221/1000",
+        "group": "primary:covariance",
+        "name": "safe rational eigenvalue-spread sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "6761/200000",
+        "expected": "6761/200000",
+        "group": "primary:covariance",
+        "name": "safe rational squared-spread sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.00352562 0.00080348 0.        ]",
+        "expected": ">=0",
+        "group": "primary:covariance",
+        "name": "anisotropic covariance remainder PSD",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.004702623956037599",
+        "expected": "0.004702623956037599",
+        "group": "primary:covariance",
+        "name": "synchronous square-root remainder exact",
+        "status": "PASS"
+      },
+      {
+        "actual": "U remains in negative feature slot",
+        "expected": "sign retained",
+        "group": "primary:covariance",
+        "name": "PSD covariance is not relabelled action-positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "(3.523370484259658e-11, 0.2599999999931745)",
+        "expected": "both nonnegative",
+        "group": "primary:tail",
+        "name": "declared kinetic dominates shifted fourth-order square",
+        "status": "PASS"
+      },
+      {
+        "actual": "1946",
+        "expected": "1946",
+        "group": "primary:tail",
+        "name": "exact sup-shell population formula",
+        "status": "PASS"
+      },
+      {
+        "actual": "3.0000000001073404",
+        "expected": "<4",
+        "group": "primary:tail",
+        "name": "production q0 lies below N=2 tail",
+        "status": "PASS"
+      },
+      {
+        "actual": "(27, 0.1103000379429299, 0.09798775164798272)",
+        "expected": "(27, '>=ceiling', '<ceiling')",
+        "group": "primary:tail",
+        "name": "large diagnostic threshold first at N=27",
+        "status": "PASS"
+      },
+      {
+        "actual": "(49, 0.016488784339416786, 0.015477846421674985)",
+        "expected": "(49, '>=ceiling', '<ceiling')",
+        "group": "primary:tail",
+        "name": "small diagnostic threshold first at N=49",
+        "status": "PASS"
+      },
+      {
+        "actual": "4.100062011735117e-08",
+        "expected": "<5e-8",
+        "group": "primary:tail",
+        "name": "synchronous tail is much smaller at N=27",
+        "status": "PASS"
+      },
+      {
+        "actual": "5.640592303064587e-10",
+        "expected": "<6e-10",
+        "group": "primary:tail",
+        "name": "synchronous tail is much smaller at N=49",
+        "status": "PASS"
+      },
+      {
+        "actual": "12000000000/4000000000001",
+        "expected": "12000000000/4000000000001",
+        "group": "independent:coefficients",
+        "name": "independent c0",
+        "status": "PASS"
+      },
+      {
+        "actual": "30375000000/4000000000001",
+        "expected": "30375000000/4000000000001",
+        "group": "independent:coefficients",
+        "name": "independent c1",
+        "status": "PASS"
+      },
+      {
+        "actual": "5/9",
+        "expected": "5/9",
+        "group": "independent:coefficients",
+        "name": "independent alpha",
+        "status": "PASS"
+      },
+      {
+        "actual": "(5, 6, 7)",
+        "expected": "(5, 6, 7)",
+        "group": "independent:coherence",
+        "name": "independent q labels",
+        "status": "PASS"
+      },
+      {
+        "actual": "(163840, 163840, 163840)",
+        "expected": "(163840, 163840, 163840)",
+        "group": "independent:coherence",
+        "name": "independent common physical output",
+        "status": "PASS"
+      },
+      {
+        "actual": "(5, 6, 7)",
+        "expected": "(5, 6, 7)",
+        "group": "independent:coherence",
+        "name": "independent exact gaps",
+        "status": "PASS"
+      },
+      {
+        "actual": "(-1, -1, -1)",
+        "expected": "(-1, -1, -1)",
+        "group": "independent:coherence",
+        "name": "all signs agree by parity",
+        "status": "PASS"
+      },
+      {
+        "actual": "[(9, (5, 6, 7), 1), (10, (5, 6, 7), 1), (11, (5, 6, 7), 1), (12, (5, 6, 7), 1), (13, (5, 6, 7), 1), (14, (5, 6, 7), 1), (15, (5, 6, 7), 1), (16, (5, 6, 7), 1)]",
+        "expected": "all legal common-output triples",
+        "group": "independent:coherence",
+        "name": "all t=9..16 are geometrically legal",
+        "status": "PASS"
+      },
+      {
+        "actual": "(10, 12, 14, 16)",
+        "expected": "negative sign",
+        "group": "independent:coherence",
+        "name": "even subfamily is same-sign",
+        "status": "PASS"
+      },
+      {
+        "actual": "(2114970, 2114970, 2114970)",
+        "expected": "2114970",
+        "group": "independent:r142_audit",
+        "name": "old half products collide",
+        "status": "PASS"
+      },
+      {
+        "actual": "(4229940, 4229940, 4229940)",
+        "expected": "4229940",
+        "group": "independent:r142_audit",
+        "name": "old physical products include factor two",
+        "status": "PASS"
+      },
+      {
+        "actual": "(6, 7, 8)",
+        "expected": "(6, 7, 8)",
+        "group": "independent:r142_audit",
+        "name": "old q labels independently recovered",
+        "status": "PASS"
+      },
+      {
+        "actual": "(6, 7, 8)",
+        "expected": "(6, 7, 8)",
+        "group": "independent:r142_audit",
+        "name": "old physical gaps independently recovered",
+        "status": "PASS"
+      },
+      {
+        "actual": "-5",
+        "expected": "-5",
+        "group": "independent:sign_firewall",
+        "name": "independent negative-half action conversion",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(10, 1), Fraction(-5, 1))",
+        "expected": "raw positive and action negative",
+        "group": "independent:sign_firewall",
+        "name": "independent adverse-edge convention",
+        "status": "PASS"
+      },
+      {
+        "actual": "21/2",
+        "expected": "21/2",
+        "group": "independent:feature",
+        "name": "independent complete feature identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "9/20",
+        "expected": "9/20",
+        "group": "independent:feature",
+        "name": "independent source one-use coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/20",
+        "expected": "3/20",
+        "group": "independent:feature",
+        "name": "independent sextic one-use coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "7/16",
+        "expected": ">0",
+        "group": "independent:douglas",
+        "name": "independent diagonal positivity",
+        "status": "PASS"
+      },
+      {
+        "actual": "(Fraction(-1, 8), Fraction(1, 1))",
+        "expected": "(Fraction(-1, 8), Fraction(1, 1))",
+        "group": "independent:douglas",
+        "name": "independent mixed failure",
+        "status": "PASS"
+      },
+      {
+        "actual": "9/8",
+        "expected": ">1",
+        "group": "independent:douglas",
+        "name": "independent optimal rho squared",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "<1",
+        "group": "independent:douglas",
+        "name": "independent strict passing contraction",
+        "status": "PASS"
+      },
+      {
+        "actual": "7/4",
+        "expected": "7/4",
+        "group": "independent:douglas",
+        "name": "independent residual completion",
+        "status": "PASS"
+      },
+      {
+        "actual": "5/2",
+        "expected": "5/2",
+        "group": "independent:feshbach",
+        "name": "independent effective Schur block",
+        "status": "PASS"
+      },
+      {
+        "actual": "5/4",
+        "expected": "5/4",
+        "group": "independent:feshbach",
+        "name": "independent sharp gap",
+        "status": "PASS"
+      },
+      {
+        "actual": "5/2",
+        "expected": "5/2",
+        "group": "independent:feshbach",
+        "name": "independent lifted vector",
+        "status": "PASS"
+      },
+      {
+        "actual": "cross into zero eigenline is nonzero",
+        "expected": "range failure",
+        "group": "independent:feshbach",
+        "name": "kernel cross makes range fail",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[Fraction(1, 10), Fraction(-1, 20), Fraction(-1, 20)], [Fraction(-1, 20), Fraction(13, 100), Fraction(-1, 20)], [Fraction(-1, 20), Fraction(-1, 20), Fraction(17, 100)]]",
+        "expected": "registered exact matrix",
+        "group": "independent:covariance",
+        "name": "independent mass entries",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.028116172335115402, 0.1651971528808273, 0.20668667478405736]",
+        "expected": "positive ordered",
+        "group": "independent:covariance",
+        "name": "independent mass eigenvalues positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.4000000000000001",
+        "expected": "0.4",
+        "group": "independent:covariance",
+        "name": "independent eigenvalue trace",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.028116172335115402, 0.1651971528808273, 0.20668667478405736]",
+        "expected": "((0.028, 0.029), (0.165, 0.166), (0.206, 0.207))",
+        "group": "independent:covariance",
+        "name": "independent roots lie in rational audit intervals",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0.221, 0.033805)",
+        "expected": "(0.221, 0.033805)",
+        "group": "independent:covariance",
+        "name": "independent interval spreads imply safe constants",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.0014448779334018252, 0.00033158494532965765, 0.0]",
+        "expected": ">=0",
+        "group": "independent:covariance",
+        "name": "independent covariance remainder PSD",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.0024087531840378262",
+        "expected": "sharp endpoint difference",
+        "group": "independent:covariance",
+        "name": "independent common-noise square-root norm",
+        "status": "PASS"
+      },
+      {
+        "actual": "(3.523370484259658e-11, 0.2599999999931745)",
+        "expected": "both nonnegative",
+        "group": "independent:tail",
+        "name": "independent kinetic shifted-square remainder is nonnegative",
+        "status": "PASS"
+      },
+      {
+        "actual": "[27, 49]",
+        "expected": "[27, 49]",
+        "group": "independent:tail",
+        "name": "independent thresholds",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0.1103000379429299, 0.10043434343434376, 0.09798775164798272)",
+        "expected": "previous >= ceiling > current",
+        "group": "independent:tail",
+        "name": "independent N=27 is first for large headroom",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0.016488784339416786, 0.015912689545308223, 0.015477846421674985)",
+        "expected": "previous >= ceiling > current",
+        "group": "independent:tail",
+        "name": "independent N=49 is first for small headroom",
+        "status": "PASS"
+      },
+      {
+        "actual": "5.640592303064587e-10",
+        "expected": "<6e-10",
+        "group": "independent:tail",
+        "name": "independent synchronous N=49 tail",
+        "status": "PASS"
+      },
+      {
+        "actual": "1946",
+        "expected": "1946",
+        "group": "independent:tail",
+        "name": "sup-shell count independently expanded",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "children",
+        "name": "primary exits zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "children",
+        "name": "independent exits zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "group": "children",
+        "name": "primary status",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY",
+        "expected": "A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY",
+        "group": "children",
+        "name": "primary result",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "children",
+        "name": "primary all pass",
+        "status": "PASS"
+      },
+      {
+        "actual": "52",
+        "expected": "52",
+        "group": "children",
+        "name": "primary count",
+        "status": "PASS"
+      },
+      {
+        "actual": "52",
+        "expected": "52",
+        "group": "children",
+        "name": "primary count self-consistent",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "group": "children",
+        "name": "independent status",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY",
+        "expected": "A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY",
+        "group": "children",
+        "name": "independent result",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "children",
+        "name": "independent all pass",
+        "status": "PASS"
+      },
+      {
+        "actual": "40",
+        "expected": "40",
+        "group": "children",
+        "name": "independent count",
+        "status": "PASS"
+      },
+      {
+        "actual": "40",
+        "expected": "40",
+        "group": "children",
+        "name": "independent count self-consistent",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "independence",
+        "name": "no relative imports",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "independence",
+        "name": "no numerical libraries",
+        "status": "PASS"
+      },
+      {
+        "actual": "['__future__', 'argparse', 'fractions', 'json', 'math', 'os', 'pathlib', 'tempfile', 'typing']",
+        "expected": "no primary",
+        "group": "independence",
+        "name": "does not import primary",
+        "status": "PASS"
+      },
+      {
+        "actual": "([5, 6, 7], [5, 6, 7])",
+        "expected": "[5, 6, 7]",
+        "group": "cross",
+        "name": "corrected gaps agree",
+        "status": "PASS"
+      },
+      {
+        "actual": "([6, 7, 8], [6, 7, 8])",
+        "expected": "[6, 7, 8]",
+        "group": "cross",
+        "name": "old gaps agree",
+        "status": "PASS"
+      },
+      {
+        "actual": "(4229940, 4229940)",
+        "expected": "4229940",
+        "group": "cross",
+        "name": "old physical output factor",
+        "status": "PASS"
+      },
+      {
+        "actual": "('4000000000001/1000000000000', '4000000000001/1000000000000')",
+        "expected": "equal",
+        "group": "cross",
+        "name": "production coefficients P",
+        "status": "PASS"
+      },
+      {
+        "actual": "('12000000000/4000000000001', '12000000000/4000000000001')",
+        "expected": "equal",
+        "group": "cross",
+        "name": "production coefficient c0",
+        "status": "PASS"
+      },
+      {
+        "actual": "('30375000000/4000000000001', '30375000000/4000000000001')",
+        "expected": "equal",
+        "group": "cross",
+        "name": "production coefficient c1",
+        "status": "PASS"
+      },
+      {
+        "actual": "('5/9', '5/9')",
+        "expected": "equal",
+        "group": "cross",
+        "name": "alpha",
+        "status": "PASS"
+      },
+      {
+        "actual": "(-0.125, '-1/8')",
+        "expected": "-1/8",
+        "group": "cross",
+        "name": "mixed failure edge",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1.125, '9/8')",
+        "expected": "9/8",
+        "group": "cross",
+        "name": "rho failure edge",
+        "status": "PASS"
+      },
+      {
+        "actual": "(2.5, '5/2')",
+        "expected": "equal",
+        "group": "cross",
+        "name": "Feshbach block",
+        "status": "PASS"
+      },
+      {
+        "actual": "([0.02811617233511541, 0.16519715288082723, 0.20668667478405733], [0.028116172335115402, 0.1651971528808273, 0.20668667478405736])",
+        "expected": "within 2e-12",
+        "group": "cross",
+        "name": "mass spectra",
+        "status": "PASS"
+      },
+      {
+        "actual": "('221/1000', 0.221)",
+        "expected": "0.221",
+        "group": "cross",
+        "name": "safe delta sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "('6761/200000', 0.033805)",
+        "expected": "0.033805",
+        "group": "cross",
+        "name": "safe squared spread",
+        "status": "PASS"
+      },
+      {
+        "actual": "({'large_first_N': 27, 'large_headroom': 0.10043434343434376, 'small_first_N': 49, 'small_headroom': 0.015912689545308223}, [27, 49])",
+        "expected": "[27, 49]",
+        "group": "cross",
+        "name": "thresholds",
+        "status": "PASS"
+      },
+      {
+        "actual": "(4.100062011735117e-08, 4.100062011735116e-08)",
+        "expected": "4.100062011735117e-08",
+        "group": "cross",
+        "name": "tail N27",
+        "status": "PASS"
+      },
+      {
+        "actual": "(5.640592303064587e-10, 5.640592303064587e-10)",
+        "expected": "5.640592303064587e-10",
+        "group": "cross",
+        "name": "tail N49",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "primary production_owner_matrix_assembled false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "primary production_feature_contraction_proved false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "primary production_adverse_direction_proved false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "primary owner_preserving_su2_intertwiner_proved false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "primary a13_gate_closed false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "primary sector_a_closed false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "independent production_matrix_assembled false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "independent a13_gate_closed false",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "scope",
+        "name": "independent sector_a_closed false",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "result",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "ledger",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "audit",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "sign",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "feature",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "Douglas",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "Feshbach",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "covariance",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "tail",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "production",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "PDE",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "map",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "review",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "note",
+        "name": "footer",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0, '')",
+        "expected": "0",
+        "group": "pdf",
+        "name": "build exits zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "FORM-CHECK: PASS (banner fields, sections, footer, filename consistency)\nOVERFULL-HBOX: 0\nPDF: claims\\A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION\\notes\\classii-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary-260802-v1.0.pdf (95 KB) \u2014 intermediates discarded\n",
+        "expected": "FORM-CHECK: PASS",
+        "group": "pdf",
+        "name": "form check",
+        "status": "PASS"
+      },
+      {
+        "actual": "FORM-CHECK: PASS (banner fields, sections, footer, filename consistency)\nOVERFULL-HBOX: 0\nPDF: claims\\A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION\\notes\\classii-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary-260802-v1.0.pdf (95 KB) \u2014 intermediates discarded\n",
+        "expected": "OVERFULL-HBOX: 0",
+        "group": "pdf",
+        "name": "zero overfull",
+        "status": "PASS"
+      },
+      {
+        "actual": "('04a0ba83091b5b058aa3811ec8d245804f6ac266b8ef262ab90514ee96b85cba', '04a0ba83091b5b058aa3811ec8d245804f6ac266b8ef262ab90514ee96b85cba')",
+        "expected": "equal",
+        "group": "pdf",
+        "name": "deterministic rebuild",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "pdf",
+        "name": "not encrypted",
+        "status": "PASS"
+      },
+      {
+        "actual": "9",
+        "expected": "9",
+        "group": "pdf",
+        "name": "nine pages",
+        "status": "PASS"
+      },
+      {
+        "actual": "[2454, 2085, 1916, 1705, 1610, 2224, 2554, 1601, 2118]",
+        "expected": ">=20 each",
+        "group": "pdf",
+        "name": "all pages nonblank",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "pdf",
+        "name": "ledger extracts",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "pdf",
+        "name": "scope extracts",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "pdf",
+        "name": "no replacement glyph",
+        "status": "PASS"
+      },
+      {
+        "actual": "None",
+        "expected": "None",
+        "group": "pdf",
+        "name": "no form fields",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "pdf",
+        "name": "no unsafe actions",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0, '')",
+        "expected": "0",
+        "group": "pdf",
+        "name": "Poppler exits zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "9",
+        "expected": "9",
+        "group": "pdf",
+        "name": "all pages rendered",
+        "status": "PASS"
+      },
+      {
+        "actual": "[262706, 232675, 222715, 203517, 189866, 247724, 285776, 198500, 169030]",
+        "expected": "positive",
+        "group": "pdf",
+        "name": "rendered pages nonempty",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000585 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "failed",
+        "expected": "failed",
+        "group": "exploration",
+        "name": "EXP-000585 verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000585 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Use the corrected dyadic q=5,6,7 family in every successor matrix and retain the old collision only as a q=6,7,8 arithmetic regression fixture.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000585 next",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000586 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "advanced",
+        "expected": "advanced",
+        "group": "exploration",
+        "name": "EXP-000586 verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000586 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Use the t=10 triple as the regression seed for the augmented q567 mixed-Gram and independently differentiated action-Hessian tests.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000586 next",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000587 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "advanced",
+        "expected": "advanced",
+        "group": "exploration",
+        "name": "EXP-000587 verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000587 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Register the actual production U/Phi base, first-, and cross-second-jet data, then compute the mixed Gram and nonlinear action Hessian independently.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000587 next",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000588 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "advanced",
+        "expected": "advanced",
+        "group": "exploration",
+        "name": "EXP-000588 verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000588 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "After matrix assembly, return the source-null range residual, generalized edge, full lifted vector, and its ownerwise Rayleigh decomposition.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000588 next",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000589 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "advanced",
+        "expected": "advanced",
+        "group": "exploration",
+        "name": "EXP-000589 verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000589 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Propagate the common-probe factor through the actual owner map, retain low modes exactly, and verify that the transformed high-tail constant fits a production margin.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000589 next",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000590 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "failed",
+        "expected": "failed",
+        "group": "exploration",
+        "name": "EXP-000590 verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000590 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Rename the check as discrete shell softness and commensurability; require a same-backend negative Hessian eigenvalue for an instability claim.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000590 next",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000591 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "inconclusive",
+        "expected": "inconclusive",
+        "group": "exploration",
+        "name": "EXP-000591 verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000591 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Use n001_variational_backend.py on exact BCC-commensurate boxes and register Delta F(phi,A), star normalization, polarization/phase coverage, residual, restricted Hessian, multistart coverage, and resolution transfer.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000591 next",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "exploration",
+        "name": "EXP-000592 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "inconclusive",
+        "expected": "inconclusive",
+        "group": "exploration",
+        "name": "EXP-000592 verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": ">=2",
+        "group": "exploration",
+        "name": "EXP-000592 evidence",
+        "status": "PASS"
+      },
+      {
+        "actual": "Certify a homogeneous stationary point, assemble the full 72-real-dimensional BCC-star matrix with cross blocks, project exact symmetries, compare with full-space Lanczos, and repeat on commensurate boxes and increasing grids.",
+        "expected": "nonempty",
+        "group": "exploration",
+        "name": "EXP-000592 next",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "negative",
+        "name": "R142 audit registered",
+        "status": "PASS"
+      },
+      {
+        "actual": "(True, True)",
+        "expected": "(True, True)",
+        "group": "negative",
+        "name": "factor-two finding",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "A1 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "expected": "nonempty",
+        "group": "authority",
+        "name": "A1 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_conditional_variance_forest_bridge_root_shell_operator_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-125 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "nonempty",
+        "group": "authority",
+        "name": "R-125 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_terminal_xi_conormal_gram_balanced_low_response_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-130 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "nonempty",
+        "group": "authority",
+        "name": "R-130 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_predictable_triangular_mixed_gram_source_graph_feshbach_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-140 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "nonempty",
+        "group": "authority",
+        "name": "R-140 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_projected_force_global_doob_signed_gram_adaptive_collar_quotient_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-141 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "nonempty",
+        "group": "authority",
+        "name": "R-141 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_innovation_compressed_common_feature_su2_covariance_signed_collar_band_boundary_manifest.json",
+        "expected": "file",
+        "group": "authority",
+        "name": "R-142 exists",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "nonempty",
+        "group": "authority",
+        "name": "R-142 claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "group": "manifest",
+        "name": "claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY",
+        "expected": "A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY",
+        "group": "manifest",
+        "name": "result",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-143",
+        "expected": "R-143",
+        "group": "manifest",
+        "name": "ledger",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "manifest",
+        "name": "proof incomplete",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "group": "manifest",
+        "name": "Sector A open",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS (9 pages rendered at 130 dpi and inspected; no clipping, overlap, malformed equations, or literal spacing-command artefacts)",
+        "expected": "PASS*",
+        "group": "manifest",
+        "name": "visual QA",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "manifest",
+        "name": "exploration ids",
+        "status": "PASS"
+      },
+      {
+        "actual": "['AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO']",
+        "expected": "AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO",
+        "group": "manifest",
+        "name": "audit id",
+        "status": "PASS"
+      },
+      {
+        "actual": "{'A1': '88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565', 'R-125': '64d0d5ee851a49c5f85994f71616b4d51def2bca701abea6d006a578d8d44e2f', 'R-130': '4ebb3a9fc55383898fb43005c242020f987bfc04c5dd9cf5bd9cda70503e33f4', 'R-140': '971a966bf72a04af10dec65e7850384e628c5215bbe75092fe6cb93033fb4144', 'R-141': 'c2b4a5d70214666632369f12ee477c9c7151d2912a3280dc930b77ed8a88dccc', 'R-142': 'dd60f0a0dd9eb14bb14fab58e743dbb46591d8393e1c579086a58276c9824679'}",
+        "expected": "{'A1': '88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565', 'R-125': '64d0d5ee851a49c5f85994f71616b4d51def2bca701abea6d006a578d8d44e2f', 'R-130': '4ebb3a9fc55383898fb43005c242020f987bfc04c5dd9cf5bd9cda70503e33f4', 'R-140': '971a966bf72a04af10dec65e7850384e628c5215bbe75092fe6cb93033fb4144', 'R-141': 'c2b4a5d70214666632369f12ee477c9c7151d2912a3280dc930b77ed8a88dccc', 'R-142': 'dd60f0a0dd9eb14bb14fab58e743dbb46591d8393e1c579086a58276c9824679'}",
+        "group": "manifest",
+        "name": "authority hashes",
+        "status": "PASS"
+      },
+      {
+        "actual": "codes/foundations/a13_classii_corrected_q567_feature_contraction_common_noise_anisotropy_tail_boundary.py",
+        "expected": "codes/foundations/a13_classii_corrected_q567_feature_contraction_common_noise_anisotropy_tail_boundary.py",
+        "group": "manifest",
+        "name": "primary path",
+        "status": "PASS"
+      },
+      {
+        "actual": "3682c1c80501fc70ef8ff0993ae2ce8ee84a9aefbb8fe7e89146f005674072e9",
+        "expected": "3682c1c80501fc70ef8ff0993ae2ce8ee84a9aefbb8fe7e89146f005674072e9",
+        "group": "manifest",
+        "name": "primary hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "codes/foundations/a13_classii_corrected_q567_feature_contraction_common_noise_anisotropy_tail_boundary_independent.py",
+        "expected": "codes/foundations/a13_classii_corrected_q567_feature_contraction_common_noise_anisotropy_tail_boundary_independent.py",
+        "group": "manifest",
+        "name": "independent path",
+        "status": "PASS"
+      },
+      {
+        "actual": "067202e3aeeae6ab7794d08c9e1a25a3431de14f1de23c313daf1401f74e0cca",
+        "expected": "067202e3aeeae6ab7794d08c9e1a25a3431de14f1de23c313daf1401f74e0cca",
+        "group": "manifest",
+        "name": "independent hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "codes/foundations/a13_classii_corrected_q567_feature_contraction_common_noise_anisotropy_tail_boundary_verify.py",
+        "expected": "codes/foundations/a13_classii_corrected_q567_feature_contraction_common_noise_anisotropy_tail_boundary_verify.py",
+        "group": "manifest",
+        "name": "verifier path",
+        "status": "PASS"
+      },
+      {
+        "actual": "908c1463ead34bde2f8571bdf5068c51e95b559f127fd5048d39b2b074d4a47d",
+        "expected": "908c1463ead34bde2f8571bdf5068c51e95b559f127fd5048d39b2b074d4a47d",
+        "group": "manifest",
+        "name": "verifier hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary-260802-v1.0.tex.txt",
+        "expected": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary-260802-v1.0.tex.txt",
+        "group": "manifest",
+        "name": "note path",
+        "status": "PASS"
+      },
+      {
+        "actual": "9e8ad63a4c4b45efe066a9cf256839ec50368c73c251ab14f02981d2e3de3e2b",
+        "expected": "9e8ad63a4c4b45efe066a9cf256839ec50368c73c251ab14f02981d2e3de3e2b",
+        "group": "manifest",
+        "name": "note hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary-260802-v1.0.pdf",
+        "expected": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary-260802-v1.0.pdf",
+        "group": "manifest",
+        "name": "pdf path",
+        "status": "PASS"
+      },
+      {
+        "actual": "04a0ba83091b5b058aa3811ec8d245804f6ac266b8ef262ab90514ee96b85cba",
+        "expected": "04a0ba83091b5b058aa3811ec8d245804f6ac266b8ef262ab90514ee96b85cba",
+        "group": "manifest",
+        "name": "pdf hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-02-primary-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary/result.json",
+        "expected": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-02-primary-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary/result.json",
+        "group": "manifest",
+        "name": "primary_result path",
+        "status": "PASS"
+      },
+      {
+        "actual": "d18035a19898e2ec4470cbfff916db145d265bcf84e9b44681b4eb829ce324b4",
+        "expected": "d18035a19898e2ec4470cbfff916db145d265bcf84e9b44681b4eb829ce324b4",
+        "group": "manifest",
+        "name": "primary_result hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-02-independent-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary/result.json",
+        "expected": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-02-independent-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary/result.json",
+        "group": "manifest",
+        "name": "independent_result path",
+        "status": "PASS"
+      },
+      {
+        "actual": "25786652d15d700c78306c0f964e026da6bfbe31e2519177e175fa65cd256f8c",
+        "expected": "25786652d15d700c78306c0f964e026da6bfbe31e2519177e175fa65cd256f8c",
+        "group": "manifest",
+        "name": "independent_result hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "52",
+        "expected": "52",
+        "group": "manifest",
+        "name": "primary count",
+        "status": "PASS"
+      },
+      {
+        "actual": "40",
+        "expected": "40",
+        "group": "manifest",
+        "name": "independent count",
+        "status": "PASS"
+      },
+      {
+        "actual": "04a0ba83091b5b058aa3811ec8d245804f6ac266b8ef262ab90514ee96b85cba",
+        "expected": "04a0ba83091b5b058aa3811ec8d245804f6ac266b8ef262ab90514ee96b85cba",
+        "group": "manifest",
+        "name": "PDF hash",
+        "status": "PASS"
+      },
+      {
+        "actual": "RESULTS-LEDGER.md",
+        "expected": "file",
+        "group": "surface",
+        "name": "results ledger file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "results ledger",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+        "expected": "file",
+        "group": "surface",
+        "name": "claim status file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "claim status",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/claim.md",
+        "expected": "file",
+        "group": "surface",
+        "name": "claim chronology file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "claim chronology",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/LINEAGE.md",
+        "expected": "file",
+        "group": "surface",
+        "name": "lineage file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "lineage",
+        "status": "PASS"
+      },
+      {
+        "actual": "governance/sector-a-theorem-map.json",
+        "expected": "file",
+        "group": "surface",
+        "name": "theorem map file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "theorem map",
+        "status": "PASS"
+      },
+      {
+        "actual": "todo/todo.json",
+        "expected": "file",
+        "group": "surface",
+        "name": "task ledger file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "task ledger",
+        "status": "PASS"
+      },
+      {
+        "actual": "CHANGELOG.md",
+        "expected": "file",
+        "group": "surface",
+        "name": "changelog file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "changelog",
+        "status": "PASS"
+      },
+      {
+        "actual": "theory/proof-evidence-map.md",
+        "expected": "file",
+        "group": "surface",
+        "name": "proof map file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "proof map",
+        "status": "PASS"
+      },
+      {
+        "actual": "CATALOG.md",
+        "expected": "file",
+        "group": "surface",
+        "name": "catalog file",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "group": "surface",
+        "name": "catalog",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "group": "aggregation",
+        "name": "child identities unique",
+        "status": "PASS"
+      }
+    ],
+    "total": 252
+  },
+  "children": {
+    "independent": {
+      "assertions": 40,
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-02-independent-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary/result.json",
+      "sha256": "25786652d15d700c78306c0f964e026da6bfbe31e2519177e175fa65cd256f8c",
+      "stdout": "[PASS] independent A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY: 40/40 assertions\n[WRITE] E:\\Dev\\TECT\\claims\\A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION\\runs\\2026-08-02-independent-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary\\result.json\n"
+    },
+    "primary": {
+      "assertions": 52,
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-02-primary-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary/result.json",
+      "sha256": "d18035a19898e2ec4470cbfff916db145d265bcf84e9b44681b4eb829ce324b4",
+      "stdout": "[PASS] A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY: 52/52 assertions\n[WRITE] E:\\Dev\\TECT\\claims\\A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION\\runs\\2026-08-02-primary-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary\\result.json\n"
+    }
+  },
+  "pdf_audit": {
+    "deterministic_rebuild": true,
+    "dpi": 130,
+    "form_check": true,
+    "manual_visual_qa": "PASS (9 pages rendered at 130 dpi and inspected; no clipping, overlap, malformed equations, or literal spacing-command artefacts)",
+    "overfull_hbox_count": 0,
+    "page_sha256": [
+      "91809738c3ebd0b528272bb1ae2d36624b7446102efaab0e31fd028b3f6cf66f",
+      "ed6d64ceefd8aaf5bf81720cbbf45d353d881f9c367135ca0f8b87116e715b22",
+      "85d1481c45ce90e67a8d5da45755a0d213296b1050d2f42ed732a27063791bd5",
+      "1eb6494d2139eae7ddd1ef034f93e1d1d203cc9916976cdc3b5300364b42f331",
+      "b355ecfecc25c7284a3f74cccf2f95fb658c2fc20184a94831ec22427a78b893",
+      "59bff33479cd211fc597702546fc88623aee8452137200ac7bda3658da3c4071",
+      "fdc37c7ffb00c5d5af536540a50becaaedb32166c0260b01682566783f4e84b3",
+      "ab5019f0e7275f2c867228c4d1a2b1db5490105c4082ecd711a210a6c5f0664e",
+      "79dae556eaf54292ed4e8d5b4ba622d0c7b5458d48a758a57828c46fdbec3bac"
+    ],
+    "pages": 9,
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary-260802-v1.0.pdf",
+    "rendered_pages": 9,
+    "renderer": "Poppler pdftoppm",
+    "security_findings": [],
+    "sha256": "04a0ba83091b5b058aa3811ec8d245804f6ac266b8ef262ab90514ee96b85cba",
+    "size_bytes": 98154
+  },
+  "result_id": "A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY",
+  "schema": "tect/a13-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary-integrated/1.0",
+  "scope": {
+    "a13_gate_closed": false,
+    "nelson": false,
+    "owner_intertwiner": false,
+    "production_adverse_direction": false,
+    "production_contraction": false,
+    "production_matrix": false,
+    "sector_a_closed": false
+  },
+  "source_hashes": {
+    "authorities": {
+      "A1": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "R-125": "64d0d5ee851a49c5f85994f71616b4d51def2bca701abea6d006a578d8d44e2f",
+      "R-130": "4ebb3a9fc55383898fb43005c242020f987bfc04c5dd9cf5bd9cda70503e33f4",
+      "R-140": "971a966bf72a04af10dec65e7850384e628c5215bbe75092fe6cb93033fb4144",
+      "R-141": "c2b4a5d70214666632369f12ee477c9c7151d2912a3280dc930b77ed8a88dccc",
+      "R-142": "dd60f0a0dd9eb14bb14fab58e743dbb46591d8393e1c579086a58276c9824679"
+    },
+    "independent": "067202e3aeeae6ab7794d08c9e1a25a3431de14f1de23c313daf1401f74e0cca",
+    "manifest": "3c094c23bd2a94cfd52aea03ce5a9dd303018ea77fb847cd77a09398c3be07a6",
+    "note": "9e8ad63a4c4b45efe066a9cf256839ec50368c73c251ab14f02981d2e3de3e2b",
+    "pdf": "04a0ba83091b5b058aa3811ec8d245804f6ac266b8ef262ab90514ee96b85cba",
+    "primary": "3682c1c80501fc70ef8ff0993ae2ce8ee84a9aefbb8fe7e89146f005674072e9",
+    "verifier": "908c1463ead34bde2f8571bdf5068c51e95b559f127fd5048d39b2b074d4a47d"
+  },
+  "status": "PASS",
+  "version": "1.0.0"
+}

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-143](#r-143) | Corrected q=5,6,7 feature contraction and common-noise anisotropy tail | Scoped T4 analytic/exact/conditional/executed/audited advance. The R-142 `(17,33,65)` collision is corrected from a half-output q567 label to a physical-output q678 witness; the exact replacement `(10,20,40)` with carriers `(4M,2M,M)` has common output `80M`, gaps `(5,6,7)`, and one rational-coefficient sign. The complete recombined core is `2A=||Y||^2-||U||^2`, with source and sextic included once, and finite-family positivity is equivalent to one Douglas mixed-Gram contraction. A positive-diagonal/mixed-negative fixture proves diagonal tests insufficient; exact residual and source-null Feshbach formulas isolate the adverse coordinate. The A1 covariance has an exact common-endpoint scalar-plus-anisotropic probe factor, and certified rational mass intervals yield explicit high-shell derivative-trace bounds with diagnostic first included shells `N=27` and `N=49`. Missing production U/Phi jets, cross reveals, low blocks, and owner intertwiners prevent a production matrix verdict, T-050, or Sector-A closure |
 | [R-142](#r-142) | Innovation-compressed common feature, SU(2) fibre/covariance split, and signed collar band | Scoped T4 analytic/exact/conditional/executed advance. Common-future centering compresses the complete mixed-endpoint signature exactly from `(U,J,R)` with sign `(+,-,+)` to `(U,Phi)` with sign `(+,-)`; a shared covariance-square-root probe pins the actual fixed-chart trace feature, and the exact Hessian retains the favorable `D Phi^* D Phi` product covariance and both connection terms. The coefficient-exact SU(2) fibre Gram has four active modes, two phase kernels, transverse eigenvalue `339 r^2/(2000P)`, and a closed radial block. The registered A1 family-lock covariance is not SU(2)-invariant but splits into a scalar principal sea plus a positive anisotropic remainder four derivative-covariance powers smoother. A legal scalar two-root/two-visit chart has minimum at least `m_G=0.7653207581...` and covariance direction at least `21.08325...`; nevertheless the exact moved C8/C10 rational scalar-slice bands have finite-cutoff negative directions. The full non-Toeplitz production common-heat/trace/forest/low cross-reveal matrix, its Loewner edge, T-050, and Sector-A closure remain open |
 | [R-141](#r-141) | Projected force, global Doob signed Gram, adaptive collar, and quotient boundary | Scoped T4 analytic/exact/conditional/executed advance. The actual finite-chart action force is `g_comp=-g_T/2=g_CN-g_V/2`, so future variance is not charged again; predictable projection gives one self-adjoint Hessian whose legal reverse is already its adjoint. After exhaustive R-125 recombination, the actual common trace feature, raw current, and centered residual form the canonical signature `Z=(U,J,R)`, `S=diag(+,-,+)`, with `E<Z,SZ>=Theta-||Phi||^2=V-Forest_ad` in the complete aggregate. A conditional two-sided factorisation gives the exact signed Gram `[A+*SA-+A-*SA+]/2`; alternatively, global Doob conjugation spends source norm once while retaining cross-reveal blocks. The exact source-null quotient and low-kernel tests yield `mu_src=e-Lambda_C^2-sigma-kappa0-(a0+tau_C)^2/[4(f-sigma)]`. Positive-analysis collar shift gives diagnostic first collars `C=8` and `C=10`, but moves coherent three- and five-layer finite bands. Signed-correlation fixtures prove magnitude data cannot decide positivity. No production factorisation, uniform Loewner bound, positive graph gap, matching/anchor data, A13 gate, Nelson theorem, or Sector-A closure is proved |
 | [R-140](#r-140) | Predictable triangular mixed-Gram one-use theorem and source-graph Feshbach boundary | Scoped T4 analytic/exact/executed advance and quantitative boundary. An owner-complete predictable triangular response with norm `Lambda_C` is paid by the Cameron--Martin source exactly once; the registered exponents `beta=7/5`, `s=2/3`, `gamma=7/12` give strict margins `7/60` and `1/12` and an exact Hilbert--Schmidt scalar sum. However the naive positive current-only diagnostic gives source-Hessian debts `1.05559...` at `C=5` and `0.465116...` at `C=6`, both above the conditional zero-low/tail headroom `0.100434...`, so signed owner-complete mixed-Gram cancellation is still necessary. Predictable stopping preserves the endpoint telescope but supplies no bad-set packing. The exact source-metric graph--Feshbach identity retains the semidefinite low-kernel cross and yields the sharp norm-data gap `e-Lambda_C^2-sigma-(a0+tau)^2/[4(f-sigma)]`. An absolute terminal Sobolev envelope is UV-infeasible at zero control; stationary-subtracted signature polarization is the viable repair. No production mixed-Gram envelope, positive graph gap, matching/anchor data, A13 gate, Nelson theorem, or Sector-A closure is proved |
@@ -161,6 +162,68 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-143"></a>
+### R-143 -- Corrected q=5,6,7 feature contraction and common-noise anisotropy tail
+
+**Result ID.**
+`A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY`.
+
+**Coherence audit and repair.**  R-142's harmonics `(17,33,65)` and carriers
+`(124410,64090,32538)` do collide arithmetically, but their physical output is
+`2nN=4229940`, not the displayed half-product `2114970`.  Sharp shell
+recomputation gives gaps `(6,7,8)`.  This supersedes only the q567 coherence
+witness.  The exact dyadic replacement is
+`(n,N)=((10,4M),(20,2M),(40,M))`, whose common physical output is `80M`,
+whose gaps are `(5,6,7)`, and whose three rational coefficients are negative
+by the registered parity formula.  The audit does not alter R-142's band-sign
+theorem or its other independent results.
+
+**Complete-feature Douglas theorem.**  After complete owner recombination,
+put `Y=Phi direct-sum sqrt(9/10)h direct-sum sqrt(3/10)|Z|^2Z`.  Then
+`2A=||Y||^2-||U||^2`, so source and sextic are spent exactly once.  For every
+finite endpoint family, `G_U<=G_Y` is equivalent to a contraction `CY_a=U_a`
+and to the corresponding mixed coefficient inequality.  Its sharp squared
+norm is the generalized Gram edge.  The exact fixture `G_Y=I_2`,
+`G_U=(9/16)11^T` has positive diagonal energy but mixed eigenvalue `-1/8`
+and edge `9/8`.  The contraction-residual square completion and the
+source-null pseudoinverse Feshbach formula identify the sole adverse residual,
+the range condition, the sharp finite source edge, and its lifted vector.
+The executable sign firewall fixes `D2 P_comp=-(D2 K)/2`: a positive raw
+signature edge is action-adverse.
+
+**Common-probe anisotropy and tail.**  The rational A1 family-lock mass has
+three exact Sturm-isolated eigenvalues in `(0.028,0.029)`, `(0.165,0.166)`,
+and `(0.206,0.207)`.  Hence `Delta_sum<0.221` and
+`Delta_2<0.033805`.  An exact rectangular factor uses independent scalar and
+anisotropic probes, each common across endpoints, so all mixed covariance is
+retained.  Covariance positivity does not reverse the adverse trace-feature
+sign.  Exact sup-shell population `24m^2+2`, the A1 fourth-order kinetic
+lower bound, and an integral zeta enclosure give a full additive derivative
+trace tail and a faster synchronous sensitivity tail.  Against the registered
+illustrative R-140 headrooms, `H6` times the safe trace bound first passes at
+included shells `N=27` and `N=49`.  These thresholds are not production
+margins and omit the still-unregistered owner transformations and low cross
+blocks.
+
+**Where proved.**  Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`; note
+`classii-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary-260802-v1.0`;
+primary, non-importing independent, and integrated certificates; manifest and
+JSON run artefacts; `EXP-000585--EXP-000592`; and
+`AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO`.
+
+**Reuse scope.**  Finite Hilbert feature families, mixed-Gram contraction
+tests, semidefinite source-null Feshbach reductions, exact common-endpoint
+covariance factors, and fourth-order lattice tails.  No temporally faithful
+production chart, full production matrix, legal adverse action vector,
+uniform contraction, positive graph gap, matching, anchor, A13 gate, Nelson
+theorem, interacting measure, or Sector-A closure is supplied.
+
+**Tier.** T4.
+
+**Publication target.**  constructive-field-theory methods note after the
+production owner map and augmented q567 matrix are registered.
 
 <a id="r-142"></a>
 ### R-142 -- Innovation-compressed common feature, SU(2) fibre/covariance split, and signed collar band

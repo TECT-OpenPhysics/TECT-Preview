@@ -1,0 +1,588 @@
+{
+  "assertions": {
+    "failed": 0,
+    "passed": 52,
+    "rows": [
+      {
+        "actual": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "expected": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "group": "authority",
+        "name": "A1 manifest is production claim",
+        "status": "PASS"
+      },
+      {
+        "actual": "4000000000001/1000000000000",
+        "expected": "4000000000001/1000000000000",
+        "group": "coefficients",
+        "name": "P derived from A1 inputs",
+        "status": "PASS"
+      },
+      {
+        "actual": "12000000000/4000000000001",
+        "expected": "12000000000/4000000000001",
+        "group": "coefficients",
+        "name": "c0 exact",
+        "status": "PASS"
+      },
+      {
+        "actual": "30375000000/4000000000001",
+        "expected": "30375000000/4000000000001",
+        "group": "coefficients",
+        "name": "c1 exact",
+        "status": "PASS"
+      },
+      {
+        "actual": "5/9",
+        "expected": "5/9",
+        "group": "coefficients",
+        "name": "alpha exact",
+        "status": "PASS"
+      },
+      {
+        "actual": "(5, 6, 7)",
+        "expected": "(5, 6, 7)",
+        "group": "coherence",
+        "name": "correct harmonics occupy q=5,6,7",
+        "status": "PASS"
+      },
+      {
+        "actual": "(327680, 327680, 327680)",
+        "expected": "one output",
+        "group": "coherence",
+        "name": "correct physical outputs collide",
+        "status": "PASS"
+      },
+      {
+        "actual": "327680",
+        "expected": "327680",
+        "group": "coherence",
+        "name": "physical factor two retained",
+        "status": "PASS"
+      },
+      {
+        "actual": "(14, 13, 12)",
+        "expected": "(14, 13, 12)",
+        "group": "coherence",
+        "name": "root shells are dyadic",
+        "status": "PASS"
+      },
+      {
+        "actual": "(5, 6, 7)",
+        "expected": "(5, 6, 7)",
+        "group": "coherence",
+        "name": "correct shell gaps",
+        "status": "PASS"
+      },
+      {
+        "actual": "(10, 20, 40)",
+        "expected": "all even",
+        "group": "coherence",
+        "name": "even family has common sign",
+        "status": "PASS"
+      },
+      {
+        "actual": "[(10, (5, 6, 7), 1), (12, (5, 6, 7), 1), (14, (5, 6, 7), 1), (16, (5, 6, 7), 1)]",
+        "expected": "t=10,12,14,16 all legal and coherent",
+        "group": "coherence",
+        "name": "full legal even family",
+        "status": "PASS"
+      },
+      {
+        "actual": "(4229940, 4229940, 4229940)",
+        "expected": "one physical output",
+        "group": "r142_audit",
+        "name": "old integer collision remains arithmetically real",
+        "status": "PASS"
+      },
+      {
+        "actual": "4229940",
+        "expected": "4229940",
+        "group": "r142_audit",
+        "name": "old physical output restores factor two",
+        "status": "PASS"
+      },
+      {
+        "actual": "(6, 7, 8)",
+        "expected": "(6, 7, 8)",
+        "group": "r142_audit",
+        "name": "old harmonics are q=6,7,8",
+        "status": "PASS"
+      },
+      {
+        "actual": "(6, 7, 8)",
+        "expected": "(6, 7, 8)",
+        "group": "r142_audit",
+        "name": "old physical shell gaps are q=6,7,8",
+        "status": "PASS"
+      },
+      {
+        "actual": "2114970 present",
+        "expected": "superseded label located",
+        "group": "r142_audit",
+        "name": "old note contains superseded half-output label",
+        "status": "PASS"
+      },
+      {
+        "actual": "{10: -1.183171571438116e-05, 20: -3.640874669774275e-07, 40: -2.288423816291403e-10}",
+        "expected": "all < 0",
+        "group": "coherence",
+        "name": "corrected band coefficients all negative",
+        "status": "PASS"
+      },
+      {
+        "actual": "{10: -1.183171571438116e-05, 20: -3.640874669774275e-07, 40: -2.288423816291403e-10}",
+        "expected": "(-1)^(n+1) g_n > 0",
+        "group": "coherence",
+        "name": "registered parity sign formula",
+        "status": "PASS"
+      },
+      {
+        "actual": "-5*t**2/2",
+        "expected": "-5*t**2/2",
+        "group": "sign_firewall",
+        "name": "Pcomp equals negative half raw signature",
+        "status": "PASS"
+      },
+      {
+        "actual": "-5",
+        "expected": "-5",
+        "group": "sign_firewall",
+        "name": "Hessian sign and factor conversion",
+        "status": "PASS"
+      },
+      {
+        "actual": "(10, -5)",
+        "expected": "raw > 0 and action < 0",
+        "group": "sign_firewall",
+        "name": "positive raw edge is action-adverse",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.45",
+        "expected": "0.45",
+        "group": "feature",
+        "name": "source coefficient spent exactly once",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.15",
+        "expected": "0.15",
+        "group": "feature",
+        "name": "sextic coefficient spent exactly once",
+        "status": "PASS"
+      },
+      {
+        "actual": "10.5",
+        "expected": "10.5",
+        "group": "feature",
+        "name": "complete feature energy identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.4375 0.4375]",
+        "expected": ">0",
+        "group": "douglas",
+        "name": "diagonal endpoint energies pass",
+        "status": "PASS"
+      },
+      {
+        "actual": "[-0.125  1.   ]",
+        "expected": "minimum < 0",
+        "group": "douglas",
+        "name": "mixed Gram nevertheless fails",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.125",
+        "expected": "1.125",
+        "group": "douglas",
+        "name": "generalized contraction edge detects failure",
+        "status": "PASS"
+      },
+      {
+        "actual": "[1.05 1.55]",
+        "expected": "minimum > 0",
+        "group": "douglas",
+        "name": "passing mixed Gram is positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.2778361813707624",
+        "expected": "<1",
+        "group": "douglas",
+        "name": "passing contraction constant is strict",
+        "status": "PASS"
+      },
+      {
+        "actual": "7/4",
+        "expected": "7/4",
+        "group": "douglas",
+        "name": "exact contraction residual identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.0",
+        "expected": "0.0",
+        "group": "feshbach",
+        "name": "source-null range condition",
+        "status": "PASS"
+      },
+      {
+        "actual": "2.5",
+        "expected": "2.5",
+        "group": "feshbach",
+        "name": "exact effective block",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.25",
+        "expected": "1.25",
+        "group": "feshbach",
+        "name": "sharp generalized source gap",
+        "status": "PASS"
+      },
+      {
+        "actual": "2.5",
+        "expected": "2.5",
+        "group": "feshbach",
+        "name": "lifted vector realizes Schur value",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.0",
+        "expected": ">0",
+        "group": "feshbach",
+        "name": "kernel-cross failure is detected",
+        "status": "PASS"
+      },
+      {
+        "actual": "[-1.  2.]",
+        "expected": "minimum < 0",
+        "group": "feshbach",
+        "name": "negative null block is detected",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.0",
+        "expected": "0.0",
+        "group": "covariance",
+        "name": "mass block symmetric",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.02811617 0.16519715 0.20668667]",
+        "expected": "0 < mu1 < mu2 < mu3",
+        "group": "covariance",
+        "name": "mass eigenvalues positive and ordered",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1, 1, 1)",
+        "expected": "(1, 1, 1)",
+        "group": "covariance",
+        "name": "exact Sturm intervals isolate all three masses",
+        "status": "PASS"
+      },
+      {
+        "actual": "221/1000",
+        "expected": "221/1000",
+        "group": "covariance",
+        "name": "safe rational eigenvalue-spread sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "6761/200000",
+        "expected": "6761/200000",
+        "group": "covariance",
+        "name": "safe rational squared-spread sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0.00352562 0.00080348 0.        ]",
+        "expected": ">=0",
+        "group": "covariance",
+        "name": "anisotropic covariance remainder PSD",
+        "status": "PASS"
+      },
+      {
+        "actual": "0.004702623956037599",
+        "expected": "0.004702623956037599",
+        "group": "covariance",
+        "name": "synchronous square-root remainder exact",
+        "status": "PASS"
+      },
+      {
+        "actual": "U remains in negative feature slot",
+        "expected": "sign retained",
+        "group": "covariance",
+        "name": "PSD covariance is not relabelled action-positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "(3.523370484259658e-11, 0.2599999999931745)",
+        "expected": "both nonnegative",
+        "group": "tail",
+        "name": "declared kinetic dominates shifted fourth-order square",
+        "status": "PASS"
+      },
+      {
+        "actual": "1946",
+        "expected": "1946",
+        "group": "tail",
+        "name": "exact sup-shell population formula",
+        "status": "PASS"
+      },
+      {
+        "actual": "3.0000000001073404",
+        "expected": "<4",
+        "group": "tail",
+        "name": "production q0 lies below N=2 tail",
+        "status": "PASS"
+      },
+      {
+        "actual": "(27, 0.1103000379429299, 0.09798775164798272)",
+        "expected": "(27, '>=ceiling', '<ceiling')",
+        "group": "tail",
+        "name": "large diagnostic threshold first at N=27",
+        "status": "PASS"
+      },
+      {
+        "actual": "(49, 0.016488784339416786, 0.015477846421674985)",
+        "expected": "(49, '>=ceiling', '<ceiling')",
+        "group": "tail",
+        "name": "small diagnostic threshold first at N=49",
+        "status": "PASS"
+      },
+      {
+        "actual": "4.100062011735117e-08",
+        "expected": "<5e-8",
+        "group": "tail",
+        "name": "synchronous tail is much smaller at N=27",
+        "status": "PASS"
+      },
+      {
+        "actual": "5.640592303064587e-10",
+        "expected": "<6e-10",
+        "group": "tail",
+        "name": "synchronous tail is much smaller at N=49",
+        "status": "PASS"
+      }
+    ],
+    "total": 52
+  },
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "diagnostics": {
+    "authorities": {
+      "a1_manifest": {
+        "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+        "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+      },
+      "r130_result": {
+        "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-31-primary-terminal-xi-conormal-gram-balanced-low-response-boundary/result.json",
+        "sha256": "14b92670733a18d1209af6b6f293117f1418e9883fc291d7a01e934b00d4b82b"
+      },
+      "r140_result": {
+        "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-31-independent-predictable-triangular-mixed-gram-source-graph-feshbach-boundary/result.json",
+        "sha256": "d901136b07d283146bb981fd7b5e86d3e789a04a2f04e497836b3ee9dfc0859d"
+      },
+      "r142_note": {
+        "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-innovation-compressed-common-feature-su2-covariance-signed-collar-band-boundary-260731-v1.0.tex.txt",
+        "sha256": "c90921c68ecadefa90d4f799470ab35641d9b0d1d6493e1c0783ab4d470476b5"
+      }
+    },
+    "corrected_q567": {
+      "band_coefficients_delta_0p2_floor_1over9": {
+        "10": -1.183171571438116e-05,
+        "20": -3.640874669774275e-07,
+        "40": -2.288423816291403e-10
+      },
+      "carriers": [
+        16384,
+        8192,
+        4096
+      ],
+      "gaps": [
+        5,
+        6,
+        7
+      ],
+      "harmonics": [
+        10,
+        20,
+        40
+      ],
+      "output_shell": 19,
+      "physical_output": 327680,
+      "root_shells": [
+        14,
+        13,
+        12
+      ]
+    },
+    "covariance": {
+      "H6": 3.5414999999991146,
+      "diagnostic_thresholds": {
+        "large_first_N": 27,
+        "large_headroom": 0.10043434343434376,
+        "small_first_N": 49,
+        "small_headroom": 0.015912689545308223
+      },
+      "kinetic_shift_remainders": [
+        3.523370484259658e-11,
+        0.2599999999931745
+      ],
+      "mass_eigenvalues": [
+        0.02811617233511541,
+        0.16519715288082723,
+        0.20668667478405733
+      ],
+      "mass_matrix": [
+        [
+          0.1,
+          -0.049999999999999996,
+          -0.049999999999999996
+        ],
+        [
+          -0.049999999999999996,
+          0.13,
+          -0.049999999999999996
+        ],
+        [
+          -0.049999999999999996,
+          -0.049999999999999996,
+          0.17
+        ]
+      ],
+      "q0_over_h_squared": 3.0000000001073404,
+      "safe_delta_square_sum": "6761/200000",
+      "safe_delta_sum": "221/1000",
+      "sturm_intervals": [
+        [
+          "7/250",
+          "29/1000"
+        ],
+        [
+          "33/200",
+          "83/500"
+        ],
+        [
+          "103/500",
+          "207/1000"
+        ]
+      ],
+      "tail_table": {
+        "17": {
+          "H6_times_trace_upper": 0.42633833480412014,
+          "derivative_trace_upper": 0.12038354787638761,
+          "synchronous_probe_squared_upper": 1.2171708036357338e-06
+        },
+        "257": {
+          "H6_times_trace_upper": 0.00010177246284986095,
+          "derivative_trace_upper": 2.8737106550864434e-05,
+          "synchronous_probe_squared_upper": 4.609916107084628e-15
+        },
+        "27": {
+          "H6_times_trace_upper": 0.09798775164798272,
+          "derivative_trace_upper": 0.027668431920939495,
+          "synchronous_probe_squared_upper": 4.100062011735117e-08
+        },
+        "33": {
+          "H6_times_trace_upper": 0.052404695181140604,
+          "derivative_trace_upper": 0.014797316160145053,
+          "synchronous_probe_squared_upper": 9.607253111700694e-09
+        },
+        "49": {
+          "H6_times_trace_upper": 0.015477846421674985,
+          "derivative_trace_upper": 0.0043704211271153055,
+          "synchronous_probe_squared_upper": 5.640592303064587e-10
+        },
+        "65": {
+          "H6_times_trace_upper": 0.006522362114515908,
+          "derivative_trace_upper": 0.0018416947944423377,
+          "synchronous_probe_squared_upper": 7.539085874862411e-11
+        },
+        "9": {
+          "H6_times_trace_upper": 3.634090317761427,
+          "derivative_trace_upper": 1.0261443788683708,
+          "synchronous_probe_squared_upper": 0.0001550059882860251
+        }
+      }
+    },
+    "douglas": {
+      "mixed_fail_eigenvalues": [
+        -0.125,
+        1.0
+      ],
+      "residual_identity": "7/4",
+      "rho_fail_squared": 1.125,
+      "rho_pass_squared": 0.2778361813707624
+    },
+    "feshbach": {
+      "bad_range_residual": 1.0,
+      "effective_block": 2.5,
+      "lifted_vector": [
+        -0.5,
+        0.0,
+        1.0
+      ],
+      "range_residual": 0.0,
+      "sharp_gap": 1.25
+    },
+    "production_coefficients": {
+      "P": "4000000000001/1000000000000",
+      "a": "18000000000/4000000000001",
+      "alpha": "5/9",
+      "b": "7500000000/4000000000001",
+      "c": "9375000000/4000000000001",
+      "c0": "12000000000/4000000000001",
+      "c1": "30375000000/4000000000001"
+    },
+    "superseded_r142_fixture": {
+      "carriers": [
+        124410,
+        64090,
+        32538
+      ],
+      "gaps": [
+        6,
+        7,
+        8
+      ],
+      "half_output_label": 2114970,
+      "harmonics": [
+        17,
+        33,
+        65
+      ],
+      "output_shell": 23,
+      "physical_output": 4229940,
+      "root_shells": [
+        17,
+        16,
+        15
+      ]
+    }
+  },
+  "no_overclaim": "R-143 repairs one R-142 coherence fixture and proves a finite-set feature-contraction reduction plus a high-shell common-noise anisotropy bound. The N=27/N=49 comparisons use registered illustrative headrooms and are not production margins. Missing temporally faithful U/Phi jets, cross reveals, returned low blocks, and owner intertwiners prevent assembly or sign certification of the production matrix. T-050 and Sector A remain open.",
+  "package_version": "1.0.0",
+  "result_id": "A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY",
+  "schema": "tect/a13-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary-primary/1.0",
+  "scope": {
+    "a13_gate_closed": false,
+    "analytic_derivative_anisotropy_tail_proved": true,
+    "common_noise_covariance_coupling_proved": true,
+    "finite_set_complete_feature_douglas_criterion_proved": true,
+    "owner_preserving_su2_intertwiner_proved": false,
+    "production_adverse_direction_proved": false,
+    "production_feature_contraction_proved": false,
+    "production_owner_matrix_assembled": false,
+    "r142_band_sign_theorem_preserved": true,
+    "r142_q567_fixture_corrected": true,
+    "raw_signature_action_sign_factor_pinned": true,
+    "sector_a_closed": false,
+    "source_and_sextic_spent_exactly_once": true,
+    "source_null_feshbach_criterion_pinned": true,
+    "tail_thresholds_are_diagnostic_only": true
+  },
+  "status": "PASS"
+}

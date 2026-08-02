@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO | R-142 coherence fixture used a half-output and the wrong mov |  |
 | NG-2026-07-31-A13-WEDGE-ONLY-FUTURE-TELESCOPE | a moving wedge mask leaves internal endpoint variation |  |
 | NG-2026-07-31-A13-TAIL-ONLY-SHIFTED-DOUGLAS-HEADROOM | a vanishing collar tail does not create a strict gap |  |
 | NG-2026-07-31-A13-CHRONOLOGY-ONLY-SPATIAL-GRADE | temporal precedence is not a Fourier support theorem |  |

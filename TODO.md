@@ -8,8 +8,8 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
-  - R-142 checkpoint: exact common-future centering compresses (U,J,R) to the actual two-feature (U,Phi) Hessian; the shared covariance probe pins mixed trace correlations and retains the favorable R-102 product covariance. The coefficient-exact SU2 fibre has four active modes and two phase kernels. The registered A1 covariance splits into a scalar principal sea plus a positive anisotropic derivative covariance four powers smoother. A legal scalar two-root/two-visit chart passes with m_G=0.7653207581934908 and lambda_c>=21.08325, while the isolated moved C8/C10 rational scalar-slice bands have exact negative directions. Full owner sign remains open. Next: assemble the non-Toeplitz q=5,6,7 four-channel U/Phi cross-reveal matrix with anisotropic and returned-low blocks, then compute generalized source eigenpairs.
-  - _updated 2026-07-31_
+  - R-143 checkpoint: corrected the R-142 q567 witness to q678, supplied an exact q567 family, reduced each finite complete-feature family to Douglas/Feshbach tests, and bounded the common-noise anisotropy tail. Next register the temporally faithful reveal/visit/q/channel production chart, retain exact low modes, and compute the generalized edge plus source-null lift. Sector A remains open.
+  - _updated 2026-08-02_
 
 ## Next up
 

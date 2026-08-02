@@ -1,0 +1,588 @@
+% =============================================================================
+% Title: Corrected q=5,6,7 feature contraction and common-noise anisotropy tail
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY
+% Ledger: R-143
+% Version: v1.0 -- first issued 2026-08-02; this version issued 2026-08-02
+% Status: scoped T4 analytic/exact/conditional/executed advance; no A13 gate closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\cY}{\mathcal Y}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+\hypertarget{section-1-result}{ }
+
+R-142 found the correct two-feature owner $(U,\Phi)$ and a signed rational
+collar band, but its displayed three-layer $q=5,6,7$ coherence witness did
+not obey its own shell convention.  R-143 repairs that finite geometry and
+then changes the proof coordinate.  Instead of estimating the adverse trace
+feature term by term, it places every already registered favorable square in
+one feature $\cY$ and asks for one contraction from $\cY$ to $\cU$.  This is
+an exact finite-set Douglas criterion, not another absolute-value budget.
+
+The durable conclusions are:
+\begin{enumerate}
+\item the old integer collision is a real $q=6,7,8$ collision at physical
+      output $4229940$, not the declared $q=5,6,7$ collision at $2114970$;
+\item an exact dyadic same-sign $q=5,6,7$ family is supplied, with canonical
+      harmonics $(10,20,40)$ and carriers $(4M,2M,M)$;
+\item the complete source and sextic reserves enter one positive feature
+      exactly once, and finite-set positivity is equivalent to a contraction
+      or, equivalently, a mixed Gram inequality;
+\item the raw R-141 signature and the action have opposite signs and a factor
+      $1/2$; this conversion is now an executable firewall;
+\item the A1 family-lock covariance has an exact scalar-plus-anisotropic
+      common-probe realization, and its high-shell derivative trace has an
+      explicit summable lattice bound;
+\item the stronger mixed-Gram route still cannot be evaluated on production
+      data because the temporally faithful $U/\Phi$ jets, cross reveals,
+      source-null coordinates, and returned-low blocks are not registered.
+\end{enumerate}
+
+Every statement is finite-cutoff and positive-floor unless an infinite
+lattice upper bound is explicitly labelled conditional.  The finite Gram
+theorem is exact on any supplied feature family; it does not assert that the
+missing production family passes it.  The $N=27$ and $N=49$ tail comparisons
+use previously registered illustrative headrooms, not production margins.
+No A13 gate, matching identity, absolute anchor, Nelson estimate, removal,
+interacting measure, Sector-A closure, or tier promotion follows.
+
+\section*{2. Audit and correction of the R-142 collision}
+\hypertarget{section-2-audit}{ }
+
+R-142 uses the sharp shell convention
+\[
+ 2^{j-1}<N\leq2^j                                      \tag{2.1}
+\]
+for a root carrier $N$, and the moved rational harmonic $n$ lies at gap $q$
+when
+\[
+ 2^{q-2}<n\leq2^{q-1}.                                \tag{2.2}
+\]
+The physical output of $\cos(2nNx)$ is $K=2nN$.
+
+The old data were
+\[
+ n=(17,33,65),\qquad N=(124410,64090,32538).           \tag{2.3}
+\]
+They satisfy $nN=2114970$, so they do form an integer collision.  But the
+physical output and sharp shell data are
+\[
+ \begin{gathered}
+ K=2nN=4229940,\\
+ j=(17,16,15),\qquad m=23
+ \end{gathered}                                      \tag{2.4}
+\]
+and hence
+\[
+ m-j=(6,7,8).                                         \tag{2.5}
+\]
+Equivalently, (2.2) assigns $(17,33,65)$ to $(6,7,8)$.  Thus the collision
+survives only as a non-dyadic $q=6,7,8$ witness.  The R-142 coefficient-band
+sign theorem is independent of this example and remains intact.
+
+Now let $M=2^J$ and choose any even $t\in\{10,12,14,16\}$.  Put
+\[
+ (n_5,n_6,n_7)=(t,2t,4t),\qquad
+ (N_5,N_6,N_7)=(4M,2M,M).                            \tag{2.6}
+\]
+Then
+\[
+ 2n_5N_5=2n_6N_6=2n_7N_7=8tM.                       \tag{2.7}
+\]
+For the canonical $t=10$ choice the output is $80M$.  Its output shell is
+$J+7$, while the root shells are $(J+2,J+1,J)$, so the gaps are exactly
+$(5,6,7)$.  Moreover the registered sign formula
+\[
+ (-1)^{n+1}g_n>0                                    \tag{2.8}
+\]
+gives
+\[
+ g_{10}<0,\qquad g_{20}<0,\qquad g_{40}<0.           \tag{2.9}
+\]
+Thus the three contributions are genuinely same-sign at one physical
+output, with no phase adjustment.  The primary certificate also recomputes
+the coefficients from the A1 inputs at $\delta=0.2$ and test floor $1/9$.
+
+There is a second legal family with $t=9$.  Its signs are mixed, but a phase
+choice can align them.  It is useful for adversarial search, whereas the even
+family (2.6) is the cleaner sign-regression fixture.  Neither family is yet a
+production counterdirection because the missing owner blocks can change the
+full action sign.
+
+\section*{3. Raw signature versus action: sign and factor firewall}
+\hypertarget{section-3-sign}{ }
+
+After R-142 innovation compression, write
+\[
+ F=(U,\Phi),\qquad S_2=\operatorname{diag}(+\Id,-\Id),
+ \qquad K(F)=\ip{F}{S_2F}=\|U\|^2-\|\Phi\|^2.        \tag{3.1}
+\]
+The compressed action owner is not $K$ but
+\[
+ \boxed{\quad \cP_{\rm comp}(F)=-{1\over2}K(F)
+ ={1\over2}\|\Phi\|^2-{1\over2}\|U\|^2.\quad}     \tag{3.2}
+\]
+Consequently
+\[
+ D^2\cP_{\rm comp}=-{1\over2}D^2K.                 \tag{3.3}
+\]
+A positive raw-signature eigenvalue is action-adverse; a negative eigenvalue
+of an already action-signed Hessian is adverse.  The certificates check (3.3)
+on an exact polynomial fixture.  This rule must be attached to every future
+matrix output so that a solver cannot silently reverse the verdict.
+
+\section*{4. The complete one-use positive feature}
+\hypertarget{section-4-feature}{ }
+
+Fix one finite cutoff, positive floor, temporally faithful chart $\pi$, and
+recombine every complete owner before taking direct sums.  Let $\Phi_\pi(h)$
+be R-142's conditional mean-current feature and let $\cU_\pi(h)$ be its
+actual shared-probe trace feature.  Define
+\[
+ \boxed{
+ \cY_\pi(h)=
+ \Phi_\pi(h)
+ \oplus\sqrt{9\over10}\,h
+ \oplus\sqrt{3\over10}\,|Z_{K,h}|^2Z_{K,h}.}        \tag{4.1}
+\]
+Expectations, spatial integration, complete-owner sums, and auxiliary probes
+are part of the Hilbert norms.  The complete R-141/R-142 core becomes
+\[
+ \boxed{
+ 2\cA_\pi(h)=\|\cY_\pi(h)\|^2-\|\cU_\pi(h)\|^2.}   \tag{4.2}
+\]
+Indeed,
+\[
+ {1\over2}\left\|\sqrt{9\over10}h\right\|^2
+ ={9\over20}\|h\|^2,
+ \qquad
+ {1\over2}\left\|\sqrt{3\over10}|Z|^2Z\right\|^2
+ ={3\over20}\E\|Z\|_6^6.                          \tag{4.3}
+\]
+Thus source and sextic are present exactly once.  The R-125 forest is an
+alternate coordinate for the already recombined variance owner and is not a
+fourth reserve.  Predictable mean and returned low must remain inside the
+complete $\Phi$/low assembly rather than being appended again.
+
+For a relative endpoint, centering alone is not harmless:
+\[
+\begin{split}
+2[\cA(h)-\cA(h_0)]={}&\|\Delta Y\|^2-\|\Delta U\|^2\\
+ &+2\Re\ip{Y_0}{\Delta Y}-2\Re\ip{U_0}{\Delta U}.
+\end{split}                                           \tag{4.4}
+\]
+The baseline cross terms belong to the exact low/Feshbach block.  They may
+not be deleted unless matching or an absolute anchor has first been proved.
+
+\section*{5. Finite-set Douglas theorem}
+\hypertarget{section-5-douglas}{ }
+
+Let $h_1,\ldots,h_N$ be any finite admissible endpoint family and set
+\[
+ (G_Y)_{ab}=\ip{\cY(h_a)}{\cY(h_b)},\qquad
+ (G_U)_{ab}=\ip{\cU(h_a)}{\cU(h_b)}.                \tag{5.1}
+\]
+
+\textbf{Theorem 5.1.}  The following are equivalent:
+\begin{enumerate}
+\item $G_U\preceq G_Y$;
+\item there is a contraction
+      $C:\overline{\operatorname{span}}\{\cY(h_a)\}\to\cH_U$
+      with $C\cY(h_a)=\cU(h_a)$ for every $a$;
+\item for every coefficient vector $c$,
+\[
+ \left\|\sum_ac_a\cU(h_a)\right\|^2
+ \leq
+ \left\|\sum_ac_a\cY(h_a)\right\|^2.              \tag{5.2}
+\]
+\end{enumerate}
+
+\textit{Proof.}  Write $Yc=\sum_ac_a\cY(h_a)$ and
+$Uc=\sum_ac_a\cU(h_a)$.  The Gram inequality is exactly
+$\|Uc\|\leq\|Yc\|$.  Hence $Yc=0$ implies $Uc=0$, so
+$C_0(Yc)=Uc$ is well-defined and contractive on $\Ran Y$ and extends to its
+closure.  Conversely, $U=CY$ and $\|C\|\leq1$ imply
+$U^*U\preceq Y^*Y$.  \hfill$\square$
+
+The optimal finite-family constant is
+\[
+ \rho_*^2=
+ \lambda_{\max}\!\left(G_Y^{\dagger/2}G_UG_Y^{\dagger/2}\right),          \tag{5.3}
+\]
+provided $\Ker G_Y\subseteq\Ker G_U$; otherwise $\rho_*=\infty$.  If
+$\rho_*<1$ then
+\[
+ c^*(G_Y-G_U)c\geq(1-\rho_*^2)c^*G_Yc.             \tag{5.4}
+\]
+
+This theorem is strictly stronger than checking every endpoint energy.
+For example, take $G_Y=\Id_2$ and
+\[
+ G_U={9\over16}\begin{pmatrix}1&1\\1&1\end{pmatrix}.                     \tag{5.5}
+\]
+Each diagonal of $G_Y-G_U$ is $7/16>0$, but its eigenvalues are
+$-1/8$ and $1$, while $\rho_*^2=9/8>1$.  Both certificates reproduce this
+mixed-only obstruction exactly.
+
+\section*{6. Residual identity and exact finite-risk Feshbach block}
+\hypertarget{section-6-feshbach}{ }
+
+For a fixed strict contraction $C$, define
+\[
+ E(h)=\cU(h)-C\cY(h),\quad D=\Id-C^*C,
+ \quad R=\Id-CC^*.                                  \tag{6.1}
+\]
+Completing the square and using
+$\Id+CD^{-1}C^*=R^{-1}$ gives the exact identity
+\[
+\boxed{
+2\cA(h)=
+\left\|D^{1/2}\cY-D^{-1/2}C^*E\right\|^2
+-\left\|R^{-1/2}E\right\|^2.}                     \tag{6.2}
+\]
+Only the contraction residual is adverse.  It cannot be charged again to
+the source or sextic coordinates already inside $\cY$.  It must vanish,
+factor through a separately reserved owner, or remain in the exact low block.
+
+For an action-signed matrix split into finite danger and complement,
+\[
+ H=\begin{pmatrix}A&B\\B^*&D\end{pmatrix},\qquad D\succeq\alpha\Id>0,      \tag{6.3}
+\]
+congruence gives
+\[
+ H\succeq0\quad\Longleftrightarrow\quad
+ A-BD^{-1}B^*\succeq0.                              \tag{6.4}
+\]
+For semidefinite $D$, retain
+$\Ran B^*\subseteq\Ran D$ and replace $D^{-1}$ by $D^\dagger$.
+
+The source-null specialization is especially important.  In coordinates
+where
+\[
+ \widehat S^*\widehat S=
+ \begin{pmatrix}0&0\\0&A_1\end{pmatrix},\qquad A_1>0,
+ \quad
+ H=\begin{pmatrix}H_{00}&H_{01}\\H_{10}&H_{11}\end{pmatrix},             \tag{6.5}
+\]
+a finite lower source gap requires
+\[
+ H_{00}\succeq0,\qquad
+ \Ran H_{01}\subseteq\Ran H_{00}^{1/2}.             \tag{6.6}
+\]
+Then
+\[
+ H_{\rm eff}=H_{11}-H_{10}H_{00}^\dagger H_{01},
+ \quad
+ \mu_*=\lambda_{\min}
+ \left(A_1^{-1/2}H_{\rm eff}A_1^{-1/2}\right).       \tag{6.7}
+\]
+An eigenvector $x_*$ lifts to
+\[
+ v_*=\binom{-H_{00}^\dagger H_{01}x_*}{x_*}.         \tag{6.8}
+\]
+A negative $H_{00}$ direction is immediately adverse; failure of the range
+condition forbids any finite source bound; and $\mu_*\leq0$ supplies an
+owner-resolved candidate counterdirection.  This is the correct matrix test
+after production inputs exist.
+
+\section*{7. Exact family-lock probe split}
+\hypertarget{section-7-covariance}{ }
+
+The A1 family masses and lock give
+\[
+M=\begin{pmatrix}
+1/10&-1/20&-1/20\\
+-1/20&13/100&-1/20\\
+-1/20&-1/20&17/100
+\end{pmatrix},                                      \tag{7.1}
+\]
+with
+\[
+ \mu_1=0.0281161723351\ldots,\quad
+ \mu_2=0.165197152881\ldots,\quad
+ \mu_3=0.206686674784\ldots.                        \tag{7.2}
+\]
+For the scalar kinetic eigenvalue $a(k)\geq0$,
+\[
+C(k)=(a(k)\Id+M)^{-1}=\gamma_0(k)\Id+R(k),
+\quad \gamma_0(k)={1\over a(k)+\mu_3},\quad R(k)\succeq0.                 \tag{7.3}
+\]
+If $M=V\operatorname{diag}(\mu_i)V^*$, an exact rectangular covariance
+factor is
+\[
+B(k)=\left[\sqrt{\gamma_0(k)}\Id\ \ R(k)^{1/2}\right],
+\qquad B(k)B(k)^*=C(k).                              \tag{7.4}
+\]
+Use independent scalar and anisotropic probes inside (7.4), but use the same
+probe pair at both endpoints.  This preserves every mixed covariance.  It is
+not valid to write
+$\sqrt{\gamma_0\Id+R}=\sqrt{\gamma_0}\Id+\sqrt R$ with one probe; that would
+create a spurious cross covariance.
+
+The synchronous optimal coupling
+\[
+D(k)=C(k)^{1/2}-\sqrt{\gamma_0(k)}\Id                \tag{7.5}
+\]
+is also exact as a comparison coupling, with
+\[
+ \|D(k)\|={1\over\sqrt{a+\mu_1}}
+           -{1\over\sqrt{a+\mu_3}}.                 \tag{7.6}
+\]
+But $D$ alone does not carry the whole additive remainder because
+$R=2\sqrt{\gamma_0}D+D^2$.  Accordingly, the full trace tail below pays
+$R$, while the $D^2$ tail is reported only as a sensitivity diagnostic.
+
+Finally, $R\succeq0$ is covariance positivity, not action positivity.
+The entire trace feature $\cU$ stays in the negative slot of (4.2).  The split
+separates scales without reversing the owner sign.
+
+\section*{8. Analytic derivative-covariance tail}
+\hypertarget{section-8-tail}{ }
+
+For $L=16$ write $k=(\pi/8)n$ and $m=\|n\|_\infty$.  The A1 scalar kinetic is
+\[
+a(k)=r+Z|k|^2+Y|k|^4,\qquad
+r-{Z^2\over4Y}=0.2600000000094749\ldots>0.           \tag{8.1}
+\]
+The declared $q_0$ also gives the safe lower bound
+\[
+a(k)\geq(|k|^2-q_0^2)^2.                            \tag{8.2}
+\]
+For all $m\geq N$ put
+\[
+c_N=1-{(q_0/h)^2\over N^2},\qquad h={\pi\over8}.
+\]
+Then
+\[
+a(k)\geq c_N^2|k|^4.                                \tag{8.3}
+\]
+The exact sup-shell population is
+\[
+\#\{n:\|n\|_\infty=m\}=(2m+1)^3-(2m-1)^3=24m^2+2. \tag{8.4}
+\]
+
+Let $\Delta_\Sigma=(\mu_3-\mu_1)+(\mu_3-\mu_2)$ and
+$\Delta_2=(\mu_3-\mu_1)^2+(\mu_3-\mu_2)^2$.  From the resolvent identity
+and the mean-value theorem,
+\[
+\sum_iR_i(k)\leq{\Delta_\Sigma\over a(k)^2},
+\qquad
+\sum_iD_i(k)^2\leq{\Delta_2\over4a(k)^3}.           \tag{8.5}
+\]
+Using $\zeta(s,N)\leq N^{-s}+N^{1-s}/(s-1)$ gives
+\[
+\boxed{
+B_R(N)=\Delta_\Sigma c_N^{-4}h^{-6}
+\{24\zeta(4,N)+2\zeta(6,N)\}}                     \tag{8.6}
+\]
+for the derivative trace tail and
+\[
+\boxed{
+B_D(N)={\Delta_2\over4}c_N^{-6}h^{-10}
+\{24\zeta(8,N)+2\zeta(10,N)\}}                    \tag{8.7}
+\]
+for the synchronous perturbation's derivative-square tail.
+
+The certificates derive $H_6=7083/(500P)$ from R-130 and the two diagnostic
+headrooms from R-140.  With the convention that $N$ is the first included
+sup-shell, the first values satisfying $H_6B_R(N)$ below those headrooms are
+\[
+\begin{array}{c|c|c|c}
+\text{headroom}&N&H_6B_R(N-1)&H_6B_R(N)\\ \hline
+0.10043434343434376&27&0.1103000379&0.0979877516\\
+0.015912689545308223&49&0.0164887843&0.0154778464
+\end{array}                                         \tag{8.8}
+\]
+and
+\[
+B_D(27)=4.10006201\times10^{-8},\qquad
+B_D(49)=5.64059230\times10^{-10}.                   \tag{8.9}
+\]
+These are explicit progress: the infinite anisotropic high-shell trace can
+be replaced by a finite low block plus an analytic tail.  They are not a
+production owner estimate because output projections, $C_6(W)$, collar
+weights, cross reveals, and low couplings have not yet been propagated
+through (8.6).  The infinite-lattice extension is also conditional; A1 itself
+is certified on finite discrete grids.
+
+\section*{9. Production matrix firewall and next finite test}
+\hypertarget{section-9-production}{ }
+
+Three layers times the four R-142 active fibre modes give a mandatory
+$12\times12$ core only after fixing or aggregating one legal source coordinate
+per layer and channel.  It is not automatically the full matrix.  The actual
+index is schematically
+\[
+ i=(\text{reveal},\text{visit},q,\text{channel})
+ \quad\text{plus source-null and returned-low coordinates}.              \tag{9.1}
+\]
+Its dimension is not determined by current authority.
+
+For every such coordinate the action-signed entry must contain
+\[
+\begin{split}
+H_{ij}={}&{9\over10}G^{\rm src}_{ij}
++\ip{\Phi_i}{\Phi_j}+\ip{\Phi}{\Phi_{ij}}\\
+&-\ip{U_i}{U_j}-\ip{U}{U_{ij}}+S^{(6)}_{ij}.
+\end{split}                                           \tag{9.2}
+\]
+Every entry must use the same future projection, output cluster, owner
+partition, and shared trace probe.  Primitive trace, future variance, forest,
+predictable mean, and returned low are multiplicity-audited so that alternate
+coordinates are never appended as new reserves.
+
+The next decisive computation is therefore:
+\begin{enumerate}
+\item instantiate the corrected coherent $q=5,6,7$ core;
+\item augment it by all reveal/visit, phase, source-null, anisotropic-low, and
+      returned-low coordinates;
+\item compute $G_Y-G_U$, its kernel condition, and $\rho_*^2$;
+\item independently differentiate the complete nonlinear action chart;
+\item prove a complement gap, form the exact Feshbach matrix, and return an
+      owner-resolved lifted vector if a nonpositive edge occurs;
+\item repeat through $q=9$ before any $C=10$ conclusion.
+\end{enumerate}
+
+A mixed-Gram pass proves the stronger contraction condition only on the
+tested feature span.  A mixed-Gram failure does not refute T-050 unless its
+vector is realized as a legal action direction.  The independent nonlinear
+Hessian/Feshbach test supplies that bridge.
+
+\section*{10. Separate PDE/BCC route decision}
+\hypertarget{section-10-pde}{ }
+
+The proposed PDE diagnostics are valuable, but they are not inputs to T-050.
+They belong to a future Sector-B production-vacuum claim and must not revive
+the retired B3 claim semantically.
+
+First, $K(q_0)<K(0)$ is shell softness, not linear instability, when both
+numbers are positive.  Second, the current records contain no same-backend
+restricted surface $F(\phi_{\rm DC},A_{\rm BCC})$.  Third, the historical
+T-033 calculation tested six separate antipodal-pair restrictions, not the
+full coupled BCC-star Hessian with cross blocks.  Therefore the honest route is
+\[
+\text{discrete shell softness}
+\longrightarrow
+\text{commensurate restricted BCC energy}
+\longrightarrow
+\text{full coupled BCC-star Hessian}.                \tag{10.1}
+\]
+Only after those same-functional tests can the scalar PDE be retained,
+rejected, or replaced on microscopic grounds.  No value from this separate
+route is used in the R-143 A13 theorem.
+
+\section*{11. Evidence-map route summary}
+\hypertarget{section-11-map}{ }
+
+\begin{itemize}
+\item \textbf{Old R-142 fixture --- superseded as q567, retained as q678:}
+      the physical factor two and sharp shell membership were omitted.
+\item \textbf{Corrected even dyadic family --- advanced:}
+      it has exact common output, exact gaps, and one coefficient sign.
+\item \textbf{Diagonal endpoint tests --- rejected as sufficient:}
+      positive diagonals do not imply a positive mixed Gram.
+\item \textbf{Complete-feature contraction --- advanced conditionally:}
+      it spends source/sextic once and keeps all mixed correlations.
+\item \textbf{PSD covariance as favorable action --- rejected:}
+      the trace feature remains in the adverse action slot.
+\item \textbf{Finite low plus analytic tail --- advanced conditionally:}
+      the full additive derivative trace is summable with explicit cutoffs.
+\item \textbf{$12\times12$ as the full matrix --- rejected:}
+      it is a per-packet core until reveal, visit, and low indices exist.
+\item \textbf{Flat-field evidence as PDE rejection --- parked separately:}
+      same-backend restricted energy and a coupled Hessian are missing.
+\end{itemize}
+
+\section*{12. Devil's-advocate review}
+\hypertarget{section-12-review}{ }
+
+\begin{enumerate}
+\item \textbf{Objection:} The R-142 coherence error invalidates all of R-142.\\
+\textbf{DISMISSED.}  The innovation, fibre, covariance, scalar-chart, and
+band-sign results do not depend on the mislabeled collision.  Only the
+declared q567 coherence evidence is superseded.
+
+\item \textbf{Objection:} A passing finite Gram closes the nonlinear Hessian.\\
+\textbf{UPHELD against that inference.}  Baseline and second-jet connection
+terms require the independently differentiated action Hessian.
+
+\item \textbf{Objection:} The feature $\cY$ double-spends source or sextic.\\
+\textbf{DISMISSED.}  Equation (4.3) checks the exact action coefficients.
+Forest, mean, and low are not appended as extra reserves.
+
+\item \textbf{Objection:} The covariance remainder is PSD, so it helps.\\
+\textbf{UPHELD against that sign claim.}  PSD describes covariance.  Its
+trace feature occurs with the adverse minus sign in (4.2).
+
+\item \textbf{Objection:} The synchronous $D$ tail pays all of $R$.\\
+\textbf{UPHELD.}  Since $R=2\sqrt{\gamma_0}D+D^2$, only the additive
+$R^{1/2}$ probe or the full trace bound pays the complete remainder.
+
+\item \textbf{Objection:} The $N=27,49$ thresholds are production margins.\\
+\textbf{UPHELD.}  Their comparison headrooms are explicitly illustrative,
+and the owner operations have not been propagated through the tail bound.
+
+\item \textbf{Objection:} The corrected coherence proves an adverse action
+direction.\\
+\textbf{UPHELD.}  It proves only coherent coefficient geometry.  Complete
+owner and low/Feshbach blocks can change the sign.
+
+\item \textbf{Objection:} The flat numerical field proves that the PDE must
+be replaced.\\
+\textbf{UPHELD.}  A same-functional restricted BCC surface and the coupled
+star Hessian are prerequisites.  The PDE decision is separately registered.
+\end{enumerate}
+
+\newpage
+\section*{13. Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-
+  COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY.
+Ledger ID: R-143.
+Precise statement: corrected dyadic q=5,6,7 common-output family;
+  raw-sign/action-sign factor firewall; exact complete-feature identity;
+  finite-set Douglas equivalence and residual identity; source-null
+  Feshbach criterion; exact scalar-plus-anisotropic common-probe covariance
+  factor; explicit high-shell derivative-trace and synchronous sensitivity
+  bounds with diagnostic first included shells N=27 and N=49.
+Scope: finite cutoff, positive floor, fixed supplied feature families;
+  high-shell lattice extension conditional on the registered A1 symbol.
+Dependencies: A1-PRODUCTION-FUNCTIONAL-REALISATION; R-125, R-130,
+  R-140, R-141, R-142.
+Evidence grade: ANALYTIC, EXACT, CONDITIONAL, EXECUTED.
+Audit status: registered and independently executed under the R-143 manifest.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_corrected_q567_feature_contraction_
+  common_noise_anisotropy_tail_boundary_verify.py
+Expected output: integrated PASS after primary and non-importing independent
+  certificates, deterministic PDF rebuild, exploration/audit, authority,
+  manifest, all-page render, and generated-public-surface checks pass.
+Falsification gate: any failed physical-output factor, shell membership,
+  sign conversion, feature coefficient, mixed Gram, kernel/range, covariance
+  reconstruction, tail threshold, authority/hash, or public-surface check.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no production U/Phi matrix or contraction, legal
+  production adverse vector, owner intertwiner, graph gap, matching, anchor,
+  A13 gate, OVERLAP_src, Nelson estimate, removal, interacting measure,
+  Sector-A closure, or T5-T7 claim follows.
+Next required action: register the actual reveal/visit/source chart and all
+  U/Phi base, first-, and second-jet data; assemble the augmented q=5,6,7
+  mixed Gram and independently differentiated action Hessian; then apply the
+  exact source-null Feshbach test and report an owner-resolved edge vector.
+\end{verbatim}
+
+\endgroup

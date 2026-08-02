@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO](#audit-2026-08-02-a13-r142-q567-physical-output-factor-two) | use the R-142 integer collision `(17,33,65)` as a `q=5,6,7` common-output witness | the displayed `2114970` is `nN`, while the physical mode is `2nN=4229940`; sharp shell membership gives gaps `(6,7,8)`, so the witness is superseded only in its q567 label and replaced by the dyadic same-sign family `(10,20,40)` with carriers `(4M,2M,M)` |
 | [NG-2026-07-31-A13-WEDGE-ONLY-FUTURE-TELESCOPE](#ng-2026-07-31-a13-wedge-only-future-telescope) | obtain a terminal-minus-prefix future identity after retaining only a moving insertion-dependent wedge mask | discrete summation by parts leaves the internal variation `sum_e(chi_e-chi_(e+1))K_e`; alternating endpoints make this term grow while the terminal difference is zero, and a coherent far/near fixture exposes the same cancellation double-spend |
 | [NG-2026-07-31-A13-TAIL-ONLY-SHIFTED-DOUGLAS-HEADROOM](#ng-2026-07-31-a13-tail-only-shifted-douglas-headroom) | infer a strict shifted-Douglas or production-graph gap from an arbitrarily small collar tail alone | with `A0=2sqrt(ef)`, zero tail, and zero low coupling, the balanced two-channel block has an exact kernel for every tail bound; an independent low-coupled fixture shows that balanced headroom alone also does not force a gap |
 | [NG-2026-07-31-A13-CHRONOLOGY-ONLY-SPATIAL-GRADE](#ng-2026-07-31-a13-chronology-only-spatial-grade) | infer the R-087 raw direct shell decay from chronological precedence, bounded positive-floor derivatives, and the three-channel identity without a spatial-grade intertwiner | a deterministic earlier prefix at shell `N=2^M` has uniformly bounded `C^(2/5)` norm but makes the exact low-insertion direct atom energy grow as `N^(6/5)`, while the claimed `s=2/3` right side decays as `N^(-4/3)` |
@@ -213,6 +214,33 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="audit-2026-08-02-a13-r142-q567-physical-output-factor-two"></a>
+### AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO -- R-142 coherence fixture used a half-output and the wrong moved layers
+
+**Failure mode.**  R-142 used harmonics `(17,33,65)` and carriers
+`(124410,64090,32538)` as a coherent `q=5,6,7` witness, reporting common
+output `2114970`.  Under R-142's own convention, the physical cosine output is
+`2nN`, not `nN`, and moved-layer membership is
+`2^(q-2)<n<=2^(q-1)`.
+
+**Evidence.**  Direct integer and sharp-shell recomputation in R-143 gives
+`2nN=4229940`, root shells `(17,16,15)`, output shell `23`, and gaps
+`(6,7,8)`.  Both the primary and non-importing independent R-143 certificates
+assert the factor two, harmonic membership, and shell gaps.  They also certify
+the replacement dyadic family
+`(n,N)=((10,4M),(20,2M),(40,M))`, whose common physical output is `80M`,
+whose gaps are exactly `(5,6,7)`, and whose three rational coefficients have
+the same negative parity sign.
+
+**Consequence.**  The old collision remains valid only as a non-dyadic
+`q=6,7,8` arithmetic witness.  Its `q=5,6,7` label and half-output statement,
+including the corresponding clause of `EXP-000583`, are superseded by R-143.
+This correction does not affect R-142's innovation compression, shared-probe
+trace construction, SU(2) fibre block, family-lock covariance split,
+coefficient-exact scalar-chart positivity, or the C8/C10 negative-band sign
+theorem, all of which are independent of the mislabeled collision.  No tier
+or A13 gate changes.
 
 <a id="ng-2026-07-31-a13-wedge-only-future-telescope"></a>
 ### NG-2026-07-31-A13-WEDGE-ONLY-FUTURE-TELESCOPE -- a moving wedge mask leaves internal endpoint variation

@@ -4869,3 +4869,57 @@ T5--T7 promotion remain open. Tier stays T4.
   Loewner edge, source-null/low compatibility, positive graph gap, matching,
   anchor, both A13 gates, `OVERLAP_src`, Nelson, removals, interacting
   measure, and Sector A remain open at T4.
+- 2026-08-02: Registered
+  `A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY`
+  (R-143) as a scoped analytic/exact/conditional/executed/audited advance and
+  route correction.  The R-142 integer collision `(17,33,65)` is real, but
+  its displayed `2114970` is the half-output `nN`; the physical output is
+  `2nN=4229940`, and both harmonic membership and sharp shell gaps are
+  `(6,7,8)`, not `(5,6,7)`.  The correction is formally registered as
+  `AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO` and supersedes
+  only the old coherence witness.  The R-142 innovation, fibre, covariance,
+  scalar-chart, and C8/C10 band-sign results remain intact.  The replacement
+  dyadic same-sign family is `(n,N)=((10,4M),(20,2M),(40,M))`, with common
+  physical output `80M` and exact gaps `(5,6,7)`.
+
+  For the complete recombined finite-chart owner, R-143 defines the one-use
+  feature
+  `Y=Phi direct-sum sqrt(9/10)h direct-sum sqrt(3/10)|Z|^2 Z` and proves
+  `2A=||Y||^2-||U||^2`.  On every supplied finite endpoint family,
+  `G_U<=G_Y` is equivalent to a contraction mapping every `Y_a` to `U_a`;
+  its sharp squared norm is the generalized Gram edge.  A two-endpoint exact
+  fixture has positive diagonal energies but mixed eigenvalue `-1/8` and
+  contraction edge `9/8`, proving that diagonal tests are insufficient.  The
+  exact contraction-residual completion and source-null pseudoinverse
+  Feshbach criterion isolate the one surviving adverse coordinate without
+  spending source or sextic twice.  The raw R-141 signature-to-action rule is
+  pinned as `D2 P_comp=-(D2 K)/2`.
+
+  The registered A1 family-lock covariance is realized exactly by a scalar
+  probe and an independent anisotropic probe shared across endpoints.  Exact
+  Sturm intervals for its three rational mass eigenvalues give the safe
+  bounds `Delta_sum<0.221` and `Delta_2<0.033805`.  Sup-norm lattice counting
+  and the fourth-order kinetic lower bound yield explicit derivative-trace
+  and synchronous-sensitivity tails.  Against the already registered
+  illustrative R-140 headrooms, `H6` times the full additive trace bound first
+  passes at included shells `N=27` and `N=49`.  These are diagnostic finite-low
+  plus analytic-tail reductions, not production margins; the anisotropic
+  trace remains in the adverse action slot.  `EXP-000585--EXP-000589` record
+  the correction, repaired coherent geometry, complete-feature contraction,
+  mixed-only/Feshbach boundary, and covariance-tail route.  `EXP-000590--`
+  `EXP-000592` separately record the PDE/BCC diagnostics without attaching
+  them to T-050: positive shell softness is not instability, no same-backend
+  restricted BCC energy surface is registered, and T-033 pairwise curvature
+  is not a coupled full-star Hessian.
+
+  The mandatory three-layer/four-active-channel matrix is only a `12x12`
+  per-packet core.  Its full production dimension remains unknown until the
+  reveal/visit/source chart, every `U/Phi` base/first/cross-second jet,
+  phase/source-null coordinates, anisotropic low modes, and returned-low
+  blocks are registered.  Primary `52/52` and non-importing independent
+  `40/40` certificates pass; integrated `252/252` embeds all `92` child rows
+  exactly once and adds `160` authority, audit, exploration, PDF, scope,
+  aggregation, and public-surface checks.  The full matrix and action sign, uniform
+  contraction/Loewner edge, source-null/low compatibility, positive graph
+  gap, matching, absolute anchor, both A13 gates, `OVERLAP_src`, Nelson,
+  removals, interacting measure, and Sector A remain open at T4.

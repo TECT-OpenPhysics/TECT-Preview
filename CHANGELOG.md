@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-143 corrected q567 feature contraction and anisotropy-tail boundary] - 2026-08-02
+
+Audited the R-142 coherence fixture, restored the physical factor two, and reclassified it as q678. Added an exact even dyadic q567 family, the raw-signature/action sign firewall, a one-use complete feature with finite-family Douglas and source-null Feshbach criteria, and safe analytic high-shell anisotropy tails. Recorded separate PDE/BCC gate failures without reviving retired B3 authority. The production reveal/visit/q/channel matrix and both A13 gates remain open at T4.
+
 ## [R-142 innovation compression, SU2 covariance split, and signed collar band] - 2026-07-31
 
 Registered R-142 at T4. Common-future centering compresses the complete mixed-endpoint owner from (U,J,R) to the actual two-feature (U,Phi) Hessian, and a shared covariance-square-root probe pins mixed trace correlations while retaining the favorable R-102 product covariance. The exact SU2 fibre block, registered A1 scalar-principal covariance split, floor-uniform legal scalar chart, and adverse C8/C10 scalar-slice bands are certified. The full non-Toeplitz production cross-reveal matrix, both A13 gates, and Sector A remain open.
