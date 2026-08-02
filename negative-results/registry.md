@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-02-A13-R147-EXACT-CANONICAL-ACTIVE-SPECTATOR-LIFT](#ng-2026-08-02-a13-r147-exact-canonical-active-spectator-lift) | use the exact R-147 rank-one fresh scalar innovation unchanged as a nonzero R-146 proportional-covariance final block | the registered covariance restriction is positive definite, so every nonzero canonical block has rank two while the fresh line innovation has rank one; this says nothing about the necessary rank of an adapted past |
+| [NG-2026-08-02-A13-ACTIVE-SPECTATOR-JET-OWNER-COMPLETION](#ng-2026-08-02-a13-active-spectator-jet-owner-completion) | reconstruct the complete forest, future, balanced, low, or spatial owner from the active-spectator diagonal coefficient energy alone | a rational `q`-dependent orthogonal gauge preserves every diagonal norm but changes an endpoint cross-Gram from one to zero and first-jet energy from zero to four |
+| [AUDIT-2026-08-02-A13-R147-ABSOLUTE-DEFECT-AS-RELATIVE-HESSIAN](#audit-2026-08-02-a13-r147-absolute-defect-as-relative-hessian) | identify the R-147 absolute coefficient curvature or the coefficient-background parameter Hessian with a physical deterministic-control Hessian | with the current prefactor held fixed, the parameter gradient uses `f'''` and its Hessian uses `f''''`; no source synthesis is specified, so a physical control lift may add further derivative terms |
 | [NG-2026-08-02-A13-COMMON-TERMINAL-AUTOMATIC-SCALAR-SIGN](#ng-2026-08-02-a13-common-terminal-automatic-scalar-sign) | infer a nonpositive scalar trace-current defect from a centred common-terminal feature alone | for `A_t(g)=exp(-t g^2/2)`, `U=A_t(g) zeta`, and `Phi=A_t(g)g`, the current is centred but the exact defect is `2t/(1+2t)^(3/2)>0`, with trace-relative ratio tending to one |
 | [NG-2026-08-02-A13-ENDPOINT-LAW-OWNER-TRANSFER](#ng-2026-08-02-a13-endpoint-law-owner-transfer) | transport sequential owners from equality of the terminal Gaussian law or covariance alone | equal `N(0,1)` terminals have linear owner allocations `(1,0)` and `(1/2,1/2)` and Wick-square allocations `(2,0)` and `(1/2,3/2)`; equal terminal covariance paths can also have incompatible prefix spectra under every time change |
 | [NG-2026-08-02-A13-PRODUCTION-PAIR-GLOBAL-CONVEXITY](#ng-2026-08-02-a13-production-pair-global-convexity) | extend the exact production `P+L` affine-collinear curvature sign to global multivariate coefficient convexity | on the exact active-spectator direction at base `(R,R)`, the retained pair has curvature `3(-528R^4-88R^2e+113e^2)/(1000P(2R^2+e)^2)`, which is negative above the exact threshold; omitted complete-action companions remain open |
@@ -226,6 +229,72 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-02-a13-r147-exact-canonical-active-spectator-lift"></a>
+### NG-2026-08-02-A13-R147-EXACT-CANONICAL-ACTIVE-SPECTATOR-LIFT -- rank-one line cannot be appended unchanged to the canonical prefix
+
+**Failure mode.** Insert the exact rank-one fresh R-147 scalar innovation
+unchanged as a nonzero final block of the R-146 proportional-covariance chart, then
+append forest, future, low, or sextic companions as if the chart were already
+registered.
+
+**Evidence.** The registered active-spectator mass block is positive definite.
+For every admissible radial parameter `a`, its covariance restriction has
+determinant
+`250(100a+13)/(25000a^3+10000a^2+1115a+24)>0`. Thus every nonzero block
+`tau C_E` has rank two. The exact fresh R-147 innovation is supported on
+`(1,-1)` and has rank one. A `(1,1)` past block is only the no-correction
+fixture; an adapted past may include later corrections and need not have rank one.
+
+**Consequence.** The unchanged-line proportional-prefix route fails before any
+complete-owner sign calculation. This is not a no-go for canonical Brownian
+owners: a new full-rank chart may exist, but it leaves the exact line and must
+rederive every current, forest, future, balanced, spatial, low, source, and
+sextic term. No phase is selected or excluded.
+
+<a id="ng-2026-08-02-a13-active-spectator-jet-owner-completion"></a>
+### NG-2026-08-02-A13-ACTIVE-SPECTATOR-JET-OWNER-COMPLETION -- diagonal coefficient energy does not determine the complete owner
+
+**Failure mode.** Infer cross-reveal Grams, adapted forest jets, future
+variance, balanced rows, returned low, or spatial Hessian data solely from the
+active-spectator diagonal coefficient function `f(q)`.
+
+**Evidence.** Apply the rational orthogonal gauge
+`O(q)=(1+q^2)^(-1)[[1-q^2,-2q],[2q,1-q^2]]` to the constant feature
+`A(q)=(1,0)`. The rotated and unrotated features both have norm one for every
+`q`, but their `q=0` to `q=1` cross-Grams are zero and one, while their
+first-jet energies at zero are four and zero.
+
+**Consequence.** A diagonal coefficient slice cannot identify the complete
+R-125/R-130/R-141/R-142 owner. A successor must supply the physical synthesis,
+covariance incidence, filtration, projectors, feedback, forest, future, low,
+and spatial tuple explicitly. Nonidentifiability does not prove that no
+complete lift exists and carries no phase verdict.
+
+<a id="audit-2026-08-02-a13-r147-absolute-defect-as-relative-hessian"></a>
+### AUDIT-2026-08-02-A13-R147-ABSOLUTE-DEFECT-AS-RELATIVE-HESSIAN -- differentiate the shifted owner twice
+
+**Failure mode.** Read the negative R-147 absolute coefficient curvature
+`f''(0)` as a negative deterministic-control Hessian, and infer instability of
+the action or of a physical phase.
+
+**Evidence.** In the declared coefficient-background parameter family, with
+the current prefactor `sigma g` held fixed and `q=m+sigma g`, second-order Gaussian Stein gives
+`P_comp(m)=sigma^4 E f''(m+sigma g)/2`. Its parameter gradient is
+`sigma^4 E f'''/2`, and the parameter
+Hessian is `sigma^4 E f''''/2`. The exact
+fourth-derivative threshold `-3/14+3sqrt(11)/28` lies strictly below the R-147
+adverse threshold. At each fixed R-147 adverse point, sufficiently small noise
+gives positive owner curvature but a nonzero gradient (negative for `R>0`).
+If the same parameter also shifts the current prefactor, additional first-
+and second-derivative terms appear.
+
+**Consequence.** The R-147 sign and the coefficient-background parameter
+Hessian are not a physical deterministic-control Hessian. Positive curvature
+at the diagnostic origin does not prove a local minimum, and the complete
+production gradient and Hessian remain to be constructed, and no stability,
+vacuum, BCC, other phase, PDE-replacement, T-050, or Sector-A conclusion
+follows.
 
 <a id="ng-2026-08-02-a13-common-terminal-automatic-scalar-sign"></a>
 ### NG-2026-08-02-A13-COMMON-TERMINAL-AUTOMATIC-SCALAR-SIGN -- centering and a common terminal do not fix the scalar sign

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-148](#r-148) | Canonical fresh-prefix rank obstruction, active-spectator lift boundary, and coefficient-parameter Hessian correction | Scoped T4 analytic/exact/executed/audited rank/lift and parameter-derivative boundary. The registered active-spectator covariance restriction is positive definite, so every nonzero R-146 proportional canonical block has rank two and cannot equal the rank-one fresh final innovation of the exact R-147 line. This excludes only the unchanged fresh block, not a new full-rank chart or a corrected adapted past. In a separately declared last-root coefficient chart, at each fixed adverse point the exact trace-bracket mismatch is positive for sufficiently small noise. With the current prefactor held fixed, the coefficient-background parameter gradient uses `f'''` and its Hessian uses `f''''`; the small-noise curvature is positive but the gradient is nonzero. No physical control Hessian is identified. Diagonal coefficient energy does not identify the complete owner. T-050, every phase verdict, and Sector A remain open |
 | [R-147](#r-147) | Canonical signed common terminal, predictable trace-bracket defect, and affine-collinear production boundary | Scoped T4 analytic/exact/executed/audited advance and method boundary. The actual R-141/R-142 signed terminal feature has an exact fixed-cutoff canonical Doob telescope, conditional signed-remainder recursion, and continuous martingale-bracket representation. Representation-universal owner transport requires the whole projection nest; endpoint law alone does not determine reveal energies. Under the full registered R-125/R-063 incidence, the exact conditional residual is `E[r_o[p,q]|F_(o-)]=bar_tau_o[p,q]-beta_o[p,q]-<b_p,b_q>`, so equality to the specific defect-free predictable mean Gram is equivalent to `bar_tau=beta`. The A1/R-075 `P+L` coefficient pair has uniform affine-collinear curvature at least `2223/(25000P)` and a strict favourable Gaussian defect, but an active-spectator direction loses convexity above `R^2/e=-1/12+5sqrt(154)/132`. The complete non-collinear forest/future/balanced/low/sextic owner, T-050, phase selection, and Sector A remain open |
 | [R-146](#r-146) | Relative zero-control anchor, endpoint-first anisotropic payment, and canonical-covariance scalar-sign boundary | Scoped T4 analytic/exact/conditional/executed/audited advance and no-go. At every registered finite cutoff and chart, the R-104 zero-control law and A7 normalization give the exact relative identity `E Vren_J(Z_h)=-[T_(J,pi)(h)-T_(J,pi)(0)]`; no separate absolute anchor is needed on this direct route. Completing the owner telescope before splitting the terminal covariance charges the anisotropic endpoint by `(1/100)Y6+24` with zero Cameron--Martin source loss, leaving the full-field scalar-trace residual windows `eta<5/11`, `zeta<13/50`. A fixed-cutoff canonical square root of the total covariance gives an equivalent endpoint-payoff Boue--Dupuis variational chart and exact positive temporal increment split. Strict-past independent scalar innovations have nonpositive signed defect, but an exact same-root Gaussian fixture has positive defect with ratio tending to one, so covariance normalization alone cannot close the remaining scalar sea. The old owner/filtration chart, common-terminal tower, complete scalar signed residual, T-050, A13, Nelson, phase selection, and Sector A remain open |
 | [R-145](#r-145) | Weighted trace-excess criterion and terminal anisotropic covariance sextic reduction | Scoped T4 analytic/exact/executed/audited advance. Writing the renormalised action as `Vren=a_pi-T_pi`, the exact T-050 implication only requires `T_pi<=eta X+zeta Y6+B` with `eta<5/11`, `zeta<27/100`, and `a_pi>=-C0`; a strict global complete-feature contraction is sufficient but not necessary. For the registered A1 family-lock covariance, exact Sturm isolation, lattice counting, and the fourth-order kinetic lower bound give complex anisotropic Fourier sum at most `7807039549231/6201562500` and six-real pointwise derivative trace at most `7807039549231/12700800000000`. At abstract terminal total-covariance level, the anisotropic owner is therefore bounded by `(1/100)Y6+24` for regulator bound one. The R-129 window `eta<9/20`, `zeta<3/20` remains valid but nonsharp. No temporally faithful transfer of the terminal split, scalar principal-sea signed estimate, complete low/anchor bound, T-050, A13, Nelson theorem, or Sector-A closure is proved |
@@ -166,6 +167,65 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-148"></a>
+### R-148 -- Canonical fresh-prefix rank obstruction, active-spectator lift boundary, and coefficient-parameter Hessian correction
+
+- **Statement.**  On the registered active-spectator plane, the A1 mass
+  matrix is positive definite and the radial covariance restriction has exact
+  determinant
+  `250(100a+13)/(25000a^3+10000a^2+1115a+24)>0`.  Every nonzero R-146
+  proportional-covariance canonical block therefore has rank two, whereas
+  the fresh final scalar innovation supporting the exact R-147
+  active-spectator line has rank one.  That fresh innovation cannot be
+  inserted unchanged as a nonzero final block.  A rank-one past block is only
+  the no-correction fixture, not a necessity for an adapted past.  In a separately declared
+  noncanonical last-root Gaussian coefficient chart, with feature `A(q)` and
+  `f(q)=||A(q)||^2`, the exact predictable trace-bracket mismatch is
+  `delta=-sigma^4 E f''(sigma g)+sigma^4||E A'(sigma g)||^2`; at each fixed
+  R-147 adverse point it is positive for all sufficiently small `sigma`.
+  Under the coefficient-background parameter `q=m+sigma g`, with the current
+  prefactor held fixed, the minimal coefficient owner is
+  `P_comp(m)=sigma^4 E f''(m+sigma g)/2`, so its gradient uses `f'''` and its
+  Hessian uses `f''''`, not `f''`.
+- **Exact parameter boundary.**  In the oriented convention `R>0`,
+  `f'''(0)=-9R(16R^2+27e)/(50P(2R^2+e)^2)<0`, while
+  `f''''(0)=18(112R^4+48R^2e-9e^2)/(25P(2R^2+e)^3)`.  The positive
+  fourth-derivative threshold
+  `r4=-3/14+3sqrt(11)/28` is strictly below the R-147 second-derivative
+  threshold `r2=-1/12+5sqrt(154)/132`, with the exact separation
+  `r2>1/3>1/7>r4`.  Hence at each fixed R-147 adverse point the sufficiently
+  small-noise owner curvature is positive but the gradient is nonzero
+  (negative for `R>0`).  The source curvature is nonnegative and the sextic
+  curvature is positive.  No physical control Hessian is identified because
+  the source synthesis is unspecified.
+- **Where proved.**  Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-canonical-prefix-rank-active-spectator-lift-relative-hessian-boundary-260802-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_canonical_prefix_rank_active_spectator_lift_relative_hessian_boundary_manifest.json`,
+  and the primary, non-importing independent, and integrated executable
+  certificates listed there.
+- **Reuse scope.**  The rank obstruction applies only to carrying the exact
+  rank-one fresh R-147 innovation unchanged into a nonzero proportional-
+  covariance final block.  A new full-rank canonical chart remains possible, but it
+  must recompute the complete current, forest, future variance, balanced and
+  spatial rows, returned low, source, and terminal sextic in that chart.  The
+  last-root formulas are exact only for their declared coefficient diagnostic.
+  A rational orthogonal gauge preserves `f(q)` while changing cross-Grams and
+  jet energy, proving that the coefficient diagonal does not identify the
+  complete production owner.
+- **Audit boundary.**  Positive parameter curvature at a nonstationary point
+  proves neither a physical local minimum nor stability.  The small-noise
+  quantifier is pointwise, not uniform up to the adverse threshold.  The noncanonical mismatch does not
+  transport the registered R-063/R-104/R-125 owners.  No global-noise sign,
+  complete-owner estimate, T-050, A13, `OVERLAP_src`, Nelson theorem, removal,
+  interacting measure, PDE replacement, BCC preference or exclusion, other
+  phase selection, or Sector-A closure is proved.
+- **Tier / publication target.**  Scoped T4 analytic/exact/executed/audited
+  rank/lift, Gaussian-Stein, and parameter-derivative boundary; suitable as a
+  canonical-realization obstruction and nonidentifiability lemma after
+  external review, not as a complete-action or phase theorem.
 
 <a id="r-147"></a>
 ### R-147 -- Canonical signed common terminal, predictable trace-bracket defect, and affine-collinear production boundary

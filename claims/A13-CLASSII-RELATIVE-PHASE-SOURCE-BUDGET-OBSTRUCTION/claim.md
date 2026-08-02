@@ -5124,3 +5124,61 @@ T5--T7 promotion remain open. Tier stays T4.
   `zeta<13/50`.  The complete scalar owner, T-050, both A13 gates,
   `OVERLAP_src`, Nelson, removals, the interacting measure, physical phase
   selection, and Sector A remain open at T4.
+
+- 2026-08-02: Registered
+  `A13-CLASSII-CANONICAL-PREFIX-RANK-ACTIVE-SPECTATOR-LIFT-RELATIVE-HESSIAN-BOUNDARY`
+  (R-148) as a phase-neutral fixed-cutoff, positive-floor T4 structural
+  advance and method boundary.  On the registered active-spectator plane,
+  the R-146 covariance restriction has exact determinant
+  `250(100a+13)/(25000a^3+10000a^2+1115a+24)>0`.  Every nonzero
+  proportional-covariance canonical block is therefore rank two, whereas the
+  exact R-147 fresh scalar innovation along `(1,-1)` is rank one.  The fresh
+  innovation cannot be inserted unchanged as a nonzero R-146 canonical final
+  block.  The rank-one past `(1,1)` block is only the no-correction fixture;
+  it is not a necessity theorem for an adapted past, and a newly constructed
+  full-rank canonical chart remains possible.
+
+  In a separately declared noncanonical last-root coefficient chart, the
+  exact predictable trace-bracket mismatch is
+  `delta=-sigma^4 E f''(sigma g)+sigma^4||E A'(sigma g)||^2`.  For every fixed
+  adverse `(R,e,P)` with
+  `R^2/e>-1/12+5sqrt(154)/132`, there exists a point-dependent positive
+  `sigma0` below which the mismatch is positive.  There is no proved uniform
+  threshold up to the adverse boundary.  This is a falsifier of automatic
+  matching in the declared chart, not an adverse sign theorem for the
+  complete production action and not transport of the registered
+  R-063/R-104/R-125 owners.
+
+  The coefficient-background family `q=m+sigma g`, with the current prefactor
+  `sigma g` deliberately held fixed, has
+  `P_comp(m)=sigma^4 E f''(m+sigma g)/2`; its parameter gradient uses `f'''`
+  and its parameter Hessian uses `f''''`.  This is not a physical
+  deterministic-control Hessian because the corresponding source/control
+  synthesis has not been specified.  The fourth-derivative threshold
+  `-3/14+3sqrt(11)/28` lies strictly below the R-147 threshold.  At each fixed
+  adverse point the small-noise parameter-owner and terminal-sextic
+  curvatures are positive, the source curvature `9kappa/10` is nonnegative
+  and may vanish, and the parameter gradient is nonzero (negative only in the
+  chosen orientation `R>0`).  Thus neither stationarity nor local stability
+  is proved.
+
+  An exact rational orthogonal-gauge witness keeps the coefficient diagonal
+  norm fixed while changing the cross Gram from one to zero and the jet
+  energy from zero to four.  Coefficient diagonal data therefore do not
+  identify the forest, future, balanced, returned-low, spatial, or sextic
+  owners.  Those terms are omitted by definition of the diagnostic, not
+  proved zero.  `EXP-000625--EXP-000631`,
+  `NG-2026-08-02-A13-R147-EXACT-CANONICAL-ACTIVE-SPECTATOR-LIFT`,
+  `NG-2026-08-02-A13-ACTIVE-SPECTATOR-JET-OWNER-COMPLETION`, and
+  `AUDIT-2026-08-02-A13-R147-ABSOLUTE-DEFECT-AS-RELATIVE-HESSIAN` preserve the
+  exact advance, failed completions, and interpretation repair.  Primary
+  `90/90` and non-importing independent `98/98` certificates pass.  Integrated
+  verification passes `453/453`, embedding all `188` child rows exactly once
+  and adding `265` source-independence, exact-identity, authority, exploration,
+  negative-result, PDF, scope, aggregation, and public-surface checks.  The
+  manifest pins deterministic SHA-256 rebuilding, strict PDF parsing,
+  security and text extraction, nine-page rendering, and manual inspection of
+  all final pages.  No BCC, uniform, or other phase is selected or excluded,
+  no PDE replacement follows, and the complete owner sign, global-noise bound,
+  T-050, both A13 gates, `OVERLAP_src`, Nelson, removals, interacting measure,
+  and Sector A remain open at T4.

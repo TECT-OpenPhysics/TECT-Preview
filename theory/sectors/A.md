@@ -45,6 +45,9 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-02-A13-R147-EXACT-CANONICAL-ACTIVE-SPECTATOR-LIFT | rank-one line cannot be appended unchanged to the canonical  |  |
+| NG-2026-08-02-A13-ACTIVE-SPECTATOR-JET-OWNER-COMPLETION | diagonal coefficient energy does not determine the complete  |  |
+| AUDIT-2026-08-02-A13-R147-ABSOLUTE-DEFECT-AS-RELATIVE-HESSIAN | differentiate the shifted owner twice |  |
 | NG-2026-08-02-A13-COMMON-TERMINAL-AUTOMATIC-SCALAR-SIGN | centering and a common terminal do not fix the scalar sign |  |
 | NG-2026-08-02-A13-ENDPOINT-LAW-OWNER-TRANSFER | terminal law does not determine sequential owners |  |
 | NG-2026-08-02-A13-PRODUCTION-PAIR-GLOBAL-CONVEXITY | the retained P+L coefficient pair is not globally convex |  |

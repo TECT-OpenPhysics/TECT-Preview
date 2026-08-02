@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-148: canonical fresh-final rank obstruction and coefficient-parameter boundary] - 2026-08-02
+
+Registered phase-neutral R-148 after hostile review. The exact rank-one fresh R-147 innovation cannot be inserted unchanged as a nonzero R-146 proportional canonical final block, while no rank-one necessity is claimed for adapted past and a new full-rank chart remains possible. A separately declared last-root coefficient chart gives an exact pointwise small-noise mismatch, coefficient-background parameter derivatives rather than a physical control Hessian, and a rational diagonal-non-identifiability witness. The result does not transport the registered production owners, select or exclude BCC or any other phase, require PDE replacement, close T-050, or close Sector A.
+
 ## [Pre-A evidence-first model-selection charter registered] - 2026-08-02
 
 Registered the operator-directed T0 Pre-A charter. Strong empirical constraints, their weak interpretations, and frozen holdouts must precede equation selection; the current production functional is one candidate alongside structurally different alternatives. T-052 is retained as its candidate-specific phase diagnostic, while T-053 becomes a shared boundary discriminator. EXP-000624 records that Pre-A is logically prior to physical interpretation but does not revoke conditional Sector-A mathematics, change any tier, select or retire an equation, or automatically replace active A13/T-050 work. T-054 owns the evidence register, candidate manifests, common discriminator matrix, robustness audit, and honest shortlist or non-selection outcome.

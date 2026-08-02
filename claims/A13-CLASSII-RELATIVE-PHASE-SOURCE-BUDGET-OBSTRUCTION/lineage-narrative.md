@@ -1047,6 +1047,27 @@ endpoint theorem.
     A13 gates and Sector A remain open at T4; research pauses at this verified
     checkpoint at the operator's request.
 
+70. **Fresh-final canonical-rank obstruction and coefficient-parameter
+    boundary.** R-148 proves that the registered active-spectator covariance
+    restriction is positive definite, so every nonzero R-146 proportional
+    canonical block is full rank on that plane.  The exact R-147 fresh final
+    scalar innovation is rank one and therefore cannot be inserted unchanged
+    as such a final block.  The rank-one past block remains only a
+    no-correction fixture; adapted past corrections and a new full-rank chart
+    are not obstructed.  A separately declared noncanonical last-root chart
+    has the exact mismatch
+    `delta=-sigma^4 E f''+sigma^4||E A'||^2`, positive below a point-dependent
+    small-noise threshold at every fixed adverse parameter.  Its shift family
+    computes coefficient-background parameter derivatives rather than a
+    physical control Hessian: the fourth-derivative threshold lies below the
+    R-147 threshold, the gradient is nonzero, and source curvature may vanish.
+    A rational orthogonal-gauge witness shows that diagonal coefficient data do
+    not determine mixed Grams or the omitted forest, future, balanced, low,
+    spatial, and sextic owners.  The legal successors are either a newly
+    derived full-rank canonical owner chart or the registered old-chart direct
+    calculation with all owners kept once.  No phase is selected or excluded,
+    and T-050, both A13 gates, and Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.
