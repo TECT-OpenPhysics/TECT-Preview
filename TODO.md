@@ -3,12 +3,12 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 4 · Done (recent) 44
+Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 5 · Done (recent) 44
 
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
-  - R-146 removes the separate absolute-anchor task from the direct finite-cutoff relative route, and endpoint-first splitting pays the terminal anisotropic owner by (1/100)Y6+24 with zero source loss, leaving the full-field scalar-trace windows eta<5/11 and zeta<13/50. A canonical total-covariance square root gives an equivalent fixed-cutoff endpoint-payoff chart, not the old production owner chart. Next reconstruct the common-terminal tower and one complete same-root scalar owner retaining R-063 forest, future variance, balanced crosses, and returned low; prove its residual within the remaining window and map it legally to production, or register a legal adverse direction and reassess the scalar Class-II route. BCC, uniform, and other phases remain neutral candidates. T-050, A13, Nelson, phase selection, and Sector A remain open.
+  - R-147 gives the actual fixed-cutoff signed terminal feature an exact canonical common-terminal Doob telescope, conditional recursion, continuous bracket representation, and reveal-grid compression. It does not transfer the registered owners automatically: the production route still needs the one-step tower, full incidence, and predictable trace-bracket match. The retained A1/R-075 P+L pair is uniformly favourable on affine-collinear Gaussian lines with curvature at least 2223/(25000P), but global pair convexity fails in the exact active-spectator direction. Next evaluate that direction in one legal owner-complete two-root chart, retaining shared-probe trace, Doob bracket, adapted R-063 forest, future variance, balanced rows, returned low, and terminal sextic exactly once; test the aggregate against eta<5/11 and zeta<13/50. If it remains adverse, reassess the scalar Class-II action without privileging BCC, uniform, or any phase. T-050, A13, Nelson, phase selection, and Sector A remain open.
   - _updated 2026-08-02_
 
 ## Next up
@@ -38,6 +38,9 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 4 · Done (recent) 44
   - _updated 2026-07-22_
 - **T-052** N-001 same-backend phase-selection diagnostic: flat, BCC, and unconstrained finite-shell competitors  _(owner: Codex)_
   - Truth-seeking pre-claim diagnostic, separate from A13/T-050 and retired B3; BCC is one falsifiable candidate, not a required outcome. Use standalone n001_variational_backend.py to reauthenticate the homogeneous stationary point; compare same-backend Delta F for normalized exact-commensurate BCC and other symmetry-distinct finite-shell stars allowed by the kernel; run a shell-seeded finite-grid full-field search; record phases, polarizations, residuals, two-dimensional restricted Hessians, multistart and grid transfer; and assemble the simultaneous BCC 72-real Hessian with every cross block as a benchmark against symmetry-projected and finite-grid full-field Lanczos spectra. EXP-000590--EXP-000592 already record why positive shell softness, the missing energy surface, and six pairwise blocks do not decide the phase. Report flat, BCC, another modulation, or metastability only within the tested cutoff/box/grid scope; if the intended finite-q mechanism fails across preregistered coverage, record evidence for reassessing the PDE, not proof of PDE inadequacy. No candidate is privileged and no single loss proves global nonexistence.
+  - _updated 2026-08-02_
+- **T-053** Boundary-mode structural programme: common massless speed and critical property activation  _(owner: Codex; claim: E2-HBAR-ORIGIN)_
+  - T0 cross-sector research seed. Use strategy/boundary-massless-mode-criticality-seed-260802.md to test whether a preregistered TECT boundary simultaneously yields the correct zero-mode count, a symmetry- or fixed-point-protected common limiting speed, compact phase winding, and critical scaling. Derive the full kinetic tensor and spectra on both sides; determine nu and z; require winding and charge/action scales before identifying hbar or e; freeze inputs before any alpha or mass-ratio comparison. Stop or narrow if equal speeds require separate tuning, regulator removal splits them, z=1 is unstable, topology is absent, or constants are inserted. Bears also on C2, C6, D2, and F1; no theorem or tier action.
   - _updated 2026-08-02_
 
 ## Done (recent)

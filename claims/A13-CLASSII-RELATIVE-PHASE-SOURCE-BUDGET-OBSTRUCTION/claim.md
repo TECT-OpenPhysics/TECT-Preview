@@ -5056,3 +5056,71 @@ T5--T7 promotion remain open. Tier stays T4.
   low/forest/future closure, T-050, both A13 gates, `OVERLAP_src`, Nelson,
   removals, interacting measure, physical phase selection, and Sector A
   remain open at T4.
+
+- 2026-08-02: Registered
+  `A13-CLASSII-CANONICAL-SIGNED-COMMON-TERMINAL-DOOB-BRACKET-DEFECT-BOUNDARY`
+  (R-147) as a phase-neutral fixed-cutoff T4 structural advance and sharp
+  method boundary.  For the actual R-141/R-142 complete trace-current
+  terminal feature on the declared canonical source filtration, conditional
+  expectation gives a unique signed common-terminal Doob tower.  Polarization
+  telescopes the relative terminal form into its base cross and all signed
+  reveal brackets.  The same construction has an exact conditional remainder
+  recursion and, under the stated separability and martingale-representation
+  hypotheses, a continuous Brownian bracket form.  The R-141 feature
+  `(U,J,R)` compresses to the R-142 feature `(U,Phi)` both terminally and
+  incrementwise when the common future projection belongs to the nested
+  reveal grid.
+
+  This aggregate coordinate is not an automatic transport theorem for the
+  registered R-063/R-104/R-125 owners.  Representation-universal transfer is
+  equivalent to intertwining the whole conditional-expectation nest.  For one
+  actual proposed terminal, the direct one-step tower condition, the
+  registered heat/covariance/output incidence hypotheses, and predictable
+  polarized trace-bracket matching must instead be checked.  With
+  `bar_tau=E[tau|F_(o-)]` and predictable bracket `beta`, the exact conditioned
+  residual is
+  `E[r_o[p,q]|F_(o-)]=bar_tau_o[p,q]-beta_o[p,q]-<b_p,b_q>`.
+  It equals the specific defect-free predictable mean Gram if and only if
+  `bar_tau=beta`.  The R-063 forest remains a signed partial-Wick
+  reconstruction; no registered result identifies it with a positive
+  quadratic bracket.
+
+  Two exact fixtures enforce the transfer and sign boundaries.  Equal
+  terminal Gaussian law can have different reveal-owner energies, so endpoint
+  law alone is insufficient.  A centred same-root common-terminal current has
+  positive defect `2t/(1+2t)^(3/2)` and defect-to-trace ratio tending to one,
+  so centering and common terminalization do not supply the scalar sign.
+  These are method no-gos, not counterexamples to the complete production
+  action and not evidence for any spatial phase.
+
+  From the upstream A1/R-075 QII inputs, R-147 reconstructs
+  `c0=3/(250P)`, `c1=243/(8000P)`, and `alpha=5/9`.  The retained production
+  `P+L` pair has affine-collinear curvature at least `2223/(25000P)` on every
+  predictable translated Gaussian line, hence a strict favourable Stein
+  defect.  Its separate zero-background L-row sign follows from monotone
+  covariance, not an assumed curvature sign.  This one-dimensional theorem
+  is sharp: in the active-spectator direction based at `(R,R)`, the exact
+  curvature is
+  `3(-528R^4-88R^2e+113e^2)/(1000P(2R^2+e)^2)` and becomes negative above
+  `R^2/e=-1/12+5sqrt(154)/132`; its fixed-nonzero-base zero-floor limit is
+  `-99/(250P)`.  This refutes only global convexity of the retained coefficient
+  pair.  The adapted forest, future variance, balanced rows, returned low,
+  spatial owners, and terminal sextic were not discarded or assigned a sign.
+
+  `EXP-000615--EXP-000622` preserve the successful and failed routes.
+  `NG-2026-08-02-A13-COMMON-TERMINAL-AUTOMATIC-SCALAR-SIGN`,
+  `NG-2026-08-02-A13-ENDPOINT-LAW-OWNER-TRANSFER`,
+  `NG-2026-08-02-A13-PRODUCTION-PAIR-GLOBAL-CONVEXITY`, and
+  `AUDIT-2026-08-02-A13-R147-R063-FOREST-BRACKET-CONFLATION` preserve the
+  exact no-go and authority boundaries.  Primary `101/101` and non-importing
+  independent `93/93` certificates pass on distinct finite filtrations.  The
+  integrated verifier passes `412/412`: all `194` child rows exactly once plus
+  `218` source-independence, exact-value, authority,
+  exploration, negative-result, PDF, scope, aggregation, and public-surface
+  checks.  The manifest pins deterministic SHA-256 rebuilding, strict PDF
+  parsing, security and text extraction, Poppler rendering, and manual visual
+  inspection of all ten pages.  The next falsification test is the complete
+  owner version of the same active-spectator direction against `eta<5/11` and
+  `zeta<13/50`.  The complete scalar owner, T-050, both A13 gates,
+  `OVERLAP_src`, Nelson, removals, the interacting measure, physical phase
+  selection, and Sector A remain open at T4.

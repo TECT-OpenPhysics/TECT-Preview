@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-147](#r-147) | Canonical signed common terminal, predictable trace-bracket defect, and affine-collinear production boundary | Scoped T4 analytic/exact/executed/audited advance and method boundary. The actual R-141/R-142 signed terminal feature has an exact fixed-cutoff canonical Doob telescope, conditional signed-remainder recursion, and continuous martingale-bracket representation. Representation-universal owner transport requires the whole projection nest; endpoint law alone does not determine reveal energies. Under the full registered R-125/R-063 incidence, the exact conditional residual is `E[r_o[p,q]|F_(o-)]=bar_tau_o[p,q]-beta_o[p,q]-<b_p,b_q>`, so equality to the specific defect-free predictable mean Gram is equivalent to `bar_tau=beta`. The A1/R-075 `P+L` coefficient pair has uniform affine-collinear curvature at least `2223/(25000P)` and a strict favourable Gaussian defect, but an active-spectator direction loses convexity above `R^2/e=-1/12+5sqrt(154)/132`. The complete non-collinear forest/future/balanced/low/sextic owner, T-050, phase selection, and Sector A remain open |
 | [R-146](#r-146) | Relative zero-control anchor, endpoint-first anisotropic payment, and canonical-covariance scalar-sign boundary | Scoped T4 analytic/exact/conditional/executed/audited advance and no-go. At every registered finite cutoff and chart, the R-104 zero-control law and A7 normalization give the exact relative identity `E Vren_J(Z_h)=-[T_(J,pi)(h)-T_(J,pi)(0)]`; no separate absolute anchor is needed on this direct route. Completing the owner telescope before splitting the terminal covariance charges the anisotropic endpoint by `(1/100)Y6+24` with zero Cameron--Martin source loss, leaving the full-field scalar-trace residual windows `eta<5/11`, `zeta<13/50`. A fixed-cutoff canonical square root of the total covariance gives an equivalent endpoint-payoff Boue--Dupuis variational chart and exact positive temporal increment split. Strict-past independent scalar innovations have nonpositive signed defect, but an exact same-root Gaussian fixture has positive defect with ratio tending to one, so covariance normalization alone cannot close the remaining scalar sea. The old owner/filtration chart, common-terminal tower, complete scalar signed residual, T-050, A13, Nelson, phase selection, and Sector A remain open |
 | [R-145](#r-145) | Weighted trace-excess criterion and terminal anisotropic covariance sextic reduction | Scoped T4 analytic/exact/executed/audited advance. Writing the renormalised action as `Vren=a_pi-T_pi`, the exact T-050 implication only requires `T_pi<=eta X+zeta Y6+B` with `eta<5/11`, `zeta<27/100`, and `a_pi>=-C0`; a strict global complete-feature contraction is sufficient but not necessary. For the registered A1 family-lock covariance, exact Sturm isolation, lattice counting, and the fourth-order kinetic lower bound give complex anisotropic Fourier sum at most `7807039549231/6201562500` and six-real pointwise derivative trace at most `7807039549231/12700800000000`. At abstract terminal total-covariance level, the anisotropic owner is therefore bounded by `(1/100)Y6+24` for regulator bound one. The R-129 window `eta<9/20`, `zeta<3/20` remains valid but nonsharp. No temporally faithful transfer of the terminal split, scalar principal-sea signed estimate, complete low/anchor bound, T-050, A13, Nelson theorem, or Sector-A closure is proved |
 | [R-144](#r-144) | Uniform affine-residual Douglas one-use theorem and production-data boundary | Scoped T4 analytic/exact/conditional/executed/audited advance. If the complete feature action is `A=a+(||Y||^2-||U||^2)/2`, `U=CY+E`, `||C||<=rho<sigma<1`, `||E||<=M`, and `a>=-C0` uniformly, then `||U||^2<=sigma^2||Y||^2+sigma^2 M^2/(sigma^2-rho^2)` with a sharp residual constant. For the R-143 complete feature this gives strict one-use coefficients `(9/20)sigma^2` and `(3/20)sigma^2` simultaneously, so exact returned-low cancellation and complete second jets are unnecessary on this global route. Independently, a positive reduced/source-low effective Hessian gap with reduced origin-force and anchor bounds is sufficient: for chosen `p=11/10`, `9/20<1/(2p)=5/11` with margin `1/220`, while `3/20<gamma/6=27/100` with margin `3/25`. Hostile pre-registration audits corrected both the draft threshold comparison and the R-142 fibre Schur coefficient. Exact phase-cycle, returned-low, and equal-first-jet fixtures prove that the registered local q567/core data do not determine the production sign. The canonical temporal/common-output/low chart, production contraction or reduced Hessian gap, residual/force/anchor bounds, T-050, and Sector-A closure remain open |
@@ -165,6 +166,58 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-147"></a>
+### R-147 -- Canonical signed common terminal, predictable trace-bracket defect, and affine-collinear production boundary
+
+- **Statement.**  For the actual fixed-cutoff R-141/R-142 trace-current
+  terminal feature on the declared canonical source filtration, conditional
+  expectation gives a unique signed common-terminal Doob tower. Polarization
+  telescopes the complete relative terminal form into the base cross plus all
+  signed reveal brackets, and the same identity has an exact conditional
+  remainder recursion and continuous Brownian martingale-bracket form. The
+  R-141 three-feature signature `(U,J,R)` compresses to `(U,Phi)` terminally
+  and incrementwise when the common projection belongs to the nested reveal
+  grid. Under the full R-125/R-063 incidence hypotheses, with
+  `bar_tau=E[tau|F_(o-)]`, the exact conditioned residual is
+  `E[r_o[p,q]|F_(o-)]=bar_tau_o[p,q]-beta_o[p,q]-<b_p,b_q>`. It equals the
+  specific defect-free predictable mean Gram exactly when `bar_tau=beta`.
+  The A1/R-075 production coefficients reconstruct
+  `c0=3/(250P)`, `c1=243/(8000P)`, and `alpha=5/9`. Their retained `P+L` pair
+  has affine-collinear curvature at least `2223/(25000P)`, hence a strict
+  favourable same-root Gaussian defect. The separate zero-background L-row
+  sign follows from an exact monotone-covariance decomposition.
+- **Where proved.**  Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-canonical-signed-common-terminal-doob-bracket-defect-boundary-260802-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_canonical_signed_common_terminal_doob_bracket_defect_boundary_manifest.json`,
+  and the primary, independent, and integrated executable certificates listed
+  there.
+- **Reuse scope.**  The signed terminal telescope and recursion are Hilbert
+  martingale identities at fixed cutoff. Representation-universal transfer
+  requires a unitary intertwining the entire conditional-expectation nest;
+  equality for one actual terminal may occur on its cyclic tower subspace but
+  still needs direct tower, incidence, and predictable bracket verification.
+  The trace-bracket formula assumes the registered common heat, once-owned
+  covariance, same-root recombination, exhaustive output or retained leakage,
+  and adapted R-063 forest identification. The production sign theorem is
+  only the exact affine-collinear coefficient slice.
+- **Audit boundary.**  Equal terminal Gaussian law does not preserve reveal
+  allocations. A centred common-terminal scalar fixture still has positive
+  trace-current defect. The retained production pair is not globally convex:
+  the active-spectator curvature is negative once
+  `R^2/e>-1/12+5sqrt(154)/132`, with fixed-nonzero-base zero-floor limit
+  `-99/(250P)`. This is not a counterexample to the complete action because
+  forest, future variance, balanced cross, returned low, spatial owners, and
+  sextic are absent. No old-owner transfer, production trace-bracket match,
+  complete non-collinear scalar estimate, T-050, A13, `OVERLAP_src`, Nelson,
+  removal, interacting measure, BCC or other phase selection, or Sector-A
+  closure is proved.
+- **Tier / publication target.**  Scoped T4 analytic/exact/executed/audited
+  advance and method boundary; suitable as a signed martingale-coordinate,
+  predictable trace-bracket, and rational coefficient-curvature lemma after
+  external review, not as a complete-action or vacuum-selection theorem.
 
 <a id="r-146"></a>
 ### R-146 -- Relative zero-control anchor, endpoint-first anisotropic payment, and canonical-covariance scalar-sign boundary

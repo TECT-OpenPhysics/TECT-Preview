@@ -45,6 +45,10 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-02-A13-COMMON-TERMINAL-AUTOMATIC-SCALAR-SIGN | centering and a common terminal do not fix the scalar sign |  |
+| NG-2026-08-02-A13-ENDPOINT-LAW-OWNER-TRANSFER | terminal law does not determine sequential owners |  |
+| NG-2026-08-02-A13-PRODUCTION-PAIR-GLOBAL-CONVEXITY | the retained P+L coefficient pair is not globally convex |  |
+| AUDIT-2026-08-02-A13-R147-R063-FOREST-BRACKET-CONFLATION | condition the trace and keep the signed forest |  |
 | AUDIT-2026-08-02-A13-R146-OUTPUT-PROJECTION-OMISSION | restore the registered endpoint owner |  |
 | AUDIT-2026-08-02-A13-ZERO-CONTROL-RELATIVE-ANCHOR | the direct R-145 route is exactly relative |  |
 | NG-2026-08-02-A13-ARBITRARY-TEMPORAL-ANISOTROPIC-POSITIVE-SUBALLOCATION | a terminal positive remainder need not split under arbitrary |  |

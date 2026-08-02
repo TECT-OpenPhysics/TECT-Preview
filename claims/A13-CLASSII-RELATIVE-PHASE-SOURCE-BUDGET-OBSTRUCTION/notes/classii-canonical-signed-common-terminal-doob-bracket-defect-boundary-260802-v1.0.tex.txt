@@ -1,0 +1,760 @@
+% =============================================================================
+% Title: Canonical signed common terminal, trace-bracket defect, and affine-ray boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-CANONICAL-SIGNED-COMMON-TERMINAL-DOOB-BRACKET-DEFECT-BOUNDARY
+% Ledger: R-147
+% Version: v1.0 -- first issued 2026-08-02; this version issued 2026-08-02
+% Status: scoped T4 analytic/exact/executed advance and method boundary; T-050 and Sector A open
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Forest}{\mathrm F}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\dd}{\,\mathrm d}
+
+\section*{1. Purpose and scope}
+\hypertarget{section-1-result}{ }
+
+The purpose of this result is to discover what the registered action actually
+permits, not to force BCC or any other spatial phase.  Every statement below
+is independent of whether a later minimizer is modulated, uniform,
+disordered, absent, or outside the present scalar working branch.
+
+R-146 supplied a new fixed-cutoff Boue--Dupuis chart whose source covariance
+increments are proportional to the complete terminal covariance.  It left a
+fail-closed sequence: construct one complete terminal feature, build its
+common-terminal tower, and then decide whether the old trace, future,
+forest, and low owners may be identified with that tower.
+
+R-130 already established the generic legal principle of recombining first
+and rerunning Doob for its fixed \(\Xi\) terminal.  This note does not reclaim
+that principle.  Its new content is the signed R-141/R-142 terminalization in
+the R-146 canonical chart, the polarized trace--bracket defect and transfer
+criterion, the sharper centred counterfixtures, and the exact production
+Pauli coefficient slices.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{R-147 conclusion.}
+For the actual R-141/R-142 trace--current terminal feature at fixed cutoff and
+the declared canonical source filtration, there is a unique common-terminal
+signed Doob tower.  Its discrete and continuous signed telescopes give the
+exact relative aggregate terminal-feature value while retaining every mixed
+endpoint correlation.
+
+This new aggregate coordinate does not by itself establish transport of the
+old R-104/R-063/R-125 owners.  A representation-universal transport is
+equivalent to intertwining the entire conditional-expectation nest.  For the
+actual terminal alone, proposed rows must instead pass the tower condition
+(4.6), the registered incidence hypotheses, and the polarized predictable
+trace--bracket matching conditions of Section 5.
+
+The exact production Pauli \(P+L\) pair is strictly favourable on every
+predictable affine collinear Gaussian line, with uniform curvature
+\[
+                       H''\ge {2223\over25000P}.
+\]
+That geometry is sharp: an explicit active--spectator direction has negative
+curvature and hence a positive small-noise trace--current defect.  Therefore
+closure based solely on global convexity of this \(P+L\) coefficient pair
+cannot close the scalar sea.  The complete
+non-collinear future/forest/balanced/low signed residual remains the live
+production target.  T-050, A13, Nelson, every phase question, and Sector A
+remain open at T4.
+}}
+\end{center}
+
+\section*{2. The actual terminal feature and auxiliary-variable firewall}
+\hypertarget{section-2-feature}{ }
+
+Write the probability space as
+\[
+       \Omega=\Omega_{\rm src}\times\Omega_{\rm aux}.       \tag{2.1}
+\]
+The source factor carries the canonical Brownian filtration
+\(\cF_0\subset\cdots\subset\cF_N\).  The auxiliary factor contains the
+independent target-heat dummy, the shared covariance probe, and only those
+replica coordinates already declared auxiliary by the registered owner.
+Hilbertize them as
+\[
+       \cK=L^2(\Omega_{\rm aux};\cH),                         \tag{2.2}
+\]
+with finite orthogonal direct sums when needed.  Source conditional
+expectation is the Bochner projection
+\[
+       P_b=\E_{\rm src}[\,\cdot\mid\cF_b]\otimes\Id_{\cK}.   \tag{2.3}
+\]
+Every deterministic bounded operator \(S\) on \(\cK\) commutes with \(P_b\):
+\[
+                         P_bS=SP_b.                          \tag{2.4}
+\]
+This is the load-bearing firewall.  Averaging the shared heat or probe before
+forming the feature would change the mixed trace Gram.
+
+For each endpoint \(q\in\{h,0\}\), use the actual R-142 shared-probe trace
+feature \(U_q\), the complete current \(J_q\), and the same legal source
+projection \(P_f=\E[\,\cdot\mid\cF_f]\), with \(f\) included in the nested
+reveal grid.  Put
+\[
+ \Phi_q=P_fJ_q,\qquad R_q=(\Id-P_f)J_q,                       \tag{2.5}
+\]
+\[
+ F_q=(U_q,\Phi_q),\qquad S_2=\operatorname{diag}(+\Id,-\Id), \tag{2.6}
+\]
+\[
+ Z_q=(U_q,J_q,R_q),\qquad
+ S_3=\operatorname{diag}(+\Id,-\Id,+\Id).                   \tag{2.7}
+\]
+The word ``actual'' means that both endpoints use the same covariance square
+root, probe, heat coordinate, output projection, and future coupling.  A
+vector with the same diagonal norm is not an admissible substitute.
+
+\subsection*{Theorem 2.1 (polarized three-to-two feature compression)}
+
+For \(p,q\in\{h,0\}\), orthogonality of the range and kernel of the common
+source projection \(P_f\) in the full source--auxiliary \(L^2\) space gives
+\[
+ \boxed{
+ \E\Rea\ip{Z_q}{S_3Z_p}
+ =\E\Rea\ip{F_q}{S_2F_p}
+ =\E\Rea\ip{U_q}{U_p}-\E\Rea\ip{\Phi_q}{\Phi_p}.} \tag{2.8}
+\]
+Consequently the complete R-141/R-142 owner has orientation
+\[
+ \cP_{\rm comp}(q)
+ =-{1\over2}\E\ip{F_q}{S_2F_q}
+ =-{1\over2}\E\ip{Z_q}{S_3Z_q}.                   \tag{2.9}
+\]
+
+\textit{Proof.}
+Write \(J_q=\Phi_q+R_q\).  The two mixed terms vanish in the full
+source--auxiliary \(L^2\) inner product, so
+\(\E\ip{J_q}{J_p}=\E\ip{\Phi_q}{\Phi_p}+\E\ip{R_q}{R_p}\).
+Substitution in the \(S_3\) form proves (2.8).  Equation (2.9) is the exact
+R-141/R-142 action convention. \hfill\(\square\)
+
+If \(P_f\) is one fixed member of the same nested source filtration, then
+\(P_bP_f=P_fP_b\).  Before \(f\), \(dJ=d\Phi\) and \(dR=0\); after \(f\),
+\(d\Phi=0\) and \(dR=dJ\).  Hence (2.8) also holds increment by increment.
+No old root or forest owner has been invoked.
+
+\section*{3. Exact common-terminal signed Doob theorem}
+\hypertarget{section-3-signed-doob}{ }
+
+Set
+\[
+ F^\Sigma=F_h+F_0,\qquad F^\Delta=F_h-F_0,                  \tag{3.1}
+\]
+and define the unique common-terminal martingales
+\[
+ M_b^a=P_bF^a,\qquad d_b^a=M_b^a-M_{b-1}^a,\qquad
+ a\in\{\Sigma,\Delta\}.                                  \tag{3.2}
+\]
+
+\subsection*{Theorem 3.1 (discrete signed terminal telescope)}
+
+At every fixed cutoff and finite canonical source chart,
+\[
+\boxed{\begin{aligned}
+&\E\{\ip{F_h}{S_2F_h}-\ip{F_0}{S_2F_0}\}\\
+&\quad=\E\Rea\ip{M_0^\Sigma}{S_2M_0^\Delta}
+ +\sum_{b=1}^N\E\Rea\ip{d_b^\Sigma}{S_2d_b^\Delta}
+\end{aligned}}                                             \tag{3.3}
+\]
+\[
+\boxed{\begin{aligned}
+\Delta\cP_{\rm comp}
+ &=-{1\over2}\left[
+ \E\Rea\ip{M_0^\Sigma}{S_2M_0^\Delta}
+ +\sum_b\E\Rea\ip{d_b^\Sigma}{S_2d_b^\Delta}\right]
+\end{aligned}}.                                            \tag{3.4}
+\]
+The same formulas hold for \((Z,S_3)\).
+
+\textit{Proof.}
+Polarization gives
+\(\ip{F_h}{SF_h}-\ip{F_0}{SF_0}
+=\Rea\ip{F^\Sigma}{SF^\Delta}\).
+Expand each terminal martingale as \(M_0+\sum_bd_b\).  When \(b<c\),
+\(d_b^\Sigma\) is \(\cF_{c-1}\)-measurable and
+\(\E[Sd_c^\Delta\mid\cF_{c-1}]=0\) by (2.4).  Every off-diagonal reveal
+pair vanishes in expectation, which proves (3.3).  Equation (3.4) follows
+from (2.9). \hfill\(\square\)
+
+Define the conditional signed future remainder
+\[
+ V_b^S=\E\!\left[
+ \Rea\ip{F^\Sigma-M_b^\Sigma}{S(F^\Delta-M_b^\Delta)}
+ \middle|\cF_b\right].                                    \tag{3.5}
+\]
+The same calculation gives
+\[
+ \boxed{
+ V_{b-1}^S=\E[V_b^S\mid\cF_{b-1}]
+ +\E[\Rea\ip{d_b^\Sigma}{Sd_b^\Delta}\mid\cF_{b-1}],
+ \qquad V_N^S=0.}                                         \tag{3.6}
+\]
+Because \(S\) is indefinite, neither (3.3) nor (3.6) has a sign.  Their
+value is exact aggregate terminal-feature accounting without deleting
+favourable current correlations.
+
+\subsection*{Theorem 3.2 (continuous Brownian form)}
+
+Assume that \(\cK\) is separable and that the completed, right-continuous
+canonical Brownian source filtration has the martingale-representation
+property.  For an \(L^2(\cK)\)-valued terminal feature, Hilbert-space
+martingale representation then gives predictable Hilbert--Schmidt integrands
+\(H_s^a\) with
+\[
+ M_t^a=M_0^a+\int_0^tH_s^a\,\dd B_s.                       \tag{3.7}
+\]
+Define
+\[
+ \Delta Q_S=\Rea\ip{F_h}{SF_h}-\Rea\ip{F_0}{SF_0}.
+\]
+Therefore
+\[
+ \boxed{
+ \E\Delta Q_S
+ =\E\Rea\ip{M_0^\Sigma}{SM_0^\Delta}
+ +\E\int_0^T\Rea\Tr[(H_s^\Sigma)^*SH_s^\Delta]\,\dd s.} \tag{3.8}
+\]
+Moreover
+\[
+ V_t^S=\E\!\left[
+ \int_t^T\Rea\Tr[(H_s^\Sigma)^*SH_s^\Delta]\,\dd s
+ \middle|\cF_t\right].                                   \tag{3.9}
+\]
+
+Martingale representation is sufficient for (3.8).  The stronger
+Clark--Ocone identification
+\(H_s=\E[D_sF\mid\cF_s]\) requires \(F\in\mathbb D^{1,2}\).  For the defined
+shifted terminal
+\[
+ X_T=\int_0^TK_{\rm can}(t)(\dd B_t+h_t\,\dd t),
+\]
+with deterministic \(K_{\rm can}\) and adapted, square-integrable,
+Malliavin-differentiable \(h\),
+\[
+ D_sX_T=K_{\rm can}(s)+\int_s^TK_{\rm can}(t)D_sh_t\,\dd t. \tag{3.10}
+\]
+Deleting the integral in (3.10) is precisely the future-feedback error that
+the R-136 raw sequential owner forbids.
+
+\section*{4. Exact filtration-nest transfer criterion}
+\hypertarget{section-4-transfer}{ }
+
+Theorem 3.1 creates new canonical aggregate owners.  It does not say that an
+old root family is that tower.
+
+\subsection*{Theorem 4.1 (conditional-expectation nest intertwining)}
+
+Let \(W:L^2(\Omega_1;\cK)\to L^2(\Omega_2;\cK)\) be a unitary induced by a
+probability-algebra isomorphism and commuting with \(S\).  Let \(P_b^{(i)}\)
+be the conditional projections of two filtrations.  Then
+\[
+ W L^2(\cF_b^{(1)};\cK)=L^2(\cF_b^{(2)};\cK)\quad\hbox{for all }b. \tag{4.1}
+\]
+implies
+\[
+                         WP_b^{(1)}=P_b^{(2)}W.              \tag{4.2}
+\]
+Thus \(WF_*^{(1)}=F_*^{(2)}\) transports every martingale row and signed
+bracket.  Conversely, transport of conditional projections for every
+terminal \(L^2\) feature forces (4.1).
+
+\textit{Proof.}
+Conditional expectation is the orthogonal projection onto the declared
+closed subspace.  A unitary carrying one range onto the other conjugates the
+unique orthogonal projections.  The converse follows from equality of their
+ranges. \hfill\(\square\)
+
+For Gaussian linear source processes, a causal physical intertwiner with
+output unitary \(V\) and time change \(\theta\) necessarily satisfies the
+whole prefix-covariance identity
+\[
+ C_2(t)=V C_1(\theta(t))V^*,
+ \qquad C_i(t)=\int_0^tK_i(s)K_i(s)^*\,\dd s.               \tag{4.3}
+\]
+Terminal covariance equality is only (4.3) at \(t=T\).
+
+\subsection*{Exact rank counterfixture}
+
+On \(\mathbb R^2\), put
+\[
+ K_{\rm old}(t)=
+ \begin{cases}\sqrt2P_1,&0<t\le1/2,\\
+               \sqrt2P_2,&1/2<t\le1,
+ \end{cases}
+ \qquad K_{\rm can}(t)=\Id.                               \tag{4.4}
+\]
+Both terminal covariances equal \(\Id\), but
+\[
+ C_{\rm old}(1/2)=P_1,\qquad C_{\rm can}(1/2)={1\over2}\Id. \tag{4.5}
+\]
+Their ranks are one and two at equal clock time.  The obstruction survives an
+arbitrary time change: the eigenvalues of
+\(C_{\rm old}(s)\) are
+\[
+ (2s,0)\quad(0\le s\le1/2),\qquad
+ (1,2s-1)\quad(1/2<s\le1),
+\]
+so no old time has the canonical half-time spectrum \((1/2,1/2)\).  Thus no
+causal Gaussian intertwiner which also maps the declared physical process and
+terminal synthesis can satisfy (4.3).  The bare Brownian filtrations remain
+abstractly isomorphic.  This sharpens, rather than contradicts, the R-104
+rule: only subdivisions preserving the original filtration, reveal order,
+and admissible controls transport its recombined endpoint identity.
+
+For a proposed old row family \(\widehat M_b\), the elementary fail-closed
+criterion is therefore
+\[
+ \widehat M_b\in L^2(\cF_b),\qquad
+ \widehat M_N=F_*,\qquad
+ \E[\widehat M_b\mid\cF_{b-1}]=\widehat M_{b-1}.            \tag{4.6}
+\]
+Conditions (4.6) are necessary and sufficient for
+\(\widehat M_b=\E[F_*\mid\cF_b]\).  The registered family
+\(\Phi_1=\xi_1\), \(\Phi_2=2\xi_1+\xi_2\) fails (4.6).
+
+\section*{5. Polarized trace--bracket defect and the R-063 boundary}
+\hypertarget{section-5-bracket-defect}{ }
+
+Fix an owner \(o=(k,\mathcal C)\), and use one shared covariance probe at
+endpoints \(p,q\).  Throughout this section assume the full R-125 incidence:
+one common heat, the same once-owned covariance, same-root visit
+recombination, an exhaustive orthogonal output family (or an explicitly
+retained complement leakage), and prior identification of the constructed
+partial-Wick coordinate with the registered adapted R-063 forest.  Write the
+R-125 future covariance and primitive trace as
+\[
+ v_o[p,q]=\E_f\ip{J_{p,o}-\Phi_{p,o}}{J_{q,o}-\Phi_{q,o}},  \tag{5.1}
+\]
+\[
+ \tau_o[p,q]=\E_{f,G'}\ip{
+ P_{\mathcal C}C_6(W_p)\partial G'_o}{
+ P_{\mathcal C}C_6(W_q)\partial G'_o}.                     \tag{5.2}
+\]
+Because \(W_u\) contains the current root, this primitive trace is generally
+\(\cF_o\)-measurable rather than predictable at \(\cF_{o^-}\).  Define
+\[
+ \bar\tau_o[p,q]
+ =\E[\tau_o[p,q]\mid\cF_{o^-}].                            \tag{5.2a}
+\]
+Polarization of R-125 equations (3.3) and (4.5) gives the exact adapted
+forest coordinate
+\[
+ f_o[p,q]=v_o[p,q]+\ip{\Phi_{p,o}}{\Phi_{q,o}}-\tau_o[p,q], \tag{5.3}
+\]
+and therefore
+\[
+ r_o[p,q]:=v_o[p,q]-f_o[p,q]
+ =\tau_o[p,q]-\ip{\Phi_{p,o}}{\Phi_{q,o}}.                 \tag{5.4}
+\]
+
+Suppose the candidate mean rows have passed (4.6).  Put
+\[
+ b_{u,o}=\E[\Phi_{u,o}\mid\cF_{o^-}],\qquad
+ Y_{u,o}=\Phi_{u,o}-b_{u,o}=P_{\mathcal C}dM_{u,k},         \tag{5.5}
+\]
+\[
+ \beta_o[p,q]=\E[\ip{P_{\mathcal C}dM_{p,k}}
+                          {P_{\mathcal C}dM_{q,k}}
+                        \mid\cF_{o^-}],\qquad
+ \delta_o[p,q]=\bar\tau_o[p,q]-\beta_o[p,q].               \tag{5.6}
+\]
+
+\subsection*{Theorem 5.1 (matching inside the registered R-125 owner system)}
+
+After conditional expectation at the previous reveal,
+\[
+ \boxed{
+ \E[r_o[p,q]\mid\cF_{o^-}]
+ =\delta_o[p,q]-\ip{b_{p,o}}{b_{q,o}}.}                    \tag{5.7}
+\]
+Under the preceding R-125/R-063 incidence hypotheses, the conditionally
+averaged owner residual equals the specific defect-free predictable Gram
+\(-\ip{b_{p,o}}{b_{q,o}}\) for every polarized endpoint pair if and only if
+\[
+ \boxed{\bar\tau_o[p,q]=\beta_o[p,q]
+        \quad\hbox{for every }p,q.}                         \tag{5.8}
+\]
+Equivalently,
+\[
+ \E[f_o[p,q]\mid\cF_{o^-}]
+ =\E[v_o[p,q]\mid\cF_{o^-}]
+  +\ip{b_{p,o}}{b_{q,o}}.                                 \tag{5.9}
+\]
+For only the exhaustive low-plus-root aggregate, the weaker necessary and
+sufficient condition for reproducing the exact aggregate mean-Gram identity
+within that same registered owner system is
+\(\sum_o\E\delta_o[p,q]=0\) for every \(p,q\).  Diagonal equality is
+insufficient for a secant or Hessian; the shared-probe bilinear equality is
+load bearing.  Tower and bracket matching alone are not a standalone
+old-owner transport theorem: the registered forest identification, heat,
+covariance incidence, recombination, and complement conditions stated above
+remain additional proof obligations.
+
+The conditioning in (5.2a) is load bearing.  With trivial past, let
+\(\xi=\pm1\) equiprobably, take \(p=q\), \(\Phi=\xi\), \(b=0\),
+\(\beta=1\), and the nonnegative current-root trace
+\(\tau=1+\xi\).  Then \(\tau\ne\beta\) pointwise, while
+\(\bar\tau=\E\tau=1=\beta\), and
+\[
+ \E[r\mid\cF_{\rm past}]
+ =\E(\tau-\Phi^2)=0=-b^2.                                 \tag{5.9a}
+\]
+Thus raw pointwise matching is not necessary; predictable matching is.
+
+The R-063 forest is not a quadratic variation or a positive Malliavin
+Dirichlet energy.  It is the same-regulator signed Wick--Taylor
+reconstruction.  At finite cutoff its adapted coordinate contains
+\[
+ F:Q=F\diamond Q+Y_\lambda D_\mu F+Y_\mu D_\lambda F
+      -D_\lambda D_\mu F.                                \tag{5.10}
+\]
+No registered theorem represents (5.10) as
+\(\ip{QU_p}{QU_q}\) for one orthogonal projection \(Q\).  Gaussian
+Poincare therefore cannot silently replace the forest.
+
+Even if (5.8) holds at both endpoints, put
+\(\delta b_o=b_{h,o}-b_{0,o}\).  The relative expected residual is
+\[
+ \Delta R^{\rm full}
+ =-\sum_o\E\{2\Rea\ip{b_{0,o}}{\delta b_o}
+                  +\|\delta b_o\|^2\}.                    \tag{5.11}
+\]
+It is indefinite unless \(b_0=0\) or a separately proved complete-low
+identity retains the baseline cross.  The scaled R-125 two-root fixture has
+\(R(a)=-a^2/4\): the changes \(2\to1\) and \(1\to2\) are \(+3/4\) and
+\(-3/4\).
+
+\section*{6. Common terminal does not imply scalar sign}
+\hypertarget{section-6-common-terminal-nogo}{ }
+
+Let \(t>0\), and let \(g,\zeta\) be independent standard Gaussians and
+\[
+ A_t(g)=e^{-tg^2/2},\qquad
+ U=A_t(g)\zeta,\qquad \Phi=A_t(g)g.                         \tag{6.1}
+\]
+This is a centred one-step common-terminal current:
+\(\E\Phi=0\).  Nevertheless
+\[
+ \E|U|^2=(1+2t)^{-1/2},\qquad
+ \E|\Phi|^2=(1+2t)^{-3/2},                                \tag{6.2}
+\]
+so
+\[
+ \boxed{
+ \E(|U|^2-|\Phi|^2)
+ ={2t\over(1+2t)^{3/2}}>0,\qquad
+ {\E(|U|^2-|\Phi|^2)\over\E|U|^2}
+ ={2t\over1+2t}\longrightarrow1.}                         \tag{6.3}
+\]
+Thus common terminal, zero predictable mean, and equal probe covariance do
+not imply trace--bracket matching.  This is a method no-go, not a production
+or phase counterexample.
+
+Endpoint-law equality also does not preserve owners.  The charts
+\(G_A=\xi_1\) and \(G_B=(\xi_1+\xi_2)/\sqrt2\) both have law \(N(0,1)\).
+Their two reveal energies are
+\[
+ (1,0)\quad\hbox{and}\quad(1/2,1/2)                        \tag{6.4}
+\]
+for \(G\), and
+\[
+ (2,0)\quad\hbox{and}\quad(1/2,3/2)                        \tag{6.5}
+\]
+for \(G^2-1\).  Only the totals agree.  Equations (4.5), (6.4), and (6.5)
+show exactly why R-146's preserved endpoint Boue--Dupuis value alone cannot
+certify preservation of the old owners.
+
+\section*{7. Exact production affine collinear sign}
+\hypertarget{section-7-production-ray}{ }
+
+The generic no-go in Section 6 does not decide the registered Pauli
+coefficient.  On a normalized scalar collinear block put
+\[
+ \alpha={5\over9},\qquad a=1-\alpha={4\over9},
+ \qquad c_0={3\over250P},\qquad c_1={243\over8000P}.         \tag{7.1}
+\]
+The exact \(P\)- and \(L\)-row coefficient energies are
+\[
+ H_P(x)=4c_0x^2,\qquad
+ H_L(x)=4c_1x^2\left({ax^2+e\over x^2+e}\right)^2,
+ \qquad H=H_P+H_L.                                         \tag{7.2}
+\]
+
+\subsection*{Theorem 7.1 (uniform affine-ray production sign)}
+
+For every \(e>0\) and production normalization \(P>0\),
+\[
+\boxed{
+ H''(x)={3\over1000P}
+ {113e^4-88e^3x^2+243e^2x^4+192ex^6+48x^8
+  \over(e+x^2)^4}
+ \ge {2223\over25000P}.}                                  \tag{7.3}
+\]
+Consequently, for every \(m\in L^2(\cF_{\rm past})\), every \(\sigma>0\),
+and a fresh standard Gaussian \(g\) independent of that past,
+\[
+ \boxed{
+ \E\{\sigma^2H(m+\sigma g)(1-g^2)\}
+ =-\sigma^4\E H''(m+\sigma g)
+ \le-{2223\over25000P}\sigma^4<0.}                        \tag{7.4}
+\]
+
+\textit{Proof.}
+Direct differentiation gives (7.3).  With \(y=x^2/e\), the rational
+numerator ratio is
+\[
+ R(y)={113-88y+243y^2+192y^3+48y^4\over(1+y)^4},           \tag{7.5}
+\]
+and
+\[
+ R'(y)={30(y+9)(3y-2)\over(1+y)^5}.                         \tag{7.6}
+\]
+Its unique nonnegative minimum occurs at \(y=2/3\), where
+\(R=741/25\).  This proves (7.3).  Gaussian integration by parts gives
+\(\E[H(m+\sigma g)(1-g^2)]=-\sigma^2\E H''(m+\sigma g)\),
+which proves (7.4). \hfill\(\square\)
+
+At zero background the rows are separately favourable:
+\[
+ \E H_P(g)(1-g^2)=-{12\over125P},\qquad
+ \E H_L(g)(1-g^2)\le-{6\over125P},                       \tag{7.7}
+\]
+so their pair is at most \(-18/(125P)\).  The \(P\) row is load bearing for
+translated lines.  The normalized \(L\)-row curvature at
+\(x^2=e/2\) is exactly
+\[
+                              -{56\over2187}.                \tag{7.8}
+\]
+
+For completeness, the separate \(L\)-row inequality in (7.7) is not a
+curvature consequence.  Put \(u=g^2\), \(b=1-a\), and
+\[
+ w_e(u)={u\{2au+(1+a)e\}\over(u+e)^2}.
+\]
+The pointwise decomposition
+\[
+ u\left({au+e\over u+e}\right)^2
+ =a^2u+be\,w_e(u)
+\]
+and the Gaussian moments \(\E u=1\), \(\E u^2=3\) give
+\[
+ \E\!\left[
+ u\left({au+e\over u+e}\right)^2(1-u)\right]
+ =-2a^2+be\,\E[w_e(u)(1-u)].                              \tag{7.7a}
+\]
+For \(a=4/9\),
+\[
+ w_e'(u)
+ ={e\{(3a-1)u+(1+a)e\}\over(u+e)^3}\ge0.
+\]
+Since \(u\) and \(w_e(u)\) are increasing,
+\(\E[w_e(u)(1-u)]=-\operatorname{Cov}(w_e(u),u)\le0\).
+Multiplication by \(4c_1\) gives
+\(-8c_1a^2=-6/(125P)\), proving the second inequality in (7.7).
+
+Theorem 7.1 is a genuine production-coefficient same-root advance.  It does not
+cover non-collinear internal directions, multiple roots, root-dependent
+backgrounds, active wedge rows, spatial output projections, or the complete
+future/forest/low owner.
+
+\section*{8. Sharp non-collinear production boundary}
+\hypertarget{section-8-noncollinear}{ }
+
+The favourable ray theorem cannot be globalized by convexity.  Take one real
+active coordinate and one real spectator, set the base to \((R,R)\), and
+perturb in direction \((1,-1)\):
+\[
+ x(q)=R+q,\qquad y(q)=R-q,\qquad
+ d(q)=x(q)^2+y(q)^2+e.                                    \tag{8.1}
+\]
+The wedge rows vanish.  With \(t(q)=x(q)^2/d(q)\), the exact production pair
+along this line is
+\[
+ f(q)=4c_0x(q)^2
+ +4c_1\{x(q)-\alpha t(q)[x(q)-y(q)]\}^2.                   \tag{8.2}
+\]
+Direct differentiation gives
+\[
+ \boxed{
+ f''(0)={3\{-528R^4-88R^2e+113e^2\}
+              \over1000P(2R^2+e)^2}.}                      \tag{8.3}
+\]
+It is negative whenever
+\[
+ {R^2\over e}>-{1\over12}+{5\sqrt{154}\over132}
+ =0.3867300623\ldots,                                     \tag{8.4}
+\]
+and, for fixed \(R\ne0\), in the formal zero-floor limit \(e\downarrow0\),
+\[
+                            f''(0)=-{99\over250P}.           \tag{8.5}
+\]
+For sufficiently small same-root noise \(q=\sigma g\), Stein's identity
+turns negative curvature into a positive trace--current defect:
+\[
+ \sigma^2\E\{f(\sigma g)(1-g^2)\}
+ =-\sigma^4\E f''(\sigma g)>0.                             \tag{8.6}
+\]
+
+This is an exact production-coefficient counterdirection to global
+multivariate convexity.  It is not a counterexample to the complete action:
+R-063 forest, future variance, balanced cross terms, returned low, spatial
+owners, and terminal sextic are absent from (8.2).  Those companions must now
+be tested on this direction rather than assumed favourable or discarded.
+
+\section*{9. Proof-route map and revised next target}
+\hypertarget{section-9-roadmap}{ }
+
+The successful and failed routes are now sharply separated.
+
+\begin{center}
+\begin{tabular}{p{0.36\linewidth}p{0.15\linewidth}p{0.39\linewidth}}
+\hline
+Route & Verdict & Exact boundary or next condition\\
+\hline
+Canonical complete signed terminal & advanced & Theorem 3.1 gives a unique aggregate tower.\\
+Three-feature to two-feature compression & advanced & Same future projection and shared trace probe required.\\
+Continuous signed bracket & advanced & Martingale representation suffices; Clark--Ocone needs \(\mathbb D^{1,2}\).\\
+Representation-universal endpoint-law transport & failed & Whole projection nest must intertwine; one terminal instead uses (4.6).\\
+R-063 as positive bracket & failed & Signed partial-Wick reconstruction has no PSD representation theorem.\\
+Common terminal implies scalar sign & failed & Centred one-step defect (6.3) is positive.\\
+Production collinear affine ray & advanced & Exact \(P+L\) pair has curvature \(2223/(25000P)\).\\
+Global retained \(P+L\) coefficient-pair convexity & failed & Active--spectator curvature (8.3) is negative.\\
+Complete non-collinear scalar owner & open & Retain forest, future, balanced cross, low, and sextic once.\\
+\hline
+\end{tabular}
+\end{center}
+
+The fixed-cutoff canonical common-terminal construction itself is no longer
+the blocker.  The most
+efficient next computation is the owner-complete version of the exact
+active--spectator direction (8.1): evaluate the polarized shared-probe trace,
+Doob bracket, R-063 adapted forest, future variance, balanced rows, returned
+low, and terminal sextic on one legal two-root canonical chart.  Its mismatch
+is
+\[
+ \delta_o[p,q]=\bar\tau_o[p,q]
+ -\E[\ip{P_{\mathcal C}dM_{p,o}}{P_{\mathcal C}dM_{q,o}}
+       \mid\cF_{o^-}].                                     \tag{9.1}
+\]
+The aggregate must satisfy the remaining R-146 window
+\[
+ \Delta\cT^{(0)}\le\eta X+\zeta Y_6+B,\qquad
+                 \eta<{5\over11},\quad\zeta<{13\over50}.   \tag{9.2}
+\]
+If the full companions repair (8.6), their exact mechanism becomes the next
+production theorem.  If an owner-complete legal scaling retains an adverse
+direction outside (9.2), the scalar Class-II route must be reassessed before
+any PDE or phase claim is continued.  This is a falsification test, not a
+preference for a spatial pattern.
+
+\section*{10. Devil's-advocate review}
+\hypertarget{section-10-audit}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: a common-terminal tower now proves the scalar sign.
+UPHELD against that inference.}  The signature is indefinite, and the
+centred one-step fixture (6.3) has positive defect arbitrarily close to the
+entire trace square.
+
+\item \textbf{Objection: equal terminal covariance transports the old
+owners.  UPHELD against that inference.}  The rank-one/rank-two prefix
+fixture (4.5) has the same terminal law and incompatible projection nests.
+
+\item \textbf{Objection: R-063 is the missing Doob bracket.  UPHELD against
+that inference.}  Its authority is a signed finite Wick--Taylor
+reconstruction.  Equation (5.10) has no registered positive subbracket
+representation.
+
+\item \textbf{Objection: the generic scalar no-go condemns the actual Pauli
+coefficient.  DISMISSED on the collinear affine class.}  The exact production
+\(P+L\) ratio has the strict curvature theorem (7.3)--(7.4).
+
+\item \textbf{Objection: the collinear curvature proves a global production
+bound.  UPHELD against that inference.}  The exact active--spectator
+direction (8.3) has negative curvature.  Non-collinear forest/low companions
+are still required.
+
+\item \textbf{Objection: the adverse direction disproves TECT or selects a
+different phase.  UPHELD against that inference.}  The fixture omits several
+once-owned terms of the complete action and is not a minimizer comparison.
+It is only a precise route-level falsifier for global convexity of the retained
+\(P+L\) coefficient pair.
+\end{enumerate}
+
+Limit checks are explicit.  A one-step filtration reduces (3.3) to ordinary
+polarization.  A trivial auxiliary factor reduces the Bochner construction
+to the usual Hilbert martingale.  Matching \(\delta=0\) reduces (5.7) to a
+negative predictable Gram.  As \(t\downarrow0\), the no-go defect (6.3)
+vanishes; as \(t\to\infty\), its ratio tends to one.  At zero background the
+production ray remains favourable, while the non-collinear zero-floor limit
+is the exact negative curvature (8.5).
+
+\section*{11. Result footer}
+\hypertarget{section-11-verification}{ }
+
+The primary and non-importing independent executables use different finite
+probability filtrations and trace/bracket fixtures.  Both reconstruct the
+production coefficients, curvature extrema, non-collinear threshold,
+common-terminal no-go, endpoint-law owner split, and transfer boundary.  The
+integrated verifier reruns them, pins every authority and artefact hash, and
+checks the rendered PDF.
+
+Dependencies: A1, R-063, R-075, R-104, R-125, R-130, R-136, R-141,
+R-142, R-146.
+
+Exploration ledger: EXP-000615 through EXP-000622.
+
+Registered negative and audit boundaries:
+\begin{itemize}
+\item \path{NG-2026-08-02-A13-COMMON-TERMINAL-AUTOMATIC-SCALAR-SIGN}
+\item \path{NG-2026-08-02-A13-ENDPOINT-LAW-OWNER-TRANSFER}
+\item \path{NG-2026-08-02-A13-PRODUCTION-PAIR-GLOBAL-CONVEXITY}
+\item \path{AUDIT-2026-08-02-A13-R147-R063-FOREST-BRACKET-CONFLATION}
+\end{itemize}
+
+Reproduction command:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_canonical_signed_common_terminal_doob_bracket_defect_boundary_verify.py
+\end{verbatim}
+
+\begingroup
+\begin{verbatim}
+Result ID: A13-CLASSII-CANONICAL-SIGNED-COMMON-TERMINAL-DOOB-
+ BRACKET-DEFECT-BOUNDARY; Ledger ID: R-147.
+Precise statement: exact canonical signed Doob terminalization and recursion;
+ nest-intertwining and polarized trace-bracket transfer criterion; centred
+ common-terminal and endpoint-law no-gos; strict production affine collinear
+ P+L sign with exact non-collinear convexity counterdirection.
+Scope: finite cutoff, fixed floor, actual R-141/R-142 shared feature and
+ canonical source filtration; affine-ray theorem is collinear only.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Expected output: integrated PASS 412/412; primary 101/101; independent 93/93.
+Falsification gate: any sign, factor, tower, projection-nest, bracket,
+ curvature, threshold, hash, PDF, public-surface, or release check fails.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no old-owner transport, non-collinear complete scalar
+ bound, T-050, A13, Nelson, removal, interacting measure, phase selection, or
+ Sector-A closure.
+Proof complete: false; T-050 closed: false; Sector A closed: false.
+Next required action: evaluate the complete forest/future/balanced/low owner
+ on the exact active-spectator direction and test the 5/11,13/50 window.
+\end{verbatim}
+\endgroup
+
+\endgroup

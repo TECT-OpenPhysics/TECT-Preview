@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [A13 R-147 canonical signed common terminal and production boundary] - 2026-08-02
+
+Registered the phase-neutral scoped T4 R-147 package. The actual fixed-cutoff R-141/R-142 terminal feature has an exact canonical signed Doob telescope, conditional recursion, continuous bracket form, and reveal-grid compression. Owner transport still requires the registered tower, incidence, and predictable trace-bracket conditions; equal endpoint law and centering are insufficient. The retained A1/R-075 P+L pair has affine-collinear curvature at least 2223/(25000P), while an exact active-spectator direction disproves global pair convexity above the stated threshold. The complete owner, T-050, A13, phase selection, Nelson, and Sector A remain open.
+
+## [Boundary and massless-mode criticality research seed registered] - 2026-08-02
+
+Registered a non-tier-bearing T0 research seed from the operator discussion. The programme replaces dimensional numerology with a joint test of the complete low-energy kinetic tensor, physical zero-mode count, compact winding sectors, and dynamic critical exponent at one preregistered TECT boundary. Exact common speed must be protected by a shared effective metric, symmetry, or infrared fixed point; superconductivity is retained only as an analogue. EXP-000623 records the parked route and falsifiers, and T-053 preserves the follow-up calculation order. No theorem, constant derivation, vacuum identification, or tier action is claimed.
+
 ## [A13 R-146 pre-release output-projection audit] - 2026-08-02
 
 Hostile pre-release review found that draft R-146 Eq. (3.2) omitted the orthogonal output projection used by the registered R-145 anisotropic owner. Restored Tr(P C6 Gamma_R C6* P), pinned the corrected formula in the integrated verifier, and recorded EXP-000614. Because P is orthogonal, all registered constants and phase-neutral scope are unchanged; the defective draft was never committed or released.

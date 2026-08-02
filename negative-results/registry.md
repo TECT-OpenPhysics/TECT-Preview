@@ -6,6 +6,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-02-A13-COMMON-TERMINAL-AUTOMATIC-SCALAR-SIGN](#ng-2026-08-02-a13-common-terminal-automatic-scalar-sign) | infer a nonpositive scalar trace-current defect from a centred common-terminal feature alone | for `A_t(g)=exp(-t g^2/2)`, `U=A_t(g) zeta`, and `Phi=A_t(g)g`, the current is centred but the exact defect is `2t/(1+2t)^(3/2)>0`, with trace-relative ratio tending to one |
+| [NG-2026-08-02-A13-ENDPOINT-LAW-OWNER-TRANSFER](#ng-2026-08-02-a13-endpoint-law-owner-transfer) | transport sequential owners from equality of the terminal Gaussian law or covariance alone | equal `N(0,1)` terminals have linear owner allocations `(1,0)` and `(1/2,1/2)` and Wick-square allocations `(2,0)` and `(1/2,3/2)`; equal terminal covariance paths can also have incompatible prefix spectra under every time change |
+| [NG-2026-08-02-A13-PRODUCTION-PAIR-GLOBAL-CONVEXITY](#ng-2026-08-02-a13-production-pair-global-convexity) | extend the exact production `P+L` affine-collinear curvature sign to global multivariate coefficient convexity | on the exact active-spectator direction at base `(R,R)`, the retained pair has curvature `3(-528R^4-88R^2e+113e^2)/(1000P(2R^2+e)^2)`, which is negative above the exact threshold; omitted complete-action companions remain open |
+| [AUDIT-2026-08-02-A13-R147-R063-FOREST-BRACKET-CONFLATION](#audit-2026-08-02-a13-r147-r063-forest-bracket-conflation) | identify the signed adapted R-063 partial-Wick forest with a positive Doob bracket or compare the current-root trace pointwise with a strict-past bracket | hostile review restored the predictable projection `bar tau=E[tau|F_(o-)]` in R-147; exact defect-free mean-Gram matching is `bar tau=beta`, while the registered forest remains a signed Wick-Taylor reconstruction with no PSD subbracket theorem |
 | [AUDIT-2026-08-02-A13-R146-OUTPUT-PROJECTION-OMISSION](#audit-2026-08-02-a13-r146-output-projection-omission) | omit the registered R-145 orthogonal output projection from the draft R-146 anisotropic endpoint trace | hostile pre-release review found that draft Eq. (3.2) displayed `Tr(C6 Gamma_R C6*)` instead of the exact registered owner `Tr(P C6 Gamma_R C6* P)`; the note and verifier were repaired before release, with constants and theorem scope unchanged |
 | [AUDIT-2026-08-02-A13-ZERO-CONTROL-RELATIVE-ANCHOR](#audit-2026-08-02-a13-zero-control-relative-anchor) | retain a separate uniform absolute chart-anchor gate after the complete R-145 trace-excess identity is evaluated at zero control | A7 external centering and the R-104 zero-control law give a_pi=T_pi(0) and E Vren(Z_h)=-[T_pi(h)-T_pi(0)]; this removes the separate anchor only on the direct relative route and does not bound either term separately |
 | [NG-2026-08-02-A13-ARBITRARY-TEMPORAL-ANISOTROPIC-POSITIVE-SUBALLOCATION](#ng-2026-08-02-a13-arbitrary-temporal-anisotropic-positive-suballocation) | split a positive terminal anisotropic covariance remainder into positive pieces dominated by arbitrary temporal covariance increments | the rank-one projectors P_+ and P_- sum to I, but every dominated positive piece is a scalar multiple of its projector, so their sum has equal diagonals and cannot equal diag(1,0) |
@@ -222,6 +226,88 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-02-a13-common-terminal-automatic-scalar-sign"></a>
+### NG-2026-08-02-A13-COMMON-TERMINAL-AUTOMATIC-SCALAR-SIGN -- centering and a common terminal do not fix the scalar sign
+
+**Failure mode.** Infer that a centred scalar trace-current feature has a
+nonpositive signed defect merely because it is placed in one common-terminal
+Doob tower with a shared Gaussian covariance.
+
+**Evidence.** Let `t>0`, let `g,zeta` be independent standard Gaussians, and
+put `A_t(g)=exp(-t g^2/2)`, `U=A_t(g)zeta`, and `Phi=A_t(g)g`. The current is
+centred by oddness. Exact Gaussian moments nevertheless give
+`E|U|^2=(1+2t)^(-1/2)`, `E|Phi|^2=(1+2t)^(-3/2)`, and defect
+`2t/(1+2t)^(3/2)>0`. Its ratio to the trace square is `2t/(1+2t)` and tends
+to one.
+
+**Consequence.** The signed common-terminal telescope is an exact accounting
+coordinate, not a positivity theorem. The actual production same-root
+coefficient must remain coupled to the predictable trace-bracket defect,
+future variance, R-063 forest, balanced terms, returned low, and sextic.
+This fixture does not falsify the complete action or select any phase.
+
+<a id="ng-2026-08-02-a13-endpoint-law-owner-transfer"></a>
+### NG-2026-08-02-A13-ENDPOINT-LAW-OWNER-TRANSFER -- terminal law does not determine sequential owners
+
+**Failure mode.** Transport old sequential owner energies from equality of a
+terminal Gaussian law, terminal covariance, or fixed-cutoff endpoint payoff.
+
+**Evidence.** The equal `N(0,1)` terminals `G_A=xi_1` and
+`G_B=(xi_1+xi_2)/sqrt(2)` have linear reveal allocations `(1,0)` and
+`(1/2,1/2)`. Their Wick squares have allocations `(2,0)` and `(1/2,3/2)`.
+At process level, the piecewise kernels `sqrt(2)P_1`, then `sqrt(2)P_2`, and
+the constant identity kernel have the same terminal covariance. The old
+prefix spectra are `(2s,0)` before half time and `(1,2s-1)` after half time,
+so no time change matches the canonical half-time spectrum `(1/2,1/2)`.
+
+**Consequence.** Representation-universal transport requires intertwining
+the whole conditional-expectation nest and the physical terminal synthesis.
+For one actual terminal, accidental row equality remains possible but must be
+proved by its tower identities and registered incidence; endpoint equality
+alone cannot certify it. The bare Brownian filtrations remain abstractly
+isomorphic.
+
+<a id="ng-2026-08-02-a13-production-pair-global-convexity"></a>
+### NG-2026-08-02-A13-PRODUCTION-PAIR-GLOBAL-CONVEXITY -- the retained P+L coefficient pair is not globally convex
+
+**Failure mode.** Extend the exact affine-collinear production coefficient
+sign to every multivariate internal direction by global convexity.
+
+**Evidence.** At base `(R,R)` and active-spectator perturbation `(1,-1)`, the
+exact retained production pair has curvature
+`3(-528R^4-88R^2e+113e^2)/(1000P(2R^2+e)^2)`. It is negative when
+`R^2/e>-1/12+5sqrt(154)/132`, and its fixed-nonzero-base zero-floor limit is
+`-99/(250P)`. The wedge rows vanish in this fixture. Small same-root Gaussian
+noise therefore produces a positive trace-current defect for this pair.
+
+**Consequence.** A closure relying only on global convexity of the retained
+`P+L` coefficient pair is unavailable. This is not a counterexample to the
+complete action: the adapted R-063 forest, future variance, balanced cross,
+returned low, spatial owners, and terminal sextic are absent and may repair
+or worsen the direction. T-050 and every phase question remain open.
+
+<a id="audit-2026-08-02-a13-r147-r063-forest-bracket-conflation"></a>
+### AUDIT-2026-08-02-A13-R147-R063-FOREST-BRACKET-CONFLATION -- condition the trace and keep the signed forest
+
+**Failure mode.** Treat the adapted R-063 partial-Wick forest as a positive
+Doob bracket, or compare the current-root primitive trace directly with a
+strict-past conditional bracket in the draft R-147 transfer formula.
+
+**Evidence.** R-063 reconstructs signed lower-chaos contractions and contains
+the exact partial-Wick terms `F diamond Q + Y_lambda D_mu F + Y_mu D_lambda F
+- D_lambda D_mu F`; no registered theorem realizes this as a PSD subbracket.
+Moreover the R-125 primitive trace depends on the current root and is normally
+`F_o`-measurable. Hostile review therefore replaced raw `tau` by its
+predictable projection `bar tau=E[tau|F_(o-)]`. The exact conditional defect is
+`E[r|F_(o-)]=bar tau-beta-<b_p,b_q>`. The two-point fixture `Phi=xi`,
+`tau=1+xi` has raw `tau!=beta` but `E tau=beta` and zero conditioned residual.
+
+**Consequence.** Defect-free equality to the specific predictable mean Gram
+holds exactly when `bar tau=beta`, under all additional registered R-125/R-063
+heat, covariance, recombination, exhaustive-output, and forest-identification
+hypotheses. The corrected note and both executables now include a
+non-predictable trace regression. Production matching itself remains open.
 
 <a id="audit-2026-08-02-a13-r146-output-projection-omission"></a>
 ### AUDIT-2026-08-02-A13-R146-OUTPUT-PROJECTION-OMISSION -- restore the registered endpoint owner
