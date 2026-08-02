@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 zero-control future-variance domination no-go] - 2026-08-02
+
+Recorded the exact production no-go for the EXP-000648 successor comparison V1<=Q1. With zero legal controls and common heat retained, same-root antipodal field/current independence turns E1(Q1-V1) into the negative coefficient-smoothing variance -E||(C6-E2 C6)D1^(1/2)||_HS^2; the linear Pauli rows make the failure strict, and the conditional point g1=0 extends by continuity to an open set. EXP-000651 records three independent audits. This retires absolute rootwise endpoint positivity and Poincare repair only. The baseline-subtracted event-complete action, R-063 forest, complete low/balanced response, source/sextic budgets, T-050, A13, every phase/PDE verdict, Nelson, and Sector A remain open.
+
 ## [R-150: production antipodal last-insertion zero-cross boundary] - 2026-08-02
 
 Registered the first actual A1 +/-k,+/-2k production field/current synthesis requested by R-149. A simultaneous antipodal pair has exact coincident cross synthesis zero but nonzero two-point and coefficient-space crosses. The conditional absolute final full-output/full-reveal atom is nonnegative with zero atom-level source/sextic suballocation. Exact fixtures reject three stronger routes: singleton projected positivity, absolute-to-relative secant transfer, and backward transport through future-dependent feedback. Primary 34/34, independent 29/29, and integrated 184/184 checks pass; the deterministic six-page PDF was rendered and inspected. The relative secant, earlier feedback connection, complete owner, all phase selection, PDE replacement, T-050, A13, Nelson, and Sector A remain open.

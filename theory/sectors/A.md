@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-02-A13-ZERO-CONTROL-FUTURE-VARIANCE-DOMINATION | the production future variance exceeds its raw endpoint budg |  |
 | AUDIT-2026-08-02-A13-R150-SCALAR-SLICE-AS-FULL-PRODUCTION-COVARIANCE | use the full A1 family covariance |  |
 | AUDIT-2026-08-02-A13-R150-COINCIDENT-CROSS-AS-PROJECTED-CROSS | local cancellation is not operator cancellation |  |
 | AUDIT-2026-08-02-A13-R150-ABSOLUTE-ATOM-AS-RELATIVE-SECANT | a positive endpoint does not order two endpoints |  |

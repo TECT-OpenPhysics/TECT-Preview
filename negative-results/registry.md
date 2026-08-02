@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-02-A13-ZERO-CONTROL-FUTURE-VARIANCE-DOMINATION](#ng-2026-08-02-a13-zero-control-future-variance-domination) | prove the earlier-root absolute comparison `V1<=Q1` from the production covariance ordering and full six-row Gram structure | at zero control the averaged difference is exactly the negative coefficient-smoothing variance `-E||(C6-E2 C6)D1^(1/2)||_HS^2<0`; rootwise endpoint positivity is retired, while the relative event-complete action and its forest/low/source/sextic companions remain open |
 | [AUDIT-2026-08-02-A13-R150-SCALAR-SLICE-AS-FULL-PRODUCTION-COVARIANCE](#audit-2026-08-02-a13-r150-scalar-slice-as-full-production-covariance) | substitute the N001 scalar covariance for the actual A1 three-family production covariance | the scalar slice omits the family masses and off-diagonal lock matrix; R-150 replaces it by the exact positive `A(p)=a(p)I+M` covariance before any theorem is registered |
 | [AUDIT-2026-08-02-A13-R150-COINCIDENT-CROSS-AS-PROJECTED-CROSS](#audit-2026-08-02-a13-r150-coincident-cross-as-projected-cross) | promote the same-point cancellation `K_i(x,x)=0` to a zero nonlocal or Fourier-coefficient cross synthesis | the exact two-point kernel is `2p_i Gamma(p) sin(p.(x-y))/V` and the coefficient cross is a nonzero skew block; a normalized-circle projection fixture has expected packets `-1/2` and `+1/2` |
 | [AUDIT-2026-08-02-A13-R150-ABSOLUTE-ATOM-AS-RELATIVE-SECANT](#audit-2026-08-02-a13-r150-absolute-atom-as-relative-secant) | use nonnegativity of the final absolute full-reveal endpoint atom to sign its relative action secant | with constant Gram and predictable currents two and one, the endpoint atoms are two and one half while their relative difference is `-3/2`; the baseline cross must be computed |
@@ -236,6 +237,39 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-02-a13-zero-control-future-variance-domination"></a>
+### NG-2026-08-02-A13-ZERO-CONTROL-FUTURE-VARIANCE-DOMINATION -- the production future variance exceeds its raw endpoint budget
+
+**Failure mode.** Prove the earlier `+/-k` root's absolute comparison
+`V1<=Q1` from the positive production packet difference
+`D2-D1=(2k^2/V)(4 Gamma(2k)-Gamma(k))` and the positivity of the complete
+six-row Gram `C6(W)^*C6(W)`.
+
+**Evidence.** Set both controls to zero, retain the common heat, and write the
+rootwise field/current innovations as `(X_j,U_j)`.  The R-150 simultaneous
+antipodal synthesis gives `Cov(X_j,U_j)=0`, hence Gaussian independence.  With
+`A=C6`, `W=r+X1+X2`, `J=A(W)(U1+U2)`, and
+`bar A=E2[A(W)]`, one has `Phi1=E2 J=bar A U1`.  Averaging the exact R-125/R-136
+identity `Q1-V1=||Phi1||^2-Theta1` over the earlier root therefore gives
+
+`E1(Q1-V1)=-E1,2 ||(A(W)-bar A)D1^(1/2)||_HS^2<0`.
+
+Strictness already follows from the three linear Pauli rows: their contribution
+is
+`-4 c0 sum_A Tr(S_A D1 S_A Sigma2)`, and each trace is nonnegative while at
+least one is positive for the positive-definite production covariances.  At
+the conditional point `g1=0`, `Phi1=0` and `Theta1>0`; positive-floor
+continuity extends the failure to an open set of positive Gaussian measure.
+See `explorations/log.jsonl#EXP-000651` and the R-125, R-136, and R-150 notes.
+
+**Consequence.** Retire absolute rootwise future-variance domination and any
+Poincare repair of that orientation.  This is not a counterexample to the
+relative action: the zero-control secant is zero, and the negative stationary
+baseline must be kept inside the EXP-000649 insertion-event difference with
+the R-063 forest, balanced/returned-low, source, and sextic owners.  T-050,
+A13, every physical-phase question, PDE selection, Nelson, and Sector A remain
+open.
 
 <a id="audit-2026-08-02-a13-r150-scalar-slice-as-full-production-covariance"></a>
 ### AUDIT-2026-08-02-A13-R150-SCALAR-SLICE-AS-FULL-PRODUCTION-COVARIANCE -- use the full A1 family covariance
