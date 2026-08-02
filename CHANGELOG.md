@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-145 weighted trace-excess and terminal anisotropic covariance reduction] - 2026-08-02
+
+Registered R-145 at T4. The exact direct T-050 acceptance criterion is eta<5/11 and zeta<27/100; R-129 remains valid but nonsharp. Exact A1 mass and lattice arithmetic gives six-real pointwise anisotropic derivative trace at most 7807039549231/12700800000000 and the abstract terminal owner bound (1/100)Y6+24 for regulator bound one. The result is terminal-only: temporal-owner transfer, scalar principal signed sea, complete low/anchor, T-050, A13, Nelson, and Sector A remain open. Added T-052 for the already-recorded same-backend flat-versus-BCC energy and coupled-star Hessian diagnostic without duplicating EXP-000590--EXP-000592.
+
 ## [Register R-144 uniform Douglas one-use and reduced-Hessian boundary] - 2026-08-02
 
 Proves the sharp conditional affine-residual complete-feature lower bound and an alternative conditional reduced-action strong-convexity route. Corrects the T-050 threshold comparison and the R-142 fibre Schur coefficient under hostile audit. Exact phase-cycle, returned-low, legal-reverse, and second-jet fixtures delimit what the current local data can decide. No production chart or uniform branch hypotheses are supplied; T-050 and Sector A remain open.

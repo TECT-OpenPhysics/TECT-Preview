@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-08-02-A13-R129-TRACE-EXCESS-ACCEPTANCE-WINDOW](#audit-2026-08-02-a13-r129-trace-excess-acceptance-window) | treat the R-129 positive-augmented-action window `eta<9/20`, `zeta<3/20` as the full direct T-050 trace-excess acceptance range | R-129 remains valid but nonsharp for T-050: after subtracting the one-use stabilizers, `Vren=a_pi-T_pi`, so the direct thresholds are `eta<5/11`, `zeta<27/100`, with exact extra headroom `1/220` and `3/25` |
 | [NG-2026-08-02-A13-LOCAL-STENCIL-PRODUCTION-SIGN-NONIDENTIFIABILITY](#ng-2026-08-02-a13-local-stencil-production-sign-nonidentifiability) | infer the full action-signed production verdict from a local q567 fibre stencil, diagonal/edge magnitudes, a positive high core, and base/first feature jets | exact gauge-inequivalent q567 completions have inertias `(12+,0-)` and `(8+,4-)`; identical-magnitude returned-low completions have determinants `171/1024` and `-61/1024`; and equal base/first jets have full action Hessians `29/10` and `-11/10` |
 | [AUDIT-2026-08-02-A13-R144-FIBRE-SCHUR-COEFFICIENT-CORRECTION](#audit-2026-08-02-a13-r144-fibre-schur-coefficient-correction) | identify the draft q567 tensor fixture with the registered R-142 active fibre after setting `c0=a` | R-142 requires the Schur-completed coefficient `c0=a-b^2/c=3/(250P)`; the corrected fibre stays positive rank four, so the opposite tensor inertias are unchanged |
 | [AUDIT-2026-08-02-A13-R144-SEXTIC-THRESHOLD-CORRECTION](#audit-2026-08-02-a13-r144-sextic-threshold-correction) | require a separate sextic reserve after proving a positive source Hessian gap | the pre-registration R-144 draft compared `epsilon_6=3/20` with the stabilizer coefficient `3/20`, but the canonical T-050 threshold is `gamma/6=27/100`; the retained coefficient already has strict margin `3/25` |
@@ -217,6 +218,28 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="audit-2026-08-02-a13-r129-trace-excess-acceptance-window"></a>
+### AUDIT-2026-08-02-A13-R129-TRACE-EXCESS-ACCEPTANCE-WINDOW -- R-129 positive-action window is sufficient but nonsharp for direct T-050 trace excess
+
+**Failure mode:** The R-129 successor language treated `eta<9/20` and
+`zeta<3/20` as the direct acceptance range for the complete trace excess.
+Those inequalities make the augmented action nonnegative up to its anchor,
+but T-050 asks for a lower bound on the renormalised potential after the
+source and sextic stabilizers are subtracted.
+
+**Evidence:** R-143 and R-144 give the owner-complete identity
+`A_pi=a_pi+(9/20)X+(3/20)Y6-T_pi`, hence
+`E V_J^ren(Z_h)=a_pi-T_pi`. Therefore a uniform bound
+`T_pi<=eta X+zeta Y6+B` implies T-050 whenever
+`eta<1/(2p)=5/11` and `zeta<gamma/6=27/100`. The exact additional
+headrooms over R-129 are `1/220` and `3/25`.
+
+**Consequence:** R-129 is not retracted and none of its exact identities is
+changed. Its displayed window is retained as a valid stronger
+positive-augmented-action criterion. R-145 records the weaker direct
+trace-excess theorem. No production trace-excess estimate, T-050 closure,
+A13 closure, Nelson theorem, or Sector-A closure follows from this audit.
 
 <a id="ng-2026-08-02-a13-local-stencil-production-sign-nonidentifiability"></a>
 ### NG-2026-08-02-A13-LOCAL-STENCIL-PRODUCTION-SIGN-NONIDENTIFIABILITY -- local packet data do not determine the complete action sign

@@ -3,12 +3,12 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
+Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 4 · Done (recent) 44
 
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
-  - R-144 proves two conditional sufficient routes without closing T-050. Preferred Branch A: register the canonical temporal/common-output/conditional-low/returned-low chart and prove uniform U=CY+E contraction, bounded exact residual, and anchor. Alternative Branch B: on the same C2 reduced action prove the Douglas reduced-solution compatibility, a uniform reduced/source-low effective Hessian gap after the reduced tail, reduced origin-force bound, and anchor. Exact local completion fixtures show current q567/core data cannot decide the production sign. T-050, A13, Nelson, and Sector A remain open.
+  - R-145 proves the exact direct trace-excess acceptance thresholds eta<5/11 and zeta<27/100 and pays the registered terminal total-covariance anisotropic owner by (1/100)Y6+24 at regulator bound one. It does not transfer this split to temporally faithful production owners. Next keep the scalar principal sea inside the complete signed owner, prove its weighted source/sextic contribution within the remaining window, and close the complete low/anchor owner. R-144 contraction or reduced-Hessian branches remain optional only if their production-uniform hypotheses are registered. T-050, A13, Nelson, and Sector A remain open.
   - _updated 2026-08-02_
 
 ## Next up
@@ -36,6 +36,9 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 - **T-051** Reconcile stale Sector-A claim cards with the five-family theorem map  _(owner: Codex)_
   - One substantive claim card per turn. Correct stale next_action/open-gate text in A10, A9, A11, A12, A6, A5, and A4 without changing valid tiers or immutable IDs; regenerate all ledgers after each card.
   - _updated 2026-07-22_
+- **T-052** N-001 same-backend phase-selection diagnostic: flat, BCC, and unconstrained finite-shell competitors  _(owner: Codex)_
+  - Truth-seeking pre-claim diagnostic, separate from A13/T-050 and retired B3; BCC is one falsifiable candidate, not a required outcome. Use standalone n001_variational_backend.py to reauthenticate the homogeneous stationary point; compare same-backend Delta F for normalized exact-commensurate BCC and other symmetry-distinct finite-shell stars allowed by the kernel; run a shell-seeded finite-grid full-field search; record phases, polarizations, residuals, two-dimensional restricted Hessians, multistart and grid transfer; and assemble the simultaneous BCC 72-real Hessian with every cross block as a benchmark against symmetry-projected and finite-grid full-field Lanczos spectra. EXP-000590--EXP-000592 already record why positive shell softness, the missing energy surface, and six pairwise blocks do not decide the phase. Report flat, BCC, another modulation, or metastability only within the tested cutoff/box/grid scope; if the intended finite-q mechanism fails across preregistered coverage, record evidence for reassessing the PDE, not proof of PDE inadequacy. No candidate is privileged and no single loss proves global nonexistence.
+  - _updated 2026-08-02_
 
 ## Done (recent)
 

@@ -1,0 +1,538 @@
+% =============================================================================
+% Title: Weighted trace-excess criterion and terminal anisotropic covariance reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-WEIGHTED-TRACE-EXCESS-ANISOTROPIC-COVARIANCE-SEXTIC-REDUCTION
+% Ledger: R-145
+% Version: v1.0 -- first issued 2026-08-02; this version issued 2026-08-02
+% Status: scoped T4 analytic/exact/executed advance; T-050 and Sector A open
+% Audit: AUDIT-2026-08-02-A13-R129-TRACE-EXCESS-ACCEPTANCE-WINDOW
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\cY}{\mathcal Y}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+\hypertarget{section-1-result}{ }
+
+R-143 writes the owner-complete fixed-chart augmented action as
+\[
+ \cY_\pi(h)=\Phi_\pi(h)
+ \oplus\sqrt{9\over10}\,h
+ \oplus\sqrt{3\over10}\,|Z_{K,h}|^2Z_{K,h},
+ \qquad
+ \cA_\pi(h)=a_\pi+{1\over2}
+ \{\|\cY_\pi(h)\|^2-\|\cU_\pi(h)\|^2\}.            \tag{1.1}
+\]
+R-144 then gives two sufficient routes: a global common-output contraction
+with a bounded residual, or a positive reduced/source-low Hessian gap with
+an origin-force bound and an absolute anchor.  Neither production input is
+registered.
+
+This note takes a weaker, pointwise route.  Define the complete trace excess
+\[
+ \cT_\pi(h)={1\over2}
+ \{\|\cU_\pi(h)\|^2-\|\Phi_\pi(h)\|^2\}.             \tag{1.2}
+\]
+The first result is an exact equivalence at the level needed by T-050: it is
+enough to bound \(\cT_\pi\) by the source and sextic budgets.  No common
+linear map on a family of endpoints is required.
+
+The second result is deliberately narrower.  The terminal A1 total
+covariance has an exact scalar-principal plus positive anisotropic split.
+The complete spatial derivative trace of the anisotropic terminal remainder
+is trace class, has an explicit cutoff-independent lattice bound, and obeys
+a terminal trace-owner sextic estimate with coefficient \(1/100\) and
+certified constant at most 24 when the regulator bound is one.
+
+The terminal lemma is not promoted through an arbitrary temporally faithful
+future-increment partition.  R-129 proves that a total Fourier multiplier
+does not by itself intertwine each temporal covariance increment, and R-143
+records the still missing output, reveal, collar, and low propagation.  Thus
+the production temporal anisotropic owner, scalar principal sea, complete
+low/anchor owner, T-050, A13, Nelson estimate, removal, interacting measure,
+and Sector-A closure all remain open.
+
+\section*{2. Exact direct trace-excess criterion}
+\hypertarget{section-2-weighted-trace}{ }
+
+Put
+\[
+ X(h)=\E\sum_k\|h_k\|_2^2,
+ \qquad
+ Y_6(h)=\E\|Z_{K,h}\|_6^6.                            \tag{2.1}
+\]
+The norm convention in (1.1) gives
+\[
+ {1\over2}\|\cY_\pi(h)\|^2
+ ={1\over2}\|\Phi_\pi(h)\|^2
+ +{9\over20}X(h)+{3\over20}Y_6(h).                   \tag{2.2}
+\]
+Consequently
+\[
+ \cA_\pi(h)=a_\pi+{9\over20}X(h)+{3\over20}Y_6(h)
+ -\cT_\pi(h).                                        \tag{2.3}
+\]
+The controlled renormalised potential is obtained by subtracting the two
+one-use stabilisers already inserted in the augmented action:
+\[
+ \boxed{\quad
+ \E V_J^{\rm ren}(Z_h)=a_\pi-\cT_\pi(h).
+ \quad}                                               \tag{2.4}
+\]
+This cancellation is why the \(9/20\) and \(3/20\) coordinates do not shift
+the direct T-050 trace-excess thresholds.
+
+% evidence-anchor: theorem-2.1-weighted-trace-excess
+\textbf{Theorem 2.1 (direct weighted trace-excess criterion).}
+Assume, uniformly in cutoff, admissible temporally faithful chart, floor,
+and control, that
+\[
+ a_\pi\geq-C_0,
+ \qquad
+ \cT_\pi(h)\leq\eta X(h)+\zeta Y_6(h)+B              \tag{2.5}
+\]
+for finite \(B,C_0\), with
+\[
+ \boxed{\qquad
+ \eta<{5\over11}={1\over2p},
+ \qquad
+ \zeta<{27\over100}={\gamma\over6},
+ \qquad p={11\over10}.
+ \qquad}                                              \tag{2.6}
+\]
+Then T-050 holds with \(\epsilon_v=\eta\),
+\(\epsilon_6=\zeta\), and \(C=B+C_0\).
+
+\textit{Proof.}
+Equations (2.4)--(2.5) give directly
+\[
+ \E V_J^{\rm ren}(Z_h)
+ \geq-\eta X(h)-\zeta Y_6(h)-(B+C_0).                 \tag{2.7}
+\]
+The strict inequalities (2.6) are exactly the two canonical T-050
+acceptance conditions. \hfill\(\square\)
+
+This theorem is weaker than demanding one common contraction
+\(\cU=C\cY\) on a whole endpoint family.  For example, take two paid
+endpoint vectors with Gram \(G_{\rm paid}=\Id_2\) and an adverse Gram
+\[
+ G_U={9\over16}
+ \begin{pmatrix}1&1\\1&1\end{pmatrix}.               \tag{2.8}
+\]
+Each diagonal endpoint has adverse squared norm \(9/16<1\), but
+\(G_U\) has largest eigenvalue \(9/8>1\), and
+\(G_{\rm paid}-G_U\) has eigenvalue \(-1/8\).  Thus endpointwise weighted
+control may hold although the stronger mixed-Gram contraction fails.
+The fixture does not prove the production inequality (2.5); it proves only
+that failure of a common contraction is not a logical obstruction to it.
+
+\subsection*{2.1 R-129 acceptance-window audit}
+
+R-129 requested
+\[
+ \eta<{9\over20},\qquad \zeta<{3\over20}.             \tag{2.9}
+\]
+That result is valid: (2.9) makes the augmented action in (2.3) positive up
+to its anchor.  It is, however, stronger than T-050 requires.  The direct
+renormalised-potential criterion is (2.6), with exact additional headroom
+\[
+ {5\over11}-{9\over20}={1\over220},
+ \qquad
+ {27\over100}-{3\over20}={3\over25}.                 \tag{2.10}
+\]
+Accordingly the normalized feature comparison
+\[
+ G_U-G_\Phi
+ \preceq \alpha_v G_{\sqrt{9/10}h}
+          +\alpha_6G_{\sqrt{3/10}|Z|^2Z}              \tag{2.11}
+\]
+would be sufficient pointwise when
+\[
+ \alpha_v<{100\over99},
+ \qquad
+ \alpha_6<{9\over5}.                                 \tag{2.12}
+\]
+The audit is a nonsharp-scope correction, not a refutation of R-129.
+
+\section*{3. Terminal total-covariance anisotropy}
+\hypertarget{section-3-terminal-covariance}{ }
+
+The A1 family masses and lock give the exact mass matrix
+\[
+ M=\begin{pmatrix}
+ 1/10&-1/20&-1/20\\
+ -1/20&13/100&-1/20\\
+ -1/20&-1/20&17/100
+ \end{pmatrix}.                                      \tag{3.1}
+\]
+Exact Sturm chains isolate its three eigenvalues in
+\[
+ (28,29)/1000,\qquad(165,166)/1000,\qquad
+ (206,207)/1000.                                     \tag{3.2}
+\]
+Writing them as \(\mu_1<\mu_2<\mu_3\), these intervals imply
+\[
+ \Delta_\Sigma=(\mu_3-\mu_1)+(\mu_3-\mu_2)
+ \leq{221\over1000}.                                 \tag{3.3}
+\]
+
+Let \(|\chi_J(k)|\leq M_\chi\).  For the terminal total covariance put
+\[
+ C_J(k)=\chi_J(k)^2(a(k)\Id+M)^{-1}
+        =\gamma_{0,J}(k)\Id+R_J(k),                  \tag{3.4}
+\]
+where
+\[
+ \gamma_{0,J}(k)={\chi_J(k)^2\over a(k)+\mu_3},
+ \qquad R_J(k)\succeq0.                              \tag{3.5}
+\]
+In the mass eigenbasis, the resolvent identity gives
+\[
+ \Tr_{\mathbb C^3}R_J(k)
+ \leq M_\chi^2{\Delta_\Sigma\over a(k)^2}.          \tag{3.6}
+\]
+
+The pinned kinetic polynomial is
+\[
+ a(k)=r+Z|k|^2+Y|k|^4,
+ \qquad Y=1,                                         \tag{3.7}
+\]
+and the exact A1 inputs satisfy
+\[
+ r-{Z^2\over4Y}
+ ={26000000000947494031\over10^{20}}>{1\over4},      \tag{3.8}
+\]
+as well as
+\[
+ a(k)\geq(|k|^2-q_0^2)^2.                            \tag{3.9}
+\]
+The check \(Y=1\) is load bearing in (3.9).
+
+\section*{4. Complete spatial lattice trace bound}
+\hypertarget{section-4-lattice}{ }
+
+On the \(L=16\) torus write \(k=(\pi/8)n\) and
+\(m=\|n\|_\infty\).  Direct summation gives
+\[
+ \sum_{\|n\|_\infty\leq r}|n|^2
+ =r(r+1)(2r+1)^3,                                    \tag{4.1}
+\]
+hence the exact shell identity
+\[
+ \boxed{\quad
+ \sum_{\|n\|_\infty=m}|n|^2=40m^4+14m^2.
+ \quad}                                               \tag{4.2}
+\]
+The radius-two cube has squared-radius sum 750.
+
+Use the rational enclosure \(3<\pi<22/7\).  On the low cube,
+\(a(k)>1/4\), so (3.3), (3.6), and (4.1) give the unnormalised complex
+Fourier-sum bound
+\[
+ G_{R,{\rm low}}^{\mathbb C}
+ \leq M_\chi^2{221\over1000}\,16\,750
+ \left({11\over28}\right)^2
+ =M_\chi^2{80223\over196}.                           \tag{4.3}
+\]
+
+For \(m\geq3\), the exact A1 value satisfies \(q_0/(\pi/8)<2\).  Therefore
+\[
+ a(k)\geq c^2|k|^4,
+ \qquad c=1-{4\over3^2}={5\over9}.                  \tag{4.4}
+\]
+The integral test gives
+\[
+ \sum_{m\geq3}m^{-4}\leq{2\over81},
+ \qquad
+ \sum_{m\geq3}m^{-6}\leq{8\over3645}.              \tag{4.5}
+\]
+Combining (3.3), (3.6), and (4.2)--(4.5) yields
+\[
+ G_{R,{\rm tail}}^{\mathbb C}
+ \leq M_\chi^2{26881294336\over31640625}.            \tag{4.6}
+\]
+Thus
+\[
+ \boxed{\quad
+ G_R^{\mathbb C}:=
+ \sum_k|k|^2\Tr_{\mathbb C^3}R_J(k)
+ \leq M_\chi^2
+ {7807039549231\over6201562500}.
+ \quad}                                               \tag{4.7}
+\]
+
+Equation (4.7) is an unnormalised complex Fourier sum, not yet the physical
+pointwise six-real trace.  The A6/A7 convention realifies the complex
+covariance with a factor two and uses the \(1/V\) Fourier normalization.
+Since \(V=16^3=4096\),
+\[
+ \boxed{\quad
+ g_R^{(6)}={2\over V}G_R^{\mathbb C}
+ \leq M_\chi^2
+ {7807039549231\over12700800000000}.
+ \quad}                                               \tag{4.8}
+\]
+The factor \(2/V\) is an explicit normalization firewall.  The lattice
+extension is a uniform upper bound conditional on the registered A1 symbol
+and regulator hypotheses; A1 itself remains a finite-grid authority.
+
+\section*{5. Terminal anisotropic trace-owner lemma}
+\hypertarget{section-5-terminal-young}{ }
+
+This section states exactly what (4.8) proves and no more.  Let
+\(\Gamma_R\) be a translation-invariant terminal derivative covariance with
+pointwise six-real trace at most \(g_R^{(6)}\).  Let \(P\) be an orthogonal
+output projection and let the registered Pauli--Fierz coordinate obey
+\[
+ 0\preceq C_6(z)^*P C_6(z)
+ \preceq\beta_{\rm op}|z|^2\Id.                      \tag{5.1}
+\]
+From the A1 coefficients,
+\[
+ \beta_{\rm op}
+ ={169500000000\over4000000000001}
+ <{339\over8000}.                                    \tag{5.2}
+\]
+The coefficient Gram determinant is positive, and (5.1) follows from the
+Pauli operator norms and the triangle bound on the three coefficient rows.
+
+For a full terminal random field \(Z_h\), define the abstract terminal
+anisotropic trace owner
+\[
+ T_{\rm an}(Z_h)
+ ={1\over2}\E\int
+ \Tr\{P C_6(Z_h)\Gamma_R C_6(Z_h)^*P\}\,dx.          \tag{5.3}
+\]
+
+% evidence-anchor: theorem-5.1-terminal-anisotropic-sextic
+\textbf{Theorem 5.1 (terminal anisotropic sextic payment).}
+Under (4.8) and (5.1),
+\[
+ T_{\rm an}(Z_h)
+ \leq A_R\,Y_6(h)^{1/3},
+ \qquad
+ A_R={\beta_{\rm op}\over2}g_R^{(6)}V^{2/3}.         \tag{5.4}
+\]
+At \(M_\chi=1\), the safe coefficient is
+\[
+ A_R\leq{882195469063103\over264600000000000}
+ =3.334072\ldots.                                    \tag{5.5}
+\]
+For every \(\zeta_{\rm an}>0\),
+\[
+ T_{\rm an}(Z_h)
+ \leq\zeta_{\rm an}Y_6(h)
+ +{2A_R^{3/2}\over3\sqrt{3\zeta_{\rm an}}}.         \tag{5.6}
+\]
+With \(\zeta_{\rm an}=1/100\), the last constant is less than 24.
+
+\textit{Proof.}
+The trace cyclicity, positivity, and (5.1) give
+\[
+ T_{\rm an}(Z_h)
+ \leq{\beta_{\rm op}\over2}g_R^{(6)}
+       \E\|Z_h\|_2^2.                                \tag{5.7}
+\]
+For every sample, spatial Holder gives
+\[
+ \|Z_h\|_2^2\leq V^{2/3}\|Z_h\|_6^2
+ =V^{2/3}\left(\int|Z_h|^6\right)^{1/3}.             \tag{5.8}
+\]
+Probability Jensen for the concave function \(s^{1/3}\) then gives
+\[
+ \E\|Z_h\|_2^2\leq V^{2/3}Y_6(h)^{1/3}.             \tag{5.9}
+\]
+This proves (5.4).  Maximizing
+\(A_Rx-\zeta_{\rm an}x^3\) over \(x\geq0\) proves (5.6).
+The executable does not treat a rounded decimal as an upper certificate:
+it verifies exactly that the square of the constant is
+\[
+ {686585249332581678649212904712608513290193727
+  \over
+  1250470044180000000000000000000000000000000}
+ <24^2.                                               \tag{5.10}
+\]
+This proves the stated integer ceiling. \hfill\(\square\)
+
+For general regulator bound, (4.8) scales as \(M_\chi^2\) and the Young
+constant in (5.6) scales as \(M_\chi^3\).  In particular, for
+\(M_\chi\leq1\),
+\[
+ T_{\rm an}(Z_h)\leq{1\over100}Y_6(h)+24.            \tag{5.11}
+\]
+
+The field in Theorem 5.1 is the full terminal field.  No centered-future
+heat constant is needed.  Substituting an individual future increment would
+be a different theorem and would require the missing temporal owner
+intertwiner; (5.11) does not make that substitution.
+
+\section*{6. What remains ultraviolet and why}
+\hypertarget{section-6-frontier}{ }
+
+The terminal anisotropic covariance is summable because the mass difference
+adds four inverse spatial powers.  The scalar principal covariance does not
+share that gain.  Before signed owner cancellation, its model shell is
+\[
+ (24m^2+2){m^2\over m^4}=24+{2\over m^2}\longrightarrow24.              \tag{6.1}
+\]
+The shell series therefore diverges.  Absolute trace estimates cannot close
+the scalar principal sea.
+
+The remaining production target is still (2.5), with all conditional means,
+common scalar noise, cross reveals, returned low, and anchors recombined
+exactly once.  The terminal split (3.4) can be useful only after either:
+\begin{enumerate}
+\item a temporally faithful owner transfer is proved, including output
+projections, heat, reveal, collar, and low blocks; or
+\item the anisotropic term is retained inside the complete signed production
+trace excess and controlled there without a separate transfer.
+\end{enumerate}
+The scalar principal common-noise sea must remain signed in either route.
+
+\section*{7. Independent Branch-B audit}
+\hypertarget{section-7-branch-b}{ }
+
+R-141 supplies the exact finite-chart action and projected force.  A
+conditional Branch-B theorem would follow from a uniform positive Hessian
+gap on one declared reduced source/low action, a uniform origin-force bound,
+and a uniform absolute anchor.  None is currently a production input.
+
+The low coordinate cannot simply be minimized as a free stationary variable.
+The current conditional low and returned low are prescribed, distinct owner
+functionals.  If low is a nonlinear graph \(\Lambda(h)\), the pullback
+Hessian contains the connection term
+\[
+ D\cA\,D^2\Lambda,                                    \tag{7.1}
+\]
+not only the Schur complement of an ambient Hessian.  A stationary reduction
+is legal only after an attained \(C^2\) low minimizer with the same action,
+force, and anchor is constructed.  Branch B therefore remains data-gated;
+it is not an escape from the scalar signed trace-excess problem.
+
+\section*{8. Proof-route and evidence map}
+\hypertarget{section-8-route-map}{ }
+
+\begin{center}
+\begin{tabular}{p{0.25\textwidth}p{0.17\textwidth}p{0.48\textwidth}}
+\hline
+Route & Verdict & Reusable consequence\\
+\hline
+Global \(\cU=C\cY\), \(\|C\|<1\) & conditional & Sufficient by R-143/R-144, but stronger than the pointwise T-050 burden.\\
+Bounded affine residual & conditional & R-144 permits a uniformly bounded returned-low residual; no production bound is registered.\\
+Direct trace excess (2.5) & advanced & Exact T-050 criterion with \(\eta<5/11\), \(\zeta<27/100\).\\
+R-129 window & valid, nonsharp & \(9/20,3/20\) guarantees augmented-action positivity; it is not the maximal T-050 window.\\
+Terminal anisotropic covariance & advanced, scoped & Exact trace-class bound and terminal sextic payment; no temporal owner transfer.\\
+Scalar principal absolute trace & failed & Shell contribution tends to 24; signed cancellation is load bearing.\\
+Stationary-low Schur reduction & unavailable & Current low is a prescribed graph; connection terms or an attained \(C^2\) minimizer are required.\\
+Reduced Hessian/force/anchor & conditional & Exact R-144 implication, but all three production-uniform inputs are absent.\\
+\hline
+\end{tabular}
+\end{center}
+
+This map separates a proved theorem, a conditional implication, a failed
+method, and missing data.  It must not be read as eight independent claims;
+they are subroutes of the single A13/T-050 burden.
+
+\section*{9. Devil's-advocate review}
+\hypertarget{section-9-adversarial}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: The trace-excess thresholds should be shifted by
+\(9/20\) and \(3/20\).  DISMISSED.}
+Those terms belong to the augmented action and are subtracted in (2.4).
+T-050 concerns \(V^{\rm ren}=a_\pi-\cT_\pi\), so the direct thresholds are
+\(5/11\) and \(27/100\).
+
+\item \textbf{Objection: R-129 was wrong.  DISMISSED.}
+Its window is a valid stronger sufficient window which makes the augmented
+action positive.  This note corrects only its use as the purported full
+T-050 acceptance range.
+
+\item \textbf{Objection: The raw lattice sum is already the physical trace.
+UPHELD against the shortcut.}
+The six-real pointwise trace is \((2/V)G_R^{\mathbb C}\).  Equations
+(4.7)--(4.8) keep realification and Fourier normalization explicit.
+
+\item \textbf{Objection: The terminal covariance split propagates through
+every temporal reveal.  UPHELD.}
+R-129 gives a finite-dimensional noncommuting increment fixture, and R-143
+lists the missing owner data.  The production-temporal transfer is false as
+an inference and remains open as a theorem.
+
+\item \textbf{Objection: The rounded decimal \(23.432\ldots\) is a certified
+upper bound.  UPHELD against that presentation.}
+Decimal square roots round.  The certificate instead proves the rational
+squared inequality (5.10) and reports the integer ceiling 24.
+
+\item \textbf{Objection: The kinetic square bound follows merely from
+\(Y>0\).  UPHELD.}
+The displayed comparison with coefficient one uses the pinned \(Y=1\).
+Both executable paths assert that exact value before using (3.9).
+
+\item \textbf{Objection: The anisotropic estimate closes T-050.  DISMISSED.}
+It is terminal-only.  The scalar principal sea, production temporal transfer,
+complete low/anchor, and the full trace-excess estimate remain open.
+
+\item \textbf{Objection: A positive reduced Hessian removes the need for an
+anchor.  DISMISSED.}
+Convexity controls variation, not absolute normalization.  Branch B still
+needs the same reduced action's origin force and anchor uniformly.
+\end{enumerate}
+
+\section*{10. Result footer}
+\hypertarget{section-10-verification}{ }
+
+The primary certificate uses exact rational arithmetic and SymPy Sturm
+chains.  The independent certificate uses only the Python standard library,
+implements polynomial division and Sturm counting directly, and enumerates
+the integer shells.  They independently reconstruct the A1 mass, kinetic
+and coefficient inputs, regulator scaling, Fourier normalization, lattice
+sum, Young ceiling, and T-050 thresholds, then compare every exact output.
+
+Dependencies: A1, A7, GATES, R-104, R-129, R-130, R-141--R-144.
+
+Reproduction command:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+  a13_classii_weighted_trace_excess_anisotropic_covariance_
+  sextic_reduction_verify.py
+\end{verbatim}
+
+Expected output: integrated PASS after primary 71/71 and non-importing
+independent 90/90, with deterministic PDF, authority, scope, and public-surface
+checks.
+
+\begin{verbatim}
+Result ID: A13-CLASSII-WEIGHTED-TRACE-EXCESS-ANISOTROPIC-
+  COVARIANCE-SEXTIC-REDUCTION.
+Ledger ID: R-145.
+Precise statement: direct trace excess below 5/11 and 27/100 implies
+  T-050 without a common contraction. The terminal anisotropic
+  covariance is trace class and its abstract terminal owner is paid
+  by zeta_an=1/100 and constant 24 when M_chi<=1.
+Scope: terminal total covariance; uniform lattice majorant conditional
+  on the A1 symbol/regulator; no temporal-owner transfer.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Audit: AUDIT-2026-08-02-A13-R129-TRACE-EXCESS-ACCEPTANCE-WINDOW.
+Falsification gate: any failed hash, mass/kinetic/shell calculation,
+  2/V normalization, coefficient, Young, scope, or release assertion.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no production temporal owner, scalar principal estimate,
+  complete low/anchor, T-050, A13, Nelson, measure, or Sector-A closure.
+Proof complete: false. T-050 closed: false. Sector A closed: false.
+Next required action: transfer terminal anisotropy legally; then prove the
+  signed scalar sea and complete low/anchor owner.
+\end{verbatim}
+
+\endgroup

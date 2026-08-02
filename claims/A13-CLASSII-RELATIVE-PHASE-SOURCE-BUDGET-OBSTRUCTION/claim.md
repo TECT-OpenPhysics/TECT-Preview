@@ -4963,3 +4963,39 @@ T5--T7 promotion remain open. Tier stays T4.
   and residual/anchor data or complete Hessian/Feshbach/force/anchor data,
   T-050, both A13 gates, `OVERLAP_src`, Nelson, removals, interacting measure,
   and Sector A remain open at T4.
+- 2026-08-02: Registered
+  `A13-CLASSII-WEIGHTED-TRACE-EXCESS-ANISOTROPIC-COVARIANCE-SEXTIC-REDUCTION`
+  (R-145) as a scoped analytic/exact/executed/audited advance.  Returning to
+  the exact action identity `Vren=a_pi-T_pi` shows that the direct acceptance
+  criterion is
+  `T_pi<=eta X+zeta Y6+B` with `eta<5/11`, `zeta<27/100`, and a uniform lower
+  anchor for `a_pi`.  A strict global complete-feature contraction is only one
+  sufficient construction.  The R-129 bounds `eta<9/20`, `zeta<3/20` remain
+  correct as a stronger positive-augmented-action window; the new audit records
+  their nonsharp scope rather than retracting them.
+
+  For the registered A1 family-lock covariance, exact Sturm isolation of the
+  three mass eigenvalues, the pinned fourth-order kinetic lower bound, and
+  exact sup-norm shell counting give anisotropic complex Fourier trace at most
+  `7807039549231/6201562500`.  Realification into six pointwise coordinates and
+  the Fourier normalization contribute the explicit factor `2/V`, yielding
+  `7807039549231/12700800000000`.  The Pauli/Fierz operator coefficient is
+  below `339/8000`; spatial Holder, terminal-randomness Jensen, and exact Young
+  arithmetic then pay the abstract terminal anisotropic owner by
+  `(1/100)Y6+24` for regulator bound one.  This spends only `1/100` of the
+  direct sextic trace window and leaves `13/50`.
+
+  This is deliberately terminal-only.  Total covariance does not identify the
+  temporally faithful future-increment owners, collars, reveals, or returned
+  low blocks, so their anisotropic transfer remains unproved.  The scalar
+  principal absolute derivative trace is shellwise nonsummable and must keep
+  its signed cancellation.  Branch B remains unavailable without the same C2
+  reduced action, a uniform effective Hessian gap, origin force, and anchor.
+  `AUDIT-2026-08-02-A13-R129-TRACE-EXCESS-ACCEPTANCE-WINDOW` and
+  `EXP-000603--EXP-000607` preserve the exact advance and both failed
+  extrapolations.  Primary `71/71` and non-importing independent `90/90`
+  certificates agree on every exact value; integrated `333/333` embeds all
+  `161` child rows exactly once and adds `172` authority, PDF, scope,
+  exploration, aggregation, and public-surface checks.  T-050, both A13
+  gates, `OVERLAP_src`, Nelson, removals, the
+  interacting measure, and Sector A remain open at T4.

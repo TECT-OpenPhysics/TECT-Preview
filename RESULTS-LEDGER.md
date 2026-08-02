@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-145](#r-145) | Weighted trace-excess criterion and terminal anisotropic covariance sextic reduction | Scoped T4 analytic/exact/executed/audited advance. Writing the renormalised action as `Vren=a_pi-T_pi`, the exact T-050 implication only requires `T_pi<=eta X+zeta Y6+B` with `eta<5/11`, `zeta<27/100`, and `a_pi>=-C0`; a strict global complete-feature contraction is sufficient but not necessary. For the registered A1 family-lock covariance, exact Sturm isolation, lattice counting, and the fourth-order kinetic lower bound give complex anisotropic Fourier sum at most `7807039549231/6201562500` and six-real pointwise derivative trace at most `7807039549231/12700800000000`. At abstract terminal total-covariance level, the anisotropic owner is therefore bounded by `(1/100)Y6+24` for regulator bound one. The R-129 window `eta<9/20`, `zeta<3/20` remains valid but nonsharp. No temporally faithful transfer of the terminal split, scalar principal-sea signed estimate, complete low/anchor bound, T-050, A13, Nelson theorem, or Sector-A closure is proved |
 | [R-144](#r-144) | Uniform affine-residual Douglas one-use theorem and production-data boundary | Scoped T4 analytic/exact/conditional/executed/audited advance. If the complete feature action is `A=a+(||Y||^2-||U||^2)/2`, `U=CY+E`, `||C||<=rho<sigma<1`, `||E||<=M`, and `a>=-C0` uniformly, then `||U||^2<=sigma^2||Y||^2+sigma^2 M^2/(sigma^2-rho^2)` with a sharp residual constant. For the R-143 complete feature this gives strict one-use coefficients `(9/20)sigma^2` and `(3/20)sigma^2` simultaneously, so exact returned-low cancellation and complete second jets are unnecessary on this global route. Independently, a positive reduced/source-low effective Hessian gap with reduced origin-force and anchor bounds is sufficient: for chosen `p=11/10`, `9/20<1/(2p)=5/11` with margin `1/220`, while `3/20<gamma/6=27/100` with margin `3/25`. Hostile pre-registration audits corrected both the draft threshold comparison and the R-142 fibre Schur coefficient. Exact phase-cycle, returned-low, and equal-first-jet fixtures prove that the registered local q567/core data do not determine the production sign. The canonical temporal/common-output/low chart, production contraction or reduced Hessian gap, residual/force/anchor bounds, T-050, and Sector-A closure remain open |
 | [R-143](#r-143) | Corrected q=5,6,7 feature contraction and common-noise anisotropy tail | Scoped T4 analytic/exact/conditional/executed/audited advance. The R-142 `(17,33,65)` collision is corrected from a half-output q567 label to a physical-output q678 witness; the exact replacement `(10,20,40)` with carriers `(4M,2M,M)` has common output `80M`, gaps `(5,6,7)`, and one rational-coefficient sign. The complete recombined core is `2A=||Y||^2-||U||^2`, with source and sextic included once, and finite-family positivity is equivalent to one Douglas mixed-Gram contraction. A positive-diagonal/mixed-negative fixture proves diagonal tests insufficient; exact residual and source-null Feshbach formulas isolate the adverse coordinate. The A1 covariance has an exact common-endpoint scalar-plus-anisotropic probe factor, and certified rational mass intervals yield explicit high-shell derivative-trace bounds with diagnostic first included shells `N=27` and `N=49`. Missing production U/Phi jets, cross reveals, low blocks, and owner intertwiners prevent a production matrix verdict, T-050, or Sector-A closure |
 | [R-142](#r-142) | Innovation-compressed common feature, SU(2) fibre/covariance split, and signed collar band | Scoped T4 analytic/exact/conditional/executed advance. Common-future centering compresses the complete mixed-endpoint signature exactly from `(U,J,R)` with sign `(+,-,+)` to `(U,Phi)` with sign `(+,-)`; a shared covariance-square-root probe pins the actual fixed-chart trace feature, and the exact Hessian retains the favorable `D Phi^* D Phi` product covariance and both connection terms. The coefficient-exact SU(2) fibre Gram has four active modes, two phase kernels, transverse eigenvalue `339 r^2/(2000P)`, and a closed radial block. The registered A1 family-lock covariance is not SU(2)-invariant but splits into a scalar principal sea plus a positive anisotropic remainder four derivative-covariance powers smoother. A legal scalar two-root/two-visit chart has minimum at least `m_G=0.7653207581...` and covariance direction at least `21.08325...`; nevertheless the exact moved C8/C10 rational scalar-slice bands have finite-cutoff negative directions. The full non-Toeplitz production common-heat/trace/forest/low cross-reveal matrix, its Loewner edge, T-050, and Sector-A closure remain open |
@@ -163,6 +164,43 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-145"></a>
+### R-145 -- Weighted trace-excess criterion and terminal anisotropic covariance sextic reduction
+
+- **Statement.**  Let the exact R-104/R-143 action be written as
+  `Vren=a_pi-T_pi`.  If `a_pi>=-C0` and
+  `T_pi<=eta X+zeta Y6+B` uniformly, then the canonical T-050 payment closes
+  whenever `eta<5/11` and `zeta<27/100`.  Thus strict contraction of the full
+  feature is one sufficient route, not the acceptance criterion itself.  For
+  the registered A1 family-lock covariance, the terminal anisotropic
+  derivative trace is finite: the exact certified complex Fourier sum is at
+  most `7807039549231/6201562500`, and realification plus the `1/V` Fourier
+  normalization gives the six-real pointwise trace bound
+  `7807039549231/12700800000000`.  The abstract terminal anisotropic owner is
+  consequently paid by `(1/100)Y6+24` when the scalar regulator bound is one.
+- **Where proved.**  Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-weighted-trace-excess-anisotropic-covariance-sextic-reduction-260802-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_weighted_trace_excess_anisotropic_covariance_sextic_reduction_manifest.json`,
+  and the primary, non-importing independent, and integrated executable
+  certificates listed there.
+- **Reuse scope.**  The weighted trace-excess implication is an abstract
+  one-use lemma.  The trace and Young estimates apply to the registered
+  terminal total covariance with the pinned torus, kinetic symbol, family-lock
+  masses, and regulator oracle.  They do not identify an arbitrary temporal
+  future-increment covariance or license moving the terminal split through the
+  production filtration.
+- **Audit boundary.**  R-129's `eta<9/20`, `zeta<3/20` window is a valid but
+  nonsharp positive-augmented-action sufficient condition; it is not
+  retracted.  The scalar principal absolute derivative trace is shellwise
+  nonsummable and must retain signed cancellation.  The complete low/anchor
+  owner is also absent.  Hence T-050, both A13 gates, `OVERLAP_src`, Nelson,
+  removals, the interacting measure, and Sector A remain open.
+- **Tier / publication target.**  Scoped T4 analytic/exact/executed/audited
+  advance; suitable as a trace-class and one-use-budget lemma after external
+  review, not as a constructive-measure theorem.
 
 <a id="r-144"></a>
 ### R-144 -- Uniform affine-residual Douglas one-use theorem and production-data boundary
