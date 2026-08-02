@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-125 live-surface verifier repair and complete-prefix route audit] - 2026-08-03
+
+Recorded EXP-000652--EXP-000655. The low-completed R-125/R-136 owner identity now fixes the order of event completion, the exact Abel classifier shows that the R-139 scalar collar weight is constant across insertion events, and the once-owned ledger retains exact source margin 1/220 and sextic margin 11/100 for one complete production-matrix test. Registered AUDIT-2026-08-03-A13-R125-MUTABLE-SURFACE-PINNING: the frozen R-125 mathematics reruns, while five obsolete live-prose checks account for the historical verifier's 159/164 current result. A new evolution-aware companion preserves the immutable R-125 evidence chain and passes 31/31 by separating historical proof checks from current routing checks. The next T-050 target is the source-pulled selfadjoint production incidence matrix and its generalized-eigenvalue or graph-Schur test. T-054 remains the phase-neutral candidate-action track. No theorem, tier, gate, phase, PDE, Nelson, or Sector-A verdict changes.
+
 ## [A13 zero-control future-variance domination no-go] - 2026-08-02
 
 Recorded the exact production no-go for the EXP-000648 successor comparison V1<=Q1. With zero legal controls and common heat retained, same-root antipodal field/current independence turns E1(Q1-V1) into the negative coefficient-smoothing variance -E||(C6-E2 C6)D1^(1/2)||_HS^2; the linear Pauli rows make the failure strict, and the conditional point g1=0 extends by continuity to an open set. EXP-000651 records three independent audits. This retires absolute rootwise endpoint positivity and Poincare repair only. The baseline-subtracted event-complete action, R-063 forest, complete low/balanced response, source/sextic budgets, T-050, A13, every phase/PDE verdict, Nelson, and Sector A remain open.

@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-08-03-A13-R125-MUTABLE-SURFACE-PINNING](#audit-2026-08-03-a13-r125-mutable-surface-pinning) | treat exact July 30 wording in the evolving A13 status, T-050 route, and Sector-A frontier as immutable R-125 theorem evidence | the frozen R-125 mathematics still reruns, but five live-surface rows become stale after valid successor progress; preserve the historical package and validate current routing with a separate structural companion audit |
 | [NG-2026-08-02-A13-ZERO-CONTROL-FUTURE-VARIANCE-DOMINATION](#ng-2026-08-02-a13-zero-control-future-variance-domination) | prove the earlier-root absolute comparison `V1<=Q1` from the production covariance ordering and full six-row Gram structure | at zero control the averaged difference is exactly the negative coefficient-smoothing variance `-E||(C6-E2 C6)D1^(1/2)||_HS^2<0`; rootwise endpoint positivity is retired, while the relative event-complete action and its forest/low/source/sextic companions remain open |
 | [AUDIT-2026-08-02-A13-R150-SCALAR-SLICE-AS-FULL-PRODUCTION-COVARIANCE](#audit-2026-08-02-a13-r150-scalar-slice-as-full-production-covariance) | substitute the N001 scalar covariance for the actual A1 three-family production covariance | the scalar slice omits the family masses and off-diagonal lock matrix; R-150 replaces it by the exact positive `A(p)=a(p)I+M` covariance before any theorem is registered |
 | [AUDIT-2026-08-02-A13-R150-COINCIDENT-CROSS-AS-PROJECTED-CROSS](#audit-2026-08-02-a13-r150-coincident-cross-as-projected-cross) | promote the same-point cancellation `K_i(x,x)=0` to a zero nonlocal or Fourier-coefficient cross synthesis | the exact two-point kernel is `2p_i Gamma(p) sin(p.(x-y))/V` and the coefficient cross is a nonzero skew block; a normalized-circle projection fixture has expected packets `-1/2` and `+1/2` |
@@ -237,6 +238,32 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="audit-2026-08-03-a13-r125-mutable-surface-pinning"></a>
+### AUDIT-2026-08-03-A13-R125-MUTABLE-SURFACE-PINNING -- separate immutable proof evidence from live routing
+
+**Failure mode.** The issued R-125 integrated verifier mixed immutable theorem,
+source, manifest, note, PDF, and child-run checks with exact July 30 tokens from
+the evolving A13 `status.json`, T-050 note, and Sector-A theorem-map frontier.
+Valid successor results through R-150 therefore made the old one-command run
+report failure even though none of the R-125 mathematics had changed.
+
+**Evidence.** A fresh temporary rerun gives primary `51/51`, non-importing
+independent `39/39`, and integrated `159/164`.  The five failures are exactly
+`surface/status`, `surface/sector_map`, `semantic/status_no_overclaim`,
+`semantic/status_next_action`, and `semantic/successor_alignment`; all other
+historical rows pass.  The stored issued result remains `164/164` with aggregate
+`254/254`.  The R-125 manifest and verifier retain their issued SHA-256 pins,
+and later A13 packages pin the unchanged R-125 manifest.
+
+**Consequence.** The R-125 v1.0.0 verifier, manifest, and issued result remain
+immutable.  The companion
+`verification/scripts/audit_r125_historical_live_surface_compatibility.py`
+reruns the historical verifier into a temporary artifact, fails on any
+non-live historical defect, and separately checks current status, T-050,
+taxonomy, frontier, and proof-map invariants.  This is a verification-routing
+repair only: no formula, theorem, tier, gate, phase, PDE, Nelson, or Sector-A
+verdict changes.
 
 <a id="ng-2026-08-02-a13-zero-control-future-variance-domination"></a>
 ### NG-2026-08-02-A13-ZERO-CONTROL-FUTURE-VARIANCE-DOMINATION -- the production future variance exceeds its raw endpoint budget

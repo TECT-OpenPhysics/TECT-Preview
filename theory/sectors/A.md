@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-08-03-A13-R125-MUTABLE-SURFACE-PINNING | separate immutable proof evidence from live routing |  |
 | NG-2026-08-02-A13-ZERO-CONTROL-FUTURE-VARIANCE-DOMINATION | the production future variance exceeds its raw endpoint budg |  |
 | AUDIT-2026-08-02-A13-R150-SCALAR-SLICE-AS-FULL-PRODUCTION-COVARIANCE | use the full A1 family covariance |  |
 | AUDIT-2026-08-02-A13-R150-COINCIDENT-CROSS-AS-PROJECTED-CROSS | local cancellation is not operator cancellation |  |
