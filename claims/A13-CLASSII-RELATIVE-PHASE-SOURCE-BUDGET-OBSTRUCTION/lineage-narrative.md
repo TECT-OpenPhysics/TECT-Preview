@@ -1096,6 +1096,28 @@ endpoint theorem.
     be restored once. T-050, both A13 gates, every phase verdict, and Sector A
     remain open at T4.
 
+73. **Direct two-root endpoint Hessian and uniform local source gap.** R-151
+    replaces the attempted independent forest/balanced/low block assembly by
+    differentiating the complete A7 endpoint once.  In the unrestricted
+    `12x12` sign/internal linear feedback chart from a simultaneous `+/-p`
+    root to a simultaneous `+/-2p` root, with nonzero admissible dual-lattice
+    `p` and all four modes retained, the reduced first variation has no
+    zero Fourier frequency.  The exact Hessian contains one nonnegative
+    covariance term and the complete mixed and cross-synthesis responses.
+    R-130's global six-real Hessian envelope, the exact A1 mass floor
+    `M>(7/250)I`, and a rational Sturm certificate give endpoint loss strictly
+    below `4/5`; the exact source Hessian is `9/10` and the sixth-power
+    Hessian is nonnegative.  The radial certificate holds for every
+    `x=|p|^2>=0`; thus every retained admissible zero-past linear pair and
+    every nonzero `H` has a strict local gap above `1/10`.  Fixed-terminal forest, future,
+    balanced, trace, and low coordinates remain legal audits but are not
+    independent reserves.  Non-lattice or unretained momenta, nonzero past
+    means, nonlinear feedback, multi-root
+    aggregation, T-050, phase/PDE selection, and Sector A remain open at T4.
+    The next bounded A13 lift tests those missing connections; if it supplies
+    no owner-complete global mechanism, the primary physical-model track moves
+    to the phase-neutral T-054/T-052 tournament.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

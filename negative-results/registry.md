@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-A13-INDEPENDENT-FOREST-BALANCED-OWNER-FABRICATION](#ng-2026-08-03-a13-independent-forest-balanced-owner-fabrication) | construct separate forest, balanced/Schur, trace, future, and low quadratic reserves after fixing one terminal scalar and filtration, then add them to the complete A7 endpoint Hessian | the Doob increments are unique and these objects are alternate expansions or estimates of the same square-minus-trace owner; the direct Gaussian endpoint Hessian already contains every covariance and cross-synthesis response once, so independent addition double counts rather than completes the owner |
 | [AUDIT-2026-08-03-A13-R125-MUTABLE-SURFACE-PINNING](#audit-2026-08-03-a13-r125-mutable-surface-pinning) | treat exact July 30 wording in the evolving A13 status, T-050 route, and Sector-A frontier as immutable R-125 theorem evidence | the frozen R-125 mathematics still reruns, but five live-surface rows become stale after valid successor progress; preserve the historical package and validate current routing with a separate structural companion audit |
 | [NG-2026-08-02-A13-ZERO-CONTROL-FUTURE-VARIANCE-DOMINATION](#ng-2026-08-02-a13-zero-control-future-variance-domination) | prove the earlier-root absolute comparison `V1<=Q1` from the production covariance ordering and full six-row Gram structure | at zero control the averaged difference is exactly the negative coefficient-smoothing variance `-E||(C6-E2 C6)D1^(1/2)||_HS^2<0`; rootwise endpoint positivity is retired, while the relative event-complete action and its forest/low/source/sextic companions remain open |
 | [AUDIT-2026-08-02-A13-R150-SCALAR-SLICE-AS-FULL-PRODUCTION-COVARIANCE](#audit-2026-08-02-a13-r150-scalar-slice-as-full-production-covariance) | substitute the N001 scalar covariance for the actual A1 three-family production covariance | the scalar slice omits the family masses and off-diagonal lock matrix; R-150 replaces it by the exact positive `A(p)=a(p)I+M` covariance before any theorem is registered |
@@ -238,6 +239,39 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-a13-independent-forest-balanced-owner-fabrication"></a>
+### NG-2026-08-03-A13-INDEPENDENT-FOREST-BALANCED-OWNER-FABRICATION -- fixed-terminal owner coordinates are not independent reserves
+
+**Failure mode.** After fixing the terminal A7 square-minus-trace scalar and
+its filtration, construct a forest block, a balanced/Schur block, a future
+block, a primitive trace block, and a complete-low block as if they were
+independent quadratic reserves; then add them to an endpoint Hessian already
+differentiated from the complete scalar.
+
+**Evidence.** The terminal and filtration uniquely determine the Doob
+increments.  The R-063 forest/future identity, balanced Schur estimates,
+trace coordinates, and low decompositions are alternate expansions or
+estimates of that same owner.  Direct differentiation of the complete A7
+endpoint gives the `Q2`, mixed `Q1-C1`, and cross-synthesis `K1-K1` responses
+once.  No additional independent block is created by rewriting them.  See
+R-151 note Sections 3 and 6, primary `20/20`, non-importing independent
+`19/19`, the integrated certificate in the R-151 manifest, and
+`EXP-000657--EXP-000659`.
+
+**Consequence.** Retire the independent-fabrication matrix route.  Build the
+finite-cylinder matrix by differentiating one complete endpoint.  A separate
+forest/future or balanced calculation is admissible only as an audit of the
+registered owner identity, not as a second payment.
+
+**Boundary.** This does not invalidate the R-063 forest, R-125 future
+variance, balanced response, or historical complete low in their registered
+coordinates.  It does not prove their production matching outside the
+declared zero-past linear two-root chart, aggregate multiple roots, close
+T-050 or A13, select a phase, validate a PDE, prove Nelson or removals, or
+close Sector A.
+
+**Registered.** 2026-08-03.
 
 <a id="audit-2026-08-03-a13-r125-mutable-surface-pinning"></a>
 ### AUDIT-2026-08-03-A13-R125-MUTABLE-SURFACE-PINNING -- separate immutable proof evidence from live routing

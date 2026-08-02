@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-151](#r-151) | Direct two-root endpoint Hessian and uniform local source gap | Scoped T4 analytic/exact/executed/audited local theorem and owner-coordinate no-go. In the full `12x12` sign/internal linear feedback chart `h2=t H xi1` for simultaneous antipodal roots `+/-p` and `+/-2p`, with nonzero admissible dual-lattice `p` and all four modes retained, zero strict past, and a stationary common-even background, the exact complete endpoint has zero first variation and, for `H != 0`, Hessian loss strictly below `4/5 ||H||_F^2`. The radial certificate holds for every `x=|p|^2>=0`. The source Hessian is exactly `9/10 ||H||_F^2` and the sixth-power Hessian is nonnegative, yielding a strict augmented local gap above `1/10 ||H||_F^2`. Forest, balanced, future, trace, and low coordinates may audit the fixed terminal owner but cannot be added as independent reserves. Non-lattice or unretained momenta, nonzero past means, nonlinear feedback, multi-root aggregation, T-050, phase/PDE selection, and Sector A remain open |
 | [R-150](#r-150) | Production antipodal last-insertion zero-cross boundary | Scoped T4 analytic/exact/executed/audited production-cylinder theorem and method boundary. For the actual A1 `L=16` Fourier pairs `+/-k` and `+/-2k`, with the full three-family lock covariance, a simultaneous antipodal pair has exact same-point field-current cross synthesis zero, while its two-point kernel and Fourier-coefficient cross synthesis are nonzero. R-149 therefore makes the conditional absolute final full-output/full-reveal endpoint atom nonnegative and permits zero source/sextic suballocation for that atom only. A constant-Gram fixture gives a negative relative endpoint secant, separate Fourier projections give expected packets `-1/2` and `+1/2`, and an earlier-root future-feedback fixture gives exact unhalved owner `-sqrt(6)/8`. The relative secant, earlier feedback connection, complete two-root forest/balanced/low/source/sextic owner, T-050, every phase verdict, and Sector A remain open |
 | [R-149](#r-149) | Cross-synthesis Stein owner, radial-slice boundary, and full-internal companion positivity | Scoped T4 analytic/exact/executed/audited owner identity and scope correction. For an affine same-root field/current pair `W=w+Xg`, `V=v+Yg`, the exact raw/covariance-normal square-minus-trace owner depends on the cross synthesis `K=XY*`, not only on the endpoint marginals `Gamma_x=XX*` and `Gamma_v=YY*`; an exact full-reveal fixture with identical marginals gives opposite owner signs for every positive covariance scale. The real active-spectator radial coefficient energy is an affine saddle, so global coefficient convexity is unavailable, but that slice is neither a physical control Hessian nor the full internal owner. In a separately declared co-synthesis with all three complex components, all three Pauli generators, all six coefficient rows, and the registered A6/A7 six-real covariance `Gamma=diag(C(a),C(a))`, where the complex covariance is `2C(a)`, the tensor is strictly positive for every `a>=0`, `R>=0`, `e>0`, and `P>0`. The adverse radial sign does not survive there, but the calculation changes both rows and cross-synthesis rank and isolates no causal companion. The physical spatial cross synthesis, heat, projectors, owner incidence, adapted feedback, complement/low leakage, relative source and sextic, T-050, every phase verdict, and Sector A remain open |
 | [R-148](#r-148) | Canonical fresh-prefix rank obstruction, active-spectator lift boundary, and coefficient-parameter Hessian correction | Scoped T4 analytic/exact/executed/audited rank/lift and parameter-derivative boundary. The registered active-spectator covariance restriction is positive definite, so every nonzero R-146 proportional canonical block has rank two and cannot equal the rank-one fresh final innovation of the exact R-147 line. This excludes only the unchanged fresh block, not a new full-rank chart or a corrected adapted past. In a separately declared last-root coefficient chart, at each fixed adverse point the exact trace-bracket mismatch is positive for sufficiently small noise. With the current prefactor held fixed, the coefficient-background parameter gradient uses `f'''` and its Hessian uses `f''''`; the small-noise curvature is positive but the gradient is nonzero. No physical control Hessian is identified. Diagonal coefficient energy does not identify the complete owner. T-050, every phase verdict, and Sector A remain open |
@@ -169,6 +170,67 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-151"></a>
+### R-151 -- Direct two-root endpoint Hessian and uniform local source gap
+
+- **Statement.**  Let the simultaneous antipodal roots `+/-p` and `+/-2p`
+  be represented in the A6/A7 six-real convention, where `p` is a nonzero
+  admissible dual-lattice momentum and the cutoff retains all four modes. Let
+  `h2=t H xi1`, with arbitrary `H in R^(12x12)`, shift the second root from
+  the first.  Under zero deterministic strict past, a stationary common-even
+  Gaussian background, and common-even scalar regulator multipliers bounded
+  by one, the complete covariance-normal A7 endpoint satisfies
+  `R'(0)=0` and
+  `R''(0)[H,H]>-(4/5)||H||_F^2` for every `H != 0`.
+- **Exact Hessian.**  Writing `B=C6*C6`, endpoint field covariance `C_t`,
+  current covariance `Q_t`, and field-current cross covariance `K_t`, two
+  Gaussian integrations by parts give one exact scalar endpoint identity.
+  At `K_0=0`, its Hessian is the sum of the nonnegative
+  `Tr(Q2 E B)` term, the mixed `Q1-C1` response, and the `K1-K1` response.
+  The full `12x12` chart retains all sign-to-sign and six-real internal
+  couplings; no scalar or same-sign restriction is used.
+- **Uniform certificate.**  R-130's pointwise six-real coefficient-Hessian
+  envelope gives the exact norm factor `156 H6 |p|^2 a^2 b^2`, and antipodal
+  normalization plus spatial integration gives loss at most
+  `624 H6 x/[V f(x)f(4x)]`.  The production mass satisfies
+  `M>(7/250)I`, with leading shifted minors `9/125`, `1211/250000`, and
+  `89/31250000`.  An exact rational Sturm chain has signs
+  `(+,-,-,+,+)` at zero and `(+,+,-,-,+)` at positive infinity, both with
+  two variations, so the radial loss is strictly below `4/5` for all `x>=0`.
+  The `9/20` source action has Hessian `9/10`, while the sixth-power Hessian
+  is nonnegative.  Therefore the augmented local gap is strictly above
+  `1/10 ||H||_F^2` for `H != 0`.
+- **Owner-coordinate consequence.**  A fixed terminal and filtration have
+  unique Doob increments.  Forest/future, balanced/Schur, trace, and low
+  expressions are alternate expansions or estimates of the same terminal
+  square-minus-trace owner.  They may be used to audit the registered
+  identity `2Pcomp=F063_ad-Vfuture`, but adding independently fabricated
+  versions to the already complete endpoint double counts it.
+- **Where proved.**  Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-two-root-endpoint-hessian-uniform-local-gap-boundary-260803-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_two_root_endpoint_hessian_uniform_local_gap_boundary_manifest.json`,
+  and the primary, non-importing independent, and integrated exact
+  certificates listed there.
+- **Reuse scope.**  The theorem is reusable for isolated simultaneous
+  antipodal `p:2p` pairs at admissible dual-lattice momenta with both roots
+  retained, arbitrary linear sign/internal feedback, zero strict past,
+  stationary common-even backgrounds, and bounded common-even scalar
+  multipliers.  It is local in control amplitude; only its radial algebraic
+  certificate extends to every `x>=0`.
+- **Audit boundary.**  R-151 does not cover non-lattice or unretained
+  momenta, nonzero strict-past means,
+  nonlinear feedback, cross-pair or full directed-union aggregation, or
+  identify the historical complete-low object.  It proves no T-050 or A13
+  closure, Nelson theorem, removal, interacting measure, phase preference or
+  exclusion, PDE validation or replacement, or Sector-A closure.
+- **Tier / publication target.**  Scoped T4 analytic/exact/executed/audited
+  finite-cylinder endpoint-Hessian lemma and owner-coordinate no-go; reusable
+  after external review of A6/A7 realification, antipodal normalization, the
+  two Gaussian-IBP factors, R-130 half-Hessian convention, dimension-six
+  nuclear-norm factors, spatial volume, and Sturm endpoint signs.
 
 <a id="r-150"></a>
 ### R-150 -- Production antipodal last-insertion zero-cross boundary

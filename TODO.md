@@ -3,12 +3,12 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 6 · Done (recent) 44
+Counts: In progress 1 · Next up 2 · Blocked 2 · Backlog 5 · Done (recent) 44
 
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
-  - EXP-000652--EXP-000654 restore the exact low-completed R-125/R-136 owner identity, classify unequal event weights by Abel prefix cones, and audit the once-owned budget. The R-139 scalar collar weight is constant across insertion events for each fixed root/spatial cell, so telescope the complete event owner before weighting; genuinely event-dependent covariance weights still require a production prefix sign. Existing allocations plus the R-146 anisotropy leave exact source margin 1/220 and sextic margin 11/100, so budget exhaustion is not the present obstruction, but prefix, balanced, far, and low terms cannot reuse the R-130 remainder. Next build one source-pulled selfadjoint production incidence matrix containing the relative forest-minus-variance prefix, complete low and returned mean, balanced response, forward/legal-reverse/far blocks, source, and sextic exactly once, then test its generalized eigenvalue or graph-Schur condition. EXP-000655 and AUDIT-2026-08-03-A13-R125-MUTABLE-SURFACE-PINNING separate immutable R-125 evidence from evolving routing. T-054 remains the phase-neutral physical model-selection track. T-050, A13, Nelson, every phase/PDE verdict, and Sector A remain open.
+  - R-151 proves a strict radial origin-Hessian gap above 1/10 for every x>=0 in the complete 144-real-coordinate zero-past linear p:2p endpoint chart; on the torus the theorem applies only to nonzero admissible dual-lattice p with +/-p and +/-2p retained, and to H!=0. Exact endpoint loss is below 4/5, source Hessian is 9/10, and the terminal sixth-power Hessian is nonnegative. EXP-000657--EXP-000659 retire independently fabricated forest/balanced/low reserves, derive the one complete Gaussian covariance Hessian, and certify the A1/Sturm gap; EXP-000660 records the post-audit lattice-retention and H!=0 scope correction. T-050 remains open because non-lattice or unretained modes, nonzero strict-past means, nonlinear feedback, interacting-root aggregation, historical low matching, and the full directed source union are not covered. Perform one bounded lift to nonzero affine past and legal nonlinear feedback, then test owner-complete multi-root aggregation without source reuse. If no global mechanism emerges, preserve A13 as conditional mathematics and move primary physical-model effort to T-054/T-052. No phase or PDE verdict follows.
   - _updated 2026-08-02_
 
 ## Next up
@@ -16,6 +16,9 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 6 · Done (recent) 44
 - **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
+- **T-054** Pre-A evidence register and candidate-functional tournament  _(owner: Codex)_
+  - Next phase-neutral physical-model priority after the bounded R-151 A13 pass. Implement strategy/pre-a-evidence-first-model-selection-charter-260802.md: freeze primary-source discovery and holdout evidence, register M0/M1 plus at least two structurally distinct candidate functionals, and build the common discriminator matrix before running T-053. T-052 is only the M1 phase-selection branch. R-151 remains conditional local mathematics and gives no preference to BCC, a uniform state, another modulation, or the current PDE. A justified shortlist or non-selection is a valid result.
+  - _updated 2026-08-02_
 
 ## Blocked
 
@@ -41,9 +44,6 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 6 · Done (recent) 44
   - _updated 2026-08-02_
 - **T-053** Boundary-mode structural programme: common massless speed and critical property activation  _(owner: Codex; claim: E2-HBAR-ORIGIN)_
   - T0 cross-sector research seed. Use strategy/boundary-massless-mode-criticality-seed-260802.md to test whether a preregistered TECT boundary simultaneously yields the correct zero-mode count, a symmetry- or fixed-point-protected common limiting speed, compact phase winding, and critical scaling. Derive the full kinetic tensor and spectra on both sides; determine nu and z; require winding and charge/action scales before identifying hbar or e; freeze inputs before any alpha or mass-ratio comparison. Stop or narrow if equal speeds require separate tuning, regulator removal splits them, z=1 is unstable, topology is absent, or constants are inserted. Bears also on C2, C6, D2, and F1; no theorem or tier action.
-  - _updated 2026-08-02_
-- **T-054** Pre-A evidence register and candidate-functional tournament  _(owner: Codex)_
-  - Implement strategy/pre-a-evidence-first-model-selection-charter-260802.md. Build a primary-source evidence register that separates observables, uncertainties, weak constraints, and candidate interpretations; freeze discovery and holdout sets; register M0/M1 plus at least two structurally distinct candidate manifests; construct the common discriminator matrix; then run T-053 across candidates and treat T-052 only as the M1 phase-selection branch. No equation is privileged, no fitted output is counted as a prediction, and a justified shortlist or non-selection is a valid result. This task is logically prior to physical interpretation of Sector A but does not revoke conditional Sector-A mathematics or automatically replace active T-050.
   - _updated 2026-08-02_
 
 ## Done (recent)

@@ -5319,3 +5319,68 @@ T5--T7 promotion remain open. Tier stays T4.
   T-050, both A13 gates, every physical phase verdict, PDE replacement,
   `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
   open at T4.
+
+- 2026-08-03: Registered
+  `A13-CLASSII-TWO-ROOT-ENDPOINT-HESSIAN-UNIFORM-LOCAL-GAP-BOUNDARY`
+  (R-151) as a direct complete-endpoint theorem for the full linear two-root
+  chart.  Let `xi1` be the simultaneous antipodal `+/-p` root and let
+  `h2=t H xi1`, with arbitrary `H in R^(12x12)`, shift the simultaneous
+  `+/-2p` root.  This retains every sign-to-sign and six-real internal
+  coupling, hence all 144 real feedback coordinates.  The torus statement
+  assumes that `p` is a nonzero admissible dual-lattice momentum and the
+  cutoff retains all four modes `+/-p,+/-2p`.
+
+  For zero deterministic strict past, a stationary common-even Gaussian
+  background, and common-even scalar regulator multipliers bounded by one,
+  two Gaussian integrations by parts reduce the complete A7
+  covariance-normal endpoint to one covariance response.  Its first
+  variation vanishes because the reduced cross frequencies are
+  `{-3,-1,1,3}`.  At the origin the exact Hessian consists of the
+  nonnegative `Tr(Q2 E B)` term, the mixed `Q1-C1` response, and the
+  `K1-K1` cross-synthesis response, each occurring once.
+
+  R-130's global six-real coefficient-Hessian envelope gives the exact norm
+  factor `156 H6 |p|^2 a^2 b^2`.  The antipodal covariance and spatial
+  volume reduce the endpoint loss to
+  `624 H6 x/[V f(x)f(4x)]`.  The A1 mass matrix obeys
+  `M>(7/250)I`, with exact shifted leading minors `9/125`, `1211/250000`,
+  and `89/31250000`.  The resulting rational quartic has a Sturm chain with
+  zero signs `(+,-,-,+,+)` and positive-infinity signs `(+,+,-,-,+)`;
+  both have two variations.  It has no positive root, so the endpoint
+  radial Hessian loss is strictly below `4/5 ||H||_F^2` for every
+  `x=|p|^2>=0`; therefore the torus inequality holds for every retained
+  admissible pair and every `H != 0`.
+  The registered `9/20` source action has Hessian exactly
+  `9/10 ||H||_F^2`, and the terminal sixth-power Hessian is nonnegative.
+  Therefore the complete augmented local Hessian has the strict uniform gap
+  `A''(0)[H,H]>(1/10)||H||_F^2` for `H != 0`.
+
+  The same derivation resolves an owner-coordinate ambiguity.  Once a
+  terminal scalar and filtration are fixed, the Doob increments are unique.
+  Forest/future, balanced/Schur, primitive trace, and low coordinates are
+  alternate expansions or estimates of the same square-minus-trace owner;
+  independently fabricating and adding them to the already complete endpoint
+  double counts it.  This failed route is registered as
+  `NG-2026-08-03-A13-INDEPENDENT-FOREST-BALANCED-OWNER-FABRICATION`.
+  `EXP-000657--EXP-000660` preserve the coordinate audit, exact Gaussian
+  Hessian identity, uniform Sturm gap, bounded successor decision, and the
+  post-audit distinction between the all-`x` radial certificate and the
+  retained dual-lattice torus theorem.
+
+  Primary `20/20` and non-importing independent `19/19` exact certificates
+  pass.  Integrated verification passes `168/168`, embedding all `39` child
+  rows exactly once and adding `129` integrator-only parity, exact-oracle,
+  authority-hash, artifact, deterministic-PDF, security/text/render,
+  public-surface, exploration, scope, and aggregation checks.  The manifest
+  pins the five-page PDF and manual inspection of every rendered page.
+
+  R-151 is local in control amplitude and assumes zero strict-past mean.  It
+  does not cover non-lattice or unretained momenta, nonzero past means,
+  nonlinear feedback, cross-pair or full
+  directed-union aggregation, or identify the historical complete-low
+  object.  It selects no phase and validates or replaces no PDE.  T-050, both
+  A13 gates, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector
+  A remain open at T4.  The bounded A13 successor is the nonzero-past and
+  nonlinear lift; absent an owner-complete global mechanism, primary physical
+  model selection moves to T-054/T-052 without revoking this conditional
+  mathematics.

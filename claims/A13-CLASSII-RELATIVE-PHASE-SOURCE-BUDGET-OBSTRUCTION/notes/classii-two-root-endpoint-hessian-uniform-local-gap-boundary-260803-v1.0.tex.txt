@@ -1,0 +1,373 @@
+% =============================================================================
+% Title: Direct two-root endpoint Hessian and uniform local source gap
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-TWO-ROOT-ENDPOINT-HESSIAN-UNIFORM-LOCAL-GAP-BOUNDARY
+% Ledger: R-151
+% Version: v1.0 -- first issued 2026-08-03; this version issued 2026-08-03
+% Status: scoped T4 analytic/exact/executed/audited local advance; no T-050 closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\HS}{\mathrm{HS}}
+
+\section*{1. Purpose and scope: result and boundary}
+\hypertarget{section-1-purpose}{ }
+
+R-150 installed the actual A1 antipodal field and current synthesis but left
+the relative final secant and earlier-root feedback open.  The subsequent
+matrix route tried to manufacture separate forest, balanced, and low blocks.
+That is unnecessary and unsafe: after the terminal scalar owner is fixed,
+those objects are alternate expansions or estimates of the same owner, not
+new orthogonal reserves.  The correct finite-cylinder matrix is obtained by
+differentiating the complete A7 endpoint once.
+
+This note carries out that direct differentiation for the full six-real,
+both-sign, linear adapted chart
+\[
+ h_2=tH\xi_1,\qquad H\in\mathbb R^{12\times12},       \tag{1.1}
+\]
+where $\xi_1$ is the simultaneous $\{\pm p\}$ root and $h_2$ shifts the
+simultaneous $\{\pm2p\}$ root.  Every sign-to-sign and internal-component
+coupling is retained, so the Hessian has 144 real coordinates.  Here $p$ is
+an admissible nonzero dual-lattice momentum and the finite cutoff retains all
+four modes $\pm p,\pm2p$.
+
+The exact endpoint Hessian is reduced to one covariance response tensor.  The
+global R-130 pointwise coefficient-Hessian envelope then proves, for every
+such retained pair and every stationary common-even Gaussian background,
+\[
+ \cR''(0)[H,H]>-{4\over5}\|H\|_{\HS}^2,\qquad H\ne0. \tag{1.2}
+\]
+The Cameron--Martin term $(9/20)\E\|h_2\|^2$ has Hessian
+$9\|H\|_{\HS}^2/10$, while the terminal sixth-power Hessian is nonnegative.
+Consequently the augmented local Hessian has the strict certified gap
+\[
+ \boxed{\quad
+ \cA''(0)[H,H]>{1\over10}\|H\|_{\HS}^2,\qquad H\ne0.
+ \quad}                                               \tag{1.3}
+\]
+
+The radial estimate is uniform for every $x=|p|^2\ge0$; the torus theorem
+applies only to admissible nonzero dual-lattice $p$ for which both roots are
+retained.  It is not the nonlinear, nonzero-past, multi-root aggregation
+required by T-050.  It neither identifies the historical complete-low object
+nor selects a spatial phase or a PDE.
+
+\section*{2. Production chart and covariance paths}
+\hypertarget{section-2-chart}{ }
+
+The A1 complex symbol is
+\[
+ A(p)=\{r+Z|p|^2+Y|p|^4\}\Id_3+M,                  \tag{2.1}
+\]
+with
+\[
+ M=\begin{pmatrix}
+ 1/10&-1/20&-1/20\\
+ -1/20&13/100&-1/20\\
+ -1/20&-1/20&17/100
+ \end{pmatrix}.                                      \tag{2.2}
+\]
+The A6/A7 convention gives one directed six-real covariance
+$\Gamma(p)=\operatorname{diag}(A(p)^{-1},A(p)^{-1})$.  Let $G_pG_p^*=\Gamma(p)$,
+$J=\left(\begin{smallmatrix}0&-\Id_3\\\Id_3&0\end{smallmatrix}\right)$,
+and $U(\theta)=\exp(\theta J)$.  On the torus of volume $V$ define
+\[
+ S_1(x)={1\over\sqrt V}
+ \begin{bmatrix}U(p\cdot x)G_p&U(-p\cdot x)G_p\end{bmatrix},               \tag{2.3}
+\]
+\[
+ S_2(x)={1\over\sqrt V}
+ \begin{bmatrix}U(2p\cdot x)G_{2p}&U(-2p\cdot x)G_{2p}\end{bmatrix}.       \tag{2.4}
+\]
+For $i=1,2,3$, let $D_{r,i}=\partial_iS_r$ and write $D_r$ for their Hilbert
+direct sum.  Their norms obey
+\[
+ \|D_1\|_{\op}=|p|\|S_1\|_{\op},\qquad
+ \|D_2\|_{\op}=2|p|\|S_2\|_{\op}.                 \tag{2.5}
+\]
+Bounded common-even scalar regulator multipliers of modulus at most one can
+only decrease these norms.
+
+Let all uncontrolled modes be included in a stationary common-even Gaussian
+background.  At one spatial point write the controlled endpoint as
+\[
+ W_t=(S_1+tS_2H)\xi_1+S_2\xi_2+W_{\rm bg},
+ \qquad
+ V_{t,i}=(D_{1,i}+tD_{2,i}H)\xi_1+D_{2,i}\xi_2+V_{{\rm bg},i}.
+                                                               \tag{2.6}
+\]
+The background may contain the full sharp cube.  Simultaneous antipodal
+revelation and common evenness give
+\[
+ K_0(x):=\operatorname{Cov}(W_0(x),V_0(x))=0.        \tag{2.7}
+\]
+Put $C_t=\operatorname{Cov}(W_t)$,
+$Q_t=\sum_i\operatorname{Cov}(V_{t,i})$, and
+$K_{t,i}=\operatorname{Cov}(W_t,V_{t,i})$.  Their relevant coefficients are
+\[
+\begin{aligned}
+ C_1&=S_2HS_1^*+S_1H^*S_2^*,& C_2&=S_2HH^*S_2^*,\\
+ Q_1&=\sum_i(D_{2,i}HD_{1,i}^*+D_{1,i}H^*D_{2,i}^*),&
+ Q_2&=\sum_iD_{2,i}HH^*D_{2,i}^*,\\
+ K_{1,i}&=S_2HD_{1,i}^*+S_1H^*D_{2,i}^* .
+\end{aligned}                                      \tag{2.8}
+\]
+
+\section*{3. One scalar endpoint and its exact Hessian}
+\hypertarget{section-3-endpoint}{ }
+
+Let $B(w)=C_6(w)^*C_6(w)\succeq0$ be the exact six-row A7 coefficient
+matrix and let $Q_0$ be the primitive derivative covariance used in the
+normal ordering.  The baseline-subtracted endpoint is
+\[
+ \cR(t)={1\over2}\int
+ \E\left\{\sum_iV_{t,i}^*B(W_t)V_{t,i}
+              -\Tr[B(W_t)Q_0]\right\}\,dx.          \tag{3.1}
+\]
+For a centered joint Gaussian pair, two Gaussian integrations by parts give
+the exact identity
+\[
+\begin{split}
+2\cR(t)=\int\{&\Tr[(Q_t-Q_0)\,\overline B(C_t)]\\
+ &+\sum_i(K_{t,i})_{am}(K_{t,i})_{bn}\,
+       \overline T_{abmn}(C_t)\}\,dx,
+\end{split}                                        \tag{3.2}
+\]
+where
+\[
+ \overline B(C)=\E_C B(W),\qquad
+ \overline T_{abmn}(C)=\E_C\partial_{ab}B_{mn}(W).  \tag{3.3}
+\]
+Equivalently, when $C$ is invertible,
+\[
+ \overline T_{abmn}
+ =\E\left[
+ \{(C^{-1}W)_a(C^{-1}W)_b-(C^{-1})_{ab}\}B_{mn}(W)
+ \right].                                           \tag{3.4}
+\]
+This derivative-free score formula is useful for numerical audit but is not
+needed for the rigorous bound below.
+
+Since $K_0=0$, differentiating (3.2) gives
+\[
+\boxed{
+\begin{aligned}
+ \cR''(0)[H,H]=\int\{&\Tr(Q_2\overline B)
+ +{1\over2}(Q_1)_{mn}(C_1)_{ab}\overline T_{abmn}\\
+ &+\sum_i(K_{1,i})_{am}(K_{1,i})_{bn}\overline T_{abmn}\}\,dx .
+\end{aligned}}                                      \tag{3.5}
+\]
+Thus the relative baseline cross, earlier-root feedback, trace, returned
+mean, forest/future recoding, and balanced spatial crosses are present once
+inside one self-adjoint quadratic form.  Adding them again as separate
+functionals would double count the endpoint.
+
+After the Gaussian covariance reduction (3.2), the first derivative contains
+$Q_1$, whose spatial frequencies are
+$\pm p$ and $\pm3p$.  Stationarity makes $\overline B(C_0)$ independent of
+$x$, hence Fourier orthogonality gives
+\[
+                         \cR'(0)=0.                  \tag{3.6}
+\]
+
+\section*{4. Uniform owner bound}
+\hypertarget{section-4-bound}{ }
+
+R-130 proves for every frozen real symmetric $Q$ that the physical coefficient
+energy obeys
+\[
+ \left\|{1\over2}D^2(B:Q)\right\|_{\op}
+ \le H_6\|Q\|_{\op},
+ \qquad H_6={7083\over500P},\quad P=4+10^{-12}.      \tag{4.1}
+\]
+Set
+\[
+ a=\|S_1\|_{\op},\quad b=\|S_2\|_{\op},\quad
+ d=|p|a,\qquad e=2|p|b.                            \tag{4.2}
+\]
+For $\|H\|_{\HS}=1$, (2.8) gives
+\[
+ \|C_1\|_{\op}\le2ab,\qquad
+ \|Q_1\|_{\op}\le2de,\qquad
+ \|K_1\|_{\HS}:=\left(\sum_i\|K_{1,i}\|_{\HS}^2\right)^{1/2}
+ \le bd+ae.                                        \tag{4.3}
+\]
+The first term in (3.5) is nonnegative.  Since the matrices are six-real,
+$\|C_1\|_*\le6\|C_1\|_{\op}$.  Equation (4.1) therefore bounds the mixed
+covariance term by
+\[
+ 6H_6(2ab)(2de)=24H_6abde.                          \tag{4.4}
+\]
+For the last term take a singular-value decomposition of $K_1$, polarize
+(4.1), and use $\|K_1\|_*^2\le6\|K_1\|_{\HS}^2$.
+This gives
+\[
+ 12H_6(bd+ae)^2.                                    \tag{4.5}
+\]
+Substitution of $d=|p|a$, $e=2|p|b$ yields the exact factor
+\[
+ 24H_6abde+12H_6(bd+ae)^2
+ =156H_6|p|^2a^2b^2.                                \tag{4.6}
+\]
+
+If $\lambda_1=\lambda_{\min}A(p)$ and
+$\lambda_2=\lambda_{\min}A(2p)$, the two antipodal signs give
+\[
+ a^2\le{2\over V\lambda_1},\qquad
+ b^2\le{2\over V\lambda_2}.                       \tag{4.7}
+\]
+After spatial integration, (4.6) becomes
+\[
+ \cR''(0)[H,H]
+ \ge-{624H_6|p|^2\over V\lambda_1\lambda_2}
+       \|H\|_{\HS}^2.                              \tag{4.8}
+\]
+
+\section*{5. Exact radial certificate}
+\hypertarget{section-5-sturm}{ }
+
+The exact Sylvester minors of $M-(7/250)\Id$ are
+\[
+ {9\over125},\qquad {1211\over250000},\qquad
+ {89\over31250000},                                \tag{5.1}
+\]
+so $M\succ(7/250)\Id$.  Put $x=|p|^2$ and
+\[
+ f(x)=x^2+Zx+r+{7\over250}.                         \tag{5.2}
+\]
+The exact registered decimals give a negative discriminant, hence $f>0$.
+Also $H_6<7083/2000$.  It remains to prove
+\[
+ {624(7083/2000)x\over V f(x)f(4x)}<{4\over5}.      \tag{5.3}
+\]
+
+For $V=4096$, clear the positive denominator in (5.3).  The resulting
+quartic is
+\[
+\begin{split}
+P(x)={}&{262144\over5}x^4
+-{592176264064\over9765625}x^3\\
+&+{74744439754677505969\over1907348632812500}x^2\\
+&-{29970036890042018799\over3051757812500000}x\\
+&+{25203778302134079729\over30517578125000000}.
+\end{split}                                        \tag{5.4}
+\]
+Its exact Sturm chain has degrees $(4,3,2,1,0)$.  The signs at zero are
+$(+,-,-,+,+)$ and the leading signs at positive infinity are
+$(+,+,-,-,+)$.  Both have two variations.  Thus $P$ has no positive root;
+since $P(0)>0$, (5.3) holds for every $x\ge0$.  Combining (4.8) and (5.3)
+proves (1.2).
+
+The source cost in this normalized root chart is
+\[
+ {9\over20}\E\|tH\xi_1\|^2
+ ={9\over20}t^2\|H\|_{\HS}^2,                     \tag{5.5}
+\]
+and therefore has Hessian $9\|H\|_{\HS}^2/10$.
+Finally, for $R(t)=|w+tz|^2$,
+\[
+ {d^2\over dt^2}R(t)^3
+ =24R(t)\{(w+tz)\cdot z\}^2+6R(t)^2|z|^2\ge0.     \tag{5.6}
+\]
+Equations (1.2), (5.5), and (5.6) prove (1.3).
+
+\section*{6. Owner-coordinate consequence and failed route}
+\hypertarget{section-6-owner}{ }
+
+For a fixed terminal and filtration, the Doob low and root increments are
+unique.  The R-063 forest and the near/balanced/far Schur blocks are not
+additional martingale increments.  They are alternate formulas or estimates
+for the same square-minus-trace scalar.  The historical R-079 complete-low
+object is not identified merely by setting a cylinder's primitive low
+covariance to zero: a returned conditional mean can remain.
+
+Therefore the route that independently fabricates forest, balanced, and low
+blocks and then adds them to (3.1) is retired.  A separate forest/future
+calculation is legal only as an audit of the already registered identity
+\[
+ 2P_{\rm comp}=F_{063}^{\rm ad}-V_{\rm future},     \tag{6.1}
+\]
+not as a second payment.  This no-go removes an ambiguity in the old
+production-matrix plan without proving the multi-root estimate.
+
+\section*{7. Devil's-advocate audit}
+\hypertarget{section-7-audit}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: the theorem is only a scalar or same-sign slice.}
+\textbf{DISMISSED.}  $H$ is an arbitrary real $12\times12$ matrix and mixes
+both antipodal signs and all six real internal coordinates.
+
+\item \textbf{Objection: the primitive trace or future owner was omitted.}
+\textbf{DISMISSED in the declared chart.}  Equation (3.1) starts from the
+complete covariance-normal endpoint.  Gaussian identity (3.2) differentiates
+that scalar, so trace and all feedback correlations occur exactly once.
+
+\item \textbf{Objection: R-130 cannot be used when the frozen matrix $Q$
+depends on the state.}  \textbf{DISMISSED here.}  The matrices $C_1,Q_1,K_1$
+are frozen covariance derivatives at $t=0$; no state derivative of $Q$ is
+discarded.
+
+\item \textbf{Objection: a numerical 144-dimensional eigenvalue is being
+reported as proof.}  \textbf{DISMISSED.}  The sign theorem uses only the
+exact norm factor (4.6) and rational Sturm certificate (5.4).  Quadrature
+eigenvalues are not part of the theorem statement.
+
+\item \textbf{Objection: local positivity closes T-050.}
+\textbf{UPHELD against that inference.}  Nonzero strict-past means, nonlinear
+$h_2$, cross-pair interactions, returned historical low, and the full
+directed source union are outside this theorem.
+
+\item \textbf{Objection: the result selects BCC, a uniform phase, or the
+current PDE.}  \textbf{UPHELD against that inference.}  No phase ansatz,
+vacuum comparison, or candidate-functional discriminator appears here.
+\end{enumerate}
+
+External review is invited for the A6/A7 realification factor, simultaneous
+antipodal normalization, the two Gaussian-IBP factors in (3.2), the
+half-Hessian convention in (4.1), the nuclear-norm factor six, the SVD
+polarization factor two, spatial volume, Sturm endpoint signs, and the
+local-versus-global scope firewall.
+
+\section*{8. Result footer and reproduction}
+\hypertarget{section-8-reproduction}{ }
+
+Dependencies: A1, A6, A7, R-063, R-079, R-104, R-125, R-128, R-130,
+R-141, R-149, R-150.
+
+Reproduction command:
+\begin{verbatim}
+& E:\Dev\TECT.venv\Scripts\python.exe `
+  codes/foundations/a13_classii_two_root_endpoint_hessian_uniform_local_gap_boundary_verify.py
+\end{verbatim}
+
+\begingroup
+\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-TWO-ROOT-ENDPOINT-HESSIAN-UNIFORM-LOCAL-
+ GAP-BOUNDARY; Ledger ID: R-151.
+Precise statement: at every retained admissible dual-lattice p:2p pair and
+ H != 0, endpoint loss coefficient <4/5, source Hessian =9/10, and local
+ gap >1/10; the radial certificate holds for every x>=0.
+Scope: zero-past linear 12x12 chart; stationary common-even law; endpoint only.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Expected output: primary and non-importing independent PASS; integrated PASS.
+Falsification gate: any factor, floor, Sturm, scope, hash, PDF, or release check fails.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no non-lattice/unretained chart, nonzero-past or
+ nonlinear theorem, multi-root bound, T-050, phase/PDE, or Sector-A closure.
+Proof complete: false; T-050 closed: false; Sector A closed: false.
+Next required action: lift to nonzero past/nonlinear feedback, then test
+ owner-complete multi-root aggregation without source reuse.
+\end{verbatim}
+\endgroup
+
+\endgroup
