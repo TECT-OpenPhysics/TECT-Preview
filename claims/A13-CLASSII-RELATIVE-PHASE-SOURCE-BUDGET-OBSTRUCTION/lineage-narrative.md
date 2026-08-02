@@ -1068,6 +1068,34 @@ endpoint theorem.
     calculation with all owners kept once.  No phase is selected or excluded,
     and T-050, both A13 gates, and Sector A remain open at T4.
 
+71. **Cross-synthesis owner identity and production-data boundary.** R-149
+    proves that an affine Gaussian square-minus-trace owner is controlled by
+    the joint field-current synthesis `K=Sx Sv*`, not by the two marginal
+    covariances alone. Exact same-marginal syntheses have opposite full-reveal
+    signs. A real active-spectator coefficient slice is an affine saddle, but
+    restoring a separately declared full-complex six-row co-synthesis with
+    `K=Gamma` gives a strictly positive exact tensor. Because that comparison
+    changes both rows and cross-synthesis rank, it identifies no causal repair
+    and no physical phase. The successor is an actual A1 production cylinder
+    with its Fourier field, derivative, cross, heat, projector, feedback, and
+    owner incidence declared.
+
+72. **Production antipodal last-insertion zero-cross boundary.** R-150
+    supplies that first actual A1 cylinder at the retained pairs `+/-k` and
+    `+/-2k`. Simultaneous antipodal revelation gives exact coincident
+    `K_i(x,x)=0`, so the conditional absolute final full-output/full-reveal
+    atom is nonnegative and spends zero atom-level source and sextic budget.
+    The two-point and coefficient-space crosses remain nonzero. Exact fixtures
+    prevent three extensions: separate Fourier outputs have expected packets
+    `-1/2` and `+1/2`, two positive absolute endpoints can have relative
+    secant `-3/2`, and an earlier root with future-dependent feedback can have
+    exact unhalved owner `-sqrt(6)/8`. The next calculation is therefore no
+    longer an unspecified production synthesis: it is the final relative
+    baseline cross together with the earlier-root feedback connection, after
+    which the forest, future, balanced, low, source, and sextic incidence must
+    be restored once. T-050, both A13 gates, every phase verdict, and Sector A
+    remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

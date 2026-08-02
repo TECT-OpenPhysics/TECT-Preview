@@ -6,6 +6,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-08-02-A13-R150-SCALAR-SLICE-AS-FULL-PRODUCTION-COVARIANCE](#audit-2026-08-02-a13-r150-scalar-slice-as-full-production-covariance) | substitute the N001 scalar covariance for the actual A1 three-family production covariance | the scalar slice omits the family masses and off-diagonal lock matrix; R-150 replaces it by the exact positive `A(p)=a(p)I+M` covariance before any theorem is registered |
+| [AUDIT-2026-08-02-A13-R150-COINCIDENT-CROSS-AS-PROJECTED-CROSS](#audit-2026-08-02-a13-r150-coincident-cross-as-projected-cross) | promote the same-point cancellation `K_i(x,x)=0` to a zero nonlocal or Fourier-coefficient cross synthesis | the exact two-point kernel is `2p_i Gamma(p) sin(p.(x-y))/V` and the coefficient cross is a nonzero skew block; a normalized-circle projection fixture has expected packets `-1/2` and `+1/2` |
+| [AUDIT-2026-08-02-A13-R150-ABSOLUTE-ATOM-AS-RELATIVE-SECANT](#audit-2026-08-02-a13-r150-absolute-atom-as-relative-secant) | use nonnegativity of the final absolute full-reveal endpoint atom to sign its relative action secant | with constant Gram and predictable currents two and one, the endpoint atoms are two and one half while their relative difference is `-3/2`; the baseline cross must be computed |
+| [NG-2026-08-02-A13-R150-LAST-ROOT-POSITIVITY-TO-FUTURE-FEEDBACK](#ng-2026-08-02-a13-r150-last-root-positivity-to-future-feedback) | transport the final-root zero-cross sign through an earlier root whose future contains adapted feedback | an exact Gaussian circle fixture with later feedback has cross covariance `-3/2` and unhalved owner `-sqrt(6)/8`; this is a method no-go, not a complete-production counterexample |
 | [NG-2026-08-02-A13-ENDPOINT-MARGINALS-DETERMINE-FRESH-OWNER](#ng-2026-08-02-a13-endpoint-marginals-determine-fresh-owner) | infer the fresh raw/full-reveal square-minus-trace owner from the endpoint field and current marginal covariances alone | identical field and current marginals admit cross syntheses whose exact unhalved owners have opposite signs for every positive covariance scale; the joint field-current cross synthesis `K=S_xS_v*` is indispensable |
 | [AUDIT-2026-08-02-A13-RADIAL-SLICE-NEGATIVE-AS-FULL-INTERNAL-OWNER](#audit-2026-08-02-a13-radial-slice-negative-as-full-internal-owner) | identify the real active-spectator radial saddle or its covariance contraction with the full internal or physical production owner | the radial Hessian is indefinite, but restoring all three complex components and all six rows gives a strictly positive A6/A7-normalized declared full-internal tensor; neither calculation supplies the physical spatial cross synthesis or complete owner |
 | [AUDIT-2026-08-02-A13-R149-REAL-COVARIANCE-DOUBLE-HALVING](#audit-2026-08-02-a13-r149-real-covariance-double-halving) | divide `diag(C,C)` by two after defining `C=(aI+M)^(-1)` as each real-coordinate covariance | writing the A6 complex covariance locally as `Sigma_C:=D_A6=2C`, A7 gives `Gamma_R=(1/2)realify(Sigma_C)=diag(C,C)`; a second halving spuriously divides the tensor by four and was rejected before registration |
@@ -232,6 +236,81 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="audit-2026-08-02-a13-r150-scalar-slice-as-full-production-covariance"></a>
+### AUDIT-2026-08-02-A13-R150-SCALAR-SLICE-AS-FULL-PRODUCTION-COVARIANCE -- use the full A1 family covariance
+
+**Failure mode.** Treat the N001 scalar denominator, with zero family and lock
+masses, as the covariance of the actual A1 three-complex-family production
+cylinder.
+
+**Evidence.** The exploratory slice used the scalar value
+`r_zero=0.219...`.  The A1 authority instead gives
+`A(p)=(r+Z|p|^2+Y|p|^4)I_3+M`, with
+`M=[[1/10,-1/20,-1/20],[-1/20,13/100,-1/20],[-1/20,-1/20,17/100]]`.
+Its exact leading principal minors and determinant are positive.  R-150 builds
+`C(p)=A(p)^(-1)` at both retained pairs and uses
+`Gamma(p)=diag(C(p),C(p))`.
+
+**Consequence.** The scalar-slice numerical experiment is rejected as evidence
+for the production owner.  It may remain only as a labelled diagnostic.  The
+replacement changes the covariance before the field-current synthesis is
+formed and implies no phase, PDE, T-050, or Sector-A verdict.
+
+<a id="audit-2026-08-02-a13-r150-coincident-cross-as-projected-cross"></a>
+### AUDIT-2026-08-02-A13-R150-COINCIDENT-CROSS-AS-PROJECTED-CROSS -- local cancellation is not operator cancellation
+
+**Failure mode.** Infer from the exact same-point identity `K_i(x,x)=0` that
+the two-point, nonlocal-output, or Fourier-coefficient field-current cross
+synthesis also vanishes.
+
+**Evidence.** For one simultaneous antipodal pair at wavevector `p`, R-150
+computes
+`K_i(x,y)=2p_i Gamma(p) sin(p.(x-y))/V` and
+`K_i^coef=p_i[[0,-Gamma(p)],[Gamma(p),0]]`.  Both are generically nonzero.
+In the exact normalized-circle fixture `W=a cos x+b sin x` and
+`V=-a sin x+b cos x`, the unhalved constant and second-harmonic projected
+packets have expectations `-1/2` and `+1/2`, while their exhaustive sum is
+zero.
+
+**Consequence.** The R-150 sign is restricted to the local full-output
+identity.  Any nonlocal or separate Fourier-output owner must retain the
+R-149 cross-derivative terms and be recombined before a sign is assigned.
+
+<a id="audit-2026-08-02-a13-r150-absolute-atom-as-relative-secant"></a>
+### AUDIT-2026-08-02-A13-R150-ABSOLUTE-ATOM-AS-RELATIVE-SECANT -- a positive endpoint does not order two endpoints
+
+**Failure mode.** Assign the zero source/sextic suballocation of the
+nonnegative absolute final endpoint atom directly to the relative final-control
+secant in the old action chart.
+
+**Evidence.** With constant positive Gram `B=1`, previous predictable current
+`v_0=2`, and final predictable current `v_*=1`, the two absolute atoms are
+`2` and `1/2`, but
+`Delta P_comp=P_comp(Z_*)-P_comp(Z_previous)=-3/2`.
+
+**Consequence.** R-150 certifies zero source and sextic expenditure only for
+the absolute final atom.  The relative baseline cross is a separate signed
+calculation and remains open.
+
+<a id="ng-2026-08-02-a13-r150-last-root-positivity-to-future-feedback"></a>
+### NG-2026-08-02-A13-R150-LAST-ROOT-POSITIVITY-TO-FUTURE-FEEDBACK -- the last-root sign does not propagate backward
+
+**Failure mode.** Transport the last simultaneous antipodal root's local
+zero-cross positivity to an earlier root while freezing or omitting a later
+feedback that depends on that earlier root.
+
+**Evidence.** On the normalized circle, reveal independent Gaussian
+coefficients and then add the legal later feedback `h=lambda a cos x`.  At
+`x=pi/4` and `lambda=1`, the exact field and current variances are both `5/2`
+and their cross covariance is `K=-3/2`.  For the positive Gram
+`B(w)=exp(-w^2)` and zero past current, Gaussian integration gives the exact
+unhalved R-149 owner `K^2 E B''(W)=-sqrt(6)/8<0`.
+
+**Consequence.** The earlier-root future-feedback connection must be computed
+in the legal two-root chart.  This fixture omits the source, sextic, forest,
+low, and other owners, so it is a method no-go only and does not falsify the
+complete production action, any phase, or the current PDE.
 
 <a id="ng-2026-08-02-a13-endpoint-marginals-determine-fresh-owner"></a>
 ### NG-2026-08-02-A13-ENDPOINT-MARGINALS-DETERMINE-FRESH-OWNER -- endpoint marginals do not determine the fresh owner

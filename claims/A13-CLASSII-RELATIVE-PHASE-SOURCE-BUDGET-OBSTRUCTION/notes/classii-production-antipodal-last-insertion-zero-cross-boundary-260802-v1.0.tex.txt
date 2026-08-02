@@ -1,0 +1,429 @@
+% =============================================================================
+% Title: Production antipodal last-insertion zero-cross boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-PRODUCTION-ANTIPODAL-LAST-INSERTION-ZERO-CROSS-BOUNDARY
+% Ledger: R-150
+% Version: v1.0 -- first issued 2026-08-02; this version issued 2026-08-02
+% Status: scoped T4 analytic/exact/executed/audited endpoint advance; no A13 gate closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope}
+\hypertarget{section-1-purpose}{ }
+
+R-149 proved that an affine Gaussian current owner is controlled by the joint
+field--current cross synthesis $K=S_xS_v^*$ and required one actual finite
+production cylinder.  This note supplies the first such cylinder.  It uses the
+canonical A1 full-production covariance at the two antipodal Fourier pairs
+$\{\pm k\}$ and $\{\pm2k\}$, where
+\[
+ k=(\pi/8,0,0)
+\]
+on the registered $L=16$ torus.
+
+The exact advance is deliberately local in the owner chronology.  When the
+final pair $\{\pm2k\}$ is revealed simultaneously, its coincident field--
+derivative cross synthesis vanishes.  R-149 then makes the conditional
+expectation of the absolute, full-output, full-reveal endpoint atom
+nonnegative.  This absolute atom spends neither source nor sextic budget.
+
+Three boundaries are load-bearing.
+\begin{enumerate}
+\item The two-point and Fourier-coefficient cross syntheses are nonzero.  A
+nonlocal output projection therefore restores the signed R-149 terms.
+\item The relative action contains the difference between final and previous
+endpoint atoms.  Positivity of the absolute final atom does not sign that
+secant.
+\item The earlier $\{\pm k\}$ root sees the later feedback $h_2(\xi_1)$ in
+its future.  R-136 forbids freezing this connection.  The complete two-root
+owner, forest, balanced response, returned low, and global source/sextic
+windows remain open.
+\end{enumerate}
+
+No spatial phase ansatz enters the result.  It selects neither BCC nor any
+alternative phase and has no PDE-replacement implication.
+
+\section*{2. The full-production covariance}
+\hypertarget{section-2-production-covariance}{ }
+
+The A1 quadratic Fourier symbol is
+\[
+ A(p)=a(p)\Id_3+M,
+ \qquad
+ a(p)=r+Z|p|^2+Y|p|^4,                              \tag{2.1}
+\]
+where the exact family-lock matrix reconstructed from the registered inputs is
+\[
+ M=
+ \begin{pmatrix}
+  1/10&-1/20&-1/20\\
+  -1/20&13/100&-1/20\\
+  -1/20&-1/20&17/100
+ \end{pmatrix}.                                      \tag{2.2}
+\]
+Its leading principal minors are positive.  For a directed complex mode the
+A6 convention is
+\[
+ \E[\widehat\Psi(p)\widehat\Psi(p)^\dagger]=2C(p),
+ \qquad C(p)=A(p)^{-1}.                              \tag{2.3}
+\]
+A7 half-realification therefore gives the six-real covariance
+\[
+ \Gamma(p)=\operatorname{diag}(C(p),C(p)),           \tag{2.4}
+\]
+with no additional factor one half.  Let $G_pG_p^*=\Gamma(p)$.
+
+The determinant of $a\Id_3+M$ is
+\[
+ {25000a^3+10000a^2+1115a+24\over25000}>0.          \tag{2.5}
+\]
+The executable certificate substitutes the exact decimal A1 inputs into
+$a(k)$ and $a(2k)$ and verifies positivity before inverting either symbol.
+This is the full production covariance.  The earlier exploratory scalar slice
+with zero family and lock masses is retained only as a rejected checksum and
+is not evidence for this theorem.
+
+\section*{3. Exact antipodal field and current syntheses}
+\hypertarget{section-3-synthesis}{ }
+
+Let
+\[
+ J=\begin{pmatrix}0&-\Id_3\\ \Id_3&0\end{pmatrix},
+ \qquad U(\theta)=\cos\theta\,\Id_6+\sin\theta\,J.  \tag{3.1}
+\]
+Because $\Gamma(p)$ has the duplicated form (2.4),
+\[
+ [J,\Gamma(p)]=0,
+ \qquad U(\theta)\Gamma(p)U(\theta)^*=\Gamma(p).    \tag{3.2}
+\]
+Reveal the two signs of one antipodal pair as a single Gaussian block
+$g=(g_+,g_-)\sim N(0,\Id_{12})$.  With
+$\theta_x=p\cdot x$, define
+\[
+ S_x(x)={1\over\sqrt V}
+ \begin{bmatrix}
+ U(\theta_x)G_p&U(-\theta_x)G_p
+ \end{bmatrix},                                      \tag{3.3}
+\]
+\[
+ S_{v,i}(x)={p_i\over\sqrt V}
+ \begin{bmatrix}
+ JU(\theta_x)G_p&-JU(-\theta_x)G_p
+ \end{bmatrix}.                                      \tag{3.4}
+\]
+These are the A1 Fourier field and the physical derivative
+$\partial_i\leftrightarrow ip_i$ in six-real coordinates.
+
+\subsection*{Theorem 3.1 (coincident cancellation and nonlocal kernel)}
+
+For every $x$,
+\[
+ S_x(x)S_x(x)^*={2\over V}\Gamma(p),\qquad
+ S_{v,i}(x)S_{v,i}(x)^*={2p_i^2\over V}\Gamma(p),   \tag{3.5}
+\]
+and
+\[
+ \boxed{K_i(x,x)=S_x(x)S_{v,i}(x)^*=0.}             \tag{3.6}
+\]
+At two distinct points,
+\[
+ \boxed{
+ K_i(x,y)={2p_i\over V}\Gamma(p)
+            \sin\{p\cdot(x-y)\}.}                  \tag{3.7}
+\]
+Consequently $K_i(y,x)=-K_i(x,y)$ and the kernel is not the zero
+operator.  For the final pair $p=q=2k$, (3.7) is
+\[
+ K_i(x,y)={4k_i\over V}\Gamma(2k)
+            \sin\{2k\cdot(x-y)\}.                  \tag{3.8}
+\]
+
+\textit{Proof.}
+Equation (3.2) gives each marginal immediately.  In the cross term the
+$+p$ contribution is $-p_i\Gamma(p)J/V$ and the $-p$ contribution is
+$+p_i\Gamma(p)J/V$, proving (3.6).  At different points the same two terms
+combine as
+\[
+ {p_i\over V}\{U(\theta_y-\theta_x)
+                 -U(\theta_x-\theta_y)\}\Gamma(p)J,
+\]
+which reduces to (3.7) because $J^2=-\Id_6$. \hfill$\square$
+
+In the cosine/sine coefficient basis the same calculation reads
+\[
+ S_x^{\rm coef}=\begin{pmatrix}G_p&0\\0&G_p\end{pmatrix},
+\qquad
+ S_{v,i}^{\rm coef}=p_i
+ \begin{pmatrix}0&G_p\\-G_p&0\end{pmatrix},         \tag{3.9}
+\]
+so
+\[
+ K_i^{\rm coef}=p_i
+ \begin{pmatrix}0&-\Gamma(p)\\\Gamma(p)&0\end{pmatrix}
+ \ne0.                                                \tag{3.10}
+\]
+Thus ``$K=0$'' in (3.6) is a coincident local statement, not a projected or
+coefficient-space statement.
+
+\section*{4. The absolute final-endpoint atom}
+\hypertarget{section-4-last-endpoint}{ }
+
+Condition on the strict past before the simultaneous final antipodal pair.
+All earlier roots and the legal feedback $h_2(\xi_1)$ are then fixed.  Write
+the pointwise field and current as
+\[
+ W=w+S_xg,\qquad V=v+S_vg,                            \tag{4.1}
+\]
+where $w,v$ are strict-past measurable.  For the complete six-row coefficient
+map put
+\[
+ B(W)=C_6(W)^*C_6(W)\succeq0,                         \tag{4.2}
+\]
+and use exactly the once-owned fresh derivative covariance
+$\Gamma_v=S_vS_v^*$ in the primitive trace.  R-149 defines
+\[
+ 2\cR_{\rm raw}=\|C_6(W)V\|^2
+ -\Tr\{C_6(W)\Gamma_vC_6(W)^*\}.                    \tag{4.3}
+\]
+
+\subsection*{Theorem 4.1 (nonnegative conditional absolute atom)}
+
+Assume the positive floor and the Gaussian integrability required by R-149,
+the full local output identity, simultaneous antipodal revelation, a common
+fresh-root-independent heat, and no later Gaussian root.  Then
+\[
+ \boxed{
+ \E[\cR_{\rm raw}\mid\cF_{\rm past}]
+ ={1\over2}\E[v^*B(W)v\mid\cF_{\rm past}]\ge0.}     \tag{4.4}
+\]
+
+\textit{Proof.}
+R-149 Theorem 3.1 gives
+\[
+ 2\E\cR_{\rm raw}
+ =\E\{v_mB_{mn}v_n+2v_mK_{an}\partial_aB_{mn}
+       +K_{am}K_{bn}\partial_{ab}B_{mn}\}.          \tag{4.5}
+\]
+The fresh-pair synthesis is precisely (3.3)--(3.4), so (3.6) removes both
+$K$ terms.  Equation (4.2) proves the remaining sign. \hfill$\square$
+
+The theorem concerns conditional expectation, not pointwise positivity of
+the random square-minus-trace atom.  R-107's complete one-pair scalar packet
+has mean zero but a negative pointwise infimum, consistently with (4.4).
+
+At the final full reveal, $P_f=\Id$ and $\cV_{\rm future}=0$.  With all visits
+recombined, the R-125/R-149 coordinate relation therefore gives
+\[
+ \cP_{\rm comp}^{\rm abs}=\cR_{\rm raw}^{\rm abs}.  \tag{4.6}
+\]
+The absolute atom (4.6) may be certified with the exact suballocation
+\[
+ \eta_{\rm abs,2}=0,\qquad\zeta_{\rm abs,2}=0.       \tag{4.7}
+\]
+No source or terminal sextic is spent to lower-bound this atom.
+
+\section*{5. Why the relative secant is still open}
+\hypertarget{section-5-relative-secant}{ }
+
+The old-chart action does not contain only (4.6).  It contains
+\[
+ \Delta\cP_{\rm comp}
+ =\cP_{\rm comp}(Z_*)-\cP_{\rm comp}(Z_{\rm previous}).
+                                                               \tag{5.1}
+\]
+Positivity of the two absolute endpoints does not order them.  With constant
+$B=1$, previous predictable current $v_0=2$, and final predictable current
+$v_*=1$, (4.4) gives the two positive atoms $2$ and $1/2$, but
+\[
+ \Delta\cP_{\rm comp}={1\over2}-2=-{3\over2}.       \tag{5.2}
+\]
+This fixture is an owner-coordinate scope test, not a production adverse
+direction.  It proves that (4.7) cannot be assigned to the relative secant
+without computing its baseline cross.
+
+Likewise, a nonlocal output projector introduces double spatial integrals and
+sees (3.7).  The $K$-derivative terms in (4.5) then return.  An exact normalized
+circle fixture makes this boundary explicit.  Let
+\[
+ W=a\cos x+b\sin x,\qquad V=-a\sin x+b\cos x,
+ \qquad a,b\sim N(0,1),                              \tag{5.3}
+\]
+and take the scalar row $C(W)=W$.  If $D_P$ denotes the unhalved projected
+square minus its correctly projected primitive trace, direct Fourier
+calculation gives
+\[
+ D_0=-{a^2+b^2\over4},\qquad
+ D_2={(a^2+b^2)^2\over8}-{a^2+b^2\over4}.           \tag{5.4}
+\]
+Hence $\E D_0=-1/2$ and $\E D_2=+1/2$, while the exhaustive recombination
+has expectation zero.  The full-output identity cannot be replaced by
+singleton output positivity; this is the same contraction-connected boundary
+that R-107 found in its one-pair cluster.
+
+\section*{6. The legal two-root chart and remaining connection}
+\hypertarget{section-6-two-root-chart}{ }
+
+Let $\xi_1$ contain the simultaneous $\{\pm k\}$ pair and $\xi_2$ the
+simultaneous $\{\pm2k\}$ pair.  The R-119 minimal legal chart is
+\[
+ Z_0=S_1\xi_1+S_2\xi_2,
+ \qquad
+ Z_*=Z_0+S_1h_1+S_2h_2(\xi_1),                      \tag{6.1}
+\]
+with $h_1$ strict past and $h_2(\xi_1)$ revealed before root two.  For root
+two, $h_2$ belongs to $w,v$ in (4.1), so Theorem 4.1 is genuinely adapted and
+not a frozen-feedback approximation.
+
+The normalized source norm of a linear diagnostic
+$h_{2,\pm}=tHg_{1,\pm}$ is
+\[
+ X(h_2)=2t^2\|H\|_{\rm HS}^2,
+ \qquad {9\over20}X(h_2)
+ ={9\over10}t^2\|H\|_{\rm HS}^2.                   \tag{6.2}
+\]
+This checksum fixes the two-sign factor but is not spent in (4.7).
+
+Root one is different.  Its future contains root two and the map
+$h_2(\xi_1)$.  Differentiating or conditioning through that future heat
+produces the R-136 feedback connection.  Freezing $h_2$ changes the owner;
+the registered two-root fixture loses an exact correction of three in its
+normalization.  R-150 does not recompute this earlier-root block.
+
+There is no abstract positivity extension to that earlier-root geometry.  On
+the normalized circle, reveal $a,b\sim N(0,1)$ and let a later causal feedback
+add $h=\lambda a\cos x$.  At $x=\pi/4$ and $\lambda=1$, the terminal field and
+current synthesis rows have equal variance $5/2$ and cross covariance
+$K=-3/2$.  For the positive Gram $B(w)=e^{-w^2}$ and zero past current,
+R-149 gives the exact unhalved owner
+\[
+ K^2\E B''(W)=-{\sqrt6\over8}<0.                    \tag{6.3}
+\]
+This is a method no-go for transporting the last-root sign through future
+feedback, not a counterexample to the complete production action: source,
+sextic, forest, low, and the other owners have not been added.
+
+For the declared endpoint diagnostic the output projector is the identity,
+the complement is zero, and the optional covariance split has
+$\Gamma_{\rm low}=0$.  Those declarations do not prove that the historical
+complete-low owner of the full production filtration vanishes.  They only
+remove it from this finite endpoint sublemma.  The full R-063 forest
+incidence, balanced response, and relative source/sextic aggregation must be
+restored before testing
+\[
+ \eta<{5\over11},\qquad \zeta<{13\over50}.          \tag{6.4}
+\]
+
+\section*{7. Failed routes and reduced next target}
+\hypertarget{section-7-roadmap}{ }
+
+The proof-first audit records four reusable corrections.
+\begin{enumerate}
+\item An exploratory scalar-slice covariance used the N001 scalar value
+$r_0$ and omitted both family masses and locking.  It was rejected before
+promotion.  Equations (2.1)--(2.5) replace it with the A1 full-production
+matrix covariance.
+\item Coincident cancellation (3.6) cannot be moved through a nonlocal
+projector.  Equations (3.7)--(3.10) preserve the exact missing cross data.
+\item The absolute endpoint theorem (4.4) is not the relative secant (5.1).
+Equation (5.2) prevents a zero-budget overclaim.
+\item The last-root sign cannot be transported across an earlier root's
+future-dependent feedback.  The exact fixture (6.3) is negative, so the
+earlier connection must be computed rather than frozen or inferred.
+\end{enumerate}
+
+The next owner calculation stays in the same chart and has exactly two signed
+targets:
+\begin{enumerate}
+\item compute the final-root relative endpoint secant with its baseline cross;
+\item compute the earlier-root common-heat derivative with the full
+$h_2(\xi_1)$ connection, then restore trace, bracket, future variance,
+forest, balanced, and historical-low incidence once.
+\end{enumerate}
+Only their recombination with Theorem 4.1 may be tested against (6.4).
+
+\section*{8. Devil's-advocate review}
+\hypertarget{section-8-adversarial}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: $K(x,x)=0$ proves every Fourier-output owner is
+nonnegative.}  \textbf{UPHELD against that inference.}  The exact two-point
+kernel (3.7) and coefficient matrix (3.10) are nonzero.  Only the local
+full-output atom is covered.
+
+\item \textbf{Objection: full reveal alone implies positivity.}
+\textbf{DISMISSED as the proof offered here.}  Full reveal identifies
+$\cP_{\rm comp}=\cR_{\rm raw}$ but does not sign it.  The sign in (4.4) uses
+the separately proved antipodal $K(x,x)=0$ and $B\succeq0$.
+
+\item \textbf{Objection: the random atom is pointwise nonnegative.}
+\textbf{UPHELD against that claim.}  The theorem is a conditional expectation
+identity.  R-107 supplies a negative pointwise complete-cluster value.
+
+\item \textbf{Objection: zero budget for the absolute final atom closes its
+relative insertion.}  \textbf{UPHELD against that claim.}  Equation (5.2)
+shows that the difference of positive endpoints can be negative.
+
+\item \textbf{Objection: revealing $+2k$ and $-2k$ sequentially gives the
+same proof.}  \textbf{UPHELD against that claim.}  Cancellation in (3.6)
+uses the simultaneous pair, equal antipodal covariance, and a common-even
+regulator.  Each sign separately has nonzero coincident cross synthesis.
+
+\item \textbf{Objection: the final-root theorem also closes root one.}
+\textbf{UPHELD against that claim.}  Root one owns future-dependent feedback;
+R-136 proves that freezing it deletes a load-bearing connection.
+
+\item \textbf{Objection: this result favors or excludes a spatial phase.}
+\textbf{UPHELD against that inference.}  No phase ansatz or energy comparison
+appears anywhere in the theorem.
+\end{enumerate}
+
+External review is invited for the A6/A7 factor two, simultaneous antipodal
+root convention, derivative signs, volume factor, two-point kernel sign,
+full-output versus future-reveal projectors, absolute-versus-relative owner
+distinction, and the untouched R-136 feedback connection.
+
+\section*{9. Result footer and reproduction}
+\hypertarget{section-9-reproduction}{ }
+
+Dependencies: A1, A6, A7, R-107, R-119, R-125, R-136, R-149.
+
+Reproduction command:
+\begin{verbatim}
+& E:\Dev\TECT.venv\Scripts\python.exe `
+  codes/foundations/a13_classii_production_antipodal_last_insertion_zero_cross_boundary_verify.py
+\end{verbatim}
+
+\begingroup
+\begin{verbatim}
+Result ID: A13-CLASSII-PRODUCTION-ANTIPODAL-LAST-INSERTION-ZERO-
+ CROSS-BOUNDARY; Ledger ID: R-150.
+Precise statement: exact A1 antipodal Sx, Sv, coincident K=0 and nonlocal
+ K(x,y); nonnegative conditional absolute final full-output endpoint atom.
+Scope: fixed finite root cylinder; simultaneous final antipodal pair; positive
+ floor; full local output and full reveal; fresh-root-independent common heat.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Expected output: primary and independent PASS; integrated verifier PASS.
+Falsification gate: any production covariance, Fourier factor, derivative
+ sign, cross kernel, Stein factor, source norm, scope, hash, PDF, or release
+ check fails.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no relative final secant, earlier-root future-feedback
+ connection, nonlocal projected owner, complete forest/balanced/low aggregate,
+ T-050, A13, Nelson, removals, measure, phase, PDE, or Sector-A closure.
+Proof complete: false; T-050 closed: false; Sector A closed: false.
+Next required action: compute the final relative secant and earlier-root
+ future-feedback connection in this same production chart, then reassemble all
+ owners once and test eta<5/11 and zeta<13/50.
+\end{verbatim}
+\endgroup
+
+\endgroup

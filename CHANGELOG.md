@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-150: production antipodal last-insertion zero-cross boundary] - 2026-08-02
+
+Registered the first actual A1 +/-k,+/-2k production field/current synthesis requested by R-149. A simultaneous antipodal pair has exact coincident cross synthesis zero but nonzero two-point and coefficient-space crosses. The conditional absolute final full-output/full-reveal atom is nonnegative with zero atom-level source/sextic suballocation. Exact fixtures reject three stronger routes: singleton projected positivity, absolute-to-relative secant transfer, and backward transport through future-dependent feedback. Primary 34/34, independent 29/29, and integrated 184/184 checks pass; the deterministic six-page PDF was rendered and inspected. The relative secant, earlier feedback connection, complete owner, all phase selection, PDE replacement, T-050, A13, Nelson, and Sector A remain open.
+
 ## [Changelog verification: UTF-8 fail-closed HEAD audit] - 2026-08-02
 
 Fixed a Windows locale integrity defect in changelog.py v1.0.2. The committed git blob is now decoded explicitly as UTF-8, and verify fails closed if git show is unavailable, nonzero, undecodable, or contains malformed JSONL instead of silently treating HEAD as empty. Direct verification passes with 470 committed entries contained in 471 current entries, and an injected UnicodeDecodeError mutant is rejected. This is a release-integrity repair and changes no theory claim or tier.

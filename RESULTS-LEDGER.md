@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-150](#r-150) | Production antipodal last-insertion zero-cross boundary | Scoped T4 analytic/exact/executed/audited production-cylinder theorem and method boundary. For the actual A1 `L=16` Fourier pairs `+/-k` and `+/-2k`, with the full three-family lock covariance, a simultaneous antipodal pair has exact same-point field-current cross synthesis zero, while its two-point kernel and Fourier-coefficient cross synthesis are nonzero. R-149 therefore makes the conditional absolute final full-output/full-reveal endpoint atom nonnegative and permits zero source/sextic suballocation for that atom only. A constant-Gram fixture gives a negative relative endpoint secant, separate Fourier projections give expected packets `-1/2` and `+1/2`, and an earlier-root future-feedback fixture gives exact unhalved owner `-sqrt(6)/8`. The relative secant, earlier feedback connection, complete two-root forest/balanced/low/source/sextic owner, T-050, every phase verdict, and Sector A remain open |
 | [R-149](#r-149) | Cross-synthesis Stein owner, radial-slice boundary, and full-internal companion positivity | Scoped T4 analytic/exact/executed/audited owner identity and scope correction. For an affine same-root field/current pair `W=w+Xg`, `V=v+Yg`, the exact raw/covariance-normal square-minus-trace owner depends on the cross synthesis `K=XY*`, not only on the endpoint marginals `Gamma_x=XX*` and `Gamma_v=YY*`; an exact full-reveal fixture with identical marginals gives opposite owner signs for every positive covariance scale. The real active-spectator radial coefficient energy is an affine saddle, so global coefficient convexity is unavailable, but that slice is neither a physical control Hessian nor the full internal owner. In a separately declared co-synthesis with all three complex components, all three Pauli generators, all six coefficient rows, and the registered A6/A7 six-real covariance `Gamma=diag(C(a),C(a))`, where the complex covariance is `2C(a)`, the tensor is strictly positive for every `a>=0`, `R>=0`, `e>0`, and `P>0`. The adverse radial sign does not survive there, but the calculation changes both rows and cross-synthesis rank and isolates no causal companion. The physical spatial cross synthesis, heat, projectors, owner incidence, adapted feedback, complement/low leakage, relative source and sextic, T-050, every phase verdict, and Sector A remain open |
 | [R-148](#r-148) | Canonical fresh-prefix rank obstruction, active-spectator lift boundary, and coefficient-parameter Hessian correction | Scoped T4 analytic/exact/executed/audited rank/lift and parameter-derivative boundary. The registered active-spectator covariance restriction is positive definite, so every nonzero R-146 proportional canonical block has rank two and cannot equal the rank-one fresh final innovation of the exact R-147 line. This excludes only the unchanged fresh block, not a new full-rank chart or a corrected adapted past. In a separately declared last-root coefficient chart, at each fixed adverse point the exact trace-bracket mismatch is positive for sufficiently small noise. With the current prefactor held fixed, the coefficient-background parameter gradient uses `f'''` and its Hessian uses `f''''`; the small-noise curvature is positive but the gradient is nonzero. No physical control Hessian is identified. Diagonal coefficient energy does not identify the complete owner. T-050, every phase verdict, and Sector A remain open |
 | [R-147](#r-147) | Canonical signed common terminal, predictable trace-bracket defect, and affine-collinear production boundary | Scoped T4 analytic/exact/executed/audited advance and method boundary. The actual R-141/R-142 signed terminal feature has an exact fixed-cutoff canonical Doob telescope, conditional signed-remainder recursion, and continuous martingale-bracket representation. Representation-universal owner transport requires the whole projection nest; endpoint law alone does not determine reveal energies. Under the full registered R-125/R-063 incidence, the exact conditional residual is `E[r_o[p,q]|F_(o-)]=bar_tau_o[p,q]-beta_o[p,q]-<b_p,b_q>`, so equality to the specific defect-free predictable mean Gram is equivalent to `bar_tau=beta`. The A1/R-075 `P+L` coefficient pair has uniform affine-collinear curvature at least `2223/(25000P)` and a strict favourable Gaussian defect, but an active-spectator direction loses convexity above `R^2/e=-1/12+5sqrt(154)/132`. The complete non-collinear forest/future/balanced/low/sextic owner, T-050, phase selection, and Sector A remain open |
@@ -168,6 +169,65 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-150"></a>
+### R-150 -- Production antipodal last-insertion zero-cross boundary
+
+- **Statement.**  On the registered `L=16` torus let `k=(pi/8,0,0)` and
+  `q=2k`.  The actual A1 quadratic symbol is
+  `A(p)=(r+Z|p|^2+Y|p|^4)I_3+M`, where
+  `M=[[1/10,-1/20,-1/20],[-1/20,13/100,-1/20],
+  [-1/20,-1/20,17/100]]`, and the six-real covariance of one directed mode is
+  `Gamma(p)=diag(A(p)^(-1),A(p)^(-1))`.  Revealing the two signs of an
+  antipodal pair simultaneously gives
+  `Sx(x)Sx(x)*=2Gamma(p)/V`,
+  `Sv_i(x)Sv_i(x)*=2p_i^2Gamma(p)/V`, and the exact coincident cancellation
+  `K_i(x,x)=Sx(x)Sv_i(x)*=0`.
+- **Nonlocal boundary.**  The same synthesis has the nonzero two-point kernel
+  `K_i(x,y)=2p_i Gamma(p) sin(p.(x-y))/V` and coefficient-space cross
+  `p_i[[0,-Gamma(p)],[Gamma(p),0]]`.  For the final pair `p=q=2k`, the kernel
+  is `4k_i Gamma(2k) sin(2k.(x-y))/V`.  Thus the zero is local and cannot be
+  moved through a nonlocal output projector.
+- **Absolute final-endpoint theorem.**  Condition on the strict past before
+  the simultaneous final `+/-2k` root, write `W=w+Sx g`, `V=v+Sv g`, and put
+  `B(W)=C_6(W)*C_6(W)>=0`.  R-149 and the coincident cancellation give
+  `E[Rraw|past]=(1/2)E[v*B(W)v|past]>=0`.  Under full reveal and exhaustive
+  output, `Vfuture=0` and this absolute atom satisfies `Rraw=Pcomp`.  It may be
+  certified with the exact atom-level suballocation `eta_abs,2=zeta_abs,2=0`.
+  This is conditional-mean positivity, not pointwise positivity of the random
+  square-minus-trace atom.
+- **Signed scope tests.**  The old action contains the relative secant
+  `Pcomp(Z*)-Pcomp(Zprevious)`.  With constant Gram and predictable currents
+  two and one, the absolute atoms are two and one half but their secant is
+  `-3/2`.  In a normalized-circle projection fixture the constant and second-
+  harmonic unhalved packets have expectations `-1/2` and `+1/2`; only their
+  exhaustive sum is zero.  In an earlier-root fixture with legal later
+  feedback, the exact cross covariance is `-3/2` and the unhalved owner for
+  `B(w)=exp(-w^2)` is `-sqrt(6)/8`.  These are method boundaries, not
+  counterexamples to the complete production action.
+- **Where proved.**  Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-production-antipodal-last-insertion-zero-cross-boundary-260802-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_production_antipodal_last_insertion_zero_cross_boundary_manifest.json`,
+  and the primary, non-importing independent, and integrated executable
+  certificates listed there.
+- **Reuse scope.**  The antipodal cancellation is reusable for a simultaneous
+  equal-covariance sign pair, common-even regulator, local full-output identity,
+  fresh-root-independent heat, and final full reveal.  It must not be applied
+  sign-by-sign, to a nonlocal projector, to a relative endpoint difference, or
+  backward through future-dependent feedback.
+- **Audit boundary.**  R-150 does not compute the final relative baseline
+  cross, the earlier-root feedback connection, the complete R-125/R-063
+  forest/future incidence, balanced response, historical complete low, or the
+  global source/sextic aggregate.  It proves no physical phase preference or
+  exclusion, PDE replacement, T-050 or A13 closure, Nelson theorem, removal,
+  interacting measure, or Sector-A closure.
+- **Tier / publication target.**  Scoped T4 analytic/exact/executed/audited
+  A1 production-cylinder endpoint lemma and sharp scope boundary; reusable
+  after external review of the A6/A7 factor, phase/derivative signs, volume
+  convention, simultaneous antipodal reveal, Stein contraction, and owner
+  chronology.
 
 <a id="r-149"></a>
 ### R-149 -- Cross-synthesis Stein owner, radial-slice boundary, and full-internal companion positivity

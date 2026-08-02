@@ -45,6 +45,10 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-08-02-A13-R150-SCALAR-SLICE-AS-FULL-PRODUCTION-COVARIANCE | use the full A1 family covariance |  |
+| AUDIT-2026-08-02-A13-R150-COINCIDENT-CROSS-AS-PROJECTED-CROSS | local cancellation is not operator cancellation |  |
+| AUDIT-2026-08-02-A13-R150-ABSOLUTE-ATOM-AS-RELATIVE-SECANT | a positive endpoint does not order two endpoints |  |
+| NG-2026-08-02-A13-R150-LAST-ROOT-POSITIVITY-TO-FUTURE-FEEDBACK | the last-root sign does not propagate backward |  |
 | NG-2026-08-02-A13-ENDPOINT-MARGINALS-DETERMINE-FRESH-OWNER | endpoint marginals do not determine the fresh owner |  |
 | AUDIT-2026-08-02-A13-RADIAL-SLICE-NEGATIVE-AS-FULL-INTERNAL-OWNER | a radial coefficient saddle is not the full internal owner |  |
 | AUDIT-2026-08-02-A13-R149-REAL-COVARIANCE-DOUBLE-HALVING | do not apply the complex-to-real factor twice |  |

@@ -5262,3 +5262,60 @@ T5--T7 promotion remain open. Tier stays T4.
   and the production cross synthesis, complete owner sign, T-050, both A13
   gates, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A
   remain open at T4.
+
+- 2026-08-02: Registered
+  `A13-CLASSII-PRODUCTION-ANTIPODAL-LAST-INSERTION-ZERO-CROSS-BOUNDARY`
+  (R-150) as the first actual A1 Fourier production-cylinder instantiation of
+  the R-149 cross-synthesis theorem.  On the registered `L=16` torus, take
+  `k=(pi/8,0,0)`, `q=2k`, and the complete three-family quadratic symbol
+  `A(p)=(r+Z|p|^2+Y|p|^4)I_3+M`, with the registered family-lock matrix `M`.
+  The A6/A7 convention gives the six-real covariance
+  `Gamma(p)=diag(A(p)^(-1),A(p)^(-1))`; the rejected scalar N001 slice is not
+  used as production evidence.
+
+  When both signs of one antipodal pair are revealed as one Gaussian root,
+  the exact field and derivative syntheses satisfy
+  `SxSx*=2Gamma(p)/V`, `Sv_i Sv_i*=2p_i^2Gamma(p)/V`, and
+  `K_i(x,x)=Sx(x)Sv_i(x)*=0`.  This is not an operator zero: the two-point
+  kernel is `2p_i Gamma(p)sin(p.(x-y))/V`, and the coefficient-space cross is
+  the nonzero skew block `p_i[[0,-Gamma(p)],[Gamma(p),0]]`.  For the final
+  `+/-2k` pair the kernel is `4k_i Gamma(2k)sin(2k.(x-y))/V`.
+
+  Conditioned on the strict past before that simultaneous final pair, write
+  `W=w+Sx g`, `V=v+Sv g`, and `B(W)=C_6(W)*C_6(W)>=0`.  R-149 then yields the
+  exact conditional identity
+  `E[Rraw|past]=(1/2)E[v*B(W)v|past]>=0`.  At exhaustive full output and final
+  full reveal, `Vfuture=0`, hence the absolute endpoint atom has
+  `Rraw=Pcomp` and may be certified with the atom-level allocation
+  `eta_abs,2=zeta_abs,2=0`.  The random atom itself need not be pointwise
+  nonnegative.
+
+  Three exact sign tests prevent overextension.  A constant-Gram fixture has
+  positive absolute endpoint atoms two and one half but relative secant
+  `-3/2`.  A normalized-circle Fourier projection has separate expected
+  packets `-1/2` and `+1/2`, so only exhaustive output recombination restores
+  zero.  An earlier-root fixture with legal later feedback has cross covariance
+  `-3/2` and exact unhalved R-149 owner `-sqrt(6)/8`.  The last calculation is
+  a method no-go for freezing the future feedback, not a counterexample to the
+  complete production action.
+
+  `EXP-000640--EXP-000647` record the rejected scalar covariance, exact A1
+  replacement, local/nonlocal cross synthesis, absolute final theorem,
+  projection boundary, relative-secant boundary, future-feedback no-go, and
+  reduced next target.  The same four corrections are promoted to
+  `AUDIT-2026-08-02-A13-R150-SCALAR-SLICE-AS-FULL-PRODUCTION-COVARIANCE`,
+  `AUDIT-2026-08-02-A13-R150-COINCIDENT-CROSS-AS-PROJECTED-CROSS`,
+  `AUDIT-2026-08-02-A13-R150-ABSOLUTE-ATOM-AS-RELATIVE-SECANT`, and
+  `NG-2026-08-02-A13-R150-LAST-ROOT-POSITIVITY-TO-FUTURE-FEEDBACK`.
+
+  Primary `34/34` and non-importing independent `29/29` certificates pass.
+  Integrated verification passes `184/184`, embedding all `63` child rows
+  exactly once and adding `121` integrator-only production-symbol, synthesis,
+  exact-fixture, authority-hash, exploration, negative-result, deterministic-
+  PDF, public-surface, scope, and aggregation checks.  The manifest pins strict
+  PDF parsing, security/text checks, Poppler rendering, and manual inspection
+  of all six pages.  The final relative endpoint secant, earlier-root feedback
+  connection, complete forest/future/balanced/low/source/sextic aggregate,
+  T-050, both A13 gates, every physical phase verdict, PDE replacement,
+  `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
+  open at T4.
