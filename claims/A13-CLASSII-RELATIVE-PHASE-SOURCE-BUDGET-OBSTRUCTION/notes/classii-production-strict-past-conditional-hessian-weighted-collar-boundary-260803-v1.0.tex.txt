@@ -1,0 +1,586 @@
+% =============================================================================
+% Title: Production strict-past conditional Hessian and weighted-collar boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-PRODUCTION-STRICT-PAST-CONDITIONAL-HESSIAN-WEIGHTED-COLLAR-BOUNDARY
+% Ledger: R-153
+% Version: v1.0 -- first issued 2026-08-03; this version issued 2026-08-03
+% Status: scoped T4 analytic/exact/executed boundary; no T-050 closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\Ef}{\mathbb E_f}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Frob}{\mathrm F}
+
+\section*{1. Purpose and scope: identify the actual conditional owner}
+\hypertarget{section-1-purpose}{ }
+
+R-151 proves a strict local Hessian gap at zero deterministic strict past for
+the complete linear $p:2p$ endpoint.  R-152 derives an affine-past chain rule,
+a conditional absolute collar, and the abstract nonlinear and multi-root
+acceptance gates.  It deliberately stops before identifying the conditional
+operator on actual production incidences.  The present result performs that
+identification for the last fresh root and records the strongest consequence
+that follows without inventing a new owner.
+
+There are four conclusions.
+
+\begin{enumerate}
+\item After conditioning on the strict past, the fresh current covariance
+cancels exactly against its part of the A7 trace counterterm.  The remaining
+endpoint contains the past covariance with a minus sign.  Its first variation
+and complete symmetric bilinear Hessian are displayed below.
+\item The terminal sixth-power and Cameron--Martin source Hessians have the
+exact factors $9/10$ and $9/10$.  A curved control chart adds the first
+variation applied to the chart acceleration; fixed-law differentiation does
+not create an unlabelled Malliavin term.
+\item Replacing the R-152 spatial essential suprema by spatial $L^2$ norms
+gives a strictly more flexible pathwise collar.  The exact A1 source symbol
+also gives the control-generated mean bound
+\[
+ \|\nabla m_h\|_2^2 < {41\over20}\|h_-\|_{\mathcal S}^2.
+\]
+Neither statement controls the revealed Gaussian past unconditionally.
+\item A nondegenerate derivative-active Gaussian past has unbounded support,
+so neither the R-152 absolute collar nor the new $L^2$ collar can hold with a
+fixed almost-sure threshold in general.  Event-localized predictable controls
+show that an all-directions weighted-average version is equivalent to the
+fiberwise bound.  The signed covariance-normal completion remains necessary.
+\end{enumerate}
+
+This is a scoped T4 boundary.  It does not construct the earlier-root
+feedback, complete forest/low/balanced assembly, or the multi-root production
+matrix.  T-050, A13, Nelson, and Sector A remain open.  No phase or PDE verdict
+follows.
+
+\section*{2. Exact strict-past reduction}
+\hypertarget{section-2-reduction}{ }
+
+Fix the A7 six-real convention, positive coefficient floor, finite cutoff,
+and one common real-even regulator.  Condition on the strict-past sigma-field
+$\mathcal F_-$.  For almost every past realization write
+\[
+ W=m+X,
+ \qquad
+ V_i=n_i+Y_i,
+ \]
+where $(X,Y_i)$ is the centered fresh Gaussian field-current pair.  Assume
+the production same-point identities
+\[
+ \Ef[XY_i^T]=0,
+ \qquad
+ \Ef[Y_iY_i^T]=\Gamma_{>,i},
+ \qquad
+ \Gamma_{\Lambda,i}=\Gamma_{<,i}+\Gamma_{>,i}.       \tag{2.1}
+\]
+For a whitened source direction $a$, let the actual final-root incidences be
+\[
+ z_a=S_xa,
+ \qquad
+ u_{i,a}=S_{v,i}a.                                   \tag{2.2}
+\]
+Production links these quantities:
+\[
+ n_i=\partial_i m,
+ \qquad
+ S_{v,i}=\partial_iS_x.                              \tag{2.3}
+\]
+They are not freely variable model parameters.
+
+Let $B=C_6^*C_6$ be the complete positive Gram coefficient and define
+\[
+ \overline B_a(x)=\Ef B(m+X+z_a).                    \tag{2.4}
+\]
+
+\subsection*{Theorem 2.1 (future-current/trace cancellation)}
+\hypertarget{theorem-2-1-cancellation}{ }
+
+The conditional A7 endpoint for the declared final fresh root is exactly
+\[
+\boxed{
+ \cR_-(a)={1\over2}\int\sum_i
+ \left[
+ (n_i+u_{i,a})^T\overline B_a(n_i+u_{i,a})
+ -\Tr(\overline B_a\Gamma_{<,i})
+ \right]dx .}                                       \tag{2.5}
+\]
+
+\paragraph{Proof.}
+Before integrating the fresh current, the $i$th A7 contribution is
+\[
+ {1\over2}\Ef\left[
+ (n_i+u_i+Y_i)^TB(m+X+z)(n_i+u_i+Y_i)
+ -\Tr\{B(m+X+z)\Gamma_{\Lambda,i}\}
+ \right].                                           \tag{2.6}
+\]
+Joint Gaussianity and the first identity in (2.1) make $X$ and $Y_i$
+independent.  Thus the linear $Y_i$ terms vanish and
+\[
+ \Ef[Y_i^TB(m+X+z)Y_i]
+ =\Tr(\overline B_z\Gamma_{>,i}).                    \tag{2.7}
+\]
+The future trace cancels against the future part of
+$\Gamma_{\Lambda,i}$, leaving
+\[
+ \Tr(\overline B_z\Gamma_{>,i})
+ -\Tr\{\overline B_z(\Gamma_{<,i}+\Gamma_{>,i})\}
+ =-\Tr(\overline B_z\Gamma_{<,i}).                  \tag{2.8}
+\]
+This proves (2.5). \hfill$\square$
+
+The cancellation is signed and owner-complete for this conditional endpoint.
+It must occur before any absolute-value estimate.  The result would change if
+the regulator were asymmetric, the same-point field-current covariance were
+nonzero, or the conditional law moved with $a$.
+
+\section*{3. First variation, Hessian, and form criterion}
+\hypertarget{section-3-hessian}{ }
+
+At $a=0$ put $W=m+X$.  For directions $\alpha,\beta$, abbreviate
+\[
+ z_\alpha=S_x\alpha,
+ \quad u_{i,\alpha}=S_{v,i}\alpha,
+ \quad
+ \overline{DB[z_\alpha]}=\Ef DB(W)[z_\alpha],       \tag{3.1}
+\]
+and similarly for $D^2B$.
+
+\subsection*{Proposition 3.1 (complete first and second variations)}
+
+The first variation is
+\[
+\boxed{
+\begin{aligned}
+ D\cR_-(0)[\alpha]=\int\sum_i\bigg[
+ &u_{i,\alpha}^T\overline B_0n_i\\
+ &+{1\over2}\Tr\!\left(
+ \overline{DB[z_\alpha]}(n_in_i^T-\Gamma_{<,i})
+ \right)\bigg]dx .
+\end{aligned}}                                      \tag{3.2}
+\]
+The symmetric bilinear Hessian is
+\[
+\boxed{
+\begin{aligned}
+ D^2\cR_-(0)[\alpha,\beta]=\int\sum_i\bigg[
+ &u_{i,\alpha}^T\overline B_0u_{i,\beta}\\
+ &+u_{i,\alpha}^T\overline{DB[z_\beta]}n_i
+  +u_{i,\beta}^T\overline{DB[z_\alpha]}n_i\\
+ &+{1\over2}\Tr\!\left(
+ \overline{D^2B[z_\alpha,z_\beta]}
+ (n_in_i^T-\Gamma_{<,i})
+ \right)\bigg]dx .
+\end{aligned}}                                      \tag{3.3}
+\]
+On the diagonal, the two cross orientations combine to coefficient two.
+The past-covariance contribution retains coefficient $-1/2$.
+
+\paragraph{Proof.}
+Differentiate the one scalar endpoint (2.5).  The quadratic current factor
+contributes two first-current orientations and one current-current term.  The
+field dependence contributes one $DB$ and one $D^2B$.  Polarization gives
+(3.3), including the two separately oriented cross terms. \hfill$\square$
+
+Equation (3.2) is generally nonzero.  Positive Hessian curvature alone does
+not prove that the base point is stationary or a local minimum.
+
+\subsection*{Exact sixth-power and source owners}
+
+For
+\[
+ \cS_6(a)={3\over20}\int\Ef|W+z_a|^6dx,
+\]
+the exact derivatives are
+\[
+ D\cS_6(0)[\alpha]
+ ={9\over10}\int\Ef[|W|^4W\mathbin{\cdot}z_\alpha]dx,       \tag{3.4}
+\]
+and
+\[
+\boxed{
+\begin{aligned}
+ D^2\cS_6(0)[\alpha,\beta]
+ ={9\over10}\int\Ef\big[&|W|^4z_\alpha\mathbin{\cdot}z_\beta\\
+ &+4|W|^2(W\mathbin{\cdot}z_\alpha)
+              (W\mathbin{\cdot}z_\beta)\big]dx .
+\end{aligned}}                                      \tag{3.5}
+\]
+This Hessian is positive semidefinite, but it need not be strictly positive.
+In whitened source coordinates the Cameron--Martin action is
+\[
+ \cC(a)={9\over20}|a|^2,
+ \qquad D^2\cC={9\over10}\Id.                       \tag{3.6}
+\]
+For nonwhitened coordinates, $\Id$ is replaced by the actual source Gram.
+
+Let $K_E$ and $K_6$ denote the conditional endpoint and sixth-power forms
+without the source term.  The requested one-tenth curvature gap is exactly
+\[
+\boxed{
+ K_E+K_6\succeq-{4\over5}\Id
+ \quad\Longleftrightarrow\quad
+ K_E+K_6+{9\over10}\Id\succeq{1\over10}\Id.}       \tag{3.7}
+\]
+This is stronger than mere nonnegative curvature, whose endpoint-plus-sixth
+threshold is $-9\Id/10$.
+
+\subsection*{Connection and domain firewall}
+
+For a curved source path
+\[
+ a(t)=a_0+t\alpha+{1\over2}t^2\eta+o(t^2),
+\]
+the chain rule is
+\[
+ {d^2\over dt^2}\cA(a(t))\big|_{t=0}
+ =D^2\cA(a_0)[\alpha,\alpha]+D\cA(a_0)[\eta].       \tag{3.8}
+\]
+The source connection is $9a_0\mathbin{\cdot}\eta/10$.  Endpoint and
+sixth-power connections need not vanish.  Gaussian-source pullback has its
+own term $DF[L D_\xi^2h]$; no $D_\xi\phi$ term belongs to the fixed-law
+Hessian (3.3).
+
+For the strict-past measurable matrix $K=K_E+K_6$, the natural absolute form
+domain is
+\[
+ \cD_{|K|^{1/2}}
+ =\{\phi:\E|\phi|^2+\E[\phi^T|K|\phi]<\infty\}.     \tag{3.9}
+\]
+At finite cutoff and fixed floor, bounded localized simple controls form the
+declared core.  If it contains $q\mathbf1_E$ for rational $q$ and
+$E\in\mathcal F_-$, then
+\[
+ \E[\phi^T(K+4\Id/5)\phi]\ge0
+ \quad\hbox{for every core }\phi                    \tag{3.10}
+\]
+is equivalent to $K\succeq-4\Id/5$ almost surely.  If a fiberwise rational
+direction fails, localize it to the positive-measure failure event.  One may
+not declare the unrestricted form closed and semibounded before this lower
+bound is proved.
+
+\section*{4. Spatially weighted collar}
+\hypertarget{section-4-collar}{ }
+
+Conditioned on the past, define the unnormalized spatial quantities
+\[
+\begin{aligned}
+ A_n^2&=\int\sum_i|n_i|^2dx,\\
+ A_W^2&=\int\Ef|m+X|^2dx,\\
+ A_Y^2&=\int\Ef\sum_i|Y_i|^2dx.
+\end{aligned}                                       \tag{4.1}
+\]
+Let $V$ be the torus volume, $\lambda_2=\lambda_{\min}A(2p)$, and retain the
+exact R-130 envelopes
+\[
+ L_6={1143\over250P},
+ \qquad H_6={7083\over500P},
+ \qquad P=4+10^{-12}.                                \tag{4.2}
+\]
+
+\subsection*{Theorem 4.1 (conditional spatial L2 collar)}
+
+Define
+\[
+\boxed{
+\begin{aligned}
+ C_{2,p}={}&{8\sqrt3L_6|p|\over V\lambda_2}A_nA_W
+ +{4\sqrt3H_6\over V\lambda_2}A_nA_Y\\
+ &+{2H_6\over V\lambda_2}A_n^2.
+\end{aligned}}                                      \tag{4.3}
+\]
+Then the retained R-152 fixed-law chart obeys
+\[
+ \cA''(0)[H,H]>
+ \left({7\over50}-C_{2,p}\right)\|H\|_{\Frob}^2.  \tag{4.4}
+\]
+In particular, $C_{2,p}\le1/25$ preserves curvature above $1/10$.
+
+\paragraph{Proof.}
+Spatial Cauchy--Schwarz applied to the three R-152 current-mean terms gives
+\[
+\begin{aligned}
+ |T_1|&\le2\sqrt3L_6beA_nA_W\|H\|_{\Frob}^2,\\
+ |T_2|&\le2\sqrt3H_6b^2A_nA_Y\|H\|_{\Frob}^2,\\
+ |T_3|&\le H_6b^2A_n^2\|H\|_{\Frob}^2.
+\end{aligned}                                       \tag{4.5}
+\]
+Here $b^2\le2/(V\lambda_2)$ and $e=2|p|b$.  Substitution gives (4.3), and
+R-152 supplies the $7/50$ base gap. \hfill$\square$
+
+For normalized RMS quantities $a_n=A_n/\sqrt V$, $a_W=A_W/\sqrt V$, and
+$a_Y=A_Y/\sqrt V$, the explicit $1/V$ disappears.  Also
+$A_n\le\sqrt V N$, $A_W\le\sqrt V M_W$, and
+$A_Y\le\sqrt V M_Y$, so (4.3) is no larger than the R-152 essential-supremum
+collar.  Its coefficients are exact for the declared R-130 plus
+Cauchy--Schwarz envelope; optimality is not claimed.
+
+For a fixed predictable direction $H$, a weighted condition
+\[
+ \E[C_{2,p}\|H\|_{\Frob}^2]
+ \le {1\over25}\E\|H\|_{\Frob}^2                  \tag{4.6}
+\]
+is sufficient.  If (4.6) is demanded for every event-localized predictable
+$H$, however, it is equivalent to $C_{2,p}\le1/25$ almost surely.  Therefore
+the new collar is spatially weaker but not probabilistically weaker as a
+uniform all-directions theorem.
+
+\section*{5. Exact A1 control-mean gradient constant}
+\hypertarget{section-5-gradient}{ }
+
+For the canonical control-generated mean $m_h=Lh_-$, Parseval and
+$LL^*\preceq A^{-1}$ give
+\[
+ \|\nabla m_h\|_2^2
+ \le\sup_{x\ge0}{x\over f(x)}\|h_-\|_{\mathcal S}^2,
+ \qquad
+ f(x)=x^2-ax+c,                                      \tag{5.1}
+\]
+where
+\[
+ a={4626377063\over5000000000},
+ \qquad
+ c={5020336473\over10000000000}.                    \tag{5.2}
+\]
+Since
+\[
+ {d\over dx}{x\over f(x)}={c-x^2\over f(x)^2},      \tag{5.3}
+\]
+the exact maximum is
+\[
+ c_{\rm grad}={1\over2\sqrt c-a}
+ =2.033300406271083\ldots .                          \tag{5.4}
+\]
+The rational certificate
+\[
+ {41\over20}f(x)-x
+ ={410000000000x^2-579362919166x+205833795393
+   \over200000000000}                               \tag{5.5}
+\]
+has discriminant
+\[
+ -{476508084992737466111\over10^{22}}<0.             \tag{5.6}
+\]
+Thus
+\[
+\boxed{
+ \|\nabla m_h\|_2^2
+ \le c_{\rm grad}\|h_-\|_{\mathcal S}^2
+ <{41\over20}\|h_-\|_{\mathcal S}^2.}             \tag{5.7}
+\]
+This bound concerns the mean generated by the control and its raw source
+norm.  It does not apply to a revealed Gaussian mean, does not include the
+$9/20$ action coefficient, and does not by itself pay a product with the
+current direction.
+
+\section*{6. Gaussian-past and ultraviolet obstruction}
+\hypertarget{section-6-obstruction}{ }
+
+\subsection*{Proposition 6.1 (no deterministic absolute collar for a
+nondegenerate derivative-active Gaussian past)}
+
+Assume one uncancelled revealed root has coefficient
+$g\sim\mathcal N(0,\sigma^2)$ with $\sigma>0$ and spatial profile $\varphi$
+such that $\|\nabla\varphi\|_\infty>0$.  Condition on all other roots and
+write
+\[
+ m=m_0+g\varphi,
+ \qquad n=\nabla m.                                  \tag{6.1}
+\]
+Then
+\[
+ N(g)\ge |g|\|\nabla\varphi\|_\infty
+       -\|\nabla m_0\|_\infty.                       \tag{6.2}
+\]
+The R-152 collar contains the strictly positive term
+$2H_6N(g)^2/\lambda_2$.  Hence
+\[
+ \operatorname*{ess\,sup}_g C_{\rm past}(g)=\infty,
+ \qquad
+ \Pr\{C_{\rm past}>K\mid m_0\}>0                  \tag{6.3}
+\]
+for every finite $K$.  The same conclusion applies to $C_{2,p}$ when the
+$L^2$ derivative profile is nonzero.  Therefore the deterministic
+almost-sure threshold $C\le1/25$ cannot close the general Gaussian strict
+past.
+
+The conclusion is unbounded support and positive-probability violation, not
+almost-sure violation.  Small $|g|$ can satisfy the collar with positive
+probability.  A zero mode, a derivative-inactive root, or an exact signed
+feedback cancellation lies outside this fixture.
+
+Event localization gives the companion logical boundary.  If
+\[
+ \E[C_{2,p}\|H\|^2]\le\kappa\E\|H\|^2              \tag{6.4}
+\]
+holds for every bounded predictable direction and the core admits
+$H=H_0\mathbf1_E$, take
+$E=\{C_{2,p}>\kappa+\epsilon\}$.  Equation (6.4) fails unless this event has
+zero probability.  Thus an averaged multiplier cannot evade (6.3) for the
+full predictable class.
+
+There is a separate ultraviolet warning.  In the A1 sharp-cube covariance,
+\[
+ \Tr\Gamma(k)={6\over Y_{\rm kin}|k|^4}+O(|k|^{-6}),
+\]
+so the separated future-current envelope obeys
+\[
+ A_{Y,\Lambda}^2
+ =\sum_{k\in\text{cube}}|k|^2\Tr\Gamma(k)
+ =\Theta(V\Lambda),
+ \qquad
+ A_{Y,\Lambda}=\Theta((V\Lambda)^{1/2}).             \tag{6.5}
+\]
+Indeed the exact max-norm shell has $24r^2+2$ lattice points, giving
+\[
+ 8N\le
+ \sum_{0<\|n\|_\infty\le N}{1\over|n|^2}
+ \le26N.                                             \tag{6.6}
+\]
+Indexing and cutoff conventions change the leading constant, not the linear
+growth for a positive-density future tail.  This is the already registered
+separated-current obstruction, not a divergence of the covariance-normal
+endpoint: the signed trace cancellation in Theorem 2.1 removes the primitive
+future-current divergence.
+
+Finally, $B\succeq0$ does not sign (3.3).  In the scalar quadratic row
+$B(w)=\kappa w^2$, the matrix in the $(z,u)$ variables is
+\[
+ \kappa\begin{pmatrix}
+ n^2-\sigma_{<}^2&2mn\\
+ 2mn&m^2+\sigma_X^2
+ \end{pmatrix}.                                     \tag{6.7}
+\]
+At $m=n=\sigma_X^2=1$ and $\sigma_<^2=1/2$, its determinant is $-3\kappa^2$.
+This is a logical sign fixture, not a production counterexample.  It explains
+why the covariance deficit and $DB$ cross terms must remain in one signed
+operator.
+
+\section*{7. Exact remaining route}
+\hypertarget{section-7-route}{ }
+
+The final-fresh-root fiber is now explicit.  The unresolved T-050 object is
+larger.  A legal continuation must derive, from one scalar action and one
+predictable chart, all of the following once:
+
+\begin{enumerate}
+\item the earlier-root future-feedback and covariance-normal
+future-variance-minus-trace/forest completion;
+\item the legal two-sided reverse of the same forward block;
+\item balanced/root compatibility and every cross-root sextic block;
+\item the genuine complete-low and returned-mean Feshbach block;
+\item chart-connection terms whenever the production control map is curved;
+\item the cutoff-, refinement-, and control-uniform form bound
+$K\succeq-4\Id/5$, or the finite owner-complete matrix bound
+$M\succeq\mu G$.
+\end{enumerate}
+
+The present calculation forbids three shortcuts: treating the future trace as
+an additional reserve after (2.8), replacing signed completion by separated
+absolute current norms, and inferring global positivity from the positive
+$B$ term alone.  It neither proves nor disproves the remaining production
+Loewner inequality.
+
+\section*{8. Devil's-advocate review}
+\hypertarget{section-8-devils-advocate}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: zero field-current covariance is only uncorrelated,
+not independent.} \textbf{DISMISSED under the declared hypothesis.}  The
+fresh pair is jointly Gaussian, so zero cross covariance gives independence.
+The result does not extend this inference to non-Gaussian laws.
+
+\item \textbf{Objection: $m,n,z,u$ were varied independently.}
+\textbf{VALID-with-mitigation.}  Equations (2.2)--(2.3) retain the production
+incidences $n=\nabla m$ and $u=\nabla z$.  Independent scalar fixtures audit
+coefficients or logic only and are not production solutions.
+
+\item \textbf{Objection: the positive sixth-power Hessian makes the full
+operator positive.} \textbf{UPHELD against that inference.}  It may vanish,
+and no registered theorem compares it uniformly with the signed covariance
+deficit and cross terms.
+
+\item \textbf{Objection: the spatial $L^2$ collar solves the random-past
+problem by averaging.} \textbf{UPHELD.}  It improves only the spatial norm.
+For all predictable directions, event localization restores the almost-sure
+multiplier condition.
+
+\item \textbf{Objection: Gaussian support proves the collar is violated
+almost surely.} \textbf{UPHELD against that stronger wording.}  The proved
+statement is unbounded essential support and positive-probability violation.
+
+\item \textbf{Objection: the $41/20$ bound pays the full source budget.}
+\textbf{UPHELD.}  It bounds only the control-generated mean gradient in the
+raw source norm.  It is not the $9/20$ action payment and does not control the
+revealed past.
+
+\item \textbf{Objection: $A_Y\sim\sqrt\Lambda$ proves the PDE or A7 composite
+diverges.} \textbf{UPHELD against that inference.}  Only the separated
+absolute current envelope diverges.  The signed future-current/trace
+cancellation is exact.
+
+\item \textbf{Objection: positive curvature proves a local minimum.}
+\textbf{UPHELD.}  The first variation (3.2) and chart connections may be
+nonzero.
+
+\item \textbf{Objection: this result selects BCC, a uniform phase, or another
+PDE.} \textbf{UPHELD against every such inference.}  R-153 is phase-neutral
+conditional mathematics and supplies no physical model-selection verdict.
+\end{enumerate}
+
+External review is invited for the conditional independence step, the trace
+sign in (2.8), every $1/2$ and factor-two coefficient in (3.2)--(3.3), the
+sixth-power factors, the $1/V$ normalization in (4.3), the discriminant in
+(5.6), and the quantifiers in Proposition 6.1.
+
+\section*{9. Reproduction and Result footer}
+\hypertarget{section-9-result-footer}{ }
+
+The primary route differentiates a polynomial endpoint with exact symbolic
+arithmetic and derives every A1/R-130 constant from pinned upstream data.  The
+independent route uses only the Python standard library, rebuilds the endpoint
+as a two-variable rational polynomial, and independently checks the lattice,
+gradient, collar, connection, and sign certificates.  The integrated verifier
+reruns both children, fails closed on authority and artifact hashes, rebuilds
+the PDF deterministically, scans it for active content, extracts required
+scope text, renders every page with Poppler, and checks all registered
+surfaces.
+
+\begin{verbatim}
+Result ID: A13-CLASSII-PRODUCTION-STRICT-PAST-CONDITIONAL-HESSIAN-
+  WEIGHTED-COLLAR-BOUNDARY (R-153).
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement: On the declared final fresh production root, (2.5) and
+  (3.2)-(3.8) give the exact strict-past endpoint, variations, and owners;
+  (4.3) and (5.4) give conditional collar and control-mean bounds; Gaussian
+  support forbids a uniform deterministic absolute collar. T-050 remains open.
+Scope: Fixed cutoff/floor, retained antipodal p:2p chart, strict-past fixed
+  common-even Gaussian law, zero same-point field-current cross covariance,
+  actual A1 incidences, and the covariance-matched A7 trace.
+Dependencies: A1, A7, R-130, R-150--R-152, and Sections 1-2 hypotheses.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_production_strict_past_conditional_hessian_
+  weighted_collar_boundary_verify.py
+Expected output: Integrated 177/177 PASS, including primary 33/33,
+  independent 27/27, 60 embedded child rows, 117 integrator-only checks, and
+  every artifact/PDF/generated-surface gate.
+Falsification gate: Failure of any cancellation, derivative factor, collar or
+  gradient coefficient, Gaussian-support quantifier, authority hash,
+  executable/JSON/PDF artifact, exploration, negative, or public-surface pin.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: No complete progressive Hessian, production Loewner
+  gap, T-050/A13 closure, Nelson/interacting measure, phase selection, PDE
+  validation/replacement, or Sector-A closure follows.
+Next required action: Reopen T-050 only from one actual predictable production
+  chart deriving every feedback/forest/reverse/balanced/low/sextic/connection
+  owner once; otherwise continue phase-neutral T-054 model selection.
+\end{verbatim}
+
+\endgroup

@@ -5466,3 +5466,85 @@ T5--T7 promotion remain open. Tier stays T4.
   operator theorem appears; primary phase-neutral physical-model work moves
   to T-054, with T-052 only the M1 current-functional branch and T-053 applied
   only to candidates surviving the common comparison rules.
+
+- 2026-08-03: Registered
+  `A13-CLASSII-PRODUCTION-STRICT-PAST-CONDITIONAL-HESSIAN-WEIGHTED-COLLAR-BOUNDARY`
+  (R-153) as the production-incidence refinement of the R-152 affine-past
+  boundary.  Condition on the strict past before the final fresh antipodal
+  root and write `W=m+X`, `V_i=n_i+Y_i`, `z_a=S_x a`, and
+  `u_i,a=S_v,i a`, with the actual A1 relations `n_i=partial_i m` and
+  `S_v,i=partial_i S_x`.  Under the registered common-even jointly Gaussian
+  future law, zero same-point `Cov(X,Y_i)`, and
+  `Gamma_Lambda,i=Gamma_<,i+Gamma_>,i`, the future-current covariance cancels
+  the `Gamma_>,i` part of the primitive A7 trace exactly.  The conditional
+  endpoint is therefore
+  `(1/2) int sum_i[(n_i+u_i,a)^T Bbar_a(n_i+u_i,a)
+  -Tr(Bbar_a Gamma_<,i)] dx`.
+
+  Direct differentiation gives the exact first variation and the full
+  symmetric bilinear Hessian.  Its four endpoint owners are, exactly once,
+  `u_alpha^T Bbar_0 u_beta`, the two mixed
+  `u^T overline(DB[z]) n` terms, and
+  `(1/2)Tr(overline(D2B[z_alpha,z_beta])
+  (n_i n_i^T-Gamma_<,i))`.  The terminal sixth-power Hessian is
+  nonnegative and the source Hessian is `(9/10)I`.  Hence the requested
+  one-tenth form gap is still equivalent to
+  `K_E+K_6>=-(4/5)I` almost surely on the localized predictable form core.
+  For a curved chart, `A''=D2A[alpha,alpha]+DA[eta]`; the source connection
+  is `(9/10)a_0.eta`.  No derivative of the past law belongs to this fixed-law
+  Hessian.
+
+  Spatial Cauchy--Schwarz yields the conditional weighted collar
+  `C_2,p=[8 sqrt(3)L6|p|/(V lambda_2)]A_n A_W
+  +[4 sqrt(3)H6/(V lambda_2)]A_n A_Y
+  +[2H6/(V lambda_2)]A_n^2`.  It gives augmented curvature strictly above
+  `(7/50-C_2,p)||H||_F^2`, so `C_2,p<=1/25` is sufficient for the desired
+  strict one-tenth gap.  This is weaker spatially than the R-152 pointwise
+  collar, but it remains conditional: requiring the estimate for every
+  predictable direction permits event localization and is equivalent to a
+  fibrewise almost-sure form bound.
+
+  The production relation does give one new quantitative payment.  For the
+  control-generated mean `m_h=Lh_-`, the exact A1 lower symbol
+  `f(x)=x^2-(4626377063/5000000000)x
+  +5020336473/10000000000` implies
+  `||grad m_h||_2^2<=c_grad||h_-||_S^2`, where
+  `c_grad=sup_{x>=0}x/f(x)=1/(2sqrt(c)-a)
+  =2.033300406271083...<41/20`.  The strict rational certificate has negative
+  discriminant
+  `-476508084992737466111/10^22`.  This pays only the control-generated mean
+  in the raw source norm; it does not pay a revealed Gaussian past or convert
+  the action coefficient `9/20` into a free unit coefficient.
+
+  The missing uniform collar is now a proved method boundary, rather than an
+  unspecified estimate.  One nondegenerate uncancelled derivative-active
+  revealed Gaussian root has unbounded current support, so every finite
+  deterministic absolute-collar threshold is violated with positive
+  probability.  This is not an almost-sure violation and not a negative
+  statement about the signed endpoint.  It is registered as
+  `NG-2026-08-03-A13-NONDEGENERATE-GAUSSIAN-PAST-CURRENT-DETERMINISTIC-LINFTY-COLLAR`.
+  A separated `A_Y` envelope also inherits the already registered
+  `NG-2026-07-31-A13-SEPARATE-FLOOR-WEIGHTED-CURRENT-ENERGY-ABSORPTION`
+  ultraviolet growth; the exact signed future-current/trace cancellation
+  itself remains finite.
+
+  `EXP-000666--EXP-000670` preserve the production cancellation, exact
+  Hessian, weighted-collar advance, Gaussian-support obstruction, and bounded
+  route decision.  Primary `33/33` and non-importing standard-library
+  independent `27/27` certificates pass.  Integrated verification passes
+  `177/177`, embedding all `60` child rows exactly once and adding `117`
+  integrator-only parity, exact-oracle, authority-hash, artifact, note-scope,
+  deterministic-PDF, security/text/render, public-surface, exploration,
+  scope, and aggregation checks.  The manifest pins the eight-page PDF and
+  manual inspection of every rendered page.
+
+  R-153 does not construct the earlier-root feedback, full progressive
+  future-variance-minus-trace/forest completion, legal two-sided reverse,
+  balanced/root compatibility, genuine low/Feshbach block, cross-root sextic,
+  or all chart connections from one scalar production action.  It proves no
+  production Loewner bound and closes neither T-050 nor A13.  It selects or
+  excludes no BCC, uniform, or other phase, validates or replaces no PDE, and
+  proves no Nelson theorem, interacting measure, or Sector-A closure.  The
+  direct T-050 matrix route remains parked until an actual owner-complete
+  predictable production chart exists; T-054 remains the primary
+  phase-neutral model-selection route, with T-052 only its M1 branch.

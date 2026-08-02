@@ -1141,6 +1141,28 @@ endpoint theorem.
     A13 stay open and parked, while primary phase-neutral model selection moves
     to T-054 with T-052 only the M1 branch and T-053 reserved for survivors.
 
+75. **Production strict-past conditional Hessian and weighted-collar
+    boundary.** R-153 uses the derived conditional-operator trigger left by
+    R-152 and identifies the actual final-fresh-root fiber.  Under the
+    common-even Gaussian covariance split, the fresh-current covariance
+    cancels exactly against its A7 future-trace component, leaving the past
+    covariance with a minus sign.  Direct differentiation gives the complete
+    first variation, symmetric bilinear Hessian, positive-semidefinite
+    sixth-power Hessian, `9/10` source Hessian, chart connection, and the exact
+    localized form threshold `K_E+K_6>=-4I/5`.  Spatial Cauchy replaces the
+    R-152 essential suprema by an exact conditional weighted-collar form, and
+    the A1 symbol gives the control-generated mean gradient constant
+    `2.033300406...<41/20`.  One uncancelled derivative-active Gaussian past
+    coefficient nevertheless gives unbounded support to every absolute
+    current collar; event-localized predictable directions show that an
+    all-directions averaged multiplier is again fiberwise.  The signed
+    future-current/trace cancellation remains finite and the older separated-
+    current ultraviolet no-go is reused rather than renumbered.  R-153 is a
+    reusable strict-past boundary, not the complete progressive owner or a
+    production Loewner theorem.  Earlier-root feedback, legal reverse,
+    forest/low/balanced completion, cross-root sextic aggregation, T-050,
+    A13, every phase/PDE verdict, and Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

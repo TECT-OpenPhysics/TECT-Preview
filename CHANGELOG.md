@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-153 exact strict-past conditional Hessian and Gaussian absolute-collar boundary] - 2026-08-03
+
+Identified the exact final-fresh-root conditional A7 endpoint after future-current/trace cancellation, derived its first and bilinear second variations plus source, sixth-power, connection, and form factors, proved a spatial L2 collar and exact A1 control-mean gradient constant below 41/20, and registered the Gaussian-support and predictable-localization obstruction to any deterministic absolute collar. The complete progressive owner and production Loewner bound remain absent; T-050, A13, phase/PDE selection, and Sector A remain open.
+
 ## [R-152 affine-past curvature and nonlinear/multi-root globalization boundary] - 2026-08-03
 
 Registered the conditional affine-past curvature theorem and exact nonlinear/multi-root acceptance boundaries. A fixed past field mean with zero current mean retains endpoint loss below 19/25 and gap above 7/50; an almost-sure declared past-current collar preserves gap above 1/10. Exact fixtures show that linear and pairwise tests do not imply the required nonlinear or global operators. R-152 closes the bounded review, not T-050; A13 remains T4 and primary phase-neutral physical-model work moves to T-054.

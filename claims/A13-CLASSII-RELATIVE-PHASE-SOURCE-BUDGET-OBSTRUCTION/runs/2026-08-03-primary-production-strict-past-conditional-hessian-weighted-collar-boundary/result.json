@@ -1,0 +1,359 @@
+{
+  "assertions": [
+    {
+      "actual": "tect/a7-classii-renormalised-energy/1.1",
+      "expected": "tect/a7-classii-renormalised-energy/1.1",
+      "group": "authority",
+      "name": "A7 covariance-normal schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-150",
+      "expected": "R-150 with zero same-point cross synthesis",
+      "group": "authority",
+      "name": "R-150 production antipodal predecessor",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-151",
+      "expected": "R-151",
+      "group": "authority",
+      "name": "R-151 local-gap predecessor",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-152",
+      "expected": "R-152 and K >= -4I/5",
+      "group": "authority",
+      "name": "R-152 conditional gate predecessor",
+      "status": "PASS"
+    },
+    {
+      "actual": "4096",
+      "expected": 4096,
+      "group": "production",
+      "name": "registered volume",
+      "status": "PASS"
+    },
+    {
+      "actual": "x**2 - 4626377063*x/5000000000 + 5020336473/10000000000",
+      "expected": "x**2 - 4626377063*x/5000000000 + 5020336473/10000000000",
+      "group": "production",
+      "name": "exact A1 lower symbol",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "14b92670733a18d1209af6b6f293117f1418e9883fc291d7a01e934b00d4b82b",
+        "4572000000000/4000000000001",
+        "14166000000000/4000000000001"
+      ],
+      "expected": [
+        "14b92670733a18d1209af6b6f293117f1418e9883fc291d7a01e934b00d4b82b",
+        "1143/(250P)",
+        "7083/(500P)"
+      ],
+      "group": "authority",
+      "name": "R-130 hash and derivative envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "gamma_future*((w + z)**4 + 2*(w + z)**2 + 3) - (gamma_future + gamma_past)*((w + z)**4 + 2*(w + z)**2 + 3) + (n + u)**2*((w + z)**4 + 2*(w + z)**2 + 3)",
+      "expected": "(-gamma_past + (n + u)**2)*((w + z)**4 + 2*(w + z)**2 + 3)",
+      "group": "conditional",
+      "name": "future current cancels its trace covariance",
+      "status": "PASS"
+    },
+    {
+      "actual": "-(w + z)**4 - 2*(w + z)**2 - 3",
+      "expected": "-(w + z)**4 - 2*(w + z)**2 - 3",
+      "group": "conditional",
+      "name": "residual past trace has minus sign",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2*gamma_past*w**3*za - 2*gamma_past*w*za + 2*n**2*w**3*za + 2*n**2*w*za + n*ua*w**4 + 2*n*ua*w**2 + 3*n*ua",
+      "expected": "-2*gamma_past*w**3*za - 2*gamma_past*w*za + 2*n**2*w**3*za + 2*n**2*w*za + n*ua*w**4 + 2*n*ua*w**2 + 3*n*ua",
+      "group": "conditional",
+      "name": "exact endpoint first variation",
+      "status": "PASS"
+    },
+    {
+      "actual": "-6*gamma_past*w**2*za*zb - 2*gamma_past*za*zb + 6*n**2*w**2*za*zb + 2*n**2*za*zb + 4*n*ua*w**3*zb + 4*n*ua*w*zb + 4*n*ub*w**3*za + 4*n*ub*w*za + ua*ub*w**4 + 2*ua*ub*w**2 + 3*ua*ub",
+      "expected": "-6*gamma_past*w**2*za*zb - 2*gamma_past*za*zb + 6*n**2*w**2*za*zb + 2*n**2*za*zb + 4*n*ua*w**3*zb + 4*n*ua*w*zb + 4*n*ub*w**3*za + 4*n*ub*w*za + ua*ub*w**4 + 2*ua*ub*w**2 + 3*ua*ub",
+      "group": "conditional",
+      "name": "exact bilinear endpoint Hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "-6*gamma_past*w**2*za*zb - 2*gamma_past*za*zb + 6*n**2*w**2*za*zb + 2*n**2*za*zb + 4*n*ua*w**3*zb + 4*n*ua*w*zb + 4*n*ub*w**3*za + 4*n*ub*w*za + ua*ub*w**4 + 2*ua*ub*w**2 + 3*ua*ub",
+      "expected": "symmetric in a,b",
+      "group": "conditional",
+      "name": "bilinear Hessian is symmetric",
+      "status": "PASS"
+    },
+    {
+      "actual": "-6*gamma_past*w**2*za**2 - 2*gamma_past*za**2 + 6*n**2*w**2*za**2 + 2*n**2*za**2 + 8*n*ua*w**3*za + 8*n*ua*w*za + ua**2*w**4 + 2*ua**2*w**2 + 3*ua**2",
+      "expected": "-6*gamma_past*w**2*za**2 - 2*gamma_past*za**2 + 6*n**2*w**2*za**2 + 2*n**2*za**2 + 8*n*ua*w**3*za + 8*n*ua*w*za + ua**2*w**4 + 2*ua**2*w**2 + 3*ua**2",
+      "group": "conditional",
+      "name": "diagonal coefficients 1,2,1/2,-1/2",
+      "status": "PASS"
+    },
+    {
+      "actual": "9*wx**5*zx/10 + 9*wx**4*wy*zy/10 + 9*wx**3*wy**2*zx/5 + 9*wx**2*wy**3*zy/5 + 9*wx*wy**4*zx/10 + 9*wy**5*zy/10",
+      "expected": "9*(wx**2 + wy**2)**2*(wx*zx + wy*zy)/10",
+      "group": "owners",
+      "name": "sixth-power first-variation factor",
+      "status": "PASS"
+    },
+    {
+      "actual": "9*wx**4*zx**2/2 + 9*wx**4*zy**2/10 + 36*wx**3*wy*zx*zy/5 + 27*wx**2*wy**2*zx**2/5 + 27*wx**2*wy**2*zy**2/5 + 36*wx*wy**3*zx*zy/5 + 9*wy**4*zx**2/10 + 9*wy**4*zy**2/2",
+      "expected": "9*(wx**2 + wy**2)**2*(zx**2 + zy**2)/10 + 9*(4*wx**2 + 4*wy**2)*(wx*zx + wy*zy)**2/10",
+      "group": "owners",
+      "name": "sixth-power Hessian factors",
+      "status": "PASS"
+    },
+    {
+      "actual": "9*(wx**2 + wy**2)**2*(zx**2 + zy**2)/10 + 9*(4*wx**2 + 4*wy**2)*(wx*zx + wy*zy)**2/10",
+      "expected": "sum of nonnegative squares",
+      "group": "owners",
+      "name": "sixth-power Hessian is positive semidefinite",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/10",
+      "expected": "9/10",
+      "group": "owners",
+      "name": "source Hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "4/5",
+      "expected": "4/5",
+      "group": "owners",
+      "name": "one-tenth gap threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*a0**3*eta + 12*a0**2*alpha**2 + 6*a0*eta + 6*alpha**2 + eta",
+      "expected": "4*a0**3*eta + 12*a0**2*alpha**2 + 6*a0*eta + 6*alpha**2 + eta",
+      "group": "connection",
+      "name": "curved-chart connection has plus first variation",
+      "status": "PASS"
+    },
+    {
+      "actual": "9*a0*eta/10",
+      "expected": "9*a0*eta/10",
+      "group": "connection",
+      "name": "source connection coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "36576000000000*sqrt(3)*p/(4000000000001*V*lambda_2)",
+        "56664000000000*sqrt(3)/(4000000000001*V*lambda_2)",
+        "28332000000000/(4000000000001*V*lambda_2)"
+      ],
+      "expected": [
+        "36576000000000*sqrt(3)*p/(4000000000001*V*lambda_2)",
+        "56664000000000*sqrt(3)/(4000000000001*V*lambda_2)",
+        "28332000000000/(4000000000001*V*lambda_2)"
+      ],
+      "group": "weighted-collar",
+      "name": "spatial L2 collar coefficients",
+      "status": "PASS"
+    },
+    {
+      "actual": "36000000000*N*(1016*sqrt(3)*M_W*p + 1574*sqrt(3)*M_Y + 787*N)/(4000000000001*lambda_2)",
+      "expected": "36576000000000*sqrt(3)*M_W*N*p/(4000000000001*lambda_2) + 56664000000000*sqrt(3)*M_Y*N/(4000000000001*lambda_2) + 28332000000000*N**2/(4000000000001*lambda_2)",
+      "group": "weighted-collar",
+      "name": "L2 collar is no larger than Linfinity envelope under norm embeddings",
+      "status": "PASS"
+    },
+    {
+      "actual": "36000000000*N*(1016*sqrt(3)*M_W*p + 1574*sqrt(3)*M_Y + 787*N)/(4000000000001*lambda_2)",
+      "expected": "independent of V",
+      "group": "weighted-collar",
+      "name": "RMS normalization removes volume",
+      "status": "PASS"
+    },
+    {
+      "actual": "-(10000000000*x**2 - 5020336473)/10000000000",
+      "expected": "5020336473/10000000000 - x**2",
+      "group": "source-gradient",
+      "name": "ratio derivative numerator",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "410000000000",
+        "-579362919166",
+        "205833795393"
+      ],
+      "expected": [
+        "410000000000",
+        "-579362919166",
+        "205833795393"
+      ],
+      "group": "source-gradient",
+      "name": "41/20 certificate integer coefficients",
+      "status": "PASS"
+    },
+    {
+      "actual": "-476508084992737466111/10000000000000000000000",
+      "expected": "-476508084992737466111/10^22",
+      "group": "source-gradient",
+      "name": "41/20 certificate negative discriminant",
+      "status": "PASS"
+    },
+    {
+      "actual": "23131885315000000000/28800000000947494031 + 500000000000000*sqrt(5020336473)/28800000000947494031",
+      "expected": "<41/20",
+      "group": "source-gradient",
+      "name": "exact control-mean gradient constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "28800000000947494031/100000000000000000000",
+      "expected": "28800000000947494031/10^20 > 36/125",
+      "group": "source-gradient",
+      "name": "A1 lower-symbol minimum",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "1": "44/3",
+        "2": "149/5",
+        "4": "5694269330719/94360347900",
+        "8": "1107723465068825851873172374853305297482336825128257/9105917815340368416450917038024810665312709098000"
+      },
+      "expected": "8N <= sum 1/|n|^2 <= 26N",
+      "group": "uv",
+      "name": "cube reciprocal sums obey linear shell bounds",
+      "status": "PASS"
+    },
+    {
+      "actual": "24*x**2 + 2",
+      "expected": "24*x**2 + 2",
+      "group": "uv",
+      "name": "exact cube shell count",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3",
+      "expected": -3,
+      "group": "signed-boundary",
+      "name": "positive-row data can leave an indefinite conditional Hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/50",
+      "expected": ">0",
+      "group": "localization",
+      "name": "event-localized predictable direction detects collar violation",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "a13_closed": false,
+        "common_even_zero_same_point_field_current_cross_covariance": true,
+        "complete_progressive_owner_assembly": false,
+        "control_generated_mean_gradient_bound": true,
+        "exact_future_current_trace_cancellation": true,
+        "fixed_finite_cutoff": true,
+        "positive_coefficient_floor": true,
+        "production_loewner_gap": false,
+        "retained_antipodal_p_2p_fresh_root": true,
+        "sector_a_closed": false,
+        "strict_past_conditioned_fixed_law": true,
+        "t050_closed": false,
+        "uniform_absolute_gaussian_past_collar": false,
+        "weighted_spatial_l2_collar_conditional": true
+      },
+      "expected": "strict-past conditional boundary only; all global gates open",
+      "group": "scope",
+      "name": "open-gate firewall",
+      "status": "PASS"
+    }
+  ],
+  "assertions_passed": 33,
+  "assertions_total": 33,
+  "authority_hashes": {
+    "A1": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "A7": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+    "R-130-result": "14b92670733a18d1209af6b6f293117f1418e9883fc291d7a01e934b00d4b82b",
+    "R-150": "ac8e55e4090dc2b819c6700b97f4dc2508f65f33d261134c1b4aa9ff6f458a43",
+    "R-151": "933db5a5cee43a821ce8e464fcacfedd22c46b854dd6bca08ce3de61e8521ed7",
+    "R-152": "cd18b2ad64b600ab912175b77474ba41ee06b6a9680af408cf438a49969d5ceb"
+  },
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "derived": {
+    "bilinear_hessian_coefficients": [
+      1,
+      1,
+      1,
+      "1/2",
+      "-1/2"
+    ],
+    "conditional_endpoint": "1/2 integral sum_i [(n_i+u_i)^T Bbar_z (n_i+u_i)-Tr(Bbar_z Gamma_<,i)] dx",
+    "control_mean_gradient_constant": "23131885315000000000/28800000000947494031 + 500000000000000*sqrt(5020336473)/28800000000947494031",
+    "control_mean_gradient_rational_upper": "41/20",
+    "cube_reciprocal_sums": {
+      "1": "44/3",
+      "2": "149/5",
+      "4": "5694269330719/94360347900",
+      "8": "1107723465068825851873172374853305297482336825128257/9105917815340368416450917038024810665312709098000"
+    },
+    "diagonal_hessian_coefficients": [
+      1,
+      2,
+      "1/2",
+      "-1/2"
+    ],
+    "endpoint_plus_sixth_threshold": "-4/5",
+    "first_variation_coefficients": [
+      1,
+      "1/2",
+      "-1/2"
+    ],
+    "gradient_certificate_discriminant": "-476508084992737466111/10000000000000000000000",
+    "lower_symbol": "x**2 - 4626377063*x/5000000000 + 5020336473/10000000000",
+    "r130_H6": "14166000000000/4000000000001",
+    "r130_L6": "4572000000000/4000000000001",
+    "signed_row_determinant": "-3",
+    "sixth_first_factor": "9/10",
+    "sixth_hessian_factors": [
+      "9/10",
+      "18/5"
+    ],
+    "source_hessian": "9/10",
+    "volume": "4096",
+    "weighted_l2_collar_coefficients": {
+      "A_n_A_W": "36576000000000*sqrt(3)*p/(4000000000001*V*lambda_2)",
+      "A_n_A_Y": "56664000000000*sqrt(3)/(4000000000001*V*lambda_2)",
+      "A_n_squared": "28332000000000/(4000000000001*V*lambda_2)"
+    }
+  },
+  "ledger_id": "R-153",
+  "no_overclaim": "R-153 identifies the exact final-fresh-root strict-past conditional endpoint, its first variation and bilinear Hessian, a conditional spatial-L2 collar, and a control-generated mean gradient bound. It proves that a nondegenerate derivative-active Gaussian past cannot satisfy the deterministic absolute collar uniformly. It does not construct the complete progressive production Hessian, prove the Loewner bound, close T-050 or A13, prove Nelson or an interacting measure, select any phase, validate or replace a PDE, or close Sector A.",
+  "result_id": "A13-CLASSII-PRODUCTION-STRICT-PAST-CONDITIONAL-HESSIAN-WEIGHTED-COLLAR-BOUNDARY",
+  "schema": "tect/a13-production-strict-past-conditional-hessian-weighted-collar-boundary-primary/1.0",
+  "scope": {
+    "a13_closed": false,
+    "common_even_zero_same_point_field_current_cross_covariance": true,
+    "complete_progressive_owner_assembly": false,
+    "control_generated_mean_gradient_bound": true,
+    "exact_future_current_trace_cancellation": true,
+    "fixed_finite_cutoff": true,
+    "positive_coefficient_floor": true,
+    "production_loewner_gap": false,
+    "retained_antipodal_p_2p_fresh_root": true,
+    "sector_a_closed": false,
+    "strict_past_conditioned_fixed_law": true,
+    "t050_closed": false,
+    "uniform_absolute_gaussian_past_collar": false,
+    "weighted_spatial_l2_collar_conditional": true
+  },
+  "status": "PASS",
+  "version": "1.0.0"
+}

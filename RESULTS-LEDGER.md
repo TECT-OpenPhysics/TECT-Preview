@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-153](#r-153) | Production strict-past conditional Hessian and weighted-collar boundary | Scoped T4 analytic/exact/executed/audited conditional theorem and method boundary. For the retained final fresh root, strict-past conditioning and the common-even Gaussian covariance split cancel the future-current covariance exactly against its A7 trace component, leaving the past covariance with a minus sign. The first variation, full bilinear Hessian, positive-semidefinite sixth-power Hessian, `9/10` source Hessian, chart connection, and form threshold `K_E+K_6>=-4I/5` are exact on the actual incidences. Spatial Cauchy gives a conditional `L2_x` collar, and the A1 control-generated mean obeys the exact gradient constant `2.033300406...<41/20`. A nondegenerate derivative-active Gaussian past has unbounded absolute-collar support; event localization prevents an all-predictable-direction averaged collar from weakening the fiberwise condition. The complete progressive owner, production Loewner gap, T-050, A13, phase/PDE selection, and Sector A remain open |
 | [R-152](#r-152) | Affine-past curvature and nonlinear/multi-root globalization boundary | Scoped T4 analytic/exact/executed/audited theorem and method boundary. In the enlarged fixed-mean R-151 chart, arbitrary field mean with zero current mean preserves endpoint loss below `19/25` and augmented curvature above `7/50`; an almost-sure declared past-current collar `C_past<=1/25` preserves curvature above `1/10`. The exact nonlinear gate is the conditional complete-form bound `K>=-4I/5`, and the exact finite multi-root gate is `M>=mu G`. Smooth-bump and rational two-edge fixtures prove that averaged linear tests and positive pairwise gaps do not imply those gates. The collar, production `K` and global production `M` remain absent; T-050, A13, phase/PDE selection, and Sector A remain open |
 | [R-151](#r-151) | Direct two-root endpoint Hessian and uniform local source gap | Scoped T4 analytic/exact/executed/audited local theorem and owner-coordinate no-go. In the full `12x12` sign/internal linear feedback chart `h2=t H xi1` for simultaneous antipodal roots `+/-p` and `+/-2p`, with nonzero admissible dual-lattice `p` and all four modes retained, zero strict past, and a stationary common-even background, the exact complete endpoint has zero first variation and, for `H != 0`, Hessian loss strictly below `4/5 ||H||_F^2`. The radial certificate holds for every `x=|p|^2>=0`. The source Hessian is exactly `9/10 ||H||_F^2` and the sixth-power Hessian is nonnegative, yielding a strict augmented local gap above `1/10 ||H||_F^2`. Forest, balanced, future, trace, and low coordinates may audit the fixed terminal owner but cannot be added as independent reserves. Non-lattice or unretained momenta, nonzero past means, nonlinear feedback, multi-root aggregation, T-050, phase/PDE selection, and Sector A remain open |
 | [R-150](#r-150) | Production antipodal last-insertion zero-cross boundary | Scoped T4 analytic/exact/executed/audited production-cylinder theorem and method boundary. For the actual A1 `L=16` Fourier pairs `+/-k` and `+/-2k`, with the full three-family lock covariance, a simultaneous antipodal pair has exact same-point field-current cross synthesis zero, while its two-point kernel and Fourier-coefficient cross synthesis are nonzero. R-149 therefore makes the conditional absolute final full-output/full-reveal endpoint atom nonnegative and permits zero source/sextic suballocation for that atom only. A constant-Gram fixture gives a negative relative endpoint secant, separate Fourier projections give expected packets `-1/2` and `+1/2`, and an earlier-root future-feedback fixture gives exact unhalved owner `-sqrt(6)/8`. The relative secant, earlier feedback connection, complete two-root forest/balanced/low/source/sextic owner, T-050, every phase verdict, and Sector A remain open |
@@ -171,6 +172,66 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-153"></a>
+### R-153 -- Production strict-past conditional Hessian and weighted-collar boundary
+
+- **Exact conditional owner.**  Fix the A7 six-real convention, positive
+  floor, finite cutoff, common-even regulator, and the retained final fresh
+  root.  Condition on the strict past and write the actual incidences
+  `z_a=S_x a`, `u_i,a=S_v,i a`, with `n_i=partial_i m` and
+  `S_v,i=partial_i S_x`.  Joint Gaussianity, zero same-point field-current
+  cross covariance, and
+  `Gamma_Lambda,i=Gamma_<,i+Gamma_>,i` cancel the complete fresh-current
+  covariance against the `Gamma_>,i` trace.  The endpoint is exactly one half
+  the integral of
+  `(n_i+u_i,a)^T Bbar_a(n_i+u_i,a)-Tr(Bbar_a Gamma_<,i)`.
+- **Differential theorem.**  Direct differentiation gives the complete first
+  variation and symmetric bilinear Hessian.  On the diagonal its coefficients
+  are `1,2,1/2,-1/2` for the current-current, two field-current orientations,
+  current-mean second field derivative, and residual past trace.  The terminal
+  sixth-power Hessian is
+  `(9/10)[|W|^4 z_a.z_b+4|W|^2(W.z_a)(W.z_b)]`, the whitened source Hessian is
+  `9I/10`, and the requested one-tenth gap is equivalent to
+  `K_E+K_6>=-4I/5` almost surely on the localized predictable form core.
+  Curved charts add the complete first variation applied to chart acceleration;
+  no unlabelled Malliavin derivative belongs to this fixed-law Hessian.
+- **Weighted collar and A1 constant.**  With unnormalized spatial norms
+  `A_n,A_W,A_Y`, spatial Cauchy gives
+  `C_2,p=[8sqrt(3)L6|p|/(V lambda_2)]A_nA_W`
+  `+[4sqrt(3)H6/(V lambda_2)]A_nA_Y`
+  `+[2H6/(V lambda_2)]A_n^2`.  It is no larger than the R-152 essential-sup
+  collar and conditionally preserves the same margin.  Independently, the A1
+  lower symbol gives the control-generated mean bound
+  `||grad m_h||_2^2<=c_grad||h_-||_S^2`, where
+  `c_grad=1/(2sqrt(c)-a)=2.033300406271083...<41/20`; an exact negative
+  discriminant certifies the rational upper bound.
+- **Absolute-collar boundary.**  One uncancelled derivative-active Gaussian
+  past coefficient gives unbounded support to the positive current-square term
+  in either absolute collar, hence positive-probability violation of every
+  finite threshold.  If a weighted multiplier estimate is required for every
+  predictable direction, event localization makes it equivalent to the
+  almost-sure fiberwise bound.  The A1 separated current envelope also has the
+  already registered `Theta(sqrt(V Lambda))` growth; this does not imply a
+  divergence of the signed covariance-normal endpoint because the fresh trace
+  cancellation is exact.
+- **Where proved.**  Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-production-strict-past-conditional-hessian-weighted-collar-boundary-260803-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_production_strict_past_conditional_hessian_weighted_collar_boundary_manifest.json`,
+  and the primary, non-importing standard-library independent, and integrated
+  certificates listed there.
+- **Audit boundary.**  R-153 is the exact final-fresh-root conditional fiber,
+  not the complete progressive production Hessian.  It supplies no
+  earlier-root feedback, future-variance-minus-trace/forest completion, legal
+  reverse, balanced/root compatibility, genuine low/Feshbach block, cross-root
+  sextic aggregation, or uniform production Loewner gap.  It closes neither
+  T-050 nor A13 and proves no Nelson theorem, phase preference or exclusion,
+  PDE validation or replacement, or Sector-A closure.
+- **Tier / publication target.**  Scoped T4 analytic/exact/executed/audited
+  conditional-Hessian and obstruction package; constructive-field-theory
+  methods note after independent review.
 
 <a id="r-152"></a>
 ### R-152 -- Affine-past curvature and nonlinear/multi-root globalization boundary
