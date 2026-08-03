@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-160](#r-160) | Weighted-Schur growing affine root-union origin gaps | Scoped T4 analytic/exact/executed/audited origin-Hessian theorem. For every finite family of distinct raw antipodal `p:2p` affine controls, allowing a target class later to serve as another raw source, the exact covariance-normal loss graph has only factor-three paths. Its block Hessian is lower-bounded by an adverse scalar Jacobi majorant; no equality of spectra is asserted. Geometric weights `d_j=4^(-j)` and exact Sturm plus non-importing Fraction/Bernstein certificates bound the adverse endpoint by `25/32` on the continuous radial half-line `x>=3/20`, giving `D2 A(0)[H,H]>(19/160) sum ||H_p||_HS^2`. Exact side-16 lattice shell separation sharpens the endpoint bound to `37/50` and the gap to `4/25`. Both constants are independent of finite family cardinality and path length. No cardinality-uniform nonzero radius, realised-past, shifted-state/revisit, nonlinear predictable, finite-amplitude, cutoff/floor-removal, T-050/A13, phase/PDE, Nelson/measure, or Sector-A conclusion follows |
 | [R-159](#r-159) | Pure-dyadic regulator-uniform local neighbourhood gap and exact normal-ordering boundary | Scoped T4 analytic/exact/executed/audited theorem. On the fixed side-16 A1 symbol and A7 floor, for common real-even covariance-matched multipliers with `|m|<=1`, exact continuum torus integration, centered raw Gaussian roots, and any retained nonzero `p:2p:4p`, the recursive chart `chi(A,B)=(A xi_p,B(xi_2p+A xi_p))` has one existential radius independent of cutoff, regulator, and `p` on which both pullback and intrinsic normalized Hessian gaps exceed `1/10`. Exact covariance-normal ordering cancels the divergent primitive `Q0` before compactness; the remaining finite covariance jets compactify uniformly. The R-155 origin gap `147/1000` and modulus allowance `47/2000` retain `247/2000`. No numerical radius, floor removal, aliased-grid theorem, realised-past/growing-root/arbitrary-revisit estimate, T-050, phase/PDE selection, or Sector-A closure follows |
 | [R-158](#r-158) | Exact charge-ensemble first-order shell transition and neutral-reference boundary | T6 conditional analytic/exact/executed/audited theorem extension. For the hash-pinned P1/A2 functional on the side-16 torus, define `Q=||Psi||_2^2/2`. With exact torus spectral bottom `lambda0`, `rho*=43/216`, and `mu_t=lambda0-1849/86400`, the full functional is `mu_t Q` plus a nonnegative spectral remainder, complete nonnegative Class-II energy, and `(gamma/6)int rho(rho-rho*)^2`. A lowest-internal-eigenvector plane wave on the unique radial shell `|n|^2=3` saturates all remainders and is a constrained global minimizer at `Q*=11008/27`; `Omega_mu=F_P1-mu Q` has exact first-order coexistence at `mu_t` before the zero spinodal `lambda0`. This is an imposed-ensemble mechanism, not a physical-vacuum theorem: no charge/reservoir provenance is derived, the state remains above the original neutral zero reference, and its registered local observables are uniform, so no BCC or unique morphology follows |
 | [R-157](#r-157) | Pinned P1 unique-zero critical point, global minimizer, and exponential gradient-flow decay | T6 conditional analytic/exact/executed/audited theorem extension. For the hash-pinned P1/A2 functional on the fixed torus with `eta_shell=0`, exact shell completion and `M>(7/250)I` give `F_P1[Psi]>=g||Psi||_2^2`, where `g=719818750025582338837/5400000000000000000000>1/8`. The full regularized Class-II amplitude-ray derivative is positive, giving `<DF_P1(Psi),Psi>>=kappa||Psi||_2^2`, where `kappa=2101675000076747016511/8100000000000000000000>1/4`. Thus zero is the unique critical point and global minimizer and the canonical L2 gradient flow decays exponentially. This analytically supersedes T-052 equilibrium searches for pinned M1 and supports rejecting or retuning that candidate; it is not a physical-vacuum theorem and does not cover constrained/compact-target, chemical-potential, conserved, historical, signed-A7, retuned, or alternative models |
@@ -178,6 +179,62 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-160"></a>
+### R-160 -- Weighted-Schur growing affine root-union origin gaps
+
+- **Result ID.**
+  `A13-CLASSII-WEIGHTED-SCHUR-GROWING-AFFINE-ROOT-UNION-ORIGIN-GAP-BOUNDARY`.
+
+- **Fixed-law source-target union.** Let `P` be any finite set of distinct
+  nonzero retained side-16 dual-lattice classes modulo sign, retain every
+  `[2p]`, define the centered Gaussian law once on `P union 2P`, and use
+  `h_[2p]=t_p H_p xi_[p]`. The intersection `P intersect 2P` may be nonempty:
+  a target may later serve as another distinct raw source. Injective doubling
+  and independence of distinct raw innovations keep the source Hessian equal
+  to `(9/10) sum_p ||H_p||_HS^2`. Factor-two reuse adds no endpoint edge; the
+  complete covariance-normal loss graph retains only factor-three paths. The
+  complete sixth-power Hessian remains one undecomposed global PSD form.
+
+- **Adverse weighted comparison.** On a component `p_j=3^j p_0`, write
+  `x_j=9^j x_0`. The exact block Hessian satisfies `D_jj >= -L(x_j) I` and
+  `||B_j,j+1||_op<E(x_j)`. Thus `L` and `E` define an adverse scalar Jacobi
+  majorant, not the exact tensor spectrum. With `d_j=4^(-j)`, the identity
+  `2ab <= a^2/4+4b^2` charges a child edge by `E/4` at its parent and `4E` at
+  its child. Root, interior, and terminal rows are therefore bounded by
+  `L+E/4`, `L+4E_parent+E/4`, and `L+4E_parent`, respectively. The legal
+  reverse is the adjoint block already present in this payment.
+
+- **Two exact gaps.** For the hash-pinned A1 radial symbol, exact Sturm chains
+  and an independent Fraction/Bernstein reconstruction prove
+  `L(x)+E(x)/4<25/32` for every `x>=3/20`; inherited high-row certificates give
+  `L+4E_parent+E/4<2801/4000<25/32`. Hence every finite family and path length
+  satisfies `D2 A(0)[H,H]>(19/160) sum_p ||H_p||_HS^2`.
+  Exact rational enclosures of `pi` further split the actual side-16 lattice
+  into `N=|n|^2=1` and `N>=2`. Separate exact certificates give the stronger
+  adverse endpoint bound `37/50`, and therefore
+  `D2 A(0)[H,H]>(4/25) sum_p ||H_p||_HS^2`.
+
+- **Where proved.** Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-weighted-schur-growing-affine-root-union-origin-gap-boundary-260803-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_weighted_schur_growing_affine_root_union_origin_gap_boundary_manifest.json`,
+  primary `51/51`, non-importing independent `59/59`, and the integrated
+  release, PDF, security, render, and visual-QA records pinned there.
+
+- **Audit boundary.** The result is fixed-cutoff, positive-floor, exactly
+  integrated, centered, stationary, common-even, covariance-matched, affine,
+  and origin-only. Uniformity in finite path length does not prove cutoff
+  removal. The theorem supplies no cardinality-uniform nonzero neighbourhood,
+  nonzero or realised past, shifted-state recursive or revisit feedback,
+  arbitrary predictable nonlinearity, finite-amplitude convexity, historical
+  low/Feshbach owner, T-050 or A13 closure, Nelson theorem, interacting
+  measure, phase/PDE verdict, or Sector-A closure.
+
+- **Tier / publication target.** Scoped T4
+  analytic/exact/executed/audited growing-union origin-Hessian theorem;
+  constructive-field-theory methods note after independent review.
 
 <a id="r-159"></a>
 ### R-159 -- Pure-dyadic regulator-uniform local neighbourhood gap and exact normal-ordering boundary

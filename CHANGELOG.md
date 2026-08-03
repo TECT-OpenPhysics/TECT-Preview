@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-160: weighted-Schur growing affine root-union origin gaps] - 2026-08-03
+
+Register A13-CLASSII-WEIGHTED-SCHUR-GROWING-AFFINE-ROOT-UNION-ORIGIN-GAP-BOUNDARY (R-160). For every finite R-155 distinct-source antipodal p:2p fixed-law affine family with source-target reuse, the exact loss graph has only factor-three paths. Geometric weighted Schur plus exact Sturm and independent Fraction/Bernstein certificates prove the continuous-half-line origin gap 19/160 and the stronger actual side-16 lattice gap 4/25, uniformly in finite cardinality and path length. Record the exact A1 authority-symbol repair and the unweighted/floor-removal method failures. No cardinality-uniform nonzero radius, realised-past/nonlinear/revisit theorem, cutoff/floor removal, T-050/A13 closure, phase/PDE verdict, Nelson/measure result, or Sector-A closure follows.
+
 ## [Pre-A C0 static-dynamics nonidentifiability certificate] - 2026-08-03
 
 Registered EXP-000697 and NG-2026-08-03-PRE-A-C0-STATIC-FUNCTIONAL-DYNAMICAL-COMPLETION. A finite-mode exact theorem and independent causal-support witness show that one time-independent static functional and spatial Hessian admit inequivalent gradient and inertial completions. At the PA-M2 critical node these yield Gaussian tree-level z=2 and z=1 respectively; the inertial slope contains the separately inserted chi, while the exact fourth-order kernel has unbounded ultraviolet group speed. Primary 21/21, non-importing independent 16/16, and integrated 79/79 assertions pass with stored-versus-fresh equality and pinned scope boundaries. This retires only the shortcut from static energy to unique dynamics: PA-M2 static variational results survive, while time, causal order, physical light speed, C0-A/C0-B selection, PA-H1 composition, and Pre-A remain open.

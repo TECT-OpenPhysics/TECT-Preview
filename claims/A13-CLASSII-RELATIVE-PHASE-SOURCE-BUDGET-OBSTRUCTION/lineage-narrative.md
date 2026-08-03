@@ -1255,6 +1255,23 @@ endpoint theorem.
     the true globalization boundary while T-054 tests candidate models without
     privileging BCC or any morphology.
 
+80. **Weighted-Schur growing affine root-union origin gaps.** R-160 sharpens
+    the R-155 source-target-reuse theorem without replacing the exact block
+    Hessian by a scalar spectrum. The physical loss graph still consists only
+    of factor-three paths, while `L` and `E` form an adverse Jacobi majorant
+    satisfying `D_jj>=-L_j I` and `||B_j,j+1||<E_j`. Geometric weights
+    `d_j=4^(-j)` charge every edge by `E/4` at its parent and `4E` at its child;
+    exact Sturm and independent Fraction/Bernstein certificates bound every
+    continuous-half-line row by `25/32`. Paying the `9/10` source Hessian once
+    and dropping the complete sextic Hessian as one PSD form gives the
+    cardinality- and path-length-uniform origin gap `19/160`. Exact side-16
+    lattice shell separation sharpens the adverse endpoint bound to `37/50`
+    and the lattice gap to `4/25`. Target-as-later-source reuse is allowed,
+    but raw sources remain distinct, affine, and one-shot. No growing-union
+    nonzero radius, realised past, shifted-state/revisit, nonlinear predictable
+    theorem, cutoff/floor removal, T-050/A13, phase/PDE, Nelson/measure, or
+    Sector-A conclusion follows at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

@@ -5752,3 +5752,51 @@ T5--T7 promotion remain open. Tier stays T4.
   this honest scope; T-050 remains parked at the genuine globalization
   boundary while T-054 continues truth-first candidate falsification without
   privileging BCC or any other morphology.
+
+- 2026-08-03: Registered
+  `A13-CLASSII-WEIGHTED-SCHUR-GROWING-AFFINE-ROOT-UNION-ORIGIN-GAP-BOUNDARY`
+  (R-160). Let `P` be any finite set of distinct nonzero retained side-16
+  dual-lattice classes modulo sign, retain every doubled target, define the
+  centered zero-control Gaussian once on `P union 2P`, and use the R-155
+  fixed-law controls `h_[2p]=t_p H_p xi_[p]`. Source-target reuse
+  `P intersect 2P != empty` is allowed, while raw source innovations remain
+  distinct and one-shot. The source Hessian is paid once as
+  `(9/10) sum_p ||H_p||_HS^2`; factor-two reuse adds no covariance-normal
+  endpoint edge, and the complete loss graph retains only factor-three paths.
+  The terminal sixth-power Hessian is retained as one global PSD form.
+
+  On each factor-three path, the exact block Hessian obeys diagonal lower
+  bounds `D_jj>=-L(x_j)I` and edge norm bounds
+  `||B_j,j+1||_op<E(x_j)`. The scalar Jacobi matrix formed from `L` and `E` is
+  therefore an adverse lower-comparison device, not the exact tensor
+  spectrum. Geometric weights `d_j=4^(-j)` use
+  `2ab<=a^2/4+4b^2`, giving root, interior, and terminal row losses
+  `L+E/4`, `L+4E_parent+E/4`, and `L+4E_parent`. The legal reverse is the
+  adjoint of the same edge and receives no second payment.
+
+  Exact rational Sturm chains and a non-importing Fraction/Bernstein audit
+  prove `L(x)+E(x)/4<25/32` on the continuous half-line `x>=3/20`; every
+  interior row is below `2801/4000`. Hence
+  `D2 A(0)[H,H]>(19/160) sum_p ||H_p||_HS^2`, uniformly in every finite family
+  cardinality and factor-three path length. Exact rational `pi` enclosures
+  split the actual side-16 lattice into `N=1` and `N>=2` shells and sharpen the
+  adverse endpoint bound to `37/50`, yielding the stronger lattice theorem
+  `D2 A(0)[H,H]>(4/25) sum_p ||H_p||_HS^2`.
+
+  The primary `51/51` and independent `59/59` exact audits pass; the integrated
+  release, deterministic six-page PDF, security, text, render, public-record,
+  and manual visual-QA checks are pinned in the manifest. The contemporaneous
+  exploration records preserve the authority-symbol correction, weighted
+  comparison, lattice sharpening, unweighted-route rejection, and momentum-
+  floor boundary.
+
+  R-160 is fixed-cutoff, positive-floor, exactly integrated, centered,
+  covariance-matched, affine, and local at zero control. It gives no
+  cardinality-uniform nonzero radius, nonzero or realised-past estimate,
+  shifted-state recursive or revisit theorem, nonlinear predictable feedback,
+  finite-amplitude convexity, cutoff/floor removal, complete historical low
+  owner, T-050 or A13 closure, Nelson theorem, interacting measure, phase/PDE
+  verdict, or Sector-A closure. Treat the arbitrary-finite fixed-law affine
+  origin union as closed at this scope; the next direct A13 target is a
+  cardinality-uniform nonzero neighbourhood or an actual realised-past/
+  nonlinear/revisit conditional Hessian theorem or counterexample.
