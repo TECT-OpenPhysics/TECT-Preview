@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-159](#r-159) | Pure-dyadic regulator-uniform local neighbourhood gap and exact normal-ordering boundary | Scoped T4 analytic/exact/executed/audited theorem. On the fixed side-16 A1 symbol and A7 floor, for common real-even covariance-matched multipliers with `|m|<=1`, exact continuum torus integration, centered raw Gaussian roots, and any retained nonzero `p:2p:4p`, the recursive chart `chi(A,B)=(A xi_p,B(xi_2p+A xi_p))` has one existential radius independent of cutoff, regulator, and `p` on which both pullback and intrinsic normalized Hessian gaps exceed `1/10`. Exact covariance-normal ordering cancels the divergent primitive `Q0` before compactness; the remaining finite covariance jets compactify uniformly. The R-155 origin gap `147/1000` and modulus allowance `47/2000` retain `247/2000`. No numerical radius, floor removal, aliased-grid theorem, realised-past/growing-root/arbitrary-revisit estimate, T-050, phase/PDE selection, or Sector-A closure follows |
 | [R-158](#r-158) | Exact charge-ensemble first-order shell transition and neutral-reference boundary | T6 conditional analytic/exact/executed/audited theorem extension. For the hash-pinned P1/A2 functional on the side-16 torus, define `Q=||Psi||_2^2/2`. With exact torus spectral bottom `lambda0`, `rho*=43/216`, and `mu_t=lambda0-1849/86400`, the full functional is `mu_t Q` plus a nonnegative spectral remainder, complete nonnegative Class-II energy, and `(gamma/6)int rho(rho-rho*)^2`. A lowest-internal-eigenvector plane wave on the unique radial shell `|n|^2=3` saturates all remainders and is a constrained global minimizer at `Q*=11008/27`; `Omega_mu=F_P1-mu Q` has exact first-order coexistence at `mu_t` before the zero spinodal `lambda0`. This is an imposed-ensemble mechanism, not a physical-vacuum theorem: no charge/reservoir provenance is derived, the state remains above the original neutral zero reference, and its registered local observables are uniform, so no BCC or unique morphology follows |
 | [R-157](#r-157) | Pinned P1 unique-zero critical point, global minimizer, and exponential gradient-flow decay | T6 conditional analytic/exact/executed/audited theorem extension. For the hash-pinned P1/A2 functional on the fixed torus with `eta_shell=0`, exact shell completion and `M>(7/250)I` give `F_P1[Psi]>=g||Psi||_2^2`, where `g=719818750025582338837/5400000000000000000000>1/8`. The full regularized Class-II amplitude-ray derivative is positive, giving `<DF_P1(Psi),Psi>>=kappa||Psi||_2^2`, where `kappa=2101675000076747016511/8100000000000000000000>1/4`. Thus zero is the unique critical point and global minimizer and the canonical L2 gradient flow decays exponentially. This analytically supersedes T-052 equilibrium searches for pinned M1 and supports rejecting or retuning that candidate; it is not a physical-vacuum theorem and does not cover constrained/compact-target, chemical-potential, conserved, historical, signed-A7, retuned, or alternative models |
 | [R-156](#r-156) | Shifted-state intrinsic Hessian and nonzero-neighbourhood gap boundary | Scoped T4 analytic/exact/executed/audited local theorem and coordinate-curvature boundary. For the predictable chart `chi(A,B)=(A xi_p,B(xi_2p+A xi_p))`, the exact intrinsic tangent Gram is `||H||_HS^2+||G||_HS^2+||GA+BH||_HS^2`, while the pullback Hessian additionally contains one projected-force pairing with controller acceleration `GK+LH`. One scalar production Hessian owns source, endpoint/current, sextic, forward/legal-reverse, and balanced blocks once; no independent low variable exists. Continuity from the R-155 pure-dyadic `147/1000` origin gap gives some fixed-cutoff nonzero coefficient neighbourhood with gap `>1/10`, using exact headroom `47/1000`. The rank-one source-cost restriction has eigenvalue `9(1-R^2)/10`, disproving global nonlinear-coordinate source convexity without refuting intrinsic convexity. No numerical/uniform radius, general nonlinear/revisit T-050, phase/PDE selection, or Sector-A closure follows |
@@ -177,6 +178,54 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-159"></a>
+### R-159 -- Pure-dyadic regulator-uniform local neighbourhood gap and exact normal-ordering boundary
+
+- **All-state reduction.**  For the recursive centered-Gaussian endpoint,
+  `R1=S1+S2 A+S4 B A`, `R2=S2+S4 B`, and `R4=S4`, with the same formulas for
+  spatial derivatives.  Writing the resulting covariance data as `C,Q,K_i`
+  and `Q0=Q(0,0)`, exact Gaussian integration by parts gives the complete
+  covariance-normal scalar in terms of `(Q-Q0) E_C B` and
+  `(K_i tensor K_i) E_C D2B`.  The raw-`Q0` family is not uniformly bounded
+  (the positive-density sharp-cube member grows linearly with cutoff), but
+  `Q0` cancels algebraically before continuity; no covariance inverse is used.
+- **Uniform compactification.**  The exact A1 radial polynomial has minimum
+  `28800000000947494031/10^20>0`.  Uniformly for `|m|<=1`, value and derivative
+  root syntheses are bounded and vanish at compactified momentum infinity.
+  The bounded background value covariance, controlled covariance jets,
+  multiplier values, torus phase, and compactified root therefore have a
+  finite-dimensional compact closure at the fixed A7 floor.
+- **One common neighbourhood.**  R-155 supplies the regulator- and root-
+  uniform origin gap `147/1000`.  Equicontinuity supplies one existential
+  `delta_*>0`, independent of cutoff, regulator, and every retained nonzero
+  `p` with `p,2p,4p` retained, such that `||A||_HS+||B||_HS<delta_*` preserves
+  both the controller-pullback and intrinsic tangent-image gaps above `1/10`.
+  Choosing modulus allowance below `47/2000` retains
+  `247/2000>1/10`.  The intrinsic source Gram is `I+T^*T>=I`.
+- **Unified owner.**  Forward and legal reverse are the off-diagonal block and
+  its adjoint in one two-block Hessian; balanced is their symmetric pairing.
+  Source, current, trace, and sextic terms are owned once, and no independent
+  low coordinate is introduced.
+- **Where proved.**  Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-pure-dyadic-regulator-uniform-neighborhood-gap-boundary-260803-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_pure_dyadic_regulator_uniform_neighborhood_gap_boundary_manifest.json`,
+  and primary `34/34`, non-importing independent `31/31`, integrated
+  `173/173`, deterministic six-page PDF, security, render, public-record, and
+  visual-QA checks pinned there.
+- **Audit boundary.**  The theorem requires the fixed side-16 A1 symbol,
+  fixed floor, common real-even covariance-matched multiplier contraction
+  subclass, centered no-past pure-dyadic chart, and exact continuum torus
+  integration.  It supplies no numerical radius, floor removal, generic
+  finite-grid alias control, realised-past fibrewise estimate, simultaneous
+  growing-root union, arbitrary predictable nonlinear/revisit theorem,
+  T-050/A13 closure, Nelson theorem, interacting measure, or physical phase,
+  lattice, vacuum, BCC, or PDE verdict.
+- **Tier / publication target.**  Scoped T4
+  analytic/exact/executed/audited finite-invariant continuation theorem;
+  constructive-field-theory methods note after independent review.
 
 <a id="r-158"></a>
 ### R-158 -- Exact charge-ensemble first-order shell transition and neutral-reference boundary

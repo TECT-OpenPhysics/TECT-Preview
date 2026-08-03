@@ -1226,6 +1226,35 @@ endpoint theorem.
     intrinsic counterexample; T-054/T-052 remain the primary phase-neutral
     candidate-selection route in parallel.
 
+79. **Pure-dyadic regulator-uniform local neighbourhood gap and exact
+    normal-ordering boundary.** R-159 removes the discretionary finite-
+    cylinder dependence from the R-156 local continuation at the fixed A1
+    symbol and A7 floor.  For common real-even covariance-matched scalar
+    multipliers with `|m|<=1`, centered raw Gaussian roots, exact continuum
+    torus integration, and every retained nonzero `p:2p:4p`, the recursive
+    endpoint remains centered Gaussian at all controller values.  Exact
+    Gaussian integration by parts rewrites the complete covariance-normal
+    scalar through `C`, `Delta Q=Q-Q0`, and `K_i`; the raw-`Q0` family is not
+    uniformly bounded (its positive-density sharp-cube member has linear
+    cutoff growth), but `Q0` cancels algebraically before any continuity
+    argument, and no covariance inverse is used.  The exact
+    positive A1 symbol minimum makes all controlled value and derivative
+    covariance jets uniformly bounded and compact after phase reduction and
+    momentum compactification.  R-155's `147/1000` origin gap therefore has
+    one existential cutoff-, regulator-, and retained-root-uniform coefficient
+    neighbourhood.  A modulus allowance below `47/2000` retains
+    `247/2000>1/10` for both the pullback and intrinsic tangent-image Hessians;
+    `G=I+T^*T` keeps intrinsic normalization safe.  Forward, legal reverse,
+    balanced, source, current, trace, and sextic owners remain one two-block
+    scalar ledger with no invented low coordinate.  Primary `34/34`,
+    independent `31/31`, and integrated `173/173` audits pass.  The theorem is
+    not numerical or floor-uniform and supplies no generic aliased-grid,
+    realised-past, growing-root, arbitrary predictable nonlinear/revisit,
+    T-050/A13, Nelson/measure, phase/PDE, or Sector-A conclusion.  The centered
+    pure-dyadic local chart is now closed at its honest scope; T-050 remains at
+    the true globalization boundary while T-054 tests candidate models without
+    privileging BCC or any morphology.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

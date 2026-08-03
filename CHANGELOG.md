@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [R-159 raw-Q0 quantifier and verifier durability correction] - 2026-08-03
+
+Corrected the raw-Q0 growth quantifier after adversarial review. Tr Q0=Theta(Lambda) is asserted only for the positive-density sharp-cube member; other admitted |m|<=1 multipliers can have smaller or scheme-dependent growth. R-159 needs only that the raw-Q0 family is not uniformly bounded and that Q0 cancels exactly, so its theorem and gap are unchanged. EXP-000691 records the correction. Replaced the primary no-C-inverse declaration with an executable denominator audit and made the integrated verifier check immutable historical status registration instead of the mutable current top-level status statement, preventing the new package from repeating the predecessor-verifier coupling defect.
+
+## [R-159 pure-dyadic regulator-uniform neighbourhood gap] - 2026-08-03
+
+Registered R-159 as a scoped T4 theorem. Exact all-state Gaussian integration by parts cancels the cutoff-divergent primitive derivative covariance Q0 before compactness. At the fixed A1 symbol and A7 floor, the remaining finite covariance jets compactify uniformly over every common real-even covariance-matched |m|<=1 regulator and every retained centered p:2p:4p root. One existential cutoff-, regulator-, and root-independent neighbourhood preserves pullback and intrinsic gaps above 1/10, retaining 247/2000 after a 47/2000 modulus allowance. Primary 34/34 and independent 31/31 pass; the deterministic six-page PDF passed complete visual QA. No numerical/floor-uniform radius, alias theorem, realised-past or growing-root globalization, arbitrary predictable/revisit T-050, phase/PDE, or Sector-A closure follows.
+
 ## [Certify and reject bare PA-M5 screened-shell joint survivor] - 2026-08-03
 
 A compact T0 candidate package proves exact screened-vector elimination, the continuous and finite-torus shell gates, finite-torus coercivity, and the exact neutral-reference threshold. Primary and non-importing independent certificates agree. The static mechanism is retained, but the bare candidate is rejected before T-053: its threshold state is a uniform-density plane wave, a negative-quartic crossing remains gapped, the continuous critical shell has rank-one spatial Hessian with tangential-quadratic frequency, and the screened vector is not a local U(1) connection. This is not a no-go for M5, nonlocal models, compact gauge completions, or TECT, and it does not close T-050, A13, or Sector A.

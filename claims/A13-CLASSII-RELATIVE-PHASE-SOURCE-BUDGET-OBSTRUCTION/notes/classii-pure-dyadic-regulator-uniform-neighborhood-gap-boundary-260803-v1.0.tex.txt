@@ -1,0 +1,430 @@
+% =============================================================================
+% Title: Pure-dyadic regulator-uniform neighbourhood gap boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-PURE-DYADIC-REGULATOR-UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY
+% Ledger: R-159
+% Version: v1.0 -- first issued 2026-08-03; this version issued 2026-08-03
+% Status: scoped T4 analytic/exact/executed/audited advance; no T-050 closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\HS}{\mathrm{HS}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\section*{1. Purpose and scope: a cylinder-free uniform local radius}
+\hypertarget{section-1-result}{ }
+
+R-156 proved a nonzero shifted-state neighbourhood only after fixing one
+finite cutoff.  R-159 removes that auxiliary-cylinder dependence for the
+single centered pure-dyadic chart.  It does so without choosing a preferred
+cutoff or multiplier and without turning a qualitative radius into a
+numerical one.
+
+Fix the side-$16$ torus, the hash-pinned A1 symbol, the A7 floor
+$\varepsilon_\rho=10^{-12}$, and exact continuum torus integration.  For
+each cutoff use the same real-even scalar multiplier on every real component,
+with
+\[
+             |m_\Lambda(k)|\le 1,\qquad
+             m_\Lambda(-k)=m_\Lambda(k),                 \tag{1.1}
+\]
+and subtract that regulator's exact primitive derivative covariance.  Let
+$p\ne0$ be a dual-lattice momentum for which $p,2p,4p$ are retained.  The raw
+both-sign roots $\xi_p,\xi_{2p},\xi_{4p}$ are centered, whitened and mutually
+independent.  There is no deterministic past mean.  Define
+\[
+ \chi(A,B)
+ =\bigl(A\xi_p,
+        B(\xi_{2p}+A\xi_p)\bigr),
+ \qquad A,B\in\mathbb R^{12\times12}.    \tag{1.2}
+\]
+
+\textbf{Theorem 1.1 (regulator-uniform local gap).}
+There exists $\delta_*>0$, depending only on the fixed torus, A1 symbol,
+positive floor and multiplier bound in (1.1), but independent of the cutoff,
+the particular admitted regulator and the retained $p$, such that
+\[
+        \|A\|_{\HS}+\|B\|_{\HS}<\delta_* \tag{1.3}
+\]
+implies, for every nonzero coefficient direction $v=(H,G)$,
+\[
+ D^2(\cA\circ\chi)_{A,B}[v,v]
+ >{1\over10}\bigl(\|H\|_{\HS}^2+\|G\|_{\HS}^2\bigr).   \tag{1.4}
+\]
+The intrinsic physical-source Hessian on the tangent image also obeys
+\[
+ D^2\cA(h_{A,B})[D\chi v,D\chi v]
+ >{1\over10}\cG_{A,B}(v,v),             \tag{1.5}
+\]
+where
+\[
+ \cG_{A,B}(v,v)
+ =\|H\|_{\HS}^2+\|G\|_{\HS}^2
+  +\|GA+B H\|_{\HS}^2.                 \tag{1.6}
+\]
+
+The radius is existential.  No numerical value, floor-uniform statement,
+finite-grid alias theorem, realised-past fibrewise result, growing multiroot
+union, arbitrary predictable nonlinear or revisit estimate, T-050 closure,
+or Sector-A closure is claimed.
+
+\section*{2. The nonlinear controller still has a centered Gaussian endpoint}
+\hypertarget{section-2-gaussian}{ }
+
+Write $S_r(x)$ for the regulator-weighted whitened synthesis at the antipodal
+pair $\{rp,-rp\}$ and $D_{r,i}=\partial_iS_r$, for $r=1,2,4$.  The endpoint
+columns after (1.2) are
+\[
+\begin{aligned}
+ R_1&=S_1+S_2A+S_4BA,
+ &R_2&=S_2+S_4B,&R_4&=S_4,\\
+ U_{1,i}&=D_{1,i}+D_{2,i}A+D_{4,i}BA,
+ &U_{2,i}&=D_{2,i}+D_{4,i}B,&U_{4,i}&=D_{4,i}.
+\end{aligned}                                                \tag{2.1}
+\]
+Thus the chart is nonlinear in $(A,B)$ but the endpoint is
+linear in the raw Gaussian vector.  In particular the field $W$ and currents
+$V_i$ remain jointly centered Gaussian for every deterministic pair
+$(A,B)$.
+
+Let $C_{\rm bg}$ and $Q_{\rm bg}$ be the background value and derivative
+covariances.  Then
+\[
+\begin{aligned}
+ C&=C_{\rm bg}+\sum_{r=1,2,4}R_rR_r^*,\\
+ Q&=Q_{\rm bg}+\sum_i\sum_{r=1,2,4}U_{r,i}U_{r,i}^*,\\
+ K_i&=\sum_{r=1,2,4}R_rU_{r,i}^*.
+\end{aligned}                                                \tag{2.2}
+\]
+Common evenness gives $K_i(0,0)=0$.  Put
+\[
+                    Q_0=Q(0,0).                           \tag{2.3}
+\]
+This $Q_0$ is exactly the primitive covariance used by the A7 subtraction.
+
+\subsection*{2.1 All-state covariance-normal Gaussian identity}
+
+Let $\mathcal B(w)=C_6(w)^*C_6(w)$ be the fixed six-row coefficient matrix.
+For any
+centered jointly Gaussian $(W,V_i)$, Gaussian integration by parts gives
+\[
+ \E\bigl[(V_i)_m(V_i)_n \mathcal B_{mn}(W)\bigr]
+ =Q_{i,mn}\E \mathcal B_{mn}(W)
+ +(K_i)_{am}(K_i)_{bn}\E\partial_{ab}\mathcal B_{mn}(W).\tag{2.4}
+\]
+Consequently the complete covariance-normal current endpoint satisfies, for
+every $(A,B)$,
+\[
+\boxed{
+ 2\cR(A,B)=\int\!\left\{
+ \Tr\bigl[(Q-Q_0)\overline{\mathcal B}(C)\bigr]
+ +\sum_i(K_i)_{am}(K_i)_{bn}\overline T_{abmn}(C)
+ \right\}dx,}                                             \tag{2.5}
+\]
+where
+\[
+ \overline{\mathcal B}(C)=\E_{N(0,C)}\mathcal B(W),\qquad
+ \overline T(C)=\E_{N(0,C)}D^2\mathcal B(W).              \tag{2.6}
+\]
+
+Equation (2.5), rather than the origin-only R-151 Hessian formula, is the new
+load-bearing lemma.  Differentiating the complete scalar in (2.5) includes
+all first and second $C,Q,K$ jets and exactly the projected-force pairing with
+the chart acceleration.  Source, trace, current, forward, legal reverse and
+balanced descriptions are not added again.
+
+\section*{3. Exact cancellation before compactness}
+\hypertarget{section-3-cancellation}{ }
+
+The raw derivative-covariance family is not uniformly bounded.  For the
+positive-density sharp-cube member, the A1 fourth-order symbol gives
+\[
+ \Tr Q_0^{\rm sharp}\asymp\sum_{|k|\le\Lambda}
+ { |k|^2\over 1+|k|^4}=\Theta(\Lambda).                  \tag{3.1}
+\]
+Other admitted multipliers can have smaller or scheme-dependent growth; the
+class as a whole is nevertheless not precompact in raw $Q$.  Thus any proof
+which first puts the whole raw-$Q$ family in a compact parameter set is false.
+Equation (2.5) instead cancels $Q_0$ algebraically.  The difference
+$\Delta Q=Q-Q_0$ contains only the finitely many controlled $p,2p,4p$
+columns.
+
+R-151's exact lower symbol polynomial is
+\[
+ f(x)=x^2-{4626377063\over5000000000}x
+          +{5020336473\over10000000000}.                 \tag{3.2}
+\]
+Its continuous minimum is
+\[
+ \nu={28800000000947494031\over10^{20}}>0.               \tag{3.3}
+\]
+For $r\in\{1,2,4\}$ and $V=16^3$,
+\[
+ \|S_r\|_{\rm op}^2\le {2\over Vf(r^2|p|^2)}
+                  \le {2\over V\nu},                    \tag{3.4}
+\]
+and
+\[
+ \|D_r\|_{\rm op}^2\le {2r^2|p|^2\over Vf(r^2|p|^2)}
+ \le {2\over V}\sup_{y\ge0}{y\over f(y)}<\infty.       \tag{3.5}
+\]
+The multiplier bound in (1.1) can only decrease these norms.  The value and
+derivative syntheses vanish respectively as $|p|^{-2}$ and $|p|^{-1}$ at
+large momentum.  On any fixed controller ball, (2.1) therefore gives uniform
+polynomial bounds for $C$, $\Delta Q$, $K_i$ and all controller jets needed
+by a Hessian.
+
+The background value covariance is harmless:
+\[
+ 0\preceq C_{\rm bg}\preceq C_{\rm val}\Id,
+ \qquad C_{\rm val}\lesssim {1\over V}\sum_k\langle k\rangle^{-4}<\infty.
+                                                               \tag{3.6}
+\]
+Its possible values have compact closure in the finite-dimensional positive
+semidefinite cone.
+
+\section*{4. Finite invariants and the uniform modulus}
+\hypertarget{section-4-compactness}{ }
+
+The controller degrees are finite and fixed:
+\[
+\begin{array}{c|ccccccc}
+\hbox{object}&\chi&R,U&C,\Delta Q,K&K\otimes K&\cC_{\rm CM}&\E|W|^6\\ \hline
+\hbox{maximum degree}&2&2&4&8&4&12.
+\end{array}                                                \tag{4.1}
+\]
+The Cameron--Martin term is exactly
+\[
+ \cC_{\rm CM}={9\over20}\left(
+ \|A\|_{\HS}^2+\|B\|_{\HS}^2
+ +\|BA\|_{\HS}^2\right),              \tag{4.2}
+\]
+and for a centered six-real Gaussian
+\[
+ \E|W|^6=(\Tr C)^3+6\Tr C\,\Tr(C^2)+8\Tr(C^3).          \tag{4.3}
+\]
+
+At the fixed positive floor every derivative of the rational matrix
+$\mathcal B(W)$
+has polynomial growth.  The maps
+\[
+ C\longmapsto\E_{N(0,C)}D^j\mathcal B(W)                 \tag{4.4}
+\]
+are therefore continuous on bounded positive semidefinite covariance sets,
+including singular covariances.  This derivative-expectation representation
+is essential: the alternative score formula containing $C^{-1}$ is not
+uniform when a regulator makes a covariance eigenvalue tend to zero.
+
+The remaining parameters have compact closure after the following exact
+reductions: $C_{\rm bg}$ lies in (3.6); the three controlled multiplier values
+lie in $[-1,1]$; the momentum direction lies in $S^2$; and the radial variable
+$|p|^2$ is compactified by adjoining its infinite limit, where every
+controlled synthesis vanishes.  All carriers are the collinear multiples
+$p,2p,4p$.  For every nonzero dual-lattice $p$, Haar measure under
+$x\mapsto p\cdot x$ is uniform on the circle, so exact spatial integration is
+one common compact phase average.  We do not assert that the oscillatory
+functions themselves form a compact family in a strong function norm.
+
+Let $J_{A,B}=D\chi_{A,B}$.  R-156 gives
+\[
+ \cG=J^*J=\Id+T^*T\succeq\Id,                            \tag{4.5}
+\]
+where $T(H,G)=GA+B H$.  On a bounded
+controller ball, both $\cG$ and $\cG^{-1/2}$ are uniformly continuous.  No
+physical covariance inverse is used.
+
+Write $\mathcal H_{\rm ctl}$ for the complete pullback Hessian and
+\[
+ \widehat{\mathcal H}_{\rm int}
+ =\cG^{-1/2}J^*H_\pi(h)J\cG^{-1/2}                       \tag{4.6}
+\]
+for the normalized intrinsic Hessian.  Define
+\[
+\begin{split}
+ \omega(r)=\sup\max\{&\|\mathcal H_{\rm ctl}(A,B)
+                -\mathcal H_{\rm ctl}(0,0)\|_{\rm op},\\
+ &\|\widehat{\mathcal H}_{\rm int}(A,B)
+                -\widehat{\mathcal H}_{\rm int}(0,0)\|_{\rm op}\},
+\end{split}                                                   \tag{4.7}
+\]
+where the supremum is over (1.1), all admitted cutoffs and retained $p$, and
+$\|A\|_{\HS}+\|B\|_{\HS}\le r$.  The repaired compact
+finite-invariant reduction proves
+\[
+                         \omega(r)\longrightarrow0
+                         \quad(r\downarrow0).             \tag{4.8}
+\]
+
+\section*{5. Uniform gap and owner-complete two-block meaning}
+\hypertarget{section-5-gap}{ }
+
+R-155 supplies, uniformly over the pure-dyadic origin family,
+\[
+ \mathcal H_{\rm ctl}(0,0)
+ =\widehat{\mathcal H}_{\rm int}(0,0)
+ \succeq {147\over1000}\Id.                              \tag{5.1}
+\]
+The exact headroom over the T-050 comparison target is
+\[
+ {147\over1000}-{1\over10}={47\over1000}.                \tag{5.2}
+\]
+Choose $\delta_*>0$ so that
+\[
+                 \omega(\delta_*)<{47\over2000}.         \tag{5.3}
+\]
+Then both complete Hessians retain the comparison value
+\[
+ {147\over1000}-{47\over2000}
+ ={247\over2000}>{1\over10},                              \tag{5.4}
+\]
+which proves Theorem 1.1.
+
+In the actual two-source decomposition, subtracting the target metric gives
+one self-adjoint block operator
+\[
+ N=M-{1\over10}\cG
+  =\begin{pmatrix}E&C\\C^*&F\end{pmatrix}.               \tag{5.5}
+\]
+The forward entry is $C$, its sole legal reverse is $C^*$, and the balanced
+cross is $2\operatorname{Re}\ip{x}{Cy}$.  These are three descriptions of
+one Hessian block, not three payments.  The source, covariance-normal current,
+trace and sextic terms occur once in the scalar differentiated above.  The
+projected-force/controller connection also occurs once through the second
+derivative of (2.5).  No independent low coordinate exists in (1.2); an
+invented low/Feshbach reserve remains prohibited.  Thus R-159 supplies the
+requested unified forward/legal-reverse/balanced/no-independent-low estimate
+on this local chart, but not on the full arbitrary predictable source class.
+
+\section*{6. Failure modes and scope firewall}
+\hypertarget{section-6-boundary}{ }
+
+\begin{enumerate}
+\item \textbf{Raw-$Q$ compactness is false.}  Equation (3.1) diverges.  The
+proof is valid only after the exact $Q-Q_0$ cancellation in (2.5).
+
+\item \textbf{A covariance-inverse score bound is not uniform.}  Admitted
+multiplier sequences can make a value covariance singular.  The proof uses
+$\E_C D^jB$, never $C^{-1}$.
+
+\item \textbf{Bounded oscillatory functions are not a compact family.}
+The theorem uses the exact Haar phase reduction for the collinear
+$p,2p,4p$ carriers, not a false strong-function compactness argument.
+
+\item \textbf{Generic finite-grid de-aliasing is not covered.}  A grid on
+which, for example, $3p$ aliases to zero can destroy the origin Fourier
+cancellation.  The theorem assumes exact continuum torus integration; a
+numerical grid needs a separate certified alias error.
+
+\item \textbf{The entire unnormalised A7 multiplier union is not covered.}
+The single radius is proved for the contraction subclass $|m|\le1$.  A class
+with a separately fixed envelope $M$ would give a radius depending on $M$.
+
+\item \textbf{The radius is not effective.}  An explicit value requires
+registered bounds for higher coefficient derivatives, Gaussian moments,
+all covariance jets, the sextic third variation, projected force and graph
+normalization.  R-130 and A7 prove finiteness but do not pin all those
+constants.
+
+\item \textbf{The chart is not the full predictable class.}  A nonzero
+deterministic mean, arbitrary nonlinear function of a realised past, a
+growing simultaneous root union or a general revisit graph is outside the
+compact parameter family.
+
+\item \textbf{No phase or equation is selected.}  No BCC ansatz, vacuum
+comparison, candidate PDE or morphology discriminator enters this theorem.
+\end{enumerate}
+
+\section*{7. Devil's-advocate review}
+\hypertarget{section-7-review}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: R-151 only proved an origin Hessian.}
+\textbf{VALID WITH REPAIR.}  R-159 proves the all-state identity (2.5) before
+differentiation.  It does not extend the origin formula by assertion.
+
+\item \textbf{Objection: the projected-force connection was omitted.}
+\textbf{DISMISSED.}  It is exactly the chain-rule part of the second
+controller derivative of the one scalar (2.5).
+
+\item \textbf{Objection: the derivative covariance destroys uniformity.}
+\textbf{VALID FOR RAW $Q$, DISMISSED AFTER NORMAL ORDERING.}  $Q_0$ diverges,
+but cancels identically.  Every controlled $\Delta Q$ jet is uniformly
+bounded by (3.4)--(3.5).
+
+\item \textbf{Objection: singular value covariance invalidates the proof.}
+\textbf{DISMISSED.}  Fixed-floor coefficient derivatives have polynomial
+growth and their Gaussian expectations extend continuously to singular
+positive semidefinite covariance.  No score inverse is used.
+
+\item \textbf{Objection: compactness silently chooses a production cylinder.}
+\textbf{DISMISSED.}  The theorem is universally quantified over the declared
+contraction regulator class.  Compactness is applied to the closure of finite
+invariants after exact cancellation and phase reduction.
+
+\item \textbf{Objection: a uniform local radius closes T-050.}
+\textbf{UPHELD AGAINST THAT INFERENCE.}  General predictable functions,
+realised past, growing source unions and arbitrary revisit structures remain
+outside R-159.
+\end{enumerate}
+
+External review is invited for the all-state Gaussian factor in (2.4), the
+orientation of $K_i$, exact cancellation of every $Q_0$ copy, root
+realification factors, Haar phase pushforward, singular-covariance continuity,
+the source-Gram normalization, the half-headroom comparison, and the
+exact-integration scope firewall.
+
+\section*{8. Reproduction, next boundary, and Result footer}
+\hypertarget{section-8-reproduction}{ }
+
+From the repository root, run
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_pure_dyadic_regulator_uniform_neighborhood_gap_boundary.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_pure_dyadic_regulator_uniform_neighborhood_gap_boundary_independent.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+ a13_classii_pure_dyadic_regulator_uniform_neighborhood_gap_boundary_verify.py
+\end{verbatim}
+
+R-159 corrects the operational reading of EXP-000685: absence of a uniquely
+pinned finite cylinder blocks a unique numerical matrix, but it does not
+block a theorem quantified over the bounded regulator class.  The next T-050
+boundary is no longer this local cylinder.  It is the passage from one
+centered finite Gaussian chart to growing multiroot unions and arbitrary
+predictable nonlinear/revisit controls.  An explicit radius package may be
+useful as a robustness audit, but it is not the logical closure gate.
+
+\begin{verbatim}
+Result ID: A13-CLASSII-PURE-DYADIC-REGULATOR-UNIFORM-
+  NEIGHBORHOOD-GAP-BOUNDARY (R-159).
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement: One existential delta_* works for every admitted cutoff,
+  |m|<=1 common-even regulator and retained p:2p:4p centered shifted chart,
+  and preserves both pullback and intrinsic normalized gaps above 1/10.
+Scope: Fixed L=16/A1 symbol/floor; exact continuum torus integral; centered
+  single pure-dyadic chart; no numerical radius or general predictable class.
+Dependencies: A1, A7, R-150, R-151, R-155, and R-156 manifests hash-pinned.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_pure_dyadic_regulator_uniform_
+  neighborhood_gap_boundary_verify.py
+Expected output: Primary, non-importing independent and integrated PASS.
+Falsification gate: Any all-state Gaussian identity, Q0 cancellation, root
+  bound, compact phase reduction, source normalization, gap arithmetic,
+  authority, artifact, PDF, public-surface or release check fails.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: No floor removal, alias theorem, realised-past,
+  growing multiroot, arbitrary nonlinear/revisit, T-050/A13, Nelson/measure,
+  phase/PDE, or Sector-A closure follows.
+Next required action: Test the growing-union/arbitrary-predictable boundary
+  or produce an intrinsic counterexample; keep truth-first T-054 primary.
+\end{verbatim}
+
+\endgroup

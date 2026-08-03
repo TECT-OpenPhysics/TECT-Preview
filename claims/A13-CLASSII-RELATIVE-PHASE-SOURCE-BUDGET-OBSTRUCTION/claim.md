@@ -5695,3 +5695,60 @@ T5--T7 promotion remain open. Tier stays T4.
   interacting measure, or Sector-A closure follows.  Quantitative intrinsic-
   operator variation or a genuine intrinsic counterexample is the next direct
   step; T-054/T-052 continue the phase-neutral model tournament in parallel.
+
+- 2026-08-03: Registered
+  `A13-CLASSII-PURE-DYADIC-REGULATOR-UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY`
+  (R-159).  This repairs the auxiliary-cylinder limitation in the operational
+  reading of R-156 without choosing one discretionary cutoff.  On the fixed
+  side-16 A1 symbol and fixed A7 floor, quantify over every common real-even
+  covariance-matched scalar multiplier with `|m|<=1`, every cutoff, and every
+  retained nonzero dual-lattice root `p` for which `p,2p,4p` are retained.
+  The raw roots are centered Gaussian with no deterministic past and spatial
+  products are integrated exactly on the continuum torus.
+
+  For every controller pair `(A,B)`, the recursive endpoint remains centered
+  Gaussian with
+  `R1=S1+S2 A+S4 B A`, `R2=S2+S4 B`, and `R4=S4`.  If `C,Q,K_i` are its value,
+  derivative, and mixed covariances and `Q0=Q(0,0)`, exact Gaussian integration
+  by parts rewrites the complete covariance-normal endpoint through
+  `(Q-Q0) E_C B` and `(K_i tensor K_i) E_C D2B`.  The raw-`Q0` family is not
+  uniformly bounded: its positive-density sharp-cube member grows linearly
+  with cutoff, while other regulator rates may be smaller.  `Q0` cancels
+  before compactness.  Gaussian derivative expectations,
+  rather than a covariance inverse, keep the identity valid at singular
+  covariance limits.
+
+  The imported A1 radial polynomial has exact positive minimum
+  `28800000000947494031/10^20`.  Hence controlled value and derivative root
+  syntheses are uniformly bounded and vanish at compactified root infinity.
+  The remaining background value covariance, finite controlled covariance
+  jets, bounded multiplier values, torus phase, and compactified momentum have
+  compact closure.  This proves a common modulus of continuity for both the
+  controller-pullback Hessian and intrinsic source-normalized Hessian.  Since
+  R-155 supplies the uniform origin gap `147/1000`, one existential
+  `delta_*>0`, independent of cutoff, regulator, and retained `p`, preserves
+  both gaps above `1/10`.  A modulus allowance below `47/2000` retains
+  `247/2000>1/10`.  The source Gram is `I+T^*T>=I`.
+
+  Forward, legal reverse, and balanced are the off-diagonal block, its
+  adjoint, and their symmetric pairing in one two-block owner.  Source,
+  current, trace, and sextic terms are counted once and no independent low
+  coordinate is added.  `EXP-000689` records the successful all-state
+  cancellation and compactification route.  `EXP-000690` records why raw-`Q`
+  compactness, covariance-inverse scores, strong-function compactness, and
+  generic finite-grid de-aliasing are invalid proof routes rather than new
+  negative theorems.  `EXP-000691` corrects the raw-`Q0` growth quantifier:
+  linear growth belongs to the positive-density sharp-cube member, while only
+  family noncompactness is used by the theorem.
+
+  Primary `34/34` and independent `31/31` audits pass.  Integrated verification
+  passes `173/173`, embeds all `65` child rows once, rebuilds the deterministic
+  six-page PDF, and checks authority and artifact hashes, exact parity,
+  security/text/render contracts, public records, exploration records, and
+  the manual visual-QA pin.  The radius is not numerical or floor-uniform.
+  No generic aliased-grid, realised-past fibrewise, growing multiroot,
+  arbitrary predictable nonlinear/revisit, T-050/A13, Nelson/measure,
+  phase/PDE, or Sector-A conclusion follows.  The direct chart is closed at
+  this honest scope; T-050 remains parked at the genuine globalization
+  boundary while T-054 continues truth-first candidate falsification without
+  privileging BCC or any other morphology.
