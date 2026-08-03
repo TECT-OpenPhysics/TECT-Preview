@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-04-PRE-A-CP1-CL8-OA2-SAMPLING-EXACT-WEYL](#ng-2026-08-04-pre-a-cp1-cl8-oa2-sampling-exact-weyl) | promote the current unrestricted continuum point sampler `R_a` to an exact boundary-to-lattice Weyl generator map | `f_M=sin(2*pi*M*x/L)` samples to zero although its continuum symplectic pairing with the corresponding momentum mode is nonzero; after exact scaling the source Weyl commutator is `-1` while both target generators are the identity. Retain the exact three-mode spectral image, an opposite-direction symplectic reconstruction, a redesigned regulator, or an explicitly approximate theorem |
+| [NG-2026-08-04-PRE-A-CP1-CL8-DIRECT-NONLINEAR-WEYL-RELABEL](#ng-2026-08-04-pre-a-cp1-cl8-direct-nonlinear-weyl-relabel) | quantize the fixed ordered nonlinear CL8 Goursat phase map by direct relabelling `W(z)` as a phase times `W(F(z))` | Weyl multiplication forces `F` to be additive, continuous additivity makes it real-linear, and commutators force it to be symplectic; the ordered collective map has a nonzero second data variation along the final slice for every positive `tau`. Retain enlarged observable algebras, nonlinear unitaries outside generator closure, deformation quantization, perturbative, path-integral, or semiclassical routes |
+| [NG-2026-08-04-PRE-A-CP1-CL8-CURRENT-SAMPLING-EXACT-DYNAMICS](#ng-2026-08-04-pre-a-cp1-cl8-current-sampling-exact-dynamics) | promote the exact restricted band sampler to an exact continuum-to-current-lattice time intertwiner | the ordered continuum first harmonic has squared frequency `25`, while the current centered lattice has `9+4*sin^2(2a)/a^2<25` at every finite even `M>=4`. Retain the proved kinematic Weyl monomorphism and `O(a^2)` dynamics, or construct a symbol-matched spectral/light-cone regulator |
 | [NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE](#ng-2026-08-03-pre-a-cp1-cl8-stationarity-only-quantum-state) | uniquely select a preferred fixed-regulator normal state on `B(L2(R^(8M)))` using only stationarity and the exact periodic CL8 node/coarse-translation, Q3, and global-Z2 symmetries | the simple ground projector and every faithful finite-temperature Gibbs density are distinct normalized stationary states with all listed symmetries.  Require an independently justified ground-state, KMS-temperature, energy, reservoir, preparation-history, symmetry-breaking, boundary, or cosmological criterion; this no-go does not reject any such criterion, quantum boundary construction, continuum state, or Hadamard limit |
 | [NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE](#ng-2026-08-03-pre-a-cp1-cl8-invariance-only-preferred-state) | uniquely select a preferred classical CL8 boundary probability using only normalization, Hamiltonian invariance, the declared exact symmetries, compact support on smooth direct-seam phases, and exact continuum-regulator compatibility | for `r<0`, the zero-equilibrium Dirac law and the Z2-symmetric mixture of the two collective ordered-equilibrium Dirac laws are distinct yet satisfy every listed condition and compose with exactly zero regulator error.  Finite-regulator Gibbs and normalized `F(H_a)` families add further nonuniqueness.  Require an independently proved energy, temperature, KMS, reservoir, preparation-history, symmetry-breaking, or other physical selection criterion; this no-go does not reject such criteria or any quantum/continuum state construction |
 | [NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION](#ng-2026-08-03-pre-a-cp1-cl8-unmatched-periodic-composition) | compose every admitted CL8 Goursat datum unchanged with the current same-domain periodic centered lattice | the exact admitted fixture `A=0`, `B(v)=v e_1`, `tau=1/10` has endpoint jump `1/5`; identifying the endpoints creates wrap-edge gradient energy asymptotic to `c/(400a)`.  The unrestricted composition is false.  Retain the matched periodic phase-jet class, an explicitly justified extension, an open-boundary lattice, or another independently verified interface |
@@ -259,6 +262,119 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-oa2-sampling-exact-weyl"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-OA2-SAMPLING-EXACT-WEYL -- unrestricted point sampling is not an exact Weyl map
+
+**Failure mode.**  Define an exact boundary-to-lattice Weyl homomorphism on
+the full admitted periodic continuum phase space by
+`W_per(v) -> W_a(R_a v)`, using the point sampler from the current classical
+`O(a^2)` composition theorem.
+
+**Evidence.**  Let `f_M(x)=sin(2*pi*M*x/L)`.  It vanishes at all `M` grid
+nodes, but `integral f_M^2=L/2`.  For one species and phases
+`v_1=(f_M,0)`, `v_2=(0,f_M)` in `(q,Pi)` order, the registered variational
+form is `Omega_var(v_1,v_2)=-L/16`; hence the CCR form
+`sigma=-Omega_var` is `L/16`.  Scale `v_2` by `16*pi*hbar/L`.  With the
+declared Weyl convention, the source commutator is `exp(-i*pi)=-1`.  Both
+sampled phase vectors are zero, so both target Weyl generators are the
+identity and their commutator is `+1`.  No generator map preserving the Weyl
+relations exists on this unrestricted source.  The sampling kernel is not
+even isotropic, so the original form cannot descend directly to its quotient.
+
+**Boundary.**  This refutes only the boundary-to-grid generator assignment on
+the unrestricted point-sampled source.  It does not refute the exact
+three-mode spectral image proved in the same package, an opposite-direction
+symplectic reconstruction, a separately constrained symplectic reduction, a
+new finite characteristic regulator, or an explicitly approximate
+characteristic-functional theorem.
+
+**Consequence.**  Exact CCR preservation cannot be inferred from an `O(a^2)`
+symplectic estimate on fixed smooth families.  Restrict the source to a
+verified finite symplectic image or redesign the finite regulator before
+claiming a full boundary Weyl map.
+
+**Evidence files.**
+`strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_quantum_boundary_algebra_intertwiner_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_quantum_boundary_algebra_intertwiner_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-direct-nonlinear-weyl-relabel"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-DIRECT-NONLINEAR-WEYL-RELABEL -- a nonlinear Goursat map cannot directly relabel Weyl generators
+
+**Failure mode.**  Quantize the fixed ordered nonlinear
+characteristic-to-phase map by
+`alpha(W(z))=exp(i*theta(z))*W(F(z))`, with `F` equal to that classical map.
+
+**Evidence.**  Comparing the Weyl product before and after a unital
+generator-relabel star-homomorphism forces `F(z+w)=F(z)+F(w)`.  The route
+assumes that the generator-label map `F` is continuous in the real
+phase-space topology; Cauchy additivity then makes `F` real-linear, and the
+Weyl commutator makes it symplectic.
+The fixed ordered CL8 map is not affine.  Let
+`v0=sqrt(-r/g)` and use collective traces `A=B=v0+epsilon`.  The second data
+variation `z` has zero axis traces and satisfies
+
+`4chi*z_(u nu)+(-2r)z=-6g*v0*eta^2`.
+
+The first variation is one on both axes, so
+`z_nu(u,0)=-3g*v0*u/(2chi)`.  Along the final slice
+`(u,nu)=(2tau-nu,nu)`, the endpoint derivative of the second variation is
+`-3g*v0*tau/chi`, nonzero for every `tau>0`.  Thus the actual ordered final
+phase map is nonlinear.  The separate `r=lambda=0` cubic third-variation
+fixture remains an independent convention check.
+
+**Boundary.**  This no-go concerns only a phase times one relabelled Weyl
+generator.  Nonlinear canonical transformations can still act by unitaries on
+`B(L2)` while sending a Weyl generator to a more complicated operator.  An
+enlarged observable algebra, perturbative algebraic QFT, path integrals,
+Fourier-integral or semiclassical Egorov maps, and formal deformation
+quantization remain open.  The separate Groenewold witness rejects exact
+full-polynomial Dirac rules, not every nonlinear quantum construction.
+
+**Consequence.**  Keep the exact ordered-tangent finite-image Weyl theorem,
+but require a newly specified nonlinear observable construction before the
+parent interacting boundary-algebra gate can close.
+
+**Evidence files.**
+`strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_quantum_boundary_algebra_intertwiner_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_quantum_boundary_algebra_intertwiner_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-current-sampling-exact-dynamics"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-CURRENT-SAMPLING-EXACT-DYNAMICS -- the exact band sampler does not intertwine the current time generators
+
+**Failure mode.**  Promote the exact three-mode one-slice symplectic sampler
+to an exact time-evolution intertwiner between the ordered collective
+continuum tangent and the current centered finite lattice.
+
+**Evidence.**  Under the inserted `c/chi=1`, `-2r/chi=9`, and `L=pi/2`
+calibration, the first nonzero continuum mode has
+`omega_cont^2=9+4^2=25`.  With `a=L/M`, the centered lattice gives
+
+`omega_a^2=9+4*sin^2(2a)/a^2`.
+
+For every finite even `M>=4`, `0<2a<=pi/4` and `sin(2a)<2a`, hence
+`omega_a^2<25`.  An exact intertwiner of the linear generators would preserve
+the frequency polynomial on the injected mode, contradicting this strict
+mismatch.  The obstruction occurs before the quartic interaction is restored.
+
+**Boundary.**  The exact one-slice finite-image Weyl monomorphism and the
+registered fixed-time `O(a^2)` continuum approximation remain valid.  A
+symbol-matched spectral regulator, a distinct light-cone regulator, or a
+declared approximate dynamics diagram can evade this no-go.
+
+**Consequence.**  The next common finite-regulator characteristic model must
+choose its finite symbol and boundary evolution together; exact equal-time CCR
+matching alone is insufficient.
+
+**Evidence files.**
+`strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_quantum_boundary_algebra_intertwiner_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_quantum_boundary_algebra_intertwiner_route_split_independent.py`.
 
 <a id="ng-2026-08-03-pre-a-cp1-cl8-stationarity-only-quantum-state"></a>
 ### NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE -- stationarity and exact symmetries do not select one fixed-regulator quantum state
