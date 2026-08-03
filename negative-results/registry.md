@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE](#ng-2026-08-03-pre-a-cp1-finite-c1-equilibrium-strict-cone) | infer an exact finite-speed zero-response waiting interval from any current finite-dimensional autonomous continuous-time CP1 candidate on its declared positive-distance localization blocks | an open-neighbourhood strict cone differentiates to `P_y exp(tA) P_x=0`; matrix-exponential analyticity and Cayley-Hamilton make this equivalent to vanishing of every cross power `P_y A^n P_x`. Exact ST8/Q3LOCK spatial edges, the ordered Q3 species Hessian, and CP1a collocation coefficients `28/9`, `-19/9`, and indirect `-38/3` all violate the criterion. Retain quasi-local bounds, a controlled hyperbolic continuum limit, or an exact-causal discrete-time/enlarged parent; this does not reject QFT microcausality, physical empty space, CP1, or Pre-A |
 | [NG-2026-08-03-PRE-A-CP1-Q3LOCK-QUADRATIC-CONNECTIVITY-CI8](#ng-2026-08-03-pre-a-cp1-q3lock-quadratic-connectivity-ci8) | preserve all eight constant-species critical zero modes while connecting the ST8 species by a positive quadratic Dirichlet form on a connected graph | at `r=0` and spatial momentum zero, the added Hessian is `eta*L_G`; a connected positive graph Laplacian has one-dimensional kernel. For `Q3` the spectrum is `0,2eta^(3),4eta^(3),6eta`, so critical nullity falls from eight to one. Retain nonlinear quartic locking as the minimal-degree analytic repair, or change the zero-mode origin, sign structure, constraints, or quotient |
 | [NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE](#ng-2026-08-03-pre-a-cp1-st8-continuous-time-exact-cone) | infer an exact finite-regulator compact-support domain of dependence or PA-H1 characteristic sheets from the bounded harmonic group speed of `PA-CP1-ST8-CB-v0` | the continuous-time semidiscrete harmonic propagator has nearest-neighbour response `c*t^2/(2chi)+O(t^4)`, nonzero for all sufficiently small positive times, so every proposed finite strict support cone fails. Retain effective speeds and possible quasi-local bounds; pursue a controlled Lorentzian continuum limit, an exact-causal discrete-time parent, or a separately supplied hyperbolic parent |
 | [NG-2026-08-03-PRE-A-CP1-ST8-ONE-CONNECTED-SCALAR-EQUIVALENCE](#ng-2026-08-03-pre-a-cp1-st8-one-connected-scalar-equivalence) | identify `PA-CP1-LT3-RS-v0` exactly and invertibly with one same-dimensional connected standard positive-edge real scalar Hamiltonian | the critical Hessian nullity is eight versus one, and the ordered complete-square minima number 256 versus two; invertible canonical equivalence preserves the former by congruence and the latter by bijection. This excludes only the stated exact standard comparator, not coarse graining, extra species, nonstandard stencils, auxiliaries, or controlled infrared equivalence |
@@ -255,6 +256,50 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-pre-a-cp1-finite-c1-equilibrium-strict-cone"></a>
+### NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE -- finite autonomous equilibrium channels have no delayed variational onset
+
+**Failure mode.**  Infer an exact finite-speed compact-support domain of
+dependence for any current finite-dimensional autonomous continuous-time CP1
+candidate on declared positive-distance localization blocks, uniformly for an
+open neighbourhood of localized initial perturbations.
+
+**Evidence.**  Let `A=DF(z_*)` be the flow Jacobian at an equilibrium.  The
+asserted open-neighbourhood cone differentiates in its source perturbation to
+
+`P_y exp(tA) P_x=0`
+
+on a nonempty time interval.  Every entry is entire, so the identity theorem
+gives `P_y A^n P_x=0` for all `n`.  Cayley-Hamilton makes powers
+`n=0,...,D-1` decisive.  Conversely, a least nonzero power `m` gives the
+arbitrarily-small-time projected variational response
+
+`t^m P_y A^m P_x/m! + O(t^(m+1))`.
+
+Exact rational fixtures trigger the obstruction.  The periodic spatial ST8
+factor has nearest-neighbour displacement coefficient `c/(2chi)` at order
+`t^2` and opposite-side coefficient `c^2/(12chi^2)` at order `t^4`.
+Q3LOCK inherits the spatial edge at the origin; at either ordered diagonal its
+species Hessian is `lambda*v^2*L_Q3`, so every Q3 edge has a nonzero order-`t^2`
+displacement channel.  On the declared CP1a `3^3` collocation blocks,
+
+`K_100=28/9`, `K_110=-19/9`, `K_111=0`, and `(K^2)_111=-38/3`,
+
+giving configuration responses `-14t^2/9`, `+19t^2/18`, and `-19t^4/36` at
+unit inertia.  Primary 39/39 and non-importing independent 31/31 exact checks
+recompute the coefficients, Q3 Hessian, disconnected control, indirect-power
+control, bounded two-qubit control, and exact-causal discrete-time shift.
+
+**Consequence.**  The current finite continuous-time candidates cannot supply
+an exact regulator-level characteristic cone.  The earlier ST8 negative result
+remains as a specific corollary.  Continue with a smooth-data controlled
+hyperbolic continuum/Goursat limit, or construct a separately justified
+exact-causal discrete-time or enlarged parent with its own conserved energy and
+selected state.  This result does not reject Lieb-Robinson quasi-locality,
+vanishing tails in a regulator limit, QFT microcausality with unbounded
+generators, purely nonlinear origin-species signalling with zero variational
+coupling, physical empty space, CP1, or Pre-A.
 
 <a id="ng-2026-08-03-pre-a-cp1-q3lock-quadratic-connectivity-ci8"></a>
 ### NG-2026-08-03-PRE-A-CP1-Q3LOCK-QUADRATIC-CONNECTIVITY-CI8 -- positive quadratic connectivity lifts seven critical species modes

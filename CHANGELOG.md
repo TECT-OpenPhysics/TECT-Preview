@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [T-054: register finite C1 equilibrium strict-cone no-go] - 2026-08-03
+
+Registered PA-CP1-FD-C1-STRICT-CONE-NOGO-v0 and EXP-000724. An open-neighbourhood finite-speed strict-support law at a finite-dimensional autonomous C1 equilibrium differentiates to P_y exp(tA) P_x=0; the identity theorem and Cayley-Hamilton make this equivalent to vanishing of every projected generator power. Exact periodic ST8, Q3LOCK origin and ordered, and CP1a 3^3 collocation fixtures trigger arbitrarily-small-time variational tails, including the indirect CP1a body channel with K_111=0 but (K^2)_111=-38/3. Primary 39/39, non-importing independent 31/31 and integrated 60/60 pass, 130 combined. The result rejects only the current finite continuous-time exact-cone route and retains quasi-locality, controlled hyperbolic continuum/Goursat limits, discrete-time or enlarged causal parents, QFT microcausality, physical-reference work, CP1 and Pre-A.
+
 ## [T-050 route audit: direct signed owner survives automatic collars] - 2026-08-03
 
 Recorded EXP-000720--EXP-000723 as one route-decision checkpoint without creating a new result. Complete variance-minus-forest recombination removes the forest-coordinate Dh/D2h debt from the direct fixed-law endpoint Hessian, leaving the actual fibrewise K_E+K_6 >= -4G/5 test and uniform anchor. A rescaled tanh chart defeats first-derivative and bi-Lipschitz score collars; the canonical Foellmer drift has bounded control energy but divergent time-integrated Jacobian energy on the registered oscillatory-density fixture; and the R-149 active-spectator negative coefficient curvature does not survive owner identification as an automatic production counterexample. T-050 remains open and parked, while truth-first T-054 remains the main lane.

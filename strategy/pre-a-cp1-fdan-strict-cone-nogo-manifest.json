@@ -1,0 +1,109 @@
+{
+  "schema": "tect/pre-a-cp1-fdan-strict-cone-nogo-manifest/0.1",
+  "candidate_id": "PA-CP1-FD-C1-STRICT-CONE-NOGO-v0",
+  "candidate_family": "PRE-A-FINITE-CONTINUOUS-TIME-CAUSALITY-AUDIT",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 exact finite-dimensional C1 equilibrium strict-cone no-go; not a TECT claim, tier change, CP1 completion, or Pre-A closure",
+  "claim_context": [
+    "C6-SPACETIME-SIGNATURE",
+    "A2-FULL-PRODUCTION-WELLPOSED"
+  ],
+  "comparison_context": "T-054 Pre-A candidate tournament",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "negative_id": "NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE",
+  "statement": "For a finite-dimensional autonomous C1 flow at an equilibrium, a local finite-speed strict-support law on an open initial-data neighbourhood forces every positive-distance projected variational channel P_y exp(tA) P_x to vanish identically. Equivalently, every block P_y A^n P_x vanishes; Cayley-Hamilton reduces the decision to n below the total dimension. Any nonzero block power therefore gives an arbitrarily-small-time variational tail and rejects that nonlinear neighbourhood cone. LT3/ST8/Q3LOCK and the declared CP1a collocation regulator all trigger the obstruction. This does not reject Lieb-Robinson quasi-locality, controlled hyperbolic continuum limits, discrete-time causal parents, or QFT microcausality.",
+  "verdict": "REJECT EXACT FINITE-SPEED STRICT SUPPORT FOR THE CURRENT FINITE AUTONOMOUS CONTINUOUS-TIME CANDIDATES; ADVANCE THE CONTROLLED CONTINUUM GOURSAT OR AN EXACT-CAUSAL ENLARGED PARENT; KEEP CP1 OPEN",
+  "theorem": {
+    "phase_space": "X=direct_sum_x X_x with finite total dimension D and declared positive block metric d",
+    "flow": "an autonomous C1 local flow Phi_t with equilibrium z_* and linearization A=D F(z_*)",
+    "strict_support_hypothesis": "for every sufficiently small perturbation u in source block X_x and 0<=t<d(x,y)/v, P_y[Phi_t(z_*+u)-Phi_t(z_*)]=0, where d(x,y)>0 and 0<v<infinity",
+    "derivative_consequence": "P_y D Phi_t(z_*) P_x=P_y exp(tA) P_x=0 on a nonempty interval",
+    "entire_consequence": "P_y A^n P_x=0 for every nonnegative integer n",
+    "finite_decision": "n=0,...,D-1 suffices by Cayley-Hamilton",
+    "leading_tail": "if m is the least power with P_y A^m P_x nonzero, then the channel is t^m P_y A^m P_x/m!+O(t^(m+1)) and is nonzero for every sufficiently small positive time after choosing a witnessing source and target functional",
+    "dichotomy": "a projected variational channel has either no waiting time or permanent decoupling; the theorem does not assert time analyticity of one isolated finite-amplitude nonlinear trajectory"
+  },
+  "hamiltonian_corollary": {
+    "definition": "F(q,p)=(M^-1 p,-grad U(q)); A=[[0,M^-1],[-K,0]] with K=D^2 U(q_*)",
+    "configuration_channel": "P_qy A^2 P_qx=-(M^-1 K)_yx and q_y(t)=-(t^2/2)(M^-1 K)_yx q_x(0)+O(t^4)",
+    "full_site_phase_channel": "when a localization block contains both q_x and p_x, a nonzero stiffness edge already gives an order-t target momentum response",
+    "scope": "the configuration formula and full phase-space support statement are distinct and both are recorded"
+  },
+  "candidate_applications": {
+    "LT3_ST8": "the inherited spatial nearest-neighbour stiffness gives the exact configuration tail c*t^2/(2chi)+O(t^4); the older ST8 negative result remains a specific corollary",
+    "Q3LOCK_origin": "the quartic lock has zero edge Hessian at the origin, so the species variational channel is not tested there, but the inherited spatial channel triggers the no-go",
+    "Q3LOCK_ordered": "the ordered edge Hessian is lambda*v^2[[1,-1],[-1,1]], so K_*=(-2r)I+c L_space tensor I_8+lambda*v^2 I tensor L_Q3 and every spatial or Q3 species edge has an immediate variational tail",
+    "CP1a_collocation": "on the 3^3 declared collocation blocks K_100=28/9, K_110=-19/9, K_111=0 and (K^2)_111=-38/3; at inertia one the corresponding configuration tails start with -14 t^2/9, +19 t^2/18 and -19 t^4/36",
+    "finite_bounded_quantum_control": "a two-qubit XX Hamiltonian gives a nonzero first nested commutator between initially commuting site observables, rejecting an open waiting interval for that finite bounded Heisenberg channel"
+  },
+  "controls": {
+    "disconnected_generator": "all cross powers vanish and the variational channel remains identically zero",
+    "discrete_time_shift": "an exact nearest-neighbour shift has strict one-site-per-step support and lies outside the continuous-time hypothesis",
+    "zero_block_distance": "d(x,y)=0 gives no positive waiting interval and is outside the theorem conclusion",
+    "purely_nonlinear_zero_linearization": "a channel whose entire variational coupling vanishes is not rejected by this theorem without a separate finite-amplitude analysis",
+    "bandlimited_continuum": "a nonzero finite Fourier trigonometric polynomial cannot have compact support in a proper open continuum region, so CP1a is stated only as a collocation-block result"
+  },
+  "cp1_consequence": {
+    "resolved_fork": "the current finite continuous-time Hamiltonian candidates cannot themselves provide exact characteristic support on their declared finite localization blocks",
+    "retained_routes": [
+      "prove smooth-data semidiscrete-to-continuum convergence to a hyperbolic Goursat problem with vanishing regulator tails",
+      "construct an exact-causal reversible discrete-time or enlarged auxiliary parent and independently prove its conserved-energy and selected-state properties",
+      "retain Lieb-Robinson or quasi-local estimates only under their nonzero-tail scope"
+    ],
+    "not_resolved": [
+      "regulator removal",
+      "same selected quantum state on bulk and characteristic boundary",
+      "physical empty-space or no-condensate reference",
+      "thermodynamic phase transition",
+      "cooling or controller work",
+      "gravity or event horizon"
+    ],
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "finite block localization and metric",
+      "autonomous C1 flow and equilibrium",
+      "finite candidate speed and open-neighbourhood strict-support assertion",
+      "the previously declared LT3/ST8/Q3LOCK and CP1a finite regulators"
+    ],
+    "derived_outputs": [
+      "the exact all-powers variational criterion",
+      "the Cayley-Hamilton finite audit",
+      "the Hamiltonian displacement and full-phase response orders",
+      "the Q3LOCK origin versus ordered-Hessian distinction",
+      "the exact CP1a collocation coefficients and indirect body-diagonal tail"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "scope": {
+    "exact_finite_C1_equilibrium_variational_nogo": true,
+    "nonlinear_open_neighbourhood_cone_rejected_when_linear_tail_nonzero": true,
+    "single_finite_amplitude_trajectory_nogo": false,
+    "Lieb_Robinson_quasi_locality_rejected": false,
+    "controlled_hyperbolic_continuum_limit_rejected": false,
+    "discrete_time_exact_causality_rejected": false,
+    "unbounded_QFT_microcausality_rejected": false,
+    "physical_vacuum": false,
+    "below_empty_space": false,
+    "event_horizon": false,
+    "gravity": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "artifacts": {
+    "certificate": "strategy/pre-a-cp1-fdan-strict-cone-nogo-certificate-260803.md",
+    "primary_script": "codes/foundations/pre_a_cp1_fdan_strict_cone_nogo.py",
+    "independent_script": "codes/foundations/pre_a_cp1_fdan_strict_cone_nogo_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_fdan_strict_cone_nogo_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-fdan-strict-cone-nogo/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-fdan-strict-cone-nogo/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-fdan-strict-cone-nogo/result.json"
+  },
+  "prior_art_boundary": "Matrix-exponential analyticity, the identity theorem, Cayley-Hamilton, variational flows, harmonic-lattice instantaneous tails, Lieb-Robinson quasi-locality, and exact causal continuum wave equations are established mathematics. No world-first or new general theorem is claimed. The repository-specific result is the convention-level theorem fork and its exact application to the registered LT3/ST8/Q3LOCK and CP1a candidates.",
+  "no_overclaim": "This package proves a finite-dimensional projected variational no-go and rejects an open-neighbourhood nonlinear strict cone whenever that variational channel is nonzero. It does not prove that every finite-amplitude nonlinear perturbation has an analytic response, reject quasi-locality or a controlled continuum cone, reject discrete-time or enlarged causal parents, derive a physical state, compare to physical empty space, remove a regulator, reconstruct a horizon, complete CP1, or complete Pre-A."
+}

@@ -1,0 +1,596 @@
+{
+  "application_boundary": {
+    "CP1a_fixed_Fourier_cutoff": "on the declared 3^3 collocation blocks the exact kernel entries 28/9 and -19/9 trigger the no-go; a nonzero trigonometric polynomial also cannot define compact support in a proper continuum open set",
+    "LT3_ST8_Q3LOCK_spatial_linearization": "strict finite-regulator cone excluded by the inherited nonzero nearest-neighbor Hessian block",
+    "Q3LOCK_ordered_species_channel": "the ordered Hessian contains lambda*v^2*L_Q3, so each Q3 species edge has a nonzero second-order displacement tail",
+    "Q3LOCK_origin_species_channel": "the quartic lock has zero species Hessian, so this theorem alone does not test purely nonlinear interspecies signalling at zero; the spatial channel already triggers the no-go",
+    "finite_dimensional_bounded_quantum_system": "exact open-time microcausality is incompatible with a nonzero nested commutator"
+  },
+  "assertions": {
+    "passed": 39,
+    "rows": [
+      {
+        "actual": "PA-CP1-ST8-CB-v0",
+        "expected": "PA-CP1-ST8-CB-v0",
+        "group": "identity",
+        "name": "ST8 upstream"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-v0",
+        "expected": "PA-CP1-ST8-Q3LOCK-v0",
+        "group": "identity",
+        "name": "Q3LOCK upstream"
+      },
+      {
+        "actual": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
+        "expected": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
+        "group": "identity",
+        "name": "CP1a upstream"
+      },
+      {
+        "actual": 6,
+        "expected": 6,
+        "group": "classical_fixture",
+        "name": "finite phase dimension"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "classical_fixture",
+        "name": "neighbor momentum channel starts at first order"
+      },
+      {
+        "actual": [
+          [
+            "3"
+          ]
+        ],
+        "expected": [
+          [
+            "3"
+          ]
+        ],
+        "group": "classical_fixture",
+        "name": "neighbor momentum coefficient"
+      },
+      {
+        "actual": 2,
+        "expected": 2,
+        "group": "classical_fixture",
+        "name": "neighbor displacement channel starts at second order"
+      },
+      {
+        "actual": [
+          [
+            "3/5"
+          ]
+        ],
+        "expected": [
+          [
+            "3/5"
+          ]
+        ],
+        "group": "classical_fixture",
+        "name": "neighbor displacement Taylor numerator"
+      },
+      {
+        "actual": 4,
+        "expected": 4,
+        "group": "classical_fixture",
+        "name": "distance-two displacement starts at fourth order"
+      },
+      {
+        "actual": [
+          [
+            "9/25"
+          ]
+        ],
+        "expected": [
+          [
+            "9/25"
+          ]
+        ],
+        "group": "classical_fixture",
+        "name": "distance-two displacement Taylor numerator"
+      },
+      {
+        "actual": "3/10",
+        "expected": "3/10",
+        "group": "classical_fixture",
+        "name": "neighbor displacement response coefficient"
+      },
+      {
+        "actual": "3/200",
+        "expected": "3/200",
+        "group": "classical_fixture",
+        "name": "distance-two displacement response coefficient"
+      },
+      {
+        "actual": 4,
+        "expected": 4,
+        "group": "periodic_fixture",
+        "name": "four-cycle opposite displacement starts at fourth order"
+      },
+      {
+        "actual": [
+          [
+            "18/25"
+          ]
+        ],
+        "expected": [
+          [
+            "18/25"
+          ]
+        ],
+        "group": "periodic_fixture",
+        "name": "four-cycle has two exact length-two paths"
+      },
+      {
+        "actual": "3/100",
+        "expected": "3/100",
+        "group": "periodic_fixture",
+        "name": "four-cycle opposite leading response"
+      },
+      {
+        "actual": null,
+        "expected": null,
+        "group": "disconnected_control",
+        "name": "disconnected control has no q channel through D-1"
+      },
+      {
+        "actual": null,
+        "expected": null,
+        "group": "disconnected_control",
+        "name": "disconnected control coefficient absent"
+      },
+      {
+        "actual": [
+          false,
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "expected": "at least one true",
+        "group": "analytic_contract",
+        "name": "connected channel violates all-zero Taylor contract"
+      },
+      {
+        "actual": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "expected": "all false",
+        "group": "analytic_contract",
+        "name": "disconnected channel satisfies all-zero Taylor contract"
+      },
+      {
+        "actual": 6,
+        "expected": 6,
+        "group": "analytic_contract",
+        "name": "Cayley-Hamilton audit range"
+      },
+      {
+        "actual": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "expected": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "group": "q3lock_application",
+        "name": "Q3 lock edge Hessian vanishes at origin"
+      },
+      {
+        "actual": "-1",
+        "expected": -1,
+        "group": "q3lock_application",
+        "name": "Q3 Laplacian neighbor entry"
+      },
+      {
+        "actual": [
+          0,
+          2,
+          2,
+          2,
+          4,
+          4,
+          4,
+          6
+        ],
+        "expected": [
+          0,
+          2,
+          2,
+          2,
+          4,
+          4,
+          4,
+          6
+        ],
+        "group": "q3lock_application",
+        "name": "Q3 Laplacian exact spectrum"
+      },
+      {
+        "actual": [
+          [
+            "28/5",
+            "-28/5"
+          ],
+          [
+            "-28/5",
+            "28/5"
+          ]
+        ],
+        "expected": [
+          [
+            "28/5",
+            "-28/5"
+          ],
+          [
+            "-28/5",
+            "28/5"
+          ]
+        ],
+        "group": "q3lock_application",
+        "name": "Q3 lock ordered edge Hessian is lambda*v^2 Laplacian"
+      },
+      {
+        "actual": 2,
+        "expected": 2,
+        "group": "q3lock_application",
+        "name": "ordered Q3 species displacement starts at second order"
+      },
+      {
+        "actual": [
+          [
+            "154/195"
+          ]
+        ],
+        "expected": [
+          [
+            "154/195"
+          ]
+        ],
+        "group": "q3lock_application",
+        "name": "ordered Q3 species edge Taylor numerator"
+      },
+      {
+        "actual": "28/9",
+        "expected": "28/9",
+        "group": "cp1a_application",
+        "name": "CP1a axis collocation kernel"
+      },
+      {
+        "actual": "-19/9",
+        "expected": "-19/9",
+        "group": "cp1a_application",
+        "name": "CP1a face collocation kernel"
+      },
+      {
+        "actual": "0",
+        "expected": 0,
+        "group": "cp1a_application",
+        "name": "CP1a corner collocation kernel vanishes"
+      },
+      {
+        "actual": "47/3",
+        "expected": "47/3",
+        "group": "cp1a_application",
+        "name": "CP1a diagonal collocation kernel"
+      },
+      {
+        "actual": "-14/9",
+        "expected": "-14/9",
+        "group": "cp1a_application",
+        "name": "CP1a axis displacement leading response"
+      },
+      {
+        "actual": "19/18",
+        "expected": "19/18",
+        "group": "cp1a_application",
+        "name": "CP1a face displacement leading response"
+      },
+      {
+        "actual": "-38/3",
+        "expected": "-38/3",
+        "group": "cp1a_application",
+        "name": "CP1a corner kernel-square channel"
+      },
+      {
+        "actual": "-19/36",
+        "expected": "-19/36",
+        "group": "cp1a_application",
+        "name": "CP1a corner displacement leading response"
+      },
+      {
+        "actual": [
+          [
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            }
+          ],
+          [
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            }
+          ],
+          [
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            }
+          ],
+          [
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            }
+          ]
+        ],
+        "expected": "zero",
+        "group": "quantum_fixture",
+        "name": "two-site observables commute initially"
+      },
+      {
+        "actual": [
+          [
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 4.0
+            }
+          ],
+          [
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": -4.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            }
+          ],
+          [
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": -4.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            }
+          ],
+          [
+            {
+              "imag": 0.0,
+              "real": 4.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            },
+            {
+              "imag": 0.0,
+              "real": 0.0
+            }
+          ]
+        ],
+        "expected": "nonzero",
+        "group": "quantum_fixture",
+        "name": "bounded Hamiltonian nested commutator is nonzero"
+      },
+      {
+        "actual": [
+          1
+        ],
+        "expected": [
+          1
+        ],
+        "group": "outside_hypothesis",
+        "name": "discrete shift has one-step exact support"
+      },
+      {
+        "actual": [
+          2
+        ],
+        "expected": [
+          2
+        ],
+        "group": "outside_hypothesis",
+        "name": "discrete shift has two-step exact support"
+      },
+      {
+        "actual": {
+          "autonomous_C1_flow": true,
+          "equilibrium": true,
+          "finite_dimensional_site_blocks": true,
+          "finite_positive_candidate_speed": true,
+          "finite_site_set": true,
+          "state_differentiable_domain_dependence": true
+        },
+        "expected": "all explicit",
+        "group": "scope",
+        "name": "theorem hypotheses are explicit"
+      }
+    ],
+    "total": 39
+  },
+  "authority": "candidate-scope finite-dimensional autonomous C1 equilibrium strict-cone no-go; not CP1 or Pre-A closure",
+  "candidate_id": "PA-CP1-FD-C1-STRICT-CONE-NOGO-v0",
+  "claim_bearing": false,
+  "claim_context": [
+    "C6-SPACETIME-SIGNATURE",
+    "A2-FULL-PRODUCTION-WELLPOSED"
+  ],
+  "exact_results": {
+    "CP1a_axis_collocation_kernel": "28/9",
+    "CP1a_axis_displacement_leading_response": "-14/9",
+    "CP1a_corner_displacement_leading_response": "-19/36",
+    "CP1a_corner_kernel_square": "-38/3",
+    "CP1a_face_collocation_kernel": "-19/9",
+    "CP1a_face_displacement_leading_response": "19/18",
+    "Q3_ordered_species_Taylor_numerator": "154/195",
+    "Q3_ordered_species_first_power": 2,
+    "bounded_quantum_nested_commutator_nonzero": true,
+    "classical_fixture_dimension": 6,
+    "disconnected_cross_channel": "identically zero by block structure",
+    "discrete_time_shift_exact_support": true,
+    "distance_two_displacement_first_power": 4,
+    "distance_two_displacement_leading_coefficient": "3/200",
+    "neighbor_displacement_first_power": 2,
+    "neighbor_displacement_leading_coefficient": "3/10",
+    "neighbor_full_phase_first_power": 1
+  },
+  "issued": "2026-08-03",
+  "schema": "tect/pre-a-cp1-fdan-strict-cone-nogo-primary/0.1",
+  "scope": {
+    "CP1_complete": false,
+    "Lieb_Robinson_or_quasi_local_cone_excluded": false,
+    "Pre_A_complete": false,
+    "continuum_wave_finite_propagation_excluded": false,
+    "discrete_time_exact_causality_excluded": false,
+    "nonautonomous_or_nondifferentiable_update_excluded": false,
+    "physical_empty_space_comparison": false,
+    "purely_nonlinear_zero_linearization_channel_excluded": false,
+    "strict_compact_support_only": true,
+    "unbounded_generator_QFT_microcausality_excluded": false
+  },
+  "sources": [
+    {
+      "path": "codes/foundations/pre_a_cp1_fdan_strict_cone_nogo.py",
+      "sha256": "91f3441344df7faba050ea23fd778739f3d0fa537b49728ae7776f866c185132"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json",
+      "sha256": "b0a8ddec5c5082da816d352f09affc8e5226a31106842b106920f49402879bcb"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-manifest.json",
+      "sha256": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046"
+    },
+    {
+      "path": "strategy/pre-a-cp1a-t3-cubic-sos-common-parent-manifest.json",
+      "sha256": "1fc0dd1dd2d7c33a549632202b5a96c88cce5ee2e7f3127024a110caaddd7899"
+    }
+  ],
+  "task_id": "T-054",
+  "theorem": {
+    "contrapositive": "any nonzero cross-block A^n rules out a finite strict waiting cone for that channel",
+    "dichotomy": "finite waiting time or permanent projected variational decoupling; no delayed onset for that linearized channel in the declared finite autonomous C1 equilibrium class",
+    "finite_audit": "powers n=0,...,dim(E)-1 suffice by Cayley-Hamilton",
+    "hypotheses": {
+      "autonomous_C1_flow": true,
+      "equilibrium": true,
+      "finite_dimensional_site_blocks": true,
+      "finite_positive_candidate_speed": true,
+      "finite_site_set": true,
+      "state_differentiable_domain_dependence": true
+    },
+    "hypothesis_detail": "For every sufficiently small source-block perturbation u and 0<=t<d(x,y)/v, the target block of Phi_t(z_*+u)-Phi_t(z_*) is exactly zero, with d(x,y)>0 and finite v.",
+    "leading_tail": "if m is the first nonzero power, the cross derivative is t^m P_y A^m I_x/m! + O(t^(m+1)), hence nonzero for all sufficiently small positive t",
+    "linearized_flow": "D Phi_t(z_*)=exp(t A), A=D F(z_*); C1 regularity suffices at an equilibrium",
+    "nonlinear_boundary": "the nonlinear no-go follows only when the strict-support assertion holds on an open initial-data neighbourhood, so differentiation transfers it to the variational channel; no finite-amplitude time analyticity is inferred from C1 alone",
+    "strict_waiting_implication": "differentiation in u gives P_y exp(tA) I_x=0 on a nonempty interval; the entire identity theorem gives P_y A^n I_x=0 for every n"
+  },
+  "version": "0.1.0"
+}
