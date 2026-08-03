@@ -1,0 +1,98 @@
+{
+  "schema": "tect/pre-a-lane-h-bridge-manifest/0.1",
+  "candidate_id": "PA-H1-DNKG4-v0",
+  "candidate_family": "H1-DOUBLE-NULL-CHARACTERISTIC-RECONSTRUCTION",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 Lane-H bridge certificate; not a TECT claim, tier change, physical horizon model, or cosmology",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "Compatible data on two intersecting characteristics uniquely and stably reconstruct the fixed-background linear 1+1 Klein-Gordon bulk on every finite rectangle; for 0<2*tau<=min(U,V), the injective continuous slice map preserves the linear symplectic form and transports a supplied algebraic Weyl state onto its reconstructed image. A phi4 extension is unique in a declared sup-norm ball under explicit contraction gates, and its finite interior energy obeys an exact boundary-flux balance. The causal background, boundary state, gravity, cosmic scale, cooling law, and connection to PA-M2 are not derived.",
+  "model": {
+    "coordinates": "u=t+x, v=t-x on a fixed 1+1 Minkowski causal diamond",
+    "linear_equation": "partial_u partial_v phi+kappa phi=0, kappa=mu^2/4",
+    "semilinear_equation": "partial_u partial_v phi+kappa phi+g phi^3=0, g=lambda/4",
+    "data": "phi(u,0)=A(u), phi(0,v)=B(v), A(0)=B(0)",
+    "slice": "u+v=2*tau with 0<2*tau<=min(U,V) for the state/symplectic map; tau=0 is only the trivial field/energy limit",
+    "slice_map_spaces": "P_tau:C1([0,2tau]) x_corner C1([0,2tau]) -> C1([-tau,tau]) x C0([-tau,tau])",
+    "state_object": "algebraic state omega_H; rho notation is restricted to a separately declared finite-cutoff or type-I representation"
+  },
+  "mathematical_status": {
+    "global_linear_finite_rectangle_reconstruction": "CANDIDATE-SCOPE EXACT LEMMA in the declared fixed-background model",
+    "linear_uniqueness_and_stability": "CANDIDATE-SCOPE EXACT LEMMA by the factorial-squared Volterra bound",
+    "causal_extension_independence": "CANDIDATE-SCOPE EXACT LEMMA relative to the fixed causal diamond and its required trace segments",
+    "classical_slice_state_map": "CANDIDATE-SCOPE EXACT LEMMA with explicit field, spatial-derivative, and momentum stability bounds",
+    "linear_state_map_injectivity": "CANDIDATE-SCOPE EXACT LEMMA by the nonnegative energy-flux uniqueness argument",
+    "linear_symplectic_transport": "CANDIDATE-SCOPE EXACT LEMMA",
+    "linear_weyl_state_transport": "CANDIDATE-SCOPE EXACT LEMMA for a supplied algebraic boundary state under the Weyl isomorphism onto the reconstructed image",
+    "preferred_physical_or_hadamard_state": "OPEN",
+    "local_semilinear_reconstruction": "CANDIDATE-SCOPE EXACT LEMMA only under the explicit self-map and contraction gates",
+    "toy_interior_energy_from_boundary_flux": "CANDIDATE-SCOPE EXACT FLUX BALANCE; E_tau is not asserted constant as the slice interval grows",
+    "causal_structure_emergence": "OPEN; the fixed Lorentzian background is inserted",
+    "gravitational_reconstruction": "OPEN",
+    "pa_m2_composition": "OPEN"
+  },
+  "semilinear_gates": {
+    "self_map": "M+U*V*(kappa*R+g*R^3)<=R",
+    "contraction": "L=U*V*(kappa+3*g*R^2)<1",
+    "stability": "for the same kappa,g,R when both data maps preserve the same radius-R ball, ||phi-phi_tilde||<=||G-G_tilde||/(1-L)",
+    "convenient_sufficient_condition": "with R=2H and H=||G||, U*V*(mu^2/2+3*lambda*H^2)<1"
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "1+1 Minkowski dimension and Lorentzian signature",
+      "null coordinates, causal diamond, and time slicing",
+      "real scalar field and its equation",
+      "mu, lambda, domain size, and compatible characteristic traces",
+      "algebraic boundary state omega_H when state transport is invoked"
+    ],
+    "derived_outputs": [
+      "global linear reconstruction, uniqueness, and stability",
+      "causal dependence on only the required trace segments",
+      "classical interior slice data",
+      "explicit stability of both phi_tau and Pi_tau",
+      "linear symplectic and Weyl algebra transport",
+      "local semilinear reconstruction under explicit gates",
+      "toy interior energy as an exact boundary-flux balance"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "open_gates": [
+    "PA-H-CAUSAL-STRUCTURE-CIRCULARITY",
+    "PA-H-BOUNDARY-ALGEBRA-AND-STATE-SELECTION",
+    "PA-H-GRAVITATIONAL-CONSTRAINT-CLOSURE",
+    "PA-H-HIGH-ENERGY-SCALE",
+    "PA-H-COOLING-CONTROL-HISTORY",
+    "PA-H-TO-PA-M2-COMPOSITION"
+  ],
+  "scope": {
+    "fixed_1_plus_1_minkowski_background": true,
+    "causal_structure_inserted": true,
+    "global_linear_rectangle_reconstruction": true,
+    "linear_uniqueness_and_stability": true,
+    "local_semilinear_reconstruction_under_explicit_gates": true,
+    "classical_state_output": true,
+    "linear_state_map_injective": true,
+    "linear_algebraic_boundary_state_transport": true,
+    "selected_hadamard_state": false,
+    "einstein_reconstruction": false,
+    "event_horizon_identified": false,
+    "high_energy_cosmic_state_derived": false,
+    "cooling_map_derived": false,
+    "map_to_pa_m2": false,
+    "spacetime_emergence": false,
+    "pre_a_complete": false
+  },
+  "artifacts": {
+    "certificate_note": "strategy/pre-a-double-null-semilinear-reconstruction-certificate-260803.md",
+    "primary_script": "codes/foundations/pre_a_double_null_semilinear_reconstruction.py",
+    "independent_script": "codes/foundations/pre_a_double_null_semilinear_reconstruction_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_double_null_semilinear_reconstruction_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-double-null-semilinear-reconstruction/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-double-null-semilinear-reconstruction/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-double-null-semilinear-reconstruction/result.json"
+  },
+  "no_overclaim": "This package proves only a fixed-background 1+1 characteristic reconstruction and state-transport bridge plus a gated local semilinear extension. It does not identify an event horizon, derive causal structure or spacetime, select a physical or Hadamard boundary state, solve Einstein constraints, derive a cosmological high-energy scale or cooling history, connect to PA-M2, or complete Pre-A."
+}

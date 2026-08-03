@@ -5,6 +5,18 @@ not pillar counts.
 
 ---
 
+## [Hostile-audit correction of Pre-A novelty and PA-H1 state map] - 2026-08-03
+
+EXP-000696 corrects the earlier checkpoint after two independent hostile audits. The literature target now separates the causal-origin fork C0 and physical N1-N5 links from validation gate V1, searches programme-level source sequences, scopes uniqueness modulo declared equivalences, and requires a controlled-limit nonanalytic phase criterion. PA-H1 now includes strict 0<2*tau slice scope, C1 x C0 map spaces, explicit field/spatial-derivative/momentum bounds, injectivity before Weyl transport, common-ball semilinear stability, and conserved-current energy-flux wording. Bessel, massive symplectic-current, both-null-flux, expected-scope, and stored-artifact freshness checks raise the independently audited total to 114/114.
+
+## [Pre-A bounded prior-art audit and PA-H1 double-null bridge] - 2026-08-03
+
+A bounded primary-source matrix finds substantial prior art for each individual ingredient but no one-law N1-N6 chain; it records no world-first claim. PA-H1-DNKG4-v0 proves fixed-background global linear double-null reconstruction and stability, the u+v=2*tau slice, linear symplectic/Weyl state transport, exact boundary energy flux, and a local phi4 reconstruction under explicit contraction gates. Three executable routes pass 93 combined assertions. The package names causal-structure circularity and leaves state selection, Einstein constraints, event-horizon identity, cosmic scale, cooling, spacetime emergence, and the PA-M2 composition open. The PA-M2 package is also narrowed to kernel-restricted morphology and stable/critical Gaussian lambda_L=0.
+
+## [Pre-A PA-M2 dual-lane certificate and horizon-origin route reset] - 2026-08-03
+
+Registered the T0 PA-M2-CI8-RS-v0 candidate package with primary, independent, and integrated exact audits. The finite-torus model beats the identical zero reference with necessarily inhomogeneous order in its onset window, sharpens the stationary and spectral-concentration bounds, and selects a single-Q stripe at leading CI8 order. The Gaussian Lane-Q boundary has zero exponential rate. A separate local double-null certificate proves that one null-sheet scalar trace is insufficient bulk data and that compatible two-sheet toy data reconstruct uniquely. Horizon-state reconstruction is now the primary Pre-A gate; cyclicity is optional downstream. No claim tier, physical event-horizon origin, gravitational bulk, nonlinear chaos, physical vacuum, or cosmology is established.
+
 ## [R-159 raw-Q0 quantifier and verifier durability correction] - 2026-08-03
 
 Corrected the raw-Q0 growth quantifier after adversarial review. Tr Q0=Theta(Lambda) is asserted only for the positive-density sharp-cube member; other admitted |m|<=1 multipliers can have smaller or scheme-dependent growth. R-159 needs only that the raw-Q0 family is not uniformly bounded and that Q0 cancels exactly, so its theorem and gap are unchanged. EXP-000691 records the correction. Replaced the primary no-C-inverse declaration with an executable denominator audit and made the integrated verifier check immutable historical status registration instead of the mutable current top-level status statement, preventing the new package from repeating the predecessor-verifier coupling defect.

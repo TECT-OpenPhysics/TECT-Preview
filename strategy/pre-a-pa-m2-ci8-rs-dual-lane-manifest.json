@@ -1,0 +1,149 @@
+{
+  "schema": "tect/pre-a-candidate-manifest/0.2",
+  "candidate_id": "PA-M2-CI8-RS-v0",
+  "candidate_family": "M2-LOCAL-CUBIC-ISOLATED-NODE",
+  "package_version": "0.2.0",
+  "issued": "2026-08-03",
+  "authority": "T0 candidate certificate and horizon-origin proof programme; not a TECT action, claim, tier change, physical model, or cosmology",
+  "claim_context": "A2-FULL-PRODUCTION-WELLPOSED",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "The real-scalar PA-M2 candidate has an exact finite-torus inhomogeneous global-minimizer window below the identical zero reference, isolated full-rank CI8 nodes, concentration onto those nodes at onset, a kernel-restricted leading single-Q stripe morphology inequality, and a tree-level z=1 inertial cone. Stable and critical Gaussian modes have zero exponential rate; unstable quadratic modes are only linear instabilities. Separately, the fixed-background local double-null toy equation proves that a scalar trace on one generic open null sheet is insufficient starting data, while compatible traces on two intersecting sheets reconstruct the toy bulk. The 1+1 toy and three-dimensional PA-M2 have no proved composition map. No causal emergence, event-horizon origin, gravitational reconstruction, nonlinear chaos, or cyclic cosmology is thereby established.",
+  "candidate_verdict": "ADVANCE AS A PRE-A DUAL-LANE BENCHMARK; MAKE HORIZON-ORIGIN RECONSTRUCTION THE PRIMARY NEXT GATE; KEEP CYCLICITY OPTIONAL AND DOWNSTREAM",
+  "degrees_of_freedom": {
+    "field": "phi:T_L^3->R in H2",
+    "canonical_momentum": "pi, introduced only in the separately declared inertial Lane-Q Hamiltonian",
+    "soft_node_coordinates": "four complex-conjugate node pairs, equivalently eight real canonical coordinates",
+    "gauge_redundancy": "none",
+    "horizon_boundary_degrees": "not yet defined; A_H and omega_H are required outputs of the Lane-H construction"
+  },
+  "functional": {
+    "static_energy": "F_r[phi]=1/2 int[r phi^2+c sum_i((partial_i^2+q^2)phi)^2]+g/4 int phi^4",
+    "parameter_domain": "c>0, g>0, q=2*pi*m/L with integer m>=1; r real",
+    "boundary_conditions": "periodic cubic torus of side L",
+    "reference_state": "phi=0 with identical volume, Fourier normalization, and boundary convention",
+    "lane_q_hamiltonian": "H=int pi^2/(2 chi)+F_r[phi], chi>0, after declared Galerkin and occupation cutoffs",
+    "declared_cosmic_cooling_map": false
+  },
+  "horizon_origin_program": {
+    "candidate_boundary": "a past null causal boundary H^-; event-horizon status must be derived globally",
+    "exact_scoped_obstruction": "For partial_u partial_v phi=0, phi=0 and phi=u have the same trace on u=0 but different bulk values",
+    "exact_toy_repair": "Compatible data A(u) on v=0 and B(v) on u=0 reconstruct phi=A(u)+B(v)-A(0)",
+    "required_data_object": "O_H=(H_1^-,H_2^-,C;A_H,omega_H;d_C;lambda_H), or a proved equivalent complete characteristic data system",
+    "required_map": "omega_Sigma0=P_(H->Sigma)(O_H) as an algebraic state with existence, uniqueness modulo gauge, continuous dependence, constraint preservation, and auxiliary-exterior independence; rho notation requires a separately proved finite-cutoff or type-I representation",
+    "exterior_policy": "unknown exterior degrees are outside the theorem domain, not set to zero; any influence must be a declared boundary channel",
+    "cyclicity_role": "optional downstream fixed-point test only",
+    "causal_structure_gate": "the local Lane-H toy inserts 1+1 Lorentzian null structure; it cannot prove spacetime emergence",
+    "composition_status": "OPEN: no state, parameter, dimension-changing, energy-normalization, or r(tau) map connects the 1+1 Lane-H toy to three-dimensional PA-M2"
+  },
+  "mathematical_status": {
+    "finite_torus_coercivity_and_minimizer_existence": "PROVED in declared candidate scope",
+    "same_reference_inhomogeneous_minimizer_window": "PROVED for -3*c*q^4<=r<0",
+    "stationary_mean_square_bound": "PROVED: ||phi||_2^2/V<=-r/g",
+    "node_concentration_bound": "PROVED: off-node mass fraction<=|r|/(c*delta_L), delta_L=(2*pi/L)^4*(2m-1)^2",
+    "leading_ci8_morphology": "PROVED only for the kernel-restricted leading quartic problem: one antipodal pair minimizes that form",
+    "nonlinear_complement_branch": "OPEN; implicit-function estimates not yet certified",
+    "tree_level_common_isotropic_cone": "PROVED for the declared inertial completion",
+    "loop_protected_common_speed": "OPEN",
+    "gaussian_exponential_chaos": "EXCLUDED for stable and critical quadratic modes: lambda_L=0; omega^2<0 is a linear instability and is not classified as chaos",
+    "nonlinear_many_body_chaos": "OPEN",
+    "single_null_scalar_trace_as_complete_data": "EXCLUDED in the local toy equation",
+    "double_null_toy_reconstruction": "PROVED for the local toy equation",
+    "gravitational_horizon_reconstruction": "OPEN",
+    "physical_event_horizon_origin": "OPEN"
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "three spatial dimensions",
+      "cubic torus and Fourier lattice",
+      "real scalar field",
+      "q, c, g, chi, and r",
+      "static functional",
+      "inertial time law for Lane Q",
+      "local double-null toy equation for the first Lane-H gate"
+    ],
+    "derived_candidate_outputs": [
+      "eight isolated full-rank nodes",
+      "same-reference inhomogeneous minimizer window",
+      "stationary amplitude and node-concentration bounds",
+      "kernel-restricted leading single-Q morphology",
+      "tree-level z=1 cone",
+      "stable and critical Gaussian lambda_L=0",
+      "one-null-trace nonuniqueness",
+      "compatible double-null toy reconstruction"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "preregistered_falsifiers": [
+    {
+      "id": "ONE-NULL-COMPLETENESS",
+      "question": "Does a scalar trace on one null characteristic sheet uniquely determine the toy bulk?",
+      "verdict": "FAIL by the exact phi=0 versus phi=u counterexample"
+    },
+    {
+      "id": "DOUBLE-NULL-TOY",
+      "question": "Do compatible traces on two intersecting null sheets reconstruct the toy equation?",
+      "verdict": "PASS for phi=A(u)+B(v)-A(0)"
+    },
+    {
+      "id": "COMMON-ZERO-REFERENCE",
+      "question": "Does the ordered trial lie below phi=0 under identical normalization?",
+      "verdict": "PASS for every r<0"
+    },
+    {
+      "id": "HOMOGENEOUS-EXCLUSION",
+      "question": "Can a constant field explain the negative global energy in the declared onset window?",
+      "verdict": "NO for -3*c*q^4<=r<0"
+    },
+    {
+      "id": "CI8-MORPHOLOGY",
+      "question": "Does a multi-Q kernel state lower the leading quartic form below one antipodal pair?",
+      "verdict": "NO by the exact convolution and AM-GM inequality"
+    },
+    {
+      "id": "GAUSSIAN-CHAOS",
+      "question": "Does critical quadratic OTOC growth have a positive exponential rate?",
+      "verdict": "NO; lambda_L=0"
+    },
+    {
+      "id": "NONLINEAR-CHAOS-CAUSATION",
+      "question": "Does converged collision scrambling causally precede and enable order under a controlled ablation?",
+      "verdict": "OPEN"
+    },
+    {
+      "id": "HORIZON-TO-BULK",
+      "question": "Does a constraint-compatible boundary state uniquely and continuously reconstruct the high-energy bulk and r(tau)?",
+      "verdict": "OPEN"
+    }
+  ],
+  "scope": {
+    "new_hypothesis": true,
+    "finite_periodic_torus": true,
+    "finite_volume_classical_onset": true,
+    "thermodynamic_phase_transition": false,
+    "nonlinear_quantum_chaos": false,
+    "chaos_caused_ordering": false,
+    "tree_level_common_speed_only": true,
+    "compact_gauge_or_winding": false,
+    "physical_vacuum_selected": false,
+    "single_null_sheet_complete_initial_data": false,
+    "double_null_toy_reconstruction": true,
+    "gravitational_horizon_reconstruction": false,
+    "event_horizon_origin_selected": false,
+    "causal_structure_inserted_in_lane_h_toy": true,
+    "lane_h_to_pa_m2_composition": false,
+    "cyclic_cosmology": false,
+    "sector_a_closed": false
+  },
+  "artifacts": {
+    "programme_note": "strategy/pre-a-dual-lane-horizon-origin-proof-programme-260803.md",
+    "primary_script": "codes/foundations/pre_a_pa_m2_ci8_rs_dual_lane.py",
+    "independent_script": "codes/foundations/pre_a_pa_m2_ci8_rs_dual_lane_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_pa_m2_ci8_rs_dual_lane_verify.py",
+    "primary_result": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-03-primary-pre-a-pa-m2-ci8-rs-dual-lane/result.json",
+    "independent_result": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-03-independent-pre-a-pa-m2-ci8-rs-dual-lane/result.json",
+    "integrated_result": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-03-integrated-pre-a-pa-m2-ci8-rs-dual-lane/result.json"
+  },
+  "no_overclaim": "This T0 package proves candidate-scope finite-torus variational, kernel-restricted CI8 morphology, stable/critical Gaussian, and fixed-background local double-null toy statements only. It does not derive causal structure, connect the 1+1 Lane-H toy to three-dimensional PA-M2, identify a physical event horizon as the origin, construct a gravitational boundary state or bulk, derive cosmic cooling, establish a thermodynamic or quantum phase transition, prove nonlinear chaos or its causal role, produce compact gauge structure, select the physical vacuum, or establish a cyclic universe."
+}
