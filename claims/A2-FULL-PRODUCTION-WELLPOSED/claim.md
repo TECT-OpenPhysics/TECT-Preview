@@ -24,6 +24,22 @@ The zero field is therefore the unique critical point and global minimizer in
 the unconstrained `H2` field space. Its canonical gradient flow obeys
 `||Psi(t)||_2^2 <= exp(-2 kappa t)||Psi(0)||_2^2`.
 
+R-158 solves a distinct ensemble extension (result ID
+`A2-CHARGE-ENSEMBLE-FIRST-ORDER-SHELL-TRANSITION`). After defining
+`Q=||Psi||_2^2/2`, let `lambda0` be the exact side-16 torus spectral bottom,
+`rho*=43/216`, and `mu_t=lambda0-1849/86400`. Then
+
+```text
+F_P1[Psi] = mu_t Q + <Psi,(L-lambda0)Psi>/2 + F_II[Psi]
+            + (gamma/6) integral rho (rho-rho*)^2.
+```
+
+A lowest-internal-eigenvector plane wave on the unique radial shell
+`|n|^2=3` saturates every remainder. It is a constrained global minimizer at
+`Q*=11008/27`. For `Omega_mu=F_P1-mu Q`, zero is unique below `mu_t`, coexists
+with nonzero shell minimizers at `mu_t`, and is beaten above `mu_t`; the zero
+spinodal is `lambda0`, so the transition is exactly first order.
+
 ## Scope
 
 The field has three complex components, treated as six real components. The
@@ -37,6 +53,14 @@ shell bias, removal of the regularisers, data below `H2`, infinite volume,
 fixed norm or charge, compact `CP2` targets, chemical-potential transforms,
 conserved or alternative dynamics, other parameter/function families,
 physical-vacuum selection, and T7.
+
+R-158 covers the newly chosen fixed-charge and grand-canonical variational
+problems, not the original neutral-reference vacuum problem. It does not derive
+a conserved physical charge or reservoir. Its saturating finite-wave-number
+state has uniform `rho` and uniform registered internal bilinears, so it proves
+a common-phase winding rather than a gauge-invariant density crystal, BCC, or
+unique morphology. Infinite-volume robustness and alternative dynamics remain
+excluded.
 
 ## Dependencies and hypotheses
 
@@ -80,11 +104,21 @@ historical backend or a different functional.
    `0 <= theta <= 1`. The resulting
    `kappa=2101675000076747016511/8100000000000000000000 > 1/4`
    removes all nonzero critical points and gives exponential `L2` decay.
+8. R-158 isolates the smallest internal eigenvalue by Sturm/LDL certificates
+   and the exact torus radial minimum at `|n|^2=3`. Completing the local
+   polynomial gives the nonnegative decomposition with
+   `rho*=43/216` and `mu_t=lambda0-1849/86400`.
+9. Constant-density ground-shell plane waves kill both Class-II currents and
+   saturate the decomposition. A Bregman identity proves constrained global
+   minimality whenever `2Q/16^3 >= rho*`; grand-potential signs and the
+   ordering `mu_sn < mu_t < lambda0` prove first-order coexistence.
 
 The self-contained proof is
 [v2.0 integrated referee theorem](notes/a2-full-production-wellposedness-260717-v2.0.tex.txt).
 The pinned equilibrium extension is
 [R-157 source note](notes/a2-pinned-functional-unique-zero-global-minimizer-260803-v1.0.tex.txt).
+The conditional ensemble extension is
+[R-158 source note](notes/a2-charge-ensemble-first-order-shell-transition-260803-v1.0.tex.txt).
 
 ## Evidence and reproduction
 
@@ -99,16 +133,20 @@ Evidence grades: `ANALYTIC`, `EXECUTED`, `CONDITIONAL`.
 - R-157 non-importing Fraction reconstruction: 24/24 PASS.
 - R-157 integrated authority, artifact, PDF, and legacy-regression audit: all
   PASS.
+- R-158 primary exact SymPy/Sturm certificate: 35/35 PASS.
+- R-158 independent standard-library rational certificate: 24/24 PASS.
+- R-158 integrated artifact, PDF, record, R-157, and legacy-A2 regression:
+  all PASS.
 
 Run from the repository root:
 
 ```bash
-python codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py
+python codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py
 ```
 
-Expected: primary `26/26`, independent `24/24`, legacy A2 `61/61`, integrated
-all PASS, exit 0. Child reruns use temporary JSON and are compared with the
-immutable evidence.
+Expected: R-158 primary `35/35`, independent `24/24`, R-157 and legacy A2
+regressions retained, integrated all PASS, exit 0. Child reruns use temporary
+JSON and are compared with the immutable evidence.
 
 The PUBLISHED referee bundle is
 `bundle/A2-Full-Production-WellPosedness-T6-260717/`: 22 files, five entry
@@ -128,6 +166,13 @@ silently absorbed.
 R-157 additionally fails if a field in the declared unconstrained pinned scope
 has energy below `g||Psi||_2^2`, if a nonzero critical point exists, or if the
 canonical gradient flow violates the exponential `L2` estimate.
+
+R-158 fails if the exact torus ground shell is not `|n|^2=3`, if decomposition
+(1.3) in its source note has a nonzero algebraic remainder, if its plane wave
+does not annihilate both Class-II currents, if it is not a constrained global
+minimizer at `Q*=11008/27`, or if the grand-potential transition does not occur
+strictly before the zero-field spinodal. Physical derivation of `Q` or `mu` is
+not part of the theorem and therefore cannot be inferred from it.
 
 ## Devil's-advocate record
 
@@ -155,6 +200,16 @@ canonical gradient flow violates the exponential `L2` estimate.
    dynamics."** UPHELD as false. Radial scaling is admissible in the declared
    unconstrained linear `H2` space only; those alternatives require new
    functionals and Euler--Lagrange equations.
+10. **"R-158 repairs P1 as a spontaneous neutral vacuum."** UPHELD as false.
+    It changes the comparison class by fixing nonzero charge or subtracting
+    `mu Q`; at coexistence its finite-shell state still has positive original
+    energy relative to zero.
+11. **"The `|n|^2=3` result is a BCC theorem."** UPHELD as false. A single
+    plane wave has uniform density and internal bilinears. The shell is a
+    finite-torus phase-winding result with no unique multi-mode morphology.
+12. **"The ensemble transition contradicts R-157."** DISMISSED. At the
+    constrained minimizer `DF_P1(Psi*)=mu_t Psi*`, not zero; R-157's
+    unconstrained critical-point theorem remains intact.
 
 ## Tier decision and operator sign-off
 
@@ -180,6 +235,13 @@ fixed-norm/charge or compact-target constraints, chemical-potential or
 conserved dynamics, other parameters/functionals, or general nonequilibrium
 transients.
 
+R-158 applies only after imposing `Q=||Psi||_2^2/2` as a fixed constraint or
+introducing `Omega_mu=F_P1-mu Q`. It proves an exact ensemble-induced
+first-order shell transition, not a microscopic conserved charge, a generated
+chemical potential, a neutral physical vacuum, gauge-invariant spatial
+modulation, BCC, unique morphology, infinite-volume robustness, or new A7 and
+Sector-A closure.
+
 ## History
 
 - 2026-07-17: registered at T4 as a separate full-production proof candidate.
@@ -194,11 +256,18 @@ transients.
   the pinned P1 functional, making zero the unique critical point and global
   minimizer and forcing exponential decay of its canonical gradient flow. Tier
   remains T6 under the same named identification hypothesis.
+- 2026-08-03: R-158 exactly solved the fixed-charge and chemical-potential P1
+  extensions. It proves finite-shell first-order coexistence in those imposed
+  ensembles while certifying that the state lies above the original neutral
+  zero reference and has uniform registered local observables. Tier remains T6.
 
 ## Next required action
 
-Preserve the original T6 bundle and R-157 as the pinned M1 rejection boundary.
-Advance the truth-first T-054 tournament with structurally distinct candidates;
-do not spend T-053 observable tests on M1. Constrained, compact-target,
-chemical-potential, conserved, historical, A7, or retuned branches require
-separate candidate definitions and claims.
+Preserve R-157 as the pinned unconstrained M1 rejection boundary and register
+R-158/PA-M1-Q only as a solved conditional ensemble mechanism. Before treating
+it as a physical candidate, derive charge or reservoir provenance and a
+gauge-invariant spatial observable. Advance T-054 with the structurally
+distinct screened-vector/nonlocal candidate and apply cheap zero-reference and
+causal-shell falsifiers before spending T-053 calculations. T-050/A13 remains
+separate and parked until a model pins the missing finite production cylinder
+or a scheme-independent intrinsic counterexample is proved.

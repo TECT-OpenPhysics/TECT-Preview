@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-158 charge-ensemble first-order shell transition and physical-provenance boundary] - 2026-08-03
+
+Registered the conditional exact R-158 extension for the hash-pinned P1/A2 functional after defining Q=||Psi||_2^2/2. Exact torus spectral and polynomial completion proves a constrained ground-shell minimizer at Q=11008/27 and a grand-canonical first-order transition at mu_t=lambda0-1849/86400, before the zero-field spinodal. Primary 35/35 and independent 24/24 certificates pass. This advances PA-M1-Q only as an imposed-ensemble mechanism: the state remains above the original neutral zero reference, its registered local observables are uniform, and no conserved physical charge, reservoir, physical vacuum, BCC, unique morphology, infinite-volume, A7, T-050, or Sector-A closure follows.
+
 ## [R-157 pinned M1 unique-zero theorem and truth-first candidate rejection] - 2026-08-03
 
 Registered the conditional exact R-157 extension for the hash-pinned unconstrained P1/A2 functional. The energy gap g>1/8 makes zero the unique global minimizer; the independent radial gap kappa>1/4 makes it the unique critical point and forces exponential L2 decay of the canonical gradient flow. This analytically supersedes T-052 equilibrium searches for pinned M1 and routes T-054 toward structurally distinct candidates. The result is not a physical-vacuum verdict and does not transfer to constrained, compact-target, chemical-potential, conserved, historical, signed-A7, retuned, or alternative models. The A13 quantitative-radius route was parked at an exact U_0/L_R criterion without a guessed numerical radius; no intrinsic counterexample was certified.

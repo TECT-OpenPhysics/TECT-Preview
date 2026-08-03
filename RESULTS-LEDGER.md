@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-158](#r-158) | Exact charge-ensemble first-order shell transition and neutral-reference boundary | T6 conditional analytic/exact/executed/audited theorem extension. For the hash-pinned P1/A2 functional on the side-16 torus, define `Q=||Psi||_2^2/2`. With exact torus spectral bottom `lambda0`, `rho*=43/216`, and `mu_t=lambda0-1849/86400`, the full functional is `mu_t Q` plus a nonnegative spectral remainder, complete nonnegative Class-II energy, and `(gamma/6)int rho(rho-rho*)^2`. A lowest-internal-eigenvector plane wave on the unique radial shell `|n|^2=3` saturates all remainders and is a constrained global minimizer at `Q*=11008/27`; `Omega_mu=F_P1-mu Q` has exact first-order coexistence at `mu_t` before the zero spinodal `lambda0`. This is an imposed-ensemble mechanism, not a physical-vacuum theorem: no charge/reservoir provenance is derived, the state remains above the original neutral zero reference, and its registered local observables are uniform, so no BCC or unique morphology follows |
 | [R-157](#r-157) | Pinned P1 unique-zero critical point, global minimizer, and exponential gradient-flow decay | T6 conditional analytic/exact/executed/audited theorem extension. For the hash-pinned P1/A2 functional on the fixed torus with `eta_shell=0`, exact shell completion and `M>(7/250)I` give `F_P1[Psi]>=g||Psi||_2^2`, where `g=719818750025582338837/5400000000000000000000>1/8`. The full regularized Class-II amplitude-ray derivative is positive, giving `<DF_P1(Psi),Psi>>=kappa||Psi||_2^2`, where `kappa=2101675000076747016511/8100000000000000000000>1/4`. Thus zero is the unique critical point and global minimizer and the canonical L2 gradient flow decays exponentially. This analytically supersedes T-052 equilibrium searches for pinned M1 and supports rejecting or retuning that candidate; it is not a physical-vacuum theorem and does not cover constrained/compact-target, chemical-potential, conserved, historical, signed-A7, retuned, or alternative models |
 | [R-156](#r-156) | Shifted-state intrinsic Hessian and nonzero-neighbourhood gap boundary | Scoped T4 analytic/exact/executed/audited local theorem and coordinate-curvature boundary. For the predictable chart `chi(A,B)=(A xi_p,B(xi_2p+A xi_p))`, the exact intrinsic tangent Gram is `||H||_HS^2+||G||_HS^2+||GA+BH||_HS^2`, while the pullback Hessian additionally contains one projected-force pairing with controller acceleration `GK+LH`. One scalar production Hessian owns source, endpoint/current, sextic, forward/legal-reverse, and balanced blocks once; no independent low variable exists. Continuity from the R-155 pure-dyadic `147/1000` origin gap gives some fixed-cutoff nonzero coefficient neighbourhood with gap `>1/10`, using exact headroom `47/1000`. The rank-one source-cost restriction has eigenvalue `9(1-R^2)/10`, disproving global nonlinear-coordinate source convexity without refuting intrinsic convexity. No numerical/uniform radius, general nonlinear/revisit T-050, phase/PDE selection, or Sector-A closure follows |
 | [R-155](#r-155) | Affine source-reuse factor-three endpoint and global origin gap | Scoped T4 analytic/exact/executed/audited origin-Hessian theorem. For any finite retained family of distinct antipodal raw source classes, the fixed-law controls `h_[2p]=H_p xi_[p]` may reuse a target later as a source. Injective doubling and raw-source independence keep the source Gram diagonal and make all distinct-source mixed covariance second jets vanish. Factor-two reuse adds no covariance-normal endpoint edge; the complete mixed endpoint/loss graph still has only factor-three paths, while the terminal sextic Hessian is retained as one global PSD form. Exact Sturm and independent Fraction/Bernstein certificates give `D2 A(0)[H,H]>(7/250) sum ||H_p||_HS^2`; pure dyadic families satisfy the sharper `147/1000` bound. Nonzero past, nonlinear/revisit feedback, finite amplitude, T-050, A13, phase/PDE selection, and Sector A remain open |
@@ -176,6 +177,55 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-158"></a>
+### R-158 -- Exact charge-ensemble first-order shell transition and neutral-reference boundary
+
+- **Exact decomposition.**  Let `lambda0` be the spectral bottom of the
+  hash-pinned P1 quadratic operator on the side-16 torus and define
+  `Q=||Psi||_2^2/2`, `rho*=43/216`, and
+  `mu_t=lambda0-1849/86400`.  Exact coefficient matching gives
+  `F_P1=mu_t Q+<Psi,(L-lambda0)Psi>/2+F_II+
+  (gamma/6)int rho(rho-rho*)^2`.  Every remainder after `mu_t Q` is
+  nonnegative.
+- **Finite-torus saturator.**  The smallest internal eigenvalue is the first
+  root of `t^3-(2/5)t^2+(223/5000)t-3/3125`; exact Sturm/LDL certificates
+  isolate it in `(0.02811617233511,0.02811617233512)`.  A rational Machin
+  enclosure of `pi` proves that the unique radial torus minimum is
+  `|n|^2=3`, with eight indices `(plus_or_minus 1,plus_or_minus 1,
+  plus_or_minus 1)`.  A lowest-internal-eigenvector plane wave has constant
+  `rho` and constant internal bilinears, so both Class-II currents vanish and
+  the decomposition is saturated.
+- **Fixed-charge and grand-canonical theorems.**  The saturator is an exact
+  constrained global minimizer at `Q*=11008/27`; an exact Bregman identity
+  extends this to every charge with mean density at least `rho*`.  For
+  `Omega_mu=F_P1-mu Q`, zero is unique below `mu_t`, coexists with nonzero
+  shell minimizers at `mu_t`, and is beaten by a nonzero global minimizer
+  above it.  The plane-wave amplitude saddle-node is
+  `lambda0-1849/64800`, coexistence is `lambda0-1849/86400`, and the zero
+  spinodal is `lambda0`, proving an exact first-order transition.
+- **Truth-first candidate verdict.**  R-158 advances `PA-M1-Q` only as a
+  conditional ensemble mechanism.  At coexistence
+  `F_P1[Psi*]=mu_t Q*>0=F_P1[0]`: it does not beat the original neutral
+  reference.  No microscopic conserved charge or reservoir is derived, and
+  all registered local observables of the plane wave are uniform.  The result
+  is therefore not a physical-vacuum, density-crystal, BCC, or unique-pattern
+  theorem and does not contradict the unconstrained R-157 no-go.
+- **Where proved.**  Claim `A2-FULL-PRODUCTION-WELLPOSED`, note
+  `claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-charge-ensemble-first-order-shell-transition-260803-v1.0.tex.txt`,
+  manifest
+  `claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json`,
+  and primary 35/35, independent 24/24, integrated, R-157/A2 regression, and
+  five-page rendered-PDF audits pinned there.
+- **Audit boundary.**  The theorem uses the hash-pinned static P1 functional,
+  side-16 torus, `eta_shell=0`, and the newly imposed fixed-charge or
+  grand-canonical ensemble.  It does not supply charge/reservoir provenance,
+  local-gauge completion, alternative dynamics, infinite-volume robustness,
+  gauge-invariant spatial modulation, A7, T-050/A13, or Sector-A closure.
+- **Tier / publication target.**  T6 conditional
+  analytic/exact/executed/audited extension of the existing A2 theorem;
+  ensemble-mechanism and model-discrimination note after independent external
+  review.
 
 <a id="r-157"></a>
 ### R-157 -- Pinned P1 unique-zero critical point, global minimizer, and exponential gradient-flow decay

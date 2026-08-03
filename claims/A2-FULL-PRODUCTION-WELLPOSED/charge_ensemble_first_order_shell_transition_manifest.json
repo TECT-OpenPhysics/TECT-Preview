@@ -1,0 +1,147 @@
+{
+  "schema": "tect/a2-charge-ensemble-first-order-shell-transition-manifest/1.0",
+  "package_version": "1.0.0",
+  "issued": "2026-08-03",
+  "claim_id": "A2-FULL-PRODUCTION-WELLPOSED",
+  "result_id": "A2-CHARGE-ENSEMBLE-FIRST-ORDER-SHELL-TRANSITION",
+  "result_ledger_id": "R-158",
+  "tier": "T6",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXACT",
+    "EXECUTED",
+    "AUDITED",
+    "CONDITIONAL"
+  ],
+  "statement": "Conditional on A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, define Q[Psi]=||Psi||_L2^2/2 for the hash-pinned P1 static functional on the side-16 torus. If lambda0 is the exact torus spectral bottom, rho_star=43/216, and mu_t=lambda0-1849/86400, then F_P1[Psi]=mu_t Q+<Psi,(L-lambda0)Psi>/2+F_II[Psi]+(gamma/6) integral rho(rho-rho_star)^2. A lowest-internal-eigenvector plane wave on the unique radial shell |n|^2=3 saturates the remainders. It is an exact constrained global minimizer at Q_star=11008/27, and at every fixed charge with mean density at least rho_star. For Omega_mu=F_P1-mu Q, zero is the unique global minimizer below mu_t, coexists with nonzero shell minimizers at mu_t, and is beaten by a nonzero global minimizer above mu_t. The zero-field spinodal is lambda0 and the plane-wave amplitude saddle-node is lambda0-1849/64800, hence the coexistence transition is first order.",
+  "scope": {
+    "hash_pinned_p1_static_functional": true,
+    "fixed_torus_h2_fields": true,
+    "charge_definition_half_l2_norm_squared": true,
+    "fixed_charge_minimizer_at_one_exact_charge": true,
+    "grand_canonical_chemical_potential_family": true,
+    "exact_first_order_coexistence": true,
+    "finite_wave_number_saturating_plane_wave": true,
+    "derived_conserved_charge_or_chemical_potential": false,
+    "physical_vacuum_selection": false,
+    "unique_morphology_or_lattice_selection": false,
+    "infinite_volume_or_thermodynamic_limit": false,
+    "a7_signed_stochastic_composite": false
+  },
+  "authorities": {
+    "A1-P1": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+    "A2-continuum": "claims/A2-FULL-PRODUCTION-WELLPOSED/full_pde_manifest.json",
+    "R-157": "claims/A2-FULL-PRODUCTION-WELLPOSED/pinned_functional_unique_zero_global_minimizer_manifest.json",
+    "P1-backend": "codes/foundations/n001_variational_backend.py"
+  },
+  "authority_hashes": {
+    "A1-P1": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "A2-continuum": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682",
+    "R-157": "b62ee37609cbe493eeb9d7d0d9b1fb9fcd94f8d1a86907b8714135e6a8026ca8",
+    "P1-backend": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+  },
+  "exact_constants": {
+    "internal_characteristic_polynomial": "t^3-(2/5)t^2+(223/5000)t-3/3125",
+    "smallest_internal_eigenvalue_interval": [
+      "2811617233511/100000000000000",
+      "2811617233512/100000000000000"
+    ],
+    "torus_radial_shell_norm_squared": 3,
+    "torus_radial_shell_vectors": "(plus_or_minus 1, plus_or_minus 1, plus_or_minus 1)",
+    "coexistence_density": "43/216",
+    "coexistence_charge": "11008/27",
+    "coexistence_drop_and_metastability_width": "1849/86400",
+    "amplitude_saddle_node_drop": "1849/64800",
+    "coexistence_stationary_densities": [
+      "43/216",
+      "43/648"
+    ],
+    "quadratic_ground_eigenvalue_interval_decimal": [
+      "0.2881161723445849403100011314263278030877",
+      "0.2881161723445949403100011314263278030877"
+    ],
+    "transition_chemical_potential_interval_decimal": [
+      "0.2667157093816219773470381684633648401247",
+      "0.2667157093816319773470381684633648401247"
+    ]
+  },
+  "files": {
+    "primary": {
+      "path": "codes/foundations/a2_charge_ensemble_first_order_shell_transition.py",
+      "version": "1.0.0",
+      "sha256": "a1a25274c2d953768c241bfaba7afcfb1763a6767c206733d0e55c0ec73fd853"
+    },
+    "independent": {
+      "path": "codes/foundations/a2_charge_ensemble_first_order_shell_transition_independent.py",
+      "version": "1.0.0",
+      "sha256": "35147aee46e338120f90c7083ae38103bf887a0f449e780513e807762ac30d87"
+    },
+    "verifier": {
+      "path": "codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py",
+      "version": "1.0.0",
+      "sha256": "7925824aa29343928e57ca0b2999fedfd59c04f066f34b6daf2296b32abf9ca9"
+    },
+    "note": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-charge-ensemble-first-order-shell-transition-260803-v1.0.tex.txt",
+      "version": "1.0",
+      "sha256": "59ad1044ab1fab4c990932d5bc98921c19d277e3c88ae2193b60d16c38e82f69"
+    },
+    "pdf": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-charge-ensemble-first-order-shell-transition-260803-v1.0.pdf",
+      "version": "1.0",
+      "sha256": "236e8ae25d6a1ab465a06eebaac85c0e6c2c581749a0cb0ca6d743c7fbebc6a2"
+    },
+    "primary_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-03-primary-charge-ensemble-first-order-shell-transition/result.json",
+      "schema": "tect/a2-charge-ensemble-first-order-shell-transition-primary/1.0",
+      "sha256": "54d1ecdf578a8356343e08ba98eaac9f287cc2872496cd5e27bb25e4d34ffb05"
+    },
+    "independent_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-03-independent-charge-ensemble-first-order-shell-transition/result.json",
+      "schema": "tect/a2-charge-ensemble-first-order-shell-transition-independent/1.0",
+      "sha256": "c5427140cabeb23ac1136ca3841cda17c17a0f836dcc8ef42ec14d2a61dcb4dd"
+    },
+    "integrated_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-03-integrated-charge-ensemble-first-order-shell-transition/result.json",
+      "schema": "tect/a2-charge-ensemble-first-order-shell-transition-integrated/1.0"
+    }
+  },
+  "verification": {
+    "command": "E:\\Dev\\TECT.venv\\Scripts\\python.exe codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py",
+    "primary_assertions": 35,
+    "independent_assertions": 24,
+    "embedded_child_assertions": 59,
+    "integrator_only_assertions": 96,
+    "integrated_assertions": 155,
+    "r157_and_legacy_a2_regression": "PASS required",
+    "pdf": {
+      "deterministic": true,
+      "source_date_epoch": 1785715200,
+      "form_check": "PASS",
+      "overfull_hbox_count": 0,
+      "pages": 5,
+      "size_bytes": 72444,
+      "security_check": "PASS: unencrypted and no JavaScript, launch action, attachment, embedded file, rich media, XFA, submission action, remote goto, or URI action",
+      "text_check": "PASS: R-158, fixed-charge theorem, exact first-order transition, neutral-reference and common-phase-winding firewalls extracted",
+      "renderer": "Poppler pdftoppm 26.802.11031",
+      "render_dpi": 150,
+      "rendered_pages": 5,
+      "manual_visual_qa": "PASS: all 5 final rendered pages inspected on 2026-08-03; title, exact decomposition, torus shell certificate, fixed-charge theorem, first-order ordering, eight objections, reproduction commands, result footer, and page breaks are legible with no clipping, overlap, overfull line, stray glyph, or missing content."
+    }
+  },
+  "exploration_ids": [
+    "EXP-000686"
+  ],
+  "proof_complete_in_declared_scope": true,
+  "t054_candidate_id": "PA-M1-Q",
+  "t054_candidate_verdict": "CONDITIONAL-MECHANISM; NOT PHYSICAL-VACUUM SELECTED",
+  "r157_contradicted": false,
+  "physical_charge_or_reservoir_derived": false,
+  "physical_vacuum_selected": false,
+  "gauge_invariant_spatial_modulation_proved": false,
+  "unique_morphology_selected": false,
+  "t050_or_a13_closed": false,
+  "sector_a_closed": false,
+  "no_overclaim": "R-158 is an exact theorem for the hash-pinned classical P1 functional after choosing either the fixed charge Q=||Psi||_2^2/2 or the modified grand potential Omega_mu=F_P1-mu Q on the fixed torus. It proves an ensemble-induced first-order finite-shell transition, not that TECT contains a physical conserved charge, not that mu is generated by cosmological cooling, and not a physical-vacuum, unique-pattern, BCC, infinite-volume, A7, quantum, or Sector-A closure theorem.",
+  "next_action": "Register PA-M1-Q in the T-054 candidate tournament as a solved conditional ensemble mechanism, not as a physical-vacuum survivor. Demand microscopic charge or reservoir provenance and a gauge-invariant spatial observable before promotion. In parallel, formalize the structurally distinct PA-M5-NL3-SV screened-vector candidate and apply its exact zero-reference and causal-shell falsifiers before any expensive T-053 calculation."
+}

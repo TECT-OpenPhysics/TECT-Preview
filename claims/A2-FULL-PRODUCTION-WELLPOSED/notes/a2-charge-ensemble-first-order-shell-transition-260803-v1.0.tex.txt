@@ -1,0 +1,346 @@
+% =============================================================================
+% Title: Charge-ensemble first-order shell transition in the pinned P1 functional
+% Claim: A2-FULL-PRODUCTION-WELLPOSED
+% Result: A2-CHARGE-ENSEMBLE-FIRST-ORDER-SHELL-TRANSITION
+% Ledger: R-158
+% Version: v1.0 -- first issued 2026-08-03; this version issued 2026-08-03
+% Status: T6 conditional theorem extension; analytic, exact, executed, audited
+% =============================================================================
+
+\begingroup
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cO}{\Omega}
+\newcommand{\Id}{\mathrm I}
+
+\section*{1. Purpose and scope: result and boundary}
+
+R-157 proved that the hash-pinned P1 functional has no nonzero equilibrium in
+its unconstrained field space.  That result did not decide a fixed-charge
+sector or a chemical-potential deformation.  This note solves those two
+different variational problems exactly.  Put
+\[
+ Q(\Psi)={1\over2}\|\Psi\|_{L^2}^2,
+ \qquad
+ \cO_\mu(\Psi)=\cF_{\rm P1}(\Psi)-\mu Q(\Psi).       \tag{1.1}
+\]
+On the fixed cubic torus of side $L=16$, define $\lambda_0$ to be the exact
+spectral bottom of the P1 quadratic operator and set
+\[
+ \rho_*={43\over216},\qquad
+ c_*={1849\over86400},\qquad
+ \mu_t=\lambda_0-c_*.                              \tag{1.2}
+\]
+Then the exact identity
+\[
+ \boxed{
+ \cF_{\rm P1}(\Psi)=\mu_t Q(\Psi)
+ +{1\over2}\langle\Psi,(\mathcal L-\lambda_0)\Psi\rangle
+ +\cF_{\rm II}(\Psi)
+ +{\gamma\over6}\int\rho(\rho-\rho_*)^2,dx }
+                                                               \tag{1.3}
+\]
+holds, where $\rho=\Psi^\dagger\Psi$.  Every term after $\mu_tQ$ is
+nonnegative.
+
+Consequently a finite-wave-number plane wave is an exact constrained global
+minimizer at $Q=Q_*:=11008/27$.  In the grand-canonical problem, zero is the
+unique global minimizer below $\mu_t$, zero coexists with nonzero shell
+minimizers at $\mu_t$, and a nonzero global minimizer wins above $\mu_t$.
+The charge jumps from zero to $Q_*$ before the zero field loses linear
+stability, so this is an exact first-order transition.
+
+This result is deliberately not called a physical-vacuum theorem.  Neither a
+conserved physical charge nor an external reservoir producing $\mu$ has been
+derived.  At the coexistence point
+\[
+ \cF_{\rm P1}(\Psi_*)=\mu_tQ_*>0=\cF_{\rm P1}(0),   \tag{1.4}
+\]
+so the state does not beat the neutral zero reference in the original
+functional.  Its gauge-invariant density and all registered internal
+bilinears are uniform.  The finite wave number is a common-phase winding, not
+a proof of BCC, a density crystal, or any unique morphology.
+
+\section*{2. Exact finite-torus quadratic bottom}
+
+Write the quadratic operator as
+\[
+ \mathcal L=\bigl(r+Z(-\Delta)+Y(-\Delta)^2\bigr)\Id+M,
+ \quad
+ M=\begin{pmatrix}
+ 1/10&-1/20&-1/20\\
+ -1/20&13/100&-1/20\\
+ -1/20&-1/20&17/100
+ \end{pmatrix}.                                    \tag{2.1}
+\]
+The characteristic polynomial of $M$ is
+\[
+ p(t)=t^3-{2\over5}t^2+{223\over5000}t-{3\over3125}. \tag{2.2}
+\]
+An exact Sturm certificate isolates its smallest root $m_*$ in
+\[
+ {2811617233511\over10^{14}}<m_*<
+ {2811617233512\over10^{14}}.                      \tag{2.3}
+\]
+
+For a Fourier index $n\in\mathbb Z^3$,
+\[
+ |k_n|^2={\pi^2\over64}|n|^2,
+ \qquad
+ D(x)=r+Zx+Yx^2.
+\]
+The exact rational enclosure of $\pi$ in the executable certificate proves
+\[
+ {5\over2}<{-Z/(2Y)\over \pi^2/64}<{7\over2}.       \tag{2.4}
+\]
+Since $|n|^2$ is a nonnegative integer and $3=1^2+1^2+1^2$, the unique radial
+minimum on the torus is $|n|^2=3$.  It contains the eight vectors
+\[
+ n=(\pm1,\pm1,\pm1).                               \tag{2.5}
+\]
+Thus
+\[
+ \lambda_0=D(3\pi^2/64)+m_*,                       \tag{2.6}
+\]
+with the certified enclosure
+\[
+ 0.28811617234458494031<\lambda_0<
+ 0.28811617234459494032.                            \tag{2.7}
+\]
+This is a finite-volume commensurability statement.  It neither selects a
+body-centred cubic density pattern nor removes the continuous shell
+degeneracy in an infinite-volume limit.
+
+\section*{3. Completion and saturation}
+
+The P1 local potential is
+\[
+ f(\rho)={\lambda\over4}\rho^2+{\gamma\over6}\rho^3,
+ \qquad \lambda=-{43\over100},\quad \gamma={81\over50}. \tag{3.1}
+\]
+Direct coefficient matching gives
+\[
+ {\lambda_0\over2}\rho+f(\rho)
+ ={\mu_t\over2}\rho+{\gamma\over6}\rho(\rho-\rho_*)^2,
+ \quad
+ \rho_*=-{3\lambda\over4\gamma},
+ \quad c_*={3\lambda^2\over16\gamma}.             \tag{3.2}
+\]
+Adding the nonnegative spectral remainder and the positive-semidefinite
+Class-II energy proves (1.3).
+
+Let $u_*$ be a unit eigenvector of $M$ for $m_*$ and take any one of the eight
+indices (2.5).  The field
+\[
+ \Psi_*(x)=\sqrt{\rho_*}\,u_*e^{i(2\pi/L)n\cdot x} \tag{3.3}
+\]
+lies in the quadratic ground eigenspace.  Moreover $\rho$ is constant and
+every $m_A=\Psi^\dagger T_A\Psi$ is constant.  Hence
+\[
+ J_A=\nabla m_A=0,\qquad K_A=0,
+ \qquad \cF_{\rm II}(\Psi_*)=0.                    \tag{3.4}
+\]
+All remainders in (1.3) vanish.  Since the torus volume is $16^3$,
+\[
+ Q_*={16^3\rho_*\over2}={11008\over27}.            \tag{3.5}
+\]
+The executable enclosure gives
+\[
+ 0.26671570938162197734<\mu_t<0.26671570938163197735,
+\]
+and
+\[
+ 108.74098255084795<\cF_{\rm P1}(\Psi_*)<
+ 108.74098255085204.                               \tag{3.6}
+\]
+In particular, the original neutral-reference energy difference is strictly
+positive.
+
+\section*{4. Fixed-charge theorem}
+
+For any prescribed $Q$, put $\bar\rho=2Q/16^3$.  The exact Bregman identity
+is
+\[
+ f(\rho)-f(\bar\rho)-f'(\bar\rho)(\rho-\bar\rho)
+ ={(\rho-\bar\rho)^2\over12}
+ \bigl(4\gamma\bar\rho+2\gamma\rho+3\lambda\bigr). \tag{4.1}
+\]
+If $\bar\rho\ge\rho_*$, the bracket is nonnegative.  On the affine constraint
+$\int\rho=2Q$, the linear Bregman term integrates to zero.  Therefore the
+difference from a ground-shell plane wave of constant density $\bar\rho$ is
+the sum of the nonnegative spectral remainder, $\cF_{\rm II}$, and the
+nonnegative integral (4.1).  Such a plane wave is an exact constrained global
+minimizer for every
+\[
+ {2Q\over16^3}\ge\rho_*.                            \tag{4.2}
+\]
+At equality, this proves the $Q_*$ assertion.  The form of the constrained
+global minimizer below $Q_*$ is not decided here.
+
+The weak Euler--Lagrange equation for a constrained critical point is
+\[
+ D\cF_{\rm P1}(\Psi)[v]=\mu\langle\Psi,v\rangle_{\mathbb R}
+ \quad\hbox{for all }v\in H^2.                     \tag{4.3}
+\]
+Equivalently,
+\[
+ Y\Delta^2\Psi-Z\Delta\Psi+(r\Id+M)\Psi
+ +\lambda\rho\Psi+\gamma\rho^2\Psi+R_{\rm II}(\Psi)
+ =\mu\Psi.                                         \tag{4.4}
+\]
+For (3.3), $R_{\rm II}=0$ and $\mu=\mu_t$.  Thus R-157 is not contradicted:
+$D\cF_{\rm P1}(\Psi_*)=\mu_t\Psi_*\ne0$, so this is not an unconstrained
+critical point.
+
+\section*{5. Grand-canonical transition and exact ordering}
+
+Subtracting $\mu Q$ from (1.3) gives
+\[
+ \cO_\mu(\Psi)=(\mu_t-\mu)Q
+ +{1\over2}\langle\Psi,(\mathcal L-\lambda_0)\Psi\rangle
+ +\cF_{\rm II}(\Psi)
+ +{\gamma\over6}\int\rho(\rho-\rho_*)^2.          \tag{5.1}
+\]
+Hence:
+\begin{itemize}
+\item if $\mu<\mu_t$, zero is the unique global minimizer;
+\item if $\mu=\mu_t$, zero and nonzero ground-shell states of density
+  $\rho_*$ coexist;
+\item if $\mu>\mu_t$, (3.3) has negative grand potential, while sextic
+  coercivity supplies a global minimizer, which must be nonzero.
+\end{itemize}
+
+The zero-field Hessian is $\mathcal L-\mu\Id$, so its linear spinodal is
+\[
+ \mu_{\rm lin}=\lambda_0.                          \tag{5.2}
+\]
+On the single ground-plane-wave amplitude family, stationary densities obey
+\[
+ \gamma\rho^2+\lambda\rho+(\lambda_0-\mu)=0.       \tag{5.3}
+\]
+The amplitude branch appears at
+\[
+ \mu_{\rm sn}=\lambda_0-{\lambda^2\over4\gamma}
+ =\lambda_0-{1849\over64800},                      \tag{5.4}
+\]
+whereas coexistence occurs at
+\[
+ \mu_t=\lambda_0-{1849\over86400}.                 \tag{5.5}
+\]
+Thus
+\[
+ \boxed{\mu_{\rm sn}<\mu_t<\mu_{\rm lin}}.         \tag{5.6}
+\]
+At coexistence the two stationary densities are
+\[
+ \rho_+={43\over216},\qquad \rho_-={43\over648}.   \tag{5.7}
+\]
+The global charge changes discontinuously from zero to $Q_*$ while zero is
+still a strict local minimum.  This closes the first-order verdict.  Equation
+(5.4) is only an amplitude-family saddle-node statement; this note does not
+claim full-space stability for every off-coexistence plane-wave branch.
+
+\section*{6. Devil's-advocate audit and physical interpretation}
+
+\begin{enumerate}
+\item \textbf{Objection: fixed charge proves a spontaneous TECT vacuum.}
+\textbf{UPHELD against that inference.}  The charge sector removes zero from
+the comparison class.  No microscopic conservation law, superselection rule,
+or cosmological initial condition selecting $Q\ne0$ has been derived.
+
+\item \textbf{Objection: the chemical potential is already a parameter of
+P1.} \textbf{UPHELD as false.}  The term $-\mu Q$ changes the variational
+problem.  A reservoir or a derived effective ensemble is a new hypothesis.
+
+\item \textbf{Objection: a nonzero torus wave vector establishes a spatial
+crystal.} \textbf{UPHELD as false.}  For (3.3), $\rho$ and every $m_A$ are
+constant.  The theorem selects a common-phase winding in this representation,
+not a gauge-invariant density modulation, BCC star, or unique lattice.
+
+\item \textbf{Objection: local gauge completion may remove the phase wave.}
+\textbf{UPHELD as an open physical gate.}  P1 has a global phase symmetry but
+no dynamical gauge field.  A local gauge model could gauge away or screen this
+configuration and must be analysed as a distinct candidate.
+
+\item \textbf{Objection: the canonical A2 gradient flow realizes the
+fixed-charge transition.} \textbf{UPHELD as false.}  That dissipative flow
+does not generally conserve $Q$.  Projected relaxation or Hamiltonian
+dynamics would require separate well-posedness and stability theorems.
+
+\item \textbf{Objection: the Class-II cross term spoils saturation.}
+\textbf{DISMISSED for the states (3.3).}  Both registered currents vanish
+pointwise, while the complete coefficient matrix is positive semidefinite.
+
+\item \textbf{Objection: the body-diagonal shell is regulator independent.}
+\textbf{UPHELD as false.}  The integer shell follows from the side-$16$ torus.
+Robustness under $L$, cutoff, and infinite-volume limits is not proved.
+
+\item \textbf{Objection: exact algebra can hide a sign, factor, or convention
+error.} \textbf{VALID WITH MITIGATION.}  A SymPy/Sturm implementation and an
+independent standard-library rational implementation reconstruct all inputs
+separately.  External review is invited for the real-pairing factor $1/2$,
+Fourier normalization, charge normalization, matrix eigenvalue enclosure,
+quartic--sextic signs, Bregman factor, units, finite-volume dependence,
+hardcode masking, and the $Q\to0$ and $\mu\to-\infty$ limits.
+\end{enumerate}
+
+The truth-first candidate verdict is therefore two-sided.  The P1 polynomial
+and torus spectrum do contain a mathematically exact finite-shell first-order
+mechanism once a charge ensemble is imposed.  The same calculation also shows
+why it is not yet the sought physical explanation: the ordered state is above
+the neutral reference, its ensemble provenance is absent, and its registered
+local observables are uniform.
+
+\section*{7. Reproduction and result footer}
+
+Run from the repository root:
+\begin{verbatim}
+$py = "E:\Dev\TECT.venv\Scripts\python.exe"
+& $py codes/foundations/a2_charge_ensemble_first_order_shell_transition.py
+& $py codes/foundations/a2_charge_ensemble_first_order_shell_transition_independent.py
+& $py codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py
+\end{verbatim}
+
+The primary certificate uses exact SymPy polynomial and interval algebra and
+must report 35/35 PASS.  The independent certificate uses only Python's
+standard-library rational arithmetic and must report 24/24 PASS.  The
+integrated verifier reruns both into temporary files, compares immutable
+artifacts and exact constants, retains the earlier A2/R-157 regression, and
+audits the note, PDF, claim, task, exploration, changelog, theorem-map, and
+generated-ledger surfaces.
+
+\begingroup
+\footnotesize
+\begin{verbatim}
+Result ID: A2-CHARGE-ENSEMBLE-FIRST-ORDER-SHELL-TRANSITION
+Ledger ID: R-158
+Claim: A2-FULL-PRODUCTION-WELLPOSED.
+Precise statement: for the hash-pinned P1 functional on the side-16 torus,
+  after defining Q=||Psi||_L2^2/2, the exact decomposition (1.3) holds.
+  At Q*=11008/27 a finite-shell plane wave is a constrained global minimizer.
+  For Omega_mu=F_P1-mu Q there is exact first-order coexistence at
+  mu_t=lambda0-1849/86400, before the zero-field spinodal lambda0.
+Scope: Hash-pinned P1/A2 static functional, side-16 torus, H2 fields,
+  fixed Q=||Psi||_L2^2/2 or Omega_mu=F_P1-mu Q, and eta_shell=0.
+Dependencies: A1-PRODUCTION-FUNCTIONAL-REALISATION, the named
+  A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL hypothesis, A2 continuum theorem,
+  and R-157 as the unconstrained boundary.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED, CONDITIONAL.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py
+Expected output: Integrated verifier PASS; primary 35/35; independent 24/24;
+  R-157 and legacy A2 regressions PASS.
+Falsification gate: Any exact internal/shell/decomposition/Bregman/Class-II,
+  child-parity, artifact-hash, record, PDF, R-157, or legacy-A2 gate fails.
+Tier before / after: T6 / T6; no promotion.
+No-overclaim statement: The charge or chemical potential is imposed, not
+  physically derived; F_P1[Psi*]>F_P1[0], registered local observables are
+  uniform, and no physical vacuum, BCC, unique morphology, infinite-volume,
+  A7, quantum, T-050/A13, or Sector-A conclusion follows.
+Next required action: Freeze PA-M1-Q as conditional; derive charge/reservoir
+  provenance and a gauge-invariant observable, and compare PA-M5-NL3-SV in
+  T-054 before survivor-only T-053 work.
+Result footer.
+\end{verbatim}
+\endgroup
+
+\endgroup
