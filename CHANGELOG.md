@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [T-054: repair Q3 ordered fixture and pin CP1a coefficients] - 2026-08-03
+
+Hostile review found that the first independent Q3 ordered-channel generator used lambda instead of the already audited lambda*v^2 edge Hessian. The qualitative first-power no-go was unchanged, but the independent coefficient was not evidence for its stated fixture. The generator now uses lambda*v^2=117/7 and gives 585/119 at chi=17/5; the primary fixture is aligned at 56/65, and the integrated verifier asserts both normalization ledgers. Both CP1a routes now derive normalized coefficients 1 and 21/2 from the upstream manifest alpha=1/256 and beta=21/512. Corrected primary 42/42, independent 34/34 and integrated 63/63 pass, 139 combined. EXP-000725 records the append-only correction; theorem and negative-result scope are unchanged.
+
 ## [T-054: register finite C1 equilibrium strict-cone no-go] - 2026-08-03
 
 Registered PA-CP1-FD-C1-STRICT-CONE-NOGO-v0 and EXP-000724. An open-neighbourhood finite-speed strict-support law at a finite-dimensional autonomous C1 equilibrium differentiates to P_y exp(tA) P_x=0; the identity theorem and Cayley-Hamilton make this equivalent to vanishing of every projected generator power. Exact periodic ST8, Q3LOCK origin and ordered, and CP1a 3^3 collocation fixtures trigger arbitrarily-small-time variational tails, including the indirect CP1a body channel with K_111=0 but (K^2)_111=-38/3. Primary 39/39, non-importing independent 31/31 and integrated 60/60 pass, 130 combined. The result rejects only the current finite continuous-time exact-cone route and retains quasi-locality, controlled hyperbolic continuum/Goursat limits, discrete-time or enlarged causal parents, QFT microcausality, physical-reference work, CP1 and Pre-A.

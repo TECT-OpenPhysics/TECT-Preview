@@ -141,31 +141,49 @@ def first_scalar_channel(
     return None, Fraction(0)
 
 
-def cp1a_value(bits: tuple[int, int, int]) -> Fraction:
+def cp1a_value(
+    bits: tuple[int, int, int],
+    radial_coefficient: Fraction,
+    anisotropy_coefficient: Fraction,
+) -> Fraction:
     radial = sum(bits) - 3
     pairs = ((0, 1), (0, 2), (1, 2))
-    return Fraction(radial * radial) + Fraction(21, 2) * sum(
+    return radial_coefficient * radial * radial + anisotropy_coefficient * sum(
         (bits[left] - bits[right]) ** 2 for left, right in pairs
     )
 
 
-def inverse_character(displacement: tuple[int, int, int]) -> Fraction:
+def inverse_character(
+    displacement: tuple[int, int, int],
+    radial_coefficient: Fraction,
+    anisotropy_coefficient: Fraction,
+) -> Fraction:
     result = Fraction(0)
     for bits in product((0, 1), repeat=3):
         paired_character = 1
         for bit, shift in zip(bits, displacement):
             paired_character *= 1 if bit == 0 else (2 if shift % 3 == 0 else -1)
-        result += cp1a_value(bits) * paired_character
+        result += cp1a_value(
+            bits, radial_coefficient, anisotropy_coefficient
+        ) * paired_character
     return result / 27
 
 
-def inverse_character_square(displacement: tuple[int, int, int]) -> Fraction:
+def inverse_character_square(
+    displacement: tuple[int, int, int],
+    radial_coefficient: Fraction,
+    anisotropy_coefficient: Fraction,
+) -> Fraction:
     total = Fraction(0)
     for site in product(range(3), repeat=3):
         remainder = tuple(
             (displacement[axis] - site[axis]) % 3 for axis in range(3)
         )
-        total += inverse_character(site) * inverse_character(remainder)
+        total += inverse_character(
+            site, radial_coefficient, anisotropy_coefficient
+        ) * inverse_character(
+            remainder, radial_coefficient, anisotropy_coefficient
+        )
     return total
 
 
@@ -231,13 +249,23 @@ def verify() -> dict[str, Any]:
             }
         )
 
-    upstream = {
-        path.name: json.loads(path.read_text(encoding="utf-8"))["candidate_id"]
+    upstream_payloads = {
+        path.name: json.loads(path.read_text(encoding="utf-8"))
         for path in (ST8, Q3LOCK, CP1A)
+    }
+    upstream = {
+        name: payload["candidate_id"] for name, payload in upstream_payloads.items()
     }
     check("ST8 identity", upstream[ST8.name] == "PA-CP1-ST8-CB-v0", upstream[ST8.name], "PA-CP1-ST8-CB-v0", "identity")
     check("Q3LOCK identity", upstream[Q3LOCK.name] == "PA-CP1-ST8-Q3LOCK-v0", upstream[Q3LOCK.name], "PA-CP1-ST8-Q3LOCK-v0", "identity")
     check("CP1a identity", upstream[CP1A.name] == "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0", upstream[CP1A.name], "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0", "identity")
+    cp1a_kernel_definition = upstream_payloads[CP1A.name]["kernel"]
+    cp1a_alpha = Fraction(cp1a_kernel_definition["alpha"])
+    cp1a_beta = Fraction(cp1a_kernel_definition["beta"])
+    cp1a_radial_coefficient = 256 * cp1a_alpha
+    cp1a_anisotropy_coefficient = 256 * cp1a_beta
+    check("CP1a radial coefficient from manifest", cp1a_radial_coefficient == 1, cp1a_radial_coefficient, 1, "identity")
+    check("CP1a anisotropy coefficient from manifest", cp1a_anisotropy_coefficient == Fraction(21, 2), cp1a_anisotropy_coefficient, Fraction(21, 2), "identity")
 
     onsite, coupling, inertia = Fraction(5, 2), Fraction(7, 3), Fraction(11, 4)
     two_stiffness = graph_stiffness(2, ((0, 1),), onsite, coupling)
@@ -270,22 +298,31 @@ def verify() -> dict[str, Any]:
         for axis in range(3)
         if not (vertex & (1 << axis))
     )
-    q3_stiffness = graph_stiffness(8, q3_edges, Fraction(0), Fraction(13, 7))
-    q3_generator = oscillator_generator(q3_stiffness, Fraction(17, 5))
+    q3_lambda = Fraction(13, 7)
+    q3_amplitude = Fraction(3)
+    q3_v_squared = q3_amplitude**2
+    q3_inertia = Fraction(17, 5)
+    q3_effective_coupling = q3_lambda * q3_v_squared
+    q3_stiffness = graph_stiffness(
+        8, q3_edges, Fraction(0), q3_effective_coupling
+    )
+    q3_generator = oscillator_generator(q3_stiffness, q3_inertia)
     q3_channel = first_scalar_channel(q3_generator, 1, 0)
     check("Q3 edge count", len(q3_edges) == 12, len(q3_edges), 12, "q3lock")
-    check("Q3 origin edge Hessian zero", edge_hessian(Fraction(0), Fraction(0), Fraction(13, 7)) == ((Fraction(0), Fraction(0)), (Fraction(0), Fraction(0))), edge_hessian(Fraction(0), Fraction(0), Fraction(13, 7)), "zero", "q3lock")
-    check("Q3 ordered edge Hessian", edge_hessian(Fraction(3), Fraction(3), Fraction(13, 7)) == ((Fraction(117, 7), Fraction(-117, 7)), (Fraction(-117, 7), Fraction(117, 7))), edge_hessian(Fraction(3), Fraction(3), Fraction(13, 7)), ((Fraction(117, 7), Fraction(-117, 7)), (Fraction(-117, 7), Fraction(117, 7))), "q3lock")
+    check("Q3 origin edge Hessian zero", edge_hessian(Fraction(0), Fraction(0), q3_lambda) == ((Fraction(0), Fraction(0)), (Fraction(0), Fraction(0))), edge_hessian(Fraction(0), Fraction(0), q3_lambda), "zero", "q3lock")
+    check("Q3 ordered edge Hessian", edge_hessian(q3_amplitude, q3_amplitude, q3_lambda) == ((q3_effective_coupling, -q3_effective_coupling), (-q3_effective_coupling, q3_effective_coupling)), edge_hessian(q3_amplitude, q3_amplitude, q3_lambda), ((q3_effective_coupling, -q3_effective_coupling), (-q3_effective_coupling, q3_effective_coupling)), "q3lock")
     check("ordered Q3 q first power", q3_channel[0] == 2, q3_channel[0], 2, "q3lock")
-    check("ordered Q3 q numerator", q3_channel[1] == Fraction(13, 7) / Fraction(17, 5), q3_channel[1], Fraction(65, 119), "q3lock")
+    check("ordered Q3 q numerator", q3_channel[1] == q3_effective_coupling / q3_inertia, q3_channel[1], Fraction(585, 119), "q3lock")
+    ordered_edge = edge_hessian(q3_amplitude, q3_amplitude, q3_lambda)
+    check("ordered Q3 generator matches edge Hessian", -ordered_edge[1][0] / q3_inertia == q3_channel[1], -ordered_edge[1][0] / q3_inertia, q3_channel[1], "q3lock")
     q3_walsh_spectrum = sorted(2 * alpha.bit_count() for alpha in range(8))
     check("Q3 Walsh spectrum", q3_walsh_spectrum == [0, 2, 2, 2, 4, 4, 4, 6], q3_walsh_spectrum, [0, 2, 2, 2, 4, 4, 4, 6], "q3lock")
 
     cp1a_values = {
-        "diagonal": inverse_character((0, 0, 0)),
-        "axis": inverse_character((1, 0, 0)),
-        "face": inverse_character((1, 1, 0)),
-        "corner": inverse_character((1, 1, 1)),
+        "diagonal": inverse_character((0, 0, 0), cp1a_radial_coefficient, cp1a_anisotropy_coefficient),
+        "axis": inverse_character((1, 0, 0), cp1a_radial_coefficient, cp1a_anisotropy_coefficient),
+        "face": inverse_character((1, 1, 0), cp1a_radial_coefficient, cp1a_anisotropy_coefficient),
+        "corner": inverse_character((1, 1, 1), cp1a_radial_coefficient, cp1a_anisotropy_coefficient),
     }
     check("CP1a diagonal kernel", cp1a_values["diagonal"] == Fraction(47, 3), cp1a_values["diagonal"], Fraction(47, 3), "cp1a")
     check("CP1a axis kernel", cp1a_values["axis"] == Fraction(28, 9), cp1a_values["axis"], Fraction(28, 9), "cp1a")
@@ -293,7 +330,9 @@ def verify() -> dict[str, Any]:
     check("CP1a corner kernel", cp1a_values["corner"] == 0, cp1a_values["corner"], 0, "cp1a")
     check("CP1a axis leading response", -cp1a_values["axis"] / 2 == Fraction(-14, 9), -cp1a_values["axis"] / 2, Fraction(-14, 9), "cp1a")
     check("CP1a face leading response", -cp1a_values["face"] / 2 == Fraction(19, 18), -cp1a_values["face"] / 2, Fraction(19, 18), "cp1a")
-    cp1a_corner_square = inverse_character_square((1, 1, 1))
+    cp1a_corner_square = inverse_character_square(
+        (1, 1, 1), cp1a_radial_coefficient, cp1a_anisotropy_coefficient
+    )
     check("CP1a corner kernel-square", cp1a_corner_square == Fraction(-38, 3), cp1a_corner_square, Fraction(-38, 3), "cp1a")
     check("CP1a corner fourth-order response", cp1a_corner_square / 24 == Fraction(-19, 36), cp1a_corner_square / 24, Fraction(-19, 36), "cp1a")
 
@@ -349,9 +388,24 @@ def verify() -> dict[str, Any]:
             "four_cycle_opposite_q_first_power": opposite_q[0],
             "four_cycle_two_path_leading_response": str(opposite_q[1] / 24),
             "Q3_ordered_edge_first_power": q3_channel[0],
+            "Q3_ordered_edge_Taylor_numerator": str(q3_channel[1]),
+            "Q3_ordered_fixture": {
+                "lambda": str(q3_lambda),
+                "v_squared": str(q3_v_squared),
+                "chi": str(q3_inertia),
+                "lambda_v_squared_over_chi": str(
+                    q3_effective_coupling / q3_inertia
+                ),
+            },
             "CP1a_collocation_kernel": cp1a_values,
             "CP1a_corner_kernel_square": str(cp1a_corner_square),
             "CP1a_corner_fourth_order_response": str(cp1a_corner_square / 24),
+            "CP1a_upstream_coefficients": {
+                "alpha": str(cp1a_alpha),
+                "beta": str(cp1a_beta),
+                "radial": str(cp1a_radial_coefficient),
+                "anisotropy": str(cp1a_anisotropy_coefficient),
+            },
             "bounded_quantum_nested_commutator_nonzero": True,
             "discrete_shift_exact_support": supports,
         },

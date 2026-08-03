@@ -1,6 +1,6 @@
 {
   "assertions": {
-    "passed": 31,
+    "passed": 34,
     "rows": [
       {
         "actual": "PA-CP1-ST8-CB-v0",
@@ -19,6 +19,18 @@
         "expected": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
         "group": "identity",
         "name": "CP1a identity"
+      },
+      {
+        "actual": "1",
+        "expected": 1,
+        "group": "identity",
+        "name": "CP1a radial coefficient from manifest"
+      },
+      {
+        "actual": "21/2",
+        "expected": "21/2",
+        "group": "identity",
+        "name": "CP1a anisotropy coefficient from manifest"
       },
       {
         "actual": 2,
@@ -132,10 +144,16 @@
         "name": "ordered Q3 q first power"
       },
       {
-        "actual": "65/119",
-        "expected": "65/119",
+        "actual": "585/119",
+        "expected": "585/119",
         "group": "q3lock",
         "name": "ordered Q3 q numerator"
+      },
+      {
+        "actual": "585/119",
+        "expected": "585/119",
+        "group": "q3lock",
+        "name": "ordered Q3 generator matches edge Hessian"
       },
       {
         "actual": [
@@ -418,7 +436,7 @@
         "name": "all theorem hypotheses declared"
       }
     ],
-    "total": 31
+    "total": 34
   },
   "authority": "non-importing exact finite C1 equilibrium cone audit; not CP1 or Pre-A closure",
   "candidate_id": "PA-CP1-FD-C1-STRICT-CONE-NOGO-v0",
@@ -436,7 +454,20 @@
     },
     "CP1a_corner_fourth_order_response": "-19/36",
     "CP1a_corner_kernel_square": "-38/3",
+    "CP1a_upstream_coefficients": {
+      "alpha": "1/256",
+      "anisotropy": "21/2",
+      "beta": "21/512",
+      "radial": "1"
+    },
+    "Q3_ordered_edge_Taylor_numerator": "585/119",
     "Q3_ordered_edge_first_power": 2,
+    "Q3_ordered_fixture": {
+      "chi": "17/5",
+      "lambda": "13/7",
+      "lambda_v_squared_over_chi": "585/119",
+      "v_squared": "9"
+    },
     "bounded_quantum_nested_commutator_nonzero": true,
     "discrete_shift_exact_support": [
       [
@@ -474,7 +505,7 @@
   "sources": [
     {
       "path": "codes/foundations/pre_a_cp1_fdan_strict_cone_nogo_independent.py",
-      "sha256": "f449350b3997b9c27b9dd67f0140663d951e66db9cdd978d5a51b7eb336c8f3e"
+      "sha256": "b9e90b28c89db4596f53ce21c722f68dc5945804be9432317d86aca2687818a5"
     },
     {
       "path": "strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json",

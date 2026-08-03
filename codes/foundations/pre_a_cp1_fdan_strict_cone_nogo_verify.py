@@ -51,8 +51,8 @@ STORED_INTEGRATED = DEFAULT_OUTPUT
 
 # Explicit test oracles: changing an assertion surface requires conscious
 # integrated-review updates rather than silently shrinking the package.
-EXPECTED_PRIMARY_ASSERTIONS = 39
-EXPECTED_INDEPENDENT_ASSERTIONS = 31
+EXPECTED_PRIMARY_ASSERTIONS = 42
+EXPECTED_INDEPENDENT_ASSERTIONS = 34
 
 
 def serial(value: Any) -> Any:
@@ -183,6 +183,43 @@ def verify() -> dict[str, Any]:
     )
     for name, first, second, expected in exact_pairs:
         check(f"primary independent agreement: {name}", first == second == expected, (first, second), expected, "cross_route")
+    check(
+        "primary Q3 lambda-v-square factor retained",
+        primary_exact["Q3_ordered_species_Taylor_numerator"] == "56/65"
+        and primary_exact["Q3_ordered_fixture"]["lambda_v_squared_over_chi"]
+        == "56/65",
+        primary_exact["Q3_ordered_fixture"],
+        "lambda*v_squared/chi=56/65",
+        "cross_route",
+    )
+    check(
+        "independent Q3 lambda-v-square factor retained",
+        independent_exact["Q3_ordered_edge_Taylor_numerator"] == "585/119"
+        and independent_exact["Q3_ordered_fixture"][
+            "lambda_v_squared_over_chi"
+        ]
+        == "585/119",
+        independent_exact["Q3_ordered_fixture"],
+        "lambda*v_squared/chi=585/119",
+        "cross_route",
+    )
+    check(
+        "CP1a coefficients are pinned to the upstream manifest in both routes",
+        primary_exact["CP1a_upstream_coefficients"]
+        == independent_exact["CP1a_upstream_coefficients"]
+        == {
+            "alpha": "1/256",
+            "beta": "21/512",
+            "radial": "1",
+            "anisotropy": "21/2",
+        },
+        (
+            primary_exact["CP1a_upstream_coefficients"],
+            independent_exact["CP1a_upstream_coefficients"],
+        ),
+        "manifest-derived 1 and 21/2",
+        "cross_route",
+    )
 
     modules = imported_modules(INDEPENDENT)
     check("independent does not import primary", not any(module.endswith("pre_a_cp1_fdan_strict_cone_nogo") for module in modules), sorted(modules), "no primary import", "independence")

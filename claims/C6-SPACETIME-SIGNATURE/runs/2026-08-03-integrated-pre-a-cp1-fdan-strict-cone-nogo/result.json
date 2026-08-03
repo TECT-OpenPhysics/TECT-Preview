@@ -1,6 +1,6 @@
 {
   "assertions": {
-    "passed": 60,
+    "passed": 63,
     "rows": [
       {
         "actual": true,
@@ -87,20 +87,20 @@
         "name": "negative id"
       },
       {
-        "actual": 39,
-        "expected": 39,
+        "actual": 42,
+        "expected": 42,
         "group": "children",
         "name": "primary assertion oracle"
       },
       {
-        "actual": 31,
-        "expected": 31,
+        "actual": 34,
+        "expected": 34,
         "group": "children",
         "name": "independent assertion oracle"
       },
       {
         "actual": {
-          "passed": 39,
+          "passed": 42,
           "rows": [
             {
               "actual": "PA-CP1-ST8-CB-v0",
@@ -119,6 +119,18 @@
               "expected": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
               "group": "identity",
               "name": "CP1a upstream"
+            },
+            {
+              "actual": "1",
+              "expected": 1,
+              "group": "identity",
+              "name": "CP1a radial coefficient derived from manifest"
+            },
+            {
+              "actual": "21/2",
+              "expected": "21/2",
+              "group": "identity",
+              "name": "CP1a anisotropy coefficient derived from manifest"
             },
             {
               "actual": 6,
@@ -355,16 +367,22 @@
             {
               "actual": [
                 [
-                  "154/195"
+                  "56/65"
                 ]
               ],
               "expected": [
                 [
-                  "154/195"
+                  "56/65"
                 ]
               ],
               "group": "q3lock_application",
               "name": "ordered Q3 species edge Taylor numerator"
+            },
+            {
+              "actual": "56/65",
+              "expected": "56/65",
+              "group": "q3lock_application",
+              "name": "ordered Q3 propagation uses its audited edge Hessian"
             },
             {
               "actual": "28/9",
@@ -606,7 +624,7 @@
               "name": "theorem hypotheses are explicit"
             }
           ],
-          "total": 39
+          "total": 42
         },
         "expected": "all pass",
         "group": "children",
@@ -614,7 +632,7 @@
       },
       {
         "actual": {
-          "passed": 31,
+          "passed": 34,
           "rows": [
             {
               "actual": "PA-CP1-ST8-CB-v0",
@@ -633,6 +651,18 @@
               "expected": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
               "group": "identity",
               "name": "CP1a identity"
+            },
+            {
+              "actual": "1",
+              "expected": 1,
+              "group": "identity",
+              "name": "CP1a radial coefficient from manifest"
+            },
+            {
+              "actual": "21/2",
+              "expected": "21/2",
+              "group": "identity",
+              "name": "CP1a anisotropy coefficient from manifest"
             },
             {
               "actual": 2,
@@ -746,10 +776,16 @@
               "name": "ordered Q3 q first power"
             },
             {
-              "actual": "65/119",
-              "expected": "65/119",
+              "actual": "585/119",
+              "expected": "585/119",
               "group": "q3lock",
               "name": "ordered Q3 q numerator"
+            },
+            {
+              "actual": "585/119",
+              "expected": "585/119",
+              "group": "q3lock",
+              "name": "ordered Q3 generator matches edge Hessian"
             },
             {
               "actual": [
@@ -1032,7 +1068,7 @@
               "name": "all theorem hypotheses declared"
             }
           ],
-          "total": 31
+          "total": 34
         },
         "expected": "all pass",
         "group": "children",
@@ -1082,6 +1118,47 @@
         "expected": 2,
         "group": "cross_route",
         "name": "primary independent agreement: Q3 ordered first power"
+      },
+      {
+        "actual": {
+          "chi": "13/2",
+          "lambda": "7/5",
+          "lambda_v_squared_over_chi": "56/65",
+          "v_squared": "4"
+        },
+        "expected": "lambda*v_squared/chi=56/65",
+        "group": "cross_route",
+        "name": "primary Q3 lambda-v-square factor retained"
+      },
+      {
+        "actual": {
+          "chi": "17/5",
+          "lambda": "13/7",
+          "lambda_v_squared_over_chi": "585/119",
+          "v_squared": "9"
+        },
+        "expected": "lambda*v_squared/chi=585/119",
+        "group": "cross_route",
+        "name": "independent Q3 lambda-v-square factor retained"
+      },
+      {
+        "actual": [
+          {
+            "alpha": "1/256",
+            "anisotropy": "21/2",
+            "beta": "21/512",
+            "radial": "1"
+          },
+          {
+            "alpha": "1/256",
+            "anisotropy": "21/2",
+            "beta": "21/512",
+            "radial": "1"
+          }
+        ],
+        "expected": "manifest-derived 1 and 21/2",
+        "group": "cross_route",
+        "name": "CP1a coefficients are pinned to the upstream manifest in both routes"
       },
       {
         "actual": [
@@ -1316,28 +1393,28 @@
         "name": "no holdout prediction"
       },
       {
-        "actual": 39,
-        "expected": 39,
+        "actual": 42,
+        "expected": 42,
         "group": "stored",
         "name": "stored primary fresh"
       },
       {
-        "actual": 31,
-        "expected": 31,
+        "actual": 34,
+        "expected": 34,
         "group": "stored",
         "name": "stored independent fresh"
       }
     ],
-    "total": 60
+    "total": 63
   },
   "authority": "integrated finite C1 equilibrium strict-cone audit; not CP1 or Pre-A closure",
   "candidate_family": "PRE-A-FINITE-CONTINUOUS-TIME-CAUSALITY-AUDIT",
   "candidate_id": "PA-CP1-FD-C1-STRICT-CONE-NOGO-v0",
   "child_assertions": {
-    "combined": 130,
-    "independent": 31,
-    "integrated": 60,
-    "primary": 39
+    "combined": 139,
+    "independent": 34,
+    "integrated": 63,
+    "primary": 42
   },
   "claim_bearing": false,
   "claim_context": [
@@ -1366,15 +1443,15 @@
   "sources": [
     {
       "path": "codes/foundations/pre_a_cp1_fdan_strict_cone_nogo_verify.py",
-      "sha256": "7cc99bfe1b0ff99a351410893ed4486a9c1fdd4160a9a4094fea33ac1623b8c3"
+      "sha256": "b7fbf13c4cc874fae3a872ffe2167da1bba25a99a7c90487610bbeaf4819bff4"
     },
     {
       "path": "codes/foundations/pre_a_cp1_fdan_strict_cone_nogo.py",
-      "sha256": "91f3441344df7faba050ea23fd778739f3d0fa537b49728ae7776f866c185132"
+      "sha256": "7feda6c8b910ce645fbcf5ee469d310a983a0f84ad1031c060eb97ccc23b00f7"
     },
     {
       "path": "codes/foundations/pre_a_cp1_fdan_strict_cone_nogo_independent.py",
-      "sha256": "f449350b3997b9c27b9dd67f0140663d951e66db9cdd978d5a51b7eb336c8f3e"
+      "sha256": "b9e90b28c89db4596f53ce21c722f68dc5945804be9432317d86aca2687818a5"
     },
     {
       "path": "strategy/pre-a-cp1-fdan-strict-cone-nogo-manifest.json",
@@ -1382,7 +1459,7 @@
     },
     {
       "path": "strategy/pre-a-cp1-fdan-strict-cone-nogo-certificate-260803.md",
-      "sha256": "555c523c92fa53160ae3a8d574529a1fee4d58952658ccab52adc4fc8719b05a"
+      "sha256": "d0291353cfc2a7501988c2f3133dfc0e6f2a7d537b4843e5fa47bd1c9836e69b"
     },
     {
       "path": "strategy/INDEX.md",
@@ -1390,7 +1467,7 @@
     },
     {
       "path": "negative-results/registry.md",
-      "sha256": "6a0bffe1ec0d4a97c1f40d326a5cee12b0f339cfbc90fe1568eefdab2077e61d"
+      "sha256": "b43668b7a3710aaa50124ac4953dca9a671f07c19a06bc9b64e2487836ac39c9"
     }
   ],
   "task_id": "T-054",

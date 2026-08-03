@@ -410,7 +410,7 @@ E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/pre_a_cp1_fdan_strict_cone
 E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/pre_a_cp1_fdan_strict_cone_nogo_verify.py
 ```
 
-The primary route has 39 exact assertions and the non-importing route has 31
+The primary route has 42 exact assertions and the non-importing route has 34
 before integrated package checks.  Every numerical coefficient is recomputed
 from the upstream symbols or graph matrices and stored under the C6 run tree.
 

@@ -287,9 +287,10 @@ displacement channel.  On the declared CP1a `3^3` collocation blocks,
 `K_100=28/9`, `K_110=-19/9`, `K_111=0`, and `(K^2)_111=-38/3`,
 
 giving configuration responses `-14t^2/9`, `+19t^2/18`, and `-19t^4/36` at
-unit inertia.  Primary 39/39 and non-importing independent 31/31 exact checks
+unit inertia.  Primary 42/42 and non-importing independent 34/34 exact checks
 recompute the coefficients, Q3 Hessian, disconnected control, indirect-power
 control, bounded two-qubit control, and exact-causal discrete-time shift.
+The corrected integrated verifier has 63/63 checks and 139 combined.
 
 **Consequence.**  The current finite continuous-time candidates cannot supply
 an exact regulator-level characteristic cone.  The earlier ST8 negative result

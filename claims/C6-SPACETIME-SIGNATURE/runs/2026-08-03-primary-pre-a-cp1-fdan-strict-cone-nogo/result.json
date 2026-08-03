@@ -7,7 +7,7 @@
     "finite_dimensional_bounded_quantum_system": "exact open-time microcausality is incompatible with a nonzero nested commutator"
   },
   "assertions": {
-    "passed": 39,
+    "passed": 42,
     "rows": [
       {
         "actual": "PA-CP1-ST8-CB-v0",
@@ -26,6 +26,18 @@
         "expected": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
         "group": "identity",
         "name": "CP1a upstream"
+      },
+      {
+        "actual": "1",
+        "expected": 1,
+        "group": "identity",
+        "name": "CP1a radial coefficient derived from manifest"
+      },
+      {
+        "actual": "21/2",
+        "expected": "21/2",
+        "group": "identity",
+        "name": "CP1a anisotropy coefficient derived from manifest"
       },
       {
         "actual": 6,
@@ -262,16 +274,22 @@
       {
         "actual": [
           [
-            "154/195"
+            "56/65"
           ]
         ],
         "expected": [
           [
-            "154/195"
+            "56/65"
           ]
         ],
         "group": "q3lock_application",
         "name": "ordered Q3 species edge Taylor numerator"
+      },
+      {
+        "actual": "56/65",
+        "expected": "56/65",
+        "group": "q3lock_application",
+        "name": "ordered Q3 propagation uses its audited edge Hessian"
       },
       {
         "actual": "28/9",
@@ -513,7 +531,7 @@
         "name": "theorem hypotheses are explicit"
       }
     ],
-    "total": 39
+    "total": 42
   },
   "authority": "candidate-scope finite-dimensional autonomous C1 equilibrium strict-cone no-go; not CP1 or Pre-A closure",
   "candidate_id": "PA-CP1-FD-C1-STRICT-CONE-NOGO-v0",
@@ -529,7 +547,19 @@
     "CP1a_corner_kernel_square": "-38/3",
     "CP1a_face_collocation_kernel": "-19/9",
     "CP1a_face_displacement_leading_response": "19/18",
-    "Q3_ordered_species_Taylor_numerator": "154/195",
+    "CP1a_upstream_coefficients": {
+      "alpha": "1/256",
+      "anisotropy": "21/2",
+      "beta": "21/512",
+      "radial": "1"
+    },
+    "Q3_ordered_fixture": {
+      "chi": "13/2",
+      "lambda": "7/5",
+      "lambda_v_squared_over_chi": "56/65",
+      "v_squared": "4"
+    },
+    "Q3_ordered_species_Taylor_numerator": "56/65",
     "Q3_ordered_species_first_power": 2,
     "bounded_quantum_nested_commutator_nonzero": true,
     "classical_fixture_dimension": 6,
@@ -558,7 +588,7 @@
   "sources": [
     {
       "path": "codes/foundations/pre_a_cp1_fdan_strict_cone_nogo.py",
-      "sha256": "91f3441344df7faba050ea23fd778739f3d0fa537b49728ae7776f866c185132"
+      "sha256": "7feda6c8b910ce645fbcf5ee469d310a983a0f84ad1031c060eb97ccc23b00f7"
     },
     {
       "path": "strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json",

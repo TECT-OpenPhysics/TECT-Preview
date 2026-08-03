@@ -213,17 +213,25 @@ def q3_edge_hessian(
     ]
 
 
-def cp1a_symbol(square_bits: tuple[int, int, int]) -> Fraction:
+def cp1a_symbol(
+    square_bits: tuple[int, int, int],
+    radial_coefficient: Fraction,
+    anisotropy_coefficient: Fraction,
+) -> Fraction:
     """Exact CP1a multiplier on modes n_i in {-1,0,1}, via n_i^2."""
     radial = sum(square_bits) - 3
     anisotropy = sum(
         (square_bits[left] - square_bits[right]) ** 2
         for left, right in ((0, 1), (0, 2), (1, 2))
     )
-    return Fraction(radial**2) + Fraction(21, 2) * anisotropy
+    return radial_coefficient * radial**2 + anisotropy_coefficient * anisotropy
 
 
-def cp1a_collocation_kernel(displacement: tuple[int, int, int]) -> Fraction:
+def cp1a_collocation_kernel(
+    displacement: tuple[int, int, int],
+    radial_coefficient: Fraction,
+    anisotropy_coefficient: Fraction,
+) -> Fraction:
     """Exact 3^3 inverse DFT, using the paired +/-1 character sums."""
     total = Fraction(0)
     for bit0 in (0, 1):
@@ -234,12 +242,16 @@ def cp1a_collocation_kernel(displacement: tuple[int, int, int]) -> Fraction:
                 for axis, bit in enumerate(square_bits):
                     if bit:
                         character *= 2 if displacement[axis] % 3 == 0 else -1
-                total += cp1a_symbol(square_bits) * character
+                total += cp1a_symbol(
+                    square_bits, radial_coefficient, anisotropy_coefficient
+                ) * character
     return total / 27
 
 
 def cp1a_collocation_kernel_square(
-    displacement: tuple[int, int, int]
+    displacement: tuple[int, int, int],
+    radial_coefficient: Fraction,
+    anisotropy_coefficient: Fraction,
 ) -> Fraction:
     total = Fraction(0)
     for site0 in range(3):
@@ -249,8 +261,10 @@ def cp1a_collocation_kernel_square(
                 remainder = tuple(
                     (displacement[axis] - site[axis]) % 3 for axis in range(3)
                 )
-                total += cp1a_collocation_kernel(site) * cp1a_collocation_kernel(
-                    remainder
+                total += cp1a_collocation_kernel(
+                    site, radial_coefficient, anisotropy_coefficient
+                ) * cp1a_collocation_kernel(
+                    remainder, radial_coefficient, anisotropy_coefficient
                 )
     return total
 
@@ -308,13 +322,23 @@ def verify() -> dict[str, Any]:
             }
         )
 
-    upstream = {
-        path.name: json.loads(path.read_text(encoding="utf-8"))["candidate_id"]
+    upstream_payloads = {
+        path.name: json.loads(path.read_text(encoding="utf-8"))
         for path in (ST8, Q3LOCK, CP1A)
+    }
+    upstream = {
+        name: payload["candidate_id"] for name, payload in upstream_payloads.items()
     }
     check("ST8 upstream", upstream[ST8.name] == "PA-CP1-ST8-CB-v0", upstream[ST8.name], "PA-CP1-ST8-CB-v0", "identity")
     check("Q3LOCK upstream", upstream[Q3LOCK.name] == "PA-CP1-ST8-Q3LOCK-v0", upstream[Q3LOCK.name], "PA-CP1-ST8-Q3LOCK-v0", "identity")
     check("CP1a upstream", upstream[CP1A.name] == "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0", upstream[CP1A.name], "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0", "identity")
+    cp1a_kernel_definition = upstream_payloads[CP1A.name]["kernel"]
+    cp1a_alpha = Fraction(cp1a_kernel_definition["alpha"])
+    cp1a_beta = Fraction(cp1a_kernel_definition["beta"])
+    cp1a_radial_coefficient = 256 * cp1a_alpha
+    cp1a_anisotropy_coefficient = 256 * cp1a_beta
+    check("CP1a radial coefficient derived from manifest", cp1a_radial_coefficient == 1, cp1a_radial_coefficient, 1, "identity")
+    check("CP1a anisotropy coefficient derived from manifest", cp1a_anisotropy_coefficient == Fraction(21, 2), cp1a_anisotropy_coefficient, Fraction(21, 2), "identity")
 
     sites = 3
     mass, coupling, inertia = Fraction(2), Fraction(3), Fraction(5)
@@ -421,7 +445,7 @@ def verify() -> dict[str, Any]:
     )
     lock_coupling, ordered_square, species_inertia = (
         Fraction(7, 5),
-        Fraction(11, 3),
+        Fraction(4),
         Fraction(13, 2),
     )
     ordered_species_stiffness = [
@@ -467,15 +491,33 @@ def verify() -> dict[str, Any]:
         [[expected_ordered_block]],
         "q3lock_application",
     )
+    check(
+        "ordered Q3 propagation uses its audited edge Hessian",
+        -ordered_edge_hessian[1][0] / species_inertia
+        == expected_ordered_block,
+        -ordered_edge_hessian[1][0] / species_inertia,
+        expected_ordered_block,
+        "q3lock_application",
+    )
 
     # CP1a's fitted 3^3 Fourier-collocation regulator has exact nonzero
     # real-space cross entries.  This is a collocation-block result, not a
     # compact-support continuum statement.
-    cp1a_axis_kernel = cp1a_collocation_kernel((1, 0, 0))
-    cp1a_face_kernel = cp1a_collocation_kernel((1, 1, 0))
-    cp1a_corner_kernel = cp1a_collocation_kernel((1, 1, 1))
-    cp1a_diagonal_kernel = cp1a_collocation_kernel((0, 0, 0))
-    cp1a_corner_kernel_square = cp1a_collocation_kernel_square((1, 1, 1))
+    cp1a_axis_kernel = cp1a_collocation_kernel(
+        (1, 0, 0), cp1a_radial_coefficient, cp1a_anisotropy_coefficient
+    )
+    cp1a_face_kernel = cp1a_collocation_kernel(
+        (1, 1, 0), cp1a_radial_coefficient, cp1a_anisotropy_coefficient
+    )
+    cp1a_corner_kernel = cp1a_collocation_kernel(
+        (1, 1, 1), cp1a_radial_coefficient, cp1a_anisotropy_coefficient
+    )
+    cp1a_diagonal_kernel = cp1a_collocation_kernel(
+        (0, 0, 0), cp1a_radial_coefficient, cp1a_anisotropy_coefficient
+    )
+    cp1a_corner_kernel_square = cp1a_collocation_kernel_square(
+        (1, 1, 1), cp1a_radial_coefficient, cp1a_anisotropy_coefficient
+    )
     check(
         "CP1a axis collocation kernel",
         cp1a_axis_kernel == Fraction(28, 9),
@@ -596,12 +638,24 @@ def verify() -> dict[str, Any]:
             "discrete_time_shift_exact_support": True,
             "Q3_ordered_species_first_power": ordered_neighbor_power,
             "Q3_ordered_species_Taylor_numerator": str(expected_ordered_block),
+            "Q3_ordered_fixture": {
+                "lambda": str(lock_coupling),
+                "v_squared": str(ordered_square),
+                "chi": str(species_inertia),
+                "lambda_v_squared_over_chi": str(expected_ordered_block),
+            },
             "CP1a_axis_collocation_kernel": str(cp1a_axis_kernel),
             "CP1a_face_collocation_kernel": str(cp1a_face_kernel),
             "CP1a_axis_displacement_leading_response": str(-cp1a_axis_kernel / 2),
             "CP1a_face_displacement_leading_response": str(-cp1a_face_kernel / 2),
             "CP1a_corner_kernel_square": str(cp1a_corner_kernel_square),
             "CP1a_corner_displacement_leading_response": str(cp1a_corner_kernel_square / 24),
+            "CP1a_upstream_coefficients": {
+                "alpha": str(cp1a_alpha),
+                "beta": str(cp1a_beta),
+                "radial": str(cp1a_radial_coefficient),
+                "anisotropy": str(cp1a_anisotropy_coefficient),
+            },
         },
         "application_boundary": {
             "LT3_ST8_Q3LOCK_spatial_linearization": "strict finite-regulator cone excluded by the inherited nonzero nearest-neighbor Hessian block",
