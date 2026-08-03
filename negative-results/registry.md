@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE](#ng-2026-08-03-pre-a-cp1-cl8-invariance-only-preferred-state) | uniquely select a preferred classical CL8 boundary probability using only normalization, Hamiltonian invariance, the declared exact symmetries, compact support on smooth direct-seam phases, and exact continuum-regulator compatibility | for `r<0`, the zero-equilibrium Dirac law and the Z2-symmetric mixture of the two collective ordered-equilibrium Dirac laws are distinct yet satisfy every listed condition and compose with exactly zero regulator error.  Finite-regulator Gibbs and normalized `F(H_a)` families add further nonuniqueness.  Require an independently proved energy, temperature, KMS, reservoir, preparation-history, symmetry-breaking, or other physical selection criterion; this no-go does not reject such criteria or any quantum/continuum state construction |
 | [NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION](#ng-2026-08-03-pre-a-cp1-cl8-unmatched-periodic-composition) | compose every admitted CL8 Goursat datum unchanged with the current same-domain periodic centered lattice | the exact admitted fixture `A=0`, `B(v)=v e_1`, `tau=1/10` has endpoint jump `1/5`; identifying the endpoints creates wrap-edge gradient energy asymptotic to `c/(400a)`.  The unrestricted composition is false.  Retain the matched periodic phase-jet class, an explicitly justified extension, an open-boundary lattice, or another independently verified interface |
 | [NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE](#ng-2026-08-03-pre-a-cp1-finite-c1-equilibrium-strict-cone) | infer an exact finite-speed zero-response waiting interval from any current finite-dimensional autonomous continuous-time CP1 candidate on its declared positive-distance localization blocks | an open-neighbourhood strict cone differentiates to `P_y exp(tA) P_x=0`; matrix-exponential analyticity and Cayley-Hamilton make this equivalent to vanishing of every cross power `P_y A^n P_x`. Exact ST8/Q3LOCK spatial edges, the ordered Q3 species Hessian, and CP1a collocation coefficients `28/9`, `-19/9`, and indirect `-38/3` all violate the criterion. Retain quasi-local bounds, a controlled hyperbolic continuum limit, or an exact-causal discrete-time/enlarged parent; this does not reject QFT microcausality, physical empty space, CP1, or Pre-A |
 | [NG-2026-08-03-PRE-A-CP1-Q3LOCK-QUADRATIC-CONNECTIVITY-CI8](#ng-2026-08-03-pre-a-cp1-q3lock-quadratic-connectivity-ci8) | preserve all eight constant-species critical zero modes while connecting the ST8 species by a positive quadratic Dirichlet form on a connected graph | at `r=0` and spatial momentum zero, the added Hessian is `eta*L_G`; a connected positive graph Laplacian has one-dimensional kernel. For `Q3` the spectrum is `0,2eta^(3),4eta^(3),6eta`, so critical nullity falls from eight to one. Retain nonlinear quartic locking as the minimal-degree analytic repair, or change the zero-mode origin, sign structure, constraints, or quotient |
@@ -257,6 +258,55 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-pre-a-cp1-cl8-invariance-only-preferred-state"></a>
+### NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE -- invariance and exact symmetries do not select one classical boundary measure
+
+**Failure mode.**  Uniquely select a preferred classical CL8 boundary
+probability using only normalization, Hamiltonian invariance, spatial
+translation and Q3 symmetry, global Z2, momentum and time reversal, compact
+support on smooth direct-seam phases, and exact compatibility with every centered
+regulator.
+
+**Evidence.**  For `r<0`, let `v=sqrt(-r/g)`.  The constant phases with all
+species and momenta equal to `(0,0)`, `(+v,0)`, or `(-v,0)` are exact fixed
+points of both the continuum and every semidiscrete CL8 flow.  Their
+characteristic traces are constant and satisfy every periodic value and
+derivative seam.  Hence
+
+`mu_zero=delta_(0,0)` and
+`mu_ordered=(delta_(+v,0)+delta_(-v,0))/2`
+
+are both compactly supported on smooth phases, invariant, translation-, Q3-, Z2-,
+momentum-reversal-, and time-reversal-symmetric probabilities.  Sampling and
+reconstruction are exact on their supports, so their regulator composition
+error is zero.  They are distinct: their supports, second moments, and raw
+same-Hamiltonian energies `0` and `-L*r^2/(4g)` differ.  In addition, every
+finite regulator has distinct invariant canonical Gibbs laws for all
+`beta>0`, with exact momentum variance `8chi/(beta*a)`, and more generally
+normalized invariant `F(H_a)` laws.
+
+**Boundary.**  This excludes only unique classical preference from the listed
+invariance, symmetry, regularity, seam, and regulator-compatibility data.  It
+does not reject selection after a separately proved mean energy, temperature,
+KMS condition, reservoir, entropy principle, preparation history,
+symmetry-breaking boundary condition, or ground-support rule.  It proves no
+quantum-state, continuum-state, or Hadamard no-go.  The zero configuration is
+not identified with physical empty space or a no-condensate quantum state.
+
+**Consequence.**  Close finite-regulator classical Gibbs existence and retain
+the two common equilibrium measures as exact controls, but keep
+`PA-CP1-CL8-PREFERRED-STATE-COMPOSITION-SELECTION` open.  Next construct the
+finite-regulator quantum state with an explicit CCR and `hbar`, then separately
+prove a quantum boundary-algebra map and a continuum/Hadamard limit.  A
+physical energy/reference selection principle remains indispensable.
+
+**Evidence files.**
+`strategy/pre-a-cp1-cl8-invariance-selection-fork-certificate-260803.md`;
+`strategy/pre-a-cp1-cl8-invariance-selection-fork-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_invariance_selection_fork.py`;
+`codes/foundations/pre_a_cp1_cl8_invariance_selection_fork_independent.py`;
+`codes/foundations/pre_a_cp1_cl8_invariance_selection_fork_verify.py`.
 
 <a id="ng-2026-08-03-pre-a-cp1-cl8-unmatched-periodic-composition"></a>
 ### NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION -- admitted Goursat traces need not define periodic phase data

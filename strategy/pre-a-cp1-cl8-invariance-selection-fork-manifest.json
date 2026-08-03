@@ -1,0 +1,154 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-invariance-selection-fork-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-INVARIANCE-SELECTION-FORK-v0",
+  "parent_ids": [
+    "PA-CP1-ST8-Q3LOCK-v0",
+    "PA-CP1-CL8-GLOBAL-GOURSAT-CONTINUATION-v0",
+    "PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-OA2-v0"
+  ],
+  "result_id": "PA-CP1-CL8-FINITE-GIBBS-AND-COMMON-EQUILIBRIUM-MEASURE-FORK",
+  "candidate_family": "PRE-A-CL8-CLASSICAL-STATE-SELECTION",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 exact finite-regulator classical measure and selection-obstruction certificate; not a TECT claim, tier change, physical-vacuum theorem, quantum-state theorem, CP1 completion, or Pre-A closure",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "comparison_context": [
+    "A2-FULL-PRODUCTION-WELLPOSED",
+    "T-054 Pre-A candidate tournament"
+  ],
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "For every fixed periodic CL8 spatial regulator, the coercive one-eighth-normalized Hamiltonian has a global Liouville-preserving flow and a normalized invariant canonical Gibbs probability for every beta>0. More sharply, when r<0 the zero equilibrium Dirac law and the Z2-symmetric mixture of the two collective ordered equilibrium Dirac laws are distinct compactly supported probability measures on smooth seam-compatible phases. They are invariant under both the continuum and every centered semidiscrete CL8 flow, preserve the same declared exact symmetries, and compose with zero regulator error. Therefore invariance, exact symmetry, smooth phase support, direct-seam compatibility, and regulator compatibility do not uniquely select a preferred classical boundary measure. A minimum-energy, mean-energy, temperature, reservoir, preparation-history, or other independent selection principle is still required.",
+  "verdict": "CLOSE FINITE-REGULATOR CLASSICAL GIBBS EXISTENCE AND EXHIBIT COMMON INVARIANT MEASURES ON SMOOTH PHASES; FORMALLY REJECT INVARIANCE-AND-SYMMETRY-ONLY PREFERENCE; KEEP PHYSICAL SELECTION, QUANTUM BOUNDARY COMPOSITION, CP1, AND PRE-A OPEN",
+  "authorities": {
+    "finite_hamiltonian": "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest.json",
+    "nonlinear_Q3_model": "strategy/pre-a-cp1-st8-q3lock-manifest.json",
+    "global_continuum_flow": "strategy/pre-a-cp1-cl8-global-goursat-continuation-manifest.json",
+    "classical_composition": "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-manifest.json",
+    "corrected_high_regularity_record": "EXP-000735"
+  },
+  "definition": {
+    "domain": "T_L=R/(LZ), M periodic nodes, a=L/M, eight real species per node",
+    "phase_space": "Gamma_a=R^(8M)_psi times R^(8M)_Pi",
+    "symplectic_form": "Omega_a=(a/8) sum_(j,e) dPi_(j,e) wedge dpsi_(j,e)",
+    "hamiltonian": "H_a=(a/8)sum_j[|Pi_j|^2/(2chi)+c|D_a^+psi_j|^2/2+W(psi_j)]",
+    "potential": "W(z)=sum_e[r*z_e^2/2+g*z_e^4/4]+(lambda/4)sum_(e~f)(z_e-z_f)^2(z_e^2+z_f^2)",
+    "parameter_domain": "L>0, finite M>=2, chi>0, c>0, g>0, lambda>=0, r real; the two-measure selection obstruction uses r<0",
+    "liouville_measure": "dLambda_a=|Omega_a^(8M)|/(8M)!, a constant positive multiple of Lebesgue measure"
+  },
+  "finite_gibbs_theorem": {
+    "global_flow": "coercivity up to a finite additive lower bound and exact conservation of H_a prevent finite-time escape, so the Hamiltonian flow Phi_a^t is global",
+    "divergence": "DX_H has zero diagonal blocks, equivalently div X_H=0, so Phi_a^t preserves dLambda_a",
+    "weak_coercive_bound": "with r_minus=max(-r,0), H_a>=(a/(16chi))|Pi|^2+(a*g/64)sum_(j,e)psi_(j,e)^4-L*r_minus^2/(2g)",
+    "exact_minimum": "H_min,a=-L*r_minus^2/(4g); for r<0 it is attained by spatially and species-constant values plus or minus sqrt(-r/g), with additional sign degeneracy only when the Q3 lock is absent",
+    "canonical_measure": "for every beta>0, dmu_(beta,a)=Z_(beta,a)^(-1) exp[-beta H_a] dLambda_a is a well-defined invariant probability with full noncompact support and finite polynomial moments",
+    "normalization_range": "Z_(beta,a) is finite exactly for beta>0 within the canonical exponential family; beta=0 has infinite phase volume and beta<0 has a divergent momentum integral",
+    "momentum_variance": "for every component, E_(mu_beta,a)[Pi_(j,e)^2]=8chi/(beta*a)",
+    "general_invariant_family": "every nonnegative Borel F with 0<integral F(H_a)dLambda_a<infinity yields the invariant probability F(H_a)dLambda_a divided by its integral",
+    "compact_invariant_controls": "for every E>H_min,a, the normalized uniform law on the compact sublevel {H_a<=E} is invariant; the choice of E is an additional input",
+    "energy_condition": "d E_beta[H_a]/d beta=-Var_beta(H_a)<0; prescribing a mean energy above H_min,a selects one beta, but that mean energy is not derived by the autonomous Hamiltonian"
+  },
+  "common_equilibrium_measures": {
+    "ordered_amplitude": "v=sqrt(-r/g) for r<0",
+    "zero_phase": "zeta_0=(psi_e(x)=0, Pi_e(x)=0 for all e and x)",
+    "ordered_phases": "zeta_plus=(psi_e(x)=v,Pi_e(x)=0) and zeta_minus=(psi_e(x)=-v,Pi_e(x)=0) for all e and x",
+    "force_check": "grad W vanishes at all three phases; the Q3 edge force vanishes on the collective diagonal",
+    "measures": "mu_zero=delta_(zeta_0) and mu_ordered=(delta_(zeta_plus)+delta_(zeta_minus))/2",
+    "continuum_invariance": "all support points are constant global CL8 solutions, so both measures are invariant under the periodic continuum Cauchy flow",
+    "lattice_invariance": "sampling gives exact fixed points of every centered periodic regulator, so both sampled measures are invariant for every M",
+    "trace_image": "backward restriction gives constant characteristic pairs A=B=0 or A=B=plus-or-minus v; every periodic value and derivative seam condition holds",
+    "composition": "sampling, trigonometric reconstruction, continuum evolution, and semidiscrete evolution agree exactly on the support, so the phase-space and W1 composition error is zero",
+    "symmetries": "both measures preserve spatial translations, Q3 automorphisms, global Z2, momentum reversal, and time reversal",
+    "energies": "H(mu_zero support)=0 while H(mu_ordered support)=-L*r^2/(4g) in the identical raw Hamiltonian convention",
+    "distinctness": "mu_zero and mu_ordered have disjoint supports and different second moments and energies"
+  },
+  "formal_selection_no_go": {
+    "negative_id": "NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE",
+    "excluded_route": "uniquely select a preferred finite or continuum classical CL8 boundary measure using only normalization, Hamiltonian invariance, the declared exact symmetries, compact support on smooth direct-seam phases, and exact regulator compatibility",
+    "witness": "mu_zero and mu_ordered satisfy every listed condition and are distinct; the continuum beta family and normalized F(H_a) families give further finite-regulator nonuniqueness",
+    "not_excluded": "selection by a separately proved energy, temperature, KMS, entropy, reservoir, cosmological preparation, symmetry-breaking boundary condition, or other physical criterion"
+  },
+  "preference_fork": {
+    "minimum_energy_rule": "for r<0 and lambda>0, adding support on the exact global-minimum set plus global Z2 invariance selects mu_ordered among classical probabilities on that two-point set",
+    "status": "the rule is a conditional mathematical selector, not a derived high-energy or cosmological principle",
+    "zero_configuration_boundary": "mu_zero is an invariant equilibrium law but is not thereby physical empty space, a no-condensate quantum state, or a vacuum reference",
+    "proof_shift_boundary": "the Goursat coercive shift changes no dynamics or normalized canonical measure, but cannot define an absolute physical energy zero or a below-empty-space comparison"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-PREFERRED-STATE-COMPOSITION-SELECTION",
+    "status": "SPLIT; PARENT GATE REMAINS OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-FINITE-CLASSICAL-GIBBS-EXISTENCE-INVARIANCE",
+      "PA-CP1-CL8-EQUILIBRIUM-MEASURES-ON-SMOOTH-PHASES"
+    ],
+    "refuted_subgate": "PA-CP1-CL8-INVARIANCE-AND-SYMMETRY-ONLY-PREFERRED-MEASURE",
+    "open_subgates": [
+      "PA-CP1-CL8-CLASSICAL-PREFERENCE-CRITERION",
+      "PA-CP1-CL8-FINITE-REGULATOR-QUANTUM-STATE",
+      "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER",
+      "PA-CP1-CL8-CONTINUUM-STATE-AND-HADAMARD-LIMIT",
+      "PA-CP1-COMMON-PARENT-PHYSICAL-STATE-AND-REFERENCE"
+    ],
+    "next_gate": "PA-CP1-CL8-FINITE-REGULATOR-QUANTUM-STATE"
+  },
+  "hostile_boundaries": {
+    "gibbs_not_boundary_composition": "the full Gibbs law has noncompact support and depends on a; it is not the supplied compact common C8 trace measure of the existing W1 theorem",
+    "compact_sublevel_not_preferred": "energy truncation restores finite-a compact support but inserts E and supplies no cutoff-uniform C8 family",
+    "equilibrium_witness_not_physical_vacuum": "a smooth fixed point is not a quantum vacuum, Hadamard state, or empirically selected empty-space reference",
+    "symmetry_mixture_not_pure_phase": "mu_ordered is Z2 symmetric and not one pure ordered phase",
+    "finite_classical_not_quantum": "a classical phase probability is not a density operator or a state on a noncommutative boundary algebra",
+    "classical_goursat_not_star_map": "the nonlinear classical Goursat map and variational symplectic flux do not provide a quantum star-homomorphism",
+    "finite_regulator_not_continuum": "no tightness, renormalized continuum measure, KMS limit, quantum limit, or Hadamard wavefront theorem is supplied"
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "the fixed periodic CL8 Hamiltonian, symplectic form, and one-eighth normalization",
+      "a finite M and L",
+      "beta when the canonical Gibbs family is invoked",
+      "r<0 when the two-measure selection witness is invoked",
+      "an energy or minimum-support criterion only when the conditional selector is invoked"
+    ],
+    "derived_outputs": [
+      "global Liouville flow and finite canonical partition function for beta>0",
+      "the exact momentum variance and a continuum of distinct invariant Gibbs measures",
+      "two distinct common invariant measures on smooth phases with exact zero-error regulator composition",
+      "the invariance-and-symmetry-only state-selection no-go",
+      "the exact decomposition of the remaining preferred-state gate"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "scope": {
+    "finite_classical_global_flow": true,
+    "finite_classical_gibbs_family": true,
+    "finite_classical_invariance": true,
+    "common_smooth_equilibrium_measure_witnesses": true,
+    "exact_zero_error_equilibrium_composition": true,
+    "invariance_only_unique_preference": false,
+    "derived_beta_or_energy": false,
+    "selected_physical_classical_measure": false,
+    "finite_quantum_state": false,
+    "quantum_boundary_state": false,
+    "continuum_quantum_state": false,
+    "Hadamard_state": false,
+    "physical_vacuum": false,
+    "below_empty_space": false,
+    "full_3_plus_1_dependence": false,
+    "gravity": false,
+    "cooling": false,
+    "C6_claim_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "artifacts": {
+    "certificate": "strategy/pre-a-cp1-cl8-invariance-selection-fork-certificate-260803.md",
+    "primary_script": "codes/foundations/pre_a_cp1_cl8_invariance_selection_fork.py",
+    "independent_script": "codes/foundations/pre_a_cp1_cl8_invariance_selection_fork_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_cl8_invariance_selection_fork_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-invariance-selection-fork/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-invariance-selection-fork/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-invariance-selection-fork/result.json"
+  },
+  "prior_art_boundary": "Liouville invariance, canonical and microcanonical finite-dimensional measures, Gibbs variational principles, and equilibrium Dirac measures are established mathematics. No world-first or new general statistical-mechanics theorem is claimed. The repository-specific result is the exact CL8/Q3 one-eighth normalization, common continuum-lattice equilibrium-measure witness, seam and regulator compatibility audit, and precise state-selection gate split.",
+  "no_overclaim": "This package proves finite-regulator classical Gibbs existence and constructs two distinct compactly supported measures on smooth classical phases that are exactly invariant and compatible across the declared continuum and lattice equilibrium maps. It refutes only unique preference from invariance, declared symmetries, smooth phase seams, and regulator compatibility alone. It does not derive beta, energy, a reservoir, a preparation history, a physical classical state, a quantum or Hadamard state, a quantum boundary algebra map, physical empty space, an absolute or below-empty-space energy sign, a continuum or thermodynamic state limit, full 3+1 dynamics, gravity, cooling, C6 advancement, CP1, or Pre-A."
+}

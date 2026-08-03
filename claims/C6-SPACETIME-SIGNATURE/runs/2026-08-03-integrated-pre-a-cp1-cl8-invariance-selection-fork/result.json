@@ -1,0 +1,923 @@
+{
+  "assertion_summary": {
+    "passed": 81,
+    "total": 81
+  },
+  "assertions": [
+    {
+      "actual": "fa2ed3fcbe75c18559ed3e1c6aaf6ce155780649ae7430b09aaa641228763903",
+      "expected": "fresh primary payload",
+      "group": "freshness",
+      "name": "stored primary equals fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": "3ea102045fad0bc69517921f1cd6c3abb7de492c1b1cb65d66abe9dc8859db26",
+      "expected": "fresh independent payload",
+      "group": "freshness",
+      "name": "stored independent equals fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "passed": 59,
+        "total": 59
+      },
+      "expected": {
+        "passed": 59,
+        "total": 59
+      },
+      "group": "children",
+      "name": "primary exact assertion count",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "passed": 66,
+        "total": 66
+      },
+      "expected": {
+        "passed": 66,
+        "total": 66
+      },
+      "group": "children",
+      "name": "independent exact assertion count",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-CL8-INVARIANCE-SELECTION-FORK-v0",
+        "PA-CP1-CL8-FINITE-GIBBS-AND-COMMON-EQUILIBRIUM-MEASURE-FORK"
+      ],
+      "expected": [
+        "PA-CP1-CL8-INVARIANCE-SELECTION-FORK-v0",
+        "PA-CP1-CL8-FINITE-GIBBS-AND-COMMON-EQUILIBRIUM-MEASURE-FORK"
+      ],
+      "group": "children",
+      "name": "primary identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-CL8-INVARIANCE-SELECTION-FORK-v0",
+        "PA-CP1-CL8-FINITE-GIBBS-AND-COMMON-EQUILIBRIUM-MEASURE-FORK"
+      ],
+      "expected": [
+        "PA-CP1-CL8-INVARIANCE-SELECTION-FORK-v0",
+        "PA-CP1-CL8-FINITE-GIBBS-AND-COMMON-EQUILIBRIUM-MEASURE-FORK"
+      ],
+      "group": "children",
+      "name": "independent identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "Gibbs": {
+          "beta_domain": "beta>0",
+          "compact_sublevel_controls": true,
+          "fixture_variances": [
+            "32",
+            "16"
+          ],
+          "full_support": true,
+          "momentum_variance": "8*chi/(beta*a)"
+        },
+        "Liouville": {
+          "H_dot": "0",
+          "density_dot": "0",
+          "divergence": "0"
+        },
+        "Q3": {
+          "connected": true,
+          "edges": 12,
+          "species": 8
+        },
+        "coercivity": {
+          "exact_floor": "-L*r_minus^2/(4*g)",
+          "weak_constant": "L*r_minus^2/(2*g)",
+          "weak_square": "(g*z^2-2*r_minus)^2/(8*g)"
+        },
+        "dimensions": {
+          "configuration": "8*M",
+          "phase": "16*M"
+        },
+        "negative_id": "NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE",
+        "normalization": {
+          "momentum_lower_coefficient": "a/(16*chi)",
+          "quartic_lower_coefficient": "a*g/64",
+          "symplectic_weight": "a/8"
+        },
+        "witnesses": {
+          "all_seams": true,
+          "composition_error": 0,
+          "distinct": true,
+          "ordered_energy": "-L*r^2/(4*g)",
+          "ordered_second_moment": "-r/g",
+          "zero_energy": "0",
+          "zero_second_moment": 0
+        }
+      },
+      "expected": {
+        "Gibbs": {
+          "beta_domain": "beta>0",
+          "compact_sublevel_controls": true,
+          "fixture_variances": [
+            "32",
+            "16"
+          ],
+          "full_support": true,
+          "momentum_variance": "8*chi/(beta*a)"
+        },
+        "Liouville": {
+          "H_dot": "0",
+          "density_dot": "0",
+          "divergence": "0"
+        },
+        "Q3": {
+          "connected": true,
+          "edges": 12,
+          "species": 8
+        },
+        "coercivity": {
+          "exact_floor": "-L*r_minus^2/(4*g)",
+          "weak_constant": "L*r_minus^2/(2*g)",
+          "weak_square": "(g*z^2-2*r_minus)^2/(8*g)"
+        },
+        "dimensions": {
+          "configuration": "8*M",
+          "phase": "16*M"
+        },
+        "negative_id": "NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE",
+        "normalization": {
+          "momentum_lower_coefficient": "a/(16*chi)",
+          "quartic_lower_coefficient": "a*g/64",
+          "symplectic_weight": "a/8"
+        },
+        "witnesses": {
+          "all_seams": true,
+          "composition_error": 0,
+          "distinct": true,
+          "ordered_energy": "-L*r^2/(4*g)",
+          "ordered_second_moment": "-r/g",
+          "zero_energy": "0",
+          "zero_second_moment": 0
+        }
+      },
+      "group": "cross",
+      "name": "derived structures agree",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        {
+          "C6_claim_advanced": false,
+          "CP1_complete": false,
+          "Hadamard_state": false,
+          "Pre_A_complete": false,
+          "below_empty_space": false,
+          "common_smooth_equilibrium_measure_witnesses": true,
+          "continuum_quantum_state": false,
+          "cooling": false,
+          "derived_beta_or_energy": false,
+          "exact_zero_error_equilibrium_composition": true,
+          "finite_classical_gibbs_family": true,
+          "finite_classical_global_flow": true,
+          "finite_classical_invariance": true,
+          "finite_quantum_state": false,
+          "full_3_plus_1_dependence": false,
+          "gravity": false,
+          "invariance_only_unique_preference": false,
+          "physical_vacuum": false,
+          "quantum_boundary_state": false,
+          "selected_physical_classical_measure": false
+        },
+        {
+          "C6_claim_advanced": false,
+          "CP1_complete": false,
+          "Hadamard_state": false,
+          "Pre_A_complete": false,
+          "below_empty_space": false,
+          "common_smooth_equilibrium_measure_witnesses": true,
+          "continuum_quantum_state": false,
+          "cooling": false,
+          "derived_beta_or_energy": false,
+          "exact_zero_error_equilibrium_composition": true,
+          "finite_classical_gibbs_family": true,
+          "finite_classical_global_flow": true,
+          "finite_classical_invariance": true,
+          "finite_quantum_state": false,
+          "full_3_plus_1_dependence": false,
+          "gravity": false,
+          "invariance_only_unique_preference": false,
+          "physical_vacuum": false,
+          "quantum_boundary_state": false,
+          "selected_physical_classical_measure": false
+        }
+      ],
+      "expected": {
+        "C6_claim_advanced": false,
+        "CP1_complete": false,
+        "Hadamard_state": false,
+        "Pre_A_complete": false,
+        "below_empty_space": false,
+        "common_smooth_equilibrium_measure_witnesses": true,
+        "continuum_quantum_state": false,
+        "cooling": false,
+        "derived_beta_or_energy": false,
+        "exact_zero_error_equilibrium_composition": true,
+        "finite_classical_gibbs_family": true,
+        "finite_classical_global_flow": true,
+        "finite_classical_invariance": true,
+        "finite_quantum_state": false,
+        "full_3_plus_1_dependence": false,
+        "gravity": false,
+        "invariance_only_unique_preference": false,
+        "physical_vacuum": false,
+        "quantum_boundary_state": false,
+        "selected_physical_classical_measure": false
+      },
+      "group": "cross",
+      "name": "scope structures agree",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "CLOSE FINITE-REGULATOR CLASSICAL GIBBS EXISTENCE AND EXHIBIT COMMON INVARIANT MEASURES ON SMOOTH PHASES; FORMALLY REJECT INVARIANCE-AND-SYMMETRY-ONLY PREFERENCE; KEEP PHYSICAL SELECTION, QUANTUM BOUNDARY COMPOSITION, CP1, AND PRE-A OPEN",
+        "CLOSE FINITE-REGULATOR CLASSICAL GIBBS EXISTENCE AND EXHIBIT COMMON INVARIANT MEASURES ON SMOOTH PHASES; FORMALLY REJECT INVARIANCE-AND-SYMMETRY-ONLY PREFERENCE; KEEP PHYSICAL SELECTION, QUANTUM BOUNDARY COMPOSITION, CP1, AND PRE-A OPEN"
+      ],
+      "expected": "CLOSE FINITE-REGULATOR CLASSICAL GIBBS EXISTENCE AND EXHIBIT COMMON INVARIANT MEASURES ON SMOOTH PHASES; FORMALLY REJECT INVARIANCE-AND-SYMMETRY-ONLY PREFERENCE; KEEP PHYSICAL SELECTION, QUANTUM BOUNDARY COMPOSITION, CP1, AND PRE-A OPEN",
+      "group": "cross",
+      "name": "verdict structures agree",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-CL8-FINITE-REGULATOR-QUANTUM-STATE",
+        "PA-CP1-CL8-FINITE-REGULATOR-QUANTUM-STATE"
+      ],
+      "expected": "PA-CP1-CL8-FINITE-REGULATOR-QUANTUM-STATE",
+      "group": "cross",
+      "name": "next gate structures agree",
+      "status": "PASS"
+    },
+    {
+      "actual": "fb47f64f8b1b74c800705f2ee72394cd5dac5ecb1252c6a687936bdaf4de42a0",
+      "expected": "fb47f64f8b1b74c800705f2ee72394cd5dac5ecb1252c6a687936bdaf4de42a0",
+      "group": "provenance",
+      "name": "primary script hash fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": "4d22993ca456c11094702034f152d5bb415e7caf5b50478324b0cef8c5a8fbbb",
+      "expected": "4d22993ca456c11094702034f152d5bb415e7caf5b50478324b0cef8c5a8fbbb",
+      "group": "provenance",
+      "name": "independent script hash fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": "070131b3ede042840ba29757ad010f8ad0bb130dfc370b870d988360de57e34d",
+      "expected": "070131b3ede042840ba29757ad010f8ad0bb130dfc370b870d988360de57e34d",
+      "group": "provenance",
+      "name": "primary manifest hash fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": "070131b3ede042840ba29757ad010f8ad0bb130dfc370b870d988360de57e34d",
+      "expected": "070131b3ede042840ba29757ad010f8ad0bb130dfc370b870d988360de57e34d",
+      "group": "provenance",
+      "name": "independent manifest hash fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
+      "expected": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
+      "group": "provenance",
+      "name": "authority hash pinned: semidiscrete_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+      "expected": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+      "group": "provenance",
+      "name": "authority hash pinned: q3lock_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "bff6323ce6a0ef82b62321bb3ad1a99c291b2742417aa4c67f8a418a7f6d67d8",
+      "expected": "bff6323ce6a0ef82b62321bb3ad1a99c291b2742417aa4c67f8a418a7f6d67d8",
+      "group": "provenance",
+      "name": "authority hash pinned: global_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "6f046b62c99c43ac6c04de546669f635cfb079c3c5ecad5e09bb7e6674a8d0b6",
+      "expected": "6f046b62c99c43ac6c04de546669f635cfb079c3c5ecad5e09bb7e6674a8d0b6",
+      "group": "provenance",
+      "name": "authority hash pinned: composition_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "a0d6d7cd99770cd97050eb28fc4dc69180191ba930de629ee023cffc3a2aa811",
+      "expected": "a0d6d7cd99770cd97050eb28fc4dc69180191ba930de629ee023cffc3a2aa811",
+      "group": "provenance",
+      "name": "authority hash pinned: c6_status",
+      "status": "PASS"
+    },
+    {
+      "actual": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
+      "expected": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
+      "group": "provenance",
+      "name": "primary parent hash: semidiscrete_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+      "expected": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+      "group": "provenance",
+      "name": "primary parent hash: q3lock_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "bff6323ce6a0ef82b62321bb3ad1a99c291b2742417aa4c67f8a418a7f6d67d8",
+      "expected": "bff6323ce6a0ef82b62321bb3ad1a99c291b2742417aa4c67f8a418a7f6d67d8",
+      "group": "provenance",
+      "name": "primary parent hash: global_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "6f046b62c99c43ac6c04de546669f635cfb079c3c5ecad5e09bb7e6674a8d0b6",
+      "expected": "6f046b62c99c43ac6c04de546669f635cfb079c3c5ecad5e09bb7e6674a8d0b6",
+      "group": "provenance",
+      "name": "primary parent hash: composition_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
+      "expected": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
+      "group": "provenance",
+      "name": "independent parent hash: semidiscrete_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+      "expected": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+      "group": "provenance",
+      "name": "independent parent hash: q3lock_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "bff6323ce6a0ef82b62321bb3ad1a99c291b2742417aa4c67f8a418a7f6d67d8",
+      "expected": "bff6323ce6a0ef82b62321bb3ad1a99c291b2742417aa4c67f8a418a7f6d67d8",
+      "group": "provenance",
+      "name": "independent parent hash: global_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "6f046b62c99c43ac6c04de546669f635cfb079c3c5ecad5e09bb7e6674a8d0b6",
+      "expected": "6f046b62c99c43ac6c04de546669f635cfb079c3c5ecad5e09bb7e6674a8d0b6",
+      "group": "provenance",
+      "name": "independent parent hash: composition_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-INVARIANCE-SELECTION-FORK-v0",
+      "expected": "PA-CP1-CL8-INVARIANCE-SELECTION-FORK-v0",
+      "group": "manifest",
+      "name": "manifest candidate",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-FINITE-GIBBS-AND-COMMON-EQUILIBRIUM-MEASURE-FORK",
+      "expected": "PA-CP1-CL8-FINITE-GIBBS-AND-COMMON-EQUILIBRIUM-MEASURE-FORK",
+      "group": "manifest",
+      "name": "manifest result",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        "T0 exact finite-regulator classical measure and selection-obstruction certificate; not a TECT claim, tier change, physical-vacuum theorem, quantum-state theorem, CP1 completion, or Pre-A closure"
+      ],
+      "expected": [
+        false,
+        "T0..."
+      ],
+      "group": "manifest",
+      "name": "manifest T0 nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE",
+      "expected": "NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE",
+      "group": "manifest",
+      "name": "manifest negative",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-CL8-FINITE-CLASSICAL-GIBBS-EXISTENCE-INVARIANCE",
+        "PA-CP1-CL8-EQUILIBRIUM-MEASURES-ON-SMOOTH-PHASES"
+      ],
+      "expected": "two",
+      "group": "manifest",
+      "name": "two closed subgates",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-INVARIANCE-AND-SYMMETRY-ONLY-PREFERRED-MEASURE",
+      "expected": "PA-CP1-CL8-INVARIANCE-AND-SYMMETRY-ONLY-PREFERRED-MEASURE",
+      "group": "manifest",
+      "name": "one refuted subgate",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-CL8-CLASSICAL-PREFERENCE-CRITERION",
+        "PA-CP1-CL8-FINITE-REGULATOR-QUANTUM-STATE",
+        "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER",
+        "PA-CP1-CL8-CONTINUUM-STATE-AND-HADAMARD-LIMIT",
+        "PA-CP1-COMMON-PARENT-PHYSICAL-STATE-AND-REFERENCE"
+      ],
+      "expected": "five",
+      "group": "manifest",
+      "name": "five open successors",
+      "status": "PASS"
+    },
+    {
+      "actual": "SPLIT; PARENT GATE REMAINS OPEN",
+      "expected": "SPLIT; PARENT GATE REMAINS OPEN",
+      "group": "manifest",
+      "name": "parent state gate remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "beta_domain": "beta>0",
+        "negative": "NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE",
+        "variance": "8*chi/(beta*a)",
+        "zero_error": 0
+      },
+      "expected": {
+        "beta_domain": "beta>0",
+        "negative": "NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE",
+        "variance": "8*chi/(beta*a)",
+        "zero_error": 0
+      },
+      "group": "mathematics",
+      "name": "load-bearing derived values",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "exact_floor": "-L*r_minus^2/(4*g)",
+        "weak_constant": "L*r_minus^2/(2*g)",
+        "weak_square": "(g*z^2-2*r_minus)^2/(8*g)"
+      },
+      "expected": "exact constants",
+      "group": "mathematics",
+      "name": "exact weak floor constants",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "H_dot": "0",
+        "density_dot": "0",
+        "divergence": "0"
+      },
+      "expected": {
+        "all": "0"
+      },
+      "group": "mathematics",
+      "name": "Liouville identities zero",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "all_seams": true,
+        "composition_error": 0,
+        "distinct": true,
+        "ordered_energy": "-L*r^2/(4*g)",
+        "ordered_second_moment": "-r/g",
+        "zero_energy": "0",
+        "zero_second_moment": 0
+      },
+      "expected": "distinct with ordered moment -r/g",
+      "group": "mathematics",
+      "name": "witnesses distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-1-verdict\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-3-finite-hamiltonian\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-4-coercivity\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-5-liouville-gibbs\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-6-common-witnesses\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-7-no-go\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-8-composition-boundary\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-10-adversarial\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-12-no-overclaim\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: 8\\chi\\over\\beta a",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: exactly zero",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: autonomous invariance",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: not a density operator",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: physical empty space",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: CP1, or Pre-A",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "group": "certificate",
+      "name": "prior art bounded",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "records",
+      "name": "formal negative in summary table",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "records",
+      "name": "formal negative section",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "records",
+      "name": "formal negative evidence path",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "group": "records",
+      "name": "corrected exploration inherited",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "records",
+      "name": "strategy index row",
+      "status": "PASS"
+    },
+    {
+      "actual": "C6-SPACETIME-SIGNATURE",
+      "expected": "C6-SPACETIME-SIGNATURE",
+      "group": "C6",
+      "name": "C6 id",
+      "status": "PASS"
+    },
+    {
+      "actual": "T1",
+      "expected": "T1",
+      "group": "C6",
+      "name": "C6 tier unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "ACTIVE",
+      "expected": "ACTIVE",
+      "group": "C6",
+      "name": "C6 lifecycle unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "CONDITIONAL"
+      ],
+      "expected": [
+        "CONDITIONAL"
+      ],
+      "group": "C6",
+      "name": "C6 evidence unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "C6-BCC-PREMISE-BLOCKED"
+      ],
+      "expected": [
+        "C6-BCC-PREMISE-BLOCKED"
+      ],
+      "group": "C6",
+      "name": "C6 gate unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: invariance_only_unique_preference",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: derived_beta_or_energy",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: selected_physical_classical_measure",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: finite_quantum_state",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: quantum_boundary_state",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: continuum_quantum_state",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: Hadamard_state",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: physical_vacuum",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: below_empty_space",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: full_3_plus_1_dependence",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: gravity",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: cooling",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: C6_claim_advanced",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: CP1_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: Pre_A_complete",
+      "status": "PASS"
+    }
+  ],
+  "authority_sha256": {
+    "c6_status": "a0d6d7cd99770cd97050eb28fc4dc69180191ba930de629ee023cffc3a2aa811",
+    "composition_manifest": "6f046b62c99c43ac6c04de546669f635cfb079c3c5ecad5e09bb7e6674a8d0b6",
+    "global_manifest": "bff6323ce6a0ef82b62321bb3ad1a99c291b2742417aa4c67f8a418a7f6d67d8",
+    "q3lock_manifest": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+    "semidiscrete_manifest": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a"
+  },
+  "candidate_id": "PA-CP1-CL8-INVARIANCE-SELECTION-FORK-v0",
+  "child_assertion_counts": {
+    "independent": 66,
+    "primary": 59
+  },
+  "child_result_sha256": {
+    "independent": "3ea102045fad0bc69517921f1cd6c3abb7de492c1b1cb65d66abe9dc8859db26",
+    "primary": "fa2ed3fcbe75c18559ed3e1c6aaf6ce155780649ae7430b09aaa641228763903"
+  },
+  "claim_bearing": false,
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "Gibbs": {
+      "beta_domain": "beta>0",
+      "compact_sublevel_controls": true,
+      "fixture_variances": [
+        "32",
+        "16"
+      ],
+      "full_support": true,
+      "momentum_variance": "8*chi/(beta*a)"
+    },
+    "Liouville": {
+      "H_dot": "0",
+      "density_dot": "0",
+      "divergence": "0"
+    },
+    "Q3": {
+      "connected": true,
+      "edges": 12,
+      "species": 8
+    },
+    "coercivity": {
+      "exact_floor": "-L*r_minus^2/(4*g)",
+      "weak_constant": "L*r_minus^2/(2*g)",
+      "weak_square": "(g*z^2-2*r_minus)^2/(8*g)"
+    },
+    "dimensions": {
+      "configuration": "8*M",
+      "phase": "16*M"
+    },
+    "negative_id": "NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE",
+    "normalization": {
+      "momentum_lower_coefficient": "a/(16*chi)",
+      "quartic_lower_coefficient": "a*g/64",
+      "symplectic_weight": "a/8"
+    },
+    "witnesses": {
+      "all_seams": true,
+      "composition_error": 0,
+      "distinct": true,
+      "ordered_energy": "-L*r^2/(4*g)",
+      "ordered_second_moment": "-r/g",
+      "zero_energy": "0",
+      "zero_second_moment": 0
+    }
+  },
+  "next_gate": "PA-CP1-CL8-FINITE-REGULATOR-QUANTUM-STATE",
+  "no_overclaim": "This package proves finite-regulator classical Gibbs existence and constructs two distinct compactly supported measures on smooth classical phases that are exactly invariant and compatible across the declared continuum and lattice equilibrium maps. It refutes only unique preference from invariance, declared symmetries, smooth phase seams, and regulator compatibility alone. It does not derive beta, energy, a reservoir, a preparation history, a physical classical state, a quantum or Hadamard state, a quantum boundary algebra map, physical empty space, an absolute or below-empty-space energy sign, a continuum or thermodynamic state limit, full 3+1 dynamics, gravity, cooling, C6 advancement, CP1, or Pre-A.",
+  "result_id": "PA-CP1-CL8-FINITE-GIBBS-AND-COMMON-EQUILIBRIUM-MEASURE-FORK",
+  "schema": "tect/pre-a-cp1-cl8-invariance-selection-fork-integrated/0.1",
+  "scope": {
+    "C6_claim_advanced": false,
+    "CP1_complete": false,
+    "Hadamard_state": false,
+    "Pre_A_complete": false,
+    "below_empty_space": false,
+    "common_smooth_equilibrium_measure_witnesses": true,
+    "continuum_quantum_state": false,
+    "cooling": false,
+    "derived_beta_or_energy": false,
+    "exact_zero_error_equilibrium_composition": true,
+    "finite_classical_gibbs_family": true,
+    "finite_classical_global_flow": true,
+    "finite_classical_invariance": true,
+    "finite_quantum_state": false,
+    "full_3_plus_1_dependence": false,
+    "gravity": false,
+    "invariance_only_unique_preference": false,
+    "physical_vacuum": false,
+    "quantum_boundary_state": false,
+    "selected_physical_classical_measure": false
+  },
+  "source_sha256": {
+    "certificate": "011d706ed1cc95313d7ad973015f14658c68d942d1c90dccee3afd7822f354f7",
+    "independent_script": "4d22993ca456c11094702034f152d5bb415e7caf5b50478324b0cef8c5a8fbbb",
+    "manifest": "070131b3ede042840ba29757ad010f8ad0bb130dfc370b870d988360de57e34d",
+    "primary_script": "fb47f64f8b1b74c800705f2ee72394cd5dac5ecb1252c6a687936bdaf4de42a0",
+    "script": "c694e4f3a230510d6a509c634e23511214dfe1d318bf57f4e0677efa0389b122"
+  },
+  "task_id": "T-054",
+  "verdict": "CLOSE FINITE-REGULATOR CLASSICAL GIBBS EXISTENCE AND EXHIBIT COMMON INVARIANT MEASURES ON SMOOTH PHASES; FORMALLY REJECT INVARIANCE-AND-SYMMETRY-ONLY PREFERENCE; KEEP PHYSICAL SELECTION, QUANTUM BOUNDARY COMPOSITION, CP1, AND PRE-A OPEN"
+}
