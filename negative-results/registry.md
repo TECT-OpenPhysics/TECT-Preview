@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-PRE-A-CP1-Q3LOCK-QUADRATIC-CONNECTIVITY-CI8](#ng-2026-08-03-pre-a-cp1-q3lock-quadratic-connectivity-ci8) | preserve all eight constant-species critical zero modes while connecting the ST8 species by a positive quadratic Dirichlet form on a connected graph | at `r=0` and spatial momentum zero, the added Hessian is `eta*L_G`; a connected positive graph Laplacian has one-dimensional kernel. For `Q3` the spectrum is `0,2eta^(3),4eta^(3),6eta`, so critical nullity falls from eight to one. Retain nonlinear quartic locking as the minimal-degree analytic repair, or change the zero-mode origin, sign structure, constraints, or quotient |
 | [NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE](#ng-2026-08-03-pre-a-cp1-st8-continuous-time-exact-cone) | infer an exact finite-regulator compact-support domain of dependence or PA-H1 characteristic sheets from the bounded harmonic group speed of `PA-CP1-ST8-CB-v0` | the continuous-time semidiscrete harmonic propagator has nearest-neighbour response `c*t^2/(2chi)+O(t^4)`, nonzero for all sufficiently small positive times, so every proposed finite strict support cone fails. Retain effective speeds and possible quasi-local bounds; pursue a controlled Lorentzian continuum limit, an exact-causal discrete-time parent, or a separately supplied hyperbolic parent |
 | [NG-2026-08-03-PRE-A-CP1-ST8-ONE-CONNECTED-SCALAR-EQUIVALENCE](#ng-2026-08-03-pre-a-cp1-st8-one-connected-scalar-equivalence) | identify `PA-CP1-LT3-RS-v0` exactly and invertibly with one same-dimensional connected standard positive-edge real scalar Hamiltonian | the critical Hessian nullity is eight versus one, and the ordered complete-square minima number 256 versus two; invertible canonical equivalence preserves the former by congruence and the latter by bijection. This excludes only the stated exact standard comparator, not coarse graining, extra species, nonstandard stencils, auxiliaries, or controlled infrared equivalence |
 | [NG-2026-08-03-PRE-A-CP1-TRANSLATION-SYMMETRIC-PROPER-BOUNDARY-SELECTION](#ng-2026-08-03-pre-a-cp1-translation-symmetric-proper-boundary-selection) | select a proper nonempty characteristic boundary from the translation-invariant finite `PA-CP1-LT3-RS-v0` Hamiltonian and its unique ground state by a deterministic translation-covariant site rule | the translation group acts transitively and fixes the parent data, so every covariantly selected site subset is translation invariant and therefore empty or the full torus.  Retain the exact same-H classical ordering and energy-reference scaffold, but do not rename the periodic spatial boundary as a null or event horizon; derive relational or time-dependent characteristic sheets using a route with a regulator-level causal/locality estimate or a controlled Lorentzian emergence limit |
@@ -254,6 +255,49 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-pre-a-cp1-q3lock-quadratic-connectivity-ci8"></a>
+### NG-2026-08-03-PRE-A-CP1-Q3LOCK-QUADRATIC-CONNECTIVITY-CI8 -- positive quadratic connectivity lifts seven critical species modes
+
+**Failure mode.**  Add a positive standard quadratic species Dirichlet form
+to the ST8 coarse representation, require its species graph to be connected,
+and simultaneously claim that all eight constant-species zero modes of the
+critical zero-background Hessian remain exact.
+
+**Evidence.**  For a finite species graph `G`, add
+
+`Delta H_eta=(eta/2) sum_y sum_{a~b} (psi_a-psi_b)^2`, with `eta>0`.
+
+At `r=0` and spatial momentum zero, the species Hessian is `eta*L_G`.  The
+kernel of a positive graph Laplacian consists of vectors constant on each
+connected component.  A connected graph therefore has nullity one.  For the
+cube graph used by `PA-CP1-ST8-Q3LOCK-v0`, the Walsh characters give
+
+`spec(L_Q3)={0,2^(3),4^(3),6}`.
+
+Thus a positive quadratic Q3 repair leaves one collective critical zero mode
+and lifts the other seven.  It cannot preserve the exact eight-mode ST8/CI8
+origin Hessian.
+
+**Boundary.**  This excludes only standard positive quadratic Dirichlet
+connectivity on a connected species graph while the eight target zero modes
+are the constant modes of eight ST8 species.  It does not exclude quartic or
+higher coupling, signed or frustrated quadratic forms, constraints, gauge
+quotients, noninvertible reductions, enlarged fields, or eight zero modes of a
+different origin.  Choosing the quadratic repair deliberately remains a valid
+different candidate with one critical collective mode.
+
+**Consequence.**  The registered successor uses a positive homogeneous
+quartic Q3 lock.  It connects and locks the species nonlinearly while leaving
+the origin Hessian unchanged.  This does not make the harmonic origin graph
+connected and does not complete CP1.
+
+**Evidence files.**
+`strategy/pre-a-cp1-st8-q3lock-certificate-260803.md`;
+`strategy/pre-a-cp1-st8-q3lock-manifest.json`;
+`codes/foundations/pre_a_cp1_st8_q3lock.py`;
+`codes/foundations/pre_a_cp1_st8_q3lock_independent.py`;
+`codes/foundations/pre_a_cp1_st8_q3lock_verify.py`.
 
 <a id="ng-2026-08-03-pre-a-cp1-st8-continuous-time-exact-cone"></a>
 ### NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE -- bounded lattice group speed is not an exact support cone

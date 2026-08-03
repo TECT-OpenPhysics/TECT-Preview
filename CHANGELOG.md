@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Reassign Q3LOCK exploration id after concurrent CP1a integration] - 2026-08-03
+
+Concurrent CP1a work reached the remote main first and occupied EXP-000714 through EXP-000718. Preserve those append-only records and re-register the Q3LOCK route as EXP-000719. The pre-rebase Q3LOCK event mentioning EXP-000714 is historical; this event is its authority correction. No formula, assertion count, candidate verdict, negative result, task status, claim tier, CP1 status, or Pre-A status changes.
+
+## [Quartic Q3 lock preserves eight bare nodes and connects the ordered interaction] - 2026-08-03
+
+Registered EXP-000714 and PA-CP1-ST8-Q3LOCK-v0. A positive local quartic Q3 edge polynomial leaves the full bare origin Hessian and eight critical species modes unchanged, but its complete-square equality conditions reduce the finite classical sign minima from 256 to two while preserving the same-H sign below the zero configuration. The ordered Q3 Hessian and exact classical collective reduction are certified. A connected positive quadratic species repair instead has critical nullity one. Primary 54/54, non-importing independent 36/36, and integrated 74/74 checks pass, 164 combined. The block origin is inserted, fine one-site translation is broken, the finite quantum ground remains symmetric, and physical empty space, causal reconstruction, CP1 and Pre-A remain open.
+
 ## [LT3 integrated verifier made workspace-portable for ST8 inheritance] - 2026-08-03
 
 Replace host-specific absolute artifact-routing values in the LT3 integrated result with repository-relative paths and canonicalize non-PDF authority hashes across CRLF/LF workspaces. This is required because ST8 hashes the LT3 integrated artifact as an upstream authority. The mathematical theorem, assertion contracts, candidate scope, negative results, claim tiers, CP1 status, and Pre-A status are unchanged.

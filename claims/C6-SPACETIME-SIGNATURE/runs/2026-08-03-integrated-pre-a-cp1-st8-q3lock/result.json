@@ -1,0 +1,682 @@
+{
+  "assertions": {
+    "passed": 74,
+    "rows": [
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: pre_a_cp1_st8_q3lock.py"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: pre_a_cp1_st8_q3lock_independent.py"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: pre-a-cp1-st8-q3lock-manifest.json"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: pre-a-cp1-st8-q3lock-certificate-260803.md"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: INDEX.md"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: registry.md"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: pre-a-cp1-st8-block-causal-bridge-manifest.json"
+      },
+      {
+        "actual": [
+          "tect/pre-a-cp1-st8-q3lock-manifest/0.1",
+          "PA-CP1-ST8-Q3LOCK-v0",
+          "PA-CP1-ST8-CB-v0",
+          "PRE-A-Q3-NONLINEAR-SPECIES-LOCK",
+          "0.1.0",
+          "T-054",
+          false
+        ],
+        "expected": [
+          "tect/pre-a-cp1-st8-q3lock-manifest/0.1",
+          "PA-CP1-ST8-Q3LOCK-v0",
+          "PA-CP1-ST8-CB-v0",
+          "PRE-A-Q3-NONLINEAR-SPECIES-LOCK",
+          "0.1.0",
+          "T-054",
+          false
+        ],
+        "group": "identity",
+        "name": "manifest identity tuple"
+      },
+      {
+        "actual": "PA-CP1-ST8-CB-v0",
+        "expected": "PA-CP1-ST8-CB-v0",
+        "group": "identity",
+        "name": "upstream identity"
+      },
+      {
+        "actual": [
+          "tect/pre-a-cp1-st8-q3lock-primary/0.1",
+          "PA-CP1-ST8-Q3LOCK-v0",
+          "PA-CP1-ST8-CB-v0",
+          "tect/pre-a-cp1-st8-q3lock-independent/0.1",
+          "PA-CP1-ST8-Q3LOCK-v0",
+          "PA-CP1-ST8-CB-v0"
+        ],
+        "expected": [
+          "tect/pre-a-cp1-st8-q3lock-primary/0.1",
+          "PA-CP1-ST8-Q3LOCK-v0",
+          "PA-CP1-ST8-CB-v0",
+          "tect/pre-a-cp1-st8-q3lock-independent/0.1",
+          "PA-CP1-ST8-Q3LOCK-v0",
+          "PA-CP1-ST8-CB-v0"
+        ],
+        "group": "identity",
+        "name": "child identity tuples"
+      },
+      {
+        "actual": [
+          54,
+          54
+        ],
+        "expected": [
+          54,
+          54
+        ],
+        "group": "children",
+        "name": "primary assertion oracle"
+      },
+      {
+        "actual": [
+          36,
+          36
+        ],
+        "expected": [
+          36,
+          36
+        ],
+        "group": "children",
+        "name": "independent assertion oracle"
+      },
+      {
+        "actual": [
+          "__future__",
+          "argparse",
+          "collections",
+          "fractions",
+          "hashlib",
+          "itertools",
+          "json",
+          "math",
+          "os",
+          "pathlib",
+          "tempfile",
+          "typing"
+        ],
+        "expected": "no primary module",
+        "group": "independence",
+        "name": "independent does not import primary"
+      },
+      {
+        "actual": 8,
+        "expected": 8,
+        "group": "cross_implementation",
+        "name": "children agree: species_count"
+      },
+      {
+        "actual": 12,
+        "expected": 12,
+        "group": "cross_implementation",
+        "name": "children agree: cube_edge_count"
+      },
+      {
+        "actual": {
+          "0": 1,
+          "2": 3,
+          "4": 3,
+          "6": 1
+        },
+        "expected": {
+          "0": 1,
+          "2": 3,
+          "4": 3,
+          "6": 1
+        },
+        "group": "cross_implementation",
+        "name": "children agree: cube_laplacian_spectrum"
+      },
+      {
+        "actual": "zero",
+        "expected": "zero",
+        "group": "cross_implementation",
+        "name": "children agree: origin_lock_hessian"
+      },
+      {
+        "actual": 2,
+        "expected": 2,
+        "group": "cross_implementation",
+        "name": "children agree: ordered_minimum_count"
+      },
+      {
+        "actual": {
+          "0": 2,
+          "12": 2,
+          "3": 16,
+          "4": 30,
+          "5": 48,
+          "6": 64,
+          "7": 48,
+          "8": 30,
+          "9": 16
+        },
+        "expected": {
+          "0": 2,
+          "12": 2,
+          "3": 16,
+          "4": 30,
+          "5": 48,
+          "6": 64,
+          "7": 48,
+          "8": 30,
+          "9": 16
+        },
+        "group": "cross_implementation",
+        "name": "children agree: cut_histogram"
+      },
+      {
+        "actual": "1/8",
+        "expected": "1/8",
+        "group": "cross_implementation",
+        "name": "children agree: finite_collective_effective_quartic"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "group": "cross_implementation",
+        "name": "children agree: physical_diagonal_continuum_quartic"
+      },
+      {
+        "actual": [
+          "9",
+          "25",
+          "25"
+        ],
+        "expected": [
+          "9",
+          "25",
+          "25"
+        ],
+        "group": "cross_implementation",
+        "name": "children agree: pah1_collective_tangent_squared_frequencies"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "cross_implementation",
+        "name": "children agree: quadratic_connected_control_nullity"
+      },
+      {
+        "actual": "-1/12",
+        "expected": "-1/12",
+        "group": "cross_implementation",
+        "name": "children agree: negative_lambda_bipartite_threshold"
+      },
+      {
+        "actual": {
+          "0": 1,
+          "2": 3,
+          "4": 3,
+          "6": 1
+        },
+        "expected": {
+          "0": 1,
+          "2": 3,
+          "4": 3,
+          "6": 1
+        },
+        "group": "exact_result",
+        "name": "exact species spectrum"
+      },
+      {
+        "actual": {
+          "0": 2,
+          "12": 2,
+          "3": 16,
+          "4": 30,
+          "5": 48,
+          "6": 64,
+          "7": 48,
+          "8": 30,
+          "9": 16
+        },
+        "expected": {
+          "0": 2,
+          "12": 2,
+          "3": 16,
+          "4": 30,
+          "5": 48,
+          "6": 64,
+          "7": 48,
+          "8": 30,
+          "9": 16
+        },
+        "group": "exact_result",
+        "name": "exact cut histogram"
+      },
+      {
+        "actual": 2,
+        "expected": 2,
+        "group": "exact_result",
+        "name": "two ordered minima"
+      },
+      {
+        "actual": "zero",
+        "expected": "zero",
+        "group": "exact_result",
+        "name": "origin Hessian zero"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "exact_result",
+        "name": "quadratic control nullity one"
+      },
+      {
+        "actual": [
+          "9",
+          "25",
+          "25"
+        ],
+        "expected": [
+          "9",
+          "25",
+          "25"
+        ],
+        "group": "exact_result",
+        "name": "PA-H1 tangent fixture"
+      },
+      {
+        "actual": "-1/12",
+        "expected": "-1/12",
+        "group": "exact_result",
+        "name": "negative threshold fixture"
+      },
+      {
+        "actual": [
+          "certificate",
+          "independent_result",
+          "independent_script",
+          "integrated_result",
+          "integrated_verifier",
+          "primary_result",
+          "primary_script"
+        ],
+        "expected": [
+          "certificate",
+          "independent_result",
+          "independent_script",
+          "integrated_result",
+          "integrated_verifier",
+          "primary_result",
+          "primary_script"
+        ],
+        "group": "artifact_routing",
+        "name": "manifest artifact keys"
+      },
+      {
+        "actual": "strategy/pre-a-cp1-st8-q3lock-certificate-260803.md",
+        "expected": "strategy/pre-a-cp1-st8-q3lock-certificate-260803.md",
+        "group": "artifact_routing",
+        "name": "manifest artifact route: certificate"
+      },
+      {
+        "actual": "codes/foundations/pre_a_cp1_st8_q3lock.py",
+        "expected": "codes/foundations/pre_a_cp1_st8_q3lock.py",
+        "group": "artifact_routing",
+        "name": "manifest artifact route: primary_script"
+      },
+      {
+        "actual": "codes/foundations/pre_a_cp1_st8_q3lock_independent.py",
+        "expected": "codes/foundations/pre_a_cp1_st8_q3lock_independent.py",
+        "group": "artifact_routing",
+        "name": "manifest artifact route: independent_script"
+      },
+      {
+        "actual": "codes/foundations/pre_a_cp1_st8_q3lock_verify.py",
+        "expected": "codes/foundations/pre_a_cp1_st8_q3lock_verify.py",
+        "group": "artifact_routing",
+        "name": "manifest artifact route: integrated_verifier"
+      },
+      {
+        "actual": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-st8-q3lock/result.json",
+        "expected": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-st8-q3lock/result.json",
+        "group": "artifact_routing",
+        "name": "manifest artifact route: primary_result"
+      },
+      {
+        "actual": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-st8-q3lock/result.json",
+        "expected": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-st8-q3lock/result.json",
+        "group": "artifact_routing",
+        "name": "manifest artifact route: independent_result"
+      },
+      {
+        "actual": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-st8-q3lock/result.json",
+        "expected": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-st8-q3lock/result.json",
+        "group": "artifact_routing",
+        "name": "manifest artifact route: integrated_result"
+      },
+      {
+        "actual": "NG-2026-08-03-PRE-A-CP1-Q3LOCK-QUADRATIC-CONNECTIVITY-CI8",
+        "expected": "NG-2026-08-03-PRE-A-CP1-Q3LOCK-QUADRATIC-CONNECTIVITY-CI8",
+        "group": "negative_registry",
+        "name": "manifest negative id"
+      },
+      {
+        "actual": "NG-2026-08-03-PRE-A-CP1-Q3LOCK-QUADRATIC-CONNECTIVITY-CI8",
+        "expected": "present",
+        "group": "negative_registry",
+        "name": "negative registry entry"
+      },
+      {
+        "actual": [
+          true,
+          true
+        ],
+        "expected": [
+          true,
+          true
+        ],
+        "group": "index",
+        "name": "strategy index entry"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "anchors",
+        "name": "certificate anchor: section-3-candidate-definition"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "anchors",
+        "name": "certificate anchor: section-4-complete-square-locking-theorem"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "anchors",
+        "name": "certificate anchor: section-6-origin-and-ordered-hessians"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "anchors",
+        "name": "certificate anchor: section-7-minimality-and-quadratic-fork"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "anchors",
+        "name": "certificate anchor: section-9-collective-and-volume-ledgers"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "anchors",
+        "name": "certificate anchor: section-10-pah1-tangent-calibration"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "anchors",
+        "name": "certificate anchor: section-12-causal-and-cp1-boundary"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate_scope",
+        "name": "certificate phrase: H_{\\min}=-\\frac{N^3r^2}{4g}<H_\\lambda(0,0)=0"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate_scope",
+        "name": "certificate phrase: D^2\\Delta H_\\lambda(0)=0"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate_scope",
+        "name": "certificate phrase: g_{\\rm eff}=\\frac g8"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate_scope",
+        "name": "certificate phrase: h^3=\\frac{a^3}{8}"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate_scope",
+        "name": "certificate phrase: lambda/g>16/9"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate_scope",
+        "name": "certificate phrase: CP1 complete=false"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate_scope",
+        "name": "certificate phrase: Pre-A complete=false"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate_scope",
+        "name": "certificate phrase: physical empty space"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate_scope",
+        "name": "certificate phrase: not an invariant full quantum Hilbert"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "no_overclaim",
+        "name": "scope remains false: inherits_original_fine_translation_symmetry"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "no_overclaim",
+        "name": "scope remains false: thermodynamic_phase_transition"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "no_overclaim",
+        "name": "scope remains false: interacting_classical_continuum_limit"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "no_overclaim",
+        "name": "scope remains false: interacting_quantum_continuum_limit"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "no_overclaim",
+        "name": "scope remains false: physical_vacuum"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "no_overclaim",
+        "name": "scope remains false: below_empty_space"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "no_overclaim",
+        "name": "scope remains false: event_horizon"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "no_overclaim",
+        "name": "scope remains false: gravity"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "no_overclaim",
+        "name": "scope remains false: cooling"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "no_overclaim",
+        "name": "scope remains false: CP1_complete"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "no_overclaim",
+        "name": "scope remains false: Pre_A_complete"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "no_overclaim",
+        "name": "no physical predictions"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "no_overclaim",
+        "name": "no holdout prediction"
+      },
+      {
+        "actual": [
+          "e49c81e2d2f84e259d40e2fb8192f3bcd198b355184845d76d8f58807d0d78ee",
+          "e49c81e2d2f84e259d40e2fb8192f3bcd198b355184845d76d8f58807d0d78ee",
+          "e49c81e2d2f84e259d40e2fb8192f3bcd198b355184845d76d8f58807d0d78ee"
+        ],
+        "expected": "all equal",
+        "group": "portability",
+        "name": "portable LF CRLF CR hashes"
+      },
+      {
+        "actual": 54,
+        "expected": 54,
+        "group": "stored_children",
+        "name": "stored primary is fresh"
+      },
+      {
+        "actual": 36,
+        "expected": 36,
+        "group": "stored_children",
+        "name": "stored independent is fresh"
+      }
+    ],
+    "total": 74
+  },
+  "authority": "integrated finite nonlinear locking and quadratic-fork audit; not CP1 or Pre-A closure",
+  "candidate_family": "PRE-A-Q3-NONLINEAR-SPECIES-LOCK",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-v0",
+  "child_assertions": {
+    "combined": 164,
+    "independent": 36,
+    "integrated": 74,
+    "primary": 54
+  },
+  "claim_bearing": false,
+  "claim_context": [
+    "C6-SPACETIME-SIGNATURE",
+    "A2-FULL-PRODUCTION-WELLPOSED"
+  ],
+  "issued": "2026-08-03",
+  "negative_id": "NG-2026-08-03-PRE-A-CP1-Q3LOCK-QUADRATIC-CONNECTIVITY-CI8",
+  "no_overclaim": "This package proves a finite candidate-scope quartic locking theorem and a restricted positive-quadratic connectivity no-go. It does not derive the locking term or block origin, retain fine one-site translation, connect the harmonic origin graph, classify other stationary or metastable points, establish renormalized poles, select a pure ordered finite quantum phase, prove a thermodynamic or quantum phase transition, identify physical empty space or a below-empty-space sign, prove a regulator removal, causal continuum or exact finite cone, reconstruct characteristic data from the same selected state, derive PA-H1 beyond a tuned invariant-collective tangent, produce cooling, gravity or an event horizon, complete CP1, or complete Pre-A.",
+  "parent_id": "PA-CP1-ST8-CB-v0",
+  "schema": "tect/pre-a-cp1-st8-q3lock-integrated/0.1",
+  "scope": {
+    "CP1_complete": false,
+    "Pre_A_complete": false,
+    "below_empty_space": false,
+    "cooling": false,
+    "event_horizon": false,
+    "exact_finite_nonlinear_locking_theorem": true,
+    "gravity": false,
+    "inherits_original_fine_translation_symmetry": false,
+    "interacting_classical_continuum_limit": false,
+    "interacting_quantum_continuum_limit": false,
+    "one_connected_interaction_graph_candidate": true,
+    "physical_vacuum": false,
+    "preserves_ST8_origin_hessian": true,
+    "preserves_same_H_classical_sign": true,
+    "thermodynamic_phase_transition": false
+  },
+  "sources": [
+    {
+      "path": "codes/foundations/pre_a_cp1_st8_q3lock_verify.py",
+      "sha256": "05653de38e4dee055fefa8ebc1599b35a72a61b6592543856aa87d0821c6d4aa"
+    },
+    {
+      "path": "codes/foundations/pre_a_cp1_st8_q3lock.py",
+      "sha256": "679e3d6b0b8a5a350f9f9d18b5046aef7692ba2c0f112cec0436a7c3524b3402"
+    },
+    {
+      "path": "codes/foundations/pre_a_cp1_st8_q3lock_independent.py",
+      "sha256": "358fd0f88a2709eeb77b621744bce1e03844d8408df031389bf03b1002cf1dd8"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-manifest.json",
+      "sha256": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-certificate-260803.md",
+      "sha256": "2288daa63fa26283a912bcffa1cbcf4a17a7f7c4c07125b563050caf676ce990"
+    },
+    {
+      "path": "strategy/INDEX.md",
+      "sha256": "27287717996e810cd82a59c65de785f869e9423f213e836e78378922c3c5a039"
+    },
+    {
+      "path": "negative-results/registry.md",
+      "sha256": "d425dc58a0b83bec22241affb5e795531797e64a0899e7b2f7b22a16e7a96fec"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json",
+      "sha256": "b0a8ddec5c5082da816d352f09affc8e5226a31106842b106920f49402879bcb"
+    }
+  ],
+  "task_id": "T-054",
+  "verdict": "ADVANCE THE MINIMAL ANALYTIC QUARTIC Q3 LOCK; REJECT POSITIVE QUADRATIC CONNECTIVITY AS AN EIGHT-NODE-PRESERVING REPAIR; KEEP CP1 OPEN",
+  "version": "0.1.0"
+}

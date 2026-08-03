@@ -1,0 +1,154 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-manifest/0.1",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-v0",
+  "parent_id": "PA-CP1-ST8-CB-v0",
+  "candidate_family": "PRE-A-Q3-NONLINEAR-SPECIES-LOCK",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 exact finite nonlinear-locking candidate certificate; not a TECT claim, tier change, CP1 completion, or Pre-A closure",
+  "claim_context": [
+    "C6-SPACETIME-SIGNATURE",
+    "A2-FULL-PRODUCTION-WELLPOSED"
+  ],
+  "comparison_context": "T-054 Pre-A candidate tournament",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "Add a positive Q3-edge quartic locking term to the exact eight-species ST8 representation. The new local polynomial leaves the entire zero-background Hessian and its eight critical species modes unchanged, but nonlinearly connects the species. For r<0 it preserves the identical-Hamiltonian minimum energy below the zero configuration while reducing the 256 sign minima to exactly two. At either ordered minimum its species Hessian is lambda*v^2 times the Q3 Laplacian, so the unique collective singlet remains the lowest branch and has an exact nonlinear classical reduction. A positive quadratic connected repair would instead reduce the critical nullity from eight to one. The new term depends on a fixed 2x2x2 block origin, and the finite continuous-time dynamics still has no exact characteristic cone. No physical-empty-space comparison, pure ordered finite quantum phase, selected boundary state, causal ultraviolet completion, CP1, or Pre-A closure follows.",
+  "verdict": "ADVANCE THE MINIMAL ANALYTIC QUARTIC Q3 LOCK; REJECT POSITIVE QUADRATIC CONNECTIVITY AS AN EIGHT-NODE-PRESERVING REPAIR; KEEP CP1 OPEN",
+  "definition": {
+    "coarse_lattice": "Lambda_M=(Z/MZ)^3 with N=2M and N divisible by four",
+    "species": "epsilon in {0,1}^3",
+    "species_graph": "the twelve undirected edges of Q3",
+    "base_hamiltonian": "the exact ST8 sum of eight coarse nearest-neighbour real phi4 Hamiltonians",
+    "new_term": "Delta H_lambda=(lambda/4) sum_y sum_{epsilon~eta} (psi_epsilon-psi_eta)^2 (psi_epsilon^2+psi_eta^2)",
+    "parameter_domain": "chi>0, c>0, g>0, lambda>0; r is real; ordered theorem uses r<0",
+    "fixed_block_origin": true,
+    "fine_one_site_translation_invariant": false,
+    "coarse_translation_invariant": true,
+    "global_Z2_invariant": true,
+    "Q3_automorphism_invariant": true,
+    "fine_range": "one fine spatial step inside each fixed 2x2x2 block",
+    "relation_to_parent": "a new local deformation on the same finite phase space; not an identity or derived term of PA-CP1-LT3-RS-v0"
+  },
+  "exact_finite_theorem": {
+    "nonnegative_lock": "For lambda>0 every edge term is nonnegative and vanishes exactly when its two real endpoints agree.",
+    "origin_hessian": "The added polynomial is homogeneous of degree four, hence D^2 Delta H_lambda(0)=0 and the ST8 critical eight-species harmonic symbol is unchanged.",
+    "complete_square": "With v^2=-r/g, H_lambda+N^3*r^2/(4g) is the sum of kinetic, spatial-gradient, onsite g*(psi^2-v^2)^2/4, and Q3-lock terms.",
+    "global_minima": "For r<0, c>0, and a connected periodic coarse spatial graph, the spatial equality conditions make every species constant; connectivity of Q3 then gives exactly the two configurations psi_epsilon=+v for every epsilon and psi_epsilon=-v for every epsilon.",
+    "same_H_reference": "H_min=-N^3*r^2/(4g)<H_lambda(0,0)=0 under the same fixed Hamiltonian and additive convention.",
+    "old_sign_manifold_gap": "A sign pattern s has excess 2*lambda*M^3*v^4 times its Q3 cut size. The minimum nonzero cut is three and the exact cut histogram is {0:2,3:16,4:30,5:48,6:64,7:48,8:30,9:16,12:2}.",
+    "ordered_hessian": "At either ordered minimum the species block is (-2r) I + lambda*v^2 L_Q3, with L_Q3 spectrum 0,2,2,2,4,4,4,6.",
+    "finite_quantum_scope": "At each fixed finite regulator on L2(R^(8M^3)), positive inertia and coercive real polynomial potential give the standard Friedrichs/compact-resolvent Schrodinger operator; positivity improvement gives one unique strictly positive Z2-even and Q3-symmetric ground state. This imports prior-art hypotheses and proves no finite-volume pure ordered phase or uniform gap. Other classical stationary or metastable points are not classified."
+  },
+  "minimality_scope": {
+    "claim": "degree four is minimal only among nonzero real polynomial or real-analytic edge additions that preserve global Z2, have their own Hessian zero at the origin, and couple species",
+    "reason": "global Z2 removes odd Taylor degrees and Hessian preservation removes degree two; the first available nonconstant coupling degree is four",
+    "not_claimed": "uniqueness, canonical selection, or minimality among arbitrary C2 or nonanalytic functions",
+    "controls": {
+      "difference_fourth": "(a-b)^4 locks signs but has zero ordered quadratic splitting",
+      "square_difference": "(a^2-b^2)^2 splits the ordered tangent but does not lock opposite signs",
+      "negative_lambda": "on the Q3 bipartite ray the quartic coefficient is 2g+24lambda; for r<0 the energy is unbounded at or below lambda=-g/12",
+      "disconnected_graph": "a species graph with C connected components has 2^C sign minima and C unsplit collective branches"
+    }
+  },
+  "quadratic_connected_control": {
+    "negative_id": "NG-2026-08-03-PRE-A-CP1-Q3LOCK-QUADRATIC-CONNECTIVITY-CI8",
+    "term": "Delta H_eta=(eta/2) sum_y sum_{epsilon~eta'} (psi_epsilon-psi_eta')^2 with eta>0",
+    "finding": "at r=0 and the spatial zero mode, the origin Hessian gains eta L_Q3 and has species spectrum 0,2eta with multiplicity three,4eta with multiplicity three,6eta; its critical nullity is one, not eight",
+    "excluded_only": "positive quadratic Dirichlet connectivity on a connected species graph while preserving all eight constant-species critical zero modes"
+  },
+  "collective_reduction": {
+    "finite_unweighted_canonical_map": "psi_epsilon=Q/sqrt(8), rho_epsilon=P/sqrt(8)",
+    "finite_symplectic_status": "exact canonical embedding and invariant classical nonlinear submanifold; not an invariant full quantum Hilbert subspace",
+    "finite_restricted_quartic": "g_eff=g/8",
+    "physical_volume_ledger": "a separately declared spacing-dependent family, not an automatic rewrite of the spacing-one ST8 Hamiltonian: with fine spacing h=a/2, every coarse species Riemann sum carries a^3/8=h^3, canonical rho=h^3*Pi, kinetic rho^2/(2*chi*h^3)=h^3*Pi^2/(2chi), and the continuum symplectic form and Hamiltonian carry (1/8) sum_epsilon integral",
+    "physical_diagonal_field": "psi_epsilon=psi and Pi_epsilon=Pi for all epsilon",
+    "physical_diagonal_quartic": "g remains g because the common 1/8 factor cancels the eight species",
+    "state_boundary": "the finite quantum ground is Q3-symmetric but is not supported on the classical diagonal submanifold, so no selected collective quantum state is proved"
+  },
+  "pah1_calibration": {
+    "status": "inserted exact-circle collective ordered-tangent calibration only",
+    "inserted": [
+      "the Q3 collective singlet reduction",
+      "one spatial axis and the transverse-zero sector",
+      "PA-H1 circumference pi/2",
+      "c_phys/chi=1",
+      "-2r/chi=9",
+      "the spatial modes n=0,+1,-1"
+    ],
+    "result": "the collective spatial squared frequencies are 9,25,25",
+    "degeneracy_warning": "the PA-H1 5,5 pair is the two real spatial n=plus-or-minus-one modes in the invariant collective reduction; it is not the first Q3 transverse triplet and is not asserted to be the three lowest modes of the full tangent. The latter would additionally require lambda/g>16/9 under the inserted tuning.",
+    "not_derived": "the circumference, axis, transverse restriction, parameter tuning, boundary role, nonlinear shifted PA-H1 theory, or quantum boundary state"
+  },
+  "cp1_clause_audit": {
+    "one_finite_phase_space_and_Weyl_algebra": true,
+    "one_finite_regulator_and_volume_convention": true,
+    "one_hbar_and_field_normalization": true,
+    "one_deformed_Hamiltonian_and_zero_configuration_reference": true,
+    "finite_selected_symmetric_ground_by_prior_art": true,
+    "interacting_ordering_sector": true,
+    "connected_interaction_hypergraph": true,
+    "connected_harmonic_graph_at_origin": false,
+    "regulator_removal_and_counterterms": false,
+    "physical_empty_space_or_no_condensate_reference": false,
+    "pure_ordered_quantum_state": false,
+    "characteristic_boundary_map_or_reduction": false,
+    "same_selected_state_boundary_restriction": false,
+    "local_3plus1_causal_ultraviolet_completion": false,
+    "CP1_complete": false
+  },
+  "causal_boundary": {
+    "inherited_negative_id": "NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE",
+    "finite_continuous_time_exact_cone": false,
+    "reason": "the spatial nearest-neighbour harmonic linearization retains nonzero analytic tails at arbitrarily small positive time; the quartic lock does not repair this at the origin",
+    "next_positive_route": "fix the a^3/8 physical ledger, prove a controlled classical semidiscrete-to-continuum Goursat and symplectic-flux theorem, and separately construct or reject an exact-causal energy-preserving quantum parent with the same selected state"
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "the ST8 eight-species finite phase space and base Hamiltonian",
+      "the Q3 species graph",
+      "the positive locking coefficient lambda",
+      "the fixed 2x2x2 block origin",
+      "the PA-H1 circle, sector and tuning used only for tangent calibration"
+    ],
+    "derived_outputs": [
+      "zero origin lock Hessian",
+      "two exact global classical minima and their same-H energy",
+      "the full Q3 sign-cut histogram and locking gap",
+      "the ordered Q3 Hessian spectrum",
+      "the exact classical collective reduction",
+      "the quadratic-connectivity eight-node no-go",
+      "the explicit one-fine-site translation counterexample"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "scope": {
+    "exact_finite_nonlinear_locking_theorem": true,
+    "preserves_ST8_origin_hessian": true,
+    "preserves_same_H_classical_sign": true,
+    "one_connected_interaction_graph_candidate": true,
+    "inherits_original_fine_translation_symmetry": false,
+    "thermodynamic_phase_transition": false,
+    "interacting_classical_continuum_limit": false,
+    "interacting_quantum_continuum_limit": false,
+    "physical_vacuum": false,
+    "below_empty_space": false,
+    "event_horizon": false,
+    "gravity": false,
+    "cooling": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "artifacts": {
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-certificate-260803.md",
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-st8-q3lock/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-st8-q3lock/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-st8-q3lock/result.json"
+  },
+  "prior_art_boundary": "Multicomponent phi4 models, graph-Laplacian mode splitting, Landau quartic anisotropies, finite anharmonic Schrodinger ground-state theorems, and invariant singlet reductions are established mathematics. No world-first or new general theorem is claimed. The repository-specific result is the exact convention-level Q3 locking fork and its audit against the ST8, PA-H1, physical-reference, and CP1 contracts.",
+  "no_overclaim": "This package proves a finite candidate-scope quartic locking theorem and a restricted positive-quadratic connectivity no-go. It does not derive the locking term or block origin, retain fine one-site translation, connect the harmonic origin graph, classify other stationary or metastable points, establish renormalized poles, select a pure ordered finite quantum phase, prove a thermodynamic or quantum phase transition, identify physical empty space or a below-empty-space sign, prove a regulator removal, causal continuum or exact finite cone, reconstruct characteristic data from the same selected state, derive PA-H1 beyond a tuned invariant-collective tangent, produce cooling, gravity or an event horizon, complete CP1, or complete Pre-A."
+}
