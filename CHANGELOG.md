@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Harden ST8 reproducibility and correct the speed ledger] - 2026-08-03
+
+Applied the independent referee fixes without changing the scoped theorem: portable text hashes, stored integrated staleness comparison, derived-count fixtures, exact provenance and artifact-route checks, executable c_LT3(a)=c_phys/a^2 parameter reconciliation, stable evidence anchors, and corrected squared-speed wording. Fresh primary 67/67, non-importing independent 37/37, and integrated 62/62 checks pass, 166 combined. CP1 and Pre-A remain open.
+
+## [PA-CP1-ST8 exact staggered factorization and causal-boundary audit] - 2026-08-03
+
+Registered EXP-000712 and PA-CP1-ST8-CB-v0. The LT3 parent factorizes exactly into eight decoupled staggered coarse phi4 species for N divisible by four. A declared harmonic family has the fixed-band Klein-Gordon symbol limit and a tuned exact-geometry PA-H1 tangent spectrum, while a nonzero small-time neighbour response rejects strict finite-regulator characteristic support. The restricted connected-standard-scalar equivalence also fails by nullity and minimum-count invariants. Primary 66, independent 36 and integrated 51 assertions pass, 153 combined. Interacting and quantum continuum limits, same-state characteristic reconstruction, physical empty space, one connected bulk, cooling, CP1 and Pre-A remain open.
+
 ## [Local lattice CP1 scaffold fixes the same-H ordering sign and exposes the boundary gate] - 2026-08-03
 
 Registered EXP-000711 and PA-CP1-LT3-RS-v0. The exact finite-lattice theorem proves eight nodes, 256 minima, H_min=-Vr^2/(4g)<H(0,0)=0, a moment-derived negative quantum trial witness, and the scoped translation-symmetric proper-site-boundary no-go. Independent and integrated audits pass 248 checks. Physical empty space, a finite-energy no-condensate reference, characteristic reconstruction, CP1, and Pre-A remain open.

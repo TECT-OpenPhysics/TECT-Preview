@@ -1,0 +1,181 @@
+{
+  "schema": "tect/pre-a-cp1-st8-block-causal-bridge-manifest/0.1",
+  "candidate_id": "PA-CP1-ST8-CB-v0",
+  "parent_id": "PA-CP1-LT3-RS-v0",
+  "candidate_family": "PRE-A-STAGGERED-BLOCK-CAUSAL-BRIDGE",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 exact finite staggered-factorization and causal-boundary certificate; not a TECT claim, tier change, CP1 completion, or Pre-A closure",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "comparison_context": "A2-FULL-PRODUCTION-WELLPOSED",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "For every PA-CP1-LT3-RS-v0 lattice side N divisible by four, the signed parity-block map phi_(2y+epsilon)=(-1)^sum(y) psi_epsilon(y), with the same map on momentum, is an exact canonical signed permutation and factorizes the full nonlinear Hamiltonian into eight decoupled nearest-neighbour coarse phi4 Hamiltonians. Thus the eight fine Q nodes are zone-folded zero modes of eight real coarse species; the 256 parent minima and finite quantum tensor product follow as analytic corollaries of this factorization and the registered LT3 complete-square and finite-ground theorems. A newly declared spacing-dependent harmonic family, with a as the coarse spacing and inherited fine spacing a/2, has the fixed-band Klein-Gordon symbol limit and a global group-speed bound. After selecting one species, one axis and the transverse-zero sector and tuning c/chi=1 and -2r/chi=9, its ordered tangent on the exact PA-H1 circle of circumference pi/2 has squared frequencies 9,25,25. This is only a tuned tangent calibration. The continuous-time semidiscrete harmonic propagator has a nonzero nearest-neighbour t-squared response at arbitrarily small time, so bounded group speed does not give exact finite-regulator characteristic support. No characteristic reconstruction, state restriction, interacting or quantum continuum limit, physical empty-space comparison, CP1, or Pre-A closure follows.",
+  "verdict": "ADVANCE THE EXACT STAGGERED FACTORIZATION AND HARMONIC CONTINUUM CALIBRATION; REJECT EXACT FINITE-LATTICE CHARACTERISTIC COMPLETION AND KEEP CP1 OPEN",
+  "exact_staggered_theorem": {
+    "fine_lattice": "Lambda_N=(Z/NZ)^3 with N=4m",
+    "coarse_lattice": "Lambda_M=(Z/MZ)^3 with M=N/2 even",
+    "species": "epsilon in {0,1}^3",
+    "map": "phi_(2y+epsilon)=(-1)^(y1+y2+y3) psi_epsilon(y), pi_(2y+epsilon)=(-1)^(y1+y2+y3) rho_epsilon(y)",
+    "periodicity": "the sign is periodic exactly because M is even; N=4m+2 produces an antiperiodic or twisted coarse boundary instead",
+    "canonical_status": "exact signed orthogonal permutation preserving the finite symplectic form",
+    "stiffness_identity": "sum_x(B_i phi)_x^2=sum_(epsilon,y)(psi_epsilon(y+e_i)-psi_epsilon(y))^2",
+    "hamiltonian_identity": "H_N=sum_epsilon H_std,M[psi_epsilon,rho_epsilon] including kinetic, mass, stiffness and onsite quartic terms",
+    "interaction_status": "all eight species are exactly decoupled in v0, including the quartic interaction",
+    "all_N_proof": "index-level algebra for N=4m",
+    "executable_coverage": "full side-4 operator Gram conjugacy plus deterministic exact energy fixtures at N=4,8,12 and an N=6 hostile boundary control"
+  },
+  "zone_folding_and_corollaries": {
+    "fine_nodes": "Q_sigma=(sigma_1*pi/2,sigma_2*pi/2,sigma_3*pi/2)",
+    "interpretation": "eight folded coarse-species zero modes, not eight proved physical valleys",
+    "kernel_dimension": 8,
+    "classical_ground_count": 256,
+    "classical_ground_provenance": "exact corollary of the block identity plus the PA-CP1-LT3-RS-v0 complete-square classification; executable fixtures enumerate the 2^8 block sign minima",
+    "cubic_umklapp_interpretation": "species bookkeeping under zone folding; not evidence that one connected node sector interacts internally",
+    "finite_quantum_factorization": "analytic corollary of the signed-coordinate L2 unitary, tensor-product operator domains, and the imported unique finite-block ground theorem",
+    "finite_quantum_ground": "the unique fine ground is the inverse-unitary image of the tensor product of the eight unique block grounds and selects no classical sign pattern"
+  },
+  "restricted_connected_scalar_no_go": {
+    "negative_id": "NG-2026-08-03-PRE-A-CP1-ST8-ONE-CONNECTED-SCALAR-EQUIVALENCE",
+    "comparator": "one real scalar on one connected finite graph, positive edge-weight Dirichlet stiffness, uniform onsite r*psi^2/2+g*psi^4/4, positive inertia, the same phase-space dimension, and no quotient",
+    "critical_obstruction": "at r=0 the configuration and full phase-space Hessian nullity is one for the connected comparator and eight for ST8; invertible C1 canonical equivalence preserving H up to positive scale and additive constant preserves Hessian nullity by congruence",
+    "ordered_obstruction": "for r<0, ker L_J consists of constants and the complete square forces exactly two uniform sign minima, versus 256 for ST8",
+    "excluded_only": "exact invertible fixed-regulator equivalence to one connected standard positive-edge scalar of the same phase dimension",
+    "not_excluded": [
+      "noninvertible coarse graining or projection",
+      "constraints or gauge quotients",
+      "enlarged unit cells or multiple species",
+      "signed, frustrated, higher-range or higher-derivative stencils",
+      "complex or multiple fields and auxiliary variables",
+      "approximate infrared or controlled continuum equivalence",
+      "a connected one-field parent with a nonstandard positive-square stencil"
+    ]
+  },
+  "declared_harmonic_regulator_family": {
+    "spacing": "a is the coarse-lattice spacing; the inherited fine-lattice spacing is a/2",
+    "parameter_map": "the LT3 stiffness in the spacing-a family is c_LT3(a)=c_phys/a^2 with chi fixed",
+    "symbol": "K_a(k)=r+(4c/a^2) sum_i sin^2(a*k_i/2)",
+    "fixed_band_limit": "K_a(k)=r+c|k|^2-(c*a^2/12)sum_i k_i^4+O(a^4)",
+    "group_speed": "for r>0, |grad_k omega_a|^2<=c/chi globally; at r=0 the bound is off the zero mode with the corresponding Lipschitz envelope",
+    "proof_identity": "4 sin^2(z/2)-sin^2(z)=4 sin^4(z/2)>=0",
+    "speed_reconciliation": "(a/2)^2*[4*c_LT3(a)/chi]=c_phys/chi, so the fine LT3 physical speed equals the coarse continuum speed sqrt(c_phys/chi)",
+    "family_status": "newly declared spacing-dependent harmonic family, not an automatic limit of the fixed-c spacing-one LT3 parent",
+    "interacting_limit": "OPEN",
+    "quantum_limit_and_counterterms": "OPEN"
+  },
+  "pah1_tangent_calibration": {
+    "authority": "PA-C0A-GAUSSIAN-CCR-PAH1-EMBEDDING-v0 finite-image fixture",
+    "selected_inputs": [
+      "one of eight coarse species",
+      "one spatial axis",
+      "the transverse-zero sector",
+      "circle circumference pi/2",
+      "c/chi=1",
+      "r=-9*chi/2"
+    ],
+    "normalized_basis": [
+      "sqrt(2/pi)",
+      "2*cos(4x)/sqrt(pi)",
+      "2*sin(4x)/sqrt(pi)"
+    ],
+    "ordered_curvature": "-2r/chi=9",
+    "frequency_squares": [
+      9,
+      25,
+      25
+    ],
+    "frequencies": [
+      3,
+      5,
+      5
+    ],
+    "status": "exact tuned classical quadratic tangent calibration",
+    "not_derived": "species, axis, sector, parameter tuning, PA-H1 boundary role, nonlinear embedding, quantum state embedding, or characteristic trace"
+  },
+  "finite_exact_cone_obstruction": {
+    "negative_id": "NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE",
+    "harmonic_generator": "A=mu*I+c*L on the coarse periodic graph, with chi*q_tt+A*q=0",
+    "initial_data": "q(0)=delta_0 and q_t(0)=0",
+    "propagator": "q(t)=cos(t*sqrt(A/chi))*delta_0",
+    "nearest_response": "q_e(t)=c*t^2/(2chi)+O(t^4) at a nearest neighbour e",
+    "distance_two_control": "q_(2e)(t)=c^2*t^4/(12chi^2)+O(t^6) on the side-4 fixture",
+    "conclusion": "for every proposed finite strict support speed v, sufficiently small t<d(0,e)/v has a nonzero response outside d<=v*t",
+    "excluded_only": "strict compact-support domain of dependence and exact characteristic sheets for this continuous-time semidiscrete harmonic propagation, and any inference of them from bounded group speed alone",
+    "not_excluded": [
+      "exponential or Lieb-Robinson quasi-local cones",
+      "a controlled continuum Lorentzian limit",
+      "a discrete-time finite-depth exact-causal rule",
+      "a separately supplied continuum hyperbolic parent",
+      "effective wave-packet propagation speeds"
+    ],
+    "quantum_interacting_commutator_computed": false
+  },
+  "energy_reference_ledger": {
+    "same_H_classical_LT3_sign": "retained: H_min=-V*r^2/(4g)<H(0,0)=0 for r<0",
+    "physical_empty_space": "UNIDENTIFIED",
+    "normalized_quantum_no_condensate_reference": "UNIDENTIFIED",
+    "below_physical_empty_space": "NOT TESTED",
+    "additive_energy_convention_fixed_physically": false
+  },
+  "minimum_repair": {
+    "continuum_route": "prove an interacting classical and quantum continuum limit with cutoff-uniform locality, counterterms, state convergence, symplectic flux and two-sheet characteristic reconstruction",
+    "exact_causal_route": "replace or enlarge the regulator by an exact-causal discrete-time or other parent and derive LT3 as a controlled reduction",
+    "connectivity_route": "if one connected bulk is required, introduce a registered parity-mixing or coupled-species repair and re-audit nodes, minima, state and continuum",
+    "state_route": "derive rather than select by hand the PA-H1 species, slice and boundary state from the same parent",
+    "cp2_route": "promote r to a dynamical coordinate only after CP1, retaining total energy and work"
+  },
+  "inserted_inputs": [
+    "the PA-CP1-LT3-RS-v0 finite Hamiltonian",
+    "N divisible by four and the even coarse torus",
+    "the signed parity-block coordinate map",
+    "a newly declared coarse-spacing regulator family",
+    "one PA-H1 species, axis and transverse-zero sector",
+    "the PA-H1 circumference and tuned c/chi and r/chi values"
+  ],
+  "derived_outputs": [
+    "the exact full nonlinear eight-block factorization",
+    "the zone-folded interpretation of the eight nodes",
+    "the restricted connected-standard-scalar exact-equivalence no-go",
+    "the harmonic fixed-band Klein-Gordon symbol and speed bound",
+    "the exact tuned PA-H1 tangent spectrum",
+    "the continuous-time finite-lattice strict-support-cone obstruction"
+  ],
+  "physical_predictions": [],
+  "holdout_prediction": false,
+  "scope": {
+    "exact_finite_block_canonical_equivalence": true,
+    "eight_decoupled_coarse_species": true,
+    "fine_nodes_are_folded_coarse_zero_modes": true,
+    "finite_quantum_tensor_factorization": true,
+    "periodic_block_factorization_requires_N_divisible_by_four": true,
+    "global_harmonic_group_speed_bound": true,
+    "harmonic_fixed_band_continuum_symbol_limit": true,
+    "tuned_formal_ordered_continuum_pah1_tangent_calibration": true,
+    "interacting_continuum_limit": false,
+    "quantum_continuum_limit": false,
+    "strict_finite_lattice_causal_cone": false,
+    "finite_lattice_characteristic_sheets": false,
+    "continuum_characteristic_reconstruction": false,
+    "selected_pah1_species_or_sector": false,
+    "full_nonlinear_pah1_embedding": false,
+    "same_selected_state_characteristic_restriction": false,
+    "one_connected_bulk_sector": false,
+    "physical_empty_space": false,
+    "cooling_history": false,
+    "gravity": false,
+    "event_horizon": false,
+    "cp1_complete": false,
+    "pre_a_complete": false
+  },
+  "artifacts": {
+    "certificate": "strategy/pre-a-cp1-st8-block-causal-bridge-certificate-260803.md",
+    "primary_script": "codes/foundations/pre_a_cp1_st8_block_causal_bridge.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_block_causal_bridge_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_block_causal_bridge_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-st8-block-causal-bridge/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-st8-block-causal-bridge/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-st8-block-causal-bridge/result.json"
+  },
+  "prior_art_boundary": "Block-spin and staggered lattice variables, Brillouin-zone folding, species doubling, phi4 lattice models, continuum finite-difference symbols, semidiscrete dispersive propagation and Lieb-Robinson quasi-locality are established themes. This package makes no world-first claim. Its repository-specific contribution is the exact convention-level factorization and incompatibility audit of the declared LT3 parent against the PA-H1 and CP1 contracts.",
+  "no_overclaim": "This package proves an exact finite signed-block equivalence, analytic finite-quantum factorization corollary, a declared harmonic fixed-band regulator-family limit, a tuned exact-geometry PA-H1 ordered tangent calibration, a restricted connected-standard-scalar equivalence no-go, and a harmonic continuous-time strict-support-cone obstruction. It does not prove that the spacing-one parent automatically converges, an interacting or quantum continuum limit, a selected PA-H1 species or sector, a nonlinear or quantum PA-H1 embedding, characteristic reconstruction or state restriction, one connected bulk, a physical vacuum or below-empty-space sign, cooling, gravity, an event horizon, CP1, or Pre-A."
+}

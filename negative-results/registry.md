@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE](#ng-2026-08-03-pre-a-cp1-st8-continuous-time-exact-cone) | infer an exact finite-regulator compact-support domain of dependence or PA-H1 characteristic sheets from the bounded harmonic group speed of `PA-CP1-ST8-CB-v0` | the continuous-time semidiscrete harmonic propagator has nearest-neighbour response `c*t^2/(2chi)+O(t^4)`, nonzero for all sufficiently small positive times, so every proposed finite strict support cone fails. Retain effective speeds and possible quasi-local bounds; pursue a controlled Lorentzian continuum limit, an exact-causal discrete-time parent, or a separately supplied hyperbolic parent |
+| [NG-2026-08-03-PRE-A-CP1-ST8-ONE-CONNECTED-SCALAR-EQUIVALENCE](#ng-2026-08-03-pre-a-cp1-st8-one-connected-scalar-equivalence) | identify `PA-CP1-LT3-RS-v0` exactly and invertibly with one same-dimensional connected standard positive-edge real scalar Hamiltonian | the critical Hessian nullity is eight versus one, and the ordered complete-square minima number 256 versus two; invertible canonical equivalence preserves the former by congruence and the latter by bijection. This excludes only the stated exact standard comparator, not coarse graining, extra species, nonstandard stencils, auxiliaries, or controlled infrared equivalence |
 | [NG-2026-08-03-PRE-A-CP1-TRANSLATION-SYMMETRIC-PROPER-BOUNDARY-SELECTION](#ng-2026-08-03-pre-a-cp1-translation-symmetric-proper-boundary-selection) | select a proper nonempty characteristic boundary from the translation-invariant finite `PA-CP1-LT3-RS-v0` Hamiltonian and its unique ground state by a deterministic translation-covariant site rule | the translation group acts transitively and fixes the parent data, so every covariantly selected site subset is translation invariant and therefore empty or the full torus.  Retain the exact same-H classical ordering and energy-reference scaffold, but do not rename the periodic spatial boundary as a null or event horizon; derive relational or time-dependent characteristic sheets using a route with a regulator-level causal/locality estimate or a controlled Lorentzian emergence limit |
 | [NG-2026-08-03-PRE-A-PAH1-PAM2-UNCHANGED-INTERFACE](#ng-2026-08-03-pre-a-pah1-pam2-unchanged-interface) | identify the current six-dimensional PA-H1 finite image and sixteen-dimensional PA-M2 CI8 phase space as one unchanged exact state-, energy-, dynamics-, and regulator-preserving interface | a symplectic injection exists but leaves a ten-dimensional complement with nonunique state extension; positive quartic degree, the incompatible squared frequencies 9 and 25 versus one repeated `r/chi`, and cubic leakage to `3Q` separately block the strict affine/full-flow/node-only identification. Independent energy shifts also leave the cross-model and below-empty-space sign unidentified. Retain both scoped inputs and construct a common finite-regulator three-torus parent with one state and energy ledger |
 | [NG-2026-08-03-PRE-A-C0A-FINITE-HILBERT-BOUNDED-LOG-LIFT](#ng-2026-08-03-pre-a-c0a-finite-hilbert-bounded-log-lift) | extend the finite-state C0-A logarithm to a finite-spatial-mode Gaussian field by treating its quantum Hilbert space as finite-dimensional, uniformly bounding the transfer below, or imposing a finite occupation cutoff with exact CCR | the exact Mehler eigenvalues `2^(-3n)` accumulate at zero, so the transfer is injective but not uniformly bounded below and its logarithmic generator is unbounded; every finite occupation cutoff has a top-state commutator anomaly and cannot obey exact CCR.  Use infinite occupation Fock space and the unbounded semigroup generator; this does not refute the Gaussian reconstruction |
@@ -251,6 +253,85 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-pre-a-cp1-st8-continuous-time-exact-cone"></a>
+### NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE -- bounded lattice group speed is not an exact support cone
+
+**Failure mode.**  Infer an exact finite-speed compact-support domain of
+dependence, and hence finite-regulator characteristic sheets, from the bounded
+harmonic group speed of the ST8 coarse continuous-time lattice.
+
+**Evidence.**  For `A=mu*I+c*L`, positive `c,chi`, initial displacement
+`q(0)=delta_0` and zero initial velocity,
+
+`q(t)=cos(t*sqrt(A/chi))*delta_0`.
+
+At a nearest neighbour `e`, `A_e0=-c`, so Taylor expansion gives
+
+`q_e(t)=c*t^2/(2chi)+O(t^4)`.
+
+The leading coefficient is positive, hence this response is nonzero for every
+sufficiently small positive time.  Given any proposed finite strict support
+speed `v`, choose such a time with `t<d(0,e)/v`; the response is then nonzero
+outside `d<=v*t`.  An independent side-four distance-two control gives
+`c^2*t^4/(12chi^2)+O(t^6)`.
+
+**Boundary.**  This excludes only strict compact support for this continuous-
+time semidiscrete harmonic propagator and the inference of exact
+finite-regulator characteristic sheets from group speed alone.  It does not
+exclude exponential or Lieb--Robinson quasi-local cones, effective wave-packet
+speeds, a controlled Lorentzian continuum limit, an exact-causal discrete-time
+rule, or a separately supplied continuum hyperbolic parent.  No interacting
+quantum commutator is computed.
+
+**Consequence.**  Keep the exact staggered factorization and harmonic symbol
+limit, but leave `finite_lattice_characteristic_sheets=false` and
+`CP1 complete=false`.  The next positive route must control a continuum
+characteristic limit or replace or enlarge the regulator by an exact-causal
+parent before importing the PA-H1 two-sheet reconstruction.
+
+**Evidence files.**
+`strategy/pre-a-cp1-st8-block-causal-bridge-certificate-260803.md`;
+`strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json`;
+`codes/foundations/pre_a_cp1_st8_block_causal_bridge.py`;
+`codes/foundations/pre_a_cp1_st8_block_causal_bridge_independent.py`;
+`codes/foundations/pre_a_cp1_st8_block_causal_bridge_verify.py`.
+
+<a id="ng-2026-08-03-pre-a-cp1-st8-one-connected-scalar-equivalence"></a>
+### NG-2026-08-03-PRE-A-CP1-ST8-ONE-CONNECTED-SCALAR-EQUIVALENCE -- no exact reduction to one connected standard scalar
+
+**Failure mode.**  Identify the LT3/ST8 Hamiltonian at fixed finite regulator
+by an invertible `C1` canonical transformation with one same-phase-dimension
+real scalar on a connected graph, positive edge-weight Dirichlet stiffness,
+uniform onsite `r*psi^2/2+g*psi^4/4`, positive inertia, and no quotient.
+Allow only a positive overall Hamiltonian scale and an additive constant.
+
+**Evidence.**  At `r=0`, the connected positive-edge graph Laplacian has
+kernel equal to the constant fields and nullity one.  ST8 has eight exact
+folded constant species and nullity eight.  At a critical point, an invertible
+`C1` canonical identification changes the Hessian by an invertible congruence
+and preserves nullity.  For `r<0`, the connected comparator's complete square
+forces a constant field of magnitude `sqrt(-r/g)` and hence exactly two sign
+minima.  The ST8 factorization and imported LT3 complete-square theorem give
+`2^8=256` minima.  An invertible Hamiltonian identification would preserve
+their number.
+
+**Boundary.**  This is not a no-go for all connected one-field parents.  It
+does not exclude noninvertible coarse graining or projection, constraints or
+gauge quotients, enlarged cells or multiple species, signed or frustrated
+couplings, higher-range or higher-derivative positive squares, complex fields,
+auxiliaries, or approximate infrared and controlled continuum equivalence.
+
+**Consequence.**  Interpret the present eight nodes as exactly decoupled
+staggered species.  If CP1 requires one connected bulk, register and re-audit a
+parity-mixing or coupled-species successor rather than renaming v0 as connected.
+
+**Evidence files.**
+`strategy/pre-a-cp1-st8-block-causal-bridge-certificate-260803.md`;
+`strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json`;
+`codes/foundations/pre_a_cp1_st8_block_causal_bridge.py`;
+`codes/foundations/pre_a_cp1_st8_block_causal_bridge_independent.py`;
+`codes/foundations/pre_a_cp1_st8_block_causal_bridge_verify.py`.
 
 <a id="ng-2026-08-03-pre-a-cp1-translation-symmetric-proper-boundary-selection"></a>
 ### NG-2026-08-03-PRE-A-CP1-TRANSLATION-SYMMETRIC-PROPER-BOUNDARY-SELECTION -- symmetric finite parent data select no proper site boundary
