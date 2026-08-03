@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-PRE-A-PAH1-PAM2-UNCHANGED-INTERFACE](#ng-2026-08-03-pre-a-pah1-pam2-unchanged-interface) | identify the current six-dimensional PA-H1 finite image and sixteen-dimensional PA-M2 CI8 phase space as one unchanged exact state-, energy-, dynamics-, and regulator-preserving interface | a symplectic injection exists but leaves a ten-dimensional complement with nonunique state extension; positive quartic degree, the incompatible squared frequencies 9 and 25 versus one repeated `r/chi`, and cubic leakage to `3Q` separately block the strict affine/full-flow/node-only identification. Independent energy shifts also leave the cross-model and below-empty-space sign unidentified. Retain both scoped inputs and construct a common finite-regulator three-torus parent with one state and energy ledger |
 | [NG-2026-08-03-PRE-A-C0A-FINITE-HILBERT-BOUNDED-LOG-LIFT](#ng-2026-08-03-pre-a-c0a-finite-hilbert-bounded-log-lift) | extend the finite-state C0-A logarithm to a finite-spatial-mode Gaussian field by treating its quantum Hilbert space as finite-dimensional, uniformly bounding the transfer below, or imposing a finite occupation cutoff with exact CCR | the exact Mehler eigenvalues `2^(-3n)` accumulate at zero, so the transfer is injective but not uniformly bounded below and its logarithmic generator is unbounded; every finite occupation cutoff has a top-state commutator anomaly and cannot obey exact CCR.  Use infinite occupation Fock space and the unbounded semigroup generator; this does not refute the Gaussian reconstruction |
 | [NG-2026-08-03-PRE-A-C0A-REVERSIBILITY-WITHOUT-POSITIVE-TRANSFER](#ng-2026-08-03-pre-a-c0a-reversibility-without-positive-transfer) | infer a nonnegative self-adjoint Hamiltonian from reversible Markov transfer data alone, or infer a finite logarithmic generator from link reflection positivity without strict operator positivity | an entrywise-positive reversible stochastic control with spectrum `{1,-1/10,-1/10}` fails link reflection positivity; the projector transfer with spectrum `{1,0,0}` remains link-reflection positive but cannot be `exp(-aH)` for finite self-adjoint `H`.  Require `P>=0` for link reflection positivity and `P>0` for the finite logarithm; this does not derive or select the transfer |
 | [NG-2026-08-03-PRE-A-C0B-FINITE-TRANSITIVE-DETERMINISTIC-ORDER-SELECTION](#ng-2026-08-03-pre-a-c0b-finite-transitive-deterministic-order-selection) | deterministically and naturally select a nonempty strict order from a finite substrate state whose automorphisms act transitively on events | an invariant strict order cannot compare two events in one finite automorphism orbit; the exact transitive but non-2-transitive `C4` fixture has eight invariant irreflexive relations and only the empty invariant strict order.  This excludes only the stated deterministic symmetric route; smaller-orbit relational states, infinite transitive orders, stochastic or non-single-valued sectors, causal-set primitives, and C0-B remain open |
@@ -249,6 +250,79 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-pre-a-pah1-pam2-unchanged-interface"></a>
+### NG-2026-08-03-PRE-A-PAH1-PAM2-UNCHANGED-INTERFACE -- the current PA-H1 and PA-M2 fixtures cannot be identified unchanged
+
+**Failure mode.**  Treat the current PA-H1 finite image and current PA-M2 CI8
+soft sector as one exact interface without constructing a new common parent:
+identify their full canonical generators, preserve the symplectic form, match
+the quadratic and interacting Hamiltonians at every amplitude up to a scale
+and additive constant, intertwine their zero-background flows, and regard the
+node-only CI8 sector as invariant under the unprojected local cubic force.
+
+**Evidence.**  The source phase space has dimension six and the target phase
+space dimension sixteen.  A canonical symplectic injection exists, so the
+dimension count alone does not block every embedding; it blocks a bijection
+and leaves a nondegenerate ten-dimensional complement.  Positive complement
+frequencies two and seven give distinct quasi-free full-state extensions that
+agree on the injected image.
+
+For an affine map `b+A y`, the degree-four coefficient of the target energy
+along `lambda y` is
+
+```text
+(g/4) int phi_(A_Q y)^4.
+```
+
+The exact CI8 Fourier Gram and Parseval identities show that this coefficient
+vanishes for every `y` only if `A_Q=0`.  The derivative image is then pure
+momentum and isotropic, contradicting symplecticity.  Independently, the
+PA-H1 characteristic polynomial is
+
+```text
+(s^2+9)(s^2+25)^2,
+```
+
+whereas the PA-M2 zero-background CI8 polynomial is
+
+```text
+(s^2+r/chi)^8.
+```
+
+An injective intertwiner, even after one constant time rescaling, would require
+one scalar to equal both 9 and 25.  Finally,
+`cos(theta)^3=[3 cos(theta)+cos(3 theta)]/4` generates `3Q` outside CI8; the
+omitted Fourier-pair norm is `1/32`.  Projecting back defines a changed
+Galerkin model, not an invariant subsystem of the unprojected continuum force.
+
+The common-energy question is separately underdetermined.  The same PA-H1
+vacuum has normal-ordered energy zero and raw three-mode offset `13/2` with the
+same state and dynamics.  Independent additive constants can reverse any
+cross-model sign.  No comparison with empty space or the no-condensate
+reference has been performed.
+
+**Consequence.**  Retain the scoped PA-H1 Gaussian reconstruction and PA-M2
+finite-torus candidate results; neither is invalidated.  Reject only the
+strict unchanged identification.  Nonlinear, holographic, constrained,
+dimension-changing, time-dependent, ordered-background, growing-regulator,
+open-system, and dynamic-clock routes remain open.  A decoupled product exists
+but provides no derived or selected common relative energy normalization,
+shared field, coupling, boundary derivation, or `r(tau)` history.
+
+**Evidence paths.**  `strategy/pre-a-pah1-m2-strict-composition-nogo-certificate-260803.md`,
+its manifest, and the primary, non-importing independent, and integrated run
+artifacts under `claims/C6-SPACETIME-SIGNATURE/runs/`; 56/56, 41/41, and
+186/186 integrator checks pass, 283 combined.
+
+**Revisit condition.**  Construct CP1: one finite-regulator three-torus
+(`T^3`) parent Weyl algebra, state, Hamiltonian, volume, boundary, `hbar`,
+counterterm, and reference ledger that derives both roles.  Then construct
+CP2: a dynamical control pair or preregistered nonstationary interacting state
+that derives a finite-time `r=0` crossing with total-energy accounting.  The
+present no-go is superseded only by an explicit map satisfying its declared
+strict contract or by a proved broader parent; it is not evidence for Pre-A
+closure by itself.
 
 <a id="ng-2026-08-03-pre-a-c0a-finite-hilbert-bounded-log-lift"></a>
 ### NG-2026-08-03-PRE-A-C0A-FINITE-HILBERT-BOUNDED-LOG-LIFT -- finite spatial modes do not make the Gaussian quantum Hilbert space finite

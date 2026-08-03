@@ -32,6 +32,7 @@ Tier profile: T6x4 T5x1 T1x1
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-03-PRE-A-PAH1-PAM2-UNCHANGED-INTERFACE | the current PA-H1 and PA-M2 fixtures cannot be identified un |  |
 | NG-2026-08-03-PRE-A-C0A-FINITE-HILBERT-BOUNDED-LOG-LIFT | finite spatial modes do not make the Gaussian quantum Hilber |  |
 | NG-2026-08-03-PRE-A-C0A-REVERSIBILITY-WITHOUT-POSITIVE-TRANSFER | reversibility and link positivity do not by themselves suppl |  |
 | NG-2026-08-03-PRE-A-C0B-FINITE-TRANSITIVE-DETERMINISTIC-ORDER-SELECTION | a finite transitive state cannot naturally select a nonempty |  |

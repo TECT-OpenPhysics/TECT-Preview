@@ -1,0 +1,163 @@
+{
+  "schema": "tect/pre-a-interface-nogo-manifest/0.1",
+  "candidate_id": "PA-H1-M2-STRICT-COMPOSITION-NOGO-v0",
+  "candidate_family": "PRE-A-STRICT-INTERFACE-NOGO",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 compatibility and no-go certificate; not a TECT action, theorem-tier change, physical model, or Pre-A closure",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "comparison_context": "A2-FULL-PRODUCTION-WELLPOSED",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "The declared six-dimensional PA-H1 finite image and sixteen-dimensional PA-M2 CI8 phase space cannot be identified by a linear symplectic bijection. Although a symplectic injection exists, it leaves a ten-dimensional complement with nonunique state extension. For positive quartic coupling no affine symplectic injection can match the quadratic PA-H1 Hamiltonian to the unchanged interacting PA-M2 Hamiltonian at all amplitudes. At the PA-M2 zero background no injective full-flow intertwiner exists, even after a constant time rescaling, because the PA-H1 squared frequencies are 9 and 25 while the CI8 linearization has one repeated value r/chi. The CI8 node subspace is not invariant under the unchanged cubic force. Independent additive constants leave each model's dynamics unchanged, so the present records do not identify a common energy zero or a below-empty-space sign. The invariant periodic PA-H1 vacuum cannot derive a nonconstant monotone cooling history, and the continuum ultraviolet symbols do not share one unchanged global Lorentz cone.",
+  "verdict": "REJECT THE STRICT UNCHANGED PA-H1/PA-M2 IDENTIFICATION; ADVANCE A COMMON THREE-TORUS (T^3) PARENT CONSTRUCTION",
+  "strict_interface_contract": {
+    "source": "V_H=R^3_q direct-sum R^3_p with Omega=diag(3,5,5)",
+    "target": "V_M=R^8_Q direct-sum R^8_P for the real CI8 soft sector",
+    "map": "state-independent linear or affine map with injective symplectic derivative",
+    "full_equivalence": "a Weyl-generator-preserving identification induced by a linear symplectic bijection of the declared phase spaces",
+    "energy": "exact equality for every source amplitude up to one overall quadratic-energy scale and one additive constant, without removing the positive local quartic interaction",
+    "dynamics": "zero-to-zero linearized-flow intertwining, allowing one nonzero constant time rescaling",
+    "regulator": "the unchanged CI8 node subspace must be invariant under the unprojected local cubic force",
+    "normalization": "the same regulator, volume, boundary, hbar, counterterm, and energy-reference prescription",
+    "cooling_input": "the selected invariant PA-H1 Gaussian vacuum is the sole state input to a time-homogeneous state-local r functional"
+  },
+  "fixture": {
+    "pah1_frequencies": [
+      3,
+      5,
+      5
+    ],
+    "pah1_configuration_dimension": 3,
+    "pah1_phase_dimension": 6,
+    "pam2_configuration_dimension": 8,
+    "pam2_phase_dimension": 16,
+    "symplectic_complement_dimension": 10
+  },
+  "exact_oracles": {
+    "pah1_characteristic_polynomial": "(s^2+9)*(s^2+25)^2",
+    "pam2_zero_characteristic_polynomial": "(s^2+r/chi)^8",
+    "common_full_frequency_ratio": null,
+    "cubic_third_harmonic_cosine_coefficient": "1/4",
+    "cubic_leakage_norm_squared": "1/32",
+    "raw_pah1_zero_point": "13/2",
+    "normal_ordered_pah1_zero_point": "0",
+    "period": "2*pi",
+    "pam2_uv_speed_growth_coefficient": "2*sqrt(c/chi)",
+    "product_phase_dimension": 22
+  },
+  "imported_authorities": {
+    "pah1_gaussian_manifest": "strategy/pre-a-c0a-gaussian-ccr-pah1-embedding-manifest.json",
+    "pah1_gaussian_primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json",
+    "pam2_manifest": "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json",
+    "pam2_primary_result": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-03-primary-pre-a-pa-m2-ci8-rs-dual-lane/result.json",
+    "static_dynamics_boundary": "strategy/pre-a-c0-dynamical-completion-underdetermination-manifest.json"
+  },
+  "separate_exact_obstructions": {
+    "dimension_and_state": "dim V_H=6 and dim V_M=16, so no linear symplectic bijection exists. An explicit symplectic injection leaves a nondegenerate ten-dimensional complement, and positive complement frequencies two and seven give distinct full quasi-free extensions agreeing on the image.",
+    "all_amplitude_energy": "For an affine symplectic map b+A y, the lambda-four coefficient of H_M(b+A lambda y) is g/4 times int phi_(A_Q y)^4. With g>0, equality to a quadratic Hamiltonian for all lambda forces A_Q=0. The derivative image is then pure momentum and isotropic, contradicting symplecticity.",
+    "zero_background_dynamics": "The PA-H1 characteristic polynomial is (s^2+9)(s^2+25)^2. The PA-M2 zero-background CI8 characteristic polynomial is (s^2+r/chi)^8. An injective intertwiner, even with constant time rescaling nu, would require r/(chi*nu^2)=9 and 25 simultaneously.",
+    "node_regulator_closure": "For a CI8 stripe, cos(theta)^3=(3 cos(theta)+cos(3 theta))/4 and 3Q is outside CI8. Projection back is a legitimate regulator choice but changes the unprojected continuum dynamics.",
+    "energy_reference": "The same PA-H1 vacuum has energy zero for dGamma(Omega) and 13/2 for the raw oscillator Hamiltonian, with identical state and dynamics. Independent constants shift any cross-model energy difference arbitrarily.",
+    "cooling_history": "The selected PA-H1 vacuum is invariant. Hence a time-homogeneous functional of that state is constant. The full finite fixture is two-pi periodic, so every continuous globally monotone state-local history on a complete orbit is constant.",
+    "causal_uv": "The PA-H1 KG group speed tends to one. Along a critical PA-M2 continuum axis the group speed grows as 2 sqrt(c/chi) K. This is a global-symbol mismatch, not a denial of the PA-M2 node-local tree-level z=1 cone."
+  },
+  "positive_controls": {
+    "symplectic_injection": "A canonical six-to-sixteen symplectic injection exists; dimension counting rules out a bijection, not every embedding.",
+    "free_matching_spectrum": "With the quartic coupling removed and all source frequencies matched, the canonical injection intertwines the free flows.",
+    "single_frequency_sectors": "The frequency-three sector can match r/chi=9 and the frequency-five sector can match r/chi=25 separately.",
+    "projected_ci8": "P_CI8(phi^3) defines a finite projected model, but it is not the unchanged local continuum vector field.",
+    "nonvacuum_crossing": "A coherent nonvacuum observable can oscillate through zero on a finite interval; the no-go concerns the invariant vacuum and global monotone cooling.",
+    "dynamic_clock": "An added canonical pair (R,P_R) can produce a nonconstant control, but its law and total-energy ledger must be declared and proved.",
+    "decoupled_product": "A formal product state and direct-sum Hamiltonian exist, but they provide no shared field, coupling, derived or selected common relative energy normalization, r history, or derivation relation."
+  },
+  "energy_reference_ledger": {
+    "pah1_normal_ordered_vacuum": "0",
+    "pah1_raw_three_mode_zero_point": "13/2",
+    "pam2_internal_reference": "phi=0 on its own fixed torus and normalization",
+    "cross_model_status": "UNIDENTIFIED",
+    "below_empty_space_or_no_condensate": "NOT TESTED",
+    "required_repair": "one common regulator, volume, boundary, hbar, counterterm, state, and reference subtraction"
+  },
+  "repair_contract": {
+    "CP1": "Construct a common finite-regulator three-torus (T^3) parent on one Weyl algebra with one Hamiltonian, state, volume, boundary, hbar, counterterm, and reference. Derive both the characteristic-boundary role and the interacting ordering sector as maps or reductions from that parent.",
+    "CP2": "Add a dynamical control coordinate with a total-energy ledger, or a preregistered nonstationary interacting state and Hessian, and prove a finite-time r=0 crossing rather than inserting a cooling curve.",
+    "causal_completion": "Provide a local 3+1 causal ultraviolet completion. Keep the present 1+1 PA-H1 result as a calibration until a dimension-changing boundary-to-bulk theorem is proved."
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "the existing PA-H1 three-mode frequencies and symplectic phase space",
+      "the existing PA-M2 real CI8 soft coordinates and canonical momenta",
+      "positive quartic coupling and positive inertia",
+      "the zero-background CI8 linearization",
+      "the node-only CI8 regulator contract",
+      "the existing normal-ordering and raw oscillator conventions",
+      "the existing 1+1 KG and three-dimensional fourth-order continuum symbols"
+    ],
+    "derived_outputs": [
+      "the dimension and nonunique-extension boundary",
+      "the all-amplitude affine symplectic energy no-go",
+      "the zero-background full-flow intertwiner no-go",
+      "the CI8 nonlinear nonclosure witness",
+      "the common-energy-zero underdetermination",
+      "the invariant-vacuum and global-monotone cooling boundary",
+      "the global causal-symbol mismatch",
+      "the minimum CP1 and CP2 repair contracts"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "open_gates": [
+    "a common three-torus (T^3) parent phase space and Weyl algebra",
+    "one common state-selection rule",
+    "one common absolute or reference-subtracted energy ledger",
+    "a controlled dimension-changing characteristic map",
+    "an ordered-background interacting Hessian",
+    "a regulator-growth and continuum theorem",
+    "a derived nonstationary r(tau) history",
+    "a local 3+1 causal ultraviolet completion",
+    "a below-empty-space or no-condensate comparison",
+    "Pre-A closure"
+  ],
+  "scope": {
+    "exact_phase_dimension_mismatch": true,
+    "explicit_linear_symplectic_injection": true,
+    "linear_symplectic_bijection": false,
+    "abstract_cstar_algebra_isomorphism_excluded": false,
+    "finite_image_selects_full_pam2_state": false,
+    "affine_all_amplitude_interacting_energy_embedding": false,
+    "zero_background_full_gaussian_flow_intertwiner": false,
+    "zero_fixing_c1_local_flow_embedding": false,
+    "ordered_background_flow_embedding_excluded": false,
+    "ci8_invariant_under_unchanged_cubic_force": false,
+    "projected_ci8_equals_unprojected_dynamics": false,
+    "common_absolute_energy_reference": false,
+    "below_empty_space_or_no_condensate_comparison": false,
+    "stationary_vacuum_generates_nonconstant_r": false,
+    "all_nonvacuum_finite_interval_zero_crossings_excluded": false,
+    "global_monotone_state_local_cooling_from_periodic_fixture": false,
+    "node_local_tree_level_z1_cone_excluded": false,
+    "global_unchanged_lorentz_cone_match": false,
+    "finite_cutoff_superluminal_signalling_proved": false,
+    "unchanged_strict_composition": false,
+    "arbitrary_nonlinear_or_holographic_map_excluded": false,
+    "larger_common_parent_excluded": false,
+    "external_or_dynamic_control_excluded": false,
+    "existing_pah1_result_invalidated": false,
+    "existing_pam2_result_invalidated": false,
+    "common_parent_and_energy_ledger_required": true,
+    "physical_vacuum_selected": false,
+    "pre_a_complete": false
+  },
+  "artifacts": {
+    "certificate": "strategy/pre-a-pah1-m2-strict-composition-nogo-certificate-260803.md",
+    "primary_script": "codes/foundations/pre_a_pah1_m2_strict_composition_nogo.py",
+    "independent_script": "codes/foundations/pre_a_pah1_m2_strict_composition_nogo_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_pah1_m2_strict_composition_nogo_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-pah1-m2-strict-composition-nogo/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-pah1-m2-strict-composition-nogo/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-pah1-m2-strict-composition-nogo/result.json"
+  },
+  "prior_art_boundary": "The finite-dimensional symplectic, polynomial-degree, Fourier-closure, additive-constant, periodicity, and dispersion arguments are standard mathematics. The repository-specific contribution is the exact incompatibility audit of the two declared T0 fixtures and its repair contract, not a claim of discovering those general facts.",
+  "no_overclaim": "This package rejects only the declared strict unchanged PA-H1/PA-M2 interface. It does not rule out an abstract C-star-algebra isomorphism, nonlinear or holographic maps, constrained reductions, dimension-changing reconstruction, approximate low-energy matching, a time-dependent interface, an ordered-background Hessian, enlarged regulators, nonstationary or open-system states, a dynamical clock, or a causal ultraviolet completion. It does not invalidate either upstream scoped result and does not prove a common energy zero, energy below empty space or a no-condensate reference, a physical vacuum, cosmic cooling, a phase transition, spacetime emergence, gravity, or Pre-A."
+}
