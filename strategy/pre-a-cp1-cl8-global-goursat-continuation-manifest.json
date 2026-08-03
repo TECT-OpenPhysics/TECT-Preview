@@ -7,7 +7,7 @@
   ],
   "result_id": "PA-CP1-CL8-FINITE-TRIANGLE-GOURSAT-GLOBAL-EXISTENCE-STABILITY",
   "candidate_family": "PRE-A-CL8-GLOBAL-CHARACTERISTIC-CONTINUATION",
-  "package_version": "0.1.0",
+  "package_version": "0.1.1",
   "issued": "2026-08-03",
   "authority": "T0 exact classical fixed-background candidate certificate; not a TECT claim, tier change, physical-state theorem, CP1 completion, or Pre-A closure",
   "claim_context": "C6-SPACETIME-SIGNATURE",
@@ -58,6 +58,18 @@
     "uniqueness": "the inherited factorial-squared Volterra argument applies on the compact common amplitude range",
     "regularity": "the integral derivative formulas bound psi_u and psi_v; C1 traces give a C1 solution with continuous mixed derivative, and Ck regularity bootstraps for k>=2",
     "variational_flux": "the parent linearized symplectic current extends across the finite solution; internal shell or rectangle interfaces cancel with opposite orientations, leaving the same two supplied null sides and final-slice flux identity"
+  },
+  "alternate_bielecki_proof": {
+    "status": "CORROBORATING ALTERNATE PROOF OF THE EXISTING FINITE-TRIANGLE EXISTENCE CONCLUSION; NO NEW THEOREM, RESULT, GATE, OR SCOPE",
+    "route_record": "EXP-000737",
+    "clip": "For any R_bar>S_tau, componentwise clipping pi_Rbar is one-Lipschitz in the max norm and F_Rbar=grad W composed with pi_Rbar is bounded and globally ell_Rbar-Lipschitz.",
+    "weighted_norm": "||phi||_beta=sup_Dtau exp[-beta*(u+v)]*|phi(u,v)|_infinity",
+    "kernel": "exp[-beta*(u+v)]*int_0^u int_0^v exp[beta*(sigma+nu)] dnu dsigma=((1-exp(-beta*u))*(1-exp(-beta*v)))/beta^2<=1/beta^2",
+    "contraction": "The clipped whole-triangle Volterra map has factor ell_Rbar/(4*chi*beta^2); beta=sqrt(ell_Rbar/(2*chi)) gives factor 1/2.",
+    "clip_removal": "Before any first contact with R_bar the clipped equation equals the original equation, whose shifted-energy estimate gives |psi|_infinity<=S_tau<R_bar; first contact is impossible.",
+    "shared_dependency": "The route is independent of translated-shell geometry but shares the canonical coercive shift, null-flux identity, and amplitude bound.",
+    "high_regularity_boundary": "All C8-to-C7-by-C6 claims continue to use only the EXP-000735 corrected cumulative recursion with the D_(m-1) carry.",
+    "counting": "No new candidate_id, result_id, theorem count, gate closure, claim tier, or physical conclusion."
   },
   "global_stability": {
     "common_radius": "R=max(S_tau(A,B),S_tau(A_tilde,B_tilde))",
@@ -163,10 +175,20 @@
     "primary_script": "codes/foundations/pre_a_cp1_cl8_global_goursat_continuation.py",
     "independent_script": "codes/foundations/pre_a_cp1_cl8_global_goursat_continuation_independent.py",
     "integrated_verifier": "codes/foundations/pre_a_cp1_cl8_global_goursat_continuation_verify.py",
-    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-global-goursat-continuation/result.json",
-    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-global-goursat-continuation/result.json",
-    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-global-goursat-continuation/result.json"
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-primary-pre-a-cp1-cl8-global-goursat-continuation/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-independent-pre-a-cp1-cl8-global-goursat-continuation/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-integrated-pre-a-cp1-cl8-global-goursat-continuation/result.json",
+    "pdf_builder": "codes/foundations/pre_a_cp1_cl8_global_goursat_continuation_pdf.py",
+    "pdf": "output/pdf/pre-a-cp1-cl8-global-goursat-continuation-certificate-260803-260804-v0.1.1.pdf"
   },
-  "prior_art_boundary": "Energy continuation for defocusing semilinear waves, characteristic rectangle patching, one-dimensional Sobolev control and Bessel-majorized Volterra stability are established mathematics. No world-first or new general PDE theorem is claimed. The repository-specific result is the exact CL8/Q3 coercive shift, one-eighth null-flux ledger, explicit constants, PA-H1 calibration repair and proof-route gate resolution.",
-  "no_overclaim": "This package proves only global classical existence, uniqueness and field-value stability on each finite null triangle of an inserted fixed 1+1 CL8 theory and exhibits a nonconstant seam-compatible periodic trace family. It does not make arbitrary Goursat traces periodic, derive the cone, a horizon, spacetime, gravity, full 3+1 dynamics, a finite-regulator characteristic scheme, a preferred boundary measure, a quantum or Hadamard state, physical empty space, an absolute energy zero, a below-empty-space sign, cooling, a phase transition, C6 advancement, CP1, or Pre-A."
+  "prior_art_boundary": "Energy continuation for defocusing semilinear waves, characteristic rectangle patching, one-dimensional Sobolev control, Bielecki-weighted contractions, clipping/first-exit arguments and Bessel-majorized Volterra stability are established mathematics. No world-first or new general PDE theorem is claimed. The repository-specific result is the exact CL8/Q3 coercive shift, one-eighth null-flux ledger, explicit constants, PA-H1 calibration repair and proof-route gate resolution.",
+  "no_overclaim": "This package proves only global classical existence, uniqueness and field-value stability on each finite null triangle of an inserted fixed 1+1 CL8 theory and exhibits a nonconstant seam-compatible periodic trace family. It does not make arbitrary Goursat traces periodic, derive the cone, a horizon, spacetime, gravity, full 3+1 dynamics, a finite-regulator characteristic scheme, a preferred boundary measure, a quantum or Hadamard state, physical empty space, an absolute energy zero, a below-empty-space sign, cooling, a phase transition, C6 advancement, CP1, or Pre-A.",
+  "version_issued": "2026-08-04",
+  "pdf_qa": {
+    "path": "output/pdf/pre-a-cp1-cl8-global-goursat-continuation-certificate-260803-260804-v0.1.1.pdf",
+    "sha256": "d581320c0099a6ed612e69469a0ed8c72d8bbbbd11716893e35183a85f9c4119",
+    "page_count": 6,
+    "render_dpi": 120,
+    "manual_visual_qa": "PASS: all 6 A4 pages inspected at 120 dpi on 2026-08-04; no clipping, overlap, broken equation layout, unreadable text, or orphaned section heading was found."
+  }
 }

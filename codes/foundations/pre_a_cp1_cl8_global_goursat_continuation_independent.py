@@ -3,8 +3,11 @@
 
 This implementation deliberately imports neither the primary module nor a
 computer-algebra package.  It reconstructs graph counts, exact rational
-coercive identities, the shell fixture, Bessel coefficients, and PA-H1
-pi-squared inequalities from the manifests and elementary arithmetic.
+coercive identities, the shell fixture, an independent clipped-Bielecki
+fixture, Bessel coefficients, and PA-H1 pi-squared inequalities from the
+manifests and elementary arithmetic.
+
+Changelog: 0.1.1 (2026-08-04) adds the alternate-proof and PDF audit surface.
 """
 
 from __future__ import annotations
@@ -22,7 +25,10 @@ from pathlib import Path
 from typing import Any
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
+__first_issued__ = "2026-08-03"
+__version_issued__ = "2026-08-04"
+__claims__ = ["C6-SPACETIME-SIGNATURE"]
 REPO = Path(__file__).resolve().parents[2]
 CANDIDATE_ID = "PA-CP1-CL8-GLOBAL-GOURSAT-CONTINUATION-v0"
 PARENT_IDS = (
@@ -41,7 +47,7 @@ BLOCK = REPO / "strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json"
 DEFAULT_OUTPUT = (
     REPO
     / "claims/C6-SPACETIME-SIGNATURE/runs"
-    / f"2026-08-03-independent-{SLUG}/result.json"
+    / f"2026-08-04-independent-{SLUG}/result.json"
 )
 
 
@@ -230,6 +236,38 @@ def derive() -> dict[str, Any]:
     audit.check("shell self-map", selfmap == Fraction(1, 2), selfmap, Fraction(1, 2), "fixture")
     audit.check("shell contraction", contraction < 1, contraction, "<1", "fixture")
 
+    clip_margin = Fraction(1)
+    R_bar = test_S + clip_margin
+    b_Rbar = test_r_abs * R_bar + (test_g + gradient_lock * test_lambda) * R_bar**3
+    ell_Rbar = test_r_abs + (3 * test_g + hessian_lock * test_lambda) * R_bar**2
+    audit.check("independent clipped-force radius fixture", (R_bar, b_Rbar, ell_Rbar) == (5, 130, 76), (R_bar, b_Rbar, ell_Rbar), (5, 130, 76), "bielecki")
+
+    def clip_component(value: Fraction, bound: Fraction) -> Fraction:
+        return min(bound, max(-bound, value))
+
+    hostile_grid = tuple(Fraction(multiplier) * R_bar / 2 for multiplier in (-4, -2, -1, 0, 1, 2, 4))
+    clip_nonexpansive = all(
+        abs(clip_component(left, R_bar) - clip_component(right, R_bar)) <= abs(left - right)
+        for left in hostile_grid
+        for right in hostile_grid
+    )
+    audit.check("independent coordinate clip nonexpansive hostile grid", clip_nonexpansive, clip_nonexpansive, True, "bielecki")
+    kernel_grid = (Fraction(0), Fraction(1, 4), Fraction(1, 2), Fraction(1))
+    kernel_bound = all(Fraction(0) <= (1 - left) * (1 - right) <= Fraction(1) for left in kernel_grid for right in kernel_grid)
+    audit.check("independent Bielecki kernel bound oracle", kernel_bound, kernel_bound, True, "bielecki")
+    beta_squared_b = ell_Rbar / (2 * test_chi)
+    weighted_factor = ell_Rbar / (4 * test_chi * beta_squared_b)
+    audit.check("independent Bielecki beta choice gives half contraction", beta_squared_b == 38 and weighted_factor == Fraction(1, 2), (beta_squared_b, weighted_factor), (38, Fraction(1, 2)), "bielecki")
+    audit.check("independent clipped first-exit margin", R_bar - test_S == clip_margin == 1 and test_S < R_bar, (R_bar - test_S, test_S, R_bar), (1, "S_tau<R_bar"), "bielecki")
+    bielecki_alternative = {
+        "R_bar": R_bar,
+        "b_Rbar": b_Rbar,
+        "ell_Rbar": ell_Rbar,
+        "beta_squared": beta_squared_b,
+        "contraction": weighted_factor,
+        "first_exit_margin": R_bar - test_S,
+    }
+
     bessel_order = 7
     bessel_coefficients = [Fraction(1, math.factorial(n) ** 2) for n in range(bessel_order)]
     recurrence_ok = all(
@@ -345,6 +383,7 @@ def derive() -> dict[str, Any]:
         "result_id": RESULT_ID,
         "version": __version__,
         "issued": "2026-08-03",
+        "version_issued": __version_issued__,
         "task_id": "T-054",
         "claim_context": "C6-SPACETIME-SIGNATURE",
         "claim_bearing": False,
@@ -371,6 +410,7 @@ def derive() -> dict[str, Any]:
                 "shell_contraction": contraction,
             },
             "bessel_coefficients": bessel_coefficients,
+            "bielecki_alternative": bielecki_alternative,
             "high_regularity": {
                 "potential_degree": potential_degree,
                 "force_degree": force_degree,

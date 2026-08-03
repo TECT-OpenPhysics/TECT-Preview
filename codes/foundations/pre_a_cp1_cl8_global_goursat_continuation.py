@@ -3,7 +3,10 @@
 
 The executable derives the Q3 counts, coercive potential shift, shifted-flux
 geometry, explicit continuation max-ball, shell contraction constants,
-factorial/Bessel stability majorant, and full-circumference PA-H1 fixtures.
+a theorem-neutral clipped-Bielecki/first-exit alternative, factorial/Bessel
+stability majorant, and full-circumference PA-H1 fixtures.
+
+Changelog: 0.1.1 (2026-08-04) adds the alternate-proof and PDF audit surface.
 The infinite-dimensional continuation proof is written in the certificate.
 """
 
@@ -23,7 +26,10 @@ from typing import Any
 import sympy as sp
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
+__first_issued__ = "2026-08-03"
+__version_issued__ = "2026-08-04"
+__claims__ = ["C6-SPACETIME-SIGNATURE"]
 REPO = Path(__file__).resolve().parents[2]
 CANDIDATE_ID = "PA-CP1-CL8-GLOBAL-GOURSAT-CONTINUATION-v0"
 PARENT_IDS = (
@@ -42,7 +48,7 @@ BLOCK = REPO / "strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json"
 DEFAULT_OUTPUT = (
     REPO
     / "claims/C6-SPACETIME-SIGNATURE/runs"
-    / f"2026-08-03-primary-{SLUG}/result.json"
+    / f"2026-08-04-primary-{SLUG}/result.json"
 )
 
 
@@ -224,6 +230,47 @@ def derive() -> dict[str, Any]:
     audit.check("shell self-map reserve", shell_selfmap == sp.Rational(1, 2), shell_selfmap, sp.Rational(1, 2), "fixture")
     audit.check("shell contraction strict", shell_contraction < 1, shell_contraction, "<1", "fixture")
 
+    clip_margin = sp.Integer(1)
+    R_bar = test_S + clip_margin
+    b_Rbar = abs(test_r) * R_bar + (test_g + gradient_lock * test_lambda) * R_bar**3
+    ell_Rbar = abs(test_r) + (3 * test_g + hessian_lock * test_lambda) * R_bar**2
+    audit.check("clipped-force radius fixture", (R_bar, b_Rbar, ell_Rbar) == (5, 130, 76), (R_bar, b_Rbar, ell_Rbar), (5, 130, 76), "bielecki")
+
+    def clip_component(value: sp.Rational, bound: sp.Rational) -> sp.Rational:
+        return min(bound, max(-bound, value))
+
+    hostile_grid = tuple(sp.Rational(multiplier) * R_bar / 2 for multiplier in (-4, -2, -1, 0, 1, 2, 4))
+    clip_nonexpansive = all(
+        abs(clip_component(left, R_bar) - clip_component(right, R_bar)) <= abs(left - right)
+        for left in hostile_grid
+        for right in hostile_grid
+    )
+    audit.check("coordinatewise clip nonexpansive hostile grid", clip_nonexpansive, clip_nonexpansive, True, "bielecki")
+    beta_b, sigma_b, nu_b, u_b, v_b = sp.symbols("beta_b sigma_b nu_b u_b v_b", positive=True)
+    weighted_kernel = sp.simplify(
+        sp.exp(-beta_b * (u_b + v_b))
+        * sp.integrate(sp.exp(beta_b * sigma_b), (sigma_b, 0, u_b))
+        * sp.integrate(sp.exp(beta_b * nu_b), (nu_b, 0, v_b))
+    )
+    expected_weighted_kernel = (
+        (1 - sp.exp(-beta_b * u_b))
+        * (1 - sp.exp(-beta_b * v_b))
+        / beta_b**2
+    )
+    audit.check("Bielecki weighted double kernel", sp.simplify(weighted_kernel - expected_weighted_kernel) == 0, weighted_kernel, expected_weighted_kernel, "bielecki")
+    beta_squared_b = ell_Rbar / (2 * test_chi)
+    weighted_factor = sp.simplify(ell_Rbar / (4 * test_chi * beta_squared_b))
+    audit.check("Bielecki beta choice gives horizon-independent half contraction", weighted_factor == sp.Rational(1, 2) and not weighted_factor.free_symbols, weighted_factor, sp.Rational(1, 2), "bielecki")
+    audit.check("clipped first-exit margin tied to amplitude bound", R_bar - test_S == clip_margin == 1 and test_S < R_bar, (R_bar - test_S, test_S, R_bar), (1, "S_tau<R_bar"), "bielecki")
+    bielecki_alternative = {
+        "R_bar": R_bar,
+        "b_Rbar": b_Rbar,
+        "ell_Rbar": ell_Rbar,
+        "beta_squared": beta_squared_b,
+        "contraction": weighted_factor,
+        "first_exit_margin": R_bar - test_S,
+    }
+
     x = sp.symbols("x", nonnegative=True)
     order = 7
     bessel_series = sp.series(sp.besseli(0, 2 * sp.sqrt(x)), x, 0, order).removeO()
@@ -347,6 +394,7 @@ def derive() -> dict[str, Any]:
         "result_id": RESULT_ID,
         "version": __version__,
         "issued": "2026-08-03",
+        "version_issued": __version_issued__,
         "task_id": "T-054",
         "claim_context": "C6-SPACETIME-SIGNATURE",
         "claim_bearing": False,
@@ -373,6 +421,7 @@ def derive() -> dict[str, Any]:
                 "shell_contraction": shell_contraction,
             },
             "bessel_coefficients": [sp.Rational(1, sp.factorial(n) ** 2) for n in range(order)],
+            "bielecki_alternative": bielecki_alternative,
             "high_regularity": {
                 "potential_degree": potential_degree,
                 "force_degree": force_degree,

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Integrated hostile verifier for global CL8 Goursat continuation."""
+"""Integrated hostile verifier for global CL8 Goursat continuation.
+
+Changelog: 0.1.1 (2026-08-04) adds clipped-Bielecki and canonical-PDF QA.
+"""
 
 from __future__ import annotations
 
@@ -14,8 +17,15 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
+import pdfplumber
+from PIL import Image, ImageStat
+from pypdf import PdfReader
 
-__version__ = "0.1.0"
+
+__version__ = "0.1.1"
+__first_issued__ = "2026-08-03"
+__version_issued__ = "2026-08-04"
+__claims__ = ["C6-SPACETIME-SIGNATURE"]
 REPO = Path(__file__).resolve().parents[2]
 CANDIDATE_ID = "PA-CP1-CL8-GLOBAL-GOURSAT-CONTINUATION-v0"
 PARENT_IDS = (
@@ -32,6 +42,8 @@ INDEPENDENT_SCHEMA = f"tect/{SLUG}-independent/0.1"
 VERIFIER = Path(__file__).resolve()
 PRIMARY = REPO / "codes/foundations/pre_a_cp1_cl8_global_goursat_continuation.py"
 INDEPENDENT = REPO / "codes/foundations/pre_a_cp1_cl8_global_goursat_continuation_independent.py"
+PDF_BUILDER = REPO / "codes/foundations/pre_a_cp1_cl8_global_goursat_continuation_pdf.py"
+PDF = REPO / "output/pdf/pre-a-cp1-cl8-global-goursat-continuation-certificate-260803-260804-v0.1.1.pdf"
 MANIFEST = REPO / f"strategy/{SLUG}-manifest.json"
 CERTIFICATE = REPO / f"strategy/{SLUG}-certificate-260803.md"
 GOURSAT = REPO / "strategy/pre-a-cp1-cl8-goursat-manifest.json"
@@ -49,21 +61,22 @@ STRATEGY_INDEX = REPO / "strategy/INDEX.md"
 STORED_PRIMARY = (
     REPO
     / "claims/C6-SPACETIME-SIGNATURE/runs"
-    / f"2026-08-03-primary-{SLUG}/result.json"
+    / f"2026-08-04-primary-{SLUG}/result.json"
 )
 STORED_INDEPENDENT = (
     REPO
     / "claims/C6-SPACETIME-SIGNATURE/runs"
-    / f"2026-08-03-independent-{SLUG}/result.json"
+    / f"2026-08-04-independent-{SLUG}/result.json"
 )
 DEFAULT_OUTPUT = (
     REPO
     / "claims/C6-SPACETIME-SIGNATURE/runs"
-    / f"2026-08-03-integrated-{SLUG}/result.json"
+    / f"2026-08-04-integrated-{SLUG}/result.json"
 )
 STORED_INTEGRATED = DEFAULT_OUTPUT
-EXPECTED_PRIMARY_ASSERTIONS = 63
-EXPECTED_INDEPENDENT_ASSERTIONS = 60
+EXPECTED_PRIMARY_ASSERTIONS = 68
+EXPECTED_INDEPENDENT_ASSERTIONS = 65
+EXPECTED_INTEGRATED_ASSERTIONS = 159
 EXPECTED_AUTHORITY_HASHES = {
     "composition_manifest": "6f046b62c99c43ac6c04de546669f635cfb079c3c5ecad5e09bb7e6674a8d0b6",
     "composition_certificate": "3d3464c0e32c6020185a9fd9b72449932f53aaeb842241353d89342f93047f2b",
@@ -129,6 +142,23 @@ def run_child(script: Path, output: Path) -> dict[str, Any]:
     return json.loads(output.read_text(encoding="utf-8"))
 
 
+
+def find_pdftoppm() -> Path:
+    candidates = [
+        Path.home()
+        / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/Library/bin/pdftoppm.exe"
+    ]
+    candidates.extend(
+        Path.home().glob(
+            ".cache/codex-runtimes/*/dependencies/native/poppler/Library/bin/pdftoppm.exe"
+        )
+    )
+    for candidate in candidates:
+        if candidate.is_file():
+            return candidate
+    raise AssertionError("pdftoppm unavailable")
+
+
 def verify() -> dict[str, Any]:
     rows: list[dict[str, Any]] = []
 
@@ -148,6 +178,8 @@ def verify() -> dict[str, Any]:
     required = (
         PRIMARY,
         INDEPENDENT,
+        PDF_BUILDER,
+        PDF,
         MANIFEST,
         CERTIFICATE,
         GOURSAT,
@@ -236,6 +268,8 @@ def verify() -> dict[str, Any]:
     ):
         check(f"test fixture agrees: {key}", p_derived["test_fixture"][key] == i_derived["test_fixture"][key], p_derived["test_fixture"][key], i_derived["test_fixture"][key], "cross")
     check("Bessel coefficients agree", p_derived["bessel_coefficients"] == i_derived["bessel_coefficients"], p_derived["bessel_coefficients"], i_derived["bessel_coefficients"], "cross")
+    expected_bielecki = {"R_bar": "5", "b_Rbar": "130", "ell_Rbar": "76", "beta_squared": "38", "contraction": "1/2", "first_exit_margin": "1"}
+    check("clipped-Bielecki fixtures agree", p_derived["bielecki_alternative"] == i_derived["bielecki_alternative"] == expected_bielecki, [p_derived["bielecki_alternative"], i_derived["bielecki_alternative"]], [expected_bielecki, expected_bielecki], "cross")
     check("high-regularity structures agree", p_derived["high_regularity"] == i_derived["high_regularity"], p_derived["high_regularity"], i_derived["high_regularity"], "cross")
     check("PA-H1 frequency squares agree", p_derived["pah1"]["frequency_squares"] == i_derived["pah1"]["frequency_squares"], p_derived["pah1"]["frequency_squares"], i_derived["pah1"]["frequency_squares"], "cross")
     check("linearized-control flags agree", p_derived["pah1"]["linearized_control_only"] is True and i_derived["pah1"]["linearized_control_only"] is True, [p_derived["pah1"]["linearized_control_only"], i_derived["pah1"]["linearized_control_only"]], [True, True], "cross")
@@ -333,6 +367,7 @@ def verify() -> dict[str, Any]:
         'id="section-5-flux"',
         'id="section-6-amplitude"',
         'id="section-7-continuation"',
+        'id="section-7-1-bielecki"',
         'id="section-8-stability"',
         'id="section-9-pah1"',
         'id="section-10-gate"',
@@ -342,6 +377,18 @@ def verify() -> dict[str, Any]:
     for anchor in anchors:
         check(f"certificate anchor: {anchor}", anchor in certificate_text, anchor in certificate_text, True, "certificate")
     check("high-regularity lemma present", "### 8.1 High-regularity phase-map lemma" in certificate_text and "D_m" in certificate_text and "D_{m-1}" in certificate_text and "P_{m-1}" in certificate_text, ["### 8.1 High-regularity phase-map lemma" in certificate_text, "D_m" in certificate_text, "D_{m-1}" in certificate_text, "P_{m-1}" in certificate_text], [True, True, True, True], "certificate")
+    alternate = manifest["alternate_bielecki_proof"]
+    alternate_surface = [
+        "### 7.1 Alternate whole-triangle clipped-Bielecki audit" in certificate_text,
+        "EXP-000734" in certificate_text,
+        "introduces no new theorem" in certificate_text,
+        "first contact" in certificate_text,
+        alternate["route_record"] == "EXP-000737",
+        "NO NEW THEOREM, RESULT, GATE, OR SCOPE" in alternate["status"],
+        "D_(m-1)" in alternate["high_regularity_boundary"],
+        "EXP-000735" in alternate["high_regularity_boundary"],
+    ]
+    check("clipped-Bielecki audit is alternate and high-regularity authority preserved", all(alternate_surface), alternate_surface, [True] * len(alternate_surface), "certificate")
     required_phrases = (
         "unknown cap of area",
         "Bessel-`I0` stability estimate",
@@ -358,6 +405,94 @@ def verify() -> dict[str, Any]:
     check("manifest physical predictions empty", manifest["input_prediction_accounting"]["physical_predictions"] == [], manifest["input_prediction_accounting"]["physical_predictions"], [], "certificate")
     check("manifest holdout false", manifest["input_prediction_accounting"]["holdout_prediction"] is False, manifest["input_prediction_accounting"]["holdout_prediction"], False, "certificate")
 
+
+    with tempfile.TemporaryDirectory(prefix="tect-cl8-global-goursat-pdf-") as directory:
+        temporary = Path(directory)
+        rebuilt_pdf = temporary / "rebuilt.pdf"
+        built = subprocess.run(
+            [sys.executable, str(PDF_BUILDER), "--output", str(rebuilt_pdf)],
+            cwd=REPO,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        check(
+            "deterministic canonical PDF rebuild",
+            built.returncode == 0 and not built.stderr.strip() and sha256(rebuilt_pdf) == sha256(PDF),
+            (built.returncode, built.stderr.strip(), sha256(rebuilt_pdf)),
+            (0, "", sha256(PDF)),
+            "pdf",
+        )
+        with pdfplumber.open(PDF) as document:
+            page_texts = [(page.extract_text() or "") for page in document.pages]
+            page_sizes = [(round(page.width, 3), round(page.height, 3)) for page in document.pages]
+        combined_text = "\n".join(page_texts)
+        check(
+            "PDF pages nonblank and A4",
+            len(page_texts) > 0 and all(item.strip() for item in page_texts) and len(set(page_sizes)) == 1 and page_sizes[0] == (595.276, 841.89),
+            (len(page_texts), page_sizes),
+            "positive nonblank pages with one A4 box",
+            "pdf",
+        )
+        reader = PdfReader(PDF)
+        root = reader.trailer["/Root"]
+        active_keys = ("/AcroForm", "/Names", "/OpenAction", "/AA", "/JavaScript")
+        check(
+            "PDF security surface inert",
+            not reader.is_encrypted and all(key not in root for key in active_keys),
+            {"encrypted": reader.is_encrypted, "active_keys": [key for key in active_keys if key in root]},
+            {"encrypted": False, "active_keys": []},
+            "pdf",
+        )
+        proof_tokens = (CANDIDATE_ID, RESULT_ID, "Bielecki", "first contact", "D_(m-1)", "CP1 and Pre-A remain open")
+        check(
+            "PDF canonical proof and no-overclaim anchors",
+            all(token in combined_text for token in proof_tokens),
+            {token: token in combined_text for token in proof_tokens},
+            {token: True for token in proof_tokens},
+            "pdf",
+        )
+        renderer = find_pdftoppm()
+        render_prefix = temporary / "page"
+        rendered = subprocess.run(
+            [str(renderer), "-png", "-r", "120", str(PDF), str(render_prefix)],
+            cwd=REPO,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        images = sorted(temporary.glob("page-*.png"))
+        dimensions: list[tuple[int, int]] = []
+        extrema: list[tuple[int, int]] = []
+        for image_path in images:
+            with Image.open(image_path) as raster:
+                dimensions.append(raster.size)
+                grayscale = raster.convert("L")
+                extrema.append(grayscale.getextrema())
+                ImageStat.Stat(grayscale).mean
+        font_pages = [bool((page.get("/Resources") or {}).get("/Font")) for page in reader.pages]
+        check(
+            "Poppler all-page render surface",
+            rendered.returncode == 0 and len(images) == len(page_texts) and len(set(dimensions)) == 1 and all(low < 245 and high == 255 for low, high in extrema) and all(font_pages),
+            {"returncode": rendered.returncode, "page_count": len(images), "dimensions": dimensions, "extrema": extrema, "font_resources": font_pages},
+            "every page rendered, nonblank, same-sized, and font-backed",
+            "pdf",
+        )
+        pdf_qa_manifest = manifest["pdf_qa"]
+        check(
+            "PDF manifest pin and manual visual QA",
+            pdf_qa_manifest["path"] == str(PDF.relative_to(REPO)).replace("\\", "/")
+            and pdf_qa_manifest["sha256"] == sha256(PDF)
+            and pdf_qa_manifest["page_count"] == len(page_texts)
+            and pdf_qa_manifest["manual_visual_qa"].startswith("PASS:"),
+            pdf_qa_manifest,
+            {"path": str(PDF.relative_to(REPO)).replace("\\", "/"), "sha256": sha256(PDF), "page_count": len(page_texts), "manual_visual_qa": "PASS: ..."},
+            "pdf",
+        )
+
+    if len(rows) != EXPECTED_INTEGRATED_ASSERTIONS:
+        raise AssertionError(f"integrated assertion surface drifted: {len(rows)} != {EXPECTED_INTEGRATED_ASSERTIONS}")
+
     return {
         "schema": SCHEMA,
         "candidate_id": CANDIDATE_ID,
@@ -366,6 +501,7 @@ def verify() -> dict[str, Any]:
         "candidate_family": CANDIDATE_FAMILY,
         "version": __version__,
         "issued": "2026-08-03",
+        "version_issued": __version_issued__,
         "task_id": "T-054",
         "claim_context": "C6-SPACETIME-SIGNATURE",
         "claim_bearing": False,
@@ -374,6 +510,7 @@ def verify() -> dict[str, Any]:
             "primary": EXPECTED_PRIMARY_ASSERTIONS,
             "independent": EXPECTED_INDEPENDENT_ASSERTIONS,
         },
+        "total_verified_assertions": EXPECTED_PRIMARY_ASSERTIONS + EXPECTED_INDEPENDENT_ASSERTIONS + EXPECTED_INTEGRATED_ASSERTIONS,
         "authority_sha256": authority_hashes,
         "source_sha256": {
             "verifier": sha256(VERIFIER),
@@ -381,8 +518,11 @@ def verify() -> dict[str, Any]:
             "independent": sha256(INDEPENDENT),
             "manifest": sha256(MANIFEST),
             "certificate": sha256(CERTIFICATE),
+            "pdf_builder": sha256(PDF_BUILDER),
+            "pdf": sha256(PDF),
         },
         "scope": scope,
+        "pdf_qa": {"path": str(PDF.relative_to(REPO)).replace("\\", "/"), "sha256": sha256(PDF), "page_count": len(PdfReader(PDF).pages), "renderer": str(find_pdftoppm()).replace("\\", "/"), "manual_visual_qa": manifest["pdf_qa"]["manual_visual_qa"]},
         "assertions": rows,
         "assertion_summary": {"passed": len(rows), "total": len(rows)},
         "next_gate": gate["next_gate"],

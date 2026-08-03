@@ -8,6 +8,7 @@
 **Claim context:** `C6-SPACETIME-SIGNATURE`  
 **Task:** `T-054`  
 **Date:** 2026-08-03
+**Package version:** `0.1.1` (revised 2026-08-04)
 
 <a id="section-1-verdict"></a>
 ## 1. Verdict
@@ -26,7 +27,9 @@ explicit constant, derives a nonnegative exact null-flux ledger, obtains a
 uniform amplitude bound by one-dimensional energy coercivity, and then tiles
 the triangle with finitely many translated local Volterra patches.  The same
 amplitude bound turns the factorial-squared Volterra comparison into a global
-Bessel-`I0` stability estimate.
+Bessel-`I0` stability estimate.  Section 7.1 supplies a theorem-neutral second
+proof of the same finite-triangle existence conclusion by a whole-triangle
+clipped Bielecki fixed point and a shifted-energy first-exit contradiction.
 
 This closes the manifest-local
 `PA-CP1-CL8-FULL-CIRCUMFERENCE-GOURSAT-EXISTENCE` gate in its declared
@@ -43,8 +46,8 @@ the physical energy reference.  CP1 and Pre-A remain open.
 
 Global energy continuation for defocusing semilinear waves, local
 characteristic rectangle constructions, one-dimensional Sobolev estimates,
-and factorial/Bessel bounds for Volterra equations are established
-mathematics.  The parent certificate already cites characteristic Goursat
+Bielecki-weighted contractions, clipping/first-exit arguments, and
+factorial/Bessel bounds for Volterra equations are established mathematics.  The parent certificate already cites characteristic Goursat
 analysis, including Gerard and Wrochna, <https://arxiv.org/abs/1409.6691>.
 No world-first or new general PDE theorem is claimed.
 
@@ -280,6 +283,106 @@ their compact common range identical.  `C1` traces give continuous first and
 mixed derivatives through (7.5) and the equation.  Higher trace regularity
 bootstraps as in the parent certificate.
 
+<a id="section-7-1-bielecki"></a>
+### 7.1 Alternate whole-triangle clipped-Bielecki audit
+
+This lemma is an alternate proof of the finite-triangle existence and
+uniqueness conclusion already recorded in EXP-000734.  The alternate route is
+recorded in EXP-000737.  It introduces no new theorem, result ID, gate closure,
+data class, or physical scope.
+
+Fix any `R_bar>S_tau` and let
+`kappa_Rbar:R8 -> [-R_bar,R_bar]^8` be componentwise clipping.  Define
+
+\[
+ F_{\bar R}(z)=\nabla W(\kappa_{\bar R}z),\qquad
+ G(u,v)=A(u)+B(v)-C.
+\]
+
+Componentwise clipping is one-Lipschitz in the max norm.  The registered
+Hessian row bound on the cube therefore gives
+
+\[
+ |F_{\bar R}(z)-F_{\bar R}(\widetilde z)|_\infty
+ \le \ell_{\bar R}|z-\widetilde z|_\infty,\qquad
+ \ell_{\bar R}=|r|+(3g+36\lambda)\bar R^2.                    \tag{7.6}
+\]
+
+Moreover, `F_Rbar` is globally bounded.  Hence the clipped Volterra map
+
+\[
+ (\mathcal T_{\bar R}\phi)(u,v)
+ =G(u,v)-{1\over4\chi}\int_0^u\int_0^v
+ F_{\bar R}(\phi(\sigma,\nu))\,d\nu\,d\sigma                 \tag{7.7}
+\]
+
+acts on the whole Banach space `C(D_tau;R8)`, without a whole-triangle
+sup-ball self-map condition.
+
+For `beta>0`, equip this space with the equivalent Bielecki norm
+
+\[
+ \|\phi\|_\beta
+ =\sup_{D_\tau}e^{-\beta(u+v)}|\phi(u,v)|_\infty.
+\]
+
+The exact weighted kernel is
+
+\[
+ e^{-\beta(u+v)}
+ \int_0^u\int_0^v e^{\beta(\sigma+\nu)}\,d\nu\,d\sigma
+ ={(1-e^{-\beta u})(1-e^{-\beta v})\over\beta^2}
+ \le {1\over\beta^2}.                                        \tag{7.8}
+\]
+
+Consequently,
+
+\[
+ \|\mathcal T_{\bar R}\phi-\mathcal T_{\bar R}\widetilde\phi\|_\beta
+ \le {\ell_{\bar R}\over4\chi\beta^2}
+ \|\phi-\widetilde\phi\|_\beta.                              \tag{7.9}
+\]
+
+Since `g>0` and `R_bar>S_tau>=0`, one has `ell_Rbar>0`.  Choosing
+`beta=sqrt(ell_Rbar/(2chi))` gives contraction factor `1/2`, so Banach's
+theorem supplies a unique clipped solution on all of `D_tau`.
+
+It remains to show that clipping never activates.  If activation occurred,
+let `t_*<=tau` be the first slice time for which
+
+\[
+ \sup_{D_{t_*}}|\psi_{\bar R}|_\infty=\bar R.
+\]
+
+Because `M_partial<=S_tau<R_bar`, one has `t_*>0`.  On all of `D_(t_*)`,
+including the first-contact set, `kappa_Rbar psi_Rbar=psi_Rbar`; thus the
+clipped solution satisfies the original equation there.  The shifted-energy
+argument of Sections 4--6 applies and yields
+
+\[
+ \sup_{D_{t_*}}|\psi_{\bar R}|_\infty\le S_\tau<\bar R,
+\]
+
+contradicting first contact.  Hence clipping is everywhere inactive, and the
+clipped fixed point is the original solution.  Conversely, every original
+solution obeys the same amplitude bound and is therefore a fixed point of
+(7.7), so clipped uniqueness also gives original uniqueness.
+
+This alternate audit stops at the `C1` existence level.  Every
+`C8 x C8 -> C7 x C6` assertion continues to rely exclusively on the corrected
+Section 8.1 recursion
+
+\[
+ D_m\le\max\{D_{m-1},
+ T_m+\tau P_{m-1}/(2\chi),P_{m-2}/(4\chi)\},
+\]
+
+with its final entry omitted at `m=1`, as required by EXP-000735.  The
+contraction factor can be fixed at `1/2`, but `R_bar`, `ell_Rbar`, `beta`, and
+the equivalence constant between the Bielecki and sup norms remain
+finite-horizon and trace dependent.
+
+
 <a id="section-8-stability"></a>
 ## 8. Global field-value stability
 
@@ -442,10 +545,14 @@ amplitude control, and field-value stability, including the inserted PA-H1
 length.  It does not mean a finite-`a` Goursat scheme, a full-dimensional
 Einstein characteristic theorem, or a physical state.
 
-The next gate must derive rather than supply a preferred or invariant
-classical boundary measure and construct a compatible finite/continuum
-quantum state.  It must not use the arbitrary proof shift `C_*` as an absolute
-vacuum-energy choice.
+EXP-000736 has since split the second gate: finite-regulator classical
+invariant measures exist, but invariance, the declared symmetries, smooth seam
+support, and regulator compatibility do not uniquely select a preferred one.
+The parent preferred-state gate therefore remains open.  Its next bounded
+child is `PA-CP1-CL8-FINITE-REGULATOR-QUANTUM-STATE`, which must declare the
+exact CCR normalization and `hbar` before any quantum state is imported.  It
+must not use the arbitrary proof shift `C_*` as an absolute vacuum-energy
+choice.
 
 <a id="section-11-adversarial"></a>
 ## 11. Devil's-advocate review
@@ -483,6 +590,16 @@ vacuum-energy choice.
     cone, physical state/reference, quantum composition, phase transition,
     cooling, gravity, and emergence links remain open.
 
+12. **Componentwise clipping destroys the gradient structure, so the shifted
+    energy identity cannot be applied to the clipped equation.**  **VALID WITH
+    MITIGATION.**  In general `F_Rbar=grad W composed with kappa_Rbar` need not
+    be the gradient of a scalar potential, and no energy identity is asserted
+    after clipping activates.  The energy estimate is used only on the closed
+    pre-exit triangle, where `kappa_Rbar psi=psi` and
+    `F_Rbar(psi)=grad W(psi)`, including at first contact.  The strict bound
+    `S_tau<R_bar` rules out that contact, so the non-gradient region is never
+    entered.
+
 <a id="section-12-reproduction"></a>
 ## 12. Reproduction
 
@@ -493,6 +610,7 @@ E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/pre_a_cp1_cl8_global_gours
 E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/pre_a_cp1_cl8_global_goursat_continuation_independent.py
 E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/pre_a_cp1_cl8_global_goursat_continuation_verify.py
 E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/pre_a_cp1_cl8_global_goursat_continuation_verify.py --check-stored
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/pre_a_cp1_cl8_global_goursat_continuation_pdf.py
 ```
 
 The primary implementation uses symbolic polynomial identities.  The
@@ -513,3 +631,12 @@ a horizon, spacetime, gravity, full `3+1` dynamics, a finite-regulator
 characteristic scheme, a preferred boundary measure, a quantum or Hadamard
 state, physical empty space, an absolute energy zero, a below-empty-space
 sign, cooling, a phase transition, C6 advancement, CP1, or Pre-A.
+
+The clipped-Bielecki lemma is only an alternate verification of the
+finite-triangle classical statement already recorded in EXP-000734.  It
+does not alter EXP-000735, provide a horizon-uniform bound as `tau` tends
+to infinity, make generic final traces periodic, select a seam, extension,
+classical measure, quantum or Hadamard state, or physical vacuum, derive
+the inserted Lorentzian background or PA-H1 parameters, reach full `3+1`
+dynamics, advance C6, complete CP1 or Pre-A, or create a new theorem,
+result, or gate.

@@ -42,7 +42,7 @@ EXPECTED_INDEPENDENT_ASSERTIONS = 66
 EXPECTED_AUTHORITY_HASHES = {
     "semidiscrete_manifest": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
     "q3lock_manifest": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
-    "global_manifest": "bff6323ce6a0ef82b62321bb3ad1a99c291b2742417aa4c67f8a418a7f6d67d8",
+    "global_manifest": "c2c0a5bc78a259c1116e68a31a41d251a0cb644956ffed3c583d786fdf1cb496",
     "composition_manifest": "6f046b62c99c43ac6c04de546669f635cfb079c3c5ecad5e09bb7e6674a8d0b6",
     "c6_status": "a0d6d7cd99770cd97050eb28fc4dc69180191ba930de629ee023cffc3a2aa811",
 }
