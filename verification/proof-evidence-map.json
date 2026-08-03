@@ -58,9 +58,9 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "96860763e26315b221fa0aa11e4ed557a3dd0f5cb3dd1bab92d73b291d3eb013",
-    "explorations/log.jsonl": "647ae00b954720029f69ba543d3400dc2023bccc6e598c18f7400ec69f72037f",
+    "explorations/log.jsonl": "0af7a25074e42df6dd4e1f7507f25368102f64dee747760717f1cf979a14be4e",
     "negative-results/registry.md": "37e4f2ef16417e195145c4ceea7498c0129241b75d3a382b6234a543b6387330",
-    "todo/todo.json": "cdecc407003b72b1b510821c7f8b083feaba4a04638c4c89f560da4ac2bf7455"
+    "todo/todo.json": "5771e3f9552e515c155fab78b2c957787f811cc2cffbe653f3ad0d280de53216"
   },
   "coverage": {
     "status_cards": 49,
@@ -68,12 +68,12 @@
     "refuted_claims": 1,
     "reusable_results": 157,
     "negative_records": 237,
-    "proof_explorations": 684,
+    "proof_explorations": 685,
     "exploration_verdicts": {
       "advanced": 384,
       "failed": 217,
       "inconclusive": 60,
-      "parked": 23
+      "parked": 24
     },
     "process_grade_lessons": 3,
     "accepted_events": 483,
@@ -2309,7 +2309,7 @@
       "owner": "Codex",
       "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
       "gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
-      "note": "R-156 remains the direct A13 frontier. The exact intrinsic sufficient-radius criterion is L_R*r*sqrt(1+r^2/16)+2*U_0*sqrt(2*(1-(1+r^2)^(-1/2)))<47/1000, with U_0 the origin shifted operator norm and L_R a pinned third-variation modulus on the smallest source cylinder. The current authorities do not pin the cutoff/regulator/source basis, U_0, or L_R, so no honest numerical or cutoff-uniform delta follows; no intrinsic counterexample was certified. Park new qualitative chart/low lemmas. Resume only by pinning one actual finite production cylinder and interval-certifying U_0 and L_R, or by finding a genuine intrinsic counterexample. R-157 is separate and does not close T-050 or A13.",
+      "note": "R-156 remains the direct A13 frontier, but EXP-000685 establishes that no canonical finite production cylinder is currently hash-pinned: A7 defines a regulator class rather than one cutoff/multiplier. The exact sufficient-radius criterion remains L_R*r*sqrt(1+r^2/16)+2*U_0*sqrt(2*(1-(1+r^2)^(-1/2)))<47/1000, but computing U_0 or L_R now would require a new scheme choice. Park new qualitative lemmas and discretionary finite-cylinder numerics. Resume only if T-054 selects a candidate that explicitly pins the regulator, cutoff, output convention, covariance subtraction, filtration, and complete scalar owner, or if a genuine scheme-independent intrinsic counterexample is proved. R-157 is separate and does not close T-050 or A13.",
       "created": "2026-07-21",
       "updated": "2026-08-03",
       "blocked_by": [],
@@ -5358,9 +5358,10 @@
           "EXP-000680",
           "EXP-000681",
           "EXP-000682",
-          "EXP-000684"
+          "EXP-000684",
+          "EXP-000685"
         ],
-        "latest_exploration_id": "EXP-000684",
+        "latest_exploration_id": "EXP-000685",
         "accepted_event_ids": [
           "20260721-close-t-049-negatively-with-the-a13-relative-ph",
           "20260721-complete-a13-gate-record-synchronization-and-re",
@@ -54220,6 +54221,53 @@
       "task_id": "T-050",
       "title": "Correct the quantitative-radius cross-reference in the intrinsic counterexample audit",
       "verdict": "parked"
+    },
+    {
+      "boundary": "This audit does not refute the R-156 existential fixed-cutoff neighbourhood, produce an intrinsic negative direction, or close T-050, A13, Nelson, any phase or PDE verdict, or Sector A. It also does not forbid a future candidate model from explicitly pinning such a regulator and cylinder.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "A numerical radius obtained after an unregistered finite-cylinder choice would certify only that newly chosen auxiliary scheme and could be mistaken for a production or cutoff-uniform T-050 theorem. Truth-first model selection should precede this discretionary computational expense.",
+      "evidence_refs": [
+        "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json#parameters",
+        "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json#scope",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_two_root_endpoint_hessian_uniform_local_gap_boundary_manifest.json#statement",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_shifted_state_nonzero_neighborhood_gap_boundary_manifest.json#statement"
+      ],
+      "finding": "No unique finite production cylinder is hash-pinned by the current authorities. A1 fixes L=16, the production symbols, parameters, and positive floor; A7 fixes covariance-normal ordering for a common-even scalar regulator class but does not select one finite multiplier or cutoff; R-151 fixes an abstract retained p:2p pair; and R-156 assumes a fixed finite cutoff for the recursive p:2p:4p chart without registering its multiplier, support, source basis, U_0, or L_R. A chart-level sparse choice using the three antipodal pairs {+/-p,+/-2p,+/-4p} would expose 36 real root coordinates and two 12-by-12 coefficient blocks, hence a 288-dimensional coefficient tangent. If the canonical sharp max-norm cutoff is used instead, retaining 4p requires N at least 4 and its full Gaussian background contains 9^3=729 Fourier modes. Either finite choice and its full-output convention must be newly specified; neither follows uniquely from the registered model.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-155",
+          "R-156"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "id": "EXP-000685",
+      "method": [
+        "Cross-check the A1 production parameters, A7 covariance-normal regulator scope, and the R-151/R-156 finite-chart hypotheses.",
+        "Reconstruct the smallest sparse p:2p:4p chart needed by the two-stage shifted-state continuation and count its raw Gaussian and coefficient dimensions.",
+        "Separate a finite member of the admitted regulator class from the regulator-class composite limit and test whether the former is already hash-pinned."
+      ],
+      "next_action": "Keep T-050 parked at R-156 unless T-054 selects a candidate whose definition explicitly pins the regulator, cutoff, output convention, covariance subtraction, filtration, and complete scalar owner, or unless a genuine scheme-independent intrinsic counterexample is proved. Put primary effort into the preregistered T-054 evidence register and candidate-functional falsification tournament.",
+      "provenance": "contemporaneous",
+      "question": "Can the R-156 quantitative-radius programme be executed now without adding a new regulator, cutoff, or source-cylinder choice to the registered TECT model?",
+      "recorded_at": "2026-08-03T01:03:01Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000681",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-03",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "No canonical R-156 finite production cylinder is presently pinned",
+      "verdict": "parked"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -54305,7 +54353,8 @@
     "EXP-000670",
     "EXP-000681",
     "EXP-000682",
-    "EXP-000684"
+    "EXP-000684",
+    "EXP-000685"
   ],
   "process_grade_lessons": [
     "Round-summary over-claim incident (legacy 2026-04-24): higher-tier summaries may never outrun pillar-level notes → single-source-of-truth rule (`status.json` → generated `CLAIMS.md`).",
@@ -72067,7 +72116,7 @@
       "owner": "Codex",
       "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
       "gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
-      "note": "R-156 remains the direct A13 frontier. The exact intrinsic sufficient-radius criterion is L_R*r*sqrt(1+r^2/16)+2*U_0*sqrt(2*(1-(1+r^2)^(-1/2)))<47/1000, with U_0 the origin shifted operator norm and L_R a pinned third-variation modulus on the smallest source cylinder. The current authorities do not pin the cutoff/regulator/source basis, U_0, or L_R, so no honest numerical or cutoff-uniform delta follows; no intrinsic counterexample was certified. Park new qualitative chart/low lemmas. Resume only by pinning one actual finite production cylinder and interval-certifying U_0 and L_R, or by finding a genuine intrinsic counterexample. R-157 is separate and does not close T-050 or A13.",
+      "note": "R-156 remains the direct A13 frontier, but EXP-000685 establishes that no canonical finite production cylinder is currently hash-pinned: A7 defines a regulator class rather than one cutoff/multiplier. The exact sufficient-radius criterion remains L_R*r*sqrt(1+r^2/16)+2*U_0*sqrt(2*(1-(1+r^2)^(-1/2)))<47/1000, but computing U_0 or L_R now would require a new scheme choice. Park new qualitative lemmas and discretionary finite-cylinder numerics. Resume only if T-054 selects a candidate that explicitly pins the regulator, cutoff, output convention, covariance subtraction, filtration, and complete scalar owner, or if a genuine scheme-independent intrinsic counterexample is proved. R-157 is separate and does not close T-050 or A13.",
       "created": "2026-07-21",
       "updated": "2026-08-03",
       "blocked_by": [],
@@ -79423,6 +79472,12 @@
         "id": "exploration:EXP-000684",
         "kind": "proof_exploration",
         "label": "Correct the quantitative-radius cross-reference in the intrinsic counterexample audit",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000685",
+        "kind": "proof_exploration",
+        "label": "No canonical R-156 finite production cylinder is presently pinned",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -120973,6 +121028,42 @@
       },
       {
         "from": "exploration:EXP-000684",
+        "relation": "references_result",
+        "to": "result:R-156",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000685",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000685",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000685",
+        "relation": "continues",
+        "to": "exploration:EXP-000681",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000685",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000685",
+        "relation": "references_result",
+        "to": "result:R-155",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000685",
         "relation": "references_result",
         "to": "result:R-156",
         "basis": "structured_formal_ref"
