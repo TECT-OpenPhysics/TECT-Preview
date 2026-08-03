@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-PRE-A-C0-STATIC-FUNCTIONAL-DYNAMICAL-COMPLETION](#ng-2026-08-03-pre-a-c0-static-functional-dynamical-completion) | close Pre-A C0 or infer a unique physical time law, dynamical exponent, causal cone, or limiting speed from the PA-M2 static functional and spatial Hessian alone | exact gradient and inertial completions share the same static equilibria and Hessian but have first- versus second-order evolution, negative-real versus imaginary generator spectra, dissipative versus conservative energy laws, and Gaussian critical exponents `z=2` versus `z=1`; a common spatial Hessian also admits heat and wave causal-support classes. Retain PA-M2's static variational results, but require an additional microscopic temporal/kinetic law and do not count an inserted inertia or cone as emergent |
 | [NG-2026-08-03-PA-M5-BARE-ISOTROPIC-SHELL-CAUSAL-CONE](#ng-2026-08-03-pa-m5-bare-isotropic-shell-causal-cone) | use the bare PA-M5-NL3-SV isotropic finite-wave-number screened-vector candidate as a joint T-053 Lorentz, gauge, and critical survivor | exact auxiliary elimination and the neutral-reference theorem survive, but a negative-quartic coexistence boundary is gapped, a continuous critical shell has a rank-one spatial Hessian with radial-linear and tangential-quadratic frequency, the screened vector is not a local gauge connection, and positive screening gaps its transverse branch. Retain the static screened-shell lemma, reject only this bare joint survivor, and treat a genuine compact-gauge or isolated-node repair as a new candidate version |
 | [NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM](#ng-2026-08-03-m1-pinned-functional-nonzero-equilibrium) | find a stable or metastable nonzero equilibrium of the hash-pinned unconstrained M1/P1 functional by BCC, other finite-star, multistart, Hessian, or full-field search | exact global and radial bounds give `F_P1[Psi]>=g||Psi||_2^2`, `g>1/8`, and `<DF_P1(Psi),Psi>>=kappa||Psi||_2^2`, `kappa>1/4`; zero is the unique critical point and global minimizer and its canonical gradient flow decays exponentially. Retire T-052's equilibrium search for this candidate except as backend regression; constrained, compact-target, chemical-potential, conserved, retuned, historical, A7, alternative-model, and physical-vacuum questions remain open |
 | [NG-2026-08-03-A13-NONLINEAR-SHIFTED-STATE-PULLBACK-SOURCE-CONVEXITY](#ng-2026-08-03-a13-nonlinear-shifted-state-pullback-source-convexity) | infer a global intrinsic production gap by treating the `9/10` Cameron--Martin source reserve as a positive controller-coordinate Hessian after nonlinear shifted-state substitution | for `chi(t,s)=(tP xi_p,sP(xi_2p+tP xi_p))` with a rank-one projection `P`, the source cost is `9(t^2+s^2+t^2s^2)/20`; at `t=s=R` its parameter Hessian has eigenvalue `9(1-R^2)/10`, equal to `-27/10` at `R=2`, while the intrinsic tangent source Gram remains positive. The failure is chart curvature, not an intrinsic production or T-050 counterexample |
@@ -245,6 +246,42 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-pre-a-c0-static-functional-dynamical-completion"></a>
+### NG-2026-08-03-PRE-A-C0-STATIC-FUNCTIONAL-DYNAMICAL-COMPLETION -- static data do not identify a unique temporal completion
+
+**Failure mode.**  Close Pre-A's causal-origin fork, or infer a unique physical
+time law, arrow, Gaussian dynamical exponent, null cone, or limiting speed,
+from the PA-M2 time-independent static functional and its spatial Hessian
+alone.
+
+**Evidence.**  For any positive static Hessian eigenvalue `ell`, the same
+finite-dimensional `C2` static function admits the gradient completion
+`u_t=-gamma grad F` with temporal root `-gamma ell` and the inertial completion
+`chi u_tt=-grad F` with roots `+/-i sqrt(ell/chi)`.  They retain the same
+configuration equilibria and static Hessian but differ in temporal order,
+initial-data count, reversibility, and energy law.  The same massless spatial
+Hessian gives both an everywhere-supported heat kernel and a finite-domain
+d'Alembert wave equation.  At the PA-M2 critical node the two completions give
+Gaussian tree-level exponents `z=2` and `z=1`; the inertial slope
+`2q sqrt(c/chi)` contains the separately chosen `chi`.  The exact PA-M2
+fourth-order kernel has unbounded ultraviolet group speed.  Primary 21/21,
+non-importing independent 16/16, and integrated 79/79 assertions pass in
+`codes/foundations/pre_a_c0_dynamical_completion_underdetermination*.py`, with
+stored evidence under `claims/C6-SPACETIME-SIGNATURE/runs/`.
+
+**Consequence.**  Retire only the static-to-unique-dynamics shortcut.  PA-M2's
+static variational theorem is not invalidated, and a richer microscopic theory
+may still derive time or causal order.  Pre-A must either declare a primitive
+temporal/causal update structure as C0-A or derive one from a premetric C0-B
+substrate, then supply the state and composition map needed by PA-H1 and
+PA-M2.  No physical time, Lorentzian signature, light speed, event horizon,
+gravity, or Pre-A closure follows from this no-go.
+
+**Revisit condition.**  Revisit only after a candidate supplies a microscopic
+update law, transfer structure, temporal action, reflection-positive
+reconstruction, or equivalent data from which the kinetic law and causal
+continuum are derived rather than inserted.
 
 <a id="ng-2026-08-03-pa-m5-bare-isotropic-shell-causal-cone"></a>
 ### NG-2026-08-03-PA-M5-BARE-ISOTROPIC-SHELL-CAUSAL-CONE -- the bare screened shell is not a joint Lorentz-gauge-critical survivor

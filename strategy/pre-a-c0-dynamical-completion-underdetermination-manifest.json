@@ -1,0 +1,133 @@
+{
+  "schema": "tect/pre-a-c0-dynamical-completion-nogo-manifest/0.1",
+  "candidate_id": "PA-C0-DYNAMICAL-COMPLETION-NOGO-v0",
+  "candidate_family": "C0-STATIC-TO-DYNAMICS-UNDERDETERMINATION",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 scoped no-go certificate; not a TECT claim, tier change, derivation of time, or physical causal model",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "comparison_context": "A2-FULL-PRODUCTION-WELLPOSED",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "A time-independent static functional, its critical set, and its spatial Hessian do not uniquely identify a temporal completion. Explicit gradient and inertial completions share the same static data but differ in temporal order, generator spectrum, reversibility, energy law, Gaussian dynamical exponent, and causal-support class. At the PA-M2 critical node they give z=2 and z=1 respectively; the inertial node slope contains the separately inserted chi and the full fourth-order kernel has unbounded ultraviolet group speed. The theorem does not rule out causal emergence from richer microscopic data and does not select C0-A or C0-B.",
+  "hypotheses": {
+    "finite_mode_theorem": "X_N is a finite real Galerkin configuration space and F:X_N->R is C2 and time independent",
+    "excluded_from_static_input": [
+      "temporal derivative law",
+      "kinetic metric or inertia",
+      "mobility or bath",
+      "symplectic form or quantum Hamiltonian",
+      "noise law",
+      "clock normalization",
+      "temporal boundary condition"
+    ],
+    "positive_mode": "L=D2F(u_*) has eigenvalue ell>0 on the compared mode",
+    "pa_m2_gapless_boundary": "r=0, c>0, q>0",
+    "infrared_interpretation": "formal local continuous momentum or a declared commensurate volume family; not a literal p->0 limit on one fixed finite torus"
+  },
+  "dynamical_completions": {
+    "gradient": "u_t=-gamma grad F(u), gamma>0, after selecting a configuration-space metric and mobility",
+    "inertial": "chi u_tt=-grad F(u), chi>0, after selecting phase space and a kinetic metric",
+    "reversed_finite_mode_gradient": "u_t=+gamma grad F(u), used only to expose the unselected Lyapunov arrow in locally well-posed finite dimension",
+    "schrodinger_branch": "not used in the core theorem because it requires an additional complex or two-real-component symplectic structure"
+  },
+  "mathematical_status": {
+    "same_static_equilibria_and_hessian": "CANDIDATE-SCOPE EXACT LEMMA",
+    "gradient_energy_identity": "CANDIDATE-SCOPE EXACT LEMMA: dF/dt=-gamma||grad F||^2",
+    "inertial_energy_identity": "CANDIDATE-SCOPE EXACT LEMMA: d[chi||u_t||^2/2+F]/dt=0 on shell",
+    "positive_mode_inequivalence": "CANDIDATE-SCOPE EXACT LEMMA: roots -gamma ell versus +/-i sqrt(ell/chi), with first versus second temporal order",
+    "physical_time_arrow": "OPEN; stable relaxation is an additional selection condition",
+    "heat_wave_causal_support": "CANDIDATE-SCOPE EXACT WITNESS for a common massless spatial Hessian",
+    "pa_m2_gradient_exponent": "CANDIDATE-SCOPE GAUSSIAN TREE-LEVEL COROLLARY: z=2 at r=0",
+    "pa_m2_inertial_exponent": "CANDIDATE-SCOPE GAUSSIAN TREE-LEVEL COROLLARY: z=1 at r=0",
+    "pa_m2_inertial_node_slope": "c_IR=2q sqrt(c/chi), conditional on the inserted inertia",
+    "pa_m2_global_causal_cone": "EXCLUDED for the exact continuum kernel by unbounded ultraviolet group speed",
+    "interacting_dynamic_exponent": "OPEN",
+    "c0_branch_selection": "OPEN",
+    "physical_time_and_causal_emergence": "OPEN"
+  },
+  "pa_m2_corollary": {
+    "symbol": "K_r(k)=r+c sum_i(k_i^2-q^2)^2",
+    "node_expansion": "K_r(Q_sigma+p)=r+4cq^2|p|^2+4cq sum_i sigma_i p_i^3+c sum_i p_i^4",
+    "gradient_rate": "Gamma_G=gamma K_0~4 gamma c q^2 |p|^2",
+    "inertial_frequency": "omega_I=sqrt(K_0/chi)~2q sqrt(c/chi)|p|",
+    "arbitrary_slope_input": "chi=4cq^2/c_target^2 gives any declared c_target>0",
+    "q_zero_boundary": "q=0 changes the Gaussian exponents to z_G=4 and z_I=2",
+    "ultraviolet_boundary": "along k=(q+R,q,q), d omega/dR=2 sqrt(c/chi)(q+R), which is unbounded"
+  },
+  "c0_consequence": {
+    "excluded_shortcut": "static free energy -> unique physical time law, null cone, or light speed",
+    "c0_a": "declare a primitive causal or temporal update structure and do not recount that primitive as emergent",
+    "c0_b": "derive causal order, a clock, the kinetic law, and continuum null structure from a premetric substrate",
+    "selection": "OPEN"
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "finite Galerkin configuration space and C2 static functional",
+      "a selected Euclidean or L2 metric when grad F is written",
+      "separately chosen gamma or chi",
+      "an already supplied spatial line for the heat-wave witness",
+      "the existing three-dimensional PA-M2 static symbol for its corollary"
+    ],
+    "derived_outputs": [
+      "noninjectivity of the map from dynamical completions to static data",
+      "inequivalent temporal orders, spectra, and energy laws",
+      "parabolic versus hyperbolic causal-support witness",
+      "conditional PA-M2 Gaussian z=2 versus z=1 behavior",
+      "freedom of the inserted inertial node slope",
+      "failure of a global PA-M2 limiting speed"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "open_gates": [
+    "PA-C0-A-OR-B-SELECTION",
+    "PA-C0-MICROSCOPIC-TEMPORAL-LAW",
+    "PA-C0-CLOCK-AND-ARROW",
+    "PA-C0-CAUSAL-ORDER-OR-PRIMITIVE",
+    "PA-C0-CONTINUUM-NULL-STRUCTURE",
+    "PA-C0-CROSS-SECTOR-SPEED-PROTECTION",
+    "PA-H-BOUNDARY-ALGEBRA-AND-STATE-SELECTION",
+    "PA-H-TO-PA-M2-COMPOSITION"
+  ],
+  "scope": {
+    "exact_scoped_underdetermination": true,
+    "static_data_map_noninjective": true,
+    "finite_galerkin_nonlinear_witness": true,
+    "continuum_heat_wave_causal_class_witness": true,
+    "static_functional_selects_kinetic_law": false,
+    "pa_m2_static_functional_selects_unique_dynamics": false,
+    "pa_m2_gradient_z2_corollary": true,
+    "pa_m2_inertial_z1_corollary": true,
+    "z_is_gaussian_tree_level_at_r_zero": true,
+    "finite_torus_z_requires_commensurate_volume_limit_or_formal_local_momentum": true,
+    "z_is_linearized_and_gapless_only": true,
+    "finite_torus_z_requires_limit": true,
+    "inertial_speed_is_inserted": true,
+    "pa_m2_low_energy_node_speed_only": true,
+    "pa_m2_cone_is_ir_only": true,
+    "pa_m2_global_causal_cone": false,
+    "time_orientation_derived": false,
+    "time_emergence_derived": false,
+    "causal_or_null_structure_derived": false,
+    "global_causal_structure_derived": false,
+    "physical_light_speed_derived": false,
+    "physical_speed_derived": false,
+    "physical_time_and_causal_emergence": false,
+    "dynamical_exponent_uniquely_derived": false,
+    "c0_a_or_c0_b_selected": false,
+    "c0_branch_selected": false,
+    "pa_m2_invalidated": false,
+    "pre_a_complete": false
+  },
+  "artifacts": {
+    "certificate_note": "strategy/pre-a-c0-dynamical-completion-underdetermination-certificate-260803.md",
+    "primary_script": "codes/foundations/pre_a_c0_dynamical_completion_underdetermination.py",
+    "independent_script": "codes/foundations/pre_a_c0_dynamical_completion_underdetermination_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_c0_dynamical_completion_underdetermination_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0-dynamical-completion-underdetermination/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0-dynamical-completion-underdetermination/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0-dynamical-completion-underdetermination/result.json"
+  },
+  "no_overclaim": "The theorem proves only that the PA-M2 static functional is compatible with inequivalent dynamical completions, with an exact heat-wave causal-support witness and Gaussian node corollaries. It does not select a physical completion, derive time, establish Lorentzian signature, fix the speed of light, establish a global PA-M2 causal cone, select C0-A or C0-B, reconstruct gravity, identify an event horizon, connect PA-H1 to PA-M2, or complete Pre-A."
+}

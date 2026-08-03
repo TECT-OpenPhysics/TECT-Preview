@@ -1,0 +1,201 @@
+{
+  "assertions": {
+    "passed": 16,
+    "rows": [
+      {
+        "actual": {
+          "1": "2",
+          "3": "3"
+        },
+        "expected": {
+          "1": "2",
+          "3": "3"
+        },
+        "group": "same_static_data",
+        "name": "independent nonlinear force coefficients",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "2",
+          "3"
+        ],
+        "expected": "lambda>0 and g>0, so lambda+g*x^2>0",
+        "group": "same_static_data",
+        "name": "independent positive bracket makes zero the only real equilibrium",
+        "status": "PASS"
+      },
+      {
+        "actual": "-147/50",
+        "expected": "-147/50",
+        "group": "dynamics",
+        "name": "independent gradient Lyapunov identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "147/50",
+        "expected": "147/50",
+        "group": "dynamics",
+        "name": "independent reversed-gradient energy identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "group": "dynamics",
+        "name": "independent inertial energy conservation on shell",
+        "status": "PASS"
+      },
+      {
+        "actual": "-35/12",
+        "expected": "negative real",
+        "group": "dynamics",
+        "name": "independent positive-mode gradient root is negative real",
+        "status": "PASS"
+      },
+      {
+        "actual": "-10/11",
+        "expected": "-10/11",
+        "group": "dynamics",
+        "name": "independent positive-mode inertial root square is negative",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          1,
+          2
+        ],
+        "expected": [
+          1,
+          2
+        ],
+        "group": "dynamics",
+        "name": "independent temporal orders differ",
+        "status": "PASS"
+      },
+      {
+        "actual": "-365/6272",
+        "expected": "-365/6272",
+        "group": "causal_class",
+        "name": "independent heat-kernel differential identity",
+        "status": "PASS"
+      },
+      {
+        "actual": {},
+        "expected": {},
+        "group": "causal_class",
+        "name": "independent dAlembert polynomial solves the wave equation",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "group": "relative_speed",
+        "name": "independent two-copy relative-speed square",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "2": "147/20",
+          "4": "3/5"
+        },
+        "expected": {
+          "2": "147/20",
+          "4": "3/5"
+        },
+        "group": "pa_m2_corollary",
+        "name": "independent symmetric node expansion cancels cubic term",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          2,
+          1
+        ],
+        "expected": [
+          2,
+          1
+        ],
+        "group": "pa_m2_corollary",
+        "name": "independent PA-M2 Gaussian exponents",
+        "status": "PASS"
+      },
+      {
+        "actual": "25/4",
+        "expected": "25/4",
+        "group": "pa_m2_corollary",
+        "name": "independent arbitrary positive node-speed fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          4,
+          2
+        ],
+        "expected": [
+          4,
+          2
+        ],
+        "group": "pa_m2_corollary",
+        "name": "independent q-zero exponents",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "0": "7/2",
+          "1": "2"
+        },
+        "expected": "positive degree-one polynomial",
+        "group": "pa_m2_corollary",
+        "name": "independent ultraviolet group-speed polynomial is unbounded",
+        "status": "PASS"
+      }
+    ],
+    "total": 16
+  },
+  "authority": "independent exact audit of a T0 static-dynamics underdetermination certificate",
+  "candidate_id": "PA-C0-DYNAMICAL-COMPLETION-NOGO-v0",
+  "issued": "2026-08-03",
+  "no_overclaim": "This non-importing audit checks exact finite-mode energy identities, distinct temporal spectra, heat-versus-wave equations, relative-speed freedom, and PA-M2 Gaussian scaling boundaries. It does not select a physical dynamics, derive time or causal order, fix light speed, establish a global PA-M2 cone, or complete Pre-A.",
+  "schema": "tect/pre-a-c0-dynamical-completion-underdetermination-independent/0.1",
+  "scope": {
+    "c0_branch_selected": false,
+    "dynamical_exponent_uniquely_derived": false,
+    "finite_torus_z_requires_limit": true,
+    "global_causal_structure_derived": false,
+    "inertial_speed_is_inserted": true,
+    "pa_m2_cone_is_ir_only": true,
+    "pa_m2_invalidated": false,
+    "physical_speed_derived": false,
+    "physical_time_and_causal_emergence": false,
+    "pre_a_complete": false,
+    "static_data_map_noninjective": true,
+    "static_functional_selects_kinetic_law": false,
+    "time_orientation_derived": false,
+    "z_is_linearized_and_gapless_only": true
+  },
+  "shared_exact_results": {
+    "gradient_and_inertial_temporal_orders": [
+      1,
+      2
+    ],
+    "gradient_energy_decreases": true,
+    "heat_wave_causal_class_witness": true,
+    "inertia_for_speed_fixture": "147/125",
+    "inertial_extended_energy_conserved": true,
+    "pa_m2_gradient_dynamic_exponent": 2,
+    "pa_m2_inertial_dynamic_exponent": 1,
+    "pa_m2_ultraviolet_group_speed_unbounded": true,
+    "pre_a_complete": false,
+    "q_zero_gradient_dynamic_exponent": 4,
+    "q_zero_inertial_dynamic_exponent": 2,
+    "reversed_gradient_energy_increases_in_finite_dimension": true,
+    "same_static_equilibria_and_hessian": true,
+    "two_copy_relative_speed_squared_fixture": "4"
+  },
+  "source": {
+    "path": "codes/foundations/pre_a_c0_dynamical_completion_underdetermination_independent.py",
+    "sha256": "56a3eb7cb95119679ea99ad388c9e3e0ff40689936c248631613c983fb8e1c50"
+  },
+  "version": "0.1.0"
+}

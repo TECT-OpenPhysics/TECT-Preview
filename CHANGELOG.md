@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Pre-A C0 static-dynamics nonidentifiability certificate] - 2026-08-03
+
+Registered EXP-000697 and NG-2026-08-03-PRE-A-C0-STATIC-FUNCTIONAL-DYNAMICAL-COMPLETION. A finite-mode exact theorem and independent causal-support witness show that one time-independent static functional and spatial Hessian admit inequivalent gradient and inertial completions. At the PA-M2 critical node these yield Gaussian tree-level z=2 and z=1 respectively; the inertial slope contains the separately inserted chi, while the exact fourth-order kernel has unbounded ultraviolet group speed. Primary 21/21, non-importing independent 16/16, and integrated 79/79 assertions pass with stored-versus-fresh equality and pinned scope boundaries. This retires only the shortcut from static energy to unique dynamics: PA-M2 static variational results survive, while time, causal order, physical light speed, C0-A/C0-B selection, PA-H1 composition, and Pre-A remain open.
+
 ## [Hostile-audit correction of Pre-A novelty and PA-H1 state map] - 2026-08-03
 
 EXP-000696 corrects the earlier checkpoint after two independent hostile audits. The literature target now separates the causal-origin fork C0 and physical N1-N5 links from validation gate V1, searches programme-level source sequences, scopes uniqueness modulo declared equivalences, and requires a controlled-limit nonanalytic phase criterion. PA-H1 now includes strict 0<2*tau slice scope, C1 x C0 map spaces, explicit field/spatial-derivative/momentum bounds, injectivity before Weyl transport, common-ball semilinear stability, and conserved-current energy-flux wording. Bessel, massive symplectic-current, both-null-flux, expected-scope, and stored-artifact freshness checks raise the independently audited total to 114/114.

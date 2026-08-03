@@ -1,0 +1,261 @@
+{
+  "assertions": {
+    "passed": 21,
+    "rows": [
+      {
+        "actual": "x*(g*x**2 + lambda)",
+        "expected": "x*(g*x**2 + lambda)",
+        "group": "same_static_data",
+        "name": "nonlinear static force",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0"
+        ],
+        "expected": [
+          0
+        ],
+        "group": "same_static_data",
+        "name": "positive fixture has one static equilibrium",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "x_dot=-gamma*dF/dx",
+          "x_ddot=-(dF/dx)/chi"
+        ],
+        "expected": "same dF/dx",
+        "group": "same_static_data",
+        "name": "gradient and inertial completions use the identical static force",
+        "status": "PASS"
+      },
+      {
+        "actual": "-f**2*gamma",
+        "expected": "-f**2*gamma",
+        "group": "dynamics",
+        "name": "gradient-flow Lyapunov identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "f**2*gamma",
+        "expected": "f**2*gamma",
+        "group": "dynamics",
+        "name": "reversed finite-mode gradient law has the opposite energy arrow",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": 0,
+        "group": "dynamics",
+        "name": "inertial extended-energy identity on shell",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-ell*gamma"
+        ],
+        "expected": [
+          "-ell*gamma"
+        ],
+        "group": "dynamics",
+        "name": "gradient characteristic root",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-I*sqrt(ell)/sqrt(chi)",
+          "I*sqrt(ell)/sqrt(chi)"
+        ],
+        "expected": [
+          "-I*sqrt(ell)/sqrt(chi)",
+          "I*sqrt(ell)/sqrt(chi)"
+        ],
+        "group": "dynamics",
+        "name": "inertial characteristic roots",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "2"
+        ],
+        "expected": [
+          1,
+          2
+        ],
+        "group": "dynamics",
+        "name": "temporal orders require different initial-data counts",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": 0,
+        "group": "causal_class",
+        "name": "heat kernel solves the parabolic completion",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "causal_class",
+        "name": "heat kernel is strictly positive for positive time and diffusivity",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": 0,
+        "group": "causal_class",
+        "name": "dAlembert family solves the hyperbolic completion",
+        "status": "PASS"
+      },
+      {
+        "actual": "chi_2/chi_1",
+        "expected": "chi_2/chi_1",
+        "group": "relative_speed",
+        "name": "two-copy relative speed remains a free kinetic ratio",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": 4,
+        "group": "relative_speed",
+        "name": "relative-speed rational fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": "c*epsilon**2*(epsilon + 2*q)**2",
+        "expected": "c*epsilon**2*(epsilon + 2*q)**2",
+        "group": "pa_m2_corollary",
+        "name": "PA-M2 exact coordinate-ray node expansion",
+        "status": "PASS"
+      },
+      {
+        "actual": "c*epsilon**2*(epsilon**2 + 4*q**2)",
+        "expected": "c*epsilon**2*(epsilon**2 + 4*q**2)",
+        "group": "pa_m2_corollary",
+        "name": "PA-M2 symmetric node-ray expansion cancels the cubic term",
+        "status": "PASS"
+      },
+      {
+        "actual": "4*c*gamma*q**2",
+        "expected": "4*c*gamma*q**2",
+        "group": "pa_m2_corollary",
+        "name": "PA-M2 gradient completion has nonzero epsilon-squared rate",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(c)*q/sqrt(chi)",
+        "expected": "2*sqrt(c)*q/sqrt(chi)",
+        "group": "pa_m2_corollary",
+        "name": "PA-M2 inertial completion has nonzero epsilon-linear frequency",
+        "status": "PASS"
+      },
+      {
+        "actual": "c_target",
+        "expected": "c_target",
+        "group": "pa_m2_corollary",
+        "name": "any positive node slope can be inserted through the inertia",
+        "status": "PASS"
+      },
+      {
+        "actual": "c*epsilon**4",
+        "expected": "c*epsilon**4",
+        "group": "pa_m2_corollary",
+        "name": "q-zero boundary changes the spatial leading power to four",
+        "status": "PASS"
+      },
+      {
+        "actual": "oo",
+        "expected": "oo",
+        "group": "pa_m2_corollary",
+        "name": "PA-M2 ultraviolet group speed is unbounded",
+        "status": "PASS"
+      }
+    ],
+    "total": 21
+  },
+  "authority": "T0 scoped no-go certificate; not a TECT claim, tier change, derivation of time, or physical causal model",
+  "candidate_family": "C0-STATIC-TO-DYNAMICS-UNDERDETERMINATION",
+  "candidate_id": "PA-C0-DYNAMICAL-COMPLETION-NOGO-v0",
+  "claim_bearing": false,
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "exact_results": {
+    "causal_class_witness": "the same massless gradient static functional admits heat evolution with everywhere-positive kernel and wave evolution with finite dAlembert domain of dependence",
+    "gradient_energy_rate": "dF/dt=-gamma*||delta F||^2",
+    "inertia_for_any_declared_positive_node_speed": "4*c*q**2/c_target**2",
+    "inertial_energy_rate": "d[chi*||phi_t||^2/2+F]/dt=0 on shell",
+    "pa_m2_global_limiting_speed": false,
+    "pa_m2_gradient_dynamic_exponent": 2,
+    "pa_m2_inertial_dynamic_exponent": 1,
+    "pa_m2_inertial_low_energy_speed": "2*sqrt(c)*q/sqrt(chi)",
+    "pa_m2_node_ray_kernel": "c*epsilon**2*(epsilon + 2*q)**2",
+    "pa_m2_ultraviolet_group_speed": "2*sqrt(c)*(momentum + q)/sqrt(chi)",
+    "positive_mode_gradient_root": "s=-gamma*ell",
+    "positive_mode_inertial_roots": "s=+/-i*sqrt(ell/chi)",
+    "q_zero_gaussian_exponents": {
+      "gradient": 4,
+      "inertial": 2
+    },
+    "reversed_gradient_energy_rate_in_finite_dimension": "dF/dt=+gamma*||delta F||^2",
+    "same_static_equilibria_and_hessian": true,
+    "temporal_initial_data_counts": {
+      "gradient": 1,
+      "inertial": 2
+    },
+    "two_copy_relative_speed_squared": "chi_2/chi_1"
+  },
+  "issued": "2026-08-03",
+  "no_overclaim": "This certificate proves only that the declared static data underdetermine their temporal completion, with exact finite-mode, heat-versus-wave, and PA-M2 soft-node witnesses. It does not prove that time or causal order cannot emerge from a richer microscopic theory. It does not select C0-A or C0-B, derive a physical clock or light speed, establish a global PA-M2 causal cone, reconstruct gravity, identify an event horizon, connect PA-H1 to PA-M2, or complete Pre-A.",
+  "required_extra_structure": [
+    "a time parameter or relational clock",
+    "a kinetic metric, symplectic form, update rule, or quantum Hamiltonian",
+    "a rule selecting reversible versus dissipative evolution and a physical arrow, if one is claimed",
+    "for a physical limiting speed, a controlled continuum causal structure and cross-sector dimensionless speed comparison"
+  ],
+  "schema": "tect/pre-a-c0-dynamical-completion-underdetermination-primary/0.1",
+  "scope": {
+    "c0_a_or_c0_b_selected": false,
+    "c0_branch_selected": false,
+    "causal_or_null_structure_derived": false,
+    "continuum_heat_wave_causal_class_witness": true,
+    "dynamical_exponent_uniquely_derived": false,
+    "exact_scoped_underdetermination": true,
+    "finite_galerkin_nonlinear_witness": true,
+    "finite_torus_z_requires_commensurate_volume_limit_or_formal_local_momentum": true,
+    "finite_torus_z_requires_limit": true,
+    "global_causal_structure_derived": false,
+    "inertial_speed_is_inserted": true,
+    "pa_m2_cone_is_ir_only": true,
+    "pa_m2_global_causal_cone": false,
+    "pa_m2_gradient_z2_corollary": true,
+    "pa_m2_inertial_z1_corollary": true,
+    "pa_m2_invalidated": false,
+    "pa_m2_low_energy_node_speed_only": true,
+    "pa_m2_static_functional_selects_unique_dynamics": false,
+    "physical_light_speed_derived": false,
+    "physical_speed_derived": false,
+    "physical_time_and_causal_emergence": false,
+    "pre_a_complete": false,
+    "static_data_map_noninjective": true,
+    "static_functional_selects_kinetic_law": false,
+    "time_emergence_derived": false,
+    "time_orientation_derived": false,
+    "z_is_gaussian_tree_level_at_r_zero": true,
+    "z_is_linearized_and_gapless_only": true
+  },
+  "source": {
+    "path": "codes/foundations/pre_a_c0_dynamical_completion_underdetermination.py",
+    "sha256": "bf49411f4cde5d2e5e348cf7b2be614564f069870dcec41f6a4511ecdfc7f75e"
+  },
+  "task_id": "T-054",
+  "theorem": {
+    "completion_one": "gradient flow dphi/dt=-gamma*delta F/delta phi, gamma>0",
+    "completion_two": "inertial flow chi*d2phi/dt2+delta F/delta phi=0, chi>0",
+    "conclusion": "F alone does not decide between an irreversible semigroup and a reversible group, supply a physical arrow, or select the kinetic coefficient, Gaussian dynamical exponent, or spacetime principal-symbol class; those require additional structure",
+    "inequivalence": "at each positive Hessian eigenvalue ell, the temporal spectra are {-gamma*ell} and {+/-i*sqrt(ell/chi)}, and the evolutions require one versus two initial data",
+    "shared_data": "the same static F, stationary configurations, and static Hessian",
+    "static_input": "a differentiable static functional F on a configuration space, with its stationary set and Hessian"
+  },
+  "version": "0.1.0"
+}
