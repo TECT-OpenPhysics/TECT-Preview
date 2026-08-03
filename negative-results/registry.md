@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-PRE-A-CP1-TRANSLATION-SYMMETRIC-PROPER-BOUNDARY-SELECTION](#ng-2026-08-03-pre-a-cp1-translation-symmetric-proper-boundary-selection) | select a proper nonempty characteristic boundary from the translation-invariant finite `PA-CP1-LT3-RS-v0` Hamiltonian and its unique ground state by a deterministic translation-covariant site rule | the translation group acts transitively and fixes the parent data, so every covariantly selected site subset is translation invariant and therefore empty or the full torus.  Retain the exact same-H classical ordering and energy-reference scaffold, but do not rename the periodic spatial boundary as a null or event horizon; derive relational or time-dependent characteristic sheets using a route with a regulator-level causal/locality estimate or a controlled Lorentzian emergence limit |
 | [NG-2026-08-03-PRE-A-PAH1-PAM2-UNCHANGED-INTERFACE](#ng-2026-08-03-pre-a-pah1-pam2-unchanged-interface) | identify the current six-dimensional PA-H1 finite image and sixteen-dimensional PA-M2 CI8 phase space as one unchanged exact state-, energy-, dynamics-, and regulator-preserving interface | a symplectic injection exists but leaves a ten-dimensional complement with nonunique state extension; positive quartic degree, the incompatible squared frequencies 9 and 25 versus one repeated `r/chi`, and cubic leakage to `3Q` separately block the strict affine/full-flow/node-only identification. Independent energy shifts also leave the cross-model and below-empty-space sign unidentified. Retain both scoped inputs and construct a common finite-regulator three-torus parent with one state and energy ledger |
 | [NG-2026-08-03-PRE-A-C0A-FINITE-HILBERT-BOUNDED-LOG-LIFT](#ng-2026-08-03-pre-a-c0a-finite-hilbert-bounded-log-lift) | extend the finite-state C0-A logarithm to a finite-spatial-mode Gaussian field by treating its quantum Hilbert space as finite-dimensional, uniformly bounding the transfer below, or imposing a finite occupation cutoff with exact CCR | the exact Mehler eigenvalues `2^(-3n)` accumulate at zero, so the transfer is injective but not uniformly bounded below and its logarithmic generator is unbounded; every finite occupation cutoff has a top-state commutator anomaly and cannot obey exact CCR.  Use infinite occupation Fock space and the unbounded semigroup generator; this does not refute the Gaussian reconstruction |
 | [NG-2026-08-03-PRE-A-C0A-REVERSIBILITY-WITHOUT-POSITIVE-TRANSFER](#ng-2026-08-03-pre-a-c0a-reversibility-without-positive-transfer) | infer a nonnegative self-adjoint Hamiltonian from reversible Markov transfer data alone, or infer a finite logarithmic generator from link reflection positivity without strict operator positivity | an entrywise-positive reversible stochastic control with spectrum `{1,-1/10,-1/10}` fails link reflection positivity; the projector transfer with spectrum `{1,0,0}` remains link-reflection positive but cannot be `exp(-aH)` for finite self-adjoint `H`.  Require `P>=0` for link reflection positivity and `P>0` for the finite logarithm; this does not derive or select the transfer |
@@ -250,6 +251,47 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-pre-a-cp1-translation-symmetric-proper-boundary-selection"></a>
+### NG-2026-08-03-PRE-A-CP1-TRANSLATION-SYMMETRIC-PROPER-BOUNDARY-SELECTION -- symmetric finite parent data select no proper site boundary
+
+**Failure mode.**  Treat the periodic spatial boundary condition of
+`PA-CP1-LT3-RS-v0`, or a proper subset of its sites selected only from the
+translation-invariant Hamiltonian and selected finite-volume ground state, as
+the characteristic-boundary role required by CP1.
+
+**Evidence.**  The finite Hamiltonian commutes with every lattice translation.
+Its full quantum ground state is simple under the stated confining
+Schrodinger-operator hypotheses, so it is also translation invariant.  Let a
+deterministic boundary rule be covariant under translations and use only these
+fixed data.  Because every translation fixes the input, covariance forces the
+selected site subset to be fixed by every translation.  The translation group
+acts transitively on the torus sites.  A nonempty invariant subset containing
+one site therefore contains its full orbit, which is the whole torus.  The
+only invariant subsets are empty and full.
+
+**Boundary.**  This excludes only a deterministic proper site-subset selection
+from the symmetric fixed-`N` data.  It does not exclude a state-conditioned or
+symmetry-broken sector, relational boundary variables, time-dependent
+characteristic sheets, a larger relativistic parent, gravity, or global causal
+structure.  It does not invalidate the exact eight-node symbol, the 256
+classical minima, or the same-Hamiltonian classical comparison
+`H_min=-Vr^2/(4g)<H(0,0)=0`.
+
+**Consequence.**  Retain the local lattice model as an exact common-container
+and ordering scaffold, but keep `CP1 complete=false`.  A sufficient next route
+would derive two characteristic sheets, corner and constraint data, symplectic
+flux, bulk reconstruction, and state restriction from a parent with a
+regulator-level causal/locality estimate; a controlled Lorentzian emergence
+limit remains an alternative.  Periodicity alone is not a null or event
+horizon.
+
+**Evidence files.**
+`strategy/pre-a-cp1-lt3-rs-common-container-certificate-260803.md`;
+`strategy/pre-a-cp1-lt3-rs-common-container-manifest.json`;
+`codes/foundations/pre_a_cp1_lt3_rs_common_container.py`;
+`codes/foundations/pre_a_cp1_lt3_rs_common_container_independent.py`;
+`codes/foundations/pre_a_cp1_lt3_rs_common_container_verify.py`.
 
 <a id="ng-2026-08-03-pre-a-pah1-pam2-unchanged-interface"></a>
 ### NG-2026-08-03-PRE-A-PAH1-PAM2-UNCHANGED-INTERFACE -- the current PA-H1 and PA-M2 fixtures cannot be identified unchanged

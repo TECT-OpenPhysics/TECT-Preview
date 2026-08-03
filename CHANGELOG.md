@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Local lattice CP1 scaffold fixes the same-H ordering sign and exposes the boundary gate] - 2026-08-03
+
+Registered EXP-000711 and PA-CP1-LT3-RS-v0. The exact finite-lattice theorem proves eight nodes, 256 minima, H_min=-Vr^2/(4g)<H(0,0)=0, a moment-derived negative quantum trial witness, and the scoped translation-symmetric proper-site-boundary no-go. Independent and integrated audits pass 248 checks. Physical empty space, a finite-energy no-condensate reference, characteristic reconstruction, CP1, and Pre-A remain open.
+
 ## [T-054 strict-interface verifier made workspace-portable] - 2026-08-03
 
 Repair the PA-H1/PA-M2 strict-interface package after cross-workspace reproduction exposed stale source self-hashes and absolute repository-root strings in the stored integrated artifact. All non-PDF authority hashes now canonicalize CRLF and lone CR to LF, and artifact-routing assertions store repository-relative paths while still resolving and comparing the declared files. Fresh primary 56/56, non-importing independent 41/41, and integrated 186/186 checks pass, 283 combined. The strict-interface no-go, its scope, and the open Pre-A/common-parent tasks are unchanged.
