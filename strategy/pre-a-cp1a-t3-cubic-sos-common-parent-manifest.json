@@ -1,0 +1,197 @@
+{
+  "schema": "tect/pre-a-cp1a-t3-cubic-sos-common-parent-manifest/0.1",
+  "candidate_id": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
+  "candidate_family": "CP1A-T3-CUBIC-SOS-COMMON-PARENT",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 CP1a kinematic/static common-parent compatibility certificate; not full CP1, a TECT action, a claim-tier change, or a physical-model selection",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "comparison_context": "A2-FULL-PRODUCTION-WELLPOSED",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "At every fixed finite Fourier cutoff on the periodic three-torus of side pi/2, one fitted real-scalar local-quartic Hamiltonian family has a common CCR algebra, field, volume, boundary, hbar, regulator, state-selection rule, and relative-energy subtraction. Its r=0 quadratic transverse-constant three-mode subspace has squared frequencies 9,25,25, matching the finite PA-H1 calibration. Its cubic-SOS spatial symbol has exactly the eight lattice zeros (+/-4,+/-4,+/-4), exact off-node lattice gap nine, and node Hessian spectrum 3/2,63/4,63/4. For -9<=r<0 every finite-regulator classical global minimizer has a nonzero node component, and stationary points obey the registered amplitude and off-node concentration bounds. The two roles are coupled by the local quartic. The same construction proves that exact PA-H1 matching occurs only at r=0, the old pure Gaussian state is not the interacting parent ground state, the node cone is anisotropic, and the ultraviolet group speed is unbounded. Therefore this is a structural CP1a benchmark, not full CP1 or a selected physical equation.",
+  "verdict": "ADVANCE AS A CP1A STRUCTURAL COMPATIBILITY BENCHMARK ONLY; DO NOT SELECT AS THE PHYSICAL EQUATION",
+  "common_parent": {
+    "space": "T^3 with side L=pi/2",
+    "boundary": "periodic",
+    "fourier_regulator": "Gamma_N={4n:n in Z^3, ||n||_infinity<=N}, N>=1",
+    "field": "one real scalar phi with canonical momentum pi",
+    "algebra": "Weyl CCR algebra over the finite-dimensional cutoff phase space, represented on infinite-dimensional L2(E_N)",
+    "hbar": "1",
+    "inertia": "1",
+    "hamiltonian_family": "H_(N,r)=||pi||_2^2/2+<phi,(a_0+r)phi>/2+g int phi^4/4, g>0",
+    "state_selection": "the unique strictly positive finite-cutoff interacting Schrodinger ground state for each r",
+    "relative_energy_subtraction": "C_N=E_N(0), the same r-independent additive subtraction for the fixed cutoff, volume, boundary, hbar, and coupling"
+  },
+  "kernel": {
+    "form": "a_0(k)=alpha[sum_i(k_i^2-16)]^2+beta sum_(i<j)(k_i^2-k_j^2)^2",
+    "alpha": "1/256",
+    "beta": "21/512",
+    "relative_beta": "21/2",
+    "coefficient_status": "uniquely fit only inside the declared fixed-q two-SOS family by a_0(0)=9 and a_0(4e_1)=25; not a microscopic derivation or holdout prediction",
+    "lattice_normal_form": "a_0(4n)=(sum_i n_i^2-3)^2+(21/2)sum_(i<j)(n_i^2-n_j^2)^2",
+    "zero_set": "exactly the eight nodes (+/-4,+/-4,+/-4)",
+    "off_node_lattice_gap": "9",
+    "node_hessian_spectrum": [
+      "3/2",
+      "63/4",
+      "63/4"
+    ],
+    "node_anisotropy_ratio": "21/2"
+  },
+  "exact_results": {
+    "pah1_quadratic_calibration": "At r=0 the normalized T3 modes 1, cos(4x1), sin(4x1) have frequencies 3,5,5 and preserve the canonical symplectic form under the transverse-constant isometric inclusion.",
+    "pah1_scope": "quadratic three-mode calibration only; no full KG dispersion, exact old Gaussian state, characteristic PDE derivation, or nonlinear invariant reduction",
+    "unchanged_componentwise_kernel_nogo": "The critical-node componentwise beta=1 kernel normalized by a(0)=9 has a(4e1)=6, not 25; the two calibrations instead force relative beta=21/2 in the declared family.",
+    "fixed_parameter_boundary": "(25+r)/(9+r)=25/9 if and only if r=0, while classical ordering requires r<0.",
+    "classical_ordering_window": "For every finite cutoff and -9<=r<0, the node cosine has A^2=-4r/(3g) and energy density -r^2/(6g), while every zero-node-component field has nonnegative energy.",
+    "stationary_mean_square_bound": "||phi||_2^2/V<=|r|/g",
+    "stationary_off_node_bound": "||P_(K8 perpendicular)phi||_2^2/||phi||_2^2<=|r|/9",
+    "native_quartic_coupling": "The normalized constant-node a^2b^2 coefficient is 3g/(2V)>0.",
+    "gaussian_state_obstruction": "The positive local quartic produces a nonzero fourth-Hermite excitation, so a factorized pure free Gaussian PA-H1 marginal cannot be an interacting eigenstate.",
+    "relative_ground_energy": "At fixed cutoff, E_N(r)<E_N(0) for r<0 by the r=0 ground-state Rayleigh-Ritz trial.",
+    "causal_liabilities": "The node squared-speed ratio is 21/2 and d omega(K,0,0)/dK grows as sqrt(22)K/8."
+  },
+  "energy_reference_ledger": {
+    "same_object": "one Hamiltonian family at the same finite cutoff, volume, boundary, hbar, inertia, field normalization, and quartic coupling",
+    "reference": "the interacting critical parent ground energy E_N(0)",
+    "proved_sign": "E_N(r)-E_N(0)<0 for r<0",
+    "classical_same_r_reference": "the node trial is below phi=0 in the onset window",
+    "not_compared": [
+      "physical empty space",
+      "an independently selected no-condensate quantum state",
+      "the old PA-H1 normal-ordered or raw oscillator vacuum",
+      "an absolute or cosmological vacuum energy"
+    ],
+    "work_boundary": "if r=r(tau), the external work term proportional to dot(r)<||phi||^2>/2 must be supplied by CP2"
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "three spatial dimensions and the torus side pi/2",
+      "periodic boundary conditions and the nested Fourier cutoff",
+      "one real scalar field, canonical momentum, inertia one, and hbar=1",
+      "positive local quartic coupling",
+      "the PA-H1 squared-frequency calibration values 9 and 25",
+      "the two-term cubic-SOS kernel family",
+      "ground-state selection at each finite cutoff"
+    ],
+    "derived_candidate_outputs": [
+      "the coefficients alpha=1/256 and beta=21/512 inside the declared ansatz",
+      "the eight-node zero set and exact lattice gap nine",
+      "the node Hessian spectrum and anisotropy",
+      "the exact quadratic PA-H1 three-mode inclusion at r=0",
+      "the finite-regulator classical ordering and concentration bounds",
+      "the nonzero native quartic coupling",
+      "the common relative-energy sign",
+      "the exact Gaussian-state, fixed-r, unchanged-kernel, and causal boundaries"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "negative_controls": {
+    "unchanged_componentwise_kernel": "beta=1 gives axis squared frequency 6 after constant-mode normalization, not 25",
+    "one_fixed_r": "exact frequency ratio and negative-r ordering do not coexist at one r",
+    "higher_harmonics": "constant-first-harmonic mixing produces n1=2 and cos^3 produces n1=3 under the unchanged local force",
+    "critical_gaussian": "the CI8 quadratic covariance is singular and the interacting ground state is not the old pure Gaussian fixture",
+    "finite_volume_quantum_order": "the finite-cutoff ground state is unique and parity even; no quantum spontaneous symmetry breaking follows",
+    "node_isotropy": "the Hessian eigenvalues are unequal",
+    "causal_uv": "the fourth-order symbol has linearly growing group speed",
+    "energy_zero": "the reference is E_N(0), not empty space or an absolute vacuum",
+    "fit_not_prediction": "two coefficients are fixed by two calibration values"
+  },
+  "open_gates": [
+    "CP1b: decide whether a common parent can recover an exact state-level PA-H1 role rather than only a quadratic calibration",
+    "CP2: derive a finite-time r=0 crossing and total-work ledger",
+    "T-053: preregister isotropy and ultraviolet-causality thresholds and reject or repair the fourth-order symbol",
+    "regulator and counterterm removal",
+    "thermodynamic and quantum phase analysis",
+    "physical-vacuum and empty-space comparison",
+    "Pre-A evidence freeze, holdout test, and candidate selection",
+    "any link to T-050 or the A13 complex three-component production law"
+  ],
+  "scope": {
+    "new_hypothesis": true,
+    "t0_only": true,
+    "finite_regulator_common_weyl_algebra": true,
+    "common_hamiltonian_family_and_reference_rule": true,
+    "exact_r0_pah1_quadratic_three_mode_calibration": true,
+    "exact_negative_r_classical_node_ordering_window": true,
+    "native_quartic_modes_coupled": true,
+    "full_cp1": false,
+    "cp2": false,
+    "pre_a_complete": false,
+    "physical_model_selected": false,
+    "exact_pah1_gaussian_state": false,
+    "full_pah1_kg_dispersion": false,
+    "nonlinear_pah1_reduction": false,
+    "one_fixed_r_realizes_both_roles": false,
+    "quantum_symmetry_breaking": false,
+    "thermodynamic_phase_transition": false,
+    "full_space_ci8_morphology_selected": false,
+    "bcc_required_or_selected": false,
+    "isotropic_causal_cone": false,
+    "bounded_uv_propagation": false,
+    "regulator_removal": false,
+    "counterterm_removal": false,
+    "absolute_empty_space_comparison": false,
+    "cosmic_cooling": false,
+    "spacetime_or_gravity": false,
+    "t050_closed": false,
+    "sector_a_closed": false
+  },
+  "verification": {
+    "primary_assertions": 38,
+    "independent_assertions": 33,
+    "integrated_assertions": 82,
+    "pdf_pages": 7,
+    "pdf_bytes": 21156,
+    "pdf_visual_qa": "all seven 120-dpi rendered pages inspected; no clipping, overlap, broken headings, or unreadable text",
+    "pdf_security": "unencrypted; no AcroForm, Names, OpenAction, AA, or JavaScript",
+    "deterministic_pdf_rebuild": true
+  },
+  "artifacts": {
+    "certificate": "strategy/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803.md",
+    "manifest": "strategy/pre-a-cp1a-t3-cubic-sos-common-parent-manifest.json",
+    "pdf": "output/pdf/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803-v0.1.pdf",
+    "primary_script": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent.py",
+    "independent_script": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_independent.py",
+    "pdf_builder": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_pdf.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1a-t3-cubic-sos-common-parent/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1a-t3-cubic-sos-common-parent/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1a-t3-cubic-sos-common-parent/result.json"
+  },
+  "artifact_hashes": {
+    "primary_script": {
+      "path": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent.py",
+      "sha256": "a2ddd53104916c94a484bc9df0e78d9a3495ba3443d85b7fcfef929062ba375f"
+    },
+    "independent_script": {
+      "path": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_independent.py",
+      "sha256": "ba20f98d4cb4cda4260a5f4e3de13477407a0a96ae651ca264c96c1577c013d1"
+    },
+    "pdf_builder": {
+      "path": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_pdf.py",
+      "sha256": "7b8641aa9072f4b9fac60be59a9557ec73bd58e7b6f1398c552687c6ba80c3a6"
+    },
+    "integrated_verifier": {
+      "path": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_verify.py",
+      "sha256": "2bf4a862b1898284483257a3eb924765fd14d1b70d5ee8dd2c77c1dc8736cd74"
+    },
+    "certificate": {
+      "path": "strategy/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803.md",
+      "sha256": "36b9de96dde4a6cf9beb84bf05b82cfa48d0dc089b27e6589512195aca45b738"
+    },
+    "pdf": {
+      "path": "output/pdf/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803-v0.1.pdf",
+      "sha256": "65fae3fc468ffb40072afdddede6d9a31a99978b3945ba8d1d4f33c1f7f1ba2b"
+    }
+  },
+  "dependencies": {
+    "strict_interface_nogo": "strategy/pre-a-pah1-m2-strict-composition-nogo-manifest.json",
+    "pah1_gaussian_calibration": "strategy/pre-a-c0a-gaussian-ccr-pah1-embedding-manifest.json",
+    "pam2_static_candidate": "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json"
+  },
+  "prior_art_boundary": "Finite-dimensional CCR algebras, confining Schrodinger ground-state uniqueness, sum-of-squares kernels, Fourier-mode variational trials, and Rayleigh-Ritz energy comparison are standard mathematics. No new general theorem is claimed. The repository-specific contribution is the exact convention-level CP1a construction, its simultaneous calibration/ordering compatibility audit, common relative-energy ledger, and explicit rejection criteria.",
+  "no_overclaim": "This T0 certificate constructs one fitted finite-regulator T3 Hamiltonian family and proves its exact r=0 quadratic PA-H1 calibration, r<0 classical finite-wavevector ordering window, shared relative-energy convention, and exact stated obstructions. It does not derive the old pure Gaussian PA-H1 state from the interacting parent, provide one fixed-r ordered calibration state, prove nonlinear subspace invariance, quantum symmetry breaking, a thermodynamic phase transition, regulator or counterterm removal, an isotropic or causal cone, bounded ultraviolet propagation, a physical vacuum, energy below empty space, cosmic cooling, spacetime, gravity, CP1, CP2, Pre-A, T-050, or Sector A."
+}

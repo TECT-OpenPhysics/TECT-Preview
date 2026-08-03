@@ -367,11 +367,12 @@ def main() -> int:
     catalog = load_json(REPO / "verification/catalog.json")
     explorations = [json.loads(line) for line in (REPO / "explorations/log.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     exploration_lookup = {row["id"]: row for row in explorations}
-    audit.check("records", "R-162 ledger entry", '<a id="r-162"></a>' in results_text and RESULT_ID in results_text, LEDGER_ID, "registered")
-    audit.check("records", "claim narrative", RESULT_ID in claim_text and "13/100" in claim_text, RESULT_ID, "registered")
+    audit.check("records", "R-162 ledger entry", '<a id="r-162"></a>' in results_text and RESULT_ID in results_text and all(token in results_text for token in ("primary `46/46`", "independent `41/41`", "integrated `228/228`", "seven-page PDF")), LEDGER_ID, "registered with 46/46, 41/41, 228/228, and seven-page PDF")
+    audit.check("records", "claim narrative", RESULT_ID in claim_text and "13/100" in claim_text and all(token in claim_text for token in ("Primary `46/46`", "independent `41/41`", "integrated verification passes `228/228`", "seven-page PDF")), RESULT_ID, "registered with current assertion and PDF counts")
     audit.check("records", "lineage narrative", "R-162" in lineage_text and "resolvent" in lineage_text.lower(), LEDGER_ID, "registered")
     audit.check("records", "generated index", RESULT_ID in index_text, RESULT_ID, "registered")
-    audit.check("records", "status immutable evidence", relative(MANIFEST) in status.get("legacy_evidence", []), relative(MANIFEST), "registered")
+    reproduction_expected = status.get("reproduction", {}).get("expected", "")
+    audit.check("records", "status immutable evidence", relative(MANIFEST) in status.get("legacy_evidence", []) and all(token in reproduction_expected for token in ("228/228", "46/46", "41/41", "seven-page PDF")), relative(MANIFEST), "registered with current reproduction counts")
     audit.check("records", "claim remains T4 open", status.get("tier") == "T4" and status.get("proof_complete") is False, [status.get("tier"), status.get("proof_complete")], ["T4", False])
     audit.check("records", "status no-overclaim parity", status.get("no_overclaim") == manifest.get("no_overclaim"), status.get("no_overclaim"), manifest.get("no_overclaim"))
     audit.check("records", "status next action pivot", "Freeze R-162" in status.get("next_action", "") and "truth-first T-054" in status.get("next_action", ""), status.get("next_action"), "R-162 freeze and T-054 pivot")

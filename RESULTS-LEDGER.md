@@ -235,8 +235,8 @@ policy in `governance/development-history.md`.
   `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-resolvent-pure-dyadic-recursive-chain-uniform-neighborhood-gap-boundary-260803-v1.0.tex.txt`,
   manifest
   `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_resolvent_pure_dyadic_recursive_chain_uniform_neighborhood_gap_boundary_manifest.json`,
-  primary `45/45`, non-importing independent `39/39`, and the integrated
-  release, deterministic PDF, security, render, and visual-QA records pinned
+  primary `46/46`, non-importing independent `41/41`, integrated `228/228`,
+  and the deterministic seven-page PDF, security, render, and visual-QA records pinned
   there.
 
 - **Failed routes and audit boundary.** Convexity of `|W|^6` does not permit

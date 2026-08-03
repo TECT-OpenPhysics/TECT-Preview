@@ -69,7 +69,14 @@ def serial(value: Any) -> Any:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    data = path.read_bytes()
+    if path.suffix.lower() != ".pdf":
+        data = data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(data).hexdigest()
+
+
+def relative(path: Path) -> str:
+    return str(path.relative_to(REPO)).replace("\\", "/")
 
 
 def atomic_json(path: Path, payload: dict[str, Any]) -> None:
@@ -672,8 +679,8 @@ def verify() -> dict[str, Any]:
         check(
             f"manifest artifact path: {key}",
             declared == path.resolve(),
-            str(declared),
-            str(path.resolve()),
+            relative(declared),
+            relative(path.resolve()),
             "artifact_routing",
         )
 

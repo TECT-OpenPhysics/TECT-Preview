@@ -5,6 +5,26 @@ not pillar counts.
 
 ---
 
+## [LT3 integrated verifier made workspace-portable for ST8 inheritance] - 2026-08-03
+
+Replace host-specific absolute artifact-routing values in the LT3 integrated result with repository-relative paths and canonicalize non-PDF authority hashes across CRLF/LF workspaces. This is required because ST8 hashes the LT3 integrated artifact as an upstream authority. The mathematical theorem, assertion contracts, candidate scope, negative results, claim tiers, CP1 status, and Pre-A status are unchanged.
+
+## [CP1a PDF binary transport pinned after rebase audit] - 2026-08-03
+
+A rebase audit caught Windows core.autocrlf changing the newly added CP1a PDF because Git's global text-conversion policy did not classify the ReportLab file as binary. Add output/.gitattributes with '*.pdf binary', rebuild the deterministic seven-page certificate after the finite-mode CCR wording clarification, and refresh the exact PDF bytes and SHA-256 in the manifest. The rebuilt PDF is 21,156 bytes with SHA-256 65fae3fc468ffb40072afdddede6d9a31a99978b3945ba8d1d4f33c1f7f1ba2b; all seven rendered pages pass visual review. No theorem, candidate verdict, task status, or claim tier changes.
+
+## [LT3-RS CP1 scaffold audit-count wording clarified] - 2026-08-03
+
+Clarify the arithmetic wording in the already published LT3-RS CP1 scaffold event. The verified counts are primary 75/75, non-importing independent 64/64, and integrated 109/109, for 248 combined. The earlier phrase attributing all 248 checks only to independent and integrated audits was imprecise. No formula, candidate scope, negative result, task status, claim tier, CP1 boundary, or Pre-A conclusion changes.
+
+## [R-162 release prose and verifier counts synchronized with stored evidence] - 2026-08-03
+
+Repair stale R-162 public prose and reproduction text after the release artifact audit. The claim narrative, RESULTS-LEDGER entry, and status now agree with the already stored manifest and run evidence: primary 46/46, non-importing independent 41/41, integrated 228/228, and a deterministic seven-page PDF. Strengthen the integrated verifier so these values and page description are release-gated, and refresh its manifest hash. No R-162 formula, scope, tier, T-050 status, or Sector-A conclusion changes.
+
+## [CP1a common-parent compatibility benchmark constructed and physical-selection liabilities exposed] - 2026-08-03
+
+Register EXP-000714--EXP-000718 and PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0. The fitted cubic-SOS T3 family gives one finite-regulator real-scalar Weyl algebra, Hamiltonian family, selected interacting ground-state rule, and common E_N(0) reference. Exact audits prove the eight-node zero set, off-node gap 9, node Hessian spectrum 3/2,63/4,63/4, the r=0 PA-H1 quadratic frequencies 3,5,5, and the -9<=r<0 classical ordering and concentration window. The unchanged componentwise kernel is rejected at the declared same-torus calibration because normalization gives axis value 6 rather than 25. The repair remains T0 and fitted: exact PA-H1 matching and order occur at different r, the interacting state is not the old pure Gaussian state, higher harmonics break nonlinear closure, the node cone is anisotropic, and ultraviolet group speed is unbounded. Primary 38, non-importing independent 33, and integrated 82 checks pass, 153 combined; the deterministic seven-page PDF passes byte-rebuild, security, text, render, and visual QA. CP1, CP2, Pre-A, physical-vacuum selection, and Sector A remain open. In the parallel A13 audit, path weights repair the crude divergence only for disjoint deterministic dyadic chains; arbitrary R-104/R-125 nonlinear forests require a derivative or score collar, Markov-contractivity, or a direct complete signed-owner estimate, so T-050 remains open.
+
 ## [Harden ST8 reproducibility and correct the speed ledger] - 2026-08-03
 
 Applied the independent referee fixes without changing the scoped theorem: portable text hashes, stored integrated staleness comparison, derived-count fixtures, exact provenance and artifact-route checks, executable c_LT3(a)=c_phys/a^2 parameter reconciliation, stable evidence anchors, and corrected squared-speed wording. Fresh primary 67/67, non-importing independent 37/37, and integrated 62/62 checks pass, 166 combined. CP1 and Pre-A remain open.

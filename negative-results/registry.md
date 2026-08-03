@@ -9,6 +9,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE](#ng-2026-08-03-pre-a-cp1-st8-continuous-time-exact-cone) | infer an exact finite-regulator compact-support domain of dependence or PA-H1 characteristic sheets from the bounded harmonic group speed of `PA-CP1-ST8-CB-v0` | the continuous-time semidiscrete harmonic propagator has nearest-neighbour response `c*t^2/(2chi)+O(t^4)`, nonzero for all sufficiently small positive times, so every proposed finite strict support cone fails. Retain effective speeds and possible quasi-local bounds; pursue a controlled Lorentzian continuum limit, an exact-causal discrete-time parent, or a separately supplied hyperbolic parent |
 | [NG-2026-08-03-PRE-A-CP1-ST8-ONE-CONNECTED-SCALAR-EQUIVALENCE](#ng-2026-08-03-pre-a-cp1-st8-one-connected-scalar-equivalence) | identify `PA-CP1-LT3-RS-v0` exactly and invertibly with one same-dimensional connected standard positive-edge real scalar Hamiltonian | the critical Hessian nullity is eight versus one, and the ordered complete-square minima number 256 versus two; invertible canonical equivalence preserves the former by congruence and the latter by bijection. This excludes only the stated exact standard comparator, not coarse graining, extra species, nonstandard stencils, auxiliaries, or controlled infrared equivalence |
 | [NG-2026-08-03-PRE-A-CP1-TRANSLATION-SYMMETRIC-PROPER-BOUNDARY-SELECTION](#ng-2026-08-03-pre-a-cp1-translation-symmetric-proper-boundary-selection) | select a proper nonempty characteristic boundary from the translation-invariant finite `PA-CP1-LT3-RS-v0` Hamiltonian and its unique ground state by a deterministic translation-covariant site rule | the translation group acts transitively and fixes the parent data, so every covariantly selected site subset is translation invariant and therefore empty or the full torus.  Retain the exact same-H classical ordering and energy-reference scaffold, but do not rename the periodic spatial boundary as a null or event horizon; derive relational or time-dependent characteristic sheets using a route with a regulator-level causal/locality estimate or a controlled Lorentzian emergence limit |
+| [NG-2026-08-03-PRE-A-CP1A-UNCHANGED-COMPONENTWISE-KERNEL-CALIBRATION](#ng-2026-08-03-pre-a-cp1a-unchanged-componentwise-kernel-calibration) | match the PA-H1 squared-frequency values 9 and 25 with the unchanged critical-node componentwise PA-M2 kernel on the common side-pi/2 torus using one scalar inertia/time normalization | critical nodes remove an additive shift, constant-mode normalization fixes the scale, and the axis value is then 6 rather than 25. The two calibrations instead force relative cubic-SOS anisotropy 21/2. This rejects only the declared unchanged same-field kernel interface; the changed CP1a benchmark and richer parents remain open |
 | [NG-2026-08-03-PRE-A-PAH1-PAM2-UNCHANGED-INTERFACE](#ng-2026-08-03-pre-a-pah1-pam2-unchanged-interface) | identify the current six-dimensional PA-H1 finite image and sixteen-dimensional PA-M2 CI8 phase space as one unchanged exact state-, energy-, dynamics-, and regulator-preserving interface | a symplectic injection exists but leaves a ten-dimensional complement with nonunique state extension; positive quartic degree, the incompatible squared frequencies 9 and 25 versus one repeated `r/chi`, and cubic leakage to `3Q` separately block the strict affine/full-flow/node-only identification. Independent energy shifts also leave the cross-model and below-empty-space sign unidentified. Retain both scoped inputs and construct a common finite-regulator three-torus parent with one state and energy ledger |
 | [NG-2026-08-03-PRE-A-C0A-FINITE-HILBERT-BOUNDED-LOG-LIFT](#ng-2026-08-03-pre-a-c0a-finite-hilbert-bounded-log-lift) | extend the finite-state C0-A logarithm to a finite-spatial-mode Gaussian field by treating its quantum Hilbert space as finite-dimensional, uniformly bounding the transfer below, or imposing a finite occupation cutoff with exact CCR | the exact Mehler eigenvalues `2^(-3n)` accumulate at zero, so the transfer is injective but not uniformly bounded below and its logarithmic generator is unbounded; every finite occupation cutoff has a top-state commutator anomaly and cannot obey exact CCR.  Use infinite occupation Fock space and the unbounded semigroup generator; this does not refute the Gaussian reconstruction |
 | [NG-2026-08-03-PRE-A-C0A-REVERSIBILITY-WITHOUT-POSITIVE-TRANSFER](#ng-2026-08-03-pre-a-c0a-reversibility-without-positive-transfer) | infer a nonnegative self-adjoint Hamiltonian from reversible Markov transfer data alone, or infer a finite logarithmic generator from link reflection positivity without strict operator positivity | an entrywise-positive reversible stochastic control with spectrum `{1,-1/10,-1/10}` fails link reflection positivity; the projector transfer with spectrum `{1,0,0}` remains link-reflection positive but cannot be `exp(-aH)` for finite self-adjoint `H`.  Require `P>=0` for link reflection positivity and `P>0` for the finite logarithm; this does not derive or select the transfer |
@@ -373,6 +374,63 @@ horizon.
 `codes/foundations/pre_a_cp1_lt3_rs_common_container.py`;
 `codes/foundations/pre_a_cp1_lt3_rs_common_container_independent.py`;
 `codes/foundations/pre_a_cp1_lt3_rs_common_container_verify.py`.
+<a id="ng-2026-08-03-pre-a-cp1a-unchanged-componentwise-kernel-calibration"></a>
+### NG-2026-08-03-PRE-A-CP1A-UNCHANGED-COMPONENTWISE-KERNEL-CALIBRATION -- the unchanged componentwise kernel cannot meet both PA-H1 calibration values
+
+**Failure mode.**  On the common periodic torus of side `pi/2`, retain one
+real scalar, unit inertia, the critical eight-node condition, and the unchanged
+componentwise PA-M2 quadratic symbol
+
+```text
+a_cmp(k)=c sum_i(k_i^2-16)^2.
+```
+
+Then attempt to identify its constant and first-axis quadratic frequencies
+with the PA-H1 squared values `9` and `25` using only the common scalar scale
+or one constant time normalization.
+
+**Evidence.**  Criticality at the eight nodes `(+/-4,+/-4,+/-4)` fixes the
+additive mass shift to zero.  The constant calibration gives
+
+```text
+a_cmp(0)=3 c 4^4=9,
+c=3/256.
+```
+
+At the first axis this same normalized kernel gives
+
+```text
+a_cmp(4e_1)=2 c 4^4=6,
+```
+
+not `25`.  Equivalently, put `x_i=k_i^2-16`.  Since
+
+```text
+(sum_i x_i)^2+sum_(i<j)(x_i-x_j)^2=3 sum_i x_i^2,
+```
+
+the componentwise kernel is the relative-`beta=1` member of the cubic-SOS
+family.  Requiring both calibration values uniquely gives relative
+`beta=21/2`, so no `beta=1` member under the declared contract succeeds.
+
+**Consequence.**  Reject only the unchanged same-torus, same-real-scalar,
+critical-node, one-inertia/time-normalization calibration interface.  This
+does not invalidate PA-M2's scoped variational theorem and does not exclude a
+changed cubic kernel, an ordered-background Hessian, separate single-frequency
+reductions, more components, auxiliary fields, nonlinear or constrained maps,
+nonlocal interactions, enlarged regulators, or a richer common parent.  The
+CP1a cubic-SOS package is a fitted structural repair, not evidence that nature
+uses its `21/2` anisotropy.
+
+**Evidence paths.**  `strategy/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803.md#exact-failure-of-the-unchanged-componentwise-pa-m2-kernel`,
+its manifest, deterministic PDF, and primary, non-importing independent, and
+integrated scripts and artifacts registered there.
+
+**Revisit condition.**  Revisit only after preregistering a different
+interface contract: a changed or higher-invariant kernel, extra fields, a
+non-scalar kinetic metric, an ordered-background rather than critical
+linearization, or a nonlinear reduction.  Do not restore the unchanged
+`beta=1` match by silently adding a second scale or dropping one calibration.
 
 <a id="ng-2026-08-03-pre-a-pah1-pam2-unchanged-interface"></a>
 ### NG-2026-08-03-PRE-A-PAH1-PAM2-UNCHANGED-INTERFACE -- the current PA-H1 and PA-M2 fixtures cannot be identified unchanged

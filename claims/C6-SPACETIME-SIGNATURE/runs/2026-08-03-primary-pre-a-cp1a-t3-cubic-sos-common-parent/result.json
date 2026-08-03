@@ -1,0 +1,652 @@
+{
+  "assertions": {
+    "passed": 38,
+    "rows": [
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "coefficient_derivation",
+        "name": "two-SOS calibration has one solution",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/256",
+        "expected": "1/256",
+        "group": "coefficient_derivation",
+        "name": "derived isotropic-square coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "21/512",
+        "expected": "21/512",
+        "group": "coefficient_derivation",
+        "name": "derived cubic-anisotropy coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "21/2",
+        "expected": "21/2",
+        "group": "coefficient_derivation",
+        "name": "derived relative anisotropy coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "pi/2",
+        "expected": "pi/2",
+        "group": "normalization",
+        "name": "common torus side",
+        "status": "PASS"
+      },
+      {
+        "actual": "(22*k1**4 - 19*k1**2*k2**2 - 19*k1**2*k3**2 - 96*k1**2 + 22*k2**4 - 19*k2**2*k3**2 - 96*k2**2 + 22*k3**4 - 96*k3**2 + 2304)/256",
+        "expected": "(22*k1**4 - 19*k1**2*k2**2 - 19*k1**2*k3**2 - 96*k1**2 + 22*k2**4 - 19*k2**2*k3**2 - 96*k2**2 + 22*k3**4 - 96*k3**2 + 2304)/256",
+        "group": "kernel",
+        "name": "expanded local fourth-order symbol",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/256",
+          "21/512"
+        ],
+        "expected": "both positive",
+        "group": "kernel",
+        "name": "symbol is a positive sum of squares",
+        "status": "PASS"
+      },
+      {
+        "actual": "9",
+        "expected": "9",
+        "group": "calibration",
+        "name": "constant-mode squared frequency",
+        "status": "PASS"
+      },
+      {
+        "actual": "25",
+        "expected": "25",
+        "group": "calibration",
+        "name": "first-axis squared frequency",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": 0,
+        "group": "node_geometry",
+        "name": "CI8 node is soft at r zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "22*n1**4 - 19*n1**2*n2**2 - 19*n1**2*n3**2 - 6*n1**2 + 22*n2**4 - 19*n2**2*n3**2 - 6*n2**2 + 22*n3**4 - 6*n3**2 + 9",
+        "expected": "22*n1**4 - 19*n1**2*n2**2 - 19*n1**2*n3**2 - 6*n1**2 + 22*n2**4 - 19*n2**2*n3**2 - 6*n2**2 + 22*n3**4 - 6*n3**2 + 9",
+        "group": "lattice_gap",
+        "name": "exact integer-lattice normal form",
+        "status": "PASS"
+      },
+      {
+        "actual": "21",
+        "expected": 21,
+        "group": "lattice_gap",
+        "name": "unequal integer-square triples cost at least twenty one",
+        "status": "PASS"
+      },
+      {
+        "actual": 9,
+        "expected": 9,
+        "group": "lattice_gap",
+        "name": "equal-square nonnode branch is minimized at the origin",
+        "status": "PASS"
+      },
+      {
+        "actual": 9,
+        "expected": 9,
+        "group": "lattice_gap",
+        "name": "exact off-node lattice gap",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "11",
+            "-19/4",
+            "-19/4"
+          ],
+          [
+            "-19/4",
+            "11",
+            "-19/4"
+          ],
+          [
+            "-19/4",
+            "-19/4",
+            "11"
+          ]
+        ],
+        "expected": [
+          [
+            "11",
+            "-19/4",
+            "-19/4"
+          ],
+          [
+            "-19/4",
+            "11",
+            "-19/4"
+          ],
+          [
+            "-19/4",
+            "-19/4",
+            "11"
+          ]
+        ],
+        "group": "node_geometry",
+        "name": "node Hessian matrix",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "3/2",
+          "63/4",
+          "63/4"
+        ],
+        "expected": [
+          "3/2",
+          "63/4",
+          "63/4"
+        ],
+        "group": "node_geometry",
+        "name": "node Hessian spectrum",
+        "status": "PASS"
+      },
+      {
+        "actual": "21/2",
+        "expected": "21/2",
+        "group": "causal_boundary",
+        "name": "node cone squared-speed anisotropy ratio",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "expected": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "group": "pah1_calibration",
+        "name": "transverse-constant T1-to-T3 inclusion is isometric",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "9",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "25",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "25",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "expected": [
+          [
+            "9",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "25",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "25",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "group": "pah1_calibration",
+        "name": "r-zero quadratic Hamiltonian pullback",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "expected": [
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "group": "pah1_calibration",
+        "name": "quadratic calibration phase inclusion is symplectic",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0"
+        ],
+        "expected": [
+          0
+        ],
+        "group": "dynamic_boundary",
+        "name": "PA-H1 frequency ratio is restored only at r zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/256",
+        "expected": "3/256",
+        "group": "unchanged_kernel_nogo",
+        "name": "unchanged componentwise kernel normalization",
+        "status": "PASS"
+      },
+      {
+        "actual": "6",
+        "expected": "6, not 25",
+        "group": "unchanged_kernel_nogo",
+        "name": "unchanged componentwise kernel misses PA-H1 axis value",
+        "status": "PASS"
+      },
+      {
+        "actual": "(4*a**3 + 12*a**2*b*cos(4*x) + 6*a*b**2*cos(8*x) + 6*a*b**2 + 3*b**3*cos(4*x) + b**3*cos(12*x))/4",
+        "expected": "(a + 8*b*cos(x)**4 - 8*b*cos(x)**2 + b)**3",
+        "group": "nonlinear_leakage",
+        "name": "local cubic harmonic decomposition",
+        "status": "PASS"
+      },
+      {
+        "actual": "3*a*b**2/2",
+        "expected": "nonzero for a*b != 0",
+        "group": "nonlinear_leakage",
+        "name": "constant-wave mixing leaks to the second harmonic",
+        "status": "PASS"
+      },
+      {
+        "actual": "b**3/4",
+        "expected": "nonzero for b != 0",
+        "group": "nonlinear_leakage",
+        "name": "a pure first harmonic leaks to the third harmonic",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4*r/(3*g)",
+        "expected": "-4*r/(3*g)",
+        "group": "classical_ordering",
+        "name": "node-stripe optimal amplitude squared",
+        "status": "PASS"
+      },
+      {
+        "actual": "-r**2/(6*g)",
+        "expected": "-r**2/(6*g)",
+        "group": "classical_ordering",
+        "name": "node-stripe energy density",
+        "status": "PASS"
+      },
+      {
+        "actual": "(r + 9)/2",
+        "expected": "nonnegative for -9 <= r < 0",
+        "group": "classical_ordering",
+        "name": "homogeneous quadratic coefficient is nonnegative in the onset window",
+        "status": "PASS"
+      },
+      {
+        "actual": "-r/g",
+        "expected": "|r|/g for r<0",
+        "group": "classical_ordering",
+        "name": "stationary mean-square density cap",
+        "status": "PASS"
+      },
+      {
+        "actual": "-r/9",
+        "expected": "|r|/9 for r<0",
+        "group": "classical_ordering",
+        "name": "stationary off-node fraction cap",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/V",
+        "expected": "1/V",
+        "group": "coupling",
+        "name": "normalized constant-node quartic overlap",
+        "status": "PASS"
+      },
+      {
+        "actual": "3*g/(2*V)",
+        "expected": "3*g/(2*V)",
+        "group": "coupling",
+        "name": "nonzero constant-node quartic coupling",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(6)/(2*omega**2)",
+        "expected": "sqrt(6)/(2*omega**2)",
+        "group": "gaussian_state_boundary",
+        "name": "x-four vacuum fourth-excitation coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(6)*I4*g/(8*omega**2)",
+        "expected": "nonzero for g,I4,omega > 0",
+        "group": "gaussian_state_boundary",
+        "name": "positive local quartic obstructs an exact free Gaussian eigenstate",
+        "status": "PASS"
+      },
+      {
+        "actual": "R2*r/2",
+        "expected": "negative for r<0",
+        "group": "energy_ledger",
+        "name": "common-reference ground-energy variational shift",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(22)/16",
+        "expected": "sqrt(22)/16",
+        "group": "causal_boundary",
+        "name": "axis ultraviolet frequency is quadratic",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(22)/8",
+        "expected": "sqrt(22)/8",
+        "group": "causal_boundary",
+        "name": "axis ultraviolet group speed is unbounded",
+        "status": "PASS"
+      }
+    ],
+    "total": 38
+  },
+  "authority": "T0 CP1a kinematic/static common-parent compatibility certificate; not full CP1, a TECT action, claim-tier change, or physical selection",
+  "candidate_id": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
+  "claim_bearing": false,
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "comparison_context": "A2-FULL-PRODUCTION-WELLPOSED",
+  "exact_results": {
+    "classical_ordering_window": "-9 <= r < 0",
+    "common_reference_rule": "C_N=E_N(0); compare E_N(r)-E_N(0) within the same cutoff, volume, boundary, hbar, and Hamiltonian family",
+    "constant_node_quartic_mixed_coefficient": "3*g/(2*V)",
+    "gaussian_fourth_excitation_coefficient": "sqrt(6)*I4*g/(8*omega**2)",
+    "negative_r_ground_energy_comparison": "E_N(r)<E_N(0) for r<0 by the r=0 ground-state variational trial",
+    "node_trial_amplitude_squared": "-4*r/(3*g)",
+    "node_trial_energy_density": "-r**2/(6*g)",
+    "pah1_frequency_ratio_match_values": [
+      "0"
+    ],
+    "pah1_quadratic_calibration": "at r=0 only, span{1,cos(4x1),sin(4x1)} has frequencies 3,5,5",
+    "stationary_mean_square_density_cap": "-r/g",
+    "stationary_off_node_fraction_cap": "-r/9",
+    "ultraviolet_speed": "unbounded; d omega(K,0,0)/dK ~ sqrt(22) K/8",
+    "unchanged_componentwise_kernel_axis_value_after_constant_calibration": "6"
+  },
+  "hostile_controls": {
+    "absolute_empty_space_comparison": false,
+    "bounded_uv_group_speed": false,
+    "coefficients_are_fitted_to_two_calibrations": true,
+    "counterterm_removal": false,
+    "cp2_closed": false,
+    "dynamic_r_history": false,
+    "exact_pah1_match_away_from_r_zero": false,
+    "exact_pure_pah1_gaussian_marginal_of_interacting_ground_state": false,
+    "finite_volume_quantum_symmetry_breaking": false,
+    "full_cp1_closed": false,
+    "full_gaussian_mehler_vacuum_at_criticality": false,
+    "full_transverse_constant_kg_dispersion": false,
+    "isotropic_node_cone": false,
+    "no_holdout_prediction": true,
+    "pah1_three_mode_nonlinear_invariance_under_removal": false,
+    "pre_a_complete": false,
+    "total_work_ledger_across_r": false,
+    "uniqueness_only_inside_two_sos_family": true
+  },
+  "inputs": {
+    "field": "one real scalar field on the periodic T3 torus",
+    "fourier_lattice": "k=4n, n in Z^3",
+    "hbar": 1,
+    "inertia": 1,
+    "positive_quartic_coupling": true,
+    "side_length": "pi/2",
+    "target_squared_frequencies": [
+      "9",
+      "25"
+    ]
+  },
+  "issued": "2026-08-03",
+  "kernel": {
+    "alpha": "1/256",
+    "beta": "21/512",
+    "expanded": "(22*k1**4 - 19*k1**2*k2**2 - 19*k1**2*k3**2 - 96*k1**2 + 22*k2**4 - 19*k2**2*k3**2 - 96*k2**2 + 22*k3**4 - 96*k3**2 + 2304)/256",
+    "form": "alpha*(sum_i(k_i^2-16))^2 + beta*sum_(i<j)(k_i^2-k_j^2)^2",
+    "lattice_normal_form": "22*n1**4 - 19*n1**2*n2**2 - 19*n1**2*n3**2 - 6*n1**2 + 22*n2**4 - 19*n2**2*n3**2 - 6*n2**2 + 22*n3**4 - 6*n3**2 + 9",
+    "node_anisotropy_ratio": "21/2",
+    "node_hessian": [
+      [
+        "11",
+        "-19/4",
+        "-19/4"
+      ],
+      [
+        "-19/4",
+        "11",
+        "-19/4"
+      ],
+      [
+        "-19/4",
+        "-19/4",
+        "11"
+      ]
+    ],
+    "node_hessian_eigenvalues": [
+      "3/2",
+      "63/4",
+      "63/4"
+    ],
+    "off_node_lattice_gap": 9,
+    "relative_beta": "21/2",
+    "zero_nodes": "exactly k=(+/-4,+/-4,+/-4)"
+  },
+  "next_gate": "CP1b/CP2: derive a nonstationary r(tau) crossing with total work accounting, then test or replace the anisotropic fourth-order ultraviolet symbol under preregistered T-053 criteria",
+  "no_overclaim": "This certificate constructs one fitted finite-regulator T3 Hamiltonian family and proves its exact r=0 quadratic PA-H1 calibration, r<0 classical finite-wavevector ordering window, shared relative-energy convention, and stated obstructions. It does not derive the old pure Gaussian PA-H1 state from the interacting parent, provide one fixed-r ordered calibration state, prove nonlinear subspace invariance, quantum symmetry breaking, a thermodynamic phase transition, regulator or counterterm removal, an isotropic or causal cone, bounded ultraviolet propagation, a physical vacuum, energy below empty space, cosmic cooling, spacetime, gravity, CP1, CP2, Pre-A, or Sector A.",
+  "schema": "tect/pre-a-cp1a-t3-cubic-sos-common-parent-primary/0.1",
+  "source": {
+    "path": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent.py",
+    "sha256": "a2ddd53104916c94a484bc9df0e78d9a3495ba3443d85b7fcfef929062ba375f"
+  },
+  "standard_theorem_dependencies": {
+    "coercivity": "the positive quartic L4 term is coercive on every finite Fourier space by finite-dimensional norm equivalence",
+    "finite_regulator_ground_state": "a real confining finite-dimensional Schrodinger operator has compact resolvent and a unique strictly positive ground state",
+    "state_restriction": "the selected interacting ground state restricts to the PA-H1 calibration Weyl subalgebra, but the restriction is not the old pure Gaussian fixture"
+  },
+  "task_id": "T-054",
+  "verdict": "ADVANCE only as a CP1a structural compatibility benchmark; require CP2 dynamics and treat the anisotropic unbounded-speed symbol as an early T-053 physical-selection liability",
+  "version": "0.1.0"
+}

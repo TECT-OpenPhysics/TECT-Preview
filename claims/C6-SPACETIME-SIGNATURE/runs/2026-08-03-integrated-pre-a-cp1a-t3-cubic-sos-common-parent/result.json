@@ -1,0 +1,767 @@
+{
+  "assertions": {
+    "passed": 82,
+    "rows": [
+      {
+        "actual": true,
+        "expected": true,
+        "group": "artifact_presence",
+        "name": "required artifact exists: codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent.py",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "artifact_presence",
+        "name": "required artifact exists: codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_independent.py",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "artifact_presence",
+        "name": "required artifact exists: codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_pdf.py",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "artifact_presence",
+        "name": "required artifact exists: strategy/pre-a-cp1a-t3-cubic-sos-common-parent-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "artifact_presence",
+        "name": "required artifact exists: strategy/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803.md",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "artifact_presence",
+        "name": "required artifact exists: output/pdf/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803-v0.1.pdf",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "artifact_presence",
+        "name": "required artifact exists: claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1a-t3-cubic-sos-common-parent/result.json",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "artifact_presence",
+        "name": "required artifact exists: claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1a-t3-cubic-sos-common-parent/result.json",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "returncode": 0,
+          "stderr_empty": true,
+          "stdout_has_pass": true
+        },
+        "expected": {
+          "returncode": 0,
+          "stderr_empty": true,
+          "stdout_has_pass": true
+        },
+        "group": "fresh_reproduction",
+        "name": "deterministic PDF builder exits zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "65fae3fc468ffb40072afdddede6d9a31a99978b3945ba8d1d4f33c1f7f1ba2b",
+        "expected": "65fae3fc468ffb40072afdddede6d9a31a99978b3945ba8d1d4f33c1f7f1ba2b",
+        "group": "fresh_reproduction",
+        "name": "fresh deterministic PDF equals stored PDF byte for byte",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS 38/38 | PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0 | CP1a compatibility only",
+        "expected": "PASS 38/38 and scoped verdict",
+        "group": "fresh_reproduction",
+        "name": "primary child stdout",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS 33/33 | PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0 | independent CP1a audit",
+        "expected": "PASS 33/33 and independent verdict",
+        "group": "fresh_reproduction",
+        "name": "independent child stdout",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "stored_artifact_integrity",
+        "name": "stored primary equals fresh primary",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "stored_artifact_integrity",
+        "name": "stored independent equals fresh independent",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
+        "expected": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
+        "group": "identity",
+        "name": "primary candidate identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
+        "expected": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
+        "group": "identity",
+        "name": "independent candidate identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
+        "expected": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
+        "group": "identity",
+        "name": "manifest candidate identity",
+        "status": "PASS"
+      },
+      {
+        "actual": 38,
+        "expected": 38,
+        "group": "assertion_contract",
+        "name": "primary assertion contract",
+        "status": "PASS"
+      },
+      {
+        "actual": 33,
+        "expected": 33,
+        "group": "assertion_contract",
+        "name": "independent assertion contract",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/256",
+          "1/256"
+        ],
+        "expected": [
+          "1/256",
+          "1/256"
+        ],
+        "group": "cross_implementation",
+        "name": "shared exact value: alpha",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "21/512",
+          "21/512"
+        ],
+        "expected": [
+          "21/512",
+          "21/512"
+        ],
+        "group": "cross_implementation",
+        "name": "shared exact value: beta",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "21/2",
+          "21/2"
+        ],
+        "expected": [
+          "21/2",
+          "21/2"
+        ],
+        "group": "cross_implementation",
+        "name": "shared exact value: relative beta",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          9,
+          9
+        ],
+        "expected": [
+          9,
+          9
+        ],
+        "group": "cross_implementation",
+        "name": "shared exact value: off-node gap",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "21/2",
+          "21/2"
+        ],
+        "expected": [
+          "21/2",
+          "21/2"
+        ],
+        "group": "cross_implementation",
+        "name": "shared exact value: node anisotropy",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          0
+        ],
+        "expected": [
+          0,
+          0
+        ],
+        "group": "cross_implementation",
+        "name": "shared exact value: r-only match",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "6",
+          6
+        ],
+        "expected": [
+          6,
+          6
+        ],
+        "group": "cross_implementation",
+        "name": "shared exact value: unchanged componentwise axis",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "3/2",
+          "63/4",
+          "63/4"
+        ],
+        "expected": [
+          "3/2",
+          "63/4",
+          "63/4"
+        ],
+        "group": "cross_implementation",
+        "name": "primary node Hessian spectrum",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "3/2",
+          "63/4",
+          "63/4"
+        ],
+        "expected": [
+          "3/2",
+          "63/4",
+          "63/4"
+        ],
+        "group": "cross_implementation",
+        "name": "independent node Hessian spectrum",
+        "status": "PASS"
+      },
+      {
+        "actual": "ADVANCE only as a CP1a structural compatibility benchmark; require CP2 dynamics and treat the anisotropic unbounded-speed symbol as an early T-053 physical-selection liability",
+        "expected": "CP1a only and full CP1 false",
+        "group": "scope",
+        "name": "primary verdict remains CP1a only",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "absolute_empty_space_comparison": false,
+          "bounded_uv_speed": false,
+          "cp1_closed": false,
+          "cp2_closed": false,
+          "dynamic_r_history": false,
+          "exact_interacting_gaussian_state": false,
+          "exact_pah1_match_only_at_r_zero": true,
+          "fitted_two_sos_ansatz": true,
+          "holdout_prediction": false,
+          "isotropic_node_cone": false,
+          "nonlinear_three_mode_invariance": false,
+          "ordered_branch_only_at_negative_r": true,
+          "pre_a_complete": false,
+          "quantum_ssb_or_phase_transition": false,
+          "regulator_removal": false,
+          "t0_only": true
+        },
+        "expected": "cp1_closed=false and pre_a_complete=false",
+        "group": "scope",
+        "name": "independent scope retains CP1 and Pre-A open",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "path": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent.py",
+          "sha256": "a2ddd53104916c94a484bc9df0e78d9a3495ba3443d85b7fcfef929062ba375f"
+        },
+        "expected": {
+          "path": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent.py",
+          "sha256": "a2ddd53104916c94a484bc9df0e78d9a3495ba3443d85b7fcfef929062ba375f"
+        },
+        "group": "manifest_hashes",
+        "name": "manifest hash: primary_script",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "path": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_independent.py",
+          "sha256": "ba20f98d4cb4cda4260a5f4e3de13477407a0a96ae651ca264c96c1577c013d1"
+        },
+        "expected": {
+          "path": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_independent.py",
+          "sha256": "ba20f98d4cb4cda4260a5f4e3de13477407a0a96ae651ca264c96c1577c013d1"
+        },
+        "group": "manifest_hashes",
+        "name": "manifest hash: independent_script",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "path": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_pdf.py",
+          "sha256": "7b8641aa9072f4b9fac60be59a9557ec73bd58e7b6f1398c552687c6ba80c3a6"
+        },
+        "expected": {
+          "path": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_pdf.py",
+          "sha256": "7b8641aa9072f4b9fac60be59a9557ec73bd58e7b6f1398c552687c6ba80c3a6"
+        },
+        "group": "manifest_hashes",
+        "name": "manifest hash: pdf_builder",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "path": "strategy/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803.md",
+          "sha256": "36b9de96dde4a6cf9beb84bf05b82cfa48d0dc089b27e6589512195aca45b738"
+        },
+        "expected": {
+          "path": "strategy/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803.md",
+          "sha256": "36b9de96dde4a6cf9beb84bf05b82cfa48d0dc089b27e6589512195aca45b738"
+        },
+        "group": "manifest_hashes",
+        "name": "manifest hash: certificate",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "path": "output/pdf/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803-v0.1.pdf",
+          "sha256": "65fae3fc468ffb40072afdddede6d9a31a99978b3945ba8d1d4f33c1f7f1ba2b"
+        },
+        "expected": {
+          "path": "output/pdf/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803-v0.1.pdf",
+          "sha256": "65fae3fc468ffb40072afdddede6d9a31a99978b3945ba8d1d4f33c1f7f1ba2b"
+        },
+        "group": "manifest_hashes",
+        "name": "manifest hash: pdf",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate scope token: Authority: T0 kinematic/static common-parent compatibility certificate only",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate scope token: delta_lattice",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate scope token: Theorem CP1a-static",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate scope token: 3g/(2V)>0",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate scope token: E_N(r)-E_N(0)<0",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate scope token: DO NOT SELECT IT AS THE PHYSICAL EQUATION",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate scope token: It does not prove a physical vacuum",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate scope token: CP1b/CP2",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate scope token: T-053",
+        "status": "PASS"
+      },
+      {
+        "actual": 7,
+        "expected": 7,
+        "group": "pdf",
+        "name": "PDF page contract",
+        "status": "PASS"
+      },
+      {
+        "actual": 21156,
+        "expected": "> 20000 bytes",
+        "group": "pdf",
+        "name": "PDF is nontrivial",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "AA": false,
+          "AcroForm": false,
+          "Names": false,
+          "OpenAction": false,
+          "encrypted": false
+        },
+        "expected": "all false",
+        "group": "pdf",
+        "name": "PDF security surface is inert",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "/Author": "TECT verification-first repository",
+          "/CreationDate": "D:20000101000000+00'00'",
+          "/Creator": "ReportLab deterministic builder 0.1.0",
+          "/Keywords": "",
+          "/ModDate": "D:20000101000000+00'00'",
+          "/Producer": "ReportLab PDF Library - (opensource)",
+          "/Subject": "T0 common-parent compatibility benchmark",
+          "/Title": "CP1a cubic-SOS common-parent compatibility certificate",
+          "/Trapped": "/False"
+        },
+        "expected": "fixed creation date and title",
+        "group": "pdf",
+        "name": "PDF deterministic metadata",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF extracted text token: CP1a cubic-SOS common-parent compatibility certificate",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF extracted text token: Exact zero set and lattice gap",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF extracted text token: E_N(r)-E_N(0)<0",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF extracted text token: DO NOT SELECT IT AS THE PHYSICAL EQUATION",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "anchor": true,
+          "axis_value": true,
+          "id": true,
+          "target_rejected": true
+        },
+        "expected": true,
+        "group": "records",
+        "name": "unchanged-kernel no-go is registered",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "records",
+        "name": "exploration record exists: EXP-000714",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "records",
+        "name": "exploration record exists: EXP-000715",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "records",
+        "name": "exploration record exists: EXP-000716",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "records",
+        "name": "exploration record exists: EXP-000717",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "records",
+        "name": "exploration record exists: EXP-000718",
+        "status": "PASS"
+      },
+      {
+        "actual": "This is a T0 CP1a structural benchmark and does not close CP1. The coefficients fit two calibration inputs in one ansatz; exact PA-H1 matching is only quadratic and only at r=0, while ordering requires r<0. The selected interacting state is not the old pure Gaussian PA-H1 state. No dynamic r(tau), total-work ledger, regulator removal, quantum symmetry breaking, thermodynamic transition, isotropic causal cone, bounded ultraviolet propagation, physical vacuum, energy below empty space, Pre-A, T-050, or Sector-A conclusion follows.",
+        "expected": "advanced with CP1 open",
+        "group": "records",
+        "name": "CP1a exploration stays T0 and open",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "failed",
+          "T-050"
+        ],
+        "expected": [
+          "failed",
+          "T-050"
+        ],
+        "group": "records",
+        "name": "A13 nonlinear forest shortcut is recorded failed",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "generated_surfaces",
+        "name": "T-054 records CP1a and CP2 boundary",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          true,
+          true
+        ],
+        "expected": [
+          true,
+          true
+        ],
+        "group": "generated_surfaces",
+        "name": "changelog registers CP1a package",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "group": "generated_surfaces",
+        "name": "proof map projects all five explorations",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "generated_surfaces",
+        "name": "catalog contains codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent.py",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "generated_surfaces",
+        "name": "catalog contains codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_independent.py",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "generated_surfaces",
+        "name": "catalog contains codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_pdf.py",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "generated_surfaces",
+        "name": "catalog contains strategy/pre-a-cp1a-t3-cubic-sos-common-parent-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "generated_surfaces",
+        "name": "catalog contains strategy/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803.md",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "generated_surfaces",
+        "name": "catalog contains output/pdf/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803-v0.1.pdf",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest no-overclaim flag false: full_cp1",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest no-overclaim flag false: cp2",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest no-overclaim flag false: pre_a_complete",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest no-overclaim flag false: physical_model_selected",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest no-overclaim flag false: exact_pah1_gaussian_state",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest no-overclaim flag false: nonlinear_pah1_reduction",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest no-overclaim flag false: quantum_symmetry_breaking",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest no-overclaim flag false: thermodynamic_phase_transition",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest no-overclaim flag false: isotropic_causal_cone",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest no-overclaim flag false: bounded_uv_propagation",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest no-overclaim flag false: regulator_removal",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest no-overclaim flag false: absolute_empty_space_comparison",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest no-overclaim flag false: sector_a_closed",
+        "status": "PASS"
+      }
+    ],
+    "total": 82
+  },
+  "candidate_id": "PA-CP1A-T3-CUBIC-SOS-COMMON-PARENT-v0",
+  "child_assertions": {
+    "independent": 33,
+    "primary": 38
+  },
+  "claim_bearing": false,
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "comparison_context": "A2-FULL-PRODUCTION-WELLPOSED",
+  "issued": "2026-08-03",
+  "no_overclaim": "The integrated PASS verifies only the declared T0 CP1a finite-regulator construction, static theorem, common-reference convention, and exact obstructions. It does not select a physical equation, recover the old PA-H1 Gaussian state, provide a nonlinear PA-H1 reduction, dynamic r history, total-work ledger, quantum or thermodynamic phase transition, isotropic causal cone, bounded ultraviolet propagation, regulator removal, physical vacuum, energy below empty space, CP1, CP2, Pre-A, T-050, or Sector A.",
+  "pdf": {
+    "bytes": 21156,
+    "deterministic_rebuild_equal": true,
+    "pages": 7,
+    "path": "output/pdf/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803-v0.1.pdf",
+    "security_check": "no encryption, AcroForm, Names, OpenAction, or AA",
+    "sha256": "65fae3fc468ffb40072afdddede6d9a31a99978b3945ba8d1d4f33c1f7f1ba2b",
+    "visual_qa": "all seven 120-dpi rendered pages inspected; no clipping, overlap, broken headings, or unreadable text"
+  },
+  "schema": "tect/pre-a-cp1a-t3-cubic-sos-common-parent-integrated/0.1",
+  "source": {
+    "path": "codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_verify.py",
+    "sha256": "2bf4a862b1898284483257a3eb924765fd14d1b70d5ee8dd2c77c1dc8736cd74"
+  },
+  "task_id": "T-054",
+  "verdict": "PASS: CP1a finite-regulator compatibility benchmark reproduces; full CP1, CP2, Pre-A, physical selection, and Sector A remain open",
+  "version": "0.1.0"
+}

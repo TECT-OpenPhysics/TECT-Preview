@@ -5890,9 +5890,9 @@ T5--T7 promotion remain open. Tier stays T4.
   `a^6b^6` pullback has Hessian eigenvalue `-6` at `(1,1)`.  Bare per-chain
   continuity is not uniform, and the theorem does not automatically union
   over unrelated forests.  Random or nonlinear past-dependent coefficients
-  also leave the centered Gaussian covariance chart.  Primary `45/45` and
-  independent `39/39` audits pass; the integrated release, deterministic
-  eight-page PDF, security, render, and visual-QA evidence are pinned in the
+  also leave the centered Gaussian covariance chart.  Primary `46/46` and
+  independent `41/41` audits pass; integrated verification passes `228/228`,
+  and the deterministic seven-page PDF, security, render, and visual-QA evidence are pinned in the
   manifest and `EXP-000708--EXP-000710` preserve the successful and failed
   routes.
 
