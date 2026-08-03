@@ -1365,6 +1365,28 @@ endpoint theorem.
     The next route must assemble and test the full one-use owner rather than
     introduce another origin-force estimate.
 
+85. **Sparse production harmonic coercivity and compact-annulus reduction.**
+    R-165 enters the actual R-153 final-fresh-root production fibre instead
+    of adding another abstract owner decomposition. For the fixed side-16
+    exact unattenuated `p:2p` strict past and fresh `4p` root with unit retained
+    regulator multipliers, exact Fourier support proves
+    the sharp separation
+    `<|m|^4|z|^2> >= (5/6)<|m|^4><|z|^2>`. Rational A1 covariance enclosures
+    and the R-130 first/half-second coefficient envelopes then give one
+    explicit owner polynomial
+    `P(G)=(3125/126241210368)G^4-(81135/43679744)G^2-(8001/8192000)G-(177075/174718976)`
+    in the whitened 24-real past amplitude. Exact derivative signs prove the
+    R-164 `-9/10` owner target for `0<=G<=21` and `G>=274`, leaving only the
+    bounded open annulus `21<G<274` for this twelve-real final principal
+    block; its closed certification domain `21<=G<=274` is compact.
+    The finite exploratory quadrature remains explicitly non-evidence.
+    Other past harmonics, root cross blocks, nonlinear/revisit feedback, low
+    variables, regulator/removal uniformity, the complete owner, T-050/A13,
+    phase/PDE/morphology, Nelson/measure, and Sector-A closure remain open at
+    T4. The next decisive calculation is an outward-rounded interval PSD
+    test on that closed certification domain or a certified counterdirection
+    in the unresolved open annulus.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

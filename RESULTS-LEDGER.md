@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-165](#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | Scoped T4 analytic/exact/executed/audited production-fibre theorem. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / fresh-`4p` R-153 fibre, whitened past amplitude `G` and final direction `alpha` obey `K_owner(g)[alpha,alpha] >= P(G)|alpha|^2` for one explicit rational quartic polynomial. A sharp `5/6` Fourier separation lemma, exact A1 covariance enclosures, and R-130 derivative envelopes prove the R-164 owner target `K_owner>=-9I/10` for `0<=G<=21` and `G>=274`, reducing this fibre's noncompact amplitude problem to the bounded open annulus `21<G<274`; its closed certification domain `21<=G<=274` is compact. Primary `38/38` and independent Fraction `30/30` audits pass; the deterministic five-page PDF passed all-page visual QA. The open annulus, other harmonics and roots, cross blocks, nonlinear/revisit feedback, low variables, regulator/removal uniformity, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-164](#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | Scoped T4 analytic/exact/executed/audited direct-chart theorem. For every finite R-104 zero-control chart, the R-141 legal force is the orthogonal projection of the complete centered terminal scalar onto predictable first Gaussian chaos, so its squared source-dual norm is at most the scalar variance with sharp constant one. A7 `L2` convergence and the A1/A11 point-covariance trace give a cutoff-, chart-length-, and linear/isometric-refinement-uniform bound on that variance along the registered sharp-cube/dyadic sequence. A7 centering also makes the direct anchor nonnegative. Therefore a complete direct owner bound `K_owner>=-(10/11-rho)G_src` yields `mu=-1/110+rho`, `epsilon_v=max(0,5/11-rho/4)`, `epsilon_6=3/20`, and constant `B_*/rho`, without separate anchor or origin-force assumptions. The complete production owner, nonzero feedback, shifted low base, arbitrary graph metric transport, random/nonlinear/revisit/pathwise scope, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
 | [R-163](#r-163) | Full-lattice weighted-resolvent dyadic-forest gap and exact reduced-action threshold | Scoped T4 analytic/exact/executed/audited deterministic-forest theorem. For every finite injective pure-dyadic forest with deterministic matrix coefficients and actual shifted-state reads, the two-sided expansion `T_A T_A^*-I=sum_(a,b) N_A^a(N_A^*)^b-I` exposes a mandatory recursive edge in every nonidentity covariance word. Exact A1 endpoint weights make the worst current-current square sum proportional to `sum |p|^-4`, so field/current covariance-data derivatives through order three are uniform in forest cardinality, depths, starting modes, cutoff and admitted common-even regulator even though the raw current synthesis diverges. Stationarity kills the complete `p:4p` chart connection at the origin, transferring the R-160 `4/25` arbitrary-family gap; the full source/current/trace/projected-force/sextic modulus retains `13/100>1/10` on one analytic forest-uniform ball. Separately, the exact T-050 coefficient algebra shows that reduced-action semiconvexity `mu>-1/110`, plus a uniform absolute anchor and origin-force bound, suffices; equivalently the adverse owner target is strictly above `-10/11`, not necessarily `-4/5`. Random/nonlinear laws, branching/revisits, pathwise conditional estimates, the anchor/force inputs, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
 | [R-162](#r-162) | Resolvent-controlled pure-dyadic recursive-chain uniform neighbourhood gap | Scoped T4 analytic/exact/executed/audited recursive-chain theorem. For one finite acyclic pure-dyadic chain with deterministic matrix coefficients and actual shifted-state reads `eta_(j+1)=xi_(j+1)+A_j eta_j`, the strictly lower shift `N_A` has `T_A=(I-N_A)^(-1)` and length-free resolvent jets in the summed `l2(HS)` coefficient norm. At the centered stationary origin, the new two-step controller acceleration has only `p:4p` support `{+/-3p,+/-5p}`, so the registered full-action first-variation cancellation transfers the R-160 `4/25` origin gap to the recursive pullback. Exact dyadic A1 synthesis bounds, covariance-normal `Q-Q0` cancellation, and the complete source, current, trace, projected-force, and sextic connections give an analytic radius `delta_*=min(1/2,3/[100(1+L_*)])` on which the expected global controller-pullback Hessian exceeds `13/100` and hence `1/10` times both the coefficient norm and induced recursive tangent Gram. The radius is uniform in finite chain length, retained starting mode, finite cutoff, and admitted regulator, but the theorem covers no intrinsic Hessian, unrelated multi-chain forest, random/nonlinear past law, revisit/cycle, pathwise conditional Hessian, removal, T-050/A13, phase/PDE, Nelson/measure, or Sector-A closure |
@@ -183,6 +184,61 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-165"></a>
+### R-165 -- Sparse production owner harmonic coercivity and compact-annulus reduction
+
+**Result ID.**
+`A13-CLASSII-SPARSE-PRODUCTION-OWNER-HARMONIC-COERCIVITY-COMPACT-ANNULUS-BOUNDARY`.
+
+**Statement.** On the fixed side-16, positive-floor, exact continuum-torus
+antipodal `p:2p` strict-past / fresh-`4p` R-153 conditional fibre, let
+`g=(g_p,g_2p)` be the whitened 24-real past source, `G=|g|`, and let
+`alpha` be a whitened 12-real final source direction. The exact conditional
+endpoint-plus-sixth owner, excluding the explicit `9/10` source Hessian,
+satisfies
+
+`K_owner(g)[alpha,alpha] >= P(G)|alpha|^2`,
+
+where
+
+`P(G)=(3125/126241210368)G^4-(81135/43679744)G^2-(8001/8192000)G-(177075/174718976)`.
+
+Consequently `K_owner(g)>=-9I/10` for `0<=G<=21` or `G>=274`. Since
+`10/11-1/110=9/10`, this is the R-164 owner target with `rho=1/110` on those
+amplitude regions. The remaining amplitude set for this one fibre is the
+bounded open annulus `21<G<274`; the closed certification domain
+`21<=G<=274` is compact and has already-certified radial endpoints.
+
+**Proof mechanism.** Exact Fourier support gives the sharp inequality
+`<|m|^4|z|^2> >= (5/6)<|m|^4><|z|^2>` for past support
+`{+/-p,+/-2p}` and tangent support `{+/-4p}`; equality is attained by the
+scalar `cos(2 theta)` / `sin(4 theta)` fixture. Centered Gaussian fourth
+moments can only improve the retained term. Rational bounds
+`333/106<pi<355/113`, exact Loewner bounds on the registered internal mass,
+and the R-130 `L6,H6` envelopes give the displayed polynomial. Exact
+derivative and endpoint signs prove the inner and outer amplitude regions.
+Primary `38/38` and non-importing Fraction `30/30` audits pass; the
+deterministic five-page PDF has zero overfull boxes and passed security,
+extraction, rendering, and all-page visual review.
+
+**Reuse scope.** Harmonic separation of a two-shell past from a doubled final
+shell; analytic coercive tails for finite-dimensional conditional production
+fibres; reduction of a noncompact amplitude test to a compact interval/PSD
+problem.
+
+**Boundary.** The theorem assumes the exact unattenuated sparse sharp chart,
+positive floor, continuum torus integration, and no additional past field.
+It does not certify `21<G<274`, other root directions or cross blocks, a
+complete production owner, random/nonlinear/revisit feedback, shifted low
+variables, regulator or cutoff removal, T-050, A13, Nelson or an interacting
+measure, any phase/PDE/morphology, or Sector A.
+
+**Proven in:** A13 / [R-165 proof note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-sparse-production-owner-harmonic-coercivity-compact-annulus-boundary-260804-v1.0.tex.txt).
+
+**Tier:** T4 (scoped exact finite production fibre; no promotion).
+
+**Publication target:** Sector-A analytic methods note.
 
 <a id="r-164"></a>
 ### R-164 -- Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction

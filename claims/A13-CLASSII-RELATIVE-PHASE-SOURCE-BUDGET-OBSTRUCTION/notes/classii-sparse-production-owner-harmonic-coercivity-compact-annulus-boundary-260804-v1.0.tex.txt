@@ -1,0 +1,389 @@
+% =============================================================================
+% Title: Sparse production owner harmonic coercivity and compact-annulus boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-SPARSE-PRODUCTION-OWNER-HARMONIC-COERCIVITY-COMPACT-ANNULUS-BOUNDARY
+% Ledger: R-165
+% Version: v1.0 -- first issued 2026-08-04; this version issued 2026-08-04
+% Status: scoped T4 analytic/exact/executed advance; T-050 and Sector A remain open
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\dd}{\,\mathrm d}
+
+\section*{1. Purpose and scope}
+\hypertarget{section-1-result}{ }
+
+R-164 reduces the direct T-050 analytic input to the complete-owner estimate
+\[
+ K_{\rm owner}\succeq-
+ \left({10\over11}-\rho\right)G_{\rm src},
+ \qquad \rho>0.                                      \tag{1.1}
+\]
+R-153 supplies the first actual strict-past conditional production fibre on
+which (1.1) can be tested.  This note takes that production calculation one
+step further without replacing it by another abstract owner lemma.
+
+On the fixed side-16 torus retain one antipodal past pair at $p$, one at
+$2p$, and one fresh final pair at $4p$, where $p=2\pi/16$ points along
+one coordinate axis.  Let
+\[
+ g=(g_p,g_{2p})\in\mathbb R^{24},\qquad G=|g|,
+ \qquad \alpha\in\mathbb R^{12}                     \tag{1.2}
+\]
+be whitened source coordinates.  For the exact R-153 endpoint-plus-sixth
+conditional Hessian, excluding the explicit source Hessian, this note proves
+\[
+ \boxed{
+ K_{\rm owner}(g)[\alpha,\alpha]\geq P(G)|\alpha|^2,} \tag{1.3}
+\]
+where
+\[
+\begin{aligned}
+ P(G)={}&{3125\over126241210368}G^4
+ -{81135\over43679744}G^2\\
+ &-{8001\over8192000}G
+ -{177075\over174718976}.
+\end{aligned}                                       \tag{1.4}
+\]
+Exact rational derivative certificates then give
+\[
+ \boxed{
+ K_{\rm owner}(g)\succeq-{9\over10}\Id
+ \quad\hbox{if}\quad 0\leq G\leq21
+ \quad\hbox{or}\quad G\geq274.}                    \tag{1.5}
+\]
+Since $10/11-1/110=9/10$, (1.5) is exactly the R-164 target with
+$\rho=1/110$ on these two amplitude regions.  Thus the noncompact amplitude
+question for this fixed twelve-dimensional fibre is reduced to the bounded
+open annulus
+\[
+                         21<G<274.                   \tag{1.6}
+\]
+
+This is not a proof on the annulus, not a complete multi-root production
+owner, and not T-050 closure.  It is fixed-cutoff, fixed-floor, exactly
+nonaliased, and specific to the displayed (p:2p:4p) support.  No BCC or
+other morphology is assumed or selected.  No phase or PDE verdict occurs.
+
+\section*{2. Exact conditional fibre}
+\hypertarget{section-2-fibre}{ }
+
+Condition on the (p,2p) strict past and write
+\[
+ W=m+X,\qquad n_i=\partial_i m,
+ \qquad z=S_{4p}\alpha,\qquad u_i=\partial_i z,       \tag{2.1}
+\]
+where (X) is the centered fresh (4p) field.  R-153 proves that the exact
+owner diagonal is
+\[
+\begin{aligned}
+K_{\rm owner}(g)[\alpha,\alpha]
+={}&\int\sum_i\bigg[
+ u_i^T\overline B u_i
+ +2u_i^T\overline{DB[z]}n_i\\
+&\quad+{1\over2}\Tr\!\left(
+ \overline{D^2B[z,z]}(n_in_i^T-\Gamma_{<,i})
+ \right)\bigg]\dd x\\
+&+{9\over10}\int\E\big[
+ |W|^4|z|^2+4|W|^2(W\mathbin{\cdot}z)^2
+ \big]\dd x .
+\end{aligned}                                       \tag{2.2}
+\]
+The future-current covariance has already cancelled against its A7 trace
+owner.  The strict-past covariance remains with the minus sign shown.  The
+positive $u^TBu$ term and the second sixth-power term will be dropped once.
+The (9/10) source Hessian is not part of (2.2) and is not counted here.
+
+R-130 gives the floor-uniform pointwise derivative envelopes
+\[
+ |D(B:Q)[a]|\leq L_6\|Q\|_{\op}|w||a|,
+ \qquad
+ \left|{1\over2}D^2(B:Q)[a,a]\right|
+ \leq H_6\|Q\|_{\op}|a|^2,                          \tag{2.3}
+\]
+with
+\[
+ L_6={1143\over250P_X}<{1143\over1000},\qquad
+ H_6={7083\over500P_X}<{7083\over2000},
+ \qquad P_X=4+10^{-12}.                              \tag{2.4}
+\]
+The half-Hessian factor is already contained in $H_6$.
+
+\section*{3. Sharp harmonic coercivity}
+\hypertarget{section-3-harmonic}{ }
+
+Let \(\theta=p\mathbin{\cdot}x\).  The real six-component fields have
+Fourier supports
+\[
+ \operatorname{supp}\widehat m\subset\{\pm1,\pm2\},
+ \qquad
+ \operatorname{supp}\widehat z\subset\{\pm4\}.     \tag{3.1}
+\]
+For normalized phase average \(\langle\cdot\rangle\), put
+\(r=|m|^2\), \(f=r^2\), and \(q=|z|^2\).
+
+\subsection*{Lemma 3.1 (sharp (5/6) separation)}
+
+For every pair satisfying (3.1),
+\[
+ \boxed{
+ \langle|m|^4|z|^2\rangle
+ \geq {5\over6}\langle|m|^4\rangle
+                    \langle|z|^2\rangle.}           \tag{3.2}
+\]
+The constant is sharp.
+
+\paragraph{Proof.}
+The top coefficient of $r$ is $r_4$.  Reality and Cauchy--Schwarz on the
+$2p$ Fourier coefficient give $r_0\geq2|r_4|$.  Since
+\(f_8=r_4^2\), Parseval gives
+\[
+ f_0\geq r_0^2+2|r_4|^2\geq6|f_8|.                  \tag{3.3}
+\]
+The function $q$ has only frequencies $0,\pm8$, and positivity gives
+\(q_0\geq2|q_8|\).  Therefore
+\[
+ \langle fq\rangle
+ =f_0q_0+2\Re(f_8\overline{q_8})
+ \geq f_0q_0-2|f_8||q_8|
+ \geq{5\over6}f_0q_0.                               \tag{3.4}
+\]
+For scalar $m=\cos(2\theta)$ and $z=\sin(4\theta)$, the three averages
+are $3/8,1/2,5/32$, so equality holds. \hfill\(\square\)
+
+For centered Gaussian (X), direct moment expansion gives
+\[
+ \E|m+X|^4=|m|^4+2|m|^2\Tr C+4m^TCm
+ +(\Tr C)^2+2\Tr(C^2)\geq|m|^4.                     \tag{3.5}
+\]
+Combining (3.2), (3.5), and spatial Jensen supplies the positive $G^4$
+term in (1.4).
+
+\section*{4. Exact spectral enclosures}
+\hypertarget{section-4-spectrum}{ }
+
+The internal three-complex-component mass matrix is
+\[
+ M=\begin{pmatrix}
+ 1/10&-1/20&-1/20\\
+ -1/20&13/100&-1/20\\
+ -1/20&-1/20&17/100
+ \end{pmatrix}.                                     \tag{4.1}
+\]
+Exact principal minors give
+\[
+ {7\over250}\Id<M\leq{27\over100}\Id.              \tag{4.2}
+\]
+With $s(x)=x^2+Zx+r$, $Z=-0.9252754126$, and
+$r=0.4740336473$, the covariance is
+\[
+ \Gamma_q=\operatorname{diag}\left((s(|q|^2)\Id+M)^{-1},
+ (s(|q|^2)\Id+M)^{-1}\right).                       \tag{4.3}
+\]
+Using the classical $333/106<\pi<355/113$, monotonicity of $s$ on the three
+relevant rational brackets, and the registered global symbol floor gives
+\[
+ {100\over63}\Id\leq\Gamma_p,\Gamma_{2p}
+ \leq{100\over31}\Id,                              \tag{4.4}
+\]
+\[
+ {20\over91}\Id\leq\Gamma_{4p}\leq{10\over43}\Id,
+ \qquad \Tr\Gamma_{4p}\leq{60\over43}.            \tag{4.5}
+\]
+For example, the rational endpoint bounds for the largest past operators are
+\[
+ s((333/106)^2/64)+{27\over100}
+ ={6313708938155690251\over10099815680000000000}
+ <{63\over100},                                     \tag{4.6}
+\]
+\[
+ s((355/113)^2/16)+{27\over100}
+ ={7223409606693823849\over13043788880000000000}
+ <{14\over25}.                                      \tag{4.7}
+\]
+The corresponding (4p) endpoints lie respectively below $91/20$ and
+above $43/10$.  Thus no floating eigenvalue enters the certificate.
+
+\section*{5. Owner lower polynomial}
+\hypertarget{section-5-polynomial}{ }
+\hypertarget{section-5-owner-polynomial}{ }
+
+Exact antipodal synthesis and Fourier orthogonality give
+\[
+ \int|m|^2\dd x\geq{100\over63}G^2,
+ \quad \int|m|^2\dd x\leq{100\over31}G^2,
+ \quad \int|n|^2\dd x\leq4p^2{100\over31}G^2,    \tag{5.1}
+\]
+and, for the final tangent,
+\[
+ |z|^2\leq{2(10/43)\over V}|\alpha|^2,
+ \quad |z||u|\leq{8|p|(10/43)\over V}|\alpha|^2,
+ \quad \int|z|^2\dd x\geq{20\over91}|\alpha|^2.   \tag{5.2}
+\]
+Here $V=16^3=4096$.  The fresh field contributes
+\[
+ \int|n|\E|X|\dd x
+ \leq2|p|\sqrt{2(100/31)(60/43)}G.                  \tag{5.3}
+\]
+The strict-past current covariance obeys
+\[
+ \|\Gamma_<\|_{\op}
+ \leq{10p^2(100/31)\over V}<{625\over507904}.       \tag{5.4}
+\]
+
+Lemma 3.1 and (5.1)--(5.2) give the sextic coefficient
+\[
+ A={3\over4}{(100/63)^2(20/91)\over4096^2}
+ ={3125\over126241210368}.                          \tag{5.5}
+\]
+The two (DB) orientations, the current-mean half-Hessian, and the retained
+past trace give the safe adverse constants
+\[
+\begin{aligned}
+B_2&={p_*^2(100/31)(10/43)\over V}
+ \left(32{\cdot1143\over1000}+8{\cdot7083\over2000}\right)
+ ={81135\over43679744},\\
+B_1&={32(1143/1000)p_*^2(10/43)(301/100)\over V}
+ ={8001\over8192000},\\
+D_0&={7083\over2000}{\cdot10\over43}
+ {625\over507904}
+ ={177075\over174718976}.
+\end{aligned}                                       \tag{5.6}
+\]
+where $p^2<p_*^2=5/32$ and
+\(\sqrt{2(100/31)(60/43)}<301/100\).  The past covariance is spatially
+constant in this sharp common-even chart, so Parseval gives
+\(\int|z|^2\leq(10/43)|\alpha|^2\) in $D_0$; no extra antipodal factor is
+present, and $H_6$ already owns the half-Hessian.  Substitution into (2.2)
+proves (1.3)--(1.4).
+
+\section*{6. Compact-annulus certificate}
+\hypertarget{section-6-annulus}{ }
+
+On $0\leq G\leq21$,
+\[
+ P'(G)\leq4A21^3-B_1
+ =-{25427\over425984000}<0,                          \tag{6.1}
+\]
+and
+\[
+ P(21)+{9\over10}
+ ={145670815281\over2271346688000}>0.               \tag{6.2}
+\]
+Thus (P(G)>-9/10) throughout the inner interval.  At the outer endpoint,
+\[
+ P'(274)={1338311264185381\over1314683854848000}>0,
+ \qquad
+ P''(274)={65160500885\over3505823612928}>0,         \tag{6.3}
+\]
+and (P'') increases for positive (G).  Hence (P') stays positive for
+all $G\geq274$.  Finally,
+\[
+ P(274)+{9\over10}
+ ={1847465221877063\over2629367709696000}>0.         \tag{6.4}
+\]
+Equations (6.1)--(6.4) prove (1.5).
+
+The unresolved set (1.6) is open, not compact.  Its closure
+\(21\leq G\leq274\), together with unit directions in
+\(\mathbb S^{23}\times\mathbb S^{11}\), is compact; the two radial endpoints
+are already certified by (6.2) and (6.4).  At the fixed positive floor its
+matrix entries are continuous.  A rigorous interval, Bernstein, or
+rational-SOS subdivision of that closed certification domain can therefore
+decide this fibre without any amplitude tail assumption.  A finite floating
+scan cannot replace that certificate.
+
+\section*{7. Route decision and next falsifier}
+\hypertarget{section-7-route}{ }
+
+The useful advance is structural: the sixth-power stabilizer does control
+large realized past on this production fibre, and the exact source-plus-owner
+target also holds on a certified inner ball.  The only unresolved amplitudes
+for this fibre are $21<G<274$.  The next bounded computation should build
+the exact $12\times12$ R-153 matrix on the compact closed certification
+domain $21\leq G\leq274$ and use outward interval errors.  A single certified
+eigenvalue below (-10/11) would refute
+the uniform R-164 target; a pass proves only this fibre and must not be lifted
+to all roots or nonlinear feedback without a separate uniform argument.
+
+The exploratory floating quadrature used while choosing this route is not
+evidence: it sampled finitely many past directions, used non-certified
+quadrature, and found no value remotely near the adverse threshold.  Its only
+role was to prioritize an analytic tail certificate rather than assert a
+positive result.
+
+\section*{8. Devil's-advocate review}
+\hypertarget{section-8-adversary}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: the (5/6) factor is an unproved decorrelation
+assumption.} \textbf{DISMISSED.}  Lemma 3.1 is an exact Fourier coefficient
+calculation, and its scalar equality fixture proves sharpness.
+
+\item \textbf{Objection: an antipodal or six-real normalization factor was
+lost.} \textbf{DISMISSED.}  Equations (5.1)--(5.4) use
+\(S_qS_q^*=2\Gamma_q/V\), the final derivative $4|p|$, both $DB$
+orientations, the fresh-field trace, and the uncancelled past covariance.
+
+\item \textbf{Objection: $H_6$ needs another factor $1/2$.}
+\textbf{DISMISSED.}  R-130 defines $H_6$ for the half-Hessian already; (2.3)
+retains that factor firewall.
+
+\item \textbf{Objection: (1.5) closes the complete production owner.}
+\textbf{UPHELD against that inference.}  It treats one fixed sparse
+conditional principal fibre.  Cross-root blocks, other past harmonics,
+nonlinear/revisit controls, low variables, and uniform removal remain open.
+
+\item \textbf{Objection: the unverified numerical scan is proof of the
+annulus.} \textbf{UPHELD against that inference.}  Only an interval or exact
+compact certificate can promote the annulus.
+
+\item \textbf{Objection: success or failure here selects BCC or a physical
+PDE.} \textbf{UPHELD against that inference.}  This is a conditional
+mathematical fibre of one candidate action and carries no morphology or
+physical-vacuum conclusion.
+\end{enumerate}
+
+\section*{9. Reproduction and Result footer}
+\hypertarget{section-9-footer}{ }
+
+\begin{verbatim}
+Result ID: A13-CLASSII-SPARSE-PRODUCTION-OWNER-HARMONIC-
+  COERCIVITY-COMPACT-ANNULUS-BOUNDARY (R-165).
+Precise statement: on the fixed exact p:2p past / fresh-4p conditional fibre,
+  K_owner[g] >= P(|g|) I with the rational polynomial (1.4), and
+  K_owner >= -9I/10 for |g|<=21 or |g|>=274.
+Dependencies: A1; R-130, R-153, R-164.
+Scope: fixed side-16 finite chart, positive floor, exact continuum torus
+  average, unit regulator multipliers at p, 2p, and 4p, only the declared
+  p:2p strict-past and fresh-4p pair, and whitened antipodal sources.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_sparse_production_owner_harmonic_
+  coercivity_compact_annulus_boundary.py
+Independent command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_sparse_production_owner_harmonic_
+  coercivity_compact_annulus_boundary_independent.py
+Integrated command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_sparse_production_owner_harmonic_
+  coercivity_compact_annulus_boundary_verify.py
+Expected output: primary 38/38, independent 30/30, integrated, PDF, and
+  release checks all PASS.
+Falsification gate: any failure of the 5/6 Fourier lemma, covariance
+  enclosure, owner factor ledger, rational polynomial, derivative signs,
+  authority hashes, PDF, record registration, or release verification.
+Tier before / after: T4 / T4; no promotion.
+Proof complete: false. T-050 closed: false. Sector A closed: false.
+No-overclaim statement: no certification of the open annulus, complete production
+  owner, feedback/removal, T-050, A13, phase, morphology, PDE, or Sector A.
+Next required action: interval-certify [21,274] or find a counterdirection on 21<G<274,
+  then test the nonzero complete multi-root owner separately.
+\end{verbatim}
+
+\endgroup

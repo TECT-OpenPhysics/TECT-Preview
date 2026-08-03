@@ -6010,3 +6010,28 @@ T5--T7 promotion remain open. Tier stays T4.
   `-(10/11-rho)G_src`, with every forward, legal reverse, balanced, low,
   current, trace, future, forest, projected-force, and sextic contribution
   retained exactly once.
+
+### R-165 sparse production owner harmonic coercivity and compact-annulus boundary
+
+- Result ID:
+  `A13-CLASSII-SPARSE-PRODUCTION-OWNER-HARMONIC-COERCIVITY-COMPACT-ANNULUS-BOUNDARY`.
+- On the actual fixed side-16 R-153 `p:2p` strict-past / fresh-`4p`
+  conditional fibre with unit retained regulator multipliers, with whitened
+  past amplitude `G`, the exact owner block
+  obeys
+  `K_owner(g)[alpha,alpha] >= P(G)|alpha|^2`, where
+  `P(G)=(3125/126241210368)G^4-(81135/43679744)G^2-(8001/8192000)G-(177075/174718976)`.
+- The sharp Fourier inequality
+  `<|m|^4|z|^2> >= (5/6)<|m|^4><|z|^2>`, exact A1 covariance enclosures, and
+  R-130 derivative envelopes imply `K_owner>=-9I/10` for `0<=G<=21` and
+  `G>=274`. This is the R-164 target with `rho=1/110` on those amplitude
+  regions and reduces this fibre's noncompact problem to `21<G<274`.
+- Primary `38/38` and non-importing Fraction independent `30/30` checks pass;
+  the integrated package and deterministic five-page PDF pin the exact
+  factors, authority hashes, extraction, security, rendering, and visual QA.
+- This is one fixed sparse principal fibre only. The bounded open annulus
+  `21<G<274` remains; its closed certification domain `21<=G<=274` is compact.
+  Other harmonics and roots, complete cross blocks, nonlinear/revisit feedback,
+  shifted low variables, regulator/removal uniformity, T-050/A13, Nelson,
+  an interacting measure, every phase/PDE/morphology verdict, and Sector A
+  remain open at T4.

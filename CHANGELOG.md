@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-165 sparse production owner compact-annulus reduction] - 2026-08-04
+
+Registered A13-CLASSII-SPARSE-PRODUCTION-OWNER-HARMONIC-COERCIVITY-COMPACT-ANNULUS-BOUNDARY (R-165). On the fixed side-16 exact nonaliased R-153 p:2p strict-past / fresh-4p twelve-dimensional conditional fibre, exact Fourier, covariance, and derivative estimates prove the R-164 owner target K_owner >= -9I/10 for 0<=G<=21 and G>=274, leaving 21<G<274. Primary 38/38 and independent 30/30 exact checks pass before integrated publication verification. The result is T4 and does not close the annulus, complete multi-root production owner, T-050, A13, phase/PDE/morphology selection, Nelson/measure, or Sector A. EXP-000747 separately records why finite floating quadrature is non-evidence.
+
 ## [Close passive two-arm CL8 control and split the quartic state route] - 2026-08-04
 
 Registered EXP-000745 as a claim-nonbearing T0 fixed-regulator control. The same-dimensional passive gate closes full-rank local cross maps and exact reconstruction on every acyclic monotone cut, with forward metaplectic/Weyl and B(H) maps, a cut-covariant normal Gibbs family, and fixed-algebra periodic stationarity. A q-only kicked local gate remains classically cross-invertible, while the formal negative rejects only automatic reuse of the passive number, vacuum, and Gibbs states after the inherited quartic kick. The interacting CL8 gate tiling, all-cut theorem, common invariant-or-work/state ledger, physical reference, continuum, C6, CP1, and Pre-A remain open.
