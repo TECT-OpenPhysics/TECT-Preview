@@ -1,0 +1,893 @@
+{
+  "assertion_summary": {
+    "passed": 79,
+    "total": 79
+  },
+  "assertions": [
+    {
+      "actual": "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+      "expected": "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+      "group": "identity",
+      "name": "candidate id",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-FINITE-QUANTUM-GROUND-THERMAL-STATE-AND-BOUNDARY-FORK",
+      "expected": "PA-CP1-CL8-FINITE-QUANTUM-GROUND-THERMAL-STATE-AND-BOUNDARY-FORK",
+      "group": "identity",
+      "name": "result id",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-ST8-Q3LOCK-v0",
+        "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
+        "PA-CP1-CL8-INVARIANCE-SELECTION-FORK-v0"
+      ],
+      "expected": [
+        "PA-CP1-ST8-Q3LOCK-v0",
+        "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
+        "PA-CP1-CL8-INVARIANCE-SELECTION-FORK-v0"
+      ],
+      "group": "identity",
+      "name": "parent ids",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "identity",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE",
+      "expected": "NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE",
+      "group": "identity",
+      "name": "negative id",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-ST8-Q3LOCK-v0",
+      "expected": "PA-CP1-ST8-Q3LOCK-v0",
+      "group": "parents",
+      "name": "Q3 parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
+      "expected": "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
+      "group": "parents",
+      "name": "semidiscrete parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-INVARIANCE-SELECTION-FORK-v0",
+      "expected": "PA-CP1-CL8-INVARIANCE-SELECTION-FORK-v0",
+      "group": "parents",
+      "name": "classical fork parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-GLOBAL-GOURSAT-CONTINUATION-v0",
+      "expected": "PA-CP1-CL8-GLOBAL-GOURSAT-CONTINUATION-v0",
+      "group": "parents",
+      "name": "global parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-C0A-GAUSSIAN-CCR-PAH1-EMBEDDING-v0",
+      "expected": "PA-C0A-GAUSSIAN-CCR-PAH1-EMBEDDING-v0",
+      "group": "parents",
+      "name": "Gaussian CCR comparator",
+      "status": "PASS"
+    },
+    {
+      "actual": "strategy/pre-a-prior-art-novelty-matrix-260803.md",
+      "expected": "strategy/pre-a-prior-art-novelty-matrix-260803.md",
+      "group": "parents",
+      "name": "Pre-A chain authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "H_a=(a/8)sum_j[|Pi_j|^2/(2chi)+c|D_a^+psi_j|^2/2+W(psi_j)]",
+      "expected": "starts H_a=(a/8)",
+      "group": "parents",
+      "name": "classical Hamiltonian a/8",
+      "status": "PASS"
+    },
+    {
+      "actual": "Omega_a=(a/8)sum_j dPi_j wedge dpsi_j",
+      "expected": "starts Omega_a=(a/8)",
+      "group": "parents",
+      "name": "classical symplectic a/8",
+      "status": "PASS"
+    },
+    {
+      "actual": "p",
+      "expected": "p",
+      "group": "quantization",
+      "name": "canonical momentum relation",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*p**2/(a*chi)",
+      "expected": "4*p**2/(a*chi)",
+      "group": "quantization",
+      "name": "canonical kinetic energy",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*hbar**2/(a*chi)",
+      "expected": "4*hbar**2/(a*chi)",
+      "group": "quantization",
+      "name": "quantum kinetic coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "hbar>0",
+      "expected": "hbar>0",
+      "group": "quantization",
+      "name": "hbar explicitly inserted",
+      "status": "PASS"
+    },
+    {
+      "actual": "[q_i,p_k]=i*hbar*delta_(ik), with p_i=-i*hbar*partial_(q_i)",
+      "expected": "contains CCR",
+      "group": "quantization",
+      "name": "CCR explicitly declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "(-8*M*a*r_minus - 128*M*mu + a*g*s)**2/(256*M*a*g)",
+      "expected": "(-8*M*a*r_minus - 128*M*mu + a*g*s)**2/(256*M*a*g)",
+      "group": "coercivity",
+      "name": "radial completion",
+      "status": "PASS"
+    },
+    {
+      "actual": "L*g/(256*M**2)",
+      "expected": "L*g/(256*M**2)",
+      "group": "coercivity",
+      "name": "radial coefficient scaling",
+      "status": "PASS"
+    },
+    {
+      "actual": 32,
+      "expected": 32,
+      "group": "fixture",
+      "name": "fixture dimension",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/16",
+      "expected": "1/16",
+      "group": "fixture",
+      "name": "fixture symplectic weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "36",
+      "expected": 36,
+      "group": "fixture",
+      "name": "fixture kinetic coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/1024",
+      "expected": "1/1024",
+      "group": "fixture",
+      "name": "fixture radial quartic",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/32",
+      "expected": "3/32",
+      "group": "fixture",
+      "name": "fixture radial quadratic",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": 4,
+      "group": "fixture",
+      "name": "fixture harmonic constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "64",
+      "expected": 64,
+      "group": "fixture",
+      "name": "fixture completion minimizer",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "fixture",
+      "name": "fixture completion zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "y*(y**2 + 1)*(y**2 - y + 1)*(y**2 + y + 1)*(y**4 - y**2 + 1)",
+      "expected": "y*(y**2 + 1)*(y**2 - y + 1)*(y**2 + y + 1)*(y**4 - y**2 + 1)",
+      "group": "heat-trace",
+      "name": "oscillator geometric partial sum",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/3",
+      "expected": "2/3",
+      "group": "heat-trace",
+      "name": "oscillator trace positive fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "4294967296/1853020188851841",
+      "expected": "4294967296/1853020188851841",
+      "group": "heat-trace",
+      "name": "d-dimensional trace product fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "Tr exp(-beta Hhat_a)<=exp(beta C_mu)[exp(-beta omega)/(1-exp(-2beta omega))]^d for every beta>0",
+      "expected": "contains exp(beta C_mu)",
+      "group": "heat-trace",
+      "name": "heat bound contains shift",
+      "status": "PASS"
+    },
+    {
+      "actual": "compact resolvent alone is not used to claim trace class; the explicit harmonic comparison supplies the heat-trace bound",
+      "expected": "contains harmonic comparison",
+      "group": "heat-trace",
+      "name": "compact resolvent not sole heat argument",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "4/7",
+        "2/7",
+        "1/7"
+      ],
+      "expected": [
+        "4/7",
+        "2/7",
+        "1/7"
+      ],
+      "group": "spectral",
+      "name": "Gibbs weights derived from one Boltzmann ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "group": "spectral",
+      "name": "ground stationary fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "group": "spectral",
+      "name": "thermal stationary fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "spectral",
+      "name": "thermal trace one",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "4/7",
+        "2/7",
+        "1/7"
+      ],
+      "expected": "all positive",
+      "group": "spectral",
+      "name": "thermal faithful",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "spectral",
+      "name": "ground pure",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/7",
+      "expected": "3/7",
+      "group": "spectral",
+      "name": "thermal mixed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "4/7",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "2/7",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/7"
+          ]
+        ]
+      ],
+      "expected": "distinct",
+      "group": "spectral",
+      "name": "ground and thermal distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          [
+            "4/7",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "2/7",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/7"
+          ]
+        ],
+        [
+          [
+            "16/21",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "4/21",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/21"
+          ]
+        ]
+      ],
+      "expected": "distinct",
+      "group": "spectral",
+      "name": "different beta weights distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "group": "spectral",
+      "name": "ground Z2 even fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "group": "spectral",
+      "name": "thermal Z2 symmetric fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "spectral",
+      "name": "ground state invariant under nontrivial alpha fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "8/7",
+      "expected": "8/7",
+      "group": "spectral",
+      "name": "thermal state invariant under nontrivial alpha fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "3/7",
+        "5/21",
+        "17/273"
+      ],
+      "expected": "strictly decreases to zero",
+      "group": "spectral",
+      "name": "zero-temperature excited mass decreases",
+      "status": "PASS"
+    },
+    {
+      "actual": "zeta*(2*zeta**2 + zeta + 1)/(zeta**2 + zeta + 1)",
+      "expected": "zeta*(2*zeta**2 + zeta + 1)/(zeta**2 + zeta + 1)",
+      "group": "spectral",
+      "name": "zero-temperature analytic fixture bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "spectral",
+      "name": "zero-temperature analytic fixture limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "with Delta=E_1-E_0>0 and R_beta=sum_(n>=1) exp[-beta(E_n-E_0)], heat-trace finiteness at beta_0 gives R_beta<=exp[-(beta-beta_0)Delta]R_(beta_0) and ||rho_(a,beta)-P_(0,a)||_1=2R_beta/(1+R_beta), hence trace-norm convergence as beta tends to infinity",
+      "expected": "contains exact trace-norm ratio",
+      "group": "spectral",
+      "name": "general trace-norm limit bound declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "L*r_minus**2/(4*g)",
+      "expected": "L*r_minus**2/(4*g)",
+      "group": "shift",
+      "name": "Goursat operator shift",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/4",
+      "expected": "9/4",
+      "group": "shift",
+      "name": "fixture operator shift",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "4/7",
+        "2/7",
+        "1/7"
+      ],
+      "expected": [
+        "4/7",
+        "2/7",
+        "1/7"
+      ],
+      "group": "shift",
+      "name": "normalized Gibbs unchanged by shift",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "group": "shift",
+      "name": "ground eigenvectors unchanged by scalar shift",
+      "status": "PASS"
+    },
+    {
+      "actual": "the ground-state selection criterion and hbar are declared inputs, not outputs of the classical CL8 dynamics or Pre-A history; no physical justification of that criterion is derived",
+      "expected": "criterion and hbar inputs",
+      "group": "scope",
+      "name": "ground theorem explicitly conditional",
+      "status": "PASS"
+    },
+    {
+      "actual": "the unique even ground does not select any one classical ordered well; for lambda>0 this includes the two collective plus-or-minus-v wells, while lambda=0 has a larger sign-minimum set. No spontaneous symmetry breaking or uniform spectral gap is proved",
+      "expected": "does not select one well",
+      "group": "scope",
+      "name": "finite ground symmetry boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "B(H_a), where H_a=L2(R^d,dq); H_a is infinite-dimensional even though d=8M is finite",
+      "expected": "starts B(H_a)",
+      "group": "scope",
+      "name": "normal observable algebra declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "B(H_a), where H_a=L2(R^d,dq); H_a is infinite-dimensional even though d=8M is finite",
+      "expected": "contains infinite-dimensional",
+      "group": "scope",
+      "name": "Hilbert space not finite dimensional",
+      "status": "PASS"
+    },
+    {
+      "actual": "a positive trace-class density rho defines omega_rho(A)=Tr(rho A) on B(H_a), and hence a state by restriction to the regular Weyl algebra",
+      "expected": "contains restriction",
+      "group": "scope",
+      "name": "regular Weyl restriction only",
+      "status": "PASS"
+    },
+    {
+      "actual": "alpha_t(A)=exp(i t Hhat_a/hbar) A exp(-i t Hhat_a/hbar); every density used here commutes with Hhat_a and therefore omega_rho composed with alpha_t equals omega_rho",
+      "expected": "contains alpha_t",
+      "group": "scope",
+      "name": "B(H) stationarity automorphism declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "the stationarity no-go is on B(H_a), where alpha_t is an automorphism; preservation of the regular Weyl C-star algebra by the interacting dynamics is not proved",
+      "expected": "contains not proved",
+      "group": "scope",
+      "name": "Weyl dynamics preservation not claimed",
+      "status": "PASS"
+    },
+    {
+      "actual": "periodic CL8 node/coarse translations, Q3 automorphisms, and global q-to-minus-q commute with Hhat_a; fine one-site ST8 translation is not claimed; simplicity makes the ground state invariant and Z2 even",
+      "expected": "fine translation not claimed",
+      "group": "scope",
+      "name": "coarse translation scope exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "SPLIT; PARENT GATE REMAINS OPEN",
+      "expected": "SPLIT; PARENT GATE REMAINS OPEN",
+      "group": "scope",
+      "name": "parent preferred-state gate remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER",
+      "expected": "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER",
+      "group": "scope",
+      "name": "next quantum boundary gate",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: hbar_origin_derived",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: stationarity_only_unique_preference",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: physical_state_criterion_derived",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: pure_ordered_finite_phase",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: quantum_boundary_algebra_map",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: quantum_characteristic_state",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: continuum_quantum_state",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: Hadamard_state",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: cutoff_uniform_trace_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: thermodynamic_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: physical_vacuum",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: below_empty_space",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: C6_claim_advanced",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: CP1_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: Pre_A_complete",
+      "status": "PASS"
+    }
+  ],
+  "candidate_id": "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+  "claim_bearing": false,
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "coercivity": {
+      "A": "a*g/(32*d)",
+      "B": "a*r_minus/16",
+      "C_mu": "(B+mu)^2/(4*A)",
+      "cutoff_scaling": "L*g/(256*M^2)"
+    },
+    "dimensions": {
+      "configuration": "8*M"
+    },
+    "fixture": {
+      "A": "1/1024",
+      "B": "3/32",
+      "C_mu": "4",
+      "d": 32,
+      "kappa": "36",
+      "s0": "64",
+      "weight": "1/16"
+    },
+    "heat_trace": {
+      "dimension": "d",
+      "fixture_factor": "4294967296/1853020188851841",
+      "one_dimensional": "exp(-beta*omega)/(1-exp(-2*beta*omega))"
+    },
+    "negative_id": "NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE",
+    "quantization": {
+      "canonical_momentum": "p=(a/8)*Pi",
+      "kappa": "4*hbar^2/(a*chi)",
+      "weight": "a/8"
+    },
+    "shift": {
+      "fixture": "9/4",
+      "normalized_states_unchanged": true,
+      "operator": "L*C_star/8=L*r_minus^2/(4*g)"
+    },
+    "spectral_fixture": {
+      "distinct": true,
+      "ground_weights": [
+        1,
+        0,
+        0
+      ],
+      "stationary": true,
+      "symmetric": true,
+      "thermal_purity": "3/7",
+      "thermal_weights": [
+        "4/7",
+        "2/7",
+        "1/7"
+      ]
+    }
+  },
+  "next_gate": "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER",
+  "no_overclaim": "This package constructs the declared fixed-regulator CL8 Schrodinger ground and thermal Gibbs normal states and refutes only unique quantum preference from stationarity and the listed exact symmetries alone. It does not derive hbar or the ground/KMS criterion, select a pure ordered finite-volume phase, turn a position marginal into a classical phase measure, construct a quantum characteristic-boundary algebra map, prove preservation of the regular Weyl C-star algebra by the interacting dynamics, prove state compatibility under regulator removal, build an interacting continuum or Hadamard state, identify physical empty space, establish an absolute or below-empty-space energy sign, reach a thermodynamic limit, derive full 3+1 dynamics, gravity or cooling, close C0 or any N1-N5 link, advance C6, complete CP1, or complete Pre-A.",
+  "parent_ids": [
+    "PA-CP1-ST8-Q3LOCK-v0",
+    "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
+    "PA-CP1-CL8-INVARIANCE-SELECTION-FORK-v0"
+  ],
+  "result_id": "PA-CP1-CL8-FINITE-QUANTUM-GROUND-THERMAL-STATE-AND-BOUNDARY-FORK",
+  "schema": "tect/pre-a-cp1-cl8-finite-quantum-state-boundary-fork-primary/0.1",
+  "scope": {
+    "C6_claim_advanced": false,
+    "CP1_complete": false,
+    "Hadamard_state": false,
+    "Pre_A_complete": false,
+    "below_empty_space": false,
+    "continuum_quantum_state": false,
+    "cooling": false,
+    "cutoff_uniform_trace_bound": false,
+    "finite_quantum_CCR_declared": true,
+    "finite_quantum_compact_resolvent": true,
+    "finite_quantum_self_adjoint_operator": true,
+    "finite_quantum_thermal_Gibbs": true,
+    "finite_quantum_unique_ground": true,
+    "full_3_plus_1_dependence": false,
+    "gravity": false,
+    "ground_selected_given_criterion": true,
+    "hbar_origin_derived": false,
+    "physical_state_criterion_derived": false,
+    "physical_vacuum": false,
+    "pure_ordered_finite_phase": false,
+    "quantum_boundary_algebra_map": false,
+    "quantum_characteristic_state": false,
+    "stationarity_only_unique_preference": false,
+    "thermodynamic_limit": false
+  },
+  "source_sha256": {
+    "classical_fork_manifest": "070131b3ede042840ba29757ad010f8ad0bb130dfc370b870d988360de57e34d",
+    "gaussian_ccr_manifest": "a0aa2792f44eb04054237638cb2158143235a7f9ecd6e715b701fdb09007c021",
+    "global_manifest": "c2c0a5bc78a259c1116e68a31a41d251a0cb644956ffed3c583d786fdf1cb496",
+    "manifest": "c3c0e82cd3cc1d75a8aa766c87dcb3ba525b9a58f71a6d30589800f45fa2b95c",
+    "prior_art_matrix": "ff19065d22110c409ed9e3c5018e5357882a090de7a46035226e76637e606c5a",
+    "q3lock_manifest": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+    "script": "b50f8a1660e8bbbc9407270c2648c55380e30cdeb50fa228643cd27f65b17bc1",
+    "semidiscrete_manifest": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a"
+  },
+  "task_id": "T-054",
+  "verdict": "CLOSE THE FINITE-REGULATOR QUANTUM GROUND-AND-GIBBS CONSTRUCTION; FORMALLY REJECT STATIONARITY-AND-SYMMETRY-ONLY PREFERENCE; KEEP QUANTUM BOUNDARY, CONTINUUM, HADAMARD, PHYSICAL REFERENCE, CP1, AND PRE-A OPEN"
+}

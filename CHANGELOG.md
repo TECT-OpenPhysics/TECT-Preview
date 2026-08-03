@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Close the fixed-regulator CL8 quantum-state fork] - 2026-08-03
+
+EXP-000738 declares the exact p=(a/8)Pi CCR normalization and hbar, proves the fixed-regulator interacting Schrodinger ground and Gibbs normal states, and registers the scoped stationarity-and-symmetry-only state-selection no-go. Primary 79/79, independent 90/90, and integrated 105/105 checks pass with stored freshness. The result is T0 and claim-nonbearing: interacting Weyl-algebra preservation, quantum characteristic-boundary composition, continuum/Hadamard limit, physical empty-space or no-condensate reference, C0/N1-N5, CP1, and Pre-A remain open.
+
 ## [T-054: add theorem-neutral Bielecki corroboration to CL8 global Goursat package] - 2026-08-04
 
 EXP-000737 records a second proof architecture for the existing PA-CP1-CL8-FINITE-TRIANGLE-GOURSAT-GLOBAL-EXISTENCE-STABILITY conclusion. For any R_bar>S_tau, componentwise clipping makes the force bounded and globally ell_Rbar-Lipschitz; the whole-triangle Volterra map contracts in the Bielecki norm with factor one half for beta^2=ell_Rbar/(2chi), and the shifted-energy amplitude bound excludes first contact with the clip. This corroborates EXP-000734 without replacing its uniform-shell proof and shares its coercive-energy input. A parallel duplicate package was rejected because it reused EXP-000734 and did not independently certify the EXP-000735 D_(m-1) high-regularity carry. Concurrent EXP-000736 is preserved as the distinct classical invariance-selection fork; its nonselection result leaves the parent preferred-state gate open and routes next to PA-CP1-CL8-FINITE-REGULATOR-QUANTUM-STATE. The candidate ID, result ID, theorem and result counts, gate status, EXP-000735 correction, seam, state and physical boundaries are unchanged. Canonical primary 68/68, non-importing independent 65/65, and PDF-aware integrated 159/159 checks pass, 292 combined; the deterministic six-page A4 PDF passed all-page Poppler rendering, inert-security checks, and manual visual review. No formal result, negative record, tier, C6 advancement, CP1 completion, or Pre-A closure is added.

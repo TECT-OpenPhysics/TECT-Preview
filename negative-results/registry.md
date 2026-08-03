@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE](#ng-2026-08-03-pre-a-cp1-cl8-stationarity-only-quantum-state) | uniquely select a preferred fixed-regulator normal state on `B(L2(R^(8M)))` using only stationarity and the exact periodic CL8 node/coarse-translation, Q3, and global-Z2 symmetries | the simple ground projector and every faithful finite-temperature Gibbs density are distinct normalized stationary states with all listed symmetries.  Require an independently justified ground-state, KMS-temperature, energy, reservoir, preparation-history, symmetry-breaking, boundary, or cosmological criterion; this no-go does not reject any such criterion, quantum boundary construction, continuum state, or Hadamard limit |
 | [NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE](#ng-2026-08-03-pre-a-cp1-cl8-invariance-only-preferred-state) | uniquely select a preferred classical CL8 boundary probability using only normalization, Hamiltonian invariance, the declared exact symmetries, compact support on smooth direct-seam phases, and exact continuum-regulator compatibility | for `r<0`, the zero-equilibrium Dirac law and the Z2-symmetric mixture of the two collective ordered-equilibrium Dirac laws are distinct yet satisfy every listed condition and compose with exactly zero regulator error.  Finite-regulator Gibbs and normalized `F(H_a)` families add further nonuniqueness.  Require an independently proved energy, temperature, KMS, reservoir, preparation-history, symmetry-breaking, or other physical selection criterion; this no-go does not reject such criteria or any quantum/continuum state construction |
 | [NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION](#ng-2026-08-03-pre-a-cp1-cl8-unmatched-periodic-composition) | compose every admitted CL8 Goursat datum unchanged with the current same-domain periodic centered lattice | the exact admitted fixture `A=0`, `B(v)=v e_1`, `tau=1/10` has endpoint jump `1/5`; identifying the endpoints creates wrap-edge gradient energy asymptotic to `c/(400a)`.  The unrestricted composition is false.  Retain the matched periodic phase-jet class, an explicitly justified extension, an open-boundary lattice, or another independently verified interface |
 | [NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE](#ng-2026-08-03-pre-a-cp1-finite-c1-equilibrium-strict-cone) | infer an exact finite-speed zero-response waiting interval from any current finite-dimensional autonomous continuous-time CP1 candidate on its declared positive-distance localization blocks | an open-neighbourhood strict cone differentiates to `P_y exp(tA) P_x=0`; matrix-exponential analyticity and Cayley-Hamilton make this equivalent to vanishing of every cross power `P_y A^n P_x`. Exact ST8/Q3LOCK spatial edges, the ordered Q3 species Hessian, and CP1a collocation coefficients `28/9`, `-19/9`, and indirect `-38/3` all violate the criterion. Retain quasi-local bounds, a controlled hyperbolic continuum limit, or an exact-causal discrete-time/enlarged parent; this does not reject QFT microcausality, physical empty space, CP1, or Pre-A |
@@ -258,6 +259,59 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-pre-a-cp1-cl8-stationarity-only-quantum-state"></a>
+### NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE -- stationarity and exact symmetries do not select one fixed-regulator quantum state
+
+**Failure mode.**  Uniquely select a preferred normal state on
+`B(L2(R^(8M)))` using only stationarity under the declared Hamiltonian and
+periodic CL8 node/coarse-translation, Q3, and global-Z2 invariance.
+
+**Evidence.**  With `hbar>0` declared and canonical momentum
+`p=(a/8)Pi`, the fixed periodic regulator has
+
+`Hhat_a=-(4hbar^2/(a*chi))Delta+U_a`.
+
+Its real coercive quartic potential gives a Friedrichs self-adjoint operator
+with compact resolvent and a simple strictly positive normalized ground
+wavefunction.  The corresponding projector `P_(0,a)` is stationary and
+preserves all listed symmetries.  For every `beta>0`, harmonic-oscillator
+comparison proves that
+
+`rho_(a,beta)=Z_(a,beta)^(-1) exp(-beta Hhat_a)`
+
+is a faithful trace-class normalized state.  It is also stationary and
+preserves every listed symmetry.  The ground projector is pure, whereas each
+finite-temperature Gibbs density is faithful and mixed; different positive
+temperatures also have different spectral weights.  These are distinct exact
+witnesses satisfying the entire proposed selection rule.
+
+**Boundary.**  This excludes only unique state preference from normalization,
+stationarity, and the listed exact symmetries.  It does not reject an
+independently justified ground-state rule, KMS temperature, energy, reservoir,
+preparation history, symmetry-breaking condition, boundary condition, or
+cosmological state rule.  The construction is at fixed regulator: it proves no
+quantum characteristic-boundary map, regulator-compatible state family,
+interacting continuum algebra, Hadamard property, thermodynamic limit, or
+physical-vacuum identification.
+
+**Consequence.**  The ground-state criterion conditionally selects the unique
+fixed-regulator ground projector, but both that criterion and `hbar` remain
+declared inputs.  Keep `PA-CP1-CL8-PREFERRED-STATE-COMPOSITION-SELECTION` open
+and advance next to
+`PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER`.  The additive Goursat proof
+shift changes every energy by one scalar while leaving normalized ground and
+Gibbs states unchanged, so it supplies no absolute energy zero.  Relative
+differences are shift-invariant; the below-empty-space sign instead remains
+unavailable because no normalized physical empty-space or no-condensate state
+has been identified in the same regulator and convention.
+
+**Evidence files.**
+`strategy/pre-a-cp1-cl8-finite-quantum-state-boundary-fork-certificate-260803.md`;
+`strategy/pre-a-cp1-cl8-finite-quantum-state-boundary-fork-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_finite_quantum_state_boundary_fork.py`;
+`codes/foundations/pre_a_cp1_cl8_finite_quantum_state_boundary_fork_independent.py`;
+`codes/foundations/pre_a_cp1_cl8_finite_quantum_state_boundary_fork_verify.py`.
 
 <a id="ng-2026-08-03-pre-a-cp1-cl8-invariance-only-preferred-state"></a>
 ### NG-2026-08-03-PRE-A-CP1-CL8-INVARIANCE-ONLY-PREFERRED-STATE -- invariance and exact symmetries do not select one classical boundary measure

@@ -1,0 +1,1162 @@
+{
+  "assertion_summary": {
+    "passed": 105,
+    "total": 105
+  },
+  "assertions": [
+    {
+      "actual": "b39ee1a632786d44d94c99f644454a1738ec357f3189e680025e872eb347cff4",
+      "expected": "fresh primary payload",
+      "group": "freshness",
+      "name": "stored primary equals fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": "8c21990071c61d647b38079ff8d2ddda5430299f39f6362f3de2cfefa1813217",
+      "expected": "fresh independent payload",
+      "group": "freshness",
+      "name": "stored independent equals fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "passed": 79,
+        "total": 79
+      },
+      "expected": {
+        "passed": 79,
+        "total": 79
+      },
+      "group": "children",
+      "name": "primary exact assertion count",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "passed": 90,
+        "total": 90
+      },
+      "expected": {
+        "passed": 90,
+        "total": 90
+      },
+      "group": "children",
+      "name": "independent exact assertion count",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+        "PA-CP1-CL8-FINITE-QUANTUM-GROUND-THERMAL-STATE-AND-BOUNDARY-FORK"
+      ],
+      "expected": [
+        "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+        "PA-CP1-CL8-FINITE-QUANTUM-GROUND-THERMAL-STATE-AND-BOUNDARY-FORK"
+      ],
+      "group": "children",
+      "name": "primary identity",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "children",
+      "name": "primary nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+        "PA-CP1-CL8-FINITE-QUANTUM-GROUND-THERMAL-STATE-AND-BOUNDARY-FORK"
+      ],
+      "expected": [
+        "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+        "PA-CP1-CL8-FINITE-QUANTUM-GROUND-THERMAL-STATE-AND-BOUNDARY-FORK"
+      ],
+      "group": "children",
+      "name": "independent identity",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "children",
+      "name": "independent nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "coercivity": {
+          "A": "a*g/(32*d)",
+          "B": "a*r_minus/16",
+          "C_mu": "(B+mu)^2/(4*A)",
+          "cutoff_scaling": "L*g/(256*M^2)"
+        },
+        "dimensions": {
+          "configuration": "8*M"
+        },
+        "fixture": {
+          "A": "1/1024",
+          "B": "3/32",
+          "C_mu": "4",
+          "d": 32,
+          "kappa": "36",
+          "s0": "64",
+          "weight": "1/16"
+        },
+        "heat_trace": {
+          "dimension": "d",
+          "fixture_factor": "4294967296/1853020188851841",
+          "one_dimensional": "exp(-beta*omega)/(1-exp(-2*beta*omega))"
+        },
+        "negative_id": "NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE",
+        "quantization": {
+          "canonical_momentum": "p=(a/8)*Pi",
+          "kappa": "4*hbar^2/(a*chi)",
+          "weight": "a/8"
+        },
+        "shift": {
+          "fixture": "9/4",
+          "normalized_states_unchanged": true,
+          "operator": "L*C_star/8=L*r_minus^2/(4*g)"
+        },
+        "spectral_fixture": {
+          "distinct": true,
+          "ground_weights": [
+            1,
+            0,
+            0
+          ],
+          "stationary": true,
+          "symmetric": true,
+          "thermal_purity": "3/7",
+          "thermal_weights": [
+            "4/7",
+            "2/7",
+            "1/7"
+          ]
+        }
+      },
+      "expected": {
+        "coercivity": {
+          "A": "a*g/(32*d)",
+          "B": "a*r_minus/16",
+          "C_mu": "(B+mu)^2/(4*A)",
+          "cutoff_scaling": "L*g/(256*M^2)"
+        },
+        "dimensions": {
+          "configuration": "8*M"
+        },
+        "fixture": {
+          "A": "1/1024",
+          "B": "3/32",
+          "C_mu": "4",
+          "d": 32,
+          "kappa": "36",
+          "s0": "64",
+          "weight": "1/16"
+        },
+        "heat_trace": {
+          "dimension": "d",
+          "fixture_factor": "4294967296/1853020188851841",
+          "one_dimensional": "exp(-beta*omega)/(1-exp(-2*beta*omega))"
+        },
+        "negative_id": "NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE",
+        "quantization": {
+          "canonical_momentum": "p=(a/8)*Pi",
+          "kappa": "4*hbar^2/(a*chi)",
+          "weight": "a/8"
+        },
+        "shift": {
+          "fixture": "9/4",
+          "normalized_states_unchanged": true,
+          "operator": "L*C_star/8=L*r_minus^2/(4*g)"
+        },
+        "spectral_fixture": {
+          "distinct": true,
+          "ground_weights": [
+            1,
+            0,
+            0
+          ],
+          "stationary": true,
+          "symmetric": true,
+          "thermal_purity": "3/7",
+          "thermal_weights": [
+            "4/7",
+            "2/7",
+            "1/7"
+          ]
+        }
+      },
+      "group": "cross",
+      "name": "derived structures agree",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        {
+          "C6_claim_advanced": false,
+          "CP1_complete": false,
+          "Hadamard_state": false,
+          "Pre_A_complete": false,
+          "below_empty_space": false,
+          "continuum_quantum_state": false,
+          "cooling": false,
+          "cutoff_uniform_trace_bound": false,
+          "finite_quantum_CCR_declared": true,
+          "finite_quantum_compact_resolvent": true,
+          "finite_quantum_self_adjoint_operator": true,
+          "finite_quantum_thermal_Gibbs": true,
+          "finite_quantum_unique_ground": true,
+          "full_3_plus_1_dependence": false,
+          "gravity": false,
+          "ground_selected_given_criterion": true,
+          "hbar_origin_derived": false,
+          "physical_state_criterion_derived": false,
+          "physical_vacuum": false,
+          "pure_ordered_finite_phase": false,
+          "quantum_boundary_algebra_map": false,
+          "quantum_characteristic_state": false,
+          "stationarity_only_unique_preference": false,
+          "thermodynamic_limit": false
+        },
+        {
+          "C6_claim_advanced": false,
+          "CP1_complete": false,
+          "Hadamard_state": false,
+          "Pre_A_complete": false,
+          "below_empty_space": false,
+          "continuum_quantum_state": false,
+          "cooling": false,
+          "cutoff_uniform_trace_bound": false,
+          "finite_quantum_CCR_declared": true,
+          "finite_quantum_compact_resolvent": true,
+          "finite_quantum_self_adjoint_operator": true,
+          "finite_quantum_thermal_Gibbs": true,
+          "finite_quantum_unique_ground": true,
+          "full_3_plus_1_dependence": false,
+          "gravity": false,
+          "ground_selected_given_criterion": true,
+          "hbar_origin_derived": false,
+          "physical_state_criterion_derived": false,
+          "physical_vacuum": false,
+          "pure_ordered_finite_phase": false,
+          "quantum_boundary_algebra_map": false,
+          "quantum_characteristic_state": false,
+          "stationarity_only_unique_preference": false,
+          "thermodynamic_limit": false
+        }
+      ],
+      "expected": {
+        "C6_claim_advanced": false,
+        "CP1_complete": false,
+        "Hadamard_state": false,
+        "Pre_A_complete": false,
+        "below_empty_space": false,
+        "continuum_quantum_state": false,
+        "cooling": false,
+        "cutoff_uniform_trace_bound": false,
+        "finite_quantum_CCR_declared": true,
+        "finite_quantum_compact_resolvent": true,
+        "finite_quantum_self_adjoint_operator": true,
+        "finite_quantum_thermal_Gibbs": true,
+        "finite_quantum_unique_ground": true,
+        "full_3_plus_1_dependence": false,
+        "gravity": false,
+        "ground_selected_given_criterion": true,
+        "hbar_origin_derived": false,
+        "physical_state_criterion_derived": false,
+        "physical_vacuum": false,
+        "pure_ordered_finite_phase": false,
+        "quantum_boundary_algebra_map": false,
+        "quantum_characteristic_state": false,
+        "stationarity_only_unique_preference": false,
+        "thermodynamic_limit": false
+      },
+      "group": "cross",
+      "name": "scope structures agree",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "CLOSE THE FINITE-REGULATOR QUANTUM GROUND-AND-GIBBS CONSTRUCTION; FORMALLY REJECT STATIONARITY-AND-SYMMETRY-ONLY PREFERENCE; KEEP QUANTUM BOUNDARY, CONTINUUM, HADAMARD, PHYSICAL REFERENCE, CP1, AND PRE-A OPEN",
+        "CLOSE THE FINITE-REGULATOR QUANTUM GROUND-AND-GIBBS CONSTRUCTION; FORMALLY REJECT STATIONARITY-AND-SYMMETRY-ONLY PREFERENCE; KEEP QUANTUM BOUNDARY, CONTINUUM, HADAMARD, PHYSICAL REFERENCE, CP1, AND PRE-A OPEN"
+      ],
+      "expected": "CLOSE THE FINITE-REGULATOR QUANTUM GROUND-AND-GIBBS CONSTRUCTION; FORMALLY REJECT STATIONARITY-AND-SYMMETRY-ONLY PREFERENCE; KEEP QUANTUM BOUNDARY, CONTINUUM, HADAMARD, PHYSICAL REFERENCE, CP1, AND PRE-A OPEN",
+      "group": "cross",
+      "name": "verdict structures agree",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER",
+        "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER"
+      ],
+      "expected": "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER",
+      "group": "cross",
+      "name": "next gate structures agree",
+      "status": "PASS"
+    },
+    {
+      "actual": "b50f8a1660e8bbbc9407270c2648c55380e30cdeb50fa228643cd27f65b17bc1",
+      "expected": "b50f8a1660e8bbbc9407270c2648c55380e30cdeb50fa228643cd27f65b17bc1",
+      "group": "provenance",
+      "name": "primary script hash fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": "2e7c7745b489c5b511049fba9631f3a3eee3ad0fc9fd41d8773d1e7bfedac518",
+      "expected": "2e7c7745b489c5b511049fba9631f3a3eee3ad0fc9fd41d8773d1e7bfedac518",
+      "group": "provenance",
+      "name": "independent script hash fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": "c3c0e82cd3cc1d75a8aa766c87dcb3ba525b9a58f71a6d30589800f45fa2b95c",
+      "expected": "c3c0e82cd3cc1d75a8aa766c87dcb3ba525b9a58f71a6d30589800f45fa2b95c",
+      "group": "provenance",
+      "name": "primary manifest hash fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": "c3c0e82cd3cc1d75a8aa766c87dcb3ba525b9a58f71a6d30589800f45fa2b95c",
+      "expected": "c3c0e82cd3cc1d75a8aa766c87dcb3ba525b9a58f71a6d30589800f45fa2b95c",
+      "group": "provenance",
+      "name": "independent manifest hash fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
+      "expected": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
+      "group": "provenance",
+      "name": "authority hash pinned: semidiscrete_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+      "expected": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+      "group": "provenance",
+      "name": "authority hash pinned: q3lock_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "070131b3ede042840ba29757ad010f8ad0bb130dfc370b870d988360de57e34d",
+      "expected": "070131b3ede042840ba29757ad010f8ad0bb130dfc370b870d988360de57e34d",
+      "group": "provenance",
+      "name": "authority hash pinned: classical_fork_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "c2c0a5bc78a259c1116e68a31a41d251a0cb644956ffed3c583d786fdf1cb496",
+      "expected": "c2c0a5bc78a259c1116e68a31a41d251a0cb644956ffed3c583d786fdf1cb496",
+      "group": "provenance",
+      "name": "authority hash pinned: global_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "a0aa2792f44eb04054237638cb2158143235a7f9ecd6e715b701fdb09007c021",
+      "expected": "a0aa2792f44eb04054237638cb2158143235a7f9ecd6e715b701fdb09007c021",
+      "group": "provenance",
+      "name": "authority hash pinned: gaussian_ccr_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "ff19065d22110c409ed9e3c5018e5357882a090de7a46035226e76637e606c5a",
+      "expected": "ff19065d22110c409ed9e3c5018e5357882a090de7a46035226e76637e606c5a",
+      "group": "provenance",
+      "name": "authority hash pinned: prior_art_matrix",
+      "status": "PASS"
+    },
+    {
+      "actual": "a0d6d7cd99770cd97050eb28fc4dc69180191ba930de629ee023cffc3a2aa811",
+      "expected": "a0d6d7cd99770cd97050eb28fc4dc69180191ba930de629ee023cffc3a2aa811",
+      "group": "provenance",
+      "name": "authority hash pinned: c6_status",
+      "status": "PASS"
+    },
+    {
+      "actual": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
+      "expected": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
+      "group": "provenance",
+      "name": "primary parent hash: semidiscrete_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+      "expected": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+      "group": "provenance",
+      "name": "primary parent hash: q3lock_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "070131b3ede042840ba29757ad010f8ad0bb130dfc370b870d988360de57e34d",
+      "expected": "070131b3ede042840ba29757ad010f8ad0bb130dfc370b870d988360de57e34d",
+      "group": "provenance",
+      "name": "primary parent hash: classical_fork_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "c2c0a5bc78a259c1116e68a31a41d251a0cb644956ffed3c583d786fdf1cb496",
+      "expected": "c2c0a5bc78a259c1116e68a31a41d251a0cb644956ffed3c583d786fdf1cb496",
+      "group": "provenance",
+      "name": "primary parent hash: global_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "a0aa2792f44eb04054237638cb2158143235a7f9ecd6e715b701fdb09007c021",
+      "expected": "a0aa2792f44eb04054237638cb2158143235a7f9ecd6e715b701fdb09007c021",
+      "group": "provenance",
+      "name": "primary parent hash: gaussian_ccr_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "ff19065d22110c409ed9e3c5018e5357882a090de7a46035226e76637e606c5a",
+      "expected": "ff19065d22110c409ed9e3c5018e5357882a090de7a46035226e76637e606c5a",
+      "group": "provenance",
+      "name": "primary parent hash: prior_art_matrix",
+      "status": "PASS"
+    },
+    {
+      "actual": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
+      "expected": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
+      "group": "provenance",
+      "name": "independent parent hash: semidiscrete_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+      "expected": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+      "group": "provenance",
+      "name": "independent parent hash: q3lock_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "070131b3ede042840ba29757ad010f8ad0bb130dfc370b870d988360de57e34d",
+      "expected": "070131b3ede042840ba29757ad010f8ad0bb130dfc370b870d988360de57e34d",
+      "group": "provenance",
+      "name": "independent parent hash: classical_fork_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "c2c0a5bc78a259c1116e68a31a41d251a0cb644956ffed3c583d786fdf1cb496",
+      "expected": "c2c0a5bc78a259c1116e68a31a41d251a0cb644956ffed3c583d786fdf1cb496",
+      "group": "provenance",
+      "name": "independent parent hash: global_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "a0aa2792f44eb04054237638cb2158143235a7f9ecd6e715b701fdb09007c021",
+      "expected": "a0aa2792f44eb04054237638cb2158143235a7f9ecd6e715b701fdb09007c021",
+      "group": "provenance",
+      "name": "independent parent hash: gaussian_ccr_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "ff19065d22110c409ed9e3c5018e5357882a090de7a46035226e76637e606c5a",
+      "expected": "ff19065d22110c409ed9e3c5018e5357882a090de7a46035226e76637e606c5a",
+      "group": "provenance",
+      "name": "independent parent hash: prior_art_matrix",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+      "expected": "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+      "group": "manifest",
+      "name": "manifest candidate",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-FINITE-QUANTUM-GROUND-THERMAL-STATE-AND-BOUNDARY-FORK",
+      "expected": "PA-CP1-CL8-FINITE-QUANTUM-GROUND-THERMAL-STATE-AND-BOUNDARY-FORK",
+      "group": "manifest",
+      "name": "manifest result",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        "T0 exact finite-regulator quantum-state construction and selection-obstruction certificate; not a TECT claim, tier change, boundary-algebra theorem, continuum or Hadamard theorem, physical-vacuum theorem, CP1 completion, or Pre-A closure"
+      ],
+      "expected": [
+        false,
+        "T0..."
+      ],
+      "group": "manifest",
+      "name": "manifest T0 nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE",
+      "expected": "NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE",
+      "group": "manifest",
+      "name": "manifest negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-FINITE-REGULATOR-QUANTUM-GROUND-AND-GIBBS-STATE",
+      "expected": "PA-CP1-CL8-FINITE-REGULATOR-QUANTUM-GROUND-AND-GIBBS-STATE",
+      "group": "manifest",
+      "name": "one closed subgate",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-STATIONARITY-AND-SYMMETRY-ONLY-QUANTUM-PREFERENCE",
+      "expected": "PA-CP1-CL8-STATIONARITY-AND-SYMMETRY-ONLY-QUANTUM-PREFERENCE",
+      "group": "manifest",
+      "name": "one refuted subgate",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER",
+        "PA-CP1-CL8-CONTINUUM-STATE-AND-HADAMARD-LIMIT",
+        "PA-CP1-CL8-CLASSICAL-AND-QUANTUM-PREFERENCE-CRITERION",
+        "PA-CP1-COMMON-PARENT-PHYSICAL-STATE-AND-REFERENCE"
+      ],
+      "expected": "four",
+      "group": "manifest",
+      "name": "four open successors",
+      "status": "PASS"
+    },
+    {
+      "actual": "SPLIT; PARENT GATE REMAINS OPEN",
+      "expected": "SPLIT; PARENT GATE REMAINS OPEN",
+      "group": "manifest",
+      "name": "parent state gate remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": "B(H_a), where H_a=L2(R^d,dq); H_a is infinite-dimensional even though d=8M is finite",
+      "expected": "B(H_a), infinite-dimensional Hilbert space",
+      "group": "manifest",
+      "name": "normal state algebra exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "the stationarity no-go is on B(H_a), where alpha_t is an automorphism; preservation of the regular Weyl C-star algebra by the interacting dynamics is not proved",
+      "expected": "not proved",
+      "group": "manifest",
+      "name": "interacting Weyl dynamics kept open",
+      "status": "PASS"
+    },
+    {
+      "actual": "periodic CL8 node/coarse translations, Q3 automorphisms, and global q-to-minus-q commute with Hhat_a; fine one-site ST8 translation is not claimed; simplicity makes the ground state invariant and Z2 even",
+      "expected": "fine one-site symmetry excluded",
+      "group": "manifest",
+      "name": "coarse translation only",
+      "status": "PASS"
+    },
+    {
+      "actual": "the unique even ground does not select any one classical ordered well; for lambda>0 this includes the two collective plus-or-minus-v wells, while lambda=0 has a larger sign-minimum set. No spontaneous symmetry breaking or uniform spectral gap is proved",
+      "expected": "lambda=0 boundary",
+      "group": "manifest",
+      "name": "lambda-zero minimum boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "N1_boundary": "not established: no characteristic-boundary observable algebra or state is constructed, and the Gaussian C0-A finite-image boundary comparator is not superseded",
+        "N2_through_N5": "not established: there is no quantum boundary reconstruction, derived cooling history, limiting phase-transition theorem, or emergent bulk geometry and excitation theorem",
+        "chain_verdict": "this package neither closes C0 nor one N1-N5 link and does not complete the Pre-A sequence",
+        "programme_authority": "strategy/pre-a-prior-art-novelty-matrix-260803.md",
+        "scoped_role": "at most a standard fixed-regulator bulk-state ingredient after a C0 branch and Hamiltonian have been supplied"
+      },
+      "expected": "not N1 and not C0/N1-N5 closure",
+      "group": "manifest",
+      "name": "Pre-A role bounded",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "A": "a*g/(32*d)",
+        "B": "a*r_minus/16",
+        "C_mu": "(B+mu)^2/(4*A)",
+        "canonical_momentum": "p=(a/8)*Pi",
+        "cutoff_scaling": "L*g/(256*M^2)",
+        "dimension": "8*M",
+        "kappa": "4*hbar^2/(a*chi)",
+        "negative": "NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE",
+        "operator_shift": "L*C_star/8=L*r_minus^2/(4*g)",
+        "thermal_purity": "3/7",
+        "thermal_weights": [
+          "4/7",
+          "2/7",
+          "1/7"
+        ],
+        "weight": "a/8"
+      },
+      "expected": {
+        "A": "a*g/(32*d)",
+        "B": "a*r_minus/16",
+        "C_mu": "(B+mu)^2/(4*A)",
+        "canonical_momentum": "p=(a/8)*Pi",
+        "cutoff_scaling": "L*g/(256*M^2)",
+        "dimension": "8*M",
+        "kappa": "4*hbar^2/(a*chi)",
+        "negative": "NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE",
+        "operator_shift": "L*C_star/8=L*r_minus^2/(4*g)",
+        "thermal_purity": "3/7",
+        "thermal_weights": [
+          "4/7",
+          "2/7",
+          "1/7"
+        ],
+        "weight": "a/8"
+      },
+      "group": "mathematics",
+      "name": "load-bearing derived values",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "A": "1/1024",
+        "B": "3/32",
+        "C_mu": "4",
+        "d": 32,
+        "kappa": "36",
+        "s0": "64",
+        "weight": "1/16"
+      },
+      "expected": "exact fixture",
+      "group": "mathematics",
+      "name": "exact fixture constants",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "distinct": true,
+        "ground_weights": [
+          1,
+          0,
+          0
+        ],
+        "stationary": true,
+        "symmetric": true,
+        "thermal_purity": "3/7",
+        "thermal_weights": [
+          "4/7",
+          "2/7",
+          "1/7"
+        ]
+      },
+      "expected": "distinct stationary symmetric witnesses",
+      "group": "mathematics",
+      "name": "spectral witnesses distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "fixture": "9/4",
+        "normalized_states_unchanged": true,
+        "operator": "L*C_star/8=L*r_minus^2/(4*g)"
+      },
+      "expected": "invariant with fixture 9/4",
+      "group": "mathematics",
+      "name": "normalized states shift invariant",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-1-verdict\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-3-canonical-variables\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-4-coercive-form\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-5-ground-state\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-6-thermal-states\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-7-selection-no-go\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-8-energy-shift\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-9-boundary-fork\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-10-adversarial\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate anchor: id=\"section-12-no-overclaim\"",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: p=(a/8)Pi",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: 4\\hbar^2\\over a\\chi",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: Compact resolvent by itself is not enough",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: configuration marginal",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: not cutoff uniform",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: physical empty space",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate phrase: and Pre-A remain open",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "group": "certificate",
+      "name": "prior art bounded",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "records",
+      "name": "formal negative in summary table",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "records",
+      "name": "formal negative section",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "records",
+      "name": "formal negative evidence path",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "group": "records",
+      "name": "exploration decision present",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "records",
+      "name": "strategy index row",
+      "status": "PASS"
+    },
+    {
+      "actual": "C6-SPACETIME-SIGNATURE",
+      "expected": "C6-SPACETIME-SIGNATURE",
+      "group": "C6",
+      "name": "C6 id",
+      "status": "PASS"
+    },
+    {
+      "actual": "T1",
+      "expected": "T1",
+      "group": "C6",
+      "name": "C6 tier unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "ACTIVE",
+      "expected": "ACTIVE",
+      "group": "C6",
+      "name": "C6 lifecycle unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "CONDITIONAL"
+      ],
+      "expected": [
+        "CONDITIONAL"
+      ],
+      "group": "C6",
+      "name": "C6 evidence unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "C6-BCC-PREMISE-BLOCKED"
+      ],
+      "expected": [
+        "C6-BCC-PREMISE-BLOCKED"
+      ],
+      "group": "C6",
+      "name": "C6 gate unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "scope true: finite_quantum_CCR_declared",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "scope true: finite_quantum_self_adjoint_operator",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "scope true: finite_quantum_compact_resolvent",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "scope true: finite_quantum_unique_ground",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "scope true: finite_quantum_thermal_Gibbs",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "scope true: ground_selected_given_criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: stationarity_only_unique_preference",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: hbar_origin_derived",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: physical_state_criterion_derived",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: pure_ordered_finite_phase",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: quantum_boundary_algebra_map",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: quantum_characteristic_state",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: continuum_quantum_state",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: Hadamard_state",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: cutoff_uniform_trace_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: thermodynamic_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: physical_vacuum",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: below_empty_space",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: full_3_plus_1_dependence",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: gravity",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: cooling",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: C6_claim_advanced",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: CP1_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope false: Pre_A_complete",
+      "status": "PASS"
+    }
+  ],
+  "authority_sha256": {
+    "c6_status": "a0d6d7cd99770cd97050eb28fc4dc69180191ba930de629ee023cffc3a2aa811",
+    "classical_fork_manifest": "070131b3ede042840ba29757ad010f8ad0bb130dfc370b870d988360de57e34d",
+    "gaussian_ccr_manifest": "a0aa2792f44eb04054237638cb2158143235a7f9ecd6e715b701fdb09007c021",
+    "global_manifest": "c2c0a5bc78a259c1116e68a31a41d251a0cb644956ffed3c583d786fdf1cb496",
+    "prior_art_matrix": "ff19065d22110c409ed9e3c5018e5357882a090de7a46035226e76637e606c5a",
+    "q3lock_manifest": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+    "semidiscrete_manifest": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a"
+  },
+  "candidate_id": "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+  "child_assertion_counts": {
+    "independent": 90,
+    "primary": 79
+  },
+  "child_result_sha256": {
+    "independent": "8c21990071c61d647b38079ff8d2ddda5430299f39f6362f3de2cfefa1813217",
+    "primary": "b39ee1a632786d44d94c99f644454a1738ec357f3189e680025e872eb347cff4"
+  },
+  "claim_bearing": false,
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "coercivity": {
+      "A": "a*g/(32*d)",
+      "B": "a*r_minus/16",
+      "C_mu": "(B+mu)^2/(4*A)",
+      "cutoff_scaling": "L*g/(256*M^2)"
+    },
+    "dimensions": {
+      "configuration": "8*M"
+    },
+    "fixture": {
+      "A": "1/1024",
+      "B": "3/32",
+      "C_mu": "4",
+      "d": 32,
+      "kappa": "36",
+      "s0": "64",
+      "weight": "1/16"
+    },
+    "heat_trace": {
+      "dimension": "d",
+      "fixture_factor": "4294967296/1853020188851841",
+      "one_dimensional": "exp(-beta*omega)/(1-exp(-2*beta*omega))"
+    },
+    "negative_id": "NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE",
+    "quantization": {
+      "canonical_momentum": "p=(a/8)*Pi",
+      "kappa": "4*hbar^2/(a*chi)",
+      "weight": "a/8"
+    },
+    "shift": {
+      "fixture": "9/4",
+      "normalized_states_unchanged": true,
+      "operator": "L*C_star/8=L*r_minus^2/(4*g)"
+    },
+    "spectral_fixture": {
+      "distinct": true,
+      "ground_weights": [
+        1,
+        0,
+        0
+      ],
+      "stationary": true,
+      "symmetric": true,
+      "thermal_purity": "3/7",
+      "thermal_weights": [
+        "4/7",
+        "2/7",
+        "1/7"
+      ]
+    }
+  },
+  "next_gate": "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER",
+  "no_overclaim": "This package constructs the declared fixed-regulator CL8 Schrodinger ground and thermal Gibbs normal states and refutes only unique quantum preference from stationarity and the listed exact symmetries alone. It does not derive hbar or the ground/KMS criterion, select a pure ordered finite-volume phase, turn a position marginal into a classical phase measure, construct a quantum characteristic-boundary algebra map, prove preservation of the regular Weyl C-star algebra by the interacting dynamics, prove state compatibility under regulator removal, build an interacting continuum or Hadamard state, identify physical empty space, establish an absolute or below-empty-space energy sign, reach a thermodynamic limit, derive full 3+1 dynamics, gravity or cooling, close C0 or any N1-N5 link, advance C6, complete CP1, or complete Pre-A.",
+  "result_id": "PA-CP1-CL8-FINITE-QUANTUM-GROUND-THERMAL-STATE-AND-BOUNDARY-FORK",
+  "schema": "tect/pre-a-cp1-cl8-finite-quantum-state-boundary-fork-integrated/0.1",
+  "scope": {
+    "C6_claim_advanced": false,
+    "CP1_complete": false,
+    "Hadamard_state": false,
+    "Pre_A_complete": false,
+    "below_empty_space": false,
+    "continuum_quantum_state": false,
+    "cooling": false,
+    "cutoff_uniform_trace_bound": false,
+    "finite_quantum_CCR_declared": true,
+    "finite_quantum_compact_resolvent": true,
+    "finite_quantum_self_adjoint_operator": true,
+    "finite_quantum_thermal_Gibbs": true,
+    "finite_quantum_unique_ground": true,
+    "full_3_plus_1_dependence": false,
+    "gravity": false,
+    "ground_selected_given_criterion": true,
+    "hbar_origin_derived": false,
+    "physical_state_criterion_derived": false,
+    "physical_vacuum": false,
+    "pure_ordered_finite_phase": false,
+    "quantum_boundary_algebra_map": false,
+    "quantum_characteristic_state": false,
+    "stationarity_only_unique_preference": false,
+    "thermodynamic_limit": false
+  },
+  "source_sha256": {
+    "certificate": "76df8a1554aa60522725416820ecb2c90c616e6a7fccd08ecb9e20eb3d56df51",
+    "independent_script": "2e7c7745b489c5b511049fba9631f3a3eee3ad0fc9fd41d8773d1e7bfedac518",
+    "manifest": "c3c0e82cd3cc1d75a8aa766c87dcb3ba525b9a58f71a6d30589800f45fa2b95c",
+    "primary_script": "b50f8a1660e8bbbc9407270c2648c55380e30cdeb50fa228643cd27f65b17bc1",
+    "script": "143d46e3a3e6927aebafabcd4e203ba49f082d117ba49621a69e0df932379f3d"
+  },
+  "task_id": "T-054",
+  "verdict": "CLOSE THE FINITE-REGULATOR QUANTUM GROUND-AND-GIBBS CONSTRUCTION; FORMALLY REJECT STATIONARITY-AND-SYMMETRY-ONLY PREFERENCE; KEEP QUANTUM BOUNDARY, CONTINUUM, HADAMARD, PHYSICAL REFERENCE, CP1, AND PRE-A OPEN"
+}
