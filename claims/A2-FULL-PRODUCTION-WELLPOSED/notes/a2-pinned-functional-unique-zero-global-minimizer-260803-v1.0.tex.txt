@@ -1,0 +1,304 @@
+% =============================================================================
+% Title: Pinned production functional: unique zero equilibrium and global minimizer
+% Claim: A2-FULL-PRODUCTION-WELLPOSED
+% Result: A2-PINNED-FUNCTIONAL-UNIQUE-ZERO-GLOBAL-MINIMIZER
+% Ledger: R-157
+% Version: v1.0 -- first issued 2026-08-03; this version issued 2026-08-03
+% Status: T6 conditional theorem extension; analytic, exact, executed, audited
+% =============================================================================
+
+\begingroup
+\newcommand{\cF}{\mathcal F}
+\newcommand{\Id}{\mathrm I}
+
+\section*{1. Purpose and scope: a decisive candidate test}
+
+The current production functional is one candidate microscopic law, not an
+axiom and not an empirically selected vacuum theory.  Nevertheless its own
+global minimizer can be decided exactly at the pinned parameters.  On the
+fixed three-torus and under the named A2 hypothesis identifying the hash-pinned
+P1 functional as the canonical continuum functional, this note proves
+\[
+ \boxed{\qquad
+ \cF_{\rm P1}[\Psi]\ge
+ g\,\|\Psi\|_{L^2}^2,
+ \qquad
+ g={719818750025582338837\over
+          5400000000000000000000}>{1\over8}.
+ \qquad} \qquad\text{(1.1)}
+\]
+In addition,
+\[
+ \left\langle D\cF_{\rm P1}(\Psi),\Psi\right\rangle
+ \ge \kappa\|\Psi\|_{L^2}^2,
+ \qquad
+ \kappa={2101675000076747016511\over
+               8100000000000000000000}>{1\over4}.   \qquad\text{(1.2)}
+\]
+Since $\cF_{\rm P1}[0]=0$, the zero field is the unique global minimizer;
+(1.2) also makes it the unique critical point.
+For the canonical A2 gradient flow $\partial_t\Psi=-D\cF(\Psi)$ it further
+gives the exponential estimate
+\[
+ \|\Psi(t)\|_{L^2}^2\le
+ e^{-2\kappa t}\|\Psi(0)\|_{L^2}^2.                \qquad\text{(1.3)}
+\]
+Thus no BCC, lamellar, other finite-wave-number pattern, uniform nonzero
+condensate, or unconstrained nonzero field can be the global ground state of
+this exact pinned functional.  A numerical phase tournament cannot reverse
+this inequality.
+
+This is a theorem about the declared classical P1/A2 functional.  It is not a
+physical-vacuum theorem and does not transfer to the historical
+nonvariational backend, the signed A7 covariance-normal stochastic composite,
+another parameter branch, or another candidate equation.  It does not exclude
+transients outside the canonical gradient flow, fixed-charge or fixed-norm
+constraints, compact targets, chemical-potential modifications, conserved
+dynamics, or other nonequilibrium equations.
+
+\section*{2. Exact quadratic lower bound}
+
+Write $\rho=|\Psi|^2$.  The scalar Fourier symbol in each internal direction is
+\[
+ D(x)=Yx^2+Zx+r,
+ \qquad x=|k|^2\ge0.
+\]
+The pinned values have $Y=1$ and $Z<0$, so completion of the square gives
+\[
+ D(x)=Y\left(x+{Z\over2Y}\right)^2+\mu_{\rm sh},
+ \qquad
+ \mu_{\rm sh}=r-{Z^2\over4Y}
+ ={26000000000947494031\over10^{20}}>0. \qquad\text{(2.1)}
+\]
+This is the P1 production shell minimum.  It must not be confused with the
+different scalar-slice manifest value used by the historical N-001 kernel
+audit.
+
+The family and lock matrix is
+\[
+ M=\begin{pmatrix}
+ 1/10&-1/20&-1/20\\
+ -1/20&13/100&-1/20\\
+ -1/20&-1/20&17/100
+ \end{pmatrix}.
+\]
+For $M-(7/250)\Id$, the three leading Sylvester minors are
+\[
+ {9\over125},\qquad {1211\over250000},\qquad
+ {89\over31250000}. \qquad\text{(2.2)}
+\]
+all strictly positive.  Hence $M>(7/250)\Id$.  Parseval therefore yields
+\[
+ \cF_{\rm quad}[\Psi]
+ \ge {\nu\over2}\|\Psi\|_{L^2}^2,
+ \qquad
+ \nu=\mu_{\rm sh}+{7\over250}
+ ={28800000000947494031\over10^{20}}. \qquad\text{(2.3)}
+\]
+
+\section*{3. Class-II positivity and local completion}
+
+The Class-II current pair has coefficient matrix
+\[
+Q_{\rm II}={1\over M_X^2+\epsilon_X}
+ \begin{pmatrix}
+ c_{JJ}\alpha_X^2&c_{JK}\alpha_X\beta_X\\
+ c_{JK}\alpha_X\beta_X&c_{KK}\beta_X^2
+\end{pmatrix}.
+\]
+Write $P=M_X^2+\epsilon_X>0$.
+Its leading entry is positive and
+\[
+ c_{JJ}c_{KK}-c_{JK}^2={1\over50}>0. \qquad\text{(3.1)}
+\]
+Therefore $Q_{\rm II}>0$ and the full Class-II energy is nonnegative.
+The registered shell-bias coefficient is exactly $\eta_{\rm shell}=0$.
+
+It remains only to combine the negative quartic with the positive sextic.
+For the pinned $\lambda=-43/100$ and $\gamma=81/50$,
+\[
+ \begin{aligned}
+ {\nu\over2}+{\lambda\over4}\rho+{\gamma\over6}\rho^2
+ &=g+{\gamma\over6}(\rho-\rho_*)^2,\\
+ \rho_*&=-{3\lambda\over4\gamma}={43\over216},\\
+ g&={\nu\over2}-{3\lambda^2\over32\gamma}
+ ={719818750025582338837\over
+          5400000000000000000000}>{1\over8}. \qquad\text{(3.2)}
+ \end{aligned}
+\]
+Multiplication by $\rho$, spatial integration, and addition of the
+nonnegative Class-II and unused quadratic-square terms prove (1.1).
+The strict coefficient $g>0$ also makes equality possible only for
+$\rho=0$ almost everywhere.
+
+There is a second exact sign which rules out hidden nonzero equilibria.  Along
+the amplitude ray $\Psi\mapsto t\Psi$, put $y=t^2$.  At a point write the
+unscaled Class-II currents as $j$ and $\ell(y)=j-q(y)\nabla\rho$, where
+\[
+ q(y)={y m\over y\rho+\epsilon},
+ \qquad
+ \theta={\epsilon\over y\rho+\epsilon}\in[0,1].
+\]
+Direct differentiation gives
+\[
+ {dE_{\rm II}\over dy}
+ =y\begin{pmatrix}j&\ell\end{pmatrix}
+ R_\theta
+ \begin{pmatrix}j\\\ell\end{pmatrix},
+ \quad
+ R_\theta=
+ \begin{pmatrix}
+ a-\theta b&b+\theta(b-c)/2\\
+ b+\theta(b-c)/2&c(1+\theta)
+ \end{pmatrix}.                                    \qquad\text{(3.3)}
+\]
+Here the displayed two-current form is applied componentwise, with
+$|j|^2$, $\operatorname{Re}(\overline j\ell)$ and $|\ell|^2$, and is summed
+over the internal generators and spatial directions.
+For the pinned coefficients, $a-\theta b\ge21/(2000P)>0$ and
+\[
+ \det R_\theta
+ ={9(-81\theta^2+128\theta+128)\over10240000P^2}>0
+ \quad(0\le\theta\le1),                            \qquad\text{(3.4)}
+\]
+because the numerator is concave and positive at both endpoints.  Hence the
+Class-II energy is nondecreasing on every amplitude ray.  The remaining radial
+derivative satisfies
+\[
+ \langle D\cF(\Psi),\Psi\rangle
+ \ge\left(\nu-{\lambda^2\over4\gamma}\right)
+       \|\Psi\|_{L^2}^2
+ =\kappa\|\Psi\|_{L^2}^2,                          \qquad\text{(3.5)}
+\]
+which proves (1.2).
+Combining (1.2) with
+$\frac12\frac d{dt}\|\Psi\|_{L^2}^2=-\langle D\cF(\Psi),\Psi\rangle$
+proves (1.3).
+
+\section*{4. Consequences for the phase-neutral model tournament}
+
+The conclusion is stronger than a finite BCC-versus-flat comparison:
+\[
+ \cF_{\rm P1}[\Psi]-\cF_{\rm P1}[0]>0
+ \quad\hbox{for every nonzero }\Psi\in H^2(\mathbb T_L^3;\mathbb C^3).
+ \qquad\text{(4.1)}
+\]
+Accordingly the pinned M1 functional cannot realize the founding requirement
+of a stable ordered state lying below its declared zero reference state.  This
+is evidence for rejecting or retuning this implementation, not evidence that
+some preferred lattice should replace it.  M0 and structurally different
+candidate families remain logically untouched.
+
+The radial derivative theorem also rules out every nonzero stationary point
+and hence every nonzero equilibrium local minimum.  T-052's finite-star,
+multistart, Hessian, and metastability search is therefore superseded for this
+exact M1 functional.  It may be retained only as a backend regression test;
+it cannot discover a missing equilibrium branch without falsifying R-157.
+
+\section*{5. Devil's-advocate audit}
+
+\begin{enumerate}
+\item \textbf{Objection: the negative gradient coefficient invalidates the
+quadratic lower bound.}  \textbf{DISMISSED.}  Equation (2.1) is the exact
+continuous square completion and the torus Fourier set is a subset of
+$x\ge0$.
+
+\item \textbf{Objection: the Class-II cross term may be negative.}
+\textbf{DISMISSED in the pinned P1 functional.}  The full two-by-two
+coefficient matrix is positive definite by (3.1); no current term is dropped.
+
+\item \textbf{Objection: Young coercivity proves only boundedness below, not a
+unique minimizer.}  \textbf{DISMISSED.}  The sharper exact completion (3.2)
+leaves the strictly positive multiple $g\rho$, so every nonzero field has
+strictly positive energy.
+
+\item \textbf{Objection: this proves the physical vacuum is empty.}
+\textbf{UPHELD against that inference.}  The theorem decides only a candidate
+functional whose physical selection remains unproved.  It is a reason to
+reject or revise that candidate, not to infer that Nature has no condensate.
+
+\item \textbf{Objection: the signed A7 stochastic composite is also positive.}
+\textbf{UPHELD as false.}  Covariance-normal subtraction makes the A7 owner
+signed.  R-157 does not modify A13/T-050 and cannot be used as its proof.
+
+\item \textbf{Objection: the energy lower bound alone cannot remove nonzero
+saddles or local minima.}  \textbf{DISMISSED by a separate argument.}
+Equations (3.3)--(3.5), not the energy bound alone, give a strictly positive
+radial derivative at every nonzero field and therefore exclude all nonzero
+critical points.
+
+\item \textbf{Objection: radial scaling is illegal in every plausible TECT
+order-parameter space.} \textbf{UPHELD as a scope boundary, not against this
+theorem.}  The A2 domain is the unconstrained linear space
+$H^2(\mathbb T_L^3;\mathbb C^3)$, where radial scaling is admissible.  A
+fixed norm or charge, a chemical-potential Legendre transform, a compact
+$\mathbb{CP}^2$ target, or conserved dynamics changes the variational problem
+and remains an alternative candidate rather than a consequence of R-157.
+\end{enumerate}
+
+External review is invited for the real-pairing factor $1/2$, the Parseval
+normalization, the distinction between the P1 shell minimum and the historical
+scalar-slice mass, the Sylvester lower bound, the Class-II determinant, the
+quartic-sextic completion, and every scope firewall above.
+
+\newpage
+\section*{6. Result footer and reproduction}
+
+Run from the repository root:
+\begin{verbatim}
+$py = "E:\Dev\TECT.venv\Scripts\python.exe"
+& $py codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py
+\end{verbatim}
+
+The verification package has three deliberately different layers:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Layer & Method & Required result\\
+\midrule
+Primary & exact SymPy derivation plus backend fixtures & 26/26 PASS\\
+Independent & standard-library rational reconstruction & 24/24 PASS\\
+Integrated & authority, artifact, PDF, and release audit & all PASS\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The existing A2 well-posedness theorem remains the continuum-domain
+authority.  R-157 extends its pinned-functional conclusion without changing
+its tier: the same named A1 identification hypothesis remains in force.  The
+result changes the candidate verdict, not the empirical status of the model.
+
+\begingroup
+\footnotesize
+\begin{verbatim}
+Result ID: A2-PINNED-FUNCTIONAL-UNIQUE-ZERO-GLOBAL-MINIMIZER
+Ledger ID: R-157
+Claim: A2-FULL-PRODUCTION-WELLPOSED.
+Precise statement: F_P1[Psi] >= g ||Psi||_L2^2 with exact g>1/8 and
+  <DF_P1(Psi),Psi> >= kappa ||Psi||_L2^2 with exact kappa>1/4;
+  hence Psi=0 is the unique critical point and global minimizer, and the
+  canonical L2 gradient flow decays at rate 2 kappa.
+Scope: Unconstrained hash-pinned P1/A2 continuum functional,
+  eta_shell=0, H2 fields, and its canonical gradient flow.
+Dependencies: A1-PRODUCTION-FUNCTIONAL-REALISATION, the named
+  A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL hypothesis, and the A2 continuum
+  theorem.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED, CONDITIONAL.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py
+Expected output: Integrated verifier PASS; primary 26/26; independent 24/24;
+  legacy A2 61/61.
+Falsification gate: Any exact shell/internal/potential/Class-II sign, radial
+  derivative, child parity, authority hash, record, PDF, or legacy A2 gate
+  fails, or a nonzero pinned critical point is produced.
+Tier before / after: T6 / T6; no promotion.
+No-overclaim statement: No physical-vacuum, historical-backend, signed-A7,
+  constrained/compact-target, conserved/chemical-potential,
+  general-nonequilibrium, alternative-parameter, alternative-model,
+  T-050/A13, or Sector-A conclusion follows.
+Next required action: Use R-157 as the M1 early-rejection boundary in T-054;
+  T-052 is superseded except as regression. Keep A13/T-050 separate.
+\end{verbatim}
+\endgroup
+
+\endgroup

@@ -21,7 +21,7 @@ Tier profile: T6x9 T5x7 T4x5
 | [`A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION`](../../claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/INDEX.md) | T4 | — | A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND, A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE | Class-II true-increment determinant reduction |
 | [`A12-CLASSII-SOURCE-SQUARE-REDUCTION`](../../claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/INDEX.md) | T4 | — | — | Class-II sharp-cube source-square reduction |
 | [`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`](../../claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/INDEX.md) | T4 | — | A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION, A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE | Class-II source, translated model, balanced coefficient jets, and obstruction bo |
-| [`A2-FULL-PRODUCTION-WELLPOSED`](../../claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full production three-component gradient-flow well-posedness |
+| [`A2-FULL-PRODUCTION-WELLPOSED`](../../claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full production gradient-flow well-posedness and pinned equilibrium selection |
 | [`A2-PDE-WELLPOSED`](../../claims/A2-PDE-WELLPOSED/INDEX.md) | T6 | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Well-posedness of the TECT gradient flow and minimisation problem |
 | [`A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM`](../../claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full-production spectral discretization to continuum PDE |
 | [`A3-PERTURBATIVE-CONTINUUM-CORRELATORS`](../../claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/INDEX.md) | T6 | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Cutoff-independent continuum limit of the perturbative correlators (conditional) |
@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM | the pinned unconstrained M1 functional has no nonzero equili |  |
 | NG-2026-08-03-A13-NONLINEAR-SHIFTED-STATE-PULLBACK-SOURCE-CONVEXITY | nonlinear controller coordinates destroy the apparent source |  |
 | NG-2026-08-03-A13-NONDEGENERATE-GAUSSIAN-PAST-CURRENT-DETERMINISTIC-LINFTY-COLLAR | absolute Gaussian past-current collars cannot close the full |  |
 | NG-2026-08-03-A13-LINEAR-PAIR-TESTS-DO-NOT-IMPLY-NONLINEAR-PREDICTABLE-GAP | averaged linear tests do not control the conditional nonline |  |

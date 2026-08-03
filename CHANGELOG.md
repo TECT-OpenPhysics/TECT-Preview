@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-157 pinned M1 unique-zero theorem and truth-first candidate rejection] - 2026-08-03
+
+Registered the conditional exact R-157 extension for the hash-pinned unconstrained P1/A2 functional. The energy gap g>1/8 makes zero the unique global minimizer; the independent radial gap kappa>1/4 makes it the unique critical point and forces exponential L2 decay of the canonical gradient flow. This analytically supersedes T-052 equilibrium searches for pinned M1 and routes T-054 toward structurally distinct candidates. The result is not a physical-vacuum verdict and does not transfer to constrained, compact-target, chemical-potential, conserved, historical, signed-A7, retuned, or alternative models. The A13 quantitative-radius route was parked at an exact U_0/L_R criterion without a guessed numerical radius; no intrinsic counterexample was certified.
+
 ## [A13 R-156 shifted-state nonzero-neighbourhood gap boundary] - 2026-08-03
 
 Registered R-156. The actual predictable chart chi(A,B)=(A xi_p,B(xi_2p+A xi_p)) has an exact intrinsic source Gram and one projected-force/controller connection obtained from a single production scalar. Continuity from the R-155 pure-dyadic 147/1000 origin gap leaves 47/1000 headroom and proves an existential fixed-cutoff nonzero coefficient neighbourhood above 1/10. An exact rank-one R=2 witness gives nonlinear parameter-Hessian eigenvalue -27/10 while the tangent source metric stays positive, retiring global nonlinear-pullback source convexity and an invented-low completion only. Primary 29/29 and independent 21/21 pass; the deterministic five-page PDF passed full visual QA. T-050, A13, phase/PDE selection, and Sector A remain open; T-054/T-052 stay the primary model-selection path.

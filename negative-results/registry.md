@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM](#ng-2026-08-03-m1-pinned-functional-nonzero-equilibrium) | find a stable or metastable nonzero equilibrium of the hash-pinned unconstrained M1/P1 functional by BCC, other finite-star, multistart, Hessian, or full-field search | exact global and radial bounds give `F_P1[Psi]>=g||Psi||_2^2`, `g>1/8`, and `<DF_P1(Psi),Psi>>=kappa||Psi||_2^2`, `kappa>1/4`; zero is the unique critical point and global minimizer and its canonical gradient flow decays exponentially. Retire T-052's equilibrium search for this candidate except as backend regression; constrained, compact-target, chemical-potential, conserved, retuned, historical, A7, alternative-model, and physical-vacuum questions remain open |
 | [NG-2026-08-03-A13-NONLINEAR-SHIFTED-STATE-PULLBACK-SOURCE-CONVEXITY](#ng-2026-08-03-a13-nonlinear-shifted-state-pullback-source-convexity) | infer a global intrinsic production gap by treating the `9/10` Cameron--Martin source reserve as a positive controller-coordinate Hessian after nonlinear shifted-state substitution | for `chi(t,s)=(tP xi_p,sP(xi_2p+tP xi_p))` with a rank-one projection `P`, the source cost is `9(t^2+s^2+t^2s^2)/20`; at `t=s=R` its parameter Hessian has eigenvalue `9(1-R^2)/10`, equal to `-27/10` at `R=2`, while the intrinsic tangent source Gram remains positive. The failure is chart curvature, not an intrinsic production or T-050 counterexample |
 | [NG-2026-08-03-A13-NONDEGENERATE-GAUSSIAN-PAST-CURRENT-DETERMINISTIC-LINFTY-COLLAR](#ng-2026-08-03-a13-nondegenerate-gaussian-past-current-deterministic-linfty-collar) | close the R-152 or R-153 absolute past-current collar by a fixed almost-sure threshold, or weaken it to an averaged multiplier required for every predictable direction | one uncancelled derivative-active Gaussian past coefficient has unbounded support, forcing positive-probability violation of every finite absolute collar; event-localized predictable controls make the all-directions weighted inequality equivalent to the fiberwise threshold, so only a signed owner completion or a genuinely restricted control class can continue this route |
 | [NG-2026-08-03-A13-LINEAR-PAIR-TESTS-DO-NOT-IMPLY-NONLINEAR-PREDICTABLE-GAP](#ng-2026-08-03-a13-linear-pair-tests-do-not-imply-nonlinear-predictable-gap) | infer the full nonlinear predictable-control Hessian gap from the R-151 averaged linear family `phi=H xi_1` and an ordinary bounded smoothness class | the exact criterion is the almost-sure conditional form bound `K>=-4I/5`; the smooth translated-bump fixture for `K(X)=-X^2/5` passes every linear Gaussian test with loss `3/5` but gives negative augmented curvature, so the inference fails without a conditional operator or weighted form theorem |
@@ -243,6 +244,44 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-m1-pinned-functional-nonzero-equilibrium"></a>
+### NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM -- the pinned unconstrained M1 functional has no nonzero equilibrium
+
+**Failure mode.**  Continue a finite BCC-versus-flat, symmetry-star,
+multistart, Hessian, or full-grid search in the hope of finding a stable or
+metastable nonzero equilibrium of the exact hash-pinned P1/A2 functional.
+
+**Exact evidence.**  R-157 proves
+
+```text
+F_P1[Psi] >= g ||Psi||_2^2,                 g > 1/8,
+<DF_P1(Psi),Psi> >= kappa ||Psi||_2^2,     kappa > 1/4.
+```
+
+The first inequality makes zero the unique global minimizer.  The second is a
+separate radial-derivative theorem and rules out every nonzero critical point,
+including saddles, local minima, and metastable equilibria.  For the canonical
+L2 gradient flow it also gives
+`||Psi(t)||_2^2<=exp(-2*kappa*t)||Psi(0)||_2^2`.
+
+**Consequence.**  Mark T-052 analytically superseded for the pinned M1
+equilibrium question; retain a finite-grid run only as an implementation
+regression.  In the T-054 model tournament, reject or retune M1 before spending
+T-053 observable tests.  No lattice or phase is substituted by preference.
+
+**Boundary.**  This no-go is conditional on the named A2 identification of the
+hash-pinned P1 functional, uses the unconstrained linear field space
+`H2(T3;C3)` and `eta_shell=0`, and concerns its canonical gradient flow.  It
+does not apply to fixed norm or charge, compact `CP2`, chemical-potential,
+conserved or other dynamics, the historical residual, the signed A7 stochastic
+composite, retuned coefficients, structurally different functionals, general
+nonequilibrium transients, or physical-vacuum selection.  It neither proves nor
+refutes T-050/A13 or Sector-A closure.
+
+**Evidence.**  R-157 note and manifest under
+`claims/A2-FULL-PRODUCTION-WELLPOSED/`; primary 26/26, independent 24/24,
+legacy A2 61/61, and integrated release/PDF audits.
 
 <a id="ng-2026-08-03-a13-nonlinear-shifted-state-pullback-source-convexity"></a>
 ### NG-2026-08-03-A13-NONLINEAR-SHIFTED-STATE-PULLBACK-SOURCE-CONVEXITY -- nonlinear controller coordinates destroy the apparent source Hessian reserve

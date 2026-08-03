@@ -1,7 +1,7 @@
-# A2-FULL-PRODUCTION-WELLPOSED -- full production three-component PDE
+# A2-FULL-PRODUCTION-WELLPOSED -- full production PDE and pinned equilibrium
 
 **Tier**: T6 CONDITIONAL-THEOREM (TSv2) | **Lifecycle**: ACTIVE |
-**Last review**: 2026-07-17
+**Last review**: 2026-08-03
 
 ## Statement
 
@@ -12,6 +12,18 @@ real-`L2` gradient flow has a unique global `H2` solution. The solution depends
 continuously on the initial field on every finite interval, obeys the exact
 gradient-flow energy identity, and is smooth for every positive time.
 
+For the same pinned functional, R-157 proves the stronger equilibrium bounds
+(result ID `A2-PINNED-FUNCTIONAL-UNIQUE-ZERO-GLOBAL-MINIMIZER`):
+
+```text
+F_P1[Psi] >= g ||Psi||_2^2,                   g > 1/8,
+<DF_P1(Psi),Psi> >= kappa ||Psi||_2^2,       kappa > 1/4.
+```
+
+The zero field is therefore the unique critical point and global minimizer in
+the unconstrained `H2` field space. Its canonical gradient flow obeys
+`||Psi(t)||_2^2 <= exp(-2 kappa t)||Psi(0)||_2^2`.
+
 ## Scope
 
 The field has three complex components, treated as six real components. The
@@ -19,9 +31,12 @@ domain is the fixed periodic cell with the P1 real pairing. Production
 coefficients, positive rho and Class-II mass regularisers, and
 `eta_shell = 0` are fixed by the P1 manifest. Initial data are in `H2`.
 
-Excluded: the historical non-variational solver, nonzero shell bias, removal of
-the regularisers, data below `H2`, infinite volume, negative shell mass,
-minimiser or BCC selection, vacuum stability, and T7.
+R-157 selects the minimizer only within this mathematical candidate. Excluded:
+the historical non-variational solver, signed A7 stochastic composite, nonzero
+shell bias, removal of the regularisers, data below `H2`, infinite volume,
+fixed norm or charge, compact `CP2` targets, chemical-potential transforms,
+conserved or alternative dynamics, other parameter/function families,
+physical-vacuum selection, and T7.
 
 ## Dependencies and hypotheses
 
@@ -56,9 +71,20 @@ historical backend or a different functional.
    Holder regularity and Duhamel cancellation give the endpoint `H4` gain;
    the order-two nonlinear map then bootstraps by two derivatives to
    `C-infinity`.
+6. R-157 completes the scalar Fourier symbol exactly and proves the internal
+   mass lower bound `M > (7/250)I`. Completing the quartic-sextic polynomial
+   gives
+   `g=719818750025582338837/5400000000000000000000 > 1/8`.
+7. The pinned Class-II coefficient matrix and its amplitude-ray derivative
+   matrix are positive definite for every regularizer ratio
+   `0 <= theta <= 1`. The resulting
+   `kappa=2101675000076747016511/8100000000000000000000 > 1/4`
+   removes all nonzero critical points and gives exponential `L2` decay.
 
 The self-contained proof is
 [v2.0 integrated referee theorem](notes/a2-full-production-wellposedness-260717-v2.0.tex.txt).
+The pinned equilibrium extension is
+[R-157 source note](notes/a2-pinned-functional-unique-zero-global-minimizer-260803-v1.0.tex.txt).
 
 ## Evidence and reproduction
 
@@ -69,16 +95,20 @@ Evidence grades: `ANALYTIC`, `EXECUTED`, `CONDITIONAL`.
 - Galerkin energy and continuation: 12/12 PASS.
 - Semigroup and smoothing: 15/15 PASS.
 - One-command aggregate: 61/61 PASS.
+- R-157 primary exact/backend audit: 26/26 PASS.
+- R-157 non-importing Fraction reconstruction: 24/24 PASS.
+- R-157 integrated authority, artifact, PDF, and legacy-regression audit: all
+  PASS.
 
 Run from the repository root:
 
 ```bash
-python codes/foundations/a2_full_production_verify.py
+python codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py
 ```
 
-Expected: four PASS lines, `ASSERTS: 61/61`,
-`A2-FULL-PRODUCTION-VERIFY-PASS`, exit 0. The wrapper writes only temporary
-JSON and does not modify the immutable evidence.
+Expected: primary `26/26`, independent `24/24`, legacy A2 `61/61`, integrated
+all PASS, exit 0. Child reruns use temporary JSON and are compared with the
+immutable evidence.
 
 The PUBLISHED referee bundle is
 `bundle/A2-Full-Production-WellPosedness-T6-260717/`: 22 files, five entry
@@ -94,6 +124,10 @@ failure of the exact energy identity, failure of the positive-time `H4` gain,
 or failure of the higher Sobolev bootstrap. A source-hash drift or loss of a
 positive production sign invalidates the pinned theorem input rather than being
 silently absorbed.
+
+R-157 additionally fails if a field in the declared unconstrained pinned scope
+has energy below `g||Psi||_2^2`, if a nonzero critical point exists, or if the
+canonical gradient flow violates the exponential `L2` estimate.
 
 ## Devil's-advocate record
 
@@ -114,6 +148,13 @@ silently absorbed.
 7. **"This should be T7."** UPHELD as a governance error. The declared physical
    domain excludes several production extensions, and the T7 external-domain
    audit is absent.
+8. **"A zero minimizer proves that the physical vacuum is empty."** UPHELD as
+   false. R-157 rejects or requires retuning this pinned M1 candidate; it does
+   not select a physical law.
+9. **"The radial proof transfers to fixed charge, compact `CP2`, or conserved
+   dynamics."** UPHELD as false. Radial scaling is admissible in the declared
+   unconstrained linear `H2` space only; those alternatives require new
+   functionals and Euler--Lagrange equations.
 
 ## Tier decision and operator sign-off
 
@@ -130,10 +171,14 @@ T4-to-T6 promotion.
 
 ## No-overclaim
 
-This is a T6 theorem conditional on the pinned P1 functional definition. It is
-not a theorem for the historical backend, `eta_shell != 0`, data below `H2`,
-infinite volume, negative shell mass, minimiser uniqueness, BCC selection,
-vacuum stability, T7, or TOE closure.
+R-157 applies only to the unconstrained hash-pinned P1/A2 classical functional
+on the fixed torus with `eta_shell=0` and to its canonical `L2` gradient flow.
+It makes `Psi=0` the unique critical point and global minimizer and forces
+exponential `L2` decay in that flow. It is not a physical-vacuum theorem; it
+does not apply to the historical backend, signed A7 stochastic composite,
+fixed-norm/charge or compact-target constraints, chemical-potential or
+conserved dynamics, other parameters/functionals, or general nonequilibrium
+transients.
 
 ## History
 
@@ -145,9 +190,15 @@ vacuum stability, T7, or TOE closure.
 - 2026-07-17: operator independently reproduced the complete audit matrix;
   v2.0 integrated referee theorem confirmed; one-command verification passed
   61/61; PUBLISHED T6 bundle passed all five entries; T4 -> T6 enacted.
+- 2026-08-03: R-157 proved exact positive energy and radial-derivative gaps for
+  the pinned P1 functional, making zero the unique critical point and global
+  minimizer and forcing exponential decay of its canonical gradient flow. Tier
+  remains T6 under the same named identification hypothesis.
 
 ## Next required action
 
-Preserve this bundle as the closed P2 baseline. Extensions to nonzero shell
-bias, floor removal, lower-regularity data, infinite volume, or the historical
-backend require separate claims. T7 is not an active target.
+Preserve the original T6 bundle and R-157 as the pinned M1 rejection boundary.
+Advance the truth-first T-054 tournament with structurally distinct candidates;
+do not spend T-053 observable tests on M1. Constrained, compact-target,
+chemical-potential, conserved, historical, A7, or retuned branches require
+separate candidate definitions and claims.

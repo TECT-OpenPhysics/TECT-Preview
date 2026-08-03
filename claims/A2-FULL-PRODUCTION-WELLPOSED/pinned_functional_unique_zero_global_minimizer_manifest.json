@@ -1,0 +1,134 @@
+{
+  "schema": "tect/a2-pinned-functional-unique-zero-global-minimizer-manifest/1.0",
+  "package_version": "1.0.0",
+  "issued": "2026-08-03",
+  "claim_id": "A2-FULL-PRODUCTION-WELLPOSED",
+  "result_id": "A2-PINNED-FUNCTIONAL-UNIQUE-ZERO-GLOBAL-MINIMIZER",
+  "result_ledger_id": "R-157",
+  "tier": "T6",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXACT",
+    "EXECUTED",
+    "AUDITED",
+    "CONDITIONAL"
+  ],
+  "statement": "Conditional on A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, the hash-pinned P1 functional on the fixed three-torus with eta_shell=0 obeys F_P1[Psi]>=g||Psi||_L2^2 for every Psi in H2(T3;C3), with g=719818750025582338837/5400000000000000000000>1/8. Independently, the exact amplitude-ray derivative of the complete regularized Class-II term is nonnegative and <DF_P1(Psi),Psi>>=kappa||Psi||_L2^2 with kappa=2101675000076747016511/8100000000000000000000>1/4. Hence Psi=0 is the unique critical point and global minimizer in the unconstrained field space, and the canonical L2 gradient flow satisfies ||Psi(t)||_L2^2<=exp(-2 kappa t)||Psi(0)||_L2^2. No nonzero uniform, BCC, lamellar, other finite-wave-number, saddle, local-minimum, or metastable equilibrium exists for this exact candidate.",
+  "scope": {
+    "pinned_a1_p1_functional": true,
+    "a2_fixed_torus_continuum_h2": true,
+    "eta_shell_zero": true,
+    "unconstrained_linear_field_space": true,
+    "unique_zero_global_minimizer": true,
+    "unique_zero_critical_point": true,
+    "nonzero_stationary_or_metastable_equilibrium_exclusion": true,
+    "canonical_gradient_flow_exponential_l2_decay": true,
+    "physical_vacuum_selection": false,
+    "historical_backend": false,
+    "a7_covariance_normal_composite": false,
+    "fixed_norm_or_charge_constraint": false,
+    "chemical_potential_modified_model": false,
+    "compact_cp2_target": false,
+    "conserved_or_alternative_dynamics": false,
+    "alternative_parameter_or_functional_branches": false
+  },
+  "authorities": {
+    "A1-P1": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+    "A2-continuum": "claims/A2-FULL-PRODUCTION-WELLPOSED/full_pde_manifest.json",
+    "P1-backend": "codes/foundations/n001_variational_backend.py"
+  },
+  "authority_hashes": {
+    "A1-P1": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "A2-continuum": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682",
+    "P1-backend": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+  },
+  "exact_constants": {
+    "shell_minimum": "26000000000947494031/100000000000000000000",
+    "internal_mass_lower_bound": "7/250",
+    "total_quadratic_mass_lower_bound": "28800000000947494031/100000000000000000000",
+    "strict_l2_gap_g": "719818750025582338837/5400000000000000000000",
+    "strict_radial_derivative_gap_kappa": "2101675000076747016511/8100000000000000000000",
+    "classii_input_determinant": "1/50",
+    "classii_radial_determinant": "9*(-81*theta^2+128*theta+128)/(10240000*P^2)"
+  },
+  "files": {
+    "primary": {
+      "path": "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer.py",
+      "version": "1.0.0",
+      "sha256": "2394353f3b6bdcb35d20cd706d10bf272045c4e12d3abfdcc17e46a5c6fb294f"
+    },
+    "independent": {
+      "path": "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_independent.py",
+      "version": "1.0.0",
+      "sha256": "cc4010827ef901fb06771882c941eabdc4804d3f080f0e5b908d55a992d9c265"
+    },
+    "verifier": {
+      "path": "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py",
+      "version": "1.0.0",
+      "sha256": "53638415caabd3a44f69903c93fdbb7d9a4c5c008d63de6c2908b0bda25dd687"
+    },
+    "note": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-pinned-functional-unique-zero-global-minimizer-260803-v1.0.tex.txt",
+      "version": "1.0",
+      "sha256": "593c7d7fa6d8ecd130dcfd86dad869dc2a69a03c10ba080bab9b62a791669591"
+    },
+    "pdf": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-pinned-functional-unique-zero-global-minimizer-260803-v1.0.pdf",
+      "version": "1.0",
+      "sha256": "e6f0f0738ca1830af9348f76a23eaeb45db40a14034a70e32001393440bfa20d"
+    },
+    "primary_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-03-primary-pinned-functional-unique-zero-global-minimizer/result.json",
+      "schema": "tect/a2-pinned-functional-unique-zero-global-minimizer-primary/1.0",
+      "sha256": "8e32fd9852f39fe28c223fd442aa7a9934dbfca856760d4785164f097a09c3d6"
+    },
+    "independent_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-03-independent-pinned-functional-unique-zero-global-minimizer/result.json",
+      "schema": "tect/a2-pinned-functional-unique-zero-global-minimizer-independent/1.0",
+      "sha256": "c87ba75cd24377df27b6529c342411d2f6a9d113b7c781ac1139efb72991aa2d"
+    },
+    "integrated_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-03-integrated-pinned-functional-unique-zero-global-minimizer/result.json",
+      "schema": "tect/a2-pinned-functional-unique-zero-global-minimizer-integrated/1.0"
+    }
+  },
+  "verification": {
+    "command": "E:\\Dev\\TECT.venv\\Scripts\\python.exe codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py",
+    "primary_assertions": 26,
+    "independent_assertions": 24,
+    "embedded_child_assertions": 50,
+    "legacy_a2_assertions": 61,
+    "integrator_only_assertions": 94,
+    "integrated_assertions": 144,
+    "pdf": {
+      "deterministic": true,
+      "source_date_epoch": 1785715200,
+      "form_check": "PASS",
+      "overfull_hbox_count": 0,
+      "pages": 5,
+      "size_bytes": 68102,
+      "security_check": "PASS: unencrypted and no JavaScript, launch action, attachment, embedded file, rich media, XFA, submission action, remote goto, or URI action",
+      "text_check": "PASS: R-157, exact energy and radial gaps, unique critical point, global minimizer, exponential flow decay, T-052 consequence, A7 and physical-vacuum firewalls extracted",
+      "renderer": "Poppler pdftoppm 26.802.11031",
+      "render_dpi": 150,
+      "rendered_pages": 5,
+      "manual_visual_qa": "PASS: all 5 final rendered pages inspected on 2026-08-03; title, exact bounds, Class-II radial matrix, candidate verdict, seven objections, reproduction table, footer, and page breaks are legible with no clipping, overlap, overfull line, stray glyph, or missing content."
+    }
+  },
+  "negative_results": [
+    "NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM"
+  ],
+  "exploration_ids": [
+    "EXP-000681",
+    "EXP-000682",
+    "EXP-000683",
+    "EXP-000684"
+  ],
+  "proof_complete_in_declared_scope": true,
+  "t052_m1_equilibrium_search_superseded": true,
+  "physical_vacuum_selected": false,
+  "t050_or_a13_closed": false,
+  "sector_a_closed": false,
+  "no_overclaim": "R-157 applies only to the unconstrained hash-pinned P1/A2 classical functional on the fixed torus with eta_shell=0 and to its canonical L2 gradient flow. It makes Psi=0 the unique critical point and global minimizer and forces exponential L2 decay in that flow. It is not a physical-vacuum theorem; it does not apply to the historical backend, signed A7 stochastic composite, fixed-norm/charge or compact-target constraints, chemical-potential or conserved dynamics, other parameters/functionals, or general nonequilibrium transients.",
+  "next_action": "Use R-157 as the pinned M1 early-rejection boundary in T-054. Do not run T-052 as a research phase search except for optional backend regression. Freeze evidence and compare at least two structurally distinct constrained, multicomponent/nonlocal, compact-target, chemical-potential, or conserved candidates before applying T-053 observables to survivors. Keep T-050/A13 separate at the pinned U_0/L_R intrinsic-radius or genuine-counterexample branch."
+}

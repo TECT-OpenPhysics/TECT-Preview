@@ -1,0 +1,265 @@
+{
+  "assertions": [
+    {
+      "actual": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "expected": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "group": "authority",
+      "name": "A1 authority",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "T6",
+        [
+          "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL"
+        ]
+      ],
+      "expected": "T6 with named hypothesis",
+      "group": "authority",
+      "name": "A2 is conditional continuum theorem",
+      "status": "PASS"
+    },
+    {
+      "actual": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+      "expected": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+      "group": "authority",
+      "name": "backend hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "26000000000947494031/100000000000000000000",
+      "expected": "26000000000947494031/100000000000000000000",
+      "group": "linear",
+      "name": "shell minimum",
+      "status": "PASS"
+    },
+    {
+      "actual": "4626377063/10000000000",
+      "expected": ">0",
+      "group": "linear",
+      "name": "shell minimizer is admissible",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "9/125",
+        "1211/250000",
+        "89/31250000"
+      ],
+      "expected": [
+        "9/125",
+        "1211/250000",
+        "89/31250000"
+      ],
+      "group": "linear",
+      "name": "independent Sylvester test",
+      "status": "PASS"
+    },
+    {
+      "actual": "43/216",
+      "expected": "43/216",
+      "group": "potential",
+      "name": "vertex",
+      "status": "PASS"
+    },
+    {
+      "actual": "719818750025582338837/5400000000000000000000",
+      "expected": "719818750025582338837/5400000000000000000000",
+      "group": "potential",
+      "name": "exact gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "719818750025582338837/5400000000000000000000",
+      "expected": ">0",
+      "group": "potential",
+      "name": "strict positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "44818750025582338837/5400000000000000000000",
+      "expected": ">0",
+      "group": "potential",
+      "name": "one-eighth corollary",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "28800000000947494031/200000000000000000000",
+        "-43/400",
+        "27/100"
+      ],
+      "expected": [
+        "28800000000947494031/200000000000000000000",
+        "-43/400",
+        "27/100"
+      ],
+      "group": "potential",
+      "name": "completion coefficient parity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/50",
+      "expected": "1/50",
+      "group": "classii",
+      "name": "input coefficient determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "18000000000/4000000000001",
+        "112500000000000000000/16000000000008000000000001"
+      ],
+      "expected": ">0",
+      "group": "classii",
+      "name": "scaled coefficient positive definite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0/1",
+      "expected": 0,
+      "group": "classii",
+      "name": "eta shell zero",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "112500000000000000000/16000000000008000000000001",
+        "112500000000000000000/16000000000008000000000001",
+        "-71191406250000000000/16000000000008000000000001"
+      ],
+      "expected": [
+        "112500000000000000000/16000000000008000000000001",
+        "112500000000000000000/16000000000008000000000001",
+        "-71191406250000000000/16000000000008000000000001"
+      ],
+      "group": "classii-ray",
+      "name": "radial determinant coefficients",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "10500000000/4000000000001",
+        "112500000000000000000/16000000000008000000000001",
+        "153808593750000000000/16000000000008000000000001"
+      ],
+      "expected": ">0; concave determinant has positive endpoints",
+      "group": "classii-ray",
+      "name": "radial matrix positive on unit theta interval",
+      "status": "PASS"
+    },
+    {
+      "actual": "2101675000076747016511/8100000000000000000000",
+      "expected": "2101675000076747016511/8100000000000000000000",
+      "group": "critical-point",
+      "name": "exact radial derivative gap",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "0.5 * float(params[\"r\"])",
+        "0.25 * float(params[\"lambda\"])",
+        "(float(params[\"gamma\"]) / 6.0)",
+        "0.5 * a_jj",
+        "b_jk *",
+        "0.5 * c_kk"
+      ],
+      "expected": "all present",
+      "group": "backend",
+      "name": "energy normalization tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": "F[Psi]>=g||Psi||2; F[0]=0",
+      "expected": "Psi=0 only",
+      "group": "verdict",
+      "name": "unique minimizer implication",
+      "status": "PASS"
+    },
+    {
+      "actual": "<DF(Psi),Psi>>=kappa||Psi||2",
+      "expected": "Psi=0 only",
+      "group": "verdict",
+      "name": "unique critical point implication",
+      "status": "PASS"
+    },
+    {
+      "actual": "d||Psi||2/dt<=-2 kappa||Psi||2",
+      "expected": "||Psi(t)||2<=exp(-2 kappa t)||Psi(0)||2",
+      "group": "dynamics",
+      "name": "canonical gradient flow exponential decay implication",
+      "status": "PASS"
+    },
+    {
+      "actual": "pinned functional selection is not empirical model selection",
+      "expected": "excluded",
+      "group": "boundary",
+      "name": "physical-vacuum firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "time-dependent non-equilibrium structures not excluded",
+      "expected": "open",
+      "group": "boundary",
+      "name": "non-equilibrium firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "covariance-normal counterterm not covered",
+      "expected": "excluded",
+      "group": "boundary",
+      "name": "signed A7 firewall",
+      "status": "PASS"
+    }
+  ],
+  "authority_hashes": {
+    "A1_manifest": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "A2_status": "16e854f265aa080c53b17a644a50b86830bca0090c77f194942ff5952d68d3eb",
+    "backend": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+  },
+  "claim_id": "A2-FULL-PRODUCTION-WELLPOSED",
+  "derived": {
+    "classii_determinant": "112500000000000000000/16000000000008000000000001",
+    "classii_radial_determinant_coefficients": [
+      "112500000000000000000/16000000000008000000000001",
+      "112500000000000000000/16000000000008000000000001",
+      "-71191406250000000000/16000000000008000000000001"
+    ],
+    "internal_lower": "7/250",
+    "rho_star": "43/216",
+    "shell_minimum": "26000000000947494031/100000000000000000000",
+    "strict_l2_gap": "719818750025582338837/5400000000000000000000",
+    "strict_radial_derivative_gap": "2101675000076747016511/8100000000000000000000",
+    "total_mass": "28800000000947494031/100000000000000000000"
+  },
+  "independence": "standard-library Fraction reconstruction; does not import the primary certificate",
+  "issued": "2026-08-03",
+  "no_overclaim": "R-157 applies only to the unconstrained hash-pinned P1/A2 classical functional on the fixed torus with eta_shell=0 and to its canonical L2 gradient flow. It makes Psi=0 the unique critical point and global minimizer and forces exponential L2 decay in that flow. It is not a physical-vacuum theorem; it does not apply to the historical backend, signed A7 stochastic composite, fixed-norm/charge or compact-target constraints, chemical-potential or conserved dynamics, other parameters/functionals, or general nonequilibrium transients.",
+  "result_id": "A2-PINNED-FUNCTIONAL-UNIQUE-ZERO-GLOBAL-MINIMIZER",
+  "result_ledger_id": "R-157",
+  "schema": "tect/a2-pinned-functional-unique-zero-global-minimizer-independent/1.0",
+  "scope": {
+    "a2_fixed_torus_continuum_h2": true,
+    "a7_covariance_normal_composite": false,
+    "alternative_parameter_or_functional_branches": false,
+    "canonical_gradient_flow_exponential_l2_decay": true,
+    "chemical_potential_modified_model": false,
+    "compact_cp2_target": false,
+    "conserved_or_alternative_dynamics": false,
+    "eta_shell_zero": true,
+    "fixed_norm_or_charge_constraint": false,
+    "historical_backend": false,
+    "nonzero_stationary_or_metastable_equilibrium_exclusion": true,
+    "physical_vacuum_selection": false,
+    "pinned_a1_p1_functional": true,
+    "unconstrained_linear_field_space": true,
+    "unique_zero_critical_point": true,
+    "unique_zero_global_minimizer": true
+  },
+  "summary": {
+    "failed": 0,
+    "passed": 24,
+    "total": 24
+  },
+  "version": "1.0.0"
+}

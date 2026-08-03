@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-157](#r-157) | Pinned P1 unique-zero critical point, global minimizer, and exponential gradient-flow decay | T6 conditional analytic/exact/executed/audited theorem extension. For the hash-pinned P1/A2 functional on the fixed torus with `eta_shell=0`, exact shell completion and `M>(7/250)I` give `F_P1[Psi]>=g||Psi||_2^2`, where `g=719818750025582338837/5400000000000000000000>1/8`. The full regularized Class-II amplitude-ray derivative is positive, giving `<DF_P1(Psi),Psi>>=kappa||Psi||_2^2`, where `kappa=2101675000076747016511/8100000000000000000000>1/4`. Thus zero is the unique critical point and global minimizer and the canonical L2 gradient flow decays exponentially. This analytically supersedes T-052 equilibrium searches for pinned M1 and supports rejecting or retuning that candidate; it is not a physical-vacuum theorem and does not cover constrained/compact-target, chemical-potential, conserved, historical, signed-A7, retuned, or alternative models |
 | [R-156](#r-156) | Shifted-state intrinsic Hessian and nonzero-neighbourhood gap boundary | Scoped T4 analytic/exact/executed/audited local theorem and coordinate-curvature boundary. For the predictable chart `chi(A,B)=(A xi_p,B(xi_2p+A xi_p))`, the exact intrinsic tangent Gram is `||H||_HS^2+||G||_HS^2+||GA+BH||_HS^2`, while the pullback Hessian additionally contains one projected-force pairing with controller acceleration `GK+LH`. One scalar production Hessian owns source, endpoint/current, sextic, forward/legal-reverse, and balanced blocks once; no independent low variable exists. Continuity from the R-155 pure-dyadic `147/1000` origin gap gives some fixed-cutoff nonzero coefficient neighbourhood with gap `>1/10`, using exact headroom `47/1000`. The rank-one source-cost restriction has eigenvalue `9(1-R^2)/10`, disproving global nonlinear-coordinate source convexity without refuting intrinsic convexity. No numerical/uniform radius, general nonlinear/revisit T-050, phase/PDE selection, or Sector-A closure follows |
 | [R-155](#r-155) | Affine source-reuse factor-three endpoint and global origin gap | Scoped T4 analytic/exact/executed/audited origin-Hessian theorem. For any finite retained family of distinct antipodal raw source classes, the fixed-law controls `h_[2p]=H_p xi_[p]` may reuse a target later as a source. Injective doubling and raw-source independence keep the source Gram diagonal and make all distinct-source mixed covariance second jets vanish. Factor-two reuse adds no covariance-normal endpoint edge; the complete mixed endpoint/loss graph still has only factor-three paths, while the terminal sextic Hessian is retained as one global PSD form. Exact Sturm and independent Fraction/Bernstein certificates give `D2 A(0)[H,H]>(7/250) sum ||H_p||_HS^2`; pure dyadic families satisfy the sharper `147/1000` bound. Nonzero past, nonlinear/revisit feedback, finite amplitude, T-050, A13, phase/PDE selection, and Sector A remain open |
 | [R-154](#r-154) | Disjoint multipair factor-three resonance graph and origin-Hessian gap | Scoped T4 analytic/exact/executed/audited multipair theorem. For any finite retained family of mutually disjoint antipodal source/target classes with affine predictable controls `h_[2p]=H_p xi_[p]`, direct polarization of the complete covariance-normal A7 endpoint shows that mixed blocks survive only on `[q]=[3p]` or `[p]=[3q]`. The resulting graph is a union of finite paths. Exact diagonal and edge envelopes, rational Sturm chains, and an independent dyadic Bernstein audit give one global block-row bound strictly above `(1/40) sum ||H_p||_F^2` after the `9/10` source Hessian is paid once and the whole global PSD sixth-power Hessian is dropped. Nonzero past, overlapping/revisited roots, nonlinear feedback, arbitrary progressive controls, T-050, A13, phase/PDE selection, and Sector A remain open |
@@ -175,6 +176,52 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-157"></a>
+### R-157 -- Pinned P1 unique-zero critical point, global minimizer, and exponential gradient-flow decay
+
+- **Exact energy gap.**  The registered scalar Fourier symbol obeys
+  `Yx^2+Zx+r >= r-Z^2/(4Y)` for every `x>=0`, and the family-lock matrix
+  satisfies `M>(7/250)I` by the three exact positive Sylvester minors
+  `9/125`, `1211/250000`, and `89/31250000`.  The Class-II coefficient
+  matrix is positive definite because `cJJ*cKK-cJK^2=1/50`.  Completing the
+  negative quartic against the positive sextic therefore gives
+  `F_P1[Psi]>=g||Psi||_2^2` with
+  `g=719818750025582338837/5400000000000000000000>1/8`.
+- **Critical-point and flow gap.**  Along `Psi -> sqrt(y)Psi`, direct
+  differentiation of the complete regularized Class-II term gives the
+  componentwise current matrix
+  `R_theta=[[a-theta*b,b+theta*(b-c)/2],[b+theta*(b-c)/2,c*(1+theta)]]`.
+  Its first minor is at least `21/(2000P)` and
+  `det R_theta=9(-81theta^2+128theta+128)/(10240000P^2)>0` on
+  `0<=theta<=1`.  Consequently
+  `<DF_P1(Psi),Psi>>=kappa||Psi||_2^2`, where
+  `kappa=2101675000076747016511/8100000000000000000000>1/4`.
+  Zero is the unique critical point and global minimizer, and the canonical
+  A2 gradient flow satisfies
+  `||Psi(t)||_2^2<=exp(-2*kappa*t)||Psi(0)||_2^2`.
+- **Candidate consequence.**  No nonzero uniform, BCC, lamellar, other
+  finite-wave-number, saddle, local-minimum, or metastable equilibrium exists
+  for the declared unconstrained pinned M1 functional.  This analytically
+  supersedes the research substance of T-052 for M1, except for optional
+  backend regression, and is evidence to reject or retune M1 in T-054.
+- **Where proved.**  Claim `A2-FULL-PRODUCTION-WELLPOSED`, note
+  `claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-pinned-functional-unique-zero-global-minimizer-260803-v1.0.tex.txt`,
+  manifest
+  `claims/A2-FULL-PRODUCTION-WELLPOSED/pinned_functional_unique_zero_global_minimizer_manifest.json`,
+  and primary, non-importing Fraction, integrated, legacy-A2, and PDF audits
+  pinned there.
+- **Audit boundary.**  The theorem uses the unconstrained linear space
+  `H2(T3;C3)`, the hash-pinned P1 coefficients, `eta_shell=0`, and the named
+  A2 identification hypothesis.  It is not a physical-vacuum theorem and
+  does not transfer to fixed norm/charge, compact `CP2`, chemical-potential,
+  conserved or other dynamics, historical residuals, the signed A7 stochastic
+  composite, other coefficients/functionals, general nonequilibrium
+  transients, T-050/A13, or Sector-A closure.
+- **Tier / publication target.**  T6 conditional
+  analytic/exact/executed/audited extension of the existing A2 continuum
+  theorem; candidate-functional falsification and PDE model-selection note
+  after independent external review.
 
 <a id="r-156"></a>
 ### R-156 -- Shifted-state intrinsic Hessian and nonzero-neighbourhood gap boundary

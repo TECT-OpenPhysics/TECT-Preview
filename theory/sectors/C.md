@@ -32,6 +32,7 @@ Tier profile: T6x4 T5x1 T1x1
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM | the pinned unconstrained M1 functional has no nonzero equili |  |
 | R-2026-legacy-newtonG-label | Newton $G$ "independently predicted / T7" label | independent prediction missing ($a_{\rm BCC}$ fixed by $G_{\rm obs}$) |
 
 ---
