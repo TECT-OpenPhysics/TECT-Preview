@@ -6,7 +6,7 @@
 
 Generated: 2026-08-04
 
-**3469 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
+**3459 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -3297,8 +3297,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `verification/README.md` | — | — | — | — | ACTIVE | `da6f8dc0c475` |
 | `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `883396f70a9c` |
-| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `883396f70a9c` |
-| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `883396f70a9c` |
 | `verification/requirements.txt` | — | — | — | — | ACTIVE | `101e9e176f7a` |
 | `verification/scripts/audit_r125_historical_live_surface_compatibility.py` | — | 2026-08-03 | 2026-08-03 | v1.0.0 | ACTIVE | `122a6ad92ab6` |
 | `verification/scripts/build_catalog.py` | — | — | — | — | ACTIVE | `c35c7327b5ed` |
@@ -3416,8 +3414,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.gitignore` | — | — | — | — | ACTIVE | `c715b48698f0` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `7f2740428029` |
 | `CHANGELOG.md` | — | — | — | — | ACTIVE | `464d31a34eaf` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `464d31a34eaf` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `464d31a34eaf` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `09d2e33e6560` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -3437,10 +3433,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
 | `changelog/log.jsonl` | — | — | — | — | ACTIVE | `d17f04c83d49` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `d17f04c83d49` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `d17f04c83d49` |
-| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `1e0ca0b23a61` |
-| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `1e0ca0b23a61` |
 | `explorations/log.jsonl` | — | — | — | — | ACTIVE | `1e0ca0b23a61` |
 | `output/.gitattributes` | — | — | — | — | ACTIVE | `fdfa7b607b52` |
 | `output/pdf/pre-a-cp1-cl8-global-goursat-continuation-certificate-260803-260804-v0.1.1.pdf` | — | — | — | — | ACTIVE | `d581320c0099` |
@@ -3538,8 +3530,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/sector-a-claim-taxonomy-and-subproof-plan-260722.md` | — | — | — | — | ACTIVE | `515c895f0a44` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `7784fbab38fd` |
 | `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `137c26ea5f80` |
-| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `f44565283f72` |
-| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `f44565283f72` |
 | `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `f44565283f72` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `528697935e4a` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
