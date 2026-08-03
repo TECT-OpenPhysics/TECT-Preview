@@ -1,0 +1,190 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-interacting-two-arm-work-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-INTERACTING-TWO-ARM-WORK-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-PASSIVE-TWO-ARM-CHARACTERISTIC-CONTROL-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-COMMON-FINITE-REGULATOR-CHARACTERISTIC-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
+    "PA-CP1-ST8-Q3LOCK-v0",
+    "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+    "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-EXACT-1D-Q3-DRIVEN-ALL-CUT-WORK-TRANSPORT-AND-DIRECT-ORDER-MICROCUT-NOGO",
+  "candidate_family": "PRE-A-CL8-INTERACTING-TWO-ARM-WORK-ROUTE-SPLIT",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 exact fixed-regulator interacting driven-circuit and work-transport route split; not a TECT claim, tier change, inherited CL8 dynamics intertwiner, physical-state theorem, CP1 completion, or Pre-A closure",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "comparison_context": [
+    "T-054 Pre-A candidate tournament",
+    "EXP-000745 passive same-dimension two-arm control"
+  ],
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-EXACT-ORDER-EVERY-MICROCUT-SIDEWAYS"
+  ],
+  "statement": "In the explicitly inserted one-dimensional per-unit-transverse-area CL8 reduction, each leg carries the same eight Q3 species and canonical p=(a/8)Pi variables. The complete Q3 onsite polynomial and each nearest-neighbour spatial bond admit an exact two-colour bond-density ledger. A two-leg gate formed from quarter kinetic shears, the exact q-only bond-density kick, a declared full-rank passive controller, and quarter kinetic shears is a global polynomial symplectomorphism with exact mixed inverses on all four orientations. Repeating this gate on every vertex of an open directed rectangle gives a unique, sweep-independent, causal symplectic diffeomorphism from the two incoming arms to every acyclic monotone cut. The ordered drift, polynomial-phase and passive-metaplectic factors give exact interacting forward-cut unitaries on B(H), exact normal-density transport, and an exact sign-indefinite local-to-global oscillator-action work ledger. The periodic even/odd companion assigns the inherited one-dimensional kinetic and Q3/spatial coefficients with no omission, but its inserted controller and ordering make it a new driven Floquet candidate rather than the inherited autonomous CL8 flow or its D-K-D step. Keeping the exact commuting global Q3 kick instead leaves q-only microcuts rank deficient. This closes only the interacting driven work-and-transport subgate; the common-parent dynamics/state/reference gate remains open.",
+  "verdict": "ADVANCE AN EXACT 1D Q3-DENSITY INTERACTING TWO-ARM ALL-CUT CIRCUIT WITH WORK AND B(H) STATE TRANSPORT; FORMALLY REJECT IDENTIFYING ITS FULL-RANK MICROGATES WITH THE INHERITED CL8 ORDER; KEEP THE COMMON PARENT OPEN",
+  "authorities": {
+    "passive_two_arm_control": "strategy/pre-a-cp1-cl8-passive-two-arm-characteristic-control-route-split-manifest.json",
+    "interacting_Cauchy_circuit": "strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-manifest.json",
+    "one_dimensional_Hamiltonian": "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest.json",
+    "Q3_polynomial": "strategy/pre-a-cp1-st8-q3lock-manifest.json",
+    "finite_normal_states": "strategy/pre-a-cp1-cl8-finite-quantum-state-boundary-fork-manifest.json",
+    "quantum_algebra_firewall": "strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-manifest.json",
+    "minimum_CP1_contract": "strategy/pre-a-cp1-lt3-rs-common-container-certificate-260803.md#14-minimum-repair-and-next-proof-target",
+    "Pre_A_selection_charter": "strategy/pre-a-evidence-first-model-selection-charter-260802.md#8-entry-and-exit-conditions"
+  },
+  "model_scope": {
+    "selected_branch": "the inserted one-dimensional transverse-zero, per-unit-transverse-area CL8 model with w=a/8; not the original three-dimensional ST8/Q3LOCK regulator with weight a^3/8",
+    "domain": "M is even and M>=4, Lambda_M=Z/(MZ), L>0, a=L/M, w=a/8, mu=chi*w, chi>0, c>0, g>0, lambda>0, r real, hbar>0, nonzero microstep tau, and real gamma,eta with gamma^2+eta^2=1 and gamma*eta nonzero",
+    "leg_variables": "q_j in R^8 and canonical p_j=w*Pi_j in R^8; each leg has real phase dimension 16 and every M-leg cut has dimension 16M",
+    "symplectic_form": "Omega_cut=sum_j sum_e dp_(j,e) wedge dq_(j,e)",
+    "Q3_potential": "W_Q3(q)=sum_e[r*q_e^2/2+g*q_e^4/4]+(lambda/4)sum_(e~f in Q3)(q_e-q_f)^2(q_e^2+q_f^2)",
+    "inserted_controller": "the passive mixing G and directed rectangle order are new controller data; they are not derived from H_a, the continuum Goursat equation, a null cone or a cooling history"
+  },
+  "exact_term_ledger": {
+    "inherited_1D_potential": "U_a(q)=w*sum_j[c*||q_(j+1)-q_j||^2/(2*a^2)+W_Q3(q_j)]",
+    "bond_density": "V_j(q_j,q_(j+1))=w*[c*||q_(j+1)-q_j||^2/(2*a^2)+(W_Q3(q_j)+W_Q3(q_(j+1)))/2]",
+    "bond_partition": "the even bonds (0,1),(2,3),... and odd bonds (1,2),(3,4),...,(M-1,0) partition the periodic nearest-neighbour edges, and sum_j V_j=U_a exactly; every onsite term has two half-owners and every spatial bond one full owner",
+    "kinetic": "T_a(p)=sum_j ||p_j||^2/(2*mu)",
+    "kinetic_ownership": "as a coefficient-occurrence ledger, with h=tau/4 every node participates in one gate per parity layer and each gate applies an input and output D_h shear, so four h shears per full two-layer period carry total coefficient tau for that node's inherited kinetic term; intervening kicks and controllers prevent combining them into one global exp(-i*tau*T_a/hbar)",
+    "controller_ownership": "one G gate is recorded on every periodic bond; these M controller insertions are extra terms rather than hidden pieces of T_a or U_a",
+    "ordering_boundary": "the local V_j kicks commute only when no drift or controller lies between them; the prescribed even-then-odd driven product is not K_(tau*U_a), the inherited D-K-D split, or exp(-i*tau*H_a/hbar)"
+  },
+  "local_interacting_gate": {
+    "single_leg_drift": "D_h(q,p)=(q+(h/mu)*p,p) with h=tau/4",
+    "pair_kick": "K_(tau,V)(q_W,p_W,q_S,p_S)=(q_W,p_W-tau*V_W,q_S,p_S-tau*V_S)",
+    "controller": "G maps (Z_W,Z_S) to (gamma*Z_W+eta*Z_S,-eta*Z_W+gamma*Z_S) on complete 16-coordinate legs",
+    "gate": "F_(tau,V)=(D_h direct-sum D_h) after G after K_(tau,V) after (D_h direct-sum D_h)",
+    "temporal_result": "every factor and hence F is a global polynomial symplectomorphism of R^32; explicitly F^(-1)=(D_(-h) direct-sum D_(-h)) after K_(-tau,V) after G^T after (D_(-h) direct-sum D_(-h))",
+    "mixed_inverse": "given pre-drift W and final N, set W1=D_h(W), N1=D_(-h)(N); solve q_S1=(q_N1+eta*q_W1)/gamma and p_S1=[p_N1+eta*(p_W1-tau*V_W)]/gamma+tau*V_S with both gradients evaluated at (q_W1,q_S1); then q_E1=(q_W1+eta*q_N1)/gamma, p_E1=(p_W1+eta*p_N1-tau*V_W)/gamma, S=D_(-h)(S1), and E=D_h(E1); the eta-oriented solve is analogous",
+    "cross_determinants": "all single-leg drifts have determinant one, while the central opposite-leg projection blocks have determinants gamma^16 or eta^16; therefore every required full-gate opposite-leg projection-block determinant is gamma^16 or eta^16 on the entire field space, independent of the Q3 Hessian; the complete temporal 32-dimensional symplectic map itself has determinant one",
+    "orientation": "the mixed maps preserve the signed form Omega_first-Omega_second; no same-positive-orientation strict continuous-variable dual-unitarity is claimed"
+  },
+  "global_open_rectangle": {
+    "domain": "positive integers m,n with m+n=M; west and south arms contain n and m complete legs and share no edge variable at their geometric corner",
+    "recurrence": "at every vertex (i,j), apply the declared F to the incoming west and south edge legs to obtain the east and north edge legs",
+    "constraints": "none; the input space is the full nondegenerate 16M-dimensional phase space, its radical is zero, and no ancilla or quotient is introduced",
+    "existence_uniqueness": "induction on i+j computes every edge; reversing the exact mixed formulas reconstructs the complementary arms globally, not merely locally",
+    "sweep_independence": "every topological sweep gives the same edge assignment because each vertex has one fixed predecessor pair and ready incomparable vertices act on disjoint unresolved outputs",
+    "all_cut_result": "each order ideal, equivalently each nonincreasing row-length tuple, defines an M-leg cut; the input-to-cut map is a global polynomial symplectic diffeomorphism and the number of cuts is binomial(m+n,m)",
+    "causality": "each edge depends only on the finite southwest rectangle of arm inputs; coefficients or derivatives outside it vanish exactly",
+    "periodic_boundary": "the theorem is for open acyclic rectangles; arbitrary wrapped two-arm seams and monodromy remain unproved"
+  },
+  "work_branch": {
+    "reference_action": "I_nu(q,p)=sum_legs[nu*||q||^2+||p||^2/nu]/2 for inserted nu>0; its zero is only an additive measurement convention",
+    "drift_increment": "Delta_D I_nu=(nu*h/mu)*q dot p+(nu*h^2/(2*mu^2))*||p||^2 on each leg",
+    "kick_increment": "Delta_K I_nu=-(tau/nu)*(p_W dot V_W+p_S dot V_S)+(tau^2/(2*nu))*(||V_W||^2+||V_S||^2), evaluated after the input drift",
+    "controller_increment": "zero because G is orthogonal on complete equal-nu legs",
+    "local_ledger": "W_v is the sum of the two input-drift increments, the kick increment, and the two output-drift increments evaluated at their actual intermediate states; I_out-I_in=W_v exactly",
+    "global_ledger": "for every order ideal, the sum of W_v over its vertices equals the total I_nu on the target cut minus the total I_nu on the input arms; internal cut contributions telescope and the result is sweep independent",
+    "sign_boundary": "W_v is sign-indefinite and I_nu is not asserted conserved, physical, or equal to H_a; this branch proves work accounting rather than a common positive invariant or stationary state"
+  },
+  "quantum_forward_cut": {
+    "Hilbert_space": "each leg is L2(R^8), every M-leg cut is canonically L2(R^(8M)), and no oscillator truncation is used",
+    "local_unitary": "U_F=(Dhat_h tensor Dhat_h)*Ghat*exp(-i*tau*V(Q_W,Q_S)/hbar)*(Dhat_h tensor Dhat_h), with the single-leg Dhat_h=exp(-i*h*||P||^2/(2*mu*hbar)) and Ghat the passive metaplectic controller",
+    "forward_cut_unitary": "the ordered product over the vertices of an order ideal is a unitary U_I from the input-cut Hilbert space to the canonically enumerated target-cut Hilbert space; ready-vertex order does not change the product because ready gates act on disjoint tensor factors",
+    "BH_map": "with rho_I=U_I*rho_in*U_I^*, the declared Heisenberg pullback is alpha_I(A_target)=U_I^* A_target U_I; the opposite algebra embedding is iota_I(A_input)=U_I A_input U_I^*, and both are normal star-isomorphisms in their stated directions",
+    "density_transport": "rho_I=U_I*rho_in*U_I^* preserves positivity, trace one, trace class and normality exactly for every input density",
+    "work_domain": "the symmetrized quantum work identity is asserted as a quadratic-form identity on the common Schwartz core and in expectation only for densities with the required finite polynomial moments",
+    "algebra_boundary": "the exact interacting result is on B(H); the nonlinear phase does not normalize the regular Weyl C-star algebra and no direct nonlinear Weyl-generator relabelling is used",
+    "state_boundary": "transport is not stationarity, a Gibbs theorem, a physical preference rule or strict dual-unitarity under mixed reshufflings"
+  },
+  "exact_order_microcut_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-EXACT-ORDER-EVERY-MICROCUT-SIDEWAYS",
+    "attempt": "simultaneously retain the inherited commuting global q-only kick order and call every local bond kick an invertible full-phase two-arm microgate, or interleave the controller while still calling the result the inherited D-K-D dynamics",
+    "rank_witness": "a q-only bond kick has cross block [[0,0],[-tau*V_WS,0]] from the opposite 16-coordinate leg and therefore rank at most eight rather than sixteen",
+    "ordering_witness": "interleaving nontrivial G gates makes later V_j kicks act on controller-rotated positions; for fixed gamma,eta the zero-step limit retains G rather than the identity, so the driven product is not the inherited K_(tau*U_a), D-K-D step or autonomous flow",
+    "conclusion": "within this direct microgate architecture, exact inherited ordering and full sideways invertibility at every microcut cannot be claimed simultaneously",
+    "survivors": "macro-cuts that hide kick-only layers, a controller scaled to zero with a separately proved common-parent limit, a different chiral or variational discretization, or a new energy-preserving full-cross gate"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-INTERACTING-GATE-TILING-ALL-CUT-INVARIANT-OR-WORK-STATE",
+    "status": "DRIVEN WORK-AND-TRANSPORT BRANCH CLOSED IN INSERTED 1D FIXED-REGULATOR SCOPE; COMMON PARENT REMAINS OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-DRIVEN-1D-Q3-DENSITY-AND-KINETIC-COEFFICIENT-TILING",
+      "PA-CP1-CL8-DRIVEN-1D-INTERACTING-LOCAL-GLOBAL-CROSS-INVERSE",
+      "PA-CP1-CL8-DRIVEN-1D-INTERACTING-OPEN-RECTANGLE-ALL-CUT-SYMPLECTIC-DIFFEOMORPHISM",
+      "PA-CP1-CL8-DRIVEN-1D-INTERACTING-BH-FORWARD-CUT-UNITARY-AND-DENSITY-TRANSPORT",
+      "PA-CP1-CL8-DRIVEN-1D-INTERACTING-EXACT-WORK-LEDGER"
+    ],
+    "refuted_subgates": [
+      "PA-CP1-CL8-EXACT-INHERITED-QONLY-ORDER-AND-EVERY-MICROCUT-FULL-SIDEWAYS"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-CONTROLLER-FREE-COMMON-PARENT-DYNAMICS-INTERTWINER",
+      "PA-CP1-CL8-COMMON-POSITIVE-INVARIANT-AND-STATIONARY-STATE",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-CP1-CL8-FULL-FINITE-A-BOUNDARY-ALGEBRA-AND-EXACT-CCR-MAP",
+      "PA-CP1-CL8-REGULATOR-COMPATIBLE-BOUNDARY-STATE-FAMILY",
+      "PA-CP1-CL8-CONTINUUM-STATE-AND-HADAMARD-LIMIT",
+      "PA-CP1-COMMON-PARENT-PHYSICAL-STATE-AND-REFERENCE"
+    ],
+    "next_gate": "PA-CP1-CL8-CONTROLLER-FREE-COMMON-PARENT-DYNAMICS-INTERTWINER"
+  },
+  "required_next_contract": {
+    "model_identity": "remove or derive the controller and prove an exact intertwiner to the inherited one-dimensional D-K-D/Cauchy dynamics, or replace both by one explicitly justified common parent",
+    "dimension_bridge": "prove a finite-regulator classical transverse reduction and a legitimate quantum algebra/state relation before identifying the one-dimensional model with the original three-dimensional Q3LOCK regulator",
+    "state_energy": "prove a positive common invariant and trace-class stationary density for the actual common parent, or retain only work and transported states",
+    "boundary_bulk": "intertwine the same state criterion, energy/counterterm convention and exact dynamics between the periodic Cauchy and open two-arm graphs",
+    "regulators": "construct inter-regulator embeddings and compatible states before a continuum or Hadamard assertion"
+  },
+  "Pre_A_chain_role": {
+    "C0": "not established because the one-dimensional reduction, directed order, microstep, controller, hbar and characteristic interpretation are inserted",
+    "N1": "an exact interacting fixed-regulator B(H) forward-cut algebra and transported normal states exist for the driven candidate, but no selected common-parent or regulator-compatible state exists",
+    "N2": "the driven open-rectangle boundary-to-cut dynamics is exact, but it is not intertwined with the inherited CL8 Cauchy dynamics",
+    "N3_through_N5": "not established; no limiting transition, control history, emergent geometry, excitation theorem or cooling law follows",
+    "CP1": "not complete because the three-dimensional ordering parent, controller-free dynamics, same selected state/reference, counterterms and cutoff-uniform family are absent",
+    "chain_verdict": "the package closes only a claim-nonbearing fixed-regulator driven work-and-transport component; C0, N1-N5, CP1 and Pre-A remain open"
+  },
+  "scope": {
+    "inserted_1D_per_unit_transverse_area_model": true,
+    "same_CL8_16M_phase_dimension": true,
+    "lambda_positive_locked_Q3_domain": true,
+    "exact_Q3_spatial_bond_coefficient_ownership": true,
+    "exact_kinetic_shear_coefficient_ownership": true,
+    "controller_explicitly_ledgered": true,
+    "global_full_cross_inverse": true,
+    "open_rectangle_all_cut_symplectic_diffeomorphism": true,
+    "exact_local_to_global_work_ledger": true,
+    "interacting_BH_forward_cut_unitaries": true,
+    "exact_normal_density_transport": true,
+    "original_3D_Q3LOCK_regulator": false,
+    "inherited_CL8_DKD_dynamics_implemented": false,
+    "controller_free_common_parent": false,
+    "exact_global_KU_order_at_every_microcut": false,
+    "arbitrary_periodic_two_arm_seam": false,
+    "strict_continuous_variable_dual_unitarity": false,
+    "passive_orthogonality_or_number_conservation": false,
+    "positive_common_invariant_established": false,
+    "stationary_trace_class_Floquet_state_established": false,
+    "full_nonlinear_Weyl_Cstar_invariance": false,
+    "preferred_physical_state_selected": false,
+    "physical_energy_reference": false,
+    "physical_vacuum": false,
+    "below_empty_space": false,
+    "regulator_compatible_state_family": false,
+    "continuum_quantum_state": false,
+    "Hadamard_state": false,
+    "hbar_origin_derived": false,
+    "Lorentzian_or_null_structure_derived": false,
+    "speed_of_light_derived": false,
+    "C0_closed": false,
+    "N1_closed": false,
+    "N2_closed": false,
+    "N3_closed": false,
+    "N4_closed": false,
+    "N5_closed": false,
+    "full_3_plus_1_dependence": false,
+    "phase_transition_or_cooling": false,
+    "gravity_or_event_horizon": false,
+    "cyclic_cosmology": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "prior_art_boundary": "Symplectic splitting, twist maps, staggered bond circuits, metaplectic controllers, polynomial phase gates, work identities and tensor-network cut evolution are established mathematics and physics. No new general theorem or world-first claim is made. The repository-specific contribution is the exact one-dimensional CL8 a/8 and Q3 coefficient ledger, global nonlinear mixed-inverse audit on the same 16M phase space, and the explicit split between a full-rank driven circuit and the inherited q-only CL8 ordering.",
+  "no_overclaim": "This package proves only an exact interacting driven circuit, open-rectangle all-cut reconstruction, work ledger and B(H) density transport on each fixed inserted one-dimensional CL8 regulator. It does not prove the original three-dimensional Q3LOCK model, the inherited autonomous CL8 flow or D-K-D step, a controller-free boundary-bulk dynamics intertwiner, a common positive invariant, a stationary or preferred physical state, nonlinear Weyl C-star closure, strict dual-unitarity, an arbitrary periodic two-arm seam, physical empty space or a below-empty-space sign, regulator removal, a continuum or Hadamard state, derived hbar, time, nullness, Lorentzian signature or light speed, a phase transition or cooling, full 3+1 dynamics, gravity, a horizon or a cycle, C0 or N1-N5 closure, C6 advancement, CP1 completion, or Pre-A completion."
+}

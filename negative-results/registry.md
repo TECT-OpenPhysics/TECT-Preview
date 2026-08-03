@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-04-PRE-A-CP1-CL8-EXACT-ORDER-EVERY-MICROCUT-SIDEWAYS](#ng-2026-08-04-pre-a-cp1-cl8-exact-order-every-microcut-sideways) | within the declared direct bond-factorization architecture, retain the inherited commuting q-only kick or D-K-D ordering while requiring a full opposite-leg inverse at every microscopic bond cut; or insert a fixed nontrivial controller and still identify the product with that inherited order | the q-only bond-kick cross block is `[[0,0],[-tau*V_WS,0]]` and has rank at most eight rather than the complete-leg rank sixteen; invertible kinetic drifts do not change that rank.  A nontrivial complete-leg controller restores full rank but survives as `tau -> 0` and rotates the positions used by later kicks, yielding a new driven circuit.  Retain the exact inserted-1D driven all-cut work/transport branch, but keep a controller-free common-parent dynamics intertwiner open |
 | [NG-2026-08-04-PRE-A-CP1-CL8-PASSIVE-TWO-ARM-NUMBER-STATE-QUARTIC-REUSE](#ng-2026-08-04-pre-a-cp1-cl8-passive-two-arm-number-state-quartic-reuse) | append the inherited positive onsite CL8 quartic kick to the exact passive two-arm control while automatically reusing its oscillator-number generator, vacuum and Gibbs densities | the kick `p'=p-delta*w*g*q^3` changes the passive invariant action by `-(delta*w*g/nu)*p*q^3+(delta^2*w^2*g^2/(2nu))*q^6`, which is positive at zero momentum and nonzero field; quantum mechanically `<4|[N,Q^4]|0>` is nonzero and the quartic phase does not preserve the Gaussian vacuum.  Retain the passive control theorem, but require a new interacting invariant/state or an exact work-and-transport ledger |
 | [NG-2026-08-04-PRE-A-CP1-CL8-NONLINEAR-FLOQUET-WEYL-NORMALIZER](#ng-2026-08-04-pre-a-cp1-cl8-nonlinear-floquet-weyl-normalizer) | promote the exact nonlinear CL8 split-circuit automorphism on `B(H_a)` to an automorphism of the concrete unital Weyl C-star algebra | conjugating a Weyl configuration translation by the quartic position kick produces a cubic-phase multiplier that is not uniformly continuous and therefore not almost periodic; it lies outside the Weyl algebra. Retain the exact `B(H_a)` automorphism, the quadratic metaplectic Weyl sector, or define and verify an enlarged observable algebra |
 | [NG-2026-08-04-PRE-A-CP1-CL8-CAUSAL-SPLIT-ORIGINAL-H-STATE](#ng-2026-08-04-pre-a-cp1-cl8-causal-split-original-h-state) | combine exact finite-depth split-circuit causality with exact conservation of the inherited autonomous CL8 Hamiltonian and automatic stationarity of its ground/Gibbs states | already for one harmonic mode the energy ratio at `(q,0)` is `1+(delta*omega)^4/4>1`; the actual ordered CL8 energy defect has a positive quadratic coefficient. The registered densities may be transported exactly, but stationarity and a conserved physical-energy ledger require a new proof or model |
@@ -267,6 +268,50 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-exact-order-every-microcut-sideways"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-EXACT-ORDER-EVERY-MICROCUT-SIDEWAYS -- the direct q-only-order microgate cannot retain inherited order and full sideways rank at every microcut
+
+**Failure mode.**  Within the declared direct bond factorization, simultaneously
+retain the inherited commuting global q-only kick or D-K-D ordering and demand
+that every local bond microcut have a full inverse from the opposite complete
+sixteen-dimensional phase leg.  The same failed identification includes
+inserting a fixed nontrivial complete-leg controller between bond kicks while
+continuing to call the result the inherited order.
+
+**Evidence.**  For a q-only bond kick, the derivative from the opposite leg is
+
+```text
+[       0       0 ]
+[ -tau*V_WS     0 ].
+```
+
+It has rank at most eight rather than sixteen.  Multiplication on either side
+by an invertible kinetic-drift Jacobian leaves this rank unchanged.  A
+nontrivial complete-leg passive controller supplies a full-rank cross block,
+but later bond potentials are then evaluated at controller-rotated positions.
+At fixed nonzero `gamma*eta`, the local `tau -> 0` limit also retains the
+controller rather than approaching the identity required of the inherited
+Hamiltonian step.
+
+**Boundary.**  This is not a no-go for all interacting characteristic circuits,
+for macro-cuts that hide q-only layers, for a `tau`-dependent controller
+`G_tau -> I` with a separately proved common-parent limit, for a variational or
+chiral discretization, or for another exact energy-preserving full-cross
+parent.  It does not refute the inherited CL8 Hamiltonian or the earlier
+model-specific D-K-D cross-rank negative result.
+
+**Consequence.**  Retain the exact inserted-one-dimensional driven all-cut
+work and `B(H)` density-transport branch.  Keep
+`PA-CP1-CL8-CONTROLLER-FREE-COMMON-PARENT-DYNAMICS-INTERTWINER`, the positive
+common invariant/stationary-state question, and the one-dimensional to
+three-dimensional parent bridge open.
+
+**Evidence files.**
+`strategy/pre-a-cp1-cl8-interacting-two-arm-work-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-interacting-two-arm-work-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_interacting_two_arm_work_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_interacting_two_arm_work_route_split_independent.py`.
 
 <a id="ng-2026-08-04-pre-a-cp1-cl8-passive-two-arm-number-state-quartic-reuse"></a>
 ### NG-2026-08-04-PRE-A-CP1-CL8-PASSIVE-TWO-ARM-NUMBER-STATE-QUARTIC-REUSE -- the CL8 quartic cannot inherit the passive number and stationary states

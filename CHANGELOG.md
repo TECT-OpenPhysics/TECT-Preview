@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Correct CL8 q-only cross-block sign oracle] - 2026-08-04
+
+Registers EXP-000750. Since V_WS=-(w*c/a^2)I, the q-only kick block -tau*V_WS has coefficient +tau*w*c/a^2: +3/64 on F0 and -7/360 on the negative-step F1 fixture. The earlier two executables used the opposite sign while testing only rank and determinant. Explicit signed oracles repair the evidence; rank eight, determinant zero, the narrow direct-order microcut no-go, the manifest verdict, C6 status, and all scope boundaries are unchanged. Corrected primary 141/141, independent 134/134, and integrated 224/224 checks pass, 499/499 total.
+
+## [Advance inserted-1D driven CL8 interacting all-cut work route] - 2026-08-04
+
+Registers EXP-000749 as a claim-nonbearing T0 route advance. The inserted one-dimensional per-unit-area Q3/spatial circuit has exact coefficient occurrence, global nonlinear mixed inverses, all open acyclic monotone cuts, B(H) density transport and a sign-indefinite work telescope. The new negative rejects only direct inherited q-only ordering plus full rank at every microcut; controller-free common-parent dynamics, a positive invariant/stationary state, the 1D-to-3D bridge, physical reference, continuum/Hadamard state, C0/N1-N5, C6, CP1 and Pre-A remain open. Primary 140/140 and independent stdlib Fraction/Jet 133/133 checks pass before integrated publication verification.
+
 ## [A13 R-165 sparse production owner compact-annulus reduction] - 2026-08-04
 
 Registered A13-CLASSII-SPARSE-PRODUCTION-OWNER-HARMONIC-COERCIVITY-COMPACT-ANNULUS-BOUNDARY (R-165). On the fixed side-16 exact nonaliased R-153 p:2p strict-past / fresh-4p twelve-dimensional conditional fibre, exact Fourier, covariance, and derivative estimates prove the R-164 owner target K_owner >= -9I/10 for 0<=G<=21 and G>=274, leaving 21<G<274. Primary 38/38 and independent 30/30 exact checks pass before integrated publication verification. The result is T4 and does not close the annulus, complete multi-root production owner, T-050, A13, phase/PDE/morphology selection, Nelson/measure, or Sector A. EXP-000747 separately records why finite floating quadrature is non-evidence.
