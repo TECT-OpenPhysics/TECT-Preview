@@ -6,7 +6,7 @@
 
 Generated: 2026-08-03
 
-**3357 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
+**3339 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -560,8 +560,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/C5-NEWTON-G/LINEAGE.md` | C5-NEWTON-G | — | — | — | ACTIVE | `bfa4c008b151` |
 | `claims/C5-NEWTON-G/claim.md` | C5-NEWTON-G | — | — | — | ACTIVE | `9608de91436e` |
 | `claims/C5-NEWTON-G/status.json` | C5-NEWTON-G | — | — | — | ACTIVE | `2d4f704d215b` |
-| `claims/C6-SPACETIME-SIGNATURE/LINEAGE.md` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `eccb003cfffe` |
-| `claims/C6-SPACETIME-SIGNATURE/LINEAGE.md` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `eccb003cfffe` |
 | `claims/C6-SPACETIME-SIGNATURE/LINEAGE.md` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `eccb003cfffe` |
 | `claims/C6-SPACETIME-SIGNATURE/claim.md` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `67c0eb3b3c67` |
 | `claims/C6-SPACETIME-SIGNATURE/status.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `a0d6d7cd9977` |
@@ -3202,8 +3200,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `verification/README.md` | — | — | — | — | ACTIVE | `da6f8dc0c475` |
 | `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `1ecaf5c41e2f` |
-| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `1ecaf5c41e2f` |
-| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `1ecaf5c41e2f` |
 | `verification/requirements.txt` | — | — | — | — | ACTIVE | `101e9e176f7a` |
 | `verification/scripts/audit_r125_historical_live_surface_compatibility.py` | — | 2026-08-03 | 2026-08-03 | v1.0.0 | ACTIVE | `122a6ad92ab6` |
 | `verification/scripts/build_catalog.py` | — | — | — | — | ACTIVE | `c35c7327b5ed` |
@@ -3289,8 +3285,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `da8ee1c7e19e` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `98bce53b5f8a` |
-| `strategy/INDEX.md` | — | — | — | — | ACTIVE | `98bce53b5f8a` |
-| `strategy/INDEX.md` | — | — | — | — | ACTIVE | `98bce53b5f8a` |
 | `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `cff4e6dca4b9` |
 
 ## Governance policies
@@ -3323,8 +3317,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.gitignore` | — | — | — | — | ACTIVE | `c715b48698f0` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `7f2740428029` |
 | `CHANGELOG.md` | — | — | — | — | ACTIVE | `edd50e72c899` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `edd50e72c899` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `edd50e72c899` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `df77db62d67c` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -3333,8 +3325,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `b5e54659ddf5` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `5f90fdae1b16` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `46caafa99347` |
-| `TODO.md` | — | — | — | — | ACTIVE | `bc5853cea790` |
-| `TODO.md` | — | — | — | — | ACTIVE | `bc5853cea790` |
 | `TODO.md` | — | — | — | — | ACTIVE | `bc5853cea790` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `a142ca8b90c2` |
 
@@ -3346,10 +3336,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
 | `changelog/log.jsonl` | — | — | — | — | ACTIVE | `81d5871e4420` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `81d5871e4420` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `81d5871e4420` |
-| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `be94ab374417` |
-| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `be94ab374417` |
 | `explorations/log.jsonl` | — | — | — | — | ACTIVE | `be94ab374417` |
 | `output/.gitattributes` | — | — | — | — | ACTIVE | `fdfa7b607b52` |
 | `output/pdf/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803-v0.1.pdf` | — | 2026-08-03 | 2026-08-03 | v0.1 | ACTIVE | `65fae3fc468f` |
@@ -3425,8 +3411,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/README.md` | — | — | — | — | ACTIVE | `7784fbab38fd` |
 | `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `137c26ea5f80` |
 | `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `1e858e6480cf` |
-| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `1e858e6480cf` |
-| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `1e858e6480cf` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `528697935e4a` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |
@@ -3439,7 +3423,5 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `a4f8eba2a79e` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `c22a362480ee` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `5e65f7f63d2e` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `8530d0c7fbca` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `8530d0c7fbca` |
 | `todo/todo.json` | — | — | — | — | ACTIVE | `8530d0c7fbca` |
 
