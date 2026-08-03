@@ -5847,3 +5847,60 @@ T5--T7 promotion remain open. Tier stays T4.
   calculation must instantiate a realised-past or recursive/revisit production
   law and certify its complete conditional Hessian or a counterexample rather
   than adding another abstract fixed-law coordinate.
+
+- 2026-08-03: Registered
+  `A13-CLASSII-RESOLVENT-PURE-DYADIC-RECURSIVE-CHAIN-UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY`
+  (R-162).  This is the first admitted A13 continuation after R-161 that
+  actually reads a shifted state at every stage.  For one finite acyclic
+  pure-dyadic chain, set `eta_0=xi_0` and
+  `eta_(j+1)=xi_(j+1)+A_j eta_j`.  The resulting lower shift `N_A` gives
+  `T_A=(I-N_A)^(-1)` and `B_A=T_A-I`.  In the summed `l2(HS)` coefficient
+  norm, the resolvent and its first three derivatives obey length-free bounds
+  controlled only by `(1-||A||)^(-1)`.  The induced recursive tangent Gram is
+  uniformly comparable to the coefficient norm on the same ball.
+
+  The nonlinear chart has a genuine origin acceleration
+  `(N_HN_K+N_KN_H)xi`.  Its only new blocks lie two dyadic steps away and have
+  `p:4p` Fourier support `{+/-3p,+/-5p}`.  At the exact centered stationary
+  common-even covariance-matched origin, the registered R-155 full-action
+  first-variation cancellation kills this connection.  Therefore the complete
+  recursive controller pullback inherits the R-160 origin gap `>4/25`.
+  This is a global-action transfer only; no local `E_CN=P_comp` substitution
+  is made.
+
+  Exact dyadic synthesis gives finite length-free `B_S`, `B_D`, and
+  `c_Z^2=B_S^2+9B_D^2+18B_SB_D<1`.  With `P_A=T_AT_A^*`, the complete
+  covariance-normal data are written through `R_A=P_A-I`, so `Q-Q0` is formed
+  before norms and `K0=0`.  The one scalar retains the source cost, endpoint/
+  current, trace, projected-force connection, and the full Gaussian sextic.
+  At `||A||<=1/2`, the exact covariance-jet factors are `16`, `96`, and `768`;
+  consequently the third-order chain rule contains
+  `4096M3c_Z^3+4608M2c_Z^2+768M1c_Z`.  The `M1` term cannot be dropped.
+  Combining this with the source third-derivative bound `1296/5` gives a
+  finite analytic `L_*`.
+
+  The radius `delta_*=min(1/2,3/[100(1+L_*)])` loses less than `3/100` from
+  the origin gap, hence the complete expected global controller-pullback
+  Hessian remains above `13/100`.  The exact metric comparison also makes it
+  exceed `1/10` times the recursive tangent Gram.  Forward, legal reverse,
+  and balanced are one self-adjoint Hessian; no independent low or Feshbach
+  coordinate is added.
+
+  Convexity of the sextic cannot justify deleting its connection: the exact
+  `a^6b^6` pullback has Hessian eigenvalue `-6` at `(1,1)`.  Bare per-chain
+  continuity is not uniform, and the theorem does not automatically union
+  over unrelated forests.  Random or nonlinear past-dependent coefficients
+  also leave the centered Gaussian covariance chart.  Primary `45/45` and
+  independent `39/39` audits pass; the integrated release, deterministic
+  eight-page PDF, security, render, and visual-QA evidence are pinned in the
+  manifest and `EXP-000708--EXP-000710` preserve the successful and failed
+  routes.
+
+  R-162 proves no intrinsic Hessian, arbitrary multi-chain forest, random or
+  nonlinear predictable law, revisit/cycle, pathwise fibrewise conditional
+  estimate, cutoff/floor removal, T-050/A13 closure, Nelson theorem,
+  interacting measure, phase/PDE verdict, or Sector-A closure.  Freeze this
+  exact single-chain boundary.  The main lane now moves to truth-first T-054
+  candidate-functional rejection; direct A13 work should reopen only for an
+  actual finite forest or a surviving production law with its complete
+  conditional Hessian or counterexample.

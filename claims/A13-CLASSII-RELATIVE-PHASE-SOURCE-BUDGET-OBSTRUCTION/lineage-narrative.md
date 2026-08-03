@@ -1296,6 +1296,32 @@ endpoint theorem.
     fixed-law route is now closed at this scope; the next direct calculation
     must use an actual realised-past or recursive/revisit production law.
 
+82. **Resolvent-controlled pure-dyadic recursive-chain neighbourhood.** R-162
+    takes the required non-affine step after R-161: each deterministic matrix
+    control reads the actual shifted state of the preceding pure-dyadic stage.
+    The strict lower shift `N_A` and resolvent `T_A=(I-N_A)^(-1)` give first,
+    second, and third derivative bounds in the summed `l2(HS)` coefficient
+    norm with constants independent of finite chain length.  The recursive
+    controller acceleration occupies exactly two dyadic steps and has the
+    R-155 `p:4p` support `{+/-3p,+/-5p}`; the centered stationary exact-torus
+    full-action first variation cancels it at the origin, transferring the
+    R-160 `4/25` gap to the recursive pullback.  Exact A1 dyadic synthesis and
+    `R_A=T_AT_A^*-I` form `Q-Q0` before norms and yield one length-free compact
+    covariance-data box.  The complete source, current, trace, projected-force,
+    and sextic terms are retained in one scalar modulus; its third-order chain
+    rule includes the mandatory `768M1c_Z` connection term.  The analytic
+    radius `delta_*=min(1/2,3/[100(1+L_*)])` retains a coefficient gap
+    `13/100` and, by exact tangent-metric comparison, more than `1/10` of the
+    recursive Gram.  Forward, legal reverse, and balanced are one Hessian and
+    no independent low is introduced.  The sextic-PSD shortcut, bare
+    finite-family continuity, stationarity-free transfer, automatic forest
+    union, and covariance-only random-coefficient routes are recorded as
+    failures.  No intrinsic Hessian, unrelated multi-chain forest,
+    random/nonlinear or revisit law, pathwise conditional estimate, removal,
+    T-050/A13, phase/PDE, Nelson/measure, or Sector-A closure follows at T4.
+    The single-chain boundary is frozen while the main lane pivots to the
+    truth-first T-054 candidate-functional tournament.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

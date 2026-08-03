@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-162](#r-162) | Resolvent-controlled pure-dyadic recursive-chain uniform neighbourhood gap | Scoped T4 analytic/exact/executed/audited recursive-chain theorem. For one finite acyclic pure-dyadic chain with deterministic matrix coefficients and actual shifted-state reads `eta_(j+1)=xi_(j+1)+A_j eta_j`, the strictly lower shift `N_A` has `T_A=(I-N_A)^(-1)` and length-free resolvent jets in the summed `l2(HS)` coefficient norm. At the centered stationary origin, the new two-step controller acceleration has only `p:4p` support `{+/-3p,+/-5p}`, so the registered full-action first-variation cancellation transfers the R-160 `4/25` origin gap to the recursive pullback. Exact dyadic A1 synthesis bounds, covariance-normal `Q-Q0` cancellation, and the complete source, current, trace, projected-force, and sextic connections give an analytic radius `delta_*=min(1/2,3/[100(1+L_*)])` on which the expected global controller-pullback Hessian exceeds `13/100` and hence `1/10` times both the coefficient norm and induced recursive tangent Gram. The radius is uniform in finite chain length, retained starting mode, finite cutoff, and admitted regulator, but the theorem covers no intrinsic Hessian, unrelated multi-chain forest, random/nonlinear past law, revisit/cycle, pathwise conditional Hessian, removal, T-050/A13, phase/PDE, Nelson/measure, or Sector-A closure |
 | [R-161](#r-161) | Summable covariance jets and a growing affine-root-union uniform neighbourhood | Scoped T4 analytic/exact/executed/audited nonzero-neighbourhood theorem. On the fixed side-16 three-torus with the A1 symbol, positive A7 floor, exact continuum integration and a common real-even contraction multiplier, the pointwise value, derivative and field-current covariance jets of every finite one-shot raw-source affine `p:2p` family are bounded from `l2(HS)` controls by cardinality-independent full-lattice square sums. The worst controlled `Q` jet and the background value covariance use the three-dimensional `sum |n|^-4` threshold, which is logarithmically critical in dimension four. After exact `Q-Q0` cancellation, a compact finite covariance-data box and Gaussian heat derivatives through `D8 B` give an explicit global Hessian modulus `L_* ||A||`. The analytic radius `delta_*=min(1,3/[100(1+L_*)])` retains the R-160 origin gap as `D2 A(A)[H,H]>(13/100)||H||^2>(1/10)||H||^2`, uniformly in finite family cardinality, cutoff, regulator and factor-three path length. The R-107/R-141 equality is global only; no local `E_CN` to `P_comp` lower-bound transfer, realised past, shifted-state/revisit, nonlinear feedback, removal, T-050/A13, phase/PDE, Nelson/measure or Sector-A conclusion follows |
 | [R-160](#r-160) | Weighted-Schur growing affine root-union origin gaps | Scoped T4 analytic/exact/executed/audited origin-Hessian theorem. For every finite family of distinct raw antipodal `p:2p` affine controls, allowing a target class later to serve as another raw source, the exact covariance-normal loss graph has only factor-three paths. Its block Hessian is lower-bounded by an adverse scalar Jacobi majorant; no equality of spectra is asserted. Geometric weights `d_j=4^(-j)` and exact Sturm plus non-importing Fraction/Bernstein certificates bound the adverse endpoint by `25/32` on the continuous radial half-line `x>=3/20`, giving `D2 A(0)[H,H]>(19/160) sum ||H_p||_HS^2`. Exact side-16 lattice shell separation sharpens the endpoint bound to `37/50` and the gap to `4/25`. Both constants are independent of finite family cardinality and path length. No cardinality-uniform nonzero radius, realised-past, shifted-state/revisit, nonlinear predictable, finite-amplitude, cutoff/floor-removal, T-050/A13, phase/PDE, Nelson/measure, or Sector-A conclusion follows |
 | [R-159](#r-159) | Pure-dyadic regulator-uniform local neighbourhood gap and exact normal-ordering boundary | Scoped T4 analytic/exact/executed/audited theorem. On the fixed side-16 A1 symbol and A7 floor, for common real-even covariance-matched multipliers with `|m|<=1`, exact continuum torus integration, centered raw Gaussian roots, and any retained nonzero `p:2p:4p`, the recursive chart `chi(A,B)=(A xi_p,B(xi_2p+A xi_p))` has one existential radius independent of cutoff, regulator, and `p` on which both pullback and intrinsic normalized Hessian gaps exceed `1/10`. Exact covariance-normal ordering cancels the divergent primitive `Q0` before compactness; the remaining finite covariance jets compactify uniformly. The R-155 origin gap `147/1000` and modulus allowance `47/2000` retain `247/2000`. No numerical radius, floor removal, aliased-grid theorem, realised-past/growing-root/arbitrary-revisit estimate, T-050, phase/PDE selection, or Sector-A closure follows |
@@ -180,6 +181,80 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-162"></a>
+### R-162 -- Resolvent-controlled pure-dyadic recursive-chain uniform neighbourhood gap
+
+- **Result ID.**
+  `A13-CLASSII-RESOLVENT-PURE-DYADIC-RECURSIVE-CHAIN-UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY`.
+
+- **Actual shifted-state chain.** For one finite acyclic pure-dyadic chain,
+  let `eta_0=xi_0` and
+  `eta_(j+1)=xi_(j+1)+A_j eta_j`, with deterministic matrix coefficients.
+  On the direct sum of raw Gaussian blocks, define the strict lower shift
+  `(N_A x)_(j+1)=A_j x_j`, `T_A=(I-N_A)^(-1)`, and `B_A=T_A-I`.
+  If `r=(sum_j ||A_j||_HS^2)^(1/2)<1`, then
+  `||T_A||_op<=(1-r)^(-1)` and
+  `||D^m T_A||_HS<=m!(1-r)^(-m-1) product_i ||H_i||` for `m=1,2,3`,
+  independently of finite chain length. The tangent Gram lies between
+  `(1+r)^(-4)||H||^2` and `(1-r)^(-4)||H||^2`.
+
+- **Origin acceleration and global owner.** The recursive chart has the real
+  controller acceleration
+  `D2 chi_0[H,K]=(N_H N_K+N_K N_H)xi`, supported only two dyadic steps away.
+  Each such `p:4p` term has Fourier differences `{+/-3p,+/-5p}`. At the
+  centered stationary common-even covariance-matched exactly integrated
+  origin, the registered R-155 full-action first variation kills this
+  connection. Hence the recursive pullback has the R-160 affine origin gap
+  `>4/25`. This transfer is global only: the R-107/R-141 local
+  `E_CN=P_comp+V_future/2` firewall remains binding.
+
+- **Complete covariance modulus.** Exact A1 dyadic synthesis gives
+  `B_S<=16g/(15c0^2)`, `B_D<=4g/(3c0)`, and
+  `c_Z^2=B_S^2+9B_D^2+18B_S B_D<1`. With
+  `P_A=T_A T_A^*`, `R_A=P_A-I`, the normal-ordered data are
+  `C=C0+S R_A S^*`, `U=Q-Q0=sum_i D_i R_A D_i^*`, and
+  `K_i=S R_A D_i^*`; thus `Q0` cancels before norms and `K0=0`.
+  The one global scalar retains the complete Gaussian sixth-moment polynomial
+  and the Cameron--Martin cost `9||B_A||_HS^2/20`. On the audit ball
+  `r<=1/2`, its exact data-jet factors are `16c_Z`, `96c_Z`, `768c_Z`, so
+  the third-order chain rule contains all three terms
+  `4096 M3 c_Z^3+4608 M2 c_Z^2+768 M1 c_Z`. The last term is the mandatory
+  recursive connection contribution. Together with the source bound
+  `1296/5`, this defines one finite explicit `L_*`.
+
+- **Retained gap.** For
+  `delta_*=min(1/2,3/[100(1+L_*)])`, every `||A||<delta_*` satisfies
+  `D2 F(A)[H,H]>(13/100)||H||^2`. Since `delta_*<3/100` and
+  `(100/97)^4<13/10`, it also exceeds `(1/10)G_A(H,H)`. Forward, legal
+  reverse, and balanced are blocks of this one self-adjoint Hessian; no
+  independent low or Feshbach reserve is introduced.
+
+- **Where proved.** Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-resolvent-pure-dyadic-recursive-chain-uniform-neighborhood-gap-boundary-260803-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_resolvent_pure_dyadic_recursive_chain_uniform_neighborhood_gap_boundary_manifest.json`,
+  primary `45/45`, non-importing independent `39/39`, and the integrated
+  release, deterministic PDF, security, render, and visual-QA records pinned
+  there.
+
+- **Failed routes and audit boundary.** Convexity of `|W|^6` does not permit
+  dropping its nonlinear-pullback connection: `a^6b^6` has Hessian eigenvalue
+  `-6` at `(1,1)`. Separate finite-family continuity is not uniform; a
+  stationarity-free abstract resolvent transfer can fail; a single chain does
+  not union over arbitrary forests; and random/nonlinear coefficients leave
+  the centered Gaussian covariance chart. The theorem is fixed side 16,
+  fixed d=3 A1 symbol, positive A7 floor, exact continuum integration,
+  centered independent raw Gaussian, deterministic, acyclic, single-chain,
+  and expected/global. It gives no intrinsic Hessian, unrelated forest,
+  random/nonlinear or revisit law, pathwise conditional Hessian, removal,
+  T-050/A13 closure, Nelson theorem, interacting measure, phase/PDE verdict,
+  or Sector-A closure.
+
+- **Tier / publication target.** Scoped T4
+  analytic/exact/executed/audited recursive-chain theorem;
+  constructive-field-theory methods note after independent review.
 
 <a id="r-161"></a>
 ### R-161 -- Summable covariance jets and a growing affine-root-union uniform neighbourhood

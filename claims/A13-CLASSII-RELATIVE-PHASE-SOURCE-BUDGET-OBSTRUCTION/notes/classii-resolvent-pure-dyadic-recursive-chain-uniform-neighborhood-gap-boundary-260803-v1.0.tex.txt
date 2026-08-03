@@ -1,0 +1,499 @@
+% =============================================================================
+% Title: Resolvent-controlled pure-dyadic recursive-chain uniform neighbourhood gap
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-RESOLVENT-PURE-DYADIC-RECURSIVE-CHAIN-UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY
+% Ledger: R-162
+% Version: v1.0 -- first issued 2026-08-03; this version issued 2026-08-03
+% Status: scoped T4 analytic/exact/executed/audited recursive-chain advance; no T-050 closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cZ}{\mathcal Z}
+\newcommand{\HS}{\mathrm{HS}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Tr}{\operatorname{Tr}}
+
+\begin{abstract}
+R-161 closes a cardinality-uniform neighbourhood only for one-shot raw-source
+affine controls.  This note instantiates an actual predictable shifted-state
+law.  For every finite acyclic chain
+\(
+ \eta_0=\xi_0,
+ \eta_{j+1}=\xi_{j+1}+A_j\eta_j
+\)
+on the retained pure-dyadic modes \(p,2p,\ldots,2^Jp\), it proves one positive
+analytic coefficient radius, uniform in the finite chain length, nonzero
+starting mode, finite cutoff, and admitted common-even contraction regulator.
+Inside that radius the complete expected \emph{controller-pullback} Hessian of
+the globally summed terminal action is larger than \(13/100\) in coefficient
+norm and larger than \(1/10\) in the induced physical-source tangent metric.
+The proof includes the projected-force connection and the full sixth-power
+connection; neither may be discarded after nonlinear pullback.  The theorem
+does not cover unrelated multi-chain forests, random or nonlinear coefficient
+feedback, revisits, a pathwise fibrewise conditional Hessian, or T-050.
+\end{abstract}
+
+\section{Purpose and scope: result and exact boundary}
+\hypertarget{section-1-result}{}
+
+Work on the fixed side-16 three-torus, in physical dimension three, with the
+hash-pinned A1 symbol, the fixed positive A7 floor, exact nonaliased continuum
+integration, and one common real-even covariance-matched scalar contraction
+multiplier.  Let \(p\ne0\) be retained and let
+\[
+ p_j=2^jp,\qquad j=0,\ldots,J.                              \tag{1.1}
+\]
+The independent whitened both-sign real Gaussian blocks are denoted by
+\(\xi_j\).  For deterministic matrices \(A_j\) of the registered block size,
+define the temporally ordered recursion
+\[
+ \eta_0=\xi_0,\qquad
+ h_{j+1}=A_j\eta_j,\qquad
+ \eta_{j+1}=\xi_{j+1}+h_{j+1}.                             \tag{1.2}
+\]
+Thus the later controller reads the actual shifted state \(\eta_j\), not the
+raw innovation \(\xi_j\).  Put
+\[
+ \|A\|_{\mathfrak E}^2=\sum_{j=0}^{J-1}\|A_j\|_{\HS}^2.   \tag{1.3}
+\]
+
+\paragraph{R-162.}
+There exists an explicit analytic number \(\delta_*>0\), independent of
+\(J\), \(p\), the finite retained cutoff, and the admitted multiplier, such
+that \(\|A\|_{\mathfrak E}<\delta_*\) implies, for every \(H\ne0\),
+\[
+ \boxed{
+ D^2(\cA\circ\chi)_A[H,H]
+   >{13\over100}\|H\|_{\mathfrak E}^2
+   >{1\over10}\cG_A(H,H).}                               \tag{1.4}
+\]
+Here \(\chi(A)=h(A)\), \(\cG_A(H,H)=\E\|D\chi_A[H]\|^2\),
+and \(\cA\) is the one globally summed R-141 production scalar: source cost,
+complete global endpoint/current owner, and terminal sixth-power term, each
+included exactly once.  Equation (1.4) is a controller-pullback theorem.  No
+intrinsic affine physical-source Hessian is promoted in R-162.
+
+The radius is analytic and deliberately nonnumerical.  Its compact-data
+derivative inputs are proved finite but are not evaluated numerically.  No
+finite-dimensional family-by-family continuity argument is used.
+
+\section{The recursive transfer and its exact jets}
+\hypertarget{section-2-resolvent}{}
+
+Let \(\mathfrak E_J=\bigoplus_{j=0}^J E_j\) and define the one-step block shift
+\[
+ (N_Ax)_{j+1}=A_jx_j,\qquad (N_Ax)_0=0.                  \tag{2.1}
+\]
+It is nilpotent.  Set
+\[
+ T_A=(\Id-N_A)^{-1},\qquad B_A=T_A-\Id=N_AT_A.            \tag{2.2}
+\]
+Then \(\eta=T_A\xi\) and \(h=B_A\xi\).  If
+\(r=\|A\|_{\mathfrak E}<1\) and \(\tau=(1-r)^{-1}\), then
+\[
+ \|N_A\|_{\op}\le\|N_A\|_{\HS}=r,\qquad
+ \|T_A\|_{\op}\le\tau,\qquad
+ \|B_A\|_{\HS}\le r\tau .                              \tag{2.3}
+\]
+These estimates contain no factor depending on the path length.
+
+For coefficient directions \(H_1,\ldots,H_m\), exact resolvent
+differentiation gives
+\[
+ D^mT_A[H_1,\ldots,H_m]
+ =\sum_{\sigma\in S_m}
+ T_AN_{H_{\sigma(1)}}T_A\cdots
+ N_{H_{\sigma(m)}}T_A .                                  \tag{2.4}
+\]
+Consequently, for \(m=1,2,3\),
+\[
+ \|D^mT_A[H_1,\ldots,H_m]\|_{\HS}
+ \le m!\tau^{m+1}\prod_{a=1}^m\|H_a\|_{\mathfrak E}.  \tag{2.5}
+\]
+The same derivatives apply to \(B_A\).  In particular,
+\[
+ \|D\chi_A[H]\|_{L^2_\xi}\le\tau^2\|H\|_{\mathfrak E},
+ \quad
+ \|D^2\chi_A[H,K]\|_{L^2_\xi}\le
+ 2\tau^3\|H\|_{\mathfrak E}\|K\|_{\mathfrak E}.       \tag{2.6}
+\]
+Since \(N_H=T_A^{-1}(D B_A[H])T_A^{-1}\), one also has
+\[
+ (1+r)^{-4}\|H\|_{\mathfrak E}^2
+ \le\cG_A(H,H)\le\tau^4\|H\|_{\mathfrak E}^2.         \tag{2.7}
+\]
+
+The complete source cost is not the affine surrogate.  It is
+\[
+ \cA_{\rm CM}(A)={9\over20}\|B_A\|_{\HS}^2.             \tag{2.8}
+\]
+For \(r\le1/2\), the exact product rule and (2.5) yield
+\[
+ \|D^3\cA_{\rm CM}(A)\|_{\op}
+ \le {27\over5}(1+r)\tau^5\le {1296\over5}.             \tag{2.9}
+\]
+Thus the source projected-force connection is paid inside one scalar
+third-derivative bound.
+
+\section{Origin transfer: the acceleration must cancel}
+\hypertarget{section-3-origin}{}
+
+At \(A=0\), the tangent is the R-160 one-shot family:
+\[
+ D\chi_0[H]=N_H\xi .                                     \tag{3.1}
+\]
+The recursive chart nevertheless has nonzero acceleration,
+\[
+ D^2\chi_0[H,K]=(N_HN_K+N_KN_H)\xi .                    \tag{3.2}
+\]
+Only adjacent coefficient blocks survive.  In the output block \(j+1\),
+\[
+ (D^2\chi_0[H,K])_{j+1}
+ =(H_jK_{j-1}+K_jH_{j-1})\xi_{j-1}.                     \tag{3.3}
+\]
+It follows directly that
+\[
+ \|D^2\chi_0[H,K]\|_{L^2_\xi}
+ \le2\|H\|_{\mathfrak E}\|K\|_{\mathfrak E},         \tag{3.4}
+\]
+uniformly in \(J\).
+
+Every term in (3.3) is a \(p_j\to4p_j\) connection.  Against the original
+carrier it has only Fourier support \(\{\pm3p_j,\pm5p_j\}\).  The R-155
+centered stationary common-even exact-torus cancellation therefore kills its
+pairing with the complete global first variation, term by term.  The source
+connection vanishes because \(B_0=0\).  This is a global-action statement; it
+does not identify a local \(E_{\rm CN}\) atom with \(P_{\rm comp}\).
+
+Equivalently, if \(P_A=T_AT_A^*\), then
+\[
+ D^2P_0[H,H]
+ =2N_HN_H^*+2N_H^2+2(N_H^*)^2.                           \tag{3.5}
+\]
+The first term is the R-160 affine covariance Hessian.  The last two terms are
+exactly the cancelled acceleration directions.  Hence the recursive pullback
+at the origin equals the R-160 affine Hessian and obeys
+\[
+ \boxed{D^2(\cA\circ\chi)_0[H,H]
+       >{4\over25}\|H\|_{\mathfrak E}^2.}               \tag{3.6}
+\]
+Aliasing, a zero mode, a nonzero mean, mismatched regulators, or a local-owner
+substitution would invalidate this transfer and are excluded.
+
+\section{Dyadic synthesis and covariance data}
+\hypertarget{section-4-data}{}
+
+Write \(x_j=|p_j|^2=4^jx_0\).  R-161 gives, with
+\[
+ c_0={3\over20},\qquad
+ g={244140625000000000\over28800000000947494031},         \tag{4.1}
+\]
+the pointwise value and stacked-current synthesis bounds
+\[
+ s_j^2\le {g\over1+x_j^2},\qquad
+ d_j^2\le {gx_j\over1+x_j^2}.                            \tag{4.2}
+\]
+The single-chain geometry makes both raw sums finite:
+\[
+ \begin{aligned}
+ B_S:=\sum_js_j^2
+ &\le {16g\over15c_0^2}
+ ={312500000000000000000\over777600000025582338837},\\
+ B_D:=\sum_jd_j^2
+ &\le {4g\over3c_0}
+ ={19531250000000000000\over259200000008527446279}.
+ \end{aligned}                                           \tag{4.3}
+\]
+These constants are uniform in \(J,p\), cutoff, and multiplier.
+
+Let \(S\) and \(D_i\) denote the combined value and current syntheses along
+the chain.  The centered deterministic recursion remains a linear image of
+the independent Gaussian vector.  With
+\[
+ R_A=P_A-\Id,                                             \tag{4.4}
+\]
+the exact covariance data after primitive cancellation are
+\[
+ \begin{aligned}
+ C_A&=C_0+SR_AS^*,\\
+ U_A:=Q_A-Q_0&=\sum_{i=1}^3D_iR_AD_i^*,\\
+ K_{A,i}&=SR_AD_i^*.
+ \end{aligned}                                           \tag{4.5}
+\]
+Common evenness supplies \(K_0=0\).  The possibly divergent raw \(Q_0\) is
+cancelled before any norm is taken.
+
+Use the R-161 data norm
+\[
+ \|(C,U,K)\|_{\cZ}^2
+ =\|C\|_{\op}^2+\|U\|_{\op}^2+
+   \sum_{i=1}^3\|K_i\|_{\HS}^2.                         \tag{4.6}
+\]
+For every bounded block operator \(R\), elementary rank and triangle bounds
+give
+\[
+ \begin{aligned}
+ \|SRS^*\|_{\op}&\le B_S\|R\|_{\op},\\
+ \left\|\sum_iD_iRD_i^*\right\|_{\op}
+ &\le3B_D\|R\|_{\op},\\
+ \left(\sum_i\|SRD_i^*\|_{\HS}^2\right)^{1/2}
+ &\le(18B_SB_D)^{1/2}\|R\|_{\op}.
+ \end{aligned}                                           \tag{4.7}
+\]
+Thus the explicit finite constant
+\[
+ c_Z^2=B_S^2+9B_D^2+18B_SB_D<1                           \tag{4.8}
+\]
+controls the linear map in (4.5).
+
+The resolvent product rule gives, for \(m=1,2,3\),
+\[
+ \|D^mP_A[H_1,\ldots,H_m]\|_{\op}
+ \le(m+1)!\tau^{m+2}\prod_a\|H_a\|_{\mathfrak E}.     \tag{4.9}
+\]
+Consequently, for \(Y_A=(C_A,U_A,K_A)\),
+\[
+ \|D^mY_A[H_1,\ldots,H_m]\|_{\cZ}
+ \le c_Z(m+1)!\tau^{m+2}\prod_a\|H_a\|_{\mathfrak E}.
+                                                                  \tag{4.10}
+\]
+
+\section{One global scalar, including the sixth power}
+\hypertarget{section-5-scalar}{}
+
+Let
+\[
+ \overline{\mathcal B}(C)=\E_{N(0,C)}\mathcal B(W),
+ \qquad
+ \overline{\mathcal T}(C)=\E_{N(0,C)}D^2\mathcal B(W). \tag{5.1}
+\]
+The globally summed R-107/R-141 endpoint identity and the centered Gaussian
+sixth moment combine into the single pointwise scalar
+\[
+ \begin{aligned}
+ \Phi(C,U,K)={1\over2}\bigg\{&
+ \Tr[U\overline{\mathcal B}(C)]
+ +\sum_iK_i\otimes K_i:\overline{\mathcal T}(C)\bigg\}\\
+ &+{3\over20}\left[(\Tr C)^3
+ +6\Tr C\,\Tr(C^2)+8\Tr(C^3)\right].
+ \end{aligned}                                           \tag{5.2}
+\]
+Up to an irrelevant constant, the full expected action is exactly
+\[
+ F(A)={9\over20}\|B_A\|_{\HS}^2
+      +\int_{\mathbb T_{16}^3}\Phi(Y_A(x))\,dx.          \tag{5.3}
+\]
+
+This placement of the sixth power is load-bearing.  Its intrinsic affine
+physical-source Hessian is positive semidefinite, but its nonlinear
+controller pullback contains the indefinite projected-force/acceleration
+term.  For the scalar test
+\[
+ f(z)=z^6,\qquad z(a,b)=ab,                              \tag{5.4}
+\]
+the Hessian of \(a^6b^6\) at \((1,1)\) is
+\[
+ \begin{pmatrix}30&36\\36&30\end{pmatrix},              \tag{5.5}
+\]
+with eigenvalues \(66\) and \(-6\).  Therefore R-161's affine step of
+dropping the global positive sextic Hessian cannot be reused here.
+
+For \(r\le1/2\), \(\|P_A-\Id\|_{\op}\le\tau^2-1\le3\).
+R-161's background bound and (4.7) place every \(Y_A(x)\) in one compact
+finite-dimensional covariance-data box, independent of the chain.  The
+positive A7 floor and the Gaussian heat identity extend the derivatives of
+the first line of (5.2) continuously to singular positive-semidefinite
+\(C\); the third derivative uses at most \(D^8\mathcal B\).  The second line
+is an explicit covariance polynomial.  Hence
+\[
+ M_j=\sup_{Y\ \mathrm{in\ the\ box}}\|D^j\Phi(Y)\|_{\op}<\infty,
+ \qquad j=1,2,3,                                         \tag{5.6}
+\]
+uniformly in \(J,p\), cutoff, and multiplier.
+
+\section{Uniform Hessian modulus and retained gap}
+\hypertarget{section-6-modulus}{}
+
+At \(r_0=1/2\), one has \(\tau_0=2\), and (4.10) gives the three constants
+\[
+ J_1=16c_Z,\qquad J_2=96c_Z,\qquad J_3=768c_Z.          \tag{6.1}
+\]
+The complete third-order chain rule is
+\[
+ \|D^3(\Phi\circ Y)\|
+ \le M_3J_1^3+3M_2J_1J_2+M_1J_3.                        \tag{6.2}
+\]
+The \(M_1J_3\) term is mandatory: recursive covariance has a nonzero third
+jet.  With torus volume \(16^3=4096\), define
+\[
+ L_*={1296\over5}+4096\bigl(4096M_3c_Z^3
+ +4608M_2c_Z^2+768M_1c_Z\bigr).                          \tag{6.3}
+\]
+Equations (2.9), (4.10), and (6.2) prove
+\[
+ \|D^2F(A)-D^2F(0)\|_{\op}\le L_*\|A\|_{\mathfrak E},
+ \qquad \|A\|_{\mathfrak E}\le{1\over2}.              \tag{6.4}
+\]
+Every forward block and its legal reverse are adjoints inside this one
+self-adjoint Hessian.  Their balanced term is the symmetric cross, not a
+third payment.  The derived states \(\eta_j\) are not independent low or
+Feshbach variables.
+
+Choose
+\[
+ \boxed{\delta_*=
+ \min\left\{{1\over2},{3\over100(1+L_*)}\right\}>0.}    \tag{6.5}
+\]
+Then \(L_*\delta_*<3/100\), and (3.6) gives
+\[
+ D^2F(A)[H,H]>
+ \left({4\over25}-{3\over100}\right)\|H\|_{\mathfrak E}^2
+ ={13\over100}\|H\|_{\mathfrak E}^2.                  \tag{6.6}
+\]
+Moreover \(\delta_*<3/100\), while
+\[
+ \left({100\over97}\right)^4<{13\over10}.              \tag{6.7}
+\]
+Using (2.7), (6.6) therefore implies
+\[
+ D^2F(A)[H,H]>{1\over10}\cG_A(H,H),                     \tag{6.8}
+\]
+which completes (1.4).
+
+The pullback identity represented by (5.3)--(6.8) is precisely
+\[
+ D^2(\cA\circ\chi)_A[H,K]
+ =\langle D\chi_AH,H_{\rm prod}(h_A)D\chi_AK\rangle
+ +\langle g_{\rm prod}(h_A),D^2\chi_A[H,K]\rangle.      \tag{6.9}
+\]
+The second term contains the source, endpoint/current, trace, and sextic first
+variations once.  No owner is added a second time.
+
+\section{What failed and what remains open}
+\hypertarget{section-7-boundaries}{}
+
+\begin{enumerate}
+\item \textbf{Dropping the sextic as positive failed.}  The exact fixture
+(5.4)--(5.5) has a negative pullback eigenvalue.  Repair: include the full
+Gaussian sextic polynomial in \(\Phi\) and retain all three terms in (6.2).
+
+\item \textbf{Bare finite-dimensional continuity failed as a uniform proof.}
+The registered coherent fixture
+\[
+ \mathcal F_N(h)={2\over25}\|h\|_2^2
+ -{(\sum_jh_j)^4\over4N}+{(\sum_jh_j)^6\over6N^2}       \tag{7.1}
+\]
+has origin Hessian \(4/25\), but along
+\(h=N^{-1}(1,\ldots,1)\) its coherent Hessian is
+\(4/25-3+5/N<0\) for \(N\ge3\).  Repair: use the explicit
+chain-length-free resolvent and dyadic synthesis bounds.
+
+\item \textbf{A stationarity-free abstract resolvent transfer failed.}
+A positive intrinsic quadratic endpoint can still have a negative recursive
+pullback if its origin gradient pairs with the \(p\to4p\) acceleration.
+R-162 survives only because Section 3 proves the exact full-action Fourier
+cancellation.  The abstract counterexample is not an A1 counterexample.
+
+\item \textbf{The single-chain raw-current bound does not union over an
+arbitrary forest.}  Across all unrelated three-dimensional roots the crude
+sum of \(d_p^2\sim|p|^{-2}\) grows with the cutoff.  A multi-chain result needs
+a new full-lattice weighted recursive estimate, not repetition of (4.3).
+
+\item \textbf{Random nonlinear coefficients leave the Gaussian chart.}
+Already \(A(\xi)=\varepsilon\operatorname{sgn}\xi\) sends a centered Gaussian
+to a component containing \(\varepsilon|\xi|\), which is noncentered and
+non-Gaussian.  The covariance scalar (5.2) no longer determines the law.
+\end{enumerate}
+
+R-162 therefore advances from the fixed two-stage R-159 chart to every finite
+acyclic pure-dyadic deterministic-matrix shifted-state chain, uniformly in
+chain length.  It does not prove an intrinsic physical-source Hessian,
+multiple unrelated chains, random or nonlinear past-dependent coefficients,
+revisits or cycles, a pathwise fibrewise conditional inequality, cutoff or
+floor removal, T-050, A13, Nelson, an interacting measure, any phase or PDE,
+or Sector-A closure.
+
+\section{Devil's-advocate audit}
+\hypertarget{section-8-adversarial}{}
+
+\begin{itemize}
+\item \textbf{Objection: the R-160 origin theorem is affine, so recursion adds
+an unpaid second jet.}  \textbf{VALID WITH MITIGATION.}  Equations
+(3.2)--(3.5) expose that jet.  Its complete global first-variation pairing
+vanishes only by the registered stationary exact-Fourier cancellation.
+
+\item \textbf{Objection: convexity of \(|W|^6\) makes the sextic harmless.}
+\textbf{UPHELD AGAINST THAT SHORTCUT.}  Convexity controls intrinsic affine
+directions, not nonlinear pullback curvature.  The \(-6\) eigenvalue in
+(5.5) forces the sextic into the common modulus.
+
+\item \textbf{Objection: the divergent raw derivative covariance was hidden
+inside a norm.}  \textbf{DISMISSED.}  Equation (4.5) forms \(Q-Q_0\) before
+norms.  Only the dyadic-chain synthesis \(B_D\) appears.
+
+\item \textbf{Objection: path length has leaked into a matrix dimension or
+compactness constant.}  \textbf{DISMISSED.}  The resolvent bounds use
+\(\|N_A\|_{\op}\le\|A\|_{\ell^2(\HS)}\), and the data box uses only the
+geometric sums (4.3) and fixed six-real output rank.
+
+\item \textbf{Objection: (1.4) proves the general T-050 conditional Hessian.}
+\textbf{UPHELD AS PROHIBITED.}  R-162 is expected/global, single-chain,
+centered Gaussian, deterministic-matrix, acyclic, fixed-floor, and finite
+cutoff.  The missing cases listed after Section 7 remain substantive gates.
+\end{itemize}
+
+\section{Reproduction and Result footer}
+\hypertarget{section-9-reproduction}{}
+
+Primary command:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+a13_classii_resolvent_pure_dyadic_recursive_chain_uniform_
+neighborhood_gap_boundary.py
+\end{verbatim}
+Independent command:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+a13_classii_resolvent_pure_dyadic_recursive_chain_uniform_
+neighborhood_gap_boundary_independent.py
+\end{verbatim}
+Integrated command:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+a13_classii_resolvent_pure_dyadic_recursive_chain_uniform_
+neighborhood_gap_boundary_verify.py
+\end{verbatim}
+
+\begingroup
+\scriptsize
+\begin{verbatim}
+Result ID: A13-CLASSII-RESOLVENT-PURE-DYADIC-RECURSIVE-CHAIN-
+ UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY; Ledger ID: R-162.
+Dependencies: A1, A7, R-107, R-141, R-155, R-159, R-160, R-161.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+ codes/foundations/
+ a13_classii_resolvent_pure_dyadic_recursive_chain_uniform_
+ neighborhood_gap_boundary_verify.py
+Precise statement: one positive analytic l2(HS) radius, uniform in finite
+ chain length, mode, cutoff and regulator, retains pullback gap >13/100>1/10.
+Scope: side-16 d=3 A1/A7, exact torus, centered independent Gaussian blocks,
+ common-even matched multiplier, deterministic acyclic shifted-state chain.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Expected output: primary, independent, integrated, PDF and release PASS.
+Falsification gate: any resolvent, origin, synthesis, connection, gap, hash,
+ PDF, public-surface, exploration, or release assertion fails.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no intrinsic/forest/random/revisit/pathwise-conditional,
+ removal, T-050/A13, Nelson, measure, phase/PDE, or Sector-A theorem.
+Proof complete: false; T-050 closed: false; Sector A closed: false.
+Next required action: test an actual forest or truth-first surviving law.
+\end{verbatim}
+\endgroup
+
+\endgroup
