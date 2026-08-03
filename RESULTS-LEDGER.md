@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-161](#r-161) | Summable covariance jets and a growing affine-root-union uniform neighbourhood | Scoped T4 analytic/exact/executed/audited nonzero-neighbourhood theorem. On the fixed side-16 three-torus with the A1 symbol, positive A7 floor, exact continuum integration and a common real-even contraction multiplier, the pointwise value, derivative and field-current covariance jets of every finite one-shot raw-source affine `p:2p` family are bounded from `l2(HS)` controls by cardinality-independent full-lattice square sums. The worst controlled `Q` jet and the background value covariance use the three-dimensional `sum |n|^-4` threshold, which is logarithmically critical in dimension four. After exact `Q-Q0` cancellation, a compact finite covariance-data box and Gaussian heat derivatives through `D8 B` give an explicit global Hessian modulus `L_* ||A||`. The analytic radius `delta_*=min(1,3/[100(1+L_*)])` retains the R-160 origin gap as `D2 A(A)[H,H]>(13/100)||H||^2>(1/10)||H||^2`, uniformly in finite family cardinality, cutoff, regulator and factor-three path length. The R-107/R-141 equality is global only; no local `E_CN` to `P_comp` lower-bound transfer, realised past, shifted-state/revisit, nonlinear feedback, removal, T-050/A13, phase/PDE, Nelson/measure or Sector-A conclusion follows |
 | [R-160](#r-160) | Weighted-Schur growing affine root-union origin gaps | Scoped T4 analytic/exact/executed/audited origin-Hessian theorem. For every finite family of distinct raw antipodal `p:2p` affine controls, allowing a target class later to serve as another raw source, the exact covariance-normal loss graph has only factor-three paths. Its block Hessian is lower-bounded by an adverse scalar Jacobi majorant; no equality of spectra is asserted. Geometric weights `d_j=4^(-j)` and exact Sturm plus non-importing Fraction/Bernstein certificates bound the adverse endpoint by `25/32` on the continuous radial half-line `x>=3/20`, giving `D2 A(0)[H,H]>(19/160) sum ||H_p||_HS^2`. Exact side-16 lattice shell separation sharpens the endpoint bound to `37/50` and the gap to `4/25`. Both constants are independent of finite family cardinality and path length. No cardinality-uniform nonzero radius, realised-past, shifted-state/revisit, nonlinear predictable, finite-amplitude, cutoff/floor-removal, T-050/A13, phase/PDE, Nelson/measure, or Sector-A conclusion follows |
 | [R-159](#r-159) | Pure-dyadic regulator-uniform local neighbourhood gap and exact normal-ordering boundary | Scoped T4 analytic/exact/executed/audited theorem. On the fixed side-16 A1 symbol and A7 floor, for common real-even covariance-matched multipliers with `|m|<=1`, exact continuum torus integration, centered raw Gaussian roots, and any retained nonzero `p:2p:4p`, the recursive chart `chi(A,B)=(A xi_p,B(xi_2p+A xi_p))` has one existential radius independent of cutoff, regulator, and `p` on which both pullback and intrinsic normalized Hessian gaps exceed `1/10`. Exact covariance-normal ordering cancels the divergent primitive `Q0` before compactness; the remaining finite covariance jets compactify uniformly. The R-155 origin gap `147/1000` and modulus allowance `47/2000` retain `247/2000`. No numerical radius, floor removal, aliased-grid theorem, realised-past/growing-root/arbitrary-revisit estimate, T-050, phase/PDE selection, or Sector-A closure follows |
 | [R-158](#r-158) | Exact charge-ensemble first-order shell transition and neutral-reference boundary | T6 conditional analytic/exact/executed/audited theorem extension. For the hash-pinned P1/A2 functional on the side-16 torus, define `Q=||Psi||_2^2/2`. With exact torus spectral bottom `lambda0`, `rho*=43/216`, and `mu_t=lambda0-1849/86400`, the full functional is `mu_t Q` plus a nonnegative spectral remainder, complete nonnegative Class-II energy, and `(gamma/6)int rho(rho-rho*)^2`. A lowest-internal-eigenvector plane wave on the unique radial shell `|n|^2=3` saturates all remainders and is a constrained global minimizer at `Q*=11008/27`; `Omega_mu=F_P1-mu Q` has exact first-order coexistence at `mu_t` before the zero spinodal `lambda0`. This is an imposed-ensemble mechanism, not a physical-vacuum theorem: no charge/reservoir provenance is derived, the state remains above the original neutral zero reference, and its registered local observables are uniform, so no BCC or unique morphology follows |
@@ -179,6 +180,71 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-161"></a>
+### R-161 -- Summable covariance jets and a growing affine-root-union uniform neighbourhood
+
+- **Result ID.**
+  `A13-CLASSII-SUMMABLE-JET-GROWING-AFFINE-ROOT-UNION-UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY`.
+
+- **Fixed-law global terminal chart.** Let `P` be any finite set of distinct
+  nonzero antipodal side-16 lattice classes with the complete union
+  `P union 2P` retained. Set `h_[2p]=A_p xi_[p]`, with the sum of squared
+  Hilbert--Schmidt controller norms as the metric. Source-target reuse is
+  allowed, but every later control reads the distinct raw innovation rather
+  than an already shifted target. This is a centered one-shot affine chart;
+  it has no connection term.
+
+- **Three-dimensional summable jets.** The exact A1 lower symbol obeys
+  `f(x)>=kappa(1+x^2)`. Hence value and derivative syntheses decay like
+  `|p|^-2` and `|p|^-1`. The linear covariance-jet square weights for
+  `C`, `Q-Q0`, and `K` decay like `|p|^-8`, `|p|^-4`, and `|p|^-6`.
+  Max-shell counting gives cardinality-independent pointwise bounds
+  `a_C^2=8g^2 c0^-4`, `a_Q^2=52g^2 c0^-2`, and
+  `a_K^2=(175/8)g^2 c0^-3`; the diagonal quadratic bounds close with
+  `b_C=g`, `b_Q=g/2`, and `b_K=g`. The `Q` jet and background value
+  covariance are critical at the same `sum |n|^-4` exponent: they converge
+  in spatial dimension three and become logarithmically critical in four.
+
+- **Explicit uniform Hessian modulus.** The global R-107 terminal telescope
+  equals the exhaustive R-141 `P_comp` sum only after all owners are summed.
+  Individual `E_CN=P_comp+V_future/2` atoms are never identified. Exact
+  Gaussian integration by parts cancels the primitive `Q0` before norms and
+  writes the global endpoint through the finite covariance data
+  `Y=(C,Q-Q0,K)`. On the compact convex covariance-data box, Gaussian heat
+  derivatives through `D8 B` give finite `M2,M3`. With
+  `a^2=a_C^2+a_Q^2+a_K^2`, `b=3g/2`, `eta(r)=ar+br^2`, and
+  `L(r)=a+2br`, the exact torus-volume estimate is
+  `||D2 R(A)-D2 R(0)|| <= 4096[M3 eta L^2+4M2 b r L+2bM2 eta] <= L_* r`.
+
+- **Retained gap.** The analytic choice
+  `delta_*=min(1,3/[100(1+L_*)])` has `L_* delta_*<3/100`.
+  Subtracting this loss from R-160's actual-lattice origin gap `4/25` and
+  retaining the complete global sixth-power Hessian once as a PSD form gives
+  `D2 A(A)[H,H]>(13/100)||H||^2>(1/10)||H||^2` for every
+  `||A||_l2(HS)<delta_*`, uniformly in finite family cardinality, cutoff,
+  admitted regulator, and factor-three path length.
+
+- **Where proved.** Claim
+  `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-summable-jet-growing-affine-root-union-uniform-neighborhood-gap-boundary-260803-v1.0.tex.txt`,
+  manifest
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_summable_jet_growing_affine_root_union_uniform_neighborhood_gap_boundary_manifest.json`,
+  primary `65/65`, non-importing independent `56/56`, and the integrated
+  release, deterministic PDF, security, render, and visual-QA records pinned
+  there.
+
+- **Audit boundary.** This is fixed spatial dimension three, fixed positive
+  floor, finite cutoff, exact continuum integration, centered raw Gaussian,
+  and one-shot fixed-law affine. It gives no local-owner lower-bound transfer,
+  deterministic or realised past, shifted-state recursion, revisit or
+  nonlinear predictable feedback, finite-amplitude global convexity, cutoff
+  or floor removal, T-050/A13 closure, Nelson theorem, interacting measure,
+  phase/PDE selection, or Sector-A closure.
+
+- **Tier / publication target.** Scoped T4
+  analytic/exact/executed/audited uniform-neighbourhood theorem;
+  constructive-field-theory methods note after independent review.
 
 <a id="r-160"></a>
 ### R-160 -- Weighted-Schur growing affine root-union origin gaps

@@ -5800,3 +5800,50 @@ T5--T7 promotion remain open. Tier stays T4.
   origin union as closed at this scope; the next direct A13 target is a
   cardinality-uniform nonzero neighbourhood or an actual realised-past/
   nonlinear/revisit conditional Hessian theorem or counterexample.
+
+- 2026-08-03: Registered
+  `A13-CLASSII-SUMMABLE-JET-GROWING-AFFINE-ROOT-UNION-UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY`
+  (R-161). In the R-160 growing fixed-law chart, place every finite control
+  family in the common `l2(HS)` direct sum and retain the complete raw-source
+  union `P union 2P`. The exact A1 symbol gives value and derivative synthesis
+  decay `|p|^-2` and `|p|^-1`. Consequently the pointwise linear covariance-
+  jet square weights for `C`, `Q-Q0`, and `K` are respectively bounded by
+  `|p|^-8`, `|p|^-4`, and `|p|^-6`. Three-dimensional max-shell counting
+  gives exact family-cardinality-free constants
+  `a_C^2=8g^2 c0^-4`, `a_Q^2=52g^2 c0^-2`, and
+  `a_K^2=(175/8)g^2 c0^-3`; diagonal quadratic jets close with
+  `b_C=g`, `b_Q=g/2`, and `b_K=g`. Both the limiting controlled `Q` jet and
+  the background value covariance become logarithmically critical in
+  spatial dimension four, so fixed dimension three is load-bearing.
+
+  The R-107 terminal telescope and the exhaustive R-141 `P_comp` action sum
+  identify one global terminal scalar only after all owners are summed. The
+  local identity `E_CN=P_comp+V_future/2` remains a firewall: no individual
+  local lower bound is transferred. For the global scalar, exact Gaussian
+  integration by parts cancels the regulator-matched primitive `Q0` before
+  any norm. The remaining data `Y=(C,Q-Q0,K)` lie pointwise in one explicit
+  compact convex finite-dimensional covariance box. Positive-floor heat
+  identities through `D8 B` give finite derivative constants `M2,M3` even at
+  singular covariance. With `a^2=a_C^2+a_Q^2+a_K^2`, `b=3g/2`,
+  `eta(r)=ar+br^2`, and `L(r)=a+2br`, the complete global endpoint satisfies
+  `||D2 R(A)-D2 R(0)||_op <= 4096[M3 eta L^2+4M2 b r L+2bM2 eta]
+  <= L_* r`, uniformly over finite family cardinality, cutoff, admitted
+  multiplier, and factor-three path length.
+
+  The analytic radius `delta_*=min(1,3/[100(1+L_*)])` has loss strictly below
+  `3/100`. Subtracting it from R-160's actual-lattice origin gap `4/25` and
+  retaining the terminal sixth-power Hessian once as one global PSD form gives
+  `D2 A(A)[H,H]>(13/100)||H||^2>(1/10)||H||^2` whenever
+  `||A||_l2(HS)<delta_*`. Primary `65/65` and non-importing independent
+  `56/56` audits pass; the integrated release, deterministic nine-page PDF,
+  security, render, and visual-QA evidence are pinned in the manifest.
+
+  R-161 supplies no numerical evaluation of the radius, deterministic or
+  realised Gaussian past, shifted-state recursion, revisit or nonlinear
+  predictable law, finite-amplitude global convexity, cutoff/floor removal,
+  individual local-owner lower bound, T-050/A13 closure, Nelson theorem,
+  interacting measure, phase/PDE selection, or Sector-A closure. The abstract
+  growing fixed-law neighbourhood route is closed at this scope. The next A13
+  calculation must instantiate a realised-past or recursive/revisit production
+  law and certify its complete conditional Hessian or a counterexample rather
+  than adding another abstract fixed-law coordinate.

@@ -1,0 +1,603 @@
+% =============================================================================
+% Title: Summable covariance jets and a growing affine-root-union uniform neighbourhood
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-SUMMABLE-JET-GROWING-AFFINE-ROOT-UNION-UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY
+% Ledger: R-161
+% Version: v1.0 -- first issued 2026-08-03; this version issued 2026-08-03
+% Status: scoped T4 analytic/exact/executed/audited advance; no T-050 closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\HS}{\mathrm{HS}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\bB}{\overline{\mathcal B}}
+\newcommand{\bT}{\overline T}
+
+\section*{1. Purpose and scope: the cardinality-uniform neighbourhood gap}
+\hypertarget{section-1-result}{ }
+
+R-160 proves a strict origin-Hessian gap for every finite R-155 family of
+one-shot fixed-law affine controls, uniformly in the number and lengths of
+the factor-three components.  Its open boundary was whether one radius could
+be chosen independently of the family cardinality.  Finite-dimensional
+continuity for each family does not answer that question.
+
+Let $\mathcal P$ be any finite set of distinct nonzero side-16 dual-lattice
+momentum classes modulo sign.  Retain $[2p]$ for every $p\in\mathcal P$ and
+allow $\mathcal P\cap2\mathcal P\ne\varnothing$; the finite cutoff retains
+the whole union $\mathcal P\cup2\mathcal P$.  On the common fixed-law
+Gaussian space, with $A_p\in\mathbb R^{12\times12}$, set
+\[
+ h_{[2p]}=A_p\xi_{[p]},\qquad
+ \|A\|_{\mathfrak E}^2=\sum_{p\in\mathcal P}\|A_p\|_{\HS}^2 .       \tag{1.1}
+\]
+The raw innovations $\xi_{[p]}$ are distinct.  A target may later be a raw
+source, but a later control still reads that raw source rather than the
+shifted state.  Thus (1.1) is affine and one-shot.
+
+Fix the side-16 A1 symbol, the positive A7 floor, exact continuum torus
+integration, and a common real-even covariance-matched scalar multiplier
+$|m_\Lambda(k)|\le1$ identical on all real components.  Then there is one
+existential number $\delta_*>0$, independent of
+\[
+ |\mathcal P|,\quad \Lambda<\infty,\quad m_\Lambda,
+ \quad\hbox{and every factor-three path length},                    \tag{1.2}
+\]
+such that for every $\|A\|_{\mathfrak E}<\delta_*$ and nonzero direction
+$H$,
+\[
+ \boxed{
+ D^2\cA_{J,\mathcal P}(A)[H,H]
+ >{13\over100}\sum_{p\in\mathcal P}\|H_p\|_{\HS}^2
+ >{1\over10}\sum_{p\in\mathcal P}\|H_p\|_{\HS}^2 .}              \tag{1.3}
+\]
+
+Here $\cA_{J,\mathcal P}$ is the \emph{global terminal} source action.  The
+R-107 predictable-baseline telescope identifies its endpoint with the one
+terminal $V_J^{\rm ren}$ difference before source and sextic are added.
+Equation (1.3) does not identify an individual root's covariance-normal
+atom with its smaller $P_{\rm comp}$ owner.
+
+Equation (6.3) gives an analytic positive radius in terms of finite derivative
+suprema, but it is not evaluated numerically.  The theorem gives no deterministic
+or realised Gaussian past, shifted-state recursion, nonlinear or revisited
+feedback, finite-amplitude convexity, floor removal, infinite-cutoff
+endpoint, T-050 or A13 closure, Nelson theorem, interacting measure, phase,
+vacuum, morphology, PDE verdict, or Sector-A closure.
+
+\section*{2. Global terminal action and the local-owner firewall}
+\hypertarget{section-2-owner}{ }
+
+This distinction is load-bearing.  R-107 writes, on a temporally faithful
+finite chart,
+\[
+ Z_k=S_\pi\xi+\sum_{\ell\le k}S_\ell h_\ell,
+ \qquad Z_0=S_\pi\xi,                                      \tag{2.1}
+\]
+\[
+ \Delta_kV=V_J^{\rm ren}(Z_k)-V_J^{\rm ren}(Z_{k-1}),
+ \qquad P_k=\E[\Delta_kV\mid\mathcal F_{k-1}],             \tag{2.2}
+\]
+and proves the exact source-action representation
+\[
+ \cA_J(h)=\sum_k\E P_k
+ +{3\over20}\E\|Z_K\|_6^6
+ +{9\over20}\E\sum_k\|h_k\|^2 .                         \tag{2.3}
+\]
+Tower property and telescoping give
+\[
+ \sum_k\E P_k
+ =\E\{V_J^{\rm ren}(Z_K)-V_J^{\rm ren}(Z_0)\}.            \tag{2.4}
+\]
+The A7 zero-control convention and R-146 relative anchor give
+\[
+ \E V_J^{\rm ren}(Z_0)=0.                                 \tag{2.5}
+\]
+R-151's scalar $\cR$ is precisely the global finite-cutoff A7 endpoint
+\[
+ {1\over2}\int\E\left\{\sum_iV_i^*\mathcal B(W)V_i
+                  -\Tr[\mathcal B(W)Q_0]\right\}dx,       \tag{2.6}
+\]
+which is the $V_J^{\rm ren}$ convention in (2.4)--(2.5).  Hence a Hessian
+bound obtained by differentiating (2.6) is a bound on the global terminal
+part of (2.3), not a lower-bound transfer from one local owner.
+
+R-141 writes the same complete action as the exhaustive global sum of
+$\E\mathcal P_{{\rm comp},\alpha}$ plus the identical Cameron--Martin and
+terminal sixth-power terms.  Comparing that identity with (2.3), after
+subtracting those two common terms, gives
+\[
+ \cR(A)=\sum_k\E P_k
+       =\sum_\alpha\E\mathcal P_{{\rm comp},\alpha}       \tag{2.7}
+\]
+only after the complete global telescope and exhaustive owner sum.  This
+global equality does not identify any individual $P_k$, $E_{\rm CN}$, or
+$\mathcal P_{\rm comp}$ atom.
+
+For one exhaustive local packet, R-141 instead has
+\[
+ E_{\rm CN}=P_{\rm comp}+{1\over2}V_{\rm future},
+ \qquad
+ P_{\rm comp}={1\over2}\|\Phi\|^2-{1\over2}\Theta .       \tag{2.8}
+\]
+Therefore $E_{\rm CN}\ge P_{\rm comp}$ has the wrong direction for
+lower-bounding that local action owner.  The existing
+AUDIT-2026-07-30-A13-COVARIANCE-NORMAL-DOMINANCE-ACTION-DIRECTION remains
+binding.  Equations (2.1)--(2.7), rather than the forbidden identification
+$E_{\rm CN}=P_{\rm comp}$, are the owner bridge used below.
+
+\section*{3. Infinite-envelope control space and affine covariance jets}
+\hypertarget{section-3-jets}{ }
+
+It is convenient to place every finite family in the Hilbert direct sum over
+all nonzero antipodal lattice classes,
+\[
+ \mathfrak E=\ell^2\!\left((\HS_p)_{[p]\ne0}\right),       \tag{3.1}
+\]
+while retaining only finite-support vectors in the theorem.  At a spatial
+point the controlled field and current are
+\[
+ W_A=W_0+\sum_pS_{2p}A_p\xi_p,
+ \qquad
+ V_{A,i}=V_{0,i}+\sum_pD_{2p,i}A_p\xi_p .             \tag{3.2}
+\]
+Because the raw sources are distinct, the covariance triples
+\[
+ C=\operatorname{Cov}(W),\qquad
+ Q=\sum_i\operatorname{Cov}(V_i),\qquad
+ K_i=\operatorname{Cov}(W,V_i)                         \tag{3.3}
+\]
+are polynomials of degree two with no $A_pA_q^*$ term for $p\ne q$.
+Their linear jets are
+\[
+\begin{aligned}
+ C^{(1)}_A&=\sum_p(S_{2p}A_pS_p^*+S_pA_p^*S_{2p}^*),\\
+ Q^{(1)}_A&=\sum_{p,i}(D_{2p,i}A_pD_{p,i}^*
+                         +D_{p,i}A_p^*D_{2p,i}^*),\\
+ K^{(1)}_{A,i}&=\sum_p(S_{2p}A_pD_{p,i}^*
+                         +S_pA_p^*D_{2p,i}^*),
+\end{aligned}                                                       \tag{3.4}
+\]
+and their quadratic jets contain only the diagonal $p$ sums with two target
+columns.  In particular,
+\[
+ D^3(C,Q,K)=0.                                             \tag{3.5}
+\]
+
+The Cameron--Martin term is exactly
+\[
+ \cA_{\rm CM}(A)={9\over20}\sum_p\|A_p\|_{\HS}^2,
+ \qquad D^2\cA_{\rm CM}={9\over10}\Id_{\mathfrak E}.     \tag{3.6}
+\]
+The chart acceleration is zero.  Thus its whitened tangent Gram is the
+identity in (3.1), and controller-pullback and intrinsic tangent-image
+Hessians coincide.  This fact does not extend to the shifted-state chart of
+R-156/R-159.
+
+\section*{4. Exact A1 envelope and three-dimensional summability}
+\hypertarget{section-4-summability}{ }
+
+Write $x=|p|^2$.  The exact registered lower symbol is
+\[
+ f(x)=x^2-{4626377063\over5000000000}x
+             +{5020336473\over10000000000}.              \tag{4.1}
+\]
+Its minimum is
+\[
+ \nu={28800000000947494031\over10^{20}}>0.                \tag{4.2}
+\]
+Set
+\[
+ \kappa={\nu\over5},\qquad
+ g={2\over4096\kappa}
+ ={244140625000000000\over28800000000947494031}.           \tag{4.3}
+\]
+The quadratic $f(x)-\kappa(1+x^2)$ has positive leading coefficient and
+exact negative discriminant
+\[
+ -{51200155480591726776097543111788780628961
+ \over62500000000000000000000000000000000000000}.          \tag{4.4}
+\]
+Consequently
+\[
+ f(x)\ge\kappa(1+x^2),\qquad x\ge0.                       \tag{4.5}
+\]
+
+Let $s_p=\|S_p\|_{\op}$ and let $d_p$ be the operator norm of the
+three-component stacked derivative synthesis.  The multiplier contraction
+and (4.5) give
+\[
+ s_p^2\le {g\over1+x^2},
+ \qquad d_p^2\le {gx\over1+x^2}.                         \tag{4.6}
+\]
+For $p=(2\pi/16)n$, $n\in\mathbb Z^3\setminus\{0\}$, R-160's exact
+lattice floor gives
+\[
+ x>{3\over20}|n|^2=:c_0|n|^2.                            \tag{4.7}
+\]
+
+The max-norm shell $\|n\|_\infty=m$ contains $24m^2+2$ points.  The
+integral-test bounds for the zeta sums yield
+\[
+ \sum_{n\ne0}|n|^{-4}<52,\qquad
+ \sum_{n\ne0}|n|^{-6}<35,\qquad
+ \sum_{n\ne0}|n|^{-8}<32.                               \tag{4.8}
+\]
+No phase cancellation is used.  From (4.6), the squared coefficient weights
+in (3.4) obey
+\[
+\begin{aligned}
+ (2s_ps_{2p})^2&\le {g^2\over4x^4},\\
+ (2d_pd_{2p})^2&\le {g^2\over x^2},\\
+ (s_{2p}d_p+s_pd_{2p})^2&\le {5g^2\over8x^3}.
+\end{aligned}                                                       \tag{4.9}
+\]
+Combining (4.7)--(4.9) gives the exact cardinality-independent constants
+\[
+ a_C^2=8g^2c_0^{-4},\qquad
+ a_Q^2=52g^2c_0^{-2},\qquad
+ a_K^2={175\over8}g^2c_0^{-3}.                         \tag{4.10}
+\]
+The $Q$ jet is limiting: its squared coefficients decay only as
+$|p|^{-4}$, which is summable in dimension three.
+
+For the diagonal quadratic jets one may take
+\[
+ b_C=g,\qquad b_Q={g\over2},\qquad b_K=g.              \tag{4.11}
+\]
+Indeed $4gx/(1+16x^2)\le g/2$ is equivalent to
+$(4x-1)^2\ge0$, while
+$s_{2p}d_{2p}\le g/\sqrt2<g$; the nonstrict value $b_K=g$ closes the
+common constant without an unresolved supremum.
+Cauchy--Schwarz in the $p$ sum and (4.10)--(4.11) give, uniformly in every
+finite family and at every spatial point,
+\[
+\begin{aligned}
+ \|C(A)-C_0\|&\le a_Cr+b_Cr^2,\\
+ \|Q(A)-Q_0\|&\le a_Qr+b_Qr^2,\\
+ \|K(A)\|&\le a_Kr+b_Kr^2,
+\end{aligned}\qquad r=\|A\|_{\mathfrak E}.             \tag{4.12}
+\]
+The same calculation bounds the first two controller derivatives, uniformly,
+and (3.5) kills all higher covariance jets.  The uncontrolled value
+covariance is also uniform because
+\[
+ \|C_{\rm bg}\|\le g\{1+52c_0^{-2}\}.                  \tag{4.13}
+\]
+The raw derivative covariance need not be bounded as the cutoff grows.  It
+is never estimated.
+
+\section*{5. Covariance-normal cancellation and the uniform Hessian modulus}
+\hypertarget{section-5-modulus}{ }
+
+For every deterministic finite-support $A$, equations (3.2) are linear in
+the finite raw Gaussian vector.  Hence $(W_A,V_{A,1},V_{A,2},V_{A,3})$ is one
+jointly centered Gaussian endpoint.  Multiplication by two is injective on
+the dual lattice, and ordering classes by increasing norm makes every raw
+$[p]$ source available before its $[2p]$ target.  When $[2p]$ is reused as a
+later source, the law retains its raw innovation rather than substituting the
+already shifted target.  Thus the endpoint is both temporally faithful for
+the R-107 telescope and Gaussian for the identity below.
+
+Write
+\[
+ \bB(C)=\E_{N(0,C)}\mathcal B(W),\qquad
+ \bT(C)=\E_{N(0,C)}D^2\mathcal B(W).                    \tag{5.1}
+\]
+Componentwise Gaussian integration by parts gives
+\[
+ \E[(V_i)_m(V_i)_n\mathcal B_{mn}(W)]
+ =Q_{i,mn}\bB_{mn}(C)
+ +(K_i)_{am}(K_i)_{bn}\bT_{abmn}(C).                   \tag{5.2}
+\]
+The A7 counterterm uses the same regulator-matched primitive covariance
+$Q_0=Q(0)$.  Subtracting it before taking a norm gives the all-state identity
+\[
+ \boxed{
+ 2\cR(A)=\int\left\{
+ \Tr[(Q(A)-Q_0)\bB(C(A))]
+ +\sum_iK_i(A)\otimes K_i(A):\bT(C(A))
+ \right\}dx.}                                          \tag{5.3}
+\]
+This instantiates R-159's Gaussian lemma for the whole growing fixed-law
+union; it is not an extrapolation of an origin formula.  The primitive $Q_0$
+cancels algebraically before any norm is taken.  This is why the linearly
+divergent sharp-cube derivative covariance does not enter (4.12).
+
+At the fixed positive floor, every derivative of the six-row coefficient
+$\mathcal B(w)$ has polynomial growth.  For a bounded positive semidefinite
+covariance set, Gaussian moments are uniformly bounded, and the heat identity
+\[
+ D_C^j\E_{N(0,C)}F(W)[E_1,\ldots,E_j]
+ ={1\over2^j}(E_1)_{a_1b_1}\cdots(E_j)_{a_jb_j}
+ \E_{N(0,C)}
+ [\partial_{a_1b_1}\cdots\partial_{a_jb_j}F(W)]          \tag{5.4}
+\]
+shows that the required derivatives of $\bB$ and $\bT$ are bounded and
+continuous, including at singular $C$.  In particular, $D^3\bT$ uses at most
+$D^8\mathcal B$, whose Gaussian moments are uniformly finite on the bounded
+covariance set.  No $C^{-1}$ score formula is used.
+
+To avoid any appeal to compactness of the infinite-dimensional controller
+ball, put
+\[
+ \mathcal Z=\operatorname{Sym}_6\times\operatorname{Sym}_6
+             \times(\mathbb R^{6\times6})^3
+\]
+and equip this finite-dimensional pointwise covariance-data space with the norm
+\[
+ \|(C,U,K)\|_{\mathcal Z}^2
+ =\|C\|_{\op}^2+\|U\|_{\op}^2+\sum_i\|K_i\|_{\HS}^2.     \tag{5.5}
+\]
+Here and in (4.10)--(4.12), $\|K\|^2=\sum_i\|K_i\|_{\HS}^2$.
+Define
+\[
+ a=(a_C^2+a_Q^2+a_K^2)^{1/2},\qquad
+ b=(b_C^2+b_Q^2+b_K^2)^{1/2}={3g\over2},                \tag{5.6}
+\]
+\[
+ \eta(r)=ar+br^2,\qquad L(r)=a+2br,
+ \qquad d(r)=2br.                                       \tag{5.7}
+\]
+For
+\[
+ Y_A(x)=(C(A,x),Q(A,x)-Q_0(x),K(A,x)),                  \tag{5.8}
+\]
+equations (4.10)--(4.13) give the pointwise operator bounds
+\[
+ \|Y_A-Y_0\|\le\eta(r),\quad
+ \|DY_A\|\le L(r),\quad
+ \|DY_A-DY_0\|\le d(r),\quad
+ \|D^2Y\|\le2b.                                        \tag{5.9}
+\]
+They hold in $L^\infty_x$, not merely after spatial integration, and are
+uniform in the family, cutoff and multiplier.
+
+Define the universal pointwise scalar
+\[
+ \phi(C,U,K)={1\over2}\left\{
+ \Tr[U\bB(C)]+\sum_iK_i\otimes K_i:\bT(C)\right\}.      \tag{5.10}
+\]
+For $r\le1$, set
+\[
+ M_0=g(1+52c_0^{-2}),\quad M_C=M_0+a_C+b_C,\quad
+ M_U=a_Q+b_Q,\quad M_K=a_K+b_K,                         \tag{5.11}
+\]
+and define the explicit compact convex data box
+\[
+ \mathcal K=\left\{(C,U,K):C\succeq0,\ \|C\|_{\op}\le M_C,
+ \ \|U\|_{\op}\le M_U,\ \|K\|\le M_K\right\}.          \tag{5.12}
+\]
+Equations (4.12)--(4.13) put every $Y_A(x)$ in $\mathcal K$.  This is
+compactness of covariance data, not compactness of the $\ell^2$ controller
+ball.  The positive A7 floor and (5.4) show that the heat derivatives
+$D^j\phi$, $j\le3$, extend continuously to the compact convex positive-
+semidefinite data set $\mathcal K$.  At a singular covariance this follows by
+writing $W=C^{1/2}Z$, approximating by $C+\epsilon\Id$, and using dominated
+convergence together with the paired-index heat identity; $D^3\bT$ requires
+only the already bounded Gaussian moments of $D^8\mathcal B$.  The mean-value
+theorem below is used only along line segments inside $\mathcal K$.
+Consequently the finite constants
+\[
+ M_j=\sup_{Y\in\mathcal K}\|D^j\phi(Y)\|_{\op}<\infty,
+ \qquad j=2,3,                                           \tag{5.13}
+\]
+are independent of $\mathcal P$, $\Lambda$ and $m_\Lambda$.
+
+The pointwise chain rule is
+\[
+ D^2(\phi\circ Y)_A[H,G]
+ =D^2\phi(Y_A)[DY_AH,DY_AG]+D\phi(Y_A)[D^2Y(H,G)].       \tag{5.14}
+\]
+Subtracting its value at zero, applying the mean-value theorem on
+$\mathcal K$, and using (5.9) gives the explicit operator estimate
+\[
+ \|D^2\cR(A)-D^2\cR(0)\|_{\op}
+ \le \Omega(r):=4096\left\{
+ M_3\eta(r)L(r)^2+4M_2brL(r)+2bM_2\eta(r)
+ \right\}.                                             \tag{5.15}
+\]
+The three terms respectively change $D^2\phi$, its two arguments, and
+$D\phi$; no mode count occurs.  For $0\le r\le1$, set
+\[
+ L_*=4096\left\{
+ M_3(a+b)(a+2b)^2+4M_2b(a+2b)+2bM_2(a+b)
+ \right\}.                                             \tag{5.16}
+\]
+Then (5.15) implies the uniform operator bound
+\[
+ \boxed{
+ \sup_{\substack{\mathcal P\ \mathrm{finite},\ \Lambda<\infty,
+                 |m_\Lambda|\le1\\ \|A\|_{\mathfrak E}\le r}}
+ \|D^2\cR_{\mathcal P,\Lambda}(A)
+      -D^2\cR_{\mathcal P,\Lambda}(0)\|_{\op}
+ \le L_*r.}                                             \tag{5.17}
+\]
+This is the missing family-cardinality-free modulus at fixed physical
+dimension three.  It is not a dimension-uniform field-theory estimate.
+
+\section*{6. Gap retention and the once-owned sextic}
+\hypertarget{section-6-gap}{ }
+
+R-160's actual side-16 lattice theorem gives, for every finite family,
+\[
+ D^2\{\cA_{\rm CM}+\cR\}(0)[H,H]
+ >{4\over25}\|H\|_{\mathfrak E}^2.                    \tag{6.1}
+\]
+Its complete sixth-power Hessian was dropped only as one global positive
+semidefinite form; (6.1) does not borrow positivity from a rootwise split.
+
+The headroom over the T-050 comparison value is
+\[
+ {4\over25}-{1\over10}={3\over50}.                      \tag{6.2}
+\]
+The analytic choice
+\[
+ \delta_*:=\min\left\{1,{3\over100(1+L_*)}\right\}>0    \tag{6.3}
+\]
+satisfies $L_*\delta_*<3/100$.  Then (3.6), (5.17), and
+(6.1) give
+\[
+ D^2\{\cA_{\rm CM}+\cR\}(A)[H,H]
+ >\left({4\over25}-{3\over100}\right)
+     \|H\|_{\mathfrak E}^2
+ ={13\over100}\|H\|_{\mathfrak E}^2.                  \tag{6.4}
+\]
+
+For the affine field direction $z_H$, the remaining terminal term is
+\[
+\begin{aligned}
+ D^2\cS_6(A)[H,H]
+ ={9\over10}\int\E\big[&|W_A|^4|z_H|^2\\
+ &+4|W_A|^2(W_A\mathbin\cdot z_H)^2\big]dx\ge0 .
+\end{aligned}                                                       \tag{6.5}
+\]
+It is retained once, globally.  Adding (6.5) to (6.4) proves (1.3).
+
+The same radius is valid for every finite cutoff, but this is not cutoff
+removal.  No infinite-cutoff action, convergence of measures, or limiting
+operator domain is constructed.
+
+\section*{7. Failed shortcuts and reusable boundaries}
+\hypertarget{section-7-failures}{ }
+
+\subsection*{7.1 Per-family continuity is not enough}
+
+The affine scalar family
+\[
+ \mathcal F_N(h)={2\over25}\|h\|_2^2
+ -{(\sum_jh_j)^4\over4N}
+ +{(\sum_jh_j)^6\over6N^2}                              \tag{7.1}
+\]
+has origin Hessian $4\Id/25$ and a positive-semidefinite sextic Hessian.
+Nevertheless, for
+\[
+ h_N=(N^{-1},\ldots,N^{-1}),\qquad
+ e_N=N^{-1/2}(1,\ldots,1),                               \tag{7.2}
+\]
+one has $\|h_N\|_2=N^{-1/2}\to0$ but
+\[
+ D^2\mathcal F_N(h_N)[e_N,e_N]
+ ={4\over25}-3+{5\over N}
+ =-{71N-125\over25N}<0\quad(N\ge2).                    \tag{7.3}
+\]
+This is a logical coherent-mode fixture, not an A1 counterexample.  It shows
+why R-160 plus qualitative continuity could not prove R-161.  The
+square-summable A1 jets in Section 4 are the new load-bearing input.
+
+\subsection*{7.2 The proof is three-dimensional}
+
+The limiting controlled $Q$-jet square behaves as $|p|^{-4}$, and the
+background value-covariance bound (4.13) uses the same lattice exponent.
+Both sums are finite in three dimensions but logarithmically critical in
+dimension four.  R-161 is not a dimension-independent field-theory theorem.
+
+\subsection*{7.3 Local covariance-normal dominance is still unusable}
+
+Equation (2.8) remains a hard firewall.  R-161 bounds the global terminal
+scalar through (2.1)--(2.6); it supplies no separate $P_{\rm comp}$ lower
+bound at each reveal and no permission to discard future variance in a
+relative owner calculation.
+
+\section*{8. Devil's-advocate audit}
+\hypertarget{section-8-audit}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: a hidden factor $|\mathcal P|$ remains in the
+pointwise covariance sums.}  \textbf{DISMISSED.}  The linear sums use
+Cauchy--Schwarz against the full-lattice square sums (4.8)--(4.10); the
+quadratic sums use $\sum_p\|A_p\|\|H_p\|$.  Neither estimate counts modes.
+
+\item \textbf{Objection: oscillatory phases may destroy compactness.}
+\textbf{DISMISSED.}  The proof takes pointwise absolute operator norms and
+uses no phase compactness or cancellation.  Exact torus integration occurs
+only after the uniform pointwise estimate.
+
+\item \textbf{Objection: the raw derivative covariance diverges with cutoff.}
+\textbf{DISMISSED.}  $Q_0$ cancels exactly in (5.3).  Only $Q-Q_0$, whose
+first jet is square summable, enters the modulus.
+
+\item \textbf{Objection: Gaussian score differentiation uses $C^{-1}$ and
+fails at a zero multiplier.}  \textbf{DISMISSED.}  Equation (5.4) uses
+derivative expectations and remains continuous at singular covariance.
+
+\item \textbf{Objection: the global endpoint was silently substituted for a
+local $P_{\rm comp}$ owner.}  \textbf{DISMISSED WITH A FIREWALL.}
+Equations (2.1)--(2.6) pin the R-107 global telescope and A7 anchor.
+Equation (2.8) is retained explicitly and no local transfer is claimed.
+
+\item \textbf{Objection: the dense sixth-power Hessian was assigned to the
+factor-three graph.}  \textbf{DISMISSED.}  It is not used in the graph or
+the modulus loss.  Equation (6.5) is one complete global PSD form.
+
+\item \textbf{Objection: source-target reuse creates cross-source quadratic
+jets.}  \textbf{DISMISSED in the declared fixed-law chart.}  Distinct raw
+innovations remain independent.  The conclusion would fail for a later
+control that reads a shifted state.
+
+\item \textbf{Objection: cutoff-uniform radius proves cutoff removal.}
+\textbf{UPHELD AS PROHIBITED.}  A common finite-cutoff estimate does not
+construct the infinite endpoint, limiting operator, Gibbs measure, or
+Nelson bound.
+
+\item \textbf{Objection: a local affine theorem closes T-050.}
+\textbf{UPHELD AS PROHIBITED.}  Realised past, recursive and revisit
+feedback, nonlinear predictable laws, the progressive owner decomposition,
+and the complete conditional Hessian remain open.
+
+\item \textbf{Objection: the theorem selects BCC or any other phase/PDE.}
+\textbf{UPHELD AS PROHIBITED.}  R-161 is phase-neutral source-Hessian
+mathematics and contains no candidate-state comparison.
+\end{enumerate}
+
+External review is invited for the R-107-to-R-151 global-owner bridge, the
+antipodal and six-real normalization, the exact symbol envelope, max-shell
+counts, the limiting $Q$-jet exponent, source-target-reuse independence,
+Gaussian heat differentiation at singular covariance, operator-norm chain
+rule, global sextic ownership, and every local-versus-global scope boundary.
+
+\section*{9. Reproduction and Result footer}
+\hypertarget{section-9-reproduction}{ }
+
+Dependencies: A1, A7; R-107, R-141, R-145, R-146, R-151, R-155, R-159,
+R-160; AUDIT-2026-07-30-A13-COVARIANCE-NORMAL-DOMINANCE-ACTION-DIRECTION.
+
+Reproduction command:
+\begin{verbatim}
+& E:\Dev\TECT.venv\Scripts\python.exe `
+  codes/foundations/a13_classii_summable_jet_growing_affine_root_union_
+  uniform_neighborhood_gap_boundary_verify.py
+\end{verbatim}
+
+\begingroup
+\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-SUMMABLE-JET-GROWING-AFFINE-ROOT-UNION-
+ UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY; Ledger ID: R-161.
+Precise statement: one existential l2(HS) radius, uniform over every finite
+ family cardinality, finite cutoff, admitted regulator and factor-three path,
+ retains the global terminal action Hessian gap >13/100>1/10.
+Scope: side-16, fixed A1 symbol and A7 floor, centered no-past common-even
+ covariance-matched exact-torus one-shot fixed-law affine p:2p chart.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Expected output: primary, non-importing independent, and integrated PASS;
+ deterministic PDF and full release PASS.
+Falsification gate: any owner bridge, symbol, shell, jet, Gaussian identity,
+ gap, hash, PDF, public-surface, exploration, or release assertion fails.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no numerical radius, local E_CN=Pcomp transfer,
+ realised past, shifted-state recursion, nonlinear/revisit, removal, T-050,
+ A13, Nelson, measure, phase/PDE, or Sector-A closure.
+Proof complete: false; T-050 closed: false; Sector A closed: false.
+Next required action: instantiate a realised-past or recursive/revisit
+ production law and certify its complete conditional Hessian or counterexample.
+\end{verbatim}
+\endgroup
+
+\endgroup

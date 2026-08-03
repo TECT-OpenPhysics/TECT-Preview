@@ -1272,6 +1272,30 @@ endpoint theorem.
     theorem, cutoff/floor removal, T-050/A13, phase/PDE, Nelson/measure, or
     Sector-A conclusion follows at T4.
 
+81. **Summable covariance jets and a growing affine-root-union uniform
+    neighbourhood.** R-161 closes the nonzero-neighbourhood question left by
+    R-160 for the entire arbitrary-finite one-shot raw-source affine chart.
+    The exact A1 symbol gives value and derivative synthesis decay
+    `|p|^-2` and `|p|^-1`. Full-lattice square sums therefore bound the
+    pointwise `C`, `Q-Q0`, and `K` first jets from `l2(HS)` with no family-size
+    factor, while diagonal quadratic jets have closed constants
+    `b_C=g`, `b_Q=g/2`, and `b_K=g`. The limiting `sum |n|^-4` exponent is
+    finite in spatial dimension three and logarithmically critical in four;
+    fixed dimension three is part of the theorem. The R-107 terminal
+    telescope and exhaustive R-141 `P_comp` sum agree only globally, so the
+    existing local `E_CN=P_comp+V_future/2` firewall remains binding. Exact
+    `Q-Q0` cancellation and heat derivatives through `D8 B` put the global
+    endpoint Hessian on an explicit compact covariance-data box and give a
+    family-, cutoff-, regulator-, and path-length-independent modulus
+    `||D2 R(A)-D2 R(0)||<=L_*||A||`. The analytic radius
+    `delta_*=min(1,3/[100(1+L_*)])` retains the R-160 lattice origin gap as
+    `13/100>1/10`; the terminal sextic is one global PSD form. Primary
+    `65/65` and independent `56/56` audits pass. This is not a realised-past,
+    shifted-state, revisit, nonlinear predictable, removal, local-owner,
+    T-050/A13, phase/PDE, Nelson/measure, or Sector-A theorem. The abstract
+    fixed-law route is now closed at this scope; the next direct calculation
+    must use an actual realised-past or recursive/revisit production law.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.
