@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import Any
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 REPO = Path(__file__).resolve().parents[2]
 CANDIDATE_ID = "PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-OA2-v0"
 PARENT_IDS = (
@@ -28,6 +28,7 @@ PARENT_IDS = (
     "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
 )
 RESULT_ID = "PA-CP1-CL8-GOURSAT-PHASE-SLICE-SEMIDISCRETE-COMPOSITION-OA2"
+NEGATIVE_ID = "NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION"
 SLUG = "pre-a-cp1-cl8-classical-boundary-lattice-oa2"
 SCHEMA = f"tect/{SLUG}-independent/0.1"
 SCRIPT = Path(__file__).resolve()
@@ -228,6 +229,23 @@ def derive() -> dict[str, Any]:
     seam_bond = seam_spacing / 8 * seam_c / 2 * (seam_jump / seam_spacing) ** 2
     expected_seam = seam_c * seam_jump**2 / (16 * seam_spacing)
     audit.check("independent seam bond", seam_bond == expected_seam, seam_bond, expected_seam, "seam_obstruction")
+
+    # Rebuild the admitted unequal-endpoint Goursat fixture independently.
+    fixture_radius = Fraction(1)
+    fixture_tau = Fraction(1, 10)
+    fixture_b_radius = fixture_radius + (1 + 12) * fixture_radius**3
+    fixture_ell_radius = 1 + (3 + 36) * fixture_radius**2
+    fixture_m_zero = Fraction(1, 5)
+    fixture_self_map = fixture_m_zero + fixture_tau**2 * fixture_b_radius / 4
+    fixture_contraction = fixture_tau**2 * fixture_ell_radius / 4
+    fixture_jump = Fraction(1, 5)
+    fixture_wrap_coefficient = fixture_jump**2 / 16
+    audit.check("independent admitted mismatch b_R", fixture_b_radius == 14, fixture_b_radius, 14, "admitted_same_domain_no_go")
+    audit.check("independent admitted mismatch ell_R", fixture_ell_radius == 40, fixture_ell_radius, 40, "admitted_same_domain_no_go")
+    audit.check("independent admitted mismatch self-map gate", fixture_self_map == Fraction(47, 200) and fixture_self_map < fixture_radius, fixture_self_map, Fraction(47, 200), "admitted_same_domain_no_go")
+    audit.check("independent admitted mismatch contraction gate", fixture_contraction == Fraction(1, 10) and fixture_contraction < 1, fixture_contraction, Fraction(1, 10), "admitted_same_domain_no_go")
+    audit.check("independent admitted mismatch phase jump", fixture_jump == Fraction(1, 5), fixture_jump, Fraction(1, 5), "admitted_same_domain_no_go")
+    audit.check("independent admitted mismatch wrap coefficient", fixture_wrap_coefficient == Fraction(1, 400), fixture_wrap_coefficient, Fraction(1, 400), "admitted_same_domain_no_go")
     audit.check("independent exact sampled position error", Fraction(9, 7) - Fraction(9, 7) == 0, 0, 0, "initialization")
     audit.check("independent exact sampled momentum error", Fraction(-5, 11) - Fraction(-5, 11) == 0, 0, 0, "initialization")
 
@@ -301,6 +319,13 @@ def derive() -> dict[str, Any]:
         "direct_length_fixture": length,
         "direct_spacing_fixture": spacing,
         "seam_bond_fixture": seam_bond,
+        "negative_id": NEGATIVE_ID,
+        "mismatch_b_R": fixture_b_radius,
+        "mismatch_ell_R": fixture_ell_radius,
+        "mismatch_self_map": fixture_self_map,
+        "mismatch_contraction": fixture_contraction,
+        "mismatch_jump": fixture_jump,
+        "mismatch_wrap_coefficient": fixture_wrap_coefficient,
         "q_hermite_determinant": q_fill["determinant"],
         "q_hermite_coefficients": q_fill["coefficients"],
         "pi_hermite_determinant": pi_fill["determinant"],
@@ -327,7 +352,7 @@ def derive() -> dict[str, Any]:
             "claim_bearing": False,
             "direct_periodic_seam_branch": True,
             "deterministic_hermite_extension_branch": True,
-            "fixed_smooth_family_discrete_phase_Oa2": True,
+            "fixed_high_regularity_family_discrete_phase_Oa2": True,
             "exact_finite_a_sampling": False,
             "generic_direct_periodic_composition": False,
             "full_pah1_circumference_current_gate": False,

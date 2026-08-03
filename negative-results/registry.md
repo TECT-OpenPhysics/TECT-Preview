@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION](#ng-2026-08-03-pre-a-cp1-cl8-unmatched-periodic-composition) | compose every admitted CL8 Goursat datum unchanged with the current same-domain periodic centered lattice | the exact admitted fixture `A=0`, `B(v)=v e_1`, `tau=1/10` has endpoint jump `1/5`; identifying the endpoints creates wrap-edge gradient energy asymptotic to `c/(400a)`.  The unrestricted composition is false.  Retain the matched periodic phase-jet class, an explicitly justified extension, an open-boundary lattice, or another independently verified interface |
 | [NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE](#ng-2026-08-03-pre-a-cp1-finite-c1-equilibrium-strict-cone) | infer an exact finite-speed zero-response waiting interval from any current finite-dimensional autonomous continuous-time CP1 candidate on its declared positive-distance localization blocks | an open-neighbourhood strict cone differentiates to `P_y exp(tA) P_x=0`; matrix-exponential analyticity and Cayley-Hamilton make this equivalent to vanishing of every cross power `P_y A^n P_x`. Exact ST8/Q3LOCK spatial edges, the ordered Q3 species Hessian, and CP1a collocation coefficients `28/9`, `-19/9`, and indirect `-38/3` all violate the criterion. Retain quasi-local bounds, a controlled hyperbolic continuum limit, or an exact-causal discrete-time/enlarged parent; this does not reject QFT microcausality, physical empty space, CP1, or Pre-A |
 | [NG-2026-08-03-PRE-A-CP1-Q3LOCK-QUADRATIC-CONNECTIVITY-CI8](#ng-2026-08-03-pre-a-cp1-q3lock-quadratic-connectivity-ci8) | preserve all eight constant-species critical zero modes while connecting the ST8 species by a positive quadratic Dirichlet form on a connected graph | at `r=0` and spatial momentum zero, the added Hessian is `eta*L_G`; a connected positive graph Laplacian has one-dimensional kernel. For `Q3` the spectrum is `0,2eta^(3),4eta^(3),6eta`, so critical nullity falls from eight to one. Retain nonlinear quartic locking as the minimal-degree analytic repair, or change the zero-mode origin, sign structure, constraints, or quotient |
 | [NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE](#ng-2026-08-03-pre-a-cp1-st8-continuous-time-exact-cone) | infer an exact finite-regulator compact-support domain of dependence or PA-H1 characteristic sheets from the bounded harmonic group speed of `PA-CP1-ST8-CB-v0` | the continuous-time semidiscrete harmonic propagator has nearest-neighbour response `c*t^2/(2chi)+O(t^4)`, nonzero for all sufficiently small positive times, so every proposed finite strict support cone fails. Retain effective speeds and possible quasi-local bounds; pursue a controlled Lorentzian continuum limit, an exact-causal discrete-time parent, or a separately supplied hyperbolic parent |
@@ -256,6 +257,39 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-pre-a-cp1-cl8-unmatched-periodic-composition"></a>
+### NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION -- admitted Goursat traces need not define periodic phase data
+
+**Failure mode.**  Compose every datum admitted by the current CL8 Goursat
+theorem, without changing its domain or adding a boundary condition, with the
+current periodic centered semidiscrete lattice and retain an `O(a^2)` energy
+interface.
+
+**Evidence.**  Set `r=g=lambda=chi=c=R=1`, `tau=1/10`, `A(u)=0`,
+`B(v)=v e_1`, and `C=0`.  The exact Goursat gates are strict:
+
+`M0=1/5`, `M0+tau^2*b_R/(4chi)=47/200<1`, and
+`tau^2*ell_R/(4chi)=1/10`.
+
+The time-`tau` phase slice nevertheless has
+`Phi(-tau)=B(2tau)=e_1/5` and `Phi(tau)=A(2tau)=0`.  It is not a continuous
+function on the torus obtained by identifying the endpoints.  If the interior
+samples are forcibly wrapped, the final lattice edge has difference
+`e_1/5+o(1)` and its gradient-energy contribution is asymptotic to
+`c/(400a)`.  It therefore cannot converge with order `a^2` to the finite
+Goursat boundary energy.  The primary and non-importing independent audits
+recompute the fixture, strict gates, jump, and wrap coefficient exactly.
+
+**Consequence.**  The universal unchanged same-domain periodic composition is
+false.  A conditional composition survives for `C7` traces whose field jets
+through order seven and momentum jets through order six match at the phase
+slice endpoints; on that supplied class, exact sampling and the existing
+semidiscrete theorem give the declared classical `O(a^2)` interface.  Other
+surviving repairs include a separately justified periodic extension or an
+open-boundary discretization.  This no-go does not select the matched gate or
+a state, establish finite-regulator exact support, derive a physical vacuum,
+or close CP1 or Pre-A.
 
 <a id="ng-2026-08-03-pre-a-cp1-finite-c1-equilibrium-strict-cone"></a>
 ### NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE -- finite autonomous equilibrium channels have no delayed variational onset

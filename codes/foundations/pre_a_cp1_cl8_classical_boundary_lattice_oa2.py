@@ -2,7 +2,7 @@
 """Primary exact audit for the classical CL8 boundary-to-lattice bridge.
 
 The executable audits the null-slice/grid geometry, periodic seam obstruction,
-explicit Hermite jet fills, fixed-smooth-family energy and symplectic
+explicit Hermite jet fills, fixed-high-regularity-family energy and symplectic
 quadrature, trigonometric reconstruction multipliers, the deterministic
 measure coupling, and the PA-H1 full-circumference contraction obstruction.
 The infinite-dimensional analytic arguments are proved in the certificate.
@@ -24,7 +24,7 @@ from typing import Any
 import sympy as sp
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 REPO = Path(__file__).resolve().parents[2]
 CANDIDATE_ID = "PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-OA2-v0"
 PARENT_IDS = (
@@ -32,6 +32,7 @@ PARENT_IDS = (
     "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
 )
 RESULT_ID = "PA-CP1-CL8-GOURSAT-PHASE-SLICE-SEMIDISCRETE-COMPOSITION-OA2"
+NEGATIVE_ID = "NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION"
 SLUG = "pre-a-cp1-cl8-classical-boundary-lattice-oa2"
 SCHEMA = f"tect/{SLUG}-primary/0.1"
 SCRIPT = Path(__file__).resolve()
@@ -226,6 +227,24 @@ def derive() -> dict[str, Any]:
     seam_laplacian_lead = derivative_jump / a
     audit.check("derivative seam residual is order a^-1", sp.simplify(a * seam_laplacian_lead) == derivative_jump, seam_laplacian_lead, "d_jump/a", "seam_obstruction")
 
+    # Exact admitted fixture proving that the generic direct-seam obstruction
+    # occurs inside, rather than merely outside, the parent Goursat gates.
+    fixture_radius = sp.Integer(1)
+    fixture_tau = sp.Rational(1, 10)
+    fixture_b_radius = fixture_radius + (1 + 12) * fixture_radius**3
+    fixture_ell_radius = 1 + (3 + 36) * fixture_radius**2
+    fixture_m_zero = sp.Rational(1, 5)
+    fixture_self_map = fixture_m_zero + fixture_tau**2 * fixture_b_radius / 4
+    fixture_contraction = fixture_tau**2 * fixture_ell_radius / 4
+    fixture_jump = sp.Rational(1, 5)
+    fixture_wrap = sp.factor(seam_bond.subs({c: 1, delta: fixture_jump}))
+    audit.check("admitted mismatch b_R", fixture_b_radius == 14, fixture_b_radius, 14, "admitted_same_domain_no_go")
+    audit.check("admitted mismatch ell_R", fixture_ell_radius == 40, fixture_ell_radius, 40, "admitted_same_domain_no_go")
+    audit.check("admitted mismatch self-map gate", fixture_self_map == sp.Rational(47, 200) and fixture_self_map < fixture_radius, fixture_self_map, sp.Rational(47, 200), "admitted_same_domain_no_go")
+    audit.check("admitted mismatch contraction gate", fixture_contraction == sp.Rational(1, 10) and fixture_contraction < 1, fixture_contraction, sp.Rational(1, 10), "admitted_same_domain_no_go")
+    audit.check("admitted mismatch phase jump", fixture_jump == sp.Rational(1, 5), fixture_jump, sp.Rational(1, 5), "admitted_same_domain_no_go")
+    audit.check("admitted mismatch wrap coefficient", fixture_wrap == 1 / (400 * a), fixture_wrap, 1 / (400 * a), "admitted_same_domain_no_go")
+
     # Explicit deterministic jet fills: q uses C7 matching, Pi uses C6.
     gap = sp.Rational(2)
     q_fill = hermite_fixture(order=7, source_power=8, gap=gap)
@@ -352,6 +371,13 @@ def derive() -> dict[str, Any]:
         "u_node": u_node,
         "v_node": v_node,
         "seam_bond": seam_bond,
+        "negative_id": NEGATIVE_ID,
+        "mismatch_b_R": fixture_b_radius,
+        "mismatch_ell_R": fixture_ell_radius,
+        "mismatch_self_map": fixture_self_map,
+        "mismatch_contraction": fixture_contraction,
+        "mismatch_jump": fixture_jump,
+        "mismatch_wrap_coefficient": sp.factor(a * fixture_wrap),
         "q_hermite_determinant": q_fill["determinant"],
         "q_hermite_coefficients": q_fill["coefficients"],
         "pi_hermite_determinant": pi_fill["determinant"],
@@ -378,7 +404,7 @@ def derive() -> dict[str, Any]:
             "claim_bearing": False,
             "direct_periodic_seam_branch": True,
             "deterministic_hermite_extension_branch": True,
-            "fixed_smooth_family_discrete_phase_Oa2": True,
+            "fixed_high_regularity_family_discrete_phase_Oa2": True,
             "trigonometric_reconstruction_H1_L2_Oa2": True,
             "supplied_classical_phase_measure_W1_Oa2": True,
             "generic_direct_periodic_composition": False,

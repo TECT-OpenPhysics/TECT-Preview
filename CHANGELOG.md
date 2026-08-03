@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [T-054,A13: harden CL8 same-domain split and record decisive route boundaries] - 2026-08-03
+
+EXP-000731 hardens the concurrent CL8 composition package. The exact admitted A=0, B(v)=v e_1, tau=1/10 fixture has self-map 47/200<1, contraction 1/10<1, endpoint jump 1/5 and natural-circle wrap energy asymptotic c/(400a), formally registering NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION. The matched direct seam remains proved; the declared larger-circle Hermite fill remains a separately proved noncanonical alternative with H_ext and Omega_ext, not generic unchanged same-domain composition. Finite C8 traces yield H7 x H6 high-regularity classical evolution, not a C-infinity statement. Hardened primary 55/55, independent 44/44 and integrated 135/135 checks pass, 234 combined. EXP-000732 records that the q=10/9 integrated tilted-law route returns exactly to the open complete signed trace-excess or a new occupation/Fisher estimate. EXP-000733 reduces the legal sparse A13 chart to a 12 by 12 PSD problem but records that no interval-certified annulus or cutoff-uniform owner-legal lift exists. T-050 stays parked; no R-result, claim tier, selected state, physical vacuum, C6 advancement, CP1, Pre-A, or Sector-A closure changes.
+
 ## [T-054: correct classical CL8 composition exploration id after concurrent rebase] - 2026-08-03
 
 A concurrent remote commit occupied EXP-000729 before the classical CL8 composition checkpoint was published. The CL8 route record is therefore registered as EXP-000730. In event 20260803-t-054-close-classical-cl8-boundary-lattice-comp, read the EXP-000729 keyword as EXP-000730. T-054 now points to EXP-000730. The candidate certificate, theorem scope, 205-check total, open full-circumference and preferred-state gates, and absence of any formal result, new negative, claim-tier, physical-empty-space, CP1, or Pre-A closure are unchanged.

@@ -1,6 +1,6 @@
 {
   "assertions": {
-    "passed": 49,
+    "passed": 55,
     "rows": [
       {
         "actual": "PA-CP1-CL8-GOURSAT-v0",
@@ -136,6 +136,48 @@
         "expected": "d_jump/a",
         "group": "seam_obstruction",
         "name": "derivative seam residual is order a^-1",
+        "status": "PASS"
+      },
+      {
+        "actual": "14",
+        "expected": 14,
+        "group": "admitted_same_domain_no_go",
+        "name": "admitted mismatch b_R",
+        "status": "PASS"
+      },
+      {
+        "actual": "40",
+        "expected": 40,
+        "group": "admitted_same_domain_no_go",
+        "name": "admitted mismatch ell_R",
+        "status": "PASS"
+      },
+      {
+        "actual": "47/200",
+        "expected": "47/200",
+        "group": "admitted_same_domain_no_go",
+        "name": "admitted mismatch self-map gate",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/10",
+        "expected": "1/10",
+        "group": "admitted_same_domain_no_go",
+        "name": "admitted mismatch contraction gate",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/5",
+        "expected": "1/5",
+        "group": "admitted_same_domain_no_go",
+        "name": "admitted mismatch phase jump",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/(400*a)",
+        "expected": "1/(400*a)",
+        "group": "admitted_same_domain_no_go",
+        "name": "admitted mismatch wrap coefficient",
         "status": "PASS"
       },
       {
@@ -470,7 +512,7 @@
         "status": "PASS"
       }
     ],
-    "total": 49
+    "total": 55
   },
   "candidate_id": "PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-OA2-v0",
   "exact_results": {
@@ -478,6 +520,13 @@
     "gradient_energy_difference_series": "pi*a**2*c*(a**2 - 30)/5760",
     "gradient_symbol_series": "(a**4 - 30*a**2 + 360)/360",
     "measure_coupling_cost_fixture": "1/60",
+    "mismatch_b_R": "14",
+    "mismatch_contraction": "1/10",
+    "mismatch_ell_R": "40",
+    "mismatch_jump": "1/5",
+    "mismatch_self_map": "47/200",
+    "mismatch_wrap_coefficient": "1/400",
+    "negative_id": "NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION",
     "pah1_ordered_q_lower": "9*pi**2/32",
     "pah1_shifted_q_lower": "9*pi**2/64",
     "pi_hermite_coefficients": [
@@ -523,7 +572,7 @@
     "u_node": "2*j*tau/M",
     "v_node": "-2*tau*(-M + j)/M"
   },
-  "package_version": "0.1.0",
+  "package_version": "0.1.1",
   "parent_ids": [
     "PA-CP1-CL8-GOURSAT-v0",
     "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0"
@@ -534,7 +583,7 @@
     "goursat_manifest": "strategy/pre-a-cp1-cl8-goursat-manifest.json",
     "goursat_manifest_sha256": "571ac5cd92fffd25e14da57ec9c4ef17e2550f72718d739f1a335dfb27c4647b",
     "script": "codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2.py",
-    "script_sha256": "d52477034e6c888bd82d19db0a1060240139836eaea53d9f1c86f8db97b94735",
+    "script_sha256": "09a784afbb297ff6452baf0f0503f752a579cc5809e9d867ae7b3d87cbe4815b",
     "semidiscrete_manifest": "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest.json",
     "semidiscrete_manifest_sha256": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a"
   },
@@ -547,7 +596,7 @@
     "direct_periodic_seam_branch": true,
     "exact_finite_a_energy_or_symplectic_sampling": false,
     "finite_a_goursat_scheme": false,
-    "fixed_smooth_family_discrete_phase_Oa2": true,
+    "fixed_high_regularity_family_discrete_phase_Oa2": true,
     "full_pah1_circumference_current_gate": false,
     "generic_direct_periodic_composition": false,
     "physical_empty_space": false,

@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 REPO = Path(__file__).resolve().parents[2]
 CANDIDATE_ID = "PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-OA2-v0"
 PARENT_IDS = (
@@ -23,6 +23,7 @@ PARENT_IDS = (
     "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
 )
 RESULT_ID = "PA-CP1-CL8-GOURSAT-PHASE-SLICE-SEMIDISCRETE-COMPOSITION-OA2"
+NEGATIVE_ID = "NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION"
 CANDIDATE_FAMILY = "PRE-A-CL8-CLASSICAL-CHARACTERISTIC-TO-REGULATOR-COMPOSITION"
 SLUG = "pre-a-cp1-cl8-classical-boundary-lattice-oa2"
 SCHEMA = f"tect/{SLUG}-integrated/0.1"
@@ -44,6 +45,7 @@ SEMIDISCRETE_CERTIFICATE = REPO / "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa
 GOURSAT_INTEGRATED = REPO / "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-goursat/result.json"
 SEMIDISCRETE_INTEGRATED = REPO / "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json"
 STRATEGY_INDEX = REPO / "strategy/INDEX.md"
+NEGATIVE_REGISTRY = REPO / "negative-results/registry.md"
 STORED_PRIMARY = (
     REPO
     / "claims/C6-SPACETIME-SIGNATURE/runs"
@@ -59,8 +61,8 @@ DEFAULT_OUTPUT = (
     / "claims/C6-SPACETIME-SIGNATURE/runs"
     / f"2026-08-03-integrated-{SLUG}/result.json"
 )
-EXPECTED_PRIMARY_ASSERTIONS = 49
-EXPECTED_INDEPENDENT_ASSERTIONS = 38
+EXPECTED_PRIMARY_ASSERTIONS = 55
+EXPECTED_INDEPENDENT_ASSERTIONS = 44
 
 
 def serial(value: Any) -> Any:
@@ -143,6 +145,7 @@ def verify() -> dict[str, Any]:
         GOURSAT_INTEGRATED,
         SEMIDISCRETE_INTEGRATED,
         STRATEGY_INDEX,
+        NEGATIVE_REGISTRY,
         STORED_PRIMARY,
         STORED_INDEPENDENT,
     )
@@ -157,6 +160,7 @@ def verify() -> dict[str, Any]:
     finite_nogo = json.loads(FINITE_NOGO.read_text(encoding="utf-8"))
     certificate_text = CERTIFICATE.read_text(encoding="utf-8")
     index_text = STRATEGY_INDEX.read_text(encoding="utf-8")
+    negative_registry_text = NEGATIVE_REGISTRY.read_text(encoding="utf-8")
     stored_primary = json.loads(STORED_PRIMARY.read_text(encoding="utf-8"))
     stored_independent = json.loads(STORED_INDEPENDENT.read_text(encoding="utf-8"))
 
@@ -271,6 +275,13 @@ def verify() -> dict[str, Any]:
     )
 
     comparable_keys = (
+        "negative_id",
+        "mismatch_b_R",
+        "mismatch_ell_R",
+        "mismatch_self_map",
+        "mismatch_contraction",
+        "mismatch_jump",
+        "mismatch_wrap_coefficient",
         "q_hermite_determinant",
         "q_hermite_coefficients",
         "pi_hermite_determinant",
@@ -346,8 +357,26 @@ def verify() -> dict[str, Any]:
     )
     mapping_text = canonical(resolution["mapping"])
     mapping_upper = mapping_text.upper()
-    for token in ("PROVED", "MOVED", "NOT REQUIRED", "finite-a", "preferred or invariant classical-measure selection", "quantum-state composition"):
+    for token in ("PROVED", "REFUTED", "separately proved alternative", "MOVED", "NOT REQUIRED", "finite-a", "preferred or invariant classical-measure selection", "quantum-state composition"):
         check(f"gate mapping token: {token}", token.upper() in mapping_upper, token.upper() in mapping_upper, True, "gate_split")
+    same_domain_no_go = manifest["unrestricted_same_domain_no_go"]
+    check(
+        "formal admitted same-domain no-go identity and gates",
+        same_domain_no_go["negative_id"] == NEGATIVE_ID
+        and "47/200<1" in same_domain_no_go["strict_gate_values"]
+        and "1/10<1" in same_domain_no_go["strict_gate_values"]
+        and "c/(400a)" in same_domain_no_go["wrap_energy"],
+        same_domain_no_go,
+        "negative ID, strict fixture gates, and wrap coefficient",
+        "gate_split",
+    )
+    check(
+        "formal negative registry entry present",
+        NEGATIVE_ID in negative_registry_text,
+        NEGATIVE_ID in negative_registry_text,
+        True,
+        "gate_split",
+    )
     check(
         "next route gates remain open",
         all(entry["status"].startswith("OPEN") for entry in manifest["next_route_gates"].values()),
@@ -458,6 +487,10 @@ def verify() -> dict[str, Any]:
         "section-11-measure",
         "section-13-calibration",
         "section-14-gate-split",
+        "NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION",
+        "{47\\over200}",
+        "{c\\over400a}",
+        "High-regularity periodic Cauchy continuation",
         "PA-CP1-CL8-PREFERRED-STATE-COMPOSITION-SELECTION",
         "9\\pi^2\\over32",
         "H_{\\rm ext}",
@@ -469,6 +502,17 @@ def verify() -> dict[str, Any]:
     )
     for token in required_certificate_tokens:
         check(f"certificate token: {token}", token in certificate_text, token in certificate_text, True, "certificate")
+    check(
+        "finite regularity is not promoted to C-infinity evolution",
+        "global smooth" not in certificate_text
+        and "smooth classical" not in manifest["no_overclaim"],
+        {
+            "certificate_has_global_smooth": "global smooth" in certificate_text,
+            "manifest_has_smooth_classical": "smooth classical" in manifest["no_overclaim"],
+        },
+        {"certificate_has_global_smooth": False, "manifest_has_smooth_classical": False},
+        "certificate",
+    )
     check(
         "strategy index route",
         "pre-a-cp1-cl8-classical-boundary-lattice-oa2-manifest.json" in index_text,

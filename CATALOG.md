@@ -4,7 +4,7 @@
 <!-- DO NOT HAND-EDIT. Derived index — sources of truth are the files,
      claims/*/status.json, and git history. Regenerate at will. -->
 
-Generated: 2026-08-03
+Generated: 2026-08-04
 
 **3371 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
 
@@ -183,7 +183,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_stationary_polarized_trace_defect_replica_root_shell_boundary_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `f0c0153bd846` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_stopped_current_far_complete_current_near_reduction_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `a4630faace23` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_strict_past_signed_causal_reduction_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `fd59d6148b37` |
-| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_summable_jet_growing_affine_root_union_uniform_neighborhood_gap_boundary_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `3d3c3f02cf69` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_summable_jet_growing_affine_root_union_uniform_neighborhood_gap_boundary_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `4e9a00593c72` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_terminal_smoothing_fixed_law_action_aggregate_collar_boundary_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `7b03da2d63e2` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_terminal_xi_conormal_gram_balanced_low_response_boundary_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `4ebb3a9fc553` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_tip_safe_grouped_harvest_carleson_reduction_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `548907f786a8` |
@@ -560,7 +560,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/C5-NEWTON-G/LINEAGE.md` | C5-NEWTON-G | — | — | — | ACTIVE | `bfa4c008b151` |
 | `claims/C5-NEWTON-G/claim.md` | C5-NEWTON-G | — | — | — | ACTIVE | `9608de91436e` |
 | `claims/C5-NEWTON-G/status.json` | C5-NEWTON-G | — | — | — | ACTIVE | `2d4f704d215b` |
-| `claims/C6-SPACETIME-SIGNATURE/LINEAGE.md` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `4ee4af052a19` |
+| `claims/C6-SPACETIME-SIGNATURE/LINEAGE.md` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `625644bb07c1` |
 | `claims/C6-SPACETIME-SIGNATURE/claim.md` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `67c0eb3b3c67` |
 | `claims/C6-SPACETIME-SIGNATURE/status.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `a0d6d7cd9977` |
 | `claims/D1-SO10-BUNDLE/LINEAGE.md` | D1-SO10-BUNDLE | — | — | — | ACTIVE | `ba1a666c32e1` |
@@ -2260,9 +2260,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-independent-disjoint-multipair-factor-three-resonance-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `19da5f574e39` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-independent-production-strict-past-conditional-hessian-weighted-collar-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `0f1e45ba07ed` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-independent-pure-dyadic-regulator-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `9e0f67d7e8c1` |
-| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-independent-resolvent-pure-dyadic-recursive-chain-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `0dcd1ce7d37b` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-independent-resolvent-pure-dyadic-recursive-chain-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `1226826f707c` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-independent-shifted-state-nonzero-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `20a6a2d919e2` |
-| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-independent-summable-jet-growing-affine-root-union-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `fa6c05d2edfc` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-independent-summable-jet-growing-affine-root-union-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `86b79f7b1d8c` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-independent-two-root-endpoint-hessian-uniform-local-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `2641a02a31d7` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-independent-weighted-schur-growing-affine-root-union-origin-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `ad87a2d96173` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-integrated-affine-past-nonlinear-multiroot-globalization-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `eee4e08259f0` |
@@ -2270,9 +2270,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-integrated-disjoint-multipair-factor-three-resonance-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `10edc74568c4` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-integrated-production-strict-past-conditional-hessian-weighted-collar-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `b51c75b0761a` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-integrated-pure-dyadic-regulator-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `d7a3e7e8d082` |
-| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-integrated-resolvent-pure-dyadic-recursive-chain-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `e3e3b0146e3c` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-integrated-resolvent-pure-dyadic-recursive-chain-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `15e564071bf9` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-integrated-shifted-state-nonzero-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `c8174ff7d1cb` |
-| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-integrated-summable-jet-growing-affine-root-union-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `830abbfae1d2` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-integrated-summable-jet-growing-affine-root-union-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `fa6bb2124438` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-integrated-two-root-endpoint-hessian-uniform-local-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `0e996fd7d4e7` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-integrated-weighted-schur-growing-affine-root-union-origin-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `d09ef4aaa837` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-primary-affine-past-nonlinear-multiroot-globalization-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `ae943b09eb25` |
@@ -2280,9 +2280,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-primary-disjoint-multipair-factor-three-resonance-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `98490c7484ce` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-primary-production-strict-past-conditional-hessian-weighted-collar-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `608c92c2c4cc` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-primary-pure-dyadic-regulator-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `4099de98fe6b` |
-| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-primary-resolvent-pure-dyadic-recursive-chain-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `d5f9699761e7` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-primary-resolvent-pure-dyadic-recursive-chain-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `c0d94aa0fca4` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-primary-shifted-state-nonzero-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `65b781c43201` |
-| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-primary-summable-jet-growing-affine-root-union-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `fe4a3b9cd127` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-primary-summable-jet-growing-affine-root-union-uniform-neighborhood-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `6b4f39db5600` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-primary-two-root-endpoint-hessian-uniform-local-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `c30654257de7` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-03-primary-weighted-schur-growing-affine-root-union-origin-gap-boundary/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `3182cec776a2` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-coercivity-baseline/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `b9df1470a98f` |
@@ -2643,47 +2643,47 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260614-dr2-t030-height-multiplicity/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `341c06cb220f` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260614-dr2-t030-sidon-decoupling/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `dc57e50185df` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0-dynamical-completion-underdetermination/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `3c7dc7c22f6a` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `80bdb86d66c2` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `f58860f75f11` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0a-reflection-positive-transfer/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `c41853a798db` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0b-equivariant-causal-selection-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `61ace49c0b2f` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-classical-boundary-lattice-oa2/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `7d6e9788af02` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-goursat/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `2ea690259b0e` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `18dc3468aef9` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-classical-boundary-lattice-oa2/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `dcfd4a4acf8e` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-goursat/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `aac30dda4925` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `dc4aa329226a` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-fdan-strict-cone-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `ef57202da37e` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-lt3-rs-common-container/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `f880a32f1150` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-st8-block-causal-bridge/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `10dc2321a591` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-lt3-rs-common-container/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `130a87f9e468` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-st8-block-causal-bridge/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `1ded87877117` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-st8-q3lock/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `0994ad899103` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1a-t3-cubic-sos-common-parent/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `5baf581e0a34` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-double-null-semilinear-reconstruction/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `82be800e5b42` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-pah1-m2-strict-composition-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `b0a0ed1ea035` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-pah1-m2-strict-composition-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `af0013036743` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0-dynamical-completion-underdetermination/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `e2217a959985` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `264c04b453c5` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `65d826522b8d` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0a-reflection-positive-transfer/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `45155b8e7750` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0b-equivariant-causal-selection-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `714fac16a9fb` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-classical-boundary-lattice-oa2/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `b6058cf148db` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-goursat/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `1ff142b9d03c` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `b2f1c6ba224a` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-classical-boundary-lattice-oa2/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `58e7e7186222` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-goursat/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `904b2cddc355` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `e584705b2aa0` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-fdan-strict-cone-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `9d9969398db4` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-lt3-rs-common-container/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `2d30b5fabad2` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-st8-block-causal-bridge/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `f8728c7c2581` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-st8-q3lock/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `ad25e3531eed` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1a-t3-cubic-sos-common-parent/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `19190f56bde1` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-lt3-rs-common-container/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `5d3dc6e40f13` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-st8-block-causal-bridge/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `3d55ab0eee24` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-st8-q3lock/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `6da4d8b515a1` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1a-t3-cubic-sos-common-parent/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `cac0ca35e52b` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-double-null-semilinear-reconstruction/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `b723b3500b2d` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-pah1-m2-strict-composition-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `e05d7f1f304c` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-pah1-m2-strict-composition-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `6cdd1263578b` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0-dynamical-completion-underdetermination/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `50245598bd1d` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `c4fc68ce24c6` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `e707c31b3f12` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0a-reflection-positive-transfer/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `15ea65f2efed` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0b-equivariant-causal-selection-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `c151745e0ff4` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-classical-boundary-lattice-oa2/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `f1a73acb4678` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-goursat/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `2c4bb46bfeb0` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `5169fbd39061` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-classical-boundary-lattice-oa2/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `da45126f2733` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-goursat/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `60850fc52bfc` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `80e73c279c15` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-fdan-strict-cone-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `c47b0eb17319` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-lt3-rs-common-container/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `02713f4586ef` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-st8-block-causal-bridge/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `ddf0261a656a` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-lt3-rs-common-container/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `98ae5d0770e8` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-st8-block-causal-bridge/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `4c9206650eb1` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-st8-q3lock/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `5997bcc510db` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1a-t3-cubic-sos-common-parent/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `2d91f91582fa` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-double-null-semilinear-reconstruction/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `bf84e5817bd5` |
-| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-pah1-m2-strict-composition-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `92250b17b4f9` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-pah1-m2-strict-composition-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `836f9a68aa1f` |
 
 ## Domain codes
 
@@ -3082,40 +3082,40 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/foundations/pre_a_c0_dynamical_completion_underdetermination.py` | — | — | — | v0.1.0 | ACTIVE | `bf49411f4cde` |
 | `codes/foundations/pre_a_c0_dynamical_completion_underdetermination_independent.py` | — | — | — | v0.1.0 | ACTIVE | `56a3eb7cb951` |
 | `codes/foundations/pre_a_c0_dynamical_completion_underdetermination_verify.py` | — | — | — | v0.1.0 | ACTIVE | `a85376feb8b3` |
-| `codes/foundations/pre_a_c0a_gaussian_ccr_pah1_embedding.py` | — | — | — | v0.1.0 | ACTIVE | `28cd55f5c131` |
-| `codes/foundations/pre_a_c0a_gaussian_ccr_pah1_embedding_independent.py` | — | — | — | v0.1.0 | ACTIVE | `5dae9f2a4de1` |
-| `codes/foundations/pre_a_c0a_gaussian_ccr_pah1_embedding_verify.py` | — | — | — | v0.1.0 | ACTIVE | `4d5cb7403100` |
+| `codes/foundations/pre_a_c0a_gaussian_ccr_pah1_embedding.py` | — | — | — | v0.1.0 | ACTIVE | `142bf6d6b70d` |
+| `codes/foundations/pre_a_c0a_gaussian_ccr_pah1_embedding_independent.py` | — | — | — | v0.1.0 | ACTIVE | `7dab4c380c45` |
+| `codes/foundations/pre_a_c0a_gaussian_ccr_pah1_embedding_verify.py` | — | — | — | v0.1.0 | ACTIVE | `f55085ff50db` |
 | `codes/foundations/pre_a_c0a_reflection_positive_transfer.py` | — | — | — | v0.1.0 | ACTIVE | `fa6865b29118` |
 | `codes/foundations/pre_a_c0a_reflection_positive_transfer_independent.py` | — | — | — | v0.1.0 | ACTIVE | `2b15452298e1` |
 | `codes/foundations/pre_a_c0a_reflection_positive_transfer_verify.py` | — | — | — | v0.1.0 | ACTIVE | `4443b6a31758` |
 | `codes/foundations/pre_a_c0b_equivariant_causal_selection_nogo.py` | — | — | — | v0.1.0 | ACTIVE | `858252f0c9a4` |
 | `codes/foundations/pre_a_c0b_equivariant_causal_selection_nogo_independent.py` | — | — | — | v0.1.0 | ACTIVE | `0ed18d82ab7a` |
 | `codes/foundations/pre_a_c0b_equivariant_causal_selection_nogo_verify.py` | — | — | — | v0.1.0 | ACTIVE | `bd62120c91ea` |
-| `codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2.py` | — | — | — | v0.1.0 | ACTIVE | `d52477034e6c` |
-| `codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2_independent.py` | — | — | — | v0.1.0 | ACTIVE | `e86a5cc95b60` |
-| `codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2_verify.py` | — | — | — | v0.1.0 | ACTIVE | `a0f1e31d9822` |
-| `codes/foundations/pre_a_cp1_cl8_goursat.py` | — | — | — | v0.1.0 | ACTIVE | `f2aedce7e2a0` |
-| `codes/foundations/pre_a_cp1_cl8_goursat_independent.py` | — | — | — | v0.1.0 | ACTIVE | `4450e9ea67c4` |
-| `codes/foundations/pre_a_cp1_cl8_goursat_verify.py` | — | — | — | v0.1.0 | ACTIVE | `3ac32ce900e7` |
-| `codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2.py` | — | — | — | v0.1.0 | ACTIVE | `459c2027435a` |
-| `codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2_independent.py` | — | — | — | v0.1.0 | ACTIVE | `378c461c2716` |
-| `codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2_verify.py` | — | — | — | v0.1.0 | ACTIVE | `e8755e1ec38c` |
+| `codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2.py` | — | — | — | v0.1.1 | ACTIVE | `d3a95da5b91f` |
+| `codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2_independent.py` | — | — | — | v0.1.1 | ACTIVE | `ee788804c58b` |
+| `codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2_verify.py` | — | — | — | v0.1.1 | ACTIVE | `7f4811bd39e6` |
+| `codes/foundations/pre_a_cp1_cl8_goursat.py` | — | — | — | v0.1.0 | ACTIVE | `ee1dd8a3d405` |
+| `codes/foundations/pre_a_cp1_cl8_goursat_independent.py` | — | — | — | v0.1.0 | ACTIVE | `b35895b8a11c` |
+| `codes/foundations/pre_a_cp1_cl8_goursat_verify.py` | — | — | — | v0.1.0 | ACTIVE | `0a5b1847850f` |
+| `codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2.py` | — | — | — | v0.1.0 | ACTIVE | `b895b1df0711` |
+| `codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2_independent.py` | — | — | — | v0.1.0 | ACTIVE | `3897328f6cdc` |
+| `codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2_verify.py` | — | — | — | v0.1.0 | ACTIVE | `b9475db96332` |
 | `codes/foundations/pre_a_cp1_fdan_strict_cone_nogo.py` | — | — | — | v0.1.0 | ACTIVE | `8cf59ecce686` |
 | `codes/foundations/pre_a_cp1_fdan_strict_cone_nogo_independent.py` | — | — | — | v0.1.0 | ACTIVE | `58e88a2069c7` |
 | `codes/foundations/pre_a_cp1_fdan_strict_cone_nogo_verify.py` | — | — | — | v0.1.0 | ACTIVE | `8a16f2e2d459` |
 | `codes/foundations/pre_a_cp1_lt3_rs_common_container.py` | — | — | — | v0.1.0 | ACTIVE | `ff88df6b6816` |
 | `codes/foundations/pre_a_cp1_lt3_rs_common_container_independent.py` | — | — | — | v0.1.0 | ACTIVE | `5368aaa04f42` |
-| `codes/foundations/pre_a_cp1_lt3_rs_common_container_verify.py` | — | — | — | v0.1.0 | ACTIVE | `3b3815cb6793` |
-| `codes/foundations/pre_a_cp1_st8_block_causal_bridge.py` | — | — | — | v0.1.0 | ACTIVE | `c7038d05def1` |
-| `codes/foundations/pre_a_cp1_st8_block_causal_bridge_independent.py` | — | — | — | v0.1.0 | ACTIVE | `187726589144` |
-| `codes/foundations/pre_a_cp1_st8_block_causal_bridge_verify.py` | — | — | — | v0.1.0 | ACTIVE | `880032a933e5` |
+| `codes/foundations/pre_a_cp1_lt3_rs_common_container_verify.py` | — | — | — | v0.1.0 | ACTIVE | `0403294e6161` |
+| `codes/foundations/pre_a_cp1_st8_block_causal_bridge.py` | — | — | — | v0.1.0 | ACTIVE | `c0bee3a733ed` |
+| `codes/foundations/pre_a_cp1_st8_block_causal_bridge_independent.py` | — | — | — | v0.1.0 | ACTIVE | `ab623f2e3e27` |
+| `codes/foundations/pre_a_cp1_st8_block_causal_bridge_verify.py` | — | — | — | v0.1.0 | ACTIVE | `fb44c4f07ef7` |
 | `codes/foundations/pre_a_cp1_st8_q3lock.py` | — | — | — | v0.1.0 | ACTIVE | `23c98eebdc41` |
 | `codes/foundations/pre_a_cp1_st8_q3lock_independent.py` | — | — | — | v0.1.0 | ACTIVE | `3360d237c163` |
 | `codes/foundations/pre_a_cp1_st8_q3lock_verify.py` | — | — | — | v0.1.0 | ACTIVE | `d6098162a4b3` |
 | `codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent.py` | — | — | — | v0.1.0 | ACTIVE | `17c5b0c3c185` |
 | `codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_independent.py` | — | — | — | v0.1.0 | ACTIVE | `331cddc39acb` |
 | `codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_pdf.py` | — | — | — | v0.1.0 | ACTIVE | `2f9683004c23` |
-| `codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_verify.py` | — | — | — | v0.1.0 | ACTIVE | `c03d2dc4f395` |
+| `codes/foundations/pre_a_cp1a_t3_cubic_sos_common_parent_verify.py` | — | — | — | v0.1.0 | ACTIVE | `f47c38bb2d5e` |
 | `codes/foundations/pre_a_double_null_semilinear_reconstruction.py` | — | — | — | v0.1.0 | ACTIVE | `1502668183e8` |
 | `codes/foundations/pre_a_double_null_semilinear_reconstruction_independent.py` | — | — | — | v0.1.0 | ACTIVE | `8e4e09022b79` |
 | `codes/foundations/pre_a_double_null_semilinear_reconstruction_verify.py` | — | — | — | v0.1.0 | ACTIVE | `54391ff9d0ef` |
@@ -3125,9 +3125,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/foundations/pre_a_pa_m5_nl3_sv_candidate.py` | — | — | — | v0.1.0 | ACTIVE | `67076df89078` |
 | `codes/foundations/pre_a_pa_m5_nl3_sv_candidate_independent.py` | — | — | — | v0.1.0 | ACTIVE | `c79553ed29b7` |
 | `codes/foundations/pre_a_pa_m5_nl3_sv_candidate_verify.py` | — | — | — | v0.1.0 | ACTIVE | `8fe9f5d7aa25` |
-| `codes/foundations/pre_a_pah1_m2_strict_composition_nogo.py` | — | — | — | v0.1.0 | ACTIVE | `817ee30b22d9` |
-| `codes/foundations/pre_a_pah1_m2_strict_composition_nogo_independent.py` | — | — | — | v0.1.0 | ACTIVE | `d3dd20b0b2ce` |
-| `codes/foundations/pre_a_pah1_m2_strict_composition_nogo_verify.py` | — | — | — | v0.1.0 | ACTIVE | `396d381b2733` |
+| `codes/foundations/pre_a_pah1_m2_strict_composition_nogo.py` | — | — | — | v0.1.0 | ACTIVE | `84c2e220bac7` |
+| `codes/foundations/pre_a_pah1_m2_strict_composition_nogo_independent.py` | — | — | — | v0.1.0 | ACTIVE | `5b03000ab1bf` |
+| `codes/foundations/pre_a_pah1_m2_strict_composition_nogo_verify.py` | — | — | — | v0.1.0 | ACTIVE | `3b8a7fb1c46c` |
 | `codes/vacuum/beyond_layer_gershgorin_bound.py` | — | — | — | — | ACTIVE | `77d5727b1e31` |
 | `codes/vacuum/consolidation_provenance_audit.py` | — | 2026-06-07 | — | v1.0.0 | ACTIVE | `9b40ae3d41c8` |
 | `codes/vacuum/dr2_affine_invariance.py` | — | 2026-06-08 | — | v1.0.0 | ACTIVE | `72ee8fbef8b7` |
@@ -3223,7 +3223,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `verification/README.md` | — | — | — | — | ACTIVE | `da6f8dc0c475` |
-| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `75d4ca1f57cf` |
+| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `c19879979373` |
 | `verification/requirements.txt` | — | — | — | — | ACTIVE | `101e9e176f7a` |
 | `verification/scripts/audit_r125_historical_live_surface_compatibility.py` | — | 2026-08-03 | 2026-08-03 | v1.0.0 | ACTIVE | `122a6ad92ab6` |
 | `verification/scripts/build_catalog.py` | — | — | — | — | ACTIVE | `c35c7327b5ed` |
@@ -3277,7 +3277,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `0db7e2d97d8e` |
-| `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `f607c63e3812` |
+| `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `9fe79207efb2` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `17772b1c414e` |
 | `claims/A1-KERNEL-IDENTITY/INDEX.md` | A1-KERNEL-IDENTITY | — | — | — | ACTIVE | `fde8f4acea96` |
 | `claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/INDEX.md` | A1-PRODUCTION-FUNCTIONAL-REALISATION | — | — | — | ACTIVE | `176847e0c96f` |
@@ -3306,9 +3306,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `327466118728` |
 | `claims/GATES.md` | — | — | — | — | ACTIVE | `96860763e263` |
 | `claims/INDEX.md` | — | — | — | — | ACTIVE | `82b28be103ed` |
-| `negative-results/registry.md` | — | — | — | — | ACTIVE | `03ce7ba74bc2` |
+| `negative-results/registry.md` | — | — | — | — | ACTIVE | `f350e6b1c31f` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
-| `strategy/INDEX.md` | — | — | — | — | ACTIVE | `a0573c8327d1` |
+| `strategy/INDEX.md` | — | — | — | — | ACTIVE | `db4c86798b7f` |
 | `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `cff4e6dca4b9` |
 
 ## Governance policies
@@ -3340,8 +3340,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `c715b48698f0` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `7f2740428029` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `e658cd3dbc15` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `df77db62d67c` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `89b2836e1d5c` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `09d2e33e6560` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `6e6f51f5a6af` |
@@ -3349,7 +3349,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `b5e54659ddf5` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `5f90fdae1b16` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `46caafa99347` |
-| `TODO.md` | — | — | — | — | ACTIVE | `d50ad89840b3` |
+| `TODO.md` | — | — | — | — | ACTIVE | `da57c719ce7f` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `a142ca8b90c2` |
 
 ## Other tracked files
@@ -3359,8 +3359,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `20f17262fec9` |
-| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `938762ea1764` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `6b80ee6e4471` |
+| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `8c8c55044bd3` |
 | `output/.gitattributes` | — | — | — | — | ACTIVE | `fdfa7b607b52` |
 | `output/pdf/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803-v0.1.pdf` | — | 2026-08-03 | 2026-08-03 | v0.1 | ACTIVE | `65fae3fc468f` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
@@ -3406,28 +3406,28 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/numerical-programme-status-and-plan-260614.md` | — | — | — | — | ACTIVE | `4cfafb391dfb` |
 | `strategy/pre-a-c0-dynamical-completion-underdetermination-certificate-260803.md` | — | — | — | — | ACTIVE | `ef23caaf61ad` |
 | `strategy/pre-a-c0-dynamical-completion-underdetermination-manifest.json` | — | — | — | — | ACTIVE | `3ca63a725884` |
-| `strategy/pre-a-c0a-gaussian-ccr-pah1-embedding-certificate-260803.md` | — | — | — | — | ACTIVE | `e6e0d2930e4f` |
-| `strategy/pre-a-c0a-gaussian-ccr-pah1-embedding-manifest.json` | — | — | — | — | ACTIVE | `a0aa2792f44e` |
+| `strategy/pre-a-c0a-gaussian-ccr-pah1-embedding-certificate-260803.md` | — | — | — | — | ACTIVE | `d30098500f27` |
+| `strategy/pre-a-c0a-gaussian-ccr-pah1-embedding-manifest.json` | — | — | — | — | ACTIVE | `edeb7b462ffe` |
 | `strategy/pre-a-c0a-reflection-positive-transfer-certificate-260803.md` | — | — | — | — | ACTIVE | `84cc7a404104` |
 | `strategy/pre-a-c0a-reflection-positive-transfer-manifest.json` | — | — | — | — | ACTIVE | `421a52eec5f8` |
 | `strategy/pre-a-c0b-equivariant-causal-selection-nogo-certificate-260803.md` | — | — | — | — | ACTIVE | `e35349887e35` |
 | `strategy/pre-a-c0b-equivariant-causal-selection-nogo-manifest.json` | — | — | — | — | ACTIVE | `6ab31b42b10a` |
-| `strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md` | — | — | — | — | ACTIVE | `2e952e1c9a21` |
-| `strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-manifest.json` | — | — | — | — | ACTIVE | `884ab25870ef` |
-| `strategy/pre-a-cp1-cl8-goursat-certificate-260803.md` | — | — | — | — | ACTIVE | `5472a71f29ba` |
-| `strategy/pre-a-cp1-cl8-goursat-manifest.json` | — | — | — | — | ACTIVE | `571ac5cd92ff` |
-| `strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-certificate-260803.md` | — | — | — | — | ACTIVE | `1abb8f681427` |
-| `strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest.json` | — | — | — | — | ACTIVE | `1862badf2c42` |
+| `strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md` | — | — | — | — | ACTIVE | `9375577c54a6` |
+| `strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-manifest.json` | — | — | — | — | ACTIVE | `699f983cc1e6` |
+| `strategy/pre-a-cp1-cl8-goursat-certificate-260803.md` | — | — | — | — | ACTIVE | `da5f28714b64` |
+| `strategy/pre-a-cp1-cl8-goursat-manifest.json` | — | — | — | — | ACTIVE | `ffebfcd55523` |
+| `strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-certificate-260803.md` | — | — | — | — | ACTIVE | `39c5b3d09ecf` |
+| `strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest.json` | — | — | — | — | ACTIVE | `3f7fa619d3d7` |
 | `strategy/pre-a-cp1-fdan-strict-cone-nogo-certificate-260803.md` | — | — | — | — | ACTIVE | `0b45d0fefe0a` |
 | `strategy/pre-a-cp1-fdan-strict-cone-nogo-manifest.json` | — | — | — | — | ACTIVE | `9ee38af7f0a4` |
 | `strategy/pre-a-cp1-lt3-rs-common-container-certificate-260803.md` | — | — | — | — | ACTIVE | `297d4081e1ad` |
 | `strategy/pre-a-cp1-lt3-rs-common-container-manifest.json` | — | — | — | — | ACTIVE | `68ec15358470` |
-| `strategy/pre-a-cp1-st8-block-causal-bridge-certificate-260803.md` | — | — | — | — | ACTIVE | `a06fc30eaa0b` |
-| `strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json` | — | — | — | — | ACTIVE | `b0a8ddec5c50` |
+| `strategy/pre-a-cp1-st8-block-causal-bridge-certificate-260803.md` | — | — | — | — | ACTIVE | `54f34cf88c85` |
+| `strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json` | — | — | — | — | ACTIVE | `295af18be579` |
 | `strategy/pre-a-cp1-st8-q3lock-certificate-260803.md` | — | — | — | — | ACTIVE | `d6a6caf1e82c` |
 | `strategy/pre-a-cp1-st8-q3lock-manifest.json` | — | — | — | — | ACTIVE | `7ff6f2dd7877` |
 | `strategy/pre-a-cp1a-t3-cubic-sos-common-parent-certificate-260803.md` | — | — | — | — | ACTIVE | `78c6789f1fd9` |
-| `strategy/pre-a-cp1a-t3-cubic-sos-common-parent-manifest.json` | — | — | — | — | ACTIVE | `84c1482803c0` |
+| `strategy/pre-a-cp1a-t3-cubic-sos-common-parent-manifest.json` | — | — | — | — | ACTIVE | `7b0df23173fd` |
 | `strategy/pre-a-double-null-semilinear-reconstruction-certificate-260803.md` | — | — | — | — | ACTIVE | `5d46c3bda9f2` |
 | `strategy/pre-a-double-null-semilinear-reconstruction-manifest.json` | — | — | — | — | ACTIVE | `7cc39af67e88` |
 | `strategy/pre-a-dual-lane-horizon-origin-proof-programme-260803.md` | — | — | — | — | ACTIVE | `4e6afab48e81` |
@@ -3438,11 +3438,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json` | — | — | — | — | ACTIVE | `102b0d5f0053` |
 | `strategy/pre-a-pah1-m2-strict-composition-nogo-certificate-260803.md` | — | — | — | — | ACTIVE | `c117c207882b` |
 | `strategy/pre-a-pah1-m2-strict-composition-nogo-manifest.json` | — | — | — | — | ACTIVE | `f9da22307955` |
-| `strategy/pre-a-prior-art-novelty-matrix-260803.md` | — | — | — | — | ACTIVE | `ff19065d2211` |
+| `strategy/pre-a-prior-art-novelty-matrix-260803.md` | — | — | — | — | ACTIVE | `c1c8cb799456` |
 | `strategy/sector-a-claim-taxonomy-and-subproof-plan-260722.md` | — | — | — | — | ACTIVE | `515c895f0a44` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `7784fbab38fd` |
 | `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `137c26ea5f80` |
-| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `25f9916bce69` |
+| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `0550d93cc5f5` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `528697935e4a` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |
@@ -3455,5 +3455,5 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `a4f8eba2a79e` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `c22a362480ee` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `5e65f7f63d2e` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `00d13518df07` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `4ff21ab98898` |
 

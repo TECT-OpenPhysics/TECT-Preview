@@ -1,6 +1,6 @@
 {
   "assertions": {
-    "passed": 118,
+    "passed": 135,
     "rows": [
       {
         "actual": true,
@@ -104,6 +104,13 @@
         "actual": true,
         "expected": true,
         "group": "files",
+        "name": "required file exists: registry.md",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
         "name": "required file exists: result.json",
         "status": "PASS"
       },
@@ -124,7 +131,7 @@
           ],
           "PA-CP1-CL8-GOURSAT-PHASE-SLICE-SEMIDISCRETE-COMPOSITION-OA2",
           "PRE-A-CL8-CLASSICAL-CHARACTERISTIC-TO-REGULATOR-COMPOSITION",
-          "0.1.0",
+          "0.1.1",
           "T-054",
           false
         ],
@@ -137,7 +144,7 @@
           ],
           "PA-CP1-CL8-GOURSAT-PHASE-SLICE-SEMIDISCRETE-COMPOSITION-OA2",
           "PRE-A-CL8-CLASSICAL-CHARACTERISTIC-TO-REGULATOR-COMPOSITION",
-          "0.1.0",
+          "0.1.1",
           "T-054",
           false
         ],
@@ -235,12 +242,12 @@
       },
       {
         "actual": [
-          49,
-          49
+          55,
+          55
         ],
         "expected": [
-          49,
-          49
+          55,
+          55
         ],
         "group": "children",
         "name": "primary assertion oracle",
@@ -248,12 +255,12 @@
       },
       {
         "actual": [
-          38,
-          38
+          44,
+          44
         ],
         "expected": [
-          38,
-          38
+          44,
+          44
         ],
         "group": "children",
         "name": "independent assertion oracle",
@@ -275,6 +282,76 @@
         "expected": "no primary, sympy, or flint import",
         "group": "independence",
         "name": "independent imports neither primary, SymPy, nor flint",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION",
+          "NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: negative_id",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "14",
+          "14"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: mismatch_b_R",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "40",
+          "40"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: mismatch_ell_R",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "47/200",
+          "47/200"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: mismatch_self_map",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/10",
+          "1/10"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: mismatch_contraction",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/5",
+          "1/5"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: mismatch_jump",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/400",
+          "1/400"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: mismatch_wrap_coefficient",
         "status": "PASS"
       },
       {
@@ -471,14 +548,14 @@
         "status": "PASS"
       },
       {
-        "actual": "f1a73acb4678cdb910f0d93df598984655c503e1fc71b32298c7930984083b20",
+        "actual": "da45126f2733e891f18461da9dda10bb3a9dbc946ef32bb74db77d86700131aa",
         "expected": "fresh canonical JSON",
         "group": "stored_evidence",
         "name": "stored primary equals fresh rerun",
         "status": "PASS"
       },
       {
-        "actual": "7d6e9788af02b0edb5c8034aad266695cb879883c3da701f3858ff9459de0143",
+        "actual": "dcfd4a4acf8e66c792f1e2c93ad4a41b77d2f54c88be47844efe0adc180428c3",
         "expected": "fresh canonical JSON",
         "group": "stored_evidence",
         "name": "stored independent equals fresh rerun",
@@ -531,6 +608,20 @@
         "actual": true,
         "expected": true,
         "group": "gate_split",
+        "name": "gate mapping token: REFUTED",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "gate_split",
+        "name": "gate mapping token: separately proved alternative",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "gate_split",
         "name": "gate mapping token: MOVED",
         "status": "PASS"
       },
@@ -560,6 +651,28 @@
         "expected": true,
         "group": "gate_split",
         "name": "gate mapping token: quantum-state composition",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "endpoint_jump": "q(-tau)-q(tau)=e_1/5",
+          "fixture": "r=g=lambda=chi=c=R=1, tau=1/10, A(u)=0, B(v)=v e_1, C=0",
+          "negative_id": "NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION",
+          "strict_gate_values": "M0=1/5, self-map=47/200<1, contraction=1/10<1",
+          "survivors": "the matched direct seam, the separately declared larger-domain Hermite alternative with H_ext and Omega_ext, and other independently verified boundary schemes remain open or proved at their stated scopes",
+          "verdict": "REFUTED for generic admitted data without a seam restriction, extra extension data, or a changed boundary discretization",
+          "wrap_energy": "the current same-domain periodic wrap bond is asymptotic to c/(400a)"
+        },
+        "expected": "negative ID, strict fixture gates, and wrap coefficient",
+        "group": "gate_split",
+        "name": "formal admitted same-domain no-go identity and gates",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "gate_split",
+        "name": "formal negative registry entry present",
         "status": "PASS"
       },
       {
@@ -688,7 +801,7 @@
       },
       {
         "actual": [
-          "PROVED_ON_DIRECT_SEAM_AND_DECLARED_EXTENSION_BRANCHES",
+          "DIRECT_SEAM_PROVED_GENERIC_UNCHANGED_REFUTED_LARGER_DOMAIN_EXTENSION_SEPARATE",
           "section-5-domain-branches"
         ],
         "expected": "uppercase disposition and existing certificate anchor",
@@ -728,7 +841,7 @@
       },
       {
         "actual": [
-          "PROVED_ON_DIRECT_SEAM_AND_DECLARED_EXTENSION_BRANCHES",
+          "DIRECT_SEAM_PROVED_GENERIC_UNCHANGED_REFUTED_LARGER_DOMAIN_EXTENSION_SEPARATE",
           "section-7-sampling"
         ],
         "expected": "uppercase disposition and existing certificate anchor",
@@ -1073,6 +1186,34 @@
         "actual": true,
         "expected": true,
         "group": "certificate",
+        "name": "certificate token: NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate token: {47\\over200}",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate token: {c\\over400a}",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate token: High-regularity periodic Cauchy continuation",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
         "name": "certificate token: PA-CP1-CL8-PREFERRED-STATE-COMPOSITION-SELECTION",
         "status": "PASS"
       },
@@ -1123,6 +1264,19 @@
         "expected": true,
         "group": "certificate",
         "name": "certificate token: Pre-A",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "certificate_has_global_smooth": false,
+          "manifest_has_smooth_classical": false
+        },
+        "expected": {
+          "certificate_has_global_smooth": false,
+          "manifest_has_smooth_classical": false
+        },
+        "group": "certificate",
+        "name": "finite regularity is not promoted to C-infinity evolution",
         "status": "PASS"
       },
       {
@@ -1182,36 +1336,36 @@
         "status": "PASS"
       }
     ],
-    "total": 118
+    "total": 135
   },
   "candidate_id": "PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-OA2-v0",
   "child_assertions": {
-    "independent": 38,
-    "primary": 49
+    "independent": 44,
+    "primary": 55
   },
-  "package_version": "0.1.0",
+  "package_version": "0.1.1",
   "parent_ids": [
     "PA-CP1-CL8-GOURSAT-v0",
     "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0"
   ],
   "provenance": {
     "block_manifest_sha256": "b0a8ddec5c5082da816d352f09affc8e5226a31106842b106920f49402879bcb",
-    "certificate_sha256": "2e952e1c9a21ec4115ddf6f02b1ea01dd15e4a27432fb0b143262a637f4a8ab4",
+    "certificate_sha256": "3d3464c0e32c6020185a9fd9b72449932f53aaeb842241353d89342f93047f2b",
     "finite_nogo_manifest_sha256": "9e2f30847c8f6d2a4b0ca33de65eeaff763374c2d729bdf47a5bfc4cd577398a",
     "goursat_certificate_sha256": "5472a71f29ba49b1cbaae05c8cf2eab99d6fad64f2e14a5008ee624c29d457fc",
     "goursat_integrated_sha256": "1ff142b9d03cca31a994da945e7940b4e4110e5a93d49891ab5b410760289574",
     "goursat_manifest_sha256": "571ac5cd92fffd25e14da57ec9c4ef17e2550f72718d739f1a335dfb27c4647b",
-    "independent_sha256": "e86a5cc95b60d030c4f2e011def488b954c6c2187a1430e0cc88969dde4bc060",
-    "manifest_sha256": "884ab25870ef335cbf7df23e3264e46aa76dfc01eb08f1e42f94aed3c9d59d48",
-    "primary_sha256": "d52477034e6c888bd82d19db0a1060240139836eaea53d9f1c86f8db97b94735",
+    "independent_sha256": "626f3ce78d367a600fec7aedff549f44127351f74c8193f2cc8ee6f56d57e08f",
+    "manifest_sha256": "6f046b62c99c43ac6c04de546669f635cfb079c3c5ecad5e09bb7e6674a8d0b6",
+    "primary_sha256": "09a784afbb297ff6452baf0f0503f752a579cc5809e9d867ae7b3d87cbe4815b",
     "q3lock_manifest_sha256": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
     "semidiscrete_certificate_sha256": "1abb8f6814276e4e43e144fcc6e3b4b84b2a2ea9bec57a51a9ea150094116efc",
     "semidiscrete_integrated_sha256": "b2f1c6ba224afcd0e6436b4ac82369079c26d30a4fe980d0863cad38d4a7e638",
     "semidiscrete_manifest_sha256": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a",
-    "stored_independent_sha256": "7d6e9788af02b0edb5c8034aad266695cb879883c3da701f3858ff9459de0143",
-    "stored_primary_sha256": "f1a73acb4678cdb910f0d93df598984655c503e1fc71b32298c7930984083b20",
+    "stored_independent_sha256": "dcfd4a4acf8e66c792f1e2c93ad4a41b77d2f54c88be47844efe0adc180428c3",
+    "stored_primary_sha256": "da45126f2733e891f18461da9dda10bb3a9dbc946ef32bb74db77d86700131aa",
     "verifier": "codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2_verify.py",
-    "verifier_sha256": "a0f1e31d9822cff947a4783407da8ecd5737db9e1be39cf418e206682ff4ee8a"
+    "verifier_sha256": "2f5ed7879647bd721fdd62e2e2453e7f347cc60d9af2706cc14a5e6fa4ccbacb"
   },
   "result_id": "PA-CP1-CL8-GOURSAT-PHASE-SLICE-SEMIDISCRETE-COMPOSITION-OA2",
   "schema": "tect/pre-a-cp1-cl8-classical-boundary-lattice-oa2-integrated/0.1",

@@ -7,7 +7,7 @@
   ],
   "result_id": "PA-CP1-CL8-GOURSAT-PHASE-SLICE-SEMIDISCRETE-COMPOSITION-OA2",
   "candidate_family": "PRE-A-CL8-CLASSICAL-CHARACTERISTIC-TO-REGULATOR-COMPOSITION",
-  "package_version": "0.1.0",
+  "package_version": "0.1.1",
   "issued": "2026-08-03",
   "authority": "T0 exact analytic classical composition candidate certificate; not a TECT claim, tier change, finite-a Goursat scheme, quantum-state composition, CP1 completion, or Pre-A closure",
   "claim_context": "C6-SPACETIME-SIGNATURE",
@@ -17,7 +17,7 @@
   ],
   "claim_bearing": false,
   "task_id": "T-054",
-  "statement": "For C8 characteristic traces inside common strict CL8 Goursat gates, the final null-triangle slice supplies a Cauchy phase pair. On the restricted periodic-jet-compatible branch this pair initializes the inherited periodic semidiscrete regulator directly and preserves the Goursat energy and variational symplectic ledgers up to fixed-smooth-family O(a^2) sampling error. For generic admitted traces, explicit finite-degree Hermite jet fills on a larger circle give a deterministic classical initialization, with every exterior energy and symplectic contribution retained as a separate extension ledger. Exact sampling gives zero initial modified error, the inherited semidiscrete theorem gives O(a^2) grid-phase convergence, trigonometric reconstruction gives O(a^2) convergence in a common H1 times L2 phase space, and supplied compactly supported classical phase measures converge in W1 at O(a^2). The original mixed composition gate is resolved only by splitting off a still-open preferred-state/measure-selection gate covering both classical selection and quantum composition.",
+  "statement": "For C8 characteristic traces inside common strict CL8 Goursat gates, the final null-triangle slice supplies a Cauchy phase pair. On the restricted periodic-jet-compatible branch this pair initializes the inherited periodic semidiscrete regulator directly and preserves the Goursat energy and variational symplectic ledgers up to fixed-H7-by-H6-family O(a^2) sampling error. For generic admitted traces, explicit finite-degree Hermite jet fills on a larger circle give a deterministic classical initialization, with every exterior energy and symplectic contribution retained as a separate extension ledger. Exact sampling gives zero initial modified error, the inherited semidiscrete theorem gives O(a^2) grid-phase convergence, trigonometric reconstruction gives O(a^2) convergence in a common H1 times L2 phase space, and supplied compactly supported classical phase measures converge in W1 at O(a^2). The original mixed composition gate is resolved only by splitting off a still-open preferred-state/measure-selection gate covering both classical selection and quantum composition.",
   "verdict": "CLOSE THE DECLARED CLASSICAL FIXED-SLICE KINEMATIC COMPOSITION SUBGATE BY DIRECT-SEAM AND EXPLICIT-EXTENSION BRANCHES; RETAIN THE FULL-CIRCUMFERENCE GOURSAT AND PREFERRED-STATE/MEASURE-SELECTION GATES",
   "authorities": {
     "continuum_goursat_parent": "strategy/pre-a-cp1-cl8-goursat-manifest.json",
@@ -25,6 +25,15 @@
     "finite_regulator_and_calibration": "strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json",
     "nonlinear_Q3_model": "strategy/pre-a-cp1-st8-q3lock-manifest.json",
     "finite_a_strict_cone_boundary": "strategy/pre-a-cp1-fdan-strict-cone-nogo-manifest.json"
+  },
+  "unrestricted_same_domain_no_go": {
+    "negative_id": "NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION",
+    "fixture": "r=g=lambda=chi=c=R=1, tau=1/10, A(u)=0, B(v)=v e_1, C=0",
+    "strict_gate_values": "M0=1/5, self-map=47/200<1, contraction=1/10<1",
+    "endpoint_jump": "q(-tau)-q(tau)=e_1/5",
+    "wrap_energy": "the current same-domain periodic wrap bond is asymptotic to c/(400a)",
+    "verdict": "REFUTED for generic admitted data without a seam restriction, extra extension data, or a changed boundary discretization",
+    "survivors": "the matched direct seam, the separately declared larger-domain Hermite alternative with H_ext and Omega_ext, and other independently verified boundary schemes remain open or proved at their stated scopes"
   },
   "phase_slice": {
     "input": "A,B in C8([0,2tau];R8), A(0)=B(0), supported inside common strict max-ball Goursat gates",
@@ -63,14 +72,14 @@
     "semidiscrete_conclusion": "exact sampled initialization sets C_init=0 and yields sup_[0,T](||psi^a-R_a Psi||_H1a+||psi^a_t-R_a Psi_t||_a)<=C_T a^2"
   },
   "energy_consistency": {
-    "statement": "for every fixed periodic smooth phase pair, |H_a(R_a q,R_a Pi)-H_per(q,Pi)|<=C_E a^2",
+    "statement": "for every fixed periodic H7 x H6 phase pair, |H_a(R_a q,R_a Pi)-H_per(q,Pi)|<=C_E a^2",
     "constant": "C_E=(L/96)||partial_x^2(|Pi|^2/(2chi)+W(q))||_infinity+(c/(16pi^2))||q_xx||_L2^2",
     "reason": "periodic composite-trapezoid error controls kinetic plus potential terms, while the forward-gradient ledger differs from the continuum gradient energy by the cellwise derivative variance",
     "time_propagation": "if the finite flow is initialized by sampled q0,Pi0, then H_a(psi^a(t),Pi^a(t))-H(Psi(t),Pi(t))=H_a(R_a q0,R_a Pi0)-H(q0,Pi0); no conservation is claimed for freshly resampling the continuum phase at each time",
     "not_exact": "point sampling has high-frequency kernels and is not an exact finite-a energy map on arbitrary frequency families"
   },
   "symplectic_consistency": {
-    "statement": "for two fixed smooth tangent phases, |Omega_a(R_a v1,R_a v2)-Omega_per(v1,v2)|<=(L a^2/96)||partial_x^2(Pi1 dot q2-Pi2 dot q1)||_infinity",
+    "statement": "for two fixed high-regularity tangent phases, |Omega_a(R_a v1,R_a v2)-Omega_per(v1,v2)|<=(L a^2/96)||partial_x^2(Pi1 dot q2-Pi2 dot q1)||_infinity",
     "direct_variations": "on the direct branch each tangent phase must be DS_tau[A,B](delta A,delta B) with the boundary variation tangent to all periodic jet-seam constraints; arbitrary Goursat variations need not be periodic",
     "direct_flux": "on the direct seam branch Omega_per=Omega_H exactly before sampling",
     "extension_flux": "on the extension branch Omega_per=Omega_H+Omega_ext exactly before sampling",
@@ -92,9 +101,9 @@
     "scope": "mu and the direct-seam correlation or extension rule are inputs; no invariant, thermal, vacuum, Hadamard, or quantum state is selected"
   },
   "hostile_boundaries": {
-    "generic_direct_seam": "if delta=B(2tau)-A(2tau) is nonzero, the wrap bond contributes c|delta|^2/(16a)+O(1); if values match but the first derivative jumps, the seam Laplacian has an O(1/a) residual",
+    "generic_direct_seam": "if delta=B(2tau)-A(2tau) is nonzero, the wrap bond contributes c|delta|^2/(16a)+O(1); the exact admitted A=0, B(v)=v e_1, tau=1/10 fixture has self-map 47/200, contraction 1/10, delta=e_1/5 and wrap asymptotic c/(400a); if values match but the first derivative jumps, the seam Laplacian has an O(1/a) residual",
     "field_measure_loss": "A_n=n^(-1)sin(nu) tends uniformly to zero but A_n' does not, so the old field-value sup topology cannot support a continuous momentum map",
-    "sampling_kernel": "M-dependent continuum modes can vanish at all M nodes while retaining nonzero continuum energy and symplectic form; every consistency statement is for fixed smooth families",
+    "sampling_kernel": "M-dependent continuum modes can vanish at all M nodes while retaining nonzero continuum energy and symplectic form; every consistency statement is for fixed bounded high-regularity families",
     "finite_a_tail": "registered finite-a variational witness tails remain nonzero; this package gives convergence and aggregate controls, not exact support",
     "pah1_full_circle": "with inserted L=pi/2, c/chi=1, -2r/chi=9 and R at least sqrt(-r/g), the current one-patch contraction factor obeys q>=9pi^2/32>1; even a shifted ordered-neighbourhood factor obeys q>=9pi^2/64>1",
     "pah1_interpretation": "the inequality blocks the current Banach certificate, not existence; the exact constant ordered equilibrium remains a special solution"
@@ -103,12 +112,12 @@
     "original_id": "PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION",
     "status": "RESOLVED BY SCOPE SPLIT",
     "closed_classical_subgate": "PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-COMPOSITION",
-    "closed_scope": "fixed-background, fixed-slice, fixed-L, fixed-T smooth classical phase composition through either correlated periodic seams or a declared Hermite extension, with O(a^2) regulator convergence",
+    "closed_scope": "fixed-background, fixed-slice, fixed-L, fixed-T H7 x H6 high-regularity classical phase composition through either correlated periodic seams or a declared larger-domain Hermite extension, with O(a^2) regulator convergence",
     "open_state_selection_subgate": "PA-CP1-CL8-PREFERRED-STATE-COMPOSITION-SELECTION",
     "mapping": {
       "finite-a characteristic scheme or boundary-to-Cauchy initialization": "PROVED only by the boundary-to-Cauchy alternative; no finite-a characteristic scheme",
-      "same-domain sampling and required regularity": "PROVED for the direct seam branch and the explicit larger-circle extension branch",
-      "energy and symplectic consistency": "PROVED at O(a^2) for fixed smooth families; exact finite-a matching rejected",
+      "same-domain sampling and required regularity": "PROVED only for the matched direct seam; REFUTED generically without extra data; the explicit larger-circle extension is a separately proved alternative, not same-domain composition",
+      "energy and symplectic consistency": "PROVED at O(a^2) for fixed bounded high-regularity families; exact finite-a matching rejected",
       "classical measure convergence and common selected state": "CLASSICAL PHASE MEASURE CONVERGENCE PROVED under stronger supplied compact support; preferred or invariant classical-measure selection and quantum-state composition both moved to the open state-selection subgate",
       "finite-a regulator tail": "CONTROLLED only by inherited aggregate convergence while registered nonzero witnesses remain",
       "moving characteristic boundaries or ghost values": "NOT REQUIRED on the selected continuum-slice-then-fixed-Cauchy branch; no moving-boundary theorem claimed"
@@ -124,7 +133,7 @@
     {
       "parent_id": "PA-CP1-CL8-GOURSAT-v0",
       "parent_text": "same-domain sampling and reconstruction with the required regularity",
-      "disposition": "PROVED_ON_DIRECT_SEAM_AND_DECLARED_EXTENSION_BRANCHES",
+      "disposition": "DIRECT_SEAM_PROVED_GENERIC_UNCHANGED_REFUTED_LARGER_DOMAIN_EXTENSION_SEPARATE",
       "certificate_anchor": "section-5-domain-branches"
     },
     {
@@ -148,7 +157,7 @@
     {
       "parent_id": "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
       "parent_text": "a proved Goursat-slice-to-grid initialization and compatible periodic domain",
-      "disposition": "PROVED_ON_DIRECT_SEAM_AND_DECLARED_EXTENSION_BRANCHES",
+      "disposition": "DIRECT_SEAM_PROVED_GENERIC_UNCHANGED_REFUTED_LARGER_DOMAIN_EXTENSION_SEPARATE",
       "certificate_anchor": "section-7-sampling"
     },
     {
@@ -198,7 +207,7 @@
     "derived_outputs": [
       "the exact characteristic-to-Cauchy phase slice and grid geometry",
       "a direct energy-faithful seam branch and a generic extension branch with explicit exterior ledgers",
-      "global smooth periodic classical Cauchy continuation for the declared data class",
+      "global periodic H7 x H6 high-regularity classical Cauchy continuation for the declared data class",
       "O(a^2) discrete and reconstructed phase convergence",
       "O(a^2) energy, variational symplectic, and supplied classical W1 consistency",
       "the exact generic-seam, high-frequency sampling, and PA-H1 one-patch-gate obstructions"
@@ -248,5 +257,5 @@
     "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-classical-boundary-lattice-oa2/result.json"
   },
   "prior_art_boundary": "Characteristic-to-Cauchy slicing, Hermite jet extension, periodic semilinear-wave wellposedness, finite-difference convergence, trapezoidal quadrature, trigonometric interpolation, symplectic consistency, and deterministic-coupling Wasserstein bounds are established mathematics. No world-first or new general theorem is claimed. The repository-specific result is the exact CL8/Q3 convention bridge, physical one-eighth ledger, two-branch seam/extension audit, gate-scope split, and PA-H1 calibration obstruction.",
-  "no_overclaim": "This package proves only a smooth classical fixed-background composition after either strong periodic seam correlations or a declared extension carrying extra exterior ledgers. It does not prove a finite-a Goursat scheme, generic direct periodic composition, a canonical extension, exact finite-a energy or symplectic matching, arbitrary-frequency convergence, exact finite-a support, the current one-patch theorem at full ordered PA-H1 circumference, growing-time or thermodynamic regulator removal, full 3+1 dynamics, a quantum continuum or selected state, physical empty space or a below-empty-space sign, cooling, gravity, an event horizon, advancement of C6, CP1, or Pre-A."
+  "no_overclaim": "This package proves only a finite-regularity H7 x H6 classical fixed-background composition after either strong periodic seam correlations or a declared larger-domain extension carrying extra exterior ledgers. It refutes generic unchanged same-domain periodic composition but does not refute or canonically select an extension or another boundary scheme. It does not prove a finite-a Goursat scheme, exact finite-a energy or symplectic matching, arbitrary-frequency convergence, exact finite-a support, the current one-patch theorem at full ordered PA-H1 circumference, growing-time or thermodynamic regulator removal, full 3+1 dynamics, a quantum continuum or selected state, physical empty space or a below-empty-space sign, cooling, gravity, an event horizon, advancement of C6, CP1, or Pre-A."
 }

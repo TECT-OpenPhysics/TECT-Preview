@@ -23,7 +23,8 @@ There are two honest branches.
    Exact sampling initializes the inherited semidiscrete flow with zero initial
    modified error.  The Goursat energy and variational symplectic flux become
    the periodic continuum ledgers exactly before sampling and agree with the
-   finite ledgers at order `O(a^2)` for every fixed smooth family.
+   finite ledgers at order `O(a^2)` for every fixed bounded `H7 x H6`
+   high-regularity family.
 2. Generic admitted Goursat data do not have matching endpoint jets.  They can
    still be initialized on a larger circle by a declared finite-degree Hermite
    fill.  That branch is mathematically well defined, but its exterior energy
@@ -38,7 +39,8 @@ measure then converges in `W1` at `O(a^2)` by the identity coupling.
 The old mixed gate is therefore resolved by a scope split:
 
 - `PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-COMPOSITION` is closed at the
-  declared smooth, fixed-background, fixed-domain, fixed-time scope;
+  declared finite-regularity `H7 x H6`, fixed-background, fixed-domain,
+  fixed-time scope;
 - `PA-CP1-CL8-PREFERRED-STATE-COMPOSITION-SELECTION` remains open for both
   preferred or invariant classical-measure selection and quantum-state
   composition.
@@ -57,7 +59,8 @@ propagation, and deterministic-coupling Wasserstein estimates.
 
 No world-first or new general theorem is claimed.  The repository-specific
 content is the exact CL8/Q3 phase convention, the physical `1/8` ledger, the
-direct-seam versus extension split, the fixed-smooth-family hostile controls,
+direct-seam versus extension split, the fixed-high-regularity-family hostile
+controls,
 and the exact incompatibility of the present one-patch contraction certificate
 with the inserted full-circumference ordered PA-H1 calibration.
 
@@ -159,6 +162,51 @@ Laplacian contains
 
 which destroys the parent's `O(a^2)` residual estimate.
 
+### 3.1.1 Exact admitted same-domain counterexample
+
+The obstruction occurs inside the strict Goursat theorem, not only for
+arbitrary traces.  Set
+
+```text
+r=g=lambda=chi=c=R=1, tau=1/10,
+A(u)=0, B(v)=v e_1, C=0.
+```
+
+This datum is `C-infinity` and has `A(0)=B(0)`.  The parent max-ball constants
+and gates are
+
+\[
+ b_R=14,\qquad \ell_R=40,
+\]
+
+\[
+ M_0+{\tau^2b_R\over4\chi}
+ ={1\over5}+{14\over400}={47\over200}<1=R,
+\qquad
+ {\tau^2\ell_R\over4\chi}={1\over10}<1.       \tag{3.6a}
+\]
+
+Nevertheless
+
+\[
+ q(-\tau)=B(2\tau)={1\over5}e_1,
+ \qquad q(\tau)=A(2\tau)=0.                   \tag{3.6b}
+\]
+
+Hence the current unchanged same-domain periodic wrap has
+
+\[
+ {ca\over16}\left|{q(-\tau)-q(\tau-a)\over a}\right|^2
+ \sim {c\over400a}.                            \tag{3.6c}
+\]
+
+This proves
+`NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION`.
+It refutes only generic unchanged same-domain periodic composition.  The
+matched direct seam, the separately declared larger-domain extension with
+`H_ext` and `Omega_ext`, and independently verified alternative boundary
+schemes survive.
+
 ### 3.2 A field-value measure is not a phase measure
 
 The Goursat parent's measure statement uses the sup topology and pushes only
@@ -197,7 +245,8 @@ is zero while
 
 Energy has the same sampling kernel.  Exact finite-`a` energy or symplectic
 matching is therefore impossible on arbitrary-frequency families.  The
-positive theorem below is deliberately restricted to fixed smooth families.
+positive theorem below is deliberately restricted to fixed bounded
+high-regularity families.
 
 <a id="section-4-phase-map"></a>
 ## 4. The strong phase-slice map
@@ -323,7 +372,7 @@ declared, but it is not canonical physics.  A different extension changes the
 global periodic state outside `I_tau`.
 
 <a id="section-6-cauchy"></a>
-## 6. Smooth periodic Cauchy continuation
+## 6. High-regularity periodic Cauchy continuation
 
 Either branch gives phase data
 
@@ -435,7 +484,7 @@ null triangle and says nothing about sample-boundary-then-solve.
 <a id="section-8-energy"></a>
 ## 8. Energy consistency and the extension ledger
 
-For any fixed smooth periodic phase pair, periodic composite trapezoidal
+For any fixed periodic `H7 x H6` phase pair, periodic composite trapezoidal
 quadrature gives
 
 \[
@@ -657,7 +706,7 @@ thermal, vacuum, Hadamard, or quantum state.
 <a id="section-12-tail"></a>
 ## 12. Extension independence inside the continuum cone and finite-`a` tails
 
-Two smooth extensions that agree on `I_tau` produce identical continuum
+Two high-regularity extensions that agree on `I_tau` produce identical continuum
 solutions at points whose backward cone remains inside `I_tau`.  If a compact
 subinterval lies a distance `rho` from both endpoints, the solutions agree
 there for elapsed times not exceeding `rho/s`.
@@ -735,8 +784,8 @@ follows.
 | Parent obligation | Disposition |
 |---|---|
 | Finite-`a` characteristic scheme or proved boundary-to-Cauchy initialization | `PROVED` by the second alternative only; no finite-`a` characteristic scheme |
-| Same-domain sampling and required regularity | `PROVED` on the direct seam branch and the declared larger-circle extension branch |
-| Energy and symplectic consistency | `PROVED` at `O(a^2)` for fixed smooth families; exact finite-`a` equality rejected |
+| Same-domain sampling and required regularity | `PROVED` only on the matched direct seam; `REFUTED` generically without extra data by `NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION`; the larger-circle extension is a separately proved alternative, not same-domain composition |
+| Energy and symplectic consistency | `PROVED` at `O(a^2)` for fixed bounded high-regularity families; exact finite-`a` equality rejected |
 | Classical measure convergence | `PROVED` for a newly supplied compact `C8` phase measure |
 | Common selected state | `MOVED` to `PA-CP1-CL8-PREFERRED-STATE-COMPOSITION-SELECTION`, covering preferred or invariant classical-measure selection and quantum-state composition |
 | Finite-`a` regulator tail | `CONTROLLED` only in inherited aggregate convergence; registered nonzero witnesses retained |
@@ -757,7 +806,7 @@ The original route ID
 3. **The old field measure loses momentum.**  **UPHELD.**  Section 11 requires
    a new phase-capable measure in the stronger `C8` topology.
 4. **Sampling cannot be exactly symplectic.**  **UPHELD.**  The explicit
-   high-frequency kernel (3.7) forbids exactness; only fixed-smooth-family
+   high-frequency kernel (3.7) forbids exactness; only fixed-high-regularity-family
    `O(a^2)` consistency is claimed.
 5. **The parent warned that reconstruction is only first order in `H1`.**
    **MITIGATED.**  That warning concerns piecewise-linear reconstruction.  The
@@ -797,10 +846,12 @@ and every scope flag, and rejects stale stored JSON.
 <a id="section-17-no-overclaim"></a>
 ## 17. No-overclaim boundary
 
-This certificate proves a smooth classical fixed-background composition only
-after either strong periodic seam correlations or a declared extension with
-explicit exterior ledgers.  It does not prove generic direct periodic
-composition, a canonical extension, a finite-`a` Goursat scheme, exact
+This certificate proves a finite-regularity `H7 x H6` classical
+fixed-background composition only after either strong periodic seam
+correlations or a declared larger-domain extension with explicit exterior
+ledgers.  It refutes generic unchanged same-domain periodic composition but
+does not canonically select an extension or another boundary scheme.  It does
+not prove a finite-`a` Goursat scheme, exact
 finite-`a` energy or symplectic matching, arbitrary-frequency convergence,
 exact finite-`a` support, the current one-patch theorem at the full ordered
 PA-H1 circumference, growing-time or thermodynamic regulator removal, full
