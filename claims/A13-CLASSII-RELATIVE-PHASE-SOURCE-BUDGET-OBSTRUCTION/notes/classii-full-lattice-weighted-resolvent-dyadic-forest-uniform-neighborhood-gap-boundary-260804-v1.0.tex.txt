@@ -1,0 +1,580 @@
+% =============================================================================
+% Title: Full-lattice weighted-resolvent dyadic-forest uniform neighbourhood gap
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-FULL-LATTICE-WEIGHTED-RESOLVENT-DYADIC-FOREST-UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY
+% Ledger: R-163
+% Version: v1.0 -- first issued 2026-08-04; this version issued 2026-08-04
+% Status: scoped T4 analytic/exact/executed/audited deterministic-forest advance; no T-050 closure
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cZ}{\mathcal Z}
+\newcommand{\HS}{\mathrm{HS}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Tr}{\operatorname{Tr}}
+
+\begin{abstract}
+R-162 proved a cutoff-uniform nonzero neighbourhood only for one recursive
+pure-dyadic chain.  The apparent obstruction to taking all unrelated chains
+at once was the divergent raw-current sum $\sum_p d_p^2$.  R-163 proves that
+this obstruction is an artefact of taking a norm before the A7 primitive
+cancellation and before exposing the mandatory recursive edge.  On every
+finite injective dyadic forest, the exact covariance perturbation
+$T_AT_A^*-\Id$ is expanded into two-sided dyadic words.  Every nonidentity
+word contains at least one coefficient or inserted direction, while its
+field-current endpoint weight is square summable.  The worst current-current
+weight is $|p|^{-4}$ in dimension three.  This gives cutoff-, depth-, and
+forest-cardinality-uniform covariance-data derivatives through order three.
+The complete global first-variation connection at the origin vanishes
+termwise on the nonzero $p\mathbin{:}4p$ Fourier support, so the R-160
+$4/25$ arbitrary-family origin gap transfers.  A compact covariance-data
+box and the complete source, current, trace, projected-force, and sixth-power
+connections then give one positive analytic radius on which the full expected
+controller-pullback Hessian is larger than $13/100$ in coefficient norm and
+larger than $1/10$ in the recursive tangent metric.  A separate exact
+coefficient audit sharpens the general T-050 reduced-action target: with an
+absolute anchor and origin-force bound, uniform semiconvexity
+$\mu>-1/110$ is sufficient; positivity is not necessary.  Neither input is
+proved for random or nonlinear production controls here, so T-050 remains
+open.
+\end{abstract}
+
+\section{Purpose and scope: result and exact boundary}
+\hypertarget{section-1-result}{}
+
+Work on the fixed side-16 three-torus with the hash-pinned A1 symbol, the
+fixed positive A7 floor, exact nonaliased continuum integration, centered
+both-sign six-real Gaussian blocks, and one common real-even
+covariance-matched scalar contraction multiplier.  Let $\mathcal V$ be any
+finite set of retained nonzero antipodal momentum classes.  Its admitted
+edge set is
+\[
+ \mathcal E=\{p:p,2p\in\mathcal V\}.                    \tag{1.1}
+\]
+There is one raw innovation $\xi_p$ for each vertex.  A target that later
+serves as a source is not duplicated.  For deterministic real block matrices
+$A_p$ define
+\[
+ (N_Ax)_{2p}=A_px_p,\qquad
+ r^2=\|A\|_{\mathfrak E}^2
+     :=\sum_{p\in\mathcal E}\|A_p\|_{\HS}^2.           \tag{1.2}
+\]
+The map $p\mapsto2p$ is injective, so (1.1) is a disjoint union of finite
+nonbranching chains.  It is called the pure-dyadic forest below; it is not a
+general visit forest.
+
+Put
+\[
+ T_A=(\Id-N_A)^{-1},\qquad B_A=T_A-\Id,
+ \qquad \eta=T_A\xi,\qquad h=B_A\xi.                   \tag{1.3}
+\]
+Thus every later controller reads the actual shifted state of its parent.
+
+\paragraph{R-163.}
+There is one explicit analytic number $\delta_{\rm F}>0$, independent of the
+finite cutoff, the number of unrelated chains, every chain depth and starting
+mode, and the admitted common multiplier, such that
+$\|A\|_{\mathfrak E}<\delta_{\rm F}$ implies, for every $H\ne0$,
+\[
+ \boxed{
+ D^2(\cA\circ\chi)_A[H,H]
+   >{13\over100}\|H\|_{\mathfrak E}^2
+   >{1\over10}\cG_A(H,H).}                             \tag{1.4}
+\]
+Here $\chi(A)=B_A\xi$,
+\[
+ \cG_A(H,H)=\E\|D\chi_A[H]\|^2,                       \tag{1.5}
+\]
+and $\cA$ is the one globally summed R-141 production scalar with source
+cost, complete A7 endpoint/current owner, and terminal sixth power included
+once.  Equation (1.4) is an expected global controller-pullback theorem, not
+an intrinsic physical-source or pathwise conditional theorem.
+
+The result does not cover random or nonlinear past-dependent coefficients,
+parallel edges, branching visits, revisits or cycles, a zero mode, aliasing,
+nonzero mean, mismatched regulators, floor or cutoff removal, T-050, A13,
+Nelson, an interacting measure, any phase or PDE, or Sector-A closure.
+
+\section{Forest resolvent, source cost, and tangent metric}
+\hypertarget{section-2-resolvent}{}
+
+The finite shift $N_A$ is nilpotent.  For $r<1$ and
+$\tau=(1-r)^{-1}$,
+\[
+ \|N_A\|_{\op}\le\|N_A\|_{\HS}=r,
+ \quad \|T_A\|_{\op}\le\tau,
+ \quad \|B_A\|_{\HS}\le r\tau.                       \tag{2.1}
+\]
+Exact resolvent differentiation gives
+\[
+ D^mT_A[H_1,\ldots,H_m]
+ =\sum_{\sigma\in S_m}
+ T_AN_{H_{\sigma(1)}}T_A\cdots
+ N_{H_{\sigma(m)}}T_A,                                 \tag{2.2}
+\]
+and hence
+\[
+ \|D^mT_A[H_1,\ldots,H_m]\|_{\HS}
+ \le m!\tau^{m+1}\prod_{j=1}^m\|H_j\|_{\mathfrak E},
+ \qquad m=1,2,3.                                       \tag{2.3}
+\]
+No matrix dimension or path count enters (2.3).
+
+The exact source cost is
+\[
+ \cA_{\rm CM}(A)={9\over20}\|B_A\|_{\HS}^2.           \tag{2.4}
+\]
+For $r\le1/2$, the complete third derivative, including the source
+projected-force connection, obeys the R-162 bound
+\[
+ \|D^3\cA_{\rm CM}(A)\|_{\op}
+ \le {27\over5}(1+r)\tau^5\le {1296\over5}.            \tag{2.5}
+\]
+Moreover
+\[
+ (1+r)^{-4}\|H\|_{\mathfrak E}^2
+ \le\cG_A(H,H)
+ \le(1-r)^{-4}\|H\|_{\mathfrak E}^2.                 \tag{2.6}
+\]
+These are forest estimates because the direct-sum shift still satisfies the
+same Hilbert-Schmidt and operator bounds.
+
+\section{Origin transfer and the complete connection}
+\hypertarget{section-3-origin}{}
+
+At $A=0$,
+\[
+ D\chi_0[H]=N_H\xi,\qquad
+ D^2\chi_0[H,K]=(N_HN_K+N_KN_H)\xi.                    \tag{3.1}
+\]
+The $4p$ component of the acceleration is exactly
+\[
+ (H_{2p}K_p+K_{2p}H_p)\xi_p.                           \tag{3.2}
+\]
+There are no cross-chain acceleration terms because doubling has a unique
+parent and child.  Each term in (3.2), paired with its original carrier, has
+only the nonzero exact-torus Fourier support
+\[
+ \{\pm3p,\pm5p\}.                                      \tag{3.3}
+\]
+
+The complete uncontrolled covariance data are stationary, so the first
+derivative of every globally integrated A7 and sixth-power covariance scalar
+at the origin is spatially constant.  Therefore its pairing with (3.3)
+vanishes term by term.  The source connection also vanishes because $B_0=0$.
+Another raw mode at $3p$ or $5p$ does not alter this linear connection:
+innovations are independent and the origin data remain stationary.  Such
+factor-three relations do occur in the quadratic tangent term, and R-160
+already includes them in the complete affine root-union Hessian.
+
+Equivalently, with $P_A=T_AT_A^*$,
+\[
+ D^2P_0[H,H]
+ =2N_HN_H^*+2N_H^2+2(N_H^*)^2.                         \tag{3.4}
+\]
+The last two terms are precisely the cancelled connection directions.  The
+first term is the R-160 one-shot family with target-source reuse.  Hence
+\[
+ \boxed{
+ D^2(\cA\circ\chi)_0[H,H]
+ >{4\over25}\|H\|_{\mathfrak E}^2.}                   \tag{3.5}
+\]
+This is a full-action statement.  No local covariance-normal atom is
+identified with $P_{\rm comp}$.
+
+\section{The two-sided weighted dyadic-word lemma}
+\hypertarget{section-4-word}{}
+
+The raw stacked-current synthesis is not cutoff-uniformly bounded.  The
+repair is to retain $P_A-\Id$ before taking a norm:
+\[
+ P_A=\sum_{a,b\ge0}N_A^a(N_A^*)^b.                     \tag{4.1}
+\]
+Let $E,F$ be value or stacked-current syntheses, and let $e_p,f_p$ be their
+block operator-norm envelopes.  Suppose
+\[
+ \left(\sum_p e_{2^ap}^2f_{2^bp}^2\right)^{1/2}
+ \le\Gamma_{EF}q_E^aq_F^b.                             \tag{4.2}
+\]
+For
+\[
+ Y_{EF}(A)=E(P_A-\Id)F^*,                              \tag{4.3}
+\]
+the exact path expansion gives, for $m=0,1,2,3$,
+\[
+ \boxed{
+ \|D^mY_{EF}(A)[H_1,\ldots,H_m]\|
+ \le \Gamma_{EF}{d^m\over dr^m}
+ \left\{{1\over(1-q_Er)(1-q_Fr)}-1\right\}
+ \prod_{j=1}^m\|H_j\|_{\mathfrak E}.}                \tag{4.4}
+\]
+For $m=0$ the empty product is one.  For $m\ge1$ the derivative kills the
+subtracted identity.
+
+To prove (4.4), fix one word $(a,b)$ of degree $n=a+b$.  Its labelled
+$m$th derivative has at most
+\[
+ (n)_m=n(n-1)\cdots(n-m+1)                              \tag{4.5}
+\]
+terms.  Matrix submultiplicativity reduces each term to one coefficient
+$e_{2^ap}f_{2^bp}$, $m$ inserted direction sequences, and $n-m$
+coefficient sequences.  Holder with exponents $2,2n,\ldots,2n$, together
+with $\ell^2\subset\ell^{2n}\subset\ell^\infty$ and injectivity of every
+$p\mapsto2^jp$, gives
+\[
+ \sum_p e_{2^ap}f_{2^bp},|\hbox{path monomial}|
+ \le\Gamma_{EF}q_E^aq_F^b r^{n-m}
+      \prod_j\|H_j\|_{\mathfrak E}.                   \tag{4.6}
+\]
+The same proof permits repeated appearances of an edge on the two sides of
+the word.  Summing (4.6) over $(a,b)$ gives (4.4).  Fourier collisions are
+paid by the absolute geometric sum; no false cross-chain orthogonality is
+used.
+
+\subsection{Exact A1 full-lattice weights}
+
+Write $x_p=|p|^2$.  R-161 supplies
+\[
+ s_p^2\le{g\over1+x_p^2},\qquad
+ d_p^2\le{gx_p\over1+x_p^2},\qquad
+ x_p>{3\over20}|n|^2=:c_0|n|^2,                        \tag{4.7}
+\]
+where
+\[
+ g={244140625000000000\over28800000000947494031}.       \tag{4.8}
+\]
+The three-dimensional lattice bounds are
+\[
+ \sum_{n\ne0}|n|^{-4}<52,\qquad
+ \sum_{n\ne0}|n|^{-6}<35,\qquad
+ \sum_{n\ne0}|n|^{-8}<32.                             \tag{4.9}
+\]
+Consequently (4.2) holds with
+\[
+ \begin{array}{c|c|c}
+ EF&\Gamma_{EF}&(q_E,q_F)\\ \hline
+ SS&\sqrt{32}\,g c_0^{-2}&(1/4,1/4)\\
+ DD&\sqrt{52}\,g c_0^{-1}&(1/2,1/2)\\
+ SD&\sqrt{35}\,g c_0^{-3/2}&(1/4,1/2).
+ \end{array}                                           \tag{4.10}
+\]
+The worst $DD$ square weight is $|p|^{-4}$, which is summable in dimension
+three.  By contrast, the forbidden raw bound uses $\sum_pd_p^2\sim
+\sum_p|p|^{-2}$ and diverges.  Thus the recursive edge and the subtraction
+$P_A-\Id$ are both load-bearing.
+
+\section{Covariance data and the one global scalar}
+\hypertarget{section-5-data}{}
+
+The exact covariance perturbation is
+\[
+ R_A=P_A-\Id=B_A+B_A^*+B_AB_A^*.                       \tag{5.1}
+\]
+Primitive A7 cancellation is performed algebraically before norms:
+\[
+ \begin{aligned}
+ C_A&=C_0+SR_AS^*,\\
+ U_A:=Q_A-Q_0&=\sum_{i=1}^3D_iR_AD_i^*,\\
+ K_{A,i}&=SR_AD_i^*.
+ \end{aligned}                                         \tag{5.2}
+\]
+Common evenness gives $K_0=0$.  Applying (4.4), followed only by the fixed
+three-current contraction and fixed six-real output-rank inequalities, gives
+finite constants $J_m$, $m=0,1,2,3$, such that on $r\le1/2$,
+\[
+ \|D^mY_A[H_1,\ldots,H_m]\|_{\cZ}
+ \le J_m\prod_j\|H_j\|_{\mathfrak E},                \tag{5.3}
+\]
+where
+\[
+ Y_A=(C_A,U_A,K_A),\qquad
+ \|(C,U,K)\|_{\cZ}^2
+ =\|C\|_{\op}^2+\|U\|_{\op}^2+\sum_i\|K_i\|_{\HS}^2.
+                                                                  \tag{5.4}
+\]
+The primary and independent executables construct conservative exact
+$J_m$ from (4.10); no decimal approximation is used by the theorem.
+
+The globally summed endpoint/current owner and terminal sixth moment combine
+into the R-162 pointwise covariance scalar
+\[
+ \begin{aligned}
+ \Phi(C,U,K)={1\over2}\bigg\{&
+ \Tr[U\overline{\mathcal B}(C)]
+ +\sum_iK_i\otimes K_i:\overline{\mathcal T}(C)\bigg\}\\
+ &+{3\over20}\left[(\Tr C)^3
+ +6\Tr C\,\Tr(C^2)+8\Tr(C^3)\right].
+ \end{aligned}                                         \tag{5.5}
+\]
+Up to the fixed zero-control constant, the complete expected action is
+\[
+ F(A)={9\over20}\|B_A\|_{\HS}^2
+      +\int_{\mathbb T_{16}^3}\Phi(Y_A(x))\,dx.         \tag{5.6}
+\]
+Equation (5.6) contains every forward block and its legal reverse as one
+self-adjoint Hessian, their balanced symmetric cross once, and every
+projected-force connection once.  Derived states are not independent low
+variables.  The sixth power remains inside $\Phi$: after nonlinear pullback
+its connection is not positive by itself.
+
+The R-161 bound on $C_0$ and (5.3) put every $Y_A(x)$ in one compact
+finite-dimensional covariance-data box.  At the positive A7 floor, Gaussian
+heat differentiation gives finite constants
+\[
+ M_j=\sup_{Y\ \mathrm{in\ the\ box}}\|D^j\Phi(Y)\|<\infty,
+ \qquad j=1,2,3.                                       \tag{5.7}
+\]
+No inverse covariance is used, so singular admitted multipliers are allowed.
+
+\section{Uniform modulus and retained forest gap}
+\hypertarget{section-6-gap}{}
+
+The complete third-order chain rule is
+\[
+ \|D^3(\Phi\circ Y_A)\|
+ \le M_3J_1^3+3M_2J_1J_2+M_1J_3.                      \tag{6.1}
+\]
+The last term is mandatory because the recursive covariance has a nonzero
+third jet.  With torus volume $16^3=4096$, define
+\[
+ L_{\rm F}:={1296\over5}
+ +4096\left(M_3J_1^3+3M_2J_1J_2+M_1J_3\right).         \tag{6.2}
+\]
+Equations (2.5), (5.3), and (6.1) give
+\[
+ \|D^2F(A)-D^2F(0)\|_{\op}
+ \le L_{\rm F}\|A\|_{\mathfrak E},
+ \qquad \|A\|_{\mathfrak E}\le{1\over2}.            \tag{6.3}
+\]
+Choose
+\[
+ \boxed{
+ \delta_{\rm F}:=
+ \min\left\{{1\over2},{3\over100(1+L_{\rm F})}\right\}>0.}  \tag{6.4}
+\]
+Then (3.5) and (6.3) imply
+\[
+ D^2F(A)[H,H]
+ >\left({4\over25}-{3\over100}\right)\|H\|_{\mathfrak E}^2
+ ={13\over100}\|H\|_{\mathfrak E}^2.                 \tag{6.5}
+\]
+Since $\delta_{\rm F}<3/100$ and
+\[
+ \left({100\over97}\right)^4<{13\over10},             \tag{6.6}
+\]
+the upper bound in (2.6) turns (6.5) into
+\[
+ D^2F(A)[H,H]>{1\over10}\cG_A(H,H),                   \tag{6.7}
+\]
+which proves R-163.
+
+\section{Exact T-050 semiconvexity threshold}
+\hypertarget{section-7-threshold}{}
+
+This section sharpens the target for the still-missing general production
+estimate.  It does not assert that its hypotheses hold beyond R-163.
+
+Let $X(h)=\E\sum_j\|h_j\|_2^2$ and let $Y_6(h)$ denote the terminal sixth
+power.  Suppose a complete reduced action $\cA_{\rm red}$, after any genuine
+low coordinate has been eliminated by its exact range-compatible Schur
+complement, obeys along every radial segment
+\[
+ D^2\cA_{\rm red}(th)[h,h]\ge\mu X(h),\qquad0\le t\le1, \tag{7.1}
+\]
+and suppose
+\[
+ \cA_{\rm red}(0)\ge-C_0,
+ \qquad \|D\cA_{\rm red}(0)\|_*^2\le B_g.              \tag{7.2}
+\]
+Taylor's formula and Young's inequality give, for every $\eta>0$,
+\[
+ \cA_{\rm red}(h)
+ \ge-C_0-{B_g\over4\eta}
+      +\left({\mu\over2}-\eta\right)X(h).             \tag{7.3}
+\]
+Because the explicit action is
+\[
+ \cA_{\rm red}(h)
+ =\E V_J^{\rm ren}(Z_h)+{9\over20}X(h)+{3\over20}Y_6(h),
+                                                                  \tag{7.4}
+\]
+equation (7.3) yields
+\[
+ \E V_J^{\rm ren}(Z_h)
+ \ge-\epsilon_vX(h)-{3\over20}Y_6(h)-C,               \tag{7.5}
+\]
+with
+\[
+ \epsilon_v={9\over20}-{\mu\over2}+\eta.              \tag{7.6}
+\]
+For the registered $p=11/10$ T-050 gate,
+\[
+ {1\over2p}={5\over11},\qquad
+ {5\over11}-{9\over20}={1\over220}.                   \tag{7.7}
+\]
+Therefore
+\[
+ \boxed{\mu>-{1\over110}}                              \tag{7.8}
+\]
+is sufficient: choose
+$0<\eta<1/220+\mu/2$.  Then
+\[
+ \epsilon_v<{5\over11},\qquad
+ \epsilon_6={3\over20}<{27\over100}.                  \tag{7.9}
+\]
+If the explicit $9/10$ source Hessian is separated, (7.8) asks the complete
+adverse owner only for
+\[
+ K_{\rm owner}^{\rm red}
+ \succ-{10\over11}G_{\rm src},                         \tag{7.10}
+\]
+with a strict margin, not the stronger previously emphasized
+$-4G_{\rm src}/5$ bound.  Equations (7.2) remain indispensable.  Thus R-163
+narrows the quantitative target but does not close the absolute anchor,
+origin force, random law, or pathwise conditional gates.
+
+If a genuine independent low variable is present, its block must satisfy the
+Douglas range condition before the Moore--Penrose Schur complement is used.
+If low is a nonlinear graph, (7.1) must instead use the full pullback Hessian
+\[
+ D\chi^*H_{\rm prod}D\chi
+ +\langle g_{\rm prod},D^2\chi\rangle.                 \tag{7.11}
+\]
+Forward, legal reverse, balanced, and low are never separate reserves.
+
+\section{Failed shortcuts and reusable boundaries}
+\hypertarget{section-8-failures}{}
+
+\begin{enumerate}
+\item \textbf{Positive local gaps do not aggregate.}  The complete one-use
+matrix
+\[
+ \begin{pmatrix}3/20&-1/5\\-1/5&3/20\end{pmatrix}     \tag{8.1}
+\]
+has both diagonal gaps above $1/10$ but eigenvalues $-1/20$ and $7/20$.
+The cross is already forward plus its legal reverse, counted once.
+
+\item \textbf{A low diagonal does not repair a kernel cross.}  The matrix
+\[
+ \begin{pmatrix}1&1\\1&0\end{pmatrix}                 \tag{8.2}
+\]
+has determinant $-1$.  Range compatibility is necessary.
+
+\item \textbf{Raw-current boundedness is false.}  The estimate
+$\|DB\|_{\HS}\le\|D\|\|B\|_{\HS}$ is not cutoff uniform.  The proof of
+(4.4) differentiates the block words directly; inserted directions provide
+the required $\ell^2$ factors even when differentiation removes every
+literal $A$ factor.
+
+\item \textbf{Cross-chain Fourier orthogonality is false.}  Factor-three and
+other collisions occur.  Equations (4.2)--(4.6) use an absolute geometric
+sum and therefore do not need orthogonality.
+
+\item \textbf{Convexity of the sixth power is insufficient after pullback.}
+The connection $D\Phi[D^3Y]$ and the chart-acceleration term in (7.11) remain
+inside the one global scalar.
+
+\item \textbf{Random nonlinear coefficients leave the Gaussian chart.}
+For example, a coefficient proportional to $\operatorname{sgn}\xi$ produces
+$|\xi|$.  Covariance data no longer determine the endpoint law, so (5.5)
+cannot be reused.
+\end{enumerate}
+
+\section{Devil's-advocate audit}
+\hypertarget{section-9-audit}{}
+
+\begin{itemize}
+\item \textbf{Objection: a hidden forest-cardinality factor remains.}
+\textbf{DISMISSED.}  Each two-sided word uses Holder against the full-lattice
+square weight (4.2), and the word lengths are summed geometrically.
+
+\item \textbf{Objection: common-ancestor $BB^*$ terms were omitted.}
+\textbf{DISMISSED.}  They are exactly the words $a,b\ge1$ in (4.1).
+
+\item \textbf{Objection: another chain at $3p$ spoils the origin
+connection.}  \textbf{DISMISSED under the declared stationary hypotheses.}
+The connection is linear in the off-diagonal $p\mathbin{:}4p$ covariance
+second jet and pairs with a spatially constant origin derivative.  The
+quadratic factor-three cross is already in R-160.
+
+\item \textbf{Objection: the divergent primitive current covariance was
+hidden.}  \textbf{DISMISSED.}  Equation (5.2) forms $Q_A-Q_0$ before every
+norm.  Raw $Q_A$ is never bounded.
+
+\item \textbf{Objection: the theorem covers a general predictable forest.}
+\textbf{UPHELD AS PROHIBITED.}  The graph is an injective disjoint union of
+dyadic chains with deterministic matrices.  General visits and random laws
+remain open.
+
+\item \textbf{Objection: (7.8) closes T-050.}
+\textbf{UPHELD AS PROHIBITED.}  It is a sufficient threshold.  The production
+conditional semiconvexity, anchor, and origin-force bounds are not supplied.
+
+\item \textbf{Objection: the result selects BCC or another phase/PDE.}
+\textbf{UPHELD AS PROHIBITED.}  R-163 is phase-neutral source-action
+mathematics and contains no candidate-state comparison.
+\end{itemize}
+
+External review is invited for the one-vertex-per-mode convention, antipodal
+and six-real normalization, origin stationarity pairing, matrix-valued Holder
+step, repeated-edge two-sided words, exact A1 exponents, current contraction,
+primitive cancellation, complete third chain rule, tangent-metric comparison,
+and the $-1/110$ threshold algebra.
+
+\section{Reproduction and Result footer}
+\hypertarget{section-10-reproduction}{}
+
+Dependencies: A1, A7; R-107, R-141, R-155, R-160, R-161, R-162.
+
+Reproduction command: primary executable below.
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+a13_classii_full_lattice_weighted_resolvent_dyadic_forest_uniform_
+neighborhood_gap_boundary.py
+\end{verbatim}
+Independent command:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+a13_classii_full_lattice_weighted_resolvent_dyadic_forest_uniform_
+neighborhood_gap_boundary_independent.py
+\end{verbatim}
+Integrated command:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+a13_classii_full_lattice_weighted_resolvent_dyadic_forest_uniform_
+neighborhood_gap_boundary_verify.py
+\end{verbatim}
+
+\begingroup
+\scriptsize
+\begin{verbatim}
+Result ID: A13-CLASSII-FULL-LATTICE-WEIGHTED-RESOLVENT-DYADIC-
+ FOREST-UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY; Ledger ID: R-163.
+Precise statement: one positive analytic l2(HS) radius, uniform over every
+ finite injective deterministic pure-dyadic forest, retains the complete
+ expected controller-pullback gap >13/100>1/10; separately, reduced-action
+ semiconvexity mu>-1/110 plus anchor and force is sufficient for T-050.
+Scope: side-16 d=3 A1/A7, fixed positive floor, exact torus, centered
+ independent Gaussian blocks, common-even matched multiplier, deterministic
+ injective dyadic forest.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Expected output: primary, independent, integrated, PDF and release PASS.
+Falsification gate: any forest, word, origin, owner, threshold, hash, PDF,
+ exploration, public-surface, or release assertion fails.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no intrinsic/random/nonlinear/branching/revisit/
+ pathwise-conditional/removal/T-050/A13/Nelson/measure/phase/PDE/Sector-A
+ theorem.
+Proof complete: false; T-050 closed: false; Sector A closed: false.
+Next required action: test the owner-complete -10/11 threshold, absolute
+ anchor, and origin force on a legal production conditional chart.
+\end{verbatim}
+\endgroup
+
+\endgroup

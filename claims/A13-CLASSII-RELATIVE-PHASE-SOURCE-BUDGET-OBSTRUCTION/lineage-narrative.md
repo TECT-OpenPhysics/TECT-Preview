@@ -1322,6 +1322,29 @@ endpoint theorem.
     The single-chain boundary is frozen while the main lane pivots to the
     truth-first T-054 candidate-functional tournament.
 
+83. **Full-lattice weighted-resolvent dyadic forest and target sharpening.**
+    R-163 extends R-162 from one recursive chain to every finite injective
+    pure-dyadic deterministic forest. The direct two-sided word expansion of
+    `T_A T_A^*-I` exposes at least one recursive coefficient or inserted
+    direction in every covariance perturbation. Exact A1 endpoint weights
+    turn the apparently divergent raw-current sum into the summable
+    three-dimensional `sum |p|^-4` current-current square weight. This gives
+    forest-cardinality-, depth-, starting-mode-, cutoff-, and regulator-
+    uniform covariance-data derivatives through order three without assuming
+    cross-chain Fourier orthogonality. The stationary exact-torus origin
+    pairing kills every same-chain `p:4p` acceleration; R-160 already controls
+    the remaining factor-three tangent crosses and transfers its `4/25` gap.
+    The complete source/current/trace/projected-force/sextic modulus retains
+    `13/100>1/10` on one analytic forest-uniform ball. The theorem remains
+    expected/global, deterministic, fixed-floor and injective-dyadic. It does
+    not cover random/nonlinear coefficients, branching or revisits, or a
+    pathwise conditional production law. A companion coefficient lemma shows
+    that T-050 needs only reduced-action semiconvexity `mu>-1/110`, equivalently
+    an adverse owner strictly above `-10/11`, provided a cutoff-uniform
+    absolute anchor and origin-force bound also hold. Those three production
+    inputs remain open, so no T-050/A13, phase/PDE, Nelson/measure, or Sector-A
+    closure is claimed.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

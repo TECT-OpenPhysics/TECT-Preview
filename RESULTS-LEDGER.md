@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-163](#r-163) | Full-lattice weighted-resolvent dyadic-forest gap and exact reduced-action threshold | Scoped T4 analytic/exact/executed/audited deterministic-forest theorem. For every finite injective pure-dyadic forest with deterministic matrix coefficients and actual shifted-state reads, the two-sided expansion `T_A T_A^*-I=sum_(a,b) N_A^a(N_A^*)^b-I` exposes a mandatory recursive edge in every nonidentity covariance word. Exact A1 endpoint weights make the worst current-current square sum proportional to `sum |p|^-4`, so field/current covariance-data derivatives through order three are uniform in forest cardinality, depths, starting modes, cutoff and admitted common-even regulator even though the raw current synthesis diverges. Stationarity kills the complete `p:4p` chart connection at the origin, transferring the R-160 `4/25` arbitrary-family gap; the full source/current/trace/projected-force/sextic modulus retains `13/100>1/10` on one analytic forest-uniform ball. Separately, the exact T-050 coefficient algebra shows that reduced-action semiconvexity `mu>-1/110`, plus a uniform absolute anchor and origin-force bound, suffices; equivalently the adverse owner target is strictly above `-10/11`, not necessarily `-4/5`. Random/nonlinear laws, branching/revisits, pathwise conditional estimates, the anchor/force inputs, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
 | [R-162](#r-162) | Resolvent-controlled pure-dyadic recursive-chain uniform neighbourhood gap | Scoped T4 analytic/exact/executed/audited recursive-chain theorem. For one finite acyclic pure-dyadic chain with deterministic matrix coefficients and actual shifted-state reads `eta_(j+1)=xi_(j+1)+A_j eta_j`, the strictly lower shift `N_A` has `T_A=(I-N_A)^(-1)` and length-free resolvent jets in the summed `l2(HS)` coefficient norm. At the centered stationary origin, the new two-step controller acceleration has only `p:4p` support `{+/-3p,+/-5p}`, so the registered full-action first-variation cancellation transfers the R-160 `4/25` origin gap to the recursive pullback. Exact dyadic A1 synthesis bounds, covariance-normal `Q-Q0` cancellation, and the complete source, current, trace, projected-force, and sextic connections give an analytic radius `delta_*=min(1/2,3/[100(1+L_*)])` on which the expected global controller-pullback Hessian exceeds `13/100` and hence `1/10` times both the coefficient norm and induced recursive tangent Gram. The radius is uniform in finite chain length, retained starting mode, finite cutoff, and admitted regulator, but the theorem covers no intrinsic Hessian, unrelated multi-chain forest, random/nonlinear past law, revisit/cycle, pathwise conditional Hessian, removal, T-050/A13, phase/PDE, Nelson/measure, or Sector-A closure |
 | [R-161](#r-161) | Summable covariance jets and a growing affine-root-union uniform neighbourhood | Scoped T4 analytic/exact/executed/audited nonzero-neighbourhood theorem. On the fixed side-16 three-torus with the A1 symbol, positive A7 floor, exact continuum integration and a common real-even contraction multiplier, the pointwise value, derivative and field-current covariance jets of every finite one-shot raw-source affine `p:2p` family are bounded from `l2(HS)` controls by cardinality-independent full-lattice square sums. The worst controlled `Q` jet and the background value covariance use the three-dimensional `sum |n|^-4` threshold, which is logarithmically critical in dimension four. After exact `Q-Q0` cancellation, a compact finite covariance-data box and Gaussian heat derivatives through `D8 B` give an explicit global Hessian modulus `L_* ||A||`. The analytic radius `delta_*=min(1,3/[100(1+L_*)])` retains the R-160 origin gap as `D2 A(A)[H,H]>(13/100)||H||^2>(1/10)||H||^2`, uniformly in finite family cardinality, cutoff, regulator and factor-three path length. The R-107/R-141 equality is global only; no local `E_CN` to `P_comp` lower-bound transfer, realised past, shifted-state/revisit, nonlinear feedback, removal, T-050/A13, phase/PDE, Nelson/measure or Sector-A conclusion follows |
 | [R-160](#r-160) | Weighted-Schur growing affine root-union origin gaps | Scoped T4 analytic/exact/executed/audited origin-Hessian theorem. For every finite family of distinct raw antipodal `p:2p` affine controls, allowing a target class later to serve as another raw source, the exact covariance-normal loss graph has only factor-three paths. Its block Hessian is lower-bounded by an adverse scalar Jacobi majorant; no equality of spectra is asserted. Geometric weights `d_j=4^(-j)` and exact Sturm plus non-importing Fraction/Bernstein certificates bound the adverse endpoint by `25/32` on the continuous radial half-line `x>=3/20`, giving `D2 A(0)[H,H]>(19/160) sum ||H_p||_HS^2`. Exact side-16 lattice shell separation sharpens the endpoint bound to `37/50` and the gap to `4/25`. Both constants are independent of finite family cardinality and path length. No cardinality-uniform nonzero radius, realised-past, shifted-state/revisit, nonlinear predictable, finite-amplitude, cutoff/floor-removal, T-050/A13, phase/PDE, Nelson/measure, or Sector-A conclusion follows |
@@ -181,6 +182,73 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-163"></a>
+### R-163 -- Full-lattice weighted-resolvent dyadic-forest gap and exact reduced-action threshold
+
+- **Result ID.**
+  `A13-CLASSII-FULL-LATTICE-WEIGHTED-RESOLVENT-DYADIC-FOREST-UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY`.
+
+- **Canonical deterministic forest.** On one vertex space with one centered
+  Gaussian innovation per nonzero antipodal class, put
+  `(N_A x)_(2p)=A_p x_p`, `T_A=(I-N_A)^(-1)`, and `B_A=T_A-I`.
+  The graph is a disjoint union of injective nonbranching dyadic chains; a
+  target reused as a later source is not duplicated. The exact controller is
+  `h=B_A xi`, so every later edge reads the actual shifted parent state.
+
+- **Two-sided weighted-word repair.** For value/current syntheses `E,F`, the
+  exact covariance perturbation is
+  `Y_EF=E(T_A T_A^*-I)F^*`. If
+  `(sum_p e_(2^a p)^2 f_(2^b p)^2)^(1/2)
+  <=Gamma_EF q_E^a q_F^b`, then every derivative through order three is
+  bounded by the corresponding derivative of
+  `Gamma_EF/[(1-q_E r)(1-q_F r)]`. The exact A1 choices are
+  `(Gamma_SS,q_S)=(sqrt(32)g c0^-2,1/4)`,
+  `(Gamma_DD,q_D)=(sqrt(52)g c0^-1,1/2)`, and
+  `Gamma_SD=sqrt(35)g c0^(-3/2)`. Thus the worst `DD` square weight uses the
+  summable three-dimensional `sum |p|^-4`; the forbidden raw
+  `sum d_p^2~sum |p|^-2` is never taken. Common-ancestor `BB^*` words and all
+  Fourier collisions are included in the absolute geometric sum.
+
+- **Origin transfer and complete scalar.** At zero controller, the nonlinear
+  chart acceleration is a finite sum of `p:4p` blocks with nonzero support
+  `{+/-3p,+/-5p}`. The complete origin covariance derivative is spatially
+  constant, so exact torus integration kills every connection term. The
+  remaining tangent Hessian is exactly the R-160 arbitrary affine root-union
+  form and is `>4/25`. After algebraic `Q-Q0` cancellation and `K0=0`, one
+  compact covariance-data box controls all cross-chain nonlinear blocks. The
+  full third chain rule retains `M3 J1^3+3M2 J1 J2+M1 J3`, and the global
+  scalar contains source, endpoint/current, trace, projected force, forward,
+  legal reverse, balanced, and terminal sixth power once.
+
+- **Uniform gap and sharpened T-050 target.** With
+  `L_F=1296/5+4096(M3 J1^3+3M2 J1 J2+M1 J3)` and
+  `delta_F=min(1/2,3/[100(1+L_F)])`, the complete expected
+  controller-pullback Hessian exceeds `13/100` in coefficient norm and
+  `1/10` of the recursive tangent Gram, uniformly over every finite admitted
+  dyadic forest. Separately, Taylor plus Young shows that a complete reduced
+  action with radial Hessian lower bound `mu>-1/110`, absolute anchor and
+  origin-force bound yields `epsilon_v<5/11` and `epsilon_6=3/20<27/100`.
+  After separating the explicit `9/10` source Hessian, the adverse owner need
+  only lie strictly above `-10/11`. The anchor, force, and general production
+  semiconvexity are not proved by R-163.
+
+- **Evidence and verification.** The primary exact audit passes `63/63`; the
+  standard-library independent audit passes `65/65`; the integrated verifier
+  rebuilds both results, checks independence and hashes, deterministically
+  rebuilds and security-scans the visually inspected eight-page PDF, and
+  checks every public surface. See
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_full_lattice_weighted_resolvent_dyadic_forest_uniform_neighborhood_gap_boundary_manifest.json`
+  and
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-full-lattice-weighted-resolvent-dyadic-forest-uniform-neighborhood-gap-boundary-260804-v1.0.tex.txt`.
+
+- **Scope boundary.** Fixed side-16, physical dimension three, fixed positive
+  A7 floor, exact nonaliased torus, centered common-even covariance-matched
+  Gaussian law, deterministic injective dyadic forest, expected global
+  controller pullback. No intrinsic Hessian, random/nonlinear law,
+  branching/parallel visit/revisit/cycle, pathwise conditional estimate,
+  cutoff/floor removal, T-050/A13, Nelson, measure, phase/PDE, or Sector-A
+  closure follows.
 
 <a id="r-162"></a>
 ### R-162 -- Resolvent-controlled pure-dyadic recursive-chain uniform neighbourhood gap

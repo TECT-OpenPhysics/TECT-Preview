@@ -5904,3 +5904,61 @@ T5--T7 promotion remain open. Tier stays T4.
   candidate-functional rejection; direct A13 work should reopen only for an
   actual finite forest or a surviving production law with its complete
   conditional Hessian or counterexample.
+
+- 2026-08-04: Registered
+  `A13-CLASSII-FULL-LATTICE-WEIGHTED-RESOLVENT-DYADIC-FOREST-UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY`
+  (R-163). This discharges the exact deterministic forest successor requested
+  by the R-162 boundary. On one vertex space with one raw innovation per
+  nonzero antipodal class, the edge law `(N_A x)_(2p)=A_p x_p` makes the
+  recursive graph a disjoint union of injective dyadic chains and the actual
+  controller `h=(I-N_A)^(-1)xi-xi` reads every shifted parent state.
+
+  The raw stacked-current synthesis is not cutoff-uniformly bounded. The new
+  load-bearing estimate instead expands
+  `T_A T_A^*-I=sum_(a,b)N_A^a(N_A^*)^b-I`. Every nonidentity two-sided word
+  contains at least one coefficient or inserted direction. Its exact A1
+  endpoint square weights decay as `16^(-a-b) sum |p|^-8` for field-field,
+  `4^(-a-b) sum |p|^-4` for current-current, and the corresponding mixed
+  product. Hence the worst current-current weight is summable in dimension
+  three, and the first three covariance-data derivatives are uniform in the
+  number of chains, their depths and starting modes, the finite cutoff, and
+  the admitted common-even regulator. Common-ancestor `BB^*` words and
+  cross-chain Fourier collisions are included by the absolute geometric sum;
+  no false band orthogonality or raw-current norm is used.
+
+  At zero controller, every recursive acceleration block is a same-chain
+  `p:4p` second jet with nonzero support `{+/-3p,+/-5p}`. The complete origin
+  covariance derivative is spatially constant, so exact torus integration
+  kills the connection term by term. Factor-three tangent crosses remain and
+  are already part of the R-160 arbitrary affine root-union theorem. Thus the
+  full recursive forest inherits the `4/25` origin gap. Exact `Q-Q0`
+  cancellation, `K0=0`, a compact finite covariance-data box, and the complete
+  third chain rule `M3J1^3+3M2J1J2+M1J3` define a forest-uniform modulus
+  `L_F`. The analytic radius
+  `delta_F=min(1/2,3/[100(1+L_F)])` retains the expected global
+  controller-pullback gap `13/100` and more than `1/10` of the recursive
+  tangent Gram. Source, endpoint/current, trace, projected force, forward,
+  legal reverse, balanced, and sixth power remain in one scalar and are
+  counted once.
+
+  A separate exact coefficient audit also improves the target for the open
+  general production theorem. If the complete reduced action has a radial
+  Hessian lower bound `mu`, an absolute anchor, and a bounded origin force,
+  Taylor plus Young yields
+  `epsilon_v=9/20-mu/2+eta`. Since `5/11-9/20=1/220`, any
+  `mu>-1/110` is sufficient after choosing `eta<1/220+mu/2`; the sextic
+  coefficient is already `3/20<27/100`. Equivalently, after the explicit
+  `9/10` source Hessian is separated, the adverse owner only needs a strict
+  bound above `-10/11`, not the stronger `-4/5`. R-163 does not prove that
+  semiconvexity, anchor, or force bound for the full production law.
+
+  Primary `63/63` and standard-library independent `65/65` audits pass. The
+  integrated verifier rebuilds the children, audits independence, hashes and
+  all public surfaces, and deterministically rebuilds, security-scans and
+  renders the visually inspected eight-page PDF. R-163 proves no intrinsic
+  Hessian, random/nonlinear law, branching or parallel visit, revisit/cycle,
+  pathwise conditional estimate, floor/cutoff removal, T-050/A13 closure,
+  Nelson theorem, measure, phase/PDE verdict, or Sector-A closure. The next
+  direct gate is an owner-complete legal production conditional chart tested
+  against the sharpened `-10/11` threshold together with the absolute anchor
+  and origin force.
