@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-03-PA-M5-BARE-ISOTROPIC-SHELL-CAUSAL-CONE | the bare screened shell is not a joint Lorentz-gauge-critica |  |
 | NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM | the pinned unconstrained M1 functional has no nonzero equili |  |
 | NG-2026-08-03-A13-NONLINEAR-SHIFTED-STATE-PULLBACK-SOURCE-CONVEXITY | nonlinear controller coordinates destroy the apparent source |  |
 | NG-2026-08-03-A13-NONDEGENERATE-GAUSSIAN-PAST-CURRENT-DETERMINISTIC-LINFTY-COLLAR | absolute Gaussian past-current collars cannot close the full |  |

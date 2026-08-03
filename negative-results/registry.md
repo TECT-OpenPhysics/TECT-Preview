@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-PA-M5-BARE-ISOTROPIC-SHELL-CAUSAL-CONE](#ng-2026-08-03-pa-m5-bare-isotropic-shell-causal-cone) | use the bare PA-M5-NL3-SV isotropic finite-wave-number screened-vector candidate as a joint T-053 Lorentz, gauge, and critical survivor | exact auxiliary elimination and the neutral-reference theorem survive, but a negative-quartic coexistence boundary is gapped, a continuous critical shell has a rank-one spatial Hessian with radial-linear and tangential-quadratic frequency, the screened vector is not a local gauge connection, and positive screening gaps its transverse branch. Retain the static screened-shell lemma, reject only this bare joint survivor, and treat a genuine compact-gauge or isolated-node repair as a new candidate version |
 | [NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM](#ng-2026-08-03-m1-pinned-functional-nonzero-equilibrium) | find a stable or metastable nonzero equilibrium of the hash-pinned unconstrained M1/P1 functional by BCC, other finite-star, multistart, Hessian, or full-field search | exact global and radial bounds give `F_P1[Psi]>=g||Psi||_2^2`, `g>1/8`, and `<DF_P1(Psi),Psi>>=kappa||Psi||_2^2`, `kappa>1/4`; zero is the unique critical point and global minimizer and its canonical gradient flow decays exponentially. Retire T-052's equilibrium search for this candidate except as backend regression; constrained, compact-target, chemical-potential, conserved, retuned, historical, A7, alternative-model, and physical-vacuum questions remain open |
 | [NG-2026-08-03-A13-NONLINEAR-SHIFTED-STATE-PULLBACK-SOURCE-CONVEXITY](#ng-2026-08-03-a13-nonlinear-shifted-state-pullback-source-convexity) | infer a global intrinsic production gap by treating the `9/10` Cameron--Martin source reserve as a positive controller-coordinate Hessian after nonlinear shifted-state substitution | for `chi(t,s)=(tP xi_p,sP(xi_2p+tP xi_p))` with a rank-one projection `P`, the source cost is `9(t^2+s^2+t^2s^2)/20`; at `t=s=R` its parameter Hessian has eigenvalue `9(1-R^2)/10`, equal to `-27/10` at `R=2`, while the intrinsic tangent source Gram remains positive. The failure is chart curvature, not an intrinsic production or T-050 counterexample |
 | [NG-2026-08-03-A13-NONDEGENERATE-GAUSSIAN-PAST-CURRENT-DETERMINISTIC-LINFTY-COLLAR](#ng-2026-08-03-a13-nondegenerate-gaussian-past-current-deterministic-linfty-collar) | close the R-152 or R-153 absolute past-current collar by a fixed almost-sure threshold, or weaken it to an averaged multiplier required for every predictable direction | one uncancelled derivative-active Gaussian past coefficient has unbounded support, forcing positive-probability violation of every finite absolute collar; event-localized predictable controls make the all-directions weighted inequality equivalent to the fiberwise threshold, so only a signed owner completion or a genuinely restricted control class can continue this route |
@@ -244,6 +245,49 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-pa-m5-bare-isotropic-shell-causal-cone"></a>
+### NG-2026-08-03-PA-M5-BARE-ISOTROPIC-SHELL-CAUSAL-CONE -- the bare screened shell is not a joint Lorentz-gauge-critical survivor
+
+**Failure mode.**  Use the bare `PA-M5-NL3-SV-v0` functional as a
+survivor for the joint T-053 common-speed, local-gauge, and critical-mode
+tests merely because exact auxiliary elimination can select a nonzero radial
+momentum shell.
+
+**Evidence.**  Eliminating the screened vector gives
+`K_j(s)=r+lambda_j+c*s-g*s/(s+sigma)`.  The continuous nonzero-shell
+condition is exactly `g>c*sigma`, while a nonzero first mode on the cubic
+torus lies below zero momentum exactly when
+`g>c*(sigma+(2*pi/L)^2)`.  For the exact finite-torus quadratic bottom
+`kappa_L`, zero is a global minimizer exactly when
+`kappa_L>=3*u_minus^2/(16*v)`.  If `u<0`, equality is a first-order
+finite-volume energy crossing with a positive zero-phase quadratic gap.
+If a continuous shell is instead tuned critical, its spatial quadratic
+Hessian has rank one and an ordinary positive inertial completion gives
+radial `omega` proportional to `|p_parallel|`, tangential `omega`
+proportional to `|p_perp|^2`, and exactly soft paths along the curved shell.
+The bare screened vector has no local `U(1)` connection law, `A_0`, Gauss
+constraint, or Maxwell redundancy; `sigma>0` also gaps its transverse branch.
+
+Primary evidence is
+`strategy/pre-a-pa-m5-nl3-sv-candidate-certificate-260803-v0.1.tex.txt`,
+`strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json`, and the primary and
+independent result JSON files under the two
+`2026-08-03-*-pre-a-pa-m5-nl3-sv-candidate` run directories.
+
+**Consequence.**  Retain the exact static screened-shell, coercivity, and
+neutral-reference statements as generic mathematical lemmas.  Reject the
+bare candidate before spending survivor-only T-053 work on physical
+interpretation, common-speed fitting, or nonlinear morphology.  A genuine
+compact-gauge model or a model with symmetry-protected isolated nodes is a
+new candidate version and must rerun boundedness, reference-state,
+observable, and causal gates.
+
+**Boundary.**  This is not a no-go theorem for the M5 family, nonlocal
+functionals, finite-wave-number order, emergent gauge structure, or TECT as a
+whole.  It does not select a physical vacuum, prove a thermodynamic phase
+transition, close T-050 or A13, or close Sector A.  The inertial conclusion is
+conditional on the explicitly stated ordinary positive quadratic completion.
 
 <a id="ng-2026-08-03-m1-pinned-functional-nonzero-equilibrium"></a>
 ### NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM -- the pinned unconstrained M1 functional has no nonzero equilibrium

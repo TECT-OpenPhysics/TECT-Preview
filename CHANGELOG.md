@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Certify and reject bare PA-M5 screened-shell joint survivor] - 2026-08-03
+
+A compact T0 candidate package proves exact screened-vector elimination, the continuous and finite-torus shell gates, finite-torus coercivity, and the exact neutral-reference threshold. Primary and non-importing independent certificates agree. The static mechanism is retained, but the bare candidate is rejected before T-053: its threshold state is a uniform-density plane wave, a negative-quartic crossing remains gapped, the continuous critical shell has rank-one spatial Hessian with tangential-quadratic frequency, and the screened vector is not a local U(1) connection. This is not a no-go for M5, nonlocal models, compact gauge completions, or TECT, and it does not close T-050, A13, or Sector A.
+
 ## [T-054 screened-vector candidate derivation and early causal boundary] - 2026-08-03
 
 Recorded the read-only derivation of the structurally distinct PA-M5-NL3-SV screened-vector/nonlocal candidate as EXP-000687, without promoting it to a TECT action or theorem. Exact auxiliary elimination gives the finite-shell gate g>c sigma and the finite-torus zero-reference gate kappa_L versus 3u_minus^2/(16v). A separately assumed inertial dynamics exposes an early causal obstruction: common limiting speed requires an unprotected coefficient relation, while the bare shell has radial-linear but tangential-quadratic frequency dispersion. Next work is a compact candidate manifest and independent exact certificate; expensive T-053 tests remain survivor-only.

@@ -1,0 +1,234 @@
+{
+  "schema": "tect/pre-a-candidate-manifest/0.1",
+  "candidate_id": "PA-M5-NL3-SV-v0",
+  "candidate_family": "M5-NONLOCAL-SPECTRAL",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 candidate certificate; not a TECT action, claim, result-ledger theorem, tier change, or physical model",
+  "claim_context": "A2-FULL-PRODUCTION-WELLPOSED",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "For the newly hypothesised periodic screened-vector functional, exact auxiliary elimination gives K_j(s)=r+lambda_j+c*s-g*s/(s+sigma). The continuous nonzero radial shell condition is g>c*sigma, while an actual nonzero first torus shell lies below zero momentum exactly when g>c*(sigma+(2*pi/L)^2). If kappa_L is the exact finite-torus quadratic bottom, zero is a global minimizer exactly when kappa_L>=3*u_minus^2/(16*v); for u<0 equality is a finite-volume first-order energy-level crossing at density 3*u_minus/(4*v), with a positive zero-phase quadratic gap. The static model is coercive and has a global minimizer. Under an ordinary positive inertial completion, however, any critical isotropic nonzero shell has a rank-one spatial quadratic Hessian, radial omega proportional to |p_parallel|, tangential omega proportional to |p_perp|^2, and exactly soft curved-shell paths. The bare candidate therefore fails the joint T-053 Lorentz-gauge-critical survivor gate even if its two ultraviolet speeds are tuned equal.",
+  "candidate_verdict": "RETAIN STATIC SCREENED-SHELL MATHEMATICAL MECHANISM; REJECT BARE JOINT T-053 LORENTZ-GAUGE-CRITICAL SURVIVOR",
+  "formal_negative_id": "NG-2026-08-03-PA-M5-BARE-ISOTROPIC-SHELL-CAUSAL-CONE",
+  "degrees_of_freedom": {
+    "psi": "Psi:T_L^3->C^3",
+    "screened_vectors": "A_i:T_L^3->C^3 for i=1,2,3",
+    "configuration_space": "H1(T_L^3;C^3) x H1(T_L^3;C^9)",
+    "density": "rho=Psi^dagger Psi",
+    "gauge_redundancy": "none; only a global common phase symmetry is manifest"
+  },
+  "functional": {
+    "static_energy": "F=1/2<Psi,(rI+M-cDelta)Psi>_R+1/2 sum_i<A_i,(-Delta+sigma)A_i>_R-sqrt(g) sum_i<A_i,partial_i Psi>_R+int[(u/4)rho^2+(v/6)rho^3]",
+    "parameter_domain": "c>0, sigma>0, g>0, v>0; r,u real; M Hermitian",
+    "boundary_conditions": "periodic cubic torus of side L",
+    "reference_state": "Psi=0, A=0 with the same volume, normalization, and boundary convention",
+    "ordinary_inertial_test_only": "chi_Psi||dot Psi||^2/2+chi_A sum_i||dot A_i||^2/2 with chi_Psi,chi_A>0",
+    "declared_evolution_law": false
+  },
+  "observable_map": {
+    "mathematical_observables": [
+      "rho=Psi^dagger Psi",
+      "internal bilinears Psi^dagger T_A Psi",
+      "phase-gradient current",
+      "direction tensor partial_i Psi^dagger partial_j Psi"
+    ],
+    "map_to_measured_observables": false,
+    "gauge_invariant_spatial_density_modulation": false,
+    "threshold_saturator": "single minimum-mode plane wave with uniform local algebraic densities and an unselected direction"
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "three spatial dimensions",
+      "Euclidean torus and Laplacian",
+      "field content C3 plus three C3 vectors",
+      "static energy form",
+      "r,c,sigma,g,u,v and L",
+      "optional inherited A1 family-lock matrix M",
+      "chi_Psi and chi_A only for the separate inertial test"
+    ],
+    "fitted_inputs": [],
+    "predicted_physical_outputs": [],
+    "derived_symbolic_outputs": [
+      "auxiliary elimination",
+      "continuous and discrete shell gates",
+      "neutral-reference threshold",
+      "coercivity",
+      "plane-wave morphology",
+      "principal-speed tuning equation",
+      "rank-one shell causal obstruction"
+    ],
+    "holdout_prediction": false
+  },
+  "mathematical_status": {
+    "static_finite_torus_coercivity": "PROVED in declared candidate scope",
+    "static_global_minimizer_existence": "PROVED in declared candidate scope",
+    "exact_reference_state_selection": "PROVED in declared candidate scope",
+    "finite_volume_energy_level_crossing": "PROVED when the exact threshold is met",
+    "thermodynamic_phase_transition": "NOT PROVED",
+    "dynamical_wellposedness": "NOT DEFINED OR PROVED",
+    "continuum_or_infinite_volume_robustness": "NOT PROVED",
+    "local_gauge_consistency": "FAILED for the bare field transformation",
+    "common_isotropic_critical_cone": "FAILED for the bare nonzero shell"
+  },
+  "preregistered_falsifiers": [
+    {
+      "id": "AUXILIARY-SQUARE",
+      "question": "Does exact elimination produce the declared screened kernel without a sign or factor defect?",
+      "verdict": "PASS"
+    },
+    {
+      "id": "FINITE-TORUS-SHELL",
+      "question": "Does the continuous shell condition alone select a nonzero finite-torus mode?",
+      "verdict": "FAIL; the stronger exact discrete condition is required"
+    },
+    {
+      "id": "NEUTRAL-ZERO-REFERENCE",
+      "question": "Can a nonzero state beat zero under the same normalization?",
+      "verdict": "PASS exactly when kappa_L<3*u_minus^2/(16*v); equality gives coexistence for u<0"
+    },
+    {
+      "id": "COMMON-CRITICAL-CONE",
+      "question": "Does the finite shell yield a protected positive isotropic Lorentz cone?",
+      "verdict": "FAIL; the spatial quadratic Hessian is rank one"
+    },
+    {
+      "id": "GAUGE-VECTOR",
+      "question": "Is A_i a local U(1) connection with a massless transverse branch?",
+      "verdict": "FAIL; the bare vector is matter-like and sigma>0 gaps its transverse branch"
+    }
+  ],
+  "scope": {
+    "authority": "T0-CANDIDATE-CERTIFICATE",
+    "bare_candidate_t054_survival": false,
+    "bare_isotropic_shell_common_lorentz_cone": false,
+    "continuous_isotropic_shell_gate": true,
+    "exact_auxiliary_elimination": true,
+    "field_psi_in_c3_and_three_auxiliary_c3_vectors": true,
+    "finite_torus_coercive_lower_bound": true,
+    "finite_torus_zero_reference_gate": true,
+    "finite_volume_energy_level_crossing_only": true,
+    "instantaneous_auxiliary_field_is_not_a_causal_completion": true,
+    "local_gauge_completion": false,
+    "new_hypothesis_not_registered_tect_action": true,
+    "ordinary_positive_inertial_extension_only": true,
+    "parameter_domain": "c>0, sigma>0, g>0, v>0; r,u real; M Hermitian",
+    "periodic_static_energy": true,
+    "physical_parameter_or_evidence_fit": false,
+    "physical_vacuum_selection": false,
+    "t050_a13_or_sector_a_closure": false,
+    "tect_tier_or_claim_promotion": false,
+    "thermodynamic_phase_transition": false,
+    "unique_morphology_or_bcc_selection": false
+  },
+  "exact_results": {
+    "bare_shell_causal_verdict": "FAIL: rank-one spatial Hessian in three dimensions",
+    "candidate_t054_verdict": "RETAIN STATIC MECHANISM; REJECT BARE JOINT T-053 SURVIVOR",
+    "coexistence_density_when_u_negative": "3*u_minus/(4*v)",
+    "continuous_shell_condition": "g>c*sigma",
+    "continuous_shell_drop": "(sqrt(g)-sqrt(c*sigma))^2",
+    "continuous_shell_radius_squared": "sqrt(g*sigma/c)-sigma",
+    "critical_fixture_kernel": "(s - 1)**2/(s + 1)",
+    "finite_torus_nonzero_first_shell_condition": "g>c*(sigma+(2*pi/L)^2)",
+    "finite_torus_zero_reference_threshold": "kappa_L>=3*u_minus^2/(16*v)",
+    "first_order_boundary_zero_phase_gap": "3*u_minus^2/(16*v)>0 when u<0",
+    "fixture_effective_dispersion": "omega_-^2=(2*p_parallel+p_parallel^2+|p_perp|^2)^2/4+higher_dynamic_order",
+    "fixture_kernel": "(16*s**2 - 29*s + 19)/(16*(s + 1))",
+    "fixture_momentum_hessian": [
+      [
+        "4",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "fixture_shell_minimum": "3/16",
+    "reduced_kernel": "K_j(s)=r+lambda_j+c*s-g*s/(s+sigma)"
+  },
+  "authority_hashes": {
+    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "strategy/boundary-massless-mode-criticality-seed-260802.md": "9b371cd95bf053421205d87c5dfb2a5ec9d2d6c405c1fbe6b6ceed472e7acf28",
+    "strategy/pre-a-evidence-first-model-selection-charter-260802.md": "732183c1f6376916fdcebccff788cd20e380a0871dd1e568d3e83df95a7ab754"
+  },
+  "files": {
+    "primary": {
+      "path": "codes/foundations/pre_a_pa_m5_nl3_sv_candidate.py",
+      "version": "0.1.0",
+      "sha256": "67076df89078b4e8b9c70f67adf302a52e426ed104cce322201f4513e6ddf5dc"
+    },
+    "independent": {
+      "path": "codes/foundations/pre_a_pa_m5_nl3_sv_candidate_independent.py",
+      "version": "0.1.0",
+      "sha256": "c79553ed29b7cc7d57408f4915f8d768f39146618a6163c5014469ce0370a906"
+    },
+    "verifier": {
+      "path": "codes/foundations/pre_a_pa_m5_nl3_sv_candidate_verify.py",
+      "version": "0.1.0",
+      "sha256": "8fe9f5d7aa2552e006f53c21fea4dfeba5a347e0b05ced8522a94afab8a0b3cc"
+    },
+    "note": {
+      "path": "strategy/pre-a-pa-m5-nl3-sv-candidate-certificate-260803-v0.1.tex.txt",
+      "version": "0.1",
+      "sha256": "2aed9ecafff053d14c1b9ea6ecdc850790d599be209d0d7a2049c64089f49e43"
+    },
+    "pdf": {
+      "path": "strategy/pre-a-pa-m5-nl3-sv-candidate-certificate-260803-v0.1.pdf",
+      "version": "0.1",
+      "sha256": "6eda4a419f0d86822b86e1fc0f470b82778b70b2613a0494a32daece5f4014b8"
+    },
+    "primary_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-03-primary-pre-a-pa-m5-nl3-sv-candidate/result.json",
+      "schema": "tect/pre-a-pa-m5-nl3-sv-candidate-primary/0.1",
+      "sha256": "2c3a79e2929da3502069352d1385fb8f4caf9abf9958c7e6a3a9ed09bd0e990e"
+    },
+    "independent_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-03-independent-pre-a-pa-m5-nl3-sv-candidate/result.json",
+      "schema": "tect/pre-a-pa-m5-nl3-sv-candidate-independent/0.1",
+      "sha256": "307331482fe2b1ddacdb0507b7bf24f9218270c1c44330bde447c5496a670b95"
+    },
+    "integrated_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-03-integrated-pre-a-pa-m5-nl3-sv-candidate/result.json",
+      "schema": "tect/pre-a-pa-m5-nl3-sv-candidate-integrated/0.1"
+    }
+  },
+  "verification": {
+    "command": "E:\\Dev\\TECT.venv\\Scripts\\python.exe codes/foundations/pre_a_pa_m5_nl3_sv_candidate_verify.py",
+    "primary_assertions": 41,
+    "independent_assertions": 29,
+    "integrated_assertions": 156,
+    "integrator_only_assertions": 86,
+    "pdf": {
+      "deterministic": true,
+      "source_date_epoch": 1785715200,
+      "form_check": "PASS",
+      "overfull_hbox_count": 0,
+      "pages": 6,
+      "size_bytes": 85673,
+      "security_check": "PASS: unencrypted and no JavaScript, launch action, attachment, embedded file, rich media, XFA, submission action, remote goto, or URI action",
+      "renderer": "Poppler pdftoppm 26.802.11031",
+      "render_dpi": 150,
+      "rendered_pages": 6,
+      "manual_visual_qa": "PASS: all 6 final rendered pages inspected on 2026-08-03; title, exact functional, square completion, continuum/discrete gate separation, neutral-reference theorem, morphology, causal no-go, eight objections, reproduction commands, decision footer, and page breaks are legible with no clipping, overlap, overfull line, stray glyph, or missing content."
+    }
+  },
+  "exploration_ids": [
+    "EXP-000687",
+    "EXP-000688"
+  ],
+  "proof_complete_in_declared_scope": true,
+  "physical_model_selected": false,
+  "t053_handoff_allowed": false,
+  "t050_or_a13_closed": false,
+  "sector_a_closed": false,
+  "no_overclaim": "PA-M5-NL3-SV is a T0 new-hypothesis candidate, not a registered TECT action or physical model. The certificate proves exact static elimination, distinct continuum and finite-torus shell criteria, a zero-reference criterion, a finite-torus coercive bound, and a bare isotropic-shell rank obstruction for ordinary positive inertial dynamics. The resulting finite-volume crossing is not called a thermodynamic phase transition. It does not derive the screened vector, parameters, symmetry, local gauge law, microscopic charge, cooling map, unique morphology, physical vacuum, Lorentz invariance, topology, A7, T-050, or Sector-A closure.",
+  "next_action": "Retain the static screened-shell theorem as a reusable generic lemma, but do not spend T-053 on PA-M5-NL3-SV-v0. Register and test either a genuine compact-gauge M3 candidate or an M5 candidate with symmetry-protected isolated nodes. Any repair of the present shell is a new candidate version and must rerun boundedness, neutral-reference, observable, and causal gates."
+}

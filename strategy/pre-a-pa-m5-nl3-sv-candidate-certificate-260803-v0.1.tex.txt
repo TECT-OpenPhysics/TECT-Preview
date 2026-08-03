@@ -1,0 +1,406 @@
+% =============================================================================
+% Title: PA-M5-NL3-SV screened-shell candidate certificate and early causal no-go
+% Claim: T0-NON-CLAIM-PRE-A-CANDIDATE
+% Candidate: PA-M5-NL3-SV-v0
+% Task: T-054
+% Negative: NG-2026-08-03-PA-M5-BARE-ISOTROPIC-SHELL-CAUSAL-CONE
+% Version: v0.1 -- first issued 2026-08-03; this version issued 2026-08-03
+% Status: T0 candidate certificate; no TECT action, theorem tier, or vacuum claim
+% =============================================================================
+
+\begingroup
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cT}{\mathbb T}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\dd}{\mathrm d}
+
+\section*{1. Purpose and scope: decision boundary}
+
+This note tests the new-hypothesis candidate \texttt{PA-M5-NL3-SV-v0}
+introduced in EXP-000687.  It is not a registered TECT action and inherits no
+A1, A2, A7, or A13 theorem.  The calculation has a two-sided conclusion:
+\begin{quote}
+The candidate is retained as a coherent static screened-shell mathematical
+mechanism, but its bare form is rejected as a joint T-053
+Lorentz-gauge-critical survivor.
+\end{quote}
+The rejection is scoped to an isotropic nonzero soft shell with an ordinary
+positive inertial completion.  It does not refute M5, nonlocal models, or
+emergent structure in general.  A genuine gauge connection, isolated
+symmetry-protected nodes, or a separate light sector defines a materially new
+candidate and must rerun the reference-state theorem below.
+
+On the cubic torus $\cT_L^3$, let
+\[
+ \Psi:\cT_L^3\longrightarrow\mathbb C^3,
+ \qquad
+ A_i:\cT_L^3\longrightarrow\mathbb C^3,\quad i=1,2,3,
+ \qquad \rho=\Psi^\dagger\Psi .                  \tag{1.1}
+\]
+For a Hermitian $3$ by $3$ matrix $M$, declare
+\[
+\begin{split}
+ \cF[\Psi,A]={}&{1\over2}
+ \langle\Psi,(r\Id+M-c\Delta)\Psi\rangle_{\mathbb R}
+ +{1\over2}\sum_i\langle A_i,(-\Delta+\sigma)A_i\rangle_{\mathbb R}
+ \\
+ &-\sqrt g\sum_i\langle A_i,\partial_i\Psi\rangle_{\mathbb R}
+ +\int_{\cT_L^3}\left({u\over4}\rho^2+{v\over6}\rho^3\right)\dd x .
+\end{split}                                                     \tag{1.2}
+\]
+The parameter domain is
+\[
+ c>0,\qquad \sigma>0,\qquad g>0,\qquad v>0,
+ \qquad r,u\in\mathbb R.                           \tag{1.3}
+\]
+Equation (1.2), its boundary conditions, and its ordinary inertial extension
+are hypotheses.  No numerical values, microscopic derivation, cooling map,
+fit, or measured-observable map is supplied.
+
+\section*{2. Exact auxiliary elimination and coercivity}
+
+Put $L_\sigma=-\Delta+\sigma$.  Since $\sigma>0$, it is invertible and
+\[
+ A_i^*=\sqrt g\,L_\sigma^{-1}\partial_i\Psi.       \tag{2.1}
+\]
+Completing the square with the repository real pairing gives
+\[
+\begin{split}
+ \cF[\Psi,A]={}&{1\over2}\sum_i
+ \left\|L_\sigma^{1/2}(A_i-A_i^*)\right\|_2^2
+ +{1\over2}\left\langle\Psi,
+ \left(r\Id+M-c\Delta-g(-\Delta)L_\sigma^{-1}\right)\Psi
+ \right\rangle_{\mathbb R}
+ \\
+ &+\int_{\cT_L^3}\left({u\over4}\rho^2+{v\over6}\rho^3\right)\dd x .
+\end{split}                                                     \tag{2.2}
+\]
+Thus, if $Mq_j=\lambda_jq_j$ and $s=|k|^2$, the reduced quadratic symbol is
+\[
+ \boxed{K_j(s)=r+\lambda_j+cs-{gs\over s+\sigma}.} \tag{2.3}
+\]
+There is no missing factor two: both quadratic terms in (1.2) carry one half,
+and the cross term carries exactly $-\sqrt g$.
+
+Let $\lambda_{\min}$ be the lowest eigenvalue of $M$ and set
+$\alpha=r+\lambda_{\min}-g$.  Since
+\[
+ K_j(s)\ge cs+r+\lambda_j-g,                       \tag{2.4}
+\]
+and the scalar polynomial
+\[
+ {\alpha x\over2}+{ux^2\over4}+{vx^3\over12}
+\]
+has a finite lower bound on $x\ge0$, (2.2) yields
+\[
+ \cF\ge {1\over2}\sum_i\|L_\sigma^{1/2}(A_i-A_i^*)\|_2^2
+ +{c\over2}\|\nabla\Psi\|_2^2+{v\over12}\|\Psi\|_6^6
+ -|\cT_L^3|C_{\rm pol}.                            \tag{2.5}
+\]
+Moreover
+\[
+ \sum_i\|L_\sigma^{-1}\partial_i\Psi\|_{H^1}^2
+ \le \sup_{s\ge0}{(1+s)s\over(s+\sigma)^2}\|\Psi\|_2^2,
+ \qquad
+ \sup_{s\ge0}{(1+s)s\over(s+\sigma)^2}
+ \le\max\{1,\sigma^{-1}\}.                       \tag{2.6}
+\]
+Therefore finite-torus sublevel sets are bounded in
+$H^1(\cT_L^3;\mathbb C^3)\times H^1(\cT_L^3;\mathbb C^9)$.
+Weak compactness, compact $H^1\hookrightarrow L^4$, and lower
+semicontinuity of the positive quadratic and sextic terms give a global
+static minimizer.  This is a static well-posedness statement, not a dynamical
+or causal theorem.
+
+\section*{3. Continuous and finite-torus shell gates are different}
+
+Direct differentiation of (2.3) gives
+\[
+ K_j'(s)=c-{g\sigma\over(s+\sigma)^2},
+ \qquad
+ K_j''(s)={2g\sigma\over(s+\sigma)^3}>0.           \tag{3.1}
+\]
+Hence the continuous radial minimum is nonzero exactly when
+\[
+ g>c\sigma,\qquad
+ s_*=\sqrt{g\sigma/c}-\sigma>0,                    \tag{3.2}
+\]
+and then
+\[
+ K_j(s_*)=r+\lambda_j-(\sqrt g-\sqrt{c\sigma})^2, \tag{3.3}
+\]
+with the useful exact identity
+\[
+ K_j(s)-K_j(s_*)={c(s-s_*)^2\over s+\sigma}.       \tag{3.4}
+\]
+Condition (3.2) selects a radial minimum; it does not assert that this mode is
+soft or unstable.  Those cases require respectively $K_j(s_*)=0$ or
+$K_j(s_*)<0$.
+
+On the finite cubic torus,
+\[
+ s_n=\left({2\pi\over L}\right)^2|n|^2,
+ \qquad s_1=\left({2\pi\over L}\right)^2.          \tag{3.5}
+\]
+Since
+\[
+ K_j(s)-K_j(0)=s\left(c-{g\over s+\sigma}\right), \tag{3.6}
+\]
+some nonzero lattice mode lies strictly below zero momentum if and only if
+\[
+ \boxed{g>c(\sigma+s_1).}                          \tag{3.7}
+\]
+At equality the zero mode and first shell are degenerate.  The exact
+counterfixture $c=\sigma=1$, $g=3/2$, $L=2\pi$ satisfies the continuous
+condition (3.2), but every nonzero torus mode has $s\ge1$ and lies above the
+zero mode.  This corrects any use of $g>c\sigma$ as a finite-volume shell
+selection theorem.
+
+\section*{4. Exact neutral-reference theorem and morphology}
+
+Let
+\[
+ \kappa_L=\min_{n\in\mathbb Z^3,\,j}K_j(s_n),
+ \qquad u_-:=\max\{-u,0\},\qquad u_+:=\max\{u,0\}. \tag{4.1}
+\]
+For $x\ge0$, exact completion gives
+\[
+\begin{split}
+ {\kappa_Lx\over2}+{ux^2\over4}+{vx^3\over6}
+ =x\left[
+ {1\over2}\left(\kappa_L-{3u_-^2\over16v}\right)
+ +{u_+x\over4}
+ +{v\over6}\left(x-{3u_-\over4v}\right)^2
+ \right].
+\end{split}                                                     \tag{4.2}
+\]
+The spectral lower bound and (4.2), together with a minimum-mode plane wave
+that saturates both, prove
+\[
+ \boxed{
+  \Psi=0\hbox{ is a global minimizer}
+  \quad\Longleftrightarrow\quad
+  \kappa_L\ge {3u_-^2\over16v}.}                  \tag{4.3}
+\]
+If the inequality is strict, zero is the unique global minimizer.  If it is
+violated, coercivity supplies a nonzero global minimizer.  When $u<0$, equality
+gives first-order coexistence at
+\[
+ \rho_t={3u_-\over4v},\qquad
+ \kappa_L={3u_-^2\over16v}>0.                      \tag{4.4}
+\]
+Thus the zero phase is still quadratically gapped at the actual coexistence
+boundary.  The massless shell at $\kappa_L=0$ is a later spinodal, not the
+first-order transition.  If $u\ge0$, the continuous onset can instead occur
+at $\kappa_L=0$, but Section 5 then fires.
+
+The inherited A1 family-lock matrix is
+\[
+ M=\begin{pmatrix}
+ 1/10&-1/20&-1/20\\
+ -1/20&13/100&-1/20\\
+ -1/20&-1/20&17/100
+ \end{pmatrix}.                                    \tag{4.5}
+\]
+Its characteristic polynomial and discriminant are
+\[
+ t^3-{2\over5}t^2+{223\over5000}t-{3\over3125},
+ \qquad {32233\over31250000000}>0,                 \tag{4.6}
+\]
+so the lowest eigendirection is simple.  In the nonzero-minimum regime,
+equality in (2.2) and (4.2) forces $A=A^*$, Fourier support on the minimum
+shell in that eigendirection, and constant $|\Psi|$.  The remaining finite
+Fourier sum is a Laurent polynomial $P$ satisfying
+$P(z)P^*(z)=\rho_t$.  It is therefore a unit of
+$\mathbb C[z_1^{\pm1},z_2^{\pm1},z_3^{\pm1}]$, whose only units are
+$az^n$.  Every nonzero global minimizer is consequently a single plane wave
+\[
+ \Psi(x)=\sqrt{\rho_*}\,q_{\min}e^{ik_{\min}\cdot x}, \tag{4.7}
+\]
+up to phase and the discrete shell degeneracy.  This is a uniform-density
+phase twist with an unselected direction, not a density lattice or BCC state.
+The finite-volume level crossing in (4.3) is not yet a thermodynamic or
+statistical phase transition; robustness in $L$ and an infinite-volume Gibbs
+analysis remain open.
+
+\section*{5. Ordinary inertial completion and the causal no-go}
+
+A causal question exists only after separately hypothesising positive kinetic
+terms
+\[
+ {\chi_\Psi\over2}\|\dot\Psi\|_2^2
+ +{\chi_A\over2}\sum_i\|\dot A_i\|_2^2,
+ \qquad \chi_\Psi,\chi_A>0.                        \tag{5.1}
+\]
+For the longitudinal $A$ component, the exact characteristic equation is
+\[
+ (D_j(s)-\chi_\Psi\omega^2)
+ (L(s)-\chi_A\omega^2)-gs=0,                       \tag{5.2}
+\]
+where $D_j=r+\lambda_j+cs$ and $L=s+\sigma$.  The two transverse
+auxiliary-vector branches satisfy
+\[
+ \omega_T^2={s+\sigma\over\chi_A}.                 \tag{5.3}
+\]
+At high momentum, the two principal speeds are
+\[
+ \sqrt{c/\chi_\Psi},\qquad 1/\sqrt{\chi_A}.        \tag{5.4}
+\]
+One ultraviolet cone therefore requires the unprotected tuning
+\[
+ c\chi_A=\chi_\Psi.                                \tag{5.5}
+\]
+
+More decisively, tune one continuous shell critical so that
+$K_{j_*}(s_*)=0$ and write $k=k_*+p$, $|k_*|^2=s_*$,
+$p=p_\parallel\widehat k_*+p_\perp$.  With
+\[
+ B_*:=\chi_A D_{j_*}(s_*)+\chi_\Psi(s_*+\sigma)>0,
+\]
+equations (3.4) and (5.2) give
+\[
+ \boxed{
+ \omega_-^2(k_*+p)
+ ={c\over B_*}
+ \left(2\sqrt{s_*}\,p_\parallel+p_\parallel^2+|p_\perp|^2\right)^2
+ +O(|s-s_*|^3).}                                   \tag{5.6}
+\]
+In particular,
+\[
+ \omega_-\asymp|p_\parallel|\quad\hbox{radially},
+ \qquad
+ \omega_-\asymp|p_\perp|^2\quad\hbox{tangentially}. \tag{5.7}
+\]
+The spatial quadratic Hessian has rank one, not rank three.  Equation (5.6)
+is a curved-shell square: paths that remain on $|k|^2=s_*$ stay exactly soft.
+It must not be replaced by a false global comparison with
+$p_\parallel^2+|p_\perp|^4$.
+
+No choice of $c,g,\sigma$ and no high-frequency tuning (5.5) creates the
+missing tangential $p_\perp^2$ term.  Therefore a rotationally invariant
+nonzero soft sphere with regular positive inertia cannot supply a positive
+isotropic Lorentz cone.  When $u<0$, the actual first-order boundary is gapped
+by (4.4); when $u\ge0$, the massless boundary has the rank-one shell defect.
+The bare candidate fails in both cases.
+
+Also, $\sigma>0$ makes (5.3) gapped at zero momentum.  Taking $\sigma=0$
+removes invertibility and coercive control of the $A$ zero mode, while the
+nonzero shell collapses toward zero momentum.  The same bare $A_i$ cannot both
+generate the screened finite shell and act as a massless photon.
+
+\section*{6. Gauge, symmetry, and observable audit}
+
+The fields $A_i\in\mathbb C^3$ transform as vector matter, not as a gauge
+connection.  Under a local common phase multiplication, derivatives of the
+phase enter both $\partial_i\Psi$ and $\nabla A_i$; (1.2) is not locally
+$U(1)$ invariant.  It contains no $A_0$, Gauss constraint, inhomogeneous
+connection transformation, Maxwell curvature, or gauge quotient.
+
+If $A$ remains auxiliary, (2.1) is an instantaneous Yukawa-type spatial
+response and supplies no microscopic finite-propagation theorem.  If (5.1)
+is added, $A$ is no longer auxiliary and contributes extra propagating modes
+and generally a second cone.  Either interpretation blocks identifying this
+screened vector with a photon.
+
+Because (4.6) is simple, the unitary commutant of literal $M$ is generically
+$U(1)^3$, not $U(3)$.  No $\mathbb{CP}^2$ quotient follows.  A global phase
+circle can support a limited winding discussion inside a nonzero-amplitude
+sector, but amplitude zeros can unwind it, and no flux quantum, charge,
+$\hbar$, or $e$ is derived.
+
+For (4.7), $\rho$, internal bilinears, and $|A|^2$ are uniform.  The phase
+gradient and tensors such as
+$\partial_i\Psi^\dagger\partial_j\Psi=\rho k_i k_j$ expose a preferred
+direction.  Under a future local gauge completion that phase gradient may
+instead be gauge equivalent to a uniform state.  In neither interpretation
+does the present candidate supply a derived gauge-invariant density crystal
+or measured-observable map.
+
+\section*{7. Devil's-advocate audit}
+
+\begin{enumerate}
+\item \textbf{Objection: $g>c\sigma$ already proves a finite-torus shell.}
+\textbf{UPHELD as false.}  The exact discrete condition is (3.7), and the
+$g=3/2$ counterfixture separates the two claims.
+
+\item \textbf{Objection: the first-order level crossing supplies the desired
+massless critical mode.} \textbf{UPHELD as false for $u<0$.}  Equation (4.4)
+shows a strictly positive quadratic gap at coexistence.
+
+\item \textbf{Objection: tuning the two ultraviolet speeds repairs the shell.}
+\textbf{UPHELD as false.}  Relation (5.5) leaves the rank-one Hessian and the
+tangential quadratic-frequency law unchanged.
+
+\item \textbf{Objection: nonlinear crystal selection could isolate directions
+and restore an ordinary cone.} \textbf{VALID, but it defines an unproved new
+candidate.}  The exact bare minimizer is instead the plane-wave family (4.7).
+Angular operators, additional fields, or a distinct interaction must be
+declared before testing and must rerun boundedness and the zero-reference gate.
+
+\item \textbf{Objection: the screened vector is already a gauge field.}
+\textbf{UPHELD as false.}  Its transformation law, field content, constraint
+structure, transverse gap, and principal symbol do not define a gauge
+connection.
+
+\item \textbf{Objection: the inherited $M$ provides $U(3)$ or
+$\mathbb{CP}^2$.} \textbf{DISMISSED by (4.6).}  Its simple spectrum leaves
+only the commuting phase rotations; no local quotient is present.
+
+\item \textbf{Objection: finite-volume minimization is already a thermodynamic
+phase transition.} \textbf{UPHELD as false.}  No $L\to\infty$ free-energy
+nonanalyticity, Gibbs measure, robustness envelope, or cooling dynamics is
+proved.
+
+\item \textbf{Objection: exact algebra may hide a sign, factor, convention,
+or hardcoded answer.} \textbf{VALID WITH MITIGATION.}  The primary SymPy
+certificate and a non-importing standard-library Fraction implementation
+independently reconstruct the A1 matrix, factor-one-half convention,
+auxiliary completion, continuum and discrete shell gates, reference-state
+threshold, coercive factors, dynamic rank, and adversarial fixtures.  External
+review is invited for units, Fourier normalization, the direct-method passage,
+the Laurent-unit argument, the inertial hypothesis, and all scope firewalls.
+\end{enumerate}
+
+\section*{8. Reproduction and Result footer}
+
+Run from the repository root:
+\begin{verbatim}
+$py = "E:\Dev\TECT.venv\Scripts\python.exe"
+& $py codes/foundations/pre_a_pa_m5_nl3_sv_candidate.py
+& $py codes/foundations/pre_a_pa_m5_nl3_sv_candidate_independent.py
+& $py codes/foundations/pre_a_pa_m5_nl3_sv_candidate_verify.py
+\end{verbatim}
+
+The primary certificate must report 41/41 PASS.  The independent certificate
+uses only Python's standard library and must report 29/29 PASS.  The integrated
+verifier reruns both in temporary locations and audits parity, hashes, the
+candidate manifest, this note and PDF, the negative and exploration records,
+T-054 routing, generated maps, and the release regressions.
+
+\begingroup
+\footnotesize
+\begin{verbatim}
+Candidate ID: PA-M5-NL3-SV-v0.
+Task: T-054.
+Authority: T0 candidate certificate; claim_bearing=false; no result-ledger ID.
+Exact static result: auxiliary elimination gives
+  K_j(s)=r+lambda_j+c*s-g*s/(s+sigma); finite-torus zero selection is
+  equivalent to kappa_L>=3*u_minus^2/(16*v).
+Formal negative: NG-2026-08-03-PA-M5-BARE-ISOTROPIC-SHELL-CAUSAL-CONE.
+Negative statement: at a nonzero isotropic critical shell and regular positive
+  inertia, the spatial quadratic Hessian has rank one and the tangential
+  frequency is quadratic.  For u<0 the first-order boundary is instead gapped.
+Candidate verdict: RETAIN STATIC SCREENED-SHELL MATHEMATICAL MECHANISM;
+  REJECT BARE JOINT T-053 LORENTZ-GAUGE-CRITICAL SURVIVOR.
+Scope: finite periodic static functional (1.2), c,sigma,g,v>0, Hermitian M;
+  causal test only for the separately declared ordinary positive inertia (5.1).
+No-overclaim: no microscopic derivation, parameter fit, thermodynamic limit,
+  gauge completion, photon, CP2, physical vacuum, BCC, density lattice,
+  topology, A7, T-050/A13, Sector-A closure, or TECT tier action follows.
+Next action: preserve this static lemma and move the tournament to a genuine
+  compact-gauge M3 candidate or an M5 candidate with protected isolated nodes.
+Decision footer.
+\end{verbatim}
+\endgroup
+
+\endgroup
