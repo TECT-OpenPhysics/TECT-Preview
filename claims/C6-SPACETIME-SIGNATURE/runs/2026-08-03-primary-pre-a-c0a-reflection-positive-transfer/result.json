@@ -1,0 +1,776 @@
+{
+  "assertions": {
+    "passed": 24,
+    "rows": [
+      {
+        "actual": [
+          "1",
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ]
+        ],
+        "expected": "positive normalized probability",
+        "group": "transfer",
+        "name": "probability vector is normalized",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1/2"
+          ],
+          [
+            "1/3"
+          ],
+          [
+            "1/6"
+          ]
+        ],
+        "expected": [
+          [
+            "1/2"
+          ],
+          [
+            "1/3"
+          ],
+          [
+            "1/6"
+          ]
+        ],
+        "group": "static_boundary",
+        "name": "static energy representative reproduces the probability",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ],
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ],
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ]
+        ],
+        "expected": [
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ],
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ],
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ]
+        ],
+        "group": "transfer",
+        "name": "stationary projector is idempotent",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1"
+          ],
+          [
+            "1"
+          ],
+          [
+            "1"
+          ]
+        ],
+        "expected": [
+          [
+            "1"
+          ],
+          [
+            "1"
+          ],
+          [
+            "1"
+          ]
+        ],
+        "group": "transfer",
+        "name": "stationary projector preserves constants",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1"
+          ],
+          [
+            "1"
+          ],
+          [
+            "1"
+          ]
+        ],
+        "expected": [
+          [
+            "1"
+          ],
+          [
+            "1"
+          ],
+          [
+            "1"
+          ]
+        ],
+        "group": "transfer",
+        "name": "transfer is stochastic",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "5/12",
+            "1/18",
+            "1/36"
+          ],
+          [
+            "1/18",
+            "7/27",
+            "1/54"
+          ],
+          [
+            "1/36",
+            "1/54",
+            "13/108"
+          ]
+        ],
+        "expected": [
+          [
+            "5/12",
+            "1/18",
+            "1/36"
+          ],
+          [
+            "1/18",
+            "7/27",
+            "1/54"
+          ],
+          [
+            "1/36",
+            "1/54",
+            "13/108"
+          ]
+        ],
+        "group": "transfer",
+        "name": "detailed balance",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1/2"
+          ],
+          [
+            "1/3"
+          ],
+          [
+            "1/6"
+          ]
+        ],
+        "expected": [
+          [
+            "1/2"
+          ],
+          [
+            "1/3"
+          ],
+          [
+            "1/6"
+          ]
+        ],
+        "group": "transfer",
+        "name": "stationary measure",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "1": 1,
+          "2/3": 2
+        },
+        "expected": {
+          "1": 1,
+          "2/3": 2
+        },
+        "group": "transfer",
+        "name": "positive transfer spectrum",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          {
+            "1": 2,
+            "2/5": 1
+          },
+          "-1/10"
+        ],
+        "expected": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          {
+            "1": 2,
+            "2/5": 1
+          },
+          "-1/10"
+        ],
+        "group": "transfer_boundary",
+        "name": "operator-positive row-preserving control is not entrywise Markov",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "5/6",
+            "1/9",
+            "1/18"
+          ],
+          [
+            "1/6",
+            "7/9",
+            "1/18"
+          ],
+          [
+            "1/6",
+            "1/9",
+            "13/18"
+          ]
+        ],
+        "expected": [
+          [
+            "5/6",
+            "1/9",
+            "1/18"
+          ],
+          [
+            "1/6",
+            "7/9",
+            "1/18"
+          ],
+          [
+            "1/6",
+            "1/9",
+            "13/18"
+          ]
+        ],
+        "group": "transfer",
+        "name": "transfer projector decomposition",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "5/6",
+            "1/9",
+            "1/18"
+          ],
+          [
+            "1/6",
+            "7/9",
+            "1/18"
+          ],
+          [
+            "1/6",
+            "1/9",
+            "13/18"
+          ]
+        ],
+        "expected": [
+          [
+            "5/6",
+            "1/9",
+            "1/18"
+          ],
+          [
+            "1/6",
+            "7/9",
+            "1/18"
+          ],
+          [
+            "1/6",
+            "1/9",
+            "13/18"
+          ]
+        ],
+        "group": "generator",
+        "name": "projector logarithm reconstructs the transfer",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "-(-log(3) + log(2))/(2*a)",
+            "(-log(3) + log(2))/(3*a)",
+            "(-log(3) + log(2))/(6*a)"
+          ],
+          [
+            "(-log(3) + log(2))/(2*a)",
+            "-2*(-log(3) + log(2))/(3*a)",
+            "(-log(3) + log(2))/(6*a)"
+          ],
+          [
+            "(-log(3) + log(2))/(2*a)",
+            "(-log(3) + log(2))/(3*a)",
+            "-5*(-log(3) + log(2))/(6*a)"
+          ]
+        ],
+        "expected": [
+          [
+            "-(-log(3) + log(2))/(2*a)",
+            "(-log(3) + log(2))/(3*a)",
+            "(-log(3) + log(2))/(6*a)"
+          ],
+          [
+            "(-log(3) + log(2))/(2*a)",
+            "-2*(-log(3) + log(2))/(3*a)",
+            "(-log(3) + log(2))/(6*a)"
+          ],
+          [
+            "(-log(3) + log(2))/(2*a)",
+            "(-log(3) + log(2))/(3*a)",
+            "-5*(-log(3) + log(2))/(6*a)"
+          ]
+        ],
+        "group": "generator",
+        "name": "generator is weighted-self-adjoint",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "-(-log(3) + log(2))/a": 2,
+          "0": 1
+        },
+        "expected": {
+          "(-log(2) + log(3))/a": 2,
+          "0": 1
+        },
+        "group": "generator",
+        "name": "generator spectrum and gap",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          1
+        ],
+        "expected": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          1
+        ],
+        "group": "generator",
+        "name": "generator kernel is one-dimensional span of constants",
+        "status": "PASS"
+      },
+      {
+        "actual": "(9*f0**2 - 12*f0*f1 - 6*f0*f2 + 8*f1**2 - 4*f1*f2 + 5*f2**2)/36",
+        "expected": "(9*f0**2 - 12*f0*f1 - 6*f0*f2 + 8*f1**2 - 4*f1*f2 + 5*f2**2)/36",
+        "group": "generator",
+        "name": "weighted complement is exactly the variance form",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "expected": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "group": "generator",
+        "name": "spectral-projector real-time group is unitary",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          true,
+          [
+            [
+              "1/2"
+            ],
+            [
+              "1/3"
+            ],
+            [
+              "1/6"
+            ]
+          ]
+        ],
+        "expected": [
+          true,
+          [
+            [
+              "1/2"
+            ],
+            [
+              "1/3"
+            ],
+            [
+              "1/6"
+            ]
+          ]
+        ],
+        "group": "static_boundary",
+        "name": "same static probability supports distinct positive transfers",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "log(2)/a",
+          "-(-log(3) + log(2))/a"
+        ],
+        "expected": "different",
+        "group": "static_boundary",
+        "name": "same static probability supports distinct gaps",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "2",
+          "41/9"
+        ],
+        "expected": "positive leading principal minors",
+        "group": "reflection_positivity",
+        "name": "site-reflection Gram fixture is positive definite",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "5/3",
+          "214/81"
+        ],
+        "expected": "positive leading principal minors",
+        "group": "reflection_positivity",
+        "name": "link-reflection Gram fixture is positive definite",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          {
+            "0": 2,
+            "1": 1
+          },
+          "0"
+        ],
+        "expected": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          {
+            "0": 2,
+            "1": 1
+          },
+          0
+        ],
+        "group": "zero_spectrum_boundary",
+        "name": "zero-spectrum control is Markov and link-positive but not strictly positive",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "1/12",
+          true
+        ],
+        "expected": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          ">=0",
+          true
+        ],
+        "group": "negative_control",
+        "name": "negative-control transfer remains stochastic and reversible",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "-1/10": 2,
+          "1": 1
+        },
+        "expected": {
+          "-1/10": 2,
+          "1": 1
+        },
+        "group": "negative_control",
+        "name": "negative-control transfer has a negative eigenvalue",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "-1/8"
+        ],
+        "expected": [
+          0,
+          "<0"
+        ],
+        "group": "negative_control",
+        "name": "negative-control link-reflection form is negative",
+        "status": "PASS"
+      }
+    ],
+    "total": 24
+  },
+  "authority": "T0 C0-A benchmark certificate; not a TECT claim, physical time-emergence theorem, or cosmology",
+  "candidate_family": "C0A-REFLECTION-POSITIVE-FINITE-STATE-TRANSFER",
+  "candidate_id": "PA-C0A-RPTM-FS-v0",
+  "claim_bearing": false,
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "exact_results": {
+    "gap": "-(-log(3) + log(2))/a",
+    "generator": "H_a=log(3/2)*(I-Pi_pi)/a",
+    "generator_spectrum": {
+      "-(-log(3) + log(2))/a": 2,
+      "0": 1
+    },
+    "ground_kernel": "span{constant function 1}",
+    "link_reflection_positivity": "requires P>=0 on L2(pi)",
+    "negative_control_alpha": "-1/10",
+    "negative_control_link_form": "-1/8",
+    "negative_control_spectrum": {
+      "-1/10": 2,
+      "1": 1
+    },
+    "operator_positive_non_markov_control_spectrum": {
+      "1": 2,
+      "2/5": 1
+    },
+    "operator_positive_non_markov_negative_entry": "-1/10",
+    "positive_weighted_self_adjoint_transfer": true,
+    "same_static_marginal_distinct_gaps": [
+      "-(-log(3) + log(2))/a",
+      "log(2)/a"
+    ],
+    "same_static_marginal_distinct_transfer_parameters": [
+      "2/3",
+      "1/2"
+    ],
+    "site_reflection_positivity": "stationary reversible Markov conditional-square identity",
+    "stationary_projector": [
+      [
+        "1/2",
+        "1/3",
+        "1/6"
+      ],
+      [
+        "1/2",
+        "1/3",
+        "1/6"
+      ],
+      [
+        "1/2",
+        "1/3",
+        "1/6"
+      ]
+    ],
+    "transfer_reconstruction": "P=exp(-a H_a)",
+    "transfer_spectrum": {
+      "1": 1,
+      "2/3": 2
+    },
+    "unitary_group": "U(t)=exp(-it H_a)=Pi_pi+exp(-it log(3/2)/a)*(I-Pi_pi)",
+    "zero_spectrum_control_link_form": "0",
+    "zero_spectrum_control_spectrum": {
+      "0": 2,
+      "1": 1
+    }
+  },
+  "issued": "2026-08-03",
+  "lane_verdict": "ADVANCE AS A C0-A TEMPORAL CALIBRATION: positive reflection-compatible transfer data reconstruct a positive self-adjoint generator and unitary group; time order and spacing remain declared primitives, while causal structure is absent",
+  "no_overclaim": "This finite-state C0-A benchmark reconstructs a positive self-adjoint generator and a unitary group only after a positive reversible transfer, time ordering, reflection, and spacing are supplied. It does not derive time, an arrow, spatial locality, Lorentzian signature, a null cone, light speed, a physical quantum theory, a Hadamard state, gravity, an event horizon, cosmic cooling, the PA-H1 to PA-M2 interface, or Pre-A completion.",
+  "primitive_inputs": {
+    "state_space": "three finite states",
+    "static_energy_representative": [
+      [
+        "log(2)"
+      ],
+      [
+        "log(3)"
+      ],
+      [
+        "log(6)"
+      ]
+    ],
+    "static_probability": [
+      [
+        "1/2"
+      ],
+      [
+        "1/3"
+      ],
+      [
+        "1/6"
+      ]
+    ],
+    "time_order_and_reflection": "declared C0-A primitives",
+    "time_spacing": "a>0",
+    "transfer": [
+      [
+        "5/6",
+        "1/9",
+        "1/18"
+      ],
+      [
+        "1/6",
+        "7/9",
+        "1/18"
+      ],
+      [
+        "1/6",
+        "1/9",
+        "13/18"
+      ]
+    ],
+    "transfer_conditions": "entrywise-nonnegative row-stochastic, detailed-balanced, and strictly positive with P<=I on L2(pi)"
+  },
+  "schema": "tect/pre-a-c0a-reflection-positive-transfer-primary/0.1",
+  "scope": {
+    "c0_a_causal_structure_instantiated": false,
+    "c0_a_temporal_transfer_benchmark_instantiated": true,
+    "causal_cone_derived": false,
+    "link_reflection_requires_positive_transfer": true,
+    "lorentzian_signature_derived": false,
+    "markov_entrywise_nonnegative_input": true,
+    "pa_h1_state_supplied": false,
+    "pa_m2_composition": false,
+    "physical_quantum_dynamics_selected": false,
+    "positive_self_adjoint_generator_reconstructed": true,
+    "pre_a_complete": false,
+    "preferred_hadamard_state_selected": false,
+    "reversibility_alone_implies_positive_generator": false,
+    "site_reflection_positive": true,
+    "spatial_locality_derived": false,
+    "static_functional_selects_transfer": false,
+    "tect_c0_branch_selected": false,
+    "time_order_and_spacing_inserted": true,
+    "unitary_group_reconstructed": true
+  },
+  "source": {
+    "path": "codes/foundations/pre_a_c0a_reflection_positive_transfer.py",
+    "sha256": "fa6865b2911806efdb55c8f5cd8b4f6c0f364a44b4b2eea5addd634df898ace4"
+  },
+  "task_id": "T-054",
+  "version": "0.1.0"
+}

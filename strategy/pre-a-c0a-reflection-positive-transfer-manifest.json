@@ -1,0 +1,126 @@
+{
+  "schema": "tect/pre-a-c0a-reflection-positive-transfer-manifest/0.1",
+  "candidate_id": "PA-C0A-RPTM-FS-v0",
+  "candidate_family": "C0A-REFLECTION-POSITIVE-FINITE-STATE-TRANSFER",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 C0-A calibration certificate; not a TECT claim, physical time-emergence theorem, or cosmology",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "An entrywise-nonnegative reversible finite-state Markov kernel P that is strictly positive definite on L2(X,pi), together with an inserted spacing a, uniquely determines the nonnegative self-adjoint generator H_a=-(1/a)log P and its unitary group. The exact three-state fixture has spectrum {1,2/3,2/3}, one-dimensional constant ground space, and gap log(3/2)/a. A reversible entrywise-nonnegative control with eigenvalue -1/10 violates link-reflection positivity, while the zero-spectrum control remains link-positive but has no finite logarithmic generator. Time order, reflection, spacing, and the full transfer are declared C0-A inputs; space, a causal cone, a field state, and Pre-A are not reconstructed.",
+  "general_theorem": {
+    "space": "finite X with at least two points, pi_x>0, sum pi_x=1, and complex Hilbert space L2(X,pi;C)",
+    "transfer_conditions": "P1=1, P_xy>=0, pi_x P_xy=pi_y P_yx, and 0<P<=I on L2(X,pi)",
+    "condition_independence": "entrywise Markov positivity and operator positivity are logically independent and both are assumed",
+    "inserted_time_data": "ordered transfer steps, reflection, and a>0",
+    "generator": "H_a=-(1/a)log P",
+    "reconstruction": "P=exp(-aH_a) and U(t)=exp(-itH_a)",
+    "irreducible_ground_state": "ker(H_a)=span{1}; the ground-state ray is unique and its normalized strictly-positive real representative is 1",
+    "gap": "Delta_a=-(1/a)log lambda_1(P)"
+  },
+  "fixture": {
+    "probability": [
+      "1/2",
+      "1/3",
+      "1/6"
+    ],
+    "static_energy_representative": [
+      "log(2)",
+      "log(3)",
+      "log(6)"
+    ],
+    "stationary_projector": "(Pi_pi f)(x)=sum_y pi_y f(y)",
+    "transfer": "P=(2/3)I+(1/3)Pi_pi",
+    "transfer_spectrum": [
+      "1",
+      "2/3",
+      "2/3"
+    ],
+    "generator": "H_a=[log(3/2)/a](I-Pi_pi)",
+    "generator_spectrum": [
+      "0",
+      "log(3/2)/a",
+      "log(3/2)/a"
+    ],
+    "static_nonidentifiability": "the same pi with alpha=1/2 gives a distinct positive transfer and gap log(2)/a"
+  },
+  "reflection_positivity": {
+    "site": "for a stationary reversible Markov path, E[conj(F(theta X))F(X)]=sum_x pi_x|E[F|X0=x]|^2>=0",
+    "link": "the reflected link form is <h,Ph>_pi for h(x)=E[F|X1=x] and requires P>=0",
+    "negative_control": "alpha=-1/10 leaves an entrywise nonnegative reversible stochastic transfer but gives spectrum {1,-1/10,-1/10} and a negative link form",
+    "zero_spectrum_control": "alpha=0 gives an irreducible entrywise-positive reversible link-positive transfer with spectrum {1,0,0}, but no finite self-adjoint logarithmic generator",
+    "operator_positive_non_markov_control": "for uniform pi and v=(1,1,-2), P=I-(1/10)vv^T has spectrum {1,1,2/5} but P_12=-1/10"
+  },
+  "mathematical_status": {
+    "positive_transfer_generator_reconstruction": "CANDIDATE-SCOPE EXACT FINITE THEOREM",
+    "one_dimensional_ground_space_and_gap": "CANDIDATE-SCOPE EXACT FINITE THEOREM",
+    "site_reflection_positivity": "CANDIDATE-SCOPE EXACT CONDITIONAL-SQUARE THEOREM",
+    "link_reflection_positivity": "CANDIDATE-SCOPE EXACT under P>=0",
+    "reversibility_without_operator_positivity": "EXCLUDED as sufficient for a positive logarithmic generator",
+    "static_probability_selects_transfer": "EXCLUDED",
+    "spatial_locality_and_causal_cone": "OPEN and absent from the finite fixture",
+    "gaussian_ccr_continuum_bridge": "OPEN",
+    "pa_h1_state_supply": "OPEN",
+    "pa_m2_composition": "OPEN"
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "finite state set and positive one-time probability",
+      "the full reversible positive transfer P",
+      "step ordering and reflection",
+      "time spacing a",
+      "C0-A interpretation"
+    ],
+    "derived_outputs": [
+      "weighted Hilbert space and positive self-adjoint logarithmic generator",
+      "unitary real-time group",
+      "one-dimensional constant ground space and finite gap in the irreducible fixture",
+      "site and link reflection-positive forms",
+      "failure of reversibility alone at a negative transfer eigenvalue and the distinct zero-spectrum finite-log boundary"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "open_gates": [
+    "PA-C0A-GAUSSIAN-CCR-TRANSFER",
+    "PA-C0A-CONTINUUM-KG-LIMIT",
+    "PA-C0A-SPATIAL-LOCALITY-AND-CONE",
+    "PA-C0A-TO-PA-H1-SYMPLECTIC-INTERTWINER",
+    "PA-H-PREFERRED-STATE-SELECTION",
+    "PA-H-TO-PA-M2-COMPOSITION",
+    "TECT-C0-PHYSICAL-BRANCH-SELECTION"
+  ],
+  "scope": {
+    "c0_a_temporal_transfer_benchmark_instantiated": true,
+    "c0_a_causal_structure_instantiated": false,
+    "time_order_and_spacing_inserted": true,
+    "markov_entrywise_nonnegative_input": true,
+    "static_functional_selects_transfer": false,
+    "positive_self_adjoint_generator_reconstructed": true,
+    "unitary_group_reconstructed": true,
+    "site_reflection_positive": true,
+    "link_reflection_requires_positive_transfer": true,
+    "reversibility_alone_implies_positive_generator": false,
+    "spatial_locality_derived": false,
+    "causal_cone_derived": false,
+    "lorentzian_signature_derived": false,
+    "physical_quantum_dynamics_selected": false,
+    "preferred_hadamard_state_selected": false,
+    "pa_h1_state_supplied": false,
+    "pa_m2_composition": false,
+    "tect_c0_branch_selected": false,
+    "pre_a_complete": false
+  },
+  "artifacts": {
+    "certificate_note": "strategy/pre-a-c0a-reflection-positive-transfer-certificate-260803.md",
+    "primary_script": "codes/foundations/pre_a_c0a_reflection_positive_transfer.py",
+    "independent_script": "codes/foundations/pre_a_c0a_reflection_positive_transfer_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_c0a_reflection_positive_transfer_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0a-reflection-positive-transfer/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0a-reflection-positive-transfer/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0a-reflection-positive-transfer/result.json"
+  },
+  "prior_art_boundary": "Osterwalder-Schrader reconstruction is established prior art. This package is a finite exact calibration and a TECT interface gate, not a novelty claim for reflection-positive reconstruction.",
+  "no_overclaim": "This finite-state C0-A benchmark reconstructs a nonnegative self-adjoint generator and a unitary group only after an entrywise-Markov, reversible, strictly operator-positive transfer, time ordering, reflection, and spacing are supplied. It does not derive time, an arrow, spatial locality, Lorentzian signature, a null cone, light speed, a physical quantum theory, a Hadamard state, gravity, an event horizon, cosmic cooling, the PA-H1 to PA-M2 interface, a physical TECT branch choice, or Pre-A completion."
+}

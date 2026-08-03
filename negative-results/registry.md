@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-PRE-A-C0A-REVERSIBILITY-WITHOUT-POSITIVE-TRANSFER](#ng-2026-08-03-pre-a-c0a-reversibility-without-positive-transfer) | infer a nonnegative self-adjoint Hamiltonian from reversible Markov transfer data alone, or infer a finite logarithmic generator from link reflection positivity without strict operator positivity | an entrywise-positive reversible stochastic control with spectrum `{1,-1/10,-1/10}` fails link reflection positivity; the projector transfer with spectrum `{1,0,0}` remains link-reflection positive but cannot be `exp(-aH)` for finite self-adjoint `H`.  Require `P>=0` for link reflection positivity and `P>0` for the finite logarithm; this does not derive or select the transfer |
+| [NG-2026-08-03-PRE-A-C0B-FINITE-TRANSITIVE-DETERMINISTIC-ORDER-SELECTION](#ng-2026-08-03-pre-a-c0b-finite-transitive-deterministic-order-selection) | deterministically and naturally select a nonempty strict order from a finite substrate state whose automorphisms act transitively on events | an invariant strict order cannot compare two events in one finite automorphism orbit; the exact transitive but non-2-transitive `C4` fixture has eight invariant irreflexive relations and only the empty invariant strict order.  This excludes only the stated deterministic symmetric route; smaller-orbit relational states, infinite transitive orders, stochastic or non-single-valued sectors, causal-set primitives, and C0-B remain open |
 | [NG-2026-08-03-PRE-A-C0-STATIC-FUNCTIONAL-DYNAMICAL-COMPLETION](#ng-2026-08-03-pre-a-c0-static-functional-dynamical-completion) | close Pre-A C0 or infer a unique physical time law, dynamical exponent, causal cone, or limiting speed from the PA-M2 static functional and spatial Hessian alone | exact gradient and inertial completions share the same static equilibria and Hessian but have first- versus second-order evolution, negative-real versus imaginary generator spectra, dissipative versus conservative energy laws, and Gaussian critical exponents `z=2` versus `z=1`; a common spatial Hessian also admits heat and wave causal-support classes. Retain PA-M2's static variational results, but require an additional microscopic temporal/kinetic law and do not count an inserted inertia or cone as emergent |
 | [NG-2026-08-03-PA-M5-BARE-ISOTROPIC-SHELL-CAUSAL-CONE](#ng-2026-08-03-pa-m5-bare-isotropic-shell-causal-cone) | use the bare PA-M5-NL3-SV isotropic finite-wave-number screened-vector candidate as a joint T-053 Lorentz, gauge, and critical survivor | exact auxiliary elimination and the neutral-reference theorem survive, but a negative-quartic coexistence boundary is gapped, a continuous critical shell has a rank-one spatial Hessian with radial-linear and tangential-quadratic frequency, the screened vector is not a local gauge connection, and positive screening gaps its transverse branch. Retain the static screened-shell lemma, reject only this bare joint survivor, and treat a genuine compact-gauge or isolated-node repair as a new candidate version |
 | [NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM](#ng-2026-08-03-m1-pinned-functional-nonzero-equilibrium) | find a stable or metastable nonzero equilibrium of the hash-pinned unconstrained M1/P1 functional by BCC, other finite-star, multistart, Hessian, or full-field search | exact global and radial bounds give `F_P1[Psi]>=g||Psi||_2^2`, `g>1/8`, and `<DF_P1(Psi),Psi>>=kappa||Psi||_2^2`, `kappa>1/4`; zero is the unique critical point and global minimizer and its canonical gradient flow decays exponentially. Retire T-052's equilibrium search for this candidate except as backend regression; constrained, compact-target, chemical-potential, conserved, retuned, historical, A7, alternative-model, and physical-vacuum questions remain open |
@@ -246,6 +248,82 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-pre-a-c0a-reversibility-without-positive-transfer"></a>
+### NG-2026-08-03-PRE-A-C0A-REVERSIBILITY-WITHOUT-POSITIVE-TRANSFER -- reversibility and link positivity do not by themselves supply a finite positive Hamiltonian
+
+**Failure mode.**  Infer a nonnegative self-adjoint Hamiltonian from an
+entrywise-nonnegative reversible stochastic transfer alone, or infer a finite
+logarithmic generator merely from link reflection positivity.
+
+**Evidence.**  For `pi=(1/2,1/3,1/6)`, the exact family
+`P_alpha=alpha I+(1-alpha)Pi_pi` is stochastic, stationary, and reversible.
+At `alpha=-1/10`, every entry remains nonnegative but the spectrum is
+`{1,-1/10,-1/10}` and the zero-mean link form is `-1/8`; hence no nonnegative
+self-adjoint `H` can satisfy `P_alpha=exp(-aH)`.  At `alpha=0`, `P_0=Pi_pi` is
+entrywise positive, irreducible, reversible, and link-reflection positive with
+spectrum `{1,0,0}`, yet it is not the exponential of any finite self-adjoint
+generator.  Conversely, a row-preserving positive-definite reversible matrix
+with spectrum `{1,1,2/5}` and entry `-1/10` proves that operator positivity does
+not supply the Markov condition.
+
+**Consequence.**  A finite C0-A transfer reconstruction must separately assume
+entrywise Markov positivity, detailed balance, and strict operator positivity.
+Operator nonnegativity `P>=0` is the exact link-reflection-positive gate;
+strict positivity `P>0` is the finite-log gate.  These supplied data reconstruct
+`H_a=-(1/a)log P`, but do not derive time ordering, the transfer, spatial
+locality, a causal cone, a physical state, a TECT branch, or Pre-A.
+
+**Evidence paths.**
+`strategy/pre-a-c0a-reflection-positive-transfer-certificate-260803.md`, its
+manifest, and the primary, non-importing independent, and integrated run
+artifacts under `claims/C6-SPACETIME-SIGNATURE/runs/`; 24/24, 20/20, and
+100/100 combined checks pass.
+
+**Revisit condition.**  Revisit only if a candidate derives the required
+positive transfer or semigroup from richer microscopic data rather than
+assuming that reversibility or a static marginal is sufficient.
+
+<a id="ng-2026-08-03-pre-a-c0b-finite-transitive-deterministic-order-selection"></a>
+### NG-2026-08-03-PRE-A-C0B-FINITE-TRANSITIVE-DETERMINISTIC-ORDER-SELECTION -- a finite transitive state cannot naturally select a nonempty deterministic strict order
+
+**Failure mode.**  Start from a finite substrate state with a vertex-transitive
+automorphism group and use a deterministic natural equivariant selector to
+obtain a nonempty strict causal order without additional relational, boundary,
+or sector data.
+
+**Evidence.**  Naturality makes the selected strict order invariant.  If
+`y=g.x` lies in the same finite automorphism orbit and `x<y`, invariance and
+transitivity iterate the comparison around the finite order of `g` and force
+`x<x`, a contradiction.  Therefore points in one finite orbit are
+incomparable, and a vertex-transitive finite input selects only the empty
+order.  On `X=Z/4`, the rotation group `C4` is transitive but not 2-transitive;
+its three ordered-pair orbits have sizes `4,4,4`, their eight unions exhaust
+the invariant irreflexive relations, and only the empty one is a strict order.
+The independent four-event enumeration also checks all 4096 irreflexive
+relations and 219 labelled strict partial orders.
+
+**Consequence.**  Retire only deterministic natural nonempty order selection
+from the excluded finite-transitive input.  A smaller-orbit relational state
+can support an invariant nonempty inter-orbit order, and an invariant random
+law over all 24 total orders remains pair-unbiased.  Infinite transitive
+substrates are outside the finite theorem (`Z` with translations and `<` is a
+counter-boundary), while the 2-transitive ordered-pair corollary remains valid
+without finiteness.  Quotient-valued, set-valued, coherent-sector, stochastic,
+causal-set, graphity, GFT/tensor, and other richer C0-B routes remain open.  No
+causal influence, Lorentz cone, null boundary, PA-H1 map, branch selection, or
+Pre-A closure follows.
+
+**Evidence paths.**
+`strategy/pre-a-c0b-equivariant-causal-selection-nogo-certificate-260803.md`,
+its manifest, and the primary, non-importing independent, and integrated run
+artifacts under `claims/C6-SPACETIME-SIGNATURE/runs/`; 52/52, 19/19, and
+131/131 combined checks pass.
+
+**Revisit condition.**  Revisit with a concrete relational dynamics whose
+actual automorphism or sector structure is derived, whose selection semantics
+are declared, and whose operational influence and continuum causal limit are
+proved.
 
 <a id="ng-2026-08-03-pre-a-c0-static-functional-dynamical-completion"></a>
 ### NG-2026-08-03-PRE-A-C0-STATIC-FUNCTIONAL-DYNAMICAL-COMPLETION -- static data do not identify a unique temporal completion

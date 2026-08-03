@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Pre-A C0 fork: positive-transfer calibration and finite-transitive selection no-go] - 2026-08-03
+
+Register EXP-000701 and EXP-000702. PA-C0A-RPTM-FS-v0 proves the exact finite supplied-transfer reconstruction H_a=-(1/a)log P only after entrywise Markov positivity, detailed balance, strict operator positivity, time order, reflection, and spacing are inputs. Negative-, zero-, and operator-positive/non-Markov controls separate the link-reflection and finite-log gates; 24/24 primary, 20/20 non-importing independent, and 100/100 combined checks pass. PA-C0B-EQUIVARIANT-CAUSAL-SELECTION-NOGO-v0 proves orbitwise incomparability for finite invariant strict orders and therefore empty deterministic selection on a finite transitive state. A transitive non-2-transitive C4 fixture, all 4096 four-event relations, a two-orbit control, marked order, and invariant random sector pass 52/52 primary, 19/19 independent, and 131/131 combined checks. The prior-art matrix now records Osterwalder-Schrader reconstruction. C0-A is only a temporal calibration, C0-B remains open through richer relational or sector dynamics, neither route is claimed as novelty or physically selected, and Pre-A remains open.
+
 ## [R-160: weighted-Schur growing affine root-union origin gaps] - 2026-08-03
 
 Register A13-CLASSII-WEIGHTED-SCHUR-GROWING-AFFINE-ROOT-UNION-ORIGIN-GAP-BOUNDARY (R-160). For every finite R-155 distinct-source antipodal p:2p fixed-law affine family with source-target reuse, the exact loss graph has only factor-three paths. Geometric weighted Schur plus exact Sturm and independent Fraction/Bernstein certificates prove the continuous-half-line origin gap 19/160 and the stronger actual side-16 lattice gap 4/25, uniformly in finite cardinality and path length. Record the exact A1 authority-symbol repair and the unweighted/floor-removal method failures. No cardinality-uniform nonzero radius, realised-past/nonlinear/revisit theorem, cutoff/floor removal, T-050/A13 closure, phase/PDE verdict, Nelson/measure result, or Sector-A closure follows.

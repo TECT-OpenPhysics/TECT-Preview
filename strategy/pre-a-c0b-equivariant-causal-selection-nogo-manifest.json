@@ -1,0 +1,139 @@
+{
+  "schema": "tect/pre-a-c0b-equivariant-causal-selection-nogo-manifest/0.1",
+  "candidate_id": "PA-C0B-EQUIVARIANT-CAUSAL-SELECTION-NOGO-v0",
+  "candidate_family": "C0B-EQUIVARIANT-CAUSAL-SELECTION-NOGO",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 C0-B symmetry no-go certificate; not a TECT claim, causal-emergence theorem, or cosmology",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "For a finite substrate state, an automorphism-invariant strict order cannot compare two events in the same automorphism orbit; hence a deterministic natural equivariant selector is empty when the automorphism group is vertex-transitive. The stronger 2-transitive ordered-pair proof remains valid without finiteness. Under fixed labels or a declared pullback identification, an exactly reversal-invariant state likewise cannot uniquely select a nonempty arrow when covariance sends the order to its opposite. The theorem leaves smaller-orbit relational states, stochastic or non-single-valued sector selection, and infinite transitive models open; it fixes a conditional C0-B gate rather than deriving causality or rejecting C0-B.",
+  "general_theorem": {
+    "substrate": "finite event set X with state s",
+    "symmetry": "Aut(s) acts on X; the empty-order corollary assumes vertex transitivity",
+    "selector": "deterministic, natural under relabeling, and valued in strict partial orders",
+    "orbitwise_conclusion": "no two points in one finite automorphism orbit are comparable",
+    "transitive_conclusion": "if Aut(s) is vertex-transitive, the selected relation C(s) is empty",
+    "proof": "if x<C(gx), invariance and transitivity iterate around the finite order of g to give x<Cx",
+    "two_transitive_corollary": "one selected ordered pair forces its reverse, so a 2-transitive invariant strict order is empty even without finite X",
+    "infinite_boundary": "translations act transitively on Z while the usual order is nonempty and invariant, so the finite transitive theorem is not extended to infinite X",
+    "reversal_corollary": "under fixed labels or a declared pullback identification, if Rs=s and covariance gives C(Rs)=C(s)^op, then a deterministic strict selected relation is empty"
+  },
+  "finite_fixture": {
+    "event_count": 4,
+    "permutation_group_size": 24,
+    "ordered_off_diagonal_pairs": 12,
+    "enumerated_irreflexive_relations": 4096,
+    "labelled_strict_partial_orders": 219,
+    "invariant_irreflexive_relations": 2,
+    "invariant_strict_partial_orders": 1,
+    "unique_invariant_strict_partial_order": "empty",
+    "unique_self_opposite_strict_partial_order": "empty",
+    "c4_group_size": 4,
+    "c4_vertex_orbit_size": 4,
+    "c4_ordered_pair_orbit_sizes": [
+      4,
+      4,
+      4
+    ],
+    "c4_invariant_irreflexive_relations": 8,
+    "c4_invariant_strict_partial_orders": 1,
+    "c4_unique_invariant_strict_partial_order": "empty",
+    "two_orbit_control": "G={id,(01)(23)} preserves the nonempty strict order {0,1}x{2,3}"
+  },
+  "escape_routes": {
+    "marked_control": "distinct marks tau=(0,1,4,9) define the total order 0<1<2<3 with trivial stabilizer; the marks and orientation are additional relational state data",
+    "marked_tuple": [
+      0,
+      1,
+      4,
+      9
+    ],
+    "marked_total_order": [
+      [0, 1],
+      [0, 2],
+      [0, 3],
+      [1, 2],
+      [1, 3],
+      [2, 3]
+    ],
+    "marked_control_stabilizer_size": 1,
+    "random_sector": "the uniform distribution over all 24 total orders is permutation invariant and pair-unbiased, so stochastic sector realization is not excluded",
+    "random_total_order_support_size": 24,
+    "random_total_order_law_s4_invariant": true,
+    "conditional_escape": "for an excluded finite-transitive or fixed-label reversal-invariant input, derive a smaller-orbit state, asymmetric boundary, sector law, or non-single-valued selection semantics",
+    "independent_required_physics": "derive operational influence, acyclicity, stable continuum Lorentz cone, null boundary, and PA-H1 interface"
+  },
+  "mathematical_status": {
+    "finite_orbit_comparability": "EXACT NO-GO within each finite automorphism orbit",
+    "finite_transitive_deterministic_selection": "EXACT NO-GO",
+    "two_transitive_deterministic_selection": "EXACT NO-GO without a finiteness requirement",
+    "reversal_invariant_unique_arrow": "EXACT NO-GO",
+    "four_event_exhaustion": "EXACT FINITE ENUMERATION",
+    "marked_total_order_control": "EXACT POSITIVE CONTROL but not a causal-emergence theorem",
+    "random_order_sector": "OPEN ESCAPE ROUTE; exact unbiased finite ensemble demonstrated",
+    "physical_c0b_model": "OPEN",
+    "continuum_lorentz_cone": "OPEN",
+    "null_boundary_and_pa_h1_bridge": "OPEN"
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "finite event set",
+      "2-transitivity for the infinite-safe ordered-pair corollary",
+      "finiteness plus vertex transitivity for the stronger orbitwise theorem",
+      "deterministic equivariance and strict-order target",
+      "for the positive control only, distinct oriented relational marks"
+    ],
+    "derived_outputs": [
+      "orbitwise incomparability and empty-order conclusion for a finite transitive deterministic selector",
+      "empty-arrow conclusion under exact reversal invariance",
+      "exhaustive four-event relation counts",
+      "equivariant marked-order positive control",
+      "pair-unbiased invariant random-order boundary"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "conditional_symmetry_escape_contract": [
+    "premetric degrees of freedom stated without imported causal or null vocabulary",
+    "for an excluded finite-transitive or fixed-label reversal-invariant input, a proved relational, boundary, sector, or selection-law escape",
+    "otherwise a proof of the input state's actual smaller automorphism group",
+    "declared deterministic, quotient-valued, set-valued, conditioned, stochastic, or coherent-sector selection semantics"
+  ],
+  "independent_tect_integration_contract": [
+    "operational influence relation and acyclicity theorem",
+    "controlled continuum limit with a stable Lorentz cone and null boundary",
+    "boundary algebra and state map into PA-H1",
+    "one causal parent theory whose controlled low-energy reduction yields PA-M2"
+  ],
+  "scope": {
+    "deterministic_equivariant_comparison_within_finite_automorphism_orbit": false,
+    "deterministic_equivariant_nonempty_order_from_finite_transitive_state": false,
+    "deterministic_equivariant_nonempty_order_from_2transitive_state": false,
+    "reversal_invariant_state_selects_unique_nonempty_arrow": false,
+    "extra_asymmetry_or_sector_required_for_excluded_symmetric_input": true,
+    "finite_transitive_nogo_extended_to_infinite_transitive_state": false,
+    "random_invariant_order_distribution_excluded": false,
+    "quotient_set_valued_or_coherent_sector_selector_excluded": false,
+    "richer_relational_c0b_model_excluded": false,
+    "causal_set_program_invalidated": false,
+    "quantum_graphity_program_invalidated": false,
+    "gft_tensor_program_invalidated": false,
+    "causal_order_derived": false,
+    "null_structure_derived": false,
+    "c0b_candidate_selected": false,
+    "pre_a_complete": false
+  },
+  "artifacts": {
+    "certificate_note": "strategy/pre-a-c0b-equivariant-causal-selection-nogo-certificate-260803.md",
+    "primary_script": "codes/foundations/pre_a_c0b_equivariant_causal_selection_nogo.py",
+    "independent_script": "codes/foundations/pre_a_c0b_equivariant_causal_selection_nogo_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_c0b_equivariant_causal_selection_nogo_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0b-equivariant-causal-selection-nogo/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0b-equivariant-causal-selection-nogo/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0b-equivariant-causal-selection-nogo/result.json"
+  },
+  "prior_art_boundary": "Causal sets provide C0-A prior art because causal order is primitive. Quantum graphity and GFT or tensor models provide emergent-adjacency and geometrogenesis precedents but do not automatically prove causal order or nullness. This package makes no global novelty or impossibility claim.",
+  "no_overclaim": "This certificate excludes deterministic natural comparison within one finite automorphism orbit and fixed-label unique-arrow selection from an exactly reversal-invariant state. It does not extend the finite transitive theorem to infinite transitive substrates, exclude stochastic, quotient-valued, set-valued, or coherent-sector selection, exclude relational order parameters, causal sets, graphity, GFT or tensor models, derive a causal order or null cone, choose a physical C0-B theory, connect PA-H1 to PA-M2, or complete Pre-A."
+}

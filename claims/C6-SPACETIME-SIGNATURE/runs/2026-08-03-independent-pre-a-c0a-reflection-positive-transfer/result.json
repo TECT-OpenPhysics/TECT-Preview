@@ -1,0 +1,890 @@
+{
+  "assertions": {
+    "passed": 20,
+    "rows": [
+      {
+        "actual": [
+          "1",
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ]
+        ],
+        "expected": "positive normalized probability",
+        "group": "transfer",
+        "name": "independent probability normalization",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ],
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ],
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ]
+        ],
+        "expected": [
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ],
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ],
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ]
+        ],
+        "group": "transfer",
+        "name": "independent stationary projector identity",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            [
+              "1/2",
+              "-1/3",
+              "-1/6"
+            ],
+            [
+              "-1/2",
+              "2/3",
+              "-1/6"
+            ],
+            [
+              "-1/2",
+              "-1/3",
+              "5/6"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            [
+              "1/2",
+              "-1/3",
+              "-1/6"
+            ],
+            [
+              "-1/2",
+              "2/3",
+              "-1/6"
+            ],
+            [
+              "-1/2",
+              "-1/3",
+              "5/6"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        ],
+        "group": "transfer",
+        "name": "independent complementary projector identity",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "1/18"
+        ],
+        "expected": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          ">=0"
+        ],
+        "group": "transfer",
+        "name": "independent stochastic transfer",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          [
+            [
+              "2/5"
+            ],
+            [
+              "2/5"
+            ],
+            [
+              "-4/5"
+            ]
+          ],
+          "-1/10"
+        ],
+        "expected": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          [
+            [
+              "2/5"
+            ],
+            [
+              "2/5"
+            ],
+            [
+              "-4/5"
+            ]
+          ],
+          "-1/10"
+        ],
+        "group": "transfer_boundary",
+        "name": "independent operator-positive control is not entrywise Markov",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "5/12",
+            "1/18",
+            "1/36"
+          ],
+          [
+            "1/18",
+            "7/27",
+            "1/54"
+          ],
+          [
+            "1/36",
+            "1/54",
+            "13/108"
+          ]
+        ],
+        "expected": [
+          [
+            "5/12",
+            "1/18",
+            "1/36"
+          ],
+          [
+            "1/18",
+            "7/27",
+            "1/54"
+          ],
+          [
+            "1/36",
+            "1/54",
+            "13/108"
+          ]
+        ],
+        "group": "transfer",
+        "name": "independent detailed balance",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1/2"
+          ],
+          [
+            "1/3"
+          ],
+          [
+            "1/6"
+          ]
+        ],
+        "expected": [
+          [
+            "1/2"
+          ],
+          [
+            "1/3"
+          ],
+          [
+            "1/6"
+          ]
+        ],
+        "group": "transfer",
+        "name": "independent stationary probability",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "expected": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "group": "transfer",
+        "name": "independent transfer minimal polynomial",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1/3",
+            "-2/9",
+            "-1/9"
+          ],
+          [
+            "-1/3",
+            "4/9",
+            "-1/9"
+          ],
+          [
+            "-1/3",
+            "-2/9",
+            "5/9"
+          ]
+        ],
+        "expected": [
+          [
+            "1/3",
+            "-2/9",
+            "-1/9"
+          ],
+          [
+            "-1/3",
+            "4/9",
+            "-1/9"
+          ],
+          [
+            "-1/3",
+            "-2/9",
+            "5/9"
+          ]
+        ],
+        "group": "transfer",
+        "name": "independent complement is a doubly degenerate alpha eigenspace",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1/4",
+            "-1/6",
+            "-1/12"
+          ],
+          [
+            "-1/6",
+            "2/9",
+            "-1/18"
+          ],
+          [
+            "-1/12",
+            "-1/18",
+            "5/36"
+          ]
+        ],
+        "expected": [
+          [
+            "1/4",
+            "-1/6",
+            "-1/12"
+          ],
+          [
+            "-1/6",
+            "2/9",
+            "-1/18"
+          ],
+          [
+            "-1/12",
+            "-1/18",
+            "5/36"
+          ]
+        ],
+        "group": "generator",
+        "name": "independent weighted generator form is the pair variance",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "1/6"
+        ],
+        "expected": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "nonzero rank-two minor"
+        ],
+        "group": "generator",
+        "name": "independent complement kernel is exactly span of constants",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "5/6",
+            "1/9",
+            "1/18"
+          ],
+          [
+            "1/6",
+            "7/9",
+            "1/18"
+          ],
+          [
+            "1/6",
+            "1/9",
+            "13/18"
+          ]
+        ],
+        "expected": [
+          [
+            "5/6",
+            "1/9",
+            "1/18"
+          ],
+          [
+            "1/6",
+            "7/9",
+            "1/18"
+          ],
+          [
+            "1/6",
+            "1/9",
+            "13/18"
+          ]
+        ],
+        "group": "generator",
+        "name": "independent transfer spectral decomposition",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ]
+        ],
+        "group": "generator",
+        "name": "independent unitary projector algebra",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          true,
+          [
+            [
+              "1/2"
+            ],
+            [
+              "1/3"
+            ],
+            [
+              "1/6"
+            ]
+          ]
+        ],
+        "expected": [
+          true,
+          [
+            [
+              "1/2"
+            ],
+            [
+              "1/3"
+            ],
+            [
+              "1/6"
+            ]
+          ]
+        ],
+        "group": "static_boundary",
+        "name": "independent same static marginal has distinct positive transfers",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "2",
+          "41/9"
+        ],
+        "expected": "positive leading principal minors",
+        "group": "reflection_positivity",
+        "name": "independent site-reflection Gram fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "5/3",
+          "214/81"
+        ],
+        "expected": "positive leading principal minors",
+        "group": "reflection_positivity",
+        "name": "independent link-reflection Gram fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          "0"
+        ],
+        "expected": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          "0"
+        ],
+        "group": "zero_spectrum_boundary",
+        "name": "independent zero-spectrum control is Markov and link-positive",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "1/12"
+        ],
+        "expected": [
+          [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          ">=0"
+        ],
+        "group": "negative_control",
+        "name": "independent negative control remains stochastic and reversible",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "-1/20",
+              "1/30",
+              "1/60"
+            ],
+            [
+              "1/20",
+              "-1/15",
+              "1/60"
+            ],
+            [
+              "1/20",
+              "1/30",
+              "-1/12"
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "-1/20",
+              "1/30",
+              "1/60"
+            ],
+            [
+              "1/20",
+              "-1/15",
+              "1/60"
+            ],
+            [
+              "1/20",
+              "1/30",
+              "-1/12"
+            ]
+          ]
+        ],
+        "group": "negative_control",
+        "name": "independent negative control has the pinned minimal polynomial",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "-1/8"
+        ],
+        "expected": [
+          "0",
+          "<0"
+        ],
+        "group": "negative_control",
+        "name": "independent negative control violates link positivity",
+        "status": "PASS"
+      }
+    ],
+    "total": 20
+  },
+  "authority": "independent rational audit of a T0 C0-A transfer benchmark",
+  "candidate_id": "PA-C0A-RPTM-FS-v0",
+  "issued": "2026-08-03",
+  "no_overclaim": "This non-importing audit certifies exact rational projector, transfer, variance, reflection-Gram, and negative-control identities. It does not derive time, locality, a causal cone, Lorentzian signature, a physical quantum theory, a PA-H1 state, a PA-M2 composition, or Pre-A completion.",
+  "schema": "tect/pre-a-c0a-reflection-positive-transfer-independent/0.1",
+  "scope": {
+    "c0_a_causal_structure_instantiated": false,
+    "c0_a_temporal_transfer_benchmark_instantiated": true,
+    "causal_cone_derived": false,
+    "link_reflection_requires_positive_transfer": true,
+    "lorentzian_signature_derived": false,
+    "markov_entrywise_nonnegative_input": true,
+    "pa_h1_state_supplied": false,
+    "pa_m2_composition": false,
+    "physical_quantum_dynamics_selected": false,
+    "positive_self_adjoint_generator_reconstructed": true,
+    "pre_a_complete": false,
+    "preferred_hadamard_state_selected": false,
+    "reversibility_alone_implies_positive_generator": false,
+    "site_reflection_positive": true,
+    "spatial_locality_derived": false,
+    "static_functional_selects_transfer": false,
+    "tect_c0_branch_selected": false,
+    "time_order_and_spacing_inserted": true,
+    "unitary_group_reconstructed": true
+  },
+  "shared_exact_results": {
+    "alpha": "2/3",
+    "link_reflection_positive_fixture": true,
+    "negative_control_alpha": "-1/10",
+    "negative_control_link_form": "-1/8",
+    "one_dimensional_constant_ground_space": true,
+    "operator_positive_non_markov_boundary": true,
+    "positive_transfer_spectrum": [
+      "1",
+      "2/3",
+      "2/3"
+    ],
+    "positive_weighted_self_adjoint_transfer": true,
+    "pre_a_complete": false,
+    "probability": [
+      "1/2",
+      "1/3",
+      "1/6"
+    ],
+    "projector_log_generator": true,
+    "same_static_marginal_distinct_positive_transfer": true,
+    "site_reflection_positive_fixture": true,
+    "zero_spectrum_markov_link_positive_boundary": true
+  },
+  "source": {
+    "path": "codes/foundations/pre_a_c0a_reflection_positive_transfer_independent.py",
+    "sha256": "2b15452298e12f17d154f7d59a9e9ad6ee5f3c496715a5bb4bece07d47c60eae"
+  },
+  "version": "0.1.0"
+}
