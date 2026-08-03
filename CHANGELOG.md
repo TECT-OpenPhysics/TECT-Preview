@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Close passive two-arm CL8 control and split the quartic state route] - 2026-08-04
+
+Registered EXP-000745 as a claim-nonbearing T0 fixed-regulator control. The same-dimensional passive gate closes full-rank local cross maps and exact reconstruction on every acyclic monotone cut, with forward metaplectic/Weyl and B(H) maps, a cut-covariant normal Gibbs family, and fixed-algebra periodic stationarity. A q-only kicked local gate remains classically cross-invertible, while the formal negative rejects only automatic reuse of the passive number, vacuum, and Gibbs states after the inherited quartic kick. The interacting CL8 gate tiling, all-cut theorem, common invariant-or-work/state ledger, physical reference, continuum, C6, CP1, and Pre-A remain open.
+
 ## [Register R-164 predictable first-chaos origin-force and anchor-free reduction] - 2026-08-04
 
 R-164 proves that the direct R-141 zero-control legal force is a predictable first-chaos projection with squared source-dual norm bounded by the terminal scalar variance, and uses A7/A11 to make this bound cutoff-uniform on the registered sequence. A7 centering removes the direct anchor. The exact remaining direct gate is the complete owner bound above -(10/11-rho)G_src; T-050, A13, graph transport, nonzero feedback, random/nonlinear/revisit/pathwise scope, phase/PDE, removal, and Sector-A closure remain open.

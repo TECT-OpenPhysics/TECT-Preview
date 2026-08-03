@@ -1,0 +1,194 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-passive-two-arm-characteristic-control-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-PASSIVE-TWO-ARM-CHARACTERISTIC-CONTROL-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-COMMON-FINITE-REGULATOR-CHARACTERISTIC-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-GLOBAL-GOURSAT-CONTINUATION-v0",
+    "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER-ROUTE-SPLIT-v0",
+    "PA-C0A-GAUSSIAN-CCR-PAH1-EMBEDDING-v0",
+    "PA-CP1-ST8-Q3LOCK-v0"
+  ],
+  "result_id": "PA-CP1-CL8-EXACT-PASSIVE-TWO-ARM-CUT-RECONSTRUCTION-AND-CL8-KICK-STATE-NOGO",
+  "candidate_family": "PRE-A-CL8-PASSIVE-TWO-ARM-CHARACTERISTIC-CONTROL",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 exact fixed-regulator passive Gaussian control and interacting-route split; not a TECT claim, tier change, interacting CL8 characteristic theorem, physical-state theorem, CP1 completion, or Pre-A closure",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "comparison_context": [
+    "T-054 Pre-A candidate tournament",
+    "the rank-deficient D-K-D neighbour block in EXP-000743"
+  ],
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-PASSIVE-TWO-ARM-NUMBER-STATE-QUARTIC-REUSE"
+  ],
+  "statement": "For every fixed even M>=4, each of the M inherited CL8 regulator legs carries exactly the existing eight canonical pairs p=(a/8)Pi. A species-diagonal two-leg passive rotation with gamma^2+eta^2=1 and gamma*eta nonzero has full-rank opposite-input blocks, exact oriented sideways inverses, and no added canonical degree of freedom. On every finite directed rectangle with arm lengths m+n=M, the west-plus-south two-arm data uniquely reconstruct every admissible monotone cut; local flux cancellation proves that every cut map is orthogonal and symplectic, independent of sweep order, and exactly causal. The same forward cut maps have exact metaplectic/Weyl and B(H) implementations. An inserted oscillator number is positive and invariant, its vacuum and finite-temperature Gibbs densities form an exact cut-covariant normal family, and the same densities are stationary for the periodic fixed-algebra companion. This closes only a passive linear-control subgate. The inherited positive CL8 onsite quartic kick does not preserve that number or its vacuum/Gibbs states, so it cannot be appended while reusing the control state and energy ledger. This no-go does not obstruct classical local sideways inversion of a kicked gate. The interacting common-parent characteristic gate tiling and common invariant-or-work/state proof remain open.",
+  "verdict": "CLOSE AN EXACT SAME-DIMENSION PASSIVE TWO-ARM SYMPLECTIC, QUANTUM, ENERGY, AND STATE CONTROL; FORMALLY REJECT AUTOMATIC REUSE OF ITS NUMBER/GIBBS LEDGER AFTER THE CL8 QUARTIC KICK; KEEP THE INTERACTING CHARACTERISTIC PARENT OPEN",
+  "authorities": {
+    "failed_parent_sideways_route": "strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-manifest.json",
+    "continuum_two_arm_and_corner_ledger": "strategy/pre-a-cp1-cl8-global-goursat-continuation-manifest.json",
+    "Weyl_and_BH_firewall": "strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-manifest.json",
+    "Gaussian_Fock_comparator": "strategy/pre-a-c0a-gaussian-ccr-pah1-embedding-manifest.json",
+    "interacting_Q3_quartic": "strategy/pre-a-cp1-st8-q3lock-manifest.json",
+    "minimum_CP1_contract": "strategy/pre-a-cp1-lt3-rs-common-container-certificate-260803.md#14-minimum-repair-and-next-proof-target",
+    "Pre_A_selection_charter": "strategy/pre-a-evidence-first-model-selection-charter-260802.md#8-entry-and-exit-conditions"
+  },
+  "fixed_regulator": {
+    "domain": "M is even and M>=4; L>0, a=L/M and w=a/8 are declared; each cut has exactly M legs and each leg carries eight inherited canonical pairs",
+    "leg_variables": "z=(q_1,...,q_8,p_1,...,p_8) with p_e=w*Pi_e and [q_e,p_f]=i*hbar*delta_ef",
+    "leg_dimension": "16 real canonical coordinates; the complete cut dimension is 16M",
+    "symplectic_form": "Omega_leg=sum_e dp_e wedge dq_e; Omega_cut is the oriented sum over its M legs",
+    "boundary_to_CL8_identification": "enumerating the M boundary legs by the M CL8 node labels is a canonical relabelling of the same 16M-dimensional phase space; no left/right ancilla, oscillator truncation, or hidden complement is added",
+    "inserted_data": "the brickwork pairing, directed-rectangle orientation, characteristic/null interpretation, microstep, hbar, oscillator complex structure and frequency nu are inputs rather than consequences of the CL8 static functional"
+  },
+  "passive_local_gate": {
+    "parameter_domain": "gamma and eta are real, gamma^2+eta^2=1, and gamma*eta is nonzero",
+    "map": "(E,N)^T=G_(gamma,eta)*(W,S)^T with G=[[gamma*I_16,eta*I_16],[-eta*I_16,gamma*I_16]]",
+    "temporal_result": "G is orthogonal and symplectic for Omega_W+Omega_S and has inverse G^T",
+    "full_rank_result": "all four 16-by-16 input-output blocks have rank 16 throughout the declared domain; in particular the opposite-input block has rank 16 rather than the inherited split circuit's rank 8",
+    "rational_fixture_rule": "for integers u>v>0, gamma=(u^2-v^2)/(u^2+v^2) and eta=2uv/(u^2+v^2); u=2,v=1 gives gamma=3/5 and eta=4/5 without fitting"
+  },
+  "sideways_inverses": {
+    "west_east_to_north_south": "(N,S)^T=T_eta*(W,E)^T with T_eta=[[-I/eta,(gamma/eta)I],[-(gamma/eta)I,I/eta]]",
+    "west_north_to_east_south": "(E,S)^T=T_gamma*(W,N)^T with T_gamma=[[I/gamma,(eta/gamma)I],[(eta/gamma)I,I/gamma]]",
+    "orientation": "both maps preserve the nondegenerate oriented form Gamma=Omega_first-Omega_second; the signs come from moving an outgoing edge to the input side of the flux identity",
+    "uniformity": "the displayed inverses exist on the complete 16-coordinate leg space for every admitted gamma,eta, not merely at the rational fixture or a tangent point",
+    "state_boundary": "after the reversed arm is identified with a standard positive-orientation oscillator, a mixed sideways inverse is a squeeze and does not preserve the passive number or Gibbs density; stationarity is claimed only for monotone cut maps composed from the original passive G gates",
+    "quantum_orientation": "the signed classical map acts between an oriented tensor product H_first tensor conjugate(H_second) and its output analogue; momentum reversal is anti-symplectic on a same-positive-orientation factor, so no same-orientation metaplectic unitary or strict continuous-variable dual-unitarity is claimed for a literal reshuffling"
+  },
+  "two_arm_boundary": {
+    "rectangle": "choose positive integers m,n with m+n=M and vertices (i,j), 1<=i<=m, 1<=j<=n",
+    "incoming_arms": "west edges X_(0,j), j=1,...,n, and south edges Y_(i,0), i=1,...,m",
+    "recurrence": "(X_(i,j),Y_(i,j))=G*(X_(i-1,j),Y_(i,j-1))",
+    "corner": "the arms meet geometrically at the southwest corner but share no directed edge variable; there is no duplicated corner coordinate and no independent third datum",
+    "constraints": "none for this edge-variable control; the admissible space is the full 16M-dimensional input space, its symplectic radical is zero, and the quotient is the same space",
+    "outputs": "east edges X_(m,j) and north edges Y_(i,n), again M complete CL8 legs"
+  },
+  "global_cut_theorem": {
+    "admissible_cut": "a monotone frontier of an order ideal in the m-by-n vertex poset; equivalently nonincreasing row lengths r_1>=...>=r_n with 0<=r_j<=m",
+    "cut_legs": "the n horizontal edges X_(r_j,j) together with the m vertical edges Y_(i,c_i), where c_i=max{j:r_j>=i} and c_i=0 if the set is empty",
+    "existence_uniqueness": "the recurrence determines every internal edge by induction on i+j; reversing local gates reconstructs the two input arms from every admissible cut",
+    "sweep_independence": "row-first, column-first and every topological sweep give the same edge values because each vertex has a unique pair of predecessors and incomparable local replacements commute",
+    "flux_and_energy": "at each vertex Omega_W+Omega_S=Omega_E+Omega_N and ||W||^2+||S||^2=||E||^2+||N||^2; summing cancels every internal edge, so every input-to-cut matrix is orthogonal and symplectic",
+    "causality": "X_(i,j) and Y_(i,j) depend only on west-arm indices at or below j and south-arm indices at or left of i; all coefficients outside that finite southwest rectangle vanish exactly",
+    "cut_count": "the finite rectangle has binomial(m+n,m) admissible monotone cuts"
+  },
+  "periodic_Cauchy_companion": {
+    "construction": "on the same even periodic M-node phase space, apply G on disjoint even bonds and then on disjoint odd bonds, including the periodic wrap bond",
+    "result": "each half-layer is an orthogonal symplectic radius-one circuit; one full brickwork period is reversible, orthogonal, symplectic and has graph radius at most two",
+    "boundary": "this companion verifies same-phase-space finite-depth causality but is a new passive update, not the inherited nonlinear CL8 D-K-D circuit and not an exact time step of the autonomous CL8 Hamiltonian"
+  },
+  "quantum_cut_model": {
+    "Hilbert_space": "each leg is H_leg=L2(R^8); every M-leg cut is canonically H_cut=L2(R^(8M)) after the declared edge enumeration",
+    "Weyl_algebra": "the regular finite-dimensional Weyl CCR algebra for the complete 16M-dimensional cut phase space, kept distinct from B(H_cut)",
+    "implementation": "every input-to-cut matrix is passive linear symplectic and has a metaplectic, equivalently bosonic second-quantized, unitary U_cut; conjugation is a normal B(H) star-isomorphism and maps Weyl generators exactly",
+    "directions": "the kinematic map sends W_in(z) to W_cut(Cz); with the fixed-algebra Heisenberg convention alpha(A)=U^*AU and W(z)=exp(i*sigma(z,Z)/hbar), alpha(W(z))=W(C^(-1)z)",
+    "inverse": "C^T=C^(-1) and U_cut^* implement the inverse cut reconstruction",
+    "nonlinear_boundary": "this is a passive Gaussian theorem only; it does not quantize the nonlinear CL8 Goursat map by direct Weyl-generator relabelling"
+  },
+  "state_and_energy": {
+    "inserted_complex_structure": "for nu>0, a_(j,e)=(sqrt(nu)q_(j,e)+i*p_(j,e)/sqrt(nu))/sqrt(2hbar)",
+    "classical_generator": "I_nu=(1/2)sum_(j,e)[nu*q_(j,e)^2+p_(j,e)^2/nu] is a positive invariant action under every local gate, admissible cut map and periodic companion; the oscillator energy is H_nu=nu*I_nu",
+    "quantum_generator": "N=sum a^*a and K_nu=hbar*nu*N are nonnegative, commute with every cut and brickwork unitary, and have compact resolvent at fixed M",
+    "normal_state": "for beta_T>0, rho_beta=(1-exp(-beta_T*hbar*nu))^(8M)*exp(-beta_T*hbar*nu*N) is faithful, positive, trace one and trace class; it is a cut-covariant family under every admissible monotone input-to-cut unitary and is genuinely stationary on the one fixed algebra under the periodic brickwork companion; the same statements hold for the vacuum projector",
+    "transport": "arbitrary input densities transport by rho_cut=U_cut*rho_in*U_cut^*, while U_cut*rho_beta*U_cut^*=rho_beta on the canonically enumerated target cut because U_cut commutes with N; this is cut covariance unless source and target algebras have been identified, whereas periodic brickwork gives fixed-algebra stationarity",
+    "reference_convention": "K_nu assigns the vacuum the declared normal-ordered value zero; the un-normal-ordered oscillator Hamiltonian differs by 4M*hbar*nu. Neither convention identifies physical empty space or a no-condensate state",
+    "selection_boundary": "nu, hbar, beta_T, the complex structure and the ground/KMS rule are inputs, and the continuum of beta_T states again prevents stationarity alone from selecting a physical state"
+  },
+  "CL8_quartic_reuse_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-PASSIVE-TWO-ARM-NUMBER-STATE-QUARTIC-REUSE",
+    "attempt": "append the inherited positive onsite CL8 quartic position kick to the passive two-arm gate while automatically retaining K_nu and its vacuum/Gibbs states",
+    "classical_witness": "for one coordinate p maps to p-delta*w*g*q^3, so Delta I_nu=-(delta*w*g/nu)*p*q^3+(delta^2*w^2*g^2/(2nu))*q^6; at p=0 and nonzero q,delta this is strictly positive",
+    "quantum_witness": "with Q=sqrt(hbar/(2nu))*(a+a^*), the exact matrix element <4|[N,Q^4]|0>=4*sqrt(24)*(hbar/(2nu))^2 is nonzero; multiplication of the strictly positive oscillator vacuum by exp(-i*delta*w*g*x^4/(4hbar)) is not a scalar multiple for any nonzero delta*w*g",
+    "conclusion": "the passive number, vacuum and Gibbs stationarity cannot be reused after the CL8 quartic kick without a new invariant generator and state proof",
+    "classical_sideways_boundary": "this is not a classical inversion no-go: for F=G after a q-only kick with gradients V_W,V_S, given pre-kick W=(q_W,p_W) and output N one first solves q_S=(q_N+eta*q_W)/gamma, evaluates the gradients, and then solves p_S=[p_N+eta*(p_W-delta*V_W)]/gamma+delta*V_S; the unresolved work is the actual CL8 coupling assignment, global gate tiling, all-cut theorem and common invariant-or-work/state ledger",
+    "survivors": "the exact local quartic work increment, a different interacting positive invariant, an explicit global work ledger, a nonlinear number-conserving model with a proved CL8 reduction, or an enlarged B(H) construction with a separately transported state"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-SIDEWAYS-INVERTIBLE-TWO-ARM-CHARACTERISTIC-CIRCUIT",
+    "status": "PASSIVE LINEAR-CONTROL SUBGATE CLOSED; INTERACTING PARENT REMAINS OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-SAME-DIMENSION-PASSIVE-FULL-RANK-SIDEWAYS-GATE",
+      "PA-CP1-CL8-Q-ONLY-KICKED-LOCAL-CLASSICAL-CROSS-INVERSE",
+      "PA-CP1-CL8-PASSIVE-TWO-ARM-ALL-CUT-SYMPLECTIC-RECONSTRUCTION",
+      "PA-CP1-CL8-PASSIVE-TWO-ARM-METAPLECTIC-WEYL-BH-CUT-MAP",
+      "PA-CP1-CL8-PASSIVE-POSITIVE-NUMBER-AND-STATIONARY-GIBBS-CONTROL"
+    ],
+    "refuted_subgates": [
+      "PA-CP1-CL8-AUTOMATICALLY-REUSE-PASSIVE-NUMBER-AND-STATES-AFTER-Q4-KICK"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-INTERACTING-GATE-TILING-ALL-CUT-INVARIANT-OR-WORK-STATE",
+      "PA-CP1-CL8-FULL-FINITE-A-INTERACTING-BOUNDARY-ALGEBRA",
+      "PA-CP1-CL8-INTERACTING-BOUNDARY-BULK-DYNAMICS-INTERTWINER",
+      "PA-CP1-CL8-REGULATOR-COMPATIBLE-BOUNDARY-STATE-FAMILY",
+      "PA-CP1-CL8-CONTINUUM-STATE-AND-HADAMARD-LIMIT",
+      "PA-CP1-COMMON-PARENT-PHYSICAL-STATE-AND-REFERENCE"
+    ],
+    "next_gate": "PA-CP1-CL8-INTERACTING-GATE-TILING-ALL-CUT-INVARIANT-OR-WORK-STATE"
+  },
+  "required_next_contract": {
+    "dynamics": "put the actual Q3 onsite quartic and spatial coupling, or an exact invariant reduction of them, in the same local two-arm gate without changing the canonical phase dimension",
+    "sideways": "assign the actual Q3 onsite and neighbour terms to a staggered local gate tiling, then prove all required cross-Jacobians remain nonsingular on the declared global data domain and prove an all-cut theorem; the q-only local kick inverse alone is already closed",
+    "quantum": "construct the interacting cut unitaries on B(H) and state clearly which nonlinear observable algebra, if any, is invariant; do not reuse direct nonlinear Weyl relabelling",
+    "state_energy": "prove a positive invariant generator and trace-class stationary density for that interacting circuit, or give an exact time-dependent work ledger and transport only",
+    "common_parent": "intertwine the same selected state and energy/counterterm ledger with the inherited CL8 boundary and Cauchy authorities",
+    "regulators": "supply inter-regulator embeddings and compatible states before a continuum or Hadamard assertion"
+  },
+  "Pre_A_chain_role": {
+    "C0": "not established because the directed circuit order, two arms, microstep, hbar, complex structure and characteristic/null interpretation are inserted",
+    "N1": "a complete fixed-regulator passive boundary algebra and actual normal cut-state control is constructed, but it is not the interacting selected parent and has no regulator-compatible family",
+    "N2": "exact passive boundary-bulk cut dynamics exists; the inherited nonlinear Q3/CL8 intertwiner does not",
+    "N3_through_N5": "not established; no control history, phase transition, emergent geometry, excitation theorem or cooling law follows",
+    "CP1": "not complete because the ordering kernel, interacting common parent, same selected state, energy/counterterm ledger and cutoff-uniform family are absent",
+    "chain_verdict": "the package closes a falsifiable linear-control component only; C0, N1-N5, CP1 and Pre-A remain open"
+  },
+  "scope": {
+    "same_CL8_finite_phase_dimension": true,
+    "general_parameter_full_rank_sideways_gate": true,
+    "two_arm_corner_and_dimension_declared": true,
+    "all_admissible_cut_reconstruction": true,
+    "global_sweep_independence": true,
+    "exact_cut_symplecticity": true,
+    "exact_cut_causality": true,
+    "exact_metaplectic_Weyl_cut_maps": true,
+    "exact_BH_cut_isomorphisms": true,
+    "positive_invariant_passive_generator": true,
+    "actual_cut_covariant_normal_Gibbs_state_family": true,
+    "periodic_companion_stationary_normal_Gibbs_state": true,
+    "linear_passive_control_subgate_closed": true,
+    "local_q_only_kicked_gate_classically_sideways_invertible": true,
+    "strict_continuous_variable_dual_unitarity": false,
+    "arbitrary_periodic_two_arm_seam_reconstruction": false,
+    "inherited_Q3_interaction_implemented": false,
+    "interacting_CL8_characteristic_parent_closed": false,
+    "passive_number_survives_CL8_quartic_kick": false,
+    "interacting_boundary_bulk_intertwiner": false,
+    "preferred_physical_state_selected": false,
+    "physical_energy_reference": false,
+    "physical_vacuum": false,
+    "below_empty_space": false,
+    "regulator_compatible_state_family": false,
+    "continuum_quantum_state": false,
+    "Hadamard_state": false,
+    "hbar_origin_derived": false,
+    "Lorentzian_or_null_structure_derived": false,
+    "speed_of_light_derived": false,
+    "C0_closed": false,
+    "N1_closed": false,
+    "N2_closed": false,
+    "N3_closed": false,
+    "N4_closed": false,
+    "N5_closed": false,
+    "full_3_plus_1_dependence": false,
+    "gravity_or_event_horizon": false,
+    "phase_transition_or_cooling": false,
+    "cyclic_cosmology": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "prior_art_boundary": "Passive linear-optical beam splitters, Gaussian/metaplectic circuits, reversible lattice gases, symplectic vertex models, tensor-network cut evolution and bosonic Gibbs states are established mathematics and physics. No new general theorem or world-first claim is made. The repository-specific contribution is the exact CL8 a/8 convention bridge, same-dimension two-arm/corner ledger, all-cut audit against the registered rank obstruction, and the explicit firewall between the passive stationary control and the inherited Q3 quartic interaction.",
+  "no_overclaim": "This package proves only an exact passive Gaussian two-arm characteristic control on each fixed finite CL8 phase space and a narrow obstruction to reusing its number/Gibbs ledger after the CL8 quartic kick. It does not implement or intertwine the inherited nonlinear Q3 dynamics, prove a full interacting boundary algebra, select a physical state, identify physical empty space or a below-empty-space sign, construct regulator-compatible states, take a continuum or Hadamard limit, derive hbar, time, nullness, Lorentzian signature or light speed, prove a phase transition or cooling, reconstruct 3+1 dynamics, gravity, a horizon or a cycle, advance C6, close C0 or N1-N5, complete CP1, or complete Pre-A."
+}
