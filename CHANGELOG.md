@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [T-054 strict-interface verifier made workspace-portable] - 2026-08-03
+
+Repair the PA-H1/PA-M2 strict-interface package after cross-workspace reproduction exposed stale source self-hashes and absolute repository-root strings in the stored integrated artifact. All non-PDF authority hashes now canonicalize CRLF and lone CR to LF, and artifact-routing assertions store repository-relative paths while still resolving and comparing the declared files. Fresh primary 56/56, non-importing independent 41/41, and integrated 186/186 checks pass, 283 combined. The strict-interface no-go, its scope, and the open Pre-A/common-parent tasks are unchanged.
+
 ## [R-162: resolvent-controlled pure-dyadic recursive-chain neighbourhood] - 2026-08-03
 
 Register A13-CLASSII-RESOLVENT-PURE-DYADIC-RECURSIVE-CHAIN-UNIFORM-NEIGHBORHOOD-GAP-BOUNDARY (R-162). For one finite acyclic pure-dyadic deterministic-matrix chain, later controls read the actual shifted state. A strict-lower-shift resolvent gives length-free coefficient and covariance jets; the registered stationary p-to-4p full-action cancellation transfers the R-160 4/25 origin gap. Exact A1 dyadic synthesis, Q-Q0 cancellation before norms, and one complete source/current/trace/projected-force/sextic modulus retain 13/100 and more than 1/10 of the induced recursive Gram, uniformly in finite chain length, starting mode, finite cutoff, and admitted regulator. The sextic-PSD shortcut, bare finite-chain continuity, stationarity-free transfer, automatic arbitrary-forest union, and covariance-only random-law closure fail at the recorded boundaries. No intrinsic Hessian, unrelated forest, random/nonlinear or revisit law, pathwise conditional estimate, removal, T-050/A13, phase/PDE, Nelson/measure, or Sector-A closure follows. Freeze this single-chain boundary and move the main lane to truth-first T-054 without privileging any morphology or PDE.

@@ -7,7 +7,7 @@
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
     "RESULTS-LEDGER.md": "b55b1b049650340cae4166f340864f9a40b9004a5671e7ddca7e1b4e876779c2",
-    "changelog/log.jsonl": "a66037a29b055c72fa4dd3ec8c675d07a75118c4af593d4686c49df0a0831a42",
+    "changelog/log.jsonl": "dd4fb197ab955e9528a29c64d40afcf5fa11f0b7f95ebc08399426b59b980577",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -76,7 +76,7 @@
       "parked": 24
     },
     "process_grade_lessons": 3,
-    "accepted_events": 498,
+    "accepted_events": 499,
     "tasks": 54,
     "live_tasks": 9,
     "completed_tasks": 45,
@@ -5732,9 +5732,10 @@
           "20260803-pre-a-bounded-prior-art-audit-and-pa-h1-double",
           "20260803-hostile-audit-correction-of-pre-a-novelty-and-p",
           "20260803-pre-a-c0-static-dynamics-nonidentifiability-cer",
-          "20260803-strict-unchanged-pa-h1-to-pa-m2-composition-rej"
+          "20260803-strict-unchanged-pa-h1-to-pa-m2-composition-rej",
+          "20260803-t-054-strict-interface-verifier-made-workspace"
         ],
-        "latest_event_id": "20260803-strict-unchanged-pa-h1-to-pa-m2-composition-rej",
+        "latest_event_id": "20260803-t-054-strict-interface-verifier-made-workspace",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -9556,9 +9557,10 @@
           "20260803-pre-a-c0-static-dynamics-nonidentifiability-cer",
           "20260803-pre-a-c0-fork-positive-transfer-calibration-and",
           "20260803-finite-gaussian-c0-a-reconstructed-and-embedded",
-          "20260803-strict-unchanged-pa-h1-to-pa-m2-composition-rej"
+          "20260803-strict-unchanged-pa-h1-to-pa-m2-composition-rej",
+          "20260803-t-054-strict-interface-verifier-made-workspace"
         ],
-        "latest_event_id": "20260803-strict-unchanged-pa-h1-to-pa-m2-composition-rej",
+        "latest_event_id": "20260803-t-054-strict-interface-verifier-made-workspace",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "C6-BCC-PREMISE-BLOCKED"
@@ -73734,6 +73736,43 @@
         "R-160": "explicit_result_id",
         "R-162": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260803-t-054-strict-interface-verifier-made-workspace",
+      "date": "2026-08-03",
+      "header": "[T-054 strict-interface verifier made workspace-portable] - 2026-08-03",
+      "claim_ids": [
+        "A2-FULL-PRODUCTION-WELLPOSED",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "keywords": [
+        "T-054",
+        "canonical-hash",
+        "portability",
+        "relative-path",
+        "reproducibility",
+        "verification"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "scripts": [
+        "codes/foundations/pre_a_pah1_m2_strict_composition_nogo.py",
+        "codes/foundations/pre_a_pah1_m2_strict_composition_nogo_independent.py",
+        "codes/foundations/pre_a_pah1_m2_strict_composition_nogo_verify.py"
+      ],
+      "raw": "## [T-054 strict-interface verifier made workspace-portable] - 2026-08-03\n\nRepair the PA-H1/PA-M2 strict-interface package after cross-workspace reproduction exposed stale source self-hashes and absolute repository-root strings in the stored integrated artifact. All non-PDF authority hashes now canonicalize CRLF and lone CR to LF, and artifact-routing assertions store repository-relative paths while still resolving and comparing the declared files. Fresh primary 56/56, non-importing independent 41/41, and integrated 186/186 checks pass, 283 combined. The strict-interface no-go, its scope, and the open Pre-A/common-parent tasks are unchanged.\n\n",
+      "claim_refs": [
+        "A2-FULL-PRODUCTION-WELLPOSED",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "A2-FULL-PRODUCTION-WELLPOSED": "explicit_claim_ids",
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [],
+      "result_ids": [],
+      "linked_result_ids": [],
+      "result_link_basis": {}
     }
   ],
   "all_tasks": [
@@ -77732,6 +77771,12 @@
         "id": "event:20260803-t-054-screened-vector-candidate-derivation-and",
         "kind": "accepted_event",
         "label": "[T-054 screened-vector candidate derivation and early causal boundary] - 2026-08-03",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260803-t-054-strict-interface-verifier-made-workspace",
+        "kind": "accepted_event",
+        "label": "[T-054 strict-interface verifier made workspace-portable] - 2026-08-03",
         "authority": "CHANGELOG.md"
       },
       {
@@ -93520,6 +93565,18 @@
         "from": "event:20260803-t-054-screened-vector-candidate-derivation-and",
         "relation": "records",
         "to": "claim:A2-FULL-PRODUCTION-WELLPOSED",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260803-t-054-strict-interface-verifier-made-workspace",
+        "relation": "records",
+        "to": "claim:A2-FULL-PRODUCTION-WELLPOSED",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260803-t-054-strict-interface-verifier-made-workspace",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
         "basis": "explicit_claim_ids"
       },
       {
@@ -145161,6 +145218,43 @@
         ],
         "claim_ref_basis": {
           "A2-FULL-PRODUCTION-WELLPOSED": "explicit_claim_ids"
+        },
+        "unresolved_claim_ids": [],
+        "result_ids": [],
+        "linked_result_ids": [],
+        "result_link_basis": {}
+      },
+      "20260803-t-054-strict-interface-verifier-made-workspace": {
+        "id": "20260803-t-054-strict-interface-verifier-made-workspace",
+        "date": "2026-08-03",
+        "header": "[T-054 strict-interface verifier made workspace-portable] - 2026-08-03",
+        "claim_ids": [
+          "A2-FULL-PRODUCTION-WELLPOSED",
+          "C6-SPACETIME-SIGNATURE"
+        ],
+        "keywords": [
+          "T-054",
+          "canonical-hash",
+          "portability",
+          "relative-path",
+          "reproducibility",
+          "verification"
+        ],
+        "negative_results": [],
+        "notes": [],
+        "scripts": [
+          "codes/foundations/pre_a_pah1_m2_strict_composition_nogo.py",
+          "codes/foundations/pre_a_pah1_m2_strict_composition_nogo_independent.py",
+          "codes/foundations/pre_a_pah1_m2_strict_composition_nogo_verify.py"
+        ],
+        "raw": "## [T-054 strict-interface verifier made workspace-portable] - 2026-08-03\n\nRepair the PA-H1/PA-M2 strict-interface package after cross-workspace reproduction exposed stale source self-hashes and absolute repository-root strings in the stored integrated artifact. All non-PDF authority hashes now canonicalize CRLF and lone CR to LF, and artifact-routing assertions store repository-relative paths while still resolving and comparing the declared files. Fresh primary 56/56, non-importing independent 41/41, and integrated 186/186 checks pass, 283 combined. The strict-interface no-go, its scope, and the open Pre-A/common-parent tasks are unchanged.\n\n",
+        "claim_refs": [
+          "A2-FULL-PRODUCTION-WELLPOSED",
+          "C6-SPACETIME-SIGNATURE"
+        ],
+        "claim_ref_basis": {
+          "A2-FULL-PRODUCTION-WELLPOSED": "explicit_claim_ids",
+          "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
         },
         "unresolved_claim_ids": [],
         "result_ids": [],
