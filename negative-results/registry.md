@@ -6,6 +6,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-04-PRE-A-CP1-CL8-NONLINEAR-FLOQUET-WEYL-NORMALIZER](#ng-2026-08-04-pre-a-cp1-cl8-nonlinear-floquet-weyl-normalizer) | promote the exact nonlinear CL8 split-circuit automorphism on `B(H_a)` to an automorphism of the concrete unital Weyl C-star algebra | conjugating a Weyl configuration translation by the quartic position kick produces a cubic-phase multiplier that is not uniformly continuous and therefore not almost periodic; it lies outside the Weyl algebra. Retain the exact `B(H_a)` automorphism, the quadratic metaplectic Weyl sector, or define and verify an enlarged observable algebra |
+| [NG-2026-08-04-PRE-A-CP1-CL8-CAUSAL-SPLIT-ORIGINAL-H-STATE](#ng-2026-08-04-pre-a-cp1-cl8-causal-split-original-h-state) | combine exact finite-depth split-circuit causality with exact conservation of the inherited autonomous CL8 Hamiltonian and automatic stationarity of its ground/Gibbs states | already for one harmonic mode the energy ratio at `(q,0)` is `1+(delta*omega)^4/4>1`; the actual ordered CL8 energy defect has a positive quadratic coefficient. The registered densities may be transported exactly, but stationarity and a conserved physical-energy ledger require a new proof or model |
+| [NG-2026-08-04-PRE-A-CP1-CL8-PRINCIPAL-FLOQUET-GIBBS-REFERENCE](#ng-2026-08-04-pre-a-cp1-cl8-principal-floquet-gibbs-reference) | obtain a preferred thermal state and absolute energy reference from the principal logarithm of the split-circuit unitary | the principal Floquet Hamiltonian is bounded, so its Gibbs exponential is bounded below by a positive multiple of the identity and has infinite trace on `L2(R^(8M))`; other logarithm branches are nonunique. Retain independently selected invariant states or a separately proved unbounded/local trace-class generator |
+| [NG-2026-08-04-PRE-A-CP1-CL8-CAUSAL-SPLIT-SIDEWAYS-CHARACTERISTIC](#ng-2026-08-04-pre-a-cp1-cl8-causal-split-sideways-characteristic) | infer a full two-null-side characteristic reconstruction from the exact radius-one CL8 Cauchy circuit | the one-species neighbour-to-output canonical block is a rank-one outer product; the eight-species block has rank at most eight rather than sixteen, so no local full canonical sideways inverse exists. Retain a chiral/dual-unitary enlargement, a proved constrained quotient, or a separate discrete Goursat scheme |
 | [NG-2026-08-04-PRE-A-CP1-CL8-OA2-SAMPLING-EXACT-WEYL](#ng-2026-08-04-pre-a-cp1-cl8-oa2-sampling-exact-weyl) | promote the current unrestricted continuum point sampler `R_a` to an exact boundary-to-lattice Weyl generator map | `f_M=sin(2*pi*M*x/L)` samples to zero although its continuum symplectic pairing with the corresponding momentum mode is nonzero; after exact scaling the source Weyl commutator is `-1` while both target generators are the identity. Retain the exact three-mode spectral image, an opposite-direction symplectic reconstruction, a redesigned regulator, or an explicitly approximate theorem |
 | [NG-2026-08-04-PRE-A-CP1-CL8-DIRECT-NONLINEAR-WEYL-RELABEL](#ng-2026-08-04-pre-a-cp1-cl8-direct-nonlinear-weyl-relabel) | quantize the fixed ordered nonlinear CL8 Goursat phase map by direct relabelling `W(z)` as a phase times `W(F(z))` | Weyl multiplication forces `F` to be additive, continuous additivity makes it real-linear, and commutators force it to be symplectic; the ordered collective map has a nonzero second data variation along the final slice for every positive `tau`. Retain enlarged observable algebras, nonlinear unitaries outside generator closure, deformation quantization, perturbative, path-integral, or semiclassical routes |
 | [NG-2026-08-04-PRE-A-CP1-CL8-CURRENT-SAMPLING-EXACT-DYNAMICS](#ng-2026-08-04-pre-a-cp1-cl8-current-sampling-exact-dynamics) | promote the exact restricted band sampler to an exact continuum-to-current-lattice time intertwiner | the ordered continuum first harmonic has squared frequency `25`, while the current centered lattice has `9+4*sin^2(2a)/a^2<25` at every finite even `M>=4`. Retain the proved kinematic Weyl monomorphism and `O(a^2)` dynamics, or construct a symbol-matched spectral/light-cone regulator |
@@ -262,6 +266,159 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-nonlinear-floquet-weyl-normalizer"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-NONLINEAR-FLOQUET-WEYL-NORMALIZER -- the quartic split kick does not normalize the Weyl C-star algebra
+
+**Failure mode.**  Promote the exact nonlinear split-circuit automorphism on
+`B(H_a)` to an automorphism of the concrete unital Weyl C-star algebra
+`A_W=C*(1,W(z))` without enlarging the observable algebra.
+
+**Evidence.**  Let `T_y` be a nonzero one-coordinate configuration
+translation, hence a Weyl unitary.  The position kick satisfies
+
+`Khat_delta T_y Khat_delta^* = M_f T_y`,
+
+where `f(x)=exp[-i delta (U(x)-U(x-y))/hbar]`.  The `g>0` quartic term makes a
+one-coordinate phase difference a polynomial with nonzero cubic leading
+coefficient.  For a cubic `P`, increments `epsilon_n=pi/P'(x_n)` tend to zero
+as `x_n` tends to infinity, while
+`P(x_n+epsilon_n)-P(x_n)` tends to `pi`.  Thus `exp(iP)` is not uniformly
+continuous and cannot be almost periodic.  The multiplication-operator
+intersection of the concrete unital Weyl algebra is the almost-periodic
+multiplication algebra, so `M_f T_y` is outside `A_W`.  The surrounding
+kinetic drifts are metaplectic Weyl normalizers and cannot repair the failed
+kick normalization.
+
+**Boundary.**  This does not reject the exact normal automorphism on `B(H_a)`,
+the full quadratic metaplectic Weyl sector, the regularity of transported
+states after restriction, or a resolvent, crossed-product, or other explicitly
+defined enlarged algebra.  It is stronger in scope than merely observing that
+one nonlinear classical label map is not linear, but it is still specific to
+the current quartic kick and concrete unital Weyl algebra.
+
+**Consequence.**  Keep nonlinear dynamics on `B(H_a)` until an enlarged
+observable algebra is defined and proved invariant.  Do not label inner
+`B(H_a)` dynamics as interacting Weyl C-star dynamics.
+
+**Evidence files.**
+`strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-causal-split-original-h-state"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-CAUSAL-SPLIT-ORIGINAL-H-STATE -- exact split causality does not preserve the inherited autonomous energy or state
+
+**Failure mode.**  Use the exact radius-one Strang circuit and simultaneously
+claim exact conservation of the inherited autonomous `H_a=T_a+U_a` and
+automatic stationarity of its registered ground and finite-beta Gibbs states.
+
+**Evidence.**  For one harmonic pair
+
+`H_0=p^2/(2mu)+mu*omega^2*q^2/2`,
+
+the D-K-D circuit sends initial `(q,0)` to
+
+`p'=-delta*mu*omega^2*q` and
+`q'=(1-delta^2*omega^2/2)q`.
+
+Therefore
+
+`H_0(q',p')/H_0(q,0)=1+(delta*omega)^4/4>1`
+
+for nonzero step and frequency.  In the actual ordered CL8 double-well
+fixture, expansion about `v0=sqrt(-r/g)` gives the positive energy-defect
+coefficient `mu*omega^6*delta^4/8`, with `omega^2=-2r/chi`; the interacting
+autonomous energy is therefore not identically conserved either.  In the
+quadratic quantum control the split metaplectic map is not orthogonal for the
+`H_0` quadratic form, so its ground and thermal covariances are not stationary.
+
+**Boundary.**  The exact symplectic circuit, exact `B(H_a)` unitary, and exact
+transport of any registered density remain valid.  This no-go rejects
+automatic reuse of the autonomous energy and stationary states; it does not
+exclude a separately proved invariant Floquet density, a new conserved
+quantity, an exact time-dependent work ledger, or a different energy-preserving
+causal model.
+
+**Consequence.**  State transport and state stationarity remain separate
+gates.  The split circuit cannot supply a common conserved physical energy or
+preferred state merely because it is symplectic and unitary.
+
+**Evidence files.**
+`strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-principal-floquet-gibbs-reference"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-PRINCIPAL-FLOQUET-GIBBS-REFERENCE -- the principal Floquet logarithm supplies no normal Gibbs reference
+
+**Failure mode.**  Define a preferred normal thermal state and absolute energy
+reference from the principal logarithm of the split-circuit unitary alone.
+
+**Evidence.**  A principal Floquet Hamiltonian has spectrum in a bounded
+quasienergy interval of width `2*pi*hbar/|delta|`.  For every positive beta,
+its Gibbs exponential is consequently bounded below by a positive multiple of
+the identity.  The Schrodinger Hilbert space `L2(R^(8M))` is
+infinite-dimensional, so the exponential has infinite trace and cannot be
+normalized to a density.  Other logarithm branches may add different integer
+multiples of `2*pi*hbar/delta` on spectral sectors and are not selected by the
+unitary itself.
+
+**Boundary.**  This rejects only the bounded principal-log Gibbs prescription
+and selection by bare Floquet data.  It does not exclude an independently
+selected invariant density, a separately proved unbounded logarithm with
+locality and trace-class heat kernel, a finite-dimensional onsite truncation
+with a separately audited CCR limit, or an external preparation principle.
+
+**Consequence.**  No ground rule, temperature, absolute physical reference,
+physical empty-space state, or below-empty-space sign follows from the current
+Floquet unitary.
+
+**Evidence files.**
+`strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-causal-split-sideways-characteristic"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-CAUSAL-SPLIT-SIDEWAYS-CHARACTERISTIC -- a radius-one Cauchy cone is not a full two-arm characteristic map
+
+**Failure mode.**  Infer a full two-null-side discrete Goursat reconstruction
+directly from the exact radius-one dependency cone of the CL8 split circuit.
+
+**Evidence.**  For each species, the derivative from the neighbouring input
+pair `(q_(j+1),p_(j+1))` to the output pair `(q'_j,p'_j)` is proportional to
+the outer product
+
+```text
+[ delta/(2mu) ] [ 1  delta/(2mu) ].
+[       1      ]
+```
+
+It has rank one rather than two.  The complete eight-species neighbour block
+therefore has rank at most eight, not the sixteen needed to solve locally for
+a full neighbouring canonical pair.  The circuit is forward reversible as a
+global Cauchy update, but the current local gate is not sideways-invertible on
+the full phase space.
+
+**Boundary.**  This does not reject exact finite propagation, a multi-cell
+boundary theorem with separately proved constraints and symplectic radical, a
+chiral or dual-unitary enlargement, or another discrete Goursat rule.  It
+rejects only the direct inference from this gate's Cauchy cone to a full local
+two-arm characteristic reconstruction.
+
+**Consequence.**  Keep
+`PA-CP1-CL8-COMMON-FINITE-REGULATOR-CHARACTERISTIC-MODEL` split and open.  The
+next candidate must declare incoming left/right channels or another full-rank
+sideways transfer, then prove its boundary symplectic and quantum maps.
+
+**Evidence files.**
+`strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split_independent.py`.
 
 <a id="ng-2026-08-04-pre-a-cp1-cl8-oa2-sampling-exact-weyl"></a>
 ### NG-2026-08-04-PRE-A-CP1-CL8-OA2-SAMPLING-EXACT-WEYL -- unrestricted point sampling is not an exact Weyl map

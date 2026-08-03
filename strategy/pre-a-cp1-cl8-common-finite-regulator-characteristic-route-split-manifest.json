@@ -1,0 +1,214 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-COMMON-FINITE-REGULATOR-CHARACTERISTIC-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-ST8-Q3LOCK-v0",
+    "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
+    "PA-CP1-FD-C1-STRICT-CONE-NOGO-v0",
+    "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+    "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-EXACT-CAUSAL-CAUCHY-FLOQUET-BH-STATE-TRANSPORT-AND-ROUTE-NOGOS",
+  "candidate_family": "PRE-A-CL8-COMMON-FINITE-REGULATOR-CHARACTERISTIC-ROUTE-SPLIT",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 exact finite-regulator classical and quantum circuit route split; not a TECT claim, tier change, two-null Goursat reconstruction, physical state or energy selection, CP1 completion, or Pre-A closure",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "comparison_context": [
+    "A2-FULL-PRODUCTION-WELLPOSED",
+    "T-054 Pre-A candidate tournament"
+  ],
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "For every fixed even periodic CL8 regulator, the exact Strang split of the inherited kinetic and interacting position potential defines a reversible radius-one classical symplectic circuit and a finite-depth unitary circuit on the same canonical variables and hbar. Its B(H) Heisenberg automorphism has an exact discrete causal cone and transports every declared density state exactly. In the quadratic tangent sector the circuit is metaplectic and preserves the finite Weyl algebra with an exact Floquet symbol. Four broader routes fail: the quartic kick does not normalize the nonlinear Weyl C-star algebra, the split circuit does not conserve the inherited autonomous CL8 energy or automatically preserve its ground or Gibbs states, the bounded principal Floquet logarithm has no trace-class Gibbs exponential on the infinite-dimensional Hilbert space, and the radius-one update has a rank-deficient sideways neighbour block and therefore does not itself give full two-null characteristic reconstruction.",
+  "verdict": "ADVANCE AN EXACT CAUSAL CAUCHY FLOQUET CIRCUIT AND B(H) STATE TRANSPORT; RETAIN THE COMMON CHARACTERISTIC MODEL, FULL NONLINEAR WEYL, STATIONARY PHYSICAL STATE, AND ENERGY-REFERENCE GATES",
+  "authorities": {
+    "finite_nonlinear_model": "strategy/pre-a-cp1-st8-q3lock-manifest.json",
+    "finite_Hamiltonian_and_symplectic_ledger": "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest.json",
+    "continuous_time_strict_cone_boundary": "strategy/pre-a-cp1-fdan-strict-cone-nogo-manifest.json",
+    "registered_ground_and_Gibbs_states": "strategy/pre-a-cp1-cl8-finite-quantum-state-boundary-fork-manifest.json",
+    "quantum_boundary_route_contract": "strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-manifest.json"
+  },
+  "finite_regulator": {
+    "domain": "Lambda_M=Z/(MZ) with even M>=4, L>0, a=L/M, and eight real Q3 species at every node",
+    "weight": "w=a/8",
+    "field_variables": "q_(j,e)=psi_(j,e), Pi_(j,e)=chi*dot psi_(j,e), and canonical p_(j,e)=w*Pi_(j,e)",
+    "canonical_mass": "mu=chi*w",
+    "symplectic_form": "Omega_a=sum_(j,e) dp_(j,e) wedge dq_(j,e)=w*sum_(j,e) dPi_(j,e) wedge dq_(j,e)",
+    "kinetic": "T_a(p)=sum_(j,e) p_(j,e)^2/(2*mu)",
+    "position_potential": "U_a(q)=w*sum_j[c*|D_a^+q_j|^2/2+W_Q3(q_j)]",
+    "autonomous_comparator": "H_a=T_a+U_a, exactly the inherited fixed-regulator CL8 Hamiltonian in canonical p coordinates",
+    "parameter_domain": "chi>0, c>0, g>0, lambda>=0, r real, hbar>0, and nonzero step delta"
+  },
+  "classical_circuit": {
+    "drift": "D_h(q,p)=(q+h*p/mu,p) with h=delta/2",
+    "kick": "K_delta(q,p)=(q,p-delta*grad U_a(q))",
+    "one_period": "F_delta=D_(delta/2) composed with K_delta composed with D_(delta/2)",
+    "drift_Jacobian": "[[I,(h/mu)I],[0,I]]",
+    "kick_Jacobian": "[[I,0],[-delta*Hess U_a(q),I]]",
+    "symplectic_result": "both shears and their composition preserve the full canonical Omega_a exactly because Hess U_a is symmetric",
+    "reversibility": "F_(-delta)=F_delta^(-1), and momentum reversal R(q,p)=(q,-p) obeys R F_delta R=F_delta^(-1)",
+    "locality": "grad U_a at node j uses only j-1,j,j+1; therefore one period has graph radius one and every derivative of F_delta^n from an input outside the periodic n-neighbourhood is exactly zero",
+    "scope": "an exact discrete-time Cauchy circuit for a periodically driven split model, not the exact continuous-time flow of H_a and not yet a two-null Goursat map"
+  },
+  "quantum_circuit": {
+    "Hilbert_space": "H_a=L2(R^(8M))=tensor_j L2(R^8), which is infinite-dimensional",
+    "operators": "Q and P are the canonical Schrodinger operators with [Q_(j,e),P_(k,f)]=i*hbar*delta_jk*delta_ef",
+    "drift_unitary": "Dhat_h=exp(-i*h*T_a(P)/hbar)",
+    "kick_unitary": "Khat_delta=exp(-i*delta*U_a(Q)/hbar), a modulus-one multiplication operator",
+    "one_period_unitary": "Uhat_delta=Dhat_(delta/2)*Khat_delta*Dhat_(delta/2)",
+    "algebra": "B(H_a), kept distinct from the universal finite Weyl C-star algebra and its concrete Schrodinger image",
+    "automorphism": "alpha_delta(A)=Uhat_delta^* A Uhat_delta is a normal unital star automorphism of B(H_a)",
+    "generator_action": "on the common Schwartz core, alpha_delta sends the Q,P generators by the same D-K-D formulas as F_delta",
+    "exact_cone": "Dhat is onsite and Khat factorizes into commuting onsite and nearest-neighbour position-phase gates; alpha_delta^n maps a bounded local algebra on X into the bounded local algebra on the exact periodic n-neighbourhood of X",
+    "normality_boundary": "the exact full interacting statement is on B(H_a); Weyl generator closure is asserted only for the quadratic sector"
+  },
+  "quadratic_tangent_symbol": {
+    "ordered_collective_mass": "m_ordered^2=-2r/chi=9 in the inherited PA-H1 calibration",
+    "centered_lattice_frequency": "omega_a(k)^2=9+(4c/(chi*a^2))*sin^2(k*a/2)",
+    "x": "x_k=delta^2*omega_a(k)^2",
+    "transfer": "S_delta(k)=[[1-x_k/2,(delta/mu)*(1-x_k/4)],[-delta*mu*omega_a(k)^2,1-x_k/2]]",
+    "exact_results": "det S_delta(k)=1; the elliptic stability window is 0<x_k<4; cos theta_k=1-x_k/2 and omega_F(k)=theta_k/delta=(2/delta)*asin(delta*omega_a(k)/2)",
+    "Weyl_status": "with W(z)=exp(i*sigma(z,Z)/hbar) and alpha_delta(Z)=S_delta(k) Z, the full quadratic finite-regulator S_delta(k) is linear symplectic, has a metaplectic implementer, and alpha_delta(W(z))=W(S_delta(k)^(-1) z)",
+    "causal_speed_boundary": "a/delta is a regulator input; the exact Floquet frequency is not the continuous CL8 frequency and no emergent light speed is derived"
+  },
+  "state_transport": {
+    "input_states": "any registered trace-one positive density rho on H_a, including the inherited interacting ground projector or finite-beta Gibbs density of H_a",
+    "Schrodinger_transport": "rho_n=Uhat_delta^n*rho*Uhat_delta^(-n)",
+    "Heisenberg_identity": "Tr(rho_n*A)=Tr(rho*alpha_delta^n(A)) for every A in B(H_a)",
+    "result": "positivity, trace one, normality, and regularity after restriction to Weyl generators are exact at every finite n",
+    "selection_boundary": "transport is not stationarity, a ground rule, a beta derivation, or physical-state selection; the full finite Hilbert space is transported, so there is no hidden symplectic complement in this Cauchy-to-Cauchy statement"
+  },
+  "nonlinear_Weyl_nonnormalizer": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-NONLINEAR-FLOQUET-WEYL-NORMALIZER",
+    "attempt": "promote the exact nonlinear B(H_a) circuit to an automorphism of the concrete unital Weyl C-star algebra A_W=C*(1,W(z))",
+    "witness": "for a nonzero one-coordinate configuration translation T_y, Khat_delta*T_y*Khat_delta^*=M_f*T_y with f(x)=exp[-i*delta*(U(x)-U(x-y))/hbar]",
+    "quartic_effect": "g>0 makes the phase difference a polynomial with a nonzero cubic leading term; exp(i*P_3(x)) is not uniformly continuous because increments pi/P_3'(x) tend to zero while the phase increment tends to pi",
+    "algebra_boundary": "a contractive modulation-average proof gives A_W intersect the multiplication operators = AP(R^(8M)): nonzero translation coefficients average to zero and fixed multiplication operators are norm limits of the surviving trigonometric multipliers; every AP function is uniformly continuous, so M_f*T_y is not in A_W",
+    "conclusion": "the quartic kick and therefore the full nonlinear split circuit do not normalize A_W; the exact automorphism survives on B(H_a) or a separately justified enlarged algebra",
+    "survivors": "the quadratic metaplectic sector, resolvent or crossed-product enlargements, and other explicitly defined observable algebras"
+  },
+  "autonomous_energy_and_state_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-CAUSAL-SPLIT-ORIGINAL-H-STATE",
+    "attempt": "reuse exact finite-depth causality while claiming exact conservation of the inherited autonomous H_a and automatic stationarity of its ground and Gibbs states",
+    "harmonic_witness": "for H_0=p^2/(2mu)+mu*omega^2*q^2/2 and initial (q,0), H_0(F_delta(q,0))/H_0(q,0)=1+(delta*omega)^4/4>1",
+    "actual_ordered_CL8_witness": "around the ordered collective equilibrium v0=sqrt(-r/g), the exact analytic energy defect has positive quadratic coefficient mu*omega^6*delta^4/8 with omega^2=-2r/chi; therefore the inherited nonlinear H_a is not identically conserved by F_delta",
+    "quantum_boundary": "even the quadratic metaplectic control does not commute with its H_0, so its harmonic ground and finite-beta Gibbs density are squeezed rather than stationary",
+    "conclusion": "the registered interacting densities may be transported, but their stationarity under Uhat_delta and a common conserved physical-energy ledger do not follow",
+    "survivors": "a separately proved invariant Floquet state, a different energy-preserving exact-causal model, a time-dependent work ledger, or an enlarged clock system"
+  },
+  "principal_Floquet_Gibbs_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-PRINCIPAL-FLOQUET-GIBBS-REFERENCE",
+    "attempt": "define a preferred thermal state and absolute energy reference from the bounded principal logarithm of Uhat_delta alone",
+    "bounded_log": "the principal Floquet Hamiltonian has spectrum in a bounded interval of width 2*pi*hbar/|delta|",
+    "trace_obstruction": "on infinite-dimensional H_a, exp(-beta*H_F,principal) is bounded below by a positive multiple of the identity and has infinite trace for every beta>0",
+    "branch_boundary": "other logarithms are nonunique and may shift different spectral sectors by integer multiples of 2*pi*hbar/delta; Floquet data alone therefore supplies no unique ground or additive physical reference",
+    "conclusion": "the principal-log Gibbs route fails; no physical empty-space state or below-empty-space sign is obtained",
+    "survivors": "an independently selected invariant density, an unbounded logarithm with proved locality and trace class, a finite-dimensional onsite truncation with a separate CCR boundary, or an external physical reference principle"
+  },
+  "sideways_characteristic_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-CAUSAL-SPLIT-SIDEWAYS-CHARACTERISTIC",
+    "attempt": "infer a full two-null-side characteristic reconstruction directly from the radius-one Cauchy circuit",
+    "neighbour_block": "for each species, the derivative from the neighbour pair (q_(j+1),p_(j+1)) to the output pair (q'_j,p'_j) is an outer product proportional to [(delta/(2mu)),1]^T*[1,delta/(2mu)] and has rank one rather than two",
+    "eight_species_rank": "the complete neighbour block has rank at most eight instead of the sixteen needed for a local full canonical sideways inverse",
+    "conclusion": "the current split circuit is not locally sideways-invertible on the full canonical phase space; exact finite propagation is not a two-sheet Goursat theorem",
+    "survivors": "an enlarged chiral or dual-unitary circuit, a multi-cell constrained boundary quotient with a proved symplectic radical, or a separately constructed discrete Goursat scheme"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-COMMON-FINITE-REGULATOR-CHARACTERISTIC-MODEL",
+    "status": "SPLIT; PARENT GATE REMAINS OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-COMMON-FINITE-REGULATOR-EXACT-SYMPLECTIC-CAUCHY-CIRCUIT",
+      "PA-CP1-CL8-COMMON-FINITE-REGULATOR-EXACT-BH-QUANTUM-AUTOMORPHISM",
+      "PA-CP1-CL8-COMMON-FINITE-REGULATOR-EXACT-DENSITY-STATE-TRANSPORT",
+      "PA-CP1-CL8-QUADRATIC-FLOQUET-METAPLECTIC-WEYL-CONTROL"
+    ],
+    "refuted_subgates": [
+      "PA-CP1-CL8-NONLINEAR-FLOQUET-WEYL-CSTAR-NORMALIZER",
+      "PA-CP1-CL8-CAUSAL-SPLIT-INHERITED-H-AND-STATE-STATIONARITY",
+      "PA-CP1-CL8-PRINCIPAL-FLOQUET-LOG-GIBBS-REFERENCE",
+      "PA-CP1-CL8-RADIUS-ONE-IMPLIES-FULL-SIDEWAYS-CHARACTERISTIC"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-SIDEWAYS-INVERTIBLE-TWO-ARM-CHARACTERISTIC-CIRCUIT",
+      "PA-CP1-CL8-FULL-FINITE-A-BOUNDARY-ALGEBRA-AND-EXACT-CCR-MAP",
+      "PA-CP1-CL8-INTERACTING-BOUNDARY-BULK-DYNAMICS-INTERTWINER",
+      "PA-CP1-CL8-REGULATOR-COMPATIBLE-BOUNDARY-STATE-FAMILY",
+      "PA-CP1-CL8-CONTINUUM-STATE-AND-HADAMARD-LIMIT",
+      "PA-CP1-COMMON-PARENT-PHYSICAL-STATE-AND-REFERENCE"
+    ],
+    "next_gate": "PA-CP1-CL8-SIDEWAYS-INVERTIBLE-TWO-ARM-CHARACTERISTIC-CIRCUIT"
+  },
+  "required_next_contract": {
+    "architecture": "add explicit left-moving and right-moving canonical channels or another locally sideways-invertible gate without silently identifying a Cauchy cone with a null boundary",
+    "boundary_phase_space": "define both incoming staircase arms, the corner, dimensions, symplectic form, constraints, radical and quotient",
+    "map": "prove a full-rank local sideways transfer and an exact global symplectic map from the two-arm cut to every admissible bulk cut",
+    "quantum": "give the corresponding cut Hilbert spaces and unitary or Weyl isomorphism, with B(H) and Weyl algebra types kept distinct",
+    "state": "transport an actual density through the same model and separately prove stationarity only if it holds",
+    "energy": "provide a conserved positive generator or an explicit time-dependent work ledger and one additive reference convention",
+    "regulators": "provide inter-regulator embeddings and compatible states before any continuum or Hadamard statement"
+  },
+  "Pre_A_chain_role": {
+    "C0": "not established because discrete time, the circuit cone, delta, hbar and the Lorentzian interpretation are inserted",
+    "N1": "an exact finite-regulator B(H) Cauchy algebra and state-transport ingredient is constructed, but no full two-arm boundary algebra, physical state selection or regulator family is present",
+    "N2": "exact interacting Cauchy dynamics exists on B(H_a) and exact quadratic Weyl dynamics exists, but the full characteristic boundary-bulk intertwiner remains absent",
+    "N3_through_N5": "not established; no control history, limiting transition, emergent geometry, excitation theorem or cooling law follows",
+    "cycle_and_horizon": "the exact circuit cone is not an event horizon and implies no cyclic cosmology",
+    "chain_verdict": "the package advances conditional cutoff N1 and N2 ingredients only; it closes neither C0 nor N1-N5 and does not complete CP1 or Pre-A"
+  },
+  "scope": {
+    "fixed_regulator_exact_symplectic_Cauchy_circuit": true,
+    "fixed_regulator_exact_reversibility": true,
+    "fixed_regulator_exact_radius_one_cone": true,
+    "full_interacting_BH_quantum_automorphism": true,
+    "exact_density_state_transport": true,
+    "quadratic_metaplectic_Weyl_covariance": true,
+    "exact_Floquet_symbol_and_CFL": true,
+    "full_nonlinear_Weyl_Cstar_invariance": false,
+    "inherited_autonomous_H_conserved": false,
+    "inherited_ground_or_Gibbs_stationary": false,
+    "principal_Floquet_log_trace_class_Gibbs": false,
+    "two_null_side_characteristic_reconstruction": false,
+    "locally_sideways_invertible": false,
+    "common_characteristic_model_gate_closed": false,
+    "preferred_physical_state_selected": false,
+    "physical_energy_reference": false,
+    "physical_vacuum": false,
+    "below_empty_space": false,
+    "regulator_compatible_state_family": false,
+    "continuum_quantum_state": false,
+    "Hadamard_state": false,
+    "hbar_origin_derived": false,
+    "Lorentzian_or_null_structure_derived": false,
+    "C0_closed": false,
+    "N1_closed": false,
+    "N2_closed": false,
+    "N3_closed": false,
+    "N4_closed": false,
+    "N5_closed": false,
+    "full_3_plus_1_dependence": false,
+    "gravity": false,
+    "cooling": false,
+    "cycle": false,
+    "C6_claim_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "artifacts": {
+    "certificate": "strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-certificate-260804.md",
+    "primary_script": "codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-primary-pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-independent-pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-integrated-pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split/result.json"
+  },
+  "negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-NONLINEAR-FLOQUET-WEYL-NORMALIZER",
+    "NG-2026-08-04-PRE-A-CP1-CL8-CAUSAL-SPLIT-ORIGINAL-H-STATE",
+    "NG-2026-08-04-PRE-A-CP1-CL8-PRINCIPAL-FLOQUET-GIBBS-REFERENCE",
+    "NG-2026-08-04-PRE-A-CP1-CL8-CAUSAL-SPLIT-SIDEWAYS-CHARACTERISTIC"
+  ],
+  "prior_art_boundary": "Symplectic splitting, variational and Floquet integrators, finite-depth local quantum circuits, metaplectic covariance, almost-periodic Weyl algebras, and the distinction between causal circuits and dual-unitary or sideways-invertible circuits are established mathematics. No world-first or new general theorem is claimed. The repository-specific result is the exact CL8 one-eighth canonical normalization, Q3 potential, B(H)/Weyl algebra firewall, ordered-mode Floquet symbol, actual registered-density transport, and four-way gate split under one finite-regulator ledger.",
+  "no_overclaim": "This package constructs a discrete-time exact-causal Cauchy circuit on each fixed CL8 regulator and an exact B(H) state-transport automorphism. It does not construct a two-null boundary or discrete Goursat reconstruction, preserve the nonlinear Weyl C-star algebra, conserve the inherited autonomous CL8 Hamiltonian, prove the inherited interacting ground or Gibbs state stationary, derive a unique Floquet energy or physical reference, identify physical empty space or a below-empty-space sign, produce inter-regulator compatible states, a continuum or Hadamard state, derive hbar, Lorentzian nullness, cooling, a phase transition, full 3+1 dynamics, gravity, an event horizon or a cycle, close C0 or N1-N5, advance C6, complete CP1, or complete Pre-A."
+}
