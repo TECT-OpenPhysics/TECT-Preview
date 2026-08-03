@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [T-054 screened-vector candidate derivation and early causal boundary] - 2026-08-03
+
+Recorded the read-only derivation of the structurally distinct PA-M5-NL3-SV screened-vector/nonlocal candidate as EXP-000687, without promoting it to a TECT action or theorem. Exact auxiliary elimination gives the finite-shell gate g>c sigma and the finite-torus zero-reference gate kappa_L versus 3u_minus^2/(16v). A separately assumed inertial dynamics exposes an early causal obstruction: common limiting speed requires an unprotected coefficient relation, while the bare shell has radial-linear but tangential-quadratic frequency dispersion. Next work is a compact candidate manifest and independent exact certificate; expensive T-053 tests remain survivor-only.
+
 ## [R-158 charge-ensemble first-order shell transition and physical-provenance boundary] - 2026-08-03
 
 Registered the conditional exact R-158 extension for the hash-pinned P1/A2 functional after defining Q=||Psi||_2^2/2. Exact torus spectral and polynomial completion proves a constrained ground-shell minimizer at Q=11008/27 and a grand-canonical first-order transition at mu_t=lambda0-1849/86400, before the zero-field spinodal. Primary 35/35 and independent 24/24 certificates pass. This advances PA-M1-Q only as an imposed-ensemble mechanism: the state remains above the original neutral zero reference, its registered local observables are uniform, and no conserved physical charge, reservoir, physical vacuum, BCC, unique morphology, infinite-volume, A7, T-050, or Sector-A closure follows.
