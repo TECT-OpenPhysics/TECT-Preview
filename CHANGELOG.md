@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Finite Gaussian C0-A reconstructed and embedded into PA-H1 at exact three-mode scope] - 2026-08-03
+
+Registered EXP-000703. The exact fixture establishes a strongly continuous reversible self-adjoint Markov Mehler semigroup, its second-quantized Hamiltonian and quasi-free CCR vacuum, and a direct characteristic-trace embedding whose pullback is the existing PA-H1 slice map. It also certifies the non-uniform lower bound, finite-occupation CCR failure, finite-rank nonlocality, nonunique full-algebra extension, and raw-versus-normal-ordered energy-offset obstruction. The package passes 119 primary, 26 independent, and 121 integrator assertions, 266 combined. Scope remains a finite-mode fixed-background calibration; it is not a physical-vacuum selection, Hadamard or locality theorem, common PA-H1/PA-M2 parent, phase transition, or Pre-A closure.
+
 ## [Pre-A C0 fork: positive-transfer calibration and finite-transitive selection no-go] - 2026-08-03
 
 Register EXP-000701 and EXP-000702. PA-C0A-RPTM-FS-v0 proves the exact finite supplied-transfer reconstruction H_a=-(1/a)log P only after entrywise Markov positivity, detailed balance, strict operator positivity, time order, reflection, and spacing are inputs. Negative-, zero-, and operator-positive/non-Markov controls separate the link-reflection and finite-log gates; 24/24 primary, 20/20 non-importing independent, and 100/100 combined checks pass. PA-C0B-EQUIVARIANT-CAUSAL-SELECTION-NOGO-v0 proves orbitwise incomparability for finite invariant strict orders and therefore empty deterministic selection on a finite transitive state. A transitive non-2-transitive C4 fixture, all 4096 four-event relations, a two-orbit control, marked order, and invariant random sector pass 52/52 primary, 19/19 independent, and 131/131 combined checks. The prior-art matrix now records Osterwalder-Schrader reconstruction. C0-A is only a temporal calibration, C0-B remains open through richer relational or sector dynamics, neither route is claimed as novelty or physically selected, and Pre-A remains open.

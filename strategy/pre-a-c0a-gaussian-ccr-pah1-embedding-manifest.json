@@ -1,0 +1,153 @@
+{
+  "schema": "tect/pre-a-c0a-gaussian-ccr-pah1-embedding-manifest/0.1",
+  "candidate_id": "PA-C0A-GAUSSIAN-CCR-PAH1-EMBEDDING-v0",
+  "candidate_family": "C0A-GAUSSIAN-OU-CCR-PAH1-EMBEDDING",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 C0-A/PA-H1 bridge certificate; not a TECT claim, tier change, physical vacuum, or Pre-A completion",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "After a positive finite-mode Klein-Gordon frequency matrix, Euclidean time/reflection, Gaussian covariance, and hbar=1 are inserted, the Mehler semigroup reconstructs the generally unbounded generator dGamma(Omega), its unique gapped quasi-free vacuum, and real-time symplectic flow. Explicit characteristic traces give P_tau T=S_tau and preserve the PA-H1 boundary/slice symplectic form and raw KG energy on the finite image. The general reconstruction is prior art; the TECT-specific result is the audited PA-H1 interface and normalization/falsifier ledger.",
+  "fixture": {
+    "background": "fixed 1+1 Minkowski cylinder",
+    "circumference": "pi/2",
+    "tau": "pi/4",
+    "mass": "3",
+    "real_modes": [
+      "sqrt(2/pi)",
+      "2*cos(4x)/sqrt(pi)",
+      "2*sin(4x)/sqrt(pi)"
+    ],
+    "omega": [
+      "3",
+      "5",
+      "5"
+    ],
+    "euclidean_spacing": "log(2)",
+    "gaussian_covariance": [
+      "1/6",
+      "1/10",
+      "1/10"
+    ],
+    "one_step_transfer": [
+      "1/8",
+      "1/32",
+      "1/32"
+    ]
+  },
+  "mathematical_status": {
+    "finite_spatial_mode_mehler_semigroup": "CANDIDATE-SCOPE EXACT LEMMA",
+    "strong_continuity_self_adjointness_markov_and_time_reflection_positivity": "CANDIDATE-SCOPE EXACT LEMMA",
+    "unbounded_second_quantized_generator": "CANDIDATE-SCOPE EXACT LEMMA",
+    "transfer_injective": true,
+    "transfer_uniformly_bounded_below": false,
+    "zero_in_transfer_spectrum_not_eigenvalue": true,
+    "unique_vacuum_and_gap": "CANDIDATE-SCOPE EXACT LEMMA conditional on Omega>0",
+    "quasi_free_ccr_state": "CANDIDATE-SCOPE EXACT LEMMA conditional on the inserted covariance, hbar normalization, and ground-state criterion",
+    "finite_mode_real_time_unitary": "CANDIDATE-SCOPE EXACT LEMMA",
+    "pah1_finite_image_embedding": "CANDIDATE-SCOPE EXACT LEMMA with P_tau T=S_tau",
+    "pah1_finite_image_state": "CANDIDATE-SCOPE EXACT LEMMA",
+    "pah1_boundary_slice_symplectic_and_energy_match": "CANDIDATE-SCOPE EXACT LEMMA",
+    "smooth_spectral_galerkin_covariance_tail": "CANDIDATE-SCOPE EXACT cross-algebra characteristic-functional comparison for s>3/2 on the fixed cylinder; not a zero-covariance extension to the full Weyl algebra or a weak-star state theorem",
+    "full_pah1_state": "OPEN and nonunique from finite-image data alone",
+    "hadamard_limit": "OPEN",
+    "interacting_state": "OPEN",
+    "absolute_physical_vacuum_energy": "OPEN",
+    "spatial_locality_and_causal_cone": "OPEN",
+    "pa_m2_composition": "OPEN"
+  },
+  "normalization_ledger": {
+    "normal_ordered_generator": "H=dGamma(Omega), vacuum eigenvalue 0",
+    "raw_oscillator_hamiltonian": "H_osc=H+(1/2)Tr(Omega)",
+    "fixture_zero_point_energy": "13/2",
+    "empty_space_or_no_condensate_comparison": "NOT PERFORMED; requires common regulator, volume, boundary, counterterm, and reference state",
+    "continuum_zero_point_sum": "DIVERGENT before an independently fixed renormalization prescription"
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "Euclidean time order, reflection, and spacing",
+      "fixed 1+1 Lorentzian cylinder and null coordinates",
+      "local Klein-Gordon operator, mass, periodic boundary condition, and spectral mode family",
+      "positive-frequency matrix Omega",
+      "Gaussian covariance C=(2Omega)^(-1)",
+      "hbar=1 and Weyl convention",
+      "ground-state selection criterion"
+    ],
+    "derived_outputs": [
+      "strongly continuous reversible Mehler semigroup",
+      "full time-reflection positivity",
+      "unbounded positive generator and exact occupation spectrum",
+      "unique finite-mode vacuum and gap",
+      "quasi-free CCR state and real-time symplectic evolution",
+      "exact finite-image PA-H1 embedding",
+      "boundary/slice symplectic and raw energy equality",
+      "smooth spectral covariance tail bound"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "negative_controls": {
+    "negative_ar1": "rho=-1/2 has positive transition noise but first-chaos reflection form -1/4",
+    "zero_transfer": "rho=0 is link-positive but has no finite logarithm on killed chaoses",
+    "no_uniform_lower_bound": "2^(-3n) tends to zero",
+    "zero_mode": "C=(2omega)^(-1) diverges at omega=0",
+    "negative_frequency": "exp(-t omega) is expansive for omega<0",
+    "finite_fock": "four-level commutator diag(1,1,1,-3) is not I",
+    "same_marginal_distinct_drift": "C=1/2 supports gaps one and two",
+    "finite_rank_nonlocality": "projector kernel at distinct points 0 and pi/8 equals 2/pi",
+    "nonunique_full_extension": "complement frequencies two and seven agree on the finite image and differ off it",
+    "generic_noninvariant_galerkin": "squared intertwining residual 9/4"
+  },
+  "prior_art_boundary": "The Mehler, OU/Fock, CCR, reflection-positive reconstruction, and general characteristic-boundary state mathematics are established prior art. No new general theorem or world-first claim is made. The repository-specific contribution is the exact PA-H1 convention-level embedding, energy/covariance normalization ledger, and executable falsifier set.",
+  "open_gates": [
+    "PA-C0A-EUCLIDEAN-TIME-AND-DRIFT-SELECTION",
+    "PA-C0A-CCR-HBAR-NORMALIZATION",
+    "PA-H-ZERO-MODE-AND-IR",
+    "PA-H-UV-HADAMARD-AND-FULL-ALGEBRA",
+    "PA-H-LOCALITY-AND-PROTECTED-CAUSAL-CONE",
+    "PA-H-INTERACTING-STATE",
+    "PA-H-COMMON-REFERENCE-VACUUM-ENERGY",
+    "PA-H-GRAVITY-AND-HORIZON-MEANING",
+    "PA-H-TO-PA-M2-COMPOSITION",
+    "PA-H-DERIVED-COOLING-HISTORY"
+  ],
+  "scope": {
+    "strongly_continuous_gaussian_semigroup": true,
+    "full_time_reflection_positivity": true,
+    "unbounded_self_adjoint_generator": true,
+    "finite_spatial_mode_infinite_occupation_ccr": true,
+    "selected_free_benchmark_vacuum_after_omega_is_inserted": true,
+    "exact_pah1_finite_image_embedding": true,
+    "exact_boundary_slice_symplectic_and_energy_match": true,
+    "controlled_smooth_galerkin_covariance_tail": true,
+    "finite_fock_truncation_used": false,
+    "transfer_uniformly_bounded_below": false,
+    "full_continuum_state_limit": false,
+    "full_pah1_state_selected": false,
+    "hadamard_property_certified": false,
+    "spatial_locality_certified": false,
+    "causal_cone_derived": false,
+    "absolute_or_physical_vacuum_energy_derived": false,
+    "empty_space_or_no_condensate_energy_comparison": false,
+    "hbar_origin_derived": false,
+    "kg_operator_or_dispersion_derived": false,
+    "time_order_scale_or_arrow_derived": false,
+    "physical_c0_branch_selected": false,
+    "gravity_derived": false,
+    "event_horizon_identified": false,
+    "pa_m2_composition": false,
+    "cooling_history_derived": false,
+    "pre_a_complete": false
+  },
+  "artifacts": {
+    "certificate_note": "strategy/pre-a-c0a-gaussian-ccr-pah1-embedding-certificate-260803.md",
+    "primary_script": "codes/foundations/pre_a_c0a_gaussian_ccr_pah1_embedding.py",
+    "independent_script": "codes/foundations/pre_a_c0a_gaussian_ccr_pah1_embedding_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_c0a_gaussian_ccr_pah1_embedding_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json"
+  },
+  "no_overclaim": "This package proves only a standard free Gaussian/CCR reconstruction and its exact finite-image compatibility with the inserted PA-H1 Klein-Gordon benchmark. It does not derive time, hbar, the KG spectrum, a full or Hadamard state, locality, a protected causal cone, absolute or below-reference vacuum energy, an interacting state, gravity, an event horizon, a cooling law, a PA-M2 composition, or Pre-A."
+}

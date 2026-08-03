@@ -6,7 +6,7 @@
 
 Generated: 2026-08-03
 
-**3270 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
+**3278 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -558,7 +558,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/C5-NEWTON-G/LINEAGE.md` | C5-NEWTON-G | — | — | — | ACTIVE | `bfa4c008b151` |
 | `claims/C5-NEWTON-G/claim.md` | C5-NEWTON-G | — | — | — | ACTIVE | `9608de91436e` |
 | `claims/C5-NEWTON-G/status.json` | C5-NEWTON-G | — | — | — | ACTIVE | `2d4f704d215b` |
-| `claims/C6-SPACETIME-SIGNATURE/LINEAGE.md` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `a406fc35f0db` |
+| `claims/C6-SPACETIME-SIGNATURE/LINEAGE.md` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `40067b14146a` |
 | `claims/C6-SPACETIME-SIGNATURE/claim.md` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `67c0eb3b3c67` |
 | `claims/C6-SPACETIME-SIGNATURE/status.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `a0d6d7cd9977` |
 | `claims/D1-SO10-BUNDLE/LINEAGE.md` | D1-SO10-BUNDLE | — | — | — | ACTIVE | `ba1a666c32e1` |
@@ -2631,14 +2631,17 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260614-dr2-t030-height-multiplicity/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `341c06cb220f` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260614-dr2-t030-sidon-decoupling/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `dc57e50185df` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0-dynamical-completion-underdetermination/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `3c7dc7c22f6a` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `80bdb86d66c2` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0a-reflection-positive-transfer/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `c41853a798db` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0b-equivariant-causal-selection-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `61ace49c0b2f` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-double-null-semilinear-reconstruction/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `82be800e5b42` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0-dynamical-completion-underdetermination/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `e2217a959985` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `264c04b453c5` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0a-reflection-positive-transfer/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `45155b8e7750` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0b-equivariant-causal-selection-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `714fac16a9fb` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-double-null-semilinear-reconstruction/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `b723b3500b2d` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0-dynamical-completion-underdetermination/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `50245598bd1d` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `c4fc68ce24c6` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0a-reflection-positive-transfer/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `15ea65f2efed` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0b-equivariant-causal-selection-nogo/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `c151745e0ff4` |
 | `claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-double-null-semilinear-reconstruction/result.json` | C6-SPACETIME-SIGNATURE | — | — | — | ACTIVE | `bf84e5817bd5` |
@@ -3034,6 +3037,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/foundations/pre_a_c0_dynamical_completion_underdetermination.py` | — | — | — | v0.1.0 | ACTIVE | `bf49411f4cde` |
 | `codes/foundations/pre_a_c0_dynamical_completion_underdetermination_independent.py` | — | — | — | v0.1.0 | ACTIVE | `56a3eb7cb951` |
 | `codes/foundations/pre_a_c0_dynamical_completion_underdetermination_verify.py` | — | — | — | v0.1.0 | ACTIVE | `a85376feb8b3` |
+| `codes/foundations/pre_a_c0a_gaussian_ccr_pah1_embedding.py` | — | — | — | v0.1.0 | ACTIVE | `28cd55f5c131` |
+| `codes/foundations/pre_a_c0a_gaussian_ccr_pah1_embedding_independent.py` | — | — | — | v0.1.0 | ACTIVE | `5dae9f2a4de1` |
+| `codes/foundations/pre_a_c0a_gaussian_ccr_pah1_embedding_verify.py` | — | — | — | v0.1.0 | ACTIVE | `4d5cb7403100` |
 | `codes/foundations/pre_a_c0a_reflection_positive_transfer.py` | — | — | — | v0.1.0 | ACTIVE | `fa6865b29118` |
 | `codes/foundations/pre_a_c0a_reflection_positive_transfer_independent.py` | — | — | — | v0.1.0 | ACTIVE | `2b15452298e1` |
 | `codes/foundations/pre_a_c0a_reflection_positive_transfer_verify.py` | — | — | — | v0.1.0 | ACTIVE | `4443b6a31758` |
@@ -3144,7 +3150,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `verification/README.md` | — | — | — | — | ACTIVE | `da6f8dc0c475` |
-| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `4918f7b60f10` |
+| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `09eb7c2172e6` |
 | `verification/requirements.txt` | — | — | — | — | ACTIVE | `101e9e176f7a` |
 | `verification/scripts/audit_r125_historical_live_surface_compatibility.py` | — | 2026-08-03 | 2026-08-03 | v1.0.0 | ACTIVE | `122a6ad92ab6` |
 | `verification/scripts/build_catalog.py` | — | — | — | — | ACTIVE | `c35c7327b5ed` |
@@ -3227,9 +3233,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `327466118728` |
 | `claims/GATES.md` | — | — | — | — | ACTIVE | `96860763e263` |
 | `claims/INDEX.md` | — | — | — | — | ACTIVE | `592e267190d7` |
-| `negative-results/registry.md` | — | — | — | — | ACTIVE | `28ff29f82002` |
+| `negative-results/registry.md` | — | — | — | — | ACTIVE | `0f6cb2b058a1` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
-| `strategy/INDEX.md` | — | — | — | — | ACTIVE | `7c9eda9e3a91` |
+| `strategy/INDEX.md` | — | — | — | — | ACTIVE | `17ee7ec32ca7` |
 | `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `cff4e6dca4b9` |
 
 ## Governance policies
@@ -3261,7 +3267,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `c715b48698f0` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `7f2740428029` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `2f7ef76f5fcf` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `36065eda3e5a` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `df77db62d67c` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -3270,7 +3276,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `b5e54659ddf5` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `5f90fdae1b16` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `46caafa99347` |
-| `TODO.md` | — | — | — | — | ACTIVE | `5da874463bf2` |
+| `TODO.md` | — | — | — | — | ACTIVE | `8c7700e79c68` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `a142ca8b90c2` |
 
 ## Other tracked files
@@ -3280,8 +3286,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `cac6485b0023` |
-| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `25c40c2ee87e` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `11dd61bc6c4a` |
+| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `81a4adbba16a` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -3325,6 +3331,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/numerical-programme-status-and-plan-260614.md` | — | — | — | — | ACTIVE | `4cfafb391dfb` |
 | `strategy/pre-a-c0-dynamical-completion-underdetermination-certificate-260803.md` | — | — | — | — | ACTIVE | `ef23caaf61ad` |
 | `strategy/pre-a-c0-dynamical-completion-underdetermination-manifest.json` | — | — | — | — | ACTIVE | `3ca63a725884` |
+| `strategy/pre-a-c0a-gaussian-ccr-pah1-embedding-certificate-260803.md` | — | — | — | — | ACTIVE | `e6e0d2930e4f` |
+| `strategy/pre-a-c0a-gaussian-ccr-pah1-embedding-manifest.json` | — | — | — | — | ACTIVE | `a0aa2792f44e` |
 | `strategy/pre-a-c0a-reflection-positive-transfer-certificate-260803.md` | — | — | — | — | ACTIVE | `84cc7a404104` |
 | `strategy/pre-a-c0a-reflection-positive-transfer-manifest.json` | — | — | — | — | ACTIVE | `421a52eec5f8` |
 | `strategy/pre-a-c0b-equivariant-causal-selection-nogo-certificate-260803.md` | — | — | — | — | ACTIVE | `e35349887e35` |
@@ -3337,11 +3345,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/pre-a-pa-m5-nl3-sv-candidate-certificate-260803-v0.1.pdf` | — | 2026-08-03 | 2026-08-03 | v0.1 | ACTIVE | `6eda4a419f0d` |
 | `strategy/pre-a-pa-m5-nl3-sv-candidate-certificate-260803-v0.1.tex.txt` | — | 2026-08-03 | 2026-08-03 | v0.1 | ACTIVE | `2aed9ecafff0` |
 | `strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json` | — | — | — | — | ACTIVE | `102b0d5f0053` |
-| `strategy/pre-a-prior-art-novelty-matrix-260803.md` | — | — | — | — | ACTIVE | `b255108f0157` |
+| `strategy/pre-a-prior-art-novelty-matrix-260803.md` | — | — | — | — | ACTIVE | `ff19065d2211` |
 | `strategy/sector-a-claim-taxonomy-and-subproof-plan-260722.md` | — | — | — | — | ACTIVE | `515c895f0a44` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `7784fbab38fd` |
 | `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `137c26ea5f80` |
-| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `9f88ea22c447` |
+| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `86895711c314` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `528697935e4a` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |
@@ -3350,9 +3358,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
 | `theory/sectors/A.md` | — | — | — | — | ACTIVE | `189f44ac8ad3` |
 | `theory/sectors/B.md` | — | — | — | — | ACTIVE | `0348e578f8e7` |
-| `theory/sectors/C.md` | — | — | — | — | ACTIVE | `1123e20a23ff` |
+| `theory/sectors/C.md` | — | — | — | — | ACTIVE | `1280f38faf10` |
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `a4f8eba2a79e` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `c22a362480ee` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `5e65f7f63d2e` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `a093f29278ec` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `f95b1a326573` |
 

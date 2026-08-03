@@ -32,6 +32,7 @@ Tier profile: T6x4 T5x1 T1x1
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-03-PRE-A-C0A-FINITE-HILBERT-BOUNDED-LOG-LIFT | finite spatial modes do not make the Gaussian quantum Hilber |  |
 | NG-2026-08-03-PRE-A-C0A-REVERSIBILITY-WITHOUT-POSITIVE-TRANSFER | reversibility and link positivity do not by themselves suppl |  |
 | NG-2026-08-03-PRE-A-C0B-FINITE-TRANSITIVE-DETERMINISTIC-ORDER-SELECTION | a finite transitive state cannot naturally select a nonempty |  |
 | NG-2026-08-03-PRE-A-C0-STATIC-FUNCTIONAL-DYNAMICAL-COMPLETION | static data do not identify a unique temporal completion |  |

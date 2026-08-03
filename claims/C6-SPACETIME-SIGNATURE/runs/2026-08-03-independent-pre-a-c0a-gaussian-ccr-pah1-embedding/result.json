@@ -1,0 +1,827 @@
+{
+  "assertions": {
+    "passed": 26,
+    "rows": [
+      {
+        "actual": [
+          "1/6",
+          "1/10",
+          "1/10"
+        ],
+        "expected": [
+          "1/6",
+          "1/10",
+          "1/10"
+        ],
+        "group": "gaussian_transfer",
+        "name": "independent stationary Mehler covariance",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "46655/279936",
+          "12093235/120932352",
+          "12093235/120932352"
+        ],
+        "expected": [
+          "46655/279936",
+          "12093235/120932352",
+          "12093235/120932352"
+        ],
+        "group": "gaussian_transfer",
+        "name": "independent Mehler semigroup covariance law",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/6",
+          "1/10",
+          "1/10"
+        ],
+        "expected": [
+          "1/6",
+          "1/10",
+          "1/10"
+        ],
+        "group": "gaussian_transfer",
+        "name": "independent inserted covariance",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/8",
+          "1/32",
+          "1/32"
+        ],
+        "expected": [
+          "1/8",
+          "1/32",
+          "1/32"
+        ],
+        "group": "gaussian_transfer",
+        "name": "independent one-step transfer",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "expected": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "group": "fock_spectrum",
+        "name": "independent unique zero occupation",
+        "status": "PASS"
+      },
+      {
+        "actual": 3,
+        "expected": 3,
+        "group": "fock_spectrum",
+        "name": "independent occupation gap",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/8",
+          "1/64",
+          "1/512",
+          "1/4096",
+          "1/32768",
+          "1/262144",
+          "1/2097152",
+          "1/16777216"
+        ],
+        "expected": "strictly decreasing with final below 1e-6",
+        "group": "unbounded_generator_boundary",
+        "name": "independent transfer eigenvalues descend toward zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "8192/6727",
+        "expected": "8192/6727",
+        "group": "fock_spectrum",
+        "name": "independent trace-class partition sum",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/8",
+        "expected": "3/8",
+        "group": "negative_controls",
+        "name": "independent negative AR1 noise remains positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4",
+        "expected": "-1/4",
+        "group": "negative_controls",
+        "name": "independent negative AR1 reflection form",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1/2",
+            "3/8",
+            1
+          ],
+          [
+            "1/4",
+            "15/32",
+            2
+          ]
+        ],
+        "expected": "same covariance with distinct transfers and gaps",
+        "group": "nonselection_controls",
+        "name": "independent same-marginal different-drift control",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1"
+          ]
+        ],
+        "expected": [
+          [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1"
+          ]
+        ],
+        "group": "quasi_free_state",
+        "name": "independent complex structure",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "expected": [
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "group": "quasi_free_state",
+        "name": "independent symplectic compatibility",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "3",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "5",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "5",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/3",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/5",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/5"
+          ]
+        ],
+        "expected": [
+          [
+            "3",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "5",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "5",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/3",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/5",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/5"
+          ]
+        ],
+        "group": "quasi_free_state",
+        "name": "independent positive covariance metric",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "10/3"
+        ],
+        "expected": [
+          0,
+          ">0"
+        ],
+        "group": "quasi_free_state",
+        "name": "independent quasi-free PSD block omega=3",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "26/5"
+        ],
+        "expected": [
+          0,
+          ">0"
+        ],
+        "group": "quasi_free_state",
+        "name": "independent quasi-free PSD block omega=5",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "26/5"
+        ],
+        "expected": [
+          0,
+          ">0"
+        ],
+        "group": "quasi_free_state",
+        "name": "independent quasi-free PSD block omega=5",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "expected": [
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "group": "pah1_embedding",
+        "name": "independent centred-trace boundary symplectic Gram",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "9/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "25/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "25/2",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2"
+          ]
+        ],
+        "expected": [
+          [
+            "9/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "25/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "25/2",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2"
+          ]
+        ],
+        "group": "pah1_embedding",
+        "name": "independent centred-trace boundary energy Gram",
+        "status": "PASS"
+      },
+      {
+        "actual": "q_symbol",
+        "expected": "q_symbol",
+        "group": "pah1_embedding",
+        "name": "centred KG coefficient returns q at top for omega=3",
+        "status": "PASS"
+      },
+      {
+        "actual": "p_symbol",
+        "expected": "p_symbol",
+        "group": "pah1_embedding",
+        "name": "centred KG coefficient returns p at top for omega=3",
+        "status": "PASS"
+      },
+      {
+        "actual": "q_symbol",
+        "expected": "q_symbol",
+        "group": "pah1_embedding",
+        "name": "centred KG coefficient returns q at top for omega=5",
+        "status": "PASS"
+      },
+      {
+        "actual": "p_symbol",
+        "expected": "p_symbol",
+        "group": "pah1_embedding",
+        "name": "centred KG coefficient returns p at top for omega=5",
+        "status": "PASS"
+      },
+      {
+        "actual": "2/pi",
+        "expected": "2/pi",
+        "group": "locality_boundary",
+        "name": "independent finite-rank locality counterexample",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/(3*pi)",
+        "expected": "1/(3*pi)",
+        "group": "state_extension_boundary",
+        "name": "independent finite-mode equal-time covariance witness",
+        "status": "PASS"
+      },
+      {
+        "actual": "9/4",
+        "expected": "9/4",
+        "group": "intertwiner_boundary",
+        "name": "independent noninvariant Galerkin residual",
+        "status": "PASS"
+      }
+    ],
+    "total": 26
+  },
+  "authority": "T0 non-importing independent audit; no TECT claim or tier change",
+  "candidate_family": "C0A-GAUSSIAN-OU-CCR-PAH1-EMBEDDING",
+  "candidate_id": "PA-C0A-GAUSSIAN-CCR-PAH1-EMBEDDING-v0",
+  "claim_bearing": false,
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "issued": "2026-08-03",
+  "no_overclaim": "This independent audit confirms a standard finite-mode Gaussian/Fock reconstruction and an exact state-bearing embedding into only the PA-H1 finite image. It does not derive the inserted KG spectrum, time order, hbar normalization, locality, a full/Hadamard state, absolute vacuum energy, gravity, a PA-M2 composition, or Pre-A.",
+  "schema": "tect/pre-a-c0a-gaussian-ccr-pah1-embedding-independent/0.1",
+  "scope": {
+    "absolute_vacuum_energy": false,
+    "causal_cone": false,
+    "exact_pah1_finite_image_embedding": true,
+    "exact_quasi_free_ccr_state": true,
+    "finite_spatial_mode_infinite_occupation_semigroup": true,
+    "full_pah1_state": false,
+    "hadamard_limit": false,
+    "hbar_origin": false,
+    "kg_dispersion_derived": false,
+    "pa_m2_composition": false,
+    "physical_c0_selection": false,
+    "pre_a_complete": false,
+    "spatial_locality": false
+  },
+  "shared_exact_results": {
+    "absolute_vacuum_energy_derived": false,
+    "covariance": [
+      "1/6",
+      "1/10",
+      "1/10"
+    ],
+    "finite_fock_exact_ccr": false,
+    "finite_image_full_state_selection": false,
+    "finite_spectral_cutoff_local": false,
+    "frequencies": [
+      3,
+      5,
+      5
+    ],
+    "full_time_reflection_positivity": true,
+    "gap": 3,
+    "generator_unbounded": true,
+    "generic_galerkin_dynamical_intertwiner": false,
+    "hadamard_certified": false,
+    "normal_ordered_vacuum_energy": 0,
+    "pah1_boundary_energy": true,
+    "pah1_boundary_symplectic": true,
+    "pah1_top_slice_reconstruction": "P_tau B_tau=id on the centred finite mode phase space",
+    "pre_a_complete": false,
+    "quasi_free_state": true,
+    "trace_at_log2": "8192/6727",
+    "transfer": [
+      "1/8",
+      "1/32",
+      "1/32"
+    ],
+    "transfer_injective_but_not_bounded_below": true,
+    "unique_vacuum": true,
+    "unnormalised_zero_point_energy": "13/2"
+  },
+  "source": {
+    "path": "codes/foundations/pre_a_c0a_gaussian_ccr_pah1_embedding_independent.py",
+    "sha256": "5dae9f2a4de1002cecf527a3c5e52d2ab2de5f25f9040ec71555ceec1c3d4f29"
+  },
+  "task_id": "T-054",
+  "version": "0.1.0"
+}

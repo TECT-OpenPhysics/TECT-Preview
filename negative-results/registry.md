@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-03-PRE-A-C0A-FINITE-HILBERT-BOUNDED-LOG-LIFT](#ng-2026-08-03-pre-a-c0a-finite-hilbert-bounded-log-lift) | extend the finite-state C0-A logarithm to a finite-spatial-mode Gaussian field by treating its quantum Hilbert space as finite-dimensional, uniformly bounding the transfer below, or imposing a finite occupation cutoff with exact CCR | the exact Mehler eigenvalues `2^(-3n)` accumulate at zero, so the transfer is injective but not uniformly bounded below and its logarithmic generator is unbounded; every finite occupation cutoff has a top-state commutator anomaly and cannot obey exact CCR.  Use infinite occupation Fock space and the unbounded semigroup generator; this does not refute the Gaussian reconstruction |
 | [NG-2026-08-03-PRE-A-C0A-REVERSIBILITY-WITHOUT-POSITIVE-TRANSFER](#ng-2026-08-03-pre-a-c0a-reversibility-without-positive-transfer) | infer a nonnegative self-adjoint Hamiltonian from reversible Markov transfer data alone, or infer a finite logarithmic generator from link reflection positivity without strict operator positivity | an entrywise-positive reversible stochastic control with spectrum `{1,-1/10,-1/10}` fails link reflection positivity; the projector transfer with spectrum `{1,0,0}` remains link-reflection positive but cannot be `exp(-aH)` for finite self-adjoint `H`.  Require `P>=0` for link reflection positivity and `P>0` for the finite logarithm; this does not derive or select the transfer |
 | [NG-2026-08-03-PRE-A-C0B-FINITE-TRANSITIVE-DETERMINISTIC-ORDER-SELECTION](#ng-2026-08-03-pre-a-c0b-finite-transitive-deterministic-order-selection) | deterministically and naturally select a nonempty strict order from a finite substrate state whose automorphisms act transitively on events | an invariant strict order cannot compare two events in one finite automorphism orbit; the exact transitive but non-2-transitive `C4` fixture has eight invariant irreflexive relations and only the empty invariant strict order.  This excludes only the stated deterministic symmetric route; smaller-orbit relational states, infinite transitive orders, stochastic or non-single-valued sectors, causal-set primitives, and C0-B remain open |
 | [NG-2026-08-03-PRE-A-C0-STATIC-FUNCTIONAL-DYNAMICAL-COMPLETION](#ng-2026-08-03-pre-a-c0-static-functional-dynamical-completion) | close Pre-A C0 or infer a unique physical time law, dynamical exponent, causal cone, or limiting speed from the PA-M2 static functional and spatial Hessian alone | exact gradient and inertial completions share the same static equilibria and Hessian but have first- versus second-order evolution, negative-real versus imaginary generator spectra, dissipative versus conservative energy laws, and Gaussian critical exponents `z=2` versus `z=1`; a common spatial Hessian also admits heat and wave causal-support classes. Retain PA-M2's static variational results, but require an additional microscopic temporal/kinetic law and do not count an inserted inertia or cone as emergent |
@@ -248,6 +249,54 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-03-pre-a-c0a-finite-hilbert-bounded-log-lift"></a>
+### NG-2026-08-03-PRE-A-C0A-FINITE-HILBERT-BOUNDED-LOG-LIFT -- finite spatial modes do not make the Gaussian quantum Hilbert space finite
+
+**Failure mode.**  Extend the earlier finite-state C0-A theorem to a
+finite-spatial-mode Gaussian field by asserting that its positive transfer is
+uniformly bounded below, that its logarithm is bounded, or that a finite
+occupation matrix can satisfy exact CCR.
+
+**Evidence.**  For the exact fixture `Omega=diag(3,5,5)` and `a=log 2`, the
+Hermite occupation vector `(n0,nc,ns)` has transfer eigenvalue
+
+```text
+2^[-(3 n0+5 nc+5 ns)].
+```
+
+The sequence `(n,0,0)` is strictly positive and tends to zero.  Thus the
+Mehler transfer is injective and form-strict positive, but
+`inf spec(P_a)=0`; zero is a spectral accumulation point rather than an
+eigenvalue, and `H=-(1/a)log P_a=dGamma(Omega)` is unbounded on its exact
+spectral domain.  Independently, every finite matrix commutator has trace zero.
+The four-level oscillator gives the explicit anomaly
+
+```text
+[a_4,a_4^*]=diag(1,1,1,-3),
+```
+
+not the identity.
+
+**Consequence.**  Retain the finite-state theorem only on its finite Hilbert
+space.  A finite number of spatial modes still requires infinite occupation
+Fock space for exact CCR and a strongly continuous semigroup with an unbounded
+generator.  Finite occupation may be used only as a numerical approximation
+with a separately controlled top-state error.  This no-go does not refute the
+Mehler, Fock, CCR, or PA-H1 finite-image construction; it prevents a false
+bounded-log or finite-matrix proof of them.
+
+**Evidence paths.**
+`strategy/pre-a-c0a-gaussian-ccr-pah1-embedding-certificate-260803.md`, its
+manifest, and the primary, non-importing independent, and integrated run
+artifacts under `claims/C6-SPACETIME-SIGNATURE/runs/`; 119/119, 26/26, and
+121/121 integrator checks pass, with 266 combined checks before release
+integration.
+
+**Revisit condition.**  Revisit a finite occupation approximation only with a
+declared occupation cutoff, a quantitative top-layer weight bound, and
+convergence of the required observables as the cutoff grows.  Never call the
+finite matrices exact CCR.
 
 <a id="ng-2026-08-03-pre-a-c0a-reversibility-without-positive-transfer"></a>
 ### NG-2026-08-03-PRE-A-C0A-REVERSIBILITY-WITHOUT-POSITIVE-TRANSFER -- reversibility and link positivity do not by themselves supply a finite positive Hamiltonian
