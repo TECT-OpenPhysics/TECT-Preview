@@ -1,0 +1,447 @@
+{
+  "assertions": {
+    "passed": 53,
+    "rows": [
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-v0",
+        "expected": "PA-CP1-ST8-Q3LOCK-v0",
+        "group": "authority",
+        "name": "upstream candidate identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "a separately declared spacing-dependent family, not an automatic rewrite of the spacing-one ST8 Hamiltonian: with fine spacing h=a/2, every coarse species Riemann sum carries a^3/8=h^3, canonical rho=h^3*Pi, kinetic rho^2/(2*chi*h^3)=h^3*Pi^2/(2chi), and the continuum symplectic form and Hamiltonian carry (1/8) sum_epsilon integral",
+        "expected": "contains a^3/8=h^3",
+        "group": "authority",
+        "name": "upstream physical ledger contains one-eighth fine volume",
+        "status": "PASS"
+      },
+      {
+        "actual": "g remains g because the common 1/8 factor cancels the eight species",
+        "expected": "g remains g because the common 1/8 factor cancels the eight species",
+        "group": "authority",
+        "name": "upstream physical diagonal quartic remains g",
+        "status": "PASS"
+      },
+      {
+        "actual": 8,
+        "expected": 8,
+        "group": "q3",
+        "name": "Q3 has eight vertices",
+        "status": "PASS"
+      },
+      {
+        "actual": 12,
+        "expected": 12,
+        "group": "q3",
+        "name": "Q3 has twelve edges",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "0": 3,
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 3,
+          "7": 3
+        },
+        "expected": {
+          "0": 3,
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 3,
+          "7": 3
+        },
+        "group": "q3",
+        "name": "Q3 is three-regular",
+        "status": "PASS"
+      },
+      {
+        "actual": "lambda*(left - right)*(2*left**2 - left*right + right**2)/2",
+        "expected": "lambda*(left - right)*(2*left**2 - left*right + right**2)/2",
+        "group": "potential",
+        "name": "Q3 edge gradient formula",
+        "status": "PASS"
+      },
+      {
+        "actual": "lambda*(3*left**2 - 3*left*right + right**2)",
+        "expected": "lambda*(3*left**2 - 3*left*right + right**2)",
+        "group": "potential",
+        "name": "Q3 edge same-end Hessian formula",
+        "status": "PASS"
+      },
+      {
+        "actual": "-lambda*(3*left**2 - 4*left*right + 3*right**2)/2",
+        "expected": "-lambda*(3*left**2 - 4*left*right + 3*right**2)/2",
+        "group": "potential",
+        "name": "Q3 edge cross Hessian formula",
+        "status": "PASS"
+      },
+      {
+        "actual": "4*R**3*lambda",
+        "expected": "4*R**3*lambda",
+        "group": "potential",
+        "name": "edge force bound is saturated by bipartite endpoints",
+        "status": "PASS"
+      },
+      {
+        "actual": "12*R**2*lambda",
+        "expected": "12*R**2*lambda",
+        "group": "potential",
+        "name": "edge Hessian row-sum bound is saturated",
+        "status": "PASS"
+      },
+      {
+        "actual": "12",
+        "expected": 12,
+        "group": "bounds",
+        "name": "Q3 lock force constant is derived",
+        "status": "PASS"
+      },
+      {
+        "actual": "36",
+        "expected": 36,
+        "group": "bounds",
+        "name": "Q3 lock Lipschitz constant is derived",
+        "status": "PASS"
+      },
+      {
+        "actual": "14",
+        "expected": 14,
+        "group": "goursat_gate",
+        "name": "Goursat fixture b_R",
+        "status": "PASS"
+      },
+      {
+        "actual": "40",
+        "expected": 40,
+        "group": "goursat_gate",
+        "name": "Goursat fixture ell_R",
+        "status": "PASS"
+      },
+      {
+        "actual": "107/200",
+        "expected": "107/200",
+        "group": "goursat_gate",
+        "name": "Goursat self-map fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/10",
+        "expected": "1/10",
+        "group": "goursat_gate",
+        "name": "Goursat contraction fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": "10/9",
+        "expected": "10/9",
+        "group": "goursat_gate",
+        "name": "Goursat stability fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": "u*v",
+        "expected": "u*v",
+        "group": "volterra",
+        "name": "Volterra monomial (0,0)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u*v**2/2",
+        "expected": "u*v**2/2",
+        "group": "volterra",
+        "name": "Volterra monomial (0,1)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u*v**3/3",
+        "expected": "u*v**3/3",
+        "group": "volterra",
+        "name": "Volterra monomial (0,2)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u*v**4/4",
+        "expected": "u*v**4/4",
+        "group": "volterra",
+        "name": "Volterra monomial (0,3)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**2*v/2",
+        "expected": "u**2*v/2",
+        "group": "volterra",
+        "name": "Volterra monomial (1,0)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**2*v**2/4",
+        "expected": "u**2*v**2/4",
+        "group": "volterra",
+        "name": "Volterra monomial (1,1)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**2*v**3/6",
+        "expected": "u**2*v**3/6",
+        "group": "volterra",
+        "name": "Volterra monomial (1,2)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**2*v**4/8",
+        "expected": "u**2*v**4/8",
+        "group": "volterra",
+        "name": "Volterra monomial (1,3)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**3*v/3",
+        "expected": "u**3*v/3",
+        "group": "volterra",
+        "name": "Volterra monomial (2,0)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**3*v**2/6",
+        "expected": "u**3*v**2/6",
+        "group": "volterra",
+        "name": "Volterra monomial (2,1)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**3*v**3/9",
+        "expected": "u**3*v**3/9",
+        "group": "volterra",
+        "name": "Volterra monomial (2,2)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**3*v**4/12",
+        "expected": "u**3*v**4/12",
+        "group": "volterra",
+        "name": "Volterra monomial (2,3)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**4*v/4",
+        "expected": "u**4*v/4",
+        "group": "volterra",
+        "name": "Volterra monomial (3,0)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**4*v**2/8",
+        "expected": "u**4*v**2/8",
+        "group": "volterra",
+        "name": "Volterra monomial (3,1)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**4*v**3/12",
+        "expected": "u**4*v**3/12",
+        "group": "volterra",
+        "name": "Volterra monomial (3,2)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**4*v**4/16",
+        "expected": "u**4*v**4/16",
+        "group": "volterra",
+        "name": "Volterra monomial (3,3)",
+        "status": "PASS"
+      },
+      {
+        "actual": "u*v",
+        "expected": "u*v",
+        "group": "volterra",
+        "name": "factorial-squared Volterra iterate 1",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**2*v**2/4",
+        "expected": "u**2*v**2/4",
+        "group": "volterra",
+        "name": "factorial-squared Volterra iterate 2",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**3*v**3/36",
+        "expected": "u**3*v**3/36",
+        "group": "volterra",
+        "name": "factorial-squared Volterra iterate 3",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**4*v**4/576",
+        "expected": "u**4*v**4/576",
+        "group": "volterra",
+        "name": "factorial-squared Volterra iterate 4",
+        "status": "PASS"
+      },
+      {
+        "actual": "u**5*v**5/14400",
+        "expected": "u**5*v**5/14400",
+        "group": "volterra",
+        "name": "factorial-squared Volterra iterate 5",
+        "status": "PASS"
+      },
+      {
+        "actual": "4*u*v",
+        "expected": "4*u*v",
+        "group": "volterra",
+        "name": "null product identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "a**3/8",
+        "expected": "a**3/8",
+        "group": "normalization",
+        "name": "fine-cell volume ledger",
+        "status": "PASS"
+      },
+      {
+        "actual": "a**3",
+        "expected": "a**3",
+        "group": "normalization",
+        "name": "eight three-dimensional species weights sum to coarse volume",
+        "status": "PASS"
+      },
+      {
+        "actual": "a",
+        "expected": "a",
+        "group": "normalization",
+        "name": "eight reduced one-dimensional weights sum to coarse length",
+        "status": "PASS"
+      },
+      {
+        "actual": "z**2*(g0*z**2 + 2*r0)/4",
+        "expected": "z**2*(g0*z**2 + 2*r0)/4",
+        "group": "normalization",
+        "name": "physical diagonal retains onsite quartic coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "4*chi*psi_uv",
+        "expected": "4*chi*psi_uv",
+        "group": "coordinates",
+        "name": "null-coordinate principal part",
+        "status": "PASS"
+      },
+      {
+        "actual": "15/2",
+        "expected": "15/2",
+        "group": "energy_flux",
+        "name": "massless slice energy fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": "15/2",
+        "expected": "15/2",
+        "group": "energy_flux",
+        "name": "massless null-boundary energy fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2",
+        "expected": -2,
+        "group": "energy_flux",
+        "name": "eight-species unshifted potential minimum",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-3/2",
+          "-3/2"
+        ],
+        "expected": [
+          "-3/2",
+          "-3/2"
+        ],
+        "group": "energy_flux",
+        "name": "negative unshifted flux is balanced but not positive",
+        "status": "PASS"
+      },
+      {
+        "actual": "-pt*(c*pxx - chi*ptt - force)/8",
+        "expected": "-pt*(c*pxx - chi*ptt - force)/8",
+        "group": "energy_flux",
+        "name": "continuum local energy-current identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "-14",
+        "expected": -14,
+        "group": "symplectic_flux",
+        "name": "inherited slice symplectic fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": "-14",
+        "expected": "-14",
+        "group": "symplectic_flux",
+        "name": "derivative-first boundary form matches inherited slice form",
+        "status": "PASS"
+      },
+      {
+        "actual": "14",
+        "expected": 14,
+        "group": "symplectic_flux",
+        "name": "value-first hostile convention has opposite sign",
+        "status": "PASS"
+      }
+    ],
+    "total": 53
+  },
+  "candidate_id": "PA-CP1-CL8-GOURSAT-v0",
+  "exact_results": {
+    "b_R_fixture": "14",
+    "contraction_fixture": "1/10",
+    "edge_force_bound_coefficient": "4",
+    "edge_hessian_row_bound_coefficient": "12",
+    "ell_R_fixture": "40",
+    "massless_energy_fixture": "15/2",
+    "negative_unshifted_energy_fixture": "-3/2",
+    "physical_3d_weight": "a^3/8",
+    "q3_degree": 3,
+    "q3_edge_count": 12,
+    "reduced_1d_weight_per_unit_transverse_area": "a/8",
+    "self_map_fixture": "107/200",
+    "species_count": 8,
+    "stability_fixture": "10/9",
+    "symplectic_derivative_first_fixture": "-14",
+    "symplectic_value_first_hostile_control": "14"
+  },
+  "package_version": "0.1.0",
+  "parent_id": "PA-CP1-ST8-Q3LOCK-v0",
+  "provenance": {
+    "script": "codes/foundations/pre_a_cp1_cl8_goursat.py",
+    "script_sha256": "f2aedce7e2a0664a5eca7788e2ec4c671ff41e78d4fa9f27ced4497ee22ab7d5",
+    "upstream": "strategy/pre-a-cp1-st8-q3lock-manifest.json",
+    "upstream_sha256": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046"
+  },
+  "result_id": "PA-CP1-CL8-CONTINUUM-GOURSAT-ENERGY-SYMPLECTIC-FLUX",
+  "schema": "tect/pre-a-cp1-cl8-goursat-primary/0.1",
+  "scope": {
+    "continuum_energy_flux": true,
+    "continuum_variational_symplectic_flux": true,
+    "cp1_complete": false,
+    "finite_a_goursat_scheme": false,
+    "fixed_1_plus_1_lorentzian_background": true,
+    "gated_continuum_goursat_reconstruction": true,
+    "lattice_boundary_composition": false,
+    "physical_empty_space": false,
+    "physical_state_selection": false,
+    "pre_a_complete": false,
+    "transverse_zero_eight_species_classical_field": true,
+    "unshifted_energy_positive_for_r_negative": false
+  },
+  "verdict": "PASS"
+}

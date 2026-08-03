@@ -7,7 +7,7 @@
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
     "RESULTS-LEDGER.md": "90557e1699f8aa42d07dc5586b8916b03c06b67e39558b897850c1e40fc8eb44",
-    "changelog/log.jsonl": "48e3667d443c17f71eacee30f89f05d3937dd73cafaefd5b9c45595877baa635",
+    "changelog/log.jsonl": "228b7ab0bb8740b898135c8a2e53d6c69f3bcba2809279159032e2d0ec6ec678",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,9 +58,9 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "96860763e26315b221fa0aa11e4ed557a3dd0f5cb3dd1bab92d73b291d3eb013",
-    "explorations/log.jsonl": "c004930d3b0a3a8475b7d4a98ba5d62f5d5c485272fbb8ecb98d7edc326c769f",
+    "explorations/log.jsonl": "b9b564a5b21d820f70309f7a340f88b4bc28734a87cefdf64c3f3e50e9a36dea",
     "negative-results/registry.md": "b43668b7a3710aaa50124ac4953dca9a671f07c19a06bc9b64e2487836ac39c9",
-    "todo/todo.json": "433af7bcf0a89b972d4187fe16708e27362a70909e8bc6aa268bb532f2cf9630"
+    "todo/todo.json": "9dac8b669dcd4645b403a2eb4692801ded4ce1bf1a6fe574d02f04d98edb682e"
   },
   "coverage": {
     "status_cards": 49,
@@ -68,15 +68,15 @@
     "refuted_claims": 1,
     "reusable_results": 162,
     "negative_records": 249,
-    "proof_explorations": 727,
+    "proof_explorations": 728,
     "exploration_verdicts": {
-      "advanced": 408,
+      "advanced": 409,
       "failed": 233,
       "inconclusive": 62,
       "parked": 24
     },
     "process_grade_lessons": 3,
-    "accepted_events": 512,
+    "accepted_events": 514,
     "tasks": 54,
     "live_tasks": 9,
     "completed_tasks": 45,
@@ -89,7 +89,7 @@
     "unordered_root_pdfs": 9,
     "proof_notes_without_sibling_pdf": 19,
     "proof_notes_with_incomplete_historical_footer": 118,
-    "run_json": 558,
+    "run_json": 564,
     "claim_manifests": 120,
     "bundle_manifests": 40,
     "bundle_embedded_manifests": 45
@@ -2149,6 +2149,12 @@
         "claim_ids": [
           "C1-STRICT-CONE-NOGO-"
         ]
+      },
+      {
+        "event": "20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy",
+        "claim_ids": [
+          "C6-BCC-PREMISE-BLOCKED"
+        ]
       }
     ],
     "event_unregistered_negative_tags": [
@@ -2274,7 +2280,7 @@
       "owner": "Codex",
       "claim": null,
       "gate": null,
-      "note": "EXP-000711--EXP-000713 establish the LT3/ST8 finite-local branch. EXP-000714--EXP-000716 retain CP1a as a fitted non-product comparator. EXP-000719 and PA-CP1-ST8-Q3LOCK-v0 give the nonlinear quartic species lock with exact two-minimum same-H classical ordering, but retain inserted block origin, symmetric finite quantum ground and no physical empty-space comparison. EXP-000724 and PA-CP1-FD-C1-STRICT-CONE-NOGO-v0 resolve the exact finite continuous-time cone fork: an open-neighbourhood strict cone at a finite-dimensional autonomous C1 equilibrium forces all projected flow-Jacobian powers to vanish, while exact ST8/Q3LOCK and CP1a fixtures have arbitrarily-small-time tails. EXP-000725 repairs an independent Q3 ordered-fixture v^2 omission and pins both CP1a calculations to upstream alpha=1/256,beta=21/512. Corrected primary 42, independent 34 and integrated 63 checks pass, 139 combined. This does not reject Lieb-Robinson quasi-locality, a controlled hyperbolic continuum limit, discrete-time or enlarged causal parents, or QFT microcausality. Next construct PA-CP1-CL8-GOURSAT-v0 using the same a^3/8 and rho=h^3*Pi ledger: transverse-zero eight-species continuum Goursat map, energy and symplectic flux, O(a^2) smooth-data semidiscrete convergence and tail disappearance, and one supplied classical boundary-measure pushforward. Keep block-origin restoration, full 3+1 dependence, quantum continuum and selected state, physical empty space and below-empty-space sign, cooling, CP1 and Pre-A open.",
+      "note": "EXP-000711--EXP-000713 establish the LT3/ST8 finite-local branch; EXP-000714--EXP-000716 retain CP1a as a fitted comparator; EXP-000719 registers Q3LOCK; EXP-000724 and EXP-000725 register and repair the finite-C1 strict-cone no-go. EXP-000728 now splits the controlled-continuum checkpoint into PA-CP1-CL8-GOURSAT-v0 and PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0. The first proves, on an inserted fixed 1+1 Lorentzian background and the pinned one-eighth ledger, gated transverse-zero eight-species classical Goursat reconstruction, exact continuum energy balance, inherited-sign variational symplectic flux, and only a supplied classical field-value measure pushforward. The second proves fixed-periodic-domain, fixed-time O(a^2) convergence for separately supplied smooth Cauchy data in weighted discrete H1_a times L2_a, exact finite Hamiltonian and variational symplectic conservation, and only an aggregate O(a^2) bound on regions where the continuum solution vanishes. Goursat primary 53, independent 52, integrated 75 and semidiscrete primary 38, independent 29, integrated 80 checks pass, 327 combined. They are not composed: PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION remains open, including phase-slice regularity, compatible same-domain sampling and reconstruction, energy, symplectic and supplied-measure control, and a common selected state. Exact finite-a support remains false; registered variational witness tails remain nonzero, while the convergence theorem neither proves nor requires a nonzero tail for every datum. Next close or refute the composition gate before quantum promotion. Keep block-origin restoration, fine translation, full 3+1 dependence, quantum continuum and state selection, physical empty space and the below-empty-space sign, cooling, gravity, CP1 and Pre-A open.",
       "created": "2026-08-02",
       "updated": "2026-08-03",
       "blocked_by": [],
@@ -9550,6 +9556,8 @@
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0a-reflection-positive-transfer/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0b-equivariant-causal-selection-nogo/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-goursat/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-fdan-strict-cone-nogo/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-lt3-rs-common-container/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-st8-block-causal-bridge/result.json",
@@ -9561,6 +9569,8 @@
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0a-reflection-positive-transfer/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0b-equivariant-causal-selection-nogo/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-goursat/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-fdan-strict-cone-nogo/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-lt3-rs-common-container/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-st8-block-causal-bridge/result.json",
@@ -9572,6 +9582,8 @@
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0a-reflection-positive-transfer/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0b-equivariant-causal-selection-nogo/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-goursat/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-fdan-strict-cone-nogo/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-lt3-rs-common-container/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-st8-block-causal-bridge/result.json",
@@ -9616,9 +9628,10 @@
           "EXP-000716",
           "EXP-000719",
           "EXP-000724",
-          "EXP-000725"
+          "EXP-000725",
+          "EXP-000728"
         ],
-        "latest_exploration_id": "EXP-000725",
+        "latest_exploration_id": "EXP-000728",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -9643,9 +9656,11 @@
           "20260803-quartic-q3-lock-preserves-eight-bare-nodes-and",
           "20260803-reassign-q3lock-exploration-id-after-concurrent",
           "20260803-t-054-register-finite-c1-equilibrium-strict-con",
-          "20260803-t-054-repair-q3-ordered-fixture-and-pin-cp1a-co"
+          "20260803-t-054-repair-q3-ordered-fixture-and-pin-cp1a-co",
+          "20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy",
+          "20260803-t-054-correct-cl8-exploration-id-after-concurre"
         ],
-        "latest_event_id": "20260803-t-054-repair-q3-ordered-fixture-and-pin-cp1a-co",
+        "latest_event_id": "20260803-t-054-correct-cl8-exploration-id-after-concurre",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "C6-BCC-PREMISE-BLOCKED"
@@ -56965,6 +56980,62 @@
       "task_id": "T-050",
       "title": "Independent audit narrows and repairs the target Foellmer no-go",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "The continuum background, 1+1 reduction, transverse-zero sector, eight species, Q3 potential, parameter ledger, smoothness class, fixed domain and finite time are supplied. The O(a^2) estimate is not a pointwise or exact tail theorem and is not uniform for nonsmooth or arbitrary high-frequency lattice data, growing times or volumes, or a quantum continuum. Fine-translation restoration, full 3+1 dependence, boundary-to-lattice initialization, a common selected state, physical empty space and a below-empty-space sign, cooling, gravity, CP1 and Pre-A remain open.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "Separating the two exact analytic authorities prevents the continuum Goursat map from being silently substituted for a finite-lattice boundary or state map, while proving the strongest controlled continuum statement currently supported by the Q3LOCK ledger and remaining compatible with the finite-C1 strict-cone no-go.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-cl8-goursat-certificate-260803.md#section-5-goursat",
+        "strategy/pre-a-cp1-cl8-goursat-certificate-260803.md#section-6-energy",
+        "strategy/pre-a-cp1-cl8-goursat-certificate-260803.md#section-7-symplectic",
+        "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-certificate-260803.md#section-6-theorem",
+        "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-certificate-260803.md#section-7-tail",
+        "strategy/pre-a-cp1-cl8-goursat-manifest.json#composition_gate",
+        "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest.json#composition_gate",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-goursat/result.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json#assertions"
+      ],
+      "finding": "PA-CP1-CL8-GOURSAT-v0 proves, on an inserted fixed 1+1 Lorentzian background and the pinned one-eighth physical ledger, the gated eight-species classical Goursat reconstruction, exact continuum energy balance, inherited-sign variational symplectic flux, and only a supplied classical field-value measure pushforward. Separately, PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0 proves O(a^2) convergence on each fixed periodic domain and finite time for separately supplied sufficiently smooth Cauchy data, plus only an aggregate O(a^2) bound on regions where the continuum solution vanishes. Registered variational witness tails remain nonzero at every fixed a, but this convergence theorem neither proves nor requires a nonzero tail for every matched datum. Goursat primary 53, independent 52, integrated 75 and semidiscrete primary 38, independent 29, integrated 80 checks pass, 327 combined.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE",
+          "NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE"
+        ],
+        "results": []
+      },
+      "gate_ids": [],
+      "id": "EXP-000728",
+      "method": [
+        "Derive the eight-species Q3 force and Hessian max-ball constants and prove gated characteristic reconstruction by a Volterra contraction, with factorial-squared uniqueness beyond the admitted ball conditional on continuous existence.",
+        "Derive the continuum energy current and the derivative-first dPi-wedge-dpsi variational symplectic flux, and audit the unshifted negative-r sign and a supplied classical field-value measure pushforward.",
+        "Define the separate fixed-periodic-domain centered semidiscretization with the a/8 physical weight and prove the smooth-data O(a^2) discrete H1_a times L2_a estimate by consistency, modified energy, Gronwall, and a uniform discrete Sobolev bootstrap.",
+        "Reconstruct exact Hamiltonian and symplectic identities in primary and non-importing rational implementations and enclose a one-mode exact-time regression with 160-bit Arb intervals.",
+        "Apply hostile audits to regularity, signs, tail scope, evidence hashes, and the non-composition boundary; retain the two finite strict-cone negative results."
+      ],
+      "next_action": "Close or refute PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION by proving that the Goursat field and phase slice lands in the semidiscrete theorem's regularity class, defining compatible same-domain sampling and reconstruction, and controlling energy, symplectic form and a supplied measure under the composition. Do not begin quantum or physical-vacuum promotion before that gate.",
+      "provenance": "contemporaneous",
+      "question": "Can the finite-regulator strict-cone obstruction be bypassed honestly by separately proving a transverse-zero CL8 continuum Goursat theorem and fixed-domain smooth-data semidiscrete Cauchy convergence, without claiming a boundary-to-lattice state map?",
+      "recorded_at": "2026-08-03T13:29:11Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000724",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000725",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-03",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Split CL8 continuum Goursat and semidiscrete Cauchy convergence without composing them",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -75429,6 +75500,87 @@
       "result_ids": [],
       "linked_result_ids": [],
       "result_link_basis": {}
+    },
+    {
+      "id": "20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy",
+      "date": "2026-08-03",
+      "header": "[T-054: split CL8 Goursat and semidiscrete Cauchy checkpoint] - 2026-08-03",
+      "claim_ids": [
+        "C6-BCC-PREMISE-BLOCKED",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "keywords": [
+        "CL8",
+        "CP1",
+        "Goursat",
+        "Pre-A",
+        "causality",
+        "continuum",
+        "semidiscrete"
+      ],
+      "negative_results": [
+        "NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE",
+        "NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE"
+      ],
+      "notes": [
+        "strategy/pre-a-cp1-cl8-goursat-manifest.json",
+        "strategy/pre-a-cp1-cl8-goursat-certificate-260803.md",
+        "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest.json",
+        "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-certificate-260803.md"
+      ],
+      "scripts": [
+        "codes/foundations/pre_a_cp1_cl8_goursat.py",
+        "codes/foundations/pre_a_cp1_cl8_goursat_independent.py",
+        "codes/foundations/pre_a_cp1_cl8_goursat_verify.py",
+        "codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2.py",
+        "codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2_independent.py",
+        "codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2_verify.py"
+      ],
+      "raw": "## [T-054: split CL8 Goursat and semidiscrete Cauchy checkpoint] - 2026-08-03\n\nRegistered PA-CP1-CL8-GOURSAT-v0 and PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0 as separate claim-nonbearing T0 candidate certificates and recorded EXP-000726. On the pinned one-eighth physical ledger, the first proves the declared transverse-zero eight-species classical continuum Goursat reconstruction under explicit gates, exact energy balance, inherited-sign variational symplectic flux, and only a supplied classical field-value measure pushforward. The second proves fixed-periodic-domain, fixed-time O(a^2) smooth-data semidiscrete Cauchy convergence in weighted discrete H1_a times L2_a, exact finite Hamiltonian and variational symplectic conservation, and only an aggregate O(a^2) bound where the continuum solution vanishes. Primary, non-importing independent and integrated checks pass 53/52/75 and 38/29/80, 327 combined. The registered fixed-a variational witness tails remain nonzero, but the convergence theorem supplies no lower bound for every matched datum. No boundary-to-lattice initialization, energy, symplectic, measure or selected-state composition is proved; PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION remains open. C6 stays T1 with C6-BCC-PREMISE-BLOCKED; no R-result, new negative, tier, physical-empty-space, CP1 or Pre-A verdict changes.\n\n",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "C6-BCC-PREMISE-BLOCKED"
+      ],
+      "result_ids": [],
+      "linked_result_ids": [],
+      "result_link_basis": {}
+    },
+    {
+      "id": "20260803-t-054-correct-cl8-exploration-id-after-concurre",
+      "date": "2026-08-03",
+      "header": "[T-054: correct CL8 exploration id after concurrent rebase] - 2026-08-03",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "keywords": [
+        "CL8",
+        "Pre-A",
+        "correction",
+        "exploration",
+        "rebase"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-cl8-goursat-manifest.json",
+        "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest.json"
+      ],
+      "scripts": [],
+      "raw": "## [T-054: correct CL8 exploration id after concurrent rebase] - 2026-08-03\n\nA concurrent remote commit registered EXP-000726 and EXP-000727 before the CL8 checkpoint was published. The CL8 route record was therefore remapped append-only to EXP-000728. In the immediately preceding event 20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy, read its single EXP-000726 reference as EXP-000728. The two candidate certificates, theorem scope, assertion totals, open composition gate, and absence of any tier, R-result, physical-empty-space, CP1 or Pre-A change are otherwise unchanged.\n\n",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [],
+      "result_ids": [],
+      "linked_result_ids": [],
+      "result_link_basis": {}
     }
   ],
   "all_tasks": [
@@ -76137,7 +76289,7 @@
       "owner": "Codex",
       "claim": null,
       "gate": null,
-      "note": "EXP-000711--EXP-000713 establish the LT3/ST8 finite-local branch. EXP-000714--EXP-000716 retain CP1a as a fitted non-product comparator. EXP-000719 and PA-CP1-ST8-Q3LOCK-v0 give the nonlinear quartic species lock with exact two-minimum same-H classical ordering, but retain inserted block origin, symmetric finite quantum ground and no physical empty-space comparison. EXP-000724 and PA-CP1-FD-C1-STRICT-CONE-NOGO-v0 resolve the exact finite continuous-time cone fork: an open-neighbourhood strict cone at a finite-dimensional autonomous C1 equilibrium forces all projected flow-Jacobian powers to vanish, while exact ST8/Q3LOCK and CP1a fixtures have arbitrarily-small-time tails. EXP-000725 repairs an independent Q3 ordered-fixture v^2 omission and pins both CP1a calculations to upstream alpha=1/256,beta=21/512. Corrected primary 42, independent 34 and integrated 63 checks pass, 139 combined. This does not reject Lieb-Robinson quasi-locality, a controlled hyperbolic continuum limit, discrete-time or enlarged causal parents, or QFT microcausality. Next construct PA-CP1-CL8-GOURSAT-v0 using the same a^3/8 and rho=h^3*Pi ledger: transverse-zero eight-species continuum Goursat map, energy and symplectic flux, O(a^2) smooth-data semidiscrete convergence and tail disappearance, and one supplied classical boundary-measure pushforward. Keep block-origin restoration, full 3+1 dependence, quantum continuum and selected state, physical empty space and below-empty-space sign, cooling, CP1 and Pre-A open.",
+      "note": "EXP-000711--EXP-000713 establish the LT3/ST8 finite-local branch; EXP-000714--EXP-000716 retain CP1a as a fitted comparator; EXP-000719 registers Q3LOCK; EXP-000724 and EXP-000725 register and repair the finite-C1 strict-cone no-go. EXP-000728 now splits the controlled-continuum checkpoint into PA-CP1-CL8-GOURSAT-v0 and PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0. The first proves, on an inserted fixed 1+1 Lorentzian background and the pinned one-eighth ledger, gated transverse-zero eight-species classical Goursat reconstruction, exact continuum energy balance, inherited-sign variational symplectic flux, and only a supplied classical field-value measure pushforward. The second proves fixed-periodic-domain, fixed-time O(a^2) convergence for separately supplied smooth Cauchy data in weighted discrete H1_a times L2_a, exact finite Hamiltonian and variational symplectic conservation, and only an aggregate O(a^2) bound on regions where the continuum solution vanishes. Goursat primary 53, independent 52, integrated 75 and semidiscrete primary 38, independent 29, integrated 80 checks pass, 327 combined. They are not composed: PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION remains open, including phase-slice regularity, compatible same-domain sampling and reconstruction, energy, symplectic and supplied-measure control, and a common selected state. Exact finite-a support remains false; registered variational witness tails remain nonzero, while the convergence theorem neither proves nor requires a nonzero tail for every datum. Next close or refute the composition gate before quantum promotion. Keep block-origin restoration, fine translation, full 3+1 dependence, quantum continuum and state selection, physical empty space and the below-empty-space sign, cooling, gravity, CP1 and Pre-A open.",
       "created": "2026-08-02",
       "updated": "2026-08-03",
       "blocked_by": [],
@@ -79490,6 +79642,12 @@
         "authority": "CHANGELOG.md"
       },
       {
+        "id": "event:20260803-t-054-correct-cl8-exploration-id-after-concurre",
+        "kind": "accepted_event",
+        "label": "[T-054: correct CL8 exploration id after concurrent rebase] - 2026-08-03",
+        "authority": "CHANGELOG.md"
+      },
+      {
         "id": "event:20260803-t-054-register-finite-c1-equilibrium-strict-con",
         "kind": "accepted_event",
         "label": "[T-054: register finite C1 equilibrium strict-cone no-go] - 2026-08-03",
@@ -79505,6 +79663,12 @@
         "id": "event:20260803-t-054-screened-vector-candidate-derivation-and",
         "kind": "accepted_event",
         "label": "[T-054 screened-vector candidate derivation and early causal boundary] - 2026-08-03",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy",
+        "kind": "accepted_event",
+        "label": "[T-054: split CL8 Goursat and semidiscrete Cauchy checkpoint] - 2026-08-03",
         "authority": "CHANGELOG.md"
       },
       {
@@ -83873,6 +84037,12 @@
         "id": "exploration:EXP-000727",
         "kind": "proof_exploration",
         "label": "Independent audit narrows and repairs the target Foellmer no-go",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000728",
+        "kind": "proof_exploration",
+        "label": "Split CL8 continuum Goursat and semidiscrete Cauchy convergence without composing them",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -95632,6 +95802,12 @@
         "basis": "explicit_result_id"
       },
       {
+        "from": "event:20260803-t-054-correct-cl8-exploration-id-after-concurre",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
         "from": "event:20260803-t-054-register-finite-c1-equilibrium-strict-con",
         "relation": "records",
         "to": "claim:A2-FULL-PRODUCTION-WELLPOSED",
@@ -95672,6 +95848,24 @@
         "relation": "records",
         "to": "claim:A2-FULL-PRODUCTION-WELLPOSED",
         "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE",
+        "basis": "explicit_negative_tag"
       },
       {
         "from": "event:20260803-t-054-strict-interface-verifier-made-workspace",
@@ -127582,6 +127776,42 @@
         "basis": "structured_formal_ref"
       },
       {
+        "from": "exploration:EXP-000728",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000728",
+        "relation": "continues",
+        "to": "exploration:EXP-000724",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000728",
+        "relation": "continues",
+        "to": "exploration:EXP-000725",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000728",
+        "relation": "records_task",
+        "to": "task:T-054",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000728",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000728",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE",
+        "basis": "structured_formal_ref"
+      },
+      {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
         "relation": "bears_on",
         "to": "claim:B1-RH-ENUM",
@@ -148527,6 +148757,38 @@
           "R-133": "proof_anchor_note:classii-affine-gaussian-score-feedback-collar-boundary-260731-v1.0"
         }
       },
+      "20260803-t-054-correct-cl8-exploration-id-after-concurre": {
+        "id": "20260803-t-054-correct-cl8-exploration-id-after-concurre",
+        "date": "2026-08-03",
+        "header": "[T-054: correct CL8 exploration id after concurrent rebase] - 2026-08-03",
+        "claim_ids": [
+          "C6-SPACETIME-SIGNATURE"
+        ],
+        "keywords": [
+          "CL8",
+          "Pre-A",
+          "correction",
+          "exploration",
+          "rebase"
+        ],
+        "negative_results": [],
+        "notes": [
+          "strategy/pre-a-cp1-cl8-goursat-manifest.json",
+          "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest.json"
+        ],
+        "scripts": [],
+        "raw": "## [T-054: correct CL8 exploration id after concurrent rebase] - 2026-08-03\n\nA concurrent remote commit registered EXP-000726 and EXP-000727 before the CL8 checkpoint was published. The CL8 route record was therefore remapped append-only to EXP-000728. In the immediately preceding event 20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy, read its single EXP-000726 reference as EXP-000728. The two candidate certificates, theorem scope, assertion totals, open composition gate, and absence of any tier, R-result, physical-empty-space, CP1 or Pre-A change are otherwise unchanged.\n\n",
+        "claim_refs": [
+          "C6-SPACETIME-SIGNATURE"
+        ],
+        "claim_ref_basis": {
+          "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+        },
+        "unresolved_claim_ids": [],
+        "result_ids": [],
+        "linked_result_ids": [],
+        "result_link_basis": {}
+      },
       "20260803-t-054-register-finite-c1-equilibrium-strict-con": {
         "id": "20260803-t-054-register-finite-c1-equilibrium-strict-con",
         "date": "2026-08-03",
@@ -148643,6 +148905,55 @@
           "A2-FULL-PRODUCTION-WELLPOSED": "explicit_claim_ids"
         },
         "unresolved_claim_ids": [],
+        "result_ids": [],
+        "linked_result_ids": [],
+        "result_link_basis": {}
+      },
+      "20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy": {
+        "id": "20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy",
+        "date": "2026-08-03",
+        "header": "[T-054: split CL8 Goursat and semidiscrete Cauchy checkpoint] - 2026-08-03",
+        "claim_ids": [
+          "C6-BCC-PREMISE-BLOCKED",
+          "C6-SPACETIME-SIGNATURE"
+        ],
+        "keywords": [
+          "CL8",
+          "CP1",
+          "Goursat",
+          "Pre-A",
+          "causality",
+          "continuum",
+          "semidiscrete"
+        ],
+        "negative_results": [
+          "NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE",
+          "NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE"
+        ],
+        "notes": [
+          "strategy/pre-a-cp1-cl8-goursat-manifest.json",
+          "strategy/pre-a-cp1-cl8-goursat-certificate-260803.md",
+          "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest.json",
+          "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-certificate-260803.md"
+        ],
+        "scripts": [
+          "codes/foundations/pre_a_cp1_cl8_goursat.py",
+          "codes/foundations/pre_a_cp1_cl8_goursat_independent.py",
+          "codes/foundations/pre_a_cp1_cl8_goursat_verify.py",
+          "codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2.py",
+          "codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2_independent.py",
+          "codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2_verify.py"
+        ],
+        "raw": "## [T-054: split CL8 Goursat and semidiscrete Cauchy checkpoint] - 2026-08-03\n\nRegistered PA-CP1-CL8-GOURSAT-v0 and PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0 as separate claim-nonbearing T0 candidate certificates and recorded EXP-000726. On the pinned one-eighth physical ledger, the first proves the declared transverse-zero eight-species classical continuum Goursat reconstruction under explicit gates, exact energy balance, inherited-sign variational symplectic flux, and only a supplied classical field-value measure pushforward. The second proves fixed-periodic-domain, fixed-time O(a^2) smooth-data semidiscrete Cauchy convergence in weighted discrete H1_a times L2_a, exact finite Hamiltonian and variational symplectic conservation, and only an aggregate O(a^2) bound where the continuum solution vanishes. Primary, non-importing independent and integrated checks pass 53/52/75 and 38/29/80, 327 combined. The registered fixed-a variational witness tails remain nonzero, but the convergence theorem supplies no lower bound for every matched datum. No boundary-to-lattice initialization, energy, symplectic, measure or selected-state composition is proved; PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION remains open. C6 stays T1 with C6-BCC-PREMISE-BLOCKED; no R-result, new negative, tier, physical-empty-space, CP1 or Pre-A verdict changes.\n\n",
+        "claim_refs": [
+          "C6-SPACETIME-SIGNATURE"
+        ],
+        "claim_ref_basis": {
+          "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+        },
+        "unresolved_claim_ids": [
+          "C6-BCC-PREMISE-BLOCKED"
+        ],
         "result_ids": [],
         "linked_result_ids": [],
         "result_link_basis": {}

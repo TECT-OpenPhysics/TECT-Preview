@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [T-054: correct CL8 exploration id after concurrent rebase] - 2026-08-03
+
+A concurrent remote commit registered EXP-000726 and EXP-000727 before the CL8 checkpoint was published. The CL8 route record was therefore remapped append-only to EXP-000728. In the immediately preceding event 20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy, read its single EXP-000726 reference as EXP-000728. The two candidate certificates, theorem scope, assertion totals, open composition gate, and absence of any tier, R-result, physical-empty-space, CP1 or Pre-A change are otherwise unchanged.
+
+## [T-054: split CL8 Goursat and semidiscrete Cauchy checkpoint] - 2026-08-03
+
+Registered PA-CP1-CL8-GOURSAT-v0 and PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0 as separate claim-nonbearing T0 candidate certificates and recorded EXP-000726. On the pinned one-eighth physical ledger, the first proves the declared transverse-zero eight-species classical continuum Goursat reconstruction under explicit gates, exact energy balance, inherited-sign variational symplectic flux, and only a supplied classical field-value measure pushforward. The second proves fixed-periodic-domain, fixed-time O(a^2) smooth-data semidiscrete Cauchy convergence in weighted discrete H1_a times L2_a, exact finite Hamiltonian and variational symplectic conservation, and only an aggregate O(a^2) bound where the continuum solution vanishes. Primary, non-importing independent and integrated checks pass 53/52/75 and 38/29/80, 327 combined. The registered fixed-a variational witness tails remain nonzero, but the convergence theorem supplies no lower bound for every matched datum. No boundary-to-lattice initialization, energy, symplectic, measure or selected-state composition is proved; PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION remains open. C6 stays T1 with C6-BCC-PREMISE-BLOCKED; no R-result, new negative, tier, physical-empty-space, CP1 or Pre-A verdict changes.
+
 ## [T-054: repair Q3 ordered fixture and pin CP1a coefficients] - 2026-08-03
 
 Hostile review found that the first independent Q3 ordered-channel generator used lambda instead of the already audited lambda*v^2 edge Hessian. The qualitative first-power no-go was unchanged, but the independent coefficient was not evidence for its stated fixture. The generator now uses lambda*v^2=117/7 and gives 585/119 at chi=17/5; the primary fixture is aligned at 56/65, and the integrated verifier asserts both normalization ledgers. Both CP1a routes now derive normalized coefficients 1 and 21/2 from the upstream manifest alpha=1/256 and beta=21/512. Corrected primary 42/42, independent 34/34 and integrated 63/63 pass, 139 combined. EXP-000725 records the append-only correction; theorem and negative-result scope are unchanged.

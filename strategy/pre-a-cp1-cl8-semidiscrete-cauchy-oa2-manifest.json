@@ -1,0 +1,145 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
+  "parent_id": "PA-CP1-CL8-GOURSAT-v0",
+  "result_id": "PA-CP1-CL8-FIXED-DOMAIN-SEMIDISCRETE-CAUCHY-OA2",
+  "candidate_family": "PRE-A-CL8-FIXED-DOMAIN-SEMIDISCRETE-CONVERGENCE",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 exact analytic classical semidiscrete candidate certificate; not a TECT claim, tier change, Goursat discretization, regulator-removal theorem, CP1 completion, or Pre-A closure",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "comparison_context": [
+    "A2-FULL-PRODUCTION-WELLPOSED",
+    "T-054 Pre-A candidate tournament"
+  ],
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "For a separately supplied sufficiently smooth solution of the declared eight-species CL8 Cauchy problem on a fixed periodic one-dimensional physical domain and fixed finite time, the centered spatial semidiscretization with the inherited a/8 per-unit-transverse-area ledger converges at O(a^2) in the weighted discrete H1_a times L2_a phase norm. Each finite regulator exactly conserves its Hamiltonian and variational symplectic form. An Arb-enclosed one-mode linearized regression independently exhibits the expected factor-four refinement ratio. The theorem is not a semidiscrete Goursat scheme and does not compose characteristic data with lattice initial data.",
+  "verdict": "ADVANCE FIXED-DOMAIN SMOOTH-CAUCHY O(a^2) CONVERGENCE; RETAIN NONZERO FINITE-a TAILS AND KEEP THE BOUNDARY-TO-LATTICE COMPOSITION OPEN",
+  "authorities": {
+    "continuum_equation_definition": "strategy/pre-a-cp1-cl8-goursat-manifest.json",
+    "finite_hamiltonian_and_physical_ledger": "strategy/pre-a-cp1-st8-q3lock-manifest.json",
+    "spacing_context": "strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json",
+    "finite_a_strict_cone_boundary": "strategy/pre-a-cp1-fdan-strict-cone-nogo-manifest.json"
+  },
+  "definition": {
+    "domain": "T_L=R/(LZ), with a=L/M and periodic nodes x_j=ja; the inherited CP1 subsequence takes even M so the fine N=2M regulator remains divisible by four",
+    "grid_fields": "psi_j and Pi_j in R^8",
+    "weighted_inner_product": "<u,v>_a=(a/8)sum_j u_j dot v_j",
+    "operators": "D_a^+u_j=(u_{j+1}-u_j)/a and Delta_a u_j=(u_{j+1}-2u_j+u_{j-1})/a^2",
+    "phase_norm": "||u||_{H1_a}^2=||u||_a^2+||D_a^+u||_a^2, together with ||u_t||_a",
+    "restriction": "R_a f=(f(x_j))_j",
+    "continuum_equation": "chi psi_tt-c psi_xx+grad W(psi)=0",
+    "semidiscrete_equation": "chi psi_j,tt-c Delta_a psi_j+grad W(psi_j)=0",
+    "potential": "the same eight-species Q3 polynomial W as PA-CP1-CL8-GOURSAT-v0",
+    "parameter_domain": "chi>0, c>0, g>0, lambda>=0, r real"
+  },
+  "hamiltonian_structure": {
+    "Hamiltonian": "H_a=(a/8)sum_j[|Pi_j|^2/(2chi)+c|D_a^+psi_j|^2/2+W(psi_j)]",
+    "symplectic_form": "Omega_a=(a/8)sum_j dPi_j wedge dpsi_j",
+    "sign_convention": "i_X Omega_a=-dH_a",
+    "equations": "psi_dot=Pi/chi and Pi_dot=c Delta_a psi-grad W(psi)",
+    "exact_invariants": "dH_a/dt=0 and d Omega_a((xi,varpi),(eta,vartheta))/dt=0 for any two variational solutions",
+    "global_finite_regulator_existence": "the positive onsite quartic and nonnegative Q3 lock make the finite potential coercive up to its exact additive lower bound; conserved energy prevents finite-time escape"
+  },
+  "analytic_theorem": {
+    "continuum_regularity": "psi in C^2([0,T];C^0(T_L;R^8)) intersect C^0([0,T];C^6_per(T_L;R^8))",
+    "range": "||psi||_{L-infinity component max}<=R0<R",
+    "initial_error": "the modified error energy E_alpha(0)^(1/2)<=C_init*a^2 for fixed alpha>0; exact sampled Cauchy data give C_init=0",
+    "nonlinear_constant": "ell_R=|r|+(3g+36lambda)R^2",
+    "residual": "tau_a=Delta_a R_a psi-R_a psi_xx and ||tau_a||_a<=a^2 sqrt(L/8)[M4/12+a^2 M6/360]",
+    "modified_energy": "E_alpha=chi||e_t||_a^2/2+c||D_a^+e||_a^2/2+alpha||e||_a^2/2",
+    "differential_bound": "E_alpha'<=Gamma_R E_alpha+(c^2/chi)||tau_a||_a^2 with Gamma_R=2sqrt(alpha/chi)+2ell_R/sqrt(alpha chi)+1/2",
+    "uniform_rate": "for every fixed L,T and a<=a_* there is an a-independent C_T with sup_{0<=t<=T} E_alpha(t)^(1/2)<=C_T*a^2",
+    "bootstrap": "the uniform discrete one-dimensional Sobolev bound closes the radius-R interval for sufficiently small a",
+    "rate_scope": "weighted discrete H1_a times L2_a only; piecewise-linear reconstruction is not claimed to converge at O(a^2) in continuous H1"
+  },
+  "consistency_coefficients": {
+    "central_difference": "delta_a^2 f=f''+a^2 f^(4)/12+R, |R|<=a^4||f^(6)||_infinity/360",
+    "derived_from_factorials": "1/12=2/4! and 1/360=2/6!",
+    "Fourier_symbol": "4sin^2(ka/2)/a^2=k^2-k^4a^2/12+k^6a^4/360+O(a^6)",
+    "manufactured_residual": "for psi_e=alpha_e(1+t)x^4 the discrete-minus-continuum residual is -2c alpha_e(1+t)a^2; the pointwise nonlinear force cancels from the comparison"
+  },
+  "tail_corollary": {
+    "statement": "if the separately supplied smooth continuum Cauchy solution vanishes on a declared grid subset K_a(t), then ||psi^a||_{L2_a(K_a)}<=||psi^a-R_a psi||_a<=C a^2 on the fixed interval",
+    "cone_instance": "smooth compactly supported continuum data give such subsets strictly outside the inserted continuum cone before periodic wraparound",
+    "scope": "aggregate weighted L2 disappearance only; no pointwise, exponential, operator-norm, exact-support, moving-boundary, or boundary-Goursat tail theorem",
+    "finite_a_boundary": "the registered strict-cone packages retain particular nonzero variational witness channels at every fixed a; this O(a^2) theorem neither proves nor requires a nonzero tail for every matched smooth datum"
+  },
+  "arb_regression": {
+    "scope": "one Fourier mode of the zero-background linearization; g and lambda may be positive because their quartic Hessians vanish at zero",
+    "inputs": "L=2pi, chi=c=r=1, xi(0,x)=cos x, xi_t(0,x)=0, T=1/2, M=16,32,64,128,256",
+    "exact_mode": "k_a=2sin(a/2)/a, omega_a=sqrt(1+k_a^2), e_M=cos(omega_a T)-cos(sqrt(2)T)",
+    "certified_checks": "160-bit Arb intervals are positive and decreasing, every successive ratio is in (3.97,4.01), and the M=256 normalized error lies within 1e-5 of sin(sqrt(2)/2)/(48sqrt(2))",
+    "regression_is_proof": false,
+    "analytic_authority": "the modified-energy theorem, not the regression, proves the nonlinear O(a^2) rate"
+  },
+  "composition_gate": {
+    "id": "PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION",
+    "status": "OPEN MANIFEST-LOCAL ROUTE GATE",
+    "separation": "this theorem receives a smooth continuum Cauchy solution and lattice Cauchy data separately; it does not receive A,B characteristic traces from the Goursat package",
+    "missing": [
+      "a proved Goursat-slice-to-grid initialization and compatible periodic domain",
+      "uniform regularity of the composed slice map in the theorem norms",
+      "energy and symplectic consistency under sampling and reconstruction",
+      "classical-measure convergence and a common selected quantum state",
+      "a treatment of moving characteristic boundaries or ghost values"
+    ]
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "the fixed periodic domain L and time horizon T",
+      "the smooth continuum Cauchy solution and its C6 spatial bounds",
+      "the centered periodic semidiscretization and sampled or O(a^2)-matched initial data",
+      "the one-eighth physical grid normalization and the Q3 potential",
+      "a max-ball bootstrap radius"
+    ],
+    "derived_outputs": [
+      "the exact consistency and remainder coefficients",
+      "the modified-energy O(a^2) discrete phase-norm estimate",
+      "bootstrap closure for sufficiently small a",
+      "finite-regulator Hamiltonian and variational symplectic conservation",
+      "the conditional aggregate-tail corollary",
+      "a rigorous one-mode Arb regression"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "scope": {
+    "fixed_periodic_domain": true,
+    "fixed_finite_time": true,
+    "smooth_classical_Cauchy_data": true,
+    "weighted_discrete_H1_L2_Oa2": true,
+    "exact_finite_Hamiltonian_conservation": true,
+    "exact_variational_symplectic_conservation": true,
+    "conditional_aggregate_tail_Oa2": true,
+    "finite_a_exact_support": false,
+    "pointwise_or_exponential_tail_bound": false,
+    "moving_characteristic_scheme": false,
+    "semidiscrete_Goursat_reconstruction": false,
+    "boundary_to_lattice_composition": false,
+    "continuous_piecewise_linear_H1_Oa2": false,
+    "growing_time_or_volume_uniformity": false,
+    "thermodynamic_limit": false,
+    "full_3_plus_1_dependence": false,
+    "quantum_continuum": false,
+    "selected_state": false,
+    "physical_vacuum": false,
+    "below_empty_space": false,
+    "cooling": false,
+    "gravity": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "artifacts": {
+    "certificate": "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-certificate-260803.md",
+    "primary_script": "codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2.py",
+    "independent_script": "codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_cl8_semidiscrete_cauchy_oa2_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json"
+  },
+  "prior_art_boundary": "Second-order central-difference consistency, modified-energy convergence for semilinear wave equations, periodic summation by parts, finite Hamiltonian symplectic flows, and rigorous interval regression are established techniques. No world-first or new general theorem is claimed. The repository-specific result is the exact CL8/Q3 potential and one-eighth normalization audit, the explicit nonlinear constants, and the separation of smooth Cauchy convergence from the still-open characteristic boundary composition.",
+  "no_overclaim": "This package proves a fixed-domain, fixed-time smooth classical Cauchy semidiscretization theorem in a weighted discrete norm. It does not prove an exact finite-a cone, a semidiscrete Goursat problem, pointwise or exponential tails, convergence for nonsmooth or arbitrary lattice-frequency data, continuous piecewise-linear H1 O(a^2), growing-time or thermodynamic uniformity, full 3+1 or quantum regulator removal, a boundary-to-lattice state map, physical empty space, a below-empty-space sign, cooling, gravity, CP1, or Pre-A."
+}

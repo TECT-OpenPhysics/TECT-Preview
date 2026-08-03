@@ -1,0 +1,139 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-goursat-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-GOURSAT-v0",
+  "parent_id": "PA-CP1-ST8-Q3LOCK-v0",
+  "result_id": "PA-CP1-CL8-CONTINUUM-GOURSAT-ENERGY-SYMPLECTIC-FLUX",
+  "candidate_family": "PRE-A-CL8-CONTINUUM-CHARACTERISTIC-RECONSTRUCTION",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 exact classical continuum candidate certificate; not a TECT claim, tier change, spacetime-emergence theorem, CP1 completion, or Pre-A closure",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "comparison_context": [
+    "A2-FULL-PRODUCTION-WELLPOSED",
+    "T-054 Pre-A candidate tournament"
+  ],
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "On an inserted fixed 1+1 Lorentzian background, the declared transverse-zero eight-species CL8 classical continuum equation has a unique characteristic solution on a finite null triangle whenever explicit max-ball self-map and contraction gates hold. For C1 traces the solution obeys an exact continuum energy balance, and C1 linearized variations obey the inherited derivative-first dPi-wedge-dpsi symplectic-flux identity. A supplied classical boundary probability measure has a measurable field-value pushforward. The theorem does not discretize the characteristic problem, derive the Lorentzian background, select a quantum or physical state, compare to physical empty space, or compose the boundary map with the finite regulator.",
+  "verdict": "ADVANCE THE GATED CLASSICAL CL8 CONTINUUM GOURSAT MAP; KEEP THE BOUNDARY-TO-LATTICE COMPOSITION AND EVERY PHYSICAL-SELECTION GATE OPEN",
+  "authorities": {
+    "field_and_potential": "strategy/pre-a-cp1-st8-q3lock-manifest.json",
+    "spacing_and_harmonic_context": "strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json",
+    "method_precedent_not_inherited_conclusion": "strategy/pre-a-double-null-semilinear-reconstruction-manifest.json",
+    "finite_regulator_no_go_boundary": "strategy/pre-a-cp1-fdan-strict-cone-nogo-manifest.json"
+  },
+  "definition": {
+    "species_graph": "Q3 with eight vertices, twelve undirected edges, and degree three",
+    "potential": "W(z)=sum_e[r*z_e^2/2+g*z_e^4/4]+(lambda/4)sum_{e~f}(z_e-z_f)^2(z_e^2+z_f^2)",
+    "parameter_domain": "chi>0, c>0, g>0, lambda>=0, r real",
+    "continuum_equation": "chi*psi_tt-c*psi_xx+grad W(psi)=0 for psi in R^8",
+    "sector": "one spatial axis with transverse-zero fields; full 3+1 dependence is not proved",
+    "inserted_speed": "s=sqrt(c/chi)",
+    "null_coordinates": "u=t+x/s, v=t-x/s, so 4chi*psi_uv+grad W(psi)=0",
+    "domain": "D_tau={(u,v):u>=0,v>=0,u+v<=2tau}",
+    "data": "A,B in C^k([0,2tau];R^8), with the sole corner compatibility A(0)=B(0)=C",
+    "free_lift": "G(u,v)=A(u)+B(v)-C",
+    "physical_normalization": "the continuum Hamiltonian and symplectic form carry (1/8)sum_e integral per unit transverse area; the equal-species diagonal retains onsite coefficient g"
+  },
+  "max_ball_constants": {
+    "edge_force": "|partial_a w|<=4lambda R^3",
+    "edge_hessian": "|partial_aa w|<=7lambda R^2 and |partial_ab w|<=5lambda R^2",
+    "gradient_bound": "b_R=|r|R+(g+12lambda)R^3",
+    "lipschitz_bound": "ell_R=|r|+(3g+36lambda)R^2",
+    "sharp_lock_control": "the lock contributions 12lambda R^3 and 36lambda R^2 are saturated by the Q3 bipartite plus/minus-R assignment"
+  },
+  "goursat_theorem": {
+    "volterra_map": "T(phi)=G-(1/(4chi)) integral_0^u integral_0^v grad W(phi)",
+    "self_map_gate": "M0+tau^2*b_R/(4chi)<=R, where M0=||G||_infinity",
+    "contraction_gate": "q=tau^2*ell_R/(4chi)<1",
+    "existence": "Banach gives one continuous radius-R integral solution",
+    "uniqueness": "any two continuous integral solutions with the same traces coincide by a factorial-squared Volterra iteration on a compact common range; ungated existence is not claimed",
+    "stability": "two data sets admitted by the same R and q obey ||psi-psi_tilde||_infinity<=||G-G_tilde||_infinity/(1-q)",
+    "regularity": "C1 traces give continuous psi_u, psi_v, psi_uv; Ck traces bootstrap to Ck for k>=2",
+    "corner_scope": "no independent null normal derivative or third corner datum is supplied; mixed corner derivatives are fixed by the equation",
+    "exact_fixture": "r=g=lambda=chi=R=1, M0=1/2, tau=1/10 gives b_R=14, ell_R=40, self-map value 107/200, q=1/10, and stability factor 10/9"
+  },
+  "continuum_energy": {
+    "regularity": "compatible A,B in C1, so the reconstructed first derivatives and null flux integrands are continuous",
+    "slice": "E_tau=(1/8)integral_{-s tau}^{s tau}[chi|psi_t|^2/2+c|psi_x|^2/2+W(psi)]dx",
+    "current": "partial_t e-partial_x[(c/8)psi_t dot psi_x]=(1/8)psi_t dot (chi psi_tt-c psi_xx+grad W)",
+    "null_flux": "E_tau=(s/8)integral_0^{2tau}[chi|A'|^2+W(A)/2]du+(s/8)integral_0^{2tau}[chi|B'|^2+W(B)/2]dv",
+    "sign_boundary": "when r<0 the unshifted potential has minimum -2r^2/g; the exact balance is not a positive-energy, injectivity, or physical-vacuum theorem"
+  },
+  "variational_symplectic_flux": {
+    "regularity": "two C1 compatible tangent traces a_i(0)=b_i(0) around the same admitted nonlinear background",
+    "convention": "Omega=(1/8)integral delta Pi wedge delta psi with Pi=chi psi_t and i_X Omega=-dH",
+    "slice": "Omega_Sigma=(1/8)integral[(chi eta_1,t) dot eta_2-(chi eta_2,t) dot eta_1]dx",
+    "boundary": "Omega_H=(chi s/8){integral[a_1' dot a_2-a_2' dot a_1]du+integral[b_1' dot b_2-b_2' dot b_1]dv}",
+    "scope": "eta_1 and eta_2 solve the linearized equation around the same nonlinear background solution; this is not a nonlinear Weyl-algebra or quantum-state theorem",
+    "sign_fixture": "the declared massless polynomial fixture gives Omega_Sigma=Omega_H=-14; the value-first hostile convention gives +14"
+  },
+  "classical_measure_pushforward": {
+    "statement": "on any Borel subset of compatible boundary data supported inside common strict gates, P_tau(A,B)(x)=psi(tau+x/s,tau-x/s) is a continuous map into C([-s tau,s tau];R^8), so every supplied Borel probability measure mu_H defines the classical pushforward (P_tau)_*mu_H",
+    "not_selected": "the measure is an input; no preferred, invariant, thermal, vacuum, Hadamard, or quantum state is selected"
+  },
+  "composition_gate": {
+    "id": "PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION",
+    "status": "OPEN MANIFEST-LOCAL ROUTE GATE",
+    "missing": [
+      "a finite-a characteristic scheme or a proved boundary-to-Cauchy initialization map",
+      "same-domain sampling and reconstruction with the required regularity",
+      "energy and symplectic consistency across the composition",
+      "measure convergence and a common selected state",
+      "control of the nonzero finite-a regulator tail under that composition"
+    ]
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "a fixed 1+1 Lorentzian background and its null coordinates",
+      "the transverse-zero reduction and eight Q3-labelled real fields",
+      "chi, c, r, g, lambda, tau, compatible traces, and the max-ball gate",
+      "the one-eighth physical normalization",
+      "a classical boundary probability measure only when pushforward is invoked"
+    ],
+    "derived_outputs": [
+      "the exact Q3 force and Hessian max-ball constants",
+      "gated characteristic existence and stable reconstruction",
+      "global uniqueness conditional on continuous integral existence",
+      "the exact continuum energy balance",
+      "the inherited-sign variational symplectic flux",
+      "measurability of the supplied classical measure pushforward"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "scope": {
+    "fixed_1_plus_1_lorentzian_background": true,
+    "causal_structure_inserted": true,
+    "transverse_zero_eight_species_classical_field": true,
+    "gated_continuum_goursat_reconstruction": true,
+    "continuum_energy_flux": true,
+    "continuum_variational_symplectic_flux": true,
+    "supplied_classical_measure_pushforward": true,
+    "ungated_global_semilinear_existence": false,
+    "full_3_plus_1_dependence": false,
+    "fine_translation_restored": false,
+    "finite_a_goursat_scheme": false,
+    "finite_a_exact_support": false,
+    "lattice_boundary_composition": false,
+    "quantum_or_Hadamard_state_selection": false,
+    "physical_vacuum": false,
+    "below_empty_space": false,
+    "cooling": false,
+    "gravity": false,
+    "event_horizon": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "artifacts": {
+    "certificate": "strategy/pre-a-cp1-cl8-goursat-certificate-260803.md",
+    "primary_script": "codes/foundations/pre_a_cp1_cl8_goursat.py",
+    "independent_script": "codes/foundations/pre_a_cp1_cl8_goursat_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_cl8_goursat_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-goursat/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-goursat/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-goursat/result.json"
+  },
+  "prior_art_boundary": "Characteristic Volterra reconstruction, semilinear Goursat fixed-point arguments, conserved energy currents, covariant symplectic currents, and measurable pushforwards are established mathematics. PA-H1-DNKG4-v0 already registered the scalar fixed-background method. No world-first or new general theorem is claimed. The repository-specific result is the exact eight-species Q3 convention bridge, one-eighth ledger, coefficients, sign audit, and proof-route separation from the finite regulator.",
+  "no_overclaim": "This package proves only the gated classical continuum theorem on an inserted fixed 1+1 Lorentzian background. It does not prove ungated existence, a finite-regulator Goursat map or exact cone, boundary-to-lattice composition, regulator removal, full 3+1 dynamics, restoration of fine translation symmetry, a quantum continuum or selected state, physical empty space or a below-empty-space sign, cooling, gravity, an event horizon, CP1, or Pre-A."
+}

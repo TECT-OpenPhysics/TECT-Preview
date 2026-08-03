@@ -1,0 +1,694 @@
+{
+  "assertions": {
+    "passed": 75,
+    "rows": [
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: pre_a_cp1_cl8_goursat.py",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: pre_a_cp1_cl8_goursat_independent.py",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: pre-a-cp1-cl8-goursat-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: pre-a-cp1-cl8-goursat-certificate-260803.md",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: INDEX.md",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: pre-a-cp1-st8-q3lock-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: pre-a-cp1-st8-block-causal-bridge-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: pre-a-double-null-semilinear-reconstruction-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: pre-a-cp1-fdan-strict-cone-nogo-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: result.json",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "files",
+        "name": "required file exists: result.json",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "tect/pre-a-cp1-cl8-goursat-manifest/0.1",
+          "PA-CP1-CL8-GOURSAT-v0",
+          "PA-CP1-ST8-Q3LOCK-v0",
+          "PA-CP1-CL8-CONTINUUM-GOURSAT-ENERGY-SYMPLECTIC-FLUX",
+          "PRE-A-CL8-CONTINUUM-CHARACTERISTIC-RECONSTRUCTION",
+          "0.1.0",
+          "T-054",
+          false
+        ],
+        "expected": [
+          "tect/pre-a-cp1-cl8-goursat-manifest/0.1",
+          "PA-CP1-CL8-GOURSAT-v0",
+          "PA-CP1-ST8-Q3LOCK-v0",
+          "PA-CP1-CL8-CONTINUUM-GOURSAT-ENERGY-SYMPLECTIC-FLUX",
+          "PRE-A-CL8-CONTINUUM-CHARACTERISTIC-RECONSTRUCTION",
+          "0.1.0",
+          "T-054",
+          false
+        ],
+        "group": "identity",
+        "name": "manifest identity tuple",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-v0",
+        "expected": "PA-CP1-ST8-Q3LOCK-v0",
+        "group": "identity",
+        "name": "Q3LOCK parent identity",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "tect/pre-a-cp1-cl8-goursat-primary/0.1",
+          "PA-CP1-CL8-GOURSAT-v0",
+          "PA-CP1-ST8-Q3LOCK-v0",
+          "PA-CP1-CL8-CONTINUUM-GOURSAT-ENERGY-SYMPLECTIC-FLUX",
+          "tect/pre-a-cp1-cl8-goursat-independent/0.1",
+          "PA-CP1-CL8-GOURSAT-v0",
+          "PA-CP1-ST8-Q3LOCK-v0",
+          "PA-CP1-CL8-CONTINUUM-GOURSAT-ENERGY-SYMPLECTIC-FLUX"
+        ],
+        "expected": [
+          "tect/pre-a-cp1-cl8-goursat-primary/0.1",
+          "PA-CP1-CL8-GOURSAT-v0",
+          "PA-CP1-ST8-Q3LOCK-v0",
+          "PA-CP1-CL8-CONTINUUM-GOURSAT-ENERGY-SYMPLECTIC-FLUX",
+          "tect/pre-a-cp1-cl8-goursat-independent/0.1",
+          "PA-CP1-CL8-GOURSAT-v0",
+          "PA-CP1-ST8-Q3LOCK-v0",
+          "PA-CP1-CL8-CONTINUUM-GOURSAT-ENERGY-SYMPLECTIC-FLUX"
+        ],
+        "group": "identity",
+        "name": "child identity tuples",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          53,
+          53
+        ],
+        "expected": [
+          53,
+          53
+        ],
+        "group": "children",
+        "name": "primary assertion oracle",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          52,
+          52
+        ],
+        "expected": [
+          52,
+          52
+        ],
+        "group": "children",
+        "name": "independent assertion oracle",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "__future__",
+          "argparse",
+          "fractions",
+          "hashlib",
+          "json",
+          "math",
+          "os",
+          "pathlib",
+          "tempfile",
+          "typing"
+        ],
+        "expected": "no primary or sympy import",
+        "group": "independence",
+        "name": "independent imports neither primary nor symbolic engine",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          8,
+          8
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: species_count",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          12,
+          12
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: q3_edge_count",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          3,
+          3
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: q3_degree",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "4",
+          "4"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: edge_force_bound_coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "12",
+          "12"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: edge_hessian_row_bound_coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "14",
+          "14"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: b_R_fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "40",
+          "40"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: ell_R_fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "107/200",
+          "107/200"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: self_map_fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/10",
+          "1/10"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: contraction_fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "10/9",
+          "10/9"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: stability_fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "15/2",
+          "15/2"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: massless_energy_fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-3/2",
+          "-3/2"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: negative_unshifted_energy_fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-14",
+          "-14"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: symplectic_derivative_first_fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "14",
+          "14"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: symplectic_value_first_hostile_control",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "a^3/8",
+          "a^3/8"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: physical_3d_weight",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "a/8",
+          "a/8"
+        ],
+        "expected": "equal",
+        "group": "cross_implementation",
+        "name": "independent exact agreement: reduced_1d_weight_per_unit_transverse_area",
+        "status": "PASS"
+      },
+      {
+        "actual": "2c4bb46bfeb01bca060866c71ebb8d7469adff9c56f4f3cf1184c879aed61780",
+        "expected": "fresh canonical JSON",
+        "group": "stored_evidence",
+        "name": "stored primary equals fresh rerun",
+        "status": "PASS"
+      },
+      {
+        "actual": "2ea690259b0e7f492c634b9bff7b14f887251bb6929dc9f9f83db990b2b2562a",
+        "expected": "fresh canonical JSON",
+        "group": "stored_evidence",
+        "name": "stored independent equals fresh rerun",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest positive scope: fixed_1_plus_1_lorentzian_background",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest positive scope: causal_structure_inserted",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest positive scope: transverse_zero_eight_species_classical_field",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest positive scope: gated_continuum_goursat_reconstruction",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest positive scope: continuum_energy_flux",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest positive scope: continuum_variational_symplectic_flux",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest positive scope: supplied_classical_measure_pushforward",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: ungated_global_semilinear_existence",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: full_3_plus_1_dependence",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: fine_translation_restored",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: finite_a_goursat_scheme",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: finite_a_exact_support",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: lattice_boundary_composition",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: quantum_or_Hadamard_state_selection",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: physical_vacuum",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: below_empty_space",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: cooling",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: gravity",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: event_horizon",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: CP1_complete",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "manifest negative scope: Pre_A_complete",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "id": "PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION",
+          "missing": [
+            "a finite-a characteristic scheme or a proved boundary-to-Cauchy initialization map",
+            "same-domain sampling and reconstruction with the required regularity",
+            "energy and symplectic consistency across the composition",
+            "measure convergence and a common selected state",
+            "control of the nonzero finite-a regulator tail under that composition"
+          ],
+          "status": "OPEN MANIFEST-LOCAL ROUTE GATE"
+        },
+        "expected": "open named route gate",
+        "group": "scope",
+        "name": "composition gate remains open",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "CP1_complete": false,
+          "Lieb_Robinson_quasi_locality_rejected": false,
+          "Pre_A_complete": false,
+          "below_empty_space": false,
+          "controlled_hyperbolic_continuum_limit_rejected": false,
+          "discrete_time_exact_causality_rejected": false,
+          "event_horizon": false,
+          "exact_finite_C1_equilibrium_variational_nogo": true,
+          "gravity": false,
+          "nonlinear_open_neighbourhood_cone_rejected_when_linear_tail_nonzero": true,
+          "physical_vacuum": false,
+          "single_finite_amplitude_trajectory_nogo": false,
+          "unbounded_QFT_microcausality_rejected": false
+        },
+        "expected": "finite no-go true and continuum rejection false",
+        "group": "scope",
+        "name": "finite strict-cone no-go is retained",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate token: section-5-goursat",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate token: section-6-energy",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate token: section-7-symplectic",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate token: section-8-measure",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate token: PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate token: does not prove ungated",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate token: physical-empty-space",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate token: CP1",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate token: Pre-A",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "routing",
+        "name": "strategy index route",
+        "status": "PASS"
+      },
+      {
+        "actual": "strategy/pre-a-cp1-cl8-goursat-certificate-260803.md",
+        "expected": "strategy/pre-a-cp1-cl8-goursat-certificate-260803.md",
+        "group": "artifacts",
+        "name": "manifest artifact path: certificate",
+        "status": "PASS"
+      },
+      {
+        "actual": "codes/foundations/pre_a_cp1_cl8_goursat.py",
+        "expected": "codes/foundations/pre_a_cp1_cl8_goursat.py",
+        "group": "artifacts",
+        "name": "manifest artifact path: primary_script",
+        "status": "PASS"
+      },
+      {
+        "actual": "codes/foundations/pre_a_cp1_cl8_goursat_independent.py",
+        "expected": "codes/foundations/pre_a_cp1_cl8_goursat_independent.py",
+        "group": "artifacts",
+        "name": "manifest artifact path: independent_script",
+        "status": "PASS"
+      },
+      {
+        "actual": "codes/foundations/pre_a_cp1_cl8_goursat_verify.py",
+        "expected": "codes/foundations/pre_a_cp1_cl8_goursat_verify.py",
+        "group": "artifacts",
+        "name": "manifest artifact path: integrated_verifier",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-goursat/result.json",
+        "expected": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-goursat/result.json",
+        "group": "artifacts",
+        "name": "manifest artifact path: primary_result",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-goursat/result.json",
+        "expected": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-goursat/result.json",
+        "group": "artifacts",
+        "name": "manifest artifact path: independent_result",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-goursat/result.json",
+        "expected": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-goursat/result.json",
+        "group": "artifacts",
+        "name": "manifest artifact path: integrated_result",
+        "status": "PASS"
+      }
+    ],
+    "total": 75
+  },
+  "candidate_id": "PA-CP1-CL8-GOURSAT-v0",
+  "child_assertions": {
+    "independent": 52,
+    "primary": 53
+  },
+  "package_version": "0.1.0",
+  "parent_id": "PA-CP1-ST8-Q3LOCK-v0",
+  "provenance": {
+    "certificate_sha256": "5472a71f29ba49b1cbaae05c8cf2eab99d6fad64f2e14a5008ee624c29d457fc",
+    "independent_sha256": "4450e9ea67c4192b38738f7054825a3e5c4065ec5bacb70ac935c41aa7826316",
+    "manifest_sha256": "571ac5cd92fffd25e14da57ec9c4ef17e2550f72718d739f1a335dfb27c4647b",
+    "primary_sha256": "f2aedce7e2a0664a5eca7788e2ec4c671ff41e78d4fa9f27ced4497ee22ab7d5",
+    "q3lock_sha256": "d49686f88833f323beabd2953eb50d0a1083d3d71fcc28e27da6a4d2b3b81046",
+    "stored_independent_sha256": "2ea690259b0e7f492c634b9bff7b14f887251bb6929dc9f9f83db990b2b2562a",
+    "stored_primary_sha256": "2c4bb46bfeb01bca060866c71ebb8d7469adff9c56f4f3cf1184c879aed61780",
+    "verifier": "codes/foundations/pre_a_cp1_cl8_goursat_verify.py",
+    "verifier_sha256": "3ac32ce900e73ff5b12ef036eeef0fb43d208ec5443c80ad282f80db5f118b5b"
+  },
+  "result_id": "PA-CP1-CL8-CONTINUUM-GOURSAT-ENERGY-SYMPLECTIC-FLUX",
+  "schema": "tect/pre-a-cp1-cl8-goursat-integrated/0.1",
+  "scope": {
+    "claim_bearing": false,
+    "cp1_complete": false,
+    "gated_continuum_goursat": true,
+    "lattice_boundary_composition": false,
+    "physical_empty_space": false,
+    "physical_state_selection": false,
+    "pre_a_complete": false
+  },
+  "verdict": "PASS"
+}
