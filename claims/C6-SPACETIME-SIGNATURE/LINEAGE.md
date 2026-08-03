@@ -23,8 +23,8 @@ _No curated narrative yet. Write `claims/C6-SPACETIME-SIGNATURE/lineage-narrativ
 - `runs/2026-08-03-independent-pre-a-c0a-reflection-positive-transfer/`
 - `runs/2026-08-03-independent-pre-a-c0b-equivariant-causal-selection-nogo/`
 - `runs/2026-08-03-independent-pre-a-cp1-cl8-classical-boundary-lattice-oa2/`
+- `runs/2026-08-03-independent-pre-a-cp1-cl8-global-goursat-continuation/`
 - `runs/2026-08-03-independent-pre-a-cp1-cl8-goursat/`
-- `runs/2026-08-03-independent-pre-a-cp1-cl8-periodic-slice-lattice-composition-oa2/`
 - `runs/2026-08-03-independent-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/`
 - `runs/2026-08-03-independent-pre-a-cp1-fdan-strict-cone-nogo/`
 - `runs/2026-08-03-independent-pre-a-cp1-lt3-rs-common-container/`
@@ -38,8 +38,8 @@ _No curated narrative yet. Write `claims/C6-SPACETIME-SIGNATURE/lineage-narrativ
 - `runs/2026-08-03-integrated-pre-a-c0a-reflection-positive-transfer/`
 - `runs/2026-08-03-integrated-pre-a-c0b-equivariant-causal-selection-nogo/`
 - `runs/2026-08-03-integrated-pre-a-cp1-cl8-classical-boundary-lattice-oa2/`
+- `runs/2026-08-03-integrated-pre-a-cp1-cl8-global-goursat-continuation/`
 - `runs/2026-08-03-integrated-pre-a-cp1-cl8-goursat/`
-- `runs/2026-08-03-integrated-pre-a-cp1-cl8-periodic-slice-lattice-composition-oa2/`
 - `runs/2026-08-03-integrated-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/`
 - `runs/2026-08-03-integrated-pre-a-cp1-fdan-strict-cone-nogo/`
 - `runs/2026-08-03-integrated-pre-a-cp1-lt3-rs-common-container/`
@@ -53,8 +53,8 @@ _No curated narrative yet. Write `claims/C6-SPACETIME-SIGNATURE/lineage-narrativ
 - `runs/2026-08-03-primary-pre-a-c0a-reflection-positive-transfer/`
 - `runs/2026-08-03-primary-pre-a-c0b-equivariant-causal-selection-nogo/`
 - `runs/2026-08-03-primary-pre-a-cp1-cl8-classical-boundary-lattice-oa2/`
+- `runs/2026-08-03-primary-pre-a-cp1-cl8-global-goursat-continuation/`
 - `runs/2026-08-03-primary-pre-a-cp1-cl8-goursat/`
-- `runs/2026-08-03-primary-pre-a-cp1-cl8-periodic-slice-lattice-composition-oa2/`
 - `runs/2026-08-03-primary-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/`
 - `runs/2026-08-03-primary-pre-a-cp1-fdan-strict-cone-nogo/`
 - `runs/2026-08-03-primary-pre-a-cp1-lt3-rs-common-container/`

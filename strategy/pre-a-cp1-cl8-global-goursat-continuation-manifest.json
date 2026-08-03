@@ -1,0 +1,172 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-global-goursat-continuation-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-GLOBAL-GOURSAT-CONTINUATION-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-GOURSAT-v0",
+    "PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-OA2-v0"
+  ],
+  "result_id": "PA-CP1-CL8-FINITE-TRIANGLE-GOURSAT-GLOBAL-EXISTENCE-STABILITY",
+  "candidate_family": "PRE-A-CL8-GLOBAL-CHARACTERISTIC-CONTINUATION",
+  "package_version": "0.1.0",
+  "issued": "2026-08-03",
+  "authority": "T0 exact classical fixed-background candidate certificate; not a TECT claim, tier change, physical-state theorem, CP1 completion, or Pre-A closure",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "comparison_context": [
+    "A2-FULL-PRODUCTION-WELLPOSED",
+    "T-054 Pre-A candidate tournament"
+  ],
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "For chi>0, c>0, g>0, lambda>=0 and real r, every finite null triangle and every compatible C1 pair of eight-species CL8 characteristic traces admit a unique classical integral solution. A constant shift W_hat=W+2*r_minus^2/g makes the exact null-flux ledger nonnegative without changing the equation. The shifted flux, a quartic coercive inequality and the one-dimensional H1 embedding give an explicit solution-amplitude bound. That bound closes translated local Volterra patches across the whole triangle. Two solutions obey a global Bessel-I0 sup-norm stability estimate on their common finite triangle. Consequently the inserted L=pi/2 ordered PA-H1 circumference is covered despite failure of the former one-patch contraction test.",
+  "verdict": "CLOSE THE MANIFEST-LOCAL FULL-CIRCUMFERENCE CLASSICAL GOURSAT GATE; KEEP STATE SELECTION, QUANTUM COMPOSITION, PHYSICAL REFERENCE, CP1, AND PRE-A OPEN",
+  "authorities": {
+    "local_goursat_parent": "strategy/pre-a-cp1-cl8-goursat-manifest.json",
+    "gate_parent": "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-manifest.json",
+    "field_and_potential": "strategy/pre-a-cp1-st8-q3lock-manifest.json",
+    "pah1_calibration": "strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json",
+    "method_precedent_not_inherited_conclusion": "strategy/pre-a-double-null-semilinear-reconstruction-manifest.json",
+    "finite_regulator_strict_cone_boundary": "strategy/pre-a-cp1-fdan-strict-cone-nogo-manifest.json"
+  },
+  "definition": {
+    "equation": "chi*psi_tt-c*psi_xx+grad W(psi)=0, equivalently 4chi*psi_uv+grad W(psi)=0",
+    "domain": "D_tau={(u,v):u>=0,v>=0,u+v<=2tau}, with arbitrary finite tau>0",
+    "data": "A,B in C1([0,2tau];R^8), A(0)=B(0); Ck data retain Ck regularity for k>=2",
+    "speed": "s=sqrt(c/chi)",
+    "potential": "W(z)=sum_e[r*z_e^2/2+g*z_e^4/4]+(lambda/4)sum_{e~f}(z_e-z_f)^2(z_e^2+z_f^2)",
+    "parameter_domain": "chi>0, c>0, g>0, lambda>=0, r real",
+    "normalization": "all continuum energy and symplectic ledgers retain the inherited (1/8)sum_e integral per unit transverse area"
+  },
+  "coercive_shift": {
+    "negative_part": "r_minus=max(-r,0)",
+    "constant": "C_star=2*r_minus^2/g",
+    "shifted_potential": "W_hat=W+C_star",
+    "equation_unchanged": "grad W_hat=grad W",
+    "nonnegative_identity": "each onsite term plus r_minus^2/(4g) is (g*z_e^2-r_minus)^2/(4g) when r<0; the Q3 lock term is nonnegative; hence W_hat>=0",
+    "quartic_lower_bound": "W_hat(z)>=g*sum_e z_e^4/8-2*r_minus^2/g",
+    "physical_boundary": "C_star is a proof normalization only; it is not a selected vacuum energy, physical empty-space reference, or below-empty-space comparison"
+  },
+  "global_goursat_theorem": {
+    "boundary_flux_density": "f_A=chi*|A'|^2+W_hat(A)/2 and f_B=chi*|B'|^2+W_hat(B)/2",
+    "full_boundary_flux": "Fcal_tau=(s/8){int_0^(2tau) f_A du+int_0^(2tau) f_B dv}",
+    "shifted_energy": "E_hat(t)=(1/8)int_[-st,st][chi|psi_t|^2/2+c|psi_x|^2/2+W_hat(psi)]dx",
+    "exact_flux": "E_hat(t)=(s/8){int_0^(2t) f_A du+int_0^(2t) f_B dv}",
+    "energy_bound": "0<=E_hat(t)<=Fcal_tau",
+    "amplitude_bound": "sup_Dtau |psi|_component<=S_tau=max(||A||_infinity,||B||_infinity)+4*sqrt(2*s*tau*Fcal_tau/c)",
+    "shell_geometry": "for D_(T+delta) minus D_T, every unknown Volterra cap has area at most (u+v-2T)^2/2<=2delta^2",
+    "continuation": "with M0=||A+B-C||_infinity, K0=M0+tau^2*b_Stau/(4chi), R_c=K0+rho, choose delta>0 so delta^2*b_Rc/(2chi)<=rho and delta^2*ell_Rc/(2chi)<1; the uniform shell contradicts any finite maximal T<tau",
+    "existence": "the local Volterra solution therefore cannot terminate at a finite interior frontier and extends over every finite D_tau",
+    "uniqueness": "the inherited factorial-squared Volterra argument applies on the compact common amplitude range",
+    "regularity": "the integral derivative formulas bound psi_u and psi_v; C1 traces give a C1 solution with continuous mixed derivative, and Ck regularity bootstraps for k>=2",
+    "variational_flux": "the parent linearized symplectic current extends across the finite solution; internal shell or rectangle interfaces cancel with opposite orientations, leaving the same two supplied null sides and final-slice flux identity"
+  },
+  "global_stability": {
+    "common_radius": "R=max(S_tau(A,B),S_tau(A_tilde,B_tilde))",
+    "force_lipschitz": "ell_R=|r|+(3g+36lambda)R^2",
+    "free_lift_difference": "delta_G=||[A+B-C]-[A_tilde+B_tilde-C_tilde]||_infinity",
+    "estimate": "||psi-psi_tilde||_infinity<=delta_G*I0(tau*sqrt(ell_R/chi))",
+    "derivation": "the nth two-variable Volterra iterate contributes at most (ell_R*u*v/(4chi))^n/(n!)^2, and uv<=tau^2 on D_tau",
+    "scope": "finite-triangle field-value stability; derivative and phase-space stability require the corresponding higher trace norms and are not claimed here"
+  },
+  "high_regularity_phase_map": {
+    "force_structure": "grad W is cubic, so its derivative tensors vanish from order four onward",
+    "recursive_bound": "with D_m=max_(p+q<=m)||partial_u^p partial_v^q psi|| and P_j the Faà-di-Bruno bound for j derivatives of grad W on the S_tau ball, D_m<=max{D_(m-1),T_m+tau*P_(m-1)/(2chi),P_(m-2)/(4chi)}; P_j depends only on D_0,...,D_j and at most three derivative factors",
+    "closure": "because the right side for D_m uses only D_0,...,D_(m-1), C8 trace bounds close inductively through m=8",
+    "continuity": "the same polynomial difference recursion, starting from the global I0 field bound, makes the phase-slice map continuous from C8 trace pairs into C7 by C6",
+    "uniform_compact_family": "each compact C8 source subset has common trace, flux, S_tau and recursive derivative bounds; on its seam-compatible trace image the inherited fixed-family O(a^2) composition theorem applies"
+  },
+  "pah1_full_circumference": {
+    "inserted_inputs": "L=pi/2, c/chi=1, -2r/chi=9, so s=1 and tau=pi/4",
+    "old_gate_failure": "the unshifted and ordered-shift one-patch lower factors remain 9pi^2/32>1 and 9pi^2/64>1",
+    "new_coverage": "the global continuation theorem has no whole-triangle smallness assumption and covers every compatible C1 ordered PA-H1-scale trace pair with finite boundary flux, including nonconstant perturbations",
+    "periodic_boundary": "existence does not create a periodic seam; literal direct-circle composition still requires the final q jets through order seven and Pi jets through order six to match",
+    "not_derived": "the circumference, parameter tuning, collective species choice, characteristic role, trace pair, probability measure, or quantum state"
+  },
+  "periodic_circumference_witness": {
+    "construction": "start at t=tau from periodic C8 by C7 Cauchy data on L=pi/2, evolve backward by the inherited global periodic classical theorem, and restrict that solution to the two null sides; Goursat uniqueness reconstructs the same periodic final phase",
+    "nonconstant_family": "on the collective ordered branch take q_e(x)=v+epsilon*cos(4x), Pi_e(x)=0 for all eight species, with 0<|epsilon|<v=sqrt(-r/g); smooth periodic Cauchy evolution supplies compatible nonconstant traces",
+    "topology": "the trace family is the image of an open periodic C8 by C7 Cauchy neighborhood, equipped only with the pullback/relative topology from those Cauchy data; no independent embedded-manifold or openness theorem in unconstrained trace space is claimed",
+    "uniformity": "on each compact source subset, differentiated Volterra induction gives common C8-to-C7-by-C6 phase-map bounds in addition to finite boundary-flux and amplitude bounds, so the existing fixed-family O(a^2) composition theorem remains applicable"
+  },
+  "gate_resolution": {
+    "id": "PA-CP1-CL8-FULL-CIRCUMFERENCE-GOURSAT-EXISTENCE",
+    "previous_status": "OPEN MANIFEST-LOCAL ROUTE GATE",
+    "status": "CLOSED IN DECLARED CLASSICAL FIXED-BACKGROUND SCOPE",
+    "closed_scope": "arbitrary finite null triangles and compatible C1 CL8 traces, including triangles whose final-slice length equals the inserted ordered PA-H1 value L=pi/2, with explicit amplitude control and field-value stability; literal circle composition still requires the declared seam conditions",
+    "not_closed": [
+      "derivation of the Lorentzian background or characteristic boundary",
+      "full 3+1 or gravity-constrained characteristic evolution",
+      "preferred classical-measure selection",
+      "quantum or Hadamard state composition",
+      "physical vacuum or below-empty-space comparison",
+      "growing-time, thermodynamic, or cosmological limit"
+    ],
+    "next_gate": "PA-CP1-CL8-PREFERRED-STATE-COMPOSITION-SELECTION"
+  },
+  "hostile_boundaries": {
+    "wrong_sign": "reversing the sign of grad W destroys this coercive-energy argument and is outside the theorem",
+    "nonpositive_quartic": "g=0 or g<0 removes the declared quartic coercive bound",
+    "negative_lock": "lambda<0 removes nonnegativity of the Q3 lock term and is outside the theorem",
+    "infinite_domain": "the theorem is for each finite tau; no tau-uniform or cosmological limit is supplied",
+    "constant_shift": "the proof shift cannot establish an absolute energy zero or a sign relative to physical empty space",
+    "state_selection": "existence for supplied traces neither selects traces nor equips them with a preferred measure or quantum state",
+    "periodic_seam": "arbitrary compatible Goursat traces need not satisfy A(2tau)=B(2tau) or the higher q and Pi seam constraints; only the declared seam-compatible trace subset composes directly on the circle",
+    "registered_same_domain_no_go": "NG-2026-08-03-PRE-A-CP1-CL8-UNMATCHED-PERIODIC-COMPOSITION remains in force for generic admitted traces",
+    "linearized_shell_fixture": "the illustrative counts two at ell=9chi and three at ell=18chi are constant-curvature linearized controls only; the nonlinear theorem uses the trace-dependent b_Rc, ell_Rc and self-map reserve and claims no universal patch count"
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "the fixed 1+1 Lorentzian CL8 equation and null coordinates",
+      "chi, c, r, g, lambda and a finite tau",
+      "compatible C1 characteristic traces",
+      "the PA-H1 circumference and tuning only when that calibration is invoked"
+    ],
+    "derived_outputs": [
+      "the exact nonnegative proof shift and quartic coercive inequality",
+      "the explicit null-flux, quartic, derivative and amplitude bounds",
+      "global finite-triangle characteristic continuation and uniqueness",
+      "the global Bessel-I0 field-value stability factor",
+      "coverage of the inserted full ordered PA-H1 circumference"
+    ],
+    "physical_predictions": [],
+    "holdout_prediction": false
+  },
+  "scope": {
+    "fixed_1_plus_1_lorentzian_background": true,
+    "transverse_zero_eight_species_classical_field": true,
+    "arbitrary_finite_triangle_goursat_existence": true,
+    "global_classical_uniqueness": true,
+    "explicit_amplitude_bound": true,
+    "global_field_value_stability": true,
+    "full_pah1_circumference_classical_gate": true,
+    "nonconstant_periodic_ordered_trace_family": true,
+    "periodic_seams_automatic": false,
+    "causal_structure_derived": false,
+    "full_3_plus_1_dependence": false,
+    "gravity_constraints": false,
+    "finite_a_goursat_scheme": false,
+    "growing_time_uniformity": false,
+    "thermodynamic_limit": false,
+    "selected_classical_measure": false,
+    "selected_state": false,
+    "quantum_or_Hadamard_state": false,
+    "physical_vacuum": false,
+    "below_empty_space": false,
+    "cooling": false,
+    "gravity": false,
+    "event_horizon": false,
+    "C6_claim_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "artifacts": {
+    "certificate": "strategy/pre-a-cp1-cl8-global-goursat-continuation-certificate-260803.md",
+    "primary_script": "codes/foundations/pre_a_cp1_cl8_global_goursat_continuation.py",
+    "independent_script": "codes/foundations/pre_a_cp1_cl8_global_goursat_continuation_independent.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_cl8_global_goursat_continuation_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-global-goursat-continuation/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-global-goursat-continuation/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-global-goursat-continuation/result.json"
+  },
+  "prior_art_boundary": "Energy continuation for defocusing semilinear waves, characteristic rectangle patching, one-dimensional Sobolev control and Bessel-majorized Volterra stability are established mathematics. No world-first or new general PDE theorem is claimed. The repository-specific result is the exact CL8/Q3 coercive shift, one-eighth null-flux ledger, explicit constants, PA-H1 calibration repair and proof-route gate resolution.",
+  "no_overclaim": "This package proves only global classical existence, uniqueness and field-value stability on each finite null triangle of an inserted fixed 1+1 CL8 theory and exhibits a nonconstant seam-compatible periodic trace family. It does not make arbitrary Goursat traces periodic, derive the cone, a horizon, spacetime, gravity, full 3+1 dynamics, a finite-regulator characteristic scheme, a preferred boundary measure, a quantum or Hadamard state, physical empty space, an absolute energy zero, a below-empty-space sign, cooling, a phase transition, C6 advancement, CP1, or Pre-A."
+}
