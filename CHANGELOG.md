@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [T-050 route audit: direct signed owner survives automatic collars] - 2026-08-03
+
+Recorded EXP-000720--EXP-000723 as one route-decision checkpoint without creating a new result. Complete variance-minus-forest recombination removes the forest-coordinate Dh/D2h debt from the direct fixed-law endpoint Hessian, leaving the actual fibrewise K_E+K_6 >= -4G/5 test and uniform anchor. A rescaled tanh chart defeats first-derivative and bi-Lipschitz score collars; the canonical Foellmer drift has bounded control energy but divergent time-integrated Jacobian energy on the registered oscillatory-density fixture; and the R-149 active-spectator negative coefficient curvature does not survive owner identification as an automatic production counterexample. T-050 remains open and parked, while truth-first T-054 remains the main lane.
+
 ## [Reassign Q3LOCK exploration id after concurrent CP1a integration] - 2026-08-03
 
 Concurrent CP1a work reached the remote main first and occupied EXP-000714 through EXP-000718. Preserve those append-only records and re-register the Q3LOCK route as EXP-000719. The pre-rebase Q3LOCK event mentioning EXP-000714 is historical; this event is its authority correction. No formula, assertion count, candidate verdict, negative result, task status, claim tier, CP1 status, or Pre-A status changes.
