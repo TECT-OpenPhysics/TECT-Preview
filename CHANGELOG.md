@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [T-054: correct classical CL8 composition exploration id after concurrent rebase] - 2026-08-03
+
+A concurrent remote commit occupied EXP-000729 before the classical CL8 composition checkpoint was published. The CL8 route record is therefore registered as EXP-000730. In event 20260803-t-054-close-classical-cl8-boundary-lattice-comp, read the EXP-000729 keyword as EXP-000730. T-054 now points to EXP-000730. The candidate certificate, theorem scope, 205-check total, open full-circumference and preferred-state gates, and absence of any formal result, new negative, claim-tier, physical-empty-space, CP1, or Pre-A closure are unchanged.
+
+## [T-054: close classical CL8 boundary-lattice composition by scope split] - 2026-08-03
+
+Added the claim-nonbearing PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-OA2-v0 certificate. A periodic-jet-compatible branch preserves the continuum Goursat energy and variational symplectic ledgers before O(a^2) sampling, while generic traces use an explicit larger-circle Hermite fill with separate exterior ledgers. Exact sampled initialization, the inherited semidiscrete theorem, and real trigonometric reconstruction give O(a^2) convergence in a common weighted H1 times L2 phase space; supplied compact classical phase measures converge in W1 at O(a^2). Hostile controls retain generic seam divergence, arbitrary-frequency non-exactness, finite-a tails, and the PA-H1 full-circumference one-patch obstruction. Primary 49, independent 38, and integrated 118 checks pass. The mixed parent gate is resolved only by scope split: the smooth classical kinematic subgate closes, while full-circumference Goursat existence and preferred classical-measure or quantum-state selection remain open. No new formal result, negative record, claim card, tier, C6 authority change, physical reference, CP1, or Pre-A closure.
+
 ## [T-054: correct CL8 exploration id after concurrent rebase] - 2026-08-03
 
 A concurrent remote commit registered EXP-000726 and EXP-000727 before the CL8 checkpoint was published. The CL8 route record was therefore remapped append-only to EXP-000728. In the immediately preceding event 20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy, read its single EXP-000726 reference as EXP-000728. The two candidate certificates, theorem scope, assertion totals, open composition gate, and absence of any tier, R-result, physical-empty-space, CP1 or Pre-A change are otherwise unchanged.

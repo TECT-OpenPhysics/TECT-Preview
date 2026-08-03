@@ -7,7 +7,7 @@
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
     "RESULTS-LEDGER.md": "90557e1699f8aa42d07dc5586b8916b03c06b67e39558b897850c1e40fc8eb44",
-    "changelog/log.jsonl": "228b7ab0bb8740b898135c8a2e53d6c69f3bcba2809279159032e2d0ec6ec678",
+    "changelog/log.jsonl": "17e4c2191249b2517a8436184f3a7ff06cc7a4340abf9d4610beaac396a919cf",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,9 +58,9 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "96860763e26315b221fa0aa11e4ed557a3dd0f5cb3dd1bab92d73b291d3eb013",
-    "explorations/log.jsonl": "714c9b8a5f509d9564b19009bc9d0ba6b2f4b8aba183d67cf89380cbd3bec86f",
+    "explorations/log.jsonl": "938762ea1764efcd2f2679140248bf9d86927fa8b18ca91d9b82e8acf1137426",
     "negative-results/registry.md": "b43668b7a3710aaa50124ac4953dca9a671f07c19a06bc9b64e2487836ac39c9",
-    "todo/todo.json": "17bbe0f44a5212e8f4c927a78e189a61268dde45c0b4c529c2226cb21cf949ce"
+    "todo/todo.json": "00d13518df071d7c8a9d596f1aea22b3d361861cf289d6a86e66e38c93fcc9fd"
   },
   "coverage": {
     "status_cards": 49,
@@ -68,15 +68,15 @@
     "refuted_claims": 1,
     "reusable_results": 162,
     "negative_records": 249,
-    "proof_explorations": 729,
+    "proof_explorations": 730,
     "exploration_verdicts": {
-      "advanced": 409,
+      "advanced": 410,
       "failed": 233,
       "inconclusive": 62,
       "parked": 25
     },
     "process_grade_lessons": 3,
-    "accepted_events": 514,
+    "accepted_events": 516,
     "tasks": 54,
     "live_tasks": 9,
     "completed_tasks": 45,
@@ -89,7 +89,7 @@
     "unordered_root_pdfs": 9,
     "proof_notes_without_sibling_pdf": 19,
     "proof_notes_with_incomplete_historical_footer": 118,
-    "run_json": 564,
+    "run_json": 567,
     "claim_manifests": 120,
     "bundle_manifests": 40,
     "bundle_embedded_manifests": 45
@@ -2280,7 +2280,7 @@
       "owner": "Codex",
       "claim": null,
       "gate": null,
-      "note": "EXP-000711--EXP-000713 establish the LT3/ST8 finite-local branch; EXP-000714--EXP-000716 retain CP1a as a fitted comparator; EXP-000719 registers Q3LOCK; EXP-000724 and EXP-000725 register and repair the finite-C1 strict-cone no-go. EXP-000728 now splits the controlled-continuum checkpoint into PA-CP1-CL8-GOURSAT-v0 and PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0. The first proves, on an inserted fixed 1+1 Lorentzian background and the pinned one-eighth ledger, gated transverse-zero eight-species classical Goursat reconstruction, exact continuum energy balance, inherited-sign variational symplectic flux, and only a supplied classical field-value measure pushforward. The second proves fixed-periodic-domain, fixed-time O(a^2) convergence for separately supplied smooth Cauchy data in weighted discrete H1_a times L2_a, exact finite Hamiltonian and variational symplectic conservation, and only an aggregate O(a^2) bound on regions where the continuum solution vanishes. Goursat primary 53, independent 52, integrated 75 and semidiscrete primary 38, independent 29, integrated 80 checks pass, 327 combined. They are not composed: PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION remains open, including phase-slice regularity, compatible same-domain sampling and reconstruction, energy, symplectic and supplied-measure control, and a common selected state. Exact finite-a support remains false; registered variational witness tails remain nonzero, while the convergence theorem neither proves nor requires a nonzero tail for every datum. Next close or refute the composition gate before quantum promotion. Keep block-origin restoration, fine translation, full 3+1 dependence, quantum continuum and state selection, physical empty space and the below-empty-space sign, cooling, gravity, CP1 and Pre-A open.",
+      "note": "EXP-000711--EXP-000725 retain the LT3/ST8/Q3LOCK finite-local branch, the CP1a comparator, and the finite-C1 strict-cone boundary. EXP-000728 registered separate CL8 Goursat and semidiscrete Cauchy theorems. EXP-000730 now resolves their mixed boundary-to-lattice gate by scope split through PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-OA2-v0. Periodic-jet-compatible C8 Goursat phase slices initialize the even-M lattice directly; generic admitted traces require a declared larger-circle Hermite fill with separate H_ext and Omega_ext ledgers. Exact sampling and the inherited theorem give O(a^2) grid-phase convergence, real trigonometric reconstruction gives O(a^2) in a common weighted H1 times L2 space including the Nyquist half-weight, and supplied compact classical phase measures converge in W1 at O(a^2). Primary 49, independent 38, integrated 118 checks pass, 205 combined. Generic direct seams, exact arbitrary-frequency sampling, and exact finite-a support remain rejected. The inserted full ordered PA-H1 circumference violates the current one-patch contraction gate with q at least 9pi^2/32, or 9pi^2/64 after an ordered shift; this blocks the certificate, not existence. Next attack PA-CP1-CL8-FULL-CIRCUMFERENCE-GOURSAT-EXISTENCE by multi-patch or global continuation, then PA-CP1-CL8-PREFERRED-STATE-COMPOSITION-SELECTION. Keep preferred classical-measure selection, quantum state composition, fine translation, full 3+1 dependence, physical empty space and the below-empty-space sign, cooling, gravity, C6 advancement, CP1 and Pre-A open.",
       "created": "2026-08-02",
       "updated": "2026-08-03",
       "blocked_by": [],
@@ -9557,6 +9557,7 @@
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0a-reflection-positive-transfer/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-c0b-equivariant-causal-selection-nogo/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-classical-boundary-lattice-oa2/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-goursat/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-independent-pre-a-cp1-fdan-strict-cone-nogo/result.json",
@@ -9570,6 +9571,7 @@
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0a-reflection-positive-transfer/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-c0b-equivariant-causal-selection-nogo/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-classical-boundary-lattice-oa2/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-goursat/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-fdan-strict-cone-nogo/result.json",
@@ -9583,6 +9585,7 @@
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0a-gaussian-ccr-pah1-embedding/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0a-reflection-positive-transfer/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-c0b-equivariant-causal-selection-nogo/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-classical-boundary-lattice-oa2/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-goursat/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-cl8-semidiscrete-cauchy-oa2/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-primary-pre-a-cp1-fdan-strict-cone-nogo/result.json",
@@ -9630,9 +9633,10 @@
           "EXP-000719",
           "EXP-000724",
           "EXP-000725",
-          "EXP-000728"
+          "EXP-000728",
+          "EXP-000730"
         ],
-        "latest_exploration_id": "EXP-000728",
+        "latest_exploration_id": "EXP-000730",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -9659,9 +9663,11 @@
           "20260803-t-054-register-finite-c1-equilibrium-strict-con",
           "20260803-t-054-repair-q3-ordered-fixture-and-pin-cp1a-co",
           "20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy",
-          "20260803-t-054-correct-cl8-exploration-id-after-concurre"
+          "20260803-t-054-correct-cl8-exploration-id-after-concurre",
+          "20260803-t-054-close-classical-cl8-boundary-lattice-comp",
+          "20260803-t-054-correct-classical-cl8-composition-explora"
         ],
-        "latest_event_id": "20260803-t-054-correct-cl8-exploration-id-after-concurre",
+        "latest_event_id": "20260803-t-054-correct-classical-cl8-composition-explora",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "C6-BCC-PREMISE-BLOCKED"
@@ -57100,6 +57106,59 @@
       "task_id": "T-050",
       "title": "Three-way audit finds no cheap A13 shortcut and confirms the truth-first candidate lane",
       "verdict": "parked"
+    },
+    {
+      "boundary": "This is a claim-nonbearing T0 fixed-background, transverse-zero, smooth, fixed-domain, fixed-time classical composition certificate. The direct branch requires correlated periodic jets; the generic branch depends on a declared noncanonical extension. No exact finite-a energy, symplectic, or support map is proved, and registered nonzero variational witness tails remain. The present one-patch Goursat certificate does not cover a nontrivial full ordered PA-H1 circumference. Preferred or invariant classical-measure selection, quantum-state composition, growing-time and thermodynamic limits, fine-translation restoration, full 3+1 dependence, physical empty space and the below-empty-space sign, cooling, gravity, event horizons, C6 advancement, CP1, and Pre-A remain open.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The two-branch theorem closes the classical kinematic interface at the strongest scope supported by the existing Goursat and semidiscrete authorities while turning every hidden boundary choice into an input and preserving all extra ledgers. Splitting the old gate prevents supplied classical-measure convergence from being confused with preferred-state selection and prevents a classical continuum approximation from being promoted to a finite-a characteristic or quantum-state theorem.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md#section-3-generic-obstruction",
+        "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md#section-5-domain-branches",
+        "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md#section-7-sampling",
+        "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md#section-8-energy",
+        "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md#section-10-reconstruction",
+        "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md#section-11-measure",
+        "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md#section-13-calibration",
+        "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-manifest.json#composition_gate_resolution",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-03-integrated-pre-a-cp1-cl8-classical-boundary-lattice-oa2/result.json#assertions"
+      ],
+      "finding": "The original mixed route gate is resolved only by scope split. On the strong periodic-jet-compatible branch, the Goursat phase slice initializes the inherited even-M periodic lattice directly, with exact continuum null energy and symplectic flux before sampling and O(a^2) finite-ledger consistency. Generic admitted traces require a declared larger-circle Hermite extension, for which H_ext and Omega_ext are generally nonzero and remain explicit. Exact sampled initialization and the parent theorem give O(a^2) grid-phase convergence; real trigonometric reconstruction, including the Nyquist half-weight, gives O(a^2) convergence in a common weighted H1 times L2 phase space; any supplied compact C8 classical phase measure then converges in W1 at O(a^2). Generic direct seams can diverge as c|delta|^2/(16a), point sampling is not exactly energy- or symplectic-preserving on arbitrary-frequency families, and the inserted full ordered PA-H1 circumference makes the current one-patch contraction factor at least 9pi^2/32>1, or 9pi^2/64 after shifting to the ordered tangent. Primary 49, independent 38, and integrated 118 checks pass, 205 combined.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE",
+          "NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE"
+        ],
+        "results": []
+      },
+      "gate_ids": [],
+      "id": "EXP-000730",
+      "method": [
+        "Derive the full final-slice phase map q=psi and Pi=chi psi_t, including exact endpoint formulas from the Volterra equation, and test generic periodic seam compatibility.",
+        "Prove a direct branch for phase slices whose q jets through order seven and Pi jets through order six match periodically, with exact null-coordinate grid geometry and zero sampled initial modified error.",
+        "Construct a generic branch by independently inverting the order-seven and order-six two-endpoint Hermite jet systems, while retaining the complementary-arc Hamiltonian and variational symplectic ledgers.",
+        "Prove global fixed-time H7 by H6 periodic classical continuation from coercive energy and differentiated Sobolev estimates, then invoke the existing nonlinear semidiscrete O(a^2) theorem with uniform constants on compact C8 trace families.",
+        "Audit periodic energy and symplectic quadrature, the real even-M Nyquist half-weight, trigonometric H1 by L2 reconstruction, and identity-coupling W1 convergence with primary symbolic and non-importing Fraction implementations.",
+        "Run hostile controls for field-jump seam energy, derivative-jump residuals, field-only measure loss, arbitrary-frequency sampling kernels, finite-a tails, and the full-circumference ordered PA-H1 one-patch contraction factor."
+      ],
+      "next_action": "Attack PA-CP1-CL8-FULL-CIRCUMFERENCE-GOURSAT-EXISTENCE by a multi-patch, continuation, or global energy argument that covers nontrivial ordered PA-H1-scale perturbations. Only after that route is closed or rejected should PA-CP1-CL8-PREFERRED-STATE-COMPOSITION-SELECTION attempt to derive rather than supply a compatible classical measure and selected quantum state.",
+      "provenance": "contemporaneous",
+      "question": "Can the output of the gated CL8 continuum Goursat theorem be composed with the fixed-domain semidiscrete Cauchy theorem without silently imposing periodic seams, discarding extension energy, losing momentum information, or claiming exact finite-a sampling?",
+      "recorded_at": "2026-08-03T14:30:27Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000728",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-03",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Split and close the smooth classical CL8 boundary-to-lattice composition subgate",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -75646,6 +75705,80 @@
       "result_ids": [],
       "linked_result_ids": [],
       "result_link_basis": {}
+    },
+    {
+      "id": "20260803-t-054-close-classical-cl8-boundary-lattice-comp",
+      "date": "2026-08-03",
+      "header": "[T-054: close classical CL8 boundary-lattice composition by scope split] - 2026-08-03",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "keywords": [
+        "CL8",
+        "EXP-000729",
+        "Goursat",
+        "Hermite",
+        "Nyquist",
+        "PA-H1",
+        "Pre-A",
+        "Wasserstein",
+        "boundary-to-lattice",
+        "symplectic"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-manifest.json",
+        "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md"
+      ],
+      "scripts": [
+        "codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2.py",
+        "codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2_independent.py",
+        "codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2_verify.py"
+      ],
+      "raw": "## [T-054: close classical CL8 boundary-lattice composition by scope split] - 2026-08-03\n\nAdded the claim-nonbearing PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-OA2-v0 certificate. A periodic-jet-compatible branch preserves the continuum Goursat energy and variational symplectic ledgers before O(a^2) sampling, while generic traces use an explicit larger-circle Hermite fill with separate exterior ledgers. Exact sampled initialization, the inherited semidiscrete theorem, and real trigonometric reconstruction give O(a^2) convergence in a common weighted H1 times L2 phase space; supplied compact classical phase measures converge in W1 at O(a^2). Hostile controls retain generic seam divergence, arbitrary-frequency non-exactness, finite-a tails, and the PA-H1 full-circumference one-patch obstruction. Primary 49, independent 38, and integrated 118 checks pass. The mixed parent gate is resolved only by scope split: the smooth classical kinematic subgate closes, while full-circumference Goursat existence and preferred classical-measure or quantum-state selection remain open. No new formal result, negative record, claim card, tier, C6 authority change, physical reference, CP1, or Pre-A closure.\n\n",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [],
+      "result_ids": [],
+      "linked_result_ids": [],
+      "result_link_basis": {}
+    },
+    {
+      "id": "20260803-t-054-correct-classical-cl8-composition-explora",
+      "date": "2026-08-03",
+      "header": "[T-054: correct classical CL8 composition exploration id after concurrent rebase] - 2026-08-03",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "keywords": [
+        "CL8",
+        "EXP-000730",
+        "Pre-A",
+        "correction",
+        "exploration",
+        "rebase"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-manifest.json",
+        "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md"
+      ],
+      "scripts": [],
+      "raw": "## [T-054: correct classical CL8 composition exploration id after concurrent rebase] - 2026-08-03\n\nA concurrent remote commit occupied EXP-000729 before the classical CL8 composition checkpoint was published. The CL8 route record is therefore registered as EXP-000730. In event 20260803-t-054-close-classical-cl8-boundary-lattice-comp, read the EXP-000729 keyword as EXP-000730. T-054 now points to EXP-000730. The candidate certificate, theorem scope, 205-check total, open full-circumference and preferred-state gates, and absence of any formal result, new negative, claim-tier, physical-empty-space, CP1, or Pre-A closure are unchanged.\n\n",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [],
+      "result_ids": [],
+      "linked_result_ids": [],
+      "result_link_basis": {}
     }
   ],
   "all_tasks": [
@@ -76354,7 +76487,7 @@
       "owner": "Codex",
       "claim": null,
       "gate": null,
-      "note": "EXP-000711--EXP-000713 establish the LT3/ST8 finite-local branch; EXP-000714--EXP-000716 retain CP1a as a fitted comparator; EXP-000719 registers Q3LOCK; EXP-000724 and EXP-000725 register and repair the finite-C1 strict-cone no-go. EXP-000728 now splits the controlled-continuum checkpoint into PA-CP1-CL8-GOURSAT-v0 and PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0. The first proves, on an inserted fixed 1+1 Lorentzian background and the pinned one-eighth ledger, gated transverse-zero eight-species classical Goursat reconstruction, exact continuum energy balance, inherited-sign variational symplectic flux, and only a supplied classical field-value measure pushforward. The second proves fixed-periodic-domain, fixed-time O(a^2) convergence for separately supplied smooth Cauchy data in weighted discrete H1_a times L2_a, exact finite Hamiltonian and variational symplectic conservation, and only an aggregate O(a^2) bound on regions where the continuum solution vanishes. Goursat primary 53, independent 52, integrated 75 and semidiscrete primary 38, independent 29, integrated 80 checks pass, 327 combined. They are not composed: PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION remains open, including phase-slice regularity, compatible same-domain sampling and reconstruction, energy, symplectic and supplied-measure control, and a common selected state. Exact finite-a support remains false; registered variational witness tails remain nonzero, while the convergence theorem neither proves nor requires a nonzero tail for every datum. Next close or refute the composition gate before quantum promotion. Keep block-origin restoration, fine translation, full 3+1 dependence, quantum continuum and state selection, physical empty space and the below-empty-space sign, cooling, gravity, CP1 and Pre-A open.",
+      "note": "EXP-000711--EXP-000725 retain the LT3/ST8/Q3LOCK finite-local branch, the CP1a comparator, and the finite-C1 strict-cone boundary. EXP-000728 registered separate CL8 Goursat and semidiscrete Cauchy theorems. EXP-000730 now resolves their mixed boundary-to-lattice gate by scope split through PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-OA2-v0. Periodic-jet-compatible C8 Goursat phase slices initialize the even-M lattice directly; generic admitted traces require a declared larger-circle Hermite fill with separate H_ext and Omega_ext ledgers. Exact sampling and the inherited theorem give O(a^2) grid-phase convergence, real trigonometric reconstruction gives O(a^2) in a common weighted H1 times L2 space including the Nyquist half-weight, and supplied compact classical phase measures converge in W1 at O(a^2). Primary 49, independent 38, integrated 118 checks pass, 205 combined. Generic direct seams, exact arbitrary-frequency sampling, and exact finite-a support remain rejected. The inserted full ordered PA-H1 circumference violates the current one-patch contraction gate with q at least 9pi^2/32, or 9pi^2/64 after an ordered shift; this blocks the certificate, not existence. Next attack PA-CP1-CL8-FULL-CIRCUMFERENCE-GOURSAT-EXISTENCE by multi-patch or global continuation, then PA-CP1-CL8-PREFERRED-STATE-COMPOSITION-SELECTION. Keep preferred classical-measure selection, quantum state composition, fine translation, full 3+1 dependence, physical empty space and the below-empty-space sign, cooling, gravity, C6 advancement, CP1 and Pre-A open.",
       "created": "2026-08-02",
       "updated": "2026-08-03",
       "blocked_by": [],
@@ -79707,9 +79840,21 @@
         "authority": "CHANGELOG.md"
       },
       {
+        "id": "event:20260803-t-054-close-classical-cl8-boundary-lattice-comp",
+        "kind": "accepted_event",
+        "label": "[T-054: close classical CL8 boundary-lattice composition by scope split] - 2026-08-03",
+        "authority": "CHANGELOG.md"
+      },
+      {
         "id": "event:20260803-t-054-correct-cl8-exploration-id-after-concurre",
         "kind": "accepted_event",
         "label": "[T-054: correct CL8 exploration id after concurrent rebase] - 2026-08-03",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260803-t-054-correct-classical-cl8-composition-explora",
+        "kind": "accepted_event",
+        "label": "[T-054: correct classical CL8 composition exploration id after concurrent rebase] - 2026-08-03",
         "authority": "CHANGELOG.md"
       },
       {
@@ -84114,6 +84259,12 @@
         "id": "exploration:EXP-000729",
         "kind": "proof_exploration",
         "label": "Three-way audit finds no cheap A13 shortcut and confirms the truth-first candidate lane",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000730",
+        "kind": "proof_exploration",
+        "label": "Split and close the smooth classical CL8 boundary-to-lattice composition subgate",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -95873,7 +96024,19 @@
         "basis": "explicit_result_id"
       },
       {
+        "from": "event:20260803-t-054-close-classical-cl8-boundary-lattice-comp",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
         "from": "event:20260803-t-054-correct-cl8-exploration-id-after-concurre",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260803-t-054-correct-classical-cl8-composition-explora",
         "relation": "records",
         "to": "claim:C6-SPACETIME-SIGNATURE",
         "basis": "explicit_claim_ids"
@@ -127961,6 +128124,36 @@
         "basis": "structured_formal_ref"
       },
       {
+        "from": "exploration:EXP-000730",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000730",
+        "relation": "continues",
+        "to": "exploration:EXP-000728",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000730",
+        "relation": "records_task",
+        "to": "task:T-054",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000730",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000730",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-03-PRE-A-CP1-ST8-CONTINUOUS-TIME-EXACT-CONE",
+        "basis": "structured_formal_ref"
+      },
+      {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
         "relation": "bears_on",
         "to": "claim:B1-RH-ENUM",
@@ -148906,6 +149099,47 @@
           "R-133": "proof_anchor_note:classii-affine-gaussian-score-feedback-collar-boundary-260731-v1.0"
         }
       },
+      "20260803-t-054-close-classical-cl8-boundary-lattice-comp": {
+        "id": "20260803-t-054-close-classical-cl8-boundary-lattice-comp",
+        "date": "2026-08-03",
+        "header": "[T-054: close classical CL8 boundary-lattice composition by scope split] - 2026-08-03",
+        "claim_ids": [
+          "C6-SPACETIME-SIGNATURE"
+        ],
+        "keywords": [
+          "CL8",
+          "EXP-000729",
+          "Goursat",
+          "Hermite",
+          "Nyquist",
+          "PA-H1",
+          "Pre-A",
+          "Wasserstein",
+          "boundary-to-lattice",
+          "symplectic"
+        ],
+        "negative_results": [],
+        "notes": [
+          "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-manifest.json",
+          "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md"
+        ],
+        "scripts": [
+          "codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2.py",
+          "codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2_independent.py",
+          "codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2_verify.py"
+        ],
+        "raw": "## [T-054: close classical CL8 boundary-lattice composition by scope split] - 2026-08-03\n\nAdded the claim-nonbearing PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-OA2-v0 certificate. A periodic-jet-compatible branch preserves the continuum Goursat energy and variational symplectic ledgers before O(a^2) sampling, while generic traces use an explicit larger-circle Hermite fill with separate exterior ledgers. Exact sampled initialization, the inherited semidiscrete theorem, and real trigonometric reconstruction give O(a^2) convergence in a common weighted H1 times L2 phase space; supplied compact classical phase measures converge in W1 at O(a^2). Hostile controls retain generic seam divergence, arbitrary-frequency non-exactness, finite-a tails, and the PA-H1 full-circumference one-patch obstruction. Primary 49, independent 38, and integrated 118 checks pass. The mixed parent gate is resolved only by scope split: the smooth classical kinematic subgate closes, while full-circumference Goursat existence and preferred classical-measure or quantum-state selection remain open. No new formal result, negative record, claim card, tier, C6 authority change, physical reference, CP1, or Pre-A closure.\n\n",
+        "claim_refs": [
+          "C6-SPACETIME-SIGNATURE"
+        ],
+        "claim_ref_basis": {
+          "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+        },
+        "unresolved_claim_ids": [],
+        "result_ids": [],
+        "linked_result_ids": [],
+        "result_link_basis": {}
+      },
       "20260803-t-054-correct-cl8-exploration-id-after-concurre": {
         "id": "20260803-t-054-correct-cl8-exploration-id-after-concurre",
         "date": "2026-08-03",
@@ -148927,6 +149161,39 @@
         ],
         "scripts": [],
         "raw": "## [T-054: correct CL8 exploration id after concurrent rebase] - 2026-08-03\n\nA concurrent remote commit registered EXP-000726 and EXP-000727 before the CL8 checkpoint was published. The CL8 route record was therefore remapped append-only to EXP-000728. In the immediately preceding event 20260803-t-054-split-cl8-goursat-and-semidiscrete-cauchy, read its single EXP-000726 reference as EXP-000728. The two candidate certificates, theorem scope, assertion totals, open composition gate, and absence of any tier, R-result, physical-empty-space, CP1 or Pre-A change are otherwise unchanged.\n\n",
+        "claim_refs": [
+          "C6-SPACETIME-SIGNATURE"
+        ],
+        "claim_ref_basis": {
+          "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+        },
+        "unresolved_claim_ids": [],
+        "result_ids": [],
+        "linked_result_ids": [],
+        "result_link_basis": {}
+      },
+      "20260803-t-054-correct-classical-cl8-composition-explora": {
+        "id": "20260803-t-054-correct-classical-cl8-composition-explora",
+        "date": "2026-08-03",
+        "header": "[T-054: correct classical CL8 composition exploration id after concurrent rebase] - 2026-08-03",
+        "claim_ids": [
+          "C6-SPACETIME-SIGNATURE"
+        ],
+        "keywords": [
+          "CL8",
+          "EXP-000730",
+          "Pre-A",
+          "correction",
+          "exploration",
+          "rebase"
+        ],
+        "negative_results": [],
+        "notes": [
+          "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-manifest.json",
+          "strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md"
+        ],
+        "scripts": [],
+        "raw": "## [T-054: correct classical CL8 composition exploration id after concurrent rebase] - 2026-08-03\n\nA concurrent remote commit occupied EXP-000729 before the classical CL8 composition checkpoint was published. The CL8 route record is therefore registered as EXP-000730. In event 20260803-t-054-close-classical-cl8-boundary-lattice-comp, read the EXP-000729 keyword as EXP-000730. T-054 now points to EXP-000730. The candidate certificate, theorem scope, 205-check total, open full-circumference and preferred-state gates, and absence of any formal result, new negative, claim-tier, physical-empty-space, CP1, or Pre-A closure are unchanged.\n\n",
         "claim_refs": [
           "C6-SPACETIME-SIGNATURE"
         ],

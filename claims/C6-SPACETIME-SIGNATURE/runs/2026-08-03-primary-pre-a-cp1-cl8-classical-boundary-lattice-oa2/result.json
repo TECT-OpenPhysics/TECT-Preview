@@ -1,0 +1,561 @@
+{
+  "assertions": {
+    "passed": 49,
+    "rows": [
+      {
+        "actual": "PA-CP1-CL8-GOURSAT-v0",
+        "expected": "PA-CP1-CL8-GOURSAT-v0",
+        "group": "authority",
+        "name": "Goursat parent identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
+        "expected": "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
+        "group": "authority",
+        "name": "semidiscrete parent identity",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION",
+          "PA-CP1-CL8-BOUNDARY-TO-LATTICE-COMPOSITION"
+        ],
+        "expected": "common route ID",
+        "group": "authority",
+        "name": "parents expose the same open route gate",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "chipsi_tt-cpsi_xx+gradW(psi)=0",
+          "chipsi_tt-cpsi_xx+gradW(psi)=0"
+        ],
+        "expected": "equal after notation normalization",
+        "group": "authority",
+        "name": "continuum equation is identical across parents",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*s*tau",
+        "expected": "2*s*tau",
+        "group": "geometry",
+        "name": "direct-circle length",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*j*tau/M",
+        "expected": "2*j*tau/M",
+        "group": "geometry",
+        "name": "slice node u coordinate",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*tau*(-M + j)/M",
+        "expected": "-2*tau*(-M + j)/M",
+        "group": "geometry",
+        "name": "slice node v coordinate",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*tau",
+        "expected": "2*tau",
+        "group": "geometry",
+        "name": "null coordinate sum",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "1",
+          "-1"
+        ],
+        "expected": [
+          1,
+          1,
+          -1
+        ],
+        "group": "phase_slice",
+        "name": "right endpoint Pi coefficients",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "-1",
+          "1"
+        ],
+        "expected": [
+          1,
+          -1,
+          1
+        ],
+        "group": "phase_slice",
+        "name": "right endpoint spatial coefficients",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "1",
+          "-1"
+        ],
+        "expected": [
+          1,
+          1,
+          -1
+        ],
+        "group": "phase_slice",
+        "name": "left endpoint Pi coefficients",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "-1",
+          "-1"
+        ],
+        "expected": [
+          1,
+          -1,
+          -1
+        ],
+        "group": "phase_slice",
+        "name": "left endpoint spatial coefficients",
+        "status": "PASS"
+      },
+      {
+        "actual": "c*delta**2/(16*a)",
+        "expected": "c*delta**2/(16*a)",
+        "group": "seam_obstruction",
+        "name": "seam jump bond coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "d_jump/a",
+        "expected": "d_jump/a",
+        "group": "seam_obstruction",
+        "name": "derivative seam residual is order a^-1",
+        "status": "PASS"
+      },
+      {
+        "actual": "15728001190723584000000",
+        "expected": "nonzero",
+        "group": "hermite_extension",
+        "name": "q Hermite matrix nonsingular",
+        "status": "PASS"
+      },
+      {
+        "actual": "14",
+        "expected": "<= 15",
+        "group": "hermite_extension",
+        "name": "q Hermite degree bound",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "16",
+          "224",
+          "2688",
+          "26880",
+          "215040",
+          "1290240",
+          "5160960"
+        ],
+        "expected": [
+          "1",
+          "16",
+          "224",
+          "2688",
+          "26880",
+          "215040",
+          "1290240",
+          "5160960"
+        ],
+        "group": "hermite_extension",
+        "name": "q right jets reproduced",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "-16",
+          "224",
+          "-2688",
+          "26880",
+          "-215040",
+          "1290240",
+          "-5160960"
+        ],
+        "expected": [
+          "1",
+          "-16",
+          "224",
+          "-2688",
+          "26880",
+          "-215040",
+          "1290240",
+          "-5160960"
+        ],
+        "group": "hermite_extension",
+        "name": "q left jets reproduced",
+        "status": "PASS"
+      },
+      {
+        "actual": "619173642240000",
+        "expected": "nonzero",
+        "group": "hermite_extension",
+        "name": "Pi Hermite matrix nonsingular",
+        "status": "PASS"
+      },
+      {
+        "actual": "13",
+        "expected": "<= 13",
+        "group": "hermite_extension",
+        "name": "Pi Hermite degree bound",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "14",
+          "168",
+          "1680",
+          "13440",
+          "80640",
+          "322560"
+        ],
+        "expected": [
+          "1",
+          "14",
+          "168",
+          "1680",
+          "13440",
+          "80640",
+          "322560"
+        ],
+        "group": "hermite_extension",
+        "name": "Pi right jets reproduced",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-1",
+          "14",
+          "-168",
+          "1680",
+          "-13440",
+          "80640",
+          "-322560"
+        ],
+        "expected": [
+          "-1",
+          "14",
+          "-168",
+          "1680",
+          "-13440",
+          "80640",
+          "-322560"
+        ],
+        "group": "hermite_extension",
+        "name": "Pi left jets reproduced",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": 0,
+        "group": "initialization",
+        "name": "exact sampled position error",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": 0,
+        "group": "initialization",
+        "name": "exact sampled velocity error",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": 0,
+        "group": "initialization",
+        "name": "exact sampled modified energy",
+        "status": "PASS"
+      },
+      {
+        "actual": "(a**4 - 30*a**2 + 360)/360",
+        "expected": "(a**4 - 30*a**2 + 360)/360",
+        "group": "energy_consistency",
+        "name": "forward-gradient symbol series",
+        "status": "PASS"
+      },
+      {
+        "actual": "pi*a**2*c*(a**2 - 30)/5760",
+        "expected": "pi*a**2*c*(a**2 - 30)/5760",
+        "group": "energy_consistency",
+        "name": "one-mode physical energy difference",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*a**3*(6*a**2 + 15*a + 10)/15",
+        "expected": "2*a**3*(6*a**2 + 15*a + 10)/15",
+        "group": "energy_consistency",
+        "name": "cell gradient variance identity",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expected": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "group": "symplectic_boundary",
+        "name": "high-frequency sampling kernel",
+        "status": "PASS"
+      },
+      {
+        "actual": "pi",
+        "expected": "pi",
+        "group": "symplectic_boundary",
+        "name": "sampling-kernel continuum mass",
+        "status": "PASS"
+      },
+      {
+        "actual": "-pi/8",
+        "expected": "nonzero",
+        "group": "symplectic_boundary",
+        "name": "sampling-kernel symplectic value nonzero",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "group": "reconstruction",
+        "name": "real Nyquist continuum/discrete squared-norm ratio",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "<= 1",
+        "group": "reconstruction",
+        "name": "real trigonometric reconstruction L2 upper stability at Nyquist",
+        "status": "PASS"
+      },
+      {
+        "actual": "pi/2",
+        "expected": "pi/2",
+        "group": "reconstruction",
+        "name": "spectral multiplier endpoint",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.5707963267948966192313216916397514420985846996876",
+        "expected": "<= pi/2",
+        "group": "reconstruction",
+        "name": "spectral multiplier finite fixture M=8",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.5707963267948966192313216916397514420985846996876",
+        "expected": "<= pi/2",
+        "group": "reconstruction",
+        "name": "spectral multiplier finite fixture M=16",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.5707963267948966192313216916397514420985846996876",
+        "expected": "<= pi/2",
+        "group": "reconstruction",
+        "name": "spectral multiplier finite fixture M=32",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.5707963267948966192313216916397514420985846996876",
+        "expected": "<= pi/2",
+        "group": "reconstruction",
+        "name": "spectral multiplier finite fixture M=64",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": 1,
+        "group": "measure",
+        "name": "probability weights sum to one",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/60",
+        "expected": "1/60",
+        "group": "measure",
+        "name": "identity coupling average error",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/60",
+        "expected": "<= 1/50",
+        "group": "measure",
+        "name": "identity coupling bounded by sup error",
+        "status": "PASS"
+      },
+      {
+        "actual": "pi/2",
+        "expected": "pi/2",
+        "group": "calibration_gate",
+        "name": "parsed PA-H1 circumference",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": 1,
+        "group": "calibration_gate",
+        "name": "parsed PA-H1 speed ratio",
+        "status": "PASS"
+      },
+      {
+        "actual": "9",
+        "expected": 9,
+        "group": "calibration_gate",
+        "name": "parsed PA-H1 ordered curvature",
+        "status": "PASS"
+      },
+      {
+        "actual": "pi/4",
+        "expected": "pi/4",
+        "group": "calibration_gate",
+        "name": "full-circle characteristic half-time",
+        "status": "PASS"
+      },
+      {
+        "actual": "9*pi**2/32",
+        "expected": "9*pi**2/32",
+        "group": "calibration_gate",
+        "name": "ordered max-ball contraction lower bound",
+        "status": "PASS"
+      },
+      {
+        "actual": "2.77582623780638211154720059372",
+        "expected": "> 1",
+        "group": "calibration_gate",
+        "name": "ordered max-ball gate fails",
+        "status": "PASS"
+      },
+      {
+        "actual": "9*pi**2/64",
+        "expected": "9*pi**2/64",
+        "group": "calibration_gate",
+        "name": "shifted ordered-neighbourhood lower bound",
+        "status": "PASS"
+      },
+      {
+        "actual": "1.38791311890319105577360029686",
+        "expected": "> 1",
+        "group": "calibration_gate",
+        "name": "shifted one-patch gate also fails",
+        "status": "PASS"
+      }
+    ],
+    "total": 49
+  },
+  "candidate_id": "PA-CP1-CL8-CLASSICAL-BOUNDARY-TO-LATTICE-OA2-v0",
+  "exact_results": {
+    "direct_length": "2*s*tau",
+    "gradient_energy_difference_series": "pi*a**2*c*(a**2 - 30)/5760",
+    "gradient_symbol_series": "(a**4 - 30*a**2 + 360)/360",
+    "measure_coupling_cost_fixture": "1/60",
+    "pah1_ordered_q_lower": "9*pi**2/32",
+    "pah1_shifted_q_lower": "9*pi**2/64",
+    "pi_hermite_coefficients": [
+      "1",
+      "14",
+      "84",
+      "280",
+      "560",
+      "672",
+      "448",
+      "-281360",
+      "1408428",
+      "-3060960",
+      "3633168",
+      "-2464560",
+      "901992",
+      "-138768"
+    ],
+    "pi_hermite_determinant": "619173642240000",
+    "q_hermite_coefficients": [
+      "1",
+      "16",
+      "112",
+      "448",
+      "1120",
+      "1792",
+      "1792",
+      "1024",
+      "-562720",
+      "2503872",
+      "-4897536",
+      "5284608",
+      "-3286080",
+      "1110144",
+      "-158592",
+      "0"
+    ],
+    "q_hermite_determinant": "15728001190723584000000",
+    "real_nyquist_squared_norm_ratio": "1/2",
+    "sampling_kernel_symplectic_fixture": "-pi/8",
+    "seam_bond": "c*delta**2/(16*a)",
+    "spectral_multiplier_endpoint": "pi/2",
+    "u_node": "2*j*tau/M",
+    "v_node": "-2*tau*(-M + j)/M"
+  },
+  "package_version": "0.1.0",
+  "parent_ids": [
+    "PA-CP1-CL8-GOURSAT-v0",
+    "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0"
+  ],
+  "provenance": {
+    "block_manifest": "strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json",
+    "block_manifest_sha256": "b0a8ddec5c5082da816d352f09affc8e5226a31106842b106920f49402879bcb",
+    "goursat_manifest": "strategy/pre-a-cp1-cl8-goursat-manifest.json",
+    "goursat_manifest_sha256": "571ac5cd92fffd25e14da57ec9c4ef17e2550f72718d739f1a335dfb27c4647b",
+    "script": "codes/foundations/pre_a_cp1_cl8_classical_boundary_lattice_oa2.py",
+    "script_sha256": "d52477034e6c888bd82d19db0a1060240139836eaea53d9f1c86f8db97b94735",
+    "semidiscrete_manifest": "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest.json",
+    "semidiscrete_manifest_sha256": "1862badf2c4255de4cfaf12cf369a4c07a8a418275485789a08f7aa1d6d9864a"
+  },
+  "result_id": "PA-CP1-CL8-GOURSAT-PHASE-SLICE-SEMIDISCRETE-COMPOSITION-OA2",
+  "schema": "tect/pre-a-cp1-cl8-classical-boundary-lattice-oa2-primary/0.1",
+  "scope": {
+    "claim_bearing": false,
+    "cp1_complete": false,
+    "deterministic_hermite_extension_branch": true,
+    "direct_periodic_seam_branch": true,
+    "exact_finite_a_energy_or_symplectic_sampling": false,
+    "finite_a_goursat_scheme": false,
+    "fixed_smooth_family_discrete_phase_Oa2": true,
+    "full_pah1_circumference_current_gate": false,
+    "generic_direct_periodic_composition": false,
+    "physical_empty_space": false,
+    "pre_a_complete": false,
+    "preferred_classical_measure_selected": false,
+    "selected_quantum_state": false,
+    "supplied_classical_phase_measure_W1_Oa2": true,
+    "trigonometric_reconstruction_H1_L2_Oa2": true
+  },
+  "verdict": "PASS"
+}
