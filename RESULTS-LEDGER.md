@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-164](#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | Scoped T4 analytic/exact/executed/audited direct-chart theorem. For every finite R-104 zero-control chart, the R-141 legal force is the orthogonal projection of the complete centered terminal scalar onto predictable first Gaussian chaos, so its squared source-dual norm is at most the scalar variance with sharp constant one. A7 `L2` convergence and the A1/A11 point-covariance trace give a cutoff-, chart-length-, and linear/isometric-refinement-uniform bound on that variance along the registered sharp-cube/dyadic sequence. A7 centering also makes the direct anchor nonnegative. Therefore a complete direct owner bound `K_owner>=-(10/11-rho)G_src` yields `mu=-1/110+rho`, `epsilon_v=max(0,5/11-rho/4)`, `epsilon_6=3/20`, and constant `B_*/rho`, without separate anchor or origin-force assumptions. The complete production owner, nonzero feedback, shifted low base, arbitrary graph metric transport, random/nonlinear/revisit/pathwise scope, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
 | [R-163](#r-163) | Full-lattice weighted-resolvent dyadic-forest gap and exact reduced-action threshold | Scoped T4 analytic/exact/executed/audited deterministic-forest theorem. For every finite injective pure-dyadic forest with deterministic matrix coefficients and actual shifted-state reads, the two-sided expansion `T_A T_A^*-I=sum_(a,b) N_A^a(N_A^*)^b-I` exposes a mandatory recursive edge in every nonidentity covariance word. Exact A1 endpoint weights make the worst current-current square sum proportional to `sum |p|^-4`, so field/current covariance-data derivatives through order three are uniform in forest cardinality, depths, starting modes, cutoff and admitted common-even regulator even though the raw current synthesis diverges. Stationarity kills the complete `p:4p` chart connection at the origin, transferring the R-160 `4/25` arbitrary-family gap; the full source/current/trace/projected-force/sextic modulus retains `13/100>1/10` on one analytic forest-uniform ball. Separately, the exact T-050 coefficient algebra shows that reduced-action semiconvexity `mu>-1/110`, plus a uniform absolute anchor and origin-force bound, suffices; equivalently the adverse owner target is strictly above `-10/11`, not necessarily `-4/5`. Random/nonlinear laws, branching/revisits, pathwise conditional estimates, the anchor/force inputs, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
 | [R-162](#r-162) | Resolvent-controlled pure-dyadic recursive-chain uniform neighbourhood gap | Scoped T4 analytic/exact/executed/audited recursive-chain theorem. For one finite acyclic pure-dyadic chain with deterministic matrix coefficients and actual shifted-state reads `eta_(j+1)=xi_(j+1)+A_j eta_j`, the strictly lower shift `N_A` has `T_A=(I-N_A)^(-1)` and length-free resolvent jets in the summed `l2(HS)` coefficient norm. At the centered stationary origin, the new two-step controller acceleration has only `p:4p` support `{+/-3p,+/-5p}`, so the registered full-action first-variation cancellation transfers the R-160 `4/25` origin gap to the recursive pullback. Exact dyadic A1 synthesis bounds, covariance-normal `Q-Q0` cancellation, and the complete source, current, trace, projected-force, and sextic connections give an analytic radius `delta_*=min(1/2,3/[100(1+L_*)])` on which the expected global controller-pullback Hessian exceeds `13/100` and hence `1/10` times both the coefficient norm and induced recursive tangent Gram. The radius is uniform in finite chain length, retained starting mode, finite cutoff, and admitted regulator, but the theorem covers no intrinsic Hessian, unrelated multi-chain forest, random/nonlinear past law, revisit/cycle, pathwise conditional Hessian, removal, T-050/A13, phase/PDE, Nelson/measure, or Sector-A closure |
 | [R-161](#r-161) | Summable covariance jets and a growing affine-root-union uniform neighbourhood | Scoped T4 analytic/exact/executed/audited nonzero-neighbourhood theorem. On the fixed side-16 three-torus with the A1 symbol, positive A7 floor, exact continuum integration and a common real-even contraction multiplier, the pointwise value, derivative and field-current covariance jets of every finite one-shot raw-source affine `p:2p` family are bounded from `l2(HS)` controls by cardinality-independent full-lattice square sums. The worst controlled `Q` jet and the background value covariance use the three-dimensional `sum |n|^-4` threshold, which is logarithmically critical in dimension four. After exact `Q-Q0` cancellation, a compact finite covariance-data box and Gaussian heat derivatives through `D8 B` give an explicit global Hessian modulus `L_* ||A||`. The analytic radius `delta_*=min(1,3/[100(1+L_*)])` retains the R-160 origin gap as `D2 A(A)[H,H]>(13/100)||H||^2>(1/10)||H||^2`, uniformly in finite family cardinality, cutoff, regulator and factor-three path length. The R-107/R-141 equality is global only; no local `E_CN` to `P_comp` lower-bound transfer, realised past, shifted-state/revisit, nonlinear feedback, removal, T-050/A13, phase/PDE, Nelson/measure or Sector-A conclusion follows |
@@ -182,6 +183,60 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-164"></a>
+### R-164 -- Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction
+
+- **Result ID.**
+  `A13-CLASSII-PREDICTABLE-FIRST-CHAOS-ORIGIN-FORCE-ANCHOR-FREE-SEMICONVEXITY-REDUCTION`.
+
+- **Sharp projection theorem.** Let the finite R-104 zero-control source be
+  `Z_0=sum_b S_b xi_b`, with independent standard Gaussian blocks and strict
+  past filtration. For the complete terminal random scalar
+  `F_J=V_J^ren(Z_0)+(3/20)||Z_0||_6^6`, the R-141 legal force is
+  `g_b=E[nabla_b F_J|F_(b-1)]`. The adapted Gaussian integral is an isometry,
+  and Gaussian integration by parts identifies `sum_b <g_b,xi_b>` with the
+  orthogonal projection of `F_J-EF_J` onto predictable first chaos. Hence
+  `sum_b E||g_b||^2<=Var(F_J)` with sharp constant one. Equality is not
+  asserted for a discrete chart in general.
+
+- **Uniform certificate and anchor.** A7 gives a uniform `L2` bound for the
+  integrated renormalized energy along the registered cutoff sequence. The
+  A1/A11 order-minus-four point covariance gives `T_*<infinity`, and the safe
+  general-real-Gaussian moment `E|G|^12<=11!!(Tr Sigma)^6` gives
+  `B_*=(M_7+(3/20)L^3 sqrt(11!!)T_*^3)^2`. Thus the origin force is uniform in
+  cutoff, chart length, and independent-Gaussian linear/isometric refinements
+  of the same zero-control law. A7 finite-cutoff centering also gives
+  `A(0)=(3/20)E||Z_0||_6^6>=0`, so no absolute anchor bound is needed.
+
+- **Exact T-050 composition.** In the direct source metric,
+  `D2 A=(9/10)G_src+K_owner`. The labelled input `9/20` generates the source
+  Hessian `9/10`; with `p=11/10`, the target is `1/(2p)=5/11`, giving the
+  derived floors `mu_*=-1/110` and `K_*=-10/11`. If one uniform `rho>0`
+  satisfies `K_owner>=-(10/11-rho)G_src` on every radial segment, Taylor and
+  one Young payment give `epsilon_v=max(0,5/11-rho/4)`,
+  `epsilon_6=3/20<27/100`, and additive constant `B_*/rho`.
+
+- **Graph and feedback firewall.** An origin-preserving causal graph inherits
+  only the force bound, with factor `C_chi^2`, when its zero-control law and
+  tangent bound are uniform. Full composition additionally needs exact
+  source-metric and stabilizer transport. A shifted low base or nonzero
+  feedback changes the Malliavin derivative and is not covered. Centering is
+  a value normalization and does not force the first variation to vanish.
+
+- **Evidence and verification.** The primary exact audit passes `50/50`; the
+  non-importing standard-library rational audit passes `47/47`. The integrated
+  verifier reruns both children, checks authority and package hashes, scope and
+  public records, and deterministically rebuilds, security-scans, renders, and
+  audits the visually inspected seven-page PDF. See
+  `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_predictable_first_chaos_origin_force_anchor_free_semiconvexity_reduction_manifest.json`.
+
+- **Scope boundary.** Fixed side-16, positive floor, registered sharp-cube/
+  dyadic cutoff sequence, finite direct zero-control Gaussian chart and
+  expected source-dual norm. No complete production owner, arbitrary admitted
+  regulator family, stationary low away from zero, nonzero feedback,
+  random/nonlinear/revisit or pathwise conditional semiconvexity, removal,
+  T-050/A13, Nelson, interacting measure, phase/PDE, or Sector-A closure.
 
 <a id="r-163"></a>
 ### R-163 -- Full-lattice weighted-resolvent dyadic-forest gap and exact reduced-action threshold

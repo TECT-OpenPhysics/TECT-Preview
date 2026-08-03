@@ -1,0 +1,489 @@
+% =============================================================================
+% Title: Predictable first-chaos origin force and anchor-free semiconvexity reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-PREDICTABLE-FIRST-CHAOS-ORIGIN-FORCE-ANCHOR-FREE-SEMICONVEXITY-REDUCTION
+% Ledger: R-164
+% Version: v1.0 -- first issued 2026-08-04; this version issued 2026-08-04
+% Status: scoped T4 analytic/exact/executed advance; T-050 and Sector A remain open
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\dd}{\,\mathrm d}
+
+\section*{1. Purpose and scope}
+\hypertarget{section-1-result}{ }
+
+R-141 identifies the legal finite-chart projected force of the complete
+source, covariance-normal endpoint, and terminal sixth-power action. R-146
+then proves that A7 centering fixes the zero-control additive gauge, so the
+direct endpoint identity is exactly relative and needs no separate absolute
+anchor. R-163 nevertheless retained both an anchor and an origin-force bound
+as hypotheses of its general reduced-action semiconvexity criterion.
+
+This note closes the origin-force hypothesis on the direct zero-control
+Gaussian chart. It also gives a force-only pullback corollary for uniformly
+bounded origin-preserving causal graphs; the full T-050 composition extends
+to such a graph only if its source metric and stabilizer decomposition are
+separately transported without change.
+The mechanism is not pointwise force regularity. It is the orthogonal
+projection of a terminal scalar onto the predictable first Gaussian chaos.
+For every finite temporally faithful chart,
+\[
+ \sum_b\E\|g_b(0)\|^2\leq\Var(F_J),                    \tag{1.1}
+\]
+where \(F_J\) is the complete zero-control endpoint scalar. A7 gives a
+cutoff-uniform \(L^2\) bound for the renormalized Class-II energy, and the
+A1/A11 point-covariance trace gives a uniform twelfth Gaussian moment for the
+sixth-power stabilizer. Hence the right side of (1.1) is uniform in cutoff,
+chart length, and independent-Gaussian linear/isometric refinement preserving
+the same zero-control law.
+
+Combining this with the exact R-146 zero-control anchor sharpens the R-163
+criterion. If, for one \(\rho>0\), the complete direct owner satisfies
+\[
+ K_{\rm owner}\succeq-\left({10\over11}-\rho\right)G_{\rm src} \tag{1.2}
+\]
+on every radial segment, then
+\[
+ \E V_J^{\rm ren}(Z_h)
+ \geq-\max\left\{0,{5\over11}-{\rho\over4}\right\}X(h)
+       -{3\over20}Y_6(h)-{B_*\over\rho}.               \tag{1.3}
+\]
+Thus the direct route, corresponding to \(C_\chi=1\), no longer needs
+separate anchor or origin-force assumptions. Equation (1.2), including
+forward, legal reverse, balanced,
+low, trace, current, future, forest, and sextic connections exactly once,
+remains unproved in production scope. Therefore T-050, A13, Nelson,
+removal, the interacting measure, every phase/PDE question, and Sector A
+remain open.
+
+The result is deliberately not asserted for stationary low elimination whose
+base minimizer is not zero, for a graph which changes the zero-control law,
+or for a nonzero adapted feedback base. In those cases the Malliavin
+derivative contains feedback Jacobians and the A7 base variance does not
+control the required fixed-law legal force.
+
+\section*{2. Predictable first-Gaussian-chaos projection}
+\hypertarget{section-2-projection}{ }
+
+Let \(E_1,\ldots,E_B\) be finite-dimensional real Hilbert spaces and let
+\(\xi_b\sim N(0,\Id_{E_b})\) be independent. Put
+\[
+ \cF_b=\sigma(\xi_1,\ldots,\xi_b),\qquad \cF_0=\{\varnothing,\Omega\}.
+                                                               \tag{2.1}
+\]
+For a smooth \(F\in L^2\) with square-integrable Gaussian derivatives, define
+\[
+ g_b=\E[\nabla_bF\mid\cF_{b-1}].                         \tag{2.2}
+\]
+The predictable source space is
+\[
+ \cH_{\rm pred}=\bigoplus_{b=1}^B
+ L^2(\Omega,\cF_{b-1};E_b),\qquad
+ \|k\|_{\rm pred}^2=\sum_b\E\|k_b\|^2.                \tag{2.3}
+\]
+Define its adapted first-chaos integral by
+\[
+ \delta k=\sum_b\ip{k_b}{\xi_b}.                         \tag{2.4}
+\]
+
+\subsection*{Theorem 2.1 (sharp predictable first-chaos bound)}
+
+The map \(\delta:\cH_{\rm pred}\to L^2(\Omega)\) is an isometry and
+\[
+ \boxed{\sum_b\E\|g_b\|^2\leq\Var(F).}                 \tag{2.5}
+\]
+More precisely, \(\delta g\) is the orthogonal projection of \(F-\E F\)
+onto the closed range of \(\delta\). The constant one is sharp.
+
+\textit{Proof.}
+For \(b<c\), conditioning on \(\cF_{c-1}\) and then on the fresh centered
+block \(\xi_c\) makes the \(b,c\) cross term in
+\(\E(\delta k)^2\) vanish. The diagonal terms give
+\[
+ \E(\delta k)^2=\sum_b\E\|k_b\|^2.                       \tag{2.6}
+\]
+For predictable \(k_b\), Gaussian integration by parts in the fresh block
+\(\xi_b\) has no derivative of \(k_b\), and therefore
+\[
+ \E[(F-\E F)\delta k]
+ =\sum_b\E\ip{\nabla_bF}{k_b}
+ =\sum_b\E\ip{g_b}{k_b}
+ =\E[(\delta g)(\delta k)].                              \tag{2.7}
+\]
+Thus \(F-\E F-\delta g\) is orthogonal to the range of \(\delta\).
+Pythagoras and (2.6) prove (2.5). Taking \(F=\ip{u}{\xi_1}\) gives equality,
+so the constant is sharp. \hfill\(\square\)
+
+Equivalently, if \(M_b=\E[F\mid\cF_b]\), conditional Gaussian integration
+by parts and Bessel's inequality in the current block give
+\[
+ g_b=\E[\xi_b(M_b-M_{b-1})\mid\cF_{b-1}],
+\quad
+ \|g_b\|^2\leq\E[(M_b-M_{b-1})^2\mid\cF_{b-1}].       \tag{2.8}
+\]
+Summation uses the orthogonality of the martingale increments. This second
+proof makes clear why a discrete chart generally gives an inequality. In a
+completed Brownian filtration with the predictable-representation property,
+the full Clark--Ocone integral gives equality.
+
+\section*{3. Identification with the R-141 origin force}
+\hypertarget{section-3-force}{ }
+
+Fix a finite cutoff \(J\) and a temporally faithful zero-control chart with
+deterministic R-104 synthesis operators
+\[
+ Z_0=\sum_{b=1}^BS_b\xi_b\stackrel{\rm law}=X_J.          \tag{3.1}
+\]
+The R-104 terminal-stage identity is pathwise:
+\(Z_{K,0}=Z_0=S_\pi\xi\). Define the terminal functional and its
+zero-control random scalar by
+\[
+ \mathfrak G_J(\phi)=V_J^{\rm ren}(\phi)+{3\over20}\|\phi\|_6^6,
+ \qquad F_J:=\mathfrak G_J(Z_0).                         \tag{3.2}
+\]
+At finite cutoff this is a smooth finite-dimensional scalar. The R-141
+formula and the differentiated R-128 owner identity give
+\[
+ (g_{J,\pi}^{\rm prod}(0))_b
+ =\E[S_b^*D\mathfrak G_J(Z_0)\mid\cF_{b-1}]
+ =\E[\nabla_bF_J\mid\cF_{b-1}].                         \tag{3.3}
+\]
+The derivative of the explicit \(9\|h\|^2/20\) source cost is zero at the
+origin. Theorem 2.1 therefore gives the chart-uniform statement
+\[
+ \boxed{
+ \|g_{J,\pi}^{\rm prod}(0)\|_{{\rm src},*}^2
+ \leq\Var(F_J).}                                        \tag{3.4}
+\]
+No field/current pointwise norm and no inverse synthesis occurs in (3.4).
+The estimate is independent of the number of source blocks and survives every
+independent-Gaussian linear/isometric source refinement that preserves the
+zero-control terminal law, because each refined gradient is still an
+orthogonal projection of the same centered endpoint scalar.
+
+The force in (3.3) need not vanish. A7 centering states
+\(\E V_J^{\rm ren}(X_J)=0\), which is a value normalization. R-153 gives the
+strict-past first-variation formula and shows that the registered structure
+does not force it to vanish. Thus neither
+centering nor spatial stationarity may be substituted for (3.4).
+
+\subsection*{Corollary 3.1 (origin-preserving causal graphs)}
+
+Let \(\chi\) be an admissible reduced or graph chart with
+\(\chi(0)=0\), the same zero-control terminal law, and a causal tangent
+\(R_0=D\chi(0)\) satisfying
+\[
+ \|R_0\|_{\cH_{\rm red}\to\cH_{\rm pred}}\leq C_\chi.    \tag{3.5}
+\]
+Assume that the same constant \(C_\chi\) works uniformly over the declared
+family of graphs. Then
+\[
+ \|D(\cA\circ\chi)(0)\|_{{\rm red},*}^2
+ \leq C_\chi^2\Var(F_J).                                \tag{3.6}
+\]
+This corollary includes a prescribed nonlinear graph only at first order;
+its Hessian still contains the registered projected-force connection
+\(D\cA(0)D^2\chi(0)\). Changing the graph metric is not a free normalization:
+it also changes the source cost and the owner threshold. Therefore (3.6)
+alone does not transfer Theorem 5.1 to an arbitrary graph.
+
+\section*{4. Cutoff-uniform endpoint variance and exact anchor}
+\hypertarget{section-4-uniformity}{ }
+
+A7 proves
+\[
+ \cV_J^{\rm ren}:=\int e_{{\rm II},J}^{\rm ren}(x)\dd x
+ \longrightarrow\cV^{\rm ren}
+ \quad\hbox{in }L^2(\Omega).                             \tag{4.1}
+\]
+Consequently
+\[
+ M_7:=\sup_J\|\cV_J^{\rm ren}\|_{L^2}<\infty.           \tag{4.2}
+\]
+The A1 symbol has order minus four in three dimensions, and A11 records the
+corresponding point-covariance trace convergence. On the fixed side-16,
+positive-floor, registered sharp-cube/dyadic cutoff sequence put
+\[
+ T_*:=\sup_{J,x}\E|Z_{K,0}(x)|^2<\infty.                 \tag{4.3}
+\]
+Here \(K\) is the registered terminal stage: the R-104 zero-control law gives
+\(Z_{K,0}\stackrel{\rm law}=X_J\). Thus (4.3) is the same all-cutoff trace
+ceiling, not an unproved contraction estimate.
+
+For a centered finite-dimensional real Gaussian \(G\) with covariance
+\(\Sigma\), weighted Jensen gives
+\[
+ \E|G|^{12}\leq11!!\,(\operatorname{Tr}\Sigma)^6.       \tag{4.4}
+\]
+If \(\operatorname{Tr}\Sigma=0\), then \(G=0\) almost surely. Otherwise,
+write \(|G|^2=\sum_a\lambda_ag_a^2\) and apply convexity to the weights
+\(\lambda_a/\operatorname{Tr}\Sigma\), followed by
+\(\E g^{12}=11!!\). This is the safe sharp constant for the general real
+Gaussian class; the circular-complex production subclass may be sharper.
+With \(|\mathbb T_L^3|=L^3\), spatial
+Cauchy--Schwarz therefore yields
+\[
+ \left\|\|Z_{K,0}\|_6^6\right\|_{L^2}
+ \leq L^3\sqrt{11!!}\,T_*^3=:M_6.                       \tag{4.5}
+\]
+Minkowski and \(\Var F\leq\E|F|^2\) now give the explicit uniform certificate
+\[
+ \boxed{
+ \sup_{J,\pi}\|g_{J,\pi}^{\rm prod}(0)\|_{{\rm src},*}^2
+ \leq B_*:=\left(M_7+{3\over20}M_6\right)^2<\infty.}     \tag{4.6}
+\]
+The theorem uses the analytic all-cutoff quantity \(T_*\) on that registered
+cutoff sequence. A finite-ladder numerical trace ceiling may audit
+(4.6), but is not substituted for (4.3).
+
+The exact zero-control anchor is simultaneously favourable. A7 centering
+and (3.2) give
+\[
+ \cA_{J,\pi}(0)
+ =\E\cV_J^{\rm ren}+{3\over20}\E\|Z_{K,0}\|_6^6
+ ={3\over20}\E\|Z_{K,0}\|_6^6\geq0.                    \tag{4.7}
+\]
+This is the direct-action version of R-146 Theorem 2.1. No separate
+cutoff-uniform bound on the representation-dependent constants
+\(a_{J,\pi}\) and \(\mathcal T_{J,\pi}(0)\) is inferred.
+
+\section*{5. Anchor-free T-050 semiconvexity reduction}
+\hypertarget{section-5-reduction}{ }
+
+Let \(X(h)=\|h\|_{\rm src}^2\) and
+\[
+ \cA_{J,\pi}(h)
+ =\E V_J^{\rm ren}(Z_h)+{9\over20}X(h)+{3\over20}Y_6(h)  \tag{5.1}
+\]
+be the direct complete action. Assume one uniform \(\rho>0\) and, on every
+radial segment,
+\[
+ D^2\cA_{J,\pi}(th)[h,h]
+ \geq\left(-{1\over110}+\rho\right)X(h),
+ \qquad 0\leq t\leq1.                                   \tag{5.2}
+\]
+This is exactly what follows from the explicit \(9G_{\rm src}/10\) source
+Hessian and the owner condition (1.2), where the notation is fixed by
+\[
+ D^2\cA={9\over10}G_{\rm src}+K_{\rm owner}.            \tag{5.2a}
+\]
+Thus the source Hessian is counted once, not included again inside
+\(K_{\rm owner}\).
+
+\subsection*{Theorem 5.1 (one remaining complete-owner gate)}
+
+Under (3.1)--(4.3) and (5.2),
+\[
+ \boxed{
+ \E V_J^{\rm ren}(Z_h)
+ \geq-\epsilon_vX(h)-{3\over20}Y_6(h)-{B_*\over\rho},
+ \quad
+ \epsilon_v=\max\left\{0,{5\over11}-{\rho\over4}\right\}
+ <{5\over11}.}                                           \tag{5.3}
+\]
+Since \(3/20<27/100\), (5.3) is the registered T-050 inequality on every
+direct chart for which the complete owner hypothesis holds uniformly.
+
+\textit{Proof.}
+Taylor's formula, (4.7), and (3.4) give
+\[
+ \cA(h)\geq
+ -\sqrt{B_*X(h)}
+ +{1\over2}\left(-{1\over110}+\rho\right)X(h).          \tag{5.4}
+\]
+Use Young's inequality with \(\eta=\rho/4\):
+\[
+ -\sqrt{B_*X}
+ \geq-{\rho\over4}X-{B_*\over\rho}.                   \tag{5.5}
+\]
+Subtracting the two stabilizers in (5.1) leaves the source coefficient
+\[
+ {9\over20}-{1\over2}\left(-{1\over110}+\rho\right)
+ +{\rho\over4}
+ ={5\over11}-{\rho\over4}.                              \tag{5.6}
+\]
+If it is negative, discard the favourable multiple of \(X\). This proves
+(5.3). \hfill\(\square\)
+
+Theorem 5.1 does not supply (5.2). It says that for the direct route, a
+uniform complete-owner lower bound above
+\(-(10/11)G_{\rm src}\) is now the sole new analytic inequality in the R-163
+semiconvexity implication. Every block must still be assembled in one
+self-adjoint owner: forward and legal reverse are one adjoint pair, while
+balanced and low are other blocks, not new reserves.
+
+For a graph, the same calculation gives constant \(C_\chi^2B_*/\rho\) only
+after one separately proves that the pulled-back action still has the exact
+form (5.1) in one fixed reduced source metric and that (5.2) holds in that
+same metric. Corollary 3.1 alone is not that proof.
+
+\section*{6. Scope firewalls and failed shortcuts}
+\hypertarget{section-6-firewalls}{ }
+
+\begin{enumerate}
+\item \textbf{Centering does not make the force zero.}
+R-146 subtracts a constant. It removes the absolute anchor but leaves the
+first variation unchanged. R-153 records a predictable strict-past
+first-variation formula that is not identically forced to vanish.
+
+\item \textbf{Theorem 2.1 is an origin theorem.}
+For nonzero feedback \(h\),
+\[
+ D_{\xi_b}Z_h=S_b+\sum_{c>b}S_cD_bh_c.                   \tag{6.1}
+\]
+Clark--Ocone then controls the feedback-corrected Malliavin force, not the
+R-141 fixed-law legal control force. No uniform Malliavin derivative or
+inverse feedback Jacobian is part of the Boue--Dupuis source budget.
+
+\item \textbf{A stationary low base may move the origin.}
+If independent-low elimination produces \(\ell_*(0)\neq0\), then the reduced
+base endpoint is not the A7 zero-control Gaussian. Equations (3.4), (4.6),
+and (4.7) do not automatically transfer. One must instead prove a uniform
+shifted endpoint variance and the exact reduced tangent, or use the full
+direct action.
+
+\item \textbf{Scalar \(L^2\) convergence is used only at the base.}
+A7 does not imply a pointwise or nonzero-feedback force norm. The predictable
+projection theorem converts the zero-control scalar variance to the exact
+origin dual norm; it makes no claim about
+\(\E\ip{G_{\rm end}}{C_JG_{\rm end}}\) away from this projection.
+
+\item \textbf{The result is phase-neutral.}
+No BCC, uniform, modulated, disordered, or other vacuum is assumed or selected.
+The theorem is a source-action reduction and remains valid if the present
+candidate functional is later rejected.
+\end{enumerate}
+
+\section*{7. Evidence map and next decisive calculation}
+\hypertarget{section-7-map}{ }
+
+\begin{center}
+\begin{tabular}{p{0.27\linewidth}p{0.16\linewidth}p{0.47\linewidth}}
+\hline
+Object or route & Verdict & Exact boundary or next condition \\
+\hline
+Direct absolute anchor & closed & A7 centering and R-146 give (4.7); no separate representation constant is bounded. \\
+Zero-control origin force & closed & Predictable first-chaos projection and A7/A1 moments give (4.6). \\
+Force equals zero & failed shortcut & Centering is not Euler stationarity; R-153 shows the first variation is not forced to vanish. \\
+Nonzero-feedback Clark--Ocone & rejected transfer & It contains feedback derivatives and is not the fixed-law legal force. \\
+Origin-preserving graph force & closed conditionally & Require the same zero-control law and uniform tangent bound (3.5); full composition also needs exact metric/stabilizer transport. \\
+Stationary low away from zero & open & Need a shifted-base variance/tangent theorem or retain the full direct action. \\
+Complete production owner & open and load-bearing & Prove (1.2) with every forward, adjoint, balanced, low, current, trace, future, forest, and sextic block once. \\
+\hline
+\end{tabular}
+\end{center}
+
+The next decisive calculation is therefore not another origin-force estimate.
+It is the generalized eigenvalue or Douglas/Feshbach test for the actual
+owner-complete production chart at the uniform threshold
+\(-(10/11-\rho)G_{\rm src}\). A failure must be retained as an explicit legal
+production direction; a restricted deterministic chart does not decide it.
+
+\section*{8. Devil's-advocate and code-discipline review}
+\hypertarget{section-8-review}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: Gaussian integration by parts differentiates the
+adapted coefficient. DISMISSED.} In the \(b\)-th integration, \(k_b\) is
+\(\cF_{b-1}\)-measurable and therefore independent of the fresh block
+\(\xi_b\). Its \(\xi_b\) derivative is zero.
+
+\item \textbf{Objection: the discrete first-chaos norm equals the whole
+variance. UPHELD against equality.} It is an orthogonal projection and gives
+only \(\leq\) in general. Equality is claimed only for the completed Brownian
+predictable-representation setting or a terminal already in the adapted first
+chaos.
+
+\item \textbf{Objection: \(11!!\) assumes independent field components.
+DISMISSED.} Diagonalize the covariance and use weighted Jensen. Correlated
+and singular Gaussian components are included.
+
+\item \textbf{Objection: a finite numerical trace ceiling proves the analytic
+all-cutoff bound. UPHELD against that inference.} The theorem uses
+\(T_*<\infty\) from trace convergence. Executable finite-ladder values are
+regression checks only.
+
+\item \textbf{Objection: (5.3) closes T-050. UPHELD against that claim.}
+The complete production owner lower bound (1.2), its random/nonlinear/revisit
+scope, and its pathwise/graph compatibility are not proved here.
+
+\item \textbf{Objection: the same source square is spent twice. DISMISSED.}
+The origin force is paid once by Young in (5.5); the owner threshold (5.2)
+contains the explicit source Hessian once. Forward/legal-reverse/balanced/low
+must still be evaluated as one Hessian and receive no second source reserve.
+\end{enumerate}
+
+The primary executable checks the exact predictable projection on polynomial
+Gaussian fixtures, the martingale/Bessel form, the twelfth-moment constant,
+the R-146/R-163 coefficient algebra, records current authority hashes, and
+checks every scope flag.
+The non-importing independent executable reconstructs the projection by exact
+Hermite enumeration and the Gaussian moment by multi-index expansion. Every
+reported derived constant is recomputed; explicit literals are used only as
+labelled exact test oracles.
+
+\section*{9. Reproduction and Result footer}
+
+\begingroup\small
+
+Dependencies: A1, A7, A11; R-104, R-128, R-141, R-146, R-153, R-163.
+
+Reproduction command: from the repository root, run the primary, independent,
+and integrated executables below.
+\begin{verbatim}
+$py = 'E:\Dev\TECT.venv\Scripts\python.exe'
+& $py codes/foundations/a13_classii_predictable_first_chaos_origin_force_
+  anchor_free_semiconvexity_reduction.py
+& $py codes/foundations/a13_classii_predictable_first_chaos_origin_force_
+  anchor_free_semiconvexity_reduction_independent.py
+& $py codes/foundations/a13_classii_predictable_first_chaos_origin_force_
+  anchor_free_semiconvexity_reduction_verify.py
+\end{verbatim}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-PREDICTABLE-FIRST-CHAOS-ORIGIN-FORCE-
+  ANCHOR-FREE-SEMICONVEXITY-REDUCTION; Ledger ID: R-164.
+Precise statement: the legal zero-control projected force is the predictable
+  first-Gaussian-chaos projection of the complete endpoint scalar and has
+  squared source dual norm at most its variance; A7 L2 convergence and A1
+  point-covariance trace convergence make that variance cutoff-uniform;
+  R-146 removes the direct anchor; a uniform owner margin rho above -10/11
+  gives mu=-1/110+rho, epsilon_v=max(0,5/11-rho/4), epsilon_6=3/20,
+  and C=B*/rho.
+Scope: finite temporally faithful Gaussian charts with the A7 zero-control
+  law; direct complete action; fixed floor and side-16 registered A1/A7
+  sharp-cube/dyadic cutoff sequence.
+  A force-only graph corollary requires an origin-preserving graph and one
+  uniform tangent bound; full graph composition also requires exact
+  source-metric and stabilizer transport.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Expected output: primary 50/50, independent 47/47, integrated, PDF, and
+  release checks all PASS.
+Falsification gate: any projection, martingale, moment, centering, trace,
+  coefficient, authority, hash, PDF, exploration, public-surface, or release
+  assertion fails.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: no complete production owner lower bound, stationary
+  low elimination away from zero, nonzero-feedback force bound, random/
+  nonlinear/revisit or pathwise conditional semiconvexity, removal, T-050,
+  A13, Nelson, interacting measure, phase/PDE verdict, or Sector-A closure.
+Proof complete: false; T-050 closed: false; Sector A closed: false.
+Next required action: assemble the actual complete production owner and test
+  K_owner >= -(10/11-rho)G_src with one uniform rho>0, retaining forward,
+  legal reverse, balanced, low, trace, current, future, forest, and sextic
+  contributions exactly once; record a failed eigenvector as a legal
+  production counterdirection.
+\end{verbatim}
+\endgroup
+
+\endgroup

@@ -5962,3 +5962,51 @@ T5--T7 promotion remain open. Tier stays T4.
   direct gate is an owner-complete legal production conditional chart tested
   against the sharpened `-10/11` threshold together with the absolute anchor
   and origin force.
+
+- 2026-08-04: Registered
+  `A13-CLASSII-PREDICTABLE-FIRST-CHAOS-ORIGIN-FORCE-ANCHOR-FREE-SEMICONVEXITY-REDUCTION`
+  (R-164) as one further subproof inside the existing A13/SA-F4 family. Let
+  `Z_0=sum_b S_b xi_b` be any finite temporally faithful R-104 zero-control
+  source chart and let
+  `F_J=V_J^ren(Z_0)+(3/20)||Z_0||_6^6`. The exact R-141 legal force is
+  `g_b=E[nabla_b F_J|F_(b-1)]`. Adapted Gaussian integration is isometric,
+  and integration by parts makes `sum_b <g_b,xi_b>` the orthogonal projection
+  of `F_J-EF_J` onto predictable first Gaussian chaos. Therefore
+  `sum_b E||g_b||^2<=Var(F_J)` with sharp constant one; equality is not
+  asserted for a general discrete chart.
+
+  A7 `L2` convergence of the integrated renormalized Class-II energy and the
+  A1/A11 point-covariance trace ceiling give the explicit all-cutoff bound
+  `B_*=(M_7+(3/20)L^3 sqrt(11!!)T_*^3)^2` on the registered sharp-cube/dyadic
+  sequence. It is uniform in finite chart length and in independent-Gaussian
+  linear/isometric refinements preserving the same zero-control law. A7
+  finite-cutoff centering also gives the favourable direct anchor
+  `A(0)=(3/20)E||Z_0||_6^6>=0`. Thus neither the direct origin force nor the
+  absolute anchor remains a separate hypothesis.
+
+  The coefficient composition is derived from labelled upstream data rather
+  than pasted constants. The source-action coefficient `9/20` gives Hessian
+  `9/10`; with `p=11/10`, the target is `1/(2p)=5/11`, the semiconvexity floor
+  is `-1/110`, and after separating the source Hessian the owner floor is
+  `-10/11`. Hence a complete direct production bound
+  `K_owner>=-(10/11-rho)G_src`, uniform for one `rho>0` along every radial
+  segment, yields
+  `epsilon_v=max(0,5/11-rho/4)`, `epsilon_6=3/20<27/100`, and constant
+  `B_*/rho` by one Taylor--Young payment.
+
+  An origin-preserving graph inherits only a force bound with tangent factor
+  `C_chi^2`; full graph composition still needs exact source-metric and
+  stabilizer transport. A stationary eliminated-low base away from zero,
+  nonzero feedback, random/nonlinear/revisit or pathwise conditional laws are
+  not covered. Primary `50/50` and non-importing independent `47/47` exact
+  audits pass; the integrated verifier and deterministic seven-page PDF pin
+  hashes, security, rendering, visual QA, records, and scope in the R-164
+  manifest and `EXP-000744`.
+
+  R-164 does not prove the complete production owner bound and therefore does
+  not close T-050, A13, Nelson, removal, the interacting measure, any phase or
+  PDE verdict, or Sector A. The next direct calculation is the actual
+  owner-complete generalized-eigenvalue/Douglas--Feshbach test at
+  `-(10/11-rho)G_src`, with every forward, legal reverse, balanced, low,
+  current, trace, future, forest, projected-force, and sextic contribution
+  retained exactly once.

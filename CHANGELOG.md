@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Register R-164 predictable first-chaos origin-force and anchor-free reduction] - 2026-08-04
+
+R-164 proves that the direct R-141 zero-control legal force is a predictable first-chaos projection with squared source-dual norm bounded by the terminal scalar variance, and uses A7/A11 to make this bound cutoff-uniform on the registered sequence. A7 centering removes the direct anchor. The exact remaining direct gate is the complete owner bound above -(10/11-rho)G_src; T-050, A13, graph transport, nonzero feedback, random/nonlinear/revisit/pathwise scope, phase/PDE, removal, and Sector-A closure remain open.
+
 ## [Clarify the common CL8 energy-state scope and Weyl conventions] - 2026-08-04
 
 Scope correction to the preceding T-054 event: the exact witnesses refute automatic inheritance or reuse of autonomous-H conservation and ground/Gibbs stationarity; they do not separately prove nonstationarity of the actual interacting ground projector. The certificate now proves the Weyl-multiplier intersection by contractive modulation averaging, fixes the inherited Weyl-label direction to S_delta^(-1), makes the dp-wedge-dq matrix sign explicit, and supplies the four evidence anchors cited by EXP-000743. Primary 120/120, independent 99/99, and integrated 164/164 checks pass after repair. The T0 scope, four registered negatives, next gate, and all C0/N1-N5, C6, CP1, physical-reference, below-empty-space, continuum/Hadamard, and Pre-A boundaries are unchanged.

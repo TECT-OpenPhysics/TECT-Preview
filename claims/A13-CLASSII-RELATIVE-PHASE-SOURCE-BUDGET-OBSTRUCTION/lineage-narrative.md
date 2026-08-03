@@ -1345,6 +1345,26 @@ endpoint theorem.
     inputs remain open, so no T-050/A13, phase/PDE, Nelson/measure, or Sector-A
     closure is claimed.
 
+84. **Predictable first-chaos origin force and anchor-free reduction.** R-164
+    removes two hypotheses from the direct R-163 implication without assuming
+    stationarity of the force. On every finite R-104 zero-control Gaussian
+    chart, the R-141 legal force is the predictable first-chaos projection of
+    the complete centered terminal scalar, so its squared source-dual norm is
+    at most the scalar variance. A7 integrated-energy `L2` convergence and the
+    A1/A11 point-covariance trace bound turn this into the cutoff- and chart-
+    uniform certificate `B_*` along the registered sharp-cube/dyadic sequence.
+    A7 finite-cutoff centering separately makes the direct anchor nonnegative.
+    Exact coefficient derivation then shows that the single remaining direct
+    analytic inequality is the complete owner bound
+    `K_owner>=-(10/11-rho)G_src`: it gives `mu=-1/110+rho`,
+    `epsilon_v=max(0,5/11-rho/4)`, `epsilon_6=3/20`, and constant `B_*/rho`.
+    This is a scoped T4 subproof, not T-050 closure. A graph receives only the
+    force pullback unless its source metric and stabilizers are transported
+    exactly; stationary low away from zero, nonzero feedback,
+    random/nonlinear/revisit and pathwise conditional production remain open.
+    The next route must assemble and test the full one-use owner rather than
+    introduce another origin-force estimate.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.
