@@ -1387,6 +1387,31 @@ endpoint theorem.
     test on that closed certification domain or a certified counterdirection
     in the unresolved open annulus.
 
+86. **Sparse production radial-Gram decomposition and global owner bound.**
+    R-166 replaces the generic interval-matrix fallback on the R-165 annulus
+    by an exact structural decomposition. The R-130 Fierz identity writes the
+    six-row coefficient as a polynomial Pauli-current Gram plus one radial
+    rank-two correction. After centered fresh expectation, the Pauli current
+    cross has frequencies at most four while its final-root second variation
+    has only zero-mean `+/-8p` support, so their spatial pairing vanishes.
+    The strict-past trace is retained. The radial quotient has the
+    floor-uniform bounds `|w||grad lambda|<=1` and
+    `|w|^2||D2 lambda||<=6`, yielding correction constants `8`, `224/9` and
+    `3208/81`. A direct Fourier coefficient inequality strengthens the
+    source-coordinate quartic coefficient without contradicting R-165's
+    sharp `5/6` fourth-moment decorrelation. The resulting exact polynomial
+    has its unique minimum in `70<G_*<71`; a rational convex tangent bound
+    leaves the strict margin
+    `62691083048203/439505584128000` above `-9/10`. Thus the R-164 owner
+    target holds at every past amplitude on this fixed sparse principal fibre.
+    The high-dimensional interval route is parked here, and hostile floating
+    searches remain non-evidence regression tests. Other harmonics, roots,
+    cross blocks, complete multi-root assembly, low variables,
+    random/nonlinear/revisit feedback, removal, T-050/A13, phase/PDE,
+    Nelson/measure and Sector-A closure remain open at T4. The main proof lane
+    now moves to the complete nonzero multi-root owner while T-054/T-052
+    truth-first candidate evaluation continues in parallel.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

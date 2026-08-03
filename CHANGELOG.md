@@ -5,6 +5,18 @@ not pillar counts.
 
 ---
 
+## [A13 R-166 Fourier and quotient-jet adversarial hardening] - 2026-08-04
+
+Pre-release adversarial hardening for A13-CLASSII-SPARSE-PRODUCTION-OWNER-RADIAL-GRAM-GLOBAL-BOUNDARY (R-166) replaces shallow Fourier and quotient-bound oracles by executable exact algebra. The primary now reconstructs the p:2p versus fresh-4p Laurent support, rejects a wrong-root resonance mutant, symbolically differentiates the radial quotient, and rejects the factor-four Hessian mutant. The non-importing Fraction audit independently uses exact Laurent convolution and rational Taylor-series division with boundary fixtures; its count is corrected from 28/28 to 31/31. Upstream covariance and volume values are read from hash-pinned A1/R-165 evidence instead of pasted derived constants, and self-test now rejects a stale integrated-result manifest pin. The theorem, polynomial, margin, T4 tier, sparse-fibre scope, and every open T-050/A13/phase/PDE/Sector-A boundary are unchanged.
+
+## [A13 R-166 full result identifier registration correction] - 2026-08-04
+
+Correction to the immediately preceding R-166 event: the full registered result identifier is A13-CLASSII-SPARSE-PRODUCTION-OWNER-RADIAL-GRAM-GLOBAL-BOUNDARY (R-166). This correction supplies the omitted full identifier only; it changes no statement, scope, evidence, tier, or open gate.
+
+## [A13/R-166 closes the sparse production owner amplitude annulus exactly] - 2026-08-04
+
+Registered R-166 as an exact T4 boundary theorem on the fixed side-16 nonaliased R-153 p:2p strict-past / fresh-4p twelve-dimensional conditional fibre. The Pauli-Fierz radial-Gram split, Fourier nonresonance, floor-uniform correction bounds, and direct source-coordinate harmonic inequality replace the unresolved R-165 annulus by a rational polynomial whose unique global minimum is bracketed by 70<G_*<71 and remains strictly above -9/10. Primary 34/34 and independent 28/28 audits pass. This closes only that sparse fibre: the complete multi-root owner, T-050/A13, removal, phase/PDE/morphology, Nelson/measure, and Sector A remain open. The route now transfers the exact owner-first structure to additional roots and cross-root blocks while T-054 truth-first candidate evaluation continues without privileging BCC.
+
 ## [Correct CL8 q-only cross-block sign oracle] - 2026-08-04
 
 Registers EXP-000750. Since V_WS=-(w*c/a^2)I, the q-only kick block -tau*V_WS has coefficient +tau*w*c/a^2: +3/64 on F0 and -7/360 on the negative-step F1 fixture. The earlier two executables used the opposite sign while testing only rank and determinant. Explicit signed oracles repair the evidence; rank eight, determinant zero, the narrow direct-order microcut no-go, the manifest verdict, C6 status, and all scope boundaries are unchanged. Corrected primary 141/141, independent 134/134, and integrated 224/224 checks pass, 499/499 total.

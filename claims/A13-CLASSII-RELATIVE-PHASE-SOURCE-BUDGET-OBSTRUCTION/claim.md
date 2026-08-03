@@ -6035,3 +6035,33 @@ T5--T7 promotion remain open. Tier stays T4.
   shifted low variables, regulator/removal uniformity, T-050/A13, Nelson,
   an interacting measure, every phase/PDE/morphology verdict, and Sector A
   remain open at T4.
+
+### R-166 sparse production owner radial-Gram global boundary
+
+- Result ID:
+  `A13-CLASSII-SPARSE-PRODUCTION-OWNER-RADIAL-GRAM-GLOBAL-BOUNDARY`.
+- On the same fixed side-16 exact nonaliased R-153 `p:2p` strict-past /
+  fresh-`4p` affine principal fibre, the exact Pauli-Fierz decomposition
+  `B=(c0+c1)B_J+c1(aa^T-bb^T)` separates the polynomial current Gram from
+  one radial rank-two correction. Centered Fourier support makes the Pauli
+  current resonance vanish exactly; the strict-past trace remains paid.
+- Floor-uniform correction constants `8`, `224/9` and `3208/81`, together
+  with the direct coefficient inequality
+  `<|m|^4|z|^2> >= <|m|^2>^2<|z|^2>`, give
+  `K_owner(g)[alpha,alpha] >= P_tilde(G)|alpha|^2`, where
+  `P_tilde(G)=(625/21040201728)G^4-(25995/87359488)G^2-(1323/8192000)G-(4402893/30051663872)`.
+- Exact derivative signs give `70<G_*<71` and
+  `P_tilde(G_*) >= -332863942666997/439505584128000 > -9/10`. Therefore the
+  R-164 owner target with `rho=1/110` holds for every `G>=0` on this fibre,
+  closing the R-165 annulus without numerical quadrature.
+- Primary `34/34` and non-importing standard-library Fraction independent
+  `31/31` checks pass, including exact quotient-jet and Fourier-resonance
+  mutation tests. The deterministic five-page PDF passed all-page visual
+  QA. The exact hostile floating search is retained only as a regression
+  falsifier and is not part of the proof.
+- This does not prove any additional harmonic or root, cross-root blocks, the
+  complete multi-root owner, shifted low variables, random/nonlinear/revisit
+  feedback, regulator or cutoff removal, T-050/A13, Nelson/measure, a phase,
+  morphology or PDE, or Sector A. The next proof target is the complete
+  nonzero multi-root owner; T-054/T-052 truth-first candidate evaluation
+  continues in parallel.
