@@ -6051,17 +6051,26 @@ T5--T7 promotion remain open. Tier stays T4.
   `K_owner(g)[alpha,alpha] >= P_tilde(G)|alpha|^2`, where
   `P_tilde(G)=(625/21040201728)G^4-(25995/87359488)G^2-(1323/8192000)G-(4402893/30051663872)`.
 - Exact derivative signs give `70<G_*<71` and
-  `P_tilde(G_*) >= -332863942666997/439505584128000 > -9/10`. Therefore the
-  R-164 owner target with `rho=1/110` holds for every `G>=0` on this fibre,
-  closing the R-165 annulus without numerical quadrature.
-- Primary `34/34` and non-importing standard-library Fraction independent
-  `31/31` checks pass, including exact quotient-jet and Fourier-resonance
-  mutation tests. The deterministic five-page PDF passed all-page visual
-  QA. The exact hostile floating search is retained only as a regression
-  falsifier and is not part of the proof.
-- This does not prove any additional harmonic or root, cross-root blocks, the
-  complete multi-root owner, shifted low variables, random/nonlinear/revisit
-  feedback, regulator or cutoff removal, T-050/A13, Nelson/measure, a phase,
-  morphology or PDE, or Sector A. The next proof target is the complete
-  nonzero multi-root owner; T-054/T-052 truth-first candidate evaluation
+  `P_tilde(G_*) >= -332863942666997/439505584128000
+  = -4/5+18740524635403/439505584128000 > -4/5`. Therefore the owner plus
+  the explicit `9/10` source Hessian is strictly above `1/10`, and the scoped
+  R-164 reduction may take `rho=3/20`, with full semiconvexity `31/220` and
+  `epsilon_v=367/880`, for every `G>=0` on this fibre.
+- The coefficient-one direct harmonic lemma is single-pair only. For
+  `m=cos(2x)` and `z=a sin(4x)+b sin(8x)`, the exact generalized Gram is
+  `[[5/4,1],[1,3/2]]`, with minimum eigenvalue `(11-sqrt(65))/8`; the rational
+  direction `(1,-1)` has ratio `3/8<1`. The named negative result therefore
+  forbids copying the lemma rootwise, without refuting the original R-166
+  fibre or the positivity of the complete joint sextic Gram.
+- Primary `40/40` and non-importing standard-library Fraction independent
+  `37/37` checks pass, including exact quotient-jet, Fourier-resonance,
+  strengthened-budget and non-tensorization tests. The deterministic v1.1
+  PDF passed all-page visual QA. Hostile floating searches remain regression
+  falsifiers and are not part of the proof.
+- This does not prove an additional root or the complete joint cross-root
+  owner, shifted low variables, random/nonlinear/revisit feedback, regulator
+  or cutoff removal, T-050/A13, Nelson/measure, a phase, morphology or PDE,
+  or Sector A. The next proof object is one canonical finite production
+  cylinder with all syntheses, covariances and incidence frozen before its
+  scalar is differentiated; T-054/T-052 truth-first candidate evaluation
   continues in parallel.

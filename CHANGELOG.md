@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [A13 R-166 v1.1 full identifier and floating-evidence wording correction] - 2026-08-04
+
+Correction to the immediately preceding R-166 v1.1 event: its full registered result identifier is A13-CLASSII-SPARSE-PRODUCTION-OWNER-RADIAL-GRAM-GLOBAL-BOUNDARY. EXP-000757 also corrects the evidentiary wording of EXP-000756: the stable sampled value near -1.9265e-5 makes K_owner>=0 unsafe as a working assumption and is an uncertified falsification candidate, but without an outward enclosure or exact certificate it does not refute the universal statement. No exact coefficient, theorem, negative-result boundary, tier, T-050/A13 status, phase/PDE/morphology verdict, or Sector-A status changes.
+
+## [A13 R-166 v1.1 strengthens the sparse-fibre gap and records the direct-harmonic tensorization no-go] - 2026-08-04
+
+Upgraded R-166 without creating a new result ID. The existing rational lower certificate is -4/5+18740524635403/439505584128000, so the fixed sparse fibre satisfies the one-tenth curvature target and permits the scoped R-164 choice rho=3/20, with full semiconvexity 31/220. An independent exact two-harmonic audit registers the named no-go: the normalized sin(4x),sin(8x) Gram is [[5/4,1],[1,3/2]], and the direction (1,-1) has ratio 3/8. Thus the single-pair theorem is strengthened, while its coefficient-one harmonic lemma cannot be copied into the open multi-root owner. T-050, A13, removal, phase/PDE/morphology, Nelson/measure, and Sector A remain open.
+
 ## [A13 R-166 Fourier and quotient-jet adversarial hardening] - 2026-08-04
 
 Pre-release adversarial hardening for A13-CLASSII-SPARSE-PRODUCTION-OWNER-RADIAL-GRAM-GLOBAL-BOUNDARY (R-166) replaces shallow Fourier and quotient-bound oracles by executable exact algebra. The primary now reconstructs the p:2p versus fresh-4p Laurent support, rejects a wrong-root resonance mutant, symbolically differentiates the radial quotient, and rejects the factor-four Hessian mutant. The non-importing Fraction audit independently uses exact Laurent convolution and rational Taylor-series division with boundary fixtures; its count is corrected from 28/28 to 31/31. Upstream covariance and volume values are read from hash-pinned A1/R-165 evidence instead of pasted derived constants, and self-test now rejects a stale integrated-result manifest pin. The theorem, polynomial, margin, T4 tier, sparse-fibre scope, and every open T-050/A13/phase/PDE/Sector-A boundary are unchanged.

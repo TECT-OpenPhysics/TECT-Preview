@@ -1400,17 +1400,23 @@ endpoint theorem.
     `3208/81`. A direct Fourier coefficient inequality strengthens the
     source-coordinate quartic coefficient without contradicting R-165's
     sharp `5/6` fourth-moment decorrelation. The resulting exact polynomial
-    has its unique minimum in `70<G_*<71`; a rational convex tangent bound
-    leaves the strict margin
-    `62691083048203/439505584128000` above `-9/10`. Thus the R-164 owner
-    target holds at every past amplitude on this fixed sparse principal fibre.
-    The high-dimensional interval route is parked here, and hostile floating
-    searches remain non-evidence regression tests. Other harmonics, roots,
-    cross blocks, complete multi-root assembly, low variables,
-    random/nonlinear/revisit feedback, removal, T-050/A13, phase/PDE,
-    Nelson/measure and Sector-A closure remain open at T4. The main proof lane
-    now moves to the complete nonzero multi-root owner while T-054/T-052
-    truth-first candidate evaluation continues in parallel.
+    has its unique minimum in `70<G_*<71`; the same rational convex tangent
+    bound is
+    `-4/5+18740524635403/439505584128000>-4/5`. Thus the owner plus explicit
+    source Hessian is strictly above `1/10`, and the scoped R-164 reduction
+    may take `rho=3/20`, yielding full semiconvexity `31/220` and
+    `epsilon_v=367/880` at every past amplitude on this fibre. A new exact
+    two-harmonic audit also shows why this lemma cannot simply be copied to
+    another root: for simultaneous `sin(4x)` and `sin(8x)` directions the
+    generalized Gram is `[[5/4,1],[1,3/2]]`, and `(1,-1)` has ratio `3/8<1`.
+    This named proof-route no-go leaves the original single-pair theorem and
+    the unknown complete joint owner intact. The high-dimensional interval
+    route is parked here, and hostile floating searches remain non-evidence
+    regression tests. The main proof lane now freezes one canonical finite
+    production cylinder before differentiating and assembling its joint
+    earlier-root/cross-root owner. Low variables, random/nonlinear/revisit
+    feedback, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A
+    closure remain open at T4; T-054/T-052 truth-first evaluation continues.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

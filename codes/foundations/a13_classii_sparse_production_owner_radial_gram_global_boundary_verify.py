@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 import argparse
 import ast
@@ -29,18 +29,19 @@ CLAIM_DIR = REPO / "claims" / CLAIM
 RESULT_ID = "A13-CLASSII-SPARSE-PRODUCTION-OWNER-RADIAL-GRAM-GLOBAL-BOUNDARY"
 LEDGER_ID = "R-166"
 SLUG = "sparse-production-owner-radial-gram-global-boundary"
-SCHEMA = f"tect/a13-{SLUG}-integrated/1.0"
+SCHEMA = f"tect/a13-{SLUG}-integrated/1.1"
 MANIFEST = CLAIM_DIR / "classii_sparse_production_owner_radial_gram_global_boundary_manifest.json"
 PRIMARY = REPO / "codes/foundations/a13_classii_sparse_production_owner_radial_gram_global_boundary.py"
 INDEPENDENT = REPO / "codes/foundations/a13_classii_sparse_production_owner_radial_gram_global_boundary_independent.py"
-NOTE = CLAIM_DIR / "notes/classii-sparse-production-owner-radial-gram-global-boundary-260804-v1.0.tex.txt"
+NOTE = CLAIM_DIR / "notes/classii-sparse-production-owner-radial-gram-global-boundary-260804-v1.1.tex.txt"
 PDF = NOTE.with_suffix("").with_suffix(".pdf")
 PDF_BUILDER = REPO / "verification/scripts/build_note_pdf.py"
-PRIMARY_OUTPUT = CLAIM_DIR / f"runs/2026-08-04-primary-{SLUG}/result.json"
-INDEPENDENT_OUTPUT = CLAIM_DIR / f"runs/2026-08-04-independent-{SLUG}/result.json"
-DEFAULT_OUTPUT = CLAIM_DIR / f"runs/2026-08-04-integrated-{SLUG}/result.json"
-EXPECTED_CHILD_COUNTS = {"primary": 34, "independent": 31}
-EXPLORATION_IDS = ("EXP-000751", "EXP-000752", "EXP-000753")
+PRIMARY_OUTPUT = CLAIM_DIR / f"runs/2026-08-04-primary-{SLUG}-v1-1/result.json"
+INDEPENDENT_OUTPUT = CLAIM_DIR / f"runs/2026-08-04-independent-{SLUG}-v1-1/result.json"
+DEFAULT_OUTPUT = CLAIM_DIR / f"runs/2026-08-04-integrated-{SLUG}-v1-1/result.json"
+EXPECTED_CHILD_COUNTS = {"primary": 40, "independent": 37}
+EXPLORATION_IDS = ("EXP-000751", "EXP-000752", "EXP-000753", "EXP-000754", "EXP-000755", "EXP-000756", "EXP-000757")
+NEGATIVE_ID = "NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION"
 EXACT_RATIONAL = re.compile(r"^[+-]?\d+(?:/[1-9]\d*)?$")
 
 
@@ -208,7 +209,7 @@ def main() -> int:
             stored = load_json(stored_path)
             audit.check("children", f"{name} fresh equals stored", fresh == stored, sha256(fresh_path), sha256(stored_path))
             rows = fresh.get("assertions", [])
-            audit.check("children", f"{name} schema", fresh.get("schema") == f"tect/a13-{SLUG}-{name}/1.0", fresh.get("schema"), f"tect/a13-{SLUG}-{name}/1.0")
+            audit.check("children", f"{name} schema", fresh.get("schema") == f"tect/a13-{SLUG}-{name}/1.1", fresh.get("schema"), f"tect/a13-{SLUG}-{name}/1.1")
             audit.check("children", f"{name} identity", fresh.get("result_id") == RESULT_ID and fresh.get("result_ledger_id") == LEDGER_ID, [fresh.get("result_id"), fresh.get("result_ledger_id")], [RESULT_ID, LEDGER_ID])
             audit.check("children", f"{name} count", len(rows) == EXPECTED_CHILD_COUNTS[name], len(rows), EXPECTED_CHILD_COUNTS[name])
             audit.check("children", f"{name} summary", fresh.get("summary") == {"passed": len(rows), "failed": 0, "total": len(rows)}, fresh.get("summary"), "all pass")
@@ -222,7 +223,7 @@ def main() -> int:
     primary, independent = children["primary"], children["independent"]
     audit.check("scope", "scope parity", primary.get("scope") == independent.get("scope") == manifest.get("scope"), [primary.get("scope"), independent.get("scope")], manifest.get("scope"))
     audit.check("scope", "no-overclaim parity", primary.get("no_overclaim") == independent.get("no_overclaim") == manifest.get("no_overclaim"), [primary.get("no_overclaim"), independent.get("no_overclaim")], manifest.get("no_overclaim"))
-    for token in ("p:2p", "fresh-4p", "multi-root", "T-050", "phase", "PDE", "Sector A"):
+    for token in ("p:2p", "fresh-4p", "fresh-8p", "tensorize", "multi-root", "T-050", "phase", "PDE", "Sector A"):
         audit.check("scope", f"boundary {token}", token.lower() in manifest.get("no_overclaim", "").lower(), token, "present")
 
     roots, relative_import, floats = imported_roots_and_floats(INDEPENDENT)
@@ -233,11 +234,14 @@ def main() -> int:
     audit.check("independence", "no primary artifact read", PRIMARY.name not in independent_text and PRIMARY_OUTPUT.parent.name not in independent_text, PRIMARY.name, "absent")
     audit.check("independence", "no float literals", floats == [], floats, [])
 
-    shared = ("coefficients", "correction_envelopes", "quotient_bounds", "harmonic_source_coordinate_constant", "polynomial_constants", "derivative_at_70", "derivative_at_71", "second_at_40", "second_at_41", "second_at_70", "minimum_bracket", "global_lower_bound", "owner_margin_above_minus_9_10", "owner_floor", "rho")
+    shared = ("coefficients", "correction_envelopes", "quotient_bounds", "harmonic_source_coordinate_constant", "multi_harmonic_gram", "multi_harmonic_gram_invariants", "multi_harmonic_counterexample", "polynomial_constants", "derivative_at_70", "derivative_at_71", "second_at_40", "second_at_41", "second_at_70", "minimum_bracket", "global_lower_bound", "owner_margin_above_minus_9_10", "owner_margin_above_minus_4_5", "owner_floor", "carryover_at_116", "carryover_margin_to_r164", "effective_rho_capacity", "rho", "rho_margin", "full_semiconvexity", "epsilon_v")
     for name in shared:
         left, right = primary["diagnostics"].get(name), independent["diagnostics"].get(name)
         audit.check("parity", name, canonical_exact(left) == canonical_exact(right), left, right)
     audit.check("oracle", "strict rational margin", F(primary["diagnostics"]["owner_margin_above_minus_9_10"]) > 0, primary["diagnostics"]["owner_margin_above_minus_9_10"], ">0")
+    audit.check("oracle", "stronger rational margin", F(primary["diagnostics"]["owner_margin_above_minus_4_5"]) > 0 and F(primary["diagnostics"]["owner_floor"]) == -F(4, 5), [primary["diagnostics"]["owner_margin_above_minus_4_5"], primary["diagnostics"]["owner_floor"]], [">0", "-4/5"])
+    audit.check("oracle", "R-164 strengthened constants", F(primary["diagnostics"]["rho"]) == F(3, 20) and F(primary["diagnostics"]["rho_margin"]) > 0 and F(primary["diagnostics"]["full_semiconvexity"]) == F(31, 220) and F(primary["diagnostics"]["epsilon_v"]) == F(367, 880), [primary["diagnostics"]["rho"], primary["diagnostics"]["rho_margin"], primary["diagnostics"]["full_semiconvexity"], primary["diagnostics"]["epsilon_v"]], ["3/20", ">0", "31/220", "367/880"])
+    audit.check("oracle", "multi-harmonic method no-go", canonical_exact(primary["diagnostics"]["multi_harmonic_counterexample"]["ratio"]) == F(3, 8) and F(primary["diagnostics"]["carryover_margin_to_r164"]) < 0, [primary["diagnostics"]["multi_harmonic_counterexample"], primary["diagnostics"]["carryover_margin_to_r164"]], ["ratio=3/8", "<0"])
     audit.check("oracle", "global bracket", primary["diagnostics"]["minimum_bracket"] == "70<G_*<71", primary["diagnostics"]["minimum_bracket"], "70<G_*<71")
 
     artifact_paths = {"primary": PRIMARY, "independent": INDEPENDENT, "verifier": Path(__file__).resolve(), "note": NOTE, "pdf": PDF, "primary_result": PRIMARY_OUTPUT, "independent_result": INDEPENDENT_OUTPUT}
@@ -251,7 +255,7 @@ def main() -> int:
 
     note_text = NOTE.read_text(encoding="utf-8")
     note_flat = " ".join(note_text.split())
-    for token in ("R-166", "radial-Gram", "224", "3208", "70<G_*<71", "62691083048203", "T-050", "morphology", "PDE"):
+    for token in ("R-166", "radial-Gram", "224", "3208", "70<G_*<71", "18740524635403", "3/20", "sqrt{65}", "3/8", "T-050", "morphology", "PDE"):
         audit.check("note", f"token {token}", token.lower() in note_flat.lower(), token, "present")
     audit.check("note", "no control characters", not any(ord(char) < 9 or 13 < ord(char) < 32 for char in note_text), "clean", "clean")
 
@@ -274,7 +278,7 @@ def main() -> int:
     audit.check("pdf", "security", findings == [] and open_action_ok(reader), findings, [])
     audit.check("pdf", "page count", len(reader.pages) == pdf_contract["pages"], len(reader.pages), pdf_contract["pages"])
     audit.check("pdf", "size", PDF.stat().st_size == pdf_contract["size_bytes"], PDF.stat().st_size, pdf_contract["size_bytes"])
-    for token in ("R-166", "RADIAL", "70 < G", "T-050", "morphology", "Sector A"):
+    for token in ("R-166", "RADIAL", "70 < G", "4/5", "3/20", "TENSOR", "T-050", "morphology", "Sector A"):
         audit.check("pdf", f"text {token}", token in extracted, token, "present")
     renderer = find_poppler("pdftoppm")
     audit.check("pdf", "Poppler available", renderer is not None, renderer, "pdftoppm")
@@ -299,21 +303,23 @@ def main() -> int:
     proof_map = (REPO / "theory/proof-evidence-map.md").read_text(encoding="utf-8")
     catalog_text = json.dumps(load_json(REPO / "verification/catalog.json"), sort_keys=True)
     explorations = {row["id"]: row for row in (json.loads(line) for line in (REPO / "explorations/log.jsonl").read_text(encoding="utf-8").splitlines() if line.strip())}
-    audit.check("records", "ledger", '<a id="r-166"></a>' in results_text and RESULT_ID in results_text and "34/34" in results_text and "31/31" in results_text, LEDGER_ID, "registered")
-    audit.check("records", "claim", RESULT_ID in claim_text and "70<G_*<71" in claim_text, RESULT_ID, "registered")
+    negative_text = (REPO / "negative-results/registry.md").read_text(encoding="utf-8")
+    audit.check("records", "ledger", '<a id="r-166"></a>' in results_text and RESULT_ID in results_text and "40/40" in results_text and "37/37" in results_text, LEDGER_ID, "registered")
+    audit.check("records", "claim", RESULT_ID in claim_text and "70<G_*<71" in claim_text and "3/20" in claim_text, RESULT_ID, "registered")
     audit.check("records", "lineage", "R-166" in lineage_text and "radial" in lineage_text.lower(), LEDGER_ID, "registered")
     audit.check("records", "index", RESULT_ID in index_text, RESULT_ID, "generated")
     audit.check("records", "status", relative(MANIFEST) in status.get("legacy_evidence", []) and "R-166" in status.get("statement", ""), relative(MANIFEST), "registered")
     audit.check("records", "status open T4", status.get("tier") == "T4" and status.get("proof_complete") is False and status.get("no_overclaim") == manifest.get("no_overclaim"), [status.get("tier"), status.get("proof_complete")], ["T4", False])
-    audit.check("records", "TODO", any(row.get("id") == "T-050" and "R-166" in row.get("note", "") and "complete multi-root" in row.get("note", "") for row in todo.get("tasks", [])), LEDGER_ID, "registered")
+    audit.check("records", "TODO", any(row.get("id") == "T-050" and "R-166" in row.get("note", "") and "finite cylinder" in row.get("note", "") for row in todo.get("tasks", [])), LEDGER_ID, "registered")
     audit.check("records", "changelog", any(LEDGER_ID in json.dumps(row, sort_keys=True) and RESULT_ID in json.dumps(row, sort_keys=True) for row in changelog), LEDGER_ID, "registered")
     audit.check("records", "theorem map", LEDGER_ID in json.dumps(theorem_map, sort_keys=True) and RESULT_ID in json.dumps(theorem_map, sort_keys=True), LEDGER_ID, "subproof")
     audit.check("records", "proof map", LEDGER_ID in proof_map and all(item in proof_map for item in EXPLORATION_IDS), EXPLORATION_IDS, "registered")
     package_paths = [relative(MANIFEST)] + [relative(path) for path in artifact_paths.values()]
     audit.check("records", "catalog", all(path in catalog_text for path in package_paths), package_paths, "catalogued")
+    audit.check("records", "negative method boundary", NEGATIVE_ID in negative_text and NEGATIVE_ID in manifest.get("negative_results", []), NEGATIVE_ID, "registered")
     audit.check("records", "explorations", all(item in explorations for item in EXPLORATION_IDS), EXPLORATION_IDS, "registered")
     if all(item in explorations for item in EXPLORATION_IDS):
-        audit.check("records", "exploration verdicts", [explorations[item]["verdict"] for item in EXPLORATION_IDS] == ["advanced", "parked", "inconclusive"], [explorations[item]["verdict"] for item in EXPLORATION_IDS], ["advanced", "parked", "inconclusive"])
+        audit.check("records", "exploration verdicts", [explorations[item]["verdict"] for item in EXPLORATION_IDS] == ["advanced", "parked", "inconclusive", "advanced", "failed", "inconclusive", "inconclusive"], [explorations[item]["verdict"] for item in EXPLORATION_IDS], ["advanced", "parked", "inconclusive", "advanced", "failed", "inconclusive", "inconclusive"])
 
     failures = [row for row in audit.rows if row["status"] != "PASS"]
     if failures:
@@ -327,7 +333,7 @@ def main() -> int:
         "result_ledger_id": LEDGER_ID,
         "scope": manifest["scope"],
         "no_overclaim": manifest["no_overclaim"],
-        "children": {"primary": {"path": relative(PRIMARY_OUTPUT), "sha256": sha256(PRIMARY_OUTPUT), "assertions": 34}, "independent": {"path": relative(INDEPENDENT_OUTPUT), "sha256": sha256(INDEPENDENT_OUTPUT), "assertions": 31}},
+        "children": {"primary": {"path": relative(PRIMARY_OUTPUT), "sha256": sha256(PRIMARY_OUTPUT), "assertions": EXPECTED_CHILD_COUNTS["primary"]}, "independent": {"path": relative(INDEPENDENT_OUTPUT), "sha256": sha256(INDEPENDENT_OUTPUT), "assertions": EXPECTED_CHILD_COUNTS["independent"]}},
         "embedded_child_assertions": embedded,
         "integrator_only_assertions": len(audit.rows) - embedded,
         "assertions": audit.rows,

@@ -13,15 +13,15 @@ import tempfile
 from typing import Any
 
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 REPO = Path(__file__).resolve().parents[2]
 CLAIM = "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
 RESULT_ID = "A13-CLASSII-SPARSE-PRODUCTION-OWNER-RADIAL-GRAM-GLOBAL-BOUNDARY"
 LEDGER_ID = "R-166"
 SLUG = "sparse-production-owner-radial-gram-global-boundary"
-SCHEMA = f"tect/a13-{SLUG}-independent/1.0"
+SCHEMA = f"tect/a13-{SLUG}-independent/1.1"
 CLAIM_DIR = REPO / "claims" / CLAIM
-DEFAULT_OUTPUT = CLAIM_DIR / "runs" / f"2026-08-04-independent-{SLUG}" / "result.json"
+DEFAULT_OUTPUT = CLAIM_DIR / "runs" / f"2026-08-04-independent-{SLUG}-v1-1" / "result.json"
 
 A1_MANIFEST = REPO / "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json"
 R130_MANIFEST = CLAIM_DIR / "classii_terminal_xi_conormal_gram_balanced_low_response_boundary_manifest.json"
@@ -41,6 +41,8 @@ SCOPE = {
     "fresh_4p_final_root": True,
     "all_past_amplitudes": True,
     "r165_open_annulus_closed": True,
+    "coefficient_one_single_fresh_pair_harmonic_coercivity": True,
+    "coefficient_one_multi_fresh_pair_harmonic_coercivity": False,
     "complete_multi_root_owner": False,
     "random_nonlinear_revisit_controls": False,
     "cutoff_or_floor_removal": False,
@@ -50,11 +52,13 @@ SCOPE = {
 }
 
 NO_OVERCLAIM = (
-    "R-166 proves K_owner >= -9I/10 for every whitened past amplitude on only the "
+    "R-166 proves K_owner > -4I/5 for every whitened past amplitude on only the "
     "fixed side-16 exact nonaliased R-153 p:2p strict-past and fresh-4p twelve-dimensional "
-    "conditional fibre with unit retained regulator multipliers and positive floor. It closes "
-    "the R-165 annulus on that fibre. It does not prove the complete multi-root production "
-    "owner, other harmonics or cross blocks, random/nonlinear/revisit feedback, shifted low "
+    "conditional fibre with unit retained regulator multipliers and positive floor, allowing "
+    "the scoped R-164 choice rho=3/20. It closes the R-165 annulus on that fibre. The "
+    "coefficient-one direct harmonic lemma does not tensorize uniformly to simultaneous fresh-4p "
+    "and fresh-8p support. This does not refute the original single-pair result and does not prove "
+    "the complete multi-root production owner, other harmonics or cross blocks, random/nonlinear/revisit feedback, shifted low "
     "variables, removal, T-050, A13, Nelson or an interacting measure, any physical phase, "
     "morphology or PDE, or Sector A."
 )
@@ -383,6 +387,52 @@ def main() -> int:
         [F(5, 32), F(1, 8), "false larger RHS"],
     )
 
+    # Independent Laurent-coefficient derivation of the exact failure of
+    # coefficient-one tensorization for simultaneous fresh 4p and 8p modes.
+    sine8_square = {-16: F(-1, 4), 0: half, 16: F(-1, 4)}
+    sine4_sine8 = {-12: F(-1, 4), -4: F(1, 4), 4: F(1, 4), 12: F(-1, 4)}
+    mixed_aa = laurent_multiply(cosine2_fourth, sine4_square).get(0, F())
+    mixed_bb = laurent_multiply(cosine2_fourth, sine8_square).get(0, F())
+    mixed_ab = 2 * laurent_multiply(cosine2_fourth, sine4_sine8).get(0, F())
+    source_aa = cosine2_square[0] ** 2 * sine4_square[0]
+    source_bb = cosine2_square[0] ** 2 * sine8_square[0]
+    source_ab = 2 * cosine2_square[0] ** 2 * sine4_sine8.get(0, F())
+    generalized_gram = [
+        [mixed_aa / source_aa, (mixed_ab / 2) / source_aa],
+        [(mixed_ab / 2) / source_bb, mixed_bb / source_bb],
+    ]
+    gram_trace = generalized_gram[0][0] + generalized_gram[1][1]
+    gram_determinant = generalized_gram[0][0] * generalized_gram[1][1] - generalized_gram[0][1] * generalized_gram[1][0]
+    mixed_counter_numerator = mixed_aa - mixed_ab + mixed_bb
+    mixed_counter_denominator = source_aa - source_ab + source_bb
+    mixed_counter_ratio = mixed_counter_numerator / mixed_counter_denominator
+    audit.check(
+        "harmonic-extension",
+        "exact two-harmonic moments",
+        [mixed_aa, mixed_ab, mixed_bb, source_aa, source_ab, source_bb]
+        == [F(5, 32), F(1, 4), F(3, 16), F(1, 8), F(0), F(1, 8)],
+        [mixed_aa, mixed_ab, mixed_bb, source_aa, source_ab, source_bb],
+        [F(5, 32), F(1, 4), F(3, 16), F(1, 8), F(0), F(1, 8)],
+    )
+    audit.check(
+        "harmonic-extension",
+        "generalized Gram invariants",
+        generalized_gram == [[F(5, 4), F(1)], [F(1), F(3, 2)]]
+        and gram_trace == F(11, 4)
+        and gram_determinant == F(7, 8),
+        [generalized_gram, gram_trace, gram_determinant],
+        [[[F(5, 4), F(1)], [F(1), F(3, 2)]], F(11, 4), F(7, 8)],
+    )
+    audit.check(
+        "harmonic-extension",
+        "coefficient-one tensorization counterdirection",
+        mixed_counter_numerator == F(3, 32)
+        and mixed_counter_denominator == F(1, 4)
+        and mixed_counter_ratio == F(3, 8) < 1,
+        [mixed_counter_numerator, mixed_counter_denominator, mixed_counter_ratio],
+        [F(3, 32), F(1, 4), "3/8<1"],
+    )
+
     predecessor = r165_result["diagnostics"]
     covariance = predecessor["covariance_bounds"]
     volume = fraction(a1["parameters"]["Lx"]) * fraction(a1["parameters"]["Ly"]) * fraction(a1["parameters"]["Lz"])
@@ -434,14 +484,35 @@ def main() -> int:
     dd40, dd41, dd70 = second(40, constants), second(41, constants), second(70, constants)
     lower = polynomial(70, constants) + d70
     margin = lower + F(9, 10)
+    strong_margin = lower + F(4, 5)
     audit.check("minimum", "curvature switch bracket", dd40 < 0 < dd41, [dd40, dd41], "negative,positive")
     audit.check("minimum", "unique derivative root bracket", d70 == -F(1360786403, 1277632512000) < 0 and d71 == F(97738714417, 876455903232000) > 0, [d70, d71], "negative,positive")
     audit.check("minimum", "convexity at bracket", dd70 == F(6865745, 5962285056) > 0, dd70, ">0")
     audit.check("minimum", "global lower certificate", lower == -F(332863942666997, 439505584128000), lower, -F(332863942666997, 439505584128000))
     audit.check("minimum", "strict target margin", margin == F(62691083048203, 439505584128000) > 0, margin, ">0")
-    rho = F(1, 110)
-    audit.check("threshold", "R-164 target", F(10, 11) - rho == F(9, 10), F(10, 11) - rho, F(9, 10))
-    audit.check("threshold", "strict reduced gap", margin > 0 and rho > 0, [margin, rho], "positive")
+    audit.check("minimum", "stronger minus-four-fifths margin", strong_margin == F(18740524635403, 439505584128000) > 0, strong_margin, ">0")
+
+    carryover_constants = dict(constants)
+    carryover_constants["A"] = mixed_counter_ratio * constants["A"]
+    carryover_at_116 = polynomial(116, carryover_constants)
+    carryover_r164_margin = carryover_at_116 + F(10, 11)
+    audit.check(
+        "harmonic-extension",
+        "old-ledger carry-over fails R-164 threshold",
+        carryover_at_116 == -F(100799462911238297, 50250138451968000)
+        and carryover_r164_margin == -F(606292707503941267, 552751522971648000) < 0,
+        [carryover_at_116, carryover_r164_margin],
+        ["exact P_3/8(116)", "P_3/8(116)+10/11<0"],
+    )
+
+    effective_rho = F(10, 11) + lower
+    rho = F(3, 20)
+    rho_margin = effective_rho - rho
+    full_semiconvexity = -F(1, 110) + rho
+    epsilon_v = F(5, 11) - rho / 4
+    audit.check("threshold", "effective R-164 rho capacity", effective_rho == F(733552471943033, 4834561425408000) > rho, effective_rho, f">{rho}")
+    audit.check("threshold", "R-164 target", F(10, 11) - rho == F(167, 220) and rho_margin == F(8368258131833, 4834561425408000) > 0, [F(10, 11) - rho, rho_margin], [F(167, 220), ">0"])
+    audit.check("threshold", "downstream semiconvexity and epsilon", full_semiconvexity == F(31, 220) > F(1, 10) and epsilon_v == F(367, 880) > 0, [full_semiconvexity, epsilon_v], [F(31, 220), F(367, 880)])
     audit.check("scope", "open-gate firewall", SCOPE["all_past_amplitudes"] and SCOPE["r165_open_annulus_closed"] and not SCOPE["complete_multi_root_owner"] and not SCOPE["t050_closed"] and not SCOPE["sector_a_closed"] and "does not prove" in NO_OVERCLAIM, SCOPE, "one sparse fibre only")
 
     audit.require()
@@ -458,6 +529,9 @@ def main() -> int:
             "correction_envelopes": {"C0": c_zero, "LC": c_first, "HC": c_half, "paid_LC": l_corr, "paid_HC": h_corr, "trace_H": h_trace},
             "quotient_bounds": {"w_grad_lambda": grad_bound, "w2_hessian_lambda": hessian_bound},
             "harmonic_source_coordinate_constant": 1,
+            "multi_harmonic_gram": generalized_gram,
+            "multi_harmonic_gram_invariants": {"trace": gram_trace, "determinant": gram_determinant},
+            "multi_harmonic_counterexample": {"numerator": mixed_counter_numerator, "denominator": mixed_counter_denominator, "ratio": mixed_counter_ratio},
             "polynomial_constants": constants,
             "derivative_at_70": d70,
             "derivative_at_71": d71,
@@ -467,8 +541,15 @@ def main() -> int:
             "minimum_bracket": "70<G_*<71",
             "global_lower_bound": lower,
             "owner_margin_above_minus_9_10": margin,
-            "owner_floor": -F(9, 10),
+            "owner_margin_above_minus_4_5": strong_margin,
+            "owner_floor": -F(4, 5),
+            "carryover_at_116": carryover_at_116,
+            "carryover_margin_to_r164": carryover_r164_margin,
+            "effective_rho_capacity": effective_rho,
             "rho": rho,
+            "rho_margin": rho_margin,
+            "full_semiconvexity": full_semiconvexity,
+            "epsilon_v": epsilon_v,
         },
         "scope": SCOPE,
         "no_overclaim": NO_OVERCLAIM,

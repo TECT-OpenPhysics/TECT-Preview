@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION](#ng-2026-08-04-a13-r166-direct-harmonic-coercivity-tensorization) | extend the R-166 coefficient-one direct source-coordinate coercivity from one fresh pair to simultaneous dyadic fresh pairs by summing rootwise bounds or deleting their cross harmonic | for `m=cos(2x)` and `z=a sin(4x)+b sin(8x)`, the normalized exact Gram is `[[5/4,1],[1,3/2]]`; its minimum eigenvalue is `(11-sqrt(65))/8<1`, and `(a,b)=(1,-1)` gives exact ratio `3/8`. Retain the single-pair R-166 lemma, but certify the complete cross-root sextic Gram jointly |
 | [NG-2026-08-04-PRE-A-CP1-CL8-EXACT-ORDER-EVERY-MICROCUT-SIDEWAYS](#ng-2026-08-04-pre-a-cp1-cl8-exact-order-every-microcut-sideways) | within the declared direct bond-factorization architecture, retain the inherited commuting q-only kick or D-K-D ordering while requiring a full opposite-leg inverse at every microscopic bond cut; or insert a fixed nontrivial controller and still identify the product with that inherited order | the q-only bond-kick cross block is `[[0,0],[-tau*V_WS,0]]` and has rank at most eight rather than the complete-leg rank sixteen; invertible kinetic drifts do not change that rank.  A nontrivial complete-leg controller restores full rank but survives as `tau -> 0` and rotates the positions used by later kicks, yielding a new driven circuit.  Retain the exact inserted-1D driven all-cut work/transport branch, but keep a controller-free common-parent dynamics intertwiner open |
 | [NG-2026-08-04-PRE-A-CP1-CL8-PASSIVE-TWO-ARM-NUMBER-STATE-QUARTIC-REUSE](#ng-2026-08-04-pre-a-cp1-cl8-passive-two-arm-number-state-quartic-reuse) | append the inherited positive onsite CL8 quartic kick to the exact passive two-arm control while automatically reusing its oscillator-number generator, vacuum and Gibbs densities | the kick `p'=p-delta*w*g*q^3` changes the passive invariant action by `-(delta*w*g/nu)*p*q^3+(delta^2*w^2*g^2/(2nu))*q^6`, which is positive at zero momentum and nonzero field; quantum mechanically `<4|[N,Q^4]|0>` is nonzero and the quartic phase does not preserve the Gaussian vacuum.  Retain the passive control theorem, but require a new interacting invariant/state or an exact work-and-transport ledger |
 | [NG-2026-08-04-PRE-A-CP1-CL8-NONLINEAR-FLOQUET-WEYL-NORMALIZER](#ng-2026-08-04-pre-a-cp1-cl8-nonlinear-floquet-weyl-normalizer) | promote the exact nonlinear CL8 split-circuit automorphism on `B(H_a)` to an automorphism of the concrete unital Weyl C-star algebra | conjugating a Weyl configuration translation by the quartic position kick produces a cubic-phase multiplier that is not uniformly continuous and therefore not almost periodic; it lies outside the Weyl algebra. Retain the exact `B(H_a)` automorphism, the quadratic metaplectic Weyl sector, or define and verify an enlarged observable algebra |
@@ -635,6 +636,39 @@ matching alone is insufficient.
 `strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-manifest.json`;
 `codes/foundations/pre_a_cp1_cl8_quantum_boundary_algebra_intertwiner_route_split.py`;
 `codes/foundations/pre_a_cp1_cl8_quantum_boundary_algebra_intertwiner_route_split_independent.py`.
+
+<a id="ng-2026-08-04-a13-r166-direct-harmonic-coercivity-tensorization"></a>
+### NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION -- coefficient-one direct harmonic coercivity does not tensorize across dyadic fresh pairs
+
+**Failure mode.**  Extend the R-166 single-fresh-pair inequality
+`<|m|^4|z|^2> >= <|m|^2>^2<|z|^2>` with coefficient one to a tangent
+containing two dyadic fresh harmonics by summing rootwise estimates or
+deleting their cross harmonic.
+
+**Exact witness.**  On the normalized one-dimensional torus, take
+`m(x)=cos(2x)` and `z(x)=a sin(4x)+b sin(8x)`.  Exact Fourier coefficients
+give `<m^4 z^2>=5a^2/32+ab/4+3b^2/16` and
+`<m^2>^2<z^2>=(a^2+b^2)/8`.  The generalized Gram is
+`Q=[[5/4,1],[1,3/2]]`, with trace `11/4`, determinant `7/8`, and eigenvalues
+`(11+/-sqrt(65))/8`.  At `(a,b)=(1,-1)` the ratio is exactly `3/8<1`.
+Replacing only the old favorable quartic coefficient by `3/8` leaves the old
+adverse ledger below the R-164 threshold already at `G=116`:
+`P_(3/8)(116)+10/11=-606292707503941267/552751522971648000<0`.
+
+**Consequence.**  The R-166 coefficient-one lemma remains valid on its
+declared single fresh-`4p` pair, but it cannot be copied rootwise into the
+multi-root owner.  A successor must retain and certify the complete
+cross-root sextic Gram against the joint source metric.
+
+**Boundary.**  The exact matrix is positive definite, so this is not a
+failure of sextic positivity, a counterexample to the complete production
+action, or a closure or refutation of T-050.  It supplies no phase,
+morphology, BCC, vacuum, or PDE verdict.
+
+**Evidence.**  R-166 v1.1 primary and independent exact Laurent audits and
+`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-sparse-production-owner-radial-gram-global-boundary-260804-v1.1.tex.txt`.
+
+**Registered.**  2026-08-04.
 
 <a id="ng-2026-08-03-pre-a-cp1-cl8-stationarity-only-quantum-state"></a>
 ### NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE -- stationarity and exact symmetries do not select one fixed-regulator quantum state

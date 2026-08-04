@@ -1,0 +1,403 @@
+% =============================================================================
+% Title: Sparse production radial-Gram decomposition, strengthened global owner
+%        bound, and direct-harmonic non-tensorization boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-SPARSE-PRODUCTION-OWNER-RADIAL-GRAM-GLOBAL-BOUNDARY
+% Ledger: R-166
+% Version: v1.1 -- first issued 2026-08-04; this version issued 2026-08-04
+% Status: scoped T4 analytic/exact/executed advance; T-050 and Sector A remain open
+% =============================================================================
+
+\begingroup
+\newcommand{\E}{\mathbb E}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\dd}{\,\mathrm d}
+
+\section*{1. Purpose and scope}
+\hypertarget{section-1-result}{ }
+
+R-166 v1.0 closed the R-165 amplitude annulus on one exact production
+principal fibre.  Version 1.1 does not introduce a new theorem number.  It
+extracts the stronger consequence already contained in the same rational
+certificate and records an exact boundary of the proof method.
+
+On the fixed side-16 torus retain one strict-past antipodal pair at $p$, one
+at $2p$, and one fresh final pair at $4p$, with unit retained regulator
+multipliers and positive floor.  Let
+\[
+ g=(g_p,g_{2p})\in\mathbb R^{24},\quad G=|g|,
+ \qquad \alpha\in\mathbb R^{12}.                    \tag{1.1}
+\]
+For the exact R-153 endpoint-plus-sixth owner, excluding the explicit source
+Hessian,
+\[
+ \boxed{K_{\rm owner}(g)[\alpha,\alpha]
+ \geq \widetilde P(G)|\alpha|^2},                  \tag{1.2}
+\]
+where
+\[
+\boxed{
+ \widetilde P(G)=
+ {625\over21040201728}G^4
+ -{25995\over87359488}G^2
+ -{1323\over8192000}G
+ -{4402893\over30051663872}.}                       \tag{1.3}
+\]
+The exact global certificate proves the stronger statement
+\[
+ \boxed{K_{\rm owner}(g)>-{4\over5}\Id
+        \quad\hbox{for every }g\in\mathbb R^{24}.} \tag{1.4}
+\]
+Consequently the scoped R-164 reduction may take
+\[
+ \boxed{\rho={3\over20}},                           \tag{1.5}
+\]
+rather than the v1.0 choice $1/110$.  This is still only one sparse
+$p{:}2p$-past/fresh-$4p$ fibre.  It does not close the complete multi-root
+owner, T-050, A13, a physical phase, a preferred morphology, a PDE, or
+Sector A.
+
+\section*{2. Exact radial-Gram decomposition}
+\hypertarget{section-2-decomposition}{ }
+
+Let $P$ be the real orthogonal projector onto the complex doublet.  For a
+six-real field $w$, set
+\[
+ d=|w|^2+e,\qquad \lambda={|Pw|^2\over d},
+ \qquad b=2Pw,\qquad a=2(Pw-\alpha_{\rm rad}\lambda w),
+ \qquad \alpha_{\rm rad}={5\over9}.                \tag{2.1}
+\]
+If $B_J$ is the three-row Pauli-current Gram and $B_L$ the conormal Gram, the
+R-130 Fierz identity gives
+\[
+ B_L=B_J+aa^T-bb^T.                                 \tag{2.2}
+\]
+The A1 coefficients are
+\[
+ c_0={3\over250P_X},\qquad
+ c_1={243\over8000P_X},\qquad P_X=4+10^{-12},       \tag{2.3}
+\]
+and therefore
+\[
+ \boxed{B=(c_0+c_1)B_J+c_1C,\qquad C=aa^T-bb^T.}   \tag{2.4}
+\]
+This isolates the rational radial defect instead of applying an absolute
+six-row derivative envelope before using the favorable Pauli structure.
+
+\section*{3. Exact Pauli resonance cancellation}
+\hypertarget{section-3-pauli}{ }
+
+Condition on the strict past and write
+\[
+ W=m+X,\qquad n=\partial m,\qquad z=S_{4p}\alpha,
+ \qquad u=\partial z.                               \tag{3.1}
+\]
+For every real symmetric embedded Pauli generator $S_A$, put
+\[
+ J_A(t)=2(W+tz)^TS_A(n+tu).                         \tag{3.2}
+\]
+Then
+\[
+ J_A''(0)=4z^TS_Au=2\partial(z^TS_Az).              \tag{3.3}
+\]
+After the centered fresh expectation, $\E J_A(0)=2m^TS_An$ has frequencies
+of magnitude at most four, whereas (3.3) has only frequencies $\pm8$ and
+zero mean.  Hence
+\[
+ \int\E[J_A(0)J_A''(0)]\dd x=0.                    \tag{3.4}
+\]
+The remaining current term is a square.  The unaveraged $Xn$ frequencies
+also do not resonate.  The strict-past trace debit is retained in Section 6;
+(3.4) is not a positivity claim for the complete owner.
+
+\section*{4. Floor-uniform radial correction}
+\hypertarget{section-4-radial}{ }
+
+Put $R=(P-\lambda\Id)w$.  Direct differentiation gives
+\[
+ \nabla\lambda={2R\over d},\qquad
+ D^2\lambda={2(P-\lambda\Id)\over d}
+ -{4(wR^T+Rw^T)\over d^2}.                          \tag{4.1}
+\]
+Writing $x=|Pw|^2/d$ and $\delta=e/d$ yields
+\[
+ {|R|^2\over d}=x(1-x)-x^2\delta\leq{1\over4},
+ \qquad {|w|^2\over d}\leq1,                       \tag{4.2}
+\]
+so
+\[
+ |w||\nabla\lambda|\leq1,\qquad
+ |w|^2\|D^2\lambda\|_{\op}\leq6.                  \tag{4.3}
+\]
+The removable origin is taken by continuity.  From (2.1)--(4.3),
+\[
+ \|Da\|\leq{38\over9},\qquad
+ |D^2a[z,z]|\leq{80\over9}{|z|^2\over|w|}.         \tag{4.4}
+\]
+For every real symmetric $Q$,
+\[
+ |C:Q|\leq8\|Q\|_{\op}|w|^2,                     \tag{4.5}
+\]
+\[
+ |D(C:Q)[z]|\leq{224\over9}\|Q\|_{\op}|w||z|,   \tag{4.6}
+\]
+\[
+ \left|{1\over2}D^2(C:Q)[z,z]\right|
+ \leq{3208\over81}\|Q\|_{\op}|z|^2.             \tag{4.7}
+\]
+Thus the paid outward constants are
+\[
+ L_C<{189\over1000},\qquad H_C<{1203\over4000},
+ \qquad H_{\rm tr}<{3423\over8000}.               \tag{4.8}
+\]
+
+\section*{5. Direct single-pair harmonic coercivity}
+\hypertarget{section-5-harmonic}{ }
+
+For the declared fresh $4p$ pair put $r=|m|^2$, $f=r^2$, and $q=|z|^2$.
+Then $q$ has only modes $0,\pm8$, $f_8=r_4^2$, and positivity gives
+$q_0\geq2|q_8|$.  Parseval gives
+\[
+ f_0-|f_8|=r_0^2+2\sum_{k=1}^3|r_k|^2+|r_4|^2
+ \geq r_0^2.                                       \tag{5.1}
+\]
+Hence
+\[
+ \boxed{\langle|m|^4|z|^2\rangle
+ \geq\langle|m|^2\rangle^2\langle|z|^2\rangle.}  \tag{5.2}
+\]
+The right side differs from the sharper but different decorrelation product
+$\langle|m|^4\rangle\langle|z|^2\rangle$ used in R-165.  Gaussian fourth
+moments only add retained nonnegative terms, so the sixth Hessian contributes
+\[
+ A={9\over10}{(100/63)^2(20/91)\over4096^2}
+ ={625\over21040201728}.                            \tag{5.3}
+\]
+
+\section*{6. One-use coefficient ledger}
+\hypertarget{section-6-ledger}{ }
+
+Use the exact R-165 covariance bounds
+\[
+ {100\over63}\Id\leq\Gamma_p,\Gamma_{2p}
+ \leq{100\over31}\Id,\qquad
+ {20\over91}\Id\leq\Gamma_{4p}\leq{10\over43}\Id,
+ \quad\Tr\Gamma_{4p}\leq{60\over43}.              \tag{6.1}
+\]
+Also $p^2<5/32$, the past derivative covariance is at most $625/507904$,
+and $\sqrt{2(100/31)(60/43)}<301/100$.  Paying each correction value,
+first derivative, half-Hessian, fresh covariance, and strict-past trace once
+gives
+\[
+\begin{aligned}
+ B_2&={25995\over87359488},
+ &B_1&={1323\over8192000},\\
+ D_{\rm fresh}&={729\over30294016},
+ &D_{\rm trace}&={85575\over698875904},
+\end{aligned}                                       \tag{6.2}
+\]
+and
+\[
+ D_0={4402893\over30051663872}.                     \tag{6.3}
+\]
+The raw coefficient behind $B_2$ is
+\[
+ 256+32{\cdot224\over9}+8{\cdot3208\over81}.      \tag{6.4}
+\]
+The Pauli square is not counted as a reserve and the source $9\Id/10$
+remains outside $K_{\rm owner}$.
+
+\section*{7. Exact global minimum and stronger budget}
+\hypertarget{section-7-minimum}{ }
+
+Exact arithmetic gives
+\[
+ \widetilde P'(70)=-{1360786403\over1277632512000}<0,
+ \quad
+ \widetilde P'(71)={97738714417\over876455903232000}>0,\tag{7.1}
+\]
+and
+\[
+ \widetilde P''(70)={6865745\over5962285056}>0.     \tag{7.2}
+\]
+The derivative has a unique nonnegative zero $70<G_*<71$.  Convexity on
+that interval gives
+\[
+ \widetilde P(G_*)\geq
+ -{332863942666997\over439505584128000}.             \tag{7.3}
+\]
+The v1.0 margin above $-9/10$ was
+\[
+ {62691083048203\over439505584128000}>0.             \tag{7.4}
+\]
+The stronger observation is
+\[
+ {4\over5}+\widetilde P(G_*)\geq
+ \boxed{{18740524635403\over439505584128000}}>0.    \tag{7.5}
+\]
+Therefore the maximum rho justified by this lower certificate is
+\[
+ \rho_{\rm eff}={10\over11}+\widetilde P_{\rm lower}
+ ={733552471943033\over4834561425408000}.            \tag{7.6}
+\]
+For the clean choice $\rho=3/20$ the remaining exact margin is
+\[
+ \rho_{\rm eff}-{3\over20}
+ ={8368258131833\over4834561425408000}>0.             \tag{7.7}
+\]
+The inherited R-164 downstream quantities become
+\[
+ -{1\over110}+\rho={31\over220}>{1\over10},
+ \qquad
+ \epsilon_v={5\over11}-{\rho\over4}={367\over880}.  \tag{7.8}
+\]
+
+\section*{8. Exact direct-harmonic non-tensorization}
+\hypertarget{section-8-nontensor}{ }
+
+Equation (5.2) is tied to one declared fresh pair.  It does not tensorize
+with coefficient one when a second fresh harmonic is admitted.  Take
+\[
+ m=\cos(2\theta),\qquad
+ z=a\sin(4\theta)+b\sin(8\theta).                   \tag{8.1}
+\]
+Fourier multiplication, with normalized phase average, gives
+\[
+ \langle m^4z^2\rangle
+ ={5\over32}a^2+{1\over4}ab+{3\over16}b^2,          \tag{8.2}
+\]
+whereas
+\[
+ \langle m^2\rangle^2\langle z^2\rangle
+ ={1\over8}(a^2+b^2).                               \tag{8.3}
+\]
+The generalized Gram is
+\[
+ M=\begin{pmatrix}5/4&1\\1&3/2\end{pmatrix},
+ \qquad
+ \lambda_{\min}(M)={11-\sqrt{65}\over8}.           \tag{8.4}
+\]
+In the rational direction $(a,b)=(1,-1)$,
+\[
+ \langle m^4z^2\rangle={3\over32},\qquad
+ \langle m^2\rangle^2\langle z^2\rangle={1\over4},
+ \qquad {N\over D}={3\over8}<1.                    \tag{8.5}
+\]
+Thus coefficient-one direct harmonic coercivity fails on the enlarged
+$\{\pm4,\pm8\}$ support.  Even if every old adverse coefficient is
+optimistically retained and only $A$ is replaced by $(3/8)A$, the resulting
+polynomial satisfies
+\[
+ P_{3/8}(116)=
+ -{100799462911238297\over50250138451968000},        \tag{8.6}
+\]
+and
+\[
+ P_{3/8}(116)+{10\over11}
+ =-{606292707503941267\over552751522971648000}<0.   \tag{8.7}
+\]
+This is an exact NON-TENSORIZATION result for a proof route, registered as
+NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION.  It does not
+refute the original R-166 fibre and is not a counterexample to the actual
+complete production owner; new positive cross terms may change that owner.
+
+\section*{9. Production-incidence audit and route decision}
+\hypertarget{section-9-route}{ }
+
+The next proof object cannot be obtained by merely adding abstract harmonic
+coordinates.  R-156 fixes the shifted chart and the formal pullback-Hessian
+term, R-153 fixes the final-root current, trace and sextic identities, and
+R-149 proves that the actual cross synthesis $K=S_xS_v^*$ is indispensable.
+The registered authorities do not yet pin one complete $p\to2p\to4p$
+production cylinder: the effective syntheses and square-root bases, raw,
+past and future covariances, output/common-heat/root-visit incidence, and the
+placement of complement, historical-low, forest and returned-mean terms are
+not all specified together.
+
+Therefore the next rigorous step is to freeze those data in one canonical
+finite cylinder and differentiate its exact scalar once.  Only then should
+the forward, legal reverse, balanced, low, current, trace, future, forest,
+projected-force and sextic blocks be assembled and bounded once.  In
+parallel, T-054 and T-052 should continue truth-first candidate evaluation;
+no BCC morphology or particular PDE is privileged.
+
+An ignored internal hostile scan of simultaneous fresh $4p+8p$ directions
+found a stable small negative sampled Rayleigh value near $-1.93\,10^{-5}$,
+so the stronger unproved assertion $K_{\rm owner}\geq0$ is not a safe target.
+The sampled value remains about $0.80$ above $-4/5$ and has no interval or
+rational enclosure.  It is a regression falsifier, not theorem evidence and
+not a T-050 counterexample.
+
+\section*{10. Devil's-advocate review}
+\hypertarget{section-10-review}{ }
+
+\begin{enumerate}
+\item \textbf{Objection: v1.1 changes the polynomial after seeing a desired
+threshold. DISMISSED.}  The polynomial and rational lower bound are unchanged
+from v1.0.  Only the exact comparison $L>-4/5$ is newly extracted.
+
+\item \textbf{Objection: the source $9\Id/10$ was counted inside the owner.
+DISMISSED.}  It remains outside (1.2).  Rho is computed from
+$10/11+\widetilde P_{\rm lower}$ exactly once.
+
+\item \textbf{Objection: (8.5) refutes R-166. DISMISSED.}  R-166 assumes one
+fresh $4p$ pair.  The counterdirection uses simultaneous $4p$ and $8p$ support
+and refutes only coefficient-one tensorization of the lemma.
+
+\item \textbf{Objection: failure of the carry-over polynomial proves the
+full two-root owner fails. UPHELD against that inference.}  Equation (8.7)
+shows failure of the old adverse ledger with a weakened favorable constant,
+not the sign of every missing cross block.
+
+\item \textbf{Objection: the finite hostile scan proves a negative
+eigenvalue. UPHELD against that inference.}  It has convergence evidence but
+no outward error enclosure.  It remains an unregistered internal falsifier.
+
+\item \textbf{Objection: this closes T-050 or selects a physical vacuum.
+UPHELD against that inference.}  The complete production incidence, root
+cross blocks, low variables, feedback, removal and physical comparison gates
+remain open.  No morphology, phase or PDE follows.
+\end{enumerate}
+
+\section*{11. Reproduction and Result footer}
+\hypertarget{section-11-footer}{ }
+
+\begin{verbatim}
+Result ID: A13-CLASSII-SPARSE-PRODUCTION-OWNER-RADIAL-GRAM-
+  GLOBAL-BOUNDARY (R-166 v1.1).
+Precise statement: on the fixed exact p:2p past / fresh-4p fibre,
+  K_owner[g] >= P_tilde(|g|) I and K_owner > -4I/5 for every g.
+Scoped R-164 choice: rho=3/20; full semiconvexity 31/220;
+  epsilon_v=367/880.
+Exact method boundary: coefficient-one direct harmonic coercivity does not
+  tensorize to simultaneous fresh-4p and fresh-8p support; rational ratio 3/8.
+Dependencies: A1; R-130, R-149, R-153, R-156, R-164, R-165.
+Scope: fixed side-16 finite chart, positive floor, exact continuum torus
+  average, unit retained multipliers, declared p:2p past and one 4p root.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, AUDITED.
+Reproduction command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_sparse_production_owner_radial_gram_
+  global_boundary.py
+Expected output: primary 40/40, independent 37/37, integrated verification,
+  deterministic PDF, and all release gates pass.
+Independent command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_sparse_production_owner_radial_gram_
+  global_boundary_independent.py
+Integrated command: E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/a13_classii_sparse_production_owner_radial_gram_
+  global_boundary_verify.py
+Falsification gate: failure of the Gram split, resonance cancellation,
+  radial bounds, single-pair harmonic lemma, one-use ledger, rational minimum,
+  strengthened rho arithmetic, non-tensorization witness, authorities, PDF,
+  records, or scope firewall.
+Tier before / after: T4 / T4; no promotion.
+Proof complete: false. T-050 closed: false. Sector A closed: false.
+No-overclaim statement: no complete multi-root owner, feedback/removal, T-050, A13,
+  Nelson/measure, phase, morphology, PDE, or Sector A theorem.
+Next required action: define one canonical finite production cylinder before computing
+  additional root and cross-root owners; continue truth-first Pre-A screening.
+\end{verbatim}
+
+\endgroup

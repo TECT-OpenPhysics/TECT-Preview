@@ -14,15 +14,15 @@ from typing import Any
 import sympy as sp
 
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 REPO = Path(__file__).resolve().parents[2]
 CLAIM = "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
 RESULT_ID = "A13-CLASSII-SPARSE-PRODUCTION-OWNER-RADIAL-GRAM-GLOBAL-BOUNDARY"
 LEDGER_ID = "R-166"
 SLUG = "sparse-production-owner-radial-gram-global-boundary"
-SCHEMA = f"tect/a13-{SLUG}-primary/1.0"
+SCHEMA = f"tect/a13-{SLUG}-primary/1.1"
 CLAIM_DIR = REPO / "claims" / CLAIM
-DEFAULT_OUTPUT = CLAIM_DIR / "runs" / f"2026-08-04-primary-{SLUG}" / "result.json"
+DEFAULT_OUTPUT = CLAIM_DIR / "runs" / f"2026-08-04-primary-{SLUG}-v1-1" / "result.json"
 
 A1_MANIFEST = REPO / "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json"
 R130_MANIFEST = CLAIM_DIR / "classii_terminal_xi_conormal_gram_balanced_low_response_boundary_manifest.json"
@@ -42,6 +42,8 @@ SCOPE = {
     "fresh_4p_final_root": True,
     "all_past_amplitudes": True,
     "r165_open_annulus_closed": True,
+    "coefficient_one_single_fresh_pair_harmonic_coercivity": True,
+    "coefficient_one_multi_fresh_pair_harmonic_coercivity": False,
     "complete_multi_root_owner": False,
     "random_nonlinear_revisit_controls": False,
     "cutoff_or_floor_removal": False,
@@ -51,11 +53,13 @@ SCOPE = {
 }
 
 NO_OVERCLAIM = (
-    "R-166 proves K_owner >= -9I/10 for every whitened past amplitude on only the "
+    "R-166 proves K_owner > -4I/5 for every whitened past amplitude on only the "
     "fixed side-16 exact nonaliased R-153 p:2p strict-past and fresh-4p twelve-dimensional "
-    "conditional fibre with unit retained regulator multipliers and positive floor. It closes "
-    "the R-165 annulus on that fibre. It does not prove the complete multi-root production "
-    "owner, other harmonics or cross blocks, random/nonlinear/revisit feedback, shifted low "
+    "conditional fibre with unit retained regulator multipliers and positive floor, allowing "
+    "the scoped R-164 choice rho=3/20. It closes the R-165 annulus on that fibre. The "
+    "coefficient-one direct harmonic lemma does not tensorize uniformly to simultaneous fresh-4p "
+    "and fresh-8p support. This does not refute the original single-pair result and does not prove "
+    "the complete multi-root production owner, other harmonics or cross blocks, random/nonlinear/revisit feedback, shifted low "
     "variables, removal, T-050, A13, Nelson or an interacting measure, any physical phase, "
     "morphology or PDE, or Sector A."
 )
@@ -73,10 +77,10 @@ def sha256(path: Path) -> str:
 
 
 def serial(value: Any) -> Any:
-    if isinstance(value, sp.Basic):
-        return str(value)
     if isinstance(value, sp.MatrixBase):
         return [[serial(item) for item in row] for row in value.tolist()]
+    if isinstance(value, sp.Basic):
+        return str(value)
     if isinstance(value, dict):
         return {str(key): serial(item) for key, item in value.items()}
     if isinstance(value, (list, tuple)):
@@ -332,6 +336,67 @@ def main() -> int:
         [">=0", sp.Rational(5, 32), sp.Rational(1, 8), "false larger RHS"],
     )
 
+    # Exact failure of coefficient-one tensorization when a second fresh
+    # harmonic is admitted.  This is a method boundary, not a counterexample
+    # to the original single-fresh-pair owner theorem.
+    mix_a, mix_b = sp.symbols("mix_a mix_b", real=True)
+    mixed_fresh = {
+        -8: sp.I * mix_b / 2,
+        -4: sp.I * mix_a / 2,
+        4: -sp.I * mix_a / 2,
+        8: -sp.I * mix_b / 2,
+    }
+    mixed_fresh_square = laurent_multiply(mixed_fresh, mixed_fresh)
+    mixed_numerator = sp.expand(
+        laurent_coefficient(laurent_multiply(cosine4_power, mixed_fresh_square), 0)
+    )
+    mixed_denominator = sp.expand(
+        laurent_coefficient(laurent_multiply(cosine2, cosine2), 0) ** 2
+        * laurent_coefficient(mixed_fresh_square, 0)
+    )
+    numerator_gram = sp.Matrix(
+        [
+            [mixed_numerator.coeff(mix_a, 2), mixed_numerator.coeff(mix_a, 1).coeff(mix_b, 1) / 2],
+            [mixed_numerator.coeff(mix_a, 1).coeff(mix_b, 1) / 2, mixed_numerator.coeff(mix_b, 2)],
+        ]
+    )
+    denominator_gram = sp.Matrix(
+        [
+            [mixed_denominator.coeff(mix_a, 2), mixed_denominator.coeff(mix_a, 1).coeff(mix_b, 1) / 2],
+            [mixed_denominator.coeff(mix_a, 1).coeff(mix_b, 1) / 2, mixed_denominator.coeff(mix_b, 2)],
+        ]
+    )
+    generalized_gram = sp.simplify(denominator_gram.inv() * numerator_gram)
+    mixed_counter_numerator = sp.factor(mixed_numerator.subs({mix_a: 1, mix_b: -1}))
+    mixed_counter_denominator = sp.factor(mixed_denominator.subs({mix_a: 1, mix_b: -1}))
+    mixed_counter_ratio = sp.factor(mixed_counter_numerator / mixed_counter_denominator)
+    audit.check(
+        "harmonic-extension",
+        "exact two-harmonic moments",
+        mixed_numerator == sp.Rational(5, 32) * mix_a**2 + sp.Rational(1, 4) * mix_a * mix_b + sp.Rational(3, 16) * mix_b**2
+        and mixed_denominator == sp.Rational(1, 8) * (mix_a**2 + mix_b**2),
+        [mixed_numerator, mixed_denominator],
+        ["5*a^2/32+a*b/4+3*b^2/16", "(a^2+b^2)/8"],
+    )
+    audit.check(
+        "harmonic-extension",
+        "generalized Gram invariants",
+        generalized_gram == sp.Matrix([[sp.Rational(5, 4), 1], [1, sp.Rational(3, 2)]])
+        and sp.trace(generalized_gram) == sp.Rational(11, 4)
+        and generalized_gram.det() == sp.Rational(7, 8),
+        [generalized_gram, sp.trace(generalized_gram), generalized_gram.det()],
+        [[[sp.Rational(5, 4), 1], [1, sp.Rational(3, 2)]], sp.Rational(11, 4), sp.Rational(7, 8)],
+    )
+    audit.check(
+        "harmonic-extension",
+        "coefficient-one tensorization counterdirection",
+        mixed_counter_numerator == sp.Rational(3, 32)
+        and mixed_counter_denominator == sp.Rational(1, 4)
+        and mixed_counter_ratio == sp.Rational(3, 8) < 1,
+        [mixed_counter_numerator, mixed_counter_denominator, mixed_counter_ratio],
+        [sp.Rational(3, 32), sp.Rational(1, 4), "3/8<1"],
+    )
+
     predecessor = r165_result["diagnostics"]
     covariance = predecessor["covariance_bounds"]
     volume = rational(parameters["Lx"]) * rational(parameters["Ly"]) * rational(parameters["Lz"])
@@ -386,14 +451,34 @@ def main() -> int:
     dd40, dd41, dd70 = (sp.factor(second.subs(G, point)) for point in (40, 41, 70))
     lower = sp.factor(polynomial.subs(G, 70) + d70)
     margin = sp.factor(lower + sp.Rational(9, 10))
+    strong_margin = sp.factor(lower + sp.Rational(4, 5))
     audit.check("minimum", "curvature switch bracket", dd40 < 0 < dd41, [dd40, dd41], "negative,positive")
     audit.check("minimum", "derivative root bracket", d70 == -sp.Rational(1360786403, 1277632512000) < 0 and d71 == sp.Rational(97738714417, 876455903232000) > 0, [d70, d71], "negative,positive")
     audit.check("minimum", "convexity on 70-to-infinity", dd70 == sp.Rational(6865745, 5962285056) > 0 and third.subs(G, 70) > 0, [dd70, third.subs(G, 70)], ">0,>0")
     audit.check("minimum", "global rational lower bound", lower == -sp.Rational(332863942666997, 439505584128000), lower, -sp.Rational(332863942666997, 439505584128000))
     audit.check("minimum", "strict owner margin", margin == sp.Rational(62691083048203, 439505584128000) > 0, margin, ">0")
-    rho = sp.Rational(1, 110)
-    audit.check("threshold", "R-164 rho choice", sp.Rational(10, 11) - rho == sp.Rational(9, 10), sp.Rational(10, 11) - rho, sp.Rational(9, 10))
-    audit.check("threshold", "reduced semiconvexity strict", margin > 0 and rho > 0, [margin, rho], "positive")
+    audit.check("minimum", "stronger minus-four-fifths margin", strong_margin == sp.Rational(18740524635403, 439505584128000) > 0, strong_margin, ">0")
+
+    carryover_polynomial = sp.expand(mixed_counter_ratio * A * G**4 - B2 * G**2 - B1 * G - D0)
+    carryover_at_116 = sp.factor(carryover_polynomial.subs(G, 116))
+    carryover_r164_margin = sp.factor(carryover_at_116 + sp.Rational(10, 11))
+    audit.check(
+        "harmonic-extension",
+        "old-ledger carry-over fails R-164 threshold",
+        carryover_at_116 == -sp.Rational(100799462911238297, 50250138451968000)
+        and carryover_r164_margin == -sp.Rational(606292707503941267, 552751522971648000) < 0,
+        [carryover_at_116, carryover_r164_margin],
+        ["exact P_3/8(116)", "P_3/8(116)+10/11<0"],
+    )
+
+    effective_rho = sp.factor(sp.Rational(10, 11) + lower)
+    rho = sp.Rational(3, 20)
+    rho_margin = sp.factor(effective_rho - rho)
+    full_semiconvexity = -sp.Rational(1, 110) + rho
+    epsilon_v = sp.Rational(5, 11) - rho / 4
+    audit.check("threshold", "effective R-164 rho capacity", effective_rho == sp.Rational(733552471943033, 4834561425408000) > rho, effective_rho, f">{rho}")
+    audit.check("threshold", "R-164 rho choice", sp.Rational(10, 11) - rho == sp.Rational(167, 220) and rho_margin == sp.Rational(8368258131833, 4834561425408000) > 0, [sp.Rational(10, 11) - rho, rho_margin], [sp.Rational(167, 220), ">0"])
+    audit.check("threshold", "downstream semiconvexity and epsilon", full_semiconvexity == sp.Rational(31, 220) > sp.Rational(1, 10) and epsilon_v == sp.Rational(367, 880) > 0, [full_semiconvexity, epsilon_v], [sp.Rational(31, 220), sp.Rational(367, 880)])
     audit.check("scope", "open-gate firewall", SCOPE["all_past_amplitudes"] and SCOPE["r165_open_annulus_closed"] and not SCOPE["complete_multi_root_owner"] and not SCOPE["t050_closed"] and not SCOPE["sector_a_closed"] and "does not prove" in NO_OVERCLAIM, SCOPE, "one sparse fibre only")
 
     audit.require()
@@ -410,6 +495,9 @@ def main() -> int:
             "correction_envelopes": {"C0": c_zero, "LC": c_first, "HC": c_half_second, "paid_LC": l_corr, "paid_HC": h_corr, "trace_H": h_trace},
             "quotient_bounds": {"w_grad_lambda": gradient_constant, "w2_hessian_lambda": hessian_constant},
             "harmonic_source_coordinate_constant": 1,
+            "multi_harmonic_gram": generalized_gram,
+            "multi_harmonic_gram_invariants": {"trace": sp.trace(generalized_gram), "determinant": generalized_gram.det()},
+            "multi_harmonic_counterexample": {"numerator": mixed_counter_numerator, "denominator": mixed_counter_denominator, "ratio": mixed_counter_ratio},
             "polynomial_constants": constants,
             "derivative_at_70": d70,
             "derivative_at_71": d71,
@@ -419,8 +507,15 @@ def main() -> int:
             "minimum_bracket": "70<G_*<71",
             "global_lower_bound": lower,
             "owner_margin_above_minus_9_10": margin,
-            "owner_floor": -sp.Rational(9, 10),
+            "owner_margin_above_minus_4_5": strong_margin,
+            "owner_floor": -sp.Rational(4, 5),
+            "carryover_at_116": carryover_at_116,
+            "carryover_margin_to_r164": carryover_r164_margin,
+            "effective_rho_capacity": effective_rho,
             "rho": rho,
+            "rho_margin": rho_margin,
+            "full_semiconvexity": full_semiconvexity,
+            "epsilon_v": epsilon_v,
         },
         "scope": SCOPE,
         "no_overclaim": NO_OVERCLAIM,

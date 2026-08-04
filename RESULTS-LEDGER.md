@@ -19,7 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-166](#r-166) | Sparse production radial-Gram decomposition and global owner bound | Scoped T4 analytic/exact/executed/audited production-fibre theorem. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / fresh-`4p` R-153 fibre, the exact Fierz split isolates a polynomial Pauli-current Gram and one radial rank-two correction. Centered Fourier support cancels the Pauli current resonance while retaining the full past trace. Floor-uniform radial bounds and the direct coefficient inequality `<|m|^4|z|^2> >= <|m|^2>^2<|z|^2>` give an explicit rational polynomial whose unique global minimum lies in `70<G_*<71` and is greater than `-9/10`. Thus the R-164 owner target holds for every past amplitude on this fibre and the R-165 annulus is closed. Primary `34/34` and independent Fraction `31/31` audits pass. Other harmonics, roots and cross blocks, the complete multi-root owner, nonlinear/revisit feedback, low variables, removal, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
+| [R-166](#r-166) | Sparse production radial-Gram decomposition and global owner bound | Scoped T4 analytic/exact/executed/audited production-fibre theorem, strengthened in v1.1 without a new result ID. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / single fresh-`4p` R-153 fibre, the exact Fierz split, Pauli nonresonance, radial bounds and direct coefficient inequality give an explicit rational polynomial whose unique global minimum lies in `70<G_*<71` and is `-4/5+18740524635403/439505584128000>-4/5`. Thus the owner plus source Hessian is strictly above `1/10`, the scoped R-164 reduction permits `rho=3/20`, and the R-165 annulus is closed. Exact simultaneous `sin(4x),sin(8x)` arithmetic gives Gram `[[5/4,1],[1,3/2]]` and ratio `3/8` at `(1,-1)`, registering that the coefficient-one lemma cannot be copied rootwise. Primary `40/40` and independent Fraction `37/37` audits pass. The complete joint owner, nonlinear/revisit feedback, low variables, removal, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-165](#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | Scoped T4 analytic/exact/executed/audited production-fibre theorem. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / fresh-`4p` R-153 fibre, whitened past amplitude `G` and final direction `alpha` obey `K_owner(g)[alpha,alpha] >= P(G)|alpha|^2` for one explicit rational quartic polynomial. A sharp `5/6` Fourier separation lemma, exact A1 covariance enclosures, and R-130 derivative envelopes prove the R-164 owner target `K_owner>=-9I/10` for `0<=G<=21` and `G>=274`, reducing this fibre's noncompact amplitude problem to the bounded open annulus `21<G<274`; its closed certification domain `21<=G<=274` is compact. Primary `38/38` and independent Fraction `30/30` audits pass; the deterministic five-page PDF passed all-page visual QA. The open annulus, other harmonics and roots, cross blocks, nonlinear/revisit feedback, low variables, regulator/removal uniformity, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-164](#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | Scoped T4 analytic/exact/executed/audited direct-chart theorem. For every finite R-104 zero-control chart, the R-141 legal force is the orthogonal projection of the complete centered terminal scalar onto predictable first Gaussian chaos, so its squared source-dual norm is at most the scalar variance with sharp constant one. A7 `L2` convergence and the A1/A11 point-covariance trace give a cutoff-, chart-length-, and linear/isometric-refinement-uniform bound on that variance along the registered sharp-cube/dyadic sequence. A7 centering also makes the direct anchor nonnegative. Therefore a complete direct owner bound `K_owner>=-(10/11-rho)G_src` yields `mu=-1/110+rho`, `epsilon_v=max(0,5/11-rho/4)`, `epsilon_6=3/20`, and constant `B_*/rho`, without separate anchor or origin-force assumptions. The complete production owner, nonzero feedback, shifted low base, arbitrary graph metric transport, random/nonlinear/revisit/pathwise scope, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
 | [R-163](#r-163) | Full-lattice weighted-resolvent dyadic-forest gap and exact reduced-action threshold | Scoped T4 analytic/exact/executed/audited deterministic-forest theorem. For every finite injective pure-dyadic forest with deterministic matrix coefficients and actual shifted-state reads, the two-sided expansion `T_A T_A^*-I=sum_(a,b) N_A^a(N_A^*)^b-I` exposes a mandatory recursive edge in every nonidentity covariance word. Exact A1 endpoint weights make the worst current-current square sum proportional to `sum |p|^-4`, so field/current covariance-data derivatives through order three are uniform in forest cardinality, depths, starting modes, cutoff and admitted common-even regulator even though the raw current synthesis diverges. Stationarity kills the complete `p:4p` chart connection at the origin, transferring the R-160 `4/25` arbitrary-family gap; the full source/current/trace/projected-force/sextic modulus retains `13/100>1/10` on one analytic forest-uniform ball. Separately, the exact T-050 coefficient algebra shows that reduced-action semiconvexity `mu>-1/110`, plus a uniform absolute anchor and origin-force bound, suffices; equivalently the adverse owner target is strictly above `-10/11`, not necessarily `-4/5`. Random/nonlinear laws, branching/revisits, pathwise conditional estimates, the anchor/force inputs, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
@@ -205,11 +205,14 @@ where
 
 Its unique global minimum lies in `70<G_*<71`, and exact convexity gives
 
-`P_tilde(G_*) >= -332863942666997/439505584128000 > -9/10`.
+`P_tilde(G_*) >= -332863942666997/439505584128000
+= -4/5+18740524635403/439505584128000 > -4/5`.
 
-Thus `K_owner(g)>-9I/10` for every `G>=0`. With `rho=1/110`, this is the
-R-164 owner target on the entire fixed sparse fibre and analytically closes
-the R-165 annulus.
+Thus `K_owner(g)>-4I/5` for every `G>=0`. The owner plus the explicit
+`9I/10` source Hessian is strictly above `I/10`. Equivalently the scoped
+R-164 reduction may take `rho=3/20`, with exact rho headroom
+`8368258131833/4834561425408000`, full semiconvexity `31/220`, and
+`epsilon_v=367/880`. This analytically closes the R-165 annulus.
 
 **Proof mechanism.** The R-130 Pauli-Fierz identity gives
 `B=(c0+c1)B_J+c1(aa^T-bb^T)`. Centered `p:2p:4p` support makes the Pauli
@@ -219,18 +222,28 @@ first-derivative and half-Hessian constants `8`, `224/9` and `3208/81`.
 Direct Fourier coefficients prove
 `<|m|^4|z|^2> >= <|m|^2>^2<|z|^2>`, which is distinct from and compatible
 with R-165's sharp `5/6` fourth-moment decorrelation. Every adverse value,
-derivative, fresh covariance and trace term is paid once. SymPy `34/34` and
-non-importing standard-library Fraction `31/31` audits reproduce the exact
-quotient jets, Fourier resonances, mutation failures, constants and global
-rational minimum.
+derivative, fresh covariance and trace term is paid once. SymPy `40/40` and
+non-importing standard-library Fraction `37/37` audits reproduce the exact
+quotient jets, Fourier resonances, mutation failures, constants, global
+rational minimum, strengthened rho arithmetic, and the following method
+boundary.
+
+The coefficient-one direct harmonic lemma does not tensorize across dyadic
+fresh pairs. For `m=cos(2x)` and `z=a sin(4x)+b sin(8x)`, the exact
+generalized Gram is `[[5/4,1],[1,3/2]]`, its minimum eigenvalue is
+`(11-sqrt(65))/8`, and `(a,b)=(1,-1)` gives ratio `3/8<1`. This registers
+`NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION` and
+requires the successor to retain the complete joint cross-root sextic Gram.
+It does not refute the single-pair theorem or the complete production action.
 
 **Boundary.** This is one affine principal-fibre theorem. It does not cover
-additional past harmonics, other final roots, cross-root blocks, shifted low
+additional past harmonics, other final roots, the complete joint cross-root
+owner, shifted low
 variables, random/nonlinear/revisit feedback, regulator or cutoff removal,
 the complete multi-root production owner, T-050, A13, Nelson or an
 interacting measure, a physical phase, morphology or PDE, or Sector A.
 
-**Proven in:** A13 / [R-166 proof note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-sparse-production-owner-radial-gram-global-boundary-260804-v1.0.tex.txt).
+**Proven in:** A13 / [R-166 v1.1 proof note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-sparse-production-owner-radial-gram-global-boundary-260804-v1.1.tex.txt).
 
 **Tier:** T4 (scoped exact finite production fibre; no promotion).
 
