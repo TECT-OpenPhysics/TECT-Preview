@@ -1,0 +1,187 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-os-dynamics-ground-gap-counterterm-empty-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-ORDERED-OS-DYNAMICS-GROUND-GAP-CONTINUUM-EMPTY-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-3D-QUANTUM-THERMODYNAMIC-PRESSURE-GROUND-DENSITY-AND-EFFECTIVE-REDUCTION-SPLIT-v0",
+    "PA-CP1-ST8-Q3LOCK-EUCLIDEAN-DLR-TANGENT-STATE-AND-PHASE-BOUNDARY-ROUTE-SPLIT-v0",
+    "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-FKG-INFRARED-CUSP-PHASE-ROUTE-SPLIT-v0",
+    "PA-CP1-ST8-Q3LOCK-GROUND-EQUAL-TIME-ORDER-GAP-CONTINUUM-COUNTERTERM-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-ST8-Q3LOCK-PHASEWISE-OS-KMS-ZERO-T-GROUND-CUSP-FULL-Q3-COUNTERTERM-AND-EMPTY-REFERENCE-SPLIT",
+  "negative_ids": [
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS",
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-CURRENT-COMMON-DYNAMICS-THEOREM-IMPORT-MISMATCH",
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-PARTIAL-QUARTIC-COUNTERTERM-ALL-SCALE-CLOSURE",
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-EQUILIBRIUM-PHASE-AS-STRICT-EMPTY-REFERENCE"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP",
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-G-LAMBDA-ONLY-4D-ONE-LOOP-CLOSURE",
+    "NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE",
+    "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR"
+  ],
+  "exploration_id": "EXP-000790",
+  "candidate_family": "PRE-A-ST8-Q3LOCK-FIXED-LATTICE-EQUILIBRIUM-GROUND-AND-CONTINUUM-ROUTE",
+  "package_version": "0.1.0",
+  "issued": "2026-08-09",
+  "authority": "T0 ordered route-split theorem: the two EXP-000782 positive-lambda Euclidean DLR phases separately satisfy the periodic OS inputs and reconstruct abstract stochastically positive beta-KMS systems; EXP-000780 and EXP-000789 compose to a strict zero-temperature ground-energy source cusp and parity-related locally normal time-zero tangent candidates; exact Aut(Q3) invariant theory and Hessian-trace closure give a 19-dimensional quartic and four-dimensional quadratic counterterm space; finite-volume finite-regulator same-Hamiltonian Gibbs and ground variational identities freeze the earliest additive-scalar-invariant empty-reference contract. Common real-time dynamics, common-alpha KMS, algebraic ground states, broken-sector GNS gap, regulator removal and physical empty space remain open",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "ordered_steps": [
+    "phasewise periodic OS/KMS reconstruction",
+    "one common state- and beta-independent real-time dynamics",
+    "distinct algebraic ground-state selection",
+    "broken-sector GNS gap",
+    "enlarged-counterterm continuum",
+    "physical empty-space comparison"
+  ],
+  "external_authority": {
+    "phasewise_KMS": "Y. Kozitsky, Equilibrium States, Phase Transitions and Dynamics in Quantum Anharmonic Crystals, arXiv:1806.08264, Theorem 2.3; and L. Birke and J. Froehlich, KMS, etc., arXiv:math-ph/0204023",
+    "periodic_OS_interface": "EXP-000768 fixed-regulator Feynman--Kac/reflection positivity and EXP-000773 fixed-torus periodic OS/KMS provide repository-local interface checks; the present theorem passes temporal invariance, reflection positivity and sharp-time generation through the EXP-000781/782 thermodynamic and source-tangent limits",
+    "current_dynamics_imports": "B. Nachtergaele et al., arXiv:0909.2249; D. Buchholz, arXiv:1605.05259; and the other audited oscillator-dynamics results do not directly cover the exact unbounded quartic onsite plus unbounded bilinear spatial coupling",
+    "counterterm_operation": "For a local multiscalar quartic in four Euclidean dimensions the one-loop quartic polynomial is a nonzero regulator factor times B(P,Q)=tr(P''Q''); the package computes the complete Aut(Q3) x Z2 invariant closure exactly",
+    "scope_warning": "All general reconstruction, operator-algebra, Gibbs-variational and perturbative renormalization principles are established prior art. The repository-specific content is the exact Q3LOCK hypothesis map, normalization, source-cusp composition and invariant-basis computation."
+  },
+  "setup": {
+    "fixed_lattice_family": "The exact EXP-000780--EXP-000782 positive-lambda ST8/Q3LOCK quantum crystal at spacing one, hbar>0, chi>0, c>0, g>0, lambda>0, r<0",
+    "phase_regime": "A0=8c chi theta_Q^2/hbar^2>I3 and beta>beta_star, theta_Q=-r/[3(g+lambda)], so EXP-000782 supplies distinct parity-related tempered Euclidean DLR states mu_(beta,+/-)",
+    "ground_regime": "A0>J3^2, so EXP-000789 supplies rho_*>0, symmetric-ground equal-time order and finite-volume broken doublets",
+    "loop_space": "Omega_beta^t is the tempered subset of the product over y in Z3 of C(R/beta Z;R8)",
+    "time_maps": "(T_s omega)_y(tau)=omega_y(tau+s), (Theta omega)_y(tau)=omega_y(-tau), and (P omega)_y(tau)=-omega_y(tau)"
+  },
+  "phasewise_OS_KMS": {
+    "sharp_time_Cstar_algebra": "Let S_conf be the norm closure of the unital star-algebra generated by all finite-site configuration characters exp(i sum_y xi_y dot q_y) with rational finite-support xi. It is a fixed separable unital commutative C-star algebra independent of the sign phase.",
+    "positive_half_core": "bounded continuous local cylinders supported at times 0<=tau<=beta/2",
+    "finite_volume_reflection_form": "For every source h and finite periodic volume, integral conjugate(F(Theta omega))F(omega)dmu_(L,h)=Z_(L,h)^(-1)Tr(B_F^*B_F)>=0",
+    "limit_passage": "Bounded local-cylinder weak convergence first in volume and then h->0+/- preserves temporal reflection positivity, time-translation invariance and reflection invariance for mu_(beta,+/-)",
+    "strong_continuity": "Continuous paths and dominated convergence give ||F after T_s-F||_L2->0 on bounded continuous cylinders; density extends this to L2",
+    "sharp_time": "Sigma_0=sigma{omega_y(0)}; continuous loops imply that rational-time translates of Sigma_0 generate the full path Borel sigma algebra",
+    "reconstruction_hypothesis_map": "P1 follows from sup-norm continuity in S_conf, path continuity and dominated convergence. P2 is time-translation invariance. P3 is cyclic beta-periodicity of the commutative loop insertions. P4 is the closed temporal reflection form. P-star follows from multilinearity, coincident-time multiplication, removal of the unit and the product sup-norm bound. These are the Birke--Froehlich inputs, not merely an informal OS analogy.",
+    "OS_form": "<F,G>_(OS,+/-)=integral conjugate(F(Theta omega))G(omega)dmu_(beta,+/-)",
+    "result": "The positive-half quotient and completion reconstruct phasewise stochastically positive W-star dynamical systems (M_(beta,+/-),B_(beta,+/-),alpha_t^(beta,+/-),omega_(beta,+/-)); each vector state is beta-KMS and its ordered imaginary-time sharp-configuration functions reproduce the corresponding DLR Matsubara functions",
+    "configuration_regular": "EXP-000781 uniform exponential local moments give finite local moments and continuity of bounded configuration characteristics",
+    "boundary": "The reconstruction is phasewise, not common. It proves neither a predeclared canonical CCR/Weyl algebra nor one state-independent thermodynamic-limit automorphism group. The thermal generator is a Liouvillean, not a nonnegative ground Hamiltonian."
+  },
+  "phase_separation_and_parity": {
+    "bounded_witness": "EXP-000782 gives opposite nonzero Q0 expectations and finite first moments. The derivative at zero of the collective characteristic function is therefore different in the two phases, so some sufficiently small rational-frequency configuration character in S_conf separates them",
+    "parity": "P_*mu_(beta,+)=mu_(beta,-), PT_s=T_sP and PTheta=ThetaP, so parity descends to a unitary equivalence of the two reconstructed systems",
+    "boundary": "Parity equivalence does not place the two states on a pre-existing common labelled quasi-local dynamics."
+  },
+  "common_dynamics_audit": {
+    "required_object": "One phase-, state- and beta-independent quasi-local oscillator algebra A and automorphism group alpha_t obtained as the thermodynamic limit of the exact zero-source finite-volume Hamiltonians, with a common local generator core",
+    "posthoc_direct_sum_no_go": "M_(beta,+) direct-sum M_(beta,-) with alpha^(beta,+) direct-sum alpha^(beta,-) always exists for arbitrary systems and carries the phase label as a central summand; it is not a Hamiltonian-derived common dynamics",
+    "import_mismatch": "The audited existing dynamics theorems require bounded Weyl-integral or bounded C0 intersite perturbations, subquadratic force conditions, or other hypotheses not met simultaneously by the unbounded quartic Q3 onsite and unbounded q_y dot q_z coupling",
+    "surviving_route": "Use the resolvent algebra or an explicitly energy-damped quasi-local algebra; first truncate polynomial forces smoothly, prove source-uniform energy-weighted Lieb--Robinson/Cauchy bounds, then remove the truncation and identify the common generator core",
+    "next_gate": "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "boundary": "This is a direct-import obstruction, not a theorem that common dynamics cannot exist."
+  },
+  "zero_temperature_source_cusp": {
+    "ground_density": "e(h)=lim_L E_(0,L)(h)/(8V) exists locally uniformly by EXP-000780, H_L(h)=H_L(0)-hS_L",
+    "trial": "EXP-000789 gives m_L^2=<S_L^2>/V^2 with liminf m_L^2>=rho_* and broken trial energy excess epsilon_L<=hbar^2/(4 chi V m_L^2)",
+    "finite_bound": "For h>0, e_L(h)-e_L(0)<=epsilon_L/(8V)-h m_L/8",
+    "cusp": "e(h)-e(0)<=-|h|sqrt(rho_*)/8; even concavity gives D_+e(0)<=-sqrt(rho_*)/8 and D_-e(0)>=sqrt(rho_*)/8",
+    "selection": "At differentiability sources h_k->0+/- the Hellmann--Feynman identity, local compactness and uniform fourth moments select parity-related locally normal zero-source time-zero tangent candidates with magnetizations at least +/-sqrt(rho_*)",
+    "conditional_algebraic_corollary": "If one common alpha^h exists and the local generators converge to delta^0 uniformly on a common core as h->0, the finite-volume ground inequalities pass to the two tangent states and make them distinct algebraic alpha^0-ground states",
+    "boundary": "The strict source cusp and distinct locally normal time-zero candidates are unconditional in the fixed-lattice theorem. Their algebraic ground-state status remains conditional on the common-dynamics gate."
+  },
+  "broken_sector_GNS_gap": {
+    "definition": "For a selected algebraic ground state omega, define the state-vector Poincare gap Delta_omega^P=inf sigma(H_omega restricted to Omega_omega perpendicular). A positive value implies ker(H_omega)=C Omega_omega and then equals inf(sigma(H_omega) minus {0}); without a simple kernel it is zero.",
+    "poincare": "Delta_omega^P is equivalently the best constant on a generator core in <A Omega,H_omega A Omega>>=Delta_omega^P[omega(A^*A)-|omega(A)|^2]",
+    "block_falsifier": "For S_B=sum_(y in B)Q_y, [S_B,[H,S_B]]=hbar^2|B|/chi and Delta_omega^P<=hbar^2|B|/[2chi Var_omega(S_B)]",
+    "necessary_condition": "A positive state-vector Poincare gap requires Var_omega(S_B)=O(|B|); if Var_omega(S_B)/|B| diverges along blocks then Delta_omega^P=0. A positive spectral gap above a separately degenerate zero eigenspace instead requires projection off the full kernel and is not decided by ordinary variance.",
+    "ordered_tangent": "At the collective classical ordered point x^2=-r/g the Q3 Walsh Hessian levels are -2r+lambda(-r/g)ell+2cE(k), ell=0,2,4,6, so the tree-level minimum -2r is positive; this is viability evidence only",
+    "boundary": "The O(1/V) full finite-volume gap collapse is the symmetry-tunnelling channel and determines neither the connected block variance nor the pure-sector GNS gap. Linear variance control is necessary but not sufficient for the full Poincare inequality, and simplicity of the selected GNS ground vector has not been proved."
+  },
+  "enlarged_counterterm_basis": {
+    "symmetry": "Aut(Q3) x global Z2",
+    "quartic_dimension": 19,
+    "quartic_orbits": "one O4; O31^(d) and O22^(d) for d=1,2,3; six O211 distance signatures; six O1111 four-vertex distance-multiset signatures",
+    "bare_vectors": "P_g=O4/4 and P_lambda=3O4/4-O31^(1)/2+O22^(1)/2",
+    "bilinear": "B(P,Q)=tr(P''Q'') with all 64 ordered Hessian entries",
+    "closure_ranks": [2, 4, 9, 19, 19],
+    "first_loop_new_terms": "lambda^2[18 O211^(1,1;2)-6 O211^(1,2;1)+4 O22^(2)] in addition to renormalizations of O4,O31^(1),O22^(1)",
+    "quadratic_dimension": 4,
+    "quadratic_basis": "A_d(v,w)=1_(Hamming(v,w)=d), d=0,1,2,3; add a scalar counterterm and independently allow temporal/spatial kinetic matrices in this invariant span until Euclidean symmetry is proved",
+    "no_go": "Adding only the first distance-two O22 witness is not even first-loop complete because both O211 terms remain; without a separate Ward identity, any all-scale one-loop-closed invariant quartic basis contains the full 19-dimensional space",
+    "continuum_requirements": "Declare an a-dependent Hamiltonian, field normalization and all bare flows; compute the actual regulator logarithmic factor; prove a-uniform coercivity, kinetic positivity, reflection positivity, tightness, critical correlation-length divergence, full-sequence OS convergence and non-Gaussianity; recheck that the enlarged flow preserves the FKG/order regime",
+    "boundary": "This closes the invariant-basis classification and perturbative route filter, not any regulator-removed continuum."
+  },
+  "physical_empty_reference_contract": {
+    "thermal_identity": "At finite spatial volume and finite regulator, F_beta(sigma_empty,L;H_L)-F_beta(rho_beta,L;H_L)=beta^(-1)D(sigma_empty,L||rho_beta,L)>=0 for rho_beta,L=exp(-beta H_L)/Z_L",
+    "ground_identity": "At finite spatial volume and finite regulator, sigma_empty,L(H_L)-E0,L(H_L)>=0",
+    "scalar_shift": "Both differences are invariant under H->H+cV I",
+    "bulk_strictness": "A strict below-empty statement requires a positive limiting specific relative entropy D/(beta V) or relative ground-energy difference divided by V along the same declared L,beta,a path",
+    "equilibrium_no_go": "Two equilibrium KMS phases of the same H,beta have the same equilibrium free-energy density, and two ground phases have the same ground-energy density; a strict empty comparator must therefore be a preregistered constrained, metastable or preparation branch rather than another equilibrium phase",
+    "EXP789_boundary": "The symmetric Omega_L already has <S_L^2>/V^2>=rho_*>0 and is not no-condensate empty; Psi_L^+/- have nonnegative O(1/V) total excess above it; q=0 is not a normalized quantum state",
+    "minimum_contract": "Freeze the same algebra, Hamiltonian, regulator, counterterms, geometry, boundary and units; independently select a normalized no-condensate branch using local LRO/clustering rather than one-point m=0 alone; use the same limit path and renormalized stress tensor; require scalar-shift invariance and a positive specific gap",
+    "boundary": "The contract states how a future physical comparison must be falsified. It does not identify a physical empty state or prove a below-empty sign."
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-ST8-Q3LOCK-INFINITE-VOLUME-DYNAMICS-KMS-GROUND-AND-CONTINUUM-SPLIT",
+    "status": "PARTIALLY RESOLVED: PHASEWISE PERIODIC OS/KMS, A FIXED-LATTICE ZERO-TEMPERATURE SOURCE CUSP, THE COMPLETE AUT(Q3) ONE-LOOP COUNTERTERM SPACE, AND THE SAME-H REFERENCE CONTRACT ARE CLOSED. COMMON ALPHA, ALGEBRAIC GROUND STATES, BROKEN-SECTOR GNS GAP, CONTINUUM REMOVAL AND PHYSICAL EMPTY SPACE REMAIN OPEN",
+    "closed_subgates": [
+      "PA-CP1-ST8-Q3LOCK-PHASEWISE-PERIODIC-OS-KMS-RECONSTRUCTION",
+      "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-ZERO-TEMPERATURE-GROUND-ENERGY-CUSP-AND-DISTINCT-SOURCE-TANGENT-SELECTION",
+      "PA-CP1-ST8-Q3LOCK-AUTQ3-Z2-FULL-ONE-LOOP-COUNTERTERM-BASIS-CLASSIFICATION",
+      "PA-CP1-ST8-Q3LOCK-SAME-HAMILTONIAN-EMPTY-REFERENCE-COMPARISON-CONTRACT"
+    ],
+    "refuted_subgates": [
+      "PA-CP1-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-AS-COMMON-DYNAMICS",
+      "PA-CP1-ST8-Q3LOCK-DIRECT-IMPORT-OF-CURRENT-BOUNDED-PERTURBATION-DYNAMICS-THEOREMS",
+      "PA-CP1-ST8-Q3LOCK-DISTANCE-TWO-ONLY-ALL-SCALE-QUARTIC-COUNTERTERM-CLOSURE",
+      "PA-CP1-ST8-Q3LOCK-ANOTHER-EQUILIBRIUM-PHASE-AS-STRICT-PHYSICAL-EMPTY-COMPARATOR"
+    ],
+    "open_subgates": [
+      "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+      "PA-CP1-ST8-Q3LOCK-DLR-TO-COMMON-ALPHA-KMS-IDENTIFICATION",
+      "PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION",
+      "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-CONNECTED-SUSCEPTIBILITY-AND-GNS-POINCARE-GATE",
+      "PA-CP1-ST8-Q3LOCK-A-TO-ZERO-ENLARGED-COUNTERTERM-REGULAR-CONTINUUM",
+      "PA-CP1-ST8-Q3LOCK-PHYSICAL-EMPTY-SPACE-REFERENCE",
+      "PA-PRE-A-C0-N1-N5-VALIDATION"
+    ],
+    "next_gate": "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE"
+  },
+  "scope": {
+    "exact_registered_positive_lambda_fixed_lattice_family": true,
+    "phasewise_periodic_OS_reconstruction": true,
+    "phasewise_stochastically_positive_beta_KMS": true,
+    "parity_unitary_equivalence": true,
+    "bounded_sharp_time_phase_separation": true,
+    "fixed_lattice_zero_temperature_source_cusp": true,
+    "distinct_locally_normal_time_zero_ground_tangent_candidates": true,
+    "full_AutQ3_Z2_quartic_invariant_dimension_19": true,
+    "one_loop_closure_reaches_full_quartic_invariant_space": true,
+    "full_quadratic_invariant_dimension_4": true,
+    "same_H_finite_volume_finite_regulator_reference_identity": true,
+    "common_state_independent_real_time_dynamics": false,
+    "common_alpha_KMS_identification": false,
+    "canonical_full_Weyl_identification": false,
+    "distinct_algebraic_ground_states": false,
+    "broken_sector_GNS_gap": false,
+    "mass_gap": false,
+    "enlarged_counterterm_continuum_limit": false,
+    "continuum_regulator_removal": false,
+    "physical_empty_space_reference": false,
+    "below_physical_empty_space": false,
+    "physical_light_speed_derived": false,
+    "physical_mass_derived": false,
+    "physical_time_derived": false,
+    "gravity_derived": false,
+    "event_horizon_derived": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC periodic OS limit theorem, variational source-cusp theorem, exact invariant-theory computation, GNS variance falsifier and finite-volume finite-regulator variational identity with two independent exact-arithmetic implementations and an integrated freshness/provenance audit",
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_os_dynamics_ground_gap_counterterm_empty_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_os_dynamics_ground_gap_counterterm_empty_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_os_dynamics_ground_gap_counterterm_empty_route_split_verify.py",
+    "fixtures": "thermal harmonic periodic RP Gram and hostile sign mutation; explicit P1--P4 and P-star theorem-interface map on a separable rational-character sharp-time C-star algebra; time/reflection/parity relations; source-cusp normalization; graph-derived Q3 automorphisms, all 330 quartic monomials, 19 invariant orbits, exact Hessian-trace coefficients and 2-4-9-19-19 closure; four-dimensional quadratic contraction span; GNS state-vector Poincare superlinear-variance falsifier and ordered-Hessian viability control; finite-volume finite-regulator Gibbs relative-entropy and scalar-shift identities; provenance, scope and unchanged-C6 firewalls"
+  },
+  "prior_art_boundary": "Periodic OS/KMS reconstruction, thermodynamic dynamics on suitable oscillator algebras, ground-state variational principles, spectral-gap/Poincare equivalence, multiscalar one-loop renormalization and Gibbs relative entropy are established mathematics. The repository-specific results are the exact passage of the selected Q3LOCK phases through the periodic OS inputs, the EXP-000780/789 cusp composition, and the exact Aut(Q3) counterterm closure. No general-method novelty, world-first or historical-priority claim is made.",
+  "no_overclaim": "This package proves only phasewise abstract beta-KMS reconstruction, a fixed-spacing zero-temperature ground-energy source cusp with distinct locally normal time-zero tangent candidates, the complete symmetry-allowed one-loop counterterm basis classification, a necessary state-vector GNS Poincare-gap variance test, and the finite-volume finite-regulator same-Hamiltonian reference contract. It does not construct one common state-independent real-time dynamics, identify both phases as KMS states of that same alpha, prove distinct algebraic ground states, simplicity of a GNS ground vector, a broken-sector GNS or physical mass gap, an enlarged regulator-removed continuum, physical empty space or a below-empty-space sign, light, mass, time, gravity, an event horizon, C6, CP1, Sector A or Pre-A completion."
+}

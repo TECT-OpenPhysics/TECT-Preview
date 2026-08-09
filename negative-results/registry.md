@@ -6,6 +6,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS](#ng-2026-08-09-pre-a-st8-q3lock-posthoc-direct-sum-common-dynamics) | treat the direct sum of the separately OS-reconstructed plus/minus thermal systems as the required common real-time dynamics | a direct sum exists for any two unrelated systems, retains the phase label as a central summand, and depends on the already chosen phase and temperature. It does not arise as the thermodynamic limit of the zero-source local Hamiltonians on one fixed labelled oscillator algebra |
+| [NG-2026-08-09-PRE-A-ST8-Q3LOCK-CURRENT-COMMON-DYNAMICS-THEOREM-IMPORT-MISMATCH](#ng-2026-08-09-pre-a-st8-q3lock-current-common-dynamics-theorem-import-mismatch) | directly import the currently cited oscillator-lattice dynamics theorems for the exact ST8/Q3LOCK Hamiltonian | the audited theorems require bounded Weyl-integral or bounded `C_0` interactions, bounded intersite terms after arbitrary onsite absorption, or subquadratic forces. They do not simultaneously cover the unbounded Q3 quartic onsite potential and unbounded bilinear spatial coupling. This is an import obstruction, not a nonexistence theorem |
+| [NG-2026-08-09-PRE-A-ST8-Q3LOCK-PARTIAL-QUARTIC-COUNTERTERM-ALL-SCALE-CLOSURE](#ng-2026-08-09-pre-a-st8-q3lock-partial-quartic-counterterm-all-scale-closure) | repair the missing distance-two quartic from EXP-000789 by adding only `O22^(2)` and call the quartic counterterm basis closed | exact `Aut(Q3) x Z2` Hessian-trace closure has ranks `2,4,9,19,19`; already at the first loop it also generates `18 O211^(1,1;2)-6 O211^(1,2;1)`. The minimum invariant one-loop-closed quartic space containing the bare directions is the full 19-dimensional orbit space |
+| [NG-2026-08-09-PRE-A-ST8-Q3LOCK-EQUILIBRIUM-PHASE-AS-STRICT-EMPTY-REFERENCE](#ng-2026-08-09-pre-a-st8-q3lock-equilibrium-phase-as-strict-empty-reference) | use another equilibrium KMS or ground phase of the same Hamiltonian as a strict physical-empty comparator | equilibrium KMS phases share the equilibrium free-energy density and ground phases share the ground-energy density. A strict bulk sign requires a preregistered constrained, metastable, or preparation branch and a positive specific same-Hamiltonian relative gap; the EXP-000789 symmetric ground already has LRO and is not empty |
 | [NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP](#ng-2026-08-09-pre-a-st8-q3lock-uniform-full-finite-volume-spectral-gap) | retain a positive volume-uniform full finite-volume spectral gap in the fixed-spacing Q3LOCK ground-order regime | inverse Falk--Bruch and the infrared bound give `liminf <S_L^2>/V^2>=rho_*>0`, while the odd trial `S_L Omega_L` gives `Delta_L^full<=hbar^2/(2 chi V m_L^2)`; the full gap closes at least as `O(1/V)`. This does not refute a positive broken-sector GNS gap or physical mass gap |
 | [NG-2026-08-09-PRE-A-ST8-Q3LOCK-G-LAMBDA-ONLY-4D-ONE-LOOP-CLOSURE](#ng-2026-08-09-pre-a-st8-q3lock-g-lambda-only-4d-one-loop-closure) | remove the ST8/Q3LOCK regulator in 3+1 dimensions while restricting quartic counterterms to the original `g,lambda` two-invariant span | the standard one-loop polynomial `tr[(W4''(q))^2]` has coefficient `4lambda^2` on `q_e^2 q_f^2` for Q3 vertices at Hamming distance two, while the original span has no such monomial. Enlarge the symmetry-allowed quartic tensor basis; this is not a nonperturbative no-continuum theorem |
 | [NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION](#ng-2026-08-09-pre-a-round1-unfrozen-tournament-selection) | select a Pre-A winner, shortlist, or exit while the evidence intake, candidate admission manifests, common reference/observable discriminator, non-fitting validation prediction, and robustness envelope are incomplete | the charter's selection condition is a conjunction and several necessary terms are explicitly false.  Preserve the scoped M1 and bare-M5 eliminations and the M2/CP1 partial mathematics, but report current non-selection and complete the common admission contract before scoring survivors |
@@ -297,6 +301,142 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-09-pre-a-st8-q3lock-posthoc-direct-sum-common-dynamics"></a>
+### NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS -- a phase-labelled direct sum is not Hamiltonian-derived common dynamics
+
+**Failure mode.**  Form the direct sum of the plus and minus W-star systems
+reconstructed separately from the two `EXP-000782` Euclidean phases, then call
+that post-hoc object one common real-time dynamics.
+
+**Exact obstruction.**  For arbitrary dynamical systems
+`(M_+,alpha^+)` and `(M_-,alpha^-)`, the object
+
+`(M_+ direct-sum M_-, alpha^+ direct-sum alpha^-)`
+
+always exists.  Its central projections retain the phase label, and its
+definition depends on the already chosen phase and temperature.  It does not
+construct the thermodynamic-limit map
+
+`alpha_t(A)=lim_(Lambda increasing Z3) exp(i t H_Lambda(0)/hbar) A exp(-i t H_Lambda(0)/hbar)`
+
+on one phase-, state- and beta-independent labelled oscillator algebra.
+Accepting the direct sum would therefore make the common-dynamics gate true
+for unrelated theories and remove its physical content.
+
+**Consequence.**  Retain the two phasewise periodic OS/KMS reconstructions and
+their exact parity unitary equivalence.  Require a common quasi-local algebra,
+the thermodynamic limit of the exact zero-source Hamiltonians, and a common
+generator core before identifying both phases as KMS states of one `alpha`.
+
+**Boundary.**  This does not refute the existence of common dynamics or a
+future canonical embedding of both reconstructed systems.  It only rejects a
+post-hoc direct sum as evidence for that result.
+
+**Evidence.**  `EXP-000790`; the OS/dynamics sections of
+`strategy/pre-a-cp1-st8-q3lock-os-dynamics-ground-gap-counterterm-empty-route-split-certificate-260809.md`.
+
+**Registered.**  2026-08-09.
+
+<a id="ng-2026-08-09-pre-a-st8-q3lock-current-common-dynamics-theorem-import-mismatch"></a>
+### NG-2026-08-09-PRE-A-ST8-Q3LOCK-CURRENT-COMMON-DYNAMICS-THEOREM-IMPORT-MISMATCH -- the current bounded-perturbation theorems do not directly cover the exact polynomial parent
+
+**Failure mode.**  Cite an existing thermodynamic oscillator-dynamics theorem
+as though its hypotheses already included the exact fixed-spacing Hamiltonian
+with both the unbounded quartic Q3 onsite potential and the unbounded bilinear
+spatial coupling.
+
+**Exact hypothesis mismatch.**  The audited Lieb--Robinson construction based
+on finite-measure Weyl integrals has bounded anharmonic perturbations.  Moving
+the quartic into arbitrary onsite Hamiltonians leaves the intersite term
+`-c q_y dot q_z` unbounded, outside the companion bounded-interaction theorem.
+The audited subquadratic result does not cover a cubic force.  The resolvent-
+algebra lattice theorem is the best algebraic candidate, but its global result
+uses bounded `C_0` nearest-neighbour interactions and its displayed unbounded
+one-particle extension has derivative in `C_0`, not the Q3 quartic force.
+
+**Consequence.**  The smallest surviving route is
+`PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE`:
+construct smoothly truncated polynomial dynamics, prove truncation- and
+source-uniform energy-weighted locality/Cauchy bounds, remove the truncation,
+and identify a common local generator core.
+
+**Boundary.**  This is a failure of direct theorem import, not a proof that
+the infinite-volume dynamics does not exist.  It does not weaken the
+phasewise abstract OS/KMS theorem.
+
+**Evidence.**  `EXP-000790`; arXiv `0909.2249` and `1605.05259`; the dynamics
+audit section of the EXP-000790 certificate.
+
+**Registered.**  2026-08-09.
+
+<a id="ng-2026-08-09-pre-a-st8-q3lock-partial-quartic-counterterm-all-scale-closure"></a>
+### NG-2026-08-09-PRE-A-ST8-Q3LOCK-PARTIAL-QUARTIC-COUNTERTERM-ALL-SCALE-CLOSURE -- the distance-two witness alone does not close the quartic basis
+
+**Failure mode.**  Add only the Q3-distance-two invariant `O22^(2)` found in
+`EXP-000789` to the original `g,lambda` quartic span and declare the enlarged
+counterterm family closed under repeated local one-loop contractions.
+
+**Exact obstruction.**  The 330 degree-four monomials split into 19 orbits
+under `Aut(Q3) x Z2`.  In the orbit-sum basis, with
+`B(P,Q)=tr(P''Q'')`, the first bare contraction contains the new part
+
+`lambda^2[18 O211^(1,1;2)-6 O211^(1,2;1)+4 O22^(2)]`.
+
+Thus `O22^(2)` alone already misses two first-loop directions.  Exact rational
+closure from the two bare vectors has basis-independent ranks
+`2,4,9,19,19`, so it reaches the complete 19-dimensional invariant quartic
+space.  The full invariant quadratic matrix space is independently
+four-dimensional.
+
+**Consequence.**  Any one-loop-closed invariant quartic family containing the
+registered bare directions must admit all 19 directions unless a separate
+Ward identity or stronger symmetry is proved.  The continuum route must also
+declare all four quadratic/kinetic distance matrices and the scalar term,
+then recheck coercivity, reflection positivity and order preservation.
+
+**Boundary.**  This does not refute an enlarged perturbative or
+nonperturbative continuum, another regulator, a symmetry-protected reduction,
+or a different microscopic parent.  It closes only the partial-basis repair.
+
+**Evidence.**  `EXP-000790`; two non-importing exact-arithmetic computations
+and their integrated verifier; Sections 11--13 of the EXP-000790 certificate.
+
+**Registered.**  2026-08-09.
+
+<a id="ng-2026-08-09-pre-a-st8-q3lock-equilibrium-phase-as-strict-empty-reference"></a>
+### NG-2026-08-09-PRE-A-ST8-Q3LOCK-EQUILIBRIUM-PHASE-AS-STRICT-EMPTY-REFERENCE -- a coexisting equilibrium phase cannot supply a strict bulk empty-reference sign
+
+**Failure mode.**  Choose another equilibrium KMS phase, ground phase, the
+symmetric finite-volume ground, or the point `q=0` as physical empty space and
+infer a strict below-empty bulk energy density for the ordered phase.
+
+**Exact obstruction.**  At a common finite spatial volume and finite regulator,
+
+`F_beta(sigma_L;H_L)-F_beta(rho_beta,L;H_L)=beta^(-1)D(sigma_L||rho_beta,L)>=0`
+
+and `Tr(sigma_L H_L)-E_0,L(H_L)>=0`; both differences are invariant under a common
+extensive scalar shift.  Equilibrium KMS phases of the same `H,beta` have the
+same equilibrium free-energy density, and ground phases have the same ground-
+energy density.  The `EXP-000789` symmetric ground has
+`<S_L^2>/V^2>=rho_*>0` and is not no-condensate empty; the broken doublets lie
+nonnegatively above it by `O(1/V)` in total energy.  The configuration `q=0`
+is not a normalized quantum state.
+
+**Consequence.**  Preregister a normalized constrained, metastable or
+preparation branch, freeze the same algebra/Hamiltonian/regulator/counterterm/
+stress-tensor/limit path, and prove a positive specific relative entropy or
+relative ground-energy gap.  One-point zero order is insufficient because a
+cat or mixture may retain long-range order.
+
+**Boundary.**  This does not identify physical empty space, prove or disprove
+a future constrained comparator, or set an absolute gravitational vacuum
+energy.  It prevents circularly choosing an equilibrium phase after seeing
+the desired sign.
+
+**Evidence.**  `EXP-000790`; Sections 14--15 of the EXP-000790 certificate.
+
+**Registered.**  2026-08-09.
 
 <a id="ng-2026-08-09-pre-a-st8-q3lock-uniform-full-finite-volume-spectral-gap"></a>
 ### NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP -- fixed-lattice ground order forces the full finite-volume gap to close

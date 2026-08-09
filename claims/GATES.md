@@ -189,37 +189,61 @@ Do not identify Euclidean DLR, OS-reconstructed thermal systems, KMS states for
 a pre-existing dynamics, ground states and continuum states without proving
 the relevant reconstruction or limit maps.
 
-**Status:** PARTIALLY RESOLVED (2026-08-09).  EXP-000789 first audits the
-EXP-000782 finite-temperature phase bound: `beta delta_beta` tends to
-`(A0-I3)/(2c)`, so that particular magnetization certificate vanishes as
-`beta^(-1/2)` and cannot by itself select distinct ground phases.  A different
-inverse Falk--Bruch route closes a genuine fixed-lattice zero-temperature
-subgate.  On the declared dyadic periodic sequence, with `beta -> infinity`
-at fixed `L` before `L -> infinity`, the symmetric finite-volume grounds obey
-`liminf <S_L^2>/V^2 >= rho_*>0` whenever `A0>J3^2`; the stronger EXP-000782
-condition `A0>I3` implies this by `J3^2<=I3`.  Even/odd superpositions give
-translation-invariant symmetry-broken approximate-ground doublets with total
-energy excess `O(1/V)`.  The odd Rayleigh quotient proves
-`Delta_L^full<=hbar^2/(2 chi V m_L^2)`, so a positive volume-uniform **full**
-finite-volume gap is refuted.  A broken-sector GNS gap remains open.
+**Status:** PARTIALLY RESOLVED (2026-08-09).  EXP-000789 closes fixed-spacing
+ground equal-time order and refutes a positive volume-uniform **full** finite-
+volume gap while leaving each broken GNS-sector gap open.  EXP-000790 then
+resolves four further subgates in the required order.
 
-The same package exposes the first exact continuum-basis obstruction.  Common-
-diagonal Wick contraction requires independent scalar, `I` and `L_Q3`
-quadratic directions, while the standard local four-dimensional one-loop
-polynomial `tr[(W4'')^2]` contains `4 lambda^2 q_e^2 q_f^2` at Q3 Hamming
-distance two, outside the original `g,lambda` quartic span.  Thus that
-restricted counterterm basis is not closed; an enlarged symmetry-allowed
-quartic tensor remains a viable but unproved route.
+The scoped result is
+`PA-CP1-ST8-Q3LOCK-PHASEWISE-OS-KMS-ZERO-T-GROUND-CUSP-FULL-Q3-COUNTERTERM-AND-EMPTY-REFERENCE-SPLIT`.
 
-Still open are phasewise temporal OS/KMS reconstruction; one common state- and
-`beta`-independent infinite-volume real-time dynamics; identification of both
-DLR phases as KMS states of that same dynamics; distinct algebraic ground-state
-selection; extremality, purity and clustering; each ground GNS sector gap; an
-`a`-dependent enlarged-counterterm regular continuum; and controlled limit
-ordering.  Physical empty space and the below-empty-space sign remain a
-separate mandatory same-Hamiltonian/reference comparison.  Effective
-reduction, C0/N1-N5, C6, light, mass, time, gravity, event-horizon composition,
-CP1, Sector A and Pre-A remain open.
+First, each `EXP-000782` source-tangent Euclidean phase separately preserves
+temporal reflection positivity, time-translation continuity and sharp-time
+generation through the two weak limits.  Periodic OS reconstruction therefore
+gives two abstract stochastically positive `beta`-KMS systems.  This result is
+phasewise: their post-hoc direct sum is not the phase-, state- and `beta`-
+independent thermodynamic-limit dynamics required by this gate.  The currently
+cited oscillator-dynamics theorems also do not directly cover the simultaneous
+unbounded Q3 quartic onsite term and unbounded bilinear intersite coupling.
+The next dynamics gate is
+`PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE`.
+
+Second, the `EXP-000780` all-source ground-energy density and `EXP-000789`
+doublets give the strict fixed-spacing cusp
+`e(h)-e(0)<=-|h|sqrt(rho_*)/8`.  Source tangents select two parity-related
+locally normal time-zero candidates with opposite nonzero order.  They become
+distinct algebraic ground states only if one common source-uniform `alpha^h`
+and common-core generator convergence are proved.  For any such selected
+ground state, the exact block test
+`Delta_omega^P<=hbar^2|B|/[2 chi Var_omega(S_B)]` makes superlinear connected
+variance a decisive zero state-vector-Poincare-gap falsifier.  Simplicity of
+the GNS ground vector and the full GNS Poincare inequality are still open; a
+gap defined only above a degenerate full kernel requires projection off that
+kernel.
+
+Third, exact `Aut(Q3) x Z2` invariant theory strengthens the `EXP-000789`
+distance-two witness.  The homogeneous quartic invariant space has dimension
+19, and repeated Hessian-trace closure from the bare two-dimensional span has
+ranks `2,4,9,19,19`.  The invariant quadratic matrix space has dimension four.
+This closes the symmetry-allowed one-loop basis classification but not an
+`a -> 0` flow, reflection-positive tightness, OS limit or non-Gaussian
+continuum.
+
+Fourth, the finite-spatial-volume, finite-regulator reference is frozen by the
+same-Hamiltonian Gibbs relative-entropy identity and its ground variational analogue, both invariant
+under a common extensive scalar shift.  Another equilibrium KMS or ground
+phase cannot furnish a strict bulk empty-reference sign; the physical empty
+branch must be independently preregistered and have a positive specific
+relative gap.  The symmetric `EXP-000789` ground already has long-range order
+and is not empty.
+
+Still open are the common real-time `alpha`, identification of both phasewise
+systems as KMS states of that same `alpha`, algebraic ground-state promotion,
+extremality/purity/clustering, each broken-sector GNS gap, the enlarged-
+counterterm regulator removal, and a normalized physical empty/preparation
+branch with a positive specific comparison.  Effective reduction,
+C0/N1-N5, C6, light, mass, time, gravity, event-horizon composition, CP1,
+Sector A and Pre-A remain open.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 
