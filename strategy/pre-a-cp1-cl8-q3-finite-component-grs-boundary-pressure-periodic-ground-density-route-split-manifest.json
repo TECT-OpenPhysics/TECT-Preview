@@ -1,0 +1,141 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-q3-finite-component-grs-boundary-pressure-periodic-ground-density-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-Q3-FINITE-COMPONENT-GRS-BOUNDARY-PRESSURE-PERIODIC-GROUND-DENSITY-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-Q3-ZERO-TEMPERATURE-THERMODYNAMIC-GROUND-PHASE-AND-PHYSICAL-REFERENCE-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-Q3-FINITE-COMPONENT-GRS-HALF-PERIODIC-PRESSURE-PERIODIC-GROUND-AND-SPECIFIC-KL-DENSITY",
+  "negative_ids": [],
+  "reused_negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-FINITE-CIRCLE-WITNESS-ZERO-TEMPERATURE-DENSITY",
+    "NG-2026-08-04-PRE-A-CP1-CL8-FIXED-VOLUME-UI-PERIODIC-SHARP-SURFACE-PAIRING",
+    "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR",
+    "NG-2026-08-04-PRE-A-CP1-CL8-FIXED-RAW-QUADRATIC-FINITE-Q3-RENORMALIZED-LIMIT"
+  ],
+  "exploration_id": "EXP-000778",
+  "candidate_family": "PRE-A-CL8-Q3-FINITE-COMPONENT-GRS-BOUNDARY-PRESSURE",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 analytic theorem for the newly declared massive plane-Wick eight-component Q3 family: an explicit finite-index port of the GRS conditioning, uniform subdominant-coupling, boundary-Wick convexity and transfer arguments proves equality of all full and half F/D/N/P pressure densities, the periodic plane-Wick ground-energy density, and the joint plus both iterated scalar specific-KL limits; claim-nonbearing and not an O(boundary) surface theorem, physical-empty-space, absolute-energy, phase-selection, state-limit, original-parent, C6, CP1 or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "GRS_monotonicity": "F. Guerra, L. Rosen and B. Simon, Nelson's Symmetry and the Infinite Volume Behavior of the Vacuum in P(phi)2, Commun. Math. Phys. 27 (1972) 10-22, DOI 10.1007/BF01649655",
+    "GRS_boundary_announcement": "F. Guerra, L. Rosen and B. Simon, The Pressure is Independent of the Boundary Conditions for P(phi)2 Field Theories, Bull. Amer. Math. Soc. 80 (1974) 1205-1210, DOI 10.1090/S0002-9904-1974-13680-3",
+    "GRS_boundary_full": "F. Guerra, L. Rosen and B. Simon, Boundary Conditions for the P(phi)2 Euclidean Field Theory, Ann. Inst. Henri Poincare A 25 (1976) 231-334",
+    "GRS_exact_scope": "Theorem I.1 identifies scalar full and half boundary pressures; Theorem VI.7 gives the Half-Periodic normalized trace formula; Theorem VII.10 supplies scalar subdominant-coupling bounds; Theorem VIII.2 identifies all sixteen covariance-boundary/Wick-reference pressures on independently growing rectangles. Section VI.1 separately reuses a pair for spatial/transfer-direction mixed boundary conditions.",
+    "multivariate_normalizability": "H. Nagoji, Construction of Gibbs measures associated with Euclidean quantum field theory with various polynomial interactions in the Wick renormalizable regime, arXiv:2305.19583",
+    "boundary": "The sources do not state the coupled eight-component Q3 theorem. This package writes the finite-index proof port using Q3 radial coercivity and product hypercontractivity. It is not a literal tensor product of interacting scalar theories and makes no world-first claim."
+  },
+  "setup": {
+    "parameters": "m0>0, g>0, lambda>=0, K_pl any fixed real symmetric 8 by 8 matrix",
+    "interaction": "u(x)=:(Phi^T K_pl Phi/2+W4(Phi)):_(plane), with the field-independent scalar removed",
+    "coercivity": "W4(q)>=c4|q|^4 with c4=g/32>0",
+    "boundary_pressures": "Write p_A^(X;Y) for the Section-VIII object with Gaussian boundary covariance X and Wick reference Y, X,Y in F,D,N,P; p_A^HP=p_A^(P;F) is the plane-Wick Half-Periodic object. This is distinct from the Section-VI coordinate-mixed notation p_(s,t)^(X|Y).",
+    "parent_density": "EXP-000777 proves alpha(l)=-E_l^sharp/l increases to alpha_infinity with 0<alpha_infinity<infinity"
+  },
+  "finite_component_GRS_port": {
+    "Gaussian_conditioning": "C1<=C2 lifts to C1 tensor I8<=C2 tensor I8, and the multivariate Wick heat identity gives E_eta[:P(Phi+eta):_(C1+Ceta)|Phi]=:P(Phi):_C1; conditional Jensen reproduces the GRS partition inequalities.",
+    "Wick_heat": ":P:_c=exp[-c Delta_8/2]P, Delta_8 W4=3 q^T A_Q3 q and Delta_8^2 W4=48(g+4lambda).",
+    "subdominant_coupling_theorem": "For symmetric matrix B and scalar b on R subset A, normalized log partitions are uniformly bounded on fixed balls of ((|A|^-1 int ||B||_HS^2)^1/2+|A|^-1 int |b|), uniformly in ultraviolet cutoff, rectangles and X=F,D,N,P.",
+    "coercive_absorption": "For degree r<4, |a q^gamma|<=epsilon|q|^4+C_r epsilon^(-r/(4-r))|a|^(4/(4-r)); in particular |q^T Bq|/2<=theta W4+||B||_op^2/(16 theta c4).",
+    "uniformity_proof": "Undoing Wick gives finitely many component-labelled chaoses; product OU hypercontractivity and scalar spatial kernel estimates port GRS VII.11-VII.13; conditioning, FKN localization, unit-block linear-volume recovery and the Duhamel series are dimension-blind, while finite multi-index multiplicity changes only constants.",
+    "not_factorization": "Only the Gaussian and analytic estimates tensor over eight labels. The coupled Q3 interaction and partition function do not factor into scalar theories."
+  },
+  "boundary_identification": {
+    "Wick_difference": "For delta_XY=C_A^X(x,x)-C_A^Y(x,x), the exact identity is :P_K:_Y=:P_(K+3 delta_XY A_Q3):_X+(delta_XY/2)TrK_pl+6 delta_XY^2(g+4lambda). Exchanging X,Y reverses only the terms linear in delta_XY, not the squared term.",
+    "image_decay": "GRS massive image estimates give |A|^-1 int(|delta_XY|+delta_XY^2)->0 as the shorter rectangle side tends to infinity.",
+    "convex_Lipschitz": "Uniform boundedness on the subdominant-coupling ball plus convexity gives |p_A^(X,Y)-p_A^(X,X)|->0.",
+    "all_sixteen": "The diagonal Dirichlet/Neumann brackets and not-feeling-the-boundary proof, with the finite-component estimates above, give lim p_A^(X;Y)=alpha_infinity for all sixteen covariance-boundary/Wick-reference choices when both sides grow independently. The four diagonal choices are full pressures. The four Y=F choices are the Half-X family and overlap the diagonal family at (F;F); equivalently, the twelve off-diagonal choices split into three nontrivial Half-X objects and nine other generalized mismatches."
+  },
+  "periodic_ground_and_KL": {
+    "half_periodic_transfer": "For the Section-VIII Half-P object p_A^HP=p_A^(P;F), meaning periodic Gaussian covariance with plane/free Wick ordering and not the Section-VI coordinate-mixed full pressure p^(P|F), GRS Theorem VI.7 gives exp(st p_(s,t)^HP)=Tr exp(-t H_s^(per,u))/Tr exp(-t H_(0,s)). At fixed s this gives lim_(t->infinity)p_(s,t)^HP=-E_s^(per,u)/s; choosing t_n>=n with error below 1/n proves lim_(s->infinity)-E_s^(per,u)/s=alpha_infinity without a projection rate uniform in s.",
+    "circle_scalar_ledger": "E0(Hhat_s)=E_s^(per,u)-s c_s, c_s=(a_s/2)TrK_pl+6a_s^2(g+4lambda)->0, so lim -E0(Hhat_s)/s=lim(T_s-E_s)/s=alpha_infinity>0.",
+    "rectangle_KL_ledger": "d(beta,L)=p_(beta,L)^(P,F)(u)+c_(beta,L), where c_(beta,L)=(D_pl/2)TrK_pl+6D_pl^2(g+4lambda)->0 when both sides grow independently.",
+    "scalar_limits": "The joint rectangular and both iterated specific-KL density limits exist and equal alpha_infinity; exact beta-L exchange supplies the second iterated limit.",
+    "state_boundary": "Only scalar pressure, energy and KL densities are identified. Measures, states, vectors, gaps and correlators are not interchanged."
+  },
+  "stronger_surface_boundary": {
+    "status": "OPEN BUT NON-LOAD-BEARING FOR THE CLOSED DENSITY LIMITS",
+    "unproved": "No cutoff-volume-interpolation-uniform O(|partial A|+1) log-partition comparison or O(1) periodic-sharp ground-energy difference is proved.",
+    "proved_density_consequence": "(E_s^(per,u)-E_s^sharp)/s->0 follows because both densities equal -alpha_infinity.",
+    "negative_preserved": "EXP-000777 and NG-2026-08-04-PRE-A-CP1-CL8-FIXED-VOLUME-UI-PERIODIC-SHARP-SURFACE-PAIRING remain correct about the failed interpolation proof."
+  },
+  "physical_and_phase_boundary": {
+    "named_reference": "alpha_infinity is a strict scalar-gauge-invariant comparison with the massive Gaussian law fixed by m0, geometry and field normalization",
+    "physical_empty_space": "the Gaussian reference is not independently derived as cosmic empty space or the no-condensate state",
+    "absolute_energy": "an additive local scalar moves every raw vacuum-energy density, so gravity still requires an external stress-tensor renormalization condition or observable anchor",
+    "phase": "boundary-pressure equality does not imply Gibbs or vacuum state uniqueness and proves no phase transition or order parameter",
+    "state_limits": "no zero-temperature state, ground vector, uniform spectral gap, correlation, full KMS algebra or interacting microlocal limit is proved",
+    "parent": "the theorem remains a newly declared inserted one-dimensional Q3 P(Phi)2 comparator, not the original fixed-raw CL8 regulator or a derived three-dimensional Q3LOCK parent"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-Q3-CUTOFF-VOLUME-INTERPOLATION-UNIFORM-PERIODIC-SHARP-SURFACE-PAIRING",
+    "status": "PERIODIC ZERO-TEMPERATURE GROUND AND SPECIFIC-KL DENSITY PLUS JOINT AND BOTH ITERATED SCALAR LIMITS CLOSED BY A FINITE-COMPONENT GRS BOUNDARY-BRACKETING BYPASS; THE STRONGER O(BOUNDARY) INTERPOLATION ESTIMATE REMAINS OPEN AND NON-LOAD-BEARING; PHYSICAL REFERENCE, PHASE/STATE, ORIGINAL PARENT AND PRE-A OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-Q3-GRS-UNIFORM-SUBDOMINANT-COUPLING",
+      "PA-CP1-CL8-Q3-ALL-SIXTEEN-FULL-HALF-BOUNDARY-PRESSURE-DENSITY",
+      "PA-CP1-CL8-Q3-HALF-PERIODIC-GROUND-ENERGY-DENSITY",
+      "PA-CP1-CL8-Q3-PERIODIC-ZERO-TEMPERATURE-SPECIFIC-KL-DENSITY",
+      "PA-CP1-CL8-Q3-SCALAR-BETA-L-VAN-HOVE-LIMIT-INTERCHANGE"
+    ],
+    "non_load_bearing_open_subgates": [
+      "PA-CP1-CL8-Q3-CUTOFF-VOLUME-INTERPOLATION-UNIFORM-PERIODIC-SHARP-SURFACE-PAIRING"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-Q3-PHASE-ORDER-PARAMETER-AND-BOUNDARY-STATE-CLASSIFICATION",
+      "PA-CP1-CL8-Q3-PHYSICAL-EMPTY-SPACE-AND-STRESS-TENSOR-RENORMALIZATION-ANCHOR",
+      "PA-CP1-CL8-Q3-ZERO-TEMPERATURE-STATE-GROUND-VECTOR-GAP-AND-CORRELATION-LIMITS",
+      "PA-CP1-CL8-INTERACTING-MICROLOCAL-SPECTRUM-OR-RELATIVISTIC-KMS",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-PRE-A-C0-N1-N5-VALIDATION"
+    ],
+    "next_gate": "PA-CP1-CL8-Q3-PHASE-PHYSICAL-REFERENCE-AND-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-PARENT-ROUTE-SPLIT"
+  },
+  "scope": {
+    "new_plane_Wick_volume_coherent_Q3_extension": true,
+    "strong_radial_Q3_coercivity_used": true,
+    "finite_component_GRS_Gaussian_conditioning": true,
+    "finite_component_GRS_uniform_subdominant_coupling": true,
+    "all_sixteen_full_half_boundary_pressure_density_limits": true,
+    "half_periodic_plane_Wick_pressure_limit": true,
+    "periodic_ground_energy_density_limit": true,
+    "strict_positive_centered_reference_density": true,
+    "periodic_zero_temperature_specific_KL_limit": true,
+    "joint_scalar_van_Hove_limit": true,
+    "both_iterated_scalar_density_limits_equal": true,
+    "scalar_shift_invariant_gap": true,
+    "periodic_sharp_density_difference_vanishes": true,
+    "periodic_sharp_surface_pairing_uniform_in_cutoff_volume_and_interpolation": false,
+    "O_boundary_log_partition_comparison": false,
+    "O1_periodic_sharp_ground_energy_difference": false,
+    "physical_empty_space_reference": false,
+    "absolute_vacuum_energy_fixed": false,
+    "phase_transition_or_phase_uniqueness": false,
+    "zero_temperature_state_limit": false,
+    "ground_vector_limit": false,
+    "uniform_spectral_gap": false,
+    "correlation_function_limit_interchange": false,
+    "full_noncommutative_infinite_volume_local_algebra": false,
+    "interacting_Hadamard_or_microlocal_spectrum": false,
+    "original_fixed_raw_CL8_family": false,
+    "original_3D_Q3LOCK_parent": false,
+    "physical_light_speed_derived": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC finite-component GRS proof port with executable multivariate Wick heat, Q3 coercive-Young, tensor covariance order, normalized boundary-coefficient decay, convex Lipschitz, diagonal transfer, scalar ledger, source-scope and unchanged-C6 audits; scripts do not replace the cutoff-uniform Duhamel and boundary-localization proof written in the certificate",
+    "primary": "codes/foundations/pre_a_cp1_cl8_q3_finite_component_grs_boundary_pressure_periodic_ground_density_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_q3_finite_component_grs_boundary_pressure_periodic_ground_density_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_q3_finite_component_grs_boundary_pressure_periodic_ground_density_route_split_verify.py",
+    "fixtures": "multivariate Wick heat conditional identity; Q3 Laplacian and coercive Young exponents; tensor covariance order; boundary coefficient norm decay; convex Lipschitz and all-sixteen logic; sequence-diagonal ground extraction; circle and rectangle KL scalar ledgers; stronger-surface, state, phase, physical-reference, parent and Pre-A firewalls"
+  },
+  "prior_art_boundary": "GRS prove the scalar all-boundary/full-half pressure and periodic ground-density mechanisms. This package explicitly ports their proof to the radially coercive coupled eight-component Q3 interaction; it does not claim that the vector theorem appears verbatim in the source or that the full TECT Pre-A chain has prior or local closure.",
+  "no_overclaim": "This theorem closes periodic and sharp equality only at scalar density level for one newly declared inserted 1+1-dimensional Q3 comparator and one named massive Gaussian reference. It does not prove the stronger O(boundary) interpolation estimate, identify physical empty space, fix absolute gravitational energy, select or classify a phase, interchange states/vectors/gaps/correlators, construct the original fixed-raw CL8 or three-dimensional Q3LOCK parent, derive light or causal spacetime, close C0 or N1-N5, advance C6, complete CP1 or Sector A, or prove Pre-A."
+}

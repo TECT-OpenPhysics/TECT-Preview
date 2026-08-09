@@ -1,0 +1,154 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-q3-spatial-spectral-rp-martingale-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-Q3-SPATIAL-SPECTRAL-RP-MARTINGALE-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-Q3-VECTOR-PHI2-CONSTRUCTIVE-COMPARATOR-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-TIME-LOCAL-RP-FEYNMAN-KAC-BRIDGE-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-Q3-SPATIAL-SPECTRAL-RP-FK-MARTINGALE-FAMILY-AND-LIMITING-MEASURE-RP-WITH-CANONICAL-NONIDENTIFICATION",
+  "negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-NODAL-SPECTRAL-FINITE-EXACT-INTERTWINER"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-FULL-EUCLIDEAN-SHARP-CUTOFF-REFLECTION-POSITIVITY",
+    "NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE",
+    "NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-GAUSSIAN-LOW-MODE-EXACT-PROJECTIVITY"
+  ],
+  "exploration_id": "EXP-000769",
+  "candidate_family": "PRE-A-CL8-Q3-VECTOR-PHI2-SPATIAL-LOCAL-RP-COMPARATOR",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 exact spatial-martingale and reflection-positivity corollary for the already constructed eight-component Q3 P(Phi)2 comparator, plus a fixed-spatial-cutoff Feynman-Kac identification; claim-nonbearing and not a centered-CL8, full-Weyl, Hadamard, physical-state, C6, CP1, or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "measure": "H. Nagoji, Construction of the Gibbs measures associated with Euclidean quantum field theory with various polynomial interactions in the Wick renormalizable regime, arXiv:2305.19583v2 (2024-12-13), Theorem 1.7(i) and Proposition A.1",
+    "scalar_constructive_context": "C. D. Jaekel and J. Robl, The relativistic KMS condition for the thermal P(phi)2 model, arXiv:1103.3609, for scalar spatial-cutoff limits, Osterwalder-Schrader positivity, reconstruction, and KMS structure; this is context rather than an eight-component Q3 import",
+    "reflection_context": "A. Jaffe and G. Ritter, Reflection positivity and monotonicity, arXiv:0705.0712, and A. Jaffe, C. D. Jaekel and R. E. Martinez II, Complex classical fields: a framework for reflection positivity, arXiv:1201.6003",
+    "Feynman_Kac_context": "B. Simon, Schrodinger semigroups, Bull. Amer. Math. Soc. 7 (1982), 447-526",
+    "not_supplied": "Nagoji does not prove reflection positivity, Osterwalder-Schrader reconstruction, a Hamiltonian, a Markov property, KMS, a ground state, Weyl CCR, momentum, or equality with a canonical CL8 regulator. The scalar constructive sources do not supply the arbitrary eight-component Q3 identification used here."
+  },
+  "statement": "Let mu be the product massive Gaussian field on the same Euclidean two-torus and let R be the limiting eight-component Q3 Wick interaction constructed in EXP-000766/760, with E_mu exp(2R)<infinity. Choose one torus coordinate as Euclidean time and let G_K^x retain every temporal Fourier mode but only spatial modes |k|<=K. Gaussian Hermite conditioning and L1 passage give R_K^x:=E[R|G_K^x], equal to the ordinary time-local spatially truncated Wick interaction. The spatial sigma-fields increase to the full field, so R_K^x tends to R almost surely and in L1. Conditional Jensen gives sup_K E exp(2R_K^x)<=E exp(2R), hence exp(R_K^x) and the normalized densities rho_K^x converge in L1 to exp(R) and rho. The massive Gaussian is reflection positive across a time half-circle: for each spatial mode with omega_k=sqrt(m0^2+k^2), its reflected covariance is the sum of two positive rank-one kernels. Spatial projection commutes with time reflection, and R_K^x splits as R_(K,+)+theta R_(K,+); coercivity makes R_(K,+) bounded above. Therefore each rho_K^x mu is reflection positive on bounded positive-half configuration cylinders. The reflected quadratic form changes by at most ||F||_infinity^2 ||rho_K^x-rho||_1, so the limiting Nagoji Q3 measure rho mu is reflection positive on the same algebra. At every finite K, the retained field is a finite collection of continuous oscillator loops and the local density is exactly the Feynman-Kac loop density of a finite-dimensional Schrodinger operator H_K^(beta0)=H_(0,K)+V_K^(beta0). Its Wick potential and hence this comparator Hamiltonian depend on the fixed torus circumference beta0 through the finite thermal coincidence covariance. This family is not identified with the registered centered CL8 Hamiltonians: its spectral spatial symbol k^2 differs at finite spacing from 4a^(-2)sin^2(ak/2), its Wick covariance and counterterms differ, and the chi,c,hbar and field-coordinate rescaling has not been proved. Full momentum/Weyl convergence, a Hadamard or microlocal theorem, physical state selection, the original three-dimensional Q3 parent, the energy reference and Pre-A remain open.",
+  "spatial_martingale": {
+    "base": "eight independent components with covariance (m0^2-Delta_T2)^(-1), m0>0, on the fixed Euclidean two-torus",
+    "sigma_field": "G_K^x is generated by all temporal Fourier modes and the spatial Fourier modes |k|<=K",
+    "exhaustion": "the increasing union of G_K^x generates the full Gaussian distribution sigma-field",
+    "finite_conditional_identity": "variance-additive multivariate Hermite conditioning gives E[R_M^x|G_K^x]=R_K^x for M>=K",
+    "terminal_identity": "the L1 Wick limit gives R_K^x=E[R|G_K^x]",
+    "martingale_limit": "R_K^x tends to R almost surely and in L1",
+    "time_locality": "P_K^x acts only in space, so R_K^x is the integral of a Wick polynomial evaluated at the same Euclidean time",
+    "boundary": "this is a new approximation of the same terminal interaction, not the simultaneous full-Euclidean sharp projector whose induced N=1 law was refuted in EXP-000767"
+  },
+  "density_limit": {
+    "imported_moment": "EXP-000767 proves E_mu exp(2R)<infinity by applying Nagoji Theorem 1.7(i) to 2F",
+    "conditional_Jensen": "E exp(2R_K^x)=E exp(2E[R|G_K^x])<=E exp(2R)",
+    "uniform_integrability": "the unnormalized weights exp(R_K^x) are uniformly L2 and hence uniformly integrable",
+    "weight_limit": "almost-sure convergence plus uniform integrability gives ||exp(R_K^x)-exp(R)||_1->0",
+    "normalizer_floor": "E R_K^x=0, so Z_K=E exp(R_K^x)>=1",
+    "normalized_limit": "rho_K^x=exp(R_K^x)/Z_K converges to rho=exp(R)/Z in L1(mu), equivalently total variation on the common Gaussian space",
+    "boundary": "this proves bounded-observable convergence on a common probability space, not trace-norm convergence of canonical density operators on changing Hilbert spaces"
+  },
+  "free_gaussian_reflection_positivity": {
+    "reflection": "theta t=-t modulo beta0, with positive half-circle 0<=t<=beta0/2",
+    "mode_frequency": "omega_k=sqrt(m0^2+k^2)>0",
+    "reflected_kernel": "C_k(t+s)=[exp(-omega_k(t+s))+exp(-omega_k(beta0-t-s))]/[2 omega_k(1-exp(-beta0 omega_k))]",
+    "rank_one_factorization": "C_k(t+s)=a_k u_k(t)u_k(s)+a_k v_k(t)v_k(s), where a_k=[2 omega_k(1-exp(-beta0 omega_k))]^(-1), u_k(t)=exp(-omega_k t), and v_k(t)=exp[-omega_k(beta0/2-t)]",
+    "product_result": "summing over retained or all spatial modes and taking eight independent components preserves positive semidefiniteness, so the free Gaussian reflection form is nonnegative",
+    "boundary": "this is time reflection on the Euclidean circle, not a Lorentzian causal cone or an arrow of time"
+  },
+  "interacting_reflection_positivity": {
+    "local_split": "R_K^x=R_(K,+)+theta R_(K,+), with the two reflection boundaries of zero spacetime measure",
+    "integrability": "after finite spatial projection the path is continuous in time; finite Wick corrections are lower-degree terms and the negative coercive quartic makes R_(K,+) bounded above",
+    "finite_K_form": "Q_K(F)=Z_K^(-1) E_mu[overline{(F exp(R_(K,+))) o theta}(F exp(R_(K,+)))]>=0 for every bounded positive-half configuration cylinder F",
+    "limit_bound": "|Q_K(F)-Q(F)|<=||F||_infinity^2 ||rho_K^x-rho||_1",
+    "limit_result": "the terminal Nagoji Q3 measure rho mu is reflection positive on bounded positive-half configuration cylinders",
+    "boundary": "reflection positivity alone is not recorded as a complete Osterwalder-Schrader reconstruction, Markov theorem, canonical Weyl state, KMS selection, or physical vacuum theorem"
+  },
+  "finite_spatial_Feynman_Kac": {
+    "real_mode_space": "choose a real orthonormal basis of the spatial modes |k|<=K; the eight-component coordinate q has finite dimension D_K",
+    "free_operator": "H_(0,K)=(1/2)[-Delta_q+q dot A_K q], where A_K is the restriction of m0^2-partial_x^2 and has oscillator frequencies omega_k",
+    "thermal_covariance": "C_K^(beta0)=E_mu[(P_K^x Phi_e)(t,x)^2], independent of component and spacetime point",
+    "potential": "V_K^(beta0)(q)=integral_Tx :P_int(phi_K(x)):_(C_K^(beta0)) dx",
+    "Hamiltonian": "H_K^(beta0)=H_(0,K)+V_K^(beta0), realized as the semibounded finite-dimensional Schrodinger form",
+    "loop_identity": "relative to the normalized free oscillator loop law, exp[-integral_0^beta0 V_K^(beta0)(q(t))dt] is the Feynman-Kac density and its partition ratio is Tr exp(-beta0 H_K^(beta0))/Tr exp(-beta0 H_(0,K))",
+    "scope_boundary": "the beta0-dependent thermal Wick constant makes this a fixed-circle comparator Hamiltonian, not one beta-independent physical Hamiltonian family and not the registered centered CL8 operator"
+  },
+  "canonical_nonidentification": {
+    "spectral_symbol": "k^2",
+    "centered_CL8_symbol": "khat_a^2=4a^(-2)sin^2(ak/2)",
+    "strict_fixture": "for every nonzero mode with 0<|ak|<2pi, khat_a^2<k^2",
+    "quartic_aliasing_no_go": {
+      "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-NODAL-SPECTRAL-FINITE-EXACT-INTERTWINER",
+      "witness": "on an even M species-singlet Nyquist interpolant phi(x)=A cos(pi M x/L), the centered nodal quartic has a sum_j phi(x_j)^4=L A^4 while the continuum spectral quartic has integral_0^L phi(x)^4 dx=(3/8)L A^4",
+      "consequence": "the difference (5/8)L A^4 is quartic and cannot be removed by a scalar energy shift or scalar/Q3-quadratic counterterm; an exact finite-M centered-nodal-to-spectral potential or Hamiltonian identification is impossible",
+      "boundary": "the high-mode witness does not obstruct low-band quadrature or an asymptotic universality theorem; for a trigonometric field of bandwidth K, the quartic trapezoidal rule is exact once M>4K"
+    },
+    "additional_missing_dictionary": [
+      "the chi,c,hbar and field-coordinate normalization",
+      "thermal versus canonical or zero-temperature Wick covariance",
+      "the scalar and Q3-matrix counterterm flow",
+      "full-sequence state identification between changing Hilbert spaces",
+      "canonical momentum and the joint Weyl functional"
+    ],
+    "reused_boundaries": "the exact centered projectivity, full-Euclidean projected reflection-positivity, and configuration-only full-Weyl failures remain registered boundaries; the quartic Nyquist witness adds the narrower finite exact-intertwiner no-go"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-REGULATOR-COMPATIBLE-RP-FEYNMAN-KAC-STATE-AND-WEYL-LIMIT",
+    "status": "Q3 SPATIAL-SPECTRAL RP/FK COMPARATOR FAMILY AND LIMITING-MEASURE REFLECTION POSITIVITY CLOSED; CENTERED-CL8 IDENTIFICATION, FULL WEYL/MOMENTUM, HADAMARD, PHYSICAL SELECTION, AND PRE-A REMAIN OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-Q3-SPATIAL-ONLY-WICK-MARTINGALE",
+      "PA-CP1-CL8-Q3-SPATIAL-ONLY-COMMON-GAUSSIAN-L1-DENSITY-LIMIT",
+      "PA-CP1-CL8-Q3-SPATIAL-ONLY-FINITE-CUTOFF-REFLECTION-POSITIVITY",
+      "PA-CP1-CL8-Q3-LIMITING-MEASURE-REFLECTION-POSITIVITY",
+      "PA-CP1-CL8-Q3-FIXED-CIRCLE-SPATIAL-CUTOFF-FEYNMAN-KAC-COMPARATOR"
+    ],
+    "refuted_subgates": [
+      "PA-CP1-CL8-CENTERED-NODAL-TO-SPECTRAL-FINITE-EXACT-SCALAR-OR-QUADRATIC-COUNTERTERM-INTERTWINER"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-CENTERED-TO-SPECTRAL-Q3-UNIT-COUNTERTERM-AND-STATE-DICTIONARY",
+      "PA-CP1-CL8-FULL-CANONICAL-WEYL-AND-MOMENTUM-LIMIT",
+      "PA-CP1-CL8-INTERACTING-HADAMARD-OR-MICROLOCAL-LIMIT",
+      "PA-CP1-CL8-PHYSICAL-BETA-GROUND-OR-PREPARATION-SELECTION",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-CP1-CL8-PHYSICAL-STATE-AND-ENERGY-REFERENCE"
+    ],
+    "next_gate": "PA-CP1-CL8-CENTERED-NODAL-TO-SPATIAL-SPECTRAL-RP-UNIVERSALITY-AND-TWISTED-WEYL-LIMIT"
+  },
+  "scope": {
+    "Q3_spatial_Wick_martingale": true,
+    "Q3_spatial_common_Gaussian_L1_density_limit": true,
+    "finite_spatial_cutoff_time_locality": true,
+    "finite_spatial_cutoff_reflection_positive": true,
+    "limiting_Nagoji_measure_reflection_positive": true,
+    "finite_spatial_cutoff_Feynman_Kac_comparator": true,
+    "bounded_configuration_observable_limit": true,
+    "complete_OS_reconstruction": false,
+    "global_Markov_property": false,
+    "beta_independent_comparator_Hamiltonian_family": false,
+    "canonical_CL8_regulator_identified": false,
+    "canonical_CL8_Hamiltonian_state_identified": false,
+    "full_phase_space_Weyl_CCR": false,
+    "canonical_momentum_regularity": false,
+    "interacting_Hadamard_state": false,
+    "physical_beta_or_ground_criterion_derived": false,
+    "original_3D_Q3LOCK_parent": false,
+    "physical_state_or_vacuum": false,
+    "below_empty_space_comparison": false,
+    "physical_light_speed_derived": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "primary": "codes/foundations/pre_a_cp1_cl8_q3_spatial_spectral_rp_martingale_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_q3_spatial_spectral_rp_martingale_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_q3_spatial_spectral_rp_martingale_route_split_verify.py",
+    "fixtures": "degree-zero-through-four Gaussian Hermite conditioning; finite probability martingale and Jensen fixtures; normalized L1 and reflected-form stability inequalities; exact two-rank reflected massive-circle covariance and independent Gram matrices; Q3 coercive Wick upper bound; finite spatial-mode oscillator/Feynman-Kac coefficient ledger; spectral-versus-centered symbol strict inequality; exact Nyquist quartic aliasing no-go and low-band quadrature survivor; source-attribution, formal-record, scope, below-empty-space, and unchanged-C6 firewalls"
+  },
+  "prior_art_boundary": "Scalar P(phi)2 spatial-cutoff reflection positivity, Osterwalder-Schrader reconstruction, Hamiltonians and KMS systems are established constructive field theory. Nagoji establishes multivariate finite-torus Wick-measure normalizability but does not supply those bridges. No world-first general vector constructive-QFT theorem is claimed. The repository-specific checkpoint is the direct spatial-conditional-martingale construction for the already typed eight-component Q3 polynomial, its L1 preservation of reflection positivity, and the exact separation from the centered CL8 canonical family.",
+  "no_overclaim": "This package proves reflection positivity only for the finite-spatial-cutoff time-local Q3 comparator measures and their common-Gaussian limiting Nagoji measure, and proves a fixed-circle beta0-dependent finite-mode Feynman-Kac comparator. It does not prove a complete OS or Markov theorem, a beta-independent Hamiltonian family, equality with the centered CL8 regulators or states, the full Weyl CCR or momentum limit, an interacting Hadamard theorem, a phase transition, physical beta or ground selection, the original three-dimensional Q3 parent, a physical vacuum or below-empty-space sign, physical light, C0, N1-N5, C6, CP1, or Pre-A."
+}

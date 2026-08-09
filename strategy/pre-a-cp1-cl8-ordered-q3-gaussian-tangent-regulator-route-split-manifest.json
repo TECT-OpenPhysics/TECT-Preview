@@ -1,0 +1,173 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-ordered-q3-gaussian-tangent-regulator-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-ORDERED-Q3-GAUSSIAN-TANGENT-REGULATOR-ROUTE-SPLIT-v0",
+  "result_id": "PA-CP1-CL8-SPECTRAL-GAUSSIAN-PROJECTIVE-FAMILY-HADAMARD-COMPARATOR-BARE-CRITICAL-SPEED-CENTERED-PROJECTIVITY-AND-CRITICAL-ZERO-MODE-NOGOS",
+  "task_id": "T-054",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-000762",
+  "date": "2026-08-04",
+  "status": "CLOSED-ORDERED-TANGENT-SPECTRUM-SPECTRAL-PROJECTIVE-HADAMARD-COMPARATOR-AND-FIXED-MODE-CENTERED-LIMIT; INTERACTING-HISTORY-3D-AND-PHYSICAL-GATES-OPEN",
+  "authority": "T0 exact ordered-Q3 quadratic-tangent and nested spectral-regulator route split with an imported static-ground Hadamard theorem; claim-nonbearing and not an interacting-state, physical-speed, phase-transition, C6, CP1, or Pre-A theorem",
+  "parent_ids": [
+    "PA-CP1-ST8-Q3LOCK-v0",
+    "PA-C0A-GAUSSIAN-CCR-PAH1-EMBEDDING-v0",
+    "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0",
+    "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+    "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-HISTORY-CUT-QUANTUM-ALGEBRA-STATE-COMPATIBILITY-ROUTE-SPLIT-v0"
+  ],
+  "claim_bearing": false,
+  "verdict": "CLOSE THE MASSIVE ORDERED-Q3 TANGENT SPECTRUM, ITS EXACT NESTED SPECTRAL GAUSSIAN STATE FAMILY, ITS STANDARD MASSIVE HADAMARD COMPARATOR, AND FIXED-MODE O(a^2) CONVERGENCE OF THE CENTERED CL8 TANGENT; FORMALLY REJECT NATURAL EXACT CENTERED PROJECTIVITY AND A NORMAL CRITICAL COMPACT GAUSSIAN GROUND; RETAIN THE INTERACTING HISTORY-CUT, LOOP-PROTECTION, 3D, PHYSICAL, C6, CP1, AND PRE-A GATES",
+  "negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-GAUSSIAN-LOW-MODE-EXACT-PROJECTIVITY",
+    "NG-2026-08-04-PRE-A-CP1-CL8-CRITICAL-COMPACT-GAUSSIAN-NORMAL-GROUND"
+  ],
+  "statement": "For r<0, the actual Q3-locked ordered wells have eight exactly diagonal Walsh species branches with stiffness nu_s=-2r(1+s*lambda/g), of multiplicities 1,3,3,1. The inherited a/8 symplectic weight fixes the normalized Fourier canonical variables and the centered-lattice quadratic frequencies omega_(a,n,s)^2=[nu_s+c*khat_a(n)^2]/chi. A separate continuum-symbol spectral cutoff gives an exactly projective family of regular quasi-free ground states on nested finite-mode Weyl algebras; its direct-limit state is the standard eight-component massive ground state on the inserted flat 1+1 cylinder and is Hadamard by the established static-ground theorem. The inherited centered-lattice Gaussian tangents are not exactly projective under the natural identity of shared normalized Fourier generators, but every fixed finite mode set and finite-time two-point matrix converges to that comparator at O(a^2). As r approaches zero from below, all bare masses collapse with mean-field tangent exponents nu_MF=1/2 and z=1 and all nonzero continuum branches share v_bare=sqrt(c/chi); this equality comes from the inserted common principal coefficients and has no loop or regulator protection theorem. At r=0 the compact spatial zero mode is a free particle, so the full quadratic tangent has no normalizable Gaussian ground and the massive ground covariances have no regular full-field limit. None of these quadratic statements establishes a thermodynamic or quantum phase transition, the interacting continuum state, physical light, or Pre-A.",
+  "model_scope": {
+    "selected_model": "the inserted one-dimensional per-unit-transverse-area CL8/Q3LOCK ordered-well quadratic tangent on a periodic circle of fixed circumference L",
+    "parameter_domain": "L,chi,c,g,hbar positive; lambda nonnegative; r<0 for the massive state theorem; M even for the centered periodic regulator",
+    "ordered_background": "q_(j,e)=sigma*v with sigma=plus or minus one and v^2=-r/g; lambda>0 leaves exactly these two global classical wells, while lambda=0 has additional sign wells but the displayed common-sign Hessian remains valid",
+    "inserted_data": "the one-dimensional reduction, circle, time coordinate, hbar, ground-state criterion, common kinetic coefficients, and the interpretation of any characteristic or horizon remain inputs",
+    "quadratic_only": "the state is the ground state of the Hessian Hamiltonian around one chosen ordered well, not the exact interacting finite-volume ground or Gibbs state"
+  },
+  "ordered_Q3_hessian": {
+    "Walsh_basis": "chi_alpha(e)=(-1)^(alpha dot e), with alpha in {0,1}^3 and s=|alpha|",
+    "cube_spectrum": "L_Q3 chi_alpha=2s chi_alpha, with multiplicities 1,3,3,1 for s=0,1,2,3",
+    "Hessian": "K_star=(-2r)I_8+lambda*v^2*L_Q3",
+    "species_stiffness": "nu_s=-2r+2s*lambda*v^2=-2r*(1+s*lambda/g)>0",
+    "factor_audit": "one locked edge contributes lambda*v^2*(delta q_e-delta q_f)^2/2 to the quadratic energy; the factor 2 in nu_s comes from the Q3 Laplacian eigenvalue 2s"
+  },
+  "canonical_mode_normalization": {
+    "weight": "w=a/8 and p_(j,e)=w*Pi_(j,e)",
+    "unweighted_transform": "y_(n,alpha)=(8M)^(-1/2) sum_(j,e) exp(-i*k_n*x_j) chi_alpha(e) delta q_(j,e), with the same orthogonal transform for p",
+    "canonical_rescaling": "Phi_(n,alpha)=sqrt(a/8)*y_(n,alpha) and P_(n,alpha)=sqrt(8/a)*p_(n,alpha)",
+    "CCR": "for I_M={-M/2,...,M/2-1} with indices modulo M, [Phi_(n,alpha),P_(m,beta)]=i*hbar*delta_(alpha,beta)*delta^(M)_(n+m,0); reality pairs n and -n, while n=-M/2 is self-conjugate",
+    "centered_symbol": "khat_a(n)^2=4*sin(k_n*a/2)^2/a^2, k_n=2*pi*n/L",
+    "quadratic_Hamiltonian": "H_a^(2)=1/2 sum_(n,alpha)[P_(-n,alpha)P_(n,alpha)/chi+(nu_alpha+c*khat_a(n)^2)Phi_(-n,alpha)Phi_(n,alpha)]",
+    "frequency": "omega_(a,n,alpha)^2=(nu_alpha+c*khat_a(n)^2)/chi"
+  },
+  "spectral_projective_state_family": {
+    "real_mode_space": "V_K is the finite real symplectic direct sum of the n=0 cosine coordinate and the cosine/sine coordinates for 1<=n<=K, for every Q3 Walsh species",
+    "spectral_frequency": "omega_(0,n,alpha)^2=(nu_alpha+c*k_n^2)/chi, independent of K",
+    "state": "for W(f,g)=exp[i*sum(f*P-g*Phi)/hbar], omega_K(W(f,g))=exp[-sum(chi*omega_0*f^2+g^2/(chi*omega_0))/(4hbar)]; equivalently each real oscillator has C_Phi=hbar/(2chi*omega_0), C_P=hbar*chi*omega_0/2 and zero symmetrized cross covariance",
+    "typed_embedding": "iota_(K,K_prime):W(V_K)->W(V_K_prime) pads every absent real Fourier coordinate by zero and is symplectic",
+    "projective_identity": "omega_(K_prime) composed with iota_(K,K_prime)=omega_K for K_prime>=K; this is a state restriction identity, not an untyped density-matrix partial trace",
+    "direct_limit": "the compatible characteristic functionals define the standard regular quasi-free massive ground state on the finite-Fourier test-function union",
+    "regulator_boundary": "this spectral cutoff uses the continuum symbol k_n^2 and is not the inherited centered nodal CL8 regulator"
+  },
+  "Hadamard_comparator": {
+    "result": "for r<0, the direct-limit state is the direct sum of eight massive static Klein-Gordon ground states on the smooth flat cylinder and therefore has the Hadamard singularity structure",
+    "effective_geometry": "ds^2=-dt^2+(chi/c)dx^2, proper circumference sqrt(chi/c)*L, standard field phi=(chi*c)^(1/4)*Phi, and mass_s^2=nu_s/chi",
+    "full_Cauchy_extension": "on smooth Cauchy data the Fourier coefficients decay rapidly, while omega_n grows linearly and its inverse is mass-bounded; the covariance forms therefore extend continuously from finite Fourier labels to the full smooth-data CCR algebra",
+    "spacetime_two_point": "W_s(t,x;t_prime,x_prime)=hbar/(2*chi*L) sum_n exp[-i*omega_(n,s)*(t-t_prime)+i*k_n*(x-x_prime)]/omega_(n,s), as a distribution; every spectral cutoff state is its exact finite-mode restriction",
+    "theorem_owner": "Fulling, Narcowich and Wald, Annals of Physics 136 (1981), DOI 10.1016/0003-4916(81)90098-1; also Junker, arXiv:hep-th/9507097",
+    "repository_contribution": "the exact Q3 mass matrix, a/8 canonical normalization, and identification of the spectral projective state with the hypotheses of the established static-ground theorem",
+    "scope_boundary": "this certifies a free massive ordered-tangent comparator only; it is not a Hadamard theorem for the interacting CL8 state, nonlinear history-cut state, critical zero-mode theory, or a 3+1 spacetime"
+  },
+  "centered_fixed_mode_limit": {
+    "symbol_bound": "for |k*a|<=pi, 0<=k^2-khat_a^2<=a^2*k^4/12",
+    "frequency_bound": "0<=omega_0-omega_a<=c*a^2*k^4/(24*chi*m_alpha), where m_alpha=sqrt(nu_alpha/chi)",
+    "field_covariance_bound": "0<=C_Phi,a-C_Phi,0<=hbar*c*a^2*k^4/(48*chi^2*m_alpha^3)",
+    "momentum_covariance_bound": "0<=C_P,0-C_P,a<=hbar*c*a^2*k^4/(48*m_alpha)",
+    "characteristic_limit": "on every fixed finite set of real modes, the centered Gaussian characteristic functions converge at O(a^2) for each fixed Weyl label, uniformly on bounded label subsets; this yields weak-star convergence on that fixed finite-mode Weyl algebra",
+    "finite_time_limit": "on every fixed finite mode set and compact time-difference interval, the positive-frequency two-point matrices converge at O(a^2)",
+    "nonuniformities": "the bounds are not uniform through r=0, over modes growing with the cutoff, in total vacuum energy, or for the nonlinear interacting state"
+  },
+  "centered_projectivity_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-GAUSSIAN-LOW-MODE-EXACT-PROJECTIVITY",
+    "target": "exact equality of centered-difference ordered-tangent Gaussian ground states under the natural identity of shared normalized Fourier field and momentum generators",
+    "identity": "khat_(a/2)^2-khat_a^2=16*sin(k*a/4)^4/a^2",
+    "witness_domain": "every shared nonzero non-Nyquist mode 0<|n|<M/2 when c>0",
+    "exact_fixture": "L=6, M=6, n=2 gives khat_a^2=3; the M=12 refinement gives khat_(a/2)^2=4",
+    "conclusion": "the refined field covariance is strictly smaller and its momentum covariance strictly larger, so omega_(a/2) composed with the natural shared-mode inclusion is not omega_a",
+    "survivors": "O(a^2) fixed-mode convergence, the exact spectral family, mode-dependent symplectic squeezes, symbol-matched or perfect actions, counterterms, and interacting renormalized limits are not excluded"
+  },
+  "critical_zero_mode_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-CRITICAL-COMPACT-GAUSSIAN-NORMAL-GROUND",
+    "target": "a normalizable regular Gaussian ground state of the full r=0 periodic quadratic tangent including its spatial zero coordinates",
+    "mass_collapse": "nu_s=-2r*(1+s*lambda/g) tends to zero for all eight Walsh species as r increases to zero from below",
+    "zero_mode_Hamiltonian": "at r=0 and n=0, each tangent branch is H=P^2/(2chi), the quantum-mechanical free particle on R",
+    "covariance_witness": "C_Phi=hbar/(2*sqrt(chi*nu_s)) diverges and C_P tends to zero; the limiting Weyl characteristic function is discontinuous in any nonzero zero-mode field direction",
+    "conclusion": "the full compact quadratic tangent has no normalizable ground vector and the massive Gaussian family has no regular full-field ground-state limit at criticality",
+    "survivors": "the exact interacting finite-volume quartic ground, non-ground or squeezed zero-mode prescriptions, decompactification, constraints, compact target fields, and a deliberately reduced mean-zero algebra are not excluded"
+  },
+  "bare_critical_scaling_and_speed": {
+    "correlation_length": "xi_s=sqrt(c/nu_s), so xi_s is proportional to (-r)^(-1/2) and the bare Gaussian correlation-length exponent is nu_MF=1/2",
+    "gap": "Delta_s=sqrt(nu_s/chi) is proportional to (-r)^(1/2)",
+    "dynamic_exponent": "Delta_s is proportional to xi_s^(-1), hence the bare tangent exponent is z=1",
+    "common_speed": "v_bare=sqrt(c/chi); at r=0 and nonzero continuum k, omega_s(k)=v_bare*|k| for every species",
+    "finite_lattice_warning": "at r=0, d omega_a/dk=v_bare*cos(k*a/2) on the positive Brillouin branch, so the finite centered lattice does not have a constant group velocity at all k",
+    "protection_boundary": "the equality follows from the declared species-independent principal gradient and inertia matrices. Q3 symmetry by itself permits additional Q3-invariant derivative operators, and no loop, RG, regulator, Lorentz, or physical-light protection theorem is proved",
+    "phase_boundary": "the Hessian bifurcation and bare exponents do not establish a thermodynamic or quantum phase transition; finite volume retains a unique even interacting ground state"
+  },
+  "history_cut_boundary": {
+    "bulk_tangent_state": "the spectral and centered constructions are bulk quadratic states",
+    "linear_cut_maps": "any fixed-regulator quadratic history-cut map is metaplectic and can transport the Gaussian, but no inter-regulator square with the typed Lambda_C and Gamma_C decoders is proved here",
+    "nonlinear_boundary": "the exact nonlinear cut unitaries generally turn Gaussian states non-Gaussian and do not make this tangent family an interacting history-cut state family"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-REGULATOR-COMPATIBLE-HISTORY-CUT-STATE-FAMILY",
+    "status": "SPLIT; MASSIVE ORDERED-TANGENT SPECTRAL/FIXED-MODE SUBGATES CLOSED, INTERACTING HISTORY-CUT PARENT OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-ORDERED-Q3-SPECTRAL-GAUSSIAN-TANGENT-PROJECTIVE-STATE-FAMILY",
+      "PA-CP1-CL8-ORDERED-Q3-MASSIVE-HADAMARD-TANGENT-COMPARATOR",
+      "PA-CP1-CL8-CENTERED-TANGENT-FIXED-MODE-CYLINDRICAL-CONTINUUM-LIMIT",
+      "PA-CP1-CL8-BARE-CRITICAL-COMMON-TANGENT-SPEED-AND-MEAN-FIELD-EXPONENTS"
+    ],
+    "refuted_subgates": [
+      "PA-CP1-CL8-CENTERED-LATTICE-GAUSSIAN-LOW-MODE-EXACT-PROJECTIVITY",
+      "PA-CP1-CL8-CRITICAL-COMPACT-FULL-GAUSSIAN-NORMAL-GROUND"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-INTERACTING-REGULATOR-COMPATIBLE-HISTORY-CUT-STATE-FAMILY",
+      "PA-CP1-CL8-REGULATOR-AND-LOOP-PROTECTED-COMMON-SPEED",
+      "PA-CP1-CL8-INTERACTING-CONTINUUM-STATE-AND-HADAMARD-LIMIT",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-CP1-CL8-PHYSICAL-STATE-AND-ENERGY-REFERENCE"
+    ],
+    "next_gate": "PA-CP1-CL8-INTERACTING-REGULATOR-COMPATIBLE-HISTORY-CUT-STATE-FAMILY"
+  },
+  "Pre_A_chain_role": {
+    "C0": "the tangent displays a supplied z=1 dispersion and standard Hadamard comparator, but the time coordinate, hbar, Lorentzian meaning, physical null cone and light speed remain inserted or unproved",
+    "N1": "a genuine massive free projective state family exists and the centered tangent has a finite-cylinder limit, but no interacting or physically selected state is obtained",
+    "N2": "the quadratic bulk theory is compatible with standard metaplectic cut transport at each fixed regulator, but the inter-regulator typed cut square and original 3D parent are absent",
+    "N3_through_N5": "open; bare Hessian criticality is not a cooling transition, history selection, emergent metric, or physical excitation theorem",
+    "CP1": "not complete because the interacting regulator-compatible history state, 3D parent, physical reference and protected cone remain absent",
+    "chain_verdict": "this closes a load-bearing free tangent and identifies two exact limit obstructions, but does not advance C6 or complete CP1 or Pre-A"
+  },
+  "scope": {
+    "ordered_Q3_Hessian_spectrum": true,
+    "canonical_a_over_8_mode_normalization": true,
+    "massive_spectral_projective_Gaussian_family": true,
+    "massive_ordered_tangent_Hadamard_comparator": true,
+    "centered_fixed_mode_O_a2_convergence": true,
+    "centered_finite_time_two_point_convergence": true,
+    "bare_mean_field_nu_half_and_z_one": true,
+    "bare_common_tangent_speed": true,
+    "natural_centered_exact_projectivity": false,
+    "critical_compact_full_Gaussian_normal_ground": false,
+    "loop_or_RG_speed_protection": false,
+    "interacting_history_cut_state_family": false,
+    "interacting_continuum_Hadamard_state": false,
+    "original_3D_Q3LOCK_parent": false,
+    "physical_light_speed_derived": false,
+    "physical_phase_transition": false,
+    "physical_state_or_vacuum": false,
+    "below_empty_space_comparison": false,
+    "hbar_origin_derived": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "primary": "codes/foundations/pre_a_cp1_cl8_ordered_q3_gaussian_tangent_regulator_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_ordered_q3_gaussian_tangent_regulator_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_ordered_q3_gaussian_tangent_regulator_route_split_verify.py",
+    "fixtures": "exact Q3 Walsh graph spectrum; symbolic ordered Hessian and canonical scaling; M=6 to M=12 non-Nyquist centered mismatch at L=6,n=2; exact finite spectral cutoffs; rational covariance and uncertainty checks; fixed-mode error inequalities; critical mass, exponent, speed and zero-mode controls",
+    "discipline": "primary SymPy derivation, non-importing standard-library Fraction reconstruction, stored JSON artifacts, parent hashes, theorem-owner citation, formal-record and unchanged-C6 firewalls"
+  },
+  "prior_art_boundary": "Fourier diagonalization of periodic harmonic lattices, Gaussian/quasi-free CCR vacua, spectral cutoffs, free-field continuum limits, static-spacetime Hadamard ground-state theorems, mean-field Gaussian exponents, lattice dispersion error, and compact massless-scalar zero-mode obstructions are established mathematics. No world-first or new general theorem is claimed. The repository-specific result is the exact composition of the Q3 ordered Hessian, CL8 a/8 canonical normalization, spectral-versus-centered regulator split, critical-speed/protection audit, and Pre-A gate ledger.",
+  "no_overclaim": "This package proves only the ordered-well quadratic Q3 tangent, an exact continuum-symbol spectral projective Gaussian family, its standard massive Hadamard comparator, fixed-finite-mode convergence of the centered CL8 tangent, bare critical exponents/common speed, and two narrowly typed no-gos. It does not prove the exact interacting ground or Gibbs state converges, a nonlinear or inter-regulator history-cut state, a critical full Gaussian ground, loop/RG speed protection, physical light, Lorentzian signature, time or hbar origin, a thermodynamic or quantum phase transition, cooling, the original 3D Q3LOCK parent, gravity, a horizon or a cycle, a physical vacuum or below-empty-space sign. It does not close C0 or N1-N5, advance C6, complete CP1, or complete Pre-A."
+}

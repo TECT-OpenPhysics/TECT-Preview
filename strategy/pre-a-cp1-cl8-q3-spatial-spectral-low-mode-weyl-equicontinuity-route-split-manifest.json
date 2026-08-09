@@ -1,0 +1,92 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-q3-spatial-spectral-low-mode-weyl-equicontinuity-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-Q3-SPATIAL-SPECTRAL-LOW-MODE-WEYL-EQUICONTINUITY-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-Q3-SPATIAL-SPECTRAL-RP-MARTINGALE-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-CENTERED-Q3-WICK-WEYL-LIMIT-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-Q3-RENORMALIZED-FORCE-VIRIAL-BOUND-AND-REGULAR-WEYL-CLUSTERS-WITH-FULL-SEQUENCE-SEAM-GATE",
+  "negative_ids": [],
+  "exploration_id": "EXP-000771",
+  "candidate_family": "PRE-A-CL8-Q3-SPATIAL-SPECTRAL-CANONICAL-LOW-MODE-LIMIT",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 fixed-beta spatial-spectral Q3 comparator theorem: exact renormalized-force virial identity, cutoff-uniform fixed-low-mode momentum bound, twisted-seam equicontinuity, and regular Weyl cluster states; claim-nonbearing and not a centered-nodal, full-sequence, KMS, Hadamard, physical-state, C6, CP1, or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "statement": "For the EXP-000769 spatial-spectral Q3 P(Phi)_2 comparator at one fixed beta0, let H_K=P^2/(2chi)+U_K(Q), let omega_K be its Gibbs state, and let Q_K(f), P_K(f), and G_K(f)=D_f U_K denote a fixed smooth spatial mode, its canonical momentum, and the renormalized directional force. The already registered L2 density bound and fixed-mode Gaussian estimates imply uniform L4 bounds on Q_K(f). Keeping the Q3 derivative as one sum of first and third Wick chaoses, rather than expanding divergent raw cubic and linear pieces, gives a cutoff-uniform L4 force bound. On a heat-smoothed polynomial core the exact Gibbs virial identity is omega_K(P_K(f)^2)=chi omega_K(Q_K(f)G_K(f)); hence the fixed-low-mode momentum second moment is uniformly bounded without controlling the total ultraviolet energy. The exact positive heat-kernel seam mass m_K(h)=omega_K(exp(iP_K(h)/hbar)) therefore satisfies 0<=1-m_K(th)<=t^2 omega_K(P_K(h)^2)/(2hbar^2), locally uniformly on every fixed finite mode space. Configuration bounds and the Weyl relations then give identity equicontinuity, and every cofinal pointwise cluster is a regular state on the inductive finite-mode Weyl algebra. The theorem does not identify a unique cluster or prove full-sequence off-diagonal seam convergence. It applies directly to the spatial-spectral comparator, not yet to the centered-nodal CL8 family.",
+  "hypotheses": {
+    "hamiltonian": "H_K=P^2/(2chi)+U_K(Q), [Q_i,P_j]=i hbar delta_ij, at fixed beta0",
+    "density": "r_K=exp(R_K^x)/Z_K relative to the common free periodic Gaussian mu",
+    "registered_L2_margin": "sup_K ||r_K||_L2(mu)<=sqrt(E exp(2R)) because R_K^x=E[R|G_K^x] and Z_K>=1",
+    "labels": "real smooth vector labels with Fourier support in one fixed finite set independent of K",
+    "scope": "finite spatial circle and spatial-spectral cutoff only"
+  },
+  "q3_force": {
+    "polynomial": "P_int(x)=x^T K_int x/2+(g/4)sum_e x_e^4+(lambda/4)sum_(e~r)(x_e-x_r)^2(x_e^2+x_r^2)",
+    "derivative": "partial_e :P_int:_C=(K_int x)_e+g:x_e^3:_C+(lambda/2)sum_(r~e)[2:x_e^3:_C-3:x_e^2 x_r:_C+2:x_e x_r^2:_C-:x_r^3:_C]",
+    "sentinels": "the own-cubic coefficient is g+3lambda; each of the three neighbours contributes (-3lambda/2, lambda, -lambda/2) to (:x_e^2 x_r:, :x_e x_r^2:, :x_r^3:)",
+    "covariance": "C_K^0(x)=L^-1 sum_|k|<=K [hbar coth(beta0 hbar omega_k/2)/(2chi omega_k)] exp(ikx), with coefficients O(1/|k|)",
+    "uniform_bound": "the logarithmic singularity is uniformly Lp for every finite p; Wick isometry controls the smeared cubic by ||C_K^0||_L3^3 and degree-three hypercontractivity gives sup_K||G_K(f)||_L4<infinity",
+    "forbidden_expansion": "do not bound :x^3:_C as x^3-3C_K(0)x term by term because C_K(0) diverges"
+  },
+  "virial": {
+    "commutators": "[H,Q_f]=-i hbar P_f/chi and [H,P_f]=i hbar G_f",
+    "dilation": "A_f=(Q_f P_f+P_f Q_f)/2",
+    "identity": "[H,A_f]=i hbar(Q_f G_f-P_f^2/chi), so Gibbs trace cyclicity gives omega(P_f^2)=chi omega(Q_f G_f)",
+    "bound": "0<=omega_K(P_f^2)<=chi ||r_K||_2 ||Q_f||_4 ||G_f||_4",
+    "boundary": "the proof is fixed-low-mode and does not require or provide a uniform total-energy bound"
+  },
+  "twisted_seam": {
+    "mass": "m_K(h)=Z_K^-1 integral K_(K,beta0)(x+h/2,x-h/2)dx=omega_K(exp(iP_K(h)/hbar))",
+    "positivity": "0<m_K(h)<=1 and time reversal makes m_K(h) real",
+    "quadratic_control": "0<=1-m_K(th)<=t^2 omega_K(P_K(h)^2)/(2hbar^2)",
+    "midpoint_domination": "D_(K,h)(x)<= [D_(K,0)(x+h/2)+D_(K,0)(x-h/2)]/2 by heat-semigroup Cauchy-Schwarz",
+    "cluster_result": "finite-mode pointwise clusters are positive normalized Weyl functionals and the uniform identity bound makes them regular"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-CENTERED-Q3-UNIFORM-EXPONENTIAL-INTEGRABILITY-AND-OFFDIAGONAL-SEAM-BOUND",
+    "status": "SPATIAL-SPECTRAL FIXED-LOW-MODE FORCE, MOMENTUM, SEAM EQUICONTINUITY, AND REGULAR-CLUSTER SUBGATES CLOSED; CENTERED-NODAL TRANSFER AND FULL-SEQUENCE SEAM IDENTIFICATION OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-Q3-SPATIAL-SPECTRAL-RENORMALIZED-FORCE-L4",
+      "PA-CP1-CL8-Q3-SPATIAL-SPECTRAL-FIXED-LOW-MODE-MOMENTUM-BOUND",
+      "PA-CP1-CL8-Q3-SPATIAL-SPECTRAL-REGULAR-WEYL-CLUSTER-EXISTENCE"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-CENTERED-Q3-NODAL-UNIFORM-EXPONENTIAL-INTEGRABILITY",
+      "PA-CP1-CL8-CENTERED-Q3-OFFDIAGONAL-SEAM-FULL-SEQUENCE-CONVERGENCE",
+      "PA-CP1-CL8-INTERACTING-OS-MARKOV-HADAMARD-RECONSTRUCTION",
+      "PA-CP1-CL8-PHYSICAL-STATE-AND-ENERGY-REFERENCE"
+    ],
+    "next_gate": "PA-CP1-CL8-CENTERED-Q3-NODAL-UNIFORM-EXPONENTIAL-INTEGRABILITY"
+  },
+  "scope": {
+    "spatial_spectral_Q3_force_L4_uniform": true,
+    "spatial_spectral_fixed_low_mode_momentum_uniform": true,
+    "spatial_spectral_twisted_seam_identity_equicontinuous": true,
+    "spatial_spectral_regular_Weyl_clusters_exist": true,
+    "spatial_spectral_full_sequence_Weyl_limit": false,
+    "centered_Q3_uniform_exponential_integrability": false,
+    "centered_Q3_interacting_density_L1_limit": false,
+    "centered_Q3_offdiagonal_seam_full_sequence": false,
+    "complete_OS_Hadamard": false,
+    "physical_state_or_vacuum": false,
+    "below_empty_space_comparison": false,
+    "original_3D_Q3LOCK_parent": false,
+    "physical_light_speed_derived": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "primary": "codes/foundations/pre_a_cp1_cl8_q3_spatial_spectral_low_mode_weyl_equicontinuity_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_q3_spatial_spectral_low_mode_weyl_equicontinuity_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_q3_spatial_spectral_low_mode_weyl_equicontinuity_route_split_verify.py",
+    "fixtures": "Q3 cube derivative coefficients; Wick derivative identity; CCR virial signs and chi factor; finite covariance L3 proxy; chaos pairing and hypercontractive degree; Holder ledger; Mehler virial and seam curvature; positive-kernel midpoint domination; oscillator hostile ultraviolet control; scope, below-empty-space, and unchanged-C6 firewalls"
+  },
+  "prior_art_boundary": "Virial identities, Wick isometry, Nelson hypercontractivity, Feynman-Kac kernels, and Weyl regularity criteria are established. The repository-specific contribution is their exact Q3 force instantiation and the proof that the existing spatial-spectral comparator controls fixed low momentum without a false uniform total-energy estimate. No world-first claim is made.",
+  "no_overclaim": "This theorem is for the fixed-beta spatial-spectral comparator. It does not prove centered-nodal uniform exponential integrability, centered density convergence, full-sequence off-diagonal seam convergence, uniqueness or normality of a continuum cluster, a beta-independent Hamiltonian family, a ground or KMS selection theorem, complete OS or Hadamard structure, the original three-dimensional Q3 parent, a physical vacuum or energy below empty space, physical light, C0, N1-N5, C6, CP1, Sector A, or Pre-A."
+}

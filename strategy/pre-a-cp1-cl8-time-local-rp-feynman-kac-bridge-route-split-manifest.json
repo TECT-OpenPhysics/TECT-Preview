@@ -1,0 +1,171 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-time-local-rp-feynman-kac-bridge-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-TIME-LOCAL-RP-FEYNMAN-KAC-BRIDGE-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+    "PA-CP1-CL8-Q3-VECTOR-PHI2-CONSTRUCTIVE-COMPARATOR-ROUTE-SPLIT-v0",
+    "PA-C0A-RPTM-FS-v0"
+  ],
+  "result_id": "PA-CP1-CL8-FIXED-REGULATOR-EXACT-HEAT-TRANSFER-REFLECTION-POSITIVITY-FEYNMAN-KAC-AND-STRANG-LIMIT-WITH-EXACT-SLICE-AND-CONE-NOGOS",
+  "negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-STRANG-ONE-SLICE-EXACT-HAMILTONIAN-SEMIGROUP",
+    "NG-2026-08-04-PRE-A-CP1-CL8-EUCLIDEAN-HEAT-SUPPORT-PHYSICAL-LIGHT-CONE"
+  ],
+  "exploration_id": "EXP-000768",
+  "candidate_family": "PRE-A-CL8-TIME-LOCAL-EUCLIDEAN-CANONICAL-BRIDGE",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 fixed-spatial-regulator instantiation of established Schrodinger Feynman-Kac, reflection-positivity, and symmetric Trotter product theorems, plus two scoped route no-gos; claim-nonbearing and not a regulator-removal, Hadamard, physical-time, light-cone, C6, CP1, or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "Feynman_Kac": "B. Simon, Schrodinger semigroups, Bull. Amer. Math. Soc. 7 (1982), 447-526, DOI 10.1090/S0273-0979-1982-15041-8, for the standard finite-dimensional Schrodinger Feynman-Kac formula",
+    "Trotter": "H. F. Trotter, On the product of semi-groups of operators, Proc. AMS 10 (1959), 545-551, DOI 10.1090/S0002-9939-1959-0108732-6, together with Kato's form-sum extension",
+    "trace_ideal_product": "A. Doumeki, T. Ichinose and H. Tamura, Error bounds on exponential product formulas for Schrodinger operators, J. Math. Soc. Japan 50 (1998), 359-377, DOI 10.2969/jmsj/05020359; the shifted smooth coercive quartic lies in the p=4 confining class",
+    "OS_context": "K. Osterwalder and R. Schrader, Axioms for Euclidean Green's functions, Commun. Math. Phys. 31 (1973), 83-112; contextual only because the finite-ring reflection forms are proved directly and no full OS reconstruction is claimed",
+    "not_supplied": "the CL8 Hamiltonian, its a/8 canonical coefficient, hbar, a physical beta or ground criterion, regulator compatibility, a continuum state, a Hadamard theorem, a Lorentzian cone, or physical branch selection"
+  },
+  "statement": "Fix one registered periodic CL8 spatial regulator with M>=2, d=8M, w=a/8, chi>0 and declared hbar>0. Its registered Schrodinger operator is H_a=-kappa_a Delta+U_a on L2(R^d), where kappa_a=hbar^2/(2chi w)=4hbar^2/(a chi) and U_a is a real smooth coercive quartic polynomial bounded below. For every t>0, T_t=exp(-tH_a) has a symmetric strictly positive Feynman-Kac kernel K_t, satisfies K_s*K_t=K_(s+t), and is trace class. For beta=2n epsilon, the periodic sampled-time density proportional to product_l K_epsilon(q_l,q_(l+1)) is normalized by Tr exp(-beta H_a), is reflection positive for every lattice-preserving dihedral axis through opposite sites or opposite links on the even ring, and reproduces exactly the canonical Gibbs time-ordered bounded configuration correlators at grid times; the exact kernels separately define the corresponding continuous-loop cylinder law at arbitrary ordered times. Thus a time-local Euclidean transfer and exact canonical Feynman-Kac bridge exist at every fixed spatial regulator. The ground-state Doob transform gives a compact injective reversible Markov semigroup with unbounded nonnegative logarithmic generator, not a finite-state bounded-log reconstruction. The explicit symmetric Kac/Strang slice S_epsilon=exp(-epsilon U_a/2) exp(epsilon kappa_a Delta) exp(-epsilon U_a/2) has a symmetric strictly positive trace-class kernel and an explicit Gram factorization, defines reflection-positive aligned even-ring sliced laws, and its N-fold products converge in trace norm to exp(-beta H_a), with quartic-class rate O(N^(-1/2)) locally uniformly away from beta=0. It is not the exact registered one-step semigroup: on a plateau at q=0 the epsilon-cubed coefficient is -4 kappa_a^2 w M(g+4lambda)<0. Moreover K_t(q,q')>0 for all configurations, so Euclidean heat-kernel support has no finite configuration-transition cone and cannot itself be relabelled as a Lorentzian light cone. Regulator removal, path-momentum/Weyl convergence, Hadamard form, physical beta or vacuum selection, the three-dimensional Q3 parent, energy reference, C6, CP1 and Pre-A remain open.",
+  "fixed_regulator": {
+    "domain": "finite M>=2, d=8M, a=L/M, w=a/8, chi>0, c>0, g>0, lambda>=0, real r, hbar>0",
+    "Hilbert_space": "H_a=L2(R^d,dq)",
+    "Hamiltonian": "H_a=-kappa_a Delta+U_a(q)",
+    "kinetic_coefficient": "kappa_a=hbar^2/(2chi w)=4hbar^2/(a chi)",
+    "potential": "U_a=(a/8)sum_j[c|D_a^+q_j|^2/2+W(q_j)]",
+    "potential_properties": "real C-infinity polynomial, bounded below, and U_a(q)>=A_a|q|^4-B_a|q|^2 with A_a=ag/(32d)>0",
+    "energy_shift": "replace U_a by U_a+C when a nonnegative potential is convenient; normalized Gibbs laws and reflection forms are unchanged"
+  },
+  "exact_heat_transfer": {
+    "operator": "T_t=exp(-tH_a), t>0",
+    "parameter_units": "t and beta are inverse-energy parameters; if delta is physical Euclidean time, t=delta/hbar and beta=delta_beta/hbar",
+    "free_kernel": "G_t(q,q')=(4pi kappa_a t)^(-d/2) exp[-|q-q'|^2/(4kappa_a t)]",
+    "coefficient_substitution": "4kappa_a t=16hbar^2 t/(a chi)",
+    "Feynman_Kac_kernel": "K_t(q,q')=G_t(q,q') E_(q to q') exp[-integral_0^t U_a(B_s) ds] for the Brownian bridge with generator kappa_a Delta",
+    "properties": [
+      "K_t(q,q')=K_t(q',q)>0",
+      "integral K_s(q,z)K_t(z,q')dz=K_(s+t)(q,q')",
+      "T_t is positive as an operator and positivity improving as a cone map",
+      "Tr T_t=integral K_t(q,q)dq<infinity"
+    ],
+    "boundary": "the temporal step t and orientation are declared inputs; the construction does not derive physical time, its arrow, or a clock calibration"
+  },
+  "ground_state_Doob_Markov_interface": {
+    "ground_data": "let E_0 be the simple lowest eigenvalue and psi_0(q)>0 its normalized real wavefunction",
+    "stationary_measure": "pi_a(dq)=psi_0(q)^2 dq",
+    "unitary_and_operator": "U_0:L2(pi_a)->L2(dq), U_0 f=psi_0 f; L_0=U_0^(-1)(H_a-E_0)U_0>=0; P_t=exp(-tL_0)",
+    "properties": "P_t 1=1; P_t is positivity improving and reversible on L2(pi_a); the infinitesimal Markov generator is -L_0",
+    "unbounded_log_boundary": "for t>0, P_t is compact and injective with eigenvalues accumulating at zero, has no bounded inverse, and -log(P_t)=tL_0 is unbounded on its spectral domain, in agreement with NG-2026-08-03-PRE-A-C0A-FINITE-HILBERT-BOUNDED-LOG-LIFT",
+    "boundary": "this is a fixed-regulator ground-state Markov interface toward, but not an application of, the finite-state C0A bounded-log theorem; it uses the already selected ground and supplied t, is distinct from the finite-beta loop law, and does not choose a physical C0 branch"
+  },
+  "periodic_path_and_reflection_positivity": {
+    "time_lattice": "beta=2n epsilon with n>=1 and q_(2n)=q_0",
+    "law": "dnu_(a,beta,epsilon)=Z^(-1) product_(l=0)^(2n-1) K_epsilon(q_l,q_(l+1)) product_l dq_l",
+    "normalizer": "Z=Tr(T_epsilon^(2n))=Tr exp(-beta H_a)",
+    "site_reflection": "splitting the even periodic ring at any lattice-preserving axis through opposite sites and conditioning on their configurations writes the reflected form as an integral of an absolute square",
+    "link_reflection": "T_epsilon=T_(epsilon/2)^*T_(epsilon/2) factors each lattice-preserving reflection axis through opposite links into half-step amplitudes, again giving an absolute-square norm",
+    "positive_algebra": "bounded cylinder functions of configuration multiplication observables supported on one temporal half-ring",
+    "result": "the exact sampled Gibbs configuration law is reflection positive for every lattice-preserving dihedral axis through opposite sites or opposite links for every fixed M, beta and even number of time links",
+    "boundary": "this is fixed-regulator thermal reflection positivity for the bounded configuration algebra on an aligned half-ring, not an odd-ring or off-grid reflection theorem and not the full continuum OS axiom package"
+  },
+  "canonical_Feynman_Kac_bridge": {
+    "continuous_loop_law": "the exact kernels over successive positive gaps and the closing gap define consistent finite-dimensional densities for a continuous-time periodic loop law",
+    "ordered_correlator": "for 0<=t_1<=...<=t_m<beta and bounded multipliers M_f, the continuous-loop expectation equals Z^(-1)Tr[e^{-(beta-t_m)H_a}M_(f_m)e^{-(t_m-t_(m-1))H_a}...M_(f_1)e^{-t_1H_a}]; the sampled law asserts this only at grid times t_j=m_j epsilon",
+    "same_state": "the normal density is exactly rho_(a,beta)=Z^(-1)exp(-beta H_a), already registered on B(H_a) and the regular finite CCR representation",
+    "configuration_identification": "the Euclidean time-zero marginal and all sampled ordered bounded configuration correlators equal those of the declared canonical Gibbs state",
+    "canonical_core": "on the Schwartz core, [q_i,p_j]=i hbar delta_ij, p_i=w Pi_i, [q_i,Pi_j]=i hbar delta_ij/w, and [H_a,q_i]=-i hbar p_i/(chi w)",
+    "momentum_boundary": "canonical p=-i hbar partial_q and its regular Weyl operators exist in the same registered Schrodinger representation, but the free Brownian difference quotient has mean-square norm 2d kappa_a/epsilon and diverges as epsilon tends to zero; p is not an ordinary Euclidean path variable and no regulator-limit momentum functional is proved",
+    "ground_boundary": "the beta-to-infinity trace-norm limit at fixed M is inherited from the finite-spatial-regulator quantum-state authority; beta, the ground criterion, and hbar remain declared rather than cosmologically derived"
+  },
+  "symmetric_time_slice": {
+    "operator": "S_epsilon=A_epsilon exp(epsilon kappa_a Delta) A_epsilon, A_epsilon=exp(-epsilon U_a/2)",
+    "kernel": "S_epsilon(q,q')=exp[-epsilon U_a(q)/2]G_epsilon(q,q')exp[-epsilon U_a(q')/2]",
+    "operator_positivity": "<f,S_epsilon f>=<A_epsilon f,exp(epsilon kappa_a Delta)A_epsilon f>>=0",
+    "link_Gram_factor": "B_epsilon=exp(epsilon kappa_a Delta/2)A_epsilon and S_epsilon=B_epsilon^*B_epsilon; equivalently b_epsilon(z,q)=G_(epsilon/2)(z,q)exp[-epsilon U_a(q)/2] and S_epsilon(q,q')=integral b_epsilon(z,q)b_epsilon(z,q')dz",
+    "trace": "Tr S_epsilon=(4pi kappa_a epsilon)^(-d/2) integral exp[-epsilon U_a(q)]dq<infinity",
+    "reflection_positivity": "kernel symmetry gives the site square and the explicit Gram factor gives the link square for every lattice-preserving axis through opposite sites or links on an even periodic sliced law",
+    "ordering_boundary": "S_epsilon is the potential-half-step companion; the literal Euclidean continuation of the inherited kinetic-half-step D-K-D order is exp(epsilon kappa_a Delta/2)exp(-epsilon U_a)exp(epsilon kappa_a Delta/2); the one-step operators differ although cyclic traces of their powers agree and both have the same Trotter limit",
+    "trace_theorem_hypotheses": "after a scalar shift U_a+C>=c<q>^4 and |partial^alpha U_a|<=C_alpha<q>^(4-|alpha|) for 1<=|alpha|<=2; unitary coordinate rescaling handles kappa_a",
+    "limit": "[S_(beta/N)]^N converges to exp(-beta H_a) in trace norm; after shift and coordinate rescaling the quartic p=4 Doumeki-Ichinose-Tamura theorem gives O(N^(-1/2)) locally uniformly for beta in compact subsets of (0,infinity), so partition functions and a fixed finite number of bounded inserted configuration correlators at fixed positive gaps converge",
+    "boundary": "S_epsilon is an explicit aligned-even-ring reflection-positive approximation, not the exact one-step heat semigroup at nonzero epsilon; no odd/off-grid reflection, unbounded insertion, uniform insertion-count, or O(N^(-2)) trace-norm claim is made"
+  },
+  "one_slice_exactness_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-STRANG-ONE-SLICE-EXACT-HAMILTONIAN-SEMIGROUP",
+    "excluded_route": "identify the explicit finite-epsilon symmetric Kac/Strang slice with exp[-epsilon(T+V)] merely because it is symmetric, positive, and its formal core expansion first differs at epsilon cubed",
+    "witness": "for T=-kappa d^2/dx^2, V=gamma x^4 with gamma,kappa>0, and a smooth compactly supported f equal to one near x=0, (S_epsilon-exp[-epsilon(T+V)])f(0)=-2 gamma kappa^2 epsilon^3+O(epsilon^4)",
+    "highest_degree_sentinel": "the full local epsilon-cubed coefficient on the plateau germ f=1 is -(4/3)gamma^2 kappa x^6-2gamma kappa^2, so lower-degree terms cannot erase the quartic noncommutation identically",
+    "actual_CL8_witness": "Delta^2 U_a(0)=wM(8*6g+12*16lambda)=48wM(g+4lambda)>0 and grad U_a(0)=0, hence the actual registered CL8 epsilon-cubed defect coefficient at q=0 is -4 kappa_a^2 w M(g+4lambda)<0",
+    "retained_route": "use the exact heat transfer K_epsilon or take the controlled n-to-infinity symmetric product limit"
+  },
+  "heat_support_cone_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-EUCLIDEAN-HEAT-SUPPORT-PHYSICAL-LIGHT-CONE",
+    "excluded_route": "read a Lorentzian causal or light cone directly from support of the positive Euclidean heat transfer",
+    "witness": "the free Gaussian is positive for every q,q' and the Feynman-Kac bridge weight is strictly positive, hence K_t(q,q')>0 for every t>0 and every pair of finite configurations",
+    "consequence": "the Euclidean transfer has full configuration-transition support and no finite support cone",
+    "retained_route": "derive a Lorentzian cone separately from real-time locality, commutator propagation, characteristic dynamics, or a controlled continuum limit"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-TIME-LOCAL-REFLECTION-POSITIVE-REGULATOR-AND-CANONICAL-FEYNMAN-KAC-BRIDGE",
+    "status": "FIXED-SPATIAL-REGULATOR SUBGATES CLOSED; REGULATOR-COMPATIBLE CONTINUUM, MOMENTUM LIMIT, HADAMARD, PHYSICAL SELECTION, AND PRE-A REMAIN OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-FIXED-REGULATOR-EXACT-TIME-LOCAL-HEAT-TRANSFER",
+      "PA-CP1-CL8-FIXED-REGULATOR-THERMAL-REFLECTION-POSITIVITY",
+      "PA-CP1-CL8-FIXED-REGULATOR-CANONICAL-CONFIGURATION-FEYNMAN-KAC-IDENTIFICATION",
+      "PA-CP1-CL8-FIXED-REGULATOR-STRANG-RP-TRACE-NORM-LIMIT",
+      "PA-CP1-CL8-FIXED-REGULATOR-GROUND-STATE-DOOB-MARKOV-INTERFACE"
+    ],
+    "refuted_subgates": [
+      "PA-CP1-CL8-FINITE-STRANG-SLICE-EXACT-ORIGINAL-HAMILTONIAN-SEMIGROUP",
+      "PA-CP1-CL8-EUCLIDEAN-HEAT-SUPPORT-AUTOMATIC-LORENTZIAN-CONE"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-REGULATOR-COMPATIBLE-REFLECTION-POSITIVE-CONTINUUM-STATE",
+      "PA-CP1-CL8-COUNTERTERM-COMPATIBLE-FEYNMAN-KAC-LIMIT",
+      "PA-CP1-CL8-FULL-CANONICAL-WEYL-AND-MOMENTUM-LIMIT",
+      "PA-CP1-CL8-INTERACTING-HADAMARD-OR-MICROLOCAL-LIMIT",
+      "PA-CP1-CL8-PHYSICAL-BETA-GROUND-OR-PREPARATION-SELECTION",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-CP1-CL8-PHYSICAL-STATE-AND-ENERGY-REFERENCE"
+    ],
+    "next_gate": "PA-CP1-CL8-REGULATOR-COMPATIBLE-RP-FEYNMAN-KAC-STATE-AND-WEYL-LIMIT"
+  },
+  "scope": {
+    "fixed_regulator_exact_heat_transfer": true,
+    "fixed_regulator_Feynman_Kac_kernel": true,
+    "fixed_regulator_site_reflection_positive": true,
+    "fixed_regulator_link_reflection_positive": true,
+    "fixed_regulator_configuration_Gibbs_bridge": true,
+    "fixed_regulator_symmetric_slice_reflection_positive": true,
+    "fixed_regulator_symmetric_product_trace_norm_limit": true,
+    "fixed_regulator_ground_state_Doob_Markov_interface": true,
+    "odd_time_ring_reflection_positive": false,
+    "off_grid_displaced_reflection_positive": false,
+    "bounded_log_finite_state_C0A_reconstruction": false,
+    "unbounded_insertion_trace_norm_convergence": false,
+    "finite_symmetric_slice_exact_original_semigroup": false,
+    "Euclidean_heat_support_has_finite_cone": false,
+    "physical_time_or_arrow_derived": false,
+    "Lorentzian_light_cone_derived": false,
+    "canonical_momentum_from_path_variable": false,
+    "regulator_compatible_continuum_state": false,
+    "continuum_full_Weyl_state": false,
+    "interacting_Hadamard_state": false,
+    "physical_beta_or_ground_criterion_derived": false,
+    "original_3D_Q3LOCK_parent": false,
+    "physical_state_or_vacuum": false,
+    "below_empty_space_comparison": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "primary": "codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split_verify.py",
+    "fixtures": "a/8 heat and physical-time coefficients; Gaussian normalization and convolution; distinct exact-heat and Strang link Gram fixtures on aligned even rings; periodic trace and bounded-correlator identities; nonconstant-ground Doob transform with unbounded-log boundary; symmetric-slice trace integral and ordering control; independent epsilon-jet quartic coefficient plus actual CL8 bi-Laplacian; full-support and pointwise-versus-operator-positivity sentinels; formal records, stored freshness, and unchanged-C6 firewalls"
+  },
+  "prior_art_boundary": "Feynman-Kac kernels, positive heat semigroups, reflection positivity from positive transfers, Trotter product convergence, and trace-ideal convergence for smooth confining Schrodinger potentials are established mathematics. No world-first general theorem is claimed. The repository-specific result is the exact insertion of the registered CL8 a/8 Hamiltonian coefficients, the typed composition with its already registered canonical Gibbs state, and the two explicit route separations.",
+  "no_overclaim": "This package closes only fixed-spatial-regulator time-local transfer, aligned-even-ring thermal configuration reflection positivity, exact bounded-configuration Feynman-Kac identification, the ground-state Doob Markov interface with an unbounded logarithmic generator, and the controlled symmetric-slice limit. It does not derive hbar, beta, the ground criterion, physical time, an arrow, an odd/off-grid reflection theorem, Lorentzian signature or light speed, a canonical momentum path variable, regulator-compatible state convergence, a continuum full Weyl or Hadamard state, a thermodynamic transition, the three-dimensional Q3 parent, a physical state or energy reference, a below-empty-space sign, C0, N1-N5, C6, CP1, or Pre-A."
+}

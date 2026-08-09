@@ -1,0 +1,152 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-centered-q3-wick-weyl-limit-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-CENTERED-Q3-WICK-WEYL-LIMIT-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-Q3-SPATIAL-SPECTRAL-RP-MARTINGALE-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-MATRIX-COUNTERTERM-STATE-COMPACTNESS-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-UNIT-FREE-RP-WEYL-SEAM-AND-CENTERED-Q3-WICK-LP-LIMIT-WITH-UI-GATES",
+  "negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-FIXED-RAW-QUADRATIC-FINITE-Q3-RENORMALIZED-LIMIT",
+    "NG-2026-08-04-PRE-A-CP1-CL8-WICK-L2-ONLY-INTERACTING-DENSITY-LIMIT"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-NODAL-SPECTRAL-FINITE-EXACT-INTERTWINER",
+    "NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE"
+  ],
+  "exploration_id": "EXP-000770",
+  "candidate_family": "PRE-A-CL8-CENTERED-Q3-CONSTRUCTIVE-AND-CCR-LIMIT",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 exact unit and counterterm dictionary, full-sequence centered free-field/RP/Weyl limit, centered-nodal Q3 Wick finite-Lp convergence, and exact finite-regulator twisted-Weyl seam identity; claim-nonbearing and not an interacting density, continuum CCR, Hadamard, physical-state, C6, CP1, or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "closest_vector_lattice_precedent": "M. G. Delgadino and S. A. Smith, Mass generation for the two dimensional O(N) Linear Sigma Model in the large N limit, arXiv:2601.19630v1, especially Definition 3.1 and Appendix D for vector lattice-to-continuum total variation and inherited reflection positivity",
+    "multivariate_terminal_measure": "H. Nagoji, Construction of the Gibbs measures associated with Euclidean quantum field theory with various polynomial interactions in the Wick renormalizable regime, arXiv:2305.19583v2, Theorem 1.7(i) and Proposition A.1",
+    "scalar_lattice_context": "F. Guerra, L. Rosen and B. Simon, The P(phi)2 Euclidean quantum field theory as classical statistical mechanics, Ann. Math. 101 (1975), and S. Albeverio, M. Bernabei and Z.-M. Zhou, On the continuum limit of lattice approximations to phi4_2 models, J. Math. Phys. 45 (2004)",
+    "Hamiltonian_renormalisation_context": "M. Rodriguez Zarate and T. Thiemann, Hamiltonian renormalisation VIII. P(Phi,2) quantum field theory, arXiv:2505.13030v2",
+    "not_imported": "The O(N) quartic is radial and has a scalar counterterm. It does not prove the non-radial Q3 twelve-edge polynomial estimate, the centered CL8 unit dictionary, the Q3 matrix counterterm, the twisted seam limit, or the original three-dimensional parent. No world-first claim is made."
+  },
+  "statement": "For the registered inserted-one-dimensional CL8 Hamiltonian with w=a/8, physical Euclidean time delta=hbar*t, isotropic coordinate tau=sqrt(c/chi)*delta and field phi=s*q with s^2=sqrt(chi*c)/(8*hbar), the Euclidean lattice action has canonical derivative coefficients and circumference beta0=hbar*beta_H*sqrt(c/chi). Its quadratic and quartic couplings are K_E=K_CL8/c, g_E=8*hbar*g/(sqrt(chi)*c^(3/2)) and lambda_E=8*hbar*lambda/(sqrt(chi)*c^(3/2)). The centered free covariance has symbol [nu_n^2+m0^2+khat_a(k)^2]^(-1), khat_a^2=4a^(-2)sin^2(ak/2). The symbol sandwich (4/pi^2)k^2<=khat_a^2<=k^2, common Fourier-white-noise coupling and dominated convergence give full-sequence convergence in L2(Omega;H^(-s)) for every s>0 to the massive spectral Gaussian field. The same two-rank time-circle covariance factorization proves finite-regulator reflection positivity, which passes to the free limit; the free joint Weyl characteristics converge on every fixed mode space, at O(a^2) on bounded labels. For the renormalized Q3 matrix-counterterm family, every Wick monomial of degree at most four converges in L2. Continuous-space chaos kernels converge by the covariance-symbol sandwich; nodal quadrature differs only by finitely many total-spatial-momentum alias sectors ell*M, whose coefficients vanish by the Riemann-Lebesgue lemma because powers of the massive Green kernel are integrable. Fixed-chaos hypercontractivity upgrades this to every fixed finite Lp. This does not yet imply convergence of the exponential densities. A uniform exponential-integrability estimate for the centered nodal family is still required. The original fixed-raw quadratic CL8 family is not the required renormalized family: since C_M grows logarithmically, K_R(M)=K_raw+3C_M[(g_E+lambda_E)I+lambda_E L_Q3] diverges in every Walsh sector. A fixed finite K_R requires K_raw(M)=K_R-3C_M[(g_E+lambda_E)I+lambda_E L_Q3], up to the declared scalar convention. At every finite regulator, the symmetric Weyl operator has the exact heat-kernel seam formula chi(f,h)=Z^(-1) integral exp[i<f,x>_w/hbar] K_beta(x+h/2,x-h/2)dx. It supplies the correct off-diagonal target, but the interacting continuum regular CCR state still requires pointwise seam convergence and uniform identity equicontinuity on each fixed symplectic mode space.",
+  "unit_dictionary": {
+    "registered_weight": "w=a/8 and p=w*Pi",
+    "physical_Euclidean_time": "delta=hbar*t, where t and beta_H have inverse-energy units",
+    "isotropic_coordinate": "tau=sqrt(c/chi)*delta",
+    "field_rescaling": "phi=s*q with s^2=sqrt(chi*c)/(8*hbar)",
+    "circumference": "beta0=hbar*beta_H*sqrt(c/chi)",
+    "canonical_action": "integral_0^beta0 d tau a sum_j [(|partial_tau phi_j|^2+|D_a phi_j|^2)/2+P_E(phi_j)]",
+    "quadratic": "K_E=K_CL8/c",
+    "quartics": "g_E=8*hbar*g/(sqrt(chi)*c^(3/2)) and lambda_E=8*hbar*lambda/(sqrt(chi)*c^(3/2))",
+    "base_Gaussian_residual": "for covariance (-Delta+m0^2)^(-1), K_int=K_E-m0^2 I plus the declared finite Q3-matrix part",
+    "boundary": "hbar, chi, c, beta_H and the inserted one-dimensional reduction remain supplied inputs; this dictionary does not derive time, hbar, physical light, or the three-dimensional parent"
+  },
+  "centered_free_limit": {
+    "covariance": "G_M(n,k)=[nu_n^2+m0^2+4a^(-2)sin^2(ak/2)]^(-1) on the time circle and spatial Brillouin zone",
+    "symbol_sandwich": "(4/pi^2)k^2<=khat_a(k)^2<=k^2 for |ak|<=pi",
+    "common_coupling": "use the same Fourier white noises for the centered and spectral multipliers",
+    "strong_distribution_limit": "phi_M tends to phi in L2(Omega;H^(-s)(T^2)) for every s>0 along the full sequence",
+    "tightness": "uniform H^(-s0) second moments for every s0>0 and compact Sobolev embedding give the equivalent weak-tightness route",
+    "reflection_positivity": "for omega_(M,k)=sqrt(m0^2+khat_a(k)^2), the reflected time-circle covariance is the sum of the same two positive rank-one kernels as the spectral family",
+    "free_Weyl": "the thermal quasifree joint q-p Weyl characteristic converges on every fixed mode set; the fixed-mode centered-symbol error is O(a^2)",
+    "boundary": "this is a free massive inserted-1+1 comparator, not an interacting or physical-vacuum theorem"
+  },
+  "centered_Q3_Wick_limit": {
+    "family": "the EXP-000765 renormalized Q3 matrix-counterterm family after the exact unit rescaling, not the original cutoff-independent raw CL8 polynomial",
+    "continuous_kernel_step": "for each Wick degree d<=4, the centered continuous-x chaos kernel converges to the spectral kernel by pointwise multiplier convergence and the uniform covariance sandwich",
+    "nodal_alias_step": "the nodal zero mode equals the exact zero-total-momentum sector plus finitely many alias sectors with total spatial momentum ell*M, 0<|ell|<=d/2",
+    "alias_decay": "the alias coefficients tend to zero because the massive Green kernel power C^d is in L1 on the two-torus and its Fourier coefficients vanish at infinity",
+    "result": "the integrated Q3 Wick interaction R_M^nod converges to the same terminal interaction R in L2 and, by finite-chaos hypercontractivity, in every fixed finite Lp",
+    "low_band_fixture": "when every spatial input has bandwidth K and M>4K, all degree-at-most-four nodal quadrature is exactly nonaliased",
+    "missing_density_lemma": "prove sup_M E exp[(1+eta)R_M^nod]<infinity for some eta>0, preferably eta=1, on the exact centered-dispersion/nodal family",
+    "consequence_if_closed": "Vitali then gives full-sequence common-space L1 density convergence to the unique Nagoji Q3 measure and passes reflection positivity",
+    "boundary": "finite-Lp convergence of R_M does not itself control exp(R_M)"
+  },
+  "counterterm_necessity": {
+    "matrix": "A_Q3=(g_E+lambda_E)I+lambda_E L_Q3",
+    "Walsh_eigenvalues": "g_E+lambda_E+2s*lambda_E for s=0,1,2,3, all positive when g_E>0 and lambda_E>=0",
+    "raw_to_renormalized": "K_R(M)=K_raw(M)+3C_M A_Q3",
+    "fixed_raw_failure": "if K_raw is independent of M and C_M grows like log M, every eigenvalue of K_R(M) diverges to positive infinity and cannot approach a fixed finite Nagoji quadratic",
+    "required_tuning": "K_raw(M)=K_R-3C_M A_Q3, up to the scalar energy convention",
+    "thermal_vacuum_change": "if the Hamiltonian is already Wick ordered at zero-temperature C_0,M, changing to the beta-circle covariance C_beta,M adds only the finite matrix shift -3(C_0,M-C_beta,M)A_Q3",
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-FIXED-RAW-QUADRATIC-FINITE-Q3-RENORMALIZED-LIMIT"
+  },
+  "twisted_Weyl_seam": {
+    "pairing": "<f,q>_w=w sum_i f_i q_i and sigma((f,h),(g,k))=<f,k>_w-<g,h>_w",
+    "operator_action": "(W(f,h)psi)(q)=exp[i<f,q+h/2>_w/hbar] psi(q+h)",
+    "midpoint_kernel_identity": "chi_(a,beta)(f,h)=Z_a^(-1) integral exp[i<f,x>_w/hbar] K_(a,beta)(x+h/2,x-h/2) dx",
+    "unsymmetric_identity": "equivalently integrate exp[i<f,q+h/2>_w/hbar] K_(a,beta)(q+h,q)/Z_a",
+    "path_boundary": "the Feynman-Kac seam is q_beta=q_0+h and the phase is evaluated at the endpoint midpoint; endpoint reversal sends h to -h",
+    "free_Cameron_Martin_cost": "|h|^2/(4 kappa_a beta)=chi ||h||_(2,w)^2/(2 hbar^2 beta), kappa_a=hbar^2/(2chi w)",
+    "regular_CCR_criterion": "on every fixed symplectic mode space, prove pointwise convergence of all seam scalars and uniform equicontinuity at the Weyl identity; positivity then passes from the finite Weyl matrices and the limit is regular",
+    "open_estimate": "prove a cutoff-uniform fixed-low-mode momentum bound or directly a locally uniform off-diagonal seam bound; diagonal configuration-density convergence is only the h=0 sector"
+  },
+  "negative_controls": {
+    "L2_without_UI": {
+      "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-WICK-L2-ONLY-INTERACTING-DENSITY-LIMIT",
+      "witness": "X_N=N on an event of probability N^(-4) and zero otherwise",
+      "facts": "||X_N||_2=N^(-1) tends to zero while E exp(X_N)=1-N^(-4)+N^(-4)exp(N) diverges",
+      "consequence": "finite-Lp Wick convergence cannot replace a uniform exponential moment; this is an inference no-go, not a counterexample to the actual Q3 family"
+    }
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-CENTERED-NODAL-TO-SPATIAL-SPECTRAL-RP-UNIVERSALITY-AND-TWISTED-WEYL-LIMIT",
+    "status": "UNIT DICTIONARY, CENTERED FREE FULL-SEQUENCE RP/WEYL LIMIT, Q3 WICK FINITE-LP LIMIT, COUNTERTERM NECESSITY, AND FINITE TWISTED SEAM CLOSED; INTERACTING DENSITY AND CONTINUUM REGULAR-CCR LIMITS OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-EXACT-EUCLIDEAN-UNIT-AND-FIELD-DICTIONARY",
+      "PA-CP1-CL8-CENTERED-FREE-GAUSSIAN-FULL-SEQUENCE-HMINUSS-LIMIT",
+      "PA-CP1-CL8-CENTERED-FREE-REFLECTION-POSITIVITY-AND-FREE-WEYL-LIMIT",
+      "PA-CP1-CL8-RENORMALIZED-Q3-CENTERED-NODAL-WICK-FINITE-LP-LIMIT",
+      "PA-CP1-CL8-FINITE-REGULATOR-TWISTED-WEYL-HEAT-SEAM"
+    ],
+    "refuted_subgates": [
+      "PA-CP1-CL8-FIXED-RAW-QUADRATIC-TO-FIXED-FINITE-Q3-RENORMALIZED-LIMIT",
+      "PA-CP1-CL8-WICK-L2-CONVERGENCE-ALONE-IMPLIES-DENSITY-L1-LIMIT"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-CENTERED-Q3-NODAL-UNIFORM-EXPONENTIAL-INTEGRABILITY",
+      "PA-CP1-CL8-CENTERED-Q3-OFFDIAGONAL-SEAM-CONVERGENCE-AND-LOW-MODE-MOMENTUM-EQUICONTINUITY",
+      "PA-CP1-CL8-INTERACTING-OS-MARKOV-HADAMARD-RECONSTRUCTION",
+      "PA-CP1-CL8-PHYSICAL-BETA-GROUND-OR-PREPARATION-SELECTION",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-CP1-CL8-PHYSICAL-STATE-AND-ENERGY-REFERENCE"
+    ],
+    "next_gate": "PA-CP1-CL8-CENTERED-Q3-UNIFORM-EXPONENTIAL-INTEGRABILITY-AND-OFFDIAGONAL-SEAM-BOUND"
+  },
+  "scope": {
+    "exact_CL8_Euclidean_unit_dictionary": true,
+    "centered_free_full_sequence_distribution_limit": true,
+    "centered_free_reflection_positive": true,
+    "free_limit_reflection_positive": true,
+    "centered_free_joint_Weyl_fixed_mode_limit": true,
+    "renormalized_Q3_Wick_L2_limit": true,
+    "renormalized_Q3_Wick_all_fixed_finite_Lp_limit": true,
+    "finite_regulator_twisted_Weyl_seam_identity": true,
+    "fixed_raw_CL8_finite_Q3_renormalized_limit": false,
+    "centered_Q3_uniform_exponential_integrability": false,
+    "centered_Q3_interacting_density_L1_limit": false,
+    "centered_Q3_terminal_measure_identified": false,
+    "interacting_full_phase_space_Weyl_CCR": false,
+    "complete_OS_reconstruction": false,
+    "interacting_Hadamard_state": false,
+    "physical_beta_or_ground_criterion_derived": false,
+    "original_3D_Q3LOCK_parent": false,
+    "physical_state_or_vacuum": false,
+    "below_empty_space_comparison": false,
+    "physical_light_speed_derived": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "primary": "codes/foundations/pre_a_cp1_cl8_centered_q3_wick_weyl_limit_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_centered_q3_wick_weyl_limit_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_centered_q3_wick_weyl_limit_route_split_verify.py",
+    "fixtures": "symbolic CL8 Euclidean coefficient rescaling; centered-symbol sandwich and fixed-mode O(a^2); H^(-s) Fourier tails; DFT alias-sector enumeration and exact low-band quadrature; finite convolution-tail decay; Q3 Wick covariance translation and Walsh levels; fixed-raw divergence and tuned cancellation; centered reflected-circle Gram matrices; Weyl BCH midpoint seam and harmonic characteristic; rare-spike L2-without-exponential-UI control; prior-art, scope, below-empty-space, and unchanged-C6 firewalls"
+  },
+  "prior_art_boundary": "Scalar P(phi)2 and vector O(N) lattice-to-continuum construction, total-variation convergence, reflection positivity, Feynman-Kac/OS reconstruction and Weyl algebras are established subjects. The complete TECT C0/N1-N5/CP1/Pre-A sequence was not located as one proved predecessor, but absence from this bounded search is not a novelty theorem. The repository-specific work here is the exact CL8 unit map, non-radial Q3 matrix-counterterm necessity, direct centered-nodal Q3 chaos/alias calculation, and exact typing of the remaining exponential and off-diagonal seam estimates.",
+  "no_overclaim": "This package does not prove the centered interacting densities converge, because the exact uniform exponential-integrability estimate is open. It does not prove an interacting continuum regular Weyl state, because the off-diagonal seam and fixed-low-mode momentum bounds are open. It does not identify the original fixed-raw CL8 Hamiltonians with a finite renormalized Q3 theory. It does not prove complete OS/Markov/Hadamard structure, a physical phase transition, a selected beta or ground state, the original three-dimensional Q3 parent, a physical vacuum or below-empty-space sign, physical light, C0, N1-N5, C6, CP1, or Pre-A."
+}

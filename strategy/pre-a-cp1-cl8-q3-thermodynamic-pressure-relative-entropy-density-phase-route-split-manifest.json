@@ -1,0 +1,140 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-q3-thermodynamic-pressure-relative-entropy-density-phase-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-Q3-THERMODYNAMIC-PRESSURE-RELATIVE-ENTROPY-DENSITY-AND-PHASE-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-Q3-BETA-INDEPENDENT-HAMILTONIAN-GROUND-REFERENCE-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-Q3-FIXED-BETA-VOLUME-COHERENT-NELSON-PRESSURE-SPECIFIC-RELATIVE-ENTROPY-AND-PERIODIC-LOCAL-SCHWINGER-LIMIT",
+  "negative_ids": [],
+  "reused_negative_ids": [
+    "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR",
+    "NG-2026-08-04-PRE-A-CP1-CL8-FIXED-RAW-QUADRATIC-FINITE-Q3-RENORMALIZED-LIMIT"
+  ],
+  "exploration_id": "EXP-000775",
+  "candidate_family": "PRE-A-CL8-Q3-VOLUME-COHERENT-NELSON-THERMODYNAMIC-LIMIT",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 analytic theorem for a newly declared plane-Wick and volume-coherent extension of EXP-000774 at each externally fixed finite beta: exact beta-L-symmetric finite-volume Wick coordinates, Nelson exchange, scalar-dependent relative-pressure limit, strictly positive scalar-invariant specific relative entropy, periodic bounded-local Schwinger limit and transfer-observable spatial mixing; claim-nonbearing and not a full infinite-volume KMS-algebra, physical-empty-space, absolute-energy, zero-temperature phase, arbitrary-boundary, original-CL8, C6, CP1 or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "Nelson_symmetry": "F. Guerra, L. Rosen and B. Simon, Nelson's Symmetry and the Infinite Volume Behavior of the Vacuum in P(phi)2, Commun. Math. Phys. 27 (1972) 10-22, DOI 10.1007/BF01649655",
+    "vacuum_energy": "F. Guerra, L. Rosen and B. Simon, The vacuum energy for P(phi)2: Infinite volume limit and coupling constant dependence, Commun. Math. Phys. 29 (1973) 233-247, DOI 10.1007/BF01645249",
+    "thermal_transfer": "C. Gerard and C. D. Jaekel, Thermal quantum fields without cut-offs in 1+1 space-time dimensions, arXiv:math-ph/0403048",
+    "finite_vector_input": "T. Nagoji, Construction of the Gibbs measures associated with the focusing nonlinear Schrodinger equations and the complex Ginzburg-Landau equations with various polynomial interactions, arXiv:2305.19583",
+    "boundary": "The scalar Nelson-symmetry and thermodynamic mechanisms are prior art. The cited sources do not state the arbitrary eight-component nonradial Q3 theorem verbatim; this package verifies the finite-index polynomial, Wick-coordinate, strict-witness and scope interfaces and claims no world-first status."
+  },
+  "setup": {
+    "parameters": "m0>0, g>0, lambda>=0, externally fixed beta in (0,infinity), spatial circumference L tending to infinity",
+    "interaction": "W4=(g/4)sum_e q_e^4+(lambda/4)sum_(e~f)(q_e-q_f)^2(q_e^2+q_f^2), P_pl(q)=q^T K_pl q/2+W4(q), with one fixed real symmetric K_pl and one fixed scalar density e_pl",
+    "Q3_matrix": "A_Q3=(g+lambda)I8+lambda L_Q3, G=g+4lambda, Tr A_Q3=8G",
+    "reference": "the common massive eight-component plane Gaussian field and plane-Wick convention; every identity is first written at one common ultraviolet cutoff and then the finite covariance differences are removed",
+    "finite_volume_law": "periodic beta by L Euclidean torus, with the normalized interacting density relative to the free periodic Gaussian law"
+  },
+  "volume_coherence": {
+    "plane_to_torus_difference": "D_pl(beta,L)=C_(beta,L)-C_pl=(1/(2pi)) sum_((n,r) in Z^2 except (0,0)) K0(m0 sqrt(n^2 beta^2+r^2 L^2))>0",
+    "exchange_symmetry": "D_pl(beta,L)=D_pl(L,beta)",
+    "whole_torus_matrix": "K_(beta,L)=K_pl+3D_pl(beta,L)A_Q3",
+    "whole_torus_scalar": "e_(beta,L)=e_pl+(D_pl(beta,L)/2)Tr K_pl+6D_pl(beta,L)^2 G",
+    "exact_identity": ":P_(K_(beta,L)):_(C_(beta,L))+e_(beta,L)=:P_pl:_(C_pl)+e_pl",
+    "circle_flow": "a_L=C_(star,L)-C_pl=(1/pi)sum_(n>=1)K0(m0 nL), K_(star,L)=K_pl+3a_L A_Q3, e_(star,L)=e_pl+(a_L/2)TrK_pl+6a_L^2G",
+    "cylinder_decomposition": "D_pl(beta,L)=a_beta+a_L+M_(beta,L), where M is the positive image sum with both winding integers nonzero; hence D_pl(beta,L) tends to a_beta and e_(beta,L) tends to e_(star,beta) as L tends to infinity",
+    "Hamiltonian_coordinates": "the first heat trace uses K_(star,L),e_(star,L) on S_L and the exchanged transfer Hamiltonian uses K_(star,beta),e_(star,beta) on S_beta",
+    "necessity": "without one fixed K_pl,e_pl or an equivalent coherent L-flow, the EXP-000774 fixed-L Hamiltonians need not define one thermodynamic theory and Nelson exchange is not licensed"
+  },
+  "Nelson_symmetry_and_pressure": {
+    "dual_Hamiltonian": "quantize the same plane-Wick action along the L direction on the dual spatial circle S_beta, obtaining H_beta^perp with compact resolvent and a unique ground energy E_beta; H_(0,beta) has ground energy zero",
+    "exact_exchange": "Z_rel(beta,L)=Tr_F(L)[exp(-beta H_L)]/Tr_F(L)[exp(-beta H_(0,L))]=Tr_F(beta)[exp(-L H_beta^perp)]/Tr_F(beta)[exp(-L H_(0,beta))]",
+    "pressure_limit": "lim_(L->infinity)L^(-1)log Z_rel(beta,L)=-E_beta and p_rel(beta)=lim_(L->infinity)(beta L)^(-1)log Z_rel=-E_beta/beta",
+    "scalar_shift": "adding c to the interaction density sends E_beta to E_beta+c beta and p_rel to p_rel-c; therefore the raw pressure limit exists in the declared convention but its sign is not scalar-gauge invariant"
+  },
+  "specific_relative_entropy": {
+    "finite_volume_identity": "for free mu_(beta,L) and normalized interacting nu_(beta,L), D(mu||nu)=log Z_rel+E_mu I_(beta,L)",
+    "transfer_expectation": "whole-torus Wick centering gives E_mu I_(beta,L)=beta L e_(beta,L) exactly; D_pl(beta,L)->a_beta gives T_beta=beta e_(star,beta)=<Omega_(0,beta),V_beta Omega_(0,beta)>=q_(H_beta^perp)[Omega_(0,beta)] and lim L^(-1)E_mu I=T_beta, without a coupling derivative",
+    "limit": "lim_(L->infinity)L^(-1)D(mu_(beta,L)||nu_(beta,L))=T_beta-E_beta",
+    "strict_witness": "for one species and normalized four-zero-mode chi on S_beta, q_(H_beta^perp)(chi,Omega)=(g+3lambda)sqrt(4!)/(16 beta m0^2)>0; a form-domain Rayleigh trial proves E_beta<T_beta",
+    "strict_density": "s_rel(beta)=lim_(L->infinity)(beta L)^(-1)D(mu||nu)=(T_beta-E_beta)/beta>0",
+    "centered_form": "for Hhat_beta=H_beta^perp-T_beta I, E0(Hhat_beta)=E_beta-T_beta<0 and lim[-D(mu||nu)/(beta L)]=E0(Hhat_beta)/beta<0",
+    "gauge_invariance": "a common scalar density shift adds c beta to both T_beta and E_beta, so T_beta-E_beta and s_rel are invariant"
+  },
+  "periodic_state_limit": {
+    "ground_projection": "compact resolvent and positivity improvement give a simple dual ground and a positive gap delta_beta; normalized exp(-L H_beta^perp) converges to its ground projection",
+    "local_limit": "periodic finite-L Schwinger functionals for transfer-representable bounded local insertions converge through the dual-ground matrix elements to a periodic infinite-line Euclidean local functional at the externally fixed beta; no global density-matrix convergence across changing Hilbert spaces is asserted",
+    "transfer_mixing": "the positive dual spectral gap gives exponential mixing in spatial separation for transfer-representable bounded local observables, with support widths absorbed into the observable-dependent constant",
+    "KMS_boundary": "a full noncommutative infinite-volume beta-KMS state on a common local algebra requires an explicit finite-component Gerard-Jaekel/Araki-Woods local-algebra bridge and is not proved by ground projection alone",
+    "boundary": "this does not prove full KMS-algebra reconstruction, uniqueness among every possible infinite-volume boundary condition, or a beta-to-infinity phase theorem"
+  },
+  "physical_and_phase_boundary": {
+    "empty_space": "the free Gaussian reference law is fixed by inserted m0, Euclidean geometry and field normalization and is not independently derived as cosmic empty space; K_pl and e_pl instead specify the interacting comparison theory and its scalar convention",
+    "absolute_energy": "the raw pressure sign changes under an additive scalar density; only the relative-entropy or centered variational gap is invariant",
+    "global_measure": "positive specific relative entropy concerns limits of finite-volume or local restrictions; it does not assert a finite global Radon-Nikodym density or finite total infinite-volume relative entropy",
+    "zero_temperature": "the theorem fixes beta<infinity; it does not interchange beta->infinity with L->infinity or prove a zero-temperature ground-energy density, phase transition or spontaneous symmetry breaking",
+    "parent": "the volume-coherent family is a newly declared inserted one-dimensional Euclidean Q3 theory, not the original fixed-raw CL8 family or a derived three-dimensional Q3LOCK parent"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-Q3-THERMODYNAMIC-PRESSURE-RELATIVE-ENTROPY-DENSITY-AND-PHASE-ROUTE-SPLIT",
+    "status": "FIXED-BETA VOLUME-COHERENT Q3 NELSON PRESSURE LIMIT, STRICT SCALAR-INVARIANT SPECIFIC RELATIVE ENTROPY, PERIODIC BOUNDED-LOCAL SCHWINGER LIMIT AND TRANSFER MIXING CLOSED; FULL INFINITE-VOLUME KMS ALGEBRA, RAW-SIGN, PHYSICAL-EMPTY, ARBITRARY-VOLUME-FAMILY, ZERO-TEMPERATURE PHASE, MICROLOCAL, ORIGINAL-PARENT AND PRE-A GATES OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-Q3-PLANE-WICK-BETA-L-VOLUME-COHERENCE",
+      "PA-CP1-CL8-Q3-FIXED-BETA-NELSON-PRESSURE-LIMIT",
+      "PA-CP1-CL8-Q3-STRICT-SPECIFIC-RELATIVE-ENTROPY-DENSITY",
+      "PA-CP1-CL8-Q3-PERIODIC-BOUNDED-LOCAL-SCHWINGER-LIMIT",
+      "PA-CP1-CL8-Q3-TRANSFER-OBSERVABLE-SPATIAL-MIXING"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-Q3-RAW-PRESSURE-ABSOLUTE-SIGN-AND-PHYSICAL-REFERENCE",
+      "PA-CP1-CL8-Q3-INFINITE-VOLUME-NONCOMMUTATIVE-LOCAL-KMS-ALGEBRA",
+      "PA-CP1-CL8-Q3-ZERO-TEMPERATURE-THERMODYNAMIC-GROUND-AND-PHASE",
+      "PA-CP1-CL8-INTERACTING-MICROLOCAL-SPECTRUM-OR-RELATIVISTIC-KMS",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-PRE-A-C0-N1-N5-VALIDATION"
+    ],
+    "next_gate": "PA-CP1-CL8-Q3-ZERO-TEMPERATURE-THERMODYNAMIC-GROUND-PHASE-AND-PHYSICAL-REFERENCE-ROUTE-SPLIT"
+  },
+  "scope": {
+    "externally_fixed_finite_beta": true,
+    "new_plane_Wick_volume_coherent_extension_of_EXP767": true,
+    "exact_beta_L_symmetric_covariance_correction": true,
+    "Nelson_coordinate_exchange": true,
+    "raw_relative_pressure_limit_exists": true,
+    "raw_pressure_scalar_shift_law": true,
+    "specific_relative_entropy_density_exists": true,
+    "strict_positive_specific_relative_entropy_density": true,
+    "strict_negative_centered_Gaussian_variational_density": true,
+    "periodic_bounded_local_Schwinger_limit": true,
+    "periodic_transfer_observable_spatial_mixing": true,
+    "dual_transfer_ground_unique_and_gapped": true,
+    "periodic_beta_KMS_limit": false,
+    "full_noncommutative_infinite_volume_local_algebra": false,
+    "raw_relative_pressure_sign_gauge_invariant": false,
+    "arbitrary_L_dependent_K_and_scalar_family": false,
+    "original_fixed_raw_CL8_family": false,
+    "physical_empty_space_reference": false,
+    "absolute_vacuum_energy_fixed": false,
+    "global_infinite_volume_Radon_Nikodym_density": false,
+    "finite_total_infinite_volume_relative_entropy": false,
+    "all_boundary_condition_state_uniqueness": false,
+    "beta_to_infinity_L_to_infinity_interchange": false,
+    "zero_temperature_ground_energy_density": false,
+    "spontaneous_symmetry_breaking_or_phase_transition": false,
+    "interacting_Hadamard_or_microlocal_spectrum": false,
+    "original_3D_Q3LOCK_parent": false,
+    "physical_light_speed_derived": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC theorem with executable common-cutoff beta-L exchange, Q3 plane-to-torus Wick coherence, dual trace/ground asymptotics, scalar-shift mutations, finite-distribution KL identities, strict Bregman/Rayleigh witnesses, transfer-gap clustering, source-scope and unchanged-C6 audits; scripts do not replace the finite-component Nelson-symmetry and thermal-transfer proof",
+    "primary": "codes/foundations/pre_a_cp1_cl8_q3_thermodynamic_pressure_relative_entropy_density_phase_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_q3_thermodynamic_pressure_relative_entropy_density_phase_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_q3_thermodynamic_pressure_relative_entropy_density_phase_route_split_verify.py",
+    "fixtures": "D_pl(beta,L)=D_pl(L,beta); exact plane-to-whole-torus matrix/scalar dictionary and cylinder decomposition; finite rectangular covariance exchange; dual spectral log-trace limit; full scalar-shift ledger; exact finite KL, direction mutation and scalar invariance; strict two-level ground/Bregman and Q3 four-particle coefficient derivation; trace-normalized two-insertion transfer mixing; full-KMS, arbitrary-volume, physical-empty, global-density, zero-temperature, phase, microlocal, original-parent and unchanged-C6 firewalls"
+  },
+  "prior_art_boundary": "Nelson symmetry, scalar P(phi)2 vacuum-energy/pressure limits and scalar thermal transfer constructions are established prior art. The arbitrary eight-component nonradial Q3 adaptation is a finite-index repository theorem and interface audit, not a world-first claim. No located source proves the complete TECT Pre-A physical chain.",
+  "no_overclaim": "This theorem concerns a newly declared volume-coherent massive Q3 family at each externally fixed finite beta. It proves a convention-dependent raw relative-pressure limit, a convention-independent strictly positive specific relative entropy against the named Gaussian reference, and a bounded-local Euclidean transfer limit. It does not prove a full noncommutative infinite-volume KMS algebra, that the raw pressure is absolutely negative, that the reference is physical empty space, that total infinite-volume relative entropy is finite, or that a global density exists. It proves no beta-to-infinity and L-to-infinity interchange, zero-temperature phase transition, spontaneous symmetry breaking, interacting Hadamard/microlocal spectrum, original fixed-raw CL8 or three-dimensional Q3 parent, physical light, C0, N1-N5, C6, CP1, Sector A or Pre-A."
+}

@@ -1,0 +1,141 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-centered-nodal-q3-nelson-boue-dupuis-seam-limit-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-CENTERED-NODAL-Q3-NELSON-BOUE-DUPUIS-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-CENTERED-Q3-WICK-WEYL-LIMIT-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-Q3-SPATIAL-SPECTRAL-LOW-MODE-WEYL-EQUICONTINUITY-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-CENTERED-NODAL-Q3-UI-L1-TV-RP-AND-FIXED-BAND-FULL-WEYL-LIMIT",
+  "negative_ids": [],
+  "reused_negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-FIXED-RAW-QUADRATIC-FINITE-Q3-RENORMALIZED-LIMIT",
+    "NG-2026-08-04-PRE-A-CP1-CL8-WICK-L2-ONLY-INTERACTING-DENSITY-LIMIT",
+    "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR"
+  ],
+  "exploration_id": "EXP-000772",
+  "candidate_family": "PRE-A-CL8-CENTERED-NODAL-Q3-CONSTRUCTIVE-CCR-LIMIT",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 analytic theorem for the bounded-renormalized-matrix centered-nodal Q3 family: whole-Wick uniform exponential integrability, full-sequence L1/total-variation and reflection-positive configuration limit, exact affine-seam formula, locally uniform shifted integrability, and fixed-band full-sequence regular Weyl limit; claim-nonbearing and not an original fixed-raw, complete OS/Hadamard, physical-state, C6, CP1, or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "general_multivariate_variational_method": "H. Nagoji, arXiv:2305.19583v2, Theorem 1.7(i) and Sections 3.3-4.1",
+    "scalar_lattice_method_precedent": "N. Barashkov, T. Gunaratnam and M. Hofstetter, arXiv:2207.13673v3, Sections 2 and 5, especially Lemma 5.9",
+    "vector_nodal_precedent": "M. G. Delgadino and S. A. Smith, arXiv:2601.19630v1, Definition 3.1 and Appendix D",
+    "boundary": "None of these sources states the hybrid continuous-time centered-dispersion, non-radial eight-component Q3, matrix-counterterm, or shifted affine-seam theorem proved here. They are method precedents, not imported closure."
+  },
+  "setup": {
+    "domain": "T_beta0 times Lambda_M, Lambda_M=Z/MZ, a=L/M, dz_M=dt*a*sum_j, M even",
+    "free_operator": "A_M=m0^2-partial_t^2-Delta_a with centered symbol khat_a(k)^2 and m0>0",
+    "field": "eight independent real Gaussian components Y_M with covariance A_M^(-1)",
+    "interaction": "P_M(x)=x^T K_M x/2+W4(x), sup_M||K_M||<=kappa, g>0, lambda>=0, W4(x)>=g|x|^4/32",
+    "signed_action": "R_M=-integral :P_M(Y_M):_(sigma_M) dz_M using whole-polynomial Wick centering at sigma_M=E Y_M(z)^2",
+    "excluded_family": "the original cutoff-independent raw CL8 quadratic is excluded; K_M is the bounded renormalized matrix of the EXP-000765 tuning"
+  },
+  "scalar_convention": {
+    "whole_Wick": ":W4:_C=W4+x^T[-3C((g+lambda)I+lambda L_Q3)]x/2+6C^2(g+4lambda), and :x^TKx/2:_C=x^TKx/2-(C/2)TrK",
+    "centering": "E_mu R_M=0",
+    "ordinary_quadratic_relation": "R_whole equals the ordinary-K plus Wick-W4 exponent plus the deterministic volume scalar (C/2)TrK",
+    "probability_invariance": "deterministic scalars cancel from normalized densities but not from raw exponential moments",
+    "energy_boundary": "the centering is a probability normalization and does not establish an absolute energy or a below-empty-space sign"
+  },
+  "uniform_exponential_integrability": {
+    "theorem": "for every s>0, sup_M E exp(s R_M)<infinity",
+    "finite_mode_reduction": "apply finite-dimensional Boue-Dupuis to a temporal projector and a bounded truncation, use the exact H1 control inequality, remove the bounded truncation by monotone convergence, then remove the temporal projector by fixed-M Wick convergence and Fatou",
+    "Wick_translation": ":P(Y+I):=P(I)+sum_alpha c_alpha sum_(0<gamma<=alpha) binom(alpha,gamma):Y^gamma:I^(alpha-gamma)",
+    "coercivity": "s P_M(I)>=s g||I||_4^4/64-(4s kappa^2/g)beta0 L",
+    "cross_exponents": "with epsilon=1/8 and r=1,2,3, ||I^r||_(W^(epsilon,4/r))<=C||I||_4^(r-1/4)||I||_H1^(1/4); generalized Young uses q_r=(16/11,16/7,16/3)",
+    "absorption": "choose the finite-support Young deltas so a positive multiple of ||I||_4^4 and one quarter of ||I||_H1^2 remain",
+    "random_remainder": "a finite sum of negative-Sobolev Wick norms with maximal required moment 16/3"
+  },
+  "all_M_Wick_Besov": {
+    "symbol": "c_M(n,m)=[nu_n^2+m0^2+khat_a(m)^2]^(-1)<=(pi^2/4)[nu_n^2+m0^2+k_m^2]^(-1)",
+    "cyclic_lift": "every degree-d cyclic spatial momentum equation lifts to finitely many ordinary sectors m+ell M, |ell|<=d",
+    "convolution": "for d<=4 and every eta>0, the ordinary massive two-dimensional convolution obeys c^(*d)(p)<=B_(d,eta)<p>^(-2+eta); the logarithmic border is absorbed into eta",
+    "dyadic": "the lift bound gives E|Delta_j :Y^gamma:(z)|^2<=C 2^(eta j); choose eta<2epsilon and use finite-chaos hypercontractivity plus the Littlewood-Paley square function",
+    "result": "for every multi-index 1<=|gamma|<=4 and every finite p,q used in the drift estimate, sup_(M,N) E||:Y_MN^gamma:||_(W_M^(-epsilon,p))^q<infinity",
+    "positive_space_constants": "piecewise-linear spatial extension, cellwise Lp equivalence, exact discrete derivative energy, continuum two-dimensional GN, the discrete Leibniz identity and interpolation give M-independent fractional product constants including Nyquist modes"
+  },
+  "density_limit": {
+    "input": "EXP-000770 proves R_M tends to R in L2 and every fixed finite Lp",
+    "Vitali": "the s=2 estimate makes exp(R_M) uniformly integrable; convergence in probability gives exp(R_M)->exp(R) in L1",
+    "normalizers": "Z_M=E exp(R_M)>=1 by centering and Jensen, and Z_M tends to Z",
+    "result": "rho_M=exp(R_M)/Z_M converges to the Nagoji Q3 density rho in L1 and total variation along the full sequence",
+    "reflection_positivity": "the exact finite centered time-local reflection forms pass through the L1 density limit"
+  },
+  "affine_seam": {
+    "shift": "r_h(t)=(t/beta0-1/2)h on [0,beta0), with h in a fixed smooth spatial band",
+    "spatial_free_operator": "A_(x,M)=m0^2-Delta_a",
+    "free_action_identity": "S0,M(phi+r_h)-S0,M(phi)=||h||_a^2/(2beta0)+L_(M,h)(phi)+(beta0/24)<h,A_(x,M)h>_a",
+    "linear_term": "L_(M,h)=integral_0^beta0 (t/beta0-1/2)<phi(t),A_(x,M)h>_a dt",
+    "phase": "the Weyl midpoint is phi(0), so no extra endpoint half-phase remains",
+    "exact_characteristic": "chi_M(f,h)=exp[-c_M(h)] E_muM[exp(i<f,phi(0)>_a) exp(R_M(phi+r_h)-L_(M,h)(phi))]/E_muM exp(R_M(phi))",
+    "shifted_UI": "for every s>0 and every compact H in a fixed h-band, the Boue-Dupuis proof with I+r_h gives sup_M sup_(h in H) E exp(s[R_M(Y+r_h)-L_(M,h)(Y)])<infinity",
+    "sawtooth": "the periodic representative is BV and is a uniform W^(epsilon,p) multiplier for epsilon<1/p; epsilon=1/8 works for every exponent used",
+    "shifted_convergence": "Wick translation, fixed-band shifted alias sectors ell M+O(K), and A_(x,M)h->A_xh give locally uniform action convergence; shifted UI and Vitali give locally uniform seam-numerator convergence"
+  },
+  "Weyl_limit": {
+    "result": "the exact EXP-000770 midpoint identity and affine-seam convergence give full-sequence locally uniform convergence of the centered interacting Weyl characteristics on every fixed finite symplectic mode space",
+    "positivity": "finite Weyl positive-type matrices pass to the limit",
+    "regularity": "EXP-000771 fixed-low-mode equicontinuity and the locally uniform seam formula make the limit regular",
+    "boundary": "this is an inductive finite-mode regular CCR state, not complete OS/Markov reconstruction, a local-net theorem, KMS uniqueness, or Hadamard form"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-CENTERED-NODAL-TO-SPATIAL-SPECTRAL-RP-UNIVERSALITY-AND-TWISTED-WEYL-LIMIT",
+    "status": "BOUNDED-RENORMALIZED-MATRIX CENTERED-NODAL Q3 UNIFORM EXPONENTIAL INTEGRABILITY, FULL-SEQUENCE L1/TV/RP LIMIT, AND FIXED-BAND REGULAR WEYL LIMIT CLOSED; PHYSICAL AND ORIGINAL-PARENT GATES OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-CENTERED-Q3-NODAL-UNIFORM-EXPONENTIAL-INTEGRABILITY",
+      "PA-CP1-CL8-CENTERED-Q3-INTERACTING-DENSITY-L1-TV-FULL-SEQUENCE",
+      "PA-CP1-CL8-CENTERED-Q3-LIMITING-REFLECTION-POSITIVITY",
+      "PA-CP1-CL8-CENTERED-Q3-OFFDIAGONAL-SEAM-FULL-SEQUENCE-CONVERGENCE",
+      "PA-CP1-CL8-CENTERED-Q3-FIXED-BAND-REGULAR-WEYL-LIMIT"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-INTERACTING-COMPLETE-OS-MARKOV-HADAMARD-RECONSTRUCTION",
+      "PA-CP1-CL8-BETA-INDEPENDENT-HAMILTONIAN-AND-PHYSICAL-KMS-GROUND-SELECTION",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-CP1-CL8-PHYSICAL-STATE-AND-ENERGY-REFERENCE",
+      "PA-PRE-A-C0-N1-N5-VALIDATION"
+    ],
+    "next_gate": "PA-CP1-CL8-INTERACTING-COMPLETE-OS-MARKOV-HADAMARD-AND-PHYSICAL-REFERENCE-ROUTE-SPLIT"
+  },
+  "scope": {
+    "bounded_renormalized_matrix_family": true,
+    "whole_Wick_scalar_convention_fixed": true,
+    "centered_Q3_uniform_exponential_integrability": true,
+    "centered_Q3_interacting_density_L1_limit": true,
+    "centered_Q3_interacting_density_total_variation_limit": true,
+    "centered_Q3_terminal_measure_identified": true,
+    "centered_Q3_limit_reflection_positive": true,
+    "centered_Q3_shifted_seam_UI_local_uniform": true,
+    "centered_Q3_offdiagonal_seam_full_sequence": true,
+    "centered_Q3_fixed_band_regular_Weyl_limit": true,
+    "original_fixed_raw_CL8_family": false,
+    "absolute_energy_fixed_by_centering": false,
+    "complete_OS_Markov_Hadamard": false,
+    "beta_independent_Hamiltonian_family": false,
+    "physical_beta_ground_or_KMS_selected": false,
+    "physical_state_or_vacuum": false,
+    "below_empty_space_comparison": false,
+    "original_3D_Q3LOCK_parent": false,
+    "physical_light_speed_derived": false,
+    "phase_transition_proved": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC theorem with executable finite algebra, exponent, lift, seam, mutation, provenance, and scope audits; the scripts do not replace the all-M harmonic-analysis proof",
+    "primary": "codes/foundations/pre_a_cp1_cl8_centered_nodal_q3_nelson_boue_dupuis_seam_limit_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_centered_nodal_q3_nelson_boue_dupuis_seam_limit_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_centered_nodal_q3_nelson_boue_dupuis_seam_limit_route_split_verify.py",
+    "fixtures": "Q3 coercivity and Wick scalar ledger; Hermite translation; epsilon=1/8 generalized-Young exponent derivation; centered-symbol sandwich; cyclic and shifted lift enumeration including Nyquist; discrete Leibniz and interpolation controls; finite-dimensional Boue-Dupuis oracle; affine free-action beta/24 and A_x ledger; Vitali and normalizer algebra; raw-family, scalar-energy, prior-art, below-empty-space, and unchanged-C6 firewalls"
+  },
+  "prior_art_boundary": "General multivariate terminal normalizability, scalar lattice Nelson estimates, radial vector nodal convergence, reflection positivity and Weyl reconstruction are prior art. No located theorem directly supplies this hybrid centered-dispersion, non-radial Q3, matrix-counterterm and affine-seam result. The bounded audit is not a global novelty proof or a world-first claim.",
+  "no_overclaim": "This theorem applies only to the tuned bounded-renormalized-matrix centered-nodal Q3 family on the inserted one-dimensional finite Euclidean torus, with g>0, lambda>=0 and m0>0. It does not rehabilitate the original fixed-raw CL8 family or turn Wick centering into an absolute energy. It does not prove complete OS/Markov/Hadamard structure, a beta-independent Hamiltonian or physical beta/ground/KMS criterion, the original three-dimensional Q3 parent, a physical vacuum or energy below empty space, a phase transition, physical light, C0, N1-N5, C6, CP1, Sector A, or Pre-A."
+}

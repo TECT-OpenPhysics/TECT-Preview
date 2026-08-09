@@ -1,0 +1,139 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-q3-zero-temperature-thermodynamic-ground-phase-physical-reference-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-Q3-ZERO-TEMPERATURE-THERMODYNAMIC-GROUND-PHASE-AND-PHYSICAL-REFERENCE-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-Q3-THERMODYNAMIC-PRESSURE-RELATIVE-ENTROPY-DENSITY-AND-PHASE-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-Q3-SHARP-CUTOFF-GRS-MONOTONE-STRICT-VACUUM-DENSITY-AND-PERIODIC-BRIDGE-REDUCTION",
+  "negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-FINITE-CIRCLE-WITNESS-ZERO-TEMPERATURE-DENSITY",
+    "NG-2026-08-04-PRE-A-CP1-CL8-FIXED-VOLUME-UI-PERIODIC-SHARP-SURFACE-PAIRING"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR",
+    "NG-2026-08-04-PRE-A-CP1-CL8-FIXED-RAW-QUADRATIC-FINITE-Q3-RENORMALIZED-LIMIT"
+  ],
+  "exploration_id": "EXP-000777",
+  "candidate_family": "PRE-A-CL8-Q3-SHARP-CUTOFF-GRS-ZERO-TEMPERATURE-DENSITY",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 analytic theorem and reduction for the newly declared massive plane-Wick eight-component Q3 family: finite-component sharp-cutoff P(Phi)2 Hamiltonians, open-rectangle Nelson symmetry, GRS spectral-Holder monotonicity and a strict positive centered sharp-cutoff vacuum-energy/reference density are closed; the periodic zero-temperature and scalar van-Hove identifications are reduced to, but not closed without, one cutoff-volume-interpolation-uniform surface-pairing lemma; claim-nonbearing and not a physical-empty-space, absolute-energy, phase-selection, state-limit, original-parent, C6, CP1 or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "GRS_monotonicity": "F. Guerra, L. Rosen and B. Simon, Nelson's Symmetry and the Infinite Volume Behavior of the Vacuum in P(phi)2, Commun. Math. Phys. 27 (1972) 10-22, DOI 10.1007/BF01649655",
+    "GRS_vacuum_energy": "F. Guerra, L. Rosen and B. Simon, The Vacuum Energy for P(phi)2: Infinite Volume Limit and Coupling Constant Dependence, Commun. Math. Phys. 29 (1973) 233-247, DOI 10.1007/BF01645249",
+    "boundary_conditions": "F. Guerra, L. Rosen and B. Simon, Boundary Conditions for the P(phi)2 Euclidean Field Theory, Ann. Inst. Henri Poincare A 25 (1976) 231-334",
+    "multivariate_normalizability": "H. Nagoji, Construction of Gibbs measures associated with Euclidean quantum field theory with various polynomial interactions in the Wick renormalizable regime, arXiv:2305.19583",
+    "boundary": "The cited GRS theorems are stated for one real scalar. This package records the finite-eight-component extension by exposing the exact component-blind spectral argument and separately discharging Q3 coercivity, line-cutoff FKN and open-rectangle coordinate exchange, while isolating the massive periodic boundary comparison as the open uniform surface-pairing gate. No world-first claim is made."
+  },
+  "setup": {
+    "parameters": "m0>0, g>0, lambda>=0, K_pl any fixed real symmetric 8 by 8 matrix, and scalar density e_pl",
+    "centered_density": "u(x)=:P_pl(Phi(x)):_(C_pl) with the field-independent scalar removed, where P_pl(q)=q^T K_pl q/2+W4(q)",
+    "coercivity": "W4(q)>=g|q|^4/32; this full radial coercivity, not mere pointwise boundedness, is the load-bearing multivariate normalizability input",
+    "sharp_cutoff": "H_l^sharp=H0+int_(-l/2)^(l/2)u(x)dx on Fock space over L2(R;C8), E_l^sharp=inf spec H_l^sharp, Z(t,l)=<Omega0,exp(-tH_l^sharp)Omega0>",
+    "periodic_centering": "Hhat_s=H_s-T_s I for the EXP-000775 circle Hamiltonian, so E0(Hhat_s)=E_s-T_s"
+  },
+  "finite_component_GRS_extension": {
+    "normalizability_firewall": "The mixed-polynomial counterexample P(x1,x2)=x1^2 x2^2 is nonnegative but not radially coercive and does not satisfy the Q3 estimate. EXP-000772's Boue-Dupuis/Nelson estimate and the g>0 bound supply the missing uniform integrability for Q3.",
+    "line_Hamiltonian": "The finite Q3 monomial list and product-Gaussian hypercontractive estimates construct every H_l^sharp as a closed lower-bounded spatially cutoff P(Phi)2 Hamiltonian with a positive ground and nonzero overlap with Omega0. The support-uniform Glimm-Jaffe/Simon localizability bound is a separate finite-component constructive input and is linear in l; a fixed-time L1-to-L2 Nelson bound gives the exponential ground-overlap estimate used for aspect-ratio-uniform open rectangles.",
+    "open_rectangle_FKN": "Z(t,l) equals the plane Gaussian expectation of exp[-int_(R_txl)u] and the isotropic plane covariance plus one plane-Wick convention gives Z(t,l)=Z(l,t).",
+    "spectral_Holder": "For 0<a<1 and positive A, <psi,A^a psi><=<psi,A psi>^a. Taking A=exp(-lH_t^sharp), using Nelson symmetry, and then the ground spectral limit gives Z(t,al)<=Z(t,l)^a and alpha(al)<=alpha(l), where alpha(l)=-E_l^sharp/l.",
+    "bounded_limit": "The linear Nelson lower bound makes alpha bounded above, so alpha_infinity=lim_(l->infinity)alpha(l) exists and is finite.",
+    "strictness": "Plane Wick centering gives q_l[Omega0]=0, while the pure four-particle projection has strictly positive norm; hence Omega0 is not a ground vector, E_l^sharp<0, alpha(l)>0, and alpha_infinity>0.",
+    "boundary_reduction": "At finite cutoff Gaussian interpolation gives an exact derivative formula for the periodic-versus-plane log partition. Closing an O(boundary) estimate requires a normalized interacting Wick-derivative insertion bound uniform in ultraviolet cutoff, rectangle size and interpolation parameter. EXP-000772 fixed-volume uniform integrability does not supply this theorem; the periodic bridge remains open."
+  },
+  "strict_witness": {
+    "pure_coefficient": "c4=(g+3lambda)/4 for every Q3 component",
+    "four_particle_norm": "||Pi_(4,e) H_l^sharp Omega0||^2=c4^2 4! int_(I_l)int_(I_l) C_m(x-y)^4 dxdy>0",
+    "finite_l_sign": "E_l^sharp<0=<Omega0,H_l^sharp Omega0>",
+    "thermodynamic_sign": "alpha_infinity=lim_(l->infinity)(-E_l^sharp/l)>0",
+    "curvature_cross_check": "sigma^2=int_R2 Cov_0(u(x),u(0))dx >= [21 zeta(3)/(16 pi^3 m0^2)](g+3lambda)^2>0, using int_R2 C_m(x)^4 dx=7 zeta(3)/(64 pi^3 m0^2)",
+    "curvature_boundary": "The curvature identity is an independent sign and factor audit. Strict thermodynamic positivity is proved by the GRS monotonicity route, not by assuming a volume-uniform Taylor remainder."
+  },
+  "zero_temperature_reduction": {
+    "periodic_energy_conditional": "if the uniform surface-pairing lemma proves (E_s^(per,u)-E_s^sharp)/s->0, then the exact Wick ledger E0(Hhat_s)=E_s^(per,u)-s c_s with c_s->0 gives lim_(s->infinity)E0(Hhat_s)/s=-alpha_infinity<0",
+    "specific_KL_conditional": "under the same bridge, lim_(beta->infinity)lim_(L->infinity)D(mu_(beta,L)||nu_(beta,L))/(beta L)=alpha_infinity>0",
+    "joint_van_Hove_conditional": "under rectangle-uniform boundary comparison, the centered relative pressure/specific-KL scalar has the same alpha_infinity joint and iterated limits",
+    "scalar_ledger": "T_beta/beta=e_(*,beta)->e_pl is closed; the further conclusion E_beta/beta->e_pl-alpha_infinity remains conditional on the periodic-sharp bridge. Adding c shifts both finite-beta terms and leaves every centered gap invariant.",
+    "finite_beta_witness_nogo": "the EXP-000775 four-zero-mode amplitude is O(beta^-1); pointwise E_beta<T_beta alone is compatible with a zero density limit and cannot replace the sharp-cutoff GRS argument",
+    "state_boundary": "Only scalar pressures, energies and specific-KL densities are interchanged. States, ground vectors, order parameters, spectral gaps and correlation functions are not interchanged."
+  },
+  "physical_and_phase_boundary": {
+    "named_reference": "alpha_infinity is a strict scalar-gauge-invariant comparison with the massive Gaussian law fixed by m0, Euclidean geometry and field normalization",
+    "physical_empty_space": "the Gaussian reference is not independently derived as cosmic empty space or the no-condensate state; no physical below-empty-space claim follows",
+    "absolute_energy": "an additive local scalar moves every raw vacuum-energy density, so gravity requires an external stress-tensor renormalization condition or observable anchor",
+    "phase": "existence and strictness of one pressure density do not imply a unique Gibbs/vacuum phase; arbitrary K_pl may allow discrete-symmetry phase coexistence",
+    "cooling": "beta is Euclidean inverse temperature in this comparator and is not identified with cosmological cooling time",
+    "parent": "the theorem remains a newly declared inserted one-dimensional Q3 P(Phi)2 comparator, not the original fixed-raw CL8 regulator or a derived three-dimensional Q3LOCK parent"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-Q3-ZERO-TEMPERATURE-THERMODYNAMIC-GROUND-PHASE-AND-PHYSICAL-REFERENCE-ROUTE-SPLIT",
+    "status": "SHARP-CUTOFF FINITE-COMPONENT Q3 GRS MONOTONICITY AND STRICT CENTERED VACUUM-ENERGY DENSITY CLOSED; PERIODIC ZERO-TEMPERATURE AND SCALAR VAN-HOVE IDENTIFICATION REDUCED TO AN OPEN UNIFORM SURFACE-PAIRING LEMMA; PHASE SELECTION, PHYSICAL EMPTY SPACE, ABSOLUTE ENERGY, STATE/GAP LIMITS, ORIGINAL PARENT AND PRE-A OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-Q3-SHARP-CUTOFF-LINE-HAMILTONIAN-AND-OPEN-RECTANGLE-NELSON-SYMMETRY",
+      "PA-CP1-CL8-Q3-GRS-MONOTONE-STRICT-CENTERED-SHARP-CUTOFF-VACUUM-ENERGY-DENSITY",
+      "PA-CP1-CL8-Q3-PERIODIC-ZERO-TEMPERATURE-SURFACE-PAIRING-REDUCTION"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-Q3-CUTOFF-VOLUME-INTERPOLATION-UNIFORM-PERIODIC-SHARP-SURFACE-PAIRING",
+      "PA-CP1-CL8-Q3-PERIODIC-ZERO-TEMPERATURE-SPECIFIC-KL-DENSITY",
+      "PA-CP1-CL8-Q3-SCALAR-BETA-L-VAN-HOVE-LIMIT-INTERCHANGE",
+      "PA-CP1-CL8-Q3-PHASE-ORDER-PARAMETER-AND-BOUNDARY-STATE-CLASSIFICATION",
+      "PA-CP1-CL8-Q3-PHYSICAL-EMPTY-SPACE-AND-STRESS-TENSOR-RENORMALIZATION-ANCHOR",
+      "PA-CP1-CL8-Q3-ZERO-TEMPERATURE-STATE-GROUND-VECTOR-GAP-AND-CORRELATION-LIMITS",
+      "PA-CP1-CL8-INTERACTING-MICROLOCAL-SPECTRUM-OR-RELATIVISTIC-KMS",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-PRE-A-C0-N1-N5-VALIDATION"
+    ],
+    "next_gate": "PA-CP1-CL8-Q3-CUTOFF-VOLUME-INTERPOLATION-UNIFORM-PERIODIC-SHARP-SURFACE-PAIRING"
+  },
+  "scope": {
+    "new_plane_Wick_volume_coherent_Q3_extension": true,
+    "strong_radial_Q3_coercivity_used": true,
+    "sharp_cutoff_line_Q3_Hamiltonians": true,
+    "open_rectangle_Feynman_Kac_Nelson_identity": true,
+    "component_blind_GRS_spectral_Holder_monotonicity": true,
+    "finite_centered_vacuum_energy_density_limit": true,
+    "strict_positive_centered_reference_density": true,
+    "periodic_zero_temperature_specific_KL_limit": false,
+    "joint_scalar_van_Hove_limit": false,
+    "both_iterated_scalar_density_limits_equal": false,
+    "periodic_sharp_surface_pairing_uniform_in_cutoff_volume_and_interpolation": false,
+    "periodic_zero_temperature_limit_reduced_to_surface_pairing": true,
+    "scalar_shift_invariant_gap": true,
+    "explicit_positive_free_pressure_curvature_cross_check": true,
+    "periodic_dyadic_positive_pressure_liminf": false,
+    "finite_circle_zero_mode_witness_sufficient_by_itself": false,
+    "ordinary_multivariate_pointwise_stability_sufficient": false,
+    "physical_empty_space_reference": false,
+    "absolute_vacuum_energy_fixed": false,
+    "phase_transition_or_phase_uniqueness": false,
+    "zero_temperature_state_limit": false,
+    "ground_vector_limit": false,
+    "uniform_spectral_gap": false,
+    "correlation_function_limit_interchange": false,
+    "beta_is_cosmological_cooling_time": false,
+    "full_noncommutative_infinite_volume_local_algebra": false,
+    "interacting_Hadamard_or_microlocal_spectrum": false,
+    "original_fixed_raw_CL8_family": false,
+    "original_3D_Q3LOCK_parent": false,
+    "physical_light_speed_derived": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC sharp-cutoff theorem plus conditional periodic reduction with executable Q3 coercivity, pure-four-chaos norm, spectral-Holder/ground-limit logic, monotone-density fixtures, finite-cutoff interpolation identity and missing-uniformity mutation, scalar ledger, Bessel curvature coefficient, source-scope and unchanged-C6 audits; scripts do not replace the finite-component line-Hamiltonian and FKN proof, and no script certifies the open cutoff-volume-interpolation-uniform surface-pairing estimate",
+    "primary": "codes/foundations/pre_a_cp1_cl8_q3_zero_temperature_thermodynamic_ground_phase_physical_reference_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_q3_zero_temperature_thermodynamic_ground_phase_physical_reference_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_q3_zero_temperature_thermodynamic_ground_phase_physical_reference_route_split_verify.py",
+    "fixtures": "full Q3 polynomial/coercivity and pure coefficient; Nagoji mixed-axis mutation; spectral probability Holder inequality; exact GRS alpha scaling; strict form witness; bounded monotone alpha sequences; formal surface-to-density implication separated from the unproved uniform insertion estimate; beta-L conditional scalar ledger; scalar-shift invariance; exact K0 fourth-power integral and eight-channel curvature factor; finite-circle subextensive witness mutation; physical-reference, phase, state-limit, parent and C6 firewalls"
+  },
+  "prior_art_boundary": "GRS prove the scalar sharp-cutoff monotonicity and vacuum-energy limit, and later scalar work proves boundary independence. Their spectral-Holder core is component-blind, but no located primary source states this eight-component nonradial Q3 theorem verbatim. Nagoji shows why mere multivariate stability is insufficient; the Q3 g>0 radial coercivity and EXP-000772 estimates are essential. No located source proves the full TECT Pre-A chain.",
+  "no_overclaim": "This theorem proves a strict infinite-line sharp-cutoff centered vacuum-energy density below one named massive Gaussian reference for a newly declared inserted Q3 P(Phi)2 family. It does not yet prove the periodic zero-temperature or joint scalar van-Hove limit because the normalized Wick-derivative surface-pairing estimate remains open. It does not identify the Gaussian with physical empty space, fix an absolute gravitational vacuum energy, select a phase, prove a cosmological phase transition, interchange states or gaps, construct the original fixed-raw CL8 or three-dimensional parent, derive light, close C0 or N1-N5, advance C6, complete CP1 or Sector A, or prove Pre-A."
+}

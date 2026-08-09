@@ -1,0 +1,133 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-Q3-SOURCE-PRESSURE-PHASE-DIAGNOSTIC-PHYSICAL-REFERENCE-AND-3D-PARENT-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-Q3-FINITE-COMPONENT-GRS-BOUNDARY-PRESSURE-PERIODIC-GROUND-DENSITY-v0",
+    "PA-CP1-ST8-Q3LOCK-v0"
+  ],
+  "result_id": "PA-CP1-CL8-Q3-ALL-SOURCE-BOUNDARY-INDEPENDENT-CONVEX-EVEN-PRESSURE-WITH-PHASE-REFERENCE-AND-PARENT-OBSTRUCTIONS",
+  "negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-PRESSURE-VALUE-ONLY-PHASE-CLASSIFICATION",
+    "NG-2026-08-04-PRE-A-CP1-CL8-TRANSVERSE-ZERO-RESTRICTION-AS-INTERACTING-MARGINAL"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR",
+    "NG-2026-08-04-PRE-A-CP1-CL8-FIXED-RAW-QUADRATIC-FINITE-Q3-RENORMALIZED-LIMIT"
+  ],
+  "exploration_id": "EXP-000779",
+  "candidate_family": "PRE-A-CL8-Q3-SOURCE-PRESSURE-PHASE-PHYSICAL-PARENT-SPLIT",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 analytic source-pressure theorem plus exact interface no-gos for the newly declared massive plane-Wick eight-component 1+1-dimensional Q3 comparator; claim-nonbearing and not a phase-transition, selected-state, physical-empty-space, absolute-energy, original-parent, C6, CP1 or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "GRS_boundary_pressure": "F. Guerra, L. Rosen and B. Simon, Boundary Conditions for the P(phi)2 Euclidean Field Theory, Ann. Inst. Henri Poincare A 25 (1976) 231-334",
+    "scalar_phi4_2_phase": "J. Glimm, A. Jaffe and T. Spencer, Phase Transitions for phi4_2 Quantum Fields, Commun. Math. Phys. 45 (1975) 203-216, DOI 10.1007/BF01608328",
+    "scalar_Ising_tools": "B. Simon and R. B. Griffiths, The phi4_2 Field Theory as a Classical Ising Model, Commun. Math. Phys. 33 (1973) 145-164, DOI 10.1007/BF01645626",
+    "scalar_phi4_3_phase": "A. Chandra, T. S. Gunaratnam and H. Weber, Phase Transitions for phi4_3, Commun. Math. Phys. 392 (2022) 691-782, DOI 10.1007/s00220-022-04353-6",
+    "stress_tensor_ambiguity": "R. M. Wald, The Back Reaction Effect in Particle Creation in Curved Spacetime, Commun. Math. Phys. 54 (1977) 1-19, DOI 10.1007/BF01609833; S. Hollands and R. M. Wald, Local Wick Polynomials and Time Ordered Products of Quantum Fields in Curved Spacetime, Commun. Math. Phys. 223 (2001) 289-326, DOI 10.1007/s002200100540",
+    "boundary": "These sources prove component mechanisms, not the coupled Q3 phase, TECT physical-vacuum selection, dimensional parent map, or full Pre-A chain. No world-first claim is made."
+  },
+  "setup": {
+    "parameters": "m0>0, g>0, lambda>=0, K_pl fixed real symmetric 8 by 8",
+    "interaction": "u_J(Phi)=u(Phi)-J dot Phi for constant J in R8, with u the scalar-removed plane-Wick Q3 interaction of EXP-000778",
+    "coercivity": "W4(q)>=c4|q|^4, c4=g/32; if k=||K_pl^-||_op then P_J(q)>=(c4/2)|q|^4-k^2/(4c4)-(3/4)c4^(-1/3)|J|^(4/3)",
+    "parent_pressure": "EXP-000778 gives p(0)=alpha_infinity>0 and the finite-component all-boundary/Wick theorem at zero source"
+  },
+  "source_pressure_theorem": {
+    "linear_subdominant_port": "The eight degree-one source chaoses obey the product hypercontractive/Duhamel estimates with exponent 4/3; finite label multiplicity changes constants only and yields cutoff-, rectangle- and boundary-uniform two-sided pressure bounds on compact J balls.",
+    "all_source_limit": "For every constant J in R8, all Section-VIII covariance/Wick pressures p_A^(X;Y) have one finite thermodynamic limit p(J) through rectangles whose two side lengths tend independently to infinity, locally uniformly in J.",
+    "convexity": "Finite-volume log moment-generating functions are convex; local-uniform convergence preserves convexity.",
+    "evenness": "The centered Gaussian law and even Q3 interaction are invariant under Phi->-Phi, so p_A(J)=p_A(-J) and p(J)=p(-J).",
+    "origin": "p(0)=alpha_infinity>0 in the fixed scalar-removed convention of EXP-000778."
+  },
+  "phase_diagnostic": {
+    "directional_response": "For f_v(h)=p(hv), m_v=f_v'(0+) exists, is finite and nonnegative, while f_v'(0-)=-m_v.",
+    "cusp": "m_v>0 is exactly a pressure-level cusp in source direction v; no sign is proved for any actual Q3 direction.",
+    "finite_volume": "Every finite symmetric volume has derivative zero at h=0. The thermodynamic limit must precede h->0; use difference quotients, not an unjustified exchange of pressure derivatives.",
+    "underdetermination": "alpha+m log cosh(h) and alpha+m|h| are finite convex even growth-compatible pressure controls with the same value at zero and different cusp behavior; moreover log cosh(nh)/n converges locally uniformly to |h| with error at most log(2)/n while every approximant has zero derivative at zero, so p(0) and finite-volume zero response alone cannot classify a phase.",
+    "state_boundary": "A cusp does not by itself construct, identify, prove purity of, or prove clustering for plus/minus states; m_v=0 in all directions also does not alone prove uniqueness of every state."
+  },
+  "physical_reference_no_go": {
+    "mutation": "u_J->u_J+c gives Z_A,c(J)=exp(-c|A|)Z_A(J), p_c(J)=p(J)-c and raw energy density shifted by +c.",
+    "invariants": "Normalized Gibbs/KMS states, correlations, KL divergence and p(J)-p(0) are unchanged.",
+    "required_external_data": "A physical below-empty-space statement needs an independently selected reference on the same algebra and geometry, a common renormalized stress tensor, and an observable or cosmological-constant renormalization condition."
+  },
+  "parent_reduction_no_go": {
+    "two_cell_identity": "For phi1=(q+r)/sqrt(2), phi2=(q-r)/sqrt(2), phi1^4+phi2^4=q^4/2+3q^2r^2+r^4/2.",
+    "marginal": "For S(q,r)=a(q^2+r^2)/2+b(q^4/2+3q^2r^2+r^4/2), the exact effective action is S(q,0)+F(q^2)-F(0), where F'(s)=3b E_s[r^2]>0 and F''(s)=-9b^2 Var_s(r^2)<0; the discarded-mode correction is nonconstant.",
+    "consequence": "The two-cell block refutes the inference that agreement on a transverse-zero restriction alone establishes the interacting Euclidean or quantum marginal. A constraint, decoupling theorem, dressed embedding or exact effective-action/RG result is required.",
+    "boundary": "The control block does not calculate the full ST8/Q3LOCK marginal, exclude cancellations in a full effective action, rule out every dimensional reduction, or refute the finite ST8/Q3LOCK candidate."
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-Q3-PHASE-PHYSICAL-REFERENCE-AND-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-PARENT-ROUTE-SPLIT",
+    "status": "ALL-CONSTANT-SOURCE Q3 PRESSURE EXISTENCE, BOUNDARY INDEPENDENCE, CONVEXITY, EVENNESS AND THE CUSP DIAGNOSTIC CLOSED; PRESSURE-VALUE-ONLY PHASE CLASSIFICATION AND BARE TRANSVERSE-RESTRICTION MARGINAL IDENTIFICATION REFUTED; PHASE SIGN/STATES, PHYSICAL REFERENCE, 3D PARENT, C6 AND PRE-A OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-Q3-ALL-CONSTANT-SOURCE-BOUNDARY-INDEPENDENT-PRESSURE",
+      "PA-CP1-CL8-Q3-CONVEX-EVEN-SOURCE-PRESSURE-AND-DIRECTIONAL-CUSP-DIAGNOSTIC",
+      "PA-CP1-CL8-Q3-PRESSURE-VALUE-ONLY-PHASE-UNDERDETERMINATION",
+      "PA-CP1-CL8-Q3-TRANSVERSE-RESTRICTION-VERSUS-INTERACTING-MARGINAL-SEPARATION"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-Q3-ORDER-PARAMETER-CUSP-SIGN-AND-SOURCE-STATE-CONSTRUCTION",
+      "PA-CP1-CL8-Q3-PHYSICAL-EMPTY-SPACE-AND-STRESS-TENSOR-RENORMALIZATION-ANCHOR",
+      "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-3D-QUANTUM-THERMODYNAMIC-LIMIT",
+      "PA-CP1-ST8-Q3LOCK-TO-CL8-Q3-EFFECTIVE-REDUCTION",
+      "PA-CP1-CL8-Q3-ZERO-TEMPERATURE-STATE-GROUND-VECTOR-GAP-AND-CORRELATION-LIMITS",
+      "PA-CP1-CL8-INTERACTING-MICROLOCAL-SPECTRUM-OR-RELATIVISTIC-KMS",
+      "PA-PRE-A-C0-N1-N5-VALIDATION"
+    ],
+    "next_gate": "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-3D-QUANTUM-PARENT-PRESSURE-GROUND-DENSITY-AND-EFFECTIVE-REDUCTION-SPLIT"
+  },
+  "scope": {
+    "constant_vector_source_Q3_interaction": true,
+    "linear_source_subdominant_exponent_4_over_3": true,
+    "all_source_pressure_exists_and_finite": true,
+    "all_source_boundary_Wick_independence": true,
+    "source_pressure_locally_uniform": true,
+    "source_pressure_convex": true,
+    "source_pressure_global_Z2_even": true,
+    "source_pressure_origin_equals_alpha_infinity": true,
+    "directional_one_sided_derivatives_exist": true,
+    "pressure_cusp_diagnostic_defined": true,
+    "finite_volume_zero_source_response": true,
+    "thermodynamic_then_zero_source_order_required": true,
+    "pressure_value_only_phase_classification_refuted": true,
+    "additive_scalar_absolute_reference_no_go_reused": true,
+    "bare_transverse_restriction_suffices_for_interacting_marginal_inference_refuted": true,
+    "any_Q3_cusp_sign_determined": false,
+    "Q3_phase_transition_or_phase_uniqueness": false,
+    "source_selected_infinite_volume_states": false,
+    "plus_minus_state_purity_or_clustering": false,
+    "physical_empty_space_reference": false,
+    "absolute_vacuum_energy_fixed": false,
+    "common_renormalized_stress_tensor_anchor": false,
+    "original_fixed_raw_CL8_family": false,
+    "fixed_lattice_3D_Q3LOCK_thermodynamic_limit": false,
+    "original_3D_Q3LOCK_parent_derived": false,
+    "exact_effective_dimensional_reduction": false,
+    "zero_temperature_state_limit": false,
+    "ground_vector_limit": false,
+    "uniform_spectral_gap": false,
+    "correlation_function_limit_interchange": false,
+    "interacting_Hadamard_or_microlocal_spectrum": false,
+    "physical_light_speed_derived": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC source-pressure extension and exact algebraic no-gos with executable Young, convex-even response, scalar-shift/KL, transverse-polynomial/marginal, provenance, scope and unchanged-C6 audits; scripts do not replace the finite-component hypercontractive/Duhamel proof written in the certificate",
+    "primary": "codes/foundations/pre_a_cp1_cl8_q3_source_pressure_phase_diagnostic_physical_reference_3d_parent_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_q3_source_pressure_phase_diagnostic_physical_reference_3d_parent_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_q3_source_pressure_phase_diagnostic_physical_reference_3d_parent_route_split_verify.py",
+    "fixtures": "explicit K-negative/source coercive bound; finite log-MGF gradient and covariance Hessian; exact local-uniform log-cosh-to-cusp bound; reference-weighted Gibbs scalar-shift and KL identities; exact full two-cell action transform; positive first and negative second discarded-mode effective derivatives; phase, reference, parent and Pre-A firewalls"
+  },
+  "prior_art_boundary": "Scalar P(phi)2 boundary pressure and scalar phi4 phase mechanisms are established prior art. The local positive result is the explicit constant-vector-source continuation of the EXP-000778 finite-component Q3 port; it is not a claimed new general phase theorem or full Pre-A chain.",
+  "no_overclaim": "This theorem supplies a source-pressure diagnostic and two exact interface no-gos. It does not determine an order parameter, construct a phase or state, identify physical empty space, fix absolute gravitational energy, derive the 1+1 comparator from ST8/Q3LOCK, advance C6, complete CP1 or Sector A, or prove Pre-A."
+}

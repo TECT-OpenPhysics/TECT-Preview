@@ -1,0 +1,134 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-fixed-lattice-3d-quantum-pressure-ground-density-effective-reduction-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-3D-QUANTUM-THERMODYNAMIC-PRESSURE-GROUND-DENSITY-AND-EFFECTIVE-REDUCTION-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-ST8-Q3LOCK-v0",
+    "PA-CP1-CL8-Q3-SOURCE-PRESSURE-PHASE-DIAGNOSTIC-PHYSICAL-REFERENCE-AND-3D-PARENT-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-FREE-PERIODIC-SOURCE-PRESSURE-AND-CENTERED-GROUND-ENERGY-DENSITY",
+  "negative_ids": [],
+  "reused_negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-TRANSVERSE-ZERO-RESTRICTION-AS-INTERACTING-MARGINAL",
+    "NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-INTERACTING-GROUND-PROJECTIVITY",
+    "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR"
+  ],
+  "exploration_id": "EXP-000780",
+  "candidate_family": "PRE-A-ST8-Q3LOCK-FIXED-LATTICE-THERMODYNAMICS",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 self-contained analytic theorem for the exact unweighted fixed-spacing ST8/Q3LOCK quantum-oscillator family; claim-nonbearing and not a phase, continuum, effective-reduction, physical-vacuum, C6, CP1 or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "quantum_crystal_pressure_scope_warning": "Y. Kozitsky and T. Pasurek, Euclidean Gibbs Measures of Quantum Anharmonic Crystals, arXiv:math-ph/0609045; its pressure theorem is in a scalar ferroelectric subsection and is not used as the load-bearing Q3LOCK proof",
+    "quantum_crystal_review_scope_warning": "M. Kargol, Y. Kondratiev and Y. Kozitsky, Phase Transitions and Quantum Stabilization in Quantum Anharmonic Crystals, arXiv:0710.2303; Proposition 2.23 is a comparator whose cited scalar theorem and relative-partition normalization prevent direct import here",
+    "multidimensional_weak_coupling_comparator": "W. G. Faris and R. A. Minlos, A Quantum Crystal with Multidimensional Anharmonic Oscillators; relevant weak-coupling infinite-volume results do not supply this all-parameter pressure and ground-density statement",
+    "multivariate_continuum_torus_comparator": "T. Nagoji, Construction of the Gibbs Measures Associated with Euclidean Quantum Field Theories with Polynomial Interactions, arXiv:2305.19583; fixed continuum-torus ultraviolet construction, not this fixed-spacing spatial thermodynamic theorem",
+    "boundary": "The proof below is self-contained at fixed lattice spacing. No full-chain or world-first claim is made; phase, continuum, physical reference and effective reduction remain separate gates."
+  },
+  "setup": {
+    "parameters": "hbar>0, chi>0, c>0, g>0, lambda>0, r real, fixed block origin, and constant energy-source J in R8",
+    "coarse_geometry": "even rectangular subsets of Z3 for the open auxiliary family and even periodic cubes Lambda_L=(Z/LZ)^3 for the registered family",
+    "fine_oscillator_count": "n_L=8L^3=N^3 with N=2L",
+    "hamiltonian": "H_L(J)=sum[-hbar^2/(2chi) d^2+r psi^2/2+g psi^4/4-J_epsilon psi]+(c/2) sum spatial difference squares+(lambda/4) sum onsite Q3-edge (psi_epsilon-psi_eta)^2(psi_epsilon^2+psi_eta^2)",
+    "dimensionless_log_density": "pi_L(beta,J)=n_L^(-1) log Tr exp[-beta H_L(J)]",
+    "thermodynamic_pressure": "P_L=pi_L/beta",
+    "free_energy_density": "f_L=-pi_L/beta",
+    "ground_density": "e_L=n_L^(-1) inf spec H_L(J)"
+  },
+  "fixed_lattice_theorem": {
+    "finite_volume": "Every finite open or periodic Hamiltonian is lower bounded, has compact resolvent and has finite heat trace for every beta>0.",
+    "open_limits": "Open rectangular dimensionless log-partition and ground-energy densities have finite limits as all even side lengths tend independently to infinity.",
+    "periodic_limits": "The even periodic-cube limits exist and equal the open limits for every beta>0 and every constant J.",
+    "source_regularities": "At fixed beta the limiting log density and pressure are finite, locally uniform in J, convex and globally Z2-even; the ground density is finite, locally uniform, concave and globally Z2-even.",
+    "zero_temperature": "For every compact J set and beta_star>0, 0<=e_L(J)-f_L(beta,J)<=C/(beta) uniformly in L and in open or periodic boundary condition for beta>=beta_star. Hence both iterated limits and every joint L,beta to infinity scalar path give e_infinity(J)=-lim pi_infinity(beta,J)/beta.",
+    "boundary_rate": "The direct global-form comparison gives periodic-minus-open ground and fixed-beta free-energy density O(L^(-1/2)); no O(surface) total estimate is claimed."
+  },
+  "proof_spine": {
+    "stability": "With Q=(g/8) sum psi^4, source Young absorption gives H_open(J)>=K-b_J |Lambda| where K=sum[-hbar^2/(2chi)d^2+(g/8)psi^4] and b_J is locally bounded in J.",
+    "volume_bounds": "A fixed centered product Gaussian gives an explicit O(volume) variational upper bound, while min-max comparison with the product quartic oscillator gives an O(volume) heat-trace upper bound.",
+    "open_additivity": "Deleting crossing spatial difference-square bonds lowers the Hamiltonian. Min-max eigenvalue ordering, not operator monotonicity of the exponential, makes ground/free energies superadditive and log partition functions subadditive; even-box tiling gives the open limits.",
+    "seam_absorption": "For the 24L^2 periodic seam bonds, B_L<=eta Q+288c^2 L^2/(eta g). Since Q<=H_open+b_JL^3 as forms, H_periodic<=(1+eta)H_open+eta b_JL^3+288c^2L^2/(eta g). Min-max and eta=L^(-1/2) identify the periodic and open densities.",
+    "zero_temperature_squeeze": "For beta>=beta_star, Tr exp[-beta(H-E0)]<=Tr exp[-beta_star(H-E0)]. Linear E0 and log-Z bounds therefore give the uniform C/beta difference between ground and free-energy densities."
+  },
+  "centering_and_reference": {
+    "source_free_center": "At J=0, sigma=r_minus^2/(4g) per fine oscillator and H_hat=H+sigma*n_L is nonnegative.",
+    "covariance": "pi_hat=pi-beta*sigma, P_hat=P-sigma, f_hat=f+sigma and e_hat=e+sigma.",
+    "source_boundary": "For J not equal to zero this inherited scalar remains an additive convention but no longer makes H_hat(J) nonnegative.",
+    "physical_boundary": "Adding any scalar d*n_L shifts pressure and energy densities while leaving normalized finite-volume Gibbs states unchanged. The center is not a physical empty-space selection and proves no below-empty-space inequality."
+  },
+  "effective_reduction_split": {
+    "collective_coordinates": "At one coarse cell write psi_epsilon=Q/sqrt(8)+r_epsilon with sum r_epsilon=0.",
+    "quartic_identity": "sum psi_epsilon^4=Q^4/8+(3/4)Q^2||r||^2+sqrt(2)Q sum r_epsilon^3+sum r_epsilon^4.",
+    "consequence": "The natural collective/transverse tensor Hamiltonian is not additively split even before the Q3 lock is integrated. The finite classical collective restriction therefore does not establish a quantum marginal or a 3D-to-1+1 effective parent map.",
+    "boundary": "This reuses only the registered bare-restriction and ground-projectivity no-gos. Dressed embeddings, constraints, decoupling limits, mean-force maps and controlled RG reductions remain open."
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-3D-QUANTUM-PARENT-PRESSURE-GROUND-DENSITY-AND-EFFECTIVE-REDUCTION-SPLIT",
+    "status": "FIXED-SPACING ST8/Q3LOCK FREE-AND-PERIODIC SOURCE PRESSURE, GROUND-ENERGY DENSITY, SCALAR CENTERING AND ZERO-TEMPERATURE DENSITY INTERCHANGE CLOSED; PHASE/STATES, PHYSICAL REFERENCE, CONTINUUM AND EFFECTIVE REDUCTION OPEN",
+    "closed_subgates": [
+      "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-OPEN-RECTANGLE-SOURCE-PRESSURE-AND-GROUND-DENSITY",
+      "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-PERIODIC-CUBE-BOUNDARY-INDEPENDENCE",
+      "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-UNIFORM-ZERO-TEMPERATURE-DENSITY-INTERCHANGE",
+      "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-ADDITIVE-SCALAR-COVARIANCE"
+    ],
+    "open_subgates": [
+      "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-SOURCE-CUSP-TANGENT-STATES-AND-PHASE",
+      "PA-CP1-ST8-Q3LOCK-INFINITE-VOLUME-GIBBS-AND-GROUND-STATE-CONSTRUCTION",
+      "PA-CP1-ST8-Q3LOCK-TO-CL8-Q3-EFFECTIVE-REDUCTION",
+      "PA-CP1-ST8-Q3LOCK-INTERACTING-CONTINUUM-AND-COUNTERTERMS",
+      "PA-CP1-ST8-Q3LOCK-PHYSICAL-EMPTY-SPACE-REFERENCE",
+      "PA-PRE-A-C0-N1-N5-VALIDATION"
+    ],
+    "next_gate": "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-SOURCE-CUSP-TANGENT-STATES-AND-PHASE"
+  },
+  "scope": {
+    "exact_registered_unweighted_ST8_Q3LOCK_family": true,
+    "fixed_block_origin_retained": true,
+    "finite_volume_self_adjoint_compact_resolvent": true,
+    "open_rectangular_source_pressure_limit": true,
+    "open_rectangular_ground_energy_density_limit": true,
+    "periodic_even_cube_source_pressure_limit": true,
+    "periodic_even_cube_ground_energy_density_limit": true,
+    "free_periodic_density_agreement": true,
+    "source_pressure_locally_uniform_convex_global_Z2_even": true,
+    "ground_density_locally_uniform_concave_global_Z2_even": true,
+    "uniform_zero_temperature_density_interchange": true,
+    "all_joint_beta_volume_scalar_density_paths": true,
+    "additive_scalar_covariance": true,
+    "source_free_classical_center_nonnegative": true,
+    "natural_collective_transverse_additive_factorization": false,
+    "exact_3D_to_1plus1_effective_reduction": false,
+    "thermodynamic_phase_transition": false,
+    "spontaneous_Z2_breaking": false,
+    "source_selected_tangent_states": false,
+    "pure_ordered_infinite_volume_state": false,
+    "KMS_or_ground_state_weak_limit": false,
+    "uniform_spectral_gap": false,
+    "clustering_or_correlation_limit": false,
+    "continuum_regulator_removal": false,
+    "Euclidean_4D_or_relativistic_QFT": false,
+    "physical_empty_space_reference": false,
+    "below_empty_space": false,
+    "absolute_vacuum_energy_fixed": false,
+    "fine_one_site_translation_restored": false,
+    "physical_light_speed_derived": false,
+    "event_horizon_or_cooling": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC fixed-lattice thermodynamic theorem with executable coercivity, product-trial, combinatorial, seam-form, min-max spectral, zero-temperature, source, scalar-shift, collective-polynomial, provenance, scope and unchanged-C6 audits",
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_lattice_3d_quantum_pressure_ground_density_effective_reduction_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_lattice_3d_quantum_pressure_ground_density_effective_reduction_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_lattice_3d_quantum_pressure_ground_density_effective_reduction_route_split_verify.py",
+    "fixtures": "exact scalar coercivity and source Young constants; Gaussian kinetic and Q3 moments; Q3 and seam edge counts; global seam-form absorption; finite spectral min-max and beta squeeze; source derivatives; scalar shifts; exact collective/transverse quartic expansion; scope and record integration"
+  },
+  "prior_art_boundary": "Thermodynamic methods for quantum anharmonic crystals and multicomponent oscillator systems are established mathematics. The closest located pressure statements have scalar, coupling, normalization or weak-coupling scope that is not imported as the Q3LOCK theorem. The local result is a self-contained application of positivity and coercivity to the exact registered polynomial; no new general theorem or world-first claim is made.",
+  "no_overclaim": "This package removes only the fixed-spacing scalar density-existence gate. It does not prove a Q3LOCK pressure cusp or phase transition, select an infinite-volume state, establish a gap or clustering, remove the lattice, construct a 3+1 or Euclidean-4D field theory, restore fine translation symmetry, derive a 1+1 effective theory, select physical empty space, establish a below-empty-space sign, derive light, gravity, cooling or an event horizon, close C0 or N1-N5, advance C6, complete CP1 or Sector A, or prove Pre-A."
+}

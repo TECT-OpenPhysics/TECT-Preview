@@ -1,0 +1,722 @@
+{
+  "assertion_summary": {
+    "passed": 78,
+    "total": 78
+  },
+  "assertions": [
+    {
+      "actual": "PA-CP1-CL8-Q3-BETA-INDEPENDENT-HAMILTONIAN-GROUND-REFERENCE-ROUTE-SPLIT-v0",
+      "expected": "PA-CP1-CL8-Q3-BETA-INDEPENDENT-HAMILTONIAN-GROUND-REFERENCE-ROUTE-SPLIT-v0",
+      "group": "identity",
+      "name": "candidate id",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-Q3-COMPACT-CIRCLE-FIXED-HAMILTONIAN-FK-GIBBS-AND-STRICT-GROUND-REFERENCE-ADVANTAGE",
+      "expected": "PA-CP1-CL8-Q3-COMPACT-CIRCLE-FIXED-HAMILTONIAN-FK-GIBBS-AND-STRICT-GROUND-REFERENCE-ADVANTAGE",
+      "group": "identity",
+      "name": "result id",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-000774",
+      "expected": "EXP-000774",
+      "group": "identity",
+      "name": "exploration id",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "identity",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'passed': 102, 'total': 102}",
+      "expected": "all pass",
+      "group": "parent",
+      "name": "EXP766 parent all pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "KMS and reference",
+      "expected": "True",
+      "group": "parent",
+      "name": "EXP766 KMS and reference parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "group": "Q3",
+      "name": "Q3 twelve edges",
+      "status": "PASS"
+    },
+    {
+      "actual": "24",
+      "expected": "24",
+      "group": "Q3",
+      "name": "Q3 Laplacian trace",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 0, 0, 0, 0, 0, 0, 0]",
+      "expected": "zero",
+      "group": "Q3",
+      "name": "Q3 Laplacian row sums",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*g*x0**2 + 3*g*x1**2 + 3*g*x2**2 + 3*g*x3**2 + 3*g*x4**2 + 3*g*x5**2 + 3*g*x6**2 + 3*g*x7**2 + 12*lambda*x0**2 - 6*lambda*x0*x1 - 6*lambda*x0*x2 - 6*lambda*x0*x4 + 12*lambda*x1**2 - 6*lambda*x1*x3 - 6*lambda*x1*x5 + 12*lambda*x2**2 - 6*lambda*x2*x3 - 6*lambda*x2*x6 + 12*lambda*x3**2 - 6*lambda*x3*x7 + 12*lambda*x4**2 - 6*lambda*x4*x5 - 6*lambda*x4*x6 + 12*lambda*x5**2 - 6*lambda*x5*x7 + 12*lambda*x6**2 - 6*lambda*x6*x7 + 12*lambda*x7**2",
+      "expected": "3 x^T A_Q3 x",
+      "group": "Wick",
+      "name": "Q3 quartic Laplacian",
+      "status": "PASS"
+    },
+    {
+      "actual": "48*g + 192*lambda",
+      "expected": "48*g + 192*lambda",
+      "group": "Wick",
+      "name": "Q3 quartic bi-Laplacian",
+      "status": "PASS"
+    },
+    {
+      "actual": "8*g + 32*lambda",
+      "expected": "8*g + 32*lambda",
+      "group": "Wick",
+      "name": "Tr A_Q3",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "Wick",
+      "name": "exact coherent Wick polynomial identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "Wick",
+      "name": "generic symmetric K exact Wick identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[k0, k1, k2, k3, k4, k5, k6, k7], [k1, k8, k9, k10, k11, k12, k13, k14], [k2, k9, k15, k16, k17, k18, k19, k20], [k3, k10, k16, k21, k22, k23, k24, k25], [k4, k11, k17, k22, k26, k27, k28, k29], [k5, k12, k18, k23, k27, k30, k31, k32], [k6, k13, k19, k24, k28, k31, k33, k34], [k7, k14, k20, k25, k29, k32, k34, k35]])",
+      "expected": "Matrix([[k0, k1, k2, k3, k4, k5, k6, k7], [k1, k8, k9, k10, k11, k12, k13, k14], [k2, k9, k15, k16, k17, k18, k19, k20], [k3, k10, k16, k21, k22, k23, k24, k25], [k4, k11, k17, k22, k26, k27, k28, k29], [k5, k12, k18, k23, k27, k30, k31, k32], [k6, k13, k19, k24, k28, k31, k33, k34], [k7, k14, k20, k25, k29, k32, k34, k35]])",
+      "group": "Wick",
+      "name": "generic symmetric K coefficient coherence",
+      "status": "PASS"
+    },
+    {
+      "actual": "6*D**2*(g + 4*lambda) - D*(24*D*(g + 4*lambda) + 24*eta + 8*m)/2",
+      "expected": "-6*D**2*(g + 4*lambda) - D*(24*eta + 8*m)/2",
+      "group": "Wick",
+      "name": "coherent uncorrected scalar sign",
+      "status": "PASS"
+    },
+    {
+      "actual": "6*D**2*(g + 4*lambda) + D*(24*eta + 8*m)/2",
+      "expected": "6*D**2*(g + 4*lambda) + D*(24*eta + 8*m)/2",
+      "group": "Wick",
+      "name": "absolute scalar compensator",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[-3*C*g - 12*C*lambda + 3*eta + m, 3*C*lambda - eta, 3*C*lambda - eta, 0, 3*C*lambda - eta, 0, 0, 0], [3*C*lambda - eta, -3*C*g - 12*C*lambda + 3*eta + m, 0, 3*C*lambda - eta, 0, 3*C*lambda - eta, 0, 0], [3*C*lambda - eta, 0, -3*C*g - 12*C*lambda + 3*eta + m, 3*C*lambda - eta, 0, 0, 3*C*lambda - eta, 0], [0, 3*C*lambda - eta, 3*C*lambda - eta, -3*C*g - 12*C*lambda + 3*eta + m, 0, 0, 0, 3*C*lambda - eta], [3*C*lambda - eta, 0, 0, 0, -3*C*g - 12*C*lambda + 3*eta + m, 3*C*lambda - eta, 3*C*lambda - eta, 0], [0, 3*C*lambda - eta, 0, 0, 3*C*lambda - eta, -3*C*g - 12*C*lambda + 3*eta + m, 0, 3*C*lambda - eta], [0, 0, 3*C*lambda - eta, 0, 3*C*lambda - eta, 0, -3*C*g - 12*C*lambda + 3*eta + m, 3*C*lambda - eta], [0, 0, 0, 3*C*lambda - eta, 0, 3*C*lambda - eta, 3*C*lambda - eta, -3*C*g - 12*C*lambda + 3*eta + m]])",
+      "expected": "Matrix([[-3*C*g - 12*C*lambda + 3*eta + m, 3*C*lambda - eta, 3*C*lambda - eta, 0, 3*C*lambda - eta, 0, 0, 0], [3*C*lambda - eta, -3*C*g - 12*C*lambda + 3*eta + m, 0, 3*C*lambda - eta, 0, 3*C*lambda - eta, 0, 0], [3*C*lambda - eta, 0, -3*C*g - 12*C*lambda + 3*eta + m, 3*C*lambda - eta, 0, 0, 3*C*lambda - eta, 0], [0, 3*C*lambda - eta, 3*C*lambda - eta, -3*C*g - 12*C*lambda + 3*eta + m, 0, 0, 0, 3*C*lambda - eta], [3*C*lambda - eta, 0, 0, 0, -3*C*g - 12*C*lambda + 3*eta + m, 3*C*lambda - eta, 3*C*lambda - eta, 0], [0, 3*C*lambda - eta, 0, 0, 3*C*lambda - eta, -3*C*g - 12*C*lambda + 3*eta + m, 0, 3*C*lambda - eta], [0, 0, 3*C*lambda - eta, 0, 3*C*lambda - eta, 0, -3*C*g - 12*C*lambda + 3*eta + m, 3*C*lambda - eta], [0, 0, 0, 3*C*lambda - eta, 0, 3*C*lambda - eta, 3*C*lambda - eta, -3*C*g - 12*C*lambda + 3*eta + m]])",
+      "group": "Wick",
+      "name": "raw field-dependent coefficients beta independent",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[-9*D*lambda, 3*D*lambda, 3*D*lambda, 0, 3*D*lambda, 0, 0, 0], [3*D*lambda, -9*D*lambda, 0, 3*D*lambda, 0, 3*D*lambda, 0, 0], [3*D*lambda, 0, -9*D*lambda, 3*D*lambda, 0, 0, 3*D*lambda, 0], [0, 3*D*lambda, 3*D*lambda, -9*D*lambda, 0, 0, 0, 3*D*lambda], [3*D*lambda, 0, 0, 0, -9*D*lambda, 3*D*lambda, 3*D*lambda, 0], [0, 3*D*lambda, 0, 0, 3*D*lambda, -9*D*lambda, 0, 3*D*lambda], [0, 0, 3*D*lambda, 0, 3*D*lambda, 0, -9*D*lambda, 3*D*lambda], [0, 0, 0, 3*D*lambda, 0, 3*D*lambda, 3*D*lambda, -9*D*lambda]])",
+      "expected": "nonzero for lambda",
+      "group": "mutation",
+      "name": "mass-only mutation fails for lambda",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*D*(3*D*(-g - 4*lambda) - 6*eta - 2*m)",
+      "expected": "nonzero",
+      "group": "mutation",
+      "name": "wrong scalar-sign mutation fails",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2574019595453674",
+      "expected": "0.2574019595453674",
+      "group": "thermal",
+      "name": "thermal-vacuum D identity beta0.7",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.05389287064905368",
+      "expected": "0.0538928706490537",
+      "group": "thermal",
+      "name": "thermal-vacuum D identity beta1.5",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.005977182237658517",
+      "expected": "0.005977182237658493",
+      "group": "thermal",
+      "name": "thermal-vacuum D identity beta3.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0001313621675400485",
+      "expected": "0.00013136216754004645",
+      "group": "thermal",
+      "name": "thermal-vacuum D identity beta6.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'beta': 0.7, 'bose': 0.2574019595453674, 'coth_minus_vacuum': 0.2574019595453674}, {'beta': 1.5, 'bose': 0.05389287064905368, 'coth_minus_vacuum': 0.0538928706490537}, {'beta': 3.0, 'bose': 0.005977182237658517, 'coth_minus_vacuum': 0.005977182237658493}, {'beta': 6.0, 'bose': 0.0001313621675400485, 'coth_minus_vacuum': 0.00013136216754004645}]",
+      "expected": "positive",
+      "group": "thermal",
+      "name": "D_beta positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'beta': 0.7, 'bose': 0.2574019595453674, 'coth_minus_vacuum': 0.2574019595453674}, {'beta': 1.5, 'bose': 0.05389287064905368, 'coth_minus_vacuum': 0.0538928706490537}, {'beta': 3.0, 'bose': 0.005977182237658517, 'coth_minus_vacuum': 0.005977182237658493}, {'beta': 6.0, 'bose': 0.0001313621675400485, 'coth_minus_vacuum': 0.00013136216754004645}]",
+      "expected": "strict decrease",
+      "group": "thermal",
+      "name": "D_beta decreases with beta",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'beta': 0.7, 'bose': 0.2574019595453674, 'coth_minus_vacuum': 0.2574019595453674}, {'beta': 1.5, 'bose': 0.05389287064905368, 'coth_minus_vacuum': 0.0538928706490537}, {'beta': 3.0, 'bose': 0.005977182237658517, 'coth_minus_vacuum': 0.005977182237658493}, {'beta': 6.0, 'bose': 0.0001313621675400485, 'coth_minus_vacuum': 0.00013136216754004645}]",
+      "expected": "decay",
+      "group": "thermal",
+      "name": "D_beta ground decay",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'cutoff': 8, 'log_free_partition': 6.093190086642947}, {'cutoff': 16, 'log_free_partition': 6.0932690330776555}, {'cutoff': 32, 'log_free_partition': 6.093269034360885}, {'cutoff': 64, 'log_free_partition': 6.093269034360885}]",
+      "expected": "nondecreasing",
+      "group": "Hamiltonian",
+      "name": "free Fock log partition monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'cutoff': 8, 'log_free_partition': 6.093190086642947}, {'cutoff': 16, 'log_free_partition': 6.0932690330776555}, {'cutoff': 32, 'log_free_partition': 6.093269034360885}, {'cutoff': 64, 'log_free_partition': 6.093269034360885}]",
+      "expected": "small tail",
+      "group": "Hamiltonian",
+      "name": "free Fock trace tail converges",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(6)*(g + 3*lambda)/(8*L*m0**2)",
+      "expected": "positive for g>0 lambda>=0",
+      "group": "ground",
+      "name": "four-particle amplitude positive domain",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "ground",
+      "name": "quadratic degree cannot create four particles",
+      "status": "PASS"
+    },
+    {
+      "actual": "-223/2121",
+      "expected": "negative",
+      "group": "ground",
+      "name": "Rayleigh-Ritz strict negative fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/10",
+      "expected": "30/77",
+      "group": "ground",
+      "name": "Rayleigh threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "c",
+      "expected": "cancels",
+      "group": "ground",
+      "name": "ground-reference scalar gauge invariance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'beta': 1.0, 'difference': -1.918100529795423}, {'beta': 2.0, 'difference': -1.9921436519289424}, {'beta': 4.0, 'difference': -1.9999176839494677}, {'beta': 8.0, 'difference': -1.9999999859378228}]",
+      "expected": "-2.0",
+      "group": "ground",
+      "name": "ground free-energy limit approaches -2",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'beta': 1.0, 'difference': -1.918100529795423}, {'beta': 2.0, 'difference': -1.9921436519289424}, {'beta': 4.0, 'difference': -1.9999176839494677}, {'beta': 8.0, 'difference': -1.9999999859378228}]",
+      "expected": "convergent",
+      "group": "ground",
+      "name": "ground free-energy convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "Wick coherence across beta",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Wick coherence across beta",
+      "status": "PASS"
+    },
+    {
+      "actual": "necessary and sufficient coherence",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase necessary and sufficient coherence",
+      "status": "PASS"
+    },
+    {
+      "actual": "Eight-component Hamiltonian construction",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Eight-component Hamiltonian construc",
+      "status": "PASS"
+    },
+    {
+      "actual": "Feynman--Kac--Nelson identification",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Feynman--Kac--Nelson identification",
+      "status": "PASS"
+    },
+    {
+      "actual": "not inferred from strong-resolvent convergence alone",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase not inferred from strong-resolvent c",
+      "status": "PASS"
+    },
+    {
+      "actual": "closed Hamiltonian form",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase closed Hamiltonian form",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite-particle Wick form core",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase finite-particle Wick form core",
+      "status": "PASS"
+    },
+    {
+      "actual": "Strict compact-circle ground advantage",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Strict compact-circle ground advanta",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite-beta scalar firewall",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase finite-beta scalar firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "not a physical-empty-space",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase not a physical-empty-space",
+      "status": "PASS"
+    },
+    {
+      "actual": "not a world-first claim",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase not a world-first claim",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope exact_thermal_to_vacuum_Wick_dictionary",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope matrix_and_scalar_coherence_necessary_sufficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope beta_independent_compact_circle_Hamiltonian",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope self_adjoint_lower_bounded_Hamiltonian",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope compact_resolvent_and_trace_class_heat_semigroup",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope Feynman_Kac_Nelson_Gibbs_identification",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope faithful_normal_beta_KMS_family",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope unique_finite_volume_ground",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope strict_ground_Gaussian_reference_advantage",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope beta_to_infinity_ground_free_energy_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall arbitrary_bounded_K_beta_family",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall original_fixed_raw_CL8_family",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall thermodynamic_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall strict_thermodynamic_energy_density",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall physical_empty_space_reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall absolute_vacuum_energy_fixed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall spontaneous_symmetry_breaking_or_phase_transition",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall interacting_Hadamard_or_microlocal_spectrum",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall original_3D_Q3LOCK_parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall physical_light_speed_derived",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall C0_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall N1_through_N5_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall C6_advanced",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall CP1_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall Sector_A_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall Pre_A_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": "ANALYTIC theorem with executable common-cutoff Wick-change, Q3 Laplacian, thermal-covariance, Fock trace, four-particle Rayleigh-Ritz, scalar-gauge, beta-limit, mutation, source-scope and unchanged-C6 audits; scripts do not replace the finite-component P(phi)2 form/FKN proof",
+      "expected": "ANALYTIC",
+      "group": "scope",
+      "name": "analytic proof label",
+      "status": "PASS"
+    },
+    {
+      "actual": "T1",
+      "expected": "T1",
+      "group": "scope",
+      "name": "C6 tier unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "ACTIVE",
+      "expected": "ACTIVE",
+      "group": "scope",
+      "name": "C6 lifecycle unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "['CONDITIONAL']",
+      "expected": "['CONDITIONAL']",
+      "group": "scope",
+      "name": "C6 evidence unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "['C6-BCC-PREMISE-BLOCKED']",
+      "expected": "['C6-BCC-PREMISE-BLOCKED']",
+      "group": "scope",
+      "name": "C6 gate unchanged",
+      "status": "PASS"
+    }
+  ],
+  "candidate_id": "PA-CP1-CL8-Q3-BETA-INDEPENDENT-HAMILTONIAN-GROUND-REFERENCE-ROUTE-SPLIT-v0",
+  "claim_bearing": false,
+  "derived": {
+    "Q3": {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "trace_A": "8*g + 32*lambda",
+      "trace_L": "24"
+    },
+    "Wick": {
+      "coherent_scalar": "-6*D**2*(g + 4*lambda) - D*(24*eta + 8*m)/2",
+      "compensator": "6*D**2*(g + 4*lambda) + D*(24*eta + 8*m)/2",
+      "delta2_W4": "48*g + 192*lambda",
+      "delta_W4": "3*g*x0**2 + 3*g*x1**2 + 3*g*x2**2 + 3*g*x3**2 + 3*g*x4**2 + 3*g*x5**2 + 3*g*x6**2 + 3*g*x7**2 + 12*lambda*x0**2 - 6*lambda*x0*x1 - 6*lambda*x0*x2 - 6*lambda*x0*x4 + 12*lambda*x1**2 - 6*lambda*x1*x3 - 6*lambda*x1*x5 + 12*lambda*x2**2 - 6*lambda*x2*x3 - 6*lambda*x2*x6 + 12*lambda*x3**2 - 6*lambda*x3*x7 + 12*lambda*x4**2 - 6*lambda*x4*x5 - 6*lambda*x4*x6 + 12*lambda*x5**2 - 6*lambda*x5*x7 + 12*lambda*x6**2 - 6*lambda*x6*x7 + 12*lambda*x7**2"
+    },
+    "free_Fock_trace": [
+      {
+        "cutoff": 8,
+        "log_free_partition": 6.093190086642947
+      },
+      {
+        "cutoff": 16,
+        "log_free_partition": 6.0932690330776555
+      },
+      {
+        "cutoff": 32,
+        "log_free_partition": 6.093269034360885
+      },
+      {
+        "cutoff": 64,
+        "log_free_partition": 6.093269034360885
+      }
+    ],
+    "ground": {
+      "Rayleigh": "t*(77*t - 30)/(21*(t**2 + 1))",
+      "amplitude": "sqrt(6)*(g + 3*lambda)/(8*L*m0**2)",
+      "free_energy": [
+        {
+          "beta": 1.0,
+          "difference": -1.918100529795423
+        },
+        {
+          "beta": 2.0,
+          "difference": -1.9921436519289424
+        },
+        {
+          "beta": 4.0,
+          "difference": -1.9999176839494677
+        },
+        {
+          "beta": 8.0,
+          "difference": -1.9999999859378228
+        }
+      ]
+    },
+    "thermal_difference": [
+      {
+        "beta": 0.7,
+        "bose": 0.2574019595453674,
+        "coth_minus_vacuum": 0.2574019595453674
+      },
+      {
+        "beta": 1.5,
+        "bose": 0.05389287064905368,
+        "coth_minus_vacuum": 0.0538928706490537
+      },
+      {
+        "beta": 3.0,
+        "bose": 0.005977182237658517,
+        "coth_minus_vacuum": 0.005977182237658493
+      },
+      {
+        "beta": 6.0,
+        "bose": 0.0001313621675400485,
+        "coth_minus_vacuum": 0.00013136216754004645
+      }
+    ]
+  },
+  "exploration_id": "EXP-000774",
+  "negative_ids": [],
+  "next_gate": "PA-CP1-CL8-Q3-THERMODYNAMIC-PRESSURE-RELATIVE-ENTROPY-DENSITY-AND-PHASE-ROUTE-SPLIT",
+  "result_id": "PA-CP1-CL8-Q3-COMPACT-CIRCLE-FIXED-HAMILTONIAN-FK-GIBBS-AND-STRICT-GROUND-REFERENCE-ADVANTAGE",
+  "schema": "tect/pre-a-cp1-cl8-q3-beta-independent-hamiltonian-ground-reference-route-split-primary/0.1",
+  "scope": {
+    "C0_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Feynman_Kac_Nelson_Gibbs_identification": true,
+    "N1_through_N5_closed": false,
+    "Pre_A_complete": false,
+    "Sector_A_complete": false,
+    "absolute_vacuum_energy_fixed": false,
+    "arbitrary_bounded_K_beta_family": false,
+    "beta_independent_compact_circle_Hamiltonian": true,
+    "beta_to_infinity_ground_free_energy_limit": true,
+    "compact_resolvent_and_trace_class_heat_semigroup": true,
+    "exact_thermal_to_vacuum_Wick_dictionary": true,
+    "faithful_normal_beta_KMS_family": true,
+    "fixed_spatial_circle_L": true,
+    "interacting_Hadamard_or_microlocal_spectrum": false,
+    "matrix_and_scalar_coherence_necessary_sufficient": true,
+    "new_Wick_coherent_extension_of_EXP766": true,
+    "original_3D_Q3LOCK_parent": false,
+    "original_fixed_raw_CL8_family": false,
+    "physical_empty_space_reference": false,
+    "physical_light_speed_derived": false,
+    "self_adjoint_lower_bounded_Hamiltonian": true,
+    "spontaneous_symmetry_breaking_or_phase_transition": false,
+    "strict_ground_Gaussian_reference_advantage": true,
+    "strict_thermodynamic_energy_density": false,
+    "thermodynamic_limit": false,
+    "unique_finite_volume_ground": true
+  },
+  "script_version": "0.1.0",
+  "source_sha256": {
+    "certificate": "4ba77918121ab978911eba95334d1d46344ad4e2be22696a7a56c4ba90b7c50e",
+    "manifest": "f03f040bd834b02e0dec4ce20d04c1170713bd711e1e2aa629000bf10d8680e4",
+    "script": "08e65ad56b7897a5f9fd53d545ae9484ea96125ebad2e58f821ac88cb9e1e49d"
+  },
+  "verdict": "WICK-COHERENT FIXED-L BETA-INDEPENDENT Q3 HAMILTONIAN, FKN GIBBS FAMILY, UNIQUE GROUND, AND STRICT GROUND-REFERENCE ADVANTAGE CLOSED; ARBITRARY K_BETA, THERMODYNAMIC, PHYSICAL-EMPTY, PHASE, MICROLOCAL AND ORIGINAL-PARENT GATES OPEN"
+}

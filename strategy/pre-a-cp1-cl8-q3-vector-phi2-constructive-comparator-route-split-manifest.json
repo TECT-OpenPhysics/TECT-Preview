@@ -1,0 +1,201 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-q3-vector-phi2-constructive-comparator-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-Q3-VECTOR-PHI2-CONSTRUCTIVE-COMPARATOR-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-MATRIX-COUNTERTERM-STATE-COMPACTNESS-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-ORDERED-Q3-GAUSSIAN-TANGENT-REGULATOR-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-Q3-PHI2-NORMALIZABILITY-L1-DENSITY-AND-CONFIGURATION-CHARACTERISTIC-LIMIT-WITH-RP-AND-SELECTION-NOGOS",
+  "negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-FULL-EUCLIDEAN-SHARP-CUTOFF-REFLECTION-POSITIVITY",
+    "NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE",
+    "NG-2026-08-04-PRE-A-CP1-CL8-CONSTRUCTIVE-NORMALIZABILITY-ONLY-PHYSICAL-STATE-SELECTION"
+  ],
+  "exploration_id": "EXP-000766",
+  "correction_exploration_id": "EXP-000767",
+  "candidate_family": "PRE-A-CL8-Q3-VECTOR-PHI2-EUCLIDEAN-COMPARATOR",
+  "package_version": "0.1.1",
+  "issued": "2026-08-04",
+  "authority": "T0 exact instantiation of established multivariate P(Phi)_2 normalizability, a derived common-Gaussian L1 density corollary, time-zero configuration-characteristic convergence, and three scoped route no-gos; claim-nonbearing and not a canonical CL8, OS, KMS, ground, Hadamard, physical-vacuum, C6, CP1, or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "work": "Hirotatsu Nagoji, Construction of the Gibbs measures associated with Euclidean quantum field theory with various polynomial interactions in the Wick renormalizable regime, arXiv:2305.19583v2 (2024-12-13)",
+    "url": "https://arxiv.org/pdf/2305.19583",
+    "used_results": [
+      "Theorem 1.7(i), the alpha=d/2 multivariate normalizability criterion",
+      "Theorem 1.7(i) applied again to 2F, combined with the standard Wick-martingale conditional-expectation identity",
+      "Proposition A.1, almost-sure convergence of the Wick monomials"
+    ],
+    "not_supplied": "reflection positivity, Osterwalder-Schrader reconstruction, a Hamiltonian or canonical momentum, a beta-to-infinity ground limit, identification with the CL8 spatial regulator, a Hadamard theorem, or a phase transition"
+  },
+  "statement": "Let mu be the product massive Gaussian field on the Euclidean two-torus with eight independent components and covariance (m0^2-Delta)^(-1), m0>0. Let P_int(x)=(1/2)x^T K_int x+W4(x), where K_int=m_int I+eta_int L_Q3 is any real symmetric Q3 interaction residual and W4=(g/4)sum_e x_e^4+(lambda/4)sum_(e~f)(x_e-x_f)^2(x_e^2+x_f^2), with g>0 and lambda>=0. Put F=-P_int. For the polynomial support A, every beta in A^- has total degree at most three. Taking q(beta)=5/4 and m=0, the exact coercive bound W4>=g|x|^4/32 gives sup_x[F(x)+sum_(beta in A^-)|x^beta|^(5/4)]<infinity. Thus Nagoji Theorem 1.7(i) applies at d=2, alpha=1, n=8, and Proposition A.1 constructs the limiting Wick interaction R. Finite Hermite conditioning gives E[R_M|G_N]=R_N for M>=N; Proposition A.1 and its uniform high-moment estimate give R_M->R in L1, so conditional-expectation continuity gives R_N=E[R|G_N]. Applying Theorem 1.7(i) to 2F then gives sup_N E_mu exp(2R_N)<=E_mu exp(2R)<infinity. Since R_N tends almost surely to R, the unnormalized weights converge in L1, the partition functions converge to a positive limit, and the normalized common-Gaussian densities converge in L1/total variation. For every fixed finite spatial Fourier label space, the sharp-cutoff time-zero configuration variables Q_N(f) converge in Gaussian L2 and their interacting second moments are uniformly bounded, so their characteristic functions converge along the full sequence and are uniformly equicontinuous at the identity. This closes only a finite-Euclidean-torus configuration comparator. It does not identify the canonical CL8 Hamiltonian states or the momentum part of the Weyl CCR. At N=1 the projected interacting law nu_1=(P_1)_#(rho_1 mu) is not reflection positive: translation invariance gives its spatial-zero covariance b0+2b1 cos(t-s), equivalence to the nondegenerate projected Gaussian gives b1>0, and an explicit three-point test is strictly negative. This does not by itself decide reflection positivity of the lifted common-base measure, any N>1 projected law, or the limiting local measure. Normalizability also cannot select a physical state, since distinct quadratic inputs produce distinct normalized zero-mode densities while satisfying the same criterion.",
+  "euclidean_model": {
+    "dimension": 2,
+    "components": 8,
+    "covariance": "(m0^2-Delta_T2)^(-1) in each independent component, with m0>0",
+    "cutoff": "the full Euclidean sharp spectral projector P_N used by the external authority",
+    "polynomial": "P_int(x)=(1/2)x^T[m_int I+eta_int L_Q3]x+(g/4)sum_e x_e^4+(lambda/4)sum_(e~f)(x_e-x_f)^2(x_e^2+x_f^2)",
+    "density_sign": "F=-P_int because the external convention is exp(integral :F:)",
+    "domain": "g>0, lambda>=0, arbitrary real m_int and eta_int, m0>0, fixed Euclidean two-torus",
+    "base_mass_boundary": "the Gaussian covariance already contributes m0^2 I to the Euclidean quadratic form. After the chi,c,hbar and field rescaling is declared, matching a target canonical quadratic K_target requires K_int=K_target-m0^2 I; this package does not prove that rescaling or the canonical regulator bridge"
+  },
+  "theorem_hypothesis_instantiation": {
+    "wick_regime": "for degree k=4, d=2 and alpha=1, (k-1)d/(2k)=3/4<1=d/2",
+    "support_fact": "if A is the monomial support of a degree-four polynomial, every beta in A^- has |beta|<=3",
+    "generic_support_fixture": "the formal maximal support has 64 monomial indices and its lower-index envelope A^- has 61 indices, with degree counts 0:1, 1:8, 2:20, 3:32; the actual support equals this maximal fixture when lambda!=0, eta_int!=0, and m_int+3 eta_int!=0, while coefficient cancellations only shrink it",
+    "maximal_formal_support": {
+      "support_count": 64,
+      "A_minus_count": 61,
+      "degree_counts": {
+        "0": 1,
+        "1": 8,
+        "2": 20,
+        "3": 32
+      },
+      "support_64_attainment_conditions": [
+        "lambda!=0",
+        "eta_int!=0",
+        "m_int+3 eta_int!=0"
+      ],
+      "A_minus_61_attainment_condition": "lambda!=0",
+      "actual_support_relation": "subset"
+    },
+    "chosen_exponent": "q(beta)=5/4, hence q>1 and q|beta|<=15/4<4",
+    "chosen_mass_budget": "m=0<m0^2/2",
+    "coercivity": "W4(x)>=g|x|^4/32",
+    "domination": "F(x)+sum_(beta in A^-)|x^beta|^(5/4)<=-g|x|^4/32+C_A(1+|x|^(15/4))+(1/2)||K_int||op|x|^2",
+    "result": "the right side has a finite supremum, so Theorem 1.7(i) applies"
+  },
+  "density_convergence_corollary": {
+    "wick_limit": "Proposition A.1 gives R_N->R almost surely after spatial integration of every Wick monomial",
+    "scaled_input": "2F has the same support and a twice-as-strong negative quartic, so the same theorem hypothesis applies",
+    "Wick_martingale": "for the nested spectral Gaussian sigma-fields G_N, the variance-additive Hermite identity gives R_N=E[R|G_N]",
+    "terminal_passage": "for M>=N the finite Hermite identity gives E[R_M|G_N]=R_N; Proposition A.1 and the uniform high-moment estimate in its proof give R_M->R in L1, so continuity of conditional expectation in L1 gives E[R|G_N]=R_N",
+    "finite_to_terminal_martingale": {
+      "finite_identity": "for every M>=N, E[R_M|G_N]=R_N",
+      "limit_input": "Proposition A.1 and estimate (A.3) give R_M->R in L1",
+      "terminal_identity": "E[R|G_N]=R_N",
+      "centered_degrees": [1, 2, 3, 4]
+    },
+    "uniform_integrability": "Theorem 1.7(i) applied to 2F gives E exp(2R)<infinity; conditional Jensen then gives sup_N E exp(2R_N)<=E exp(2R), so exp(R_N) is uniformly integrable",
+    "normalizer_floor": "every positive-degree Wick monomial is centered, so E R_N=0 and Jensen gives Z_N=E exp(R_N)>=1",
+    "weight_limit": "Vitali convergence gives ||exp(R_N)-exp(R)||_L1(mu)->0",
+    "normalizer_limit": "Z_N=E exp(R_N)->Z=E exp(R)>0",
+    "density_limit": "rho_N=exp(R_N)/Z_N converges to rho=exp(R)/Z in L1(mu), equivalently in the common-space total-variation norm",
+    "boundary": "this total variation is for lifted densities on one common Gaussian distribution space, not total variation between mutually singular finite-dimensional laws on different spaces"
+  },
+  "configuration_characteristic_limit": {
+    "labels": "real smooth spatial test functions f in a fixed finite Fourier space V_K",
+    "time_zero_variable": "Q_N(f) is the Euclidean sharp-cutoff field evaluated at time zero and spatially smeared by f",
+    "Gaussian_trace": "for fixed K, E_mu|Q_N(f)-Q(f)|^2 is the convergent temporal-frequency tail of sum_(k,n)|f_k|^2/(m0^2+k^2+n^2)",
+    "interacting_moment": "Cauchy-Schwarz gives E_(rho_N mu)|Q_N(f)|^2<=||rho_N||_2 [E_mu Q_N(f)^4]^(1/2), and both factors are uniformly bounded on V_K",
+    "equicontinuity": "|1-E_(rho_N mu)exp(iQ_N(f))|<=sqrt(E_(rho_N mu)|Q_N(f)|^2)<=C_K||f||",
+    "full_sequence": "L1 density convergence plus the Gaussian L2 trace limit gives E_(rho_N mu)exp(iQ_N(f))->E_(rho mu)exp(iQ(f)) for every f in V_K",
+    "boundary": "this is the commuting configuration subgroup only; a sharp-time canonical momentum is not an ordinary Euclidean random variable and the full phase-space Weyl CCR is not constructed"
+  },
+  "configuration_only_full_Weyl_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE",
+    "excluded_route": "identify a full regular canonical Weyl state from convergence of every time-zero configuration characteristic alone",
+    "witness": "psi_0(x)=pi^(-1/4)exp(-x^2/2) and psi_1=exp(iQ^2/2)psi_0 have the same Q distribution and characteristic exp(-t^2/4), but with [Q,P]=i their momentum variances are 1/2 and 1 because U^* P U=P+Q",
+    "retained_routes": "reflection-positive reconstruction, direct momentum characteristic estimates, a canonical Feynman-Kac bridge, or another proof of the joint Weyl functional"
+  },
+  "wick_scheme_translation": {
+    "whole_polynomial": ":P_int:_C=(1/2)q^T K_int q+:W4:_C-(C/2)Tr(K_int)",
+    "same_covariance": "the external whole-polynomial Wick convention and the EXP-000765 W4-only convention differ only by a scalar, so their normalized densities agree when the covariance and K_int agree",
+    "covariance_change": "if the common diagonal covariance changes from C to C+D, preserving the raw quadratic requires K_(C+D)=K_C+3D[(g+lambda)I+lambda L_Q3], up to an additive scalar energy",
+    "boundary": "finite-beta Euclidean, infinite-time vacuum, and canonical lattice covariances are not identical; the displayed translation types the polynomial scheme but does not prove regulator or state equivalence"
+  },
+  "reflection_positivity_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-FULL-EUCLIDEAN-SHARP-CUTOFF-REFLECTION-POSITIVITY",
+    "cutoff_fixture": "at N=1 and spatial momentum zero, the projected Gaussian covariance is C_1(t-s)=a0+2a1 cos(t-s) with a1=1/(m0^2+1)>0",
+    "projected_interacting_extension": "the projected finite-dimensional interacting law nu_1=(P_1)_#(rho_1 mu) has a strictly positive density and is invariant under time translations, reflection, and global sign; hence its one-component spatial-zero covariance is b0+2b1 cos(t-s), where b1=E|phi_hat(1,0)|^2>0 by full support",
+    "positive_times": "t=(pi/6,pi/3,pi/2)",
+    "weights": "w=(1,-sqrt(3),sqrt(3)-1)",
+    "moments": "sum w=0, sum w cos(t)=0, sum w sin(t)=sqrt(3)-2",
+    "reflection_form": "for either the Gaussian coefficient a1 or the projected interacting coefficient b1, sum_(i,j)w_i w_j C(t_i+t_j)=-2b1(2-sqrt(3))^2<0 after renaming the positive coefficient",
+    "scope": "this refutes reflection positivity of the induced finite-dimensional N=1 projected sharp-cutoff law, including its positive density-weighted interacting version, and any automatic OS proof based on that projected approximant; it does not by itself refute reflection positivity of the lifted rho_N mu measure on the common full Gaussian field, any N>1 projected law, the limiting local measure, or a time-local/spatial-only approximation",
+    "projected_law_scope": {
+      "cutoff": 1,
+      "law": "nu_1=(P_1)_#(rho_1 mu)",
+      "Gaussian_b1_positive": true,
+      "interacting_b1_positive": true,
+      "lifted_rho1_mu_decided": false,
+      "higher_projected_N_decided": false,
+      "limiting_local_measure_decided": false
+    }
+  },
+  "selection_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-CONSTRUCTIVE-NORMALIZABILITY-ONLY-PHYSICAL-STATE-SELECTION",
+    "excluded_route": "infer a unique canonical or physical state from coercivity and constructive normalizability alone",
+    "witness": "with the same m0,g,lambda and cutoff N=0, both K_int=0 and K_int=I satisfy the theorem hypothesis, while the ratio of their normalized eight-dimensional zero-mode densities is a nonconstant multiple of exp(-V|x|^2/2), with normalized Haar volume V=1",
+    "volume_convention": {
+      "ratio": "c exp(-V|x|^2/2)",
+      "V": "integral_T2 1 dz",
+      "normalized_Haar_V": 1
+    },
+    "retained_routes": "a separately fixed Hamiltonian/Feynman-Kac bridge, beta or ground criterion, symmetry breaking boundary condition, energy reference, KMS condition, or another physical state-selection rule"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-UNIFORM-WEYL-EQUICONTINUITY-AND-INTERACTING-LIMIT-IDENTIFICATION",
+    "status": "PARTIAL ADVANCE; EUCLIDEAN Q3 VECTOR P(PHI)_2 NORMALIZABILITY, COMMON-GAUSSIAN FULL-SEQUENCE L1 DENSITY CONVERGENCE, AND TIME-ZERO CONFIGURATION CHARACTERISTICS CLOSED; CANONICAL CL8 STATE, MOMENTUM CCR, REFLECTION POSITIVITY, AND GROUND IDENTIFICATION OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-Q3-VECTOR-PHI2-NAGOJI-HYPOTHESIS-INSTANTIATION",
+      "PA-CP1-CL8-Q3-VECTOR-PHI2-COMMON-GAUSSIAN-L1-DENSITY-LIMIT",
+      "PA-CP1-CL8-Q3-VECTOR-PHI2-TIME-ZERO-CONFIGURATION-CHARACTERISTIC-LIMIT"
+    ],
+    "refuted_subgates": [
+      "PA-CP1-CL8-PROJECTED-EUCLIDEAN-SHARP-CUTOFF-AUTOMATIC-REFLECTION-POSITIVITY",
+      "PA-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE",
+      "PA-CP1-CL8-NORMALIZABILITY-ONLY-PHYSICAL-STATE-SELECTION"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-TIME-LOCAL-REFLECTION-POSITIVE-EUCLIDEAN-REGULATOR",
+      "PA-CP1-CL8-FEYNMAN-KAC-IDENTIFICATION-WITH-CANONICAL-SPATIAL-REGULATORS",
+      "PA-CP1-CL8-FULL-CANONICAL-WEYL-CCR-AND-MOMENTUM-REGULARITY",
+      "PA-CP1-CL8-BETA-TO-INFINITY-GROUND-STATE-LIMIT",
+      "PA-CP1-CL8-INTERACTING-HADAMARD-OR-MICROLOCAL-LIMIT",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-CP1-CL8-PHYSICAL-STATE-AND-ENERGY-REFERENCE"
+    ],
+    "next_gate": "PA-CP1-CL8-TIME-LOCAL-REFLECTION-POSITIVE-REGULATOR-AND-CANONICAL-FEYNMAN-KAC-BRIDGE"
+  },
+  "scope": {
+    "Nagoji_hypotheses_instantiated": true,
+    "finite_Euclidean_torus_vector_Phi2_measure": true,
+    "common_Gaussian_L1_density_convergence": true,
+    "time_zero_configuration_characteristic_full_sequence": true,
+    "time_zero_configuration_characteristic_equicontinuity": true,
+    "same_covariance_Wick_scheme_translation": true,
+    "canonical_CL8_regulator_identified": false,
+    "canonical_Hamiltonian_state_identified": false,
+    "full_phase_space_Weyl_CCR": false,
+    "canonical_momentum_regularity": false,
+    "sharp_projected_Euclidean_cutoff_law_reflection_positive": false,
+    "limiting_measure_reflection_positive": false,
+    "Osterwalder_Schrader_reconstruction": false,
+    "beta_KMS_state": false,
+    "ground_or_vacuum_state": false,
+    "unique_physical_state_selected": false,
+    "interacting_Hadamard_state": false,
+    "thermodynamic_phase_transition": false,
+    "physical_state_or_vacuum": false,
+    "below_empty_space_comparison": false,
+    "physical_light_speed_derived": false,
+    "original_3D_Q3LOCK_parent": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "primary": "codes/foundations/pre_a_cp1_cl8_q3_vector_phi2_constructive_comparator_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_q3_vector_phi2_constructive_comparator_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_q3_vector_phi2_constructive_comparator_route_split_verify.py",
+    "fixtures": "exact Q3 cube maximal support, cancellation sentinel, and coercivity; A^- degree enumeration and 5/4 domination; finite Hermite conditioning, degree-one-through-four Wick centering, and L1 terminal passage; scaled-polynomial uniform-integrability logic; finite temporal-tail trace sums; Gaussian fourth moments and characteristic bounds; whole-polynomial Wick scalar translation; N=1 projected-law reflection-positivity counterexample; N=0 volume-typed state-selection density ratio; scope and unchanged-C6 firewalls"
+  },
+  "prior_art_boundary": "The multivariate P(Phi)_2 normalizability theorem, convergence and martingale conditioning of Wick monomials, uniform-integrability/Vitali implication, Gaussian trace construction, and Osterwalder-Schrader framework are established mathematics. No world-first or new general constructive-QFT theorem is claimed. The repository-specific result is the exact hypothesis instantiation for the CL8/Q3 polynomial, the elementary L1 and configuration-characteristic corollaries, the Wick-scheme dictionary, and the explicit projected-sharp-cutoff, configuration-only, and selection route separations.",
+  "no_overclaim": "This package constructs only a fixed-finite-Euclidean-torus eight-component Q3 polynomial-field comparator and proves common-Gaussian density and configuration-characteristic convergence. It proves non-reflection-positivity only for the induced N=1 projected sharp-cutoff law, not automatically for the lifted common-base or limiting local measure. It does not prove that the limiting measure satisfies OS hypotheses, that the comparator equals the canonical CL8 Hamiltonian ground or Gibbs states, that the canonical momentum or full Weyl CCR has a regular limit, that beta tends to infinity, that a physical state or energy reference is selected, that the state is Hadamard, that a thermodynamic phase transition occurs, that the original three-dimensional Q3 parent exists, that energy lies below empty space, or that C0, N1-N5, C6, CP1, or Pre-A is complete."
+}

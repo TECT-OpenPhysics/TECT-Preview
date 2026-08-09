@@ -1,0 +1,135 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-q3-beta-independent-hamiltonian-ground-reference-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-Q3-BETA-INDEPENDENT-HAMILTONIAN-GROUND-REFERENCE-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-Q3-FIXED-TORUS-OS-KMS-MARKOV-REFERENCE-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-Q3-COMPACT-CIRCLE-FIXED-HAMILTONIAN-FK-GIBBS-AND-STRICT-GROUND-REFERENCE-ADVANTAGE",
+  "negative_ids": [],
+  "reused_negative_ids": [
+    "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR",
+    "NG-2026-08-04-PRE-A-CP1-CL8-FIXED-RAW-QUADRATIC-FINITE-Q3-RENORMALIZED-LIMIT"
+  ],
+  "exploration_id": "EXP-000774",
+  "candidate_family": "PRE-A-CL8-Q3-COMPACT-CIRCLE-FIXED-HAMILTONIAN-AND-GROUND-REFERENCE",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 analytic theorem for a newly declared Wick-coherent extension of the EXP-000773 fixed-torus Q3 state: exact thermal-to-vacuum Wick dictionary, one beta-independent compact-circle vector P(phi)2 Hamiltonian, Feynman-Kac-Nelson Gibbs identification, unique finite-volume ground and strict scalar-gauge-invariant ground advantage over the free-vacuum trial; claim-nonbearing and not a theorem for arbitrary bounded K_beta, the original fixed-raw CL8 family, thermodynamic phase selection, physical empty space, C6, CP1, or Pre-A",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "scalar_Hamiltonian": "J. Glimm and A. Jaffe, Positivity and self-adjointness of the P(phi)2 Hamiltonian, Commun. Math. Phys. 22 (1971) 253-258, DOI 10.1007/BF01877508",
+    "charged_nonradial_precedent": "C. Gerard, Spectral and scattering theory of space-cutoff charged P(varphi)2 models, arXiv:0906.5478, especially Proposition 4.1, Theorem 4.3 and Corollary 4.5",
+    "thermal_FKN_precedent": "C. Gerard and C. D. Jaekel, arXiv:math-ph/0403048 and arXiv:math-ph/0609088",
+    "boundary": "The scalar and two-real-component nonradial P(phi)2 mechanisms are prior art. This package writes the finite eight-component Q3 adaptation and its exact Wick-coordinate interface; it does not claim novelty for constructive Hamiltonian or Feynman-Kac theory."
+  },
+  "setup": {
+    "space": "fixed spatial circle S_L, L finite, with m0>0",
+    "one_particle": "h=L2(S_L;C^8), omega=sqrt(-partial_x^2+m0^2) tensor I8",
+    "Fock": "F=Gamma_s(h), H0=dGamma(omega), free vacuum Omega0",
+    "Q3": "W4=(g/4)sum_e q_e^4+(lambda/4)sum_(e~f)(q_e-q_f)^2(q_e^2+q_f^2), g>0, lambda>=0",
+    "matrix": "A_Q3=(g+lambda)I8+lambda L_Q3, G=g+4lambda, Tr A_Q3=8G",
+    "fixed_polynomial": "P_*(q)=q^T K_* q/2+W4(q), with any fixed real symmetric K_*"
+  },
+  "thermal_vacuum_Wick_dictionary": {
+    "vacuum_cutoff_covariance": "C_(star,N)=L^(-1) sum_(|k|<=N)(2 omega_k)^(-1)",
+    "thermal_cutoff_covariance": "C_(beta,N)=L^(-1) sum_(|k|<=N)coth(beta omega_k/2)/(2 omega_k)",
+    "finite_difference": "D_(beta,L)=lim_N(C_(beta,N)-C_(star,N))=L^(-1)sum_k[omega_k(exp(beta omega_k)-1)]^(-1)>0 and tends to zero as beta tends to infinity",
+    "whole_Wick_change": ":P_(K_beta):_(C_beta)=:P_(K_beta-3D_beta A_Q3):_(C_star)+6D_beta^2 G-(D_beta/2)Tr K_beta",
+    "matrix_coherence": "one fixed vacuum-Wick matrix exists if and only if K_beta=K_*+3D_beta A_Q3",
+    "coherent_scalar": "under matrix coherence, :P_(K_beta):_(C_beta)=:P_*:_(C_star)-(D_beta/2)Tr K_*-6D_beta^2 G",
+    "absolute_scalar_coherence": "if the thermal density also contains e_beta and the fixed Hamiltonian contains e_*, exact unnormalized equality requires e_beta=e_*+(D_beta/2)Tr K_*+6D_beta^2 G",
+    "necessity": "comparison of the degree-two and degree-zero Wick coefficients makes the matrix and scalar conditions necessary as well as sufficient within the common diagonal-covariance Q3 basis",
+    "Q3_matrix_boundary": "for lambda>0 both the identity and L_Q3 coefficients run; scalar mass-only tuning cannot represent the common Hamiltonian"
+  },
+  "Hamiltonian_construction": {
+    "interaction": "V_L=integral_(S_L) :P_*(phi(x)):_(C_star) dx in the eight-component Gaussian Q-space",
+    "finite_component_adaptation": "component-indexed Wick kernels are a finite sum; product-Gaussian hypercontractivity and N_tau estimates are unchanged up to finite constants, while W4>=g|q|^4/32 supplies stability",
+    "result": "the cutoff forms converge to a closed lower-bounded form whose self-adjoint generator is H_L=H0+V_L; the finite-mode Hamiltonians converge in strong resolvent sense",
+    "comparison": "for every epsilon>0 there is C_epsilon with H0<=(1+epsilon)H_L+C_epsilon after a harmless common lower-bound shift",
+    "trace_and_compactness": "Tr exp(-sH0)=product_(k in Z)(1-exp(-s omega_k))^(-8)<infinity; the form comparison and min-max give compact resolvent and Tr exp(-sH_L)<infinity for every s>0",
+    "positivity": "the free Mehler kernel is positivity improving and the Feynman-Kac weight is strictly positive, so exp(-sH_L) is positivity improving and the compact ground eigenvector is unique up to phase"
+  },
+  "Feynman_Kac_Nelson_identification": {
+    "trace_formula": "Tr exp(-beta H_L)/Tr exp(-beta H0)=E_(mu_beta,L) exp[-integral_(T_beta times S_L):P_*(Phi):_(C_star) dt dx]",
+    "correlators": "the same formula holds with ordered bounded sharp-time multiplication observables",
+    "thermal_rewrite": "using K_beta=K_*+3D_beta A_Q3 and the coherent scalar rewrites the normalized loop law exactly as the EXP-000773 whole-thermal-Wick Q3 law",
+    "beta0_match": "given the EXP-000773 terminal K_(beta0), K_*=K_(beta0)-3D_(beta0,L)A_Q3 uniquely embeds that state into the coherent all-beta family",
+    "KMS": "rho_(beta,L)=exp(-beta H_L)/Tr exp(-beta H_L) is a faithful normal beta-KMS state on B(F), and its periodic OS reconstruction agrees with EXP-000773 at beta0",
+    "boundary": "arbitrary merely bounded K_beta families do not define this common Hamiltonian; the coherence law is additional declared structure"
+  },
+  "strict_ground_reference": {
+    "vacuum_expectation": "q_L[Omega0]=0 in the fixed vacuum-Wick convention, where q_L is the closed Hamiltonian form",
+    "four_particle_witness": "Omega0 and the normalized four-zero-mode vector chi_e lie in Q(H_L), and q_L(chi_e,Omega0)=(g+3lambda)sqrt(4!)/(16 L m0^2)>0; the quadratic matrix has no four-particle contribution",
+    "Rayleigh_Ritz": "with B=q_L[chi_e] finite and psi_t=(Omega0-t chi_e)/sqrt(1+t^2), q_L[psi_t]=[-2tA+t^2B]/(1+t^2)<0 for sufficiently small t>0",
+    "result": "E0(H_L)<q_L[Omega0]=0; equivalently E0(H_L)-q_L[Omega0]<0, which is invariant under H_L->H_L+cI",
+    "uniqueness": "compactness and positivity improvement make the interacting ground unique; it is invariant under every symmetry shared by K_* and W4 (always global Z2, and full Q3 graph symmetry only when K_* also has it)",
+    "beta_limit": "F_H(beta)-F_0(beta) tends to E0(H_L)<0 as beta tends to infinity; D_beta and the coherent scalar tend to zero, so the coherent thermal-Wick representation has the same ground limit"
+  },
+  "physical_and_thermodynamic_boundary": {
+    "reference": "Omega0 is the named massive free Fock vacuum selected by inserted m0,L and K_* units, not a derived cosmic empty-space state",
+    "absolute_energy": "the invariant theorem compares the interacting ground to its own free-vacuum trial expectation; it does not fix the gravitational or absolute vacuum-energy zero",
+    "thermodynamic": "fixed-L strictness does not prove that L^(-1)[E0(H_L)-<Omega0,H_L Omega0>] has a strictly negative L->infinity limit",
+    "phase": "the unique finite-volume symmetric ground is not spontaneous symmetry breaking, condensate selection or a genuine phase transition",
+    "microlocal": "Hamiltonian/FKN construction does not by itself prove an interacting microlocal-spectrum or Hadamard condition"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-BETA-INDEPENDENT-HAMILTONIAN-THERMODYNAMIC-REFERENCE-AND-GROUND-LIMIT-ROUTE-SPLIT",
+    "status": "WICK-COHERENT FIXED-L BETA-INDEPENDENT Q3 HAMILTONIAN, FKN GIBBS FAMILY, UNIQUE GROUND, AND STRICT GROUND-REFERENCE ADVANTAGE CLOSED; ARBITRARY K_BETA, THERMODYNAMIC, PHYSICAL-EMPTY, PHASE, MICROLOCAL AND ORIGINAL-PARENT GATES OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-Q3-THERMAL-TO-VACUUM-WICK-COHERENCE-DICTIONARY",
+      "PA-CP1-CL8-Q3-COMPACT-CIRCLE-BETA-INDEPENDENT-HAMILTONIAN",
+      "PA-CP1-CL8-Q3-COMPACT-CIRCLE-FEYNMAN-KAC-GIBBS-IDENTIFICATION",
+      "PA-CP1-CL8-Q3-COMPACT-CIRCLE-UNIQUE-GROUND",
+      "PA-CP1-CL8-Q3-STRICT-GROUND-GAUSSIAN-REFERENCE-ADVANTAGE"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-Q3-THERMODYNAMIC-PRESSURE-AND-RELATIVE-ENTROPY-DENSITY",
+      "PA-CP1-CL8-PHYSICAL-EMPTY-SPACE-REFERENCE-AND-ABSOLUTE-ENERGY",
+      "PA-CP1-CL8-INTERACTING-MICROLOCAL-SPECTRUM-OR-RELATIVISTIC-KMS",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-PRE-A-C0-N1-N5-VALIDATION"
+    ],
+    "next_gate": "PA-CP1-CL8-Q3-THERMODYNAMIC-PRESSURE-RELATIVE-ENTROPY-DENSITY-AND-PHASE-ROUTE-SPLIT"
+  },
+  "scope": {
+    "fixed_spatial_circle_L": true,
+    "new_Wick_coherent_extension_of_EXP766": true,
+    "exact_thermal_to_vacuum_Wick_dictionary": true,
+    "matrix_and_scalar_coherence_necessary_sufficient": true,
+    "beta_independent_compact_circle_Hamiltonian": true,
+    "self_adjoint_lower_bounded_Hamiltonian": true,
+    "compact_resolvent_and_trace_class_heat_semigroup": true,
+    "Feynman_Kac_Nelson_Gibbs_identification": true,
+    "faithful_normal_beta_KMS_family": true,
+    "unique_finite_volume_ground": true,
+    "strict_ground_Gaussian_reference_advantage": true,
+    "beta_to_infinity_ground_free_energy_limit": true,
+    "arbitrary_bounded_K_beta_family": false,
+    "original_fixed_raw_CL8_family": false,
+    "thermodynamic_limit": false,
+    "strict_thermodynamic_energy_density": false,
+    "physical_empty_space_reference": false,
+    "absolute_vacuum_energy_fixed": false,
+    "spontaneous_symmetry_breaking_or_phase_transition": false,
+    "interacting_Hadamard_or_microlocal_spectrum": false,
+    "original_3D_Q3LOCK_parent": false,
+    "physical_light_speed_derived": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC theorem with executable common-cutoff Wick-change, Q3 Laplacian, thermal-covariance, Fock trace, four-particle Rayleigh-Ritz, scalar-gauge, beta-limit, mutation, source-scope and unchanged-C6 audits; scripts do not replace the finite-component P(phi)2 form/FKN proof",
+    "primary": "codes/foundations/pre_a_cp1_cl8_q3_beta_independent_hamiltonian_ground_reference_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_q3_beta_independent_hamiltonian_ground_reference_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_q3_beta_independent_hamiltonian_ground_reference_route_split_verify.py",
+    "fixtures": "Tr A_Q3=8(g+4lambda); exact Wick heat-operator identity and scalar signs; D_beta Matsubara/Bose sum and decay; identity-plus-L_Q3 matrix flow; free Fock partition convergence; nonzero four-zero-mode creation coefficient; two-state Rayleigh-Ritz negativity; ground free-energy limit; arbitrary-K_beta, scalar-energy, thermodynamic, phase, physical-empty, Hadamard, original-parent and unchanged-C6 firewalls"
+  },
+  "prior_art_boundary": "Self-adjoint lower-bounded P(phi)2 Hamiltonians, Feynman-Kac-Nelson formulas, positivity improvement and thermal Gibbs constructions are established prior art. A charged two-real-component nonradial theorem demonstrates that radiality is not essential. The eight-component Q3 adaptation is a finite-index verification and repository interface theorem, not a world-first claim. No located source proves the complete TECT Pre-A physical chain.",
+  "no_overclaim": "This theorem constructs one mathematically coherent beta-independent Hamiltonian only for the newly declared vacuum-Wick extension on a fixed spatial circle. It does not retrofit an arbitrary bounded K_beta family or the original fixed-raw CL8 quadratic. Its strict negative ground advantage is relative to the named free Fock vacuum trial and does not identify physical empty space or fix absolute gravitational vacuum energy. It proves no thermodynamic limit, spontaneous transition, condensate selection, interacting Hadamard/microlocal spectrum, original three-dimensional Q3 parent, physical light, C0, N1-N5, C6, CP1, Sector A, or Pre-A."
+}

@@ -1,0 +1,1114 @@
+{
+  "assertion_summary": {
+    "passed": 108,
+    "total": 108
+  },
+  "assertions": [
+    {
+      "actual": "PA-CP1-CL8-Q3-FINITE-COMPONENT-GRS-BOUNDARY-PRESSURE-PERIODIC-GROUND-DENSITY-v0",
+      "expected": "PA-CP1-CL8-Q3-FINITE-COMPONENT-GRS-BOUNDARY-PRESSURE-PERIODIC-GROUND-DENSITY-v0",
+      "group": "identity",
+      "name": "candidate id",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-Q3-FINITE-COMPONENT-GRS-HALF-PERIODIC-PRESSURE-PERIODIC-GROUND-AND-SPECIFIC-KL-DENSITY",
+      "expected": "PA-CP1-CL8-Q3-FINITE-COMPONENT-GRS-HALF-PERIODIC-PRESSURE-PERIODIC-GROUND-AND-SPECIFIC-KL-DENSITY",
+      "group": "identity",
+      "name": "result id",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-000778",
+      "expected": "EXP-000778",
+      "group": "identity",
+      "name": "exploration id",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "identity",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'passed': 124, 'total': 124}",
+      "expected": "all pass",
+      "group": "parent",
+      "name": "EXP770 parent all pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "parent",
+      "name": "EXP770 parent sharp density",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "parent",
+      "name": "EXP770 parent periodic firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "group": "Q3",
+      "name": "Q3 graph has twelve edges",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*g*q0**2 + 3*g*q1**2 + 3*g*q2**2 + 3*g*q3**2 + 3*g*q4**2 + 3*g*q5**2 + 3*g*q6**2 + 3*g*q7**2 + 12*lambda*q0**2 - 6*lambda*q0*q1 - 6*lambda*q0*q2 - 6*lambda*q0*q4 + 12*lambda*q1**2 - 6*lambda*q1*q3 - 6*lambda*q1*q5 + 12*lambda*q2**2 - 6*lambda*q2*q3 - 6*lambda*q2*q6 + 12*lambda*q3**2 - 6*lambda*q3*q7 + 12*lambda*q4**2 - 6*lambda*q4*q5 - 6*lambda*q4*q6 + 12*lambda*q5**2 - 6*lambda*q5*q7 + 12*lambda*q6**2 - 6*lambda*q6*q7 + 12*lambda*q7**2",
+      "expected": "-6*lambda*(q0*q1 + q0*q2 + q0*q4 + q1*q3 + q1*q5 + q2*q3 + q2*q6 + q3*q7 + q4*q5 + q4*q6 + q5*q7 + q6*q7) + (3*g + 12*lambda)*(q0**2 + q1**2 + q2**2 + q3**2 + q4**2 + q5**2 + q6**2 + q7**2)",
+      "group": "Q3",
+      "name": "Q3 Wick Laplacian matrix identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "48*g + 192*lambda",
+      "expected": "48*g + 192*lambda",
+      "group": "Q3",
+      "name": "Q3 second Wick Laplacian",
+      "status": "PASS"
+    },
+    {
+      "actual": "6*delta**2*g + 24*delta**2*lambda + 3*delta*g*q0**2/2 + 3*delta*g*q1**2/2 + 3*delta*g*q2**2/2 + 3*delta*g*q3**2/2 + 3*delta*g*q4**2/2 + 3*delta*g*q5**2/2 + 3*delta*g*q6**2/2 + 3*delta*g*q7**2/2 + delta*k0/2 + delta*k1/2 + delta*k2/2 + delta*k3/2 + delta*k4/2 + delta*k5/2 + delta*k6/2 + delta*k7/2 + 6*delta*lambda*q0**2 - 3*delta*lambda*q0*q1 - 3*delta*lambda*q0*q2 - 3*delta*lambda*q0*q4 + 6*delta*lambda*q1**2 - 3*delta*lambda*q1*q3 - 3*delta*lambda*q1*q5 + 6*delta*lambda*q2**2 - 3*delta*lambda*q2*q3 - 3*delta*lambda*q2*q6 + 6*delta*lambda*q3**2 - 3*delta*lambda*q3*q7 + 6*delta*lambda*q4**2 - 3*delta*lambda*q4*q5 - 3*delta*lambda*q4*q6 + 6*delta*lambda*q5**2 - 3*delta*lambda*q5*q7 + 6*delta*lambda*q6**2 - 3*delta*lambda*q6*q7 + 6*delta*lambda*q7**2 + g*q0**4/4 + g*q1**4/4 + g*q2**4/4 + g*q3**4/4 + g*q4**4/4 + g*q5**4/4 + g*q6**4/4 + g*q7**4/4 + k0*q0**2/2 + k1*q1**2/2 + k2*q2**2/2 + k3*q3**2/2 + k4*q4**2/2 + k5*q5**2/2 + k6*q6**2/2 + k7*q7**2/2 + 3*lambda*q0**4/4 - lambda*q0**3*q1/2 - lambda*q0**3*q2/2 - lambda*q0**3*q4/2 + lambda*q0**2*q1**2/2 + lambda*q0**2*q2**2/2 + lambda*q0**2*q4**2/2 - lambda*q0*q1**3/2 - lambda*q0*q2**3/2 - lambda*q0*q4**3/2 + 3*lambda*q1**4/4 - lambda*q1**3*q3/2 - lambda*q1**3*q5/2 + lambda*q1**2*q3**2/2 + lambda*q1**2*q5**2/2 - lambda*q1*q3**3/2 - lambda*q1*q5**3/2 + 3*lambda*q2**4/4 - lambda*q2**3*q3/2 - lambda*q2**3*q6/2 + lambda*q2**2*q3**2/2 + lambda*q2**2*q6**2/2 - lambda*q2*q3**3/2 - lambda*q2*q6**3/2 + 3*lambda*q3**4/4 - lambda*q3**3*q7/2 + lambda*q3**2*q7**2/2 - lambda*q3*q7**3/2 + 3*lambda*q4**4/4 - lambda*q4**3*q5/2 - lambda*q4**3*q6/2 + lambda*q4**2*q5**2/2 + lambda*q4**2*q6**2/2 - lambda*q4*q5**3/2 - lambda*q4*q6**3/2 + 3*lambda*q5**4/4 - lambda*q5**3*q7/2 + lambda*q5**2*q7**2/2 - lambda*q5*q7**3/2 + 3*lambda*q6**4/4 - lambda*q6**3*q7/2 + lambda*q6**2*q7**2/2 - lambda*q6*q7**3/2 + 3*lambda*q7**4/4",
+      "expected": "delta**2*(48*g + 192*lambda)/8 + delta*(3*g*q0**2 + 3*g*q1**2 + 3*g*q2**2 + 3*g*q3**2 + 3*g*q4**2 + 3*g*q5**2 + 3*g*q6**2 + 3*g*q7**2 + k0 + k1 + k2 + k3 + k4 + k5 + k6 + k7 + 12*lambda*q0**2 - 6*lambda*q0*q1 - 6*lambda*q0*q2 - 6*lambda*q0*q4 + 12*lambda*q1**2 - 6*lambda*q1*q3 - 6*lambda*q1*q5 + 12*lambda*q2**2 - 6*lambda*q2*q3 - 6*lambda*q2*q6 + 12*lambda*q3**2 - 6*lambda*q3*q7 + 12*lambda*q4**2 - 6*lambda*q4*q5 - 6*lambda*q4*q6 + 12*lambda*q5**2 - 6*lambda*q5*q7 + 12*lambda*q6**2 - 6*lambda*q6*q7 + 12*lambda*q7**2)/2 + g*(q0**4 + q1**4 + q2**4 + q3**4 + q4**4 + q5**4 + q6**4 + q7**4)/4 + k0*q0**2/2 + k1*q1**2/2 + k2*q2**2/2 + k3*q3**2/2 + k4*q4**2/2 + k5*q5**2/2 + k6*q6**2/2 + k7*q7**2/2 + lambda*((q0 - q1)**2*(q0**2 + q1**2) + (q0 - q2)**2*(q0**2 + q2**2) + (q0 - q4)**2*(q0**2 + q4**2) + (q1 - q3)**2*(q1**2 + q3**2) + (q1 - q5)**2*(q1**2 + q5**2) + (q2 - q3)**2*(q2**2 + q3**2) + (q2 - q6)**2*(q2**2 + q6**2) + (q3 - q7)**2*(q3**2 + q7**2) + (q4 - q5)**2*(q4**2 + q5**2) + (q4 - q6)**2*(q4**2 + q6**2) + (q5 - q7)**2*(q5**2 + q7**2) + (q6 - q7)**2*(q6**2 + q7**2))/4",
+      "group": "Q3",
+      "name": "exact boundary Wick reordering identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "x0**4 + 2*x0**2*x1**2 - 6*x0**2/5 + x0*x1 + 3*x1**4 - 8*x1**2 + 36/25",
+      "expected": "x0**4 + 2*x0**2*x1**2 - 6*x0**2/5 + x0*x1 + 3*x1**4 - 8*x1**2 + 36/25",
+      "group": "conditioning",
+      "name": "multivariate Wick conditioning identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "521/432",
+      "expected": ">=0",
+      "group": "conditioning",
+      "name": "tensor covariance order fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "25/18",
+      "expected": ">=0",
+      "group": "conditioning",
+      "name": "tensor covariance order fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "(0, 73/144)",
+      "expected": "rank-one PSD",
+      "group": "conditioning",
+      "name": "scalar covariance order fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "(-B + 4*c4*r2*theta)**2/(16*c4*theta)",
+      "expected": "square",
+      "group": "subdominant",
+      "name": "quadratic Young identity is a square",
+      "status": "PASS"
+    },
+    {
+      "actual": "{0: 1, 1: 4/3, 2: 2, 3: 4}",
+      "expected": "1,4/3,2,4",
+      "group": "subdominant",
+      "name": "subdominant exponents",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6467813020709939",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.38365907706024827",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.39642428732630813",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.26516022668851097",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.8528294264250929",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6912",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.14185785123966943",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.4538371900826446",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04668235294117648",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.7271749999999999",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4105867647058819",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.280000000000002",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04511167269995219",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.721428181135168",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "20.038305443617237",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0015957663342153477",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.11437499999999999",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5879552971707713",
+      "expected": "finite",
+      "group": "subdominant",
+      "name": "multi-index Young finite supremum fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'side': 4.0, 'matrix_norm': 0.7096381466096604, 'scalar_norm': 0.952551144622199, 'coupling_norm': 1.6621892912318594}, {'side': 8.0, 'matrix_norm': 0.477363231103285, 'scalar_norm': 0.4551141241650284, 'coupling_norm': 0.9324773552683134}, {'side': 16.0, 'matrix_norm': 0.3371000660311464, 'scalar_norm': 0.22727281557269646, 'coupling_norm': 0.5643728816038429}, {'side': 32.0, 'matrix_norm': 0.23836564731140242, 'scalar_norm': 0.11363636363636567, 'coupling_norm': 0.35200201094776806}, {'side': 64.0, 'matrix_norm': 0.1685499656158105, 'scalar_norm': 0.056818181818181816, 'coupling_norm': 0.22536814743399233}]",
+      "expected": "decreasing to zero",
+      "group": "boundary",
+      "name": "boundary Wick coupling norm vanishes",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'side': 64.0, 'matrix_norm': 0.1685499656158105, 'scalar_norm': 0.056818181818181816, 'coupling_norm': 0.22536814743399233}",
+      "expected": "positive finite-size remainder",
+      "group": "boundary",
+      "name": "boundary norm has density not surface-rate conclusion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-1.0430718100418703, -0.972398369758505, -0.8991751258394357, -0.8236511181353314, -0.7461184746097056, -0.6669085597367906, -0.5863864491870888, -0.5049438877723106, -0.4229910040205438, -0.3409471554494617, -0.2592313513119303, -0.17825273503050304, -0.09840160210875279, -0.02004138191132549, 0.056498070414027504, 0.13092563199927226, 0.20299239831384797, 0.2724934915473381, 0.33926828904140727, 0.403199251675944]",
+      "expected": "nondecreasing",
+      "group": "convexity",
+      "name": "convex pressure slope monotonicity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.008265325623658504",
+      "expected": "0.031292154301256106",
+      "group": "convexity",
+      "name": "convex bounded-ball Lipschitz fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "[('F', 'F'), ('F', 'D'), ('F', 'N'), ('F', 'P'), ('D', 'F'), ('D', 'D'), ('D', 'N'), ('D', 'P'), ('N', 'F'), ('N', 'D'), ('N', 'N'), ('N', 'P'), ('P', 'F'), ('P', 'D'), ('P', 'N'), ('P', 'P')]",
+      "expected": "16 including half-periodic and full-periodic",
+      "group": "boundary",
+      "name": "all sixteen full-half boundary pairs",
+      "status": "PASS"
+    },
+    {
+      "actual": "('P', 'F')",
+      "expected": "not diagonal",
+      "group": "boundary",
+      "name": "half-periodic convention distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "{('F', 'F'): 'full', ('F', 'D'): 'generalized', ('F', 'N'): 'generalized', ('F', 'P'): 'generalized', ('D', 'F'): 'half-X', ('D', 'D'): 'full', ('D', 'N'): 'generalized', ('D', 'P'): 'generalized', ('N', 'F'): 'half-X', ('N', 'D'): 'generalized', ('N', 'N'): 'full', ('N', 'P'): 'generalized', ('P', 'F'): 'half-X', ('P', 'D'): 'generalized', ('P', 'N'): 'generalized', ('P', 'P'): 'full'}",
+      "expected": "4 full, 3 non-diagonal Half-X plus F;F, 9 generalized",
+      "group": "boundary",
+      "name": "Section VIII Wick pair classification",
+      "status": "PASS"
+    },
+    {
+      "actual": "('half-X', 'coordinate-mixed-full')",
+      "expected": "('half-X', 'coordinate-mixed-full')",
+      "group": "boundary",
+      "name": "reused P-F notation has distinct semantics",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'s': 4.0, 't': 16.0, 'pressure': 0.5343749999999999, 'ground_density': 0.5175, 'projection_error': 0.016874999999999973}, {'s': 8.0, 't': 64.0, 'pressure': 0.47796875, 'ground_density': 0.47375, 'projection_error': 0.004218749999999993}, {'s': 16.0, 't': 256.0, 'pressure': 0.45292968749999996, 'ground_density': 0.45187499999999997, 'projection_error': 0.0010546874999999845}, {'s': 32.0, 't': 1024.0, 'pressure': 0.44120117187499996, 'ground_density': 0.4409375, 'projection_error': 0.00026367187499998224}]",
+      "expected": "to zero",
+      "group": "transfer",
+      "name": "sequence diagonal projection error vanishes",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'s': 4.0, 't': 16.0, 'pressure': 0.5343749999999999, 'ground_density': 0.5175, 'projection_error': 0.016874999999999973}, {'s': 8.0, 't': 64.0, 'pressure': 0.47796875, 'ground_density': 0.47375, 'projection_error': 0.004218749999999993}, {'s': 16.0, 't': 256.0, 'pressure': 0.45292968749999996, 'ground_density': 0.45187499999999997, 'projection_error': 0.0010546874999999845}, {'s': 32.0, 't': 1024.0, 'pressure': 0.44120117187499996, 'ground_density': 0.4409375, 'projection_error': 0.00026367187499998224}]",
+      "expected": "0.43",
+      "group": "transfer",
+      "name": "sequence diagonal ground density converges",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'s': 2, 'a_s': '0.028612445588919591867803889422640661', 'c_s': '0.035127049712622924663675908962954503', 'half_periodic_density': '-0.2948729502873770753363240910370455', 'specific_KL': '0.33'}, {'s': 4, 'a_s': '0.0020082482886994789110758814548528529', 'c_s': '0.0017602474530902069642791880301685503', 'half_periodic_density': '-0.37823975254690979303572081196983145', 'specific_KL': '0.38'}, {'s': 8, 'a_s': '0.000015528678398581701673550542800388725', 'c_s': '0.000013202559684851493251627299268620028', 'half_periodic_density': '-0.40498679744031514850674837270073138', 'specific_KL': '0.405'}, {'s': 16, 'a_s': '0.000000001310215276322970991615132275030762', 'c_s': '0.0000000011136830075344910709659082690150186', 'half_periodic_density': '-0.41749999888631699246550892903409173', 'specific_KL': '0.4175'}]",
+      "expected": "to zero",
+      "group": "ledger",
+      "name": "circle Wick scalar tends zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'s': 2, 'a_s': '0.028612445588919591867803889422640661', 'c_s': '0.035127049712622924663675908962954503', 'half_periodic_density': '-0.2948729502873770753363240910370455', 'specific_KL': '0.33'}, {'s': 4, 'a_s': '0.0020082482886994789110758814548528529', 'c_s': '0.0017602474530902069642791880301685503', 'half_periodic_density': '-0.37823975254690979303572081196983145', 'specific_KL': '0.38'}, {'s': 8, 'a_s': '0.000015528678398581701673550542800388725', 'c_s': '0.000013202559684851493251627299268620028', 'half_periodic_density': '-0.40498679744031514850674837270073138', 'specific_KL': '0.405'}, {'s': 16, 'a_s': '0.000000001310215276322970991615132275030762', 'c_s': '0.0000000011136830075344910709659082690150186', 'half_periodic_density': '-0.41749999888631699246550892903409173', 'specific_KL': '0.4175'}]",
+      "expected": "0.43",
+      "group": "ledger",
+      "name": "specific KL tends alpha fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "(-0.41, 2.69)",
+      "expected": "both signs",
+      "group": "firewall",
+      "name": "raw ground sign scalar mutable",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.520848768474497",
+      "expected": "0.520848768474497",
+      "group": "ledger",
+      "name": "rectangle KL exchange symmetry",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4694364473608098",
+      "expected": "0.4694364473608098",
+      "group": "ledger",
+      "name": "rectangle KL exchange symmetry",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.449642879863317",
+      "expected": "0.449642879863317",
+      "group": "ledger",
+      "name": "rectangle KL exchange symmetry",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.43982142857142903",
+      "expected": "0.43982142857142903",
+      "group": "ledger",
+      "name": "rectangle KL exchange symmetry",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'beta': 4.0, 'L': 7.0, 'd': 0.520848768474497, 'correction': 0.012277339903068436}, {'beta': 8.0, 'L': 14.0, 'd': 0.4694364473608098, 'correction': 0.0001507330750954765}, {'beta': 16.0, 'L': 28.0, 'd': 0.449642879863317, 'correction': 2.2720459927738556e-08}, {'beta': 32.0, 'L': 56.0, 'd': 0.43982142857142903, 'correction': 5.162192993279735e-16}]",
+      "expected": "0.43",
+      "group": "ledger",
+      "name": "joint scalar KL density converges",
+      "status": "PASS"
+    },
+    {
+      "actual": "Scoped theorem",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Scoped theorem",
+      "status": "PASS"
+    },
+    {
+      "actual": "Exact historical boundary",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Exact historical boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "Vector Gaussian conditioning",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Vector Gaussian conditioning",
+      "status": "PASS"
+    },
+    {
+      "actual": "Q3 uniform subdominant-coupling theorem",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Q3 uniform subdominant-coupling theorem",
+      "status": "PASS"
+    },
+    {
+      "actual": "Wick and hypercontractive replacement",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Wick and hypercontractive replacement",
+      "status": "PASS"
+    },
+    {
+      "actual": "Localization and Duhamel summation",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Localization and Duhamel summation",
+      "status": "PASS"
+    },
+    {
+      "actual": "all sixteen",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase all sixteen",
+      "status": "PASS"
+    },
+    {
+      "actual": "Half-periodic transfer",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Half-periodic transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "sequence",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase sequence",
+      "status": "PASS"
+    },
+    {
+      "actual": "What the old surface gate now means",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase What the old surface gate now means",
+      "status": "PASS"
+    },
+    {
+      "actual": "physical empty space",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase physical empty space",
+      "status": "PASS"
+    },
+    {
+      "actual": "not a world-first claim",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase not a world-first claim",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope finite_component_GRS_Gaussian_conditioning",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope finite_component_GRS_uniform_subdominant_coupling",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope all_sixteen_full_half_boundary_pressure_density_limits",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope half_periodic_plane_Wick_pressure_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope periodic_ground_energy_density_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope periodic_zero_temperature_specific_KL_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope joint_scalar_van_Hove_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope both_iterated_scalar_density_limits_equal",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope periodic_sharp_density_difference_vanishes",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall periodic_sharp_surface_pairing_uniform_in_cutoff_volume_and_interpolation",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall O_boundary_log_partition_comparison",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall O1_periodic_sharp_ground_energy_difference",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall physical_empty_space_reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall absolute_vacuum_energy_fixed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall phase_transition_or_phase_uniqueness",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall zero_temperature_state_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall original_3D_Q3LOCK_parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall C6_advanced",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall Pre_A_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": "OPEN BUT NON-LOAD-BEARING FOR THE CLOSED DENSITY LIMITS",
+      "expected": "open non-load-bearing",
+      "group": "scope",
+      "name": "stronger surface gate retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-Q3-PHASE-PHYSICAL-REFERENCE-AND-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-PARENT-ROUTE-SPLIT",
+      "expected": "phase/reference/parent split",
+      "group": "scope",
+      "name": "next gate separates physical phase parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "T1",
+      "expected": "T1",
+      "group": "scope",
+      "name": "C6 tier unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "ACTIVE",
+      "expected": "ACTIVE",
+      "group": "scope",
+      "name": "C6 lifecycle unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "['CONDITIONAL']",
+      "expected": "['CONDITIONAL']",
+      "group": "scope",
+      "name": "C6 evidence unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "['C6-BCC-PREMISE-BLOCKED']",
+      "expected": "['C6-BCC-PREMISE-BLOCKED']",
+      "group": "scope",
+      "name": "C6 gate unchanged",
+      "status": "PASS"
+    }
+  ],
+  "candidate_id": "PA-CP1-CL8-Q3-FINITE-COMPONENT-GRS-BOUNDARY-PRESSURE-PERIODIC-GROUND-DENSITY-v0",
+  "claim_bearing": false,
+  "derived": {
+    "Q3": {
+      "boundary_reordering": "6*delta**2*g + 24*delta**2*lambda + 3*delta*g*q0**2/2 + 3*delta*g*q1**2/2 + 3*delta*g*q2**2/2 + 3*delta*g*q3**2/2 + 3*delta*g*q4**2/2 + 3*delta*g*q5**2/2 + 3*delta*g*q6**2/2 + 3*delta*g*q7**2/2 + delta*k0/2 + delta*k1/2 + delta*k2/2 + delta*k3/2 + delta*k4/2 + delta*k5/2 + delta*k6/2 + delta*k7/2 + 6*delta*lambda*q0**2 - 3*delta*lambda*q0*q1 - 3*delta*lambda*q0*q2 - 3*delta*lambda*q0*q4 + 6*delta*lambda*q1**2 - 3*delta*lambda*q1*q3 - 3*delta*lambda*q1*q5 + 6*delta*lambda*q2**2 - 3*delta*lambda*q2*q3 - 3*delta*lambda*q2*q6 + 6*delta*lambda*q3**2 - 3*delta*lambda*q3*q7 + 6*delta*lambda*q4**2 - 3*delta*lambda*q4*q5 - 3*delta*lambda*q4*q6 + 6*delta*lambda*q5**2 - 3*delta*lambda*q5*q7 + 6*delta*lambda*q6**2 - 3*delta*lambda*q6*q7 + 6*delta*lambda*q7**2 + g*q0**4/4 + g*q1**4/4 + g*q2**4/4 + g*q3**4/4 + g*q4**4/4 + g*q5**4/4 + g*q6**4/4 + g*q7**4/4 + k0*q0**2/2 + k1*q1**2/2 + k2*q2**2/2 + k3*q3**2/2 + k4*q4**2/2 + k5*q5**2/2 + k6*q6**2/2 + k7*q7**2/2 + 3*lambda*q0**4/4 - lambda*q0**3*q1/2 - lambda*q0**3*q2/2 - lambda*q0**3*q4/2 + lambda*q0**2*q1**2/2 + lambda*q0**2*q2**2/2 + lambda*q0**2*q4**2/2 - lambda*q0*q1**3/2 - lambda*q0*q2**3/2 - lambda*q0*q4**3/2 + 3*lambda*q1**4/4 - lambda*q1**3*q3/2 - lambda*q1**3*q5/2 + lambda*q1**2*q3**2/2 + lambda*q1**2*q5**2/2 - lambda*q1*q3**3/2 - lambda*q1*q5**3/2 + 3*lambda*q2**4/4 - lambda*q2**3*q3/2 - lambda*q2**3*q6/2 + lambda*q2**2*q3**2/2 + lambda*q2**2*q6**2/2 - lambda*q2*q3**3/2 - lambda*q2*q6**3/2 + 3*lambda*q3**4/4 - lambda*q3**3*q7/2 + lambda*q3**2*q7**2/2 - lambda*q3*q7**3/2 + 3*lambda*q4**4/4 - lambda*q4**3*q5/2 - lambda*q4**3*q6/2 + lambda*q4**2*q5**2/2 + lambda*q4**2*q6**2/2 - lambda*q4*q5**3/2 - lambda*q4*q6**3/2 + 3*lambda*q5**4/4 - lambda*q5**3*q7/2 + lambda*q5**2*q7**2/2 - lambda*q5*q7**3/2 + 3*lambda*q6**4/4 - lambda*q6**3*q7/2 + lambda*q6**2*q7**2/2 - lambda*q6*q7**3/2 + 3*lambda*q7**4/4",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "laplacian": "3*g*q0**2 + 3*g*q1**2 + 3*g*q2**2 + 3*g*q3**2 + 3*g*q4**2 + 3*g*q5**2 + 3*g*q6**2 + 3*g*q7**2 + 12*lambda*q0**2 - 6*lambda*q0*q1 - 6*lambda*q0*q2 - 6*lambda*q0*q4 + 12*lambda*q1**2 - 6*lambda*q1*q3 - 6*lambda*q1*q5 + 12*lambda*q2**2 - 6*lambda*q2*q3 - 6*lambda*q2*q6 + 12*lambda*q3**2 - 6*lambda*q3*q7 + 12*lambda*q4**2 - 6*lambda*q4*q5 - 6*lambda*q4*q6 + 12*lambda*q5**2 - 6*lambda*q5*q7 + 12*lambda*q6**2 - 6*lambda*q6*q7 + 12*lambda*q7**2",
+      "second_laplacian": "48*g + 192*lambda"
+    },
+    "boundary": {
+      "direction_semantics": {
+        "D|D": "coordinate-mixed-full",
+        "D|F": "coordinate-mixed-full",
+        "D|N": "coordinate-mixed-full",
+        "D|P": "coordinate-mixed-full",
+        "F|D": "coordinate-mixed-full",
+        "F|F": "coordinate-mixed-full",
+        "F|N": "coordinate-mixed-full",
+        "F|P": "coordinate-mixed-full",
+        "N|D": "coordinate-mixed-full",
+        "N|F": "coordinate-mixed-full",
+        "N|N": "coordinate-mixed-full",
+        "N|P": "coordinate-mixed-full",
+        "P|D": "coordinate-mixed-full",
+        "P|F": "coordinate-mixed-full",
+        "P|N": "coordinate-mixed-full",
+        "P|P": "coordinate-mixed-full"
+      },
+      "pairs": [
+        [
+          "F",
+          "F"
+        ],
+        [
+          "F",
+          "D"
+        ],
+        [
+          "F",
+          "N"
+        ],
+        [
+          "F",
+          "P"
+        ],
+        [
+          "D",
+          "F"
+        ],
+        [
+          "D",
+          "D"
+        ],
+        [
+          "D",
+          "N"
+        ],
+        [
+          "D",
+          "P"
+        ],
+        [
+          "N",
+          "F"
+        ],
+        [
+          "N",
+          "D"
+        ],
+        [
+          "N",
+          "N"
+        ],
+        [
+          "N",
+          "P"
+        ],
+        [
+          "P",
+          "F"
+        ],
+        [
+          "P",
+          "D"
+        ],
+        [
+          "P",
+          "N"
+        ],
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "rows": [
+        {
+          "coupling_norm": 1.6621892912318594,
+          "matrix_norm": 0.7096381466096604,
+          "scalar_norm": 0.952551144622199,
+          "side": 4.0
+        },
+        {
+          "coupling_norm": 0.9324773552683134,
+          "matrix_norm": 0.477363231103285,
+          "scalar_norm": 0.4551141241650284,
+          "side": 8.0
+        },
+        {
+          "coupling_norm": 0.5643728816038429,
+          "matrix_norm": 0.3371000660311464,
+          "scalar_norm": 0.22727281557269646,
+          "side": 16.0
+        },
+        {
+          "coupling_norm": 0.35200201094776806,
+          "matrix_norm": 0.23836564731140242,
+          "scalar_norm": 0.11363636363636567,
+          "side": 32.0
+        },
+        {
+          "coupling_norm": 0.22536814743399233,
+          "matrix_norm": 0.1685499656158105,
+          "scalar_norm": 0.056818181818181816,
+          "side": 64.0
+        }
+      ],
+      "wick_semantics": {
+        "D;D": "full",
+        "D;F": "half-X",
+        "D;N": "generalized",
+        "D;P": "generalized",
+        "F;D": "generalized",
+        "F;F": "full",
+        "F;N": "generalized",
+        "F;P": "generalized",
+        "N;D": "generalized",
+        "N;F": "half-X",
+        "N;N": "full",
+        "N;P": "generalized",
+        "P;D": "generalized",
+        "P;F": "half-X",
+        "P;N": "generalized",
+        "P;P": "full"
+      }
+    },
+    "conditioning": {
+      "tensor_rows": [
+        "521/432",
+        "25/18"
+      ],
+      "toy_conditional": "x0**4 + 2*x0**2*x1**2 - 6*x0**2/5 + x0*x1 + 3*x1**4 - 8*x1**2 + 36/25",
+      "toy_target": "x0**4 + 2*x0**2*x1**2 - 6*x0**2/5 + x0*x1 + 3*x1**4 - 8*x1**2 + 36/25"
+    },
+    "ledger": {
+      "circle": [
+        {
+          "a_s": "0.028612445588919591867803889422640661",
+          "c_s": "0.035127049712622924663675908962954503",
+          "half_periodic_density": "-0.2948729502873770753363240910370455",
+          "s": 2,
+          "specific_KL": "0.33"
+        },
+        {
+          "a_s": "0.0020082482886994789110758814548528529",
+          "c_s": "0.0017602474530902069642791880301685503",
+          "half_periodic_density": "-0.37823975254690979303572081196983145",
+          "s": 4,
+          "specific_KL": "0.38"
+        },
+        {
+          "a_s": "0.000015528678398581701673550542800388725",
+          "c_s": "0.000013202559684851493251627299268620028",
+          "half_periodic_density": "-0.40498679744031514850674837270073138",
+          "s": 8,
+          "specific_KL": "0.405"
+        },
+        {
+          "a_s": "0.000000001310215276322970991615132275030762",
+          "c_s": "0.0000000011136830075344910709659082690150186",
+          "half_periodic_density": "-0.41749999888631699246550892903409173",
+          "s": 16,
+          "specific_KL": "0.4175"
+        }
+      ],
+      "rectangles": [
+        {
+          "L": 7.0,
+          "beta": 4.0,
+          "correction": 0.012277339903068436,
+          "d": 0.520848768474497
+        },
+        {
+          "L": 14.0,
+          "beta": 8.0,
+          "correction": 0.0001507330750954765,
+          "d": 0.4694364473608098
+        },
+        {
+          "L": 28.0,
+          "beta": 16.0,
+          "correction": 2.2720459927738556e-08,
+          "d": 0.449642879863317
+        },
+        {
+          "L": 56.0,
+          "beta": 32.0,
+          "correction": 5.162192993279735e-16,
+          "d": 0.43982142857142903
+        }
+      ],
+      "target_alpha": 0.43
+    },
+    "subdominant": {
+      "exponents": {
+        "0": "1",
+        "1": "4/3",
+        "2": "2",
+        "3": "4"
+      },
+      "young_gap": "(-B + 4*c4*r2*theta)**2/(16*c4*theta)"
+    },
+    "transfer": [
+      {
+        "ground_density": 0.5175,
+        "pressure": 0.5343749999999999,
+        "projection_error": 0.016874999999999973,
+        "s": 4.0,
+        "t": 16.0
+      },
+      {
+        "ground_density": 0.47375,
+        "pressure": 0.47796875,
+        "projection_error": 0.004218749999999993,
+        "s": 8.0,
+        "t": 64.0
+      },
+      {
+        "ground_density": 0.45187499999999997,
+        "pressure": 0.45292968749999996,
+        "projection_error": 0.0010546874999999845,
+        "s": 16.0,
+        "t": 256.0
+      },
+      {
+        "ground_density": 0.4409375,
+        "pressure": 0.44120117187499996,
+        "projection_error": 0.00026367187499998224,
+        "s": 32.0,
+        "t": 1024.0
+      }
+    ]
+  },
+  "exploration_id": "EXP-000778",
+  "negative_ids": [],
+  "next_gate": "PA-CP1-CL8-Q3-PHASE-PHYSICAL-REFERENCE-AND-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-PARENT-ROUTE-SPLIT",
+  "result_id": "PA-CP1-CL8-Q3-FINITE-COMPONENT-GRS-HALF-PERIODIC-PRESSURE-PERIODIC-GROUND-AND-SPECIFIC-KL-DENSITY",
+  "schema": "tect/pre-a-cp1-cl8-q3-finite-component-grs-boundary-pressure-periodic-ground-density-route-split-primary/0.1",
+  "scope": {
+    "C0_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "N1_through_N5_closed": false,
+    "O1_periodic_sharp_ground_energy_difference": false,
+    "O_boundary_log_partition_comparison": false,
+    "Pre_A_complete": false,
+    "Sector_A_complete": false,
+    "absolute_vacuum_energy_fixed": false,
+    "all_sixteen_full_half_boundary_pressure_density_limits": true,
+    "both_iterated_scalar_density_limits_equal": true,
+    "correlation_function_limit_interchange": false,
+    "finite_component_GRS_Gaussian_conditioning": true,
+    "finite_component_GRS_uniform_subdominant_coupling": true,
+    "full_noncommutative_infinite_volume_local_algebra": false,
+    "ground_vector_limit": false,
+    "half_periodic_plane_Wick_pressure_limit": true,
+    "interacting_Hadamard_or_microlocal_spectrum": false,
+    "joint_scalar_van_Hove_limit": true,
+    "new_plane_Wick_volume_coherent_Q3_extension": true,
+    "original_3D_Q3LOCK_parent": false,
+    "original_fixed_raw_CL8_family": false,
+    "periodic_ground_energy_density_limit": true,
+    "periodic_sharp_density_difference_vanishes": true,
+    "periodic_sharp_surface_pairing_uniform_in_cutoff_volume_and_interpolation": false,
+    "periodic_zero_temperature_specific_KL_limit": true,
+    "phase_transition_or_phase_uniqueness": false,
+    "physical_empty_space_reference": false,
+    "physical_light_speed_derived": false,
+    "scalar_shift_invariant_gap": true,
+    "strict_positive_centered_reference_density": true,
+    "strong_radial_Q3_coercivity_used": true,
+    "uniform_spectral_gap": false,
+    "zero_temperature_state_limit": false
+  },
+  "script_version": "0.1.0",
+  "source_sha256": {
+    "certificate": "5eca4a306fb28946110bbd1e40ce5356e19cd1bee527d0f26b00303b5ecf1560",
+    "manifest": "d3b52e23c23e68a912dffd68dac5c75642388dce5298c0a80b8d4ea78fc59c65",
+    "parent": "ee393636aadbd0fae502da639c4b5573593a1c51efadd09eeab9d1f3fe8577ce",
+    "script": "b87373dff7ab12fb48b605dd6c4fa82b9ddd8de3fa91c6e18de36842072c08f4"
+  },
+  "verdict": "PERIODIC ZERO-TEMPERATURE GROUND AND SPECIFIC-KL DENSITY PLUS JOINT AND BOTH ITERATED SCALAR LIMITS CLOSED BY A FINITE-COMPONENT GRS BOUNDARY-BRACKETING BYPASS; THE STRONGER O(BOUNDARY) INTERPOLATION ESTIMATE REMAINS OPEN AND NON-LOAD-BEARING; PHYSICAL REFERENCE, PHASE/STATE, ORIGINAL PARENT AND PRE-A OPEN"
+}

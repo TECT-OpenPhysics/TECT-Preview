@@ -1,0 +1,149 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-q3-fixed-torus-os-kms-markov-reference-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-Q3-FIXED-TORUS-OS-KMS-MARKOV-REFERENCE-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-CENTERED-NODAL-Q3-NELSON-BOUE-DUPUIS-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-Q3-FIXED-TORUS-PERIODIC-OS-DOMAIN-MARKOV-KMS-AND-STRICT-CENTERED-FREE-ENERGY-COMPARATOR",
+  "negative_ids": [],
+  "reused_negative_ids": [
+    "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR",
+    "NG-2026-08-04-PRE-A-CP1-CL8-CONSTRUCTIVE-NORMALIZABILITY-ONLY-PHYSICAL-STATE-SELECTION"
+  ],
+  "exploration_id": "EXP-000773",
+  "candidate_family": "PRE-A-CL8-CENTERED-NODAL-Q3-THERMAL-OS-KMS-AND-REFERENCE",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 analytic theorem for the fixed finite Euclidean torus and tuned bounded-renormalized-matrix Q3 family: periodic OS path-space completion, two-sided germ-domain Markov property, abstract stochastically positive beta0-KMS reconstruction, and strict scalar-gauge-invariant Gaussian-reference free-energy advantage; claim-nonbearing and not a vacuum, Hadamard, physical-empty-space, phase-transition, C6, CP1, or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "periodic_OS_reconstruction": "Klein-Landau periodic Osterwalder-Schrader reconstruction as summarized and used in C. Gerard and C. D. Jaekel, Thermal Quantum Fields without Cut-offs in 1+1 Space-time, Rev. Math. Phys. 17 (2005), and arXiv:math-ph/0609088",
+    "thermal_P_phi_2_precedent": "C. D. Jaekel and F. Robl, arXiv:1103.3609v3",
+    "multivariate_measure_input": "H. Nagoji, arXiv:2305.19583v2",
+    "Hadamard_boundary": "R. Brunetti, K. Fredenhagen and M. Koehler, arXiv:gr-qc/9510056; H. Sahlmann and R. Verch, arXiv:math-ph/0002021",
+    "boundary": "The OS/KMS, Gaussian domain-Markov and Gibbs variational principles are established prior art. This package verifies their exact interface hypotheses for the EXP-000772 Q3 measure and does not claim novelty for those principles."
+  },
+  "setup": {
+    "domain": "T_beta0 times S_L with beta0,L finite, beta0>0, L>0",
+    "free_measure": "mu is the eight-component massive Gaussian measure with covariance C=(m0^2-partial_t^2-partial_x^2)^(-1), m0>0",
+    "interaction": "R=-integral :P(Phi): dz is the EXP-000772 whole-Wick limit with g>0, lambda>=0 and bounded renormalized quadratic matrix",
+    "interacting_measure": "dnu=Z^(-1) exp(R) dmu, Z=E_mu exp(R)",
+    "integrability_input": "EXP-000772 gives exp(R) in Lp(mu) for every finite p, full-sequence L1/TV convergence, periodic time-reflection positivity and the regular fixed-band Weyl limit"
+  },
+  "Schwinger_regularities": {
+    "moments": "all smeared polynomial moments under nu are finite by Holder against the all-p density and Gaussian moments",
+    "continuity": "the n-point Schwinger forms are continuous distributions; a representative bound is |S_n(f_1,...,f_n)|<=C_(n,p) product_j <f_j,Cf_j>^(1/2)",
+    "symmetry": "bosonic permutation symmetry and reality are exact",
+    "covariance": "the terminal spectral measure has continuous time and space translations and the rectangular-torus isometries preserving beta0,L and the local Q3 action",
+    "not_full_E2": "a generic rectangular torus does not have full Euclidean E(2) covariance or a time-space interchange"
+  },
+  "reflection_positivity": {
+    "input": "EXP-000772 reflection positivity for bounded positive-half configuration cylinders",
+    "extension": "theta invariance and Cauchy-Schwarz extend the positive form by L2(nu) density to the closed positive-half algebra",
+    "all_diameters": "continuous time translations conjugate the proof to every time-reflection diameter",
+    "boundary": "this is beta-periodic thermal reflection positivity, not Lorentzian positivity, a spectrum condition or a vacuum axiom"
+  },
+  "sharp_time_and_generation": {
+    "free_covariance": "for omega_k=sqrt(m0^2+k^2), the sharp-time mode covariance is coth(beta0 omega_k/2)/(2 omega_k)",
+    "construction": "temporal mollifiers eta_epsilon approaching delta_t make Phi(eta_epsilon tensor f) Cauchy in every finite Gaussian Lq; Holder with dnu/dmu in every finite Lp gives a sharp-time Phi_t(f) in L2(nu)",
+    "continuity": "the same covariance difference estimate gives L2(nu)-continuity in t for every smooth spatial f",
+    "generation": "Riemann sums of integral Phi_t(f_t) dt approximate Phi(F) for smooth F, so time translates of the sharp-time algebra generate the full field sigma algebra and the OS cyclic subspace",
+    "boundary_germ_equivalent": "the same construction may be stated with the boundary-germ algebra, avoiding a pathwise trace of a two-dimensional distribution"
+  },
+  "domain_Markov": {
+    "free_input": "because C^(-1)=m0^2-Delta is local, the massive torus Gaussian field is conditionally independent across a slab D given the germ sigma algebra at the two boundary slices",
+    "interaction_additivity": "for a Lipschitz time slab, R=R_D+R_(D^c); Wick chaoses lie in H^(-epsilon) for every epsilon>0 and slab indicators lie in H^s for s<1/2, so the two restrictions are well typed",
+    "Bayes_result": "for bounded inside F and outside G, E_nu[FG|G_boundary]=E_nu[F|G_boundary] E_nu[G|G_boundary]",
+    "scope": "this is a two-sided germ-domain Markov theorem on the closed beta circle; it is not by itself an ordinary one-sided homogeneous Markov-chain statement after forgetting the closing boundary"
+  },
+  "thermal_OS_reconstruction": {
+    "verified_inputs": [
+      "normalized beta-periodic probability space",
+      "time-translation invariance and strong continuity",
+      "time reflection and closed positive-half reflection positivity",
+      "sharp-time or boundary-germ algebra",
+      "generation and cyclicity by its time translates"
+    ],
+    "result": "periodic Osterwalder-Schrader reconstruction yields, uniquely up to reconstruction equivalence, a stochastically positive W-star dynamical system (H_OS,A,Omega,alpha_t) whose vector state is beta0-KMS",
+    "generator": "the reconstructed thermal generator is a Liouvillean and is not asserted nonnegative",
+    "Weyl_interface": "the EXP-000772 affine seam identifies the fixed-band regular Weyl characteristics with the corresponding reconstructed sharp-time matrix elements",
+    "boundary": "fixed beta0 reconstruction does not select beta0 physically and does not produce a beta-independent Hamiltonian family"
+  },
+  "common_reference_free_energy": {
+    "finite_regulator": "R_M is whole-Wick centered, E_muM R_M=0, and its fourth Wiener-chaos component is nonzero because g>0; strict Jensen gives Z_M=E exp(R_M)>1",
+    "finite_regulator_sign": "Delta F_M^W=-(1/beta0)log Z_M<0 and Delta f_M^W=-(1/(beta0 L))log Z_M<0",
+    "continuum": "EXP-000772 gives R_M->R in L2 and exp(R_M)->exp(R) in L1; the constant spacetime/species zero-mode projection of the fourth chaos has coefficient -(g+3lambda)/(4 beta0 L), so R is nonconstant, Z>1 and the strict sign survives on the fixed finite torus",
+    "scalar_gauge_invariant_form": "Delta F_ref=-(1/beta0)D(mu||nu)=-(1/beta0)[log Z-E_mu R]<0; this is invariant under R->R-C and equals Delta F^W in the whole-Wick centered representative",
+    "variational_meaning": "the exact Gibbs minimizer has strictly lower Gibbs variational free energy than the specified Gaussian trial/reference law",
+    "physical_boundary": "mu contains inserted m0,beta0,L and has not been derived or selected as the physical no-condensate or empty-space state; the theorem is below a named mathematical reference, not below physical empty space"
+  },
+  "Hadamard_and_vacuum_boundary": {
+    "regular_Weyl_not_Hadamard": "regularity at the Weyl identity supplies Stone generators on each fixed mode but no ultraviolet wavefront-set control",
+    "linear_theorem_mismatch": "standard KMS-to-Hadamard results assume fields obeying a linear hyperbolic equation and cannot be imported directly for nonlinear interacting Q3 P(phi)2",
+    "correct_later_target": "prove an interacting n-point microlocal spectrum condition or relativistic-KMS tube analyticity after constructing a local Lorentzian net",
+    "vacuum_limit": "a vacuum route requires beta0->infinity for one beta-independent renormalized Hamiltonian, plus tightness, reflection positivity, uniqueness and a positive-energy spectrum; none is proved here"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-INTERACTING-COMPLETE-OS-MARKOV-HADAMARD-AND-PHYSICAL-REFERENCE-ROUTE-SPLIT",
+    "status": "FIXED-TORUS PERIODIC OS, TWO-SIDED DOMAIN MARKOV, ABSTRACT BETA0-KMS, AND STRICT CENTERED GAUSSIAN-REFERENCE FREE-ENERGY ORDERING CLOSED; VACUUM, HADAMARD, BETA-INDEPENDENT HAMILTONIAN, THERMODYNAMIC AND PHYSICAL-EMPTY GATES OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-Q3-FIXED-TORUS-SCHWINGER-REGULARITY-AND-COVARIANCE",
+      "PA-CP1-CL8-Q3-FIXED-TORUS-CLOSED-L2-REFLECTION-POSITIVITY",
+      "PA-CP1-CL8-Q3-SHARP-TIME-ALGEBRA-AND-GENERATION",
+      "PA-CP1-CL8-Q3-TWO-SIDED-GERM-DOMAIN-MARKOV",
+      "PA-CP1-CL8-Q3-PERIODIC-OS-STOCHASTIC-BETA0-KMS-RECONSTRUCTION",
+      "PA-CP1-CL8-Q3-FIXED-TORUS-STRICT-CENTERED-GAUSSIAN-REFERENCE-FREE-ENERGY-ORDERING"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-BETA-INDEPENDENT-HAMILTONIAN-AND-FEYNMAN-KAC-DICTIONARY",
+      "PA-CP1-CL8-THERMODYNAMIC-RELATIVE-ENTROPY-DENSITY-AND-PHYSICAL-EMPTY-REFERENCE",
+      "PA-CP1-CL8-GROUND-VACUUM-AND-INTERACTING-MICROLOCAL-SPECTRUM",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-PRE-A-C0-N1-N5-VALIDATION"
+    ],
+    "next_gate": "PA-CP1-CL8-BETA-INDEPENDENT-HAMILTONIAN-THERMODYNAMIC-REFERENCE-AND-GROUND-LIMIT-ROUTE-SPLIT"
+  },
+  "scope": {
+    "fixed_finite_beta0_L_torus": true,
+    "bounded_renormalized_matrix_family": true,
+    "Schwinger_distribution_regularity": true,
+    "rectangular_torus_covariance": true,
+    "closed_L2_thermal_reflection_positivity": true,
+    "sharp_time_algebra_and_generation": true,
+    "two_sided_germ_domain_Markov": true,
+    "abstract_stochastically_positive_beta0_KMS": true,
+    "strict_centered_Gaussian_reference_free_energy_ordering": true,
+    "scalar_gauge_invariant_relative_entropy_comparator": true,
+    "full_E2_covariance": false,
+    "ordinary_one_sided_circle_Markov_claimed": false,
+    "beta_independent_Hamiltonian_family": false,
+    "physical_beta_selected": false,
+    "positive_energy_vacuum": false,
+    "interacting_Hadamard_or_microlocal_spectrum": false,
+    "physical_empty_space_reference": false,
+    "absolute_vacuum_energy_fixed": false,
+    "thermodynamic_limit": false,
+    "ground_state_limit": false,
+    "phase_transition_proved": false,
+    "original_fixed_raw_CL8_family": false,
+    "original_3D_Q3LOCK_parent": false,
+    "physical_light_speed_derived": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC theorem using the EXP-000772 integrability/RP/Weyl result plus explicit sharp-time, generation, local-action Bayes, strict-Jensen and relative-entropy derivations; executable checks audit exact algebra, covariance, conditional-factorization fixtures, scalar gauges, source boundaries and unchanged C6 authority",
+    "primary": "codes/foundations/pre_a_cp1_cl8_q3_fixed_torus_os_kms_markov_reference_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_q3_fixed_torus_os_kms_markov_reference_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_q3_fixed_torus_os_kms_markov_reference_route_split_verify.py",
+    "fixtures": "thermal sharp-time covariance; time continuity; Q3 constant-mode fourth-chaos strictness; strict Jensen; normalized scalar-shift invariance; KL/relative-entropy identity; finite conditional-independence reweighting; RP Gram closure; KMS/vacuum/Hadamard, physical-empty, phase-transition, original-parent and unchanged-C6 firewalls"
+  },
+  "prior_art_boundary": "Periodic OS/KMS reconstruction, massive Gaussian domain Markov, Gibbs variational inequalities and scalar P(phi)2 thermal constructions are established prior art. No global novelty follows from applying and verifying those structures for the already constructed Q3 measure. The separate bounded audit still located no source proving the complete TECT C0/N1-N5/CL8/Q3/Pre-A physical chain.",
+  "no_overclaim": "This theorem closes a fixed-beta0, fixed-L thermal Euclidean/Q3 mathematical theory and a strict free-energy comparison to its explicitly named Gaussian reference. It does not identify that reference with physical empty space, fix absolute vacuum energy, produce one beta-independent Hamiltonian, prove a ground state, positive-energy vacuum, interacting Hadamard or microlocal-spectrum condition, thermodynamic limit, genuine phase transition, the original fixed-raw or three-dimensional Q3 parent, physical light, C0, N1-N5, C6, CP1, Sector A, or Pre-A."
+}

@@ -1,0 +1,177 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-MATRIX-COUNTERTERM-STATE-COMPACTNESS-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-INTERACTING-REGULATOR-COMPATIBLE-STATE-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-HISTORY-CUT-QUANTUM-ALGEBRA-STATE-COMPATIBILITY-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-UNIFORM-COERCIVE-SHIFT-WEAKSTAR-SUBNET-CUT-DEFECT-IDENTITY-REGULARITY-AND-DYNAMICS-NOGOS",
+  "negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-ABSTRACT-COMPACTNESS-ONLY-REGULAR-CONTINUUM-STATE",
+    "NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-EXACT-DYNAMICS-EQUIVARIANCE",
+    "NG-2026-08-04-PRE-A-CP1-CL8-POINTWISE-STABILITY-GAUSSIAN-TRIAL-UNIFORM-ENERGY"
+  ],
+  "exploration_id": "EXP-000765",
+  "candidate_family": "PRE-A-CL8-MATRIX-COUNTERTERM-ABSTRACT-STATE-AND-CUT-SPLIT",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 exact matrix-counterterm coercive shift, abstract inductive-state compactness, matched-cut defect identity, and regularity no-go; claim-nonbearing and not an interacting continuum-QFT, Hadamard, physical-vacuum, C6, CP1, or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "statement": "Write the declared common-diagonal Wick interaction as :W4:_C=W4+(1/2)q^T deltaK_C q+6C^2(g+4lambda), with deltaK_C=-3C[(g+lambda)I+lambda L_Q3]. Add a fixed renormalized quadratic matrix K_R=m_R I+eta_R L_Q3. Its raw quadratic Walsh eigenvalues are kappa_s=m_R+2s eta_R-3C(g+lambda+2s lambda), s=0,1,2,3. If b_C=(1/2)max(0,-min_s kappa_s) and epsilon_C=16b_C^2/g-6C^2(g+4lambda), then V_C=(1/2)q^T K_R q+:W4:_C+epsilon_C is at least g|q|^4/64. Thus, after this declared cutoff-dependent scalar shift, the enlarged finite-regulator Hamiltonians have a cutoff-uniform lower form bound in the Riemann-sum convention and retain the standard fixed-regulator ground/Gibbs construction. For any chosen states on the nested dyadic type-I algebras, compactness of the product of state spaces gives a subnet whose every fixed-regulator restriction converges to a compatible state on the inductive C-star limit. Conjugating the natural bulk embeddings by the registered unitary fixed-regulator cut anchors constructs exact matched-reference-cut monomorphisms, and the cut-state defect equals the bulk-state defect exactly. This kinematic square cannot be promoted to exact natural interacting dynamics equivariance within the declared inserted-one-dimensional g>0 family and quadratic-counterterm class: on the collective retained-zero/added-Nyquist plane, the fine force on P_X contains -(3g/L)X*Y^2, a cubic force term quadratic in the added mode, so the low algebra is not invariant. For ground projectors, define sigma_M=iota_(M,2M,*)(P_(2M)), eta_M=1-Tr(P_M sigma_M), and d_M=||sigma_M-P_M||_1; then 2eta_M<=d_M<=2sqrt(eta_M), while exact failure at each pair does not decide whether d_M tends to zero. Abstract compactness and lower stability do not imply regularity: squeezed one-oscillator Hamiltonians h_N=[N P^2+Q^2/N]/2 have a uniform spectrum and regular normal ground states but a nonregular pointwise Weyl limit. A positive continuum-state proof needs an additional regularity mechanism, such as uniform fixed-mode characteristic equicontinuity or moment bounds, and a full-sequence claim separately needs a Cauchy, uniqueness-plus-uniformity, or equivalent identification theorem.",
+  "verdict": "ADVANCE UNIFORM MATRIX-COUNTERTERM LOWER STABILITY, ABSTRACT COMPATIBLE-SUBNET EXISTENCE, AND AN EXACT MATCHED-CUT DEFECT IDENTITY; REJECT LOWER-STABILITY PLUS WEAK-STAR COMPACTNESS AS A REGULAR CONTINUUM-STATE PROOF AND REJECT EXACT NATURAL LOW-MODE INTERACTING DYNAMICS EQUIVARIANCE",
+  "authorities": {
+    "interacting_route_split": "strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-manifest.json",
+    "fixed_regulator_cut_anchors": "strategy/pre-a-cp1-cl8-history-cut-quantum-algebra-state-compatibility-route-split-manifest.json",
+    "finite_ground_and_Gibbs": "strategy/pre-a-cp1-cl8-finite-quantum-state-boundary-fork-manifest.json"
+  },
+  "matrix_counterterm_candidate": {
+    "domain": "g>0, lambda>=0, C>=0, real m_R and eta_R, eight Q3 species, and any finite centered spatial regulator",
+    "renormalized_quadratic": "K_R=m_R*I+eta_R*L_Q3",
+    "Wick_contraction": "deltaK_C=-3*C*[(g+lambda)I+lambda*L_Q3]",
+    "scheme_boundary": "this candidate Wick-orders W4 only and leaves (1/2)q^T K_R q outside the Wick operator; Wick-ordering the whole quadratic-plus-quartic polynomial would add the scalar -(C/2)Tr K_R=-4*C*m_R-12*C*eta_R and must be treated as a different declared energy convention",
+    "raw_quadratic": "K_raw(C)=K_R+deltaK_C; this sign convention is defined by (1/2)q^T K_R q+:W4:_C=W4+(1/2)q^T K_raw(C)q+6C^2(g+4lambda)",
+    "Walsh_eigenvalues": "kappa_s(C)=m_R+2*s*eta_R-3*C*(g+lambda+2*s*lambda), s=0,1,2,3, with multiplicities 1,3,3,1",
+    "scalar_energy": "b_C=(1/2)*max(0,-min_s kappa_s(C)); epsilon_C=16*b_C^2/g-6*C^2*(g+4*lambda)"
+  },
+  "uniform_coercive_shift": {
+    "quartic_SOS": "sum_e q_e^4-|q|^4/8=(1/8)sum_(e<f)(q_e^2-q_f^2)^2>=0 and the Q3 quartic lock is nonnegative, so W4(q)>=g*|q|^4/32",
+    "quadratic_bound": "(1/2)q^T[K_R+deltaK_C]q>=-b_C*|q|^2",
+    "completion": "g*R^4/32-b_C*R^2+16*b_C^2/g = g*R^4/64+(g*R^2-32*b_C)^2/(64*g)",
+    "local_result": "V_C(q)=(1/2)q^T K_R q+:W4:_(C)(q)+epsilon_C>=g*|q|^4/64",
+    "lattice_result": "Hhat_(a,C)>=a*g/512*sum_j |q_j|^4>=0 after the declared scalar shift, because the kinetic and spatial-gradient forms are nonnegative",
+    "state_invariance": "epsilon_C is an additive scalar local energy convention and therefore does not change the normalized finite-regulator ground projector or Gibbs density",
+    "moment_reduction": "any normalized state family with a uniform upper bound on the shifted energy immediately has uniform Riemann-sum field-fourth, momentum-second and, for lambda>0, Q3-edge-fourth moment bounds; this package does not prove that upper bound"
+  },
+  "anisotropic_Q3_strengthening": {
+    "domain": "lambda>0",
+    "edge_SOS": "with S=|q|^2 and T=q^T L_Q3 q=sum_edges(q_e-q_f)^2, sum_edges(q_e-q_f)^2(q_e^2+q_f^2)>=T^2/24; together with sum_e q_e^4>=S^2/8 this is sharp on the Q3 bipartite Walsh ray",
+    "negative_coefficients": "alpha_C=max(0,3*C*(g+lambda)-m_R), beta_C=max(0,3*C*lambda-eta_R)",
+    "scalar_energy": "epsilon_C_aniso=4*alpha_C^2/g+12*beta_C^2/lambda-6*C^2*(g+4*lambda)",
+    "result": "with epsilon_C_aniso in place of epsilon_C, V_C(q)>=g*S^2/64+lambda*T^2/192; this preserves cutoff-uniform quartic control of both total amplitude and Q3 variation",
+    "lambda_zero_boundary": "for lambda=0 use the general Walsh-minimum scalar completion; a negative eta_R is then absorbed through min_s kappa_s rather than divided by lambda"
+  },
+  "finite_regulator_state": {
+    "result": "the uniform quartic coercive bound implies, at every fixed regulator, the same Friedrichs self-adjointness, compact resolvent, simple strictly positive ground and trace-class finite-beta Gibbs construction as the registered finite-state authority",
+    "boundary": "fixed-regulator existence and a cutoff-uniform lower form bound do not give a cutoff-uniform ground-energy upper bound, spectral gap, moments, local energy, or convergence"
+  },
+  "scalar_shift_Gaussian_trial_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-POINTWISE-STABILITY-GAUSSIAN-TRIAL-UNIFORM-ENERGY",
+    "excluded_route": "for fixed g, lambda, m_R and eta_R, use one scalar energy shift to make the local Wick polynomial pointwise uniformly lower stable and simultaneously obtain a cutoff-uniform variational upper bound from the same Wick-reference Gaussian",
+    "singlet_minimum": "on q_e=x, F_C=2*g*x^4+[4*m_R-12*C*(g+lambda)]*x^2+6*C^2*(g+4*lambda); when 12*C*(g+lambda)>4*m_R its minimum is 6*C^2*(g+4*lambda)-[12*C*(g+lambda)-4*m_R]^2/(8*g)",
+    "full_Gaussian_mean": "for P_C(q)=(1/2)q^T K_R q+:W4:_C(q), the full eight-component reference mean of this local quadratic-plus-Wick polynomial is mu_C=E_C[P_C]=C*(4*m_R+12*eta_R); this is not the one-variable Gaussian expectation of the singlet restriction F_C",
+    "gap": "because inf_(q in R^8) P_C(q)<=min_x F_C(x), mu_C-inf_q P_C(q)>=mu_C-min_x F_C(x)=[12*g+12*lambda+18*lambda^2/g]*C^2+O(C); if inf_q(P_C+s_C)>=-B then E_C[P_C+s_C]>=mu_C-min_x F_C-B, so this same-Gaussian upper bound diverges at least as Theta((log N)^2) for C_N=Theta(log N)",
+    "not_excluded": "a sharper global operator lower bound, a Nelson or spatial-kinetic cancellation, a non-Gaussian trial family, a constructive vector P(phi)_2 argument, or another fully specified normalization"
+  },
+  "ground_entanglement_distance": {
+    "definitions": "P_(0,M) denotes the ground projector of this Wick/matrix-counterterm family at declared C_M,K_R; sigma_M=iota_(M,2M,*)(P_(0,2M)), eta_M=1-Tr(P_(0,M) sigma_M), d_M=||sigma_M-P_(0,M)||_1, where iota_* is the predual state restriction; in a factorizing chart iota(A)=V(A tensor I)V^*, sigma_M=Tr_add(V^*P_(0,2M)V), not bare Tr_add P_(0,2M)",
+    "bounds": "the two-outcome effect P_M gives d_M>=2*eta_M, while Fuchs-van de Graaf for the pure P_M gives d_M<=2*sqrt(eta_M)",
+    "equivalence": "d_M tends to zero if and only if eta_M tends to zero",
+    "known_boundary": "the EXP-000764 mixed-derivative proof also gives eta_M>0 for this enlarged family because scalar and quadratic counterterms do not change the nonzero X^2Y^2 derivative; it gives no uniform positive lower bound and no decay estimate, so exact projectivity fails while asymptotic projectivity remains open"
+  },
+  "abstract_state_compactness": {
+    "algebras": "A_M=B(H_M) with the transitive natural low-mode monomorphisms iota_(M,N), including the reciprocal coarse-Nyquist squeeze at the one exceptional real quadrature",
+    "theorem": "for any cofinal dyadic family of finite-regulator states omega_N, Tychonoff compactness of product_M S(A_M) gives a subnet for which omega_N composed with iota_(M,N) converges pointwise on every fixed A_M",
+    "compatibility": "transitivity of iota makes the coordinate limits compatible and hence defines a state on the unital inductive C-star limit",
+    "boundary": "this full-B(H_M) pointwise subnet statement and fixed-mode cylindrical full-sequence uniform convergence are incomparable: the former covers more observables but only along a subnet and pointwise, while the latter covers fewer labels but asks for a uniform full-sequence limit; the cluster object may be singular on every type-I factor, nonregular on the Weyl generators, nonunique, subnet dependent, and unrelated to local energy, dynamics, Hadamard form, or a physical state criterion"
+  },
+  "matched_cut_square": {
+    "anchor_isomorphism": "for matched typed data c_M=(C_M,n_M) and c_N=(C_N,n_N), theta_(M,c_M)(A)=Gamma_(M,C_M)^[n_M]* A Gamma_(M,C_M)^[n_M], using only registered unitary fixed-regulator reference-cut anchors; later Gamma_(M,C) abbreviates the full typed datum",
+    "embedding": "j_(M,N,C)=theta_(N,C) composed with iota_(M,N) composed with theta_(M,C)^(-1)",
+    "square": "j_(M,N,C)(Gamma_(M,C)^* A Gamma_(M,C))=Gamma_(N,C)^* iota_(M,N)(A) Gamma_(N,C)",
+    "cut_state": "Omega_(M,C)=omega_M composed with theta_(M,C)^(-1)",
+    "defect_identity": "Omega_(N,C)(j_(M,N,C)B)-Omega_(M,C)(B)=omega_N(iota_(M,N)A)-omega_M(A) for B=theta_(M,C)(A); the anchors add exactly zero state-comparison error",
+    "normal_state_norm": "for normal densities the cut-state dual-norm defect equals ||iota_(M,N,*)(rho_N)-rho_M||_1 exactly, where iota_* is the predual restriction; this becomes ||Tr_add rho_N-rho_M||_1 only in the declared tensor-factor chart implementing the natural embedding, including the Nyquist-squeeze unitary",
+    "same_time_naturality": "with S_M(D<-C)=Gamma_(M,D)^*Gamma_(M,C) and beta_M(B)=S_M B S_M^*, j_(M,N,D) composed with beta_M equals beta_N composed with j_(M,N,C), so every matched registered same-time re-slicing square commutes",
+    "boundary": "this constructs matched same-time cut algebra squares only; it does not compare unmatched cut combinatorics, prove physical-step dynamics equivariance, or make the original finite states projective"
+  },
+  "cylindrical_topology_gate": {
+    "definition": "for a fixed cutoff-independent mode space V_K and label radius R, epsilon_(M,N;K,R)=sup_(F in V_K, ||F||<=R)|omega_N(W(iota_(M,N)F))-omega_M(W(F))|; fixed K eventually excludes the moving coarse Nyquist mode",
+    "Weyl_polynomial": "for B=sum_l c_l W(F_l), the cut or bulk defect is at most sum_l |c_l|*epsilon(F_l); for arbitrary A in the fixed-K Weyl C-star algebra it is at most 2||A-B|| plus that polynomial bound",
+    "full_sequence": "the exact Cauchy target is lim_(n->infinity) sup_(m>=n) epsilon_(n,m;K,R)=0; adjacent defects merely tending to zero are insufficient",
+    "summable_sufficient_condition": "if dyadic adjacent defects obey epsilon_(n,n+1;K,R)=O(a_n^p) for some p>0, transitivity and telescoping make them summable and close the full sequence",
+    "ground_boundary": "eta_M->0 is equivalent only to full retained-factor trace-norm projectivity; fixed-K cylindrical convergence can hold even when global entanglement or an orthogonality catastrophe keeps eta_M away from zero"
+  },
+  "natural_dynamics_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-EXACT-DYNAMICS-EQUIVARIANCE",
+    "excluded_route": "for the declared inserted-one-dimensional g>0 Hamiltonians, natural low-mode embedding, and scalar-energy plus scalar/Q3-quadratic counterterm class, require exact coarse/fine Heisenberg intertwining; differentiating on the common invariant Schwartz core would require the retained fine algebra B(H_low) tensor I to be invariant",
+    "witness": "on q_(j,e)=[X+(-1)^jY]/sqrt(L), the fine potential contains 3*g*X^2*Y^2/(2L), so (i/hbar)[H_f,P_X]=-partial_X U_f contains -(3*g/L)*X*Y^2 and is not retained-only",
+    "counterterm_boundary": "scalar energy has zero force; scalar and Q3-Laplacian quadratic counterterms have only linear forces and the Q3 term vanishes on the collective species singlet, so none cancels X*Y^2",
+    "not_excluded": "asymptotic fixed-observable dynamics, a dressed or nonnatural embedding, completely positive reduced dynamics, Hamiltonians of mean force, or a different perfect-action regulator"
+  },
+  "regularity_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-ABSTRACT-COMPACTNESS-ONLY-REGULAR-CONTINUUM-STATE",
+    "excluded_route": "infer a regular interacting continuum state from finite-regulator normality, a uniform lower spectral bound or gap, and abstract weak-star subnet compactness alone",
+    "witness": "h_N=[N*P^2+Q^2/N]/2 has spectrum n+1/2 and a regular normal squeezed ground with covariance diag(N/2,1/(2N)); its Weyl characteristic exp[-(N*u^2+v^2/N)/4] tends to zero for u!=0 and to one for u=0, discontinuously at the origin",
+    "not_excluded": "regularity from uniform fixed-mode moments, characteristic equicontinuity, a constructive vector P(phi)_2 theorem, or separately proved local-energy and microlocal bounds; uniqueness or full-sequence identification is a separate gate and does not establish regularity by itself"
+  },
+  "positive_regularity_gate": {
+    "sufficient_input": "one sufficient mechanism is: for every fixed finite mode space V_K, a cutoff-uniform bound omega_N(R(F)^2)<=C_K*||F||^2 gives |1-omega_N(W(F))|<=sqrt(C_K)*||F|| and hence equicontinuity at the Weyl identity; this particular moment bound is not claimed necessary",
+    "full_sequence_input": "a Cauchy theorem directly closes the uniform full-sequence target; alternatively, compactness plus uniqueness gives pointwise full-sequence convergence, and uniform equicontinuity on each fixed finite-dimensional label ball upgrades it to the displayed supremum norm",
+    "ground_input": "for the stronger full retained-factor ground route, eta_M->0 is equivalent to trace-norm asymptotic projectivity; the weaker fixed-K cylindrical route instead needs local reduced-density or direct characteristic estimates",
+    "running_family_boundary": "holding K_R fixed in the Wick scheme makes the raw scalar and Q3-Laplacian coefficients run like -C_N; the fixed-r classical O(a^2) and history-dynamics results are not automatically uniform for this new family"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-Q3-MATRIX-COUNTERTERM-INTERACTING-STATE-COMPACTNESS-AND-CUT-SQUARE",
+    "status": "SPLIT; UNIFORM LOWER STABILITY AFTER THE DECLARED SCALAR SHIFT, ABSTRACT SUBNET COMPACTNESS, AND MATCHED-CUT ALGEBRA SQUARE CLOSED; REGULAR INTERACTING LIMIT OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-Q3-MATRIX-COUNTERTERM-UNIFORM-LOWER-STABILITY-AFTER-DECLARED-SCALAR-SHIFT",
+      "PA-CP1-CL8-ABSTRACT-INDUCTIVE-STATE-SUBNET-COMPACTNESS",
+      "PA-CP1-CL8-MATCHED-REFERENCE-CUT-ALGEBRA-SQUARE-AND-DEFECT-IDENTITY"
+    ],
+    "refuted_subgates": [
+      "PA-CP1-CL8-LOWER-STABILITY-PLUS-WEAKSTAR-ONLY-REGULAR-STATE",
+      "PA-CP1-CL8-NATURAL-LOW-MODE-EXACT-INTERACTING-DYNAMICS-EQUIVARIANCE",
+      "PA-CP1-CL8-POINTWISE-STABILITY-PLUS-REFERENCE-GAUSSIAN-TRIAL-UNIFORM-ENERGY"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-UNIFORM-FIXED-MODE-MOMENTS-AND-WEYL-EQUICONTINUITY",
+      "PA-CP1-CL8-FULL-SEQUENCE-INTERACTING-LIMIT-IDENTIFICATION",
+      "PA-CP1-CL8-ASYMPTOTIC-OR-DRESSED-DYNAMICS-EQUIVARIANT-CUT-SQUARE",
+      "PA-CP1-CL8-INTERACTING-HADAMARD-OR-MICROLOCAL-LIMIT",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-CP1-CL8-PHYSICAL-STATE-AND-ENERGY-REFERENCE"
+    ],
+    "next_gate": "PA-CP1-CL8-UNIFORM-WEYL-EQUICONTINUITY-AND-INTERACTING-LIMIT-IDENTIFICATION"
+  },
+  "scope": {
+    "Q3_matrix_counterterm_candidate_typed": true,
+    "cutoff_uniform_lower_form_stability_after_declared_scalar_shift": true,
+    "fixed_regulator_ground_and_Gibbs": true,
+    "abstract_compatible_state_subnet": true,
+    "matched_reference_cut_algebra_square": true,
+    "cut_bulk_defect_identity": true,
+    "exact_finite_pair_ground_projectivity": false,
+    "asymptotic_ground_projectivity": false,
+    "unshifted_uniform_energy_floor": false,
+    "uniform_shifted_energy_upper_bound": false,
+    "pointwise_stability_plus_reference_Gaussian_uniform_energy": false,
+    "cutoff_uniform_moment_bounds": false,
+    "uniform_Weyl_equicontinuity": false,
+    "normal_or_regular_limit_state": false,
+    "unique_full_sequence_limit": false,
+    "natural_exact_dynamics_equivariance": false,
+    "asymptotic_or_dressed_dynamics_equivariance": false,
+    "interacting_continuum_QFT_state": false,
+    "interacting_Hadamard_state": false,
+    "physical_state_or_vacuum": false,
+    "below_empty_space_comparison": false,
+    "physical_phase_transition": false,
+    "physical_light_speed_derived": false,
+    "original_3D_Q3LOCK_parent": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "primary": "codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split_verify.py",
+    "fixtures": "exact Q3 Walsh matrix; quartic SOS and isotropic/anisotropic square completions; rational matrix-counterterm hostile point and singlet Gaussian gap; conditional smeared-moment coefficients; pure-state entanglement-distance bounds; reciprocal Nyquist squeeze; finite-matrix same-time cut-square orientation; cylindrical telescoping; collective low/high force leakage; squeezed-oscillator regularity no-go; scope and unchanged-C6 firewalls"
+  },
+  "prior_art_boundary": "Graph-Laplacian diagonalization, Wick ordering, polynomial square completion, compactness of state spaces, inductive C-star limits, Fuchs-van de Graaf inequalities, unitary conjugation of type-I factors, squeezed quasi-free states, multicomponent P(phi)_2 construction, and Osterwalder-Schrader reconstruction are established mathematics. No world-first or new general theorem is claimed. The repository-specific content is their exact composition with the CL8/Q3 counterterm convention, natural-mode embedding, registered cut anchors, and explicit proof-scope split. A Euclidean import must still prove equal-time Weyl convergence in the declared cylindrical topology; finite Euclidean time targets a beta-KMS state, infinite Euclidean time targets a ground/vacuum construction, OS reconstruction does not itself prove Lorentzian continuation or Hadamard form, and a finite-torus construction does not prove a thermodynamic phase transition.",
+  "no_overclaim": "This package proves a uniform lower form bound after a declared Q3-matrix and scalar-energy counterterm convention, conditional moment reductions, fixed-regulator state existence, an abstract compatible subnet, exact matched same-time cut algebra squares and defect identities, and scoped Gaussian-trial, regularity and natural-exact-dynamics no-gos. It does not prove a uniform shifted-energy upper bound, unconditional uniform moments or local energy, interacting Weyl equicontinuity, normality or regularity of a cluster state, uniqueness or full-sequence convergence, fixed-K or full-factor asymptotic ground projectivity, asymptotic or dressed dynamics equivariance, an interacting continuum QFT or Hadamard state, the original 3D Q3 parent, a physical vacuum or below-empty-space sign, a phase transition, physical light, Lorentzian signature, time or hbar, C0 or N1-N5, C6 advancement, CP1 completion, or Pre-A completion."
+}

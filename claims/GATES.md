@@ -21,6 +21,163 @@ conditional cluster and a separate one-use source/sextic aggregation before
 close. The historical R-085 weighted/labelled-owner formulas are
 non-load-bearing under R-088/R-103/R-105.
 
+### **PA-CP1-CL8-Q3-CUTOFF-VOLUME-INTERPOLATION-UNIFORM-PERIODIC-SHARP-SURFACE-PAIRING**
+
+**Statement:** For the plane-Wick volume-coherent eight-component Q3 family,
+prove that the common-ultraviolet-cutoff Gaussian covariance interpolation
+between periodic and spatially sharp/open rectangle geometries has a
+log-partition derivative bounded by `C(|partial Lambda|+1)`, with one constant
+uniform in cutoff, growing rectangle and interpolation parameter.  The proof
+must control the connected Wick-cubic pairing and diagonal Wick-quadratic
+counterterm after normalization.
+
+**Status:** OPEN BUT NON-LOAD-BEARING FOR DENSITY LIMITS (2026-08-04).
+The finite-cutoff differentiation identity is exact, but EXP-000772
+fixed-volume uniform integrability does not supply the required common-
+regulator seam or Schur bound, volume- and interpolation-uniform local
+Gibbs/Wick moments, mixed-covariance comparison, or uniform integrability for
+derivative insertions.  EXP-000778 bypasses this stronger quantitative route:
+the explicit finite-component port of the GRS all-sixteen full/half boundary-
+pressure theorem proves equality of periodic and sharp scalar densities and
+therefore closes the periodic ground-energy and joint plus iterated specific-
+KL density limits.  It does **not** prove the requested uniform
+`C(|partial Lambda|+1)` estimate or an `O(1)` periodic-sharp ground-energy
+difference.  This gate remains open for those stronger conclusions and does
+not identify physical empty space, absolute energy, a phase, C6, CP1, Sector
+A or Pre-A.
+
+### **PA-CP1-CL8-Q3-PHASE-PHYSICAL-REFERENCE-AND-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-PARENT-ROUTE-SPLIT**
+
+**Statement:** Starting from the EXP-000778 scalar pressure, centered ground-
+energy and specific-relative-entropy density theorem, separate and test three
+logically independent upgrades: (i) phase/order-parameter or boundary-state
+classification from correlation or uniqueness estimates rather than pressure
+alone; (ii) identification of the named massive Gaussian comparator with
+physical empty space using an observable stress-tensor renormalization anchor;
+and (iii) derivation of the inserted one-dimensional Q3 `P(Phi)_2` family from
+the original fixed-raw CL8 or a declared three-dimensional Q3LOCK parent by an
+explicit regulator-compatible map.
+
+**Status:** PARTIALLY RESOLVED (2026-08-04).  EXP-000779 proves, for every
+constant vector source in the inserted Q3 comparator, the finite common
+all-sixteen boundary/Wick pressure limit through rectangles whose two sides
+tend independently to infinity, locally uniformly on source compacts.  The
+limit is convex and globally Z2-even; finite directional one-sided slopes
+exist, and a strictly positive right slope is exactly a pressure cusp.  No
+Q3 cusp sign or selected state is proved.  The analytic sequence
+`log cosh(nh)/n` and the smooth-versus-cusped controls register why pressure
+value or finite-volume zero response alone cannot classify a phase.  An
+additive scalar leaves normalized laws and KL data unchanged, so the physical
+empty-space/stress-tensor anchor remains external.  The exact two-cell
+quartic marginal has a nonconstant discarded-mode correction, refuting only
+the inference that bare transverse-zero restriction is enough to establish
+an interacting parent marginal.  The full ST8/Q3LOCK marginal, possible
+effective reductions, state/vector/gap/correlator limits, interacting
+microlocal spectrum, C0/N1-N5, C6, CP1, Sector A and Pre-A remain open.
+
+### **PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-3D-QUANTUM-PARENT-PRESSURE-GROUND-DENSITY-AND-EFFECTIVE-REDUCTION-SPLIT**
+
+**Statement:** Starting from the fixed-spacing, finite-volume
+`PA-CP1-ST8-Q3LOCK-v0` oscillator Hamiltonians, construct one common
+finite-volume quantum family on growing periodic cubes and prove or refute
+the thermodynamic pressure and centered ground-energy-density limits.  Keep
+the scalar normalization explicit.  Then test a genuine transverse
+constraint, decoupling, mean-force, dressed-embedding or controlled
+effective-action map to the inserted `1+1` Q3 comparator; agreement after
+setting transverse modes to zero is not sufficient.
+
+**Status:** PARTIALLY RESOLVED (2026-08-04).  EXP-000780 closes the
+fixed-spacing scalar thermodynamic half.  For every constant energy source
+`J in R8`, the exact unweighted fixed-block-origin ST8/Q3LOCK family has
+finite open-rectangle source-pressure and ground-energy-density limits; the
+periodic even-cube limits exist and agree.  A global quadratic-form seam
+absorption gives a direct density error `O(L^(-1/2))`, and a uniform
+`C/beta` spectral squeeze identifies both iterated and every joint scalar
+zero-temperature limit.  The source-free complete-square center and every
+additive scalar remain explicit conventions, not physical empty-space
+anchors.  Exact collective/transverse quartic mixing and the reused marginal
+and ground-projectivity no-gos leave every genuine constraint, decoupling,
+mean-force, dressed or controlled effective-action reduction open.  A
+classical three-dimensional equilibrium route has Euclidean `Phi4_3` type,
+whereas a quantum theory with three spatial dimensions has a
+four-dimensional Euclidean route.  Neither may be imported from the
+`P(Phi)_2` comparator by coordinate relabelling.  Phase/states, regulator
+removal, physical reference, C0/N1-N5, C6, CP1, Sector A and Pre-A remain
+open.
+
+### **PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-SOURCE-CUSP-TANGENT-STATES-AND-PHASE**
+
+**Statement:** Starting from the EXP-000780 locally uniform convex even
+source-pressure family, determine the one-sided source slopes and construct
+or refute corresponding infinite-volume tangent Gibbs/KMS or ground states.
+Separate pressure differentiability, state uniqueness, extremality, purity,
+clustering and spontaneous global-Z2 breaking.  Do not infer a cusp sign from
+the zero-source pressure value or from finite-volume zero response.
+
+**Status:** PARTIALLY RESOLVED (2026-08-04).  EXP-000781 maps the exact
+positive-`lambda`, eight-component Q3LOCK oscillator family to the established
+general vector quantum-crystal theorem, closing nonemptiness and compactness of
+the tempered Euclidean DLR set together with the cited uniform moment bounds.
+Periodic finite-volume DLR accumulation and the EXP-000780 locally uniform
+convex pressure construct zero-source DLR tangent states realizing both
+endpoint slopes with the exact factor `1/8`; compatible locally normal
+time-zero tangent states follow.  If an endpoint slope is strictly positive,
+the two parity-related DLR states are distinct and the pressure has a cusp, but
+EXP-000781 proves no such strict sign.  At `lambda=0`, eight decoupled scalar
+quantum crystals have a known low-temperature coexistence regime under the
+explicit imported sufficient condition; that boundary theorem does not extend
+coexistence to the registered positive-`lambda` model.  Algebraic KMS dynamics,
+extremality, purity, clustering, the positive-`lambda` phase sign, ground phase,
+continuum removal, physical reference, effective reduction, C0/N1-N5, C6, CP1,
+Sector A and Pre-A remain open.
+
+### **PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-Q3-PHASE-SIGN-AND-KMS-SPLIT**
+
+**Statement:** For the exact fixed-spacing positive-`lambda` Q3LOCK family,
+prove or refute a strictly positive collective-source endpoint slope without
+borrowing scalar or `O(8)`-radial phase theorems whose hypotheses fail.  Audit
+finite-loop FKG and spatial reflection positivity, the unbounded collective
+double-commutator identity, Falk--Bruch and three-dimensional infrared
+constants, and the long-range-order-to-pressure-subgradient implication.
+Separately construct an infinite-volume real-time dynamics and algebraic KMS
+state, or keep the Euclidean-DLR/OS-reconstructed equilibrium notion distinct.
+
+**Status:** PARTIALLY RESOLVED (2026-08-04).  EXP-000782 proves the exact
+positive-`lambda` fixed-lattice chain in an explicit nonempty sufficient
+regime.  Continuous-loop FKG gives the collective moment lower bound
+`theta_Q=-r/[3(g+lambda)]`; Falk--Bruch, Hilbert-valued spatial reflection
+positivity and the three-dimensional infrared estimate give a strictly
+positive volume-squared zero mode whenever `r<0`,
+`A0=8c chi theta_Q^2/hbar^2>I3` and `beta>beta_star`.  The Griffiths pressure
+lemma and EXP-000781 tangent-state construction then give a strict collective
+source cusp and at least two parity-related tempered Euclidean DLR states.
+Failure of the displayed sufficient inequalities is inconclusive and does not
+prove absence of a phase.  Algebraic KMS for a pre-existing infinite-volume
+real-time dynamics, extremality, purity, clustering, a ground-state phase or
+gap, continuum removal, physical empty space, C0/N1-N5, C6, CP1, Sector A and
+Pre-A remain open.
+
+### **PA-CP1-ST8-Q3LOCK-INFINITE-VOLUME-DYNAMICS-KMS-GROUND-AND-CONTINUUM-SPLIT**
+
+**Statement:** Starting from the EXP-000781--775 tempered Euclidean DLR phase,
+separately construct or refute (i) a thermodynamic-limit real-time automorphism
+group on a declared quasi-local algebra and algebraic `beta`-KMS states whose
+Euclidean restrictions are the constructed phases; (ii) controlled
+`beta -> infinity` ground-state phase limits and any spectral-gap statement;
+and (iii) a regulator-removal continuum limit with the required counterterms.
+Do not identify Euclidean DLR, OS-reconstructed thermal systems, KMS states for
+a pre-existing dynamics, ground states and continuum states without proving
+the relevant reconstruction or limit maps.
+
+**Status:** OPEN (2026-08-04).  EXP-000782 closes only the exact positive-
+`lambda` fixed-lattice Euclidean-DLR phase and collective-source cusp in its
+explicit sufficient regime.  It supplies neither an infinite-volume real-time
+dynamics nor a `C*`-algebraic KMS identification.  Its lower bound is
+temperature dependent and does not yet justify interchange of thermodynamic
+and zero-temperature limits, ground-state degeneracy, a uniform spectral gap,
+or regulator removal.  Physical empty space and below-empty-space comparison,
+effective reduction, C0/N1-N5, C6, CP1, Sector A and Pre-A remain open.
+
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**

@@ -1,0 +1,167 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-history-cut-quantum-algebra-state-compatibility-route-split-manifest/0.2",
+  "candidate_id": "PA-CP1-CL8-HISTORY-CUT-QUANTUM-ALGEBRA-STATE-COMPATIBILITY-ROUTE-SPLIT-v0",
+  "result_id": "PA-CP1-CL8-EXACT-HISTORY-CUT-BH-CCR-STATE-TRANSPORT-AND-RAW-LEG-NOGO",
+  "task_id": "T-054",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-000760",
+  "correction_exploration_id": "EXP-000761",
+  "date": "2026-08-04",
+  "status": "CLOSED-FINITE-OPEN-ALL-CUT-BH-AND-BALANCED-EVEN-M-PERIODIC-DKD-STATE-TRANSPORT; WEYL-STATIONARY-REGULATOR-3D-AND-CONTINUUM-OPEN",
+  "authority": "T0 exact quantum inserted-1D finite-cut and balanced-even-M fixed-regulator route split; claim-nonbearing and not a physical-state, regulator-limit, 3D-parent, CP1, C6, or Pre-A theorem",
+  "parent_ids": [
+    "PA-CP1-CL8-CONTROLLER-FREE-COMMON-PARENT-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-COMMON-FINITE-REGULATOR-CHARACTERISTIC-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+    "PA-CP1-CL8-QUANTUM-BOUNDARY-ALGEBRA-INTERTWINER-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-PASSIVE-TWO-ARM-CHARACTERISTIC-CONTROL-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-INTERACTING-TWO-ARM-WORK-ROUTE-SPLIT-v0"
+  ],
+  "claim_bearing": false,
+  "verdict": "CLOSE EXACT FINITE OPEN ALL-CUT B(H) UNITARIES AND CUT CCR, PLUS THE BALANCED-EVEN-M PERIODIC D-K-D AUTOMORPHISM AND NORMAL-STATE-TRANSPORT INTERTWINER; RETAIN FIXED WEYL-CSTAR INVARIANCE, STATIONARITY/SELECTION, INTER-REGULATOR, CONTINUUM/HADAMARD, 1D-TO-3D, C6, CP1, AND PRE-A GATES",
+  "negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-HISTORY-CUT-RAW-LEG-TENSOR-FACTORIZATION"
+  ],
+  "statement": "For the inserted one-dimensional CL8 D-K-D regulator, every admitted finite monotone history cut has an explicit non-product current-flux form and a global linear Darboux chart. A local valley flip is an exact nonlinear canonical map which factors into real-polynomial spectral-calculus phases, a neighbor-control shear and a central parity. This gives a genuine unitary on L2, preserves the Schwartz core, and induces an exact normal B(H) isomorphism. Ready incomparable flip unitaries commute exactly under a fixed spatial enumeration, so every finite open topological sweep is unitary and sweep independent. On the balanced even-M periodic seam the two checkerboard layers implement the already registered D-K-D history map projectively; their B(H) automorphisms and density transport agree exactly. Registered autonomous ground and Gibbs densities therefore define exact normal cut families and remain ground/Gibbs for an explicitly co-moving Hamiltonian, but are not shown stationary, selected, or ground/Gibbs for the unchanged inherited Hamiltonian. Raw A/B vertex algebras on neighboring legs do not commute because the spatial-current connector gives a nonzero cross commutator, so a per-raw-leg tensor factorization is formally rejected. The nonlinear circuit does not preserve one fixed concrete Weyl C-star algebra. Regulator compatibility, a physical reference, the 1D-to-3D parent and continuum/Hadamard limits remain open.",
+  "model_scope": {
+    "selected_model": "the explicitly inserted one-dimensional per-unit-transverse-area CL8 regulator with w=a/8 and the inherited nonlinear D-K-D step",
+    "domain": "finite open monotone cuts; and, for inherited periodic state/D-K-D comparison, M even with M>=4 on the balanced M/2 by M/2 seam; delta, c, chi, g, lambda and hbar nonzero with chi,c,g,lambda,hbar positive",
+    "hilbert_dimension_boundary": "the classical phase has finite real dimension 16M on the balanced seam, while H=L2(R^(8M)) is infinite-dimensional",
+    "inserted_data": "one-dimensional reduction, regulator, step delta, hbar, checkerboard interpretation, and any null, horizon or physical-time meaning remain inputs"
+  },
+  "history_quantum_step": {
+    "coefficient": "ell=mu/delta, with delta nonzero",
+    "discrete_Legendre_chart": "q_n=x_n and pi_n=ell*(x_n-x_(n-1)); sum d pi_n wedge d q_n equals Omega_hist=ell sum dx_n wedge dx_(n-1)",
+    "exact_map": "pi_(n+1)=pi_n-delta*grad U_a(q_n), q_(n+1)=q_n+pi_(n+1)/ell",
+    "type_one_phase": "Phi(q_prime,q)=ell*||q_prime-q||^2/2-delta*U_a(q), with pi=-partial_q Phi and pi_prime=partial_q_prime Phi",
+    "mixed_Hessian": "partial_q_prime partial_q Phi=-ell*I_(8M), so the finite-regulator kernel has no field-dependent caustic",
+    "unitary": "U_hist=exp[-i*pi_hat^2/(2*ell*hbar)] exp[-i*delta*U_a(q_hat)/hbar], equivalently the oscillatory kernel with |c_ell|=(|ell|/(2*pi*hbar))^(4M), up to one global Fresnel phase fixed by the factor convention",
+    "DKD_relation": "the half-drift metaplectic change gives U_hist=M_half U_DKD M_half^* exactly with the declared functional-calculus factors",
+    "core": "the polynomial phases, free drift and their inverses preserve Schwartz space; displayed unbounded-generator identities are core identities"
+  },
+  "cut_Darboux_CCR": {
+    "raw_edge": "A_j=x_(n_j,j), B_j=x_(n_j+1,j), with adjacent cut heights differing by one",
+    "current_form": "Omega_C=ell[sum_j dB_j wedge dA_j-kappa sum_(lower s adjacent to higher r) dB_s wedge dA_r]",
+    "Darboux_chart": "Q_j=A_j and P_j=ell*(B_j-kappa*sum_(s adjacent and one history time lower than j) B_s), giving Omega_C=sum_j dP_j wedge dQ_j",
+    "global_inverse": "P=ell*(I-kappa*N_C)B; N_C follows strictly increasing integer history time and is nilpotent on every admitted finite cut, so B=ell^(-1)*sum_r(kappa*N_C)^r P is finite and global",
+    "CCR": "[Q_(j,e),P_(k,f)]=i*hbar*delta_jk*delta_ef in the regular Schrodinger representation; the represented cut Weyl system is irreducible and its von Neumann closure is B(H_C)",
+    "reference_regularity": "on a checkerboard, the spatial connector cancels explicitly so high sites have Q=q and P=pi+ell*(1-2*kappa)q-delta*w*grad W_Q3(q), while low sites have Q=q-pi/ell and P=ell*q; a low-site metaplectic drift/chirp and a high-site position phase implement these operators, proving regularity and essential self-adjointness before Stone-von Neumann is invoked",
+    "periodic_boundary": "on the balanced seam time is not periodically identified, the seam adjacency is counted once, and H_C=L2(R^(8M)); odd or time-shift seams are excluded"
+  },
+  "local_flip_unitary": {
+    "force": "f(z)=2*(1-kappa)*z-beta*grad W_Q3(z)",
+    "canonical_map": "at a valley s with retained neighbors L,R: Q_s_prime=-Q_s+kappa*(Q_L+Q_R)+f(P_s/ell), P_s_prime=-P_s+ell*f(Q_s_prime), P_L_prime=P_L+kappa*P_s, P_R_prime=P_R+kappa*P_s; retained Q and all other variables are unchanged",
+    "momentum_phase": "G_p(P_s)=-(1-kappa)*||P_s||^2/ell+beta*ell*W_Q3(P_s/ell)",
+    "control_shear": "U_kappa=exp[-i*kappa*(Q_L+Q_R) dot P_s/hbar]",
+    "position_phase": "G_q(Q_s)=-ell*(1-kappa)*||Q_s||^2+beta*ell*W_Q3(Q_s)",
+    "factorization": "with U^* Z U convention, U_flip=exp[-i*G_q(Q_s)/hbar] U_kappa R_s exp[-i*G_p(P_s)/hbar] implements the canonical map exactly; the induced point map is applied as four explicit right-to-left stages",
+    "unitarity": "each real polynomial of commuting positions or momenta is handled by joint spectral calculus; the control shear is metaplectic and all factors preserve Schwartz space",
+    "not_Trotter": "this is an exact finite product, not a Trotter or semiclassical approximation"
+  },
+  "all_cut_quantum_composition": {
+    "fixed_enumeration": "all cut Hilbert spaces use the same spatial-site ordering; explicit permutation intertwiners would otherwise be required",
+    "ready_commutation": "simultaneously ready incomparable valleys have distinct centers; their generator Q/P support pairs are (empty,{s}), (N_s,{s}), and ({s},empty), with s not in N_t and t not in N_s, so every cross-pair strongly commutes even when retained Q controls overlap",
+    "sweep_independence": "topological orders of a finite cell order ideal differ by adjacent swaps of incomparable ready cells; exact ready commutation makes the unitary product independent of sweep order",
+    "open_cut_scope": "an open m by n cut has m+n+1 complete 16-real-dimensional A/B history legs, eight configuration coordinates per quantum factor, and H_C=L2(R^(8*(m+n+1))); all compared cuts keep this dimension",
+    "open_fixture": "endpoint-aware exhaustive audits cover every cut and every saturated cell-addition sweep of the open 2 by 2 and 2 by 3 order ideals",
+    "periodic_scope": "balanced endpoint identification removes one duplicate and leaves M complete history legs; this is the only scope compared with the inherited periodic H_a states"
+  },
+  "periodic_DKD_intertwiner": {
+    "checkerboards": "the two alternating cuts decode (x_(m-1),x_m), then (x_m,x_(m+1)), then (x_(m+1),x_(m+2))",
+    "typed_anchors": "Lambda_C^[n]:H_C->H_hist is the explicit history decoder and Gamma_C^[n]=M_half^* Lambda_C^[n]:H_C->H_a is the phase anchor",
+    "same_time_map": "S_(D<-C)^[n]=Lambda_D^[n]^* Lambda_C^[n]=Gamma_D^[n]^* Gamma_C^[n]",
+    "physical_map": "V_(D<-C)^[n->n+1]=Lambda_D^[n+1]^* U_hist Lambda_C^[n]=Gamma_D^[n+1]^* U_DKD Gamma_C^[n]",
+    "implementers": "for one checkerboard layer U_layer, Lambda_D^[n+1] U_layer=exp(i*theta_C) U_hist Lambda_C^[n] and equivalently Gamma_D^[n+1] U_layer=exp(i*theta_C) U_DKD Gamma_C^[n] because both sides have the same Heisenberg action on canonical generators",
+    "automorphisms": "the scalar phase cancels, so the induced normal B(H) diagrams commute exactly",
+    "wavefunction_boundary": "an exact implementer equality without the scalar would require an additional coherent metaplectic/Maslov phase convention"
+  },
+  "normal_state_compatibility": {
+    "actual_inputs": "the registered autonomous interacting ground projector and every finite-beta Gibbs density are positive trace-one normal densities on the periodic H_a",
+    "cut_family": "rho_C^[n]=Gamma_C^[n]^* rho_n Gamma_C^[n] with rho_(n+1)=U_DKD rho_n U_DKD^*",
+    "covariance": "same-time re-slicing uses S_(D<-C)^[n], while rho_D^[n+1]=V_(D<-C)^[n->n+1] rho_C^[n] V_(D<-C)^[n->n+1]^* for a physical step, with the corresponding expectation covariance",
+    "co_moving_ground_Gibbs": "Hhat_n_co=U_DKD^n Hhat_a U_DKD^(-n) and Ehat_C_co^[n]=Gamma_C^[n]^* Hhat_n_co Gamma_C^[n]; transported registered Gibbs densities and ground projectors are Gibbs/ground for this co-moving operator",
+    "preserved": "positivity, trace class, trace one, normality and the already registered exact global symmetries",
+    "boundary": "the transported state is not generally Gibbs/ground for the unchanged inherited Hamiltonian; this is transport and cut compatibility, not stationarity, preference, physical-vacuum selection or compatibility across M"
+  },
+  "energy_ledger": {
+    "definition": "Ehat_C^[n]=Gamma_C^[n]^* Hhat_a Gamma_C^[n] as an affiliated self-adjoint operator",
+    "same_time": "S_(D<-C)^[n]^* Ehat_D^[n] S_(D<-C)^[n]=Ehat_C^[n]",
+    "one_step_defect": "V_(D<-C)^[n->n+1]^* Ehat_D^[n+1] V_(D<-C)^[n->n+1]-Ehat_C^[n]=Gamma_C^[n]^*(U_DKD^* Hhat_a U_DKD-Hhat_a)Gamma_C^[n] on the transported common core or as the corresponding quadratic form",
+    "expectation_scope": "expectation identities require densities with the needed finite polynomial moments",
+    "reference_boundary": "additive constants cancel from the defect; neither a conserved cut-local energy nor a physical zero, vacuum or below-empty-space comparison is selected"
+  },
+  "raw_leg_tensor_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-HISTORY-CUT-RAW-LEG-TENSOR-FACTORIZATION",
+    "witness": "on a checkerboard edge from lower s to higher r, the inverse current form gives [A_(s,e),B_(r,f)]=i*hbar*(kappa/ell)*delta_ef, nonzero for the declared domain",
+    "conclusion": "neighboring raw A/B vertex algebras cannot be independent commuting tensor factors, and a parity layer is not a tensor product of independent raw-leg replacements",
+    "survivors": "the global Darboux site tensorization, commuting overlapping gates, full B(H) unitary and cut-adapted transported Weyl systems remain exact"
+  },
+  "algebra_boundary": {
+    "closed": "regular cut CCR systems, normal B(H_C) isomorphisms, exact nonlinear generator action on Schwartz space and normal-state transport",
+    "open": "one fixed concrete nonlinear Weyl C-star algebra is not normalized; direct nonlinear Weyl-label relabelling and exact full-polynomial Dirac quantization remain excluded by existing no-gos",
+    "quadratic_exception": "the quadratic tangent sector is metaplectic and does map Weyl generators linearly"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-HISTORY-CUT-QUANTUM-ALGEBRA-AND-STATE-COMPATIBILITY",
+    "status": "CLOSED FOR FINITE INSERTED-1D CUT B(H)/CCR AND BALANCED-EVEN-M PERIODIC NORMAL-STATE TRANSPORT; PHYSICAL AND LIMIT AXES OPEN",
+    "closed_subgates": [
+      "PA-CP1-CL8-EXACT-FINITE-HISTORY-CUT-DARBOUX-CCR",
+      "PA-CP1-CL8-EXACT-Q3-VALLEY-FLIP-BH-UNITARY",
+      "PA-CP1-CL8-EXACT-FINITE-OPEN-ALL-CUT-QUANTUM-SWEEP",
+      "PA-CP1-CL8-BALANCED-EVEN-M-PERIODIC-DKD-AUTOMORPHISM-INTERTWINER",
+      "PA-CP1-CL8-BALANCED-EVEN-M-GROUND-GIBBS-NORMAL-STATE-TRANSPORT"
+    ],
+    "refuted_subgates": [
+      "PA-CP1-CL8-HISTORY-CUT-RAW-LEG-TENSOR-FACTORIZATION"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-FIXED-NONLINEAR-WEYL-CSTAR-INVARIANCE",
+      "PA-CP1-CL8-COMMON-POSITIVE-INVARIANT-AND-STATIONARY-STATE",
+      "PA-CP1-CL8-PHYSICAL-STATE-AND-ENERGY-REFERENCE",
+      "PA-CP1-CL8-REGULATOR-COMPATIBLE-HISTORY-CUT-STATE-FAMILY",
+      "PA-CP1-CL8-CONTINUUM-STATE-AND-HADAMARD-LIMIT",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT"
+    ],
+    "next_gate": "PA-CP1-CL8-REGULATOR-COMPATIBLE-HISTORY-CUT-STATE-FAMILY"
+  },
+  "Pre_A_chain_role": {
+    "C0": "open because hbar, the time step, the one-dimensional reduction and the characteristic interpretation remain inserted",
+    "N1": "gains an exact fixed-regulator normal cut-state family but lacks physical selection and inter-regulator compatibility",
+    "N2": "gains an exact fixed-regulator quantum B(H) boundary-Cauchy intertwiner on the inserted 1D model, but lacks the 3D parent, regulator limit and physical characteristic meaning",
+    "N3_through_N5": "open; no cooling transition, history selection, emergent metric or excitation theorem follows",
+    "CP1": "not complete because the original 3D parent, regulator-compatible state/reference and continuum/Hadamard limit remain absent",
+    "chain_verdict": "this is a real fixed-regulator quantum advance but not C0, N1-N5, CP1, C6 or Pre-A closure"
+  },
+  "scope": {
+    "inserted_1D_per_unit_transverse_area_model": true,
+    "finite_open_cut_Darboux_CCR": true,
+    "finite_open_all_cut_BH_unitaries": true,
+    "exact_local_Q3_valley_flip_unitary": true,
+    "exact_ready_flip_commutation": true,
+    "balanced_even_M_periodic_seam": true,
+    "periodic_DKD_BH_automorphism_intertwiner": true,
+    "periodic_ground_Gibbs_normal_state_transport": true,
+    "raw_leg_tensor_factorization": false,
+    "fixed_nonlinear_Weyl_Cstar_invariance": false,
+    "stationary_or_selected_state": false,
+    "physical_energy_reference": false,
+    "below_empty_space_comparison": false,
+    "inter_regulator_state_compatibility": false,
+    "continuum_Hadamard_state": false,
+    "original_3D_Q3LOCK_parent": false,
+    "odd_or_unbalanced_periodic_seam": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "primary": "codes/foundations/pre_a_cp1_cl8_history_cut_quantum_algebra_state_compatibility_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_history_cut_quantum_algebra_state_compatibility_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_history_cut_quantum_algebra_state_compatibility_route_split_verify.py",
+    "fixtures": "exact full-Q3 M=4 positive-step and M=6 negative-step regulators; all 6 and 20 balanced periodic cut forms; every open 2 by 2 and 2 by 3 cut and saturated sweep; both checkerboard orientations; staged four-factor flips; shared-control generator supports; and a noncommuting rational 3 by 3 Lambda/Gamma state-energy diagram",
+    "discipline": "primary SymPy derivation, non-importing standard-library Fraction reconstruction, stored JSON artifacts and integrated source/record/C6 firewalls"
+  },
+  "no_overclaim": "This package proves an exact finite-cut quantum B(H)/CCR construction and balanced-even-M periodic state-transport diagram only for the inserted one-dimensional fixed regulator. It does not prove invariance of one fixed nonlinear Weyl C-star algebra, a stationary or preferred state, a physical vacuum or below-empty-space sign, compatibility across regulators, a continuum/Hadamard state, the original 3D Q3LOCK parent, derived hbar, physical time, nullness, Lorentzian signature, light speed, cooling, a phase transition, gravity, a horizon or a cycle. It does not close C0 or N1-N5, advance C6, complete CP1, or complete Pre-A."
+}

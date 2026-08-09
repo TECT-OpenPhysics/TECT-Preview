@@ -7,6 +7,29 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | Tag | Branch / claim | Summary |
 |---|---|---|
 | [NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION](#ng-2026-08-04-a13-r166-direct-harmonic-coercivity-tensorization) | extend the R-166 coefficient-one direct source-coordinate coercivity from one fresh pair to simultaneous dyadic fresh pairs by summing rootwise bounds or deleting their cross harmonic | for `m=cos(2x)` and `z=a sin(4x)+b sin(8x)`, the normalized exact Gram is `[[5/4,1],[1,3/2]]`; its minimum eigenvalue is `(11-sqrt(65))/8<1`, and `(a,b)=(1,-1)` gives exact ratio `3/8`. Retain the single-pair R-166 lemma, but certify the complete cross-root sextic Gram jointly |
+| [NG-2026-08-04-PRE-A-CP1-CL8-PRESSURE-VALUE-ONLY-PHASE-CLASSIFICATION](#ng-2026-08-04-pre-a-cp1-cl8-pressure-value-only-phase-classification) | infer phase uniqueness, coexistence, spontaneous order, or selected states from the scalar pressure value or boundary-independent pressure alone | the smooth pressure control `alpha+m log cosh(h)` and the cusped control `alpha+m|h|` have the same value at zero, while analytic even finite-volume controls `log cosh(nh)/n` converge locally uniformly to `|h|` with zero derivative at the origin. Retain source tangents, state compactness and correlation/order estimates |
+| [NG-2026-08-04-PRE-A-CP1-CL8-TRANSVERSE-ZERO-RESTRICTION-AS-INTERACTING-MARGINAL](#ng-2026-08-04-pre-a-cp1-cl8-transverse-zero-restriction-as-interacting-marginal) | infer that a bare transverse-zero restriction by itself establishes the interacting marginal of a higher-dimensional parent | the exact two-cell quartic produces a discarded-mode correction `F(q^2)-F(0)` with `F'>0` and `F''<0`. This refutes only the bare inference; the full ST8/Q3LOCK marginal, possible cancellations, constrained limits and derived effective actions remain open |
+| [NG-2026-08-04-PRE-A-CP1-CL8-FIXED-VOLUME-UI-PERIODIC-SHARP-SURFACE-PAIRING](#ng-2026-08-04-pre-a-cp1-cl8-fixed-volume-ui-periodic-sharp-surface-pairing) | infer a cutoff-, volume- and interpolation-uniform periodic-sharp boundary estimate from EXP-000772 fixed-volume uniform integrability | the finite-cutoff covariance derivative is exact, but normalized Wick-derivative insertions, mixed covariances and the seam kernel still require one uniform surface-order bound. Keep the sharp GRS density theorem; leave periodic zero-temperature and scalar van-Hove limits conditional |
+| [NG-2026-08-04-PRE-A-CP1-CL8-FINITE-CIRCLE-WITNESS-ZERO-TEMPERATURE-DENSITY](#ng-2026-08-04-pre-a-cp1-cl8-finite-circle-witness-zero-temperature-density) | infer a strict zero-temperature density solely from the fixed-circle four-zero-mode Rayleigh witness | its exact matrix element is `O(beta^-1)`, so pointwise strictness supplies no extensive lower bound after division by `beta`. Retain the sharp-cutoff GRS route and require a separate periodic-sharp surface theorem |
+| [NG-2026-08-04-PRE-A-CP1-CL8-FIXED-RAW-QUADRATIC-FINITE-Q3-RENORMALIZED-LIMIT](#ng-2026-08-04-pre-a-cp1-cl8-fixed-raw-quadratic-finite-q3-renormalized-limit) | identify the original cutoff-independent raw CL8 quadratic with a fixed finite renormalized Q3 `P(Phi)_2` interaction | the exact Wick dictionary gives `K_R(M)=K_raw+3C_M[(g_E+lambda_E)I+lambda_E L_Q3]`; all four Q3 Walsh eigenvalues diverge because `C_M=Theta(log M)`. A fixed finite target requires the cutoff-dependent Q3 matrix tuning `K_raw(M)=K_R-3C_M[(g_E+lambda_E)I+lambda_E L_Q3]`, up to the scalar energy convention |
+| [NG-2026-08-04-PRE-A-CP1-CL8-WICK-L2-ONLY-INTERACTING-DENSITY-LIMIT](#ng-2026-08-04-pre-a-cp1-cl8-wick-l2-only-interacting-density-limit) | infer convergence of normalized interacting densities from finite-`Lp`, in particular `L2`, convergence of their Wick actions alone | `X_N=N` on an event of probability `N^-4` satisfies `||X_N||_2=N^-1->0` while `E exp(X_N)->infinity`. Retain the actual centered-Q3 route, but prove a regulator-uniform exponential moment before invoking Vitali or passing reflection positivity |
+| [NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-NODAL-SPECTRAL-FINITE-EXACT-INTERTWINER](#ng-2026-08-04-pre-a-cp1-cl8-centered-nodal-spectral-finite-exact-intertwiner) | identify a finite centered-nodal CL8 spatial regulator exactly with the spectral-spatial Q3 comparator by field relabelling plus scalar energy and scalar/Q3-quadratic counterterms | on the species-singlet Nyquist interpolant, the nodal quartic average is `1` while the continuum spectral average is `3/8`; the `5/8` amplitude-quartic defect cannot be cancelled by any scalar or quadratic counterterm. Retain low-band/asymptotic universality, for which nodal quartic quadrature is exact once `M>4K` |
+| [NG-2026-08-04-PRE-A-CP1-CL8-STRANG-ONE-SLICE-EXACT-HAMILTONIAN-SEMIGROUP](#ng-2026-08-04-pre-a-cp1-cl8-strang-one-slice-exact-hamiltonian-semigroup) | identify the explicit symmetric finite-time Gaussian-link slice with the exact registered CL8 heat semigroup merely from symmetry, positivity, and low-order agreement | on a compactly supported plateau at zero, the actual CL8 potential has `grad U_a(0)=0` and `Delta^2 U_a(0)=48wM(g+4lambda)>0`, so the epsilon-cubed coefficient of `S_epsilon-exp(-epsilon H_a)` is `-4 kappa_a^2 wM(g+4lambda)<0`. Retain the exact heat kernel or the controlled trace-norm product limit |
+| [NG-2026-08-04-PRE-A-CP1-CL8-EUCLIDEAN-HEAT-SUPPORT-PHYSICAL-LIGHT-CONE](#ng-2026-08-04-pre-a-cp1-cl8-euclidean-heat-support-physical-light-cone) | infer a Lorentzian causal or physical light cone directly from support of the fixed-regulator Euclidean heat transfer | the free Gaussian and every finite-path Feynman--Kac weight are strictly positive, hence `K_t(q,q')>0` for all finite configurations and every `t>0`; Euclidean configuration-transition support is full. Retain separately derived real-time commutator propagation, characteristic dynamics, or a controlled Lorentzian continuum limit |
+| [NG-2026-08-04-PRE-A-CP1-CL8-FULL-EUCLIDEAN-SHARP-CUTOFF-REFLECTION-POSITIVITY](#ng-2026-08-04-pre-a-cp1-cl8-full-euclidean-sharp-cutoff-reflection-positivity) | infer reflection positivity of the induced `N=1` projected simultaneous sharp-cutoff law from time-reflection symmetry | the projected Gaussian and positive density-weighted interacting law have spatial-zero covariance `b0+2b1 cos(t-s)` with `b1>0`, so an exact positive-time test gives `-2b1(2-sqrt(3))^2<0`. The lifted full-field law, higher cutoffs, local limit, and time-local alternatives remain undecided |
+| [NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE](#ng-2026-08-04-pre-a-cp1-cl8-time-zero-configuration-only-full-weyl-state) | identify a full canonical Weyl state from all time-zero configuration characteristics alone | a Gaussian and its quadratic phase chirp have the same position characteristic `exp(-t^2/4)` but momentum variances `1/2` and `1`. Retain reflection-positive reconstruction, direct momentum estimates, or another joint Weyl-functional construction |
+| [NG-2026-08-04-PRE-A-CP1-CL8-CONSTRUCTIVE-NORMALIZABILITY-ONLY-PHYSICAL-STATE-SELECTION](#ng-2026-08-04-pre-a-cp1-cl8-constructive-normalizability-only-physical-state-selection) | infer a unique canonical or physical state from Q3 coercivity and constructive normalizability alone | the same criterion accepts distinct quadratic inputs; at zero-mode cutoff the `K_int=0` and `K_int=I` density ratio is a nonconstant multiple of `exp(-V|x|^2/2)`, with normalized Haar `V=1`. Retain a fixed Hamiltonian, beta/ground, KMS, boundary-condition, energy-reference, or other physical selection rule |
+| [NG-2026-08-04-PRE-A-CP1-CL8-ABSTRACT-COMPACTNESS-ONLY-REGULAR-CONTINUUM-STATE](#ng-2026-08-04-pre-a-cp1-cl8-abstract-compactness-only-regular-continuum-state) | infer a regular interacting continuum state from finite-cutoff normality, uniform spectral lower bounds or gaps, and abstract state-space compactness alone | the regular normal squeezed grounds of `h_N=(N P^2+Q^2/N)/2` have one fixed spectrum but Weyl characteristics tending to a function discontinuous at the identity. Retain separately proved fixed-mode equicontinuity, moments, constructive identification, or another regularity mechanism |
+| [NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-EXACT-DYNAMICS-EQUIVARIANCE](#ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-exact-dynamics-equivariance) | exactly intertwine the declared inserted-1D `g>0` coarse and fine dynamics with the natural low-mode embedding while allowing only scalar-energy, scalar-mass, and Q3-Laplacian quadratic counterterms | type-I-factor invariance would force product dynamics and an additive low/high generator, but the exact fine potential has `partial_X^2 partial_Y^2 U_N=6g/L>0`. Retain asymptotic fixed-observable, dressed, completely-positive, mean-force, or perfect-action routes |
+| [NG-2026-08-04-PRE-A-CP1-CL8-POINTWISE-STABILITY-GAUSSIAN-TRIAL-UNIFORM-ENERGY](#ng-2026-08-04-pre-a-cp1-cl8-pointwise-stability-gaussian-trial-uniform-energy) | for fixed `g,lambda,m_R,eta_R`, use one scalar normalization both for a uniform pointwise lower bound and a uniform variational upper bound from the same Wick-reference Gaussian | the full Gaussian mean minus the singlet-restricted minimum is at least `[12g+12lambda+18lambda^2/g]C^2+O(C)` and is invariant under scalar shifts, hence grows as `Theta((log N)^2)`. Retain sharper operator/Nelson bounds, non-Gaussian trials, constructive `P(phi)_2`, or another normalization |
+| [NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-INTERACTING-GROUND-PROJECTIVITY](#ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-interacting-ground-projectivity) | identify the registered interacting fine ground with the coarse ground by restricting the natural low-mode `B(H)` factor under strict refinement `N=2M` | on the collective uniform/fine-Nyquist plane the exact quartic potential has `partial_X^2 partial_Y^2 U_N=6g/L>0`; a product positive ground would force low/high additivity, so the fine ground is entangled and its retained marginal is mixed, unlike the coarse pure ground. Retain approximate, dressed, completely-positive, mean-force, or newly renormalized state families |
+| [NG-2026-08-04-PRE-A-CP1-CL8-SCALAR-MASS-ONLY-Q3-WICK-RENORMALIZATION](#ng-2026-08-04-pre-a-cp1-cl8-scalar-mass-only-q3-wick-renormalization) | Wick-order the local Q3 quartic interaction against the declared common-diagonal Gaussian reference while allowing only a scalar mass and scalar energy counterterm | the exact quadratic contraction is `-3C[(g+lambda)I+lambda L_Q3]`; for `lambda>0` its Q3-Laplacian direction is independent of `I`, and its Walsh-level separations grow as `C_N=Theta(log N)`. Retain a Q3-matrix counterterm basis, another declared scheme, `lambda=0`, or a separately proved constructive limit |
+| [NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-GAUSSIAN-LOW-MODE-EXACT-PROJECTIVITY](#ng-2026-08-04-pre-a-cp1-cl8-centered-gaussian-low-mode-exact-projectivity) | identify the inherited centered-lattice Gaussian ground states at spacings `a` and `a/2` by the natural identity on shared continuum-normalized Fourier generators and demand exact restriction/projectivity | every shared nonzero non-Nyquist mode has `khat_(a/2)^2-khat_a^2=16*sin^4(k*a/4)/a^2>0`; the exact `L=6,M=6->12,n=2` witness is `3->4`, so both field and momentum covariances differ. Retain exact continuum-symbol spectral projectivity, centered fixed-mode `O(a^2)` convergence, or separately verified nonidentity embeddings/perfect actions |
+| [NG-2026-08-04-PRE-A-CP1-CL8-CRITICAL-COMPACT-GAUSSIAN-NORMAL-GROUND](#ng-2026-08-04-pre-a-cp1-cl8-critical-compact-gaussian-normal-ground) | extend the massive ordered-tangent Gaussian ground continuously to a regular normalizable full-field ground at `r=0` on the compact circle | the spatial zero mode becomes the free particle `P^2/(2*chi)`, whose zero-energy affine solutions are not nonzero `L2(R)` vectors; its field covariance diverges and the limiting zero-mode Weyl functional is discontinuous. Retain the finite-volume interacting quartic ground, mean-zero/derivative algebras, an explicit infrared prescription, or nonregular critical representations |
+| [NG-2026-08-04-PRE-A-CP1-CL8-HISTORY-CUT-RAW-LEG-TENSOR-FACTORIZATION](#ng-2026-08-04-pre-a-cp1-cl8-history-cut-raw-leg-tensor-factorization) | treat each raw complete history vertex `(A_j,B_j)` on a mixed cut as an independent canonical tensor factor and implement a parity layer as a tensor product of independent raw-leg replacements | the exact current-flux Darboux inverse gives `[A_(s,e),B_(r,f)]=i*hbar*(kappa/ell)*delta_ef` for a lower-time site `s` adjacent to a higher-time site `r`; this is nonzero on the declared domain, so adjacent raw-leg algebras do not commute. Retain the global cut Darboux tensorization, commuting overlapping control gates, exact `B(H)` unitary and normal-state transport |
+| [NG-2026-08-04-PRE-A-CP1-CL8-BOND-FLOW-GLOBAL-ALL-TIME-SIDEWAYS](#ng-2026-08-04-pre-a-cp1-cl8-bond-flow-global-all-time-sideways) | promote the exact controller-free two-site Q3 bond flow from compact short-time twist charts to a global all-field, all-time sideways inverse over the full declared parameter family | at the Q3 zero equilibrium choose `r=4c/(3a^2)`, giving harmonic normal frequencies `omega_minus=2*omega_plus`; at `t=2*pi/omega_plus` both normal-mode rotations are the identity and the opposite-site block `[R_plus-R_minus]/2` vanishes.  Retain complete temporal bond flow, compact nonresonant twist charts and the exact inherited staggered-history route |
+| [NG-2026-08-04-PRE-A-CP1-CL8-DKD2-DIRECT-TWO-LEG-LOCALIZATION](#ng-2026-08-04-pre-a-cp1-cl8-dkd2-direct-two-leg-localization) | identify two inherited D-K-D steps directly with a two-input/two-output vertex on the same sixteen-dimensional adjacent legs, without a halo, ancilla, quotient or spectator data | the adjacent tangent cross determinant is in fact nonzero, `[delta^4*k^2/mu^2]^8`, but the same square has a nonzero distance-two position-to-momentum derivative `delta^3*k^2/mu`; its output therefore depends on radius-two spectators.  Retain macroblocks with explicit halos/larger legs and the exact staggered-history quad |
+| [NG-2026-08-04-PRE-A-CP1-CL8-MIDPOINT-QUAD-GLOBAL-UNIQUENESS](#ng-2026-08-04-pre-a-cp1-cl8-midpoint-quad-global-uniqueness) | claim a global single-valued Q3 four-corner map for the symmetric midpoint variational quad over the whole admitted `r<0` parameter range | with three corners zero and `q_11=y*1_8`, the equation becomes `y[1+alpha*r/4+alpha*g*y^2/64]=0`; `alpha=-4/r` is singular and `alpha>-4/r` has three real roots.  Retain local implicit branches, the explicit q-only scheme and the exact derived staggered-history A/B quad |
 | [NG-2026-08-04-PRE-A-CP1-CL8-EXACT-ORDER-EVERY-MICROCUT-SIDEWAYS](#ng-2026-08-04-pre-a-cp1-cl8-exact-order-every-microcut-sideways) | within the declared direct bond-factorization architecture, retain the inherited commuting q-only kick or D-K-D ordering while requiring a full opposite-leg inverse at every microscopic bond cut; or insert a fixed nontrivial controller and still identify the product with that inherited order | the q-only bond-kick cross block is `[[0,0],[-tau*V_WS,0]]` and has rank at most eight rather than the complete-leg rank sixteen; invertible kinetic drifts do not change that rank.  A nontrivial complete-leg controller restores full rank but survives as `tau -> 0` and rotates the positions used by later kicks, yielding a new driven circuit.  Retain the exact inserted-1D driven all-cut work/transport branch, but keep a controller-free common-parent dynamics intertwiner open |
 | [NG-2026-08-04-PRE-A-CP1-CL8-PASSIVE-TWO-ARM-NUMBER-STATE-QUARTIC-REUSE](#ng-2026-08-04-pre-a-cp1-cl8-passive-two-arm-number-state-quartic-reuse) | append the inherited positive onsite CL8 quartic kick to the exact passive two-arm control while automatically reusing its oscillator-number generator, vacuum and Gibbs densities | the kick `p'=p-delta*w*g*q^3` changes the passive invariant action by `-(delta*w*g/nu)*p*q^3+(delta^2*w^2*g^2/(2nu))*q^6`, which is positive at zero momentum and nonzero field; quantum mechanically `<4|[N,Q^4]|0>` is nonzero and the quartic phase does not preserve the Gaussian vacuum.  Retain the passive control theorem, but require a new interacting invariant/state or an exact work-and-transport ledger |
 | [NG-2026-08-04-PRE-A-CP1-CL8-NONLINEAR-FLOQUET-WEYL-NORMALIZER](#ng-2026-08-04-pre-a-cp1-cl8-nonlinear-floquet-weyl-normalizer) | promote the exact nonlinear CL8 split-circuit automorphism on `B(H_a)` to an automorphism of the concrete unital Weyl C-star algebra | conjugating a Weyl configuration translation by the quartic position kick produces a cubic-phase multiplier that is not uniformly continuous and therefore not almost periodic; it lies outside the Weyl algebra. Retain the exact `B(H_a)` automorphism, the quadratic metaplectic Weyl sector, or define and verify an enlarged observable algebra |
@@ -269,6 +292,923 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-04-a13-r166-direct-harmonic-coercivity-tensorization"></a>
+### NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION -- coefficient-one direct harmonic coercivity does not tensorize across dyadic fresh pairs
+
+**Failure mode.**  Extend the R-166 single-fresh-pair inequality
+`<|m|^4|z|^2> >= <|m|^2>^2<|z|^2>` with coefficient one to a tangent
+containing two dyadic fresh harmonics by summing rootwise estimates or
+deleting their cross harmonic.
+
+**Exact witness.**  On the normalized one-dimensional torus, take
+`m(x)=cos(2x)` and `z(x)=a sin(4x)+b sin(8x)`.  Exact Fourier coefficients
+give `<m^4 z^2>=5a^2/32+ab/4+3b^2/16` and
+`<m^2>^2<z^2>=(a^2+b^2)/8`.  The generalized Gram is
+`Q=[[5/4,1],[1,3/2]]`, with trace `11/4`, determinant `7/8`, and eigenvalues
+`(11+/-sqrt(65))/8`.  At `(a,b)=(1,-1)` the ratio is exactly `3/8<1`.
+Replacing only the old favorable quartic coefficient by `3/8` leaves the old
+adverse ledger below the R-164 threshold already at `G=116`:
+`P_(3/8)(116)+10/11=-606292707503941267/552751522971648000<0`.
+
+**Consequence.**  The R-166 coefficient-one lemma remains valid on its
+declared single fresh-`4p` pair, but it cannot be copied rootwise into the
+multi-root owner.  A successor must retain and certify the complete
+cross-root sextic Gram against the joint source metric.
+
+**Boundary.**  The exact matrix is positive definite, so this is not a
+failure of sextic positivity, a counterexample to the complete production
+action, or a closure or refutation of T-050.  It supplies no phase,
+morphology, BCC, vacuum, or PDE verdict.
+
+**Evidence.**  R-166 v1.1 primary and independent exact Laurent audits and
+`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-sparse-production-owner-radial-gram-global-boundary-260804-v1.1.tex.txt`.
+
+**Registered.**  2026-08-04.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-pressure-value-only-phase-classification"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-PRESSURE-VALUE-ONLY-PHASE-CLASSIFICATION -- a pressure value or common pressure does not classify the phase
+
+**Failure mode.**  Infer phase uniqueness, phase coexistence, spontaneous
+order, or a selected plus/minus state solely from existence and boundary
+independence of the constant-source pressure, or from its single value
+`p(0)=alpha_infinity`.
+
+**Evidence.**  For every `alpha` and `m>0`,
+`alpha+m log cosh(h)` and `alpha+m|h|` are finite, convex and even and
+have the same value at zero, but only the latter has a cusp there.  More
+strongly, each
+
+```text
+f_n(h)=log cosh(nh)/n
+```
+
+is analytic, convex and even with `f_n'(0)=0`, while
+`0<=|h|-f_n(h)<=log(2)/n`; thus the sequence converges locally uniformly to
+the cusped function `|h|`.  Finite-volume zero response and common pressure
+therefore do not determine the infinite-volume source tangent.  Established
+scalar `phi4_2` models also combine thermodynamic pressure with nontrivial
+phase structure, so pressure boundary independence is not a uniqueness
+theorem.
+
+**Consequence.**  EXP-000779 may define the directional diagnostic
+`m_v=partial_+ p(hv)|_(h=0)`, but proves no sign for it and no Q3 phase or
+state theorem.  A positive result needs an explicit parameter regime and
+order parameter, ultraviolet-uniform contour or correlation estimates,
+source-state compactness, and proof that the `h->0+` and `h->0-` tangent
+states are distinct.  This no-go does not refute a Q3 phase transition and
+has no physical-empty-space, C6, CP1, Sector-A or Pre-A consequence.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_q3_source_pressure_phase_diagnostic_physical_reference_3d_parent_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_q3_source_pressure_phase_diagnostic_physical_reference_3d_parent_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-transverse-zero-restriction-as-interacting-marginal"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-TRANSVERSE-ZERO-RESTRICTION-AS-INTERACTING-MARGINAL -- bare restriction does not establish an interacting marginal
+
+**Failure mode.**  Identify the inserted one-dimensional Q3 comparator with
+the interacting marginal of the three-dimensional ST8/Q3LOCK parent merely
+because setting transverse modes to zero reproduces a restricted classical
+action.
+
+**Evidence.**  In the exact two-cell scalar control
+`phi_1=(q+r)/sqrt(2)`, `phi_2=(q-r)/sqrt(2)`,
+
+```text
+phi_1^4+phi_2^4=q^4/2+3q^2 r^2+r^4/2.
+```
+
+For `S(q,r)=a(q^2+r^2)/2+b(q^4/2+3q^2r^2+r^4/2)` with `a,b>0`, integrating
+`r` gives
+`S_eff(q)=S(q,0)+F(q^2)-F(0)`, where
+`F'(s)=3b E_s[r^2]>0` and
+`F''(s)=-9b^2 Var_s(r^2)<0`.  The discarded-mode term is therefore
+nonconstant and is absent from the bare `r=0` restriction.
+
+**Consequence.**  The witness refutes only the inference that bare
+transverse-zero agreement is sufficient to establish an interacting
+marginal.  It does not compute the full registered ST8/Q3LOCK marginal,
+exclude cancellations in a complete effective action, or rule out a
+constraint, decoupling limit, dressed embedding or controlled RG reduction.
+A direct classical three-dimensional parent is a Euclidean `Phi4_3`-type
+problem, while a quantum parent with three spatial dimensions has a
+four-dimensional Euclidean route; the present `P(Phi)_2` result proves
+neither.  C6, CP1, Sector A and Pre-A remain open.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_q3_source_pressure_phase_diagnostic_physical_reference_3d_parent_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_q3_source_pressure_phase_diagnostic_physical_reference_3d_parent_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-interacting-ground-projectivity"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-INTERACTING-GROUND-PROJECTIVITY -- the registered interacting ground is not naturally projective
+
+**Failure mode.**  For even `M>=4` and `N=2M`, identify the coarse oscillator
+space with the natural fine low-mode factor, including the explicit reciprocal
+coarse-Nyquist squeeze, and demand
+
+```text
+Tr_high P_(0,N)=P_(0,M).
+```
+
+**Evidence.**  The fine ground is a smooth strictly positive pure vector.  A
+pure retained marginal would therefore make that vector a product across the
+low/high tensor split.  The separated kinetic operator and divided ground
+equation would then make the potential low/high additive.  On the exact
+collective Q3 plane
+
+```text
+q_(j,e)=[X+(-1)^j Y]/sqrt(L),
+partial_X^2 partial_Y^2 U_N=6g/L>0,
+```
+
+for every species, independently of `N`, `r`, and `lambda`.  The Q3 lock
+vanishes on this plane.  The nonzero mixed derivative contradicts the required
+additivity, so the fine ground is entangled and its retained density is mixed;
+the coarse simple ground is pure.
+
+**Consequence.**  Exact projectivity of the registered interacting ground
+states under this natural factorization is refuted.  The trace-norm ground
+limit also excludes same-`beta` Gibbs equality on an explicit low-temperature
+tail and hence excludes an exact family covering every `beta>0`.  This does not
+exclude an isolated finite temperature, a cutoff-dependent temperature,
+Hamiltonians of mean force, completely positive coarse-graining, dressed or
+nonnatural embeddings, approximate consistency, or a newly renormalized
+continuum state.  The history-cut consequence is conditional on a separately
+constructed inter-regulator cut square.  No physical vacuum, below-empty-space
+comparison, C6, CP1, or Pre-A verdict follows.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-scalar-mass-only-q3-wick-renormalization"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-SCALAR-MASS-ONLY-Q3-WICK-RENORMALIZATION -- one scalar mass cannot absorb the declared Q3 Wick contraction
+
+**Failure mode.**  Wick-order the local Q3 quartic interaction against the
+declared common-diagonal Gaussian reference while permitting only a scalar
+mass `r_N I` and a scalar energy counterterm, with no quadratic Q3-matrix
+counterterm.
+
+**Evidence.**  Exact Gaussian contraction gives
+
+```text
+delta K=-3C[(g+lambda)I+lambda L_Q3],
+E_shift=6C^2(g+4lambda).
+```
+
+The cube Laplacian has Walsh levels `0,2,4,6` with multiplicities `1,3,3,1`.
+For `lambda>0`, `L_Q3` is nonzero and linearly independent of `I`.  In the
+separately declared positive-mass centered reference,
+`C_N=Theta(log N)`, so the separation between Walsh level `s` and the singlet
+is `-6s*lambda*C_N` and is unbounded with the cutoff.
+
+**Consequence.**  Scalar-mass-only renormalization is refuted within this
+specific common-diagonal Wick scheme.  A fixed renormalized parameterization
+requires at least a scalar mass direction, a distinct Q3-Laplacian quadratic
+direction, and a scalar energy convention.  Necessity does not prove that this
+enlarged basis is sufficient or convergent.  Other fully specified schemes,
+`lambda=0`, constrained or gauge sectors, non-Gaussian references, and a
+separately constructed vector `P(phi)_2` limit remain open.  This reference is
+not identified with physical empty space, so no physical-vacuum or
+below-empty-space conclusion follows.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-finite-circle-witness-zero-temperature-density"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-FINITE-CIRCLE-WITNESS-ZERO-TEMPERATURE-DENSITY -- pointwise circle strictness does not prove a strict zero-temperature density
+
+**Failure mode.**  Infer
+`lim_(beta->infinity)(T_beta-E_beta)/beta>0` solely from the EXP-000775
+four-zero-mode Rayleigh witness proving `E_beta<T_beta` at each fixed finite
+`beta`.
+
+**Evidence.**  The exact vacuum-to-four-zero-mode matrix element is
+
+```text
+A_beta=(g+3lambda)sqrt(4!)/(16 beta m0^2)=O(beta^-1).
+```
+
+The two-vector trial therefore supplies pointwise strictness but no lower
+bound proportional to `beta`.  A positive sequence may converge to zero, and
+division by `beta` can erase any subextensive improvement.  Executable
+mutations make the amplitude and its density proxy tend to zero.  The
+successful successor instead constructs line sharp-cutoff Hamiltonians and
+uses open-rectangle Nelson symmetry with the GRS spectral-Holder monotonicity.
+It reduces the periodic-versus-sharp comparison to a separate uniform
+surface-pairing lemma, which remains open.
+
+**Consequence.**  Finite-circle strictness remains valid but cannot be cited
+as the zero-temperature thermodynamic proof.  The strict density requires an
+extensive argument such as the registered sharp-cutoff monotonicity or a
+uniform pressure-curvature theorem.  This no-go says nothing against the
+resulting strict named-Gaussian-reference density.  It supplies no physical
+empty-space identification, absolute energy, phase transition, C6, CP1 or
+Pre-A conclusion.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-q3-zero-temperature-thermodynamic-ground-phase-physical-reference-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-q3-zero-temperature-thermodynamic-ground-phase-physical-reference-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_q3_zero_temperature_thermodynamic_ground_phase_physical_reference_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_q3_zero_temperature_thermodynamic_ground_phase_physical_reference_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-fixed-volume-ui-periodic-sharp-surface-pairing"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-FIXED-VOLUME-UI-PERIODIC-SHARP-SURFACE-PAIRING -- fixed-volume uniform integrability does not prove the periodic-sharp surface estimate
+
+**Failure mode.**  Infer a cutoff-, volume- and interpolation-uniform
+periodic-versus-sharp boundary estimate from the fixed-volume
+uniform-integrability and Nelson-normalization results of EXP-000772.
+
+**Evidence.**  At a common ultraviolet cutoff the Gaussian covariance
+interpolation derivative is exact.  The required next step is nevertheless a
+new estimate of the connected Wick-derivative pairing plus its diagonal
+counterterm by `C(|partial Lambda|+1)`, with one constant uniform in the
+cutoff, rectangle size and interpolation parameter.  EXP-000772 controls the
+original Gibbs density at each fixed volume; it does not control normalized
+Wick-cubic and Wick-quadratic insertions uniformly over growing volumes, the
+mixed nonlocal covariances, or the seam logarithm.  Division by the
+interpolating partition function can reintroduce volume dependence.
+
+**Consequence.**  The sharp-cutoff Q3 GRS theorem and its strictly positive
+centered vacuum-energy density survive.  The periodic-circle
+zero-temperature specific relative-entropy limit, the joint rectangular
+van-Hove identification and equality of the two iterated scalar limits remain
+conditional on the named surface-pairing lemma.  No periodic state limit,
+phase classification, physical-empty-space comparison, absolute energy, C6,
+CP1 or Pre-A conclusion follows.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-q3-zero-temperature-thermodynamic-ground-phase-physical-reference-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-q3-zero-temperature-thermodynamic-ground-phase-physical-reference-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_q3_zero_temperature_thermodynamic_ground_phase_physical_reference_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_q3_zero_temperature_thermodynamic_ground_phase_physical_reference_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-fixed-raw-quadratic-finite-q3-renormalized-limit"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-FIXED-RAW-QUADRATIC-FINITE-Q3-RENORMALIZED-LIMIT -- a fixed raw quadratic is not a fixed finite renormalized Q3 interaction
+
+**Failure mode.**  Keep the original inserted-one-dimensional CL8 raw
+quadratic matrix independent of the spatial cutoff and identify that family,
+after only field and coordinate rescaling, with one fixed finite
+eight-component Q3 `P(Phi)_2` interaction.
+
+**Evidence.**  The exact rescaling gives finite couplings `g_E>0` and
+`lambda_E>=0`.  With common diagonal coincidence covariance `C_M`, the Q3
+Wick calculation gives
+
+```text
+K_R(M)=K_raw(M)+3C_M[(g_E+lambda_E)I+lambda_E L_Q3].
+```
+
+On Walsh level `s=0,1,2,3`, the matrix in brackets has eigenvalue
+`g_E+lambda_E+2s lambda_E`, which is strictly positive.  The massive
+two-dimensional centered covariance has `C_M=Theta(log M)`.  Therefore every
+eigenvalue of `K_R(M)` diverges to positive infinity when `K_raw` is fixed;
+it cannot approach a prescribed finite Q3 quadratic.  The required bare
+tuning is instead
+
+```text
+K_raw(M)=K_R-3C_M[(g_E+lambda_E)I+lambda_E L_Q3],
+```
+
+up to the separately declared scalar-energy convention.
+
+**Consequence.**  The original cutoff-independent raw CL8 Hamiltonian family
+and the renormalized Q3 constructive family are not the same regulator
+sequence.  The matrix-counterterm family remains a viable successor and its
+Wick actions have the convergence proved in EXP-000770.  This no-go does not
+determine the limit, if any, of the fixed-raw family and does not refute CL8
+at a fixed cutoff.  It proves only that a fixed finite Nagoji Q3 target
+requires the displayed Q3 matrix tuning.  It supplies no physical vacuum,
+energy-reference, below-empty-space, C6, CP1 or Pre-A conclusion.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-centered-q3-wick-weyl-limit-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-centered-q3-wick-weyl-limit-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_centered_q3_wick_weyl_limit_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_centered_q3_wick_weyl_limit_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-wick-l2-only-interacting-density-limit"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-WICK-L2-ONLY-INTERACTING-DENSITY-LIMIT -- Wick-action L2 convergence alone does not control exponential densities
+
+**Failure mode.**  Infer `L1` or total-variation convergence of normalized
+interacting weights `exp(R_M)/E exp(R_M)` solely from `L2` convergence of the
+Wick interactions `R_M`.
+
+**Evidence.**  On any nonatomic probability space, let `X_N=N` on an event
+of probability `N^-4` and zero elsewhere.  Then
+
+```text
+||X_N||_2=N^-1 -> 0,
+E exp(X_N)=1-N^-4+N^-4 exp(N) -> infinity.
+```
+
+The primary and independent verifiers use distinct integer sequences and
+check both directions exactly or in logarithmic scale.  The witness isolates
+rare positive tails, precisely the information not controlled by finite
+polynomial moments.
+
+**Consequence.**  The centered-Q3 Wick `L2` and fixed finite-`Lp` theorem in
+EXP-000770 is not a density theorem.  The surviving route must prove
+`sup_M E exp[(1+eta)R_M]<infinity` for some `eta>0` on the actual centered-
+dispersion nodal family, or an equivalent de la Vallee-Poussin bound.  Once
+that lemma is available, the existing almost-sure/subsequence convergence
+and Vitali argument can identify the normalized density and pass reflection
+positivity.  This is an inference no-go, not a counterexample to the actual
+Q3 family, and it has no physical-state, energy-reference, C6, CP1 or Pre-A
+consequence.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-centered-q3-wick-weyl-limit-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-centered-q3-wick-weyl-limit-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_centered_q3_wick_weyl_limit_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_centered_q3_wick_weyl_limit_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-centered-nodal-spectral-finite-exact-intertwiner"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-NODAL-SPECTRAL-FINITE-EXACT-INTERTWINER -- centered nodal and spectral-spatial quartics are not one finite Hamiltonian under scalar or quadratic counterterms
+
+**Failure mode.**  Identify one finite centered-nodal CL8 spatial potential or
+Hamiltonian exactly with the finite spectral-spatial Q3 comparator under the
+natural trigonometric interpolation, while allowing a scalar energy shift and
+scalar/Q3-matrix quadratic counterterms but no quartic perfect-action terms.
+
+**Evidence.**  Let `M` be even, `a=L/M`, take the Q3 species singlet so every
+species-edge difference vanishes, and use the centered Nyquist interpolant
+
+```text
+phi(x)=A cos(pi M x/L),  phi(x_j)=A(-1)^j.
+```
+
+Then exact roots-of-unity quadrature and the constant Fourier coefficient of
+`cos^4` give
+
+```text
+a sum_(j=0)^(M-1) phi(x_j)^4 = L A^4,
+integral_0^L phi(x)^4 dx = (3/8)L A^4.
+```
+
+The difference is `(5/8)L A^4`.  It has degree four in `A`; no scalar energy
+or scalar/Q3-quadratic counterterm can cancel it as a polynomial.  The
+independent rational verifier obtains `1`, `3/8`, and `5/8` without numerical
+quadrature.  Separately, the kinetic symbols are `4a^(-2)sin^2(ak/2)` and
+`k^2`, so even the quadratic pieces are not naturally equal at nonzero finite
+spacing.
+
+**Consequence.**  Exact finite-regulator equality in the stated counterterm
+class is refuted.  The result does not imply different continuum theories and
+does not block the surviving low-local universality route.  If a
+trigonometric field has bandwidth `K`, its fourth power has bandwidth at most
+`4K`, and the nodal quartic quadrature is exact once `M>4K`.  A valid bridge
+must therefore prove tightness and full-sequence asymptotic identification,
+with the unit, base-mass and Wick-covariance dictionaries declared; it cannot
+be a finite relabelling.  No physical state, absolute energy reference,
+below-empty-space sign, C6, CP1, or Pre-A conclusion follows.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-q3-spatial-spectral-rp-martingale-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-q3-spatial-spectral-rp-martingale-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_q3_spatial_spectral_rp_martingale_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_q3_spatial_spectral_rp_martingale_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-strang-one-slice-exact-hamiltonian-semigroup"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-STRANG-ONE-SLICE-EXACT-HAMILTONIAN-SEMIGROUP -- the explicit symmetric slice is not the exact registered interacting heat step
+
+**Failure mode.**  Identify
+`S_epsilon=exp(-epsilon U_a/2) exp(epsilon kappa_a Delta)
+exp(-epsilon U_a/2)` with `exp(-epsilon H_a)` at finite nonzero step merely
+because the slice is symmetric, operator positive, has a strictly positive
+kernel, and agrees through the epsilon-squared core expansion.
+
+**Evidence.**  Let `f` be smooth, compactly supported, and equal to one near a
+point `q`.  For `T=-kappa Delta` and any smooth `V`, direct expansion on this
+plateau gives
+
+```text
+[epsilon^3](S_epsilon-exp[-epsilon(T+V)])f(q)
+ =-(kappa/12)|grad V(q)|^2-(kappa^2/12)Delta^2 V(q).
+```
+
+For the actual registered CL8 potential, `grad U_a(0)=0`.  Quadratic spatial
+and mass terms have zero bi-Laplacian.  Each of the `8M` self-quartics gives
+`6wg`, while each of the twelve Q3 edges at each node gives `16w lambda`.
+Therefore
+
+```text
+Delta^2 U_a(0)=48wM(g+4lambda)>0,
+[epsilon^3](S_epsilon-exp[-epsilon H_a])f(0)
+ =-4 kappa_a^2 wM(g+4lambda)<0.
+```
+
+The two independent verifiers reconstruct both the general quartic jet and
+the actual Q3 bi-Laplacian without importing one another.  This proves failure
+of the one-parameter operator identity and nonzero defect for every
+sufficiently small positive step; it does not exclude an isolated accidental
+matrix element at another step.
+
+**Consequence.**  Retain the exact Feynman--Kac heat transfer
+`exp(-epsilon H_a)`.  The explicit Gaussian-link slice remains a useful
+aligned-even-ring reflection-positive approximation, and its products
+converge in trace norm to the exact semigroup.  No regulator limit, physical
+time, vacuum selection, energy reference, C6, CP1, or Pre-A conclusion follows.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-time-local-rp-feynman-kac-bridge-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-time-local-rp-feynman-kac-bridge-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split_independent.py`;
+`codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split_verify.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-euclidean-heat-support-physical-light-cone"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-EUCLIDEAN-HEAT-SUPPORT-PHYSICAL-LIGHT-CONE -- Euclidean heat support is full rather than conical
+
+**Failure mode.**  Read a Lorentzian causal cone or physical limiting speed
+directly from support of the fixed-regulator Euclidean heat transfer.
+
+**Evidence.**  For every `t>0`, the free kernel is a Gaussian and is strictly
+positive for every pair of finite configurations.  The Feynman--Kac bridge
+multiplier is the expectation of a strictly positive finite exponential.
+Consequently
+
+```text
+K_t(q,q')>0  for every q,q' in R^(8M) and every t>0.
+```
+
+The Euclidean transfer therefore has full configuration-transition support,
+not a finite support cone.
+
+**Consequence.**  Reflection positivity and time-local Euclidean links do not
+by themselves derive Lorentzian causality or physical light speed.  This does
+not refute a cone proved separately from real-time commutators, the registered
+classical characteristic dynamics, quasi-local bounds, or a controlled
+Lorentzian continuum limit.  It supplies no physical time, vacuum, reference
+energy, below-empty-space sign, C6, CP1, or Pre-A closure.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-time-local-rp-feynman-kac-bridge-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-time-local-rp-feynman-kac-bridge-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split_independent.py`;
+`codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split_verify.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-full-euclidean-sharp-cutoff-reflection-positivity"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-FULL-EUCLIDEAN-SHARP-CUTOFF-REFLECTION-POSITIVITY -- the induced N=1 projected simultaneous sharp-cutoff law is not reflection positive
+
+**Failure mode.**  Infer reflection positivity of the induced `N=1` projected
+law merely because the full Euclidean sharp spectral projector commutes with
+time reflection, and use that projected approximant as an automatic
+Osterwalder--Schrader route.
+
+**Evidence.**  Let `nu_1=(P_1)_#(rho_1 mu)` be the induced projected
+interacting law.  Its density with respect to the nondegenerate projected
+Gaussian is strictly positive, so it has full support.  Time-translation and
+reflection invariance force the one-component spatial-zero covariance to have
+the form
+
+```text
+C_1(s,t)=b0+2b1 cos(s-t),  b1=E_nu1 |phi_hat(1,0)|^2>0.
+```
+
+At the positive times `(pi/6,pi/3,pi/2)`, choose weights
+`(1,-sqrt(3),sqrt(3)-1)`.  Their constant and cosine moments vanish while
+their sine moment is `sqrt(3)-2`.  Hence the reflected covariance form is
+
+```text
+sum_ij w_i w_j C_1(-t_i,t_j)=-2b1(2-sqrt(3))^2<0.
+```
+
+The strict sign persists for smooth positive-time tests concentrated near
+these points.
+
+**Consequence.**  Reflection positivity is refuted for both the projected
+Gaussian reference and its strictly positive density-weighted `N=1`
+interacting projected law.  This does not decide the lifted law `rho_1 mu` on
+the full field's positive-time local algebra, because `P_1` is nonlocal in
+Euclidean time.  It also does not decide any `N>1` projected law, the limiting
+local measure, or a time-local, spatial-only, heat-kernel, or transfer-matrix
+approximation.  OS reconstruction, KMS/ground identification, Hadamard form,
+physical vacuum, C6, CP1 and Pre-A remain open.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-q3-vector-phi2-constructive-comparator-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-q3-vector-phi2-constructive-comparator-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_q3_vector_phi2_constructive_comparator_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_q3_vector_phi2_constructive_comparator_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-time-zero-configuration-only-full-weyl-state"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE -- configuration characteristics do not determine the momentum sector
+
+**Failure mode.**  Promote convergence of every time-zero configuration
+characteristic to convergence or identification of a full regular canonical
+Weyl state without separately constructing the momentum sector.
+
+**Evidence.**  In one oscillator with `[Q,P]=i`, let
+
+```text
+psi_0(x)=pi^(-1/4) exp(-x^2/2),
+psi_1=exp(iQ^2/2) psi_0.
+```
+
+The two vectors have the same position probability density and therefore the
+same configuration characteristic `exp(-t^2/4)`.  If
+`U=exp(iQ^2/2)`, then `U^* P U=P+Q`.  Thus their momentum variances are
+respectively `1/2` and `1`.
+
+**Consequence.**  The constructive comparator's time-zero configuration
+limit is retained, but it does not determine the joint Weyl functional,
+canonical momentum, or a canonical state.  Reflection-positive
+reconstruction, direct momentum-characteristic estimates, a Feynman--Kac
+bridge, or another joint construction remains possible.  No negative verdict
+on the existence of a full CL8 state is claimed, and C6, CP1 and Pre-A remain
+open.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-q3-vector-phi2-constructive-comparator-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-q3-vector-phi2-constructive-comparator-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_q3_vector_phi2_constructive_comparator_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_q3_vector_phi2_constructive_comparator_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-constructive-normalizability-only-physical-state-selection"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-CONSTRUCTIVE-NORMALIZABILITY-ONLY-PHYSICAL-STATE-SELECTION -- normalizability is not a state-selection principle
+
+**Failure mode.**  Infer a unique canonical or physical state from the Q3
+quartic coercivity and constructive normalizability criterion alone.
+
+**Evidence.**  Hold `m0,g,lambda` fixed at the zero-mode cutoff.  Both
+interaction residuals `K_int=0` and `K_int=I` satisfy the same quartic
+domination hypothesis and give strictly positive normalizable densities.  Up
+to a positive scalar normalizer, their density ratio is
+
+```text
+rho_I(x)/rho_0(x)=c exp(-V|x|^2/2),
+```
+
+where `V=int_(T^2)1 dz`, and normalized Haar measure gives `V=1`.  The ratio
+is nonconstant for every positive `V`.  Thus the admitted state candidates
+are distinct.
+
+**Consequence.**  Constructive existence and normalizability do not by
+themselves select a unique canonical, KMS, ground, vacuum, or physical state.
+A fixed Hamiltonian/Feynman--Kac bridge, beta or ground criterion, boundary
+condition, KMS condition, energy reference, or other physical rule remains a
+valid successor.  The witness neither chooses nor refutes such a state and
+does not establish an absolute or below-empty-space energy sign, C6, CP1, or
+Pre-A.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-q3-vector-phi2-constructive-comparator-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-q3-vector-phi2-constructive-comparator-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_q3_vector_phi2_constructive_comparator_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_q3_vector_phi2_constructive_comparator_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-abstract-compactness-only-regular-continuum-state"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-ABSTRACT-COMPACTNESS-ONLY-REGULAR-CONTINUUM-STATE -- weak-star compactness alone does not supply Weyl regularity
+
+**Failure mode.**  Infer a regular interacting continuum state solely from
+normal finite-cutoff states, a cutoff-uniform spectral lower bound or gap, and
+abstract weak-star state-space compactness.
+
+**Evidence.**  The one-oscillator Hamiltonians
+
+```text
+h_N=(N P^2+Q^2/N)/2
+```
+
+have the cutoff-independent spectrum `{n+1/2:n>=0}` and unique regular normal
+Gaussian grounds.  Their covariance is `diag(N/2,1/(2N))`, so
+
+```text
+omega_N(W(u,v))=exp[-(N u^2+v^2/N)/4].
+```
+
+The pointwise limit is zero for every `u!=0` and one for `u=0`, hence is
+discontinuous at the Weyl identity and nonregular.
+
+**Consequence.**  Abstract compatible-subnet existence is retained, but it
+cannot be promoted to a regular interacting continuum state without an
+additional regularity mechanism.  Uniform fixed-mode moments or
+characteristic equicontinuity are sufficient candidates, not claimed
+necessary.  Uniqueness/full-sequence identification is a separate gate.  The
+witness does not claim that the CL8 limit is nonregular and gives no physical
+vacuum, below-empty-space, C6, CP1, or Pre-A verdict.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-exact-dynamics-equivariance"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-EXACT-DYNAMICS-EQUIVARIANCE -- the declared natural low-mode factor is not exactly invariant under interacting dynamics
+
+**Failure mode.**  Within the inserted one-dimensional CL8 family with
+`g>0`, require the natural low-mode monomorphism to exactly intertwine coarse
+and fine Heisenberg dynamics while allowing only the declared scalar-energy,
+scalar-mass, and Q3-Laplacian quadratic counterterms.
+
+**Evidence.**  Exact invariance of the type-I factor
+`B(H_low) tensor I` would make the fine unitary a product, up to phase, and its
+generator additive on the common invariant Schwartz tensor core.  On the
+collective retained-zero/added-Nyquist plane, however,
+
+```text
+U_N contains 3g X^2 Y^2/(2L),
+partial_X^2 partial_Y^2 U_N=6g/L>0.
+```
+
+The resulting cubic force term `-(3g/L)X Y^2` is quadratic in the added mode.
+A scalar energy has no force, quadratic counterterms have only linear forces,
+and the Q3 term vanishes on the species singlet, so this term cannot be
+canceled within the declared class.
+
+**Consequence.**  Exact natural low-mode interacting dynamics equivariance is
+refuted only for this inserted-1D family, embedding, and counterterm class.
+Asymptotic fixed-observable dynamics, dressed or nonnatural embeddings,
+completely-positive reductions, Hamiltonians of mean force, and different
+perfect-action regulators remain open.  No continuum, physical-light, C6,
+CP1, or Pre-A verdict follows.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-pointwise-stability-gaussian-trial-uniform-energy"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-POINTWISE-STABILITY-GAUSSIAN-TRIAL-UNIFORM-ENERGY -- one scalar cannot close both local stability and the same-Gaussian energy trial
+
+**Failure mode.**  For fixed `g,lambda,m_R,eta_R`, use one scalar energy shift
+both to make the local Wick polynomial pointwise uniformly lower bounded and
+to obtain a cutoff-uniform variational upper bound from the same declared
+Wick-reference Gaussian.
+
+**Evidence.**  On the species singlet `q_e=x`, the unshifted local polynomial
+is
+
+```text
+F_C(x)=2g x^4+[4m_R-12C(g+lambda)]x^2+6C^2(g+4lambda).
+```
+
+When the nonzero minimum branch applies, the full eight-component Gaussian
+mean minus this restricted minimum has leading coefficient
+
+```text
+12g+12lambda+18lambda^2/g > 0.
+```
+
+The global pointwise minimum is no larger than the singlet minimum.  Therefore
+any scalar shift producing `inf_q(P_C+s_C)>=-B` makes the same-Gaussian mean at
+least this positive `C^2+O(C)-B` lower bound.  Since `C_N=Theta(log N)`, it
+diverges at least as `Theta((log N)^2)`.  The comparison is invariant under
+the scalar shift.
+
+**Consequence.**  The pointwise-local-bound plus same-Wick-Gaussian and
+scalar-only normalization route is refuted.  Sharper global operator bounds,
+spatial-kinetic or Nelson cancellation, non-Gaussian trials, constructive
+vector `P(phi)_2`, and other fully specified normalizations remain open.  The
+scalar convention does not identify physical empty space or an absolute
+energy sign, and no C6, CP1, or Pre-A verdict follows.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-centered-gaussian-low-mode-exact-projectivity"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-GAUSSIAN-LOW-MODE-EXACT-PROJECTIVITY -- inherited centered Gaussian states are not naturally projective
+
+**Failure mode.**  Identify the inherited centered-lattice Gaussian ground
+states at spacings `a` and `a/2` by the natural identity on every shared
+continuum-normalized Fourier field and momentum generator, and demand exact
+state restriction/projectivity under that identity.
+
+**Evidence.**  For every shared nonzero, non-Nyquist mode with `c>0`,
+
+```text
+khat_(a/2)(k)^2-khat_a(k)^2
+  =16*sin(k*a/4)^4/a^2 > 0.
+```
+
+Consequently the fine frequency is strictly larger, its field covariance is
+strictly smaller, and its momentum covariance is strictly larger.  The exact
+non-Nyquist witness `L=6`, `M=6 -> 12`, `n=2` changes the squared symbol from
+`3` to `4`.  One real sine or cosine quadrature already distinguishes the two
+Gaussian characteristic functionals.
+
+**Consequence.**  Exact natural-identity centered projectivity is refuted.
+This does not reject the separately proved exact continuum-symbol spectral
+projective family, centered fixed-mode and finite-time `O(a^2)` convergence,
+nonidentity symplectic/squeezed embeddings, perfect actions, counterterms, or
+an interacting regulator-compatible construction.  No physical vacuum,
+continuum state, phase transition, C6, CP1 or Pre-A verdict follows.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-ordered-q3-gaussian-tangent-regulator-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-ordered-q3-gaussian-tangent-regulator-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_ordered_q3_gaussian_tangent_regulator_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_ordered_q3_gaussian_tangent_regulator_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-critical-compact-gaussian-normal-ground"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-CRITICAL-COMPACT-GAUSSIAN-NORMAL-GROUND -- the compact critical quadratic zero mode has no normalizable Gaussian ground
+
+**Failure mode.**  Extend the massive ordered-tangent Gaussian ground to a
+regular normalizable ground of the full compact-circle quadratic tangent at
+`r=0`, including the spatial zero mode.
+
+**Evidence.**  At `r=0` every tangent stiffness vanishes.  The spatial zero
+mode therefore has
+
+```text
+H_0=P_0^2/(2*chi).
+```
+
+Its zero-energy wave functions are affine and no nonzero one belongs to
+`L2(R)`.  Equivalently, along `r=-rho -> 0-`, the zero-mode field covariance
+`hbar/[2*sqrt(chi*nu_s)]` diverges while the momentum covariance tends to zero;
+the resulting full-field Weyl characteristic limit is discontinuous in every
+nonzero zero-mode field direction.
+
+**Consequence.**  The full compact **quadratic regular Gaussian** critical
+ground route is refuted.  This does not reject the finite-volume interacting
+quartic Hamiltonian and its even ground state, a mean-zero or derivative
+observable algebra, an explicit infrared prescription, a nonregular
+representation, a thermodynamic limit with separately proved controls, or a
+different critical theory.  It is not a no-go for a physical phase transition,
+C6, CP1 or Pre-A.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-ordered-q3-gaussian-tangent-regulator-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-ordered-q3-gaussian-tangent-regulator-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_ordered_q3_gaussian_tangent_regulator_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_ordered_q3_gaussian_tangent_regulator_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-history-cut-raw-leg-tensor-factorization"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-HISTORY-CUT-RAW-LEG-TENSOR-FACTORIZATION -- spatial current prevents independent raw-leg tensor factors
+
+**Failure mode.**  Treat every raw complete history vertex
+`(A_j,B_j)` on a mixed cut as an independent canonical tensor factor, and
+therefore represent a simultaneous parity layer as a tensor product of
+independent raw-leg replacement unitaries.
+
+**Evidence.**  For a cut with integer history heights `n_j`, the exact
+current-flux form is Darboux only after defining
+
+```text
+Q_j=A_j,
+P_j=ell*[B_j-kappa*sum_(s adjacent and one history time lower) B_s],
+ell=mu/delta.
+```
+
+On a checkerboard edge from a lower-time site `s` to a higher-time neighbour
+`r`, inversion gives the exact coefficient
+
+```text
+{A_(s,e),B_(r,f)}=(kappa/ell)*delta_ef,
+[A_(s,e),B_(r,f)]=i*hbar*(kappa/ell)*delta_ef.
+```
+
+It is nonzero because the declared theorem has `delta,c,chi,hbar!=0`.
+Operators on independent tensor factors must commute.  Primary SymPy and
+non-importing standard-library `Fraction` audits verify the complete cut form
+on all 6 `M=4` and 20 `M=6` balanced cuts, including the positive-step
+coefficient `3/64` and negative-step coefficient `-7/250`.
+
+**Consequence.**  The raw per-vertex tensor-factor route is refuted.  This does
+not reject the exact global Darboux tensorization, the overlapping but strongly
+commuting control gates, the nonlinear finite-cut `B(H)` unitary, cut-specific
+regular CCR systems or normal-state transport.  One fixed nonlinear Weyl
+C-star algebra, stationarity and physical state selection remain separate
+open gates.
+
+**Artifacts.**
+`strategy/pre-a-cp1-cl8-history-cut-quantum-algebra-state-compatibility-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-history-cut-quantum-algebra-state-compatibility-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_history_cut_quantum_algebra_state_compatibility_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_history_cut_quantum_algebra_state_compatibility_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-bond-flow-global-all-time-sideways"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-BOND-FLOW-GLOBAL-ALL-TIME-SIDEWAYS -- exact bond flow has harmonic sideways caustics
+
+**Failure mode.**  Promote the exact controller-free two-site Q3 bond flow
+from its compact short-time twist charts to a global all-field, all-time
+sideways inverse uniformly over the full declared parameter family.
+
+**Evidence.**  At the full Q3 zero equilibrium, the quartic locking and onsite
+quartic have zero Hessian.  The opposite-site tangent block for one species is
+
+```text
+B(t)=[R_(omega_plus)(t)-R_(omega_minus)(t)]/2,
+```
+
+where `R_omega` is the canonical harmonic rotation with common bond mass
+`2*mu`.  Choose the admissible relation `r=4c/(3a^2)`.  Then
+`omega_minus=2*omega_plus`.  At `t=2*pi/omega_plus`, both rotations equal the
+identity and `B(t)=0`; the eight-species opposite-leg determinant therefore
+vanishes.
+
+**Boundary.**  The exact bond flow remains a complete temporal symplectic
+diffeomorphism.  Its opposite-leg determinant has nonzero leading jet
+`[k^2/(48*mu^2)]^8*t^32`, so every fixed compact phase set admits sufficiently
+small nonzero twist charts.  Nonresonant restrictions, other parameter
+domains and different common parents are not refuted.
+
+**Consequence.**  Do not use exact bond flow as a global all-time
+characteristic theorem.  Retain it as a fallback local parent and use the
+exact inherited staggered-history A/B construction for the closed classical
+fixed-regulator intertwiner.
+
+**Evidence files.**
+`strategy/pre-a-cp1-cl8-controller-free-common-parent-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-controller-free-common-parent-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_controller_free_common_parent_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_controller_free_common_parent_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-dkd2-direct-two-leg-localization"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-DKD2-DIRECT-TWO-LEG-LOCALIZATION -- an interior full-rank macroblock still has radius-two spectators
+
+**Failure mode.**  Identify two inherited D-K-D steps directly with a
+two-input/two-output vertex on the same adjacent sixteen-dimensional legs,
+without recording a halo, ancilla, quotient, larger leg or spectator data.
+
+**Evidence.**  At a static tangent point, let `u=K_WS=-k*I_8` and
+`v=(K^2)_WS`.  The squared-map adjacent cross subblocks obey
+
+```text
+D^2-P*Q=delta^4*u^2/mu^2,
+```
+
+so the adjacent determinant is actually full rank:
+
+```text
+det C_opp(F_delta^2)=[delta^4*k^2/mu^2]^8.
+```
+
+However the distance-two position-to-momentum derivative is
+`delta^3*k^2/mu`, which is nonzero for the declared parameters.  The adjacent
+output is not a function of only the proposed two adjacent input legs.
+
+**Boundary.**  This does not reinstate the one-step rank-eight obstruction for
+interior macroblocks.  It does not refute a macrocell with explicit halos,
+larger legs, constraints, quotients or a nonlocal evaluation map.  The
+outermost characteristic edge of an unblocked power also remains a separate
+rank question.
+
+**Consequence.**  Reject only the direct same-leg two-input localization.
+Retain the exact D-K-D map and its derived staggered-history quad, which
+reorganizes the same phase information without hiding spectators.
+
+**Evidence files.**
+`strategy/pre-a-cp1-cl8-controller-free-common-parent-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-controller-free-common-parent-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_controller_free_common_parent_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_controller_free_common_parent_route_split_independent.py`.
+
+<a id="ng-2026-08-04-pre-a-cp1-cl8-midpoint-quad-global-uniqueness"></a>
+### NG-2026-08-04-PRE-A-CP1-CL8-MIDPOINT-QUAD-GLOBAL-UNIQUENESS -- the symmetric midpoint Q3 quad is multivalued
+
+**Failure mode.**  Claim a globally single-valued four-corner map for the
+symmetric midpoint variational quad over the whole admitted `r<0` parameter
+range.
+
+**Evidence.**  For
+
+```text
+q_11-q_10-q_01+q_00
+ =-alpha*grad W_Q3((q_00+q_10+q_01+q_11)/4),
+```
+
+set three corners to zero and `q_11=y*1_8`.  The Q3 locking term vanishes and
+the equation reduces to
+
+```text
+y*[1+alpha*r/4+alpha*g*y^2/64]=0.
+```
+
+At `alpha=-4/r` the derivative at the zero solution is singular.  For
+`alpha>-4/r`, the zero root and two nonzero real roots coexist.  The exact
+hostile fixture `alpha=2`, `r=-4`, `g=1` has `y=0,+4*sqrt(2),-4*sqrt(2)`.
+
+**Boundary.**  This does not refute local implicit branches, restricted
+monotonicity domains, the explicit q-only quad, or the staggered A/B quad
+derived exactly from the inherited D-K-D history recurrence.
+
+**Consequence.**  Do not use the symmetric midpoint proposal for a global
+all-cut theorem without a branch/domain proof.  The exact derived history
+quad supplies the current classical fixed-regulator route.
+
+**Evidence files.**
+`strategy/pre-a-cp1-cl8-controller-free-common-parent-route-split-certificate-260804.md`;
+`strategy/pre-a-cp1-cl8-controller-free-common-parent-route-split-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_controller_free_common_parent_route_split.py`;
+`codes/foundations/pre_a_cp1_cl8_controller_free_common_parent_route_split_independent.py`.
 
 <a id="ng-2026-08-04-pre-a-cp1-cl8-exact-order-every-microcut-sideways"></a>
 ### NG-2026-08-04-PRE-A-CP1-CL8-EXACT-ORDER-EVERY-MICROCUT-SIDEWAYS -- the direct q-only-order microgate cannot retain inherited order and full sideways rank at every microcut
@@ -636,39 +1576,6 @@ matching alone is insufficient.
 `strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-manifest.json`;
 `codes/foundations/pre_a_cp1_cl8_quantum_boundary_algebra_intertwiner_route_split.py`;
 `codes/foundations/pre_a_cp1_cl8_quantum_boundary_algebra_intertwiner_route_split_independent.py`.
-
-<a id="ng-2026-08-04-a13-r166-direct-harmonic-coercivity-tensorization"></a>
-### NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION -- coefficient-one direct harmonic coercivity does not tensorize across dyadic fresh pairs
-
-**Failure mode.**  Extend the R-166 single-fresh-pair inequality
-`<|m|^4|z|^2> >= <|m|^2>^2<|z|^2>` with coefficient one to a tangent
-containing two dyadic fresh harmonics by summing rootwise estimates or
-deleting their cross harmonic.
-
-**Exact witness.**  On the normalized one-dimensional torus, take
-`m(x)=cos(2x)` and `z(x)=a sin(4x)+b sin(8x)`.  Exact Fourier coefficients
-give `<m^4 z^2>=5a^2/32+ab/4+3b^2/16` and
-`<m^2>^2<z^2>=(a^2+b^2)/8`.  The generalized Gram is
-`Q=[[5/4,1],[1,3/2]]`, with trace `11/4`, determinant `7/8`, and eigenvalues
-`(11+/-sqrt(65))/8`.  At `(a,b)=(1,-1)` the ratio is exactly `3/8<1`.
-Replacing only the old favorable quartic coefficient by `3/8` leaves the old
-adverse ledger below the R-164 threshold already at `G=116`:
-`P_(3/8)(116)+10/11=-606292707503941267/552751522971648000<0`.
-
-**Consequence.**  The R-166 coefficient-one lemma remains valid on its
-declared single fresh-`4p` pair, but it cannot be copied rootwise into the
-multi-root owner.  A successor must retain and certify the complete
-cross-root sextic Gram against the joint source metric.
-
-**Boundary.**  The exact matrix is positive definite, so this is not a
-failure of sextic positivity, a counterexample to the complete production
-action, or a closure or refutation of T-050.  It supplies no phase,
-morphology, BCC, vacuum, or PDE verdict.
-
-**Evidence.**  R-166 v1.1 primary and independent exact Laurent audits and
-`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-sparse-production-owner-radial-gram-global-boundary-260804-v1.1.tex.txt`.
-
-**Registered.**  2026-08-04.
 
 <a id="ng-2026-08-03-pre-a-cp1-cl8-stationarity-only-quantum-state"></a>
 ### NG-2026-08-03-PRE-A-CP1-CL8-STATIONARITY-ONLY-QUANTUM-STATE -- stationarity and exact symmetries do not select one fixed-regulator quantum state

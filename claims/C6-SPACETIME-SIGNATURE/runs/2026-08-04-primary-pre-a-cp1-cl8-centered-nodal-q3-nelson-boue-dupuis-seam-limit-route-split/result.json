@@ -1,0 +1,796 @@
+{
+  "assertion_summary": {
+    "passed": 75,
+    "total": 75
+  },
+  "assertions": [
+    {
+      "actual": "PA-CP1-CL8-CENTERED-NODAL-Q3-NELSON-BOUE-DUPUIS-ROUTE-SPLIT-v0",
+      "expected": "PA-CP1-CL8-CENTERED-NODAL-Q3-NELSON-BOUE-DUPUIS-ROUTE-SPLIT-v0",
+      "group": "identity",
+      "name": "candidate id",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-CENTERED-NODAL-Q3-UI-L1-TV-RP-AND-FIXED-BAND-FULL-WEYL-LIMIT",
+      "expected": "PA-CP1-CL8-CENTERED-NODAL-Q3-UI-L1-TV-RP-AND-FIXED-BAND-FULL-WEYL-LIMIT",
+      "group": "identity",
+      "name": "result id",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-000772",
+      "expected": "EXP-000772",
+      "group": "identity",
+      "name": "exploration id",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "identity",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "group": "Q3",
+      "name": "Q3 twelve edges",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "group": "Q3",
+      "name": "Q3 edges nonnegative for positive lambda",
+      "status": "PASS"
+    },
+    {
+      "actual": "all nonnegative",
+      "expected": ">=0",
+      "group": "Q3",
+      "name": "Q3 onsite Cauchy fixtures",
+      "status": "PASS"
+    },
+    {
+      "actual": "g/32",
+      "expected": "g/32",
+      "group": "Q3",
+      "name": "Q3 coercive coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "6*C**2*(g + 4*lambda)",
+      "expected": "6C^2(g+4lambda)",
+      "group": "scalar",
+      "name": "whole-Wick quartic scalar",
+      "status": "PASS"
+    },
+    {
+      "actual": "-C*TrK/2",
+      "expected": "-C TrK/2",
+      "group": "scalar",
+      "name": "whole-Wick quadratic scalar",
+      "status": "PASS"
+    },
+    {
+      "actual": "[E/(2 + E + 2*exp(4)), 2*exp(4)/(2 + E + 2*exp(4)), 2/(2 + E + 2*exp(4))]",
+      "expected": "[E/(2 + E + 2*exp(4)), 2*exp(4)/(2 + E + 2*exp(4)), 2/(2 + E + 2*exp(4))]",
+      "group": "scalar",
+      "name": "normalized scalar-shift invariance",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-7/3)",
+      "expected": "exp(-7/3)",
+      "group": "scalar",
+      "name": "raw partition changes under scalar",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'r': 1, 'a_power': '3/4', 'b_power': '1/4', 'consumed': '5/16', 'q': '16/11', 'negative_dual': '4/3'}, {'r': 2, 'a_power': '7/4', 'b_power': '1/4', 'consumed': '9/16', 'q': '16/7', 'negative_dual': '2'}, {'r': 3, 'a_power': '11/4', 'b_power': '1/4', 'consumed': '13/16', 'q': '16/3', 'negative_dual': '4'}]",
+      "expected": "[16/11, 16/7, 16/3]",
+      "group": "Nelson",
+      "name": "Nelson Young exponent table",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/3",
+      "expected": "16/3",
+      "group": "Nelson",
+      "name": "worst random moment 16/3",
+      "status": "PASS"
+    },
+    {
+      "actual": "b",
+      "expected": "b",
+      "group": "Nelson",
+      "name": "finite BD Gaussian stationary drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "b**2/2",
+      "expected": "b**2/2",
+      "group": "Nelson",
+      "name": "finite BD Gaussian value",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.40528473456935116",
+      "expected": "0.4052847345693511",
+      "group": "harmonic",
+      "name": "centered symbol lower M12",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9773614559926759",
+      "expected": "1.0",
+      "group": "harmonic",
+      "name": "centered symbol upper M12",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.40528473456935116",
+      "expected": "0.4052847345693511",
+      "group": "harmonic",
+      "name": "centered symbol lower M24",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9943014562635542",
+      "expected": "1.0",
+      "group": "harmonic",
+      "name": "centered symbol upper M24",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.40528473456935116",
+      "expected": "0.4052847345693511",
+      "group": "harmonic",
+      "name": "centered symbol lower M48",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9985729211479443",
+      "expected": "1.0",
+      "group": "harmonic",
+      "name": "centered symbol upper M48",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0]",
+      "expected": "|ell|<=1",
+      "group": "harmonic",
+      "name": "cyclic lifts finite M6 d1",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-1, 0, 1]",
+      "expected": "|ell|<=2",
+      "group": "harmonic",
+      "name": "cyclic lifts finite M6 d2",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-1, 0, 1]",
+      "expected": "|ell|<=3",
+      "group": "harmonic",
+      "name": "cyclic lifts finite M6 d3",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-2, -1, 0, 1]",
+      "expected": "|ell|<=4",
+      "group": "harmonic",
+      "name": "cyclic lifts finite M6 d4",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0]",
+      "expected": "|ell|<=1",
+      "group": "harmonic",
+      "name": "cyclic lifts finite M8 d1",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-1, 0, 1]",
+      "expected": "|ell|<=2",
+      "group": "harmonic",
+      "name": "cyclic lifts finite M8 d2",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-1, 0, 1]",
+      "expected": "|ell|<=3",
+      "group": "harmonic",
+      "name": "cyclic lifts finite M8 d3",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-2, -1, 0, 1, 2]",
+      "expected": "|ell|<=4",
+      "group": "harmonic",
+      "name": "cyclic lifts finite M8 d4",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0]",
+      "expected": "|ell|<=1",
+      "group": "harmonic",
+      "name": "cyclic lifts finite M10 d1",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-1, 0, 1]",
+      "expected": "|ell|<=2",
+      "group": "harmonic",
+      "name": "cyclic lifts finite M10 d2",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-1, 0, 1]",
+      "expected": "|ell|<=3",
+      "group": "harmonic",
+      "name": "cyclic lifts finite M10 d3",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-2, -1, 0, 1, 2]",
+      "expected": "|ell|<=4",
+      "group": "harmonic",
+      "name": "cyclic lifts finite M10 d4",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'-2': [-2, -1, 0, 1], '-1': [-2, -1, 0, 1, 2], '0': [-2, -1, 0, 1, 2], '1': [-2, -1, 0, 1, 2], '2': [-2, -1, 0, 1, 2]}",
+      "expected": "|ell|<=4",
+      "group": "harmonic",
+      "name": "fixed-band shifted lifts remain finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-2, -1, 0, 1, 2]",
+      "expected": "nonzero",
+      "group": "harmonic",
+      "name": "Nyquist lift included",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9679714181735385, 0.2784836371839913, 0.03357437222281229]",
+      "expected": "strict decrease",
+      "group": "harmonic",
+      "name": "convolution tail decreases d2",
+      "status": "PASS"
+    },
+    {
+      "actual": "[12.02951883306826, 4.619864364235262, 1.092848974465967]",
+      "expected": "strict decrease",
+      "group": "harmonic",
+      "name": "convolution tail decreases d3",
+      "status": "PASS"
+    },
+    {
+      "actual": "[142.08022411788983, 68.20700303904673, 22.63984463232706]",
+      "expected": "strict decrease",
+      "group": "harmonic",
+      "name": "convolution tail decreases d4",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-4, -1, 5, -7/2, 7/2]",
+      "expected": "[-4, -1, 5, -7/2, 7/2]",
+      "group": "positive-space",
+      "name": "discrete shifted Leibniz identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "15/2",
+      "expected": "61/4",
+      "group": "positive-space",
+      "name": "piecewise-linear L2 upper",
+      "status": "PASS"
+    },
+    {
+      "actual": "15/2",
+      "expected": "61/12",
+      "group": "positive-space",
+      "name": "piecewise-linear L2 lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "beta/12",
+      "expected": "beta/12",
+      "group": "seam",
+      "name": "seam sawtooth square beta/12",
+      "status": "PASS"
+    },
+    {
+      "actual": "h2/(2*beta)",
+      "expected": "h2/(2*beta)",
+      "group": "seam",
+      "name": "seam kinetic cost",
+      "status": "PASS"
+    },
+    {
+      "actual": "Ah*beta/24",
+      "expected": "Ah*beta/24",
+      "group": "seam",
+      "name": "seam spatial cost beta/24",
+      "status": "PASS"
+    },
+    {
+      "actual": "k**2 + m0**2",
+      "expected": "not m0^2 for k!=0",
+      "group": "seam",
+      "name": "seam full spatial operator sentinel",
+      "status": "PASS"
+    },
+    {
+      "actual": "whole polynomial Wick convention",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase whole polynomial Wick convention",
+      "status": "PASS"
+    },
+    {
+      "actual": "16\\over3",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase 16\\over3",
+      "status": "PASS"
+    },
+    {
+      "actual": "all-M hybrid-lattice Wick estimate",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase all-M hybrid-lattice Wick estimate",
+      "status": "PASS"
+    },
+    {
+      "actual": "beta_0\\over24",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase beta_0\\over24",
+      "status": "PASS"
+    },
+    {
+      "actual": "full-sequence total-variation convergence",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase full-sequence total-variation conv",
+      "status": "PASS"
+    },
+    {
+      "actual": "energy below empty space",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase energy below empty space",
+      "status": "PASS"
+    },
+    {
+      "actual": "not a world-first or novelty proof",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase not a world-first or novelty proof",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope centered_Q3_uniform_exponential_integrability",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope centered_Q3_interacting_density_L1_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope centered_Q3_interacting_density_total_variation_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope centered_Q3_limit_reflection_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope centered_Q3_shifted_seam_UI_local_uniform",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope centered_Q3_offdiagonal_seam_full_sequence",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope centered_Q3_fixed_band_regular_Weyl_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall original_fixed_raw_CL8_family",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall absolute_energy_fixed_by_centering",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall complete_OS_Markov_Hadamard",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall physical_state_or_vacuum",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall below_empty_space_comparison",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall phase_transition_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall C6_advanced",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall CP1_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall Sector_A_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall Pre_A_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": "ANALYTIC theorem with executable finite algebra, exponent, lift, seam, mutation, provenance, and scope audits; the scripts do not replace the all-M harmonic-analysis proof",
+      "expected": "ANALYTIC",
+      "group": "scope",
+      "name": "analytic proof label",
+      "status": "PASS"
+    },
+    {
+      "actual": "T1",
+      "expected": "T1",
+      "group": "scope",
+      "name": "C6 tier unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "ACTIVE",
+      "expected": "ACTIVE",
+      "group": "scope",
+      "name": "C6 lifecycle unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "['CONDITIONAL']",
+      "expected": "['CONDITIONAL']",
+      "group": "scope",
+      "name": "C6 evidence unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "['C6-BCC-PREMISE-BLOCKED']",
+      "expected": "['C6-BCC-PREMISE-BLOCKED']",
+      "group": "scope",
+      "name": "C6 gate unchanged",
+      "status": "PASS"
+    }
+  ],
+  "candidate_id": "PA-CP1-CL8-CENTERED-NODAL-Q3-NELSON-BOUE-DUPUIS-ROUTE-SPLIT-v0",
+  "claim_bearing": false,
+  "derived": {
+    "convolution_tails": {
+      "2": [
+        0.9679714181735385,
+        0.2784836371839913,
+        0.03357437222281229
+      ],
+      "3": [
+        12.02951883306826,
+        4.619864364235262,
+        1.092848974465967
+      ],
+      "4": [
+        142.08022411788983,
+        68.20700303904673,
+        22.63984463232706
+      ]
+    },
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "exponents": [
+      {
+        "a_power": "3/4",
+        "b_power": "1/4",
+        "consumed": "5/16",
+        "negative_dual": "4/3",
+        "q": "16/11",
+        "r": 1
+      },
+      {
+        "a_power": "7/4",
+        "b_power": "1/4",
+        "consumed": "9/16",
+        "negative_dual": "2",
+        "q": "16/7",
+        "r": 2
+      },
+      {
+        "a_power": "11/4",
+        "b_power": "1/4",
+        "consumed": "13/16",
+        "negative_dual": "4",
+        "q": "16/3",
+        "r": 3
+      }
+    ],
+    "lifts": {
+      "10": {
+        "1": [
+          0
+        ],
+        "2": [
+          -1,
+          0,
+          1
+        ],
+        "3": [
+          -1,
+          0,
+          1
+        ],
+        "4": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "6": {
+        "1": [
+          0
+        ],
+        "2": [
+          -1,
+          0,
+          1
+        ],
+        "3": [
+          -1,
+          0,
+          1
+        ],
+        "4": [
+          -2,
+          -1,
+          0,
+          1
+        ]
+      },
+      "8": {
+        "1": [
+          0
+        ],
+        "2": [
+          -1,
+          0,
+          1
+        ],
+        "3": [
+          -1,
+          0,
+          1
+        ],
+        "4": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "seam": {
+      "kinetic": "h2/(2*beta)",
+      "saw_square": "beta/12",
+      "spatial": "Ah*beta/24"
+    },
+    "shifted_lifts": {
+      "-1": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "-2": [
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "0": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "1": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "2": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ]
+    },
+    "symbol": [
+      {
+        "M": 12,
+        "maximum": 0.9773614559926759,
+        "minimum": 0.40528473456935116
+      },
+      {
+        "M": 24,
+        "maximum": 0.9943014562635542,
+        "minimum": 0.40528473456935116
+      },
+      {
+        "M": 48,
+        "maximum": 0.9985729211479443,
+        "minimum": 0.40528473456935116
+      }
+    ],
+    "whole_Wick_scalar": "6*C**2*(g + 4*lambda)"
+  },
+  "exploration_id": "EXP-000772",
+  "negative_ids": [],
+  "next_gate": "PA-CP1-CL8-INTERACTING-COMPLETE-OS-MARKOV-HADAMARD-AND-PHYSICAL-REFERENCE-ROUTE-SPLIT",
+  "result_id": "PA-CP1-CL8-CENTERED-NODAL-Q3-UI-L1-TV-RP-AND-FIXED-BAND-FULL-WEYL-LIMIT",
+  "schema": "tect/pre-a-cp1-cl8-centered-nodal-q3-nelson-boue-dupuis-seam-limit-route-split-primary/0.1",
+  "scope": {
+    "C0_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "N1_through_N5_closed": false,
+    "Pre_A_complete": false,
+    "Sector_A_complete": false,
+    "absolute_energy_fixed_by_centering": false,
+    "below_empty_space_comparison": false,
+    "beta_independent_Hamiltonian_family": false,
+    "bounded_renormalized_matrix_family": true,
+    "centered_Q3_fixed_band_regular_Weyl_limit": true,
+    "centered_Q3_interacting_density_L1_limit": true,
+    "centered_Q3_interacting_density_total_variation_limit": true,
+    "centered_Q3_limit_reflection_positive": true,
+    "centered_Q3_offdiagonal_seam_full_sequence": true,
+    "centered_Q3_shifted_seam_UI_local_uniform": true,
+    "centered_Q3_terminal_measure_identified": true,
+    "centered_Q3_uniform_exponential_integrability": true,
+    "complete_OS_Markov_Hadamard": false,
+    "original_3D_Q3LOCK_parent": false,
+    "original_fixed_raw_CL8_family": false,
+    "phase_transition_proved": false,
+    "physical_beta_ground_or_KMS_selected": false,
+    "physical_light_speed_derived": false,
+    "physical_state_or_vacuum": false,
+    "whole_Wick_scalar_convention_fixed": true
+  },
+  "script_version": "0.1.0",
+  "source_sha256": {
+    "certificate": "a34c0d74c42674a783dcf8354bb5116e449c0da4576681de5c7b6d85fe01674f",
+    "manifest": "780a672091867ac1db8b73bada7e5a972be07d0e0d0ab0405c04de65b3d45711",
+    "script": "b3000856ee37a44988831d82383105aaf2b159d4b5d7bee18b1e5243f2b5bce4"
+  },
+  "verdict": "BOUNDED-RENORMALIZED-MATRIX CENTERED-NODAL Q3 UNIFORM EXPONENTIAL INTEGRABILITY, FULL-SEQUENCE L1/TV/RP LIMIT, AND FIXED-BAND REGULAR WEYL LIMIT CLOSED; PHYSICAL AND ORIGINAL-PARENT GATES OPEN"
+}

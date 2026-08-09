@@ -1,0 +1,1018 @@
+{
+  "assertion_summary": {
+    "passed": 100,
+    "total": 100
+  },
+  "assertions": [
+    {
+      "actual": "PA-CP1-CL8-Q3-THERMODYNAMIC-PRESSURE-RELATIVE-ENTROPY-DENSITY-AND-PHASE-ROUTE-SPLIT-v0",
+      "expected": "PA-CP1-CL8-Q3-THERMODYNAMIC-PRESSURE-RELATIVE-ENTROPY-DENSITY-AND-PHASE-ROUTE-SPLIT-v0",
+      "group": "identity",
+      "name": "candidate id",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-CL8-Q3-FIXED-BETA-VOLUME-COHERENT-NELSON-PRESSURE-SPECIFIC-RELATIVE-ENTROPY-AND-PERIODIC-LOCAL-SCHWINGER-LIMIT",
+      "expected": "PA-CP1-CL8-Q3-FIXED-BETA-VOLUME-COHERENT-NELSON-PRESSURE-SPECIFIC-RELATIVE-ENTROPY-AND-PERIODIC-LOCAL-SCHWINGER-LIMIT",
+      "group": "identity",
+      "name": "result id",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-000775",
+      "expected": "EXP-000775",
+      "group": "identity",
+      "name": "exploration id",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "identity",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'passed': 114, 'total': 114}",
+      "expected": "all pass",
+      "group": "parent",
+      "name": "EXP767 parent all pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "fixed H and ground sign",
+      "expected": "True",
+      "group": "parent",
+      "name": "EXP767 fixed Hamiltonian parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "group": "Q3",
+      "name": "Q3 twelve edges",
+      "status": "PASS"
+    },
+    {
+      "actual": "8*g + 32*lambda",
+      "expected": "8*g + 32*lambda",
+      "group": "Q3",
+      "name": "Q3 trace A",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*g*x0**2 + 3*g*x1**2 + 3*g*x2**2 + 3*g*x3**2 + 3*g*x4**2 + 3*g*x5**2 + 3*g*x6**2 + 3*g*x7**2 + 12*lambda*x0**2 - 6*lambda*x0*x1 - 6*lambda*x0*x2 - 6*lambda*x0*x4 + 12*lambda*x1**2 - 6*lambda*x1*x3 - 6*lambda*x1*x5 + 12*lambda*x2**2 - 6*lambda*x2*x3 - 6*lambda*x2*x6 + 12*lambda*x3**2 - 6*lambda*x3*x7 + 12*lambda*x4**2 - 6*lambda*x4*x5 - 6*lambda*x4*x6 + 12*lambda*x5**2 - 6*lambda*x5*x7 + 12*lambda*x6**2 - 6*lambda*x6*x7 + 12*lambda*x7**2",
+      "expected": "3 qT A q",
+      "group": "Q3",
+      "name": "Q3 quartic Laplacian",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2*normK**2/g",
+      "expected": "-2*normK**2/g",
+      "group": "Hamiltonian",
+      "name": "arbitrary K stability scalar minimum",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "coherence",
+      "name": "exact plane-to-torus Wick identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[d0, 0, 0, u03, 0, 0, 0, 0], [0, d1, 0, 0, 0, 0, 0, 0], [0, 0, d2, 0, 0, 0, 0, u27], [u03, 0, 0, d3, 0, 0, 0, 0], [0, 0, 0, 0, d4, 0, 0, 0], [0, 0, 0, 0, 0, d5, 0, 0], [0, 0, 0, 0, 0, 0, d6, 0], [0, 0, u27, 0, 0, 0, 0, d7]])",
+      "expected": "Matrix([[d0, 0, 0, u03, 0, 0, 0, 0], [0, d1, 0, 0, 0, 0, 0, 0], [0, 0, d2, 0, 0, 0, 0, u27], [u03, 0, 0, d3, 0, 0, 0, 0], [0, 0, 0, 0, d4, 0, 0, 0], [0, 0, 0, 0, 0, d5, 0, 0], [0, 0, 0, 0, 0, 0, d6, 0], [0, 0, u27, 0, 0, 0, 0, d7]])",
+      "group": "coherence",
+      "name": "generic matrix volume coherence",
+      "status": "PASS"
+    },
+    {
+      "actual": "-6*D**2*(g + 4*lambda) - D*(d0 + d1 + d2 + d3 + d4 + d5 + d6 + d7)/2",
+      "expected": "fails",
+      "group": "mutation",
+      "name": "wrong scalar sign mutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[-9*D*lambda, 3*D*lambda, 3*D*lambda, 0, 3*D*lambda, 0, 0, 0], [3*D*lambda, -9*D*lambda, 0, 3*D*lambda, 0, 3*D*lambda, 0, 0], [3*D*lambda, 0, -9*D*lambda, 3*D*lambda, 0, 0, 3*D*lambda, 0], [0, 3*D*lambda, 3*D*lambda, -9*D*lambda, 0, 0, 0, 3*D*lambda], [3*D*lambda, 0, 0, 0, -9*D*lambda, 3*D*lambda, 3*D*lambda, 0], [0, 3*D*lambda, 0, 0, 3*D*lambda, -9*D*lambda, 0, 3*D*lambda], [0, 0, 3*D*lambda, 0, 3*D*lambda, 0, -9*D*lambda, 3*D*lambda], [0, 0, 0, 3*D*lambda, 0, 3*D*lambda, 3*D*lambda, -9*D*lambda]])",
+      "expected": "nonzero lambda L_Q3",
+      "group": "mutation",
+      "name": "mass-only volume mutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4985537764261995",
+      "expected": "0.4985537764261995",
+      "group": "coherence",
+      "name": "rectangular covariance exchange N2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5902804817860414",
+      "expected": "0.5902804817860414",
+      "group": "coherence",
+      "name": "rectangular covariance exchange N4",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6710424256005122",
+      "expected": "0.6710424256005122",
+      "group": "coherence",
+      "name": "rectangular covariance exchange N7",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1465258153625851",
+      "expected": "0.1465258153625851",
+      "group": "coherence",
+      "name": "image covariance exchange R3",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.14784921546858304",
+      "expected": "0.14784921546858304",
+      "group": "coherence",
+      "name": "image covariance exchange R5",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1479140381441059",
+      "expected": "0.1479140381441059",
+      "group": "coherence",
+      "name": "image covariance exchange R7",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'cutoff': 3, 'forward': 0.1465258153625851, 'swapped': 0.1465258153625851}, {'cutoff': 5, 'forward': 0.14784921546858304, 'swapped': 0.14784921546858304}, {'cutoff': 7, 'forward': 0.1479140381441059, 'swapped': 0.1479140381441059}]",
+      "expected": "positive",
+      "group": "coherence",
+      "name": "image covariance positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'cutoff': 3, 'forward': 0.1465258153625851, 'swapped': 0.1465258153625851}, {'cutoff': 5, 'forward': 0.14784921546858304, 'swapped': 0.14784921546858304}, {'cutoff': 7, 'forward': 0.1479140381441059, 'swapped': 0.1479140381441059}]",
+      "expected": "small image tail",
+      "group": "coherence",
+      "name": "image covariance converges",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'L': 1.4, 'a_L': 0.06936807120910615}, {'L': 2.8, 'a_L': 0.008839521925529415}, {'L': 5.6, 'a_L': 0.00024674266271392165}]",
+      "expected": "strict decay",
+      "group": "coherence",
+      "name": "circle correction decays with L",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1479140381441059",
+      "expected": "0.1479140381441059",
+      "group": "coherence",
+      "name": "cylinder image decomposition L2.1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.08764788792291561",
+      "expected": "0.08764788792291561",
+      "group": "coherence",
+      "name": "cylinder image decomposition L4.2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.08230611320312131",
+      "expected": "0.08230611320312131",
+      "group": "coherence",
+      "name": "cylinder image decomposition L8.4",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'L': 2.1, 'total': 0.1479140381441059, 'a_beta': 0.08226350502294183, 'a_L': 0.02348360905406498, 'mixed': 0.04216692406709909}, {'L': 4.2, 'total': 0.08764788792291561, 'a_beta': 0.08226350502294183, 'a_L': 0.0014240159634598029, 'mixed': 0.0039603669365139834}, {'L': 8.4, 'total': 0.08230611320312131, 'a_beta': 0.08226350502294183, 'a_L': 8.087242686778162e-06, 'mixed': 3.4520937492711284e-05}]",
+      "expected": "0.08226350502294183",
+      "group": "coherence",
+      "name": "cylinder limit tends a_beta",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0013968221916997314, -0.22870417682293723, -0.24468367076772368]",
+      "expected": "-0.24480823907138882",
+      "group": "coherence",
+      "name": "torus scalar tends dual circle scalar",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9999999999998903",
+      "expected": "1.0",
+      "group": "coherence",
+      "name": "two-dimensional Green coefficient flux",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'L': 1.0, 'rate': 1.5302465672456849}, {'L': 2.0, 'rate': 1.6630533894025887}, {'L': 4.0, 'rate': 1.6980056982926812}, {'L': 8.0, 'rate': 1.6999915405105714}, {'L': 16.0, 'rate': 1.6999999997133013}]",
+      "expected": "1.7",
+      "group": "pressure",
+      "name": "Nelson dual trace rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'L': 1.0, 'rate': 1.5302465672456849}, {'L': 2.0, 'rate': 1.6630533894025887}, {'L': 4.0, 'rate': 1.6980056982926812}, {'L': 8.0, 'rate': 1.6999915405105714}, {'L': 16.0, 'rate': 1.6999999997133013}]",
+      "expected": "convergent",
+      "group": "pressure",
+      "name": "Nelson rate convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.1875",
+      "expected": "-1.1875",
+      "group": "pressure",
+      "name": "raw pressure scalar shift law",
+      "status": "PASS"
+    },
+    {
+      "actual": "(1.0625, -1.1875)",
+      "expected": "both signs",
+      "group": "mutation",
+      "name": "raw pressure sign mutable",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'H_L': 7.3125, 'H_beta': 3.6, 'logZ': -11.700000000000003, 'insertion': 11.700000000000001, 'E': 3.6, 'pressure': -2.25, 'KL_change': 0.0}",
+      "expected": "cL, c beta, -c beta L, +c beta L, invariant KL",
+      "group": "pressure",
+      "name": "full scalar density factor ledger",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.19479435183858373",
+      "expected": "0.19479435183858373",
+      "group": "entropy",
+      "name": "finite KL identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.19479435183858368",
+      "expected": "0.19479435183858373",
+      "group": "entropy",
+      "name": "finite KL scalar invariance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.2240089516889927, 0.13539950712373783, 0.08223883264873452, 0.5583527085385349]",
+      "expected": "[0.22400895168899254, 0.13539950712373783, 0.0822388326487345, 0.558352708538535]",
+      "group": "entropy",
+      "name": "normalized law scalar invariance",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1615236648065551",
+      "expected": "not free-to-interacting identity",
+      "group": "mutation",
+      "name": "KL direction mutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10649021548738713",
+      "expected": "positive",
+      "group": "strictness",
+      "name": "strict Bregman ground gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6462590454876116, 0.6385062265844166, 0.6303308397302043, 0.6217109140270161, 0.6126241533188104, 0.6030481298096424, 0.59296052131669, 0.5823393966502177, 0.5711635530440695, 0.5594129085840782, 0.5470689511130411, 0.5341152430465734, 0.5205379788516673, 0.506326588593462, 0.4914743769697849, 0.47597918273303064, 0.45984403854007594, 0.44307780638403793, 0.42569575926734604, 0.4077200762004818]",
+      "expected": "nonincreasing slopes",
+      "group": "strictness",
+      "name": "ground energy concavity",
+      "status": "PASS"
+    },
+    {
+      "actual": "g/4 + 3*lambda/4",
+      "expected": "g/4 + 3*lambda/4",
+      "group": "strictness",
+      "name": "Q3 pure quartic coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1205632716049382",
+      "expected": "0.12056327160493825",
+      "group": "strictness",
+      "name": "zero-mode four-creation normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5315732948748215",
+      "expected": "0.5315732948748213",
+      "group": "strictness",
+      "name": "Q3 dual amplitude factor derivation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5315732948748215",
+      "expected": "positive",
+      "group": "strictness",
+      "name": "Q3 dual four-particle amplitude",
+      "status": "PASS"
+    },
+    {
+      "actual": "-0.13342575215471325",
+      "expected": "negative",
+      "group": "strictness",
+      "name": "form Rayleigh strictness arbitrary B",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10649021548738791",
+      "expected": "0.10649021548738713",
+      "group": "strictness",
+      "name": "specific KL scalar invariance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'L': 2.0, 'D_per_L': 0.10995347534983091, 'D_per_area': 0.06872092209364432, 'negative_centered': -0.06872092209364432}, {'L': 4.0, 'D_per_L': 0.10663206062385211, 'D_per_area': 0.06664503788990757, 'negative_centered': -0.06664503788990757}, {'L': 8.0, 'D_per_L': 0.10649030470385557, 'D_per_area': 0.06655644043990973, 'negative_centered': -0.06655644043990973}, {'L': 16.0, 'D_per_L': 0.10649021548742221, 'D_per_area': 0.06655638467963888, 'negative_centered': -0.06655638467963888}]",
+      "expected": "0.10649021548738713",
+      "group": "entropy",
+      "name": "specific KL length composition",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'L': 16.0, 'D_per_L': 0.10649021548742221, 'D_per_area': 0.06655638467963888, 'negative_centered': -0.06655638467963888}",
+      "expected": "(0.06655638467961696, -0.06655638467961696)",
+      "group": "entropy",
+      "name": "specific KL beta factor",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'L': 1.0, 'ground_probability': 0.876174505289175}, {'L': 2.0, 'ground_probability': 0.9849001555788617}, {'L': 4.0, 'ground_probability': 0.999775070745105}, {'L': 8.0, 'ground_probability': 0.9999999494346764}]",
+      "expected": "to one",
+      "group": "state",
+      "name": "dual ground projection convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1",
+      "expected": "positive",
+      "group": "state",
+      "name": "transfer gap positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'r': 1.0, 'bound': 0.1224564282529819}, {'r': 2.0, 'bound': 0.014995576820477703}, {'r': 4.0, 'bound': 0.0002248673241788482}, {'r': 8.0, 'bound': 5.05653134833552e-08}]",
+      "expected": "strict decay",
+      "group": "state",
+      "name": "exponential spatial clustering fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'L': 5.0, 'connected': 0.05304269420758454}, {'L': 10.0, 'connected': 0.05289632498684574}, {'L': 20.0, 'connected': 0.05289632095613513}, {'L': 40.0, 'connected': 0.05289632095613513}]",
+      "expected": "0.05289632095613513",
+      "group": "state",
+      "name": "trace-normalized connected transfer limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "Scoped theorem",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Scoped theorem",
+      "status": "PASS"
+    },
+    {
+      "actual": "Plane-to-torus covariance",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Plane-to-torus covariance",
+      "status": "PASS"
+    },
+    {
+      "actual": "No coupling derivative",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase No coupling derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": "Nelson coordinate exchange",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Nelson coordinate exchange",
+      "status": "PASS"
+    },
+    {
+      "actual": "Finite-volume relative entropy identity",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Finite-volume relative entropy identit",
+      "status": "PASS"
+    },
+    {
+      "actual": "Strictness from the Q3 four-particle witness",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Strictness from the Q3 four-particle w",
+      "status": "PASS"
+    },
+    {
+      "actual": "not convergence of global density matrices",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase not convergence of global density matr",
+      "status": "PASS"
+    },
+    {
+      "actual": "Periodic bounded-local Schwinger limit",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase Periodic bounded-local Schwinger limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "full noncommutative infinite-volume KMS algebra",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase full noncommutative infinite-volume KM",
+      "status": "PASS"
+    },
+    {
+      "actual": "not a physical-empty-space",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase not a physical-empty-space",
+      "status": "PASS"
+    },
+    {
+      "actual": "global Radon--Nikodym",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase global Radon--Nikodym",
+      "status": "PASS"
+    },
+    {
+      "actual": "does not claim a world-first",
+      "expected": "present",
+      "group": "scope",
+      "name": "certificate phrase does not claim a world-first",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope exact_beta_L_symmetric_covariance_correction",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope Nelson_coordinate_exchange",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope raw_relative_pressure_limit_exists",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope specific_relative_entropy_density_exists",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope strict_positive_specific_relative_entropy_density",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope strict_negative_centered_Gaussian_variational_density",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope periodic_bounded_local_Schwinger_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope periodic_transfer_observable_spatial_mixing",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "positive scope dual_transfer_ground_unique_and_gapped",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall raw_relative_pressure_sign_gauge_invariant",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall arbitrary_L_dependent_K_and_scalar_family",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall original_fixed_raw_CL8_family",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall physical_empty_space_reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall absolute_vacuum_energy_fixed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall global_infinite_volume_Radon_Nikodym_density",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall finite_total_infinite_volume_relative_entropy",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall all_boundary_condition_state_uniqueness",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall periodic_beta_KMS_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall full_noncommutative_infinite_volume_local_algebra",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall beta_to_infinity_L_to_infinity_interchange",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall zero_temperature_ground_energy_density",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall spontaneous_symmetry_breaking_or_phase_transition",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall interacting_Hadamard_or_microlocal_spectrum",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall original_3D_Q3LOCK_parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall physical_light_speed_derived",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall C0_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall N1_through_N5_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall C6_advanced",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall CP1_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall Sector_A_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall Pre_A_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": "ANALYTIC theorem with executable common-cutoff beta-L exchange, Q3 plane-to-torus Wick coherence, dual trace/ground asymptotics, scalar-shift mutations, finite-distribution KL identities, strict Bregman/Rayleigh witnesses, transfer-gap clustering, source-scope and unchanged-C6 audits; scripts do not replace the finite-component Nelson-symmetry and thermal-transfer proof",
+      "expected": "ANALYTIC",
+      "group": "scope",
+      "name": "analytic proof label",
+      "status": "PASS"
+    },
+    {
+      "actual": "T1",
+      "expected": "T1",
+      "group": "scope",
+      "name": "C6 tier unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "ACTIVE",
+      "expected": "ACTIVE",
+      "group": "scope",
+      "name": "C6 lifecycle unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "['CONDITIONAL']",
+      "expected": "['CONDITIONAL']",
+      "group": "scope",
+      "name": "C6 evidence unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "['C6-BCC-PREMISE-BLOCKED']",
+      "expected": "['C6-BCC-PREMISE-BLOCKED']",
+      "group": "scope",
+      "name": "C6 gate unchanged",
+      "status": "PASS"
+    }
+  ],
+  "candidate_id": "PA-CP1-CL8-Q3-THERMODYNAMIC-PRESSURE-RELATIVE-ENTROPY-DENSITY-AND-PHASE-ROUTE-SPLIT-v0",
+  "claim_bearing": false,
+  "derived": {
+    "Q3": {
+      "amplitude": 0.5315732948748215,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "trace_A": "8*g + 32*lambda"
+    },
+    "coherence": {
+      "circle": [
+        {
+          "L": 1.4,
+          "a_L": 0.06936807120910615
+        },
+        {
+          "L": 2.8,
+          "a_L": 0.008839521925529415
+        },
+        {
+          "L": 5.6,
+          "a_L": 0.00024674266271392165
+        }
+      ],
+      "decomposition": [
+        {
+          "L": 2.1,
+          "a_L": 0.02348360905406498,
+          "a_beta": 0.08226350502294183,
+          "mixed": 0.04216692406709909,
+          "total": 0.1479140381441059
+        },
+        {
+          "L": 4.2,
+          "a_L": 0.0014240159634598029,
+          "a_beta": 0.08226350502294183,
+          "mixed": 0.0039603669365139834,
+          "total": 0.08764788792291561
+        },
+        {
+          "L": 8.4,
+          "a_L": 8.087242686778162e-06,
+          "a_beta": 0.08226350502294183,
+          "mixed": 3.4520937492711284e-05,
+          "total": 0.08230611320312131
+        }
+      ],
+      "e_limit": [
+        0.0013968221916997314,
+        -0.22870417682293723,
+        -0.24468367076772368
+      ],
+      "images": [
+        {
+          "cutoff": 3,
+          "forward": 0.1465258153625851,
+          "swapped": 0.1465258153625851
+        },
+        {
+          "cutoff": 5,
+          "forward": 0.14784921546858304,
+          "swapped": 0.14784921546858304
+        },
+        {
+          "cutoff": 7,
+          "forward": 0.1479140381441059,
+          "swapped": 0.1479140381441059
+        }
+      ],
+      "rectangular": [
+        {
+          "cutoff": 2,
+          "forward": 0.4985537764261995,
+          "swapped": 0.4985537764261995
+        },
+        {
+          "cutoff": 4,
+          "forward": 0.5902804817860414,
+          "swapped": 0.5902804817860414
+        },
+        {
+          "cutoff": 7,
+          "forward": 0.6710424256005122,
+          "swapped": 0.6710424256005122
+        }
+      ],
+      "scalar": "6*D**2*(g + 4*lambda) + D*(d0 + d1 + d2 + d3 + d4 + d5 + d6 + d7)/2"
+    },
+    "entropy": {
+      "Bregman": 0.10649021548738713,
+      "density": [
+        {
+          "D_per_L": 0.10995347534983091,
+          "D_per_area": 0.06872092209364432,
+          "L": 2.0,
+          "negative_centered": -0.06872092209364432
+        },
+        {
+          "D_per_L": 0.10663206062385211,
+          "D_per_area": 0.06664503788990757,
+          "L": 4.0,
+          "negative_centered": -0.06664503788990757
+        },
+        {
+          "D_per_L": 0.10649030470385557,
+          "D_per_area": 0.06655644043990973,
+          "L": 8.0,
+          "negative_centered": -0.06655644043990973
+        },
+        {
+          "D_per_L": 0.10649021548742221,
+          "D_per_area": 0.06655638467963888,
+          "L": 16.0,
+          "negative_centered": -0.06655638467963888
+        }
+      ],
+      "divergence": 0.19479435183858373,
+      "identity": 0.19479435183858373,
+      "partition": 1.0928558894113205,
+      "reverse": 0.1615236648065551
+    },
+    "pressure": {
+      "raw": 1.0625,
+      "scalar_ledger": {
+        "E": 3.6,
+        "H_L": 7.3125,
+        "H_beta": 3.6,
+        "KL_change": 0.0,
+        "insertion": 11.700000000000001,
+        "logZ": -11.700000000000003,
+        "pressure": -2.25
+      },
+      "shifted": -1.1875,
+      "transfer": [
+        {
+          "L": 1.0,
+          "rate": 1.5302465672456849
+        },
+        {
+          "L": 2.0,
+          "rate": 1.6630533894025887
+        },
+        {
+          "L": 4.0,
+          "rate": 1.6980056982926812
+        },
+        {
+          "L": 8.0,
+          "rate": 1.6999915405105714
+        },
+        {
+          "L": 16.0,
+          "rate": 1.6999999997133013
+        }
+      ]
+    },
+    "state": {
+      "clustering": [
+        {
+          "bound": 0.1224564282529819,
+          "r": 1.0
+        },
+        {
+          "bound": 0.014995576820477703,
+          "r": 2.0
+        },
+        {
+          "bound": 0.0002248673241788482,
+          "r": 4.0
+        },
+        {
+          "bound": 5.05653134833552e-08,
+          "r": 8.0
+        }
+      ],
+      "connected": [
+        {
+          "L": 5.0,
+          "connected": 0.05304269420758454
+        },
+        {
+          "L": 10.0,
+          "connected": 0.05289632498684574
+        },
+        {
+          "L": 20.0,
+          "connected": 0.05289632095613513
+        },
+        {
+          "L": 40.0,
+          "connected": 0.05289632095613513
+        }
+      ],
+      "gap": 2.1,
+      "projection": [
+        {
+          "L": 1.0,
+          "ground_probability": 0.876174505289175
+        },
+        {
+          "L": 2.0,
+          "ground_probability": 0.9849001555788617
+        },
+        {
+          "L": 4.0,
+          "ground_probability": 0.999775070745105
+        },
+        {
+          "L": 8.0,
+          "ground_probability": 0.9999999494346764
+        }
+      ]
+    }
+  },
+  "exploration_id": "EXP-000775",
+  "negative_ids": [],
+  "next_gate": "PA-CP1-CL8-Q3-ZERO-TEMPERATURE-THERMODYNAMIC-GROUND-PHASE-AND-PHYSICAL-REFERENCE-ROUTE-SPLIT",
+  "result_id": "PA-CP1-CL8-Q3-FIXED-BETA-VOLUME-COHERENT-NELSON-PRESSURE-SPECIFIC-RELATIVE-ENTROPY-AND-PERIODIC-LOCAL-SCHWINGER-LIMIT",
+  "schema": "tect/pre-a-cp1-cl8-q3-thermodynamic-pressure-relative-entropy-density-phase-route-split-primary/0.1",
+  "scope": {
+    "C0_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "N1_through_N5_closed": false,
+    "Nelson_coordinate_exchange": true,
+    "Pre_A_complete": false,
+    "Sector_A_complete": false,
+    "absolute_vacuum_energy_fixed": false,
+    "all_boundary_condition_state_uniqueness": false,
+    "arbitrary_L_dependent_K_and_scalar_family": false,
+    "beta_to_infinity_L_to_infinity_interchange": false,
+    "dual_transfer_ground_unique_and_gapped": true,
+    "exact_beta_L_symmetric_covariance_correction": true,
+    "externally_fixed_finite_beta": true,
+    "finite_total_infinite_volume_relative_entropy": false,
+    "full_noncommutative_infinite_volume_local_algebra": false,
+    "global_infinite_volume_Radon_Nikodym_density": false,
+    "interacting_Hadamard_or_microlocal_spectrum": false,
+    "new_plane_Wick_volume_coherent_extension_of_EXP767": true,
+    "original_3D_Q3LOCK_parent": false,
+    "original_fixed_raw_CL8_family": false,
+    "periodic_beta_KMS_limit": false,
+    "periodic_bounded_local_Schwinger_limit": true,
+    "periodic_transfer_observable_spatial_mixing": true,
+    "physical_empty_space_reference": false,
+    "physical_light_speed_derived": false,
+    "raw_pressure_scalar_shift_law": true,
+    "raw_relative_pressure_limit_exists": true,
+    "raw_relative_pressure_sign_gauge_invariant": false,
+    "specific_relative_entropy_density_exists": true,
+    "spontaneous_symmetry_breaking_or_phase_transition": false,
+    "strict_negative_centered_Gaussian_variational_density": true,
+    "strict_positive_specific_relative_entropy_density": true,
+    "zero_temperature_ground_energy_density": false
+  },
+  "script_version": "0.1.0",
+  "source_sha256": {
+    "certificate": "90f8b9d8ee39ef7a6d5318ae05905a36af097683d1e5dec0270612edc92eb4c1",
+    "manifest": "c55733bf347d4af31aa2ed943ba554b4e36f61959e3ff9ff24374b3d92d33425",
+    "script": "d1d027d1fbe6f1cbd4d947cca319571038b516f0fb66b0974562cb453341a461"
+  },
+  "verdict": "FIXED-BETA VOLUME-COHERENT Q3 NELSON PRESSURE LIMIT, STRICT SCALAR-INVARIANT SPECIFIC RELATIVE ENTROPY, PERIODIC BOUNDED-LOCAL SCHWINGER LIMIT AND TRANSFER MIXING CLOSED; FULL INFINITE-VOLUME KMS ALGEBRA, RAW-SIGN, PHYSICAL-EMPTY, ARBITRARY-VOLUME-FAMILY, ZERO-TEMPERATURE PHASE, MICROLOCAL, ORIGINAL-PARENT AND PRE-A GATES OPEN"
+}

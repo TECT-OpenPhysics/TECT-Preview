@@ -1,0 +1,139 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-EUCLIDEAN-DLR-TANGENT-STATE-AND-PHASE-BOUNDARY-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-ST8-Q3LOCK-v0",
+    "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-3D-QUANTUM-THERMODYNAMIC-PRESSURE-GROUND-DENSITY-AND-EFFECTIVE-REDUCTION-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-ST8-Q3LOCK-TEMPERED-EUCLIDEAN-DLR-TANGENT-STATES-AND-LAMBDA0-PHASE-BOUNDARY",
+  "negative_ids": [],
+  "reused_negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-PRESSURE-VALUE-ONLY-PHASE-CLASSIFICATION",
+    "NG-2026-08-04-PRE-A-CP1-CL8-ABSTRACT-COMPACTNESS-ONLY-REGULAR-CONTINUUM-STATE",
+    "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR"
+  ],
+  "exploration_id": "EXP-000781",
+  "candidate_family": "PRE-A-ST8-Q3LOCK-FIXED-LATTICE-EQUILIBRIUM-AND-PHASE",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 exact instantiation of established vector quantum-crystal Euclidean-DLR theorems, plus a self-contained convex-selection and local-compactness tangent-state theorem and an imported lambda=0 phase-boundary comparator; claim-nonbearing and not a positive-lambda phase, algebraic KMS, ground-state, continuum, physical-vacuum, C6, CP1 or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "euclidean_DLR": "Y. Kozitsky and T. Pasurek, Euclidean Gibbs Measures of Interacting Quantum Anharmonic Oscillators, arXiv:math-ph/0609045; Theorems 3.1-3.3",
+    "periodic_state_bridge": "A. Kargol, Y. Kondratiev and Y. Kozitsky, Phase Transitions and Quantum Stabilization in Quantum Anharmonic Crystals, arXiv:0710.2303; Propositions 2.12-2.13 and 2.21",
+    "lambda0_phase_boundary": "Kargol-Kondratiev-Kozitsky, arXiv:0710.2303; Lemma 3.15 and Theorem 3.20",
+    "positive_lambda_scope_warning": "The located scalar and rotation-invariant phase theorems do not cover the nonradial positive-lambda Q3 onsite polynomial.",
+    "KMS_scope_warning": "The cited Euclidean-DLR construction does not by itself construct a KMS state for a pre-existing infinite-volume real-time dynamics on the full quasi-local oscillator algebra."
+  },
+  "setup": {
+    "parameters": "hbar>0, chi>0, c>0, g>0, lambda>0, r real, beta>0, and an energy-source ray J=h*v with v in R8",
+    "coarse_field": "q_y in R8 on y in Z3, with one Q3 cell per coarse site",
+    "coarse_Hamiltonian": "sum_y[-hbar^2/(2chi) Delta_y+U_h(q_y)]-c sum_<yz> q_y dot q_z",
+    "onsite": "U_h(q)=(r+6c)|q|^2/2+(g/4)sum_e q_e^4+(lambda/4)sum_(e~f)(q_e-q_f)^2(q_e^2+q_f^2)-h v dot q",
+    "fine_pressure": "P_beta,L(h)=[beta*8L^3]^(-1) log Tr exp[-beta H_L(hv)]"
+  },
+  "exact_external_theorem_instantiation": {
+    "mass": "m=chi/hbar^2",
+    "harmonic_split": "choose any a>0 and put V_h(q)=[r+6c-a]|q|^2/2+(g/4)sum q_e^4+Q3lock(q)-h v dot q",
+    "interaction": "nearest-neighbor J_yz=c, so sup_y sum_z |J_yz|=6c",
+    "coercivity": "sum_e q_e^4>=|q|^4/8 and Q3lock>=0 imply V_h(q)>=A|q|^4+B on every compact h interval, with A>0 and uniform finite B",
+    "upper_control": "translation invariance permits the same continuous V_h as the common onsite upper function",
+    "conclusion": "For every beta>0 and fixed h, the exact positive-lambda Q3LOCK model has a nonempty compact set of tempered Euclidean DLR measures; all such measures obey the cited uniform exponential one-site moment and support estimates. Periodic finite-volume loop laws are relatively compact, and every accumulation point is a translation-invariant tempered DLR measure."
+  },
+  "tangent_DLR_theorem": {
+    "finite_derivative": "P_beta,L'(h)=(8L^3)^(-1)<sum_y v dot q_y>=(1/8)<v dot q_0> for periodic cubes",
+    "pressure_limit": "EXP-000780 gives locally uniform convergence to a finite convex even P_beta(h)",
+    "endpoint_slopes": "m_plus(v)=D_+P_beta(0)>=0 and D_-P_beta(0)=-m_plus(v)",
+    "selection": "Choose differentiability points h_k down to zero. Convex local-uniform convergence and periodic-state compactness give source-h_k DLR states mu_hk with (1/8) integral(v dot omega_0(0)) dmu_hk=P_beta'(h_k).",
+    "zero_source_limit": "The external exponential estimates are uniform for h in a compact interval. Compactness, continuity of the local specifications in h, and uniform integrability give zero-source tempered DLR limits mu_plus and mu_minus with magnetizations plus or minus 8*m_plus(v).",
+    "parity": "mu_minus is the global field-inversion image of mu_plus.",
+    "conditional_phase_consequence": "If m_plus(v)>0, mu_plus and mu_minus are distinct zero-source Euclidean equilibrium states and P_beta has a cusp in direction v. No strict sign is proved here.",
+    "zero_slope_boundary": "m_plus(v)=0 does not imply DLR uniqueness or absence of a phase transition."
+  },
+  "local_normal_state_corollary": {
+    "energy_bound": "EXP-000780 coercivity plus beta-convexity of log Z yields a uniform O(L^3) Gibbs expectation of the product quartic-oscillator control K_L on compact source intervals.",
+    "local_compactness": "Periodic translation invariance gives a uniform local K_Delta expectation. Since K_Delta has compact resolvent, the local reduced density matrices are trace-norm precompact.",
+    "corollary": "Along the same diagonal sequences, the tangent limits induce compatible coarse-translation-invariant locally normal time-zero states whose bounded configuration observables agree with mu_plus and mu_minus and whose unbounded q expectations pass by the uniform fourth moment.",
+    "boundary": "No infinite-volume real-time dynamics or algebraic KMS condition is inferred."
+  },
+  "lambda0_phase_boundary": {
+    "scope": "This is a boundary comparator with lambda=0, outside the registered positive-lambda Q3LOCK parameter domain.",
+    "factorization": "At lambda=0 the eight species are independent scalar nearest-neighbor phi4 quantum crystals.",
+    "double_well": "If r+6c<0, write the external theorem's V(x)=-b x^2+b2 x^4 with b=(a-r-6c)/2 and b2=g/4.",
+    "theta_star": "theta_star=-(r+6c)/(3g)>0",
+    "condition": "With m=chi/hbar^2 and interaction J=c, 8*m*c*theta_star^2>Jcal(3) implies a finite beta_star, and every beta>beta_star has more than one tempered Euclidean Gibbs measure.",
+    "boundary": "This proves a nonempty phase regime only at lambda=0. No located theorem transports coexistence through the unbounded quartic Q3 perturbation to lambda>0."
+  },
+  "positive_lambda_route_lemmas": {
+    "nonradial_witness": "At equal norm R, q=(R,0,...,0) and q'=(R/sqrt8,...,R/sqrt8) have quartic energies (g+3lambda)R^4/4 and gR^4/32, respectively, so the onsite potential is not O8 invariant.",
+    "Q3_submodularity": "For one Q3 edge W(x,y)=lambda(x-y)^2(x^2+y^2)/4, d_x d_y W=-(lambda/2)(3x^2-4xy+3y^2)<=0 because the quadratic form has eigenvalues 1 and 5.",
+    "retained_route": "Coordinatewise attraction, spatial reflection positivity, a collective double-commutator lower bound, Falk-Bruch control, and a three-dimensional infrared estimate form the next candidate route.",
+    "unclosed_links": "Continuous-loop FKG/RP normalization, the unbounded double-commutator core limit, the exact infrared constants, and the long-range-order to source-subgradient step must be proved before any positive-lambda phase claim."
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-SOURCE-CUSP-TANGENT-STATES-AND-PHASE",
+    "status": "PARTIALLY RESOLVED; EXACT POSITIVE-LAMBDA EUCLIDEAN-DLR EXISTENCE, SOURCE-TANGENT ZERO-SOURCE DLR STATES, ENDPOINT MAGNETIZATION AND A LAMBDA0 PHASE BOUNDARY CLOSED; POSITIVE-LAMBDA CUSP SIGN, ALGEBRAIC KMS, EXTREMALITY, PURITY AND CLUSTERING OPEN",
+    "closed_subgates": [
+      "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-TEMPERED-EUCLIDEAN-DLR-EXISTENCE-AND-COMPACTNESS",
+      "PA-CP1-ST8-Q3LOCK-SOURCE-TANGENT-ZERO-SOURCE-DLR-STATE-CONSTRUCTION",
+      "PA-CP1-ST8-Q3LOCK-PRESSURE-ENDPOINT-SLOPE-MAGNETIZATION-IDENTITY",
+      "PA-CP1-ST8-Q3LOCK-LAMBDA0-LOW-TEMPERATURE-PHASE-BOUNDARY"
+    ],
+    "open_subgates": [
+      "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-Q3-PHASE-SIGN",
+      "PA-CP1-ST8-Q3LOCK-INFINITE-VOLUME-REAL-TIME-DYNAMICS-AND-ALGEBRAIC-KMS",
+      "PA-CP1-ST8-Q3LOCK-EXTREMALITY-PURITY-AND-CLUSTERING",
+      "PA-CP1-ST8-Q3LOCK-GROUND-STATE-PHASE-AND-GAP",
+      "PA-CP1-ST8-Q3LOCK-INTERACTING-CONTINUUM-AND-COUNTERTERMS",
+      "PA-CP1-ST8-Q3LOCK-PHYSICAL-EMPTY-SPACE-REFERENCE",
+      "PA-CP1-ST8-Q3LOCK-TO-CL8-Q3-EFFECTIVE-REDUCTION",
+      "PA-PRE-A-C0-N1-N5-VALIDATION"
+    ],
+    "next_gate": "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-Q3-PHASE-SIGN-AND-KMS-SPLIT"
+  },
+  "scope": {
+    "exact_registered_positive_lambda_fixed_lattice_family": true,
+    "Kozitsky_Pasurek_hypotheses_instantiated": true,
+    "tempered_Euclidean_DLR_nonempty": true,
+    "tempered_Euclidean_DLR_compact": true,
+    "uniform_exponential_local_moments": true,
+    "periodic_limit_DLR_states": true,
+    "source_tangent_zero_source_DLR_states": true,
+    "pressure_slope_magnetization_identity": true,
+    "locally_normal_time_zero_tangent_states": true,
+    "lambda0_boundary_phase_regime": true,
+    "positive_lambda_pressure_cusp": false,
+    "positive_lambda_spontaneous_Z2_breaking": false,
+    "tangent_states_extreme": false,
+    "Cstar_pure_states": false,
+    "spatial_clustering": false,
+    "algebraic_KMS_for_preexisting_dynamics": false,
+    "infinite_volume_real_time_dynamics": false,
+    "ground_state_phase": false,
+    "uniform_spectral_gap": false,
+    "continuum_regulator_removal": false,
+    "physical_empty_space_reference": false,
+    "below_empty_space": false,
+    "absolute_vacuum_energy_fixed": false,
+    "effective_3D_to_1plus1_reduction": false,
+    "physical_light_speed_derived": false,
+    "event_horizon_or_cooling": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC external-theorem instantiation plus self-contained pressure-tangent and local-normal compactness corollaries, with executable Hamiltonian mapping, coercivity, source normalization, convex-selection, Q3 symmetry, lambda0 phase-boundary and scope audits",
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_euclidean_dlr_tangent_state_phase_boundary_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_euclidean_dlr_tangent_state_phase_boundary_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_euclidean_dlr_tangent_state_phase_boundary_route_split_verify.py",
+    "fixtures": "coarse Hamiltonian expansion; Q3 coercivity and graph spectrum; external-assumption mapping; finite Gibbs source derivative and factor eight; convex derivative selection; compact-resolvent spectral tails; parity; nonradial witness; edge submodularity; lambda0 theta-star substitution; provenance, scope and unchanged-C6 checks"
+  },
+  "prior_art_boundary": "Euclidean-DLR existence, compactness, exponential moments, periodic-state accumulation, convex pressure response and the scalar/radial low-temperature phase theorems are established mathematics. The repository-specific contribution is the exact positive-lambda Q3LOCK hypothesis map, its composition with EXP-000780 pressure convergence, the factor-eight tangent-state selection, the locally normal time-zero corollary, and the explicit separation from the lambda0 phase boundary. No new general Gibbs-state or phase-transition theorem and no world-first claim is made.",
+  "no_overclaim": "This package proves existence and compactness of exact fixed-lattice positive-lambda Euclidean equilibrium measures and constructs zero-source DLR tangent states realizing every directional pressure endpoint slope. It does not prove that any slope is strictly positive for lambda>0, that the tangent states are extreme or pure, that they cluster, that a pre-existing infinite-volume real-time dynamics or algebraic KMS state exists, that the ground state is degenerate or gapped, that the lattice can be removed, that a physical empty-space reference or below-empty-space sign is selected, that a 3D-to-1+1 effective map exists, or that C0, N1-N5, C6, CP1, Sector A or Pre-A is complete."
+}

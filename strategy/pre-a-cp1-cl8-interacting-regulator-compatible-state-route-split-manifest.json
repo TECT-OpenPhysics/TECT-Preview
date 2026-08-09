@@ -1,0 +1,146 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-CL8-INTERACTING-REGULATOR-COMPATIBLE-STATE-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-ST8-Q3LOCK-v0",
+    "PA-CP1-CL8-FINITE-QUANTUM-STATE-BOUNDARY-FORK-v0",
+    "PA-CP1-CL8-HISTORY-CUT-QUANTUM-ALGEBRA-STATE-COMPATIBILITY-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-ORDERED-Q3-GAUSSIAN-TANGENT-REGULATOR-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-CL8-LOW-MODE-GROUND-ENTANGLEMENT-ALL-BETA-PROJECTIVITY-AND-Q3-WICK-COUNTERTERM-OBSTRUCTIONS",
+  "negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-INTERACTING-GROUND-PROJECTIVITY",
+    "NG-2026-08-04-PRE-A-CP1-CL8-SCALAR-MASS-ONLY-Q3-WICK-RENORMALIZATION"
+  ],
+  "exploration_id": "EXP-000764",
+  "candidate_family": "PRE-A-CL8-INTERACTING-REGULATOR-STATE-AND-COUNTERTERM-SPLIT",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 exact natural-low-mode interacting-state and common-diagonal Wick-counterterm route split; claim-nonbearing and not an interacting continuum-state, Hadamard, phase-transition, physical-vacuum, C6, CP1, or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "statement": "For the registered finite CL8 Schrodinger ground states, split the fine N=2M real Fourier configuration space into the M-dimensional natural coarse low-mode subspace and its orthogonal high-mode complement. The fine ground is strictly positive and pure. If its restriction to the low-mode B(H) factor were the coarse pure ground, the fine ground vector would factor. The separated kinetic operator and the positive ground equation would then force the fine potential to be a sum of low-only and high-only functions. This is impossible: on the collective-Q3 plane q_(j,e)=[X+(-1)^j Y]/sqrt(L) for every species, the Q3 lock vanishes and the exact fine potential contains 3*g*X^2*Y^2/(2*L), so partial_X^2 partial_Y^2 U_f=6*g/L>0. Hence the reduced fine ground is mixed and natural exact ground projectivity fails. Exact same-beta projectivity of the complete Gibbs family for all beta>0 also fails because both finite-regulator Gibbs states converge in trace norm to their ground projectors as beta tends to infinity and partial trace is trace-norm contractive. Every fine normal state nevertheless has an exact normal low-mode pullback; a fine Gibbs pullback is exactly Gibbs for its beta-dependent Hamiltonian of mean force, not automatically for the inherited coarse Hamiltonian. For corresponding flat reference cuts, any proposed inter-regulator cut square that intertwines the registered fixed-regulator anchors with this bulk embedding would fail exact ground-state compatibility at that cut; no such inter-regulator square is registered here. Separately, common-diagonal Gaussian Wick ordering of the local Q3 quartic interaction gives the exact quadratic contraction matrix delta K=-3*C*[(g+lambda)I+lambda L_Q3] and scalar term 6*C^2*(g+4lambda). For lambda*C>0, the L_Q3 part is linearly independent of a scalar mass counterterm. The centered reference coincidence C_N grows logarithmically with the cutoff. Thus the scalar-mass-only Wick route cannot hold all four Walsh stiffness levels fixed; a Q3-matrix counterterm and energy convention are necessary within this declared scheme. No interacting continuum state or uniform compactness theorem is obtained.",
+  "verdict": "ADVANCE TWO EXACT OBSTRUCTIONS: REJECT NATURAL LOW-MODE PROJECTIVITY OF THE REGISTERED INTERACTING GROUND/ALL-BETA FAMILY, AND REJECT SCALAR-MASS-ONLY COMMON-DIAGONAL Q3 WICK RENORMALIZATION; REQUIRE AN ENLARGED COUNTERTERM BASIS, UNIFORM STATE ESTIMATES, AND TYPED CUT SQUARES",
+  "authorities": {
+    "Q3_interaction": "strategy/pre-a-cp1-st8-q3lock-manifest.json",
+    "finite_ground_and_Gibbs": "strategy/pre-a-cp1-cl8-finite-quantum-state-boundary-fork-manifest.json",
+    "fixed_regulator_history_states": "strategy/pre-a-cp1-cl8-history-cut-quantum-algebra-state-compatibility-route-split-manifest.json",
+    "Gaussian_regulator_split": "strategy/pre-a-cp1-cl8-ordered-q3-gaussian-tangent-regulator-route-split-manifest.json"
+  },
+  "natural_low_mode_split": {
+    "domain": "even M>=4, fine N=2M, a_f=L/N, eight real Q3 species",
+    "fine_real_modes": "zero; cosine/sine pairs n=1,...,M-1; and the self-conjugate fine Nyquist cosine n=M",
+    "low_subspace": "zero; cosine/sine pairs n=1,...,M/2-1; and fine cosine n=M/2, giving exactly M real modes per species; the last quadrature corresponds to the coarse self-conjugate Nyquist oscillator only after the explicit canonical squeeze below",
+    "high_subspace": "the Euclidean orthogonal complement, which contains the fine Nyquist vector (-1)^j/sqrt(N)",
+    "quantum_tensorization": "the orthogonal Fourier transform and canonical scale give H_fine unitarily isomorphic to H_low tensor H_high, with low algebra B(H_low) tensor I",
+    "coarse_identification": "for zero and non-Nyquist shared modes the continuum-normalized canonical generators are identified; for the coarse self-conjugate Nyquist oscillator sample matching is the symplectic squeeze iota(Phi_M,Ny)=sqrt(2)*Phi_N,M/2 and iota(Pi_M,Ny)=Pi_N,M/2/sqrt(2), unitarily implemented on H_low; no claim is made that the interacting Hamiltonians intertwine"
+  },
+  "ground_projectivity_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-INTERACTING-GROUND-PROJECTIVITY",
+    "projectivity_target": "the partial trace of the fine simple ground projector over H_high equals the coarse simple ground projector under the natural low-mode identification",
+    "purity_lemma": "a pure bipartite vector has a pure reduced state if and only if it is a product vector",
+    "factorization_lemma": "because the fine kinetic operator separates as T_X+T_Y with T=-kappa*Delta and the fine ground wavefunction is smooth and strictly positive, a product ground f(X)g(Y) would imply U_f(X,Y)=E-T_X*f/f-T_Y*g/g=E+kappa*Delta_X(f)/f+kappa*Delta_Y(g)/g, hence every mixed low/high derivative of U_f vanishes",
+    "witness_plane": "take the collective Q3 direction q_(j,e)=[X+(-1)^j*Y]/sqrt(L) for every species; X is the retained spatial zero mode and Y is the added fine Nyquist mode",
+    "exact_potential_restriction": "U_f(X,Y)=r*(X^2+Y^2)/2+2*c*Y^2/a_f^2+g*(X^4+6*X^2*Y^2+Y^4)/(4*L); all Q3 lock terms vanish identically",
+    "mixed_derivative": "partial_X^2 partial_Y^2 U_f=6*g/L>0 for g>0, independently of r, lambda and the cutoff",
+    "conclusion": "the fine ground is entangled across the natural low/high split, its low-mode restriction is mixed, and it cannot equal the coarse pure ground"
+  },
+  "all_beta_Gibbs_consequence": {
+    "target": "exact natural low-mode equality Tr_high rho_(fine,beta)=rho_(coarse,beta) for every beta>0 at the same declared beta",
+    "limit_input": "each registered finite-regulator Gibbs density converges in trace norm to its simple ground projector as beta tends to infinity",
+    "continuity": "partial trace is trace-norm contractive",
+    "contradiction": "equality for all beta would equate the mixed fine-ground reduction with the pure coarse ground in the beta-to-infinity limit",
+    "explicit_tail": "with R_s(beta)=sum_(n>=1) exp[-beta*(E_(s,n)-E_(s,0))], Delta_s=E_(s,1)-E_(s,0), eta=1-Tr[(P_(0,M) tensor I)P_(0,N)] and any beta_0>0, beta_*=beta_0+max_(s=M,N) Delta_s^(-1)*[log(8*R_s(beta_0)/eta)]_+ gives epsilon_s<=eta/4 and trace distance at least eta for every beta>=beta_*",
+    "boundary": "this does not exclude an isolated specially tuned beta, a beta that runs with the cutoff, a non-Gibbs compatible family, or approximate convergence"
+  },
+  "normal_pullback_and_mean_force": {
+    "normality": "under the type-I tensor implementation, every fine normal density rho_f pulls back to the normal low-mode density sigma=Tr_high rho_f",
+    "fine_Gibbs": "A_beta=Tr_high exp(-beta H_f) is positive trace class with trivial kernel because exp(-beta H_f) is faithful, and sigma_beta=A_beta/Tr A_beta",
+    "mean_force": "H_mf(beta)=-beta^(-1) log A_beta, up to an additive scalar, makes sigma_beta exactly Gibbs for a generally beta-dependent and nonlocal effective Hamiltonian",
+    "boundary": "this is an exact positive coarse state theorem but not equality with the inherited local coarse CL8 Hamiltonian or an equivariant/KMS embedding"
+  },
+  "history_cut_consequence": {
+    "reference_cut": "choose a corresponding flat Cauchy reference cut C at both regulators, with the registered fixed-regulator anchor unitaries Gamma_M and Gamma_N; the parent authority does not itself register an inter-regulator cut square",
+    "conditional_square": "if an inter-regulator cut monomorphism j_C is required to satisfy j_C(Gamma_M^* A Gamma_M)=Gamma_N^* iota(A) Gamma_N for every coarse bulk observable A, then exact anchored state compatibility at this reference cut reduces to the bulk projectivity target",
+    "ground_family": "under that explicitly conditional square, a family anchored to the registered ground projectors already fails at the reference cut",
+    "Gibbs_family": "the same holds for a proposed exact same-beta family covering all beta>0",
+    "survivors": "cutoff-dependent state criteria, nonnatural algebra embeddings, renormalized approximate limits, and newly constructed continuum states remain open"
+  },
+  "common_diagonal_Wick_ledger": {
+    "reference": "a declared centered free Gaussian reference with local coincident covariance E[q_e q_f]=C_N*delta_ef, positive reference stiffness, and the same eight species",
+    "definition": ":P:_(C)=exp[-(C/2) sum_e partial_(q_e)^2]P for local polynomials",
+    "onsite_identity": ":q_e^4:_(C)=q_e^4-6*C*q_e^2+3*C^2",
+    "edge_polynomial": "P(a,b)=(a-b)^2*(a^2+b^2)",
+    "edge_identity": ":P(a,b):_(C)=P(a,b)-8*C*(a^2+b^2)+12*C*a*b+8*C^2",
+    "Q3_sum": "for W4=(g/4)sum_e q_e^4+(lambda/4)sum_(e~f)P(q_e,q_f), :W4:_(C)=W4+(1/2)q^T deltaK q+6*C^2*(g+4*lambda)",
+    "quadratic_matrix": "deltaK=-3*C*[(g+lambda)I+lambda*L_Q3]",
+    "Walsh_levels": "deltaK_s=-3*C*(g+lambda+2*s*lambda), s=0,1,2,3, with multiplicities 1,3,3,1",
+    "required_raw_basis": "within this Wick scheme a fixed renormalized parameterization requires a scalar mass shift delta r=-3*C*(g+lambda), a separate Q3-Laplacian coefficient delta eta=-3*C*lambda, and a scalar energy convention",
+    "scheme_boundary": "this is an exact diagnostic for the declared common-diagonal Wick scheme, not a uniqueness theorem for every renormalization prescription"
+  },
+  "reference_covariance_growth": {
+    "definition": "C_N=hbar/(2*chi*L) sum_(n in I_N) 1/omega_(N,n), omega_(N,n)^2=[nu_ref+c*khat_(a_f,n)^2]/chi, nu_ref>0",
+    "centered_symbol_bounds": "for |k*a_f|<=pi, (2/pi)*|k|<=|khat_a(k)|<=|k|",
+    "result": "positive constants A,B,D independent of N give A*log N-D<=C_N<=B*log N+D; hence C_N diverges logarithmically",
+    "counterterm_consequence": "for lambda>0 the separation between the s-th and singlet Wick quadratic shifts is -6*s*lambda*C_N and cannot be absorbed by one scalar r_N"
+  },
+  "counterterm_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-SCALAR-MASS-ONLY-Q3-WICK-RENORMALIZATION",
+    "excluded_route": "normal-order the Q3 quartic interaction against the declared common-diagonal reference while allowing only a scalar mass r_N*I and scalar energy counterterm, with no quadratic Q3 matrix term",
+    "exact_obstruction": "lambda*L_Q3 is nonzero and linearly independent of I for lambda>0, while its coefficient -3*lambda*C_N is cutoff dependent and logarithmically unbounded",
+    "not_excluded": "an enlarged Q3-invariant quadratic counterterm basis, another fully specified renormalization scheme, lambda=0, constrained or gauge sectors, non-Gaussian reference states, or a separately constructed vector P(phi)_2 limit"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-INTERACTING-REGULATOR-COMPATIBLE-HISTORY-CUT-STATE-FAMILY",
+    "status": "SPLIT; TWO NATURAL EXACT ROUTES BLOCKED, INTERACTING RENORMALIZED STATE PARENT OPEN",
+    "refuted_subgates": [
+      "PA-CP1-CL8-NATURAL-LOW-MODE-REGISTERED-GROUND-PROJECTIVITY",
+      "PA-CP1-CL8-NATURAL-SAME-BETA-ALL-TEMPERATURE-GIBBS-PROJECTIVITY",
+      "PA-CP1-CL8-COMMON-DIAGONAL-SCALAR-MASS-ONLY-Q3-WICK-RENORMALIZATION"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-Q3-MATRIX-COUNTERTERM-INTERACTING-STATE-COMPACTNESS-AND-CUT-SQUARE",
+      "PA-CP1-CL8-INTERACTING-CONTINUUM-STATE-AND-HADAMARD-LIMIT",
+      "PA-CP1-CL8-ONE-DIMENSIONAL-TO-THREE-DIMENSIONAL-Q3-PARENT",
+      "PA-CP1-CL8-PHYSICAL-STATE-AND-ENERGY-REFERENCE",
+      "PA-CP1-CL8-REGULATOR-AND-LOOP-PROTECTED-COMMON-SPEED"
+    ],
+    "next_gate": "PA-CP1-CL8-Q3-MATRIX-COUNTERTERM-INTERACTING-STATE-COMPACTNESS-AND-CUT-SQUARE"
+  },
+  "scope": {
+    "natural_low_mode_tensor_split": true,
+    "fine_interacting_ground_low_high_entangled": true,
+    "natural_exact_ground_projectivity": false,
+    "natural_same_beta_all_temperature_Gibbs_projectivity": false,
+    "natural_ground_anchored_history_cut_projectivity": false,
+    "common_diagonal_Q3_Wick_counterterm_ledger": true,
+    "reference_covariance_logarithmic_growth": true,
+    "scalar_mass_only_Q3_Wick_renormalization": false,
+    "Q3_matrix_counterterm_sufficiency": false,
+    "cutoff_uniform_moment_bounds": false,
+    "cutoff_uniform_local_energy_bounds": false,
+    "interacting_state_compactness": false,
+    "typed_inter_regulator_cut_square": false,
+    "interacting_continuum_state": false,
+    "interacting_Hadamard_state": false,
+    "physical_state_or_vacuum": false,
+    "below_empty_space_comparison": false,
+    "physical_phase_transition": false,
+    "physical_light_speed_derived": false,
+    "original_3D_Q3LOCK_parent": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "primary": "codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split_verify.py",
+    "fixtures": "exact Q3 Walsh graph; symbolic Gaussian contraction; even-N uniform/Nyquist low-high plane; purity and beta-limit logic; centered reference covariance growth; scope and unchanged-C6 firewalls"
+  },
+  "prior_art_boundary": "Pure-state Schmidt factorization, positive-ground properties of confining Schrodinger operators, reduced density matrices, Fourier-mode tensor splittings, Gaussian Wick ordering, tadpole counterterms, harmonic sums and constructive P(phi)_2 renormalization are established mathematics. No world-first or new general theorem is claimed. The repository-specific result is the exact CL8/Q3 natural-mode entanglement witness, its history-cut consequence, and the convention-level Q3 Wick matrix-counterterm ledger.",
+  "no_overclaim": "This package proves two narrow route obstructions. It does not prove that no interacting regulator-compatible family can exist, exclude isolated-beta or cutoff-dependent-temperature families, exclude nonnatural or approximate embeddings, construct the required matrix-counterterm Hamiltonian, prove its stability or uniform moment/local-energy estimates, prove state compactness, construct a typed inter-regulator history-cut square, obtain an interacting continuum or Hadamard state, identify a physical vacuum or below-empty-space sign, derive a phase transition, physical light, Lorentzian signature, time or hbar, reconstruct the original 3D Q3LOCK parent, close C0 or N1-N5, advance C6, complete CP1, or complete Pre-A."
+}

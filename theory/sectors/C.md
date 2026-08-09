@@ -32,6 +32,24 @@ Tier profile: T6x4 T5x1 T1x1
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-04-PRE-A-CP1-CL8-PRESSURE-VALUE-ONLY-PHASE-CLASSIFICATION | a pressure value or common pressure does not classify the ph |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-TRANSVERSE-ZERO-RESTRICTION-AS-INTERACTING-MARGINAL | bare restriction does not establish an interacting marginal |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-INTERACTING-GROUND-PROJECTIVITY | the registered interacting ground is not naturally projectiv |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-FINITE-CIRCLE-WITNESS-ZERO-TEMPERATURE-DENSITY | pointwise circle strictness does not prove a strict zero-tem |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-FIXED-VOLUME-UI-PERIODIC-SHARP-SURFACE-PAIRING | fixed-volume uniform integrability does not prove the period |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-FIXED-RAW-QUADRATIC-FINITE-Q3-RENORMALIZED-LIMIT | a fixed raw quadratic is not a fixed finite renormalized Q3  |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-WICK-L2-ONLY-INTERACTING-DENSITY-LIMIT | Wick-action L2 convergence alone does not control exponentia |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-NODAL-SPECTRAL-FINITE-EXACT-INTERTWINER | centered nodal and spectral-spatial quartics are not one fin |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-STRANG-ONE-SLICE-EXACT-HAMILTONIAN-SEMIGROUP | the explicit symmetric slice is not the exact registered int |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-EUCLIDEAN-HEAT-SUPPORT-PHYSICAL-LIGHT-CONE | Euclidean heat support is full rather than conical |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-FULL-EUCLIDEAN-SHARP-CUTOFF-REFLECTION-POSITIVITY | the induced N=1 projected simultaneous sharp-cutoff law is n |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE | configuration characteristics do not determine the momentum  |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-CONSTRUCTIVE-NORMALIZABILITY-ONLY-PHYSICAL-STATE-SELECTION | normalizability is not a state-selection principle |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-ABSTRACT-COMPACTNESS-ONLY-REGULAR-CONTINUUM-STATE | weak-star compactness alone does not supply Weyl regularity |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-EXACT-DYNAMICS-EQUIVARIANCE | the declared natural low-mode factor is not exactly invarian |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-POINTWISE-STABILITY-GAUSSIAN-TRIAL-UNIFORM-ENERGY | one scalar cannot close both local stability and the same-Ga |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-GAUSSIAN-LOW-MODE-EXACT-PROJECTIVITY | inherited centered Gaussian states are not naturally project |  |
+| NG-2026-08-04-PRE-A-CP1-CL8-CRITICAL-COMPACT-GAUSSIAN-NORMAL-GROUND | the compact critical quadratic zero mode has no normalizable |  |
 | NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE | finite autonomous equilibrium channels have no delayed varia |  |
 | NG-2026-08-03-PRE-A-CP1-ST8-ONE-CONNECTED-SCALAR-EQUIVALENCE | no exact reduction to one connected standard scalar |  |
 | NG-2026-08-03-PRE-A-PAH1-PAM2-UNCHANGED-INTERFACE | the current PA-H1 and PA-M2 fixtures cannot be identified un |  |

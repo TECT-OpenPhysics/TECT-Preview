@@ -1,0 +1,146 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-FKG-INFRARED-CUSP-PHASE-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-ST8-Q3LOCK-v0",
+    "PA-CP1-ST8-Q3LOCK-EUCLIDEAN-DLR-TANGENT-STATE-AND-PHASE-BOUNDARY-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-LOW-TEMPERATURE-DLR-PHASE-AND-COLLECTIVE-SOURCE-CUSP",
+  "negative_ids": [],
+  "reused_negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-PRESSURE-VALUE-ONLY-PHASE-CLASSIFICATION",
+    "NG-2026-08-04-PRE-A-CP1-CL8-ABSTRACT-COMPACTNESS-ONLY-REGULAR-CONTINUUM-STATE",
+    "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR"
+  ],
+  "exploration_id": "EXP-000782",
+  "candidate_family": "PRE-A-ST8-Q3LOCK-FIXED-LATTICE-EQUILIBRIUM-AND-PHASE",
+  "package_version": "0.1.0",
+  "issued": "2026-08-04",
+  "authority": "T0 exact-model conditional-parameter theorem: finite-volume loop FKG, spatial reflection positivity, collective double-commutator and Falk--Bruch lower bounds, the three-dimensional infrared estimate, and the Griffiths pressure lemma prove a nonempty positive-lambda low-temperature regime with multiple tempered Euclidean DLR states and a strict collective-source cusp; claim-nonbearing and not an algebraic-KMS, ground-state, continuum, physical-vacuum, C6, CP1, Sector-A or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "reflection_positivity_and_infrared": "J. Froehlich, B. Simon and T. Spencer, Infrared bounds, phase transitions and continuous symmetry breaking, Communications in Mathematical Physics 50 (1976), 79-95; and A. Kargol, Y. Kondratiev and Y. Kozitsky, arXiv:0710.2303, Lemma 3.12 and Corollary 3.14",
+    "bruch_falk": "Kargol-Kondratiev-Kozitsky, arXiv:0710.2303, Proposition 3.18, with f(u tanh u)=tanh(u)/u",
+    "long_range_order_to_pressure_cusp": "Kargol-Kondratiev-Kozitsky, arXiv:0710.2303, Proposition 3.9 and equations (3.19)-(3.27), applied to one scalar collective source",
+    "DLR_tangent_states": "EXP-000781 exact Q3LOCK theorem instantiation and source-tangent construction",
+    "scope_warning": "The cited rotation-invariant phase theorem is not imported. The present proof instead verifies the exact Q3LOCK FKG and collective-moment hypotheses and rederives the fixed-direction infrared chain without O(8) invariance."
+  },
+  "setup": {
+    "parameters": "hbar>0, chi>0, c>0, g>0, lambda>0, r<0 and beta>0",
+    "coarse_volume": "Lambda_L=(Z/LZ)^3 with V=L^3 along reflection-compatible even, and safely dyadic, periodic cubes",
+    "collective_direction": "u=(1,...,1)/sqrt(8) and Q_y=u dot q_y",
+    "coarse_Hamiltonian": "sum_y[p_y^2/(2chi)+(r/2)|q_y|^2+(g/4)sum_e q_y,e^4+(lambda/4)sum_(e~f)(q_y,e-q_y,f)^2(q_y,e^2+q_y,f^2)]+(c/2)sum_<yz>|q_y-q_z|^2-h sum_y Q_y",
+    "fine_energy_pressure": "P_beta,L(h)=[beta*8V]^(-1) log Tr exp[-beta H_L(h)]",
+    "coarse_dimensionless_pressure": "p_beta,L(h)=V^(-1)log Z_L(h)=8 beta P_beta,L(h)",
+    "normalized_Duhamel": "(A,B)_D=beta^(-1) integral_0^beta <A(tau)B(0)>_c d tau"
+  },
+  "finite_loop_FKG": {
+    "harmonic_reference": "Choose an arbitrary positive onsite harmonic split so the periodic Ornstein--Uhlenbeck loop reference is proper; absorb the residual quadratic into the local potential.",
+    "time_slice_core": "Every positive-weight Trotter time-slice density is MTP2: temporal Mehler bonds and spatial difference-square bonds have nonnegative mixed log derivatives, while every Q3 edge has d_x d_y W=-(lambda/2)(3x^2-4xy+3y^2)<=0.",
+    "limit": "Quartic domination gives uniform integrability; marginalization and weak limits preserve MTP2/association for finite evaluation cylinders, hence the continuous-loop law is FKG for bounded increasing functionals and for the required coordinate products by moment truncation.",
+    "symmetry_consequence": "At zero source global field inversion gives <q_e>=0, Q3 automorphism transitivity gives equal component variances, and FKG gives <q_e q_f>>=0. Therefore <Q_y^2>>=<|q_y|^2>/8.",
+    "source_boundary": "Coordinatewise stochastic monotonicity holds for source directions with nonnegative components, including u. No mixed-sign source monotonicity is claimed."
+  },
+  "collective_moment_bound": {
+    "operator": "A=V^(-1/2) sum_y u dot p_y on the polynomial Schwartz core, extended by spectral cutoff",
+    "spectral_positivity": "< [A,[H_L,A]] >_beta>=0",
+    "exact_hessian": "0<=r+(1/8)<3g|q_y|^2+lambda sum_(e~f)(q_y,e-q_y,f)^2>",
+    "FKG_edge_improvement": "Writing S_y=sum_e q_y,e^2 and D_y=sum_edges(q_y,e-q_y,f)^2, Q3 3-regularity and FKG give <D_y><=3<S_y>, while <Q_y^2>>=<S_y>/8.",
+    "conclusion": "The exact collective lower bound is <Q_y^2>>=theta_Q with theta_Q=-r/[3(g+lambda)]>0, where each >= is a lower-bound symbol and not equality. The weaker graph-spectrum estimate D_y<=6S_y is retained only as a hostile no-FKG control."
+  },
+  "falk_bruch_and_ir": {
+    "theta_Q": "theta_Q=-r/[3(g+lambda)]",
+    "f_definition": "f(0)=1 and f(x tanh x)=tanh(x)/x for x>0",
+    "local_Duhamel_lower": "d_L=(Q_0,Q_0)_D>=theta_Q*f(beta*hbar^2/(4chi*theta_Q))",
+    "spatial_RP": "Treat each full R8 loop as one site spin in K=L2(S_beta;R8). Crossing kernels exp[c<a,b>_K] are positive by the symmetric-tensor expansion; nonradial Q3 terms remain onsite.",
+    "gaussian_domination": "For every zero-sum K-valued spatial source j, log <exp(sum_y<j_y,omega_y>_K)> <= (1/(2c))<j,L_sp^(-1)j>.",
+    "infrared_bound": "For p nonzero, Dhat_L(p)<=[2 beta c E(p)]^(-1), E(p)=sum_i(1-cos p_i).",
+    "Watson_integral": "I3=(2pi)^(-3) integral_(-pi,pi]^3 dp/E(p)=0.505462019717326...",
+    "zero_mode": "Pi_L=V^(-1)Dhat_L(0)>=d_L-I3,L/(2 beta c), with I3,L->I3."
+  },
+  "explicit_phase_regime": {
+    "dimensionless_strength": "A0=8c*chi*theta_Q^2/hbar^2",
+    "nonempty_condition": "A0>I3",
+    "threshold": "rho=sqrt(I3/A0), x_star=artanh(rho), beta_star=(4chi*theta_Q/hbar^2)*x_star*rho",
+    "low_temperature_condition": "beta>beta_star",
+    "x_beta": "x_beta is the unique positive solution of x_beta*tanh(x_beta)=beta*hbar^2/(4chi*theta_Q)",
+    "strict_zero_mode_lower": "delta_beta=theta_Q*tanh(x_beta)/x_beta-I3/(2beta*c)>0",
+    "method_boundary": "If A0<=I3 or beta<=beta_star, this route is inconclusive and does not prove absence of a phase."
+  },
+  "cusp_and_DLR_phase": {
+    "Griffiths_normalization": "The scalar collective moment-generating function and the Griffiths lemma give physical M_plus(u)>=sqrt(delta_beta). Since p=8beta P and p'_+(0)=beta M_plus(u), D_+P_beta(0)>=sqrt(delta_beta)/8.",
+    "parity": "D_-P_beta(0)=-D_+P_beta(0)<=-sqrt(delta_beta)/8, so the fine-pressure cusp gap is at least sqrt(delta_beta)/4.",
+    "tangent_states": "The EXP-000781 zero-source DLR tangent states obey integral Q_0 dmu_plus=8D_+P_beta(0)>=sqrt(delta_beta) and mu_minus is its parity image.",
+    "phase": "mu_plus and mu_minus are distinct tempered Euclidean DLR states. Thus the exact positive-lambda fixed-lattice model has a low-temperature DLR phase transition and spontaneous global-Z2 breaking in this explicit sufficient regime.",
+    "state_boundary": "The construction does not prove that these tangent states are extreme, pure, clustering, or the only phases."
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-Q3-PHASE-SIGN-AND-KMS-SPLIT",
+    "status": "PARTIALLY RESOLVED; AN EXPLICIT NONEMPTY POSITIVE-LAMBDA LOW-TEMPERATURE REGIME HAS A STRICT COLLECTIVE-SOURCE CUSP AND AT LEAST TWO PARITY-RELATED TEMPERED EUCLIDEAN DLR STATES; ALGEBRAIC KMS DYNAMICS, GROUND PHASE, EXTREMALITY, CLUSTERING, CONTINUUM AND PRE-A COMPOSITION REMAIN OPEN",
+    "closed_subgates": [
+      "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-CONTINUOUS-LOOP-FKG",
+      "PA-CP1-ST8-Q3LOCK-SPATIAL-REFLECTION-POSITIVITY-AND-COLLECTIVE-INFRARED-BOUND",
+      "PA-CP1-ST8-Q3LOCK-COLLECTIVE-DOUBLE-COMMUTATOR-MOMENT-LOWER-BOUND",
+      "PA-CP1-ST8-Q3LOCK-FALK-BRUCH-LOCAL-DUHAMEL-LOWER-BOUND",
+      "PA-CP1-ST8-Q3LOCK-POSITIVE-ZERO-MODE-TO-COLLECTIVE-PRESSURE-CUSP",
+      "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-LOW-TEMPERATURE-DLR-PHASE"
+    ],
+    "open_subgates": [
+      "PA-CP1-ST8-Q3LOCK-INFINITE-VOLUME-REAL-TIME-DYNAMICS-AND-ALGEBRAIC-KMS",
+      "PA-CP1-ST8-Q3LOCK-EXTREMALITY-PURITY-AND-CLUSTERING",
+      "PA-CP1-ST8-Q3LOCK-GROUND-STATE-PHASE-AND-GAP",
+      "PA-CP1-ST8-Q3LOCK-INTERACTING-CONTINUUM-AND-COUNTERTERMS",
+      "PA-CP1-ST8-Q3LOCK-PHYSICAL-EMPTY-SPACE-REFERENCE",
+      "PA-CP1-ST8-Q3LOCK-TO-CL8-Q3-EFFECTIVE-REDUCTION",
+      "PA-PRE-A-C0-N1-N5-VALIDATION"
+    ],
+    "next_gate": "PA-CP1-ST8-Q3LOCK-INFINITE-VOLUME-DYNAMICS-KMS-GROUND-AND-CONTINUUM-SPLIT"
+  },
+  "scope": {
+    "exact_registered_positive_lambda_fixed_lattice_family": true,
+    "continuous_loop_FKG": true,
+    "collective_positive_source_monotonicity": true,
+    "spatial_reflection_positivity": true,
+    "collective_infrared_bound": true,
+    "collective_double_commutator_moment_bound": true,
+    "Falk_Bruch_local_Duhamel_bound": true,
+    "nonempty_explicit_low_temperature_parameter_regime": true,
+    "strict_positive_collective_zero_mode": true,
+    "strict_collective_source_pressure_cusp": true,
+    "distinct_parity_related_tangent_DLR_states": true,
+    "positive_lambda_spontaneous_Z2_breaking": true,
+    "positive_lambda_DLR_phase_transition": true,
+    "phase_for_all_positive_lambda_parameters": false,
+    "tangent_states_extreme": false,
+    "Cstar_pure_states": false,
+    "spatial_clustering": false,
+    "algebraic_KMS_for_preexisting_dynamics": false,
+    "infinite_volume_real_time_dynamics": false,
+    "ground_state_phase": false,
+    "uniform_spectral_gap": false,
+    "continuum_regulator_removal": false,
+    "physical_empty_space_reference": false,
+    "below_empty_space": false,
+    "absolute_vacuum_energy_fixed": false,
+    "effective_3D_to_1plus1_reduction": false,
+    "physical_light_speed_derived": false,
+    "event_horizon_or_cooling": false,
+    "C0_closed": false,
+    "N1_through_N5_closed": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC exact-model composition of finite-time MTP2/loop FKG, polynomial-core double commutator, Falk--Bruch, Hilbert-valued spatial reflection positivity/Gaussian domination, three-dimensional infrared summation, Griffiths moment-to-pressure conversion and EXP-000781 tangent DLR states",
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_positive_lambda_fkg_infrared_cusp_phase_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_positive_lambda_fkg_infrared_cusp_phase_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_positive_lambda_fkg_infrared_cusp_phase_route_split_verify.py",
+    "fixtures": "Q3 graph and submodularity; temporal/spatial precision signs; total-shift Hessian; FKG collective variance; Falk--Bruch transform; torus Fourier eigenvalues and Watson sums; threshold equivalence; phase/pass and inconclusive controls; factor-eight pressure normalization; provenance, scope and unchanged-C6 audits"
+  },
+  "prior_art_boundary": "FKG/MTP2, reflection positivity, Gaussian domination, the infrared bound, Bruch--Falk inequality and Griffiths moment-to-pressure conversion are established methods. The repository-specific result is their exact hypothesis-by-hypothesis composition for the nonradial positive-lambda Q3LOCK onsite interaction, using Q3 submodularity and graph spectrum to replace the O(8)-rotation hypothesis of the closest published vector phase theorem. No claim of a new general phase method, historical priority or world-first status is made.",
+  "no_overclaim": "This package proves an exact sufficient positive-lambda low-temperature DLR phase and collective-source cusp only when r<0, A0>I3 and beta>beta_star. It does not prove a phase for every parameter, the extremality, purity, clustering or completeness of the constructed phases, a pre-existing infinite-volume real-time dynamics or algebraic KMS condition, a ground-state phase or gap, continuum regulator removal, a physical empty-space reference or below-empty-space sign, an effective 3D-to-1+1 map, physical light, gravity, cooling or event-horizon emergence, or C0, N1-N5, C6, CP1, Sector A or Pre-A completion."
+}
