@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION](#ng-2026-08-09-pre-a-round1-unfrozen-tournament-selection) | select a Pre-A winner, shortlist, or exit while the evidence intake, candidate admission manifests, common reference/observable discriminator, non-fitting validation prediction, and robustness envelope are incomplete | the charter's selection condition is a conjunction and several necessary terms are explicitly false.  Preserve the scoped M1 and bare-M5 eliminations and the M2/CP1 partial mathematics, but report current non-selection and complete the common admission contract before scoring survivors |
+| [NG-2026-08-09-PRE-A-CP1-CL8-RAW-PERIODIC-EO-RECTANGLE-QUOTIENT](#ng-2026-08-09-pre-a-cp1-cl8-raw-periodic-eo-rectangle-quotient) | identify the seam-fixed straight-routed block-rectangle quotient directly with one raw fixed-site even/odd ring period built from the same `M_Delta` macro | the quotient occurrence graph is `K_(n,m)` with `mn` gates and endpoint degrees `m,n`, whereas one raw ring period is `C_M` with `M=m+n` gates and degree two.  Equality forces `m=n=2`; even there an exact rational tangent separates the two maps.  Retain the exact all-`k` swap-dressed routed seam conjugacy; it does not restore raw direct equality |
+| [NG-2026-08-09-PRE-A-CP1-CL8-UNIVERSAL-PERIODIC-QUADRATIC-SHADOW-GIBBS](#ng-2026-08-09-pre-a-cp1-cl8-universal-periodic-quadratic-shadow-gibbs) | infer from symplecticity, global mixed invertibility, and coefficient occurrence that the full admitted controller-free macro domain has one positive quadratic invariant and its zero-centred nondegenerate Gaussian common to the raw periodic and routed/open constructions | the admitted C4 `rho=1/2` tangent has characteristic polynomial `(z-1)^2(z^2+z+1)(z^2+3z+1)^2` and hence reciprocal real hyperbolic eigenvalues.  No positive-definite invariant metric or tangent-circuit Gaussian exists; the nonlinear fixture has no zero-centred invariant Gaussian.  Exact C4 conjugacy transfers these scoped obstructions to the routed block.  Preserve singular fixed-point probabilities, the conditional single-bond quadratic shadow theorem, and arbitrary off-centre nonlinear Gaussians as open |
 | [NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION](#ng-2026-08-04-a13-r166-direct-harmonic-coercivity-tensorization) | extend the R-166 coefficient-one direct source-coordinate coercivity from one fresh pair to simultaneous dyadic fresh pairs by summing rootwise bounds or deleting their cross harmonic | for `m=cos(2x)` and `z=a sin(4x)+b sin(8x)`, the normalized exact Gram is `[[5/4,1],[1,3/2]]`; its minimum eigenvalue is `(11-sqrt(65))/8<1`, and `(a,b)=(1,-1)` gives exact ratio `3/8`. Retain the single-pair R-166 lemma, but certify the complete cross-root sextic Gram jointly |
 | [NG-2026-08-04-PRE-A-CP1-CL8-PRESSURE-VALUE-ONLY-PHASE-CLASSIFICATION](#ng-2026-08-04-pre-a-cp1-cl8-pressure-value-only-phase-classification) | infer phase uniqueness, coexistence, spontaneous order, or selected states from the scalar pressure value or boundary-independent pressure alone | the smooth pressure control `alpha+m log cosh(h)` and the cusped control `alpha+m|h|` have the same value at zero, while analytic even finite-volume controls `log cosh(nh)/n` converge locally uniformly to `|h|` with zero derivative at the origin. Retain source tangents, state compactness and correlation/order estimates |
 | [NG-2026-08-04-PRE-A-CP1-CL8-TRANSVERSE-ZERO-RESTRICTION-AS-INTERACTING-MARGINAL](#ng-2026-08-04-pre-a-cp1-cl8-transverse-zero-restriction-as-interacting-marginal) | infer that a bare transverse-zero restriction by itself establishes the interacting marginal of a higher-dimensional parent | the exact two-cell quartic produces a discarded-mode correction `F(q^2)-F(0)` with `F'>0` and `F''<0`. This refutes only the bare inference; the full ST8/Q3LOCK marginal, possible cancellations, constrained limits and derived effective actions remain open |
@@ -292,6 +295,169 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-09-pre-a-round1-unfrozen-tournament-selection"></a>
+### NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION -- an incomplete admission conjunction cannot select a Pre-A candidate
+
+**Failure mode.**  Declare a round-one winner, shortlist, candidate survival,
+or Pre-A exit before freezing the complete evidence/clue register, admitting
+every candidate under the same minimum manifest, freezing a common
+reference/observable discriminator, preregistering a non-fitting validation
+prediction, and completing the robustness envelope.
+
+**Exact obstruction.**  The evidence-first charter makes selection depend on
+the conjunction of those necessary conditions.  The 2026-08-09 admission
+vector records that the current evidence file is only a partial intake, the
+candidate minimum manifests and common discriminator are incomplete, no
+candidate has a preregistered validation prediction, and the robustness
+envelope is open.  Therefore the conjunction is false and no current
+selection or exit statement is licensed.
+
+**Consequence.**  Preserve R-157's rejection of only the pinned unconstrained
+neutral M1 nonzero-order mechanism and the registered rejection of only bare
+M5 as a joint T-053 survivor.  M2 remains incomplete and not selected; CP1 is
+incomplete bridge infrastructure, not a round-one contestant.
+The controller-free CL8 macro is a mathematical bridge result, not candidate
+evidence.  Complete the common state/reference/observable/input-prediction
+contract before scoring a survivor.
+
+**Boundary.**  This necessary-condition no-go does not show every candidate is
+false, reject repaired M1/M5 versions, alter the conditional A5 theorem, close
+or refute the Class-II mathematical programme, or select nature's equation.
+
+**Evidence.**
+`strategy/pre-a-evidence-first-model-selection-charter-260802.md#8-entry-and-exit-conditions`;
+`strategy/pre-a-round1-boundary-evidence-register-260809-v0.1.json`;
+`strategy/pre-a-round1-admission-canonical-functional-bridge-manifest.json`.
+
+**Registered.**  2026-08-09.
+
+<a id="ng-2026-08-09-pre-a-cp1-cl8-raw-periodic-eo-rectangle-quotient"></a>
+### NG-2026-08-09-PRE-A-CP1-CL8-RAW-PERIODIC-EO-RECTANGLE-QUOTIENT -- a straight-routed block rectangle is not one raw fixed-site even/odd ring period
+
+**Failure mode.**  Quotient an open `m`-by-`n` straight-routed macro
+rectangle by the translation `(m,-n)` and identify its transfer directly,
+without a cut-change conjugacy or routing permutation, with one raw fixed-site
+even/odd period on a ring of `M=m+n` legs.
+
+**Exact incidence obstruction.**  The quotient height
+`theta([i,j])=n*i+m*j` is well defined and strictly increases along both
+directed edge types, so the quotient is acyclic.  Its block transfer contains
+`m*n` macro vertices and every horizontal row wire meets every vertical column
+wire exactly once.  The occurrence graph is therefore `K_(n,m)`, with
+horizontal degree `m` and vertical degree `n`.  One raw even/odd ring period
+has graph `C_M`, `M=m+n` gates, and degree two.  Gate-count and degree equality
+force the sole positive solution `m=n=2`.
+
+**Exact smallest witness.**  Even in that `2`-by-`2` case, direct equality
+fails.  At the admitted scalar tangent fixture
+
+`a=1, c=8, chi=8, Delta=2, r=0, rho=1/2`
+
+with positive quartic inputs, the declared one-species macro sends the
+`q_(H1)` basis vector under the block order to
+
+`(-5/8,-1/2,1,-1,7/8,-1/2,3/4,2)`,
+
+while the matching raw even/odd circuit gives
+
+`(-5/8,-1/2,7/8,3/2,-1/8,-1/2,7/8,-1/2)`.
+
+The vectors differ exactly.  Nevertheless, with
+`A=M_(H1,V1)`, `B=M_(H1,V2)`, `C=M_(H2,V1)`, and `D=M_(H2,V2)`, disjoint-gate
+commutation gives the positive survivor
+
+`A*(D*C*B*A)=(D*A)*(B*C)*A`.
+
+Thus the C4 block transfer is exactly conjugate to, but not directly equal to,
+the ring circuit.
+
+**Consequence.**  Retain the controller-free macro, all open acyclic monotone
+cuts, and the exact all-`k` swap-dressed straight-routing seam-frame conjugacy.
+The executable table closes that positive routed theorem without changing this
+negative: raw direct equality may not be used as a shortcut.
+
+**Boundary.**  This is not a failure of the local macro, symplecticity, mixed
+inverses, coefficient occurrence, the exact bond flow, every periodic routing,
+or a state/reference intertwiner.  It changes no TECT claim or tier and proves
+no physical vacuum, causal structure, CP1, C6, Pre-A, or Sector-A closure.
+
+**Evidence.**
+`strategy/pre-a-cp1-cl8-controller-free-two-kick-macro-bridge-certificate-260809.md#section-9-periodic-quotient`;
+`strategy/pre-a-cp1-cl8-controller-free-two-kick-macro-bridge-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_controller_free_two_kick_macro_bridge.py`;
+`codes/foundations/pre_a_cp1_cl8_controller_free_two_kick_macro_bridge_independent.py`.
+
+**Registered.**  2026-08-09.
+
+<a id="ng-2026-08-09-pre-a-cp1-cl8-universal-periodic-quadratic-shadow-gibbs"></a>
+### NG-2026-08-09-PRE-A-CP1-CL8-UNIVERSAL-PERIODIC-QUADRATIC-SHADOW-GIBBS -- the admitted macro domain has no universal positive quadratic or zero-centred Gaussian state
+
+**Failure mode.**  Infer from symplecticity, global mixed invertibility, exact
+coefficient occurrence, and routed seam conjugacy that every admitted
+controller-free periodic macro has a positive-definite quadratic invariant and
+its zero-centred nondegenerate Gaussian stationary state which can also serve
+on the routed or open cuts.
+
+**Exact witness.**  Use the admitted one-species C4 tangent fixture
+`a=1, c=8, chi=8, Delta=2, r=0, rho=1/2`, with positive quartic inputs.  In
+one-species order `(q_H,p_H,q_V,p_V)`, the macro-derived local tangent is
+`[[1/4,11/16,3/4,5/16],[-1,1/4,1,3/4],[3/4,5/16,1/4,11/16],[1,3/4,-1,1/4]]`;
+the full 32-dimensional zero-phase tangent is eight decoupled identical
+species blocks.  In C4 order
+`(q_H1,p_H1,q_H2,p_H2,q_V1,p_V1,q_V2,p_V2)`, the raw circuit
+`F=(D*A)*(B*C)` acts right-to-left and has exact characteristic polynomial
+
+`(z-1)^2*(z^2+z+1)*(z^2+3*z+1)^2`.
+
+It therefore has reciprocal real eigenvalues `(-3+/-sqrt(5))/2`, including
+one with modulus greater than one.  If a positive-definite matrix `G` obeyed
+`F^T*G*F=G`, an eigenvector with eigenvalue `z` would imply
+`v^*Gv=|z|^2*v^*Gv`, forcing `|z|=1`, a contradiction.  Hence the fixture has
+no positive-definite quadratic invariant and no nondegenerate invariant
+Gaussian for the tangent circuit.  Differentiating a hypothetical nonlinear
+`C2` invariant with a strict nondegenerate minimum at zero gives the same
+impossible Hessian equation, excluding a zero-centred nonlinear invariant
+Gaussian.  This does not exclude an arbitrary off-centre nonlinear stationary
+Gaussian.  The exact C4 cut conjugacy transfers only these scoped obstructions
+to the routed block.
+
+**Positive survivors.**  The all-zero fixed phase gives an exact singular
+stationary probability on every cut.  For `r<0`, the globally correlated
+one-half mixture of the all-plus-`v` and all-minus-`v` phases,
+`v=sqrt(-r/g)`, is also stationary.  For a single positive quadratic bond,
+the declared spectral step condition gives an exact bond-correlated quadratic
+shadow and its Gibbs law.  These facts do not provide a common regular state,
+preferred reference, or cut-independent periodic Gibbs measure.
+
+They also do not repair the inherited reference.  The delta measures are
+singular and the one-bond shadow is pairing-dependent, so neither is the
+regular oscillator-number vacuum/Gibbs/reference ruled out for quartic reuse
+by `NG-2026-08-04-PRE-A-CP1-CL8-PASSIVE-TWO-ARM-NUMBER-STATE-QUARTIC-REUSE`.
+The original-H-state and principal-Floquet-Gibbs negative boundaries remain in
+force.
+
+**Consequence.**  Keep
+`PA-CP1-CL8-COMMON-POSITIVE-INVARIANT-AND-STATIONARY-STATE` open.  Restrict
+future positive work to an explicitly Floquet-stable domain, freeze the
+collective zero-mode treatment, solve the Bloch/Lyapunov equation, and verify
+cut covariance.  Do not use the full mixed-inverse domain as a state-stability
+domain.
+
+**Boundary.**  This does not reject smaller-step pinned or massive domains,
+correlated non-Gaussian invariant measures, singular fixed-point states, an
+energy-preserving redesign, arbitrary off-centre nonlinear stationary
+Gaussians, or a separately proved quantum Floquet eigenstate.
+It selects no physical state or energy reference and changes no TECT claim or
+tier.
+
+**Evidence.**
+`strategy/pre-a-cp1-cl8-controller-free-two-kick-macro-bridge-certificate-260809.md#section-10-invariant-state-split`;
+`strategy/pre-a-cp1-cl8-controller-free-two-kick-macro-bridge-manifest.json`;
+`codes/foundations/pre_a_cp1_cl8_controller_free_two_kick_macro_bridge.py`;
+`codes/foundations/pre_a_cp1_cl8_controller_free_two_kick_macro_bridge_independent.py`.
+
+**Registered.**  2026-08-09.
 
 <a id="ng-2026-08-04-a13-r166-direct-harmonic-coercivity-tensorization"></a>
 ### NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION -- coefficient-one direct harmonic coercivity does not tensorize across dyadic fresh pairs

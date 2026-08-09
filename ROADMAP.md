@@ -120,7 +120,8 @@ the still-open `q=10/9` Nelson moment. A coefficient-blind endpoint-only
 timewise Young enclosure and the direct nonfrozen one-shot Ramer map at
 `t=5/9` are now also closed negatively; the latter has a production
 determinant sign change near amplitude `3.49230586`. The sole canonical
-objective remains `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`, which must
+objective within the preserved SA-F4 constructive-measure programme remains
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`, which must
 spend Cameron--Martin energy once and retain a signed global cancellation.
 The translation-model reduction now proves the flexible sufficient field
 range `epsilon_6<gamma/6`, the exact finite-cutoff translation and Cartan
@@ -685,10 +686,40 @@ D — Gauge/matter topology.
 
 ---
 
-## Current priority view (refreshed 2026-07-28)
+## Current priority view (refreshed 2026-08-09)
 
 The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
+
+The binding truth-first priority is now **T-054 Pre-A canonical-functional,
+state, and reference selection**.  The evidence register is only a partial
+intake, so no candidate is selected.  The controller-free two-kick macro closes
+a fixed-regulator global mixed/open-acyclic-cut subgate; raw periodic even/odd
+rectangle equality fails, while an exact all-`k` swap-dressed routed seam-frame
+conjugacy survives.  EXP-000788 independently derives the C4 tangent and full
+species decoupling: it excludes a universal positive quadratic, tangent
+Gaussian, and zero-centred nonlinear Gaussian, but leaves arbitrary off-centre
+nonlinear stationary Gaussians open.  The surviving singular and one-bond
+states do not yet match the inherited regular reference.  The primary next
+gate is the cross-candidate
+`PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE`, followed by the
+preregistered quadratic-causal admission triage.  Published EXP-000758--
+EXP-000782 provide extensive fixed-regulator and three-dimensional comparator
+evidence, culminating in a scoped positive-lambda low-temperature Euclidean-
+DLR phase regime, but they neither select a round-one candidate nor provide a
+common regular stationary reference for the new two-kick macro.  The separate
+real-time KMS/ground/continuum/effective-reduction and macro-reference gates
+continue in parallel rather than replacing the cross-candidate gate.
+
+**T-050/A13 is mathematically preserved but parked from the main physical
+priority.**  The current registered SA-F4 route still passes through T-050,
+but T-050 is neither a dependency of the already published seven-hypothesis
+A5 conditional synthesis nor the unique possible constructive route.  Reopen
+it as the main path only if Pre-A selects the current A1/A7 branch and freezes
+its complete finite production cylinder, governance explicitly restores that
+programme, or an exact/outward-certified scheme-independent legal complete-
+owner counterdirection appears.  The numbered list below retains the internal
+SA-F4 dependency order; it is not a cross-programme priority ranking.
 
 1. **Repository control task T-006** — finish code-discipline automation.
 2. **A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE** — the broad joint gate is

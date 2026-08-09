@@ -1,0 +1,207 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-controller-free-two-kick-macro-bridge/0.1",
+  "candidate_id": "PA-CP1-CL8-CONTROLLER-FREE-TWO-KICK-MACRO-BRIDGE-v0",
+  "parent_ids": [
+    "PA-CP1-CL8-INTERACTING-TWO-ARM-WORK-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-COMMON-FINITE-REGULATOR-CHARACTERISTIC-ROUTE-SPLIT-v0",
+    "PA-CP1-CL8-SEMIDISCRETE-CAUCHY-OA2-v0"
+  ],
+  "result_id": "PA-CP1-CL8-EXACT-GLOBAL-SIDEWAYS-MACRO-AND-FIXED-REGULATOR-SPLITTING-BRIDGE",
+  "candidate_family": "PRE-A-CL8-CONTROLLER-FREE-TWO-KICK-MACRO-BRIDGE",
+  "package_version": "0.2.1",
+  "issued": "2026-08-09",
+  "authority": "T0 exact claim-nonbearing fixed-regulator classical splitting, routed-seam, and invariant-state route-split theorem; not a TECT action, physical candidate selection, autonomous-flow identity, common regular stationary-state theorem, CP1 completion, C6 advancement, or Pre-A closure",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "statement": "On the inserted one-dimensional per-unit-transverse-area CL8 regulator, replace the previously inserted passive controller by two exact bond-potential half-kicks separated by inherited kinetic drift. The resulting symmetric two-substep bond macro is a controller-free global polynomial symplectomorphism. Away from zero coupling/step and one exact step resonance, all four complete-leg mixed projections have explicit global inverses. The cross determinants are rho^16 and (1-rho^2)^8, independent of the nonlinear onsite Hessian. The same local rule gives controller-free reconstruction of every open acyclic monotone cut and carries each periodic bond potential and half-owned endpoint kinetic coefficient exactly once under the even/odd ledger. A quotient audit rejects direct raw fixed-site EO equality. For every square k by k quotient, an explicit permutation table instead gives an exact swap-dressed straight-routing seam-frame conjugacy; k=3 is the first raw-routing counterexample. Singular fixed-point probabilities and a conditional one-bond quadratic shadow exist, but an admitted C4 hyperbolic tangent refutes a universal positive-quadratic invariant, tangent-circuit Gaussian, or zero-centred nonlinear Gaussian theorem on the full mixed-inverse domain. It does not exclude an arbitrary off-centre nonlinear stationary Gaussian. The macro remains a symmetric second-order splitting companion, not the exact autonomous CL8 flow. A common regular state/reference/counterterm ledger, the one-dimensional-to-three-dimensional Q3 bridge, and regulator removal remain open.",
+  "verdict": "ADVANCE THE CONTROLLER-FREE GLOBAL MIXED MACRO, OPEN-ACYCLIC-ALL-CUT BRIDGE, EXACT ALL-K SWAP-DRESSED ROUTED SEAM CONJUGACY, SINGULAR EQUILIBRIUM STATES, AND CONDITIONAL ONE-BOND QUADRATIC SHADOW; REJECT RAW RECTANGLE-EQUALS-EO IDENTIFICATION AND A UNIVERSAL PERIODIC POSITIVE-QUADRATIC, TANGENT-GAUSSIAN, OR ZERO-CENTRED NONLINEAR-GAUSSIAN THEOREM ON THE FULL ADMITTED DOMAIN; KEEP ARBITRARY OFF-CENTRE GAUSSIANS, COMMON REGULAR STATE/REFERENCE, 1D-TO-3D, CONTINUUM, CP1, C6, AND PRE-A OPEN",
+  "negative_ids": [
+    "NG-2026-08-09-PRE-A-CP1-CL8-RAW-PERIODIC-EO-RECTANGLE-QUOTIENT",
+    "NG-2026-08-09-PRE-A-CP1-CL8-UNIVERSAL-PERIODIC-QUADRATIC-SHADOW-GIBBS"
+  ],
+  "authorities": {
+    "controller_driven_predecessor": "strategy/pre-a-cp1-cl8-interacting-two-arm-work-route-split-manifest.json",
+    "cauchy_split_parent": "strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-manifest.json",
+    "semidiscrete_hamiltonian": "strategy/pre-a-cp1-cl8-semidiscrete-cauchy-oa2-manifest.json",
+    "selection_charter": "strategy/pre-a-evidence-first-model-selection-charter-260802.md",
+    "admission_audit": "strategy/pre-a-round1-admission-canonical-functional-bridge-manifest.json"
+  },
+  "model_scope": {
+    "spatial_model": "inserted one-dimensional transverse-zero CL8 chain per unit transverse area",
+    "species_dimension": 8,
+    "phase_dimension_per_leg": 16,
+    "parameter_domain": "M even and M>=4, L>0, a=L/M, w=a/8, mu=chi*w, chi>0, c>0, g>0, lambda>0, real r, and nonzero Delta with rho^2!=1",
+    "Q3_onsite": "W_Q3(q)=sum_e[r*q_e^2/2+g*q_e^4/4]+(lambda/4)sum_(e~f in Q3)(q_e-q_f)^2(q_e^2+q_f^2)",
+    "bond_potential": "V(x,y)=w*[c*||y-x||^2/(2*a^2)+(W_Q3(x)+W_Q3(y))/2]",
+    "bond_hamiltonian": "h_b=(||p||^2+||r||^2)/(4*mu)+V(x,y)",
+    "cross_hessian": "D_x D_y V=-kappa*I_8 with kappa=w*c/a^2=c/(8*a)"
+  },
+  "macro_definition": {
+    "full_node_drift": "D_t(q,p)=(q+t*p/mu,p)",
+    "bond_kick": "K_s(x,p,y,r)=(x,p-s*[f(x)+kappa*(x-y)],y,r-s*[f(y)+kappa*(y-x)]) with f=(w/2)*grad W_Q3",
+    "step_fractions": "s=Delta/2 and h=Delta/8",
+    "macro": "M_Delta=(D_h direct-sum D_h) after K_s after (D_(2h) direct-sum D_(2h)) after K_s after (D_h direct-sum D_h)",
+    "Strang_identity": "M_Delta=S_(Delta/2)^2 for the bond Hamiltonian, where each S is one symmetric Strang substep",
+    "rho": "rho=2*h*s*kappa/mu=kappa*Delta^2/(8*mu)=c*Delta^2/(8*chi*a^2)",
+    "safe_simple_domain": "0<Delta^2*c<8*chi*a^2, which implies 0<rho<1",
+    "exact_global_domain": "rho!=0 and rho^2!=1"
+  },
+  "exact_mixed_inverse": {
+    "intermediate_notation": "x1=x+h*p/mu, y1=y+h*r/mu, P1 and R1 after kick one, x2=x1+2h*P1/mu, y2=y1+2h*R1/mu, P2 and R2 after kick two, E=(x2+h*P2/mu,P2), N=(y2+h*R2/mu,R2)",
+    "given_W_and_E": [
+      "x1=x+h*p/mu and x2=e-h*P2/mu",
+      "P1=mu*(x2-x1)/(2h)",
+      "y1=x1+(P1-p+s*f(x1))/(s*kappa)",
+      "y2=x2+(P2-P1+s*f(x2))/(s*kappa)",
+      "R1=mu*(y2-y1)/(2h)",
+      "r=R1+s*[f(y1)+kappa*(y1-x1)] and y=y1-h*r/mu",
+      "R2=R1-s*[f(y2)+kappa*(y2-x2)] and N=(y2+h*R2/mu,R2)"
+    ],
+    "given_W_and_N": [
+      "x1=x+h*p/mu and y2=n-h*R2/mu",
+      "A=x1+(2h/mu)*[p-s*(f(x1)+kappa*x1)]",
+      "B=R2+s*[f(y2)+kappa*(y2-A)]",
+      "y1=[y2-(2h/mu)*B]/(1-rho^2) and x2=A+rho*y1",
+      "R1=mu*(y2-y1)/(2h), r=R1+s*[f(y1)+kappa*(y1-x1)], and y=y1-h*r/mu",
+      "P1=mu*(x2-x1)/(2h), P2=P1-s*[f(x2)+kappa*(x2-y2)], and E=(x2+h*P2/mu,P2)"
+    ],
+    "other_orientations": "leg exchange gives the two remaining mixed orientations",
+    "cross_determinants": {
+      "det_dE_dS_at_fixed_W": "rho^16",
+      "det_dN_dW_at_fixed_S": "rho^16",
+      "det_dN_dS_at_fixed_W": "(1-rho^2)^8",
+      "det_dE_dW_at_fixed_S": "(1-rho^2)^8"
+    },
+    "noncommutativity_firewall": "No commutation of the two onsite Hessians is assumed. The block elimination uses the ordered Schur identity D*A-beta*C=(1-rho^2)I, not an illegally reordered product."
+  },
+  "exact_flow_consistency_lemma": {
+    "mass_firewall": "For the exact bond flow the standard kinetic mass is m=2*mu, not mu.",
+    "compact_uniform_blocks": [
+      "D_y X=(kappa*t^2/(2*m))*I_8+O_K(t^4)",
+      "D_r X=(kappa*t^3/(6*m^2))*I_8+O_K(t^5)",
+      "D_y P=kappa*t*I_8+O_K(t^3)",
+      "D_r P=(kappa*t^2/(2*m))*I_8+O_K(t^4)"
+    ],
+    "determinant": "det D_(y,r)(X,P)=[kappa^2/(12*m^2)]^8*t^32+O_K(t^34)=[kappa^2/(48*mu^2)]^8*t^32+O_K(t^34)",
+    "scope": "Every compact phase set has a sufficiently small nonzero time interval with local mixed inverses. This does not prove a global exact-flow mixed inverse or exclude caustics.",
+    "macro_comparison": "The macro species-leading factor is kappa^2*Delta^4/(64*mu^2), whereas exact flow gives kappa^2*Delta^4/(48*mu^2); this confirms that M_Delta is an integrator, not the exact flow."
+  },
+  "symplectic_and_term_ledger": {
+    "symplecticity": "Every drift and kick is an exact global polynomial symplectomorphism, so det D M_Delta=1 and M_Delta^(-1)=M_(-Delta).",
+    "bond_potential_ownership": "two kicks give 2s=Delta, exactly one Delta occurrence of V on that bond",
+    "bond_kinetic_ownership": "four full-node drift parameters give 4h=Delta/2 per endpoint, exactly the time-Delta flow coefficient of the half-owned endpoint kinetic ||p||^2/(4*mu)",
+    "periodic_ledger": "on an even periodic ring, the even and odd bond sets partition all bonds and every node belongs to exactly two bonds; hence every potential bond and every full-node kinetic coefficient occurs exactly once per declared period",
+    "accuracy_boundary": "the bond macro is symmetric second order with local error O_K(Delta^3); an even-then-odd periodic product is a controller-free first-order consistent Floquet companion unless an additional symmetric layer composition is declared"
+  },
+  "open_rectangle_result": {
+    "domain": "an open directed m by n acyclic rectangle with m,n positive and m+n=M",
+    "local_rule": "place the same M_Delta at every vertex",
+    "result": "every monotone order-ideal cut contains M complete legs and is related to the incoming arms by a global polynomial symplectic diffeomorphism; temporal and complementary mixed reconstruction are exact and sweep independent",
+    "scope_boundary": "this result covers open acyclic monotone cuts only; no wrapped seam, cylinder quotient, or periodic monodromy is inferred"
+  },
+  "periodic_quotient_audit": {
+    "quotient": "Gamma=Z^2/<T> with T=(m,-n), m,n>0, and M=m+n",
+    "acyclic_height": "theta([i,j])=n*i+m*j is well defined and rises by n on east edges and m on north edges, so the directed quotient has no cycle",
+    "block_cut": "B has word S^n E^m and B1=B+(m,0); the transfer contains m*n macro vertices",
+    "incidence": "every horizontal row wire meets every vertical column wire once, hence the occurrence graph is K_(n,m), with horizontal degree m and vertical degree n",
+    "seam_rotation": "in a seam-fixed cyclic frame the output cut is R^n B, and R^n has order M/gcd(m,n)",
+    "parity": "checkerboard parity descends exactly when M is even; R^n preserves the even/odd bond colour exactly when n is even",
+    "raw_ring_comparison": "one raw fixed-site even/odd ring period has incidence C_M, M gates, and degree two. Incidence and count agreement force m=n=2.",
+    "exact_C4_survivor": "for m=n=2, writing A=M_(H1,V1), B=M_(H1,V2), C=M_(H2,V1), D=M_(H2,V2), U_block=D*C*B*A, F=(D*A)*(B*C), and C_cut=A, disjoint-gate commutation gives C_cut*U_block=F*C_cut exactly",
+    "direct_equality_counterexample": "at a=1,c=8,chi=8,Delta=2,r=0 with positive g and lambda, rho=1/2 and the declared rational one-species tangent sends q_H1 to (-5/8,-1/2,1,-1,7/8,-1/2,3/4,2) under U_block but to (-5/8,-1/2,7/8,3/2,-1/8,-1/2,7/8,-1/2) under the matching raw EO circuit",
+    "general_square_theorem": "for m=n=k, let G_(j,i)=M_(H_j,V_i), let C_k be the diagonal-ordered triangle i+j<=k, and let L_l be the disjoint matching G_(j,[l-j]_k). Trace-monoid projection gives C_k*U_k=(L_k*...*L_1)*C_k for every k. In the existing straight routing, the geometric local gate is P after M and the explicit slot table pos_r(H_j)=2(k-j)+r, pos_r(V_i)=2(i-1)+1-r gives C_ring*U_k*C_ring^(-1)=R^(-k)*Fhat_k exactly.",
+    "general_square_checks": "exact rational checks pass for k=2,3,4, including every routed layer, total frame, half-turn, intertwiner and seam-fixed conjugacy; raw routing first fails at k=3",
+    "negative_conclusion": "the seam-fixed straight-routed rectangle quotient is not the raw fixed-site even/odd product of M_Delta. This does not reject the exact C4 conjugacy, a declared turning routing, a translated-edge frame, or the swap-dressed geometric circuit."
+  },
+  "invariant_state_route_split": {
+    "singular_positive_states": "delta at the all-zero phase is stationary on every macro cut. For r<0, the globally correlated one-half mixture of the all-plus-v and all-minus-v fixed phases, v=sqrt(-r/g), is also an exact normalized stationary classical probability.",
+    "liouville_boundary": "symplectic volume is invariant but has infinite total mass and is not a probability",
+    "single_bond_quadratic_shadow": "for V(q)=q^T K q/2 with K positive and spectrum((h*s/mu)K) contained in (0,2), one Strang substep and M_Delta preserve H_tilde=||p||^2/(4mu)+q^T K[I-(h*s/(2mu))K]^(-1)q/2 exactly",
+    "periodic_C4_tangent": "in one-species order (q_H,p_H,q_V,p_V), the independently macro-derived tangent is [[1/4,11/16,3/4,5/16],[-1,1/4,1,3/4],[3/4,5/16,1/4,11/16],[1,3/4,-1,1/4]]. The full zero-phase 32 by 32 bond tangent is exactly eight decoupled identical species blocks.",
+    "periodic_C4_obstruction": "at the admitted rho=1/2 tangent, in C4 order (q_H1,p_H1,q_H2,p_H2,q_V1,p_V1,q_V2,p_V2) with F=(D*A)*(B*C) acting right-to-left, the characteristic polynomial is (z-1)^2(z^2+z+1)(z^2+3z+1)^2, giving reciprocal real hyperbolic eigenvalues. Therefore no positive-definite quadratic invariant or nondegenerate Gaussian for the tangent circuit exists. For the full nonlinear fixture, no C2 invariant with a strict nondegenerate minimum at zero, hence no zero-centred invariant Gaussian, exists. An arbitrary off-centre nonlinear stationary Gaussian is not excluded. Exact C4 conjugacy transfers only these scoped obstructions to the routed block.",
+    "inherited_state_reference_reuse": "NG-2026-08-04-PRE-A-CP1-CL8-PASSIVE-TWO-ARM-NUMBER-STATE-QUARTIC-REUSE remains controlling: the new fixed-point measures are singular and the one-bond shadow Gibbs law is pairing-dependent, so neither is the inherited regular oscillator-number vacuum/Gibbs/reference. NG-2026-08-04-PRE-A-CP1-CL8-CAUSAL-SPLIT-ORIGINAL-H-STATE and NG-2026-08-04-PRE-A-CP1-CL8-PRINCIPAL-FLOQUET-GIBBS-REFERENCE also remain in force.",
+    "scope_boundary": "singular fixed states do not select a preferred state or reference; the one-bond shadow is pairing-dependent and does not automatically tile the open or periodic circuit; arbitrary off-centre nonlinear stationary Gaussians, smaller stable domains, and non-Gaussian correlated states remain possible"
+  },
+  "quantum_boundary": {
+    "forward_transport": "the ordered drift and polynomial-phase factors have a corresponding unitary product on B(L2(R^(8M))) and transport normal densities exactly on each fixed open cut",
+    "not_proved": "mixed classical invertibility is not strict quantum dual-unitarity, does not normalize the nonlinear Weyl C-star algebra, and supplies no stationary or preferred state"
+  },
+  "relation_to_existing_no_go": {
+    "negative_id": "NG-2026-08-04-PRE-A-CP1-CL8-EXACT-ORDER-EVERY-MICROCUT-SIDEWAYS",
+    "status": "RETAINED, NOT SUPERSEDED",
+    "reason": "a single q-only kick still has complete-leg rank at most eight. The new theorem uses the explicitly preserved macro-cut route: two kicks separated by drift create the missing q-p channel and restore full rank sixteen."
+  },
+  "falsifiers": [
+    "Delta=0 or kappa=0 must make the rho cross determinant vanish",
+    "rho^2=1, equivalently Delta^2*c=8*chi*a^2 for the positive domain, must make the second mixed determinant vanish",
+    "any failure of D_xD_yV=-kappa*I_8, 2s=Delta, 4h=Delta/2 per bond endpoint, or the even/odd occurrence ledger",
+    "any failed exact mixed reconstruction on a valid rational Q3 fixture",
+    "any failed symplectic Jacobian or temporal inverse",
+    "any dependence of the exact cross determinants on onsite Hessian commutation",
+    "any failed forward/reverse reconstruction on a finite open monotone cut",
+    "identifying the /64 macro coefficient with the /48 exact-flow coefficient",
+    "any failure of the K_(n,m) block-incidence count, seam rotation, parity criterion, exact C4 word conjugacy, or rational raw-EO counterexample",
+    "any failure of the all-k trace-monoid identity, routed slot table, half-turn seam factor, or k=2,3,4 exact rational fixtures",
+    "any failure of the admitted C4 characteristic polynomial or its hyperbolic obstruction to a positive-definite invariant metric",
+    "any failure of the conditional one-bond quadratic shadow identity on its declared spectral domain"
+  ],
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-CL8-CONTROLLER-FREE-COMMON-PARENT-DYNAMICS-INTERTWINER",
+    "status": "ALTERNATIVE TWO-KICK BOND-MACRO, OPEN-CUT, AND ROUTED-SEAM SUBGATES CLOSED; DOES NOT REOPEN OR REPLACE THE EXP-000758/759 CLASSICAL INSERTED-1D D-K-D COMMON-PARENT RESULT",
+    "closed_subgates": [
+      "PA-CP1-CL8-CONTROLLER-FREE-GLOBAL-MIXED-MACRO-GATE",
+      "PA-CP1-CL8-CONTROLLER-FREE-OPEN-ACYCLIC-ALL-CUT-RECONSTRUCTION",
+      "PA-CP1-CL8-BOND-COEFFICIENT-OCCURRENCE-AND-SECOND-ORDER-SPLITTING-BRIDGE",
+      "PA-CP1-CL8-EXACT-BOND-FLOW-COMPACT-LOCAL-SIDEWAYS-CONSISTENCY",
+      "PA-CP1-CL8-PERIODIC-QUOTIENT-INCIDENCE-AND-RAW-EO-NOGO",
+      "PA-CP1-CL8-C4-STAIRCASE-CUT-CONJUGACY",
+      "PA-CP1-CL8-GENERAL-K-ROUTED-SEAM-FRAME-PERMUTATION-INTERTWINER",
+      "PA-CP1-CL8-SINGULAR-EQUILIBRIUM-STATE-AND-LOCAL-QUADRATIC-SHADOW-ROUTE-SPLIT",
+      "PA-CP1-CL8-UNIVERSAL-PERIODIC-POSITIVE-QUADRATIC-AND-ZERO-CENTRED-GAUSSIAN-NOGO"
+    ],
+    "open_subgates": [
+      "PA-CP1-CL8-TWO-KICK-MACRO-COMMON-REGULAR-STATIONARY-STATE",
+      "PA-CP1-CL8-TWO-KICK-MACRO-TO-Q3LOCK-EFFECTIVE-REDUCTION",
+      "PA-CP1-CL8-TWO-KICK-MACRO-STATE-REFERENCE-AND-COUNTERTERM-LEDGER",
+      "PA-CP1-CL8-TWO-KICK-MACRO-REGULATOR-COMPATIBLE-BOUNDARY-STATE-FAMILY",
+      "PA-CP1-CL8-CONTINUUM-STATE-AND-HADAMARD-LIMIT"
+    ],
+    "next_gate": "PA-CP1-CL8-PERIODIC-BLOCH-LYAPUNOV-CUT-COMPATIBLE-STATE-FEASIBILITY"
+  },
+  "scope": {
+    "inserted_1D_per_unit_transverse_area_model": true,
+    "fixed_regulator": true,
+    "controller_free": true,
+    "exact_global_mixed_macro_inverse": true,
+    "open_acyclic_monotone_all_cut_reconstruction": true,
+    "exact_bond_coefficient_occurrence": true,
+    "symmetric_second_order_bond_splitting": true,
+    "exact_autonomous_CL8_flow": false,
+    "exact_global_mixed_inverse_for_autonomous_flow": false,
+    "periodic_quotient_incidence_audit": true,
+    "raw_periodic_EO_direct_identification": false,
+    "exact_C4_staircase_cut_conjugacy": true,
+    "general_k_routed_periodic_cylinder_seam_intertwiner": true,
+    "singular_stationary_classical_probabilities": true,
+    "conditional_single_bond_quadratic_shadow": true,
+    "universal_periodic_positive_quadratic_or_zero_centered_Gaussian_state": false,
+    "common_positive_invariant": false,
+    "common_regular_or_preferred_stationary_state": false,
+    "strict_quantum_dual_unitarity": false,
+    "full_nonlinear_Weyl_Cstar_invariance": false,
+    "original_3D_Q3LOCK_regulator": false,
+    "one_dimensional_to_three_dimensional_parent": false,
+    "physical_state_or_reference": false,
+    "physical_vacuum": false,
+    "regulator_removal": false,
+    "continuum_or_Hadamard_state": false,
+    "Lorentzian_or_null_structure_derived": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false,
+    "Sector_A_changed": false
+  },
+  "next_action": "For the CP1 branch, compute periodic and routed Bloch/Floquet blocks, solve the positive Lyapunov equation with an explicit collective-zero-mode convention, and test cut-covariant state transport. In the round-one tournament, keep the cross-candidate evidence-role and minimum-manifest freeze primary before any survivor score.",
+  "no_overclaim": "This package proves only a controller-free global mixed macro gate, open acyclic monotone-cut reconstruction, exact coefficient occurrence, compact-local exact-bond-flow consistency, quotient-incidence/raw-EO no-gos, exact all-k swap-dressed routed seam conjugacy, singular fixed-point probabilities, a conditional one-bond quadratic shadow, and one admitted C4 obstruction to a universal positive-quadratic invariant, tangent-circuit Gaussian, or zero-centred nonlinear Gaussian on the inserted 1D fixed regulator. It does not exclude arbitrary off-centre nonlinear stationary Gaussians; identify the macro with the exact autonomous flow; conserve the inherited Hamiltonian; equate the straight-routed rectangle with raw fixed-site EO; select a preferred or physical state/reference; prove a common regular invariant state; establish strict quantum dual-unitarity or nonlinear Weyl closure; connect one dimension to the original three-dimensional Q3LOCK regulator; remove a regulator; construct a continuum or Hadamard state; derive hbar, time, nullness, Lorentzian signature, light speed, a vacuum, phase transition, gravity, or cooling; advance C6; complete CP1 or Pre-A; change Sector A; or select nature's equation."
+}

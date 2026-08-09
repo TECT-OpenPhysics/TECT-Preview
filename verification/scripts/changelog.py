@@ -43,8 +43,10 @@ Changelog:
   1.0.2 (2026-08-02) decode git-show output explicitly as UTF-8 and make the
         verification gate fail closed when the committed source is unavailable,
         undecodable, or malformed.
+  1.0.3 (2026-08-09) preserve the exact committed JSONL prefix and line endings;
+        append only the new compact record instead of reserializing history.
 """
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 
 import argparse, json, os, re, shutil, sqlite3, sys, tempfile
 from pathlib import Path
@@ -68,7 +70,8 @@ NEG_RE   = re.compile(r"\b((?:R|F|NG|AUDIT)-\d{4}-[0-9A-Za-z][0-9A-Za-z-]*)")
 def atomic_write(path: Path, text: str):
     path.parent.mkdir(parents=True, exist_ok=True)
     fd, tmp = tempfile.mkstemp(dir=str(path.parent)); os.close(fd)
-    Path(tmp).write_text(text, encoding="utf-8")
+    with Path(tmp).open("w", encoding="utf-8", newline="") as stream:
+        stream.write(text)
     os.replace(tmp, str(path))
 
 
@@ -86,11 +89,8 @@ def _parse_lines(text):
     return entries, bad
 
 
-def _git_head_entries(strict=False):
-    """Entries from the committed log.jsonl (git HEAD) -- the recovery source that
-    Drive working-tree corruption cannot touch.  Recovery callers receive [] if
-    git/blob is unavailable; the verification gate uses strict=True and fails
-    closed instead."""
+def _git_head_text(strict=False):
+    """Exact committed log text, preserving historical JSON serialization."""
     import subprocess
     try:
         out = subprocess.run(["git", "show", "HEAD:changelog/log.jsonl"],
@@ -103,8 +103,28 @@ def _git_head_entries(strict=False):
                     f"git show HEAD:changelog/log.jsonl exited {out.returncode}"
                     + (f": {detail}" if detail else "")
                 )
+            return ""
+        return out.stdout
+    except Exception as exc:
+        if strict:
+            if isinstance(exc, RuntimeError):
+                raise
+            raise RuntimeError(
+                f"cannot read git HEAD changelog as UTF-8: {exc}"
+            ) from exc
+        return ""
+
+
+def _git_head_entries(strict=False):
+    """Entries from the committed log.jsonl (git HEAD) -- the recovery source that
+    Drive working-tree corruption cannot touch.  Recovery callers receive [] if
+    git/blob is unavailable; the verification gate uses strict=True and fails
+    closed instead."""
+    try:
+        text = _git_head_text(strict=strict)
+        if not text:
             return []
-        ents, bad = _parse_lines(out.stdout)
+        ents, bad = _parse_lines(text)
         if bad:
             if strict:
                 raise RuntimeError(
@@ -136,8 +156,15 @@ def load():
     return entries
 
 
+def _encode_entry(entry):
+    return json.dumps(entry, ensure_ascii=False, separators=(",", ":")) + "\n"
+
+
 def save(entries):
-    atomic_write(LOG, "".join(json.dumps(e, ensure_ascii=False) + "\n" for e in entries))
+    atomic_write(
+        LOG,
+        "".join(_encode_entry(entry) for entry in entries),
+    )
 
 
 def _meta(raw):
@@ -187,7 +214,11 @@ def cmd_add(args):
                  keywords=sorted(set(args.keywords or [])),
                  neg_results=sorted(set((args.neg or []) + m["neg_results"])),
                  notes=args.notes or [], scripts=args.scripts or [], raw=raw)
-    entries = load(); entries.append(entry); save(entries)  # EOF == newest
+    entries = load(); entries.append(entry)  # EOF == newest
+    previous = LOG.read_text(encoding="utf-8") if LOG.exists() else ""
+    if previous and not previous.endswith("\n"):
+        previous += "\n"
+    atomic_write(LOG, previous + _encode_entry(entry))
     atomic_write(MD, render())
     print(f"changelog: added {entry['id']} ({len(entries)} entries)")
     return 0
@@ -364,7 +395,10 @@ def cmd_repair(args):
     committed git-HEAD entries with any valid working-tree-only (new, uncommitted)
     entries, drop corrupted lines, then re-write log.jsonl + CHANGELOG.md + db."""
     cur, bad = (_parse_lines(LOG.read_text(encoding="utf-8")) if LOG.exists() else ([], []))
-    head = _git_head_entries()
+    head_text = _git_head_text()
+    head, head_bad = _parse_lines(head_text) if head_text else ([], [])
+    if head_bad:
+        head_text, head = "", []
     by_id, order = {}, []
     for e in head + cur:               # HEAD first (committed history), then new appends
         eid = e.get("id")
@@ -372,7 +406,14 @@ def cmd_repair(args):
             by_id[eid] = e; order.append(eid)
     recovered = [by_id[i] for i in order]
     added = len([e for e in cur if e.get("id") not in {h.get("id") for h in head}])
-    save(recovered)
+    if head_text and not head_text.endswith("\n"):
+        head_text += "\n"
+    head_ids = {entry.get("id") for entry in head}
+    new_entries = [entry for entry in cur if entry.get("id") not in head_ids]
+    if head_text:
+        atomic_write(LOG, head_text + "".join(_encode_entry(entry) for entry in new_entries))
+    else:
+        save(recovered)
     atomic_write(MD, render(recovered))
     build_db()
     print(f"changelog repair: {len(recovered)} entries restored "

@@ -21,6 +21,26 @@ conditional cluster and a separate one-use source/sextic aggregation before
 close. The historical R-085 weighted/labelled-owner formulas are
 non-load-bearing under R-088/R-103/R-105.
 
+### **PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE**
+
+**Statement:** Before scoring or selecting any Pre-A round-one candidate,
+freeze the complete evidence and clue register with an explicit role for each
+item, admit every contestant under the same minimum manifest fields, separate
+bridge infrastructure from contestants, and declare one common
+reference/observable/input ledger, one non-fitting validation prediction, and
+one robustness envelope. Scoped failures may eliminate only the exact
+mechanism and parameter contract that was tested.
+
+**Status:** OPEN (2026-08-09). EXP-000784--EXP-000788 record a partial intake,
+the current non-selection verdict, and an alternative controller-free
+two-kick bond-macro/routed-seam theorem. Published EXP-000758--EXP-000782 add
+substantial fixed-regulator and three-dimensional CP1 bridge evidence, but do
+not convert CP1 into a contestant or freeze a common round-one discriminator.
+The gate closes only when the evidence-role register and every minimum
+candidate contract are complete and internally consistent. No winner,
+shortlist, preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or
+unconditional Sector-A closure is presently licensed.
+
 ### **PA-CP1-CL8-Q3-CUTOFF-VOLUME-INTERPOLATION-UNIFORM-PERIODIC-SHARP-SURFACE-PAIRING**
 
 **Statement:** For the plane-Wick volume-coherent eight-component Q3 family,
@@ -159,7 +179,7 @@ Pre-A remain open.
 
 ### **PA-CP1-ST8-Q3LOCK-INFINITE-VOLUME-DYNAMICS-KMS-GROUND-AND-CONTINUUM-SPLIT**
 
-**Statement:** Starting from the EXP-000781--775 tempered Euclidean DLR phase,
+**Statement:** Starting from the EXP-000781--EXP-000782 tempered Euclidean DLR phase,
 separately construct or refute (i) a thermodynamic-limit real-time automorphism
 group on a declared quasi-local algebra and algebraic `beta`-KMS states whose
 Euclidean restrictions are the constructed phases; (ii) controlled

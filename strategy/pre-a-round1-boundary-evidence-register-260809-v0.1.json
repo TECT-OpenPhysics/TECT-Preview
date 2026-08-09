@@ -1,0 +1,254 @@
+{
+  "schema": "tect/pre-a-evidence-register/0.1",
+  "register_id": "PRE-A-ROUND1-T053-BOUNDARY-EVIDENCE-INTAKE-v0.1",
+  "version": "0.1.0",
+  "issued_on": "2026-08-09",
+  "task_id": "T-054",
+  "authority": "T0 partial evidence-register intake for the common T-053 boundary benchmark; not a charter-complete freeze, TECT claim, candidate selection, physical-vacuum result, or Pre-A exit",
+  "charter": "strategy/pre-a-evidence-first-model-selection-charter-260802.md",
+  "scope": "A first candidate-neutral boundary intake only: electromagnetic Lorentz anisotropy and dispersion, gravitational-wave/electromagnetic propagation, superconducting flux periodicity and quantization, and controlled critical scaling. Dataset/table locators and uncertainty models are recorded, but the full Pre-A evidence families and common observable map are incomplete.",
+  "versioning_policy": {
+    "roles_declared_in_this_version": true,
+    "charter_complete_freeze": false,
+    "corrections_require_new_version_or_append_only_correction": true,
+    "discovery_items_may_be_used_to_form_candidate_tests": true,
+    "declared_non_fitting_validation_items_may_not_be_used_to_fit_or_choose_candidate_parameters": true,
+    "candidate_generated_targets_are_excluded": true,
+    "admission_rule": "Only directly measured observables with primary experimental or official archival provenance enter this tranche. Structural interpretations are deliberately weaker than candidate narratives."
+  },
+  "evidence_items": [
+    {
+      "id": "PA-EV-T053-001",
+      "role": "discovery",
+      "admission_status": "PARTIAL_INTAKE_ONLY",
+      "family": "local Lorentz and electromagnetic propagation",
+      "observable": "orientation-dependent relative beat-frequency modulation Delta_nu/nu in two orthogonal cryogenic sapphire oscillators",
+      "reported_value": "(9.2 +/- 10.7) x 10^-19 at 95% confidence",
+      "units": "dimensionless",
+      "source": {
+        "title": "Direct terrestrial test of Lorentz symmetry in electrodynamics to 10^-18",
+        "authors": "M. Nagel et al.",
+        "journal": "Nature Communications 6, 8174 (2015)",
+        "doi": "10.1038/ncomms9174",
+        "url": "https://www.nature.com/articles/ncomms9174",
+        "source_type": "primary experiment",
+        "retrieved_on": "2026-08-09"
+      },
+      "independence_group": "EM-CAVITY-NAGEL-2015",
+      "dataset_or_table": "published main-result fit and supplementary harmonic-amplitude tables",
+      "uncertainty_model": "the reported central value and 95% confidence interval, with material-resonator and magnetic-systematic qualifications retained",
+      "independence_rationale": "terrestrial rotating-cavity apparatus independent of the astrophysical and condensed-matter anchors; photon and electron SME interpretations are not counted as independent measurements",
+      "minimum_constraint": "A viable low-energy electromagnetic sector must suppress orientation-dependent propagation or resonator-frequency anisotropy to the measured scale under the declared apparatus and test framework.",
+      "systematic_and_model_boundary": "The experimental observable is a material-resonator beat frequency. Several reported SME coefficient bounds assume an electron-sector convention or constrain photon-electron combinations; the datum is not a model-free measurement of a standalone microscopic light speed.",
+      "does_not_license": [
+        "a literal mechanical ether",
+        "a derived Lorentzian metric",
+        "equality of every particle or collective-mode speed",
+        "a TECT parameter fit"
+      ]
+    },
+    {
+      "id": "PA-EV-T053-002",
+      "role": "discovery",
+      "admission_status": "PARTIAL_INTAKE_ONLY",
+      "family": "multi-messenger causal propagation",
+      "observable": "arrival-time delay between GRB 170817A and GW170817",
+      "reported_value": "+1.74 +/- 0.05 s; inferred (v_GW-v_EM)/v_EM in [-3 x 10^-15, +7 x 10^-16] under the collaboration's emission-delay assumptions",
+      "units": "seconds and dimensionless speed ratio",
+      "source": {
+        "title": "Gravitational Waves and Gamma-rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A",
+        "authors": "LIGO Scientific Collaboration, Virgo Collaboration, Fermi GBM, and INTEGRAL",
+        "archive_id": "LIGO-P1700308-v8",
+        "doi": "10.3847/2041-8213/aa920c",
+        "url": "https://dcc.ligo.org/P1700308/public",
+        "source_type": "primary multi-messenger collaboration paper",
+        "retrieved_on": "2026-08-09"
+      },
+      "independence_group": "GW170817-GRB170817A",
+      "dataset_or_table": "collaboration paper timing result and derived speed-bound section",
+      "uncertainty_model": "reported detector timing uncertainty plus the collaboration's conservative intrinsic-emission-delay interval; the speed interval is conditional on that source model",
+      "independence_rationale": "independent gravitational-wave and gamma-ray instruments observe one associated source, so detector independence is retained while source association and emission physics remain shared nuisances",
+      "minimum_constraint": "A viable shared low-energy causal structure must reproduce the observed near-coincidence of gravitational-wave and electromagnetic propagation after explicitly modelling source-emission delay and propagation effects.",
+      "systematic_and_model_boundary": "The speed interval uses an assumed range for the intrinsic gamma-ray emission delay and one source association. It compares gravitational and gamma-ray signals, not all matter, gauge, or collective modes.",
+      "does_not_license": [
+        "derivation of the speed of light from a candidate lattice",
+        "equality of every excitation speed",
+        "emergent gravity",
+        "a unique microscopic action"
+      ]
+    },
+    {
+      "id": "PA-EV-T053-003",
+      "role": "discovery",
+      "admission_status": "PARTIAL_INTAKE_ONLY",
+      "family": "compact phase and flux quantization",
+      "observable": "discrete trapped magnetic-flux states in multiply connected superconducting cylinders or rings",
+      "reported_value": "independent 1961 experiments found flux steps compatible with a basic unit near hc/(2e); the Doll-Nabauer abstract reports about 40% of hc/e",
+      "units": "magnetic flux",
+      "sources": [
+        {
+          "title": "Experimental Evidence for Quantized Flux in Superconducting Cylinders",
+          "authors": "B. S. Deaver Jr. and W. M. Fairbank",
+          "journal": "Physical Review Letters 7, 43-46 (1961)",
+          "doi": "10.1103/PhysRevLett.7.43",
+          "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.7.43",
+          "source_type": "primary experiment"
+        },
+        {
+          "title": "Experimental Proof of Magnetic Flux Quantization in a Superconducting Ring",
+          "authors": "R. Doll and M. Nabauer",
+          "journal": "Physical Review Letters 7, 51-52 (1961)",
+          "doi": "10.1103/PhysRevLett.7.51",
+          "url": "https://www.osti.gov/biblio/4843903",
+          "source_type": "independent primary experiment archived by OSTI"
+        }
+      ],
+      "retrieved_on": "2026-08-09",
+      "independence_group": "SC-FLUX-QUANTIZATION-1961",
+      "independence_subgroups": [
+        "DEAVER-FAIRBANK",
+        "DOLL-NABAUER"
+      ],
+      "dataset_or_table": "the two 1961 primary reports and their archived abstracts; the present intake does not reconstruct raw magnetometer traces",
+      "uncertainty_model": "historical apparatus precision and geometry/calibration limitations as reported; no modern combined confidence interval is manufactured",
+      "independence_rationale": "two independent groups and apparatuses reported the same half-electron-pair flux scale; they share superconducting theory and period-calibration assumptions",
+      "minimum_constraint": "Controlled condensed-matter systems can realize a coherent compact phase or equivalent winding structure with reproducible discrete flux sectors. Any candidate invoking an analogous mechanism must define its compact variable, charge normalization, and finite-energy winding sectors rather than infer them from a real scalar modulation.",
+      "systematic_and_model_boundary": "These are historical superconducting-material measurements with their original precision and apparatus assumptions. The compact-phase interpretation uses superconducting theory and does not transfer automatically to empty space.",
+      "does_not_license": [
+        "vacuum superconductivity",
+        "a universal value of microscopic charge",
+        "TECT topology",
+        "identification of a mathematical defect with a particle"
+      ]
+    },
+    {
+      "id": "PA-EV-T053-004",
+      "role": "discovery",
+      "admission_status": "PARTIAL_INTAKE_ONLY",
+      "family": "controlled critical scaling",
+      "observable": "specific-heat singularity of liquid helium-4 near the lambda transition in microgravity",
+      "reported_value": "alpha = -0.0127 +/- 0.0003; measurements reached within 2 nK of the transition with no observed rounding at that resolution",
+      "units": "dimensionless exponent and kelvin",
+      "source": {
+        "title": "Specific Heat of Liquid Helium in Zero Gravity very near the Lambda Point",
+        "authors": "J. A. Lipa, J. A. Nissen, D. A. Stricker, D. R. Swanson, and T. C. P. Chui",
+        "journal": "Physical Review B 68, 174518 (2003)",
+        "doi": "10.1103/PhysRevB.68.174518",
+        "url": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.68.174518/fulltext",
+        "source_type": "primary microgravity experiment",
+        "retrieved_on": "2026-08-09"
+      },
+      "independence_group": "HE4-LAMBDA-LIPA-2003",
+      "dataset_or_table": "published final exponent fit, amplitude-ratio fit, and near-transition residual/rounding analysis",
+      "uncertainty_model": "reported fit uncertainty with thermometry, background, correction-to-scaling, and fit-window systematics retained as one experiment rather than multiplied",
+      "independence_rationale": "microgravity helium experiment independent of propagation and superconducting apparatus; alpha and its amplitude ratio share the same data and are one evidence group",
+      "minimum_constraint": "A candidate that claims a particular universality mechanism must derive its static exponents, scaling window, and finite-size or rounding corrections before comparison; a generic statement that a phase transition occurs is insufficient.",
+      "systematic_and_model_boundary": "This is a helium-4 material transition and alpha is a specific-heat exponent. Converting it to a correlation-length exponent requires additional scaling assumptions; neither its universality class nor numerical value is evidence for a vacuum transition without a derived observable map.",
+      "does_not_license": [
+        "a TECT critical exponent by analogy",
+        "a cosmological cooling law",
+        "a vacuum phase transition",
+        "z=1 or a Lorentzian cone"
+      ]
+    },
+    {
+      "id": "PA-EV-T053-005",
+      "role": "discovery",
+      "admission_status": "PARTIAL_INTAKE_ONLY",
+      "family": "photon energy-dependent propagation",
+      "observable": "energy-dependent arrival-time dispersion in GRB 090510 over the reported 35 MeV to 31 GeV range",
+      "reported_value": "|Delta t/Delta E| < 30 ms/GeV at 99% confidence; for the declared linear-dispersion model M_QG,1/M_Planck > 1.22",
+      "units": "milliseconds per GeV and dimensionless scale ratio",
+      "source": {
+        "title": "A limit on the variation of the speed of light arising from quantum gravity effects",
+        "authors": "Fermi LAT and Fermi GBM Collaborations",
+        "journal": "Nature 462, 331-334 (2009)",
+        "doi": "10.1038/nature08574",
+        "url": "https://www.nature.com/articles/nature08574",
+        "source_type": "primary astrophysical observation and analysis",
+        "retrieved_on": "2026-08-09"
+      },
+      "independence_group": "FERMI-GRB090510-2009",
+      "dataset_or_table": "published high-energy photon chronology and 99% confidence dispersion analyses",
+      "uncertainty_model": "reported photon-energy and timing uncertainties together with alternative intrinsic-source-lag controls; the two analyses of the same burst are not treated as independent replications",
+      "independence_rationale": "a distinct event from GW170817 but with Fermi instrumentation in both gamma-ray evidence groups, so instrument correlation is explicitly retained",
+      "minimum_constraint": "A candidate predicting a linear photon dispersion over the tested energy and background range must suppress its coefficient at least to the reported conditional scale or explain why the observable map differs.",
+      "systematic_and_model_boundary": "The bound assumes a cosmological propagation model and controls rather than eliminates intrinsic source lag. It does not constrain energy-independent shifts or every quadratic and higher-order dispersion law.",
+      "does_not_license": [
+        "exact Lorentz invariance",
+        "a bound on all particle sectors",
+        "a derived microscopic causal cone",
+        "using the Planck scale as a predicted TECT output"
+      ]
+    },
+    {
+      "id": "PA-HO-T053-001",
+      "role": "declared_non_fitting_validation",
+      "admission_status": "VISIBLE NON-BLIND VALIDATION TARGET",
+      "family": "independent critical response",
+      "observable": "superfluid-density critical exponent of helium-4 near the lambda transition",
+      "reported_value": "zeta = 0.672 +/- 0.001 in the reported reanalysis",
+      "units": "dimensionless exponent",
+      "source": {
+        "title": "The exponent of the superfluid density of He-4 near T_lambda",
+        "authors": "G. Ahlers",
+        "journal": "Physica B+C 107, 347 (1981)",
+        "doi": "10.1016/0378-4363(81)90479-4",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/0378436381904794",
+        "source_type": "experimental-data reanalysis",
+        "retrieved_on": "2026-08-09"
+      },
+      "independence_group": "HE4-SUPERFLUID-DENSITY-1981",
+      "dataset_or_table": "published reanalysis result; original measurement lineage must still be reconstructed before charter-complete evidence freeze",
+      "uncertainty_model": "reported reanalysis uncertainty; relation to the correlation-length exponent is conditional on an additional Josephson-scaling hypothesis",
+      "independence_rationale": "different helium response and earlier experimental lineage than the Lipa specific-heat flight, but shared universality assumptions prevent treating the two exponents as model-free independent vacuum evidence",
+      "validation_rule": "The value is public and therefore not blind or sealed. Do not use it to choose field number, symmetry, kinetic coefficients, or candidate parameters; preregister the mapped stiffness exponent and corrections-to-scaling convention before scoring it.",
+      "minimum_constraint": "A candidate claiming the same controlled universality mechanism must predict the relevant stiffness or superfluid-density exponent under a declared observable map, not infer it from a fitted alpha.",
+      "systematic_and_model_boundary": "The result is a reanalysis of helium measurements and is not independent evidence for a vacuum order parameter. Relation to nu uses an additional Josephson-scaling hypothesis.",
+      "does_not_license": [
+        "using zeta as an inserted TECT parameter",
+        "identifying zeta with nu without a scaling proof",
+        "claiming a shared universality class before the preregistered non-fitting prediction is scored"
+      ]
+    }
+  ],
+  "calibration_authorities": [
+    {
+      "id": "PA-CAL-T053-001",
+      "role": "CALIBRATION_AUTHORITY_NOT_EXPERIMENT",
+      "quantity": "superconducting flux quantum Phi_0=h/(2e)",
+      "reported_value": "2.067833848... x 10^-15 Wb, exact in the present SI because h and e are defining constants",
+      "source": {
+        "title": "SI Brochure, Appendix 2: mise en pratique for the ampere and other electric units",
+        "publisher": "BIPM",
+        "doi": "10.59161/AUEZ1291",
+        "url": "https://www.bipm.org/documents/20126/41489676/SI-App2-ampere.pdf"
+      },
+      "boundary": "Definitional exactness calibrates units; it is not another experiment and does not derive h or e from a candidate."
+    }
+  ],
+  "registered_missing_evidence": [
+    {
+      "id": "PA-EV-GAP-001",
+      "missing": "a frozen primary-source constraint on the complete physical zero-mode and polarization count used by the common boundary benchmark"
+    },
+    {
+      "id": "PA-EV-GAP-002",
+      "missing": "a candidate-neutral empirical constraint on compact vacuum winding or vacuum topological sectors; superconducting flux is a mechanism example only"
+    },
+    {
+      "id": "PA-EV-GAP-003",
+      "missing": "a direct observable map from any current microscopic candidate to the registered laboratory quantities"
+    },
+    {
+      "id": "PA-EV-GAP-004",
+      "missing": "a frozen cosmological transition or cooling dataset with uncertainty and independence groups"
+    },
+    {
+      "id": "PA-EV-GAP-005",
+      "missing": "a complete M0/M1/alternative common-reference and prediction-cost ledger"
+    }
+  ],
+  "status": "PARTIAL BOUNDARY INTAKE ISSUED; CHARTER-COMPLETE FREEZE AND FULL PRE-A EVIDENCE REGISTER OPEN",
+  "no_overclaim": "This register records a small candidate-neutral discovery intake and one visible non-fitting validation target. It does not satisfy the charter's complete evidence-freeze condition, show that the listed phenomena share one microscopic cause, show that a vacuum is a superconductor or helium-like medium, show that any candidate passes T-053, select an action, exit Pre-A, or change Sector-A tier or scope."
+}

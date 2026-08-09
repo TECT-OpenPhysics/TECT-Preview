@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION | an incomplete admission conjunction cannot select a Pre-A ca |  |
 | NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION | coefficient-one direct harmonic coercivity does not tensoriz |  |
 | NG-2026-08-03-PA-M5-BARE-ISOTROPIC-SHELL-CAUSAL-CONE | the bare screened shell is not a joint Lorentz-gauge-critica |  |
 | NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM | the pinned unconstrained M1 functional has no nonzero equili |  |
