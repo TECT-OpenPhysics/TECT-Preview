@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP](#ng-2026-08-09-pre-a-st8-q3lock-uniform-full-finite-volume-spectral-gap) | retain a positive volume-uniform full finite-volume spectral gap in the fixed-spacing Q3LOCK ground-order regime | inverse Falk--Bruch and the infrared bound give `liminf <S_L^2>/V^2>=rho_*>0`, while the odd trial `S_L Omega_L` gives `Delta_L^full<=hbar^2/(2 chi V m_L^2)`; the full gap closes at least as `O(1/V)`. This does not refute a positive broken-sector GNS gap or physical mass gap |
+| [NG-2026-08-09-PRE-A-ST8-Q3LOCK-G-LAMBDA-ONLY-4D-ONE-LOOP-CLOSURE](#ng-2026-08-09-pre-a-st8-q3lock-g-lambda-only-4d-one-loop-closure) | remove the ST8/Q3LOCK regulator in 3+1 dimensions while restricting quartic counterterms to the original `g,lambda` two-invariant span | the standard one-loop polynomial `tr[(W4''(q))^2]` has coefficient `4lambda^2` on `q_e^2 q_f^2` for Q3 vertices at Hamming distance two, while the original span has no such monomial. Enlarge the symmetry-allowed quartic tensor basis; this is not a nonperturbative no-continuum theorem |
 | [NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION](#ng-2026-08-09-pre-a-round1-unfrozen-tournament-selection) | select a Pre-A winner, shortlist, or exit while the evidence intake, candidate admission manifests, common reference/observable discriminator, non-fitting validation prediction, and robustness envelope are incomplete | the charter's selection condition is a conjunction and several necessary terms are explicitly false.  Preserve the scoped M1 and bare-M5 eliminations and the M2/CP1 partial mathematics, but report current non-selection and complete the common admission contract before scoring survivors |
 | [NG-2026-08-09-PRE-A-CP1-CL8-RAW-PERIODIC-EO-RECTANGLE-QUOTIENT](#ng-2026-08-09-pre-a-cp1-cl8-raw-periodic-eo-rectangle-quotient) | identify the seam-fixed straight-routed block-rectangle quotient directly with one raw fixed-site even/odd ring period built from the same `M_Delta` macro | the quotient occurrence graph is `K_(n,m)` with `mn` gates and endpoint degrees `m,n`, whereas one raw ring period is `C_M` with `M=m+n` gates and degree two.  Equality forces `m=n=2`; even there an exact rational tangent separates the two maps.  Retain the exact all-`k` swap-dressed routed seam conjugacy; it does not restore raw direct equality |
 | [NG-2026-08-09-PRE-A-CP1-CL8-UNIVERSAL-PERIODIC-QUADRATIC-SHADOW-GIBBS](#ng-2026-08-09-pre-a-cp1-cl8-universal-periodic-quadratic-shadow-gibbs) | infer from symplecticity, global mixed invertibility, and coefficient occurrence that the full admitted controller-free macro domain has one positive quadratic invariant and its zero-centred nondegenerate Gaussian common to the raw periodic and routed/open constructions | the admitted C4 `rho=1/2` tangent has characteristic polynomial `(z-1)^2(z^2+z+1)(z^2+3z+1)^2` and hence reciprocal real hyperbolic eigenvalues.  No positive-definite invariant metric or tangent-circuit Gaussian exists; the nonlinear fixture has no zero-centred invariant Gaussian.  Exact C4 conjugacy transfers these scoped obstructions to the routed block.  Preserve singular fixed-point probabilities, the conditional single-bond quadratic shadow theorem, and arbitrary off-centre nonlinear Gaussians as open |
@@ -295,6 +297,90 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-09-pre-a-st8-q3lock-uniform-full-finite-volume-spectral-gap"></a>
+### NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP -- fixed-lattice ground order forces the full finite-volume gap to close
+
+**Failure mode.**  Retain a positive lower bound on the full finite-volume
+spectral gap, uniform along the dyadic periodic thermodynamic sequence, in the
+fixed-spacing positive-`lambda` Q3LOCK ground-order regime.
+
+**Evidence.**  EXP-000789 applies the inverse Falk--Bruch inequality to the
+EXP-000782 nonzero-momentum Duhamel infrared bound.  If
+
+\[
+ A_0={8c\chi\theta_Q^2\over\hbar^2}>J_3^2,
+ \qquad \theta_Q={-r\over3(g+\lambda)},
+\]
+
+then, with `S_L=sum_y Q_y`, `V=L^3`, and the unique even ground vector
+`Omega_L`,
+
+\[
+ \liminf_{L\to\infty}{\langle\Omega_L,S_L^2\Omega_L\rangle\over V^2}
+ \ge\rho_*:=\theta_Q-{\hbar J_3\over2\sqrt{2\chi c}}>0.
+\]
+
+The normalized odd trial `S_L Omega_L/||S_L Omega_L||` and the exact identity
+`[S_L,[H_L,S_L]]=V hbar^2/chi` give
+
+\[
+ \Delta_L^{\rm full}\le\Delta_L^{\rm odd}
+ \le {\hbar^2\over2\chi V m_L^2},
+ \qquad
+ \limsup_L V\Delta_L^{\rm full}\le{\hbar^2\over2\chi\rho_*}.
+\]
+
+Primary `85/85` and independent `80/80` executable assertions recompute the
+Falk--Bruch normalization, `J3`, the threshold and the parity quotient.
+
+**Consequence.**  The full symmetric finite-volume gap is not uniformly
+positive.  This is only an upper bound and is compatible with exponentially
+small tunnelling.  It does not refute a positive excitation gap within either
+pure broken infinite-volume GNS sector, a continuum mass gap, or a gap outside
+the stated fixed-spacing/order/limit scope.
+
+<a id="ng-2026-08-09-pre-a-st8-q3lock-g-lambda-only-4d-one-loop-closure"></a>
+### NG-2026-08-09-PRE-A-ST8-Q3LOCK-G-LAMBDA-ONLY-4D-ONE-LOOP-CLOSURE -- the original two-invariant quartic basis is not one-loop closed
+
+**Failure mode.**  Construct a local `3+1`-dimensional perturbative continuum
+limit of the positive-`lambda` ST8/Q3LOCK family while restricting quartic
+counterterms to the original scalar `g` and Q3-edge `lambda` invariants.
+
+**Evidence.**  For
+
+\[
+ W_4={g\over4}\sum_e q_e^4
+ +{\lambda\over4}\sum_{e\sim f}(q_e-q_f)^2(q_e^2+q_f^2),
+\]
+
+the standard one-loop local quartic polynomial is a nonzero common factor
+times `T(q)=tr[(W4''(q))^2]`.  Two Q3 vertices `e,f` at Hamming distance two
+have exactly two common neighbours.  The two associated diagonal-Hessian
+squares give the exact coefficient
+
+\[
+ [q_e^2q_f^2]T(q)=4\lambda^2.
+\]
+
+The original `g,lambda` span has no distance-two monomial.  Exact symbolic and
+non-importing polynomial-engine audits agree, with distance-one and distance-
+three controls.  The same package also records
+
+\[
+ :W_4:_C=W_4-{3C\over2}\big[(g+\lambda)|q|^2
+ +\lambda q^TL_{Q3}q\big]+6C^2(g+4\lambda),
+\]
+
+so independent `I` and `L_Q3` quadratic directions are already required.
+
+**Consequence.**  The `g,lambda`-only local one-loop route is closed.  A
+minimum enlargement includes the distance-two invariant, while the safe
+target is the full `Aut(Q3) x Z2`-allowed quartic tensor basis plus required
+quadratic, kinetic and scalar counterterms.  This does not refute an enlarged
+renormalized trajectory, `lambda(a)->0`, nonperturbative cancellation, another
+regulator, a constrained/gauge construction, a nonlocal UV parent, or another
+continuum theory.
 
 <a id="ng-2026-08-09-pre-a-round1-unfrozen-tournament-selection"></a>
 ### NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION -- an incomplete admission conjunction cannot select a Pre-A candidate

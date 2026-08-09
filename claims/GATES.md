@@ -189,14 +189,37 @@ Do not identify Euclidean DLR, OS-reconstructed thermal systems, KMS states for
 a pre-existing dynamics, ground states and continuum states without proving
 the relevant reconstruction or limit maps.
 
-**Status:** OPEN (2026-08-04).  EXP-000782 closes only the exact positive-
-`lambda` fixed-lattice Euclidean-DLR phase and collective-source cusp in its
-explicit sufficient regime.  It supplies neither an infinite-volume real-time
-dynamics nor a `C*`-algebraic KMS identification.  Its lower bound is
-temperature dependent and does not yet justify interchange of thermodynamic
-and zero-temperature limits, ground-state degeneracy, a uniform spectral gap,
-or regulator removal.  Physical empty space and below-empty-space comparison,
-effective reduction, C0/N1-N5, C6, CP1, Sector A and Pre-A remain open.
+**Status:** PARTIALLY RESOLVED (2026-08-09).  EXP-000789 first audits the
+EXP-000782 finite-temperature phase bound: `beta delta_beta` tends to
+`(A0-I3)/(2c)`, so that particular magnetization certificate vanishes as
+`beta^(-1/2)` and cannot by itself select distinct ground phases.  A different
+inverse Falk--Bruch route closes a genuine fixed-lattice zero-temperature
+subgate.  On the declared dyadic periodic sequence, with `beta -> infinity`
+at fixed `L` before `L -> infinity`, the symmetric finite-volume grounds obey
+`liminf <S_L^2>/V^2 >= rho_*>0` whenever `A0>J3^2`; the stronger EXP-000782
+condition `A0>I3` implies this by `J3^2<=I3`.  Even/odd superpositions give
+translation-invariant symmetry-broken approximate-ground doublets with total
+energy excess `O(1/V)`.  The odd Rayleigh quotient proves
+`Delta_L^full<=hbar^2/(2 chi V m_L^2)`, so a positive volume-uniform **full**
+finite-volume gap is refuted.  A broken-sector GNS gap remains open.
+
+The same package exposes the first exact continuum-basis obstruction.  Common-
+diagonal Wick contraction requires independent scalar, `I` and `L_Q3`
+quadratic directions, while the standard local four-dimensional one-loop
+polynomial `tr[(W4'')^2]` contains `4 lambda^2 q_e^2 q_f^2` at Q3 Hamming
+distance two, outside the original `g,lambda` quartic span.  Thus that
+restricted counterterm basis is not closed; an enlarged symmetry-allowed
+quartic tensor remains a viable but unproved route.
+
+Still open are phasewise temporal OS/KMS reconstruction; one common state- and
+`beta`-independent infinite-volume real-time dynamics; identification of both
+DLR phases as KMS states of that same dynamics; distinct algebraic ground-state
+selection; extremality, purity and clustering; each ground GNS sector gap; an
+`a`-dependent enlarged-counterterm regular continuum; and controlled limit
+ordering.  Physical empty space and the below-empty-space sign remain a
+separate mandatory same-Hamiltonian/reference comparison.  Effective
+reduction, C0/N1-N5, C6, light, mass, time, gravity, event-horizon composition,
+CP1, Sector A and Pre-A remain open.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 

@@ -1,0 +1,136 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-ground-equal-time-order-gap-continuum-counterterm-route-split-manifest/0.1",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-GROUND-EQUAL-TIME-ORDER-GAP-CONTINUUM-COUNTERTERM-ROUTE-SPLIT-v0",
+  "parent_ids": [
+    "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-FKG-INFRARED-CUSP-PHASE-ROUTE-SPLIT-v0"
+  ],
+  "result_id": "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-GROUND-EQUAL-TIME-LRO-APPROXIMATE-DOUBLETS-FULL-GAP-COLLAPSE-AND-CONTINUUM-BASIS-OBSTRUCTION",
+  "negative_ids": [
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP",
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-G-LAMBDA-ONLY-4D-ONE-LOOP-CLOSURE"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-04-PRE-A-CP1-CL8-ABSTRACT-COMPACTNESS-ONLY-REGULAR-CONTINUUM-STATE",
+    "NG-2026-08-04-PRE-A-CP1-CL8-SCALAR-MASS-ONLY-Q3-WICK-RENORMALIZATION",
+    "NG-2026-08-04-PRE-A-CP1-CL8-EUCLIDEAN-HEAT-SUPPORT-PHYSICAL-LIGHT-CONE",
+    "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR"
+  ],
+  "exploration_id": "EXP-000789",
+  "candidate_family": "PRE-A-ST8-Q3LOCK-FIXED-LATTICE-GROUND-ORDER-AND-CONTINUUM-ROUTE",
+  "package_version": "0.1.0",
+  "issued": "2026-08-09",
+  "authority": "T0 exact-model theorem and perturbative route obstruction: inverse Falk--Bruch plus the EXP-000782 infrared bound proves iterated zero-temperature equal-time long-range order for the symmetric finite-volume ground sequence; variational parity vectors force the full finite-volume gap to close at least as O(1/V); exact Wick contraction and the standard four-dimensional one-loop Hessian-square test show that the original g,lambda quartic basis is not counterterm closed for lambda>0. Claim-nonbearing and not a common-dynamics KMS, distinct infinite-volume ground-state, GNS-sector gap, continuum, physical-vacuum, C6, Sector-A or Pre-A theorem",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "external_authority": {
+    "falk_bruch": "A. Kargol, Y. Kondratiev and Y. Kozitsky, arXiv:0710.2303, Proposition 3.18, algebraically inverted; the exact coth form is also the Dyson--Lieb--Simon/Falk--Bruch equal-time upper conversion",
+    "infrared_input": "EXP-000782 exact Q3LOCK Duhamel infrared bound and collective local-moment lower bound",
+    "finite_volume_ground": "Positivity improving Feynman--Kac semigroup and compact resolvent for a finite-dimensional confining real Schrodinger operator give a unique strictly positive even ground vector",
+    "one_loop_filter": "For a local multi-scalar quartic interaction in four Euclidean dimensions, the background-field logarithmic quartic divergence is a nonzero universal factor times tr[(W''(q))^2]; the repository-specific Q3 coefficient audit is exact",
+    "scope_warning": "The one-loop calculation is a counterterm-basis obstruction for the declared perturbative route, not a nonperturbative no-continuum theorem. No located theorem currently identifies the Euclidean DLR phases as KMS states of one pre-existing beta-independent infinite-volume dynamics for this exact unbounded model."
+  },
+  "setup": {
+    "parameters": "hbar>0, chi>0, c>0, g>0, lambda>0, r<0 and A0=8c chi theta_Q^2/hbar^2>J3^2, theta_Q=-r/[3(g+lambda)]; the stronger EXP-000782 finite-temperature phase condition is A0>I3",
+    "coarse_volume": "Lambda_L=(Z/LZ)^3, V=L^3, along reflection-compatible dyadic periodic cubes",
+    "collective_coordinate": "Q_y=u dot q_y, u=(1,...,1)/sqrt(8), S_L=sum_y Q_y",
+    "fourier": "Qhat_p=V^(-1/2) sum_y exp(-ip dot y)Q_y, E(p)=sum_i(1-cos p_i)",
+    "order_of_limits": "beta tends to infinity at each fixed finite L, then L tends to infinity; no thermodynamic-first state interchange is claimed"
+  },
+  "finite_temperature_route_audit": {
+    "old_lower_bound": "delta_beta=theta_Q tanh(x_beta)/x_beta-I3/(2 beta c), x_beta tanh(x_beta)=beta hbar^2/(4 chi theta_Q)",
+    "exact_asymptotic": "When A0>I3, lim_(beta->infinity) beta delta_beta=(A0-I3)/(2c)>0",
+    "consequence": "The EXP-000782 magnetization lower bound sqrt(delta_beta) is O(beta^(-1/2)); by itself it cannot keep the two finite-temperature DLR phases distinct at zero temperature.",
+    "repair_boundary": "The successful inverse Falk--Bruch route below is a different equal-time argument for the symmetric finite-volume ground sequence, not an interchange of the old phase-state bound."
+  },
+  "ground_equal_time_order": {
+    "objects": "D_beta,L(p)=(Qhat_p,Qhat_-p)_D, C_beta,L(p)=<Qhat_p Qhat_-p>, K_beta,L(p)=<[Qhat_p,[beta H_L,Qhat_-p]]>=beta hbar^2/chi",
+    "inverse_Falk_Bruch": "C_beta,L(p)<=0.5 sqrt(D_beta,L(p)K_beta,L(p)) coth(0.5 sqrt(K_beta,L(p)/D_beta,L(p)))",
+    "infrared_substitution": "For p!=0, D_beta,L(p)<=[2 beta c E(p)]^(-1), hence C_beta,L(p)<=hbar/[2 sqrt(2 chi c E(p))] coth[beta hbar sqrt(cE(p)/(2chi))].",
+    "ground_cap": "At fixed L and beta->infinity, C_0,L(p)<=hbar/[2 sqrt(2 chi c E(p))] for p!=0.",
+    "half_Watson": "J3=(2pi)^(-3) integral d^3p/sqrt(E(p))=0.643953733381468096... and J3^2<=I3 by normalized Cauchy--Schwarz.",
+    "order_density": "m_L^2=<S_L^2>_0,L/V^2; Fourier inversion and <Q_0^2>_0,L>=theta_Q give liminf_(L->infinity)m_L^2>=rho_*=theta_Q-hbar J3/[2sqrt(2chi c)]=hbar[sqrt(A0)-J3]/sqrt(8chi c)>0. The intrinsic condition is A0>J3^2; normalized Cauchy J3^2<=I3 shows that EXP-000782's A0>I3 regime is contained in it.",
+    "unbounded_observable_passage": "Finite-L compact resolvent and quartic confinement give beta-to-infinity convergence and uniform integrability of the required quadratic observables; translation-invariant ground-energy-density bounds give the local moment control used for subsequential bounded-observable states.",
+    "boundary": "This is fixed-spacing, equal-time, symmetric-ground long-range order in the iterated beta-first limit. It is not yet two distinct ground states of a common infinite-volume dynamics."
+  },
+  "approximate_doublets_and_gap": {
+    "ground_parity": "The finite-volume ground vector Omega_L is unique, translation invariant and even.",
+    "odd_trial": "Phi_L=S_L Omega_L/||S_L Omega_L|| is normalized and odd.",
+    "double_commutator": "<Omega_L,[S_L,[H_L,S_L]]Omega_L>=V hbar^2/chi.",
+    "odd_gap_bound": "Delta_L^odd<=hbar^2/[2 chi V m_L^2]. Therefore Delta_L^full<=Delta_L^odd and limsup_L V Delta_L^full<=hbar^2/(2chi rho_*); no positive volume-uniform full gap exists.",
+    "broken_candidates": "Psi_L^plus/minus=(Omega_L plus/minus Phi_L)/sqrt(2) are translation invariant, have <Q_y>=plus/minus sqrt(m_L^2), and total-energy excess at most hbar^2/[4chi V m_L^2].",
+    "boundary": "Locally compact subsequences give distinct symmetry-broken zero-temperature approximate-ground candidates with vanishing total-energy excess. Calling them algebraic ground states requires a common infinite-volume dynamics and ground-state condition. The result does not rule out a positive excitation gap inside either broken GNS sector."
+  },
+  "continuum_counterterm_audit": {
+    "lattice_spacing_boundary": "EXP-000780--EXP-000782 and EXP-000789 use spacing one. No a-dependent Hamiltonian, field normalization, bare-parameter flow or a-uniform state estimate has yet been declared.",
+    "quartic": "W4=(g/4)sum_e q_e^4+(lambda/4)sum_(e~f)(q_e-q_f)^2(q_e^2+q_f^2), with 12 undirected Q3 edges and L_Q3=3I-A.",
+    "wick_identity": ":W4:_C=exp[-(C/2)Delta]W4=W4-(3C/2)[(g+lambda)|q|^2+lambda q^T L_Q3 q]+6C^2(g+4lambda).",
+    "quadratic_requirement": "Even the first contraction needs independent I and L_Q3 quadratic counterterm directions plus a scalar counterterm; reversing the raw/Wick convention changes signs, not the required directions.",
+    "one_loop_polynomial": "T(q)=tr[(W4''(q))^2]. For Q3 vertices e,f at Hamming distance two, [q_e^2 q_f^2]T=4lambda^2, while the original g,lambda quartic span contains no such monomial.",
+    "no_go": "For lambda>0 the original two-invariant quartic basis is not closed under the standard local 3+1D one-loop counterterm test. At least the distance-two invariant sum_(d(e,f)=2)q_e^2q_f^2, and safely the full Aut(Q3) times Z2 invariant quartic tensor basis, must be admitted and tested.",
+    "boundary": "This does not refute an enlarged renormalized trajectory, lambda(a)->0, nonperturbative cancellation, another regulator or another UV parent. The nonzero regulator-specific logarithmic coefficient and a-uniform constructive limit remain to be proved."
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-ST8-Q3LOCK-INFINITE-VOLUME-DYNAMICS-KMS-GROUND-AND-CONTINUUM-SPLIT",
+    "status": "PARTIALLY RESOLVED: BETA-FIRST FIXED-LATTICE SYMMETRIC-GROUND EQUAL-TIME LRO AND APPROXIMATE BROKEN DOUBLETS ARE PROVED; A POSITIVE UNIFORM FULL FINITE-VOLUME GAP IS REFUTED; THE ORIGINAL G,LAMBDA QUARTIC BASIS FAILS THE STANDARD 4D ONE-LOOP CLOSURE TEST. COMMON DYNAMICS/KMS, DISTINCT ALGEBRAIC GROUND STATES, BROKEN-SECTOR GNS GAP, ENLARGED RENORMALIZED CONTINUUM AND PHYSICAL REFERENCE REMAIN OPEN",
+    "closed_subgates": [
+      "PA-CP1-ST8-Q3LOCK-BETA-FIRST-SYMMETRIC-GROUND-EQUAL-TIME-LONG-RANGE-ORDER",
+      "PA-CP1-ST8-Q3LOCK-SYMMETRY-BROKEN-APPROXIMATE-GROUND-DOUBLETS",
+      "PA-CP1-ST8-Q3LOCK-NO-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP",
+      "PA-CP1-ST8-Q3LOCK-G-LAMBDA-ONLY-4D-ONE-LOOP-COUNTERTERM-CLOSURE-NOGO"
+    ],
+    "open_subgates": [
+      "PA-CP1-ST8-Q3LOCK-PHASEWISE-PERIODIC-OS-KMS-RECONSTRUCTION",
+      "PA-CP1-ST8-Q3LOCK-COMMON-ZERO-SOURCE-QUASI-LOCAL-ALGEBRA-AND-THERMODYNAMIC-LIMIT-DYNAMICS",
+      "PA-CP1-ST8-Q3LOCK-DLR-TO-COMMON-ALPHA-KMS-IDENTIFICATION",
+      "PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION",
+      "PA-CP1-ST8-Q3LOCK-GROUND-GNS-SECTOR-SPECTRAL-GAP",
+      "PA-CP1-ST8-Q3LOCK-A-TO-ZERO-ENLARGED-COUNTERTERM-REGULAR-CONTINUUM",
+      "PA-CP1-ST8-Q3LOCK-PHYSICAL-EMPTY-SPACE-REFERENCE",
+      "PA-PRE-A-C0-N1-N5-VALIDATION"
+    ],
+    "next_gate": "PA-CP1-ST8-Q3LOCK-INFINITE-VOLUME-DYNAMICS-KMS-GROUND-AND-CONTINUUM-SPLIT"
+  },
+  "physical_composition_boundary": {
+    "empty_space": "A physical-empty comparison must freeze one common Hamiltonian, regulator, counterterm scheme, boundary convention and predeclared normalized empty/no-condensate reference, then prove an additive-scalar-invariant energy/free-energy difference with controlled beta, L and a limits. Candidate ranking is insufficient.",
+    "light_mass_time_gravity_horizon": "Only after a regular Lorentzian continuum state and C6 causal/signature theorem may a protected massless mode and common speed be tested as light, GNS excitations/defects as mass, the unitary group and causal order as time, C4/C5 as gravity, and global Lorentzian causal geometry as an event horizon. None is derived here."
+  },
+  "scope": {
+    "exact_registered_positive_lambda_fixed_lattice_family": true,
+    "beta_first_symmetric_ground_equal_time_LRO": true,
+    "positive_explicit_ground_order_lower_bound": true,
+    "symmetry_broken_approximate_ground_doublets": true,
+    "vanishing_total_energy_excess_doublets": true,
+    "uniform_positive_full_finite_volume_gap_refuted": true,
+    "standard_4D_one_loop_g_lambda_basis_closure_refuted": true,
+    "independent_I_and_LQ3_quadratic_counterterms_required": true,
+    "finite_temperature_tangent_phases_survive_beta_infinity": false,
+    "distinct_infinite_volume_algebraic_ground_states": false,
+    "common_infinite_volume_real_time_dynamics": false,
+    "algebraic_KMS_for_preexisting_common_dynamics": false,
+    "ground_GNS_sector_gap": false,
+    "mass_gap": false,
+    "enlarged_counterterm_continuum": false,
+    "continuum_regulator_removal": false,
+    "physical_empty_space_reference": false,
+    "below_empty_space": false,
+    "physical_light_speed_derived": false,
+    "physical_mass_derived": false,
+    "physical_time_derived": false,
+    "gravity_derived": false,
+    "event_horizon_derived": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC exact-model inverse Falk--Bruch/Fourier/variational theorem plus exact symbolic Wick and Q3 one-loop counterterm-basis audit",
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_ground_equal_time_order_gap_continuum_counterterm_route_split.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_ground_equal_time_order_gap_continuum_counterterm_route_split_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_ground_equal_time_order_gap_continuum_counterterm_route_split_verify.py",
+    "fixtures": "Falk--Bruch harmonic equality; coth monotonic substitution; I3 and half-Watson J3 Bessel and finite-torus evaluations; Cauchy threshold; old delta asymptotic; parity-gap normalization; exact Q3 Wick Laplacians; distance-one/two/three one-loop monomial controls; hostile factor and counterterm-span mutations; provenance, scope and unchanged-C6 audits"
+  },
+  "prior_art_boundary": "Falk--Bruch/Dyson--Lieb--Simon conversion, reflection-positive infrared bounds, finite-volume positivity and the multi-scalar background-field one-loop test are established methods. The repository-specific result is their exact normalization and composition for the nonradial positive-lambda ST8/Q3LOCK family, including its Q3 counterterm-basis obstruction. No general-method novelty, world-first or historical-priority claim is made.",
+  "no_overclaim": "This package proves fixed-spacing equal-time long-range order only in the iterated beta-to-infinity then volume-to-infinity symmetric-ground sequence, constructs finite-volume approximate broken doublets, refutes only a volume-uniform full finite-volume gap, and refutes only the original g,lambda quartic basis under the standard local 4D one-loop closure test. It does not prove that the finite-temperature DLR phases converge to distinct algebraic ground states, one common infinite-volume real-time dynamics, KMS states for that common dynamics, a broken-sector GNS or physical mass gap, an enlarged nonperturbative continuum, physical empty space or a below-empty-space sign, light, mass, time, gravity, an event horizon, C6, CP1, Sector A or Pre-A completion."
+}
