@@ -6,7 +6,7 @@
 
 Generated: 2026-08-09
 
-**3645 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
+**3633 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -3431,8 +3431,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `verification/README.md` | — | — | — | — | ACTIVE | `da6f8dc0c475` |
 | `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `1b7417b25f13` |
-| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `1b7417b25f13` |
-| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `1b7417b25f13` |
 | `verification/requirements.txt` | — | — | — | — | ACTIVE | `101e9e176f7a` |
 | `verification/scripts/audit_r125_historical_live_surface_compatibility.py` | — | 2026-08-03 | 2026-08-03 | v1.0.0 | ACTIVE | `122a6ad92ab6` |
 | `verification/scripts/build_catalog.py` | — | — | — | — | ACTIVE | `c35c7327b5ed` |
@@ -3516,8 +3514,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/GATES.md` | — | — | — | — | ACTIVE | `60b4bdebf11d` |
 | `claims/INDEX.md` | — | — | — | — | ACTIVE | `5e653c1fbe4b` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `3eaf4bac7fd1` |
-| `negative-results/registry.md` | — | — | — | — | ACTIVE | `3eaf4bac7fd1` |
-| `negative-results/registry.md` | — | — | — | — | ACTIVE | `3eaf4bac7fd1` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `4ef9da706f53` |
 | `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `cff4e6dca4b9` |
@@ -3552,8 +3548,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.gitignore` | — | — | — | — | ACTIVE | `c715b48698f0` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `7f2740428029` |
 | `CHANGELOG.md` | — | — | — | — | ACTIVE | `705883e1f3b4` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `705883e1f3b4` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `705883e1f3b4` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `238312cc97b3` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -3573,10 +3567,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
 | `changelog/log.jsonl` | — | — | — | — | ACTIVE | `03fd51571d8b` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `03fd51571d8b` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `03fd51571d8b` |
-| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `97b3e044fc77` |
-| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `97b3e044fc77` |
 | `explorations/log.jsonl` | — | — | — | — | ACTIVE | `97b3e044fc77` |
 | `output/.gitattributes` | — | — | — | — | ACTIVE | `fdfa7b607b52` |
 | `output/pdf/pre-a-cp1-cl8-global-goursat-continuation-certificate-260803-260804-v0.1.1.pdf` | — | — | — | — | ACTIVE | `d581320c0099` |
@@ -3630,9 +3620,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/pre-a-c0a-reflection-positive-transfer-manifest.json` | — | — | — | — | ACTIVE | `421a52eec5f8` |
 | `strategy/pre-a-c0b-equivariant-causal-selection-nogo-certificate-260803.md` | — | — | — | — | ACTIVE | `e35349887e35` |
 | `strategy/pre-a-c0b-equivariant-causal-selection-nogo-manifest.json` | — | — | — | — | ACTIVE | `6ab31b42b10a` |
-| `strategy/pre-a-cp1-cl8-centered-nodal-q3-nelson-boue-dupuis-seam-limit-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `a34c0d74c426` |
+| `strategy/pre-a-cp1-cl8-centered-nodal-q3-nelson-boue-dupuis-seam-limit-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `bf706dc87d7f` |
 | `strategy/pre-a-cp1-cl8-centered-nodal-q3-nelson-boue-dupuis-seam-limit-route-split-manifest.json` | — | — | — | — | ACTIVE | `780a67209186` |
-| `strategy/pre-a-cp1-cl8-centered-q3-wick-weyl-limit-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `6546f0897dd7` |
+| `strategy/pre-a-cp1-cl8-centered-q3-wick-weyl-limit-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `e74a336f8ddf` |
 | `strategy/pre-a-cp1-cl8-centered-q3-wick-weyl-limit-route-split-manifest.json` | — | — | — | — | ACTIVE | `955c2bab8d0e` |
 | `strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-certificate-260803.md` | — | — | — | — | ACTIVE | `6eac07d5463e` |
 | `strategy/pre-a-cp1-cl8-classical-boundary-lattice-oa2-manifest.json` | — | — | — | — | ACTIVE | `409e2218b97a` |
@@ -3648,27 +3638,27 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/pre-a-cp1-cl8-goursat-manifest.json` | — | — | — | — | ACTIVE | `571ac5cd92ff` |
 | `strategy/pre-a-cp1-cl8-history-cut-quantum-algebra-state-compatibility-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `51c9fee4f8df` |
 | `strategy/pre-a-cp1-cl8-history-cut-quantum-algebra-state-compatibility-route-split-manifest.json` | — | — | — | — | ACTIVE | `24a0bfb5d511` |
-| `strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `5a4afe2ffa9c` |
+| `strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `938b6d4a554e` |
 | `strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-manifest.json` | — | — | — | — | ACTIVE | `876088312c9e` |
 | `strategy/pre-a-cp1-cl8-interacting-two-arm-work-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `e8c73fe5b447` |
 | `strategy/pre-a-cp1-cl8-interacting-two-arm-work-route-split-manifest.json` | — | — | — | — | ACTIVE | `e597abc48b79` |
 | `strategy/pre-a-cp1-cl8-invariance-selection-fork-certificate-260803.md` | — | — | — | — | ACTIVE | `011d706ed1cc` |
 | `strategy/pre-a-cp1-cl8-invariance-selection-fork-manifest.json` | — | — | — | — | ACTIVE | `070131b3ede0` |
-| `strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `f73cb905657b` |
+| `strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `122d70970b6e` |
 | `strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-manifest.json` | — | — | — | — | ACTIVE | `1c005ad54d0f` |
 | `strategy/pre-a-cp1-cl8-ordered-q3-gaussian-tangent-regulator-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `b333ca663fc0` |
 | `strategy/pre-a-cp1-cl8-ordered-q3-gaussian-tangent-regulator-route-split-manifest.json` | — | — | — | — | ACTIVE | `91be0292abe5` |
 | `strategy/pre-a-cp1-cl8-passive-two-arm-characteristic-control-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `8c0ba267eaa6` |
 | `strategy/pre-a-cp1-cl8-passive-two-arm-characteristic-control-route-split-manifest.json` | — | — | — | — | ACTIVE | `c9a765797de9` |
-| `strategy/pre-a-cp1-cl8-q3-beta-independent-hamiltonian-ground-reference-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `4ba77918121a` |
+| `strategy/pre-a-cp1-cl8-q3-beta-independent-hamiltonian-ground-reference-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `b2238b776d95` |
 | `strategy/pre-a-cp1-cl8-q3-beta-independent-hamiltonian-ground-reference-route-split-manifest.json` | — | — | — | — | ACTIVE | `f03f040bd834` |
-| `strategy/pre-a-cp1-cl8-q3-finite-component-grs-boundary-pressure-periodic-ground-density-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `5eca4a306fb2` |
+| `strategy/pre-a-cp1-cl8-q3-finite-component-grs-boundary-pressure-periodic-ground-density-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `3e370a799853` |
 | `strategy/pre-a-cp1-cl8-q3-finite-component-grs-boundary-pressure-periodic-ground-density-route-split-manifest.json` | — | — | — | — | ACTIVE | `d3b52e23c23e` |
-| `strategy/pre-a-cp1-cl8-q3-fixed-torus-os-kms-markov-reference-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `4ab8955caa5f` |
+| `strategy/pre-a-cp1-cl8-q3-fixed-torus-os-kms-markov-reference-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `27ac7f823831` |
 | `strategy/pre-a-cp1-cl8-q3-fixed-torus-os-kms-markov-reference-route-split-manifest.json` | — | — | — | — | ACTIVE | `2d58057264e9` |
-| `strategy/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `2b2bd3933e40` |
+| `strategy/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `d852f98b4593` |
 | `strategy/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-manifest.json` | — | — | — | — | ACTIVE | `44dfcc033513` |
-| `strategy/pre-a-cp1-cl8-q3-spatial-spectral-low-mode-weyl-equicontinuity-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `9dcca5e843fb` |
+| `strategy/pre-a-cp1-cl8-q3-spatial-spectral-low-mode-weyl-equicontinuity-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `8250fb53eb24` |
 | `strategy/pre-a-cp1-cl8-q3-spatial-spectral-low-mode-weyl-equicontinuity-route-split-manifest.json` | — | — | — | — | ACTIVE | `fb618ba79429` |
 | `strategy/pre-a-cp1-cl8-q3-spatial-spectral-rp-martingale-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `da9ccfff67cc` |
 | `strategy/pre-a-cp1-cl8-q3-spatial-spectral-rp-martingale-route-split-manifest.json` | — | — | — | — | ACTIVE | `bea3c28e137b` |
@@ -3676,7 +3666,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/pre-a-cp1-cl8-q3-thermodynamic-pressure-relative-entropy-density-phase-route-split-manifest.json` | — | — | — | — | ACTIVE | `c55733bf347d` |
 | `strategy/pre-a-cp1-cl8-q3-vector-phi2-constructive-comparator-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `594fcf4760b4` |
 | `strategy/pre-a-cp1-cl8-q3-vector-phi2-constructive-comparator-route-split-manifest.json` | — | — | — | — | ACTIVE | `0865d9336253` |
-| `strategy/pre-a-cp1-cl8-q3-zero-temperature-thermodynamic-ground-phase-physical-reference-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `b56f1c9a84e7` |
+| `strategy/pre-a-cp1-cl8-q3-zero-temperature-thermodynamic-ground-phase-physical-reference-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `b92bf58e4c1e` |
 | `strategy/pre-a-cp1-cl8-q3-zero-temperature-thermodynamic-ground-phase-physical-reference-route-split-manifest.json` | — | — | — | — | ACTIVE | `fe564abe7073` |
 | `strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `7c00fe075839` |
 | `strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-manifest.json` | — | — | — | — | ACTIVE | `baaf63a549d3` |
@@ -3691,9 +3681,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/pre-a-cp1-st8-block-causal-bridge-certificate-260803.md` | — | — | — | — | ACTIVE | `a06fc30eaa0b` |
 | `strategy/pre-a-cp1-st8-block-causal-bridge-manifest.json` | — | — | — | — | ACTIVE | `b0a8ddec5c50` |
 | `strategy/pre-a-cp1-st8-q3lock-certificate-260803.md` | — | — | — | — | ACTIVE | `d6a6caf1e82c` |
-| `strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `7ec7d796e51a` |
+| `strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `8c7ea493eef2` |
 | `strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json` | — | — | — | — | ACTIVE | `52841edd083a` |
-| `strategy/pre-a-cp1-st8-q3lock-fixed-lattice-3d-quantum-pressure-ground-density-effective-reduction-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `a860d459b854` |
+| `strategy/pre-a-cp1-st8-q3lock-fixed-lattice-3d-quantum-pressure-ground-density-effective-reduction-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `d3fe75aff396` |
 | `strategy/pre-a-cp1-st8-q3lock-fixed-lattice-3d-quantum-pressure-ground-density-effective-reduction-route-split-manifest.json` | — | — | — | — | ACTIVE | `48889ebc8d25` |
 | `strategy/pre-a-cp1-st8-q3lock-manifest.json` | — | — | — | — | ACTIVE | `7ff6f2dd7877` |
 | `strategy/pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split-certificate-260804.md` | — | — | — | — | ACTIVE | `b6487a9381be` |
@@ -3714,8 +3704,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/sector-a-claim-taxonomy-and-subproof-plan-260722.md` | — | — | — | — | ACTIVE | `515c895f0a44` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `7784fbab38fd` |
 | `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `137c26ea5f80` |
-| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `b17080a614b1` |
-| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `b17080a614b1` |
 | `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `b17080a614b1` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `528697935e4a` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
