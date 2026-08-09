@@ -1,4 +1,4 @@
-# CHANGELOG database — JSONL source, generated view, query cache
+# CHANGELOG database — append-only source, bounded views, query cache
 
 **Binding from 2026-06-09.** Operator-authorised: DB-ize the unbounded CHANGELOG so
 theory development is searchable by claim and keyword, git-backed. This document is
@@ -18,12 +18,16 @@ git) was rejected: it breaks the repository's plaintext clone-and-read trust mod
 | Tier | Path | Role | Git |
 |---|---|---|---|
 | SOURCE | `changelog/log.jsonl` | append-only, one JSON object per line, oldest-first; new entries appended at EOF | tracked (plaintext, line-diff, merge-safe) |
-| VIEW | `CHANGELOG.md` | generated, newest-first, `== render(log.jsonl)` | tracked (generated; never hand-edit) |
+| COMPATIBILITY | `CHANGELOG.md` | frozen through record 568 / commit `4db22f4e`; preserves issued verifier prose searches | tracked; never grows or hand-edits |
+| CURRENT VIEW | `changelog/INDEX.md` | compact latest-event and page index | tracked; generated |
+| BODY PAGES | `changelog/pages/NNNNNN-NNNNNN.md` | post-cutover bodies, 50 records per page; each body occurs once | tracked; generated |
+| LOCATOR | `changelog/index.json` + `changelog/locators/*.json` | thin manifest/recent metadata plus 100-record stable locator shards | tracked; generated |
 | CACHE | `changelog/.cache/changelog.db` | SQLite FTS5 full-text index, rebuildable | gitignored |
 
-Identical in spirit to `status.json -> CLAIMS.md`, `catalog.json -> CATALOG.md`,
-`todo/todo.json -> TODO.md`: a plaintext structured source, a generated human view,
-and a rebuildable derived index. No binary artefact ever enters git.
+This keeps one full-detail authority and bounded generated readers. Pre-cutover
+bodies remain once in the frozen compatibility volume; post-cutover bodies remain
+once in their bounded page. The index repeats metadata only. No binary artefact
+ever enters git.
 
 ## 3. Record schema (one JSON object per line)
 
@@ -39,13 +43,14 @@ scripts     [ ... ]   supporting script paths
 raw         the verbatim Markdown block (header + body)
 ```
 
-`render()` concatenates `raw` (oldest-first reversed to newest-first) under a fixed
-preamble. Losslessness rests on `raw`, not on metadata parsing; the migration
-round-trip is byte-verified.
+Losslessness rests on `raw`, not on metadata parsing. The generator reconstructs
+the frozen compatibility volume from the first 568 records and projects later
+records into exactly one bounded page.
 
 ## 4. Workflow (binding)
 
-- **NEVER hand-edit `CHANGELOG.md`.** It is generated.
+- **NEVER hand-edit any changelog projection.** Add only to `log.jsonl` through
+  `changelog.py add`.
 - Add an entry (body on stdin):
 
 ```
@@ -58,7 +63,9 @@ python verification/scripts/changelog.py add \
 BODY
 ```
 
-  The command appends one line to `log.jsonl` and re-renders `CHANGELOG.md`.
+  The command appends one line to `log.jsonl`, leaves the frozen compatibility
+  volume unchanged, and refreshes `changelog/INDEX.md`, the thin manifest,
+  locator shards, and the current bounded page.
 - Query:
 
 ```
@@ -71,16 +78,19 @@ changelog.py search --fts --text "screened AND tail"     # ranked FTS5
 
 ## 5. Enforcement
 
-`release_check.py` runs `changelog.py render --check` (the `[changelog]` gate):
-the working `CHANGELOG.md` must equal `render(log.jsonl)`, exactly as CLAIMS /
-CATALOG / TODO are sync-gated. A hand-edit not mirrored in `log.jsonl` fails the
-gate. `english-only` now also scans `.jsonl`.
+`release_check.py` runs `changelog.py render --check` and `changelog.py verify`.
+The first 568 records must reconstruct the frozen `CHANGELOG.md` exactly; every
+later record must have one locator and one generated body page; stale/orphan
+pages and duplicate event IDs fail. The aggregate-consumer gate also forbids new
+code from reading the frozen root volume directly. `english-only` scans `.jsonl`.
 
-## 6. Migration
+## 6. Migrations
 
 `changelog.py migrate` parsed the 131 legacy entries into `log.jsonl` with a
 byte-verified lossless round-trip (`render == ` the pre-migration `CHANGELOG.md`).
-The legacy hand-edited file became the generated view of its own structured source.
+The legacy hand-edited file first became the generated view of its own structured
+source. At the 2026-08-10 growth cutover it became a frozen compatibility volume;
+the migration command is now retired. See ADR-0002.
 
 ## 7. Sandbox note
 
@@ -94,5 +104,5 @@ operator side) the cache persists natively. The JSONL scan path (`search` withou
 
 The same JSONL-source + FTS-cache pattern extends to other append-only ledgers
 (`negative-results/registry.md`, research logs) and to full-text search over note
-footers (via `verification/catalog.json`). Tracked as a follow-on; this issue
+footers (via `verification/catalog/index.json`). Tracked as a follow-on; this issue
 covers `CHANGELOG`.

@@ -5,8 +5,11 @@
 ## 1. Repository root
 
 Only these files may exist at root: `README.md`, `GOVERNANCE.md`, `ROADMAP.md`,
-`REVIEWING.md`, `CLAIMS.md` (generated), `CATALOG.md` (generated),
-`CHANGELOG.md`, `CLAUDE.md`, `.gitignore`. Everything else has a destination folder; when unsure, the
+`REVIEWING.md`, `CLAIMS.md`, `CATALOG.md`, `CHANGELOG.md`,
+`RESULTS-LEDGER.md`, `TODO.md`, `SESSION.md`, `AGENTS.md`, `CLAUDE.md`,
+`requirements.txt`, `.gitattributes`, and `.gitignore`. `CLAUDE.md` is a compatibility pointer
+to `AGENTS.md`, not a second protocol. Everything else has a destination
+folder; when unsure, the
 decision table in `governance/publication-tiers.md` applies.
 
 ## 2. Claim IDs

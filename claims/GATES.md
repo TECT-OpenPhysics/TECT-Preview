@@ -1,5 +1,9 @@
 # Gate & Hypothesis Registry
 
+> **Reader route:** start with [`GATES-INDEX.md`](GATES-INDEX.md), which shows
+> current claim-card citations and preserves registry/card mismatches for
+> follow-up. This file remains the complete definition and history authority.
+
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
 exist here. Last updated: 2026-07-28.

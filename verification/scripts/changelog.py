@@ -5,8 +5,13 @@ git-ignored full-text query cache.
 Design (governance/changelog-db.md):
   * SOURCE OF TRUTH   changelog/log.jsonl   (append-only, one JSON object/line,
                       oldest-first; new entries appended at EOF).
-  * GENERATED VIEW    CHANGELOG.md          (newest-first; == render(log.jsonl);
-                      never hand-edited; release_check enforces sync).
+  * COMPATIBILITY     CHANGELOG.md          (frozen through the declared v1
+                      cutover so historical verifier hashes and prose searches
+                      remain reproducible; it no longer grows).
+  * GENERATED VIEW    changelog/INDEX.md    (compact current landing) plus
+                      changelog/pages/YYYY-MM.md (post-cutover full bodies;
+                      every new body appears in exactly one bounded page).
+                      Never hand-edited; release_check enforces the whole set.
   * QUERY CACHE       changelog/.cache/changelog.db  (gitignored SQLite FTS5;
                       rebuildable from log.jsonl by `build-db`).
 
@@ -45,21 +50,39 @@ Changelog:
         undecodable, or malformed.
   1.0.3 (2026-08-09) preserve the exact committed JSONL prefix and line endings;
         append only the new compact record instead of reserializing history.
+  1.1.0 (2026-08-10) freeze the legacy Markdown mirror and add a compact
+        landing page, bounded single-copy pages, and a stable locator index.
 """
-__version__ = "1.0.3"
+__version__ = "1.1.0"
 
-import argparse, json, os, re, shutil, sqlite3, sys, tempfile
+import argparse, hashlib, json, os, re, shutil, sqlite3, sys, tempfile
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 LOG  = REPO / "changelog" / "log.jsonl"
 MD   = REPO / "CHANGELOG.md"
 DBP  = REPO / "changelog" / ".cache" / "changelog.db"
+PAGES = REPO / "changelog" / "pages"
+LOCATORS = REPO / "changelog" / "locators"
+INDEX = REPO / "changelog" / "index.json"
+LANDING = REPO / "changelog" / "INDEX.md"
+RECENT_COUNT = 25
+PAGE_SIZE = 50
+LOCATOR_SIZE = 100
+CUTOVER_COUNT = 568
+CUTOVER_COMMIT = "4db22f4ea94bb1a936d1a2e4b416aa2d6d1960d4"
 
-PREAMBLE = (
+LEGACY_PREAMBLE = (
     "# CHANGELOG — TECT (verification-first repository)\n\n"
     "One entry per accepted change set. Newest first. Entries reference claim IDs,\n"
     "not pillar counts.\n\n---\n\n"
+)
+LANDING_PREAMBLE = (
+    "# TECT changelog index\n\n"
+    "Compact generated reader surface. The append-only authority is\n"
+    "`log.jsonl`. `../CHANGELOG.md` is a frozen compatibility volume through\n"
+    f"record {CUTOVER_COUNT} / commit `{CUTOVER_COMMIT[:8]}` and no longer grows.\n"
+    "Post-cutover full bodies live exactly once in bounded pages under `pages/`.\n\n"
 )
 SPLIT_RE = re.compile(r"(?m)^## \[")
 DATE_RE  = re.compile(r"(\d{4}-\d{2}-\d{2})\s*$")
@@ -176,23 +199,225 @@ def _slug(date, header):
     return f"{date.replace('-','')}-" + re.sub(r"[^a-z0-9]+", "-", header.lower())[:48].strip("-")
 
 
+def _cell(value):
+    return str(value or "—").replace("|", "\\|").replace("\n", " ")
+
+
+def _page_name(ordinal):
+    """Stable post-cutover page for a one-based ledger ordinal."""
+    if ordinal <= CUTOVER_COUNT:
+        return None
+    start = CUTOVER_COUNT + 1 + ((ordinal - CUTOVER_COUNT - 1) // PAGE_SIZE) * PAGE_SIZE
+    end = start + PAGE_SIZE - 1
+    return f"{start:06d}-{end:06d}.md"
+
+
+def _locator_name(ordinal):
+    start = 1 + ((ordinal - 1) // LOCATOR_SIZE) * LOCATOR_SIZE
+    end = start + LOCATOR_SIZE - 1
+    return f"{start:06d}-{end:06d}.json"
+
+
+def _legacy_render(entries):
+    if len(entries) < CUTOVER_COUNT:
+        raise ValueError(
+            f"changelog has {len(entries)} entries; cutover requires {CUTOVER_COUNT}"
+        )
+    return LEGACY_PREAMBLE + "".join(
+        entry["raw"] for entry in reversed(entries[:CUTOVER_COUNT])
+    )
+
+
+def _page_groups(entries):
+    groups = {}
+    for ordinal, entry in enumerate(entries, start=1):
+        name = _page_name(ordinal)
+        if name:
+            groups.setdefault(name, []).append((ordinal, entry))
+    return groups
+
+
+def _locator_groups(entries):
+    groups = {}
+    for ordinal, entry in enumerate(entries, start=1):
+        groups.setdefault(_locator_name(ordinal), []).append((ordinal, entry))
+    return groups
+
+
+def _render_landing(entries):
+    groups = _page_groups(entries)
+    lines = [LANDING_PREAMBLE.rstrip(), "",
+             f"**{len(entries)} accepted events** · latest "
+             f"{min(RECENT_COUNT, len(entries))} shown below · "
+             "machine locator: `index.json`", "",
+             "Search the complete authority without loading every page:", "",
+             "```bash", "python verification/scripts/changelog.py search --text <phrase>",
+             "```", "", "## Latest events", "",
+             "| Date | Event | Claims | Full entry |", "|---|---|---|---|"]
+    first_recent = max(1, len(entries) - RECENT_COUNT + 1)
+    for ordinal in range(len(entries), first_recent - 1, -1):
+        entry = entries[ordinal - 1]
+        claims = ", ".join(entry.get("claim_ids", [])) or "—"
+        page = _page_name(ordinal)
+        target = f"pages/{page}#{entry['id']}" if page else "../CHANGELOG.md"
+        label = "bounded page" if page else "legacy volume"
+        lines.append(
+            f"| {_cell(entry.get('date'))} | `{_cell(entry.get('id'))}` — "
+            f"{_cell(entry.get('header'))} | {_cell(claims)} | "
+            f"[{label}]({target}) |"
+        )
+    lines.extend(["", "## Post-cutover pages", "",
+                  "Each full event body after the cutover occurs in exactly one page.", "",
+                  "| Ordinals | Events | Page |", "|---|---:|---|"])
+    if not groups:
+        lines.append("| — | 0 | No post-cutover events yet |")
+    for name, rows in sorted(groups.items(), reverse=True):
+        lines.append(
+            f"| {rows[0][0]}–{rows[-1][0]} | {len(rows)} | [{name}](pages/{name}) |"
+        )
+    lines.append("")
+    return "\n".join(lines)
+
+
+def _render_page(name, rows):
+    lines = [f"# TECT changelog — records {name[:-3]}", "",
+             "<!-- AUTO-GENERATED by verification/scripts/changelog.py -->",
+             "<!-- DO NOT HAND-EDIT. Authority: changelog/log.jsonl -->", "",
+             f"**{len(rows)} events** · [compact index](../INDEX.md) · "
+             "[machine locator](../index.json)", "", "---", ""]
+    for _, entry in reversed(rows):
+        lines.extend([f"<a id=\"{entry['id']}\"></a>", "", entry["raw"].rstrip(), ""])
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def _render_locator(name, rows):
+    entries = []
+    for ordinal, entry in rows:
+        page = _page_name(ordinal)
+        entries.append({
+            "ordinal": ordinal,
+            "id": entry["id"],
+            "volume": (f"changelog/pages/{page}" if page else "CHANGELOG.md"),
+            "anchor": (entry["id"] if page else None),
+        })
+    return json.dumps({
+        "schema": "tect/changelog-locators/1.0",
+        "range": name[:-5],
+        "count": len(entries),
+        "entries": entries,
+    }, ensure_ascii=False, indent=2) + "\n"
+
+
+def _index_payload(entries, locator_outputs):
+    pages = _page_groups(entries)
+    recent = [
+        {
+            "id": entry["id"],
+            "date": entry.get("date", ""),
+            "header": entry.get("header", ""),
+            "claim_ids": entry.get("claim_ids", []),
+        }
+        for entry in reversed(entries[-RECENT_COUNT:])
+    ]
+    return {
+        "schema": "tect/changelog-index/2.0",
+        "authority": "changelog/log.jsonl",
+        "cutover": {"records": CUTOVER_COUNT, "commit": CUTOVER_COMMIT,
+                    "compatibility_volume": "CHANGELOG.md"},
+        "total": len(entries),
+        "recent_count": min(RECENT_COUNT, len(entries)),
+        "recent": recent,
+        "pages": [
+            {"page": f"changelog/pages/{name}", "first_ordinal": rows_[0][0],
+             "last_ordinal": rows_[-1][0], "count": len(rows_)}
+            for name, rows_ in sorted(pages.items())
+        ],
+        "locators": [
+            {
+                "path": path.relative_to(REPO).as_posix(),
+                "first_ordinal": rows_[0][0],
+                "last_ordinal": rows_[-1][0],
+                "count": len(rows_),
+                "bytes": len(locator_outputs[path].encode("utf-8")),
+                "sha256": hashlib.sha256(locator_outputs[path].encode("utf-8")).hexdigest(),
+            }
+            for name, rows_ in sorted(_locator_groups(entries).items())
+            for path in [LOCATORS / name]
+        ],
+    }
+
+
+def render_outputs(entries=None):
+    entries = load() if entries is None else entries
+    locator_outputs = {
+        LOCATORS / name: _render_locator(name, rows)
+        for name, rows in _locator_groups(entries).items()
+    }
+    outputs = {
+        LANDING: _render_landing(entries),
+        INDEX: json.dumps(
+            _index_payload(entries, locator_outputs), ensure_ascii=False, indent=2
+        ) + "\n",
+        **locator_outputs,
+    }
+    for name, rows in _page_groups(entries).items():
+        outputs[PAGES / name] = _render_page(name, rows)
+    return outputs
+
+
 def render(entries=None):
     entries = load() if entries is None else entries
-    return PREAMBLE + "".join(e["raw"] for e in reversed(entries))  # oldest-first storage -> newest-first view
+    return _legacy_render(entries)
+
+
+def _stale_page_paths(outputs):
+    expected = {path.resolve() for path in outputs if path.parent == PAGES}
+    actual = {path.resolve() for path in PAGES.glob("*.md")} if PAGES.exists() else set()
+    return sorted(actual - expected)
+
+
+def _stale_locator_paths(outputs):
+    expected = {path.resolve() for path in outputs if path.parent == LOCATORS}
+    actual = ({path.resolve() for path in LOCATORS.glob("*.json")}
+              if LOCATORS.exists() else set())
+    return sorted(actual - expected)
+
+
+def _write_views(entries):
+    outputs = render_outputs(entries)
+    atomic_write(MD, _legacy_render(entries))
+    for path, text in outputs.items():
+        atomic_write(path, text)
+    for path in _stale_page_paths(outputs):
+        path.unlink()
+    for path in _stale_locator_paths(outputs):
+        path.unlink()
+    return outputs
 
 
 def cmd_render(args):
-    out = render()
+    entries = load()
+    outputs = render_outputs(entries)
     if args.check:
-        cur = MD.read_text(encoding="utf-8") if MD.exists() else ""
-        if cur != out:
-            print("CHANGELOG-SYNC: FAIL -- CHANGELOG.md is out of sync with changelog/log.jsonl")
+        stale = []
+        if not MD.exists() or MD.read_text(encoding="utf-8") != _legacy_render(entries):
+            stale.append(MD)
+        stale.extend(path for path, text in outputs.items()
+                     if not path.exists() or path.read_text(encoding="utf-8") != text)
+        stale.extend(_stale_page_paths(outputs))
+        stale.extend(_stale_locator_paths(outputs))
+        if stale:
+            print("CHANGELOG-SYNC: FAIL -- generated changelog views are stale")
+            for path in stale[:10]:
+                print(f"  - {path.relative_to(REPO)}")
             print("  fix: python verification/scripts/changelog.py render")
             return 1
         print("CHANGELOG-SYNC: PASS")
         return 0
-    atomic_write(MD, out)
-    print(f"CHANGELOG: rendered {len(load())} entries -> CHANGELOG.md")
+    _write_views(entries)
+    print(f"CHANGELOG: preserved {CUTOVER_COUNT}-entry CHANGELOG.md + rendered "
+          f"{len(entries)}-entry compact index + {len(_page_groups(entries))} body page(s) + "
+          f"{len(_locator_groups(entries))} locator shard(s)")
     return 0
 
 
@@ -214,12 +439,16 @@ def cmd_add(args):
                  keywords=sorted(set(args.keywords or [])),
                  neg_results=sorted(set((args.neg or []) + m["neg_results"])),
                  notes=args.notes or [], scripts=args.scripts or [], raw=raw)
-    entries = load(); entries.append(entry)  # EOF == newest
+    entries = load()
+    if entry["id"] in {row.get("id") for row in entries}:
+        print(f"changelog add: REFUSED -- duplicate event id {entry['id']}")
+        return 1
+    entries.append(entry)  # EOF == newest
     previous = LOG.read_text(encoding="utf-8") if LOG.exists() else ""
     if previous and not previous.endswith("\n"):
         previous += "\n"
     atomic_write(LOG, previous + _encode_entry(entry))
-    atomic_write(MD, render())
+    _write_views(entries)
     print(f"changelog: added {entry['id']} ({len(entries)} entries)")
     return 0
 
@@ -317,44 +546,9 @@ def cmd_build_db(args):
 
 
 def cmd_migrate(args):
-    src = MD.read_text(encoding="utf-8")
-    m = SPLIT_RE.search(src)
-    if not m:
-        print("migrate: no entries found"); return 1
-    pre = src[:m.start()]
-    if pre != PREAMBLE:
-        print("migrate: PREAMBLE mismatch -- fix the constant. repr(file preamble):")
-        print(repr(pre)); return 1
-    starts = [mm.start() for mm in SPLIT_RE.finditer(src)]
-    entries, undated = [], []  # file order == newest-first
-    for i, s in enumerate(starts):
-        e = starts[i + 1] if i + 1 < len(starts) else len(src)
-        blk = src[s:e]
-        first = blk.split("\n", 1)[0]
-        dm = DATE_RE.search(first)
-        date = dm.group(1) if dm else ""
-        if not dm:
-            undated.append(first[:70])
-        header = first[3:].strip()  # drop "## "
-        meta = _meta(blk)
-        entries.append(dict(id=_slug(date or "00000000", header), date=date, header=header,
-                            claim_ids=meta["claim_ids"], keywords=[], neg_results=meta["neg_results"],
-                            notes=[], scripts=[], raw=blk))
-    if undated:
-        print(f"migrate: WARNING {len(undated)} header(s) without a trailing date (stored, date=''):")
-        for u in undated[:5]:
-            print(f"    {u}")
-    save(list(reversed(entries)))  # store oldest-first
-    out = render()
-    if out != src:
-        for i, (a, b) in enumerate(zip(out, src)):
-            if a != b:
-                print(f"migrate: ROUND-TRIP MISMATCH @ {i}: out={out[i:i+40]!r} src={src[i:i+40]!r}"); break
-        else:
-            print(f"migrate: length diff out={len(out)} src={len(src)}")
-        return 1
-    print(f"migrate: {len(entries)} entries -> changelog/log.jsonl; render == CHANGELOG.md (LOSSLESS)")
-    return 0
+    print("migrate: RETIRED -- changelog/log.jsonl is already authoritative; "
+          "CHANGELOG.md is a frozen compatibility volume")
+    return 1
 
 
 def cmd_verify(args):
@@ -369,17 +563,39 @@ def cmd_verify(args):
     if bad:
         problems.append(f"{len(bad)} unparseable line(s) at {bad} (truncation/corruption)")
     try:
-        head = _git_head_entries(strict=True)
+        head_text = _git_head_text(strict=True)
+        head, head_bad = _parse_lines(head_text)
+        if head_bad:
+            raise RuntimeError(f"git HEAD changelog contains unparseable line(s) at {head_bad}")
     except RuntimeError as exc:
+        head_text = ""
         head = []
         problems.append(f"committed changelog audit unavailable: {exc}")
-    cur_ids = {e.get("id") for e in entries}
+    if head_text and not text.startswith(head_text):
+        problems.append("working changelog does not preserve the committed byte prefix")
+    ids = [entry.get("id") for entry in entries]
+    cur_ids = set(ids)
+    if len(cur_ids) != len(ids):
+        problems.append(f"{len(ids) - len(cur_ids)} duplicate event id(s)")
     lost = [e.get("id") for e in head if e.get("id") not in cur_ids]
     if lost:
         problems.append(f"{len(lost)} committed entry/entries missing from working tree "
                         f"(e.g. {lost[:3]})")
-    if MD.exists() and MD.read_text(encoding="utf-8") != render(entries):
-        problems.append("CHANGELOG.md out of sync with log.jsonl")
+    if len(entries) < CUTOVER_COUNT:
+        problems.append(
+            f"only {len(entries)} entries; compatibility cutover requires {CUTOVER_COUNT}"
+        )
+    else:
+        if not MD.exists() or MD.read_text(encoding="utf-8") != _legacy_render(entries):
+            problems.append("frozen CHANGELOG.md compatibility volume is stale")
+        outputs = render_outputs(entries)
+        stale = [path for path, expected in outputs.items()
+                 if not path.exists() or path.read_text(encoding="utf-8") != expected]
+        stale.extend(_stale_page_paths(outputs))
+        stale.extend(_stale_locator_paths(outputs))
+        if stale:
+            examples = [str(path.relative_to(REPO)) for path in stale[:3]]
+            problems.append(f"generated compact changelog views are stale (e.g. {examples})")
     if problems:
         print("CHANGELOG-VERIFY: FAIL")
         for pr in problems:
@@ -414,11 +630,11 @@ def cmd_repair(args):
         atomic_write(LOG, head_text + "".join(_encode_entry(entry) for entry in new_entries))
     else:
         save(recovered)
-    atomic_write(MD, render(recovered))
+    _write_views(recovered)
     build_db()
     print(f"changelog repair: {len(recovered)} entries restored "
           f"(git HEAD {len(head)} + {added} working-tree-only; dropped {len(bad)} corrupted line(s)). "
-          f"log.jsonl + CHANGELOG.md + db rebuilt atomically.")
+           f"log.jsonl + compatibility/compact views + db rebuilt atomically.")
     return 0
 
 

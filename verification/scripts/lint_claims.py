@@ -24,10 +24,12 @@ Changelog:
   1.2.0 (2026-06-05) version header added (code-versioning rule, naming §5).
   1.3.0 (2026-07-22) enforce the exact-cover Sector-A theorem-family map and
         fail closed on unapproved claim-ID expansion.
+  1.4.0 (2026-08-10) recognize only heading-defined gate/hypothesis IDs;
+        emphasized status and tier words no longer pass registry membership.
 """
-__version__ = "1.3.0"
+__version__ = "1.4.0"
 __first_issued__ = "2026-06-05"
-__version_issued__ = "2026-07-22"
+__version_issued__ = "2026-08-10"
 
 import argparse
 import datetime as _dt
@@ -60,11 +62,15 @@ def tier_idx(t):
 
 
 def load_registry():
-    """Bold ALL-CAPS tokens in GATES.md are registered gate/hypothesis IDs."""
+    """Return only IDs declared by bold gate/hypothesis section headings."""
     if not GATES_FILE.exists():
         return set()
     text = GATES_FILE.read_text(encoding="utf-8")
-    return set(re.findall(r"\*\*([A-Z][A-Z0-9-]+)\*\*", text))
+    return set(re.findall(
+        r"^#{2,4}\s+\*\*([A-Z0-9][A-Z0-9-]+)\*\*\s*$",
+        text,
+        re.MULTILINE,
+    ))
 
 
 def load_cards(errors):

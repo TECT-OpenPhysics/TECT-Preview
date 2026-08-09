@@ -76,7 +76,7 @@ Every script MUST:
 ## Enforcement
 
 - These rules are part of the §3 claim-first / numerical-claim discipline
-  (`CLAUDE.md` §3, §6).
+  (`AGENTS.md` §3, §6).
 - A future automated check (`verification/scripts/check_code_discipline.py`,
   tracked as task T-006) will scan `codes/` for (a) suspect hardcoded literals
   outside the permitted classes, (b) scripts lacking self-test asserts or a JSON

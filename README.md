@@ -24,13 +24,16 @@ The operating principle of this repository:
 
 | Path | Content | Publication tier |
 |---|---|---|
+| `management/INDEX.md` | Bounded current task, gate, result, and reader dashboard -- start here for live work | P1 |
 | `CLAIMS.md` | Master claim ledger (auto-generated — start here) | P1 |
-| `theory/proof-evidence-map.md` | Generated one-glance map of accepted results, proof explorations, failed routes/reasons, live gates/tasks, and reproduction paths | P1 |
-| `CATALOG.md` | Every artefact with versions, dates, claim links (auto-generated) | P1 |
-| `RESULTS-LEDGER.md` | Standalone-publishable results harvested from the claims (curated) | P1 |
+| `theory/proof-evidence/INDEX.md` | Compact proof-evidence entry with targeted lookup commands; complete compatibility maps remain under `theory/` and `verification/` | P1 |
+| `catalog/INDEX.md` | Compact current artefact catalog; machine manifest/shards in `verification/catalog/` | P1 |
+| `changelog/INDEX.md` | Compact current change history; append-only authority in `changelog/log.jsonl` | P1 |
+| `results/INDEX.md` | Compact reusable-result index; full curated authority in `RESULTS-LEDGER.md` | P1 |
+| `negative-results/INDEX.md` | Compact failed-route and audit index; full authority in `negative-results/registry.md` | P1 |
 | `explorations/log.jsonl` | Append-only proof-route decisions: checks, failures, boundaries, and revisit conditions | P1 |
 | `strategy/` | Non-tier-bearing strategy / analysis / decision-rationale notes (route planning, impact studies) | P1 |
-| `ROADMAP.md` | 6-Stage roadmap v2 with exit conditions and current status | P1 |
+| `ROADMAP.md` | Long-form staged roadmap and historical planning narrative; live priority is in `management/INDEX.md` | P1 |
 | `GOVERNANCE.md` | Operating constitution (tiers, gates, registration rules) | P1 |
 | `REVIEWING.md` | How to review or attack TECT in 30 minutes | P1 |
 | `governance/` | Detailed binding policies | P1 |
@@ -54,11 +57,12 @@ Publication tiers P0/P1/P2 are defined in `governance/publication-tiers.md`.
 # 1. Validate the claim ledger (schema, DAG, tier-monotonicity)
 python verification/scripts/lint_claims.py
 
-# 2. Read the master ledger
-#    CLAIMS.md  — every claim, its tier, its falsifier, its open gates
+# 2. Read bounded current state, then the master claim ledger
+#    management/INDEX.md — live tasks, cited gates, and reader routes
+#    CLAIMS.md           — every claim, its tier, falsifier, and open gates
 
-# 2b. Read or search the proof evidence map
-#     theory/proof-evidence-map.md  — results, explorations, failures, current route
+# 2b. Search the complete proof evidence map by an exact ID
+rg -n "<claim-result-gate-or-exploration-id>" theory/proof-evidence-map.md
 
 # 2c. Search the append-only route-decision source
 python verification/scripts/exploration.py search --claim <ID>

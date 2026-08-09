@@ -1,5 +1,9 @@
 # TECT 6-Stage Roadmap — v2
 
+> **Reader route:** use [`management/INDEX.md`](management/INDEX.md) for live
+> tasks and priority. This file preserves the detailed staged narrative and
+> historical planning context, which may lag the structured current sources.
+
 **Issued**: 2026-06-05 · **Source of stage definitions**: GOVERNANCE.md
 **Current-status source**: live `claims/*/status.json`, rendered `CLAIMS.md`,
 `RESULTS-LEDGER.md`, and `TODO.md`. The legacy `TOE-FACT-SHEET.md` snapshot is

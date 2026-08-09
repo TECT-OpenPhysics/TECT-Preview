@@ -1,5 +1,8 @@
 # RESULTS-LEDGER — standalone-publishable results
 
+> **Reader route:** start with the bounded [`results/INDEX.md`](results/INDEX.md)
+> and open this authority only at the required result anchor.
+
 **What this is.** A curated registry of results that emerged while developing
 TECT claims but have *standalone* value — reusable lemmas, theorems, and
 techniques worth organizing and publishing on their own (several are pure

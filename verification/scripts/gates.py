@@ -13,7 +13,7 @@ Each entry is (label, [script, *args]) with a BARE script name; each caller
 prefixes the path it needs (doctor: SCRIPTS/<name>; release_check:
 verification/scripts/<name>).
 """
-__version__ = "1.2.0"
+__version__ = "1.4.0"
 
 # --check sync gates (generated surface == its source). Order is display-only.
 SYNC_GATES = [
@@ -27,6 +27,10 @@ SYNC_GATES = [
     ("dossier",   ["build_dossier.py", "--check"]),
     ("exploration-integrity", ["exploration.py", "verify"]),
     ("proof-evidence-map", ["build_proof_evidence_map.py", "--check"]),
+    ("management-indexes", ["build_management_indexes.py", "--check"]),
+    ("aggregate-consumers", ["check_aggregate_consumers.py"]),
+    ("protocol-single-source", ["check_protocol_single_source.py"]),
+    ("website-smoke", ["check_website.py"]),
 ]
 
 # Write (non-check) invocations, in dependency order. build_catalog is LAST
@@ -39,5 +43,6 @@ REGEN_ORDER = [
     ["changelog.py", "render"],
     ["todo.py", "render"],
     ["build_proof_evidence_map.py"],
+    ["build_management_indexes.py"],
     ["build_catalog.py"],
 ]

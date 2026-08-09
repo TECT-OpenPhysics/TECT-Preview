@@ -28,8 +28,9 @@ research state lives in the cowork app; it all lives in tracked files here.
    from `archive/legacy/scripts/`; a partial copy of only `claims/` will not run.
    `doctor.py` checks this explicitly.
 
-3. **Connect cowork to the `TECT` folder.** The AI session auto-loads
-   `CLAUDE.md` (the session protocol) as project instructions.
+3. **Connect the collaborator to the `TECT` folder.** The canonical session
+   protocol is `AGENTS.md`. `CLAUDE.md` is only a compatibility pointer for
+   clients that discover that filename.
 
 ---
 
@@ -48,16 +49,19 @@ research state lives in the cowork app; it all lives in tracked files here.
    python verification/scripts/regen_all.py     # or: doctor.py --fix
    ```
 
-2. **Session-entry prelude** (CLAUDE.md §1, the AI does this automatically):
-   read `GOVERNANCE.md` → `CLAIMS.md` → `ROADMAP.md` → `CHANGELOG.md` (top) →
-   `negative-results/registry.md` → `explorations/log.jsonl` (latest) →
-   **`TODO.md`**, run `date -u`, and emit
+2. **Session-entry prelude** (`AGENTS.md` §1, performed automatically): run the
+   host-native UTC date command first, then read `GOVERNANCE.md`, `CLAIMS.md`,
+   and the bounded [`management/INDEX.md`](management/INDEX.md). Read the
+   compact changelog and negative indexes, query the live task states, and open
+   only ID-targeted portions of the large historical authorities. Emit
    `[ENTRY-OK] <date> | claims: <n> | top priority: <gate>`.
 
 3. **Pick up the work** — the live task ledger:
 
    ```bash
-   python verification/scripts/todo.py list
+   python verification/scripts/todo.py list --status in_progress
+   python verification/scripts/todo.py list --status next
+   python verification/scripts/todo.py list --status blocked
    ```
 
    `TODO.md` is the human-readable view; `todo/todo.json` is the source. Manage
@@ -89,7 +93,7 @@ research state lives in the cowork app; it all lives in tracked files here.
    The watcher (v1.2.0+) **batch-drains**: an accumulated queue is committed as
    ONE combined commit and empty-diff leftovers move to done/, so accumulation
    is safe. Draining per turn is still tidier (1:1 commit-to-message) but not
-   required for correctness (CLAUDE.md §4).
+   required for correctness (`AGENTS.md` §4).
 
 ---
 
@@ -109,13 +113,13 @@ may not end with it failing.
 
 - The task ledger (`TODO.md` / `todo.json`) carries `owner` and `status` per
   task. Claim a task with `todo.py set T-0NN --owner <name> --status in_progress`.
-- **One substantive claim-card change per turn** (CLAUDE.md §3); commit one
+- **One substantive claim-card change per turn** (`AGENTS.md` §3); commit one
   logical change set at a time. This keeps parallel work mergeable.
 - Status/tier/gate transitions are **operator-authorized** — do the work, record
   it as a dated ADVANCE in `claims/GATES.md`, and recommend the flip; the
   operator confirms it.
 - All numerical claims ship a reproducible script + self-test asserts + JSON
-  under `claims/<ID>/runs/` (CLAUDE.md §3, §6). Anyone can re-run and verify.
+  under `claims/<ID>/runs/` (`AGENTS.md` §3, §6). Anyone can re-run and verify.
 
 ---
 
@@ -123,15 +127,18 @@ may not end with it failing.
 
 | Path | Role |
 |---|---|
-| `CLAUDE.md` | session protocol (auto-loaded) |
+| `AGENTS.md` | single binding session protocol |
+| `CLAUDE.md` | compatibility pointer to `AGENTS.md` |
 | `GOVERNANCE.md` | constitution: tiers, gates, registration rules |
-| `CLAIMS.md` / `CATALOG.md` | generated ledgers (start reading at `CLAIMS.md`) |
-| `ROADMAP.md` | 6-stage roadmap + current status |
-| `theory/proof-evidence-map.md` / `verification/proof-evidence-map.json` | generated human/machine map of proof advances, explorations, failures, gates, tasks, and evidence paths |
+| `management/INDEX.md` | bounded live task, gate, result, and reader dashboard |
+| `CLAIMS.md` / `catalog/INDEX.md` | current generated ledgers (root `CATALOG.md` is frozen compatibility) |
+| `ROADMAP.md` | long-form staged research narrative; use the management index for live priority |
+| `theory/proof-evidence/INDEX.md` | compact proof-evidence entry and targeted lookup commands |
+| `theory/proof-evidence-map.md` / `verification/proof-evidence-map.json` | complete compatibility maps for deep or issued-verifier lookups |
 | `explorations/log.jsonl` | canonical append-only proof-route decisions; add/search/verify with `exploration.py` |
 | `TODO.md` / `todo/todo.json` | live task ledger (this resume system) |
 | `claims/<ID>/` | per-claim card + `status.json` + `notes/` + `runs/` + lineage |
-| `claims/GATES.md` | open gates / hypotheses registry |
+| `claims/GATES-INDEX.md` / `claims/GATES.md` | compact current references / complete gate and hypothesis authority |
 | `codes/` | numerical codes by domain (import `archive/legacy/scripts/`) |
 | `verification/scripts/` | `doctor.py`, `lint_claims.py`, `build_*`, `todo.py`, `release_check.py`, `commit_watcher.ps1` |
 | `governance/` | binding policies (incl. `CODE-DISCIPLINE.md`) |

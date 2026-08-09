@@ -111,13 +111,16 @@ than the files and git are forbidden (this is the same single-source-of-truth
 principle that generates `CLAIMS.md` and `BY-CLAIM.md`, and it removes the
 legacy mirror-drift failure class by construction).
 
-Implementation: `verification/scripts/build_catalog.py` emits `CATALOG.md`
-(human view, grouped by artefact kind) and `verification/catalog.json`
-(machine twin: path, kind, claim links, theory tag, two-date fields, version,
-lifecycle incl. SUPERSEDED detection, size, sha256/12). Regenerate after any
-file add/move/version bump; CI runs `--check`. The JSON loads directly into
-pandas/SQLite for ad-hoc queries; if the corpus outgrows JSON (>10^4 entries),
-the generator may emit SQLite instead — the derived-index rule is unchanged.
+Implementation: `verification/scripts/build_catalog.py` emits the thin current
+manifest `verification/catalog/index.json`, one bounded kind shard under
+`verification/catalog/kinds/`, the small `verification/catalog-summary.json`,
+and the human landing `catalog/INDEX.md`. Root `CATALOG.md` and the former full
+`verification/catalog.json` are frozen at commit `4db22f4e` solely because
+issued verifiers search them directly; neither grows. UTF-8 text bytes and hashes
+are LF-normalized so Windows and Linux regeneration agree. Regenerate after any
+file add/move/version bump; CI runs `--check`. New code uses the summary for counts
+and top-level claim paths and the manifest for explicit inventory queries. The
+derived-index rule is unchanged.
 
 ## 9. External review interface
 

@@ -215,7 +215,9 @@ Bulk copying is forbidden.
 ## 14. AI-collaborator protocol
 
 Session-entry sequence, write discipline, and archival duties for AI sessions
-working in this repository: `CLAUDE.md` (repo root).
+working in this repository are defined only in `AGENTS.md` (repo root).
+`CLAUDE.md` is a compatibility pointer for clients that discover that name; it
+must not duplicate or override the protocol.
 
 ## 15. Final governance principle
 

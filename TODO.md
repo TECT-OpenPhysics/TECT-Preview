@@ -1,9 +1,10 @@
 # TODO -- TECT task ledger
 
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
-Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
+Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
+For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 5 · Done (recent) 45
+Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 5 · Done (compatibility history) 45
 
 ## In progress
 
@@ -43,7 +44,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 5 · Done (recent) 45
   - T0 cross-sector research seed. Use strategy/boundary-massless-mode-criticality-seed-260802.md to test whether a preregistered TECT boundary simultaneously yields the correct zero-mode count, a symmetry- or fixed-point-protected common limiting speed, compact phase winding, and critical scaling. Derive the full kinetic tensor and spectra on both sides; determine nu and z; require winding and charge/action scales before identifying hbar or e; freeze inputs before any alpha or mass-ratio comparison. Stop or narrow if equal speeds require separate tuning, regulator removal splits them, z=1 is unstable, topology is absent, or constants are inserted. Bears also on C2, C6, D2, and F1; no theorem or tier action.
   - _updated 2026-08-02_
 
-## Done (recent)
+## Done (compatibility history)
 
 - **T-001** Flip ROBUSTNESS-MU2 -> CLOSED@[x0.5,x2]-2ND-CUMULANT (atomic GATES.md + card + CHANGELOG)  _(owner: operator; claim: B1-RH-ENUM; gate: ROBUSTNESS-MU2; blocked by: operator sign-off)_
   - Closure bar MET (robustness-mu2-margin-recompute v1.0, 11/11): exact m(mu^2) recomputed, min 0.945 m_anchor, STEP-5B ratio worst x2.41, J_eff envelope converged. Awaits operator authorization to flip.

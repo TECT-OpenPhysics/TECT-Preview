@@ -22,8 +22,10 @@ Changelog:
         claim.md, eliminating broken dossier targets.
   1.0.2 (2026-07-31) anchor modern negative tags at their primary claim family;
         mathematical D2/D4/B4 tokens no longer create cross-sector links.
+  1.0.3 (2026-08-10) parse both colon- and period-style detail labels and use
+        word-safe ellipses in compact table cells.
 """
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 
 import argparse, json, os, re, sys, tempfile
 from pathlib import Path
@@ -44,6 +46,16 @@ def atomic_write(path: Path, text: str):
 
 def pipe(s):
     return str(s).replace("|", "\\|")
+
+
+def short(value, limit):
+    text = " ".join(str(value or "").split())
+    if len(text) <= limit:
+        return text
+    prefix = text[: limit - 1].rstrip()
+    if " " in prefix:
+        prefix = prefix.rsplit(" ", 1)[0]
+    return prefix.rstrip() + "…"
 
 
 def claim_target(cid):
@@ -153,8 +165,9 @@ def load_negatives(prefix2sector):
                 flush(cur)
                 cur = None
                 continue
-            if ln.startswith("**Failure mode:**"):
-                cur["mode"] = ln.split("**Failure mode:**", 1)[1].strip()
+            mode = re.match(r"^\*\*Failure mode(?:[.:])\*\*\s*(.*)$", ln)
+            if mode:
+                cur["mode"] = mode.group(1).strip()
             cur["body"].append(ln)
     flush(cur)
     return out
@@ -186,7 +199,7 @@ def render_sector(s, claims, preds, negs):
         hyp = ", ".join(c.get("hypotheses", [])) or "—"
         gates = ", ".join(c.get("open_gates", [])) or "—"
         L.append(f"| [`{cid}`]({claim_target(cid)}) | {c.get('tier','?')} | "
-                 f"{pipe(hyp)} | {pipe(gates)} | {pipe(c.get('title','')[:80])} |")
+                 f"{pipe(hyp)} | {pipe(gates)} | {pipe(short(c.get('title', ''), 80))} |")
     # aggregate gates/hypotheses
     allhyp = sorted({h for _, c in claims for h in c.get("hypotheses", [])})
     allg = sorted({g for _, c in claims for g in c.get("open_gates", [])})
@@ -208,7 +221,8 @@ def render_sector(s, claims, preds, negs):
     if sec_negs:
         L += ["| Tag | Branch / claim | Failure mode |", "|---|---|---|"]
         for n in sec_negs:
-            L.append(f"| {pipe(n['tag'])} | {pipe(n['branch'][:60])} | {pipe(n['mode'][:140])} |")
+            L.append(f"| {pipe(n['tag'])} | {pipe(short(n['branch'], 60))} | "
+                     f"{pipe(short(n['mode'], 140))} |")
     else:
         L += ["_None referencing this sector's claims._"]
     L += ["", "---", "",

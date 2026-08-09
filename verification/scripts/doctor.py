@@ -93,7 +93,7 @@ def main() -> int:
            else f"MISSING {missing_pdf} -- run: pip install -r requirements.txt")
 
     # 3. canonical files present (resume needs these readable)
-    needed = ["CLAUDE.md", "GOVERNANCE.md", "CLAIMS.md", "ROADMAP.md",
+    needed = ["AGENTS.md", "CLAUDE.md", "GOVERNANCE.md", "CLAIMS.md", "ROADMAP.md",
               "CHANGELOG.md", "TODO.md", "todo/todo.json",
               "negative-results/registry.md", "explorations/log.jsonl",
               "SESSION.md"]

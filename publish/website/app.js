@@ -3,25 +3,29 @@
  * content files: the repo itself is the only source of truth
  * (governance/publication-tiers.md, live-fetch architecture).
  *
- * __version__ 1.1.0 · first issued 2026-06-05 · issued 2026-06-06
+ * __version__ 1.2.0 · first issued 2026-06-05 · issued 2026-08-10
  * 1.0.1: exclude claims/_TEMPLATE from the live ledger (same defect as build_wiki 1.0.1)
  * 1.1.0: live per-claim Development lineage (LINEAGE.md) + Results-ledger route
  * 1.1.1: strategy/ route (non-tier-bearing analysis notes)
+ * 1.2.0: compact catalog-summary bootstrap, exact live-card paths, paginated
+ *        catalog rendering, and bounded changelog landing.
  */
 "use strict";
 
 /* ---- repository autodetection (owner.github.io/<repo>/) ------------------ */
 const REPO_FALLBACK = "";            // "owner/repo" — used off-Pages (e.g. local preview)
+const SLUG_RE = /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/;
 function repoSlug() {
   const q = new URLSearchParams(location.search).get("repo");
-  if (q) return q;
+  if (q) return SLUG_RE.test(q) ? q : "";
   const host = location.hostname;        // owner.github.io
   if (host.endsWith(".github.io")) {
     const owner = host.split(".")[0];
     const seg = location.pathname.split("/").filter(Boolean)[0];
-    if (seg) return owner + "/" + seg;
+    const candidate = seg ? owner + "/" + seg : "";
+    if (SLUG_RE.test(candidate)) return candidate;
   }
-  return REPO_FALLBACK;
+  return SLUG_RE.test(REPO_FALLBACK) ? REPO_FALLBACK : "";
 }
 const SLUG = repoSlug();
 const RAW  = s => `https://raw.githubusercontent.com/${SLUG}/main/${s}`;
@@ -40,15 +44,32 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":
 const tierClass = (t, life) => life === "REFUTED" ? "refuted" : (t || "").toLowerCase();
 function typeset() { if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([app]); }
 function md(text) { return marked.parse(text, {mangle: false, headerIds: false}); }
+function rewriteRepoLinks(root, sourcePath) {
+  if (!root) return;
+  const blobBase = BLOB(sourcePath);
+  const rawBase = RAW(sourcePath);
+  root.querySelectorAll("a[href]").forEach(link => {
+    const href = link.getAttribute("href");
+    if (!href || /^(?:https?:|mailto:)/i.test(href)) return;
+    link.href = href.startsWith("#") ? blobBase + href : new URL(href, blobBase).href;
+  });
+  root.querySelectorAll("img[src]").forEach(img => {
+    const src = img.getAttribute("src");
+    if (!src || /^(?:https?:|data:)/i.test(src)) return;
+    img.src = new URL(src, rawBase).href;
+  });
+}
 
 /* ---- data loading --------------------------------------------------------- */
 async function loadClaims() {
-  const cat = await fetchJSON("verification/catalog.json");
-  const paths = cat.entries.filter(e => e.kind === "claim-card" && e.path.endsWith("status.json")
-    && !e.path.includes("/_")).map(e => e.path);
+  const summary = await fetchJSON("verification/catalog-summary.json");
+  const paths = summary.claim_status_paths;
   const cards = await Promise.all(paths.map(fetchJSON));
+  if (cards.length !== summary.claim_count) {
+    throw new Error(`live claim index mismatch: ${cards.length}/${summary.claim_count}`);
+  }
   cards.sort((a, b) => a.id.localeCompare(b.id));
-  return {cards, catalog: cat};
+  return {cards, catalogSummary: summary};
 }
 
 /* ---- views ----------------------------------------------------------------- */
@@ -77,7 +98,8 @@ async function viewOverview() {
       ${Object.entries(tiers).sort().map(([t, n]) => `<span class="pill ${tierClass(t)}">${t}: ${n}</span>`).join(" ")}
       <p class="muted">${t7c} T7-candidates awaiting verification packages</p></div>
     <div class="card"><h3>Open gates (by citing claims)</h3>${gateRows}
-      <p class="muted">Top priority: STEP-5B — the gateway for any whole-Reading-H T6 discussion.</p></div>
+      <p class="muted">Current priorities are read from the live <a href="#/roadmap">roadmap</a>
+      and task ledger; this overview does not hardcode a stale gate.</p></div>
     <div class="card"><h3>Falsify us</h3>
       <p>Every claim ships its falsification condition and, where available, a
       one-command reproduction. Start at <a href="#/reviewing">Review TECT</a>.</p></div>
@@ -140,27 +162,30 @@ async function viewClaim(id) {
      <span class="pill">${esc(c.lifecycle)}</span>
      <span class="pill">sector ${esc(c.sector)}</span>
      <span class="pill">reviewed ${esc(c.last_review)}</span></p>
-  <h3>Statement</h3><p>${c.statement}</p>
+  <h3>Statement</h3><p>${esc(c.statement)}</p>
   <h3>Scope</h3><p>${esc(c.scope)}</p>
   ${c.hypotheses.length ? `<h3>Hypotheses</h3><p>${c.hypotheses.map(h => `<span class="pill">${esc(h)}</span>`).join(" ")}
      <a href="#/gates">(registry)</a></p>` : ""}
   ${c.open_gates.length ? `<h3>Open gates</h3><p>${c.open_gates.map(g => `<span class="pill">${esc(g)}</span>`).join(" ")}</p>` : ""}
-  <h3>Falsifier</h3><p>${c.falsifier}</p>
+  <h3>Falsifier</h3><p>${esc(c.falsifier)}</p>
   <h3>Reproduction</h3><p><code>${esc(c.reproduction.command || "package pending")}</code><br>
      <span class="muted">${esc(c.reproduction.expected || "")}</span></p>
   <h3>No-overclaim</h3><p class="notice">${esc(c.no_overclaim)}</p>
   <h3>Evidence</h3><ul>${ev}</ul>
-  <details><summary>Full card (claims/${esc(id)}/claim.md)</summary>${cardMd}</details>
+  <details><summary>Full card (claims/${esc(id)}/claim.md)</summary>
+    <div id="claim-card-md">${cardMd}</div></details>
   <h3>Development lineage</h3>
   <p class="muted">The ordered theory-development trace for this claim, live from
      <a href="${BLOB(`claims/${id}/LINEAGE.md`)}"><code>claims/${esc(id)}/LINEAGE.md</code></a>
      (generated from note banners).</p>
   <div id="lineage"><p class="muted">Loading lineage…</p></div>`;
+  rewriteRepoLinks(document.getElementById("claim-card-md"), `claims/${id}/claim.md`);
   typeset();
   try {
     const lin = await fetchText(`claims/${id}/LINEAGE.md`);
     document.getElementById("lineage").innerHTML =
       `<details open><summary>development arc + chronological note-lineage</summary>${md(lin)}</details>`;
+    rewriteRepoLinks(document.getElementById("lineage"), `claims/${id}/LINEAGE.md`);
     typeset();
   } catch (e) {
     document.getElementById("lineage").innerHTML =
@@ -171,38 +196,89 @@ async function viewClaim(id) {
 async function mdPage(title, path) {
   app.innerHTML = `<h2>${esc(title)}</h2>
     <p class="muted">Rendered live from <a href="${BLOB(path)}"><code>${esc(path)}</code></a>.</p>
-    <div>${md(await fetchText(path))}</div>`;
+    <div id="md-page-body">${md(await fetchText(path))}</div>`;
+  rewriteRepoLinks(document.getElementById("md-page-body"), path);
   typeset();
 }
 
 async function viewCatalog() {
-  const cat = await fetchJSON("verification/catalog.json");
-  const kinds = [...new Set(cat.entries.map(e => e.kind))];
-  const rows = cat.entries.map(e => `<tr><td><a href="${BLOB(e.path)}">${esc(e.path)}</a></td>
-    <td>${esc(e.kind)}</td><td>${e.claims.map(esc).join(", ") || "—"}</td>
-    <td>${esc(e.version || "—")}</td><td>${esc(e.first_issued || "—")}</td>
-    <td>${esc(e.version_issued || "—")}</td><td>${esc(e.lifecycle)}</td></tr>`).join("");
-  app.innerHTML = `<h2>Catalog — every tracked artefact (${cat.entries.length})</h2>
-    <p class="muted">Generated ${esc(cat.generated)} · kinds: ${kinds.map(esc).join(", ")}</p>
-    <table><thead><tr><th>Path</th><th>Kind</th><th>Claims</th><th>Ver</th>
-    <th>First issued</th><th>Version issued</th><th>Lifecycle</th></tr></thead>
-    <tbody>${rows}</tbody></table>`;
+  const summary = await fetchJSON("verification/catalog-summary.json");
+  const manifest = await fetchJSON("verification/catalog/index.json");
+  const kinds = summary.kinds.map(row => row.kind);
+  const pageSize = 100;
+  let page = 0;
+  let loaded = [];
+  app.innerHTML = `<h2>Catalog — every tracked artefact (${manifest.total})</h2>
+    <p class="muted">The manifest is compact. One kind shard is fetched on selection;
+    loading every kind requires an explicit choice.</p>
+    <p><select id="ck"><option value="">choose a kind</option>
+      <option value="__all__">all kinds (load all shards)</option>${kinds.map(k =>
+      `<option value="${esc(k)}">${esc(k)}</option>`).join("")}</select>
+      <input id="cq" placeholder="path, claim, or version…"></p>
+    <div id="catalog-page"></div>`;
+  const render = () => {
+    const kind = document.getElementById("ck").value;
+    const q = document.getElementById("cq").value.toLowerCase();
+    if (!kind) {
+      document.getElementById("catalog-page").innerHTML = `<table><thead><tr>
+        <th>Kind</th><th>Artefacts</th><th>Canonical bytes</th></tr></thead><tbody>
+        ${summary.kinds.map(row => `<tr><td>${esc(row.kind)}</td><td>${row.count}</td>
+        <td>${row.bytes.toLocaleString()}</td></tr>`).join("")}</tbody></table>`;
+      return;
+    }
+    const filtered = loaded.filter(e => (!q ||
+      `${e.path} ${e.claims.join(" ")} ${e.version || ""}`.toLowerCase().includes(q)));
+    const pages = Math.max(1, Math.ceil(filtered.length / pageSize));
+    page = Math.min(page, pages - 1);
+    const visible = filtered.slice(page * pageSize, (page + 1) * pageSize);
+    const rows = visible.map(e => `<tr><td><a href="${BLOB(e.path)}">${esc(e.path)}</a></td>
+      <td>${esc(e.kind)}</td><td>${e.claims.map(esc).join(", ") || "—"}</td>
+      <td>${esc(e.version || "—")}</td><td>${esc(e.first_issued || "—")}</td>
+      <td>${esc(e.version_issued || "—")}</td><td>${esc(e.lifecycle)}</td></tr>`).join("");
+    document.getElementById("catalog-page").innerHTML = `
+      <p class="muted">${filtered.length} matches · page ${page + 1}/${pages} · at most ${pageSize} rows</p>
+      <p><button id="cp" ${page === 0 ? "disabled" : ""}>previous</button>
+         <button id="cn" ${page + 1 >= pages ? "disabled" : ""}>next</button></p>
+      <table><thead><tr><th>Path</th><th>Kind</th><th>Claims</th><th>Ver</th>
+      <th>First issued</th><th>Version issued</th><th>Lifecycle</th></tr></thead>
+      <tbody>${rows}</tbody></table>`;
+    document.getElementById("cp").addEventListener("click", () => { page--; render(); });
+    document.getElementById("cn").addEventListener("click", () => { page++; render(); });
+  };
+  document.getElementById("ck").addEventListener("input", async () => {
+    page = 0;
+    const kind = document.getElementById("ck").value;
+    if (!kind) {
+      loaded = [];
+      render();
+      return;
+    }
+    document.getElementById("catalog-page").innerHTML = `<p class="muted">Loading shard…</p>`;
+    const selected = kind === "__all__" ? manifest.shards :
+      manifest.shards.filter(row => row.kind === kind);
+    const shards = await Promise.all(selected.map(row => fetchJSON(row.path)));
+    loaded = shards.flatMap(shard => shard.entries);
+    render();
+  });
+  document.getElementById("cq").addEventListener("input", () => { page = 0; render(); });
+  render();
 }
 
 /* ---- router ----------------------------------------------------------------- */
 const routes = {
   "": viewOverview,
   "claims": viewClaims,
-  "gates": () => mdPage("Gate & hypothesis registry", "claims/GATES.md"),
-  "roadmap": () => mdPage("Roadmap", "ROADMAP.md"),
+  "gates": () => mdPage("Gate & hypothesis index", "claims/GATES-INDEX.md"),
+  "roadmap": () => mdPage("Current research management", "management/INDEX.md"),
   "catalog": viewCatalog,
-  "negative": () => mdPage("Negative-result registry", "negative-results/registry.md"),
+  "negative": () => mdPage("Negative-result and audit index", "negative-results/INDEX.md"),
   "predictions": () => mdPage("Prediction ledger", "predictions/prediction-ledger.md"),
   "reviewing": () => mdPage("How to review (or attack) TECT", "REVIEWING.md"),
-  "results": () => mdPage("Standalone-publishable results (R-NNN)", "RESULTS-LEDGER.md"),
+  "results": () => mdPage("Reusable results index", "results/INDEX.md"),
+  "evidence": () => mdPage("Proof-evidence entry", "theory/proof-evidence/INDEX.md"),
   "strategy": () => mdPage("Strategy & analysis notes", "strategy/INDEX.md"),
   "lineage-policy": () => mdPage("Development-history policy", "governance/development-history.md"),
-  "changelog": () => mdPage("Changelog", "CHANGELOG.md"),
+  "changelog": () => mdPage("Changelog", "changelog/INDEX.md"),
 };
 async function route() {
   if (!SLUG) {
@@ -210,8 +286,12 @@ async function route() {
       or append <code>?repo=owner/name</code> to the URL.</p>`;
     return;
   }
-  document.getElementById("repolink").innerHTML =
-    `Repository: <a href="https://github.com/${SLUG}">${SLUG}</a>`;
+  const repoLink = document.getElementById("repolink");
+  repoLink.textContent = "Repository: ";
+  const anchor = document.createElement("a");
+  anchor.href = `https://github.com/${SLUG}`;
+  anchor.textContent = SLUG;
+  repoLink.appendChild(anchor);
   const h = location.hash.replace(/^#\/?/, "");
   app.innerHTML = `<p class="muted">Loading…</p>`;
   try {

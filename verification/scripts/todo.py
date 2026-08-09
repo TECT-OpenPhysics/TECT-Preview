@@ -52,7 +52,7 @@ STATUS_LABEL = {
     "next": "Next up",
     "blocked": "Blocked",
     "backlog": "Backlog",
-    "done": "Done (recent)",
+    "done": "Done (compatibility history)",
 }
 
 
@@ -108,7 +108,9 @@ def render_text(db: dict) -> str:
         "Generated from `todo/todo.json` by `verification/scripts/todo.py` -- "
         "**never hand-edit**; run `todo.py render`.",
         "Portable: copying the TECT folder carries this ledger; a fresh cowork "
-        "session reads it in the session-entry prelude (CLAUDE.md §1).",
+        "session reads it in the session-entry prelude (AGENTS.md §1).",
+        "For bounded daily reading use `management/INDEX.md`; this compatibility "
+        "view deliberately preserves every completed task.",
         "",
         "Counts: " + " · ".join(f"{STATUS_LABEL[s]} {counts[s]}" for s in STATUS_ORDER),
         "",
@@ -252,7 +254,7 @@ def selftest() -> int:
         # render is a pure function (idempotent) -> --check stability
         a = render_text(db); b = render_text(db)
         assert a == b, "render not deterministic"
-        assert "T-001" in a and "Done (recent)" in a, "render content"
+        assert "T-001" in a and "Done (compatibility history)" in a, "render content"
         # empty ledger renders without crashing
         assert render_text({"tasks": [], "next_id": 1}).startswith("# TODO"), "empty render"
     print("TODO-SELFTEST: PASS (id derivation, persist, transitions, deterministic render)")

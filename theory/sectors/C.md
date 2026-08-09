@@ -32,34 +32,34 @@ Tier profile: T6x4 T5x1 T1x1
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
-| NG-2026-08-09-PRE-A-CP1-CL8-RAW-PERIODIC-EO-RECTANGLE-QUOTIENT | a straight-routed block rectangle is not one raw fixed-site  |  |
-| NG-2026-08-09-PRE-A-CP1-CL8-UNIVERSAL-PERIODIC-QUADRATIC-SHADOW-GIBBS | the admitted macro domain has no universal positive quadrati |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-PRESSURE-VALUE-ONLY-PHASE-CLASSIFICATION | a pressure value or common pressure does not classify the ph |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-TRANSVERSE-ZERO-RESTRICTION-AS-INTERACTING-MARGINAL | bare restriction does not establish an interacting marginal |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-INTERACTING-GROUND-PROJECTIVITY | the registered interacting ground is not naturally projectiv |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-FINITE-CIRCLE-WITNESS-ZERO-TEMPERATURE-DENSITY | pointwise circle strictness does not prove a strict zero-tem |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-FIXED-VOLUME-UI-PERIODIC-SHARP-SURFACE-PAIRING | fixed-volume uniform integrability does not prove the period |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-FIXED-RAW-QUADRATIC-FINITE-Q3-RENORMALIZED-LIMIT | a fixed raw quadratic is not a fixed finite renormalized Q3  |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-WICK-L2-ONLY-INTERACTING-DENSITY-LIMIT | Wick-action L2 convergence alone does not control exponentia |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-NODAL-SPECTRAL-FINITE-EXACT-INTERTWINER | centered nodal and spectral-spatial quartics are not one fin |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-STRANG-ONE-SLICE-EXACT-HAMILTONIAN-SEMIGROUP | the explicit symmetric slice is not the exact registered int |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-EUCLIDEAN-HEAT-SUPPORT-PHYSICAL-LIGHT-CONE | Euclidean heat support is full rather than conical |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-FULL-EUCLIDEAN-SHARP-CUTOFF-REFLECTION-POSITIVITY | the induced N=1 projected simultaneous sharp-cutoff law is n |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE | configuration characteristics do not determine the momentum  |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-CONSTRUCTIVE-NORMALIZABILITY-ONLY-PHYSICAL-STATE-SELECTION | normalizability is not a state-selection principle |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-ABSTRACT-COMPACTNESS-ONLY-REGULAR-CONTINUUM-STATE | weak-star compactness alone does not supply Weyl regularity |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-EXACT-DYNAMICS-EQUIVARIANCE | the declared natural low-mode factor is not exactly invarian |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-POINTWISE-STABILITY-GAUSSIAN-TRIAL-UNIFORM-ENERGY | one scalar cannot close both local stability and the same-Ga |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-GAUSSIAN-LOW-MODE-EXACT-PROJECTIVITY | inherited centered Gaussian states are not naturally project |  |
-| NG-2026-08-04-PRE-A-CP1-CL8-CRITICAL-COMPACT-GAUSSIAN-NORMAL-GROUND | the compact critical quadratic zero mode has no normalizable |  |
-| NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE | finite autonomous equilibrium channels have no delayed varia |  |
-| NG-2026-08-03-PRE-A-CP1-ST8-ONE-CONNECTED-SCALAR-EQUIVALENCE | no exact reduction to one connected standard scalar |  |
-| NG-2026-08-03-PRE-A-PAH1-PAM2-UNCHANGED-INTERFACE | the current PA-H1 and PA-M2 fixtures cannot be identified un |  |
-| NG-2026-08-03-PRE-A-C0A-FINITE-HILBERT-BOUNDED-LOG-LIFT | finite spatial modes do not make the Gaussian quantum Hilber |  |
-| NG-2026-08-03-PRE-A-C0A-REVERSIBILITY-WITHOUT-POSITIVE-TRANSFER | reversibility and link positivity do not by themselves suppl |  |
-| NG-2026-08-03-PRE-A-C0B-FINITE-TRANSITIVE-DETERMINISTIC-ORDER-SELECTION | a finite transitive state cannot naturally select a nonempty |  |
-| NG-2026-08-03-PRE-A-C0-STATIC-FUNCTIONAL-DYNAMICAL-COMPLETION | static data do not identify a unique temporal completion |  |
-| NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM | the pinned unconstrained M1 functional has no nonzero equili |  |
+| NG-2026-08-09-PRE-A-CP1-CL8-RAW-PERIODIC-EO-RECTANGLE-QUOTIENT | a straight-routed block rectangle is not one raw… | Quotient an open `m`-by-`n` straight-routed macro |
+| NG-2026-08-09-PRE-A-CP1-CL8-UNIVERSAL-PERIODIC-QUADRATIC-SHADOW-GIBBS | the admitted macro domain has no universal positive… | Infer from symplecticity, global mixed invertibility, exact |
+| NG-2026-08-04-PRE-A-CP1-CL8-PRESSURE-VALUE-ONLY-PHASE-CLASSIFICATION | a pressure value or common pressure does not classify the… | Infer phase uniqueness, phase coexistence, spontaneous |
+| NG-2026-08-04-PRE-A-CP1-CL8-TRANSVERSE-ZERO-RESTRICTION-AS-INTERACTING-MARGINAL | bare restriction does not establish an interacting marginal | Identify the inserted one-dimensional Q3 comparator with |
+| NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-INTERACTING-GROUND-PROJECTIVITY | the registered interacting ground is not naturally… | For even `M>=4` and `N=2M`, identify the coarse oscillator |
+| NG-2026-08-04-PRE-A-CP1-CL8-FINITE-CIRCLE-WITNESS-ZERO-TEMPERATURE-DENSITY | pointwise circle strictness does not prove a strict… | Infer |
+| NG-2026-08-04-PRE-A-CP1-CL8-FIXED-VOLUME-UI-PERIODIC-SHARP-SURFACE-PAIRING | fixed-volume uniform integrability does not prove the… | Infer a cutoff-, volume- and interpolation-uniform |
+| NG-2026-08-04-PRE-A-CP1-CL8-FIXED-RAW-QUADRATIC-FINITE-Q3-RENORMALIZED-LIMIT | a fixed raw quadratic is not a fixed finite renormalized… | Keep the original inserted-one-dimensional CL8 raw |
+| NG-2026-08-04-PRE-A-CP1-CL8-WICK-L2-ONLY-INTERACTING-DENSITY-LIMIT | Wick-action L2 convergence alone does not control… | Infer `L1` or total-variation convergence of normalized |
+| NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-NODAL-SPECTRAL-FINITE-EXACT-INTERTWINER | centered nodal and spectral-spatial quartics are not one… | Identify one finite centered-nodal CL8 spatial potential or |
+| NG-2026-08-04-PRE-A-CP1-CL8-STRANG-ONE-SLICE-EXACT-HAMILTONIAN-SEMIGROUP | the explicit symmetric slice is not the exact registered… | Identify |
+| NG-2026-08-04-PRE-A-CP1-CL8-EUCLIDEAN-HEAT-SUPPORT-PHYSICAL-LIGHT-CONE | Euclidean heat support is full rather than conical | Read a Lorentzian causal cone or physical limiting speed |
+| NG-2026-08-04-PRE-A-CP1-CL8-FULL-EUCLIDEAN-SHARP-CUTOFF-REFLECTION-POSITIVITY | the induced N=1 projected simultaneous sharp-cutoff law… | Infer reflection positivity of the induced `N=1` projected |
+| NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE | configuration characteristics do not determine the… | Promote convergence of every time-zero configuration |
+| NG-2026-08-04-PRE-A-CP1-CL8-CONSTRUCTIVE-NORMALIZABILITY-ONLY-PHYSICAL-STATE-SELECTION | normalizability is not a state-selection principle | Infer a unique canonical or physical state from the Q3 |
+| NG-2026-08-04-PRE-A-CP1-CL8-ABSTRACT-COMPACTNESS-ONLY-REGULAR-CONTINUUM-STATE | weak-star compactness alone does not supply Weyl regularity | Infer a regular interacting continuum state solely from |
+| NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-EXACT-DYNAMICS-EQUIVARIANCE | the declared natural low-mode factor is not exactly… | Within the inserted one-dimensional CL8 family with |
+| NG-2026-08-04-PRE-A-CP1-CL8-POINTWISE-STABILITY-GAUSSIAN-TRIAL-UNIFORM-ENERGY | one scalar cannot close both local stability and the… | For fixed `g,lambda,m_R,eta_R`, use one scalar energy shift |
+| NG-2026-08-04-PRE-A-CP1-CL8-CENTERED-GAUSSIAN-LOW-MODE-EXACT-PROJECTIVITY | inherited centered Gaussian states are not naturally… | Identify the inherited centered-lattice Gaussian ground |
+| NG-2026-08-04-PRE-A-CP1-CL8-CRITICAL-COMPACT-GAUSSIAN-NORMAL-GROUND | the compact critical quadratic zero mode has no… | Extend the massive ordered-tangent Gaussian ground to a |
+| NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE | finite autonomous equilibrium channels have no delayed… | Infer an exact finite-speed compact-support domain of |
+| NG-2026-08-03-PRE-A-CP1-ST8-ONE-CONNECTED-SCALAR-EQUIVALENCE | no exact reduction to one connected standard scalar | Identify the LT3/ST8 Hamiltonian at fixed finite regulator |
+| NG-2026-08-03-PRE-A-PAH1-PAM2-UNCHANGED-INTERFACE | the current PA-H1 and PA-M2 fixtures cannot be identified… | Treat the current PA-H1 finite image and current PA-M2 CI8 |
+| NG-2026-08-03-PRE-A-C0A-FINITE-HILBERT-BOUNDED-LOG-LIFT | finite spatial modes do not make the Gaussian quantum… | Extend the earlier finite-state C0-A theorem to a |
+| NG-2026-08-03-PRE-A-C0A-REVERSIBILITY-WITHOUT-POSITIVE-TRANSFER | reversibility and link positivity do not by themselves… | Infer a nonnegative self-adjoint Hamiltonian from an |
+| NG-2026-08-03-PRE-A-C0B-FINITE-TRANSITIVE-DETERMINISTIC-ORDER-SELECTION | a finite transitive state cannot naturally select a… | Start from a finite substrate state with a vertex-transitive |
+| NG-2026-08-03-PRE-A-C0-STATIC-FUNCTIONAL-DYNAMICAL-COMPLETION | static data do not identify a unique temporal completion | Close Pre-A's causal-origin fork, or infer a unique physical |
+| NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM | the pinned unconstrained M1 functional has no nonzero… | Continue a finite BCC-versus-flat, symmetry-star, |
 | R-2026-legacy-newtonG-label | Newton $G$ "independently predicted / T7" label | independent prediction missing ($a_{\rm BCC}$ fixed by $G_{\rm obs}$) |
 
 ---

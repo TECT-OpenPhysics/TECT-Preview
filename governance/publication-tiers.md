@@ -37,8 +37,11 @@ P2 is **derived** from P1. Two channels, separate folders, separate rules:
 - Audience: general/scientific public. The website is a **static shell only**
   (`index.html`, `app.js`, `style.css`): at view time the JavaScript fetches
   the repository's `main` branch directly
-  (`raw.githubusercontent.com/<owner>/<repo>/main/...`) — the manifest is
-  `verification/catalog.json`, claims render from `claims/*/status.json`,
+  (`raw.githubusercontent.com/<owner>/<repo>/main/...`) — the lightweight
+  bootstrap is `verification/catalog-summary.json`, whose exact top-level paths
+  select live claim cards. The Catalog route fetches the thin
+  `verification/catalog/index.json` and only the selected kind shard; loading
+  every shard is explicit. Claims render from `claims/*/status.json`,
   registries/roadmap render from their Markdown sources (marked + MathJax,
   CDN). **There are no content files in `publish/website/` at all**, hence
   nothing to regenerate and nothing that can go stale: push = the site is
@@ -48,9 +51,10 @@ P2 is **derived** from P1. Two channels, separate folders, separate rules:
   literal — everything displayed is fetched. Shell changes are layout only.
 - Rule W2′: the shell auto-detects `<owner>/<repo>` from the GitHub Pages URL
   (override: `?repo=owner/name`); it carries no hard-coded repository name.
-- Deployment: `.github/workflows/pages.yml` uploads `publish/website/` via
-  GitHub Actions Pages on every push to `main` (Settings → Pages → Source =
-  GitHub Actions). This fully replaces the legacy website.
+- Deployment: `.github/workflows/pages.yml` runs `release_check.py` and then
+  uploads `publish/website/` via GitHub Actions Pages on every push to `main`
+  (Settings → Pages → Source = GitHub Actions). The shell and generated data
+  therefore come from one release-gated commit.
 
 ### GitHub Wiki — generated snapshot channel
 

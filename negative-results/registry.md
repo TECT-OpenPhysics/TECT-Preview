@@ -1,5 +1,8 @@
 # Negative-Result Registry
 
+> **Reader route:** start with the bounded [`INDEX.md`](INDEX.md) and open this
+> append-only trust authority only at the required failure or audit anchor.
+
 Failures are trust assets. Entries are never deleted. Format:
 (branch/claim | failure mode | evidence | consequence). Tags: `R-` retracted
 result, `F-` fired falsification gate, `NG-` no-go finding.

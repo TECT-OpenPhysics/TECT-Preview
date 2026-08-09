@@ -4,18 +4,22 @@
 repository. Deliberately short: the constitution is `GOVERNANCE.md`; this file
 is only the session protocol.
 
-## 1. Session-entry sequence (read-only, in order)
+## 1. Session-entry sequence (read-only, bounded)
 
-1. `GOVERNANCE.md` (constitution)
-2. `CLAIMS.md` (current ledger state)
-3. `ROADMAP.md` (priority queue)
-4. `CHANGELOG.md` (top entry)
-5. `negative-results/registry.md` (top entries)
-6. `explorations/log.jsonl` (latest proof-route decisions)
-7. `TODO.md` (live task ledger — what is in progress / next)
+1. As the **first shell command**, capture the UTC date using the host-native
+   equivalent: POSIX `date -u +"%Y-%m-%d (%A)"`; Windows PowerShell
+   `(Get-Date).ToUniversalTime().ToString('yyyy-MM-dd (dddd)',
+   [Globalization.CultureInfo]::InvariantCulture)`.
+2. Read `GOVERNANCE.md` (constitution), `CLAIMS.md` (current claim state), and
+   `management/INDEX.md` (bounded current research/task/gate dashboard).
+3. Read `changelog/INDEX.md`, `negative-results/INDEX.md`, and only the latest
+   few `explorations/log.jsonl` records relevant to the active task.
+4. Query live tasks with `todo.py list --status in_progress`, then `--status
+   next` and `--status blocked`. `TODO.md` and `ROADMAP.md` are detailed views;
+   open only the relevant task/stage section rather than loading them as the
+   priority source.
 
-Then run `date -u +"%Y-%m-%d (%A)"` as the first shell command and emit one
-status line: `[ENTRY-OK] <date> | claims: <n> | top priority: <gate>`.
+Emit one status line: `[ENTRY-OK] <date> | claims: <n> | top priority: <gate>`.
 
 On a freshly copied workspace, run `python verification/scripts/doctor.py`
 first (readiness gate) and follow `SESSION.md` to resume.
@@ -49,9 +53,15 @@ Do not load the complete map when a narrow lookup is sufficient.
   parent to write, not write tracked files itself.
 - Never create files at the repository root beyond the canonical set
   (README, GOVERNANCE, ROADMAP, REVIEWING, CLAIMS, CATALOG, CHANGELOG,
-  RESULTS-LEDGER, TODO, SESSION, AGENTS.md, requirements.txt, .gitignore).
-- `CATALOG.md` + `verification/catalog.json` are generated — never hand-edit.
-  Regenerate with `python verification/scripts/build_catalog.py` after any
+  RESULTS-LEDGER, TODO, SESSION, AGENTS.md, CLAUDE.md, requirements.txt,
+  .gitattributes, .gitignore). `CLAUDE.md` is a compatibility pointer to
+  `AGENTS.md`, not a
+  second protocol.
+- `catalog/INDEX.md`, `verification/catalog-summary.json`, and the manifest/shards
+  under `verification/catalog/` are generated — never hand-edit. `CATALOG.md`
+  and `verification/catalog.json` are frozen pre-cutover compatibility volumes
+  and must not change. Regenerate current surfaces with
+  `python verification/scripts/build_catalog.py` after any
   file add/move/version; CI checks sync.
 - `theory/proof-evidence-map.md` + `verification/proof-evidence-map.json` are
   generated — never hand-edit. They project all current claims, accepted
@@ -59,15 +69,21 @@ Do not load the complete map when a narrow lookup is sufficient.
   and evidence paths.
   Regenerate with `python verification/scripts/build_proof_evidence_map.py`;
   policy: `governance/proof-evidence-map.md`.
+- `management/INDEX.md`, `results/INDEX.md`, `negative-results/INDEX.md`,
+  `claims/GATES-INDEX.md`, their locator JSONs, and
+  `theory/proof-evidence/INDEX.md` are generated compact reader surfaces. Never
+  hand-edit; regenerate with `build_management_indexes.py`.
 - `explorations/log.jsonl` is append-only — never edit or delete an existing
   line. Add one record or a batch with `python verification/scripts/exploration.py
   add --file ...`; corrections are new records. Policy:
   `governance/proof-exploration-ledger.md`.
 - `TODO.md` is generated from `todo/todo.json` — never hand-edit; manage with
   `python verification/scripts/todo.py {list,add,start,done,block,set,render}`.
-- `CHANGELOG.md` is generated from `changelog/log.jsonl` (append-only) — never
-  hand-edit. Add entries with `python verification/scripts/changelog.py add
-  --title ... --date ... --claims ...` (body on stdin); search with
+- `changelog/log.jsonl` is append-only. `CHANGELOG.md` is its frozen pre-cutover
+  compatibility volume; current generated readers are `changelog/INDEX.md`,
+  `changelog/index.json`, and bounded pages under `changelog/pages/` — never
+  hand-edit any of them. Add entries with `python verification/scripts/changelog.py
+  add --title ... --date ... --claims ...` (body on stdin); search with
   `changelog.py search [--claim|--keyword|--text|--fts]`. The query cache
   `changelog/.cache/changelog.db` is gitignored/rebuildable. Policy:
   `governance/changelog-db.md`.
@@ -79,7 +95,7 @@ Do not load the complete map when a narrow lookup is sufficient.
   / registry entry is already written to disk in the same response.
 - One substantive claim-card change per turn; atomic set per accepted result:
   claim card + a `changelog.py add` entry (-> `changelog/log.jsonl` + regenerated
-  `CHANGELOG.md`) + regenerated `CLAIMS.md` (+ `negative-results/` entry if a gate
+  compact index/page) + regenerated `CLAIMS.md` (+ `negative-results/` entry if a gate
   fired) in one commit.
 - Tier changes require the devil's-advocate self-test in the claim card
   (≥3 concrete objections, each DISMISSED/VALID-with-mitigation/UPHELD) and

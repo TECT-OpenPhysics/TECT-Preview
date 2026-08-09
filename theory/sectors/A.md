@@ -20,8 +20,8 @@ Tier profile: T6x9 T5x7 T4x5
 | [`A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION`](../../claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/INDEX.md) | T4 | — | A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE | Frozen-energy relative Class-II structural reduction |
 | [`A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION`](../../claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/INDEX.md) | T4 | — | A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND, A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE | Class-II true-increment determinant reduction |
 | [`A12-CLASSII-SOURCE-SQUARE-REDUCTION`](../../claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/INDEX.md) | T4 | — | — | Class-II sharp-cube source-square reduction |
-| [`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`](../../claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/INDEX.md) | T4 | — | A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION, A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE | Class-II source, translated model, balanced coefficient jets, and obstruction bo |
-| [`A2-FULL-PRODUCTION-WELLPOSED`](../../claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full production well-posedness, pinned equilibrium, and conditional charge-ensem |
+| [`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`](../../claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/INDEX.md) | T4 | — | A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION, A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE | Class-II source, translated model, balanced coefficient jets, and obstruction… |
+| [`A2-FULL-PRODUCTION-WELLPOSED`](../../claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full production well-posedness, pinned equilibrium, and conditional… |
 | [`A2-PDE-WELLPOSED`](../../claims/A2-PDE-WELLPOSED/INDEX.md) | T6 | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Well-posedness of the TECT gradient flow and minimisation problem |
 | [`A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM`](../../claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full-production spectral discretization to continuum PDE |
 | [`A3-PERTURBATIVE-CONTINUUM-CORRELATORS`](../../claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/INDEX.md) | T6 | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Cutoff-independent continuum limit of the perturbative correlators (conditional) |
@@ -45,141 +45,141 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
-| NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION | an incomplete admission conjunction cannot select a Pre-A ca |  |
-| NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION | coefficient-one direct harmonic coercivity does not tensoriz |  |
-| NG-2026-08-03-PA-M5-BARE-ISOTROPIC-SHELL-CAUSAL-CONE | the bare screened shell is not a joint Lorentz-gauge-critica |  |
-| NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM | the pinned unconstrained M1 functional has no nonzero equili |  |
-| NG-2026-08-03-A13-NONLINEAR-SHIFTED-STATE-PULLBACK-SOURCE-CONVEXITY | nonlinear controller coordinates destroy the apparent source |  |
-| NG-2026-08-03-A13-NONDEGENERATE-GAUSSIAN-PAST-CURRENT-DETERMINISTIC-LINFTY-COLLAR | absolute Gaussian past-current collars cannot close the full |  |
-| NG-2026-08-03-A13-LINEAR-PAIR-TESTS-DO-NOT-IMPLY-NONLINEAR-PREDICTABLE-GAP | averaged linear tests do not control the conditional nonline |  |
-| NG-2026-08-03-A13-PAIRWISE-LOCAL-GAPS-DO-NOT-IMPLY-MULTIROOT-GLOBAL-GAP | local gaps do not globalize across interacting roots |  |
-| NG-2026-08-03-A13-INDEPENDENT-FOREST-BALANCED-OWNER-FABRICATION | fixed-terminal owner coordinates are not independent reserve |  |
-| AUDIT-2026-08-03-A13-R125-MUTABLE-SURFACE-PINNING | separate immutable proof evidence from live routing |  |
-| NG-2026-08-02-A13-ZERO-CONTROL-FUTURE-VARIANCE-DOMINATION | the production future variance exceeds its raw endpoint budg |  |
-| AUDIT-2026-08-02-A13-R150-SCALAR-SLICE-AS-FULL-PRODUCTION-COVARIANCE | use the full A1 family covariance |  |
-| AUDIT-2026-08-02-A13-R150-COINCIDENT-CROSS-AS-PROJECTED-CROSS | local cancellation is not operator cancellation |  |
-| AUDIT-2026-08-02-A13-R150-ABSOLUTE-ATOM-AS-RELATIVE-SECANT | a positive endpoint does not order two endpoints |  |
-| NG-2026-08-02-A13-R150-LAST-ROOT-POSITIVITY-TO-FUTURE-FEEDBACK | the last-root sign does not propagate backward |  |
-| NG-2026-08-02-A13-ENDPOINT-MARGINALS-DETERMINE-FRESH-OWNER | endpoint marginals do not determine the fresh owner |  |
-| AUDIT-2026-08-02-A13-RADIAL-SLICE-NEGATIVE-AS-FULL-INTERNAL-OWNER | a radial coefficient saddle is not the full internal owner |  |
-| AUDIT-2026-08-02-A13-R149-REAL-COVARIANCE-DOUBLE-HALVING | do not apply the complex-to-real factor twice |  |
-| NG-2026-08-02-A13-R147-EXACT-CANONICAL-ACTIVE-SPECTATOR-LIFT | rank-one line cannot be appended unchanged to the canonical  |  |
-| NG-2026-08-02-A13-ACTIVE-SPECTATOR-JET-OWNER-COMPLETION | diagonal coefficient energy does not determine the complete  |  |
-| AUDIT-2026-08-02-A13-R147-ABSOLUTE-DEFECT-AS-RELATIVE-HESSIAN | differentiate the shifted owner twice |  |
-| NG-2026-08-02-A13-COMMON-TERMINAL-AUTOMATIC-SCALAR-SIGN | centering and a common terminal do not fix the scalar sign |  |
-| NG-2026-08-02-A13-ENDPOINT-LAW-OWNER-TRANSFER | terminal law does not determine sequential owners |  |
-| NG-2026-08-02-A13-PRODUCTION-PAIR-GLOBAL-CONVEXITY | the retained P+L coefficient pair is not globally convex |  |
-| AUDIT-2026-08-02-A13-R147-R063-FOREST-BRACKET-CONFLATION | condition the trace and keep the signed forest |  |
-| AUDIT-2026-08-02-A13-R146-OUTPUT-PROJECTION-OMISSION | restore the registered endpoint owner |  |
-| AUDIT-2026-08-02-A13-ZERO-CONTROL-RELATIVE-ANCHOR | the direct R-145 route is exactly relative |  |
-| NG-2026-08-02-A13-ARBITRARY-TEMPORAL-ANISOTROPIC-POSITIVE-SUBALLOCATION | a terminal positive remainder need not split under arbitrary |  |
-| NG-2026-08-02-A13-CANONICAL-COVARIANCE-AUTOMATIC-SCALAR-CANCELLATION | equal covariance does not control a same-root coefficient |  |
-| AUDIT-2026-08-02-A13-R129-TRACE-EXCESS-ACCEPTANCE-WINDOW | R-129 positive-action window is sufficient but nonsharp for  | The R-129 successor language treated `eta<9/20` and |
-| NG-2026-08-02-A13-LOCAL-STENCIL-PRODUCTION-SIGN-NONIDENTIFIABILITY | local packet data do not determine the complete action sign |  |
-| AUDIT-2026-08-02-A13-R144-FIBRE-SCHUR-COEFFICIENT-CORRECTION | the draft fibre reconstruction omitted the Schur term |  |
-| AUDIT-2026-08-02-A13-R144-SEXTIC-THRESHOLD-CORRECTION | the draft Hessian route used the wrong sextic threshold |  |
-| AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO | R-142 coherence fixture used a half-output and the wrong mov |  |
-| NG-2026-07-31-A13-WEDGE-ONLY-FUTURE-TELESCOPE | a moving wedge mask leaves internal endpoint variation |  |
-| NG-2026-07-31-A13-TAIL-ONLY-SHIFTED-DOUGLAS-HEADROOM | a vanishing collar tail does not create a strict gap |  |
-| NG-2026-07-31-A13-CHRONOLOGY-ONLY-SPATIAL-GRADE | temporal precedence is not a Fourier support theorem |  |
-| NG-2026-07-31-A13-BARE-LAST-INSERTION-R135-REANCHORING | future reveal weights cannot be relabelled for free |  |
-| NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY | post-heat means do not determine raw future variance |  |
-| NG-2026-07-31-A13-COVARIANCE-ENVELOPE-REBATE-ERASURE | a scalar norm envelope destroys the future-variance rebate |  |
-| NG-2026-07-31-A13-REFINEMENT-UNIFORM-LAST-BLOCK-ELLIPTICITY | a labelled final source increment has no directed-refinement |  |
-| NG-2026-07-31-A13-ELLIPTIC-GAUSSIAN-D4-FLOOR-UNIFORMITY | six-real ellipticity is critical at the fourth rational jet |  |
-| NG-2026-07-31-A13-POINTWISE-ELLIPTICITY-SPATIAL-FRACTIONAL-TRANSFER | pointwise anti-concentration does not control spatial oscill |  |
-| NG-2026-07-31-A13-SEPARATE-FLOOR-WEIGHTED-CURRENT-ENERGY-ABSORPTION | separate absolute action payments destroy the covariance-nor |  |
-| AUDIT-2026-07-31-A13-R132-POLYNOMIAL-RESPONSE-INTERTWINER-SCOPE | stopped-current support is not the complete physical respons |  |
-| NG-2026-07-31-A13-PREDICTABLE-SCORE-FINITE-ENERGY-TRANSFER | affine Gaussian scores do not extend from triangularity and  |  |
-| NG-2026-07-31-A13-GAMMA-FOUR-SIXTH-AMPLITUDE-ROUTE | the joint rational boundary layer needs a seventh amplitude  |  |
-| AUDIT-2026-07-31-A13-R132-GAMMA-FOUR-SUCCESSOR-SCOPE | fixed-collar acceptance does not require the old uniform far |  |
-| NG-2026-07-31-A13-DIAGONAL-HEAT-SEXTIC-TO-MIXED-RESPONSE | diagonal heat and sextic do not imply mixed-response coerciv |  |
-| NG-2026-07-31-A13-LAW-FREE-MIXED-RESPONSE-FLOOR-UNIFORMITY | complete six-row algebra alone is not floor-uniform over arb |  |
-| NG-2026-07-31-A13-DIAGONAL-GRAM-TO-MIXED-CONDITIONAL-RESPONSE | diagonal sample Grams do not determine the mixed conditional |  |
-| NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY | bounded frozen coefficients supply no automatic dyadic off-d |  |
-| NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY | one fixed heat law does not uniformly fill the Xi singlet de |  |
-| NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION | one common-phase quotient does not turn the Xi coefficient s |  |
-| NG-2026-07-31-A13-UNWEIGHTED-RATIONAL-D2-FLOOR-UNIFORMITY | separated rational second derivatives are not floor-uniform |  |
-| NG-2026-07-31-A13-COMPLETE-LOW-SQUARE-STRICT-GAP-REFINEMENT | a complete Gram square supplies no automatic strict gap or c |  |
-| AUDIT-2026-07-30-A13-COVARIANCE-NORMAL-DOMINANCE-ACTION-DIRECTION | covariance-normal dominance has the wrong direction for the  |  |
-| NG-2026-07-30-A13-SEPARATE-VARIANCE-TRACE-HESSIAN-NORM-NECESSITY | separate Hessian norms are not logically necessary for a sig |  |
-| NG-2026-07-30-A13-CONDITIONAL-POINCARE-PARAMETER-SEMICONVEXITY | source Poincare does not control an external parameter Hessi |  |
-| NG-2026-07-30-A13-ENTROPY-SECOND-SCORE-CONTROL | bounded relative entropy does not bound the conditional seco |  |
-| NG-2026-07-30-A13-TOTAL-COVARIANCE-TEMPORAL-SHELL-INTERTWINING | total Fourier covariance does not diagonalize every temporal |  |
-| NG-2026-07-30-A13-SWAPPED-GEOMETRIC-REVERSE-BAND-ADJOINT | the true adjoint orientation is not a swapped geometric cell |  |
-| AUDIT-2026-07-30-A13-R127-R119-CONTROL-HESSIAN-AUTHORITY | the fixed-chart control Hessian was already an R-119 theorem |  |
-| AUDIT-2026-07-30-A13-R126-COVARIANCE-NORMAL-FORCE-OMISSION | trace excess alone is not the complete covariance-normal for |  |
-| NG-2026-07-30-A13-CONTROL-MALLIAVIN-DERIVATIVE-CONFLATION | adapted feedback separates the two Hessians |  |
-| NG-2026-07-30-A13-ROOTWISE-COMMON-TERMINAL-INFERENCE | rootwise adapted means need not form one martingale |  |
-| NG-2026-07-30-A13-ONE-SIDED-SHELL-PROJECTION-ADJOINT | selfadjointness does not survive one-sided shell projection |  |
-| AUDIT-2026-07-30-A13-FORCE-COMPLETION-HESSIAN-DOUBLE-SPEND | the source square can be allocated only once |  |
-| NG-2026-07-30-A13-UNRESTRICTED-PREDICTABLE-COVARIANCE-COLLAPSE | blockwise predictability cannot collapse to the unrestricted |  |
-| NG-2026-07-30-A13-LOEWNER-SATURATION-LOW-COUPLING | the saturated two-channel budget cannot absorb a generic low |  |
-| NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR | normalized relative data cannot supply the absolute low anch |  |
-| NG-2026-07-30-A13-UNRESTRICTED-REVERSE-BAND-EXTENSION | forward decay does not extend coefficient-blindly to an unre |  |
-| NG-2026-07-30-A13-NAIVE-PRIMITIVE-TRACE-FOREST-IDENTIFICATION | conditional future variance separates primitive trace from t |  |
-| NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION | replica variance does not automatically dominate the trace s |  |
-| NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER | stationary six-row parity does not transfer to arbitrary ada |  |
-| NG-2026-07-30-A13-RAW-SIX-CURRENT-HESSIAN-POSITIVITY | the isolated raw six-current Hessian is indefinite |  |
-| NG-2026-07-30-A13-FIXED-PROFILE-CORRELATION-YOUNG-CUTOFF-UNIFORMITY | correlation alone does not supply arbitrary cutoff-uniform Y |  |
-| NG-2026-07-29-A13-FEEDBACK-DERIVATIVE-GRAPH-CLOSURE | graph convergence does not control feedback derivatives |  |
-| NG-2026-07-29-A13-ADAPTED-CARTAN-FIFTH-MOMENT-GRAPH-TRANSFER | source and sextic budgets do not imply the isolated fifth cu |  |
-| NG-2026-07-29-A13-SELFADJOINTNESS-CARTAN-CANCELLATION | selfadjoint completion retains a nonzero skew first-order co |  |
-| AUDIT-2026-07-29-A13-R119-R120-CARTAN-COMPANION-INFERENCE | path-space exactness does not require a local opposite curl |  |
-| NG-2026-07-29-A13-FIRST-ORDER-HMINUS-11-10-CARTAN-REUSE | zeroth-order rough regularity cannot pay a first-order Carta |  |
-| NG-2026-07-29-A13-BARE-JACOBIAN-HEAT-LOW-CHAOS-CANCELLATION | bare heat leaves a strict nonlinear mean debt |  |
-| NG-2026-07-28-A13-UNIVERSAL-PSD-RANDOM-W-DOUBLE-DIVERGENCE | the canonical two-visit preimage is signed |  |
-| NG-2026-07-28-A13-FIXED-SHELL-LIPSCHITZ-METRIC-REGULARITY | phase modulation defeats a local distance-to-current error b |  |
-| NG-2026-07-28-A13-CENTERED-QUADRATIC-NULL-CONE-NORMALIZER | exact centering and finite unweighted tensor costs do not co |  |
-| NG-2026-07-28-A13-FULL-WICK-TENSOR-NORMALIZER | exact full-Wick centering retains a sharp null-cone domain |  |
-| NG-2026-07-28-A13-SEPARATED-INTERPOLATION-CROSS-SCORE-BUDGET | the baseline cancellation belongs to the complete endpoint |  |
-| AUDIT-2026-07-28-A13-GAUGE-NULL-RANKTWO-ROOT-SCOPE | a gauge-null face is not an independently revealable product |  |
-| NG-2026-07-28-A13-K2K-EXACT-KS-POST-EXTENSION | the sharp two-moment coefficient fails immediately after its |  |
-| NG-2026-07-28-A13-FOUR-MOMENT-RESERVE-ONLY | lower support, four moments, and positive reserve do not imp |  |
-| NG-2026-07-28-A13-K2K-CUBIC-KS-PROXY-BEYOND-CONE | the cubic Bernoulli proxy does not extend the selected floor |  |
-| NG-2026-07-28-A13-K2K-BESSEL-CROSS-CONTRACTION-ORIGIN-DEBT | the stable cross contraction creates a false linear origin d | combine `I_0(z)<=e^z` with `2sqrt(ab)<=a+b` to replace the |
+| NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION | an incomplete admission conjunction cannot select a Pre-A… | Declare a round-one winner, shortlist, candidate survival, |
+| NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION | coefficient-one direct harmonic coercivity does not… | Extend the R-166 single-fresh-pair inequality |
+| NG-2026-08-03-PA-M5-BARE-ISOTROPIC-SHELL-CAUSAL-CONE | the bare screened shell is not a joint… | Use the bare `PA-M5-NL3-SV-v0` functional as a |
+| NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM | the pinned unconstrained M1 functional has no nonzero… | Continue a finite BCC-versus-flat, symmetry-star, |
+| NG-2026-08-03-A13-NONLINEAR-SHIFTED-STATE-PULLBACK-SOURCE-CONVEXITY | nonlinear controller coordinates destroy the apparent… | Substitute a nonlinear shifted-state controller chart into |
+| NG-2026-08-03-A13-NONDEGENERATE-GAUSSIAN-PAST-CURRENT-DETERMINISTIC-LINFTY-COLLAR | absolute Gaussian past-current collars cannot close the… | Use a fixed almost-sure threshold on the absolute |
+| NG-2026-08-03-A13-LINEAR-PAIR-TESTS-DO-NOT-IMPLY-NONLINEAR-PREDICTABLE-GAP | averaged linear tests do not control the conditional… | Infer a uniform Hessian gap for every bounded predictable |
+| NG-2026-08-03-A13-PAIRWISE-LOCAL-GAPS-DO-NOT-IMPLY-MULTIROOT-GLOBAL-GAP | local gaps do not globalize across interacting roots | Sum positive pairwise local gaps after assigning orthogonal |
+| NG-2026-08-03-A13-INDEPENDENT-FOREST-BALANCED-OWNER-FABRICATION | fixed-terminal owner coordinates are not independent… | After fixing the terminal A7 square-minus-trace scalar and |
+| AUDIT-2026-08-03-A13-R125-MUTABLE-SURFACE-PINNING | separate immutable proof evidence from live routing | The issued R-125 integrated verifier mixed immutable theorem, |
+| NG-2026-08-02-A13-ZERO-CONTROL-FUTURE-VARIANCE-DOMINATION | the production future variance exceeds its raw endpoint… | Prove the earlier `+/-k` root's absolute comparison |
+| AUDIT-2026-08-02-A13-R150-SCALAR-SLICE-AS-FULL-PRODUCTION-COVARIANCE | use the full A1 family covariance | Treat the N001 scalar denominator, with zero family and lock |
+| AUDIT-2026-08-02-A13-R150-COINCIDENT-CROSS-AS-PROJECTED-CROSS | local cancellation is not operator cancellation | Infer from the exact same-point identity `K_i(x,x)=0` that |
+| AUDIT-2026-08-02-A13-R150-ABSOLUTE-ATOM-AS-RELATIVE-SECANT | a positive endpoint does not order two endpoints | Assign the zero source/sextic suballocation of the |
+| NG-2026-08-02-A13-R150-LAST-ROOT-POSITIVITY-TO-FUTURE-FEEDBACK | the last-root sign does not propagate backward | Transport the last simultaneous antipodal root's local |
+| NG-2026-08-02-A13-ENDPOINT-MARGINALS-DETERMINE-FRESH-OWNER | endpoint marginals do not determine the fresh owner | Infer the fresh raw/full-reveal square-minus-trace owner, |
+| AUDIT-2026-08-02-A13-RADIAL-SLICE-NEGATIVE-AS-FULL-INTERNAL-OWNER | a radial coefficient saddle is not the full internal owner | Promote the indefinite Hessian of the real active-spectator |
+| AUDIT-2026-08-02-A13-R149-REAL-COVARIANCE-DOUBLE-HALVING | do not apply the complex-to-real factor twice | After defining `C(a)=(aI+M)^(-1)` as the covariance of |
+| NG-2026-08-02-A13-R147-EXACT-CANONICAL-ACTIVE-SPECTATOR-LIFT | rank-one line cannot be appended unchanged to the… | Insert the exact rank-one fresh R-147 scalar innovation |
+| NG-2026-08-02-A13-ACTIVE-SPECTATOR-JET-OWNER-COMPLETION | diagonal coefficient energy does not determine the… | Infer cross-reveal Grams, adapted forest jets, future |
+| AUDIT-2026-08-02-A13-R147-ABSOLUTE-DEFECT-AS-RELATIVE-HESSIAN | differentiate the shifted owner twice | Read the negative R-147 absolute coefficient curvature |
+| NG-2026-08-02-A13-COMMON-TERMINAL-AUTOMATIC-SCALAR-SIGN | centering and a common terminal do not fix the scalar sign | Infer that a centred scalar trace-current feature has a |
+| NG-2026-08-02-A13-ENDPOINT-LAW-OWNER-TRANSFER | terminal law does not determine sequential owners | Transport old sequential owner energies from equality of a |
+| NG-2026-08-02-A13-PRODUCTION-PAIR-GLOBAL-CONVEXITY | the retained P+L coefficient pair is not globally convex | Extend the exact affine-collinear production coefficient |
+| AUDIT-2026-08-02-A13-R147-R063-FOREST-BRACKET-CONFLATION | condition the trace and keep the signed forest | Treat the adapted R-063 partial-Wick forest as a positive |
+| AUDIT-2026-08-02-A13-R146-OUTPUT-PROJECTION-OMISSION | restore the registered endpoint owner | Omit the R-145 orthogonal output projection `P` when |
+| AUDIT-2026-08-02-A13-ZERO-CONTROL-RELATIVE-ANCHOR | the direct R-145 route is exactly relative | Treat the chart constant a_(J,pi) as an independent |
+| NG-2026-08-02-A13-ARBITRARY-TEMPORAL-ANISOTROPIC-POSITIVE-SUBALLOCATION | a terminal positive remainder need not split under… | Given positive temporal increments P_+, P_- with |
+| NG-2026-08-02-A13-CANONICAL-COVARIANCE-AUTOMATIC-SCALAR-CANCELLATION | equal covariance does not control a same-root coefficient | Infer that the scalar trace-current defect is nonpositive |
+| AUDIT-2026-08-02-A13-R129-TRACE-EXCESS-ACCEPTANCE-WINDOW | R-129 positive-action window is sufficient but nonsharp… | The R-129 successor language treated `eta<9/20` and |
+| NG-2026-08-02-A13-LOCAL-STENCIL-PRODUCTION-SIGN-NONIDENTIFIABILITY | local packet data do not determine the complete action sign | Three exact indistinguishability pairs preserve the stated |
+| AUDIT-2026-08-02-A13-R144-FIBRE-SCHUR-COEFFICIENT-CORRECTION | the draft fibre reconstruction omitted the Schur term | The pre-registration R-144 certificates initially set the |
+| AUDIT-2026-08-02-A13-R144-SEXTIC-THRESHOLD-CORRECTION | the draft Hessian route used the wrong sextic threshold | The pre-registration R-144 draft derived the source-Hessian |
+| AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO | R-142 coherence fixture used a half-output and the wrong… | R-142 used harmonics `(17,33,65)` and carriers |
+| NG-2026-07-31-A13-WEDGE-ONLY-FUTURE-TELESCOPE | a moving wedge mask leaves internal endpoint variation | Apply the complete signed future endpoint telescope only |
+| NG-2026-07-31-A13-TAIL-ONLY-SHIFTED-DOUGLAS-HEADROOM | a vanishing collar tail does not create a strict gap | Deduce a strictly positive shifted-Douglas or |
+| NG-2026-07-31-A13-CHRONOLOGY-ONLY-SPATIAL-GRADE | temporal precedence is not a Fourier support theorem | Infer the R-087-type direct raw estimate from |
+| NG-2026-07-31-A13-BARE-LAST-INSERTION-R135-REANCHORING | future reveal weights cannot be relabelled for free | Swap the finite future sums, prove an insertion-anchored |
+| NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY | post-heat means do not determine raw future variance | Commute future conditional centring through the deterministic |
+| NG-2026-07-31-A13-COVARIANCE-ENVELOPE-REBATE-ERASURE | a scalar norm envelope destroys the future-variance rebate | Scale the exact one-owner, one-exhaustive-cluster R-125 |
+| NG-2026-07-31-A13-REFINEMENT-UNIFORM-LAST-BLOCK-ELLIPTICITY | a labelled final source increment has no… | Even total covariance `I_6` admits the |
+| NG-2026-07-31-A13-ELLIPTIC-GAUSSIAN-D4-FLOOR-UNIFORMITY | six-real ellipticity is critical at the fourth rational jet | Take the embedded production Pauli generator |
+| NG-2026-07-31-A13-POINTWISE-ELLIPTICITY-SPATIAL-FRACTIONAL-TRANSFER | pointwise anti-concentration does not control spatial… | On the torus let `G_a,H_a`, `1<=a<=6`, be independent |
+| NG-2026-07-31-A13-SEPARATE-FLOOR-WEIGHTED-CURRENT-ENERGY-ABSORPTION | separate absolute action payments destroy the… | For the zero-control cutoff Gaussian with production |
+| AUDIT-2026-07-31-A13-R132-POLYNOMIAL-RESPONSE-INTERTWINER-SCOPE | stopped-current support is not the complete physical… | The polynomial response has the owner decomposition |
+| NG-2026-07-31-A13-PREDICTABLE-SCORE-FINITE-ENERGY-TRANSFER | affine Gaussian scores do not extend from triangularity… | The exact predictable score is |
+| NG-2026-07-31-A13-GAMMA-FOUR-SIXTH-AMPLITUDE-ROUTE | the joint rational boundary layer needs a seventh… | On the complete one-real Pauli slice, |
+| AUDIT-2026-07-31-A13-R132-GAMMA-FOUR-SUCCESSOR-SCOPE | fixed-collar acceptance does not require the old uniform… | If `sigma=k^2/d<min(e,f)`, the exact strict acceptance |
+| NG-2026-07-31-A13-DIAGONAL-HEAT-SEXTIC-TO-MIXED-RESPONSE | diagonal heat and sextic do not imply mixed-response… | At `z=0`, every output of `Xi(A,V)` is odd under the |
+| NG-2026-07-31-A13-LAW-FREE-MIXED-RESPONSE-FLOOR-UNIFORMITY | complete six-row algebra alone is not floor-uniform over… | Put `e=delta^2`, `u=s e_1`, `V=e_1`, and |
+| NG-2026-07-31-A13-DIAGONAL-GRAM-TO-MIXED-CONDITIONAL-RESPONSE | diagonal sample Grams do not determine the mixed… | On a two-point space take `C_+(t)` and `C_-(t)` to be |
+| NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY | bounded frozen coefficients supply no automatic dyadic… | For shell labels `r<m`, let the input Fourier mode be |
+| NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY | one fixed heat law does not uniformly fill the Xi singlet… | At background `(u,chi)=(0,T)` with aligned singlet tangent, |
+| NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION | one common-phase quotient does not turn the Xi… | Take `u=(1,0)`, `chi=1`, `v=(i,0)`, and `w=-i`. The |
+| NG-2026-07-31-A13-UNWEIGHTED-RATIONAL-D2-FLOOR-UNIFORMITY | separated rational second derivatives are not floor-uniform | On the normalized circle let |
+| NG-2026-07-31-A13-COMPLETE-LOW-SQUARE-STRICT-GAP-REFINEMENT | a complete Gram square supplies no automatic strict gap… | Its exact Schur complement is |
+| AUDIT-2026-07-30-A13-COVARIANCE-NORMAL-DOMINANCE-ACTION-DIRECTION | covariance-normal dominance has the wrong direction for… | The action owner is the smaller quantity |
+| NG-2026-07-30-A13-SEPARATE-VARIANCE-TRACE-HESSIAN-NORM-NECESSITY | separate Hessian norms are not logically necessary for a… | For independent standard Gaussians and the exact family |
+| NG-2026-07-30-A13-CONDITIONAL-POINCARE-PARAMETER-SEMICONVEXITY | source Poincare does not control an external parameter… | For `J_N(z,eta)=cos(Nz)eta`, Gaussian Poincare is an |
+| NG-2026-07-30-A13-ENTROPY-SECOND-SCORE-CONTROL | bounded relative entropy does not bound the conditional… | For standard Gaussian measure and |
+| NG-2026-07-30-A13-TOTAL-COVARIANCE-TEMPORAL-SHELL-INTERTWINING | total Fourier covariance does not diagonalize every… | The projections |
+| NG-2026-07-30-A13-SWAPPED-GEOMETRIC-REVERSE-BAND-ADJOINT | the true adjoint orientation is not a swapped geometric cell | With orthogonal source and shell coordinates, |
+| AUDIT-2026-07-30-A13-R127-R119-CONTROL-HESSIAN-AUTHORITY | the fixed-chart control Hessian was already an R-119 theorem | R-119 Theorem 5.1 already proves on its stated cylindrical |
+| AUDIT-2026-07-30-A13-R126-COVARIANCE-NORMAL-FORCE-OMISSION | trace excess alone is not the complete covariance-normal… | The complete endpoint is |
+| NG-2026-07-30-A13-CONTROL-MALLIAVIN-DERIVATIVE-CONFLATION | adapted feedback separates the two Hessians | For two scalar blocks with bounded smooth |
+| NG-2026-07-30-A13-ROOTWISE-COMMON-TERMINAL-INFERENCE | rootwise adapted means need not form one martingale | With `F_1=sigma(xi_1)`, |
+| NG-2026-07-30-A13-ONE-SIDED-SHELL-PROJECTION-ADJOINT | selfadjointness does not survive one-sided shell projection | For `H=[[0,1],[1,0]]` and `P=diag(1,0)`, |
+| AUDIT-2026-07-30-A13-FORCE-COMPLETION-HESSIAN-DOUBLE-SPEND | the source square can be allocated only once | Completing |
+| NG-2026-07-30-A13-UNRESTRICTED-PREDICTABLE-COVARIANCE-COLLAPSE | blockwise predictability cannot collapse to the… | Use two scalar blocks `S_1=S_2=1`, let the first strict |
+| NG-2026-07-30-A13-LOEWNER-SATURATION-LOW-COUPLING | the saturated two-channel budget cannot absorb a generic… | The saturated matrix has null vector |
+| NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR | normalized relative data cannot supply the absolute low… | Replacing `L` by `L+C` leaves |
+| NG-2026-07-30-A13-UNRESTRICTED-REVERSE-BAND-EXTENSION | forward decay does not extend coefficient-blindly to an… | Fix one normalized spatial shell `m0` and let |
+| NG-2026-07-30-A13-NAIVE-PRIMITIVE-TRACE-FOREST-IDENTIFICATION | conditional future variance separates primitive trace… | Take trivial past, one future `eta~N(0,1)`, no heat, one |
+| NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION | replica variance does not automatically dominate the… | For the bounded smooth legal first-linear-row control |
+| NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER | stationary six-row parity does not transfer to arbitrary… | In the fixed six-row frame, take independent standard |
+| NG-2026-07-30-A13-RAW-SIX-CURRENT-HESSIAN-POSITIVITY | the isolated raw six-current Hessian is indefinite | On the active real doublet set |
+| NG-2026-07-30-A13-FIXED-PROFILE-CORRELATION-YOUNG-CUTOFF-UNIFORMITY | correlation alone does not supply arbitrary… | For a fixed skew matrix and |
+| NG-2026-07-29-A13-FEEDBACK-DERIVATIVE-GRAPH-CLOSURE | graph convergence does not control feedback derivatives | For a standard Gaussian `xi`, the bounded smooth controls |
+| NG-2026-07-29-A13-ADAPTED-CARTAN-FIFTH-MOMENT-GRAPH-TRANSFER | source and sextic budgets do not imply the isolated fifth… | On the normalized torus take |
+| NG-2026-07-29-A13-SELFADJOINTNESS-CARTAN-CANCELLATION | selfadjoint completion retains a nonzero skew first-order… | The complete Jacobi operator has the exact form |
+| AUDIT-2026-07-29-A13-R119-R120-CARTAN-COMPANION-INFERENCE | path-space exactness does not require a local opposite curl | A scalar first-order path functional has an exact |
+| NG-2026-07-29-A13-FIRST-ORDER-HMINUS-11-10-CARTAN-REUSE | zeroth-order rough regularity cannot pay a first-order… | On a normalized one-dimensional torus embedded in the |
+| NG-2026-07-29-A13-BARE-JACOBIAN-HEAT-LOW-CHAOS-CANCELLATION | bare heat leaves a strict nonlinear mean debt | If `R=sum_(n>=2) I_n(r_n)` has no zero or first chaos, |
+| NG-2026-07-28-A13-UNIVERSAL-PSD-RANDOM-W-DOUBLE-DIVERGENCE | the canonical two-visit preimage is signed | For the exact two-visit scalar Hermite fixture |
+| NG-2026-07-28-A13-FIXED-SHELL-LIPSCHITZ-METRIC-REGULARITY | phase modulation defeats a local distance-to-current… | In the legal full shell `S_8`, set |
+| NG-2026-07-28-A13-CENTERED-QUADRATIC-NULL-CONE-NORMALIZER | exact centering and finite unweighted tensor costs do not… | For independent standard U,V set |
+| NG-2026-07-28-A13-FULL-WICK-TENSOR-NORMALIZER | exact full-Wick centering retains a sharp null-cone domain | For independent U,V let |
+| NG-2026-07-28-A13-SEPARATED-INTERPOLATION-CROSS-SCORE-BUDGET | the baseline cancellation belongs to the complete endpoint | In the affine scalar fixture A=C=1 with |
+| AUDIT-2026-07-28-A13-GAUGE-NULL-RANKTWO-ROOT-SCOPE | a gauge-null face is not an independently revealable… | The field |
+| NG-2026-07-28-A13-K2K-EXACT-KS-POST-EXTENSION | the sharp two-moment coefficient fails immediately after… | The fifth-order inequality |
+| NG-2026-07-28-A13-FOUR-MOMENT-RESERVE-ONLY | lower support, four moments, and positive reserve do not… | Let `X` take values `-1,0,2` with respective weights |
+| NG-2026-07-28-A13-K2K-CUBIC-KS-PROXY-BEYOND-CONE | the cubic Bernoulli proxy does not extend the selected… | At the exact rational fixture `b=103/32`, `c=5/16`, only |
+| NG-2026-07-28-A13-K2K-BESSEL-CROSS-CONTRACTION-ORIGIN-DEBT | the stable cross contraction creates a false linear… | combine `I_0(z)<=e^z` with `2sqrt(ab)<=a+b` to replace the |
 | NG-2026-07-28-A13-K2K-ALL-ORDER-PROJECTIVE-COEFFICIENT-POSITIVITY | the third exact projective coefficient changes sign | expand the exact covariance-simplex logarithmic gap in |
-| NG-2026-07-28-A13-K2K-QUADRATIC-BESSEL-UPPER-DOMINATION | the local Gaussian Bessel envelope destroys radial integrabi | insert `I_0(z)<=exp(z^2/4)` into the exact phase-averaged |
-| NG-2026-07-28-A13-K2K-CONDITIONAL-SCALAR-TENSORIZATION | conditioning creates a false negative-coefficient scalar pro | condition on the second-frequency radius `S`, treat the |
+| NG-2026-07-28-A13-K2K-QUADRATIC-BESSEL-UPPER-DOMINATION | the local Gaussian Bessel envelope destroys radial… | insert `I_0(z)<=exp(z^2/4)` into the exact phase-averaged |
+| NG-2026-07-28-A13-K2K-CONDITIONAL-SCALAR-TENSORIZATION | conditioning creates a false negative-coefficient scalar… | condition on the second-frequency radius `S`, treat the |
 | NG-2026-07-28-A13-K2K-TILTED-VARIANCE-MONOTONICITY | the mixed tilted variance can increase | prove the mixed all-`q` target by asserting |
-| NG-2026-07-28-A13-RANDOM-W-HS-ONLY-SCORE-TRANSFER | a same-root random PSD score weight is not controlled by its | extend the R-109 fixed-past score-transfer estimate to a |
-| NG-2026-07-28-A13-UNIVERSAL-NONLINEAR-TANGENT-SQUARE-FIRST-NORMALIZER | a nonlinear tangent-covariance square does not pay an uncent | infer a universal square-first conditional normalizer for a |
-| NG-2026-07-28-A13-CROSS-RESONANCE-POINTWISE-BASELINE-PAYMENT | the sharp local k:2k completion spends a nonsummable baselin | close each physical resonant `k:2k` complete-output packet |
-| AUDIT-2026-07-28-A13-R108-REALIZED-COVARIANCE-FILTRATION | a realized covariance square must be conditioned before pre- |  |
-| NG-2026-07-28-A13-STEIN-SECOND-JET-EXPONENTIATION | Stein expectation transfer does not survive exponentiation |  |
-| NG-2026-07-28-A13-PREDICTABLE-MULTIROW-BACKWARD-RESOLVENT | rowwise predictability does not freeze a backward Gaussian r |  |
-| NG-2026-07-28-A13-SINGLE-OUTPUT-FREQUENCY-PACKET | output trace allocation does not make singleton packets posi |  |
-| NG-2026-07-28-A13-INDEPENDENT-OUTPUT-DETERMINANT-NORMALIZATION | separate output normalizers lose extensive determinant slack |  |
-| NG-2026-07-28-A13-ADAPTED-SECOND-JET-TERMSEPARATION | absolute forest companions create artificial quadratic deriv |  |
-| NG-2026-07-28-A13-AVERAGED-COVARIANCE-BEFORE-HS-SQUARE | average-before-square loses the complete-cluster determinant |  |
-| NG-2026-07-28-A13-ABSOLUTE-FUTURE-FEEDBACK-CARTAN-CARLESON | bounded action budgets do not control an arbitrary positive  |  |
-| NG-2026-07-28-A13-PURE-CARRIER-KL-DIAGONAL-BRIDGE | standalone carrier information diverges at self-coupling |  |
-| NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY | total thermodynamic integration is the endpoint target |  |
-| NG-2026-07-28-A13-POINTWISE-ENDPOINT-LIKELIHOOD-COERCIVITY | fixed pointwise sextic and Cameron--Martin payments cannot d |  |
-| NG-2026-07-28-A13-PRODUCTION-INPUT-MODE-MERGE-TENSORIZATION | exact production 1:2 merge defeats a universal bounded input |  |
-| AUDIT-2026-07-28-A13-R105-SEXTIC-COEFFICIENT-CUTOFF-NOTATION | corrected stabilized coefficient and physical-radius variabl |  |
-| NG-2026-07-28-A13-RATIONAL-TAYLOR-OWNER-SUBDIVISION | labelled rational owners do not descend to the subdivision q |  |
-| NG-2026-07-28-A13-GENERIC-SMART-PATH-MONOTONICITY | PSD and sextic coercivity do not force A9 monotonicity |  |
-| NG-2026-07-28-A13-ALL-LAW-POINTWISE-RELATIVE-BRACKET | the all-finite-entropy pointwise A9 bracket forces a noninte |  |
-| NG-2026-07-28-A13-FULL-BUDGET-CRITICAL-YOUNG | full budgets do not rescue pathwise or critical Young extrac |  |
-| NG-2026-07-28-A13-ONE-PAIR-PRODUCT-FACTORIZATION | exact pair bounds do not tensorize through physical cross-mo |  |
-| NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING | deterministic heat cannot be conditioned through arbitrary s |  |
-| NG-2026-07-28-A13-GLOBAL-TO-PREDICTABLE-CURRENT-BRIDGE | predictable-baseline support does not delete the global curr |  |
-| NG-2026-07-28-A13-FULL-HESSIAN-CARTAN-CHAIN-PRIMITIVE | the complete secant current is not an exact field-space one- |  |
+| NG-2026-07-28-A13-RANDOM-W-HS-ONLY-SCORE-TRANSFER | a same-root random PSD score weight is not controlled by… | extend the R-109 fixed-past score-transfer estimate to a |
+| NG-2026-07-28-A13-UNIVERSAL-NONLINEAR-TANGENT-SQUARE-FIRST-NORMALIZER | a nonlinear tangent-covariance square does not pay an… | infer a universal square-first conditional normalizer for a |
+| NG-2026-07-28-A13-CROSS-RESONANCE-POINTWISE-BASELINE-PAYMENT | the sharp local k:2k completion spends a nonsummable… | close each physical resonant `k:2k` complete-output packet |
+| AUDIT-2026-07-28-A13-R108-REALIZED-COVARIANCE-FILTRATION | a realized covariance square must be conditioned before… | Read the target schema R-108 (8.3) as permitting a covariance |
+| NG-2026-07-28-A13-STEIN-SECOND-JET-EXPONENTIATION | Stein expectation transfer does not survive exponentiation | Replace the raw Wick coordinate of a complete R-063 |
+| NG-2026-07-28-A13-PREDICTABLE-MULTIROW-BACKWARD-RESOLVENT | rowwise predictability does not freeze a backward… | Insert future rows that are merely measurable with respect |
+| NG-2026-07-28-A13-SINGLE-OUTPUT-FREQUENCY-PACKET | output trace allocation does not make singleton packets… | Prove positivity, or multiply signed estimates, separately |
+| NG-2026-07-28-A13-INDEPENDENT-OUTPUT-DETERMINANT-NORMALIZATION | separate output normalizers lose extensive determinant slack | Replace the coherent whole-output determinant by the |
+| NG-2026-07-28-A13-ADAPTED-SECOND-JET-TERMSEPARATION | absolute forest companions create artificial quadratic… | Estimate the adapted second-jet/R-063 forest companions |
+| NG-2026-07-28-A13-AVERAGED-COVARIANCE-BEFORE-HS-SQUARE | average-before-square loses the complete-cluster… | Interpret the covariance in the R-107 determinant-compatible |
+| NG-2026-07-28-A13-ABSOLUTE-FUTURE-FEEDBACK-CARTAN-CARLESON | bounded action budgets do not control an arbitrary… | Extend the strict-past R-088 positive atom ledger to an |
+| NG-2026-07-28-A13-PURE-CARRIER-KL-DIAGONAL-BRIDGE | standalone carrier information diverges at self-coupling | Transfer the independent-carrier determinant estimate to |
+| NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY | total thermodynamic integration is the endpoint target | Treat the exact integral of the A9 Gibbs bracket as a new |
+| NG-2026-07-28-A13-POINTWISE-ENDPOINT-LIKELIHOOD-COERCIVITY | fixed pointwise sextic and Cameron--Martin payments… | Discard entropy and bound the exact endpoint likelihood |
+| NG-2026-07-28-A13-PRODUCTION-INPUT-MODE-MERGE-TENSORIZATION | exact production 1:2 merge defeats a universal bounded… | Reassemble deterministic production input leaves using a |
+| AUDIT-2026-07-28-A13-R105-SEXTIC-COEFFICIENT-CUTOFF-NOTATION | corrected stabilized coefficient and physical-radius… | R-105 v1.0 displayed the coefficient inherited from A9's |
+| NG-2026-07-28-A13-RATIONAL-TAYLOR-OWNER-SUBDIVISION | labelled rational owners do not descend to the… | Treat the historical R-085 form `F_6.5` or the R-101/R-102 |
+| NG-2026-07-28-A13-GENERIC-SMART-PATH-MONOTONICITY | PSD and sextic coercivity do not force A9 monotonicity | Prove the A9 interpolation monotone, or uniformly bound its |
+| NG-2026-07-28-A13-ALL-LAW-POINTWISE-RELATIVE-BRACKET | the all-finite-entropy pointwise A9 bracket forces a… | Seek cutoff-independent integrable `a,b>=0` such that |
+| NG-2026-07-28-A13-FULL-BUDGET-CRITICAL-YOUNG | full budgets do not rescue pathwise or critical Young… | Replace expectation-level signed Wick cancellation by a |
+| NG-2026-07-28-A13-ONE-PAIR-PRODUCT-FACTORIZATION | exact pair bounds do not tensorize through physical… | Decompose the nonlinear physical field into independent |
+| NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING | deterministic heat cannot be conditioned through… | Treat an arbitrary control-dependent or same-root random |
+| NG-2026-07-28-A13-GLOBAL-TO-PREDICTABLE-CURRENT-BRIDGE | predictable-baseline support does not delete the global… | Apply R-096 support collapse to each predictable |
+| NG-2026-07-28-A13-FULL-HESSIAN-CARTAN-CHAIN-PRIMITIVE | the complete secant current is not an exact field-space… | Replace the complete rational second-Hessian current by a |
 | NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE | the bracket gap cancels in the complete owner | Use the R-098 matching-payment posterior superadditivity |
-| NG-2026-07-27-A13-ABSTRACT-FIBRE-XY-COVARIANCE-DEBT | PSD and separate X/Y moments do not control abstract covaria | Prove the complete posterior/source-action lower form from |
-| NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD | terminal mixed payload cannot pay arbitrary progressive Cart | Extend the R-085 (4.11)-type Cartan one-use estimate from |
-| NG-2026-07-27-A13-ABSOLUTE-LAST-ROOT-FRAME-TRANSFER | causal control ownership does not imply an absolute nonlinea | After proving the causal Doob--Hardy one-use theorem for the |
-| NG-2026-07-27-A13-NONNEGATIVE-PER-SUBVISIT-CARTAN-ATOMIZATION | nonnegative Cartan atoms are not stable under opposite subvi | Extend the R-085 (4.10)--(4.11), or corrected R-088 |
+| NG-2026-07-27-A13-ABSTRACT-FIBRE-XY-COVARIANCE-DEBT | PSD and separate X/Y moments do not control abstract… | Prove the complete posterior/source-action lower form from |
+| NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD | terminal mixed payload cannot pay arbitrary progressive… | Extend the R-085 (4.11)-type Cartan one-use estimate from |
+| NG-2026-07-27-A13-ABSOLUTE-LAST-ROOT-FRAME-TRANSFER | causal control ownership does not imply an absolute… | After proving the causal Doob--Hardy one-use theorem for the |
+| NG-2026-07-27-A13-NONNEGATIVE-PER-SUBVISIT-CARTAN-ATOMIZATION | nonnegative Cartan atoms are not stable under opposite… | Extend the R-085 (4.10)--(4.11), or corrected R-088 |
 | NG-2026-07-27-A13-PREDICTABILITY-ONLY-LOW-HERMITE-AGGREGATE | terminalization does not control aggregate reuse | Terminalize every predictable quadratic-Wick row into one |
 | NG-2026-07-27-A13-AUTOMATIC-POSTERIOR-COVARIANCE-POSITIVITY | the exact posterior bracket is signed | After terminal Schur completion, discard the full positive |
 | NG-2026-07-27-A13-PREDICTABLE-BASELINE-SUPPORT-IMPLIES-PAYABILITY | support collapse does not pay the moving adapted base | Apply the R-086 Gram/Taylor split to every R-077 |
-| NG-2026-07-27-A13-LOW-HERMITE-STEIN-DERIVATIVE-CLOSURE | Hermite orthogonality is not a spatial or adapted-derivative | Project the same-root coefficient to its low Hermite |
-| NG-2026-07-27-A13-FRACTIONAL-FEEDBACK-GLOBAL-SQUARE-IDENTIFICATION | a rootwise future reserve is not a fraction of the terminal  | The R-094 payment by a declared fraction of the rootwise |
+| NG-2026-07-27-A13-LOW-HERMITE-STEIN-DERIVATIVE-CLOSURE | Hermite orthogonality is not a spatial or… | Project the same-root coefficient to its low Hermite |
+| NG-2026-07-27-A13-FRACTIONAL-FEEDBACK-GLOBAL-SQUARE-IDENTIFICATION | a rootwise future reserve is not a fraction of the… | The R-094 payment by a declared fraction of the rootwise |
 | NG-2026-07-27-A13-SCALE-DEPENDENT-FRACTION-ABSOLUTE-CLOSURE | the two current root weights meet critically | Choose |
-| AUDIT-2026-07-27-A13-R093-ROOT-FACTOR-SQUARE-ALLOCATION | the strong factor and the positive square have narrower owne | The R-093 scaling diagnostic `2^(j-4k)` was promoted to |
+| AUDIT-2026-07-27-A13-R093-ROOT-FACTOR-SQUARE-ALLOCATION | the strong factor and the positive square have narrower… | The R-093 scaling diagnostic `2^(j-4k)` was promoted to |
 | AUDIT-2026-07-27-A13-R093-BG-CRITICAL-ROW-SCOPE | the zero-slack rows were superseded coarse estimates | The two zero-slack rows in R-093 Section 9 were treated as |
-| NG-2026-07-27-A13-ABSOLUTE-REVISIT-SECANT-SUM | terminal cancellation does not control per-increment sixth m | The regular one-shot centered Gram-secant theorem was |
+| NG-2026-07-27-A13-ABSOLUTE-REVISIT-SECANT-SUM | terminal cancellation does not control per-increment… | The regular one-shot centered Gram-secant theorem was |
 | AUDIT-2026-07-27-R092-AUGMENTED-PRODUCTION-COVARIANCE | deprecated short chronology alias | The first append-only R-093 changelog event cited the |
 | AUDIT-2026-07-27-A13-R092-AUGMENTED-PRODUCTION-COVARIANCE | the complete sign is a weighted covariance | R-092's coefficient-conditioned moment-matched one-reveal |
 | NG-2026-07-27-A13-LOCAL-PERSPECTIVE-PAID-SCALING | the first genuine paid lift is coercive | Amplify the smooth local anti-monotone coefficient fixture |
@@ -199,38 +199,38 @@ _None linked to this sector._
 | AUDIT-2026-07-25-A13-R089-RATIONAL-FOREST-DISJOINTNESS | reconstruct the Wick endpoint exactly once | Call the R-089 branch switch conditionally covariance |
 | AUDIT-2026-07-25-A13-R088-PROGRESSIVE-TERMINAL-CM-BRIDGE | the terminal CM bridge is globally progressive | Treat R-079's regular orthogonal no-revisit square-function |
 | AUDIT-2026-07-25-A13-OVERLAP-NELSON-CHAIN | controlled-shell assembly belongs before full OVERLAP | Order the last steps as full OVERLAP, then R-087 CORE, then |
-| NG-2026-07-25-A13-PURE-QUARTIC-CARTAN-HOMOGENEITY | a homogeneous quartic payload misses the linear Cartan respo | Infer the complete production Cartan far atom from a bound |
-| NG-2026-07-25-A13-RATIONAL-ETA-MEAN-SPECTRAL-CLOSURE | eta and covariance matching do not control the same-root mea | Close the coefficient-dominant rational packet by choosing |
+| NG-2026-07-25-A13-PURE-QUARTIC-CARTAN-HOMOGENEITY | a homogeneous quartic payload misses the linear Cartan… | Infer the complete production Cartan far atom from a bound |
+| NG-2026-07-25-A13-RATIONAL-ETA-MEAN-SPECTRAL-CLOSURE | eta and covariance matching do not control the same-root… | Close the coefficient-dominant rational packet by choosing |
 | AUDIT-2026-07-25-A13-R085-CARTAN-OUTER-WEIGHT-NORMALIZATION | the exact R-084 OU target is unweighted in the root scale | Treat the valid R-085 outer-`2^j` Schur theorem as the |
-| NG-2026-07-25-A13-RATIONAL-STANDALONE-ETA-DEBT-AND-K-HEAT | the eta debt and nonlinear heat coefficient cannot be separa | Complete the rational square, discard the retained positive |
-| NG-2026-07-25-A13-PATHWISE-TRANSLATED-MODEL-NORM-EXTRACTION | translated model-norm extraction cannot prove the Cartan one | Start from the R-087 spatial atom estimate, use the |
-| NG-2026-07-25-A13-RATIONAL-TRANSLATED-WICK-SEPARATION-AND-HEAT-SCHUR | the translated-Wick rational packet cannot be separated by p | Prove the R-085 coupled rational shifted-Hessian bound by |
-| NG-2026-07-25-A13-RATIONAL-PF-FIVE-DEGREE-AND-FIXED-SCHUR | the rational shifted-Hessian pair cannot be deleted or paid  | Close the nonlinear rational Pauli--Fierz NEAR row by |
+| NG-2026-07-25-A13-RATIONAL-STANDALONE-ETA-DEBT-AND-K-HEAT | the eta debt and nonlinear heat coefficient cannot be… | Complete the rational square, discard the retained positive |
+| NG-2026-07-25-A13-PATHWISE-TRANSLATED-MODEL-NORM-EXTRACTION | translated model-norm extraction cannot prove the Cartan… | Start from the R-087 spatial atom estimate, use the |
+| NG-2026-07-25-A13-RATIONAL-TRANSLATED-WICK-SEPARATION-AND-HEAT-SCHUR | the translated-Wick rational packet cannot be separated… | Prove the R-085 coupled rational shifted-Hessian bound by |
+| NG-2026-07-25-A13-RATIONAL-PF-FIVE-DEGREE-AND-FIXED-SCHUR | the rational shifted-Hessian pair cannot be deleted or… | Close the nonlinear rational Pauli--Fierz NEAR row by |
 | AUDIT-2026-07-25-A13-R084-MANIFEST-COUNT-CONTRACT | R-084 verifier now fails closed on all assertion counts | Treat verifier v1.0.0 as enforcing the manifest-pinned |
-| NG-2026-07-25-A13-ROOT-ORTHOGONALITY-ONE-USE | R-084 root orthogonality alone does not spend a cumulative c | Infer the controlled Cartan one-use estimate solely from |
-| NG-2026-07-25-A13-K-SMOOTHING-OUTPUT-ORTHOGONALITY | input smoothing does not manufacture global nonlinear output | Infer the pairwise orthogonality of nonlinear production |
-| NG-2026-07-25-A13-LINEAR-PF-ADAPTED-POSITIVITY | the linear Pauli--Fierz subpacket is not universally positiv | Delete the three linear Pauli--Fierz rows from NEAR because |
-| AUDIT-2026-07-25-A13-R081-PRE-RELEASE-CONTRACT-SYMBOL | manifest, claim surface, Cartan symbol, and executable evide | The first R-081 integrated wrapper recomputed its own row |
-| NG-2026-07-25-A13-NONLINEAR-COEFFICIENT-DJA-FACTORISATION | complete nonlinear coefficient innovation is not determined  | Treat the complete future-adapted coefficient, covariance |
-| NG-2026-07-25-A13-ROOTWISE-DETERMINISTIC-FAR-AND-HALF-DERIVATIVE | deterministic FAR decay does not supply the martingale-root  | Close R-080's localized base-current tail by applying an |
+| NG-2026-07-25-A13-ROOT-ORTHOGONALITY-ONE-USE | R-084 root orthogonality alone does not spend a… | Infer the controlled Cartan one-use estimate solely from |
+| NG-2026-07-25-A13-K-SMOOTHING-OUTPUT-ORTHOGONALITY | input smoothing does not manufacture global nonlinear… | Infer the pairwise orthogonality of nonlinear production |
+| NG-2026-07-25-A13-LINEAR-PF-ADAPTED-POSITIVITY | the linear Pauli--Fierz subpacket is not universally… | Delete the three linear Pauli--Fierz rows from NEAR because |
+| AUDIT-2026-07-25-A13-R081-PRE-RELEASE-CONTRACT-SYMBOL | manifest, claim surface, Cartan symbol, and executable… | The first R-081 integrated wrapper recomputed its own row |
+| NG-2026-07-25-A13-NONLINEAR-COEFFICIENT-DJA-FACTORISATION | complete nonlinear coefficient innovation is not… | Treat the complete future-adapted coefficient, covariance |
+| NG-2026-07-25-A13-ROOTWISE-DETERMINISTIC-FAR-AND-HALF-DERIVATIVE | deterministic FAR decay does not supply the… | Close R-080's localized base-current tail by applying an |
 | NG-2026-07-25-A13-ABSOLUTE-CONTROL-CONTROL-PAIR-HIGH | absolute pair-high harvest is supercritical | Obtain the missing NEAR gain by exposing one additional |
 | NG-2026-07-25-A13-ONESHOT-GRAPH-PROGRESSIVE-NONDENSITY | the regular one-shot graph is not progressive-dense | Prove the full progressive/revisit theorem by approximating |
 | NG-2026-07-25-A13-TARGET-HEAT-ROOT-SHELL-GAP | target heat and canonical CM weights do not create a far gap | Use the R-079 predictable base-current heat projection, or |
-| NG-2026-07-25-A13-NEAR-WIDTH-AND-ROOTWISE-POSITIVITY | bounded near width and universal rootwise sign do not close  | Treat `\|m-j\|<=C` as an analytic gain, or declare the complete |
-| NG-2026-07-25-A13-REGULAR-GRAPH-PROGRESSIVE-REVISIT | regular graph recovery does not imply the full progressive b | After proving a lower bound for mutually orthogonal |
+| NG-2026-07-25-A13-NEAR-WIDTH-AND-ROOTWISE-POSITIVITY | bounded near width and universal rootwise sign do not… | Treat `\|m-j\|<=C` as an analytic gain, or declare the complete |
+| NG-2026-07-25-A13-REGULAR-GRAPH-PROGRESSIVE-REVISIT | regular graph recovery does not imply the full… | After proving a lower bound for mutually orthogonal |
 | NG-2026-07-25-A13-GENERIC-WEIGHTED-DOOB-SHORTCUTS | three generic weighted-Doob closures fail | After the exact R-079 full-current decomposition, close the |
 | NG-2026-07-25-A13-ADAPTED-WICK-CARRE-DU-CHAMP | exact square and trace have no universal adapted sign | Infer that the future-feedback current bracket becomes |
-| AUDIT-2026-07-25-A13-R078-PRE-RELEASE-PACKET-TO-BRACKET-ATTRIBUTION | generic Doob lemma was over-attributed to the full safe pack | Promote the exact generic bilinear identity |
+| AUDIT-2026-07-25-A13-R078-PRE-RELEASE-PACKET-TO-BRACKET-ATTRIBUTION | generic Doob lemma was over-attributed to the full safe… | Promote the exact generic bilinear identity |
 | AUDIT-2026-07-25-A13-R077-PACKET-DEFINITION | descriptive companions were not a canonical algebraic packet | Treat the R-077 phrase “the coefficient-dominant form with |
 | NG-2026-07-25-A13-AHIGH-ABSOLUTE-AND-AUTOMATIC-BRACKET | two post-Hessian shortcuts fail | After replacing the cubic transport coordinate by its exact |
-| AUDIT-2026-07-25-A13-R076-ROOT-TAXONOMY | A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION coeffi | Treat the coefficient-dominant high-high-to-low residual and |
-| AUDIT-2026-07-25-A13-R076-PRE-RELEASE-PROOF-AND-EVIDENCE-REPAIR | adversarial review found proof, PDF, verifier, independence, | Accept the first R-076 package because its numerical |
-| AUDIT-2026-07-25-A13-R076-PREDECESSOR-PASS-SCHEMAS | the first integrated wrapper repeated a historical-schema as | Treat every pinned predecessor result as if PASS were |
+| AUDIT-2026-07-25-A13-R076-ROOT-TAXONOMY | A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION… | Treat the coefficient-dominant high-high-to-low residual and |
+| AUDIT-2026-07-25-A13-R076-PRE-RELEASE-PROOF-AND-EVIDENCE-REPAIR | adversarial review found proof, PDF, verifier,… | Accept the first R-076 package because its numerical |
+| AUDIT-2026-07-25-A13-R076-PREDECESSOR-PASS-SCHEMAS | the first integrated wrapper repeated a historical-schema… | Treat every pinned predecessor result as if PASS were |
 | AUDIT-2026-07-25-A13-R075-COARSE-TRANSPORT-CRITICALITY | the R-075 payload estimate was valid but nonsharp | Promote the valid coarse estimate |
 | NG-2026-07-25-A13-BREGMAN-AND-SEPARATED-SHIFTED-MULTIPLIER | two signed-transport shortcuts fail | Close the signed coefficient transport either by convexity |
 | NG-2026-07-24-A13-ABSOLUTE-THIRD-ORDER-TRANSPORT | the coarse transported-tail estimate has no Young slack | Bound the exact third-order coefficient-transport tail by |
-| NG-2026-07-24-A13-ONEFORM-ONLY-ENDPOINT-OMISSION | a cubic one-form plus terminal square omits the constant-con | Treat the signed endpoint as a positive terminal square plus |
-| NG-2026-07-24-A13-ADAPTED-FINITE-CHAOS-TRANSFER | correlated adapted substitution need not preserve a finite f | Substitute an arbitrary terminal adapted control into the |
+| NG-2026-07-24-A13-ONEFORM-ONLY-ENDPOINT-OMISSION | a cubic one-form plus terminal square omits the… | Treat the signed endpoint as a positive terminal square plus |
+| NG-2026-07-24-A13-ADAPTED-FINITE-CHAOS-TRANSFER | correlated adapted substitution need not preserve a… | Substitute an arbitrary terminal adapted control into the |
 | NG-2026-07-24-A13-L2-ONLY-PREDICTABLE-RECOVERY | Cameron--Martin density alone loses terminal sextic energy | Extend a regular strict-past endpoint inequality to every |
 | AUDIT-2026-07-24-A13-R074-PREDECESSOR-CONTRACT-SCHEMAS | predecessor verification must normalize three issued schemas | The first corrected R-074 wrapper still passed every pinned |
 | AUDIT-2026-07-24-A13-R074-EXECUTABLE-INDEPENDENCE | pre-release checks were not sufficiently independent | The first R-074 executable draft tested the two inactive |
@@ -239,11 +239,11 @@ _None linked to this sector._
 | AUDIT-2026-07-24-A13-R073-PREDECESSOR-CONTRACT-SCHEMA | predecessor contracts used two historical schemas | The first R-073 integrated wrapper attempted to validate all |
 | NG-2026-07-24-A13-RAW-ABSOLUTE-OFFDIAGONAL-CARLESON | the raw termwise value-high route is endpoint-critical | After grouping the exact R-072 off-diagonal families by the |
 | NG-2026-07-24-A13-DIAGONAL-TO-TERMINAL-COLLAPSE | the matched diagonal is not the full terminal leakage | The strict-past same-shell calculation replaces the terminal |
-| NG-2026-07-24-A13-RAW-LINEAR-REGULARITY-AND-KERNEL-SCHUR | raw linear regularity and pointwise terminal-square closure  | Two successive shortcuts fail. First, the R-070 proposal |
-| AUDIT-2026-07-24-A13-R071-SUCCESSOR-STATE-AND-IMPORT-BOOTSTRAP | verification depended on mutable successor state and an unde | The first R-071 integrated wrapper executed the complete |
+| NG-2026-07-24-A13-RAW-LINEAR-REGULARITY-AND-KERNEL-SCHUR | raw linear regularity and pointwise terminal-square… | Two successive shortcuts fail. First, the R-070 proposal |
+| AUDIT-2026-07-24-A13-R071-SUCCESSOR-STATE-AND-IMPORT-BOOTSTRAP | verification depended on mutable successor state and an… | The first R-071 integrated wrapper executed the complete |
 | AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP | imported runtime closure was checked too late | The first integrated R-070 verifier pinned its own sources |
 | AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION | the first R-070 draft deleted a weighted linear channel | The initial Section 8 reduction made two load-bearing |
-| NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE | Doob terminalization and terminal-resolvent centering do not | Three plausible shortcuts fail.  First, summing the exact |
+| NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE | Doob terminalization and terminal-resolvent centering do… | Three plausible shortcuts fail. First, summing the exact |
 | NG-2026-07-24-A13-AFFINE-SCHUR-AND-PURE-CONTROL-PAYMENT | affine Schur and separate pure-control payment fail | Two candidate continuations of the R-068 production |
 | AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION | proof-map semantic association and portability defects | The first pre-commit generator scanned entire free-form |
 | NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER | absolute score and full fast remainder fail | Two proposed continuations attempted to close the production |
@@ -266,11 +266,11 @@ _None linked to this sector._
 | NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT | direct production Ramer map becomes singular | The selected nonfrozen determinant continuation first tried |
 | NG-2026-07-22-A13-RAW-DIAMOND-JET | unqualified coefficient jets fail | The translation-model boundary used the symbols |
 | NG-2026-legacy-convention | old $r=K(0)$ no-condensation convention | wrong variable convention |
-| AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND | A3 v2.1 exact-Galerkin evolution underbound | The v2.1 evolution argument assigned the restarted exact-Galerkin solution the continuum energy-derived $H^2$ envelope without proving $F(P_ |
-| AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY | stale historical A3 shared bundle manifest | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/MANIFEST.json` listed the v1.0 consolidation `.tex.txt` and |
-| AUDIT-2026-07-19-A4-VERIFIER-TIER-DRIFT | stale pre-promotion boundary in the A4 verifier artifact | after the A4 scalar constructive theorem was enacted at scoped T6 on 2026-07-18, `a4_scalar_constructive_measure_verify.py` v1.0.0 continued |
+| AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND | A3 v2.1 exact-Galerkin evolution underbound | The v2.1 evolution argument assigned the restarted exact-Galerkin solution the continuum energy-derived $H^2$ envelope without proving… |
+| AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY | stale historical A3 shared bundle manifest | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/MANIFEST.json` listed the v1.0 consolidation `.tex.txt`… |
+| AUDIT-2026-07-19-A4-VERIFIER-TIER-DRIFT | stale pre-promotion boundary in the A4 verifier artifact | after the A4 scalar constructive theorem was enacted at scoped T6 on 2026-07-18, `a4_scalar_constructive_measure_verify.py` v1.0.0… |
 | AUDIT-2026-07-19-A4-Q0-ZERO-SHELL-BOUNDARY | zero-mode endpoint omitted from the v2.0 shell notation | the operator-confirmed integrated v2.0 referee package declared |
-| AUDIT-2026-07-19-A5-DEPENDENCY-PIN-DRIFT | stale A3/A4 pins in the A5 v1.0 synthesis manifest | A5 manifest schema 1.0 correctly froze the 2026-07-18 review surface, but the subsequent replacement A3 perturbative T6 bundle and A4 v2.0 p |
+| AUDIT-2026-07-19-A5-DEPENDENCY-PIN-DRIFT | stale A3/A4 pins in the A5 v1.0 synthesis manifest | A5 manifest schema 1.0 correctly froze the 2026-07-18 review surface, but the subsequent replacement A3 perturbative T6 bundle and A4… |
 | AUDIT-2026-07-19-A5-BUNDLE-NOTE-PDF-COMPLETENESS | paired A4 PDF omitted from initial A5 bundle | The first A5 capstone bundle copied the confirmed A4 v2.1 |
 
 ---
