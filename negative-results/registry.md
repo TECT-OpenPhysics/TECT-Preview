@@ -9,6 +9,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-FOURIER-SECOND-MOMENT-UNIFORM-NORM-LR-CUTOFF](#ng-2026-08-10-pre-a-st8-q3lock-fourier-second-moment-uniform-norm-lr-cutoff) | obtain a cutoff-uniform operator-norm Lieb--Robinson speed for the exact Q3LOCK quartic by applying the bounded-Weyl theorem to Fourier--Stieltjes cutoffs that agree on expanding balls | every such cutoff has global Fourier second moment `kappa_R>=3(g+3lambda)R^2`, so the speed furnished by that theorem diverges at least quadratically. This rejects only that theorem/moment route, not exact common dynamics or an energy-weighted locality proof |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-BASIC-RESOLVENT-CUBIC-FORCE-UNWEIGHTED-CORE](#ng-2026-08-10-pre-a-st8-q3lock-basic-resolvent-cubic-force-unweighted-core) | use ordinary basic resolvents as a cutoff-uniform unweighted generator core for the exact quartic force | for nonreal `z`, fixed-norm Weyl-displaced compact-support test vectors turn the exact sandwich into `4s^3W4(a)+O(s^2)`. It has no bounded extension, and cutoffs agreeing on expanding balls have an explicit `Omega(R^3)` norm lower bound; an energy-damped core or another invariance proof remains open |
 | [NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS](#ng-2026-08-09-pre-a-st8-q3lock-posthoc-direct-sum-common-dynamics) | treat the direct sum of the separately OS-reconstructed plus/minus thermal systems as the required common real-time dynamics | a direct sum exists for any two unrelated systems, retains the phase label as a central summand, and depends on the already chosen phase and temperature. It does not arise as the thermodynamic limit of the zero-source local Hamiltonians on one fixed labelled oscillator algebra |
 | [NG-2026-08-09-PRE-A-ST8-Q3LOCK-CURRENT-COMMON-DYNAMICS-THEOREM-IMPORT-MISMATCH](#ng-2026-08-09-pre-a-st8-q3lock-current-common-dynamics-theorem-import-mismatch) | directly import the currently cited oscillator-lattice dynamics theorems for the exact ST8/Q3LOCK Hamiltonian | the audited theorems require bounded Weyl-integral or bounded `C_0` interactions, bounded intersite terms after arbitrary onsite absorption, or subquadratic forces. They do not simultaneously cover the unbounded Q3 quartic onsite potential and unbounded bilinear spatial coupling. This is an import obstruction, not a nonexistence theorem |
 | [NG-2026-08-09-PRE-A-ST8-Q3LOCK-PARTIAL-QUARTIC-COUNTERTERM-ALL-SCALE-CLOSURE](#ng-2026-08-09-pre-a-st8-q3lock-partial-quartic-counterterm-all-scale-closure) | repair the missing distance-two quartic from EXP-000789 by adding only `O22^(2)` and call the quartic counterterm basis closed | exact `Aut(Q3) x Z2` Hessian-trace closure has ranks `2,4,9,19,19`; already at the first loop it also generates `18 O211^(1,1;2)-6 O211^(1,2;1)`. The minimum invariant one-loop-closed quartic space containing the bare directions is the full 19-dimensional orbit space |
@@ -304,6 +306,56 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-fourier-second-moment-uniform-norm-lr-cutoff"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-FOURIER-SECOND-MOMENT-UNIFORM-NORM-LR-CUTOFF -- bounded-Weyl cutoff speed is not uniform
+
+**Failure mode.** Apply the bounded-Weyl-integral oscillator theorem to smooth
+Fourier--Stieltjes cutoffs `V_R` that agree with the exact ST8/Q3LOCK quartic
+on `|q|<=R`, and infer a cutoff-uniform operator-norm Lieb--Robinson speed as
+`R` tends to infinity.
+
+**Evidence.** If
+`V_R(q)=integral exp(i k.q) mu_R(dk)` and
+`kappa_R=integral |k|^2 |mu_R|(dk)`, differentiation gives
+`sup_(q,|v|=1)|v^T D^2V_R(q)v|<=kappa_R`.  Along a Q3 coordinate ray, exactly
+three edges meet the occupied vertex and
+`W4(t e)=(g+3lambda)t^4/4`.  Therefore
+`kappa_R>=3(g+3lambda)R^2`.  The audited theorem's exponent depends linearly
+on this global second moment.  Primary symbolic, independent exact-arithmetic,
+and integrated checks are stored with EXP-000792.
+
+**Consequence.** This particular cutoff plus global-second-moment theorem
+cannot close the common-alpha gate uniformly.  The result is not a proof that
+the exact dynamics, a different resolvent-algebra construction, or an
+energy-weighted locality estimate does not exist.  Continue with higher
+weighted-energy moments and a thermodynamic Cauchy estimate.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-basic-resolvent-cubic-force-unweighted-core"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-BASIC-RESOLVENT-CUBIC-FORCE-UNWEIGHTED-CORE -- the ordinary basic-resolvent core is not uniformly polynomial-force bounded
+
+**Failure mode.** Treat the ordinary basic resolvents
+`R_z=(a.P+b.Q-z)^(-1)`, with nonzero `a` and `Im(z)!=0`, as an unweighted generator core on
+which the exact quartic commutator or expanding-ball cutoff commutators remain
+uniformly bounded.
+
+**Evidence.** On Schwartz space the resolvent identity is
+`[W4(Q),R_z]=-i hbar R_z(D_aW4)(Q)R_z`.  Put `L=a.P+b.Q`, choose normalized
+`xi in C_c^infty` with configuration support in `B_r0`, and let the Weyl
+unitary `U_s` send `Q` to `Q+s a` and `P` to `P-s b`.  It preserves `L`.
+The inputs `psi_s=U_s(L-z)xi` and `phi_s=U_s(L-conj(z))xi` have norms
+independent of `s`, while exact resolvent cancellation gives
+`<phi_s,R_z(D_aW4)(Q)R_z psi_s>=4s^3W4(a)+O(s^2)`, with `W4(a)>0`.
+Thus the exact sandwich has no bounded extension.  If `V_R=W4` on `B_R`, the
+same identity holds for `0<=s<=(R-r0)/|a|`; choosing
+`s=(R-r0)/(2|a|)` proves
+`||R_z(D_aV_R)(Q)R_z||>=c_(xi,z,a)R^3` for all sufficiently large `R`.
+
+**Consequence.** The standard unweighted basic-resolvent generator estimate
+does not close the common dynamics.  This does not rule out finite-time
+resolvent-algebra invariance by another argument, a smaller analytic core, or
+an energy-damped graph norm.  The registered repair is precisely the higher-
+moment energy-damped thermodynamic Cauchy gate.
 
 <a id="ng-2026-08-09-pre-a-st8-q3lock-posthoc-direct-sum-common-dynamics"></a>
 ### NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS -- a phase-labelled direct sum is not Hamiltonian-derived common dynamics

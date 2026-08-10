@@ -1,0 +1,311 @@
+{
+  "assertions": [
+    {
+      "actual": "tect/pre-a-cp1-st8-q3lock-common-local-derivation-weighted-energy-route-split/1.0",
+      "expected": "*/1.0",
+      "group": "provenance",
+      "name": "manifest schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-000790",
+      "expected": "EXP-000790",
+      "group": "provenance",
+      "name": "parent exploration",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "provenance",
+      "name": "certificate result id",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "group": "quartic",
+      "name": "Q3 vertex count",
+      "status": "PASS"
+    },
+    {
+      "actual": 12,
+      "expected": 12,
+      "group": "quartic",
+      "name": "Q3 edge count",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "expected": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "group": "quartic",
+      "name": "Q3 degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "t**4*(g + 3*lambda)/4",
+      "expected": "t**4*(g + 3*lambda)/4",
+      "group": "quartic",
+      "name": "coordinate-ray quartic",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*t**2*(g + 3*lambda)",
+      "expected": "t**2*(3*g + 9*lambda)",
+      "group": "quartic",
+      "name": "coordinate-ray Hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "coercivity",
+      "name": "eight-component coercivity SOS",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "resolvent",
+      "name": "quartic Euler identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/(4*epsilon*gamma)",
+      "expected": "1/(4*epsilon*gamma)",
+      "group": "coercivity",
+      "name": "single-site Young constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "c**2/(8*epsilon*gamma)",
+      "expected": "c^2/(8*epsilon*gamma)",
+      "group": "coercivity",
+      "name": "bond-dot Young constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "max_(rho>=0)[h0 rho-(r/2)rho^2-a_gamma rho^4]",
+      "expected": "max_*",
+      "group": "coercivity",
+      "name": "source envelope is a maximum",
+      "status": "PASS"
+    },
+    {
+      "actual": "c*(-px*x + px*y - py*x + py*y)/(2*chi)",
+      "expected": "-c*(px + py)*(x - y)/(2*chi)",
+      "group": "current",
+      "name": "local current sign and coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "current",
+      "name": "sharp current plus square",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "current",
+      "name": "sharp current minus square",
+      "status": "PASS"
+    },
+    {
+      "actual": "+/-J_xy<=sqrt(c/(2chi))(e_x+e_y) as quadratic forms",
+      "expected": "sqrt(c/(2chi))",
+      "group": "current",
+      "name": "sharp current constant in manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "tau_t^Lambda(E_f)<=exp[6 sqrt(c/(2chi))(exp(mu)-1)|t|] E_f as a finite-volume transported quadratic-form inequality",
+      "expected": "degree 6",
+      "group": "weighted",
+      "name": "cubic lattice degree factor",
+      "status": "PASS"
+    },
+    {
+      "actual": "kappa_R>=3(g+3lambda)R^2",
+      "expected": "kappa_R>=3(g+3lambda)R^2",
+      "group": "cutoff",
+      "name": "Fourier second-moment lower bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "This refutes only cutoff-uniform operator-norm LR control through that theorem and moment. It does not refute exact common dynamics or an energy-weighted locality proof.",
+      "expected": "scoped route obstruction",
+      "group": "scope",
+      "name": "cutoff obstruction scoped",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "bounded_input_test": "For normalized xi in C_c^infty with q-support in B_r0, psi_s=U_s(L-z)xi and phi_s=U_s(L-conj(z))xi have s-independent norms and give <phi_s,R_z(D_a W4)(Q)R_z psi_s>=4W4(a)s^3+O(s^2)",
+        "commutator": "[W4(Q),R_z]=-i hbar R_z(D_a W4)(Q)R_z on Schwartz space",
+        "consequence": "The sandwiched commutator is unbounded for the exact quartic, and cutoffs agreeing on expanding balls have basic-resolvent commutator norms growing at least cubically",
+        "cubic_growth": "D_a W4(Q+s a)=4s^3 W4(a)+O(s^2), with W4(a)>0",
+        "cutoff_norm_lower_bound": "If V_R=W4 on B_R, the same identity holds for 0<=s<=(R-r0)/|a|; choosing s=(R-r0)/(2|a|) gives ||R_z(D_a V_R)(Q)R_z||>=c_xi,z,a R^3 for all large R",
+        "preserving_displacement": "Q maps to Q+s a and P maps to P-s b, leaving a.P+b.Q invariant",
+        "resolvent": "R_z=(a.P+b.Q-z)^(-1), a nonzero, Im(z) nonzero",
+        "scope": "This refutes the standard unweighted basic-resolvent generator-core estimate, not finite-time resolvent-algebra invariance by another argument or an energy-damped core."
+      },
+      "expected": "nonreal-z bounded-input R^3 lower-bound lemma",
+      "group": "resolvent",
+      "name": "basic resolvent cubic growth",
+      "status": "PASS"
+    },
+    {
+      "actual": "This refutes the standard unweighted basic-resolvent generator-core estimate, not finite-time resolvent-algebra invariance by another argument or an energy-damped core.",
+      "expected": "scoped route obstruction",
+      "group": "scope",
+      "name": "basic resolvent obstruction scoped",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "local derivation closed",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "first energy cone closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "open scope common_state_independent_real_time_automorphism",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "open scope common_alpha_KMS_identification",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "open scope distinct_algebraic_ground_states",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "open scope broken_sector_GNS_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "open scope continuum_limit",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "open scope physical_empty_space",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "open scope C6_advanced",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "open scope CP1_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "open scope Sector_A_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "open scope Pre_A_complete",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "Q3_degrees": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "Q3_edges": 12,
+    "Q3_vertices": 8,
+    "common_alpha_closed": false,
+    "coordinate_ray_hessian": "3*t**2*(g + 3*lambda)",
+    "coordinate_ray_quartic": "t**4*(g + 3*lambda)/4",
+    "current_poisson": "c*(-px*x + px*y - py*x + py*y)/(2*chi)",
+    "sharp_current_constant": "sqrt(2)*sqrt(c)/(2*sqrt(chi))",
+    "weighted_degree": 6
+  },
+  "result_id": "PA-CP1-ST8-Q3LOCK-COMMON-LOCAL-DERIVATION-SOURCE-UNIFORM-WEIGHTED-FIRST-ENERGY-CONE-AND-FOURIER-CUTOFF-ROUTE-SPLIT",
+  "schema": "tect/pre-a-cp1-st8-q3lock-common-local-derivation-weighted-energy-route-split-primary-result/1.0",
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_common_local_derivation_weighted_energy_route_split.py": "01e45e379f59aecb0349e93544d35c30125f11b6df78c75912e21af70828b68e",
+    "strategy/pre-a-cp1-st8-q3lock-common-local-derivation-weighted-energy-route-split-certificate-260810.md": "e958d596080723023a3a174c6a8448bc2c5dbaa92501a21c0cbc39302070d9c9",
+    "strategy/pre-a-cp1-st8-q3lock-common-local-derivation-weighted-energy-route-split-manifest.json": "2a29637bcddd115042986fb3c1e1df7d43bf43c91e010cbc7349eda60c924d2f",
+    "strategy/pre-a-cp1-st8-q3lock-os-dynamics-ground-gap-counterterm-empty-route-split-manifest.json": "65dad7a04af5b83883ffff75e9ce4bead3e2bbc3359384744af18c489008f890"
+  },
+  "summary": {
+    "failed": 0,
+    "passed": 35,
+    "total": 35
+  },
+  "verdict": "PASS"
+}

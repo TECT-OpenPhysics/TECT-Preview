@@ -1,0 +1,170 @@
+{
+  "schema": "tect/pre-a-round1-evidence-clue-freeze/1.0",
+  "freeze_id": "PRE-A-ROUND1-T053-BOUNDARY-EVIDENCE-CLUE-FREEZE-v1.0",
+  "version": "1.0.0",
+  "issued_on": "2026-08-10",
+  "task_id": "T-054",
+  "authority": "T0 immutable Round-1 role and scope freeze; not a complete Pre-A evidence register, candidate selection, physical model, or claim-tier change",
+  "claim_bearing": false,
+  "round_scope": {
+    "question": "Which already registered observations and exact mathematical clues can be used, without refitting, for a first categorical admission test of the current M0/M1/M2/M5 candidates at the causal, compact-winding, critical-response, and same-reference boundaries?",
+    "included_families": [
+      "local Lorentz and electromagnetic propagation",
+      "multi-messenger causal propagation",
+      "photon energy-dependent propagation",
+      "superconducting compact-phase mechanism calibration",
+      "controlled helium critical response",
+      "candidate-internal same-reference ordering and quadratic-dynamics clues"
+    ],
+    "excluded_or_deferred_families": [
+      {
+        "family": "stable particle spectrum, masses, and charges",
+        "reason": "no candidate-neutral microscopic observable map is frozen in Round 1",
+        "status": "DEFERRED_TO_LATER_PRE_A_ROUND"
+      },
+      {
+        "family": "universal gravitational response and redshift",
+        "reason": "the current contestants do not provide a common dynamical metric observable",
+        "status": "DEFERRED_TO_LATER_PRE_A_ROUND"
+      },
+      {
+        "family": "vacuum compact winding or vacuum topological sectors",
+        "reason": "PA-EV-T053-003 is a material mechanism example, not direct vacuum evidence",
+        "status": "MISSING_DIRECT_EVIDENCE"
+      },
+      {
+        "family": "microscopic physical zero-mode and polarization count",
+        "reason": "the propagation observations constrain speeds and dispersion but do not by themselves identify microscopic degrees of freedom, constraints, gauge quotients, or polarization counts",
+        "status": "MISSING_DIRECT_EVIDENCE_AND_CANDIDATE_MAP"
+      },
+      {
+        "family": "cosmological transition and cooling history",
+        "reason": "no frozen dataset, uncertainty model, or candidate cooling map exists",
+        "status": "MISSING_DIRECT_EVIDENCE"
+      },
+      {
+        "family": "physical empty-space preparation branch",
+        "reason": "EXP-000790 proves that another same-H equilibrium phase is not a strict bulk empty comparator",
+        "status": "DEFERRED_TO_PREPARATION_BRANCH_CONTRACT"
+      }
+    ],
+    "scope_boundary": "Completeness below means every item used or considered for this bounded Round-1 T053 boundary triage is assigned exactly one role and every omitted family is explicitly deferred. It does not mean that the full Pre-A empirical programme or exit conditions are complete."
+  },
+  "source_register": {
+    "path": "strategy/pre-a-round1-boundary-evidence-register-260809-v0.1.json",
+    "normalized_sha256": "99efda3594e31879c76c1918eaec044ff6e24d712407ce68d621113212a1791f",
+    "immutable_projection_policy": "The detailed observable values, units, uncertainty statements, dataset locators, provenance, independence groups, systematics, and minimum constraints remain single-copy in the source register. This freeze assigns roles by ID and does not duplicate those bodies."
+  },
+  "evidence_roles": [
+    {
+      "id": "PA-EV-T053-001",
+      "role": "DISCOVERY_CONSTRAINT",
+      "used_for": ["D04-SPEED-DISPERSION"],
+      "candidate_interpretations": ["M0 effective Lorentz baseline", "microscopic candidate anisotropy or dispersion prediction"],
+      "known_alternatives": ["ordinary Lorentz-invariant effective field theory", "apparatus and environmental systematics as recorded in the source register"]
+    },
+    {
+      "id": "PA-EV-T053-002",
+      "role": "DISCOVERY_CONSTRAINT",
+      "used_for": ["D04-SPEED-DISPERSION"],
+      "candidate_interpretations": ["common limiting propagation speed", "supplied relativistic background"],
+      "known_alternatives": ["standard general-relativistic propagation with source-model uncertainty"]
+    },
+    {
+      "id": "PA-EV-T053-003",
+      "role": "MECHANISM_CALIBRATION_NOT_VACUUM_EVIDENCE",
+      "used_for": ["D05-COMPACT-WINDING"],
+      "candidate_interpretations": ["example of compact phase and winding observables"],
+      "known_alternatives": ["material condensate with inserted electromagnetic gauge structure"]
+    },
+    {
+      "id": "PA-EV-T053-004",
+      "role": "DISCOVERY_CONSTRAINT",
+      "used_for": ["D06-CRITICAL-DATA"],
+      "candidate_interpretations": ["specific-heat critical response under a declared order-parameter map"],
+      "known_alternatives": ["established helium universality description", "corrections to scaling and experimental systematics"]
+    },
+    {
+      "id": "PA-EV-T053-005",
+      "role": "DISCOVERY_CONSTRAINT",
+      "used_for": ["D04-SPEED-DISPERSION"],
+      "candidate_interpretations": ["energy-dependent propagation prediction"],
+      "known_alternatives": ["standard dispersionless propagation", "source-intrinsic delay and propagation systematics"]
+    },
+    {
+      "id": "PA-HO-T053-001",
+      "role": "VISIBLE_POSTHOC_DIAGNOSTIC_TARGET",
+      "used_for": ["D07-VALIDATION"],
+      "candidate_interpretations": ["stiffness exponent only after a frozen microscopic-to-observable map"],
+      "known_alternatives": ["established helium critical theory", "Josephson-scaling interpretation"],
+      "blind": false,
+      "prediction_preregistered_before_target_disclosure": false
+    },
+    {
+      "id": "PA-CAL-T053-001",
+      "role": "CALIBRATION_AUTHORITY_NOT_EXPERIMENT",
+      "used_for": ["D05-COMPACT-WINDING", "D09-PREDICTION-COST"],
+      "candidate_interpretations": ["unit and normalization calibration only"],
+      "known_alternatives": ["none; the value is an SI defining-constant consequence"]
+    }
+  ],
+  "clue_items": [
+    {
+      "id": "PA-CLUE-R157-M1-ZERO",
+      "role": "EXACT_CANDIDATE_INTERNAL_FALSIFIER",
+      "authority": "claims/A2-FULL-PRODUCTION-WELLPOSED/status.json#statement",
+      "finding": "The pinned unconstrained neutral M1 functional has zero as its unique critical point and global minimizer.",
+      "candidate_scope": "M1 pinned version only"
+    },
+    {
+      "id": "PA-CLUE-M1-GRADIENT-DYNAMICS",
+      "role": "EXACT_ADMISSION_BOUNDARY",
+      "authority": "strategy/pre-a-m1-current-production-functional-candidate-manifest.json#law",
+      "finding": "The registered M1 evolution is canonical first-order L2 gradient flow and has no canonical momentum or declared conservative real-time law.",
+      "candidate_scope": "M1 pinned version only"
+    },
+    {
+      "id": "PA-CLUE-M2-CI8-CONE",
+      "role": "EXACT_CANDIDATE_INTERNAL_ADVANCE",
+      "authority": "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json#mathematical_status",
+      "finding": "The declared inertial M2 completion has eight isolated critical nodes and an isotropic tree-level z=1 cone, but inertia and time are inputs.",
+      "candidate_scope": "M2 declared inertial lane only"
+    },
+    {
+      "id": "PA-CLUE-M5-RANK-ONE",
+      "role": "EXACT_CANDIDATE_INTERNAL_FALSIFIER",
+      "authority": "negative-results/registry.md#ng-2026-08-03-pa-m5-bare-isotropic-shell-causal-cone",
+      "finding": "The bare M5 isotropic shell has a rank-one spatial Hessian and cannot provide the joint three-dimensional critical Lorentz cone.",
+      "candidate_scope": "bare PA-M5-NL3-SV-v0 only"
+    },
+    {
+      "id": "PA-CLUE-EXP790-COMMON-ALPHA",
+      "role": "BRIDGE_ONLY_OPEN_BOUNDARY",
+      "authority": "strategy/pre-a-cp1-st8-q3lock-os-dynamics-ground-gap-counterterm-empty-route-split-manifest.json#common_dynamics_audit",
+      "finding": "Phasewise OS/KMS reconstruction exists, while one phase-independent Hamiltonian-derived common real-time dynamics remains open.",
+      "candidate_scope": "CP1/ST8 bridge; not a Round-1 contestant"
+    }
+  ],
+  "role_exclusivity": {
+    "allowed_roles": [
+      "DISCOVERY_CONSTRAINT",
+      "VISIBLE_POSTHOC_DIAGNOSTIC_TARGET",
+      "MECHANISM_CALIBRATION_NOT_VACUUM_EVIDENCE",
+      "CALIBRATION_AUTHORITY_NOT_EXPERIMENT"
+    ],
+    "each_source_id_occurs_once": true,
+    "discovery_ids_are_not_reused_for_parameter_choice_after_freeze": true,
+    "posthoc_target_carries_no_validation_credit": true
+  },
+  "completeness": {
+    "all_source_evidence_items_accounted": true,
+    "all_source_calibration_items_accounted": true,
+    "theoretical_clues_declared": true,
+    "omitted_families_explicitly_classified": true,
+    "round1_t053_boundary_role_freeze_complete": true,
+    "full_pre_a_evidence_register_complete": false,
+    "pre_a_exit_condition_met": false
+  },
+  "versioning_policy": "Immutable after publication. A later round may add evidence or alter scope only in a new version that cites this freeze; it may not rewrite a role after seeing a score.",
+  "no_overclaim": "This file closes only the bounded Round-1 evidence-role inventory. It does not show that the registered phenomena have one cause, supply direct vacuum winding or cosmological-cooling evidence, map a microscopic candidate to measured observables, select a candidate, complete Pre-A, advance C6, or close Sector A."
+}

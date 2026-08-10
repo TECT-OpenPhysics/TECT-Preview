@@ -5,12 +5,14 @@
 
 Authorities: `negative-results/registry.md`.
 
-**294 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 223 · retraction: 5
+**296 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 225 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FOURIER-SECOND-MOMENT-UNIFORM-NORM-LR-CUTOFF`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-fourier-second-moment-uniform-norm-lr-cutoff) | no_go | obtain a cutoff-uniform operator-norm Lieb--Robinson speed for the exact Q3LOCK quartic by applying the bounded-Weyl theorem to Fourier--Stieltjes cutoffs that agree on expanding… |
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-BASIC-RESOLVENT-CUBIC-FORCE-UNWEIGHTED-CORE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-basic-resolvent-cubic-force-unweighted-core) | no_go | use ordinary basic resolvents as a cutoff-uniform unweighted generator core for the exact quartic force |
 | [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-uniform-full-finite-volume-spectral-gap) | no_go | retain a positive volume-uniform full finite-volume spectral gap in the fixed-spacing Q3LOCK ground-order regime |
 | [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-posthoc-direct-sum-common-dynamics) | no_go | treat the direct sum of the separately OS-reconstructed plus/minus thermal systems as the required common real-time dynamics |
 | [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-PARTIAL-QUARTIC-COUNTERTERM-ALL-SCALE-CLOSURE`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-partial-quartic-counterterm-all-scale-closure) | no_go | repair the missing distance-two quartic from EXP-000789 by adding only `O22^(2)` and call the quartic counterterm basis closed |
@@ -34,8 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-INTERACTING-GROUND-PROJECTIVITY`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-interacting-ground-projectivity) | no_go | identify the registered interacting fine ground with the coarse ground by restricting the natural low-mode `B(H)` factor under strict refinement `N=2M` |
 | [`NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-EXACT-DYNAMICS-EQUIVARIANCE`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-exact-dynamics-equivariance) | no_go | exactly intertwine the declared inserted-1D `g>0` coarse and fine dynamics with the natural low-mode embedding while allowing only scalar-energy, scalar-mass, and Q3-Laplacian qua… |
 | [`NG-2026-08-04-PRE-A-CP1-CL8-MIDPOINT-QUAD-GLOBAL-UNIQUENESS`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-midpoint-quad-global-uniqueness) | no_go | claim a global single-valued Q3 four-corner map for the symmetric midpoint variational quad over the whole admitted `r<0` parameter range |
-| [`NG-2026-08-04-PRE-A-CP1-CL8-HISTORY-CUT-RAW-LEG-TENSOR-FACTORIZATION`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-history-cut-raw-leg-tensor-factorization) | no_go | treat each raw complete history vertex `(A_j,B_j)` on a mixed cut as an independent canonical tensor factor and implement a parity layer as a tensor product of independent raw-leg… |
-| [`NG-2026-08-04-PRE-A-CP1-CL8-FULL-EUCLIDEAN-SHARP-CUTOFF-REFLECTION-POSITIVITY`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-full-euclidean-sharp-cutoff-reflection-positivity) | no_go | infer reflection positivity of the induced `N=1` projected simultaneous sharp-cutoff law from time-reflection symmetry |
 
 Search without loading the full registry:
 

@@ -1,0 +1,136 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-common-local-derivation-weighted-energy-route-split/1.0",
+  "package_id": "PA-CP1-ST8-Q3LOCK-COMMON-LOCAL-DERIVATION-WEIGHTED-ENERGY-ROUTE-SPLIT-v1",
+  "result_id": "PA-CP1-ST8-Q3LOCK-COMMON-LOCAL-DERIVATION-SOURCE-UNIFORM-WEIGHTED-FIRST-ENERGY-CONE-AND-FOURIER-CUTOFF-ROUTE-SPLIT",
+  "package_version": "1.0.0",
+  "issued": "2026-08-10",
+  "task_id": "T-054",
+  "exploration_id": "EXP-000792",
+  "parent_exploration_id": "EXP-000790",
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FOURIER-SECOND-MOMENT-UNIFORM-NORM-LR-CUTOFF",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-BASIC-RESOLVENT-CUBIC-FORCE-UNWEIGHTED-CORE"
+  ],
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "claim_bearing": false,
+  "authority": "T0 exact fixed-lattice finite-volume route-split theorem: the ST8/Q3LOCK Hamiltonians define one phase-independent local polynomial CCR derivation before any state is selected; a sharp source-uniform coercive shift gives a source- and volume-uniform weighted first-local-energy cone; any Fourier--Stieltjes cutoff that agrees with the exact quartic on a radius-R ball has second moment at least 3(g+3lambda)R^2, so the audited bounded-Weyl theorem cannot furnish a cutoff-uniform operator-norm Lieb--Robinson speed. Higher weighted-energy moments, thermodynamic Cauchy convergence, exponentiation to a common alpha, and KMS identification remain open",
+  "model": {
+    "onsite_quartic": "W4(q)=(g/4)sum_e q_e^4+(lambda/4)sum_(e~f in Q3)(q_e-q_f)^2(q_e^2+q_f^2)",
+    "finite_volume_hamiltonian": "H_Lambda(h)=sum_x[p_x^2/(2chi)+(r/2)|q_x|^2+W4(q_x)-h u.q_x]+(c/2)sum_<xy>|q_x-q_y|^2",
+    "parameters": "g>0, lambda>=0, c>0, chi>0, |h|<=h0, u=8^(-1/2)(1,...,1)",
+    "quartic_lower_bound": "W4(q)>=g|q|^4/32"
+  },
+  "common_local_derivation": {
+    "algebra": "finite-support polynomial CCR star-algebra P_loc",
+    "definition": "delta_h(A)=(i/hbar)[H_Lambda(h),A] once Lambda contains the one-neighbourhood of supp(A)",
+    "volume_independence": true,
+    "generators": {
+      "delta_h_q_x": "p_x/chi",
+      "delta_h_p_x": "-r q_x-grad W4(q_x)-c sum_(y~x)(q_x-q_y)+h u"
+    },
+    "phase_independent": true,
+    "exponentiated_common_automorphism": false
+  },
+  "source_uniform_coercivity": {
+    "range": "|h|<=h0 and 0<gamma<g/32",
+    "a_gamma": "g/32-gamma",
+    "C_gamma": "max_(rho>=0)[h0 rho-(r/2)rho^2-a_gamma rho^4]",
+    "shifted_energy": "K_Lambda,h=H_Lambda(h)+C_gamma|Lambda|",
+    "lower_bound": "K_Lambda,h>=sum_x[p_x^2/(2chi)+gamma|q_x|^4]+(c/2)sum_<xy>|q_x-q_y|^2",
+    "derived_bounds": [
+      "sum_(x in X)|q_x|^2<=epsilon K+|X|/(4 epsilon gamma)",
+      "+/- q_x.q_y<=epsilon K+1/(8 epsilon gamma)",
+      "+/- c q_x.q_y<=epsilon K+c^2/(8 epsilon gamma)",
+      "(q_x.q_y)^2<=K/(2gamma)",
+      "||(q_x.q_y)(1+K)^(-1/2)||<=(2gamma)^(-1/2)",
+      "|q_x|^4<=K/gamma, p_x^2<=2chi K, |q_x-q_y|^2<=2K/c"
+    ]
+  },
+  "weighted_first_local_energy": {
+    "local_energy": "e_x=p_x^2/(2chi)+(r/2)|q_x|^2+W4(q_x)-h u.q_x+C_gamma+(c/4)sum_(y~x)|q_x-q_y|^2",
+    "positivity": "e_x>=p_x^2/(2chi)+gamma|q_x|^4+(c/4)sum_(y~x)|q_x-q_y|^2>=0",
+    "sum_rule": "sum_x e_x=K_Lambda,h",
+    "continuity_equation": "d e_x/dt=-sum_(y~x)J_xy, J_xy=(c/(4chi)){p_x+p_y,q_x-q_y}, J_yx=-J_xy",
+    "current_form_bound": "+/-J_xy<=sqrt(c/(2chi))(e_x+e_y) as quadratic forms",
+    "weight_contract": "E_f=sum_x f_x e_x with f_x>0 and exp(-mu)<=f_x/f_y<=exp(mu) on adjacent sites",
+    "three_dimensional_growth_bound": "tau_t^Lambda(E_f)<=exp[6 sqrt(c/(2chi))(exp(mu)-1)|t|] E_f as a finite-volume transported quadratic-form inequality",
+    "uniformity": ["finite volume", "|h|<=h0", "phase choice"],
+    "common_alpha_proved": false
+  },
+  "fourier_cutoff_obstruction": {
+    "contract": "V_R(q)=integral exp(i k.q) mu_R(dk), kappa_R=integral |k|^2 |mu_R|(dk), and V_R=W4 on |q|<=R",
+    "hessian_bound": "sup_(q,|v|=1)|v^T D^2V_R(q)v|<=kappa_R",
+    "coordinate_ray": "W4(t e)=(g+3lambda)t^4/4",
+    "lower_bound": "kappa_R>=3(g+3lambda)R^2",
+    "consequence": "The speed delivered by arXiv:0909.2249 Theorem 4.2 through its global Fourier second moment diverges at least quadratically with R",
+    "scope": "This refutes only cutoff-uniform operator-norm LR control through that theorem and moment. It does not refute exact common dynamics or an energy-weighted locality proof."
+  },
+  "basic_resolvent_core_obstruction": {
+    "resolvent": "R_z=(a.P+b.Q-z)^(-1), a nonzero, Im(z) nonzero",
+    "commutator": "[W4(Q),R_z]=-i hbar R_z(D_a W4)(Q)R_z on Schwartz space",
+    "preserving_displacement": "Q maps to Q+s a and P maps to P-s b, leaving a.P+b.Q invariant",
+    "cubic_growth": "D_a W4(Q+s a)=4s^3 W4(a)+O(s^2), with W4(a)>0",
+    "bounded_input_test": "For normalized xi in C_c^infty with q-support in B_r0, psi_s=U_s(L-z)xi and phi_s=U_s(L-conj(z))xi have s-independent norms and give <phi_s,R_z(D_a W4)(Q)R_z psi_s>=4W4(a)s^3+O(s^2)",
+    "cutoff_norm_lower_bound": "If V_R=W4 on B_R, the same identity holds for 0<=s<=(R-r0)/|a|; choosing s=(R-r0)/(2|a|) gives ||R_z(D_a V_R)(Q)R_z||>=c_xi,z,a R^3 for all large R",
+    "consequence": "The sandwiched commutator is unbounded for the exact quartic, and cutoffs agreeing on expanding balls have basic-resolvent commutator norms growing at least cubically",
+    "scope": "This refutes the standard unweighted basic-resolvent generator-core estimate, not finite-time resolvent-algebra invariance by another argument or an energy-damped core."
+  },
+  "next_exact_gate": {
+    "gate": "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "requirements": [
+      "Propagate sufficiently high weighted local-energy graph norms uniformly in volume, source and cutoff to control the cubic force",
+      "Prove an energy-weighted spatial Cauchy estimate for finite-volume dynamics on one predeclared dense local resolvent/regular core",
+      "Exponentiate the common local derivation and identify both phasewise reconstructed systems as KMS states of that same alpha"
+    ],
+    "target_estimate": "||(1+E_mu,X)^(-s)[tau_t^Lambda'(A)-tau_t^Lambda(A)](1+E_mu,X)^(-s)||<=C_A,T exp[-mu(dist(X,Lambda^c)-vT)]",
+    "minimal_falsifier": "One fixed local A and compact time interval for which every finite energy weight fails to make the volume net Cauchy"
+  },
+  "external_authority_boundary": {
+    "arXiv_0909_2249": "bounded Weyl-integral anharmonic perturbations with a finite global Fourier second moment; useful for the exact cutoff obstruction, not directly applicable uniformly to W4",
+    "arXiv_1605_05259": "resolvent-algebra dynamics for bounded C0 interactions; the exact quartic onsite plus unbounded harmonic coupling requires a new extension",
+    "arXiv_1601_04809": "Schwartz onsite and pair potentials, not the exact polynomial/harmonic model",
+    "arXiv_0904_2717": "subquadratic/Fourier-derivative conditions, not the quartic model",
+    "arXiv_1602_01294": "classical polynomial anharmonic-crystal local-energy propagation; route evidence only, not a quantum automorphism theorem"
+  },
+  "gate_resolution": {
+    "parent_gate": "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "status": "PARTIALLY RESOLVED: COMMON LOCAL POLYNOMIAL DERIVATION AND SOURCE-UNIFORM WEIGHTED FIRST-ENERGY CONE CLOSED; COMMON AUTOMORPHISM, KMS IDENTIFICATION, HIGHER MOMENTS AND THERMODYNAMIC CAUCHY REMAIN OPEN",
+    "closed_subgates": [
+      "PA-CP1-ST8-Q3LOCK-PHASE-INDEPENDENT-LOCAL-POLYNOMIAL-CCR-DERIVATION",
+      "PA-CP1-ST8-Q3LOCK-SOURCE-UNIFORM-WEIGHTED-FIRST-LOCAL-ENERGY-CONE"
+    ],
+    "refuted_subgates": [
+      "PA-CP1-ST8-Q3LOCK-FOURIER-CUTOFF-UNIFORM-OPERATOR-NORM-LR-VIA-GLOBAL-SECOND-MOMENT",
+      "PA-CP1-ST8-Q3LOCK-BASIC-RESOLVENT-UNWEIGHTED-POLYNOMIAL-GENERATOR-CORE"
+    ],
+    "open_subgates": [
+      "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+      "PA-CP1-ST8-Q3LOCK-DLR-TO-COMMON-ALPHA-KMS-IDENTIFICATION"
+    ]
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_common_local_derivation_weighted_energy_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_common_local_derivation_weighted_energy_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_common_local_derivation_weighted_energy_route_split_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-primary-pre-a-cp1-st8-q3lock-common-local-derivation-weighted-energy-route-split/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-independent-pre-a-cp1-st8-q3lock-common-local-derivation-weighted-energy-route-split/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-integrated-pre-a-cp1-st8-q3lock-common-local-derivation-weighted-energy-route-split/result.json"
+  },
+  "scope": {
+    "fixed_lattice_finite_volume": true,
+    "common_local_polynomial_derivation": true,
+    "source_uniform_coercivity": true,
+    "weighted_first_local_energy_cone": true,
+    "common_state_independent_real_time_automorphism": false,
+    "common_alpha_KMS_identification": false,
+    "distinct_algebraic_ground_states": false,
+    "broken_sector_GNS_gap": false,
+    "continuum_limit": false,
+    "physical_empty_space": false,
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "no_overclaim": "The theorem is a finite-volume algebraic and quadratic-form locality precursor. It neither exponentiates the derivation in the thermodynamic limit nor proves a common C-star automorphism, KMS identification, algebraic ground states, a GNS or physical mass gap, regulator removal, physical empty space, light, mass, time, gravity, C6, CP1, Sector A, or Pre-A completion."
+}

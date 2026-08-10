@@ -36,8 +36,9 @@ Changelog:
         line endings so catalog hashes are stable across Windows/Linux worktrees.
   1.4.0 (2026-08-10) freeze the legacy full catalog JSON and emit a thin current
         manifest with one bounded JSON shard per artefact kind.
+  1.4.1 (2026-08-10) remove trailing whitespace from the compact summary line.
 """
-__version__ = "1.4.0"
+__version__ = "1.4.1"
 __first_issued__ = "2026-06-05"
 __version_issued__ = "2026-08-10"
 
@@ -347,7 +348,7 @@ def render_index(summary):
         f"`../CATALOG.md` is a frozen compatibility volume at commit `{CUTOVER_COMMIT[:8]}`",
         "for historical verifiers and no longer grows.",
         "",
-        f"**{summary['total']} artefacts** · **{summary['claim_count']} live claim cards** · ",
+        f"**{summary['total']} artefacts** · **{summary['claim_count']} live claim cards** ·",
         f"{summary['superseded']} superseded artefacts retained",
         "",
         "## By kind",

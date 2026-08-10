@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**571 accepted events** · latest 25 shown below · machine locator: `index.json`
+**573 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-10 | `20260810-pre-a-resolvent-lower-bound-adversarial-repair` — [PRE-A-RESOLVENT-LOWER-BOUND adversarial repair] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-pre-a-resolvent-lower-bound-adversarial-repair) |
+| 2026-08-10 | `20260810-pre-a-round1-and-weighted-energy-truth-first-ch` — [PRE-A-ROUND1-AND-WEIGHTED-ENERGY truth-first checkpoint] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-pre-a-round1-and-weighted-energy-truth-first-ch) |
 | 2026-08-10 | `20260810-management-index-and-publication-routes-compact` — [MANAGEMENT-INDEX-AND-PUBLICATION-ROUTES compact authority navigation] - 2026-08-10 | — | [bounded page](pages/000569-000618.md#20260810-management-index-and-publication-routes-compact) |
 | 2026-08-10 | `20260810-correction-aggregate-index-cutover-formatting-a` — [CORRECTION AGGREGATE-INDEX-CUTOVER formatting and final shard scope] - 2026-08-10 | — | [bounded page](pages/000569-000618.md#20260810-correction-aggregate-index-cutover-formatting-a) |
 | 2026-08-10 | `20260810-aggregate-index-cutover-bounded-changelog-and-c` — [AGGREGATE-INDEX-CUTOVER bounded changelog and catalog readers] - 2026-08-10 | — | [bounded page](pages/000569-000618.md#20260810-aggregate-index-cutover-bounded-changelog-and-c) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-04 | `20260804-verify-centered-q3-wick-and-weyl-limit-route-sp` — [Verify centered Q3 Wick and Weyl limit route split] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 | 2026-08-04 | `20260804-close-centered-free-and-q3-wick-action-limits-a` — [Close centered free and Q3 Wick-action limits and isolate density and Weyl seam gates] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 | 2026-08-04 | `20260804-exp-000762-publication-verification-passes-305` — [EXP-000769 publication verification passes 305 scoped checks] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
-| 2026-08-04 | `20260804-exp-000762-closes-the-q3-spatial-spectral-rp-ma` — [EXP-000769 closes the Q3 spatial-spectral RP martingale comparator] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
-| 2026-08-04 | `20260804-exp-000761-publication-verification-passes-326` — [EXP-000768 publication verification passes 326 scoped checks] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 
 ## Post-cutover pages
 
@@ -49,4 +49,4 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 569–571 | 3 | [000569-000618.md](pages/000569-000618.md) |
+| 569–573 | 5 | [000569-000618.md](pages/000569-000618.md) |

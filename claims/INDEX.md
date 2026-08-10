@@ -67,7 +67,7 @@ The 21 Sector-A claim cards are immutable evidence and branch records, not 21 pe
 | `C3-EP` | T6 | H-LEGACY-CHAIN | — | _scaffold (no notes yet)_ | — |
 | `C4-GRAVITY-1LOOP` | T5 | — | SCHEME-2LOOP | _scaffold (no notes yet)_ | — |
 | `C5-NEWTON-G` | T6 | H-LEGACY-CHAIN | GAP-3, PRED-G-FREEZE | _scaffold (no notes yet)_ | — |
-| `C6-SPACETIME-SIGNATURE` | T1 | — | C6-BCC-PREMISE-BLOCKED | (all notes) (2) | [INDEX](C6-SPACETIME-SIGNATURE/INDEX.md) |
+| `C6-SPACETIME-SIGNATURE` | T1 | — | C6-BCC-PREMISE-BLOCKED | (all notes) (3) | [INDEX](C6-SPACETIME-SIGNATURE/INDEX.md) |
 
 ## Sector D — Gauge / Matter / Topology
 

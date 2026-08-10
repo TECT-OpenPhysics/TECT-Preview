@@ -9,10 +9,11 @@
 
 **Falsifier.** A consistency requirement of the low-energy theory forcing a dimension $\neq 3+1$ or a Euclidean/degenerate signature in the IR.
 
-## (all notes)/  ·  2 proof units  ·  tier span T1
+## (all notes)/  ·  3 proof units  ·  tier span T1
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
+| `pre-a-round1-inventory-and-q3lock-weighted-energy-common-alpha` | v0.1 | T1 | Bounded Round-1 inventory frozen, no current admitted survivor, no prospective validation; common local derivation and first weighted-energy cone pro… | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Freeze a future validation relation; prove higher weighted moments and thermodynamic Cauc… |
 | `pre-a-round1-route-controller-free-macro-seam-state-split` | v0.1 | T1 | Global mixed macro/open cuts; exact all-k routed seam; singular states and one-bond shadow; raw-EO plus scoped C4 quadratic/Gaussian routes fail. | EXACT ANALYTIC + EXECUTED + INDEPENDENT + PDF… | PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST- FREEZE; in parallel run CP1 Bloch/Lyapunov … |
 | `pre-a-st8-q3lock-os-dynamics-ground-gap-counterterm-empty-route-split` | v0.1 | T1 | Phasewise beta-KMS; strict zero-T source cusp; 19D quartic and 4D quadratic basis; finite-volume same-H reference contract; four shortcut failures. | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA- CLOSURE; keep the round-one admission fr… |
 

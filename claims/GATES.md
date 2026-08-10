@@ -35,15 +35,18 @@ reference/observable/input ledger, one non-fitting validation prediction, and
 one robustness envelope. Scoped failures may eliminate only the exact
 mechanism and parameter contract that was tested.
 
-**Status:** OPEN (2026-08-09). EXP-000784--EXP-000788 record a partial intake,
-the current non-selection verdict, and an alternative controller-free
-two-kick bond-macro/routed-seam theorem. Published EXP-000758--EXP-000782 add
-substantial fixed-regulator and three-dimensional CP1 bridge evidence, but do
-not convert CP1 into a contestant or freeze a common round-one discriminator.
-The gate closes only when the evidence-role register and every minimum
-candidate contract are complete and internally consistent. No winner,
-shortlist, preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or
-unconditional Sector-A closure is presently licensed.
+**Status:** OPEN (2026-08-10). EXP-000791 freezes a bounded T-053 evidence-role
+inventory, common categorical matrix, explicit absence fields, reference
+rules, and robustness boundaries. It independently derives the M2 quadratic
+cone and computes that none of M1/M2/M5 survives all hard admission rows; M0
+remains the effective baseline. The visible helium target predates the new
+stiffness observable map, so its exact mismatch is retrospective and receives
+no validation credit. The parent gate therefore remains open until a genuinely
+prospective prediction or holdout and its microscopic observable map are
+frozen in an earlier immutable commit. Published EXP-000758--EXP-000790 remain
+bridge evidence and do not convert CP1 into a contestant. No winner, shortlist,
+preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional
+Sector-A closure is licensed.
 
 ### **PA-CP1-CL8-Q3-CUTOFF-VOLUME-INTERPOLATION-UNIFORM-PERIODIC-SHARP-SURFACE-PAIRING**
 
@@ -248,6 +251,54 @@ counterterm regulator removal, and a normalized physical empty/preparation
 branch with a positive specific comparison.  Effective reduction,
 C0/N1-N5, C6, light, mass, time, gravity, event-horizon composition, CP1,
 Sector A and Pre-A remain open.
+
+### **PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE**
+
+**Statement:** Starting from the exact fixed-lattice quartic oscillator
+Hamiltonians, fix one phase-independent local algebra and derivation, then
+prove a volume-, source- and cutoff-uniform locality/Cauchy theorem strong
+enough to exponentiate that derivation to one thermodynamic-limit real-time
+automorphism group. Identify both phasewise OS-reconstructed thermal systems
+as KMS states of this same dynamics. A post-hoc direct sum, a phase-dependent
+reconstruction, or a cutoff estimate whose velocity diverges on removal does
+not close the gate.
+
+**Status:** PARTIALLY RESOLVED (2026-08-10). EXP-000792 proves two exact
+precursors. On the finite-support polynomial CCR star-algebra, the local
+commutator derivation is independent of the containing volume and is fixed
+before either sign phase. A sharp source-uniform coercive shift gives a
+positive local-energy decomposition, exact bond current
+`J_xy=(c/(4 chi)){p_x+p_y,q_x-q_y}`, and the three-dimensional form bound
+`tau_t(E_f)<=exp[6 sqrt(c/(2 chi))(exp(mu)-1)|t|]E_f`. However, this controls
+only the first weighted energy moment. A Fourier--Stieltjes cutoff agreeing
+with the quartic on a radius-`R` ball has second moment at least
+`3(g+3 lambda)R^2`, so the audited bounded-Weyl theorem cannot give a
+cutoff-uniform operator-norm speed. The exact quartic also makes the standard
+unweighted basic-resolvent generator sandwich grow cubically. EXP-000793
+repairs the first-draft operator-norm inference by fixing nonreal `z`, using
+fixed-norm Weyl-displaced compact-support test vectors, cancelling the
+resolvents exactly and deriving an explicit `Omega(R^3)` cutoff norm lower
+bound. These are route obstructions, not nonexistence results for common
+dynamics. The next
+gate is
+`PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE`.
+Common `alpha`, KMS identification, algebraic ground-state promotion, GNS gap,
+continuum removal, physical empty space, C6, CP1 and Pre-A remain open.
+
+### **PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE**
+
+**Statement:** On one declared energy-damped local resolvent/regular core,
+propagate enough weighted local-energy graph norms to control the cubic onsite
+force and prove a volume- and cutoff-uniform spatial Cauchy estimate for
+finite-volume dynamics. The estimate must be independent of exhaustion and
+strong enough to establish multiplicativity, invertibility, pointwise time
+continuity, and exponentiation of the common local derivation.
+
+**Status:** OPEN (2026-08-10). The first weighted energy moment is controlled
+by EXP-000792, but no higher-moment factorial/analytic-vector bound or
+energy-damped thermodynamic Cauchy estimate has been proved. A fixed local
+observable and compact time interval for which every finite energy weight
+fails to make the volume net Cauchy is the registered minimal falsifier.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 

@@ -1,0 +1,178 @@
+{
+  "schema": "tect/pre-a-round1-frozen-quadratic-causal-admission-triage/1.0",
+  "package_id": "PA-ROUND1-FROZEN-QUADRATIC-CAUSAL-ADMISSION-TRIAGE-v1",
+  "result_id": "PRE-A-ROUND1-T053-FROZEN-INVENTORY-AND-NO-CURRENT-ADMITTED-MICROSCOPIC-SURVIVOR",
+  "package_version": "1.0.0",
+  "issued": "2026-08-10",
+  "task_id": "T-054",
+  "authority": "T0 exact categorical admission and retrospective analytic diagnostic; the bounded inventory is frozen but the parent gate remains open because no prediction was preregistered before target disclosure",
+  "claim_bearing": false,
+  "parent_freezes": {
+    "evidence_clue": {
+      "path": "strategy/pre-a-round1-evidence-clue-freeze-260810-v1.0.json",
+      "normalized_sha256": "190f32d4e5439c77ca05123cdb4b2ac1790ccc815fa7616cb8532c74e1e1bd7d"
+    },
+    "admission_discriminator": {
+      "path": "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json",
+      "normalized_sha256": "01803912d108499596c40bf30551150c704fe6adf49b2e43d86c41ce93bca608"
+    }
+  },
+  "ordered_execution": [
+    "freeze the bounded Round-1 evidence and clue roles",
+    "freeze candidate versions, categorical discriminators, reference/observable/input ledger, retrospective analytic diagnostic, and robustness without copying the visible target value",
+    "derive the M1, M2, and M5 quadratic-dynamics boundaries",
+    "compare the retrospective analytic formula to the visible target without awarding validation credit",
+    "return PASS, FAIL, NOT_TESTED, NOT_ADMITTED, or INCOMPARABLE only"
+  ],
+  "exact_derived_relations": {
+    "M1": {
+      "registered_law": "canonical first-order L2 gradient flow",
+      "canonical_momentum": "absent",
+      "causal_verdict": "NOT_ADMITTED: no conservative real-time kinetic tensor or microscopic observable map is declared",
+      "same_reference_verdict": "FAIL for nonzero unconstrained neutral order by R-157",
+      "repair_boundary": "Adding inertia, conserved dynamics, compact target, or gauge structure defines a new candidate version."
+    },
+    "M2": {
+      "critical_kernel": "K(k)=r+c*sum_i(q^2-k_i^2)^2",
+      "critical_nodes": "k_star in {+q,-q}^3 at r=0",
+      "node_hessian": "D_k^2 K(k_star)=8*c*q^2*I_3",
+      "small_momentum_dispersion": "omega^2=(4*c*q^2/chi)*|p|^2+O(|p|^3)",
+      "tree_speed_squared": "4*c*q^2/chi",
+      "causal_verdict": "PASS only for the separately inserted tree-level inertial lane; physical zero modes, protection, and observable map are not admitted",
+      "compact_verdict": "NOT_ADMITTED: no compact target or winding-to-flux map"
+    },
+    "M5": {
+      "causal_verdict": "FAIL for the bare continuous isotropic shell because its spatial Hessian is rank one",
+      "compact_verdict": "FAIL for the bare vector because it is not a local compact gauge connection",
+      "repair_boundary": "An isolated-node or compact-gauge completion is a new candidate version."
+    }
+  },
+  "visible_posthoc_diagnostic": {
+    "prediction_id": "PA-M2-TREE-STIFFNESS-ZETA-v1",
+    "target_id": "PA-HO-T053-001",
+    "prediction_frozen_before_score": false,
+    "prediction_preregistered_before_target_disclosure": false,
+    "validation_credit": false,
+    "blind": false,
+    "predicted_exponent": "1",
+    "reported_target": "0.672 +/- 0.001",
+    "reported_interval_used_for_categorical_test": ["0.671", "0.673"],
+    "outcome": "RETROSPECTIVE_DIAGNOSTIC_CONFLICT",
+    "reason": "1 is outside the reported interval, but the target predated this freeze. The mismatch rejects no candidate and receives no validation credit; it only records that this newly declared analytic tree-level stiffness map cannot reproduce the visible target.",
+    "sigma_claimed": false
+  },
+  "categorical_matrix": {
+    "PA-M0-ESTABLISHED-LOW-ENERGY-BASELINE-v0": {
+      "D00-ADMISSION": "PASS",
+      "D01-SAME-REFERENCE": "INCOMPARABLE",
+      "D02-KINETIC-TENSOR": "NOT_ADMITTED",
+      "D03-PHYSICAL-ZERO-MODES": "INCOMPARABLE",
+      "D04-SPEED-DISPERSION": "PASS",
+      "D05-COMPACT-WINDING": "PASS",
+      "D06-CRITICAL-DATA": "PASS",
+      "D07-VALIDATION": "NOT_ADMITTED",
+      "D08-ROBUSTNESS": "INCOMPARABLE",
+      "D09-PREDICTION-COST": "PASS",
+      "overall": "BASELINE_ONLY"
+    },
+    "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": {
+      "D00-ADMISSION": "PASS",
+      "D01-SAME-REFERENCE": "FAIL",
+      "D02-KINETIC-TENSOR": "NOT_ADMITTED",
+      "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+      "D04-SPEED-DISPERSION": "NOT_ADMITTED",
+      "D05-COMPACT-WINDING": "NOT_ADMITTED",
+      "D06-CRITICAL-DATA": "NOT_TESTED",
+      "D07-VALIDATION": "NOT_ADMITTED",
+      "D08-ROBUSTNESS": "NOT_ADMITTED",
+      "D09-PREDICTION-COST": "PASS",
+      "overall": "REJECTED_SCOPED_AS_PINNED_UNCONSTRAINED_ORDERED_VACUUM; NOT_ADMITTED_TO_PHYSICAL_T053"
+    },
+    "PA-M2-CI8-RS-v0": {
+      "D00-ADMISSION": "PASS",
+      "D01-SAME-REFERENCE": "PASS",
+      "D02-KINETIC-TENSOR": "PASS",
+      "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+      "D04-SPEED-DISPERSION": "NOT_ADMITTED",
+      "D05-COMPACT-WINDING": "NOT_ADMITTED",
+      "D06-CRITICAL-DATA": "NOT_TESTED",
+      "D07-VALIDATION": "NOT_TESTED",
+      "D08-ROBUSTNESS": "NOT_ADMITTED",
+      "D09-PREDICTION-COST": "PASS",
+      "overall": "NOT_ADMITTED; TREE_LEVEL_CONE_RETAINED_AND_RETROSPECTIVE_TREE_STIFFNESS_CONFLICT_RECORDED_WITHOUT_VALIDATION_CREDIT"
+    },
+    "PA-M5-NL3-SV-v0": {
+      "D00-ADMISSION": "PASS",
+      "D01-SAME-REFERENCE": "PASS",
+      "D02-KINETIC-TENSOR": "NOT_ADMITTED",
+      "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+      "D04-SPEED-DISPERSION": "FAIL",
+      "D05-COMPACT-WINDING": "FAIL",
+      "D06-CRITICAL-DATA": "NOT_TESTED",
+      "D07-VALIDATION": "NOT_ADMITTED",
+      "D08-ROBUSTNESS": "NOT_TESTED",
+      "D09-PREDICTION-COST": "PASS",
+      "overall": "REJECTED_SCOPED_FROM_BARE_JOINT_T053_SURVIVOR_CLASS"
+    }
+  },
+  "matrix_evidence_notes": {
+    "D00_scope": "PASS means only that all nine canonical field labels are present and every absence or partial status is explicit. It does not mean semantic completeness or a complete per-parameter input ledger; those remain requirements of the open parent gate.",
+    "M2_D01": "PASS only for the candidate-internal finite-torus ordered branch and its declared parameter domain; it is not a physical-empty comparison.",
+    "M2_internal_tree_cone": "PASS only for the separately inserted inertial lane; D04 remains NOT_ADMITTED because no complete physical observable map or all-mode dispersion comparison exists.",
+    "M5_D01": "PASS only for the candidate-internal finite-torus shell ordering statement; it is not a physical-vacuum comparison.",
+    "M5_D04": "FAIL only for the bare continuous isotropic-shell rank-one Hessian; isolated-node or gauge completions are new versions."
+  },
+  "survival_rule": {
+    "eligible_roles": ["CURRENT_TECT_BENCHMARK", "LOCAL_FINITE_WAVENUMBER_ALTERNATIVE", "NONLOCAL_SCREENED_SHELL_ALTERNATIVE"],
+    "hard_rows": ["D00-ADMISSION", "D01-SAME-REFERENCE", "D02-KINETIC-TENSOR", "D03-PHYSICAL-ZERO-MODES", "D04-SPEED-DISPERSION", "D05-COMPACT-WINDING", "D06-CRITICAL-DATA", "D07-VALIDATION", "D08-ROBUSTNESS", "D09-PREDICTION-COST"],
+    "survives_if": "Every hard row is PASS.",
+    "semantics": {
+      "FAIL": "The declared cell mechanism is falsified only in its stated scope.",
+      "NOT_ADMITTED": "A required law, map, state, or contract is absent; no falsity claim follows.",
+      "NOT_TESTED": "The object is declared but the discriminator was not executed.",
+      "INCOMPARABLE": "No common comparison contract exists."
+    }
+  },
+  "round1_verdict": {
+    "gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+    "bounded_role_and_contract_inventory_frozen": true,
+    "freeze_gate_closed": false,
+    "visible_validation_preregistration_complete": false,
+    "weighted_ranking_performed": false,
+    "selected_candidate": null,
+    "shortlist": [],
+    "admitted_microscopic_survivors": [],
+    "outcome": "HONEST_NONSELECTION_AFTER_FROZEN_INVENTORY_AND_CATEGORICAL_TRIAGE",
+    "reason": "M1 is rejected only in its pinned unconstrained ordered-vacuum scope and lacks a physical T053 law/map; M2 retains a valid inserted tree cone but lacks physical zero-mode, compact, critical, observable-map and robustness admission; bare M5 retains its static lemma but fails the joint causal/gauge shell gate. M0 remains the effective baseline and cannot be a microscopic winner. The retrospective stiffness conflict supplies no validation credit.",
+    "full_pre_a_evidence_complete": false,
+    "pre_a_exit_conditions_met": false
+  },
+  "next_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+  "next_action": "Before closing the parent gate, register a genuinely prospective prediction or holdout before target disclosure and derive the candidate-neutral microscopic observable map. In parallel generate at least one new candidate version with genuine conservative dynamics, compact/gauge configuration and physical observable map, plus a structurally distinct isolated-node alternative. Continue the ST8/Q3LOCK common-alpha proof as bridge mathematics, not as evidence that a contestant won.",
+  "scope": {
+    "bounded_round1_t053_inventory_frozen": true,
+    "parent_round1_freeze_gate_closed": false,
+    "categorical_triage_complete": true,
+    "current_round1_winner": false,
+    "current_round1_shortlist": false,
+    "current_admitted_microscopic_survivor": false,
+    "full_pre_a_evidence_complete": false,
+    "physical_functional_selected": false,
+    "physical_vacuum_selected": false,
+    "common_real_time_dynamics": false,
+    "continuum_limit": false,
+    "physical_empty_reference": false,
+    "c6_closed": false,
+    "a13_t050_or_sector_a_closed": false
+  },
+  "verification": {
+    "certificate": "strategy/pre-a-round1-frozen-quadratic-causal-admission-triage-certificate-260810.md",
+    "primary_script": "codes/foundations/pre_a_round1_frozen_quadratic_causal_admission_triage.py",
+    "independent_script": "codes/foundations/pre_a_round1_frozen_quadratic_causal_admission_triage_independent.py",
+    "integrated_script": "codes/foundations/pre_a_round1_frozen_quadratic_causal_admission_triage_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-primary-pre-a-round1-frozen-quadratic-causal-admission-triage/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-independent-pre-a-round1-frozen-quadratic-causal-admission-triage/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-integrated-pre-a-round1-frozen-quadratic-causal-admission-triage/result.json"
+  },
+  "no_overclaim": "No current admitted survivor is not evidence that every possible TECT or non-TECT law is false. The result freezes only the bounded Round-1 inventory and executes a categorical triage; the parent gate remains open because no prospective validation prediction was frozen before target disclosure. It does not complete the full evidence programme, select a physical law or vacuum, establish a common real-time dynamics or continuum, prove physical empty-space ordering, advance C6, close CP1, return A13/T-050 to priority, or close Sector A or Pre-A."
+}

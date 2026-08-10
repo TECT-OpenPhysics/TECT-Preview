@@ -1,0 +1,159 @@
+{
+  "assertions": [
+    {
+      "actual": [],
+      "expected": [],
+      "group": "independence",
+      "name": "independent implementation import firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS 56/56",
+      "expected": "PASS *",
+      "group": "freshness",
+      "name": "primary execution",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS 95/95",
+      "expected": "PASS *",
+      "group": "freshness",
+      "name": "independent execution",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "failed": 0,
+        "passed": 56,
+        "total": 56
+      },
+      "expected": {
+        "failed": 0,
+        "passed": 56,
+        "total": 56
+      },
+      "group": "freshness",
+      "name": "primary stored result fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "failed": 0,
+        "passed": 95,
+        "total": 95
+      },
+      "expected": {
+        "failed": 0,
+        "passed": 95,
+        "total": 95
+      },
+      "group": "freshness",
+      "name": "independent stored result fresh",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PRE-A-ROUND1-T053-FROZEN-INVENTORY-AND-NO-CURRENT-ADMITTED-MICROSCOPIC-SURVIVOR",
+        "PRE-A-ROUND1-T053-FROZEN-INVENTORY-AND-NO-CURRENT-ADMITTED-MICROSCOPIC-SURVIVOR"
+      ],
+      "expected": "PRE-A-ROUND1-T053-FROZEN-INVENTORY-AND-NO-CURRENT-ADMITTED-MICROSCOPIC-SURVIVOR",
+      "group": "cross",
+      "name": "common result id",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[8*c*q**2, 0, 0], [0, 8*c*q**2, 0], [0, 0, 8*c*q**2]])",
+      "expected": "Matrix([[8*c*q**2, 0, 0], [0, 8*c*q**2, 0], [0, 0, 8*c*q**2]])",
+      "group": "cross",
+      "name": "derived agreement M2_node_hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*c*q**2/chi",
+      "expected": "4*c*q**2/chi",
+      "group": "cross",
+      "name": "derived agreement M2_speed_squared",
+      "status": "PASS"
+    },
+    {
+      "actual": "HONEST_NONSELECTION_AFTER_FROZEN_INVENTORY_AND_CATEGORICAL_TRIAGE",
+      "expected": "HONEST_NONSELECTION_AFTER_FROZEN_INVENTORY_AND_CATEGORICAL_TRIAGE",
+      "group": "cross",
+      "name": "derived agreement round1_outcome",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "671/1000",
+        "673/1000"
+      ],
+      "expected": [
+        "671/1000",
+        "673/1000"
+      ],
+      "group": "cross",
+      "name": "derived agreement visible_target_interval",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "primary no validation credit",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "group": "scope",
+      "name": "primary survivors empty",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "parent gate remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "Pre-A remains open",
+      "status": "PASS"
+    }
+  ],
+  "child_summaries": {
+    "independent": {
+      "failed": 0,
+      "passed": 95,
+      "total": 95
+    },
+    "primary": {
+      "failed": 0,
+      "passed": 56,
+      "total": 56
+    }
+  },
+  "derived": {
+    "M2_node_hessian": "Matrix([[8*c*q**2, 0, 0], [0, 8*c*q**2, 0], [0, 0, 8*c*q**2]])",
+    "M2_speed_squared": "4*c*q**2/chi",
+    "derived_survivors": [],
+    "round1_outcome": "HONEST_NONSELECTION_AFTER_FROZEN_INVENTORY_AND_CATEGORICAL_TRIAGE",
+    "validation_credit": false,
+    "visible_target_interval": [
+      "671/1000",
+      "673/1000"
+    ]
+  },
+  "result_id": "PRE-A-ROUND1-T053-FROZEN-INVENTORY-AND-NO-CURRENT-ADMITTED-MICROSCOPIC-SURVIVOR",
+  "schema": "tect/pre-a-round1-frozen-quadratic-causal-admission-triage-integrated-result/1.0",
+  "script_version": "1.0.0",
+  "summary": {
+    "failed": 0,
+    "passed": 14,
+    "total": 14
+  },
+  "verdict": "PASS"
+}
