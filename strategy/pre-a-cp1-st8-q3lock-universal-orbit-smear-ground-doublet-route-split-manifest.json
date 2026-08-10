@@ -1,0 +1,94 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-GROUND-DOUBLET-ROUTE-SPLIT-v0",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "parent_explorations": [
+    "EXP-000789",
+    "EXP-000801",
+    "EXP-000802"
+  ],
+  "exploration_id": "EXP-000803",
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_version": "v1.6",
+  "result_number": "R-167",
+  "claim_bearing": false,
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+  ],
+  "authority": "R-167 v1.6 is an additive T0 theorem with two deliberately separate conclusions. First, the exact modular right-context estimate upgrades the selected EXP-000781 tangent-net result from single cyclic characters to every fixed finite raw configuration-orbit word moment and Gram block, hence to pointed finite-core Fell/GNS convergence on the algebraic raw orbit-word span. Second, the exact zero-source finite periodic Hamiltonians define one beta- and state-independent universal L1-orbit-smear C-star carrier with a point-norm continuous time-shift group. The EXP-000789 zero-source approximate broken doublets have two distinct weak-star cluster states on that carrier, and both are ground states for its common shift. The carrier is categorical rather than quasi-local: it proves no all-exhaustion spatial Cauchy, no inductive raw oscillator algebra, no canonical momentum or polynomial local generator, no identification with the fixed-beta OS phase envelopes, and no broken-sector GNS gap.",
+  "selected_tangent_raw_word_completion": {
+    "input": "Fix beta>0 and the already registered EXP-000781 plus/minus source tangent diagonal net. R-167 v1.5 supplies fixed-band word-kernel convergence and the uniform cyclic Fejer error for every raw rational configuration character.",
+    "right_context": "In the support-reduced faithful beta-KMS standard form with sigma_s=alpha_(-beta hbar s), every entire right context C obeys YC Omega=J sigma_(-i/2)(C^*)JY Omega and ||YC Omega||<=||sigma_(i/2)(C)|| ||Y Omega||. If the physical Arveson spectrum of C lies in [-S,S], then ||sigma_(i/2)(C)||<=exp(beta hbar S/2)||C||.",
+    "recursive_smoothing": "For a fixed word A_1...A_m, replace factors from right to left. If Y_j=A_j-C_j is the Fejer residual and the already smoothed right context has bandwidth S_j=sum_(k>j)R_k, the j-th telescoping error is at most exp(beta hbar S_j/2) epsilon_j(R_j), where epsilon_j(R)=||xi_j||[2/R^2+beta hbar/R]^(1/2)/(beta chi)^(1/2). Choose R_m first and then R_(m-1),...,R_1 after each finite right bandwidth is fixed. The total error tends to zero for every fixed finite word.",
+    "conclusion": "Every fixed finite raw configuration-orbit word moment and Gram entry converges along the selected tangent net. Independent limiting pivots therefore give pointed finite-core Fell/GNS convergence on the algebraic raw orbit-word span and identify its cyclic subspace in a GNS ultraproduct.",
+    "scope": "The bandwidths may grow rapidly with word length. No uniform word-length completion, arbitrary bounded-context multiplier theorem, common-Hilbert operator strong-star convergence, or all-exhaustion uniqueness follows."
+  },
+  "zero_source_universal_orbit_smear_carrier": {
+    "labels": "Let Xi_Q be the finite-support rational configuration labels xi on Z^3 times {1,...,8}. For every periodic volume Lambda, periodize xi and write W_(Lambda,xi)=exp(i xi.q). Only the exact zero-source Hamiltonians H_Lambda(0) are used.",
+    "generators": "For f in L1(R), introduce a symbol A_(xi,f), linear in f with A_(xi,f)^*=A_(-xi,bar f). Its Lambda representation is the weak-operator integral pi_Lambda(A_(xi,f))=int f(t) tau_t^Lambda(W_(Lambda,xi))dt, so ||pi_Lambda(A_(xi,f))||<=||f||_1.",
+    "completion": "Take the supremum of the finite-volume representation norms on the unital formal star algebra, quotient its common kernel, and complete. The resulting separable C-star algebra A_H^0 is beta independent and state independent; the product of all pi_Lambda is faithful, while no individual quotient representation is required to be faithful.",
+    "time_group": "theta_s A_(xi,f)=A_(xi,tau_s f), (tau_s f)(t)=f(t-s). Equivariance makes theta_s isometric, L1 translation continuity makes it point-norm C0, and the smooth smear core has generator delta_H A_(xi,f)=-A_(xi,f').",
+    "thermal_states": "Every finite-volume Gibbs state pulled back through pi_Lambda is beta-KMS for theta. At each fixed beta, weak-star limits of such pullbacks remain beta-KMS. This statement does not identify the EXP-000800 phase envelopes as quotient representations of A_H^0.",
+    "scope": "Raw W_xi need not belong to A_H^0 because its finite Hamiltonian orbit is generally not norm continuous. The pi_Lambda are not an inductive system, temporal smears are dynamically delocalized, and A_H^0 has no proved spatial quasi-local net, all-exhaustion Cauchy property, momentum/CCR carrier, or polynomial delta_0 identification."
+  },
+  "distinct_ground_doublets": {
+    "input": "Use the EXP-000789 zero-source periodic doublets Psi_L^plus/minus. Put K_L=H_L(0)-E_(0,L)>=0, V=L^3 and m_L^2=<S_L^2>/V^2. Eventually m_L>=m_0=sqrt(rho_*/2), and their energy excess satisfies epsilon_L=<Psi_L^plus/minus,K_L Psi_L^plus/minus><=hbar^2/(4 chi V m_L^2)<=hbar^2/(2 chi V rho_*).",
+    "fixed_order_witness": "At one fixed site let X=sum_(e=1)^8 q_e=sqrt(8)Q. If M_(4,Q)=sup_(L,plus/minus)<|Q|^4><infinity, put M_3=(64M_(4,Q))^(3/4). Choose one fixed rational r>0 with r^2 M_3<=3sqrt(8)m_0 and xi=r(1,...,1). Since |sin z-z|<=|z|^3/6 and parity exchanges the doublets, omega_L^plus(sin(rX))>=d and omega_L^minus(sin(rX))<=-d for all large L, where d=r sqrt(8)m_0/2>0.",
+    "fixed_smear_witness": "Choose one fixed T>0 and f_T(t)=T^(-1)(1-|t|/T)_+, whose integral is one and whose |t|^(1/2) moment is 8sqrt(T)/15. The single self-adjoint abstract observable b=[A_(xi,f_T)-A_(-xi,f_T)]/(2i) belongs to A_H^0 for every volume.",
+    "smear_error": "For every contraction B, |omega_L^plus/minus(tau_t(B))-omega_L^plus/minus(B)|<=2[2|t|epsilon_L/hbar]^(1/2). Hence the f_T-smear error is at most (16/15)[2T epsilon_L/hbar]^(1/2)<=(16/15)[hbar T/(chi V rho_*)]^(1/2), which tends to zero. Thus eventually omega_L^plus(b)>=d/2 and omega_L^minus(b)<=-d/2.",
+    "ground_criterion": "If a in A_H^0 has theta-Arveson spectrum in (-infinity,-nu] with nu>0 in inverse-time units, equivariance gives pi_Lambda(a)P_[0,hbar nu)(K_L)=0. Therefore omega_L^plus/minus(a^*a)<=||a||_H^2 epsilon_L/(hbar nu). Every joint weak-star cluster pair is consequently a pair of theta-ground states, and the fixed b separates the two states.",
+    "scope": "These are distinct algebraic ground states of the universal zero-source orbit-smear carrier. This is not yet a ground-state theorem on the sought quasi-local raw oscillator algebra and proves neither a positive broken-sector GNS gap nor a physical mass gap."
+  },
+  "categorical_boundary": {
+    "finite_matrix_fixture": "The exact pair (beta_1,H_1)=(1,-sigma_x), (beta_2,H_2)=(2,-2sigma_x) with common configuration label sigma_z has orbit frequencies 2 and 4. Its L1 orbit smears generate M_2 direct-sum M_2 and carry one abstract C0 shift with both KMS pullbacks, although the labelled Hamiltonian generators differ nonscalarly.",
+    "consequence": "A universal orbit-smear carrier can package inequivalent quotient dynamics. Its existence, KMS pullbacks and scoped ground states do not imply a quasi-local thermodynamic Hamiltonian limit, exhaustion uniqueness or canonical raw local generator. This retains the registered posthoc-direct-sum and automatic-cross-beta-gluing boundaries rather than overturning them."
+  },
+  "projected_corridor_route_audit": {
+    "bounded_cutoff": "For pair interactions of norm at most J_L on a degree-z graph, a conservative pairwise-union cutoff estimate is 8sqrt(2)|X|||A||exp(nu_LT)(nu_LT)^R/R!, where nu_L=4zJ_L/hbar. The coordinate cutoff has J_L<=4cL^2 and z=6, hence nu_L<=96cL^2/hbar. Taking L=R^alpha makes this term vanish on compact time intervals for every 0<alpha<1/2.",
+    "static_tail_no_go": "An exact four-dimensional matrix fixture has uniform all-a Gaussian coordinate moments, a q-only bond tail X with ||X||_D tending to zero and [log rho,X]=0, but ||[X,tau_T^K(W)]||_D^2 tends to 2 and the full-versus-cutoff orbit two-sided distance tends to 2. Thus static tail and first modular-derivative smallness alone do not imply projected orbit locality.",
+    "scope": "The fixture is not a Q3LOCK counterexample because its state is not Gibbs invariant for the displayed Hamiltonians. It rejects only the logical inference from static tails/local normality to the missing connected two-orientation dynamic tail estimate."
+  },
+  "route_status": {
+    "closed_scope": "Every fixed finite raw configuration-orbit word kernel converges along the selected phase-tangent net. Independently, the exact zero-source finite Hamiltonians have one beta-independent universal L1-orbit-smear C-star carrier, and the EXP-000789 broken doublets yield two distinct ground states of its common C0 shift.",
+    "not_closed": "The carrier is not the quasi-local raw oscillator thermodynamic algebra. No all-shape pairwise-union locality estimate, canonical finite-volume-to-OS quotient identification, spatial net, momentum/full Weyl carrier, polynomial local generator, zero-source phase KMS identification, broken-sector GNS gap or physical mass gap is proved.",
+    "next_gate": "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP"
+  },
+  "status": "PARTIALLY RESOLVED: THE SELECTED PHASE-TANGENT NET CONVERGES ON EVERY FIXED FINITE RAW CONFIGURATION-ORBIT WORD KERNEL. THE EXACT ZERO-SOURCE FINITE HAMILTONIANS ALSO DEFINE ONE BETA-INDEPENDENT UNIVERSAL L1-ORBIT-SMEAR C-STAR CARRIER, AND THE EXP-000789 BROKEN DOUBLETS HAVE TWO DISTINCT GROUND-STATE CLUSTERS FOR ITS COMMON C0 SHIFT. THIS IS A CATEGORICAL SMEAR CARRIER, NOT THE QUASI-LOCAL RAW OSCILLATOR THERMODYNAMIC DYNAMICS OR A BROKEN-SECTOR GNS-GAP THEOREM.",
+  "closed_subgates": [
+    "PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION",
+    "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER",
+    "PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS"
+  ],
+  "retained_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "checkpoint_synthesis": {
+    "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt",
+    "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf",
+    "source_sha256": "fc34cea2126a9d1af3aaf6b62b55474a6d816b399c68ec20c0b255f4b850d1cf",
+    "pdf_sha256": "5664ba020bc7ef9d077b532eb7ac554979a57958274241b6fbaaa69929356f42",
+    "pages": 7,
+    "workflow": "No per-lemma or intermediate PDF was issued during development. This is the single gate-level synthesis PDF created after the manifest, certificate and three verifier layers passed.",
+    "visual_qa": "Seven rendered pages inspected; zero clipping, overlap, broken equations, unreadable identifiers or overfull boxes."
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC exact modular right-context and recursive finite-word recovery theorem; exact universal C-star seminorm/completion and C0-shift theorem; exact near-ground Arveson estimate; exact EXP-000789 rational-sine and fixed-smear separation theorem; exact bounded-cutoff factorial estimate and static-tail-only hostile fixture; exact finite-dimensional categorical-boundary fixture; primary, non-importing independent and integrated verification",
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split_verify.py"
+  },
+  "no_overclaim": "This package proves finite raw-word moment convergence only on the selected fixed-beta phase-tangent nets and proves distinct algebraic ground states only on the beta-independent universal zero-source finite-Hamiltonian L1-orbit-smear carrier. It does not prove a quasi-local raw oscillator thermodynamic limit, all-exhaustion or all-boundary Cauchy, a spatially local algebra, the zero-source periodic phase mixture, finite-volume-to-OS quotient identification, canonical momentum/full Weyl reconstruction, the polynomial local generator on raw characters, a broken-sector GNS or physical mass gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure."
+}

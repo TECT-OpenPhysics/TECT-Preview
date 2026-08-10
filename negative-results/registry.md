@@ -9,6 +9,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY](#ng-2026-08-10-pre-a-st8-q3lock-static-tail-only-projected-orbit-locality) | infer projected real-time orbit locality from static coordinate-tail smallness, local normality and a vanishing first modular derivative alone | an exact four-dimensional q-only-tail fixture has all-coefficient Gaussian coordinate moments, `||X_n||_D->0` and `[log rho_n,X_n]=0`, while `||[X_n,tau_T^K(W)]||_D^2->2` and the full-versus-cutoff orbit two-sided distance tends to two. Require a connected two-orientation dynamic tail or quasi-invariance estimate; this is a route no-go, not a Q3LOCK dynamics counterexample |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING](#ng-2026-08-10-pre-a-st8-q3lock-pointwise-os-gram-naive-label-embedding) | turn pointwise convergence of OS Gram forms into the literal quotient-label map `[F]_n -> [F]_0` or an injective complete-GNS embedding | rotating rank-one forms converge pointwise while their null spaces are not nested, and a faithful-to-rank-one state limit collapses GNS dimension. Retain independent limiting pivots and explicit finite-block polar transports |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR](#ng-2026-08-10-pre-a-st8-q3lock-configuration-cylinder-canonical-momentum-generator) | infer a canonical momentum or polynomial CCR generator from bounded Euclidean configuration-cylinder data alone | the momentum-gauge-conjugate Hamiltonians `p^2/(2chi)+V(q)` and `(p-a)^2/(2chi)+V(q)` have identical bounded q-cylinder traces but send `q` to `p/chi` and `(p-a)/chi`. Require an independent kinetic/CCR anchor |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE](#ng-2026-08-10-pre-a-st8-q3lock-raw-configuration-character-bounded-generator-core) | use raw rational configuration characters as a bounded W-star generator core | `[H,W_xi]` contains the unbounded multiplier `(hbar/chi)xi.p`; raw characters remain valid bounded orbit and Duhamel-form seeds, while temporal smears supply the bounded smooth core |
@@ -331,6 +332,40 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-static-tail-only-projected-orbit-locality"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY -- static tails do not control the projected real-time orbit
+
+**Failure mode.**  Infer a connected real-time cutoff-removal or boundary
+estimate from static coordinate-tail smallness, local normality and a vanishing
+first modular derivative alone.
+
+**Evidence.**  In the basis `(|00>,|01>,|10>,|11>)`, let
+`r_n=(2n+1)pi`, `epsilon_n=exp(-r_n^4)`, and
+`rho_n=diag(1,epsilon_n,epsilon_n,epsilon_n)/(1+3epsilon_n)`.  Put
+
+`q_x=r_n diag(0,0,1,1)`, `q_y=r_n diag(0,1,0,1)`,
+`X_n=q_xq_y=r_n^2|11><11|`, and `W=diag(1,1,-1,-1)`.
+
+For `k=pi hbar/(4T)`, let `K_n` act as `k sigma_y` on the
+`|00>,|11>` block and put `H_n=K_n+X_n`.  Every fixed Gaussian coordinate
+moment is uniformly bounded.  Exact logarithmic-mean arithmetic gives
+
+`||X_n||_D^2=r_n^4 epsilon_n/(1+3epsilon_n)->0`,
+`[log rho_n,X_n]=0`, but, with `B_n=tau_T^(K_n)(W)`,
+
+`||[X_n,B_n]||_D^2=2(1-epsilon_n)/(1+3epsilon_n)->2`.
+
+The full-versus-cutoff orbit two-sided distance also tends to two.  The v1.6
+primary and non-importing independent engines recompute the matrices, the
+logarithmic mean and both limits.
+
+**Consequence.**  The R-167 coordinate-cutoff route still requires a dynamic
+connected two-orientation tail or quasi-invariance estimate.  Static Gaussian
+tails and their first modular derivative cannot replace it.  This fixture is
+not a counterexample to ST8/Q3LOCK dynamics because `rho_n` is not an invariant
+Gibbs state of the displayed `H_n` or `K_n`; it rejects only the named proof
+inference.
 
 <a id="ng-2026-08-10-pre-a-st8-q3lock-pointwise-os-gram-naive-label-embedding"></a>
 ### NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING -- pointwise Gram convergence does not preserve quotient labels

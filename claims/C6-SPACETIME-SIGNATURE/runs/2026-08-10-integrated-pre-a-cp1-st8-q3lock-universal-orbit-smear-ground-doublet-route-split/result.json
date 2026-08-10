@@ -1,0 +1,2115 @@
+{
+  "assertions": {
+    "failed": 0,
+    "missing": 0,
+    "passed": 137,
+    "rows": [
+      {
+        "actual": "strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-manifest.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "manifest parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "candidate": true,
+          "claim": true,
+          "claim_bearing": true,
+          "closed_gates": true,
+          "exploration": true,
+          "new_negative": true,
+          "open_gates": true,
+          "parents": true,
+          "result_id": true,
+          "result_number": true,
+          "result_version": true,
+          "retained_gates": true,
+          "reused_negatives": true,
+          "successor": true,
+          "task": true
+        },
+        "expected": "all true",
+        "group": "manifest",
+        "name": "manifest exact identity, negative and gate contract",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split_independent.py",
+          "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split_verify.py",
+          "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split.py"
+        },
+        "expected": {
+          "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split_independent.py",
+          "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split_verify.py",
+          "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split.py"
+        },
+        "group": "manifest",
+        "name": "manifest exact verifier paths",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "development_economy": true,
+          "one_checkpoint": true,
+          "pdf": true,
+          "proof_layers_first": true,
+          "seven_pages": true,
+          "source": true,
+          "visual_qa": true
+        },
+        "expected": "all true",
+        "group": "manifest",
+        "name": "manifest exact gate-level synthesis checkpoint contract",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "manifest",
+        "name": "manifest positive theorem content required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "scope",
+        "name": "manifest no-overclaim boundary required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "scope",
+        "name": "manifest has no broadened positive conclusion",
+        "status": "PASS"
+      },
+      {
+        "actual": 20436,
+        "expected": ">0",
+        "group": "formal",
+        "name": "certificate readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "scope",
+        "name": "certificate theorem, fixtures and boundary required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "scope",
+        "name": "certificate has no broadened positive conclusion",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "independence",
+        "name": "independent import firewall",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "independence",
+        "name": "independent dynamic import firewall",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "module_named": false,
+          "stored_named": false
+        },
+        "expected": {
+          "module_named": false,
+          "stored_named": false
+        },
+        "group": "independence",
+        "name": "independent does not name primary module or stored result",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "independence",
+        "name": "primary does not import independent module",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "__future__",
+          "argparse",
+          "ast",
+          "fractions",
+          "hashlib",
+          "json",
+          "math",
+          "os",
+          "pathlib",
+          "pdfplumber",
+          "pypdf",
+          "re",
+          "subprocess",
+          "sys",
+          "tempfile",
+          "typing"
+        ],
+        "expected": "no primary/independent module import",
+        "group": "independence",
+        "name": "integrated imports neither theorem implementation",
+        "status": "PASS"
+      },
+      {
+        "actual": "different",
+        "expected": "different",
+        "group": "independence",
+        "name": "primary and independent ASTs differ",
+        "status": "PASS"
+      },
+      {
+        "actual": "0e0965746cc2ef488a38f236498efc68c3d84fba4b3c056e653a9e82e0ce3388",
+        "expected": "different from e9df2e7fdcdc3dbf848b6e3b724389d118202378b76f8f3386e14cb7688c3198",
+        "group": "independence",
+        "name": "primary and independent source hashes differ",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "primary fresh A execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "FRESH-COMPONENT PASS 128/128",
+        "expected": "FRESH-COMPONENT ...",
+        "group": "freshness",
+        "name": "primary fresh A fresh sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "primary fresh B execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "FRESH-COMPONENT PASS 128/128",
+        "expected": "FRESH-COMPONENT ...",
+        "group": "freshness",
+        "name": "primary fresh B fresh sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "a": "b22db263599da6bdff92e91df12e2fef0b2ca77cf778f2678e4c0f1bdf00ca7e",
+          "b": "b22db263599da6bdff92e91df12e2fef0b2ca77cf778f2678e4c0f1bdf00ca7e"
+        },
+        "expected": "equal canonical hashes",
+        "group": "freshness",
+        "name": "primary deterministic fresh equality",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "independent fresh A execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "FRESH-COMPONENT PASS 113/113",
+        "expected": "FRESH-COMPONENT ...",
+        "group": "freshness",
+        "name": "independent fresh A fresh sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "independent fresh B execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "FRESH-COMPONENT PASS 113/113",
+        "expected": "FRESH-COMPONENT ...",
+        "group": "freshness",
+        "name": "independent fresh B fresh sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "a": "8dcccc4832412f8c1f523cf1f21a816bda0ccf51e199c45246df7cc5aa62f999",
+          "b": "8dcccc4832412f8c1f523cf1f21a816bda0ccf51e199c45246df7cc5aa62f999"
+        },
+        "expected": "equal canonical hashes",
+        "group": "freshness",
+        "name": "independent deterministic fresh equality",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "fresh": "b22db263599da6bdff92e91df12e2fef0b2ca77cf778f2678e4c0f1bdf00ca7e",
+          "stored": "b22db263599da6bdff92e91df12e2fef0b2ca77cf778f2678e4c0f1bdf00ca7e"
+        },
+        "expected": "equal canonical hashes",
+        "group": "freshness",
+        "name": "primary stored equals fresh",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "fresh": "8dcccc4832412f8c1f523cf1f21a816bda0ccf51e199c45246df7cc5aa62f999",
+          "stored": "8dcccc4832412f8c1f523cf1f21a816bda0ccf51e199c45246df7cc5aa62f999"
+        },
+        "expected": "equal canonical hashes",
+        "group": "freshness",
+        "name": "independent stored equals fresh",
+        "status": "PASS"
+      },
+      {
+        "actual": "tect/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-primary-result/1.0",
+        "expected": "tect/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-primary-result/1.0",
+        "group": "components",
+        "name": "primary schema",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "group": "components",
+        "name": "primary result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-167",
+        "expected": "R-167",
+        "group": "components",
+        "name": "primary result number",
+        "status": "PASS"
+      },
+      {
+        "actual": "v1.6",
+        "expected": "v1.6",
+        "group": "components",
+        "name": "primary result version",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000803",
+        "expected": "EXP-000803",
+        "group": "components",
+        "name": "primary exploration id",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "group": "components",
+        "name": "primary verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "failed": 0,
+          "missing": 0,
+          "passed": 128,
+          "total": 128
+        },
+        "expected": "passed=total>=50, failed=missing=0",
+        "group": "components",
+        "name": "primary all mathematical assertions PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": 128,
+        "expected": 128,
+        "group": "components",
+        "name": "primary assertion row count",
+        "status": "PASS"
+      },
+      {
+        "actual": 128,
+        "expected": 128,
+        "group": "components",
+        "name": "primary assertion rows all PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY"
+        ],
+        "expected": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY"
+        ],
+        "group": "components",
+        "name": "primary exact new negative set",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+        ],
+        "expected": [
+          "NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+        ],
+        "group": "components",
+        "name": "primary exact reused negative set",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION",
+          "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER",
+          "PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION",
+          "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER",
+          "PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS"
+        ],
+        "group": "components",
+        "name": "primary exact closed gates",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "group": "components",
+        "name": "primary exact open gates",
+        "status": "PASS"
+      },
+      {
+        "actual": "dict",
+        "expected": "dict",
+        "group": "hashes",
+        "name": "primary source hash map",
+        "status": "PASS"
+      },
+      {
+        "actual": "e9df2e7fdcdc3dbf848b6e3b724389d118202378b76f8f3386e14cb7688c3198",
+        "expected": "e9df2e7fdcdc3dbf848b6e3b724389d118202378b76f8f3386e14cb7688c3198",
+        "group": "hashes",
+        "name": "primary live hash codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split.py",
+        "status": "PASS"
+      },
+      {
+        "actual": "dbe6e0a1d169e97d4c0a40d8129d44858828f2a43872af42fa445b9a0925a0aa",
+        "expected": "dbe6e0a1d169e97d4c0a40d8129d44858828f2a43872af42fa445b9a0925a0aa",
+        "group": "hashes",
+        "name": "primary live hash strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "c9b6553863c9d7d1b15a0d419095e5fec816100b69708421aba464b28d719b89",
+        "expected": "c9b6553863c9d7d1b15a0d419095e5fec816100b69708421aba464b28d719b89",
+        "group": "hashes",
+        "name": "primary live hash strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-certificate-260810.md",
+        "status": "PASS"
+      },
+      {
+        "actual": "tect/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-independent-result/1.0",
+        "expected": "tect/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-independent-result/1.0",
+        "group": "components",
+        "name": "independent schema",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "group": "components",
+        "name": "independent result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-167",
+        "expected": "R-167",
+        "group": "components",
+        "name": "independent result number",
+        "status": "PASS"
+      },
+      {
+        "actual": "v1.6",
+        "expected": "v1.6",
+        "group": "components",
+        "name": "independent result version",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000803",
+        "expected": "EXP-000803",
+        "group": "components",
+        "name": "independent exploration id",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "group": "components",
+        "name": "independent verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "failed": 0,
+          "missing": 0,
+          "passed": 113,
+          "total": 113
+        },
+        "expected": "passed=total>=45, failed=missing=0",
+        "group": "components",
+        "name": "independent all mathematical assertions PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": 113,
+        "expected": 113,
+        "group": "components",
+        "name": "independent assertion row count",
+        "status": "PASS"
+      },
+      {
+        "actual": 113,
+        "expected": 113,
+        "group": "components",
+        "name": "independent assertion rows all PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY"
+        ],
+        "expected": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY"
+        ],
+        "group": "components",
+        "name": "independent exact new negative set",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+        ],
+        "expected": [
+          "NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+        ],
+        "group": "components",
+        "name": "independent exact reused negative set",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION",
+          "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER",
+          "PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION",
+          "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER",
+          "PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS"
+        ],
+        "group": "components",
+        "name": "independent exact closed gates",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "group": "components",
+        "name": "independent exact open gates",
+        "status": "PASS"
+      },
+      {
+        "actual": "dict",
+        "expected": "dict",
+        "group": "hashes",
+        "name": "independent source hash map",
+        "status": "PASS"
+      },
+      {
+        "actual": "0e0965746cc2ef488a38f236498efc68c3d84fba4b3c056e653a9e82e0ce3388",
+        "expected": "0e0965746cc2ef488a38f236498efc68c3d84fba4b3c056e653a9e82e0ce3388",
+        "group": "hashes",
+        "name": "independent live hash codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split_independent.py",
+        "status": "PASS"
+      },
+      {
+        "actual": "dbe6e0a1d169e97d4c0a40d8129d44858828f2a43872af42fa445b9a0925a0aa",
+        "expected": "dbe6e0a1d169e97d4c0a40d8129d44858828f2a43872af42fa445b9a0925a0aa",
+        "group": "hashes",
+        "name": "independent live hash strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "c9b6553863c9d7d1b15a0d419095e5fec816100b69708421aba464b28d719b89",
+        "expected": "c9b6553863c9d7d1b15a0d419095e5fec816100b69708421aba464b28d719b89",
+        "group": "hashes",
+        "name": "independent live hash strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-certificate-260810.md",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "exact_total": "sqrt(201*exp(16281/20000) + 1250*exp(16281/40000))*exp(-16281/40000)/1206 + sqrt(1809*exp(201*exp(16281/40000)/625 + 16281/20000) + 20000*exp(16281/40000))*exp(-16281/40000 - 201*exp(16281/40000)/1250)/3618 + sqrt(96281)/10854",
+          "fixed_only": true,
+          "order": "right-to-left",
+          "rows": 3,
+          "target": "1/2",
+          "uniform_length": false
+        },
+        "expected": "right-to-left, fixed finite word, exact total below target",
+        "group": "cross_core",
+        "name": "primary exact right-context recursive word recovery",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "expected_01": 1.7320508075688772,
+          "identity": "Y C Omega = J sigma_{-i/2}(C*) J Y Omega; sigma_s=alpha_{-beta*hbar*s}",
+          "sigma_i_half_01": 1.7320508075688772,
+          "wrong_01": 0.5773502691896257
+        },
+        "expected": {
+          "adjoint_identity": "J sigma_(-i/2)(C*) J",
+          "opposite_orientation_rejected": true,
+          "right_multiplier": "sigma_(i/2)(C)"
+        },
+        "group": "cross_core",
+        "name": "primary exact standard-form imaginary-half orientation",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "distance": "34/81",
+          "formula": "34/81",
+          "isometric": true,
+          "point_norm_C0": true,
+          "row_formula_ok": false,
+          "translation_rows": 0
+        },
+        "expected": "exact L1 translation formula and isometric point-norm C0 shift",
+        "group": "cross_core",
+        "name": "primary exact L1 C0 shift",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "half_moment": "4/5",
+          "normalization": 1,
+          "ratio": 0.5333333333333333,
+          "width": "9/4"
+        },
+        "expected": {
+          "half_moment_over_sqrt_T": "8/15",
+          "normalization": 1
+        },
+        "group": "cross_core",
+        "name": "primary triangular kernel exact 8/15 half moment",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "d": "sqrt(2)/16",
+          "label_length": 8,
+          "lower": "23*sqrt(2)/192",
+          "margin": "11*sqrt(2)/192"
+        },
+        "expected": "positive margin above d with eight-entry rational label",
+        "group": "cross_core",
+        "name": "primary rational sine witness positive margin",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "direct_equal": [
+            true,
+            true,
+            true
+          ],
+          "errors": [
+            "sqrt(15)/100",
+            "sqrt(10)/150",
+            "sqrt(30)/400"
+          ],
+          "formula": "16/15 sqrt(hbar T/(chi V rho_star))",
+          "signs": [
+            true,
+            true,
+            true
+          ]
+        },
+        "expected": "16/15 formula, exact direct equality, V-decay, opposite signs",
+        "group": "cross_core",
+        "name": "primary exact fixed-smear error and sign separation",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "bound": "2/7",
+          "frequency": "-3",
+          "hbar": "2",
+          "nu": "3",
+          "recomputed": 0.2857142857142857
+        },
+        "expected": "frequency=-nu and bound=norm^2 epsilon/(hbar nu)",
+        "group": "cross_core",
+        "name": "primary negative-Arveson hbar-nu denominator and sign",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "commutator": "2",
+          "gibbs_invariant": false,
+          "orbit": 2,
+          "q3lock_counterexample": false,
+          "tail": "0"
+        },
+        "expected": {
+          "gibbs": false,
+          "limits": [
+            0,
+            2,
+            2
+          ],
+          "q3lock_counterexample": false
+        },
+        "group": "cross_core",
+        "name": "primary exact 4x4 static-tail hostile limits",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "commutator": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                -1,
+                0,
+                0,
+                0
+              ]
+            ],
+            "commutator_matches_expected": true,
+            "cutoff": [
+              [
+                0,
+                -1
+              ],
+              [
+                -1,
+                0
+              ]
+            ],
+            "cutoff_matches_expected": true
+          },
+          {
+            "commutator": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                -1,
+                0,
+                0,
+                0
+              ]
+            ],
+            "commutator_matches_expected": true,
+            "cutoff": [
+              [
+                0,
+                -1
+              ],
+              [
+                -1,
+                0
+              ]
+            ],
+            "cutoff_matches_expected": true
+          },
+          {
+            "commutator": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                -1,
+                0,
+                0,
+                0
+              ]
+            ],
+            "commutator_matches_expected": true,
+            "cutoff": [
+              [
+                0,
+                -1
+              ],
+              [
+                -1,
+                0
+              ]
+            ],
+            "cutoff_matches_expected": true
+          }
+        ],
+        "expected": {
+          "commutator_C_sign": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              -1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "cutoff_B_00_11": [
+            [
+              0,
+              -1
+            ],
+            [
+              -1,
+              0
+            ]
+          ]
+        },
+        "group": "cross_core",
+        "name": "primary exact 4x4 cutoff and commutator signs",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "common_shift": true,
+          "dimension": 8,
+          "exhaustion_unique": false,
+          "frequencies": [
+            "2",
+            "4"
+          ],
+          "quasi_local": false,
+          "rank": 8,
+          "single_generator": false
+        },
+        "expected": {
+          "common_shift": true,
+          "exhaustion_unique": false,
+          "frequencies": [
+            2,
+            4
+          ],
+          "quasi_local": false,
+          "rank": 8,
+          "single_generator": false
+        },
+        "group": "cross_core",
+        "name": "primary exact M2 categorical boundary",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "exact_total": "4.721005259098575971032133666933993113620620016993688487851869709205215E-1",
+          "fixed_only": true,
+          "order": "right-to-left",
+          "rows": 3,
+          "target": "1/2",
+          "uniform_length": false
+        },
+        "expected": "right-to-left, fixed finite word, exact total below target",
+        "group": "cross_core",
+        "name": "independent exact right-context recursive word recovery",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "convention": "sigma_s=alpha_(-beta hbar s)",
+          "sigma_i_half_residual": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          "wrong_orientation_residual": [
+            [
+              "6",
+              "-3"
+            ],
+            [
+              "9",
+              "3"
+            ]
+          ]
+        },
+        "expected": {
+          "adjoint_identity": "J sigma_(-i/2)(C*) J",
+          "opposite_orientation_rejected": true,
+          "right_multiplier": "sigma_(i/2)(C)"
+        },
+        "group": "cross_core",
+        "name": "independent exact standard-form imaginary-half orientation",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "distance": null,
+          "formula": "2|s|/T-|s|^2/(2T^2), 0<=|s|<=2T",
+          "isometric": true,
+          "point_norm_C0": true,
+          "row_formula_ok": true,
+          "translation_rows": 6
+        },
+        "expected": "exact L1 translation formula and isometric point-norm C0 shift",
+        "group": "cross_core",
+        "name": "independent exact L1 C0 shift",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "half_moment": "4/5",
+          "normalization": "1",
+          "ratio": 0.5333333333333333,
+          "width": "9/4"
+        },
+        "expected": {
+          "half_moment_over_sqrt_T": "8/15",
+          "normalization": 1
+        },
+        "group": "cross_core",
+        "name": "independent triangular kernel exact 8/15 half moment",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "d": "1/128",
+          "label_length": 8,
+          "lower": null,
+          "margin": "1/128"
+        },
+        "expected": "positive margin above d with eight-entry rational label",
+        "group": "cross_core",
+        "name": "independent rational sine witness positive margin",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "direct_equal": [
+            true,
+            true,
+            true
+          ],
+          "errors": [
+            "3/2000",
+            "1/2250",
+            "3/16000"
+          ],
+          "formula": null,
+          "signs": [
+            true,
+            true,
+            true
+          ]
+        },
+        "expected": "16/15 formula, exact direct equality, V-decay, opposite signs",
+        "group": "cross_core",
+        "name": "independent exact fixed-smear error and sign separation",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "bound": "9/14",
+          "frequency": -3.0,
+          "hbar": "2",
+          "nu": "3",
+          "recomputed": 0.6428571428571428
+        },
+        "expected": "frequency=-nu and bound=norm^2 epsilon/(hbar nu)",
+        "group": "cross_core",
+        "name": "independent negative-Arveson hbar-nu denominator and sign",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "commutator": 2,
+          "gibbs_invariant": false,
+          "orbit": 2,
+          "q3lock_counterexample": false,
+          "tail": 0
+        },
+        "expected": {
+          "gibbs": false,
+          "limits": [
+            0,
+            2,
+            2
+          ],
+          "q3lock_counterexample": false
+        },
+        "group": "cross_core",
+        "name": "independent exact 4x4 static-tail hostile limits",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "commutator": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                -1,
+                0,
+                0,
+                0
+              ]
+            ],
+            "commutator_matches_expected": true,
+            "cutoff": [
+              [
+                0,
+                -1
+              ],
+              [
+                -1,
+                0
+              ]
+            ],
+            "cutoff_matches_expected": true
+          }
+        ],
+        "expected": {
+          "commutator_C_sign": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              -1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "cutoff_B_00_11": [
+            [
+              0,
+              -1
+            ],
+            [
+              -1,
+              0
+            ]
+          ]
+        },
+        "group": "cross_core",
+        "name": "independent exact 4x4 cutoff and commutator signs",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "common_shift": true,
+          "dimension": 8,
+          "exhaustion_unique": false,
+          "frequencies": [
+            2,
+            4
+          ],
+          "quasi_local": false,
+          "rank": 8,
+          "single_generator": false
+        },
+        "expected": {
+          "common_shift": true,
+          "exhaustion_unique": false,
+          "frequencies": [
+            2,
+            4
+          ],
+          "quasi_local": false,
+          "rank": 8,
+          "single_generator": false
+        },
+        "group": "cross_core",
+        "name": "independent exact M2 categorical boundary",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": {
+            "L1_point_norm_C0_shift": true,
+            "M2_categorical_not_quasi_local": true,
+            "M2_direct_sum_dimension": 8,
+            "M2_frequencies": [
+              2,
+              4
+            ],
+            "negative_arveson_denominator": "hbar*nu",
+            "negative_arveson_frequency_sign": -1,
+            "rational_sine_margin_positive": true,
+            "right_context_opposite_orientation_rejected": true,
+            "right_context_recursive_word_recovery": true,
+            "right_context_standard_form_orientation": "sigma_(i/2)(C)",
+            "smear_error_coefficient": "16/15",
+            "static_tail_4x4_limits": [
+              0,
+              2,
+              2
+            ],
+            "static_tail_commutator_C_sign": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                -1,
+                0,
+                0,
+                0
+              ]
+            ],
+            "static_tail_cutoff_B_00_11": [
+              [
+                0,
+                -1
+              ],
+              [
+                -1,
+                0
+              ]
+            ],
+            "triangular_half_moment_coefficient": "8/15"
+          },
+          "primary": {
+            "L1_point_norm_C0_shift": true,
+            "M2_categorical_not_quasi_local": true,
+            "M2_direct_sum_dimension": 8,
+            "M2_frequencies": [
+              2,
+              4
+            ],
+            "negative_arveson_denominator": "hbar*nu",
+            "negative_arveson_frequency_sign": -1,
+            "rational_sine_margin_positive": true,
+            "right_context_opposite_orientation_rejected": true,
+            "right_context_recursive_word_recovery": true,
+            "right_context_standard_form_orientation": "sigma_(i/2)(C)",
+            "smear_error_coefficient": "16/15",
+            "static_tail_4x4_limits": [
+              0,
+              2,
+              2
+            ],
+            "static_tail_commutator_C_sign": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                -1,
+                0,
+                0,
+                0
+              ]
+            ],
+            "static_tail_cutoff_B_00_11": [
+              [
+                0,
+                -1
+              ],
+              [
+                -1,
+                0
+              ]
+            ],
+            "triangular_half_moment_coefficient": "8/15"
+          }
+        },
+        "expected": {
+          "L1_point_norm_C0_shift": true,
+          "M2_categorical_not_quasi_local": true,
+          "M2_direct_sum_dimension": 8,
+          "M2_frequencies": [
+            2,
+            4
+          ],
+          "negative_arveson_denominator": "hbar*nu",
+          "negative_arveson_frequency_sign": -1,
+          "rational_sine_margin_positive": true,
+          "right_context_opposite_orientation_rejected": true,
+          "right_context_recursive_word_recovery": true,
+          "right_context_standard_form_orientation": "sigma_(i/2)(C)",
+          "smear_error_coefficient": "16/15",
+          "static_tail_4x4_limits": [
+            0,
+            2,
+            2
+          ],
+          "static_tail_commutator_C_sign": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              -1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "static_tail_cutoff_B_00_11": [
+            [
+              0,
+              -1
+            ],
+            [
+              -1,
+              0
+            ]
+          ],
+          "triangular_half_moment_coefficient": "8/15"
+        },
+        "group": "cross_core",
+        "name": "primary and independent exact cross-invariants agree",
+        "status": "PASS"
+      },
+      {
+        "actual": 803,
+        "expected": ">=1",
+        "group": "formal",
+        "name": "exploration ledger parses",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "EXP-000803 unique",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "claim": true,
+          "closed_gates": true,
+          "negatives": true,
+          "no_note_pdf": true,
+          "paths": true,
+          "result": true,
+          "successor_gate": true,
+          "task": true,
+          "verdict": true
+        },
+        "expected": "all true",
+        "group": "formal",
+        "name": "EXP-000803 complete authority chain",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "EXP-000803 exact narrow boundary required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 612980,
+        "expected": ">0",
+        "group": "formal",
+        "name": "result ledger readable",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "R-167 unique detail section",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "R-167 v1.6 ledger required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 651101,
+        "expected": ">0",
+        "group": "formal",
+        "name": "negative registry readable",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING",
+        "status": "PASS"
+      },
+      {
+        "actual": 228269,
+        "expected": ">0",
+        "group": "formal",
+        "name": "gate authority readable",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION**\n\n**Statement:** Upgrade the selected fixed-beta tangent-net theorem from one\ncyclic raw character to every fixed finite raw configuration-orbit word. Keep\nthe conclusion in scalar word-kernel and pointed finite-core Fell/GNS scope,\nwithout assuming an arbitrary bounded-context multiplier theorem.\n\n**Status:** CLOSED IN THE SELECTED TANGENT-NET SCOPE (2026-08-10).\n`EXP-000803` / R-167 v1.6 proves the modular right-context lemma and recovers\nthe factors from right to left. If the already smoothed right context has\nbandwidth `S_j`, its error cost is\n`exp(beta hbar S_j/2) epsilon_(xi_j)(R_j)`. Choosing each next bandwidth only\nafter the finite right-context bandwidth is fixed closes every fixed word.\nThe bandwidths need not be uniform in word length. No common-Hilbert operator\nstrong-star, arbitrary-context completion or all-exhaustion result follows.\n",
+        "expected": "exact gate heading with CLOSED status",
+        "group": "formal",
+        "name": "closed gate authority PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER**\n\n**Statement:** From the complete family of exact zero-source finite periodic\nHamiltonians, define a beta- and state-independent C-star seminorm on formal\n`L1` time-smears of rational finite-support configuration characters. Prove\nthat its quotient completion carries one point-norm continuous time shift,\nwith every finite Hamiltonian evolution as an equivariant quotient.\n\n**Status:** CLOSED AS A CATEGORICAL NONLOCAL CARRIER (2026-08-10).\n`EXP-000803` / R-167 v1.6 defines\n`||a||_H=sup_Lambda||pi_Lambda(a)||` and\n`theta_s A_(xi,f)=A_(xi,f(.-s))`. The generator estimate\n`||pi_Lambda(A_(xi,f))||<=||f||_1`, equivariance and `L1` translation\ncontinuity give a unital beta-independent C0 C-star system with smooth-core\ngenerator `delta_H A_(xi,f)=-A_(xi,f')`. Finite Gibbs pullbacks are KMS.\n\nThe carrier is not a quasi-local thermodynamic limit: its quotient\nrepresentations are not an inductive system, raw characters need not belong\nto it, temporal smears are not spatially local, and no all-exhaustion Cauchy,\nmomentum/CCR or polynomial local-generator identification follows.\n",
+        "expected": "exact gate heading with CLOSED status",
+        "group": "formal",
+        "name": "closed gate authority PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS**\n\n**Statement:** Promote the `EXP-000789` zero-source approximate broken\ndoublets to two distinct algebraic ground states of the universal orbit-smear\ncarrier by one fixed bounded order witness and the negative-Arveson ground\ncriterion.\n\n**Status:** CLOSED ON THE ORBIT-SMEAR CARRIER (2026-08-10). Choose the rational\none-site label `xi=r(1,...,1)` sufficiently small. Uniform local quartic\nmoments and `|sin z-z|<=|z|^3/6` give an order split at least\n`d=r sqrt(8 rho_*/2)/2`. One fixed triangular time smear changes either\nexpectation by at most\n`(16/15)sqrt(hbar T/(chi V rho_*))`, so one self-adjoint abstract smeared sine\nseparates every joint cluster pair. If `Sp_theta(a)` lies below `-nu`, then\n`omega_L(a^*a)<=||a||_H^2 epsilon_L/(hbar nu)->0`; every cluster is a ground\nstate.\n\nThese are algebraic ground states only of the categorical smear carrier. A\nground theorem on the sought quasi-local raw oscillator algebra and a\npositive broken-sector GNS or physical mass gap remain open.\n\nThe three v1.6 closures and their common no-overclaim boundary are collected\nonce, after strict proof validation, in\n`claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf`.\nNo per-lemma or intermediate v1.6 PDF was issued.\n",
+        "expected": "exact gate heading with CLOSED status",
+        "group": "formal",
+        "name": "closed gate authority PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP**\n\n**Statement:** Construct a noncollapsing raw/resolvent oscillator carrier with\na spatially local net and one zero-source Hamiltonian dynamics. Prove\nall-shape exhaustion Cauchy, identify the finite Hamiltonian generator and the\nfixed-beta phase KMS quotient representations, and then determine the\nspectral gap in each selected broken ground-state GNS representation.\n\n**Status:** OPEN (2026-08-10). R-167 v1.6 supplies two useful precursors: all\nfixed finite raw-word moments on the selected tangent nets, and a separate\nbeta-independent product-type orbit-smear carrier with two distinct ground\nstates. It does not supply a quasi-local net, all-exhaustion uniqueness,\ncanonical momentum/full Weyl data, polynomial local-generator closure,\nphase-KMS quotient identification, or a broken-sector GNS-gap lower bound.\nThose are the live requirements before physical mass, continuum, empty-space,\nC6, CP1 or Pre-A conclusions.\n\n## A6/A7 full derivative Class-II composite and renormalisation gates\n",
+        "expected": "OPEN; successor linked to EXP-000803",
+        "group": "formal",
+        "name": "open gate authority PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE**\n\n**Statement:** Before scoring or selecting any Pre-A round-one candidate,\nfreeze the complete evidence and clue register with an explicit role for each\nitem, admit every contestant under the same minimum manifest fields, separate\nbridge infrastructure from contestants, and declare one common\nreference/observable/input ledger, one non-fitting validation prediction, and\none robustness envelope. Scoped failures may eliminate only the exact\nmechanism and parameter contract that was tested.\n\n**Status:** OPEN (2026-08-10). EXP-000791 freezes a bounded T-053 evidence-role\ninventory, common categorical matrix, explicit absence fields, reference\nrules, and robustness boundaries. It independently derives the M2 quadratic\ncone and computes that none of M1/M2/M5 survives all hard admission rows; M0\nremains the effective baseline. The visible helium target predates the new\nstiffness observable map, so its exact mismatch is retrospective and receives\nno validation credit. The parent gate therefore remains open until a genuinely\nprospective prediction or holdout and its microscopic observable map are\nfrozen in an earlier immutable commit. Published EXP-000758--EXP-000790 remain\nbridge evidence and do not convert CP1 into a contestant. No winner, shortlist,\npreferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional\nSector-A closure is licensed.\n",
+        "expected": "OPEN; successor linked to EXP-000803",
+        "group": "formal",
+        "name": "open gate authority PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS**\n\n**Statement:** In one preregistered locally normal representation, prove an\nall-shape pairwise-union estimate for every bounded local seed, uniformly on\ncompact real times,\n\n`sup_(Lambda,Lambda' superset B_R(X)) ||X_Lambda-X_Lambda'||_(#,beta) -> 0`.\n\nUse it to establish exhaustion independence, products, star, inverse, group\nlaw and strong continuity. Construct one beta-independent invariant C-star\nalgebra and derivation, add the kinetic/CCR anchor needed for canonical\nmomentum, and separately prove the symmetric zero-source periodic anchoring\nbefore any ground-state limit.\n\n**Status:** OPEN, WITH A CATEGORICAL BETA-INDEPENDENT CARRIER NOW SEPARATED\n(2026-08-10). `EXP-000801` proves only selected-tangent\nfinite-word kernel/Gram convergence after explicit finite-block transports.\nIt supplies neither the untransported pairwise-union estimate nor a common\nHilbert embedding for complete finite GNS spaces. Its Fejer theorem is cyclic\ntwo-sided L2 recovery of each raw character, not a multiplier theorem in\narbitrary word contexts. The five v1.5 negative results remove naive label,\nmomentum, raw-generator, asymmetric-periodic and automatic cross-beta\nshortcuts without proving that the required common dynamics is nonexistent.\n\n`EXP-000803` closes every fixed finite raw word on the selected tangent net\nand constructs a beta-independent universal zero-source orbit-smear C-star\nsystem. It does not supply the pairwise-union estimate in this gate, because\nthe volume quotient maps are not an inductive family and the smears are not a\nspatial local net. An exact four-dimensional fixture registered as\n`NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY`\nalso shows that static Gaussian tails and a vanishing first modular derivative\nalone do not imply the missing projected real-time orbit estimate. No exact\nQ3LOCK non-Cauchy counterexample is claimed.\n",
+        "expected": "OPEN",
+        "group": "formal",
+        "name": "retained gate remains open PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE**\n\n**Statement:** Embed the exact finite-volume Hamiltonian evolution of the\nrational finite-support configuration-character seed into the canonical\nfixed-beta OS mixture envelope. Prove direct two-sided mixture-L2 Cauchy, or\ndirect Duhamel `D,delta D` estimates implying it, uniformly on compact real\ntimes and independently of the exhaustion. Identify the limit generator on a\nbounded temporal-smear core and supply an independently registered kinetic/CCR\nanchor before identifying canonical momentum or the local polynomial\nderivation. Prove products, star, inverse, group law and strong continuity.\nFinally construct a beta-compatible state-independent algebra before any\nbeta-to-infinity ground-state claim.\n\n**Status:** OPEN, WITH SELECTED-TANGENT AND CATEGORICAL-CARRIER SUBGATES CLOSED\n(2026-08-10). `EXP-000801` / R-167 v1.5 identifies each fixed finite\nbandlimited word block of the selected `EXP-000781` tangent Hamiltonian KMS\nsystems with the `EXP-000800` mixture in pointed finite-core Fell/GNS\ntopology, and cyclically de-filters each raw character. It also proves that\npointwise Gram convergence does not define a literal quotient-label\nembedding, configuration cylinders do not select momentum, raw characters\nare not a bounded generator core, asymmetric mixtures cannot be zero-source\nperiodic limits, and fixed-beta envelopes need not glue across beta.\n\nMissing are the all-shape pairwise-union estimate in one preregistered\nlocally normal representation, boundary Cauchy, exhaustion independence,\nraw-context operator convergence, canonical kinetic/full-Weyl identification,\nand beta compatibility. `EXP-000803` / R-167 v1.6 additionally constructs a\nbeta-independent universal zero-source `L1` orbit-smear carrier and distinct\nground states on it. Because that product-type carrier has no spatial net or\nexhaustion identification, it does not close this thermodynamic gate. The\nremaining obligations are concentrated in\n`PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP`.\nThe symmetric phase mixture is also not yet proved to be the periodic\nzero-source finite-volume limit. The selected-tangent theorem alone does not\nlicense ground states. The v1.6 carrier licenses its narrowly scoped ground\nstates, but not a quasi-local oscillator ground representation or GNS gap.\n",
+        "expected": "OPEN",
+        "group": "formal",
+        "name": "retained gate remains open PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY**\n\n**Statement:** On a preregistered faithful fixed-beta representation or\nseparating tempered state class, truncate only the intersite coordinates and\nprove projected Duhamel locality for the finite-volume difference `D` together\nwith a uniform bound on its first modular derivative `delta D`. Uniform\nhalf-modular-strip multiplier bounds `M_0,M_1` for the structured truncated\nevolution are a stronger sufficient option, not an equivalent requirement.\nUse the arithmetic/logarithmic-mean theorem to obtain\ntwo-sided GNS/strong-star convergence, then prove exhaustion independence,\ngroup law and Hamiltonian identification.\n\n**Status:** OPEN, NARROWED TO DIRECT `D,delta D` (2026-08-10).\n`EXP-000799` / R-167 v1.3 proves a finite-volume two-orientation relative-\nunitary bound and resulting Gibbs trace-distance estimate from the v1.2\ncoordinate tail. It also proves that the cutoff bond is not norm-`C1` for the\nonsite kinetic derivation and that the connected absolute half-strip condition\n`z beta J_L<1` collapses as `J_L=Theta(L^2)`. A Hamiltonian-generated\ntwo-level fixture has direct `D,delta D` tails tending to zero while its\nevolved `M_0,M_1` diverge, so the direct theorem is strictly weaker. The live\ngate is a volume/source-uniform preregistered separating local test class with\ndirect `D,delta D` Cauchy, product/core density, exhaustion independence and\ngroup law. Common dynamics/KMS, beta independence and every zero-temperature\nconsequence remain open.\n\n`EXP-000800` / R-167 v1.4 proves that a bounded finite-support class with both\nfull-Gibbs half-modular endpoint conjugates bounded is scalar. It therefore\nretires that particular separating-class implementation. Direct two-sided\nmixture-L2 or direct Duhamel `D,delta D` Cauchy on the full common orbit-word\nclass remains viable and is carried into the Hamiltonian-identification gate.\n",
+        "expected": "OPEN",
+        "group": "formal",
+        "name": "retained gate remains open PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "todo/todo.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "TODO authority parses",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "T-054 unique",
+        "status": "PASS"
+      },
+      {
+        "actual": "in_progress",
+        "expected": "in_progress",
+        "group": "formal",
+        "name": "T-054 remains in progress",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "T-054 v1.6 linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 81920,
+        "expected": ">0",
+        "group": "formal",
+        "name": "roadmap readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "roadmap v1.6 linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": "governance/sector-a-theorem-map.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "Sector-A theorem map parses",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "theorem map v1.6 linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 582,
+        "expected": ">=1",
+        "group": "formal",
+        "name": "changelog parses",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "EXP-000803 theorem changelog unique",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "claim_refs": true,
+          "negatives": true,
+          "no_note_pdf_path": true,
+          "notes_deferred": true,
+          "scope": true,
+          "scripts": true
+        },
+        "expected": "all true",
+        "group": "formal",
+        "name": "EXP-000803 changelog complete",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "R-167 v1.6 checkpoint-PDF changelog unique",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "claim_refs": true,
+          "development_economy": true,
+          "exact_pdf": true,
+          "exact_source": true,
+          "no_formal_change": true,
+          "one_checkpoint": true,
+          "proof_layers_first": true,
+          "seven_page_pdf": true,
+          "source_structured": true,
+          "visual_review": true,
+          "zero_overfull": true
+        },
+        "expected": "all true",
+        "group": "formal",
+        "name": "R-167 v1.6 checkpoint-PDF changelog complete",
+        "status": "PASS"
+      },
+      {
+        "actual": 3170916,
+        "expected": ">0",
+        "group": "formal",
+        "name": "proof-evidence map readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "proof-evidence map v1.6 linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/proof-evidence-map.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "proof-evidence JSON map parses",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "proof-evidence JSON v1.6 linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/C6-SPACETIME-SIGNATURE/status.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "C6 status parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "T1",
+        "expected": "T1",
+        "group": "claim_firewall",
+        "name": "C6 tier unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": "ACTIVE",
+        "expected": "ACTIVE",
+        "group": "claim_firewall",
+        "name": "C6 lifecycle unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "C6-BCC-PREMISE-BLOCKED"
+        ],
+        "expected": [
+          "C6-BCC-PREMISE-BLOCKED"
+        ],
+        "group": "claim_firewall",
+        "name": "C6 open gate unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt"
+        ],
+        "expected": [
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt"
+        ],
+        "group": "pdf_efficiency",
+        "name": "exactly one EXP-000803 checkpoint source/PDF pair exists",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "characters": 17525,
+          "error": null
+        },
+        "expected": "readable UTF-8 source with >12000 characters",
+        "group": "pdf_checkpoint",
+        "name": "checkpoint source readable UTF-8",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "pdf_checkpoint",
+        "name": "checkpoint source theorem and no-overclaim content required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "pdf_checkpoint",
+        "name": "checkpoint source has no drafting placeholders",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "error": null,
+          "pdfplumber_page_characters": [
+            2343,
+            2208,
+            1921,
+            1930,
+            2267,
+            2693,
+            707
+          ],
+          "pdfplumber_pages": 7,
+          "pypdf_page_characters": [
+            2360,
+            2177,
+            1906,
+            1921,
+            2257,
+            2704,
+            707
+          ],
+          "pypdf_pages": 7
+        },
+        "expected": "7 nonempty pages in pypdf and pdfplumber",
+        "group": "pdf_checkpoint",
+        "name": "checkpoint PDF readable by two independent parsers",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "encrypted": false,
+          "form_fields": false
+        },
+        "expected": {
+          "encrypted": false,
+          "form_fields": false
+        },
+        "group": "pdf_checkpoint",
+        "name": "checkpoint PDF is static, unencrypted, and form-free",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "pdf_checkpoint",
+        "name": "checkpoint PDF theorem and no-overclaim text required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "pdf_checkpoint",
+        "name": "checkpoint PDF second-extractor provenance and boundary required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "has_eof": true,
+          "header": "%PDF-1.5",
+          "pdf_mtime_ns": 1786373360926299100,
+          "pdf_size": 88035,
+          "source_mtime_ns": 1786373337294550400,
+          "source_size": 17525
+        },
+        "expected": "PDF mtime >= source, nonempty, %PDF header, %%EOF trailer",
+        "group": "pdf_checkpoint",
+        "name": "checkpoint PDF is readable and fresh relative to source",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "returncode": 0,
+          "stderr": ""
+        },
+        "expected": {
+          "returncode": 0
+        },
+        "group": "pdf_efficiency",
+        "name": "git can audit changed note/PDF artifacts",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt"
+        ],
+        "expected": {
+          "allowed_atomic_checkpoint_pair": [
+            "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf",
+            "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt"
+          ],
+          "allowed_clean_after_commit": []
+        },
+        "group": "pdf_efficiency",
+        "name": "no other new or reissued note/PDF accompanies checkpoint",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt"
+        ],
+        "expected": [
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt"
+        ],
+        "group": "pdf_efficiency",
+        "name": "manifest and certificate cite the exact checkpoint pair only",
+        "status": "PASS"
+      }
+    ],
+    "total": 137
+  },
+  "boundary": "This package proves finite raw-word moment convergence only on the selected fixed-beta phase-tangent nets and proves distinct algebraic ground states only on the beta-independent universal zero-source finite-Hamiltonian L1-orbit-smear carrier. It does not prove a quasi-local raw oscillator thermodynamic limit, all-exhaustion or all-boundary Cauchy, a spatially local algebra, the zero-source periodic phase mixture, finite-volume-to-OS quotient identification, canonical momentum/full Weyl reconstruction, the polynomial local generator on raw characters, a broken-sector GNS or physical mass gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+  "claim_bearing": false,
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "closed_gates": [
+    "PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION",
+    "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER",
+    "PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS"
+  ],
+  "component_summaries": {
+    "independent": {
+      "assertions": [
+        113,
+        0,
+        0,
+        113
+      ],
+      "schema": "tect/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-independent-result/1.0",
+      "verdict": "PASS"
+    },
+    "primary": {
+      "assertions": [
+        128,
+        0,
+        0,
+        128
+      ],
+      "schema": "tect/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-primary-result/1.0",
+      "verdict": "PASS"
+    }
+  },
+  "cross_derived": {
+    "all_exact": true,
+    "expected": {
+      "L1_point_norm_C0_shift": true,
+      "M2_categorical_not_quasi_local": true,
+      "M2_direct_sum_dimension": 8,
+      "M2_frequencies": [
+        2,
+        4
+      ],
+      "negative_arveson_denominator": "hbar*nu",
+      "negative_arveson_frequency_sign": -1,
+      "rational_sine_margin_positive": true,
+      "right_context_opposite_orientation_rejected": true,
+      "right_context_recursive_word_recovery": true,
+      "right_context_standard_form_orientation": "sigma_(i/2)(C)",
+      "smear_error_coefficient": "16/15",
+      "static_tail_4x4_limits": [
+        0,
+        2,
+        2
+      ],
+      "static_tail_commutator_C_sign": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "static_tail_cutoff_B_00_11": [
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "triangular_half_moment_coefficient": "8/15"
+    },
+    "independent": {
+      "L1_point_norm_C0_shift": true,
+      "M2_categorical_not_quasi_local": true,
+      "M2_direct_sum_dimension": 8,
+      "M2_frequencies": [
+        2,
+        4
+      ],
+      "negative_arveson_denominator": "hbar*nu",
+      "negative_arveson_frequency_sign": -1,
+      "rational_sine_margin_positive": true,
+      "right_context_opposite_orientation_rejected": true,
+      "right_context_recursive_word_recovery": true,
+      "right_context_standard_form_orientation": "sigma_(i/2)(C)",
+      "smear_error_coefficient": "16/15",
+      "static_tail_4x4_limits": [
+        0,
+        2,
+        2
+      ],
+      "static_tail_commutator_C_sign": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "static_tail_cutoff_B_00_11": [
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "triangular_half_moment_coefficient": "8/15"
+    },
+    "primary": {
+      "L1_point_norm_C0_shift": true,
+      "M2_categorical_not_quasi_local": true,
+      "M2_direct_sum_dimension": 8,
+      "M2_frequencies": [
+        2,
+        4
+      ],
+      "negative_arveson_denominator": "hbar*nu",
+      "negative_arveson_frequency_sign": -1,
+      "rational_sine_margin_positive": true,
+      "right_context_opposite_orientation_rejected": true,
+      "right_context_recursive_word_recovery": true,
+      "right_context_standard_form_orientation": "sigma_(i/2)(C)",
+      "smear_error_coefficient": "16/15",
+      "static_tail_4x4_limits": [
+        0,
+        2,
+        2
+      ],
+      "static_tail_commutator_C_sign": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "static_tail_cutoff_B_00_11": [
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "triangular_half_moment_coefficient": "8/15"
+    }
+  },
+  "exploration_id": "EXP-000803",
+  "failures": [],
+  "formal_workflow": {
+    "checkpoint_changelog_matches": 1,
+    "exploration_matches": 1,
+    "formal_authorities_complete": true,
+    "theorem_changelog_matches": 1
+  },
+  "fresh_sentinels": {
+    "independent": "FRESH-COMPONENT PASS 113/113",
+    "primary": "FRESH-COMPONENT PASS 128/128"
+  },
+  "missing_authorities": [],
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "pdf_efficiency": {
+    "authority_artifact_refs": [
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf",
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt",
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt",
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf"
+    ],
+    "changed_note_or_pdf_artifacts": [
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf",
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt"
+    ],
+    "checkpoint_pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf",
+    "note_source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt",
+    "package_artifacts": [
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf",
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt"
+    ],
+    "page_count": 7,
+    "pdf_built_by_integrated_verifier": false,
+    "pdf_imported": true,
+    "pdf_sha256": "763ae0b8821e1f0371c7d4ddfb7d843dd413ec798db6c87ccc924a5aab9d5c6f",
+    "pdfplumber_text_characters": 14075,
+    "policy": "one synthesis source/PDF at the logical gate checkpoint",
+    "pypdf_text_characters": 14038,
+    "render_attempted": false,
+    "source_sha256": "fc34cea2126a9d1af3aaf6b62b55474a6d816b399c68ec20c0b255f4b850d1cf"
+  },
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_number": "R-167",
+  "result_version": "v1.6",
+  "retained_gates": [
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+  ],
+  "schema": "tect/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-integrated-result/1.0",
+  "scope": {
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false,
+    "Sector_A_complete": false,
+    "all_exhaustion_thermodynamic_limit": false,
+    "beta_and_state_independent_universal_shift": true,
+    "broken_sector_GNS_gap": false,
+    "continuum_regulator_removal": false,
+    "finite_volume_to_OS_quotient_identified": false,
+    "physical_empty_space_reference": false,
+    "physical_mass_gap": false,
+    "polynomial_local_derivation_identified": false,
+    "quasi_local_raw_oscillator_algebra": false,
+    "raw_character_generator_core": false,
+    "selected_tangent_fixed_finite_raw_orbit_word_moments": true,
+    "selected_tangent_raw_word_pointed_finite_core_fell_gns": true,
+    "two_distinct_algebraic_ground_states_on_smear_carrier": true,
+    "zero_source_finite_hamiltonian_L1_orbit_smear_cstar": true
+  },
+  "script_version": "1.1.0",
+  "source_hashes": {
+    "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf": "763ae0b8821e1f0371c7d4ddfb7d843dd413ec798db6c87ccc924a5aab9d5c6f",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt": "fc34cea2126a9d1af3aaf6b62b55474a6d816b399c68ec20c0b255f4b850d1cf",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-independent-pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split/result.json": "f08381cdf757ea87801b116df3f418b82d39659d7d28ba12ec806225fb5d652e",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-primary-pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split/result.json": "b5b9e3580b2715dc704e63972990d1d8d4c5c9ae8212e8d71b373add3b8e1c91",
+    "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split.py": "e9df2e7fdcdc3dbf848b6e3b724389d118202378b76f8f3386e14cb7688c3198",
+    "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split_independent.py": "0e0965746cc2ef488a38f236498efc68c3d84fba4b3c056e653a9e82e0ce3388",
+    "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split_verify.py": "5a67d1032a9f09f253df204e23790ca46c3a05f46f4f36423f63a4138bcce115",
+    "strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-certificate-260810.md": "c9b6553863c9d7d1b15a0d419095e5fec816100b69708421aba464b28d719b89",
+    "strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-manifest.json": "dbe6e0a1d169e97d4c0a40d8129d44858828f2a43872af42fa445b9a0925a0aa"
+  },
+  "summary": {
+    "failed": 0,
+    "missing": 0,
+    "passed": 137,
+    "total": 137
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

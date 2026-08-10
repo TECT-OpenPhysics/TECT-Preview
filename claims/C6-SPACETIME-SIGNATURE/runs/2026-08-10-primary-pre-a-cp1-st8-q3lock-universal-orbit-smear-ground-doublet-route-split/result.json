@@ -1,0 +1,1803 @@
+{
+  "assertions": [
+    {
+      "actual": "Matrix([[0, sqrt(3)/2], [0, 0]])",
+      "expected": "Matrix([[0, sqrt(3)/2], [0, 0]])",
+      "group": "modular_context",
+      "name": "modular commutant identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, sqrt(3)], [0, 0]])",
+      "expected": "Matrix([[0, sqrt(3)], [0, 0]])",
+      "group": "modular_context",
+      "name": "modular half-translate adjoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/4",
+      "expected": "<= multiplier norm squared times base square",
+      "group": "modular_context",
+      "name": "modular multiplier inequality",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/4",
+      "expected": "3/4",
+      "group": "modular_context",
+      "name": "modular fixture saturates multiplier bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(3)",
+      "expected": "sqrt(3)",
+      "group": "modular_context",
+      "name": "Arveson exponential bound exact in fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "log(3)",
+      "expected": "log(3)",
+      "group": "modular_context",
+      "name": "physical modular convention",
+      "status": "PASS"
+    },
+    {
+      "actual": "1809*exp(16281/40000 + 201*exp(16281/40000)/625)/100",
+      "expected": "finite",
+      "group": "sequential_fejer",
+      "name": "sequential cutoff finite letter 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "1809*exp(16281/40000 + 201*exp(16281/40000)/625)/100",
+      "expected": ">=1",
+      "group": "sequential_fejer",
+      "name": "sequential cutoff at least one letter 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(1809*exp(201*exp(16281/40000)/625 + 16281/20000) + 20000*exp(16281/40000))*exp(-16281/40000 - 201*exp(16281/40000)/1250)/3618",
+      "expected": "1/6",
+      "group": "sequential_fejer",
+      "name": "sequential exact below crude letter 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/6",
+      "expected": "1/6",
+      "group": "sequential_fejer",
+      "name": "sequential crude target letter 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "804*exp(16281/40000)/25",
+      "expected": "finite",
+      "group": "sequential_fejer",
+      "name": "sequential cutoff finite letter 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "804*exp(16281/40000)/25",
+      "expected": ">=1",
+      "group": "sequential_fejer",
+      "name": "sequential cutoff at least one letter 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(201*exp(16281/20000) + 1250*exp(16281/40000))*exp(-16281/40000)/1206",
+      "expected": "1/6",
+      "group": "sequential_fejer",
+      "name": "sequential exact below crude letter 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/6",
+      "expected": "1/6",
+      "group": "sequential_fejer",
+      "name": "sequential crude target letter 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "16281/400",
+      "expected": "finite",
+      "group": "sequential_fejer",
+      "name": "sequential cutoff finite letter 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "16281/400",
+      "expected": ">=1",
+      "group": "sequential_fejer",
+      "name": "sequential cutoff at least one letter 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(96281)/10854",
+      "expected": "1/6",
+      "group": "sequential_fejer",
+      "name": "sequential exact below crude letter 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/6",
+      "expected": "1/6",
+      "group": "sequential_fejer",
+      "name": "sequential crude target letter 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(201*exp(16281/20000) + 1250*exp(16281/40000))*exp(-16281/40000)/1206 + sqrt(1809*exp(201*exp(16281/40000)/625 + 16281/20000) + 20000*exp(16281/40000))*exp(-16281/40000 - 201*exp(16281/40000)/1250)/3618 + sqrt(96281)/10854",
+      "expected": "1/2",
+      "group": "sequential_fejer",
+      "name": "sequential exact total below target",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "group": "sequential_fejer",
+      "name": "sequential crude total equals target",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        {
+          "all_cutoffs_finite": true,
+          "largest_cutoff": "201/25",
+          "length": 1
+        },
+        {
+          "all_cutoffs_finite": true,
+          "largest_cutoff": "804*exp(201/625)/25",
+          "length": 2
+        },
+        {
+          "all_cutoffs_finite": true,
+          "largest_cutoff": "1809*exp(1809/2500 + 1809*exp(1809/2500)/2500)/25",
+          "length": 3
+        },
+        {
+          "all_cutoffs_finite": true,
+          "largest_cutoff": "3216*exp(804/625 + 804*exp(804/625)/625 + 804*exp(804/625 + 804*exp(804/625)/625)/625)/25",
+          "length": 4
+        }
+      ],
+      "expected": "all finite",
+      "group": "sequential_fejer",
+      "name": "every scanned fixed length finite",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "fixed": true,
+        "uniform": false
+      },
+      "expected": {
+        "fixed": true,
+        "uniform": false
+      },
+      "group": "sequential_fejer",
+      "name": "no uniform word-length promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "sequential_fejer",
+      "name": "stars shifts mixtures preserve recursion",
+      "status": "PASS"
+    },
+    {
+      "actual": "6561/21025",
+      "expected": "<= 1",
+      "group": "universal_carrier",
+      "name": "orbit-smear representation contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "81/145",
+      "expected": "in (0,1)",
+      "group": "universal_carrier",
+      "name": "Laplace response positive contraction",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0], [0]])",
+      "expected": "Matrix([[0], [0]])",
+      "group": "universal_carrier",
+      "name": "joint null ideal fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "universal_carrier",
+      "name": "joint representation Cstar identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "34/81",
+      "expected": "34/81",
+      "group": "universal_carrier",
+      "name": "triangular translation exact formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "34/81",
+      "expected": "4/9",
+      "group": "universal_carrier",
+      "name": "W11 translation upper bound",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "universal_carrier",
+      "name": "translation isometric C0 contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "5*I*sqrt(pi)*exp(-25/64)/4",
+      "expected": "5*I*sqrt(pi)*exp(-25/64)/4",
+      "group": "universal_carrier",
+      "name": "smooth generator integration by parts",
+      "status": "PASS"
+    },
+    {
+      "actual": "d/dr at zero",
+      "expected": "i omega Fourier(f)",
+      "group": "universal_carrier",
+      "name": "shift derivative equals generator",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "(0, 1, 0)": "-1/7",
+        "(2, 0, 0)": "27/55",
+        "(4, 0, 0)": "1/3"
+      },
+      "expected": {
+        "(0, 1, 0)": "-1/7",
+        "(2, 0, 0)": "27/55",
+        "(4, 0, 0)": "1/3"
+      },
+      "group": "universal_carrier",
+      "name": "periodization linear",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "(2, 0, 0)": "11/15"
+      },
+      "expected": "wrapped",
+      "group": "universal_carrier",
+      "name": "small-torus wrap fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "(2, 0, 0)": "2/5",
+        "(4, 0, 0)": "1/3"
+      },
+      "expected": "support separated",
+      "group": "universal_carrier",
+      "name": "cofinal-torus label separation fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "beta": false,
+        "source": false
+      },
+      "expected": {
+        "beta": false,
+        "source": false
+      },
+      "group": "universal_carrier",
+      "name": "carrier beta independent and zero source",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "universal_carrier",
+      "name": "quotient precedes Cstar completion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "group": "ground_doublet",
+      "name": "EXP789 m0 substitution",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8"
+      ],
+      "expected": "r(1,...,1)",
+      "group": "ground_doublet",
+      "name": "Q3 rational label has eight equal entries",
+      "status": "PASS"
+    },
+    {
+      "actual": "16*sqrt(2)",
+      "expected": "(64 M4)^(3/4)",
+      "group": "ground_doublet",
+      "name": "third moment reconstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(2)/4",
+      "expected": "3*sqrt(2)",
+      "group": "ground_doublet",
+      "name": "rational sine small-frequency condition",
+      "status": "PASS"
+    },
+    {
+      "actual": "23*sqrt(2)/192",
+      "expected": "sqrt(2)/16",
+      "group": "ground_doublet",
+      "name": "sine witness lower bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(2)/16",
+      "expected": "r sqrt(8) m0/2",
+      "group": "ground_doublet",
+      "name": "exact d formula",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": 1,
+      "group": "ground_doublet",
+      "name": "triangular kernel normalized",
+      "status": "PASS"
+    },
+    {
+      "actual": "4/5",
+      "expected": "4/5",
+      "group": "ground_doublet",
+      "name": "triangular half moment 8 sqrt(T)/15",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(15)/100",
+      "expected": "sqrt(15)/100",
+      "group": "ground_doublet",
+      "name": "smear error formula V=4096",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(10)/150",
+      "expected": "sqrt(10)/150",
+      "group": "ground_doublet",
+      "name": "smear error formula V=13824",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(30)/400",
+      "expected": "sqrt(30)/400",
+      "group": "ground_doublet",
+      "name": "smear error formula V=32768",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "sqrt(15)/100",
+        "sqrt(10)/150",
+        "sqrt(30)/400"
+      ],
+      "expected": "strictly decreasing",
+      "group": "ground_doublet",
+      "name": "smear error decreases with volume",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "4096",
+        "13824",
+        "32768"
+      ],
+      "expected": "393216/125",
+      "group": "ground_doublet",
+      "name": "declared volumes exceed separation threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "-sqrt(15)/100 + sqrt(2)/16",
+          "-sqrt(2)/16 + sqrt(15)/100"
+        ],
+        [
+          "-sqrt(10)/150 + sqrt(2)/16",
+          "-sqrt(2)/16 + sqrt(10)/150"
+        ],
+        [
+          "-sqrt(30)/400 + sqrt(2)/16",
+          "-sqrt(2)/16 + sqrt(30)/400"
+        ]
+      ],
+      "expected": "positive/negative",
+      "group": "ground_doublet",
+      "name": "fixed smeared witness separates signs",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, -3*I, 0], [0, 0, 0], [0, 0, 0]])",
+      "expected": "Matrix([[0, -3*I, 0], [0, 0, 0], [0, 0, 0]])",
+      "group": "ground_spectrum",
+      "name": "negative Arveson derivation",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/7",
+      "expected": "2/7",
+      "group": "ground_spectrum",
+      "name": "negative Arveson near-ground bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/7",
+      "expected": "2/7",
+      "group": "ground_spectrum",
+      "name": "negative Arveson fixture saturates",
+      "status": "PASS"
+    },
+    {
+      "actual": "12/7",
+      "expected": "hbar nu times high probability",
+      "group": "ground_spectrum",
+      "name": "energy Markov factor",
+      "status": "PASS"
+    },
+    {
+      "actual": "864/27625",
+      "expected": "nonzero",
+      "group": "categorical_no_go",
+      "name": "M2 response matrix invertible",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[1], [0]])",
+      "expected": "Matrix([[1], [0]])",
+      "group": "categorical_no_go",
+      "name": "M2 first component isolated",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0], [1]])",
+      "expected": "Matrix([[0], [1]])",
+      "group": "categorical_no_go",
+      "name": "M2 second component isolated",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "group": "categorical_no_go",
+      "name": "M2 orbit smears generate direct sum",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "first": "Matrix([[0, 2*I], [-2*I, 0]])",
+        "second": "Matrix([[0, 4*I], [-4*I, 0]])"
+      },
+      "expected": "different",
+      "group": "categorical_no_go",
+      "name": "M2 labelled derivations disagree",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, -1], [-1, 0]])",
+      "expected": "traceless nonscalar",
+      "group": "categorical_no_go",
+      "name": "M2 generator difference nonscalar",
+      "status": "PASS"
+    },
+    {
+      "actual": "1 + I*tanh(1)",
+      "expected": "1 + I*tanh(1)",
+      "group": "categorical_no_go",
+      "name": "M2 component 1 KMS boundary identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/(4*cosh(1)**2)",
+      "expected": ">0",
+      "group": "categorical_no_go",
+      "name": "M2 component 1 Gibbs state faithful",
+      "status": "PASS"
+    },
+    {
+      "actual": "1 + I*tanh(4)",
+      "expected": "1 + I*tanh(4)",
+      "group": "categorical_no_go",
+      "name": "M2 component 2 KMS boundary identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/(4*cosh(4)**2)",
+      "expected": ">0",
+      "group": "categorical_no_go",
+      "name": "M2 component 2 Gibbs state faithful",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "common_shift": true,
+        "exhaustion_unique": false,
+        "quasi_local": false,
+        "single_labelled_generator": false
+      },
+      "expected": {
+        "common_shift": true,
+        "exhaustion_unique": false,
+        "quasi_local": false,
+        "single_labelled_generator": false
+      },
+      "group": "categorical_no_go",
+      "name": "categorical carrier does not imply quasi-locality",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "48*18**(1/3)/25",
+        "96*3**(2/3)/25",
+        "96*6**(2/3)/25",
+        "192*18**(1/3)/25"
+      ],
+      "expected": "96 c L^2/hbar",
+      "group": "projected_corridor",
+      "name": "bounded-cutoff nu coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "123256172596690944*sqrt(2)*exp(24*18**(1/3)/125)/28012436814606189727783203125",
+        "31113388202363428055148172598499606528*sqrt(2)*exp(48*3**(2/3)/125)/530485515781633021142014994264712868243805132806301116943359375",
+        "14436502450868656903289666408184527041054675856972707895108519703768376569420054528*sqrt(2)*exp(48*6**(2/3)/125)/252082099997393249076819009924654235125275700841445779587597615873667073583886557496821784811968057693487565984469256363809108734130859375",
+        "13349076213658746349358836207364434144690464186721160836377989343138047419995717511371415095764253846162906970666725058267652437313512049362349978405457414305915085983566908817932288*sqrt(2)*exp(96*18**(1/3)/125)/11358855883111802799404706934191746794451403109473190246381800786056128573751909612790069349217753050648676904016424901816780854247423739217711075829925695097727322475988677261111529470125774320016202081609494743551038169132325941582932077147455067134674847550111775884573717121384106576442718505859375"
+      ],
+      "expected": "all positive",
+      "group": "projected_corridor",
+      "name": "bounded-cutoff factorial rows positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "123256172596690944*sqrt(2)*exp(24*18**(1/3)/125)/28012436814606189727783203125",
+        "31113388202363428055148172598499606528*sqrt(2)*exp(48*3**(2/3)/125)/530485515781633021142014994264712868243805132806301116943359375",
+        "14436502450868656903289666408184527041054675856972707895108519703768376569420054528*sqrt(2)*exp(48*6**(2/3)/125)/252082099997393249076819009924654235125275700841445779587597615873667073583886557496821784811968057693487565984469256363809108734130859375",
+        "13349076213658746349358836207364434144690464186721160836377989343138047419995717511371415095764253846162906970666725058267652437313512049362349978405457414305915085983566908817932288*sqrt(2)*exp(96*18**(1/3)/125)/11358855883111802799404706934191746794451403109473190246381800786056128573751909612790069349217753050648676904016424901816780854247423739217711075829925695097727322475988677261111529470125774320016202081609494743551038169132325941582932077147455067134674847550111775884573717121384106576442718505859375"
+      ],
+      "expected": "strictly decreasing",
+      "group": "projected_corridor",
+      "name": "bounded-cutoff factorial rows decrease",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/3",
+      "expected": "-1/3",
+      "group": "projected_corridor",
+      "name": "bounded-cutoff subcritical normalized log",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, -1], [-1, 0]])",
+      "expected": "Matrix([[0, -1], [-1, 0]])",
+      "group": "static_tail_no_go",
+      "name": "static-tail cutoff orbit block n=0",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-pi**2, 0, 0, 0]])",
+      "expected": "Matrix([[0, 0, 0, pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-pi**2, 0, 0, 0]])",
+      "group": "static_tail_no_go",
+      "name": "static-tail commutator entries n=0",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "expected": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "group": "static_tail_no_go",
+      "name": "static-tail commutes with rho n=0",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "expected": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "group": "static_tail_no_go",
+      "name": "static-tail first modular derivative zero n=0",
+      "status": "PASS"
+    },
+    {
+      "actual": "(1 + 2*exp(3*pi**2/2) + exp(pi**4))/(3 + exp(pi**4))",
+      "expected": "2 + 2*exp(9/16)",
+      "group": "static_tail_no_go",
+      "name": "static-tail Gaussian coordinate bound n=0",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "H": false,
+        "K": false
+      },
+      "expected": {
+        "H": false,
+        "K": false
+      },
+      "group": "static_tail_no_go",
+      "name": "static-tail deliberately non-Gibbs fixture n=0",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, -1], [-1, 0]])",
+      "expected": "Matrix([[0, -1], [-1, 0]])",
+      "group": "static_tail_no_go",
+      "name": "static-tail cutoff orbit block n=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 9*pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-9*pi**2, 0, 0, 0]])",
+      "expected": "Matrix([[0, 0, 0, 9*pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-9*pi**2, 0, 0, 0]])",
+      "group": "static_tail_no_go",
+      "name": "static-tail commutator entries n=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "expected": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "group": "static_tail_no_go",
+      "name": "static-tail commutes with rho n=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "expected": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "group": "static_tail_no_go",
+      "name": "static-tail first modular derivative zero n=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "(1 + 2*exp(27*pi**2/2) + exp(81*pi**4))/(3 + exp(81*pi**4))",
+      "expected": "2 + 2*exp(9/16)",
+      "group": "static_tail_no_go",
+      "name": "static-tail Gaussian coordinate bound n=1",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "H": false,
+        "K": false
+      },
+      "expected": {
+        "H": false,
+        "K": false
+      },
+      "group": "static_tail_no_go",
+      "name": "static-tail deliberately non-Gibbs fixture n=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, -1], [-1, 0]])",
+      "expected": "Matrix([[0, -1], [-1, 0]])",
+      "group": "static_tail_no_go",
+      "name": "static-tail cutoff orbit block n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 25*pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-25*pi**2, 0, 0, 0]])",
+      "expected": "Matrix([[0, 0, 0, 25*pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-25*pi**2, 0, 0, 0]])",
+      "group": "static_tail_no_go",
+      "name": "static-tail commutator entries n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "expected": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "group": "static_tail_no_go",
+      "name": "static-tail commutes with rho n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "expected": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "group": "static_tail_no_go",
+      "name": "static-tail first modular derivative zero n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "(1 + 2*exp(75*pi**2/2) + exp(625*pi**4))/(3 + exp(625*pi**4))",
+      "expected": "2 + 2*exp(9/16)",
+      "group": "static_tail_no_go",
+      "name": "static-tail Gaussian coordinate bound n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "H": false,
+        "K": false
+      },
+      "expected": {
+        "H": false,
+        "K": false
+      },
+      "group": "static_tail_no_go",
+      "name": "static-tail deliberately non-Gibbs fixture n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "static_tail_no_go",
+      "name": "static-tail limit tail_duhamel_square",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": 2,
+      "group": "static_tail_no_go",
+      "name": "static-tail limit commutator_duhamel_square",
+      "status": "PASS"
+    },
+    {
+      "actual": "oo",
+      "expected": "oo",
+      "group": "static_tail_no_go",
+      "name": "static-tail limit commutator_sharp_sum_square",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": 2,
+      "group": "static_tail_no_go",
+      "name": "static-tail limit cutoff_static_averaged_sharp_square",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": 4,
+      "group": "static_tail_no_go",
+      "name": "static-tail limit cutoff_static_unaveraged_sharp_square",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "static_tail_no_go",
+      "name": "static-tail limit full_orbit_operator_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "pi**4/(3 + exp(pi**4))",
+        "81*pi**4/(3 + exp(81*pi**4))",
+        "625*pi**4/(3 + exp(625*pi**4))"
+      ],
+      "expected": "strictly decreasing to zero",
+      "group": "static_tail_no_go",
+      "name": "static-tail Duhamel norm decreases",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "-(2 - 2*exp(pi**4))/(3 + exp(pi**4))",
+        "-(2 - 2*exp(81*pi**4))/(3 + exp(81*pi**4))",
+        "-(2 - 2*exp(625*pi**4))/(3 + exp(625*pi**4))"
+      ],
+      "expected": "strictly increasing to two",
+      "group": "static_tail_no_go",
+      "name": "static-tail evolved commutator survives",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "static_tail_no_go",
+      "name": "static-tail logical scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "T-054",
+      "expected": "T-054",
+      "group": "authority",
+      "name": "authority task",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-000803",
+      "expected": "EXP-000803",
+      "group": "authority",
+      "name": "authority exploration",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-167",
+      "expected": "R-167",
+      "group": "authority",
+      "name": "authority result number",
+      "status": "PASS"
+    },
+    {
+      "actual": "v1.6",
+      "expected": "v1.6",
+      "group": "authority",
+      "name": "authority result version",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+      "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+      "group": "authority",
+      "name": "authority result id",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "authority",
+      "name": "authority claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION",
+        "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER",
+        "PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS"
+      ],
+      "expected": [
+        "PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION",
+        "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER",
+        "PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS"
+      ],
+      "group": "authority",
+      "name": "authority closed subgates",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY"
+      ],
+      "expected": [
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY"
+      ],
+      "group": "authority",
+      "name": "authority new negative set",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+      ],
+      "expected": [
+        "NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+      ],
+      "group": "authority",
+      "name": "authority reused negative set",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+      "expected": "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+      "group": "authority",
+      "name": "authority retained next gate",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "expected": [
+        "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "group": "authority",
+      "name": "authority open gates",
+      "status": "PASS"
+    },
+    {
+      "actual": "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split.py",
+      "expected": "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split.py",
+      "group": "authority",
+      "name": "authority primary script",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token fixed finite raw",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token orbit-smear",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token zero-source",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token all-exhaustion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token quasi-local",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token GNS gap",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token Pre-A",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority section selected_tangent_raw_word_completion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority section zero_source_universal_orbit_smear_carrier",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority section distinct_ground_doublets",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority section categorical_boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority section projected_corridor_route_audit",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority no-overclaim token quasi-local",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority no-overclaim token all-exhaustion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority no-overclaim token raw characters",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority no-overclaim token gns",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority no-overclaim token pre-a",
+      "status": "PASS"
+    },
+    {
+      "actual": "T1",
+      "expected": "T1",
+      "group": "claim_firewall",
+      "name": "C6 tier unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "ACTIVE",
+      "expected": "ACTIVE",
+      "group": "claim_firewall",
+      "name": "C6 lifecycle unchanged",
+      "status": "PASS"
+    }
+  ],
+  "authority": {
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-certificate-260810.md",
+    "checked": [
+      "authority task",
+      "authority exploration",
+      "authority result number",
+      "authority result version",
+      "authority result id",
+      "authority claim nonbearing",
+      "authority closed subgates",
+      "authority new negative set",
+      "authority reused negative set",
+      "authority retained next gate",
+      "authority open gates",
+      "authority primary script",
+      "certificate token fixed finite raw",
+      "certificate token orbit-smear",
+      "certificate token zero-source",
+      "certificate token all-exhaustion",
+      "certificate token quasi-local",
+      "certificate token GNS gap",
+      "certificate token Pre-A",
+      "authority section selected_tangent_raw_word_completion",
+      "authority section zero_source_universal_orbit_smear_carrier",
+      "authority section distinct_ground_doublets",
+      "authority section categorical_boundary",
+      "authority section projected_corridor_route_audit",
+      "authority no-overclaim token quasi-local",
+      "authority no-overclaim token all-exhaustion",
+      "authority no-overclaim token raw characters",
+      "authority no-overclaim token gns",
+      "authority no-overclaim token pre-a",
+      "C6 tier unchanged",
+      "C6 lifecycle unchanged"
+    ],
+    "missing": [],
+    "status": "COMPLETE"
+  },
+  "boundary": "Zero-source finite-Hamiltonian universal L1 orbit-smear carrier and selected-tangent fixed-finite-word/scoped-ground theorem only; not all-exhaustion, quasi-local, a raw generator, a GNS gap, C6, CP1, Sector A or Pre-A.",
+  "claim_bearing": false,
+  "closed_gates": [
+    "PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION",
+    "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER",
+    "PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS"
+  ],
+  "closed_subgates": [
+    "PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION",
+    "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER",
+    "PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS"
+  ],
+  "derived": {
+    "categorical_M2_boundary": {
+      "categorical_envelope_implies_exhaustion_uniqueness": false,
+      "categorical_envelope_implies_quasi_local_limit": false,
+      "common_direct_sum_shift_exists": true,
+      "derivation_one": "Matrix([[0, 2*I], [-2*I, 0]])",
+      "derivation_two": "Matrix([[0, 4*I], [-4*I, 0]])",
+      "direct_sum_basis_rank": 8,
+      "direct_sum_dimension": 8,
+      "first_coefficients": "Matrix([[1105/96], [-1625/864]])",
+      "first_shift_to_y": "pi/4",
+      "frequencies": [
+        "2",
+        "4"
+      ],
+      "generated_algebra": "M2 direct-sum M2",
+      "generator_difference": "Matrix([[0, -1], [-1, 0]])",
+      "generator_difference_determinant": "-1",
+      "generator_difference_trace": "0",
+      "inputs": {
+        "H_one": "Matrix([[0, -1], [-1, 0]])",
+        "H_two": "Matrix([[0, -2], [-2, 0]])",
+        "beta_one": "1",
+        "beta_two": "2",
+        "configuration_label": "Matrix([[1, 0], [0, -1]])",
+        "hbar": "1"
+      },
+      "isolated_first_responses": "Matrix([[1], [0]])",
+      "isolated_second_responses": "Matrix([[0], [1]])",
+      "kms_rows": [
+        {
+          "beta": "1",
+          "coupling": "1",
+          "cyclic_lhs": "1 + I*tanh(1)",
+          "cyclic_residual": "0",
+          "lhs": "-sqrt(2)*(-cosh(2 + I*pi/4) + sinh(2 + I*pi/4)*tanh(1))",
+          "rho": "Matrix([[1/2, tanh(1)/2], [tanh(1)/2, 1/2]])",
+          "rho_determinant": "1/(4*cosh(1)**2)",
+          "rhs": "1 + I*tanh(1)"
+        },
+        {
+          "beta": "2",
+          "coupling": "2",
+          "cyclic_lhs": "1 + I*tanh(4)",
+          "cyclic_residual": "0",
+          "lhs": "(1 + 8*sinh(1)**2 + 4*I*sinh(1)*cosh(1) + 8*sqrt(2)*sinh(1)**3*sinh(1 + I*pi/4))/(1 + 8*sinh(1)**2 + 8*sinh(1)**4)",
+          "rho": "Matrix([[1/2, tanh(4)/2], [tanh(4)/2, 1/2]])",
+          "rho_determinant": "1/(4*cosh(4)**2)",
+          "rhs": "1 + I*tanh(4)"
+        }
+      ],
+      "laplace_decays": [
+        "1",
+        "3"
+      ],
+      "response_determinant": "864/27625",
+      "response_matrix": "Matrix([[1/5, 9/13], [1/17, 9/25]])",
+      "second_coefficients": "Matrix([[-2125/96], [5525/864]])",
+      "second_shift_to_y": "pi/8",
+      "single_labelled_M2_generator_exists": false
+    },
+    "exp789_rational_sine_ground_doublets": {
+      "approximate_invariance": "||(exp(-it(H-E0)/hbar)-1)psi||^2 <= 2|t| epsilon/hbar",
+      "cubic_remainder": "sqrt(2)/192",
+      "energy_excess_formula": "hbar^2/(4 chi V m_L^2)",
+      "fixed_smeared_witness_separates_cluster_states": true,
+      "inputs": {
+        "chi": "5/4",
+        "fourth_moment_bound_M4": "1",
+        "hbar": "3/2",
+        "q3_component_count": "8",
+        "rational_frequency_r": "1/8",
+        "rho_star": "1/2",
+        "triangle_width_T": "9/4"
+      },
+      "m0": "1/2",
+      "parity_expectation_signs": {
+        "minus": -1,
+        "plus": 1
+      },
+      "raw_linear_mean": "sqrt(2)/8",
+      "rho_substitution": "m_L^2>=rho_star/2",
+      "separation_d": "sqrt(2)/16",
+      "sine_lower": "23*sqrt(2)/192",
+      "sine_margin": "11*sqrt(2)/192",
+      "small_frequency_lhs": "sqrt(2)/4",
+      "small_frequency_rhs": "3*sqrt(2)",
+      "smear_error_formula": "16/15 sqrt(hbar T/(chi V rho_star))",
+      "third_moment_bound_M3": "16*sqrt(2)",
+      "third_moment_identity": "64",
+      "triangle": {
+        "formula": "f_T(t)=(1-|t|/T)_+/T",
+        "half_moment": "4/5",
+        "half_moment_formula": "4/5",
+        "normalization": 1
+      },
+      "volume_rows": [
+        {
+          "energy_excess_upper": "9/20480",
+          "minus_smeared_upper": "-sqrt(2)/16 + sqrt(15)/100",
+          "plus_smeared_lower": "-sqrt(15)/100 + sqrt(2)/16",
+          "smear_error_formula": "sqrt(15)/100",
+          "smear_error_from_half_moment": "sqrt(15)/100",
+          "vector_invariance_coefficient": "sqrt(15)/80",
+          "volume": "4096"
+        },
+        {
+          "energy_excess_upper": "1/7680",
+          "minus_smeared_upper": "-sqrt(2)/16 + sqrt(10)/150",
+          "plus_smeared_lower": "-sqrt(10)/150 + sqrt(2)/16",
+          "smear_error_formula": "sqrt(10)/150",
+          "smear_error_from_half_moment": "sqrt(10)/150",
+          "vector_invariance_coefficient": "sqrt(10)/120",
+          "volume": "13824"
+        },
+        {
+          "energy_excess_upper": "9/163840",
+          "minus_smeared_upper": "-sqrt(2)/16 + sqrt(30)/400",
+          "plus_smeared_lower": "-sqrt(30)/400 + sqrt(2)/16",
+          "smear_error_formula": "sqrt(30)/400",
+          "smear_error_from_half_moment": "sqrt(30)/400",
+          "vector_invariance_coefficient": "sqrt(30)/320",
+          "volume": "32768"
+        }
+      ],
+      "volume_threshold_for_error_at_most_d_over_2": "393216/125",
+      "witness": "B_r=sin(r sum_e q_e)=(W_xi-W_xi^*)/(2i)",
+      "xi": [
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8"
+      ]
+    },
+    "modular_right_context": {
+      "arveson_bandwidth": "log(3)",
+      "base_square": "1/4",
+      "commutant_multiplier": "Matrix([[0, sqrt(3)], [0, 0]])",
+      "context": "Matrix([[0, 1], [0, 0]])",
+      "exponential_band_bound": "sqrt(3)",
+      "general_bound": "||Y C Omega|| <= ||sigma_{i/2}(C)|| ||Y Omega|| <= exp(beta*hbar*R_C/2)||C||||Y Omega||",
+      "identity": "Y C Omega = J sigma_{-i/2}(C*) J Y Omega; sigma_s=alpha_{-beta*hbar*s}",
+      "inputs": {
+        "beta": "1",
+        "hbar": "1",
+        "probability_high": "3/4",
+        "probability_low": "1/4"
+      },
+      "left_word": "Matrix([[1, 0], [0, 0]])",
+      "lhs": "Matrix([[0, sqrt(3)/2], [0, 0]])",
+      "lhs_square": "3/4",
+      "multiplier_norm_square": "3",
+      "physical_frequency": "log(3)",
+      "rho": "Matrix([[1/4, 0], [0, 3/4]])",
+      "rhs": "Matrix([[0, sqrt(3)/2], [0, 0]])",
+      "sigma_plus_half": "Matrix([[0, sqrt(3)], [0, 0]])"
+    },
+    "negative_arveson_near_ground": {
+      "arveson_frequency": "-3",
+      "bound": "2/7",
+      "cluster_consequence": "epsilon_L->0 annihilates every strictly negative-Arveson element; the weak-star cluster state is theta-ground",
+      "derivation": "Matrix([[0, -3*I, 0], [0, 0, 0], [0, 0, 0]])",
+      "energy_excess": "12/7",
+      "expected_derivation": "Matrix([[0, -3*I, 0], [0, 0, 0], [0, 0, 0]])",
+      "general_bound": "omega(a* a)<=||a||_u^2 epsilon/(hbar nu)",
+      "hamiltonian": "Matrix([[0, 0, 0], [0, 6, 0], [0, 0, 12]])",
+      "inputs": {
+        "hbar": "2",
+        "high_probability": "2/7",
+        "nu": "3"
+      },
+      "lowered_norm_square": "2/7",
+      "lowering_operator": "Matrix([[0, 1, 0], [0, 0, 0], [0, 0, 0]])",
+      "operator_norm_square": "1",
+      "state": "Matrix([[sqrt(35)/7], [sqrt(14)/7], [0]])"
+    },
+    "projected_corridor": {
+      "bounded_cutoff": {
+        "corridor_condition": "0<alpha<1/2",
+        "expected_normalized_limit": "-1/3",
+        "factorial_rule": "8 sqrt(2)||X||||A|| exp(nu_L T)(nu_L T)^R/R!",
+        "inputs": {
+          "alpha": "1/3",
+          "boundary_norm": "1",
+          "c": "1/100",
+          "degree_z": "6",
+          "hbar": "1",
+          "observable_norm": "1",
+          "time_horizon_T": "1/10"
+        },
+        "interaction_rule": "J_L<=4 c L^2",
+        "normalized_stirling_log_limit": "-1/3",
+        "nu_rule": "nu_L=4 z J_L/hbar<=96 c L^2/hbar",
+        "rows": [
+          {
+            "coordinate_cutoff_L": "12**(1/3)",
+            "factorial_bound": "123256172596690944*sqrt(2)*exp(24*18**(1/3)/125)/28012436814606189727783203125",
+            "interaction_bound_J": "2*18**(1/3)/25",
+            "nu_bound": "48*18**(1/3)/25",
+            "order_R": "12",
+            "stirling_log_upper": "log(3439853568*sqrt(2)/14551915228366851806640625) + 24*18**(1/3)/125 + 12"
+          },
+          {
+            "coordinate_cutoff_L": "2*3**(1/3)",
+            "factorial_bound": "31113388202363428055148172598499606528*sqrt(2)*exp(48*3**(2/3)/125)/530485515781633021142014994264712868243805132806301116943359375",
+            "interaction_bound_J": "4*3**(2/3)/25",
+            "nu_bound": "96*3**(2/3)/25",
+            "order_R": "24",
+            "stirling_log_upper": "log(5777633090469888*sqrt(2)/211758236813575084767080625169910490512847900390625) + 48*3**(2/3)/125 + 24"
+          },
+          {
+            "coordinate_cutoff_L": "2*6**(1/3)",
+            "factorial_bound": "14436502450868656903289666408184527041054675856972707895108519703768376569420054528*sqrt(2)*exp(48*6**(2/3)/125)/252082099997393249076819009924654235125275700841445779587597615873667073583886557496821784811968057693487565984469256363809108734130859375",
+            "interaction_bound_J": "4*6**(2/3)/25",
+            "nu_bound": "96*6**(2/3)/25",
+            "order_R": "48",
+            "stirling_log_upper": "log(63669288879571207075135488*sqrt(2)/44841550858394146269559346665277316200968382140048504696226185084473314645947539247572422027587890625) + 48*6**(2/3)/125 + 48"
+          },
+          {
+            "coordinate_cutoff_L": "2*12**(1/3)",
+            "factorial_bound": "13349076213658746349358836207364434144690464186721160836377989343138047419995717511371415095764253846162906970666725058267652437313512049362349978405457414305915085983566908817932288*sqrt(2)*exp(96*18**(1/3)/125)/11358855883111802799404706934191746794451403109473190246381800786056128573751909612790069349217753050648676904016424901816780854247423739217711075829925695097727322475988677261111529470125774320016202081609494743551038169132325941582932077147455067134674847550111775884573717121384106576442718505859375",
+            "interaction_bound_J": "8*18**(1/3)/25",
+            "nu_bound": "192*18**(1/3)/25",
+            "order_R": "96",
+            "stirling_log_upper": "log(117980477703685458202217308705322233233408*sqrt(2)/2010764683385948796148028192762378503362648273919774541869690518399838312334014814806056093301691167652734390913078017438993579462829964862589958071955031430042871998242759445929550565779209136962890625) + 96*18**(1/3)/125 + 96"
+          }
+        ]
+      },
+      "static_tail": {
+        "full_vs_cutoff_averaged_sharp_square_limit": 2,
+        "full_vs_cutoff_unaveraged_sharp_square_limit": 4,
+        "gaussian_completion_square": "-r^4+a r^2=-(r^2-a/2)^2+a^2/4",
+        "inputs": {
+          "epsilon_rule": "exp(-r^4)",
+          "gaussian_parameter_a": "3/2",
+          "hbar": "1",
+          "k": "3*pi/20",
+          "r_rule": "(2n+1)pi",
+          "time_T": "5/3"
+        },
+        "limits": {
+          "commutator_duhamel_square": "2",
+          "commutator_sharp_sum_square": "oo",
+          "cutoff_static_averaged_sharp_square": "2",
+          "cutoff_static_unaveraged_sharp_square": "4",
+          "full_orbit_operator_bound": "0",
+          "tail_duhamel_square": "0"
+        },
+        "log_rho_tail_commutator": 0,
+        "logical_inference_rejected": "static Duhamel tail plus first modular derivative does not imply projected orbit locality",
+        "q3lock_counterexample": false,
+        "rows": [
+          {
+            "commutator_C": "Matrix([[0, 0, 0, pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-pi**2, 0, 0, 0]])",
+            "commutator_duhamel_square": "-(2 - 2*exp(pi**4))/(3 + exp(pi**4))",
+            "commutator_sharp_sum_square": "2*pi**4*(1 + exp(pi**4))/(3 + exp(pi**4))",
+            "cutoff_Hamiltonian_K": "Matrix([[0, 0, 0, -3*I*pi/20], [0, 0, 0, 0], [0, 0, 0, 0], [3*I*pi/20, 0, 0, 0]])",
+            "cutoff_orbit_00_11_block": "Matrix([[0, -1], [-1, 0]])",
+            "cutoff_orbit_B": "Matrix([[0, 0, 0, -1], [0, 1, 0, 0], [0, 0, -1, 0], [-1, 0, 0, 0]])",
+            "cutoff_static_averaged_sharp_square": "2*(1 + exp(pi**4))/(3 + exp(pi**4))",
+            "cutoff_static_left_square": "2*(1 + exp(pi**4))/(3 + exp(pi**4))",
+            "cutoff_static_right_square": "2*(1 + exp(pi**4))/(3 + exp(pi**4))",
+            "cutoff_static_unaveraged_sharp_square": "4*(1 + exp(pi**4))/(3 + exp(pi**4))",
+            "epsilon": "exp(-pi**4)",
+            "expected_commutator_C": "Matrix([[0, 0, 0, pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-pi**2, 0, 0, 0]])",
+            "expected_cutoff_block": "Matrix([[0, -1], [-1, 0]])",
+            "full_Hamiltonian_H": "Matrix([[0, 0, 0, -3*I*pi/20], [0, 0, 0, 0], [0, 0, 0, 0], [3*I*pi/20, 0, 0, pi**2]])",
+            "full_orbit_operator_bound": "6/sqrt(9 + 100*pi**2)",
+            "gaussian_coordinate_moment": "(1 + 2*exp(3*pi**2/2) + exp(pi**4))/(3 + exp(pi**4))",
+            "gaussian_uniform_bound": "2 + 2*exp(9/16)",
+            "index_n": "0",
+            "log_rho": "Matrix([[-log(3*exp(-pi**4) + 1), 0, 0, 0], [0, -pi**4 - log(3*exp(-pi**4) + 1), 0, 0], [0, 0, -pi**4 - log(3*exp(-pi**4) + 1), 0], [0, 0, 0, -pi**4 - log(3*exp(-pi**4) + 1)]])",
+            "log_rho_tail_commutator": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+            "partition_Z": "3*exp(-pi**4) + 1",
+            "q_x": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, pi, 0], [0, 0, 0, pi]])",
+            "q_y": "Matrix([[0, 0, 0, 0], [0, pi, 0, 0], [0, 0, 0, 0], [0, 0, 0, pi]])",
+            "radius_r": "pi",
+            "raw_word_W": "Matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, -1, 0], [0, 0, 0, -1]])",
+            "rho": "Matrix([[1/(3*exp(-pi**4) + 1), 0, 0, 0], [0, exp(-pi**4)/(3*exp(-pi**4) + 1), 0, 0], [0, 0, exp(-pi**4)/(3*exp(-pi**4) + 1), 0], [0, 0, 0, exp(-pi**4)/(3*exp(-pi**4) + 1)]])",
+            "rho_tail_commutator": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+            "state_invariant_under_H": false,
+            "state_invariant_under_K": false,
+            "tail_X": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, pi**2]])",
+            "tail_duhamel_square": "pi**4/(3 + exp(pi**4))"
+          },
+          {
+            "commutator_C": "Matrix([[0, 0, 0, 9*pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-9*pi**2, 0, 0, 0]])",
+            "commutator_duhamel_square": "-(2 - 2*exp(81*pi**4))/(3 + exp(81*pi**4))",
+            "commutator_sharp_sum_square": "162*pi**4*(1 + exp(81*pi**4))/(3 + exp(81*pi**4))",
+            "cutoff_Hamiltonian_K": "Matrix([[0, 0, 0, -3*I*pi/20], [0, 0, 0, 0], [0, 0, 0, 0], [3*I*pi/20, 0, 0, 0]])",
+            "cutoff_orbit_00_11_block": "Matrix([[0, -1], [-1, 0]])",
+            "cutoff_orbit_B": "Matrix([[0, 0, 0, -1], [0, 1, 0, 0], [0, 0, -1, 0], [-1, 0, 0, 0]])",
+            "cutoff_static_averaged_sharp_square": "2*(1 + exp(81*pi**4))/(3 + exp(81*pi**4))",
+            "cutoff_static_left_square": "2*(1 + exp(81*pi**4))/(3 + exp(81*pi**4))",
+            "cutoff_static_right_square": "2*(1 + exp(81*pi**4))/(3 + exp(81*pi**4))",
+            "cutoff_static_unaveraged_sharp_square": "4*(1 + exp(81*pi**4))/(3 + exp(81*pi**4))",
+            "epsilon": "exp(-81*pi**4)",
+            "expected_commutator_C": "Matrix([[0, 0, 0, 9*pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-9*pi**2, 0, 0, 0]])",
+            "expected_cutoff_block": "Matrix([[0, -1], [-1, 0]])",
+            "full_Hamiltonian_H": "Matrix([[0, 0, 0, -3*I*pi/20], [0, 0, 0, 0], [0, 0, 0, 0], [3*I*pi/20, 0, 0, 9*pi**2]])",
+            "full_orbit_operator_bound": "2/sqrt(1 + 900*pi**2)",
+            "gaussian_coordinate_moment": "(1 + 2*exp(27*pi**2/2) + exp(81*pi**4))/(3 + exp(81*pi**4))",
+            "gaussian_uniform_bound": "2 + 2*exp(9/16)",
+            "index_n": "1",
+            "log_rho": "Matrix([[-log(3*exp(-81*pi**4) + 1), 0, 0, 0], [0, -81*pi**4 - log(3*exp(-81*pi**4) + 1), 0, 0], [0, 0, -81*pi**4 - log(3*exp(-81*pi**4) + 1), 0], [0, 0, 0, -81*pi**4 - log(3*exp(-81*pi**4) + 1)]])",
+            "log_rho_tail_commutator": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+            "partition_Z": "3*exp(-81*pi**4) + 1",
+            "q_x": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 3*pi, 0], [0, 0, 0, 3*pi]])",
+            "q_y": "Matrix([[0, 0, 0, 0], [0, 3*pi, 0, 0], [0, 0, 0, 0], [0, 0, 0, 3*pi]])",
+            "radius_r": "3*pi",
+            "raw_word_W": "Matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, -1, 0], [0, 0, 0, -1]])",
+            "rho": "Matrix([[1/(3*exp(-81*pi**4) + 1), 0, 0, 0], [0, exp(-81*pi**4)/(3*exp(-81*pi**4) + 1), 0, 0], [0, 0, exp(-81*pi**4)/(3*exp(-81*pi**4) + 1), 0], [0, 0, 0, exp(-81*pi**4)/(3*exp(-81*pi**4) + 1)]])",
+            "rho_tail_commutator": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+            "state_invariant_under_H": false,
+            "state_invariant_under_K": false,
+            "tail_X": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 9*pi**2]])",
+            "tail_duhamel_square": "81*pi**4/(3 + exp(81*pi**4))"
+          },
+          {
+            "commutator_C": "Matrix([[0, 0, 0, 25*pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-25*pi**2, 0, 0, 0]])",
+            "commutator_duhamel_square": "-(2 - 2*exp(625*pi**4))/(3 + exp(625*pi**4))",
+            "commutator_sharp_sum_square": "1250*pi**4*(1 + exp(625*pi**4))/(3 + exp(625*pi**4))",
+            "cutoff_Hamiltonian_K": "Matrix([[0, 0, 0, -3*I*pi/20], [0, 0, 0, 0], [0, 0, 0, 0], [3*I*pi/20, 0, 0, 0]])",
+            "cutoff_orbit_00_11_block": "Matrix([[0, -1], [-1, 0]])",
+            "cutoff_orbit_B": "Matrix([[0, 0, 0, -1], [0, 1, 0, 0], [0, 0, -1, 0], [-1, 0, 0, 0]])",
+            "cutoff_static_averaged_sharp_square": "2*(1 + exp(625*pi**4))/(3 + exp(625*pi**4))",
+            "cutoff_static_left_square": "2*(1 + exp(625*pi**4))/(3 + exp(625*pi**4))",
+            "cutoff_static_right_square": "2*(1 + exp(625*pi**4))/(3 + exp(625*pi**4))",
+            "cutoff_static_unaveraged_sharp_square": "4*(1 + exp(625*pi**4))/(3 + exp(625*pi**4))",
+            "epsilon": "exp(-625*pi**4)",
+            "expected_commutator_C": "Matrix([[0, 0, 0, 25*pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-25*pi**2, 0, 0, 0]])",
+            "expected_cutoff_block": "Matrix([[0, -1], [-1, 0]])",
+            "full_Hamiltonian_H": "Matrix([[0, 0, 0, -3*I*pi/20], [0, 0, 0, 0], [0, 0, 0, 0], [3*I*pi/20, 0, 0, 25*pi**2]])",
+            "full_orbit_operator_bound": "6/sqrt(9 + 62500*pi**2)",
+            "gaussian_coordinate_moment": "(1 + 2*exp(75*pi**2/2) + exp(625*pi**4))/(3 + exp(625*pi**4))",
+            "gaussian_uniform_bound": "2 + 2*exp(9/16)",
+            "index_n": "2",
+            "log_rho": "Matrix([[-log(3*exp(-625*pi**4) + 1), 0, 0, 0], [0, -625*pi**4 - log(3*exp(-625*pi**4) + 1), 0, 0], [0, 0, -625*pi**4 - log(3*exp(-625*pi**4) + 1), 0], [0, 0, 0, -625*pi**4 - log(3*exp(-625*pi**4) + 1)]])",
+            "log_rho_tail_commutator": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+            "partition_Z": "3*exp(-625*pi**4) + 1",
+            "q_x": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 5*pi, 0], [0, 0, 0, 5*pi]])",
+            "q_y": "Matrix([[0, 0, 0, 0], [0, 5*pi, 0, 0], [0, 0, 0, 0], [0, 0, 0, 5*pi]])",
+            "radius_r": "5*pi",
+            "raw_word_W": "Matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, -1, 0], [0, 0, 0, -1]])",
+            "rho": "Matrix([[1/(3*exp(-625*pi**4) + 1), 0, 0, 0], [0, exp(-625*pi**4)/(3*exp(-625*pi**4) + 1), 0, 0], [0, 0, exp(-625*pi**4)/(3*exp(-625*pi**4) + 1), 0], [0, 0, 0, exp(-625*pi**4)/(3*exp(-625*pi**4) + 1)]])",
+            "rho_tail_commutator": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+            "state_invariant_under_H": false,
+            "state_invariant_under_K": false,
+            "tail_X": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 25*pi**2]])",
+            "tail_duhamel_square": "625*pi**4/(3 + exp(625*pi**4))"
+          }
+        ]
+      }
+    },
+    "projected_static_tail_4x4": {
+      "commutator_limit": "2",
+      "core_limits_0_2_2": {
+        "evolved_commutator_duhamel_square": "2",
+        "full_vs_cutoff_averaged_sharp_square": "2",
+        "static_tail_duhamel_square": "0"
+      },
+      "fixture_dimension": "4x4",
+      "gibbs_invariant": false,
+      "limits": {
+        "commutator_duhamel_square": "2",
+        "commutator_sharp_sum_square": "oo",
+        "cutoff_static_averaged_sharp_square": "2",
+        "cutoff_static_unaveraged_sharp_square": "4",
+        "full_orbit_operator_bound": "0",
+        "tail_duhamel_square": "0"
+      },
+      "orbit_distance_limit": "2",
+      "q3lock_counterexample": false,
+      "rows": [
+        {
+          "commutator_C": "Matrix([[0, 0, 0, pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-pi**2, 0, 0, 0]])",
+          "commutator_duhamel_square": "-(2 - 2*exp(pi**4))/(3 + exp(pi**4))",
+          "commutator_sharp_sum_square": "2*pi**4*(1 + exp(pi**4))/(3 + exp(pi**4))",
+          "cutoff_Hamiltonian_K": "Matrix([[0, 0, 0, -3*I*pi/20], [0, 0, 0, 0], [0, 0, 0, 0], [3*I*pi/20, 0, 0, 0]])",
+          "cutoff_orbit_00_11_block": "Matrix([[0, -1], [-1, 0]])",
+          "cutoff_orbit_B": "Matrix([[0, 0, 0, -1], [0, 1, 0, 0], [0, 0, -1, 0], [-1, 0, 0, 0]])",
+          "cutoff_static_averaged_sharp_square": "2*(1 + exp(pi**4))/(3 + exp(pi**4))",
+          "cutoff_static_left_square": "2*(1 + exp(pi**4))/(3 + exp(pi**4))",
+          "cutoff_static_right_square": "2*(1 + exp(pi**4))/(3 + exp(pi**4))",
+          "cutoff_static_unaveraged_sharp_square": "4*(1 + exp(pi**4))/(3 + exp(pi**4))",
+          "epsilon": "exp(-pi**4)",
+          "expected_commutator_C": "Matrix([[0, 0, 0, pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-pi**2, 0, 0, 0]])",
+          "expected_cutoff_block": "Matrix([[0, -1], [-1, 0]])",
+          "full_Hamiltonian_H": "Matrix([[0, 0, 0, -3*I*pi/20], [0, 0, 0, 0], [0, 0, 0, 0], [3*I*pi/20, 0, 0, pi**2]])",
+          "full_orbit_operator_bound": "6/sqrt(9 + 100*pi**2)",
+          "gaussian_coordinate_moment": "(1 + 2*exp(3*pi**2/2) + exp(pi**4))/(3 + exp(pi**4))",
+          "gaussian_uniform_bound": "2 + 2*exp(9/16)",
+          "index_n": "0",
+          "log_rho": "Matrix([[-log(3*exp(-pi**4) + 1), 0, 0, 0], [0, -pi**4 - log(3*exp(-pi**4) + 1), 0, 0], [0, 0, -pi**4 - log(3*exp(-pi**4) + 1), 0], [0, 0, 0, -pi**4 - log(3*exp(-pi**4) + 1)]])",
+          "log_rho_tail_commutator": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+          "partition_Z": "3*exp(-pi**4) + 1",
+          "q_x": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, pi, 0], [0, 0, 0, pi]])",
+          "q_y": "Matrix([[0, 0, 0, 0], [0, pi, 0, 0], [0, 0, 0, 0], [0, 0, 0, pi]])",
+          "radius_r": "pi",
+          "raw_word_W": "Matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, -1, 0], [0, 0, 0, -1]])",
+          "rho": "Matrix([[1/(3*exp(-pi**4) + 1), 0, 0, 0], [0, exp(-pi**4)/(3*exp(-pi**4) + 1), 0, 0], [0, 0, exp(-pi**4)/(3*exp(-pi**4) + 1), 0], [0, 0, 0, exp(-pi**4)/(3*exp(-pi**4) + 1)]])",
+          "rho_tail_commutator": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+          "state_invariant_under_H": false,
+          "state_invariant_under_K": false,
+          "tail_X": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, pi**2]])",
+          "tail_duhamel_square": "pi**4/(3 + exp(pi**4))"
+        },
+        {
+          "commutator_C": "Matrix([[0, 0, 0, 9*pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-9*pi**2, 0, 0, 0]])",
+          "commutator_duhamel_square": "-(2 - 2*exp(81*pi**4))/(3 + exp(81*pi**4))",
+          "commutator_sharp_sum_square": "162*pi**4*(1 + exp(81*pi**4))/(3 + exp(81*pi**4))",
+          "cutoff_Hamiltonian_K": "Matrix([[0, 0, 0, -3*I*pi/20], [0, 0, 0, 0], [0, 0, 0, 0], [3*I*pi/20, 0, 0, 0]])",
+          "cutoff_orbit_00_11_block": "Matrix([[0, -1], [-1, 0]])",
+          "cutoff_orbit_B": "Matrix([[0, 0, 0, -1], [0, 1, 0, 0], [0, 0, -1, 0], [-1, 0, 0, 0]])",
+          "cutoff_static_averaged_sharp_square": "2*(1 + exp(81*pi**4))/(3 + exp(81*pi**4))",
+          "cutoff_static_left_square": "2*(1 + exp(81*pi**4))/(3 + exp(81*pi**4))",
+          "cutoff_static_right_square": "2*(1 + exp(81*pi**4))/(3 + exp(81*pi**4))",
+          "cutoff_static_unaveraged_sharp_square": "4*(1 + exp(81*pi**4))/(3 + exp(81*pi**4))",
+          "epsilon": "exp(-81*pi**4)",
+          "expected_commutator_C": "Matrix([[0, 0, 0, 9*pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-9*pi**2, 0, 0, 0]])",
+          "expected_cutoff_block": "Matrix([[0, -1], [-1, 0]])",
+          "full_Hamiltonian_H": "Matrix([[0, 0, 0, -3*I*pi/20], [0, 0, 0, 0], [0, 0, 0, 0], [3*I*pi/20, 0, 0, 9*pi**2]])",
+          "full_orbit_operator_bound": "2/sqrt(1 + 900*pi**2)",
+          "gaussian_coordinate_moment": "(1 + 2*exp(27*pi**2/2) + exp(81*pi**4))/(3 + exp(81*pi**4))",
+          "gaussian_uniform_bound": "2 + 2*exp(9/16)",
+          "index_n": "1",
+          "log_rho": "Matrix([[-log(3*exp(-81*pi**4) + 1), 0, 0, 0], [0, -81*pi**4 - log(3*exp(-81*pi**4) + 1), 0, 0], [0, 0, -81*pi**4 - log(3*exp(-81*pi**4) + 1), 0], [0, 0, 0, -81*pi**4 - log(3*exp(-81*pi**4) + 1)]])",
+          "log_rho_tail_commutator": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+          "partition_Z": "3*exp(-81*pi**4) + 1",
+          "q_x": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 3*pi, 0], [0, 0, 0, 3*pi]])",
+          "q_y": "Matrix([[0, 0, 0, 0], [0, 3*pi, 0, 0], [0, 0, 0, 0], [0, 0, 0, 3*pi]])",
+          "radius_r": "3*pi",
+          "raw_word_W": "Matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, -1, 0], [0, 0, 0, -1]])",
+          "rho": "Matrix([[1/(3*exp(-81*pi**4) + 1), 0, 0, 0], [0, exp(-81*pi**4)/(3*exp(-81*pi**4) + 1), 0, 0], [0, 0, exp(-81*pi**4)/(3*exp(-81*pi**4) + 1), 0], [0, 0, 0, exp(-81*pi**4)/(3*exp(-81*pi**4) + 1)]])",
+          "rho_tail_commutator": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+          "state_invariant_under_H": false,
+          "state_invariant_under_K": false,
+          "tail_X": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 9*pi**2]])",
+          "tail_duhamel_square": "81*pi**4/(3 + exp(81*pi**4))"
+        },
+        {
+          "commutator_C": "Matrix([[0, 0, 0, 25*pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-25*pi**2, 0, 0, 0]])",
+          "commutator_duhamel_square": "-(2 - 2*exp(625*pi**4))/(3 + exp(625*pi**4))",
+          "commutator_sharp_sum_square": "1250*pi**4*(1 + exp(625*pi**4))/(3 + exp(625*pi**4))",
+          "cutoff_Hamiltonian_K": "Matrix([[0, 0, 0, -3*I*pi/20], [0, 0, 0, 0], [0, 0, 0, 0], [3*I*pi/20, 0, 0, 0]])",
+          "cutoff_orbit_00_11_block": "Matrix([[0, -1], [-1, 0]])",
+          "cutoff_orbit_B": "Matrix([[0, 0, 0, -1], [0, 1, 0, 0], [0, 0, -1, 0], [-1, 0, 0, 0]])",
+          "cutoff_static_averaged_sharp_square": "2*(1 + exp(625*pi**4))/(3 + exp(625*pi**4))",
+          "cutoff_static_left_square": "2*(1 + exp(625*pi**4))/(3 + exp(625*pi**4))",
+          "cutoff_static_right_square": "2*(1 + exp(625*pi**4))/(3 + exp(625*pi**4))",
+          "cutoff_static_unaveraged_sharp_square": "4*(1 + exp(625*pi**4))/(3 + exp(625*pi**4))",
+          "epsilon": "exp(-625*pi**4)",
+          "expected_commutator_C": "Matrix([[0, 0, 0, 25*pi**2], [0, 0, 0, 0], [0, 0, 0, 0], [-25*pi**2, 0, 0, 0]])",
+          "expected_cutoff_block": "Matrix([[0, -1], [-1, 0]])",
+          "full_Hamiltonian_H": "Matrix([[0, 0, 0, -3*I*pi/20], [0, 0, 0, 0], [0, 0, 0, 0], [3*I*pi/20, 0, 0, 25*pi**2]])",
+          "full_orbit_operator_bound": "6/sqrt(9 + 62500*pi**2)",
+          "gaussian_coordinate_moment": "(1 + 2*exp(75*pi**2/2) + exp(625*pi**4))/(3 + exp(625*pi**4))",
+          "gaussian_uniform_bound": "2 + 2*exp(9/16)",
+          "index_n": "2",
+          "log_rho": "Matrix([[-log(3*exp(-625*pi**4) + 1), 0, 0, 0], [0, -625*pi**4 - log(3*exp(-625*pi**4) + 1), 0, 0], [0, 0, -625*pi**4 - log(3*exp(-625*pi**4) + 1), 0], [0, 0, 0, -625*pi**4 - log(3*exp(-625*pi**4) + 1)]])",
+          "log_rho_tail_commutator": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+          "partition_Z": "3*exp(-625*pi**4) + 1",
+          "q_x": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 5*pi, 0], [0, 0, 0, 5*pi]])",
+          "q_y": "Matrix([[0, 0, 0, 0], [0, 5*pi, 0, 0], [0, 0, 0, 0], [0, 0, 0, 5*pi]])",
+          "radius_r": "5*pi",
+          "raw_word_W": "Matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, -1, 0], [0, 0, 0, -1]])",
+          "rho": "Matrix([[1/(3*exp(-625*pi**4) + 1), 0, 0, 0], [0, exp(-625*pi**4)/(3*exp(-625*pi**4) + 1), 0, 0], [0, 0, exp(-625*pi**4)/(3*exp(-625*pi**4) + 1), 0], [0, 0, 0, exp(-625*pi**4)/(3*exp(-625*pi**4) + 1)]])",
+          "rho_tail_commutator": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+          "state_invariant_under_H": false,
+          "state_invariant_under_K": false,
+          "tail_X": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 25*pi**2]])",
+          "tail_duhamel_square": "625*pi**4/(3 + exp(625*pi**4))"
+        }
+      ],
+      "static_tail_limit": "0"
+    },
+    "sequential_fejer_raw_word_recovery": {
+      "convex_phase_mixtures_preserve_bound": true,
+      "crude_total_error": "1/2",
+      "exact_total_error": "sqrt(201*exp(16281/20000) + 1250*exp(16281/40000))*exp(-16281/40000)/1206 + sqrt(1809*exp(201*exp(16281/40000)/625 + 16281/20000) + 20000*exp(16281/40000))*exp(-16281/40000 - 201*exp(16281/40000)/1250)/3618 + sqrt(96281)/10854",
+      "fixed_finite_word_only": true,
+      "inputs": {
+        "beta": "1/100",
+        "chi": "100",
+        "hbar": "1",
+        "raw_frequency_norms": [
+          "1/2",
+          "2/3",
+          "3/4"
+        ],
+        "target_error": "1/2"
+      },
+      "length_scan": [
+        {
+          "all_cutoffs_finite": true,
+          "largest_cutoff": "201/25",
+          "length": 1
+        },
+        {
+          "all_cutoffs_finite": true,
+          "largest_cutoff": "804*exp(201/625)/25",
+          "length": 2
+        },
+        {
+          "all_cutoffs_finite": true,
+          "largest_cutoff": "1809*exp(1809/2500 + 1809*exp(1809/2500)/2500)/25",
+          "length": 3
+        },
+        {
+          "all_cutoffs_finite": true,
+          "largest_cutoff": "3216*exp(804/625 + 804*exp(804/625)/625 + 804*exp(804/625 + 804*exp(804/625)/625)/625)/25",
+          "length": 4
+        }
+      ],
+      "per_letter_error": "1/6",
+      "real_time_shifts_preserve_bandwidth_and_error": true,
+      "replacement_order": "right-to-left",
+      "right_context_bandwidth_rule": "sum of already chosen right cutoffs",
+      "rows": [
+        {
+          "a_xi": "1/2",
+          "context_multiplier": "exp(16281/80000 + 201*exp(16281/40000)/1250)",
+          "contextual_error": "sqrt(1809*exp(201*exp(16281/40000)/625 + 16281/20000) + 20000*exp(16281/40000))*exp(-16281/40000 - 201*exp(16281/40000)/1250)/3618",
+          "crude_error": "1/6",
+          "cutoff": "1809*exp(16281/40000 + 201*exp(16281/40000)/625)/100",
+          "cutoff_finite": true,
+          "cutoff_prefactor": "1809/100",
+          "exact_cyclic_error": "sqrt(1809*exp(201*exp(16281/40000)/625 + 16281/20000) + 20000*exp(16281/40000))*exp(-48843/80000 - 201*exp(16281/40000)/625)/3618",
+          "index": 0,
+          "right_context_bandwidth": "16281/400 + 804*exp(16281/40000)/25",
+          "xi_norm": "1/2"
+        },
+        {
+          "a_xi": "2/3",
+          "context_multiplier": "exp(16281/80000)",
+          "contextual_error": "sqrt(201*exp(16281/20000) + 1250*exp(16281/40000))*exp(-16281/40000)/1206",
+          "crude_error": "1/6",
+          "cutoff": "804*exp(16281/40000)/25",
+          "cutoff_finite": true,
+          "cutoff_prefactor": "804/25",
+          "exact_cyclic_error": "sqrt(201*exp(16281/20000) + 1250*exp(16281/40000))*exp(-48843/80000)/1206",
+          "index": 1,
+          "right_context_bandwidth": "16281/400",
+          "xi_norm": "2/3"
+        },
+        {
+          "a_xi": "3/4",
+          "context_multiplier": "1",
+          "contextual_error": "sqrt(96281)/10854",
+          "crude_error": "1/6",
+          "cutoff": "16281/400",
+          "cutoff_finite": true,
+          "cutoff_prefactor": "16281/400",
+          "exact_cyclic_error": "sqrt(96281)/10854",
+          "index": 2,
+          "right_context_bandwidth": "0",
+          "xi_norm": "3/4"
+        }
+      ],
+      "stars_preserve_bandwidth_and_error": true,
+      "uniform_in_word_length": false
+    },
+    "universal_zero_source_orbit_smear_carrier": {
+      "contracts": {
+        "beta_enters_carrier": false,
+        "equivariance": "pi_Lambda(theta_r a)=alpha_r^Lambda(pi_Lambda(a))",
+        "generator_bound": "||pi_Lambda(A_(xi,f))|| <= ||f||_1",
+        "null_ideal_quotiented_before_completion": true,
+        "source_h_enters_carrier": false,
+        "star_rule": "A_(xi,f)^*=A_(-xi,conjugate(f))",
+        "universal_seminorm": "sup over exact zero-source periodic finite Hamiltonians"
+      },
+      "cstar_completion": {
+        "evaluation": "Matrix([[1, 0, 1], [0, 1, 1]])",
+        "individual_evaluations_need_not_be_faithful": true,
+        "joint_element": "Matrix([[1, 1, 0, 0], [0, 0, 0, 0], [0, 0, 1/2, 0], [0, 0, 0, -1/2]])",
+        "joint_product_representation_faithful_after_quotient": true,
+        "null_image": "Matrix([[0], [0]])",
+        "null_vector": "Matrix([[-1], [-1], [1]])",
+        "square_norm": "2",
+        "universal_norm_square": "2"
+      },
+      "laplace_contract": {
+        "cosine_response": "81/145",
+        "coupling": "2/3",
+        "decay": "3/2",
+        "hbar": "1",
+        "kernel_l1": "1",
+        "physical_frequency": "4/3",
+        "represented_norm_square": "6561/21025",
+        "represented_smear": "Matrix([[81/145, 0], [0, -81/145]])"
+      },
+      "periodization": {
+        "cofinal_torus_separates_fixture": true,
+        "eta": {
+          "(0, 1, 0)": "-1/7",
+          "(2, 0, 0)": "1/11"
+        },
+        "linear_left": {
+          "(0, 1, 0)": "-1/7",
+          "(2, 0, 0)": "27/55",
+          "(4, 0, 0)": "1/3"
+        },
+        "linear_right": {
+          "(0, 1, 0)": "-1/7",
+          "(2, 0, 0)": "27/55",
+          "(4, 0, 0)": "1/3"
+        },
+        "period_five": {
+          "(2, 0, 0)": "2/5",
+          "(4, 0, 0)": "1/3"
+        },
+        "period_three": {
+          "(2, 0, 0)": "11/15"
+        },
+        "small_torus_wraps": true,
+        "xi": {
+          "(-1, 0, 0)": "1/3",
+          "(2, 0, 0)": "2/5"
+        }
+      },
+      "smooth_generator": {
+        "formula": "delta_H A_(xi,f)=-A_(xi,f')",
+        "gaussian_transform": "sqrt(pi)*exp(-25/64)",
+        "generator_transform": "5*I*sqrt(pi)*exp(-25/64)/4",
+        "minus_derivative_transform": "5*I*sqrt(pi)*exp(-25/64)/4",
+        "omega": "5/4",
+        "shifted_transform": "sqrt(pi)*exp(-25/64)*exp(5*I/12)"
+      },
+      "translation": {
+        "derivative_l1": "4/3",
+        "exact_l1_distance": "34/81",
+        "exact_l1_formula": "34/81",
+        "kernel_l1": "1",
+        "point_norm_C0_on_completion": true,
+        "theta_rule": "theta_r A_(xi,f)=A_(xi,tau_r f), tau_r f(t)=f(t-r)",
+        "translation": "1/3",
+        "triangle_width": "3/2",
+        "universal_isometry": true,
+        "w11_upper_bound": "4/9"
+      }
+    }
+  },
+  "exploration_id": "EXP-000803",
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY"
+  ],
+  "next_gate": "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_number": "R-167",
+  "result_version": "v1.6",
+  "reused_negative_ids": [
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+  ],
+  "schema": "tect/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-primary-result/1.0",
+  "scope": {
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false,
+    "Sector_A_complete": false,
+    "all_exhaustion_thermodynamic_limit": false,
+    "beta_independent_universal_shift_dynamics": true,
+    "canonical_momentum_full_weyl_bridge": false,
+    "continuum_regulator_removal": false,
+    "ground_GNS_sector_gap": false,
+    "mass_gap": false,
+    "physical_empty_space_reference": false,
+    "polynomial_local_derivation_identified_on_carrier": false,
+    "quasi_local_raw_oscillator_algebra": false,
+    "raw_character_generator_core": false,
+    "selected_tangent_fixed_finite_raw_orbit_word_moments": true,
+    "selected_tangent_raw_word_pointed_gns_ultraproduct": true,
+    "two_distinct_scoped_algebraic_ground_states": true,
+    "zero_source_finite_hamiltonian_L1_orbit_smear_cstar": true
+  },
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_universal_orbit_smear_ground_doublet_route_split.py": "e9df2e7fdcdc3dbf848b6e3b724389d118202378b76f8f3386e14cb7688c3198",
+    "strategy/pre-a-cp1-st8-q3lock-ground-equal-time-order-gap-continuum-counterterm-route-split-manifest.json": "3921637d7fc4aa91a4339f6f18f26b9e26caa03b88a0adc62379f9fec106775e",
+    "strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-manifest.json": "facce35da2a48460a3afd87b6a8e194e537c114e34db468a7e6fd266c8b297ae",
+    "strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-certificate-260810.md": "c9b6553863c9d7d1b15a0d419095e5fec816100b69708421aba464b28d719b89",
+    "strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-manifest.json": "dbe6e0a1d169e97d4c0a40d8129d44858828f2a43872af42fa445b9a0925a0aa"
+  },
+  "summary": {
+    "authority_status": "COMPLETE",
+    "failed": 0,
+    "passed": 128,
+    "total": 128
+  },
+  "verdict": "PASS"
+}

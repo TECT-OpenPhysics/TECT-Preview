@@ -5,7 +5,7 @@
 
 Authorities: `negative-results/registry.md`.
 
-**321 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 250 · retraction: 5
+**322 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 251 · retraction: 5
 
 Latest 25 records:
 
@@ -15,6 +15,7 @@ Latest 25 records:
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity) | no_go | delete the centered spatial weight from the cubic graph multiplier while keeping a support-location-uniform constant |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-symmetric-sandwich-only-thermodynamic-cauchy) | no_go | infer a thermodynamic automorphism from convergence only in a symmetric energy sandwich |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-subcritical-energy-damped-onsite-lipschitz-stability) | no_go | repair the onsite `q/p` Lipschitz class with a fixed one-sided graph power `K^(-s)`, `s<1/2` |
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-static-tail-only-projected-orbit-locality) | no_go | infer projected real-time orbit locality from static coordinate-tail smallness, local normality and a vanishing first modular derivative alone |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-static-modular-tail-arbitrary-bounded-multiplier) | no_go | multiply a small static cutoff tail by an arbitrary bounded evolved observable using only the tail's first modular derivative |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-small-d-delta-d-uniform-half-strip-multiplier-inference) | no_go | infer uniform evolved half-strip `M_0,M_1` bounds from small direct Duhamel `D,delta D` tails |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-single-rung-energy-constrained-sitewise-influence-recurrence) | no_go | propagate one frequency-blind energy-constrained site-influence rung through the exact bond kick with a neighbor coefficient tending to zero with the step |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-coordinate-cutoff-half-modular-strip-absolute-closure) | no_go | obtain fixed-beta uniform half-modular-strip multipliers from the bounded coordinate-cutoff bond and a connected absolute expansion |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONVEXITY-ONLY-WEIGHTED-COMMUTATOR-SIGN`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-convexity-only-weighted-commutator-sign) | no_go | use quartic convexity in the `0<=lambda<=2g` subregime alone to obtain the energy/KMS-weighted commutator sign needed for spatial Cauchy |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-configuration-cylinder-canonical-momentum-generator) | no_go | infer a canonical momentum or polynomial CCR generator from bounded Euclidean configuration-cylinder data alone |
-| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-BASIC-RESOLVENT-CUBIC-FORCE-UNWEIGHTED-CORE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-basic-resolvent-cubic-force-unweighted-core) | no_go | use ordinary basic resolvents as a cutoff-uniform unweighted generator core for the exact quartic force |
 
 Search without loading the full registry:
 

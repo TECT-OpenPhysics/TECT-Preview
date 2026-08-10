@@ -807,12 +807,39 @@ periodic limit, and one beta-independent invariant C-star algebra. The v1.5
 selected-tangent theorem is not common-Hilbert operator strong-star
 convergence or an all-exhaustion completion.
 
-The fixed-beta envelope is not yet the thermodynamic Hamiltonian `alpha` and
-does not support beta-to-infinity algebraic ground states. Hamiltonian common-
-alpha identification, distinct algebraic ground states, broken-sector GNS
-gap, enlarged-counterterm continuum, physical empty space and effective
-reduction remain open. These bridge results do not select a Round-1
-contestant.
+EXP-000803 advances R-167 to v1.6. The exact KMS modular right-context lemma,
+used with a right-to-left recursive Fejer choice, upgrades the selected
+tangent theorem to every fixed finite raw configuration-orbit word moment and
+Gram block. Separately, the complete zero-source finite periodic Hamiltonian
+family defines one beta- and state-independent universal `L1` orbit-smear
+C-star carrier with a point-norm C0 time shift. The `EXP-000789` approximate
+broken doublets have two distinct weak-star cluster states on this carrier;
+the negative-Arveson estimate proves both are ground states, and one fixed
+rational smeared sine separates them.
+
+This closes three scoped subgates but not the thermodynamic gate. The carrier
+is a product-type categorical object: its quotient representations are not an
+inductive local system, raw characters need not be present, and temporal
+smears need not be spatially local. An exact hostile fixture further rejects
+the inference from static Gaussian coordinate tails and a zero first modular
+derivative to projected real-time cutoff removal. The successor is
+`PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP`:
+construct the spatial raw/resolvent carrier, prove all-exhaustion Cauchy and
+phase-KMS quotient identification, fix the local generator, and then test the
+broken-sector GNS gap.
+
+The one v1.6 gate-level synthesis PDF, issued only after the proof package and
+all three verifier layers passed, is
+`claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf`.
+It consolidates the three scoped closures and the live successor; it does not
+promote the categorical carrier to the thermodynamic gate.
+
+The fixed-beta envelope is not yet the thermodynamic Hamiltonian `alpha`.
+Distinct algebraic ground states now exist on the separate universal
+orbit-smear carrier, but a quasi-local raw-oscillator ground representation,
+Hamiltonian all-exhaustion identification, broken-sector GNS gap, enlarged-
+counterterm continuum, physical empty space and effective reduction remain
+open. These bridge results do not select a Round-1 contestant.
 
 **T-050/A13 is mathematically preserved but parked from the main physical
 priority.**  The current registered SA-F4 route still passes through T-050,

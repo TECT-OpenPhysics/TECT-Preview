@@ -507,11 +507,81 @@ pointed finite-core Fell/GNS convergence. The exact character identity
 `||delta W_xi||_D^2=||xi||^2/(beta chi)` and the uniform cyclic estimate
 `||W_xi-W_xi^(R)||_#<=a_xi sqrt(2/R^2+beta hbar/R)`.
 
+`EXP-000803` / R-167 v1.6 strengthens this selected-net conclusion. The exact
+KMS standard-form right-context estimate
+`||YC Omega||<=exp(beta hbar S/2)||C||||Y Omega||` for a context of bandwidth
+`S`, combined with a right-to-left recursive Fejer choice, proves convergence
+of every fixed finite raw configuration-orbit word moment and Gram block. This
+closes the separate raw finite-word subgate below.
+
 This is not a label-preserving complete-GNS embedding, a globally compatible
 common-Hilbert operator strong-star limit, raw-character operator convergence
 after arbitrary left/right contexts, an all-exhaustion theorem, the
 zero-source periodic limit, a canonical momentum generator, or a
 beta-independent C-star dynamics.
+
+### **PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION**
+
+**Statement:** Upgrade the selected fixed-beta tangent-net theorem from one
+cyclic raw character to every fixed finite raw configuration-orbit word. Keep
+the conclusion in scalar word-kernel and pointed finite-core Fell/GNS scope,
+without assuming an arbitrary bounded-context multiplier theorem.
+
+**Status:** CLOSED IN THE SELECTED TANGENT-NET SCOPE (2026-08-10).
+`EXP-000803` / R-167 v1.6 proves the modular right-context lemma and recovers
+the factors from right to left. If the already smoothed right context has
+bandwidth `S_j`, its error cost is
+`exp(beta hbar S_j/2) epsilon_(xi_j)(R_j)`. Choosing each next bandwidth only
+after the finite right-context bandwidth is fixed closes every fixed word.
+The bandwidths need not be uniform in word length. No common-Hilbert operator
+strong-star, arbitrary-context completion or all-exhaustion result follows.
+
+### **PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER**
+
+**Statement:** From the complete family of exact zero-source finite periodic
+Hamiltonians, define a beta- and state-independent C-star seminorm on formal
+`L1` time-smears of rational finite-support configuration characters. Prove
+that its quotient completion carries one point-norm continuous time shift,
+with every finite Hamiltonian evolution as an equivariant quotient.
+
+**Status:** CLOSED AS A CATEGORICAL NONLOCAL CARRIER (2026-08-10).
+`EXP-000803` / R-167 v1.6 defines
+`||a||_H=sup_Lambda||pi_Lambda(a)||` and
+`theta_s A_(xi,f)=A_(xi,f(.-s))`. The generator estimate
+`||pi_Lambda(A_(xi,f))||<=||f||_1`, equivariance and `L1` translation
+continuity give a unital beta-independent C0 C-star system with smooth-core
+generator `delta_H A_(xi,f)=-A_(xi,f')`. Finite Gibbs pullbacks are KMS.
+
+The carrier is not a quasi-local thermodynamic limit: its quotient
+representations are not an inductive system, raw characters need not belong
+to it, temporal smears are not spatially local, and no all-exhaustion Cauchy,
+momentum/CCR or polynomial local-generator identification follows.
+
+### **PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS**
+
+**Statement:** Promote the `EXP-000789` zero-source approximate broken
+doublets to two distinct algebraic ground states of the universal orbit-smear
+carrier by one fixed bounded order witness and the negative-Arveson ground
+criterion.
+
+**Status:** CLOSED ON THE ORBIT-SMEAR CARRIER (2026-08-10). Choose the rational
+one-site label `xi=r(1,...,1)` sufficiently small. Uniform local quartic
+moments and `|sin z-z|<=|z|^3/6` give an order split at least
+`d=r sqrt(8 rho_*/2)/2`. One fixed triangular time smear changes either
+expectation by at most
+`(16/15)sqrt(hbar T/(chi V rho_*))`, so one self-adjoint abstract smeared sine
+separates every joint cluster pair. If `Sp_theta(a)` lies below `-nu`, then
+`omega_L(a^*a)<=||a||_H^2 epsilon_L/(hbar nu)->0`; every cluster is a ground
+state.
+
+These are algebraic ground states only of the categorical smear carrier. A
+ground theorem on the sought quasi-local raw oscillator algebra and a
+positive broken-sector GNS or physical mass gap remain open.
+
+The three v1.6 closures and their common no-overclaim boundary are collected
+once, after strict proof validation, in
+`claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf`.
+No per-lemma or intermediate v1.6 PDF was issued.
 
 ### **PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE**
 
@@ -526,7 +596,7 @@ derivation. Prove products, star, inverse, group law and strong continuity.
 Finally construct a beta-compatible state-independent algebra before any
 beta-to-infinity ground-state claim.
 
-**Status:** OPEN, WITH THE SELECTED-TANGENT CORRELATION SUBGATE CLOSED
+**Status:** OPEN, WITH SELECTED-TANGENT AND CATEGORICAL-CARRIER SUBGATES CLOSED
 (2026-08-10). `EXP-000801` / R-167 v1.5 identifies each fixed finite
 bandlimited word block of the selected `EXP-000781` tangent Hamiltonian KMS
 systems with the `EXP-000800` mixture in pointed finite-core Fell/GNS
@@ -539,11 +609,16 @@ periodic limits, and fixed-beta envelopes need not glue across beta.
 Missing are the all-shape pairwise-union estimate in one preregistered
 locally normal representation, boundary Cauchy, exhaustion independence,
 raw-context operator convergence, canonical kinetic/full-Weyl identification,
-and beta compatibility. These obligations are concentrated in
-`PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS`.
+and beta compatibility. `EXP-000803` / R-167 v1.6 additionally constructs a
+beta-independent universal zero-source `L1` orbit-smear carrier and distinct
+ground states on it. Because that product-type carrier has no spatial net or
+exhaustion identification, it does not close this thermodynamic gate. The
+remaining obligations are concentrated in
+`PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP`.
 The symmetric phase mixture is also not yet proved to be the periodic
-zero-source finite-volume limit. The selected-tangent theorem does not
-license algebraic ground states or a GNS gap.
+zero-source finite-volume limit. The selected-tangent theorem alone does not
+license ground states. The v1.6 carrier licenses its narrowly scoped ground
+states, but not a quasi-local oscillator ground representation or GNS gap.
 
 ### **PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS**
 
@@ -559,7 +634,8 @@ algebra and derivation, add the kinetic/CCR anchor needed for canonical
 momentum, and separately prove the symmetric zero-source periodic anchoring
 before any ground-state limit.
 
-**Status:** OPEN (2026-08-10). `EXP-000801` proves only selected-tangent
+**Status:** OPEN, WITH A CATEGORICAL BETA-INDEPENDENT CARRIER NOW SEPARATED
+(2026-08-10). `EXP-000801` proves only selected-tangent
 finite-word kernel/Gram convergence after explicit finite-block transports.
 It supplies neither the untransported pairwise-union estimate nor a common
 Hilbert embedding for complete finite GNS spaces. Its Fejer theorem is cyclic
@@ -567,6 +643,33 @@ two-sided L2 recovery of each raw character, not a multiplier theorem in
 arbitrary word contexts. The five v1.5 negative results remove naive label,
 momentum, raw-generator, asymmetric-periodic and automatic cross-beta
 shortcuts without proving that the required common dynamics is nonexistent.
+
+`EXP-000803` closes every fixed finite raw word on the selected tangent net
+and constructs a beta-independent universal zero-source orbit-smear C-star
+system. It does not supply the pairwise-union estimate in this gate, because
+the volume quotient maps are not an inductive family and the smears are not a
+spatial local net. An exact four-dimensional fixture registered as
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY`
+also shows that static Gaussian tails and a vanishing first modular derivative
+alone do not imply the missing projected real-time orbit estimate. No exact
+Q3LOCK non-Cauchy counterexample is claimed.
+
+### **PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP**
+
+**Statement:** Construct a noncollapsing raw/resolvent oscillator carrier with
+a spatially local net and one zero-source Hamiltonian dynamics. Prove
+all-shape exhaustion Cauchy, identify the finite Hamiltonian generator and the
+fixed-beta phase KMS quotient representations, and then determine the
+spectral gap in each selected broken ground-state GNS representation.
+
+**Status:** OPEN (2026-08-10). R-167 v1.6 supplies two useful precursors: all
+fixed finite raw-word moments on the selected tangent nets, and a separate
+beta-independent product-type orbit-smear carrier with two distinct ground
+states. It does not supply a quasi-local net, all-exhaustion uniqueness,
+canonical momentum/full Weyl data, polynomial local-generator closure,
+phase-KMS quotient identification, or a broken-sector GNS-gap lower bound.
+Those are the live requirements before physical mass, continuum, empty-space,
+C6, CP1 or Pre-A conclusions.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 
