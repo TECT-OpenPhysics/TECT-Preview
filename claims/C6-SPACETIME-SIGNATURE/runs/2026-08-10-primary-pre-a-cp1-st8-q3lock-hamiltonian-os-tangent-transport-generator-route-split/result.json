@@ -1,0 +1,1473 @@
+{
+  "assertions": [
+    {
+      "actual": "949/900",
+      "expected": "positive rational norm square",
+      "group": "character",
+      "name": "character frequency is nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": "46501/41250",
+      "expected": "hbar^2 ||xi||^2 / chi",
+      "group": "character",
+      "name": "character double commutator coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "949/2750",
+      "expected": "949/2750",
+      "group": "character",
+      "name": "Kubo factor has no extra two or hbar",
+      "status": "PASS"
+    },
+    {
+      "actual": "949/2750",
+      "expected": "double/(beta hbar^2)",
+      "group": "character",
+      "name": "Kubo reconstruction of double commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "commutator": "Matrix([[21/55], [-28/55], [126/275]])",
+        "generator": "Matrix([[3/11], [-4/11], [18/55]])",
+        "shift": "Matrix([[7/10], [-14/15], [21/25]])"
+      },
+      "expected": "hbar xi, hbar xi/chi, xi/chi",
+      "group": "character",
+      "name": "raw character momentum shift and commutator vector",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*sqrt(104390)/3575",
+      "expected": "a_xi/R",
+      "group": "filter",
+      "name": "Fejer Duhamel error bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(104390)/550",
+      "expected": "a_xi",
+      "group": "filter",
+      "name": "Fejer delta-D bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "3358/10725",
+      "expected": "3358/10725",
+      "group": "filter",
+      "name": "unaveraged two-sided Fejer bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "3358/10725",
+      "expected": "3358/10725",
+      "group": "filter",
+      "name": "physical and modular bandwidth conventions agree",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "generator_mean": "0",
+        "residual_mean": "0",
+        "zero_multiplier": "1"
+      },
+      "expected": "0, 1, 0",
+      "group": "filter",
+      "name": "connected Duhamel convention harmless",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "raw": 1,
+        "residual": 2,
+        "smear": 1
+      },
+      "expected": {
+        "raw": 1,
+        "residual": 2,
+        "smear": 1
+      },
+      "group": "filter",
+      "name": "Fejer operator bounds distinguish smear and residual",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "factorized": "(-5 + 2*exp(3/2))/(2*(-1 + exp(1/2))*(1 + exp(1/2) + E))",
+        "lhs": "3*(1 + exp(3/2))/(4*(-1 + exp(3/2)))",
+        "residual": "(-5 + 2*exp(3/2))/(2*(-1 + exp(1/2))*(1 + exp(1/2) + E))",
+        "rhs": "7/4"
+      },
+      "expected": "(u/2)coth(u/2) <= 1+u/2 with residual (exp(u)-1-u)/(exp(u)-1)",
+      "group": "filter",
+      "name": "modular arithmetic/logarithmic mean inequality",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "ell": "44/35",
+        "gradient": "44/35"
+      },
+      "expected": "equal at q=0",
+      "group": "finite_span",
+      "name": "finite-span triangle bound sharp fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "3168/6125",
+      "expected": "ell_gradient^2/(beta chi)",
+      "group": "finite_span",
+      "name": "finite-span Duhamel bound square",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "Matrix([[0, -25/2], [25/2, 0]])",
+        "Matrix([[0, -25/3], [25/3, 0]])",
+        "Matrix([[0, -5], [5, 0]])",
+        "Matrix([[0, -25/8], [25/8, 0]])"
+      ],
+      "expected": "at least one nonzero commutator",
+      "group": "gram_transport",
+      "name": "noncommuting Gram fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[epsilon**2 + 4, 5*epsilon], [5*epsilon, epsilon**2 + 9]])",
+      "expected": "Matrix([[epsilon**2 + 4, 5*epsilon], [5*epsilon, epsilon**2 + 9]])",
+      "group": "gram_transport",
+      "name": "polar congruence identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "2",
+          "23/4"
+        ],
+        [
+          "2",
+          "53/9"
+        ],
+        [
+          "2",
+          "149/25"
+        ],
+        [
+          "2",
+          "383/64"
+        ]
+      ],
+      "expected": "Sylvester positive",
+      "group": "gram_transport",
+      "name": "fixture square roots positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "Matrix([[0, 0], [0, 0]])",
+        "Matrix([[0, 0], [0, 0]])",
+        "Matrix([[0, 0], [0, 0]])",
+        "Matrix([[0, 0], [0, 0]])"
+      ],
+      "expected": "all zero",
+      "group": "gram_transport",
+      "name": "fixture congruences exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[1, 0], [0, 1]])",
+      "expected": "Matrix([[1, 0], [0, 1]])",
+      "group": "gram_transport",
+      "name": "polar transport tends to identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 1], [2, 0]])",
+      "expected": "Matrix([[0, 1], [2, 0]])",
+      "group": "gram_transport",
+      "name": "transported operator tends to limiting matrix",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0], [0, 0]])",
+      "expected": "Matrix([[0, 0], [0, 0]])",
+      "group": "gram_transport",
+      "name": "metric adjoint transported exactly",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "det": "0",
+        "rank": 2
+      },
+      "expected": {
+        "det": 0,
+        "rank": 2
+      },
+      "group": "support_reduction",
+      "name": "singular limit cannot be inverse-rooted",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "discarded": [
+          1
+        ],
+        "retained": [
+          0,
+          2
+        ]
+      },
+      "expected": {
+        "discarded": [
+          1
+        ],
+        "retained": [
+          0,
+          2
+        ]
+      },
+      "group": "support_reduction",
+      "name": "support pivot rule deterministic",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[epsilon + 1, 0], [0, 4 - epsilon]])",
+      "expected": "Matrix([[epsilon + 1, 0], [0, 4 - epsilon]])",
+      "group": "support_reduction",
+      "name": "reduced polar congruence exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "expected": "all zero",
+      "group": "embedding_no_go",
+      "name": "rotating finite nulls exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/4",
+        "1/16",
+        "1/64",
+        "1/256"
+      ],
+      "expected": "all positive",
+      "group": "embedding_no_go",
+      "name": "rotating nulls survive in limit quotient",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "9/16",
+        "33/256",
+        "129/4096",
+        "513/65536"
+      ],
+      "expected": "strictly decreasing to zero",
+      "group": "embedding_no_go",
+      "name": "rotating Gram forms converge",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "embedding_no_go",
+      "name": "naive label map rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "expected": "all rank two",
+      "group": "dimension_collapse",
+      "name": "faithful finite state dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "finite_rank": 2,
+        "finite_rows": [
+          {
+            "distance_sq": "1/2",
+            "epsilon": "1/2",
+            "gram": "Matrix([[1/2, 0], [0, 1/2]])",
+            "rank": 2
+          },
+          {
+            "distance_sq": "1/8",
+            "epsilon": "1/4",
+            "gram": "Matrix([[3/4, 0], [0, 1/4]])",
+            "rank": 2
+          },
+          {
+            "distance_sq": "1/32",
+            "epsilon": "1/8",
+            "gram": "Matrix([[7/8, 0], [0, 1/8]])",
+            "rank": 2
+          },
+          {
+            "distance_sq": "1/128",
+            "epsilon": "1/16",
+            "gram": "Matrix([[15/16, 0], [0, 1/16]])",
+            "rank": 2
+          }
+        ],
+        "injective_isometry_possible": false,
+        "limit_gram": "Matrix([[1, 0], [0, 0]])",
+        "limit_rank": 1
+      },
+      "expected": "rank 2 to rank 1; no injective isometry",
+      "group": "dimension_collapse",
+      "name": "GNS dimension collapses",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0], [0, 0]])",
+      "expected": "Matrix([[0, 0], [0, 0]])",
+      "group": "momentum_gauge",
+      "name": "gauge functional calculus conjugation",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0], [0, 0]])",
+      "expected": "Matrix([[0, 0], [0, 0]])",
+      "group": "momentum_gauge",
+      "name": "gauge commutes with q cylinders",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "gauged": "7726027/6048000",
+        "original": "7726027/6048000"
+      },
+      "expected": "identical",
+      "group": "momentum_gauge",
+      "name": "q-cylinder trace gauge invariant",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[-12/55], [2/11]])",
+      "expected": "-a/chi nonzero",
+      "group": "momentum_gauge",
+      "name": "momentum generator changes nonscalarly",
+      "status": "PASS"
+    },
+    {
+      "actual": "42/55",
+      "expected": "42/55",
+      "group": "raw_character",
+      "name": "raw commutator asymptotic slope",
+      "status": "PASS"
+    },
+    {
+      "actual": "oo",
+      "expected": "oo",
+      "group": "raw_character",
+      "name": "raw commutator unbounded",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "109501/82500",
+        "172501/82500",
+        "298501/82500",
+        "550501/82500",
+        "1054501/82500"
+      ],
+      "expected": "strictly increasing",
+      "group": "raw_character",
+      "name": "raw ray regression increases",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/2"
+      ],
+      "expected": [
+        "1/2"
+      ],
+      "group": "parity",
+      "name": "parity fixes only equal phase weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3/35",
+      "expected": "nonzero",
+      "group": "parity",
+      "name": "asymmetric mixture remains ordered",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "parity",
+      "name": "symmetric mixture parity expectation",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "first": [
+          "E/(2*cosh(1))",
+          "exp(-1)/(2*cosh(1))"
+        ],
+        "second": [
+          "exp(4)/(2*cosh(4))",
+          "exp(-4)/(2*cosh(4))"
+        ]
+      },
+      "expected": "all positive",
+      "group": "cross_beta",
+      "name": "cross-beta Gibbs densities faithful",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "first": "Matrix([[cosh(1/3), sinh(1/3)], [sinh(1/3), cosh(1/3)]])",
+        "second": "Matrix([[cosh(2/3), sinh(2/3)], [sinh(2/3), cosh(2/3)]])"
+      },
+      "expected": "entrywise nonnegative",
+      "group": "cross_beta",
+      "name": "cross-beta heat kernels positive",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "first": "Matrix([[0, -1], [-1, 0]])",
+        "second": "Matrix([[0, -2], [-2, 0]])"
+      },
+      "expected": {
+        "first": "-sigma_x",
+        "second": "-2 sigma_x"
+      },
+      "group": "cross_beta",
+      "name": "cross-beta effective Hamiltonians recomputed",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, -1], [-1, 0]])",
+      "expected": "traceless nonscalar mismatch",
+      "group": "cross_beta",
+      "name": "cross-beta generator mismatch nonscalar",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "group": "local_jet",
+      "name": "source leaves first character jet unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*sqrt(2)*I/308",
+      "expected": "i h (xi.u)/chi",
+      "group": "local_jet",
+      "name": "source enters exact second jet",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          1,
+          "1"
+        ],
+        [
+          7,
+          "7"
+        ],
+        [
+          25,
+          "25"
+        ],
+        [
+          63,
+          "63"
+        ]
+      ],
+      "expected": "all equal",
+      "group": "local_jet",
+      "name": "local jet balls match binomial formula",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "expected": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "group": "local_jet",
+      "name": "local jet maximum radius",
+      "status": "PASS"
+    },
+    {
+      "actual": "4788481/70560000",
+      "expected": "nonnegative",
+      "group": "coordinate_tail",
+      "name": "coordinate-tail Cauchy residual nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "bound": "23885381/237160000",
+        "exact": "190969/2371600"
+      },
+      "expected": "exact <= ||xi||^2 ||grad W||^2/chi^2",
+      "group": "coordinate_tail",
+      "name": "coordinate-tail first rung bounded",
+      "status": "PASS"
+    },
+    {
+      "actual": "-437*I/1540",
+      "expected": "-i (xi.grad W_L)/chi",
+      "group": "coordinate_tail",
+      "name": "coordinate-tail exact signed first rung",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "-8",
+        "-38/3",
+        "-17",
+        "-106/5"
+      ],
+      "expected": "all negative using log(1+x)<x",
+      "group": "coordinate_tail",
+      "name": "super-Gaussian fixture decreases",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "coordinate_tail",
+      "name": "higher tail rungs remain open",
+      "status": "PASS"
+    },
+    {
+      "actual": "T-054",
+      "expected": "T-054",
+      "group": "authority",
+      "name": "authority task",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-000801",
+      "expected": "EXP-000801",
+      "group": "authority",
+      "name": "authority exploration",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-167",
+      "expected": "R-167",
+      "group": "authority",
+      "name": "authority result number",
+      "status": "PASS"
+    },
+    {
+      "actual": "v1.5",
+      "expected": "v1.5",
+      "group": "authority",
+      "name": "authority result version",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+      "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+      "group": "authority",
+      "name": "authority result id",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "authority",
+      "name": "authority claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+      ],
+      "expected": [
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+      ],
+      "group": "authority",
+      "name": "all v1.5 negatives ordered",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "EXP-000781",
+        "EXP-000790",
+        "EXP-000798",
+        "EXP-000800"
+      ],
+      "expected": [
+        "EXP-000781",
+        "EXP-000790",
+        "EXP-000798",
+        "EXP-000800"
+      ],
+      "group": "authority",
+      "name": "registered parent explorations",
+      "status": "PASS"
+    },
+    {
+      "actual": "strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json",
+      "expected": "existing registered parent manifest",
+      "group": "authority",
+      "name": "parent exists EXP-000781",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "exploration": "EXP-000781",
+        "version": null
+      },
+      "expected": {
+        "exploration": "EXP-000781",
+        "version": null
+      },
+      "group": "authority",
+      "name": "parent identity EXP-000781",
+      "status": "PASS"
+    },
+    {
+      "actual": "strategy/pre-a-cp1-st8-q3lock-os-dynamics-ground-gap-counterterm-empty-route-split-manifest.json",
+      "expected": "existing registered parent manifest",
+      "group": "authority",
+      "name": "parent exists EXP-000790",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "exploration": "EXP-000790",
+        "version": null
+      },
+      "expected": {
+        "exploration": "EXP-000790",
+        "version": null
+      },
+      "group": "authority",
+      "name": "parent identity EXP-000790",
+      "status": "PASS"
+    },
+    {
+      "actual": "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json",
+      "expected": "existing registered parent manifest",
+      "group": "authority",
+      "name": "parent exists EXP-000798",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "exploration": "EXP-000798",
+        "version": "v1.2"
+      },
+      "expected": {
+        "exploration": "EXP-000798",
+        "version": "v1.2"
+      },
+      "group": "authority",
+      "name": "parent identity EXP-000798",
+      "status": "PASS"
+    },
+    {
+      "actual": "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json",
+      "expected": "existing registered parent manifest",
+      "group": "authority",
+      "name": "parent exists EXP-000800",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "exploration": "EXP-000800",
+        "version": "v1.4"
+      },
+      "expected": {
+        "exploration": "EXP-000800",
+        "version": "v1.4"
+      },
+      "group": "authority",
+      "name": "parent identity EXP-000800",
+      "status": "PASS"
+    },
+    {
+      "actual": "registered_tangent_net",
+      "expected": "registered_tangent_net",
+      "group": "authority",
+      "name": "manifest object registered_tangent_net",
+      "status": "PASS"
+    },
+    {
+      "actual": "bandlimited_kms_kernel_theorem",
+      "expected": "bandlimited_kms_kernel_theorem",
+      "group": "authority",
+      "name": "manifest object bandlimited_kms_kernel_theorem",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite_block_polar_transport",
+      "expected": "finite_block_polar_transport",
+      "group": "authority",
+      "name": "manifest object finite_block_polar_transport",
+      "status": "PASS"
+    },
+    {
+      "actual": "character_dirichlet_and_filter_theorem",
+      "expected": "character_dirichlet_and_filter_theorem",
+      "group": "authority",
+      "name": "manifest object character_dirichlet_and_filter_theorem",
+      "status": "PASS"
+    },
+    {
+      "actual": "generator_and_first_tail",
+      "expected": "generator_and_first_tail",
+      "group": "authority",
+      "name": "manifest object generator_and_first_tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "embedding_and_generator_no_gos",
+      "expected": "embedding_and_generator_no_gos",
+      "group": "authority",
+      "name": "manifest object embedding_and_generator_no_gos",
+      "status": "PASS"
+    },
+    {
+      "actual": "parity_and_cross_beta_no_gos",
+      "expected": "parity_and_cross_beta_no_gos",
+      "group": "authority",
+      "name": "manifest object parity_and_cross_beta_no_gos",
+      "status": "PASS"
+    },
+    {
+      "actual": "route_status",
+      "expected": "route_status",
+      "group": "authority",
+      "name": "manifest object route_status",
+      "status": "PASS"
+    },
+    {
+      "actual": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split.py",
+      "expected": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split.py",
+      "group": "authority",
+      "name": "primary script binding",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION"
+      ],
+      "expected": [
+        "PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION"
+      ],
+      "group": "authority",
+      "name": "closed tangent-net subgate",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "next": "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "open": [
+          "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ]
+      },
+      "expected": "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+      "group": "authority",
+      "name": "next gate binding",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "boundary": "The uniformly bounded analytic functions have unique weak-star boundary distributions. Convolution in every physical-time variable with a fixed L1 kernel gives locally uniform convergence of the real-time boundary functions; uniformity on compact translation sets follows from L1 translation continuity of the fixed kernel. Choosing even Fejer kernels with compact Fourier support produces a countable word list closed under star, products and rational shifts; its complex span is used.",
+        "normal_family": "For each finite word of bounded configuration characters, the finite-volume KMS function is uniformly bounded on its thermal tube by the product of operator norms. Euclidean cylinder convergence on the ordered imaginary-time region and analytic uniqueness give local-uniform convergence in the tube interior."
+      },
+      "expected": "scalar KMS function analytically continued from real-time boundary data",
+      "group": "scope",
+      "name": "KMS continuation is a scalar function boundary statement",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "gram": "Every fixed finite Gram matrix of the bandlimited word list converges entrywise to the corresponding EXP-000800 mixture Gram matrix.",
+        "scope": "This is convergence of selected tangent-net word kernels. It does not by itself put the raw finite-volume operators into the locally normal mixture GNS representation."
+      },
+      "expected": "selected tangent-net finite-word Gram convergence",
+      "group": "scope",
+      "name": "fixed finite-word Gram scope",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "scope": "The transport is asymptotically canonical only after freezing the enumeration, dependence-removal rule and principal square roots. Singular limit directions are discarded through retained independent pivots rather than embedded into a lower-rank support. This is a pointed finite-core GNS/Fell identification, not a label-preserving injective embedding of the complete finite GNS spaces, a common-representation strong-star theorem or the canonical inductive local-algebra embedding.",
+        "transport": "Choose k(n) increasing diagonally and include every required product, adjoint and rational translate before testing a fixed finite set. The exact block isometries give finite-word approximate intertwining and pointed finite-core Fell/GNS convergence of each such family. No globally compatible common-Hilbert extension is inferred."
+      },
+      "expected": "independent-pivot pointed finite-core Fell/GNS only",
+      "group": "scope",
+      "name": "independent-pivot finite-core Fell/GNS scope",
+      "status": "PASS"
+    },
+    {
+      "actual": "Let g_R(omega)=(1-|omega|/R)_+ and W_xi^(R)=int f_R(t)alpha_t(W_xi)dt. With a_xi=||xi||/sqrt(beta chi), Y_R=W_xi-W_xi^(R) obeys ||Y_R||_D<=a_xi/R, ||delta Y_R||_D<=a_xi and, in the unaveraged cyclic two-sided convention, ||Y_R||_#<=a_xi sqrt(2/R^2+beta hbar/R). Thus each raw character is recovered uniformly as a cyclic two-sided L2 vector after fixed-band convergence. This does not give arbitrary bandlimited left/right-context multiplier control or raw-core operator strong-star convergence. EXP-000781 local p^2 control also yields an optional O(1/R) cyclic rate.",
+      "expected": "cyclic two-sided L2, without contextual multiplier or operator strong-star control",
+      "group": "scope",
+      "name": "cyclic L2-only raw-character recovery scope",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "form_scope": "The equality is finite-volume and form-core exact. In the limit, the uniform limsup filter bound is sufficient; equality of the limiting Dirichlet form requires a separate closure statement.",
+        "modular_bridge": "In a faithful normal W-star standard form, the logarithmic-mean functional calculus gives the averaged two-sided norm inequality ||X||_#^2<=||X||_D^2+(1/2)||X||_D||[log Delta,X]||_D. For a beta-KMS dynamics this is the general modular counterpart of the finite type-I R-167 v1.2 lemma. With the unaveraged v1.4 sum convention the right side is multiplied by two."
+      },
+      "expected": "finite-volume form-core exact; faithful support-reduced standard form; no limiting form equality",
+      "group": "scope",
+      "name": "Duhamel and modular form-domain convention",
+      "status": "PASS"
+    },
+    {
+      "actual": "pointed",
+      "expected": "pointed",
+      "group": "authority",
+      "name": "manifest semantic pointed",
+      "status": "PASS"
+    },
+    {
+      "actual": "Fejer",
+      "expected": "Fejer",
+      "group": "authority",
+      "name": "manifest semantic Fejer",
+      "status": "PASS"
+    },
+    {
+      "actual": "selected phase-tangent",
+      "expected": "selected phase-tangent",
+      "group": "authority",
+      "name": "manifest semantic selected phase-tangent",
+      "status": "PASS"
+    },
+    {
+      "actual": "not the zero-source periodic sequence",
+      "expected": "not the zero-source periodic sequence",
+      "group": "authority",
+      "name": "manifest semantic not the zero-source periodic sequence",
+      "status": "PASS"
+    },
+    {
+      "actual": "not a beta-independent C-star dynamics",
+      "expected": "not a beta-independent C-star dynamics",
+      "group": "authority",
+      "name": "manifest semantic not a beta-independent C-star dynamics",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-000801",
+      "expected": "EXP-000801",
+      "group": "authority",
+      "name": "certificate token EXP-000801",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-167",
+      "expected": "R-167",
+      "group": "authority",
+      "name": "certificate token R-167",
+      "status": "PASS"
+    },
+    {
+      "actual": "v1.5",
+      "expected": "v1.5",
+      "group": "authority",
+      "name": "certificate token v1.5",
+      "status": "PASS"
+    },
+    {
+      "actual": "Fejer",
+      "expected": "Fejer",
+      "group": "authority",
+      "name": "certificate token Fejer",
+      "status": "PASS"
+    },
+    {
+      "actual": "pointed",
+      "expected": "pointed",
+      "group": "authority",
+      "name": "certificate token pointed",
+      "status": "PASS"
+    },
+    {
+      "actual": "zero-source",
+      "expected": "zero-source",
+      "group": "authority",
+      "name": "certificate token zero-source",
+      "status": "PASS"
+    },
+    {
+      "actual": "beta-independent",
+      "expected": "beta-independent",
+      "group": "authority",
+      "name": "certificate token beta-independent",
+      "status": "PASS"
+    },
+    {
+      "actual": "Pre-A",
+      "expected": "Pre-A",
+      "group": "authority",
+      "name": "certificate token Pre-A",
+      "status": "PASS"
+    },
+    {
+      "actual": "bounded scalar KMS analytic continuation",
+      "expected": "bounded scalar KMS analytic continuation",
+      "group": "authority",
+      "name": "certificate token bounded scalar KMS analytic continuation",
+      "status": "PASS"
+    },
+    {
+      "actual": "pointed finite-core Fell/GNS",
+      "expected": "pointed finite-core Fell/GNS",
+      "group": "authority",
+      "name": "certificate token pointed finite-core Fell/GNS",
+      "status": "PASS"
+    },
+    {
+      "actual": "common-Hilbert operator strong-star",
+      "expected": "common-Hilbert operator strong-star",
+      "group": "authority",
+      "name": "certificate token common-Hilbert operator strong-star",
+      "status": "PASS"
+    },
+    {
+      "actual": "arbitrary left/right contexts",
+      "expected": "arbitrary left/right contexts",
+      "group": "authority",
+      "name": "certificate token arbitrary left/right contexts",
+      "status": "PASS"
+    },
+    {
+      "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+      "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+      "group": "authority",
+      "name": "certificate negative NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+      "status": "PASS"
+    },
+    {
+      "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+      "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+      "group": "authority",
+      "name": "certificate negative NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+      "status": "PASS"
+    },
+    {
+      "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+      "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+      "group": "authority",
+      "name": "certificate negative NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+      "status": "PASS"
+    },
+    {
+      "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+      "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+      "group": "authority",
+      "name": "certificate negative NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+      "status": "PASS"
+    },
+    {
+      "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING",
+      "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING",
+      "group": "authority",
+      "name": "certificate negative NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING",
+      "status": "PASS"
+    }
+  ],
+  "authority": {
+    "missing": [],
+    "status": "COMPLETE"
+  },
+  "derived": {
+    "all_exhaustion_mixture_l2_closed": false,
+    "arbitrary_bandlimited_left_right_context_control_closed": false,
+    "beta_independent_cstar_dynamics_closed": false,
+    "canonical_momentum_weyl_bridge_closed": false,
+    "character_dirichlet_filter": {
+      "a_xi": "sqrt(104390)/550",
+      "commutator": {
+        "generator_momentum_coefficient": "6/11",
+        "generator_momentum_vector_coefficients": "Matrix([[3/11], [-4/11], [18/55]])",
+        "generator_scalar_coefficient": "6643/16500",
+        "momentum_coefficient": "42/55",
+        "momentum_shift": "Matrix([[7/10], [-14/15], [21/25]])",
+        "momentum_vector_coefficients": "Matrix([[21/55], [-28/55], [126/275]])",
+        "scalar_coefficient": "46501/82500"
+      },
+      "double_commutator": "46501/41250",
+      "fejer": {
+        "connected_equals_uncentered": true,
+        "delta_duhamel_error_bound": "sqrt(104390)/550",
+        "duhamel_error_bound": "2*sqrt(104390)/3575",
+        "fejer_zero_multiplier": "1",
+        "filter_error_mean": "0",
+        "filter_error_operator_bound": 2,
+        "filtered_character_operator_bound": 1,
+        "generator_mean": "0",
+        "modular_bandwidth": "91/12",
+        "modular_bandwidth_form": "3358/10725",
+        "raw_character_operator_norm": 1,
+        "unaveraged_two_sided_square_bound": "3358/10725",
+        "unaveraged_two_sided_square_formula": "3358/10725"
+      },
+      "inputs": {
+        "beta": "5/3",
+        "chi": "11/6",
+        "hbar": "7/5",
+        "physical_bandwidth": "13/4",
+        "xi": [
+          "1/2",
+          "-2/3",
+          "3/5"
+        ]
+      },
+      "kubo_delta_square": "949/2750",
+      "kubo_expected": "949/2750",
+      "mean_fixture": {
+        "exponential_residual": "-5/2 + exp(3/2)",
+        "factorized_residual": "(-5 + 2*exp(3/2))/(2*(-1 + exp(1/2))*(1 + exp(1/2) + E))",
+        "lhs": "3*(1 + exp(3/2))/(4*(-1 + exp(3/2)))",
+        "lhs_coth": "3*coth(3/4)/4",
+        "modular_gap": "3/2",
+        "residual": "(-5 + 2*exp(3/2))/(2*(-1 + exp(1/2))*(1 + exp(1/2) + E))",
+        "rhs": "7/4"
+      },
+      "xi_norm_sq": "949/900"
+    },
+    "common_hilbert_operator_strong_star_closed": false,
+    "embedding_no_gos": {
+      "dimension_collapse": {
+        "finite_rank": 2,
+        "finite_rows": [
+          {
+            "distance_sq": "1/2",
+            "epsilon": "1/2",
+            "gram": "Matrix([[1/2, 0], [0, 1/2]])",
+            "rank": 2
+          },
+          {
+            "distance_sq": "1/8",
+            "epsilon": "1/4",
+            "gram": "Matrix([[3/4, 0], [0, 1/4]])",
+            "rank": 2
+          },
+          {
+            "distance_sq": "1/32",
+            "epsilon": "1/8",
+            "gram": "Matrix([[7/8, 0], [0, 1/8]])",
+            "rank": 2
+          },
+          {
+            "distance_sq": "1/128",
+            "epsilon": "1/16",
+            "gram": "Matrix([[15/16, 0], [0, 1/16]])",
+            "rank": 2
+          }
+        ],
+        "injective_isometry_possible": false,
+        "limit_gram": "Matrix([[1, 0], [0, 0]])",
+        "limit_rank": 1
+      },
+      "rotating_null": {
+        "limit_gram": "Matrix([[1, 0], [0, 0]])",
+        "limit_rank": 1,
+        "naive_label_map_well_defined": false,
+        "rows": [
+          {
+            "finite_null_value": "0",
+            "gram": "Matrix([[1, 1/2], [1/2, 1/4]])",
+            "gram_distance_sq": "9/16",
+            "limit_null_value": "1/4",
+            "n": "2",
+            "null_vector": "Matrix([[-1/2], [1]])"
+          },
+          {
+            "finite_null_value": "0",
+            "gram": "Matrix([[1, 1/4], [1/4, 1/16]])",
+            "gram_distance_sq": "33/256",
+            "limit_null_value": "1/16",
+            "n": "4",
+            "null_vector": "Matrix([[-1/4], [1]])"
+          },
+          {
+            "finite_null_value": "0",
+            "gram": "Matrix([[1, 1/8], [1/8, 1/64]])",
+            "gram_distance_sq": "129/4096",
+            "limit_null_value": "1/64",
+            "n": "8",
+            "null_vector": "Matrix([[-1/8], [1]])"
+          },
+          {
+            "finite_null_value": "0",
+            "gram": "Matrix([[1, 1/16], [1/16, 1/256]])",
+            "gram_distance_sq": "513/65536",
+            "limit_null_value": "1/256",
+            "n": "16",
+            "null_vector": "Matrix([[-1/16], [1]])"
+          }
+        ]
+      }
+    },
+    "finite_span": {
+      "coefficients": [
+        "2/5",
+        "3/7"
+      ],
+      "delta_bound": "12*sqrt(110)/175",
+      "delta_bound_square": "3168/6125",
+      "ell_gradient": "44/35",
+      "frequencies": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ],
+      "gradient_at_zero": [
+        "44/35",
+        "0"
+      ],
+      "gradient_norm_at_zero": "44/35",
+      "sharp_at_zero": true
+    },
+    "fixed_band_finite_word_gram_convergence_scope": true,
+    "gram_polar_transport": {
+      "congruence": "Matrix([[epsilon**2 + 4, 5*epsilon], [5*epsilon, epsilon**2 + 9]])",
+      "fixtures": [
+        {
+          "congruence_residual": "Matrix([[0, 0], [0, 0]])",
+          "epsilon": "1/2",
+          "noncommutator": "Matrix([[0, -25/2], [25/2, 0]])",
+          "root_determinant": "23/4",
+          "root_first_minor": "2",
+          "transport_distance_sq": "11939/9522"
+        },
+        {
+          "congruence_residual": "Matrix([[0, 0], [0, 0]])",
+          "epsilon": "1/3",
+          "noncommutator": "Matrix([[0, -25/3], [25/3, 0]])",
+          "root_determinant": "53/9",
+          "root_first_minor": "2",
+          "transport_distance_sq": "114910/227529"
+        },
+        {
+          "congruence_residual": "Matrix([[0, 0], [0, 0]])",
+          "epsilon": "1/5",
+          "noncommutator": "Matrix([[0, -5], [5, 0]])",
+          "root_determinant": "149/25",
+          "root_first_minor": "2",
+          "transport_distance_sq": "848302/4995225"
+        },
+        {
+          "congruence_residual": "Matrix([[0, 0], [0, 0]])",
+          "epsilon": "1/8",
+          "noncommutator": "Matrix([[0, -25/8], [25/8, 0]])",
+          "root_determinant": "383/64",
+          "root_first_minor": "2",
+          "transport_distance_sq": "2706635/42246432"
+        }
+      ],
+      "gram_n": "Matrix([[epsilon**2 + 4, 5*epsilon], [5*epsilon, epsilon**2 + 9]])",
+      "gram_zero": "Matrix([[4, 0], [0, 9]])",
+      "operator_transport": {
+        "adjoint_residual": "Matrix([[0, 0], [0, 0]])",
+        "left_n": "Matrix([[epsilon, 1 - epsilon], [2, epsilon]])",
+        "left_zero": "Matrix([[0, 1], [2, 0]])",
+        "transported_left": "Matrix([[epsilon*(epsilon**2 - 2*epsilon - 10)/(epsilon**2 - 6), 3*(epsilon**2 + 2*epsilon - 2)/(epsilon**2 - 6)], [2*(-epsilon**3 + epsilon**2 - 18)/(3*(epsilon**2 - 6)), epsilon*(epsilon**2 + 2*epsilon - 2)/(epsilon**2 - 6)]])",
+        "transported_limit": "Matrix([[0, 1], [2, 0]])"
+      },
+      "singular_support": {
+        "discarded_indices": [
+          1
+        ],
+        "finite": "Matrix([[epsilon + 1, 0, 0], [0, epsilon**2, 0], [0, 0, 4 - epsilon]])",
+        "limit": "Matrix([[1, 0, 0], [0, 0, 0], [0, 0, 4]])",
+        "limit_determinant": "0",
+        "limit_rank": 2,
+        "reduced_congruence": "Matrix([[epsilon + 1, 0], [0, 4 - epsilon]])",
+        "reduced_finite": "Matrix([[epsilon + 1, 0], [0, 4 - epsilon]])",
+        "reduced_limit": "Matrix([[1, 0], [0, 4]])",
+        "reduced_transport": "Matrix([[sqrt(epsilon + 1), 0], [0, sqrt(4 - epsilon)/2]])",
+        "retained_indices": [
+          0,
+          2
+        ]
+      },
+      "square_root_n": "Matrix([[2, epsilon], [epsilon, 3]])",
+      "square_root_zero": "Matrix([[2, 0], [0, 3]])",
+      "transport": "Matrix([[1, epsilon/2], [epsilon/3, 1]])",
+      "transport_limit": "Matrix([[1, 0], [0, 1]])"
+    },
+    "independent_pivot_pointed_finite_core_fell_gns_scope": true,
+    "kms_scalar_analytic_continuation_from_real_time": true,
+    "local_jet_and_coordinate_tail": {
+      "coordinate_tail": {
+        "all_higher_orbit_rungs_resummed": false,
+        "cauchy_residual": "4788481/70560000",
+        "contraction": "437/840",
+        "exact_first_rung_square": "190969/2371600",
+        "first_rung_bound_square": "23885381/237160000",
+        "first_rung_coefficient": "sqrt(949)/55",
+        "first_rung_difference_coefficient": "-437*I/1540",
+        "gradient_fixture": [
+          "2/5",
+          "-1/7",
+          "3/8"
+        ],
+        "gradient_norm_sq": "25169/78400",
+        "tail_inputs": {
+          "constant": "7/3",
+          "power": "4",
+          "rate": "2"
+        },
+        "tail_rows": [
+          {
+            "bound": "112*exp(-8)/3",
+            "next_over_current_log_upper": "-8",
+            "radius": "2"
+          },
+          {
+            "bound": "189*exp(-18)",
+            "next_over_current_log_upper": "-38/3",
+            "radius": "3"
+          },
+          {
+            "bound": "1792*exp(-32)/3",
+            "next_over_current_log_upper": "-17",
+            "radius": "4"
+          },
+          {
+            "bound": "4375*exp(-50)/3",
+            "next_over_current_log_upper": "-106/5",
+            "radius": "5"
+          }
+        ],
+        "xi": [
+          "1/2",
+          "-2/3",
+          "3/5"
+        ],
+        "xi_norm_sq": "949/900"
+      },
+      "local_jet": {
+        "first_jet_source_difference": 0,
+        "neighborhood_balls": [
+          {
+            "binomial_formula": "1",
+            "enumerated_count": 1,
+            "maximum_l1_distance": 0,
+            "radius": "0"
+          },
+          {
+            "binomial_formula": "7",
+            "enumerated_count": 7,
+            "maximum_l1_distance": 1,
+            "radius": "1"
+          },
+          {
+            "binomial_formula": "25",
+            "enumerated_count": 25,
+            "maximum_l1_distance": 2,
+            "radius": "2"
+          },
+          {
+            "binomial_formula": "63",
+            "enumerated_count": 63,
+            "maximum_l1_distance": 3,
+            "radius": "3"
+          }
+        ],
+        "second_jet_difference_coefficient": "3*sqrt(2)*I/308",
+        "source": "3/7",
+        "source_pairing": "sqrt(2)/24",
+        "u": [
+          "sqrt(2)/4",
+          "sqrt(2)/4",
+          "sqrt(2)/4",
+          "sqrt(2)/4",
+          "sqrt(2)/4",
+          "sqrt(2)/4",
+          "sqrt(2)/4",
+          "sqrt(2)/4"
+        ],
+        "volume_independence_radius_rule": "m-th jet uses only the m-neighborhood",
+        "xi": [
+          "1/2",
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    },
+    "momentum_gauge_and_raw_character": {
+      "momentum_gauge": {
+        "canonical_momentum_selected": false,
+        "cylinder_trace_residual": "0",
+        "gauge": "Matrix([[2/5], [-1/3]])",
+        "gauged_cylinder_trace": "7726027/6048000",
+        "gauged_hamiltonian": "Matrix([[2, -I], [I, 3]])",
+        "generator_difference": "Matrix([[-12/55], [2/11]])",
+        "hamiltonian": "Matrix([[2, 1], [1, 3]])",
+        "original_cylinder_trace": "7726027/6048000",
+        "q_commutator_residual": "Matrix([[0, 0], [0, 0]])",
+        "unitary": "Matrix([[1, 0], [0, I]])",
+        "unitary_conjugation_residual": "Matrix([[0, 0], [0, 0]])"
+      },
+      "raw_character": {
+        "asymptotic_limit": "oo",
+        "asymptotic_slope": "42/55",
+        "bounded_generator_core": false,
+        "rows": [
+          {
+            "commutator_amplitude": "109501/82500",
+            "xi_dot_p_ray": "1"
+          },
+          {
+            "commutator_amplitude": "172501/82500",
+            "xi_dot_p_ray": "2"
+          },
+          {
+            "commutator_amplitude": "298501/82500",
+            "xi_dot_p_ray": "4"
+          },
+          {
+            "commutator_amplitude": "550501/82500",
+            "xi_dot_p_ray": "8"
+          },
+          {
+            "commutator_amplitude": "1054501/82500",
+            "xi_dot_p_ray": "16"
+          }
+        ],
+        "xi_dot_p_ray_expression": "42*xi_dot_p_ray/55 + 46501/82500"
+      }
+    },
+    "parity_and_cross_beta": {
+      "cross_beta": {
+        "difference_determinant": "-1",
+        "difference_trace": "0",
+        "first": {
+          "beta": "1",
+          "centered_log": "Matrix([[0, 1], [1, 0]])",
+          "coupling": "1",
+          "effective_generator": "Matrix([[0, -1], [-1, 0]])",
+          "eigenweights": [
+            "E/(2*cosh(1))",
+            "exp(-1)/(2*cosh(1))"
+          ],
+          "heat_entries_nonnegative": true,
+          "heat_kernel": "Matrix([[cosh(1/3), sinh(1/3)], [sinh(1/3), cosh(1/3)]])",
+          "log_ratio": "2",
+          "ratio": "exp(2)",
+          "rho": "Matrix([[1/2, tanh(1)/2], [tanh(1)/2, 1/2]])",
+          "x": "1"
+        },
+        "generator_difference": "Matrix([[0, -1], [-1, 0]])",
+        "second": {
+          "beta": "2",
+          "centered_log": "Matrix([[0, 4], [4, 0]])",
+          "coupling": "2",
+          "effective_generator": "Matrix([[0, -2], [-2, 0]])",
+          "eigenweights": [
+            "exp(4)/(2*cosh(4))",
+            "exp(-4)/(2*cosh(4))"
+          ],
+          "heat_entries_nonnegative": true,
+          "heat_kernel": "Matrix([[cosh(2/3), sinh(2/3)], [sinh(2/3), cosh(2/3)]])",
+          "log_ratio": "8",
+          "ratio": "exp(8)",
+          "rho": "Matrix([[1/2, tanh(4)/2], [tanh(4)/2, 1/2]])",
+          "x": "4"
+        },
+        "sigma_x": "Matrix([[0, 1], [1, 0]])",
+        "single_inner_dynamics_possible": false
+      },
+      "parity": {
+        "asymmetric_order": "-3/35",
+        "asymmetric_weight": "2/5",
+        "asymmetric_zero_source_periodic_limit_possible": false,
+        "parity_solutions": [
+          "1/2"
+        ],
+        "phase_order": "3/7",
+        "symbolic_mixture_order": "6*mixture_weight/7 - 3/7",
+        "symmetric_order": "0"
+      }
+    },
+    "raw_character_cyclic_two_sided_l2_filter_removal": true,
+    "raw_character_operator_strong_star_recovery_closed": false,
+    "raw_operator_complex_time_alpha_used": false,
+    "zero_source_periodic_symmetric_limit_closed": false
+  },
+  "exploration_id": "EXP-000801",
+  "negative_id": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+  ],
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_number": "R-167",
+  "result_version": "v1.5",
+  "schema": "tect/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-primary-result/1.0",
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split.py": "e2b760b8ed788b80565b7e3ee649c9272667ecefd2decd48c15d9ec034543caf",
+    "strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json": "52841edd083a9e4f45df5a6a633f84646773b82920605a769f1ccc5b6ce032ff",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json": "b06dc6b1370e2865d1d6a52795d12cc85204924df4b038545d7d24d76a52579d",
+    "strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-certificate.md": "4d1d886c3361b07ae34099fa10108fb07faa610a0cb8eb07f582760376c93593",
+    "strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-manifest.json": "facce35da2a48460a3afd87b6a8e194e537c114e34db468a7e6fd266c8b297ae",
+    "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json": "0e6f46c9f3532bc69605a42c01146d5de85897cdc69082c8de29ee829fd0f51f",
+    "strategy/pre-a-cp1-st8-q3lock-os-dynamics-ground-gap-counterterm-empty-route-split-manifest.json": "65dad7a04af5b83883ffff75e9ce4bead3e2bbc3359384744af18c489008f890"
+  },
+  "summary": {
+    "authority_status": "COMPLETE",
+    "failed": 0,
+    "passed": 107,
+    "total": 107
+  },
+  "verdict": "PASS"
+}

@@ -785,6 +785,28 @@ embed the exact finite-volume Hamiltonian orbits into this envelope, prove
 two-sided mixture-L2 or direct `D,delta D` exhaustion Cauchy, identify the
 local generator, and construct a beta-compatible state-independent algebra.
 
+EXP-000801 advances R-167 to v1.5 and closes the selected-tangent correlation
+subgate
+`PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION`.
+On the frozen `EXP-000781` `+h_n/-h_n` tangent nets, every fixed finite
+bandlimited Hamiltonian KMS word Gram block converges to the `EXP-000800`
+mixture block. Independent-pivot polar transports give pointed finite-core
+Fell/GNS convergence, while the exact character double commutator and Fejer
+bound recover each raw rational configuration character in cyclic two-sided
+L2. Pointwise Gram convergence does not create a literal label embedding;
+configuration cylinders do not select canonical momentum; raw characters
+are not a bounded generator core; parity excludes asymmetric zero-source
+mixture limits; and fixed-beta envelopes need not glue across beta.
+
+The surviving primary analytic gate is
+`PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS`:
+prove the untransported all-shape pairwise-union estimate in one
+preregistered locally normal representation, raw-context multiplication,
+exhaustion/group law, a kinetic/full-Weyl anchor, the symmetric zero-source
+periodic limit, and one beta-independent invariant C-star algebra. The v1.5
+selected-tangent theorem is not common-Hilbert operator strong-star
+convergence or an all-exhaustion completion.
+
 The fixed-beta envelope is not yet the thermodynamic Hamiltonian `alpha` and
 does not support beta-to-infinity algebraic ground states. Hamiltonian common-
 alpha identification, distinct algebraic ground states, broken-sector GNS

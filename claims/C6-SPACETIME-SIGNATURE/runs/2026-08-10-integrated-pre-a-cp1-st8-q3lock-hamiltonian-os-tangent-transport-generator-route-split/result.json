@@ -1,0 +1,1028 @@
+{
+  "assertions": {
+    "failed": 0,
+    "missing": 0,
+    "passed": 105,
+    "rows": [
+      {
+        "actual": "strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-manifest.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "manifest parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "candidate": true,
+          "claim_bearing": true,
+          "closed_gate": true,
+          "exploration": true,
+          "negatives": true,
+          "result_id": true,
+          "result_number": true,
+          "result_version": true,
+          "retained_gates": true,
+          "successor": true,
+          "task": true
+        },
+        "expected": "all true",
+        "group": "manifest",
+        "name": "manifest exact identity and gate contract",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split_independent.py",
+          "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split_verify.py",
+          "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split.py"
+        },
+        "expected": {
+          "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split_independent.py",
+          "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split_verify.py",
+          "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split.py"
+        },
+        "group": "manifest",
+        "name": "manifest exact verifier paths",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "cyclic_l2_positive": true,
+          "finite_core_positive": true,
+          "finite_word_intertwining": true,
+          "no_context": true,
+          "no_global_extension": true,
+          "no_raw_operator": true,
+          "route_cyclic": true,
+          "route_finite_core": true,
+          "singular_pivots": true
+        },
+        "expected": "all true",
+        "group": "scope",
+        "name": "manifest narrowed Fell-GNS and cyclic-L2 scope",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "scope",
+        "name": "manifest has no broadened positive topology claim",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "scope",
+        "name": "manifest no-overclaim required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 21755,
+        "expected": ">0",
+        "group": "formal",
+        "name": "certificate readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "scope",
+        "name": "certificate theorem and boundary required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "scope",
+        "name": "certificate has no broadened positive topology claim",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "independence",
+        "name": "independent import firewall",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "independence",
+        "name": "independent dynamic import firewall",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "module_named": false,
+          "result_named": false
+        },
+        "expected": {
+          "module_named": false,
+          "result_named": false
+        },
+        "group": "independence",
+        "name": "independent does not name primary module or stored result",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "independence",
+        "name": "primary does not import independent module",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "__future__",
+          "argparse",
+          "ast",
+          "fractions",
+          "hashlib",
+          "json",
+          "os",
+          "pathlib",
+          "re",
+          "subprocess",
+          "sys",
+          "tempfile",
+          "typing"
+        ],
+        "expected": "no primary/independent module import",
+        "group": "independence",
+        "name": "integrated imports neither theorem implementation",
+        "status": "PASS"
+      },
+      {
+        "actual": "different",
+        "expected": "different",
+        "group": "independence",
+        "name": "primary and independent ASTs differ",
+        "status": "PASS"
+      },
+      {
+        "actual": "cd8fabf1ee859e2e2ed043dbd798117492808d2ef13b12042514b25d95ee1e98",
+        "expected": "different from e2b760b8ed788b80565b7e3ee649c9272667ecefd2decd48c15d9ec034543caf",
+        "group": "independence",
+        "name": "primary and independent source hashes differ",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "primary fresh A execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "FRESH-COMPONENT PASS 107/107",
+        "expected": "FRESH-COMPONENT ...",
+        "group": "freshness",
+        "name": "primary fresh A fresh sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "primary fresh B execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "FRESH-COMPONENT PASS 107/107",
+        "expected": "FRESH-COMPONENT ...",
+        "group": "freshness",
+        "name": "primary fresh B fresh sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "a": "d9edddbf22a40fcb14852bbe2caecce4b1d69e730cb3243911b7db06ec53b4df",
+          "b": "d9edddbf22a40fcb14852bbe2caecce4b1d69e730cb3243911b7db06ec53b4df"
+        },
+        "expected": "equal canonical hashes",
+        "group": "freshness",
+        "name": "primary deterministic fresh equality",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "independent fresh A execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "FRESH-COMPONENT PASS 96/96",
+        "expected": "FRESH-COMPONENT ...",
+        "group": "freshness",
+        "name": "independent fresh A fresh sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "independent fresh B execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "FRESH-COMPONENT PASS 96/96",
+        "expected": "FRESH-COMPONENT ...",
+        "group": "freshness",
+        "name": "independent fresh B fresh sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "a": "92d3536e3d232e582c54ad1fc52724fea25f1356680e832a7bf7fc4a4beffd97",
+          "b": "92d3536e3d232e582c54ad1fc52724fea25f1356680e832a7bf7fc4a4beffd97"
+        },
+        "expected": "equal canonical hashes",
+        "group": "freshness",
+        "name": "independent deterministic fresh equality",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "fresh": "d9edddbf22a40fcb14852bbe2caecce4b1d69e730cb3243911b7db06ec53b4df",
+          "stored": "d9edddbf22a40fcb14852bbe2caecce4b1d69e730cb3243911b7db06ec53b4df"
+        },
+        "expected": "equal canonical hashes",
+        "group": "freshness",
+        "name": "primary stored equals fresh",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "fresh": "92d3536e3d232e582c54ad1fc52724fea25f1356680e832a7bf7fc4a4beffd97",
+          "stored": "92d3536e3d232e582c54ad1fc52724fea25f1356680e832a7bf7fc4a4beffd97"
+        },
+        "expected": "equal canonical hashes",
+        "group": "freshness",
+        "name": "independent stored equals fresh",
+        "status": "PASS"
+      },
+      {
+        "actual": "tect/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-primary-result/1.0",
+        "expected": "tect/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-primary-result/1.0",
+        "group": "components",
+        "name": "primary schema",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "group": "components",
+        "name": "primary result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-167",
+        "expected": "R-167",
+        "group": "components",
+        "name": "primary result number",
+        "status": "PASS"
+      },
+      {
+        "actual": "v1.5",
+        "expected": "v1.5",
+        "group": "components",
+        "name": "primary result version",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000801",
+        "expected": "EXP-000801",
+        "group": "components",
+        "name": "primary exploration id",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "group": "components",
+        "name": "primary verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "failed": 0,
+          "passed": 107,
+          "total": 107
+        },
+        "expected": "passed=total>=100, failed=0",
+        "group": "components",
+        "name": "primary all mathematical assertions PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": 107,
+        "expected": 107,
+        "group": "components",
+        "name": "primary assertion row count",
+        "status": "PASS"
+      },
+      {
+        "actual": 107,
+        "expected": 107,
+        "group": "components",
+        "name": "primary rows all PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+        ],
+        "expected": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+        ],
+        "group": "components",
+        "name": "primary exact negative set",
+        "status": "PASS"
+      },
+      {
+        "actual": "dict",
+        "expected": "dict",
+        "group": "hashes",
+        "name": "primary source hash map",
+        "status": "PASS"
+      },
+      {
+        "actual": "e2b760b8ed788b80565b7e3ee649c9272667ecefd2decd48c15d9ec034543caf",
+        "expected": "e2b760b8ed788b80565b7e3ee649c9272667ecefd2decd48c15d9ec034543caf",
+        "group": "hashes",
+        "name": "primary live hash codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split.py",
+        "status": "PASS"
+      },
+      {
+        "actual": "facce35da2a48460a3afd87b6a8e194e537c114e34db468a7e6fd266c8b297ae",
+        "expected": "facce35da2a48460a3afd87b6a8e194e537c114e34db468a7e6fd266c8b297ae",
+        "group": "hashes",
+        "name": "primary live hash strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "4d1d886c3361b07ae34099fa10108fb07faa610a0cb8eb07f582760376c93593",
+        "expected": "4d1d886c3361b07ae34099fa10108fb07faa610a0cb8eb07f582760376c93593",
+        "group": "hashes",
+        "name": "primary live hash strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-certificate.md",
+        "status": "PASS"
+      },
+      {
+        "actual": "tect/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-independent-result/1.0",
+        "expected": "tect/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-independent-result/1.0",
+        "group": "components",
+        "name": "independent schema",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "group": "components",
+        "name": "independent result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-167",
+        "expected": "R-167",
+        "group": "components",
+        "name": "independent result number",
+        "status": "PASS"
+      },
+      {
+        "actual": "v1.5",
+        "expected": "v1.5",
+        "group": "components",
+        "name": "independent result version",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000801",
+        "expected": "EXP-000801",
+        "group": "components",
+        "name": "independent exploration id",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "group": "components",
+        "name": "independent verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "failed": 0,
+          "passed": 96,
+          "total": 96
+        },
+        "expected": "passed=total>=90, failed=0",
+        "group": "components",
+        "name": "independent all mathematical assertions PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": 96,
+        "expected": 96,
+        "group": "components",
+        "name": "independent assertion row count",
+        "status": "PASS"
+      },
+      {
+        "actual": 96,
+        "expected": 96,
+        "group": "components",
+        "name": "independent rows all PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+        ],
+        "expected": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+        ],
+        "group": "components",
+        "name": "independent exact negative set",
+        "status": "PASS"
+      },
+      {
+        "actual": "dict",
+        "expected": "dict",
+        "group": "hashes",
+        "name": "independent source hash map",
+        "status": "PASS"
+      },
+      {
+        "actual": "cd8fabf1ee859e2e2ed043dbd798117492808d2ef13b12042514b25d95ee1e98",
+        "expected": "cd8fabf1ee859e2e2ed043dbd798117492808d2ef13b12042514b25d95ee1e98",
+        "group": "hashes",
+        "name": "independent live hash codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split_independent.py",
+        "status": "PASS"
+      },
+      {
+        "actual": "facce35da2a48460a3afd87b6a8e194e537c114e34db468a7e6fd266c8b297ae",
+        "expected": "facce35da2a48460a3afd87b6a8e194e537c114e34db468a7e6fd266c8b297ae",
+        "group": "hashes",
+        "name": "independent live hash strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "4d1d886c3361b07ae34099fa10108fb07faa610a0cb8eb07f582760376c93593",
+        "expected": "4d1d886c3361b07ae34099fa10108fb07faa610a0cb8eb07f582760376c93593",
+        "group": "hashes",
+        "name": "independent live hash strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-certificate.md",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": true,
+          "primary": true
+        },
+        "expected": {
+          "independent": true,
+          "primary": true
+        },
+        "group": "cross_core",
+        "name": "exact character, Kubo and Fejer constants cross",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": "4",
+          "primary": "3168/6125"
+        },
+        "expected": "exact coefficient-weighted character bound",
+        "group": "cross_core",
+        "name": "finite-span Duhamel bounds cross",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent_distances": [
+            "1/3",
+            "2/9",
+            "2/15",
+            "1/15",
+            "1/30"
+          ],
+          "independent_retained": [
+            0,
+            2
+          ],
+          "primary_distances": [
+            "11939/9522",
+            "114910/227529",
+            "848302/4995225",
+            "2706635/42246432"
+          ],
+          "primary_retained": [
+            0,
+            2
+          ]
+        },
+        "expected": "zero residuals, decreasing distance, retained [0,2], no full inverse",
+        "group": "cross_core",
+        "name": "exact positive-root congruence and singular-pivot cross",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "cross_core",
+        "name": "embedding, momentum and raw-generator negatives cross",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "cross_core",
+        "name": "parity and cross-beta negatives cross",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "cross_core",
+        "name": "first-tail-only boundary cross",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": {
+            "finite_core_fell_gns": true,
+            "no_all_exhaustion": true,
+            "no_arbitrary_context": true,
+            "no_common_hilbert_strong_star": true,
+            "selected_tangent": true
+          },
+          "primary": {
+            "cyclic_l2_only": true,
+            "finite_core_fell_gns": true,
+            "fixed_band": true,
+            "no_arbitrary_context": true,
+            "no_common_hilbert_strong_star": true,
+            "no_operator_complex_time": true,
+            "no_raw_operator_strong_star": true,
+            "scalar_kms": true
+          }
+        },
+        "expected": "all true",
+        "group": "scope",
+        "name": "narrowed topology scope cross",
+        "status": "PASS"
+      },
+      {
+        "actual": 802,
+        "expected": ">=1",
+        "group": "formal",
+        "name": "exploration ledger parses",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "EXP-000801 unique",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "EXP-000802 correction unique",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "claim": true,
+          "closed_gate": true,
+          "negatives": true,
+          "no_note_pdf": true,
+          "paths": true,
+          "result": true,
+          "successor_gate": true,
+          "task": true,
+          "verdict": true
+        },
+        "expected": "all true",
+        "group": "formal",
+        "name": "EXP-000801 complete chain",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "EXP-000801 base boundary required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "aggregate_paths": true,
+          "claim": true,
+          "integrated_path": true,
+          "no_note_pdf": true,
+          "relation": true,
+          "result": true,
+          "task": true,
+          "verdict": true
+        },
+        "expected": "all true",
+        "group": "formal",
+        "name": "EXP-000802 append-only correction chain",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "EXP-000801/EXP-000802 aggregate narrow scope required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 608928,
+        "expected": ">0",
+        "group": "formal",
+        "name": "result ledger readable",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "R-167 unique detail",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "R-167 v1.5 ledger required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 648790,
+        "expected": ">0",
+        "group": "formal",
+        "name": "negative registry readable",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING",
+        "status": "PASS"
+      },
+      {
+        "actual": 222247,
+        "expected": ">0",
+        "group": "formal",
+        "name": "gate authority readable",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION**\n\n**Statement:** Along the already registered `EXP-000781` plus/minus source\ntangent subsequences at one fixed `beta`, prove convergence of every finite\nbandlimited real-time configuration-word Gram block to the `EXP-000800`\nmixture kernel. Use support-aware finite-block polar transports to obtain a\npointed finite-core Fell/GNS identification. Recover each raw rational\nconfiguration character in cyclic two-sided L2 by a volume- and\nsource-uniform Fejer/Dirichlet estimate.\n\n**Status:** CLOSED IN THE SELECTED TANGENT-NET SCOPE (2026-08-10).\n`EXP-000801` / R-167 v1.5 proves bounded scalar KMS-tube convergence and fixed\nphysical-time boundary smoothing on the frozen `+h_n/-h_n` diagonal nets.\nFor every limit-independent finite Gram block,\n`M_(n,k)=G_0^(-1/2)G_n^(1/2)` is an exact congruence isometry tending to the\nidentity. Independent limiting pivots discard vanishing directions and give\npointed finite-core Fell/GNS convergence. The exact character identity\n`[W_xi^*,[H,W_xi]]=hbar^2||xi||^2/chi` yields\n`||delta W_xi||_D^2=||xi||^2/(beta chi)` and the uniform cyclic estimate\n`||W_xi-W_xi^(R)||_#<=a_xi sqrt(2/R^2+beta hbar/R)`.\n\nThis is not a label-preserving complete-GNS embedding, a globally compatible\ncommon-Hilbert operator strong-star limit, raw-character operator convergence\nafter arbitrary left/right contexts, an all-exhaustion theorem, the\nzero-source periodic limit, a canonical momentum generator, or a\nbeta-independent C-star dynamics.\n",
+        "expected": "CLOSED and linked to EXP-000801",
+        "group": "formal",
+        "name": "closed selected-tangent gate authority",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS**\n\n**Statement:** In one preregistered locally normal representation, prove an\nall-shape pairwise-union estimate for every bounded local seed, uniformly on\ncompact real times,\n\n`sup_(Lambda,Lambda' superset B_R(X)) ||X_Lambda-X_Lambda'||_(#,beta) -> 0`.\n\nUse it to establish exhaustion independence, products, star, inverse, group\nlaw and strong continuity. Construct one beta-independent invariant C-star\nalgebra and derivation, add the kinetic/CCR anchor needed for canonical\nmomentum, and separately prove the symmetric zero-source periodic anchoring\nbefore any ground-state limit.\n\n**Status:** OPEN (2026-08-10). `EXP-000801` proves only selected-tangent\nfinite-word kernel/Gram convergence after explicit finite-block transports.\nIt supplies neither the untransported pairwise-union estimate nor a common\nHilbert embedding for complete finite GNS spaces. Its Fejer theorem is cyclic\ntwo-sided L2 recovery of each raw character, not a multiplier theorem in\narbitrary word contexts. The five v1.5 negative results remove naive label,\nmomentum, raw-generator, asymmetric-periodic and automatic cross-beta\nshortcuts without proving that the required common dynamics is nonexistent.\n\n## A6/A7 full derivative Class-II composite and renormalisation gates\n",
+        "expected": "OPEN and linked to EXP-000801",
+        "group": "formal",
+        "name": "open successor gate authority",
+        "status": "PASS"
+      },
+      {
+        "actual": "todo/todo.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "TODO authority parses",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "T-054 unique",
+        "status": "PASS"
+      },
+      {
+        "actual": "in_progress",
+        "expected": "in_progress",
+        "group": "formal",
+        "name": "T-054 remains in progress",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "T-054 v1.5 linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 80127,
+        "expected": ">0",
+        "group": "formal",
+        "name": "roadmap readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "roadmap v1.5 linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": "governance/sector-a-theorem-map.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "Sector-A theorem map parses",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "theorem map v1.5 linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 580,
+        "expected": ">=1",
+        "group": "formal",
+        "name": "changelog parses",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "EXP-000801 changelog unique",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "claim_refs": true,
+          "negatives": true,
+          "no_note_pdf_path": true,
+          "notes_deferred": true,
+          "scope": true,
+          "scripts": true
+        },
+        "expected": "all true",
+        "group": "formal",
+        "name": "EXP-000801 changelog complete",
+        "status": "PASS"
+      },
+      {
+        "actual": 3162446,
+        "expected": ">0",
+        "group": "formal",
+        "name": "proof-evidence map readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "proof-evidence map v1.5 linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/proof-evidence-map.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "proof-evidence JSON map parses",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "proof-evidence JSON v1.5 linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/C6-SPACETIME-SIGNATURE/status.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "C6 status parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "T1",
+        "expected": "T1",
+        "group": "claim_firewall",
+        "name": "C6 tier unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": "ACTIVE",
+        "expected": "ACTIVE",
+        "group": "claim_firewall",
+        "name": "C6 lifecycle unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "C6-BCC-PREMISE-BLOCKED"
+        ],
+        "expected": [
+          "C6-BCC-PREMISE-BLOCKED"
+        ],
+        "group": "claim_firewall",
+        "name": "C6 open gate unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "pdf_efficiency",
+        "name": "no EXP-000801 note source or PDF exists",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "returncode": 0,
+          "stderr": ""
+        },
+        "expected": {
+          "returncode": 0
+        },
+        "group": "pdf_efficiency",
+        "name": "git can audit changed note/PDF artifacts",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "pdf_efficiency",
+        "name": "no new or reissued note/PDF in worktree",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "pdf_efficiency",
+        "name": "manifest and certificate cite no intermediate note/PDF path",
+        "status": "PASS"
+      }
+    ],
+    "total": 105
+  },
+  "boundary": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+  "claim_bearing": false,
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "closed_gates": [
+    "PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION"
+  ],
+  "component_summaries": {
+    "independent": {
+      "assertions": [
+        96,
+        0,
+        96
+      ],
+      "schema": "tect/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-independent-result/1.0",
+      "verdict": "PASS"
+    },
+    "primary": {
+      "assertions": [
+        107,
+        0,
+        107
+      ],
+      "schema": "tect/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-primary-result/1.0",
+      "verdict": "PASS"
+    }
+  },
+  "cross_derived": {
+    "character_fejer_exact": true,
+    "finite_span_exact": true,
+    "first_tail_only": true,
+    "five_negative_fixtures_crossed": true,
+    "positive_root_transport_exact": true,
+    "scope": {
+      "arbitrary_context_control_closed": false,
+      "common_hilbert_operator_strong_star_closed": false,
+      "fejer_cyclic_two_sided_l2_only": true,
+      "pointed_finite_core_fell_gns_only": true
+    }
+  },
+  "exploration_id": "EXP-000801",
+  "failures": [],
+  "formal_workflow": {
+    "changelog_matches": 1,
+    "correction_matches": 1,
+    "exploration_matches": 1,
+    "formal_authorities_complete": true
+  },
+  "fresh_sentinels": {
+    "independent": "FRESH-COMPONENT PASS 96/96",
+    "primary": "FRESH-COMPONENT PASS 107/107"
+  },
+  "missing_authorities": [],
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+  ],
+  "pdf_efficiency": {
+    "authority_artifact_refs": [],
+    "changed_note_or_pdf_artifacts": [],
+    "package_artifacts": [],
+    "pdf_imported": false,
+    "policy": "development-records-only-until-gate-checkpoint",
+    "render_attempted": false
+  },
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_number": "R-167",
+  "result_version": "v1.5",
+  "schema": "tect/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-integrated-result/1.0",
+  "scope": {
+    "all_exhaustion_mixture_l2_closed": false,
+    "beta_independent_cstar_dynamics_closed": false,
+    "common_hilbert_operator_strong_star_closed": false,
+    "fejer_cyclic_two_sided_l2_only": true,
+    "pointed_finite_core_fell_gns_only": true,
+    "raw_character_arbitrary_context_control_closed": false,
+    "raw_character_operator_strong_star_closed": false
+  },
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-independent-pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split/result.json": "56a23e921768ad6affc7f531cfec72f5413472cda4de051d0a69b8c2351a9ce5",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-primary-pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split/result.json": "5ec3779dabeb7d41e3190631f6a523699f7fe11e20fb8a243e1a6d65afdc4603",
+    "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split.py": "e2b760b8ed788b80565b7e3ee649c9272667ecefd2decd48c15d9ec034543caf",
+    "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split_independent.py": "cd8fabf1ee859e2e2ed043dbd798117492808d2ef13b12042514b25d95ee1e98",
+    "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split_verify.py": "5dba31bc632942b61a9bfe0576ae05d4b3c854ac14653d606942d7f84c9859bd",
+    "strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-certificate.md": "4d1d886c3361b07ae34099fa10108fb07faa610a0cb8eb07f582760376c93593",
+    "strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-manifest.json": "facce35da2a48460a3afd87b6a8e194e537c114e34db468a7e6fd266c8b297ae"
+  },
+  "summary": {
+    "failed": 0,
+    "missing": 0,
+    "passed": 105,
+    "total": 105
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

@@ -486,26 +486,87 @@ alone would not suffice. This is a pair- and beta-defined OS envelope, not the
 thermodynamic limit of the exact finite-volume Hamiltonians and not a
 beta-independent common C-star alpha.
 
+### **PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION**
+
+**Statement:** Along the already registered `EXP-000781` plus/minus source
+tangent subsequences at one fixed `beta`, prove convergence of every finite
+bandlimited real-time configuration-word Gram block to the `EXP-000800`
+mixture kernel. Use support-aware finite-block polar transports to obtain a
+pointed finite-core Fell/GNS identification. Recover each raw rational
+configuration character in cyclic two-sided L2 by a volume- and
+source-uniform Fejer/Dirichlet estimate.
+
+**Status:** CLOSED IN THE SELECTED TANGENT-NET SCOPE (2026-08-10).
+`EXP-000801` / R-167 v1.5 proves bounded scalar KMS-tube convergence and fixed
+physical-time boundary smoothing on the frozen `+h_n/-h_n` diagonal nets.
+For every limit-independent finite Gram block,
+`M_(n,k)=G_0^(-1/2)G_n^(1/2)` is an exact congruence isometry tending to the
+identity. Independent limiting pivots discard vanishing directions and give
+pointed finite-core Fell/GNS convergence. The exact character identity
+`[W_xi^*,[H,W_xi]]=hbar^2||xi||^2/chi` yields
+`||delta W_xi||_D^2=||xi||^2/(beta chi)` and the uniform cyclic estimate
+`||W_xi-W_xi^(R)||_#<=a_xi sqrt(2/R^2+beta hbar/R)`.
+
+This is not a label-preserving complete-GNS embedding, a globally compatible
+common-Hilbert operator strong-star limit, raw-character operator convergence
+after arbitrary left/right contexts, an all-exhaustion theorem, the
+zero-source periodic limit, a canonical momentum generator, or a
+beta-independent C-star dynamics.
+
 ### **PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE**
 
 **Statement:** Embed the exact finite-volume Hamiltonian evolution of the
 rational finite-support configuration-character seed into the canonical
 fixed-beta OS mixture envelope. Prove direct two-sided mixture-L2 Cauchy, or
 direct Duhamel `D,delta D` estimates implying it, uniformly on compact real
-times and independently of the exhaustion. Identify the limit generator with
-the registered local polynomial derivation on a strong-dense orbit-word core,
-and prove products, star, inverse, group law and strong continuity. Finally
-construct a beta-compatible state-independent algebra before any
+times and independently of the exhaustion. Identify the limit generator on a
+bounded temporal-smear core and supply an independently registered kinetic/CCR
+anchor before identifying canonical momentum or the local polynomial
+derivation. Prove products, star, inverse, group law and strong continuity.
+Finally construct a beta-compatible state-independent algebra before any
 beta-to-infinity ground-state claim.
 
-**Status:** OPEN (2026-08-10). The target W-star topology is now canonical at
-each fixed beta, and its two-sided L2 seminorm metrizes strong-star on bounded
-sets. Missing are the finite-volume-to-envelope embedding, boundary Cauchy,
-exhaustion independence, generator identification, full canonical
-momentum/Weyl bridge, and compatibility across beta. The symmetric phase
-mixture is also not yet proved to be the periodic zero-source finite-volume
-limit. Closing only the fixed-beta envelope does not license algebraic ground
-states or a GNS gap.
+**Status:** OPEN, WITH THE SELECTED-TANGENT CORRELATION SUBGATE CLOSED
+(2026-08-10). `EXP-000801` / R-167 v1.5 identifies each fixed finite
+bandlimited word block of the selected `EXP-000781` tangent Hamiltonian KMS
+systems with the `EXP-000800` mixture in pointed finite-core Fell/GNS
+topology, and cyclically de-filters each raw character. It also proves that
+pointwise Gram convergence does not define a literal quotient-label
+embedding, configuration cylinders do not select momentum, raw characters
+are not a bounded generator core, asymmetric mixtures cannot be zero-source
+periodic limits, and fixed-beta envelopes need not glue across beta.
+
+Missing are the all-shape pairwise-union estimate in one preregistered
+locally normal representation, boundary Cauchy, exhaustion independence,
+raw-context operator convergence, canonical kinetic/full-Weyl identification,
+and beta compatibility. These obligations are concentrated in
+`PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS`.
+The symmetric phase mixture is also not yet proved to be the periodic
+zero-source finite-volume limit. The selected-tangent theorem does not
+license algebraic ground states or a GNS gap.
+
+### **PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS**
+
+**Statement:** In one preregistered locally normal representation, prove an
+all-shape pairwise-union estimate for every bounded local seed, uniformly on
+compact real times,
+
+`sup_(Lambda,Lambda' superset B_R(X)) ||X_Lambda-X_Lambda'||_(#,beta) -> 0`.
+
+Use it to establish exhaustion independence, products, star, inverse, group
+law and strong continuity. Construct one beta-independent invariant C-star
+algebra and derivation, add the kinetic/CCR anchor needed for canonical
+momentum, and separately prove the symmetric zero-source periodic anchoring
+before any ground-state limit.
+
+**Status:** OPEN (2026-08-10). `EXP-000801` proves only selected-tangent
+finite-word kernel/Gram convergence after explicit finite-block transports.
+It supplies neither the untransported pairwise-union estimate nor a common
+Hilbert embedding for complete finite GNS spaces. Its Fejer theorem is cyclic
+two-sided L2 recovery of each raw character, not a multiplier theorem in
+arbitrary word contexts. The five v1.5 negative results remove naive label,
+momentum, raw-generator, asymmetric-periodic and automatic cross-beta
+shortcuts without proving that the required common dynamics is nonexistent.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 

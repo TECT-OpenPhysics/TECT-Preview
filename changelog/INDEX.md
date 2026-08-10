@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**579 accepted events** · latest 25 shown below · machine locator: `index.json`
+**580 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-10 | `20260810-r-167-v1-5-identifies-the-selected-hamiltonian` — [R-167 v1.5 identifies the selected Hamiltonian tangent nets with the fixed-beta OS mixture] - 2026-08-10 | C6-SPACETIME-SIGNATURE, EXP-000801, R-167 | [bounded page](pages/000569-000618.md#20260810-r-167-v1-5-identifies-the-selected-hamiltonian) |
 | 2026-08-10 | `20260810-r-167-v1-4-closes-the-fixed-beta-canonical-os-m` — [R-167 v1.4 closes the fixed-beta canonical OS-mixture common normal KMS envelope] - 2026-08-10 | C6-SPACETIME-SIGNATURE, EXP-000800, R-167 | [bounded page](pages/000569-000618.md#20260810-r-167-v1-4-closes-the-fixed-beta-canonical-os-m) |
 | 2026-08-10 | `20260810-advance-r-167-to-v1-3-and-reject-the-fixed-crit` — [Advance R-167 to v1.3 and reject the fixed critical Leibniz onsite route] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-advance-r-167-to-v1-3-and-reject-the-fixed-crit) |
 | 2026-08-10 | `20260810-exp-000798-r-167-v1-2-modular-cutoff-and-unitar` — [EXP-000798 / R-167 v1.2: modular cutoff and unitary resummation route split] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-exp-000798-r-167-v1-2-modular-cutoff-and-unitar) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-04 | `20260804-exp-000770-corrects-exp-000769-to-sharp-cutoff` — [EXP-000777 corrects EXP-000776 to sharp-cutoff theorem and open periodic surface gate] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 | 2026-08-04 | `20260804-exp-000769-closes-strict-q3-zero-temperature-ce` — [EXP-000776 closes strict Q3 zero-temperature centered density and scalar van-Hove limits] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 | 2026-08-04 | `20260804-exp-000768-closes-fixed-beta-q3-nelson-pressure` — [EXP-000775 closes fixed-beta Q3 Nelson pressure and strict specific KL density] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
-| 2026-08-04 | `20260804-exp-000767-closes-beta-independent-compact-circ` — [EXP-000774 closes beta-independent compact-circle Q3 Hamiltonian and strict ground reference advantage] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 
 ## Post-cutover pages
 
@@ -49,4 +49,4 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 569–579 | 11 | [000569-000618.md](pages/000569-000618.md) |
+| 569–580 | 12 | [000569-000618.md](pages/000569-000618.md) |

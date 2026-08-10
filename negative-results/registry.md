@@ -9,6 +9,11 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING](#ng-2026-08-10-pre-a-st8-q3lock-pointwise-os-gram-naive-label-embedding) | turn pointwise convergence of OS Gram forms into the literal quotient-label map `[F]_n -> [F]_0` or an injective complete-GNS embedding | rotating rank-one forms converge pointwise while their null spaces are not nested, and a faithful-to-rank-one state limit collapses GNS dimension. Retain independent limiting pivots and explicit finite-block polar transports |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR](#ng-2026-08-10-pre-a-st8-q3lock-configuration-cylinder-canonical-momentum-generator) | infer a canonical momentum or polynomial CCR generator from bounded Euclidean configuration-cylinder data alone | the momentum-gauge-conjugate Hamiltonians `p^2/(2chi)+V(q)` and `(p-a)^2/(2chi)+V(q)` have identical bounded q-cylinder traces but send `q` to `p/chi` and `(p-a)/chi`. Require an independent kinetic/CCR anchor |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE](#ng-2026-08-10-pre-a-st8-q3lock-raw-configuration-character-bounded-generator-core) | use raw rational configuration characters as a bounded W-star generator core | `[H,W_xi]` contains the unbounded multiplier `(hbar/chi)xi.p`; raw characters remain valid bounded orbit and Duhamel-form seeds, while temporal smears supply the bounded smooth core |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT](#ng-2026-08-10-pre-a-st8-q3lock-asymmetric-mixture-zero-source-periodic-limit) | identify an asymmetric convex mixture of the ordered path laws with a zero-source periodic finite-volume limit | every finite zero-source periodic law is parity invariant, while parity exchanges the distinct ordered laws; the mixture is invariant only at weight `1/2`. The symmetric case still needs phase exhaustiveness or direct convergence |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING](#ng-2026-08-10-pre-a-st8-q3lock-fixed-beta-envelope-automatic-cross-beta-gluing) | infer one beta-independent dynamics merely from separately valid fixed-beta OS/KMS envelopes | two exact stochastically positive `M_2` Gibbs systems at different beta require nonscalar-different generators. Construct one beta-independent algebra and derivation before any cross-beta or ground-state passage |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY](#ng-2026-08-10-pre-a-st8-q3lock-sharp-time-os-gram-only-real-time-functoriality) | infer common real-time or analytic-word intertwining from domination or equality of the sharp-time OS Gram form alone | two finite Gibbs systems have the same diagonal sharp-time Gram and multiplier action but distinct real-time rotations and midpoint Euclidean two-point functions `1` and `4/5`. Retain the full common positive-time cylinder module and translation action used by the canonical fixed-beta mixture theorem |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS](#ng-2026-08-10-pre-a-st8-q3lock-full-gibbs-half-modular-local-separating-class) | build a nontrivial bounded finite-support separating class whose two full-Gibbs half-modular endpoint conjugates are bounded | strip analyticity first makes `[H,A]` bounded; configuration translations and momentum boosts at an extreme support site then force `[q_x,A]=[p_x,A]=0`, and sitewise irreducibility makes `A` scalar. Retain direct `D,delta D`, nonlocal spectral analytic, state-weighted or weaker topology routes |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE](#ng-2026-08-10-pre-a-st8-q3lock-single-rung-energy-constrained-sitewise-influence-recurrence) | propagate one frequency-blind energy-constrained site-influence rung through the exact bond kick with a neighbor coefficient tending to zero with the step | the kick sends `W_a(x)` to `W_a(x)exp(-ic delta a q_y/hbar)`; choosing `a=pi hbar/(c|delta|b)` leaves an order-one commutator with a fixed normalized `W_b(y)` test for every nonzero step. Retain a Weyl-frequency or analytic-rung hierarchy and prove its quartic onsite orbit closure |
@@ -326,6 +331,107 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-pointwise-os-gram-naive-label-embedding"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING -- pointwise Gram convergence does not preserve quotient labels
+
+**Failure mode.**  Define the literal map `[F]_n -> [F]_0`, or an injective
+embedding of each complete finite GNS space into the limiting GNS space, from
+pointwise convergence of all finite OS Gram entries alone.
+
+**Evidence.**  On `C^2`, let unit vectors `v_n` tend to `e_1` without ever
+being parallel to it and put `q_n(x)=|<v_n,x>|^2`.  Then `q_n(x)->|x_1|^2`
+pointwise, but `N_n=v_n^perp` is not contained in `N_0=e_1^perp`, so the
+displayed quotient-label map is not well-defined.  Independently, faithful
+diagonal states tending to a rank-one state have two-dimensional finite GNS
+supports and a one-dimensional limiting support.  The primary and
+non-importing v1.5 verifiers reconstruct both fixtures.
+
+**Consequence.**  Use a frozen independent limiting pivot rule and the exact
+finite-block congruence
+`M_(n,k)=G_0^(-1/2)G_n^(1/2)`, discarding vanishing directions.  This yields
+the scoped pointed finite-core Fell/GNS transport in `R-167 v1.5`; it does not
+give a canonical label-preserving complete-GNS embedding or common-Hilbert
+operator strong-star limit.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-configuration-cylinder-canonical-momentum-generator"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR -- q-cylinder data do not fix momentum
+
+**Failure mode.**  Infer the canonical momentum operator, or identify the
+registered local polynomial CCR generator, from the bounded Euclidean
+configuration-cylinder kernels of one OS reconstruction alone.
+
+**Evidence.**  For `H=p^2/(2chi)+V(q)` and
+`U_a=exp(i a.q/hbar)`, the conjugate Hamiltonian
+`H_a=U_aHU_a^*=(p-a)^2/(2chi)+V(q)` has exactly the same bounded Euclidean
+q-cylinder traces: every q insertion commutes with `U_a`.  Nevertheless
+`delta_H(q)=p/chi` while `delta_(H_a)(q)=(p-a)/chi`.  The v1.5 verifiers check
+the conjugation and nonscalar generator difference exactly.
+
+**Consequence.**  Configuration OS data determine the scoped configuration
+word dynamics but not a preferred momentum realization.  Any full Weyl/CCR
+or polynomial-generator theorem must add an independently registered kinetic
+or CCR anchor.  The counterexample does not reject the configuration-orbit
+group or the selected tangent-net correlation theorem.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-raw-configuration-character-bounded-generator-core"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE -- raw characters have an unbounded first generator
+
+**Failure mode.**  Treat the bounded rational configuration characters
+themselves as a bounded W-star generator core for the exact Schrodinger
+dynamics.
+
+**Evidence.**  For nonzero finite-support `xi`, the exact form-core identity is
+
+`[H,W_xi]=W_xi[(hbar/chi)xi.p+hbar^2||xi||^2/(2chi)]`.
+
+The momentum multiplier is unbounded.  The same calculation also gives the
+positive scalar double commutator and exact Duhamel norm used constructively
+in `R-167 v1.5`; the primary and independent verifiers distinguish these two
+domains.
+
+**Consequence.**  Raw characters remain bounded orbit labels and Duhamel-form
+seeds.  Bounded temporal smears form the valid smooth core and obey
+`delta(A_f)=-A_(f')`.  No canonical momentum embedding or bounded raw-core
+generator follows.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-asymmetric-mixture-zero-source-periodic-limit"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT -- parity forbids unequal zero-source mixture weights
+
+**Failure mode.**  Identify an arbitrary nontrivial convex v1.4 mixture
+`lambda mu_+ +(1-lambda)mu_-` with a weak limit of the zero-source periodic
+finite-volume Gibbs/path laws.
+
+**Evidence.**  Every finite zero-source periodic law is invariant under the
+registered parity.  The two distinct ordered laws are exchanged by parity.
+Their convex mixture is invariant exactly when `lambda=1/2`, as verified by
+the exact two-component weight fixture.
+
+**Consequence.**  An asymmetric mixture cannot be the zero-source periodic
+limit.  The symmetric mixture is only an admissible candidate: phase
+exhaustiveness or a direct periodic-limit theorem remains open.  The selected
+`+h_n/-h_n` tangent mixture used in `R-167 v1.5` is not reclassified as a
+zero-source exhaustion.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-fixed-beta-envelope-automatic-cross-beta-gluing"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING -- fixed-beta KMS systems need not share a generator
+
+**Failure mode.**  Infer one beta-independent dynamics solely because a
+canonical common normal W-star envelope exists separately at every fixed
+beta.
+
+**Evidence.**  On `M_2` with the diagonal configuration algebra, take
+`(beta_1,H_1)=(1,-sigma_x)` and `(beta_2,H_2)=(2,-2sigma_x)`.  Both are exact
+faithful stochastically positive finite KMS systems.  If one inner generator
+produced both Gibbs densities at the displayed temperatures, it would equal
+`-beta_j^(-1)log rho_j` modulo scalars for both `j`; those two operators differ
+by a nonscalar multiple of `sigma_x`.  Both v1.5 engines recompute the
+mismatch.
+
+**Consequence.**  Fixed-beta OS reconstruction does not automatically glue
+across temperature.  A beta-independent algebra and one common derivation
+must be constructed before beta-to-infinity, algebraic-ground or GNS-gap
+claims.  This does not reject such a construction.
 
 <a id="ng-2026-08-10-pre-a-st8-q3lock-sharp-time-os-gram-only-real-time-functoriality"></a>
 ### NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY -- one reflection plane does not determine the real-time word system

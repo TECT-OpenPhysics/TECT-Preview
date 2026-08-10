@@ -206,7 +206,13 @@ and coordinate-cutoff theorems and advances the same result to v1.2.
 `EXP-000799` adds the exact common-alpha topology split and advances the same
 result to v1.3. `EXP-000800` proves the canonical fixed-beta OS-mixture common
 normal W-star envelope, registers three sharper topology boundaries, and
-advances the same result to v1.4.
+advances the same result to v1.4. `EXP-000801` identifies the selected
+finite-volume source-tangent Hamiltonian KMS word kernels with that envelope
+in fixed-band finite-core Fell/GNS topology, proves an exact cyclic character
+de-filtering theorem, registers five embedding/generator boundaries, and
+advances the same result to v1.5. `EXP-000802` is an append-only integrated-
+verifier locator and exact-scope-token correction only; it changes no
+mathematical statement or boundary.
 
 **Authority links.** The v1.1 `centered-weight cubic graph` and
 `prescribed-word` heat theorem are recorded under
@@ -227,7 +233,12 @@ R-167 v1.4 closes
 and makes
 `PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE`
 the precise successor. The historical all-bond and projected gate IDs remain
-part of the route provenance.
+part of the route provenance. R-167 v1.5 closes
+`PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION`
+and concentrates the remaining thermodynamic obligation in
+`PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS`.
+The selected-tangent theorem is not an all-exhaustion or beta-independent
+completion.
 
 **Negative-route authorities.** The exact fixed-power star/repeat obstruction
 is registered as
@@ -248,6 +259,13 @@ The three v1.4 boundaries are
 `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS`,
 and
 `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE`.
+The five v1.5 boundaries are
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING`,
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR`,
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE`,
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT`,
+and
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING`.
 
 **Statement.** For the exact finite-volume ST8/Q3LOCK Hamiltonian with
 `chi,c,g>0`, `lambda>=0`, bounded source, and centered weight
@@ -416,17 +434,68 @@ exact Weyl bond response rejects a frequency-blind single-rung site-influence
 recurrence with a neighbor coefficient tending to zero. A valid locality
 proof must retain an analytic-frequency or all-moment orbit profile.
 
-**Boundary.** The v1.4 common normal envelope is fixed-beta and defined from
-the chosen phase pair. It is not identified with the exhaustion limit of the
-exact finite-volume Hamiltonians and is not a phase-, state- or
-beta-independent quasi-local C-star alpha. The theorem does not prove
-volume-uniform direct projected `D,delta D` locality, generator identification
-on a common Hamiltonian core, a full canonical momentum/Weyl bridge,
+**v1.5 selected-tangent Hamiltonian--OS identification.** Fix `beta>0` and
+the registered `EXP-000781` periodic finite-volume tangent subsequences
+`(Lambda_n,+h_n)` and `(Lambda_n,-h_n)`, with `h_n->0`. Their convex finite
+word functionals converge on the ordered Euclidean cylinder slice to the
+`EXP-000800` mixture kernel. Uniform boundedness on every KMS thermal tube,
+analytic uniqueness on the maximally totally real Euclidean slice, and weak-
+star boundary convergence imply convergence after fixed `L1` physical-time
+smoothing. Thus every fixed finite Gram matrix of the countable bandlimited
+configuration-word list converges.
+
+For every limiting independent `k`-block, let `G_n^(k)` and `G_0^(k)` be the
+finite and limiting Gram matrices. The exact congruence
+
+`M_(n,k)=G_0^(-1/2)G_n^(1/2)`,
+`M_(n,k)^*G_0M_(n,k)=G_n`,
+
+and `M_(n,k)->I` give reproducible finite-block isometries. A frozen
+independent-pivot rule discards vanishing directions; a diagonal block
+exhaustion gives pointed finite-core Fell/GNS convergence of every fixed
+bandlimited word family. This is not a label-preserving embedding of the
+complete GNS spaces or a globally compatible common-Hilbert operator
+strong-star theorem.
+
+For every rational finite-support configuration character
+`W_xi=exp(i xi.q)` and every exact finite-volume Hamiltonian
+`H=p^2/(2chi)+V(q)`, with arbitrary q-only source and boundary terms,
+
+`[W_xi^*,[H,W_xi]]=hbar^2||xi||^2/chi`,
+`||delta W_xi||_D^2=||xi||^2/(beta chi)`.
+
+The Fejer multiplier `g_R(omega)=(1-|omega|/R)_+` therefore gives, with
+`a_xi=||xi||/sqrt(beta chi)`,
+
+`||W_xi-W_xi^(R)||_D<=a_xi/R`,
+`||delta(W_xi-W_xi^(R))||_D<=a_xi`,
+`||W_xi-W_xi^(R)||_#<=a_xi sqrt(2/R^2+beta hbar/R)`.
+
+This uniformly recovers each raw character as a cyclic two-sided L2 vector
+after the fixed-band tangent limit. It is not a left/right-context multiplier
+estimate and does not prove raw-core operator strong-star convergence.
+
+The valid bounded generator core consists of temporal smears and obeys
+`delta(A_f)=-A_(f')`; raw characters have an unbounded momentum term in their
+first commutator. Exact local source jets and the first coordinate-tail rung
+are also fixed, but configuration-cylinder data alone cannot select a
+canonical momentum realization. Parity excludes asymmetric mixtures as
+zero-source periodic limits, and a finite `M_2` fixture shows that separately
+valid fixed-beta envelopes need not glue to one beta-independent generator.
+
+**Boundary.** The v1.5 theorem is fixed-beta and confined to the selected
+source-tangent diagonal nets. It identifies finite bandlimited correlation
+blocks with the v1.4 common normal envelope in pointed finite-core Fell/GNS
+topology and cyclically recovers each raw configuration character. It is not
+an all-shape exhaustion limit and is not a phase-, state- or beta-independent
+quasi-local C-star alpha. The theorem does not prove globally compatible
+complete-GNS embeddings, raw-context operator convergence, volume-uniform
+direct projected `D,delta D` locality, a full canonical momentum/Weyl bridge,
 algebraic ground states, a GNS or physical mass gap, regulator removal,
 continuum, a physical empty/preparation reference, a below-empty sign, C6,
 CP1, Sector A or Pre-A.
 
-**Proven in:** C6 / [R-167 v1.4 certificate](strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-certificate-260810.md). A reader-note/PDF pair is intentionally deferred until this gate-level checkpoint is fully stable.
+**Proven in:** C6 / [R-167 v1.5 certificate](strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-certificate.md). Per the gate-level PDF-efficiency protocol, this development checkpoint uses the manifest, certificate, run JSONs and append-only exploration record and issues no intermediate note/PDF.
 
 **Tier:** T0 (scoped finite-volume/fixed-beta analytic theorem and conditional
 Hamiltonian-identification target; no beta-independent common-alpha

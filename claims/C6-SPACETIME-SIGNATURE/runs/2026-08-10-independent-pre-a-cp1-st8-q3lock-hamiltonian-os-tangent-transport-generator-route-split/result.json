@@ -1,0 +1,2035 @@
+{
+  "assertions": {
+    "failed": 0,
+    "passed": 96,
+    "rows": [
+      {
+        "actual": [
+          "__future__",
+          "argparse",
+          "ast",
+          "fractions",
+          "hashlib",
+          "json",
+          "os",
+          "pathlib",
+          "tempfile",
+          "typing"
+        ],
+        "expected": "standard library only",
+        "group": "code",
+        "name": "stdlib-only imports",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "__future__",
+          "argparse",
+          "ast",
+          "fractions",
+          "hashlib",
+          "json",
+          "os",
+          "pathlib",
+          "tempfile",
+          "typing"
+        ],
+        "expected": "standard-library imports only",
+        "group": "code",
+        "name": "no primary import/result consumption",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "norm": "3",
+          "square": "9"
+        },
+        "expected": {
+          "norm": 3,
+          "square": 9
+        },
+        "group": "character",
+        "name": "character norm",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/4",
+          "1/2",
+          "1/2"
+        ],
+        "expected": [
+          "1/4",
+          "1/2",
+          "1/2"
+        ],
+        "group": "character",
+        "name": "character CCR shift",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/8",
+          "1/4",
+          "1/4"
+        ],
+        "expected": [
+          "1/8",
+          "1/4",
+          "1/4"
+        ],
+        "group": "character",
+        "name": "character commutator p coefficients",
+        "status": "PASS"
+      },
+      {
+        "actual": "9/64",
+        "expected": "9/64",
+        "group": "character",
+        "name": "character commutator constant",
+        "status": "PASS"
+      },
+      {
+        "actual": "9/32",
+        "expected": "9/32",
+        "group": "character",
+        "name": "character double commutator",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "norm": "3/2",
+          "square": "9/4"
+        },
+        "expected": {
+          "norm": "3/2",
+          "square": "9/4"
+        },
+        "group": "character",
+        "name": "Kubo exact norm",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/8",
+        "expected": "3/8",
+        "group": "Fejer",
+        "name": "Fejer D tail",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/2",
+        "expected": "3/2",
+        "group": "Fejer",
+        "name": "Fejer derivative tail",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4",
+        "expected": "1/4",
+        "group": "Fejer",
+        "name": "Fejer modular radicand",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "bound": "3/4",
+          "square": "9/16"
+        },
+        "expected": {
+          "bound": "3/4",
+          "square": "9/16"
+        },
+        "group": "Fejer",
+        "name": "Fejer unaveraged two-sided",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": 4,
+        "group": "character",
+        "name": "finite character span",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "beta": "2",
+          "chi": "2",
+          "commutator_constant": "9/64",
+          "commutator_p_coefficients": [
+            "1/8",
+            "1/4",
+            "1/4"
+          ],
+          "double_commutator": "9/32",
+          "fejer_derivative_bound": "3/2",
+          "fejer_duhamel_bound": "3/8",
+          "fejer_inside": "1/4",
+          "fejer_unaveraged_bound": "3/4",
+          "fejer_unaveraged_squared": "9/16",
+          "hbar": "1/4",
+          "kubo_norm": "3/2",
+          "kubo_norm_squared": "9/4",
+          "momentum_shift": [
+            "1/4",
+            "1/2",
+            "1/2"
+          ],
+          "q_only_terms_cancel": true,
+          "radius": "4",
+          "raw_recovery_uniform_in_q_only_terms": true,
+          "span_coefficients": [
+            "2",
+            "-1/2"
+          ],
+          "span_derivative_bound": "4",
+          "span_label_norms": [
+            "3",
+            "4"
+          ],
+          "xi": [
+            "1",
+            "2",
+            "2"
+          ],
+          "xi_norm": "3",
+          "xi_norm_squared": "9"
+        },
+        "expected": "q-only source/boundary cancellation",
+        "group": "scope",
+        "name": "q-only uniformity",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "5",
+            "4"
+          ],
+          [
+            "4",
+            "5"
+          ]
+        ],
+        "expected": [
+          [
+            "5",
+            "4"
+          ],
+          [
+            "4",
+            "5"
+          ]
+        ],
+        "group": "Gram",
+        "name": "limit Gram root",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        "expected": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        "group": "Gram",
+        "name": "root inverse",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "4",
+            "11/4"
+          ],
+          [
+            "4",
+            "26/9"
+          ],
+          [
+            "4",
+            "74/25"
+          ],
+          [
+            "4",
+            "299/100"
+          ],
+          [
+            "4",
+            "1199/400"
+          ]
+        ],
+        "expected": "positive trace and determinant",
+        "group": "Gram",
+        "name": "all perturbed roots positive",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        ],
+        "expected": "all zero",
+        "group": "Gram",
+        "name": "polar transports exact",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/3",
+          "2/9",
+          "2/15",
+          "1/15",
+          "1/30"
+        ],
+        "expected": "strict decrease",
+        "group": "Gram",
+        "name": "polar transports tend to identity",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "discarded": [
+            1
+          ],
+          "rank": 2,
+          "retained": [
+            0,
+            2
+          ]
+        },
+        "expected": {
+          "discarded": [
+            1
+          ],
+          "rank": 2,
+          "retained": [
+            0,
+            2
+          ]
+        },
+        "group": "Gram",
+        "name": "singular support rank",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "determinant": "1",
+          "full_inverse": false
+        },
+        "expected": {
+          "determinant": 1,
+          "full_inverse": false
+        },
+        "group": "Gram",
+        "name": "retained Gram positive",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "0",
+            "1/4"
+          ],
+          [
+            "0",
+            "1/9"
+          ],
+          [
+            "0",
+            "1/25"
+          ],
+          [
+            "0",
+            "1/100"
+          ],
+          [
+            "0",
+            "1/400"
+          ]
+        ],
+        "expected": "finite null but nonnull limit",
+        "group": "embedding",
+        "name": "rotating null exact",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "expected": "all rank one",
+        "group": "embedding",
+        "name": "rotating Gram rank one",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "finite": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "limit": 1
+        },
+        "expected": {
+          "finite": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "limit": 1
+        },
+        "group": "embedding",
+        "name": "dimension collapse",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "no complete injective label embedding",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "gauge",
+        "name": "gauge commutes with q observables",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "gauged": "-28373/60",
+          "plain": "-28373/60"
+        },
+        "expected": "equal",
+        "group": "gauge",
+        "name": "full finite cylinder cancellation",
+        "status": "PASS"
+      },
+      {
+        "actual": "-14/15",
+        "expected": "-14/15",
+        "group": "gauge",
+        "name": "gauge changes q generator",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "configuration cylinders do not select momentum",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "intercept": "9/64",
+          "slope": "3/8"
+        },
+        "expected": {
+          "intercept": "9/64",
+          "slope": "3/8"
+        },
+        "group": "raw-character",
+        "name": "raw commutator affine coefficients",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "33/64",
+          "57/64",
+          "105/64",
+          "201/64",
+          "393/64",
+          "777/64",
+          "1545/64"
+        ],
+        "expected": "strict growth",
+        "group": "raw-character",
+        "name": "raw high-momentum growth",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "bounded_core": false,
+          "slope_nonzero": true
+        },
+        "expected": {
+          "bounded_core": false,
+          "slope_nonzero": true
+        },
+        "group": "raw-character",
+        "name": "raw symbolic unboundedness",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "bounded_wstar_generator_core": false,
+          "chi": "2",
+          "hbar": "1/4",
+          "intercept": "9/64",
+          "l2_form_seed_not_rejected": true,
+          "rows": [
+            {
+              "affine_commutator_value": "33/64",
+              "momentum": 1,
+              "value_over_momentum": "33/64"
+            },
+            {
+              "affine_commutator_value": "57/64",
+              "momentum": 2,
+              "value_over_momentum": "57/128"
+            },
+            {
+              "affine_commutator_value": "105/64",
+              "momentum": 4,
+              "value_over_momentum": "105/256"
+            },
+            {
+              "affine_commutator_value": "201/64",
+              "momentum": 8,
+              "value_over_momentum": "201/512"
+            },
+            {
+              "affine_commutator_value": "393/64",
+              "momentum": 16,
+              "value_over_momentum": "393/1024"
+            },
+            {
+              "affine_commutator_value": "777/64",
+              "momentum": 32,
+              "value_over_momentum": "777/2048"
+            },
+            {
+              "affine_commutator_value": "1545/64",
+              "momentum": 64,
+              "value_over_momentum": "1545/4096"
+            }
+          ],
+          "slope": "3/8",
+          "symbolically_unbounded": true,
+          "temporal_smear_identity": "delta(A_f)=-A_(f')",
+          "temporal_smears_bounded_smooth": true,
+          "xi": "3"
+        },
+        "expected": "L2/form seed and temporal smears retained",
+        "group": "scope",
+        "name": "raw L2/form scope retained",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "lambda_plus": "1/3",
+            "mixed_odd_expectation": "-1/5",
+            "parity_invariant": false
+          },
+          {
+            "lambda_plus": "1/2",
+            "mixed_odd_expectation": "0",
+            "parity_invariant": true
+          },
+          {
+            "lambda_plus": "2/3",
+            "mixed_odd_expectation": "1/5",
+            "parity_invariant": false
+          }
+        ],
+        "expected": "only lambda=1/2",
+        "group": "parity",
+        "name": "parity only at half mixture",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-1/5",
+          "0",
+          "1/5"
+        ],
+        "expected": [
+          "-1/5",
+          0,
+          "1/5"
+        ],
+        "group": "parity",
+        "name": "parity exact odd response",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "symmetric limit remains open",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "H1": [
+            [
+              "0",
+              "-1"
+            ],
+            [
+              "-1",
+              "0"
+            ]
+          ],
+          "H2": [
+            [
+              "0",
+              "-2"
+            ],
+            [
+              "-2",
+              "0"
+            ]
+          ]
+        },
+        "expected": "-sigma_x and -2 sigma_x",
+        "group": "cross-beta",
+        "name": "cross-beta Hamiltonians",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "0",
+            "-1"
+          ],
+          [
+            "-1",
+            "0"
+          ]
+        ],
+        "expected": "nonscalar -sigma_x",
+        "group": "cross-beta",
+        "name": "cross-beta nonscalar mismatch",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "entrywise_nonnegative": true,
+            "ratio": "2",
+            "transfer": [
+              [
+                "5/4",
+                "3/4"
+              ],
+              [
+                "3/4",
+                "5/4"
+              ]
+            ]
+          },
+          {
+            "entrywise_nonnegative": true,
+            "ratio": "4",
+            "transfer": [
+              [
+                "17/8",
+                "15/8"
+              ],
+              [
+                "15/8",
+                "17/8"
+              ]
+            ]
+          }
+        ],
+        "expected": "entrywise positive transfers",
+        "group": "cross-beta",
+        "name": "cross-beta stochastic-positive controls",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "cross-beta gluing not automatic",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": 0,
+        "group": "generator",
+        "name": "source first jet",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "coefficient": "6/35",
+          "dot": "2"
+        },
+        "expected": {
+          "coefficient": "6/35",
+          "dot": 2
+        },
+        "group": "generator",
+        "name": "source second jet",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "generator",
+        "name": "local fixed-iterate jet",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "first": "0",
+          "second": "-7/5"
+        },
+        "expected": {
+          "first": 0,
+          "second": "-7/5"
+        },
+        "group": "tail",
+        "name": "tail first rung",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "bound": "3",
+          "square": "9"
+        },
+        "expected": {
+          "bound": 3,
+          "square": 9
+        },
+        "group": "tail",
+        "name": "tail Duhamel bound",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "chi": "5",
+          "connected_tail_resummation_closed": false,
+          "finite_neighbourhood_for_each_fixed_iterate": true,
+          "first_source_jet_difference": "0",
+          "first_tail_jet_difference": "0",
+          "gradient_second_moment": "9",
+          "real_time_series_summed": false,
+          "second_source_jet_imaginary_coefficient": "6/35",
+          "second_tail_jet_imaginary_coefficient": "-7/5",
+          "source": "3/7",
+          "source_direction": [
+            "2",
+            "-1"
+          ],
+          "source_dot": "2",
+          "tail_dot": "7",
+          "tail_duhamel_bound": "3",
+          "tail_duhamel_bound_squared": "9",
+          "tail_gradient": [
+            "1",
+            "1"
+          ],
+          "xi": [
+            "3",
+            "4"
+          ],
+          "xi_norm": "5",
+          "xi_norm_squared": "25"
+        },
+        "expected": "first rung only",
+        "group": "scope",
+        "name": "tail resummation remains open",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "number": "R-167",
+          "version": "v1.5"
+        },
+        "expected": {
+          "number": "R-167",
+          "version": "v1.5"
+        },
+        "group": "authority",
+        "name": "manifest result number/version",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000801",
+        "expected": "EXP-000801",
+        "group": "authority",
+        "name": "manifest exploration",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "authority",
+        "name": "manifest claim nonbearing",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+        ],
+        "expected": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+        ],
+        "group": "authority",
+        "name": "manifest negative set",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION"
+        ],
+        "group": "authority",
+        "name": "manifest closed gate",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+          "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+          "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+        ],
+        "group": "authority",
+        "name": "manifest retained gates",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "open": [
+            "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+            "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+          ],
+          "route": "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+        },
+        "expected": "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "group": "authority",
+        "name": "manifest successor",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000781",
+        "expected": "EXP-000781",
+        "group": "authority",
+        "name": "EXP-000781 tangent parent",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "exploration": "EXP-000800",
+          "version": "v1.4"
+        },
+        "expected": {
+          "exploration": "EXP-000800",
+          "version": "v1.4"
+        },
+        "group": "authority",
+        "name": "EXP-000800 mixture parent",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000801",
+        "expected": "EXP-000801",
+        "group": "authority",
+        "name": "certificate token EXP-000801",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-167",
+        "expected": "R-167",
+        "group": "authority",
+        "name": "certificate token R-167",
+        "status": "PASS"
+      },
+      {
+        "actual": "v1.5",
+        "expected": "v1.5",
+        "group": "authority",
+        "name": "certificate token v1.5",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION",
+        "expected": "PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION",
+        "group": "authority",
+        "name": "certificate token PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "expected": "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "group": "authority",
+        "name": "certificate token PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "status": "PASS"
+      },
+      {
+        "actual": "Fejer",
+        "expected": "Fejer",
+        "group": "authority",
+        "name": "certificate token Fejer",
+        "status": "PASS"
+      },
+      {
+        "actual": "pointed",
+        "expected": "pointed",
+        "group": "authority",
+        "name": "certificate token pointed",
+        "status": "PASS"
+      },
+      {
+        "actual": "momentum",
+        "expected": "momentum",
+        "group": "authority",
+        "name": "certificate token momentum",
+        "status": "PASS"
+      },
+      {
+        "actual": "cross-beta",
+        "expected": "cross-beta",
+        "group": "authority",
+        "name": "certificate token cross-beta",
+        "status": "PASS"
+      },
+      {
+        "actual": "beta-independent",
+        "expected": "beta-independent",
+        "group": "authority",
+        "name": "certificate token beta-independent",
+        "status": "PASS"
+      },
+      {
+        "actual": "Pre-A",
+        "expected": "Pre-A",
+        "group": "authority",
+        "name": "certificate token Pre-A",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+        "group": "authority",
+        "name": "certificate negative NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+        "group": "authority",
+        "name": "certificate negative NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+        "group": "authority",
+        "name": "certificate negative NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+        "group": "authority",
+        "name": "certificate negative NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING",
+        "group": "authority",
+        "name": "certificate negative NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+        "group": "authority",
+        "name": "negative registry NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+        "group": "authority",
+        "name": "negative registry NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+        "group": "authority",
+        "name": "negative registry NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+        "group": "authority",
+        "name": "negative registry NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING",
+        "group": "authority",
+        "name": "negative registry NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000801",
+        "expected": "EXP-000801",
+        "group": "authority",
+        "name": "exploration registered",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION",
+        "expected": "PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION",
+        "group": "authority",
+        "name": "gate registered PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "expected": "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "group": "authority",
+        "name": "gate registered PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+        "expected": "contains complete finite GNS spaces",
+        "group": "scope",
+        "name": "no-overclaim complete finite GNS spaces",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+        "expected": "contains all-exhaustion",
+        "group": "scope",
+        "name": "no-overclaim all-exhaustion",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+        "expected": "contains periodic zero-source symmetric limit",
+        "group": "scope",
+        "name": "no-overclaim periodic zero-source symmetric limit",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+        "expected": "contains canonical momentum",
+        "group": "scope",
+        "name": "no-overclaim canonical momentum",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+        "expected": "contains beta-independent common C-star alpha",
+        "group": "scope",
+        "name": "no-overclaim beta-independent common C-star alpha",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+        "expected": "contains ground states",
+        "group": "scope",
+        "name": "no-overclaim ground states",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+        "expected": "contains GNS",
+        "group": "scope",
+        "name": "no-overclaim GNS",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+        "expected": "contains continuum",
+        "group": "scope",
+        "name": "no-overclaim continuum",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+        "expected": "contains physical empty space",
+        "group": "scope",
+        "name": "no-overclaim physical empty space",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+        "expected": "contains Pre-A",
+        "group": "scope",
+        "name": "no-overclaim Pre-A",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+        "expected": "contains C6",
+        "group": "scope",
+        "name": "no-overclaim C6",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+        "expected": "contains Sector-A",
+        "group": "scope",
+        "name": "no-overclaim Sector-A",
+        "status": "PASS"
+      },
+      {
+        "actual": "cd8fabf1ee859e2e2ed043dbd798117492808d2ef13b12042514b25d95ee1e98",
+        "expected": "64 lowercase hexadecimal",
+        "group": "provenance",
+        "name": "source hash codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split_independent.py",
+        "status": "PASS"
+      },
+      {
+        "actual": "facce35da2a48460a3afd87b6a8e194e537c114e34db468a7e6fd266c8b297ae",
+        "expected": "64 lowercase hexadecimal",
+        "group": "provenance",
+        "name": "source hash strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "52841edd083a9e4f45df5a6a633f84646773b82920605a769f1ccc5b6ce032ff",
+        "expected": "64 lowercase hexadecimal",
+        "group": "provenance",
+        "name": "source hash strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "b06dc6b1370e2865d1d6a52795d12cc85204924df4b038545d7d24d76a52579d",
+        "expected": "64 lowercase hexadecimal",
+        "group": "provenance",
+        "name": "source hash strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "4d1d886c3361b07ae34099fa10108fb07faa610a0cb8eb07f582760376c93593",
+        "expected": "64 lowercase hexadecimal",
+        "group": "provenance",
+        "name": "source hash strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-certificate.md",
+        "status": "PASS"
+      }
+    ],
+    "total": 96
+  },
+  "authority": {
+    "boundary": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+    "missing": [],
+    "source_paths": [
+      "E:\\Dev\\TECT\\strategy\\pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-manifest.json",
+      "E:\\Dev\\TECT\\strategy\\pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json",
+      "E:\\Dev\\TECT\\strategy\\pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json",
+      "E:\\Dev\\TECT\\strategy\\pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-certificate.md"
+    ],
+    "status": "COMPLETE"
+  },
+  "boundary": "This package proves a selected fixed-beta phase-tangent Hamiltonian-to-OS finite-word correlation/pointed finite-core Fell-GNS identification and exact cyclic character topology reductions. It does not prove a canonical label-preserving embedding of complete finite GNS spaces, globally compatible common-Hilbert operator strong-star convergence, raw-character convergence after arbitrary left/right contexts, all-exhaustion or all-boundary Cauchy in one local-algebra representation, the periodic zero-source symmetric limit, a canonical momentum/full Weyl embedding, a beta-independent common C-star alpha, algebraic ground states, a GNS or physical gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+  "claim_bearing": false,
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "closed_gate": "PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION",
+  "derived": {
+    "GNS_gap_closed": false,
+    "Pre_A_closed": false,
+    "all_exhaustion_mixture_l2_closed": false,
+    "beta_independent_cstar_dynamics_closed": false,
+    "canonical_momentum_weyl_bridge_closed": false,
+    "character_dirichlet_fejer": {
+      "beta": "2",
+      "chi": "2",
+      "commutator_constant": "9/64",
+      "commutator_p_coefficients": [
+        "1/8",
+        "1/4",
+        "1/4"
+      ],
+      "double_commutator": "9/32",
+      "fejer_derivative_bound": "3/2",
+      "fejer_duhamel_bound": "3/8",
+      "fejer_inside": "1/4",
+      "fejer_unaveraged_bound": "3/4",
+      "fejer_unaveraged_squared": "9/16",
+      "hbar": "1/4",
+      "kubo_norm": "3/2",
+      "kubo_norm_squared": "9/4",
+      "momentum_shift": [
+        "1/4",
+        "1/2",
+        "1/2"
+      ],
+      "q_only_terms_cancel": true,
+      "radius": "4",
+      "raw_recovery_uniform_in_q_only_terms": true,
+      "span_coefficients": [
+        "2",
+        "-1/2"
+      ],
+      "span_derivative_bound": "4",
+      "span_label_norms": [
+        "3",
+        "4"
+      ],
+      "xi": [
+        "1",
+        "2",
+        "2"
+      ],
+      "xi_norm": "3",
+      "xi_norm_squared": "9"
+    },
+    "continuum_closed": false,
+    "embedding_counterexamples": {
+      "collapse_limit": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "collapse_rows": [
+        {
+          "denominator": 2,
+          "gram": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1/2"
+            ]
+          ],
+          "rank": 2,
+          "second_label_norm_squared": "1/2"
+        },
+        {
+          "denominator": 4,
+          "gram": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1/4"
+            ]
+          ],
+          "rank": 2,
+          "second_label_norm_squared": "1/4"
+        },
+        {
+          "denominator": 8,
+          "gram": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1/8"
+            ]
+          ],
+          "rank": 2,
+          "second_label_norm_squared": "1/8"
+        },
+        {
+          "denominator": 16,
+          "gram": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1/16"
+            ]
+          ],
+          "rank": 2,
+          "second_label_norm_squared": "1/16"
+        },
+        {
+          "denominator": 32,
+          "gram": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1/32"
+            ]
+          ],
+          "rank": 2,
+          "second_label_norm_squared": "1/32"
+        }
+      ],
+      "complete_label_embedding_injective": false,
+      "finite_ranks": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "limit_rank": 1,
+      "null_inclusion_fails": true,
+      "rotating_limit": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "rotating_rows": [
+        {
+          "denominator": 2,
+          "finite_null_value": "0",
+          "gram": [
+            [
+              "1",
+              "1/2"
+            ],
+            [
+              "1/2",
+              "1/4"
+            ]
+          ],
+          "limit_value_of_finite_null": "1/4",
+          "null_vector": [
+            "-1/2",
+            "1"
+          ],
+          "rank": 1
+        },
+        {
+          "denominator": 3,
+          "finite_null_value": "0",
+          "gram": [
+            [
+              "1",
+              "1/3"
+            ],
+            [
+              "1/3",
+              "1/9"
+            ]
+          ],
+          "limit_value_of_finite_null": "1/9",
+          "null_vector": [
+            "-1/3",
+            "1"
+          ],
+          "rank": 1
+        },
+        {
+          "denominator": 5,
+          "finite_null_value": "0",
+          "gram": [
+            [
+              "1",
+              "1/5"
+            ],
+            [
+              "1/5",
+              "1/25"
+            ]
+          ],
+          "limit_value_of_finite_null": "1/25",
+          "null_vector": [
+            "-1/5",
+            "1"
+          ],
+          "rank": 1
+        },
+        {
+          "denominator": 10,
+          "finite_null_value": "0",
+          "gram": [
+            [
+              "1",
+              "1/10"
+            ],
+            [
+              "1/10",
+              "1/100"
+            ]
+          ],
+          "limit_value_of_finite_null": "1/100",
+          "null_vector": [
+            "-1/10",
+            "1"
+          ],
+          "rank": 1
+        },
+        {
+          "denominator": 20,
+          "finite_null_value": "0",
+          "gram": [
+            [
+              "1",
+              "1/20"
+            ],
+            [
+              "1/20",
+              "1/400"
+            ]
+          ],
+          "limit_value_of_finite_null": "1/400",
+          "null_vector": [
+            "-1/20",
+            "1"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    "finite_block_transport": {
+      "discarded_indices": [
+        1
+      ],
+      "full_inverse_permitted": false,
+      "gram_zero": [
+        [
+          "5",
+          "4"
+        ],
+        [
+          "4",
+          "5"
+        ]
+      ],
+      "principal_positive_root_rule": true,
+      "retained_determinant": "1",
+      "retained_gram": [
+        [
+          "1",
+          "2"
+        ],
+        [
+          "2",
+          "5"
+        ]
+      ],
+      "retained_indices": [
+        0,
+        2
+      ],
+      "root_zero": [
+        [
+          "2",
+          "1"
+        ],
+        [
+          "1",
+          "2"
+        ]
+      ],
+      "root_zero_inverse": [
+        [
+          "2/3",
+          "-1/3"
+        ],
+        [
+          "-1/3",
+          "2/3"
+        ]
+      ],
+      "singular_gram": [
+        [
+          "1",
+          "1",
+          "2"
+        ],
+        [
+          "1",
+          "1",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "5"
+        ]
+      ],
+      "singular_rank": 2,
+      "transport_rows": [
+        {
+          "denominator": 2,
+          "distance_to_identity": "1/3",
+          "epsilon": "1/2",
+          "gram": [
+            [
+              "29/4",
+              "4"
+            ],
+            [
+              "4",
+              "13/4"
+            ]
+          ],
+          "isometry_residual": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          "root": [
+            [
+              "5/2",
+              "1"
+            ],
+            [
+              "1",
+              "3/2"
+            ]
+          ],
+          "root_determinant": "11/4",
+          "root_trace": "4",
+          "transport": [
+            [
+              "4/3",
+              "1/6"
+            ],
+            [
+              "-1/6",
+              "2/3"
+            ]
+          ]
+        },
+        {
+          "denominator": 3,
+          "distance_to_identity": "2/9",
+          "epsilon": "1/3",
+          "gram": [
+            [
+              "58/9",
+              "4"
+            ],
+            [
+              "4",
+              "34/9"
+            ]
+          ],
+          "isometry_residual": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          "root": [
+            [
+              "7/3",
+              "1"
+            ],
+            [
+              "1",
+              "5/3"
+            ]
+          ],
+          "root_determinant": "26/9",
+          "root_trace": "4",
+          "transport": [
+            [
+              "11/9",
+              "1/9"
+            ],
+            [
+              "-1/9",
+              "7/9"
+            ]
+          ]
+        },
+        {
+          "denominator": 5,
+          "distance_to_identity": "2/15",
+          "epsilon": "1/5",
+          "gram": [
+            [
+              "146/25",
+              "4"
+            ],
+            [
+              "4",
+              "106/25"
+            ]
+          ],
+          "isometry_residual": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          "root": [
+            [
+              "11/5",
+              "1"
+            ],
+            [
+              "1",
+              "9/5"
+            ]
+          ],
+          "root_determinant": "74/25",
+          "root_trace": "4",
+          "transport": [
+            [
+              "17/15",
+              "1/15"
+            ],
+            [
+              "-1/15",
+              "13/15"
+            ]
+          ]
+        },
+        {
+          "denominator": 10,
+          "distance_to_identity": "1/15",
+          "epsilon": "1/10",
+          "gram": [
+            [
+              "541/100",
+              "4"
+            ],
+            [
+              "4",
+              "461/100"
+            ]
+          ],
+          "isometry_residual": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          "root": [
+            [
+              "21/10",
+              "1"
+            ],
+            [
+              "1",
+              "19/10"
+            ]
+          ],
+          "root_determinant": "299/100",
+          "root_trace": "4",
+          "transport": [
+            [
+              "16/15",
+              "1/30"
+            ],
+            [
+              "-1/30",
+              "14/15"
+            ]
+          ]
+        },
+        {
+          "denominator": 20,
+          "distance_to_identity": "1/30",
+          "epsilon": "1/20",
+          "gram": [
+            [
+              "2081/400",
+              "4"
+            ],
+            [
+              "4",
+              "1921/400"
+            ]
+          ],
+          "isometry_residual": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          "root": [
+            [
+              "41/20",
+              "1"
+            ],
+            [
+              "1",
+              "39/20"
+            ]
+          ],
+          "root_determinant": "1199/400",
+          "root_trace": "4",
+          "transport": [
+            [
+              "31/30",
+              "1/60"
+            ],
+            [
+              "-1/60",
+              "29/30"
+            ]
+          ]
+        }
+      ]
+    },
+    "generator_first_tail": {
+      "chi": "5",
+      "connected_tail_resummation_closed": false,
+      "finite_neighbourhood_for_each_fixed_iterate": true,
+      "first_source_jet_difference": "0",
+      "first_tail_jet_difference": "0",
+      "gradient_second_moment": "9",
+      "real_time_series_summed": false,
+      "second_source_jet_imaginary_coefficient": "6/35",
+      "second_tail_jet_imaginary_coefficient": "-7/5",
+      "source": "3/7",
+      "source_direction": [
+        "2",
+        "-1"
+      ],
+      "source_dot": "2",
+      "tail_dot": "7",
+      "tail_duhamel_bound": "3",
+      "tail_duhamel_bound_squared": "9",
+      "tail_gradient": [
+        "1",
+        "1"
+      ],
+      "xi": [
+        "3",
+        "4"
+      ],
+      "xi_norm": "5",
+      "xi_norm_squared": "25"
+    },
+    "ground_state_selection_closed": false,
+    "momentum_gauge": {
+      "canonical_momentum_selected_by_q_cylinders": false,
+      "chi": "5/2",
+      "cylinder_equal": true,
+      "delta_H_q_p_coefficient": "2/5",
+      "delta_Ha_q_constant": "-14/15",
+      "delta_Ha_q_p_coefficient": "2/5",
+      "gauge": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "-1"
+        ]
+      ],
+      "gauged_cylinder_trace": "-28373/60",
+      "generator_difference": "-14/15",
+      "momentum_shift": "7/3",
+      "observables_commute_with_gauge": true,
+      "plain_cylinder_trace": "-28373/60",
+      "transfer": [
+        [
+          "2",
+          "1"
+        ],
+        [
+          "1",
+          "2"
+        ]
+      ]
+    },
+    "parity_cross_beta": {
+      "H_one": [
+        [
+          "0",
+          "-1"
+        ],
+        [
+          "-1",
+          "0"
+        ]
+      ],
+      "H_two": [
+        [
+          "0",
+          "-2"
+        ],
+        [
+          "-2",
+          "0"
+        ]
+      ],
+      "automatic_cross_beta_gluing": false,
+      "beta_one": "1",
+      "beta_two": "2",
+      "magnetization": "3/5",
+      "mismatch_is_scalar": false,
+      "modular_generator_mismatch": [
+        [
+          "0",
+          "-1"
+        ],
+        [
+          "-1",
+          "0"
+        ]
+      ],
+      "parity_rows": [
+        {
+          "lambda_plus": "1/3",
+          "mixed_odd_expectation": "-1/5",
+          "parity_invariant": false
+        },
+        {
+          "lambda_plus": "1/2",
+          "mixed_odd_expectation": "0",
+          "parity_invariant": true
+        },
+        {
+          "lambda_plus": "2/3",
+          "mixed_odd_expectation": "1/5",
+          "parity_invariant": false
+        }
+      ],
+      "positivity_rows": [
+        {
+          "entrywise_nonnegative": true,
+          "ratio": "2",
+          "transfer": [
+            [
+              "5/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "5/4"
+            ]
+          ]
+        },
+        {
+          "entrywise_nonnegative": true,
+          "ratio": "4",
+          "transfer": [
+            [
+              "17/8",
+              "15/8"
+            ],
+            [
+              "15/8",
+              "17/8"
+            ]
+          ]
+        }
+      ],
+      "sigma_x": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "symmetric_limit_still_unproved": true,
+      "unique_parity_weight": "1/2"
+    },
+    "physical_empty_comparison_closed": false,
+    "raw_character_bounded_generator_core_closed": false,
+    "raw_character_scope": {
+      "bounded_wstar_generator_core": false,
+      "chi": "2",
+      "hbar": "1/4",
+      "intercept": "9/64",
+      "l2_form_seed_not_rejected": true,
+      "rows": [
+        {
+          "affine_commutator_value": "33/64",
+          "momentum": 1,
+          "value_over_momentum": "33/64"
+        },
+        {
+          "affine_commutator_value": "57/64",
+          "momentum": 2,
+          "value_over_momentum": "57/128"
+        },
+        {
+          "affine_commutator_value": "105/64",
+          "momentum": 4,
+          "value_over_momentum": "105/256"
+        },
+        {
+          "affine_commutator_value": "201/64",
+          "momentum": 8,
+          "value_over_momentum": "201/512"
+        },
+        {
+          "affine_commutator_value": "393/64",
+          "momentum": 16,
+          "value_over_momentum": "393/1024"
+        },
+        {
+          "affine_commutator_value": "777/64",
+          "momentum": 32,
+          "value_over_momentum": "777/2048"
+        },
+        {
+          "affine_commutator_value": "1545/64",
+          "momentum": 64,
+          "value_over_momentum": "1545/4096"
+        }
+      ],
+      "slope": "3/8",
+      "symbolically_unbounded": true,
+      "temporal_smear_identity": "delta(A_f)=-A_(f')",
+      "temporal_smears_bounded_smooth": true,
+      "xi": "3"
+    },
+    "selected_tangent_pointed_gns_identification_closed": true,
+    "zero_source_symmetric_periodic_limit_closed": false
+  },
+  "exploration_id": "EXP-000801",
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING"
+  ],
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_number": "R-167",
+  "result_version": "v1.5",
+  "retained_gates": [
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+  ],
+  "schema": "tect/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-independent-result/1.0",
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_os_tangent_transport_generator_route_split_independent.py": "cd8fabf1ee859e2e2ed043dbd798117492808d2ef13b12042514b25d95ee1e98",
+    "strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json": "52841edd083a9e4f45df5a6a633f84646773b82920605a769f1ccc5b6ce032ff",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json": "b06dc6b1370e2865d1d6a52795d12cc85204924df4b038545d7d24d76a52579d",
+    "strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-certificate.md": "4d1d886c3361b07ae34099fa10108fb07faa610a0cb8eb07f582760376c93593",
+    "strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-manifest.json": "facce35da2a48460a3afd87b6a8e194e537c114e34db468a7e6fd266c8b297ae"
+  },
+  "successor_gate": "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+  "summary": {
+    "authority_status": "COMPLETE",
+    "failed": 0,
+    "passed": 96,
+    "total": 96
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
