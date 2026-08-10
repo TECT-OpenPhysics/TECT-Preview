@@ -1,0 +1,110 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RENYI-HISTORY-OS-GAP-REDUCTION-ROUTE-SPLIT-v0",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "parent_explorations": [
+    "EXP-000782",
+    "EXP-000789",
+    "EXP-000804"
+  ],
+  "exploration_id": "EXP-000805",
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_version": "v1.8",
+  "result_number": "R-167",
+  "claim_bearing": false,
+  "negative_ids": [
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP"
+  ],
+  "authority": "R-167 v1.8 is an additive T0 route reduction. It proves exact exhaustion compatibility for every fixed finite split-product level, an exact sandwiched-Renyi sufficient condition for the missing two-orientation history tail, the zero-temperature OS temporal-mass/GNS-gap equivalence, the exact one-site Q3 instanton action minimum, and a conditional low-doublet Ising reference gap. It also proves that the registered entropy, finite-moment, and two-sided energy-form controls do not automatically imply the required Renyi estimate, and that the direct two-phase Yarotsky import lacks its load-bearing hypotheses. The actual all-exhaustion common alpha, actual Q3 history estimate, beta-infinity phase selection, actual broken-sector temporal mass, continuum, physical reference comparison, prospective validation, Sector A, and Pre-A remain open.",
+  "fixed_trotter_level_compatibility": {
+    "theorem": "For A supported in a finite X and every fixed split-product word containing b bond layers, onsite factors preserve support and each exact commuting all-bond layer enlarges support by at most one lattice halo. The word therefore lies in the multiplier algebra of N_b(X) and agrees exactly in every finite ambient volume containing that halo. The same statement holds for adjoints and the reverse-sign inverse word.",
+    "exact_all_bond_identity": "All cross-bond generators are multiplication polynomials in q and commute exactly, including bonds sharing a vertex. Their exponential factorization is an exact finite-volume identity.",
+    "scope": "This is a theorem at each fixed finite Trotter level only. It proves neither n-to-infinity Cauchy convergence nor a continuous group, generator, product-star-inverse completion, common KMS quotient, global strict topology, or invariance of a local Weyl or resolvent C-star algebra."
+  },
+  "renyi_history_sufficiency": {
+    "setup": "For alpha>1 put theta=(alpha-1)/alpha. Let rho be faithful and P any unitary partial split history in either orientation.",
+    "projection_bound": "With Qtilde_alpha(P rho P*||rho)=||rho^(-theta/2) P rho^(1/2)||_(2alpha)^(2alpha), every projection E obeys Tr(P rho P* E)<=Qtilde_alpha^(1/alpha) Tr(rho E)^theta. Uniform control of P and P* gives the exact two-orientation sum bound 2 Q_(alpha,T)^(1/alpha) rho(E)^theta.",
+    "weighted_tail": "If rho(max_(x in S)|q_x|>u)<=M_a|S|exp(-a u^2), then each history orientation has fourth tail bounded by Q^(1/alpha)(M_a|S|)^theta exp(-bL^2)(L^4+2L^2/b+2/b^2), b=theta a. The coordinate-cutoff bond tail satisfies |w_(xy,L)|^2<=4c^2 X_(xy)^4 1_(X_(xy)>L).",
+    "corridor": "With L=R^gamma and 0<gamma<1/2, a squared-seminorm history multiplier exp(kappa_T L^2) is absorbed when theta(a-d)>kappa_T if the sandwiched divergence is at most dL^2+o(L^2). If the same multiplier is paid after taking the square root, require theta(a-d)>2kappa_T.",
+    "scope": "This is a sufficient reduction. No uniform Q3LOCK sandwiched-Renyi or direct restricted-tail domination theorem is proved."
+  },
+  "renyi_energy_form_no_go": {
+    "fixture": "A two-level Gibbs family has vanishing relative entropy and energy excess, uniformly bounded prescribed finite tilted moments, all-coefficient Gaussian reference moments, and the two-sided comparison (1/2)K<=UKU*<=2K, while every fixed-alpha>1 sandwiched Renyi divergence tends to infinity.",
+    "consequence": "The current energy-form, entropy, and finite-moment inputs do not automatically imply the history hypothesis in renyi_history_sufficiency.",
+    "scope": "This rejects only the automatic implication. It is not a Q3LOCK dynamics counterexample and does not prove that a stronger model-specific quasi-invariance estimate is impossible."
+  },
+  "zero_temperature_os_gap_equivalence": {
+    "hypotheses": "In a selected zero-temperature phase let H>=0 have simple vacuum kernel and let centered vectors from an invariant observable core form a form core for H^(1/2) on the vacuum complement.",
+    "equivalence": "A spectral gap Delta, the phasewise coercive inequality -i hbar omega(A*delta(A))>=Delta[omega(A*A)-|omega(A)|^2], and G_A(tau)<=exp(-Delta tau/hbar)G_A(0) for every core observable are equivalent.",
+    "mass_test": "A common large-time rate G_A(tau)<=C_A exp(-m tau), with finite observable-dependent C_A, implies Delta>=hbar m.",
+    "scope": "This is a zero-temperature criterion. A fixed-beta thermal OS/KMS reconstruction does not by itself provide the positive vacuum Hamiltonian, beta-infinity selection, or the required uniform temporal rate."
+  },
+  "q3_instanton_low_doublet_reference": {
+    "instanton": "For the shifted one-site Q3 potential and every absolutely continuous finite-action H1_loc heteroclinic from -v times the all-ones vector to +v times that vector, with chi>0 and v>0, the Euclidean action is at least S_inst=(16 sqrt(2)/3)v^3 sqrt(chi g). The locked kink attains the minimum. For lambda>0 it is unique up to common time translation; for lambda=0 the eight scalar centers may translate independently.",
+    "instanton_scope": "The action minimum identifies a semiclassical exponent precursor only. It is not an eigenvalue-splitting or prefactor theorem.",
+    "reference": "Condition on simple even and odd one-site singlets with splitting delta_1, high-mode gap Gamma, nonzero m=<phi_0,q_e phi_1>, and residual R_e=q_e-ms. The doublet-Ising reference has exactly two product ground vectors and gap at least min{Gamma,2J kappa(G)}, J=8cm^2. On the periodic cubic bond multigraph kappa(G)=6.",
+    "remainder": "The exact full-minus-reference remainder is delta_1 sum P_1 plus (c/2) sum [m{d_s,d_R}+d_R^2]. Rigorous enclosures and a volume-uniform relative-perturbation or block-diagonalization theorem are still missing.",
+    "scope": "The displayed gap belongs to the conditional reference Hamiltonian, not the exact Q3LOCK broken-sector GNS representation."
+  },
+  "yarotsky_qps_boundary": {
+    "two_phase_mismatch": "The direct two-phase quantum Pirogov-Sinai theorem requires a finite-dimensional onsite reference with two exact product zero vectors, a local gap and Peierls condition, and a sufficiently small relative perturbation. The exact Q3 onsite space is L2(R^8); classical point minima are not Hilbert vectors, the finite quantum onsite ground is unique and positive, and the required doublet reduction and smallness are not established.",
+    "single_phase_nuance": "The distinct single-phase relative-form theorem permits infinite-dimensional onsite spaces and can produce an existential unique weak-coupling phase. That is not the ordered broken-phase conclusion sought here.",
+    "ir_boundary": "The registered infrared condition is a lower bound on c. It supplies no upper perturbative radius and none of the one-site splitting, high-mode gap, matrix element, or residual-form constants required by the doublet reference.",
+    "scope": "This is a direct-import hypothesis mismatch, not a no-go for a future controlled low-doublet theorem and not a counterexample to an actual sector gap."
+  },
+  "status": "PARTIALLY RESOLVED: FIVE NARROW ROUTE-REDUCTION SUBGATES ARE CLOSED. THE TWO PARENT MATHEMATICAL GATES AND THE PROSPECTIVE PRE-A GATE REMAIN OPEN.",
+  "closed_subgates": [
+    "PA-CP1-ST8-Q3LOCK-FIXED-TROTTER-LOCAL-STRICT-INDUCTIVE-EXHAUSTION-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-SANDWICHED-RENYI-TO-TWO-ORIENTATION-HISTORY-TAIL-CORRIDOR-REDUCTION",
+    "PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE",
+    "PA-CP1-ST8-Q3LOCK-ONE-SITE-Q3-INSTANTON-ACTION-MINIMUM",
+    "PA-CP1-ST8-Q3LOCK-CONDITIONAL-DOUBLET-ISING-REFERENCE-GAP"
+  ],
+  "retained_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+  ],
+  "superseded_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "route_status": {
+    "closed_scope": "Exact fixed-level exhaustion compatibility, a conditional sandwiched-Renyi history-tail reduction, zero-temperature OS temporal-mass/GNS-gap equivalence, the isolated one-site instanton action minimum, and a conditional doublet-Ising reference gap.",
+    "not_closed": "No actual Q3LOCK Renyi history estimate, n-to-infinity split limit, all-exhaustion common alpha, phase-KMS quotient, beta-infinity phase selection, actual broken-sector temporal mass or gap, continuum, physical reference comparison, or prospective Pre-A validation is proved.",
+    "superseded_combined_gate": "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+    "next_dynamics_gate": "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "next_gap_gate": "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "prospective_holdout_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  },
+  "checkpoint_synthesis": {
+    "status": "ISSUED AFTER PROOF VALIDATION",
+    "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.tex.txt",
+    "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.pdf",
+    "source_sha256": "71fa3ddf23bbaa6f0df49f8cb5b21456d7e6f33c79c51323b674e5f348f2c640",
+    "pdf_sha256": "de99b5b2379a4f7bebb0925a3e01caa9ca927e0cd44979a074ae1bb8d4454e9b",
+    "pages": 12,
+    "workflow": "No per-lemma or intermediate PDF was issued. One single gate-level synthesis source/PDF pair was issued only after the manifest, certificate, primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed.",
+    "visual_qa": "All 12 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 12 nonempty pages."
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC exact route reductions and counterfixtures; claim-nonbearing T0; primary and non-importing independent exact engines; integrated cross-audit and all-page PDF QA complete",
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_renyi_history_os_gap_reduction_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_renyi_history_os_gap_reduction_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_renyi_history_os_gap_reduction_route_split_verify.py",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-renyi-history-os-gap-reduction-route-split-certificate-260811.md"
+  },
+  "no_overclaim": "This package does not prove the actual Q3LOCK sandwiched-Renyi history estimate, n-to-infinity Trotter convergence, continuous-time all-exhaustion common alpha, phase-KMS quotient, beta-infinity ground-state identification, actual broken-sector temporal mass or GNS gap, regulator removal, continuum, a same-Hamiltonian physical-empty comparison, a prospective blind validation result, C6, CP1, physical Sector A, or Pre-A closure."
+}

@@ -874,6 +874,63 @@ intermediate PDF. After all proof layers passed, the single nine-page v0.6
 gate-level synthesis source/PDF pair was issued and every rendered page passed
 visual review.
 
+EXP-000805 advances the same R-167 additively to v1.8 without closing either
+parent. At every fixed Trotter level `n`, the exact onsite and commuting
+all-bond split word on a seed region `X` is independent of the exhaustion once
+the finite volume contains `N_n(X)`, with the reverse split word as its exact
+inverse. This closes
+`PA-CP1-ST8-Q3LOCK-FIXED-TROTTER-LOCAL-STRICT-INDUCTIVE-EXHAUSTION-COMPATIBILITY`.
+It does not prove a growing-stage `n->infinity` Cauchy estimate, group
+completion, generator identity or phase-KMS quotient.
+
+A uniform sandwiched-Renyi bound for every partial history and its adjoint
+gives the exact two-orientation tilted-tail estimate. Combined with the
+registered arbitrary-Gaussian coordinate tail, the weighted fourth tail is
+`exp(-bL^2)(L^4+2L^2/b+2/b^2)`, with
+`b=((alpha-1)/alpha)a`, and it absorbs the current squared corridor when
+`b>kappa_T` (safely `b>2kappa_T` after an unsquared square root). This closes
+the conditional reduction
+`PA-CP1-ST8-Q3LOCK-SANDWICHED-RENYI-TO-TWO-ORIENTATION-HISTORY-TAIL-CORRIDOR-REDUCTION`,
+not the required Q3LOCK Renyi estimate. The exact two-level obstruction
+`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE`
+shows that v1.7 energy, entropy and finite-moment inputs do not provide that
+upgrade automatically.
+
+On the independent gap branch, v1.8 closes the zero-temperature equivalence
+between a simple-vacuum spectral gap, the sector coercive form, and uniform OS
+temporal exponential decay. It also proves the exact one-site Q3 instanton
+action minimum and, conditional on a controlled isolated onsite doublet, a
+reference Ising gap. These are the narrow subgates
+`PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE`,
+`PA-CP1-ST8-Q3LOCK-ONE-SITE-Q3-INSTANTON-ACTION-MINIMUM`, and
+`PA-CP1-ST8-Q3LOCK-CONDITIONAL-DOUBLET-ISING-REFERENCE-GAP`.
+Neither the instanton action nor the reference-model estimate is the actual
+Q3LOCK broken-sector gap. The direct two-phase Yarotsky import is rejected by
+the infinite onsite space, absent exact product doublet, and missing
+remainder-smallness hypotheses; the distinct infinite-dimensional
+single-phase theorem yields a unique weak-coupling phase rather than the
+target broken phase.
+
+The two active R-167 parents therefore remain
+`PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA`
+and
+`PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY`. The former now needs an
+actual volume-uniform Q3LOCK two-orientation history estimate plus split-limit
+completion; the latter needs beta-infinity phase selection and an actual
+positive sectorwise OS rate or equivalent coercive estimate, including a
+controlled low-doublet reduction if that route is used. Independently,
+`PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` stays open: a genuinely
+future or blind target and microscopic observable map must be frozen before
+disclosure. No internal proof can retroactively supply that ordering.
+
+Per the PDF-efficiency protocol, v1.8 development remained in EXP-000805, the
+manifest, certificate and verifier JSONs until every proof and source-form
+check passed. No per-lemma or intermediate v1.8 PDF was issued. The single
+twelve-page v0.7 gate-level synthesis source/PDF pair was then issued, and all
+rendered pages passed visual review. The published A5 result remains its
+seven-hypothesis T6 conditional composition. Physical/full-Class-II Sector A
+and Pre-A are not closed.
+
 The fixed-beta envelope is not yet the thermodynamic Hamiltonian `alpha`.
 Distinct algebraic ground states now exist on the separate universal
 orbit-smear carrier, but a quasi-local raw-oscillator ground representation,

@@ -5,7 +5,7 @@
 
 Authorities: `negative-results/registry.md`.
 
-**326 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 255 · retraction: 5
+**328 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 257 · retraction: 5
 
 Latest 25 records:
 
@@ -15,6 +15,8 @@ Latest 25 records:
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-pure-quartic-potential-resolvent-algebra-invariance) | no_go | use the pure Q3 quartic potential kick as an internal automorphism of the full finite-site resolvent algebra |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-ordered-ground-doublets-automatic-gns-gap) | no_go | infer a positive broken-sector GNS gap from two distinct ordered algebraic ground states, parity exchange, a fixed order witness and simple ground vectors |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-entropy-finite-moment-dynamic-gaussian-tail-inference) | no_go | promote small relative entropy, all-coefficient Gaussian reference moments and any fixed finite list of tilted moments to the dynamic Gaussian history tail required by the cutoff… |
+| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-energy-form-entropy-finite-moment-automatic-sandwiched-renyi-upgrade) | no_go | infer one uniform `alpha>1` sandwiched-Renyi history estimate from vanishing entropy/energy excess, two-sided energy-form comparison and any fixed finite list of tilted moments |
+| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-direct-yarotsky-two-phase-gap-import) | no_go | import the two-phase Yarotsky quantum Pirogov--Sinai gap theorem directly from the Q3 infrared-order inequality and classical point minima |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-onsite-qp-lipschitz-stability) | no_go | propagate the ordinary bounded `q/p` commutator Lipschitz class through the exact quartic onsite flow |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity) | no_go | delete the centered spatial weight from the cubic graph multiplier while keeping a support-location-uniform constant |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-symmetric-sandwich-only-thermodynamic-cauchy) | no_go | infer a thermodynamic automorphism from convergence only in a symmetric energy sandwich |
@@ -34,8 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-fixed-s-coefficientwise-first-passage-branch-response) | no_go | bound every fixed-order first-passage branch/repeat response in the same finite graph power before resumming the exact bond subflow |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-fixed-beta-envelope-automatic-cross-beta-gluing) | no_go | infer one beta-independent dynamics merely from separately valid fixed-beta OS/KMS envelopes |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIRST-MOMENT-AUTOMATIC-POWER-UPGRADE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-first-moment-automatic-power-upgrade) | no_go | square the first weighted-energy form cone to obtain higher weighted-energy moments |
-| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-faithful-representation-strongstar-abstract-cstar-inference) | no_go | promote strong-star convergence in one selected faithful representation to a representation-independent C-star limit |
-| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-DUHAMEL-INNER-PRODUCT-ONLY-COMMON-DYNAMICS`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-duhamel-inner-product-only-common-dynamics) | no_go | infer strong-star common dynamics from convergence of an operator and its adjoint only in the Kubo--Mori/Duhamel inner product |
 
 Search without loading the full registry:
 

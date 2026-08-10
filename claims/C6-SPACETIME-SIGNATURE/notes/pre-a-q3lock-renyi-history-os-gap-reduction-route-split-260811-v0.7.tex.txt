@@ -1,0 +1,903 @@
+% Title: Q3LOCK Renyi History, OS Gap, and Low-Doublet Route Split
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v0.7 -- first issued 2026-08-11; this version issued 2026-08-11
+% Status: T0 claim-nonbearing R-167 v1.8 extension; two mathematical parents and prospective Pre-A remain open
+
+\section{Purpose and scope}
+
+This gate-level checkpoint records \texttt{EXP-000805} and advances reusable
+result \texttt{R-167} to additive version v1.8 without allocating a new
+result number.  Its stable identifier remains
+\url{PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT}.
+The task is \texttt{T-054}, the claim context is
+\texttt{C6-SPACETIME-SIGNATURE}, the tier is \texttt{T0}, and
+\texttt{claim_bearing} is false.
+
+Five narrow subgates close in this version:
+
+\begin{enumerate}
+\item exact inductive-exhaustion compatibility at every fixed finite Trotter
+level;
+\item reduction of the two-orientation history tail to a uniform
+sandwiched-Renyi estimate;
+\item equivalence of a zero-temperature phasewise GNS gap, coercivity, and OS
+temporal mass;
+\item the exact minimum of the isolated one-site Q3 instanton action;
+\item an exact lower bound for the gap of a conditional low-doublet Ising
+reference Hamiltonian.
+\end{enumerate}
+
+Two mathematical parent gates remain open.  The first still requires an
+actual Q3LOCK two-orientation history estimate, growing-stage
+$n\longrightarrow\infty$ Cauchy control, and a common all-exhaustion
+continuous dynamics.  The second still requires actual broken-phase
+selection and volume-uniform GNS coercivity for the exact Q3LOCK Hamiltonian.
+The prospective gate
+\url{PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE}
+also remains open.
+
+This checkpoint therefore does not prove a thermodynamic split dynamics, a
+phase-KMS quotient, beta-infinity phase selection, an actual Q3LOCK
+sandwiched-Renyi bound, an actual broken-sector temporal mass or spectral
+gap, regulator removal, continuum, a same-Hamiltonian physical-empty
+comparison, prospective validation, C6, CP1, physical Sector A, or Pre-A
+closure.
+
+\section{Provenance and gate ledger}
+
+The direct parents are \url{EXP-000782}, \url{EXP-000789}, and
+\url{EXP-000804}; the present decision is \url{EXP-000805}.  The five closed
+subgates are exactly
+
+\begin{enumerate}
+\item \url{PA-CP1-ST8-Q3LOCK-FIXED-TROTTER-LOCAL-STRICT-INDUCTIVE-EXHAUSTION-COMPATIBILITY};
+\item \url{PA-CP1-ST8-Q3LOCK-SANDWICHED-RENYI-TO-TWO-ORIENTATION-HISTORY-TAIL-CORRIDOR-REDUCTION};
+\item \url{PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE};
+\item \url{PA-CP1-ST8-Q3LOCK-ONE-SITE-Q3-INSTANTON-ACTION-MINIMUM};
+\item \url{PA-CP1-ST8-Q3LOCK-CONDITIONAL-DOUBLET-ISING-REFERENCE-GAP}.
+\end{enumerate}
+
+The two open mathematical successors are
+
+\begin{enumerate}
+\item \url{PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA};
+\item \url{PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY}.
+\end{enumerate}
+
+The old combined gate
+\url{PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP}
+is historically open and superseded as the active successor; it is not a
+closed theorem.  The following v1.7 route obligations are retained:
+
+\begin{enumerate}
+\item \url{PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS};
+\item \url{PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE};
+\item \url{PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY}.
+\end{enumerate}
+
+Two scoped failures are new:
+
+\begin{enumerate}
+\item \url{NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE};
+\item \url{NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT}.
+\end{enumerate}
+
+The prior failures
+\url{NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE}
+and
+\url{NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP}
+remain applicable and are not promoted beyond their registered scopes.
+
+\section{Exact fixed-Trotter exhaustion compatibility}
+
+For a finite lattice set $X$, let
+
+\[
+ \mathcal A_X=B\!\left(L^2(\mathbb R^{8|X|})\right)
+ \quad\hbox{and}\quad
+ \mathcal A_X\longrightarrow\mathcal A_Y,\quad A\longmapsto A\otimes1,
+                                                               \tag{3.1}
+\]
+
+whenever $X\subset Y$.  An exact onsite subflow preserves support.  Every
+cross-bond generator
+
+\[
+ v_{xy}=-c\,q_x\mathbin{\cdot}q_y                            \tag{3.2}
+\]
+
+is a multiplication polynomial.  All such generators commute exactly,
+including generators on bonds with one common endpoint.  Factors on bonds
+not incident on the current support commute with the observable and with
+every retained bond factor.  Consequently one exact all-bond layer maps
+
+\[
+ \mathcal A_X\longrightarrow\mathcal A_{N_1(X)}              \tag{3.3}
+\]
+
+and agrees in every finite ambient volume containing $N_1(X)$.
+
+More generally, a fixed split-product word containing $b$ bond layers lies
+in $\mathcal A_{N_b(X)}$ and is exactly independent of every ambient volume
+containing that halo.  In particular, for fixed $n$,
+
+\[
+ \Theta_{t,n}=(\sigma_{t/n}\beta_{t/n})^n,\qquad
+ \Theta_{t,n}:\mathcal A_X\longrightarrow\mathcal A_{N_n(X)}, \tag{3.4}
+\]
+
+and the reverse-sign inverse word is
+
+\[
+ \Theta_{t,n}^{-1}=(\beta_{-t/n}\sigma_{-t/n})^n.             \tag{3.5}
+\]
+
+Adjoints obey the same support statement.  Local Weyl and basic-resolvent
+labels may be inserted as bounded finite-region multiplier inputs.  Nothing
+here proves that the outputs preserve one inductive local Weyl or resolvent
+$C^*$-algebra.
+
+\subsection{Exact constructive support proxy}
+
+The primary and independent engines verify the support mechanism without
+using a symbolic support flag.  For the cubic lattice, the first four
+$\ell^1$-ball cardinalities around one site are
+
+\[
+ |N_0|,|N_1|,|N_2|,|N_3|=1,7,25,63.                         \tag{3.6}
+\]
+
+A separate one-dimensional rational proxy starts from
+$q_0=1$, all other $q_x,p_x=0$, and uses
+
+\[
+ \kappa={10\over21},\qquad
+ p_x\longmapsto p_x+\kappa(q_{x-1}+q_{x+1}),\qquad
+ (q_x,p_x)\longmapsto(p_x,-q_x).                            \tag{3.7}
+\]
+
+After three forward layers the exact nonzero word is
+
+\[
+\begin{array}{c|rrrrrrr}
+x&-3&-2&-1&0&1&2&3\\ \hline
+q_x&{1000\over9261}&0&-{1940\over3087}&0&
+     -{1940\over3087}&0&{1000\over9261}\\[2pt]
+p_x&0&-{100\over441}&0&{241\over441}&0&
+     -{100\over441}&0 .
+\end{array}                                                  \tag{3.8}
+\]
+
+Ambient radii three and four give exactly (3.8) at every prefix, the reverse
+word recovers the seed exactly, and ambient radius two gives a different
+word.  Thus the outer halo is both sufficient and detected by a nonzero
+coefficient.  This proxy checks the exact support and inverse bookkeeping;
+it is not a substitute for the nonlinear Q3 onsite flow.
+
+Equations (3.1)--(3.8) are fixed-finite-word statements.  The support radius
+grows with $n$, so they prove no $n\longrightarrow\infty$ Cauchy estimate,
+continuous group, common generator, global strict topology, or phase-KMS
+quotient.
+
+\section{Sandwiched-Renyi history domination}
+
+Let $\rho$ be a faithful finite Gibbs density, let $P$ be a unitary partial
+split history, let $\alpha>1$, and set
+
+\[
+ \vartheta={\alpha-1\over\alpha},\qquad
+ \widetilde Q_\alpha(P\rho P^*\Vert\rho)
+ =\left\|\rho^{-\vartheta/2}P\rho^{1/2}\right\|_{2\alpha}^{2\alpha}.
+                                                               \tag{4.1}
+\]
+
+For every projection $E$, noncommutative Holder, or equivalently binary
+measurement data processing, gives
+
+\[
+ \operatorname {Tr}(P\rho P^*E)
+ \le
+ \widetilde Q_\alpha(P\rho P^*\Vert\rho)^{1/\alpha}
+ \operatorname {Tr}(\rho E)^\vartheta.                       \tag{4.2}
+\]
+
+Suppose that both orientations, uniformly over the finite volume, compact
+source, mesh, partial history, and $|t|\le T$, satisfy
+
+\[
+\begin{split}
+ \widetilde Q_\alpha(P\rho P^*\Vert\rho)&\le Q_{\alpha,T},\\
+ \widetilde Q_\alpha(P^*\rho P\Vert\rho)&\le Q_{\alpha,T}.
+\end{split}                                                   \tag{4.3}
+\]
+
+Then the required orientation sum has the exact factor two:
+
+\[
+ \rho(P^*EP)+\rho(PEP^*)
+ \le2Q_{\alpha,T}^{1/\alpha}\rho(E)^\vartheta.                \tag{4.4}
+\]
+
+This is a sufficient reduction.  The smaller model-specific target is (4.4)
+and its coordinate-polynomial weighted form on the actual cutoff events;
+the full uniform Renyi hypothesis is not asserted to be necessary.
+
+\subsection{Noncommuting orientation oracle}
+
+The exact two-level oracle is deliberately noncommuting.  Put
+
+\[
+ \rho=\begin{pmatrix}4/5&0\\0&1/5\end{pmatrix},\qquad
+ \sigma_\pm=
+ \begin{pmatrix}52/125&\mathord\pm36/125\\
+                 \mathord\pm36/125&73/125\end{pmatrix}.       \tag{4.5}
+\]
+
+For $\alpha=2$,
+
+\[
+ \widetilde Q_2(\sigma_+\Vert\rho)
+ =\widetilde Q_2(\sigma_-\Vert\rho)
+ ={7301\over3125},\qquad
+ Q^{\rm Petz}_2(\sigma_\pm\Vert\rho)={61\over25}.             \tag{4.6}
+\]
+
+For $E_+=|+\rangle\langle+|$,
+
+\[
+ \rho(E_+)={1\over2},\qquad
+ \sigma_+(E_+)={197\over250},\qquad
+ \sigma_-(E_+)={53\over250}.                                 \tag{4.7}
+\]
+
+Thus the two orientations are distinct even though their sandwiched costs
+agree, and the Petz and sandwiched quantities are not interchangeable.
+Equations (4.5)--(4.7) protect both the orientation bookkeeping and the
+choice of Renyi functional.
+
+\section{Weighted coordinate tail and the cutoff corridor}
+
+For a finite coordinate set $S$, define
+
+\[
+ X_S=\max_{x\in S}|q_x|,\qquad E_{S,L}=1_{\{X_S>L\}}.         \tag{5.1}
+\]
+
+Assume the registered reference tail
+
+\[
+ \rho(E_{S,L})\le M_a|S|e^{-aL^2}.                           \tag{5.2}
+\]
+
+With $b=\vartheta a$, applying (4.2) at every radius and integrating the
+tail yields, for either history orientation,
+
+\[
+\begin{split}
+ \operatorname {Tr}(P\rho P^*X_S^4E_{S,L})
+ \le{}&
+ Q_{\alpha,T}^{1/\alpha}(M_a|S|)^\vartheta e^{-bL^2}\\
+ &{}\times\left(L^4+{2L^2\over b}+{2\over b^2}\right).
+\end{split}                                                   \tag{5.3}
+\]
+
+For one cutoff bond,
+
+\[
+ |w_{xy,L}|^2\le4c^2X_{\{x,y\}}^4E_{\{x,y\},L}.              \tag{5.4}
+\]
+
+If at most $m$ edges occur, Cauchy--Schwarz and the two orientations give
+the explicit bound
+
+\[
+\begin{split}
+ &\rho\!\left(P^*|\sum_e w_{e,L}|^2P\right)
+ +\rho\!\left(P|\sum_e w_{e,L}|^2P^*\right)\\
+ &\quad\le
+ 8c^2m^2Q_{\alpha,T}^{1/\alpha}(M_a|S|)^\vartheta
+ e^{-bL^2}
+ \left(L^4+{2L^2\over b}+{2\over b^2}\right).
+\end{split}                                                   \tag{5.5}
+\]
+
+The exact coefficient oracle takes
+
+\[
+ \alpha=2,\quad\vartheta={1\over2},\quad a=12,\quad b=6,\quad
+ L=2,\quad Q=9,\quad M_a|S|=16,\quad c={3\over5},\quad m=3. \tag{5.6}
+\]
+
+Then
+
+\[
+ L^4+{2L^2\over b}+{2\over b^2}={313\over18},               \tag{5.7}
+\]
+
+the one-orientation prefactor before this polynomial is $3888/25$, the
+two-orientation prefactor is $7776/25$, and (5.5) becomes
+
+\[
+ {135216\over25}e^{-24}.                                    \tag{5.8}
+\]
+
+The bounded-cutoff propagation term has the safe form
+
+\[
+ 8\sqrt2\,|X|\,\|A\|e^{\nu_LT}{(\nu_LT)^R\over R!},
+ \qquad \nu_L\le{96cL^2\over\hbar}.                          \tag{5.9}
+\]
+
+With $L=R^\gamma$ and $0<\gamma<1/2$, its factorial part vanishes.
+If the sandwiched divergence satisfies
+
+\[
+ \widetilde D_\alpha(P\rho P^*\Vert\rho)
+ \le dL^2+o(L^2),                                           \tag{5.10}
+\]
+
+then (5.3) has effective exponential rate $\vartheta(a-d)$.  A history
+multiplier $e^{\kappa_TL^2}$ paid in a squared seminorm is absorbed when
+
+\[
+ \vartheta(a-d)>\kappa_T,                                   \tag{5.11}
+\]
+
+whereas the safe condition after taking the square root is
+
+\[
+ \vartheta(a-d)>2\kappa_T.                                  \tag{5.12}
+\]
+
+For the corridor oracle
+
+\[
+ \alpha=2,\quad a=14,\quad d=1,\quad\kappa_T=3,\quad
+ \gamma={1\over3},                                         \tag{5.13}
+\]
+
+the effective rate is $13/2$, both (5.11) and (5.12) hold, and the
+factorial exponent $2\gamma-1$ is $-1/3$.  These exact constants close the
+arithmetic conditional on (4.3); they do not prove (4.3) for Q3LOCK.
+
+\section{Exact energy-form and finite-moment no-go}
+
+The current entropy, energy-form, and finite-moment inputs do not
+automatically imply the Renyi hypothesis.  An exact rational family makes
+the separation explicit.  For integers $n\ge2$ and $m\ge3$, set
+
+\[
+ R_n=2^{n^4},\qquad
+ p_{0,n}={R_n\over R_n+1},\qquad
+ p_{1,n}={1\over R_n+1},\qquad
+ \delta_n=p_{0,n}-p_{1,n}.                                \tag{6.1}
+\]
+
+Let
+
+\[
+ d_{n,m}=4n^{2m}+1,\qquad
+ c_{n,m}={4n^{2m}-1\over d_{n,m}},\qquad
+ s_{n,m}={4n^m\over d_{n,m}},                              \tag{6.2}
+\]
+
+so that $c_{n,m}^2+s_{n,m}^2=1$.  Rotate
+$\rho_n=\operatorname {diag}(p_{0,n},p_{1,n})$ by either sign of the real
+rotation with cosine $c_{n,m}$ and sine $s_{n,m}$.  For the excited
+projection $P_1$,
+
+\[
+ q_{n,m}=\operatorname {Tr}(U_{\pm}\rho_nU_{\pm}^*P_1)
+ =p_{1,n}+\delta_ns_{n,m}^2.                               \tag{6.3}
+\]
+
+With
+
+\[
+ K_n=\operatorname {diag}(1,1+n^4),\qquad X_n=nP_1,         \tag{6.4}
+\]
+
+the exact relative entropy and energy excess are
+
+\[
+\begin{split}
+ D(U_\pm\rho_nU_\pm^*\Vert\rho_n)
+   &=\delta_ns_{n,m}^2n^4\log2,\\
+ \operatorname {Tr}(U_\pm\rho_nU_\pm^*K_n)
+   -\operatorname {Tr}(\rho_nK_n)
+   &=\delta_ns_{n,m}^2n^4.
+\end{split}                                                  \tag{6.5}
+\]
+
+They vanish as $O(n^{4-2m})$.  The generalized relative matrix has
+determinant one and trace strictly below $5/2$, hence
+
+\[
+ {1\over2}K_n\le U_\pm K_nU_\pm^*\le2K_n.                   \tag{6.6}
+\]
+
+For every $1\le r\le2m$,
+
+\[
+ \operatorname {Tr}(U_\pm\rho_nU_\pm^*X_n^r)=n^rq_{n,m}    \tag{6.7}
+\]
+
+is uniformly bounded.  By increasing $m$, this covers any preregistered
+finite list of polynomial moments.  The reference also has every fixed
+Gaussian coefficient:
+
+\[
+ \operatorname {Tr}(\rho_ne^{aX_n^2})
+ ={R_n+e^{an^2}\over R_n+1},                               \tag{6.8}
+\]
+
+which is uniformly bounded for each fixed $a$.
+
+Nevertheless,
+
+\[
+ q_{n,m}\ge{8\over25n^{2m}},                               \tag{6.9}
+\]
+
+and binary measurement data processing gives, for every fixed $\alpha>1$,
+
+\[
+ \widetilde D_\alpha(U_\pm\rho_nU_\pm^*\Vert\rho_n)
+ \ge n^4\log2
+ -{2m\alpha\over\alpha-1}\log n+O(1)
+ \longrightarrow\infty.                                   \tag{6.10}
+\]
+
+The compact exact oracle at $n=2,m=3$ is
+
+\[
+\begin{array}{c|c}
+p_0&65536/65537\\
+p_1&1/65537\\
+c_{2,3}&255/257\\
+s_{2,3}&32/257\\
+q_{2,3}&261377/16843009\\
+\operatorname {Tr}G&2507810/1122833\\
+Q^{\rm measured}_2&1106449/66049\\
+\widetilde Q_2&106339353113/4328653313\\
+\widetilde Q_2-Q^{\rm measured}_2&33826005000/4328653313\\
+q_{2,3}^2/p_1&68317936129/4328653313 .
+\end{array}                                                  \tag{6.11}
+\]
+
+This proves only failure of the automatic implication.  The auxiliary
+rotations are not Q3LOCK histories, so (6.1)--(6.11) neither refute an
+actual model-specific Q3LOCK quasi-invariance theorem nor prove dynamics
+nonexistence.
+
+\section{Zero-temperature OS mass and GNS gap equivalence}
+
+Let $(\pi_\omega,\mathcal H_\omega,\Omega_\omega)$ be one selected
+zero-temperature phase representation with
+
+\[
+ H_\omega\ge0,\qquad H_\omega\Omega_\omega=0,\qquad
+ \ker H_\omega=\mathbb C\Omega_\omega.                       \tag{7.1}
+\]
+
+For an invariant unital observable core, put
+
+\[
+ \xi_A=\pi_\omega(A-\omega(A)1)\Omega_\omega.                \tag{7.2}
+\]
+
+Assume that these centered vectors form a form core for
+$H_\omega^{1/2}$ on $\Omega_\omega^\perp$.  Define physical imaginary time
+
+\[
+\begin{split}
+ G_A(\tau)
+ &=\langle\xi_A,e^{-\tau H_\omega/\hbar}\xi_A\rangle\\
+ &=\int_{(0,\infty)}e^{-\tau E/\hbar}\,d\mu_A(E).
+\end{split}                                                   \tag{7.3}
+\]
+
+For every $\Delta>0$, the following are equivalent:
+
+\begin{enumerate}
+\item $\sigma(H_\omega)\subset\{0\}\cup[\Delta,\infty)$;
+\item for every core observable,
+ \[
+ -i\hbar\,\omega(A^*\delta(A))
+ \ge\Delta\{\omega(A^*A)-|\omega(A)|^2\};                   \tag{7.4}
+ \]
+\item for every core observable and $\tau\ge0$,
+ \[
+ G_A(\tau)\le e^{-\Delta\tau/\hbar}G_A(0).                  \tag{7.5}
+ \]
+\end{enumerate}
+
+Here $\delta(A)=(i/\hbar)[H_\omega,A]$ on the core, and
+
+\[
+ -\hbar G_A'(0+)
+ =\langle\xi_A,H_\omega\xi_A\rangle
+ =-i\hbar\,\omega(A^*\delta(A)).                             \tag{7.6}
+\]
+
+The spectral theorem proves the forward implications; the form-core
+hypothesis promotes the converse coercivity to the whole vacuum complement.
+A weaker large-time test is also exact: if every core observable has a
+finite $C_A$ and there is one common $m>0$ such that, for all sufficiently
+large $\tau$,
+
+\[
+ G_A(\tau)\le C_Ae^{-m\tau},                                \tag{7.7}
+\]
+
+then no core spectral measure has support below $\hbar m$, and the form-core
+hypothesis gives
+
+\[
+ \Delta\ge\hbar m.                                          \tag{7.8}
+\]
+
+This theorem identifies the precise spectral target.  A fixed-beta periodic
+OS/KMS reconstruction supplies a thermal Liouvillean, not automatically the
+positive vacuum Hamiltonian in (7.1).  Q3LOCK still needs beta-infinity
+phase selection and one phasewise, beta-uniform half-line rate.
+
+\section{Exact one-site Q3 instanton action}
+
+For the shifted one-site potential, write
+
+\[
+ U(q)={g\over4}\sum_{e=1}^8(q_e^2-v^2)^2
+ +{\lambda\over4}\sum_{\{e,f\}\in E(Q_3)}
+ (q_e-q_f)^2(q_e^2+q_f^2),                                \tag{8.1}
+\]
+
+where $\chi>0$, $v>0$, $g>0$, and $\lambda\ge0$.  For every absolutely
+continuous finite-action $H^1_{\rm loc}$ heteroclinic with
+$\dot q\in L^2$, $q(-\infty)=-v\mathbf1$, and
+$q(+\infty)=v\mathbf1$,
+
+\[
+ I[q]=\int_{\mathbb R}
+ \left({\chi\over2}|\dot q|^2+U(q)\right)dt
+ \ge S_{\rm inst}:={16\sqrt2\over3}v^3\sqrt{\chi g}.         \tag{8.2}
+\]
+
+Indeed, discarding the nonnegative Q3 coupling and applying the pointwise
+arithmetic-geometric mean inequality gives
+
+\[
+ {\chi\over2}|\dot q|^2
+ +{g\over4}\sum_e(q_e^2-v^2)^2
+ \ge\sqrt{\chi g\over2}
+ \sum_e|\dot q_e|\,|q_e^2-v^2|.                             \tag{8.3}
+\]
+
+Each of the eight endpoint variations contributes at least $4v^3/3$.
+Equality is attained by the locked path
+
+\[
+ q_e(t)=v\tanh\!\left(v\sqrt{g\over2\chi}(t-t_0)\right).
+                                                               \tag{8.4}
+\]
+
+When $\lambda>0$, equality in the Q3 term locks the eight centers, so the
+minimizer is unique up to common time translation.  When $\lambda=0$, the
+eight scalar centers may translate independently.
+
+For the exact verifier fixture
+
+\[
+ \chi=1,\qquad g=2,\qquad v={3\over2},\qquad\lambda={5\over7},
+                                                               \tag{8.5}
+\]
+
+the squared action is $1296$ and
+
+\[
+ S_{\rm inst}=36.                                           \tag{8.6}
+\]
+
+This is an action minimum, not an eigenvalue-splitting theorem.  It proves
+neither a tunnelling prefactor nor a volume-uniform sector gap.
+
+\section{Conditional low-doublet Ising reference}
+
+Assume that the exact one-site Hamiltonian has simple even and odd
+Aut$(Q_3)$ singlets $\phi_0,\phi_1$ with
+
+\[
+ \epsilon_0<\epsilon_1<\epsilon_2.                          \tag{9.1}
+\]
+
+Define
+
+\[
+\begin{split}
+ P&=|\phi_0\rangle\langle\phi_0|
+   +|\phi_1\rangle\langle\phi_1|,\\
+ s&=|\phi_0\rangle\langle\phi_1|
+   +|\phi_1\rangle\langle\phi_0|,\\
+ \delta_1&=\epsilon_1-\epsilon_0,\\
+ k&=h_{\rm site}-\epsilon_0-\delta_1
+       |\phi_1\rangle\langle\phi_1|.
+\end{split}                                                   \tag{9.2}
+\]
+
+If
+
+\[
+ \Gamma=\inf\sigma(h_{\rm site}|_{P^\perp})-\epsilon_0>0,
+ \qquad k\ge\Gamma(1-P),                                    \tag{9.3}
+\]
+
+choose phases so that, independently of the Q3 coordinate $e$,
+
+\[
+ m=\langle\phi_0,q_e\phi_1\rangle>0,\qquad R_e=q_e-ms.
+                                                               \tag{9.4}
+\]
+
+Parity and symmetry give $PR_eP=0$.  On a connected finite lattice graph
+$G$, define
+
+\[
+ H_{\rm ref}=\sum_xk_x+{cm^2\over2}
+ \sum_{\langle xy\rangle,e}(s_x-s_y)^2,\qquad J=8cm^2.
+                                                               \tag{9.5}
+\]
+
+Its kernel is exactly the span of the two product vectors
+
+\[
+ \bigotimes_x{\phi_0+\phi_1\over\sqrt2},\qquad
+ \bigotimes_x{\phi_0-\phi_1\over\sqrt2}.                    \tag{9.6}
+\]
+
+If $\kappa(G)$ is the edge connectivity, then
+
+\[
+ \operatorname {gap}(H_{\rm ref})
+ \ge\min\{\Gamma,2J\kappa(G)\}.                              \tag{9.7}
+\]
+
+A state outside the doublet sector pays at least $\Gamma$.  Within the
+doublet sector, every disagreeing bond pays $2J$, and every nonconstant
+configuration cuts at least $\kappa(G)$ bonds.  For the standard periodic
+cubic bond multigraph of side at least two, $\kappa(G)=6$ and the bound is
+$\min\{\Gamma,12J\}$.
+
+The exact full-minus-reference decomposition is
+
+\[
+\begin{split}
+ H-\epsilon_0|\Lambda|
+ ={}&H_{\rm ref}+\delta_1\sum_xP_{1,x}\\
+ &+{c\over2}\sum_{\langle xy\rangle,e}
+ \left[m\{s_x-s_y,R_{x,e}-R_{y,e}\}
+ +(R_{x,e}-R_{y,e})^2\right].
+\end{split}                                                   \tag{9.8}
+\]
+
+The verifier fixture uses
+
+\[
+ \delta_1={1\over10},\quad\Gamma=5,\quad m={1\over2},
+ \quad c={3\over5},\quad J={6\over5},\quad\kappa=6.          \tag{9.9}
+\]
+
+The low-sector excitation is $72/5$, and the certified reference lower
+bound is therefore $5$.  An exact three-level matrix fixture independently
+checks the bond expansion in (9.8).
+
+The reference-gap certificate and the transfer to the exact model have
+different assumptions.  The reference certificate first needs rigorous
+enclosures for $\delta_1,\Gamma,m$ to validate (9.3)--(9.7).  Even after
+that reference gap is available, transfer to the exact Q3LOCK Hamiltonian
+still needs relative-form estimates for every $R_e$ and a volume-uniform
+remainder-smallness, perturbation, or block-diagonalization theorem with
+controlled truncation removal.  Equation (9.7) is a gap lower bound for a
+conditional reference Hamiltonian, not the actual Q3LOCK broken-sector GNS
+gap.
+
+\section{Boundary of the Yarotsky imports}
+
+The direct two-phase quantum Pirogov--Sinai import does not meet its
+load-bearing hypotheses.  In the form audited here, it requires a
+finite-dimensional onsite reference, two exact Hilbert-space product zero
+vectors minimizing the local reference blocks, a local gap and Peierls
+condition, a nonzero first-order splitting vector, and a sufficiently small
+relative perturbation.  The exact Q3 onsite space is $L^2(\mathbb R^8)$.
+Its classical point minima are not Hilbert vectors, its finite quantum
+Schrodinger ground vector is unique and positive, and neither the controlled
+doublet embedding nor the required smallness of (9.8) has been proved.
+
+The distinct single-phase relative-form theorem permits an
+infinite-dimensional onsite Hilbert space.  For every $\eta>0$, the Q3 bond
+obeys a bound of the form
+
+\[
+\begin{split}
+ B_{xy}\le{}&
+ \eta[(h_x-\epsilon_0)+(h_y-\epsilon_0)]\\
+ &+\left(2\eta\epsilon_0+4\eta gv^4
+ +{32c^2\over\eta g}\right)1.
+\end{split}                                                   \tag{10.1}
+\]
+
+The scalar residual used in this estimate is the exact sum of squares
+
+\[
+ {\eta g\over8}(q^2-2v^2)^2
+ +{\eta g\over8}\left(q^2-{4c\over\eta g}\right)^2.          \tag{10.2}
+\]
+
+This theorem can yield an existential unique gapped weak-coupling phase near
+a simple product reference.  It does not yield the desired ordered
+two-phase conclusion.
+
+The registered infrared condition
+
+\[
+ c>c_{\rm IR}:={\hbar^2J_3^2\over8\chi\theta_Q^2}            \tag{10.3}
+\]
+
+is only a lower bound on $c$.  It supplies no upper perturbative radius and
+none of $\delta_1,\Gamma,m$ or the $R_e$ constants required by (9.8).
+Therefore the direct two-phase import fails by a hypothesis mismatch.  This
+is not a no-go for a future controlled low-doublet theorem and not a
+counterexample to an actual sector gap.
+
+The primary sources for this distinction are Yarotsky's
+\url{https://arxiv.org/abs/math-ph/0412040}
+single-phase relative-perturbation theorem and the two-phase quantum
+Pirogov--Sinai statement at
+\url{https://www.mathnet.ru/eng/rm1728}.
+
+\section{Exact dependency boundary for Sector A and Pre-A}
+
+The dynamics parent is now recorded as
+
+\begin{quote}
+\textbf{OPEN, with fixed-Trotter exhaustion compatibility and a conditional
+sandwiched-Renyi tail reduction closed on 2026-08-11.}
+\end{quote}
+
+The spectral parent is now recorded as
+
+\begin{quote}
+\textbf{OPEN, with the zero-temperature OS temporal-mass equivalence,
+one-site instanton minimum, and conditional reference gap isolated on
+2026-08-11.}
+\end{quote}
+
+The active \texttt{A5-SECTOR-A-SYNTHESIS} remains the published
+\texttt{T6} conditional composition under its seven registered hypotheses.
+This checkpoint does not alter that card and does not promote it to a
+physical or full-Class-II Sector-A theorem.
+
+Physical Pre-A still requires target-algebra beta-infinity ground-state
+selection, actual broken-sector coercivity, enlarged-counterterm continuum
+control, a same-Hamiltonian physical-empty comparison, and prospective
+validation.  The prospective gate requires a genuinely future or blind
+target together with a microscopic observable map frozen before disclosure.
+The present Round-1 record contains no admitted microscopic survivor.
+Repository-internal proof work cannot retroactively create the required time
+ordering.  Pre-A therefore remains open.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{UPHELD as an overreach:} fixed-$n$ compatibility does not imply
+the split limit.  The halo grows with $n$, and no growing-stage Cauchy bound
+has been proved.
+\item \textbf{DISMISSED:} the orientation theorem does not confuse Petz and
+sandwiched Renyi quantities.  Equations (4.5)--(4.7) make them numerically
+different and check both history orientations.
+\item \textbf{DISMISSED:} v1.7 entropy and energy comparability do not imply
+the required Renyi bound.  Section 6 preserves a factor-two energy-form
+comparison and arbitrary preregistered finite moments while every fixed
+$\alpha>1$ sandwiched divergence diverges.
+\item \textbf{UPHELD as an overreach:} the exact no-go family is auxiliary,
+not a Q3LOCK history.  It rejects only the automatic inference.
+\item \textbf{UPHELD as an overreach:} a fixed-beta OS decay statement is not
+the vacuum gap.  Section 7 requires a selected zero-temperature
+representation and a positive implementing Hamiltonian.
+\item \textbf{UPHELD as an overreach:} the instanton action is not a
+tunnelling splitting or prefactor theorem.
+\item \textbf{DISMISSED:} the conditional Ising reference is not silently
+identified with the exact Q3LOCK Hamiltonian.  Equation (9.8) displays the
+unbounded remainder and the one-site splitting still to be controlled.
+\item \textbf{DISMISSED:} the Yarotsky audit does not assert that all
+Yarotsky theorems require finite onsite dimension.  The infinite-dimensional
+single-phase theorem is separated explicitly from the two-phase import.
+\item \textbf{DISMISSED:} five narrow closures do not close physical Sector A
+or Pre-A.  The two mathematical parents and the prospective holdout remain
+open.
+\end{enumerate}
+
+\section{Reproduction and evidence contract}
+
+The formal owner is the manifest
+\url{strategy/pre-a-cp1-st8-q3lock-renyi-history-os-gap-reduction-route-split-manifest.json};
+the analytic authority is
+\url{strategy/pre-a-cp1-st8-q3lock-renyi-history-os-gap-reduction-route-split-certificate-260811.md}.
+The exact primary, non-importing independent, and integrated engines are
+
+\begin{enumerate}
+\item \url{codes/foundations/pre_a_cp1_st8_q3lock_renyi_history_os_gap_reduction_route_split.py};
+\item \url{codes/foundations/pre_a_cp1_st8_q3lock_renyi_history_os_gap_reduction_route_split_independent.py};
+\item \url{codes/foundations/pre_a_cp1_st8_q3lock_renyi_history_os_gap_reduction_route_split_verify.py}.
+\end{enumerate}
+
+From the repository root, run
+
+\begin{verbatim}
+Set-Location E:\Dev\TECT
+$py = 'E:\Dev\TECT.venv\Scripts\python.exe'
+$stem = (
+  'codes\foundations\pre_a_cp1_st8_q3lock_' +
+  'renyi_history_os_gap_reduction_route_split'
+)
+& $py -X utf8 ($stem + '.py')
+& $py -X utf8 ($stem + '_independent.py')
+& $py -X utf8 ($stem + '_verify.py')
+\end{verbatim}
+
+The expected proof-layer outputs are primary \texttt{PASS 127/127},
+independent \texttt{PASS 115/115}, and integrated
+\texttt{PASS 197/197}.  The independent engine does not import the primary
+engine and uses distinct exact OS and Ising-reference fixtures.  The
+integrated layer launches both engines twice, checks deterministic canonical
+outputs, enforces its import firewall, cross-checks the exact constants and
+scope booleans, verifies stored-result freshness, audits all formal
+authorities, and governs the single gate-level source/PDF checkpoint.
+
+This v0.7 file is the sole synthesis source for the present logical
+checkpoint.  Its sibling PDF is governed by the manifest source and PDF
+hashes, page count, freshness, text extraction, and all-page visual review.
+No per-lemma or intermediate PDF belongs to this result.
+
+\section{Result footer}
+
+\begin{verbatim}
+Result ID:               PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-
+                         MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT.
+Reusable result:         R-167 v1.8; no new result number.
+Exploration:             EXP-000805.
+Precise statement:       Fixed-Trotter compatibility; Renyi history-tail
+                         reduction; zero-T OS mass/gap equivalence; exact
+                         instanton minimum; conditional Ising reference gap.
+Open parents:            All-exhaustion two-orientation history common alpha;
+                         actual broken-sector GNS gap coercivity.
+Prospective gate:        PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE
+                         remains open.
+Negative results:        No automatic Renyi upgrade from energy forms,
+                         entropy and finite moments; no direct two-phase
+                         Yarotsky import without its hypotheses.
+Scope:                   T0 exact route reductions and counterfixture;
+                         claim_bearing false.
+Dependencies:            EXP-000782, EXP-000789, EXP-000804; R-167 v1.0-v1.7;
+                         exact finite Q3 Hamiltonians and registered tails.
+Evidence grade:          ANALYTIC + EXACT + primary + non-importing
+                         independent + integrated verification.
+Reproduction command:    Run the three commands in Section 13 in the listed
+                         order, with the integrated verifier last.
+Expected output:         Primary PASS 127/127; independent PASS 115/115;
+                         integrated PASS 197/197.
+Falsification gate:      Any support word, orientation, Petz/sandwiched,
+                         edge coefficient, no-go rational, OS sign or rate,
+                         instanton factor, min-cut gap, provenance, freshness,
+                         hash, count or scope mismatch.
+Tier before / after:     C6 T1 / C6 T1; no claim or tier change.
+No-overclaim statement:  No n-to-infinity split limit, actual Q3LOCK Renyi
+                         history estimate, all-exhaustion common alpha,
+                         phase-KMS quotient, beta-infinity selection, actual
+                         broken-sector temporal mass or gap, regulator
+                         removal, continuum, physical-empty comparison,
+                         prospective validation, C6, CP1, physical Sector A,
+                         or Pre-A closure.
+Next required action:    Prove uniform two-orientation cutoff domination and
+                         growing-stage Cauchy completion; separately prove the
+                         doublet remainder bound or a beta-uniform OS mass.
+\end{verbatim}

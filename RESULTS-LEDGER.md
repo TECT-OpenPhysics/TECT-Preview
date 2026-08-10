@@ -22,7 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-167](#r-167) | Weighted-energy, common-dynamics topology, orbit-smear carrier, local-strict and ground-gap route split | Scoped T0 analytic/exact/executed/audited theorem, strengthened additively through v1.7 without a new result number. v1.0--v1.3 prove the weighted-energy/cubic graph inputs and exact topology route splits; v1.4 constructs the canonical fixed-beta OS-mixture common normal KMS envelope; v1.5 identifies the selected Hamiltonian tangent nets in finite-core Fell/GNS topology; v1.6 completes fixed raw words and constructs a categorical orbit-smear carrier with two ground states. v1.7 proves a finite-region local-strict/energy subflow carrier and a fixed-Gibbs character entropy-tail theorem, rejects raw point-norm and pure-kick resolvent-algebra shortcuts, and splits all-exhaustion common alpha from sector GNS coercivity. Neither successor is closed; continuum, empty-space comparison, C6, CP1 and Pre-A remain open |
+| [R-167](#r-167) | Weighted-energy, common-dynamics topology, orbit-smear carrier, local-strict and ground-gap route split | Scoped T0 analytic/exact/executed/audited theorem, strengthened additively through v1.8 without a new result number. v1.0--v1.3 prove the weighted-energy/cubic graph inputs and exact topology route splits; v1.4 constructs the canonical fixed-beta OS-mixture common normal KMS envelope; v1.5 identifies the selected Hamiltonian tangent nets in finite-core Fell/GNS topology; v1.6 completes fixed raw words and constructs a categorical orbit-smear carrier with two ground states; v1.7 proves a finite-region local-strict/energy subflow carrier and a fixed-Gibbs character entropy-tail theorem. v1.8 closes fixed-Trotter compatibility, a conditional sandwiched-Renyi history-tail reduction, the zero-temperature OS/GNS gap equivalence, the one-site instanton action and a conditional doublet-Ising reference gap. The common-alpha and actual broken-sector gap parents remain open; continuum, empty-space comparison, C6, CP1, physical Sector A and Pre-A remain open |
 | [R-166](#r-166) | Sparse production radial-Gram decomposition and global owner bound | Scoped T4 analytic/exact/executed/audited production-fibre theorem, strengthened in v1.1 without a new result ID. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / single fresh-`4p` R-153 fibre, the exact Fierz split, Pauli nonresonance, radial bounds and direct coefficient inequality give an explicit rational polynomial whose unique global minimum lies in `70<G_*<71` and is `-4/5+18740524635403/439505584128000>-4/5`. Thus the owner plus source Hessian is strictly above `1/10`, the scoped R-164 reduction permits `rho=3/20`, and the R-165 annulus is closed. Exact simultaneous `sin(4x),sin(8x)` arithmetic gives Gram `[[5/4,1],[1,3/2]]` and ratio `3/8` at `(1,-1)`, registering that the coefficient-one lemma cannot be copied rootwise. Primary `40/40` and independent Fraction `37/37` audits pass. The complete joint owner, nonlinear/revisit feedback, low variables, removal, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-165](#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | Scoped T4 analytic/exact/executed/audited production-fibre theorem. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / fresh-`4p` R-153 fibre, whitened past amplitude `G` and final direction `alpha` obey `K_owner(g)[alpha,alpha] >= P(G)|alpha|^2` for one explicit rational quartic polynomial. A sharp `5/6` Fourier separation lemma, exact A1 covariance enclosures, and R-130 derivative envelopes prove the R-164 owner target `K_owner>=-9I/10` for `0<=G<=21` and `G>=274`, reducing this fibre's noncompact amplitude problem to the bounded open annulus `21<G<274`; its closed certification domain `21<=G<=274` is compact. Primary `38/38` and independent Fraction `30/30` audits pass; the deterministic five-page PDF passed all-page visual QA. The open annulus, other harmonics and roots, cross blocks, nonlinear/revisit feedback, low variables, regulator/removal uniformity, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-164](#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | Scoped T4 analytic/exact/executed/audited direct-chart theorem. For every finite R-104 zero-control chart, the R-141 legal force is the orthogonal projection of the complete centered terminal scalar onto predictable first Gaussian chaos, so its squared source-dual norm is at most the scalar variance with sharp constant one. A7 `L2` convergence and the A1/A11 point-covariance trace give a cutoff-, chart-length-, and linear/isometric-refinement-uniform bound on that variance along the registered sharp-cube/dyadic sequence. A7 centering also makes the direct anchor nonnegative. Therefore a complete direct owner bound `K_owner>=-(10/11-rho)G_src` yields `mu=-1/110+rho`, `epsilon_v=max(0,5/11-rho/4)`, `epsilon_6=3/20`, and constant `B_*/rho`, without separate anchor or origin-force assumptions. The complete production owner, nonzero feedback, shifted low base, arbitrary graph metric transport, random/nonlinear/revisit/pathwise scope, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
@@ -219,7 +219,11 @@ two distinct ground states of that carrier, and advances the same result to
 v1.6. `EXP-000804` proves the finite-region local-strict/energy subflow
 carrier and fixed finite-Gibbs character entropy-tail theorem, registers four
 norm/topology/tail/gap boundaries, splits the combined successor, and advances
-the same result to v1.7.
+the same result to v1.7. `EXP-000805` then proves fixed-Trotter exhaustion
+compatibility, a conditional sandwiched-Renyi history-tail reduction, the
+zero-temperature OS temporal-mass/GNS-gap equivalence, the exact one-site Q3
+instanton action minimum, and a conditional doublet-Ising reference gap. It
+registers two further route boundaries and advances the same result to v1.8.
 
 **Authority links.** The v1.1 `centered-weight cubic graph` and
 `prescribed-word` heat theorem are recorded under
@@ -271,6 +275,16 @@ and
 thermodynamic dynamics/phase-quotient problem; the second is an independent
 sectorwise spectral-coercivity problem. Neither is closed.
 
+R-167 v1.8 closes the five narrow subgates
+`PA-CP1-ST8-Q3LOCK-FIXED-TROTTER-LOCAL-STRICT-INDUCTIVE-EXHAUSTION-COMPATIBILITY`,
+`PA-CP1-ST8-Q3LOCK-SANDWICHED-RENYI-TO-TWO-ORIENTATION-HISTORY-TAIL-CORRIDOR-REDUCTION`,
+`PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE`,
+`PA-CP1-ST8-Q3LOCK-ONE-SITE-Q3-INSTANTON-ACTION-MINIMUM`, and
+`PA-CP1-ST8-Q3LOCK-CONDITIONAL-DOUBLET-ISING-REFERENCE-GAP`. These are route
+reductions, not closures of either parent. The two v1.7 parent gates remain
+open, as does the independent prospective holdout gate
+`PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE`.
+
 **Negative-route authorities.** The exact fixed-power star/repeat obstruction
 is registered as
 `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE`.
@@ -305,6 +319,10 @@ The four v1.7 route boundaries are
 `NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE`,
 and
 `NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP`.
+The two v1.8 route boundaries are
+`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE`
+and
+`NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT`.
 
 **Statement.** For the exact finite-volume ST8/Q3LOCK Hamiltonian with
 `chi,c,g>0`, `lambda>=0`, bounded source, and centered weight
@@ -627,6 +645,49 @@ Ordered-ground distinctness therefore does not imply a broken-sector GNS gap.
 That successor requires the independent coercive estimate
 `-i hbar omega(A^*delta(A))>=Delta[omega(A^*A)-|omega(A)|^2]`.
 
+**v1.8 fixed-Trotter, Renyi-history and zero-temperature gap reductions.**
+For every fixed split level `n`, the exact onsite and mutually commuting
+all-bond subflows send a seed algebra `A_X` into `A_(N_n(X))`; the split word
+`Theta_(t,n)=(sigma_(t/n) beta_(t/n))^n` is exactly exhaustion independent
+once the finite volume contains that halo, and its inverse is the reverse
+word. This is fixed-`n` compatibility only: no growing-stage `n->infinity`
+Cauchy estimate, group completion, generator identity or phase-KMS quotient
+follows.
+
+For a faithful finite Gibbs density, every unitary partial history `P`, and
+`alpha>1`, sandwiched-Renyi data processing gives
+
+`Tr(P rho P^* E)<=Qtilde_alpha(P rho P^*||rho)^(1/alpha)
+rho(E)^vartheta`, `vartheta=(alpha-1)/alpha`.
+
+A uniform bound for both `P` and `P^*` therefore reduces the required
+two-orientation cutoff history estimate to the registered Gaussian reference
+tail. The coordinate-polynomial tail is
+`exp(-bL^2)(L^4+2L^2/b+2/b^2)`, `b=vartheta a`; it absorbs a squared corridor
+multiplier `exp(kappa_T L^2)` when `b>kappa_T`, and the safe unsquared
+condition is `b>2kappa_T`. If the Renyi divergence itself grows as
+`dL^2+o(L^2)`, replace `b` by `vartheta(a-d)`. An exact two-level family keeps
+two-sided energy-form comparability, vanishing entropy and energy excess,
+all reference Gaussian coefficients and any fixed finite tilted-moment list
+while its sandwiched-Renyi divergence diverges. Thus the v1.7 inputs do not
+automatically prove the required Q3LOCK Renyi history bound.
+
+In a simple-vacuum zero-temperature phase representation with the declared
+form-core condition, a spectral gap `Delta`, the coercive inequality
+`-i hbar omega(A^*delta(A))>=Delta Var_omega(A)`, and OS temporal decay
+`G_A(tau)<=exp(-Delta tau/hbar)G_A(0)` are equivalent. A common large-time
+rate `m` on the core implies `Delta>=hbar m`; fixed-beta OS data alone do not
+supply the required positive vacuum Hamiltonian or beta-infinity phase
+selection. The one-site Q3 heteroclinic action has the exact minimum
+`S_inst=(16sqrt(2)/3)v^3sqrt(chi g)`, with the eight centers locked for
+`lambda>0`; this is not a splitting theorem. Under an unproved isolated
+even/odd onsite doublet and remainder-smallness hypothesis, the reference
+Ising Hamiltonian has gap at least `min{Gamma,2J kappa(G)}`, `J=8cm^2`.
+The exact Q3LOCK reduction and smallness estimates are still missing, and the
+finite-dimensional two-phase Yarotsky hypotheses cannot be imported
+directly. The distinct infinite-dimensional single-phase theorem yields only
+a unique weak-coupling phase, not the target broken-sector gap.
+
 **Boundary.** The v1.6 selected-tangent theorem is fixed-beta and confined to
 the registered source-tangent diagonal nets. Its raw finite-word conclusion
 is scalar-kernel and pointed finite-core Fell/GNS convergence, not globally
@@ -634,19 +695,25 @@ compatible common-Hilbert operator strong-star convergence. The separate
 zero-source carrier is beta independent and supports two distinct algebraic
 ground states, but it is not an all-shape exhaustion limit or the sought
 quasi-local raw oscillator alpha. The v1.7 local-strict theorem remains
-finite-region, and its Gibbs tail remains finite-volume. The theorem does not
-prove volume-uniform
+finite-region, and its Gibbs tail remains finite-volume. The v1.8 split-word
+compatibility is fixed Trotter level, its Renyi theorem is conditional on an
+unproved Q3LOCK history bound, and its gap statements are an equivalence,
+an action minimum and a conditional reference-model estimate rather than the
+actual broken-sector gap. Both R-167 parent gates and
+`PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` remain open. The theorem
+does not prove volume-uniform
 direct projected `D,delta D` locality, a local net, a full canonical
 momentum/Weyl bridge, polynomial local-generator identification, phase-KMS
 quotient identification, a broken-sector GNS or physical mass gap, regulator
 removal, continuum, a physical empty/preparation reference, a below-empty
-sign, C6, CP1, Sector A or Pre-A.
+sign, C6, CP1, physical/full-Class-II Sector A or Pre-A. The published A5
+card remains only its seven-hypothesis T6 conditional composition.
 
-**Proven in:** C6 / [R-167 v1.7 certificate](strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md), [single gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt), and [rendered synthesis PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf). The v1.6 selected-word/carrier predecessor remains in [its certificate](strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-certificate-260810.md) and [single synthesis](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf). Per the PDF-efficiency protocol, no per-lemma or intermediate v1.7 PDF was issued: the one gate-level synthesis is a nine-page checkpoint built only after the manifest, certificate, primary, non-importing independent, and integrated proof layers passed, and every rendered page passed visual review.
+**Proven in:** C6 / [R-167 v1.8 certificate](strategy/pre-a-cp1-st8-q3lock-renyi-history-os-gap-reduction-route-split-certificate-260811.md), [single gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.tex.txt), and [rendered synthesis PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.pdf). Its v1.7 finite-region predecessor remains in [its certificate](strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md) and [single synthesis](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf). The v1.6 selected-word/carrier predecessor remains in [its certificate](strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-certificate-260810.md) and [single synthesis](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf). Per the PDF-efficiency protocol, no per-lemma or intermediate v1.8 PDF was issued. The one twelve-page v0.7 synthesis was built only after the manifest, certificate, primary, non-importing independent, integrated, formal-authority, generated-surface and source-form checks passed, and every rendered page passed visual review.
 
-**Tier:** T0 (scoped selected-tangent, categorical orbit-smear and finite-
-region local-strict/finite-Gibbs theorem; no quasi-local thermodynamic
-common-alpha or GNS-gap promotion).
+**Tier:** T0 (scoped selected-tangent, categorical orbit-smear, finite-region
+local-strict/finite-Gibbs and v1.8 route-reduction theorem; no quasi-local
+thermodynamic common-alpha, actual GNS-gap, Sector-A or Pre-A promotion).
 
 **Publication target:** Pre-A analytic methods note.
 

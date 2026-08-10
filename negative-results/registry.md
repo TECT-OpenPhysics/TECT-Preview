@@ -9,6 +9,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE](#ng-2026-08-11-pre-a-st8-q3lock-energy-form-entropy-finite-moment-automatic-sandwiched-renyi-upgrade) | infer one uniform `alpha>1` sandwiched-Renyi history estimate from vanishing entropy/energy excess, two-sided energy-form comparison and any fixed finite list of tilted moments | an exact two-level family retains all those inputs and all-coefficient Gaussian reference moments while its sandwiched-Renyi divergence grows without bound. Require a genuine model-specific quasi-invariance or restricted-tail estimate; this is not a Q3LOCK dynamics counterexample |
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT](#ng-2026-08-11-pre-a-st8-q3lock-direct-yarotsky-two-phase-gap-import) | import the two-phase Yarotsky quantum Pirogov--Sinai gap theorem directly from the Q3 infrared-order inequality and classical point minima | the exact Q3 onsite Hilbert space, product-reference, local-gap, first-order splitting and small-relative-perturbation hypotheses are not established. Build and control a low-doublet reference first; this is an import mismatch, not a no-go for an actual broken-sector gap |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0](#ng-2026-08-11-pre-a-st8-q3lock-raw-weyl-basic-resolvent-quartic-point-norm-c0) | make the exact unsplit quartic onsite flow point-norm continuous on an invariant concrete C-star carrier containing a raw momentum Weyl or basic momentum resolvent | exact full-Q3 translated packets at time `tau R^(-3)` give a positive norm-discontinuity lower bound for both labels. Retain the finite-region bounded local-strict/energy topology; full resolvent-algebra invariance under the unsplit flow remains open |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE](#ng-2026-08-11-pre-a-st8-q3lock-pure-quartic-potential-resolvent-algebra-invariance) | use the pure Q3 quartic potential kick as an internal automorphism of the full finite-site resolvent algebra | conjugating a basic momentum resolvent produces an element whose orbit under every nonzero configuration translation has the exact norm jump `1/|mu|`, violating the intrinsic finite-dimensional Weyl-orbit continuity criterion. This blocks the split-subflow resolvent-algebra route, not unsplit invariance or dynamics existence |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE](#ng-2026-08-11-pre-a-st8-q3lock-entropy-finite-moment-dynamic-gaussian-tail-inference) | promote small relative entropy, all-coefficient Gaussian reference moments and any fixed finite list of tilted moments to the dynamic Gaussian history tail required by the cutoff corridor | a two-level Gibbs family has both unitary orientations, relative entropy and energy excess tending to zero, and uniform tilted moments through any fixed order, while the tilted coordinate tail decays only polynomially. Require a genuine two-orientation quasi-invariance/history estimate; this is not a Q3LOCK counterexample |
@@ -336,6 +338,56 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-energy-form-entropy-finite-moment-automatic-sandwiched-renyi-upgrade"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE -- current energy and entropy inputs do not imply history quasi-invariance
+
+**Failure mode:** infer one volume-, source-, mesh-, history- and
+orientation-uniform sandwiched-Renyi estimate at a fixed `alpha>1` from
+vanishing relative entropy and energy excess, a two-sided energy-form
+comparison, all-coefficient Gaussian moments in the reference state, and any
+fixed finite list of moments in the tilted states.
+
+**Evidence:** `EXP-000805` / R-167 v1.8 gives an exact two-level unitary family.
+Both orientations have entropy and energy excess tending to zero and satisfy
+`(1/2)K<=UKU^*<=2K`.  The reference has every fixed Gaussian coefficient and,
+after choosing the family order above a preregistered ceiling, the tilted
+moments through that ceiling are uniformly bounded.  Nevertheless every
+fixed-`alpha>1` sandwiched-Renyi divergence diverges.  The primary and
+non-importing independent verifiers also distinguish the full sandwiched
+quantity from its Petz and binary-measurement reductions by exact rational
+arithmetic.
+
+**Consequence:** the common-alpha corridor may be closed by a genuine
+model-specific sandwiched-Renyi or direct restricted-tail domination theorem,
+but it cannot be declared from the currently registered energy, entropy and
+finite-moment inputs alone.  This is a proof-route implication no-go, not a
+Q3LOCK dynamics counterexample and not a claim that the required stronger
+estimate is impossible.
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-direct-yarotsky-two-phase-gap-import"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT -- the ordered infrared theorem does not satisfy the two-phase reference hypotheses
+
+**Failure mode:** apply the two-phase Yarotsky quantum Pirogov--Sinai theorem
+directly to exact Q3LOCK using only the classical `+/-v` point minima and the
+registered infrared inequality `A0>J3^2`, then cite its sector gap.
+
+**Evidence:** the exact Q3 onsite space is `L2(R^8)`, the classical minima are
+delta configurations rather than Hilbert vectors, and the finite confining
+Schrodinger onsite problem has a unique positive even ground vector.  The
+two-phase theorem instead requires two exact product reference ground vectors
+minimizing the local blocks, strict positivity on their orthogonal complement,
+a nonzero first-order splitting and a sufficiently small parameter
+neighbourhood.  R-167 v1.8 isolates a conditional low-doublet Ising reference
+and writes the exact full-minus-reference remainder, but supplies none of the
+required splitting, high-mode, matrix-element or residual-form enclosures.
+
+**Consequence:** direct import is invalid.  A future controlled low-doublet
+block reduction, relative quantum-Pirogov--Sinai theorem, or direct phasewise
+OS temporal-mass proof remains viable.  This negative result does not refute
+the actual broken-sector GNS gap.  The distinct single-phase Yarotsky theorem
+allows infinite-dimensional onsite spaces and can address a unique weak-
+coupling phase, but that is not the ordered two-phase target.
 
 <a id="ng-2026-08-11-pre-a-st8-q3lock-raw-weyl-basic-resolvent-quartic-point-norm-c0"></a>
 ### NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0 -- the exact quartic onsite flow is not point-norm C0 on raw momentum labels

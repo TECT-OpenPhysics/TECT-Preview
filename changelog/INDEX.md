@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**584 accepted events** · latest 25 shown below · machine locator: `index.json`
+**586 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-11 | `20260811-r-167-v1-8-gate-level-synthesis-pdf-issued-afte` — [R-167 v1.8 gate-level synthesis PDF issued after strict proof validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v1-8-gate-level-synthesis-pdf-issued-afte) |
+| 2026-08-11 | `20260811-r-167-v1-8-isolates-fixed-trotter-renyi-history` — [R-167 v1.8 isolates fixed-Trotter, Renyi-history, and zero-temperature OS-gap reductions] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000805, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v1-8-isolates-fixed-trotter-renyi-history) |
 | 2026-08-11 | `20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte` — [R-167 v1.7 gate-level synthesis PDF issued after strict proof validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte) |
 | 2026-08-11 | `20260811-r-167-v1-7-separates-the-finite-region-local-st` — [R-167 v1.7 separates the finite-region local-strict carrier, Gibbs entropy tail, and broken-sector gap gate] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000804, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v1-7-separates-the-finite-region-local-st) |
 | 2026-08-10 | `20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte` — [R-167 v1.6 gate-level synthesis PDF issued after strict proof validation] - 2026-08-10 | C6-SPACETIME-SIGNATURE, R-167 | [bounded page](pages/000569-000618.md#20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-09 | `20260809-pre-a-priority-reset-and-controller-free-cl8-ma` — [Pre-A priority reset and controller-free CL8 macro, seam, and state split] - 2026-08-09 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, A5-SECTOR-A-SYNTHESIS, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE, C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 | 2026-08-04 | `20260804-exp-000775-close-an-explicit-positive-lambda-q3` — [EXP-000782: close an explicit positive-lambda Q3LOCK low-temperature DLR phase and split dynamics, ground and continuum gates] - 2026-08-04 | C6-BCC-PREMISE-BLOCKED, C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 | 2026-08-04 | `20260804-exp-000774-close-exact-q3lock-euclidean-dlr-tan` — [EXP-000781: close exact Q3LOCK Euclidean DLR tangent states and split the positive-lambda phase gate] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
-| 2026-08-04 | `20260804-exp-000773-close-fixed-lattice-st8-q3lock-scala` — [EXP-000780: close fixed-lattice ST8/Q3LOCK scalar thermodynamics and split phase/reduction] - 2026-08-04 | C6-BCC-PREMISE-BLOCKED, C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
-| 2026-08-04 | `20260804-exp-000772-closes-constant-source-q3-pressure-a` — [EXP-000779 closes constant-source Q3 pressure and splits phase, reference and parent gates] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 
 ## Post-cutover pages
 
@@ -49,4 +49,4 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 569–584 | 16 | [000569-000618.md](pages/000569-000618.md) |
+| 569–586 | 18 | [000569-000618.md](pages/000569-000618.md) |
