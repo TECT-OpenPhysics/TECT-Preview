@@ -716,8 +716,20 @@ the global-Fourier-second-moment cutoff route and the ordinary unweighted basic-
 resolvent core cannot be uniform.  EXP-000793 records the failed first-draft
 operator-norm inference and repairs it with a nonreal resolvent parameter,
 fixed-norm Weyl-displaced Schwartz inputs, exact cancellation and an explicit
-`Omega(R^3)` cutoff norm lower bound.  The next parallel gate is
-`PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE`.
+`Omega(R^3)` cutoff norm lower bound.  EXP-000794 / R-167, corrected in
+EXP-000795, then closes the exact second weighted-energy moment, minimal
+three-half-energy moment, three-quarter energy-domain propagation, boundary
+position multiplier, and a conditional
+two-sided thermodynamic-Cauchy reduction.  Exact counterexamples reject
+automatic form-order squaring, symmetric-sandwich-only convergence,
+polynomial separate-rung conjugation, and convexity-only weighted positivity.
+The next parallel gate is
+`PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE`, targeted at
+a direct product-level Volterra/linked-cluster or heat/strip-loss estimate, or
+a KMS-specific state-weighted substitute, followed by a noncollapsing
+Hamiltonian-derived algebra.  The noncommuting bound `q^3A^(-3/4)` and its
+graph-domain embedding are part of this open gate; `3/4` is only the necessary
+scalar power-count target, not a proved cubic multiplier theorem.
 Common real-time `alpha`, common-alpha KMS identification, algebraic ground
 states, broken-sector GNS gap, enlarged-counterterm continuum, physical empty
 space and effective reduction remain open.  These bridge results do not select

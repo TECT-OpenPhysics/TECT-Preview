@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**573 accepted events** · latest 25 shown below · machine locator: `index.json`
+**575 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-10 | `20260810-exp-000795-corrects-r-167-cubic-domain-scope-20` — [EXP-000795 corrects R-167 cubic-domain scope] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-exp-000795-corrects-r-167-cubic-domain-scope-20) |
+| 2026-08-10 | `20260810-exp-000794-r-167-exact-second-weighted-energy-m` — [EXP-000794 / R-167: exact second weighted-energy moment and common-alpha Cauchy gate split] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-exp-000794-r-167-exact-second-weighted-energy-m) |
 | 2026-08-10 | `20260810-pre-a-resolvent-lower-bound-adversarial-repair` — [PRE-A-RESOLVENT-LOWER-BOUND adversarial repair] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-pre-a-resolvent-lower-bound-adversarial-repair) |
 | 2026-08-10 | `20260810-pre-a-round1-and-weighted-energy-truth-first-ch` — [PRE-A-ROUND1-AND-WEIGHTED-ENERGY truth-first checkpoint] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-pre-a-round1-and-weighted-energy-truth-first-ch) |
 | 2026-08-10 | `20260810-management-index-and-publication-routes-compact` — [MANAGEMENT-INDEX-AND-PUBLICATION-ROUTES compact authority navigation] - 2026-08-10 | — | [bounded page](pages/000569-000618.md#20260810-management-index-and-publication-routes-compact) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-04 | `20260804-exp-000765-centered-nodal-q3-nelson-and-full-fi` — [EXP-000772 centered-nodal Q3 Nelson and full fixed-band Weyl limit] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 | 2026-08-04 | `20260804-exp-000764-q3-low-mode-virial-and-regular-weyl` — [EXP-000771 Q3 low-mode virial and regular Weyl clusters] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 | 2026-08-04 | `20260804-verify-centered-q3-wick-and-weyl-limit-route-sp` — [Verify centered Q3 Wick and Weyl limit route split] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
-| 2026-08-04 | `20260804-close-centered-free-and-q3-wick-action-limits-a` — [Close centered free and Q3 Wick-action limits and isolate density and Weyl seam gates] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
-| 2026-08-04 | `20260804-exp-000762-publication-verification-passes-305` — [EXP-000769 publication verification passes 305 scoped checks] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 
 ## Post-cutover pages
 
@@ -49,4 +49,4 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 569–573 | 5 | [000569-000618.md](pages/000569-000618.md) |
+| 569–575 | 7 | [000569-000618.md](pages/000569-000618.md) |

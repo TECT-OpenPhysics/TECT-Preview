@@ -278,10 +278,19 @@ unweighted basic-resolvent generator sandwich grow cubically. EXP-000793
 repairs the first-draft operator-norm inference by fixing nonreal `z`, using
 fixed-norm Weyl-displaced compact-support test vectors, cancelling the
 resolvents exactly and deriving an explicit `Omega(R^3)` cutoff norm lower
-bound. These are route obstructions, not nonexistence results for common
-dynamics. The next
-gate is
-`PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE`.
+bound. EXP-000794, corrected in EXP-000795, and result
+`PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT`,
+then uses the exact current rather than invalid automatic squaring to close
+the second weighted-energy moment, the minimal three-half-energy moment and
+propagation of the energy domain `D(A^(3/4))`. The correction records that
+`q^3A^(-3/4)` boundedness and the corresponding graph-domain embedding remain
+open; `3/4` is only the necessary scalar power-count target.
+It also reduces two-sided thermodynamic Cauchy to a precise spatial
+first/double position-commutator estimate. The cubic force does not close that
+finite commutator system and instead generates an infinite half-energy graph
+ladder. These are route reductions and obstructions, not nonexistence results
+for common dynamics. The next gate is
+`PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE`.
 Common `alpha`, KMS identification, algebraic ground-state promotion, GNS gap,
 continuum removal, physical empty space, C6, CP1 and Pre-A remain open.
 
@@ -294,11 +303,46 @@ finite-volume dynamics. The estimate must be independent of exhaustion and
 strong enough to establish multiplicativity, invertibility, pointwise time
 continuity, and exponentiation of the common local derivation.
 
-**Status:** OPEN (2026-08-10). The first weighted energy moment is controlled
-by EXP-000792, but no higher-moment factorial/analytic-vector bound or
-energy-damped thermodynamic Cauchy estimate has been proved. A fixed local
-observable and compact time interval for which every finite energy weight
-fails to make the volume net Cauchy is the registered minimal falsifier.
+**Status:** PARTIALLY RESOLVED (2026-08-10). EXP-000794, corrected in
+EXP-000795, proves the exact
+second-moment bound `U(t)^*A^2U(t)<=exp(2M_mu|t|)A^2`, interpolates it with the
+first moment to propagate the energy domain `D(A^(3/4))` and the minimal
+`A^(3/2)` moment, and proves the boundary position graph multiplier. It does
+not prove the noncommuting cubic multiplier or domain embedding.
+It also proves a conditional two-sided Duhamel theorem: if the first and
+double position commutators decay in their declared one-sided energy norms
+with spatial rate `rho>mu/4`, then arbitrary-volume differences are Cauchy in
+both orientations and yield exhaustion-independent strong-star core
+dynamics. Automatic squaring of the first form cone and symmetric-sandwich
+convergence alone are rejected by exact counterexamples. The remaining
+commutator/Gevrey gate below is still open, so no common automorphism or KMS
+identification is claimed.
+
+### **PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE**
+
+**Statement:** For the exact quartic onsite dynamics and harmonic nearest-
+neighbor coupling, first prove the open one-sided cubic multiplier/domain
+embedding or an exact substitute, then prove a volume-, source- and cutoff-uniform spatial decay
+hierarchy for the first and double position commutators in both one-sided
+energy norms required by the EXP-000794 Duhamel theorem. Equivalently, a valid
+replacement may prove a direct product-level Volterra/heat-loss estimate with
+linked-cluster resummation and a noncollapsing Hamiltonian-derived algebra
+bridge that contains the intended finite-density thermal phases.
+
+**Status:** OPEN (2026-08-10). The exact identity
+`[q^3,D]=3[q,D]q^2+3[q,[q,D]]q+[q,[q,[q,D]]]` shows that a first/double
+commutator closure is not finite; ordered graph estimates generate an
+infinite half-energy ladder. A polynomial separate-rung conjugation estimate
+is now exactly excluded by an exponential spectral-transition lower bound,
+and quartic convexity alone is separated from the required weighted sign by a
+faithful 3x3 counterexample. Fixed-chain heat damping is only conditional:
+lattice-animal multiplicity, noncommuting heat-factor allocation, radial
+costs of summable weights and norm-density of the thermal algebra remain
+unproved. A successful product-level heat/strip-loss or state-weighted
+cancellation theorem closes this gate. A
+fixed local momentum-sensitive observable whose one-sided volume net fails to
+be Cauchy for every finite energy power would fire the corresponding
+nonexistence branch; no such falsifier is currently known.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 

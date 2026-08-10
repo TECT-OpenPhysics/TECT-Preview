@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**166 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**167 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-167`](../RESULTS-LEDGER.md#r-167) | Exact second weighted-energy moment and thermodynamic-Cauchy topology split | T0 (scoped finite-volume analytic theorem and conditional Cauchy reduction; no common-alpha promotion). |
 | [`R-166`](../RESULTS-LEDGER.md#r-166) | Sparse production radial-Gram decomposition and global owner bound | T4 (scoped exact finite production fibre; no promotion). |
 | [`R-165`](../RESULTS-LEDGER.md#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | T4 (scoped exact finite production fibre; no promotion). |
 | [`R-164`](../RESULTS-LEDGER.md#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | T4 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-145`](../RESULTS-LEDGER.md#r-145) | Weighted trace-excess criterion and terminal anisotropic covariance sextic reduction | T4 |
 | [`R-144`](../RESULTS-LEDGER.md#r-144) | Uniform affine-residual Douglas one-use theorem and production-data boundary | T4. |
 | [`R-143`](../RESULTS-LEDGER.md#r-143) | Corrected q=5,6,7 feature contraction and common-noise anisotropy tail | T4. |
-| [`R-142`](../RESULTS-LEDGER.md#r-142) | Innovation-compressed common feature, SU(2) fibre/covariance split, and signed collar band | T4. |
 
 Search without loading the full ledger:
 

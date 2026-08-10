@@ -17,9 +17,9 @@ Usage:
     python verification/scripts/exploration.py --self-test
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __first_issued__ = "2026-07-24"
-__version_issued__ = "2026-07-24"
+__version_issued__ = "2026-08-10"
 
 import argparse
 import datetime as dt
@@ -137,7 +137,7 @@ def _known_references() -> dict[str, set[str]]:
     gate_text = (REPO / "claims" / "GATES.md").read_text(encoding="utf-8")
     gates = set(
         re.findall(
-            r"^###\s+\*{0,2}([A-F]\d+[A-Z]?-[A-Z0-9][A-Z0-9-]{2,})\*{0,2}\s*$",
+            r"^###\s+\*{0,2}([A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+)\*{0,2}\s*$",
             gate_text,
             re.MULTILINE,
         )

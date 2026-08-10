@@ -1,0 +1,106 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-CAUCHY-GATE-v0",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "parent_explorations": [
+    "EXP-000790",
+    "EXP-000792",
+    "EXP-000793"
+  ],
+  "scope_correction_exploration": "EXP-000795",
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIRST-MOMENT-AUTOMATIC-POWER-UPGRADE",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-POLYNOMIAL-ALL-RUNG-ONSITE-ENERGY-CONJUGATION",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONVEXITY-ONLY-WEIGHTED-COMMUTATOR-SIGN"
+  ],
+  "authority": "T0 exact finite-volume analytic theorem: for a centered summable exponential local-energy weight, the exact ST8/Q3LOCK current has a volume- and compact-source-uniform one-sided A-bounded derivative. This closes A^2, A^(3/2), propagation of the energy domain D(A^(3/4)), and the boundary position multiplier. Scalar power counting identifies 3/4 as a necessary target for a one-sided cubic multiplier, but the noncommuting embedding q^3 A^-3/4 remains open. A conditional two-sided Duhamel theorem reduces thermodynamic Cauchy to first/double position-commutator spatial decay. The cubic force generates an infinite half-energy graph ladder, so common alpha remains open.",
+  "model": {
+    "dimension": 3,
+    "components_per_site": 8,
+    "lattice_degree": 6,
+    "parameters": "chi,c,g>0; lambda>=0; r real; |h|<=h0; 0<gamma<g/32",
+    "weight": "0<f_x<=1, exp(-mu)<=f_x/f_y<=exp(mu) on bonds, S_f=sum_x f_x<=S_(mu,X)<infinity",
+    "energy": "A=1+E_f=1+sum_x f_x e_x=T_f+U_f+1"
+  },
+  "second_moment": {
+    "theta": "exp(mu)-1",
+    "current_derivative": "B_f=delta(E_f)=-sum_<xy>(f_x-f_y)c(p_x+p_y).(q_x-q_y)/(2chi)",
+    "weighted_cauchy": "||B_f psi||^2 <= c z theta^2 chi^(-2) int U_f sum_x f_x |p_x psi|^2",
+    "schrodinger_cross_identity": "int U_f sum f|p psi|^2=2chi Re<T_f psi,U_f psi>+(hbar^2/2)int(sum f_x Delta_x U_f)|psi|^2",
+    "q3_laplacian": "Delta W4<=C2|q|^2 with C2=3g+21lambda",
+    "laplacian_bound": "sum f_x Delta_x U_f<=C2 epsilon U_f+S_f[8r_+ +8cz+C2/(4epsilon gamma)]",
+    "M_mu_squared": "theta^2(cz/chi)[1+(hbar^2/(2chi))(C2 epsilon+S_f(8r_+ +8cz+C2/(4epsilon gamma)))]",
+    "conclusion": "||B_f A^-1||=||A^-1 B_f||<=M_mu and U(t)^*A^2U(t)<=exp(2M_mu|t|)A^2"
+  },
+  "fractional_graph_domain": {
+    "first_rate": "v_mu=6sqrt(c/(2chi))(exp(mu)-1)",
+    "three_quarter_transport": "||A^(3/4)U(t)A^(-3/4)||<=exp[(v_mu/4+M_mu/2)|t|]",
+    "three_half_moment": "U(t)^*A^(3/2)U(t)<=exp[(v_mu/2+M_mu)|t|]A^(3/2)",
+    "sharp_power_count": "scalar power counting makes s>=3/4 necessary for one-sided q^3 A^-s and s>=3/8 necessary for symmetric A^-s q^3 A^-s; it does not prove either noncommuting operator/domain embedding",
+    "cubic_multiplier_closed": false,
+    "cubic_multiplier_open_obligation": "Prove a volume- and compact-source-uniform bound q^3 A^-3/4 in the required one-sided orientation, or an equivalent graph-domain embedding D(A^(3/4)) subset D(q^3); neither follows from the proved energy-domain transport alone.",
+    "position_multiplier": "f_x^(1/4)||A^(1/2)q_xA^(-3/4)||<=gamma^(-1/4)+hbar/sqrt(2chi), with the adjoint orientation"
+  },
+  "conditional_cauchy": {
+    "boundary_identity": "[c|R|^2/2,D]=(c/2)sum_a([R_a,[R_a,D]]+2[R_a,D]R_a)",
+    "required_first_commutator": "both one-sided A^(-1/2) norms decay as exp[-rho(d-v|t|)]",
+    "required_second_commutator": "both one-sided A^(-3/4) norms decay as exp[-rho(d-v|t|)]",
+    "spatial_condition": "rho>mu/4",
+    "conclusion": "both one-sided A^(-3/4)-damped volume differences decay exponentially in distance; exhaustion independence, strong-star core convergence, products, adjoints, group law, inverse and strong time continuity follow, subject to core stability",
+    "cstar_boundary": "A Hamiltonian-derived invariant C-star algebra or norm-tight energy tails are still required."
+  },
+  "open_commutator_gate": {
+    "gate_id": "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "exact_cubic_identity": "[q^3,D]=3[q,D]q^2+3[q,[q,D]]q+[q,[q,[q,D]]]",
+    "failure": "The first/double-commutator system is not closed; ordered graph estimates create an infinite +1/2 energy ladder.",
+    "rejected_separate_rung": "For any nonzero upward spectral transition of a bond V, ||K^(j/2)V(t)K^(-(j+1)/2)|| has an exponential lower bound in j, uniformly in t; no C(j+1)^alpha estimate can hold.",
+    "spectral_fixture": "K=diag(1,4), V=[[0,1],[1,0]] gives norm 2^j exactly.",
+    "surviving_base_rung": "For K_xy>=gamma(|q_x|^4+|q_y|^4), both ||V_xy(t)K_xy^(-1/2)|| and its adjoint orientation are at most c/sqrt(2gamma).",
+    "replacement_targets": "Prove a direct product-level Volterra/linked-cluster estimate, a heat/strip-loss analytic-ideal theorem that never commutes growing powers through each bond, or a KMS-specific state-weighted positivity theorem; then construct a noncollapsing Hamiltonian-derived finite-density algebra.",
+    "convex_subregime_boundary": "For 0<=lambda<=2g the quartic is convex, but a faithful 3x3 weighted commutator fixture has negative expectation, so convexity alone does not supply the required operator/state-weighted LR sign.",
+    "gevrey_boundaries": [
+      "Fixed-chain time-simplex convergence does not control factorial lattice-animal multiplicity.",
+      "The first graph rung does not justify commuting allocated heat factors through V_e(t).",
+      "Centered summable spatial weights can accumulate exp[O(mu n^2)] costs.",
+      "Heat-smoothed finite-energy ideals are not norm dense in the unital label algebra and do not automatically contain thermal phases."
+    ]
+  },
+  "exact_counterexamples": {
+    "automatic_square": "E=diag(1,3), U=[[3,-4],[4,3]]/5, c0=5/2: c0E-U*EU is positive with determinant 7/20, while det(c0^2E^2-(U*EU)^2)=-127/16.",
+    "symmetric_topology": "On ell^2(N0), W e_n=(n+1)e_n and D_n=|e_n><e_0| have both symmetric s-sandwich norms (n+1)^(-s)->0, but D_n e_0=e_n does not converge strongly.",
+    "polynomial_all_rung": "K=diag(1,4), V=[[0,1],[1,0]] gives ||K^(j/2)V K^(-(j+1)/2)||=2^j, excluding every fixed polynomial-in-j rung bound.",
+    "convexity_weighted_sign": "For q=diag(0,1,2), D=-ones(3), C=[q,D], F=[q^3,D], X=(C^T F+F^T C)/2 has trace 48 but v^T X v=-1 at v=(-2,2,-1)."
+  },
+  "prior_art_boundary": {
+    "0712.3820": "Harmonic pair base but onsite derivative Fourier-integrability assumptions exclude q^4.",
+    "0909.2249": "Bounded Weyl-measure perturbations with uniform moments; the exact quartic cutoff moment diverges.",
+    "0904.2717": "Useful graph norm and exact quadratic base, but only subquadratic perturbations.",
+    "1601.04809": "One-dimensional Schwartz onsite and pair potentials.",
+    "1605.05259": "Bounded C0 pair interaction; displayed unbounded onsite extension is sublinear and single-site.",
+    "2505.13170": "Close state-dependent common-algebra architecture for number-conserving bosons, but Q3LOCK has no conserved oscillator number."
+  },
+  "status": "PARTIALLY RESOLVED: SECOND WEIGHTED-ENERGY MOMENT, MINIMAL THREE-HALF MOMENT, THREE-QUARTER ENERGY-DOMAIN PROPAGATION, POSITION MULTIPLIER, AND CONDITIONAL CAUCHY REDUCTION CLOSED. THE CUBIC MULTIPLIER EMBEDDING, ENERGY-WEIGHTED COMMUTATOR/GEVREY LR, COMMON ALPHA AND ALL DOWNSTREAM PHYSICAL GATES REMAIN OPEN.",
+  "closed_subgates": [
+    "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT",
+    "PA-CP1-ST8-Q3LOCK-MINIMAL-THREE-HALF-ENERGY-DOMAIN",
+    "PA-CP1-ST8-Q3LOCK-BOUNDARY-POSITION-GRAPH-MULTIPLIER",
+    "PA-CP1-ST8-Q3LOCK-CONDITIONAL-TWO-SIDED-THERMODYNAMIC-CAUCHY-REDUCTION"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "verification": {
+    "proof_grade": "ANALYTIC finite-volume second-moment and energy-domain-propagation theorem, exact conditional Cauchy theorem, four exact finite-dimensional/topological route counterexamples, two independent exact-arithmetic implementations, integrated freshness/provenance checks, and rendered PDF inspection",
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_second_weighted_energy_cauchy_gate.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_second_weighted_energy_cauchy_gate_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_second_weighted_energy_cauchy_gate_verify.py"
+  },
+  "no_overclaim": "This package does not prove q^3 A^-3/4 boundedness or the corresponding cubic graph-domain embedding, the required spatial commutator Lieb--Robinson hierarchy, thermodynamic common alpha, common-alpha KMS identification, algebraic ground states, GNS or physical mass gap, regulator removal, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A."
+}

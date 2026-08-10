@@ -1,0 +1,474 @@
+% Title: Q3LOCK Second Weighted-Energy Moment and Common-Alpha Cauchy Gate
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v0.1 -- first issued 2026-08-10; this version issued 2026-08-10
+% Status: T0 claim-nonbearing analytic checkpoint; common alpha and Pre-A remain open
+
+\section{Purpose and scope}
+
+This note records \texttt{EXP-000794} and reusable result \texttt{R-167}.
+It asks how far the exact fixed-lattice ST8/Q3LOCK Hamiltonian can be pushed
+from the first weighted-energy cone toward one phase-independent
+thermodynamic real-time dynamics.
+
+There is a strict positive advance.  The exact energy current closes the
+second weighted-energy moment, the minimal three-half-energy moment,
+propagation of the energy domain $D(A^{3/4})$, and the boundary position
+multiplier.  It does not prove the noncommuting cubic multiplier or the
+corresponding graph-domain embedding.
+An exact two-sided Duhamel theorem then reduces thermodynamic Cauchy to one
+explicit spatial commutator gate.
+
+There is also a strict route correction.  Four plausible shortcuts fail by
+exact counterexamples: automatic squaring of positive form order, symmetric
+energy sandwiches as a substitute for strong convergence, polynomial
+separate-rung energy conjugation, and convexity alone as a weighted
+commutator sign.  The surviving proof target is product-level rather than
+rung-by-rung.
+
+No common thermodynamic automorphism, common-alpha KMS identification,
+algebraic ground state, GNS or physical mass gap, continuum removal, physical
+empty-space comparison, C6, CP1, Sector A or Pre-A closure is claimed.
+
+\section{Provenance identifiers}
+
+\begin{itemize}
+\item Result: \url{PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT}.
+\item Scope correction: \url{EXP-000795}; it narrows the issued
+      \url{EXP-000794} cubic-domain wording to energy-domain propagation.
+\item Next gate: \url{PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIRST-MOMENT-AUTOMATIC-POWER-UPGRADE}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-POLYNOMIAL-ALL-RUNG-ONSITE-ENERGY-CONJUGATION}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONVEXITY-ONLY-WEIGHTED-COMMUTATOR-SIGN}.
+\end{itemize}
+
+\section{Exact model and first-moment input}
+
+At every site $x\in\mathbb Z^3$, let $q_x,p_x\in\mathbb R^8$.  The
+finite-volume Hamiltonian is
+
+\[
+ H_\Lambda(h)=\sum_{x\in\Lambda}
+ \left\{{|p_x|^2\over2\chi}+{r\over2}|q_x|^2+W_4(q_x)
+ -h u\mathbin\cdot q_x\right\}
+ +{c\over2}\sum_{\langle xy\rangle}|q_x-q_y|^2,             \tag{2.1}
+\]
+
+where $\chi,c,g>0$, $\lambda\ge0$, and
+
+\[
+ W_4(q)={g\over4}\sum_eq_e^4
+ +{\lambda\over4}\sum_{e\sim f\ {\rm in}\ Q_3}
+ (q_e-q_f)^2(q_e^2+q_f^2).                                  \tag{2.2}
+\]
+
+For $|h|\le h_0$ and $0<\gamma<g/32$, a scalar shift makes the local
+energies positive with
+
+\[
+ e_x\ge {|p_x|^2\over2\chi}+\gamma|q_x|^4
+ +{c\over4}\sum_{y\sim x}|q_x-q_y|^2.                       \tag{2.3}
+\]
+
+Fix $f_x=e^{-\mu d(x,X)}$, $S_f=\sum_xf_x<\infty$, and set
+
+\[
+ A=1+E_f=1+\sum_xf_xe_x=T_f+U_f+1.                           \tag{2.4}
+\]
+
+The first-moment theorem from \texttt{EXP-000792} is
+
+\[
+ U_\Lambda(t)^*AU_\Lambda(t)\le e^{v_\mu|t|}A,
+ \qquad
+ v_\mu=6\sqrt{c\over2\chi}\,(e^\mu-1).                    \tag{2.5}
+\]
+
+This controls only one energy moment.  Positive operator order is not
+preserved by taking powers, so (2.5) cannot simply be squared.
+
+\section{Why automatic squaring fails}
+
+Let
+
+\[
+ E=\begin{pmatrix}1&0\\0&3\end{pmatrix},\qquad
+ U={1\over5}\begin{pmatrix}3&-4\\4&3\end{pmatrix},\qquad
+ A_1=U^*EU,\qquad c_0={5\over2}.                             \tag{3.1}
+\]
+
+Exact rational arithmetic gives
+
+\[
+ (c_0E-A_1)_{11}={11\over50},\qquad
+ \det(c_0E-A_1)={7\over20}>0,                               \tag{3.2}
+\]
+
+but
+
+\[
+ \det(c_0^2E^2-A_1^2)=-{127\over16}<0.                      \tag{3.3}
+\]
+
+Thus the first form cone is not a higher-moment theorem.  The next section
+uses the exact Q3LOCK current rather than this invalid order inference.
+
+\section{Exact second weighted-energy moment}
+
+On the common Schwartz/form core let
+
+\[
+ B_f=\delta(E_f)={i\over\hbar}[H_\Lambda(h),E_f].             \tag{4.1}
+\]
+
+The local continuity equation gives
+
+\[
+ B_f=-\sum_{\langle xy\rangle}(f_x-f_y){c\over2\chi}
+ (p_x+p_y)\mathbin\cdot(q_x-q_y).                            \tag{4.2}
+\]
+
+Put $\theta=e^\mu-1$ and $z=6$.  Weighted Cauchy--Schwarz yields
+
+\[
+ \|B_f\psi\|^2\le {cz\theta^2\over\chi^2}
+ \int U_f\sum_xf_x|p_x\psi|^2.                              \tag{4.3}
+\]
+
+The remaining term has the exact Schroedinger cross identity
+
+\[
+ \int U_f\sum_xf_x|p_x\psi|^2
+ =2\chi\,\Re\langle T_f\psi,U_f\psi\rangle
+ +{\hbar^2\over2}\int\left(\sum_xf_x\Delta_xU_f\right)|\psi|^2.
+                                                                    \tag{4.4}
+\]
+
+For one Q3 edge with coordinates $a,b$,
+
+\[
+ (\partial_a^2+\partial_b^2)
+ {\lambda\over4}(a-b)^2(a^2+b^2)
+ =\lambda(4a^2-6ab+4b^2)\le7\lambda(a^2+b^2).               \tag{4.5}
+\]
+
+Since every Q3 vertex has degree three,
+
+\[
+ \Delta W_4(q)\le C_2|q|^2,\qquad C_2=3g+21\lambda.         \tag{4.6}
+\]
+
+For every $\epsilon>0$,
+
+\[
+ \sum_xf_x\Delta_xU_f\le C_2\epsilon U_f
+ +S_f\left(8r_++8cz+{C_2\over4\epsilon\gamma}\right).     \tag{4.7}
+\]
+
+Equations (4.3)--(4.7) close both operator orientations:
+
+\[
+ \|B_fA^{-1}\|=\|A^{-1}B_f\|\le M_\mu,                    \tag{4.8}
+\]
+
+where
+
+\[
+ M_\mu=\theta\left\{{cz\over\chi}\left[1+{\hbar^2\over2\chi}
+ \left(C_2\epsilon+S_f\left(8r_++8cz
+ +{C_2\over4\epsilon\gamma}\right)\right)\right]\right\}^{1/2}.
+                                                                    \tag{4.9}
+\]
+
+Because $\delta(A^2)=AB_f+B_fA$, form Gronwall gives
+
+\[
+ U_\Lambda(t)^*A^2U_\Lambda(t)\le e^{2M_\mu|t|}A^2,
+ \qquad
+ \|AU_\Lambda(t)A^{-1}\|\le e^{M_\mu|t|}.                 \tag{4.10}
+\]
+
+The constants are uniform in finite volume, sign phase, and the admitted
+compact source interval.
+
+\section{Three-quarter energy-domain propagation}
+
+Interpolating (2.5) and (4.10) gives
+
+\[
+ \|A^{3/4}U_\Lambda(t)A^{-3/4}\|
+ \le\exp\left[\left({v_\mu\over4}+{M_\mu\over2}\right)|t|\right],
+                                                                    \tag{5.1}
+\]
+
+or equivalently
+
+\[
+ U_\Lambda(t)^*A^{3/2}U_\Lambda(t)
+ \le e^{(v_\mu/2+M_\mu)|t|}A^{3/2}.                        \tag{5.2}
+\]
+
+Scalar power counting identifies a necessary target for the cubic force: in
+the commuting model $A\sim1+\gamma q^4$, $q^3A^{-s}$ can be bounded only for
+$s\ge3/4$.  A symmetric sandwich analog needs $s\ge3/8$.  This power count
+does not prove $q^3A^{-3/4}$ bounded for the noncommuting anharmonic
+Schroedinger energy, nor the embedding $D(A^{3/4})\subset D(q^3)$.  Equations
+(5.1)--(5.2) prove energy-domain propagation only; the cubic multiplier and
+domain embedding remain part of the next gate.
+
+The boundary position multiplier also closes.  Balakrishnan calculus gives
+
+\[
+ \|[A^{1/2},q_x]A^{-3/4}\|
+ \le\hbar\sqrt{f_x\over2\chi},                               \tag{5.3}
+\]
+
+and therefore
+
+\[
+ f_x^{1/4}\|A^{1/2}q_xA^{-3/4}\|
+ \le\gamma^{-1/4}+{\hbar\over\sqrt{2\chi}},                \tag{5.4}
+\]
+
+with the adjoint orientation as well.
+
+\section{Conditional thermodynamic-Cauchy theorem}
+
+For $\Lambda\subset\Lambda'$, the exact boundary Duhamel identity is
+
+\[
+ \tau_t^{\Lambda'}(A_0)-\tau_t^\Lambda(A_0)
+ ={i\over\hbar}\int_0^t\tau_{t-s}^{\Lambda'}
+ [V_{\partial\Lambda},\tau_s^\Lambda(A_0)]\,ds.             \tag{6.1}
+\]
+
+For $R=q_x-q_y$, $C_1^a=[R_a,D]$, and
+$C_2^a=[R_a,C_1^a]$,
+
+\[
+ [c|R|^2/2,D]={c\over2}\sum_a(C_2^a+2C_1^aR_a).             \tag{6.2}
+\]
+
+Assume both one-sided orientations satisfy, uniformly in finite volume and
+compact time,
+
+\[
+ \|C_1^aA^{-1/2}\|+\|A^{-1/2}C_1^a\|
+ \le C e^{-\rho(d(x,X)-v|t|)},                               \tag{6.3}
+\]
+
+\[
+ \|C_2^aA^{-3/4}\|+\|A^{-3/4}C_2^a\|
+ \le C e^{-\rho(d(x,X)-v|t|)},\qquad \rho>{\mu\over4}.      \tag{6.4}
+\]
+
+Then the cubic-lattice shell sum and (5.1)--(5.4) give exponential boundary
+decay in both one-sided $A^{-3/4}$-damped norms.  Union comparison makes the
+limit exhaustion independent.  The two orientations pass products,
+adjoints, group law, inverse, and strong time continuity on the stable core.
+An invariant Hamiltonian-derived C-star algebra or norm-tight energy tails
+are still required for the C-star conclusion.
+
+Symmetric damping alone is insufficient.  On $\ell^2(\mathbb N_0)$, let
+$We_n=(n+1)e_n$ and $D_n=|e_n\rangle\langle e_0|$.  Then both symmetric
+sandwich norms are $(n+1)^{-s}\to0$, including the adjoints, but
+$D_ne_0=e_n$ is not strongly Cauchy.
+
+\section{The infinite ladder and the rejected rung route}
+
+The cubic force does not preserve a finite first/double commutator system:
+
+\[
+ [q^3,D]=3[q,D]q^2+3[q,[q,D]]q+[q,[q,[q,D]]].                \tag{7.1}
+\]
+
+A proposed repair was a polynomial separate-rung estimate for
+$K^{j/2}V(t)K^{-(j+1)/2}$.  It is exactly false.  Let
+$k\phi_m=\epsilon_m\phi_m$ be a positive confining onsite Hamiltonian,
+$K=k\otimes1+1\otimes k$, and
+$V=-c\sum_aq_a\otimes q_a$.  A nonzero upward transition gives
+
+\[
+ \|K^{j/2}VK^{-(j+1)/2}\|
+ \ge {b_n\over\sqrt{2\epsilon_0}}
+ \left({\epsilon_n\over\epsilon_0}\right)^{j/2},
+ \qquad b_n=c\sum_a|\langle\phi_n,q_a\phi_0\rangle|^2>0.  \tag{7.2}
+\]
+
+The bound is unchanged in the onsite interaction picture.  In the exact
+fixture
+
+\[
+ K=\operatorname{diag}(1,4),\qquad
+ V=\begin{pmatrix}0&1\\1&0\end{pmatrix},                    \tag{7.3}
+\]
+
+the norm is $2^j$.  No fixed polynomial in $j$ can dominate it.  A simple
+exponential rung allowance is also unsuitable for sequential multiplication,
+which produces an $\exp[O(n^2)]$ cost.
+
+The base bond rung survives:
+
+\[
+ \|V_{xy}(t)K_{xy}^{-1/2}\|,
+ \ \|K_{xy}^{-1/2}V_{xy}(t)\|
+ \le {c\over\sqrt{2\gamma}}.                                \tag{7.4}
+\]
+
+The replacement must estimate the complete Volterra product without moving a
+growing power through every bond.  Candidate architectures are a direct
+linked-cluster estimate, a heat/strip-loss analytic ideal, or a KMS-specific
+state-weighted theorem, followed by a noncollapsing finite-density algebra
+bridge.
+
+\section{Convex subregime: a true lemma and a false promotion}
+
+For $0\le\lambda\le2g$, the quartic is genuinely convex and
+
+\[
+ D^2W_4(q)[\xi,\xi]
+ \ge3(g-\lambda/2)\sum_aq_a^2\xi_a^2.                        \tag{8.1}
+\]
+
+This gives an unweighted Hilbert--Schmidt monotonicity sign, but not the
+energy/KMS-weighted operator sign needed in (6.3)--(6.4).  Already for a
+scalar convex quartic set $q=\operatorname{diag}(0,1,2)$, let
+$D$ be the negative all-ones matrix, $C=[q,D]$, and $F=[q^3,D]$.  Then
+
+\[
+ X={C^*F+F^*C\over2}
+ =\begin{pmatrix}17&11&-4\\11&8&5\\-4&5&23\end{pmatrix}.   \tag{8.2}
+\]
+
+Although ${\rm tr}\,X=48$, the vector $v=(-2,2,-1)$ satisfies
+$v^*Xv=-1$.  Hence the faithful weight
+$(vv^*+\epsilon I)/(9+3\epsilon)$ has negative expectation for
+$0<\epsilon<1/48$.  Convexity alone cannot provide the missing weighted
+commutator estimate.
+
+\section{Evidence map and next gate}
+
+The successful result is
+
+\begin{center}
+\texttt{R-167: exact second weighted-energy moment and Cauchy split.}
+\end{center}
+
+The four registered route boundaries are:
+
+\begin{enumerate}
+\item first-moment automatic power upgrade;
+\item symmetric-sandwich-only thermodynamic Cauchy;
+\item polynomial all-rung onsite-energy conjugation;
+\item convexity-only weighted commutator sign.
+\end{enumerate}
+
+The next gate is
+
+\begin{center}
+\texttt{PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-}\par
+\texttt{COMMUTATOR-GEVREY-LR-CLOSURE}.
+\end{center}
+
+Its accepted target is no longer the rejected polynomial rung estimate.  It
+must prove product-level spatial decay in both one-sided norms, or an exact
+state-weighted substitute, and then construct the phase-independent
+Hamiltonian-derived algebra.  Only after that gate closes can the programme
+identify the two phasewise systems as KMS states of one common real-time
+dynamics and proceed honestly to ground-state selection and GNS-gap tests.
+
+\section{Devil's-advocate audit}
+
+\begin{enumerate}
+\item \textbf{Objection: first-moment form order can simply be squared.}
+      \textbf{UPHELD against that route.}  The exact fixture (3.1)--(3.3)
+      has positive first order and indefinite squared order.
+\item \textbf{Objection: a symmetric energy sandwich is enough for an
+      automorphism.} \textbf{UPHELD against that route.}  The rank-one shift
+      sequence is symmetric-sandwich small but not strongly Cauchy.
+\item \textbf{Objection: the second moment closes the spatial hierarchy.}
+      \textbf{UPHELD as false.}  Equation (7.1) creates the third
+      commutator and the ordered alternative creates an infinite graph
+      ladder.
+\item \textbf{Objection: a polynomial separate-rung bound supplies the
+      missing ladder.} \textbf{UPHELD against that route.}  The spectral
+      transition lower bound is exponential in the rung and is unchanged by
+      onsite interaction-picture time evolution.
+\item \textbf{Objection: quartic convexity closes the weighted sign.}
+      \textbf{UPHELD against that promotion.}  The convexity lemma is true,
+      but the faithful weighted 3-by-3 fixture has negative expectation.
+\item \textbf{Objection: the route failures prove common dynamics does not
+      exist.} \textbf{DISMISSED.}  Product-level cancellations, heat-loss
+      ideals, state-weighted methods and other Hamiltonian-derived
+      topologies remain open.
+\end{enumerate}
+
+\section{Verification and no-overclaim boundary}
+
+The primary SymPy implementation derives the Q3 graph, edge Laplacian,
+second-moment constants, order counterexample, free noncommutative cubic
+identity, spectral-rung fixture, and convexity-weighted fixture.  A separate
+standard-library Fraction implementation reconstructs the same exact core
+without importing the primary.  The integrated verifier reruns both in fresh
+temporary locations, compares their derived invariants, checks source hashes,
+and requires this note, its rendered PDF, the exploration record, result,
+negative entries, live gate and T-054 route.
+
+This checkpoint does not select a physical functional or a vacuum.  It does
+not prove the cubic multiplier/domain embedding, a common alpha, KMS
+identification, ground-state purity,
+broken-sector GNS gap, regulator or continuum limit, physical empty-space
+reference, below-empty sign, light, mass, time, gravity, C6, CP1, Sector A or
+Pre-A.  Those claims remain gated.
+
+\section{Reproduction}
+
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe -X utf8
+codes\foundations\pre_a_cp1_st8_q3lock_second_weighted_energy_cauchy_gate.py
+
+E:\Dev\TECT.venv\Scripts\python.exe -X utf8
+codes\foundations\pre_a_cp1_st8_q3lock_second_weighted_energy_cauchy_gate_
+independent.py
+
+E:\Dev\TECT.venv\Scripts\python.exe -X utf8
+codes\foundations\pre_a_cp1_st8_q3lock_second_weighted_energy_cauchy_gate_
+verify.py
+\end{verbatim}
+
+Run the primary and independent implementations first and the integrated
+freshness/provenance verifier last.
+
+\section{Result footer}
+
+\begin{verbatim}
+Result ID:               PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-
+                         MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT.
+Reusable result:         R-167.
+Exploration:             EXP-000794; scope correction EXP-000795.
+Precise statement:       Exact second energy moment, minimal A^(3/2)
+                         moment, D(A^(3/4)) energy-domain propagation and
+                         boundary multiplier proved; the cubic multiplier
+                         embedding remains open; thermodynamic Cauchy is
+                         reduced to a two-sided spatial commutator hypothesis.
+Scope:                   T0 finite-volume analytic theorem and conditional
+                         Cauchy reduction.
+Dependencies:            EXP-000792--EXP-000794; the exact fixed-volume
+                         ST8/Q3LOCK Hamiltonian and first energy cone.
+Evidence grade:          ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF QA.
+Reproduction command:    Run the three commands under Reproduction in the
+                         listed order, with the integrated verifier last.
+Expected output:         Primary PASS 51/51; independent PASS 271/271;
+                         integrated PASS 176/176.
+Falsification gate:      Any Q3, current, Laplacian, graph exponent,
+                         one-sided topology, spectral-rung, convexity-sign,
+                         hash, scope or provenance mismatch.
+Tier before / after:     C6 T1 / C6 T1; no claim or tier change.
+No-overclaim statement:  Cubic multiplier/domain embedding, common alpha/KMS,
+                         algebraic ground states, GNS gap, continuum,
+                         physical empty, C6, CP1, Sector A and Pre-A remain
+                         open.
+Next required action:    Prove the cubic multiplier/domain obligation and
+                         product-level spatial decay, then construct the
+                         Hamiltonian-derived phase-independent algebra.
+\end{verbatim}

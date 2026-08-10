@@ -5,13 +5,17 @@
 
 Authorities: `negative-results/registry.md`.
 
-**296 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 225 · retraction: 5
+**300 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 229 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-symmetric-sandwich-only-thermodynamic-cauchy) | no_go | infer a thermodynamic automorphism from convergence only in a symmetric energy sandwich |
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-POLYNOMIAL-ALL-RUNG-ONSITE-ENERGY-CONJUGATION`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-polynomial-all-rung-onsite-energy-conjugation) | no_go | close the quartic commutator ladder with a polynomial-in-rung bound on `K^(j/2)V(t)K^(-(j+1)/2)` |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FOURIER-SECOND-MOMENT-UNIFORM-NORM-LR-CUTOFF`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-fourier-second-moment-uniform-norm-lr-cutoff) | no_go | obtain a cutoff-uniform operator-norm Lieb--Robinson speed for the exact Q3LOCK quartic by applying the bounded-Weyl theorem to Fourier--Stieltjes cutoffs that agree on expanding… |
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIRST-MOMENT-AUTOMATIC-POWER-UPGRADE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-first-moment-automatic-power-upgrade) | no_go | square the first weighted-energy form cone to obtain higher weighted-energy moments |
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONVEXITY-ONLY-WEIGHTED-COMMUTATOR-SIGN`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-convexity-only-weighted-commutator-sign) | no_go | use quartic convexity in the `0<=lambda<=2g` subregime alone to obtain the energy/KMS-weighted commutator sign needed for spatial Cauchy |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-BASIC-RESOLVENT-CUBIC-FORCE-UNWEIGHTED-CORE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-basic-resolvent-cubic-force-unweighted-core) | no_go | use ordinary basic resolvents as a cutoff-uniform unweighted generator core for the exact quartic force |
 | [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-uniform-full-finite-volume-spectral-gap) | no_go | retain a positive volume-uniform full finite-volume spectral gap in the fixed-spacing Q3LOCK ground-order regime |
 | [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-posthoc-direct-sum-common-dynamics) | no_go | treat the direct sum of the separately OS-reconstructed plus/minus thermal systems as the required common real-time dynamics |
@@ -32,10 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-04-PRE-A-CP1-CL8-POINTWISE-STABILITY-GAUSSIAN-TRIAL-UNIFORM-ENERGY`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-pointwise-stability-gaussian-trial-uniform-energy) | no_go | for fixed `g,lambda,m_R,eta_R`, use one scalar normalization both for a uniform pointwise lower bound and a uniform variational upper bound from the same Wick-reference Gaussian |
 | [`NG-2026-08-04-PRE-A-CP1-CL8-PASSIVE-TWO-ARM-NUMBER-STATE-QUARTIC-REUSE`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-passive-two-arm-number-state-quartic-reuse) | no_go | append the inherited positive onsite CL8 quartic kick to the exact passive two-arm control while automatically reusing its oscillator-number generator, vacuum and Gibbs densities |
 | [`NG-2026-08-04-PRE-A-CP1-CL8-OA2-SAMPLING-EXACT-WEYL`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-oa2-sampling-exact-weyl) | no_go | promote the current unrestricted continuum point sampler `R_a` to an exact boundary-to-lattice Weyl generator map |
-| [`NG-2026-08-04-PRE-A-CP1-CL8-NONLINEAR-FLOQUET-WEYL-NORMALIZER`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-nonlinear-floquet-weyl-normalizer) | no_go | promote the exact nonlinear CL8 split-circuit automorphism on `B(H_a)` to an automorphism of the concrete unital Weyl C-star algebra |
-| [`NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-INTERACTING-GROUND-PROJECTIVITY`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-interacting-ground-projectivity) | no_go | identify the registered interacting fine ground with the coarse ground by restricting the natural low-mode `B(H)` factor under strict refinement `N=2M` |
-| [`NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-EXACT-DYNAMICS-EQUIVARIANCE`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-exact-dynamics-equivariance) | no_go | exactly intertwine the declared inserted-1D `g>0` coarse and fine dynamics with the natural low-mode embedding while allowing only scalar-energy, scalar-mass, and Q3-Laplacian qua… |
-| [`NG-2026-08-04-PRE-A-CP1-CL8-MIDPOINT-QUAD-GLOBAL-UNIQUENESS`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-midpoint-quad-global-uniqueness) | no_go | claim a global single-valued Q3 four-corner map for the symmetric midpoint variational quad over the whole admitted `r<0` parameter range |
 
 Search without loading the full registry:
 

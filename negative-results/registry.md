@@ -9,6 +9,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIRST-MOMENT-AUTOMATIC-POWER-UPGRADE](#ng-2026-08-10-pre-a-st8-q3lock-first-moment-automatic-power-upgrade) | square the first weighted-energy form cone to obtain higher weighted-energy moments | an exact two-dimensional positive-operator fixture has `c0 E-A1>0` but `c0^2 E^2-A1^2` indefinite. Operator order cannot be squared; the exact ST8/Q3LOCK cross identity instead closes the second moment without that invalid inference |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY](#ng-2026-08-10-pre-a-st8-q3lock-symmetric-sandwich-only-thermodynamic-cauchy) | infer a thermodynamic automorphism from convergence only in a symmetric energy sandwich | rank-one shifts `D_n=|e_n><e_0|` satisfy both symmetric sandwich estimates tending to zero while `D_n e_0=e_n` is not strongly Cauchy. Two one-sided graph estimates, or an equivalent uniform energy-tail compactness theorem, are required |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-POLYNOMIAL-ALL-RUNG-ONSITE-ENERGY-CONJUGATION](#ng-2026-08-10-pre-a-st8-q3lock-polynomial-all-rung-onsite-energy-conjugation) | close the quartic commutator ladder with a polynomial-in-rung bound on `K^(j/2)V(t)K^(-(j+1)/2)` | every nonzero upward onsite spectral transition gives an exponential lower bound in `j`, uniform in interaction-picture time; the exact `K=diag(1,4)` swap fixture has norm `2^j`. Retain product-level Volterra, heat-loss or state-weighted routes that do not commute growing powers through each bond |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONVEXITY-ONLY-WEIGHTED-COMMUTATOR-SIGN](#ng-2026-08-10-pre-a-st8-q3lock-convexity-only-weighted-commutator-sign) | use quartic convexity in the `0<=lambda<=2g` subregime alone to obtain the energy/KMS-weighted commutator sign needed for spatial Cauchy | convexity gives a valid unweighted Hilbert--Schmidt monotonicity sign, but an exact 3x3 scalar-quartic commutator matrix has trace `48` and expectation `-1` on `(-2,2,-1)`. A faithful noncommuting weight can therefore reverse the sign; retain the convexity lemma without promoting it to weighted LR closure |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-FOURIER-SECOND-MOMENT-UNIFORM-NORM-LR-CUTOFF](#ng-2026-08-10-pre-a-st8-q3lock-fourier-second-moment-uniform-norm-lr-cutoff) | obtain a cutoff-uniform operator-norm Lieb--Robinson speed for the exact Q3LOCK quartic by applying the bounded-Weyl theorem to Fourier--Stieltjes cutoffs that agree on expanding balls | every such cutoff has global Fourier second moment `kappa_R>=3(g+3lambda)R^2`, so the speed furnished by that theorem diverges at least quadratically. This rejects only that theorem/moment route, not exact common dynamics or an energy-weighted locality proof |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-BASIC-RESOLVENT-CUBIC-FORCE-UNWEIGHTED-CORE](#ng-2026-08-10-pre-a-st8-q3lock-basic-resolvent-cubic-force-unweighted-core) | use ordinary basic resolvents as a cutoff-uniform unweighted generator core for the exact quartic force | for nonreal `z`, fixed-norm Weyl-displaced compact-support test vectors turn the exact sandwich into `4s^3W4(a)+O(s^2)`. It has no bounded extension, and cutoffs agreeing on expanding balls have an explicit `Omega(R^3)` norm lower bound; an energy-damped core or another invariance proof remains open |
 | [NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS](#ng-2026-08-09-pre-a-st8-q3lock-posthoc-direct-sum-common-dynamics) | treat the direct sum of the separately OS-reconstructed plus/minus thermal systems as the required common real-time dynamics | a direct sum exists for any two unrelated systems, retains the phase label as a central summand, and depends on the already chosen phase and temperature. It does not arise as the thermodynamic limit of the zero-source local Hamiltonians on one fixed labelled oscillator algebra |
@@ -306,6 +310,93 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-first-moment-automatic-power-upgrade"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIRST-MOMENT-AUTOMATIC-POWER-UPGRADE -- positive form order cannot be squared
+
+**Failure mode.** Infer propagation of `A^2`, or of every higher
+weighted-energy moment, by squaring the already proved first-moment form
+inequality `U^*AU<=c0 A`.
+
+**Evidence.** Take `E=diag(1,3)`,
+`U=[[3,-4],[4,3]]/5`, `A1=U^*EU`, and `c0=5/2`.  Exact rational arithmetic
+gives `c0 E-A1>0`: its first principal minor is `11/50` and its determinant
+is `7/20`.  Nevertheless
+`det(c0^2 E^2-A1^2)=-127/16`, so the squared order is false.  For the exact
+ST8/Q3LOCK current, a separate weighted Cauchy estimate and Schroedinger
+cross identity do prove boundedness of `B_f A^-1` and `A^-1 B_f`; that
+model-specific repair, not automatic squaring, closes the second moment.
+
+**Consequence.** The first weighted-energy cone is not a higher-moment
+theorem.  Retain the separately proved second-moment and three-half-moment
+results, and require a new all-rung commutator/Gevrey estimate before claiming
+the complete spatial Lieb--Robinson hierarchy.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-symmetric-sandwich-only-thermodynamic-cauchy"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY -- symmetric graph convergence is too weak
+
+**Failure mode.** Use only
+`||W^-s D_n W^-s||->0`, together with the same estimate for the adjoint, to
+infer strong-star convergence, multiplicativity, and a thermodynamic
+automorphism.
+
+**Evidence.** On `ell^2(N0)`, let `W e_n=(n+1)e_n` and
+`D_n=|e_n><e_0|`.  Both symmetric sandwich norms equal `(n+1)^(-s)` and
+tend to zero; the same is true after taking adjoints.  But
+`D_n e_0=e_n`, so the sequence is not strongly Cauchy.  The exact boundary
+Duhamel reduction therefore targets both one-sided norms
+`||D_n W^-s||` and `||W^-s D_n||`, not a symmetric sandwich alone.
+
+**Consequence.** A conditional energy-damped boundary estimate is useful
+only when it supplies both one-sided orientations, or an equivalent uniform
+energy-tail compactness statement.  The counterexample does not rule out the
+thermodynamic dynamics; it fixes the minimum topology required to prove it.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-polynomial-all-rung-onsite-energy-conjugation"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-POLYNOMIAL-ALL-RUNG-ONSITE-ENERGY-CONJUGATION -- separate graph rungs grow exponentially
+
+**Failure mode.** Close the infinite quartic commutator ladder by proving a
+uniform bound
+`||K^(j/2)V(t)K^(-(j+1)/2)||<=C(j+1)^alpha` for some finite `alpha`, and then
+multiply these separate rung estimates inside the Dyson/Volterra series.
+
+**Evidence.** Let the positive confining onsite Hamiltonian have eigenpairs
+`k phi_m=epsilon_m phi_m`, and choose an excited level with real nonzero
+transition vector `m_(n,a)=<phi_n,q_a phi_0>`.  On two sites,
+`K=k tensor 1+1 tensor k` and `V=-c sum_a q_a tensor q_a` give
+`b_n=c sum_a m_(n,a)^2>0`.  A single matrix element proves
+`||K^(j/2)V K^(-(j+1)/2)|| >= b_n( epsilon_n/epsilon_0)^(j/2)
+/sqrt(2 epsilon_0)`.  Onsite interaction-picture evolution commutes with `K`,
+so the norm is time independent.  The exact rational fixture
+`K=diag(1,4)`, `V=[[0,1],[1,0]]` has norm `2^j`.
+
+**Consequence.** No fixed polynomial separate-rung theorem can close the
+common-alpha gate in the nontrivial confining model.  A viable replacement
+must estimate the complete product by linked-cluster/Volterra cancellation,
+use a heat/strip-loss analytic ideal without commuting growing powers through
+every bond, or prove a KMS-specific state-weighted theorem.  This does not
+prove that the exact thermodynamic dynamics is absent.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-convexity-only-weighted-commutator-sign"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONVEXITY-ONLY-WEIGHTED-COMMUTATOR-SIGN -- convexity does not localize through a general energy weight
+
+**Failure mode.** Use the exact convexity of the Q3LOCK quartic for
+`0<=lambda<=2g` by itself to infer the operator- or state-weighted
+commutator positivity needed for the first/double commutator spatial decay.
+
+**Evidence.** The edge Hessian calculation does prove
+`D^2W4(q)[xi,xi]>=3(g-lambda/2) sum_a q_a^2 xi_a^2`.  Nevertheless, already
+for the scalar convex quartic take `q=diag(0,1,2)`, `D=-ones(3)`,
+`C=[q,D]`, `F=[q^3,D]`, and `X=(C^T F+F^T C)/2`.  Exact arithmetic gives
+`X=[[17,11,-4],[11,8,5],[-4,5,23]]`, `tr X=48`, but
+`v^T X v=-1` at `v=(-2,2,-1)`.  Therefore the faithful density
+`(vv^T+epsilon I)/(9+3epsilon)` has negative expectation for
+`0<epsilon<1/48`.
+
+**Consequence.** Preserve the convex-subregime monotonicity lemma and its
+unweighted Hilbert--Schmidt scope, but do not promote it to an energy/KMS-
+weighted Lieb--Robinson sign.  Additional cancellation, product-level, or
+state-specific structure is required; common dynamics remains open.
 
 <a id="ng-2026-08-10-pre-a-st8-q3lock-fourier-second-moment-uniform-norm-lr-cutoff"></a>
 ### NG-2026-08-10-PRE-A-ST8-Q3LOCK-FOURIER-SECOND-MOMENT-UNIFORM-NORM-LR-CUTOFF -- bounded-Weyl cutoff speed is not uniform

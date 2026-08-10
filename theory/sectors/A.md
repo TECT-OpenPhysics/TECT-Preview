@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIRST-MOMENT-AUTOMATIC-POWER-UPGRADE | positive form order cannot be squared | Infer propagation of `A^2`, or of every higher |
 | NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION | an incomplete admission conjunction cannot select a Pre-A… | Declare a round-one winner, shortlist, candidate survival, |
 | NG-2026-08-04-A13-R166-DIRECT-HARMONIC-COERCIVITY-TENSORIZATION | coefficient-one direct harmonic coercivity does not… | Extend the R-166 single-fresh-pair inequality |
 | NG-2026-08-03-PA-M5-BARE-ISOTROPIC-SHELL-CAUSAL-CONE | the bare screened shell is not a joint… | Use the bare `PA-M5-NL3-SV-v0` functional as a |

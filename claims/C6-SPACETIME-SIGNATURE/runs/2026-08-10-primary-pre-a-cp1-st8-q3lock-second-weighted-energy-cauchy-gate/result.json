@@ -1,0 +1,468 @@
+{
+  "assertions": [
+    {
+      "actual": "tect/pre-a-route-split/1.0",
+      "expected": "tect/pre-a-route-split/1.0",
+      "group": "provenance",
+      "name": "manifest schema",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "EXP-000790",
+        "EXP-000792",
+        "EXP-000793"
+      ],
+      "expected": "contains EXP-000792",
+      "group": "provenance",
+      "name": "parent EXP-000792",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "provenance",
+      "name": "parent result reused",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "provenance",
+      "name": "certificate result id",
+      "status": "PASS"
+    },
+    {
+      "actual": 12,
+      "expected": 12,
+      "group": "Q3",
+      "name": "Q3 edge count",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "expected": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "group": "Q3",
+      "name": "Q3 degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*a**2*lambda - 6*a*b*lambda + 4*b**2*lambda",
+      "expected": "lambda*(4*a**2 - 6*a*b + 4*b**2)",
+      "group": "Q3",
+      "name": "edge Laplacian",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*a**2*lambda + 6*a*b*lambda + 3*b**2*lambda",
+      "expected": "3*lambda*(a + b)**2",
+      "group": "Q3",
+      "name": "edge Laplacian bound SOS",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*g + 21*lambda",
+      "expected": "3*g + 21*lambda",
+      "group": "Q3",
+      "name": "Q3 Laplacian coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/32",
+      "expected": "< g/32",
+      "group": "moment",
+      "name": "fixture gamma admitted",
+      "status": "PASS"
+    },
+    {
+      "actual": "13",
+      "expected": "13",
+      "group": "moment",
+      "name": "fixture C2 derived",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "group": "moment",
+      "name": "fixture theta derived",
+      "status": "PASS"
+    },
+    {
+      "actual": "700902/125",
+      "expected": ">0",
+      "group": "moment",
+      "name": "M squared positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "27/5",
+      "expected": ">0",
+      "group": "moment",
+      "name": "first rate positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "Delta W4<=C2|q|^2 with C2=3g+21lambda",
+      "expected": "C2=3g+21lambda",
+      "group": "moment",
+      "name": "manifest C2",
+      "status": "PASS"
+    },
+    {
+      "actual": "||B_f A^-1||=||A^-1 B_f||<=M_mu and U(t)^*A^2U(t)<=exp(2M_mu|t|)A^2",
+      "expected": "two orientations",
+      "group": "moment",
+      "name": "one-sided derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": "||B_f A^-1||=||A^-1 B_f||<=M_mu and U(t)^*A^2U(t)<=exp(2M_mu|t|)A^2",
+      "expected": "2M_mu",
+      "group": "moment",
+      "name": "second moment exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0], [0, 0]])",
+      "expected": "zero",
+      "group": "ordering",
+      "name": "counterexample unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "11/50",
+      "expected": "11/50",
+      "group": "ordering",
+      "name": "first order leading minor",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/20",
+      "expected": "7/20",
+      "group": "ordering",
+      "name": "first order determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "-127/16",
+      "expected": "-127/16",
+      "group": "ordering",
+      "name": "squared order determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "scalar power counting makes s>=3/4 necessary for one-sided q^3 A^-s and s>=3/8 necessary for symmetric A^-s q^3 A^-s; it does not prove either noncommuting operator/domain embedding",
+      "expected": "necessary scalar target s>=3/4",
+      "group": "graph",
+      "name": "cubic one-sided power-count target",
+      "status": "PASS"
+    },
+    {
+      "actual": "scalar power counting makes s>=3/4 necessary for one-sided q^3 A^-s and s>=3/8 necessary for symmetric A^-s q^3 A^-s; it does not prove either noncommuting operator/domain embedding",
+      "expected": "necessary scalar target s>=3/8",
+      "group": "graph",
+      "name": "cubic symmetric power-count target",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "cubic_multiplier_closed": false,
+        "cubic_multiplier_open_obligation": "Prove a volume- and compact-source-uniform bound q^3 A^-3/4 in the required one-sided orientation, or an equivalent graph-domain embedding D(A^(3/4)) subset D(q^3); neither follows from the proved energy-domain transport alone.",
+        "first_rate": "v_mu=6sqrt(c/(2chi))(exp(mu)-1)",
+        "position_multiplier": "f_x^(1/4)||A^(1/2)q_xA^(-3/4)||<=gamma^(-1/4)+hbar/sqrt(2chi), with the adjoint orientation",
+        "sharp_power_count": "scalar power counting makes s>=3/4 necessary for one-sided q^3 A^-s and s>=3/8 necessary for symmetric A^-s q^3 A^-s; it does not prove either noncommuting operator/domain embedding",
+        "three_half_moment": "U(t)^*A^(3/2)U(t)<=exp[(v_mu/2+M_mu)|t|]A^(3/2)",
+        "three_quarter_transport": "||A^(3/4)U(t)A^(-3/4)||<=exp[(v_mu/4+M_mu/2)|t|]"
+      },
+      "expected": "cubic_multiplier_closed=false with open embedding obligation",
+      "group": "scope",
+      "name": "cubic multiplier embedding remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": "U(t)^*A^(3/2)U(t)<=exp[(v_mu/2+M_mu)|t|]A^(3/2)",
+      "expected": "A^(3/2)",
+      "group": "graph",
+      "name": "three-half moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "f_x^(1/4)||A^(1/2)q_xA^(-3/4)||<=gamma^(-1/4)+hbar/sqrt(2chi), with the adjoint orientation",
+      "expected": "Q0",
+      "group": "graph",
+      "name": "position multiplier",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "lhs_terms": 2,
+        "residual_terms": 0,
+        "rhs_terms": 2
+      },
+      "expected": {
+        "residual_terms": 0
+      },
+      "group": "ladder",
+      "name": "cubic commutator identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+      "expected": "GEVREY-LR-CLOSURE",
+      "group": "ladder",
+      "name": "infinite ladder gate",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64",
+        "128",
+        "256"
+      ],
+      "expected": "2^j",
+      "group": "ladder",
+      "name": "rung amplitudes exponential",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "expected": "zero",
+      "group": "ladder",
+      "name": "rung exact doubling",
+      "status": "PASS"
+    },
+    {
+      "actual": "For any nonzero upward spectral transition of a bond V, ||K^(j/2)V(t)K^(-(j+1)/2)|| has an exponential lower bound in j, uniformly in t; no C(j+1)^alpha estimate can hold.",
+      "expected": "polynomial no-go",
+      "group": "ladder",
+      "name": "separate-rung route rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "Prove a direct product-level Volterra/linked-cluster estimate, a heat/strip-loss analytic-ideal theorem that never commutes growing powers through each bond, or a KMS-specific state-weighted positivity theorem; then construct a noncollapsing Hamiltonian-derived finite-density algebra.",
+      "expected": "product-level Volterra",
+      "group": "ladder",
+      "name": "product-level replacement retained",
+      "status": "PASS"
+    },
+    {
+      "actual": 4,
+      "expected": 4,
+      "group": "ladder",
+      "name": "Gevrey boundaries complete",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[17, 11, -4], [11, 8, 5], [-4, 5, 23]])",
+      "expected": "Matrix([[17, 11, -4], [11, 8, 5], [-4, 5, 23]])",
+      "group": "convexity",
+      "name": "convex weighted matrix",
+      "status": "PASS"
+    },
+    {
+      "actual": "48",
+      "expected": 48,
+      "group": "convexity",
+      "name": "convex weighted trace",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1",
+      "expected": -1,
+      "group": "convexity",
+      "name": "convex weighted negative witness",
+      "status": "PASS"
+    },
+    {
+      "actual": "(z - 24)*(z**2 - 24*z - 27)",
+      "expected": "(z-24)(z^2-24z-27)",
+      "group": "convexity",
+      "name": "convex weighted characteristic",
+      "status": "PASS"
+    },
+    {
+      "actual": "rho>mu/4",
+      "expected": "rho>mu/4",
+      "group": "cauchy",
+      "name": "Cauchy spatial condition",
+      "status": "PASS"
+    },
+    {
+      "actual": "both one-sided A^(-3/4)-damped volume differences decay exponentially in distance; exhaustion independence, strong-star core convergence, products, adjoints, group law, inverse and strong time continuity follow, subject to core stability",
+      "expected": "both one-sided",
+      "group": "cauchy",
+      "name": "Cauchy two orientations",
+      "status": "PASS"
+    },
+    {
+      "actual": "A Hamiltonian-derived invariant C-star algebra or norm-tight energy tails are still required.",
+      "expected": "still required",
+      "group": "scope",
+      "name": "C-star boundary retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "On ell^2(N0), W e_n=(n+1)e_n and D_n=|e_n><e_0| have both symmetric s-sandwich norms (n+1)^(-s)->0, but D_n e_0=e_n does not converge strongly.",
+      "expected": "(n+1)^(-s)",
+      "group": "topology",
+      "name": "symmetric topology formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "This package does not prove q^3 A^-3/4 boundedness or the corresponding cubic graph-domain embedding, the required spatial commutator Lieb--Robinson hierarchy, thermodynamic common alpha, common-alpha KMS identification, algebraic ground states, GNS or physical mass gap, regulator removal, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+      "expected": "contains common alpha",
+      "group": "scope",
+      "name": "no-overclaim common alpha",
+      "status": "PASS"
+    },
+    {
+      "actual": "This package does not prove q^3 A^-3/4 boundedness or the corresponding cubic graph-domain embedding, the required spatial commutator Lieb--Robinson hierarchy, thermodynamic common alpha, common-alpha KMS identification, algebraic ground states, GNS or physical mass gap, regulator removal, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+      "expected": "contains common-alpha KMS",
+      "group": "scope",
+      "name": "no-overclaim common-alpha KMS",
+      "status": "PASS"
+    },
+    {
+      "actual": "This package does not prove q^3 A^-3/4 boundedness or the corresponding cubic graph-domain embedding, the required spatial commutator Lieb--Robinson hierarchy, thermodynamic common alpha, common-alpha KMS identification, algebraic ground states, GNS or physical mass gap, regulator removal, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+      "expected": "contains algebraic ground states",
+      "group": "scope",
+      "name": "no-overclaim algebraic ground states",
+      "status": "PASS"
+    },
+    {
+      "actual": "This package does not prove q^3 A^-3/4 boundedness or the corresponding cubic graph-domain embedding, the required spatial commutator Lieb--Robinson hierarchy, thermodynamic common alpha, common-alpha KMS identification, algebraic ground states, GNS or physical mass gap, regulator removal, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+      "expected": "contains GNS",
+      "group": "scope",
+      "name": "no-overclaim GNS",
+      "status": "PASS"
+    },
+    {
+      "actual": "This package does not prove q^3 A^-3/4 boundedness or the corresponding cubic graph-domain embedding, the required spatial commutator Lieb--Robinson hierarchy, thermodynamic common alpha, common-alpha KMS identification, algebraic ground states, GNS or physical mass gap, regulator removal, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+      "expected": "contains regulator removal",
+      "group": "scope",
+      "name": "no-overclaim regulator removal",
+      "status": "PASS"
+    },
+    {
+      "actual": "This package does not prove q^3 A^-3/4 boundedness or the corresponding cubic graph-domain embedding, the required spatial commutator Lieb--Robinson hierarchy, thermodynamic common alpha, common-alpha KMS identification, algebraic ground states, GNS or physical mass gap, regulator removal, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+      "expected": "contains physical empty space",
+      "group": "scope",
+      "name": "no-overclaim physical empty space",
+      "status": "PASS"
+    },
+    {
+      "actual": "This package does not prove q^3 A^-3/4 boundedness or the corresponding cubic graph-domain embedding, the required spatial commutator Lieb--Robinson hierarchy, thermodynamic common alpha, common-alpha KMS identification, algebraic ground states, GNS or physical mass gap, regulator removal, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+      "expected": "contains C6",
+      "group": "scope",
+      "name": "no-overclaim C6",
+      "status": "PASS"
+    },
+    {
+      "actual": "This package does not prove q^3 A^-3/4 boundedness or the corresponding cubic graph-domain embedding, the required spatial commutator Lieb--Robinson hierarchy, thermodynamic common alpha, common-alpha KMS identification, algebraic ground states, GNS or physical mass gap, regulator removal, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+      "expected": "contains CP1",
+      "group": "scope",
+      "name": "no-overclaim CP1",
+      "status": "PASS"
+    },
+    {
+      "actual": "This package does not prove q^3 A^-3/4 boundedness or the corresponding cubic graph-domain embedding, the required spatial commutator Lieb--Robinson hierarchy, thermodynamic common alpha, common-alpha KMS identification, algebraic ground states, GNS or physical mass gap, regulator removal, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+      "expected": "contains Sector A",
+      "group": "scope",
+      "name": "no-overclaim Sector A",
+      "status": "PASS"
+    },
+    {
+      "actual": "This package does not prove q^3 A^-3/4 boundedness or the corresponding cubic graph-domain embedding, the required spatial commutator Lieb--Robinson hierarchy, thermodynamic common alpha, common-alpha KMS identification, algebraic ground states, GNS or physical mass gap, regulator removal, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+      "expected": "contains Pre-A",
+      "group": "scope",
+      "name": "no-overclaim Pre-A",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "C2_fixture": "13",
+    "M_mu_squared_fixture": "700902/125",
+    "Q3_degrees": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "Q3_edges": 12,
+    "common_alpha_closed": false,
+    "convex_weighted_trace": "48",
+    "convex_weighted_witness": "-1",
+    "cubic_identity_residual_terms": 0,
+    "cubic_multiplier_closed": false,
+    "cubic_power_count_target": "3/4",
+    "edge_laplacian": "4*a**2*lambda - 6*a*b*lambda + 4*b**2*lambda",
+    "first_order_det": "7/20",
+    "rung_amplitudes": [
+      "1",
+      "2",
+      "4",
+      "8",
+      "16",
+      "32",
+      "64",
+      "128",
+      "256"
+    ],
+    "squared_order_det": "-127/16",
+    "symmetric_cubic_power_count_target": "3/8",
+    "v_mu_squared_fixture": "27/5"
+  },
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "schema": "tect/pre-a-cp1-st8-q3lock-second-weighted-energy-cauchy-gate-primary-result/1.0",
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_second_weighted_energy_cauchy_gate.py": "63e3732b2b2c6f5fb7a284419b484628d33cd0230df005cd00f074026db74c20",
+    "strategy/pre-a-cp1-st8-q3lock-common-local-derivation-weighted-energy-route-split-manifest.json": "2a29637bcddd115042986fb3c1e1df7d43bf43c91e010cbc7349eda60c924d2f",
+    "strategy/pre-a-cp1-st8-q3lock-second-weighted-energy-cauchy-gate-certificate-260810.md": "f9ff9311b3726449965e48fe1f55387eb55fe59b71858ff4c2cdd6f09e36ee77",
+    "strategy/pre-a-cp1-st8-q3lock-second-weighted-energy-cauchy-gate-manifest.json": "7970c71325fca706321f342f82b4c3896ea07babcb146d44f886e9f1ee9a8ea3"
+  },
+  "summary": {
+    "failed": 0,
+    "passed": 51,
+    "total": 51
+  },
+  "verdict": "PASS"
+}
