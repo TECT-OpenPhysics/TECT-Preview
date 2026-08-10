@@ -5,7 +5,7 @@
 
 Authorities: `negative-results/registry.md`.
 
-**304 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 233 · retraction: 5
+**306 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 235 · retraction: 5
 
 Latest 25 records:
 
@@ -13,9 +13,11 @@ Latest 25 records:
 |---|---|---|
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity) | no_go | delete the centered spatial weight from the cubic graph multiplier while keeping a support-location-uniform constant |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-symmetric-sandwich-only-thermodynamic-cauchy) | no_go | infer a thermodynamic automorphism from convergence only in a symmetric energy sandwich |
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-static-modular-tail-arbitrary-bounded-multiplier) | no_go | multiply a small static cutoff tail by an arbitrary bounded evolved observable using only the tail's first modular derivative |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-ABSOLUTE-CONNECTED-HISTORY-ANIMAL-MAJORANT`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-raw-absolute-connected-history-animal-majorant) | no_go | prove real-time locality by multiplying a uniform prescribed-word heat bound by the number of raw connected growth histories |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-POLYNOMIAL-ALL-RUNG-ONSITE-ENERGY-CONJUGATION`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-polynomial-all-rung-onsite-energy-conjugation) | no_go | close the quartic commutator ladder with a polynomial-in-rung bound on `K^(j/2)V(t)K^(-(j+1)/2)` |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FOURIER-SECOND-MOMENT-UNIFORM-NORM-LR-CUTOFF`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-fourier-second-moment-uniform-norm-lr-cutoff) | no_go | obtain a cutoff-uniform operator-norm Lieb--Robinson speed for the exact Q3LOCK quartic by applying the bounded-Weyl theorem to Fourier--Stieltjes cutoffs that agree on expanding… |
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-fixed-s-coefficientwise-first-passage-branch-response) | no_go | bound every fixed-order first-passage branch/repeat response in the same finite graph power before resumming the exact bond subflow |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIRST-MOMENT-AUTOMATIC-POWER-UPGRADE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-first-moment-automatic-power-upgrade) | no_go | square the first weighted-energy form cone to obtain higher weighted-energy moments |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-DUHAMEL-INNER-PRODUCT-ONLY-COMMON-DYNAMICS`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-duhamel-inner-product-only-common-dynamics) | no_go | infer strong-star common dynamics from convergence of an operator and its adjoint only in the Kubo--Mori/Duhamel inner product |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONVEXITY-ONLY-WEIGHTED-COMMUTATOR-SIGN`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-convexity-only-weighted-commutator-sign) | no_go | use quartic convexity in the `0<=lambda<=2g` subregime alone to obtain the energy/KMS-weighted commutator sign needed for spatial Cauchy |
@@ -34,8 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-04-PRE-A-CP1-CL8-TRANSVERSE-ZERO-RESTRICTION-AS-INTERACTING-MARGINAL`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-transverse-zero-restriction-as-interacting-marginal) | no_go | infer that a bare transverse-zero restriction by itself establishes the interacting marginal of a higher-dimensional parent |
 | [`NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-time-zero-configuration-only-full-weyl-state) | no_go | identify a full canonical Weyl state from all time-zero configuration characteristics alone |
 | [`NG-2026-08-04-PRE-A-CP1-CL8-STRANG-ONE-SLICE-EXACT-HAMILTONIAN-SEMIGROUP`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-strang-one-slice-exact-hamiltonian-semigroup) | no_go | identify the explicit symmetric finite-time Gaussian-link slice with the exact registered CL8 heat semigroup merely from symmetry, positivity, and low-order agreement |
-| [`NG-2026-08-04-PRE-A-CP1-CL8-SCALAR-MASS-ONLY-Q3-WICK-RENORMALIZATION`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-scalar-mass-only-q3-wick-renormalization) | no_go | Wick-order the local Q3 quartic interaction against the declared common-diagonal Gaussian reference while allowing only a scalar mass and scalar energy counterterm |
-| [`NG-2026-08-04-PRE-A-CP1-CL8-PRINCIPAL-FLOQUET-GIBBS-REFERENCE`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-principal-floquet-gibbs-reference) | no_go | obtain a preferred thermal state and absolute energy reference from the principal logarithm of the split-circuit unitary |
 
 Search without loading the full registry:
 

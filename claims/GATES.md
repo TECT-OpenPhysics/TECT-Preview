@@ -357,6 +357,17 @@ spatial velocity `P^2G_j^2 exp(2rho)/(rho hbar)`, `P=11`, and for
 comparison adds only `C_mu^(s_j n)` and can be absorbed into `G_j`. The exact
 branch/repeat resummation and energy-tail algebra are not yet proved.
 
+**Superseding verdict:** CLOSED NEGATIVELY AS STATED (2026-08-10).
+`EXP-000798` / R-167 v1.2 gives exact star and repeated-bond commutators.
+Translated product bumps show that three branches defeat the `s=1/2` graph
+power and four defeat `s=3/4`; every same-order permutation has the same sign.
+The complete star nevertheless resums across all perturbative orders to an
+exact unitary phase. A unique-path tree has an exact sequential-activation
+Duhamel formula, while the nearest-neighbor square leaves an alternate-path
+remainder. This closes only the coefficientwise fixed-`s` target, not the
+dynamics. The successor is
+`PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE`.
+
 ### **PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY**
 
 **Statement:** On a predeclared fixed-beta phase pair or separating tempered
@@ -374,6 +385,58 @@ squared Duhamel norms tending to zero while strong-star convergence fails.
 Uniform modular bandwidth or a high-modular-energy/dual-state tail remains
 required. A fixed-beta W-star result would still not be a state- and
 beta-independent C-star automorphism or a ground-state theorem.
+
+**Superseding verdict:** SUPERSEDED AS THE PRIMARY STATIC REQUIREMENT
+(2026-08-10). `EXP-000798` reuses the exact Q3LOCK Euclidean exponential loop
+estimate and derives an exponentially small coordinate-only bond tail together
+with its first modular derivative. Thus a fifth onsite-energy moment is a
+backup, not a necessary primary gate. The arithmetic/logarithmic-mean theorem
+also shows that Duhamel convergence plus a uniformly bounded first modular
+derivative gives a two-sided GNS topology in one fixed faithful
+representation. An exact two-level counterexample proves that an arbitrary
+bounded multiplier can still destroy the tail. The successor is
+`PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY`.
+
+### **PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE**
+
+**Statement:** Split the exact Hamiltonian into tensor-local onsite quartic
+flow and the full commuting cross-bond sector. Construct one phase-independent
+two-sided graph-Lipschitz core on which each exact subflow has `1+C delta`
+growth and the bond kick transfers influence only one lattice layer with
+coefficient `J delta`. Prove graph-topology Lie--Trotter convergence uniformly
+in volume and compact source, exhaustion independence, and an invariant
+Hamiltonian-derived algebra. Then identify both phasewise OS systems as KMS
+states of that one common dynamics.
+
+**Status:** OPEN (2026-08-10). R-167 v1.2 proves the load-bearing algebraic
+inputs: all cross bonds commute, the full kick factorizes exactly, and
+`q_x` is fixed while `p_x` gains `delta c sum_(y~x)q_y`. The onsite flow is
+support-diagonal, and v1.1 supplies the centered cubic graph multiplier. If a
+stable seminorm obeys
+`L_x'<=(1+C delta)L_x+J delta sum_(y~x)L_y`, the Trotter path coefficients
+have the desired factorial `exp(Ct)(Jt)^d/d!` form. Stability of that core,
+uniform graph-topology convergence, the invariant algebra, and common-alpha
+KMS identification remain unproved.
+
+### **PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY**
+
+**Statement:** On a preregistered faithful fixed-beta representation or
+separating tempered state class, truncate only the intersite coordinates and
+prove projected Duhamel locality for the finite-volume difference `D` together
+with a uniform bound on its first modular derivative `delta D`. Equivalently,
+prove uniform half-modular-strip multiplier bounds `M_0,M_1` for the structured
+truncated evolution. Use the arithmetic/logarithmic-mean theorem to obtain
+two-sided GNS/strong-star convergence, then prove exhaustion independence,
+group law and Hamiltonian identification.
+
+**Status:** OPEN (2026-08-10). R-167 v1.2 proves the static and first-modular-
+derivative coordinate tails are `poly(L)exp(-aL^2)` for arbitrary `a>0`, and
+proves the exact topology and multiplier lemmas. If the remaining structured
+comparison grows no faster than `poly(L)exp(C_0TL^2)`, the scale
+`L_m=m^alpha`, `0<alpha<1/2`, closes both tail and factorial errors. An exact
+two-level fixture rules out replacing the structured multiplier by an
+arbitrary contraction. Common dynamics/KMS, beta independence and all
+zero-temperature consequences remain open.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 

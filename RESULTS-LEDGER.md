@@ -22,7 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-167](#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | Scoped T0 analytic/exact/executed/audited finite-volume theorem, strengthened to v1.1 without a new result number. The exact ST8/Q3LOCK current closes the second and three-half weighted-energy moments. The full graph expansion and Heinz--Kato now close the optimal centered multiplier `f_x^(3/4)q_x^3A^(-3/4)`, its adjoint, Q3 cubic force and neighboring-center graph comparison. Every prescribed bond word has an exact `Gamma(1+n/2)` heat-simplex denominator. Exact route tests reject support-location-uniform unweighted cubic constants, raw absolute animal counting, absolute strip continuation and Duhamel-inner-product-only dynamics. The remaining alternatives are branch/repeat-resummed first-passage real-time product plus an energy-tail algebra, or fixed-beta fifth-energy moments plus modular/dual cutoff locality. Common alpha/KMS, ground/GNS gap, continuum, empty-space comparison, C6, CP1 and Pre-A remain open |
+| [R-167](#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | Scoped T0 analytic/exact/executed/audited theorem, strengthened to v1.2 without a new result number. v1.0--v1.1 prove the exact second/three-half weighted-energy moments, centered cubic graph multiplier, neighboring-center comparison and prescribed-word heat bound. v1.2 proves that the fixed-`s` coefficientwise first-passage target fails on exact star/repeat fixtures although the full star resums to a unitary; a unique-path tree formula survives but a square leaves an alternate-path remainder. It also proves the arithmetic/logarithmic-mean Duhamel-to-GNS theorem, a structured modular multiplier lemma, and exponentially small coordinate-cutoff static/modular tails. The active alternatives are all-bond unitary Trotter graph locality or projected-Duhamel modular-`C1` locality. Common alpha/KMS, ground/GNS gap, continuum, empty-space comparison, C6, CP1 and Pre-A remain open |
 | [R-166](#r-166) | Sparse production radial-Gram decomposition and global owner bound | Scoped T4 analytic/exact/executed/audited production-fibre theorem, strengthened in v1.1 without a new result ID. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / single fresh-`4p` R-153 fibre, the exact Fierz split, Pauli nonresonance, radial bounds and direct coefficient inequality give an explicit rational polynomial whose unique global minimum lies in `70<G_*<71` and is `-4/5+18740524635403/439505584128000>-4/5`. Thus the owner plus source Hessian is strictly above `1/10`, the scoped R-164 reduction permits `rho=3/20`, and the R-165 annulus is closed. Exact simultaneous `sin(4x),sin(8x)` arithmetic gives Gram `[[5/4,1],[1,3/2]]` and ratio `3/8` at `(1,-1)`, registering that the coefficient-one lemma cannot be copied rootwise. Primary `40/40` and independent Fraction `37/37` audits pass. The complete joint owner, nonlinear/revisit feedback, low variables, removal, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-165](#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | Scoped T4 analytic/exact/executed/audited production-fibre theorem. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / fresh-`4p` R-153 fibre, whitened past amplitude `G` and final direction `alpha` obey `K_owner(g)[alpha,alpha] >= P(G)|alpha|^2` for one explicit rational quartic polynomial. A sharp `5/6` Fourier separation lemma, exact A1 covariance enclosures, and R-130 derivative envelopes prove the R-164 owner target `K_owner>=-9I/10` for `0<=G<=21` and `G>=274`, reducing this fibre's noncompact amplitude problem to the bounded open annulus `21<G<274`; its closed certification domain `21<=G<=274` is compact. Primary `38/38` and independent Fraction `30/30` audits pass; the deterministic five-page PDF passed all-page visual QA. The open annulus, other harmonics and roots, cross blocks, nonlinear/revisit feedback, low variables, regulator/removal uniformity, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-164](#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | Scoped T4 analytic/exact/executed/audited direct-chart theorem. For every finite R-104 zero-control chart, the R-141 legal force is the orthogonal projection of the complete centered terminal scalar onto predictable first Gaussian chaos, so its squared source-dual norm is at most the scalar variance with sharp constant one. A7 `L2` convergence and the A1/A11 point-covariance trace give a cutoff-, chart-length-, and linear/isometric-refinement-uniform bound on that variance along the registered sharp-cube/dyadic sequence. A7 centering also makes the direct anchor nonnegative. Therefore a complete direct owner bound `K_owner>=-(10/11-rho)G_src` yields `mu=-1/110+rho`, `epsilon_v=max(0,5/11-rho/4)`, `epsilon_6=3/20`, and constant `B_*/rho`, without separate anchor or origin-force assumptions. The complete production owner, nonzero feedback, shifted low base, arbitrary graph metric transport, random/nonlinear/revisit/pathwise scope, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
@@ -200,13 +200,25 @@ policy in `governance/development-history.md`.
 `EXP-000796` then proves the missing centered cubic graph embedding and
 strengthens this result to v1.1 without allocating a new result number.
 `EXP-000797` is an append-only source-note-linkage correction only; it changes
-no mathematical statement or boundary.
+no mathematical statement or boundary. `EXP-000798` adds the exact
+fixed-order response counterexample, all-order unitary repair, modular topology
+and coordinate-cutoff theorems and advances the same result to v1.2.
 
 **Authority links.** The v1.1 `centered-weight cubic graph` and
 `prescribed-word` heat theorem are recorded under
 `PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE`
 and the alternative
 `PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY` gate.
+R-167 v1.2 preserves those historical IDs and supersedes their active route by
+`PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE`
+and
+`PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY`.
+
+**Negative-route authorities.** The exact fixed-power star/repeat obstruction
+is registered as
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE`.
+The independent modular-multiplier obstruction is registered as
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER`.
 
 **Statement.** For the exact finite-volume ST8/Q3LOCK Hamiltonian with
 `chi,c,g>0`, `lambda>=0`, bounded source, and centered weight
@@ -261,15 +273,42 @@ adjoint labels in the Duhamel inner product does not imply strong-star
 dynamics. These findings reject only the named proof routes, not existence of
 thermodynamic dynamics.
 
-**Boundary.** The theorem is finite-volume and graph-domain based. It does not
-prove the branch/repeat-resummed first-passage response, the spatial
-commutator hierarchy, a fifth onsite-energy moment or modular/dual cutoff
-tail, a common thermodynamic automorphism, common-alpha KMS states, algebraic
-ground states, a GNS or physical mass gap, regulator removal, continuum, a
-physical empty/preparation reference, a below-empty sign, C6, CP1, Sector A
-or Pre-A.
+**v1.2 route correction.** For one component and a spatial star,
+`V_j=-c q_0q_j`, `W_0(a)=exp(-ia p_0/hbar)` give the exact fixed-order law
+`ad_(V_m)...ad_(V_1)W_0=(-ca)^m(prod_j q_j)W_0`. Translated bumps show that
+three leaves defeat graph exponent `s=1/2` and four defeat `s=3/4`; one
+repeated edge gives the same obstruction. The complete star instead resums to
+the unitary `exp[-icat sum_jq_j/hbar]W_0`. A unique-path tree has an exact
+sequential-activation Duhamel formula with every path edge used once, while a
+square leaves an alternate-path remainder. Thus the coefficientwise
+first-passage target is false as stated, but an all-bond unitary Trotter route
+remains open.
 
-**Proven in:** C6 / [R-167 v1.1 proof note](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-cubic-graph-product-locality-route-split-260810-v0.2.tex.txt).
+For faithful finite Gibbs `rho`, v1.2 also proves
+
+`||X||_#^2<=||X||_D^2+(1/2)||X||_D||[log rho,X]||_D`.
+
+This is the arithmetic/logarithmic-mean inequality. Duhamel convergence plus
+a uniform first modular derivative therefore gives two-sided GNS convergence
+in one fixed faithful representation. Exact half-modular-strip bounds `M_0`
+and `M_1` make multiplication by a structured observable continuous in this
+topology. A two-level fixture shows that an arbitrary contraction can instead
+turn a static tail with zero modular derivative into a divergent Duhamel
+commutator. Finally, the imported Q3LOCK Euclidean exponential moment makes a
+coordinate-only bond cutoff and its first modular derivative
+`poly(L)exp(-aL^2)` for arbitrary `a>0`. The scale `L_m=m^alpha`,
+`0<alpha<1/2`, closes the tail/factorial arithmetic conditionally on the still-
+open projected or modular-multiplier locality estimate.
+
+**Boundary.** The theorem is finite-volume and graph-domain based. It does not
+prove graph-Lipschitz stability of the exact onsite flow, graph-topology
+Trotter convergence, the projected Duhamel or structured modular-multiplier
+estimate, a common thermodynamic automorphism, common-alpha KMS states,
+algebraic ground states, a GNS or physical mass gap, regulator removal,
+continuum, a physical empty/preparation reference, a below-empty sign, C6,
+CP1, Sector A or Pre-A.
+
+**Proven in:** C6 / [R-167 v1.2 proof note](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-modular-cutoff-unitary-resummation-route-split-260810-v0.3.tex.txt).
 
 **Tier:** T0 (scoped finite-volume analytic theorem and conditional Cauchy
 reduction; no common-alpha promotion).

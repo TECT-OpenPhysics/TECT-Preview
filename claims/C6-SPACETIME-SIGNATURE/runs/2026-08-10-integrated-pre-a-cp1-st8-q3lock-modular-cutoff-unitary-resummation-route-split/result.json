@@ -1,0 +1,2462 @@
+{
+  "assertions": {
+    "failed": 0,
+    "missing": 0,
+    "passed": 288,
+    "rows": [
+      {
+        "actual": "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json",
+        "expected": "valid JSON object",
+        "group": "files",
+        "name": "manifest parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "tect/pre-a-route-split/1.0",
+        "expected": "tect/pre-a-route-split/1.0",
+        "group": "manifest",
+        "name": "manifest schema",
+        "status": "PASS"
+      },
+      {
+        "actual": "T-054",
+        "expected": "T-054",
+        "group": "manifest",
+        "name": "manifest task_id",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000798",
+        "expected": "EXP-000798",
+        "group": "manifest",
+        "name": "manifest exploration_id",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "group": "manifest",
+        "name": "manifest result_id",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-167",
+        "expected": "R-167",
+        "group": "manifest",
+        "name": "manifest result_number",
+        "status": "PASS"
+      },
+      {
+        "actual": "v1.2",
+        "expected": "v1.2",
+        "group": "manifest",
+        "name": "manifest result_version",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "manifest",
+        "name": "manifest claim_bearing",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "C6-SPACETIME-SIGNATURE"
+        ],
+        "expected": [
+          "C6-SPACETIME-SIGNATURE"
+        ],
+        "group": "manifest",
+        "name": "manifest exact claim context",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER"
+        ],
+        "expected": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER"
+        ],
+        "group": "manifest",
+        "name": "manifest exact two negatives",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "EXP-000781",
+          "EXP-000790",
+          "EXP-000794",
+          "EXP-000795",
+          "EXP-000796",
+          "EXP-000797"
+        ],
+        "expected": "contains EXP-000796 and EXP-000797",
+        "group": "manifest",
+        "name": "manifest v1.1 parent chain retained",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "fixture": "For one component take V_j=-c q_0 q_j and W_0(a)=exp(-ia p_0/hbar). Then ad_(V_m)...ad_(V_1)W_0=(-ca)^m(prod_j q_j)W_0 for distinct leaves, every ordering has the same sign, and ad_V^n W_0=(-ca)^n q_y^n W_0 for one repeated bond.",
+          "graph_scaling": "Translated product bumps obey ||A^s psi_R||=O(R^(4s)) while the m-leaf commutator norm is bounded below by const R^m. Hence both B A^-s and A^-s B lack bounded closure whenever m>4s.",
+          "minimal_failures": "m=3 for s=1/2 and m=4 for s=3/4; both fit inside the degree-six Q3LOCK spatial star, with one leaf designated as the first-passage backbone and the others as side branches.",
+          "scope": "This rejects the proof organization, not the exact finite-volume or thermodynamic dynamics. No claim is made at the endpoint m=4s.",
+          "verdict": "THE V1.1 FIXED-s COEFFICIENTWISE FIRST-PASSAGE BRANCH/REPEAT TARGET IS FALSE AS STATED"
+        },
+        "expected": "v1.1 coefficientwise target false; dynamics not rejected",
+        "group": "scope",
+        "name": "manifest fixed-order counterexample scope",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "finding": "The necessary cancellation occurs across all perturbative orders. Repeat, star and branch insertions cannot be bounded coefficientwise at fixed energy power and must be absorbed into an exact unitary subflow or another nonperturbative cluster object.",
+          "identity": "Ad(exp[it sum_j V_j/hbar])W_0(a)=exp[-i c a t sum_j q_j/hbar]W_0(a), an exact unitary phase times W_0.",
+          "scope": "This is an exact finite-volume bond-subflow identity. It is not the onsite-plus-bond Trotter limit, a spatial locality theorem, or common thermodynamic dynamics.",
+          "target_leaf_response": "For Z_1(b)=exp(-ib p_1/hbar), Weyl covariance makes the commutator a scalar phase times a unitary; its norm is at most |c a b t|/hbar and is independent of the number of side branches."
+        },
+        "expected": "exact unitary subflow only",
+        "group": "manifest",
+        "name": "manifest unitary all-order resummation",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "scope": "The tree identity is exact. The square rejects only a per-backbone isolation on loopy lattices; cut/forest expansions, global bond resummation and locality remain possible.",
+          "square_obstruction": "On the nearest-neighbor square 0-1-2-3-0, removing the chosen path 0-1-2 leaves the alternate path 0-3-2. The base propagator can already connect the endpoint supports, so a chosen-backbone unitary formula has an alternate-path remainder.",
+          "tree_formula": "[U_d(t)A,B]=integral_(0<t_1<...<t_d<t)[U_d(t-t_d)D_d U_(d-1)(t_d-t_(d-1))...D_1 U_0(t_1)A,B]dt_1...dt_d.",
+          "tree_theorem": "On a tree, remove the unique path e_1,...,e_d between the supports and absorb every off-path component into H_0. With H_k=H_0+sum_(r<=k)V_(e_r), U_k=Ad exp(itH_k/hbar), and D_r=(i/hbar)ad V_(e_r), iterated Duhamel contains each path edge once while all branches and post-activation repeats stay inside the unitary U_k propagators."
+        },
+        "expected": "exact tree formula and scoped loop obstruction",
+        "group": "scope",
+        "name": "manifest tree and square split",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "conditional_path_bound": "If one phase-independent two-sided graph-Lipschitz seminorm is stable under the onsite and bond subflows with one-step recurrence L_x'<= (1+C delta)L_x+J delta sum_(y~x)L_y, the N-step coefficient has binom(N,d)(Jt/N)^d(1+Ct/N)^(N-d) and tends to at most exp(Ct)(Jt)^d/d!.",
+          "gate_id": "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+          "open_obligations": [
+            "construct the two-sided local graph-Lipschitz core without spurious support sources under the exact quartic onsite flow",
+            "prove the all-bond kick graph estimate in both orientations with volume/source-uniform constants",
+            "prove graph-topology Lie--Trotter convergence and exhaustion independence",
+            "construct an invariant Hamiltonian-derived algebra or noncollapsing energy-tail completion",
+            "identify the phasewise OS systems as KMS states of the resulting common alpha"
+          ],
+          "positive_precursor": "A weighted shifted-square estimate controls the kinetic form growth by 1+C|delta| after q^2 is absorbed into 1+q^4. The onsite subflow is tensor-local, and the exact bond kick enlarges support by at most one graph layer.",
+          "split": "H=sum_x h_x+V_cross, V_cross=-c sum_<xy>q_x.q_y. The exact finite-volume bond kick factorizes over all edges and sends q_x to q_x and p_x to p_x+delta c sum_(y~x)q_y; its inverse is the negative step.",
+          "status": "OPEN"
+        },
+        "expected": "exact open all-bond gate with five obligations",
+        "group": "manifest",
+        "name": "manifest all-bond successor",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "consequence": "Duhamel convergence plus a uniform first modular-derivative bound gives two-sided GNS convergence in the finite type-I Gibbs representation. On a uniformly operator-bounded set this gives strong-star convergence in that fixed faithful representation.",
+          "definitions": "For faithful finite Gibbs rho, ||X||_D^2=int_0^1 Tr(rho^(1-s)X* rho^s X)ds and ||X||_#^2=Tr[rho(X*X+XX*)]/2.",
+          "mean_inequality": "A(a,b)/L(a,b)=(u/2)coth(u/2)<=1+u/2 for u=|log a-log b|.",
+          "scope": "Faithfulness, or restriction to the support, is essential. The matrix proof is finite type I; a general W-star extension requires a modular-operator proof. The inequality does not create a common representation for volume-varying Gibbs states.",
+          "theorem": "||X||_#^2<=||X||_D^2+(1/2)||X||_D||[log rho,X]||_D=||X||_D^2+(beta hbar/2)||X||_D||delta X||_D, delta=(i/hbar)[H,.]."
+        },
+        "expected": "fixed-representation two-sided topology only",
+        "group": "manifest",
+        "name": "manifest modular-mean topology theorem",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "definitions": "M_0(B)=sup_(|t|<=1/2)||rho^t B rho^-t|| and M_1(B)=M_0([log rho,B]) on one common modular-analytic core.",
+          "duhamel_bounds": "||[X,B]||_D<=2M_0||X||_D and ||[log rho,[X,B]]||_D<=2M_0||[log rho,X]||_D+2M_1||X||_D.",
+          "gns_bound": "||[X,B]||_#^2<=(4M_0^2+2M_0M_1)||X||_D^2+2M_0^2||X||_D||[log rho,X]||_D.",
+          "status": "PROVED AS A FINITE TYPE-I FAITHFUL-GIBBS TOPOLOGY LEMMA; A GENERAL W-STAR EXTENSION AND UNIFORM M_0/M_1 FOR THE STRUCTURED TRUNCATED EVOLUTION ARE OPEN"
+        },
+        "expected": "scoped lemma proved; structured uniform bound open",
+        "group": "scope",
+        "name": "manifest modular multiplier lemma boundary",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "failure": "||[W_n,B_n]||_D^2=exp(beta n/2)(1-exp(-beta n))/[(1+exp(-beta n))beta n] diverges, and the hard dual term phi(B_n*W_n^2B_n) diverges.",
+          "fixture": "H_n=diag(0,n), rho_n=diag(1,exp(-beta n))/(1+exp(-beta n)), W_n=exp(beta n/4)|1><1|, and B_n=|1><0|.",
+          "scope": "Static tail smallness, even with zero modular derivative, cannot be multiplied by arbitrary contractions. Structured modular multipliers or direct projected D,delta D estimates remain possible.",
+          "static_tail": "phi_n(W_n^2) is asymptotic to exp(-beta n/2) and [H_n,W_n]=0."
+        },
+        "expected": "static tail plus zero derivative does not survive arbitrary multiplier",
+        "group": "scope",
+        "name": "manifest arbitrary multiplier counterexample",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "backup": "A uniform fifth onsite-energy moment remains a possible heat-kernel/elliptic backup but is no longer the primary static gate.",
+          "cutoff": "For Q_L(q)=eta(|q|/L)q with eta=1 on [0,1] and zero past 2, replace only -c q_x.q_y by -c Q_L(q_x).Q_L(q_y). The truncated bond has norm O(L^2).",
+          "gate_id": "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+          "imported_input": "EXP-000781 instantiates Kozitsky--Pasurek Theorems 3.1--3.3 for exact Q3LOCK. For a periodic finite volume define A_x=lambda_sigma||omega_x||_(C^sigma)^2+kappa||omega_x||_2^2. Condition the periodic law at x, apply their Lemma 4.1, integrate, and use generalized Holder with r_y=theta|J^Lambda_xy|/kappa and sum_y r_y<1. Finite-volume integrability then gives exp(n_x)<=exp(C)prod_y exp(r_y n_y), hence the conditional moment recursion n_x<=C+(theta/kappa)sum_y|J^Lambda_xy|n_y. Translation invariance, Jhat_Lambda<=6c, and kappa>theta Jhat_Lambda give n<=C/(1-theta Jhat_Lambda/kappa), uniformly in periodic volume and compact source by the EXP-000781 stability constants. Its arbitrary L2 exponential coefficient plus Holder control and the point-evaluation inequality imply sup phi(exp[a|q_x(0)|^2])<infinity for every a>0 at fixed beta.",
+          "open_obligations": [
+            "prove uniform half-modular-strip M_0/M_1 bounds for the structured truncated evolution or direct projected D and delta D estimates",
+            "place all finite-volume maps in one preregistered faithful representation or a separating tempered state class",
+            "prove exhaustion independence, group law and Hamiltonian identification",
+            "identify both phasewise OS reconstructions as KMS states of the common dynamics"
+          ],
+          "scale_balance": "If the still-missing projected/multiplier comparison on |t|<=T grows no faster than poly(L)exp(C_0 T L^2), choose L_m=m^alpha with 0<alpha<1/2 and a>C_0T. Then both m^d poly(L_m)exp[-(a-C_0T)L_m^2] and poly(L_m)(C_1TL_m^2)^m/m! vanish.",
+          "status": "OPEN",
+          "tail": "With rho=rho_(Lambda,h), the bond tail W_L and its gradient over both endpoints are polynomial factors supported on max(|q_x|,|q_y|)>L. Prove the Dirichlet identity first for a bounded outer truncation W_(L,M) on the common core and pass M to infinity by exponential domination. Then ||W_L||_D^2 and ||[log rho,W_L]||_D^2=(beta hbar^2/chi)phi(|grad_(x,y) W_L|^2) are at most C_(a,N)L^N exp(-aL^2) for arbitrary a>0."
+        },
+        "expected": "exact open projected-modular gate with four obligations",
+        "group": "manifest",
+        "name": "manifest projected-modular successor",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY": "SUPERSEDED AS THE PRIMARY STATIC REQUIREMENT: coordinate exponential tails close the static and first-modular-derivative cutoff error without p=5, but the successor projected/modular multiplier locality gate remains open.",
+          "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE": "CLOSED NEGATIVELY AS STATED by the fixed-s star/repeat counterexample; the unique-path tree subcase survives and the successor is the all-bond unitary Trotter gate."
+        },
+        "expected": "two historical gates and exact successor semantics",
+        "group": "compatibility",
+        "name": "manifest old gates retained with successors",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+          "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+          "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "group": "manifest",
+        "name": "manifest exact active gate set",
+        "status": "PASS"
+      },
+      {
+        "actual": "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split.py",
+        "expected": "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split.py",
+        "group": "manifest",
+        "name": "manifest verification primary_script",
+        "status": "PASS"
+      },
+      {
+        "actual": "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_independent.py",
+        "expected": "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_independent.py",
+        "group": "manifest",
+        "name": "manifest verification independent_script",
+        "status": "PASS"
+      },
+      {
+        "actual": "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_verify.py",
+        "expected": "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_verify.py",
+        "group": "manifest",
+        "name": "manifest verification integrated_script",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim graph-Lipschitz",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim Trotter",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim projected Duhamel",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim modular multiplier",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim common alpha",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim KMS",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim ground states",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim GNS gap",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim continuum",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim physical empty space",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim below-empty",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim functional selection",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim C6",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim CP1",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim Sector A",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest no-overclaim Pre-A",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "manifest explicit open-boundary signal",
+        "status": "PASS"
+      },
+      {
+        "actual": "strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json",
+        "expected": "valid JSON object",
+        "group": "files",
+        "name": "R-167 v1.1 parent manifest parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+          "result_number": "R-167",
+          "result_version": "v1.1"
+        },
+        "expected": {
+          "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+          "result_number": "R-167",
+          "result_version": "v1.1"
+        },
+        "group": "compatibility",
+        "name": "v1.1 parent result identity",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+          "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+          "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "group": "compatibility",
+        "name": "v1.1 parent old gates immutable",
+        "status": "PASS"
+      },
+      {
+        "actual": "strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json",
+        "expected": "valid JSON object",
+        "group": "files",
+        "name": "EXP-000781 Euclidean parent parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "exploration_id": "EXP-000781",
+          "scope": {
+            "C0_closed": false,
+            "C6_advanced": false,
+            "CP1_complete": false,
+            "Cstar_pure_states": false,
+            "Kozitsky_Pasurek_hypotheses_instantiated": true,
+            "N1_through_N5_closed": false,
+            "Pre_A_complete": false,
+            "Sector_A_complete": false,
+            "absolute_vacuum_energy_fixed": false,
+            "algebraic_KMS_for_preexisting_dynamics": false,
+            "below_empty_space": false,
+            "continuum_regulator_removal": false,
+            "effective_3D_to_1plus1_reduction": false,
+            "event_horizon_or_cooling": false,
+            "exact_registered_positive_lambda_fixed_lattice_family": true,
+            "ground_state_phase": false,
+            "infinite_volume_real_time_dynamics": false,
+            "lambda0_boundary_phase_regime": true,
+            "locally_normal_time_zero_tangent_states": true,
+            "periodic_limit_DLR_states": true,
+            "physical_empty_space_reference": false,
+            "physical_light_speed_derived": false,
+            "positive_lambda_pressure_cusp": false,
+            "positive_lambda_spontaneous_Z2_breaking": false,
+            "pressure_slope_magnetization_identity": true,
+            "source_tangent_zero_source_DLR_states": true,
+            "spatial_clustering": false,
+            "tangent_states_extreme": false,
+            "tempered_Euclidean_DLR_compact": true,
+            "tempered_Euclidean_DLR_nonempty": true,
+            "uniform_exponential_local_moments": true,
+            "uniform_spectral_gap": false
+          }
+        },
+        "expected": "EXP-000781 with uniform exponential local moments",
+        "group": "compatibility",
+        "name": "Euclidean exponential-moment input",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "independence",
+        "name": "independent import firewall",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "independence",
+        "name": "independent dynamic import firewall",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "independence",
+        "name": "independent does not name primary module",
+        "status": "PASS"
+      },
+      {
+        "actual": "different",
+        "expected": "different",
+        "group": "independence",
+        "name": "independent AST differs",
+        "status": "PASS"
+      },
+      {
+        "actual": "7c6aa9273f9033d403375b814da7bd6ce638865d86529bfb9e1919d2cef6452b",
+        "expected": "different from 44d5df8cd8f0b366485d45ffdbdaa90053f4f63759feacde16b51c05323e118d",
+        "group": "independence",
+        "name": "independent source hash differs",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "primary fresh execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS 91/91",
+        "expected": "PASS ...",
+        "group": "freshness",
+        "name": "primary PASS sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "independent fresh execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS 147/147 | SHA256 0e8511bdaef60c954dea2da1c1960dca8ecd36cdc3d66d34c82bc19d8f70c00a | PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "expected": "PASS ...",
+        "group": "freshness",
+        "name": "independent PASS sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "fresh_sha256": "daf5b7831d50e2ef6ff0066765e8b982041e8efbc6eb245c3189d0c8d74b8f95",
+          "stored_sha256": "daf5b7831d50e2ef6ff0066765e8b982041e8efbc6eb245c3189d0c8d74b8f95"
+        },
+        "expected": "equal canonical payload hashes",
+        "group": "freshness",
+        "name": "primary stored equals fresh",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "fresh_sha256": "0e8511bdaef60c954dea2da1c1960dca8ecd36cdc3d66d34c82bc19d8f70c00a",
+          "stored_sha256": "0e8511bdaef60c954dea2da1c1960dca8ecd36cdc3d66d34c82bc19d8f70c00a"
+        },
+        "expected": "equal canonical payload hashes",
+        "group": "freshness",
+        "name": "independent stored equals fresh",
+        "status": "PASS"
+      },
+      {
+        "actual": "tect/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-primary-result/1.0",
+        "expected": "tect/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-primary-result/1.0",
+        "group": "components",
+        "name": "primary fresh schema",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "group": "components",
+        "name": "primary fresh result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "v1.2",
+        "expected": "v1.2",
+        "group": "components",
+        "name": "primary fresh result version",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000798",
+        "expected": "EXP-000798",
+        "group": "components",
+        "name": "primary fresh exploration",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "group": "components",
+        "name": "primary fresh verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "failed": 0,
+          "passed": 91,
+          "total": 91
+        },
+        "expected": "passed=total>=89, failed=0",
+        "group": "components",
+        "name": "primary fresh all-PASS summary",
+        "status": "PASS"
+      },
+      {
+        "actual": 91,
+        "expected": 91,
+        "group": "components",
+        "name": "primary fresh row count",
+        "status": "PASS"
+      },
+      {
+        "actual": 91,
+        "expected": 91,
+        "group": "components",
+        "name": "primary fresh rows all PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split.py",
+          "strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json",
+          "strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json",
+          "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-certificate-260810.md",
+          "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json"
+        ],
+        "expected": "superset of ['codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split.py', 'strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json', 'strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json', 'strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-certificate-260810.md', 'strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json']",
+        "group": "hashes",
+        "name": "primary fresh required source hashes",
+        "status": "PASS"
+      },
+      {
+        "actual": "44d5df8cd8f0b366485d45ffdbdaa90053f4f63759feacde16b51c05323e118d",
+        "expected": "44d5df8cd8f0b366485d45ffdbdaa90053f4f63759feacde16b51c05323e118d",
+        "group": "hashes",
+        "name": "primary fresh fresh hash codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split.py",
+        "status": "PASS"
+      },
+      {
+        "actual": "f8b29d929a8bee3aaf6b9274ff94c5e6928dc7268afc53b2600f4b18e518606a",
+        "expected": "f8b29d929a8bee3aaf6b9274ff94c5e6928dc7268afc53b2600f4b18e518606a",
+        "group": "hashes",
+        "name": "primary fresh fresh hash strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "52841edd083a9e4f45df5a6a633f84646773b82920605a769f1ccc5b6ce032ff",
+        "expected": "52841edd083a9e4f45df5a6a633f84646773b82920605a769f1ccc5b6ce032ff",
+        "group": "hashes",
+        "name": "primary fresh fresh hash strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "20f99e383fef880a16046e437b4e7a4f159168e223b8835ee5b45e624a587aa3",
+        "expected": "20f99e383fef880a16046e437b4e7a4f159168e223b8835ee5b45e624a587aa3",
+        "group": "hashes",
+        "name": "primary fresh fresh hash strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-certificate-260810.md",
+        "status": "PASS"
+      },
+      {
+        "actual": "0e6f46c9f3532bc69605a42c01146d5de85897cdc69082c8de29ee829fd0f51f",
+        "expected": "0e6f46c9f3532bc69605a42c01146d5de85897cdc69082c8de29ee829fd0f51f",
+        "group": "hashes",
+        "name": "primary fresh fresh hash strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "tect/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-independent-result/1.0",
+        "expected": "tect/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-independent-result/1.0",
+        "group": "components",
+        "name": "independent fresh schema",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "group": "components",
+        "name": "independent fresh result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "v1.2",
+        "expected": "v1.2",
+        "group": "components",
+        "name": "independent fresh result version",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000798",
+        "expected": "EXP-000798",
+        "group": "components",
+        "name": "independent fresh exploration",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "group": "components",
+        "name": "independent fresh verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "failed": 0,
+          "passed": 147,
+          "total": 147
+        },
+        "expected": "passed=total>=147, failed=0",
+        "group": "components",
+        "name": "independent fresh all-PASS summary",
+        "status": "PASS"
+      },
+      {
+        "actual": 147,
+        "expected": 147,
+        "group": "components",
+        "name": "independent fresh row count",
+        "status": "PASS"
+      },
+      {
+        "actual": 147,
+        "expected": 147,
+        "group": "components",
+        "name": "independent fresh rows all PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "scope",
+        "name": "independent fresh claim nonbearing",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_independent.py",
+          "strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json",
+          "strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json",
+          "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-certificate-260810.md",
+          "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json"
+        ],
+        "expected": "superset of ['codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_independent.py', 'strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json', 'strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json', 'strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-certificate-260810.md', 'strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json']",
+        "group": "hashes",
+        "name": "independent fresh required source hashes",
+        "status": "PASS"
+      },
+      {
+        "actual": "7c6aa9273f9033d403375b814da7bd6ce638865d86529bfb9e1919d2cef6452b",
+        "expected": "7c6aa9273f9033d403375b814da7bd6ce638865d86529bfb9e1919d2cef6452b",
+        "group": "hashes",
+        "name": "independent fresh fresh hash codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_independent.py",
+        "status": "PASS"
+      },
+      {
+        "actual": "f8b29d929a8bee3aaf6b9274ff94c5e6928dc7268afc53b2600f4b18e518606a",
+        "expected": "f8b29d929a8bee3aaf6b9274ff94c5e6928dc7268afc53b2600f4b18e518606a",
+        "group": "hashes",
+        "name": "independent fresh fresh hash strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "52841edd083a9e4f45df5a6a633f84646773b82920605a769f1ccc5b6ce032ff",
+        "expected": "52841edd083a9e4f45df5a6a633f84646773b82920605a769f1ccc5b6ce032ff",
+        "group": "hashes",
+        "name": "independent fresh fresh hash strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "20f99e383fef880a16046e437b4e7a4f159168e223b8835ee5b45e624a587aa3",
+        "expected": "20f99e383fef880a16046e437b4e7a4f159168e223b8835ee5b45e624a587aa3",
+        "group": "hashes",
+        "name": "independent fresh fresh hash strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-certificate-260810.md",
+        "status": "PASS"
+      },
+      {
+        "actual": "0e6f46c9f3532bc69605a42c01146d5de85897cdc69082c8de29ee829fd0f51f",
+        "expected": "0e6f46c9f3532bc69605a42c01146d5de85897cdc69082c8de29ee829fd0f51f",
+        "group": "hashes",
+        "name": "independent fresh fresh hash strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": "-21/55",
+          "primary": "-21/55"
+        },
+        "expected": "-21/55",
+        "group": "cross_core",
+        "name": "exact cross invariant star coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": 3,
+          "primary": 3
+        },
+        "expected": 3,
+        "group": "cross_core",
+        "name": "exact cross invariant first half-energy failure",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": 4,
+          "primary": 4
+        },
+        "expected": 4,
+        "group": "cross_core",
+        "name": "exact cross invariant first three-quarter-energy failure",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": "-51/143",
+          "primary": "-51/143"
+        },
+        "expected": "-51/143",
+        "group": "cross_core",
+        "name": "exact cross invariant all-order phase",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": "-3/13",
+          "primary": "-3/13"
+        },
+        "expected": "-3/13",
+        "group": "cross_core",
+        "name": "exact cross invariant target-leaf phase",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": "125/162",
+          "primary": "125/162"
+        },
+        "expected": "125/162",
+        "group": "cross_core",
+        "name": "exact cross invariant tree simplex fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              2
+            ]
+          ],
+          "primary": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              2
+            ]
+          ]
+        },
+        "expected": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            2
+          ]
+        ],
+        "group": "cross_core",
+        "name": "exact cross invariant square paths",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": "6/35",
+          "primary": "6/35"
+        },
+        "expected": "6/35",
+        "group": "cross_core",
+        "name": "exact cross invariant bond-kick transfer",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": "129/385",
+          "primary": "129/385"
+        },
+        "expected": "129/385",
+        "group": "cross_core",
+        "name": "exact cross invariant bond-kick composition",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": "54",
+          "primary": "54"
+        },
+        "expected": "54",
+        "group": "cross_core",
+        "name": "exact cross invariant neighbor factor",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": "11664/1225",
+          "primary": "11664/1225"
+        },
+        "expected": "11664/1225",
+        "group": "cross_core",
+        "name": "exact cross invariant q2 kinetic numerator",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": "1/4",
+          "primary": "1/4"
+        },
+        "expected": "1/4",
+        "group": "cross_core",
+        "name": "exact cross invariant cutoff alpha",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": "-1/2",
+          "primary": "-1/2"
+        },
+        "expected": "-1/2",
+        "group": "cross_core",
+        "name": "exact cross invariant cutoff factorial exponent",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": [
+            "5/3",
+            "5/11"
+          ],
+          "primary": [
+            "5/3",
+            "5/11"
+          ]
+        },
+        "expected": [
+          "5/3",
+          "5/11"
+        ],
+        "group": "cross_core",
+        "name": "exact cross invariant OS plus densities",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": [
+            "5/9",
+            "15/11"
+          ],
+          "primary": [
+            "5/9",
+            "15/11"
+          ]
+        },
+        "expected": [
+          "5/9",
+          "15/11"
+        ],
+        "group": "cross_core",
+        "name": "exact cross invariant OS minus densities",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": false,
+          "primary": false
+        },
+        "expected": false,
+        "group": "cross_core",
+        "name": "exact cross invariant fixed-order target rejected",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": false,
+          "primary": false
+        },
+        "expected": false,
+        "group": "cross_core",
+        "name": "exact cross invariant all-bond Trotter open",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": false,
+          "primary": false
+        },
+        "expected": false,
+        "group": "cross_core",
+        "name": "exact cross invariant projected modular locality open",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": false,
+          "primary": false
+        },
+        "expected": false,
+        "group": "cross_core",
+        "name": "exact cross invariant common alpha open",
+        "status": "PASS"
+      },
+      {
+        "actual": 798,
+        "expected": ">=1",
+        "group": "formal",
+        "name": "exploration ledger parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "all_evidence_paths": true,
+          "claim": true,
+          "result": true,
+          "task": true,
+          "two_exact_negatives": true,
+          "two_exact_new_gates": true,
+          "v1.1_parents": true,
+          "verdict": true
+        },
+        "expected": "all conditions true",
+        "group": "formal",
+        "name": "EXP-000798 complete authority chain",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim graph-Lipschitz",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim Trotter",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim projected Duhamel",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim modular multiplier",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim common alpha",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim KMS",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim ground states",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim GNS gap",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim continuum",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim physical empty space",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim below-empty",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim functional selection",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim C6",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim CP1",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim Sector A",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 no-overclaim Pre-A",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "EXP-000798 explicit open-boundary signal",
+        "status": "PASS"
+      },
+      {
+        "actual": 598203,
+        "expected": ">0",
+        "group": "formal",
+        "name": "result ledger readable",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "compatibility",
+        "name": "R-167 unique detail section",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "R-167 v1.2 result ledger links PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "R-167 v1.2 result ledger links R-167",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "R-167 v1.2 result ledger links v1.2",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "R-167 v1.2 result ledger links EXP-000798",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "R-167 v1.2 result ledger links PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "R-167 v1.2 result ledger links PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "R-167 v1.2 result ledger links PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "R-167 v1.2 result ledger links PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "R-167 v1.2 result ledger links NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "R-167 v1.2 result ledger links NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "R-167 v1.2 result ledger links claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-modular-cutoff-unitary-resummation-route-split-260810-v0.3.tex.txt",
+        "status": "PASS"
+      },
+      {
+        "actual": 622544,
+        "expected": ">0",
+        "group": "formal",
+        "name": "negative registry readable",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2 (index row and detail)",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2 (index row and detail)",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER",
+        "status": "PASS"
+      },
+      {
+        "actual": 214237,
+        "expected": ">0",
+        "group": "formal",
+        "name": "gate authority readable",
+        "status": "PASS"
+      },
+      {
+        "actual": "\n**Statement:** Group every branch and repeated-edge history by its common\nfirst-passage backbone before taking norms. In both one-sided graph\norientations prove, for `s_1=1/2` and `s_2=3/4`, the response coefficient\n`C_j[G_j sqrt(|t|/hbar)]^n/Gamma(1+n/2)`. Then prove a Hamiltonian-derived\ninvariant algebra or uniform two-sided energy-tail compactness so the\nstrong-star core limit closes under products, inverse and time evolution.\n\n**Status:** OPEN (2026-08-10). The conditional coefficient gives the explicit\nspatial velocity `P^2G_j^2 exp(2rho)/(rho hbar)`, `P=11`, and for\n`rho>mu/4` closes the R-167 volume-Cauchy theorem. The proved moving-center\ncomparison adds only `C_mu^(s_j n)` and can be absorbed into `G_j`. The exact\nbranch/repeat resummation and energy-tail algebra are not yet proved.\n\n**Superseding verdict:** CLOSED NEGATIVELY AS STATED (2026-08-10).\n`EXP-000798` / R-167 v1.2 gives exact star and repeated-bond commutators.\nTranslated product bumps show that three branches defeat the `s=1/2` graph\npower and four defeat `s=3/4`; every same-order permutation has the same sign.\nThe complete star nevertheless resums across all perturbative orders to an\nexact unitary phase. A unique-path tree has an exact sequential-activation\nDuhamel formula, while the nearest-neighbor square leaves an alternate-path\nremainder. This closes only the coefficientwise fixed-`s` target, not the\ndynamics. The successor is\n`PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE`.\n\n",
+        "expected": "historical definition + EXP-000798 + all-bond successor",
+        "group": "compatibility",
+        "name": "old first-passage gate retained and linked",
+        "status": "PASS"
+      },
+      {
+        "actual": "\n**Statement:** On a predeclared fixed-beta phase pair or separating tempered\nstate class, prove one volume/source-uniform local onsite-energy moment of\norder `p>4` and both one-sided/dual-state cutoff tails, or an equivalent\nhigh-modular-energy tail. Combine them with the `O(R^(1/2))` projected bond\nnorm to obtain common equilibrium locality and one Hamiltonian-derived normal\nW-star dynamics before KMS identification.\n\n**Status:** OPEN (2026-08-10). If the two-sided leakage estimate is already\navailable, `R_m=m^b` with `2d/(p-1)<b<2` closes the scale balance; `d=3`,\n`p=5`, `b=7/4` give exact exponents `-1/2` and `-1/8`. The onsite moment\nalone does not prove the nontracial topology. A rank-shift fixture has both\nsquared Duhamel norms tending to zero while strong-star convergence fails.\nUniform modular bandwidth or a high-modular-energy/dual-state tail remains\nrequired. A fixed-beta W-star result would still not be a state- and\nbeta-independent C-star automorphism or a ground-state theorem.\n\n**Superseding verdict:** SUPERSEDED AS THE PRIMARY STATIC REQUIREMENT\n(2026-08-10). `EXP-000798` reuses the exact Q3LOCK Euclidean exponential loop\nestimate and derives an exponentially small coordinate-only bond tail together\nwith its first modular derivative. Thus a fifth onsite-energy moment is a\nbackup, not a necessary primary gate. The arithmetic/logarithmic-mean theorem\nalso shows that Duhamel convergence plus a uniformly bounded first modular\nderivative gives a two-sided GNS topology in one fixed faithful\nrepresentation. An exact two-level counterexample proves that an arbitrary\nbounded multiplier can still destroy the tail. The successor is\n`PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY`.\n\n",
+        "expected": "historical definition + EXP-000798 + projected successor",
+        "group": "compatibility",
+        "name": "old fifth-energy gate retained and linked",
+        "status": "PASS"
+      },
+      {
+        "actual": "\n**Statement:** Split the exact Hamiltonian into tensor-local onsite quartic\nflow and the full commuting cross-bond sector. Construct one phase-independent\ntwo-sided graph-Lipschitz core on which each exact subflow has `1+C delta`\ngrowth and the bond kick transfers influence only one lattice layer with\ncoefficient `J delta`. Prove graph-topology Lie--Trotter convergence uniformly\nin volume and compact source, exhaustion independence, and an invariant\nHamiltonian-derived algebra. Then identify both phasewise OS systems as KMS\nstates of that one common dynamics.\n\n**Status:** OPEN (2026-08-10). R-167 v1.2 proves the load-bearing algebraic\ninputs: all cross bonds commute, the full kick factorizes exactly, and\n`q_x` is fixed while `p_x` gains `delta c sum_(y~x)q_y`. The onsite flow is\nsupport-diagonal, and v1.1 supplies the centered cubic graph multiplier. If a\nstable seminorm obeys\n`L_x'<=(1+C delta)L_x+J delta sum_(y~x)L_y`, the Trotter path coefficients\nhave the desired factorial `exp(Ct)(Jt)^d/d!` form. Stability of that core,\nuniform graph-topology convergence, the invariant algebra, and common-alpha\nKMS identification remain unproved.\n\n",
+        "expected": "Statement and Status OPEN",
+        "group": "formal",
+        "name": "new all-bond gate open",
+        "status": "PASS"
+      },
+      {
+        "actual": "\n**Statement:** On a preregistered faithful fixed-beta representation or\nseparating tempered state class, truncate only the intersite coordinates and\nprove projected Duhamel locality for the finite-volume difference `D` together\nwith a uniform bound on its first modular derivative `delta D`. Equivalently,\nprove uniform half-modular-strip multiplier bounds `M_0,M_1` for the structured\ntruncated evolution. Use the arithmetic/logarithmic-mean theorem to obtain\ntwo-sided GNS/strong-star convergence, then prove exhaustion independence,\ngroup law and Hamiltonian identification.\n\n**Status:** OPEN (2026-08-10). R-167 v1.2 proves the static and first-modular-\nderivative coordinate tails are `poly(L)exp(-aL^2)` for arbitrary `a>0`, and\nproves the exact topology and multiplier lemmas. If the remaining structured\ncomparison grows no faster than `poly(L)exp(C_0TL^2)`, the scale\n`L_m=m^alpha`, `0<alpha<1/2`, closes both tail and factorial errors. An exact\ntwo-level fixture rules out replacing the structured multiplier by an\narbitrary contraction. Common dynamics/KMS, beta independence and all\nzero-temperature consequences remain open.\n\n## A6/A7 full derivative Class-II composite and renormalisation gates\n\n",
+        "expected": "Statement and Status OPEN",
+        "group": "formal",
+        "name": "new projected-modular gate open",
+        "status": "PASS"
+      },
+      {
+        "actual": "todo/todo.json",
+        "expected": "valid JSON object",
+        "group": "files",
+        "name": "TODO authority parses",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "T-054 unique",
+        "status": "PASS"
+      },
+      {
+        "actual": "in_progress",
+        "expected": "in_progress",
+        "group": "formal",
+        "name": "T-054 remains in progress",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "T-054 links EXP-000798",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "T-054 links R-167",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "T-054 links v1.2",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "T-054 links PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "T-054 links PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "T-054 links PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "T-054 links PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": 75851,
+        "expected": ">0",
+        "group": "formal",
+        "name": "roadmap readable",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "roadmap links EXP-000798",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "roadmap links R-167",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "roadmap links v1.2",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "roadmap links PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "roadmap links PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "roadmap links PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "roadmap links PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "governance/sector-a-theorem-map.json",
+        "expected": "valid JSON object",
+        "group": "files",
+        "name": "Sector-A theorem map parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "a13_reopen_conditions": [
+            "Pre-A selects the current A1/A7 branch and freezes its actual complete finite production cylinder.",
+            "Governance explicitly restores the fixed-cylinder SA-F4 programme as the dominant research objective.",
+            "A scheme-independent exact or outward-certified legal complete-owner counterdirection appears."
+          ],
+          "a13_t050_priority": "PARKED FROM MAIN PHYSICAL PRIORITY; MATHEMATICALLY PRESERVED",
+          "alternative_cp1_gate": "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+          "first_reopened_test": "On one minimal legal complete finite production cylinder, assemble every forward, legal reverse, balanced, low, current, trace, future, forest, projected-force, and joint sextic occurrence exactly once, then prove a uniform generalized-eigenvalue owner margin or register a legal counterexample.",
+          "historical_cp1_gates_retained": [
+            "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+            "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY"
+          ],
+          "next_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+          "parallel_cp1_gate": "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+          "primary_task": "T-054",
+          "reason": "Select or reject candidate canonical functionals only after a common state, reference, counterterm, observable, regulator, and validation ledger is available; proof depth on one unselected functional cannot establish physical priority.",
+          "status": "IN_PROGRESS"
+        },
+        "expected": {
+          "alternative_cp1_gate": "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+          "parallel_cp1_gate": "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE"
+        },
+        "group": "formal",
+        "name": "Sector-A current successor pointers",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "Sector-A theorem map links EXP-000798",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "Sector-A theorem map links R-167",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "Sector-A theorem map links v1.2",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "Sector-A theorem map links PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "Sector-A theorem map links PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "Sector-A theorem map links PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "Sector-A theorem map links PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": 577,
+        "expected": ">=1",
+        "group": "formal",
+        "name": "changelog authority parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "claim": true,
+          "negatives": true,
+          "notes": true,
+          "result_version": true,
+          "scripts": true
+        },
+        "expected": "all conditions true",
+        "group": "formal",
+        "name": "EXP-000798 changelog complete",
+        "status": "PASS"
+      },
+      {
+        "actual": 3119544,
+        "expected": ">0",
+        "group": "formal",
+        "name": "proof-evidence map readable",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "proof-evidence map links EXP-000798",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "proof-evidence map links R-167",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "proof-evidence map links PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "proof-evidence map links PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "proof-evidence map links PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "proof-evidence map links PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "proof-evidence map links NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "proof-evidence map links NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER",
+        "status": "PASS"
+      },
+      {
+        "actual": 15798,
+        "expected": ">0",
+        "group": "formal",
+        "name": "source note readable",
+        "status": "PASS"
+      },
+      {
+        "actual": "% Title: Q3LOCK Modular Cutoff and Unitary Resummation Route Split",
+        "expected": "not % SUPERSEDED",
+        "group": "formal",
+        "name": "source note is current",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "source note links EXP-000798",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "source note links R-167",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "source note links v1.2",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "source note links PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "source note links PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "source note links PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "source note links PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "source note links PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "source note links NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "source note links NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY- MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT.",
+        "expected": "nonempty",
+        "group": "footer",
+        "name": "source note footer Result ID",
+        "status": "PASS"
+      },
+      {
+        "actual": "Fixed-s star/repeat first-passage target rejected; all-order star and unique-path tree repaired. Modular-mean, structured multiplier, and coordinate- cutoff static/modular tail theorems proved.",
+        "expected": "nonempty",
+        "group": "footer",
+        "name": "source note footer Precise statement",
+        "status": "PASS"
+      },
+      {
+        "actual": "T0 exact finite-volume and fixed-beta theorems, counterexamples, and conditional locality reductions.",
+        "expected": "nonempty",
+        "group": "footer",
+        "name": "source note footer Scope",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000781, EXP-000790, EXP-000794--EXP-000798; R-167 v1.0--v1.1.",
+        "expected": "nonempty",
+        "group": "footer",
+        "name": "source note footer Dependencies",
+        "status": "PASS"
+      },
+      {
+        "actual": "ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF QA.",
+        "expected": "nonempty",
+        "group": "footer",
+        "name": "source note footer Evidence grade",
+        "status": "PASS"
+      },
+      {
+        "actual": "Run the three commands under Reproduction in the listed order, with the integrated verifier last.",
+        "expected": "nonempty",
+        "group": "footer",
+        "name": "source note footer Reproduction command",
+        "status": "PASS"
+      },
+      {
+        "actual": "Primary PASS 91/91; independent PASS 147/147; integrated PASS 288/288.",
+        "expected": "nonempty",
+        "group": "footer",
+        "name": "source note footer Expected output",
+        "status": "PASS"
+      },
+      {
+        "actual": "Any CCR sign, graph threshold, all-order phase, tree/square incidence, modular-mean constant, cutoff tail, hash, scope or provenance mismatch.",
+        "expected": "nonempty",
+        "group": "footer",
+        "name": "source note footer Falsification gate",
+        "status": "PASS"
+      },
+      {
+        "actual": "C6 T1 / C6 T1; no claim or tier change.",
+        "expected": "nonempty",
+        "group": "footer",
+        "name": "source note footer Tier before / after",
+        "status": "PASS"
+      },
+      {
+        "actual": "Trotter graph locality, projected Duhamel and structured modular-multiplier locality, common alpha/KMS, algebraic ground states, GNS gap, regulator removal, continuum, physical empty and the below-empty sign, functional selection, C6, CP1, Sector A and Pre-A remain open.",
+        "expected": "nonempty",
+        "group": "footer",
+        "name": "source note footer No-overclaim statement",
+        "status": "PASS"
+      },
+      {
+        "actual": "Prove either all-bond unitary Trotter graph-Lipschitz closure or projected-Duhamel modular-C1 multiplier locality in one preregistered faithful topology.",
+        "expected": "nonempty",
+        "group": "footer",
+        "name": "source note footer Next required action",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY- MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT.",
+        "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "group": "footer",
+        "name": "source note footer result identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "C6 T1 / C6 T1; no claim or tier change.",
+        "expected": "C6 T1 unchanged / no claim change",
+        "group": "footer",
+        "name": "source note footer no tier change",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim graph-Lipschitz",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim Trotter",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim projected Duhamel",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim modular multiplier",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim common alpha",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim KMS",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim ground states",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim GNS gap",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim continuum",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim physical empty space",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim below-empty",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim functional selection",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim C6",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim CP1",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim Sector A",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note no-overclaim Pre-A",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "source note explicit open-boundary signal",
+        "status": "PASS"
+      },
+      {
+        "actual": 17101,
+        "expected": ">0",
+        "group": "formal",
+        "name": "certificate readable",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "certificate links EXP-000798",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "certificate links R-167",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "certificate links v1.2",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "certificate links PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "certificate links PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "certificate links PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "certificate links PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal",
+        "name": "certificate links PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim graph-Lipschitz",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim Trotter",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim projected Duhamel",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim modular multiplier",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim common alpha",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim KMS",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim ground states",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim GNS gap",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim continuum",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim physical empty space",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim below-empty",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim functional selection",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim C6",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim CP1",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim Sector A",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate no-overclaim Pre-A",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "certificate explicit open-boundary signal",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/C6-SPACETIME-SIGNATURE/status.json",
+        "expected": "valid JSON object",
+        "group": "files",
+        "name": "C6 status parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "T1",
+        "expected": "T1",
+        "group": "claim_firewall",
+        "name": "C6 tier unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": "ACTIVE",
+        "expected": "ACTIVE",
+        "group": "claim_firewall",
+        "name": "C6 lifecycle unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "CONDITIONAL"
+        ],
+        "expected": [
+          "CONDITIONAL"
+        ],
+        "group": "claim_firewall",
+        "name": "C6 evidence unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "C6-BCC-PREMISE-BLOCKED"
+        ],
+        "expected": [
+          "C6-BCC-PREMISE-BLOCKED"
+        ],
+        "group": "claim_firewall",
+        "name": "C6 claim gate unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": "%PDF-",
+        "expected": "%PDF-",
+        "group": "pdf",
+        "name": "PDF signature",
+        "status": "PASS"
+      },
+      {
+        "actual": 88225,
+        "expected": ">1024",
+        "group": "pdf",
+        "name": "PDF nontrivial size",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "note_mtime_ns": 1786348307883039600,
+          "pdf_mtime_ns": 1786348322968650200
+        },
+        "expected": "pdf >= note",
+        "group": "pdf",
+        "name": "PDF fresh relative to source note",
+        "status": "PASS"
+      },
+      {
+        "actual": 7,
+        "expected": ">=4",
+        "group": "pdf",
+        "name": "PDF page count",
+        "status": "PASS"
+      },
+      {
+        "actual": 12514,
+        "expected": ">2500",
+        "group": "pdf",
+        "name": "PDF text nontrivial",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF links EXP-000798",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF links R-167",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF links v1.2",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF links PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF links PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF links PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF links PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF links PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF links NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "pdf",
+        "name": "PDF links NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim graph-Lipschitz",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim Trotter",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim projected Duhamel",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim modular multiplier",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim common alpha",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim KMS",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim ground states",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim GNS gap",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim continuum",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim physical empty space",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim below-empty",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim functional selection",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim C6",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim CP1",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim Sector A",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF no-overclaim Pre-A",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "scope",
+        "name": "PDF explicit open-boundary signal",
+        "status": "PASS"
+      }
+    ],
+    "total": 288
+  },
+  "boundary": "This package does not prove graph-Lipschitz stability of the exact onsite flow, graph-topology Trotter convergence, the projected Duhamel or structured modular-multiplier estimate, a phase- and beta-independent common C-star alpha, common-alpha KMS identification, algebraic ground states, a broken-sector GNS or physical mass gap, regulator removal, continuum, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+  "claim_bearing": false,
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "component_summaries": {
+    "independent_fresh": {
+      "failed": 0,
+      "passed": 147,
+      "total": 147
+    },
+    "independent_stored": {
+      "failed": 0,
+      "passed": 147,
+      "total": 147
+    },
+    "primary_fresh": {
+      "failed": 0,
+      "passed": 91,
+      "total": 91
+    },
+    "primary_stored": {
+      "failed": 0,
+      "passed": 91,
+      "total": 91
+    }
+  },
+  "cross_derived": {
+    "OS minus densities": [
+      "5/9",
+      "15/11"
+    ],
+    "OS plus densities": [
+      "5/3",
+      "5/11"
+    ],
+    "all-bond Trotter open": false,
+    "all-order phase": "-51/143",
+    "bond-kick composition": "129/385",
+    "bond-kick transfer": "6/35",
+    "common alpha open": false,
+    "cutoff alpha": "1/4",
+    "cutoff factorial exponent": "-1/2",
+    "first half-energy failure": 3,
+    "first three-quarter-energy failure": 4,
+    "fixed-order target rejected": false,
+    "neighbor factor": "54",
+    "projected modular locality open": false,
+    "q2 kinetic numerator": "11664/1225",
+    "square paths": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        3,
+        2
+      ]
+    ],
+    "star coefficient": "-21/55",
+    "target-leaf phase": "-3/13",
+    "tree simplex fixture": "125/162"
+  },
+  "exploration_id": "EXP-000798",
+  "failures": [],
+  "fresh_sentinels": {
+    "independent": "PASS 147/147 | SHA256 0e8511bdaef60c954dea2da1c1960dca8ecd36cdc3d66d34c82bc19d8f70c00a | PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+    "primary": "PASS 91/91"
+  },
+  "missing_authorities": [],
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "pdf": {
+    "pages": 7,
+    "path": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-modular-cutoff-unitary-resummation-route-split-260810-v0.3.pdf",
+    "sha256": "b57bc9febd40bd1cd0905839e39506fb2a99487123e54d90eef3434255aece22",
+    "size_bytes": 88225,
+    "text_characters": 12514
+  },
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_number": "R-167",
+  "result_version": "v1.2",
+  "retained_v1_1_gates": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY"
+  ],
+  "schema": "tect/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-integrated-result/1.0",
+  "script_version": "1.1.0",
+  "source_hashes": {
+    "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-modular-cutoff-unitary-resummation-route-split-260810-v0.3.pdf": "b57bc9febd40bd1cd0905839e39506fb2a99487123e54d90eef3434255aece22",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-modular-cutoff-unitary-resummation-route-split-260810-v0.3.tex.txt": "e42bf54f6d5d7b07d0bd53bf00a670fbf186e0e5aac59f3a329a3b25833afe8e",
+    "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split.py": "44d5df8cd8f0b366485d45ffdbdaa90053f4f63759feacde16b51c05323e118d",
+    "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_independent.py": "7c6aa9273f9033d403375b814da7bd6ce638865d86529bfb9e1919d2cef6452b",
+    "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_verify.py": "56155752311a661af3a28cfe1051e37e2e9b8ee6eff607e345adb4d76e73b776",
+    "strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json": "f8b29d929a8bee3aaf6b9274ff94c5e6928dc7268afc53b2600f4b18e518606a",
+    "strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json": "52841edd083a9e4f45df5a6a633f84646773b82920605a769f1ccc5b6ce032ff",
+    "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-certificate-260810.md": "20f99e383fef880a16046e437b4e7a4f159168e223b8835ee5b45e624a587aa3",
+    "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json": "0e6f46c9f3532bc69605a42c01146d5de85897cdc69082c8de29ee829fd0f51f"
+  },
+  "summary": {
+    "failed": 0,
+    "missing": 0,
+    "passed": 288,
+    "total": 288
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

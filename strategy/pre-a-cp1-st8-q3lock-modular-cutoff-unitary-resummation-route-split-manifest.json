@@ -1,0 +1,138 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-MODULAR-CUTOFF-UNITARY-RESUMMATION-ROUTE-v0",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "parent_explorations": [
+    "EXP-000781",
+    "EXP-000790",
+    "EXP-000794",
+    "EXP-000795",
+    "EXP-000796",
+    "EXP-000797"
+  ],
+  "exploration_id": "EXP-000798",
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_version": "v1.2",
+  "result_number": "R-167",
+  "claim_bearing": false,
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER"
+  ],
+  "authority": "R-167 v1.2 is an additive T0 route correction, not a new result number. Exact star and repeated-bond commutators falsify the v1.1 fixed-energy-power coefficientwise first-passage target, while their all-order bond subflow resums to a unitary phase. A unique-path tree admits an exact sequential-activation Duhamel formula, but a square supplies the minimal alternate-path obstruction to a chosen-backbone isolation. Independently, the arithmetic/logarithmic-mean inequality upgrades Duhamel convergence plus a bounded first modular derivative to a two-sided GNS topology in one fixed faithful representation. The imported Euclidean exponential moment theorem gives exponentially small coordinate-cutoff tails and modular derivatives. Arbitrary bounded multipliers still fail, so the surviving gates are an all-bond unitary Trotter graph-Lipschitz theorem or a projected-Duhamel modular-C1 multiplier theorem.",
+  "model": {
+    "dimension": 3,
+    "components_per_site": 8,
+    "lattice_degree": 6,
+    "parameters": "chi,c,g>0; lambda>=0; r real; |h|<=h0; fixed beta>0 on the equilibrium route",
+    "weighted_energy": "A=1+E_f with f_z=exp[-mu d(z,X)] and the R-167 v1.1 centered graph estimates",
+    "cross_bonds": "V_e=-c q_x.q_y; all V_e commute, including bonds sharing a site, because they are multiplication polynomials in q"
+  },
+  "fixed_order_first_passage_counterexample": {
+    "fixture": "For one component take V_j=-c q_0 q_j and W_0(a)=exp(-ia p_0/hbar). Then ad_(V_m)...ad_(V_1)W_0=(-ca)^m(prod_j q_j)W_0 for distinct leaves, every ordering has the same sign, and ad_V^n W_0=(-ca)^n q_y^n W_0 for one repeated bond.",
+    "graph_scaling": "Translated product bumps obey ||A^s psi_R||=O(R^(4s)) while the m-leaf commutator norm is bounded below by const R^m. Hence both B A^-s and A^-s B lack bounded closure whenever m>4s.",
+    "minimal_failures": "m=3 for s=1/2 and m=4 for s=3/4; both fit inside the degree-six Q3LOCK spatial star, with one leaf designated as the first-passage backbone and the others as side branches.",
+    "verdict": "THE V1.1 FIXED-s COEFFICIENTWISE FIRST-PASSAGE BRANCH/REPEAT TARGET IS FALSE AS STATED",
+    "scope": "This rejects the proof organization, not the exact finite-volume or thermodynamic dynamics. No claim is made at the endpoint m=4s."
+  },
+  "all_order_star_resummation": {
+    "identity": "Ad(exp[it sum_j V_j/hbar])W_0(a)=exp[-i c a t sum_j q_j/hbar]W_0(a), an exact unitary phase times W_0.",
+    "target_leaf_response": "For Z_1(b)=exp(-ib p_1/hbar), Weyl covariance makes the commutator a scalar phase times a unitary; its norm is at most |c a b t|/hbar and is independent of the number of side branches.",
+    "finding": "The necessary cancellation occurs across all perturbative orders. Repeat, star and branch insertions cannot be bounded coefficientwise at fixed energy power and must be absorbed into an exact unitary subflow or another nonperturbative cluster object.",
+    "scope": "This is an exact finite-volume bond-subflow identity. It is not the onsite-plus-bond Trotter limit, a spatial locality theorem, or common thermodynamic dynamics."
+  },
+  "tree_and_loop_split": {
+    "tree_theorem": "On a tree, remove the unique path e_1,...,e_d between the supports and absorb every off-path component into H_0. With H_k=H_0+sum_(r<=k)V_(e_r), U_k=Ad exp(itH_k/hbar), and D_r=(i/hbar)ad V_(e_r), iterated Duhamel contains each path edge once while all branches and post-activation repeats stay inside the unitary U_k propagators.",
+    "tree_formula": "[U_d(t)A,B]=integral_(0<t_1<...<t_d<t)[U_d(t-t_d)D_d U_(d-1)(t_d-t_(d-1))...D_1 U_0(t_1)A,B]dt_1...dt_d.",
+    "square_obstruction": "On the nearest-neighbor square 0-1-2-3-0, removing the chosen path 0-1-2 leaves the alternate path 0-3-2. The base propagator can already connect the endpoint supports, so a chosen-backbone unitary formula has an alternate-path remainder.",
+    "scope": "The tree identity is exact. The square rejects only a per-backbone isolation on loopy lattices; cut/forest expansions, global bond resummation and locality remain possible."
+  },
+  "all_bond_trotter_candidate": {
+    "gate_id": "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "split": "H=sum_x h_x+V_cross, V_cross=-c sum_<xy>q_x.q_y. The exact finite-volume bond kick factorizes over all edges and sends q_x to q_x and p_x to p_x+delta c sum_(y~x)q_y; its inverse is the negative step.",
+    "positive_precursor": "A weighted shifted-square estimate controls the kinetic form growth by 1+C|delta| after q^2 is absorbed into 1+q^4. The onsite subflow is tensor-local, and the exact bond kick enlarges support by at most one graph layer.",
+    "conditional_path_bound": "If one phase-independent two-sided graph-Lipschitz seminorm is stable under the onsite and bond subflows with one-step recurrence L_x'<= (1+C delta)L_x+J delta sum_(y~x)L_y, the N-step coefficient has binom(N,d)(Jt/N)^d(1+Ct/N)^(N-d) and tends to at most exp(Ct)(Jt)^d/d!.",
+    "open_obligations": [
+      "construct the two-sided local graph-Lipschitz core without spurious support sources under the exact quartic onsite flow",
+      "prove the all-bond kick graph estimate in both orientations with volume/source-uniform constants",
+      "prove graph-topology Lie--Trotter convergence and exhaustion independence",
+      "construct an invariant Hamiltonian-derived algebra or noncollapsing energy-tail completion",
+      "identify the phasewise OS systems as KMS states of the resulting common alpha"
+    ],
+    "status": "OPEN"
+  },
+  "modular_mean_topology": {
+    "definitions": "For faithful finite Gibbs rho, ||X||_D^2=int_0^1 Tr(rho^(1-s)X* rho^s X)ds and ||X||_#^2=Tr[rho(X*X+XX*)]/2.",
+    "mean_inequality": "A(a,b)/L(a,b)=(u/2)coth(u/2)<=1+u/2 for u=|log a-log b|.",
+    "theorem": "||X||_#^2<=||X||_D^2+(1/2)||X||_D||[log rho,X]||_D=||X||_D^2+(beta hbar/2)||X||_D||delta X||_D, delta=(i/hbar)[H,.].",
+    "consequence": "Duhamel convergence plus a uniform first modular-derivative bound gives two-sided GNS convergence in the finite type-I Gibbs representation. On a uniformly operator-bounded set this gives strong-star convergence in that fixed faithful representation.",
+    "scope": "Faithfulness, or restriction to the support, is essential. The matrix proof is finite type I; a general W-star extension requires a modular-operator proof. The inequality does not create a common representation for volume-varying Gibbs states."
+  },
+  "modular_multiplier_lemma": {
+    "definitions": "M_0(B)=sup_(|t|<=1/2)||rho^t B rho^-t|| and M_1(B)=M_0([log rho,B]) on one common modular-analytic core.",
+    "duhamel_bounds": "||[X,B]||_D<=2M_0||X||_D and ||[log rho,[X,B]]||_D<=2M_0||[log rho,X]||_D+2M_1||X||_D.",
+    "gns_bound": "||[X,B]||_#^2<=(4M_0^2+2M_0M_1)||X||_D^2+2M_0^2||X||_D||[log rho,X]||_D.",
+    "status": "PROVED AS A FINITE TYPE-I FAITHFUL-GIBBS TOPOLOGY LEMMA; A GENERAL W-STAR EXTENSION AND UNIFORM M_0/M_1 FOR THE STRUCTURED TRUNCATED EVOLUTION ARE OPEN"
+  },
+  "arbitrary_multiplier_counterexample": {
+    "fixture": "H_n=diag(0,n), rho_n=diag(1,exp(-beta n))/(1+exp(-beta n)), W_n=exp(beta n/4)|1><1|, and B_n=|1><0|.",
+    "static_tail": "phi_n(W_n^2) is asymptotic to exp(-beta n/2) and [H_n,W_n]=0.",
+    "failure": "||[W_n,B_n]||_D^2=exp(beta n/2)(1-exp(-beta n))/[(1+exp(-beta n))beta n] diverges, and the hard dual term phi(B_n*W_n^2B_n) diverges.",
+    "scope": "Static tail smallness, even with zero modular derivative, cannot be multiplied by arbitrary contractions. Structured modular multipliers or direct projected D,delta D estimates remain possible."
+  },
+  "coordinate_cutoff_route": {
+    "gate_id": "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "imported_input": "EXP-000781 instantiates Kozitsky--Pasurek Theorems 3.1--3.3 for exact Q3LOCK. For a periodic finite volume define A_x=lambda_sigma||omega_x||_(C^sigma)^2+kappa||omega_x||_2^2. Condition the periodic law at x, apply their Lemma 4.1, integrate, and use generalized Holder with r_y=theta|J^Lambda_xy|/kappa and sum_y r_y<1. Finite-volume integrability then gives exp(n_x)<=exp(C)prod_y exp(r_y n_y), hence the conditional moment recursion n_x<=C+(theta/kappa)sum_y|J^Lambda_xy|n_y. Translation invariance, Jhat_Lambda<=6c, and kappa>theta Jhat_Lambda give n<=C/(1-theta Jhat_Lambda/kappa), uniformly in periodic volume and compact source by the EXP-000781 stability constants. Its arbitrary L2 exponential coefficient plus Holder control and the point-evaluation inequality imply sup phi(exp[a|q_x(0)|^2])<infinity for every a>0 at fixed beta.",
+    "cutoff": "For Q_L(q)=eta(|q|/L)q with eta=1 on [0,1] and zero past 2, replace only -c q_x.q_y by -c Q_L(q_x).Q_L(q_y). The truncated bond has norm O(L^2).",
+    "tail": "With rho=rho_(Lambda,h), the bond tail W_L and its gradient over both endpoints are polynomial factors supported on max(|q_x|,|q_y|)>L. Prove the Dirichlet identity first for a bounded outer truncation W_(L,M) on the common core and pass M to infinity by exponential domination. Then ||W_L||_D^2 and ||[log rho,W_L]||_D^2=(beta hbar^2/chi)phi(|grad_(x,y) W_L|^2) are at most C_(a,N)L^N exp(-aL^2) for arbitrary a>0.",
+    "scale_balance": "If the still-missing projected/multiplier comparison on |t|<=T grows no faster than poly(L)exp(C_0 T L^2), choose L_m=m^alpha with 0<alpha<1/2 and a>C_0T. Then both m^d poly(L_m)exp[-(a-C_0T)L_m^2] and poly(L_m)(C_1TL_m^2)^m/m! vanish.",
+    "backup": "A uniform fifth onsite-energy moment remains a possible heat-kernel/elliptic backup but is no longer the primary static gate.",
+    "open_obligations": [
+      "prove uniform half-modular-strip M_0/M_1 bounds for the structured truncated evolution or direct projected D and delta D estimates",
+      "place all finite-volume maps in one preregistered faithful representation or a separating tempered state class",
+      "prove exhaustion independence, group law and Hamiltonian identification",
+      "identify both phasewise OS reconstructions as KMS states of the common dynamics"
+    ],
+    "status": "OPEN"
+  },
+  "fixed_beta_os_mixture_envelope": {
+    "form_theorem": "For 0<lambda<1, the same reflection and common positive-time test algebra, and mu_0=lambda mu_+ +(1-lambda)mu_-, reflection positivity gives q_0=lambda q_+ +(1-lambda)q_-, N_0=N_+ intersect N_-, and [F]_0 maps isometrically to (sqrt(lambda)[F]_+,sqrt(1-lambda)[F]_-) in H_+ direct-sum H_-.",
+    "boundary": "The image need not be the whole direct sum. Normal phase states in one mixture W-star algebra require reconstruction functoriality on one common formal field algebra; central phase projections require disjointness, while extremality helps only with a common-KMS-simplex theorem that implies it. The repository has not proved that mu_0 is the zero-source periodic limit.",
+    "scope": "This is a scoped fixed-beta envelope precursor, not a beta-independent Hamiltonian common alpha, a ground-state limit, or a GNS-gap theorem."
+  },
+  "retired_or_superseded_gates": {
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE": "CLOSED NEGATIVELY AS STATED by the fixed-s star/repeat counterexample; the unique-path tree subcase survives and the successor is the all-bond unitary Trotter gate.",
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY": "SUPERSEDED AS THE PRIMARY STATIC REQUIREMENT: coordinate exponential tails close the static and first-modular-derivative cutoff error without p=5, but the successor projected/modular multiplier locality gate remains open."
+  },
+  "pre_a_order": [
+    "phasewise OS/KMS reconstruction",
+    "close either all-bond unitary Trotter graph locality or projected-Duhamel modular-C1 locality",
+    "construct one beta- and phase-independent Hamiltonian common dynamics and identify both KMS phases",
+    "select distinct algebraic ground states",
+    "prove a broken-sector GNS gap",
+    "remove the enlarged counterterm regulator",
+    "compare with a preregistered physical-empty preparation under the same Hamiltonian"
+  ],
+  "status": "PARTIALLY RESOLVED: THE V1.1 FIXED-s FIRST-PASSAGE TARGET IS FALSIFIED, WHILE ALL-ORDER STAR RESUMMATION AND THE UNIQUE-PATH TREE FORMULA ARE EXACT. THE MODULAR-MEAN TOPOLOGY, MODULAR MULTIPLIER LEMMA, AND COORDINATE-CUTOFF STATIC/MODULAR TAIL ARE CLOSED. THE ALL-BOND TROTTER AND PROJECTED-DUHAMEL MODULAR-C1 LOCALITY GATES, COMMON ALPHA/KMS, GROUND, GAP, CONTINUUM, EMPTY-REFERENCE AND PRE-A GATES REMAIN OPEN.",
+  "closed_subgates": [
+    "PA-CP1-ST8-Q3LOCK-FIXED-s-FIRST-PASSAGE-COUNTEREXAMPLE",
+    "PA-CP1-ST8-Q3LOCK-UNIQUE-PATH-UNITARY-SEQUENTIAL-ACTIVATION",
+    "PA-CP1-ST8-Q3LOCK-DUHAMEL-TO-TWO-SIDED-GNS-MODULAR-MEAN",
+    "PA-CP1-ST8-Q3LOCK-COORDINATE-CUTOFF-STATIC-AND-MODULAR-DERIVATIVE-TAIL"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "verification": {
+    "proof_grade": "ANALYTIC exact finite-volume CCR, graph, modular-mean, cutoff-tail and scoped OS-form theorems; exact counterexamples; conditional scale reductions; independent exact-arithmetic implementation; integrated freshness, provenance and PDF verification",
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_verify.py"
+  },
+  "no_overclaim": "This package does not prove graph-Lipschitz stability of the exact onsite flow, graph-topology Trotter convergence, the projected Duhamel or structured modular-multiplier estimate, a phase- and beta-independent common C-star alpha, common-alpha KMS identification, algebraic ground states, a broken-sector GNS or physical mass gap, regulator removal, continuum, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A."
+}

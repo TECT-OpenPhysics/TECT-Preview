@@ -9,6 +9,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE](#ng-2026-08-10-pre-a-st8-q3lock-fixed-s-coefficientwise-first-passage-branch-response) | bound every fixed-order first-passage branch/repeat response in the same finite graph power before resumming the exact bond subflow | exact star commutators grow as a product of one leaf coordinate per branch, so three leaves defeat `s=1/2` and four defeat `s=3/4`; repeated edges do the same. The full star nevertheless resums to a unitary phase. Retain the unique-path tree theorem and replace the false coefficient target by all-bond unitary Trotter or cut/forest resummation |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER](#ng-2026-08-10-pre-a-st8-q3lock-static-modular-tail-arbitrary-bounded-multiplier) | multiply a small static cutoff tail by an arbitrary bounded evolved observable using only the tail's first modular derivative | a two-level Gibbs fixture has a self-adjoint tail whose square expectation tends to zero and whose modular derivative vanishes, yet its commutator with a contraction has divergent Duhamel norm and dual expectation. Require a structured half-modular-strip multiplier bound or direct projected `D,delta D` locality |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY](#ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity) | delete the centered spatial weight from the cubic graph multiplier while keeping a support-location-uniform constant | a translated compact bump forces every unweighted `q_x^3 A_x^(-3/4)` constant to grow at least as `f_x^(-3/4)`. Retain the proved weighted multiplier and the exact neighboring-center comparison; fixed-site boundedness and recentered product locality remain open |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-ABSOLUTE-CONNECTED-HISTORY-ANIMAL-MAJORANT](#ng-2026-08-10-pre-a-st8-q3lock-raw-absolute-connected-history-animal-majorant) | prove real-time locality by multiplying a uniform prescribed-word heat bound by the number of raw connected growth histories | one `5m`-edge backbone-with-leaves animal has at least `(4m)!` legal histories, so the resulting positive majorant `(4m)!a^(5m)/Gamma(1+5m/2)` has log growth `(3/2)m log m+O(m)` and zero radius. Resum branches and repeated edges before taking norms; no dynamics nonexistence is inferred |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-ABSOLUTE-HEAT-STRIP-REAL-TIME-CONTINUATION](#ng-2026-08-10-pre-a-st8-q3lock-absolute-heat-strip-real-time-continuation) | continue the prescribed-word heat estimate termwise in absolute value to the real-time boundary and integrate it against a finite Balakrishnan energy power | even after a hypothetical edge-chain reduction the absolute strip majorant contains `exp(C/epsilon)` at nonzero real time, so `int_0^1 epsilon^(s-1)exp(C/epsilon)d epsilon` diverges for every finite `s`. Oscillatory/unitary resummation and modular routes remain open |
@@ -314,6 +316,56 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-fixed-s-coefficientwise-first-passage-branch-response"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE -- fixed graph power cannot absorb raw branches or repeats
+
+**Failure mode.** Keep one finite graph exponent `s` and bound every raw
+fixed-order branch or repeated-edge commutator before summing the exact bond
+subflow. This is the literal response target left by R-167 v1.1.
+
+**Evidence.** For one component, let
+`V_j=-c q_0q_j` and `W_0(a)=exp(-ia p_0/hbar)`. The CCR and commutativity of
+all bond multipliers give
+`ad_(V_m)...ad_(V_1)W_0=(-ca)^m(prod_j q_j)W_0`; all `m!` orderings have the
+same sign. One repeated edge similarly gives
+`ad_V^nW_0=(-ca)^nq_y^nW_0`. On translated product bumps,
+`||A^s psi_R||=O(R^(4s))` while the displayed commutator is bounded below by
+`const R^m`. Hence both one-sided graph operators are unbounded for `m>4s`:
+the first failures are `m=3` at `s=1/2` and `m=4` at `s=3/4`, both within a
+degree-six lattice star. In contrast, the complete star subflow is exactly
+`exp[-icat sum_jq_j/hbar]W_0(a)`, a unitary.
+
+**Consequence.** The fixed-`s` coefficientwise first-passage gate is closed
+negatively as stated; this is not a dynamics no-go. On a tree the unique-path
+sequential-activation Duhamel formula survives. A square leaves an alternate
+path after one chosen backbone is removed, so a general lattice needs an
+all-bond unitary Trotter construction or a cut/forest resummation.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-static-modular-tail-arbitrary-bounded-multiplier"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER -- static modular tails do not form an arbitrary multiplier ideal
+
+**Failure mode.** Infer two-sided cutoff locality by multiplying a small
+static Gibbs tail by any bounded evolved observable, using only smallness of
+the tail and its first modular derivative.
+
+**Evidence.** Let
+`H_n=diag(0,n)`,
+`rho_n=diag(1,exp(-beta n))/(1+exp(-beta n))`,
+`W_n=exp(beta n/4)|1><1|`, and `B_n=|1><0|`. Then `W_n` is self-adjoint,
+`[H_n,W_n]=0`, and
+`phi_n(W_n^2)=exp(-beta n/2)/(1+exp(-beta n))->0`. Nevertheless
+`||[W_n,B_n]||_D^2` equals
+`exp(beta n/2)(1-exp(-beta n))/[(1+exp(-beta n))beta n]` and diverges. The
+dual term `phi_n(B_n^*W_n^2B_n)` diverges as well. The half-modular-strip norm
+of `B_n` grows as `exp(beta n/2)`, exposing the missing hypothesis.
+
+**Consequence.** Static position tails and even a zero modular derivative do
+not control arbitrary contractions. The equilibrium route must prove a
+structured half-strip multiplier bound for the truncated evolution, or direct
+projected Duhamel estimates for both `D` and `delta D`. The exact
+arithmetic/logarithmic-mean theorem still converts those estimates into a
+two-sided GNS topology; KMS states and common dynamics are not rejected.
 
 <a id="ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity"></a>
 ### NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY -- the centered spatial weight is necessary

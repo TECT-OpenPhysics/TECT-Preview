@@ -729,13 +729,21 @@ form-order squaring, symmetric-sandwich-only convergence, polynomial
 separate-rung conjugation, convexity-only weighted positivity,
 support-location-uniform unweighted cubic bounds, raw absolute animal
 counting, absolute strip continuation, and Duhamel-inner-product-only
-dynamics.  The two ordered alternatives are now
+dynamics.  EXP-000798 advances the same R-167 to v1.2. Exact star and repeat
+commutators close the v1.1
 `PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE`
+target negatively at fixed graph power, even though the complete star resums
+to a unitary. A unique-path tree formula survives, while a square leaves an
+alternate-path remainder. The v1.1
+`PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY` gate is
+superseded as the primary static requirement: imported Euclidean exponential
+moments already give exponentially small coordinate-cutoff static and first-
+modular-derivative tails. The arithmetic/logarithmic-mean theorem identifies
+the exact two-sided topology, while a two-level fixture proves that arbitrary
+bounded multipliers still fail. The two active alternatives are now
+`PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE`
 and
-`PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY`.
-The first must resum branches and repeated edges before taking norms; the
-second must add genuinely two-sided modular or dual-state leakage rather than
-infer strong-star convergence from a Duhamel inner product.
+`PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY`.
 Common real-time `alpha`, common-alpha KMS identification, algebraic ground
 states, broken-sector GNS gap, enlarged-counterterm continuum, physical empty
 space and effective reduction remain open.  These bridge results do not select

@@ -1,0 +1,424 @@
+% Title: Q3LOCK Modular Cutoff and Unitary Resummation Route Split
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v0.3 -- first issued 2026-08-10; this version issued 2026-08-10
+% Status: T0 claim-nonbearing R-167 v1.2 extension; common alpha and Pre-A remain open
+
+\section{Purpose and scope}
+
+This note records \texttt{EXP-000798} and strengthens reusable result
+\texttt{R-167} to v1.2 without allocating a new result number.  It is an
+additive route correction: the v1.0--v1.1 weighted-energy and cubic graph
+theorems remain unchanged.
+
+The fixed-energy-power, coefficientwise first-passage target left by v1.1 is
+false.  Exact star and repeated-bond commutators accumulate one coordinate per
+raw branch or repeat.  The same star nevertheless resums over all orders to an
+exact unitary phase.  A unique-path tree has an exact sequential-activation
+Duhamel formula, but a square leaves an alternate-path remainder.
+
+The fixed-temperature alternative also sharpens.  An exact arithmetic versus
+logarithmic mean inequality upgrades Duhamel convergence plus one bounded
+modular derivative to a two-sided GNS topology.  Existing Euclidean
+exponential moments make a coordinate-only bond cutoff and its first modular
+derivative exponentially small.  An exact two-level fixture shows why an
+arbitrary bounded multiplier is still insufficient.
+
+No common thermodynamic automorphism, common-alpha KMS identification,
+algebraic ground states, broken-sector GNS or physical mass gap, continuum
+removal, physical empty-space comparison, C6, CP1, Sector A or Pre-A closure is
+claimed.
+
+\section{Provenance identifiers}
+
+\begin{itemize}
+\item Result: \url{PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT}, v1.2, \texttt{R-167}.
+\item Exploration: \url{EXP-000798}.
+\item Historical gate: \url{PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE}.
+\item Historical gate: \url{PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY}.
+\item Active gate: \url{PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE}.
+\item Active gate: \url{PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER}.
+\end{itemize}
+
+\section{Fixed-order star obstruction and exact resummation}
+
+For one component, let
+
+\[
+ V_j=-cq_0q_j,\qquad W_0(a)=e^{-iap_0/\hbar}.
+\]
+
+The Weyl relation and commutativity of all bond multipliers give
+
+\[
+ \operatorname{ad}_{V_m}\cdots\operatorname{ad}_{V_1}W_0(a)
+ =(-ca)^m\left(\prod_{j=1}^m q_j\right)W_0(a),       \tag{3.1}
+\]
+
+with the same sign for every ordering.  One repeated edge gives
+
+\[
+ \operatorname{ad}_{V}^{,n}W_0(a)=(-ca)^nq_y^nW_0(a). \tag{3.2}
+\]
+
+On translated smooth product bumps,
+
+\[
+ \|A^s\psi_R\|=O(R^{4s}),\qquad
+ \left\|\prod_{j=1}^m q_jW_0(a)\psi_R\right\|
+ \gtrsim R^m.                                        \tag{3.3}
+\]
+
+Thus both one-sided graph operators fail whenever $m>4s$.  The first failures
+are $m=3$ at $s=1/2$ and $m=4$ at $s=3/4$, both inside a degree-six lattice
+star.  This rejects the literal coefficientwise target, not the dynamics.
+
+Indeed the complete star subflow is
+
+\[
+ \operatorname{Ad}\!\left(e^{it\sum_jV_j/\hbar}\right)W_0(a)
+ =\exp\!\left[-{icat\over\hbar}\sum_jq_j\right]W_0(a), \tag{3.4}
+\]
+
+an exact unitary.  Cancellation occurs across all perturbative orders.
+
+\section{Tree theorem and loop boundary}
+
+On a tree, let $e_1,\ldots,e_d$ be the unique path between the observable
+supports.  Absorb every off-path component into $H_0$ and put
+
+\[
+ H_k=H_0+\sum_{r\le k}V_{e_r},\quad
+ \mathcal U_k(t)=\operatorname{Ad}(e^{itH_k/\hbar}),\quad
+ \mathcal D_r={i\over\hbar}\operatorname{ad}_{V_{e_r}}.
+\]
+
+Successive Duhamel identities give
+
+\[
+\begin{split}
+ [\mathcal U_d(t)A,B]
+ =\int_{0<t_1<\cdots<t_d<t}
+ [&\mathcal U_d(t-t_d)\mathcal D_d
+ \mathcal U_{d-1}(t_d-t_{d-1})\cdots\\
+ &\cdots\mathcal D_1\mathcal U_0(t_1)A,B],d\mathbf t .
+\end{split}                                           \tag{4.1}
+\]
+
+Each path edge appears once; all side branches and post-activation repeats are
+inside exact unitaries.  On the square $0-1-2-3-0$, however, deleting the
+chosen backbone $0-1-2$ leaves $0-3-2$.  The base propagator can already
+connect the endpoints.  A cubic lattice therefore needs a cut/forest
+organization or a global bond resummation.
+
+\section{All-bond Trotter successor}
+
+Write
+
+\[
+ H=\sum_xh_x-c\sum_{\langle xy\rangle}q_x\cdot q_y. \tag{5.1}
+\]
+
+Every cross bond commutes with every other one, including bonds sharing a
+site.  The complete bond kick factorizes exactly and acts by
+
+\[
+ q_x\mapsto q_x,\qquad
+ p_x\mapsto p_x+\delta c\sum_{y\sim x}q_y.          \tag{5.2}
+\]
+
+The onsite flow is tensor-local.  If a two-sided graph-Lipschitz core can be
+found with the one-step recurrence
+
+\[
+ L_x'\le(1+C\delta)L_x+J\delta\sum_{y\sim x}L_y,    \tag{5.3}
+\]
+
+then the exactly $d$-transfer coefficient after $N$ steps is
+
+\[
+ {N\choose d}(Jt/N)^d(1+Ct/N)^{N-d}
+ \longrightarrow e^{Ct}{(Jt)^d\over d!}.           \tag{5.4}
+\]
+
+The graph-Lipschitz core, uniform Trotter convergence, invariant Hamiltonian
+algebra, and KMS identification are open.  Equation (5.4) is a conditional
+reduction, not a completed locality theorem.
+
+\section{Duhamel-to-GNS modular theorem}
+
+For a faithful Gibbs density $\rho$ in one fixed finite-volume type-I
+representation, with $X$ and $[\log\rho,X]$ in the Duhamel form domain, define
+
+\[
+ \|X\|_D^2=\int_0^1\operatorname{Tr}(\rho^{1-s}X^*\rho^sX),ds,
+ \qquad
+ \|X\|_\#^2={1\over2}\operatorname{Tr}\rho(X^*X+XX^*). \tag{6.1}
+\]
+
+The respective matrix weights are the logarithmic and arithmetic means.  If
+$u=|\log p_m-\log p_n|$, then
+
+\[
+ {A(p_m,p_n)\over L(p_m,p_n)}
+ ={u\over2}\coth{u\over2}\le1+{u\over2}.          \tag{6.2}
+\]
+
+Cauchy--Schwarz gives the exact inequality
+
+\[
+ \boxed{\quad
+ \|X\|_\#^2\le\|X\|_D^2
+ +{1\over2}\|X\|_D\|[\log\rho,X]\|_D .\quad}    \tag{6.3}
+\]
+
+With $\delta=(i/\hbar)[H,\cdot]$,
+$[\log\rho,X]=i\beta\hbar\delta X$.  Hence Duhamel convergence and a
+uniform first modular-derivative bound imply two-sided GNS convergence.  On a
+uniformly operator-bounded set this yields strong-star convergence in one
+fixed faithful type-I representation.  Faithfulness (or support restriction)
+is essential; this matrix proof is not a general W-star modular-operator
+theorem, and it does not create a common representation across volumes.
+
+For a modular-analytic multiplier $B$, put
+
+\[
+ M_0(B)=\sup_{|t|\le1/2}\|\rho^tB\rho^{-t}\|,\qquad
+ M_1(B)=M_0([\log\rho,B]).                           \tag{6.4}
+\]
+
+Then
+
+\[
+ \|[X,B]\|_D\le2M_0\|X\|_D,                       \tag{6.5}
+\]
+
+\[
+ \|[\log\rho,[X,B]]\|_D
+ \le2M_0\|[\log\rho,X]\|_D+2M_1\|X\|_D.          \tag{6.6}
+\]
+
+These are exact sufficient multiplier conditions.  Uniform $M_0,M_1$ for the
+structured truncated evolution remain open.
+
+\section{Why an arbitrary bounded multiplier still fails}
+
+Let
+
+\[
+ H_n=\operatorname{diag}(0,n),\quad
+ \rho_n={\operatorname{diag}(1,e^{-\beta n})\over1+e^{-\beta n}},
+\]
+
+\[
+ W_n=e^{\beta n/4}|1\rangle\langle1|,\qquad
+ B_n=|1\rangle\langle0|.
+\]
+
+Then $[H_n,W_n]=0$ and
+
+\[
+ \varphi_n(W_n^2)={e^{-\beta n/2}\over1+e^{-\beta n}}\to0,
+\]
+
+but
+
+\[
+ \|[W_n,B_n]\|_D^2
+ =e^{\beta n/2}{1-e^{-\beta n}\over
+ (1+e^{-\beta n})\beta n}\to\infty.                \tag{7.1}
+\]
+
+Thus static tail smallness and even a zero modular derivative do not form an
+ideal under arbitrary contractions.  The projected or structured multiplier
+condition is load-bearing.
+
+\section{Coordinate-only cutoff}
+
+The exact Q3LOCK hypothesis map in \texttt{EXP-000781} imports the
+infinite-volume tempered-DLR one-site exponential path estimate of
+Kozitsky--Pasurek.  For the finite periodic-volume bridge define
+
+\[
+ A_x=\lambda_\sigma\|\omega_x\|_{C^\sigma}^2
+       +\kappa\|\omega_x\|_2^2.                       \tag{8.1}
+\]
+
+Finite-volume confinement makes the exponential moment finite.  Condition the
+periodic Gibbs law at $x$, apply their Lemma 4.1, integrate, and use generalized
+Holder with $r_y=\vartheta|J^\Lambda_{xy}|/\kappa$ and
+$\sum_y r_y<1$.  This gives
+
+\[
+ e^{n_x}\le e^C\prod_y e^{r_yn_y},
+ \qquad n_x=\log\mu_{\Lambda,h}^{\rm per}(e^{A_x}),   \tag{8.2}
+\]
+
+and hence
+
+\[
+ n_x\le C+{\vartheta\over\kappa}\sum_y|J^\Lambda_{xy}|n_y.
+                                                               \tag{8.3}
+\]
+
+Here $\widehat J_\Lambda\le6c$.  Periodic translation invariance and
+$\vartheta\widehat J_\Lambda<\kappa$ give
+$n_x\le C/(1-\vartheta\widehat J_\Lambda/\kappa)$.  The compact-source
+uniformity of $C$ is inherited from the stability constants checked in
+\texttt{EXP-000781}.  For $0<r\le\beta$,
+
+\[
+ |\omega(0)|^2\le2r^{-1}\|\omega\|_2^2
+                 +2r^{2\sigma}[\omega]_\sigma^2.      \tag{8.4}
+\]
+
+Given $a>0$, choose $r\le\beta$ with
+$2ar^{2\sigma}\le\lambda_\sigma$ and then the freely available $L^2$
+coefficient $\kappa\ge2a/r$.  The recursion and Holder control imply, at fixed
+$\beta$ and on compact source intervals,
+
+\[
+ \sup_{\Lambda,h,x}\varphi_{\Lambda,h}(e^{a|q_x|^2})<\infty
+ \qquad\hbox{for every }a>0.                         \tag{8.5}
+\]
+
+Choose $Q_L(q)=\eta(|q|/L)q$, equal to $q$ on the $L$-ball and zero outside
+the $2L$-ball, and truncate only the intersite coordinate.  The truncated bond
+has norm $O(L^2)$.  With $\rho=\rho_{\Lambda,h}$, its tail $W_L$ and gradient
+over both bond endpoints and all components are polynomial factors on
+$\max(|q_x|,|q_y|)>L$, so
+
+\[
+ \|W_L\|_D^2+\|[\log\rho,W_L]\|_D^2
+ \le C_{a,N}L^Ne^{-aL^2}.                            \tag{8.6}
+\]
+
+To justify the identity, first impose a bounded outer cutoff $W_{L,M}$ on the
+common Schrodinger core and then send $M\to\infty$ by exponential domination.
+The exact Dirichlet identity is
+
+\[
+ \|[\log\rho,W_L]\|_D^2
+ ={\beta\hbar^2\over\chi}
+   \varphi(|\nabla_{(x,y)}W_L|^2).                  \tag{8.7}
+\]
+
+If the missing structured comparison grows at most as
+$\operatorname{poly}(L)e^{C_0TL^2}$, choose $L_m=m^\alpha$,
+$0<\alpha<1/2$, and $a>C_0T$.  The static/modular tail and the bounded-
+interaction factorial error then both vanish.  Constants depend on fixed
+$\beta,a,h_0$ and model data; no ground-limit uniformity is asserted.  This
+scale arithmetic is conditional on the projected or multiplier estimate.
+
+Primary source: Y. Kozitsky and T. Pasurek,
+\url{https://arxiv.org/abs/math-ph/0609045}.
+
+\section{Fixed-beta OS mixture precursor}
+
+For $0<\lambda<1$, assume the same reflection, underlying field space and
+positive-time test algebra.  For
+$\mu_0=\lambda\mu_++(1-\lambda)\mu_-$, reflection positivity gives
+
+\[
+ q_0=\lambda q_++(1-\lambda)q_-,\qquad
+ N_0=N_+\cap N_-.                                   \tag{9.1}
+\]
+
+The map
+
+\[
+ [F]_0\mapsto(\sqrt\lambda[F]_+,\sqrt{1-\lambda}[F]_-)
+\]
+
+is an isometry into the direct sum of the phasewise OS spaces.  It need not be
+surjective.  A common normal W-star interpretation additionally needs
+reconstruction functoriality on one formal field algebra.  Central phase
+projections require disjointness; extremality helps only with a common-KMS-
+simplex theorem that implies it.  The mixture $\mu_0$ has not been proved to be
+the zero-source periodic finite-volume limit.  This is only a fixed-beta
+envelope precursor, not a beta-independent Hamiltonian common alpha.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item The star counterexample might be misread as nonexistence of the dynamics.
+This objection is upheld as a scope warning: equation (3.4) proves the same
+subflow is exactly unitary after all-order resummation.
+\item The tree identity might be copied directly to the cubic lattice.  This is
+dismissed by the square, where a second endpoint path remains after the chosen
+backbone is removed.
+\item Static Gibbs tails might be assumed stable under every bounded evolved
+observable.  This is dismissed by equation (7.1); modular half-strip or direct
+projected control is essential.
+\item The OS mixture might be called the common Hamiltonian dynamics.  This is
+dismissed: it is fixed-beta, its image need not be the full direct sum, and the
+Hamiltonian, central-decomposition and zero-temperature gates remain open.
+\end{enumerate}
+
+\section{Verification and route verdict}
+
+The primary implementation uses symbolic algebra and exact graph enumeration.
+The independent implementation uses only standard-library fractions,
+polynomial dictionaries and graph search.  The integrated verifier requires
+fresh equality with the stored artefacts and checks all authority, scope,
+negative-result and PDF links.
+
+The historical v1.1 first-passage and fifth-energy gate identifiers remain in
+the registry.  Their active successors are the all-bond unitary Trotter gate
+and the projected-Duhamel modular-$C^1$ multiplier gate.  Only after one yields
+a phase- and beta-independent common dynamics may the programme proceed to
+common-alpha KMS identification, algebraic ground selection, a broken-sector
+GNS gap, enlarged-counterterm continuum removal, and a same-Hamiltonian
+physical-empty comparison.
+
+\section{Reproduction}
+
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe -X utf8
+codes\foundations\pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_
+route_split.py
+
+E:\Dev\TECT.venv\Scripts\python.exe -X utf8
+codes\foundations\pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_
+route_split_independent.py
+
+E:\Dev\TECT.venv\Scripts\python.exe -X utf8
+codes\foundations\pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_
+route_split_verify.py
+\end{verbatim}
+
+\section{Result footer}
+
+\begin{verbatim}
+Result ID:               PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-
+                         MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT.
+Reusable result:         R-167 v1.2; no new result number.
+Exploration:             EXP-000798.
+Precise statement:       Fixed-s star/repeat first-passage target rejected;
+                         all-order star and unique-path tree repaired.
+                         Modular-mean, structured multiplier, and coordinate-
+                         cutoff static/modular tail theorems proved.
+Scope:                   T0 exact finite-volume and fixed-beta theorems,
+                         counterexamples, and conditional locality reductions.
+Dependencies:            EXP-000781, EXP-000790, EXP-000794--EXP-000798;
+                         R-167 v1.0--v1.1.
+Evidence grade:          ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF QA.
+Reproduction command:    Run the three commands under Reproduction in the
+                         listed order, with the integrated verifier last.
+Expected output:         Primary PASS 91/91; independent PASS 147/147;
+                         integrated PASS 288/288.
+Falsification gate:      Any CCR sign, graph threshold, all-order phase,
+                         tree/square incidence, modular-mean constant,
+                         cutoff tail, hash, scope or provenance mismatch.
+Tier before / after:     C6 T1 / C6 T1; no claim or tier change.
+No-overclaim statement:  Trotter graph locality, projected Duhamel and
+                         structured modular-multiplier locality, common
+                         alpha/KMS, algebraic ground states, GNS gap,
+                         regulator removal, continuum, physical empty and the
+                         below-empty sign, functional selection, C6, CP1,
+                         Sector A and Pre-A remain open.
+Next required action:    Prove either all-bond unitary Trotter graph-Lipschitz
+                         closure or projected-Duhamel modular-C1 multiplier
+                         locality in one preregistered faithful topology.
+\end{verbatim}
