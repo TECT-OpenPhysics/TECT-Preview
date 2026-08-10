@@ -282,15 +282,17 @@ bound. EXP-000794, corrected in EXP-000795, and result
 `PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT`,
 then uses the exact current rather than invalid automatic squaring to close
 the second weighted-energy moment, the minimal three-half-energy moment and
-propagation of the energy domain `D(A^(3/4))`. The correction records that
-`q^3A^(-3/4)` boundedness and the corresponding graph-domain embedding remain
-open; `3/4` is only the necessary scalar power-count target.
-It also reduces two-sided thermodynamic Cauchy to a precise spatial
-first/double position-commutator estimate. The cubic force does not close that
-finite commutator system and instead generates an infinite half-energy graph
-ladder. These are route reductions and obstructions, not nonexistence results
-for common dynamics. The next gate is
-`PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE`.
+propagation of the energy domain `D(A^(3/4))`. EXP-000796 / R-167 v1.1 now
+discharges the correction's cubic obligation in the optimal centered form:
+`f_x^(3/4)||q_x^3A^(-3/4)||` is volume and compact-source uniform, and
+neighboring centered graph norms compare with one explicit `C_mu^s` cost.
+It also proves the exact prescribed-word heat-simplex coefficient. Raw
+absolute connected-history counting, absolute strip continuation, and
+Duhamel-inner-product-only topology are rejected by four scoped route
+results. These are route reductions and obstructions, not nonexistence
+results for common dynamics. The two next gates are the first-passage
+backbone real-time product/energy-tail theorem and the fixed-beta fifth-energy
+moment plus modular-cutoff locality theorem below.
 Common `alpha`, KMS identification, algebraic ground-state promotion, GNS gap,
 continuum removal, physical empty space, C6, CP1 and Pre-A remain open.
 
@@ -304,45 +306,74 @@ strong enough to establish multiplicativity, invertibility, pointwise time
 continuity, and exponentiation of the common local derivation.
 
 **Status:** PARTIALLY RESOLVED (2026-08-10). EXP-000794, corrected in
-EXP-000795, proves the exact
+EXP-000795 and strengthened by EXP-000796 / R-167 v1.1, proves the exact
 second-moment bound `U(t)^*A^2U(t)<=exp(2M_mu|t|)A^2`, interpolates it with the
 first moment to propagate the energy domain `D(A^(3/4))` and the minimal
-`A^(3/2)` moment, and proves the boundary position graph multiplier. It does
-not prove the noncommuting cubic multiplier or domain embedding.
+`A^(3/2)` moment, and proves the boundary position and cubic-force graph
+multipliers. The exact graph expansion gives `||U_fA^-1||<=kappa`, hence
+Heinz--Kato closes all weighted natural powers through `m=4`, including the
+previously open `f_x^(3/4)q_x^3A^(-3/4)`. A neighboring-center theorem keeps
+the fixed graph exponent cost exponential in path length.
 It also proves a conditional two-sided Duhamel theorem: if the first and
 double position commutators decay in their declared one-sided energy norms
 with spatial rate `rho>mu/4`, then arbitrary-volume differences are Cauchy in
 both orientations and yield exhaustion-independent strong-star core
-dynamics. Automatic squaring of the first form cone and symmetric-sandwich
-convergence alone are rejected by exact counterexamples. The remaining
-commutator/Gevrey gate below is still open, so no common automorphism or KMS
-identification is claimed.
+dynamics. The remaining product resummation and Hamiltonian algebra gates
+below are still open, so no common automorphism or KMS identification is
+claimed.
 
 ### **PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE**
 
 **Statement:** For the exact quartic onsite dynamics and harmonic nearest-
-neighbor coupling, first prove the open one-sided cubic multiplier/domain
-embedding or an exact substitute, then prove a volume-, source- and cutoff-uniform spatial decay
+neighbor coupling, prove a volume-, source- and cutoff-uniform spatial decay
 hierarchy for the first and double position commutators in both one-sided
-energy norms required by the EXP-000794 Duhamel theorem. Equivalently, a valid
-replacement may prove a direct product-level Volterra/heat-loss estimate with
-linked-cluster resummation and a noncollapsing Hamiltonian-derived algebra
-bridge that contains the intended finite-density thermal phases.
+energy norms required by the EXP-000794 Duhamel theorem. The cubic graph
+multiplier is now available; the remaining theorem must resum branches and
+repeated edges before taking norms and must land in a noncollapsing
+Hamiltonian-derived algebra containing the intended finite-density phases.
 
-**Status:** OPEN (2026-08-10). The exact identity
-`[q^3,D]=3[q,D]q^2+3[q,[q,D]]q+[q,[q,[q,D]]]` shows that a first/double
-commutator closure is not finite; ordered graph estimates generate an
-infinite half-energy ladder. A polynomial separate-rung conjugation estimate
-is now exactly excluded by an exponential spectral-transition lower bound,
-and quartic convexity alone is separated from the required weighted sign by a
-faithful 3x3 counterexample. Fixed-chain heat damping is only conditional:
-lattice-animal multiplicity, noncommuting heat-factor allocation, radial
-costs of summable weights and norm-density of the thermal algebra remain
-unproved. A successful product-level heat/strip-loss or state-weighted
-cancellation theorem closes this gate. A
-fixed local momentum-sensitive observable whose one-sided volume net fails to
-be Cauchy for every finite energy power would fire the corresponding
-nonexistence branch; no such falsifier is currently known.
+**Status:** PARTIALLY RESOLVED (2026-08-10). EXP-000796 closes the centered
+cubic multiplier and neighboring-center graph comparison. Every prescribed
+bond word has the exact `Gamma(1+n/2)` heat-simplex denominator. However, a
+single `5m`-edge animal has at least `(4m)!` connected growth histories, so
+the history-count times uniform per-word majorant has zero radius. Even after
+a hypothetical chain reduction, absolute strip continuation produces
+`exp(C/epsilon)`, nonintegrable against every finite energy power at nonzero
+real time. These reject two absolute proof methods, not the dynamics. The
+successor is the first-passage gate below.
+
+### **PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE**
+
+**Statement:** Group every branch and repeated-edge history by its common
+first-passage backbone before taking norms. In both one-sided graph
+orientations prove, for `s_1=1/2` and `s_2=3/4`, the response coefficient
+`C_j[G_j sqrt(|t|/hbar)]^n/Gamma(1+n/2)`. Then prove a Hamiltonian-derived
+invariant algebra or uniform two-sided energy-tail compactness so the
+strong-star core limit closes under products, inverse and time evolution.
+
+**Status:** OPEN (2026-08-10). The conditional coefficient gives the explicit
+spatial velocity `P^2G_j^2 exp(2rho)/(rho hbar)`, `P=11`, and for
+`rho>mu/4` closes the R-167 volume-Cauchy theorem. The proved moving-center
+comparison adds only `C_mu^(s_j n)` and can be absorbed into `G_j`. The exact
+branch/repeat resummation and energy-tail algebra are not yet proved.
+
+### **PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY**
+
+**Statement:** On a predeclared fixed-beta phase pair or separating tempered
+state class, prove one volume/source-uniform local onsite-energy moment of
+order `p>4` and both one-sided/dual-state cutoff tails, or an equivalent
+high-modular-energy tail. Combine them with the `O(R^(1/2))` projected bond
+norm to obtain common equilibrium locality and one Hamiltonian-derived normal
+W-star dynamics before KMS identification.
+
+**Status:** OPEN (2026-08-10). If the two-sided leakage estimate is already
+available, `R_m=m^b` with `2d/(p-1)<b<2` closes the scale balance; `d=3`,
+`p=5`, `b=7/4` give exact exponents `-1/2` and `-1/8`. The onsite moment
+alone does not prove the nontracial topology. A rank-shift fixture has both
+squared Duhamel norms tending to zero while strong-star convergence fails.
+Uniform modular bandwidth or a high-modular-energy/dual-state tail remains
+required. A fixed-beta W-star result would still not be a state- and
+beta-independent C-star automorphism or a ground-state theorem.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 

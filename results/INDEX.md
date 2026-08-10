@@ -9,7 +9,7 @@ Authorities: `RESULTS-LEDGER.md`.
 
 | ID | Result | Tier/scope |
 |---|---|---|
-| [`R-167`](../RESULTS-LEDGER.md#r-167) | Exact second weighted-energy moment and thermodynamic-Cauchy topology split | T0 (scoped finite-volume analytic theorem and conditional Cauchy reduction; no common-alpha promotion). |
+| [`R-167`](../RESULTS-LEDGER.md#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | T0 (scoped finite-volume analytic theorem and conditional Cauchy reduction; no common-alpha promotion). |
 | [`R-166`](../RESULTS-LEDGER.md#r-166) | Sparse production radial-Gram decomposition and global owner bound | T4 (scoped exact finite production fibre; no promotion). |
 | [`R-165`](../RESULTS-LEDGER.md#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | T4 (scoped exact finite production fibre; no promotion). |
 | [`R-164`](../RESULTS-LEDGER.md#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | T4 |

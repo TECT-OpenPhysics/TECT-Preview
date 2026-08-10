@@ -5,18 +5,22 @@
 
 Authorities: `negative-results/registry.md`.
 
-**300 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 229 · retraction: 5
+**304 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 233 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity) | no_go | delete the centered spatial weight from the cubic graph multiplier while keeping a support-location-uniform constant |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-symmetric-sandwich-only-thermodynamic-cauchy) | no_go | infer a thermodynamic automorphism from convergence only in a symmetric energy sandwich |
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-ABSOLUTE-CONNECTED-HISTORY-ANIMAL-MAJORANT`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-raw-absolute-connected-history-animal-majorant) | no_go | prove real-time locality by multiplying a uniform prescribed-word heat bound by the number of raw connected growth histories |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-POLYNOMIAL-ALL-RUNG-ONSITE-ENERGY-CONJUGATION`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-polynomial-all-rung-onsite-energy-conjugation) | no_go | close the quartic commutator ladder with a polynomial-in-rung bound on `K^(j/2)V(t)K^(-(j+1)/2)` |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FOURIER-SECOND-MOMENT-UNIFORM-NORM-LR-CUTOFF`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-fourier-second-moment-uniform-norm-lr-cutoff) | no_go | obtain a cutoff-uniform operator-norm Lieb--Robinson speed for the exact Q3LOCK quartic by applying the bounded-Weyl theorem to Fourier--Stieltjes cutoffs that agree on expanding… |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIRST-MOMENT-AUTOMATIC-POWER-UPGRADE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-first-moment-automatic-power-upgrade) | no_go | square the first weighted-energy form cone to obtain higher weighted-energy moments |
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-DUHAMEL-INNER-PRODUCT-ONLY-COMMON-DYNAMICS`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-duhamel-inner-product-only-common-dynamics) | no_go | infer strong-star common dynamics from convergence of an operator and its adjoint only in the Kubo--Mori/Duhamel inner product |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONVEXITY-ONLY-WEIGHTED-COMMUTATOR-SIGN`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-convexity-only-weighted-commutator-sign) | no_go | use quartic convexity in the `0<=lambda<=2g` subregime alone to obtain the energy/KMS-weighted commutator sign needed for spatial Cauchy |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-BASIC-RESOLVENT-CUBIC-FORCE-UNWEIGHTED-CORE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-basic-resolvent-cubic-force-unweighted-core) | no_go | use ordinary basic resolvents as a cutoff-uniform unweighted generator core for the exact quartic force |
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-ABSOLUTE-HEAT-STRIP-REAL-TIME-CONTINUATION`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-absolute-heat-strip-real-time-continuation) | no_go | continue the prescribed-word heat estimate termwise in absolute value to the real-time boundary and integrate it against a finite Balakrishnan energy power |
 | [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-uniform-full-finite-volume-spectral-gap) | no_go | retain a positive volume-uniform full finite-volume spectral gap in the fixed-spacing Q3LOCK ground-order regime |
 | [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-posthoc-direct-sum-common-dynamics) | no_go | treat the direct sum of the separately OS-reconstructed plus/minus thermal systems as the required common real-time dynamics |
 | [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-PARTIAL-QUARTIC-COUNTERTERM-ALL-SCALE-CLOSURE`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-partial-quartic-counterterm-all-scale-closure) | no_go | repair the missing distance-two quartic from EXP-000789 by adding only `O22^(2)` and call the quartic counterterm basis closed |
@@ -32,10 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-04-PRE-A-CP1-CL8-STRANG-ONE-SLICE-EXACT-HAMILTONIAN-SEMIGROUP`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-strang-one-slice-exact-hamiltonian-semigroup) | no_go | identify the explicit symmetric finite-time Gaussian-link slice with the exact registered CL8 heat semigroup merely from symmetry, positivity, and low-order agreement |
 | [`NG-2026-08-04-PRE-A-CP1-CL8-SCALAR-MASS-ONLY-Q3-WICK-RENORMALIZATION`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-scalar-mass-only-q3-wick-renormalization) | no_go | Wick-order the local Q3 quartic interaction against the declared common-diagonal Gaussian reference while allowing only a scalar mass and scalar energy counterterm |
 | [`NG-2026-08-04-PRE-A-CP1-CL8-PRINCIPAL-FLOQUET-GIBBS-REFERENCE`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-principal-floquet-gibbs-reference) | no_go | obtain a preferred thermal state and absolute energy reference from the principal logarithm of the split-circuit unitary |
-| [`NG-2026-08-04-PRE-A-CP1-CL8-PRESSURE-VALUE-ONLY-PHASE-CLASSIFICATION`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-pressure-value-only-phase-classification) | no_go | infer phase uniqueness, coexistence, spontaneous order, or selected states from the scalar pressure value or boundary-independent pressure alone |
-| [`NG-2026-08-04-PRE-A-CP1-CL8-POINTWISE-STABILITY-GAUSSIAN-TRIAL-UNIFORM-ENERGY`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-pointwise-stability-gaussian-trial-uniform-energy) | no_go | for fixed `g,lambda,m_R,eta_R`, use one scalar normalization both for a uniform pointwise lower bound and a uniform variational upper bound from the same Wick-reference Gaussian |
-| [`NG-2026-08-04-PRE-A-CP1-CL8-PASSIVE-TWO-ARM-NUMBER-STATE-QUARTIC-REUSE`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-passive-two-arm-number-state-quartic-reuse) | no_go | append the inherited positive onsite CL8 quartic kick to the exact passive two-arm control while automatically reusing its oscillator-number generator, vacuum and Gibbs densities |
-| [`NG-2026-08-04-PRE-A-CP1-CL8-OA2-SAMPLING-EXACT-WEYL`](registry.md#ng-2026-08-04-pre-a-cp1-cl8-oa2-sampling-exact-weyl) | no_go | promote the current unrestricted continuum point sampler `R_a` to an exact boundary-to-lattice Weyl generator map |
 
 Search without loading the full registry:
 

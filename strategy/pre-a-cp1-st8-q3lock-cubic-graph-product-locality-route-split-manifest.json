@@ -1,0 +1,121 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-CUBIC-GRAPH-PRODUCT-LOCALITY-ROUTE-v0",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "parent_explorations": [
+    "EXP-000790",
+    "EXP-000794",
+    "EXP-000795"
+  ],
+  "exploration_id": "EXP-000796",
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_version": "v1.1",
+  "result_number": "R-167",
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-ABSOLUTE-CONNECTED-HISTORY-ANIMAL-MAJORANT",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ABSOLUTE-HEAT-STRIP-REAL-TIME-CONTINUATION",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-DUHAMEL-INNER-PRODUCT-ONLY-COMMON-DYNAMICS"
+  ],
+  "authority": "R-167 v1.1 exact finite-volume analytic extension and route split. The exact Schrodinger cross identity and Heinz--Kato graph interpolation close the formerly open centered-weight cubic multiplier in its optimal weighted form. A heat-simplex lemma is exact for each prescribed bond word, while factorial connected-history multiplicity and an exp(C/epsilon) strip boundary reject two raw absolute-value real-time proof routes. A first-passage product response estimate is isolated as the remaining phase-independent route. A separate equilibrium cutoff balance identifies a local fifth onsite-energy moment plus genuinely two-sided modular/dual-state control as a possible fixed-beta phase-pair W-star route; neither ingredient is yet proved for Q3LOCK.",
+  "model": {
+    "dimension": 3,
+    "components_per_site": 8,
+    "lattice_degree": 6,
+    "parameters": "chi,c,g>0; lambda>=0; r real; |h|<=h0; 0<gamma<g/32",
+    "centered_weight": "f_x=exp[-mu d(x,X)], 0<f_x<=1, S_f=sum_x f_x<=|X|[(1+exp(-mu))/(1-exp(-mu))]^3",
+    "weighted_energy": "A=1+E_f=1+T_f+U_f with U_f>=gamma f_x|q_x|^4"
+  },
+  "cubic_graph_embedding": {
+    "laplacian_input": "L_f=sum_x f_x Delta_x U_f<=C2 epsilon U_f+S_f[8r_+ +8cz+C2/(4epsilon gamma)], C2=3g+21lambda",
+    "epsilon_star": "4chi/(hbar^2 C2)",
+    "b_star": "S_f[8r_+ +8cz+hbar^2 C2^2/(16chi gamma)]",
+    "beta_star": "hbar^2 b_star/(2chi)",
+    "kappa": "sqrt(max(1,beta_star))",
+    "operator_bound": "||U_f A^-1||<=kappa",
+    "interpolation": "||U_f^theta A^-theta||<=kappa^theta for 0<=theta<=1",
+    "all_natural_powers": "f_x^(m/4)|| |q_x|^m A^(-m/4)||<=(kappa/gamma)^(m/4) for 0<=m<=4, with adjoint orientation",
+    "cubic_conclusion": "f_x^(3/4)|| |q_x|^3 A^-3/4||<=gamma^-3/4 max(1,beta_star)^(3/8), with adjoint orientation",
+    "q3_force": "|partial_e W4(q)|<=(g+12lambda)|q|^3; the full eight-component gradient adds sqrt(8)",
+    "closed": true,
+    "scope": "Finite volume on the closed Schwartz/C_c-infinity operator core, uniform in volume, bounded source and location of a bounded-size center X. The spatial weight is essential."
+  },
+  "moving_site_boundary": {
+    "finding": "For a normalized compact product bump translated by amplitude R at a site x, ||q_x,e^3 psi_R||>=(R-1)^3 while ||A psi_R||<=C0+C1 f_x R^4. Hence every unweighted moving-site graph constant is at least proportional to f_x^-3/4.",
+    "consequence": "The centered weighted estimate is optimal in spatial order; a locality proof must absorb exp(3mu d(x,X)/4) or recenter the energy graph at each first-passage step.",
+    "does_not_show": "It does not refute boundedness at any fixed x, a recentered product estimate, or exact thermodynamic dynamics."
+  },
+  "moving_center_comparison": {
+    "neighbor_bound": "For neighboring centers x,y, ||A_x A_y^-1|| and ||A_y A_x^-1|| are at most C_mu=1+2(exp(mu)-1)(1+kappa).",
+    "fractional_bound": "||A_x^s A_y^-s||<=C_mu^s for 0<=s<=1, and conversely.",
+    "proof": "The potential difference is at most theta U_y and the commuting kinetic-weight difference is at most theta T_y, while ||U_y A_y^-1||<=kappa and ||T_y A_y^-1||<=2+kappa.",
+    "consequence": "A fixed graph exponent pays only C_mu^(s n) along an n-step recentered backbone; branch/repeat resummation remains open."
+  },
+  "heat_simplex": {
+    "hypothesis": "K>=1 and both ||V_e K^-1/2|| and ||K^-1/2 V_e|| are at most b",
+    "word_bound": "integral_Delta_n(beta)||e^-s0K V_en e^-s1K ... V_e1 e^-snK|| ds <=[b sqrt(pi/(2e)) sqrt(beta)]^n/Gamma(1+n/2)",
+    "q3lock_base_rung": "b=c/sqrt(2gamma)",
+    "commutator_activity": "kappa0=c sqrt(pi/(e gamma)) after the two left/right branches are summed",
+    "status": "PROVED FOR EACH PRESCRIBED WORD; NOT A CONNECTED-CLUSTER OR REAL-TIME THEOREM"
+  },
+  "absolute_route_obstructions": {
+    "raw_animal": "A length-m backbone with four transverse leaves at each of m selected vertices has n=5m edges and at least (4m)! legal connected growth histories. The raw absolute majorant (4m)! a^(5m)/Gamma(1+5m/2) has log=(3/2)m log m+O(m), so it has zero radius for every a>0.",
+    "strip_boundary": "After an assumed chain reduction with P=2z-1, the absolute complex-time bound contains exp[P^2 kappa0^2 exp(2rho)|epsilon+it/hbar|^2/epsilon]. Its Balakrishnan integral contains integral_0^1 epsilon^(s-1) exp(C/epsilon)d epsilon and diverges for every finite s at t!=0.",
+    "scope": "These are hard falsifiers for the named termwise-absolute animal and strip-continuation methods, not nonexistence results for the real-time dynamics."
+  },
+  "conditional_real_time_product": {
+    "gate_id": "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "response_target": "After summing every branch and repeated-edge history sharing one first-passage backbone pi, prove in both one-sided orientations integral_Delta_n(t)||R_(pi,n)^(j) A^-s_j|| <= C_j[G_j sqrt(|t|/hbar)]^n/Gamma(1+n/2), with s_1=1/2 and s_2=3/4.",
+    "chain_degree": "P=2z-1=11",
+    "derived_decay": "C_j(d,t)<=(2C_j z|X|/P)exp[-rho d+P^2 G_j^2 exp(2rho)|t|/hbar]",
+    "velocity": "v_(rho,j)=P^2 G_j^2 exp(2rho)/(rho hbar)",
+    "downstream": "For rho>mu/4 this supplies the R-167 conditional two-sided volume-Cauchy theorem. The proved moving-center comparison adds only C_mu^(s_j n), which can be absorbed into G_j. A Hamiltonian-derived invariant C-star algebra or uniform two-sided energy-tail compactness is still required.",
+    "status": "OPEN"
+  },
+  "equilibrium_cutoff_alternative": {
+    "gate_id": "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+    "onsite_split": "H+C|Lambda|=sum_x k_(x,h)+sum_<xy>V_xy, k_(x,h)>=1+gamma|q_x|^4, V_xy=-c q_x.q_y",
+    "projected_bond": "For P_(x,R)=1_[k_(x,h)<=R], ||V_xy P_(x,R)P_(y,R)||=O(R^1/2)",
+    "moment_target": "sup_(Lambda,h,x) phi_(Lambda,h)(k_(x,h)^p)<=M_p for one p>d+1; p=5 is sufficient in d=3",
+    "scale_balance": "With R_m=m^b and 2d/(p-1)<b<2, the candidate leakage exponent d+b(1-p)/2 is negative and the projected factorial tail is superexponentially small.",
+    "topology_requirement": "The moment and exponent balance alone do not prove nontracial strong-star convergence. One must additionally prove both one-sided/dual-state cutoff control or a uniform modular-energy tail on a predeclared faithful mixture or separating state class.",
+    "possible_scope": "At most a fixed-beta, predeclared phase-pair common normal W-star dynamics before a separate beta/state-independent C-star algebra theorem.",
+    "status": "OPEN"
+  },
+  "duhamel_topology_counterexample": {
+    "fixture": "H e_n=n e_n, p_n=(1-exp(-beta))exp(-beta n), X_n=|e_n><e_0|",
+    "duhamel": "The squared Duhamel norms satisfy (X_n,X_n)_D=(X_n*,X_n*)_D=(p_0-p_n)/(beta n)->0",
+    "strong_boundary": "X_n e_0=e_n and the symmetric GNS square norm tends to p_0/2, so strong-star convergence fails",
+    "repair": "A uniform modular bandwidth Omega gives ||X||_(rho,#)^2<=[beta Omega/2 coth(beta Omega/2)](X,X)_D; otherwise a high-modular-energy tail theorem is required.",
+    "scope": "Duhamel-inner-product convergence alone is rejected; KMS or state-weighted dynamics itself is not rejected."
+  },
+  "pre_a_order": [
+    "phasewise OS/KMS reconstruction",
+    "one of the two common-dynamics locality gates above",
+    "common real-time dynamics and KMS identification",
+    "distinct algebraic ground-state selection",
+    "broken-sector GNS gap",
+    "enlarged counterterm continuum limit",
+    "preregistered physical-empty preparation comparison"
+  ],
+  "status": "PARTIALLY RESOLVED: THE CENTERED-WEIGHT CUBIC GRAPH EMBEDDING AND PRESCRIBED-WORD HEAT SIMPLEX ARE CLOSED. RAW ABSOLUTE ANIMAL AND STRIP-CONTINUATION ROUTES ARE REJECTED. FIRST-PASSAGE REAL-TIME PRODUCT RESUMMATION, EQUILIBRIUM FIFTH ONSITE-ENERGY MOMENTS, MODULAR/DUAL-STATE TAILS, COMMON DYNAMICS AND ALL DOWNSTREAM PHYSICAL GATES REMAIN OPEN.",
+  "closed_subgates": [
+    "PA-CP1-ST8-Q3LOCK-CENTERED-WEIGHT-CUBIC-GRAPH-EMBEDDING",
+    "PA-CP1-ST8-Q3LOCK-PRESCRIBED-BOND-WORD-HEAT-SIMPLEX"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "verification": {
+    "proof_grade": "ANALYTIC finite-volume graph-domain theorem, exact prescribed-word heat-simplex theorem, exact combinatorial/asymptotic/topological route counterexamples, conditional first-passage response reduction, independent exact-arithmetic implementations, integrated freshness/provenance checks, and rendered PDF inspection",
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_cubic_graph_product_locality_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_cubic_graph_product_locality_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_cubic_graph_product_locality_route_split_verify.py"
+  },
+  "no_overclaim": "This package does not prove the first-passage RT-PV estimate, spatial commutator Lieb--Robinson closure, a uniform fifth onsite-energy moment, nontracial cutoff locality, a phase- or beta-independent common C-star alpha, common-alpha KMS identification, algebraic ground states, a GNS or physical mass gap, regulator removal, continuum, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A."
+}

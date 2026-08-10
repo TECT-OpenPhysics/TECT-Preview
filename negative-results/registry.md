@@ -9,6 +9,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY](#ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity) | delete the centered spatial weight from the cubic graph multiplier while keeping a support-location-uniform constant | a translated compact bump forces every unweighted `q_x^3 A_x^(-3/4)` constant to grow at least as `f_x^(-3/4)`. Retain the proved weighted multiplier and the exact neighboring-center comparison; fixed-site boundedness and recentered product locality remain open |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-ABSOLUTE-CONNECTED-HISTORY-ANIMAL-MAJORANT](#ng-2026-08-10-pre-a-st8-q3lock-raw-absolute-connected-history-animal-majorant) | prove real-time locality by multiplying a uniform prescribed-word heat bound by the number of raw connected growth histories | one `5m`-edge backbone-with-leaves animal has at least `(4m)!` legal histories, so the resulting positive majorant `(4m)!a^(5m)/Gamma(1+5m/2)` has log growth `(3/2)m log m+O(m)` and zero radius. Resum branches and repeated edges before taking norms; no dynamics nonexistence is inferred |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-ABSOLUTE-HEAT-STRIP-REAL-TIME-CONTINUATION](#ng-2026-08-10-pre-a-st8-q3lock-absolute-heat-strip-real-time-continuation) | continue the prescribed-word heat estimate termwise in absolute value to the real-time boundary and integrate it against a finite Balakrishnan energy power | even after a hypothetical edge-chain reduction the absolute strip majorant contains `exp(C/epsilon)` at nonzero real time, so `int_0^1 epsilon^(s-1)exp(C/epsilon)d epsilon` diverges for every finite `s`. Oscillatory/unitary resummation and modular routes remain open |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-DUHAMEL-INNER-PRODUCT-ONLY-COMMON-DYNAMICS](#ng-2026-08-10-pre-a-st8-q3lock-duhamel-inner-product-only-common-dynamics) | infer strong-star common dynamics from convergence of an operator and its adjoint only in the Kubo--Mori/Duhamel inner product | for `H e_n=n e_n` and `X_n=|e_n><e_0|`, both squared Duhamel norms tend to zero as `(p_0-p_n)/(beta n)`, while `X_n e_0=e_n` and the symmetric GNS square norm stays positive. Require uniform modular bandwidth, high-modular-energy tails, or equivalent two-sided dual-state control |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIRST-MOMENT-AUTOMATIC-POWER-UPGRADE](#ng-2026-08-10-pre-a-st8-q3lock-first-moment-automatic-power-upgrade) | square the first weighted-energy form cone to obtain higher weighted-energy moments | an exact two-dimensional positive-operator fixture has `c0 E-A1>0` but `c0^2 E^2-A1^2` indefinite. Operator order cannot be squared; the exact ST8/Q3LOCK cross identity instead closes the second moment without that invalid inference |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY](#ng-2026-08-10-pre-a-st8-q3lock-symmetric-sandwich-only-thermodynamic-cauchy) | infer a thermodynamic automorphism from convergence only in a symmetric energy sandwich | rank-one shifts `D_n=|e_n><e_0|` satisfy both symmetric sandwich estimates tending to zero while `D_n e_0=e_n` is not strongly Cauchy. Two one-sided graph estimates, or an equivalent uniform energy-tail compactness theorem, are required |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-POLYNOMIAL-ALL-RUNG-ONSITE-ENERGY-CONJUGATION](#ng-2026-08-10-pre-a-st8-q3lock-polynomial-all-rung-onsite-energy-conjugation) | close the quartic commutator ladder with a polynomial-in-rung bound on `K^(j/2)V(t)K^(-(j+1)/2)` | every nonzero upward onsite spectral transition gives an exponential lower bound in `j`, uniform in interaction-picture time; the exact `K=diag(1,4)` swap fixture has norm `2^j`. Retain product-level Volterra, heat-loss or state-weighted routes that do not commute growing powers through each bond |
@@ -310,6 +314,90 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY -- the centered spatial weight is necessary
+
+**Failure mode.** Delete `f_x^(3/4)` from the proved centered cubic graph
+bound and claim one constant uniform in the location of the observed site.
+
+**Evidence.** For `A=1+T_f+U_f`, the exact cross identity and Heinz--Kato
+interpolation prove
+`f_x^(3/4)||q_x^3A^(-3/4)||<=gamma^(-3/4)kappa^(3/4)`.  Conversely, a
+normalized compact product bump translated by amplitude `R` at site `x`
+satisfies `||q_x^3 psi_R||>=(R-1)^3` and
+`||A psi_R||<=C0+C1 f_x R^4`.  Spectral interpolation and `R->infinity`
+force every unweighted constant to be at least
+`C1^(-3/4)f_x^(-3/4)`.
+
+**Consequence.** A support-location-uniform unweighted multiplier is
+rejected.  Boundedness at any fixed site is not rejected.  The proved
+neighboring-center comparison
+`||A_x^sA_y^(-s)||<=C_mu^s`, `0<=s<=1`, retains a recentered
+first-passage route with only exponential path cost.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-raw-absolute-connected-history-animal-majorant"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-ABSOLUTE-CONNECTED-HISTORY-ANIMAL-MAJORANT -- raw history counting destroys the heat denominator
+
+**Failure mode.** Bound each connected bond history separately by the exact
+prescribed-word heat-simplex coefficient, then sum the resulting positive
+majorant without first resumming branches or repeated edges.
+
+**Evidence.** A length-`m` backbone with four transverse leaves at each of
+`m` selected vertices has `5m` edges.  After the backbone is grown, its
+`4m` leaves may be appended in every order while all prefixes remain
+connected.  Thus one animal has at least `(4m)!` histories.  The corresponding
+uniform per-word majorant is
+`M_m=(4m)!a^(5m)/Gamma(1+5m/2)`, and Stirling gives
+`log M_m=(3/2)m log m+O(m)` for every `a>0`.
+
+**Consequence.** The history-count times uniform per-word heat-bound
+majorant has zero radius.  This is not a lower bound on the exact signed or
+operator series and does not refute exact dynamics.  The successor must group
+all branches and repeated edges sharing a first-passage backbone before
+taking norms.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-absolute-heat-strip-real-time-continuation"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-ABSOLUTE-HEAT-STRIP-REAL-TIME-CONTINUATION -- the absolute strip majorant is nonintegrable at real time
+
+**Failure mode.** After reducing to edge chains, analytically continue the
+positive heat estimate termwise in absolute value to
+`zeta=epsilon+it/hbar`, then use a finite Balakrishnan energy power to reach
+the real-time boundary.
+
+**Evidence.** The exact prescribed-word denominator sums to a
+Mittag--Leffler bound.  At complex time its activity is proportional to
+`|zeta|/sqrt(epsilon)`, so the spatially tilted chain majorant contains
+`exp[P^2 kappa0^2 exp(2rho)|zeta|^2/epsilon]`, with `P=11`.  For `t!=0`, every
+finite energy power contains the divergent integral
+`int_0^1 epsilon^(s-1)exp(C/epsilon)d epsilon`.
+
+**Consequence.** Absolute heat/strip continuation cannot prove the desired
+real-time boundary estimate at any finite graph power.  The actual boundary
+value is not proved divergent.  Unitary/oscillatory first-passage resummation,
+or a modular-energy tail theorem, remains admissible.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-duhamel-inner-product-only-common-dynamics"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-DUHAMEL-INNER-PRODUCT-ONLY-COMMON-DYNAMICS -- Kubo--Mori convergence does not imply strong-star convergence
+
+**Failure mode.** Infer products, inverse and a common normal automorphism
+from convergence of an operator and its adjoint only in the Gibbs
+Kubo--Mori/Duhamel inner product.
+
+**Evidence.** Let `H e_n=n e_n`,
+`p_n=(1-exp(-beta))exp(-beta n)`, and `X_n=|e_n><e_0|`.  Direct integration
+gives the squared Duhamel norms
+`(X_n,X_n)_D=(X_n*,X_n*)_D=(p_0-p_n)/(beta n)->0`.  Nevertheless
+`X_n e_0=e_n`, and the symmetric GNS square norm tends to `p_0/2>0`.  If all
+matrix elements instead have modular bandwidth `Omega`, the exact
+arithmetic/logarithmic-mean ratio gives the repair factor
+`(beta Omega/2)coth(beta Omega/2)`.
+
+**Consequence.** Duhamel convergence alone is too weak.  A fixed-beta
+equilibrium cutoff route must prove a uniform modular bandwidth,
+high-modular-energy tail, or equivalent two-sided/dual-state cutoff control.
+This does not reject KMS states, common dynamics, or the separate
+first-passage product route.
 
 <a id="ng-2026-08-10-pre-a-st8-q3lock-first-moment-automatic-power-upgrade"></a>
 ### NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIRST-MOMENT-AUTOMATIC-POWER-UPGRADE -- positive form order cannot be squared

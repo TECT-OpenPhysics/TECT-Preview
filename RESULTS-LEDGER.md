@@ -22,7 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-167](#r-167) | Exact second weighted-energy moment and thermodynamic-Cauchy topology split | Scoped T0 analytic/exact/executed/audited finite-volume theorem. For the exact fixed-lattice ST8/Q3LOCK quartic oscillator with a centered summable exponential local-energy weight, the current derivative is bounded on both sides of `A`, closing `U(t)^*A^2U(t)<=exp(2M_mu|t|)A^2`, the minimal `A^(3/2)` moment and propagation of the energy domain `D(A^(3/4))`. A two-sided Duhamel theorem reduces thermodynamic Cauchy to declared first/double position-commutator decay. Scalar power counting identifies `3/4` only as a necessary one-sided cubic-multiplier target; the noncommuting cubic embedding remains open. Exact counterexamples reject automatic squaring, symmetric-sandwich topology, polynomial separate-rung conjugation and convexity-only weighted positivity. Product-level heat/strip-loss or state-weighted spatial closure, common alpha, KMS, ground/GNS gap, continuum, empty-space comparison, C6, CP1 and Pre-A remain open |
+| [R-167](#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | Scoped T0 analytic/exact/executed/audited finite-volume theorem, strengthened to v1.1 without a new result number. The exact ST8/Q3LOCK current closes the second and three-half weighted-energy moments. The full graph expansion and Heinz--Kato now close the optimal centered multiplier `f_x^(3/4)q_x^3A^(-3/4)`, its adjoint, Q3 cubic force and neighboring-center graph comparison. Every prescribed bond word has an exact `Gamma(1+n/2)` heat-simplex denominator. Exact route tests reject support-location-uniform unweighted cubic constants, raw absolute animal counting, absolute strip continuation and Duhamel-inner-product-only dynamics. The remaining alternatives are branch/repeat-resummed first-passage real-time product plus an energy-tail algebra, or fixed-beta fifth-energy moments plus modular/dual cutoff locality. Common alpha/KMS, ground/GNS gap, continuum, empty-space comparison, C6, CP1 and Pre-A remain open |
 | [R-166](#r-166) | Sparse production radial-Gram decomposition and global owner bound | Scoped T4 analytic/exact/executed/audited production-fibre theorem, strengthened in v1.1 without a new result ID. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / single fresh-`4p` R-153 fibre, the exact Fierz split, Pauli nonresonance, radial bounds and direct coefficient inequality give an explicit rational polynomial whose unique global minimum lies in `70<G_*<71` and is `-4/5+18740524635403/439505584128000>-4/5`. Thus the owner plus source Hessian is strictly above `1/10`, the scoped R-164 reduction permits `rho=3/20`, and the R-165 annulus is closed. Exact simultaneous `sin(4x),sin(8x)` arithmetic gives Gram `[[5/4,1],[1,3/2]]` and ratio `3/8` at `(1,-1)`, registering that the coefficient-one lemma cannot be copied rootwise. Primary `40/40` and independent Fraction `37/37` audits pass. The complete joint owner, nonlinear/revisit feedback, low variables, removal, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-165](#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | Scoped T4 analytic/exact/executed/audited production-fibre theorem. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / fresh-`4p` R-153 fibre, whitened past amplitude `G` and final direction `alpha` obey `K_owner(g)[alpha,alpha] >= P(G)|alpha|^2` for one explicit rational quartic polynomial. A sharp `5/6` Fourier separation lemma, exact A1 covariance enclosures, and R-130 derivative envelopes prove the R-164 owner target `K_owner>=-9I/10` for `0<=G<=21` and `G>=274`, reducing this fibre's noncompact amplitude problem to the bounded open annulus `21<G<274`; its closed certification domain `21<=G<=274` is compact. Primary `38/38` and independent Fraction `30/30` audits pass; the deterministic five-page PDF passed all-page visual QA. The open annulus, other harmonics and roots, cross blocks, nonlinear/revisit feedback, low variables, regulator/removal uniformity, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-164](#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | Scoped T4 analytic/exact/executed/audited direct-chart theorem. For every finite R-104 zero-control chart, the R-141 legal force is the orthogonal projection of the complete centered terminal scalar onto predictable first Gaussian chaos, so its squared source-dual norm is at most the scalar variance with sharp constant one. A7 `L2` convergence and the A1/A11 point-covariance trace give a cutoff-, chart-length-, and linear/isometric-refinement-uniform bound on that variance along the registered sharp-cube/dyadic sequence. A7 centering also makes the direct anchor nonnegative. Therefore a complete direct owner bound `K_owner>=-(10/11-rho)G_src` yields `mu=-1/110+rho`, `epsilon_v=max(0,5/11-rho/4)`, `epsilon_6=3/20`, and constant `B_*/rho`, without separate anchor or origin-force assumptions. The complete production owner, nonzero feedback, shifted low base, arbitrary graph metric transport, random/nonlinear/revisit/pathwise scope, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
@@ -191,14 +191,22 @@ policy in `governance/development-history.md`.
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
 <a id="r-167"></a>
-### R-167 -- Exact second weighted-energy moment and thermodynamic-Cauchy topology split
+### R-167 -- Weighted-energy, cubic graph and thermodynamic-Cauchy route split
 
 **Result ID.**
 `PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT`.
 
-**Scope correction.** `EXP-000795` corrects the cubic-domain wording in
-`EXP-000794`: this result proves energy-domain propagation, not the
-noncommuting cubic multiplier embedding.
+**Version.** `EXP-000795` corrected the v1.0 cubic-domain wording.
+`EXP-000796` then proves the missing centered cubic graph embedding and
+strengthens this result to v1.1 without allocating a new result number.
+`EXP-000797` is an append-only source-note-linkage correction only; it changes
+no mathematical statement or boundary.
+
+**Authority links.** The v1.1 `centered-weight cubic graph` and
+`prescribed-word` heat theorem are recorded under
+`PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE`
+and the alternative
+`PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY` gate.
 
 **Statement.** For the exact finite-volume ST8/Q3LOCK Hamiltonian with
 `chi,c,g>0`, `lambda>=0`, bounded source, and centered weight
@@ -215,9 +223,19 @@ Consequently
 
 Interpolation with the first-energy cone closes the minimal
 three-half-energy moment and propagates the energy domain `D(A^(3/4))`.
-This does not prove `q^3A^(-3/4)` bounded or the corresponding graph-domain
-embedding; `3/4` is only the necessary scalar power-count target.  The
-boundary position multiplier separately closes.  If the first
+The exact full graph expansion additionally gives `||U_fA^-1||<=kappa`.
+Heinz--Kato and the commuting multiplication order inside `U_f` therefore
+give
+
+`f_x^(m/4)|| |q_x|^mA^(-m/4)||<=gamma^(-m/4)kappa^(m/4)`,
+`0<=m<=4`,
+
+with the adjoint orientation.  This closes the formerly open centered cubic
+multiplier and the Q3 force, whose component coefficient is `g+12lambda`.
+The spatial weight is sharp: an unweighted moving-site constant must grow at
+least as `f_x^(-3/4)`.  Neighboring centered graph norms nevertheless compare
+by `C_mu^s`, so fixed-exponent recentering has only exponential path cost.
+The boundary position multiplier also closes. If the first
 and double position commutators decay in both declared one-sided energy norms
 with spatial rate `rho>mu/4`, the exact boundary Duhamel formula makes the
 finite-volume dynamics Cauchy in both orientations, independently of the
@@ -227,26 +245,31 @@ exhaustion.
 `U_f sum f_x|p_x|^2`.  An exact integration-by-parts identity turns that term
 into `2chi Re<T_f psi,U_f psi>` plus a Laplacian.  The Q3 edge calculation
 gives `Delta W4<=C2|q|^2` with `C2=3g+21lambda`, closing both ordered
-derivative bounds.  Loewner--Heinz and complex interpolation then give the
-`3/4` energy-domain exponent.  Balakrishnan calculus supplies the boundary position
-multiplier.  The Duhamel identity shows exactly which two one-sided spatial
-commutator estimates remain.
+derivative bounds.  The same cross identity controls `U_fA^-1`; Heinz--Kato
+then closes the cubic graph domain. Complex interpolation gives energy-domain
+propagation, Balakrishnan calculus supplies the boundary position multiplier,
+and the Duhamel identity shows exactly which two one-sided spatial commutator
+estimates remain.
 
-Four exact route boundaries are retained.  Positive form order cannot be
-squared; a symmetric energy sandwich does not imply strong convergence;
-nonzero onsite spectral transitions force exponential rather than polynomial
-separate-rung conjugation growth; and quartic convexity does not imply the
-required energy/KMS-weighted commutator sign.  These findings narrow the next
-gate to a product-level Volterra/heat-loss or state-weighted cancellation
-theorem and do not prove nonexistence of the thermodynamic dynamics.
+Every prescribed bond word has the exact heat-simplex bound
+`[b sqrt(pi/(2e))sqrt(beta)]^n/Gamma(1+n/2)`. A single `5m`-edge animal has at
+least `(4m)!` legal histories, so termwise absolute animal counting destroys
+that denominator. Even after a hypothetical chain reduction, absolute strip
+continuation produces `exp(C/epsilon)`, nonintegrable against every finite
+energy power. A rank-shift fixture separately shows that convergence of both
+adjoint labels in the Duhamel inner product does not imply strong-star
+dynamics. These findings reject only the named proof routes, not existence of
+thermodynamic dynamics.
 
-**Boundary.** The theorem is finite-volume and energy-domain based.  It does
-not prove the cubic multiplier/domain embedding, the spatial commutator hierarchy, a common thermodynamic
-automorphism, common-alpha KMS states, algebraic ground states, a GNS or
-physical mass gap, regulator removal, a physical empty/preparation reference,
-a below-empty sign, C6, CP1, Sector A or Pre-A.
+**Boundary.** The theorem is finite-volume and graph-domain based. It does not
+prove the branch/repeat-resummed first-passage response, the spatial
+commutator hierarchy, a fifth onsite-energy moment or modular/dual cutoff
+tail, a common thermodynamic automorphism, common-alpha KMS states, algebraic
+ground states, a GNS or physical mass gap, regulator removal, continuum, a
+physical empty/preparation reference, a below-empty sign, C6, CP1, Sector A
+or Pre-A.
 
-**Proven in:** C6 / [R-167 proof note](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-second-weighted-energy-and-cauchy-gate-260810-v0.1.tex.txt).
+**Proven in:** C6 / [R-167 v1.1 proof note](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-cubic-graph-product-locality-route-split-260810-v0.2.tex.txt).
 
 **Tier:** T0 (scoped finite-volume analytic theorem and conditional Cauchy
 reduction; no common-alpha promotion).

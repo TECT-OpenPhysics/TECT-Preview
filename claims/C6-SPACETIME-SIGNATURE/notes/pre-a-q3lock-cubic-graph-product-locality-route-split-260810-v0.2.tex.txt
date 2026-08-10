@@ -1,0 +1,389 @@
+% Title: Q3LOCK Cubic Graph Embedding and Product-Locality Route Split
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v0.2 -- first issued 2026-08-10; this version issued 2026-08-10
+% Status: T0 claim-nonbearing R-167 v1.1 extension; common alpha and Pre-A remain open
+
+\section{Purpose and scope}
+
+This note records \texttt{EXP-000796} and strengthens reusable result
+\texttt{R-167} to v1.1 without allocating a new result number.  It closes the
+weighted cubic graph-domain obligation left open by \texttt{EXP-000795},
+computes the exact heat-simplex coefficient for every prescribed interaction
+word, and then tests whether this is enough for common real-time dynamics.
+
+It is not enough.  Two termwise-absolute organizations fail exactly: raw
+connected histories have factorial multiplicity, and absolute complex-time
+continuation has a nonintegrable $e^{C/\varepsilon}$ boundary.  These are
+proof-route no-go results, not nonexistence of the dynamics.  The surviving
+phase-independent target is a first-passage backbone response theorem which
+resums branches and repeated edges before taking norms.  A separate
+fixed-temperature route requires a uniform fifth onsite-energy moment plus a
+genuinely two-sided modular or dual-state cutoff estimate.
+
+No common thermodynamic automorphism, common-alpha KMS identification,
+algebraic ground states, GNS or physical mass gap, continuum removal, physical
+empty-space comparison, C6, CP1, Sector A or Pre-A closure is claimed.  The
+spatial commutator hierarchy also remains open.
+
+\section{Provenance identifiers}
+
+\begin{itemize}
+\item Result: \url{PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT}, v1.1, \texttt{R-167}.
+\item Exploration: \url{EXP-000796}.
+\item Provenance correction: \url{EXP-000797}; source-note locator only, with
+no mathematical change.
+\item Next gate: \url{PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE}.
+\item Alternative gate: \url{PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-ABSOLUTE-CONNECTED-HISTORY-ANIMAL-MAJORANT}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-ABSOLUTE-HEAT-STRIP-REAL-TIME-CONTINUATION}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-DUHAMEL-INNER-PRODUCT-ONLY-COMMON-DYNAMICS}.
+\end{itemize}
+
+\section{Exact weighted cubic graph theorem}
+
+For the centered weight $f_x=e^{-\mu d(x,X)}$, write
+
+\[
+ A=1+E_f=1+T_f+U_f,
+ \qquad U_f\ge\gamma f_x|q_x|^4,                              \tag{3.1}
+\]
+
+where $0<\gamma<g/32$ and
+
+\[
+ S_f\le |X|\left(\frac{1+e^{-\mu}}{1-e^{-\mu}}\right)^3.    \tag{3.2}
+\]
+
+The exact R-167 Laplacian input is
+
+\[
+ L_f\le C_2\varepsilon U_f+S_f
+ \left(8r_++8cz+\frac{C_2}{4\varepsilon\gamma}\right),
+ \qquad C_2=3g+21\lambda.                                    \tag{3.3}
+\]
+
+On the finite-volume Schwartz core, the exact Schrodinger cross identity
+expands the full graph norm as
+
+\[
+\begin{split}
+ \|A\psi\|^2={}&\|T_f\psi\|^2+\|U_f\psi\|^2+\|\psi\|^2
+ +2\langle T_f\rangle+2\langle U_f\rangle\\
+ &+\frac{D_f}{\chi}-\frac{\hbar^2}{2\chi}\langle L_f\rangle.
+\end{split}\tag{3.4}
+\]
+
+Choose
+
+\[
+ \varepsilon_*=\frac{4\chi}{\hbar^2C_2},
+ \quad
+ b_*=S_f\left(8r_++8cz+\frac{\hbar^2C_2^2}{16\chi\gamma}\right),
+ \quad
+ \beta_*=\frac{\hbar^2b_*}{2\chi}.                          \tag{3.5}
+\]
+
+The negative $U_f$ coefficient in (3.4) then cancels exactly.  Since $A\ge1$,
+
+\[
+ \|U_f\psi\|^2\le\max(1,\beta_*)\|A\psi\|^2,
+ \qquad
+ \|U_fA^{-1}\|\le\kappa:=\sqrt{\max(1,\beta_*)}.           \tag{3.6}
+\]
+
+The finite polynomial Schrodinger operator has the stated Schwartz core as
+an operator core.  Heinz--Kato graph interpolation therefore gives
+
+\[
+ \|U_f^\theta A^{-\theta}\|\le\kappa^\theta,
+ \qquad0\le\theta\le1.                                      \tag{3.7}
+\]
+
+Because $U_f$ and $q_x$ commute as multiplication operators,
+
+\[
+ \boxed{
+ f_x^{m/4}\bigl\||q_x|^mA^{-m/4}\bigr\|
+ \le\gamma^{-m/4}\kappa^{m/4},\qquad0\le m\le4.}          \tag{3.8}
+\]
+
+The adjoint orientation has the same bound.  In particular,
+
+\[
+ f_x^{3/4}\bigl\||q_x|^3A^{-3/4}\bigr\|
+ \le\gamma^{-3/4}\max(1,\beta_*)^{3/8}.                    \tag{3.9}
+\]
+
+For each Q3 component,
+
+\[
+ |\partial_eW_4(q)|\le(g+12\lambda)|q|^3,                   \tag{3.10}
+\]
+
+so (3.9) also closes the cubic onsite force.  The full eight-component
+gradient costs an additional factor $\sqrt8$.
+
+\section{Sharp spatial boundary and moving centers}
+
+A compact product bump translated by amplitude $R$ at site $x$ satisfies
+
+\[
+ \|q_{x,e}^3\psi_{x,R}\|\ge(R-1)^3,
+ \qquad
+ \|A\psi_{x,R}\|\le C_0+C_1f_xR^4.                         \tag{4.1}
+\]
+
+Hence spectral interpolation forces every unweighted moving-site constant to
+obey
+
+\[
+ C_x\ge C_1^{-3/4}f_x^{-3/4}.                               \tag{4.2}
+\]
+
+This rejects support-location-uniform unweighted bounds, not boundedness at a
+fixed $x$.
+
+The energy can instead be recentered.  For neighboring centers $x,y$, let
+$\vartheta=e^\mu-1$.  The weighted kinetic terms commute, the potentials are
+nonnegative, and (3.6) gives
+
+\[
+ \|(U_x-U_y)A_y^{-1}\|\le\vartheta\kappa,
+ \qquad
+ \|(T_x-T_y)A_y^{-1}\|\le\vartheta(2+\kappa).               \tag{4.3}
+\]
+
+Thus, in both orientations,
+
+\[
+ \|A_xA_y^{-1}\|\le C_\mu:=1+2(e^\mu-1)(1+\kappa),
+ \qquad
+ \|A_x^sA_y^{-s}\|\le C_\mu^s,\qquad0\le s\le1.           \tag{4.4}
+\]
+
+A fixed graph exponent therefore pays only $C_\mu^{sn}$ along an $n$-step
+backbone.
+
+\section{Prescribed-word heat-simplex theorem}
+
+Let $K\ge1$ and suppose every bond obeys
+
+\[
+ \|V_eK^{-1/2}\|,\ \|K^{-1/2}V_e\|\le b.                  \tag{5.1}
+\]
+
+Using $\|K^{1/2}e^{-sK}\|\le(2es)^{-1/2}$ and the exact Dirichlet integral,
+
+\[
+ \int_{\sum s_j=\beta}\prod_{j=0}^{n-1}s_j^{-1/2}\,ds
+ =\frac{\pi^{n/2}\beta^{n/2}}{\Gamma(1+n/2)},               \tag{5.2}
+\]
+
+one obtains for every prescribed edge word
+
+\[
+ \boxed{
+ \|\mathcal I_{{\bf e},n}(\beta)\|
+ \le\frac{[b\sqrt{\pi/(2e)}\sqrt\beta]^n}{\Gamma(1+n/2)}.}\tag{5.3}
+\]
+
+For $V_{xy}=-c q_x\mathbin\cdot q_y$, quartic coercivity gives
+
+\[
+ b=\frac{c}{\sqrt{2\gamma}},
+ \qquad
+ \kappa_0=c\sqrt{\frac{\pi}{e\gamma}}                     \tag{5.4}
+\]
+
+after the two commutator orientations are summed.
+
+\section{Why raw absolute histories fail}
+
+Take a length-$m$ backbone and attach four distinct transverse leaves at each
+of $m$ selected vertices.  This $5m$-edge animal admits at least $(4m)!$
+connected growth histories.  Multiplying the history count by the uniform
+per-word bound (5.3) gives
+
+\[
+ M_m=\frac{(4m)!a^{5m}}{\Gamma(1+5m/2)},
+ \qquad
+ \log M_m=\frac32m\log m+O(m).                               \tag{6.1}
+\]
+
+The raw absolute majorant has zero radius.  This does not prove that the exact
+series or dynamics diverges; it proves that branches and repeated edges must
+be resummed before taking norms.
+
+Even granting a reduction to edge chains, the absolute complex-time estimate
+at $\zeta=\varepsilon+it/\hbar$ contains
+
+\[
+ \exp\left[-\rho d+
+ P^2\kappa_0^2e^{2\rho}\frac{|\zeta|^2}{\varepsilon}\right],
+ \qquad P=2z-1=11.                                           \tag{6.2}
+\]
+
+For $t\ne0$, every finite Balakrishnan power encounters
+
+\[
+ \int_0^1\varepsilon^{s-1}e^{C/\varepsilon}\,d\varepsilon
+ =\infty.                                                     \tag{6.3}
+\]
+
+Thus absolute strip continuation also fails as a proof method.  Oscillatory
+or unitary cancellation remains open.
+
+\section{Exact surviving real-time target}
+
+Let $\mathcal R_{\pi,n}^{(j)}$ sum every branch and repeated-edge history with
+one first-passage backbone $\pi$, before taking a norm.  With
+$s_1=1/2,s_2=3/4$, the load-bearing target is
+
+\[
+ \int_{\Delta_n(t)}\left(
+ \|\mathcal R_{\pi,n}^{(j)}A^{-s_j}\|
+ +\|A^{-s_j}\mathcal R_{\pi,n}^{(j)}\|\right)d{\bf t}
+ \le C_j\frac{[G_j\sqrt{|t|/\hbar}]^n}{\Gamma(1+n/2)}.      \tag{7.1}
+\]
+
+It would imply
+
+\[
+ \mathcal C_j(d,t)\le\frac{2C_jz|X|}{P}
+ \exp\left[-\rho d+\frac{P^2G_j^2e^{2\rho}}{\hbar}|t|\right],\tag{7.2}
+\]
+
+with velocity
+
+\[
+ v_{\rho,j}=\frac{P^2G_j^2e^{2\rho}}{\rho\hbar}.            \tag{7.3}
+\]
+
+The moving-center factor from (4.4) is absorbed into $G_j$.  If
+$\rho>\mu/4$, the conditional R-167 Duhamel theorem then supplies two-sided
+volume Cauchy and strong-star core dynamics.  Equation (7.1), the branch
+resummation, and a noncollapsing Hamiltonian algebra remain open.
+
+\section{Equilibrium cutoff alternative}
+
+At fixed temperature, split
+
+\[
+ H_\Lambda(h)+C|\Lambda|=\sum_xk_{x,h}
+ +\sum_{\langle xy\rangle}V_{xy},
+ \qquad k_{x,h}\ge1+\gamma|q_x|^4.                           \tag{8.1}
+\]
+
+For $P_{x,R}=1_{[k_{x,h}\le R]}$, projected bonds are $O(R^{1/2})$.
+If one separately proves both a local moment
+
+\[
+ \sup_{\Lambda,h,x}\varphi_{\Lambda,h}(k_{x,h}^{\,p})\le M_p,
+ \qquad p>d+1,                                                \tag{8.2}
+\]
+
+and a genuinely two-sided nontracial cutoff estimate, then $R_m=m^b$ with
+
+\[
+ \frac{2d}{p-1}<b<2                                          \tag{8.3}
+\]
+
+balances the leakage and factorial tails.  In $d=3$, $p=5,b=7/4$ give
+exponents $-1/2$ and $-1/8$ in the two leading asymptotic tests.
+
+The moment alone is not enough.  Let
+
+\[
+ He_n=ne_n,
+ \quad p_n=(1-e^{-\beta})e^{-\beta n},
+ \quad X_n=|e_n\rangle\langle e_0|.                          \tag{8.4}
+\]
+
+Both squared Duhamel norms satisfy
+
+\[
+ (X_n,X_n)_D=(X_n^*,X_n^*)_D
+ =\frac{p_0-p_n}{\beta n}\longrightarrow0,                  \tag{8.5}
+\]
+
+but $X_ne_0=e_n$ and the symmetric GNS square norm tends to $p_0/2>0$.
+Hence Duhamel convergence does not imply strong-star dynamics.  Uniform
+modular bandwidth $\Omega$ would repair the topology via
+
+\[
+ \|X\|_{\rho,\#}^2\le
+ \left[\frac{\beta\Omega}{2}\coth\left(\frac{\beta\Omega}{2}\right)\right]
+ (X,X)_D,                                                     \tag{8.6}
+\]
+
+while Q3LOCK currently requires a high-modular-energy tail theorem instead.
+
+\section{Devil's-advocate review and verification boundary}
+
+The primary implementation derives every coefficient and finite check from
+declared inputs.  A non-importing standard-library implementation reconstructs
+the Q3 graph, graph constant, heat coefficients, animal asymptotics, cutoff
+exponents and Duhamel fixture independently.  The integrated verifier reruns
+both, compares their derived core, verifies source freshness and requires all
+formal authorities and this rendered PDF.
+
+Adversarial review confirmed the operator core, Heinz--Kato orientation,
+$\sqrt8$ vector factor, moving-site boundary, integrable simplex endpoints,
+animal Stirling coefficient, and the method-only scope of both heat
+obstructions.  It also upheld that onsite moments alone cannot justify
+nontracial strong-star convergence.
+
+\section{Reproduction}
+
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe -X utf8
+codes\foundations\pre_a_cp1_st8_q3lock_cubic_graph_product_locality_route_split.py
+
+E:\Dev\TECT.venv\Scripts\python.exe -X utf8
+codes\foundations\pre_a_cp1_st8_q3lock_cubic_graph_product_locality_route_split_
+independent.py
+
+E:\Dev\TECT.venv\Scripts\python.exe -X utf8
+codes\foundations\pre_a_cp1_st8_q3lock_cubic_graph_product_locality_route_split_
+verify.py
+\end{verbatim}
+
+Run the primary and independent implementations first and the integrated
+freshness/provenance verifier last.
+
+\section{Result footer}
+
+\begin{verbatim}
+Result ID:               PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-
+                         MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT.
+Reusable result:         R-167 v1.1; no new result number.
+Exploration:             EXP-000796.
+Precise statement:       Weighted cubic graph embedding, Q3 force multiplier,
+                         moving-center graph comparison, and prescribed-word
+                         heat simplex proved. Raw absolute animal and strip
+                         continuations rejected. First-passage RT product and
+                         fifth-energy/modular cutoff routes remain open.
+Scope:                   T0 finite-volume analytic theorem, exact route
+                         counterexamples, and conditional locality reductions.
+Dependencies:            EXP-000792--EXP-000797; exact fixed-volume
+                         ST8/Q3LOCK Hamiltonian and R-167 v1.0 energy bounds.
+Evidence grade:          ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF QA.
+Reproduction command:    Run the three commands under Reproduction in the
+                         listed order, with the integrated verifier last.
+Expected output:         Primary PASS 66/66; independent PASS 143/143;
+                         integrated PASS 273/273.
+Falsification gate:      Any graph-expansion sign, Heinz--Kato domain,
+                         Q3 force, moving-center, heat-simplex, animal,
+                         strip, Duhamel-topology, hash, scope or provenance
+                         mismatch.
+Tier before / after:     C6 T1 / C6 T1; no claim or tier change.
+No-overclaim statement:  First-passage spatial commutator/product closure,
+                         fifth energy moment, modular tail, common alpha/KMS,
+                         algebraic ground states,
+                         GNS gap, continuum, physical empty, C6, CP1,
+                         Sector A and Pre-A remain open.
+Next required action:    Prove either the first-passage RT-PV response plus
+                         Hamiltonian energy-tail algebra, or the fixed-beta
+                         fifth-energy and modular/dual cutoff locality gate.
+\end{verbatim}
