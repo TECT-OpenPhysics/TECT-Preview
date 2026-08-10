@@ -1,0 +1,2566 @@
+{
+  "assertions": {
+    "failed": 0,
+    "passed": 111,
+    "rows": [
+      {
+        "actual": 6,
+        "expected": 6,
+        "group": "global-graph",
+        "name": "Q3 degree",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/2",
+        "expected": "3/2",
+        "group": "global-graph",
+        "name": "centered neighbor ratio",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "3/5",
+          "7/4",
+          "4/25"
+        ],
+        "expected": [
+          "3/5",
+          "7/4",
+          "4/25"
+        ],
+        "group": "global-graph",
+        "name": "fixture parameters",
+        "status": "PASS"
+      },
+      {
+        "actual": "2/5",
+        "expected": "2/5",
+        "group": "global-graph",
+        "name": "exact sqrt gamma",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "0": "1",
+          "2": "-4/5",
+          "4": "4/25"
+        },
+        "expected": "(sqrt(gamma) q^2-1)^2",
+        "group": "global-graph",
+        "name": "Young q2 residual square",
+        "status": "PASS"
+      },
+      {
+        "actual": "54",
+        "expected": 54,
+        "group": "global-graph",
+        "name": "weighted neighbor coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "135/2",
+        "expected": "135/2",
+        "group": "global-graph",
+        "name": "weighted S absorption coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": "486/35",
+        "expected": "486/35",
+        "group": "global-graph",
+        "name": "kick excess",
+        "status": "PASS"
+      },
+      {
+        "actual": "521/35",
+        "expected": "521/35",
+        "group": "global-graph",
+        "name": "C_b exact",
+        "status": "PASS"
+      },
+      {
+        "actual": "1287/245",
+        "expected": "1287/245",
+        "group": "global-graph",
+        "name": "delta form factor",
+        "status": "PASS"
+      },
+      {
+        "actual": "18/49",
+        "expected": "<= 4/7",
+        "group": "global-graph",
+        "name": "Young square bounded by two abs delta",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "cross_young_coefficient": "2/7",
+            "delta": "-2/7",
+            "form_factor": "1287/245",
+            "sign": -1,
+            "square_below_two_abs": true,
+            "square_coefficient": "18/49"
+          },
+          {
+            "cross_young_coefficient": "2/7",
+            "delta": "2/7",
+            "form_factor": "1287/245",
+            "sign": 1,
+            "square_below_two_abs": true,
+            "square_coefficient": "18/49"
+          }
+        ],
+        "expected": "same 1+C_b|delta| bound for both signs",
+        "group": "global-graph",
+        "name": "positive and negative kick forms",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "1/2",
+          "3/4",
+          "1"
+        ],
+        "expected": [
+          "0",
+          "1/2",
+          "3/4",
+          "1"
+        ],
+        "group": "global-graph",
+        "name": "two-sided graph exponent",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "kick-CCR",
+        "name": "kick leaves q invariant",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expected": "zero",
+        "group": "kick-CCR",
+        "name": "kick commutator series terminates",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "neighbor": "6/35",
+          "p": [
+            "0",
+            "6/35",
+            "6/35",
+            "6/35",
+            "6/35",
+            "6/35",
+            "6/35",
+            "1"
+          ]
+        },
+        "expected": "p_x+delta*c*sum q_y with coefficient 6/35",
+        "group": "kick-CCR",
+        "name": "kick momentum sign and coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "expected": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "group": "kick-CCR",
+        "name": "inverse kick recurrence",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "(0, 0)": "1",
+          "(1, 1)": "2",
+          "(2, 2)": "1"
+        },
+        "expected": "(1+u*v)^2",
+        "group": "resolvent-no-go",
+        "name": "resolvent polynomial residual",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1",
+        "expected": -1,
+        "group": "resolvent-no-go",
+        "name": "uv critical fibre",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": 0,
+        "group": "resolvent-no-go",
+        "name": "resolvent ratio residual zero",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "delta": "-5/13",
+            "distance_squared": "1",
+            "q_neighbor": "65/6",
+            "reconstructed_v": "-1/2"
+          },
+          {
+            "delta": "-2/7",
+            "distance_squared": "1",
+            "q_neighbor": "175/12",
+            "reconstructed_v": "-1/2"
+          },
+          {
+            "delta": "2/7",
+            "distance_squared": "1",
+            "q_neighbor": "-175/12",
+            "reconstructed_v": "-1/2"
+          },
+          {
+            "delta": "5/13",
+            "distance_squared": "1",
+            "q_neighbor": "-65/6",
+            "reconstructed_v": "-1/2"
+          }
+        ],
+        "expected": "v=u+delta*c*q_y for each nonzero delta",
+        "group": "resolvent-no-go",
+        "name": "every tested nonzero kick realizes the critical fibre",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": 1,
+        "group": "resolvent-no-go",
+        "name": "raw resolvent norm distance",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "0": "125/441",
+          "1": "-25/21",
+          "2": "5/3"
+        },
+        "expected": {
+          "0": "125/441",
+          "1": "-25/21",
+          "2": "5/3"
+        },
+        "group": "onsite-critical",
+        "name": "quartic translation polynomial",
+        "status": "PASS"
+      },
+      {
+        "actual": "5/3",
+        "expected": "5/3",
+        "group": "onsite-critical",
+        "name": "quartic leading translated coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "2",
+          "1",
+          "1/2",
+          "0",
+          "-1"
+        ],
+        "expected": [
+          "2",
+          "1",
+          "1/2",
+          "0",
+          "-1"
+        ],
+        "group": "onsite-critical",
+        "name": "translated bump exponents",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "critical_test_only": false,
+            "forces_unboundedness": true,
+            "s": "0",
+            "translated_bump_exponent": "2"
+          },
+          {
+            "critical_test_only": false,
+            "forces_unboundedness": true,
+            "s": "1/4",
+            "translated_bump_exponent": "1"
+          },
+          {
+            "critical_test_only": false,
+            "forces_unboundedness": true,
+            "s": "3/8",
+            "translated_bump_exponent": "1/2"
+          },
+          {
+            "critical_test_only": true,
+            "forces_unboundedness": false,
+            "s": "1/2",
+            "translated_bump_exponent": "0"
+          },
+          {
+            "critical_test_only": false,
+            "forces_unboundedness": false,
+            "s": "3/4",
+            "translated_bump_exponent": "-1"
+          }
+        ],
+        "expected": "2-4s>0 for s<1/2",
+        "group": "onsite-critical",
+        "name": "all sampled subcritical powers fail",
+        "status": "PASS"
+      },
+      {
+        "actual": "INCONCLUSIVE UNDER THIS FIRST-VARIATION POWER COUNT; THE FIXED ONE-SIDED LEIBNIZ ROUTE IS TESTED SEPARATELY",
+        "expected": "inconclusive here; separate critical theorem required",
+        "group": "onsite-critical",
+        "name": "first-variation critical half test is inconclusive",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "edges": 12,
+          "neighbors0": [
+            1,
+            2,
+            4
+          ]
+        },
+        "expected": {
+          "degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "edges": 12,
+          "neighbors0": [
+            1,
+            2,
+            4
+          ]
+        },
+        "group": "critical-half",
+        "name": "critical Q3 graph combinatorics",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "G": "51/35",
+          "chi": "7/4",
+          "g": "3/5",
+          "lambda": "2/7"
+        },
+        "expected": {
+          "G": "51/35",
+          "chi": "7/4",
+          "g": "3/5",
+          "lambda": "2/7"
+        },
+        "group": "critical-half",
+        "name": "critical Q3 exact parameters",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "(0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-1/7",
+          "(0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-1/7",
+          "(0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-1/7",
+          "(1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "2/7",
+          "(1, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "2/7",
+          "(1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "2/7",
+          "(2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-3/7",
+          "(2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-3/7",
+          "(2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-3/7",
+          "(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "51/35"
+        },
+        "expected": "(g+3lambda)q0^3+lambda*sum_(j~0)[-3q0^2qj/2+q0qj^2-qj^3/2]",
+        "group": "critical-half",
+        "name": "critical Q3 force polynomial",
+        "status": "PASS"
+      },
+      {
+        "actual": 10,
+        "expected": "one own cubic plus three terms for each of three neighbors",
+        "group": "critical-half",
+        "name": "critical Q3 force term count",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "3": "51/35"
+          },
+          {},
+          {
+            "5": "-32112/8575"
+          }
+        ],
+        "expected": [
+          {
+            "3": "51/35"
+          },
+          {},
+          {
+            "5": "-32112/8575"
+          }
+        ],
+        "group": "critical-half",
+        "name": "critical Q3 backward jets",
+        "status": "PASS"
+      },
+      {
+        "actual": "-32112/8575",
+        "expected": "-(3G^2+9lambda^2/4)/chi",
+        "group": "critical-half",
+        "name": "critical Q3 third jet Hessian-force contraction",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "a_power": 1,
+            "coefficient": "51/35",
+            "tau_power": 1
+          },
+          {
+            "a_power": -1,
+            "coefficient": "-5352/8575",
+            "tau_power": 3
+          }
+        ],
+        "expected": "(51/35)a*tau-(5352/8575)a^-1*tau^3+...",
+        "group": "critical-half",
+        "name": "critical Q3 tau over a squared expansion",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "3": "1"
+          },
+          {},
+          {
+            "5": "-3"
+          },
+          {},
+          {
+            "7": "27"
+          }
+        ],
+        "expected": [
+          {
+            "3": "1"
+          },
+          {},
+          {
+            "5": "-3"
+          },
+          {},
+          {
+            "7": "27"
+          }
+        ],
+        "group": "critical-half",
+        "name": "critical scalar backward jets",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "a_power": 1,
+            "coefficient": "1",
+            "tau_power": 1
+          },
+          {
+            "a_power": -1,
+            "coefficient": "-1/2",
+            "tau_power": 3
+          },
+          {
+            "a_power": -3,
+            "coefficient": "9/40",
+            "tau_power": 5
+          }
+        ],
+        "expected": "a*tau-tau^3/(2a)+9tau^5/(40a^3)+...",
+        "group": "critical-half",
+        "name": "critical scalar tau expansion",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "W_a_factor_count": 1,
+            "a": "3/5",
+            "b": "3/5",
+            "cubic_correction": "-20/1029",
+            "cubic_per_factor": "-20/1029",
+            "leading_p": "6/35",
+            "leading_per_factor": "6/35",
+            "n": 1,
+            "quintic_correction": "100/50421",
+            "quintic_per_factor": "100/50421",
+            "t": "50/63"
+          },
+          {
+            "W_a_factor_count": 2,
+            "a": "6/5",
+            "b": "3/5",
+            "cubic_correction": "-10/1029",
+            "cubic_per_factor": "-5/1029",
+            "leading_p": "12/35",
+            "leading_per_factor": "6/35",
+            "n": 2,
+            "quintic_correction": "25/100842",
+            "quintic_per_factor": "25/201684",
+            "t": "25/126"
+          },
+          {
+            "W_a_factor_count": 4,
+            "a": "12/5",
+            "b": "3/5",
+            "cubic_correction": "-5/1029",
+            "cubic_per_factor": "-5/4116",
+            "leading_p": "24/35",
+            "leading_per_factor": "6/35",
+            "n": 4,
+            "quintic_correction": "25/806736",
+            "quintic_per_factor": "25/3226944",
+            "t": "25/504"
+          },
+          {
+            "W_a_factor_count": 8,
+            "a": "24/5",
+            "b": "3/5",
+            "cubic_correction": "-5/2058",
+            "cubic_per_factor": "-5/16464",
+            "leading_p": "48/35",
+            "leading_per_factor": "6/35",
+            "n": 8,
+            "quintic_correction": "25/6453888",
+            "quintic_per_factor": "25/51631104",
+            "t": "25/2016"
+          },
+          {
+            "W_a_factor_count": 16,
+            "a": "48/5",
+            "b": "3/5",
+            "cubic_correction": "-5/4116",
+            "cubic_per_factor": "-5/65856",
+            "leading_p": "96/35",
+            "leading_per_factor": "6/35",
+            "n": 16,
+            "quintic_correction": "25/51631104",
+            "quintic_per_factor": "25/826097664",
+            "t": "25/8064"
+          }
+        ],
+        "expected": "a=n*b, t=tau/a^2, W_a=W_b^n",
+        "group": "critical-half",
+        "name": "critical Leibniz a and time scaling",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "6/35",
+          "6/35",
+          "6/35",
+          "6/35",
+          "6/35"
+        ],
+        "expected": "6/35",
+        "group": "critical-half",
+        "name": "critical Leibniz leading response per factor",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "-20/1029",
+            "100/50421"
+          ],
+          [
+            "-5/1029",
+            "25/201684"
+          ],
+          [
+            "-5/4116",
+            "25/3226944"
+          ],
+          [
+            "-5/16464",
+            "25/51631104"
+          ],
+          [
+            "-5/65856",
+            "25/826097664"
+          ]
+        ],
+        "expected": "n^-2 and n^-4 per-factor corrections",
+        "group": "critical-half",
+        "name": "critical Leibniz correction scaling",
+        "status": "PASS"
+      },
+      {
+        "actual": "The fixture rejects the named one-sided critical energy-damped Leibniz onsite stability class. It does not reject a two-sided, orbit-adapted, state-tempered, or non-Leibniz critical topology.",
+        "expected": "only named one-sided Leibniz class rejected",
+        "group": "critical-half",
+        "name": "critical one-sided negative scope",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "half_graph_factor_exponent": "0",
+            "s": "0",
+            "strict_upgrade": true,
+            "strong_factor_exponent": "1"
+          },
+          {
+            "half_graph_factor_exponent": "1/2",
+            "s": "1/4",
+            "strict_upgrade": true,
+            "strong_factor_exponent": "1/2"
+          },
+          {
+            "half_graph_factor_exponent": "3/4",
+            "s": "3/8",
+            "strict_upgrade": true,
+            "strong_factor_exponent": "1/4"
+          },
+          {
+            "half_graph_factor_exponent": "1",
+            "s": "1/2",
+            "strict_upgrade": false,
+            "strong_factor_exponent": "0"
+          }
+        ],
+        "expected": "1-2s>0",
+        "group": "trotter-topology",
+        "name": "subcritical interpolation exponent positive",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "half_graph_factor_exponent": "1",
+          "s": "1/2",
+          "strict_upgrade": false,
+          "strong_factor_exponent": "0"
+        },
+        "expected": "1-2s=0 at s=1/2",
+        "group": "trotter-topology",
+        "name": "endpoint interpolation exponent zero",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/16",
+          "1/256",
+          "1/4096",
+          "1/65536",
+          "1/1048576",
+          "1/16777216",
+          "1/268435456",
+          "1/4294967296"
+        ],
+        "expected": "strict decay to zero",
+        "group": "trotter-topology",
+        "name": "endpoint fixture base norm decays",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "0": "1/16",
+            "1/2": "1",
+            "1/4": "1/4",
+            "3/8": "1/2"
+          },
+          {
+            "0": "1/256",
+            "1/2": "1",
+            "1/4": "1/16",
+            "3/8": "1/4"
+          },
+          {
+            "0": "1/4096",
+            "1/2": "1",
+            "1/4": "1/64",
+            "3/8": "1/8"
+          }
+        ],
+        "expected": "strict decay for s<1/2",
+        "group": "trotter-topology",
+        "name": "strict subcritical graph coefficients decay",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "expected": "all one; no endpoint inference",
+        "group": "trotter-topology",
+        "name": "endpoint half-graph image stays unit size",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "conclusion": "finite-volume K^s-graph strong convergence for every 0<=s<1/2",
+          "status": "CONDITIONAL THEOREM"
+        },
+        "expected": "conditional finite-volume graph-strong convergence below one half",
+        "group": "trotter-topology",
+        "name": "finite-volume theorem is conditional and subcritical",
+        "status": "PASS"
+      },
+      {
+        "actual": "OPEN: no spatial Cauchy estimate follows",
+        "expected": "OPEN",
+        "group": "trotter-topology",
+        "name": "thermodynamic inference remains open",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "momentum": 1,
+            "squared_norm": 8
+          },
+          {
+            "momentum": 2,
+            "squared_norm": 20
+          },
+          {
+            "momentum": 4,
+            "squared_norm": 68
+          },
+          {
+            "momentum": 8,
+            "squared_norm": 260
+          },
+          {
+            "momentum": 16,
+            "squared_norm": 1028
+          },
+          {
+            "momentum": 32,
+            "squared_norm": 4100
+          }
+        ],
+        "expected": "unbounded [p^2,Q_L] norm",
+        "group": "cutoff",
+        "name": "cutoff kinetic commutator grows",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "left": "195/308",
+          "right": "195/308"
+        },
+        "expected": "195/308",
+        "group": "direct-relative-unitary",
+        "name": "relative-unitary one-orientation constant",
+        "status": "PASS"
+      },
+      {
+        "actual": "195/154",
+        "expected": "195/154",
+        "group": "direct-relative-unitary",
+        "name": "relative-unitary trace factor two",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "adjoint": "585/616",
+          "direct": "1105/1232"
+        },
+        "expected": "tail*(||A||+||A_minus/plus||)",
+        "group": "direct-relative-unitary",
+        "name": "initial analytic direct constants",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "beta": "4/3",
+          "entropy_coefficient": "4/3",
+          "entropy_moment_condition": "theta>beta",
+          "finite_gibbs_energy_required": true,
+          "fixed_finite_volume_unbounded_tail_passage_closed": true,
+          "form_norm_cutoff_required": true,
+          "hbar": "11/13",
+          "initial_adjoint_bound": "585/616",
+          "initial_direct_bound": "1105/1232",
+          "norm_A": "2/3",
+          "norm_A_minus": "3/4",
+          "norm_A_plus": "5/6",
+          "one_orientation_bound": "195/308",
+          "other_orientation_bound": "195/308",
+          "phi_W_squared": "9/16",
+          "relative_entropy_identity": "S(U_K rho U_K^*||rho)=beta*(rho_t(W)-rho(W))",
+          "root_tail": "3/4",
+          "scope": "finite volume, fixed beta, and an initially modular-analytic test; no uniform evolved half-strip multiplier follows",
+          "thermodynamic_uniform_tail_passage_closed": false,
+          "theta": "7/3",
+          "time": "5/7",
+          "trace_distance_bound": "195/154"
+        },
+        "expected": "same-H identity and initial-analytic-only scope",
+        "group": "direct-relative-unitary",
+        "name": "relative entropy and fixed-beta scope",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "finite_energy": true,
+          "fixed_finite_volume": true,
+          "form_norm": true,
+          "thermodynamic_uniform": false
+        },
+        "expected": "fixed finite volume only",
+        "group": "direct-relative-unitary",
+        "name": "fixed-finite-volume unbounded-tail scope",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1/2",
+            "1/16"
+          ],
+          [
+            "1/4",
+            "1/256"
+          ],
+          [
+            "1/16",
+            "1/65536"
+          ],
+          [
+            "1/256",
+            "1/4294967296"
+          ],
+          [
+            "1/65536",
+            "1/18446744073709551616"
+          ],
+          [
+            "1/4294967296",
+            "1/340282366920938463463374607431768211456"
+          ]
+        ],
+        "expected": "exp(-beta*n)=epsilon^4",
+        "group": "multiplier-no-go",
+        "name": "two-level Gibbs relation exact",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "15/34",
+            "15/34"
+          ],
+          [
+            "255/4112",
+            "255/1028"
+          ],
+          [
+            "65535/33554944",
+            "65535/2097184"
+          ],
+          [
+            "4294967295/1125899907104768",
+            "4294967295/17592186048512"
+          ],
+          [
+            "18446744073709551615/633825300114114700782711341056",
+            "18446744073709551615/2475880078570760549932466176"
+          ],
+          [
+            "340282366920938463463374607431768211455/100433627766186892221372630771322662657932835016603905032192",
+            "340282366920938463463374607431768211455/98079714615416886934934209737619787751887534195902251008"
+          ]
+        ],
+        "expected": "both strictly decrease",
+        "group": "multiplier-no-go",
+        "name": "two-level perturbation and modular tails decrease",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "47/68",
+            "15/34"
+          ],
+          [
+            "4337/74273",
+            "960/4369"
+          ],
+          [
+            "33619457/68854810625",
+            "107372544/13770962125"
+          ],
+          [
+            "1125904201547777/4722375491172708646913",
+            "4238682001244160/277786793598394626289"
+          ],
+          [
+            "633825300132561444787701415937/1393796574918305151223384537723034008551425",
+            "32451855365842672676556383453184/278759314983661030244676907544606801710285"
+          ],
+          [
+            "100433627766186892221712913138243601120805913813676967591937/7588550360256754183282361949617888709645286724712999874174945257910381982318067713",
+            "400171341760993687294496396536320648097738366331498381967360/29527433308392039623666778014077387975273489201217898343093172209768023277502209"
+          ]
+        ],
+        "expected": "both strictly decrease",
+        "group": "multiplier-no-go",
+        "name": "two-level direct D and delta-D tails decrease",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "2",
+            "1/2"
+          ],
+          [
+            "64/17",
+            "16/17"
+          ],
+          [
+            "8192/1025",
+            "1024/1025"
+          ],
+          [
+            "67108864/1048577",
+            "1048576/1048577"
+          ],
+          [
+            "2251799813685248/274877906945",
+            "274877906944/274877906945"
+          ],
+          [
+            "1267650600228229401496703205376/4722366482869645213697",
+            "4722366482869645213696/4722366482869645213697"
+          ]
+        ],
+        "expected": "M0 lower increases and scales as 2/(n*epsilon)",
+        "group": "multiplier-no-go",
+        "name": "two-level evolved M0 lower bound diverges",
+        "status": "PASS"
+      },
+      {
+        "actual": "18/7",
+        "expected": "18/7",
+        "group": "cutoff",
+        "name": "cutoff connected radius formula",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": 4,
+        "group": "cutoff",
+        "name": "cutoff interaction scales quadratically",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "J_L": "3/5",
+            "L": 1,
+            "absolute_geometric_route_converges": false,
+            "radius": "18/7"
+          },
+          {
+            "J_L": "12/5",
+            "L": 2,
+            "absolute_geometric_route_converges": false,
+            "radius": "72/7"
+          },
+          {
+            "J_L": "48/5",
+            "L": 4,
+            "absolute_geometric_route_converges": false,
+            "radius": "288/7"
+          },
+          {
+            "J_L": "192/5",
+            "L": 8,
+            "absolute_geometric_route_converges": false,
+            "radius": "1152/7"
+          },
+          {
+            "J_L": "768/5",
+            "L": 16,
+            "absolute_geometric_route_converges": false,
+            "radius": "4608/7"
+          }
+        ],
+        "expected": "r=z*beta*J_L grows like L^2 and exceeds one",
+        "group": "cutoff",
+        "name": "fixed-beta absolute half-strip route fails",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "representation",
+        "name": "standard multiplication representation faithful",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "adjoint_tail_squared": "1/2",
+            "free_ultrafilter_character": "1",
+            "n": 1,
+            "standard_l2_tail_squared": "1/2"
+          },
+          {
+            "adjoint_tail_squared": "1/4",
+            "free_ultrafilter_character": "1",
+            "n": 2,
+            "standard_l2_tail_squared": "1/4"
+          },
+          {
+            "adjoint_tail_squared": "1/8",
+            "free_ultrafilter_character": "1",
+            "n": 3,
+            "standard_l2_tail_squared": "1/8"
+          },
+          {
+            "adjoint_tail_squared": "1/16",
+            "free_ultrafilter_character": "1",
+            "n": 4,
+            "standard_l2_tail_squared": "1/16"
+          },
+          {
+            "adjoint_tail_squared": "1/32",
+            "free_ultrafilter_character": "1",
+            "n": 5,
+            "standard_l2_tail_squared": "1/32"
+          },
+          {
+            "adjoint_tail_squared": "1/64",
+            "free_ultrafilter_character": "1",
+            "n": 6,
+            "standard_l2_tail_squared": "1/64"
+          },
+          {
+            "adjoint_tail_squared": "1/128",
+            "free_ultrafilter_character": "1",
+            "n": 7,
+            "standard_l2_tail_squared": "1/128"
+          },
+          {
+            "adjoint_tail_squared": "1/256",
+            "free_ultrafilter_character": "1",
+            "n": 8,
+            "standard_l2_tail_squared": "1/256"
+          },
+          {
+            "adjoint_tail_squared": "1/512",
+            "free_ultrafilter_character": "1",
+            "n": 9,
+            "standard_l2_tail_squared": "1/512"
+          },
+          {
+            "adjoint_tail_squared": "1/1024",
+            "free_ultrafilter_character": "1",
+            "n": 10,
+            "standard_l2_tail_squared": "1/1024"
+          }
+        ],
+        "expected": "2^-n for operator and adjoint",
+        "group": "representation",
+        "name": "standard tail tends strongly-star to zero",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "expected": "all one",
+        "group": "representation",
+        "name": "ultrafilter character keeps every tail",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "character": "1",
+          "faithful": "0"
+        },
+        "expected": "different strong-star limits",
+        "group": "representation",
+        "name": "no representation-free C-star inference",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-167",
+        "expected": "R-167",
+        "group": "authority",
+        "name": "manifest result number reused",
+        "status": "PASS"
+      },
+      {
+        "actual": "v1.3",
+        "expected": "v1.3",
+        "group": "authority",
+        "name": "manifest result version",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000799",
+        "expected": "EXP-000799",
+        "group": "authority",
+        "name": "manifest exploration identity",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "claims": [
+            "C6-SPACETIME-SIGNATURE"
+          ],
+          "task": "T-054"
+        },
+        "expected": {
+          "claims": [
+            "C6-SPACETIME-SIGNATURE"
+          ],
+          "task": "T-054"
+        },
+        "group": "authority",
+        "name": "manifest task and claim scope",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "group": "authority",
+        "name": "manifest result identity unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "exploration": "EXP-000798",
+          "number": "R-167",
+          "version": "v1.2"
+        },
+        "expected": {
+          "exploration": "EXP-000798",
+          "number": "R-167",
+          "version": "v1.2"
+        },
+        "group": "authority",
+        "name": "parent was R-167 v1.2",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+          "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+          "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+        ],
+        "group": "authority",
+        "name": "two inherited active gates retained",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-ALL-BOND-CENTERED-ENERGY-GRAPH-FORM-STABILITY",
+          "PA-CP1-ST8-Q3LOCK-BOND-KICK-QP-ONE-LAYER-COMMUTATOR-RECURRENCE",
+          "PA-CP1-ST8-Q3LOCK-SUBCRITICAL-FINITE-VOLUME-STRONG-GRAPH-TROTTER-COROLLARY"
+        ],
+        "expected": "neither active gate",
+        "group": "authority",
+        "name": "no gate falsely closed",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "authority",
+        "name": "claim bearing remains false",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY"
+        ],
+        "expected": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY"
+        ],
+        "group": "authority",
+        "name": "seven negative route IDs exact",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY"
+        ],
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE",
+        "group": "authority",
+        "name": "small direct-tail multiplier negative registered",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY"
+        ],
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY",
+        "group": "authority",
+        "name": "critical half one-sided negative registered",
+        "status": "PASS"
+      },
+      {
+        "actual": "For the full one-site eight-component Q3LOCK onsite Hamiltonian h, set K=h-inf(spec h)+1, W_a=exp(-ia p_0/hbar), t_a=tau/a^2, and G=g+3lambda.",
+        "expected": "K, W_a, t_a and G declared",
+        "group": "authority",
+        "name": "manifest critical setup",
+        "status": "PASS"
+      },
+      {
+        "actual": "partial_0 V4=G q_0^3-(3lambda/2)q_0^2 sum_(j~0)q_j+lambda q_0 sum_(j~0)q_j^2-(lambda/2)sum_(j~0)q_j^3.",
+        "expected": "(g+3lambda)q0^3+lambda*sum_(j~0)[-3q0^2qj/2+q0qj^2-qj^3/2]",
+        "group": "authority",
+        "name": "manifest critical Q3 force",
+        "status": "PASS"
+      },
+      {
+        "actual": "Quartic coercivity and exact Heisenberg equations give ||[p_0,alpha_(t_a)(W_a)]K^(-1/2)||>=G tau a-B_tau, with B_tau finite and independent of a.",
+        "expected": "G*tau*a-B_tau with uniform remainder",
+        "group": "authority",
+        "name": "manifest critical boundary-layer lower bound",
+        "status": "PASS"
+      },
+      {
+        "actual": "If a fixed star-symmetric C-star-Leibniz seminorm L is finite on one nonzero W_b, dominates either one-sided critical p-commutator, and satisfies L(alpha_t(A))<=(1+C|t|)L(A), then L(W_b^n)<=nL(W_b). Taking a=nb and fixed tau>L(W_b)/(c_p G b) contradicts the boundary-layer lower bound as n tends to infinity.",
+        "expected": "fixed one-sided-dominating Leibniz contradiction",
+        "group": "authority",
+        "name": "manifest critical Leibniz contradiction",
+        "status": "PASS"
+      },
+      {
+        "actual": "For g=3/5, lambda=2/7, chi=7/4, G=51/35 and the backward Q3 Hamilton vector field gives Dp_0=(51/35)a^3, D^2p_0=0, D^3p_0=-(32112/8575)a^5. The scalar g=chi=1 fixture has jets a^3,0,-3a^5,0,27a^7.",
+        "expected": "full Q3 and scalar jet sentinels",
+        "group": "authority",
+        "name": "manifest critical exact jets",
+        "status": "PASS"
+      },
+      {
+        "actual": "This rejects the fixed Weyl-containing C-star-Leibniz critical route only. It does not reject non-Leibniz analytic or Frechet scales, symmetric or state-weighted topologies with energy tails, direct projected D,delta-D locality, or existence of the full dynamics.",
+        "expected": "only fixed critical Leibniz route rejected",
+        "group": "authority",
+        "name": "manifest critical no-overclaim scope",
+        "status": "PASS"
+      },
+      {
+        "actual": "||(U_K-U_H)rho^(1/2)||_2 and ||rho^(1/2)(U_K-U_H)||_2 are each at most |t|hbar^(-1)phi(W^2)^(1/2).",
+        "expected": "two HS orientations with the same tail",
+        "group": "authority",
+        "name": "manifest two relative-unitary orientations",
+        "status": "PASS"
+      },
+      {
+        "actual": "||U_K rho U_K^*-rho||_1<=2|t|hbar^(-1)phi(W^2)^(1/2).",
+        "expected": "2|t|/hbar tail",
+        "group": "authority",
+        "name": "manifest trace-distance factor two",
+        "status": "PASS"
+      },
+      {
+        "actual": "S(U_K rho U_K^*||rho)=beta[rho_t(W)-rho(W)]; for theta>beta it is at most beta/(theta-beta) log phi(exp(theta[W-phi(W)])).",
+        "expected": "same-H entropy identity and theta>beta bound",
+        "group": "authority",
+        "name": "manifest entropy theorem",
+        "status": "PASS"
+      },
+      {
+        "actual": "For each fixed finite Lambda and fixed beta: H and H-W_L share the common quartic form domain; |W_L-W_(L,M)|<=cz|Lambda|M^(-2)sum_x|q_x|^4 gives form-norm cutoff convergence; the Gibbs state has finite H-energy, phi(W_L^2)<infinity, and the displayed exponential W_L moment for the entropy bound.",
+        "expected": "fixed-volume form norm + finite energy + exponential moment",
+        "group": "authority",
+        "name": "manifest unbounded-tail hypotheses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "initial": "For an initial A with bounded half-modular conjugates A_-=rho^(-1/2)A rho^(1/2) and A_+=rho^(1/2)A rho^(-1/2), the direct D and D^* GNS differences are bounded by the same tail times ||A||+||A_-/+||. This needs only initial-test control, not uniform half-strip bounds for the evolved truncated multiplier.",
+          "scope": "This closes fixed-finite-volume fixed-beta coordinate-tail approximate state invariance as L tends to infinity and a conditional initial-analytic GNS estimate. Its constants may depend on Lambda and beta. It does not provide a volume-uniform separating local analytic class, products, exhaustion, group law or common alpha."
+        },
+        "expected": "initial analytic tests only; no common alpha",
+        "group": "authority",
+        "name": "manifest initial-analytic-only scope",
+        "status": "PASS"
+      },
+      {
+        "actual": "Let H_n=diag(0,n), rho_n proportional to exp(-beta H_n), epsilon_n=exp(-beta n/4), K_n=H_n+epsilon_n sigma_x, A=P_0, and t_n=pi hbar/sqrt(n^2+4epsilon_n^2).",
+        "expected": "declared H, epsilon and half period",
+        "group": "authority",
+        "name": "manifest exact two-level fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "failure": "The off-diagonal entry of tau_(t_n)^(K_n)(P_0) makes M_0 at least asymptotic to 2exp(beta n/4)/n, and M_1 diverges faster.",
+          "fixture": "Let H_n=diag(0,n), rho_n proportional to exp(-beta H_n), epsilon_n=exp(-beta n/4), K_n=H_n+epsilon_n sigma_x, A=P_0, and t_n=pi hbar/sqrt(n^2+4epsilon_n^2).",
+          "scope": "Direct D,delta D convergence is strictly weaker than uniform evolved M_0,M_1. The counterexample rejects the inference, not the direct route.",
+          "small_quantities": "The perturbation W_n=-epsilon_n sigma_x and its first modular derivative tend to zero in Duhamel norm. The direct differences D_n=tau_(t_n)^(K_n)(P_0)-P_0 and [log rho_n,D_n] also tend to zero in Duhamel norm."
+        },
+        "expected": "small D/delta-D but divergent M0; direct route retained",
+        "group": "authority",
+        "name": "manifest direct-small multiplier-large split",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package rejects the fixed one-sided-dominating C-star-Leibniz critical route but does not reject every critical topology and does not prove a non-Leibniz or state-weighted s=1/2 onsite closure, thermodynamic graph Cauchy, direct projected D or delta-D locality, a phase- and beta-independent common C-star alpha, common-alpha KMS identification, algebraic ground states, a GNS or physical mass gap, regulator removal, continuum, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+        "expected": "contains common alpha",
+        "group": "scope",
+        "name": "manifest no-overclaim common alpha",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package rejects the fixed one-sided-dominating C-star-Leibniz critical route but does not reject every critical topology and does not prove a non-Leibniz or state-weighted s=1/2 onsite closure, thermodynamic graph Cauchy, direct projected D or delta-D locality, a phase- and beta-independent common C-star alpha, common-alpha KMS identification, algebraic ground states, a GNS or physical mass gap, regulator removal, continuum, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+        "expected": "contains KMS",
+        "group": "scope",
+        "name": "manifest no-overclaim KMS",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package rejects the fixed one-sided-dominating C-star-Leibniz critical route but does not reject every critical topology and does not prove a non-Leibniz or state-weighted s=1/2 onsite closure, thermodynamic graph Cauchy, direct projected D or delta-D locality, a phase- and beta-independent common C-star alpha, common-alpha KMS identification, algebraic ground states, a GNS or physical mass gap, regulator removal, continuum, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+        "expected": "contains ground",
+        "group": "scope",
+        "name": "manifest no-overclaim ground",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package rejects the fixed one-sided-dominating C-star-Leibniz critical route but does not reject every critical topology and does not prove a non-Leibniz or state-weighted s=1/2 onsite closure, thermodynamic graph Cauchy, direct projected D or delta-D locality, a phase- and beta-independent common C-star alpha, common-alpha KMS identification, algebraic ground states, a GNS or physical mass gap, regulator removal, continuum, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+        "expected": "contains GNS",
+        "group": "scope",
+        "name": "manifest no-overclaim GNS",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package rejects the fixed one-sided-dominating C-star-Leibniz critical route but does not reject every critical topology and does not prove a non-Leibniz or state-weighted s=1/2 onsite closure, thermodynamic graph Cauchy, direct projected D or delta-D locality, a phase- and beta-independent common C-star alpha, common-alpha KMS identification, algebraic ground states, a GNS or physical mass gap, regulator removal, continuum, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+        "expected": "contains continuum",
+        "group": "scope",
+        "name": "manifest no-overclaim continuum",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package rejects the fixed one-sided-dominating C-star-Leibniz critical route but does not reject every critical topology and does not prove a non-Leibniz or state-weighted s=1/2 onsite closure, thermodynamic graph Cauchy, direct projected D or delta-D locality, a phase- and beta-independent common C-star alpha, common-alpha KMS identification, algebraic ground states, a GNS or physical mass gap, regulator removal, continuum, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+        "expected": "contains Pre-A",
+        "group": "scope",
+        "name": "manifest no-overclaim Pre-A",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "certificate records exp-000799",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "certificate records r-167 v1.3",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "certificate records 521",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "certificate records (1+uv)^2",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "certificate records 3aq^2-3a^2q+a^3",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "certificate records q^2k^{-s}",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "certificate records strong-star",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "certificate records direct relative-unitary theorem",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "certificate records critical one-sided leibniz no-go",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "certificate records 32112",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "certificate records 8575",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "certificate records a=nb",
+        "status": "PASS"
+      },
+      {
+        "actual": "1c1922ea04ff81b94e62ca2cf2f36e5d4036d8b36df5e1b61ba836bac798c19d",
+        "expected": "64 lowercase hexadecimal characters",
+        "group": "provenance",
+        "name": "source hash codes/foundations/pre_a_cp1_st8_q3lock_common_alpha_topology_critical_graph_route_split_independent.py",
+        "status": "PASS"
+      },
+      {
+        "actual": "2b732db59ebc9e611ed14ad1a27ce88d8cf973afd14f1ec3a39603c625713a9d",
+        "expected": "64 lowercase hexadecimal characters",
+        "group": "provenance",
+        "name": "source hash strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "9e55c1e20615ae4a97dd57a701894d3301324dc234dd0bc1d262ba02f465fcc6",
+        "expected": "64 lowercase hexadecimal characters",
+        "group": "provenance",
+        "name": "source hash strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-certificate-260810.md",
+        "status": "PASS"
+      },
+      {
+        "actual": "0e6f46c9f3532bc69605a42c01146d5de85897cdc69082c8de29ee829fd0f51f",
+        "expected": "64 lowercase hexadecimal characters",
+        "group": "provenance",
+        "name": "source hash strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json",
+        "status": "PASS"
+      }
+    ],
+    "total": 111
+  },
+  "boundary": "This package rejects the fixed one-sided-dominating C-star-Leibniz critical route but does not reject every critical topology and does not prove a non-Leibniz or state-weighted s=1/2 onsite closure, thermodynamic graph Cauchy, direct projected D or delta-D locality, a phase- and beta-independent common C-star alpha, common-alpha KMS identification, algebraic ground states, a GNS or physical mass gap, regulator removal, continuum, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
+  "claim_bearing": false,
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "derived": {
+    "coordinate_cutoff": {
+      "J_L_formula": "c*L^2",
+      "beta": "5/7",
+      "c": "3/5",
+      "commutator_identity": "[p^2,Q_L]=-2*i*p on the identity region",
+      "commutator_rows": [
+        {
+          "momentum": 1,
+          "squared_norm": 8
+        },
+        {
+          "momentum": 2,
+          "squared_norm": 20
+        },
+        {
+          "momentum": 4,
+          "squared_norm": 68
+        },
+        {
+          "momentum": 8,
+          "squared_norm": 260
+        },
+        {
+          "momentum": 16,
+          "squared_norm": 1028
+        },
+        {
+          "momentum": 32,
+          "squared_norm": 4100
+        }
+      ],
+      "fixed_beta_half_strip_limit": false,
+      "norm_C1": false,
+      "quartic_scaling_ratio": "4",
+      "radius_formula": "r=z*beta*J_L",
+      "radius_rows": [
+        {
+          "J_L": "3/5",
+          "L": 1,
+          "absolute_geometric_route_converges": false,
+          "radius": "18/7"
+        },
+        {
+          "J_L": "12/5",
+          "L": 2,
+          "absolute_geometric_route_converges": false,
+          "radius": "72/7"
+        },
+        {
+          "J_L": "48/5",
+          "L": 4,
+          "absolute_geometric_route_converges": false,
+          "radius": "288/7"
+        },
+        {
+          "J_L": "192/5",
+          "L": 8,
+          "absolute_geometric_route_converges": false,
+          "radius": "1152/7"
+        },
+        {
+          "J_L": "768/5",
+          "L": 16,
+          "absolute_geometric_route_converges": false,
+          "radius": "4608/7"
+        }
+      ],
+      "scope": "This rejects the absolute connected/norm-C1 cutoff method, not all projected Duhamel or state-tempered locality methods.",
+      "z": 6
+    },
+    "critical_half_vector_field": {
+      "leibniz": {
+        "first_correction_per_factor_order": "n^-2",
+        "identity": "W_(n*b)=W_b^n",
+        "leading_per_factor": "6/35",
+        "one_sided_critical_uniform_stability": false,
+        "rows": [
+          {
+            "W_a_factor_count": 1,
+            "a": "3/5",
+            "b": "3/5",
+            "cubic_correction": "-20/1029",
+            "cubic_per_factor": "-20/1029",
+            "leading_p": "6/35",
+            "leading_per_factor": "6/35",
+            "n": 1,
+            "quintic_correction": "100/50421",
+            "quintic_per_factor": "100/50421",
+            "t": "50/63"
+          },
+          {
+            "W_a_factor_count": 2,
+            "a": "6/5",
+            "b": "3/5",
+            "cubic_correction": "-10/1029",
+            "cubic_per_factor": "-5/1029",
+            "leading_p": "12/35",
+            "leading_per_factor": "6/35",
+            "n": 2,
+            "quintic_correction": "25/100842",
+            "quintic_per_factor": "25/201684",
+            "t": "25/126"
+          },
+          {
+            "W_a_factor_count": 4,
+            "a": "12/5",
+            "b": "3/5",
+            "cubic_correction": "-5/1029",
+            "cubic_per_factor": "-5/4116",
+            "leading_p": "24/35",
+            "leading_per_factor": "6/35",
+            "n": 4,
+            "quintic_correction": "25/806736",
+            "quintic_per_factor": "25/3226944",
+            "t": "25/504"
+          },
+          {
+            "W_a_factor_count": 8,
+            "a": "24/5",
+            "b": "3/5",
+            "cubic_correction": "-5/2058",
+            "cubic_per_factor": "-5/16464",
+            "leading_p": "48/35",
+            "leading_per_factor": "6/35",
+            "n": 8,
+            "quintic_correction": "25/6453888",
+            "quintic_per_factor": "25/51631104",
+            "t": "25/2016"
+          },
+          {
+            "W_a_factor_count": 16,
+            "a": "48/5",
+            "b": "3/5",
+            "cubic_correction": "-5/4116",
+            "cubic_per_factor": "-5/65856",
+            "leading_p": "96/35",
+            "leading_per_factor": "6/35",
+            "n": 16,
+            "quintic_correction": "25/51631104",
+            "quintic_per_factor": "25/826097664",
+            "t": "25/8064"
+          }
+        ],
+        "scaling": "a=n*b, t=tau/a^2",
+        "scope": "The fixture rejects the named one-sided critical energy-damped Leibniz onsite stability class. It does not reject a two-sided, orbit-adapted, state-tempered, or non-Leibniz critical topology.",
+        "second_correction_per_factor_order": "n^-4"
+      },
+      "q3": {
+        "G": "51/35",
+        "backward_jets": [
+          {
+            "axis_polynomial": {
+              "3": "51/35"
+            },
+            "order": 1,
+            "term_count_before_axis_projection": 10
+          },
+          {
+            "axis_polynomial": {},
+            "order": 2,
+            "term_count_before_axis_projection": 16
+          },
+          {
+            "axis_polynomial": {
+              "5": "-32112/8575"
+            },
+            "order": 3,
+            "term_count_before_axis_projection": 107
+          }
+        ],
+        "chi": "7/4",
+        "degree_rows": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "expected_partial_0_V4": {
+          "(0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-1/7",
+          "(0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-1/7",
+          "(0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-1/7",
+          "(1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "2/7",
+          "(1, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "2/7",
+          "(1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "2/7",
+          "(2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-3/7",
+          "(2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-3/7",
+          "(2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-3/7",
+          "(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "51/35"
+        },
+        "g": "3/5",
+        "lambda": "2/7",
+        "neighbors_of_zero": [
+          1,
+          2,
+          4
+        ],
+        "partial_0_V4": {
+          "(0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-1/7",
+          "(0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-1/7",
+          "(0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-1/7",
+          "(1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "2/7",
+          "(1, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "2/7",
+          "(1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "2/7",
+          "(2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-3/7",
+          "(2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-3/7",
+          "(2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "-3/7",
+          "(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)": "51/35"
+        },
+        "partial_0_formula": "(g+3lambda)q0^3+lambda*sum_(j~0)[-3q0^2qj/2+q0qj^2-qj^3/2]",
+        "tau_over_a_squared_terms": [
+          {
+            "a_power": 1,
+            "coefficient": "51/35",
+            "tau_power": 1
+          },
+          {
+            "a_power": -1,
+            "coefficient": "-5352/8575",
+            "tau_power": 3
+          }
+        ],
+        "vertices": 8
+      },
+      "scalar": {
+        "backward_jets": [
+          {
+            "axis_polynomial": {
+              "3": "1"
+            },
+            "order": 1,
+            "term_count_before_axis_projection": 1
+          },
+          {
+            "axis_polynomial": {},
+            "order": 2,
+            "term_count_before_axis_projection": 1
+          },
+          {
+            "axis_polynomial": {
+              "5": "-3"
+            },
+            "order": 3,
+            "term_count_before_axis_projection": 2
+          },
+          {
+            "axis_polynomial": {},
+            "order": 4,
+            "term_count_before_axis_projection": 2
+          },
+          {
+            "axis_polynomial": {
+              "7": "27"
+            },
+            "order": 5,
+            "term_count_before_axis_projection": 2
+          }
+        ],
+        "chi": "1",
+        "g": "1",
+        "series": "p(tau/a^2)=a*tau-tau^3/(2a)+9tau^5/(40a^3)+...",
+        "tau_over_a_squared_terms": [
+          {
+            "a_power": 1,
+            "coefficient": "1",
+            "tau_power": 1
+          },
+          {
+            "a_power": -1,
+            "coefficient": "-1/2",
+            "tau_power": 3
+          },
+          {
+            "a_power": -3,
+            "coefficient": "9/40",
+            "tau_power": 5
+          }
+        ]
+      }
+    },
+    "direct_relative_unitary": {
+      "beta": "4/3",
+      "entropy_coefficient": "4/3",
+      "entropy_moment_condition": "theta>beta",
+      "finite_gibbs_energy_required": true,
+      "fixed_finite_volume_unbounded_tail_passage_closed": true,
+      "form_norm_cutoff_required": true,
+      "hbar": "11/13",
+      "initial_adjoint_bound": "585/616",
+      "initial_direct_bound": "1105/1232",
+      "norm_A": "2/3",
+      "norm_A_minus": "3/4",
+      "norm_A_plus": "5/6",
+      "one_orientation_bound": "195/308",
+      "other_orientation_bound": "195/308",
+      "phi_W_squared": "9/16",
+      "relative_entropy_identity": "S(U_K rho U_K^*||rho)=beta*(rho_t(W)-rho(W))",
+      "root_tail": "3/4",
+      "scope": "finite volume, fixed beta, and an initially modular-analytic test; no uniform evolved half-strip multiplier follows",
+      "thermodynamic_uniform_tail_passage_closed": false,
+      "theta": "7/3",
+      "time": "5/7",
+      "trace_distance_bound": "195/154"
+    },
+    "faithful_representation": {
+      "abstract_C_star_inference": false,
+      "algebra": "ell_infinity(N)",
+      "finite_support_dense_test": "e_n xi=0 once n exceeds supp(xi)",
+      "rows": [
+        {
+          "adjoint_tail_squared": "1/2",
+          "free_ultrafilter_character": "1",
+          "n": 1,
+          "standard_l2_tail_squared": "1/2"
+        },
+        {
+          "adjoint_tail_squared": "1/4",
+          "free_ultrafilter_character": "1",
+          "n": 2,
+          "standard_l2_tail_squared": "1/4"
+        },
+        {
+          "adjoint_tail_squared": "1/8",
+          "free_ultrafilter_character": "1",
+          "n": 3,
+          "standard_l2_tail_squared": "1/8"
+        },
+        {
+          "adjoint_tail_squared": "1/16",
+          "free_ultrafilter_character": "1",
+          "n": 4,
+          "standard_l2_tail_squared": "1/16"
+        },
+        {
+          "adjoint_tail_squared": "1/32",
+          "free_ultrafilter_character": "1",
+          "n": 5,
+          "standard_l2_tail_squared": "1/32"
+        },
+        {
+          "adjoint_tail_squared": "1/64",
+          "free_ultrafilter_character": "1",
+          "n": 6,
+          "standard_l2_tail_squared": "1/64"
+        },
+        {
+          "adjoint_tail_squared": "1/128",
+          "free_ultrafilter_character": "1",
+          "n": 7,
+          "standard_l2_tail_squared": "1/128"
+        },
+        {
+          "adjoint_tail_squared": "1/256",
+          "free_ultrafilter_character": "1",
+          "n": 8,
+          "standard_l2_tail_squared": "1/256"
+        },
+        {
+          "adjoint_tail_squared": "1/512",
+          "free_ultrafilter_character": "1",
+          "n": 9,
+          "standard_l2_tail_squared": "1/512"
+        },
+        {
+          "adjoint_tail_squared": "1/1024",
+          "free_ultrafilter_character": "1",
+          "n": 10,
+          "standard_l2_tail_squared": "1/1024"
+        }
+      ],
+      "scope": "A preregistered faithful strong-star topology can still be used; the fixture forbids promoting it to a representation-free C-star fact.",
+      "standard_representation": "faithful multiplication on ell_2(N)",
+      "standard_representation_faithful": true,
+      "standard_strong_star_limit": "0",
+      "tail_projection": "e_n(k)=1 if k>=n else 0",
+      "ultrafilter_character_limit": "1"
+    },
+    "finite_volume_trotter_graph_convergence": {
+      "conclusion": "finite-volume K^s-graph strong convergence for every 0<=s<1/2",
+      "dense_core": "D(K^(1/2-s))",
+      "endpoint_base_norm_tends_to_zero": true,
+      "endpoint_half_graph_image_norm": "1",
+      "endpoint_inference_valid": false,
+      "endpoint_rows": [
+        {
+          "K_ratio": "256",
+          "base_norm": "1/16",
+          "graph_coefficients": {
+            "0": "1/16",
+            "1/2": "1",
+            "1/4": "1/4",
+            "3/8": "1/2"
+          },
+          "n": 1
+        },
+        {
+          "K_ratio": "65536",
+          "base_norm": "1/256",
+          "graph_coefficients": {
+            "0": "1/256",
+            "1/2": "1",
+            "1/4": "1/16",
+            "3/8": "1/4"
+          },
+          "n": 2
+        },
+        {
+          "K_ratio": "16777216",
+          "base_norm": "1/4096",
+          "graph_coefficients": {
+            "0": "1/4096",
+            "1/2": "1",
+            "1/4": "1/64",
+            "3/8": "1/8"
+          },
+          "n": 3
+        },
+        {
+          "K_ratio": "4294967296",
+          "base_norm": "1/65536",
+          "graph_coefficients": {
+            "0": "1/65536",
+            "1/2": "1",
+            "1/4": "1/256",
+            "3/8": "1/16"
+          },
+          "n": 4
+        },
+        {
+          "K_ratio": "1099511627776",
+          "base_norm": "1/1048576",
+          "graph_coefficients": {
+            "0": "1/1048576",
+            "1/2": "1",
+            "1/4": "1/1024",
+            "3/8": "1/32"
+          },
+          "n": 5
+        },
+        {
+          "K_ratio": "281474976710656",
+          "base_norm": "1/16777216",
+          "graph_coefficients": {
+            "0": "1/16777216",
+            "1/2": "1",
+            "1/4": "1/4096",
+            "3/8": "1/64"
+          },
+          "n": 6
+        },
+        {
+          "K_ratio": "72057594037927936",
+          "base_norm": "1/268435456",
+          "graph_coefficients": {
+            "0": "1/268435456",
+            "1/2": "1",
+            "1/4": "1/16384",
+            "3/8": "1/128"
+          },
+          "n": 7
+        },
+        {
+          "K_ratio": "18446744073709551616",
+          "base_norm": "1/4294967296",
+          "graph_coefficients": {
+            "0": "1/4294967296",
+            "1/2": "1",
+            "1/4": "1/65536",
+            "3/8": "1/256"
+          },
+          "n": 8
+        }
+      ],
+      "finite_volume_subcritical_status": "CONDITIONAL THEOREM",
+      "hypotheses": [
+        "finite-volume strong Lie--Trotter convergence",
+        "uniform K^(1/2) graph bound for approximants and limit",
+        "uniform ordinary operator bound"
+      ],
+      "interpolation_inequality": "||K^s S_n K^-s psi|| <= ||S_n K^-s psi||^(1-2s) *(2M ||K^(1/2-s)psi||)^(2s)",
+      "interpolation_rows": [
+        {
+          "half_graph_factor_exponent": "0",
+          "s": "0",
+          "strict_upgrade": true,
+          "strong_factor_exponent": "1"
+        },
+        {
+          "half_graph_factor_exponent": "1/2",
+          "s": "1/4",
+          "strict_upgrade": true,
+          "strong_factor_exponent": "1/2"
+        },
+        {
+          "half_graph_factor_exponent": "3/4",
+          "s": "3/8",
+          "strict_upgrade": true,
+          "strong_factor_exponent": "1/4"
+        },
+        {
+          "half_graph_factor_exponent": "1",
+          "s": "1/2",
+          "strict_upgrade": false,
+          "strong_factor_exponent": "0"
+        }
+      ],
+      "thermodynamic_status": "OPEN: no spatial Cauchy estimate follows"
+    },
+    "global_graph": {
+      "C_b": "521/35",
+      "c": "3/5",
+      "centered_ratio": "3/2",
+      "chi": "7/4",
+      "delta": "2/7",
+      "factor": "1287/245",
+      "gamma": "4/25",
+      "graph_power_rows": [
+        {
+          "finite_step_exponent_for_N8": "0",
+          "fully_conjugated_safe_power": "0",
+          "one_orientation_power": "0",
+          "one_sided_sum_power": "0",
+          "s": "0"
+        },
+        {
+          "finite_step_exponent_for_N8": "4",
+          "fully_conjugated_safe_power": "1/2",
+          "one_orientation_power": "1/4",
+          "one_sided_sum_power": "1/4",
+          "s": "1/4"
+        },
+        {
+          "finite_step_exponent_for_N8": "6",
+          "fully_conjugated_safe_power": "3/4",
+          "one_orientation_power": "3/8",
+          "one_sided_sum_power": "3/8",
+          "s": "3/8"
+        },
+        {
+          "finite_step_exponent_for_N8": "8",
+          "fully_conjugated_safe_power": "1",
+          "one_orientation_power": "1/2",
+          "one_sided_sum_power": "1/2",
+          "s": "1/2"
+        }
+      ],
+      "kick_excess": "486/35",
+      "neighbor_weight_coefficient": "9",
+      "q2_absorption_coefficient": "5/4",
+      "q2_residual": {
+        "0": "1",
+        "2": "-4/5",
+        "4": "4/25"
+      },
+      "q2_residual_square": {
+        "0": "1",
+        "2": "-4/5",
+        "4": "4/25"
+      },
+      "sign_rows": [
+        {
+          "cross_young_coefficient": "2/7",
+          "delta": "-2/7",
+          "form_factor": "1287/245",
+          "sign": -1,
+          "square_below_two_abs": true,
+          "square_coefficient": "18/49"
+        },
+        {
+          "cross_young_coefficient": "2/7",
+          "delta": "2/7",
+          "form_factor": "1287/245",
+          "sign": 1,
+          "square_below_two_abs": true,
+          "square_coefficient": "18/49"
+        }
+      ],
+      "sqrt_gamma": "2/5",
+      "trotter_exponential_rate_at_s_half": "521/35",
+      "two_s_rate_formula": "exp(2*s*C_b*abs(t))",
+      "weighted_s_coefficient": "135/2",
+      "weighted_s_coefficient_before_absorption": "54",
+      "young_cross": "2/7",
+      "young_square": "18/49",
+      "z": 6
+    },
+    "kick_commutator": {
+      "basis": [
+        "q0",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "p0"
+      ],
+      "convention": "beta_delta(X)=B_delta^* X B_delta, so p_x maps to p_x+delta*c*sum_(y~x)q_y",
+      "derivation_p0": [
+        "0",
+        "3/5",
+        "3/5",
+        "3/5",
+        "3/5",
+        "3/5",
+        "3/5",
+        "0"
+      ],
+      "expected_kicked_p0": [
+        "0",
+        "6/35",
+        "6/35",
+        "6/35",
+        "6/35",
+        "6/35",
+        "6/35",
+        "1"
+      ],
+      "inverse_p0": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "kicked_p0": [
+        "0",
+        "6/35",
+        "6/35",
+        "6/35",
+        "6/35",
+        "6/35",
+        "6/35",
+        "1"
+      ],
+      "neighbor_coefficient": "6/35",
+      "original_p0": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "q_invariant": true,
+      "second_derivation_p0": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "series_terminates_after_first_commutator": true
+    },
+    "quartic_onsite_criticality": {
+      "U_prime": "g*q^3",
+      "a": "5/7",
+      "below_half_local_graph_bound": false,
+      "critical_half_status": "INCONCLUSIVE UNDER THIS FIRST-VARIATION POWER COUNT; THE FIXED ONE-SIDED LEIBNIZ ROUTE IS TESTED SEPARATELY",
+      "difference": {
+        "0": "125/441",
+        "1": "-25/21",
+        "2": "5/3"
+      },
+      "expected": {
+        "0": "125/441",
+        "1": "-25/21",
+        "2": "5/3"
+      },
+      "exponent_formula": "2-4*s",
+      "exponent_rows": [
+        {
+          "critical_test_only": false,
+          "forces_unboundedness": true,
+          "s": "0",
+          "translated_bump_exponent": "2"
+        },
+        {
+          "critical_test_only": false,
+          "forces_unboundedness": true,
+          "s": "1/4",
+          "translated_bump_exponent": "1"
+        },
+        {
+          "critical_test_only": false,
+          "forces_unboundedness": true,
+          "s": "3/8",
+          "translated_bump_exponent": "1/2"
+        },
+        {
+          "critical_test_only": true,
+          "forces_unboundedness": false,
+          "s": "1/2",
+          "translated_bump_exponent": "0"
+        },
+        {
+          "critical_test_only": false,
+          "forces_unboundedness": false,
+          "s": "3/4",
+          "translated_bump_exponent": "-1"
+        }
+      ],
+      "g": "7/9",
+      "identity": "[p,delta(W_a)]=(U'(q)-U'(q-a))*W_a=g*(3*a*q^2-3*a^2*q+a^3)*W_a",
+      "threshold": "1/2",
+      "translated_U_prime": {
+        "0": "-125/441",
+        "1": "25/21",
+        "2": "-5/3",
+        "3": "7/9"
+      }
+    },
+    "resolvent_no_go": {
+      "delta_rows": [
+        {
+          "delta": "-5/13",
+          "distance_squared": "1",
+          "q_neighbor": "65/6",
+          "reconstructed_v": "-1/2"
+        },
+        {
+          "delta": "-2/7",
+          "distance_squared": "1",
+          "q_neighbor": "175/12",
+          "reconstructed_v": "-1/2"
+        },
+        {
+          "delta": "2/7",
+          "distance_squared": "1",
+          "q_neighbor": "-175/12",
+          "reconstructed_v": "-1/2"
+        },
+        {
+          "delta": "5/13",
+          "distance_squared": "1",
+          "q_neighbor": "-65/6",
+          "reconstructed_v": "-1/2"
+        }
+      ],
+      "denominator_polynomial": {
+        "(0, 0)": "1",
+        "(0, 2)": "1",
+        "(2, 0)": "1",
+        "(2, 2)": "1"
+      },
+      "denominator_value": "25/4",
+      "distance_squared": "1",
+      "expected_residual_polynomial": {
+        "(0, 0)": "1",
+        "(1, 1)": "2",
+        "(2, 2)": "1"
+      },
+      "joint_spectrum_surjective_for_nonzero_delta": true,
+      "norm_distance_for_every_nonzero_delta": "1",
+      "numerator_polynomial": {
+        "(0, 2)": "1",
+        "(1, 1)": "-2",
+        "(2, 0)": "1"
+      },
+      "numerator_value": "25/4",
+      "point_norm_continuous_at_zero": false,
+      "residual_identity": "(1+u*v)^2",
+      "residual_polynomial": {
+        "(0, 0)": "1",
+        "(1, 1)": "2",
+        "(2, 2)": "1"
+      },
+      "residual_value": "0",
+      "u": "2",
+      "uv": "-1",
+      "v": "-1/2"
+    },
+    "scope": {
+      "alternative_critical_topology_closed": false,
+      "common_alpha_closed": false,
+      "common_alpha_kms_closed": false,
+      "continuum_closed": false,
+      "critical_half_local_graph_lipschitz_closed": false,
+      "critical_half_one_sided_leibniz_stability": false,
+      "cutoff_norm_C1_half_strip_closed": false,
+      "finite_volume_subcritical_graph_convergence_conditional": true,
+      "global_kick_graph_form_closed": true,
+      "gns_gap_closed": false,
+      "ground_selection_closed": false,
+      "negative_ids": [
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY"
+      ],
+      "open_gates": [
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+      ],
+      "pre_a_closed": false,
+      "raw_resolvent_point_norm_continuity": false,
+      "subcritical_quartic_local_graph_lipschitz": false,
+      "thermodynamic_spatial_cauchy_closed": false
+    },
+    "small_direct_tail_large_multiplier": {
+      "M0_lower_increases": true,
+      "M0_scaled_ratio_increases_to_one": true,
+      "W_tail_decreases": true,
+      "beta": "4*log(2)",
+      "direct_modular_tail_decreases": true,
+      "direct_tail_decreases": true,
+      "modular_W_tail_decreases": true,
+      "rows": [
+        {
+          "M0_asymptotic_ratio": "1/2",
+          "M0_lower": "2",
+          "Omega_squared": "2",
+          "W_D_squared_in_log16_units": "15/34",
+          "direct_D_squared_in_log16_units": "47/68",
+          "direct_delta_D_squared_in_log16_units": "15/34",
+          "epsilon": "1/2",
+          "evolved_projection_off_diagonal": "1/2",
+          "gibbs_ratio": "1/16",
+          "half_period_label": "pi*hbar/sqrt(Omega_squared)",
+          "logarithmic_mean_in_log16_units": "15/17",
+          "logrho_W_D_squared_in_log16_units": "15/34",
+          "n": 1,
+          "p0": "16/17",
+          "p1": "1/17"
+        },
+        {
+          "M0_asymptotic_ratio": "16/17",
+          "M0_lower": "64/17",
+          "Omega_squared": "17/4",
+          "W_D_squared_in_log16_units": "255/4112",
+          "direct_D_squared_in_log16_units": "4337/74273",
+          "direct_delta_D_squared_in_log16_units": "960/4369",
+          "epsilon": "1/4",
+          "evolved_projection_off_diagonal": "4/17",
+          "gibbs_ratio": "1/256",
+          "half_period_label": "pi*hbar/sqrt(Omega_squared)",
+          "logarithmic_mean_in_log16_units": "255/514",
+          "logrho_W_D_squared_in_log16_units": "255/1028",
+          "n": 2,
+          "p0": "256/257",
+          "p1": "1/257"
+        },
+        {
+          "M0_asymptotic_ratio": "1024/1025",
+          "M0_lower": "8192/1025",
+          "Omega_squared": "1025/64",
+          "W_D_squared_in_log16_units": "65535/33554944",
+          "direct_D_squared_in_log16_units": "33619457/68854810625",
+          "direct_delta_D_squared_in_log16_units": "107372544/13770962125",
+          "epsilon": "1/16",
+          "evolved_projection_off_diagonal": "32/1025",
+          "gibbs_ratio": "1/65536",
+          "half_period_label": "pi*hbar/sqrt(Omega_squared)",
+          "logarithmic_mean_in_log16_units": "65535/262148",
+          "logrho_W_D_squared_in_log16_units": "65535/2097184",
+          "n": 4,
+          "p0": "65536/65537",
+          "p1": "1/65537"
+        },
+        {
+          "M0_asymptotic_ratio": "1048576/1048577",
+          "M0_lower": "67108864/1048577",
+          "Omega_squared": "1048577/16384",
+          "W_D_squared_in_log16_units": "4294967295/1125899907104768",
+          "direct_D_squared_in_log16_units": "1125904201547777/4722375491172708646913",
+          "direct_delta_D_squared_in_log16_units": "4238682001244160/277786793598394626289",
+          "epsilon": "1/256",
+          "evolved_projection_off_diagonal": "1024/1048577",
+          "gibbs_ratio": "1/4294967296",
+          "half_period_label": "pi*hbar/sqrt(Omega_squared)",
+          "logarithmic_mean_in_log16_units": "4294967295/34359738376",
+          "logrho_W_D_squared_in_log16_units": "4294967295/17592186048512",
+          "n": 8,
+          "p0": "4294967296/4294967297",
+          "p1": "1/4294967297"
+        },
+        {
+          "M0_asymptotic_ratio": "274877906944/274877906945",
+          "M0_lower": "2251799813685248/274877906945",
+          "Omega_squared": "274877906945/1073741824",
+          "W_D_squared_in_log16_units": "18446744073709551615/633825300114114700782711341056",
+          "direct_D_squared_in_log16_units": "633825300132561444787701415937/1393796574918305151223384537723034008551425",
+          "direct_delta_D_squared_in_log16_units": "32451855365842672676556383453184/278759314983661030244676907544606801710285",
+          "epsilon": "1/65536",
+          "evolved_projection_off_diagonal": "524288/274877906945",
+          "gibbs_ratio": "1/18446744073709551616",
+          "half_period_label": "pi*hbar/sqrt(Omega_squared)",
+          "logarithmic_mean_in_log16_units": "18446744073709551615/295147905179352825872",
+          "logrho_W_D_squared_in_log16_units": "18446744073709551615/2475880078570760549932466176",
+          "n": 16,
+          "p0": "18446744073709551616/18446744073709551617",
+          "p1": "1/18446744073709551617"
+        },
+        {
+          "M0_asymptotic_ratio": "4722366482869645213696/4722366482869645213697",
+          "M0_lower": "1267650600228229401496703205376/4722366482869645213697",
+          "Omega_squared": "4722366482869645213697/4611686018427387904",
+          "W_D_squared_in_log16_units": "340282366920938463463374607431768211455/100433627766186892221372630771322662657932835016603905032192",
+          "direct_D_squared_in_log16_units": "100433627766186892221712913138243601120805913813676967591937/7588550360256754183282361949617888709645286724712999874174945257910381982318067713",
+          "direct_delta_D_squared_in_log16_units": "400171341760993687294496396536320648097738366331498381967360/29527433308392039623666778014077387975273489201217898343093172209768023277502209",
+          "epsilon": "1/4294967296",
+          "evolved_projection_off_diagonal": "68719476736/4722366482869645213697",
+          "gibbs_ratio": "1/340282366920938463463374607431768211456",
+          "half_period_label": "pi*hbar/sqrt(Omega_squared)",
+          "logarithmic_mean_in_log16_units": "340282366920938463463374607431768211455/10889035741470030830827987437816582766624",
+          "logrho_W_D_squared_in_log16_units": "340282366920938463463374607431768211455/98079714615416886934934209737619787751887534195902251008",
+          "n": 32,
+          "p0": "340282366920938463463374607431768211456/340282366920938463463374607431768211457",
+          "p1": "1/340282366920938463463374607431768211457"
+        }
+      ],
+      "scope": "small direct D and delta-D tails do not imply uniform evolved M0/M1; the direct projected route remains open"
+    }
+  },
+  "exploration_id": "EXP-000799",
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_number": "R-167",
+  "result_version": "v1.3",
+  "schema": "tect/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-independent-result/1.0",
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_common_alpha_topology_critical_graph_route_split_independent.py": "1c1922ea04ff81b94e62ca2cf2f36e5d4036d8b36df5e1b61ba836bac798c19d",
+    "strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-certificate-260810.md": "9e55c1e20615ae4a97dd57a701894d3301324dc234dd0bc1d262ba02f465fcc6",
+    "strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-manifest.json": "2b732db59ebc9e611ed14ad1a27ce88d8cf973afd14f1ec3a39603c625713a9d",
+    "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json": "0e6f46c9f3532bc69605a42c01146d5de85897cdc69082c8de29ee829fd0f51f"
+  },
+  "summary": {
+    "failed": 0,
+    "passed": 111,
+    "total": 111
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

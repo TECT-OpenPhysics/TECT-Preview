@@ -32,6 +32,7 @@ Tier profile: T6x4 T5x1 T1x1
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE | bounded coordinate bonds do not give a uniform half… | Infer fixed-beta, cutoff-uniform half-modular-strip |
 | NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY | the centered spatial weight is necessary | Delete `f_x^(3/4)` from the proved centered cubic graph |
 | NG-2026-08-09-PRE-A-CP1-CL8-RAW-PERIODIC-EO-RECTANGLE-QUOTIENT | a straight-routed block rectangle is not one raw… | Quotient an open `m`-by-`n` straight-routed macro |
 | NG-2026-08-09-PRE-A-CP1-CL8-UNIVERSAL-PERIODIC-QUADRATIC-SHADOW-GIBBS | the admitted macro domain has no universal positive… | Infer from symplecticity, global mixed invertibility, exact |

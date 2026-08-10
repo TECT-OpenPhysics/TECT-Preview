@@ -408,35 +408,48 @@ in volume and compact source, exhaustion independence, and an invariant
 Hamiltonian-derived algebra. Then identify both phasewise OS systems as KMS
 states of that one common dynamics.
 
-**Status:** OPEN (2026-08-10). R-167 v1.2 proves the load-bearing algebraic
-inputs: all cross bonds commute, the full kick factorizes exactly, and
-`q_x` is fixed while `p_x` gains `delta c sum_(y~x)q_y`. The onsite flow is
-support-diagonal, and v1.1 supplies the centered cubic graph multiplier. If a
-stable seminorm obeys
-`L_x'<=(1+C delta)L_x+J delta sum_(y~x)L_y`, the Trotter path coefficients
-have the desired factorial `exp(Ct)(Jt)^d/d!` form. Stability of that core,
-uniform graph-topology convergence, the invariant algebra, and common-alpha
-KMS identification remain unproved.
+**Status:** OPEN, NARROWED TO THE CRITICAL GRAPH TOPOLOGY (2026-08-10).
+`EXP-000799` / R-167 v1.3 proves the centered all-bond form estimate
+`B_delta^*K_XB_delta<=[1+C_b|delta|]K_X` in both orientations and the exact
+one-layer `q/p` commutator recurrence. Standard finite-volume strong Trotter
+convergence plus this endpoint form bound gives strong graph convergence for
+every `s<1/2`. However, the basic resolvent changes by norm exactly one for
+every nonzero kick, the ordinary onsite `q/p` Lipschitz class fails, and
+translated bumps reject every subcritical `s<1/2` onsite repair. The exact
+critical Q3 boundary layer further rejects every fixed Weyl-containing
+C-star-Leibniz seminorm that dominates a one-sided critical `p` commutator and
+has uniform `1+C|t|` onsite growth; see
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY`.
+The surviving obligation is a noncollapsing non-Leibniz analytic/Frechet or
+symmetric/state-weighted topology, followed by boundary/exhaustion Cauchy, the
+invariant Hamiltonian algebra, and common-alpha KMS identification. The new
+failures reject only their named point-norm, subcritical and fixed-Leibniz
+proof routes, not existence of weaker graph or normal dynamics.
 
 ### **PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY**
 
 **Statement:** On a preregistered faithful fixed-beta representation or
 separating tempered state class, truncate only the intersite coordinates and
 prove projected Duhamel locality for the finite-volume difference `D` together
-with a uniform bound on its first modular derivative `delta D`. Equivalently,
-prove uniform half-modular-strip multiplier bounds `M_0,M_1` for the structured
-truncated evolution. Use the arithmetic/logarithmic-mean theorem to obtain
+with a uniform bound on its first modular derivative `delta D`. Uniform
+half-modular-strip multiplier bounds `M_0,M_1` for the structured truncated
+evolution are a stronger sufficient option, not an equivalent requirement.
+Use the arithmetic/logarithmic-mean theorem to obtain
 two-sided GNS/strong-star convergence, then prove exhaustion independence,
 group law and Hamiltonian identification.
 
-**Status:** OPEN (2026-08-10). R-167 v1.2 proves the static and first-modular-
-derivative coordinate tails are `poly(L)exp(-aL^2)` for arbitrary `a>0`, and
-proves the exact topology and multiplier lemmas. If the remaining structured
-comparison grows no faster than `poly(L)exp(C_0TL^2)`, the scale
-`L_m=m^alpha`, `0<alpha<1/2`, closes both tail and factorial errors. An exact
-two-level fixture rules out replacing the structured multiplier by an
-arbitrary contraction. Common dynamics/KMS, beta independence and all
-zero-temperature consequences remain open.
+**Status:** OPEN, NARROWED TO DIRECT `D,delta D` (2026-08-10).
+`EXP-000799` / R-167 v1.3 proves a finite-volume two-orientation relative-
+unitary bound and resulting Gibbs trace-distance estimate from the v1.2
+coordinate tail. It also proves that the cutoff bond is not norm-`C1` for the
+onsite kinetic derivation and that the connected absolute half-strip condition
+`z beta J_L<1` collapses as `J_L=Theta(L^2)`. A Hamiltonian-generated
+two-level fixture has direct `D,delta D` tails tending to zero while its
+evolved `M_0,M_1` diverge, so the direct theorem is strictly weaker. The live
+gate is a volume/source-uniform preregistered separating local test class with
+direct `D,delta D` Cauchy, product/core density, exhaustion independence and
+group law. Common dynamics/KMS, beta independence and every zero-temperature
+consequence remain open.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 

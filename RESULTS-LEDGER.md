@@ -22,7 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-167](#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | Scoped T0 analytic/exact/executed/audited theorem, strengthened to v1.2 without a new result number. v1.0--v1.1 prove the exact second/three-half weighted-energy moments, centered cubic graph multiplier, neighboring-center comparison and prescribed-word heat bound. v1.2 proves that the fixed-`s` coefficientwise first-passage target fails on exact star/repeat fixtures although the full star resums to a unitary; a unique-path tree formula survives but a square leaves an alternate-path remainder. It also proves the arithmetic/logarithmic-mean Duhamel-to-GNS theorem, a structured modular multiplier lemma, and exponentially small coordinate-cutoff static/modular tails. The active alternatives are all-bond unitary Trotter graph locality or projected-Duhamel modular-`C1` locality. Common alpha/KMS, ground/GNS gap, continuum, empty-space comparison, C6, CP1 and Pre-A remain open |
+| [R-167](#r-167) | Weighted-energy, critical graph topology and thermodynamic-Cauchy route split | Scoped T0 analytic/exact/executed/audited theorem, strengthened to v1.3 without a new result number. v1.0--v1.2 prove the exact weighted-energy/cubic graph theorems, reject fixed-power first passage, and establish the modular-mean and coordinate-tail inputs. v1.3 proves centered all-bond kick graph stability, its exact one-layer commutator recurrence, a subcritical finite-volume graph-Trotter corollary and a direct finite-Gibbs relative-unitary estimate. Exact fixtures reject raw basic-resolvent point-norm continuity, ordinary and every `s<1/2` onsite Lipschitz class, and now also every fixed Weyl-containing C-star-Leibniz critical seminorm dominating a one-sided `p` commutator. They separately reject the coordinate-cutoff half-strip absolute route, the inference from direct `D,delta D` to evolved multipliers, and representation-independent C-star inference from one faithful strong-star topology. The live targets are a non-Leibniz analytic/Frechet or symmetric/state-weighted thermodynamic topology, or direct projected `D,delta D` locality. Common alpha/KMS, ground/GNS gap, continuum, empty-space comparison, C6, CP1 and Pre-A remain open |
 | [R-166](#r-166) | Sparse production radial-Gram decomposition and global owner bound | Scoped T4 analytic/exact/executed/audited production-fibre theorem, strengthened in v1.1 without a new result ID. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / single fresh-`4p` R-153 fibre, the exact Fierz split, Pauli nonresonance, radial bounds and direct coefficient inequality give an explicit rational polynomial whose unique global minimum lies in `70<G_*<71` and is `-4/5+18740524635403/439505584128000>-4/5`. Thus the owner plus source Hessian is strictly above `1/10`, the scoped R-164 reduction permits `rho=3/20`, and the R-165 annulus is closed. Exact simultaneous `sin(4x),sin(8x)` arithmetic gives Gram `[[5/4,1],[1,3/2]]` and ratio `3/8` at `(1,-1)`, registering that the coefficient-one lemma cannot be copied rootwise. Primary `40/40` and independent Fraction `37/37` audits pass. The complete joint owner, nonlinear/revisit feedback, low variables, removal, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-165](#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | Scoped T4 analytic/exact/executed/audited production-fibre theorem. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / fresh-`4p` R-153 fibre, whitened past amplitude `G` and final direction `alpha` obey `K_owner(g)[alpha,alpha] >= P(G)|alpha|^2` for one explicit rational quartic polynomial. A sharp `5/6` Fourier separation lemma, exact A1 covariance enclosures, and R-130 derivative envelopes prove the R-164 owner target `K_owner>=-9I/10` for `0<=G<=21` and `G>=274`, reducing this fibre's noncompact amplitude problem to the bounded open annulus `21<G<274`; its closed certification domain `21<=G<=274` is compact. Primary `38/38` and independent Fraction `30/30` audits pass; the deterministic five-page PDF passed all-page visual QA. The open annulus, other harmonics and roots, cross blocks, nonlinear/revisit feedback, low variables, regulator/removal uniformity, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-164](#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | Scoped T4 analytic/exact/executed/audited direct-chart theorem. For every finite R-104 zero-control chart, the R-141 legal force is the orthogonal projection of the complete centered terminal scalar onto predictable first Gaussian chaos, so its squared source-dual norm is at most the scalar variance with sharp constant one. A7 `L2` convergence and the A1/A11 point-covariance trace give a cutoff-, chart-length-, and linear/isometric-refinement-uniform bound on that variance along the registered sharp-cube/dyadic sequence. A7 centering also makes the direct anchor nonnegative. Therefore a complete direct owner bound `K_owner>=-(10/11-rho)G_src` yields `mu=-1/110+rho`, `epsilon_v=max(0,5/11-rho/4)`, `epsilon_6=3/20`, and constant `B_*/rho`, without separate anchor or origin-force assumptions. The complete production owner, nonzero feedback, shifted low base, arbitrary graph metric transport, random/nonlinear/revisit/pathwise scope, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
@@ -203,6 +203,8 @@ strengthens this result to v1.1 without allocating a new result number.
 no mathematical statement or boundary. `EXP-000798` adds the exact
 fixed-order response counterexample, all-order unitary repair, modular topology
 and coordinate-cutoff theorems and advances the same result to v1.2.
+`EXP-000799` adds the exact common-alpha topology split and advances the same
+result to v1.3.
 
 **Authority links.** The v1.1 `centered-weight cubic graph` and
 `prescribed-word` heat theorem are recorded under
@@ -213,12 +215,26 @@ R-167 v1.2 preserves those historical IDs and supersedes their active route by
 `PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE`
 and
 `PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY`.
+R-167 v1.3 retains both gate IDs, rejects the fixed Weyl-containing
+C-star-Leibniz realization of the critical `s=1/2` onsite orbit, and narrows
+the first to a non-Leibniz analytic/Frechet or symmetric/state-weighted
+thermodynamic topology. The second is narrowed to direct projected
+`D,delta D` locality on a preregistered separating local class.
 
 **Negative-route authorities.** The exact fixed-power star/repeat obstruction
 is registered as
 `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE`.
 The independent modular-multiplier obstruction is registered as
 `NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER`.
+The seven v1.3 topology and graph failures are registered as
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY`,
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY`,
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY`,
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE`,
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE`,
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE`,
+and
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY`.
 
 **Statement.** For the exact finite-volume ST8/Q3LOCK Hamiltonian with
 `chi,c,g>0`, `lambda>=0`, bounded source, and centered weight
@@ -300,15 +316,68 @@ coordinate-only bond cutoff and its first modular derivative
 `0<alpha<1/2`, closes the tail/factorial arithmetic conditionally on the still-
 open projected or modular-multiplier locality estimate.
 
+**v1.3 topology correction.** Write the exact Hamiltonian as a tensor-local
+onsite part plus the commuting cross-bond sector and let `K_X=sum f_x k_x`
+with `k_x>=1+p_x^2/(2chi)+gamma|q_x|^4`.  The complete bond kick fixes `q_x`
+and sends `p_x` to `p_x+delta c sum_(y~x)q_y`.  Weighted Cauchy--Schwarz and a
+shifted-square estimate give, in both time orientations,
+
+`B_delta^* K_X B_delta <= [1+C_b(mu)|delta|]K_X`,
+
+`C_b(mu)=1+c^2z^2 exp(mu)/(2chi sqrt(gamma))`.
+
+It also obeys the exact one-layer commutator recurrence for `q_x,p_x`.
+Interpolation closes finite-volume strong graph Trotter convergence for every
+`s<1/2` once the standard strong finite-volume product limit is used.  The
+endpoint and every thermodynamic boundary estimate remain open.
+
+The topology cannot be raw point norm: the local basic resolvent
+`R_x=(i+p_x)^(-1)` has kick distance exactly one for every nonzero step.  The
+quartic onsite flow also takes a momentum translation with `[p,W_a]=0` to a
+first commutator derivative containing
+`g(3a q^2-3a^2q+a^3)W_a`.  Translated bumps reject every one-sided graph power
+`s<1/2`. At the critical endpoint, the full eight-component one-site Q3 force
+has axis coefficient `G=g+3lambda`. For `W_a=exp(-ia p_0/hbar)` and
+`t_a=tau/a^2`, quartic coercivity and the exact Heisenberg boundary layer give
+
+`||[p_0,alpha_(t_a)(W_a)]K^(-1/2)|| >= G tau a-B_tau`.
+
+If a fixed C-star-Leibniz seminorm is finite on one nonzero `W_b`, dominates
+either one-sided critical `p` commutator, and grows as `1+C|t|` under the onsite
+flow, then `L(W_b^n)<=nL(W_b)` contradicts this bound for `a=nb` and fixed
+sufficiently large `tau`. Thus the literal two-one-sided critical seminorm and
+every such fixed Leibniz realization fail. Non-Leibniz analytic/Frechet,
+symmetric or state-weighted topologies and direct projected locality remain
+open.
+
+On the fixed-beta branch, bounded coordinate cutoff is not norm-`C1` for the
+kinetic onsite derivation, and the connected absolute half-strip condition
+`z beta J_L<1` collapses because `J_L=Theta(L^2)`.  A weaker direct theorem
+does survive: if `K=H-W` and `rho` is the finite Gibbs density of `H`, the two
+relative-unitary orientations give
+
+`||(U_K-U_H)rho^(1/2)||_2,
+ ||rho^(1/2)(U_K-U_H)||_2
+ <=|t|hbar^(-1)phi(W^2)^(1/2)`
+
+and hence trace distance at most twice that quantity.  The exact relative-
+entropy identity plus the v1.2 Gaussian tail proves finite-volume approximate
+state invariance.  A two-level fixture shows that small direct `D,delta D`
+tails do not imply uniform evolved half-strip multipliers, so the direct route
+is strictly weaker and remains open.  A separate `l_infinity` tail-projection
+fixture shows why one faithful strong-star topology is not an abstract C-star
+limit.
+
 **Boundary.** The theorem is finite-volume and graph-domain based. It does not
-prove graph-Lipschitz stability of the exact onsite flow, graph-topology
-Trotter convergence, the projected Duhamel or structured modular-multiplier
-estimate, a common thermodynamic automorphism, common-alpha KMS states,
+construct a surviving non-Leibniz analytic/Frechet or symmetric/state-weighted
+critical topology, prove thermodynamic graph Cauchy, direct projected
+`D,delta D` locality on a
+separating common core, a common thermodynamic automorphism, common-alpha KMS states,
 algebraic ground states, a GNS or physical mass gap, regulator removal,
 continuum, a physical empty/preparation reference, a below-empty sign, C6,
 CP1, Sector A or Pre-A.
 
-**Proven in:** C6 / [R-167 v1.2 proof note](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-modular-cutoff-unitary-resummation-route-split-260810-v0.3.tex.txt).
+**Proven in:** C6 / [R-167 v1.3 proof note](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-common-alpha-topology-critical-graph-route-split-260810-v0.4.tex.txt) / [verified PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-common-alpha-topology-critical-graph-route-split-260810-v0.4.pdf).
 
 **Tier:** T0 (scoped finite-volume analytic theorem and conditional Cauchy
 reduction; no common-alpha promotion).

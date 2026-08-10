@@ -9,6 +9,13 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY](#ng-2026-08-10-pre-a-st8-q3lock-raw-local-resolvent-point-norm-bond-kick-continuity) | use the raw local basic-resolvent norm as a point-continuous topology for the exact cross-bond kick | for `R_x=(i+p_x)^(-1)`, every nonzero kick gives `||(i+p_x+delta c q_y)^(-1)-R_x||=1` in the declared `B_delta^* A B_delta` convention. Retain each fixed shear automorphism, but use a critical energy-graph, strict, or normal topology rather than point-norm Trotter continuity |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY](#ng-2026-08-10-pre-a-st8-q3lock-unweighted-onsite-qp-lipschitz-stability) | propagate the ordinary bounded `q/p` commutator Lipschitz class through the exact quartic onsite flow | a momentum Weyl translation starts with `[p,W_a]=0`, while its first onsite derivative contains the unbounded multiplier `g(3a q^2-3a^2q+a^3)W_a`. Use an energy-damped critical class; this does not reject the onsite unitary |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY](#ng-2026-08-10-pre-a-st8-q3lock-subcritical-energy-damped-onsite-lipschitz-stability) | repair the onsite `q/p` Lipschitz class with a fixed one-sided graph power `K^(-s)`, `s<1/2` | translated bumps give `q^2K^(-s)~R^(2-4s)`, so both one-sided repairs remain unbounded below the critical exponent. The endpoint `s=1/2` survives this scalar power count, but the successor critical boundary-layer result rejects every fixed Weyl-containing one-sided-dominating C-star-Leibniz realization; non-Leibniz and state-weighted routes remain open |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE](#ng-2026-08-10-pre-a-st8-q3lock-coordinate-cutoff-half-modular-strip-absolute-closure) | obtain fixed-beta uniform half-modular-strip multipliers from the bounded coordinate-cutoff bond and a connected absolute expansion | `[p^2,Q_L]` is unbounded, so the cutoff is not automatically norm-`C1`; even after an analytic repair the absolute expansion requires `z beta J_L<1`, while `J_L=Theta(cL^2)`. Retain direct projected `D,delta D` estimates or a nonabsolute resummation |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE](#ng-2026-08-10-pre-a-st8-q3lock-small-d-delta-d-uniform-half-strip-multiplier-inference) | infer uniform evolved half-strip `M_0,M_1` bounds from small direct Duhamel `D,delta D` tails | a two-level Hamiltonian perturbation has its perturbation, modular derivative, direct evolved difference and direct modular derivative all tending to zero, while the evolved projection has `M_0` growing as `2 exp(beta n/4)/n`. Direct projected locality is strictly weaker and remains viable |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE](#ng-2026-08-10-pre-a-st8-q3lock-faithful-representation-strongstar-abstract-cstar-inference) | promote strong-star convergence in one selected faithful representation to a representation-independent C-star limit | tail projections in `l_infinity` converge strong-star to zero in the faithful multiplication representation, but to `0 direct-sum 1` after adjoining a nonprincipal-ultrafilter character while faithfulness is retained. Keep fixed-representation W-star conclusions separate from a common abstract C-star alpha |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY](#ng-2026-08-10-pre-a-st8-q3lock-critical-one-sided-energy-damped-leibniz-onsite-stability) | close the critical onsite step with one fixed Weyl-containing C-star-Leibniz seminorm that dominates a one-sided `p`-commutator | for `W_a=exp(-ia p_0/hbar)` and `t_a=tau/a^2`, the full Q3 onsite flow gives `||[p_0,alpha_(t_a)(W_a)]K^(-1/2)||>=(g+3lambda)tau a-B_tau`; Leibniz growth of `W_b^n` is only linear with slope `L(W_b)/b`, yielding a contradiction. Retain non-Leibniz analytic/Frechet, symmetric or state-weighted, and direct projected routes |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE](#ng-2026-08-10-pre-a-st8-q3lock-fixed-s-coefficientwise-first-passage-branch-response) | bound every fixed-order first-passage branch/repeat response in the same finite graph power before resumming the exact bond subflow | exact star commutators grow as a product of one leaf coordinate per branch, so three leaves defeat `s=1/2` and four defeat `s=3/4`; repeated edges do the same. The full star nevertheless resums to a unitary phase. Retain the unique-path tree theorem and replace the false coefficient target by all-bond unitary Trotter or cut/forest resummation |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER](#ng-2026-08-10-pre-a-st8-q3lock-static-modular-tail-arbitrary-bounded-multiplier) | multiply a small static cutoff tail by an arbitrary bounded evolved observable using only the tail's first modular derivative | a two-level Gibbs fixture has a self-adjoint tail whose square expectation tends to zero and whose modular derivative vanishes, yet its commutator with a contraction has divergent Duhamel norm and dual expectation. Require a structured half-modular-strip multiplier bound or direct projected `D,delta D` locality |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY](#ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity) | delete the centered spatial weight from the cubic graph multiplier while keeping a support-location-uniform constant | a translated compact bump forces every unweighted `q_x^3 A_x^(-3/4)` constant to grow at least as `f_x^(-3/4)`. Retain the proved weighted multiplier and the exact neighboring-center comparison; fixed-site boundedness and recentered product locality remain open |
@@ -366,6 +373,142 @@ structured half-strip multiplier bound for the truncated evolution, or direct
 projected Duhamel estimates for both `D` and `delta D`. The exact
 arithmetic/logarithmic-mean theorem still converts those estimates into a
 two-sided GNS topology; KMS states and common dynamics are not rejected.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-raw-local-resolvent-point-norm-bond-kick-continuity"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY -- the cross-bond shear is not point-norm continuous on a basic resolvent
+
+**Failure mode.** Use the raw local basic-resolvent norm as the point-continuous
+topology for an all-bond Lie--Trotter construction.
+
+**Evidence.** With `beta_delta(A)=B_delta^*AB_delta`, the exact kick sends
+`p_x` to `p_x+delta c q_y`. Thus `R_x=(i+p_x)^(-1)` is sent to
+`(i+p_x+delta c q_y)^(-1)`. The pair
+`p_x,q_y` strongly commutes and has joint spectrum `R^2`. The squared
+denominator minus numerator in the resolvent-difference ratio is exactly
+`(1+uv)^2`; choosing `uv=-1` proves norm distance one for every
+`delta!=0`.
+
+**Consequence.** Every fixed shear may still act as a resolvent-algebra
+automorphism. What fails is point-norm continuity of this subflow and any
+Trotter proof which silently assumes it. Critical graph, strict and normal
+topologies and existence of the full Hamiltonian dynamics remain open.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-unweighted-onsite-qp-lipschitz-stability"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY -- quartic onsite flow leaves the ordinary bounded q/p Lipschitz class
+
+**Failure mode.** Require the exact quartic onsite flow to preserve the
+ordinary operator-norm seminorm generated by bounded `[q_x,A]` and `[p_x,A]`
+with local `1+C|t|` growth.
+
+**Evidence.** In the scalar submodel
+`h=p^2/(2chi)+gq^4/4`, take `W_a=exp(-ia p/hbar)`. Although `[p,W_a]=0`, the
+strong Schwartz-core derivative at zero of `[p,alpha_t(W_a)]` is
+`g(3a q^2-3a^2q+a^3)W_a`, an unbounded quadratic multiplier. A uniform bounded
+difference quotient would give it a bounded extension, a contradiction.
+
+**Consequence.** The ordinary bounded `q/p` Lipschitz core cannot close the
+onsite step. This is not an onsite-unitary or dynamics no-go; an energy-damped
+critical topology remains possible.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-subcritical-energy-damped-onsite-lipschitz-stability"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY -- every fixed s below one half misses the onsite quadratic derivative
+
+**Failure mode.** Repair the preceding onsite seminorm by placing a fixed
+one-sided graph factor `K^(-s)` with `s<1/2` next to the commutator.
+
+**Evidence.** On compact bumps translated to amplitude `R`, the quartic
+energy scales as `K~gamma R^4`, while the leading multiplier in the exact
+onsite derivative scales as `R^2`. Hence `q^2K^(-s)~R^(2-4s)` is unbounded for
+every `s<1/2`; the adjoint fixture gives the opposite orientation.
+
+**Consequence.** Subcritical energy damping does not stabilize the onsite
+Lipschitz class. At `s=1/2` the scalar exponent is neutral, but the successor
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY`
+rejects every fixed Weyl-containing one-sided-dominating C-star-Leibniz
+realization. Non-Leibniz analytic/Frechet, symmetric or state-weighted routes
+remain open.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-coordinate-cutoff-half-modular-strip-absolute-closure"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE -- bounded coordinate bonds do not give a uniform half modular strip
+
+**Failure mode.** Infer fixed-beta, cutoff-uniform half-modular-strip
+multiplier bounds from bounded coordinate-cutoff bonds and a connected
+absolute Taylor expansion.
+
+**Evidence.** For `Q_L(q)=eta(|q|/L)q`, the kinetic commutator
+`[p^2,Q_L]=-i hbar(p.DQ_L+DQ_L.p)` is unbounded, so boundedness of the bond does
+not supply norm-`C1` stability. Even after assuming a separate analytic
+repair, the degree-`z` connected expansion has radius parameter
+`r=2zJ_L|Im t|/hbar`; the half strip requires `z beta J_L<1`. Since the bond
+norm is `J_L=Theta(cL^2)`, no fixed positive beta survives `L->infinity` by
+this method.
+
+**Consequence.** The absolute half-strip proof route is closed, not the
+projected equilibrium route. Direct `D,delta D` estimates or a nonabsolute
+resummation remain possible.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-small-d-delta-d-uniform-half-strip-multiplier-inference"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE -- direct modular tails are strictly weaker than evolved multipliers
+
+**Failure mode.** Treat small direct Duhamel norms of an evolved difference
+`D` and its first modular derivative as equivalent to uniform half-strip
+`M_0,M_1` bounds for the evolved observable.
+
+**Evidence.** Let `H_n=diag(0,n)`, `K_n=H_n+epsilon_n sigma_x`,
+`epsilon_n=exp(-beta n/4)`, `A=P_0`, and
+`t_n=pi hbar/sqrt(n^2+4epsilon_n^2)`. The perturbation, its modular derivative,
+`D_n=tau_(t_n)^(K_n)(P_0)-P_0`, and `[log rho_n,D_n]` all tend to zero in
+Duhamel norm. Nevertheless the off-diagonal matrix element gives
+`M_0(tau_(t_n)^(K_n)(P_0))` asymptotic lower bound
+`2 exp(beta n/4)/n`, which diverges; `M_1` diverges faster.
+
+**Consequence.** Uniform evolved multipliers are a stronger sufficient route,
+not an equivalent reformulation. Direct projected `D,delta D` locality on a
+separating test class remains the live secondary gate.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-faithful-representation-strongstar-abstract-cstar-inference"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE -- one faithful strong-star topology is not an abstract C-star limit
+
+**Failure mode.** Promote convergence in one selected faithful normal
+representation to a representation-independent C-star limit without an
+additional norm, strict-topology, or universal-algebra argument.
+
+**Evidence.** In `l_infinity(N)`, the tail projections
+`f_n=1_{k>=n}` converge strong-star to zero in the faithful multiplication
+representation on `l2(N)`. Adjoin a nonprincipal-ultrafilter character. The
+direct sum is still faithful, but every cofinite tail has character value one,
+so the same sequence converges strong-star to `0 direct-sum 1`.
+
+**Consequence.** A preregistered fixed-beta W-star topology can support a
+scoped normal result, but it cannot silently become a phase- and
+beta-independent abstract C-star `alpha`. Common Hamiltonian dynamics remains
+open.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-critical-one-sided-energy-damped-leibniz-onsite-stability"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY -- the fixed one-sided-dominating critical Leibniz route fails
+
+**Failure mode.** Close the exact quartic onsite step with one fixed
+star-symmetric C-star-Leibniz seminorm on a Weyl-containing local algebra,
+finite on a nonzero momentum Weyl `W_b`, dominating either one-sided critical
+`p_0` commutator, and growing by at most `1+C|t|` under the onsite flow.
+
+**Evidence.** For the full one-site eight-component Q3LOCK onsite Hamiltonian,
+put `K=h-inf(spec h)+1`, `W_a=exp(-ia p_0/hbar)` and `t_a=tau/a^2`.  The exact
+Q3 force has leading axis coefficient `G=g+3lambda`.  Quartic coercivity and
+the exact Heisenberg equations give
+`||[p_0,alpha_(t_a)(W_a)]K^(-1/2)||>=G tau a-B_tau`, where `B_tau` is finite
+and independent of `a`.  On the other hand, the Leibniz rule gives
+`L(W_b^n)<=nL(W_b)`. Taking `a=nb` and fixed
+`tau>L(W_b)/(c_p G b)` makes the lower linear slope exceed the proposed upper
+slope while `t_a->0`.  Exact independent fixtures give `G=51/35` and Q3
+backward jets `51a^3/35,0,-32112a^5/8575`; the scalar jets are
+`a^3,0,-3a^5,0,27a^7`.
+
+**Consequence.** The literal critical two-one-sided seminorm and every fixed
+C-star-Leibniz enlargement with the stated domination fail.  This does not
+reject non-Leibniz analytic or Frechet scales, symmetric or state-weighted
+topologies with a separate energy-tail theorem, direct projected `D,delta D`
+locality, or existence of the full dynamics.
 
 <a id="ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity"></a>
 ### NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY -- the centered spatial weight is necessary

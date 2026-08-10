@@ -1,0 +1,121 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-COMMON-ALPHA-TOPOLOGY-CRITICAL-GRAPH-ROUTE-v0",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "parent_explorations": [
+    "EXP-000792",
+    "EXP-000794",
+    "EXP-000795",
+    "EXP-000796",
+    "EXP-000798"
+  ],
+  "exploration_id": "EXP-000799",
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_version": "v1.3",
+  "result_number": "R-167",
+  "claim_bearing": false,
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY"
+  ],
+  "authority": "R-167 v1.3 is an additive T0 topology and critical-graph route split, not a new result number. The exact all-bond kick has volume/source-uniform centered energy-graph stability and a one-layer q/p commutator recurrence. Finite-volume Lie--Trotter products therefore converge in subcritical graph powers once ordinary strong convergence and the endpoint graph bound are supplied. However, the same kick is discontinuous in the raw local basic-resolvent norm; the exact quartic onsite flow destroys the unweighted, every subcritical s<1/2, and every fixed Weyl-containing C-star-Leibniz critical seminorm that dominates a one-sided p-commutator; and the coordinate cutoff does not supply a fixed-beta half-modular-strip absolute expansion. The surviving common-dynamics obligations require a non-Leibniz analytic/Frechet or symmetric/state-weighted critical topology with a thermodynamic Cauchy theorem, or direct projected D and delta-D locality in one preregistered topology.",
+  "model": {
+    "dimension": 3,
+    "components_per_site": 8,
+    "lattice_degree": 6,
+    "parameters": "chi,c,g>0; lambda>=0; r real; |h|<=h0",
+    "onsite_split": "K_X=sum_z f_z k_z with k_z>=1+p_z^2/(2chi)+gamma|q_z|^4 and f_z/f_y in [exp(-mu),exp(mu)] on neighboring sites",
+    "bond_split": "V_cross=-c sum_<xy>q_x.q_y and B_delta=exp(-i delta V_cross/hbar)"
+  },
+  "all_bond_centered_graph_theorem": {
+    "canonical_action": "B_delta^*q_xB_delta=q_x and B_delta^*p_xB_delta=p_x+delta c sum_(y~x)q_y; all cross-bond factors commute exactly.",
+    "weighted_neighbor_bound": "sum_x f_x|sum_(y~x)q_y|^2<=z^2 exp(mu)sum_y f_y|q_y|^2<=z^2 exp(mu)K_X/(2sqrt(gamma)).",
+    "form_bound": "For |delta|<=1, B_(+/-delta)^*K_XB_(+/-delta)<=[1+C_b(mu)|delta|]K_X, C_b(mu)=1+c^2z^2exp(mu)/(2chi sqrt(gamma)).",
+    "graph_bound": "For 0<=s<=1/2, ||K_X^sB_(+/-delta)K_X^(-s)||<=[1+C_b(mu)|delta|]^s. A fully conjugated K^s A K^(-s) norm may use both factors and cost power 2s, whereas each orientation in N_s(C)=||CK^(-s)||+||K^(-s)C|| costs only power s.",
+    "commutator_recurrence": "For beta_delta(A)=B_delta^*AB_delta, [q_x,beta_delta(A)]=beta_delta([q_x,A]) and [p_x,beta_delta(A)]=beta_delta([p_x,A]-delta c sum_(y~x)[q_y,A]).",
+    "scope": "This is a finite-volume form and bond-step spatial theorem. It is not onsite seminorm stability, thermodynamic Cauchy or common alpha."
+  },
+  "finite_volume_trotter_graph_corollary": {
+    "statement": "The tensor-local onsite flow is an exact K_X graph isometry. If the usual finite-volume Lie--Trotter products converge strongly and have the proved uniform K_X^(1/2) product bound, interpolation first gives K_X^s graph convergence on D(K_X^(1/2-s)); uniform K_X^s T_N K_X^(-s) bounds then extend it by density to D(K_X^s), for every 0<=s<1/2.",
+    "endpoint": "The argument uses ||K^s eta||<=||eta||^(1-2s)||K^(1/2)eta||^(2s), the graph-core density of D(K^(1/2-s)) in D(K^s), and does not close s=1/2.",
+    "scope": "No volume/exhaustion limit follows from this finite-volume corollary."
+  },
+  "raw_resolvent_point_norm_counterexample": {
+    "observable": "R_x=(i+p_x)^(-1)",
+    "kick": "With beta_delta(A)=B_delta^*AB_delta and B_delta^*p_xB_delta=p_x+delta c q_y, beta_delta(R_x)=(i+p_x+delta c q_y)^(-1) for one neighboring component.",
+    "exact_norm": "Because p_x and q_y strongly commute with joint spectrum R^2, the squared denominator minus the squared numerator in the resolvent-difference ratio is (1+uv)^2. Taking uv=-1 gives ||beta_delta(R_x)-R_x||=1 for every delta!=0.",
+    "scope": "Each fixed kick can still act as a resolvent-algebra automorphism. The result rejects point-norm continuity of this subflow, not weaker graph, strict or W-star dynamics and not existence of the full Hamiltonian flow."
+  },
+  "onsite_lipschitz_counterexample": {
+    "fixture": "In one component take h=p^2/(2chi)+gq^4/4 and W_a=exp(-ia p/hbar). Then [p,W_a]=0 but d/dt at t=0 of [p,alpha_t(W_a)] equals [U'(q)-U'(q-a)]W_a=g(3a q^2-3a^2q+a^3)W_a.",
+    "unweighted_verdict": "An operator-norm q/p Lipschitz estimate with 1+C|t| growth is impossible because the strong core derivative is an unbounded quadratic multiplier.",
+    "subcritical_verdict": "On translated bumps K is asymptotic to gamma q^4, so q^2K^(-s) is unbounded for every s<1/2. Both one-sided subcritical graph repairs fail this first-variation test.",
+    "critical_boundary": "s=1/2 survives scalar power counting but not the fixed Leibniz route. The separate critical-half theorem rejects any fixed Weyl-containing C-star-Leibniz seminorm that dominates either one-sided p-commutator and has uniform 1+C|t| onsite growth. Non-Leibniz analytic/Frechet and symmetric or state-weighted critical topologies remain open."
+  },
+  "critical_half_leibniz_counterexample": {
+    "setup": "For the full one-site eight-component Q3LOCK onsite Hamiltonian h, set K=h-inf(spec h)+1, W_a=exp(-ia p_0/hbar), t_a=tau/a^2, and G=g+3lambda.",
+    "force": "partial_0 V4=G q_0^3-(3lambda/2)q_0^2 sum_(j~0)q_j+lambda q_0 sum_(j~0)q_j^2-(lambda/2)sum_(j~0)q_j^3.",
+    "boundary_layer": "Quartic coercivity and exact Heisenberg equations give ||[p_0,alpha_(t_a)(W_a)]K^(-1/2)||>=G tau a-B_tau, with B_tau finite and independent of a.",
+    "leibniz_contradiction": "If a fixed star-symmetric C-star-Leibniz seminorm L is finite on one nonzero W_b, dominates either one-sided critical p-commutator, and satisfies L(alpha_t(A))<=(1+C|t|)L(A), then L(W_b^n)<=nL(W_b). Taking a=nb and fixed tau>L(W_b)/(c_p G b) contradicts the boundary-layer lower bound as n tends to infinity.",
+    "exact_fixture": "For g=3/5, lambda=2/7, chi=7/4, G=51/35 and the backward Q3 Hamilton vector field gives Dp_0=(51/35)a^3, D^2p_0=0, D^3p_0=-(32112/8575)a^5. The scalar g=chi=1 fixture has jets a^3,0,-3a^5,0,27a^7.",
+    "scope": "This rejects the fixed Weyl-containing C-star-Leibniz critical route only. It does not reject non-Leibniz analytic or Frechet scales, symmetric or state-weighted topologies with energy tails, direct projected D,delta-D locality, or existence of the full dynamics."
+  },
+  "coordinate_cutoff_half_strip_boundary": {
+    "norm_c1_failure": "For a smooth bounded coordinate cutoff Q_L(q), [p^2,Q_L(q)] contains p.DQ_L+DQ_L.p and is unbounded. Boundedness of the cutoff bond alone therefore does not make it norm-C1 for the quartic onsite derivation.",
+    "absolute_radius": "Even after an auxiliary analytic repair, a degree-z connected absolute expansion with bond norm J_L has generating parameter r=2zJ_L|Im t|/hbar. On the half modular strip |Im t|=beta hbar/2 this requires z beta J_L<1.",
+    "cutoff_limit": "J_L=Theta(cL^2), so no fixed beta>0 survives L to infinity through this absolute expansion. This is a proof-route boundary, not a no-go for direct projected D,delta D locality or nonabsolute resummation."
+  },
+  "direct_relative_unitary_theorem": {
+    "setup": "At finite volume and fixed beta let rho=Z^(-1)exp(-beta H), K=H-W, U_H=exp(-itH/hbar), U_K=exp(-itK/hbar), and rho_t=U_K rho U_K^*. The direct theorem is first proved for bounded W. For the quadratic coordinate tail choose bounded outer cutoffs |W_M|<=|W| on the common closed forms. Their uniform infinitesimal quartic-form bound and form-core convergence imply K_M=H-W_M -> K in strong resolvent sense by Kato form convergence; Gaussian domination gives both Hilbert--Schmidt tail orientations tending to zero. Strong unitary convergence against the Hilbert--Schmidt Gibbs vectors passes the bounds to W. The entropy identity is then obtained directly from unitary entropy invariance and K-energy conservation, while its exponential bound uses the entropy variational inequality, not an unproved entropy-cutoff limit.",
+    "unbounded_tail_hypotheses": "For each fixed finite Lambda and fixed beta: H and H-W_L share the common quartic form domain; |W_L-W_(L,M)|<=cz|Lambda|M^(-2)sum_x|q_x|^4 gives form-norm cutoff convergence; the Gibbs state has finite H-energy, phi(W_L^2)<infinity, and the displayed exponential W_L moment for the entropy bound.",
+    "two_orientations": "||(U_K-U_H)rho^(1/2)||_2 and ||rho^(1/2)(U_K-U_H)||_2 are each at most |t|hbar^(-1)phi(W^2)^(1/2).",
+    "state_distance": "||U_K rho U_K^*-rho||_1<=2|t|hbar^(-1)phi(W^2)^(1/2).",
+    "relative_entropy": "S(U_K rho U_K^*||rho)=beta[rho_t(W)-rho(W)]; for theta>beta it is at most beta/(theta-beta) log phi(exp(theta[W-phi(W)])).",
+    "initial_analytic_corollary": "For an initial A with bounded half-modular conjugates A_-=rho^(-1/2)A rho^(1/2) and A_+=rho^(1/2)A rho^(-1/2), the direct D and D^* GNS differences are bounded by the same tail times ||A||+||A_-/+||. This needs only initial-test control, not uniform half-strip bounds for the evolved truncated multiplier.",
+    "scope": "This closes fixed-finite-volume fixed-beta coordinate-tail approximate state invariance as L tends to infinity and a conditional initial-analytic GNS estimate. Its constants may depend on Lambda and beta. It does not provide a volume-uniform separating local analytic class, products, exhaustion, group law or common alpha."
+  },
+  "small_direct_tail_large_multiplier_counterexample": {
+    "fixture": "Let H_n=diag(0,n), rho_n proportional to exp(-beta H_n), epsilon_n=exp(-beta n/4), K_n=H_n+epsilon_n sigma_x, A=P_0, and t_n=pi hbar/sqrt(n^2+4epsilon_n^2).",
+    "small_quantities": "The perturbation W_n=-epsilon_n sigma_x and its first modular derivative tend to zero in Duhamel norm. The direct differences D_n=tau_(t_n)^(K_n)(P_0)-P_0 and [log rho_n,D_n] also tend to zero in Duhamel norm.",
+    "failure": "The off-diagonal entry of tau_(t_n)^(K_n)(P_0) makes M_0 at least asymptotic to 2exp(beta n/4)/n, and M_1 diverges faster.",
+    "scope": "Direct D,delta D convergence is strictly weaker than uniform evolved M_0,M_1. The counterexample rejects the inference, not the direct route."
+  },
+  "representation_topology_boundary": {
+    "fixture": "In A=l_infinity(N), f_n=1_{k>=n} tends strong-star to zero in the faithful multiplication representation on l2(N). After adjoining a nonprincipal-ultrafilter character, the same faithful representation has f_n tending strong-star to 0 direct-sum 1.",
+    "consequence": "Strong-star convergence in one selected faithful representation is not an abstract C-star limit and cannot by itself create a phase- and beta-independent common alpha.",
+    "scope": "The fixed-beta modular route remains useful for a preregistered faithful W-star phase envelope and later KMS identification."
+  },
+  "active_routes": {
+    "primary_gate": "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "primary_narrowed_obligation": "Construct a preregistered noncollapsing non-Leibniz analytic/Frechet or symmetric/state-weighted critical topology not covered by the one-sided Leibniz no-go, prove its onsite and bond propagation plus volume/exhaustion Cauchy theorem, and identify the invariant Hamiltonian algebra.",
+    "secondary_gate": "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "secondary_narrowed_obligation": "Prove direct projected D and delta-D locality on a preregistered volume/source-uniform separating local test class, including product/core density, exhaustion and group law. Uniform evolved M_0,M_1 is a stronger sufficient route, not an equivalent requirement, and the failed coordinate-cutoff half-strip absolute expansion must not replace the direct theorem.",
+    "ground_precursor": "Finite-volume ground inequalities may still yield positive-energy functionals for the common local derivation on a bounded smooth core, but closability/exponentiation is required before calling them algebraic ground states or defining a GNS gap."
+  },
+  "status": "PARTIALLY RESOLVED: THE ALL-BOND KICK CENTERED GRAPH FORM AND ONE-LAYER COMMUTATOR THEOREMS ARE CLOSED, AS IS SUBCRITICAL FINITE-VOLUME GRAPH TROTTER CONVERGENCE CONDITIONAL ON THE STANDARD STRONG PRODUCT LIMIT. RAW BASIC-RESOLVENT POINT-NORM CONTINUITY, UNWEIGHTED AND s<1/2 ONSITE LIPSCHITZ STABILITY, THE FIXED ONE-SIDED-DOMINATING C-STAR-LEIBNIZ CRITICAL ROUTE, AND THE COORDINATE-CUTOFF HALF-STRIP ABSOLUTE ROUTE FAIL. NON-LEIBNIZ OR STATE-WEIGHTED CRITICAL THERMODYNAMIC CAUCHY, DIRECT PROJECTED MODULAR-C1 LOCALITY, COMMON ALPHA/KMS, GROUND, GAP, CONTINUUM, EMPTY-REFERENCE AND PRE-A REMAIN OPEN.",
+  "closed_subgates": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-CENTERED-ENERGY-GRAPH-FORM-STABILITY",
+    "PA-CP1-ST8-Q3LOCK-BOND-KICK-QP-ONE-LAYER-COMMUTATOR-RECURRENCE",
+    "PA-CP1-ST8-Q3LOCK-SUBCRITICAL-FINITE-VOLUME-STRONG-GRAPH-TROTTER-COROLLARY"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "verification": {
+    "proof_grade": "ANALYTIC exact finite-volume form, CCR, resolvent and quartic-flow calculations; exact topology counterexamples; conditional finite-volume interpolation corollary; independent exact-arithmetic implementation",
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_common_alpha_topology_critical_graph_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_common_alpha_topology_critical_graph_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_common_alpha_topology_critical_graph_route_split_verify.py"
+  },
+  "no_overclaim": "This package rejects the fixed one-sided-dominating C-star-Leibniz critical route but does not reject every critical topology and does not prove a non-Leibniz or state-weighted s=1/2 onsite closure, thermodynamic graph Cauchy, direct projected D or delta-D locality, a phase- and beta-independent common C-star alpha, common-alpha KMS identification, algebraic ground states, a GNS or physical mass gap, regulator removal, continuum, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A."
+}

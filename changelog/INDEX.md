@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**577 accepted events** · latest 25 shown below · machine locator: `index.json`
+**578 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-10 | `20260810-advance-r-167-to-v1-3-and-reject-the-fixed-crit` — [Advance R-167 to v1.3 and reject the fixed critical Leibniz onsite route] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-advance-r-167-to-v1-3-and-reject-the-fixed-crit) |
 | 2026-08-10 | `20260810-exp-000798-r-167-v1-2-modular-cutoff-and-unitar` — [EXP-000798 / R-167 v1.2: modular cutoff and unitary resummation route split] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-exp-000798-r-167-v1-2-modular-cutoff-and-unitar) |
 | 2026-08-10 | `20260810-exp-000796-r-167-v1-1-weighted-cubic-graph-and` — [EXP-000796 / R-167 v1.1: weighted cubic graph and product-locality split] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-exp-000796-r-167-v1-1-weighted-cubic-graph-and) |
 | 2026-08-10 | `20260810-exp-000795-corrects-r-167-cubic-domain-scope-20` — [EXP-000795 corrects R-167 cubic-domain scope] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-exp-000795-corrects-r-167-cubic-domain-scope-20) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-04 | `20260804-exp-000768-closes-fixed-beta-q3-nelson-pressure` — [EXP-000775 closes fixed-beta Q3 Nelson pressure and strict specific KL density] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 | 2026-08-04 | `20260804-exp-000767-closes-beta-independent-compact-circ` — [EXP-000774 closes beta-independent compact-circle Q3 Hamiltonian and strict ground reference advantage] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 | 2026-08-04 | `20260804-exp-000766-closes-fixed-torus-q3-thermal-os-kms` — [EXP-000773 closes fixed-torus Q3 thermal OS/KMS, domain Markov, and strict Gaussian-reference free-energy ordering] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
-| 2026-08-04 | `20260804-exp-000765-centered-nodal-q3-nelson-and-full-fi` — [EXP-000772 centered-nodal Q3 Nelson and full fixed-band Weyl limit] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 
 ## Post-cutover pages
 
@@ -49,4 +49,4 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 569–577 | 9 | [000569-000618.md](pages/000569-000618.md) |
+| 569–578 | 10 | [000569-000618.md](pages/000569-000618.md) |

@@ -744,6 +744,27 @@ bounded multipliers still fail. The two active alternatives are now
 `PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE`
 and
 `PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY`.
+EXP-000799 advances R-167 to v1.3 without a new result number and makes this
+topology fork exact. The complete bond kick obeys a centered two-sided energy-
+graph form bound and an exact one-layer `q/p` commutator recurrence; standard
+finite-volume strong Trotter convergence therefore lifts to every graph power
+`s<1/2`. In contrast, every nonzero kick moves the local basic resolvent by
+norm exactly one, and the quartic onsite derivative rejects both the ordinary
+and every subcritical `s<1/2` `q/p` Lipschitz class. At the critical endpoint,
+the exact one-site Q3 boundary layer
+`||[p_0,alpha_(tau/a^2)(W_a)]K^(-1/2)|| >= (g+3lambda)tau a-B_tau`
+contradicts every fixed Weyl-containing C-star-Leibniz seminorm that dominates
+a one-sided critical `p` commutator and has `1+C|t|` onsite growth. The
+all-bond gate is therefore narrowed further to a non-Leibniz analytic/Frechet
+or symmetric/state-weighted thermodynamic topology and boundary Cauchy. On the
+equilibrium branch, coordinate cutoff is not norm-`C1` for the
+kinetic derivation and its absolute half-strip radius collapses as `L^-2`.
+The direct relative-unitary/Gibbs trace-distance theorem survives, while an
+exact two-level fixture proves that direct `D,delta D` tails do not imply
+uniform evolved `M_0,M_1`. The projected gate is therefore narrowed to direct
+locality on a preregistered separating local class, product/core density,
+exhaustion and group law. A fixed faithful strong-star topology is not by
+itself an abstract C-star limit.
 Common real-time `alpha`, common-alpha KMS identification, algebraic ground
 states, broken-sector GNS gap, enlarged-counterterm continuum, physical empty
 space and effective reduction remain open.  These bridge results do not select

@@ -9,10 +9,11 @@
 
 **Falsifier.** A consistency requirement of the low-energy theory forcing a dimension $\neq 3+1$ or a Euclidean/degenerate signature in the IR.
 
-## (all notes)/  ·  6 proof units  ·  tier span T1
+## (all notes)/  ·  7 proof units  ·  tier span T1
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
+| `pre-a-q3lock-common-alpha-topology-critical-graph-route-split` | v0.4 | T1 | All-bond kick graph form and one-layer recurrence proved; subcritical finite-volume graph Trotter convergence proved conditionally on strong product … | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Prove a non-Leibniz or state-weighted critical onsite topology and thermodynamic boundary… |
 | `pre-a-q3lock-cubic-graph-product-locality-route-split` | v0.2 | T1 | Weighted cubic graph embedding, Q3 force multiplier, moving-center graph comparison, and prescribed-word heat simplex proved. Raw absolute animal and… | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Prove either the first-passage RT-PV response plus Hamiltonian energy-tail algebra, or th… |
 | `pre-a-q3lock-modular-cutoff-unitary-resummation-route-split` | v0.3 | T1 | Fixed-s star/repeat first-passage target rejected; all-order star and unique-path tree repaired. Modular-mean, structured multiplier, and coordinate-… | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Prove either all-bond unitary Trotter graph-Lipschitz closure or projected-Duhamel modula… |
 | `pre-a-q3lock-second-weighted-energy-and-cauchy-gate` | v0.1 | T1 | Exact second energy moment, minimal A^(3/2) moment, D(A^(3/4)) energy-domain propagation and boundary multiplier proved; the cubic multiplier embeddi… | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Prove the cubic multiplier/domain obligation and product-level spatial decay, then constr… |

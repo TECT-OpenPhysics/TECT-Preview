@@ -1,0 +1,464 @@
+% Title: Q3LOCK Common-Alpha Topology and Critical Graph Route Split
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v0.4 -- first issued 2026-08-10; this version issued 2026-08-10
+% Status: T0 claim-nonbearing R-167 v1.3 extension; common alpha and Pre-A remain open
+
+\section{Purpose and scope}
+
+This note records \texttt{EXP-000799} and strengthens reusable result
+\texttt{R-167} to v1.3 without allocating a new result number.  The exact
+result identifier remains
+\url{PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT}.
+The v1.0--v1.2 weighted-energy, cubic-multiplier, modular-topology and
+all-order-resummation results remain in force.
+
+The new positive result is an exact all-bond unitary-kick theorem.  The entire
+commuting cross-bond sector preserves a centered weighted energy graph up to a
+volume- and source-uniform factor and transfers canonical commutators by one
+lattice layer.  At fixed finite volume this upgrades ordinary Lie--Trotter
+convergence to every subcritical graph power $s<1/2$ once the standard strong
+product limit is supplied.
+
+Three topology routes are also narrowed exactly.  The all-bond kick is not
+point-norm continuous on a basic local resolvent.  The quartic onsite flow
+destroys the unweighted and every subcritical $s<1/2$ canonical Lipschitz
+class.  A bounded coordinate cutoff does not yield a fixed-temperature
+half-modular-strip absolute expansion.  A boundary-layer theorem further
+rejects every fixed Weyl-containing C-star-Leibniz critical seminorm that
+dominates a one-sided momentum commutator.  The surviving primary obligation
+is therefore a non-Leibniz analytic/Fr\'echet or symmetric/state-weighted
+critical topology together with thermodynamic boundary Cauchy.
+
+A separate finite-volume theorem shows that coordinate-tail truncations make
+the exact Gibbs state approximately invariant in trace norm at each fixed
+finite volume and fixed inverse temperature.  A two-level fixture proves that
+small direct $D,\delta D$ differences do not imply uniform evolved half-strip
+multipliers.  A faithful-representation fixture proves that representationwise
+strong-star convergence is not an abstract C-star conclusion.
+
+No common thermodynamic automorphism, common-alpha KMS identification,
+algebraic ground states, broken-sector GNS or physical mass gap, regulator or
+continuum removal, physical empty-space comparison, C6, CP1, Sector A or Pre-A
+closure is claimed.
+
+\section{Provenance identifiers}
+
+\begin{itemize}
+\item Result: \url{PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT}, v1.3, \texttt{R-167}.
+\item Exploration: \url{EXP-000799}.
+\item Active gate: \url{PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE}.
+\item Active gate: \url{PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE}.
+\item Negative: \url{NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY}.
+\end{itemize}
+
+\section{Exact all-bond kick}
+
+At finite volume write
+
+\[
+ K_X=\sum_x f_x k_x,\qquad
+ k_x\ge 1+{p_x^2\over2\chi}+\gamma|q_x|^4,           \tag{3.1}
+\]
+
+where $e^{-\mu}\le f_x/f_y\le e^\mu$ for neighbours.  Split the Hamiltonian
+as an onsite tensor sum plus
+
+\[
+ V_{\rm cross}=-c\sum_{\langle xy\rangle}q_x\mathbin\cdot q_y,
+ \qquad B_\delta=e^{-i\delta V_{\rm cross}/\hbar}.    \tag{3.2}
+\]
+
+Every cross-bond factor commutes with every other, even when two bonds share a
+vertex.  The exact canonical action is
+
+\[
+ B_\delta^*q_xB_\delta=q_x,
+ \qquad B_\delta^*p_xB_\delta=p_x+\delta cS_x,
+ \qquad S_x=\sum_{y\sim x}q_y.                         \tag{3.3}
+\]
+
+For lattice degree $z$,
+
+\[
+ \sum_x f_x|S_x|^2
+ \le z^2e^\mu\sum_y f_y|q_y|^2
+ \le {z^2e^\mu\over2\sqrt\gamma}K_X.               \tag{3.4}
+\]
+
+Expanding the shifted kinetic square and using Young's inequality in both
+time orientations gives, for $|\delta|\le1$,
+
+\[
+ B_{\pm\delta}^*K_XB_{\pm\delta}
+ \le(1+C_b|\delta|)K_X,
+ \qquad C_b=1+{c^2z^2e^\mu\over2\chi\sqrt\gamma}.    \tag{3.5}
+\]
+
+Heinz interpolation therefore yields
+
+\[
+ \|K_X^sB_{\pm\delta}K_X^{-s}\|
+ \le(1+C_b|\delta|)^s,\qquad 0\le s\le{1\over2}.    \tag{3.6}
+\]
+
+For $c=3/5$, $z=6$, $\chi=7/4$, $\sqrt\gamma=2/5$ and
+$e^\mu=3/2$, the exact constant is $C_b=521/35$.  Each orientation in
+$N_s(C)=\|CK_X^{-s}\|+\|K_X^{-s}C\|$ costs the exact power $s$; a fully
+conjugated $K_X^sAK_X^{-s}$ estimate may safely cost $2s$ because it uses both
+kick factors.
+
+\section{One-layer recurrence and subcritical Trotter theorem}
+
+With $\beta_\delta(A)=B_\delta^*AB_\delta$, the CCR give
+
+\[
+ [q_x,\beta_\delta(A)]=\beta_\delta([q_x,A]),         \tag{4.1}
+\]
+
+\[
+ [p_x,\beta_\delta(A)]
+ =\beta_\delta\!\left([p_x,A]
+ -\delta c\sum_{y\sim x}[q_y,A]\right).              \tag{4.2}
+\]
+
+Thus the bond step transfers influence by one lattice layer and one explicit
+power of $\delta$.  The onsite tensor flow is a $K_X$ graph isometry.  Suppose
+the finite-volume Lie--Trotter products $T_N(t)$ converge strongly to $T(t)$
+and, on $|t|\le T_0$,
+
+\[
+ \sup_N\|K_X^{1/2}T_N(\pm t)K_X^{-1/2}\|\le C_T.      \tag{4.3}
+\]
+
+Fix $0\le s<1/2$.  For $\xi\in D(K_X^{1/2-s})$, set
+$\eta_N=(T_N-T)K_X^{-s}\xi$.  Then $\eta_N\to0$ in norm,
+$\|K_X^{1/2}\eta_N\|\le2C_T\|K_X^{1/2-s}\xi\|$, and
+
+\[
+ \|K_X^s\eta_N\|
+ \le\|\eta_N\|^{1-2s}\|K_X^{1/2}\eta_N\|^{2s}
+ \longrightarrow0.                                  \tag{4.4}
+\]
+
+The uniform conjugated bounds extend this convergence by density from
+$D(K_X^{1/2-s})$ to all of $D(K_X^s)$.  The argument does not close the
+endpoint $s=1/2$ and gives no thermodynamic boundary Cauchy theorem.
+
+\section{Raw resolvent topology fails}
+
+On one bond and one component let $R_x=(i+p_x)^{-1}$.  The convention in
+(3.3) gives
+
+\[
+ \beta_\delta(R_x)=(i+p_x+\delta cq_y)^{-1}.          \tag{5.1}
+\]
+
+The strongly commuting pair $(p_x,q_y)$ has joint spectrum $\mathbb R^2$.
+Hence, for every nonzero $\delta$,
+
+\[
+ \|\beta_\delta(R_x)-R_x\|
+ =\sup_{u,v\in\mathbb R}{|u-v|\over
+   \sqrt{1+u^2}\sqrt{1+v^2}}=1,                      \tag{5.2}
+\]
+
+because
+
+\[
+ (1+u^2)(1+v^2)-(u-v)^2=(1+uv)^2                     \tag{5.3}
+\]
+
+and $uv=-1$ saturates the bound.  This rejects point-norm continuity of the
+kick on the raw basic-resolvent topology.  It does not reject the fixed kick
+as an automorphism, a weaker graph or strict topology, normal W-star dynamics,
+or the full Hamiltonian flow.
+
+\section{Quartic onsite obstruction and the critical boundary}
+
+The one-component submodel already suffices:
+
+\[
+ h={p^2\over2\chi}+{gq^4\over4},\qquad
+ W_a=e^{-iap/\hbar}.                                  \tag{6.1}
+\]
+
+Although $[p,W_a]=0$, differentiation on the Schwartz core gives
+
+\[
+ {d\over dt}\bigg|_{t=0}[p,\alpha_t(W_a)]
+ =g(3aq^2-3a^2q+a^3)W_a.                              \tag{6.2}
+\]
+
+The strong core derivative is an unbounded quadratic multiplier, so an
+ordinary bounded canonical Lipschitz estimate cannot hold.  On translated
+compact bumps, $K\sim\gamma R^4$ and $q^2K^{-s}\sim R^{2-4s}$.  Both
+one-sided repairs therefore fail for every $s<1/2$.  The scalar power count is
+neutral at $s=1/2$, but the fixed Leibniz endpoint also fails.
+
+\subsection{Critical one-sided Leibniz no-go}
+
+For the full one-site Q3LOCK onsite Hamiltonian set
+$K=h-\inf\sigma(h)+1$, $W_a=e^{-iap_0/\hbar}$ and
+$t_a=\tau/a^2$.  The exact Q3 force is
+
+\[
+ \partial_0V_4=(g+3\lambda)q_0^3
+ -{3\lambda\over2}q_0^2\sum_{j\sim0}q_j
+ +\lambda q_0\sum_{j\sim0}q_j^2
+ -{\lambda\over2}\sum_{j\sim0}q_j^3.                \tag{6.3}
+\]
+
+Quartic coercivity bounds the translated energy by $E_*a^4$.  During
+$0\le s\le\tau/a^2$, evolved momenta are therefore $O(a^2)$ and every
+translated coordinate displacement from $ae_0$ remains $O_\tau(1)$ in
+$L^2$.  Substitution in (6.3) yields
+
+\[
+ \langle\partial_0V\rangle_s=(g+3\lambda)a^3+O_\tau(a^2). \tag{6.4}
+\]
+
+Integration of the exact Heisenberg equation, followed by a ground-vector
+matrix element, gives the operator lower bound
+
+\[
+ \|[p_0,\alpha_{t_a}(W_a)]K^{-1/2}\|
+ \ge(g+3\lambda)\tau a-B_\tau,                       \tag{6.5}
+\]
+
+with $B_\tau$ independent of $a$.  If a fixed star-symmetric C-star-Leibniz
+seminorm $L$ is finite on one nonzero $W_b$, dominates either one-sided
+critical $p_0$ commutator and obeys
+$L(\alpha_t(A))\le(1+C|t|)L(A)$, then
+$L(W_b^n)\le nL(W_b)$.  Taking $a=nb$ in (6.5) and a fixed
+$\tau>L(W_b)/(c_p(g+3\lambda)b)$ gives contradictory linear slopes while
+$t_a\to0$.
+
+For $g=3/5$, $\lambda=2/7$, $\chi=7/4$, the independently reconstructed Q3
+jets are
+
+\[
+ G={51\over35},\qquad Dp_0={51\over35}a^3,qquad
+ D^2p_0=0,\qquad D^3p_0=-{32112\over8575}a^5.         \tag{6.6}
+\]
+
+The result rejects only the fixed one-sided-dominating C-star-Leibniz route.
+Non-Leibniz analytic/Fr\'echet, symmetric or state-weighted, and direct
+projected topologies remain open.
+
+\section{Coordinate-cutoff half-strip boundary}
+
+For $Q_L(q)=\eta(|q|/L)q$, the cutoff bond is bounded, but
+
+\[
+ [p^2,Q_L(q)]=-i\hbar\{p\mathbin\cdot DQ_L+DQ_L\mathbin\cdot p\} \tag{7.1}
+\]
+
+is unbounded.  Thus boundedness alone does not make the cutoff norm-$C^1$ for
+the quartic onsite derivation.  Even granting an auxiliary analytic repair, a
+degree-$z$ connected absolute expansion with bond norm $J_L$ has parameter
+
+\[
+ r={2zJ_L|\operatorname{Im}t|\over\hbar}.             \tag{7.2}
+\]
+
+At the half modular strip, $|\operatorname{Im}t|=\beta\hbar/2$, this requires
+$z\beta J_L<1$.  Since $J_L=\Theta(cL^2)$, no fixed positive $\beta$ survives
+$L\to\infty$ through this absolute method.  This is a route boundary, not a
+no-dynamics theorem and not a rejection of direct projected $D,\delta D$.
+
+\section{Fixed-volume relative-unitary theorem}
+
+At fixed finite $\Lambda$ and fixed $\beta$, let
+
+\[
+ \rho=Z^{-1}e^{-\beta H},\qquad K=H-W_L,
+ \qquad \rho_t=U_K\rho U_K^*.                         \tag{8.1}
+\]
+
+For bounded $W_L$, Duhamel in its two orientations gives
+
+\[
+ \|(U_K-U_H)\rho^{1/2}\|_2,
+ \ \|\rho^{1/2}(U_K-U_H)\|_2
+ \le {|t|\over\hbar}\phi(W_L^2)^{1/2}.              \tag{8.2}
+\]
+
+Consequently
+
+\[
+ \|U_K\rho U_K^*-\rho\|_1
+ \le {2|t|\over\hbar}\phi(W_L^2)^{1/2}.             \tag{8.3}
+\]
+
+The unbounded coordinate tail follows by form approximation.  On the common
+quartic form domain,
+
+\[
+ |W_L|\le cz\sum_x|q_x|^2,\qquad
+ |W_L-W_{L,M}|\le cz|\Lambda|M^{-2}\sum_x|q_x|^4.    \tag{8.4}
+\]
+
+Thus bounded outer cutoffs converge in form norm, the corresponding
+Hamiltonians converge in strong resolvent sense, and their unitaries converge
+strongly on compact real-time intervals.  Gaussian domination gives both
+Hilbert--Schmidt tail orientations.  If $E_L=\phi(W_L^2)^{1/2}\to0$, then
+
+\[
+ \sup_{|t|\le T}\|U_K\rho U_K^*-\rho\|_1\to0
+ \quad(L\to\infty)                                   \tag{8.5}
+\]
+
+for each fixed finite $\Lambda$ and fixed $\beta$.  The constants may depend
+on both.
+
+Finite Gibbs energy and $K$-energy conservation also give
+
+\[
+ S(\rho_t\Vert\rho)=\beta[\rho_t(W_L)-\rho(W_L)].     \tag{8.6}
+\]
+
+If $\phi(e^{\theta[W_L-\phi(W_L)]})<\infty$ for some $\theta>\beta$, the
+Gibbs variational inequality and Golden--Thompson yield
+
+\[
+ S(\rho_t\Vert\rho)
+ \le{\beta\over\theta-\beta}
+ \log\phi(e^{\theta[W_L-\phi(W_L)]}).                \tag{8.7}
+\]
+
+This is not uniform in volume or inverse temperature and does not construct a
+separating common local algebra.
+
+\section{Direct topology is weaker than half-strip multiplier control}
+
+Let
+
+\[
+ H_n=\operatorname{diag}(0,n),\quad
+ \epsilon_n=e^{-\beta n/4},\quad
+ K_n=H_n+\epsilon_n\sigma_x,
+ \quad A=P_0.                                         \tag{9.1}
+\]
+
+At $t_n=\pi\hbar/\sqrt{n^2+4\epsilon_n^2}$, the perturbation, its first
+modular derivative, the direct difference
+$D_n=\tau_{t_n}^{K_n}(P_0)-P_0$, and $[\log\rho_n,D_n]$ all tend to zero in
+Duhamel norm.  However, the off-diagonal entry implies
+
+\[
+ M_0(\tau_{t_n}^{K_n}(P_0))
+ \gtrsim {2e^{\beta n/4}\over n}\longrightarrow\infty,          \tag{9.2}
+\]
+
+and $M_1$ diverges faster.  Therefore direct projected $D,\delta D$ locality
+is strictly weaker than uniform evolved half-strip multiplier control; the two
+must not be called equivalent.
+
+\section{Representation topology boundary}
+
+Let $\mathcal A=\ell^\infty$ and $f_n=1_{\{k\ge n\}}$.  In the faithful
+multiplication representation on $\ell^2$, $f_n\to0$ strong-star.  Adjoining a
+nonprincipal-ultrafilter character leaves the direct-sum representation
+faithful but changes the limit to $0\oplus1$.  Thus a strong-star limit in one
+faithful representation does not determine an abstract C-star limit.  The
+projected route must preregister one faithful/separating state class and may
+at most construct a fixed-temperature common normal W-star system until an
+independent phase- and beta-independent algebra theorem is supplied.
+
+\section{Route decision}
+
+The fixed critical C-star-Leibniz route is rejected.  The all-bond route can
+continue only through a non-Leibniz analytic/Fr\'echet or symmetric/
+state-weighted critical topology, followed by a volume-independent boundary
+Cauchy estimate and an invariant Hamiltonian algebra.  The projected route
+remains secondary: prove direct $D,\delta D$
+Cauchy on a preregistered separating local test class, product closure,
+exhaustion independence and the group law.
+
+\section{Devil's-advocate review}
+
+The package survived the following hostile checks.
+
+\begin{enumerate}
+\item The resolvent sign was recomputed from the declared convention
+$\beta_\delta=B_\delta^*(\cdot)B_\delta$; the plus sign in (5.1) is required.
+\item The one-sided seminorm cost is $M_\delta^s$, while $M_\delta^{2s}$ is
+only a safe fully conjugated bound.  They are not conflated.
+\item The Trotter graph conclusion is extended from
+$D(K_X^{1/2-s})$ by a uniform conjugated bound and density; the endpoint is
+not inferred.
+\item Neutral scalar power counting at $s=1/2$ does not rescue the fixed
+Leibniz route: the exact boundary layer (6.5) defeats its linear Weyl-power
+growth.  Non-Leibniz and state-weighted alternatives are not rejected.
+\item The unbounded coordinate tail uses a common closed form domain,
+form-norm cutoff convergence, finite Gibbs energy and an exponential moment;
+no thermodynamic uniformity is inferred.
+\item The raw-resolvent, onsite and cutoff negatives reject named proof
+topologies or methods only.  None is promoted to nonexistence of exact
+dynamics.
+\end{enumerate}
+
+Therefore v1.3 is a verified topology and route split.  It is not a proof of
+common alpha, KMS phase identity, ground-state selection, a GNS gap, continuum
+physics, physical empty space, C6, Sector A or Pre-A.
+
+\section{Reproduction}
+
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe -X utf8
+codes\foundations\pre_a_cp1_st8_q3lock_common_alpha_topology_critical_
+graph_route_split.py
+
+E:\Dev\TECT.venv\Scripts\python.exe -X utf8
+codes\foundations\pre_a_cp1_st8_q3lock_common_alpha_topology_critical_
+graph_route_split_independent.py
+
+E:\Dev\TECT.venv\Scripts\python.exe -X utf8
+codes\foundations\pre_a_cp1_st8_q3lock_common_alpha_topology_critical_
+graph_route_split_verify.py
+\end{verbatim}
+
+\section{Result footer}
+
+\begin{verbatim}
+Result ID:               PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-
+                         MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT.
+Reusable result:         R-167 v1.3; no new result number.
+Exploration:             EXP-000799.
+Precise statement:       All-bond kick graph form and one-layer recurrence
+                         proved; subcritical finite-volume graph Trotter
+                         convergence proved conditionally on strong product
+                         convergence. Raw resolvent, unweighted/subcritical
+                         onsite Lipschitz, fixed critical Leibniz, cutoff
+                         half-strip, multiplier inference and abstract-C-star
+                         shortcuts rejected.
+Scope:                   T0 exact finite-volume topology theorems and scoped
+                         proof-route counterexamples.
+Dependencies:            EXP-000781, EXP-000790, EXP-000794--EXP-000799;
+                         R-167 v1.0--v1.2.
+Evidence grade:          ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF QA.
+Reproduction command:    Run the three commands under Reproduction in the
+                         listed order, with the integrated verifier last.
+Expected output:         Primary PASS 77/77; independent PASS 111/111;
+                         integrated PASS 271/271.
+Falsification gate:      Any CCR sign, weighted graph factor, interpolation
+                         domain, resolvent norm, onsite exponent, half-strip
+                         radius, form cutoff, topology, hash or scope mismatch.
+Tier before / after:     C6 T1 / C6 T1; no claim or tier change.
+No-overclaim statement:  Non-Leibniz/state-weighted critical onsite closure,
+                         thermodynamic Cauchy, common alpha/KMS, algebraic
+                         ground states, GNS gap,
+                         regulator removal, continuum, physical empty and the
+                         below-empty sign, C6, CP1, Sector A and Pre-A remain
+                         open.
+Next required action:    Prove a non-Leibniz or state-weighted critical onsite
+                         topology and thermodynamic boundary Cauchy, or close
+                         direct projected D,delta-D locality on a separating
+                         preregistered class.
+\end{verbatim}
