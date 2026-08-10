@@ -426,6 +426,14 @@ invariant Hamiltonian algebra, and common-alpha KMS identification. The new
 failures reject only their named point-norm, subcritical and fixed-Leibniz
 proof routes, not existence of weaker graph or normal dynamics.
 
+`EXP-000800` / R-167 v1.4 further rejects a frequency-blind single-rung
+site-influence recurrence: an exact Weyl frequency of order `1/|delta|`
+creates an order-one neighbor response in one bond kick. The finite-volume
+critical graph and energy-constrained form propagation survives, but any live
+all-bond route must retain an analytic-frequency or all-moment orbit profile.
+The active common-dynamics question is now registered more precisely as
+`PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE`.
+
 ### **PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY**
 
 **Statement:** On a preregistered faithful fixed-beta representation or
@@ -450,6 +458,54 @@ gate is a volume/source-uniform preregistered separating local test class with
 direct `D,delta D` Cauchy, product/core density, exhaustion independence and
 group law. Common dynamics/KMS, beta independence and every zero-temperature
 consequence remain open.
+
+`EXP-000800` / R-167 v1.4 proves that a bounded finite-support class with both
+full-Gibbs half-modular endpoint conjugates bounded is scalar. It therefore
+retires that particular separating-class implementation. Direct two-sided
+mixture-L2 or direct Duhamel `D,delta D` Cauchy on the full common orbit-word
+class remains viable and is carried into the Hamiltonian-identification gate.
+
+### **PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE**
+
+**Statement:** At fixed `beta`, form a preregistered nontrivial convex mixture
+of the two `EXP-000790` phase path laws on their common loop space. Reconstruct
+from the full common positive-time cylinder module, not merely the sharp-time
+Gram form. Prove that the mixture reconstruction is the common-word cyclic
+subspace of the phasewise direct sum and that both phase functionals are
+normal beta-KMS states of its single real-time group.
+
+**Status:** CLOSED AT FIXED BETA (2026-08-10). `EXP-000800` / R-167 v1.4
+constructs the canonical isometry
+`[F]_0 -> (sqrt(lambda_+)[F]_+,sqrt(lambda_-)[F]_-)`, proves full analytic-word
+and time-shift intertwining, and obtains positive commutant Radon--Nikodym
+operators `T_sigma` with
+`lambda_+T_+ + lambda_-T_-=I`. The resulting phase functionals are distinct,
+parity-related normal beta-KMS states of one support-reduced mixture W-star
+group. A sharp-time two-level fixture proves that sharp-time Gram equality
+alone would not suffice. This is a pair- and beta-defined OS envelope, not the
+thermodynamic limit of the exact finite-volume Hamiltonians and not a
+beta-independent common C-star alpha.
+
+### **PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE**
+
+**Statement:** Embed the exact finite-volume Hamiltonian evolution of the
+rational finite-support configuration-character seed into the canonical
+fixed-beta OS mixture envelope. Prove direct two-sided mixture-L2 Cauchy, or
+direct Duhamel `D,delta D` estimates implying it, uniformly on compact real
+times and independently of the exhaustion. Identify the limit generator with
+the registered local polynomial derivation on a strong-dense orbit-word core,
+and prove products, star, inverse, group law and strong continuity. Finally
+construct a beta-compatible state-independent algebra before any
+beta-to-infinity ground-state claim.
+
+**Status:** OPEN (2026-08-10). The target W-star topology is now canonical at
+each fixed beta, and its two-sided L2 seminorm metrizes strong-star on bounded
+sets. Missing are the finite-volume-to-envelope embedding, boundary Cauchy,
+exhaustion independence, generator identification, full canonical
+momentum/Weyl bridge, and compatibility across beta. The symmetric phase
+mixture is also not yet proved to be the periodic zero-source finite-volume
+limit. Closing only the fixed-beta envelope does not license algebraic ground
+states or a GNS gap.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 

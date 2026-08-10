@@ -9,6 +9,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY](#ng-2026-08-10-pre-a-st8-q3lock-sharp-time-os-gram-only-real-time-functoriality) | infer common real-time or analytic-word intertwining from domination or equality of the sharp-time OS Gram form alone | two finite Gibbs systems have the same diagonal sharp-time Gram and multiplier action but distinct real-time rotations and midpoint Euclidean two-point functions `1` and `4/5`. Retain the full common positive-time cylinder module and translation action used by the canonical fixed-beta mixture theorem |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS](#ng-2026-08-10-pre-a-st8-q3lock-full-gibbs-half-modular-local-separating-class) | build a nontrivial bounded finite-support separating class whose two full-Gibbs half-modular endpoint conjugates are bounded | strip analyticity first makes `[H,A]` bounded; configuration translations and momentum boosts at an extreme support site then force `[q_x,A]=[p_x,A]=0`, and sitewise irreducibility makes `A` scalar. Retain direct `D,delta D`, nonlocal spectral analytic, state-weighted or weaker topology routes |
+| [NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE](#ng-2026-08-10-pre-a-st8-q3lock-single-rung-energy-constrained-sitewise-influence-recurrence) | propagate one frequency-blind energy-constrained site-influence rung through the exact bond kick with a neighbor coefficient tending to zero with the step | the kick sends `W_a(x)` to `W_a(x)exp(-ic delta a q_y/hbar)`; choosing `a=pi hbar/(c|delta|b)` leaves an order-one commutator with a fixed normalized `W_b(y)` test for every nonzero step. Retain a Weyl-frequency or analytic-rung hierarchy and prove its quartic onsite orbit closure |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY](#ng-2026-08-10-pre-a-st8-q3lock-raw-local-resolvent-point-norm-bond-kick-continuity) | use the raw local basic-resolvent norm as a point-continuous topology for the exact cross-bond kick | for `R_x=(i+p_x)^(-1)`, every nonzero kick gives `||(i+p_x+delta c q_y)^(-1)-R_x||=1` in the declared `B_delta^* A B_delta` convention. Retain each fixed shear automorphism, but use a critical energy-graph, strict, or normal topology rather than point-norm Trotter continuity |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY](#ng-2026-08-10-pre-a-st8-q3lock-unweighted-onsite-qp-lipschitz-stability) | propagate the ordinary bounded `q/p` commutator Lipschitz class through the exact quartic onsite flow | a momentum Weyl translation starts with `[p,W_a]=0`, while its first onsite derivative contains the unbounded multiplier `g(3a q^2-3a^2q+a^3)W_a`. Use an energy-damped critical class; this does not reject the onsite unitary |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY](#ng-2026-08-10-pre-a-st8-q3lock-subcritical-energy-damped-onsite-lipschitz-stability) | repair the onsite `q/p` Lipschitz class with a fixed one-sided graph power `K^(-s)`, `s<1/2` | translated bumps give `q^2K^(-s)~R^(2-4s)`, so both one-sided repairs remain unbounded below the critical exponent. The endpoint `s=1/2` survives this scalar power count, but the successor critical boundary-layer result rejects every fixed Weyl-containing one-sided-dominating C-star-Leibniz realization; non-Leibniz and state-weighted routes remain open |
@@ -323,6 +326,81 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-sharp-time-os-gram-only-real-time-functoriality"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY -- one reflection plane does not determine the real-time word system
+
+**Failure mode.**  Infer real-time or full analytic-word intertwining between
+two periodic OS reconstructions solely from domination, or even equality, of
+their sharp-time Gram forms and agreement of their sharp-time multipliers.
+
+**Evidence.**  At `beta=hbar=1` on `C^2`, take `H_0=0` and
+`H_1=-(log 2)sigma_x`.  The Gibbs densities are `rho_0=I/2` and
+`rho_1=(I+(3/5)sigma_x)/2`.  Every diagonal `f=diag(a,b)` has the same
+sharp-time square expectation `(abs(a)^2+abs(b)^2)/2` in both systems.  At
+`t=pi/(4 log 2)`, however, the two images of `sigma_z` are `sigma_z` and
+`plus-or-minus sigma_y`, at norm distance `sqrt(2)`.  Their beta/2 Euclidean
+two-point functions are respectively `1` and `1/cosh(log 2)=4/5`.
+
+**Consequence.**  The fixed-beta canonical mixture theorem must use the full
+common positive-time cylinder module, its product/star structure and the
+common time-shift action.  With those data the canonical cyclic-subspace
+intertwiner is valid and both phases become normal KMS states of the mixture
+group.  This negative does not reject that theorem, phasewise OS
+reconstruction or common dynamics obtained from a stronger Hamiltonian
+identification.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-full-gibbs-half-modular-local-separating-class"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS -- bounded half-strip local observables are scalar
+
+**Failure mode.**  Seek a nontrivial bounded finite-support local star-class
+for which both full interacting Gibbs half-modular endpoint conjugates
+`exp(+beta H/2)A exp(-beta H/2)` and
+`exp(-beta H/2)A exp(+beta H/2)` have bounded closures, and use that class as
+a separating local multiplier core.
+
+**Evidence.**  Compact spectral compression, three-lines and Cauchy first
+give `[H,A]` bounded with norm at most `2M/beta`.  Choose an extreme site `x`
+of the support and its outward collar neighbor `y`.  Translating `q_y` by
+`Rv` changes the bounded commutator by exactly `-cR[v.q_x,A]`; division by
+`R` gives `[q_x,A]=0`.  Boosting `p_x` by `hbar Rv` changes it by
+`(hbar R/chi)[v.p_x,A]`, so `[p_x,A]=0`.  One-site Schrodinger
+irreducibility removes `x`, and finite induction makes `A` scalar.  The
+one-bond witness
+`exp(-sc q_x.q_y)exp(-ia p_x/hbar)exp(+sc q_x.q_y)` carries the unbounded
+factor `exp(-sca q_y)` whenever `sca!=0`.
+
+**Consequence.**  Do not require a nontrivial finite-support separating class
+with both full-Gibbs half-strip endpoints bounded.  Global finite-volume
+spectral analytic elements, direct `D,delta D` convergence, nonlocal or
+state-weighted classes and the existence of a weaker thermodynamic dynamics
+remain open.  Finite oscillator truncations are not counterexamples to this
+CCR theorem because their commutator has the top-state defect
+`i hbar(I-NP_top)`.
+
+<a id="ng-2026-08-10-pre-a-st8-q3lock-single-rung-energy-constrained-sitewise-influence-recurrence"></a>
+### NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE -- one frequency-blind rung cannot have a small bond coefficient
+
+**Failure mode.**  Use a single sitewise energy-constrained influence
+seminorm and prove a bond-step recurrence whose neighbor-transfer coefficient
+`epsilon(delta)` tends to zero uniformly over all bounded source observables.
+
+**Evidence.**  For one bond `xy`, the exact kick sends
+`A=W_a(x)=exp(-ia p_x/hbar)` to
+`A exp(-ic delta a q_y/hbar)`.  Against the fixed normalized graph test
+`C_b=W_b(y)/G_y(W_b)`, the symmetric energy-constrained strong-star response
+is
+`(2sqrt(2)/G_y(W_b)) abs(sin(c delta a b/(2hbar)))`.  The initial `y`
+influence is zero and the source-site influence is uniformly bounded, while
+choosing `a=pi hbar/(c abs(delta)b)` makes the new `y` response exactly
+`2sqrt(2)/G_y(W_b)` for every nonzero `delta`.
+
+**Consequence.**  A surviving bond-locality proof must keep a Weyl-frequency
+profile or lose an analytic rung.  The exact graph Banach and
+energy-constrained form propagation through one kick survives, and a
+Weyl-Fourier hierarchy has a shear/radius recurrence; quartic onsite
+invariance of the required all-moment orbit-Frechet scale and thermodynamic
+Cauchy remain open.  This is not a no-dynamics theorem.
 
 <a id="ng-2026-08-10-pre-a-st8-q3lock-fixed-s-coefficientwise-first-passage-branch-response"></a>
 ### NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE -- fixed graph power cannot absorb raw branches or repeats

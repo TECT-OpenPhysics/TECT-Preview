@@ -1,0 +1,1981 @@
+{
+  "assertions": [
+    {
+      "actual": [
+        "2/3",
+        "1/3"
+      ],
+      "expected": [
+        "2/3",
+        "1/3"
+      ],
+      "group": "mixture",
+      "name": "Gibbs qubit weights",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "9/20",
+        "11/20"
+      ],
+      "expected": [
+        "9/20",
+        "11/20"
+      ],
+      "group": "mixture",
+      "name": "derived mixture center law",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+      "expected": "zero matrix",
+      "group": "mixture",
+      "name": "full Gram mixture identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[5/3, 0, 0, 0, 0, 0, 0, 0], [0, 5/3, 0, 0, 0, 0, 0, 0], [0, 0, 5/3, 0, 0, 0, 0, 0], [0, 0, 0, 5/3, 0, 0, 0, 0], [0, 0, 0, 0, 5/11, 0, 0, 0], [0, 0, 0, 0, 0, 5/11, 0, 0], [0, 0, 0, 0, 0, 0, 5/11, 0], [0, 0, 0, 0, 0, 0, 0, 5/11]])",
+      "expected": "Matrix([[5/3, 0, 0, 0, 0, 0, 0, 0], [0, 5/3, 0, 0, 0, 0, 0, 0], [0, 0, 5/3, 0, 0, 0, 0, 0], [0, 0, 0, 5/3, 0, 0, 0, 0], [0, 0, 0, 0, 5/11, 0, 0, 0], [0, 0, 0, 0, 0, 5/11, 0, 0], [0, 0, 0, 0, 0, 0, 5/11, 0], [0, 0, 0, 0, 0, 0, 0, 5/11]])",
+      "group": "RN",
+      "name": "T plus exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[5/9, 0, 0, 0, 0, 0, 0, 0], [0, 5/9, 0, 0, 0, 0, 0, 0], [0, 0, 5/9, 0, 0, 0, 0, 0], [0, 0, 0, 5/9, 0, 0, 0, 0], [0, 0, 0, 0, 15/11, 0, 0, 0], [0, 0, 0, 0, 0, 15/11, 0, 0], [0, 0, 0, 0, 0, 0, 15/11, 0], [0, 0, 0, 0, 0, 0, 0, 15/11]])",
+      "expected": "Matrix([[5/9, 0, 0, 0, 0, 0, 0, 0], [0, 5/9, 0, 0, 0, 0, 0, 0], [0, 0, 5/9, 0, 0, 0, 0, 0], [0, 0, 0, 5/9, 0, 0, 0, 0], [0, 0, 0, 0, 15/11, 0, 0, 0], [0, 0, 0, 0, 0, 15/11, 0, 0], [0, 0, 0, 0, 0, 0, 15/11, 0], [0, 0, 0, 0, 0, 0, 0, 15/11]])",
+      "group": "RN",
+      "name": "T minus exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+      "expected": "zero matrix",
+      "group": "RN",
+      "name": "weighted T identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[5/6, 5/6, 5/6, 5/6, 45/22, 45/22, 45/22, 45/22]])",
+      "expected": "nonnegative diagonal",
+      "group": "RN",
+      "name": "T plus domination",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[10/9, 10/9, 10/9, 10/9, 10/33, 10/33, 10/33, 10/33]])",
+      "expected": "nonnegative diagonal",
+      "group": "RN",
+      "name": "T minus domination",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": "all zero",
+      "group": "RN",
+      "name": "T in common-word commutant",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])"
+      ],
+      "expected": "all zero",
+      "group": "functoriality",
+      "name": "J translation intertwining",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])",
+      "expected": "zero matrix",
+      "group": "functoriality",
+      "name": "two-insertion cylinder Gram mixture",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "group": "functoriality",
+      "name": "analytic word rank",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "intersection": true,
+        "nullity": 8
+      },
+      "expected": "N0=N+ intersection N-",
+      "group": "functoriality",
+      "name": "analytic word null intersection",
+      "status": "PASS"
+    },
+    {
+      "actual": 64,
+      "expected": "all matrix-unit KMS residuals zero",
+      "group": "KMS",
+      "name": "exhaustive KMS word inheritance",
+      "status": "PASS"
+    },
+    {
+      "actual": "3",
+      "expected": "3",
+      "group": "RN",
+      "name": "RN plus functional",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "5",
+      "group": "RN",
+      "name": "RN minus functional",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "overlapping phases do not imply projections",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "strong_star",
+      "name": "mixture state faithful",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+      "expected": "zero matrix",
+      "group": "parity",
+      "name": "symmetric mixture parity invariant",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+      "expected": "zero matrix",
+      "group": "parity",
+      "name": "parity commutes with translation",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[1/2, 3/10], [3/10, 1/2]])",
+      "expected": "[[1/2,3/10],[3/10,1/2]]",
+      "group": "sharp_counterexample",
+      "name": "sharp Gibbs density",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "one": "a**2/2 + b**2/2",
+        "zero": "a**2/2 + b**2/2"
+      },
+      "expected": "equal",
+      "group": "sharp_counterexample",
+      "name": "sharp-time Gram equality",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, I], [-I, 0]])",
+      "expected": "Matrix([[0, I], [-I, 0]])",
+      "group": "sharp_counterexample",
+      "name": "real-time dynamics differ",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[2, 0], [0, 2]])",
+      "expected": "2I hence norm sqrt(2)",
+      "group": "sharp_counterexample",
+      "name": "real-time norm gap",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "one": "4/5",
+        "zero": "1"
+      },
+      "expected": {
+        "one": "4/5",
+        "zero": 1
+      },
+      "group": "sharp_counterexample",
+      "name": "Euclidean midpoint separates dynamics",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "full_required": true,
+        "sharp_valid": false
+      },
+      "expected": "sharp-time insufficient; full cylinder required",
+      "group": "sharp_counterexample",
+      "name": "sharp-only inference rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/beta",
+      "expected": "2/beta",
+      "group": "half_modular",
+      "name": "half-modular strip coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "-R*c",
+      "expected": "-c*R",
+      "group": "half_modular",
+      "name": "outward bond translation coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "R*hbar/chi",
+      "expected": "hbar*R/chi",
+      "group": "half_modular",
+      "name": "momentum boost coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "-a*beta*c/2",
+      "expected": "-s*c*a with s=beta/2 and nonzero positive inputs",
+      "group": "half_modular",
+      "name": "cross witness exponent coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": 255,
+      "expected": 255,
+      "group": "extreme_site",
+      "name": "2x2x2 all-subset extreme-site peeling",
+      "status": "PASS"
+    },
+    {
+      "actual": 1024,
+      "expected": 1024,
+      "group": "extreme_site",
+      "name": "2x2x2 aggregate peeling steps",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "group": "extreme_site",
+      "name": "outward neighbor absent at every peel",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "maximum_depth": 8,
+        "trace_length": 8
+      },
+      "expected": 8,
+      "group": "extreme_site",
+      "name": "full cube peeled to scalar base",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[I*hbar, 0, 0, 0, 0], [0, I*hbar, 0, 0, 0], [0, 0, I*hbar, 0, 0], [0, 0, 0, I*hbar, 0], [0, 0, 0, 0, -4*I*hbar]])",
+      "expected": "i*hbar*(I-N*P_top)",
+      "group": "truncation_boundary",
+      "name": "finite truncation exact CCR boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, -5*I*hbar]])",
+      "expected": "Matrix([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, -5*I*hbar]])",
+      "group": "truncation_boundary",
+      "name": "finite truncation canonical CCR defect",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "defect_rank": 1,
+        "trace": "0"
+      },
+      "expected": {
+        "defect_rank": 1,
+        "trace": 0
+      },
+      "group": "truncation_boundary",
+      "name": "finite truncation trace-rank obstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "analytic": true,
+        "finite_truncation": false
+      },
+      "expected": {
+        "analytic": true,
+        "finite_truncation": false
+      },
+      "group": "scope",
+      "name": "analytic authority excludes finite truncation",
+      "status": "PASS"
+    },
+    {
+      "actual": "1001*pi/102",
+      "expected": "pi*hbar/(c*Abs(delta)*b)",
+      "group": "single_rung",
+      "name": "single-rung prescribed frequency fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "-pi/2",
+      "expected": "+/- pi/2",
+      "group": "single_rung",
+      "name": "single-rung half phase saturation",
+      "status": "PASS"
+    },
+    {
+      "actual": "6*sqrt(2)/7",
+      "expected": "6*sqrt(2)/7",
+      "group": "single_rung",
+      "name": "single-rung exact sine response",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "half_phase": "pi/2",
+        "response": "6*sqrt(2)/7"
+      },
+      "expected": {
+        "abs_half_phase": "pi/2",
+        "response": "6*sqrt(2)/7"
+      },
+      "group": "single_rung",
+      "name": "single-rung orientation-independent magnitude",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "half_phase": "pi/2",
+        "response": "6*sqrt(2)/7"
+      },
+      "expected": {
+        "half_phase": "pi/2",
+        "response": "6*sqrt(2)/7"
+      },
+      "group": "single_rung",
+      "name": "all-positive-epsilon saturation identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 4,
+      "expected": "all exact responses saturated",
+      "group": "single_rung",
+      "name": "decreasing-delta exact saturation regression",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "x_upper": "2*sqrt(2)",
+        "y": "0"
+      },
+      "expected": {
+        "x_upper": "2*sqrt(2)",
+        "y": 0
+      },
+      "group": "single_rung",
+      "name": "single-rung initial influences",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "single_rung",
+      "name": "frequency-blind small-coefficient recurrence rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "finite_volume_critical_graph_bond_kick_energy_propagation": true,
+        "finite_volume_energy_constrained_strongstar_bond_kick_propagation": true,
+        "hamiltonian_thermodynamic_alpha_identification": false,
+        "quartic_onsite_all_moment_orbit_frechet_invariance": false,
+        "volume_uniform_thermodynamic_cauchy": false,
+        "weyl_fourier_analytic_shear_radius_recurrence": true
+      },
+      "expected": "three finite-volume/analytic precursor statements true",
+      "group": "precursor_scope",
+      "name": "finite-volume graph-energy precursors retained",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "finite_volume_critical_graph_bond_kick_energy_propagation": true,
+        "finite_volume_energy_constrained_strongstar_bond_kick_propagation": true,
+        "hamiltonian_thermodynamic_alpha_identification": false,
+        "quartic_onsite_all_moment_orbit_frechet_invariance": false,
+        "volume_uniform_thermodynamic_cauchy": false,
+        "weyl_fourier_analytic_shear_radius_recurrence": true
+      },
+      "expected": "quartic onsite and thermodynamic gates remain false",
+      "group": "precursor_scope",
+      "name": "precursors do not close onsite or thermodynamic gates",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "common_formal_analytic_word_algebra": true,
+        "common_reflection_field_and_positive_time_cylinder_module": true,
+        "common_sharp_multipliers": true,
+        "fixed_beta": true,
+        "positive_mixture_weights": true,
+        "translation_intertwining": true
+      },
+      "expected": "fixed beta",
+      "group": "scope",
+      "name": "theorem is fixed-beta",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "T_in_mixture_commutant": true,
+        "bounded_dense_range_J": true,
+        "component_states_beta_KMS_for_one_reconstructed_alpha": true,
+        "component_states_normal": true,
+        "faithful_mixture_two_sided_L2_metrizes_bounded_strong_star": true,
+        "interior_weight_envelopes_label_equivalent": true,
+        "weighted_T_partition_of_identity": true
+      },
+      "expected": "all scoped conclusions true",
+      "group": "scope",
+      "name": "normal common-envelope conclusions",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "GNS_gap": true,
+        "Pre_A": true,
+        "beta_independent_passage": true,
+        "beta_to_infinity_ground_passage": true,
+        "common_local_generator_core": true,
+        "continuum": true,
+        "exhaustion_independence": true,
+        "finite_volume_strong_star_cauchy": true,
+        "hamiltonian_thermodynamic_limit_identification": true,
+        "phase_state_independent_quasilocal_Cstar_alpha": true,
+        "physical_empty_comparison": true
+      },
+      "expected": "all listed boundaries open",
+      "group": "scope",
+      "name": "thermodynamic and beta-independent claims remain open",
+      "status": "PASS"
+    },
+    {
+      "actual": "For every preregistered bounded local analytic A and compact time interval, prove mixture expectations of D^*D+DD^* tend to zero for nested finite-volume zero-source dynamics.",
+      "expected": "two-sided mixture L2 boundary Cauchy",
+      "group": "scope",
+      "name": "successor criterion is two-sided mixture L2",
+      "status": "PASS"
+    },
+    {
+      "actual": "T-054",
+      "expected": "T-054",
+      "group": "authority",
+      "name": "authority task",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-000800",
+      "expected": "EXP-000800",
+      "group": "authority",
+      "name": "authority exploration",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-167",
+      "expected": "R-167",
+      "group": "authority",
+      "name": "authority result number",
+      "status": "PASS"
+    },
+    {
+      "actual": "v1.4",
+      "expected": "v1.4",
+      "group": "authority",
+      "name": "authority result version",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+      "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+      "group": "authority",
+      "name": "authority result id",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "authority",
+      "name": "authority claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE"
+      ],
+      "expected": [
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS",
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE"
+      ],
+      "group": "authority",
+      "name": "all v1.4 negatives registered in order",
+      "status": "PASS"
+    },
+    {
+      "actual": "fixed_beta_os_mixture_theorem",
+      "expected": "fixed_beta_os_mixture_theorem",
+      "group": "authority",
+      "name": "manifest object fixed_beta_os_mixture_theorem",
+      "status": "PASS"
+    },
+    {
+      "actual": "sharp_time_only_counterexample",
+      "expected": "sharp_time_only_counterexample",
+      "group": "authority",
+      "name": "manifest object sharp_time_only_counterexample",
+      "status": "PASS"
+    },
+    {
+      "actual": "half_modular_local_scalarity_theorem",
+      "expected": "half_modular_local_scalarity_theorem",
+      "group": "authority",
+      "name": "manifest object half_modular_local_scalarity_theorem",
+      "status": "PASS"
+    },
+    {
+      "actual": "single_rung_influence_counterexample",
+      "expected": "single_rung_influence_counterexample",
+      "group": "authority",
+      "name": "manifest object single_rung_influence_counterexample",
+      "status": "PASS"
+    },
+    {
+      "actual": "hamiltonian_identification_boundary",
+      "expected": "hamiltonian_identification_boundary",
+      "group": "authority",
+      "name": "manifest object hamiltonian_identification_boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "2M/beta",
+      "expected": "2M/beta",
+      "group": "authority",
+      "name": "authority semantic strip coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "-cR",
+      "expected": "-cR",
+      "group": "authority",
+      "name": "authority semantic bond shift",
+      "status": "PASS"
+    },
+    {
+      "actual": "hbar R/chi",
+      "expected": "hbar R/chi",
+      "group": "authority",
+      "name": "authority semantic momentum boost",
+      "status": "PASS"
+    },
+    {
+      "actual": "-sca",
+      "expected": "-sca",
+      "group": "authority",
+      "name": "authority semantic cross exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "I-NP_",
+      "expected": "I-NP_",
+      "group": "authority",
+      "name": "authority semantic truncated CCR boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "a=pi hbar/(c|delta|b)",
+      "expected": "a=pi hbar/(c|delta|b)",
+      "group": "authority",
+      "name": "authority semantic single-rung frequency fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-000800",
+      "expected": "EXP-000800",
+      "group": "authority",
+      "name": "certificate token EXP-000800",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-167",
+      "expected": "R-167",
+      "group": "authority",
+      "name": "certificate token R-167",
+      "status": "PASS"
+    },
+    {
+      "actual": "v1.4",
+      "expected": "v1.4",
+      "group": "authority",
+      "name": "certificate token v1.4",
+      "status": "PASS"
+    },
+    {
+      "actual": "fixed-beta",
+      "expected": "fixed-beta",
+      "group": "authority",
+      "name": "certificate token fixed-beta",
+      "status": "PASS"
+    },
+    {
+      "actual": "KMS",
+      "expected": "KMS",
+      "group": "authority",
+      "name": "certificate token KMS",
+      "status": "PASS"
+    },
+    {
+      "actual": "strong-star",
+      "expected": "strong-star",
+      "group": "authority",
+      "name": "certificate token strong-star",
+      "status": "PASS"
+    },
+    {
+      "actual": "thermodynamic",
+      "expected": "thermodynamic",
+      "group": "authority",
+      "name": "certificate token thermodynamic",
+      "status": "PASS"
+    },
+    {
+      "actual": "beta-independent",
+      "expected": "beta-independent",
+      "group": "authority",
+      "name": "certificate token beta-independent",
+      "status": "PASS"
+    },
+    {
+      "actual": "Pre-A",
+      "expected": "Pre-A",
+      "group": "authority",
+      "name": "certificate token Pre-A",
+      "status": "PASS"
+    },
+    {
+      "actual": "analytic infinite-dimensional theorem",
+      "expected": "analytic infinite-dimensional theorem",
+      "group": "authority",
+      "name": "certificate token analytic infinite-dimensional theorem",
+      "status": "PASS"
+    },
+    {
+      "actual": "non-authoritative",
+      "expected": "non-authoritative",
+      "group": "authority",
+      "name": "certificate token non-authoritative",
+      "status": "PASS"
+    }
+  ],
+  "authority": {
+    "missing": [],
+    "status": "COMPLETE"
+  },
+  "derived": {
+    "analytic_infinite_dimensional_scalarity_theorem_authoritative": true,
+    "beta_independent_alpha_closed": false,
+    "common_alpha_KMS_for_hamiltonian_limit_closed": false,
+    "finite_truncation_authoritative": false,
+    "finite_volume_strong_star_cauchy_closed": false,
+    "fixed_beta_common_normal_envelope_closed": true,
+    "half_modular_scalarity": {
+      "analytic_infinite_dimensional_theorem_authoritative": true,
+      "bond_shift_coefficient": "-R*c",
+      "canonical_ccr_defect": "Matrix([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, -5*I*hbar]])",
+      "canonical_ccr_defect_rank": 1,
+      "canonical_ccr_defect_residual": "Matrix([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]])",
+      "commutator_trace": "0",
+      "cross_exponent_coefficient": "-a*beta*c/2",
+      "cross_exponent_nonzero": true,
+      "cube_site_count": 8,
+      "exact_truncated_ccr": "Matrix([[I*hbar, 0, 0, 0, 0], [0, I*hbar, 0, 0, 0], [0, 0, I*hbar, 0, 0], [0, 0, 0, I*hbar, 0], [0, 0, 0, 0, -4*I*hbar]])",
+      "expected_bond_shift_coefficient": "-R*c",
+      "expected_canonical_ccr_defect": "Matrix([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, -5*I*hbar]])",
+      "expected_cross_exponent_coefficient": "-a*beta*c/2",
+      "expected_momentum_boost_coefficient": "R*hbar/chi",
+      "expected_nonempty_subset_count": 255,
+      "expected_peeling_step_count": 1024,
+      "expected_strip_coefficient": "2/beta",
+      "finite_truncation_authoritative": false,
+      "finite_truncation_role": "hostile boundary control: [q_N,p_N]=i*hbar*(I-N*P_top)",
+      "full_cube_trace": [
+        {
+          "extreme": [
+            1,
+            1,
+            1
+          ],
+          "outward": [
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "extreme": [
+            1,
+            1,
+            0
+          ],
+          "outward": [
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "extreme": [
+            1,
+            0,
+            1
+          ],
+          "outward": [
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "extreme": [
+            1,
+            0,
+            0
+          ],
+          "outward": [
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "extreme": [
+            0,
+            1,
+            1
+          ],
+          "outward": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "extreme": [
+            0,
+            1,
+            0
+          ],
+          "outward": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "extreme": [
+            0,
+            0,
+            1
+          ],
+          "outward": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "extreme": [
+            0,
+            0,
+            0
+          ],
+          "outward": [
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "half_strip": "beta/2",
+      "inputs": {
+        "R": "R",
+        "a": "a",
+        "beta": "beta",
+        "c": "c",
+        "chi": "chi",
+        "hbar": "hbar",
+        "truncation_dimension": 5
+      },
+      "maximum_peeling_depth": 8,
+      "momentum_boost_coefficient": "R*hbar/chi",
+      "outward_failure_count": 0,
+      "outward_failures": [],
+      "peeled_nonempty_subset_count": 255,
+      "peeling_step_count": 1024,
+      "strip_coefficient": "2/beta",
+      "truncated_ccr_residual": "Matrix([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]])",
+      "truncated_commutator": "Matrix([[I*hbar, 0, 0, 0, 0], [0, I*hbar, 0, 0, 0], [0, 0, I*hbar, 0, 0], [0, 0, 0, I*hbar, 0], [0, 0, 0, 0, -4*I*hbar]])"
+    },
+    "hamiltonian_thermodynamic_alpha_closed": false,
+    "mixture": {
+      "T_minus": "Matrix([[5/9, 0, 0, 0, 0, 0, 0, 0], [0, 5/9, 0, 0, 0, 0, 0, 0], [0, 0, 5/9, 0, 0, 0, 0, 0], [0, 0, 0, 5/9, 0, 0, 0, 0], [0, 0, 0, 0, 15/11, 0, 0, 0], [0, 0, 0, 0, 0, 15/11, 0, 0], [0, 0, 0, 0, 0, 0, 15/11, 0], [0, 0, 0, 0, 0, 0, 0, 15/11]])",
+      "T_minus_bound_residual": "Matrix([[10/9, 0, 0, 0, 0, 0, 0, 0], [0, 10/9, 0, 0, 0, 0, 0, 0], [0, 0, 10/9, 0, 0, 0, 0, 0], [0, 0, 0, 10/9, 0, 0, 0, 0], [0, 0, 0, 0, 10/33, 0, 0, 0], [0, 0, 0, 0, 0, 10/33, 0, 0], [0, 0, 0, 0, 0, 0, 10/33, 0], [0, 0, 0, 0, 0, 0, 0, 10/33]])",
+      "T_plus": "Matrix([[5/3, 0, 0, 0, 0, 0, 0, 0], [0, 5/3, 0, 0, 0, 0, 0, 0], [0, 0, 5/3, 0, 0, 0, 0, 0], [0, 0, 0, 5/3, 0, 0, 0, 0], [0, 0, 0, 0, 5/11, 0, 0, 0], [0, 0, 0, 0, 0, 5/11, 0, 0], [0, 0, 0, 0, 0, 0, 5/11, 0], [0, 0, 0, 0, 0, 0, 0, 5/11]])",
+      "T_plus_bound_residual": "Matrix([[5/6, 0, 0, 0, 0, 0, 0, 0], [0, 5/6, 0, 0, 0, 0, 0, 0], [0, 0, 5/6, 0, 0, 0, 0, 0], [0, 0, 0, 5/6, 0, 0, 0, 0], [0, 0, 0, 0, 45/22, 0, 0, 0], [0, 0, 0, 0, 0, 45/22, 0, 0], [0, 0, 0, 0, 0, 0, 45/22, 0], [0, 0, 0, 0, 0, 0, 0, 45/22]])",
+      "commutator_residuals": [
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])"
+      ],
+      "direct_minus_value": "5",
+      "direct_plus_value": "3",
+      "expected_T_minus": "Matrix([[5/9, 0, 0, 0, 0, 0, 0, 0], [0, 5/9, 0, 0, 0, 0, 0, 0], [0, 0, 5/9, 0, 0, 0, 0, 0], [0, 0, 0, 5/9, 0, 0, 0, 0], [0, 0, 0, 0, 15/11, 0, 0, 0], [0, 0, 0, 0, 0, 15/11, 0, 0], [0, 0, 0, 0, 0, 0, 15/11, 0], [0, 0, 0, 0, 0, 0, 0, 15/11]])",
+      "expected_T_plus": "Matrix([[5/3, 0, 0, 0, 0, 0, 0, 0], [0, 5/3, 0, 0, 0, 0, 0, 0], [0, 0, 5/3, 0, 0, 0, 0, 0], [0, 0, 0, 5/3, 0, 0, 0, 0], [0, 0, 0, 0, 5/11, 0, 0, 0], [0, 0, 0, 0, 0, 5/11, 0, 0], [0, 0, 0, 0, 0, 0, 5/11, 0], [0, 0, 0, 0, 0, 0, 0, 5/11]])",
+      "gram_minus": "Matrix([[1/6, 0, 0, 0, 0, 0, 0, 0], [0, 1/12, 0, 0, 0, 0, 0, 0], [0, 0, 1/6, 0, 0, 0, 0, 0], [0, 0, 0, 1/12, 0, 0, 0, 0], [0, 0, 0, 0, 1/2, 0, 0, 0], [0, 0, 0, 0, 0, 1/4, 0, 0], [0, 0, 0, 0, 0, 0, 1/2, 0], [0, 0, 0, 0, 0, 0, 0, 1/4]])",
+      "gram_plus": "Matrix([[1/2, 0, 0, 0, 0, 0, 0, 0], [0, 1/4, 0, 0, 0, 0, 0, 0], [0, 0, 1/2, 0, 0, 0, 0, 0], [0, 0, 0, 1/4, 0, 0, 0, 0], [0, 0, 0, 0, 1/6, 0, 0, 0], [0, 0, 0, 0, 0, 1/12, 0, 0], [0, 0, 0, 0, 0, 0, 1/6, 0], [0, 0, 0, 0, 0, 0, 0, 1/12]])",
+      "gram_zero": "Matrix([[3/10, 0, 0, 0, 0, 0, 0, 0], [0, 3/20, 0, 0, 0, 0, 0, 0], [0, 0, 3/10, 0, 0, 0, 0, 0], [0, 0, 0, 3/20, 0, 0, 0, 0], [0, 0, 0, 0, 11/30, 0, 0, 0], [0, 0, 0, 0, 0, 11/60, 0, 0], [0, 0, 0, 0, 0, 0, 11/30, 0], [0, 0, 0, 0, 0, 0, 0, 11/60]])",
+      "inputs": {
+        "boltzmann_ratio": "1/2",
+        "lambda_minus": "3/5",
+        "lambda_plus": "2/5",
+        "p_minus": [
+          "1/4",
+          "3/4"
+        ],
+        "p_plus": [
+          "3/4",
+          "1/4"
+        ]
+      },
+      "kms_rows": [
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        }
+      ],
+      "mixture_faithful": true,
+      "mixture_residual": "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+      "p_zero": [
+        "9/20",
+        "11/20"
+      ],
+      "rho": [
+        "2/3",
+        "1/3"
+      ],
+      "rn_are_not_projections": true,
+      "rn_minus_value": "5",
+      "rn_plus_value": "3",
+      "symmetric_parity_gram_residual": "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+      "symmetric_parity_translation_residual": "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+      "translation_residuals": [
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+        "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])"
+      ],
+      "weighted_T_residual": "Matrix([[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]])",
+      "word_gram_rank": 8,
+      "word_labels": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "word_mixture_residual": "Matrix([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])",
+      "word_null_intersection": true,
+      "word_nullity": 8
+    },
+    "positive_finite_volume_graph_energy_precursor_closed": true,
+    "sharp_time_counterexample": {
+      "beta": "1",
+      "difference_square": "Matrix([[2, 0], [0, 2]])",
+      "evolved_sigma_z": "Matrix([[0, I], [-I, 0]])",
+      "expected_evolved": "Matrix([[0, I], [-I, 0]])",
+      "full_cylinder_translation_required": true,
+      "midpoint_one": "4/5",
+      "midpoint_zero": "1",
+      "nu": "log(2)",
+      "operator_norm_difference": "sqrt(2)",
+      "rho_one": "Matrix([[1/2, 3/10], [3/10, 1/2]])",
+      "rho_zero": "Matrix([[1/2, 0], [0, 1/2]])",
+      "sharp_q_one": "a**2/2 + b**2/2",
+      "sharp_q_zero": "a**2/2 + b**2/2",
+      "sharp_time_inference_valid": false,
+      "t_star": "pi/(4*log(2))"
+    },
+    "single_rung_influence": {
+      "a_fixture": "1001*pi/102",
+      "bond_kick_identity": "beta_delta(W_a(x))=W_a(x) exp(-i*c*delta*a*q_y/hbar)",
+      "decreasing_delta_fixture": [
+        {
+          "a": "286*pi/51",
+          "delta": "1/2",
+          "half_phase": "pi/2",
+          "response": "6*sqrt(2)/7"
+        },
+        {
+          "a": "572*pi/51",
+          "delta": "1/4",
+          "half_phase": "pi/2",
+          "response": "6*sqrt(2)/7"
+        },
+        {
+          "a": "1144*pi/51",
+          "delta": "1/8",
+          "half_phase": "pi/2",
+          "response": "6*sqrt(2)/7"
+        },
+        {
+          "a": "2288*pi/51",
+          "delta": "1/16",
+          "half_phase": "pi/2",
+          "response": "6*sqrt(2)/7"
+        }
+      ],
+      "epsilon": "epsilon",
+      "epsilon_a": "143*pi/(51*epsilon)",
+      "epsilon_half_phase": "pi/2",
+      "epsilon_response": "6*sqrt(2)/7",
+      "exact_response_identity": "(2*sqrt(2)/G_y(W_b))*Abs(sin(c*delta*a*b/(2*hbar)))",
+      "expected_a_fixture": "1001*pi/102",
+      "frequency_blind_small_coefficient_recurrence_possible": false,
+      "half_phase": "-pi/2",
+      "initial_y_influence": "0",
+      "inputs": {
+        "G_y_W_b": "7/3",
+        "b": "5/11",
+        "c": "3/5",
+        "delta": "-2/7",
+        "hbar": "13/17"
+      },
+      "opposite_half_phase": "pi/2",
+      "opposite_response": "6*sqrt(2)/7",
+      "positive_precursor_scope": {
+        "finite_volume_critical_graph_bond_kick_energy_propagation": true,
+        "finite_volume_energy_constrained_strongstar_bond_kick_propagation": true,
+        "hamiltonian_thermodynamic_alpha_identification": false,
+        "quartic_onsite_all_moment_orbit_frechet_invariance": false,
+        "volume_uniform_thermodynamic_cauchy": false,
+        "weyl_fourier_analytic_shear_radius_recurrence": true
+      },
+      "response": "6*sqrt(2)/7",
+      "saturated_response": "6*sqrt(2)/7",
+      "uniform_x_influence_upper_bound": "2*sqrt(2)"
+    },
+    "theorem_schema": {
+      "canonical_maps": "J_sigma[F]_0=[F]_sigma and T_sigma=J_sigma^*J_sigma",
+      "conclusions": {
+        "T_in_mixture_commutant": true,
+        "bounded_dense_range_J": true,
+        "component_states_beta_KMS_for_one_reconstructed_alpha": true,
+        "component_states_normal": true,
+        "faithful_mixture_two_sided_L2_metrizes_bounded_strong_star": true,
+        "interior_weight_envelopes_label_equivalent": true,
+        "weighted_T_partition_of_identity": true
+      },
+      "exact_form_identity": "q_0=lambda_+ q_+ + lambda_- q_-",
+      "hypotheses": {
+        "common_formal_analytic_word_algebra": true,
+        "common_reflection_field_and_positive_time_cylinder_module": true,
+        "common_sharp_multipliers": true,
+        "fixed_beta": true,
+        "positive_mixture_weights": true,
+        "translation_intertwining": true
+      },
+      "name": "fixed-beta canonical OS-mixture common-normal-envelope theorem",
+      "open_boundaries": {
+        "GNS_gap": true,
+        "Pre_A": true,
+        "beta_independent_passage": true,
+        "beta_to_infinity_ground_passage": true,
+        "common_local_generator_core": true,
+        "continuum": true,
+        "exhaustion_independence": true,
+        "finite_volume_strong_star_cauchy": true,
+        "hamiltonian_thermodynamic_limit_identification": true,
+        "phase_state_independent_quasilocal_Cstar_alpha": true,
+        "physical_empty_comparison": true
+      },
+      "strong_star_successor_criterion": "For every preregistered bounded local analytic A and compact time interval, prove mixture expectations of D^*D+DD^* tend to zero for nested finite-volume zero-source dynamics.",
+      "v1_4_route_split": {
+        "analytic_half_modular_extreme_site_theorem_authoritative": true,
+        "finite_oscillator_truncation_authoritative": false,
+        "finite_volume_graph_energy_precursor_survives": true,
+        "frequency_blind_single_rung_site_recurrence_available": false,
+        "full_gibbs_half_modular_nontrivial_local_class_available": false,
+        "weyl_frequency_or_analytic_rung_profile_required": true
+      }
+    }
+  },
+  "exploration_id": "EXP-000800",
+  "negative_id": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE"
+  ],
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_number": "R-167",
+  "result_version": "v1.4",
+  "schema": "tect/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-primary-result/1.0",
+  "script_version": "1.1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_beta_os_mixture_common_wstar_route_split.py": "c5699f58a5c6f000a96127f592ba6a990e450072333acd481ffd2452eee0a069",
+    "strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-manifest.json": "2b732db59ebc9e611ed14ad1a27ce88d8cf973afd14f1ec3a39603c625713a9d",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-certificate-260810.md": "f97b11d124706550d0bd10e7f38f81692267149d72f6821ec9e0b524f614a3d1",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json": "b06dc6b1370e2865d1d6a52795d12cc85204924df4b038545d7d24d76a52579d",
+    "strategy/pre-a-cp1-st8-q3lock-os-dynamics-ground-gap-counterterm-empty-route-split-certificate-260809.md": "504338f9416d016888bedb8258f7c610e66b0311db699fe69416341b04914f4b"
+  },
+  "summary": {
+    "authority_status": "COMPLETE",
+    "failed": 0,
+    "passed": 81,
+    "total": 81
+  },
+  "verdict": "PASS"
+}

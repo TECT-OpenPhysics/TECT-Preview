@@ -1,0 +1,77 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FIXED-BETA-OS-MIXTURE-COMMON-WSTAR-ROUTE-SPLIT-v0",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "parent_explorations": [
+    "EXP-000790",
+    "EXP-000798",
+    "EXP-000799"
+  ],
+  "exploration_id": "EXP-000800",
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_version": "v1.4",
+  "result_number": "R-167",
+  "claim_bearing": false,
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE"
+  ],
+  "authority": "R-167 v1.4 is an additive T0 fixed-beta reconstruction and topology route split, not a new result number. For every fixed beta and every preregistered nontrivial convex mixture of the two EXP-000790 phase path laws, the full common positive-time cylinder module reconstructs one canonical mixture W-star envelope. The two phase functionals are normal beta-KMS states of its single reconstructed real-time automorphism group. This closes a fixed-beta pair-derived common normal envelope, not the phase-, state- and beta-independent thermodynamic Hamiltonian alpha. Exact counterexamples show that sharp-time OS Gram domination alone cannot supply the required functoriality, every bounded finite-support observable with both full-Gibbs half-modular endpoint conjugates bounded is scalar, and a single-rung energy-constrained site influence seminorm cannot have a small-coefficient bond recurrence uniform in Weyl frequency. The surviving target is Hamiltonian thermodynamic identification inside the canonical mixture envelope, using direct D and delta-D Cauchy or an all-moment orbit-Frechet hierarchy.",
+  "fixed_beta_os_mixture_theorem": {
+    "inputs": "Fix beta>0 and the two EXP-000790 parity-related path laws mu_(beta,+/-) on the same loop configuration space. Let 0<lambda_+,lambda_-<1 with lambda_++lambda_-=1 and mu_0=lambda_+mu_++lambda_-mu_-. Use the same full positive-time cylinder module D_+, common to both phases, together with the sharp-time algebra S_conf and formal analytic word/time-shift operations already verified in EXP-000790.",
+    "reflection_form": "For sigma in {+,-,0}, q_sigma(F,G)=int conjugate(F(Theta omega))G(omega)dmu_sigma. Linearity gives q_0=lambda_+q_++lambda_-q_- and q_sigma(F,F)<=lambda_sigma^(-1)q_0(F,F).",
+    "canonical_reconstruction": "The map V[F]_0=(sqrt(lambda_+)[F]_+,sqrt(lambda_-)[F]_-) is an isometry from H_0 onto the closed cyclic common-word subspace K of H_+ direct-sum H_-. Because the full common analytic word algebra contains products, star and both real shift orientations, K reduces the direct-sum word representation and real-time group. Periodic OS reconstruction uniqueness therefore identifies the mixture dynamics with this restriction.",
+    "intertwiners": "J_sigma=lambda_sigma^(-1/2)P_sigma V has dense range, norm at most lambda_sigma^(-1/2), and intertwines every common analytic word and the reconstructed real-time groups. T_sigma=J_sigma^*J_sigma lies in M_0 prime, is positive, obeys T_sigma<=lambda_sigma^(-1)I and lambda_+T_++lambda_-T_-=I.",
+    "normal_kms_states": "On the support-reduced mixture GNS W-star algebra, psi_sigma(X)=<Omega_0,T_sigma X Omega_0> is a normal beta-KMS state for the single mixture group alpha_0 and reproduces the sigma Matsubara and real-time word functions. The two states remain distinct and parity-related through S_conf. For lambda_+=lambda_-=1/2 the mixture state is parity invariant.",
+    "strongstar_topology": "The support-reduced mixture KMS vector is cyclic and separating. On norm-bounded sets, ||X||_(#,0)^2=psi_0(X^*X)+psi_0(XX^*) metrizes strong-star. Thus direct two-sided mixture-L2 Cauchy is the exact fixed-beta topology target for later Hamiltonian exhaustion identification.",
+    "scope": "The envelope is fixed-beta and is defined from the chosen DLR phase pair and full common OS word kernel. It is not a finite-volume Hamiltonian thermodynamic limit, a beta-independent or representation-independent quasi-local C-star dynamics, or a ground-state system."
+  },
+  "sharp_time_only_counterexample": {
+    "fixture": "At beta=hbar=1 on C^2, let H_0=0 and H_1=-(log 2)sigma_x. Then rho_0=I/2 and rho_1=(I+(3/5)sigma_x)/2. Every diagonal sharp-time f has Tr(rho_0 f^*f)=Tr(rho_1 f^*f), and sharp multipliers agree.",
+    "failure": "At t_*=pi/(4 log 2), alpha_0,t_*(sigma_z)=sigma_z while alpha_1,t_*(sigma_z) is plus or minus sigma_y, with operator-norm difference sqrt(2). The beta/2 Euclidean two-point functions are 1 and 1/cosh(log 2)=4/5.",
+    "consequence": "Sharp-time Gram domination, even equality with identical sharp multipliers, does not imply real-time or analytic-word intertwining. The full common positive-time cylinder module and translation action are load-bearing in the positive theorem."
+  },
+  "half_modular_local_scalarity_theorem": {
+    "setup": "Let H_Lambda(h) be an exact finite-volume ST8/Q3LOCK Schrodinger Hamiltonian with c,chi,hbar>0. Let X be finite with one lattice collar inside Lambda and A=A_X tensor I bounded. Put s=beta/2. Assume e^(sH)Ae^(-sH) and e^(-sH)Ae^(sH) have bounded closures.",
+    "strip_lemma": "After a scalar shift H>=0, compact spectral compressions and three-lines give a bounded analytic strip. Cauchy with radius r<s and r increasing to s yields [H,A] bounded with norm at most M/s=2M/beta, where M is the larger endpoint norm.",
+    "extreme_site_induction": "Choose an extreme support site x and its outward neighbor y. A configuration translation of q_y by Rv changes the bounded commutator by -cR[v.q_x,A], hence [q_x,A]=0. A momentum boost of p_x by hbar Rv then changes it by (hbar R/chi)[v.p_x,A], hence [p_x,A]=0. Stone-von Neumann irreducibility removes x; induction makes A scalar.",
+    "cross_witness": "For one bond, exp(s[-c q_x.q_y])exp(-ia p_x/hbar)exp(-s[-c q_x.q_y])=exp(-ia p_x/hbar)exp(-sca q_y), which is unbounded for sca!=0.",
+    "truncation_boundary": "Finite oscillator truncations are non-authoritative controls because their canonical commutator is i*hbar*(I-N*P_top), not the exact CCR.",
+    "scope": "This rejects a nontrivial bounded finite-support separating class with full-Gibbs half-modular endpoints. It does not reject global finite-volume spectral analytic elements, direct D and delta-D estimates, state-weighted nonlocal classes or existence of the dynamics."
+  },
+  "single_rung_influence_counterexample": {
+    "setup": "Let beta_delta be one exact bond kick on xy. For A=W_a(x)=exp(-ia p_x/hbar), beta_delta(A)=A exp(-ic delta a q_y/hbar). Test the y influence with C_b=W_b(y)/G_y(W_b), where b!=0 and G_y(W_b)<infinity is any fixed graph-test normalization.",
+    "exact_response": "In the symmetric energy-constrained strong-star convention, p_E([beta_delta(A),C_b])=(2sqrt(2)/G_y(W_b))|sin(c delta a b/(2hbar))|. Initially the y influence is zero and the x influence is uniformly bounded by 2sqrt(2). Choosing a=pi hbar/(c|delta|b) makes the new y response 2sqrt(2)/G_y(W_b) for every delta!=0.",
+    "consequence": "No single-rung site influence recurrence with a neighbor coefficient epsilon(delta) tending to zero can hold uniformly over the source observable. A surviving bond estimate must retain a Weyl-frequency or analytic-rung profile.",
+    "positive_precursor": "The critical graph Banach norm and energy-constrained strong-star seminorm still have finite-volume bond-kick energy propagation. A Weyl-Fourier analytic hierarchy has an exact shear/radius recurrence, but quartic onsite invariance of the required all-moment orbit-Frechet scale is open."
+  },
+  "hamiltonian_identification_boundary": {
+    "valid_fixed_beta_word_class": "The countable orbit-word span generated by rational-time translates of rational finite-support S_conf characters is strong-dense in the mixture OS W-star envelope.",
+    "direct_cauchy_criterion": "For bounded nets, direct Cauchy of both D and delta-D in the mixture Duhamel seminorm implies two-sided mixture-L2 and hence strong-star Cauchy by the arithmetic/logarithmic-mean inequality from R-167 v1.2. Product closure then uses joint strong-star continuity on bounded sets.",
+    "missing_identification": "Finite-volume Hamiltonian-evolved characters do not yet have a canonical exhaustion-independent embedding into the OS mixture envelope, their generator is not yet identified with the exact local polynomial derivation there, and the symmetric mixture is not proved to be the periodic zero-source finite-volume limit. Momentum and a full canonical Weyl algebra are also not reconstructed.",
+    "next_gate": "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE"
+  },
+  "status": "PARTIALLY RESOLVED: AT EACH FIXED BETA THE FULL COMMON OS CYLINDER MODULE CLOSES A CANONICAL MIXTURE W-STAR ENVELOPE WITH TWO DISTINCT NORMAL BETA-KMS PHASE STATES FOR ONE RECONSTRUCTED REAL-TIME GROUP. SHARP-TIME GRAM DATA ALONE, A NONTRIVIAL FULL-GIBBS HALF-MODULAR LOCAL CLASS, AND A SINGLE-RUNG FREQUENCY-BLIND SITE RECURRENCE FAIL. HAMILTONIAN THERMODYNAMIC IDENTIFICATION, A BETA-INDEPENDENT COMMON C-STAR ALPHA, GROUND STATES, GAP, CONTINUUM, EMPTY REFERENCE AND PRE-A REMAIN OPEN.",
+  "closed_subgates": [
+    "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE"
+  ],
+  "retained_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "verification": {
+    "proof_grade": "ANALYTIC exact OS quotient/intertwiner/Radon-Nikodym theorem at fixed beta; exact finite-dimensional KMS and sharp-time hostile fixtures; exact finite-volume strip/extreme-site CCR theorem; exact Weyl bond-response counterexample; primary, non-importing independent and integrated verification",
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_beta_os_mixture_common_wstar_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_beta_os_mixture_common_wstar_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_beta_os_mixture_common_wstar_route_split_verify.py"
+  },
+  "no_overclaim": "This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A."
+}

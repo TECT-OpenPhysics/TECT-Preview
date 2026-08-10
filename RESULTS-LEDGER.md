@@ -22,7 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-167](#r-167) | Weighted-energy, critical graph topology and thermodynamic-Cauchy route split | Scoped T0 analytic/exact/executed/audited theorem, strengthened to v1.3 without a new result number. v1.0--v1.2 prove the exact weighted-energy/cubic graph theorems, reject fixed-power first passage, and establish the modular-mean and coordinate-tail inputs. v1.3 proves centered all-bond kick graph stability, its exact one-layer commutator recurrence, a subcritical finite-volume graph-Trotter corollary and a direct finite-Gibbs relative-unitary estimate. Exact fixtures reject raw basic-resolvent point-norm continuity, ordinary and every `s<1/2` onsite Lipschitz class, and now also every fixed Weyl-containing C-star-Leibniz critical seminorm dominating a one-sided `p` commutator. They separately reject the coordinate-cutoff half-strip absolute route, the inference from direct `D,delta D` to evolved multipliers, and representation-independent C-star inference from one faithful strong-star topology. The live targets are a non-Leibniz analytic/Frechet or symmetric/state-weighted thermodynamic topology, or direct projected `D,delta D` locality. Common alpha/KMS, ground/GNS gap, continuum, empty-space comparison, C6, CP1 and Pre-A remain open |
+| [R-167](#r-167) | Weighted-energy, critical graph topology and thermodynamic-Cauchy route split | Scoped T0 analytic/exact/executed/audited theorem, strengthened to v1.4 without a new result number. v1.0--v1.3 prove the weighted-energy/cubic graph inputs and exact topology route splits. v1.4 proves that the full common OS cylinder module of any fixed-beta convex phase mixture reconstructs one canonical normal W-star envelope in which both ordered phases are distinct beta-KMS states of a single real-time group. Sharp-time Gram data alone do not imply that functoriality; bounded finite-support full-Gibbs half-modular analytic observables are scalar; and a single frequency-blind site-influence rung cannot transfer with a small bond coefficient. The fixed-beta envelope is not yet the thermodynamic Hamiltonian alpha. Its Hamiltonian/exhaustion identification, beta-independent common algebra, ground/GNS gap, continuum, empty-space comparison, C6, CP1 and Pre-A remain open |
 | [R-166](#r-166) | Sparse production radial-Gram decomposition and global owner bound | Scoped T4 analytic/exact/executed/audited production-fibre theorem, strengthened in v1.1 without a new result ID. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / single fresh-`4p` R-153 fibre, the exact Fierz split, Pauli nonresonance, radial bounds and direct coefficient inequality give an explicit rational polynomial whose unique global minimum lies in `70<G_*<71` and is `-4/5+18740524635403/439505584128000>-4/5`. Thus the owner plus source Hessian is strictly above `1/10`, the scoped R-164 reduction permits `rho=3/20`, and the R-165 annulus is closed. Exact simultaneous `sin(4x),sin(8x)` arithmetic gives Gram `[[5/4,1],[1,3/2]]` and ratio `3/8` at `(1,-1)`, registering that the coefficient-one lemma cannot be copied rootwise. Primary `40/40` and independent Fraction `37/37` audits pass. The complete joint owner, nonlinear/revisit feedback, low variables, removal, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-165](#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | Scoped T4 analytic/exact/executed/audited production-fibre theorem. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / fresh-`4p` R-153 fibre, whitened past amplitude `G` and final direction `alpha` obey `K_owner(g)[alpha,alpha] >= P(G)|alpha|^2` for one explicit rational quartic polynomial. A sharp `5/6` Fourier separation lemma, exact A1 covariance enclosures, and R-130 derivative envelopes prove the R-164 owner target `K_owner>=-9I/10` for `0<=G<=21` and `G>=274`, reducing this fibre's noncompact amplitude problem to the bounded open annulus `21<G<274`; its closed certification domain `21<=G<=274` is compact. Primary `38/38` and independent Fraction `30/30` audits pass; the deterministic five-page PDF passed all-page visual QA. The open annulus, other harmonics and roots, cross blocks, nonlinear/revisit feedback, low variables, regulator/removal uniformity, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-164](#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | Scoped T4 analytic/exact/executed/audited direct-chart theorem. For every finite R-104 zero-control chart, the R-141 legal force is the orthogonal projection of the complete centered terminal scalar onto predictable first Gaussian chaos, so its squared source-dual norm is at most the scalar variance with sharp constant one. A7 `L2` convergence and the A1/A11 point-covariance trace give a cutoff-, chart-length-, and linear/isometric-refinement-uniform bound on that variance along the registered sharp-cube/dyadic sequence. A7 centering also makes the direct anchor nonnegative. Therefore a complete direct owner bound `K_owner>=-(10/11-rho)G_src` yields `mu=-1/110+rho`, `epsilon_v=max(0,5/11-rho/4)`, `epsilon_6=3/20`, and constant `B_*/rho`, without separate anchor or origin-force assumptions. The complete production owner, nonzero feedback, shifted low base, arbitrary graph metric transport, random/nonlinear/revisit/pathwise scope, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
@@ -204,7 +204,9 @@ no mathematical statement or boundary. `EXP-000798` adds the exact
 fixed-order response counterexample, all-order unitary repair, modular topology
 and coordinate-cutoff theorems and advances the same result to v1.2.
 `EXP-000799` adds the exact common-alpha topology split and advances the same
-result to v1.3.
+result to v1.3. `EXP-000800` proves the canonical fixed-beta OS-mixture common
+normal W-star envelope, registers three sharper topology boundaries, and
+advances the same result to v1.4.
 
 **Authority links.** The v1.1 `centered-weight cubic graph` and
 `prescribed-word` heat theorem are recorded under
@@ -220,6 +222,12 @@ C-star-Leibniz realization of the critical `s=1/2` onsite orbit, and narrows
 the first to a non-Leibniz analytic/Frechet or symmetric/state-weighted
 thermodynamic topology. The second is narrowed to direct projected
 `D,delta D` locality on a preregistered separating local class.
+R-167 v1.4 closes
+`PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE`
+and makes
+`PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE`
+the precise successor. The historical all-bond and projected gate IDs remain
+part of the route provenance.
 
 **Negative-route authorities.** The exact fixed-power star/repeat obstruction
 is registered as
@@ -235,6 +243,11 @@ The seven v1.3 topology and graph failures are registered as
 `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE`,
 and
 `NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY`.
+The three v1.4 boundaries are
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY`,
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS`,
+and
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE`.
 
 **Statement.** For the exact finite-volume ST8/Q3LOCK Hamiltonian with
 `chi,c,g>0`, `lambda>=0`, bounded source, and centered weight
@@ -368,19 +381,56 @@ is strictly weaker and remains open.  A separate `l_infinity` tail-projection
 fixture shows why one faithful strong-star topology is not an abstract C-star
 limit.
 
-**Boundary.** The theorem is finite-volume and graph-domain based. It does not
-construct a surviving non-Leibniz analytic/Frechet or symmetric/state-weighted
-critical topology, prove thermodynamic graph Cauchy, direct projected
-`D,delta D` locality on a
-separating common core, a common thermodynamic automorphism, common-alpha KMS states,
+**v1.4 fixed-beta common-envelope theorem.** Let `mu_+` and `mu_-` be the two
+`EXP-000790` path laws at one fixed beta and let
+`mu_0=lambda_+mu_+ + lambda_-mu_-`, with both weights positive. On the full
+common positive-time cylinder module their OS forms obey
+
+`q_0=lambda_+q_+ + lambda_-q_-`.
+
+Consequently
+`[F]_0 -> (sqrt(lambda_+)[F]_+,sqrt(lambda_-)[F]_-)` is an isometry onto the
+closed common-word cyclic subspace of the phasewise direct sum. Because the
+full formal word algebra contains products, star and both real time-shift
+orientations, that subspace reduces the word representation and reconstructed
+unitary group. The component maps `J_sigma` therefore intertwine all common
+analytic words and real time. The operators `T_sigma=J_sigma^*J_sigma` lie in
+the mixture commutant, satisfy
+
+`0<=T_sigma<=lambda_sigma^(-1)I`,
+`lambda_+T_+ + lambda_-T_-=I`,
+
+and define two distinct normal beta-KMS phase states of the single mixture
+group. On the support-reduced mixture GNS algebra, the two-sided mixture-L2
+seminorm metrizes strong-star on bounded sets.
+
+The full common cylinder module is essential. Two finite Gibbs systems have
+identical sharp-time diagonal Gram forms and multipliers while their real-time
+rotations differ by norm `sqrt(2)` and their beta/2 Euclidean two-point
+functions are `1` and `4/5`. A second theorem shows that any bounded
+finite-support observable whose two full-Gibbs half-modular endpoint
+conjugates are bounded is scalar: strip analyticity makes `[H,A]` bounded,
+then an outward configuration translation and an onsite momentum boost force
+successively `[q_x,A]=[p_x,A]=0` at every extreme support site. Finally, an
+exact Weyl bond response rejects a frequency-blind single-rung site-influence
+recurrence with a neighbor coefficient tending to zero. A valid locality
+proof must retain an analytic-frequency or all-moment orbit profile.
+
+**Boundary.** The v1.4 common normal envelope is fixed-beta and defined from
+the chosen phase pair. It is not identified with the exhaustion limit of the
+exact finite-volume Hamiltonians and is not a phase-, state- or
+beta-independent quasi-local C-star alpha. The theorem does not prove
+volume-uniform direct projected `D,delta D` locality, generator identification
+on a common Hamiltonian core, a full canonical momentum/Weyl bridge,
 algebraic ground states, a GNS or physical mass gap, regulator removal,
 continuum, a physical empty/preparation reference, a below-empty sign, C6,
 CP1, Sector A or Pre-A.
 
-**Proven in:** C6 / [R-167 v1.3 proof note](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-common-alpha-topology-critical-graph-route-split-260810-v0.4.tex.txt) / [verified PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-common-alpha-topology-critical-graph-route-split-260810-v0.4.pdf).
+**Proven in:** C6 / [R-167 v1.4 certificate](strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-certificate-260810.md). A reader-note/PDF pair is intentionally deferred until this gate-level checkpoint is fully stable.
 
-**Tier:** T0 (scoped finite-volume analytic theorem and conditional Cauchy
-reduction; no common-alpha promotion).
+**Tier:** T0 (scoped finite-volume/fixed-beta analytic theorem and conditional
+Hamiltonian-identification target; no beta-independent common-alpha
+promotion).
 
 **Publication target:** Pre-A analytic methods note.
 

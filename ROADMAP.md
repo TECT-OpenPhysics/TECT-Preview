@@ -765,10 +765,32 @@ uniform evolved `M_0,M_1`. The projected gate is therefore narrowed to direct
 locality on a preregistered separating local class, product/core density,
 exhaustion and group law. A fixed faithful strong-star topology is not by
 itself an abstract C-star limit.
-Common real-time `alpha`, common-alpha KMS identification, algebraic ground
-states, broken-sector GNS gap, enlarged-counterterm continuum, physical empty
-space and effective reduction remain open.  These bridge results do not select
-a Round-1 contestant.
+
+EXP-000800 advances R-167 to v1.4 and closes the first genuinely common
+real-time object, but only at fixed beta and in the canonical OS-mixture
+scope. For any nontrivial convex mixture of the two EXP-000790 path laws, the
+full common positive-time cylinder module identifies the mixture
+reconstruction with the common-word cyclic subspace of the two phasewise
+systems. The induced commutant Radon--Nikodym operators make both ordered
+phases distinct normal beta-KMS states of one mixture W-star group. A
+sharp-time-only two-level fixture shows why the full word/translation data are
+essential. Separately, a strip/extreme-site theorem proves that a bounded
+finite-support full-Gibbs half-modular analytic class is scalar, and an exact
+high-frequency Weyl response rejects a frequency-blind single-rung influence
+recurrence. This closes
+`PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE`.
+The next gate is therefore
+`PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE`:
+embed the exact finite-volume Hamiltonian orbits into this envelope, prove
+two-sided mixture-L2 or direct `D,delta D` exhaustion Cauchy, identify the
+local generator, and construct a beta-compatible state-independent algebra.
+
+The fixed-beta envelope is not yet the thermodynamic Hamiltonian `alpha` and
+does not support beta-to-infinity algebraic ground states. Hamiltonian common-
+alpha identification, distinct algebraic ground states, broken-sector GNS
+gap, enlarged-counterterm continuum, physical empty space and effective
+reduction remain open. These bridge results do not select a Round-1
+contestant.
 
 **T-050/A13 is mathematically preserved but parked from the main physical
 priority.**  The current registered SA-F4 route still passes through T-050,

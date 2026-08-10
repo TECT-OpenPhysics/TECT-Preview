@@ -102,6 +102,14 @@ Do not load the complete map when a narrow lookup is sufficient.
   respect for the T7 prohibition list (GOVERNANCE.md §5).
 - Every numerical claim needs a reproducible script + self-test asserts + JSON
   artefact under `claims/<ID>/runs/` before it is cited as evidence.
+- **PDF economy, without weakening the release gate:** during active proof
+  development, keep intermediate evidence in the exploration ledger, manifest,
+  strategy certificate, and reproducible run JSON; do not create or reissue a
+  proof-note PDF for each lemma, audit, or route decision.  `build_note_pdf.py
+  --no-compile` is permitted for source-form validation.  At one logical
+  gate-level checkpoint, issue or update one synthesis note, build its PDF,
+  and render-review it before commit.  The commit-time fresh-PDF requirement
+  remains unchanged.
 - **File-write-before-route-verdict:** before reporting a substantive proof
   route as advanced, failed, inconclusive, parked, repaired, or superseded,
   append the researcher-reusable decision to `explorations/log.jsonl` in the

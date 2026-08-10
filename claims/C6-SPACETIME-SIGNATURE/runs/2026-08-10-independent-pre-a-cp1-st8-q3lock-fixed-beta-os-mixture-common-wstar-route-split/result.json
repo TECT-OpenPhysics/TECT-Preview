@@ -1,0 +1,3271 @@
+{
+  "assertions": {
+    "failed": 0,
+    "passed": 95,
+    "rows": [
+      {
+        "actual": "standard library",
+        "expected": "standard library",
+        "group": "code",
+        "name": "stdlib-only imports",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "2/5",
+          "3/5"
+        ],
+        "expected": [
+          "2/5",
+          "3/5"
+        ],
+        "group": "OS",
+        "name": "OS mixture weights",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "9/20",
+          "11/20"
+        ],
+        "expected": [
+          "9/20",
+          "11/20"
+        ],
+        "group": "OS",
+        "name": "OS mixture center law",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expected": "all zero",
+        "group": "OS",
+        "name": "OS full Gram identity",
+        "status": "PASS"
+      },
+      {
+        "actual": "3249/20",
+        "expected": "3249/20",
+        "group": "OS",
+        "name": "OS mixture form isometry",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "dimension": 8,
+          "faithful": true
+        },
+        "expected": {
+          "dimension": 8,
+          "faithful": true
+        },
+        "group": "OS",
+        "name": "OS mixture faithful",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "5/3",
+          "5/11"
+        ],
+        "expected": [
+          "5/3",
+          "5/11"
+        ],
+        "group": "RN",
+        "name": "RN T plus",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "5/9",
+          "15/11"
+        ],
+        "expected": [
+          "5/9",
+          "15/11"
+        ],
+        "group": "RN",
+        "name": "RN T minus",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "expected": "all one",
+        "group": "RN",
+        "name": "RN weighted identity",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "minus": [
+            "5/9",
+            "15/11"
+          ],
+          "plus": [
+            "5/3",
+            "5/11"
+          ]
+        },
+        "expected": {
+          "minus_upper": "5/3",
+          "plus_upper": "5/2"
+        },
+        "group": "RN",
+        "name": "RN domination bounds",
+        "status": "PASS"
+      },
+      {
+        "actual": 8,
+        "expected": "all residuals zero",
+        "group": "RN",
+        "name": "RN in commutant",
+        "status": "PASS"
+      },
+      {
+        "actual": "11/12",
+        "expected": "11/12",
+        "group": "RN",
+        "name": "RN plus normal functional",
+        "status": "PASS"
+      },
+      {
+        "actual": "11/4",
+        "expected": "11/4",
+        "group": "RN",
+        "name": "RN minus normal functional",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "5/3",
+          "5/11",
+          "5/9",
+          "15/11"
+        ],
+        "expected": "nonprojection densities",
+        "group": "scope",
+        "name": "RN densities not central projections",
+        "status": "PASS"
+      },
+      {
+        "actual": 64,
+        "expected": "64 zero residuals",
+        "group": "KMS",
+        "name": "KMS exhaustive rows",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/2",
+          "1/2"
+        ],
+        "expected": [
+          "1/2",
+          "1/2"
+        ],
+        "group": "OS",
+        "name": "symmetric mixture parity law",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1/2",
+            "3/10"
+          ],
+          [
+            "3/10",
+            "1/2"
+          ]
+        ],
+        "expected": "[[1/2,3/10],[3/10,1/2]]",
+        "group": "sharp",
+        "name": "sharp density exact",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "4789/1800",
+          "4789/1800"
+        ],
+        "expected": "equal",
+        "group": "sharp",
+        "name": "sharp Gram equality",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": 2,
+        "group": "sharp",
+        "name": "sharp quarter-turn gap",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "4/5"
+        ],
+        "expected": [
+          1,
+          "4/5"
+        ],
+        "group": "sharp",
+        "name": "sharp Euclidean midpoint split",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "cosh_nu": "5/4",
+          "euclidean_midpoint_one": "4/5",
+          "euclidean_midpoint_zero": "1",
+          "exp_nu": "2",
+          "quarter_turn_difference_square": "2",
+          "quarter_turn_evolved_label": "-sigma_y",
+          "quarter_turn_operator_norm_squared": "2",
+          "rho_one": [
+            [
+              "1/2",
+              "3/10"
+            ],
+            [
+              "3/10",
+              "1/2"
+            ]
+          ],
+          "rho_zero": [
+            [
+              "1/2",
+              "0"
+            ],
+            [
+              "0",
+              "1/2"
+            ]
+          ],
+          "same_positive_time_cylinder": false,
+          "same_real_time": false,
+          "same_sharp_multipliers": true,
+          "sharp_one": "4789/1800",
+          "sharp_zero": "4789/1800",
+          "tanh_nu": "3/5"
+        },
+        "expected": "same sharp data, distinct dynamics",
+        "group": "sharp",
+        "name": "sharp-only inference false",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "cross_ratio": "4/3",
+          "weights": [
+            "1/14",
+            "1/7",
+            "3/14",
+            "4/7"
+          ]
+        },
+        "expected": "faithful and nonproduct",
+        "group": "half-modular",
+        "name": "half modular density faithful correlated",
+        "status": "PASS"
+      },
+      {
+        "actual": 16,
+        "expected": "adjoint invariant",
+        "group": "half-modular",
+        "name": "half modular star closure",
+        "status": "PASS"
+      },
+      {
+        "actual": 64,
+        "expected": "submultiplicative",
+        "group": "half-modular",
+        "name": "half modular product closure",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "3",
+          "4"
+        ],
+        "expected": [
+          "3",
+          "4"
+        ],
+        "group": "half-modular",
+        "name": "half modular local flip becomes conditional",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/3",
+          "1/4"
+        ],
+        "expected": [
+          "1/3",
+          "1/4"
+        ],
+        "group": "half-modular",
+        "name": "half modular reverse amplitudes",
+        "status": "PASS"
+      },
+      {
+        "actual": "7/10",
+        "expected": "7/10",
+        "group": "half-modular",
+        "name": "Q3 cross witness nonzero",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          false,
+          false
+        ],
+        "expected": [
+          false,
+          false
+        ],
+        "group": "half-modular",
+        "name": "Q3 full endpoints unbounded",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-3/5",
+          "-6/5",
+          "-12/5",
+          "-24/5"
+        ],
+        "expected": "nonzero linear R slopes",
+        "group": "half-modular",
+        "name": "extreme-site translation slopes",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "20/49",
+          "40/49",
+          "80/49",
+          "160/49"
+        ],
+        "expected": "nonzero linear R slopes force CCR commutators zero",
+        "group": "half-modular",
+        "name": "extreme-site boost slopes",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "expected": "all half-turns",
+        "group": "single-rung",
+        "name": "single-rung phase locked",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1/2",
+          "1/4",
+          "1/8",
+          "1/16",
+          "1/32",
+          "1/64"
+        ],
+        "expected": "strict decrease",
+        "group": "single-rung",
+        "name": "single-rung delta tends down",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            "1/2",
+            "1"
+          ],
+          [
+            "1/4",
+            "2"
+          ],
+          [
+            "1/8",
+            "4"
+          ],
+          [
+            "1/16",
+            "8"
+          ],
+          [
+            "1/32",
+            "16"
+          ],
+          [
+            "1/64",
+            "32"
+          ]
+        ],
+        "expected": "delta*a=1/2",
+        "group": "single-rung",
+        "name": "single-rung frequency compensates",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "commutator_operator_norm_squared": "1",
+          "frequency_blind_small_coefficient_recurrence": false,
+          "graph_conjugate_singular_values_squared": [
+            "4",
+            "1/4"
+          ],
+          "graph_test_norm": "2",
+          "initial_neighbour_influence_squared": "0",
+          "minimum_recurrence_coefficient": "1/4",
+          "normalized_test_scale": "1/2",
+          "response_strongstar_squared": "2",
+          "rows": [
+            {
+              "delta": "1/2",
+              "denominator": 2,
+              "phase_is_minus_one": true,
+              "phase_turn": "1/2",
+              "source_frequency": "1",
+              "test_frequency": "1"
+            },
+            {
+              "delta": "1/4",
+              "denominator": 4,
+              "phase_is_minus_one": true,
+              "phase_turn": "1/2",
+              "source_frequency": "2",
+              "test_frequency": "1"
+            },
+            {
+              "delta": "1/8",
+              "denominator": 8,
+              "phase_is_minus_one": true,
+              "phase_turn": "1/2",
+              "source_frequency": "4",
+              "test_frequency": "1"
+            },
+            {
+              "delta": "1/16",
+              "denominator": 16,
+              "phase_is_minus_one": true,
+              "phase_turn": "1/2",
+              "source_frequency": "8",
+              "test_frequency": "1"
+            },
+            {
+              "delta": "1/32",
+              "denominator": 32,
+              "phase_is_minus_one": true,
+              "phase_turn": "1/2",
+              "source_frequency": "16",
+              "test_frequency": "1"
+            },
+            {
+              "delta": "1/64",
+              "denominator": 64,
+              "phase_is_minus_one": true,
+              "phase_turn": "1/2",
+              "source_frequency": "32",
+              "test_frequency": "1"
+            }
+          ],
+          "source_influence_uniform_upper_squared": "8"
+        },
+        "expected": "G(X)=2 and G(X/2)=1",
+        "group": "single-rung",
+        "name": "single-rung graph test normalization",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "new": "2",
+          "old": "0"
+        },
+        "expected": {
+          "new": 2,
+          "old": 0
+        },
+        "group": "single-rung",
+        "name": "single-rung nonvanishing response",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4",
+        "expected": "1/4",
+        "group": "single-rung",
+        "name": "single-rung recurrence lower coefficient",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "factor": "47/35",
+          "transformed": "94/7"
+        },
+        "expected": "47/35",
+        "group": "analytic",
+        "name": "analytic shear one-layer identity",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "bond_one_layer": true,
+          "coupling": "3/5",
+          "delta": "2/7",
+          "frequencies": [
+            "2",
+            "3",
+            "5"
+          ],
+          "quartic_onsite_radius_invariance_proved": false,
+          "radius_factor": "47/35",
+          "radius_identity": true,
+          "thermodynamic_boundary_cauchy_proved": false,
+          "total": "10",
+          "transformed": [
+            "118/35",
+            "21/5",
+            "41/7"
+          ],
+          "transformed_total": "94/7"
+        },
+        "expected": "bond precursor only",
+        "group": "scope",
+        "name": "analytic route boundary",
+        "status": "PASS"
+      },
+      {
+        "actual": "tect/pre-a-route-split/1.0",
+        "expected": "tect/pre-a-route-split/1.0",
+        "group": "authority",
+        "name": "authority schema",
+        "status": "PASS"
+      },
+      {
+        "actual": "T-054",
+        "expected": "T-054",
+        "group": "authority",
+        "name": "authority task",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000800",
+        "expected": "EXP-000800",
+        "group": "authority",
+        "name": "authority exploration",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "group": "authority",
+        "name": "authority result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-167",
+        "expected": "R-167",
+        "group": "authority",
+        "name": "authority result number",
+        "status": "PASS"
+      },
+      {
+        "actual": "v1.4",
+        "expected": "v1.4",
+        "group": "authority",
+        "name": "authority version",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "authority",
+        "name": "authority claim nonbearing",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "EXP-000790",
+          "EXP-000798",
+          "EXP-000799"
+        ],
+        "expected": [
+          "EXP-000790",
+          "EXP-000798",
+          "EXP-000799"
+        ],
+        "group": "authority",
+        "name": "authority parent explorations",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE"
+        ],
+        "expected": [
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS",
+          "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE"
+        ],
+        "group": "authority",
+        "name": "negative IDs exact",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE"
+        ],
+        "group": "authority",
+        "name": "closed fixed-beta envelope gate",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+          "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+          "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+        ],
+        "group": "authority",
+        "name": "retained common-alpha gates",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "expected": "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "group": "authority",
+        "name": "successor gate first",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "exploration": "EXP-000799",
+          "version": "v1.3"
+        },
+        "expected": {
+          "exploration": "EXP-000799",
+          "version": "v1.3"
+        },
+        "group": "authority",
+        "name": "v1.3 parent",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "definitions": "M_0(B)=sup_(|t|<=1/2)||rho^t B rho^-t|| and M_1(B)=M_0([log rho,B]) on one common modular-analytic core.",
+          "duhamel_bounds": "||[X,B]||_D<=2M_0||X||_D and ||[log rho,[X,B]]||_D<=2M_0||[log rho,X]||_D+2M_1||X||_D.",
+          "gns_bound": "||[X,B]||_#^2<=(4M_0^2+2M_0M_1)||X||_D^2+2M_0^2||X||_D||[log rho,X]||_D.",
+          "status": "PROVED AS A FINITE TYPE-I FAITHFUL-GIBBS TOPOLOGY LEMMA; A GENERAL W-STAR EXTENSION AND UNIFORM M_0/M_1 FOR THE STRUCTURED TRUNCATED EVOLUTION ARE OPEN"
+        },
+        "expected": "finite type-I modular multiplier lemma",
+        "group": "authority",
+        "name": "v1.2 modular parent",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000790",
+        "expected": "EXP-000790 common sharp-time authority",
+        "group": "authority",
+        "name": "phasewise OS parent",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+        "group": "authority",
+        "name": "negative registry NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+        "group": "authority",
+        "name": "certificate negative NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS",
+        "group": "authority",
+        "name": "negative registry NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS",
+        "group": "authority",
+        "name": "certificate negative NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE",
+        "group": "authority",
+        "name": "negative registry NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE",
+        "status": "PASS"
+      },
+      {
+        "actual": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE",
+        "expected": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE",
+        "group": "authority",
+        "name": "certificate negative NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000800",
+        "expected": "EXP-000800",
+        "group": "authority",
+        "name": "certificate token EXP-000800",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-167",
+        "expected": "R-167",
+        "group": "authority",
+        "name": "certificate token R-167",
+        "status": "PASS"
+      },
+      {
+        "actual": "v1.4",
+        "expected": "v1.4",
+        "group": "authority",
+        "name": "certificate token v1.4",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE",
+        "expected": "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE",
+        "group": "authority",
+        "name": "certificate token PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "expected": "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "group": "authority",
+        "name": "certificate token PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "status": "PASS"
+      },
+      {
+        "actual": "fixed-beta",
+        "expected": "fixed-beta",
+        "group": "authority",
+        "name": "certificate token fixed-beta",
+        "status": "PASS"
+      },
+      {
+        "actual": "normal KMS",
+        "expected": "normal KMS",
+        "group": "authority",
+        "name": "certificate token normal KMS",
+        "status": "PASS"
+      },
+      {
+        "actual": "strong-star",
+        "expected": "strong-star",
+        "group": "authority",
+        "name": "certificate token strong-star",
+        "status": "PASS"
+      },
+      {
+        "actual": "half-modular",
+        "expected": "half-modular",
+        "group": "authority",
+        "name": "certificate token half-modular",
+        "status": "PASS"
+      },
+      {
+        "actual": "single site-influence rung",
+        "expected": "single site-influence rung",
+        "group": "authority",
+        "name": "certificate token single site-influence rung",
+        "status": "PASS"
+      },
+      {
+        "actual": "thermodynamic",
+        "expected": "thermodynamic",
+        "group": "authority",
+        "name": "certificate token thermodynamic",
+        "status": "PASS"
+      },
+      {
+        "actual": "beta-independent",
+        "expected": "beta-independent",
+        "group": "authority",
+        "name": "certificate token beta-independent",
+        "status": "PASS"
+      },
+      {
+        "actual": "Pre-A",
+        "expected": "Pre-A",
+        "group": "authority",
+        "name": "certificate token Pre-A",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "canonical_reconstruction": "The map V[F]_0=(sqrt(lambda_+)[F]_+,sqrt(lambda_-)[F]_-) is an isometry from H_0 onto the closed cyclic common-word subspace K of H_+ direct-sum H_-. Because the full common analytic word algebra contains products, star and both real shift orientations, K reduces the direct-sum word representation and real-time group. Periodic OS reconstruction uniqueness therefore identifies the mixture dynamics with this restriction.",
+          "inputs": "Fix beta>0 and the two EXP-000790 parity-related path laws mu_(beta,+/-) on the same loop configuration space. Let 0<lambda_+,lambda_-<1 with lambda_++lambda_-=1 and mu_0=lambda_+mu_++lambda_-mu_-. Use the same full positive-time cylinder module D_+, common to both phases, together with the sharp-time algebra S_conf and formal analytic word/time-shift operations already verified in EXP-000790.",
+          "intertwiners": "J_sigma=lambda_sigma^(-1/2)P_sigma V has dense range, norm at most lambda_sigma^(-1/2), and intertwines every common analytic word and the reconstructed real-time groups. T_sigma=J_sigma^*J_sigma lies in M_0 prime, is positive, obeys T_sigma<=lambda_sigma^(-1)I and lambda_+T_++lambda_-T_-=I.",
+          "normal_kms_states": "On the support-reduced mixture GNS W-star algebra, psi_sigma(X)=<Omega_0,T_sigma X Omega_0> is a normal beta-KMS state for the single mixture group alpha_0 and reproduces the sigma Matsubara and real-time word functions. The two states remain distinct and parity-related through S_conf. For lambda_+=lambda_-=1/2 the mixture state is parity invariant.",
+          "reflection_form": "For sigma in {+,-,0}, q_sigma(F,G)=int conjugate(F(Theta omega))G(omega)dmu_sigma. Linearity gives q_0=lambda_+q_++lambda_-q_- and q_sigma(F,F)<=lambda_sigma^(-1)q_0(F,F).",
+          "scope": "The envelope is fixed-beta and is defined from the chosen DLR phase pair and full common OS word kernel. It is not a finite-volume Hamiltonian thermodynamic limit, a beta-independent or representation-independent quasi-local C-star dynamics, or a ground-state system.",
+          "strongstar_topology": "The support-reduced mixture KMS vector is cyclic and separating. On norm-bounded sets, ||X||_(#,0)^2=psi_0(X^*X)+psi_0(XX^*) metrizes strong-star. Thus direct two-sided mixture-L2 Cauchy is the exact fixed-beta topology target for later Hamiltonian exhaustion identification."
+        },
+        "expected": "full common reducing word module",
+        "group": "authority",
+        "name": "full cylinder load-bearing",
+        "status": "PASS"
+      },
+      {
+        "actual": "On the support-reduced mixture GNS W-star algebra, psi_sigma(X)=<Omega_0,T_sigma X Omega_0> is a normal beta-KMS state for the single mixture group alpha_0 and reproduces the sigma Matsubara and real-time word functions. The two states remain distinct and parity-related through S_conf. For lambda_+=lambda_-=1/2 the mixture state is parity invariant.",
+        "expected": "normal phase states for one mixture group",
+        "group": "authority",
+        "name": "normal KMS authority",
+        "status": "PASS"
+      },
+      {
+        "actual": "This rejects a nontrivial bounded finite-support separating class with full-Gibbs half-modular endpoints. It does not reject global finite-volume spectral analytic elements, direct D and delta-D estimates, state-weighted nonlocal classes or existence of the dynamics.",
+        "expected": "local class rejected, direct route retained",
+        "group": "authority",
+        "name": "half modular scope",
+        "status": "PASS"
+      },
+      {
+        "actual": "No single-rung site influence recurrence with a neighbor coefficient epsilon(delta) tending to zero can hold uniformly over the source observable. A surviving bond estimate must retain a Weyl-frequency or analytic-rung profile.",
+        "expected": "frequency profile required",
+        "group": "authority",
+        "name": "single rung scope",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "direct_cauchy_criterion": "For bounded nets, direct Cauchy of both D and delta-D in the mixture Duhamel seminorm implies two-sided mixture-L2 and hence strong-star Cauchy by the arithmetic/logarithmic-mean inequality from R-167 v1.2. Product closure then uses joint strong-star continuity on bounded sets.",
+          "missing_identification": "Finite-volume Hamiltonian-evolved characters do not yet have a canonical exhaustion-independent embedding into the OS mixture envelope, their generator is not yet identified with the exact local polynomial derivation there, and the symmetric mixture is not proved to be the periodic zero-source finite-volume limit. Momentum and a full canonical Weyl algebra are also not reconstructed.",
+          "next_gate": "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+          "valid_fixed_beta_word_class": "The countable orbit-word span generated by rational-time translates of rational finite-support S_conf characters is strong-dense in the mixture OS W-star envelope."
+        },
+        "expected": "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "group": "authority",
+        "name": "Hamiltonian identification open",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A.",
+        "expected": "contains thermodynamic limit",
+        "group": "scope",
+        "name": "no-overclaim thermodynamic limit",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A.",
+        "expected": "contains beta-independent",
+        "group": "scope",
+        "name": "no-overclaim beta-independent",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A.",
+        "expected": "contains volume-uniform",
+        "group": "scope",
+        "name": "no-overclaim volume-uniform",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A.",
+        "expected": "contains ground states",
+        "group": "scope",
+        "name": "no-overclaim ground states",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A.",
+        "expected": "contains GNS",
+        "group": "scope",
+        "name": "no-overclaim GNS",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A.",
+        "expected": "contains continuum",
+        "group": "scope",
+        "name": "no-overclaim continuum",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A.",
+        "expected": "contains physical empty space",
+        "group": "scope",
+        "name": "no-overclaim physical empty space",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A.",
+        "expected": "contains C6",
+        "group": "scope",
+        "name": "no-overclaim C6",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A.",
+        "expected": "contains Sector A",
+        "group": "scope",
+        "name": "no-overclaim Sector A",
+        "status": "PASS"
+      },
+      {
+        "actual": "This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A.",
+        "expected": "contains Pre-A",
+        "group": "scope",
+        "name": "no-overclaim Pre-A",
+        "status": "PASS"
+      },
+      {
+        "actual": "{\"authority\": \"R-167 v1.4 is an additive T0 fixed-beta reconstruction and topology route split, not a new result number. For every fixed beta and every preregistered nontrivial convex mixture of the two EXP-000790 phase path laws, the full common positive-time cylinder module reconstructs one canonical mixture W-star envelope. The two phase functionals are normal beta-KMS states of its single reconstructed real-time automorphism group. This closes a fixed-beta pair-derived common normal envelope, not the phase-, state- and beta-independent thermodynamic Hamiltonian alpha. Exact counterexamples show that sharp-time OS Gram domination alone cannot supply the required functoriality, every bounded finite-support observable with both full-Gibbs half-modular endpoint conjugates bounded is scalar, and a single-rung energy-constrained site influence seminorm cannot have a small-coefficient bond recurrence uniform in Weyl frequency. The surviving target is Hamiltonian thermodynamic identification inside the canonical mixture envelope, using direct D and delta-D Cauchy or an all-moment orbit-Frechet hierarchy.\", \"candidate_id\": \"PA-CP1-ST8-Q3LOCK-FIXED-BETA-OS-MIXTURE-COMMON-WSTAR-ROUTE-SPLIT-v0\", \"claim_bearing\": false, \"claim_ids\": [\"C6-SPACETIME-SIGNATURE\"], \"closed_subgates\": [\"PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE\"], \"exploration_id\": \"EXP-000800\", \"fixed_beta_os_mixture_theorem\": {\"canonical_reconstruction\": \"The map V[F]_0=(sqrt(lambda_+)[F]_+,sqrt(lambda_-)[F]_-) is an isometry from H_0 onto the closed cyclic common-word subspace K of H_+ direct-sum H_-. Because the full common analytic word algebra contains products, star and both real shift orientations, K reduces the direct-sum word representation and real-time group. Periodic OS reconstruction uniqueness therefore identifies the mixture dynamics with this restriction.\", \"inputs\": \"Fix beta>0 and the two EXP-000790 parity-related path laws mu_(beta,+/-) on the same loop configuration space. Let 0<lambda_+,lambda_-<1 with lambda_++lambda_-=1 and mu_0=lambda_+mu_++lambda_-mu_-. Use the same full positive-time cylinder module D_+, common to both phases, together with the sharp-time algebra S_conf and formal analytic word/time-shift operations already verified in EXP-000790.\", \"intertwiners\": \"J_sigma=lambda_sigma^(-1/2)P_sigma V has dense range, norm at most lambda_sigma^(-1/2), and intertwines every common analytic word and the reconstructed real-time groups. T_sigma=J_sigma^*J_sigma lies in M_0 prime, is positive, obeys T_sigma<=lambda_sigma^(-1)I and lambda_+T_++lambda_-T_-=I.\", \"normal_kms_states\": \"On the support-reduced mixture GNS W-star algebra, psi_sigma(X)=<Omega_0,T_sigma X Omega_0> is a normal beta-KMS state for the single mixture group alpha_0 and reproduces the sigma Matsubara and real-time word functions. The two states remain distinct and parity-related through S_conf. For lambda_+=lambda_-=1/2 the mixture state is parity invariant.\", \"reflection_form\": \"For sigma in {+,-,0}, q_sigma(F,G)=int conjugate(F(Theta omega))G(omega)dmu_sigma. Linearity gives q_0=lambda_+q_++lambda_-q_- and q_sigma(F,F)<=lambda_sigma^(-1)q_0(F,F).\", \"scope\": \"The envelope is fixed-beta and is defined from the chosen DLR phase pair and full common OS word kernel. It is not a finite-volume Hamiltonian thermodynamic limit, a beta-independent or representation-independent quasi-local C-star dynamics, or a ground-state system.\", \"strongstar_topology\": \"The support-reduced mixture KMS vector is cyclic and separating. On norm-bounded sets, ||X||_(#,0)^2=psi_0(X^*X)+psi_0(XX^*) metrizes strong-star. Thus direct two-sided mixture-L2 Cauchy is the exact fixed-beta topology target for later Hamiltonian exhaustion identification.\"}, \"half_modular_local_scalarity_theorem\": {\"cross_witness\": \"For one bond, exp(s[-c q_x.q_y])exp(-ia p_x/hbar)exp(-s[-c q_x.q_y])=exp(-ia p_x/hbar)exp(-sca q_y), which is unbounded for sca!=0.\", \"extreme_site_induction\": \"Choose an extreme support site x and its outward neighbor y. A configuration translation of q_y by Rv changes the bounded commutator by -cR[v.q_x,A], hence [q_x,A]=0. A momentum boost of p_x by hbar Rv then changes it by (hbar R/chi)[v.p_x,A], hence [p_x,A]=0. Stone-von Neumann irreducibility removes x; induction makes A scalar.\", \"scope\": \"This rejects a nontrivial bounded finite-support separating class with full-Gibbs half-modular endpoints. It does not reject global finite-volume spectral analytic elements, direct D and delta-D estimates, state-weighted nonlocal classes or existence of the dynamics.\", \"setup\": \"Let H_Lambda(h) be an exact finite-volume ST8/Q3LOCK Schrodinger Hamiltonian with c,chi,hbar>0. Let X be finite with one lattice collar inside Lambda and A=A_X tensor I bounded. Put s=beta/2. Assume e^(sH)Ae^(-sH) and e^(-sH)Ae^(sH) have bounded closures.\", \"strip_lemma\": \"After a scalar shift H>=0, compact spectral compressions and three-lines give a bounded analytic strip. Cauchy with radius r<s and r increasing to s yields [H,A] bounded with norm at most M/s=2M/beta, where M is the larger endpoint norm.\", \"truncation_boundary\": \"Finite oscillator truncations are non-authoritative controls because their canonical commutator is i*hbar*(I-N*P_top), not the exact CCR.\"}, \"hamiltonian_identification_boundary\": {\"direct_cauchy_criterion\": \"For bounded nets, direct Cauchy of both D and delta-D in the mixture Duhamel seminorm implies two-sided mixture-L2 and hence strong-star Cauchy by the arithmetic/logarithmic-mean inequality from R-167 v1.2. Product closure then uses joint strong-star continuity on bounded sets.\", \"missing_identification\": \"Finite-volume Hamiltonian-evolved characters do not yet have a canonical exhaustion-independent embedding into the OS mixture envelope, their generator is not yet identified with the exact local polynomial derivation there, and the symmetric mixture is not proved to be the periodic zero-source finite-volume limit. Momentum and a full canonical Weyl algebra are also not reconstructed.\", \"next_gate\": \"PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE\", \"valid_fixed_beta_word_class\": \"The countable orbit-word span generated by rational-time translates of rational finite-support S_conf characters is strong-dense in the mixture OS W-star envelope.\"}, \"negative_ids\": [\"NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY\", \"NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS\", \"NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE\"], \"no_overclaim\": \"This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A.\", \"open_gates\": [\"PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE\", \"PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE\"], \"parent_explorations\": [\"EXP-000790\", \"EXP-000798\", \"EXP-000799\"], \"result_id\": \"PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT\", \"result_number\": \"R-167\", \"result_version\": \"v1.4\", \"retained_gate_ids\": [\"PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE\", \"PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY\"], \"schema\": \"tect/pre-a-route-split/1.0\", \"sharp_time_only_counterexample\": {\"consequence\": \"Sharp-time Gram domination, even equality with identical sharp multipliers, does not imply real-time or analytic-word intertwining. The full common positive-time cylinder module and translation action are load-bearing in the positive theorem.\", \"failure\": \"At t_*=pi/(4 log 2), alpha_0,t_*(sigma_z)=sigma_z while alpha_1,t_*(sigma_z) is plus or minus sigma_y, with operator-norm difference sqrt(2). The beta/2 Euclidean two-point functions are 1 and 1/cosh(log 2)=4/5.\", \"fixture\": \"At beta=hbar=1 on C^2, let H_0=0 and H_1=-(log 2)sigma_x. Then rho_0=I/2 and rho_1=(I+(3/5)sigma_x)/2. Every diagonal sharp-time f has Tr(rho_0 f^*f)=Tr(rho_1 f^*f), and sharp multipliers agree.\"}, \"single_rung_influence_counterexample\": {\"consequence\": \"No single-rung site influence recurrence with a neighbor coefficient epsilon(delta) tending to zero can hold uniformly over the source observable. A surviving bond estimate must retain a Weyl-frequency or analytic-rung profile.\", \"exact_response\": \"In the symmetric energy-constrained strong-star convention, p_E([beta_delta(A),C_b])=(2sqrt(2)/G_y(W_b))|sin(c delta a b/(2hbar))|. Initially the y influence is zero and the x influence is uniformly bounded by 2sqrt(2). Choosing a=pi hbar/(c|delta|b) makes the new y response 2sqrt(2)/G_y(W_b) for every delta!=0.\", \"positive_precursor\": \"The critical graph Banach norm and energy-constrained strong-star seminorm still have finite-volume bond-kick energy propagation. A Weyl-Fourier analytic hierarchy has an exact shear/radius recurrence, but quartic onsite invariance of the required all-moment orbit-Frechet scale is open.\", \"setup\": \"Let beta_delta be one exact bond kick on xy. For A=W_a(x)=exp(-ia p_x/hbar), beta_delta(A)=A exp(-ic delta a q_y/hbar). Test the y influence with C_b=W_b(y)/G_y(W_b), where b!=0 and G_y(W_b)<infinity is any fixed graph-test normalization.\"}, \"status\": \"PARTIALLY RESOLVED: AT EACH FIXED BETA THE FULL COMMON OS CYLINDER MODULE CLOSES A CANONICAL MIXTURE W-STAR ENVELOPE WITH TWO DISTINCT NORMAL BETA-KMS PHASE STATES FOR ONE RECONSTRUCTED REAL-TIME GROUP. SHARP-TIME GRAM DATA ALONE, A NONTRIVIAL FULL-GIBBS HALF-MODULAR LOCAL CLASS, AND A SINGLE-RUNG FREQUENCY-BLIND SITE RECURRENCE FAIL. HAMILTONIAN THERMODYNAMIC IDENTIFICATION, A BETA-INDEPENDENT COMMON C-STAR ALPHA, GROUND STATES, GAP, CONTINUUM, EMPTY REFERENCE AND PRE-A REMAIN OPEN.\", \"task_id\": \"T-054\", \"verification\": {\"independent_script\": \"codes/foundations/pre_a_cp1_st8_q3lock_fixed_beta_os_mixture_common_wstar_route_split_independent.py\", \"integrated_script\": \"codes/foundations/pre_a_cp1_st8_q3lock_fixed_beta_os_mixture_common_wstar_route_split_verify.py\", \"primary_script\": \"codes/foundations/pre_a_cp1_st8_q3lock_fixed_beta_os_mixture_common_wstar_route_split.py\", \"proof_grade\": \"ANALYTIC exact OS quotient/intertwiner/Radon-Nikodym theorem at fixed beta; exact finite-dimensional KMS and sharp-time hostile fixtures; exact finite-volume strip/extreme-site CCR theorem; exact Weyl bond-response counterexample; primary, non-importing independent and integrated verification\"}}",
+        "expected": "all gate IDs",
+        "group": "authority",
+        "name": "manifest mentions all authorities",
+        "status": "PASS"
+      },
+      {
+        "actual": "dce389dcd755da0b7356cffce8ae50cb4706479f441d7589a6ecdfc1c3ed3423",
+        "expected": "64 lowercase hexadecimal",
+        "group": "provenance",
+        "name": "source hash codes/foundations/pre_a_cp1_st8_q3lock_fixed_beta_os_mixture_common_wstar_route_split_independent.py",
+        "status": "PASS"
+      },
+      {
+        "actual": "2b732db59ebc9e611ed14ad1a27ce88d8cf973afd14f1ec3a39603c625713a9d",
+        "expected": "64 lowercase hexadecimal",
+        "group": "provenance",
+        "name": "source hash strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "0e6f46c9f3532bc69605a42c01146d5de85897cdc69082c8de29ee829fd0f51f",
+        "expected": "64 lowercase hexadecimal",
+        "group": "provenance",
+        "name": "source hash strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "65dad7a04af5b83883ffff75e9ce4bead3e2bbc3359384744af18c489008f890",
+        "expected": "64 lowercase hexadecimal",
+        "group": "provenance",
+        "name": "source hash strategy/pre-a-cp1-st8-q3lock-os-dynamics-ground-gap-counterterm-empty-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "b06dc6b1370e2865d1d6a52795d12cc85204924df4b038545d7d24d76a52579d",
+        "expected": "64 lowercase hexadecimal",
+        "group": "provenance",
+        "name": "source hash strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "f97b11d124706550d0bd10e7f38f81692267149d72f6821ec9e0b524f614a3d1",
+        "expected": "64 lowercase hexadecimal",
+        "group": "provenance",
+        "name": "source hash strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-certificate-260810.md",
+        "status": "PASS"
+      },
+      {
+        "actual": "f8e2f0a9e5c9251a08ea195840cfd540bbd7bb98fdb50a025289f5fb7bc7ade6",
+        "expected": "64 lowercase hexadecimal",
+        "group": "provenance",
+        "name": "source hash negative-results/registry.md",
+        "status": "PASS"
+      }
+    ],
+    "total": 95
+  },
+  "authority": {
+    "boundary": "This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A.",
+    "missing": [],
+    "source_paths": [
+      "E:/Dev/TECT/strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json",
+      "E:/Dev/TECT/strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-certificate-260810.md",
+      "E:/Dev/TECT/strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-manifest.json",
+      "E:/Dev/TECT/strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json",
+      "E:/Dev/TECT/strategy/pre-a-cp1-st8-q3lock-os-dynamics-ground-gap-counterterm-empty-route-split-manifest.json",
+      "E:/Dev/TECT/negative-results/registry.md"
+    ],
+    "status": "COMPLETE"
+  },
+  "boundary": "This package proves one fixed-beta pair-derived common normal OS/KMS envelope. It does not identify that envelope dynamics with the thermodynamic limit of the exact finite-volume Hamiltonians, construct a phase-, state- and beta-independent quasi-local C-star alpha, prove volume-uniform direct D or delta-D locality, reconstruct a full canonical Weyl algebra, select algebraic ground states, prove a GNS or physical gap, remove the regulator, construct a continuum, identify physical empty space or a below-empty sign, select the Pre-A functional, or close C6, CP1, Sector A or Pre-A.",
+  "claim_bearing": false,
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "closed_gate": "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE",
+  "derived": {
+    "GNS_gap_closed": false,
+    "Hamiltonian_thermodynamic_identification_closed": false,
+    "Pre_A_closed": false,
+    "analytic_shear_precursor": {
+      "bond_one_layer": true,
+      "coupling": "3/5",
+      "delta": "2/7",
+      "frequencies": [
+        "2",
+        "3",
+        "5"
+      ],
+      "quartic_onsite_radius_invariance_proved": false,
+      "radius_factor": "47/35",
+      "radius_identity": true,
+      "thermodynamic_boundary_cauchy_proved": false,
+      "total": "10",
+      "transformed": [
+        "118/35",
+        "21/5",
+        "41/7"
+      ],
+      "transformed_total": "94/7"
+    },
+    "beta_independent_common_alpha_closed": false,
+    "continuum_closed": false,
+    "fixed_beta_common_normal_wstar_envelope_closed": true,
+    "full_gibbs_half_modular_local_separating_class_closed": false,
+    "ground_state_selection_closed": false,
+    "half_modular_locality": {
+      "adjoint_rows": [
+        {
+          "adjoint_value": "1",
+          "unit": [
+            0,
+            0
+          ],
+          "value": "1"
+        },
+        {
+          "adjoint_value": "2",
+          "unit": [
+            0,
+            1
+          ],
+          "value": "2"
+        },
+        {
+          "adjoint_value": "3",
+          "unit": [
+            0,
+            2
+          ],
+          "value": "3"
+        },
+        {
+          "adjoint_value": "8",
+          "unit": [
+            0,
+            3
+          ],
+          "value": "8"
+        },
+        {
+          "adjoint_value": "2",
+          "unit": [
+            1,
+            0
+          ],
+          "value": "2"
+        },
+        {
+          "adjoint_value": "1",
+          "unit": [
+            1,
+            1
+          ],
+          "value": "1"
+        },
+        {
+          "adjoint_value": "3/2",
+          "unit": [
+            1,
+            2
+          ],
+          "value": "3/2"
+        },
+        {
+          "adjoint_value": "4",
+          "unit": [
+            1,
+            3
+          ],
+          "value": "4"
+        },
+        {
+          "adjoint_value": "3",
+          "unit": [
+            2,
+            0
+          ],
+          "value": "3"
+        },
+        {
+          "adjoint_value": "3/2",
+          "unit": [
+            2,
+            1
+          ],
+          "value": "3/2"
+        },
+        {
+          "adjoint_value": "1",
+          "unit": [
+            2,
+            2
+          ],
+          "value": "1"
+        },
+        {
+          "adjoint_value": "8/3",
+          "unit": [
+            2,
+            3
+          ],
+          "value": "8/3"
+        },
+        {
+          "adjoint_value": "8",
+          "unit": [
+            3,
+            0
+          ],
+          "value": "8"
+        },
+        {
+          "adjoint_value": "4",
+          "unit": [
+            3,
+            1
+          ],
+          "value": "4"
+        },
+        {
+          "adjoint_value": "8/3",
+          "unit": [
+            3,
+            2
+          ],
+          "value": "8/3"
+        },
+        {
+          "adjoint_value": "1",
+          "unit": [
+            3,
+            3
+          ],
+          "value": "1"
+        }
+      ],
+      "boost_slopes": [
+        "20/49",
+        "40/49",
+        "80/49",
+        "160/49"
+      ],
+      "coupling_c": "3/5",
+      "cross_ratio": "4/3",
+      "cross_witness_kappa": "7/10",
+      "extreme_site_coefficients_forced_zero": true,
+      "flip_backward_squared": [
+        "1/3",
+        "1/4"
+      ],
+      "flip_forward_squared": [
+        "3",
+        "4"
+      ],
+      "negative_endpoint_bounded": false,
+      "positive_endpoint_bounded": false,
+      "product_rows": [
+        {
+          "input_product": "1",
+          "output": "1",
+          "product": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "2",
+          "output": "2",
+          "product": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "3",
+          "output": "3",
+          "product": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "8",
+          "output": "8",
+          "product": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "4",
+          "output": "1",
+          "product": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "2",
+          "output": "2",
+          "product": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "3",
+          "output": "3",
+          "product": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "8",
+          "output": "8",
+          "product": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "9",
+          "output": "1",
+          "product": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "9/2",
+          "output": "2",
+          "product": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "3",
+          "output": "3",
+          "product": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "8",
+          "output": "8",
+          "product": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "64",
+          "output": "1",
+          "product": [
+            [
+              0,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "32",
+          "output": "2",
+          "product": [
+            [
+              0,
+              3
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "64/3",
+          "output": "3",
+          "product": [
+            [
+              0,
+              3
+            ],
+            [
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "8",
+          "output": "8",
+          "product": [
+            [
+              0,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "2",
+          "output": "2",
+          "product": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "4",
+          "output": "1",
+          "product": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "6",
+          "output": "3/2",
+          "product": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "16",
+          "output": "4",
+          "product": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "2",
+          "output": "2",
+          "product": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "1",
+          "output": "1",
+          "product": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "3/2",
+          "output": "3/2",
+          "product": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "4",
+          "output": "4",
+          "product": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "9/2",
+          "output": "2",
+          "product": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "9/4",
+          "output": "1",
+          "product": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "3/2",
+          "output": "3/2",
+          "product": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "4",
+          "output": "4",
+          "product": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "32",
+          "output": "2",
+          "product": [
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "16",
+          "output": "1",
+          "product": [
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "32/3",
+          "output": "3/2",
+          "product": [
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "4",
+          "output": "4",
+          "product": [
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "3",
+          "output": "3",
+          "product": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "6",
+          "output": "3/2",
+          "product": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "9",
+          "output": "1",
+          "product": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "24",
+          "output": "8/3",
+          "product": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "3",
+          "output": "3",
+          "product": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "3/2",
+          "output": "3/2",
+          "product": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "9/4",
+          "output": "1",
+          "product": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "6",
+          "output": "8/3",
+          "product": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "3",
+          "output": "3",
+          "product": [
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "3/2",
+          "output": "3/2",
+          "product": [
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "1",
+          "output": "1",
+          "product": [
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "8/3",
+          "output": "8/3",
+          "product": [
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "64/3",
+          "output": "3",
+          "product": [
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "32/3",
+          "output": "3/2",
+          "product": [
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "64/9",
+          "output": "1",
+          "product": [
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "8/3",
+          "output": "8/3",
+          "product": [
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "8",
+          "output": "8",
+          "product": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "16",
+          "output": "4",
+          "product": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "24",
+          "output": "8/3",
+          "product": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "64",
+          "output": "1",
+          "product": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "8",
+          "output": "8",
+          "product": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "4",
+          "output": "4",
+          "product": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "6",
+          "output": "8/3",
+          "product": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "16",
+          "output": "1",
+          "product": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "8",
+          "output": "8",
+          "product": [
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "4",
+          "output": "4",
+          "product": [
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "8/3",
+          "output": "8/3",
+          "product": [
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "64/9",
+          "output": "1",
+          "product": [
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "input_product": "8",
+          "output": "8",
+          "product": [
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "input_product": "4",
+          "output": "4",
+          "product": [
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "input_product": "8/3",
+          "output": "8/3",
+          "product": [
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "input_product": "1",
+          "output": "1",
+          "product": [
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ]
+        }
+      ],
+      "strict_locality_preserved": false,
+      "strip_s": "2/3",
+      "translation_a": "7/4",
+      "translation_slopes": [
+        "-3/5",
+        "-6/5",
+        "-12/5",
+        "-24/5"
+      ],
+      "weights": [
+        "1/14",
+        "1/7",
+        "3/14",
+        "4/7"
+      ]
+    },
+    "os_mixture": {
+      "T_minus_center": [
+        "5/9",
+        "15/11"
+      ],
+      "T_minus_upper": "5/3",
+      "T_plus_center": [
+        "5/3",
+        "5/11"
+      ],
+      "T_plus_upper": "5/2",
+      "basis_dimension": 8,
+      "center_minus": [
+        "1/4",
+        "3/4"
+      ],
+      "center_plus": [
+        "3/4",
+        "1/4"
+      ],
+      "center_zero": [
+        "9/20",
+        "11/20"
+      ],
+      "commutant_rows": [
+        {
+          "center": 0,
+          "matrix_unit": [
+            0,
+            0
+          ],
+          "minus_residual": "0",
+          "plus_residual": "0"
+        },
+        {
+          "center": 0,
+          "matrix_unit": [
+            0,
+            1
+          ],
+          "minus_residual": "0",
+          "plus_residual": "0"
+        },
+        {
+          "center": 0,
+          "matrix_unit": [
+            1,
+            0
+          ],
+          "minus_residual": "0",
+          "plus_residual": "0"
+        },
+        {
+          "center": 0,
+          "matrix_unit": [
+            1,
+            1
+          ],
+          "minus_residual": "0",
+          "plus_residual": "0"
+        },
+        {
+          "center": 1,
+          "matrix_unit": [
+            0,
+            0
+          ],
+          "minus_residual": "0",
+          "plus_residual": "0"
+        },
+        {
+          "center": 1,
+          "matrix_unit": [
+            0,
+            1
+          ],
+          "minus_residual": "0",
+          "plus_residual": "0"
+        },
+        {
+          "center": 1,
+          "matrix_unit": [
+            1,
+            0
+          ],
+          "minus_residual": "0",
+          "plus_residual": "0"
+        },
+        {
+          "center": 1,
+          "matrix_unit": [
+            1,
+            1
+          ],
+          "minus_residual": "0",
+          "plus_residual": "0"
+        }
+      ],
+      "direct_minus": "11/4",
+      "direct_plus": "11/12",
+      "faithful_mixture": true,
+      "gram_determinant": "2",
+      "gram_minus": [
+        "1/6",
+        "1/12",
+        "1/6",
+        "1/12",
+        "1/2",
+        "1/4",
+        "1/2",
+        "1/4"
+      ],
+      "gram_plus": [
+        "1/2",
+        "1/4",
+        "1/2",
+        "1/4",
+        "1/6",
+        "1/12",
+        "1/6",
+        "1/12"
+      ],
+      "gram_residual": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "gram_zero": [
+        "3/10",
+        "3/20",
+        "3/10",
+        "3/20",
+        "11/30",
+        "11/60",
+        "11/30",
+        "11/60"
+      ],
+      "kms_rows": [
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "plus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 0,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            0
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            0,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            0
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        },
+        {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            1,
+            1
+          ],
+          "center": 1,
+          "phase": "minus",
+          "residual": "0"
+        }
+      ],
+      "lambda_minus": "3/5",
+      "lambda_plus": "2/5",
+      "q_minus": "2587/12",
+      "q_mixture": "3249/20",
+      "q_plus": "331/4",
+      "q_zero": "3249/20",
+      "rho": [
+        "2/3",
+        "1/3"
+      ],
+      "rn_minus": "11/4",
+      "rn_nonprojections": true,
+      "rn_plus": "11/12",
+      "symmetric_center": [
+        "1/2",
+        "1/2"
+      ],
+      "weighted_T": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    "physical_empty_comparison_closed": false,
+    "sharp_time_counterexample": {
+      "cosh_nu": "5/4",
+      "euclidean_midpoint_one": "4/5",
+      "euclidean_midpoint_zero": "1",
+      "exp_nu": "2",
+      "quarter_turn_difference_square": "2",
+      "quarter_turn_evolved_label": "-sigma_y",
+      "quarter_turn_operator_norm_squared": "2",
+      "rho_one": [
+        [
+          "1/2",
+          "3/10"
+        ],
+        [
+          "3/10",
+          "1/2"
+        ]
+      ],
+      "rho_zero": [
+        [
+          "1/2",
+          "0"
+        ],
+        [
+          "0",
+          "1/2"
+        ]
+      ],
+      "same_positive_time_cylinder": false,
+      "same_real_time": false,
+      "same_sharp_multipliers": true,
+      "sharp_one": "4789/1800",
+      "sharp_zero": "4789/1800",
+      "tanh_nu": "3/5"
+    },
+    "sharp_time_only_functoriality_closed": false,
+    "single_rung_counterexample": {
+      "commutator_operator_norm_squared": "1",
+      "frequency_blind_small_coefficient_recurrence": false,
+      "graph_conjugate_singular_values_squared": [
+        "4",
+        "1/4"
+      ],
+      "graph_test_norm": "2",
+      "initial_neighbour_influence_squared": "0",
+      "minimum_recurrence_coefficient": "1/4",
+      "normalized_test_scale": "1/2",
+      "response_strongstar_squared": "2",
+      "rows": [
+        {
+          "delta": "1/2",
+          "denominator": 2,
+          "phase_is_minus_one": true,
+          "phase_turn": "1/2",
+          "source_frequency": "1",
+          "test_frequency": "1"
+        },
+        {
+          "delta": "1/4",
+          "denominator": 4,
+          "phase_is_minus_one": true,
+          "phase_turn": "1/2",
+          "source_frequency": "2",
+          "test_frequency": "1"
+        },
+        {
+          "delta": "1/8",
+          "denominator": 8,
+          "phase_is_minus_one": true,
+          "phase_turn": "1/2",
+          "source_frequency": "4",
+          "test_frequency": "1"
+        },
+        {
+          "delta": "1/16",
+          "denominator": 16,
+          "phase_is_minus_one": true,
+          "phase_turn": "1/2",
+          "source_frequency": "8",
+          "test_frequency": "1"
+        },
+        {
+          "delta": "1/32",
+          "denominator": 32,
+          "phase_is_minus_one": true,
+          "phase_turn": "1/2",
+          "source_frequency": "16",
+          "test_frequency": "1"
+        },
+        {
+          "delta": "1/64",
+          "denominator": 64,
+          "phase_is_minus_one": true,
+          "phase_turn": "1/2",
+          "source_frequency": "32",
+          "test_frequency": "1"
+        }
+      ],
+      "source_influence_uniform_upper_squared": "8"
+    },
+    "single_rung_frequency_blind_recurrence_closed": false
+  },
+  "exploration_id": "EXP-000800",
+  "negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE"
+  ],
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_number": "R-167",
+  "result_version": "v1.4",
+  "retained_gates": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+  ],
+  "schema": "tect/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-independent-result/1.0",
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_beta_os_mixture_common_wstar_route_split_independent.py": "dce389dcd755da0b7356cffce8ae50cb4706479f441d7589a6ecdfc1c3ed3423",
+    "negative-results/registry.md": "f8e2f0a9e5c9251a08ea195840cfd540bbd7bb98fdb50a025289f5fb7bc7ade6",
+    "strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-manifest.json": "2b732db59ebc9e611ed14ad1a27ce88d8cf973afd14f1ec3a39603c625713a9d",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-certificate-260810.md": "f97b11d124706550d0bd10e7f38f81692267149d72f6821ec9e0b524f614a3d1",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json": "b06dc6b1370e2865d1d6a52795d12cc85204924df4b038545d7d24d76a52579d",
+    "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json": "0e6f46c9f3532bc69605a42c01146d5de85897cdc69082c8de29ee829fd0f51f",
+    "strategy/pre-a-cp1-st8-q3lock-os-dynamics-ground-gap-counterterm-empty-route-split-manifest.json": "65dad7a04af5b83883ffff75e9ce4bead3e2bbc3359384744af18c489008f890"
+  },
+  "successor_gate": "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+  "summary": {
+    "authority_status": "COMPLETE",
+    "failed": 0,
+    "passed": 95,
+    "total": 95
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

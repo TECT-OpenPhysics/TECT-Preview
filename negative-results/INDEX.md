@@ -5,7 +5,7 @@
 
 Authorities: `negative-results/registry.md`.
 
-**313 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 242 · retraction: 5
+**316 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 245 · retraction: 5
 
 Latest 25 records:
 
@@ -17,9 +17,12 @@ Latest 25 records:
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-subcritical-energy-damped-onsite-lipschitz-stability) | no_go | repair the onsite `q/p` Lipschitz class with a fixed one-sided graph power `K^(-s)`, `s<1/2` |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-static-modular-tail-arbitrary-bounded-multiplier) | no_go | multiply a small static cutoff tail by an arbitrary bounded evolved observable using only the tail's first modular derivative |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-small-d-delta-d-uniform-half-strip-multiplier-inference) | no_go | infer uniform evolved half-strip `M_0,M_1` bounds from small direct Duhamel `D,delta D` tails |
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-single-rung-energy-constrained-sitewise-influence-recurrence) | no_go | propagate one frequency-blind energy-constrained site-influence rung through the exact bond kick with a neighbor coefficient tending to zero with the step |
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-sharp-time-os-gram-only-real-time-functoriality) | no_go | infer common real-time or analytic-word intertwining from domination or equality of the sharp-time OS Gram form alone |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-raw-local-resolvent-point-norm-bond-kick-continuity) | no_go | use the raw local basic-resolvent norm as a point-continuous topology for the exact cross-bond kick |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-ABSOLUTE-CONNECTED-HISTORY-ANIMAL-MAJORANT`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-raw-absolute-connected-history-animal-majorant) | no_go | prove real-time locality by multiplying a uniform prescribed-word heat bound by the number of raw connected growth histories |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-POLYNOMIAL-ALL-RUNG-ONSITE-ENERGY-CONJUGATION`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-polynomial-all-rung-onsite-energy-conjugation) | no_go | close the quartic commutator ladder with a polynomial-in-rung bound on `K^(j/2)V(t)K^(-(j+1)/2)` |
+| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-full-gibbs-half-modular-local-separating-class) | no_go | build a nontrivial bounded finite-support separating class whose two full-Gibbs half-modular endpoint conjugates are bounded |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FOURIER-SECOND-MOMENT-UNIFORM-NORM-LR-CUTOFF`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-fourier-second-moment-uniform-norm-lr-cutoff) | no_go | obtain a cutoff-uniform operator-norm Lieb--Robinson speed for the exact Q3LOCK quartic by applying the bounded-Weyl theorem to Fourier--Stieltjes cutoffs that agree on expanding… |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-fixed-s-coefficientwise-first-passage-branch-response) | no_go | bound every fixed-order first-passage branch/repeat response in the same finite graph power before resumming the exact bond subflow |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIRST-MOMENT-AUTOMATIC-POWER-UPGRADE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-first-moment-automatic-power-upgrade) | no_go | square the first weighted-energy form cone to obtain higher weighted-energy moments |
@@ -33,9 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-uniform-full-finite-volume-spectral-gap) | no_go | retain a positive volume-uniform full finite-volume spectral gap in the fixed-spacing Q3LOCK ground-order regime |
 | [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-posthoc-direct-sum-common-dynamics) | no_go | treat the direct sum of the separately OS-reconstructed plus/minus thermal systems as the required common real-time dynamics |
 | [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-PARTIAL-QUARTIC-COUNTERTERM-ALL-SCALE-CLOSURE`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-partial-quartic-counterterm-all-scale-closure) | no_go | repair the missing distance-two quartic from EXP-000789 by adding only `O22^(2)` and call the quartic counterterm basis closed |
-| [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-G-LAMBDA-ONLY-4D-ONE-LOOP-CLOSURE`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-g-lambda-only-4d-one-loop-closure) | no_go | remove the ST8/Q3LOCK regulator in 3+1 dimensions while restricting quartic counterterms to the original `g,lambda` two-invariant span |
-| [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-EQUILIBRIUM-PHASE-AS-STRICT-EMPTY-REFERENCE`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-equilibrium-phase-as-strict-empty-reference) | no_go | use another equilibrium KMS or ground phase of the same Hamiltonian as a strict physical-empty comparator |
-| [`NG-2026-08-09-PRE-A-ST8-Q3LOCK-CURRENT-COMMON-DYNAMICS-THEOREM-IMPORT-MISMATCH`](registry.md#ng-2026-08-09-pre-a-st8-q3lock-current-common-dynamics-theorem-import-mismatch) | no_go | directly import the currently cited oscillator-lattice dynamics theorems for the exact ST8/Q3LOCK Hamiltonian |
 
 Search without loading the full registry:
 

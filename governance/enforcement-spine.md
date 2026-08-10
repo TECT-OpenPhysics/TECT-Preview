@@ -79,3 +79,8 @@ history without a fresh PDF (operator-side, no sandbox 44s timeout). `release_ch
 and `doctor` report missing PDFs as an advisory `[note-pdf]`. This closes the
 recurring missing-PDF defect the same way the sync gates close stale generated
 surfaces.
+
+The enforcement point is intentionally the logical checkpoint/commit boundary,
+not each intermediate proof decision. Development records use the exploration
+ledger, manifests, certificates, and run JSON; the one synthesis note that
+survives to a checkpoint receives the full build and render review.

@@ -45,6 +45,18 @@ are reached.  PDF generation, formal note updates, full regeneration,
 verification, commit, and push occur together at the next logical checkpoint;
 they are not repeated for each exploration entry.
 
+### PDF release boundary
+
+The exploration ledger, route manifest, strategy certificate, and reproducible
+run JSON are the development record. While a proof route is being developed,
+do not issue or reissue a `.tex.txt`/PDF note for an individual lemma, audit,
+or route decision. A source-only form check with `build_note_pdf.py <note>
+--no-compile` is permitted when a future synthesis note is drafted. At a
+single logical gate-level checkpoint, package the surviving result in one
+synthesis note, build its PDF once, and render-review that final artifact
+before commit. This batching changes the cadence, not the fresh-PDF release
+requirement.
+
 Before communicating a substantive route verdict to the operator, append its
 record in the same response.  This file-write-before-verdict rule is the only
 practical completeness control for decisions that no static release gate can

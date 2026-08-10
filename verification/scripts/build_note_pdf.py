@@ -17,8 +17,10 @@ Pipeline (naming-and-versioning.md section 3, binding):
      banner Title (never the filename); the date field shows
      "first issued D1 · this version issued D2 · vN.M"; the author line
      carries the primary claim ID.
-  3. COMPILE in a TEMPORARY directory (two pdflatex passes, or one Tectonic
-     invocation with a rerun); LaTeX intermediates never touch the repository.
+  3. COMPILE in a TEMPORARY directory.  pdflatex always makes a first pass and
+     makes a second only when the first log requests a rerun (or the explicit
+     --force-second-pass release-recovery option is supplied); Tectonic keeps
+     its own rerun handling.  LaTeX intermediates never touch the repository.
   4. GATE on zero Overfull-hbox, then place the PDF NEXT TO ITS SOURCE
      (claims/<ID>/notes/<stem>.pdf). Only the current version's PDF is kept;
      superseded PDFs are removed on re-issue (sources remain, so any PDF is
@@ -42,10 +44,12 @@ Changelog:
   1.3.0 (2026-07-23) use a venv-local Tectonic executable when pdflatex is
         unavailable; retain temporary compilation, log, PDF, and overfull
         gates.
+  1.4.0 (2026-08-10) make the second pdflatex pass conditional on concrete
+        rerun markers; retain --force-second-pass for recovery diagnostics.
 """
-__version__ = "1.3.0"
+__version__ = "1.4.0"
 __first_issued__ = "2026-06-05"
-__version_issued__ = "2026-07-23"
+__version_issued__ = "2026-08-10"
 
 import argparse
 import re
@@ -63,6 +67,13 @@ BANNER_VER = re.compile(
     r"this version issued\s*(\d{4}-\d{2}-\d{2})")
 FILE_VER = re.compile(r"-(\d{6})(?:-(\d{6}))?-v(\d+)\.(\d+)\.tex\.txt$")
 REQUIRED_SECTIONS = ["Purpose and scope", "Devil's-advocate", "Result footer"]
+RERUN_MARKERS = (
+    "Rerun to get cross-references right",
+    "Label(s) may have changed",
+    "There were undefined references",
+    "Please (re)run Biber",
+    "Please (re)run BibTeX",
+)
 
 
 def banner_field(frag, key):
@@ -109,10 +120,17 @@ def validate(src, frag):
     return errs, title, claim, (mb.groups() if mb else None)
 
 
+def needs_second_pdflatex_pass(log):
+    """Return whether a successful first pdflatex log asks for a rerun."""
+    return any(marker in log for marker in RERUN_MARKERS)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("note")
     ap.add_argument("--no-compile", action="store_true")
+    ap.add_argument("--force-second-pass", action="store_true",
+                    help="run a second pdflatex pass even if no rerun marker is present")
     args = ap.parse_args()
     src = (REPO / args.note) if not Path(args.note).is_absolute() else Path(args.note)
     if not src.name.endswith(".tex.txt"):
@@ -153,12 +171,19 @@ def main():
     with tempfile.TemporaryDirectory(prefix="tect-note-") as td:
         tex = Path(td) / f"{stem}.tex"
         tex.write_text(doc, encoding="utf-8")
+        passes = 0
         if pdflatex:
-            for _ in range(2):
+            r = subprocess.run([pdflatex, "-interaction=nonstopmode", tex.name],
+                               cwd=td, capture_output=True, text=True, errors="replace")
+            passes = 1
+            first_log_path = Path(td) / f"{stem}.log"
+            first_log = (first_log_path.read_text(encoding="utf-8", errors="replace")
+                         if first_log_path.exists() else "")
+            rerun_requested = needs_second_pdflatex_pass(first_log)
+            if r.returncode == 0 and (rerun_requested or args.force_second_pass):
                 r = subprocess.run([pdflatex, "-interaction=nonstopmode", tex.name],
                                    cwd=td, capture_output=True, text=True, errors="replace")
-                if r.returncode != 0:
-                    break
+                passes = 2
         else:
             r = subprocess.run(
                 [tectonic, "--keep-logs", "--reruns", "1", "--outdir", td, tex.name],
@@ -167,6 +192,7 @@ def main():
                 text=True,
                 errors="replace",
             )
+            passes = "tectonic"
         pdf = Path(td) / f"{stem}.pdf"
         log_path = Path(td) / f"{stem}.log"
         log = log_path.read_text(encoding="utf-8", errors="replace") if log_path.exists() else ""
@@ -207,6 +233,13 @@ def main():
             print("OVERFULL CONTEXT:")
             print("\n".join(contexts))
             return 1
+        if passes == "tectonic":
+            print("PDF-PASSES: tectonic-managed")
+        elif passes == 2:
+            reason = "forced" if args.force_second_pass and not rerun_requested else "rerun requested"
+            print(f"PDF-PASSES: 2 ({reason})")
+        else:
+            print("PDF-PASSES: 1 (no rerun marker)")
         dest = src.parent / f"{stem}.pdf"
         shutil.copyfile(pdf, dest)
         print(f"PDF: {dest.relative_to(REPO)} ({dest.stat().st_size//1024} KB) — intermediates discarded")
