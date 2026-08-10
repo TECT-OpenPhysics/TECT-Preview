@@ -9,6 +9,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0](#ng-2026-08-11-pre-a-st8-q3lock-raw-weyl-basic-resolvent-quartic-point-norm-c0) | make the exact unsplit quartic onsite flow point-norm continuous on an invariant concrete C-star carrier containing a raw momentum Weyl or basic momentum resolvent | exact full-Q3 translated packets at time `tau R^(-3)` give a positive norm-discontinuity lower bound for both labels. Retain the finite-region bounded local-strict/energy topology; full resolvent-algebra invariance under the unsplit flow remains open |
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE](#ng-2026-08-11-pre-a-st8-q3lock-pure-quartic-potential-resolvent-algebra-invariance) | use the pure Q3 quartic potential kick as an internal automorphism of the full finite-site resolvent algebra | conjugating a basic momentum resolvent produces an element whose orbit under every nonzero configuration translation has the exact norm jump `1/|mu|`, violating the intrinsic finite-dimensional Weyl-orbit continuity criterion. This blocks the split-subflow resolvent-algebra route, not unsplit invariance or dynamics existence |
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE](#ng-2026-08-11-pre-a-st8-q3lock-entropy-finite-moment-dynamic-gaussian-tail-inference) | promote small relative entropy, all-coefficient Gaussian reference moments and any fixed finite list of tilted moments to the dynamic Gaussian history tail required by the cutoff corridor | a two-level Gibbs family has both unitary orientations, relative entropy and energy excess tending to zero, and uniform tilted moments through any fixed order, while the tilted coordinate tail decays only polynomially. Require a genuine two-orientation quasi-invariance/history estimate; this is not a Q3LOCK counterexample |
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP](#ng-2026-08-11-pre-a-st8-q3lock-ordered-ground-doublets-automatic-gns-gap) | infer a positive broken-sector GNS gap from two distinct ordered algebraic ground states, parity exchange, a fixed order witness and simple ground vectors | an exact direct-sum system has two pure disjoint ground states with simple ground vectors and a central order split, while each implementing spectrum contains `[0,1]` and is gapless. Prove an independent sectorwise coercive inequality |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY](#ng-2026-08-10-pre-a-st8-q3lock-static-tail-only-projected-orbit-locality) | infer projected real-time orbit locality from static coordinate-tail smallness, local normality and a vanishing first modular derivative alone | an exact four-dimensional q-only-tail fixture has all-coefficient Gaussian coordinate moments, `||X_n||_D->0` and `[log rho_n,X_n]=0`, while `||[X_n,tau_T^K(W)]||_D^2->2` and the full-versus-cutoff orbit two-sided distance tends to two. Require a connected two-orientation dynamic tail or quasi-invariance estimate; this is a route no-go, not a Q3LOCK dynamics counterexample |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING](#ng-2026-08-10-pre-a-st8-q3lock-pointwise-os-gram-naive-label-embedding) | turn pointwise convergence of OS Gram forms into the literal quotient-label map `[F]_n -> [F]_0` or an injective complete-GNS embedding | rotating rank-one forms converge pointwise while their null spaces are not nested, and a faithful-to-rank-one state limit collapses GNS dimension. Retain independent limiting pivots and explicit finite-block polar transports |
 | [NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR](#ng-2026-08-10-pre-a-st8-q3lock-configuration-cylinder-canonical-momentum-generator) | infer a canonical momentum or polynomial CCR generator from bounded Euclidean configuration-cylinder data alone | the momentum-gauge-conjugate Hamiltonians `p^2/(2chi)+V(q)` and `(p-a)^2/(2chi)+V(q)` have identical bounded q-cylinder traces but send `q` to `p/chi` and `(p-a)/chi`. Require an independent kinetic/CCR anchor |
@@ -332,6 +336,111 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-raw-weyl-basic-resolvent-quartic-point-norm-c0"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0 -- the exact quartic onsite flow is not point-norm C0 on raw momentum labels
+
+**Failure mode.**  Put the exact unsplit full-Q3 quartic onsite flow on an
+invariant concrete C-star carrier that contains either a nontrivial momentum
+Weyl `W_a=exp(-ia p_0/hbar)` or the basic momentum resolvent
+`R_0=(i+p_0)^(-1)`, and require point-norm continuity.
+
+**Evidence.**  Let `G=g+3lambda>0`,
+`K=h-inf spec(h)+1`, and `delta=(i/hbar)[h,.]`.  On the Schwartz
+core the exact first and second derivations are recorded in R-167 v1.7, and
+the quartic elliptic graph estimate gives
+`||delta^2(A)K^(-3/2)||<infinity` for both labels.  For
+`psi_R=exp(-iR p_0/hbar)psi`,
+`R^(-3)||delta W_a psi_R||` tends to `|a|G/hbar`,
+`R^(-3)||delta R_0 psi_R||` tends to
+`G||R_0^2psi||>0`, and `||K^(3/2)psi_R||=O(R^6)`.  At
+`t_R=tau R^(-3)`, the second-order vector remainder is only
+`O(tau^2)`.  Choosing one fixed small `tau>0` yields a positive lower
+bound on `||alpha_(t_R)(A)-A||` while `t_R->0`.
+
+**Consequence.**  The exact onsite action is not point-norm C0 on any
+invariant concrete C-star subalgebra containing either raw label.  This is a
+norm-topology obstruction, not a nonexistence theorem.  In particular it does
+not prove that the unsplit flow fails to preserve the full resolvent algebra.
+Use the finite-region bounded local-strict/energy carrier or a state-tempered
+topology and still prove the independent all-exhaustion Cauchy theorem.
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-pure-quartic-potential-resolvent-algebra-invariance"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE -- the pure quartic kick leaves the resolvent algebra
+
+**Failure mode.**  Split the exact onsite Hamiltonian into kinetic and pure
+quartic-potential subflows and assume that the quartic kick is an internal
+automorphism of the full finite-site Buchholz--Grundling resolvent algebra.
+
+**Evidence.**  Along one exact Q3 coordinate axis,
+`W_4(r e_0)=(g+3lambda)r^4/4`.  Let
+`U_t=exp(i t W_4(Q)/hbar)`, `R_mu=(i mu-p_0)^(-1)`, and
+`A_t=U_tR_muU_t^*`.  A translated and dilated packet of width
+`R^(1/2)` has momentum spread `O(R^(-1/2))`.  After a nonzero
+configuration translation by `s`, the relative quartic phase gives a
+momentum center `3t(g+3lambda)sR^2+O(R^(3/2))`.  One resolvent action
+therefore tends to `(i mu)^(-1)` and the other to zero.  The Cayley
+transform supplies the matching upper bound, so for every nonzero `s,t`,
+`||S_sA_tS_s^*-A_t||=1/|mu|`.  This violates the intrinsic
+finite-dimensional Weyl-conjugation norm-continuity criterion for the
+field/resolvent algebra.
+
+**Consequence.**  `U_tR_muU_t^*` is not in the full finite-site resolvent
+algebra for nonzero `t`.  The full algebra is unital, hence its multiplier
+strict topology is norm and does not repair the kick.  This rejects a Trotter
+route requiring both exact subflows to be internal automorphisms.  It does
+not settle invariance under the unsplit kinetic-plus-quartic flow.
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-entropy-finite-moment-dynamic-gaussian-tail-inference"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE -- entropy and fixed finite moments do not create a Gaussian history tail
+
+**Failure mode.**  Infer the dynamic Gaussian two-orientation history tail
+needed by the cutoff corridor from small relative entropy/energy excess, an
+all-coefficient Gaussian bound in the reference Gibbs state, and any fixed
+finite list of tilted coordinate moments.
+
+**Evidence.**  For `n>=2` put
+`q_n=nP_1`, `H_n=n^4P_1/beta`, and
+`rho_n=diag(1,exp(-n^4))/(1+exp(-n^4))`.  For any fixed integer
+`m>=3`, rotate by `theta_(n,m)` with
+`sin^2(theta_(n,m))=1/[(p_(0,n)-p_(1,n))n^(2m)]` in either
+direction.  The rotated tail is exactly `p_(1,n)+n^(-2m)`, its relative
+entropy is `n^(4-2m)`, its energy excess is
+`n^(4-2m)/beta`, and its `2m` moment is
+`1+n^(2m)p_(1,n)`, uniformly bounded.  Meanwhile
+`Tr(rho_n exp(aq_n^2))<=1+exp(a^2/4)` for every `a>0`.
+Both rotations are exact finite-time flows of bounded two-level drives.
+
+**Consequence.**  For any preregistered finite moment ceiling, choose `m`
+above it.  All the displayed inputs still allow only polynomial tilted-tail
+decay.  They cannot be promoted to the Gaussian history estimate that would
+absorb the current `exp(C L^2)` corridor loss.  This is a proof-method
+no-go, not a counterexample to Q3LOCK dynamics or to a stronger
+quasi-invariance theorem.
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-ordered-ground-doublets-automatic-gns-gap"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP -- order and distinct ground sectors do not imply a spectral gap
+
+**Failure mode.**  Infer a positive broken-sector GNS gap from two distinct
+ordered algebraic ground states, parity exchange, a fixed bounded order
+witness, or a simple ground vector.
+
+**Evidence.**  Let
+`K_0=C Omega direct-sum L2((0,1),dx)`, let
+`h_0Omega=0` and `(h_0f)(x)=xf(x)`, and put
+`A=B(K_0) direct-sum B(K_0)` with the same inner dynamics on both
+summands.  The two component `Omega` vector states are pure, disjoint,
+exact ground states; summand-swap parity exchanges them and the central
+observable `Z=(1,-1)` separates them.  Each GNS ground vector is simple,
+but the positive implementing spectrum is `[0,1]`, so it accumulates at
+zero.
+
+**Consequence.**  Ordered-ground distinctness does not prove a GNS or
+physical mass gap.  The separate successor must establish, on a dense
+invariant core in each selected sector,
+`-i hbar omega(A^*delta(A))>=Delta[omega(A^*A)-|omega(A)|^2]`
+with one positive `Delta`.  The v1.6 ground-doublet theorem remains valid
+in its categorical-carrier scope.
 
 <a id="ng-2026-08-10-pre-a-st8-q3lock-static-tail-only-projected-orbit-locality"></a>
 ### NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY -- static tails do not control the projected real-time orbit

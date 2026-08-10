@@ -834,6 +834,46 @@ all three verifier layers passed, is
 It consolidates the three scoped closures and the live successor; it does not
 promote the categorical carrier to the thermodynamic gate.
 
+EXP-000804 advances the same R-167 to v1.7 and splits that successor.
+On each fixed finite ambient region, the bounded multiplier local-strict
+topology agrees on norm-bounded sets with strong-star, compact-resolvent graph
+and two-sided energy-constrained convergence. The exact onsite and commuting
+all-bond subflows are strict-C0 and energy controlled in their appropriate
+finite controls, so
+`PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER`
+is closed. This is a finite-region subflow carrier, not a thermodynamic
+split-product limit.
+
+The exact full-Q3 translated-packet theorem rejects point-norm continuity on
+any invariant concrete C-star algebra containing a nontrivial momentum Weyl
+or basic momentum resolvent. The pure quartic potential kick more strongly
+fails to preserve the full resolvent algebra. These are topology/route no-go
+results, not dynamics nonexistence. Separately, the exact finite-Gibbs
+character relative entropy gives an inverse-logarithmic two-orientation tail,
+closing
+`PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND`.
+An exact Gibbs family shows that entropy plus any fixed finite moment package
+does not create the Gaussian partial-history tail needed to absorb the
+current `exp(C L^2)` cutoff corridor.
+
+The old combined quasi-local-and-gap successor remains historically open but
+is split and superseded as the active target. The dynamics task is now
+`PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA`:
+prove compatible exhaustion energy/state seminorms, two-orientation control
+for every partial history and adjoint history, cutoff removal, group
+completion, a noncollapsing spatial algebra and both phase-KMS quotient
+identifications. Independently,
+`PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY`
+requires a positive sectorwise ground-state coercive inequality. Distinct
+pure disjoint ordered ground states with simple ground vectors can still be
+gapless, so neither task is evidence for the other.
+
+Per the PDF-efficiency protocol, v1.7 development used the manifest,
+certificate, append-only EXP-000804 and verifier JSONs without a per-lemma or
+intermediate PDF. After all proof layers passed, the single nine-page v0.6
+gate-level synthesis source/PDF pair was issued and every rendered page passed
+visual review.
+
 The fixed-beta envelope is not yet the thermodynamic Hamiltonian `alpha`.
 Distinct algebraic ground states now exist on the separate universal
 orbit-smear carrier, but a quasi-local raw-oscillator ground representation,

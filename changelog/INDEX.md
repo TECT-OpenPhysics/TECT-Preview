@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**582 accepted events** · latest 25 shown below · machine locator: `index.json`
+**584 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-11 | `20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte` — [R-167 v1.7 gate-level synthesis PDF issued after strict proof validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte) |
+| 2026-08-11 | `20260811-r-167-v1-7-separates-the-finite-region-local-st` — [R-167 v1.7 separates the finite-region local-strict carrier, Gibbs entropy tail, and broken-sector gap gate] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000804, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v1-7-separates-the-finite-region-local-st) |
 | 2026-08-10 | `20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte` — [R-167 v1.6 gate-level synthesis PDF issued after strict proof validation] - 2026-08-10 | C6-SPACETIME-SIGNATURE, R-167 | [bounded page](pages/000569-000618.md#20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte) |
 | 2026-08-10 | `20260810-r-167-v1-6-closes-selected-raw-word-moments-and` — [R-167 v1.6 closes selected raw-word moments and a universal orbit-smear ground carrier] - 2026-08-10 | C6-SPACETIME-SIGNATURE, EXP-000803, R-167 | [bounded page](pages/000569-000618.md#20260810-r-167-v1-6-closes-selected-raw-word-moments-and) |
 | 2026-08-10 | `20260810-r-167-v1-5-identifies-the-selected-hamiltonian` — [R-167 v1.5 identifies the selected Hamiltonian tangent nets with the fixed-beta OS mixture] - 2026-08-10 | C6-SPACETIME-SIGNATURE, EXP-000801, R-167 | [bounded page](pages/000569-000618.md#20260810-r-167-v1-5-identifies-the-selected-hamiltonian) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-04 | `20260804-exp-000774-close-exact-q3lock-euclidean-dlr-tan` — [EXP-000781: close exact Q3LOCK Euclidean DLR tangent states and split the positive-lambda phase gate] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 | 2026-08-04 | `20260804-exp-000773-close-fixed-lattice-st8-q3lock-scala` — [EXP-000780: close fixed-lattice ST8/Q3LOCK scalar thermodynamics and split phase/reduction] - 2026-08-04 | C6-BCC-PREMISE-BLOCKED, C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 | 2026-08-04 | `20260804-exp-000772-closes-constant-source-q3-pressure-a` — [EXP-000779 closes constant-source Q3 pressure and splits phase, reference and parent gates] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
-| 2026-08-04 | `20260804-exp-000771-closes-the-q3-periodic-scalar-densit` — [EXP-000778 closes the Q3 periodic scalar density bridge by a finite-component GRS port] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
-| 2026-08-04 | `20260804-exp-000770-corrects-exp-000769-to-sharp-cutoff` — [EXP-000777 corrects EXP-000776 to sharp-cutoff theorem and open periodic surface gate] - 2026-08-04 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 
 ## Post-cutover pages
 
@@ -49,4 +49,4 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 569–582 | 14 | [000569-000618.md](pages/000569-000618.md) |
+| 569–584 | 16 | [000569-000618.md](pages/000569-000618.md) |

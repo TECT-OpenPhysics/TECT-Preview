@@ -1,0 +1,1752 @@
+{
+  "assertions": {
+    "failed": 0,
+    "missing": 0,
+    "passed": 153,
+    "rows": [
+      {
+        "actual": "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-manifest.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "manifest parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "candidate": true,
+          "claim": true,
+          "claim_bearing": true,
+          "closed": true,
+          "exploration": true,
+          "historical": true,
+          "negatives": true,
+          "open": true,
+          "parents": true,
+          "result_id": true,
+          "result_number": true,
+          "result_version": true,
+          "retained": true,
+          "reused_negatives": true,
+          "route_dynamics": true,
+          "route_gap": true,
+          "route_historical": true,
+          "schema": true,
+          "task": true
+        },
+        "expected": "all true",
+        "group": "manifest",
+        "name": "manifest exact identity, negatives and gate split",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_independent.py",
+          "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_verify.py",
+          "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split.py"
+        },
+        "expected": {
+          "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_independent.py",
+          "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_verify.py",
+          "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split.py"
+        },
+        "group": "manifest",
+        "name": "manifest exact verifier paths",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "development_economy": true,
+          "pdf": true,
+          "proof_layers_first": true,
+          "source": true
+        },
+        "expected": "all true",
+        "group": "manifest",
+        "name": "manifest checkpoint core contract",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "manifest",
+        "name": "manifest theorem and hostile-fixture content required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "scope",
+        "name": "manifest no-overclaim boundary required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "scope",
+        "name": "manifest has no broadened positive conclusion",
+        "status": "PASS"
+      },
+      {
+        "actual": 21791,
+        "expected": ">0",
+        "group": "formal",
+        "name": "certificate readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "certificate",
+        "name": "certificate theorem, fixtures and exact boundary required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "certificate",
+        "name": "certificate has no known malformed LaTeX tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "scope",
+        "name": "certificate has no broadened positive conclusion",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "independence",
+        "name": "independent import firewall",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "independence",
+        "name": "independent dynamic import firewall",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "module_named": false,
+          "stored_named": false,
+          "suspicious_literals": []
+        },
+        "expected": {
+          "module_named": false,
+          "stored_named": false,
+          "suspicious_literals": []
+        },
+        "group": "independence",
+        "name": "independent names neither primary module nor primary result",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "independence",
+        "name": "primary does not import independent module",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "__future__",
+          "argparse",
+          "ast",
+          "fractions",
+          "hashlib",
+          "json",
+          "math",
+          "os",
+          "pathlib",
+          "pypdf",
+          "re",
+          "subprocess",
+          "sys",
+          "tempfile",
+          "typing"
+        ],
+        "expected": "no primary or independent module import",
+        "group": "independence",
+        "name": "integrated imports neither theorem implementation",
+        "status": "PASS"
+      },
+      {
+        "actual": "different",
+        "expected": "different",
+        "group": "independence",
+        "name": "primary and independent ASTs differ",
+        "status": "PASS"
+      },
+      {
+        "actual": "94a42fb9908ab89fca0009687dbd6cb431c9e6cf9662b52438db836fc1d29d77",
+        "expected": "different from e4901ef7cd1b78e2976d7ac8ff7dbc066c60801b9588b2787164ba6b477a0dc5",
+        "group": "independence",
+        "name": "primary and independent source hashes differ",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "primary fresh A execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "FRESH-COMPONENT PASS 189/189",
+        "expected": "FRESH-COMPONENT ...",
+        "group": "freshness",
+        "name": "primary fresh A sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "primary fresh B execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "FRESH-COMPONENT PASS 189/189",
+        "expected": "FRESH-COMPONENT ...",
+        "group": "freshness",
+        "name": "primary fresh B sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "a": "80c0bad46c43251e812b23160aeef7828de28e5459859a6a977e3610261293e0",
+          "b": "80c0bad46c43251e812b23160aeef7828de28e5459859a6a977e3610261293e0"
+        },
+        "expected": "equal canonical hashes",
+        "group": "freshness",
+        "name": "primary deterministic fresh equality",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "independent fresh A execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "FRESH-COMPONENT PASS 109/109",
+        "expected": "FRESH-COMPONENT ...",
+        "group": "freshness",
+        "name": "independent fresh A sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "group": "freshness",
+        "name": "independent fresh B execution",
+        "status": "PASS"
+      },
+      {
+        "actual": "FRESH-COMPONENT PASS 109/109",
+        "expected": "FRESH-COMPONENT ...",
+        "group": "freshness",
+        "name": "independent fresh B sentinel",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "a": "0f53e46004290fb66b727e3a641624337045a936b8f7262a32e8059876efcb4c",
+          "b": "0f53e46004290fb66b727e3a641624337045a936b8f7262a32e8059876efcb4c"
+        },
+        "expected": "equal canonical hashes",
+        "group": "freshness",
+        "name": "independent deterministic fresh equality",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "fresh": "80c0bad46c43251e812b23160aeef7828de28e5459859a6a977e3610261293e0",
+          "stored": "80c0bad46c43251e812b23160aeef7828de28e5459859a6a977e3610261293e0"
+        },
+        "expected": "equal canonical hashes",
+        "group": "freshness",
+        "name": "primary stored equals fresh",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "fresh": "61091f5018cd9e987fdac8042309b3a034d8e71bfee81250e710058e7e6bb402",
+          "stored": "61091f5018cd9e987fdac8042309b3a034d8e71bfee81250e710058e7e6bb402"
+        },
+        "expected": "equal canonical hashes",
+        "group": "freshness",
+        "name": "independent stored equals fresh",
+        "status": "PASS"
+      },
+      {
+        "actual": "tect/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-primary-result/1.0",
+        "expected": "tect/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-primary-result/1.0",
+        "group": "components",
+        "name": "primary schema",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "group": "components",
+        "name": "primary result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-167",
+        "expected": "R-167",
+        "group": "components",
+        "name": "primary result number",
+        "status": "PASS"
+      },
+      {
+        "actual": "v1.7",
+        "expected": "v1.7",
+        "group": "components",
+        "name": "primary result version",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000804",
+        "expected": "EXP-000804",
+        "group": "components",
+        "name": "primary exploration id",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "components",
+        "name": "primary claim bearing",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "group": "components",
+        "name": "primary verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "failed": 0,
+          "missing": 0,
+          "passed": 189,
+          "total": 189
+        },
+        "expected": "passed=total>=150; failed=missing=0",
+        "group": "components",
+        "name": "primary all mathematical assertions PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": 189,
+        "expected": 189,
+        "group": "components",
+        "name": "primary assertion row count",
+        "status": "PASS"
+      },
+      {
+        "actual": 189,
+        "expected": 189,
+        "group": "components",
+        "name": "primary assertion rows all PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+          "PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+          "PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND"
+        ],
+        "group": "components",
+        "name": "primary exact closed gate set",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+          "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+          "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "group": "components",
+        "name": "primary exact open gate set",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP"
+        ],
+        "expected": [
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP"
+        ],
+        "group": "components",
+        "name": "primary exact four negative IDs",
+        "status": "PASS"
+      },
+      {
+        "actual": "dict",
+        "expected": "dict",
+        "group": "hashes",
+        "name": "primary source hash map",
+        "status": "PASS"
+      },
+      {
+        "actual": "e4901ef7cd1b78e2976d7ac8ff7dbc066c60801b9588b2787164ba6b477a0dc5",
+        "expected": "e4901ef7cd1b78e2976d7ac8ff7dbc066c60801b9588b2787164ba6b477a0dc5",
+        "group": "hashes",
+        "name": "primary live hash codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split.py",
+        "status": "PASS"
+      },
+      {
+        "actual": "ad59c27985a3bd8c098ba6289e4e4dde0614fc92a4029d320f9264b03625ad0d",
+        "expected": "ad59c27985a3bd8c098ba6289e4e4dde0614fc92a4029d320f9264b03625ad0d",
+        "group": "hashes",
+        "name": "primary live hash strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "5beab888a16d12ff1af1b5bba9ad40fe12f99d0ba467e19d7ae372e8da38788e",
+        "expected": "5beab888a16d12ff1af1b5bba9ad40fe12f99d0ba467e19d7ae372e8da38788e",
+        "group": "hashes",
+        "name": "primary live hash strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md",
+        "status": "PASS"
+      },
+      {
+        "actual": "tect/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-independent-result/1.0",
+        "expected": "tect/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-independent-result/1.0",
+        "group": "components",
+        "name": "independent schema",
+        "status": "PASS"
+      },
+      {
+        "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "group": "components",
+        "name": "independent result id",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-167",
+        "expected": "R-167",
+        "group": "components",
+        "name": "independent result number",
+        "status": "PASS"
+      },
+      {
+        "actual": "v1.7",
+        "expected": "v1.7",
+        "group": "components",
+        "name": "independent result version",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXP-000804",
+        "expected": "EXP-000804",
+        "group": "components",
+        "name": "independent exploration id",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "components",
+        "name": "independent claim bearing",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "group": "components",
+        "name": "independent verdict",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "failed": 0,
+          "missing": 0,
+          "passed": 109,
+          "total": 109
+        },
+        "expected": "passed=total>=90; failed=missing=0",
+        "group": "components",
+        "name": "independent all mathematical assertions PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": 109,
+        "expected": 109,
+        "group": "components",
+        "name": "independent assertion row count",
+        "status": "PASS"
+      },
+      {
+        "actual": 109,
+        "expected": 109,
+        "group": "components",
+        "name": "independent assertion rows all PASS",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+          "PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+          "PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND"
+        ],
+        "group": "components",
+        "name": "independent exact closed gate set",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+          "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+          "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+          "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        ],
+        "group": "components",
+        "name": "independent exact open gate set",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP"
+        ],
+        "expected": [
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP"
+        ],
+        "group": "components",
+        "name": "independent exact four negative IDs",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+          "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+          "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY"
+        ],
+        "group": "components",
+        "name": "independent exact successor gate set",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP"
+        ],
+        "expected": [
+          "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP"
+        ],
+        "group": "components",
+        "name": "independent exact historical superseded gate",
+        "status": "PASS"
+      },
+      {
+        "actual": "dict",
+        "expected": "dict",
+        "group": "hashes",
+        "name": "independent source hash map",
+        "status": "PASS"
+      },
+      {
+        "actual": "94a42fb9908ab89fca0009687dbd6cb431c9e6cf9662b52438db836fc1d29d77",
+        "expected": "94a42fb9908ab89fca0009687dbd6cb431c9e6cf9662b52438db836fc1d29d77",
+        "group": "hashes",
+        "name": "independent live hash codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_independent.py",
+        "status": "PASS"
+      },
+      {
+        "actual": "ad59c27985a3bd8c098ba6289e4e4dde0614fc92a4029d320f9264b03625ad0d",
+        "expected": "ad59c27985a3bd8c098ba6289e4e4dde0614fc92a4029d320f9264b03625ad0d",
+        "group": "hashes",
+        "name": "independent live hash strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-manifest.json",
+        "status": "PASS"
+      },
+      {
+        "actual": "5beab888a16d12ff1af1b5bba9ad40fe12f99d0ba467e19d7ae372e8da38788e",
+        "expected": "5beab888a16d12ff1af1b5bba9ad40fe12f99d0ba467e19d7ae372e8da38788e",
+        "group": "hashes",
+        "name": "independent live hash strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "delta_delta2_packet_positive_only": true,
+          "general_m_and_m4_finite_moment_no_go": true,
+          "local_strict_topology_and_subflows": true,
+          "no_overclaim_scope": true,
+          "ordered_ground_gap_no_go": true,
+          "pure_kick_exact_jump_and_scope": true,
+          "q3_effective_coupling": true,
+          "two_sided_gibbs_entropy_log_tail": true
+        },
+        "expected": {
+          "delta_delta2_packet_positive_only": true,
+          "general_m_and_m4_finite_moment_no_go": true,
+          "local_strict_topology_and_subflows": true,
+          "no_overclaim_scope": true,
+          "ordered_ground_gap_no_go": true,
+          "pure_kick_exact_jump_and_scope": true,
+          "q3_effective_coupling": true,
+          "two_sided_gibbs_entropy_log_tail": true
+        },
+        "group": "cross_core",
+        "name": "primary exact semantic invariants",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "delta_delta2_packet_positive_only": true,
+          "general_m_and_m4_finite_moment_no_go": true,
+          "local_strict_topology_and_subflows": true,
+          "no_overclaim_scope": true,
+          "ordered_ground_gap_no_go": true,
+          "pure_kick_exact_jump_and_scope": true,
+          "q3_effective_coupling": true,
+          "two_sided_gibbs_entropy_log_tail": true
+        },
+        "expected": {
+          "delta_delta2_packet_positive_only": true,
+          "general_m_and_m4_finite_moment_no_go": true,
+          "local_strict_topology_and_subflows": true,
+          "no_overclaim_scope": true,
+          "ordered_ground_gap_no_go": true,
+          "pure_kick_exact_jump_and_scope": true,
+          "q3_effective_coupling": true,
+          "two_sided_gibbs_entropy_log_tail": true
+        },
+        "group": "cross_core",
+        "name": "independent exact semantic invariants",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "delta_delta2_packet_positive_only": true,
+          "general_m_and_m4_finite_moment_no_go": true,
+          "local_strict_topology_and_subflows": true,
+          "no_overclaim_scope": true,
+          "ordered_ground_gap_no_go": true,
+          "pure_kick_exact_jump_and_scope": true,
+          "q3_effective_coupling": true,
+          "two_sided_gibbs_entropy_log_tail": true
+        },
+        "expected": {
+          "delta_delta2_packet_positive_only": true,
+          "general_m_and_m4_finite_moment_no_go": true,
+          "local_strict_topology_and_subflows": true,
+          "no_overclaim_scope": true,
+          "ordered_ground_gap_no_go": true,
+          "pure_kick_exact_jump_and_scope": true,
+          "q3_effective_coupling": true,
+          "two_sided_gibbs_entropy_log_tail": true
+        },
+        "group": "cross_core",
+        "name": "third stdlib/Fraction recomputation",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": {
+            "delta_delta2_packet_positive_only": true,
+            "general_m_and_m4_finite_moment_no_go": true,
+            "local_strict_topology_and_subflows": true,
+            "no_overclaim_scope": true,
+            "ordered_ground_gap_no_go": true,
+            "pure_kick_exact_jump_and_scope": true,
+            "q3_effective_coupling": true,
+            "two_sided_gibbs_entropy_log_tail": true
+          },
+          "primary": {
+            "delta_delta2_packet_positive_only": true,
+            "general_m_and_m4_finite_moment_no_go": true,
+            "local_strict_topology_and_subflows": true,
+            "no_overclaim_scope": true,
+            "ordered_ground_gap_no_go": true,
+            "pure_kick_exact_jump_and_scope": true,
+            "q3_effective_coupling": true,
+            "two_sided_gibbs_entropy_log_tail": true
+          },
+          "third": {
+            "delta_delta2_packet_positive_only": true,
+            "general_m_and_m4_finite_moment_no_go": true,
+            "local_strict_topology_and_subflows": true,
+            "no_overclaim_scope": true,
+            "ordered_ground_gap_no_go": true,
+            "pure_kick_exact_jump_and_scope": true,
+            "q3_effective_coupling": true,
+            "two_sided_gibbs_entropy_log_tail": true
+          }
+        },
+        "expected": {
+          "delta_delta2_packet_positive_only": true,
+          "general_m_and_m4_finite_moment_no_go": true,
+          "local_strict_topology_and_subflows": true,
+          "no_overclaim_scope": true,
+          "ordered_ground_gap_no_go": true,
+          "pure_kick_exact_jump_and_scope": true,
+          "q3_effective_coupling": true,
+          "two_sided_gibbs_entropy_log_tail": true
+        },
+        "group": "cross_core",
+        "name": "three proof layers agree on the exact boundary",
+        "status": "PASS"
+      },
+      {
+        "actual": 804,
+        "expected": ">=1",
+        "group": "formal",
+        "name": "exploration ledger parses",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "EXP-000804 unique",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "claim": true,
+          "closed_gates": true,
+          "events_deferred": true,
+          "evidence": true,
+          "historical": true,
+          "negatives": true,
+          "no_note_pdf": true,
+          "result": true,
+          "successors": true,
+          "task": true,
+          "verdict": true
+        },
+        "expected": "all true",
+        "group": "formal",
+        "name": "EXP-000804 complete append-only authority chain",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "EXP-000804 exact narrow boundary required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 617513,
+        "expected": ">0",
+        "group": "formal",
+        "name": "result ledger readable",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "R-167 unique detail section",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "R-167 v1.7 ledger and final checkpoint linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 659386,
+        "expected": ">0",
+        "group": "formal",
+        "name": "negative registry readable",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2 (index row and detail)",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2 (index row and detail)",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2 (index row and detail)",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": ">=2 (index row and detail)",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP",
+        "status": "PASS"
+      },
+      {
+        "actual": 232519,
+        "expected": ">0",
+        "group": "formal",
+        "name": "gate authority readable",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER**\n\n**Statement:** On every fixed finite ambient region, use\n`B(H_Y)=M(K(H_Y))` with its bounded local-strict topology. Prove its\nequivalence on norm-bounded sets with strong-star, compact-resolvent graph\nseminorms and two-sided energy-constrained seminorms. Show that the exact\nonsite subflow is strict-C0 and graph/energy isometric for its commuting\nonsite control, while the exact commuting all-bond kick is strict-C0,\nexpands support by one layer and obeys the centered energy-form estimate in a\ncommon ambient region.\n\n**Status:** CLOSED IN THE FINITE-REGION SUBFLOW SCOPE (2026-08-11).\n`EXP-000804` / R-167 v1.7 proves the topology equivalence and the exact\nsubflow bounds. For `0<s<=1/2`,\n`e_E(A)<=E^s max(||AK^(-s)||,||K^(-s)A||)` and\n`q_s(A)<=2e_E(A)+2||A||E^(-s)`. For `0<|delta|<=1`, the registered\ncentered bond control gives\n`e_E(beta_delta A)<=e_(M_delta E)(A)` and\n`q_s(beta_delta A)<=M_delta^s q_s(A)`. This is not one global multiplier\nstrict topology, a split-product limit, an all-exhaustion Cauchy theorem or a\nquasi-local common alpha.\n",
+        "expected": "CLOSED in its exact registered finite scope",
+        "group": "formal",
+        "name": "closed gate authority PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND**\n\n**Statement:** In one exact finite-volume Gibbs system, compute the relative\nentropy of both configuration-character orientations and use binary data\nprocessing to control an evolved coordinate-tail projection.\n\n**Status:** CLOSED AT FIXED FINITE VOLUME (2026-08-11). For\n`A=W_xi`, time reversal and the exact momentum shift give\n`S(A rho A^*||rho)=S(A^*rho A||rho)=beta hbar^2||xi||^2/(2chi)`,\nalso after the full Hamiltonian evolution. If `p=rho(E)` and `q_+/-`\nis either tilted tail, then\n`q_+/-<=min(1,(S_xi+log 2)/log(1/p))`. Under\n`p<=M_a|S|exp(-aL^2)` this is only `O(L^(-2))`, so it does not\nclose the dynamic Gaussian history or all-exhaustion gate.\n",
+        "expected": "CLOSED in its exact registered finite scope",
+        "group": "formal",
+        "name": "closed gate authority PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**\n\n**Statement:** Starting from the finite-region local-strict carrier, construct\ncompatible exhaustion-level energy/state seminorms and prove a volume- and\nsource-uniform two-orientation estimate for every partial split-product\nhistory and its adjoint. Remove the coordinate cutoff without losing the\nhistory tail, prove all-shape exhaustion Cauchy, group/star/product/inverse\nclosure, and identify the exact zero-source finite-Hamiltonian generator and\nboth fixed-beta phase KMS quotient representations on one noncollapsing\nspatial oscillator algebra.\n\n**Status:** OPEN (2026-08-11). R-167 v1.7 supplies the finite-region\nlocal-strict carrier and exact subflow control, but the current bounded-cutoff\ncorridor pays `exp(C L^2)`. The exact Gibbs character entropy bound gives\nonly an inverse-logarithmic tail. The registered entropy/finite-moment\nfixture proves that those inputs cannot be upgraded automatically to a\nGaussian history estimate. The missing target is a uniform bound for\n`phi_0(P^*EP)+phi_0(PEP^*)` and its\n`(V-V_L)^2`-weighted analogue for every partial history, or a\nstate-weighted all-bond resummation avoiding the exponential corridor loss.\nNo exact Q3LOCK dynamics nonexistence is asserted.\n",
+        "expected": "OPEN and linked to v1.7",
+        "group": "formal",
+        "name": "successor gate authority PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**\n\n**Statement:** After the ordered ground states have been identified in the\ntwo broken-sector GNS representations of the sought common oscillator\nalgebra, prove a positive sectorwise spectral coercivity estimate on one\ndense invariant core:\n\n`-i hbar omega(A^*delta(A)) >= Delta[omega(A^*A)-|omega(A)|^2]`\n\nwith `Delta>0`, separately in both parity-related sectors.\n\n**Status:** OPEN (2026-08-11). R-167 v1.6 proves two distinct algebraic\nground states only on the categorical orbit-smear carrier. R-167 v1.7 gives\nan exact system with two pure, disjoint, parity-related ordered ground states,\nsimple ground vectors and a fixed central order witness, while each\nimplementing spectrum is gapless. Distinct order and ground-state existence\ntherefore do not supply the required coercive estimate. This gate is\nindependent of the common-alpha history gate and does not license a physical\nmass-gap claim.\n\n## A6/A7 full derivative Class-II composite and renormalisation gates\n",
+        "expected": "OPEN and linked to v1.7",
+        "group": "formal",
+        "name": "successor gate authority PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP**\n\n**Statement:** Construct a noncollapsing raw/resolvent oscillator carrier with\na spatially local net and one zero-source Hamiltonian dynamics. Prove\nall-shape exhaustion Cauchy, identify the finite Hamiltonian generator and the\nfixed-beta phase KMS quotient representations, and then determine the\nspectral gap in each selected broken ground-state GNS representation.\n\n**Status:** OPEN HISTORICALLY; SPLIT AND SUPERSEDED AS THE ACTIVE SUCCESSOR\n(2026-08-11). R-167 v1.6 supplies two useful precursors: all fixed finite\nraw-word moments on the selected tangent nets, and a separate beta-independent\nproduct-type orbit-smear carrier with two distinct ground states. R-167 v1.7\nshows that the remaining dynamics and spectral-gap obligations are logically\nindependent. The dynamics side is now\n`PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA`;\nthe sector-gap side is\n`PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY`. This historical\ncombined gate is not closed and must not be cited as one finished theorem.\n",
+        "expected": "OPEN HISTORICALLY; SPLIT AND SUPERSEDED",
+        "group": "formal",
+        "name": "historical combined gate remains open and superseded",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE**\n\n**Statement:** Before scoring or selecting any Pre-A round-one candidate,\nfreeze the complete evidence and clue register with an explicit role for each\nitem, admit every contestant under the same minimum manifest fields, separate\nbridge infrastructure from contestants, and declare one common\nreference/observable/input ledger, one non-fitting validation prediction, and\none robustness envelope. Scoped failures may eliminate only the exact\nmechanism and parameter contract that was tested.\n\n**Status:** OPEN (2026-08-10). EXP-000791 freezes a bounded T-053 evidence-role\ninventory, common categorical matrix, explicit absence fields, reference\nrules, and robustness boundaries. It independently derives the M2 quadratic\ncone and computes that none of M1/M2/M5 survives all hard admission rows; M0\nremains the effective baseline. The visible helium target predates the new\nstiffness observable map, so its exact mismatch is retrospective and receives\nno validation credit. The parent gate therefore remains open until a genuinely\nprospective prediction or holdout and its microscopic observable map are\nfrozen in an earlier immutable commit. Published EXP-000758--EXP-000790 remain\nbridge evidence and do not convert CP1 into a contestant. No winner, shortlist,\npreferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional\nSector-A closure is licensed.\n",
+        "expected": "OPEN",
+        "group": "formal",
+        "name": "PA-ROUND1 provenance remains open",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS**\n\n**Statement:** In one preregistered locally normal representation, prove an\nall-shape pairwise-union estimate for every bounded local seed, uniformly on\ncompact real times,\n\n`sup_(Lambda,Lambda' superset B_R(X)) ||X_Lambda-X_Lambda'||_(#,beta) -> 0`.\n\nUse it to establish exhaustion independence, products, star, inverse, group\nlaw and strong continuity. Construct one beta-independent invariant C-star\nalgebra and derivation, add the kinetic/CCR anchor needed for canonical\nmomentum, and separately prove the symmetric zero-source periodic anchoring\nbefore any ground-state limit.\n\n**Status:** OPEN, WITH A CATEGORICAL BETA-INDEPENDENT CARRIER NOW SEPARATED\n(2026-08-10). `EXP-000801` proves only selected-tangent\nfinite-word kernel/Gram convergence after explicit finite-block transports.\nIt supplies neither the untransported pairwise-union estimate nor a common\nHilbert embedding for complete finite GNS spaces. Its Fejer theorem is cyclic\ntwo-sided L2 recovery of each raw character, not a multiplier theorem in\narbitrary word contexts. The five v1.5 negative results remove naive label,\nmomentum, raw-generator, asymmetric-periodic and automatic cross-beta\nshortcuts without proving that the required common dynamics is nonexistent.\n\n`EXP-000803` closes every fixed finite raw word on the selected tangent net\nand constructs a beta-independent universal zero-source orbit-smear C-star\nsystem. It does not supply the pairwise-union estimate in this gate, because\nthe volume quotient maps are not an inductive family and the smears are not a\nspatial local net. An exact four-dimensional fixture registered as\n`NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY`\nalso shows that static Gaussian tails and a vanishing first modular derivative\nalone do not imply the missing projected real-time orbit estimate. No exact\nQ3LOCK non-Cauchy counterexample is claimed.\n",
+        "expected": "OPEN",
+        "group": "formal",
+        "name": "retained provenance gate remains open PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE**\n\n**Statement:** Embed the exact finite-volume Hamiltonian evolution of the\nrational finite-support configuration-character seed into the canonical\nfixed-beta OS mixture envelope. Prove direct two-sided mixture-L2 Cauchy, or\ndirect Duhamel `D,delta D` estimates implying it, uniformly on compact real\ntimes and independently of the exhaustion. Identify the limit generator on a\nbounded temporal-smear core and supply an independently registered kinetic/CCR\nanchor before identifying canonical momentum or the local polynomial\nderivation. Prove products, star, inverse, group law and strong continuity.\nFinally construct a beta-compatible state-independent algebra before any\nbeta-to-infinity ground-state claim.\n\n**Status:** OPEN, WITH SELECTED-TANGENT AND CATEGORICAL-CARRIER SUBGATES CLOSED\n(2026-08-10). `EXP-000801` / R-167 v1.5 identifies each fixed finite\nbandlimited word block of the selected `EXP-000781` tangent Hamiltonian KMS\nsystems with the `EXP-000800` mixture in pointed finite-core Fell/GNS\ntopology, and cyclically de-filters each raw character. It also proves that\npointwise Gram convergence does not define a literal quotient-label\nembedding, configuration cylinders do not select momentum, raw characters\nare not a bounded generator core, asymmetric mixtures cannot be zero-source\nperiodic limits, and fixed-beta envelopes need not glue across beta.\n\nMissing are the all-shape pairwise-union estimate in one preregistered\nlocally normal representation, boundary Cauchy, exhaustion independence,\nraw-context operator convergence, canonical kinetic/full-Weyl identification,\nand beta compatibility. `EXP-000803` / R-167 v1.6 additionally constructs a\nbeta-independent universal zero-source `L1` orbit-smear carrier and distinct\nground states on it. Because that product-type carrier has no spatial net or\nexhaustion identification, it does not close this thermodynamic gate. The\nremaining obligations are concentrated in\n`PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP`.\nThe symmetric phase mixture is also not yet proved to be the periodic\nzero-source finite-volume limit. The selected-tangent theorem alone does not\nlicense ground states. The v1.6 carrier licenses its narrowly scoped ground\nstates, but not a quasi-local oscillator ground representation or GNS gap.\n",
+        "expected": "OPEN",
+        "group": "formal",
+        "name": "retained provenance gate remains open PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY**\n\n**Statement:** On a preregistered faithful fixed-beta representation or\nseparating tempered state class, truncate only the intersite coordinates and\nprove projected Duhamel locality for the finite-volume difference `D` together\nwith a uniform bound on its first modular derivative `delta D`. Uniform\nhalf-modular-strip multiplier bounds `M_0,M_1` for the structured truncated\nevolution are a stronger sufficient option, not an equivalent requirement.\nUse the arithmetic/logarithmic-mean theorem to obtain\ntwo-sided GNS/strong-star convergence, then prove exhaustion independence,\ngroup law and Hamiltonian identification.\n\n**Status:** OPEN, NARROWED TO DIRECT `D,delta D` (2026-08-10).\n`EXP-000799` / R-167 v1.3 proves a finite-volume two-orientation relative-\nunitary bound and resulting Gibbs trace-distance estimate from the v1.2\ncoordinate tail. It also proves that the cutoff bond is not norm-`C1` for the\nonsite kinetic derivation and that the connected absolute half-strip condition\n`z beta J_L<1` collapses as `J_L=Theta(L^2)`. A Hamiltonian-generated\ntwo-level fixture has direct `D,delta D` tails tending to zero while its\nevolved `M_0,M_1` diverge, so the direct theorem is strictly weaker. The live\ngate is a volume/source-uniform preregistered separating local test class with\ndirect `D,delta D` Cauchy, product/core density, exhaustion independence and\ngroup law. Common dynamics/KMS, beta independence and every zero-temperature\nconsequence remain open.\n\n`EXP-000800` / R-167 v1.4 proves that a bounded finite-support class with both\nfull-Gibbs half-modular endpoint conjugates bounded is scalar. It therefore\nretires that particular separating-class implementation. Direct two-sided\nmixture-L2 or direct Duhamel `D,delta D` Cauchy on the full common orbit-word\nclass remains viable and is carried into the Hamiltonian-identification gate.\n",
+        "expected": "OPEN",
+        "group": "formal",
+        "name": "retained provenance gate remains open PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "todo/todo.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "TODO authority parses",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "T-054 unique",
+        "status": "PASS"
+      },
+      {
+        "actual": "in_progress",
+        "expected": "in_progress",
+        "group": "formal",
+        "name": "T-054 remains in progress",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "T-054 v1.7 gate split linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 84253,
+        "expected": ">0",
+        "group": "formal",
+        "name": "roadmap readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "roadmap v1.7 gate split linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": "governance/sector-a-theorem-map.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "Sector-A theorem map parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "active_frontier": true,
+          "schema": "tect/sector-a-theorem-map/1.0",
+          "status": "ACTIVE"
+        },
+        "expected": "current scoped Sector-A theorem map; R-167 is bound through proof-evidence surfaces",
+        "group": "formal",
+        "name": "Sector-A theorem map remains its scoped current authority",
+        "status": "PASS"
+      },
+      {
+        "actual": 584,
+        "expected": ">=1",
+        "group": "formal",
+        "name": "changelog parses",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "EXP-000804 theorem changelog unique",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "claims": true,
+          "negatives": true,
+          "no_note_pdf": true,
+          "notes_deferred": true,
+          "scope": true,
+          "scripts": true
+        },
+        "expected": "all true",
+        "group": "formal",
+        "name": "EXP-000804 changelog theorem event complete",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal",
+        "name": "R-167 v1.7 checkpoint-PDF changelog unique",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "claims": true,
+          "development_economy": true,
+          "no_formal_change": true,
+          "one_checkpoint": true,
+          "proof_layers": true,
+          "render_review": true,
+          "source_note": true
+        },
+        "expected": "all true",
+        "group": "formal",
+        "name": "R-167 v1.7 checkpoint-PDF changelog complete",
+        "status": "PASS"
+      },
+      {
+        "actual": 3183424,
+        "expected": ">0",
+        "group": "formal",
+        "name": "proof-evidence map readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "proof-evidence map v1.7 linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/proof-evidence-map.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "proof-evidence JSON map parses",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "proof-evidence JSON v1.7 linkage required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 4041,
+        "expected": ">0",
+        "group": "formal",
+        "name": "result index readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "result index current R-167 projection required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 8333,
+        "expected": ">0",
+        "group": "formal",
+        "name": "negative index readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "negative index current four-route projection required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 7268,
+        "expected": ">0",
+        "group": "formal",
+        "name": "gate index readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "gate index current definition count required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 889,
+        "expected": ">0",
+        "group": "formal",
+        "name": "compact proof-evidence index readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "compact proof-evidence current counts required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 7919,
+        "expected": ">0",
+        "group": "formal",
+        "name": "changelog index readable",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "changelog index current theorem event required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/index.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog current index parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/claim-card.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard claim-card parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/proof-note.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard proof-note parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/synthesis.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard synthesis parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/archive-note.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard archive-note parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/archive-script.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard archive-script parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/archive-artefact.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard archive-artefact parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/run-artefact.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard run-artefact parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/code.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard code parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/verification.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard verification parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/paper.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard paper parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/website.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard website parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/registry.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard registry parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/policy.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard policy parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/root-doc.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard root-doc parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/other.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard other parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "declared_total": 3789,
+          "schema": "tect/catalog-manifest/2.0",
+          "shards": 15,
+          "summed_total": 3789,
+          "valid": 15
+        },
+        "expected": "valid shard hashes/counts summing to manifest total",
+        "group": "formal",
+        "name": "catalog manifest and shards are internally current",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "catalog current v1.7 artifacts required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": "claims/C6-SPACETIME-SIGNATURE/status.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "C6 status parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "T1",
+        "expected": "T1",
+        "group": "claim_firewall",
+        "name": "C6 tier unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": "ACTIVE",
+        "expected": "ACTIVE",
+        "group": "claim_firewall",
+        "name": "C6 lifecycle unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "C6-BCC-PREMISE-BLOCKED"
+        ],
+        "expected": [
+          "C6-BCC-PREMISE-BLOCKED"
+        ],
+        "group": "claim_firewall",
+        "name": "C6 open gate unchanged",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt"
+        ],
+        "expected": [
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt"
+        ],
+        "group": "pdf_efficiency",
+        "name": "exactly one v0.6 checkpoint source/PDF pair exists",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "characters": 24657,
+          "error": null
+        },
+        "expected": "readable UTF-8 source with >10000 characters",
+        "group": "pdf_checkpoint",
+        "name": "checkpoint source readable UTF-8",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "pdf_checkpoint",
+        "name": "checkpoint source theorem and no-overclaim content required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "all_exhaustion_denied": true,
+          "m4_bound": true,
+          "positive_not_exact_jump": true,
+          "pure_kick_exact_inverse_mu": true,
+          "unsplit_invariance_open": true
+        },
+        "expected": "all true",
+        "group": "pdf_checkpoint",
+        "name": "checkpoint source exact route-boundary clauses",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "group": "pdf_checkpoint",
+        "name": "checkpoint source has no drafting placeholders",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "bytes": 112517,
+          "encrypted": false,
+          "eof": true,
+          "form_fields": false,
+          "header": "%PDF-1.5",
+          "page_characters": [
+            2666,
+            1922,
+            1953,
+            1338,
+            1972,
+            1610,
+            2100,
+            2818,
+            2476
+          ],
+          "pages": 9,
+          "parse_error": null,
+          "read_error": null
+        },
+        "expected": "static unencrypted form-free PDF with nonempty extracted pages",
+        "group": "pdf_checkpoint",
+        "name": "checkpoint PDF static structure",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "pdf_checkpoint",
+        "name": "checkpoint PDF provenance and exact gate boundary required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "pdf_mtime_ns": 1786382902174813300,
+          "pdf_size": 112517,
+          "source_mtime_ns": 1786382886971251500,
+          "source_size": 24657
+        },
+        "expected": "PDF mtime >= source and both nonempty",
+        "group": "pdf_checkpoint",
+        "name": "checkpoint PDF fresh relative to source",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "not_deferred": true,
+          "pages": true,
+          "pdf_hash": true,
+          "single_checkpoint": true,
+          "source_hash": true,
+          "visual_clipping": true,
+          "visual_equations": true,
+          "visual_overfull": true,
+          "visual_overlap": true,
+          "visual_render": true
+        },
+        "expected": "all true",
+        "group": "pdf_checkpoint",
+        "name": "manifest final checkpoint hashes, pages and visual QA",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "returncode": 0,
+          "stderr": ""
+        },
+        "expected": {
+          "returncode": 0
+        },
+        "group": "pdf_efficiency",
+        "name": "git can audit changed note/PDF artifacts",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt"
+        ],
+        "expected": {
+          "allowed_atomic_checkpoint_pair": [
+            "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
+            "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt"
+          ],
+          "allowed_clean_after_commit": []
+        },
+        "group": "pdf_efficiency",
+        "name": "no other new or reissued note/PDF accompanies checkpoint",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt"
+        ],
+        "expected": [
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt"
+        ],
+        "group": "pdf_efficiency",
+        "name": "manifest/certificate cite the exact checkpoint pair only",
+        "status": "PASS"
+      }
+    ],
+    "total": 153
+  },
+  "boundary": "This package proves only a finite-region local-strict/energy carrier and a fixed finite-Gibbs entropy tail bound, together with four sharply scoped route no-go results. It does not prove a continuous-time thermodynamic split limit, all-exhaustion or all-boundary Cauchy, a quasi-local raw oscillator common alpha, full resolvent-algebra invariance or non-invariance for the unsplit quartic flow, phase-KMS quotient identification, a broken-sector GNS or physical mass gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
+  "claim_bearing": false,
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "closed_gates": [
+    "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+    "PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND"
+  ],
+  "component_summaries": {
+    "independent": {
+      "assertions": [
+        109,
+        0,
+        0,
+        109
+      ],
+      "schema": "tect/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-independent-result/1.0",
+      "verdict": "PASS"
+    },
+    "primary": {
+      "assertions": [
+        189,
+        0,
+        0,
+        189
+      ],
+      "schema": "tect/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-primary-result/1.0",
+      "verdict": "PASS"
+    }
+  },
+  "cross_derived": {
+    "all_exact": true,
+    "expected": {
+      "delta_delta2_packet_positive_only": true,
+      "general_m_and_m4_finite_moment_no_go": true,
+      "local_strict_topology_and_subflows": true,
+      "no_overclaim_scope": true,
+      "ordered_ground_gap_no_go": true,
+      "pure_kick_exact_jump_and_scope": true,
+      "q3_effective_coupling": true,
+      "two_sided_gibbs_entropy_log_tail": true
+    },
+    "independent": {
+      "delta_delta2_packet_positive_only": true,
+      "general_m_and_m4_finite_moment_no_go": true,
+      "local_strict_topology_and_subflows": true,
+      "no_overclaim_scope": true,
+      "ordered_ground_gap_no_go": true,
+      "pure_kick_exact_jump_and_scope": true,
+      "q3_effective_coupling": true,
+      "two_sided_gibbs_entropy_log_tail": true
+    },
+    "primary": {
+      "delta_delta2_packet_positive_only": true,
+      "general_m_and_m4_finite_moment_no_go": true,
+      "local_strict_topology_and_subflows": true,
+      "no_overclaim_scope": true,
+      "ordered_ground_gap_no_go": true,
+      "pure_kick_exact_jump_and_scope": true,
+      "q3_effective_coupling": true,
+      "two_sided_gibbs_entropy_log_tail": true
+    },
+    "third": {
+      "C_b": "521/35",
+      "M_delta": "1287/245",
+      "cube_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "effective_G": "51/35",
+      "entropy_rows": [
+        {
+          "energy": "5/28",
+          "entropy": "1/4",
+          "m": 3,
+          "n": 2,
+          "tail": "1/64",
+          "zero_moment": "1"
+        },
+        {
+          "energy": "5/63",
+          "entropy": "1/9",
+          "m": 3,
+          "n": 3,
+          "tail": "1/729",
+          "zero_moment": "1"
+        },
+        {
+          "energy": "1/35",
+          "entropy": "1/25",
+          "m": 3,
+          "n": 5,
+          "tail": "1/15625",
+          "zero_moment": "1"
+        },
+        {
+          "energy": "5/112",
+          "entropy": "1/16",
+          "m": 4,
+          "n": 2,
+          "tail": "1/256",
+          "zero_moment": "1"
+        },
+        {
+          "energy": "5/567",
+          "entropy": "1/81",
+          "m": 4,
+          "n": 3,
+          "tail": "1/6561",
+          "zero_moment": "1"
+        },
+        {
+          "energy": "1/875",
+          "entropy": "1/625",
+          "m": 4,
+          "n": 5,
+          "tail": "1/390625",
+          "zero_moment": "1"
+        },
+        {
+          "energy": "5/7168",
+          "entropy": "1/1024",
+          "m": 7,
+          "n": 2,
+          "tail": "1/16384",
+          "zero_moment": "1"
+        },
+        {
+          "energy": "5/413343",
+          "entropy": "1/59049",
+          "m": 7,
+          "n": 3,
+          "tail": "1/4782969",
+          "zero_moment": "1"
+        },
+        {
+          "energy": "1/13671875",
+          "entropy": "1/9765625",
+          "m": 7,
+          "n": 5,
+          "tail": "1/6103515625",
+          "zero_moment": "1"
+        }
+      ],
+      "flags": {
+        "delta_delta2_packet_positive_only": true,
+        "general_m_and_m4_finite_moment_no_go": true,
+        "local_strict_topology_and_subflows": true,
+        "no_overclaim_scope": true,
+        "ordered_ground_gap_no_go": true,
+        "pure_kick_exact_jump_and_scope": true,
+        "q3_effective_coupling": true,
+        "two_sided_gibbs_entropy_log_tail": true
+      },
+      "gibbs_S_xi": "5/4",
+      "m4_reference_piece_bound": true,
+      "neighbors_zero": [
+        1,
+        2,
+        4
+      ],
+      "packet_positive_lower": "98/375",
+      "packet_tau": "28/75",
+      "packet_tau_threshold": "56/75",
+      "positive_spectral_points": [
+        "1",
+        "1/2",
+        "1/4",
+        "1/8",
+        "1/16",
+        "1/32"
+      ],
+      "pure_kick_jump": "6/11"
+    }
+  },
+  "exploration_id": "EXP-000804",
+  "failures": [],
+  "formal_workflow": {
+    "checkpoint_changelog_matches": 1,
+    "exploration_matches": 1,
+    "theorem_changelog_matches": 1
+  },
+  "fresh_sentinels": {
+    "independent": "FRESH-COMPONENT PASS 109/109",
+    "primary": "FRESH-COMPONENT PASS 189/189"
+  },
+  "historical_superseded_gates": [
+    "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP"
+  ],
+  "missing_authorities": [],
+  "negative_ids": [
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "pdf_efficiency": {
+    "authority_artifact_refs": [
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt"
+    ],
+    "changed_note_or_pdf_artifacts": [
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt"
+    ],
+    "checkpoint_pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
+    "note_source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt",
+    "package_artifacts": [
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
+      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt"
+    ],
+    "page_count": 9,
+    "pdf_built_by_integrated_verifier": false,
+    "pdf_sha256": "3d2e33dbef6781dc45563750bf451e7e9243c4cb079b5e2ed571794d8d6aba3d",
+    "policy": "one synthesis source/PDF at the logical gate checkpoint",
+    "render_attempted": false,
+    "source_sha256": "101c4ffc3742d4c9caf57e57d90db599656f5ea22332f1b178d8920a28b643fc"
+  },
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_number": "R-167",
+  "result_version": "v1.7",
+  "retained_gates": [
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY",
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP"
+  ],
+  "schema": "tect/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-integrated-result/1.0",
+  "scope": {
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false,
+    "Sector_A_complete": false,
+    "all_exhaustion_two_orientation_history_common_alpha": false,
+    "broken_sector_GNS_gap_coercivity": false,
+    "continuous_time_split_product_limit": false,
+    "continuum_regulator_removal": false,
+    "entropy_finite_moment_dynamic_gaussian_tail": false,
+    "finite_volume_local_strict_energy_subflow_carrier": true,
+    "fixed_finite_gibbs_character_entropy_tail": true,
+    "ordered_ground_doublets_imply_GNS_gap": false,
+    "phase_KMS_quotient_identification": false,
+    "physical_empty_space_reference": false,
+    "physical_mass_gap": false,
+    "pure_quartic_resolvent_algebra_invariance": false,
+    "raw_weyl_basic_resolvent_point_norm_C0": false,
+    "unsplit_resolvent_algebra_invariance_decided": false
+  },
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf": "3d2e33dbef6781dc45563750bf451e7e9243c4cb079b5e2ed571794d8d6aba3d",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt": "101c4ffc3742d4c9caf57e57d90db599656f5ea22332f1b178d8920a28b643fc",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split/result.json": "7e2abcb80cf60b629e437ac720d1a5f7f5d5630de51743ca1622b8a755e7e33e",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split/result.json": "6280bb8571306089058f95c6e7226f5a5df6138b9a2cd59549ea33b31d32d423",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split.py": "e4901ef7cd1b78e2976d7ac8ff7dbc066c60801b9588b2787164ba6b477a0dc5",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_independent.py": "94a42fb9908ab89fca0009687dbd6cb431c9e6cf9662b52438db836fc1d29d77",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_verify.py": "72ea64b2e1f3e97b6dc05d9f66902ef9b583d39139c4289cc6355b86569d45dd",
+    "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md": "5beab888a16d12ff1af1b5bba9ad40fe12f99d0ba467e19d7ae372e8da38788e",
+    "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-manifest.json": "ad59c27985a3bd8c098ba6289e4e4dde0614fc92a4029d320f9264b03625ad0d"
+  },
+  "successor_gates": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY"
+  ],
+  "summary": {
+    "failed": 0,
+    "missing": 0,
+    "passed": 153,
+    "total": 153
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

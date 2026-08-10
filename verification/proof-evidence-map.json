@@ -6,8 +6,8 @@
   },
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
-    "RESULTS-LEDGER.md": "3ae47ac54908f62b8017bfcdf097a80ff8a139a2a2f5be40a03aa3d55c060db9",
-    "changelog/log.jsonl": "4aea0ec4d790b1a4e095f2b91fe621c67c20c9c7afa80249cd014f440d8c0623",
+    "RESULTS-LEDGER.md": "8982b50283ad7f85fe3831b55ae066ec8cb442e88c7cc1977adc0dd9d5698593",
+    "changelog/log.jsonl": "b712b43f3e8774643b37fb04e57dae62e2a4e2ff90891c7b809877dcccd097d6",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -57,39 +57,39 @@
     "claims/F1-COSMO-DARK-SECTOR/status.json": "41e0c2e92f754fc2a2f8501b95169d98c0f3cfc130be27ae9d31246c406b5179",
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
-    "claims/GATES.md": "2caf83373e11e8ee56a08201e7579c06accf31bbba2bd925447d62ea121c0307",
-    "explorations/log.jsonl": "d7057e6329fec1fa0636df409744e45260acd81419dde60131db4884bb3a2642",
-    "negative-results/registry.md": "4e674dfb06ca8c3e670d829e02f8175130bbca5e3158cec261972fd9104755dc",
-    "todo/todo.json": "215f928fbeb1865a014e8c01288a6d704e3f05892646ca51c399b7d895fa13dd"
+    "claims/GATES.md": "b60238d10a8496b8b76466cdfca35b9a4d5fa01e425f2b897eb19b104d9d01fb",
+    "explorations/log.jsonl": "bc7e08bd4156fd6cb3ae19060ac8b58935e0c18d55262cd63b5dfc9d0faa0fea",
+    "negative-results/registry.md": "54abfdaa76c681200fbdde9ad1a7185841e07d462a7a951d1e68e9f47d264530",
+    "todo/todo.json": "3991b1b258671503bef138de2672497d93cdcd47e5ef9a73df82769b2db95439"
   },
   "coverage": {
     "status_cards": 49,
     "active_claims": 48,
     "refuted_claims": 1,
     "reusable_results": 167,
-    "negative_records": 322,
-    "proof_explorations": 803,
+    "negative_records": 326,
+    "proof_explorations": 804,
     "exploration_verdicts": {
-      "advanced": 474,
+      "advanced": 475,
       "failed": 235,
       "inconclusive": 66,
       "parked": 28
     },
     "process_grade_lessons": 3,
-    "accepted_events": 582,
+    "accepted_events": 584,
     "tasks": 54,
     "live_tasks": 9,
     "completed_tasks": 45,
     "open_gates": 18,
     "current_route_gates": 19,
     "sectors": 6,
-    "proof_notes": 404,
-    "proof_pdfs": 385,
+    "proof_notes": 405,
+    "proof_pdfs": 386,
     "unordered_root_notes": 9,
     "unordered_root_pdfs": 9,
     "proof_notes_without_sibling_pdf": 19,
     "proof_notes_with_incomplete_historical_footer": 118,
-    "run_json": 704,
+    "run_json": 707,
     "claim_manifests": 124,
     "bundle_manifests": 40,
     "bundle_embedded_manifests": 45
@@ -1524,6 +1524,7 @@
       "R-078"
     ],
     "claim_unbound_negative_tags": [
+      "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
       "NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION",
       "NG-2026-08-03-PRE-A-C0B-FINITE-TRANSITIVE-DETERMINISTIC-ORDER-SELECTION",
       "NG-2026-08-03-PRE-A-C0A-REVERSIBILITY-WITHOUT-POSITIVE-TRANSFER",
@@ -2208,6 +2209,19 @@
         "claim_ids": [
           "R-167"
         ]
+      },
+      {
+        "event": "20260811-r-167-v1-7-separates-the-finite-region-local-st",
+        "claim_ids": [
+          "EXP-000804",
+          "R-167"
+        ]
+      },
+      {
+        "event": "20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte",
+        "claim_ids": [
+          "R-167"
+        ]
       }
     ],
     "event_unregistered_negative_tags": [
@@ -2333,7 +2347,7 @@
       "owner": "Codex",
       "claim": null,
       "gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
-      "note": "EXP-000791 keeps the parent PA-ROUND1 evidence and manifest gate open pending a genuinely future relation and microscopic map. On the ST8/Q3LOCK lane, EXP-000792--802 / R-167 v1.0--v1.5 establish the local derivation, weighted-energy and graph precursors, the fixed-beta canonical OS-mixture KMS envelope, and selected tangent-net finite-core Hamiltonian identification. EXP-000803 advances R-167 to v1.6: the modular right-context lemma and recursive Fejer smoothing give every fixed finite raw configuration-orbit word moment and Gram block on the selected tangent nets; the exact zero-source finite Hamiltonians define one beta-independent universal L1 orbit-smear C-star carrier; and the EXP-000789 broken doublets yield two distinct algebraic ground states of its common C0 shift. This carrier is categorical and nonlocal, not the quasi-local thermodynamic oscillator alpha. The live CP1 gate is PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP: prove a spatial raw or resolvent carrier, all-shape exhaustion Cauchy, phase-KMS quotient and local-generator identification, then the broken-sector GNS gap. Static tails alone do not close projected orbit locality. Continuum, physical empty space, C6, CP1, Sector A and Pre-A remain open. The single v1.6 gate-level synthesis PDF is claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf; it was issued only after strict proof validation and does not alter the open successor.",
+      "note": "EXP-000791 keeps the parent PA-ROUND1 evidence and manifest gate open pending a genuinely future relation and microscopic map. On the ST8/Q3LOCK lane, EXP-000792--803 / R-167 v1.0--v1.6 establish the local derivation, weighted-energy and graph precursors, the fixed-beta canonical OS-mixture KMS envelope, selected tangent finite-word Hamiltonian identification, and the categorical beta-independent orbit-smear carrier with two algebraic ground states. EXP-000804 advances R-167 to v1.7: every fixed finite-region multiplier algebra has an exact bounded local-strict/strong-star/energy topology in which the onsite and commuting bond subflows are continuous and energy controlled; exact full-Q3 packets reject point-norm continuity on raw momentum-Weyl/basic-resolvent labels; the pure quartic kick does not preserve the full resolvent algebra; finite-Gibbs character entropy gives only an inverse-logarithmic tilted tail; and ordered ground-state distinctness does not imply a GNS gap. The former combined successor is split. The live dynamics gate is PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA; separately, PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY requires a sectorwise positive coercive estimate. Continuum, physical empty space, C6, CP1, Sector A and Pre-A remain open. Per the PDF-efficiency protocol, no per-lemma or intermediate v1.7 PDF was issued. After the manifest, certificate, primary, non-importing independent, and integrated proof layers passed, the single nine-page v0.6 gate-level synthesis source/PDF pair was issued and every rendered page passed visual review.",
       "created": "2026-08-02",
       "updated": "2026-08-10",
       "blocked_by": [],
@@ -9709,6 +9723,7 @@
         "proof_notes": [
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-common-alpha-topology-critical-graph-route-split-260810-v0.4.tex.txt",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-cubic-graph-product-locality-route-split-260810-v0.2.tex.txt",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-modular-cutoff-unitary-resummation-route-split-260810-v0.3.tex.txt",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-second-weighted-energy-and-cauchy-gate-260810-v0.1.tex.txt",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt",
@@ -9720,6 +9735,7 @@
         "proof_pdfs": [
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-common-alpha-topology-critical-graph-route-split-260810-v0.4.pdf",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-cubic-graph-product-locality-route-split-260810-v0.2.pdf",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-modular-cutoff-unitary-resummation-route-split-260810-v0.3.pdf",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-second-weighted-energy-and-cauchy-gate-260810-v0.1.pdf",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf",
@@ -9894,7 +9910,10 @@
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-primary-pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-primary-pre-a-cp1-st8-q3lock-second-weighted-energy-cauchy-gate/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-primary-pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split/result.json",
-          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-primary-pre-a-round1-frozen-quadratic-causal-admission-triage/result.json"
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-10-primary-pre-a-round1-frozen-quadratic-causal-admission-triage/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split/result.json"
         ],
         "manifests": [],
         "bundle_manifests": [],
@@ -9905,6 +9924,9 @@
           "R-167"
         ],
         "negative_tags": [
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
           "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY",
           "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY",
           "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY",
@@ -10064,9 +10086,10 @@
           "EXP-000800",
           "EXP-000801",
           "EXP-000802",
-          "EXP-000803"
+          "EXP-000803",
+          "EXP-000804"
         ],
-        "latest_exploration_id": "EXP-000803",
+        "latest_exploration_id": "EXP-000804",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -10150,9 +10173,11 @@
           "20260810-r-167-v1-4-closes-the-fixed-beta-canonical-os-m",
           "20260810-r-167-v1-5-identifies-the-selected-hamiltonian",
           "20260810-r-167-v1-6-closes-selected-raw-word-moments-and",
-          "20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte"
+          "20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte",
+          "20260811-r-167-v1-7-separates-the-finite-region-local-st",
+          "20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte"
         ],
-        "latest_event_id": "20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte",
+        "latest_event_id": "20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "C6-BCC-PREMISE-BLOCKED"
@@ -11070,14 +11095,14 @@
     {
       "id": "R-167",
       "anchor": "r-167",
-      "title": "Weighted-energy, common-dynamics topology, orbit-smear carrier and ground-doublet route split",
-      "summary": "Scoped T0 analytic/exact/executed/audited theorem, strengthened additively through v1.6 without a new result number. v1.0--v1.3 prove the weighted-energy/cubic graph inputs and exact topology route splits; v1.4 constructs the canonical fixed-beta OS-mixture common normal KMS envelope; v1.5 identifies the selected Hamiltonian tangent nets in finite-core Fell/GNS topology. v1.6 recovers every fixed finite raw orbit-word kernel on those nets and constructs a beta-independent universal zero-source finite-Hamiltonian `L1` orbit-smear C-star carrier with two distinct ground states from the EXP-000789 doublets. The carrier is categorical/nonlocal, not the quasi-local thermodynamic oscillator alpha. All-exhaustion locality, canonical momentum/local generator, phase quotient identification, broken-sector GNS gap, continuum, empty-space comparison, C6, CP1 and Pre-A remain open",
+      "title": "Weighted-energy, common-dynamics topology, orbit-smear carrier, local-strict and ground-gap route split",
+      "summary": "Scoped T0 analytic/exact/executed/audited theorem, strengthened additively through v1.7 without a new result number. v1.0--v1.3 prove the weighted-energy/cubic graph inputs and exact topology route splits; v1.4 constructs the canonical fixed-beta OS-mixture common normal KMS envelope; v1.5 identifies the selected Hamiltonian tangent nets in finite-core Fell/GNS topology; v1.6 completes fixed raw words and constructs a categorical orbit-smear carrier with two ground states. v1.7 proves a finite-region local-strict/energy subflow carrier and a fixed-Gibbs character entropy-tail theorem, rejects raw point-norm and pure-kick resolvent-algebra shortcuts, and splits all-exhaustion common alpha from sector GNS coercivity. Neither successor is closed; continuum, empty-space comparison, C6, CP1 and Pre-A remain open",
       "detail_title": "Weighted-energy, cubic graph and thermodynamic-Cauchy route split",
       "detail": {
         "result_id": "`PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT`.",
-        "version": "`EXP-000795` corrected the v1.0 cubic-domain wording. `EXP-000796` then proves the missing centered cubic graph embedding and strengthens this result to v1.1 without allocating a new result number. `EXP-000797` is an append-only source-note-linkage correction only; it changes no mathematical statement or boundary. `EXP-000798` adds the exact fixed-order response counterexample, all-order unitary repair, modular topology and coordinate-cutoff theorems and advances the same result to v1.2. `EXP-000799` adds the exact common-alpha topology split and advances the same result to v1.3. `EXP-000800` proves the canonical fixed-beta OS-mixture common normal W-star envelope, registers three sharper topology boundaries, and advances the same result to v1.4. `EXP-000801` identifies the selected finite-volume source-tangent Hamiltonian KMS word kernels with that envelope in fixed-band finite-core Fell/GNS topology, proves an exact cyclic character de-filtering theorem, registers five embedding/generator boundaries, and advances the same result to v1.5. `EXP-000802` is an append-only integrated- verifier locator and exact-scope-token correction only; it changes no mathematical statement or boundary. `EXP-000803` proves the selected-tangent finite raw-word completion, constructs the universal zero-source finite- Hamiltonian `L1` orbit-smear carrier, promotes the `EXP-000789` doublets to two distinct ground states of that carrier, and advances the same result to v1.6.",
-        "authority_links": "The v1.1 `centered-weight cubic graph` and `prescribed-word` heat theorem are recorded under `PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE` and the alternative `PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY` gate. R-167 v1.2 preserves those historical IDs and supersedes their active route by `PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE` and `PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY`. R-167 v1.3 retains both gate IDs, rejects the fixed Weyl-containing C-star-Leibniz realization of the critical `s=1/2` onsite orbit, and narrows the first to a non-Leibniz analytic/Frechet or symmetric/state-weighted thermodynamic topology. The second is narrowed to direct projected `D,delta D` locality on a preregistered separating local class. R-167 v1.4 closes `PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE` and makes `PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE` the precise successor. The historical all-bond and projected gate IDs remain part of the route provenance. R-167 v1.5 closes `PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION` and concentrates the remaining thermodynamic obligation in `PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS`. The selected-tangent theorem is not an all-exhaustion or beta-independent completion. R-167 v1.6 closes `PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION`, `PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER`, and `PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS`. The carrier is categorical rather than quasi-local; the precise successor is `PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP`. The single gate-level synthesis authority is `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt` with rendered PDF sibling `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf`. No per-lemma or intermediate PDF was issued during the v1.6 development phase.",
-        "negative_route_authorities": "The exact fixed-power star/repeat obstruction is registered as `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE`. The independent modular-multiplier obstruction is registered as `NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER`. The seven v1.3 topology and graph failures are registered as `NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE`, and `NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY`. The three v1.4 boundaries are `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS`, and `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE`. The five v1.5 boundaries are `NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT`, and `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING`. The v1.6 projected-tail route boundary is `NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY`.",
+        "version": "`EXP-000795` corrected the v1.0 cubic-domain wording. `EXP-000796` then proves the missing centered cubic graph embedding and strengthens this result to v1.1 without allocating a new result number. `EXP-000797` is an append-only source-note-linkage correction only; it changes no mathematical statement or boundary. `EXP-000798` adds the exact fixed-order response counterexample, all-order unitary repair, modular topology and coordinate-cutoff theorems and advances the same result to v1.2. `EXP-000799` adds the exact common-alpha topology split and advances the same result to v1.3. `EXP-000800` proves the canonical fixed-beta OS-mixture common normal W-star envelope, registers three sharper topology boundaries, and advances the same result to v1.4. `EXP-000801` identifies the selected finite-volume source-tangent Hamiltonian KMS word kernels with that envelope in fixed-band finite-core Fell/GNS topology, proves an exact cyclic character de-filtering theorem, registers five embedding/generator boundaries, and advances the same result to v1.5. `EXP-000802` is an append-only integrated- verifier locator and exact-scope-token correction only; it changes no mathematical statement or boundary. `EXP-000803` proves the selected-tangent finite raw-word completion, constructs the universal zero-source finite- Hamiltonian `L1` orbit-smear carrier, promotes the `EXP-000789` doublets to two distinct ground states of that carrier, and advances the same result to v1.6. `EXP-000804` proves the finite-region local-strict/energy subflow carrier and fixed finite-Gibbs character entropy-tail theorem, registers four norm/topology/tail/gap boundaries, splits the combined successor, and advances the same result to v1.7.",
+        "authority_links": "The v1.1 `centered-weight cubic graph` and `prescribed-word` heat theorem are recorded under `PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE` and the alternative `PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY` gate. R-167 v1.2 preserves those historical IDs and supersedes their active route by `PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE` and `PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY`. R-167 v1.3 retains both gate IDs, rejects the fixed Weyl-containing C-star-Leibniz realization of the critical `s=1/2` onsite orbit, and narrows the first to a non-Leibniz analytic/Frechet or symmetric/state-weighted thermodynamic topology. The second is narrowed to direct projected `D,delta D` locality on a preregistered separating local class. R-167 v1.4 closes `PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE` and makes `PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE` the precise successor. The historical all-bond and projected gate IDs remain part of the route provenance. R-167 v1.5 closes `PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION` and concentrates the remaining thermodynamic obligation in `PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS`. The selected-tangent theorem is not an all-exhaustion or beta-independent completion. R-167 v1.6 closes `PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION`, `PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER`, and `PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS`. The carrier is categorical rather than quasi-local; the precise successor is `PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP`. The single gate-level synthesis authority is `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt` with rendered PDF sibling `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf`. No per-lemma or intermediate PDF was issued during the v1.6 development phase. R-167 v1.7 closes `PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER` and `PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND`. It leaves the preceding combined successor historically open but splits and supersedes it as the active target by `PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA` and `PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY`. The first is a thermodynamic dynamics/phase-quotient problem; the second is an independent sectorwise spectral-coercivity problem. Neither is closed.",
+        "negative_route_authorities": "The exact fixed-power star/repeat obstruction is registered as `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE`. The independent modular-multiplier obstruction is registered as `NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER`. The seven v1.3 topology and graph failures are registered as `NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE`, and `NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY`. The three v1.4 boundaries are `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS`, and `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE`. The five v1.5 boundaries are `NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT`, and `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING`. The v1.6 projected-tail route boundary is `NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY`. The four v1.7 route boundaries are `NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0`, `NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE`, `NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE`, and `NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP`.",
         "statement": "For the exact finite-volume ST8/Q3LOCK Hamiltonian with `chi,c,g>0`, `lambda>=0`, bounded source, and centered weight `f_x=exp[-mu d(x,X)]`, let `A=1+E_f` be the positive shifted local energy. Writing `B_f=delta(E_f)`, the exact current and Schroedinger cross identity give `||B_f A^-1||=||A^-1 B_f||<=M_mu`, with the explicit volume- and source-uniform constant in the proof note. Consequently `U(t)^*A^2U(t)<=exp(2M_mu|t|)A^2`. Interpolation with the first-energy cone closes the minimal three-half-energy moment and propagates the energy domain `D(A^(3/4))`. The exact full graph expansion additionally gives `||U_fA^-1||<=kappa`. Heinz--Kato and the commuting multiplication order inside `U_f` therefore give `f_x^(m/4)|| |q_x|^mA^(-m/4)||<=gamma^(-m/4)kappa^(m/4)`, `0<=m<=4`, with the adjoint orientation. This closes the formerly open centered cubic multiplier and the Q3 force, whose component coefficient is `g+12lambda`. The spatial weight is sharp: an unweighted moving-site constant must grow at least as `f_x^(-3/4)`. Neighboring centered graph norms nevertheless compare by `C_mu^s`, so fixed-exponent recentering has only exponential path cost. The boundary position multiplier also closes. If the first and double position commutators decay in both declared one-sided energy norms with spatial rate `rho>mu/4`, the exact boundary Duhamel formula makes the finite-volume dynamics Cauchy in both orientations, independently of the exhaustion.",
         "proof_mechanism": "Weighted Cauchy--Schwarz converts the current square into `U_f sum f_x|p_x|^2`. An exact integration-by-parts identity turns that term into `2chi Re<T_f psi,U_f psi>` plus a Laplacian. The Q3 edge calculation gives `Delta W4<=C2|q|^2` with `C2=3g+21lambda`, closing both ordered derivative bounds. The same cross identity controls `U_fA^-1`; Heinz--Kato then closes the cubic graph domain. Complex interpolation gives energy-domain propagation, Balakrishnan calculus supplies the boundary position multiplier, and the Duhamel identity shows exactly which two one-sided spatial commutator estimates remain. Every prescribed bond word has the exact heat-simplex bound `[b sqrt(pi/(2e))sqrt(beta)]^n/Gamma(1+n/2)`. A single `5m`-edge animal has at least `(4m)!` legal histories, so termwise absolute animal counting destroys that denominator. Even after a hypothetical chain reduction, absolute strip continuation produces `exp(C/epsilon)`, nonintegrable against every finite energy power. A rank-shift fixture separately shows that convergence of both adjoint labels in the Duhamel inner product does not imply strong-star dynamics. These findings reject only the named proof routes, not existence of thermodynamic dynamics.",
         "v1_2_route_correction": "For one component and a spatial star, `V_j=-c q_0q_j`, `W_0(a)=exp(-ia p_0/hbar)` give the exact fixed-order law `ad_(V_m)...ad_(V_1)W_0=(-ca)^m(prod_j q_j)W_0`. Translated bumps show that three leaves defeat graph exponent `s=1/2` and four defeat `s=3/4`; one repeated edge gives the same obstruction. The complete star instead resums to the unitary `exp[-icat sum_jq_j/hbar]W_0`. A unique-path tree has an exact sequential-activation Duhamel formula with every path edge used once, while a square leaves an alternate-path remainder. Thus the coefficientwise first-passage target is false as stated, but an all-bond unitary Trotter route remains open. For faithful finite Gibbs `rho`, v1.2 also proves `||X||_#^2<=||X||_D^2+(1/2)||X||_D||[log rho,X]||_D`. This is the arithmetic/logarithmic-mean inequality. Duhamel convergence plus a uniform first modular derivative therefore gives two-sided GNS convergence in one fixed faithful representation. Exact half-modular-strip bounds `M_0` and `M_1` make multiplication by a structured observable continuous in this topology. A two-level fixture shows that an arbitrary contraction can instead turn a static tail with zero modular derivative into a divergent Duhamel commutator. Finally, the imported Q3LOCK Euclidean exponential moment makes a coordinate-only bond cutoff and its first modular derivative `poly(L)exp(-aL^2)` for arbitrary `a>0`. The scale `L_m=m^alpha`, `0<alpha<1/2`, closes the tail/factorial arithmetic conditionally on the still- open projected or modular-multiplier locality estimate.",
@@ -11085,16 +11110,17 @@
         "v1_4_fixed_beta_common_envelope_theorem": "Let `mu_+` and `mu_-` be the two `EXP-000790` path laws at one fixed beta and let `mu_0=lambda_+mu_+ + lambda_-mu_-`, with both weights positive. On the full common positive-time cylinder module their OS forms obey `q_0=lambda_+q_+ + lambda_-q_-`. Consequently `[F]_0 -> (sqrt(lambda_+)[F]_+,sqrt(lambda_-)[F]_-)` is an isometry onto the closed common-word cyclic subspace of the phasewise direct sum. Because the full formal word algebra contains products, star and both real time-shift orientations, that subspace reduces the word representation and reconstructed unitary group. The component maps `J_sigma` therefore intertwine all common analytic words and real time. The operators `T_sigma=J_sigma^*J_sigma` lie in the mixture commutant, satisfy `0<=T_sigma<=lambda_sigma^(-1)I`, `lambda_+T_+ + lambda_-T_-=I`, and define two distinct normal beta-KMS phase states of the single mixture group. On the support-reduced mixture GNS algebra, the two-sided mixture-L2 seminorm metrizes strong-star on bounded sets. The full common cylinder module is essential. Two finite Gibbs systems have identical sharp-time diagonal Gram forms and multipliers while their real-time rotations differ by norm `sqrt(2)` and their beta/2 Euclidean two-point functions are `1` and `4/5`. A second theorem shows that any bounded finite-support observable whose two full-Gibbs half-modular endpoint conjugates are bounded is scalar: strip analyticity makes `[H,A]` bounded, then an outward configuration translation and an onsite momentum boost force successively `[q_x,A]=[p_x,A]=0` at every extreme support site. Finally, an exact Weyl bond response rejects a frequency-blind single-rung site-influence recurrence with a neighbor coefficient tending to zero. A valid locality proof must retain an analytic-frequency or all-moment orbit profile.",
         "v1_5_selected_tangent_hamiltonian_os_identification": "Fix `beta>0` and the registered `EXP-000781` periodic finite-volume tangent subsequences `(Lambda_n,+h_n)` and `(Lambda_n,-h_n)`, with `h_n->0`. Their convex finite word functionals converge on the ordered Euclidean cylinder slice to the `EXP-000800` mixture kernel. Uniform boundedness on every KMS thermal tube, analytic uniqueness on the maximally totally real Euclidean slice, and weak- star boundary convergence imply convergence after fixed `L1` physical-time smoothing. Thus every fixed finite Gram matrix of the countable bandlimited configuration-word list converges. For every limiting independent `k`-block, let `G_n^(k)` and `G_0^(k)` be the finite and limiting Gram matrices. The exact congruence `M_(n,k)=G_0^(-1/2)G_n^(1/2)`, `M_(n,k)^*G_0M_(n,k)=G_n`, and `M_(n,k)->I` give reproducible finite-block isometries. A frozen independent-pivot rule discards vanishing directions; a diagonal block exhaustion gives pointed finite-core Fell/GNS convergence of every fixed bandlimited word family. This is not a label-preserving embedding of the complete GNS spaces or a globally compatible common-Hilbert operator strong-star theorem. For every rational finite-support configuration character `W_xi=exp(i xi.q)` and every exact finite-volume Hamiltonian `H=p^2/(2chi)+V(q)`, with arbitrary q-only source and boundary terms, `[W_xi^*,[H,W_xi]]=hbar^2||xi||^2/chi`, `||delta W_xi||_D^2=||xi||^2/(beta chi)`. The Fejer multiplier `g_R(omega)=(1-|omega|/R)_+` therefore gives, with `a_xi=||xi||/sqrt(beta chi)`, `||W_xi-W_xi^(R)||_D<=a_xi/R`, `||delta(W_xi-W_xi^(R))||_D<=a_xi`, `||W_xi-W_xi^(R)||_#<=a_xi sqrt(2/R^2+beta hbar/R)`. This uniformly recovers each raw character as a cyclic two-sided L2 vector after the fixed-band tangent limit. It is not a left/right-context multiplier estimate and does not prove raw-core operator strong-star convergence. The valid bounded generator core consists of temporal smears and obeys `delta(A_f)=-A_(f')`; raw characters have an unbounded momentum term in their first commutator. Exact local source jets and the first coordinate-tail rung are also fixed, but configuration-cylinder data alone cannot select a canonical momentum realization. Parity excludes asymmetric mixtures as zero-source periodic limits, and a finite `M_2` fixture shows that separately valid fixed-beta envelopes need not glue to one beta-independent generator.",
         "v1_6_finite_raw_word_and_orbit_smear_ground_theorem": "In the faithful standard form of the selected fixed-beta KMS limit, every finite-band right context `C` obeys `||YC Omega||<=exp(beta hbar S/2)||C||||Y Omega||`, where `S` is its physical Arveson bandwidth. Replacing a fixed raw orbit word from right to left and choosing the Fejer bandwidths recursively therefore upgrades the v1.5 cyclic estimate to convergence of every fixed finite raw configuration-orbit word moment and Gram block. Independent limiting pivots give pointed finite-core Fell/GNS convergence on the algebraic raw orbit-word span. The construction has no word-length-uniform or arbitrary bounded- context estimate. Independently, let `A_(xi,f)` be the formal `L1` time-smear of the rational configuration character `W_xi` and represent it in every exact zero-source periodic volume by `pi_Lambda(A_(xi,f))=int f(t)alpha_t^Lambda(W_xi)dt`. The supremum seminorm `sup_Lambda||pi_Lambda(.)||`, followed by its common- kernel quotient and completion, gives a beta- and state-independent C-star algebra `A_H^0`. The translations `theta_sA_(xi,f)=A_(xi,f(.-s))` are isometric and point-norm continuous, and their smooth generator is `delta_HA_(xi,f)=-A_(xi,f')`. Every finite Gibbs pullback is KMS for this one shift. The `EXP-000789` doublets have energy excess `epsilon_L<=hbar^2/(4chi V m_L^2)`. Choose the rational one-site label `xi=r(1,...,1)` sufficiently small. Uniform local quartic moments and the sine remainder give a raw order split `d=r sqrt(8)sqrt(rho_*/2)/2>0`. One fixed triangular time smear changes either expectation by at most `(16/15)sqrt(hbar T/(chi V rho_*))->0`, so one abstract self-adjoint smeared sine separates every joint cluster pair. If `Sp_theta(a)` lies in `(-infinity,-nu]`, equivariance and the finite energy excess give `omega_L(a^*a)<=||a||_H^2 epsilon_L/(hbar nu)->0`. Thus both cluster states satisfy the C-star negative-Arveson ground criterion and are distinct. This carrier is a product-type/categorical object. Its quotient maps are not an inductive local system, raw characters need not belong to it, and temporal smears need not be spatially local. It proves no all-exhaustion Cauchy, canonical momentum/full Weyl reconstruction, polynomial local generator, identification of the v1.4 phase KMS systems as its quotients, or broken- sector GNS gap. A four-dimensional hostile fixture also proves that static Gaussian tail smallness and a zero first modular derivative alone do not control the projected real-time cutoff-removal term.",
-        "boundary": "The v1.6 selected-tangent theorem is fixed-beta and confined to the registered source-tangent diagonal nets. Its raw finite-word conclusion is scalar-kernel and pointed finite-core Fell/GNS convergence, not globally compatible common-Hilbert operator strong-star convergence. The separate zero-source carrier is beta independent and supports two distinct algebraic ground states, but it is not an all-shape exhaustion limit or the sought quasi-local raw oscillator alpha. The theorem does not prove volume-uniform direct projected `D,delta D` locality, a local net, a full canonical momentum/Weyl bridge, polynomial local-generator identification, phase-KMS quotient identification, a broken-sector GNS or physical mass gap, regulator removal, continuum, a physical empty/preparation reference, a below-empty sign, C6, CP1, Sector A or Pre-A.",
-        "proven_in": "C6 / [R-167 v1.6 certificate](strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-certificate-260810.md) / [single gate-level synthesis](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf). Per the PDF-efficiency protocol, development used the manifest, certificate, run JSONs and append-only exploration record without per-lemma PDFs; the single synthesis was issued only after the logical gate checkpoint passed strict validation.",
-        "tier": "T0 (scoped selected-tangent and categorical orbit-smear theorem; no quasi-local thermodynamic common-alpha or GNS-gap promotion).",
+        "v1_7_finite_region_local_strict_quartic_norm_entropy_tail_and_gap_split": "For a fixed finite ambient region `Y`, `B(H_Y)=M(K(H_Y))` with its bounded strict topology is equivalent on norm-bounded nets to strong-star convergence, convergence in one `q_s(A)=||AK^(-s)||+||K^(-s)A||`, and convergence in every two-sided energy-constrained seminorm. The exact onsite subflow is strict-C0 and graph/energy isometric for its separate commuting onsite control. In a common ambient region containing `N_1(X)`, the exact all-bond kick is strict-C0, expands support by one layer and, for `0<|delta|<=1`, obeys `e_E(beta_delta A)<=e_(M_delta E)(A)` and `q_s(beta_delta A)<=M_delta^s q_s(A)`. This is a finite-region subflow carrier, not a thermodynamic split limit. For the full eight-component Q3 quartic onsite flow, translated high-energy packets give, for both a nontrivial momentum Weyl and a basic momentum resolvent, `liminf_(R->infinity)||alpha_(tau R^(-3))(A)-A||>0` at fixed sufficiently small `tau`. The second vector remainder is controlled by `||delta^2(A)K^(-3/2)||<infinity`. Thus no invariant concrete C-star algebra containing either raw label carries the exact onsite action point-norm continuously. The statement is only a positive lower bound for the unsplit flow. Separately, conjugating a basic momentum resolvent by the pure quartic potential kick gives an exact `1/|mu|` discontinuity under every nonzero configuration translation, violating the intrinsic finite-dimensional resolvent-algebra Weyl-orbit criterion. The pure kick does not preserve the full resolvent algebra; unsplit resolvent-algebra invariance remains open. For one exact finite Gibbs density and `A=W_xi`, `S(A rho A^*||rho)=S(A^*rho A||rho)=beta hbar^2||xi||^2/(2chi)`. Binary data processing gives either evolved tilted tail `q_+/-<=min(1,(S_xi+log 2)/log(1/p))`. Even with a Gaussian reference tail this is only inverse logarithmic. An exact two-level Gibbs family shows that vanishing entropy and energy excess, both unitary orientations, all-coefficient Gaussian reference moments and any fixed finite list of tilted moments still permit polynomial tails. These inputs do not supply the two-orientation Gaussian partial-history estimate needed to remove the coordinate cutoff after the current `exp(C L^2)` corridor. Finally, an exact point-norm C0 direct-sum system has two pure, disjoint, parity-related ordered ground states with simple ground vectors and a central order witness, while each implementing spectrum is `[0,1]` and gapless. Ordered-ground distinctness therefore does not imply a broken-sector GNS gap. That successor requires the independent coercive estimate `-i hbar omega(A^*delta(A))>=Delta[omega(A^*A)-|omega(A)|^2]`.",
+        "boundary": "The v1.6 selected-tangent theorem is fixed-beta and confined to the registered source-tangent diagonal nets. Its raw finite-word conclusion is scalar-kernel and pointed finite-core Fell/GNS convergence, not globally compatible common-Hilbert operator strong-star convergence. The separate zero-source carrier is beta independent and supports two distinct algebraic ground states, but it is not an all-shape exhaustion limit or the sought quasi-local raw oscillator alpha. The v1.7 local-strict theorem remains finite-region, and its Gibbs tail remains finite-volume. The theorem does not prove volume-uniform direct projected `D,delta D` locality, a local net, a full canonical momentum/Weyl bridge, polynomial local-generator identification, phase-KMS quotient identification, a broken-sector GNS or physical mass gap, regulator removal, continuum, a physical empty/preparation reference, a below-empty sign, C6, CP1, Sector A or Pre-A.",
+        "proven_in": "C6 / [R-167 v1.7 certificate](strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md), [single gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt), and [rendered synthesis PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf). The v1.6 selected-word/carrier predecessor remains in [its certificate](strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-certificate-260810.md) and [single synthesis](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf). Per the PDF-efficiency protocol, no per-lemma or intermediate v1.7 PDF was issued: the one gate-level synthesis is a nine-page checkpoint built only after the manifest, certificate, primary, non-importing independent, and integrated proof layers passed, and every rendered page passed visual review.",
+        "tier": "T0 (scoped selected-tangent, categorical orbit-smear and finite- region local-strict/finite-Gibbs theorem; no quasi-local thermodynamic common-alpha or GNS-gap promotion).",
         "publication_target": "Pre-A analytic methods note."
       },
       "normalized_detail": {
         "statement": "For the exact finite-volume ST8/Q3LOCK Hamiltonian with `chi,c,g>0`, `lambda>=0`, bounded source, and centered weight `f_x=exp[-mu d(x,X)]`, let `A=1+E_f` be the positive shifted local energy. Writing `B_f=delta(E_f)`, the exact current and Schroedinger cross identity give `||B_f A^-1||=||A^-1 B_f||<=M_mu`, with the explicit volume- and source-uniform constant in the proof note. Consequently `U(t)^*A^2U(t)<=exp(2M_mu|t|)A^2`. Interpolation with the first-energy cone closes the minimal three-half-energy moment and propagates the energy domain `D(A^(3/4))`. The exact full graph expansion additionally gives `||U_fA^-1||<=kappa`. Heinz--Kato and the commuting multiplication order inside `U_f` therefore give `f_x^(m/4)|| |q_x|^mA^(-m/4)||<=gamma^(-m/4)kappa^(m/4)`, `0<=m<=4`, with the adjoint orientation. This closes the formerly open centered cubic multiplier and the Q3 force, whose component coefficient is `g+12lambda`. The spatial weight is sharp: an unweighted moving-site constant must grow at least as `f_x^(-3/4)`. Neighboring centered graph norms nevertheless compare by `C_mu^s`, so fixed-exponent recentering has only exponential path cost. The boundary position multiplier also closes. If the first and double position commutators decay in both declared one-sided energy norms with spatial rate `rho>mu/4`, the exact boundary Duhamel formula makes the finite-volume dynamics Cauchy in both orientations, independently of the exhaustion.",
-        "proof_anchor": "C6 / [R-167 v1.6 certificate](strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-certificate-260810.md) / [single gate-level synthesis](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf). Per the PDF-efficiency protocol, development used the manifest, certificate, run JSONs and append-only exploration record without per-lemma PDFs; the single synthesis was issued only after the logical gate checkpoint passed strict validation.",
+        "proof_anchor": "C6 / [R-167 v1.7 certificate](strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md), [single gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt), and [rendered synthesis PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf). The v1.6 selected-word/carrier predecessor remains in [its certificate](strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-certificate-260810.md) and [single synthesis](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf). Per the PDF-efficiency protocol, no per-lemma or intermediate v1.7 PDF was issued: the one gate-level synthesis is a nine-page checkpoint built only after the manifest, certificate, primary, non-importing independent, and integrated proof layers passed, and every rendered page passed visual review.",
         "reuse": "",
-        "boundary": "The v1.6 selected-tangent theorem is fixed-beta and confined to the registered source-tangent diagonal nets. Its raw finite-word conclusion is scalar-kernel and pointed finite-core Fell/GNS convergence, not globally compatible common-Hilbert operator strong-star convergence. The separate zero-source carrier is beta independent and supports two distinct algebraic ground states, but it is not an all-shape exhaustion limit or the sought quasi-local raw oscillator alpha. The theorem does not prove volume-uniform direct projected `D,delta D` locality, a local net, a full canonical momentum/Weyl bridge, polynomial local-generator identification, phase-KMS quotient identification, a broken-sector GNS or physical mass gap, regulator removal, continuum, a physical empty/preparation reference, a below-empty sign, C6, CP1, Sector A or Pre-A.",
+        "boundary": "The v1.6 selected-tangent theorem is fixed-beta and confined to the registered source-tangent diagonal nets. Its raw finite-word conclusion is scalar-kernel and pointed finite-core Fell/GNS convergence, not globally compatible common-Hilbert operator strong-star convergence. The separate zero-source carrier is beta independent and supports two distinct algebraic ground states, but it is not an all-shape exhaustion limit or the sought quasi-local raw oscillator alpha. The v1.7 local-strict theorem remains finite-region, and its Gibbs tail remains finite-volume. The theorem does not prove volume-uniform direct projected `D,delta D` locality, a local net, a full canonical momentum/Weyl bridge, polynomial local-generator identification, phase-KMS quotient identification, a broken-sector GNS or physical mass gap, regulator removal, continuum, a physical empty/preparation reference, a below-empty sign, C6, CP1, Sector A or Pre-A.",
         "publication_target": "Pre-A analytic methods note."
       },
       "claim_refs": [
@@ -11115,7 +11141,9 @@
         "20260810-r-167-v1-4-closes-the-fixed-beta-canonical-os-m",
         "20260810-r-167-v1-5-identifies-the-selected-hamiltonian",
         "20260810-r-167-v1-6-closes-selected-raw-word-moments-and",
-        "20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte"
+        "20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte",
+        "20260811-r-167-v1-7-separates-the-finite-region-local-st",
+        "20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte"
       ],
       "co_recorded_negative_tags": [
         "NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS",
@@ -11144,7 +11172,11 @@
         "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY",
         "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY",
         "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY",
-        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY"
+        "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0"
       ]
     },
     {
@@ -17538,6 +17570,84 @@
     }
   ],
   "negative_records": [
+    {
+      "tag": "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+      "anchor": "ng-2026-08-11-pre-a-st8-q3lock-raw-weyl-basic-resolvent-quartic-point-norm-c0",
+      "branch": "make the exact unsplit quartic onsite flow point-norm continuous on an invariant concrete C-star carrier containing a raw momentum Weyl or basic momentum resolvent",
+      "summary": "exact full-Q3 translated packets at time `tau R^(-3)` give a positive norm-discontinuity lower bound for both labels. Retain the finite-region bounded local-strict/energy topology; full resolvent-algebra invariance under the unsplit flow remains open",
+      "detail_title": "the exact quartic onsite flow is not point-norm C0 on raw momentum labels",
+      "detail": {
+        "failure_mode": "Put the exact unsplit full-Q3 quartic onsite flow on an invariant concrete C-star carrier that contains either a nontrivial momentum Weyl `W_a=exp(-ia p_0/hbar)` or the basic momentum resolvent `R_0=(i+p_0)^(-1)`, and require point-norm continuity.",
+        "evidence": "Let `G=g+3lambda>0`, `K=h-inf spec(h)+1`, and `delta=(i/hbar)[h,.]`. On the Schwartz core the exact first and second derivations are recorded in R-167 v1.7, and the quartic elliptic graph estimate gives `||delta^2(A)K^(-3/2)||<infinity` for both labels. For `psi_R=exp(-iR p_0/hbar)psi`, `R^(-3)||delta W_a psi_R||` tends to `|a|G/hbar`, `R^(-3)||delta R_0 psi_R||` tends to `G||R_0^2psi||>0`, and `||K^(3/2)psi_R||=O(R^6)`. At `t_R=tau R^(-3)`, the second-order vector remainder is only `O(tau^2)`. Choosing one fixed small `tau>0` yields a positive lower bound on `||alpha_(t_R)(A)-A||` while `t_R->0`.",
+        "consequence": "The exact onsite action is not point-norm C0 on any invariant concrete C-star subalgebra containing either raw label. This is a norm-topology obstruction, not a nonexistence theorem. In particular it does not prove that the unsplit flow fails to preserve the full resolvent algebra. Use the finite-region bounded local-strict/energy carrier or a state-tempered topology and still prove the independent all-exhaustion Cauchy theorem."
+      },
+      "kind": "no_go",
+      "claim_refs": [],
+      "claim_ref_basis": {},
+      "family_refs": [
+        "C0"
+      ]
+    },
+    {
+      "tag": "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+      "anchor": "ng-2026-08-11-pre-a-st8-q3lock-pure-quartic-potential-resolvent-algebra-invariance",
+      "branch": "use the pure Q3 quartic potential kick as an internal automorphism of the full finite-site resolvent algebra",
+      "summary": "conjugating a basic momentum resolvent produces an element whose orbit under every nonzero configuration translation has the exact norm jump `1/|mu|`, violating the intrinsic finite-dimensional Weyl-orbit continuity criterion. This blocks the split-subflow resolvent-algebra route, not unsplit invariance or dynamics existence",
+      "detail_title": "the pure quartic kick leaves the resolvent algebra",
+      "detail": {
+        "failure_mode": "Split the exact onsite Hamiltonian into kinetic and pure quartic-potential subflows and assume that the quartic kick is an internal automorphism of the full finite-site Buchholz--Grundling resolvent algebra.",
+        "evidence": "Along one exact Q3 coordinate axis, `W_4(r e_0)=(g+3lambda)r^4/4`. Let `U_t=exp(i t W_4(Q)/hbar)`, `R_mu=(i mu-p_0)^(-1)`, and `A_t=U_tR_muU_t^*`. A translated and dilated packet of width `R^(1/2)` has momentum spread `O(R^(-1/2))`. After a nonzero configuration translation by `s`, the relative quartic phase gives a momentum center `3t(g+3lambda)sR^2+O(R^(3/2))`. One resolvent action therefore tends to `(i mu)^(-1)` and the other to zero. The Cayley transform supplies the matching upper bound, so for every nonzero `s,t`, `||S_sA_tS_s^*-A_t||=1/|mu|`. This violates the intrinsic finite-dimensional Weyl-conjugation norm-continuity criterion for the field/resolvent algebra.",
+        "consequence": "`U_tR_muU_t^*` is not in the full finite-site resolvent algebra for nonzero `t`. The full algebra is unital, hence its multiplier strict topology is norm and does not repair the kick. This rejects a Trotter route requiring both exact subflows to be internal automorphisms. It does not settle invariance under the unsplit kinetic-plus-quartic flow."
+      },
+      "kind": "no_go",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260811-r-167-v1-7-separates-the-finite-region-local-st"
+      },
+      "family_refs": []
+    },
+    {
+      "tag": "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP",
+      "anchor": "ng-2026-08-11-pre-a-st8-q3lock-ordered-ground-doublets-automatic-gns-gap",
+      "branch": "infer a positive broken-sector GNS gap from two distinct ordered algebraic ground states, parity exchange, a fixed order witness and simple ground vectors",
+      "summary": "an exact direct-sum system has two pure disjoint ground states with simple ground vectors and a central order split, while each implementing spectrum contains `[0,1]` and is gapless. Prove an independent sectorwise coercive inequality",
+      "detail_title": "order and distinct ground sectors do not imply a spectral gap",
+      "detail": {
+        "failure_mode": "Infer a positive broken-sector GNS gap from two distinct ordered algebraic ground states, parity exchange, a fixed bounded order witness, or a simple ground vector.",
+        "evidence": "Let `K_0=C Omega direct-sum L2((0,1),dx)`, let `h_0Omega=0` and `(h_0f)(x)=xf(x)`, and put `A=B(K_0) direct-sum B(K_0)` with the same inner dynamics on both summands. The two component `Omega` vector states are pure, disjoint, exact ground states; summand-swap parity exchanges them and the central observable `Z=(1,-1)` separates them. Each GNS ground vector is simple, but the positive implementing spectrum is `[0,1]`, so it accumulates at zero.",
+        "consequence": "Ordered-ground distinctness does not prove a GNS or physical mass gap. The separate successor must establish, on a dense invariant core in each selected sector, `-i hbar omega(A^*delta(A))>=Delta[omega(A^*A)-|omega(A)|^2]` with one positive `Delta`. The v1.6 ground-doublet theorem remains valid in its categorical-carrier scope."
+      },
+      "kind": "no_go",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260811-r-167-v1-7-separates-the-finite-region-local-st"
+      },
+      "family_refs": []
+    },
+    {
+      "tag": "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+      "anchor": "ng-2026-08-11-pre-a-st8-q3lock-entropy-finite-moment-dynamic-gaussian-tail-inference",
+      "branch": "promote small relative entropy, all-coefficient Gaussian reference moments and any fixed finite list of tilted moments to the dynamic Gaussian history tail required by the cutoff corridor",
+      "summary": "a two-level Gibbs family has both unitary orientations, relative entropy and energy excess tending to zero, and uniform tilted moments through any fixed order, while the tilted coordinate tail decays only polynomially. Require a genuine two-orientation quasi-invariance/history estimate; this is not a Q3LOCK counterexample",
+      "detail_title": "entropy and fixed finite moments do not create a Gaussian history tail",
+      "detail": {
+        "failure_mode": "Infer the dynamic Gaussian two-orientation history tail needed by the cutoff corridor from small relative entropy/energy excess, an all-coefficient Gaussian bound in the reference Gibbs state, and any fixed finite list of tilted coordinate moments.",
+        "evidence": "For `n>=2` put `q_n=nP_1`, `H_n=n^4P_1/beta`, and `rho_n=diag(1,exp(-n^4))/(1+exp(-n^4))`. For any fixed integer `m>=3`, rotate by `theta_(n,m)` with `sin^2(theta_(n,m))=1/[(p_(0,n)-p_(1,n))n^(2m)]` in either direction. The rotated tail is exactly `p_(1,n)+n^(-2m)`, its relative entropy is `n^(4-2m)`, its energy excess is `n^(4-2m)/beta`, and its `2m` moment is `1+n^(2m)p_(1,n)`, uniformly bounded. Meanwhile `Tr(rho_n exp(aq_n^2))<=1+exp(a^2/4)` for every `a>0`. Both rotations are exact finite-time flows of bounded two-level drives.",
+        "consequence": "For any preregistered finite moment ceiling, choose `m` above it. All the displayed inputs still allow only polynomial tilted-tail decay. They cannot be promoted to the Gaussian history estimate that would absorb the current `exp(C L^2)` corridor loss. This is a proof-method no-go, not a counterexample to Q3LOCK dynamics or to a stronger quasi-invariance theorem."
+      },
+      "kind": "no_go",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260811-r-167-v1-7-separates-the-finite-region-local-st"
+      },
+      "family_refs": []
+    },
     {
       "tag": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY",
       "anchor": "ng-2026-08-10-pre-a-st8-q3lock-unweighted-onsite-qp-lipschitz-stability",
@@ -63632,6 +63742,74 @@
       "task_id": "T-054",
       "title": "Complete selected raw orbit words and construct the universal zero-source orbit-smear ground carrier",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "This is R-167 v1.7, a T0 finite-region local-strict/energy carrier, fixed finite-Gibbs entropy-tail theorem and four route no-go results. It is not a continuous-time thermodynamic split limit, all-exhaustion Cauchy theorem, quasi-local raw oscillator common alpha, proof of unsplit resolvent-algebra non-invariance, phase-KMS quotient identification, broken-sector GNS or physical mass gap, regulator removal, continuum, physical empty-space comparison, C6, CP1, Sector A or Pre-A closure. The entropy and packet fixtures do not prove Q3LOCK dynamics nonexistent.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The local-strict theorem is the strongest state-independent raw-label carrier currently justified, but it is finite-region and does not solve the exhaustion problem. The packet and resolvent tests eliminate point-norm and pure-kick resolvent-algebra shortcuts without proving dynamics nonexistence. The exact entropy theorem is useful but quantitatively too weak for the exp(C L^2) cutoff corridor, and the ground fixture proves that spectral coercivity is a separate problem. The previous combined successor must therefore be split into an all-exhaustion two-orientation history gate and an independent broken-sector GNS coercivity gate.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-manifest.json#finite_region_local_strict_carrier",
+        "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md#1-exact-finite-region-local-strict-topology",
+        "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md#4-the-quartic-graph-endpoint-and-packet-limit",
+        "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md#5-the-pure-quartic-kick-leaves-the-resolvent-algebra",
+        "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md#6-exact-finite-gibbs-character-relative-entropy",
+        "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md#9-ordered-ground-states-do-not-imply-a-gns-gap",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split.py#L1"
+      ],
+      "finding": "On each fixed finite region, the bounded local-strict topology is equivalent on norm-bounded sets to strong-star, compact-resolvent graph and two-sided energy-constrained convergence. The exact onsite and commuting bond subflows are strict-C0 and energy controlled in their respective finite controls, giving a beta- and phase-state-independent finite-region carrier precursor. The exact unsplit Q3 quartic onsite flow is nevertheless not point-norm C0 on any invariant concrete C-star algebra containing a nontrivial momentum Weyl or basic momentum resolvent, while the pure quartic kick does not preserve the full resolvent algebra. In a finite Gibbs state a configuration character has exact relative entropy beta hbar^2||xi||^2/(2chi), but binary data processing yields only an inverse-logarithmic tilted tail. A Gibbs two-level family shows that all-coefficient Gaussian reference moments, vanishing entropy/energy excess and any fixed finite list of tilted moments still permit polynomial tails. Finally, two pure disjoint parity-related ordered ground states with simple ground vectors can both be gapless.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP"
+        ],
+        "results": [
+          "R-167"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+        "PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP"
+      ],
+      "id": "EXP-000804",
+      "method": [
+        "Compare bounded local-strict, strong-star, compact-resolvent graph and energy-constrained topologies on every fixed finite-region multiplier algebra, then propagate the exact onsite and all-bond subflows in their appropriate finite ambient controls.",
+        "Test point-norm continuity of the full eight-component Q3 quartic onsite flow on a momentum Weyl and basic momentum resolvent with translated high-energy packets at time tau R^(-3), including a K^(3/2) Taylor remainder.",
+        "Test pure-quartic resolvent-algebra invariance with the intrinsic finite-dimensional Weyl-orbit continuity criterion and a translated-dilated packet giving the exact 1/|mu| jump.",
+        "Compute the exact configuration-character relative entropy in a finite Gibbs state, invert binary data processing for a tail projection, and test whether entropy plus arbitrary fixed finite tilted moments forces a Gaussian dynamic tail.",
+        "Separate ordered-ground distinctness from a positive GNS gap with an exact pure disjoint parity-paired ground system whose positive implementing spectrum accumulates at zero."
+      ],
+      "next_action": "Construct compatible exhaustion-level energy/state seminorms and prove a uniform two-orientation tail for every partial split-product history and its adjoint, or find an all-bond state-weighted resummation avoiding the exponential corridor loss. Separately, after the broken ground representations are identified on the common algebra, prove the sectorwise coercive inequality -i hbar omega(A*delta(A))>=Delta[omega(A*A)-|omega(A)|^2].",
+      "provenance": "contemporaneous",
+      "question": "Can the exact quartic onsite and commuting bond subflows act continuously on a noncollapsing raw oscillator carrier, can finite-Gibbs entropy close the missing history tail, and do the ordered ground doublets already imply a broken-sector GNS gap?",
+      "recorded_at": "2026-08-11T06:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000792",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000799",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000803",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-11",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Split finite-region local-strict dynamics from all-exhaustion common alpha and sector GNS coercivity",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -85089,6 +85267,110 @@
       "result_link_basis": {
         "R-167": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260811-r-167-v1-7-separates-the-finite-region-local-st",
+      "date": "2026-08-11",
+      "header": "[R-167 v1.7 separates the finite-region local-strict carrier, Gibbs entropy tail, and broken-sector gap gate] - 2026-08-11",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-000804",
+        "R-167"
+      ],
+      "keywords": [
+        "GNS-gap",
+        "Q3LOCK",
+        "T-054",
+        "entropy-tail",
+        "local-strict",
+        "resolvent-algebra",
+        "route-split",
+        "strong-star"
+      ],
+      "negative_results": [
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0"
+      ],
+      "notes": [],
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_verify.py"
+      ],
+      "raw": "## [R-167 v1.7 separates the finite-region local-strict carrier, Gibbs entropy tail, and broken-sector gap gate] - 2026-08-11\n\nEXP-000804 advances the existing R-167 to v1.7 without a new result number. On every fixed finite region, strict, strong-star, compact-resolvent graph, and two-sided energy-constrained convergence agree on norm-bounded sets; the exact onsite and commuting all-bond subflows preserve the corresponding finite controls. Exact translated packets show that the full Q3 quartic onsite flow is not point-norm C0 on invariant concrete carriers containing a nontrivial momentum Weyl or basic momentum resolvent, while a separate translated-dilated fixture proves that the pure quartic kick does not preserve the full finite-site resolvent algebra. For exact finite Gibbs states, both character orientations have relative entropy beta hbar squared norm-xi squared over two chi and hence only an inverse-logarithmic tilted-tail bound. An exact Gibbs family shows that entropy, energy excess, all-coefficient Gaussian reference moments, and any fixed finite list of tilted moments do not imply the dynamic Gaussian history tail. Finally, two pure disjoint parity-related ordered ground states with simple ground vectors can still have positive spectrum accumulating at zero. The former combined successor remains historically open but is split into independent all-exhaustion two-orientation common-alpha and broken-sector GNS coercivity gates. This is a T0 finite-region and fixed-Gibbs checkpoint only; no thermodynamic common dynamics, phase quotient, physical gap, C6, CP1, Sector-A, or Pre-A closure is claimed. Per the PDF-efficiency protocol, this theorem event records the manifest, certificate, verifier scripts, and append-only exploration record before the single later gate-level synthesis PDF.\n\n",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000804",
+        "R-167"
+      ],
+      "result_ids": [
+        "R-167"
+      ],
+      "linked_result_ids": [
+        "R-167"
+      ],
+      "result_link_basis": {
+        "R-167": "explicit_result_id"
+      }
+    },
+    {
+      "id": "20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte",
+      "date": "2026-08-11",
+      "header": "[R-167 v1.7 gate-level synthesis PDF issued after strict proof validation] - 2026-08-11",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "R-167"
+      ],
+      "keywords": [
+        "PDF-QA",
+        "Q3LOCK",
+        "R-167",
+        "T-054",
+        "checkpoint-synthesis",
+        "v1.7"
+      ],
+      "negative_results": [
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0"
+      ],
+      "notes": [
+        "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt",
+        "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
+        "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md"
+      ],
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_verify.py"
+      ],
+      "raw": "## [R-167 v1.7 gate-level synthesis PDF issued after strict proof validation] - 2026-08-11\n\nThis append-only workflow event changes no mathematics. No per-lemma or intermediate PDF was issued during development. After the manifest, certificate, primary, non-importing independent and integrated proof layers passed, one gate-level synthesis source and PDF were issued for R-167 v1.7. All nine rendered pages passed visual review with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs or overfull boxes; pypdf and pdfplumber independently extracted nine nonempty pages. The source and PDF hashes and page count are pinned in the manifest. No result number, gate status, tier or no-overclaim boundary changes. The finite-region local-strict and fixed-Gibbs entropy subgates remain the only newly closed scopes; all-exhaustion common alpha and broken-sector GNS coercivity remain independent open successors.\n\n",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "R-167"
+      ],
+      "result_ids": [
+        "R-167"
+      ],
+      "linked_result_ids": [
+        "R-167"
+      ],
+      "result_link_basis": {
+        "R-167": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -85797,7 +86079,7 @@
       "owner": "Codex",
       "claim": null,
       "gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
-      "note": "EXP-000791 keeps the parent PA-ROUND1 evidence and manifest gate open pending a genuinely future relation and microscopic map. On the ST8/Q3LOCK lane, EXP-000792--802 / R-167 v1.0--v1.5 establish the local derivation, weighted-energy and graph precursors, the fixed-beta canonical OS-mixture KMS envelope, and selected tangent-net finite-core Hamiltonian identification. EXP-000803 advances R-167 to v1.6: the modular right-context lemma and recursive Fejer smoothing give every fixed finite raw configuration-orbit word moment and Gram block on the selected tangent nets; the exact zero-source finite Hamiltonians define one beta-independent universal L1 orbit-smear C-star carrier; and the EXP-000789 broken doublets yield two distinct algebraic ground states of its common C0 shift. This carrier is categorical and nonlocal, not the quasi-local thermodynamic oscillator alpha. The live CP1 gate is PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP: prove a spatial raw or resolvent carrier, all-shape exhaustion Cauchy, phase-KMS quotient and local-generator identification, then the broken-sector GNS gap. Static tails alone do not close projected orbit locality. Continuum, physical empty space, C6, CP1, Sector A and Pre-A remain open. The single v1.6 gate-level synthesis PDF is claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf; it was issued only after strict proof validation and does not alter the open successor.",
+      "note": "EXP-000791 keeps the parent PA-ROUND1 evidence and manifest gate open pending a genuinely future relation and microscopic map. On the ST8/Q3LOCK lane, EXP-000792--803 / R-167 v1.0--v1.6 establish the local derivation, weighted-energy and graph precursors, the fixed-beta canonical OS-mixture KMS envelope, selected tangent finite-word Hamiltonian identification, and the categorical beta-independent orbit-smear carrier with two algebraic ground states. EXP-000804 advances R-167 to v1.7: every fixed finite-region multiplier algebra has an exact bounded local-strict/strong-star/energy topology in which the onsite and commuting bond subflows are continuous and energy controlled; exact full-Q3 packets reject point-norm continuity on raw momentum-Weyl/basic-resolvent labels; the pure quartic kick does not preserve the full resolvent algebra; finite-Gibbs character entropy gives only an inverse-logarithmic tilted tail; and ordered ground-state distinctness does not imply a GNS gap. The former combined successor is split. The live dynamics gate is PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA; separately, PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY requires a sectorwise positive coercive estimate. Continuum, physical empty space, C6, CP1, Sector A and Pre-A remain open. Per the PDF-efficiency protocol, no per-lemma or intermediate v1.7 PDF was issued. After the manifest, certificate, primary, non-importing independent, and integrated proof layers passed, the single nine-page v0.6 gate-level synthesis source/PDF pair was issued and every rendered page passed visual review.",
       "created": "2026-08-02",
       "updated": "2026-08-10",
       "blocked_by": [],
@@ -89591,6 +89873,18 @@
         "id": "event:20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte",
         "kind": "accepted_event",
         "label": "[R-167 v1.6 gate-level synthesis PDF issued after strict proof validation] - 2026-08-10",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte",
+        "kind": "accepted_event",
+        "label": "[R-167 v1.7 gate-level synthesis PDF issued after strict proof validation] - 2026-08-11",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260811-r-167-v1-7-separates-the-finite-region-local-st",
+        "kind": "accepted_event",
+        "label": "[R-167 v1.7 separates the finite-region local-strict carrier, Gibbs entropy tail, and broken-sector gap gate] - 2026-08-11",
         "authority": "CHANGELOG.md"
       },
       {
@@ -94412,6 +94706,12 @@
         "authority": "explorations/log.jsonl"
       },
       {
+        "id": "exploration:EXP-000804",
+        "kind": "proof_exploration",
+        "label": "Split finite-region local-strict dynamics from all-exhaustion common alpha and sector GNS coercivity",
+        "authority": "explorations/log.jsonl"
+      },
+      {
         "id": "gate:A1-KERNEL-CONV",
         "kind": "hypothesis",
         "label": "A1-KERNEL-CONV",
@@ -94730,6 +95030,12 @@
         "authority": "claims/GATES.md#pa-cp1-st8-q3lock-all-exhaustion-mixture-l2-locality-and-beta-independent-cstar-dynamics"
       },
       {
+        "id": "gate:PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "kind": "gate",
+        "label": "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "authority": "claims/GATES.md#pa-cp1-st8-q3lock-broken-sector-gns-gap-coercivity"
+      },
+      {
         "id": "gate:PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
         "kind": "gate",
         "label": "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
@@ -94740,6 +95046,12 @@
         "kind": "gate",
         "label": "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
         "authority": "claims/GATES.md#pa-cp1-st8-q3lock-fifth-energy-moment-and-modular-cutoff-locality"
+      },
+      {
+        "id": "gate:PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+        "kind": "gate",
+        "label": "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+        "authority": "claims/GATES.md#pa-cp1-st8-q3lock-finite-volume-local-strict-energy-subflow-carrier"
       },
       {
         "id": "gate:PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
@@ -94760,10 +95072,22 @@
         "authority": "claims/GATES.md#pa-cp1-st8-q3lock-fixed-beta-tangent-net-bandlimited-hamiltonian-os-pointed-gns-identification"
       },
       {
+        "id": "gate:PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND",
+        "kind": "gate",
+        "label": "PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND",
+        "authority": "claims/GATES.md#pa-cp1-st8-q3lock-fixed-gibbs-character-entropy-tilted-tail-bound"
+      },
+      {
         "id": "gate:PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
         "kind": "gate",
         "label": "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
         "authority": "claims/GATES.md#pa-cp1-st8-q3lock-hamiltonian-thermodynamic-identification-in-canonical-os-mixture"
+      },
+      {
+        "id": "gate:PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "kind": "gate",
+        "label": "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "authority": "claims/GATES.md#pa-cp1-st8-q3lock-local-strict-all-exhaustion-two-orientation-history-common-alpha"
       },
       {
         "id": "gate:PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
@@ -96728,6 +97052,30 @@
         "authority": "negative-results/registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-onsite-qp-lipschitz-stability"
       },
       {
+        "id": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+        "kind": "no_go",
+        "label": "promote small relative entropy, all-coefficient Gaussian reference moments and any fixed finite list of tilted moments to the dynamic Gaussian history tail required by the cutoff corridor",
+        "authority": "negative-results/registry.md#ng-2026-08-11-pre-a-st8-q3lock-entropy-finite-moment-dynamic-gaussian-tail-inference"
+      },
+      {
+        "id": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP",
+        "kind": "no_go",
+        "label": "infer a positive broken-sector GNS gap from two distinct ordered algebraic ground states, parity exchange, a fixed order witness and simple ground vectors",
+        "authority": "negative-results/registry.md#ng-2026-08-11-pre-a-st8-q3lock-ordered-ground-doublets-automatic-gns-gap"
+      },
+      {
+        "id": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+        "kind": "no_go",
+        "label": "use the pure Q3 quartic potential kick as an internal automorphism of the full finite-site resolvent algebra",
+        "authority": "negative-results/registry.md#ng-2026-08-11-pre-a-st8-q3lock-pure-quartic-potential-resolvent-algebra-invariance"
+      },
+      {
+        "id": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+        "kind": "no_go",
+        "label": "make the exact unsplit quartic onsite flow point-norm continuous on an invariant concrete C-star carrier containing a raw momentum Weyl or basic momentum resolvent",
+        "authority": "negative-results/registry.md#ng-2026-08-11-pre-a-st8-q3lock-raw-weyl-basic-resolvent-quartic-point-norm-c0"
+      },
+      {
         "id": "negative:NG-2026-legacy-classical-hbar",
         "kind": "no_go",
         "label": "classical-field-theoretic derivation of $\\hbar$ (8 routes)",
@@ -97774,7 +98122,7 @@
       {
         "id": "result:R-167",
         "kind": "accepted_result",
-        "label": "Weighted-energy, common-dynamics topology, orbit-smear carrier and ground-doublet route split",
+        "label": "Weighted-energy, common-dynamics topology, orbit-smear carrier, local-strict and ground-gap route split",
         "authority": "RESULTS-LEDGER.md#r-167"
       },
       {
@@ -107999,6 +108347,78 @@
       },
       {
         "from": "event:20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte",
+        "relation": "records_result",
+        "to": "result:R-167",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte",
+        "relation": "records_result",
+        "to": "result:R-167",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260811-r-167-v1-7-separates-the-finite-region-local-st",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260811-r-167-v1-7-separates-the-finite-region-local-st",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260811-r-167-v1-7-separates-the-finite-region-local-st",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260811-r-167-v1-7-separates-the-finite-region-local-st",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260811-r-167-v1-7-separates-the-finite-region-local-st",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260811-r-167-v1-7-separates-the-finite-region-local-st",
         "relation": "records_result",
         "to": "result:R-167",
         "basis": "explicit_result_id"
@@ -142852,6 +143272,96 @@
         "basis": "structured_formal_ref"
       },
       {
+        "from": "exploration:EXP-000804",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "assesses_gate",
+        "to": "gate:PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "assesses_gate",
+        "to": "gate:PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "assesses_gate",
+        "to": "gate:PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "assesses_gate",
+        "to": "gate:PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "assesses_gate",
+        "to": "gate:PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "continues",
+        "to": "exploration:EXP-000792",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "continues",
+        "to": "exploration:EXP-000799",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "continues",
+        "to": "exploration:EXP-000803",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "records_task",
+        "to": "task:T-054",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000804",
+        "relation": "references_result",
+        "to": "result:R-167",
+        "basis": "structured_formal_ref"
+      },
+      {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
         "relation": "bears_on",
         "to": "claim:B1-RH-ENUM",
@@ -144866,6 +145376,24 @@
         "relation": "bears_on",
         "to": "claim:C6-SPACETIME-SIGNATURE",
         "basis": "explicit_negative_event:20260810-advance-r-167-to-v1-3-and-reject-the-fixed-crit"
+      },
+      {
+        "from": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+        "relation": "bears_on",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_negative_event:20260811-r-167-v1-7-separates-the-finite-region-local-st"
+      },
+      {
+        "from": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP",
+        "relation": "bears_on",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_negative_event:20260811-r-167-v1-7-separates-the-finite-region-local-st"
+      },
+      {
+        "from": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+        "relation": "bears_on",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_negative_event:20260811-r-167-v1-7-separates-the-finite-region-local-st"
       },
       {
         "from": "negative:NG-2026-legacy-classical-hbar",

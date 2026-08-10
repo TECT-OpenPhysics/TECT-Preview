@@ -1,0 +1,118 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-QUARTIC-C0-ENTROPY-GAP-ROUTE-SPLIT-v0",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "parent_explorations": [
+    "EXP-000792",
+    "EXP-000799",
+    "EXP-000803"
+  ],
+  "exploration_id": "EXP-000804",
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_version": "v1.7",
+  "result_number": "R-167",
+  "claim_bearing": false,
+  "negative_ids": [
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY",
+    "NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY",
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP"
+  ],
+  "authority": "R-167 v1.7 is an additive T0 route split. In each fixed finite region, the bounded local-strict topology, strong-star topology, compact-resolvent graph seminorms and energy-constrained seminorms agree on norm-bounded sets; the exact onsite and commuting all-bond subflows are continuous and energy controlled there. This is a beta- and phase-state-independent finite-region carrier precursor, not an infinite-volume dynamics. Exact full-Q3 translated-packet estimates prove that the unsplit quartic onsite flow is not point-norm continuous on raw momentum Weyl or basic momentum-resolvent labels. The pure quartic potential kick does not preserve the full resolvent algebra. A separate finite-Gibbs theorem gives an exact relative-entropy bound on a character-tilted coordinate tail, but only with inverse-logarithmic decay; an exact Gibbs fixture proves that entropy plus finite moments cannot be promoted to the dynamic Gaussian history tail needed by the current corridor estimate. Finally, distinct ordered ground states do not imply a positive broken-sector GNS gap. The previous combined successor is split into independent common-alpha and sector-gap gates.",
+  "finite_region_local_strict_carrier": {
+    "setup": "For a finite ambient region Y let H_Y=L2(R^(8|Y|)), let K_Y>=1 be any positive compact-resolvent control, and identify M_Y=B(H_Y)=M(K(H_Y)). The local algebraic carrier is the directed union of these finite-region multiplier algebras under A -> A tensor I.",
+    "topology": "On a norm-bounded net A_i in B(H_Y), strict convergence relative to K(H_Y), strong-star convergence, convergence of q_s(A_i)=||A_i K_Y^(-s)||+||K_Y^(-s)A_i|| for one fixed 0<s<=1/2, and convergence of the two-sided energy-constrained seminorm e_E(A_i) for every finite E>inf spec(K_Y) are equivalent.",
+    "exact_comparison": "With ||A||<=M and e_E(A)=max{sup_(||psi||=1,<psi,K_Y psi><=E)||Apsi||, the same expression for A*}, one has e_E(A)<=E^s max(||A K_Y^(-s)||,||K_Y^(-s)A||) and q_s(A)<=2e_E(A)+2M E^(-s).",
+    "onsite": "For the onsite subflow choose the separate compact-resolvent control K_Y^os as the positive weighted sum of the exact zero-source onsite Hamiltonians. Since the onsite unitary commutes with K_Y^os, the q_s and e_E seminorms defined by this control are isometric. The strict and strong-star topologies are preserved, and every bounded local orbit is strict-C0.",
+    "bond": "Embed an observable supported in X into one fixed finite ambient Y containing N_1(X), and use the registered centered positive control K_(Y,mu) of R-167 v1.3. For the exact commuting all-bond kick beta_delta(A)=B_delta^* A B_delta and 0<|delta|<=1, B_(+/-delta)^*K_(Y,mu)B_(+/-delta)<=M_delta K_(Y,mu) gives e_E(beta_delta A)<=e_(M_delta E)(A) and q_s(beta_delta A)<=M_delta^s q_s(A), where M_delta=1+C_b|delta| and C_b=1+c^2 z^2 exp(mu)/(2 chi sqrt(gamma)). Larger finite parameters require iteration of small steps or a separate nonlinear bound.",
+    "spatial_support": "The onsite subflow keeps support X fixed. In an ambient Y containing N_1(X), the commuting all-bond kick sends a finite support into its one-neighbourhood. For observables whose unbounded commutators are defined on the common polynomial/Schwartz core it obeys [q_x,beta_delta(A)]=beta_delta([q_x,A]) and [p_x,beta_delta(A)]=beta_delta([p_x,A]-delta c sum_(y~x)[q_y,A]).",
+    "scope": "This is a finite-region bounded local-strict net theorem. It does not provide a single global multiplier strict topology, uniform control over all locally normal states, a continuous-time split-product limit, all-shape exhaustion Cauchy, group completion, phase KMS quotient identification, or a quasi-local common alpha."
+  },
+  "full_quartic_point_norm_no_go": {
+    "setup": "At one exact eight-component Q3 site let h=sum_j p_j^2/(2chi)+V(q), K=h-inf spec(h)+1, delta=(i/hbar)[h,.], G=g+3lambda>0, W_a=exp(-ia p_0/hbar) with a nonzero, R_0=(i+p_0)^(-1), D_a(q)=V(q)-V(q-ae_0), and F_0=partial_0 V.",
+    "derivations": "On the Schwartz core, delta W_a=(i/hbar)D_a W_a; delta^2 W_a=(i/(2chi hbar))sum_j{p_j,partial_jD_a}W_a-hbar^(-2)D_a^2W_a; delta R_0=R_0F_0R_0; and delta^2R_0=2R_0F_0R_0F_0R_0+(1/(2chi))R_0 sum_j{p_j,partial_jF_0}R_0.",
+    "graph_endpoint": "The global quartic elliptic graph estimate gives ||delta^2(A)K^(-3/2)||<infinity for A=W_a and A=R_0. Every displayed polynomial-differential term has anisotropic degree at most six.",
+    "packet": "For normalized Schwartz psi and psi_R=exp(-iR p_0/hbar)psi, R^(-3)||delta W_a psi_R|| tends to |a|G/hbar, R^(-3)||delta R_0 psi_R|| tends to G||R_0^2psi||>0, and ||K^(3/2)psi_R||=O(R^6).",
+    "conclusion": "Let C_A=||delta^2(A)K^(-3/2)|| and M_psi=limsup_R R^(-6)||K^(3/2)psi_R||. With t_R=tau R^(-3), vector Taylor gives liminf_R||(alpha_(t_R)(A)-A)psi_R||>=tau d_A-(tau^2/2)C_A M_psi for fixed sufficiently small tau>0. Hence the exact unsplit onsite flow cannot act point-norm C0 on any invariant concrete C-star subalgebra containing either the raw momentum Weyl W_a or the basic momentum resolvent R_0.",
+    "scope": "The packet theorem proves a positive discontinuity lower bound, not an exact norm jump. For the full resolvent algebra it is conditional on invariance: it proves non-C0 if the full quartic flow preserves that algebra, but it does not settle unsplit resolvent-algebra invariance."
+  },
+  "pure_quartic_resolvent_no_go": {
+    "setup": "Let U_t=exp(i t W_4(Q)/hbar) for the exact eight-component Q3 quartic potential and R_mu=(i mu-p_0)^(-1), mu nonzero. Put A_t=U_t R_mu U_t^*.",
+    "axis": "Along the Q3 axis W_4(r e_0)=G r^4/4 and partial_0W_4(r e_0)=G r^3 with G=g+3lambda>0.",
+    "exact_jump": "For every nonzero t and every nonzero configuration translation s, ||exp(-is p_0/hbar)A_t exp(is p_0/hbar)-A_t||=1/|mu|. In particular A_t has a norm-discontinuous spatial Weyl orbit and A_t is not in the finite-dimensional Buchholz-Grundling resolvent algebra.",
+    "criterion": "The exclusion uses the intrinsic field/resolvent-algebra criterion that Weyl conjugation is norm continuous on each finite-dimensional phase-space subspace. A translated packet gives the matching lower bound; the Cayley transform gives the universal upper bound 1/|mu|.",
+    "scope": "This closes the pure-potential-kick invariance route and invalidates a Trotter construction requiring both exact subflows to be internal automorphisms of the full resolvent algebra. It does not imply non-invariance of the unsplit kinetic-plus-quartic flow. On the unital resolvent algebra strict topology equals norm topology, so strict continuity does not repair this route."
+  },
+  "fixed_gibbs_character_entropy_tail": {
+    "setup": "Let rho=Z^(-1)exp(-beta H) for one exact finite Q3LOCK Hamiltonian and A=W_xi=exp(i xi.q). Time reversal gives phi(p)=0.",
+    "relative_entropy": "The two character orientations obey S(A rho A^*||rho)=S(A^*rho A||rho)=beta hbar^2||xi||^2/(2chi)=S_xi. The same identity holds after the full H time evolution because rho is invariant.",
+    "binary_bound": "For a coordinate-tail projection E, p=rho(E), q_+(t)=(A_t rho A_t^*)(E), and q_-(t)=(A_t^* rho A_t)(E), binary data processing and d_bin(q_+/-||p)>=q_+/- log(1/p)-log 2 give q_+/-(t)<=min{1,(S_xi+log 2)/log(1/p)}. If p<=M_a|S|exp(-aL^2) and aL^2>log(M_a|S|), then q_+/-(t)<=min{1,(S_xi+log 2)/(aL^2-log(M_a|S|))}.",
+    "scope": "This is an exact two-orientation finite-Gibbs tilted-tail theorem, but its decay is only O(L^(-2)). It cannot absorb the exp(C L^2) loss in the current bounded-cutoff corridor or provide all-exhaustion history control."
+  },
+  "entropy_finite_moment_no_go": {
+    "fixture": "For n>=2 and any fixed integer m>=3 on C^2 put q_n=nP_1, H_n=n^4P_1/beta, rho_n=diag(1,exp(-n^4))/(1+exp(-n^4)), Delta_n=p_(0,n)-p_(1,n), sin^2(theta_(n,m))=1/(Delta_n n^(2m)), U_(n,m)^(+/-)=exp(-/+ i theta_(n,m) sigma_y), and rho_(n,m)^(+/-)=U_(n,m)^(+/-)rho_n U_(n,m)^(+/-*).",
+    "exact_values": "For both signs, Tr(rho_(n,m)^(+/-)P_1)=p_(1,n)+n^(-2m), S(rho_(n,m)^(+/-)||rho_n)=n^(4-2m), the energy excess is n^(4-2m)/beta, and for every 0<r<=2m, Tr(rho_(n,m)^(+/-)q_n^r)=n^r p_(1,n)+n^(r-2m), uniformly bounded for each fixed m; at r=0 the expectation is one. The reference states satisfy phi_n(exp(aq_n^2))<=1+exp(a^2/4) for every a>0. The rotations are exact time-T flows of the auxiliary bounded drives K_(n,m)^(+/-)=+/- hbar theta_(n,m) sigma_y/T. At m=4 these are the exact n^(-8), n^(-4), 1/(beta n^4), and eighth-moment fixtures, with Tr(rho_(n,4)^(+/-)q_n^8)=1+n^8p_(1,n)<=1+4exp(-2).",
+    "conclusion": "For any preregistered finite moment ceiling, choose fixed m above it. Vanishing relative entropy and energy excess, all-coefficient Gaussian reference moments, both unitary orientations and the corresponding uniform finite tilted moments still permit only a polynomial tail. Entropy plus an arbitrary fixed finite list of tilted moments cannot be promoted to the dynamic Gaussian history tail required by the current corridor argument.",
+    "scope": "This is a proof-method no-go, not a Q3LOCK dynamics counterexample and not a theorem that Gaussian history tails are impossible under stronger quasi-invariance hypotheses."
+  },
+  "ordered_ground_doublet_gap_no_go": {
+    "fixture": "Let H_0=C Omega direct-sum L2((0,1),dx), let h_0Omega=0 and (h_0f)(x)=x f(x), and put A=B(H_0) direct-sum B(H_0) with alpha_t=Ad(exp(i t h_0/hbar)) on each summand. The two component Omega vector states are distinct pure disjoint exact ground states, summand-swap parity exchanges them, and the central order observable Z=(1,-1) separates them.",
+    "gap": "In either ground-state GNS representation the ground vector is simple and the implementing spectrum is [0,1]. Its positive spectral values form (0,1] and accumulate at zero, so both exact ordered ground states have zero GNS spectral gap.",
+    "consequence": "Distinct pure disjoint algebraic ground states, a nonzero bounded order witness, parity exchange and a simple ground vector do not imply a positive broken-sector GNS gap.",
+    "successor": "A positive gap requires an independent coercive estimate -i hbar omega(A^*delta(A))>=Delta[omega(A^*A)-|omega(A)|^2] on a dense invariant core, separately in each selected broken-sector GNS representation."
+  },
+  "current_history_tail_boundary": {
+    "bounded_cutoff": "For coordinate cutoff scale L and boundary distance R, the existing safe corridor majorant is 8sqrt(2)|X|||A||exp(nu_LT)(nu_LT)^R/R! with nu_L<=96cL^2/hbar. Choosing L=R^alpha closes this bounded-cutoff term for 0<alpha<1/2.",
+    "missing_estimate": "Removing the cutoff requires uniform two-orientation Gaussian or comparably strong tails for every partial product history P and P*: phi_0(P^*EP)+phi_0(PEP^*) and the corresponding (V-V_L)^2-weighted expressions. Static tails, finite Gibbs relative entropy, finite tilted moments and single-step energy control do not supply this estimate.",
+    "surviving_routes": "Either prove a local-strict all-exhaustion two-orientation history estimate in compatible energy-density seminorms, or build an all-bond state-weighted resummation that avoids the exp(C L^2) corridor loss."
+  },
+  "route_status": {
+    "closed_scope": "The finite-region bounded local-strict/energy topology and both exact subflow actions are rigorous. The fixed finite-Gibbs character relative-entropy and inverse-logarithmic tilted-tail theorem is rigorous.",
+    "not_closed": "No continuous-time split-product thermodynamic limit, all-shape exhaustion Cauchy, quasi-local raw oscillator algebra, finite-Hamiltonian-to-phase quotient identification, beta-independent quasi-local common alpha, or broken-sector GNS gap is proved.",
+    "superseded_combined_gate": "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP",
+    "next_dynamics_gate": "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "next_gap_gate": "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY"
+  },
+  "status": "PARTIALLY RESOLVED: A BETA- AND PHASE-STATE-INDEPENDENT FINITE-REGION LOCAL-STRICT/ENERGY CARRIER EXISTS AND BOTH EXACT SUBFLOWS ARE CONTINUOUS THERE. THE UNSPLIT QUARTIC ONSITE FLOW IS NOT POINT-NORM C0 ON RAW MOMENTUM-WEYL OR BASIC MOMENTUM-RESOLVENT LABELS, AND THE PURE QUARTIC KICK DOES NOT PRESERVE THE FULL RESOLVENT ALGEBRA. FINITE-GIBBS ENTROPY GIVES ONLY AN INVERSE-LOGARITHMIC TILTED TAIL, NOT THE DYNAMIC GAUSSIAN HISTORY ESTIMATE. DISTINCT ORDERED GROUND STATES DO NOT IMPLY A BROKEN-SECTOR GNS GAP. COMMON-ALPHA AND GNS-GAP OBLIGATIONS ARE NOW SEPARATE OPEN GATES.",
+  "closed_subgates": [
+    "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+    "PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND"
+  ],
+  "superseded_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP"
+  ],
+  "retained_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "checkpoint_synthesis": {
+    "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt",
+    "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
+    "source_sha256": "101c4ffc3742d4c9caf57e57d90db599656f5ea22332f1b178d8920a28b643fc",
+    "pdf_sha256": "3d2e33dbef6781dc45563750bf451e7e9243c4cb079b5e2ed571794d8d6aba3d",
+    "pages": 9,
+    "workflow": "No per-lemma or intermediate PDF was issued during development. This is the single gate-level synthesis PDF created after the manifest, certificate, primary, non-importing independent and integrated verifier layers passed.",
+    "visual_qa": "Nine rendered pages inspected; zero clipping, overlap, broken equations, unreadable identifiers, black glyphs or overfull boxes. Pypdf and pdfplumber independently extracted all nine nonempty pages."
+  },
+  "verification": {
+    "proof_grade": "ANALYTIC finite-region strict/strong-star/energy-topology equivalence; exact onsite and all-bond subflow estimates; exact full-Q3 high-energy packet point-norm no-go; exact pure-quartic resolvent-algebra non-invariance; exact finite-Gibbs relative-entropy tilted-tail theorem; exact entropy/finite-moment and ordered-ground/GNS-gap hostile fixtures; primary, non-importing independent and integrated verification",
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_verify.py"
+  },
+  "no_overclaim": "This package proves only a finite-region local-strict/energy carrier and a fixed finite-Gibbs entropy tail bound, together with four sharply scoped route no-go results. It does not prove a continuous-time thermodynamic split limit, all-exhaustion or all-boundary Cauchy, a quasi-local raw oscillator common alpha, full resolvent-algebra invariance or non-invariance for the unsplit quartic flow, phase-KMS quotient identification, a broken-sector GNS or physical mass gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure."
+}

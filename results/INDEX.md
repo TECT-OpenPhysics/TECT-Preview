@@ -9,7 +9,7 @@ Authorities: `RESULTS-LEDGER.md`.
 
 | ID | Result | Tier/scope |
 |---|---|---|
-| [`R-167`](../RESULTS-LEDGER.md#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | T0 (scoped selected-tangent and categorical orbit-smear theorem; no quasi-local thermodynamic common-alpha or GNS-gap promotion). |
+| [`R-167`](../RESULTS-LEDGER.md#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | T0 (scoped selected-tangent, categorical orbit-smear and finite- region local-strict/finite-Gibbs theorem; no quasi-local thermodynamic common-alpha or GNS-gap promotion). |
 | [`R-166`](../RESULTS-LEDGER.md#r-166) | Sparse production radial-Gram decomposition and global owner bound | T4 (scoped exact finite production fibre; no promotion). |
 | [`R-165`](../RESULTS-LEDGER.md#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | T4 (scoped exact finite production fibre; no promotion). |
 | [`R-164`](../RESULTS-LEDGER.md#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | T4 |

@@ -1,0 +1,2610 @@
+{
+  "assertions": [
+    {
+      "actual": 8,
+      "expected": 8,
+      "group": "q3",
+      "name": "Q3 vertex count",
+      "status": "PASS"
+    },
+    {
+      "actual": 12,
+      "expected": 12,
+      "group": "q3",
+      "name": "Q3 edge count",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1,
+        2,
+        4
+      ],
+      "expected": [
+        1,
+        2,
+        4
+      ],
+      "group": "q3",
+      "name": "Q3 zero neighbors",
+      "status": "PASS"
+    },
+    {
+      "actual": "(2*g*q0**3 + 6*lambda*q0**3 - 3*lambda*q0**2*q1 - 3*lambda*q0**2*q2 - 3*lambda*q0**2*q4 + 2*lambda*q0*q1**2 + 2*lambda*q0*q2**2 + 2*lambda*q0*q4**2 - lambda*q1**3 - lambda*q2**3 - lambda*q4**3)/2",
+      "expected": "(2*g*q0**3 + 6*lambda*q0**3 - 3*lambda*q0**2*q1 - 3*lambda*q0**2*q2 - 3*lambda*q0**2*q4 + 2*lambda*q0*q1**2 + 2*lambda*q0*q2**2 + 2*lambda*q0*q4**2 - lambda*q1**3 - lambda*q2**3 - lambda*q4**3)/2",
+      "group": "q3",
+      "name": "exact Q3 F0",
+      "status": "PASS"
+    },
+    {
+      "actual": "g + 3*lambda",
+      "expected": "g+3 lambda",
+      "group": "q3",
+      "name": "exact Q3 G",
+      "status": "PASS"
+    },
+    {
+      "actual": "R**4*(g + 3*lambda)/4",
+      "expected": "G R^4/4",
+      "group": "q3",
+      "name": "coordinate-ray potential",
+      "status": "PASS"
+    },
+    {
+      "actual": "R**3*(g + 3*lambda)",
+      "expected": "G R^3",
+      "group": "q3",
+      "name": "coordinate-ray force",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*R**2*(g + 3*lambda)",
+      "expected": "3 G R^2",
+      "group": "q3",
+      "name": "coordinate-ray Hessian",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[2/7, -6/35], [-6/35, 18/175]])",
+      "expected": "PSD",
+      "group": "carrier",
+      "name": "Young residual PSD",
+      "status": "PASS"
+    },
+    {
+      "actual": "18/49",
+      "expected": "delta+delta^2",
+      "group": "carrier",
+      "name": "Young delta plus delta squared",
+      "status": "PASS"
+    },
+    {
+      "actual": "521/35",
+      "expected": "521/35",
+      "group": "carrier",
+      "name": "exact C_b",
+      "status": "PASS"
+    },
+    {
+      "actual": "1287/245",
+      "expected": "1+C_b|delta|",
+      "group": "carrier",
+      "name": "exact M_delta",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*sqrt(715)/35",
+      "expected": "M_delta^s",
+      "group": "carrier",
+      "name": "exact M_delta power",
+      "status": "PASS"
+    },
+    {
+      "actual": "1 + sqrt(5)",
+      "expected": "1 + sqrt(5)",
+      "group": "carrier",
+      "name": "local-strict transport identity fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "ambient": "B(H_Y)=M(K(H_Y)), Y finite",
+        "bounded_strict_equals_strong_star": true,
+        "bounded_strict_graph_energy_equivalent": true,
+        "control": "arbitrary positive compact-resolvent K_Y>=1",
+        "energy_seminorm": "e_E(A)=max{sup_<psi,Kpsi><=E ||Apsi||, sup_<psi,Kpsi><=E ||A*psi||}",
+        "graph_seminorm": "q_s(A)=||A K_Y^-s||+||K_Y^-s A||",
+        "strict_after_fixture": "1 + sqrt(5)",
+        "strict_before_fixture": "1 + sqrt(5)",
+        "strict_seminorm": "p_C(A)=||A C||+||C A||, C compact"
+      },
+      "expected": "strict=strong-star=graph=energy on bounded sets",
+      "group": "carrier",
+      "name": "bounded strict topology equivalence",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(3)/3",
+      "expected": "1/sqrt(3)",
+      "group": "carrier",
+      "name": "spectral e_E exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/2",
+        "1/2"
+      ],
+      "expected": [
+        "1/2",
+        "1/2"
+      ],
+      "group": "carrier",
+      "name": "spectral graph wings exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(3)/3",
+      "expected": "<=sqrt(2)/2",
+      "group": "carrier",
+      "name": "energy-to-graph inequality",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "<=2*sqrt(3)/3 + sqrt(2)",
+      "group": "carrier",
+      "name": "graph-to-energy inequality",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "<=sqrt(2)/2",
+      "group": "carrier",
+      "name": "spectral tail split",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "commutes_with_onsite_unitary": true,
+        "control": "separate K_Y^os, positive weighted onsite sum",
+        "e_E_isometry": true,
+        "q_s_isometry": true,
+        "strict_C0": true,
+        "support_X_fixed": true
+      },
+      "expected": "commuting K_Y^os isometries",
+      "group": "carrier",
+      "name": "onsite separate commuting control",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "carrier",
+      "name": "carrier controls separated",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "all_exhaustion": false,
+        "finite": true,
+        "split_limit": false
+      },
+      "expected": {
+        "all_exhaustion": false,
+        "finite": true,
+        "split_limit": false
+      },
+      "group": "carrier",
+      "name": "finite-volume local-strict carrier only",
+      "status": "PASS"
+    },
+    {
+      "actual": "G*a",
+      "expected": "G*a",
+      "group": "packet",
+      "name": "quartic D_a cubic coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "[q_0,R_0]=-i hbar R_0^2",
+      "expected": "[q_0,R_0]=-i hbar R_0^2",
+      "group": "packet",
+      "name": "resolvent commutator sign",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "K_degree_R": "4",
+        "K_three_halves_degree_R": "6",
+        "anisotropic_max_degree": 6,
+        "contract": "||delta^2(A) K^-3/2||<infinity",
+        "fixed_translation_graph_equivalence_required": true,
+        "labels": [
+          "W_a",
+          "R_0"
+        ]
+      },
+      "expected": "degree six",
+      "group": "packet",
+      "name": "quartic graph endpoint degree",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "packet",
+      "name": "fixed Weyl graph equivalence retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "-6",
+      "expected": -6,
+      "group": "packet",
+      "name": "t_R squared R degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "packet",
+      "name": "Taylor remainder scale cancels",
+      "status": "PASS"
+    },
+    {
+      "actual": "153/1225",
+      "expected": "in (0,306/1225)",
+      "group": "packet",
+      "name": "packet tau threshold raw_momentum_weyl",
+      "status": "PASS"
+    },
+    {
+      "actual": "7803/300125",
+      "expected": "tau^2 C_A M_psi/2",
+      "group": "packet",
+      "name": "packet C_A M_psi remainder raw_momentum_weyl",
+      "status": "PASS"
+    },
+    {
+      "actual": "7803/300125",
+      "expected": ">0",
+      "group": "packet",
+      "name": "packet positive liminf raw_momentum_weyl",
+      "status": "PASS"
+    },
+    {
+      "actual": "1836/6125",
+      "expected": "in (0,3672/6125)",
+      "group": "packet",
+      "name": "packet tau threshold basic_momentum_resolvent",
+      "status": "PASS"
+    },
+    {
+      "actual": "140454/1071875",
+      "expected": "tau^2 C_A M_psi/2",
+      "group": "packet",
+      "name": "packet C_A M_psi remainder basic_momentum_resolvent",
+      "status": "PASS"
+    },
+    {
+      "actual": "140454/1071875",
+      "expected": ">0",
+      "group": "packet",
+      "name": "packet positive liminf basic_momentum_resolvent",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "basic_momentum_resolvent_point_norm_C0": false,
+        "exact_norm_jump_claimed": false,
+        "full_unsplit_positive_liminf_only": true,
+        "raw_momentum_weyl_point_norm_C0": false,
+        "unsplit_resolvent_algebra_invariance_decided": false
+      },
+      "expected": "positive liminf, no exact jump",
+      "group": "packet",
+      "name": "full unsplit only positive liminf",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "basic_momentum_resolvent_point_norm_C0": false,
+        "exact_norm_jump_claimed": false,
+        "full_unsplit_positive_liminf_only": true,
+        "raw_momentum_weyl_point_norm_C0": false,
+        "unsplit_resolvent_algebra_invariance_decided": false
+      },
+      "expected": "both not C0",
+      "group": "packet",
+      "name": "raw and basic point norm routes rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "packet",
+      "name": "unsplit invariance remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "all_alternative_carriers_rejected": false,
+        "full_Q3LOCK_dynamics_counterexample": false,
+        "local_strict_C0_rejected": false
+      },
+      "expected": "local-strict and Q3LOCK remain open",
+      "group": "packet",
+      "name": "packet scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*G*s*t",
+      "expected": "3*G*s*t",
+      "group": "pure_kick",
+      "name": "pure quartic 3 t G s R^2 coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*G*s*t",
+      "expected": "3*G*s*t",
+      "group": "pure_kick",
+      "name": "pure quartic scaled momentum limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/2",
+      "expected": "<0",
+      "group": "pure_kick",
+      "name": "pure kick packet relative error",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/3",
+      "expected": "1/abs(mu)",
+      "group": "pure_kick",
+      "name": "pure kick exact 1/mu jump",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "basic_resolvent": "R_mu=(i mu-p_0)^(-1)",
+        "basic_resolvent_image": "A_t=U_t R_mu U_t^*",
+        "cayley_upper_fixture": "2/3",
+        "exact_jump_fixture": "2/3",
+        "exact_spatial_weyl_orbit_jump": "1/abs(mu)",
+        "expected_quadratic_translation_coefficient": "3*G*s*t",
+        "finite_phase_space_weyl_orbit_norm_continuity_criterion": true,
+        "force": "G*R**3",
+        "induced_momentum_center": "3*G*R**2*s*t - 3*G*R*s**2*t + G*s**3*t",
+        "large_R_scaled_limit": "3*G*s*t",
+        "local_strict_BH_carrier_remains_available": true,
+        "mu_fixture": "3/2",
+        "packet": {
+          "center_scale": "3 t G s R^2+O(R)",
+          "centered_momentum_error": "O(R^3/2)",
+          "initial_momentum_scale": "O(R^-1/2)",
+          "relative_error_power": "-1/2",
+          "width": "R^(1/2)"
+        },
+        "potential_kick": "p -> p-t G q^3",
+        "quadratic_translation_coefficient": "3*G*s*t",
+        "scope": "Pure quartic potential subflow versus the standard finite-dimensional resolvent algebra only; not a no-go for local-strict or other carriers.",
+        "standard_resolvent_algebra_invariant_under_pure_quartic_kick": false,
+        "symbols": {
+          "kick_time": "t",
+          "mu": "mu"
+        },
+        "translated_force_difference": "-3*G*R**2*s + 3*G*R*s**2 - G*s**3",
+        "unital_resolvent_strict_equals_norm": true,
+        "unsplit_quartic_resolvent_algebra_invariance_decided": false
+      },
+      "expected": "pure kick no; local-strict yes; unsplit open",
+      "group": "pure_kick",
+      "name": "pure quartic standard resolvent invariance rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "91/55",
+      "expected": "91/55",
+      "group": "entropy_tail",
+      "name": "exact Gibbs S_xi",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "S_xi": "91/55",
+        "W_xi": "exp(i xi.q)",
+        "both_character_orientations": true,
+        "gibbs_mean_momentum": 0,
+        "identity": "S(W_xi rho W_xi^* || rho)=beta*hbar^2*||xi||^2/(2 chi)",
+        "momentum_shift": "W_xi^* p W_xi=p+hbar xi",
+        "preserved_after_full_H_time_evolution": true
+      },
+      "expected": "both orientations, time preserved",
+      "group": "entropy_tail",
+      "name": "Gibbs two orientations and evolved character",
+      "status": "PASS"
+    },
+    {
+      "actual": "-9*log(-1 + exp(20))/10 - log(10) + 9*log(3)/5 + 20",
+      "expected": ">=2 - log(2)",
+      "group": "entropy_tail",
+      "name": "binary entropy lower bound fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "12*exp(-72/5)",
+      "expected": "in (0,1)",
+      "group": "entropy_tail",
+      "name": "reference Gaussian tail below one",
+      "status": "PASS"
+    },
+    {
+      "actual": "72/5 - log(12)",
+      "expected": ">0",
+      "group": "entropy_tail",
+      "name": "entropy tail denominator positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "(log(36028797018963968) + 91)/(11*(72 - log(248832)))",
+      "expected": "in (0,1] after min",
+      "group": "entropy_tail",
+      "name": "entropy tail bound finite",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "q_minus": "(log(36028797018963968) + 91)/(11*(72 - log(248832)))",
+        "q_plus": "(log(36028797018963968) + 91)/(11*(72 - log(248832)))"
+      },
+      "expected": "same exact bound",
+      "group": "entropy_tail",
+      "name": "entropy tail both orientation bounds",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "all_exhaustion_uniformity": false,
+        "dynamic_gaussian_tail": false,
+        "fixed_finite_gibbs_character": true,
+        "fixed_support_tail_event": true,
+        "history_word_bound": false
+      },
+      "expected": "fixed character only",
+      "group": "entropy_tail",
+      "name": "fixed Gibbs scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "entropy_fixture",
+      "name": "general rotation identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "entropy_fixture",
+      "name": "symbolic 2x2 tail_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "entropy_fixture",
+      "name": "symbolic 2x2 relative_entropy_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "entropy_fixture",
+      "name": "symbolic 2x2 energy_excess_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "entropy_fixture",
+      "name": "symbolic 2x2 moment_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "a**2/4 - a*n**2 + n**4",
+      "expected": "(-a/2 + n**2)**2",
+      "group": "entropy_fixture",
+      "name": "Gaussian completion square",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-16)/(exp(-16) + 1) + 1/64",
+      "expected": "exp(-16)/(exp(-16) + 1) + 1/64",
+      "group": "entropy_fixture",
+      "name": "2x2 tilted tail m=3,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/4",
+      "expected": "1/4",
+      "group": "entropy_fixture",
+      "name": "2x2 exact entropy m=3,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/28",
+      "expected": "5/28",
+      "group": "entropy_fixture",
+      "name": "2x2 exact energy excess m=3,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "64*exp(-16)/(exp(-16) + 1) + 1",
+      "expected": "64*exp(-16)/(exp(-16) + 1) + 1",
+      "group": "entropy_fixture",
+      "name": "2x2 exact finite moment m=3,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        4,
+        6
+      ],
+      "expected": "0<r<=6",
+      "group": "entropy_fixture",
+      "name": "2x2 positive lower moment orders m=3,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.015625003516724606,
+      "expected": "in (0,1)",
+      "group": "entropy_fixture",
+      "name": "2x2 rotation admissible m=3,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "64*exp(-16)/(exp(-16) + 1) + 1",
+      "expected": "<2",
+      "group": "entropy_fixture",
+      "name": "2x2 finite moment bounded m=3,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-256)/(exp(-256) + 1) + 1/4096",
+      "expected": "exp(-256)/(exp(-256) + 1) + 1/4096",
+      "group": "entropy_fixture",
+      "name": "2x2 tilted tail m=3,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/16",
+      "expected": "1/16",
+      "group": "entropy_fixture",
+      "name": "2x2 exact entropy m=3,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/112",
+      "expected": "5/112",
+      "group": "entropy_fixture",
+      "name": "2x2 exact energy excess m=3,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "4096*exp(-256)/(exp(-256) + 1) + 1",
+      "expected": "4096*exp(-256)/(exp(-256) + 1) + 1",
+      "group": "entropy_fixture",
+      "name": "2x2 exact finite moment m=3,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        4,
+        6
+      ],
+      "expected": "0<r<=6",
+      "group": "entropy_fixture",
+      "name": "2x2 positive lower moment orders m=3,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.000244140625,
+      "expected": "in (0,1)",
+      "group": "entropy_fixture",
+      "name": "2x2 rotation admissible m=3,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "4096*exp(-256)/(exp(-256) + 1) + 1",
+      "expected": "<2",
+      "group": "entropy_fixture",
+      "name": "2x2 finite moment bounded m=3,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-4096)/(exp(-4096) + 1) + 1/262144",
+      "expected": "exp(-4096)/(exp(-4096) + 1) + 1/262144",
+      "group": "entropy_fixture",
+      "name": "2x2 tilted tail m=3,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/64",
+      "expected": "1/64",
+      "group": "entropy_fixture",
+      "name": "2x2 exact entropy m=3,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/448",
+      "expected": "5/448",
+      "group": "entropy_fixture",
+      "name": "2x2 exact energy excess m=3,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "262144*exp(-4096)/(exp(-4096) + 1) + 1",
+      "expected": "262144*exp(-4096)/(exp(-4096) + 1) + 1",
+      "group": "entropy_fixture",
+      "name": "2x2 exact finite moment m=3,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        4,
+        6
+      ],
+      "expected": "0<r<=6",
+      "group": "entropy_fixture",
+      "name": "2x2 positive lower moment orders m=3,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.814697265625e-06,
+      "expected": "in (0,1)",
+      "group": "entropy_fixture",
+      "name": "2x2 rotation admissible m=3,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "262144*exp(-4096)/(exp(-4096) + 1) + 1",
+      "expected": "<2",
+      "group": "entropy_fixture",
+      "name": "2x2 finite moment bounded m=3,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-16)/(exp(-16) + 1) + 1/256",
+      "expected": "exp(-16)/(exp(-16) + 1) + 1/256",
+      "group": "entropy_fixture",
+      "name": "2x2 tilted tail m=4,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/16",
+      "expected": "1/16",
+      "group": "entropy_fixture",
+      "name": "2x2 exact entropy m=4,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/112",
+      "expected": "5/112",
+      "group": "entropy_fixture",
+      "name": "2x2 exact energy excess m=4,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "256*exp(-16)/(exp(-16) + 1) + 1",
+      "expected": "256*exp(-16)/(exp(-16) + 1) + 1",
+      "group": "entropy_fixture",
+      "name": "2x2 exact finite moment m=4,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "expected": "0<r<=8",
+      "group": "entropy_fixture",
+      "name": "2x2 positive lower moment orders m=4,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0039062508791811515,
+      "expected": "in (0,1)",
+      "group": "entropy_fixture",
+      "name": "2x2 rotation admissible m=4,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "256*exp(-16)/(exp(-16) + 1) + 1",
+      "expected": "<2",
+      "group": "entropy_fixture",
+      "name": "2x2 finite moment bounded m=4,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-256)/(exp(-256) + 1) + 1/65536",
+      "expected": "exp(-256)/(exp(-256) + 1) + 1/65536",
+      "group": "entropy_fixture",
+      "name": "2x2 tilted tail m=4,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/256",
+      "expected": "1/256",
+      "group": "entropy_fixture",
+      "name": "2x2 exact entropy m=4,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/1792",
+      "expected": "5/1792",
+      "group": "entropy_fixture",
+      "name": "2x2 exact energy excess m=4,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "65536*exp(-256)/(exp(-256) + 1) + 1",
+      "expected": "65536*exp(-256)/(exp(-256) + 1) + 1",
+      "group": "entropy_fixture",
+      "name": "2x2 exact finite moment m=4,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "expected": "0<r<=8",
+      "group": "entropy_fixture",
+      "name": "2x2 positive lower moment orders m=4,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.52587890625e-05,
+      "expected": "in (0,1)",
+      "group": "entropy_fixture",
+      "name": "2x2 rotation admissible m=4,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "65536*exp(-256)/(exp(-256) + 1) + 1",
+      "expected": "<2",
+      "group": "entropy_fixture",
+      "name": "2x2 finite moment bounded m=4,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-4096)/(exp(-4096) + 1) + 1/16777216",
+      "expected": "exp(-4096)/(exp(-4096) + 1) + 1/16777216",
+      "group": "entropy_fixture",
+      "name": "2x2 tilted tail m=4,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/4096",
+      "expected": "1/4096",
+      "group": "entropy_fixture",
+      "name": "2x2 exact entropy m=4,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/28672",
+      "expected": "5/28672",
+      "group": "entropy_fixture",
+      "name": "2x2 exact energy excess m=4,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "16777216*exp(-4096)/(exp(-4096) + 1) + 1",
+      "expected": "16777216*exp(-4096)/(exp(-4096) + 1) + 1",
+      "group": "entropy_fixture",
+      "name": "2x2 exact finite moment m=4,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "expected": "0<r<=8",
+      "group": "entropy_fixture",
+      "name": "2x2 positive lower moment orders m=4,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.960464477539063e-08,
+      "expected": "in (0,1)",
+      "group": "entropy_fixture",
+      "name": "2x2 rotation admissible m=4,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "16777216*exp(-4096)/(exp(-4096) + 1) + 1",
+      "expected": "<2",
+      "group": "entropy_fixture",
+      "name": "2x2 finite moment bounded m=4,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-16)/(exp(-16) + 1) + 1/1024",
+      "expected": "exp(-16)/(exp(-16) + 1) + 1/1024",
+      "group": "entropy_fixture",
+      "name": "2x2 tilted tail m=5,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/64",
+      "expected": "1/64",
+      "group": "entropy_fixture",
+      "name": "2x2 exact entropy m=5,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/448",
+      "expected": "5/448",
+      "group": "entropy_fixture",
+      "name": "2x2 exact energy excess m=5,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1024*exp(-16)/(exp(-16) + 1) + 1",
+      "expected": "1024*exp(-16)/(exp(-16) + 1) + 1",
+      "group": "entropy_fixture",
+      "name": "2x2 exact finite moment m=5,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "expected": "0<r<=10",
+      "group": "entropy_fixture",
+      "name": "2x2 positive lower moment orders m=5,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0009765627197952879,
+      "expected": "in (0,1)",
+      "group": "entropy_fixture",
+      "name": "2x2 rotation admissible m=5,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1024*exp(-16)/(exp(-16) + 1) + 1",
+      "expected": "<2",
+      "group": "entropy_fixture",
+      "name": "2x2 finite moment bounded m=5,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-256)/(exp(-256) + 1) + 1/1048576",
+      "expected": "exp(-256)/(exp(-256) + 1) + 1/1048576",
+      "group": "entropy_fixture",
+      "name": "2x2 tilted tail m=5,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/4096",
+      "expected": "1/4096",
+      "group": "entropy_fixture",
+      "name": "2x2 exact entropy m=5,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/28672",
+      "expected": "5/28672",
+      "group": "entropy_fixture",
+      "name": "2x2 exact energy excess m=5,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "1048576*exp(-256)/(exp(-256) + 1) + 1",
+      "expected": "1048576*exp(-256)/(exp(-256) + 1) + 1",
+      "group": "entropy_fixture",
+      "name": "2x2 exact finite moment m=5,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "expected": "0<r<=10",
+      "group": "entropy_fixture",
+      "name": "2x2 positive lower moment orders m=5,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 9.5367431640625e-07,
+      "expected": "in (0,1)",
+      "group": "entropy_fixture",
+      "name": "2x2 rotation admissible m=5,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "1048576*exp(-256)/(exp(-256) + 1) + 1",
+      "expected": "<2",
+      "group": "entropy_fixture",
+      "name": "2x2 finite moment bounded m=5,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-4096)/(exp(-4096) + 1) + 1/1073741824",
+      "expected": "exp(-4096)/(exp(-4096) + 1) + 1/1073741824",
+      "group": "entropy_fixture",
+      "name": "2x2 tilted tail m=5,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/262144",
+      "expected": "1/262144",
+      "group": "entropy_fixture",
+      "name": "2x2 exact entropy m=5,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/1835008",
+      "expected": "5/1835008",
+      "group": "entropy_fixture",
+      "name": "2x2 exact energy excess m=5,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "1073741824*exp(-4096)/(exp(-4096) + 1) + 1",
+      "expected": "1073741824*exp(-4096)/(exp(-4096) + 1) + 1",
+      "group": "entropy_fixture",
+      "name": "2x2 exact finite moment m=5,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "expected": "0<r<=10",
+      "group": "entropy_fixture",
+      "name": "2x2 positive lower moment orders m=5,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": 9.313225746154785e-10,
+      "expected": "in (0,1)",
+      "group": "entropy_fixture",
+      "name": "2x2 rotation admissible m=5,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "1073741824*exp(-4096)/(exp(-4096) + 1) + 1",
+      "expected": "<2",
+      "group": "entropy_fixture",
+      "name": "2x2 finite moment bounded m=5,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-16)/(exp(-16) + 1) + 1/4096",
+      "expected": "exp(-16)/(exp(-16) + 1) + 1/4096",
+      "group": "entropy_fixture",
+      "name": "2x2 tilted tail m=6,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/256",
+      "expected": "1/256",
+      "group": "entropy_fixture",
+      "name": "2x2 exact entropy m=6,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/1792",
+      "expected": "5/1792",
+      "group": "entropy_fixture",
+      "name": "2x2 exact energy excess m=6,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "4096*exp(-16)/(exp(-16) + 1) + 1",
+      "expected": "4096*exp(-16)/(exp(-16) + 1) + 1",
+      "group": "entropy_fixture",
+      "name": "2x2 exact finite moment m=6,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "expected": "0<r<=12",
+      "group": "entropy_fixture",
+      "name": "2x2 positive lower moment orders m=6,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.00024414067994882197,
+      "expected": "in (0,1)",
+      "group": "entropy_fixture",
+      "name": "2x2 rotation admissible m=6,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "4096*exp(-16)/(exp(-16) + 1) + 1",
+      "expected": "<2",
+      "group": "entropy_fixture",
+      "name": "2x2 finite moment bounded m=6,n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-256)/(exp(-256) + 1) + 1/16777216",
+      "expected": "exp(-256)/(exp(-256) + 1) + 1/16777216",
+      "group": "entropy_fixture",
+      "name": "2x2 tilted tail m=6,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/65536",
+      "expected": "1/65536",
+      "group": "entropy_fixture",
+      "name": "2x2 exact entropy m=6,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/458752",
+      "expected": "5/458752",
+      "group": "entropy_fixture",
+      "name": "2x2 exact energy excess m=6,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "16777216*exp(-256)/(exp(-256) + 1) + 1",
+      "expected": "16777216*exp(-256)/(exp(-256) + 1) + 1",
+      "group": "entropy_fixture",
+      "name": "2x2 exact finite moment m=6,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "expected": "0<r<=12",
+      "group": "entropy_fixture",
+      "name": "2x2 positive lower moment orders m=6,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.960464477539063e-08,
+      "expected": "in (0,1)",
+      "group": "entropy_fixture",
+      "name": "2x2 rotation admissible m=6,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "16777216*exp(-256)/(exp(-256) + 1) + 1",
+      "expected": "<2",
+      "group": "entropy_fixture",
+      "name": "2x2 finite moment bounded m=6,n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-4096)/(exp(-4096) + 1) + 1/68719476736",
+      "expected": "exp(-4096)/(exp(-4096) + 1) + 1/68719476736",
+      "group": "entropy_fixture",
+      "name": "2x2 tilted tail m=6,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/16777216",
+      "expected": "1/16777216",
+      "group": "entropy_fixture",
+      "name": "2x2 exact entropy m=6,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/117440512",
+      "expected": "5/117440512",
+      "group": "entropy_fixture",
+      "name": "2x2 exact energy excess m=6,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "68719476736*exp(-4096)/(exp(-4096) + 1) + 1",
+      "expected": "68719476736*exp(-4096)/(exp(-4096) + 1) + 1",
+      "group": "entropy_fixture",
+      "name": "2x2 exact finite moment m=6,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "expected": "0<r<=12",
+      "group": "entropy_fixture",
+      "name": "2x2 positive lower moment orders m=6,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4551915228366852e-11,
+      "expected": "in (0,1)",
+      "group": "entropy_fixture",
+      "name": "2x2 rotation admissible m=6,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "68719476736*exp(-4096)/(exp(-4096) + 1) + 1",
+      "expected": "<2",
+      "group": "entropy_fixture",
+      "name": "2x2 finite moment bounded m=6,n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "expected": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "group": "entropy_fixture",
+      "name": "entropy fixture m range",
+      "status": "PASS"
+    },
+    {
+      "actual": "m=4 checked",
+      "expected": "n^-8, n^-4, eighth moment",
+      "group": "entropy_fixture",
+      "name": "m=4 exact specialization",
+      "status": "PASS"
+    },
+    {
+      "actual": "-x*(x - 2)*exp(-x)",
+      "expected": "x(2-x)exp(-x)",
+      "group": "entropy_fixture",
+      "name": "m=4 envelope derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*exp(-2)",
+      "expected": "4*exp(-2)",
+      "group": "entropy_fixture",
+      "name": "m=4 envelope global maximum",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "256*exp(-16)/(exp(-16) + 1)",
+        "65536*exp(-256)/(exp(-256) + 1)",
+        "16777216*exp(-4096)/(exp(-4096) + 1)"
+      ],
+      "expected": "<=4 exp(-2)",
+      "group": "entropy_fixture",
+      "name": "m=4 eighth reference-piece bound",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "entropy_fixture",
+      "name": "two entropy orientations",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "entropy_fixture",
+      "name": "entropy finite-moment Gaussian inference rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": 1,
+      "group": "ground_gap",
+      "name": "infinite fixture simple kernel",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "limit": "0",
+        "probes": [
+          "1/2",
+          "1/4",
+          "1/8",
+          "1/16",
+          "1/32"
+        ]
+      },
+      "expected": "decrease to zero",
+      "group": "ground_gap",
+      "name": "continuous spectrum accumulates at zero",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "central_supports": [
+          "(1,0)",
+          "(0,1)"
+        ],
+        "disjoint": true,
+        "exact_ground": true,
+        "omega_minus": "Omega vector state on second summand",
+        "omega_plus": "Omega vector state on first summand",
+        "parity_exchange": "summand swap",
+        "pure": true
+      },
+      "expected": "pure disjoint exact with orthogonal central supports",
+      "group": "ground_gap",
+      "name": "component ground states pure disjoint exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "summand swap",
+      "expected": "summand swap",
+      "group": "ground_gap",
+      "name": "parity exchanges ground states",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "Z": "(1,-1)",
+        "omega_minus_Z": -1,
+        "omega_plus_Z": 1
+      },
+      "expected": "+1/-1",
+      "group": "ground_gap",
+      "name": "central order witness separates",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "coercive_gap_estimate_supplied": false,
+        "ground_vector_simple": true,
+        "implementing_spectrum": "{0} union [0,1]",
+        "positive_gap": 0
+      },
+      "expected": "simple kernel, zero gap, no coercivity",
+      "group": "ground_gap",
+      "name": "GNS simple ground but zero gap",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "GNS_gap": false,
+        "distinct": true
+      },
+      "expected": {
+        "GNS_gap": false,
+        "distinct": true
+      },
+      "group": "ground_gap",
+      "name": "ground doublets do not force GNS gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "T-054",
+      "expected": "T-054",
+      "group": "authority",
+      "name": "authority task",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-000804",
+      "expected": "EXP-000804",
+      "group": "authority",
+      "name": "authority exploration",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-167",
+      "expected": "R-167",
+      "group": "authority",
+      "name": "authority result number",
+      "status": "PASS"
+    },
+    {
+      "actual": "v1.7",
+      "expected": "v1.7",
+      "group": "authority",
+      "name": "authority result version",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+      "expected": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+      "group": "authority",
+      "name": "authority result id",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "authority",
+      "name": "authority claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+        "PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND"
+      ],
+      "expected": [
+        "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+        "PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND"
+      ],
+      "group": "authority",
+      "name": "authority closed gates",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "expected": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "group": "authority",
+      "name": "authority open gates",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP"
+      ],
+      "expected": [
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP"
+      ],
+      "group": "authority",
+      "name": "authority negative set",
+      "status": "PASS"
+    },
+    {
+      "actual": "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split.py",
+      "expected": "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split.py",
+      "group": "authority",
+      "name": "authority primary script",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority section finite_region_local_strict_carrier",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority section full_quartic_point_norm_no_go",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority section pure_quartic_resolvent_no_go",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority section fixed_gibbs_character_entropy_tail",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority section entropy_finite_moment_no_go",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority section ordered_ground_doublet_gap_no_go",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority no-overclaim all-exhaustion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority no-overclaim common alpha",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority no-overclaim gns",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority no-overclaim c6",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "authority no-overclaim pre-a",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token local strict",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token entropy",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token R^-3",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token all exhaustion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token GNS gap",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token Pre-A",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate negative NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate negative NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate negative NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate negative NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP",
+      "status": "PASS"
+    },
+    {
+      "actual": "T1",
+      "expected": "T1",
+      "group": "authority",
+      "name": "C6 tier unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "ACTIVE",
+      "expected": "ACTIVE",
+      "group": "authority",
+      "name": "C6 lifecycle unchanged",
+      "status": "PASS"
+    }
+  ],
+  "authority": {
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md",
+    "checked": [
+      "authority task",
+      "authority exploration",
+      "authority result number",
+      "authority result version",
+      "authority result id",
+      "authority claim nonbearing",
+      "authority closed gates",
+      "authority open gates",
+      "authority negative set",
+      "authority primary script",
+      "authority section finite_region_local_strict_carrier",
+      "authority section full_quartic_point_norm_no_go",
+      "authority section pure_quartic_resolvent_no_go",
+      "authority section fixed_gibbs_character_entropy_tail",
+      "authority section entropy_finite_moment_no_go",
+      "authority section ordered_ground_doublet_gap_no_go",
+      "authority no-overclaim all-exhaustion",
+      "authority no-overclaim common alpha",
+      "authority no-overclaim gns",
+      "authority no-overclaim c6",
+      "authority no-overclaim pre-a",
+      "certificate token local strict",
+      "certificate token entropy",
+      "certificate token R^-3",
+      "certificate token all exhaustion",
+      "certificate token GNS gap",
+      "certificate token Pre-A",
+      "certificate negative NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+      "certificate negative NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+      "certificate negative NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+      "certificate negative NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP",
+      "C6 tier unchanged",
+      "C6 lifecycle unchanged"
+    ],
+    "missing": [],
+    "status": "COMPLETE"
+  },
+  "boundary": "Finite-volume local-strict/energy subflow carrier and fixed-Gibbs single-character entropy-tail theorem only; not all-exhaustion history dynamics, a standard raw-Weyl/resolvent point-norm carrier, a dynamic Gaussian tail, a broken-sector GNS gap, C6, CP1, Sector A, or Pre-A closure.",
+  "claim_bearing": false,
+  "closed_gates": [
+    "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+    "PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND"
+  ],
+  "closed_subgates": [
+    "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER",
+    "PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND"
+  ],
+  "derived": {
+    "entropy_fixture": {
+      "auxiliary_drive": "K_nm^(+/-)=+/- hbar theta_nm sigma_y/T",
+      "both_unitary_orientations": true,
+      "construction": "rho_n=diag(1,exp(-n^4))/(1+exp(-n^4)); sin^2(theta_nm)=1/(Delta_n n^(2m))",
+      "energy_excess_tends_to_zero_for_m_at_least_3": true,
+      "entropy_tends_to_zero": true,
+      "gaussian_reference": {
+        "all_coefficients": true,
+        "bound": "Tr rho_n exp(a q_n^2)<=1+exp(a^2/4)",
+        "completion_square": "a**2/4 - a*n**2 + n**4",
+        "expected_completion_square": "(-a/2 + n**2)**2",
+        "observable": "q_n=n P_1"
+      },
+      "general_exact_values": {
+        "energy_excess": "beta^-1 n^(4-2m)",
+        "relative_entropy": "n^(4-2m)",
+        "tilted_2m_moment": "1+n^(2m)p1",
+        "tilted_tail": "p1+n^(-2m)"
+      },
+      "inputs": {
+        "beta": "7/5",
+        "m_values": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "n_values": [
+          2,
+          4,
+          8
+        ]
+      },
+      "m4_bound_proof": {
+        "critical_point": 2,
+        "derivative": "-x*(x - 2)*exp(-x)",
+        "envelope": "x**2*exp(-x)",
+        "expected_global_maximum": "4*exp(-2)",
+        "global_maximum": "4*exp(-2)",
+        "p1_upper": "p1<=exp(-x)",
+        "substitution": "x=n^4"
+      },
+      "m4_exact_values": {
+        "energy_excess": "1/(beta n^4)",
+        "moment_order": 8,
+        "reference_piece_bound": "n^8 p1<=4 exp(-2)",
+        "relative_entropy": "n^-4",
+        "tilted_tail_increment": "n^-8"
+      },
+      "rotation_identity_residual": "0",
+      "rows": [
+        {
+          "Delta_n": "(1 - exp(-16))/(exp(-16) + 1)",
+          "energy_excess": "5/28",
+          "expected_energy_excess": "5/28",
+          "expected_relative_entropy": "1/4",
+          "expected_tilted_moment": "64*exp(-16)/(exp(-16) + 1) + 1",
+          "expected_tilted_tail": "exp(-16)/(exp(-16) + 1) + 1/64",
+          "finite_moment_fixture_bound": "2",
+          "lower_even_moments": [
+            {
+              "formula": "4*exp(-16)/(exp(-16) + 1) + 1/16",
+              "order_r": 2
+            },
+            {
+              "formula": "16*exp(-16)/(exp(-16) + 1) + 1/4",
+              "order_r": 4
+            },
+            {
+              "formula": "64*exp(-16)/(exp(-16) + 1) + 1",
+              "order_r": 6
+            }
+          ],
+          "m": "3",
+          "m4_eighth_reference_piece": null,
+          "m4_exact_fixture": false,
+          "m4_reference_piece_bound": null,
+          "moment_order": "6",
+          "n": "2",
+          "p0": "1/(exp(-16) + 1)",
+          "p1": "exp(-16)/(exp(-16) + 1)",
+          "relative_entropy": "1/4",
+          "sin_theta_squared": "(exp(-16) + 1)/(64*(1 - exp(-16)))",
+          "tail_increment": "1/64",
+          "tilted_moment": "64*exp(-16)/(exp(-16) + 1) + 1",
+          "tilted_tail": "exp(-16)/(exp(-16) + 1) + 1/64"
+        },
+        {
+          "Delta_n": "(1 - exp(-256))/(exp(-256) + 1)",
+          "energy_excess": "5/112",
+          "expected_energy_excess": "5/112",
+          "expected_relative_entropy": "1/16",
+          "expected_tilted_moment": "4096*exp(-256)/(exp(-256) + 1) + 1",
+          "expected_tilted_tail": "exp(-256)/(exp(-256) + 1) + 1/4096",
+          "finite_moment_fixture_bound": "2",
+          "lower_even_moments": [
+            {
+              "formula": "16*exp(-256)/(exp(-256) + 1) + 1/256",
+              "order_r": 2
+            },
+            {
+              "formula": "256*exp(-256)/(exp(-256) + 1) + 1/16",
+              "order_r": 4
+            },
+            {
+              "formula": "4096*exp(-256)/(exp(-256) + 1) + 1",
+              "order_r": 6
+            }
+          ],
+          "m": "3",
+          "m4_eighth_reference_piece": null,
+          "m4_exact_fixture": false,
+          "m4_reference_piece_bound": null,
+          "moment_order": "6",
+          "n": "4",
+          "p0": "1/(exp(-256) + 1)",
+          "p1": "exp(-256)/(exp(-256) + 1)",
+          "relative_entropy": "1/16",
+          "sin_theta_squared": "(exp(-256) + 1)/(4096*(1 - exp(-256)))",
+          "tail_increment": "1/4096",
+          "tilted_moment": "4096*exp(-256)/(exp(-256) + 1) + 1",
+          "tilted_tail": "exp(-256)/(exp(-256) + 1) + 1/4096"
+        },
+        {
+          "Delta_n": "(1 - exp(-4096))/(exp(-4096) + 1)",
+          "energy_excess": "5/448",
+          "expected_energy_excess": "5/448",
+          "expected_relative_entropy": "1/64",
+          "expected_tilted_moment": "262144*exp(-4096)/(exp(-4096) + 1) + 1",
+          "expected_tilted_tail": "exp(-4096)/(exp(-4096) + 1) + 1/262144",
+          "finite_moment_fixture_bound": "2",
+          "lower_even_moments": [
+            {
+              "formula": "64*exp(-4096)/(exp(-4096) + 1) + 1/4096",
+              "order_r": 2
+            },
+            {
+              "formula": "4096*exp(-4096)/(exp(-4096) + 1) + 1/64",
+              "order_r": 4
+            },
+            {
+              "formula": "262144*exp(-4096)/(exp(-4096) + 1) + 1",
+              "order_r": 6
+            }
+          ],
+          "m": "3",
+          "m4_eighth_reference_piece": null,
+          "m4_exact_fixture": false,
+          "m4_reference_piece_bound": null,
+          "moment_order": "6",
+          "n": "8",
+          "p0": "1/(exp(-4096) + 1)",
+          "p1": "exp(-4096)/(exp(-4096) + 1)",
+          "relative_entropy": "1/64",
+          "sin_theta_squared": "(exp(-4096) + 1)/(262144*(1 - exp(-4096)))",
+          "tail_increment": "1/262144",
+          "tilted_moment": "262144*exp(-4096)/(exp(-4096) + 1) + 1",
+          "tilted_tail": "exp(-4096)/(exp(-4096) + 1) + 1/262144"
+        },
+        {
+          "Delta_n": "(1 - exp(-16))/(exp(-16) + 1)",
+          "energy_excess": "5/112",
+          "expected_energy_excess": "5/112",
+          "expected_relative_entropy": "1/16",
+          "expected_tilted_moment": "256*exp(-16)/(exp(-16) + 1) + 1",
+          "expected_tilted_tail": "exp(-16)/(exp(-16) + 1) + 1/256",
+          "finite_moment_fixture_bound": "2",
+          "lower_even_moments": [
+            {
+              "formula": "4*exp(-16)/(exp(-16) + 1) + 1/64",
+              "order_r": 2
+            },
+            {
+              "formula": "16*exp(-16)/(exp(-16) + 1) + 1/16",
+              "order_r": 4
+            },
+            {
+              "formula": "64*exp(-16)/(exp(-16) + 1) + 1/4",
+              "order_r": 6
+            },
+            {
+              "formula": "256*exp(-16)/(exp(-16) + 1) + 1",
+              "order_r": 8
+            }
+          ],
+          "m": "4",
+          "m4_eighth_reference_piece": "256*exp(-16)/(exp(-16) + 1)",
+          "m4_exact_fixture": true,
+          "m4_reference_piece_bound": "4*exp(-2)",
+          "moment_order": "8",
+          "n": "2",
+          "p0": "1/(exp(-16) + 1)",
+          "p1": "exp(-16)/(exp(-16) + 1)",
+          "relative_entropy": "1/16",
+          "sin_theta_squared": "(exp(-16) + 1)/(256*(1 - exp(-16)))",
+          "tail_increment": "1/256",
+          "tilted_moment": "256*exp(-16)/(exp(-16) + 1) + 1",
+          "tilted_tail": "exp(-16)/(exp(-16) + 1) + 1/256"
+        },
+        {
+          "Delta_n": "(1 - exp(-256))/(exp(-256) + 1)",
+          "energy_excess": "5/1792",
+          "expected_energy_excess": "5/1792",
+          "expected_relative_entropy": "1/256",
+          "expected_tilted_moment": "65536*exp(-256)/(exp(-256) + 1) + 1",
+          "expected_tilted_tail": "exp(-256)/(exp(-256) + 1) + 1/65536",
+          "finite_moment_fixture_bound": "2",
+          "lower_even_moments": [
+            {
+              "formula": "16*exp(-256)/(exp(-256) + 1) + 1/4096",
+              "order_r": 2
+            },
+            {
+              "formula": "256*exp(-256)/(exp(-256) + 1) + 1/256",
+              "order_r": 4
+            },
+            {
+              "formula": "4096*exp(-256)/(exp(-256) + 1) + 1/16",
+              "order_r": 6
+            },
+            {
+              "formula": "65536*exp(-256)/(exp(-256) + 1) + 1",
+              "order_r": 8
+            }
+          ],
+          "m": "4",
+          "m4_eighth_reference_piece": "65536*exp(-256)/(exp(-256) + 1)",
+          "m4_exact_fixture": true,
+          "m4_reference_piece_bound": "4*exp(-2)",
+          "moment_order": "8",
+          "n": "4",
+          "p0": "1/(exp(-256) + 1)",
+          "p1": "exp(-256)/(exp(-256) + 1)",
+          "relative_entropy": "1/256",
+          "sin_theta_squared": "(exp(-256) + 1)/(65536*(1 - exp(-256)))",
+          "tail_increment": "1/65536",
+          "tilted_moment": "65536*exp(-256)/(exp(-256) + 1) + 1",
+          "tilted_tail": "exp(-256)/(exp(-256) + 1) + 1/65536"
+        },
+        {
+          "Delta_n": "(1 - exp(-4096))/(exp(-4096) + 1)",
+          "energy_excess": "5/28672",
+          "expected_energy_excess": "5/28672",
+          "expected_relative_entropy": "1/4096",
+          "expected_tilted_moment": "16777216*exp(-4096)/(exp(-4096) + 1) + 1",
+          "expected_tilted_tail": "exp(-4096)/(exp(-4096) + 1) + 1/16777216",
+          "finite_moment_fixture_bound": "2",
+          "lower_even_moments": [
+            {
+              "formula": "64*exp(-4096)/(exp(-4096) + 1) + 1/262144",
+              "order_r": 2
+            },
+            {
+              "formula": "4096*exp(-4096)/(exp(-4096) + 1) + 1/4096",
+              "order_r": 4
+            },
+            {
+              "formula": "262144*exp(-4096)/(exp(-4096) + 1) + 1/64",
+              "order_r": 6
+            },
+            {
+              "formula": "16777216*exp(-4096)/(exp(-4096) + 1) + 1",
+              "order_r": 8
+            }
+          ],
+          "m": "4",
+          "m4_eighth_reference_piece": "16777216*exp(-4096)/(exp(-4096) + 1)",
+          "m4_exact_fixture": true,
+          "m4_reference_piece_bound": "4*exp(-2)",
+          "moment_order": "8",
+          "n": "8",
+          "p0": "1/(exp(-4096) + 1)",
+          "p1": "exp(-4096)/(exp(-4096) + 1)",
+          "relative_entropy": "1/4096",
+          "sin_theta_squared": "(exp(-4096) + 1)/(16777216*(1 - exp(-4096)))",
+          "tail_increment": "1/16777216",
+          "tilted_moment": "16777216*exp(-4096)/(exp(-4096) + 1) + 1",
+          "tilted_tail": "exp(-4096)/(exp(-4096) + 1) + 1/16777216"
+        },
+        {
+          "Delta_n": "(1 - exp(-16))/(exp(-16) + 1)",
+          "energy_excess": "5/448",
+          "expected_energy_excess": "5/448",
+          "expected_relative_entropy": "1/64",
+          "expected_tilted_moment": "1024*exp(-16)/(exp(-16) + 1) + 1",
+          "expected_tilted_tail": "exp(-16)/(exp(-16) + 1) + 1/1024",
+          "finite_moment_fixture_bound": "2",
+          "lower_even_moments": [
+            {
+              "formula": "4*exp(-16)/(exp(-16) + 1) + 1/256",
+              "order_r": 2
+            },
+            {
+              "formula": "16*exp(-16)/(exp(-16) + 1) + 1/64",
+              "order_r": 4
+            },
+            {
+              "formula": "64*exp(-16)/(exp(-16) + 1) + 1/16",
+              "order_r": 6
+            },
+            {
+              "formula": "256*exp(-16)/(exp(-16) + 1) + 1/4",
+              "order_r": 8
+            },
+            {
+              "formula": "1024*exp(-16)/(exp(-16) + 1) + 1",
+              "order_r": 10
+            }
+          ],
+          "m": "5",
+          "m4_eighth_reference_piece": null,
+          "m4_exact_fixture": false,
+          "m4_reference_piece_bound": null,
+          "moment_order": "10",
+          "n": "2",
+          "p0": "1/(exp(-16) + 1)",
+          "p1": "exp(-16)/(exp(-16) + 1)",
+          "relative_entropy": "1/64",
+          "sin_theta_squared": "(exp(-16) + 1)/(1024*(1 - exp(-16)))",
+          "tail_increment": "1/1024",
+          "tilted_moment": "1024*exp(-16)/(exp(-16) + 1) + 1",
+          "tilted_tail": "exp(-16)/(exp(-16) + 1) + 1/1024"
+        },
+        {
+          "Delta_n": "(1 - exp(-256))/(exp(-256) + 1)",
+          "energy_excess": "5/28672",
+          "expected_energy_excess": "5/28672",
+          "expected_relative_entropy": "1/4096",
+          "expected_tilted_moment": "1048576*exp(-256)/(exp(-256) + 1) + 1",
+          "expected_tilted_tail": "exp(-256)/(exp(-256) + 1) + 1/1048576",
+          "finite_moment_fixture_bound": "2",
+          "lower_even_moments": [
+            {
+              "formula": "16*exp(-256)/(exp(-256) + 1) + 1/65536",
+              "order_r": 2
+            },
+            {
+              "formula": "256*exp(-256)/(exp(-256) + 1) + 1/4096",
+              "order_r": 4
+            },
+            {
+              "formula": "4096*exp(-256)/(exp(-256) + 1) + 1/256",
+              "order_r": 6
+            },
+            {
+              "formula": "65536*exp(-256)/(exp(-256) + 1) + 1/16",
+              "order_r": 8
+            },
+            {
+              "formula": "1048576*exp(-256)/(exp(-256) + 1) + 1",
+              "order_r": 10
+            }
+          ],
+          "m": "5",
+          "m4_eighth_reference_piece": null,
+          "m4_exact_fixture": false,
+          "m4_reference_piece_bound": null,
+          "moment_order": "10",
+          "n": "4",
+          "p0": "1/(exp(-256) + 1)",
+          "p1": "exp(-256)/(exp(-256) + 1)",
+          "relative_entropy": "1/4096",
+          "sin_theta_squared": "(exp(-256) + 1)/(1048576*(1 - exp(-256)))",
+          "tail_increment": "1/1048576",
+          "tilted_moment": "1048576*exp(-256)/(exp(-256) + 1) + 1",
+          "tilted_tail": "exp(-256)/(exp(-256) + 1) + 1/1048576"
+        },
+        {
+          "Delta_n": "(1 - exp(-4096))/(exp(-4096) + 1)",
+          "energy_excess": "5/1835008",
+          "expected_energy_excess": "5/1835008",
+          "expected_relative_entropy": "1/262144",
+          "expected_tilted_moment": "1073741824*exp(-4096)/(exp(-4096) + 1) + 1",
+          "expected_tilted_tail": "exp(-4096)/(exp(-4096) + 1) + 1/1073741824",
+          "finite_moment_fixture_bound": "2",
+          "lower_even_moments": [
+            {
+              "formula": "64*exp(-4096)/(exp(-4096) + 1) + 1/16777216",
+              "order_r": 2
+            },
+            {
+              "formula": "4096*exp(-4096)/(exp(-4096) + 1) + 1/262144",
+              "order_r": 4
+            },
+            {
+              "formula": "262144*exp(-4096)/(exp(-4096) + 1) + 1/4096",
+              "order_r": 6
+            },
+            {
+              "formula": "16777216*exp(-4096)/(exp(-4096) + 1) + 1/64",
+              "order_r": 8
+            },
+            {
+              "formula": "1073741824*exp(-4096)/(exp(-4096) + 1) + 1",
+              "order_r": 10
+            }
+          ],
+          "m": "5",
+          "m4_eighth_reference_piece": null,
+          "m4_exact_fixture": false,
+          "m4_reference_piece_bound": null,
+          "moment_order": "10",
+          "n": "8",
+          "p0": "1/(exp(-4096) + 1)",
+          "p1": "exp(-4096)/(exp(-4096) + 1)",
+          "relative_entropy": "1/262144",
+          "sin_theta_squared": "(exp(-4096) + 1)/(1073741824*(1 - exp(-4096)))",
+          "tail_increment": "1/1073741824",
+          "tilted_moment": "1073741824*exp(-4096)/(exp(-4096) + 1) + 1",
+          "tilted_tail": "exp(-4096)/(exp(-4096) + 1) + 1/1073741824"
+        },
+        {
+          "Delta_n": "(1 - exp(-16))/(exp(-16) + 1)",
+          "energy_excess": "5/1792",
+          "expected_energy_excess": "5/1792",
+          "expected_relative_entropy": "1/256",
+          "expected_tilted_moment": "4096*exp(-16)/(exp(-16) + 1) + 1",
+          "expected_tilted_tail": "exp(-16)/(exp(-16) + 1) + 1/4096",
+          "finite_moment_fixture_bound": "2",
+          "lower_even_moments": [
+            {
+              "formula": "4*exp(-16)/(exp(-16) + 1) + 1/1024",
+              "order_r": 2
+            },
+            {
+              "formula": "16*exp(-16)/(exp(-16) + 1) + 1/256",
+              "order_r": 4
+            },
+            {
+              "formula": "64*exp(-16)/(exp(-16) + 1) + 1/64",
+              "order_r": 6
+            },
+            {
+              "formula": "256*exp(-16)/(exp(-16) + 1) + 1/16",
+              "order_r": 8
+            },
+            {
+              "formula": "1024*exp(-16)/(exp(-16) + 1) + 1/4",
+              "order_r": 10
+            },
+            {
+              "formula": "4096*exp(-16)/(exp(-16) + 1) + 1",
+              "order_r": 12
+            }
+          ],
+          "m": "6",
+          "m4_eighth_reference_piece": null,
+          "m4_exact_fixture": false,
+          "m4_reference_piece_bound": null,
+          "moment_order": "12",
+          "n": "2",
+          "p0": "1/(exp(-16) + 1)",
+          "p1": "exp(-16)/(exp(-16) + 1)",
+          "relative_entropy": "1/256",
+          "sin_theta_squared": "(exp(-16) + 1)/(4096*(1 - exp(-16)))",
+          "tail_increment": "1/4096",
+          "tilted_moment": "4096*exp(-16)/(exp(-16) + 1) + 1",
+          "tilted_tail": "exp(-16)/(exp(-16) + 1) + 1/4096"
+        },
+        {
+          "Delta_n": "(1 - exp(-256))/(exp(-256) + 1)",
+          "energy_excess": "5/458752",
+          "expected_energy_excess": "5/458752",
+          "expected_relative_entropy": "1/65536",
+          "expected_tilted_moment": "16777216*exp(-256)/(exp(-256) + 1) + 1",
+          "expected_tilted_tail": "exp(-256)/(exp(-256) + 1) + 1/16777216",
+          "finite_moment_fixture_bound": "2",
+          "lower_even_moments": [
+            {
+              "formula": "16*exp(-256)/(exp(-256) + 1) + 1/1048576",
+              "order_r": 2
+            },
+            {
+              "formula": "256*exp(-256)/(exp(-256) + 1) + 1/65536",
+              "order_r": 4
+            },
+            {
+              "formula": "4096*exp(-256)/(exp(-256) + 1) + 1/4096",
+              "order_r": 6
+            },
+            {
+              "formula": "65536*exp(-256)/(exp(-256) + 1) + 1/256",
+              "order_r": 8
+            },
+            {
+              "formula": "1048576*exp(-256)/(exp(-256) + 1) + 1/16",
+              "order_r": 10
+            },
+            {
+              "formula": "16777216*exp(-256)/(exp(-256) + 1) + 1",
+              "order_r": 12
+            }
+          ],
+          "m": "6",
+          "m4_eighth_reference_piece": null,
+          "m4_exact_fixture": false,
+          "m4_reference_piece_bound": null,
+          "moment_order": "12",
+          "n": "4",
+          "p0": "1/(exp(-256) + 1)",
+          "p1": "exp(-256)/(exp(-256) + 1)",
+          "relative_entropy": "1/65536",
+          "sin_theta_squared": "(exp(-256) + 1)/(16777216*(1 - exp(-256)))",
+          "tail_increment": "1/16777216",
+          "tilted_moment": "16777216*exp(-256)/(exp(-256) + 1) + 1",
+          "tilted_tail": "exp(-256)/(exp(-256) + 1) + 1/16777216"
+        },
+        {
+          "Delta_n": "(1 - exp(-4096))/(exp(-4096) + 1)",
+          "energy_excess": "5/117440512",
+          "expected_energy_excess": "5/117440512",
+          "expected_relative_entropy": "1/16777216",
+          "expected_tilted_moment": "68719476736*exp(-4096)/(exp(-4096) + 1) + 1",
+          "expected_tilted_tail": "exp(-4096)/(exp(-4096) + 1) + 1/68719476736",
+          "finite_moment_fixture_bound": "2",
+          "lower_even_moments": [
+            {
+              "formula": "64*exp(-4096)/(exp(-4096) + 1) + 1/1073741824",
+              "order_r": 2
+            },
+            {
+              "formula": "4096*exp(-4096)/(exp(-4096) + 1) + 1/16777216",
+              "order_r": 4
+            },
+            {
+              "formula": "262144*exp(-4096)/(exp(-4096) + 1) + 1/262144",
+              "order_r": 6
+            },
+            {
+              "formula": "16777216*exp(-4096)/(exp(-4096) + 1) + 1/4096",
+              "order_r": 8
+            },
+            {
+              "formula": "1073741824*exp(-4096)/(exp(-4096) + 1) + 1/64",
+              "order_r": 10
+            },
+            {
+              "formula": "68719476736*exp(-4096)/(exp(-4096) + 1) + 1",
+              "order_r": 12
+            }
+          ],
+          "m": "6",
+          "m4_eighth_reference_piece": null,
+          "m4_exact_fixture": false,
+          "m4_reference_piece_bound": null,
+          "moment_order": "12",
+          "n": "8",
+          "p0": "1/(exp(-4096) + 1)",
+          "p1": "exp(-4096)/(exp(-4096) + 1)",
+          "relative_entropy": "1/16777216",
+          "sin_theta_squared": "(exp(-4096) + 1)/(68719476736*(1 - exp(-4096)))",
+          "tail_increment": "1/68719476736",
+          "tilted_moment": "68719476736*exp(-4096)/(exp(-4096) + 1) + 1",
+          "tilted_tail": "exp(-4096)/(exp(-4096) + 1) + 1/68719476736"
+        }
+      ],
+      "scope": "For any preregistered finite moment ceiling choose fixed m above it.  This is a proof-method no-go, not a Q3LOCK counterexample.",
+      "symbolic_2x2_derivation": {
+        "Delta": "(1 - b)/(b + 1)",
+        "energy_excess_residual": "0",
+        "moment_residual": "0",
+        "p1": "b/(b + 1)",
+        "relative_entropy_residual": "0",
+        "rotated_tail": "b/(b + 1) + 1/z",
+        "sin_squared": "(b + 1)/(z*(1 - b))",
+        "tail_residual": "0"
+      },
+      "uniform_dynamic_gaussian_tail_inferred": false
+    },
+    "gibbs_entropy_tail": {
+      "binary_data_processing": {
+        "contract": "d_bin(q||p)<=S_xi and d_bin(q||p)>=q log(1/p)-log(2)",
+        "d_bin_q_p": "-9*log(-1 + exp(20))/10 - log(10) + 9*log(3)/5 + 20",
+        "reference_p": "exp(-20)",
+        "tilted_q": "1/10",
+        "universal_lower_bound": "2 - log(2)"
+      },
+      "character": {
+        "S_xi": "91/55",
+        "W_xi": "exp(i xi.q)",
+        "both_character_orientations": true,
+        "gibbs_mean_momentum": 0,
+        "identity": "S(W_xi rho W_xi^* || rho)=beta*hbar^2*||xi||^2/(2 chi)",
+        "momentum_shift": "W_xi^* p W_xi=p+hbar xi",
+        "preserved_after_full_H_time_evolution": true
+      },
+      "inputs": {
+        "L": "6",
+        "M_a": "3/2",
+        "a": "2/5",
+        "beta": "5/3",
+        "chi": "11/6",
+        "hbar": "7/5",
+        "support_size": "8",
+        "xi_norm_square": "13/7"
+      },
+      "scope": {
+        "all_exhaustion_uniformity": false,
+        "dynamic_gaussian_tail": false,
+        "fixed_finite_gibbs_character": true,
+        "fixed_support_tail_event": true,
+        "history_word_bound": false
+      },
+      "tail": {
+        "denominator_positive": true,
+        "formula": "q<=min(1,(S_xi+log(2))/(a L^2-log(M_a |S|)))",
+        "log_reference_lower": "72/5 - log(12)",
+        "orientation_bounds": {
+          "q_minus": "(log(36028797018963968) + 91)/(11*(72 - log(248832)))",
+          "q_plus": "(log(36028797018963968) + 91)/(11*(72 - log(248832)))"
+        },
+        "raw_tilted_upper": "(log(36028797018963968) + 91)/(11*(72 - log(248832)))",
+        "reference_upper": "12*exp(-72/5)",
+        "tilted_upper": "(log(36028797018963968) + 91)/(11*(72 - log(248832)))"
+      }
+    },
+    "local_strict_carrier": {
+      "all_exhaustion_common_alpha": false,
+      "bond_kick": {
+        "C_b": "521/35",
+        "M_delta": "1287/245",
+        "M_delta_to_s": "3*sqrt(715)/35",
+        "combined_delta_coefficient": "18/49",
+        "control": "registered centered K_(Y,mu), Y contains N_1(X)",
+        "energy_contract": "e_E(beta_delta A)<=e_(M_delta E)(A)",
+        "form_contract": "B_(+/-delta)^* K_(Y,mu) B_(+/-delta)<=M_delta K_(Y,mu)",
+        "graph_contract": "q_s(beta_delta A)<=M_delta^s q_s(A)",
+        "linear_delta_coefficient": "2/7",
+        "p_commutator": "[p_x,beta_delta(A)]=beta_delta([p_x,A]-delta c sum_(y~x)[q_y,A])",
+        "q_commutator": "[q_x,beta_delta(A)]=beta_delta([q_x,A])",
+        "quadratic_delta_coefficient": "4/49",
+        "shifted_square": "36*S**2/1225 + 12*S*p/35 + p**2",
+        "support_action": "X -> N_1(X) inside fixed Y",
+        "young_hessian": "Matrix([[2/7, -6/35], [-6/35, 18/175]])",
+        "young_majorant": "162*S**2/1225 + 9*p**2/7",
+        "young_residual": "2*(-3*S + 5*p)**2/175"
+      },
+      "continuous_time_split_product_limit": false,
+      "controls_are_distinct": true,
+      "finite_region_subflow_carrier_closed": true,
+      "inputs": {
+        "bond_c": "3/5",
+        "chi": "7/4",
+        "coordination_z": "6",
+        "delta_fixture": "2/7",
+        "exp_mu": "3/2",
+        "graph_power_s": "1/2",
+        "sqrt_gamma": "2/5"
+      },
+      "onsite_subflow": {
+        "commutes_with_onsite_unitary": true,
+        "control": "separate K_Y^os, positive weighted onsite sum",
+        "e_E_isometry": true,
+        "q_s_isometry": true,
+        "strict_C0": true,
+        "support_X_fixed": true
+      },
+      "spectral_energy_fixture": {
+        "A": "Matrix([[0, 0], [0, 1]])",
+        "E": "2",
+        "K": "Matrix([[1, 0], [0, 4]])",
+        "P_E": "Matrix([[1, 0], [0, 0]])",
+        "contracts": "e_E<=E^s max(||AK^-s||,||K^-sA||); q_s<=2e_E+2M E^-s",
+        "e_E": "sqrt(3)/3",
+        "e_E_upper": "sqrt(2)/2",
+        "graph_left": "1/2",
+        "graph_right": "1/2",
+        "norm_bound_M": "1",
+        "q_s": "1",
+        "q_s_upper": "2*sqrt(3)/3 + sqrt(2)",
+        "s": "1/2",
+        "tail_weight_norm": "1/2",
+        "tail_weight_upper": "sqrt(2)/2"
+      },
+      "topology": {
+        "ambient": "B(H_Y)=M(K(H_Y)), Y finite",
+        "bounded_strict_equals_strong_star": true,
+        "bounded_strict_graph_energy_equivalent": true,
+        "control": "arbitrary positive compact-resolvent K_Y>=1",
+        "energy_seminorm": "e_E(A)=max{sup_<psi,Kpsi><=E ||Apsi||, sup_<psi,Kpsi><=E ||A*psi||}",
+        "graph_seminorm": "q_s(A)=||A K_Y^-s||+||K_Y^-s A||",
+        "strict_after_fixture": "1 + sqrt(5)",
+        "strict_before_fixture": "1 + sqrt(5)",
+        "strict_seminorm": "p_C(A)=||A C||+||C A||, C compact"
+      }
+    },
+    "ordered_ground_gap_no_go": {
+      "algebra": "B(K_0) direct-sum B(K_0)",
+      "automatic_broken_sector_GNS_gap": false,
+      "dynamics": "Ad(exp(i t h_0/hbar)) on each summand",
+      "generator": {
+        "continuum_action": "(h_0 f)(x)=x f(x)",
+        "kernel_dimension": 1,
+        "positive_spectrum_accumulates_at_zero": true,
+        "probe_limit": "0",
+        "spectral_probes_1_over_N": [
+          "1/2",
+          "1/4",
+          "1/8",
+          "1/16",
+          "1/32"
+        ],
+        "spectrum": "{0} union [0,1]",
+        "vacuum_action": "h_0 Omega=0"
+      },
+      "gns": {
+        "coercive_gap_estimate_supplied": false,
+        "ground_vector_simple": true,
+        "implementing_spectrum": "{0} union [0,1]",
+        "positive_gap": 0
+      },
+      "hilbert_space": "K_0=C Omega direct-sum L2((0,1),dx)",
+      "order_witness": {
+        "Z": "(1,-1)",
+        "omega_minus_Z": -1,
+        "omega_plus_Z": 1
+      },
+      "scope": "Distinct ordered algebraic ground states do not by themselves supply a uniform excitation or GNS gap.",
+      "states": {
+        "central_supports": [
+          "(1,0)",
+          "(0,1)"
+        ],
+        "disjoint": true,
+        "exact_ground": true,
+        "omega_minus": "Omega vector state on second summand",
+        "omega_plus": "Omega vector state on first summand",
+        "parity_exchange": "summand swap",
+        "pure": true
+      },
+      "two_distinct_pure_disjoint_ordered_ground_states": true
+    },
+    "pure_kick_resolvent_no_go": {
+      "basic_resolvent": "R_mu=(i mu-p_0)^(-1)",
+      "basic_resolvent_image": "A_t=U_t R_mu U_t^*",
+      "cayley_upper_fixture": "2/3",
+      "exact_jump_fixture": "2/3",
+      "exact_spatial_weyl_orbit_jump": "1/abs(mu)",
+      "expected_quadratic_translation_coefficient": "3*G*s*t",
+      "finite_phase_space_weyl_orbit_norm_continuity_criterion": true,
+      "force": "G*R**3",
+      "induced_momentum_center": "3*G*R**2*s*t - 3*G*R*s**2*t + G*s**3*t",
+      "large_R_scaled_limit": "3*G*s*t",
+      "local_strict_BH_carrier_remains_available": true,
+      "mu_fixture": "3/2",
+      "packet": {
+        "center_scale": "3 t G s R^2+O(R)",
+        "centered_momentum_error": "O(R^3/2)",
+        "initial_momentum_scale": "O(R^-1/2)",
+        "relative_error_power": "-1/2",
+        "width": "R^(1/2)"
+      },
+      "potential_kick": "p -> p-t G q^3",
+      "quadratic_translation_coefficient": "3*G*s*t",
+      "scope": "Pure quartic potential subflow versus the standard finite-dimensional resolvent algebra only; not a no-go for local-strict or other carriers.",
+      "standard_resolvent_algebra_invariant_under_pure_quartic_kick": false,
+      "symbols": {
+        "kick_time": "t",
+        "mu": "mu"
+      },
+      "translated_force_difference": "-3*G*R**2*s + 3*G*R*s**2 - G*s**3",
+      "unital_resolvent_strict_equals_norm": true,
+      "unsplit_quartic_resolvent_algebra_invariance_decided": false
+    },
+    "q3_force": {
+      "F0": "(2*g*q0**3 + 6*lambda*q0**3 - 3*lambda*q0**2*q1 - 3*lambda*q0**2*q2 - 3*lambda*q0**2*q4 + 2*lambda*q0*q1**2 + 2*lambda*q0*q2**2 + 2*lambda*q0*q4**2 - lambda*q1**3 - lambda*q2**3 - lambda*q4**3)/2",
+      "G": "g + 3*lambda",
+      "G_fixture": "51/35",
+      "coordinate_ray": {
+        "force": "R**3*(g + 3*lambda)",
+        "hessian": "3*R**2*(g + 3*lambda)",
+        "potential": "R**4*(g + 3*lambda)/4"
+      },
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "expected_F0": "(2*g*q0**3 + 6*lambda*q0**3 - 3*lambda*q0**2*q1 - 3*lambda*q0**2*q2 - 3*lambda*q0**2*q4 + 2*lambda*q0*q1**2 + 2*lambda*q0*q2**2 + 2*lambda*q0*q4**2 - lambda*q1**3 - lambda*q2**3 - lambda*q4**3)/2",
+      "inputs": {
+        "Q3_dimension": 3,
+        "g": "3/5",
+        "lambda": "2/7"
+      },
+      "neighbors_zero": [
+        1,
+        2,
+        4
+      ],
+      "potential": "g*(q0**4 + q1**4 + q2**4 + q3**4 + q4**4 + q5**4 + q6**4 + q7**4)/4 + lambda*((q0 - q1)**2*(q0**2 + q1**2) + (q0 - q2)**2*(q0**2 + q2**2) + (q0 - q4)**2*(q0**2 + q4**2) + (q1 - q3)**2*(q1**2 + q3**2) + (q1 - q5)**2*(q1**2 + q5**2) + (q2 - q3)**2*(q2**2 + q3**2) + (q2 - q6)**2*(q2**2 + q6**2) + (q3 - q7)**2*(q3**2 + q7**2) + (q4 - q5)**2*(q4**2 + q5**2) + (q4 - q6)**2*(q4**2 + q6**2) + (q5 - q7)**2*(q5**2 + q7**2) + (q6 - q7)**2*(q6**2 + q7**2))/4",
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "quartic_packet_c0_no_go": {
+      "axial_quartic": {
+        "D_a": "-G*a**4/4 + G*a**3*q - 3*G*a**2*q**2/2 + G*a*q**3",
+        "D_a_cubic_coefficient": "G*a",
+        "expected_D_a_cubic_coefficient": "G*a",
+        "potential": "G*q**4/4"
+      },
+      "conclusion": {
+        "basic_momentum_resolvent_point_norm_C0": false,
+        "exact_norm_jump_claimed": false,
+        "full_unsplit_positive_liminf_only": true,
+        "raw_momentum_weyl_point_norm_C0": false,
+        "unsplit_resolvent_algebra_invariance_decided": false
+      },
+      "delta_convention": "delta(A)=(i/hbar)[h,A]",
+      "delta_squared_convention": "delta^2(A)=delta(delta(A))",
+      "exact_derivations": {
+        "R_0": "delta R_0=R_0 F_0 R_0",
+        "R_0_second": "delta^2 R_0=2R_0F_0R_0F_0R_0+(1/(2chi))R_0 sum_j{p_j,partial_jF_0}R_0",
+        "W_a": "delta W_a=(i/hbar) D_a W_a",
+        "W_a_second": "delta^2 W_a=(i/(2 chi hbar)) sum_j{p_j,partial_j D_a}W_a -hbar^-2 D_a^2 W_a",
+        "resolvent_sign_anchor": "[q_0,R_0]=-i hbar R_0^2"
+      },
+      "graph_endpoint": {
+        "K_degree_R": "4",
+        "K_three_halves_degree_R": "6",
+        "anisotropic_max_degree": 6,
+        "contract": "||delta^2(A) K^-3/2||<infinity",
+        "fixed_translation_graph_equivalence_required": true,
+        "labels": [
+          "W_a",
+          "R_0"
+        ]
+      },
+      "packet": {
+        "psi_R": "exp(-i R p_0/hbar) psi",
+        "raw_weyl_scaled_limit": "R^-3||delta W_a psi_R||->|a|G/hbar",
+        "resolvent_scaled_limit": "R^-3||delta R_0 psi_R||->G||R_0^2 psi||",
+        "resolvent_square_vector_norm_fixture": "3/5",
+        "rows": [
+          {
+            "C_A": "5/2",
+            "M_psi": "4/3",
+            "d_A": "102/245",
+            "label": "raw_momentum_weyl",
+            "liminf_lower": "7803/300125",
+            "main_term": "15606/300125",
+            "tau": "153/1225",
+            "tau_threshold": "306/1225",
+            "taylor_remainder": "7803/300125"
+          },
+          {
+            "C_A": "7/3",
+            "M_psi": "5/4",
+            "d_A": "153/175",
+            "label": "basic_momentum_resolvent",
+            "liminf_lower": "140454/1071875",
+            "main_term": "280908/1071875",
+            "tau": "1836/6125",
+            "tau_threshold": "3672/6125",
+            "taylor_remainder": "140454/1071875"
+          }
+        ]
+      },
+      "scaling": {
+        "delta_squared_vector_bound_degree_R": 6,
+        "remainder_contract": "tau d_A-(tau^2/2) C_A M_psi; t_R^2 O(R^6)=O(tau^2)",
+        "taylor_remainder_total_degree_R": "0",
+        "time_degree_R": "-3",
+        "time_squared_degree_R": "-6",
+        "time_t_R": "tau R^-3"
+      },
+      "scope": {
+        "all_alternative_carriers_rejected": false,
+        "full_Q3LOCK_dynamics_counterexample": false,
+        "local_strict_C0_rejected": false
+      },
+      "symbols": {
+        "hbar": "hbar",
+        "translation": "a"
+      }
+    }
+  },
+  "exploration_id": "EXP-000804",
+  "failed": 0,
+  "negative_ids": [
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP"
+  ],
+  "next_gate": "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "passed": 189,
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_number": "R-167",
+  "result_version": "v1.7",
+  "schema": "tect/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-primary-result/1.0",
+  "scope": {
+    "C6_advanced": false,
+    "CP1_complete": false,
+    "Pre_A_complete": false,
+    "Sector_A_complete": false,
+    "all_exhaustion_two_orientation_history_common_alpha": false,
+    "broken_sector_GNS_gap_coercivity": false,
+    "continuum_regulator_removal": false,
+    "entropy_finite_moment_dynamic_gaussian_tail": false,
+    "finite_volume_local_strict_energy_subflow_carrier": true,
+    "fixed_gibbs_character_entropy_tilted_tail": true,
+    "mass_gap": false,
+    "ordered_ground_doublets_imply_GNS_gap": false,
+    "physical_empty_space_reference": false,
+    "pure_quartic_standard_resolvent_algebra_invariance": false,
+    "raw_weyl_basic_resolvent_point_norm_C0": false
+  },
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split.py": "e4901ef7cd1b78e2976d7ac8ff7dbc066c60801b9588b2787164ba6b477a0dc5",
+    "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md": "5beab888a16d12ff1af1b5bba9ad40fe12f99d0ba467e19d7ae372e8da38788e",
+    "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-manifest.json": "ad59c27985a3bd8c098ba6289e4e4dde0614fc92a4029d320f9264b03625ad0d",
+    "strategy/pre-a-cp1-st8-q3lock-universal-orbit-smear-ground-doublet-route-split-manifest.json": "dbe6e0a1d169e97d4c0a40d8129d44858828f2a43872af42fa445b9a0925a0aa"
+  },
+  "summary": {
+    "authority_status": "COMPLETE",
+    "failed": 0,
+    "passed": 189,
+    "total": 189
+  },
+  "total": 189,
+  "verdict": "PASS"
+}

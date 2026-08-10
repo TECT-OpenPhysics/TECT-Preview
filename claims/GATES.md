@@ -662,14 +662,95 @@ all-shape exhaustion Cauchy, identify the finite Hamiltonian generator and the
 fixed-beta phase KMS quotient representations, and then determine the
 spectral gap in each selected broken ground-state GNS representation.
 
-**Status:** OPEN (2026-08-10). R-167 v1.6 supplies two useful precursors: all
-fixed finite raw-word moments on the selected tangent nets, and a separate
-beta-independent product-type orbit-smear carrier with two distinct ground
-states. It does not supply a quasi-local net, all-exhaustion uniqueness,
-canonical momentum/full Weyl data, polynomial local-generator closure,
-phase-KMS quotient identification, or a broken-sector GNS-gap lower bound.
-Those are the live requirements before physical mass, continuum, empty-space,
-C6, CP1 or Pre-A conclusions.
+**Status:** OPEN HISTORICALLY; SPLIT AND SUPERSEDED AS THE ACTIVE SUCCESSOR
+(2026-08-11). R-167 v1.6 supplies two useful precursors: all fixed finite
+raw-word moments on the selected tangent nets, and a separate beta-independent
+product-type orbit-smear carrier with two distinct ground states. R-167 v1.7
+shows that the remaining dynamics and spectral-gap obligations are logically
+independent. The dynamics side is now
+`PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA`;
+the sector-gap side is
+`PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY`. This historical
+combined gate is not closed and must not be cited as one finished theorem.
+
+### **PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER**
+
+**Statement:** On every fixed finite ambient region, use
+`B(H_Y)=M(K(H_Y))` with its bounded local-strict topology. Prove its
+equivalence on norm-bounded sets with strong-star, compact-resolvent graph
+seminorms and two-sided energy-constrained seminorms. Show that the exact
+onsite subflow is strict-C0 and graph/energy isometric for its commuting
+onsite control, while the exact commuting all-bond kick is strict-C0,
+expands support by one layer and obeys the centered energy-form estimate in a
+common ambient region.
+
+**Status:** CLOSED IN THE FINITE-REGION SUBFLOW SCOPE (2026-08-11).
+`EXP-000804` / R-167 v1.7 proves the topology equivalence and the exact
+subflow bounds. For `0<s<=1/2`,
+`e_E(A)<=E^s max(||AK^(-s)||,||K^(-s)A||)` and
+`q_s(A)<=2e_E(A)+2||A||E^(-s)`. For `0<|delta|<=1`, the registered
+centered bond control gives
+`e_E(beta_delta A)<=e_(M_delta E)(A)` and
+`q_s(beta_delta A)<=M_delta^s q_s(A)`. This is not one global multiplier
+strict topology, a split-product limit, an all-exhaustion Cauchy theorem or a
+quasi-local common alpha.
+
+### **PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND**
+
+**Statement:** In one exact finite-volume Gibbs system, compute the relative
+entropy of both configuration-character orientations and use binary data
+processing to control an evolved coordinate-tail projection.
+
+**Status:** CLOSED AT FIXED FINITE VOLUME (2026-08-11). For
+`A=W_xi`, time reversal and the exact momentum shift give
+`S(A rho A^*||rho)=S(A^*rho A||rho)=beta hbar^2||xi||^2/(2chi)`,
+also after the full Hamiltonian evolution. If `p=rho(E)` and `q_+/-`
+is either tilted tail, then
+`q_+/-<=min(1,(S_xi+log 2)/log(1/p))`. Under
+`p<=M_a|S|exp(-aL^2)` this is only `O(L^(-2))`, so it does not
+close the dynamic Gaussian history or all-exhaustion gate.
+
+### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
+
+**Statement:** Starting from the finite-region local-strict carrier, construct
+compatible exhaustion-level energy/state seminorms and prove a volume- and
+source-uniform two-orientation estimate for every partial split-product
+history and its adjoint. Remove the coordinate cutoff without losing the
+history tail, prove all-shape exhaustion Cauchy, group/star/product/inverse
+closure, and identify the exact zero-source finite-Hamiltonian generator and
+both fixed-beta phase KMS quotient representations on one noncollapsing
+spatial oscillator algebra.
+
+**Status:** OPEN (2026-08-11). R-167 v1.7 supplies the finite-region
+local-strict carrier and exact subflow control, but the current bounded-cutoff
+corridor pays `exp(C L^2)`. The exact Gibbs character entropy bound gives
+only an inverse-logarithmic tail. The registered entropy/finite-moment
+fixture proves that those inputs cannot be upgraded automatically to a
+Gaussian history estimate. The missing target is a uniform bound for
+`phi_0(P^*EP)+phi_0(PEP^*)` and its
+`(V-V_L)^2`-weighted analogue for every partial history, or a
+state-weighted all-bond resummation avoiding the exponential corridor loss.
+No exact Q3LOCK dynamics nonexistence is asserted.
+
+### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
+
+**Statement:** After the ordered ground states have been identified in the
+two broken-sector GNS representations of the sought common oscillator
+algebra, prove a positive sectorwise spectral coercivity estimate on one
+dense invariant core:
+
+`-i hbar omega(A^*delta(A)) >= Delta[omega(A^*A)-|omega(A)|^2]`
+
+with `Delta>0`, separately in both parity-related sectors.
+
+**Status:** OPEN (2026-08-11). R-167 v1.6 proves two distinct algebraic
+ground states only on the categorical orbit-smear carrier. R-167 v1.7 gives
+an exact system with two pure, disjoint, parity-related ordered ground states,
+simple ground vectors and a fixed central order witness, while each
+implementing spectrum is gapless. Distinct order and ground-state existence
+therefore do not supply the required coercive estimate. This gate is
+independent of the common-alpha history gate and does not license a physical
+mass-gap claim.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 

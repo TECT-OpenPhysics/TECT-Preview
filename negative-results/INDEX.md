@@ -5,12 +5,16 @@
 
 Authorities: `negative-results/registry.md`.
 
-**322 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 251 · retraction: 5
+**326 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 255 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-raw-weyl-basic-resolvent-quartic-point-norm-c0) | no_go | make the exact unsplit quartic onsite flow point-norm continuous on an invariant concrete C-star carrier containing a raw momentum Weyl or basic momentum resolvent |
+| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-pure-quartic-potential-resolvent-algebra-invariance) | no_go | use the pure Q3 quartic potential kick as an internal automorphism of the full finite-site resolvent algebra |
+| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-ordered-ground-doublets-automatic-gns-gap) | no_go | infer a positive broken-sector GNS gap from two distinct ordered algebraic ground states, parity exchange, a fixed order witness and simple ground vectors |
+| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-entropy-finite-moment-dynamic-gaussian-tail-inference) | no_go | promote small relative entropy, all-coefficient Gaussian reference moments and any fixed finite list of tilted moments to the dynamic Gaussian history tail required by the cutoff… |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-onsite-qp-lipschitz-stability) | no_go | propagate the ordinary bounded `q/p` commutator Lipschitz class through the exact quartic onsite flow |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity) | no_go | delete the centered spatial weight from the cubic graph multiplier while keeping a support-location-uniform constant |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-symmetric-sandwich-only-thermodynamic-cauchy) | no_go | infer a thermodynamic automorphism from convergence only in a symmetric energy sandwich |
@@ -32,10 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIRST-MOMENT-AUTOMATIC-POWER-UPGRADE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-first-moment-automatic-power-upgrade) | no_go | square the first weighted-energy form cone to obtain higher weighted-energy moments |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-faithful-representation-strongstar-abstract-cstar-inference) | no_go | promote strong-star convergence in one selected faithful representation to a representation-independent C-star limit |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-DUHAMEL-INNER-PRODUCT-ONLY-COMMON-DYNAMICS`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-duhamel-inner-product-only-common-dynamics) | no_go | infer strong-star common dynamics from convergence of an operator and its adjoint only in the Kubo--Mori/Duhamel inner product |
-| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-critical-one-sided-energy-damped-leibniz-onsite-stability) | no_go | close the critical onsite step with one fixed Weyl-containing C-star-Leibniz seminorm that dominates a one-sided `p`-commutator |
-| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-coordinate-cutoff-half-modular-strip-absolute-closure) | no_go | obtain fixed-beta uniform half-modular-strip multipliers from the bounded coordinate-cutoff bond and a connected absolute expansion |
-| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONVEXITY-ONLY-WEIGHTED-COMMUTATOR-SIGN`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-convexity-only-weighted-commutator-sign) | no_go | use quartic convexity in the `0<=lambda<=2g` subregime alone to obtain the energy/KMS-weighted commutator sign needed for spatial Cauchy |
-| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-configuration-cylinder-canonical-momentum-generator) | no_go | infer a canonical momentum or polynomial CCR generator from bounded Euclidean configuration-cylinder data alone |
 
 Search without loading the full registry:
 
