@@ -8,24 +8,26 @@
   "parent_explorations": [
     "EXP-000791",
     "EXP-000807",
-    "EXP-000808"
+    "EXP-000808",
+    "EXP-000810"
   ],
-  "exploration_id": "EXP-000810",
+  "exploration_id": "EXP-000812",
   "correction_exploration_ids": [
     "EXP-000808"
   ],
   "result_id": "PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
-  "result_version": "v1.1",
+  "result_version": "v1.2",
   "result_number": "R-168",
   "claim_bearing": false,
   "negative_ids": [
     "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
-    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR",
+    "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE"
   ],
   "reused_negative_ids": [
     "NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION"
   ],
-  "authority": "R-168 v1.1 cumulatively retains the v1.0/EXP-000807 schema and current-checkpoint audit plus the EXP-000808 hardening correction. It proves from the exact hash-pinned current M1-v0, M2-v0 and M5-v0 candidate records that the map-only admitted set is empty. More strongly, the frozen all-hard-rows-PASS rule shows that a hypothetical new version adding only a response map while preserving law, state, reference, regulator and other non-map structures still yields no survivor: M1 retains D01 FAIL and D02 NOT_ADMITTED, M2 retains D03/D05/D06/D08 non-PASS, and M5 retains D04/D05 FAIL. Repairs using new kinetic, state, law, regulator, compact or gauge data are not map-only and require a substantively new candidate version. R-168 v1.1 also proves the exact 48-component finite-torus M2 Gaussian fingerprint and the retrospective response-map underdetermination. PA-M2-CI8-RS-DISPERSION-MAP-v1 remains DESIGN_ONLY and NOT_CREATED. No candidate, admitted map, prediction, target, freeze, tag, score or selection is created.",
+  "authority": "R-168 v1.2 cumulatively retains the v1.0 protocol/hardening and every v1.1 current-version map-empty-set and 48-component fingerprint result. At every finite regulated Lane-Q volume, adding +(V/2)d(t)J^2 I to a fixed linear probe family leaves H(0), H prime(0), the zero-source state/spectrum and the fingerprint fixed while shifting +V^-1 F_beta double-prime(0) and the ground-energy curvature by exactly d(t). Therefore a linear source alone cannot identify the physical second-order stiffness response. A fail-closed minimum physical-response successor contract validator passes a schema-only synthetic fixture, and the formal schema child is now registered as a syntactic and declared-binding contract only. PA-M2-CI8-RS-DISPERSION-MAP-v1 remains DESIGN_ONLY and NOT_CREATED; all physical-response, candidate, error-budget, external-freeze and parent gates remain open.",
   "audited_checkpoint": {
     "commit": "99157442831c0e44d425b5d5f8cd78856c57da53",
     "date": "2026-08-11",
@@ -178,14 +180,16 @@
     "requirement": "At least one actual microscopic contestant must acquire an admitted microscopic-to-observable map and a nonempty prediction derived without the holdout target, together with a complete per-parameter common-input ledger.",
     "status": "OPEN: THE CURRENT ADMITTED SET IS EMPTY"
   },
-  "status": "R-168 v1.1 THEOREM-READY: v1.0 PROTOCOL RETAINED; CURRENT-VERSION MAP SET EMPTY; GAUSSIAN FINGERPRINT CLOSED; M2 PHYSICAL RESPONSE/ERROR, CRYPTOGRAPHIC REMOTE VERIFICATION AND PARENT PRE-A GATES OPEN",
+  "status": "R-168 v1.2 THEOREM-READY AND FORMALIZED FOR FINITE-REGULATOR LINEAR-PROBE NONIDENTIFIABILITY AND THE HARDENED MINIMUM-CONTRACT SYNTAX/DECLARED-BINDING SCHEMA; M2 PHYSICAL RESPONSE/ERROR, ACTUAL CANDIDATE, CRYPTOGRAPHIC REMOTE VERIFICATION AND PARENT PRE-A GATES OPEN",
   "closed_subgates": [
     "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
     "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
     "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
     "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
     "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
-    "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
+    "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+    "PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY",
+    "PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA"
   ],
   "open_gates": [
     "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
@@ -196,8 +200,8 @@
     "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
   ],
   "route_status": {
-    "closed_scope": "The v1.0 machine schema/provenance/current-checkpoint audit plus the exact current-version M1/M2/M5 map-only empty set and the 48-component finite-torus Gaussian M2 fingerprint.",
-    "not_closed": "No physical M2 response channel or controlled error bound, M2-v1 candidate, cryptographic custodian-signature verification, independent remote commit/tag/ref verification, real target commitment, official freeze record, annotated tag, admitted microscopic map, frozen candidate prediction, score, candidate selection, physical law, Sector A, or Pre-A exit.",
+    "closed_scope": "The v1.0 machine schema/provenance/current-checkpoint audit, the v1.1 current-version map-only empty set and 48-component mathematical fingerprint, the finite-regulator fixed-linear-probe second-order response nonidentifiability theorem, and the formally registered schema-only minimum successor contract.",
+    "not_closed": "No physical M2 response channel or controlled error bound, actual M2-v1 candidate, compact/gauge source law, selected state, control map, all-PASS rerun, cryptographic remote verification, real target commitment, freeze, prediction, score, candidate selection, physical law, Sector A, or Pre-A exit.",
     "parent_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
     "external_gate": "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
     "internal_gate": "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
@@ -213,25 +217,28 @@
     "pages": 15,
     "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v1.9 / R-168 v1.0 gate-level synthesis source/PDF pair was issued only after the manifest, certificate, primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed.",
     "visual_qa": "All 15 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 15 nonempty pages.",
-    "v1_1_pdf_policy": "No intermediate R-168 v1.1 PDF is issued by this additive four-file package. A later logical gate-level synthesis may be issued only after formal, independent and integrated verification."
+    "v1_1_pdf_policy": "No intermediate R-168 v1.1 PDF is issued by this additive four-file package. A later logical gate-level synthesis may be issued only after formal, independent and integrated verification.",
+    "v1_2_pdf_policy": "No intermediate R-168 v1.2 PDF was issued by the four-file proof-first package. The formal authorities and integrated verifier are now present. At the proof-first stage the later combined v2.1/v1.2 gate-level checkpoint was pending full render and release QA; that checkpoint is now issued."
   },
   "verification": {
-    "proof_grade": "IN DEVELOPMENT",
+    "proof_grade": "R-168 V1.2 SCOPED CHILDREN FORMALLY ISSUED AND STRICTLY VERIFIED; PHYSICAL-RESPONSE, EXTERNAL-FREEZE, ROUND-1, C6, CP1, PHYSICAL SECTOR A AND PRE-A PARENTS REMAIN OPEN",
     "primary_script": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py",
     "independent_script": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py",
     "integrated_script": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py",
     "certificate": "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md"
   },
-  "no_overclaim": "R-168 v1.1 retains the v1.0 schema-shape boundary and adds an exact current-version map-empty-set proof, the stronger frozen-all-PASS map-only repair no-go, a retrospective missing-map underdetermination theorem, a mathematical finite-torus Gaussian fingerprint, and a DESIGN_ONLY successor schema. It does not create PA-M2-CI8-RS-DISPERSION-MAP-v1 or any candidate, admitted map, physical response channel, error-controlled physical prediction, target, freeze, tag, score or selection. A candidate that adds kinetic, state, law, regulator, compact or gauge data is substantively new and must rerun all gates. Nothing here verifies a signature or remote ref, fixes nature's functional, proves a physical vacuum or below-empty sign, or closes C6, CP1, physical Sector A, or Pre-A.",
+  "no_overclaim": "R-168 v1.2 retains every narrower v1.0/v1.1 result and adds only an exact finite-regulator source-contact nonidentifiability theorem and a schema-only minimum physical-response successor contract. The synthetic all-PASS and error-margin fixture is a validator oracle, not a candidate. It does not create PA-M2-CI8-RS-DISPERSION-MAP-v1 or any candidate, compact/gauge law, state, admitted map, physical response, error-controlled prediction, target, freeze, tag, score or selection. The physical response gate, every external gate, the parent Round-1 gate, C6, CP1, physical Sector A and Pre-A remain open.",
   "prior_exploration_ids": [
     "EXP-000807",
-    "EXP-000808"
+    "EXP-000808",
+    "EXP-000810"
   ],
   "prior_negative_ids": [
-    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
   ],
   "new_negative_ids": [
-    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+    "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE"
   ],
   "current_version_map_only_audit": {
     "closed_child_id": "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
@@ -521,18 +528,19 @@
     "no_overclaim": "A design schema is not a candidate record. The hypothetical ID is NOT_CREATED and carries no admitted map, prediction, target, freeze, tag, score or selection."
   },
   "new_formal_authority_placeholders": {
-    "exploration_id": "EXP-000810",
+    "exploration_id": "EXP-000812",
     "closed_child_ids": [
-      "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
-      "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
+      "PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY",
+      "PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA"
     ],
     "negative_ids": [
-      "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+      "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE"
     ],
     "open_gate_ids": [
       "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
     ],
-    "release_rule": "--staged may report these authorities missing while the four-file theorem package is assembled; a non-staged release requires the exploration, result, gate and negative authorities."
+    "result": "R-168 v1.2",
+    "release_rule": "Historical proof-first rule: staged verification was permitted to report the exploration, result, both closed-child gate sections and negative authority missing during four-file assembly. All are now registered. The physical parent remains OPEN."
   },
   "m2_v1_successor_hostile_fixtures": {
     "v1_0_freeze_schema_hostile_count_preserved": 28,
@@ -565,7 +573,8 @@
       "map_only_survivor_fabricated": "MAP_ONLY_SURVIVOR_FALSE_PROMOTION"
     },
     "checks": "Reject deletion or softening of the all-PASS rule, promotion of the exact M1/M2/M5 residual cells, removal of regulator preservation from the map-only scope, and fabrication of a survivor.",
-    "total_hostile_class_count_with_v1_0_and_successor": 46
+    "total_hostile_class_count_with_v1_0_and_successor": 46,
+    "total_hostile_class_count_with_all_layers": 63
   },
   "v2_checkpoint_synthesis": {
     "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
@@ -576,5 +585,332 @@
     "pages": 10,
     "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v2.0 / R-168 v1.1 gate-level synthesis source/PDF pair was issued only after the primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed.",
     "visual_qa": "All 10 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 10 nonempty pages."
+  },
+  "m2_linear_probe_second_order_response_nonidentifiability": {
+    "closed_child_id": "PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY",
+    "negative_id": "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE",
+    "scope": "finite-dimensional finite-volume regulated Lane-Q source families at finite beta and beta=infinity",
+    "theorem": "For H_d(t,J)=H(t)-JQ+(V/2)d(t)J^2 I, every target-blind C2 d leaves H_d(t,0)=H(t) and partial_J H_d(t,0)=-Q. The scalar contact factors exactly from the partition function, so with F_beta=-beta^-1 log Z the helicity-like curvature +V^-1 partial_J^2 F_beta shifts by +d(t). The same c-number shift moves +V^-1 partial_J^2 E_0 by +d(t) wherever the ground branch is stable.",
+    "sign_convention": {
+      "free_energy": "F_beta(J)=-beta^-1 log Tr exp[-beta H(J)]",
+      "helicity_like_response": "+V^-1 d_J^2 F_beta(J)|J=0",
+      "scalar_susceptibility": "-V^-1 d_J^2 F_beta(J)|J=0",
+      "consequence": "the same positive contact shifts helicity curvature by +d and scalar susceptibility by -d"
+    },
+    "fraction_fixture": {
+      "volume": "7",
+      "beta": "3/2",
+      "source_step": "1/5",
+      "d_left": "5/7",
+      "d_right": "11/7",
+      "delta_d": "6/7",
+      "free_energy_difference_at_step": "3/25",
+      "boltzmann_exponent_shift_at_step": "-9/50",
+      "normalized_curvature_left": "5/7",
+      "normalized_curvature_right": "11/7",
+      "normalized_curvature_shift": "6/7",
+      "ground_branch_indices_minus_zero_plus": [
+        0,
+        0,
+        0
+      ]
+    },
+    "fixed_data": [
+      "zero-source Hamiltonian",
+      "first source derivative -Q",
+      "zero-source state and spectrum",
+      "48-component mathematical fingerprint"
+    ],
+    "physical_boundary": "A scalar J*phi source defines a real-scalar susceptibility, not automatically the common physical helicity or superfluid-density response. The full second-order probe/contact convention, compact or gauge action, state/reference, control map, units, limit order and error budget remain required.",
+    "candidate_created": false,
+    "physical_response_gate_closed": false
+  },
+  "m2_physical_response_successor_minimum_contract_schema": {
+    "closed_child_id": "PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA",
+    "schema": "tect/pre-a-m2-ci8-physical-response-successor-minimum-contract/1.1",
+    "status": "FORMALIZED SYNTACTIC AND DECLARED-BINDING SCHEMA COMPLETE; PHYSICAL-RESPONSE AND ROUND-1 PARENTS OPEN",
+    "fixture_only": true,
+    "candidate_created": false,
+    "root_fields": [
+      "schema",
+      "contract_id",
+      "candidate_id",
+      "parent_candidate_id",
+      "status",
+      "fixture_only",
+      "candidate_created",
+      "version_delta",
+      "physical_control_map",
+      "probe_contract",
+      "state_reference_contract",
+      "response_definition",
+      "estimand_binding",
+      "critical_prediction",
+      "error_budget",
+      "common_input_ledger",
+      "hard_row_rerun",
+      "verification",
+      "prospective_firewall",
+      "no_overclaim"
+    ],
+    "artifact_ref_fields": [
+      "path",
+      "sha256",
+      "role",
+      "media_type"
+    ],
+    "substantive_change_enum": [
+      "SECOND_ORDER_SOURCE_LAW",
+      "COMPACT_OR_GAUGE_ACTION",
+      "STATE_REFERENCE_CHANGE",
+      "PHYSICAL_CONTROL_MAP",
+      "REGULATOR_OR_LIMIT_CHANGE",
+      "ERROR_BOUND_PROOF",
+      "MICROSCOPIC_MAP_ONLY"
+    ],
+    "mandatory_substantive_changes": [
+      "SECOND_ORDER_SOURCE_LAW",
+      "COMPACT_OR_GAUGE_ACTION",
+      "STATE_REFERENCE_CHANGE",
+      "PHYSICAL_CONTROL_MAP",
+      "REGULATOR_OR_LIMIT_CHANGE",
+      "ERROR_BOUND_PROOF"
+    ],
+    "required_sections": [
+      "unique substantive-change enum with all six mandatory non-map-only changes and artifact-bound change evidence",
+      "target-blind physical control map r(t) with artifact ref and source-ID binding",
+      "second-order source law, linear probe and quadratic contact as exact role-bound artifacts",
+      "compact or gauge action, configuration and winding/flux law as an exact role-bound artifact",
+      "state, phase, reference, regulator, physical modes and state-existence artifact",
+      "structured positive-curvature helicity response and exact ordered limit enum",
+      "candidate-neutral estimand, role-bound raw estimator, units and canonical reduced positive rational margin",
+      "candidate-bound non-placeholder critical prediction",
+      "six-term error budget; each term binds a script, run JSON and unique existing result key; composite evidence is distinct",
+      "unique ledger row/source IDs and section-source subsets under an exact source firewall",
+      "order-insensitive exact D00-D09 PASS set",
+      "distinct primary, independent and integrated Python verifier artifacts",
+      "external commitment and remote verification remain external and absent"
+    ],
+    "artifact_roles": [
+      "SOURCE_LAW",
+      "LINEAR_PROBE",
+      "QUADRATIC_CONTACT",
+      "COMPACT_OR_GAUGE_ACTION",
+      "PHYSICAL_CONTROL_MAP",
+      "STATE_EXISTENCE",
+      "RESPONSE_MAP",
+      "RAW_ESTIMATOR",
+      "PROOF",
+      "VERIFIER_PRIMARY",
+      "VERIFIER_INDEPENDENT",
+      "VERIFIER_INTEGRATED",
+      "ERROR_SCRIPT",
+      "ERROR_RUN"
+    ],
+    "artifact_policy": "Every ref has exact path, sha256, role and media_type fields; path must be normalized repository-relative POSIX, contain no embedded NUL, have at most 4096 characters, use exact case-sensitive on-disk segment spelling, contain no segment ending in a space or dot, exist now, round-trip exactly through resolved repository-relative POSIX spelling, match its normalized SHA-256, and satisfy its role-specific root, suffix and media-type policy. PurePath, resolve, directory listing, is_file, stat, hash and open OSError, ValueError and RuntimeError failures are caught as structured rejection.",
+    "structured_enums": {
+      "quadratic_contact": "DIAMAGNETIC_CONTACT_TERM",
+      "compact_or_gauge_action": "COMPACT_U1_GAUGE_ACTION",
+      "response": "HELICITY_FREE_ENERGY_CURVATURE",
+      "limit_order": [
+        "SOURCE_TO_ZERO",
+        "THERMODYNAMIC_LIMIT",
+        "REGULATOR_REMOVAL",
+        "CRITICAL_LIMIT_FROM_ORDERED_SIDE"
+      ],
+      "prediction": "CRITICAL_EXPONENT_PREDICTION",
+      "rejected_placeholders": [
+        "ABSENT",
+        "N/A",
+        "NA",
+        "NONE",
+        "NOT_AVAILABLE",
+        "NOT_CREATED",
+        "NOT_SUPPLIED",
+        "PLACEHOLDER",
+        "TBD",
+        "UNSPECIFIED"
+      ]
+    },
+    "canonical_positive_rational_grammar": "[1-9][0-9]*(?:/[1-9][0-9]*)? with at most 128 characters, coprime numerator/denominator and slash-form denominator at least 2; denominator-one values use canonical integer spelling. No decimals, whitespace, leading zeros, sign, zero, denominator one in slash form or unreduced form; conversion ValueError is caught.",
+    "input_firewall": {
+      "allowed_classes": [
+        "CALIBRATION",
+        "DERIVED",
+        "INSERTED",
+        "MATCHED",
+        "PREDICTED"
+      ],
+      "rejected_classes": [
+        "VISIBLE_VALIDATION",
+        "NOT_AVAILABLE"
+      ],
+      "forbidden_source_tokens": [
+        "TARGET",
+        "HOLDOUT",
+        "DISCOVERY",
+        "FORBIDDEN"
+      ],
+      "allowed_set_comparison": "order-insensitive exact equality to unique ledger source IDs",
+      "section_binding": "every declared section source-ID list is a nonempty unique subset of ledger source IDs",
+      "semantic_text_firewall": "physical_control_map physical_variable/r_of_t/domain/scaling_window and critical_prediction predicted_relation/scaling_window/corrections reject placeholder values and TARGET, HOLDOUT, DISCOVERY or FORBIDDEN tokens."
+    },
+    "verification_contract": "Three exact, distinct, current .py refs under codes/ are required for primary, independent and integrated roles; paths and hashes must each be distinct.",
+    "error_evidence_contract": "Exactly six unique error IDs; every canonical positive bound binds an ERROR_SCRIPT .py ref, an ERROR_RUN claims/*/runs/*/result.json ref and a unique top-level result key that exists in that JSON; all (script,run,key) composites are distinct.",
+    "error_terms": [
+      "finite_torus_spacing",
+      "regulator_removal",
+      "nonlinear_remainder",
+      "loop_or_renormalization",
+      "state_reference_transfer",
+      "raw_estimator"
+    ],
+    "hard_rows": [
+      "D00-ADMISSION",
+      "D01-SAME-REFERENCE",
+      "D02-KINETIC-TENSOR",
+      "D03-PHYSICAL-ZERO-MODES",
+      "D04-SPEED-DISPERSION",
+      "D05-COMPACT-WINDING",
+      "D06-CRITICAL-DATA",
+      "D07-VALIDATION",
+      "D08-ROBUSTNESS",
+      "D09-PREDICTION-COST"
+    ],
+    "survival_rule": "Every hard row is PASS.",
+    "sign_convention": "helicity_modulus=+V^-1*d2F/dJ2|J=0; scalar_susceptibility=-V^-1*d2F/dJ2|J=0",
+    "synthetic_fixture_error_oracle": "six exact bounds 1/100 sum to 3/50, strictly below 1/10",
+    "fixture_artifact_policy": {
+      "label": "FIXTURE_ONLY_EXISTING_REPOSITORY_ARTIFACTS_NOT_FUTURE_CANDIDATE_EVIDENCE",
+      "paths": [
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py",
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py",
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py",
+        "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-round1-prospective-holdout-freeze-protocol/result.json"
+      ],
+      "meaning": "These extant files exercise syntax, existence, hash, role, media-type and result-key binding only. They do not instantiate any required future source law, state proof, response map, error proof, candidate or prediction."
+    },
+    "metamorphic_and_fuzz": {
+      "reordered_positive": "PASS is required after reordering substantive changes, ledger rows, error terms, hard rows and firewall sets.",
+      "deterministic_malformed_case_count": 48,
+      "required_result": "all malformed cases rejected without exception",
+      "non_string_extra_keys": "Integer, None and tuple extra dictionary keys are rejected with structured codes and no exception."
+    },
+    "external_status": {
+      "custodian_commitment": "REQUIRED_EXTERNAL_NOT_SUPPLIED",
+      "remote_verification": "REQUIRED_EXTERNAL_NOT_SUPPLIED"
+    },
+    "validation_boundary": {
+      "syntax_and_binding": "VALIDATED",
+      "physical_semantics": "NOT_VALIDATED",
+      "external_prospective_freeze": "NOT_SUPPLIED",
+      "formal_schema_child": "REGISTERED_CLOSED_AS_SYNTAX_AND_DECLARED_BINDING_ONLY",
+      "semantic_truth_and_provenance_equivalence": "NOT_MACHINE_PROVED"
+    },
+    "boundary": "The schema fixture creates no candidate, response map, prediction or physical error proof. Artifact existence cannot establish artifact semantics. The validator does not machine-prove semantic truth, change-evidence equivalence, result-key fitness, script/run provenance equivalence, or source-class/used-for equivalence. The Lane-Q source-only route remains non-admitted; D03/D05/D06/D08, prospective D07 and every parent gate remain open.",
+    "max_canonical_rational_length": 128,
+    "max_repository_relative_path_length": 4096
+  },
+  "m2_physical_response_successor_minimum_contract_hostile_fixtures": {
+    "count": 57,
+    "cases": {
+      "candidate_materialized": "PHYSICAL_CONTRACT_LIFECYCLE_INVALID",
+      "substantive_change_mislabeled_map_only": "PHYSICAL_CONTRACT_VERSION_DELTA_INVALID",
+      "control_map_missing": "PHYSICAL_CONTRACT_CONTROL_MAP_INVALID",
+      "target_dependent_control": "PHYSICAL_CONTRACT_CONTROL_MAP_INVALID",
+      "quadratic_contact_missing": "PHYSICAL_CONTRACT_PROBE_INVALID",
+      "compact_action_missing": "PHYSICAL_CONTRACT_PROBE_INVALID",
+      "state_reference_missing": "PHYSICAL_CONTRACT_STATE_INVALID",
+      "scalar_susceptibility_relabel": "PHYSICAL_CONTRACT_RESPONSE_INVALID",
+      "limit_order_missing": "PHYSICAL_CONTRACT_RESPONSE_INVALID",
+      "estimand_mismatch": "PHYSICAL_CONTRACT_ESTIMAND_INVALID",
+      "fingerprint_promoted_as_response": "PHYSICAL_CONTRACT_RESPONSE_INVALID",
+      "error_term_dropped": "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+      "error_total_not_sum": "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+      "error_margin_not_strict": "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+      "hard_row_nonpass": "PHYSICAL_CONTRACT_HARD_ROWS_INVALID",
+      "single_implementation": "PHYSICAL_CONTRACT_VERIFICATION_INVALID",
+      "target_value_present": "PHYSICAL_CONTRACT_FIREWALL_INVALID",
+      "map_only_payload_under_substantive_label": "PHYSICAL_CONTRACT_VERSION_DELTA_INVALID",
+      "unknown_substantive_change": "PHYSICAL_CONTRACT_VERSION_DELTA_INVALID",
+      "duplicate_substantive_change": "PHYSICAL_CONTRACT_VERSION_DELTA_INVALID",
+      "unbound_probe_hash": "PHYSICAL_CONTRACT_PROBE_INVALID",
+      "probe_artifact_wrong_role": "PHYSICAL_CONTRACT_PROBE_INVALID",
+      "quadratic_contact_placeholder": "PHYSICAL_CONTRACT_PROBE_INVALID",
+      "compact_action_placeholder": "PHYSICAL_CONTRACT_PROBE_INVALID",
+      "state_existence_ref_unbound": "PHYSICAL_CONTRACT_STATE_INVALID",
+      "response_map_ref_unbound": "PHYSICAL_CONTRACT_RESPONSE_INVALID",
+      "limit_order_placeholder": "PHYSICAL_CONTRACT_RESPONSE_INVALID",
+      "limit_order_permuted": "PHYSICAL_CONTRACT_RESPONSE_INVALID",
+      "prediction_placeholder": "PHYSICAL_CONTRACT_PREDICTION_INVALID",
+      "prediction_candidate_unbound": "PHYSICAL_CONTRACT_PREDICTION_INVALID",
+      "proof_ref_unbound": "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+      "error_evidence_reused": "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+      "error_result_key_missing": "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+      "non_script_verifier": "PHYSICAL_CONTRACT_VERIFICATION_INVALID",
+      "identical_verifier_hash": "PHYSICAL_CONTRACT_VERIFICATION_INVALID",
+      "integrated_ref_missing": "PHYSICAL_CONTRACT_VERIFICATION_INVALID",
+      "duplicate_input_id": "PHYSICAL_CONTRACT_INPUT_LEDGER_INVALID",
+      "duplicate_source_id": "PHYSICAL_CONTRACT_INPUT_LEDGER_INVALID",
+      "visible_validation_source": "PHYSICAL_CONTRACT_INPUT_LEDGER_INVALID",
+      "forbidden_source_id": "PHYSICAL_CONTRACT_INPUT_LEDGER_INVALID",
+      "source_section_unbound": "PHYSICAL_CONTRACT_SOURCE_BINDING_INVALID",
+      "forbidden_choices_placeholder": "PHYSICAL_CONTRACT_FIREWALL_INVALID",
+      "decimal_ratio": "PHYSICAL_CONTRACT_ESTIMAND_INVALID",
+      "unreduced_ratio": "PHYSICAL_CONTRACT_ESTIMAND_INVALID",
+      "whitespace_ratio": "PHYSICAL_CONTRACT_ESTIMAND_INVALID",
+      "embedded_nul_artifact_path": "PHYSICAL_CONTRACT_PROBE_INVALID",
+      "overlong_artifact_path": "PHYSICAL_CONTRACT_PROBE_INVALID",
+      "overlong_rational_literal": "NUMERIC_LITERAL_INVALID",
+      "trailing_dot_segment_artifact_path": "PHYSICAL_CONTRACT_PROBE_INVALID",
+      "trailing_space_segment_artifact_path": "PHYSICAL_CONTRACT_PROBE_INVALID",
+      "case_changed_artifact_path": "PHYSICAL_CONTRACT_PROBE_INVALID",
+      "free_semantic_placeholder": "PHYSICAL_CONTRACT_PREDICTION_INVALID",
+      "prediction_target_leakage": "PHYSICAL_CONTRACT_PREDICTION_INVALID",
+      "scaling_window_holdout_leakage": "PHYSICAL_CONTRACT_PREDICTION_INVALID",
+      "control_map_r_of_t_target_leakage": "PHYSICAL_CONTRACT_CONTROL_MAP_INVALID",
+      "control_map_scaling_window_holdout_leakage": "PHYSICAL_CONTRACT_CONTROL_MAP_INVALID",
+      "denominator_one_ratio": "NUMERIC_LITERAL_INVALID"
+    },
+    "checks": "Reject lifecycle promotion; map-only, unknown or duplicate change claims; unbound/wrong-role artifacts; embedded-NUL, overlong, trailing-dot, trailing-space and case-changed paths without exceptions; structured and free-text placeholders; prediction and control-map target/holdout tokens; permuted limits; candidate/prediction mismatch; missing/reused error evidence; overlong or noncanonical rational literals including denominator-one slash forms with NUMERIC_LITERAL_INVALID; non-script, identical or missing verifiers; duplicate or forbidden ledger sources; unbound section sources; all retained prior hostile cases.",
+    "deterministic_fuzz": {
+      "case_count": 48,
+      "required_result": "ALL_REJECTED_WITHOUT_EXCEPTION",
+      "coverage": "NUL/overlong/alias paths; 5000-digit and denominator-one rationals; placeholder and target-blind text; integer/None/tuple extra dictionary keys; malformed containers and unhashable scalars."
+    },
+    "boundary": "Hostile rejection validates exact syntax, local artifact binding and declared set relationships only. It does not machine-prove semantic truth or provenance equivalence, validate physical semantics, or create an external freeze."
+  },
+  "v1_2_checkpoint_synthesis": {
+    "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+    "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt",
+    "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf",
+    "source_sha256": "b5e21a1aa14492947fa2b0aa4a04d14e89bdc58dc862a77cb273a5905d3d5827",
+    "pdf_sha256": "a535317888cb712e06a15ef06aa9fef25b317d18830c69235cb798130987d4aa",
+    "pages": 13,
+    "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v2.1 / R-168 v1.2 gate-level synthesis source/PDF pair was issued only after the primary, non-importing independent, integrated, formal-authority, generated-surface, source-form, dual-extraction, and visual-review checks passed.",
+    "visual_qa": "All 13 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 13/13 nonempty pages; the build reported OVERFULL-HBOX 0."
+  },
+  "v1_2_proof_first_checkpoint": {
+    "status": "HISTORICAL FOUR-FILE PROOF-FIRST SNAPSHOT; FORMAL AUTHORITIES WERE MISSING BY DESIGN AT THAT STAGE",
+    "files": [
+      "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json",
+      "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md",
+      "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py",
+      "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py"
+    ],
+    "not_created": [
+      "formal exploration",
+      "gate registry sections",
+      "negative registry entry",
+      "results ledger entry",
+      "run JSON",
+      "generated file",
+      "PDF",
+      "changelog entry",
+      "commit"
+    ]
   }
 }

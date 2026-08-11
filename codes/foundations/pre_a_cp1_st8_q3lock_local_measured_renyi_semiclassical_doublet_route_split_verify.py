@@ -1,25 +1,25 @@
 #!/usr/bin/env python3
-"""Integrated verifier for EXP-000809 / R-167 v2.0.
+"""Integrated verifier for EXP-000811 / R-167 v2.1.
 
 The primary and non-importing independent engines are each executed twice in
-fresh child processes.  Invocation-only metadata is normalized, component
-payloads must be deterministic, and a stored v2.0 result must equal the fresh
-payload.  During assembly, historical v1.9 stored results and not-yet-landed
-formal/generated authorities are reported as ``MISSING`` under ``--staged``;
+fresh child processes. Invocation-only metadata is normalized, component
+payloads must be deterministic, and stored v2.1 results must equal the fresh
+payload. Under --staged, not-yet-landed formal/generated authorities, stored
+runs, and the future combined checkpoint are reported as MISSING;
 contradictions and cross-engine mismatches remain hard failures.
 
-The verifier binds all retained v1.9 reductions plus the additive v2.0
-finite-Gibbs two-orientation resummation, bounded-context boundary, exact
-arbitrary-context no-go, fixed-edge corridor reduction, dimer Gaussian
-implication no-go, below-Gamma global Feshbach/relative-form precursor,
-compressed finite-spin TFIM two-phase theorem, and extensive-self-energy
-locality no-go.  All four parent gates remain open.
+The verifier retains every v1.9/v2.0 reduction and adds exact cross-engine
+checks for the p=5 twentieth-moment fixed-edge corridor, conditional fifth
+graph transport, both automatic-inference no-gos, and the full-oscillator
+local-edge parity-doublet/min-max/relative-form/Ritz theorem. The new fifth
+Gibbs/elliptic and simultaneous-bond graph inputs and all parent gates remain
+open.
 
-The issued R-167 v1.9 / R-168 v1.0 PDF remains strictly validated historical
-evidence and is not v2.0 evidence.  No intermediate v2.0 PDF is created here.
-A distinct later R-167 v2.0 / R-168 v1.1 gate-level checkpoint is accepted only
-after its shared metadata, hashes, freshness, pages, dual extraction, scope,
-and reproduction contract validate.  This script creates no note or PDF.
+The issued R-167 v1.9 / R-168 v1.0 and R-167 v2.0 / R-168 v1.1 PDFs remain
+strictly validated historical evidence; neither is v2.1 evidence. A distinct
+R-167 v2.1 / R-168 v1.2 combined gate-level checkpoint is accepted only after
+shared metadata, hashes, freshness, pages, dual extraction, scope, and
+reproduction contracts validate. This script creates no note or PDF.
 """
 
 from __future__ import annotations
@@ -38,7 +38,7 @@ from pathlib import Path
 from typing import Any, Iterable, Mapping
 
 
-__version__ = "2.0.0"
+__version__ = "2.1.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = (
@@ -51,10 +51,10 @@ RESULT_ID = (
     "COMMON-ALPHA-CAUCHY-GATE-SPLIT"
 )
 RESULT_NUMBER = "R-167"
-PRIOR_RESULT_VERSION = "v1.9"
-RESULT_VERSION = "v2.0"
-PRIOR_EXPLORATION_ID = "EXP-000806"
-EXPLORATION_ID = "EXP-000809"
+PRIOR_RESULT_VERSION = "v2.0"
+RESULT_VERSION = "v2.1"
+PRIOR_EXPLORATION_ID = "EXP-000809"
+EXPLORATION_ID = "EXP-000811"
 TASK_ID = "T-054"
 CLAIM_ID = "C6-SPACETIME-SIGNATURE"
 CANDIDATE_ID = (
@@ -69,7 +69,7 @@ V1_9_CLOSED_SUBGATES = (
     "PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-"
     "LOW-BAND-TFIM-COMPRESSION",
 )
-NEW_CLOSED_SUBGATES = (
+V2_0_CLOSED_SUBGATES = (
     "PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-"
     "CUTOFF-UNITARY-RESUMMATION",
     "PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-"
@@ -79,7 +79,14 @@ NEW_CLOSED_SUBGATES = (
     "PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-"
     "PHASEWISE-GAP",
 )
-CLOSED_SUBGATES = (*V1_9_CLOSED_SUBGATES, *NEW_CLOSED_SUBGATES)
+NEW_CLOSED_SUBGATES = (
+    "PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-"
+    "CORRIDOR-REDUCTION",
+    "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-"
+    "CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
+)
+PRIOR_CLOSED_SUBGATES = (*V1_9_CLOSED_SUBGATES, *V2_0_CLOSED_SUBGATES)
+CLOSED_SUBGATES = (*PRIOR_CLOSED_SUBGATES, *NEW_CLOSED_SUBGATES)
 OPEN_GATES = (
     "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-"
     "HISTORY-COMMON-ALPHA",
@@ -87,14 +94,17 @@ OPEN_GATES = (
     "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-"
     "BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
     "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+    "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-"
+    "ELLIPTIC-EMBEDDING",
+    "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
 )
-PRIOR_NEGATIVE_IDS = (
+V1_9_NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-"
     "VOLUME-UNIFORMITY",
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-"
     "BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT",
 )
-NEW_NEGATIVE_IDS = (
+V2_0_NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-"
     "ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE",
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-"
@@ -102,6 +112,13 @@ NEW_NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-"
     "MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
 )
+NEW_NEGATIVE_IDS = (
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-"
+    "BOND-SHEAR-GRAPH-TRANSPORT",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-"
+    "AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
+)
+PRIOR_NEGATIVE_IDS = (*V1_9_NEGATIVE_IDS, *V2_0_NEGATIVE_IDS)
 NEGATIVE_IDS = (*PRIOR_NEGATIVE_IDS, *NEW_NEGATIVE_IDS)
 REUSED_NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-"
@@ -147,6 +164,20 @@ DEFAULT_OUTPUT = REPO / (
 PROSPECTIVE_MANIFEST = (
     REPO / "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json"
 )
+PROSPECTIVE_PRIMARY_REL = (
+    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py"
+)
+PROSPECTIVE_INDEPENDENT_REL = (
+    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py"
+)
+PROSPECTIVE_INTEGRATED_REL = (
+    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py"
+)
+EXPECTED_M2_COMPONENT_SCRIPT_SHA256 = (
+    "78dd5b2bc79efe26e16f42f7c1f49ee93d550d8a9fdb65904f22d89729c7b7ec",
+    "313d5b76caf43dc0750a2d3cbbda245e1e492d370f9c5be4accd9dc66b25e8f4",
+)
+
 CHECKPOINT_SOURCE_REL = (
     "claims/C6-SPACETIME-SIGNATURE/notes/"
     "pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-"
@@ -197,14 +228,43 @@ EXPECTED_CHECKPOINT = {
         "extracted 15 nonempty pages."
     ),
 }
-NEXT_CHECKPOINT_FIELD = "v2_checkpoint_synthesis"
-NEXT_CHECKPOINT_REQUIRED_TOKENS = (
+
+V2_CHECKPOINT_FIELD = "v2_checkpoint_synthesis"
+EXPECTED_V2_CHECKPOINT = {
+    "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+    "source": (
+        "claims/C6-SPACETIME-SIGNATURE/notes/"
+        "pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-"
+        "checkpoint-260811-v0.9.tex.txt"
+    ),
+    "pdf": (
+        "claims/C6-SPACETIME-SIGNATURE/notes/"
+        "pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-"
+        "checkpoint-260811-v0.9.pdf"
+    ),
+    "source_sha256": "ca8b0fdc1c4881aa13e3311851c719d0b6a0dfb4b27e0bb30906f7bc77b04239",
+    "pdf_sha256": "346595c8609be1e49fb33d87e5a469b01f9083c78d7a1fc89d3648b88ea4d243",
+    "pages": 10,
+    "workflow": (
+        "No per-lemma or intermediate PDF was issued. One combined R-167 v2.0 / "
+        "R-168 v1.1 gate-level synthesis source/PDF pair was issued only after "
+        "the primary, non-importing independent, integrated, formal-authority, "
+        "generated-surface, and source-form checks passed."
+    ),
+    "visual_qa": (
+        "All 10 rendered pages were reviewed at readable resolution with zero "
+        "clipping, overlap, broken equations, unreadable identifiers, black "
+        "glyphs, or malformed page transitions; pypdf and pdfplumber each "
+        "extracted 10 nonempty pages."
+    ),
+}
+V2_CHECKPOINT_REQUIRED_TOKENS = (
     "R-167 v2.0",
-    EXPLORATION_ID,
+    "EXP-000809",
     "R-168 v1.1",
     "EXP-000810",
-    *NEW_NEGATIVE_IDS,
-    *NEW_CLOSED_SUBGATES,
+    *V2_0_NEGATIVE_IDS,
+    *V2_0_CLOSED_SUBGATES,
     "153/153",
     "117/117",
     "205/205",
@@ -212,6 +272,36 @@ NEXT_CHECKPOINT_REQUIRED_TOKENS = (
     PRIMARY.relative_to(REPO).as_posix(),
     INDEPENDENT.relative_to(REPO).as_posix(),
     SCRIPT.relative_to(REPO).as_posix(),
+    PROSPECTIVE_PRIMARY_REL,
+    PROSPECTIVE_INDEPENDENT_REL,
+    PROSPECTIVE_INTEGRATED_REL,
+    "no per-lemma or intermediate",
+    "physical Sector A",
+    "Pre-A",
+)
+
+NEXT_CHECKPOINT_FIELD = "v2_1_checkpoint_synthesis"
+PROSPECTIVE_NEXT_CHECKPOINT_FIELD = "v1_2_checkpoint_synthesis"
+M2_COMPONENT_COUNT_TOKENS: tuple[str, ...] = ("340/340", "361/361")
+NEXT_CHECKPOINT_REQUIRED_TOKENS = (
+    "R-167 v2.1",
+    EXPLORATION_ID,
+    "R-168 v1.2",
+    "EXP-000812",
+    *NEW_NEGATIVE_IDS,
+    *NEW_CLOSED_SUBGATES,
+    "209/209",
+    "138/138",
+    *M2_COMPONENT_COUNT_TOKENS,
+    "7162e22fe04eac53e7fe8adf3fb0d77a8f7374c70a5bcb3e5f96c06a53d7b868",
+    "6d46d3fea15dc17f1f783ac8a04d1f08f7c2c2ae2dea50fa809fee3f2b345104",
+    *EXPECTED_M2_COMPONENT_SCRIPT_SHA256,
+    PRIMARY.relative_to(REPO).as_posix(),
+    INDEPENDENT.relative_to(REPO).as_posix(),
+    SCRIPT.relative_to(REPO).as_posix(),
+    PROSPECTIVE_PRIMARY_REL,
+    PROSPECTIVE_INDEPENDENT_REL,
+    PROSPECTIVE_INTEGRATED_REL,
     "no per-lemma or intermediate",
     "physical Sector A",
     "Pre-A",
@@ -220,8 +310,12 @@ NEXT_CHECKPOINT_REQUIRED_TOKENS = (
 PRIMARY_SCHEMA = f"tect/{SLUG}-primary-result/1.0"
 INDEPENDENT_SCHEMA = f"tect/{SLUG}-independent-result/1.0"
 INTEGRATED_SCHEMA = f"tect/{SLUG}-integrated-result/1.0"
-MINIMUM_PRIMARY_ASSERTIONS = 153
-MINIMUM_INDEPENDENT_ASSERTIONS = 117
+MINIMUM_PRIMARY_ASSERTIONS = 209
+MINIMUM_INDEPENDENT_ASSERTIONS = 138
+EXPECTED_COMPONENT_SCRIPT_SHA256 = {
+    "primary": "7162e22fe04eac53e7fe8adf3fb0d77a8f7374c70a5bcb3e5f96c06a53d7b868",
+    "independent": "6d46d3fea15dc17f1f783ac8a04d1f08f7c2c2ae2dea50fa809fee3f2b345104",
+}
 
 
 def json_safe(value: Any) -> Any:
@@ -709,13 +803,18 @@ def _confined_checkpoint_path(raw: Any, suffix: str) -> Path | None:
     return candidate
 
 
-def future_checkpoint_lifecycle_diagnostics(
+def checkpoint_lifecycle_diagnostics(
     synthesis: Mapping[str, Any],
+    *,
+    other_field: str,
+    required_tokens: tuple[str, ...],
+    workflow_tokens: tuple[str, ...],
 ) -> dict[str, Any]:
-    """Validate a later issued v2.0/v1.1 checkpoint without fixed pages/hashes."""
+    """Validate one shared combined checkpoint without trusting declared pins."""
 
     diagnostics: dict[str, Any] = {
         "metadata": dict(synthesis),
+        "other_field": other_field,
         "shared_manifest_exact": False,
         "shared_manifest_error": None,
         "issued_metadata": False,
@@ -733,26 +832,35 @@ def future_checkpoint_lifecycle_diagnostics(
         "source_mtime_ns": None,
         "pdf_mtime_ns": None,
         "pdf_fresh_relative_to_source": False,
-        "source_missing_tokens": list(NEXT_CHECKPOINT_REQUIRED_TOKENS),
+        "source_missing_tokens": list(required_tokens),
         "pypdf_pages": None,
         "pypdf_nonempty_pages": None,
-        "pypdf_missing_tokens": list(NEXT_CHECKPOINT_REQUIRED_TOKENS),
+        "pypdf_missing_tokens": list(required_tokens),
         "pypdf_error": None,
         "pdfplumber_pages": None,
         "pdfplumber_nonempty_pages": None,
-        "pdfplumber_missing_tokens": list(NEXT_CHECKPOINT_REQUIRED_TOKENS),
+        "pdfplumber_missing_tokens": list(required_tokens),
         "pdfplumber_error": None,
         "valid": False,
-    }
+}
     try:
         other = json.loads(PROSPECTIVE_MANIFEST.read_text(encoding="utf-8"))
-        other_checkpoint = as_mapping(as_mapping(other).get(NEXT_CHECKPOINT_FIELD))
-        diagnostics["shared_manifest_exact"] = bool(synthesis) and dict(synthesis) == other_checkpoint
+        other_checkpoint = as_mapping(as_mapping(other).get(other_field))
+        diagnostics["shared_manifest_exact"] = (
+            bool(synthesis) and dict(synthesis) == other_checkpoint
+        )
     except (OSError, UnicodeError, json.JSONDecodeError) as error:
         diagnostics["shared_manifest_error"] = str(error)
 
     required_fields = {
-        "status", "source", "pdf", "source_sha256", "pdf_sha256", "pages", "workflow", "visual_qa"
+        "status",
+        "source",
+        "pdf",
+        "source_sha256",
+        "pdf_sha256",
+        "pages",
+        "workflow",
+        "visual_qa",
     }
     diagnostics["issued_metadata"] = (
         set(synthesis) == required_fields
@@ -780,20 +888,18 @@ def future_checkpoint_lifecycle_diagnostics(
         isinstance(pages, int) and not isinstance(pages, bool) and pages > 0
     )
     diagnostics["workflow_exact_scope"] = all(
-        text_has(synthesis.get("workflow", ""), token)
-        for token in (
-            "No per-lemma or intermediate",
-            "R-167 v2.0",
-            "R-168 v1.1",
-            "primary",
-            "independent",
-            "integrated",
-            "formal",
-        )
+        text_has(synthesis.get("workflow", ""), token) for token in workflow_tokens
     )
     diagnostics["visual_qa_declared"] = all(
         text_has(synthesis.get("visual_qa", ""), token)
-        for token in ("all", "rendered pages", "clipping", "overlap", "pypdf", "pdfplumber")
+        for token in (
+            "all",
+            "rendered pages",
+            "clipping",
+            "overlap",
+            "pypdf",
+            "pdfplumber",
+        )
     )
 
     if source is not None and source.is_file():
@@ -803,7 +909,7 @@ def future_checkpoint_lifecycle_diagnostics(
             diagnostics["source_sha256"] = raw_sha256(source)
             diagnostics["source_mtime_ns"] = source.stat().st_mtime_ns
             diagnostics["source_missing_tokens"] = [
-                token for token in NEXT_CHECKPOINT_REQUIRED_TOKENS if not text_has(source_text, token)
+                token for token in required_tokens if not text_has(source_text, token)
             ]
         except (OSError, UnicodeError) as error:
             diagnostics["source_read_error"] = str(error)
@@ -826,9 +932,11 @@ def future_checkpoint_lifecycle_diagnostics(
             texts = [(page.extract_text() or "") for page in reader.pages]
             joined = "\n".join(texts)
             diagnostics["pypdf_pages"] = len(texts)
-            diagnostics["pypdf_nonempty_pages"] = sum(bool(item.strip()) for item in texts)
+            diagnostics["pypdf_nonempty_pages"] = sum(
+                bool(item.strip()) for item in texts
+            )
             diagnostics["pypdf_missing_tokens"] = [
-                token for token in NEXT_CHECKPOINT_REQUIRED_TOKENS if not text_has(joined, token)
+                token for token in required_tokens if not text_has(joined, token)
             ]
         except Exception as error:
             diagnostics["pypdf_error"] = f"{type(error).__name__}: {error}"
@@ -839,9 +947,11 @@ def future_checkpoint_lifecycle_diagnostics(
                 texts = [(page.extract_text() or "") for page in document.pages]
             joined = "\n".join(texts)
             diagnostics["pdfplumber_pages"] = len(texts)
-            diagnostics["pdfplumber_nonempty_pages"] = sum(bool(item.strip()) for item in texts)
+            diagnostics["pdfplumber_nonempty_pages"] = sum(
+                bool(item.strip()) for item in texts
+            )
             diagnostics["pdfplumber_missing_tokens"] = [
-                token for token in NEXT_CHECKPOINT_REQUIRED_TOKENS if not text_has(joined, token)
+                token for token in required_tokens if not text_has(joined, token)
             ]
         except Exception as error:
             diagnostics["pdfplumber_error"] = f"{type(error).__name__}: {error}"
@@ -917,7 +1027,7 @@ def validate_checkpoint_synthesis(
     )
     r168_label_exact = (
         set(prospective_checkpoint)
-        == set(EXPECTED_CHECKPOINT) | {"v1_1_pdf_policy"}
+        == set(EXPECTED_CHECKPOINT) | {"v1_1_pdf_policy", "v1_2_pdf_policy"}
         and text_has(
             prospective_checkpoint.get("v1_1_pdf_policy", ""),
             "No intermediate R-168 v1.1 PDF",
@@ -925,6 +1035,18 @@ def validate_checkpoint_synthesis(
         and text_has(
             prospective_checkpoint.get("v1_1_pdf_policy", ""),
             "later logical gate-level synthesis",
+        )
+        and text_has(
+            prospective_checkpoint.get("v1_2_pdf_policy", ""),
+            "No intermediate R-168 v1.2 PDF",
+        )
+        and text_has(
+            prospective_checkpoint.get("v1_2_pdf_policy", ""),
+            "now present",
+        )
+        and text_has(
+            prospective_checkpoint.get("v1_2_pdf_policy", ""),
+            "pending full render and release QA",
         )
     )
     shared_checkpoint = (
@@ -1108,10 +1230,51 @@ def validate_checkpoint_synthesis(
         "all required tokens in source and both PDF extractors",
         "pdf_history",
     )
+    v2_metadata = as_mapping(manifest.get(V2_CHECKPOINT_FIELD))
+    v2_checkpoint = checkpoint_lifecycle_diagnostics(
+        v2_metadata,
+        other_field=V2_CHECKPOINT_FIELD,
+        required_tokens=V2_CHECKPOINT_REQUIRED_TOKENS,
+        workflow_tokens=(
+            "No per-lemma or intermediate",
+            "R-167 v2.0",
+            "R-168 v1.1",
+            "primary",
+            "independent",
+            "integrated",
+            "formal",
+        ),
+    )
+    v2_exact = dict(v2_metadata) == EXPECTED_V2_CHECKPOINT
+    audit.check(
+        "historical combined R-167 v2.0 / R-168 v1.1 checkpoint lifecycle",
+        v2_exact and v2_checkpoint["valid"],
+        {"exact_pins": v2_exact, "diagnostics": v2_checkpoint},
+        {
+            "exact_metadata": EXPECTED_V2_CHECKPOINT,
+            "shared": True,
+            "fresh_dual_parser_artifact": True,
+        },
+        "pdf_history",
+    )
+
     future_metadata = as_mapping(manifest.get(NEXT_CHECKPOINT_FIELD))
-    future = future_checkpoint_lifecycle_diagnostics(future_metadata)
+    future = checkpoint_lifecycle_diagnostics(
+        future_metadata,
+        other_field=PROSPECTIVE_NEXT_CHECKPOINT_FIELD,
+        required_tokens=NEXT_CHECKPOINT_REQUIRED_TOKENS,
+        workflow_tokens=(
+            "No per-lemma or intermediate",
+            "R-167 v2.1",
+            "R-168 v1.2",
+            "primary",
+            "independent",
+            "integrated",
+            "formal",
+        ),
+    )
     audit.pending(
-        "later combined R-167 v2.0 / R-168 v1.1 checkpoint lifecycle",
+        "later combined R-167 v2.1 / R-168 v1.2 checkpoint lifecycle",
         future["valid"],
         future,
         {
@@ -1126,8 +1289,14 @@ def validate_checkpoint_synthesis(
         },
         "pdf_checkpoint",
     )
-    details["historical_valid"] = not (
+    first_historical_valid = not (
         artifact_failures or parser_failures or text_failures
+    )
+    details["v1_9_v1_0_historical_valid"] = first_historical_valid
+    details["v2_0_v1_1_historical_metadata"] = v2_metadata
+    details["v2_0_v1_1_historical_valid"] = v2_exact and v2_checkpoint["valid"]
+    details["historical_valid"] = (
+        first_historical_valid and v2_exact and v2_checkpoint["valid"]
     )
     details["future_metadata"] = future_metadata
     details["future_valid"] = future["valid"]
@@ -1161,13 +1330,13 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
             "manifest",
         )
     audit.check(
-        "manifest v2.0 theorem-ready status with parents open",
+        "manifest v2.1 additive theorem-ready status with parents open",
         all(
             text_has(manifest.get("status", ""), token)
-            for token in ("v2.0", "THEOREM-READY", "PARENT", "OPEN")
+            for token in ("v2.0", "v2.1", "TWO", "THEOREM-READY", "PARENT", "OPEN")
         ),
         manifest.get("status"),
-        "v2.0 theorem-ready narrow children and parents open",
+        "all v2.0 children plus two v2.1 narrow children theorem-ready; parents open",
         "manifest",
     )
     sections = (
@@ -1188,6 +1357,12 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
         "global_feshbach_relative_form_precursor",
         "compressed_tfim_two_phase_qps",
         "extensive_self_energy_no_go",
+        V2_CHECKPOINT_FIELD,
+        "twentieth_moment_fixed_edge_corridor",
+        "conditional_fifth_graph_transport",
+        "all_order_graph_growth_no_go",
+        "static_moment_low_graph_no_go",
+        "full_oscillator_edge_cluster",
         NEXT_CHECKPOINT_FIELD,
     )
     for section in sections:
@@ -1236,7 +1411,7 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     arbitrary = as_mapping(manifest.get("arbitrary_context_no_go"))
     audit.check(
         "manifest exact arbitrary-context no-go",
-        arbitrary.get("negative_id") == NEW_NEGATIVE_IDS[0]
+        arbitrary.get("negative_id") == V2_0_NEGATIVE_IDS[0]
         and all(
             text_has(arbitrary, token)
             for token in ("A=sigma_x", "4p", "exactly 2", "squared is 8", "exactly zero")
@@ -1265,7 +1440,7 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     )
     audit.check(
         "manifest dimer Gaussian implication no-go scope",
-        gaussian.get("negative_id") == NEW_NEGATIVE_IDS[2]
+        gaussian.get("negative_id") == V2_0_NEGATIVE_IDS[2]
         and all(
             text_has(gaussian, token)
             for token in ("7/16", "16/7", "-5/4", "homogeneous-dimer", "not a fully one-site")
@@ -1302,24 +1477,120 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
             text_has(compressed, token)
             for token in ("k=(0,-2)", "|delta_eff|/(2J)", "in each selected phase", "no finite-torus exact degeneracy", "oscillator GNS gap")
         )
-        and extensive.get("negative_id") == NEW_NEGATIVE_IDS[1]
+        and extensive.get("negative_id") == V2_0_NEGATIVE_IDS[1]
         and text_has(extensive, "all-ones matrix")
         and text_has(extensive, "cannot be promoted automatically"),
         {"compressed": compressed, "extensive": extensive},
         "compressed finite-spin phase theorem only; global self-energy is not local",
         "manifest_v2_math",
     )
+
+    moment_v21 = as_mapping(manifest.get("twentieth_moment_fixed_edge_corridor"))
+    conditional_v21 = as_mapping(manifest.get("conditional_fifth_graph_transport"))
+    audit.check(
+        "manifest v2.1 p=5 twentieth-moment corridor",
+        all(
+            text_has(moment_v21, token)
+            for token in (
+                "2916 c^2 M20 R^6 L^-16",
+                "6-4gamma(p-1)",
+                "minimal possible integer is p=5",
+                "gamma=2/5",
+                "R^-2/5",
+                "-R log(R)/5+O(R)",
+                "does not prove M20",
+            )
+        ),
+        moment_v21,
+        "conditional twentieth moment gives 2916, p=5, R^-2/5, factorial -1/5",
+        "manifest_v2_1_math",
+    )
+    audit.check(
+        "manifest v2.1 conditional fifth graph transport",
+        conditional_v21.get("open_inputs") == list(OPEN_GATES[-2:])
+        and all(
+            text_has(conditional_v21, token)
+            for token in (
+                "m5",
+                "d5",
+                "G5",
+                "coefficients are 1,2,2",
+                "exp(G5|delta|/2)",
+                "M20<=2 d5^2 exp(G5 T) S_mu^5 m5",
+                "conditional",
+            )
+        ),
+        conditional_v21,
+        "sharp factor two and exactly two named open inputs",
+        "manifest_v2_1_math",
+    )
+    all_m_v21 = as_mapping(manifest.get("all_order_graph_growth_no_go"))
+    static_v21 = as_mapping(manifest.get("static_moment_low_graph_no_go"))
+    audit.check(
+        "manifest v2.1 two exact automatic-inference no-gos",
+        all_m_v21.get("negative_id") == NEW_NEGATIVE_IDS[0]
+        and static_v21.get("negative_id") == NEW_NEGATIVE_IDS[1]
+        and all(
+            text_has(all_m_v21, token)
+            for token in (
+                "K=diag(1,4)",
+                "2^m-2^(-m)",
+                "right Dini derivative",
+                "fixed m=5",
+            )
+        )
+        and all(
+            text_has(static_v21, token)
+            for token in (
+                "K_N=diag(1,N^4)",
+                "d5=1",
+                "G5=N^6-N^(-14)",
+                "delta^2 N^12/8",
+                "sum is at least delta^2 N^12/4",
+                "not a Q3 dynamics no-go",
+            )
+        ),
+        {"all_m": all_m_v21, "static_low_graph": static_v21},
+        "exponential all-m and N^12 history-growth fixtures with narrow boundaries",
+        "manifest_v2_1_math",
+    )
+    edge_v21 = as_mapping(manifest.get("full_oscillator_edge_cluster"))
+    audit.check(
+        "manifest v2.1 full-oscillator local-edge cluster and Ritz boundary",
+        all(
+            text_has(edge_v21, token)
+            for token in (
+                "P0 h_xy P0=eb P0",
+                "L h_xy L=(eb+2J)L",
+                "P0 h_xy L is nonzero",
+                "exactly one even and one odd eigenvalue",
+                "20832953/19531250",
+                "332047248/5188304375",
+                "4430237/234375000",
+                "nested parity-preserving onsite spectral projections",
+                "Ritz eigenvalues decrease",
+                "Pi_M q^2 Pi_M need not equal (Pi_M q Pi_M)^2",
+                "local edge coercivity only",
+            )
+        ),
+        edge_v21,
+        "non-invariant low compression, two parity levels, explicit gaps, Ritz only",
+        "manifest_v2_1_math",
+    )
     require_tokens(
         manifest.get("no_overclaim", ""),
-        "manifest v2.0 no-overclaim boundary",
+        "manifest v2.1 no-overclaim boundary",
         (
+            "fifth-moment/graph input",
+            "twentieth fixed-edge history moment",
             "fixed-edge history estimate",
             "arbitrary bounded-context automorphism upgrade",
             "n-to-infinity Trotter convergence",
             "all-exhaustion common alpha",
-            "thermodynamic ground-band isolation",
-            "quasi-local rank-two unbounded block diagonalization",
-            "QPS locality of the oscillator self-energy",
+            "beta-infinity oscillator phase identification",
+            "quasi-local many-edge rank-two unbounded block diagonalization",
+            "Ritz form compression",
+            "QPS locality of an oscillator effective interaction",
             "two-phase QPS for the exact oscillator lattice",
             "oscillator temporal mass or GNS gap",
             "prospective blind validation",
@@ -1337,16 +1608,44 @@ def validate_certificate(audit: Audit) -> str | None:
     text = read_text(CERTIFICATE, audit, "certificate", core=True)
     if text is None:
         return None
+    head = "\n".join(text.splitlines()[:16])
+    audit.check(
+        "certificate current v2.1 head metadata",
+        text.startswith("# R-167 v2.1 certificate:")
+        and text_has(head, "Exploration: EXP-000811 (additive successor to EXP-000809)")
+        and text_has(head, "Result: R-167, additive version v2.1; no new result number"),
+        head,
+        "top heading and metadata bind EXP-000811 / R-167 v2.1",
+        "certificate",
+    )
+    audit.check(
+        "certificate current v2.1 additive-scope paragraph",
+        all(
+            text_has(head, token)
+            for token in (
+                "preserves the complete v2.0 certificate below",
+                "conditional twentieth-moment fixed-edge corridor reduction",
+                "full-oscillator local-edge parity-doublet",
+                "proves neither the required Q3 fifth-moment/fifth-graph inputs",
+                "issues no intermediate PDF",
+            )
+        ),
+        head,
+        "explicit v2.1 additive theorem and open-input boundary in head",
+        "certificate",
+    )
     require_tokens(
         text,
-        "certificate retained and v2 theorem/boundary chain",
+        "certificate retained v1.9/v2.0 and additive v2.1 theorem chain",
         (
             EXPLORATION_ID,
+            PRIOR_EXPLORATION_ID,
             RESULT_NUMBER,
             RESULT_VERSION,
             RESULT_ID,
             *CLOSED_SUBGATES,
             *OPEN_GATES,
+            *V2_0_NEGATIVE_IDS,
             *NEW_NEGATIVE_IDS,
             r"289\over64",
             "24137569",
@@ -1365,6 +1664,21 @@ def validate_certificate(audit: Audit) -> str | None:
             "k=(0,-2)",
             "RM2006v061n02ABEH004323",
             "No v2.0 PDF is issued",
+            "2916c^2M_{20}",
+            "smallest possible integer is therefore p=5",
+            r"M_{20}\le2d_5^2e^{G_5T}S_\mu^5m_5",
+            "exact coefficient pattern 1,2,2",
+            "2^m-2^{-m}",
+            "N^6-N^{-14}",
+            "20832953/19531250",
+            "332047248/5188304375",
+            "4430237/234375000",
+            "P_0h_{xy}P_0=e_bP_0",
+            "Lh_{xy}L=(e_b+2J)L",
+            "P_0h_{xy}L",
+            "one even and one odd",
+            "Ritz form restriction",
+            "No v2.1 PDF is issued",
             "No statement here closes C6, CP1, physical Sector A, or Pre-A",
         ),
         audit,
@@ -1373,7 +1687,7 @@ def validate_certificate(audit: Audit) -> str | None:
     )
     require_tokens(
         text,
-        "certificate v2 scope corrections",
+        "certificate v2.0/v2.1 scope corrections",
         (
             "common quartic form domain",
             "strong-resolvent",
@@ -1386,6 +1700,12 @@ def validate_certificate(audit: Audit) -> str | None:
             r"{|\delta_{\rm eff}|\over 2J}",
             "every off-diagonal matrix element is nonzero",
             "oscillator GNS gap",
+            "right Dini derivative",
+            "fixed m=5 constant",
+            "Neither P0 nor L is asserted invariant",
+            "nested parity-preserving onsite spectral projections",
+            "truncated-coordinate model need not preserve",
+            "local edge",
         ),
         audit,
         core=True,
@@ -1455,14 +1775,26 @@ def validate_component(
     )
 
 
-def validate_hash_map(payload: dict[str, Any], owner: Path, label: str, audit: Audit) -> None:
+def validate_hash_map(
+    payload: dict[str, Any], owner: Path, label: str, audit: Audit
+) -> None:
+    owner_digest = portable_sha256(owner)
+    audit.check(
+        f"{label} pinned component script hash",
+        owner_digest == EXPECTED_COMPONENT_SCRIPT_SHA256[label],
+        owner_digest,
+        EXPECTED_COMPONENT_SCRIPT_SHA256[label],
+        "freshness",
+    )
     expected = {
         path.relative_to(REPO).as_posix(): portable_sha256(path)
         for path in (owner, MANIFEST, CERTIFICATE)
         if path.is_file()
     }
     actual = as_mapping(payload.get("source_hashes"))
-    audit.check(f"{label} exact source hashes", actual == expected, actual, expected, "freshness")
+    audit.check(
+        f"{label} exact source hashes", actual == expected, actual, expected, "freshness"
+    )
 
 
 def compare_exact_core(
@@ -1891,15 +2223,268 @@ def compare_exact_core(
         "cross_v2_math",
     )
 
+    pg21 = as_mapping(pd.get("fixture_G_twentieth_moment_graph_boundary"))
+    ig21 = as_mapping(ider.get("v2_1_twentieth_moment_graph_boundary"))
+    audit.check(
+        "cross v2.1 p=5 twentieth-moment corridor",
+        pg21.get("moment_order_p") == ig21.get("p") == 5
+        and as_fraction(pg21.get("gamma")) == as_fraction(ig21.get("gamma")) == Fraction(2, 5)
+        and as_fraction(pg21.get("corridor_exponent"))
+        == as_fraction(ig21.get("corridor_exponent"))
+        == Fraction(-2, 5)
+        and as_fraction(pg21.get("edge_constant"))
+        == as_fraction(ig21.get("edge_constant"))
+        == Fraction(2916)
+        and as_fraction(pg21.get("tail_power"))
+        == as_fraction(ig21.get("tail_power"))
+        == Fraction(16)
+        and as_fraction(pg21.get("factorial_R_log_R_coefficient"))
+        == as_fraction(ig21.get("factorial_R_log_R_coefficient"))
+        == Fraction(-1, 5)
+        and ig21.get("minimal_admissible_integer") == 5
+        and all(as_list(row)[-1] is True for row in as_list(pg21.get("pointwise_samples")))
+        and all(as_list(row)[-1] is True for row in as_list(ig21.get("pointwise_samples"))),
+        {"primary": pg21, "independent": ig21},
+        "2916, L^-16, R^-2/5, factorial -1/5, minimal p=5",
+        "cross_v2_1_math",
+    )
+    pg_conditional = as_mapping(pg21.get("conditional"))
+    audit.check(
+        "cross v2.1 sharp conditional factor-two graph transport",
+        as_fraction(ig21.get("conditional_coefficient_without_exp")) == Fraction(75000)
+        and text_has(pg_conditional.get("M20_two_orientation"), "75000*E")
+        and text_has(pg_conditional.get("one_orientation"), "37500*E")
+        and pg_conditional.get("commutator_coefficients") == [1, 2, 2]
+        and ig21.get("commutator_coefficients") == [1, 2, 2]
+        and pg_conditional.get("endpoint_weights_one") is True
+        and pg_conditional.get("onsite_family_strongly_commuting") is True
+        and pg_conditional.get("onsite_flow_commutes_with_K_e") is True
+        and text_has(pg_conditional.get("bond_graph_norm"), "exp(G5*abs(delta)/2)")
+        and text_has(pg_conditional.get("graph_squared_moment"), "exp(G5*T)")
+        and pg_conditional.get("actual_m5_d5_G5_inputs_proved") is False
+        and as_mapping(ig21.get("convexity")).get("holds") is True,
+        {"primary": pg_conditional, "independent": ig21},
+        "M20 <= 2 d5^2 exp(G5 T) S_mu^5 m5; coefficients 1,2,2",
+        "cross_v2_1_math",
+    )
+    pg_all_m = as_mapping(pg21.get("all_m_no_go"))
+    ig_all_m = as_mapping(ig21.get("all_m"))
+    primary_all_m = as_list(pg_all_m.get("rows"))
+    independent_all_m = as_list(ig_all_m.get("rows"))
+    all_m_exact = (
+        len(primary_all_m) == len(independent_all_m) == 7
+        and all(
+            as_mapping(prow).get("m") == as_mapping(irow).get("m") == order
+            and as_fraction(as_mapping(prow).get("norm"))
+            == as_fraction(as_mapping(prow).get("expected"))
+            == as_fraction(as_mapping(irow).get("normalized_commutator_norm"))
+            == as_fraction(as_mapping(irow).get("forced_Gm"))
+            == Fraction(2**order) - Fraction(1, 2**order)
+            for order, (prow, irow) in enumerate(
+                zip(primary_all_m, independent_all_m), 1
+            )
+        )
+    )
+    audit.check(
+        "cross v2.1 exponential all-m graph-growth no-go",
+        all_m_exact
+        and text_has(pg_all_m.get("Dini_log_norm_derivative"), "||C_m||/(2*hbar)")
+        and text_has(pg_all_m.get("forced_G_m"), "||C_m||/hbar")
+        and pg_all_m.get("fixed_m5_rejected") is False
+        and pg_all_m.get("automatic_quadratic_all_m_inference_rejected") is True
+        and ig_all_m.get("quadratic_growth") is False
+        and ig_all_m.get("fixed_m5_rejected") is False,
+        {"primary": pg_all_m, "independent": ig_all_m},
+        "||C_m||=2^m-2^-m, right-Dini factor 1/2, fixed m=5 remains viable",
+        "cross_v2_1_negative",
+    )
+    pg_kn = as_mapping(pg21.get("KN_no_go"))
+    ig_kn = as_mapping(ig21.get("KN"))
+    n_kn = ig_kn.get("N")
+    audit.check(
+        "cross v2.1 static-moment/low-graph history no-go",
+        n_kn == 3
+        and text_has(pg_kn.get("d5_matrix"), "Matrix([[0, 0], [0, 1]])")
+        and as_fraction(ig_kn.get("d5")) == 1
+        and text_has(pg_kn.get("G5"), "(N**20 - 1)/N**14")
+        and as_fraction(ig_kn.get("G5")) == Fraction(n_kn**6) - Fraction(1, n_kn**14)
+        and text_has(pg_kn.get("one_orientation_q20_lower"), "N**12*delta**2/8")
+        and text_has(pg_kn.get("two_orientation_q20_lower"), "N**12*delta**2/4")
+        and as_fraction(ig_kn.get("one_orientation_q20_lower")) == Fraction(n_kn**12, 8)
+        and as_fraction(ig_kn.get("two_orientation_q20_lower")) == Fraction(n_kn**12, 4)
+        and pg_kn.get("low_graph_range") == ig_kn.get("low_graph_s_range") == "0<=s<=1"
+        and pg_kn.get("delta_nonzero") is True
+        and ig_kn.get("condition_delta_nonzero") is True
+        and ig_kn.get("condition_N4_ge_abs_delta") is True
+        and pg_kn.get("Q3_dynamics_no_go") is False,
+        {"primary": pg_kn, "independent": ig_kn},
+        "d5=1, G5=N^6-N^-14, each orientation >=delta^2 N^12/8; inference-only no-go",
+        "cross_v2_1_negative",
+    )
+
+    ph21 = as_mapping(pd.get("fixture_H_full_oscillator_edge_cluster"))
+    ih21 = as_mapping(ider.get("v2_1_full_oscillator_edge_cluster"))
+    ph_inputs = as_mapping(ph21.get("inputs"))
+    ih_inputs = as_mapping(ih21.get("inputs"))
+    expected_inputs = {
+        "c": Fraction(1, 1000),
+        "m": Fraction(2),
+        "a": Fraction(1, 10),
+        "b": Fraction(1, 20),
+        "A_Q": Fraction(3),
+        "a0_minus_m2": Fraction(1, 100),
+        "d2": Fraction(-1, 1000),
+        "delta1": Fraction(1, 10000),
+        "Gamma": Fraction(100),
+        "z": Fraction(6),
+    }
+    audit.check(
+        "cross v2.1 corrected full-edge inputs",
+        all(
+            as_fraction(ph_inputs.get(key))
+            == as_fraction(ih_inputs.get(key))
+            == value
+            for key, value in expected_inputs.items()
+        )
+        and as_fraction(ih_inputs.get("a1_minus_m2")) == Fraction(9, 1000),
+        {"primary": ph_inputs, "independent": ih_inputs},
+        expected_inputs,
+        "cross_v2_1_math",
+    )
+    ph_sharp = as_mapping(ph21.get("sharp_minmax"))
+    ih_scalars = as_mapping(ih21.get("scalars"))
+    expected_edge = {
+        "Cb": Fraction(1, 12500),
+        "fb": Fraction(19, 1500000),
+        "eb": Fraction(139, 1500000),
+        "J": Fraction(4, 125),
+        "epsilon": Fraction(23, 6250),
+        "A": Fraction(96139, 1500000),
+        "D": Fraction(50, 3),
+        "D_minus_A": Fraction(8301287, 500000),
+        "margin": Fraction(20832953, 19531250),
+    }
+    audit.check(
+        "cross v2.1 exact local-edge Schur constants",
+        all(
+            as_fraction(ph_sharp.get(key))
+            == as_fraction(ih_scalars.get(key))
+            == value
+            for key, value in expected_edge.items()
+        )
+        and as_fraction(ph_sharp.get("gap_lower"))
+        == as_fraction(ih_scalars.get("gap_rational_lower"))
+        == Fraction(332047248, 5188304375)
+        and ph_sharp.get("global_parity_invariant") is True
+        and ph_sharp.get("h_nonnegative_hypothesis") is True
+        and ph_sharp.get("compact_resolvent_hypothesis") is True
+        and ph_sharp.get("exactly_one_low_per_parity") is True,
+        {"primary": ph_sharp, "independent": ih_scalars},
+        {**expected_edge, "gap_rational_lower": Fraction(332047248, 5188304375)},
+        "cross_v2_1_math",
+    )
+    ih_compressions = as_mapping(ih21.get("compressions"))
+    audit.check(
+        "cross v2.1 diagonal compressions retain noninvariance",
+        ph_sharp.get("P0_and_L_invariant") is False
+        and ih_compressions.get("P0_L_invariant") is False
+        and as_fraction(ph_sharp.get("P0_h_L_norm"))
+        == as_fraction(ih_compressions.get("P0_h_L_norm"))
+        == abs(expected_edge["fb"])
+        and [as_fraction(value) for value in as_list(ih_compressions.get("P0_h_P0_diagonal"))]
+        == [expected_edge["eb"], Fraction(0), Fraction(0), expected_edge["eb"]]
+        and [as_fraction(value) for value in as_list(ih_compressions.get("L_h_L_diagonal"))]
+        == [Fraction(0), expected_edge["A"], expected_edge["A"], Fraction(0)]
+        and all(
+            as_fraction(value) == -expected_edge["fb"] / 2
+            for value in as_list(ih_compressions.get("P0_h_L_entries"))
+        )
+        and as_fraction(ih_compressions.get("even_trial_energy")) == expected_edge["eb"]
+        and as_fraction(ih_compressions.get("odd_trial_energy")) == expected_edge["eb"]
+        and ih_compressions.get("global_parity_invariant") is True,
+        {"primary": ph_sharp, "independent": ih_compressions},
+        "P0hP0=ebP0, LhL=AL, ||P0hL||=|fb| != 0; one trial per parity",
+        "cross_v2_1_math",
+    )
+    ph_relative = as_mapping(ph21.get("relative_form"))
+    ih_relative = as_mapping(ih21.get("relative"))
+    expected_relative = {
+        "eta_b": Fraction(12, 125),
+        "nu_b": Fraction(402, 3125),
+        "rho_b": Fraction(15201, 156250),
+        "alpha": Fraction(183081, 312500),
+        "beta": Fraction(2851, 750000),
+        "gamma0": Fraction(8, 125),
+        "Delta_rf": Fraction(4430237, 234375000),
+    }
+    audit.check(
+        "cross v2.1 relative-form local-edge gap",
+        all(
+            as_fraction(ph_relative.get(key))
+            == as_fraction(ih_relative.get(key))
+            == value
+            for key, value in expected_relative.items()
+        )
+        and ph_relative.get("exactly_two_low") is True
+        and as_fraction(ph_relative.get("lambda3_minus_lambda2_lower"))
+        == expected_relative["Delta_rf"],
+        {"primary": ph_relative, "independent": ih_relative},
+        expected_relative,
+        "cross_v2_1_math",
+    )
+    ph_cutoff = as_mapping(ph21.get("cutoff_removal"))
+    ih_cutoff = as_mapping(ih21.get("cutoff"))
+    audit.check(
+        "cross v2.1 parity-preserving Ritz boundary",
+        all(
+            ph_cutoff.get(key) is True
+            for key in (
+                "nested",
+                "parity_preserving",
+                "Pi_M_contains_P",
+                "union_is_quartic_form_core",
+                "restriction_is_Pi_tensor_Pi_full_form",
+                "same_constants",
+                "Ritz_eigenvalues_decrease",
+                "Ritz_limit_is_full_edge",
+            )
+        )
+        and ph_cutoff.get("replace_q_then_square") is False
+        and ph_cutoff.get("Pi_q2_Pi_equals_Pi_q_Pi_squared") is False
+        and ih_cutoff.get("nested_parity_preserving_Ritz_form_restriction") is True
+        and ih_cutoff.get("Pi_M_contains_P") is True
+        and ih_cutoff.get("union_form_core") is True
+        and ih_cutoff.get("same_constants") is True
+        and ih_cutoff.get("eigenvalues_decrease_to_full") is True
+        and ih_cutoff.get("replace_q_then_square") is False
+        and ih_cutoff.get("Pi_q2_Pi_equals_Pi_q_Pi_squared") is False
+        and ph21.get("local_edge_only") is True
+        and ph21.get("global_QPS_transfer") is False
+        and ph21.get("oscillator_lattice_GNS_gap") is False
+        and ih21.get("local_edge_only") is True
+        and ih21.get("global_QPS") is False
+        and ih21.get("oscillator_lattice_GNS_gap") is False,
+        {"primary": ph_cutoff, "independent": ih_cutoff},
+        "nested parity-preserving full-form Ritz restrictions only; no truncated q or lattice transfer",
+        "cross_v2_1_scope",
+    )
+
     primary_scope = as_mapping(primary.get("scope"))
     primary_true = (
         "finite_Gibbs_full_Hamiltonian_cutoff_resummation",
         "fixed_edge_to_growing_corridor_reduction",
         "below_Gamma_global_Feshbach_precursor",
         "compressed_TFIM_two_phase_QPS_and_phasewise_gap",
+        "twentieth_moment_fixed_edge_corridor_reduction",
+        "conditional_fifth_graph_transport_reduction",
+        "full_oscillator_local_edge_parity_doublet_cluster",
+        "parity_preserving_onsite_spectral_Ritz_removal",
     )
     primary_false = (
         "actual_Q3_fixed_edge_history_bound",
+        "actual_Q3_twentieth_fixed_edge_history_bound",
+        "translate_uniform_local_fifth_Gibbs_moment_and_elliptic_embedding",
+        "simultaneous_bond_shear_fifth_graph_propagation",
         "arbitrary_context_automorphism_upgrade",
         "rank_two_unbounded_block_elimination",
         "two_phase_QPS_for_exact_Q3LOCK",
@@ -1912,10 +2497,16 @@ def compare_exact_core(
         "fixed_edge_to_growing_corridor_reduction_closed",
         "below_Gamma_Feshbach_precursor_closed",
         "compressed_TFIM_two_phase_QPS_closed",
+        "twentieth_moment_fixed_edge_corridor_reduction_closed",
+        "conditional_fifth_graph_transport_reduction_closed",
+        "full_oscillator_local_edge_parity_cluster_closed",
+        "parity_preserving_Ritz_removal_closed",
     )
     independent_false = (
         "arbitrary_context_upgrade_closed",
         "actual_Q3_fixed_edge_history_bound_closed",
+        "translate_uniform_local_fifth_Gibbs_moment_closed",
+        "simultaneous_bond_shear_fifth_graph_propagation_closed",
         "onsite_interspersed_history_bound_closed",
         "all_exhaustion_common_alpha_closed",
         "rank_two_block_diagonalization_closed",
@@ -1931,7 +2522,7 @@ def compare_exact_core(
         "Pre_A_closed",
     )
     audit.check(
-        "all narrow v2 children true in both components",
+        "all narrow v2.0/v2.1 children true in both components",
         all(primary_scope.get(key) is True for key in primary_true)
         and all(ider.get(key) is True for key in independent_true),
         {
@@ -1974,6 +2565,16 @@ def compare_exact_core(
         "fixed_edge_corridor_reduction_closed": True,
         "below_Gamma_global_Feshbach_precursor_closed": True,
         "compressed_finite_spin_phasewise_gap_closed": True,
+        "twentieth_moment_corridor_constant": 2916,
+        "twentieth_moment_corridor_exponent": "-2/5",
+        "minimal_moment_p": 5,
+        "conditional_M20_factor": "2 d5^2 exp(G5 T) S_mu^5 m5",
+        "all_m_normalized_commutator": "2^m-2^-m",
+        "static_low_graph_history_growth": "delta^2 N^12/8 per orientation",
+        "local_edge_schur_margin": "20832953/19531250",
+        "local_edge_gap_rational_lower": "332047248/5188304375",
+        "local_edge_relative_gap": "4430237/234375000",
+        "local_edge_Ritz_removal_closed": True,
         "arbitrary_context_or_history_or_oscillator_parent_closed": False,
     }
 
@@ -2018,7 +2619,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
             require_tokens(
                 section,
                 f"{RESULT_NUMBER} {RESULT_VERSION} authority",
-                (RESULT_VERSION, EXPLORATION_ID, "pure-bond", "measured-Renyi", "semiclassical", "rank-two", *CLOSED_SUBGATES, *OPEN_GATES[:3], *NEGATIVE_IDS, "T0"),
+                (RESULT_VERSION, EXPLORATION_ID, "pure-bond", "measured-Renyi", "semiclassical", "rank-two", "twentieth", "full-oscillator", "Ritz", *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS, "T0"),
                 audit,
             )
 
@@ -2026,21 +2627,21 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
     if negatives is not None:
         require_tokens(
             negatives,
-            "retained v1.9 negative authorities",
+            "retained v1.9/v2.0 negative authorities",
             PRIOR_NEGATIVE_IDS,
             audit,
         )
         for negative_id in NEW_NEGATIVE_IDS:
             require_tokens(
                 negatives,
-                f"v2 negative authority {negative_id}",
+                f"v2.1 negative authority {negative_id}",
                 (negative_id,),
                 audit,
             )
 
     gates = read_text(REPO / "claims/GATES.md", audit, "gate registry")
     if gates is not None:
-        for gate in V1_9_CLOSED_SUBGATES:
+        for gate in PRIOR_CLOSED_SUBGATES:
             section = heading_section(gates, gate)
             audit.pending(
                 f"retained closed gate section {gate}",
@@ -2055,13 +2656,13 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
                     re.search(r"\*\*Status:\*\*\s*CLOSED", section, re.I)
                     is not None,
                     section,
-                    "CLOSED retained from v1.9",
+                    "CLOSED retained from v1.9/v2.0",
                     "formal_history",
                 )
         for gate in NEW_CLOSED_SUBGATES:
             section = heading_section(gates, gate)
             audit.pending(
-                f"v2 closed gate section {gate}",
+                f"v2.1 closed gate section {gate}",
                 section is not None,
                 section,
                 "section",
@@ -2069,7 +2670,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
             )
             if section is not None:
                 audit.pending(
-                    f"v2 closed gate scoped status {gate}",
+                    f"v2.1 closed gate scoped status {gate}",
                     re.search(r"\*\*Status:\*\*\s*CLOSED", section, re.I)
                     is not None
                     and text_has(section, EXPLORATION_ID)
@@ -2099,7 +2700,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
 
     strategy_index = read_text(REPO / "strategy/INDEX.md", audit, "strategy index")
     if strategy_index is not None:
-        require_tokens(strategy_index, "strategy v2.0 links", (MANIFEST.name, CERTIFICATE.name), audit)
+        require_tokens(strategy_index, "strategy v2.1 links", (MANIFEST.name, CERTIFICATE.name), audit)
 
     todo = load_json(REPO / "todo/todo.json", audit, "TODO authority")
     if todo is not None:
@@ -2108,11 +2709,11 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         if len(tasks) == 1:
             serialized = json.dumps(tasks[0], sort_keys=True)
             audit.pending(
-                f"{TASK_ID} in-progress v2.0 linkage",
+                f"{TASK_ID} in-progress v2.1 linkage",
                 tasks[0].get("status") == "in_progress"
                 and all(text_has(serialized, token) for token in (EXPLORATION_ID, RESULT_VERSION, *OPEN_GATES)),
                 tasks[0],
-                "in_progress and linked to v2.0 open gates",
+                "in_progress and linked to v2.1 open gates",
                 "formal",
             )
 
@@ -2120,7 +2721,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
     if theorem_map is not None:
         require_tokens(
             json.dumps(theorem_map, sort_keys=True),
-            "Sector-A theorem map v2.0 scope",
+            "Sector-A theorem map v2.1 scope",
             (RESULT_NUMBER, RESULT_VERSION, EXPLORATION_ID, *CLOSED_SUBGATES, *OPEN_GATES, "Pre-A"),
             audit,
         )
@@ -2131,14 +2732,15 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         for event in changelog or []
         if {CLAIM_ID, EXPLORATION_ID, RESULT_NUMBER}
         <= set(as_list(event.get("claim_ids")))
-        and text_has(event.get("raw", event.get("header", "")), "R-167 v2.0")
+        and text_has(event.get("raw", event.get("header", "")), "R-167 v2.1")
         and not text_has(event.get("raw", event.get("header", "")), "combined gate-level synthesis PDF issued")
+        and "hash-correction" not in set(as_list(event.get("keywords")))
     ]
     if not v2_events:
-        audit.pending("R-167 v2.0 changelog", False, 0, 1, "formal")
+        audit.pending("R-167 v2.1 changelog", False, 0, 1, "formal")
     else:
         audit.check(
-            "R-167 v2.0 changelog unique",
+            "R-167 v2.1 changelog unique",
             len(v2_events) == 1,
             len(v2_events),
             1,
@@ -2147,7 +2749,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
     if len(v2_events) == 1:
         event = v2_events[0]
         audit.check(
-            "R-167 v2.0 changelog authority sets",
+            "R-167 v2.1 changelog authority sets",
             set(NEW_NEGATIVE_IDS) <= set(as_list(event.get("neg_results")))
             and {
                 PRIMARY.relative_to(REPO).as_posix(),
@@ -2168,15 +2770,15 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         )
         require_tokens(
             event.get("raw", ""),
-            "R-167 v2.0 changelog theorem and boundary",
+            "R-167 v2.1 changelog theorem and boundary",
             (
-                "finite-Gibbs",
-                "fixed-edge",
-                "Feshbach",
-                "compressed",
-                "oscillator",
-                "remain open",
-                "No intermediate PDF",
+                "twentieth",
+                "R^(2/5)",
+                "full two-site oscillator edge",
+                "parity",
+                "Ritz",
+                "remain OPEN",
+                "No v2.1 PDF",
             ),
             audit,
             core=True,
@@ -2184,10 +2786,10 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
 
     proof_map = read_text(REPO / "theory/proof-evidence-map.md", audit, "proof-evidence map")
     if proof_map is not None:
-        require_tokens(proof_map, "proof-evidence v2.0 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
+        require_tokens(proof_map, "proof-evidence v2.1 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
     proof_json = load_json(REPO / "verification/proof-evidence-map.json", audit, "proof-evidence JSON")
     if proof_json is not None:
-        require_tokens(json.dumps(proof_json, sort_keys=True), "proof-evidence JSON v2.0 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
+        require_tokens(json.dumps(proof_json, sort_keys=True), "proof-evidence JSON v2.1 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
 
     locator_specs = (
         (
@@ -2337,7 +2939,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         catalog_inventory = json.dumps(payloads, sort_keys=True)
         require_tokens(
             catalog_inventory,
-            "catalog v2.0 artifacts",
+            "catalog v2.1 artifacts",
             (
                 MANIFEST.relative_to(REPO).as_posix(),
                 CERTIFICATE.relative_to(REPO).as_posix(),
@@ -2392,7 +2994,7 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
 
     components: dict[str, dict[str, Any]] = {}
     sentinels: dict[str, str] = {}
-    with tempfile.TemporaryDirectory(prefix="tect-exp809-integrated-") as directory:
+    with tempfile.TemporaryDirectory(prefix="tect-exp811-integrated-") as directory:
         temporary = Path(directory)
         for label, component in (("primary", PRIMARY), ("independent", INDEPENDENT)):
             result = run_fresh_pair(component, temporary, audit, label)
@@ -2432,7 +3034,13 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
         for path in source_paths
         if path.is_file()
     }
-    for artifact in (CHECKPOINT_SOURCE, CHECKPOINT_PDF):
+    historical_artifacts = (
+        CHECKPOINT_SOURCE,
+        CHECKPOINT_PDF,
+        REPO / EXPECTED_V2_CHECKPOINT["source"],
+        REPO / EXPECTED_V2_CHECKPOINT["pdf"],
+    )
+    for artifact in historical_artifacts:
         if artifact.is_file():
             source_hashes[artifact.relative_to(REPO).as_posix()] = raw_sha256(artifact)
     return {
@@ -2483,8 +3091,15 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "exact_low_band_TFIM_compression": True,
             "finite_Gibbs_full_Hamiltonian_cutoff_resummation": True,
             "fixed_edge_to_growing_corridor_reduction": True,
+            "twentieth_moment_fixed_edge_corridor_reduction": True,
+            "conditional_fifth_graph_transport_reduction": True,
+            "translate_uniform_local_fifth_Gibbs_moment_and_elliptic_embedding": False,
+            "simultaneous_bond_shear_fifth_graph_propagation": False,
+            "actual_Q3_twentieth_fixed_edge_history_bound": False,
             "below_Gamma_global_Feshbach_precursor": True,
             "compressed_finite_spin_TFIM_two_phase_QPS_and_phasewise_gap": True,
+            "full_oscillator_local_edge_parity_doublet_cluster": True,
+            "parity_preserving_onsite_spectral_Ritz_removal": True,
             "arbitrary_context_automorphism_upgrade": False,
             "actual_Q3_fixed_edge_history_bound": False,
             "onsite_interspersed_history_bound": False,
@@ -2508,29 +3123,35 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
         "source_hashes": source_hashes,
         "formal_workflow": formal,
         "pdf_efficiency": {
-            "dedicated_R167_v2_0_source_required": False,
-            "dedicated_R167_v2_0_PDF_required": False,
+            "dedicated_R167_v2_1_source_required": False,
+            "dedicated_R167_v2_1_PDF_required": False,
             "PDF_created_by_this_verifier": False,
             "historical_v1_9_v1_0_checkpoint_strictly_validated": checkpoint_state.get(
-                "historical_valid", False
+                "v1_9_v1_0_historical_valid", False
             ),
-            "historical_v1_9_v1_0_checkpoint_is_v2_evidence": False,
-            "per_lemma_or_intermediate_v2_0_PDF_issued": False,
-            "later_v2_0_v1_1_checkpoint_deferred_until_layers_pass": not checkpoint_state.get(
+            "historical_v2_0_v1_1_checkpoint_strictly_validated": checkpoint_state.get(
+                "v2_0_v1_1_historical_valid", False
+            ),
+            "historical_checkpoints_are_v2_1_evidence": False,
+            "per_lemma_or_intermediate_v2_1_PDF_issued": False,
+            "later_v2_1_v1_2_checkpoint_deferred_until_layers_pass": not checkpoint_state.get(
                 "future_valid", False
             ),
-            "later_v2_0_v1_1_checkpoint_strictly_validated": checkpoint_state.get(
+            "later_v2_1_v1_2_checkpoint_strictly_validated": checkpoint_state.get(
                 "future_valid", False
             ),
-            "historical_source": CHECKPOINT_SOURCE_REL,
-            "historical_pdf": CHECKPOINT_PDF_REL,
-            "historical_source_sha256": (
+            "historical_v1_9_v1_0_source": CHECKPOINT_SOURCE_REL,
+            "historical_v1_9_v1_0_pdf": CHECKPOINT_PDF_REL,
+            "historical_v1_9_v1_0_source_sha256": (
                 raw_sha256(CHECKPOINT_SOURCE) if CHECKPOINT_SOURCE.is_file() else None
             ),
-            "historical_pdf_sha256": (
+            "historical_v1_9_v1_0_pdf_sha256": (
                 raw_sha256(CHECKPOINT_PDF) if CHECKPOINT_PDF.is_file() else None
             ),
-            "historical_pages": CHECKPOINT_PAGES,
+            "historical_v1_9_v1_0_pages": CHECKPOINT_PAGES,
+            "historical_v2_0_v1_1_metadata": checkpoint_state.get(
+                "v2_0_v1_1_historical_metadata", {}
+            ),
             "future_checkpoint_metadata": checkpoint_state.get("future_metadata", {}),
             "certificate_present": certificate is not None,
         },

@@ -995,6 +995,29 @@ phasewise GNS gap. That closes
 not the rank-two oscillator transfer or oscillator gap. The rank-two/QPS and
 broken-sector oscillator parents remain OPEN.
 
+EXP-000811 advances the same R-167 additively to v2.1. A uniform
+translate- and orientation-resolved twentieth endpoint-coordinate moment for
+every partial history and its adjoint implies the fixed-edge hard tail
+`c^2 M_20 L^-16` and corridor `2916c^2M_20R^6L^-16`; `L=R^(2/5)` gives
+`R^(-2/5)`. This closes only
+`PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION`.
+The moment is not proved. Its exact open inputs are
+`PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING`
+and
+`PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION`.
+
+On the gap branch, the exact full two-site oscillator edge has a parity-related
+two-eigenvalue low cluster and an explicit positive third-eigenvalue separation
+under either the min--max or relative-form corridor. The corrected rational
+fixture has `d_2=-1/1000`, sharp lower bound
+`332047248/5188304375`, and independent relative-form lower bound
+`4430237/234375000`. Nested parity-preserving Ritz form restrictions remove the
+onsite spectral cutoff uniformly, closing
+`PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL`
+only for one local edge. The aligned--misaligned cross term is generally
+nonzero; no many-edge block diagonalization, QPS transfer, thermodynamic phase
+selection or oscillator GNS gap follows. All three R-167 parents remain OPEN.
+
 EXP-000807--808 / R-168 v1.0 separately freeze and harden the prospective Round-1 validation
 protocol and audits current readiness. It closes only the common estimand/map
 schema, provenance-order protocol, anti-leakage schema validator and exact
@@ -1025,6 +1048,24 @@ NOT_CREATED, while
 map, prediction, target, freeze, tag, score or selection is created; the
 common-input, external commitment, admitted-map/prediction, cryptographic
 remote-verification and parent Round-1 gates also remain OPEN.
+
+EXP-000812 advances R-168 additively to v1.2. At finite regulated volume,
+`H_d(t,J)=H(t)-JQ+(V/2)d(t)J^2 I` leaves the zero-source Hamiltonian and first
+source derivative fixed while shifting normalized second response by the
+arbitrary declared contact `d(t)`; the exact rational fixture gives shift
+`6/7`. This closes
+`PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY` only. It is
+not a no-go for a fully specified physical probe.
+
+The hardened
+`tect/pre-a-m2-ci8-physical-response-successor-minimum-contract/1.1` schema
+closes
+`PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA` only as a
+syntax and declared-artifact-binding contract. Its synthetic fixture and
+primary/independent/integrated validators create no physical candidate, law,
+state/reference, control or response map, error-controlled prediction or
+external commitment. `PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND` and
+the Round-1 parent remain OPEN.
 
 The primary
 `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` gate therefore remains

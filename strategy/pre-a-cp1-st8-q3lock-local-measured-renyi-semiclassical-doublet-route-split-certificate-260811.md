@@ -1,12 +1,14 @@
-# R-167 v2.0 certificate: Gibbs resummation, corridor reduction, and compressed phases
+# R-167 v2.1 certificate: twentieth-moment corridor and full-oscillator local-edge cluster
 
-- **Exploration:** `EXP-000809` (additive successor to `EXP-000806`)
-- **Result:** `R-167`, additive version `v2.0`; no new result number
+- **Exploration:** `EXP-000811` (additive successor to `EXP-000809`)
+- **Result:** `R-167`, additive version `v2.1`; no new result number
 - **Stable result ID:** `PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT`
 - **Claim context:** `C6-SPACETIME-SIGNATURE`
 - **Task:** `T-054`
 - **Tier:** `T0`, `claim_bearing: false`
 - **Date:** 2026-08-11
+
+R-167 v2.1 preserves the complete v2.0 certificate below and adds the conditional twentieth-moment fixed-edge corridor reduction and the full-oscillator local-edge parity-doublet compression/min--max and parity-preserving Ritz layers in Sections 21--30. It proves neither the required Q3 fifth-moment/fifth-graph inputs nor a lattice QPS or phasewise GNS gap, and it issues no intermediate PDF.
 
 R-167 v2.0 preserves the complete v1.9 certificate below and adds the finite-Gibbs, fixed-edge corridor, global Feshbach, and compressed-phase layers in Sections 11--19. No v2.0 PDF is issued at this proof-first stage.
 
@@ -1083,3 +1085,518 @@ historical v0.8 source/PDF remains prior R-167 v1.9 / R-168 v1.0 evidence and
 is not current v2.0/v1.1 evidence.  This issuance changes no claim tier and
 closes none of the common-alpha, rank-two oscillator, oscillator GNS-gap,
 physical-response, prospective-freeze, physical Sector-A, or Pre-A parents.
+
+
+## 21. R-167 v2.1 additive checkpoint and staging boundary
+
+This section records `EXP-000811` and `R-167 v2.1`.  Every v2.0 theorem,
+negative boundary, and historical combined checkpoint above is retained.
+The additive theorem closes only
+
+`PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION`
+
+and
+
+`PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL`.
+
+The new input gates are
+
+`PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING`
+
+and
+
+`PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION`.
+
+They remain open together with all three mathematical parents and the
+prospective Round-1 parent.
+
+## 22. A twentieth endpoint-coordinate moment closes the fixed-edge corridor
+
+For each tested translated edge `e=<xy>`, each finite volume and compact
+source, every split mesh and partial history, and both history orientations,
+put
+
+\[
+ X_e=\max(|q_x|,|q_y|),\qquad
+ M_{20}=\sup\{\sigma_+(X_e^{20})+\sigma_-(X_e^{20})\}.       \tag{22.1}
+\]
+
+The supremum includes the translate and edge orientation; translation
+covariance alone still leaves the three direction orbits identified in
+Section 14.  Since
+
+\[
+ X^4{\bf1}_{X>L}\le L^{-16}X^{20},                           \tag{22.2}
+\]
+
+the hard restricted edge tail obeys
+
+\[
+ \sigma_+(w_{e,L}^2)+\sigma_-(w_{e,L}^2)
+ \le c^2M_{20}L^{-16}.                                      \tag{22.3}
+\]
+
+Combining (22.3) with `m_R=6R(2R+1)^2<=54R^3` and the exact edge-sum
+Cauchy estimate gives
+
+\[
+ \boxed{
+ \sigma_+(W_{R,L}^2)+\sigma_-(W_{R,L}^2)
+ \le2916c^2M_{20}R^6L^{-16}.\ }                             \tag{22.4}
+\]
+
+More generally a uniform `4p`-th moment and `L=R^gamma` give exponent
+
+\[
+ 6-4\gamma(p-1).                                            \tag{22.5}
+\]
+
+The separate bounded-cutoff factorial requires `gamma<1/2`.  Allowing every
+such gamma, the smallest possible integer is therefore `p=5`.  The concrete
+choice `gamma=2/5` gives
+
+\[
+ 6-16(2/5)=-2/5.                                            \tag{22.6}
+\]
+
+Moreover `nu_L=O(L^2)=O(R^(4/5))`, so Stirling gives
+
+\[
+ \log{(C R^{4/5})^R\over R!}
+ =-{1\over5}R\log R+O(R).                                  \tag{22.7}
+\]
+
+This closes the stated implication, not the moment input itself.
+
+## 23. Conditional local-fifth-moment and fifth-graph transport theorem
+
+Let `k_(x,h)` be the positive shifted exact onsite Hamiltonian at source `h`.
+For one tested edge `e`, define
+
+\[
+ m_5=\sup_{\Lambda,|h|\le h_0,x}
+ \varphi_{\Lambda,h}(k_{x,h}^5),\qquad
+ d_5=\sup_{|h|\le h_0}\|\,|q|^{10}k_h^{-5/2}\|,             \tag{23.1}
+\]
+
+where the second norm is the closed one-site quartic elliptic graph
+extension.  With
+
+\[
+ \mu_z=e^{-\mu d(z,e)},\quad d(z,e)=\min[d(z,x),d(z,y)],
+ \quad K_e=\sum_z\mu_zk_{z,h},\quad S_\mu=\sum_z\mu_z,       \tag{23.2}
+\]
+
+both endpoint weights are one.  The distinct-site `k_z` strongly commute.
+
+Let `V_x` be the simultaneous all-cross-bond generator and
+`B_delta=exp(-i delta V_x/hbar)`.  The load-bearing `C1`/form-domain
+hypothesis is that `K_e^5` has a `B_delta`-invariant form domain and
+
+\[
+ {d\over d\delta}\langle B_\delta\psi,K_e^5B_\delta\psi\rangle
+ =\langle B_\delta\psi,{i\over\hbar}[V_x,K_e^5]
+ B_\delta\psi\rangle.                                      \tag{23.3}
+\]
+
+Put `J_e=(i/hbar)[V_x,K_e]` and require the uniform finite constant
+
+\[
+ G_5=\left\|K_e^{-5/2}{i\over\hbar}[V_x,K_e^5]K_e^{-5/2}
+ \right\|.                                                  \tag{23.4}
+\]
+
+Expanding the five commutator positions and pairing adjoints gives the exact
+coefficient pattern `1,2,2`:
+
+\[
+\begin{split}
+G_5\le{}&\|K_e^{-1/2}J_eK_e^{-1/2}\|\\
+&+2\|K_e^{1/2}J_eK_e^{-3/2}\|
+ +2\|K_e^{3/2}J_eK_e^{-5/2}\|.                             \tag{23.5}
+\end{split}
+\]
+
+Gronwall applied to (23.3) yields
+
+\[
+ \|K_e^{5/2}B_\delta K_e^{-5/2}\|
+ \le e^{G_5|\delta|/2}.                                    \tag{23.6}
+\]
+
+The onsite product flow commutes with `K_e` exactly.  Every prefix with total
+bond time at most `T`, including the reverse orientation, therefore has
+`K_e^5` moment at most `e^(G_5T)` times the initial one.  Strong commutativity
+and scalar convexity give
+
+\[
+ \varphi(K_e^5)\le S_\mu^4\sum_z\mu_z\varphi(k_{z,h}^5)
+ \le S_\mu^5m_5.                                           \tag{23.7}
+\]
+
+Finally,
+
+\[
+ X_e^{20}\le |q_x|^{20}+|q_y|^{20}
+ \le d_5^2(k_x^5+k_y^5)\le d_5^2K_e^5.                    \tag{23.8}
+\]
+
+Thus the sharp two-orientation conditional input to Section 22 is
+
+\[
+ \boxed{\ M_{20}\le2d_5^2e^{G_5T}S_\mu^5m_5.\ }           \tag{23.9}
+\]
+
+The factor is two, not eight: `M20` already sums the two orientations, and
+the two endpoint fifth powers fit under the single strongly commuting
+`K_e^5`.
+
+Existing static sharp-coordinate exponential moments do not establish the
+moment in (23.1), which contains momentum.  The currently proved graph
+endpoint does not supply `s=5/2` or the two upper rungs in (23.5).  Hence both
+new gates in Section 21 remain genuine inputs.
+
+## 24. No automatic quadratic-in-m all-order graph hierarchy
+
+The first new negative is
+
+`NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT`.
+
+Take `hbar=1`, `K=diag(1,4)` and `V=sigma_x`.  Then
+
+\[
+ C_m=K^{-m/2}i[V,K^m]K^{-m/2},\qquad
+ \|C_m\|=2^m-2^{-m}.                                      \tag{24.1}
+\]
+
+For `A_m(t)=K^(m/2)exp(-itV)K^(-m/2)`,
+
+\[
+ A_m(t)^*A_m(t)=I+tC_m+O(t^2).                             \tag{24.2}
+\]
+
+The ordinary two-sided derivative of the norm has the expected cusp.  The
+right Dini derivative of `log||A_m(t)||`, equivalently `t` decreasing to zero
+after maximizing over the two signs of `t`, is `||C_m||/2`.  Therefore
+`||A_m(t)||<=exp(G_m|t|/2)` forces `G_m>=||C_m||` (and division by `hbar`
+in general).  No automatic quadratic-in-`m` all-order conclusion follows.
+
+This abstract fixture does not reject the fixed `m=5` constant in (23.4).
+Embedding (24.1) into the actual Q3 onsite spectrum would additionally
+require a proved nonzero transition of the bond generator between the chosen
+onsite spectral levels; that is not asserted here.
+
+## 25. Static moments plus low graph control do not force the history moment
+
+The second new negative is
+
+`NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT`.
+
+For integers `N>=1`, let
+
+\[
+ K_N=\operatorname{diag}(1,N^4),\quad
+ q_N=\operatorname{diag}(0,N),\quad
+ H_N=\operatorname{diag}(0,N^4),\quad
+ V_N={\sigma_y\over N^4}.                                  \tag{25.1}
+\]
+
+At `beta=1`, let `rho_N` be proportional to `exp(-H_N)` and put
+`U_N(delta)=exp(-i delta V_N)`.  Exact arithmetic gives
+
+\[
+ d_5=\|q_N^{10}K_N^{-5/2}\|=1,
+ \qquad \rho_N(K_N^5)\le1+(5/e)^5,                         \tag{25.2}
+\]
+
+because `sup_(x>=0)x^5e^(-x)=(5/e)^5`.  If `0<=s<=1` and
+`N^4>=|delta|`, then
+
+\[
+ \|K_N^sU_N(\delta)K_N^{-s}\|\le1+|\delta|.               \tag{25.3}
+\]
+
+Nevertheless the exact fifth normalized commutator constant is
+
+\[
+ G_5=N^6-N^{-14}.                                          \tag{25.4}
+\]
+
+For `delta!=0`, `N^4>=|delta|` implies `|delta|/N^4<=1`; using
+`sin^2x>=x^2/4` on that interval and the ground Gibbs weight at least one
+half, each history orientation obeys
+
+\[
+ \operatorname{Tr}(U_N^{\pm1}\rho_NU_N^{\mp1}q_N^{20})
+ \ge{\delta^2N^{12}\over8}.                               \tag{25.5}
+\]
+
+Their sum is at least `delta^2 N^12/4`.  Thus static moments and graph
+transport only through the explicitly stated range `0<=s<=1` do not
+automatically give (22.1).  The fixture is consistent with Section 23:
+its missing `G5` grows.  It is not a Q3 dynamics nonexistence theorem.
+
+## 26. Full-oscillator local-edge parity-doublet cluster
+
+For the exact two-site edge form set
+
+\[
+ h_{xy}={(h_x-\epsilon_0)+(h_y-\epsilon_0)\over z}+B_{xy},
+ \qquad z=6.                                                \tag{26.1}
+\]
+
+Let `P0` be the span of the two aligned `s`-product vectors, `L` the two
+low-band misaligned vectors, and `Q=1-P_xP_y`.  Define
+
+\[
+\begin{gathered}
+ C_b=8c(a_0-m^2),\quad f_b={\delta_1\over z}+4cd_2,
+ \quad e_b=C_b+f_b,\\
+ J=8cm^2,\quad \epsilon=8c(b+2ma+a^2),
+ \quad A=e_b+2J,\quad D={\Gamma\over z}.                    \tag{26.2}
+\end{gathered}
+\]
+
+The exact statements are diagonal compressions,
+
+\[
+ P_0h_{xy}P_0=e_bP_0,\qquad Lh_{xy}L=(e_b+2J)L,             \tag{26.3}
+\]
+
+together with
+
+\[
+ Qh_{xy}Q\ge DQ,\qquad \|Qh_{xy}P_xP_y\|\le\epsilon.      \tag{26.4}
+\]
+
+Neither `P0` nor `L` is asserted invariant.  In fact the exact low
+compression generally has
+
+\[
+ \|P_0h_{xy}L\|=|f_b|.                                    \tag{26.5}
+\]
+
+This cross term drops from the Rayleigh quotient on `P0^perp=L direct-sum Q`,
+which is the only complement used below.
+
+Assume the exact edge form commutes with global parity and is nonnegative with compact resolvent,
+
+\[
+ e_b\ge0,\quad J>0,\quad D>e_b,
+ \quad \epsilon^2<2J(D-e_b).                               \tag{26.6}
+\]
+
+The `L direct-sum Q` lower matrix has diagonal `A,D` and off-diagonal norm at
+most `epsilon`, hence its lower eigenvalue is
+
+\[
+ g_b={A+D-\sqrt{(D-A)^2+4\epsilon^2}\over2}>e_b.           \tag{26.7}
+\]
+
+The parity trials `(Omega_(++) plus/minus Omega_(--))/sqrt(2)` have opposite
+parity and expectation `e_b`.  Min--max in each parity sector and (26.7)
+therefore prove exactly one even and one odd eigenvalue at most `e_b`, while
+
+\[
+ \lambda_3\ge g_b,\qquad
+ \lambda_3-\lambda_2\ge g_b-e_b.                           \tag{26.8}
+\]
+
+When `D>A`, rationalizing the square root gives
+
+\[
+ g_b-e_b\ge2J-{\epsilon^2\over D-A}.                       \tag{26.9}
+\]
+
+This is a compression/min--max theorem, not a block-diagonalization claim.
+
+## 27. Independent relative-form edge theorem and corrected exact fixture
+
+Put
+
+\[
+ k=h_{\rm site}-\epsilon_0-\delta_1P_1\ge\Gamma Q,
+ \qquad h_0={k_x+k_y\over z}+J(1-s_xs_y),                  \tag{27.1}
+\]
+
+whose zero space is `P0` and whose third spectral threshold is
+
+\[
+ \gamma_0=\min(\Gamma/z,2J).                               \tag{27.2}
+\]
+
+With the Section 16 constants set
+
+\[
+ \rho_b=\eta_b+{\nu_b\over\Gamma},\qquad
+ \ell_b=8c(a_0-m^2)+8c|d_2|.                               \tag{27.3}
+\]
+
+For every `tau>0`, the exact diagonal-high and off-block estimates give
+
+\[
+ |\langle V\rangle|
+ \le\alpha\langle h_0\rangle+\beta\|\psi\|^2,             \tag{27.4}
+\]
+
+where
+
+\[
+ \alpha=z\left[\rho_b+{J\over\Gamma}
+ +{\epsilon^2\over\tau\Gamma}\right],\qquad
+ \beta={2\delta_1\over z}+\ell_b+\tau.                    \tag{27.5}
+\]
+
+If `alpha<1` and
+
+\[
+ \Delta_{\rm rf}=(1-\alpha)\gamma_0-2\beta>0,              \tag{27.6}
+\]
+
+the same parity count holds and
+`lambda3-lambda2>=Delta_rf`.
+
+The exact self-test fixture uses
+
+\[
+ c={1\over1000},\ m=2,\ a={1\over10},\ b={1\over20},\
+ A_Q=3,\ a_0-m^2={1\over100},\ d_2=-{1\over1000},\
+ \delta_1={1\over10000},\ \Gamma=100.                     \tag{27.7}
+\]
+
+The negative sign of `d2` is load-bearing for consistency with
+`a^2=max_j(a_j-m^2)=1/100`.  Direct derivation gives
+
+\[
+\begin{gathered}
+ C_b={1\over12500},\quad f_b={19\over1500000},
+ \quad e_b={139\over1500000},\\
+ J={4\over125},\quad\epsilon={23\over6250},
+ \quad A={96139\over1500000},\quad D={50\over3},\\
+ 2J(D-e_b)-\epsilon^2={20832953\over19531250},\\
+ g_b-e_b\ge{332047248\over5188304375}.                     \tag{27.8}
+\end{gathered}
+\]
+
+The exact machine-oracle fractions are also recorded without TeX division: `20832953/19531250`, `332047248/5188304375`, and `4430237/234375000`.
+
+At `u=t=1` and `tau=epsilon`, the independently recomputed relative constants
+are
+
+\[
+ \eta_b={12\over125},\quad \nu_b={402\over3125},\quad
+ \rho_b={15201\over156250},\quad
+ \alpha={183081\over312500},                               \tag{27.9}
+\]
+
+\[
+ \beta={2851\over750000},\quad \gamma_0={8\over125},\quad
+ \Delta_{\rm rf}={4430237\over234375000}>0.               \tag{27.10}
+\]
+
+## 28. Parity-preserving onsite spectral cutoff removal
+
+Let `Pi_M` be nested parity-preserving onsite spectral projections satisfying
+`Pi_M>=P`, with union a core for the quartic edge form.  The valid finite
+restriction is the Ritz form restriction of the original `h_xy` to
+
+\[
+ (\Pi_M\otimes\Pi_M){\cal H}_{xy}.                          \tag{28.1}
+\]
+
+Every compression and lower constant in Sections 26--27 survives, while the
+Ritz eigenvalues decrease to the full edge eigenvalues.  Hence the displayed
+gap lower bounds are uniform in `M` and pass to the full oscillator edge.
+
+This is not the Hamiltonian obtained by replacing `q` with `Pi_M q Pi_M` and
+then squaring.  In general
+
+\[
+ \Pi_Mq^2\Pi_M\ne(\Pi_Mq\Pi_M)^2,                           \tag{28.2}
+\]
+
+because the omitted virtual term is positive.  Such a truncated-coordinate
+model need not preserve the exact low compression or Ritz monotonicity.
+
+In the registered large-`N` corridor,
+
+\[
+ e_b=O(N^{-6}),\quad\epsilon=O(N^{-3}),\quad
+ D\asymp N^2,\quad2J\to16.                                 \tag{28.3}
+\]
+
+Thus the sharp local edge gap tends to `16`, with the mixing correction in
+(26.9) of order `N^-8`.  Independently `alpha=O(N^-2)` and
+`beta=O(N^-3)` in the relative-form route.
+
+## 29. Adversarial review and parent verdicts
+
+1. **Objection -- the twentieth moment was already static.**
+   **UPHELD against that wording.**  Section 22 requires every partial
+   history, translate and both orientations.  Section 23 identifies two new
+   open inputs rather than assuming them.
+2. **Objection -- finite static moments plus low graph bounds imply Section
+   22.**  **UPHELD as an overreach.**  Section 25 has bounded static fifth
+   energy, `d5=1`, and control for every `0<=s<=1`, while the twentieth
+   history moment grows as `N^12`.
+3. **Objection -- (24.1) rules out fixed fifth graph transport.**
+   **DISMISSED.**  It rejects only an automatic polynomial all-order
+   hierarchy.  The fixed `G5` theorem remains viable.
+4. **Objection -- the edge theorem makes `P0` and `L` invariant.**
+   **UPHELD as a false statement.**  Equation (26.5) is generally nonzero;
+   only the diagonal compressions and complement min--max are used.
+5. **Objection -- the original positive-`d2` rational fixture was
+   consistent.**  **UPHELD as a defect.**  It made
+   `a1-m^2=11/1000>a^2=1/100`.  The corrected negative `d2` and every
+   downstream fraction appear in (27.7)--(27.10).
+6. **Objection -- truncating `q` before squaring is the same cutoff.**
+   **UPHELD as an overreach.**  Equation (28.2) isolates the missing virtual
+   term.  Only nested Ritz form restrictions are certified.
+7. **Objection -- one edge doublet is a lattice QPS/GNS theorem.**
+   **UPHELD.**  No linked-cluster interaction, thermodynamic phase
+   identification or lattice coercive inequality is supplied.
+8. **Objection -- the new reductions finish common alpha.**
+   **UPHELD.**  The actual two input gates, the split limit, all-exhaustion
+   Cauchy, group/inverse/generator completion and fixed-beta KMS quotients all
+   remain open.
+
+External adversarial review is invited on the unbounded `C1` form hypothesis,
+the two extra commutator rungs, the `L direct-sum Q` min--max lower matrix, and
+the nested form-core cutoff removal.
+
+The common-alpha, infinite-dimensional many-edge rank-two/QPS, and
+broken-sector oscillator-lattice GNS-gap parents remain open.  Nothing here
+closes the prospective Round-1 gate, C6, CP1, physical Sector A, or Pre-A.
+
+## 30. Combined R-167 v2.1 / R-168 v1.2 gate-level checkpoint issuance
+
+The historical proof-first sentence No v2.1 PDF is issued applied only to
+the earlier four-file staging batch. It is superseded by this single
+gate-level issuance; no per-lemma or intermediate PDF was issued.
+
+- Source:
+  claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt
+  (raw SHA-256
+  b5e21a1aa14492947fa2b0aa4a04d14e89bdc58dc862a77cb273a5905d3d5827).
+- PDF:
+  claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf
+  (raw SHA-256
+  a535317888cb712e06a15ef06aa9fef25b317d18830c69235cb798130987d4aa;
+  13 pages).
+- R-167 verification: primary 209/209, non-importing independent 138/138,
+  integrated 251/251.
+- R-168 verification: primary 340/340, non-importing independent 361/361,
+  integrated 288/288.
+- Extraction and render QA: pypdf 13/13 nonempty pages; pdfplumber 13/13
+  nonempty pages; all 13 rendered pages visually reviewed with zero clipping,
+  overlap, broken equations, unreadable identifiers, black glyphs, or
+  malformed page transitions; build OVERFULL-HBOX 0.
+
+The workflow issued one combined source/PDF pair only after the primary,
+non-importing independent, integrated, formal-authority, generated-surface,
+source-form, dual-extraction, and visual-review checks passed. This formally
+issues and strictly verifies only the scoped R-167 v2.1 and R-168 v1.2
+children. The common-alpha, infinite-dimensional many-edge rank-two/QPS,
+broken-sector oscillator-lattice GNS-gap, physical-response,
+external-prospective-freeze, Round-1, C6, CP1, physical Sector A, and Pre-A
+parents remain **OPEN**.

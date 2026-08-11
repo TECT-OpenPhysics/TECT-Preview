@@ -9,6 +9,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE](#ng-2026-08-11-pre-a-m2-lane-q-linear-source-automatic-physical-stiffness-response) | identify a physical helicity or stiffness response from the scalar Lane-Q linear source alone | EXP-000812 / R-168 v1.2 keeps the zero-source Hamiltonian and first source derivative fixed while a target-blind scalar `J^2` contact shifts normalized second curvature by an arbitrary declared `d(t)`. Freeze the quadratic contact, normalization and physical control law; this is not a no-go for a fully specified physical probe |
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT](#ng-2026-08-11-pre-a-st8-q3lock-uniform-quadratic-in-m-all-moment-bond-shear-graph-transport) | infer a universal quadratic or polynomial-in-order bound for every normalized bond-shear graph moment from abstract positive-energy structure | `K=diag(1,4)` and `V=sigma_x` give right Dini slope `(2^m-2^-m)/(2 hbar)`, so any all-order exponent must grow exponentially in `m`. This rejects only the automatic hierarchy, not the fixed fifth graph constant or Q3 transport |
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT](#ng-2026-08-11-pre-a-st8-q3lock-static-moments-and-low-graph-automatic-twentieth-history-moment) | infer the uniform two-orientation twentieth history moment from static exponential-coordinate and fixed energy moments plus low-rung graph control | an exact two-level `K_N` rotation retains the static moment bounds and all graph estimates in the stated range `0<=s<=1`, while the two-orientation twentieth coordinate history moment grows at least as `delta^2 N^12/4`. The missing fifth graph constant grows; this rejects automatic inference only, not Q3 dynamics |
 | [NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR](#ng-2026-08-11-pre-a-round1-current-version-map-only-admission-repair) | repair the exact current M1/M2/M5 admission result by adding only an externally relabelled map slot | EXP-000810 / R-168 v1.1 leaves eight frozen non-map hard-row cells non-PASS and hence no all-PASS survivor. A state, law, dynamics, regulator, compactness or gauge change is substantively new and must be versioned and fully rerun; this is not a no-go for such a future candidate |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE](#ng-2026-08-11-pre-a-st8-q3lock-weighted-unitary-cutoff-automatic-arbitrary-context-automorphism-l2-upgrade) | promote static Gibbs weighted-unitary cutoff control automatically through every bounded observable context | the exact two-level Gibbs fixture has squared weighted-unitary errors `4p` and zero evolved-state trace distance, while both contextual automorphism errors have norm two and sum-`#` square eight. Retain a bounded half-modular or finite Bohr-projective class; the common-alpha gate remains open |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL](#ng-2026-08-11-pre-a-st8-q3lock-static-gaussian-symmetry-finite-moment-automatic-fixed-edge-history-tail) | infer the required fixed-edge history tail from static Gaussianity, endpoint symmetry and all finite moments | the `kappa=3/4` tilted Gaussian has variance `16/7`, tail exponent `7/32<1/4`, and squared-likelihood precision determinant `-5/4`. This rejects only the two-site/dimer implication, not a full one-site-translation-invariant Q3 history theorem |
@@ -345,6 +348,77 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-11-pre-a-m2-lane-q-linear-source-automatic-physical-stiffness-response"></a>
+### NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE -- a scalar linear probe does not fix second-order physical response
+
+**Failure mode:** identify the scalar Lane-Q source `-JQ` and its first source
+derivative with a complete physical helicity or stiffness probe, without first
+freezing the quadratic contact or diamagnetic term, normalization, physical
+control law and response convention.
+
+**Evidence:** EXP-000812 / R-168 v1.2 takes, at finite regulated volume,
+`H_d(t,J)=H(t)-JQ+(V/2)d(t)J^2 I`. Every `d` leaves `H(t,0)` and
+`partial_J H_d(t,0)=-Q` unchanged. The scalar term factors from the Gibbs
+trace, giving `F_(beta,d)=F_(beta,0)+(V/2)d(t)J^2`; on a stable ground branch
+the ground energy has the same shift. Thus the registered positive normalized
+helicity curvature moves by `+d(t)`, while the conventional scalar
+susceptibility moves by `-d(t)`. The exact fixture has curvatures `5/7` and
+`11/7`, hence shift `6/7`, with the zero-source law and linear probe fixed.
+
+**Consequence:** a scalar linear source or internal Gaussian fingerprint alone
+cannot identify the physical second-order response. A successor must freeze
+and justify the quadratic contact, normalization, compact or gauge action,
+state/reference, physical-control and response maps, limit order and error
+budget. This is not a no-go for a fully specified physical probe and supplies
+no physical response candidate or prediction.
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-uniform-quadratic-in-m-all-moment-bond-shear-graph-transport"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT -- abstract graph growth need not be polynomial in moment order
+
+**Failure mode:** infer from positivity and a normalized two-sided graph setup
+that every moment order `m` admits a universal graph exponent bounded
+quadratically, or by any fixed polynomial, in `m`.
+
+**Evidence:** EXP-000811 / R-167 v2.1 uses `K=diag(1,4)` and `V=sigma_x`.
+For
+`C_m=K^(-m/2)(i/hbar)[V,K^m]K^(-m/2)`, exact diagonal arithmetic gives
+`||C_m||=(2^m-2^-m)/hbar`. For
+`A_m(t)=K^(m/2)exp(-itV/hbar)K^(-m/2)`, the right Dini derivative of
+`log||A_m(t)||`, after maximizing over the two signs of `t`, is
+`(2^m-2^-m)/(2hbar)`. Hence a bound of the form
+`||A_m(t)||<=exp(G_m|t|/2)` forces exponentially growing `G_m`; no automatic
+quadratic or polynomial all-order inference is valid.
+
+**Consequence:** an all-moment graph hierarchy must be proved from additional
+model-specific structure rather than assumed. The fixture does not reject the
+fixed `m=5` constant required by R-167 v2.1, and no embedding into actual Q3
+spectral transitions or Q3 dynamics nonexistence is asserted.
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-static-moments-and-low-graph-automatic-twentieth-history-moment"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT -- static moments and low graph rungs do not force the history endpoint
+
+**Failure mode:** promote static exponential-coordinate control, fixed fifth
+energy moments, the one-site `|q|^10K^(-5/2)` embedding and graph estimates on
+the currently stated low range automatically to a volume-uniform
+two-orientation twentieth coordinate moment for every partial history.
+
+**Evidence:** EXP-000811 / R-167 v2.1 sets
+With `hbar=1`, `K_N=diag(1,N^4)`, `q_N=diag(0,N)`,
+`H_N=diag(0,N^4)` and `V_N=sigma_y/N^4`, with beta-one Gibbs state and
+`U_N(delta)=exp(-i delta V_N)`. Exactly,
+`||q_N^10 K_N^(-5/2)||=1` and
+`rho_N(K_N^5)<=1+(5/e)^5`. For every `0<=s<=1` and
+`N^4>=|delta|`, `||K_N^s U_N(delta)K_N^(-s)||<=1+|delta|`. Nevertheless the
+fifth normalized commutator constant is `G_5=N^6-N^-14`, and for nonzero
+`delta` the two history orientations have summed twentieth moment at least
+`delta^2 N^12/4`.
+
+**Consequence:** the local fifth Gibbs/elliptic input and simultaneous-bond
+fifth-graph propagation identified by R-167 v2.1 remain genuine separate
+OPEN gates. This fixture rejects only their automatic derivation from static
+moments and the declared low graph range; it is consistent with the conditional
+fifth-moment theorem and is not a Q3 dynamics nonexistence result.
 
 <a id="ng-2026-08-11-pre-a-round1-current-version-map-only-admission-repair"></a>
 ### NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR -- an external map relabel does not repair the frozen non-map failures

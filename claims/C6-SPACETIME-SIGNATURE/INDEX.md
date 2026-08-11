@@ -9,7 +9,7 @@
 
 **Falsifier.** A consistency requirement of the low-energy theory forcing a dimension $\neq 3+1$ or a Euclidean/degenerate signature in the IR.
 
-## (all notes)/  ·  12 proof units  ·  tier span T1
+## (all notes)/  ·  13 proof units  ·  tier span T1
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -21,6 +21,7 @@
 | `pre-a-q3lock-modular-cutoff-unitary-resummation-route-split` | v0.3 | T1 | Fixed-s star/repeat first-passage target rejected; all-order star and unique-path tree repaired. Modular-mean, structured multiplier, and coordinate-… | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Prove either all-bond unitary Trotter graph-Lipschitz closure or projected-Duhamel modula… |
 | `pre-a-q3lock-renyi-history-os-gap-reduction-route-split` | v0.7 | T1 | Fixed-Trotter compatibility; Renyi history-tail reduction; zero-T OS mass/gap equivalence; exact instanton minimum; conditional Ising reference gap. | ANALYTIC + EXACT + primary + non-importing in… | Prove uniform two-orientation cutoff domination and growing-stage Cauchy completion; sepa… |
 | `pre-a-q3lock-second-weighted-energy-and-cauchy-gate` | v0.1 | T1 | Exact second energy moment, minimal A^(3/2) moment, D(A^(3/4)) energy-domain propagation and boundary multiplier proved; the cubic multiplier embeddi… | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Prove the cubic multiplier/domain obligation and product-level spatial decay, then constr… |
+| `pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint` | v1.0 | T1 | Conditional twentieth-moment fixed-edge corridor with sharp fifth-moment/graph reduction; full- oscillator local-edge parity doublet, gap, and Ritz r… | ANALYTIC + EXACT + primary + non-importing in… | Prove both Q3 fifth-moment/graph inputs and the split limit; build a quasi-local many-edg… |
 | `pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split` | v0.5 | T1 | Selected tangent-net convergence for every fixed finite raw orbit-word moment and Gram block; one beta-independent zero-source finite-Hamiltonian L1 … | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Build a spatial raw/resolvent carrier with direct all-shape exhaustion Cauchy and Hamilto… |
 | `pre-a-round1-inventory-and-q3lock-weighted-energy-common-alpha` | v0.1 | T1 | Bounded Round-1 inventory frozen, no current admitted survivor, no prospective validation; common local derivation and first weighted-energy cone pro… | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Freeze a future validation relation; prove higher weighted moments and thermodynamic Cauc… |
 | `pre-a-round1-route-controller-free-macro-seam-state-split` | v0.1 | T1 | Global mixed macro/open cuts; exact all-k routed seam; singular states and one-bond shadow; raw-EO plus scoped C4 quadratic/Gaussian routes fail. | EXACT ANALYTIC + EXECUTED + INDEPENDENT + PDF… | PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST- FREEZE; in parallel run CP1 Bloch/Lyapunov … |

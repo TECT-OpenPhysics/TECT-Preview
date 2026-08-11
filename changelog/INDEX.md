@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**595 accepted events** · latest 25 shown below · machine locator: `index.json`
+**600 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,11 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-11 | `20260811-r-167-theorem-event-selector-repair-finalizes-t` — [R-167 theorem-event selector repair finalizes the v2.1 and v1.2 checkpoint hashes] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, EXP-000812, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-theorem-event-selector-repair-finalizes-t) |
+| 2026-08-11 | `20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f` — [R-167 v2.1 and R-168 v1.2 combined checkpoint final hash correction after integrated normalization] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, EXP-000812, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f) |
+| 2026-08-11 | `20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s` — [R-167 v2.1 and R-168 v1.2 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, EXP-000812, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s) |
+| 2026-08-11 | `20260811-r-168-v1-2-proves-linear-probe-response-noniden` — [R-168 v1.2 proves linear-probe response nonidentifiability and hardens the minimum successor schema] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000812, R-168 | [bounded page](pages/000569-000618.md#20260811-r-168-v1-2-proves-linear-probe-response-noniden) |
+| 2026-08-11 | `20260811-r-167-v2-1-closes-the-conditional-twentieth-mom` — [R-167 v2.1 closes the conditional twentieth-moment corridor and local full-oscillator edge cluster] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-1-closes-the-conditional-twentieth-mom) |
 | 2026-08-11 | `20260811-r-167-v2-0-and-r-168-v1-1-combined-v0-9-proof-e` — [R-167 v2.0 and R-168 v1.1 combined v0.9 proof-evidence footer and hash correction] - 2026-08-11 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260811-r-167-v2-0-and-r-168-v1-1-combined-v0-9-proof-e) |
 | 2026-08-11 | `20260811-r-167-v2-0-and-r-168-v1-1-combined-gate-level-s` — [R-167 v2.0 and R-168 v1.1 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260811-r-167-v2-0-and-r-168-v1-1-combined-gate-level-s) |
 | 2026-08-11 | `20260811-r-168-v1-1-proves-current-version-map-emptiness` — [R-168 v1.1 proves current-version map emptiness and the finite-torus M2 fingerprint] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000810, R-168 | [bounded page](pages/000569-000618.md#20260811-r-168-v1-1-proves-current-version-map-emptiness) |
@@ -37,11 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-10 | `20260810-advance-r-167-to-v1-3-and-reject-the-fixed-crit` — [Advance R-167 to v1.3 and reject the fixed critical Leibniz onsite route] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-advance-r-167-to-v1-3-and-reject-the-fixed-crit) |
 | 2026-08-10 | `20260810-exp-000798-r-167-v1-2-modular-cutoff-and-unitar` — [EXP-000798 / R-167 v1.2: modular cutoff and unitary resummation route split] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-exp-000798-r-167-v1-2-modular-cutoff-and-unitar) |
 | 2026-08-10 | `20260810-exp-000796-r-167-v1-1-weighted-cubic-graph-and` — [EXP-000796 / R-167 v1.1: weighted cubic graph and product-locality split] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-exp-000796-r-167-v1-1-weighted-cubic-graph-and) |
-| 2026-08-10 | `20260810-exp-000795-corrects-r-167-cubic-domain-scope-20` — [EXP-000795 corrects R-167 cubic-domain scope] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-exp-000795-corrects-r-167-cubic-domain-scope-20) |
-| 2026-08-10 | `20260810-exp-000794-r-167-exact-second-weighted-energy-m` — [EXP-000794 / R-167: exact second weighted-energy moment and common-alpha Cauchy gate split] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-exp-000794-r-167-exact-second-weighted-energy-m) |
-| 2026-08-10 | `20260810-pre-a-resolvent-lower-bound-adversarial-repair` — [PRE-A-RESOLVENT-LOWER-BOUND adversarial repair] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-pre-a-resolvent-lower-bound-adversarial-repair) |
-| 2026-08-10 | `20260810-pre-a-round1-and-weighted-energy-truth-first-ch` — [PRE-A-ROUND1-AND-WEIGHTED-ENERGY truth-first checkpoint] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-pre-a-round1-and-weighted-energy-truth-first-ch) |
-| 2026-08-10 | `20260810-management-index-and-publication-routes-compact` — [MANAGEMENT-INDEX-AND-PUBLICATION-ROUTES compact authority navigation] - 2026-08-10 | — | [bounded page](pages/000569-000618.md#20260810-management-index-and-publication-routes-compact) |
 
 ## Post-cutover pages
 
@@ -49,4 +49,4 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 569–595 | 27 | [000569-000618.md](pages/000569-000618.md) |
+| 569–600 | 32 | [000569-000618.md](pages/000569-000618.md) |

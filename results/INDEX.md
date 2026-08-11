@@ -9,7 +9,7 @@ Authorities: `RESULTS-LEDGER.md`.
 
 | ID | Result | Tier/scope |
 |---|---|---|
-| [`R-168`](../RESULTS-LEDGER.md#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | T0 (claim-nonbearing scoped schema, current-version admission theorem and Gaussian mathematical fingerprint only; no actual holdout, candidate selection, physical Sector-A or Pre-… |
+| [`R-168`](../RESULTS-LEDGER.md#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | T0 (claim-nonbearing scoped schema, current-version admission, Gaussian fingerprint and finite-regulator nonidentifiability theorems only; no actual holdout, candidate selection,… |
 | [`R-167`](../RESULTS-LEDGER.md#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | T0 (scoped selected-tangent, categorical orbit-smear, finite-region local-strict/finite-Gibbs, local-tail and fixed-edge reductions, existential onsite doublet, global Feshbach pr… |
 | [`R-166`](../RESULTS-LEDGER.md#r-166) | Sparse production radial-Gram decomposition and global owner bound | T4 (scoped exact finite production fibre; no promotion). |
 | [`R-165`](../RESULTS-LEDGER.md#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | T4 (scoped exact finite production fibre; no promotion). |

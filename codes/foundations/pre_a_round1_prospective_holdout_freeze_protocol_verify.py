@@ -1,30 +1,28 @@
 #!/usr/bin/env python3
-"""Integrated verifier for EXP-000810 / R-168 v1.1.
+"""Integrated verifier for EXP-000812 / R-168 v1.2.
 
 The primary and non-importing independent engines are each executed twice via
 their public command-line interfaces in fresh child processes.  This verifier
-requires exact 205/205 and 223/223 sentinels, deterministic payload equality,
-stored-result freshness once the successor runs are issued, the AST/import
-firewall, all retained v1.0 schema hardening, and the additive v1.1 map-only,
-finite-torus-fingerprint, underdetermination, and DESIGN_ONLY successor
-contracts.
+pins the exact current 340/340 and 361/361 engines and their frozen script
+hashes (the pre-formal staged sentinels were 333/333 and 353/353),
+reconstructs the fixed-linear-probe contact-curvature theorem with exact
+rationals and stable ground branches, and cross-checks the hardened minimum
+physical-response successor contract, all 57 named hostile classes, and all
+48 deterministic malformed fuzz cases.
 
 ``--staged`` is assembly-safe and fail-closed.  A not-yet-issued formal,
-stored-result, regenerated reader, or later combined gate-level checkpoint is
-reported as ``MISSING`` and produces ``INCOMPLETE`` with exit code zero.  A
-contradiction, malformed issued authority, existing strict-mode stale result,
-or cross-engine mismatch is always ``FAIL``.  Invocation-only staged metadata
-and the explicitly informational live local-tag observation are normalized;
-no mathematical, audited-checkpoint, or provenance field is removed.
+stored-result, regenerated reader, or combined R-167 v2.1 / R-168 v1.2
+gate-level checkpoint is reported as ``MISSING`` and produces ``INCOMPLETE``
+with exit code zero.  Contradictions, malformed issued authorities, stale
+strict-mode results, and cross-engine mismatches remain failures.
 
-The issued R-167 v1.9 / R-168 v1.0 shared PDF remains hash-, freshness-, page-,
-text-, and two-parser-validated historical evidence.  R-168 v1.1 creates no
-intermediate PDF.  A distinct later R-167 v2.0 / R-168 v1.1 combined checkpoint
-is required only after proof, independent, integrated, and formal layers pass;
-its final paths, hashes, and positive page count are derived from issued
-metadata rather than hardcoded here.  This script never creates a candidate,
-map, prediction, target, freeze, tag, score, selection, note source, PDF, or
-formal authority.
+The issued R-167 v1.9 / R-168 v1.0 and R-167 v2.0 / R-168 v1.1 PDFs are
+strictly revalidated as historical evidence only.  The future
+``v1_2_checkpoint_synthesis`` and R-167 ``v2_1_checkpoint_synthesis`` fields
+are one cross-bound staged checkpoint: both must remain explicit deferred
+records until they are replaced by identical issued metadata.  This script
+never creates a candidate, physical response, map, prediction, target, freeze,
+tag, score, selection, note source, PDF, or formal authority.
 """
 
 from __future__ import annotations
@@ -42,7 +40,7 @@ from pathlib import Path
 from typing import Any, Iterable, Mapping
 
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = "pre-a-round1-prospective-holdout-freeze-protocol"
@@ -50,24 +48,35 @@ SLUG = "pre-a-round1-prospective-holdout-freeze-protocol"
 TASK_ID = "T-054"
 CLAIM_IDS = ("C6-SPACETIME-SIGNATURE",)
 RESULT_NUMBER = "R-168"
-RESULT_VERSION = "v1.1"
+RESULT_VERSION = "v1.2"
 RESULT_ID = (
     "PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-"
     "READINESS-AUDIT"
 )
-EXPLORATION_ID = "EXP-000810"
-PRIOR_EXPLORATION_IDS = ("EXP-000807", "EXP-000808")
+V1_0_EXPLORATION_ID = "EXP-000807"
 HARDENING_EXPLORATION_ID = "EXP-000808"
+V1_1_EXPLORATION_ID = "EXP-000810"
+EXPLORATION_ID = "EXP-000812"
+PRIOR_EXPLORATION_IDS = (
+    V1_0_EXPLORATION_ID,
+    HARDENING_EXPLORATION_ID,
+    V1_1_EXPLORATION_ID,
+)
 PARENT_EXPLORATIONS = ("EXP-000791", *PRIOR_EXPLORATION_IDS)
 AUDITED_COMMIT = "99157442831c0e44d425b5d5f8cd78856c57da53"
 PARENT_GATE = "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
 
-PRIOR_NEGATIVE_IDS = (
+V1_0_NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-"
     "NONEXISTENCE",
 )
-NEW_NEGATIVE_IDS = (
+V1_1_NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR",
+)
+PRIOR_NEGATIVE_IDS = (*V1_0_NEGATIVE_IDS, *V1_1_NEGATIVE_IDS)
+NEW_NEGATIVE_IDS = (
+    "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-"
+    "STIFFNESS-RESPONSE",
 )
 NEGATIVE_IDS = (*PRIOR_NEGATIVE_IDS, *NEW_NEGATIVE_IDS)
 REUSED_NEGATIVE_IDS = (
@@ -79,11 +88,19 @@ V1_0_CLOSED_SUBGATES = (
     "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
     "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
 )
-NEW_CLOSED_SUBGATES = (
+V1_1_CLOSED_SUBGATES = (
     "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
     "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
 )
-CLOSED_SUBGATES = (*V1_0_CLOSED_SUBGATES, *NEW_CLOSED_SUBGATES)
+NEW_CLOSED_SUBGATES = (
+    "PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY",
+    "PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA",
+)
+CLOSED_SUBGATES = (
+    *V1_0_CLOSED_SUBGATES,
+    *V1_1_CLOSED_SUBGATES,
+    *NEW_CLOSED_SUBGATES,
+)
 PHYSICAL_RESPONSE_GATE = "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
 V1_0_OPEN_GATES = (
     PARENT_GATE,
@@ -96,6 +113,11 @@ V1_0_OPEN_GATES = (
 OPEN_GATES = (*V1_0_OPEN_GATES, PHYSICAL_RESPONSE_GATE)
 ALL_GATE_IDS = (*CLOSED_SUBGATES, *OPEN_GATES)
 V1_0_ALL_GATE_IDS = (*V1_0_CLOSED_SUBGATES, *V1_0_OPEN_GATES)
+V1_1_EXPLORATION_GATES = (
+    *V1_1_CLOSED_SUBGATES,
+    PHYSICAL_RESPONSE_GATE,
+    *V1_0_OPEN_GATES,
+)
 HARDENING_GATE_IDS = (
     "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
     PARENT_GATE,
@@ -107,6 +129,14 @@ M2_SUCCESSOR_ID = "PA-M2-CI8-RS-DISPERSION-MAP-v1"
 FINGERPRINT_COMPONENT_SHA256 = (
     "a00d2c537ba82ba12324d4b48d9a8190c84c1f071971d22dd37793ec36253eb9"
 )
+PRIMARY_SCRIPT_SHA256 = (
+    "78dd5b2bc79efe26e16f42f7c1f49ee93d550d8a9fdb65904f22d89729c7b7ec"
+)
+INDEPENDENT_SCRIPT_SHA256 = (
+    "313d5b76caf43dc0750a2d3cbbda245e1e492d370f9c5be4accd9dc66b25e8f4"
+)
+PRIMARY_ASSERTION_COUNT = 340
+INDEPENDENT_ASSERTION_COUNT = 361
 HARD_ROWS = (
     "D00-ADMISSION",
     "D01-SAME-REFERENCE",
@@ -178,6 +208,8 @@ PRIMARY_SCOPE_EXPECTED = {
     "admitted_current_microscopic_map_present": False,
     "prospective_prediction_present": False,
     "m2_v1_candidate_created": False,
+    "m2_minimum_physical_response_contract_schema_validated": True,
+    "m2_linear_probe_response_nonidentifiability_closed": True,
     "m2_physical_response_channel_present": False,
     "m2_controlled_physical_error_bound_present": False,
     "parent_gate_closed": False,
@@ -185,11 +217,16 @@ PRIMARY_SCOPE_EXPECTED = {
     "Sector_A_complete": False,
 }
 INDEPENDENT_SCOPE_EXPECTED = {
-    **{key: value for key, value in PRIMARY_SCOPE_EXPECTED.items() if key != "protocol_schema_validated"},
+    **{
+        key: value
+        for key, value in PRIMARY_SCOPE_EXPECTED.items()
+        if key != "protocol_schema_validated"
+    },
     "protocol_schema_shape_validated": True,
 }
 
 FREEZE_SCHEMA = "tect/pre-a-round1-prospective-holdout-freeze/1.0"
+
 ROOT_FIELDS = (
     "schema",
     "freeze_id",
@@ -254,6 +291,155 @@ HOSTILE_CODES = {
     "target_leakage": "TARGET_LEAKAGE",
     "temporal_order": "TEMPORAL_ORDER_INVALID",
     "unbound_prediction": "PREDICTION_CANDIDATE_UNBOUND",
+}
+
+PHYSICAL_CONTRACT_SCHEMA = (
+    "tect/pre-a-m2-ci8-physical-response-successor-minimum-contract/1.1"
+)
+PHYSICAL_CONTRACT_ROOT_FIELDS = (
+    "schema", "contract_id", "candidate_id", "parent_candidate_id", "status",
+    "fixture_only", "candidate_created", "version_delta", "physical_control_map",
+    "probe_contract", "state_reference_contract", "response_definition",
+    "estimand_binding", "critical_prediction", "error_budget",
+    "common_input_ledger", "hard_row_rerun", "verification",
+    "prospective_firewall", "no_overclaim",
+)
+PHYSICAL_CONTRACT_ARTIFACT_REF_FIELDS = ("path", "sha256", "role", "media_type")
+PHYSICAL_CONTRACT_ARTIFACT_ROLES = (
+    "SOURCE_LAW", "LINEAR_PROBE", "QUADRATIC_CONTACT",
+    "COMPACT_OR_GAUGE_ACTION", "PHYSICAL_CONTROL_MAP", "STATE_EXISTENCE",
+    "RESPONSE_MAP", "RAW_ESTIMATOR", "PROOF", "VERIFIER_PRIMARY",
+    "VERIFIER_INDEPENDENT", "VERIFIER_INTEGRATED", "ERROR_SCRIPT", "ERROR_RUN",
+)
+PHYSICAL_CONTRACT_MANDATORY_CHANGES = (
+    "SECOND_ORDER_SOURCE_LAW", "COMPACT_OR_GAUGE_ACTION",
+    "STATE_REFERENCE_CHANGE", "PHYSICAL_CONTROL_MAP",
+    "REGULATOR_OR_LIMIT_CHANGE", "ERROR_BOUND_PROOF",
+)
+PHYSICAL_CONTRACT_CHANGE_ENUM = (
+    *PHYSICAL_CONTRACT_MANDATORY_CHANGES, "MICROSCOPIC_MAP_ONLY",
+)
+PHYSICAL_CONTRACT_ERROR_TERMS = (
+    "finite_torus_spacing", "regulator_removal", "nonlinear_remainder",
+    "loop_or_renormalization", "state_reference_transfer", "raw_estimator",
+)
+PHYSICAL_CONTRACT_LIMIT_ORDER = (
+    "SOURCE_TO_ZERO", "THERMODYNAMIC_LIMIT", "REGULATOR_REMOVAL",
+    "CRITICAL_LIMIT_FROM_ORDERED_SIDE",
+)
+PHYSICAL_RESPONSE_SIGN_CONVENTION = (
+    "helicity_modulus=+V^-1*d2F/dJ2|J=0; "
+    "scalar_susceptibility=-V^-1*d2F/dJ2|J=0"
+)
+PHYSICAL_CONTRACT_HOSTILE_CODES = {
+    "candidate_materialized": "PHYSICAL_CONTRACT_LIFECYCLE_INVALID",
+    "case_changed_artifact_path": "PHYSICAL_CONTRACT_PROBE_INVALID",
+    "compact_action_missing": "PHYSICAL_CONTRACT_PROBE_INVALID",
+    "compact_action_placeholder": "PHYSICAL_CONTRACT_PROBE_INVALID",
+    "control_map_missing": "PHYSICAL_CONTRACT_CONTROL_MAP_INVALID",
+    "control_map_r_of_t_target_leakage": "PHYSICAL_CONTRACT_CONTROL_MAP_INVALID",
+    "control_map_scaling_window_holdout_leakage": "PHYSICAL_CONTRACT_CONTROL_MAP_INVALID",
+    "decimal_ratio": "PHYSICAL_CONTRACT_ESTIMAND_INVALID",
+    "denominator_one_ratio": "NUMERIC_LITERAL_INVALID",
+    "duplicate_input_id": "PHYSICAL_CONTRACT_INPUT_LEDGER_INVALID",
+    "duplicate_source_id": "PHYSICAL_CONTRACT_INPUT_LEDGER_INVALID",
+    "duplicate_substantive_change": "PHYSICAL_CONTRACT_VERSION_DELTA_INVALID",
+    "embedded_nul_artifact_path": "PHYSICAL_CONTRACT_PROBE_INVALID",
+    "error_evidence_reused": "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+    "error_margin_not_strict": "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+    "error_result_key_missing": "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+    "error_term_dropped": "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+    "error_total_not_sum": "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+    "estimand_mismatch": "PHYSICAL_CONTRACT_ESTIMAND_INVALID",
+    "fingerprint_promoted_as_response": "PHYSICAL_CONTRACT_RESPONSE_INVALID",
+    "forbidden_choices_placeholder": "PHYSICAL_CONTRACT_FIREWALL_INVALID",
+    "forbidden_source_id": "PHYSICAL_CONTRACT_INPUT_LEDGER_INVALID",
+    "free_semantic_placeholder": "PHYSICAL_CONTRACT_PREDICTION_INVALID",
+    "hard_row_nonpass": "PHYSICAL_CONTRACT_HARD_ROWS_INVALID",
+    "identical_verifier_hash": "PHYSICAL_CONTRACT_VERIFICATION_INVALID",
+    "integrated_ref_missing": "PHYSICAL_CONTRACT_VERIFICATION_INVALID",
+    "limit_order_missing": "PHYSICAL_CONTRACT_RESPONSE_INVALID",
+    "limit_order_permuted": "PHYSICAL_CONTRACT_RESPONSE_INVALID",
+    "limit_order_placeholder": "PHYSICAL_CONTRACT_RESPONSE_INVALID",
+    "map_only_payload_under_substantive_label": "PHYSICAL_CONTRACT_VERSION_DELTA_INVALID",
+    "non_script_verifier": "PHYSICAL_CONTRACT_VERIFICATION_INVALID",
+    "overlong_artifact_path": "PHYSICAL_CONTRACT_PROBE_INVALID",
+    "overlong_rational_literal": "NUMERIC_LITERAL_INVALID",
+    "prediction_candidate_unbound": "PHYSICAL_CONTRACT_PREDICTION_INVALID",
+    "prediction_placeholder": "PHYSICAL_CONTRACT_PREDICTION_INVALID",
+    "prediction_target_leakage": "PHYSICAL_CONTRACT_PREDICTION_INVALID",
+    "probe_artifact_wrong_role": "PHYSICAL_CONTRACT_PROBE_INVALID",
+    "proof_ref_unbound": "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+    "quadratic_contact_missing": "PHYSICAL_CONTRACT_PROBE_INVALID",
+    "quadratic_contact_placeholder": "PHYSICAL_CONTRACT_PROBE_INVALID",
+    "response_map_ref_unbound": "PHYSICAL_CONTRACT_RESPONSE_INVALID",
+    "scalar_susceptibility_relabel": "PHYSICAL_CONTRACT_RESPONSE_INVALID",
+    "scaling_window_holdout_leakage": "PHYSICAL_CONTRACT_PREDICTION_INVALID",
+    "single_implementation": "PHYSICAL_CONTRACT_VERIFICATION_INVALID",
+    "source_section_unbound": "PHYSICAL_CONTRACT_SOURCE_BINDING_INVALID",
+    "state_existence_ref_unbound": "PHYSICAL_CONTRACT_STATE_INVALID",
+    "state_reference_missing": "PHYSICAL_CONTRACT_STATE_INVALID",
+    "substantive_change_mislabeled_map_only": "PHYSICAL_CONTRACT_VERSION_DELTA_INVALID",
+    "target_dependent_control": "PHYSICAL_CONTRACT_CONTROL_MAP_INVALID",
+    "target_value_present": "PHYSICAL_CONTRACT_FIREWALL_INVALID",
+    "trailing_dot_segment_artifact_path": "PHYSICAL_CONTRACT_PROBE_INVALID",
+    "trailing_space_segment_artifact_path": "PHYSICAL_CONTRACT_PROBE_INVALID",
+    "unbound_probe_hash": "PHYSICAL_CONTRACT_PROBE_INVALID",
+    "unknown_substantive_change": "PHYSICAL_CONTRACT_VERSION_DELTA_INVALID",
+    "unreduced_ratio": "PHYSICAL_CONTRACT_ESTIMAND_INVALID",
+    "visible_validation_source": "PHYSICAL_CONTRACT_INPUT_LEDGER_INVALID",
+    "whitespace_ratio": "PHYSICAL_CONTRACT_ESTIMAND_INVALID",
+}
+PHYSICAL_CONTRACT_FUZZ_CODES = {
+    **{
+        f"ratio_{index:02d}": (
+            "NUMERIC_LITERAL_INVALID", "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID"
+        )
+        for index in range(12)
+    },
+    **{
+        f"path_{index:02d}": ("PHYSICAL_CONTRACT_PROBE_INVALID",)
+        for index in range(6)
+    },
+    **{
+        f"container_{index:02d}": ("PHYSICAL_CONTRACT_VERIFICATION_INVALID",)
+        for index in range(5)
+    },
+    "nul_artifact_path": ("PHYSICAL_CONTRACT_PROBE_INVALID",),
+    "overlong_artifact_path": ("PHYSICAL_CONTRACT_PROBE_INVALID",),
+    "overlong_rational_literal": (
+        "NUMERIC_LITERAL_INVALID", "PHYSICAL_CONTRACT_ESTIMAND_INVALID",
+        "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+    ),
+    "trailing_dot_segment": ("PHYSICAL_CONTRACT_PROBE_INVALID",),
+    "trailing_space_segment": ("PHYSICAL_CONTRACT_PROBE_INVALID",),
+    "case_changed_segment": ("PHYSICAL_CONTRACT_PROBE_INVALID",),
+    "semantic_na_placeholder": ("PHYSICAL_CONTRACT_PREDICTION_INVALID",),
+    "semantic_not_available_placeholder": ("PHYSICAL_CONTRACT_PREDICTION_INVALID",),
+    "prediction_target_token": ("PHYSICAL_CONTRACT_PREDICTION_INVALID",),
+    "scaling_holdout_token": ("PHYSICAL_CONTRACT_PREDICTION_INVALID",),
+    "control_map_target_token": ("PHYSICAL_CONTRACT_CONTROL_MAP_INVALID",),
+    "control_map_scaling_holdout_token": ("PHYSICAL_CONTRACT_CONTROL_MAP_INVALID",),
+    "denominator_one_ratio": (
+        "NUMERIC_LITERAL_INVALID", "PHYSICAL_CONTRACT_ESTIMAND_INVALID",
+        "PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",
+    ),
+    "extra_key_root_int": ("PHYSICAL_CONTRACT_FIELDS_INVALID",),
+    "extra_key_nested_none": ("PHYSICAL_CONTRACT_PREDICTION_INVALID",),
+    "extra_key_artifact_tuple": ("PHYSICAL_CONTRACT_PROBE_INVALID",),
+    "term_id_unhashable": ("PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",),
+    "result_key_unhashable": ("PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",),
+    "proof_path_unhashable": ("PHYSICAL_CONTRACT_ERROR_BUDGET_INVALID",),
+    "input_id_unhashable": ("PHYSICAL_CONTRACT_INPUT_LEDGER_INVALID",),
+    "input_class_unhashable": ("PHYSICAL_CONTRACT_INPUT_LEDGER_INVALID",),
+    "source_id_unhashable": (
+        "PHYSICAL_CONTRACT_INPUT_LEDGER_INVALID",
+        "PHYSICAL_CONTRACT_SOURCE_BINDING_INVALID",
+        "PHYSICAL_CONTRACT_FIREWALL_INVALID",
+    ),
+    "allowed_source_unhashable": ("PHYSICAL_CONTRACT_FIREWALL_INVALID",),
+    "forbidden_choice_unhashable": ("PHYSICAL_CONTRACT_FIREWALL_INVALID",),
+    "verifier_hash_unhashable": ("PHYSICAL_CONTRACT_VERIFICATION_INVALID",),
 }
 
 TARGET_FIELDS = (
@@ -392,24 +578,90 @@ CHECKPOINT_REQUIRED_TOKENS = (
     "Pre-A closure",
 )
 
-NEXT_CHECKPOINT_FIELD = "v2_checkpoint_synthesis"
-NEXT_CHECKPOINT_REQUIRED_TOKENS = (
-    "R-167 v2.0",
-    "EXP-000809",
-    "R-168 v1.1",
-    EXPLORATION_ID,
-    RESULT_ID,
-    *NEW_NEGATIVE_IDS,
-    *NEW_CLOSED_SUBGATES,
-    PHYSICAL_RESPONSE_GATE,
-    "205/205",
-    "223/223",
+V2_HISTORICAL_CHECKPOINT_FIELD = "v2_checkpoint_synthesis"
+V2_CHECKPOINT_SOURCE = REPO / (
+    "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-"
+    "and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt"
+)
+V2_CHECKPOINT_PDF = V2_CHECKPOINT_SOURCE.with_suffix("").with_suffix(".pdf")
+V2_CHECKPOINT_SOURCE_SHA256 = (
+    "ca8b0fdc1c4881aa13e3311851c719d0b6a0dfb4b27e0bb30906f7bc77b04239"
+)
+V2_CHECKPOINT_PDF_SHA256 = (
+    "346595c8609be1e49fb33d87e5a469b01f9083c78d7a1fc89d3648b88ea4d243"
+)
+V2_CHECKPOINT_PAGES = 10
+EXPECTED_V2_HISTORICAL_CHECKPOINT_CORE = {
+    "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+    "source": V2_CHECKPOINT_SOURCE.relative_to(REPO).as_posix(),
+    "pdf": V2_CHECKPOINT_PDF.relative_to(REPO).as_posix(),
+    "source_sha256": V2_CHECKPOINT_SOURCE_SHA256,
+    "pdf_sha256": V2_CHECKPOINT_PDF_SHA256,
+    "pages": V2_CHECKPOINT_PAGES,
+    "workflow": (
+        "No per-lemma or intermediate PDF was issued. One combined R-167 v2.0 / "
+        "R-168 v1.1 gate-level synthesis source/PDF pair was issued only after the "
+        "primary, non-importing independent, integrated, formal-authority, "
+        "generated-surface, and source-form checks passed."
+    ),
+    "visual_qa": (
+        "All 10 rendered pages were reviewed at readable resolution with zero "
+        "clipping, overlap, broken equations, unreadable identifiers, black glyphs, "
+        "or malformed page transitions; pypdf and pdfplumber each extracted 10 "
+        "nonempty pages."
+    ),
+}
+V2_HISTORICAL_CHECKPOINT_REQUIRED_TOKENS = (
+    "R-167 v2.0", "EXP-000809", "R-168 v1.1", V1_1_EXPLORATION_ID,
+    RESULT_ID, *V1_1_NEGATIVE_IDS, *V1_1_CLOSED_SUBGATES,
+    PHYSICAL_RESPONSE_GATE, "205/205", "223/223",
     PRIMARY.relative_to(REPO).as_posix(),
     INDEPENDENT.relative_to(REPO).as_posix(),
     SCRIPT.relative_to(REPO).as_posix(),
-    "no per-lemma or intermediate",
-    "physical Sector A",
-    "Pre-A",
+    "no per-lemma or intermediate", "physical Sector A", "Pre-A",
+)
+
+NEXT_CHECKPOINT_FIELD = "v1_2_checkpoint_synthesis"
+R167_NEXT_CHECKPOINT_FIELD = "v2_1_checkpoint_synthesis"
+R167_V2_1_PRIMARY = (
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_"
+    "semiclassical_doublet_route_split.py"
+)
+R167_V2_1_INDEPENDENT = (
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_"
+    "semiclassical_doublet_route_split_independent.py"
+)
+R167_V2_1_INTEGRATED = (
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_"
+    "semiclassical_doublet_route_split_verify.py"
+)
+R167_V2_1_NEW_NEGATIVES = (
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-"
+    "BOND-SHEAR-GRAPH-TRANSPORT",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-"
+    "AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
+)
+R167_V2_1_CLOSED_GATES = (
+    "PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-"
+    "CORRIDOR-REDUCTION",
+    "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-"
+    "AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
+)
+R167_V2_1_OPEN_GATES = (
+    "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-"
+    "ELLIPTIC-EMBEDDING",
+    "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
+)
+NEXT_CHECKPOINT_REQUIRED_TOKENS = (
+    "R-167 v2.1", "EXP-000811", "R-168 v1.2", EXPLORATION_ID, RESULT_ID,
+    *R167_V2_1_NEW_NEGATIVES, *R167_V2_1_CLOSED_GATES,
+    *R167_V2_1_OPEN_GATES, *NEW_NEGATIVE_IDS, *NEW_CLOSED_SUBGATES,
+    PHYSICAL_RESPONSE_GATE, "209/209", "138/138", "340/340", "361/361",
+    R167_V2_1_PRIMARY, R167_V2_1_INDEPENDENT, R167_V2_1_INTEGRATED,
+    PRIMARY.relative_to(REPO).as_posix(),
+    INDEPENDENT.relative_to(REPO).as_posix(),
+    SCRIPT.relative_to(REPO).as_posix(),
+    "no per-lemma or intermediate", "physical Sector A", "Pre-A",
 )
 
 ROUND1_MANIFEST = (
@@ -426,6 +678,7 @@ M2_MANIFEST = REPO / "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json"
 M5_MANIFEST = REPO / "strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json"
 INDEPENDENT_HASH_INPUTS = (
     INDEPENDENT,
+    PRIMARY,
     MANIFEST,
     CERTIFICATE,
     ROUND1_MANIFEST,
@@ -540,10 +793,16 @@ def historical_checkpoint_lifecycle_diagnostics(
         == EXPECTED_HISTORICAL_CHECKPOINT_CORE,
         "expected_metadata_core": EXPECTED_HISTORICAL_CHECKPOINT_CORE,
         "r168_history_label_exact": set(synthesis)
-        == set(EXPECTED_HISTORICAL_CHECKPOINT_CORE) | {"v1_1_pdf_policy"}
+        == set(EXPECTED_HISTORICAL_CHECKPOINT_CORE)
+        | {"v1_1_pdf_policy", "v1_2_pdf_policy"}
         and text_has(synthesis.get("v1_1_pdf_policy", ""), "No intermediate R-168 v1.1 PDF")
         and text_has(synthesis.get("v1_1_pdf_policy", ""), "later logical gate-level synthesis")
-        and text_has(synthesis.get("v1_1_pdf_policy", ""), "formal, independent and integrated verification"),
+        and text_has(synthesis.get("v1_1_pdf_policy", ""), "formal, independent and integrated verification")
+        and text_has(synthesis.get("v1_2_pdf_policy", ""), "No intermediate R-168 v1.2 PDF")
+        and text_has(synthesis.get("v1_2_pdf_policy", ""), "proof-first package")
+        and text_has(synthesis.get("v1_2_pdf_policy", ""), "integrated verifier")
+        and text_has(synthesis.get("v1_2_pdf_policy", ""), "now present")
+        and text_has(synthesis.get("v1_2_pdf_policy", ""), "pending full render and release QA"),
         "shared_manifest_core_exact": False,
         "r167_history_label_exact": False,
         "shared_manifest_error": None,
@@ -657,10 +916,14 @@ def historical_checkpoint_lifecycle_diagnostics(
     return diagnostics
 
 
-def future_checkpoint_lifecycle_diagnostics(
+def issued_checkpoint_lifecycle_diagnostics(
     synthesis: Mapping[str, Any],
+    *,
+    other_field: str,
+    required_tokens: tuple[str, ...],
+    workflow_versions: tuple[str, str],
 ) -> dict[str, Any]:
-    """Validate a later issued v2.0/v1.1 checkpoint without fixed pages/hashes."""
+    """Strictly validate one already-issued or future shared checkpoint."""
 
     diagnostics: dict[str, Any] = {
         "metadata": dict(synthesis),
@@ -681,26 +944,29 @@ def future_checkpoint_lifecycle_diagnostics(
         "source_mtime_ns": None,
         "pdf_mtime_ns": None,
         "pdf_fresh_relative_to_source": False,
-        "source_missing_tokens": list(NEXT_CHECKPOINT_REQUIRED_TOKENS),
+        "source_missing_tokens": list(required_tokens),
         "pypdf_pages": None,
         "pypdf_nonempty_pages": None,
-        "pypdf_missing_tokens": list(NEXT_CHECKPOINT_REQUIRED_TOKENS),
+        "pypdf_missing_tokens": list(required_tokens),
         "pypdf_error": None,
         "pdfplumber_pages": None,
         "pdfplumber_nonempty_pages": None,
-        "pdfplumber_missing_tokens": list(NEXT_CHECKPOINT_REQUIRED_TOKENS),
+        "pdfplumber_missing_tokens": list(required_tokens),
         "pdfplumber_error": None,
         "valid": False,
     }
     try:
         other = json.loads(R167_MANIFEST.read_text(encoding="utf-8"))
-        other_checkpoint = as_mapping(as_mapping(other).get(NEXT_CHECKPOINT_FIELD))
-        diagnostics["shared_manifest_exact"] = bool(synthesis) and dict(synthesis) == other_checkpoint
+        other_checkpoint = as_mapping(as_mapping(other).get(other_field))
+        diagnostics["shared_manifest_exact"] = (
+            bool(synthesis) and dict(synthesis) == other_checkpoint
+        )
     except (OSError, UnicodeError, json.JSONDecodeError) as error:
         diagnostics["shared_manifest_error"] = str(error)
 
     required_fields = {
-        "status", "source", "pdf", "source_sha256", "pdf_sha256", "pages", "workflow", "visual_qa"
+        "status", "source", "pdf", "source_sha256", "pdf_sha256", "pages",
+        "workflow", "visual_qa",
     }
     diagnostics["issued_metadata"] = (
         set(synthesis) == required_fields
@@ -730,18 +996,15 @@ def future_checkpoint_lifecycle_diagnostics(
     diagnostics["workflow_exact_scope"] = all(
         text_has(synthesis.get("workflow", ""), token)
         for token in (
-            "No per-lemma or intermediate",
-            "R-167 v2.0",
-            "R-168 v1.1",
-            "primary",
-            "independent",
-            "integrated",
-            "formal",
+            "No per-lemma or intermediate", *workflow_versions,
+            "primary", "independent", "integrated", "formal",
         )
     )
     diagnostics["visual_qa_declared"] = all(
         text_has(synthesis.get("visual_qa", ""), token)
-        for token in ("all", "rendered pages", "clipping", "overlap", "pypdf", "pdfplumber")
+        for token in (
+            "All", "rendered pages", "clipping", "overlap", "pypdf", "pdfplumber"
+        )
     )
 
     if source is not None and source.is_file():
@@ -751,7 +1014,7 @@ def future_checkpoint_lifecycle_diagnostics(
             diagnostics["source_sha256"] = artifact_sha256(source)
             diagnostics["source_mtime_ns"] = source.stat().st_mtime_ns
             diagnostics["source_missing_tokens"] = [
-                token for token in NEXT_CHECKPOINT_REQUIRED_TOKENS if not text_has(source_text, token)
+                token for token in required_tokens if not text_has(source_text, token)
             ]
         except (OSError, UnicodeError) as error:
             diagnostics["source_read_error"] = str(error)
@@ -770,13 +1033,17 @@ def future_checkpoint_lifecycle_diagnostics(
         try:
             from pypdf import PdfReader
 
-            reader = PdfReader(str(pdf))
-            texts = [(page.extract_text() or "") for page in reader.pages]
+            texts = [
+                (page.extract_text() or "")
+                for page in PdfReader(str(pdf)).pages
+            ]
             joined = "\n".join(texts)
             diagnostics["pypdf_pages"] = len(texts)
-            diagnostics["pypdf_nonempty_pages"] = sum(bool(item.strip()) for item in texts)
+            diagnostics["pypdf_nonempty_pages"] = sum(
+                bool(item.strip()) for item in texts
+            )
             diagnostics["pypdf_missing_tokens"] = [
-                token for token in NEXT_CHECKPOINT_REQUIRED_TOKENS if not text_has(joined, token)
+                token for token in required_tokens if not text_has(joined, token)
             ]
         except Exception as error:
             diagnostics["pypdf_error"] = f"{type(error).__name__}: {error}"
@@ -787,9 +1054,11 @@ def future_checkpoint_lifecycle_diagnostics(
                 texts = [(page.extract_text() or "") for page in document.pages]
             joined = "\n".join(texts)
             diagnostics["pdfplumber_pages"] = len(texts)
-            diagnostics["pdfplumber_nonempty_pages"] = sum(bool(item.strip()) for item in texts)
+            diagnostics["pdfplumber_nonempty_pages"] = sum(
+                bool(item.strip()) for item in texts
+            )
             diagnostics["pdfplumber_missing_tokens"] = [
-                token for token in NEXT_CHECKPOINT_REQUIRED_TOKENS if not text_has(joined, token)
+                token for token in required_tokens if not text_has(joined, token)
             ]
         except Exception as error:
             diagnostics["pdfplumber_error"] = f"{type(error).__name__}: {error}"
@@ -820,6 +1089,50 @@ def future_checkpoint_lifecycle_diagnostics(
         and diagnostics["pdfplumber_missing_tokens"] == []
     )
     return diagnostics
+
+
+def future_checkpoint_pair_diagnostics(
+    synthesis: Mapping[str, Any],
+) -> dict[str, Any]:
+    """Cross-bind the R-168 v1.2 and R-167 v2.1 checkpoint lifecycle."""
+
+    other_checkpoint: dict[str, Any] = {}
+    error: str | None = None
+    try:
+        other = json.loads(R167_MANIFEST.read_text(encoding="utf-8"))
+        other_checkpoint = as_mapping(other.get(R167_NEXT_CHECKPOINT_FIELD))
+    except (OSError, UnicodeError, json.JSONDecodeError) as caught:
+        error = str(caught)
+    deferred_keys = {"status", "pdf_issued", "statement"}
+    deferred_pair_valid = (
+        set(synthesis) == deferred_keys
+        and set(other_checkpoint) == deferred_keys
+        and synthesis.get("status") == other_checkpoint.get("status")
+        == "DEFERRED DURING PROOF-FIRST DEVELOPMENT"
+        and synthesis.get("pdf_issued") is False
+        and other_checkpoint.get("pdf_issued") is False
+        and text_has(synthesis.get("statement", ""), "No v1.2 PDF")
+        and text_has(other_checkpoint.get("statement", ""), "No v2.1 PDF")
+        and text_has(synthesis.get("statement", ""), "later logical gate-level synthesis")
+        and text_has(other_checkpoint.get("statement", ""), "later logical gate-level synthesis")
+    )
+    issued = issued_checkpoint_lifecycle_diagnostics(
+        synthesis,
+        other_field=R167_NEXT_CHECKPOINT_FIELD,
+        required_tokens=NEXT_CHECKPOINT_REQUIRED_TOKENS,
+        workflow_versions=("R-167 v2.1", "R-168 v1.2"),
+    )
+    return {
+        "r168_field": NEXT_CHECKPOINT_FIELD,
+        "r167_field": R167_NEXT_CHECKPOINT_FIELD,
+        "r168_metadata": dict(synthesis),
+        "r167_metadata": other_checkpoint,
+        "shared_manifest_error": error,
+        "deferred_pair_valid": deferred_pair_valid,
+        "issued": issued,
+        "valid": issued["valid"],
+    }
+
 
 class Audit:
     """Separate contradictions from not-yet-issued staged authorities."""
@@ -973,12 +1286,30 @@ def heading_section(text: str, identifier: str) -> str | None:
     return "\n".join(lines[start:end])
 
 
+def _normalize_fixture_hashes(value: Any) -> Any:
+    """Normalize only mutable hashes in the explicitly syntax-only fixture."""
+
+    if isinstance(value, dict):
+        return {
+            key: "<CURRENT-FIXTURE-SHA256>"
+            if key == "sha256"
+            else _normalize_fixture_hashes(item)
+            for key, item in value.items()
+        }
+    if isinstance(value, list):
+        return [_normalize_fixture_hashes(item) for item in value]
+    return value
+
+
 def invocation_view(payload: dict[str, Any] | None) -> dict[str, Any] | None:
-    """Remove invocation-only metadata, never theorem/provenance content.
+    """Remove CLI-only state and mutable syntax-fixture hashes.
 
     ``authority.staged`` records CLI mode.  The live local ``freeze/*`` tag
-    observation is explicitly informational and may change after a legitimate
-    future freeze, so it is also excluded from stored-result freshness.
+    observation is informational.  The minimum-contract positive fixture
+    deliberately hashes the current proof scripts and stored run oracles;
+    those hashes test syntax/existence only and include the result files being
+    refreshed, so their values are normalized while every theorem, identity,
+    path, role, result key, formal binding, and non-fixture hash remains exact.
     """
 
     if payload is None:
@@ -991,6 +1322,26 @@ def invocation_view(payload: dict[str, Any] | None) -> dict[str, Any] | None:
     current_tree = copied.get("current_tree")
     if isinstance(current_tree, dict):
         current_tree.pop("local_freeze_tag_observation", None)
+    fixture_field = "m2_physical_response_successor_minimum_contract_fixture"
+    if fixture_field in copied:
+        copied[fixture_field] = _normalize_fixture_hashes(copied[fixture_field])
+    assertions = copied.get("assertions")
+    if isinstance(assertions, list):
+        for assertion in assertions:
+            if (
+                isinstance(assertion, dict)
+                and assertion.get("group") == "physical_contract"
+                and isinstance(assertion.get("name"), str)
+                and (
+                    assertion["name"].startswith("minimum contract")
+                    or assertion["name"] == "independent error sum strict"
+                )
+            ):
+                for field in ("actual", "expected"):
+                    if field in assertion:
+                        assertion[field] = _normalize_fixture_hashes(
+                            assertion[field]
+                        )
     return copied
 
 
@@ -1194,6 +1545,20 @@ def stored_against_fresh(
 
 
 def validate_firewall(audit: Audit) -> None:
+    audit.check(
+        "primary frozen v1.2 script SHA exact",
+        normalized_sha256(PRIMARY) == PRIMARY_SCRIPT_SHA256,
+        normalized_sha256(PRIMARY),
+        PRIMARY_SCRIPT_SHA256,
+        "firewall",
+    )
+    audit.check(
+        "independent frozen v1.2 script SHA exact",
+        normalized_sha256(INDEPENDENT) == INDEPENDENT_SCRIPT_SHA256,
+        normalized_sha256(INDEPENDENT),
+        INDEPENDENT_SCRIPT_SHA256,
+        "firewall",
+    )
     source = read_text(INDEPENDENT, audit, "independent source", core=True)
     if source is None:
         return
@@ -1221,11 +1586,38 @@ def validate_firewall(audit: Audit) -> None:
         if isinstance(node, ast.Constant) and isinstance(node.value, str)
     ]
     primary_run_fragment = f"2026-08-11-primary-{SLUG}"
+    primary_run_literals = [
+        value for value in literals if primary_run_fragment in value
+    ]
+    fixture_functions = [
+        node
+        for node in tree.body
+        if isinstance(node, ast.FunctionDef)
+        and node.name == "synthetic_physical_response_contract_independent"
+    ]
+    fixture_literals = [
+        node.value
+        for function in fixture_functions
+        for node in ast.walk(function)
+        if isinstance(node, ast.Constant)
+        and isinstance(node.value, str)
+        and primary_run_fragment in node.value
+    ]
     audit.check(
-        "independent primary-result firewall",
-        all(primary_run_fragment not in value for value in literals),
-        [value for value in literals if primary_run_fragment in value],
-        [],
+        "independent primary-result theorem firewall with syntax-fixture exception",
+        len(fixture_functions) == 1
+        and primary_run_literals == fixture_literals
+        and len(primary_run_literals) == 1
+        and primary_run_literals[0]
+        == (
+            "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-"
+            "pre-a-round1-prospective-holdout-freeze-protocol/result.json"
+        ),
+        {
+            "all_primary_run_literals": primary_run_literals,
+            "fixture_primary_run_literals": fixture_literals,
+        },
+        "one exact syntax-only fixture literal and none elsewhere",
         "firewall",
     )
 
@@ -1366,6 +1758,427 @@ def validate_source_hashes(
 def normalize_hostiles(payload: dict[str, Any], label: str) -> dict[str, Any]:
     raw = as_mapping(payload.get("hostile_fixtures"))
     return {name: as_mapping(raw.get(name)) for name in HOSTILE_CODES}
+
+
+def _iter_artifact_refs(value: Any) -> Iterable[dict[str, Any]]:
+    if isinstance(value, dict):
+        if set(value) == set(PHYSICAL_CONTRACT_ARTIFACT_REF_FIELDS):
+            yield value
+        for item in value.values():
+            yield from _iter_artifact_refs(item)
+    elif isinstance(value, list):
+        for item in value:
+            yield from _iter_artifact_refs(item)
+
+
+def _linear_probe_view(value: Any) -> dict[str, Any]:
+    theorem = as_mapping(value)
+    finite = as_mapping(theorem.get("finite_beta"))
+    ground = as_mapping(theorem.get("beta_infinity"))
+    return {
+        "closed_child_id": theorem.get("closed_child_id"),
+        "negative_id": theorem.get("negative_id"),
+        "fixture": theorem.get("fixture"),
+        "finite_beta": {
+            key: finite.get(key)
+            for key in (
+                "free_energy_difference_at_step", "boltzmann_exponent_shift_at_step",
+                "central_second_difference", "normalized_curvature_shift",
+                "expected_shift",
+            )
+        },
+        "beta_infinity": ground,
+        "invariants": theorem.get("invariants"),
+        "sign_convention": theorem.get("sign_convention"),
+    }
+
+
+def compare_v1_2(
+    primary: dict[str, Any],
+    independent: dict[str, Any],
+    manifest: dict[str, Any],
+    audit: Audit,
+) -> dict[str, Any]:
+    expected_fixture = {
+        "beta": "3/2", "d_left": "5/7", "d_right": "11/7",
+        "delta_d": "6/7", "probe_diagonal": ["1", "-1"],
+        "source_step": "1/5", "two_level_gap": "4", "volume": "7",
+    }
+    expected_finite = {
+        "free_energy_difference_at_step": "3/25",
+        "boltzmann_exponent_shift_at_step": "-9/50",
+        "central_second_difference": "6",
+        "normalized_curvature_shift": "6/7",
+        "expected_shift": "6/7",
+    }
+    expected_ground = {
+        "branch_stable": True,
+        "expected_shift": "6/7",
+        "ground_branch_indices_minus_zero_plus": [0, 0, 0],
+        "normalized_curvature_left": "5/7",
+        "normalized_curvature_right": "11/7",
+        "normalized_curvature_shift": "6/7",
+    }
+    expected_invariants = {
+        "admitted_candidate_created": False,
+        "physical_response_identified": False,
+        "same_finite_torus_fingerprint": True,
+        "same_first_source_derivative": True,
+        "same_zero_source_hamiltonian": True,
+        "same_zero_source_state_and_spectrum": True,
+    }
+    expected_linear = {
+        "closed_child_id": NEW_CLOSED_SUBGATES[0],
+        "negative_id": NEW_NEGATIVE_IDS[0],
+        "fixture": expected_fixture,
+        "finite_beta": expected_finite,
+        "beta_infinity": expected_ground,
+        "invariants": expected_invariants,
+        "sign_convention": {
+            "contract_literal": PHYSICAL_RESPONSE_SIGN_CONVENTION,
+            "free_energy": "F_beta(J)=-beta^{-1} log Tr exp[-beta H(J)]",
+            "helicity_like_response": "+V^{-1} d_J^2 F_beta(J)|J=0",
+            "scalar_susceptibility": "-V^{-1} d_J^2 F_beta(J)|J=0",
+        },
+    }
+    p_linear = _linear_probe_view(
+        primary.get("m2_linear_probe_second_order_response_nonidentifiability")
+    )
+    i_linear = _linear_probe_view(
+        independent.get("m2_linear_probe_second_order_response_nonidentifiability")
+    )
+    audit.check(
+        "cross v1.2 exact linear-probe curvature theorem",
+        p_linear == i_linear == expected_linear,
+        {"primary": p_linear, "independent": i_linear},
+        expected_linear,
+        "cross_v1_2",
+    )
+    m_linear = as_mapping(
+        manifest.get("m2_linear_probe_second_order_response_nonidentifiability")
+    )
+    m_fraction = as_mapping(m_linear.get("fraction_fixture"))
+    audit.check(
+        "manifest v1.2 exact curvature rationals branches and boundary",
+        m_linear.get("closed_child_id") == NEW_CLOSED_SUBGATES[0]
+        and m_linear.get("negative_id") == NEW_NEGATIVE_IDS[0]
+        and m_linear.get("candidate_created") is False
+        and m_linear.get("physical_response_gate_closed") is False
+        and m_fraction
+        == {
+            "beta": "3/2", "boltzmann_exponent_shift_at_step": "-9/50",
+            "d_left": "5/7", "d_right": "11/7", "delta_d": "6/7",
+            "free_energy_difference_at_step": "3/25",
+            "ground_branch_indices_minus_zero_plus": [0, 0, 0],
+            "normalized_curvature_left": "5/7",
+            "normalized_curvature_right": "11/7",
+            "normalized_curvature_shift": "6/7", "source_step": "1/5",
+            "volume": "7",
+        }
+        and as_mapping(m_linear.get("sign_convention")).get("helicity_like_response")
+        == "+V^-1 d_J^2 F_beta(J)|J=0"
+        and as_mapping(m_linear.get("sign_convention")).get("scalar_susceptibility")
+        == "-V^-1 d_J^2 F_beta(J)|J=0",
+        m_linear,
+        "exact fraction fixture, stable branch [0,0,0], and response gate false",
+        "cross_v1_2",
+    )
+    require_tokens(
+        json.dumps(m_linear, sort_keys=True),
+        "manifest v1.2 contact theorem and physical boundary",
+        (
+            "H_d(t,J)=H(t)-JQ", "+V^-1 partial_J^2 F_beta shifts by +d(t)",
+            "scalar J*phi source", "not automatically", "compact or gauge action",
+            "state/reference", "error budget",
+        ),
+        audit,
+        core=True,
+        group="cross_v1_2",
+    )
+
+    p_contract = as_mapping(
+        primary.get("m2_physical_response_successor_minimum_contract_fixture")
+    )
+    i_contract = as_mapping(
+        independent.get("m2_physical_response_successor_minimum_contract_fixture")
+    )
+    p_valid = primary.get(
+        "m2_physical_response_successor_minimum_contract_validation"
+    )
+    i_valid = independent.get(
+        "m2_physical_response_successor_minimum_contract_validation"
+    )
+    audit.check(
+        "cross v1.2 independently reconstructed minimum contract exact",
+        p_contract == i_contract
+        and p_valid == i_valid == {"valid": True, "errors": [], "error_codes": []},
+        {"fixture_equal": p_contract == i_contract, "primary": p_valid, "independent": i_valid},
+        "equal positive fixture and two valid reports",
+        "cross_v1_2",
+    )
+    audit.check(
+        "cross v1.2 minimum contract root lifecycle and substantive delta exact",
+        set(p_contract) == set(PHYSICAL_CONTRACT_ROOT_FIELDS)
+        and len(p_contract) == len(PHYSICAL_CONTRACT_ROOT_FIELDS)
+        and p_contract.get("schema") == PHYSICAL_CONTRACT_SCHEMA
+        and p_contract.get("status") == "SCHEMA_FIXTURE_ONLY"
+        and p_contract.get("fixture_only") is True
+        and p_contract.get("candidate_created") is False
+        and as_mapping(p_contract.get("version_delta")).get("classification")
+        == "SUBSTANTIVE_NEW_VERSION"
+        and set(as_list(as_mapping(p_contract.get("version_delta")).get("substantive_changes")))
+        == set(PHYSICAL_CONTRACT_MANDATORY_CHANGES)
+        and len(as_list(as_mapping(p_contract.get("version_delta")).get("substantive_changes")))
+        == len(PHYSICAL_CONTRACT_MANDATORY_CHANGES)
+        and "MICROSCOPIC_MAP_ONLY"
+        not in as_list(as_mapping(p_contract.get("version_delta")).get("substantive_changes")),
+        {
+            "keys": list(p_contract),
+            "schema": p_contract.get("schema"),
+            "status": p_contract.get("status"),
+            "version_delta": p_contract.get("version_delta"),
+        },
+        {
+            "keys": PHYSICAL_CONTRACT_ROOT_FIELDS,
+            "schema": PHYSICAL_CONTRACT_SCHEMA,
+            "changes": PHYSICAL_CONTRACT_MANDATORY_CHANGES,
+        },
+        "cross_v1_2",
+    )
+    response = as_mapping(p_contract.get("response_definition"))
+    estimand = as_mapping(p_contract.get("estimand_binding"))
+    prediction = as_mapping(p_contract.get("critical_prediction"))
+    control = as_mapping(p_contract.get("physical_control_map"))
+    hard = as_mapping(p_contract.get("hard_row_rerun"))
+    firewall = as_mapping(p_contract.get("prospective_firewall"))
+    audit.check(
+        "cross v1.2 response estimand prediction firewall and hard rows exact",
+        response.get("kind") == "HELICITY_FREE_ENERGY_CURVATURE"
+        and response.get("sign_convention") == PHYSICAL_RESPONSE_SIGN_CONVENTION
+        and tuple(response.get("limit_order", ())) == PHYSICAL_CONTRACT_LIMIT_ORDER
+        and response.get("common_estimand_id") == estimand.get("id")
+        == prediction.get("estimand_id")
+        and prediction.get("candidate_id") == p_contract.get("candidate_id")
+        and prediction.get("target_blind") is True
+        and control.get("target_blind") is True
+        and hard.get("all_pass") is True
+        and tuple(as_mapping(hard.get("rows"))) == HARD_ROWS
+        and set(as_mapping(hard.get("rows")).values()) == {"PASS"}
+        and firewall.get("target_value_present") is False
+        and firewall.get("external_commitment_status")
+        == firewall.get("remote_verification_status")
+        == "REQUIRED_EXTERNAL_NOT_SUPPLIED",
+        {
+            "response": response,
+            "estimand": estimand,
+            "prediction": prediction,
+            "control": control,
+            "hard": hard,
+            "firewall": firewall,
+        },
+        "helicity curvature, ordered limits, bound target-blind prediction, ten PASS rows, external inputs absent",
+        "cross_v1_2",
+    )
+    budget = as_mapping(p_contract.get("error_budget"))
+    terms = [as_mapping(item) for item in as_list(budget.get("terms"))]
+    composites = [
+        (
+            as_mapping(term.get("script_ref")).get("path"),
+            as_mapping(term.get("run_ref")).get("path"),
+            term.get("result_key"),
+        )
+        for term in terms
+    ]
+    audit.check(
+        "cross v1.2 exact six-term rational error budget and distinct evidence",
+        tuple(term.get("id") for term in terms) == PHYSICAL_CONTRACT_ERROR_TERMS
+        and all(term.get("bound") == "1/100" for term in terms)
+        and budget.get("total_bound") == "3/50"
+        and budget.get("acceptance_margin") == "1/10"
+        and budget.get("strict_margin") is True
+        and len(composites) == len(set(composites)) == 6,
+        {"terms": terms, "composites": composites, "budget": budget},
+        {
+            "ids": PHYSICAL_CONTRACT_ERROR_TERMS,
+            "bounds": ["1/100"] * 6,
+            "total": "3/50",
+            "margin": "1/10",
+            "distinct": 6,
+        },
+        "cross_v1_2",
+    )
+
+    refs = list(_iter_artifact_refs(p_contract))
+    role_counts: dict[str, int] = {}
+    refs_valid = True
+    for ref in refs:
+        role = ref.get("role")
+        role_counts[str(role)] = role_counts.get(str(role), 0) + 1
+        raw_path = ref.get("path")
+        if not isinstance(raw_path, str) or "\\" in raw_path:
+            refs_valid = False
+            continue
+        candidate = REPO / raw_path
+        refs_valid = (
+            refs_valid
+            and role in PHYSICAL_CONTRACT_ARTIFACT_ROLES
+            and candidate.is_file()
+            and ref.get("sha256") == normalized_sha256(candidate)
+        )
+    audit.check(
+        "cross v1.2 all 31 role-bound artifact refs current",
+        len(refs) == 31
+        and refs_valid
+        and role_counts
+        == {
+            "ERROR_RUN": 6, "ERROR_SCRIPT": 6, "PROOF": 3,
+            "PHYSICAL_CONTROL_MAP": 2, "COMPACT_OR_GAUGE_ACTION": 2,
+            "SOURCE_LAW": 2, "RESPONSE_MAP": 2, "STATE_EXISTENCE": 2,
+            "RAW_ESTIMATOR": 1, "LINEAR_PROBE": 1, "QUADRATIC_CONTACT": 1,
+            "VERIFIER_INDEPENDENT": 1, "VERIFIER_INTEGRATED": 1,
+            "VERIFIER_PRIMARY": 1,
+        },
+        {"count": len(refs), "valid": refs_valid, "roles": role_counts},
+        "31 current exact refs with declared roles and hashes",
+        "cross_v1_2",
+    )
+    verification = as_mapping(p_contract.get("verification"))
+    verifier_refs = {
+        name: as_mapping(verification.get(name))
+        for name in ("primary_ref", "independent_ref", "integrated_ref")
+    }
+    audit.check(
+        "cross v1.2 distinct frozen verifier bindings exact",
+        verifier_refs["primary_ref"].get("path") == repo_path(PRIMARY)
+        and verifier_refs["primary_ref"].get("sha256") == PRIMARY_SCRIPT_SHA256
+        and verifier_refs["independent_ref"].get("path") == repo_path(INDEPENDENT)
+        and verifier_refs["independent_ref"].get("sha256") == INDEPENDENT_SCRIPT_SHA256
+        and verifier_refs["integrated_ref"].get("path") == repo_path(SCRIPT)
+        and verifier_refs["integrated_ref"].get("sha256") == normalized_sha256(SCRIPT)
+        and len({ref.get("path") for ref in verifier_refs.values()}) == 3
+        and len({ref.get("sha256") for ref in verifier_refs.values()}) == 3,
+        verifier_refs,
+        "current distinct primary, independent, integrated .py refs and hashes",
+        "cross_v1_2",
+    )
+
+    p_hostile = as_mapping(
+        primary.get("m2_physical_response_successor_minimum_contract_hostile_fixtures")
+    )
+    i_hostile = as_mapping(
+        independent.get("m2_physical_response_successor_minimum_contract_hostile_fixtures")
+    )
+    audit.check(
+        "cross v1.2 exact 57 hostile names and reports",
+        p_hostile == i_hostile
+        and tuple(p_hostile) == tuple(PHYSICAL_CONTRACT_HOSTILE_CODES)
+        and len(p_hostile) == 57
+        and all(
+            as_mapping(p_hostile.get(name)).get("valid") is False
+            and as_mapping(p_hostile.get(name)).get("expected_code_observed") is True
+            and as_mapping(p_hostile.get(name)).get("expected_error_code") == code
+            and code in as_list(as_mapping(p_hostile.get(name)).get("error_codes"))
+            for name, code in PHYSICAL_CONTRACT_HOSTILE_CODES.items()
+        ),
+        {"primary_names": list(p_hostile), "independent_names": list(i_hostile)},
+        PHYSICAL_CONTRACT_HOSTILE_CODES,
+        "cross_v1_2_hostile",
+    )
+    reordered = {"valid": True, "errors": [], "error_codes": []}
+    audit.check(
+        "cross v1.2 reordered positive metamorphic accepted",
+        primary.get("m2_physical_response_successor_minimum_contract_reordered_metamorphic")
+        == independent.get("m2_physical_response_successor_minimum_contract_reordered_metamorphic")
+        == reordered,
+        {
+            "primary": primary.get("m2_physical_response_successor_minimum_contract_reordered_metamorphic"),
+            "independent": independent.get("m2_physical_response_successor_minimum_contract_reordered_metamorphic"),
+        },
+        reordered,
+        "cross_v1_2",
+    )
+    p_fuzz = as_mapping(primary.get("m2_physical_response_successor_minimum_contract_fuzz"))
+    i_fuzz = as_mapping(independent.get("m2_physical_response_successor_minimum_contract_fuzz"))
+    fuzz_codes = {
+        as_mapping(row).get("name"): tuple(as_list(as_mapping(row).get("error_codes")))
+        for row in as_list(p_fuzz.get("cases"))
+    }
+    audit.check(
+        "cross v1.2 exact 48 malformed fuzz cases rejected without exception",
+        p_fuzz == i_fuzz
+        and p_fuzz.get("case_count") == p_fuzz.get("rejected_count") == 48
+        and p_fuzz.get("all_rejected_without_exception") is True
+        and all(as_mapping(row).get("rejected") is True for row in as_list(p_fuzz.get("cases")))
+        and fuzz_codes == PHYSICAL_CONTRACT_FUZZ_CODES,
+        {"summary": {key: p_fuzz.get(key) for key in ("case_count", "rejected_count", "all_rejected_without_exception")}, "codes": fuzz_codes},
+        PHYSICAL_CONTRACT_FUZZ_CODES,
+        "cross_v1_2_fuzz",
+    )
+
+    m_schema = as_mapping(
+        manifest.get("m2_physical_response_successor_minimum_contract_schema")
+    )
+    m_hostiles = as_mapping(
+        manifest.get("m2_physical_response_successor_minimum_contract_hostile_fixtures")
+    )
+    audit.check(
+        "manifest v1.2 minimum-contract exact schema enums and counts",
+        m_schema.get("closed_child_id") == NEW_CLOSED_SUBGATES[1]
+        and m_schema.get("schema") == PHYSICAL_CONTRACT_SCHEMA
+        and tuple(m_schema.get("root_fields", ())) == PHYSICAL_CONTRACT_ROOT_FIELDS
+        and tuple(m_schema.get("artifact_ref_fields", ())) == PHYSICAL_CONTRACT_ARTIFACT_REF_FIELDS
+        and tuple(m_schema.get("artifact_roles", ())) == PHYSICAL_CONTRACT_ARTIFACT_ROLES
+        and tuple(m_schema.get("mandatory_substantive_changes", ()))
+        == PHYSICAL_CONTRACT_MANDATORY_CHANGES
+        and tuple(m_schema.get("substantive_change_enum", ()))
+        == PHYSICAL_CONTRACT_CHANGE_ENUM
+        and tuple(m_schema.get("error_terms", ())) == PHYSICAL_CONTRACT_ERROR_TERMS
+        and tuple(m_schema.get("hard_rows", ())) == HARD_ROWS
+        and tuple(as_mapping(m_schema.get("structured_enums")).get("limit_order", ()))
+        == PHYSICAL_CONTRACT_LIMIT_ORDER
+        and m_schema.get("max_canonical_rational_length") == 128
+        and m_schema.get("max_repository_relative_path_length") == 4096
+        and m_schema.get("candidate_created") is False
+        and m_schema.get("fixture_only") is True
+        and m_hostiles.get("count") == 57
+        and as_mapping(m_hostiles.get("cases")) == PHYSICAL_CONTRACT_HOSTILE_CODES
+        and as_mapping(m_hostiles.get("deterministic_fuzz")).get("case_count") == 48,
+        {"schema": m_schema, "hostiles": m_hostiles},
+        "exact 1.1 schema, enums, limits, 57 hostiles, and 48 fuzz cases",
+        "cross_v1_2",
+    )
+    require_tokens(
+        json.dumps(m_schema, sort_keys=True),
+        "manifest v1.2 hardened minimum-contract boundaries",
+        (
+            "embedded NUL", "4096", "case-sensitive", "space or dot",
+            "OSError, ValueError and RuntimeError", "128", "coprime",
+            "denominator at least 2", "Exactly six unique error IDs",
+            "unique top-level result key", "order-insensitive exact equality",
+            "semantic truth", "NOT_MACHINE_PROVED", "physical semantics",
+            "FORMAL", "parent gate remain open",
+        ),
+        audit,
+        core=True,
+        group="cross_v1_2",
+    )
+    return {
+        "linear_probe": {
+            "free_energy_difference": "3/25",
+            "boltzmann_exponent_shift": "-9/50",
+            "curvatures": ["5/7", "11/7"],
+            "shift": "6/7",
+            "ground_branches": [0, 0, 0],
+        },
+        "minimum_contract_schema": PHYSICAL_CONTRACT_SCHEMA,
+        "hostile_count": 57,
+        "fuzz_count": 48,
+        "artifact_ref_count": 31,
+        "new_closed_children": list(NEW_CLOSED_SUBGATES),
+        "new_negative": NEW_NEGATIVE_IDS[0],
+        "physical_response_gate_closed": False,
+        "parent_gate_closed": False,
+    }
 
 
 def compare_components(
@@ -1831,6 +2644,8 @@ def compare_components(
         "cross_v1_1",
     )
 
+    v1_2 = compare_v1_2(primary, independent, manifest, audit)
+
     pboundary = as_mapping(primary.get("real_freeze_verification_boundary"))
     iboundary = as_mapping(independent.get("real_freeze_verification_boundary"))
     audit.check(
@@ -1904,6 +2719,7 @@ def compare_components(
         "stable_blocker_count": 7,
         "successor_status": "DESIGN_ONLY",
         "successor_candidate_created": False,
+        "v1_2": v1_2,
     }
 
 
@@ -1936,13 +2752,13 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
             "manifest",
         )
     audit.check(
-        "manifest v1.1 theorem-ready status exact",
+        "manifest v1.2 theorem-ready status exact",
         isinstance(manifest.get("status"), str)
-        and manifest.get("status", "").startswith("R-168 v1.1 THEOREM-READY")
+        and manifest.get("status", "").startswith("R-168 v1.2 THEOREM-READY")
         and text_has(manifest.get("status", ""), "M2 PHYSICAL RESPONSE/ERROR")
         and text_has(manifest.get("status", ""), "PARENT PRE-A GATES OPEN"),
         manifest.get("status"),
-        "R-168 v1.1 THEOREM-READY with physical-response and parent gates open",
+        "R-168 v1.2 THEOREM-READY with linear-probe theorem and physical-response/parent gates open",
         "manifest",
     )
 
@@ -2057,7 +2873,7 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     frozen_rule = as_mapping(map_audit.get("frozen_survival_rule"))
     audit.check(
         "manifest exact map-only empty-set and frozen all-PASS contract",
-        map_audit.get("closed_child_id") == NEW_CLOSED_SUBGATES[0]
+        map_audit.get("closed_child_id") == V1_1_CLOSED_SUBGATES[0]
         and map_audit.get("cardinality") == 0
         and map_audit.get("admitted_candidate_ids") == []
         and map_audit.get("map_only_new_version_survivor_ids") == []
@@ -2086,7 +2902,7 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     fingerprint = as_mapping(manifest.get("m2_finite_torus_dispersion_fingerprint"))
     audit.check(
         "manifest exact ordered 48-component Gaussian fingerprint contract",
-        fingerprint.get("closed_child_id") == NEW_CLOSED_SUBGATES[1]
+        fingerprint.get("closed_child_id") == V1_1_CLOSED_SUBGATES[1]
         and fingerprint.get("node_count") == 8
         and fingerprint.get("axes_per_node") == 3
         and fingerprint.get("components_per_axis") == 2
@@ -2183,12 +2999,12 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
         )
     require_tokens(
         manifest.get("no_overclaim", ""),
-        "manifest v1.1 no-overclaim",
+        "manifest v1.2 no-overclaim",
         (
             "does not create PA-M2-CI8-RS-DISPERSION-MAP-v1",
-            "physical response channel",
-            "error-controlled physical prediction",
-            "signature or remote ref",
+            "physical response",
+            "error-controlled prediction",
+            "external gate",
             "physical Sector A",
             "Pre-A",
         ),
@@ -2210,24 +3026,61 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
         "pdf_history",
     )
     audit.check(
-        "historical checkpoint hashes freshness pages and two-parser extraction",
+        "historical v1.9/v1.0 checkpoint hashes freshness pages and two-parser extraction",
         historical["valid"],
         historical,
         {
             "source_sha256": CHECKPOINT_SOURCE_SHA256,
             "pdf_sha256": CHECKPOINT_PDF_SHA256,
             "pages": CHECKPOINT_PAGES,
-            "fresh": True,
-            "pypdf": "all nonempty and all tokens",
-            "pdfplumber": "all nonempty and all tokens",
+            "scope": "historical only",
+        },
+        "pdf_history",
+    )
+
+    v2_metadata = as_mapping(manifest.get(V2_HISTORICAL_CHECKPOINT_FIELD))
+    v2_historical = issued_checkpoint_lifecycle_diagnostics(
+        v2_metadata,
+        other_field=V2_HISTORICAL_CHECKPOINT_FIELD,
+        required_tokens=V2_HISTORICAL_CHECKPOINT_REQUIRED_TOKENS,
+        workflow_versions=("R-167 v2.0", "R-168 v1.1"),
+    )
+    audit.check(
+        "historical shared v2.0/v1.1 checkpoint fixed metadata exact",
+        dict(v2_metadata) == EXPECTED_V2_HISTORICAL_CHECKPOINT_CORE,
+        v2_metadata,
+        EXPECTED_V2_HISTORICAL_CHECKPOINT_CORE,
+        "pdf_history",
+    )
+    audit.check(
+        "historical v2.0/v1.1 checkpoint hashes freshness pages and two-parser extraction",
+        v2_historical["valid"]
+        and v2_historical.get("source_sha256") == V2_CHECKPOINT_SOURCE_SHA256
+        and v2_historical.get("pdf_sha256") == V2_CHECKPOINT_PDF_SHA256
+        and v2_historical.get("pypdf_pages") == V2_CHECKPOINT_PAGES
+        and v2_historical.get("pdfplumber_pages") == V2_CHECKPOINT_PAGES,
+        v2_historical,
+        {
+            "source_sha256": V2_CHECKPOINT_SOURCE_SHA256,
+            "pdf_sha256": V2_CHECKPOINT_PDF_SHA256,
+            "pages": V2_CHECKPOINT_PAGES,
+            "scope": "historical only",
         },
         "pdf_history",
     )
 
     future_metadata = as_mapping(manifest.get(NEXT_CHECKPOINT_FIELD))
-    future = future_checkpoint_lifecycle_diagnostics(future_metadata)
+    future = future_checkpoint_pair_diagnostics(future_metadata)
+    audit.check(
+        "future R-168 v1.2 / R-167 v2.1 checkpoint fields cross-bound",
+        future["deferred_pair_valid"]
+        or as_mapping(future.get("issued")).get("shared_manifest_exact") is True,
+        future,
+        "two explicit deferred records or identical issued shared metadata",
+        "pdf_checkpoint",
+    )
     audit.pending(
-        "later combined R-167 v2.0 / R-168 v1.1 checkpoint lifecycle",
+        "combined R-167 v2.1 / R-168 v1.2 checkpoint lifecycle",
         future["valid"],
         future,
         {
@@ -2245,7 +3098,11 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     return {
         "historical_metadata": historical_metadata,
         "historical_valid": historical["valid"],
+        "v2_historical_metadata": v2_metadata,
+        "v2_historical_valid": v2_historical["valid"],
         "future_metadata": future_metadata,
+        "future_cross_bound": future["deferred_pair_valid"]
+        or as_mapping(future.get("issued")).get("shared_manifest_exact") is True,
         "future_valid": future["valid"],
     }
 
@@ -2331,7 +3188,7 @@ def validate_certificate(audit: Audit) -> str | None:
     )
     require_tokens(
         text,
-        "certificate v1.1 additive proof and no-overclaim contract",
+        "certificate v1.2 additive proof and no-overclaim contract",
         (
             *PRIOR_EXPLORATION_IDS,
             EXPLORATION_ID,
@@ -2347,7 +3204,10 @@ def validate_certificate(audit: Audit) -> str | None:
             "NOT_CREATED",
             "physical response channel",
             "controlled error budget",
-            "No v1.1 PDF is issued here",
+            "No intermediate v1.2 PDF is issued",
+            "3/25", "-9/50", "5/7", "11/7", "6/7",
+            "57 exact", "48 deterministic", "embedded NUL", "4096",
+            "128 characters", "denominator-one", "formal gate authority",
         ),
         audit,
         core=True,
@@ -2401,7 +3261,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
                 audit.check(
                     f"closed gate {gate}",
                     "**Status:**" in section and text_has(section, "CLOSED"),
-                    section[:500],
+                    section[:700],
                     "explicit CLOSED status",
                     "formal",
                 )
@@ -2413,7 +3273,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
                 audit.check(
                     f"open gate {gate}",
                     "**Status:**" in section and text_has(section, "OPEN"),
-                    section[:500],
+                    section[:700],
                     "explicit OPEN status",
                     "formal",
                 )
@@ -2427,72 +3287,66 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
     )
     if not result_ready:
         audit.pending(
-            "R-168 v1.1 result authority",
+            "R-168 v1.2 result authority",
             False,
-            None if result_section is None else result_section[:700],
+            None if result_section is None else result_section[:900],
             f"{RESULT_NUMBER} {RESULT_VERSION} / {RESULT_ID} / {EXPLORATION_ID}",
             "formal",
         )
         if result_section is not None:
             audit.check(
-                "R-168 v1.0 authority retained while v1.1 is staged",
-                text_has(result_section, "R-168 v1.0")
-                and text_has(result_section, PRIOR_EXPLORATION_IDS[0])
-                and text_has(result_section, HARDENING_EXPLORATION_ID),
-                result_section[:700],
-                "historical v1.0/EXP-000807/EXP-000808 linkage",
+                "R-168 v1.1 authority retained while v1.2 is staged",
+                text_has(result_section, "R-168 v1.1")
+                and text_has(result_section, V1_1_EXPLORATION_ID),
+                result_section[:900],
+                "historical v1.1/EXP-000810 linkage",
                 "formal_history",
             )
     else:
         require_tokens(
             result_section,
-            "R-168 v1.1 result authority",
+            "R-168 v1.2 result authority",
             (
-                RESULT_NUMBER,
-                RESULT_VERSION,
-                RESULT_ID,
-                EXPLORATION_ID,
-                *PRIOR_EXPLORATION_IDS,
-                "T0",
-                *NEGATIVE_IDS,
-                *NEW_CLOSED_SUBGATES,
-                PHYSICAL_RESPONSE_GATE,
-                "DESIGN_ONLY",
-                "actual freeze",
-                "physical Sector A",
-                "Pre-A",
+                RESULT_NUMBER, RESULT_VERSION, RESULT_ID, EXPLORATION_ID,
+                *PRIOR_EXPLORATION_IDS, "T0", *NEGATIVE_IDS,
+                *NEW_CLOSED_SUBGATES, PHYSICAL_RESPONSE_GATE,
+                "linear", "second-order", "minimum", "schema", "actual",
+                "physical Sector A", "Pre-A",
             ),
             audit,
             core=True,
         )
 
+    negative_tokens = {
+        V1_0_NEGATIVE_IDS[0]: (
+            V1_0_NEGATIVE_IDS[0], V1_0_EXPLORATION_ID, RESULT_NUMBER,
+            "current", "future",
+        ),
+        V1_1_NEGATIVE_IDS[0]: (
+            V1_1_NEGATIVE_IDS[0], V1_1_EXPLORATION_ID, RESULT_NUMBER,
+            "map-only", "substantively new", "not a no-go",
+        ),
+        NEW_NEGATIVE_IDS[0]: (
+            NEW_NEGATIVE_IDS[0], EXPLORATION_ID, RESULT_NUMBER,
+            "linear", "quadratic", "contact", "physical", "not",
+        ),
+    }
     if negatives is not None:
-        for negative in NEGATIVE_IDS:
+        for negative, tokens in negative_tokens.items():
             section = heading_section(negatives, negative)
             if section is None:
                 audit.pending(
-                    f"negative authority {negative}", False, None, "unique section", "formal"
+                    f"negative authority {negative}", False, None,
+                    "unique section", "formal",
                 )
-                continue
-            tokens = (
-                (negative, PRIOR_EXPLORATION_IDS[0], RESULT_NUMBER, "current", "future")
-                if negative in PRIOR_NEGATIVE_IDS
-                else (
-                    negative,
-                    EXPLORATION_ID,
-                    RESULT_NUMBER,
-                    "map-only",
-                    "substantively new",
-                    "not a no-go",
+            else:
+                require_tokens(
+                    section,
+                    f"negative authority {negative}",
+                    tokens,
+                    audit,
+                    core=True,
                 )
-            )
-            require_tokens(
-                section,
-                f"negative authority {negative}",
-                tokens,
-                audit,
-                core=True,
-            )
         reused = heading_section(negatives, REUSED_NEGATIVE_IDS[0])
         audit.check(
             "reused negative authority retained",
@@ -2508,124 +3362,85 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         if isinstance(identifier, str):
             records_by_id.setdefault(identifier, []).append(row)
 
-    legacy_matches = records_by_id.get(PRIOR_EXPLORATION_IDS[0], [])
-    audit.check(
-        "EXP-000807 retained unique record",
-        len(legacy_matches) == 1,
-        len(legacy_matches),
-        1,
-        "formal_history",
-    )
-    if len(legacy_matches) == 1:
-        legacy = legacy_matches[0]
+    def one_record(identifier: str, group: str) -> dict[str, Any] | None:
+        matches = records_by_id.get(identifier, [])
+        if not matches:
+            audit.pending(f"{identifier} unique record", False, 0, 1, group)
+            return None
+        audit.check(
+            f"{identifier} unique record", len(matches) == 1, len(matches), 1, group
+        )
+        return matches[0] if len(matches) == 1 else None
+
+    legacy = one_record(V1_0_EXPLORATION_ID, "formal_history")
+    if legacy is not None:
         refs = as_mapping(legacy.get("formal_refs"))
         audit.check(
             "EXP-000807 retained exact identity sets",
             legacy.get("task_id") == TASK_ID
             and legacy.get("claim_ids") == list(CLAIM_IDS)
             and refs.get("results") == [RESULT_NUMBER]
-            and refs.get("negatives") == list(PRIOR_NEGATIVE_IDS)
-            and set(legacy.get("gate_ids", [])) == set(V1_0_ALL_GATE_IDS)
-            and len(legacy.get("gate_ids", [])) == len(V1_0_ALL_GATE_IDS),
-            {
-                "task": legacy.get("task_id"),
-                "claims": legacy.get("claim_ids"),
-                "refs": refs,
-                "gates": legacy.get("gate_ids"),
-            },
-            {
-                "task": TASK_ID,
-                "claims": CLAIM_IDS,
-                "results": [RESULT_NUMBER],
-                "negatives": PRIOR_NEGATIVE_IDS,
-                "gates": V1_0_ALL_GATE_IDS,
-            },
+            and refs.get("negatives") == list(V1_0_NEGATIVE_IDS)
+            and set(legacy.get("gate_ids", [])) == set(V1_0_ALL_GATE_IDS),
+            legacy,
+            "historical v1.0 exact task, claim, result, negative and gate sets",
             "formal_history",
         )
-
-    hardening_matches = records_by_id.get(HARDENING_EXPLORATION_ID, [])
-    audit.check(
-        "EXP-000808 retained unique repair record",
-        len(hardening_matches) == 1,
-        len(hardening_matches),
-        1,
-        "formal_history",
-    )
-    if len(hardening_matches) == 1:
-        repair = hardening_matches[0]
-        repair_refs = as_mapping(repair.get("formal_refs"))
+    repair = one_record(HARDENING_EXPLORATION_ID, "formal_history")
+    if repair is not None:
+        refs = as_mapping(repair.get("formal_refs"))
         audit.check(
             "EXP-000808 retained exact repair identity sets",
             repair.get("task_id") == TASK_ID
             and repair.get("claim_ids") == list(CLAIM_IDS)
-            and repair_refs.get("results") == [RESULT_NUMBER]
-            and repair_refs.get("negatives") == []
+            and refs.get("results") == [RESULT_NUMBER]
+            and refs.get("negatives") == []
             and tuple(repair.get("gate_ids", ())) == HARDENING_GATE_IDS,
-            {
-                "task": repair.get("task_id"),
-                "claims": repair.get("claim_ids"),
-                "refs": repair_refs,
-                "gates": repair.get("gate_ids"),
-            },
-            {
-                "task": TASK_ID,
-                "claims": CLAIM_IDS,
-                "results": [RESULT_NUMBER],
-                "negatives": [],
-                "gates": HARDENING_GATE_IDS,
-            },
+            repair,
+            "historical repair identity and gate sets",
+            "formal_history",
+        )
+    v1_1 = one_record(V1_1_EXPLORATION_ID, "formal_history")
+    if v1_1 is not None:
+        refs = as_mapping(v1_1.get("formal_refs"))
+        audit.check(
+            "EXP-000810 retained exact v1.1 identity sets",
+            v1_1.get("task_id") == TASK_ID
+            and v1_1.get("claim_ids") == list(CLAIM_IDS)
+            and refs.get("results") == [RESULT_NUMBER]
+            and refs.get("negatives") == list(V1_1_NEGATIVE_IDS)
+            and tuple(v1_1.get("gate_ids", ())) == V1_1_EXPLORATION_GATES,
+            v1_1,
+            "historical v1.1 exact task, claim, result, negative and gate order",
             "formal_history",
         )
 
-    matches = records_by_id.get(EXPLORATION_ID, [])
-    if not matches:
-        audit.pending(f"{EXPLORATION_ID} unique record", False, 0, 1, "formal")
-    else:
-        audit.check(
-            f"{EXPLORATION_ID} unique record", len(matches) == 1, len(matches), 1, "formal"
-        )
-    if len(matches) == 1:
-        record = matches[0]
-        formal_refs = as_mapping(record.get("formal_refs"))
+    current = one_record(EXPLORATION_ID, "formal")
+    if current is not None:
+        refs = as_mapping(current.get("formal_refs"))
         required_gates = {*NEW_CLOSED_SUBGATES, PARENT_GATE, PHYSICAL_RESPONSE_GATE}
         audit.check(
-            f"{EXPLORATION_ID} exact additive authority bindings",
-            record.get("task_id") == TASK_ID
-            and record.get("claim_ids") == list(CLAIM_IDS)
-            and RESULT_NUMBER in as_list(formal_refs.get("results"))
-            and set(NEW_NEGATIVE_IDS) <= set(as_list(formal_refs.get("negatives")))
-            and required_gates <= set(as_list(record.get("gate_ids"))),
+            "EXP-000812 exact additive authority bindings",
+            current.get("task_id") == TASK_ID
+            and current.get("claim_ids") == list(CLAIM_IDS)
+            and refs.get("results") == [RESULT_NUMBER]
+            and refs.get("negatives") == list(NEW_NEGATIVE_IDS)
+            and required_gates <= set(as_list(current.get("gate_ids"))),
+            current,
             {
-                "task": record.get("task_id"),
-                "claims": record.get("claim_ids"),
-                "formal_refs": formal_refs,
-                "gates": record.get("gate_ids"),
-            },
-            {
-                "task": TASK_ID,
-                "claims": CLAIM_IDS,
-                "result": RESULT_NUMBER,
-                "new_negatives": NEW_NEGATIVE_IDS,
-                "required_gates": sorted(required_gates),
+                "task": TASK_ID, "claims": CLAIM_IDS, "result": RESULT_NUMBER,
+                "negative": NEW_NEGATIVE_IDS, "required_gates": sorted(required_gates),
             },
             "formal",
         )
         require_tokens(
-            json.dumps(record, sort_keys=True),
-            f"{EXPLORATION_ID} proof and boundary",
+            json.dumps(current, sort_keys=True),
+            "EXP-000812 proof and boundary",
             (
-                "current-version",
-                "map-only",
-                "ten",
-                "eight",
-                "48",
-                "DESIGN_ONLY",
-                "physical response",
-                "error bound",
-                "cryptographic",
-                "remote",
-                "physical Sector A",
-                "Pre-A",
+                "H_d(t,J)", "linear", "quadratic contact", "6/7",
+                "minimum successor", "schema", "hostile", "deterministic fuzz",
+                "physical response", "candidate", "external freeze",
+                "physical Sector A", "Pre-A",
             ),
             audit,
             core=True,
@@ -2634,97 +3449,77 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
     def event_claim_set(event: Mapping[str, Any]) -> set[str]:
         return set(as_list(event.get("claim_ids")))
 
-    legacy_event_ids = {CLAIM_IDS[0], PRIOR_EXPLORATION_IDS[0], RESULT_NUMBER}
-    legacy_events = [
-        event for event in changelog or [] if event_claim_set(event) == legacy_event_ids
-    ]
-    audit.check(
-        "R-168 v1.0 theorem changelog retained unique",
-        len(legacy_events) == 1,
-        len(legacy_events),
-        1,
-        "formal_history",
-    )
-    if len(legacy_events) == 1:
-        event = legacy_events[0]
-        audit.check(
-            "R-168 v1.0 theorem changelog retained exact sets",
-            event.get("neg_results") == list(PRIOR_NEGATIVE_IDS)
-            and set(as_list(event.get("scripts"))) == {repo_path(PRIMARY), repo_path(INDEPENDENT)},
-            event,
-            "historical negative and primary/independent scripts",
+    expected_events = (
+        (
+            "R-168 v1.0 theorem changelog retained",
+            {CLAIM_IDS[0], V1_0_EXPLORATION_ID, RESULT_NUMBER},
+            V1_0_NEGATIVE_IDS,
+            {repo_path(PRIMARY), repo_path(INDEPENDENT)},
             "formal_history",
-        )
-
-    hardening_event_ids = {
-        CLAIM_IDS[0],
-        PRIOR_EXPLORATION_IDS[0],
-        HARDENING_EXPLORATION_ID,
-        RESULT_NUMBER,
-    }
-    hardening_events = [
-        event for event in changelog or [] if event_claim_set(event) == hardening_event_ids
-    ]
-    audit.check(
-        "R-168 v1.0 hardening changelog retained unique",
-        len(hardening_events) == 1,
-        len(hardening_events),
-        1,
-        "formal_history",
-    )
-    if len(hardening_events) == 1:
-        event = hardening_events[0]
-        audit.check(
-            "R-168 v1.0 hardening changelog retained exact sets",
-            event.get("neg_results") == list(PRIOR_NEGATIVE_IDS)
-            and set(as_list(event.get("scripts")))
-            == {repo_path(PRIMARY), repo_path(INDEPENDENT), repo_path(SCRIPT)},
-            event,
-            "historical repair identities, negative, and all three scripts",
+        ),
+        (
+            "R-168 v1.0 hardening changelog retained",
+            {CLAIM_IDS[0], V1_0_EXPLORATION_ID, HARDENING_EXPLORATION_ID, RESULT_NUMBER},
+            V1_0_NEGATIVE_IDS,
+            {repo_path(PRIMARY), repo_path(INDEPENDENT), repo_path(SCRIPT)},
             "formal_history",
-        )
+        ),
+        (
+            "R-168 v1.1 theorem changelog retained",
+            {CLAIM_IDS[0], V1_1_EXPLORATION_ID, RESULT_NUMBER},
+            V1_1_NEGATIVE_IDS,
+            {repo_path(PRIMARY), repo_path(INDEPENDENT), repo_path(SCRIPT)},
+            "formal_history",
+        ),
+    )
+    historical_event_counts: dict[str, int] = {}
+    for label, identities, negative_set, scripts, group in expected_events:
+        matches = [event for event in changelog or [] if event_claim_set(event) == identities]
+        historical_event_counts[label] = len(matches)
+        audit.check(f"{label} unique", len(matches) == 1, len(matches), 1, group)
+        if len(matches) == 1:
+            event = matches[0]
+            audit.check(
+                f"{label} exact authorities",
+                event.get("neg_results") == list(negative_set)
+                and scripts <= set(as_list(event.get("scripts"))),
+                event,
+                {"negatives": negative_set, "scripts": scripts},
+                group,
+            )
 
-    v1_1_events = [
+    v1_2_events = [
         event
         for event in changelog or []
-        if CLAIM_IDS[0] in event_claim_set(event)
-        and EXPLORATION_ID in event_claim_set(event)
-        and RESULT_NUMBER in event_claim_set(event)
-        and "R-167" not in event_claim_set(event)
-        and text_has(event.get("raw", event.get("header", "")), "R-168 v1.1")
+        if event_claim_set(event) == {CLAIM_IDS[0], EXPLORATION_ID, RESULT_NUMBER}
     ]
-    if not v1_1_events:
-        audit.pending("R-168 v1.1 changelog", False, 0, 1, "formal")
+    if not v1_2_events:
+        audit.pending("R-168 v1.2 changelog", False, 0, 1, "formal")
     else:
         audit.check(
-            "R-168 v1.1 changelog unique",
-            len(v1_1_events) == 1,
-            len(v1_1_events),
+            "R-168 v1.2 changelog unique",
+            len(v1_2_events) == 1,
+            len(v1_2_events),
             1,
             "formal",
         )
-    if len(v1_1_events) == 1:
-        event = v1_1_events[0]
+    if len(v1_2_events) == 1:
+        event = v1_2_events[0]
         audit.check(
-            "R-168 v1.1 changelog authority sets",
-            set(NEW_NEGATIVE_IDS) <= set(as_list(event.get("neg_results")))
+            "R-168 v1.2 changelog authority sets",
+            event.get("neg_results") == list(NEW_NEGATIVE_IDS)
             and {repo_path(PRIMARY), repo_path(INDEPENDENT), repo_path(SCRIPT)}
             <= set(as_list(event.get("scripts"))),
             event,
-            {"new_negatives": NEW_NEGATIVE_IDS, "scripts": [repo_path(PRIMARY), repo_path(INDEPENDENT), repo_path(SCRIPT)]},
+            {"negative": NEW_NEGATIVE_IDS, "scripts": [repo_path(PRIMARY), repo_path(INDEPENDENT), repo_path(SCRIPT)]},
             "formal",
         )
         require_tokens(
             event.get("raw", ""),
-            "R-168 v1.1 changelog boundary",
+            "R-168 v1.2 changelog boundary",
             (
-                "map-only",
-                "48",
-                "DESIGN_ONLY",
-                "physical response",
-                "no candidate",
-                "Sector A",
-                "Pre-A",
+                "linear", "second response", "quadratic", "minimum", "schema",
+                "no candidate", "physical response", "Sector A", "Pre-A",
             ),
             audit,
             core=True,
@@ -2733,12 +3528,12 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
     return {
         "exploration_count": len(explorations or []),
         "changelog_count": len(changelog or []),
-        "v1_1_exploration_matches": len(matches),
-        "legacy_exploration_matches": len(legacy_matches),
-        "hardening_exploration_matches": len(hardening_matches),
-        "v1_1_event_matches": len(v1_1_events),
-        "legacy_event_matches": len(legacy_events),
-        "hardening_event_matches": len(hardening_events),
+        "v1_2_exploration_matches": len(records_by_id.get(EXPLORATION_ID, [])),
+        "v1_1_exploration_matches": len(records_by_id.get(V1_1_EXPLORATION_ID, [])),
+        "legacy_exploration_matches": len(records_by_id.get(V1_0_EXPLORATION_ID, [])),
+        "hardening_exploration_matches": len(records_by_id.get(HARDENING_EXPLORATION_ID, [])),
+        "v1_2_event_matches": len(v1_2_events),
+        "historical_event_counts": historical_event_counts,
     }
 
 
@@ -2930,7 +3725,7 @@ def validate_generated(formal: dict[str, Any], audit: Audit) -> dict[str, Any]:
                 "expected_total": formal.get("changelog_count"),
                 "recent": len(recent),
             },
-            "current total and recent R-168 theorem event",
+            "current total and recent R-168 v1.2 theorem event",
             "generated",
         )
 
@@ -3053,7 +3848,7 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
 
     components: dict[str, dict[str, Any]] = {}
     sentinels: dict[str, dict[str, Any]] = {}
-    with tempfile.TemporaryDirectory(prefix="tect-exp810-integrated-") as directory:
+    with tempfile.TemporaryDirectory(prefix="tect-exp812-integrated-") as directory:
         temporary = Path(directory)
         for label, component in (("primary", PRIMARY), ("independent", INDEPENDENT)):
             result = run_fresh_pair(component, temporary, audit, label)
@@ -3065,20 +3860,20 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
         INDEPENDENT_STORED, components.get("independent"), audit, "independent"
     )
     if "primary" in components:
-        validate_fresh_sentinel(sentinels["primary"], "primary", 205, audit)
+        validate_fresh_sentinel(sentinels["primary"], "primary", PRIMARY_ASSERTION_COUNT, audit)
         validate_component(
-            components["primary"], "primary", PRIMARY_SCHEMA, 205, audit
+            components["primary"], "primary", PRIMARY_SCHEMA, PRIMARY_ASSERTION_COUNT, audit
         )
         validate_source_hashes(
             components["primary"], (PRIMARY, MANIFEST, CERTIFICATE), audit, "primary"
         )
     if "independent" in components:
-        validate_fresh_sentinel(sentinels["independent"], "independent", 223, audit)
+        validate_fresh_sentinel(sentinels["independent"], "independent", INDEPENDENT_ASSERTION_COUNT, audit)
         validate_component(
             components["independent"],
             "independent",
             INDEPENDENT_SCHEMA,
-            223,
+            INDEPENDENT_ASSERTION_COUNT,
             audit,
         )
         validate_source_hashes(
@@ -3114,6 +3909,8 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
         CERTIFICATE,
         CHECKPOINT_SOURCE,
         CHECKPOINT_PDF,
+        V2_CHECKPOINT_SOURCE,
+        V2_CHECKPOINT_PDF,
         PRIMARY_STORED,
         INDEPENDENT_STORED,
         DEFAULT_OUTPUT,
@@ -3174,18 +3971,21 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "dedicated_R168_source_required": False,
             "dedicated_R168_PDF_required": False,
             "dedicated_R168_PDF_created_by_verifier": False,
-            "per_lemma_or_intermediate_v1_1_PDF_issued": False,
+            "per_lemma_or_intermediate_v1_2_PDF_issued": False,
             "historical_v1_9_v1_0_checkpoint_strictly_validated": checkpoint_state.get(
                 "historical_valid", False
             ),
-            "later_v2_0_v1_1_checkpoint_deferred_until_layers_pass": not checkpoint_state.get(
+            "later_v2_1_v1_2_checkpoint_deferred_until_layers_pass": not checkpoint_state.get(
                 "future_valid", False
             ),
-            "later_v2_0_v1_1_checkpoint_strictly_validated": checkpoint_state.get(
+            "later_v2_1_v1_2_checkpoint_strictly_validated": checkpoint_state.get(
                 "future_valid", False
             ),
             "shared_with_R167_manifest": True,
             "historical_manifest_metadata": checkpoint_state.get("historical_metadata", {}),
+            "historical_v2_v1_1_checkpoint_strictly_validated": checkpoint_state.get("v2_historical_valid", False),
+            "historical_v2_v1_1_manifest_metadata": checkpoint_state.get("v2_historical_metadata", {}),
+            "future_cross_bound": checkpoint_state.get("future_cross_bound", False),
             "future_manifest_metadata": checkpoint_state.get("future_metadata", {}),
         },
         "scope": {
@@ -3193,6 +3993,8 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "current_tree_readiness_audited": True,
             "current_version_map_only_empty_set_closed": True,
             "finite_torus_mathematical_fingerprint_closed": True,
+            "linear_probe_second_order_response_nonidentifiability_closed": True,
+            "minimum_physical_response_contract_schema_closed": True,
             "actual_freeze_record_created": False,
             "git_tag_created": False,
             "external_target_commitment_present": False,

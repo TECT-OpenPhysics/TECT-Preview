@@ -5,13 +5,15 @@
 
 Authorities: `negative-results/registry.md`.
 
-**335 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 264 · retraction: 5
+**338 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 267 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-weighted-unitary-cutoff-automatic-arbitrary-context-automorphism-l2-upgrade) | no_go | promote static Gibbs weighted-unitary cutoff control automatically through every bounded observable context |
+| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-uniform-quadratic-in-m-all-moment-bond-shear-graph-transport) | no_go | infer a universal quadratic or polynomial-in-order bound for every normalized bond-shear graph moment from abstract positive-energy structure |
+| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-static-moments-and-low-graph-automatic-twentieth-history-moment) | no_go | infer the uniform two-orientation twentieth history moment from static exponential-coordinate and fixed energy moments plus low-rung graph control |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-static-gaussian-symmetry-finite-moment-automatic-fixed-edge-history-tail) | no_go | infer the required fixed-edge history tail from static Gaussianity, endpoint symmetry and all finite moments |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-raw-weyl-basic-resolvent-quartic-point-norm-c0) | no_go | make the exact unsplit quartic onsite flow point-norm continuous on an invariant concrete C-star carrier containing a raw momentum Weyl or basic momentum resolvent |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-rank-one-unbounded-block-diagonalization-direct-broken-doublet-import) | no_go | import the published rank-one unbounded Lie--Schwinger theorem directly to finish the broken Q3 doublet phase |
@@ -24,6 +26,7 @@ Latest 25 records:
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-direct-yarotsky-two-phase-gap-import) | no_go | import the two-phase Yarotsky quantum Pirogov--Sinai gap theorem directly from the Q3 infrared-order inequality and classical point minima |
 | [`NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR`](registry.md#ng-2026-08-11-pre-a-round1-current-version-map-only-admission-repair) | no_go | repair the exact current M1/M2/M5 admission result by adding only an externally relabelled map slot |
 | [`NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE`](registry.md#ng-2026-08-11-pre-a-round1-current-tree-prospective-holdout-nonexistence) | no_go | issue an actual prospective Round-1 holdout from the audited registered checkpoint |
+| [`NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE`](registry.md#ng-2026-08-11-pre-a-m2-lane-q-linear-source-automatic-physical-stiffness-response) | no_go | identify a physical helicity or stiffness response from the scalar Lane-Q linear source alone |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-onsite-qp-lipschitz-stability) | no_go | propagate the ordinary bounded `q/p` commutator Lipschitz class through the exact quartic onsite flow |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity) | no_go | delete the centered spatial weight from the cubic graph multiplier while keeping a support-location-uniform constant |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-symmetric-sandwich-only-thermodynamic-cauchy) | no_go | infer a thermodynamic automorphism from convergence only in a symmetric energy sandwich |
@@ -33,9 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-small-d-delta-d-uniform-half-strip-multiplier-inference) | no_go | infer uniform evolved half-strip `M_0,M_1` bounds from small direct Duhamel `D,delta D` tails |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-single-rung-energy-constrained-sitewise-influence-recurrence) | no_go | propagate one frequency-blind energy-constrained site-influence rung through the exact bond kick with a neighbor coefficient tending to zero with the step |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-sharp-time-os-gram-only-real-time-functoriality) | no_go | infer common real-time or analytic-word intertwining from domination or equality of the sharp-time OS Gram form alone |
-| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-raw-local-resolvent-point-norm-bond-kick-continuity) | no_go | use the raw local basic-resolvent norm as a point-continuous topology for the exact cross-bond kick |
-| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-raw-configuration-character-bounded-generator-core) | no_go | use raw rational configuration characters as a bounded W-star generator core |
-| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-ABSOLUTE-CONNECTED-HISTORY-ANIMAL-MAJORANT`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-raw-absolute-connected-history-animal-majorant) | no_go | prove real-time locality by multiplying a uniform prescribed-word heat bound by the number of raw connected growth histories |
 
 Search without loading the full registry:
 

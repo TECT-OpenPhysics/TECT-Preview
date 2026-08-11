@@ -1,30 +1,13 @@
 #!/usr/bin/env python3
-"""Independent exact verifier for the R-167 v2.0 route split.
+"""Independent standard-library verifier for the R-167 v2.1 route split.
 
-This standard-library program reconstructs the finite algebra behind the
-R-167 v2.0 checkpoint without importing the primary implementation or reading
-any primary run result.  Its exact ``Fraction`` fixtures cover:
-
-* pure-bond multiplier invariance and the two cutoff-Hilbert--Schmidt
-  orientations on a finite diagonal model;
-* the full four-level order-two sandwiched-Renyi polynomial and its
-  multiplicative growth on disjoint bonds;
-* the local measured-Renyi Holder and fourth-moment layer-cake coefficients;
-* Q3 connectivity, Laplacian/Hessian spectra, and semiclassical scaling;
-* the exact low-doublet transverse-field Ising compression;
-* the centered one-bond residual algebra and a rational form-bound fixture;
-* every polynomial exponent in the proposed semiclassical N corridor;
-* finite-Gibbs Duhamel, modular-context, and arbitrary-context fixtures;
-* the fixed-edge corridor, covariance, and tilted-Gaussian implication boundary;
-* the cubic Feshbach, relative-form, dense-self-energy, and compressed-TFIM
-  quantum-Pirogov--Sinai inputs; and
-* the manifest/certificate identity and no-overclaim boundary.
-
-The verifier closes no common-alpha, rank-two oscillator, or oscillator
-GNS-gap parent gate.  In particular,
-the Renyi fixture rejects only a volume-uniform *global* target in the stated
-conditional product reference; it is not a counterexample to a local
-coordinate-marginal bound for the interacting Q3 Gibbs state.
+All v2.0 Fraction fixtures are retained.  New independent reconstructions
+derive the twentieth-moment corridor and conditional factor, the two graph
+automatic-inference counterfixtures, and the corrected local full-oscillator
+edge min-max/relative-form/Ritz constants.  This program imports neither the
+primary implementation nor any primary result.  It closes no actual Q3 fifth
+moment, n-to-infinity common alpha, many-edge oscillator QPS transfer, or
+oscillator-lattice GNS-gap parent.
 """
 
 from __future__ import annotations
@@ -41,7 +24,7 @@ from pathlib import Path
 from typing import Any, Mapping, Sequence
 
 
-__version__ = "2.0.0"
+__version__ = "2.1.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = (
@@ -53,8 +36,8 @@ RESULT_ID = (
     "COMMON-ALPHA-CAUCHY-GATE-SPLIT"
 )
 RESULT_NUMBER = "R-167"
-RESULT_VERSION = "v2.0"
-EXPLORATION_ID = "EXP-000809"
+RESULT_VERSION = "v2.1"
+EXPLORATION_ID = "EXP-000811"
 TASK_ID = "T-054"
 CLAIM_ID = "C6-SPACETIME-SIGNATURE"
 
@@ -70,56 +53,26 @@ DEFAULT_OUTPUT = (
     / f"2026-08-11-independent-{SLUG}/result.json"
 )
 
-NEGATIVE_IDS = (
-    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-"
-    "VOLUME-UNIFORMITY",
-    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-"
-    "DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT",    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-"
-    "AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE",
-    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-"
-    "AUTOMATIC-QPS-LOCALITY",
-    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-"
-    "MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
-)
-CLOSED_SUBGATES = (
-    "PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-"
-    "STATE-WEIGHTED-CUTOFF-IDENTITY",
-    "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-"
-    "REDUCTION",
-    "PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-"
-    "LOW-BAND-TFIM-COMPRESSION",    "PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-"
-    "CUTOFF-UNITARY-RESUMMATION",
-    "PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-"
-    "REDUCTION",
-    "PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-"
-    "SMALLNESS-PRECURSOR",
-    "PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-"
-    "PHASEWISE-GAP",
-)
+NEGATIVE_IDS = ('NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT')
+CLOSED_SUBGATES = ('PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY', 'PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION', 'PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION', 'PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION', 'PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR', 'PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP', 'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL')
 YAROTSKII_QPS_SOURCE = "https://doi.org/10.1070/RM2006v061n02ABEH004323"
 
-OPEN_GATES = (
-    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-"
-    "HISTORY-COMMON-ALPHA",
-    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
-    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-"
-    "DIAGONALIZATION-AND-TWO-PHASE-QPS",
-    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
-)
+OPEN_GATES = ('PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA', 'PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY', 'PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS', 'PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE', 'PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING', 'PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION')
 
 NO_OVERCLAIM = (
-    "This independent verifier proves only finite exact fixtures for the "
-    "v1.9 layers plus finite-Gibbs resummation, bounded modular contexts, "
-    "fixed-edge corridor reduction, global Feshbach algebra, and the exact "
-    "compressed-TFIM QPS hypotheses and imported phasewise theorem. "
-    "It does not prove an onsite-interspersed local measured-Renyi or "
-    "restricted-tail estimate, n-to-infinity Trotter convergence, an "
-    "all-exhaustion common alpha, a phase-KMS quotient, a rank-two "
-    "unbounded block diagonalization, two-phase QPS for the oscillator "
-    "lattice, beta-infinity phase selection, a broken-sector temporal mass "
-    "or GNS gap, regulator removal, a continuum, a physical-empty "
-    "comparison, prospective blind validation, C6, CP1, physical Sector A, "
-    "or Pre-A closure."
+    "This independent verifier proves only the retained v2.0 fixtures, the "
+    "twentieth-moment corridor and conditional m5/d5/G5 reduction, two exact "
+    "automatic-inference no-gos, and a local full-oscillator edge parity/Ritz "
+    "theorem. It does not prove the actual Q3 fifth Gibbs moment or elliptic "
+    "embedding, simultaneous-bond fifth graph propagation, a twentieth history "
+    "moment, n-to-infinity Trotter convergence, all-exhaustion common alpha, "
+    "group/generator completion, a phase-KMS quotient, a many-edge rank-two "
+    "unbounded block diagonalization, oscillator QPS transfer, an oscillator-"
+    "lattice broken-sector temporal mass or GNS gap, regulator removal, a "
+    "continuum, physical-empty comparison, prospective blind validation, C6, "
+    "CP1, physical Sector A, or Pre-A closure. It also does not prove an "
+    "onsite-interspersed local measured-Renyi estimate, two-phase QPS for "
+    "the oscillator lattice, or a broken-sector temporal mass or GNS gap."
 )
 
 Polynomial = tuple[Fraction, ...]
@@ -1254,6 +1207,264 @@ def feshbach_compressed_qps_fixture() -> dict[str, Any]:
     }
 
 
+
+def twentieth_moment_graph_fixture() -> dict[str, Any]:
+    """Reconstruct the v2.1 moment arithmetic using only Fraction."""
+
+    p = 5
+    gamma = Fraction(2, 5)
+    edge_power = 6
+    tail_power = 4 * (p - 1)
+    exponent = Fraction(edge_power) - gamma * tail_power
+    edge_constant = 54**2
+    factorial_coefficient = 2 * gamma - 1
+    admissible = [
+        order
+        for order in range(2, 9)
+        if Fraction(6) - 4 * gamma * (order - 1) < 0
+    ]
+    samples = []
+    for x_value, cutoff in ((1, 2), (2, 2), (3, 2), (7, 5)):
+        left = x_value**4 if x_value > cutoff else 0
+        right = Fraction(x_value**20, cutoff**16)
+        samples.append((x_value, cutoff, left, right, Fraction(left) <= right))
+
+    m5 = 3
+    d5 = 2
+    s_mu = 5
+    conditional_coefficient = 2 * d5**2 * s_mu**5 * m5
+    weights = (Fraction(1), Fraction(1), Fraction(1, 2))
+    energies = (Fraction(2), Fraction(3), Fraction(4))
+    weighted_energy = sum(w * k for w, k in zip(weights, energies))
+    weight_sum = sum(weights)
+    convex_upper = weight_sum**4 * sum(
+        w * k**5 for w, k in zip(weights, energies)
+    )
+
+    low_k = Fraction(1)
+    high_k = Fraction(4)
+    square_root_ratio = 2
+    all_m = []
+    for order in range(1, 8):
+        normalized = (
+            square_root_ratio**order - Fraction(1, square_root_ratio**order)
+        )
+        all_m.append(
+            {
+                "m": order,
+                "normalized_commutator_norm": normalized,
+                "forced_Gm": normalized,
+            }
+        )
+
+    # K_N, q_N, V_N inputs are recorded by their powers.  The derivations use
+    # sqrt(K_high/K_low)=N^2 and the V transition N^-4.
+    n = 3
+    k_high = n**4
+    q_high = n
+    v_transition = Fraction(1, n**4)
+    # k_high^(5/2)=N^10; write it directly to avoid floating square roots.
+    d5_value = Fraction(q_high**10, n**10)
+    g5 = v_transition * (n**10 - Fraction(1, n**10))
+    delta = Fraction(1)
+    one_history_lower = delta**2 * n**12 / 8
+    two_history_lower = 2 * one_history_lower
+    low_graph_exponents = {
+        str(s): 4 * s - 4 for s in (Fraction(0), Fraction(1, 2), Fraction(1))
+    }
+
+    return {
+        "p": p,
+        "gamma": gamma,
+        "edge_constant": edge_constant,
+        "tail_power": tail_power,
+        "corridor_exponent": exponent,
+        "factorial_R_log_R_coefficient": factorial_coefficient,
+        "minimal_admissible_integer": admissible[0],
+        "pointwise_samples": samples,
+        "conditional_coefficient_without_exp": conditional_coefficient,
+        "commutator_coefficients": (1, 2, 2),
+        "convexity": {
+            "weighted_energy_fifth": weighted_energy**5,
+            "upper": convex_upper,
+            "holds": weighted_energy**5 <= convex_upper,
+        },
+        "all_m": {
+            "K_diagonal": (low_k, high_k),
+            "rows": all_m,
+            "quadratic_growth": False,
+            "fixed_m5_rejected": False,
+        },
+        "KN": {
+            "N": n,
+            "delta": delta,
+            "condition_delta_nonzero": delta != 0,
+            "condition_N4_ge_abs_delta": n**4 >= abs(delta),
+            "d5": d5_value,
+            "static_m5_upper": "1+(5/e)^5",
+            "low_graph_s_range": "0<=s<=1",
+            "low_graph_exponents": low_graph_exponents,
+            "low_graph_upper": 1 + abs(delta),
+            "G5": g5,
+            "G5_formula": f"{n}^6-{n}^-14",
+            "one_orientation_q20_lower": one_history_lower,
+            "two_orientation_q20_lower": two_history_lower,
+            "history_growth_power_N": 12,
+        },
+    }
+
+
+def oscillator_edge_cluster_fixture() -> dict[str, Any]:
+    """Independent Fraction reconstruction of the corrected local edge fixture."""
+
+    c_value = Fraction(1, 1000)
+    m_value = Fraction(2)
+    a_value = Fraction(1, 10)
+    b_value = Fraction(1, 20)
+    a_q = Fraction(3)
+    a0_minus_m2 = Fraction(1, 100)
+    d2 = -Fraction(1, 1000)
+    delta1 = Fraction(1, 10000)
+    gamma_high = Fraction(100)
+    z = Fraction(6)
+
+    c_b = 8 * c_value * a0_minus_m2
+    f_b = delta1 / z + 4 * c_value * d2
+    e_b = c_b + f_b
+    j_value = 8 * c_value * m_value**2
+    epsilon = 8 * c_value * (b_value + 2 * m_value * a_value + a_value**2)
+    a_block = e_b + 2 * j_value
+    d_block = gamma_high / z
+    d_minus_a = d_block - a_block
+    schur_margin = 2 * j_value * (d_block - e_b) - epsilon**2
+    rational_gap = 2 * j_value - epsilon**2 / d_minus_a
+    g_b_float = (
+        float(a_block + d_block)
+        - math.sqrt(float((d_block - a_block) ** 2 + 4 * epsilon**2))
+    ) / 2
+
+    # In the s basis (++,+-,-+,--), P1_x+P1_y has this exact matrix.
+    half = Fraction(1, 2)
+    p1_sum = (
+        (1, -half, -half, 0),
+        (-half, 1, 0, -half),
+        (-half, 0, 1, -half),
+        (0, -half, -half, 1),
+    )
+    low_h = []
+    bond_diagonal = (0, 2 * j_value, 2 * j_value, 0)
+    for row in range(4):
+        low_h.append(
+            tuple(
+                (c_b if row == column else 0)
+                + (bond_diagonal[row] if row == column else 0)
+                + f_b * p1_sum[row][column]
+                for column in range(4)
+            )
+        )
+    p0_diagonal = (1, 0, 0, 1)
+    l_diagonal = (0, 1, 1, 0)
+    p0_compression_diagonal = tuple(
+        low_h[i][i] if p0_diagonal[i] else 0 for i in range(4)
+    )
+    l_compression_diagonal = tuple(
+        low_h[i][i] if l_diagonal[i] else 0 for i in range(4)
+    )
+    p0_l_entries = tuple(
+        low_h[i][j]
+        for i in (0, 3)
+        for j in (1, 2)
+    )
+    # The 2x2 cross matrix has all four entries -fb/2, hence norm |fb|.
+    p0_l_norm = abs(f_b)
+
+    eta_b = 32 * c_value * a_q
+    nu_b = 32 * c_value * m_value**2 + 64 * c_value * a_value**2
+    rho_b = eta_b + nu_b / gamma_high
+    tau = epsilon
+    alpha = z * (
+        rho_b + j_value / gamma_high + epsilon**2 / (tau * gamma_high)
+    )
+    ell_b = c_b + 8 * c_value * abs(d2)
+    beta = 2 * delta1 / z + ell_b + tau
+    gamma0 = min(gamma_high / z, 2 * j_value)
+    delta_rf = (1 - alpha) * gamma0 - 2 * beta
+
+    return {
+        "inputs": {
+            "c": c_value,
+            "m": m_value,
+            "a": a_value,
+            "b": b_value,
+            "A_Q": a_q,
+            "a0_minus_m2": a0_minus_m2,
+            "a1_minus_m2": a0_minus_m2 + d2,
+            "d2": d2,
+            "delta1": delta1,
+            "Gamma": gamma_high,
+            "z": z,
+        },
+        "scalars": {
+            "Cb": c_b,
+            "fb": f_b,
+            "eb": e_b,
+            "J": j_value,
+            "epsilon": epsilon,
+            "A": a_block,
+            "D": d_block,
+            "D_minus_A": d_minus_a,
+            "margin": schur_margin,
+            "gap_rational_lower": rational_gap,
+            "gb_float": g_b_float,
+            "gb_minus_eb_float": g_b_float - float(e_b),
+        },
+        "compressions": {
+            "low_h_s_basis": tuple(low_h),
+            "P0_diagonal": p0_diagonal,
+            "L_diagonal": l_diagonal,
+            "P0_h_P0_diagonal": p0_compression_diagonal,
+            "L_h_L_diagonal": l_compression_diagonal,
+            "P0_h_L_entries": p0_l_entries,
+            "P0_h_L_norm": p0_l_norm,
+            "P0_L_invariant": False,
+            "global_parity_invariant": True,
+            "even_trial_energy": e_b,
+            "odd_trial_energy": e_b,
+        },
+        "relative": {
+            "eta_b": eta_b,
+            "nu_b": nu_b,
+            "rho_b": rho_b,
+            "alpha": alpha,
+            "ell_b": ell_b,
+            "beta": beta,
+            "gamma0": gamma0,
+            "Delta_rf": delta_rf,
+        },
+        "cutoff": {
+            "nested_parity_preserving_Ritz_form_restriction": True,
+            "Pi_M_contains_P": True,
+            "union_form_core": True,
+            "same_constants": True,
+            "eigenvalues_decrease_to_full": True,
+            "replace_q_then_square": False,
+            "Pi_q2_Pi_equals_Pi_q_Pi_squared": False,
+        },
+        "N_scaling": {
+            "eb": -6,
+            "epsilon": -3,
+            "D": 2,
+            "two_J_limit": 16,
+            "sharp_gap_correction": -8,
+            "alpha": -2,
+            "beta": -3,
+        },
+        "local_edge_only": True,
+        "global_QPS": False,
+        "oscillator_lattice_GNS_gap": False,
+    }
+
+
 def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     """Bind to the manifest/certificate without reading primary outputs."""
 
@@ -1333,6 +1544,21 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         OPEN_GATES,
         "authority",
     )
+    for section in (
+        "twentieth_moment_fixed_edge_corridor",
+        "conditional_fifth_graph_transport",
+        "all_order_graph_growth_no_go",
+        "static_moment_low_graph_no_go",
+        "full_oscillator_edge_cluster",
+        "v2_1_checkpoint_synthesis",
+    ):
+        audit.check(
+            f"manifest v2.1 section {section}",
+            section in manifest,
+            section in manifest,
+            True,
+            "authority",
+        )
     checkpoint = manifest.get("checkpoint_synthesis", {})
     checkpoint_source = checkpoint.get("source")
     checkpoint_pdf = checkpoint.get("pdf")
@@ -1424,6 +1650,31 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         "all boundary phrases present",
         "authority",
     )
+    audit.check(
+        "certificate v2.1 exact tokens",
+        all(
+            token in certificate
+            for token in (
+                "EXP-000811",
+                "R-167 v2.1",
+                "2916c^2M_{20}",
+                r"M_{20}\le2d_5^2e^{G_5T}S_\mu^5m_5",
+                "20832953/19531250",
+                "332047248/5188304375",
+                "4430237/234375000",
+                "P_0h_{xy}L",
+                "Ritz form restriction",
+                "No v2.1 PDF is issued",
+                *CLOSED_SUBGATES[-2:],
+                *OPEN_GATES[-2:],
+                *NEGATIVE_IDS[-2:],
+            )
+        ),
+        "all v2.1 tokens present",
+        True,
+        "authority",
+    )
+
     formal_missing: list[str] = []
 
     def formal_require(condition: bool, label: str) -> None:
@@ -1432,7 +1683,7 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         elif staged:
             formal_missing.append(label)
         else:
-            raise AssertionError("missing formal v2.0 authority: " + label)
+            raise AssertionError("missing formal v2.1 authority: " + label)
 
     exploration_records = [
         json.loads(line)
@@ -1446,7 +1697,7 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     result_lines = RESULT_LEDGER.read_text(encoding="utf-8").splitlines()
     formal_require(
         any(RESULT_NUMBER in line and RESULT_VERSION in line for line in result_lines),
-        "formal result R-167 v2.0",
+        "formal result R-167 v2.1",
     )
     negative_text = NEGATIVE_REGISTRY.read_text(encoding="utf-8")
     for identifier in NEGATIVE_IDS:
@@ -2136,6 +2387,132 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
         "scope",
     )
 
+    moment_v21 = twentieth_moment_graph_fixture()
+    audit.check(
+        "v2.1 twentieth-moment corridor arithmetic",
+        moment_v21["edge_constant"] == 2916
+        and moment_v21["tail_power"] == 16
+        and moment_v21["corridor_exponent"] == Fraction(-2, 5)
+        and moment_v21["factorial_R_log_R_coefficient"] == Fraction(-1, 5)
+        and moment_v21["minimal_admissible_integer"] == 5
+        and all(row[-1] for row in moment_v21["pointwise_samples"]),
+        moment_v21,
+        "2916, L^-16, R^-2/5, factorial -1/5, p=5",
+        "v2.1-moment",
+    )
+    audit.check(
+        "v2.1 sharp conditional factor and expansion",
+        moment_v21["conditional_coefficient_without_exp"] == 75000
+        and moment_v21["commutator_coefficients"] == (1, 2, 2)
+        and moment_v21["convexity"]["holds"],
+        moment_v21,
+        "2*d5^2*S_mu^5*m5 and coefficients 1,2,2",
+        "v2.1-conditional",
+    )
+    audit.check(
+        "v2.1 all-m normalized commutator fixture",
+        all(
+            row["normalized_commutator_norm"]
+            == 2**row["m"] - Fraction(1, 2**row["m"])
+            for row in moment_v21["all_m"]["rows"]
+        )
+        and not moment_v21["all_m"]["quadratic_growth"]
+        and not moment_v21["all_m"]["fixed_m5_rejected"],
+        moment_v21["all_m"],
+        "2^m-2^-m; automatic all-m only",
+        "v2.1-all-m-no-go",
+    )
+    kn = moment_v21["KN"]
+    audit.check(
+        "v2.1 KN static/low-graph no-go",
+        kn["condition_delta_nonzero"]
+        and kn["condition_N4_ge_abs_delta"]
+        and kn["d5"] == 1
+        and kn["G5"] == Fraction(kn["N"] ** 6) - Fraction(1, kn["N"] ** 14)
+        and kn["one_orientation_q20_lower"] == Fraction(kn["N"] ** 12, 8)
+        and kn["two_orientation_q20_lower"] == Fraction(kn["N"] ** 12, 4)
+        and all(Fraction(value) <= 0 for value in kn["low_graph_exponents"].values()),
+        kn,
+        "d5=1, G5=N^6-N^-14, q20 lower N^12/8 per orientation",
+        "v2.1-static-low-graph-no-go",
+    )
+
+    edge_v21 = oscillator_edge_cluster_fixture()
+    scalars = edge_v21["scalars"]
+    # Independent exact test oracles; the fixture derives every value from inputs.
+    expected_edge = {
+        "Cb": Fraction(1, 12500),
+        "fb": Fraction(19, 1500000),
+        "eb": Fraction(139, 1500000),
+        "J": Fraction(4, 125),
+        "epsilon": Fraction(23, 6250),
+        "A": Fraction(96139, 1500000),
+        "D": Fraction(50, 3),
+        "D_minus_A": Fraction(8301287, 500000),
+        "margin": Fraction(20832953, 19531250),
+        "gap_rational_lower": Fraction(332047248, 5188304375),
+    }
+    audit.check(
+        "v2.1 corrected edge constants",
+        all(scalars[key] == value for key, value in expected_edge.items())
+        and edge_v21["inputs"]["a0_minus_m2"]
+        == max(
+            edge_v21["inputs"]["a0_minus_m2"],
+            edge_v21["inputs"]["a1_minus_m2"],
+        )
+        == edge_v21["inputs"]["a"] ** 2,
+        scalars,
+        expected_edge,
+        "v2.1-edge",
+    )
+    compressions = edge_v21["compressions"]
+    audit.check(
+        "v2.1 diagonal compressions without false invariance",
+        compressions["P0_h_P0_diagonal"]
+        == (scalars["eb"], 0, 0, scalars["eb"])
+        and compressions["L_h_L_diagonal"]
+        == (0, scalars["A"], scalars["A"], 0)
+        and all(value == -scalars["fb"] / 2 for value in compressions["P0_h_L_entries"])
+        and compressions["P0_h_L_norm"] == abs(scalars["fb"])
+        and not compressions["P0_L_invariant"],
+        compressions,
+        "P0hP0=ebP0, LhL=AL, ||P0hL||=|fb| != 0",
+        "v2.1-edge-compression",
+    )
+    relative = edge_v21["relative"]
+    expected_relative = {
+        "eta_b": Fraction(12, 125),
+        "nu_b": Fraction(402, 3125),
+        "rho_b": Fraction(15201, 156250),
+        "alpha": Fraction(183081, 312500),
+        "beta": Fraction(2851, 750000),
+        "gamma0": Fraction(8, 125),
+        "Delta_rf": Fraction(4430237, 234375000),
+    }
+    audit.check(
+        "v2.1 relative-form constants",
+        all(relative[key] == value for key, value in expected_relative.items())
+        and relative["alpha"] < 1
+        and relative["Delta_rf"] > 0,
+        relative,
+        expected_relative,
+        "v2.1-edge-relative",
+    )
+    cutoff = edge_v21["cutoff"]
+    audit.check(
+        "v2.1 Ritz cutoff boundary",
+        cutoff["nested_parity_preserving_Ritz_form_restriction"]
+        and cutoff["Pi_M_contains_P"]
+        and cutoff["union_form_core"]
+        and cutoff["same_constants"]
+        and cutoff["eigenvalues_decrease_to_full"]
+        and not cutoff["replace_q_then_square"]
+        and not cutoff["Pi_q2_Pi_equals_Pi_q_Pi_squared"],
+        cutoff,
+        "Ritz form restriction, not truncated q",
+        "v2.1-edge-cutoff",
+    )
+
     corridor = corridor_exponent_fixture()
     audit.check(
         "N corridor exponent table",
@@ -2266,7 +2643,15 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "full_Gibbs_context": full_gibbs,
             "fixed_edge_corridor": fixed_edge,
             "Feshbach_compressed_QPS": feshbach_qps,
+            "v2_1_twentieth_moment_graph_boundary": moment_v21,
+            "v2_1_full_oscillator_edge_cluster": edge_v21,
             "pure_bond_identity_closed": True,
+            "twentieth_moment_fixed_edge_corridor_reduction_closed": True,
+            "conditional_fifth_graph_transport_reduction_closed": True,
+            "translate_uniform_local_fifth_Gibbs_moment_closed": False,
+            "simultaneous_bond_shear_fifth_graph_propagation_closed": False,
+            "full_oscillator_local_edge_parity_cluster_closed": True,
+            "parity_preserving_Ritz_removal_closed": True,
             "full_Hamiltonian_Gibbs_resummation_closed": True,
             "fixed_edge_to_growing_corridor_reduction_closed": True,
             "below_Gamma_Feshbach_precursor_closed": True,

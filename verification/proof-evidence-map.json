@@ -6,8 +6,8 @@
   },
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
-    "RESULTS-LEDGER.md": "ca8a7d83a5d36a8dc883c10aea0edf09a59352552c65cb8a16dae2df8512dd88",
-    "changelog/log.jsonl": "5b5dbb261e1a745684e8a6958829180cfb18d81f463da35fb248889a3ef74c20",
+    "RESULTS-LEDGER.md": "39d2116b922fdf91da73e75a7723a97752eb66b23da5271ed82cac56f1975f84",
+    "changelog/log.jsonl": "d3ea4bf98a9a9ab22285e0c1621f6ef5f67819b7617d7855fb76feab87e632a7",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -57,34 +57,34 @@
     "claims/F1-COSMO-DARK-SECTOR/status.json": "41e0c2e92f754fc2a2f8501b95169d98c0f3cfc130be27ae9d31246c406b5179",
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
-    "claims/GATES.md": "3dd9ba7c480ff875b556d1a930fa5037ca7ef8f48b69eef5a1b3a430f86de2bc",
-    "explorations/log.jsonl": "62f48028710538279ade8bd6491db18e6453de10bea2cc51597003caf05fbedb",
-    "negative-results/registry.md": "e2282f2adb3909ec46b3020a1c4e18b87f87cd6f05e79837d3a22ea27ce5af89",
-    "todo/todo.json": "5a1c030f56dd0d83a1d6542754012476da185cfc1218143f2d6880b7c82050f6"
+    "claims/GATES.md": "7d0c2eef79ce00031b18a3e4dc5904fc75fbb2738b10b215a2866f14475a8937",
+    "explorations/log.jsonl": "bae9dfdb8c270415e25aceab2a43ee430565a49ead0db6b6066277e2be5cc07b",
+    "negative-results/registry.md": "c51a11488c80e7eea3eadff673c31761c00b04efc75070534e78592188b49ef6",
+    "todo/todo.json": "c3dce5e6a3c2c09633ff669192022f55ef027d1fcb308011e8c00627e1333ca4"
   },
   "coverage": {
     "status_cards": 49,
     "active_claims": 48,
     "refuted_claims": 1,
     "reusable_results": 168,
-    "negative_records": 335,
-    "proof_explorations": 810,
+    "negative_records": 338,
+    "proof_explorations": 812,
     "exploration_verdicts": {
-      "advanced": 481,
+      "advanced": 483,
       "failed": 235,
       "inconclusive": 66,
       "parked": 28
     },
     "process_grade_lessons": 3,
-    "accepted_events": 595,
+    "accepted_events": 600,
     "tasks": 54,
     "live_tasks": 9,
     "completed_tasks": 45,
     "open_gates": 18,
     "current_route_gates": 19,
     "sectors": 6,
-    "proof_notes": 408,
-    "proof_pdfs": 389,
+    "proof_notes": 409,
+    "proof_pdfs": 390,
     "unordered_root_notes": 9,
     "unordered_root_pdfs": 9,
     "proof_notes_without_sibling_pdf": 19,
@@ -2288,6 +2288,47 @@
           "EXP-000810",
           "R-168"
         ]
+      },
+      {
+        "event": "20260811-r-167-v2-1-closes-the-conditional-twentieth-mom",
+        "claim_ids": [
+          "EXP-000811",
+          "R-167"
+        ]
+      },
+      {
+        "event": "20260811-r-168-v1-2-proves-linear-probe-response-noniden",
+        "claim_ids": [
+          "EXP-000812",
+          "R-168"
+        ]
+      },
+      {
+        "event": "20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s",
+        "claim_ids": [
+          "EXP-000811",
+          "EXP-000812",
+          "R-167",
+          "R-168"
+        ]
+      },
+      {
+        "event": "20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f",
+        "claim_ids": [
+          "EXP-000811",
+          "EXP-000812",
+          "R-167",
+          "R-168"
+        ]
+      },
+      {
+        "event": "20260811-r-167-theorem-event-selector-repair-finalizes-t",
+        "claim_ids": [
+          "EXP-000811",
+          "EXP-000812",
+          "R-167",
+          "R-168"
+        ]
       }
     ],
     "event_unregistered_negative_tags": [
@@ -2413,7 +2454,7 @@
       "owner": "Codex",
       "claim": null,
       "gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
-      "note": "EXP-000809 / R-167 v2.0 closes only the finite-Gibbs resummation, fixed-edge corridor reduction, global Feshbach precursor and compressed-spin phase theorem. Live parents remain PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA, PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY, PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS and PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE. EXP-000810 / R-168 v1.1 proves current-version and map-only survivor emptiness plus the 48-component Gaussian M2 fingerprint; PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND remains open. Next: prove the actual fixed-edge onsite-interspersed history bound and split limit; build a quasi-local rank-two oscillator elimination and phasewise gap transfer; derive the M2 physical response/error budget; and obtain the external prospective freeze with common inputs and cryptographic remote verification. No candidate, prediction, physical Sector A result or Pre-A closure.",
+      "note": "EXP-000811 / R-167 v2.1 closes only the conditional two-orientation twentieth-history-moment fixed-edge corridor implication and the local full-oscillator edge parity-doublet/Ritz-cutoff theorem. Its translate-uniform local fifth Gibbs/elliptic and simultaneous-bond fifth-graph inputs are OPEN; common alpha, many-edge rank-two QPS transfer and the oscillator GNS gap remain OPEN. EXP-000812 / R-168 v1.2 closes only finite-regulator linear-probe second-order-response nonidentifiability and a synthetic minimum successor syntax/declared-binding schema. The actual M2 physical response/error budget, common inputs, admitted map/prediction and external prospective freeze remain OPEN. Next: prove the two R-167 input gates, then the thermodynamic rank-two/gap transfer; independently build and prospectively freeze a fully specified M2 physical response successor. No candidate, prediction, physical Sector A result or Pre-A closure. Exact OPEN IDs retained: PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA; PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY; PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS; PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE; PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING; PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION.",
       "created": "2026-08-02",
       "updated": "2026-08-11",
       "blocked_by": [],
@@ -2870,9 +2911,9 @@
       ],
       "definition": {
         "statement": "Before scoring or selecting any Pre-A round-one candidate, freeze the complete evidence and clue register with an explicit role for each item, admit every contestant under the same minimum manifest fields, separate bridge infrastructure from contestants, and declare one common reference/observable/input ledger, one non-fitting validation prediction, and one robustness envelope. Scoped failures may eliminate only the exact mechanism and parameter contract that was tested.",
-        "status": "OPEN (2026-08-11). EXP-000791 freezes a bounded T-053 evidence-role inventory, common categorical matrix, explicit absence fields, reference rules, and robustness boundaries. It independently derives the M2 quadratic cone and computes that none of M1/M2/M5 survives all hard admission rows; M0 remains the effective baseline. The visible helium target predates the new stiffness observable map, so its exact mismatch is retrospective and receives no validation credit. EXP-000807 / R-168 v1.0 now closes four schema and audit subgates: the common estimand/map split, prospective provenance-order protocol, anti-leakage schema validator, and exact current-checkpoint empty-admission audit. At audited commit `99157442831c0e44d425b5d5f8cd78856c57da53` there are zero official freeze records, zero locally registered `freeze/*` tags observed at audit execution, zero admitted microscopic survivors, and no admitted M1/M2/M5 map with a nonempty prediction. The tag observation is local only; no remote ref or custodian signature was verified. The parent gate remains open until a genuinely prospective external commitment and admitted microscopic observable map with a nonempty prediction are frozen before disclosure and independently verified. EXP-000810 / R-168 v1.1 proves that the exact current hash-pinned M1/M2/M5 map-only admitted set is empty, and that even a hypothetical map-only new version has no all-PASS survivor under the ten frozen hard rows. It also closes a 48-component finite-torus Gaussian M2 fingerprint. Neither result is an admitted physical response map, an error-controlled prediction, or a prospective freeze; the parent gate remains OPEN. Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1 into a contestant. No winner, shortlist, preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed.",
+        "status": "OPEN (2026-08-11). EXP-000791 freezes a bounded T-053 evidence-role inventory, common categorical matrix, explicit absence fields, reference rules, and robustness boundaries. It independently derives the M2 quadratic cone and computes that none of M1/M2/M5 survives all hard admission rows; M0 remains the effective baseline. The visible helium target predates the new stiffness observable map, so its exact mismatch is retrospective and receives no validation credit. EXP-000807 / R-168 v1.0 now closes four schema and audit subgates: the common estimand/map split, prospective provenance-order protocol, anti-leakage schema validator, and exact current-checkpoint empty-admission audit. At audited commit `99157442831c0e44d425b5d5f8cd78856c57da53` there are zero official freeze records, zero locally registered `freeze/*` tags observed at audit execution, zero admitted microscopic survivors, and no admitted M1/M2/M5 map with a nonempty prediction. The tag observation is local only; no remote ref or custodian signature was verified. The parent gate remains open until a genuinely prospective external commitment and admitted microscopic observable map with a nonempty prediction are frozen before disclosure and independently verified. EXP-000810 / R-168 v1.1 proves that the exact current hash-pinned M1/M2/M5 map-only admitted set is empty, and that even a hypothetical map-only new version has no all-PASS survivor under the ten frozen hard rows. It also closes a 48-component finite-torus Gaussian M2 fingerprint. Neither result is an admitted physical response map, an error-controlled prediction, or a prospective freeze; the parent gate remains OPEN. EXP-000812 / R-168 v1.2 additionally proves that a fixed linear scalar probe does not identify second-order response without a frozen quadratic contact and closes only the minimum successor syntax/declared-binding schema. It supplies no physical control law, actual candidate, state/reference realization, response map, error budget, prediction or external prospective commitment. The physical-response gate and this Round-1 parent remain OPEN. Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1 into a contestant. No winner, shortlist, preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed.",
         "statement_summary": "Before scoring or selecting any Pre-A round-one candidate, freeze the complete evidence and clue register with an explicit role for each item, admit every contestant under the same minimum manifest fields, separate bridge infrastructure from contestants, and declare one common reference/observable/input ledger, one non-fitting validation prediction, and one robustness envelope. Scoped failures may eliminate only the exact mechanism and parameter contract that was tested.",
-        "status_summary": "OPEN (2026-08-11). EXP-000791 freezes a bounded T-053 evidence-role inventory, common categorical matrix, explicit absence fields, reference rules, and robustness boundaries. It independently derives the M2 quadratic cone and computes that none of M1/M2/M5 survives all hard admission rows; M0 remains the effective baseline. The visible helium target predates the new stiffness observable map, so its exact mismatch is retrospective and receives no validation credit. EXP-000807 / R-168 v1.0 now closes four schema and audit subgates: the common estimand/map split, prospective provenance-order protocol, anti-leakage schema validator, and exact current-checkpoint empty-admission audit. At audited commit `99157442831c0e44d425b5d5f8cd78856c57da53` there are zero official freeze records, zero locally registered `freeze/*` tags observed at audit execution, zero admitted microscopic survivors, and no admitted M1/M2/M5 map with a nonempty prediction. The tag observation is local only; no remote ref or custodian signature was verified. The parent gate remains open until a genuinely prospective external commitment and admitted microscopic observable map with a nonempty prediction are frozen before disclosure and independently verified. EXP-000810 / R-168 v1.1 proves that the exact current hash-pinned M1/M2/M5 map-only admitted set is empty, and that even a hypothetical map-only new version has no all-PASS survivor under the ten frozen hard rows. It also closes a 48-component finite-torus Gaussian M2 fingerprint. Neither result is an admitted physical response map, an error-controlled prediction, or a prospective freeze; the parent gate remains OPEN. Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1 into a contestant. No winner, shortlist, preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed."
+        "status_summary": "OPEN (2026-08-11). EXP-000791 freezes a bounded T-053 evidence-role inventory, common categorical matrix, explicit absence fields, reference rules, and robustness boundaries. It independently derives the M2 quadratic cone and computes that none of M1/M2/M5 survives all hard admission rows; M0 remains the effective baseline. The visible helium target predates the new stiffness observable map, so its exact mismatch is retrospective and receives no validation credit. EXP-000807 / R-168 v1.0 now closes four schema and audit subgates: the common estimand/map split, prospective provenance-order protocol, anti-leakage schema validator, and exact current-checkpoint empty-admission audit. At audited commit `99157442831c0e44d425b5d5f8cd78856c57da53` there are zero official freeze records, zero locally registered `freeze/*` tags observed at audit execution, zero admitted microscopic survivors, and no admitted M1/M2/M5 map with a nonempty prediction. The tag observation is local only; no remote ref or custodian signature was verified. The parent gate remains open until a genuinely prospective external commitment and admitted microscopic observable map with a nonempty prediction are frozen before disclosure and independently verified. EXP-000810 / R-168 v1.1 proves that the exact current hash-pinned M1/M2/M5 map-only admitted set is empty, and that even a hypothetical map-only new version has no all-PASS survivor under the ten frozen hard rows. It also closes a 48-component finite-torus Gaussian M2 fingerprint. Neither result is an admitted physical response map, an error-controlled prediction, or a prospective freeze; the parent gate remains OPEN. EXP-000812 / R-168 v1.2 additionally proves that a fixed linear scalar probe does not identify second-order response without a frozen quadratic contact and closes only the minimum successor syntax/declared-binding schema. It supplies no physical control law, actual candidate, state/reference realization, response map, error budget, prediction or external prospective commitment. The physical-response gate and this Round-1 parent remain OPEN. Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1 into a contestant. No winner, shortlist, preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed."
       },
       "path": "claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze"
     },
@@ -9795,6 +9836,7 @@
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-modular-cutoff-unitary-resummation-route-split-260810-v0.3.tex.txt",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.tex.txt",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-second-weighted-energy-and-cauchy-gate-260810-v0.1.tex.txt",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-round1-inventory-and-q3lock-weighted-energy-common-alpha-260810-v0.1.tex.txt",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-round1-route-controller-free-macro-seam-state-split-260809-v0.1.tex.txt",
@@ -9810,6 +9852,7 @@
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-modular-cutoff-unitary-resummation-route-split-260810-v0.3.pdf",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.pdf",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-second-weighted-energy-and-cauchy-gate-260810-v0.1.pdf",
+          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-round1-inventory-and-q3lock-weighted-energy-common-alpha-260810-v0.1.pdf",
           "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-round1-route-controller-free-macro-seam-state-split-260809-v0.1.pdf",
@@ -10007,6 +10050,8 @@
         ],
         "negative_tags": [
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT",
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE",
@@ -10018,6 +10063,7 @@
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT",
           "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR",
           "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+          "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE",
           "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY",
           "NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY",
           "NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY",
@@ -10184,9 +10230,11 @@
           "EXP-000807",
           "EXP-000808",
           "EXP-000809",
-          "EXP-000810"
+          "EXP-000810",
+          "EXP-000811",
+          "EXP-000812"
         ],
-        "latest_exploration_id": "EXP-000810",
+        "latest_exploration_id": "EXP-000812",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -10283,9 +10331,14 @@
           "20260811-r-167-v2-0-resums-finite-gibbs-cutoffs-and-sepa",
           "20260811-r-168-v1-1-proves-current-version-map-emptiness",
           "20260811-r-167-v2-0-and-r-168-v1-1-combined-gate-level-s",
-          "20260811-r-167-v2-0-and-r-168-v1-1-combined-v0-9-proof-e"
+          "20260811-r-167-v2-0-and-r-168-v1-1-combined-v0-9-proof-e",
+          "20260811-r-167-v2-1-closes-the-conditional-twentieth-mom",
+          "20260811-r-168-v1-2-proves-linear-probe-response-noniden",
+          "20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s",
+          "20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f",
+          "20260811-r-167-theorem-event-selector-repair-finalizes-t"
         ],
-        "latest_event_id": "20260811-r-167-v2-0-and-r-168-v1-1-combined-v0-9-proof-e",
+        "latest_event_id": "20260811-r-167-theorem-event-selector-repair-finalizes-t",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "C6-BCC-PREMISE-BLOCKED"
@@ -11204,26 +11257,28 @@
       "id": "R-168",
       "anchor": "r-168",
       "title": "Prospective holdout freeze protocol and current-tree readiness audit",
-      "summary": "R-168 v1.1 is a scoped T0 exact/executed/audited additive result under EXP-000810. It retains the v1.0 protocol and 28-class hardened validator, proves that the exact current M1/M2/M5 map-only admitted set and every map-only all-PASS survivor set are empty, and closes an exact 48-component all-one finite-torus Gaussian M2 fingerprint. The physical response/error gate, actual candidate/map/prediction/freeze, external commitment, cryptographic remote verification, physical Sector A and Pre-A remain open",
+      "summary": "R-168 v1.2 is a scoped T0 exact/executed/audited additive result under EXP-000812. It retains v1.0--v1.1, proves that a fixed linear scalar probe does not identify a second-order physical response before the quadratic contact and normalization are frozen, and closes a hardened minimum successor syntax/declared-binding schema. It creates no physical candidate, response law/map, prediction or freeze; the physical-response, Round-1, physical Sector A and Pre-A gates remain open",
       "detail_title": "Prospective holdout freeze protocol and current-tree readiness audit",
       "detail": {
         "result_id": "`PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT`.",
-        "version": "R-168 v1.1 is established by `EXP-000810`. It retains `EXP-000807` v1.0 and the `EXP-000808` validator repair, then adds two narrowly closed mathematical/current-version children and one explicit physical-response successor without changing the T0 tier or claim-bearing status.",
+        "version": "R-168 v1.2 is established by `EXP-000812`. It retains `EXP-000807` v1.0, the `EXP-000808` validator repair and `EXP-000810` v1.1, then adds a finite-regulator linear-probe nonidentifiability theorem, a hardened minimum successor syntax/declared-binding schema and one scoped negative without changing the T0 tier or claim-bearing status.",
         "retained_v1_0_protocol": "A future Pre-A blind holdout must separate one candidate-neutral target estimand and raw-data estimator from every candidate- specific microscopic-to-observable map. Each admitted map carries its theorem, script/hash pins, domain, state, reference, limit order, units, nuisance inputs, uncertainty and admission status. M0 is the effective null baseline, not a microscopic winner. The required order is `independent custodian commitment <= public remote freeze commit/tag < target disclosure <= unchanged frozen scorer execution`. The repaired validator enforces exact declared fields and types across 28 hostile classes, candidate-bound nonempty predictions, source separation, repo-confined hashes, target/common-estimand consistency and parsed HTTPS anchors. It checks only local schema and hash structure. It does not semantically attest free text, cryptographically validate a custodian signature, or fetch and verify a remote commit, tag object or ref. The historical commit-blob audit of `99157442831c0e44d425b5d5f8cd78856c57da53` finds zero official freeze records, zero admitted microscopic survivors and no admitted M1/M2/M5 map/prediction pair. The separately observed zero local `freeze/*` tags is informational and non-load-bearing.",
         "v1_1_current_version_theorem": "The exact hash-pinned M1-v0, M2-v0 and M5-v0 candidate-specific map-admission set has cardinality zero. Under the frozen ten hard rows, even a hypothetical new version whose only substantive change is an admitted map has no all-PASS survivor. Eight residual hard-row cells remain: M1 D01 FAIL and D02 NOT_ADMITTED; M2 D03, D05 and D08 NOT_ADMITTED plus D06 NOT_TESTED; M5 D04 and D05 FAIL. A repair that changes state, law, kinetic data, regulator, compactness or gauge structure is substantively new, must receive a new version and rerun every hard row. This is not a no-go for such a future candidate. The old retrospective M2 stiffness exponent is underdetermined because the physical response channel is absent: the same mathematical input `kappa(t)=C|t|` admits target-free identity and squared completions with exponents one and two. Neither completion is an admitted map or prediction.",
-        "v1_1_exact_m2_fingerprint": "For `K(k)=r+c sum_i(q^2-k_i^2)^2`, `h=2 pi/L`, `q=mh`, and all eight nodes `k_s=q s`, the normalized finite differences satisfy `R_(s,i)=U_(s,i)=1` for each of three axes. Hence all 48 ordered components are exactly one. This is finite-torus Gaussian mathematics, not a physical response channel or physical dispersion prediction. The hypothetical `PA-M2-CI8-RS-DISPERSION-MAP-v1` is DESIGN_ONLY and NOT_CREATED. Its required physical response channel, state/reference/units, limit order, six-term error budget, target-blind prospective firewall and independent verification remain absent. It creates no candidate, map, prediction, target, freeze, tag, score or selection. R-168 v1.1 closes exactly the four retained v1.0 subgates plus `PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET` and `PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT`.",
-        "open_gates": "`PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND` is OPEN. The parent `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` remains OPEN, together with `PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER`, `PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT`, `PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION`, and `PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION`.",
-        "negative_route_authorities": "The retained current-checkpoint obstruction is `NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE`. The v1.1 map-only repair boundary is `NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR`. Neither is a no-go for a substantively new future candidate and genuinely prospective external target.",
-        "boundary": "R-168 v1.1 creates no actual candidate or actual freeze, no physical response map, error-controlled prediction, target, official freeze record, public commit, annotated tag, score or selection. It does not fix nature's functional, prove a below-empty sign or physical vacuum, close common Q3LOCK dynamics or its sector gap, advance C6 or CP1, or close physical Sector A or Pre-A.",
-        "proven_in": "C6 / [R-168 v1.1 certificate](strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md) and [machine manifest](strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json). The [combined R-167 v1.9 / R-168 v1.0 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf) remain historical v1.0 evidence only. No intermediate R-168 v1.1 PDF was issued during proof-first development; a later combined gate-level checkpoint is separate.",
-        "tier": "T0 (claim-nonbearing scoped schema, current-version admission theorem and Gaussian mathematical fingerprint only; no actual holdout, candidate selection, physical Sector-A or Pre-A promotion).",
+        "v1_1_exact_m2_fingerprint": "For `K(k)=r+c sum_i(q^2-k_i^2)^2`, `h=2 pi/L`, `q=mh`, and all eight nodes `k_s=q s`, the normalized finite differences satisfy `R_(s,i)=U_(s,i)=1` for each of three axes. Hence all 48 ordered components are exactly one. This is finite-torus Gaussian mathematics, not a physical response channel or physical dispersion prediction.",
+        "v1_2_linear_probe_nonidentifiability_theorem": "At finite regulated volume, `H_d(t,J)=H(t)-JQ+(V/2)d(t)J^2 I` preserves the zero-source Hamiltonian and first source derivative for every admissible `d`. The scalar contact factors exactly, so the finite-beta free energy and every stable ground branch shift by `(V/2)d(t)J^2`. With the registered positive helicity-curvature convention the normalized second response shifts by `+d(t)`; conventional scalar susceptibility shifts by `-d(t)`. The exact rational fixture has contact free-energy difference `3/25`, Boltzmann exponent shift `-9/50`, stable branch indices `[0,0,0]`, curvatures `5/7` and `11/7`, and normalized shift `6/7`. Thus the fixed scalar linear probe does not identify the response before the quadratic contact, normalization and physical control law are frozen. This is not a no-go for a fully specified physical probe.",
+        "v1_2_hardened_minimum_successor_schema": "Schema `tect/pre-a-m2-ci8-physical-response-successor-minimum-contract/1.1` requires the second-order source/contact law, compact or gauge action, state/reference, physical-control and response maps, limit order, prediction, six-term error budget, common inputs, every hard-row rerun, proof/run artifact bindings, independent validation and prospective firewall. Artifact references are repository-confined, case-exact, hash- and role-bound; rational fields use one canonical grammar and structured placeholder aliases fail closed. Primary, independent and integrated validators accept the synthetic positive and reordered fixtures and reject the frozen hostile and deterministic fuzz matrices without escaping exceptions. This closes only syntax and declared binding. The synthetic fixture creates no candidate, physical semantics, external commitment, response map, error proof or prediction. The hypothetical `PA-M2-CI8-RS-DISPERSION-MAP-v1` is DESIGN_ONLY and NOT_CREATED. Its required physical response channel, state/reference/units, limit order, six-term error budget, target-blind prospective firewall and independent verification remain absent. It creates no candidate, map, prediction, target, freeze, tag, score or selection. R-168 v1.2 cumulatively retains the four v1.0 subgates and the two v1.1 children, then adds `PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY` and `PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA`.",
+        "open_gates": "`PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND` is OPEN. No actual second-order source/contact law, compact or gauge action, state/reference realization, physical-control map, response map, six-term error proof, admitted prediction or prospective external commitment is supplied. The parent `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` remains OPEN, together with `PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER`, `PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT`, `PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION`, and `PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION`.",
+        "negative_route_authorities": "The retained current-checkpoint obstruction is `NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE`. The v1.1 map-only repair boundary is `NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR`. The v1.2 linear-probe boundary is `NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE`. It rejects automatic physical-response identification from the scalar linear source alone, not a fully specified future probe. None of these scoped boundaries is a no-go for a substantively new future candidate and genuinely prospective external target.",
+        "boundary": "R-168 v1.2 creates no actual candidate or actual freeze, no physical response law or map, error-controlled prediction, target, official freeze record, public commit, annotated tag, score or selection. It does not fix nature's functional, prove a below-empty sign or physical vacuum, close common Q3LOCK dynamics or its sector gap, advance C6 or CP1, or close physical Sector A or Pre-A.",
+        "proven_in": "C6 / [R-168 v1.2 certificate](strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md) and [machine manifest](strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json). The current [combined R-167 v2.1 / R-168 v1.2 gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt) and [rendered 13-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf) are the issued v1.2 evidence. The earlier [combined R-167 v1.9 / R-168 v1.0 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf), and the [combined R-167 v2.0 / R-168 v1.1 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt) and [10-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf) remain historical evidence only. No per-lemma or intermediate R-168 v1.2 PDF was issued.",
+        "tier": "T0 (claim-nonbearing scoped schema, current-version admission, Gaussian fingerprint and finite-regulator nonidentifiability theorems only; no actual holdout, candidate selection, physical Sector-A or Pre-A promotion).",
         "publication_target": "Pre-A evidence and validation protocol note."
       },
       "normalized_detail": {
         "statement": "",
-        "proof_anchor": "C6 / [R-168 v1.1 certificate](strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md) and [machine manifest](strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json). The [combined R-167 v1.9 / R-168 v1.0 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf) remain historical v1.0 evidence only. No intermediate R-168 v1.1 PDF was issued during proof-first development; a later combined gate-level checkpoint is separate.",
+        "proof_anchor": "C6 / [R-168 v1.2 certificate](strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md) and [machine manifest](strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json). The current [combined R-167 v2.1 / R-168 v1.2 gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt) and [rendered 13-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf) are the issued v1.2 evidence. The earlier [combined R-167 v1.9 / R-168 v1.0 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf), and the [combined R-167 v2.0 / R-168 v1.1 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt) and [10-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf) remain historical evidence only. No per-lemma or intermediate R-168 v1.2 PDF was issued.",
         "reuse": "",
-        "boundary": "R-168 v1.1 creates no actual candidate or actual freeze, no physical response map, error-controlled prediction, target, official freeze record, public commit, annotated tag, score or selection. It does not fix nature's functional, prove a below-empty sign or physical vacuum, close common Q3LOCK dynamics or its sector gap, advance C6 or CP1, or close physical Sector A or Pre-A.",
+        "boundary": "R-168 v1.2 creates no actual candidate or actual freeze, no physical response law or map, error-controlled prediction, target, official freeze record, public commit, annotated tag, score or selection. It does not fix nature's functional, prove a below-empty sign or physical vacuum, close common Q3LOCK dynamics or its sector gap, advance C6 or CP1, or close physical Sector A or Pre-A.",
         "publication_target": "Pre-A evidence and validation protocol note."
       },
       "claim_refs": [
@@ -11241,9 +11296,14 @@
         "20260811-r-167-v1-9-and-r-168-v1-0-combined-gate-level-s",
         "20260811-r-168-v1-1-proves-current-version-map-emptiness",
         "20260811-r-167-v2-0-and-r-168-v1-1-combined-gate-level-s",
-        "20260811-r-167-v2-0-and-r-168-v1-1-combined-v0-9-proof-e"
+        "20260811-r-167-v2-0-and-r-168-v1-1-combined-v0-9-proof-e",
+        "20260811-r-168-v1-2-proves-linear-probe-response-noniden",
+        "20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s",
+        "20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f",
+        "20260811-r-167-theorem-event-selector-repair-finalizes-t"
       ],
       "co_recorded_negative_tags": [
+        "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE",
         "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
         "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR",
         "NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY",
@@ -11257,13 +11317,13 @@
       "id": "R-167",
       "anchor": "r-167",
       "title": "Weighted-energy, common-dynamics topology, orbit-smear carrier, local-strict and ground-gap route split",
-      "summary": "R-167 v2.0 is a scoped T0 analytic/exact/executed/audited additive result under EXP-000809. It retains v1.0--v1.9 and adds finite-Gibbs full-Hamiltonian two-orientation cutoff resummation, a fixed-bond-to-growing-corridor reduction, a below-Gamma global Feshbach/relative-form precursor, and the exact compressed finite-spin TFIM two-phase phasewise-gap theorem. Arbitrary contexts, the actual Q3 fixed-edge history input, common alpha, quasi-local oscillator block/QPS transfer and the oscillator GNS gap remain open; continuum, physical-empty comparison, C6, CP1, physical Sector A and Pre-A remain open",
+      "summary": "R-167 v2.1 is a scoped T0 analytic/exact/executed/audited additive result under EXP-000811. It retains v1.0--v2.0 and adds a conditional twentieth-history-moment fixed-edge corridor reduction plus a full-oscillator local-edge parity-doublet cluster with nested Ritz form-cutoff removal. The actual fifth Gibbs/elliptic and fifth-graph inputs, common alpha, quasi-local rank-two QPS transfer and oscillator GNS gap remain open; continuum, C6, CP1, physical Sector A and Pre-A remain open",
       "detail_title": "Weighted-energy, cubic graph and thermodynamic-Cauchy route split",
       "detail": {
         "result_id": "`PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT`.",
-        "version": "`EXP-000795` corrected the v1.0 cubic-domain wording. `EXP-000796` then proves the missing centered cubic graph embedding and strengthens this result to v1.1 without allocating a new result number. `EXP-000797` is an append-only source-note-linkage correction only; it changes no mathematical statement or boundary. `EXP-000798` adds the exact fixed-order response counterexample, all-order unitary repair, modular topology and coordinate-cutoff theorems and advances the same result to v1.2. `EXP-000799` adds the exact common-alpha topology split and advances the same result to v1.3. `EXP-000800` proves the canonical fixed-beta OS-mixture common normal W-star envelope, registers three sharper topology boundaries, and advances the same result to v1.4. `EXP-000801` identifies the selected finite-volume source-tangent Hamiltonian KMS word kernels with that envelope in fixed-band finite-core Fell/GNS topology, proves an exact cyclic character de-filtering theorem, registers five embedding/generator boundaries, and advances the same result to v1.5. `EXP-000802` is an append-only integrated- verifier locator and exact-scope-token correction only; it changes no mathematical statement or boundary. `EXP-000803` proves the selected-tangent finite raw-word completion, constructs the universal zero-source finite- Hamiltonian `L1` orbit-smear carrier, promotes the `EXP-000789` doublets to two distinct ground states of that carrier, and advances the same result to v1.6. `EXP-000804` proves the finite-region local-strict/energy subflow carrier and fixed finite-Gibbs character entropy-tail theorem, registers four norm/topology/tail/gap boundaries, splits the combined successor, and advances the same result to v1.7. `EXP-000805` then proves fixed-Trotter exhaustion compatibility, a conditional sandwiched-Renyi history-tail reduction, the zero-temperature OS temporal-mass/GNS-gap equivalence, the exact one-site Q3 instanton action minimum, and a conditional doublet-Ising reference gap. It registers two further route boundaries and advances the same result to v1.8. `EXP-000806` then proves pure-bond coordinate-tail invariance, replaces the overstrong global quantum Renyi target by a local coordinate-marginal measured- Renyi sufficient condition, verifies the fixed-`mu` small-`h_sc` Q3 onsite doublet theorem, derives the exact rank-two low-band TFIM compression and residual inputs, and advances the same result to v1.9. It registers the global all-bond Renyi and direct rank-one unbounded-block import boundaries without closing either parent gate. `EXP-000809` establishes R-167 v2.0: it adds the finite-Gibbs full-Hamiltonian two-orientation resummation, fixed-edge corridor reduction, below-`Gamma` global Feshbach/relative-form precursor and exact compressed finite-spin two-phase phasewise-gap theorem, while registering three new implication/locality boundaries. It changes no result number or T0 tier.",
-        "authority_links": "The v1.1 `centered-weight cubic graph` and `prescribed-word` heat theorem are recorded under `PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE` and the alternative `PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY` gate. R-167 v1.2 preserves those historical IDs and supersedes their active route by `PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE` and `PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY`. R-167 v1.3 retains both gate IDs, rejects the fixed Weyl-containing C-star-Leibniz realization of the critical `s=1/2` onsite orbit, and narrows the first to a non-Leibniz analytic/Frechet or symmetric/state-weighted thermodynamic topology. The second is narrowed to direct projected `D,delta D` locality on a preregistered separating local class. R-167 v1.4 closes `PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE` and makes `PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE` the precise successor. The historical all-bond and projected gate IDs remain part of the route provenance. R-167 v1.5 closes `PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION` and concentrates the remaining thermodynamic obligation in `PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS`. The selected-tangent theorem is not an all-exhaustion or beta-independent completion. R-167 v1.6 closes `PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION`, `PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER`, and `PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS`. The carrier is categorical rather than quasi-local; the precise successor is `PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP`. The single gate-level synthesis authority is `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt` with rendered PDF sibling `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf`. No per-lemma or intermediate PDF was issued during the v1.6 development phase. R-167 v1.7 closes `PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER` and `PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND`. It leaves the preceding combined successor historically open but splits and supersedes it as the active target by `PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA` and `PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY`. The first is a thermodynamic dynamics/phase-quotient problem; the second is an independent sectorwise spectral-coercivity problem. Neither is closed. R-167 v1.8 closes the five narrow subgates `PA-CP1-ST8-Q3LOCK-FIXED-TROTTER-LOCAL-STRICT-INDUCTIVE-EXHAUSTION-COMPATIBILITY`, `PA-CP1-ST8-Q3LOCK-SANDWICHED-RENYI-TO-TWO-ORIENTATION-HISTORY-TAIL-CORRIDOR-REDUCTION`, `PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE`, `PA-CP1-ST8-Q3LOCK-ONE-SITE-Q3-INSTANTON-ACTION-MINIMUM`, and `PA-CP1-ST8-Q3LOCK-CONDITIONAL-DOUBLET-ISING-REFERENCE-GAP`. These are route reductions, not closures of either parent. The two v1.7 parent gates remain open, as does the independent prospective holdout gate `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE`. R-167 v1.9 closes exactly three further narrow subgates: `PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY`, `PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION`, and `PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION`. The old global sandwiched-Renyi reduction remains a correct conditional inequality but is superseded as the active target: global volume uniformity is overstrong in the conditional product-doublet reference. The new spectral successor is `PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS`. The all-exhaustion common-alpha and actual broken-sector GNS-gap parents remain open. R-167 v2.0 closes exactly four additive children: `PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION`, `PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION`, `PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR`, and `PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP`. The full-Gibbs theorem is finite-volume and state weighted; the corridor theorem is conditional on a uniform fixed-edge input; the Feshbach estimate is global and extensive; and the phase theorem concerns only the exact compressed finite-spin TFIM at an existentially small transverse ratio. The parents `PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA`, `PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS`, and `PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY` remain OPEN.",
-        "negative_route_authorities": "The exact fixed-power star/repeat obstruction is registered as `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE`. The independent modular-multiplier obstruction is registered as `NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER`. The seven v1.3 topology and graph failures are registered as `NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE`, and `NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY`. The three v1.4 boundaries are `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS`, and `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE`. The five v1.5 boundaries are `NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT`, and `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING`. The v1.6 projected-tail route boundary is `NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY`. The four v1.7 route boundaries are `NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0`, `NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE`, `NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE`, and `NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP`. The two v1.8 route boundaries are `NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE` and `NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT`. The two v1.9 route boundaries are `NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY` and `NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT`. The three v2.0 route boundaries are `NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE`, `NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL`, and `NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY`.",
+        "version": "`EXP-000795` corrected the v1.0 cubic-domain wording. `EXP-000796` then proves the missing centered cubic graph embedding and strengthens this result to v1.1 without allocating a new result number. `EXP-000797` is an append-only source-note-linkage correction only; it changes no mathematical statement or boundary. `EXP-000798` adds the exact fixed-order response counterexample, all-order unitary repair, modular topology and coordinate-cutoff theorems and advances the same result to v1.2. `EXP-000799` adds the exact common-alpha topology split and advances the same result to v1.3. `EXP-000800` proves the canonical fixed-beta OS-mixture common normal W-star envelope, registers three sharper topology boundaries, and advances the same result to v1.4. `EXP-000801` identifies the selected finite-volume source-tangent Hamiltonian KMS word kernels with that envelope in fixed-band finite-core Fell/GNS topology, proves an exact cyclic character de-filtering theorem, registers five embedding/generator boundaries, and advances the same result to v1.5. `EXP-000802` is an append-only integrated- verifier locator and exact-scope-token correction only; it changes no mathematical statement or boundary. `EXP-000803` proves the selected-tangent finite raw-word completion, constructs the universal zero-source finite- Hamiltonian `L1` orbit-smear carrier, promotes the `EXP-000789` doublets to two distinct ground states of that carrier, and advances the same result to v1.6. `EXP-000804` proves the finite-region local-strict/energy subflow carrier and fixed finite-Gibbs character entropy-tail theorem, registers four norm/topology/tail/gap boundaries, splits the combined successor, and advances the same result to v1.7. `EXP-000805` then proves fixed-Trotter exhaustion compatibility, a conditional sandwiched-Renyi history-tail reduction, the zero-temperature OS temporal-mass/GNS-gap equivalence, the exact one-site Q3 instanton action minimum, and a conditional doublet-Ising reference gap. It registers two further route boundaries and advances the same result to v1.8. `EXP-000806` then proves pure-bond coordinate-tail invariance, replaces the overstrong global quantum Renyi target by a local coordinate-marginal measured- Renyi sufficient condition, verifies the fixed-`mu` small-`h_sc` Q3 onsite doublet theorem, derives the exact rank-two low-band TFIM compression and residual inputs, and advances the same result to v1.9. It registers the global all-bond Renyi and direct rank-one unbounded-block import boundaries without closing either parent gate. `EXP-000809` establishes R-167 v2.0: it adds the finite-Gibbs full-Hamiltonian two-orientation resummation, fixed-edge corridor reduction, below-`Gamma` global Feshbach/relative-form precursor and exact compressed finite-spin two-phase phasewise-gap theorem, while registering three new implication/locality boundaries. It changes no result number or T0 tier. `EXP-000811` establishes R-167 v2.1: it adds the conditional twentieth-history-moment fixed-edge corridor reduction and the full-oscillator local-edge parity-doublet cluster with nested Ritz form-cutoff removal, while registering two exact input gates and two scoped automatic-inference failures. It changes no result number or T0 tier.",
+        "authority_links": "The v1.1 `centered-weight cubic graph` and `prescribed-word` heat theorem are recorded under `PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE` and the alternative `PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY` gate. R-167 v1.2 preserves those historical IDs and supersedes their active route by `PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE` and `PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY`. R-167 v1.3 retains both gate IDs, rejects the fixed Weyl-containing C-star-Leibniz realization of the critical `s=1/2` onsite orbit, and narrows the first to a non-Leibniz analytic/Frechet or symmetric/state-weighted thermodynamic topology. The second is narrowed to direct projected `D,delta D` locality on a preregistered separating local class. R-167 v1.4 closes `PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE` and makes `PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE` the precise successor. The historical all-bond and projected gate IDs remain part of the route provenance. R-167 v1.5 closes `PA-CP1-ST8-Q3LOCK-FIXED-BETA-TANGENT-NET-BANDLIMITED-HAMILTONIAN-OS-POINTED-GNS-IDENTIFICATION` and concentrates the remaining thermodynamic obligation in `PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS`. The selected-tangent theorem is not an all-exhaustion or beta-independent completion. R-167 v1.6 closes `PA-CP1-ST8-Q3LOCK-SELECTED-TANGENT-RAW-FINITE-ORBIT-WORD-MOMENT-COMPLETION`, `PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FINITE-HAMILTONIAN-L1-ORBIT-SMEAR-CSTAR-CARRIER`, and `PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS`. The carrier is categorical rather than quasi-local; the precise successor is `PA-CP1-ST8-Q3LOCK-QUASI-LOCAL-RAW-OSCILLATOR-ALL-EXHAUSTION-COMMON-ALPHA-AND-BROKEN-GNS-GAP`. The single gate-level synthesis authority is `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.tex.txt` with rendered PDF sibling `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-universal-orbit-smear-ground-doublet-route-split-260810-v0.5.pdf`. No per-lemma or intermediate PDF was issued during the v1.6 development phase. R-167 v1.7 closes `PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-LOCAL-STRICT-ENERGY-SUBFLOW-CARRIER` and `PA-CP1-ST8-Q3LOCK-FIXED-GIBBS-CHARACTER-ENTROPY-TILTED-TAIL-BOUND`. It leaves the preceding combined successor historically open but splits and supersedes it as the active target by `PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA` and `PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY`. The first is a thermodynamic dynamics/phase-quotient problem; the second is an independent sectorwise spectral-coercivity problem. Neither is closed. R-167 v1.8 closes the five narrow subgates `PA-CP1-ST8-Q3LOCK-FIXED-TROTTER-LOCAL-STRICT-INDUCTIVE-EXHAUSTION-COMPATIBILITY`, `PA-CP1-ST8-Q3LOCK-SANDWICHED-RENYI-TO-TWO-ORIENTATION-HISTORY-TAIL-CORRIDOR-REDUCTION`, `PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE`, `PA-CP1-ST8-Q3LOCK-ONE-SITE-Q3-INSTANTON-ACTION-MINIMUM`, and `PA-CP1-ST8-Q3LOCK-CONDITIONAL-DOUBLET-ISING-REFERENCE-GAP`. These are route reductions, not closures of either parent. The two v1.7 parent gates remain open, as does the independent prospective holdout gate `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE`. R-167 v1.9 closes exactly three further narrow subgates: `PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY`, `PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION`, and `PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION`. The old global sandwiched-Renyi reduction remains a correct conditional inequality but is superseded as the active target: global volume uniformity is overstrong in the conditional product-doublet reference. The new spectral successor is `PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS`. The all-exhaustion common-alpha and actual broken-sector GNS-gap parents remain open. R-167 v2.0 closes exactly four additive children: `PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION`, `PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION`, `PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR`, and `PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP`. The full-Gibbs theorem is finite-volume and state weighted; the corridor theorem is conditional on a uniform fixed-edge input; the Feshbach estimate is global and extensive; and the phase theorem concerns only the exact compressed finite-spin TFIM at an existentially small transverse ratio. The parents `PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA`, `PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS`, and `PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY` remain OPEN. R-167 v2.1 closes exactly two additive children: `PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION` and `PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL`. The first is a deterministic implication from a uniform two-orientation history moment and does not prove that input. The second is a local two-site full-oscillator min--max/relative-form/Ritz theorem and is not a many-edge QPS or GNS-gap transfer. The new input gates `PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING` and `PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION` are OPEN. The common-alpha, rank-two oscillator/QPS and broken-sector oscillator GNS-gap parents remain OPEN.",
+        "negative_route_authorities": "The exact fixed-power star/repeat obstruction is registered as `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE`. The independent modular-multiplier obstruction is registered as `NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-MODULAR-TAIL-ARBITRARY-BOUNDED-MULTIPLIER`. The seven v1.3 topology and graph failures are registered as `NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-POINT-NORM-BOND-KICK-CONTINUITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SMALL-D-DELTA-D-UNIFORM-HALF-STRIP-MULTIPLIER-INFERENCE`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FAITHFUL-REPRESENTATION-STRONGSTAR-ABSTRACT-CSTAR-INFERENCE`, and `NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY`. The three v1.4 boundaries are `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SHARP-TIME-OS-GRAM-ONLY-REAL-TIME-FUNCTORIALITY`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FULL-GIBBS-HALF-MODULAR-LOCAL-SEPARATING-CLASS`, and `NG-2026-08-10-PRE-A-ST8-Q3LOCK-SINGLE-RUNG-ENERGY-CONSTRAINED-SITEWISE-INFLUENCE-RECURRENCE`. The five v1.5 boundaries are `NG-2026-08-10-PRE-A-ST8-Q3LOCK-POINTWISE-OS-GRAM-NAIVE-LABEL-EMBEDDING`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-CHARACTER-BOUNDED-GENERATOR-CORE`, `NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT`, and `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-BETA-ENVELOPE-AUTOMATIC-CROSS-BETA-GLUING`. The v1.6 projected-tail route boundary is `NG-2026-08-10-PRE-A-ST8-Q3LOCK-STATIC-TAIL-ONLY-PROJECTED-ORBIT-LOCALITY`. The four v1.7 route boundaries are `NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0`, `NG-2026-08-11-PRE-A-ST8-Q3LOCK-PURE-QUARTIC-POTENTIAL-RESOLVENT-ALGEBRA-INVARIANCE`, `NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE`, and `NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP`. The two v1.8 route boundaries are `NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE` and `NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT`. The two v1.9 route boundaries are `NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY` and `NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT`. The three v2.0 route boundaries are `NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE`, `NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL`, and `NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY`. The two v2.1 automatic-inference boundaries are `NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT` and `NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT`. The first rejects only an automatic polynomial all-order graph hierarchy, not the fixed fifth constant; the second rejects only automatic inference from static moments and the explicitly tested low graph range, not Q3 dynamics.",
         "statement": "For the exact finite-volume ST8/Q3LOCK Hamiltonian with `chi,c,g>0`, `lambda>=0`, bounded source, and centered weight `f_x=exp[-mu d(x,X)]`, let `A=1+E_f` be the positive shifted local energy. Writing `B_f=delta(E_f)`, the exact current and Schroedinger cross identity give `||B_f A^-1||=||A^-1 B_f||<=M_mu`, with the explicit volume- and source-uniform constant in the proof note. Consequently `U(t)^*A^2U(t)<=exp(2M_mu|t|)A^2`. Interpolation with the first-energy cone closes the minimal three-half-energy moment and propagates the energy domain `D(A^(3/4))`. The exact full graph expansion additionally gives `||U_fA^-1||<=kappa`. Heinz--Kato and the commuting multiplication order inside `U_f` therefore give `f_x^(m/4)|| |q_x|^mA^(-m/4)||<=gamma^(-m/4)kappa^(m/4)`, `0<=m<=4`, with the adjoint orientation. This closes the formerly open centered cubic multiplier and the Q3 force, whose component coefficient is `g+12lambda`. The spatial weight is sharp: an unweighted moving-site constant must grow at least as `f_x^(-3/4)`. Neighboring centered graph norms nevertheless compare by `C_mu^s`, so fixed-exponent recentering has only exponential path cost. The boundary position multiplier also closes. If the first and double position commutators decay in both declared one-sided energy norms with spatial rate `rho>mu/4`, the exact boundary Duhamel formula makes the finite-volume dynamics Cauchy in both orientations, independently of the exhaustion.",
         "proof_mechanism": "Weighted Cauchy--Schwarz converts the current square into `U_f sum f_x|p_x|^2`. An exact integration-by-parts identity turns that term into `2chi Re<T_f psi,U_f psi>` plus a Laplacian. The Q3 edge calculation gives `Delta W4<=C2|q|^2` with `C2=3g+21lambda`, closing both ordered derivative bounds. The same cross identity controls `U_fA^-1`; Heinz--Kato then closes the cubic graph domain. Complex interpolation gives energy-domain propagation, Balakrishnan calculus supplies the boundary position multiplier, and the Duhamel identity shows exactly which two one-sided spatial commutator estimates remain. Every prescribed bond word has the exact heat-simplex bound `[b sqrt(pi/(2e))sqrt(beta)]^n/Gamma(1+n/2)`. A single `5m`-edge animal has at least `(4m)!` legal histories, so termwise absolute animal counting destroys that denominator. Even after a hypothetical chain reduction, absolute strip continuation produces `exp(C/epsilon)`, nonintegrable against every finite energy power. A rank-shift fixture separately shows that convergence of both adjoint labels in the Duhamel inner product does not imply strong-star dynamics. These findings reject only the named proof routes, not existence of thermodynamic dynamics.",
         "v1_2_route_correction": "For one component and a spatial star, `V_j=-c q_0q_j`, `W_0(a)=exp(-ia p_0/hbar)` give the exact fixed-order law `ad_(V_m)...ad_(V_1)W_0=(-ca)^m(prod_j q_j)W_0`. Translated bumps show that three leaves defeat graph exponent `s=1/2` and four defeat `s=3/4`; one repeated edge gives the same obstruction. The complete star instead resums to the unitary `exp[-icat sum_jq_j/hbar]W_0`. A unique-path tree has an exact sequential-activation Duhamel formula with every path edge used once, while a square leaves an alternate-path remainder. Thus the coefficientwise first-passage target is false as stated, but an all-bond unitary Trotter route remains open. For faithful finite Gibbs `rho`, v1.2 also proves `||X||_#^2<=||X||_D^2+(1/2)||X||_D||[log rho,X]||_D`. This is the arithmetic/logarithmic-mean inequality. Duhamel convergence plus a uniform first modular derivative therefore gives two-sided GNS convergence in one fixed faithful representation. Exact half-modular-strip bounds `M_0` and `M_1` make multiplication by a structured observable continuous in this topology. A two-level fixture shows that an arbitrary contraction can instead turn a static tail with zero modular derivative into a divergent Duhamel commutator. Finally, the imported Q3LOCK Euclidean exponential moment makes a coordinate-only bond cutoff and its first modular derivative `poly(L)exp(-aL^2)` for arbitrary `a>0`. The scale `L_m=m^alpha`, `0<alpha<1/2`, closes the tail/factorial arithmetic conditionally on the still- open projected or modular-multiplier locality estimate.",
@@ -11275,16 +11335,17 @@
         "v1_8_fixed_trotter_renyi_history_and_zero_temperature_gap_reductions": "For every fixed split level `n`, the exact onsite and mutually commuting all-bond subflows send a seed algebra `A_X` into `A_(N_n(X))`; the split word `Theta_(t,n)=(sigma_(t/n) beta_(t/n))^n` is exactly exhaustion independent once the finite volume contains that halo, and its inverse is the reverse word. This is fixed-`n` compatibility only: no growing-stage `n->infinity` Cauchy estimate, group completion, generator identity or phase-KMS quotient follows. For a faithful finite Gibbs density, every unitary partial history `P`, and `alpha>1`, sandwiched-Renyi data processing gives `Tr(P rho P^* E)<=Qtilde_alpha(P rho P^*||rho)^(1/alpha) rho(E)^vartheta`, `vartheta=(alpha-1)/alpha`. A uniform bound for both `P` and `P^*` therefore reduces the required two-orientation cutoff history estimate to the registered Gaussian reference tail. The coordinate-polynomial tail is `exp(-bL^2)(L^4+2L^2/b+2/b^2)`, `b=vartheta a`; it absorbs a squared corridor multiplier `exp(kappa_T L^2)` when `b>kappa_T`, and the safe unsquared condition is `b>2kappa_T`. If the Renyi divergence itself grows as `dL^2+o(L^2)`, replace `b` by `vartheta(a-d)`. An exact two-level family keeps two-sided energy-form comparability, vanishing entropy and energy excess, all reference Gaussian coefficients and any fixed finite tilted-moment list while its sandwiched-Renyi divergence diverges. Thus the v1.7 inputs do not automatically prove the required Q3LOCK Renyi history bound. In a simple-vacuum zero-temperature phase representation with the declared form-core condition, a spectral gap `Delta`, the coercive inequality `-i hbar omega(A^*delta(A))>=Delta Var_omega(A)`, and OS temporal decay `G_A(tau)<=exp(-Delta tau/hbar)G_A(0)` are equivalent. A common large-time rate `m` on the core implies `Delta>=hbar m`; fixed-beta OS data alone do not supply the required positive vacuum Hamiltonian or beta-infinity phase selection. The one-site Q3 heteroclinic action has the exact minimum `S_inst=(16sqrt(2)/3)v^3sqrt(chi g)`, with the eight centers locked for `lambda>0`; this is not a splitting theorem. Under an unproved isolated even/odd onsite doublet and remainder-smallness hypothesis, the reference Ising Hamiltonian has gap at least `min{Gamma,2J kappa(G)}`, `J=8cm^2`. The exact Q3LOCK reduction and smallness estimates are still missing, and the finite-dimensional two-phase Yarotsky hypotheses cannot be imported directly. The distinct infinite-dimensional single-phase theorem yields only a unique weak-coupling phase, not the target broken-sector gap. For the pure all-bond layer `B_delta=exp(-i delta V_cross/hbar)`, every bounded coordinate multiplier commutes with `B_delta`. Coordinate tail projections and finite-moment weighted coordinate tails are invariant in both orientations. If `W_L` is the bond- potential cutoff tail and `sigma(W_L^2)<infinity`, then exactly `||(B_delta-B_delta,L)sigma^(1/2)||_2^2 =||sigma^(1/2)(B_delta-B_delta,L)||_2^2 =sigma(4 sin^2(delta W_L/(2hbar))) <=delta^2 sigma(W_L^2)/hbar^2`. Thus a state-weighted pure-bond telescope pays no operator-norm `exp(C L^2)` factor. The missing input is the `W_L^2` tail in intermediate onsite-interspersed histories. For a fixed finite coordinate region `S`, `alpha>1` and `theta=(alpha-1)/alpha`, a uniform coordinate-marginal measured-Renyi bound `int(dnu_P,S^+/-/dnu_0,S)^alpha dnu_0,S<=Q` implies the two-orientation fourth tail `2Q^(1/alpha)(M_a|S|)^theta exp(-bL^2) (L^4+2L^2/b+2/b^2)`, `b=theta a`. This is a fixed-`S` implication only. A growing corridor additionally needs `Q` uniform over translates of the relevant fixed bond shapes or an explicit `Q_(alpha,T,S_R)` growth envelope absorbable with `R,L`; neither is proved. This is strictly weaker than global quantum sandwiched Renyi. In the conditional low-doublet product reference, the exact one-bond fixture gives `Qtilde_2=((4+9 sin^2 theta_b)^2)/16`, equal to `289/64` at `theta_b=pi/4`; tensor multiplicativity makes it exponential in the number of disjoint bonds even though local compressed-coordinate probabilities are unchanged. Hence the global volume-uniform target is overstrong, while the onsite-interspersed local measured likelihood remains open. For `R=-r>0`, `mu=lambda/g>0`, `v=sqrt(R/g)`, `E_*=R^2/g` and `h_sc=hbar g/(sqrt(chi)R^(3/2))`, the isolated shifted onsite Hamiltonian is `E_*[-h_sc^2 Delta/2+W_mu]`. The dimensionless `W_mu` has exactly the two nondegenerate minima `+/-1`, Hessian `2I+mu L_Q3` with eigenvalues `2`, `2+2mu` (multiplicity three), `2+4mu` (multiplicity three) and `2+6mu`, and exact Agmon action `S_0=16sqrt(2)/3`. Standard multidimensional two-well semiclassics therefore gives, for fixed `mu>0` and sufficiently small `h_sc`, a simple even/odd onsite doublet with the registered logarithmic splitting, high-mode and matrix-element asymptotics. This is existential and gives no numerical threshold for the repository `r=-9` fixture. On the exact rank-two onsite band, after a scalar shift the lattice compression is `H_low=J sum_<xy>(1-s_xs_y) +sum_x[delta_1+4c deg(x)(a_1-a_0)]P_1,x`, `J=8cm^2`, with explicit low/high bond and weighted relative-form residual quantities. The registered `r=-N^4`, `c=N^-4` corridor keeps `J` order one while the model-side low/high ratios and effective field vanish. The published Del Vecchio--Frohlich--Pizzo theorem is rank-one and concludes a unique ground state; it does not prove the required rank-two `2^|Lambda|` low-band block diagonalization or two-phase QPS transfer.",
         "v2_0_finite_gibbs_and_fixed_edge_reductions": "In one finite volume, with `rho=Z^-1 exp(-beta H)` and `H_L=H-W_L`, the two opposite Duhamel orderings give `||(U-U_L)rho^(1/2)||_2, ||rho^(1/2)(U-U_L)||_2 <= |t|rho(W_L^2)^(1/2)/hbar`, and `||rho-U_L rho U_L^*||_1` is at most twice that error. Bounded half-modular contexts, including a finite Bohr-projective class, transfer the estimate. An exact two-level Gibbs fixture has both weighted-unitary squared errors `4p` and exact state stability but arbitrary-context automorphism-error norms two, so that unrestricted upgrade is false. For `C_R=[-R,R]^3`, the induced nearest-neighbour edge count is `m_R=6R(2R+1)^2<=54R^3`, and `W_(R,L)^2<=m_R sum_e w_(e,L)^2`. Under the declared uniform fixed-edge hard-tail input, `L_R=sqrt(R)` yields `1296 R^6 exp(-R)(R^2+2R+2)->0`. Translations leave three bond-direction orbits; the actual Q3 onsite-interspersed fixed-edge history estimate remains open.",
         "v2_0_feshbach_and_compressed_phase_split": "Before subtracting an extensive low-band scalar, `QHQ>=Gamma Q` and, for `E<Gamma`, `F(E)=PHP-E-PHQ(QHQ-E)^(-1)QHP`. Cubic bond overlap is at most 11. The exact diagonal local-high coefficients are `eta_b=8c(1+u^-1)(1+t^-1)A_Q`, `nu_b=16c[(1+u)m^2+(1+u^-1)(1+t)a^2]`, and `zeta=6(eta_b+nu_b/Gamma)`. The N corridor gives the distinct off-block `epsilon=O(N^-3)` and diagonal relative-form `zeta=O(N^-2)`. This global extensive estimate has no quasi-local QPS content; the all-ones self-energy fixture makes that boundary exact. Separately, the exact compressed TFIM forward-star spectrum is `{0 x2, 2J x6, 4J x6, 6J x2}` and the selector convention gives `k=(0,-2)`. Yarotskii's two-phase theorem, DOI `10.1070/RM2006v061n02ABEH004323`, yields two pure translation-invariant phases, exponential clustering and a positive GNS gap in each selected compressed phase for existential `|delta_eff|/(2J)<epsilon_Y`. It gives no explicit threshold, finite-torus exact degeneracy, rank-two oscillator transfer or oscillator GNS gap.",
-        "boundary": "The v1.6 selected-tangent theorem is fixed-beta and confined to the registered source-tangent diagonal nets. Its raw finite-word conclusion is scalar-kernel and pointed finite-core Fell/GNS convergence, not globally compatible common-Hilbert operator strong-star convergence. The separate zero-source carrier is beta independent and supports two distinct algebraic ground states, but it is not an all-shape exhaustion limit or the sought quasi-local raw oscillator alpha. The v1.7 local-strict theorem remains finite- region, and its Gibbs tail remains finite-volume. The v1.8 split-word compatibility is fixed Trotter level. R-167 v1.9 removes the pure-bond operator- norm corridor and proves local measured-Renyi sufficiency, but no onsite- interspersed local likelihood/tail estimate or split limit. Its onsite doublet theorem is fixed-`mu`, small-`h_sc` and existential. R-167 v2.0 adds a finite- volume static full-Gibbs theorem, conditional fixed-edge corridor, global Feshbach precursor and exact compressed finite-spin phasewise gap. None is the missing actual Q3 history input, quasi-local rank-two oscillator elimination or oscillator gap. All three R-167 parent gates and `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` remain open. The theorem does not prove volume-uniform direct projected `D,delta D` locality, a local net, a full canonical momentum/Weyl bridge, polynomial local-generator identification, phase-KMS quotient identification, a broken-sector GNS or physical mass gap, regulator removal, continuum, a physical empty/preparation reference, a below-empty sign, C6, CP1, physical/full-Class-II Sector A or Pre-A. The published A5 card remains only its seven-hypothesis T6 conditional composition.",
-        "proven_in": "C6 / [R-167 v2.0 certificate](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md) and [machine manifest](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json). The historical [combined R-167 v1.9 / R-168 v1.0 gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [rendered 15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf) remain v1.9 evidence only. The v1.8 checkpoint remains in [its certificate](strategy/pre-a-cp1-st8-q3lock-renyi-history-os-gap-reduction-route-split-certificate-260811.md), [single gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.tex.txt), and [rendered synthesis PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.pdf). Per the PDF-efficiency protocol, no per-lemma or intermediate v1.9 PDF was issued; the combined pair was issued only after the proof, formal, independent, integrated, source-form and visual-QA layers passed. That v0.8 PDF is historical evidence only and is not v2.0 evidence. No intermediate v2.0 PDF was issued during proof-first development; the later combined R-167 v2.0 / R-168 v1.1 checkpoint is separate.",
-        "tier": "T0 (scoped selected-tangent, categorical orbit-smear, finite-region local-strict/finite-Gibbs, local-tail and fixed-edge reductions, existential onsite doublet, global Feshbach precursor and compressed-spin phase theorem; no quasi-local thermodynamic common-alpha, oscillator rank-two QPS, actual oscillator GNS gap, Sector-A or Pre-A promotion).",
+        "v2_1_twentieth_moment_corridor_and_full_edge_cluster": "For each translated edge and both partial-history orientations, a uniform endpoint-coordinate moment `M_20` gives the hard tail `c^2 M_20 L^-16` and corridor `2916 c^2 M_20 R^6 L^-16`. Choosing `L=R^(2/5)` gives `R^(-2/5)` and remains compatible with the separate factorial cutoff. This closes only the implication. Its exact sufficient inputs are a volume/source/translate-uniform local fifth Gibbs moment and one-site `|q|^10 k^(-5/2)` elliptic bound, plus a common-core/form-`C1` simultaneous-bond `K_e^5` graph estimate. Both inputs remain OPEN. For the exact full two-site oscillator edge, the aligned and misaligned low-band spaces have diagonal compressions `e_b` and `e_b+2J`, the high compression is at least `Gamma/6`, and the low/high coupling is at most `epsilon`. The aligned--misaligned cross term generally has norm `|f_b|` and is not set to zero. Under the stated positivity condition, parity-sector min--max gives exactly one even and one odd eigenvalue below the rest and `lambda_3-lambda_2>=g_b-e_b>0`. The corrected rational fixture has `d_2=-1/1000`, `e_b=139/1500000`, `J=4/125`, `epsilon=23/6250` and `g_b-e_b>=332047248/5188304375`. The independent relative-form bound is `(1-alpha)gamma_0-2beta=4430237/234375000`. Nested parity-preserving onsite spectral Ritz form restrictions decrease to the full-edge eigenvalues and carry these bounds to the full oscillator edge. Truncating `q` before squaring, a many-edge linked-cluster transfer and an oscillator GNS gap are not proved.",
+        "boundary": "The v1.6 selected-tangent theorem is fixed-beta and confined to the registered source-tangent diagonal nets. Its raw finite-word conclusion is scalar-kernel and pointed finite-core Fell/GNS convergence, not globally compatible common-Hilbert operator strong-star convergence. The separate zero-source carrier is beta independent and supports two distinct algebraic ground states, but it is not an all-shape exhaustion limit or the sought quasi-local raw oscillator alpha. The v1.7 local-strict theorem remains finite- region, and its Gibbs tail remains finite-volume. The v1.8 split-word compatibility is fixed Trotter level. R-167 v1.9 removes the pure-bond operator- norm corridor and proves local measured-Renyi sufficiency, but no onsite- interspersed local likelihood/tail estimate or split limit. Its onsite doublet theorem is fixed-`mu`, small-`h_sc` and existential. R-167 v2.0 adds a finite- volume static full-Gibbs theorem, conditional fixed-edge corridor, global Feshbach precursor and exact compressed finite-spin phasewise gap. R-167 v2.1 adds a sharper conditional twentieth-moment corridor and a local full- oscillator two-site edge cluster with Ritz form-cutoff removal. None proves the missing history moment inputs, common alpha, many-edge quasi-local rank-two oscillator elimination or oscillator GNS gap. All three R-167 parent gates and `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` remain open. The theorem does not prove volume-uniform direct projected `D,delta D` locality, a local net, a full canonical momentum/Weyl bridge, polynomial local-generator identification, phase-KMS quotient identification, a broken-sector GNS or physical mass gap, regulator removal, continuum, a physical empty/preparation reference, a below-empty sign, C6, CP1, physical/full-Class-II Sector A or Pre-A. The published A5 card remains only its seven-hypothesis T6 conditional composition.",
+        "proven_in": "C6 / [R-167 v2.1 certificate](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md) and [machine manifest](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json). The current [combined R-167 v2.1 / R-168 v1.2 gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt) and [rendered 13-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf) are the issued v2.1 evidence. The earlier [combined R-167 v1.9 / R-168 v1.0 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf), the [combined R-167 v2.0 / R-168 v1.1 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt) and [10-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf), and the [R-167 v1.8 synthesis PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.pdf) remain historical evidence only. No per-lemma or intermediate R-167 v2.1 PDF was issued.",
+        "tier": "T0 (scoped selected-tangent, categorical orbit-smear, finite-region local-strict/finite-Gibbs, local-tail and fixed-edge reductions, existential onsite doublet, global Feshbach precursor, compressed-spin phase theorem and local full-oscillator edge cluster; no actual fifth-history input, quasi-local thermodynamic common-alpha, many-edge oscillator rank-two QPS, actual oscillator GNS gap, Sector-A or Pre-A promotion).",
         "publication_target": "Pre-A analytic methods note."
       },
       "normalized_detail": {
         "statement": "For the exact finite-volume ST8/Q3LOCK Hamiltonian with `chi,c,g>0`, `lambda>=0`, bounded source, and centered weight `f_x=exp[-mu d(x,X)]`, let `A=1+E_f` be the positive shifted local energy. Writing `B_f=delta(E_f)`, the exact current and Schroedinger cross identity give `||B_f A^-1||=||A^-1 B_f||<=M_mu`, with the explicit volume- and source-uniform constant in the proof note. Consequently `U(t)^*A^2U(t)<=exp(2M_mu|t|)A^2`. Interpolation with the first-energy cone closes the minimal three-half-energy moment and propagates the energy domain `D(A^(3/4))`. The exact full graph expansion additionally gives `||U_fA^-1||<=kappa`. Heinz--Kato and the commuting multiplication order inside `U_f` therefore give `f_x^(m/4)|| |q_x|^mA^(-m/4)||<=gamma^(-m/4)kappa^(m/4)`, `0<=m<=4`, with the adjoint orientation. This closes the formerly open centered cubic multiplier and the Q3 force, whose component coefficient is `g+12lambda`. The spatial weight is sharp: an unweighted moving-site constant must grow at least as `f_x^(-3/4)`. Neighboring centered graph norms nevertheless compare by `C_mu^s`, so fixed-exponent recentering has only exponential path cost. The boundary position multiplier also closes. If the first and double position commutators decay in both declared one-sided energy norms with spatial rate `rho>mu/4`, the exact boundary Duhamel formula makes the finite-volume dynamics Cauchy in both orientations, independently of the exhaustion.",
-        "proof_anchor": "C6 / [R-167 v2.0 certificate](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md) and [machine manifest](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json). The historical [combined R-167 v1.9 / R-168 v1.0 gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [rendered 15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf) remain v1.9 evidence only. The v1.8 checkpoint remains in [its certificate](strategy/pre-a-cp1-st8-q3lock-renyi-history-os-gap-reduction-route-split-certificate-260811.md), [single gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.tex.txt), and [rendered synthesis PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.pdf). Per the PDF-efficiency protocol, no per-lemma or intermediate v1.9 PDF was issued; the combined pair was issued only after the proof, formal, independent, integrated, source-form and visual-QA layers passed. That v0.8 PDF is historical evidence only and is not v2.0 evidence. No intermediate v2.0 PDF was issued during proof-first development; the later combined R-167 v2.0 / R-168 v1.1 checkpoint is separate.",
+        "proof_anchor": "C6 / [R-167 v2.1 certificate](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md) and [machine manifest](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json). The current [combined R-167 v2.1 / R-168 v1.2 gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt) and [rendered 13-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf) are the issued v2.1 evidence. The earlier [combined R-167 v1.9 / R-168 v1.0 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf), the [combined R-167 v2.0 / R-168 v1.1 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt) and [10-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf), and the [R-167 v1.8 synthesis PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.pdf) remain historical evidence only. No per-lemma or intermediate R-167 v2.1 PDF was issued.",
         "reuse": "",
-        "boundary": "The v1.6 selected-tangent theorem is fixed-beta and confined to the registered source-tangent diagonal nets. Its raw finite-word conclusion is scalar-kernel and pointed finite-core Fell/GNS convergence, not globally compatible common-Hilbert operator strong-star convergence. The separate zero-source carrier is beta independent and supports two distinct algebraic ground states, but it is not an all-shape exhaustion limit or the sought quasi-local raw oscillator alpha. The v1.7 local-strict theorem remains finite- region, and its Gibbs tail remains finite-volume. The v1.8 split-word compatibility is fixed Trotter level. R-167 v1.9 removes the pure-bond operator- norm corridor and proves local measured-Renyi sufficiency, but no onsite- interspersed local likelihood/tail estimate or split limit. Its onsite doublet theorem is fixed-`mu`, small-`h_sc` and existential. R-167 v2.0 adds a finite- volume static full-Gibbs theorem, conditional fixed-edge corridor, global Feshbach precursor and exact compressed finite-spin phasewise gap. None is the missing actual Q3 history input, quasi-local rank-two oscillator elimination or oscillator gap. All three R-167 parent gates and `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` remain open. The theorem does not prove volume-uniform direct projected `D,delta D` locality, a local net, a full canonical momentum/Weyl bridge, polynomial local-generator identification, phase-KMS quotient identification, a broken-sector GNS or physical mass gap, regulator removal, continuum, a physical empty/preparation reference, a below-empty sign, C6, CP1, physical/full-Class-II Sector A or Pre-A. The published A5 card remains only its seven-hypothesis T6 conditional composition.",
+        "boundary": "The v1.6 selected-tangent theorem is fixed-beta and confined to the registered source-tangent diagonal nets. Its raw finite-word conclusion is scalar-kernel and pointed finite-core Fell/GNS convergence, not globally compatible common-Hilbert operator strong-star convergence. The separate zero-source carrier is beta independent and supports two distinct algebraic ground states, but it is not an all-shape exhaustion limit or the sought quasi-local raw oscillator alpha. The v1.7 local-strict theorem remains finite- region, and its Gibbs tail remains finite-volume. The v1.8 split-word compatibility is fixed Trotter level. R-167 v1.9 removes the pure-bond operator- norm corridor and proves local measured-Renyi sufficiency, but no onsite- interspersed local likelihood/tail estimate or split limit. Its onsite doublet theorem is fixed-`mu`, small-`h_sc` and existential. R-167 v2.0 adds a finite- volume static full-Gibbs theorem, conditional fixed-edge corridor, global Feshbach precursor and exact compressed finite-spin phasewise gap. R-167 v2.1 adds a sharper conditional twentieth-moment corridor and a local full- oscillator two-site edge cluster with Ritz form-cutoff removal. None proves the missing history moment inputs, common alpha, many-edge quasi-local rank-two oscillator elimination or oscillator GNS gap. All three R-167 parent gates and `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` remain open. The theorem does not prove volume-uniform direct projected `D,delta D` locality, a local net, a full canonical momentum/Weyl bridge, polynomial local-generator identification, phase-KMS quotient identification, a broken-sector GNS or physical mass gap, regulator removal, continuum, a physical empty/preparation reference, a below-empty sign, C6, CP1, physical/full-Class-II Sector A or Pre-A. The published A5 card remains only its seven-hypothesis T6 conditional composition.",
         "publication_target": "Pre-A analytic methods note."
       },
       "claim_refs": [
@@ -11315,7 +11376,11 @@
         "20260811-r-167-v1-9-and-r-168-v1-0-combined-gate-level-s",
         "20260811-r-167-v2-0-resums-finite-gibbs-cutoffs-and-sepa",
         "20260811-r-167-v2-0-and-r-168-v1-1-combined-gate-level-s",
-        "20260811-r-167-v2-0-and-r-168-v1-1-combined-v0-9-proof-e"
+        "20260811-r-167-v2-0-and-r-168-v1-1-combined-v0-9-proof-e",
+        "20260811-r-167-v2-1-closes-the-conditional-twentieth-mom",
+        "20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s",
+        "20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f",
+        "20260811-r-167-theorem-event-selector-repair-finalizes-t"
       ],
       "co_recorded_negative_tags": [
         "NG-2026-08-09-PRE-A-ST8-Q3LOCK-POSTHOC-DIRECT-SUM-COMMON-DYNAMICS",
@@ -11357,6 +11422,8 @@
         "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT",
         "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0",
         "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
         "NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE"
       ]
     },
@@ -17772,6 +17839,46 @@
       "family_refs": []
     },
     {
+      "tag": "NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
+      "anchor": "ng-2026-08-11-pre-a-st8-q3lock-uniform-quadratic-in-m-all-moment-bond-shear-graph-transport",
+      "branch": "infer a universal quadratic or polynomial-in-order bound for every normalized bond-shear graph moment from abstract positive-energy structure",
+      "summary": "`K=diag(1,4)` and `V=sigma_x` give right Dini slope `(2^m-2^-m)/(2 hbar)`, so any all-order exponent must grow exponentially in `m`. This rejects only the automatic hierarchy, not the fixed fifth graph constant or Q3 transport",
+      "detail_title": "abstract graph growth need not be polynomial in moment order",
+      "detail": {
+        "failure_mode": "infer from positivity and a normalized two-sided graph setup that every moment order `m` admits a universal graph exponent bounded quadratically, or by any fixed polynomial, in `m`.",
+        "evidence": "EXP-000811 / R-167 v2.1 uses `K=diag(1,4)` and `V=sigma_x`. For `C_m=K^(-m/2)(i/hbar)[V,K^m]K^(-m/2)`, exact diagonal arithmetic gives `||C_m||=(2^m-2^-m)/hbar`. For `A_m(t)=K^(m/2)exp(-itV/hbar)K^(-m/2)`, the right Dini derivative of `log||A_m(t)||`, after maximizing over the two signs of `t`, is `(2^m-2^-m)/(2hbar)`. Hence a bound of the form `||A_m(t)||<=exp(G_m|t|/2)` forces exponentially growing `G_m`; no automatic quadratic or polynomial all-order inference is valid.",
+        "consequence": "an all-moment graph hierarchy must be proved from additional model-specific structure rather than assumed. The fixture does not reject the fixed `m=5` constant required by R-167 v2.1, and no embedding into actual Q3 spectral transitions or Q3 dynamics nonexistence is asserted."
+      },
+      "kind": "no_go",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260811-r-167-v2-1-closes-the-conditional-twentieth-mom"
+      },
+      "family_refs": []
+    },
+    {
+      "tag": "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
+      "anchor": "ng-2026-08-11-pre-a-st8-q3lock-static-moments-and-low-graph-automatic-twentieth-history-moment",
+      "branch": "infer the uniform two-orientation twentieth history moment from static exponential-coordinate and fixed energy moments plus low-rung graph control",
+      "summary": "an exact two-level `K_N` rotation retains the static moment bounds and all graph estimates in the stated range `0<=s<=1`, while the two-orientation twentieth coordinate history moment grows at least as `delta^2 N^12/4`. The missing fifth graph constant grows; this rejects automatic inference only, not Q3 dynamics",
+      "detail_title": "static moments and low graph rungs do not force the history endpoint",
+      "detail": {
+        "failure_mode": "promote static exponential-coordinate control, fixed fifth energy moments, the one-site `|q|^10K^(-5/2)` embedding and graph estimates on the currently stated low range automatically to a volume-uniform two-orientation twentieth coordinate moment for every partial history.",
+        "evidence": "EXP-000811 / R-167 v2.1 sets With `hbar=1`, `K_N=diag(1,N^4)`, `q_N=diag(0,N)`, `H_N=diag(0,N^4)` and `V_N=sigma_y/N^4`, with beta-one Gibbs state and `U_N(delta)=exp(-i delta V_N)`. Exactly, `||q_N^10 K_N^(-5/2)||=1` and `rho_N(K_N^5)<=1+(5/e)^5`. For every `0<=s<=1` and `N^4>=|delta|`, `||K_N^s U_N(delta)K_N^(-s)||<=1+|delta|`. Nevertheless the fifth normalized commutator constant is `G_5=N^6-N^-14`, and for nonzero `delta` the two history orientations have summed twentieth moment at least `delta^2 N^12/4`.",
+        "consequence": "the local fifth Gibbs/elliptic input and simultaneous-bond fifth-graph propagation identified by R-167 v2.1 remain genuine separate OPEN gates. This fixture rejects only their automatic derivation from static moments and the declared low graph range; it is consistent with the conditional fifth-moment theorem and is not a Q3 dynamics nonexistence result."
+      },
+      "kind": "no_go",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260811-r-167-v2-1-closes-the-conditional-twentieth-mom"
+      },
+      "family_refs": []
+    },
+    {
       "tag": "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
       "anchor": "ng-2026-08-11-pre-a-st8-q3lock-static-gaussian-symmetry-finite-moment-automatic-fixed-edge-history-tail",
       "branch": "infer the required fixed-edge history tail from static Gaussianity, endpoint symmetry and all finite moments",
@@ -18006,6 +18113,26 @@
       ],
       "claim_ref_basis": {
         "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260811-r-168-v1-0-freezes-the-prospective-holdout-sche"
+      },
+      "family_refs": []
+    },
+    {
+      "tag": "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE",
+      "anchor": "ng-2026-08-11-pre-a-m2-lane-q-linear-source-automatic-physical-stiffness-response",
+      "branch": "identify a physical helicity or stiffness response from the scalar Lane-Q linear source alone",
+      "summary": "EXP-000812 / R-168 v1.2 keeps the zero-source Hamiltonian and first source derivative fixed while a target-blind scalar `J^2` contact shifts normalized second curvature by an arbitrary declared `d(t)`. Freeze the quadratic contact, normalization and physical control law; this is not a no-go for a fully specified physical probe",
+      "detail_title": "a scalar linear probe does not fix second-order physical response",
+      "detail": {
+        "failure_mode": "identify the scalar Lane-Q source `-JQ` and its first source derivative with a complete physical helicity or stiffness probe, without first freezing the quadratic contact or diamagnetic term, normalization, physical control law and response convention.",
+        "evidence": "EXP-000812 / R-168 v1.2 takes, at finite regulated volume, `H_d(t,J)=H(t)-JQ+(V/2)d(t)J^2 I`. Every `d` leaves `H(t,0)` and `partial_J H_d(t,0)=-Q` unchanged. The scalar term factors from the Gibbs trace, giving `F_(beta,d)=F_(beta,0)+(V/2)d(t)J^2`; on a stable ground branch the ground energy has the same shift. Thus the registered positive normalized helicity curvature moves by `+d(t)`, while the conventional scalar susceptibility moves by `-d(t)`. The exact fixture has curvatures `5/7` and `11/7`, hence shift `6/7`, with the zero-source law and linear probe fixed.",
+        "consequence": "a scalar linear source or internal Gaussian fingerprint alone cannot identify the physical second-order response. A successor must freeze and justify the quadratic contact, normalization, compact or gauge action, state/reference, physical-control and response maps, limit order and error budget. This is not a no-go for a fully specified physical probe and supplies no physical response candidate or prediction."
+      },
+      "kind": "no_go",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260811-r-168-v1-2-proves-linear-probe-response-noniden"
       },
       "family_refs": []
     },
@@ -64552,6 +64679,132 @@
       "task_id": "T-054",
       "title": "Prove current-version map-only admission emptiness and freeze the M2 finite-torus fingerprint",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "This is R-167 v2.1, a claim-nonbearing T0 additive result. The moment theorem is conditional, and the spectral theorem concerns one local full-oscillator edge with nested Ritz form cutoffs. It proves no common alpha, split limit, many-edge linked-cluster or two-phase QPS transfer, thermodynamic phase selection, oscillator GNS gap, continuum, physical-empty comparison, C6, CP1, physical Sector A, or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The twentieth-moment implication and local full-edge cluster are exact reusable children, while the actual history moment, fifth graph propagation, many-edge quasi-local rank-two transfer and sectorwise lattice coercivity remain separate unsolved inputs. The two counterfamilies reject only automatic inference shortcuts and do not establish Q3 dynamics or fixed-fifth nonexistence.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#twentieth_moment_fixed_edge_corridor",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#conditional_fifth_graph_transport",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#all_order_graph_growth_no_go",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#static_moment_low_graph_no_go",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#full_oscillator_edge_cluster",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md#22-a-twentieth-endpoint-coordinate-moment-closes-the-fixed-edge-corridor",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md#26-full-oscillator-local-edge-parity-doublet-cluster",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split.py#L1",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py#L1"
+      ],
+      "finding": "A uniform two-orientation endpoint-coordinate twentieth moment implies the fixed-edge hard tail c^2 M20 L^-16 and the corridor bound 2916 c^2 M20 R^6 L^-16; L=R^(2/5) gives R^(-2/5), but the moment itself remains unproved. Its exact sufficient inputs are a translate-uniform local fifth Gibbs moment plus one-site |q|^10 k^-5/2 elliptic embedding and a common-core simultaneous-bond K_e^5 graph estimate. Independently, the exact full two-site oscillator edge has one even and one odd eigenvalue below a uniformly separated third eigenvalue under the displayed min--max or relative-form positivity conditions. The corrected fixture d2=-1/1000 gives rational lower bounds 332047248/5188304375 and 4430237/234375000. Nested parity-preserving Ritz form restrictions pass the bounds to the full oscillator edge; truncating q before squaring is not certified.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT"
+        ],
+        "results": [
+          "R-167"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION",
+        "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
+        "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
+        "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-000811",
+      "method": [
+        "Convert a translate- and orientation-uniform two-orientation endpoint-coordinate twentieth moment into a hard fixed-edge tail, count the growing cubic corridor, and optimize a cutoff exponent below one half.",
+        "Factor the missing moment input into a uniform local fifth Gibbs moment, a one-site quartic elliptic embedding, and a simultaneous all-bond fifth graph propagation theorem on one common form-C1 core.",
+        "Test the proposed all-order graph shortcut and static-moment shortcut on exact two-level normalized-energy families.",
+        "Compress the exact two-site oscillator edge into aligned, misaligned and high sectors without discarding the generally nonzero aligned--misaligned cross term, then apply parity-sector min--max.",
+        "Derive an independent relative-form lower bound, correct the exact rational fixture, and remove only nested parity-preserving Ritz form cutoffs on a quartic form core."
+      ],
+      "next_action": "Prove the translate/source/volume-uniform local fifth Gibbs moment and one-site elliptic embedding, then establish simultaneous all-bond fifth graph propagation on one common form-C1 core. Separately construct a many-edge quasi-local rank-two oscillator elimination and prove phasewise lattice coercivity.",
+      "provenance": "contemporaneous",
+      "question": "Can R-167 v2.0 be advanced by identifying an exact fixed-order history-moment endpoint and by proving a cutoff-uniform full-oscillator edge doublet without mistaking either local result for common alpha or a many-edge GNS gap?",
+      "recorded_at": "2026-08-11T10:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000809",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000806",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-11",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Close the twentieth-moment corridor implication and the full-oscillator local-edge parity cluster",
+      "verdict": "advanced"
+    },
+    {
+      "boundary": "This is R-168 v1.2, a claim-nonbearing T0 additive result. It creates no candidate, physical law, state/reference realization, control or response map, error-controlled prediction, target, commitment, remote freeze, score or selection. It is not a no-go for a fully specified physical probe and does not advance C6, CP1, physical Sector A, or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The nonidentifiability theorem is an exact finite-regulator boundary on the current linear probe, and the minimum schema is a reusable fail-closed syntax/binding contract. Neither creates a physical candidate, chooses a contact law, validates a response map or replaces the external prospective protocol, so the physical-response and Round-1 parents remain open.",
+      "evidence_refs": [
+        "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json#m2_linear_probe_second_order_response_nonidentifiability",
+        "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json#m2_physical_response_successor_minimum_contract_schema",
+        "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json#m2_physical_response_successor_minimum_contract_hostile_fixtures",
+        "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md#16-r-168-v12-fixed-linear-probe-nonidentifiability-theorem",
+        "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md#18-hardened-minimum-physical-helicity-response-successor-contract",
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py#L1",
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py#L1"
+      ],
+      "finding": "At finite regulated volume, H_d(t,J)=H(t)-JQ+(V/2)d(t)J^2 I preserves the zero-source Hamiltonian and first source derivative while shifting the registered positive normalized helicity curvature by +d(t), or conventional scalar susceptibility by -d(t). The exact fixture has curvature difference 6/7. Thus a scalar linear probe alone does not identify physical second-order response. The hardened successor schema validates only exact syntax and declared artifact binding: it rejects the frozen hostile and deterministic fuzz matrices without accepted malformed cases or escaping exceptions, but it neither certifies physical semantics nor supplies a prospective external freeze.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE"
+        ],
+        "results": [
+          "R-168"
+        ]
+      },
+      "gate_ids": [
+        "PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY",
+        "PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA",
+        "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-000812",
+      "method": [
+        "Add an arbitrary target-blind scalar quadratic contact to a fixed linear source family and derive the exact finite-beta free-energy and stable-ground-branch curvature shifts with explicit sign conventions.",
+        "Recompute a rational two-level fixture with independent Fraction and normalized integer-cross-product engines.",
+        "Specify the minimum successor record with exact root and artifact-reference fields, canonical rational grammar, structured physical contracts, six error terms, common inputs, all hard rows, verifier roles and prospective firewall.",
+        "Adversarially test exact positive and reordered fixtures, declared hostile classes, deterministic JSON-realistic fuzz, Any-input malformed containers, path aliases and errors, rational parity, token firewall and result-key/container mutations in primary and non-importing independent validators."
+      ],
+      "next_action": "Derive and justify an actual second-order source/contact law, compact or gauge action, state/reference realization, physical-control and response maps, limit order and all six error bounds; rerun every hard row, then obtain and independently verify a genuinely prospective external commitment and freeze.",
+      "provenance": "contemporaneous",
+      "question": "Does the fixed scalar Lane-Q linear source determine a second-order physical response, and what minimum fail-closed machine contract must any honest M2 physical-response successor satisfy?",
+      "recorded_at": "2026-08-11T10:01:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000810",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000808",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-11",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Prove linear-probe response nonidentifiability and harden the minimum M2 successor contract",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -86690,6 +86943,280 @@
         "R-167": "explicit_result_id",
         "R-168": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260811-r-167-v2-1-closes-the-conditional-twentieth-mom",
+      "date": "2026-08-11",
+      "header": "[R-167 v2.1 closes the conditional twentieth-moment corridor and local full-oscillator edge cluster] - 2026-08-11",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-000811",
+        "R-167"
+      ],
+      "keywords": [
+        "Pre-A",
+        "Q3LOCK",
+        "R-167",
+        "Ritz-cutoff",
+        "parity-doublet",
+        "twentieth-moment",
+        "v2.1"
+      ],
+      "negative_results": [
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
+        "NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT"
+      ],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md"
+      ],
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_verify.py"
+      ],
+      "raw": "## [R-167 v2.1 closes the conditional twentieth-moment corridor and local full-oscillator edge cluster] - 2026-08-11\n\nEXP-000811 advances R-167 to v2.1 at T0. A uniform translate- and orientation-resolved two-orientation twentieth endpoint-coordinate history moment implies the fixed-edge hard tail and the growing corridor at L=R^(2/5), but the moment itself is not proved. The exact local fifth Gibbs/elliptic and simultaneous-bond fifth-graph inputs are registered OPEN. Independently, the full two-site oscillator edge has exactly one even and one odd low eigenvalue separated from the rest under the stated min--max or relative-form positivity corridor; the corrected d2=-1/1000 fixture gives exact positive rational bounds, and nested parity-preserving Ritz form restrictions remove the onsite spectral cutoff. This local theorem is not a many-edge block diagonalization, QPS transfer or oscillator GNS gap. Common alpha, all rank-two oscillator and broken-sector gap parents, physical Sector A and Pre-A remain OPEN. No v2.1 PDF is issued in this theorem-only event.\n\n",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000811",
+        "R-167"
+      ],
+      "result_ids": [
+        "R-167"
+      ],
+      "linked_result_ids": [
+        "R-167"
+      ],
+      "result_link_basis": {
+        "R-167": "explicit_result_id"
+      }
+    },
+    {
+      "id": "20260811-r-168-v1-2-proves-linear-probe-response-noniden",
+      "date": "2026-08-11",
+      "header": "[R-168 v1.2 proves linear-probe response nonidentifiability and hardens the minimum successor schema] - 2026-08-11",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-000812",
+        "R-168"
+      ],
+      "keywords": [
+        "M2",
+        "Pre-A",
+        "R-168",
+        "nonidentifiability",
+        "physical-response",
+        "schema",
+        "v1.2"
+      ],
+      "negative_results": [
+        "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE"
+      ],
+      "notes": [
+        "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json",
+        "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md"
+      ],
+      "scripts": [
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py",
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py",
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py"
+      ],
+      "raw": "## [R-168 v1.2 proves linear-probe response nonidentifiability and hardens the minimum successor schema] - 2026-08-11\n\nEXP-000812 advances R-168 to v1.2 at T0. At finite regulated volume, a target-blind scalar quadratic contact leaves the zero-source Hamiltonian and fixed linear source derivative unchanged while shifting normalized second response by an arbitrary declared d(t); the exact rational fixture gives shift 6/7. Thus the scalar linear probe alone does not identify physical stiffness or helicity response, without implying a no-go for a fully specified probe. The hardened minimum successor schema closes only exact syntax and declared artifact binding. Its synthetic fixture and validators create no candidate, physical law, state/reference realization, control or response map, error-controlled prediction or prospective freeze. The physical-response/error and Round-1 parents, physical Sector A and Pre-A remain OPEN. No v1.2 PDF is issued in this theorem-only event.\n\n",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000812",
+        "R-168"
+      ],
+      "result_ids": [
+        "R-168"
+      ],
+      "linked_result_ids": [
+        "R-168"
+      ],
+      "result_link_basis": {
+        "R-168": "explicit_result_id"
+      }
+    },
+    {
+      "id": "20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s",
+      "date": "2026-08-11",
+      "header": "[R-167 v2.1 and R-168 v1.2 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-000811",
+        "EXP-000812",
+        "R-167",
+        "R-168"
+      ],
+      "keywords": [
+        "PDF",
+        "R-167-v2.1",
+        "R-168-v1.2",
+        "dual-extraction",
+        "gate-level-synthesis",
+        "no-parent-closure",
+        "visual-QA"
+      ],
+      "negative_results": [],
+      "notes": [
+        "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt",
+        "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md",
+        "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md"
+      ],
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_verify.py",
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py",
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py",
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py"
+      ],
+      "raw": "## [R-167 v2.1 and R-168 v1.2 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11\n\nEXP-000811 / R-167 v2.1 and EXP-000812 / R-168 v1.2 now share one issued gate-level synthesis source/PDF pair. The source is claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt with raw SHA-256 2aaac57e3be3f4bcd85f661db5e8e04fd82ae37de8ef6d0e353cdf27f0ff78d8. The sibling 13-page PDF is claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf with raw SHA-256 320bf38c98d5a02a52ecdee94e088210f548c7dfec934888e8b007b68092bf87.\n\nNo per-lemma or intermediate PDF was issued. The single combined checkpoint was issued only after primary, non-importing independent, integrated, formal-authority, generated-surface, source-form, dual-extraction, and visual-review checks. R-167 counts are 209/209 primary, 138/138 independent, and 251/251 integrated. R-168 counts are 340/340 primary, 361/361 independent, and 288/288 integrated.\n\nThe six script pins are: codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split.py at 7162e22fe04eac53e7fe8adf3fb0d77a8f7374c70a5bcb3e5f96c06a53d7b868; codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py at 6d46d3fea15dc17f1f783ac8a04d1f08f7c2c2ae2dea50fa809fee3f2b345104; codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_verify.py at aa2b292cb37850c68b9b6cd1479798cc4effc3647313b26770707b131eb9413a; codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py at 78dd5b2bc79efe26e16f42f7c1f49ee93d550d8a9fdb65904f22d89729c7b7ec; codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py at 313d5b76caf43dc0750a2d3cbbda245e1e492d370f9c5be4accd9dc66b25e8f4; and codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py at 95e51f9147e52b14110b85521e698212b50a8fd5d7f70a559eda4fc81e88db52.\n\nPypdf and pdfplumber each extracted 13/13 nonempty pages. All 13 rendered pages were visually reviewed with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions, and the build reported OVERFULL-HBOX 0. This issues only the scoped R-167 v2.1 and R-168 v1.2 child results. The common-alpha, many-edge rank-two/QPS, broken-sector GNS-gap, physical-response, prospective-freeze, Round-1, C6, CP1, physical Sector A, and Pre-A parents remain OPEN; there is no parent closure.\n\n",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000811",
+        "EXP-000812",
+        "R-167",
+        "R-168"
+      ],
+      "result_ids": [
+        "R-167",
+        "R-168"
+      ],
+      "linked_result_ids": [
+        "R-167",
+        "R-168"
+      ],
+      "result_link_basis": {
+        "R-167": "explicit_result_id",
+        "R-168": "explicit_result_id"
+      }
+    },
+    {
+      "id": "20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f",
+      "date": "2026-08-11",
+      "header": "[R-167 v2.1 and R-168 v1.2 combined checkpoint final hash correction after integrated normalization] - 2026-08-11",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-000811",
+        "EXP-000812",
+        "R-167",
+        "R-168"
+      ],
+      "keywords": [
+        "R-167-v2.1",
+        "R-168-v1.2",
+        "freshness",
+        "hash-correction",
+        "integrated-normalization",
+        "no-parent-closure"
+      ],
+      "negative_results": [],
+      "notes": [
+        "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt",
+        "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md",
+        "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md"
+      ],
+      "scripts": [
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py"
+      ],
+      "raw": "## [R-167 v2.1 and R-168 v1.2 combined checkpoint final hash correction after integrated normalization] - 2026-08-11\n\nThis correction explicitly supersedes only the hash triple recorded by event 20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s (event 598). The superseded triple is source SHA-256 2aaac57e3be3f4bcd85f661db5e8e04fd82ae37de8ef6d0e353cdf27f0ff78d8, PDF SHA-256 320bf38c98d5a02a52ecdee94e088210f548c7dfec934888e8b007b68092bf87, and R-168 integrated-script SHA-256 95e51f9147e52b14110b85521e698212b50a8fd5d7f70a559eda4fc81e88db52.\n\nThe final triple is source SHA-256 5562d3446707f7bffb04d59d5114a5d95542dac446518a62e277b98ce702f686, PDF SHA-256 ebbfcd3dda5bcfaa2f1a50ab2e6ea45670f3334f78f21acd1ade7a7838190927, and R-168 integrated-script SHA-256 be735f01b7e42a9a71b5f92b73acfcfe9366679ec77300eb0ae6a69b39c18556. Paths are unchanged: claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt and its sibling PDF.\n\nThe change was required because the R-168 integrated verifier's syntax-fixture assertion hash needed normalization to the final same-file freshness value. Only that integrated script and the corresponding one hash line in the already-issued synthesis source changed; the PDF was rebuilt from that final source. The source/PDF remain 13 pages, pypdf and pdfplumber each extract 13/13 nonempty pages, all rendered pages remain visually clean with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed transitions, and the build remains OVERFULL-HBOX 0.\n\nThe other five script hashes remain unchanged: R-167 primary 7162e22fe04eac53e7fe8adf3fb0d77a8f7374c70a5bcb3e5f96c06a53d7b868, R-167 independent 6d46d3fea15dc17f1f783ac8a04d1f08f7c2c2ae2dea50fa809fee3f2b345104, R-167 integrated aa2b292cb37850c68b9b6cd1479798cc4effc3647313b26770707b131eb9413a, R-168 primary 78dd5b2bc79efe26e16f42f7c1f49ee93d550d8a9fdb65904f22d89729c7b7ec, and R-168 independent 313d5b76caf43dc0750a2d3cbbda245e1e492d370f9c5be4accd9dc66b25e8f4. All verification counts remain unchanged: R-167 209/209, 138/138, 251/251 and R-168 340/340, 361/361, 288/288.\n\nThis is a provenance and freshness correction only. It adds no theorem, candidate, response law, prediction, freeze, score, or selection. The common-alpha, many-edge rank-two/QPS, broken-sector GNS-gap, physical-response, prospective-freeze, Round-1, C6, CP1, physical Sector A, and Pre-A parents remain OPEN; there is no parent closure.\n\n",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000811",
+        "EXP-000812",
+        "R-167",
+        "R-168"
+      ],
+      "result_ids": [
+        "R-167",
+        "R-168"
+      ],
+      "linked_result_ids": [
+        "R-167",
+        "R-168"
+      ],
+      "result_link_basis": {
+        "R-167": "explicit_result_id",
+        "R-168": "explicit_result_id"
+      }
+    },
+    {
+      "id": "20260811-r-167-theorem-event-selector-repair-finalizes-t",
+      "date": "2026-08-11",
+      "header": "[R-167 theorem-event selector repair finalizes the v2.1 and v1.2 checkpoint hashes] - 2026-08-11",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-000811",
+        "EXP-000812",
+        "R-167",
+        "R-168"
+      ],
+      "keywords": [
+        "R-167-v2.1",
+        "R-168-v1.2",
+        "freshness",
+        "hash-correction",
+        "no-parent-closure",
+        "theorem-event-selector"
+      ],
+      "negative_results": [],
+      "notes": [
+        "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt",
+        "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md",
+        "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md"
+      ],
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_verify.py"
+      ],
+      "raw": "## [R-167 theorem-event selector repair finalizes the v2.1 and v1.2 checkpoint hashes] - 2026-08-11\n\nThis correction explicitly supersedes event 20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f (event 599) for the source/PDF/R-167-integrated hash triple. The superseded triple is source SHA-256 5562d3446707f7bffb04d59d5114a5d95542dac446518a62e277b98ce702f686, PDF SHA-256 ebbfcd3dda5bcfaa2f1a50ab2e6ea45670f3334f78f21acd1ade7a7838190927, and R-167 integrated-script SHA-256 aa2b292cb37850c68b9b6cd1479798cc4effc3647313b26770707b131eb9413a.\n\nThe final triple is source SHA-256 b5e21a1aa14492947fa2b0aa4a04d14e89bdc58dc862a77cb273a5905d3d5827, PDF SHA-256 a535317888cb712e06a15ef06aa9fef25b317d18830c69235cb798130987d4aa, and R-167 integrated-script SHA-256 a62c23ca36ad7806800c83ed3821c92eb42a68fee3be1948aed6c0855385473f. Paths are unchanged: claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt and its sibling PDF.\n\nThe repair narrows the R-167 integrated theorem-event selector so that append-only hash-correction roles are excluded from theorem-bearing event selection. A provenance-only correction event therefore cannot be mistaken for the theorem event it corrects. Only the R-167 integrated verifier and the corresponding one hash line in the issued synthesis source changed; the PDF was rebuilt from that final source. The source/PDF remain 13 pages, pypdf and pdfplumber each extract 13/13 nonempty pages, all rendered pages remain visually clean with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed transitions, and the build remains OVERFULL-HBOX 0.\n\nR-168 integrated remains be735f01b7e42a9a71b5f92b73acfcfe9366679ec77300eb0ae6a69b39c18556. The other four component hashes remain unchanged: R-167 primary 7162e22fe04eac53e7fe8adf3fb0d77a8f7374c70a5bcb3e5f96c06a53d7b868, R-167 independent 6d46d3fea15dc17f1f783ac8a04d1f08f7c2c2ae2dea50fa809fee3f2b345104, R-168 primary 78dd5b2bc79efe26e16f42f7c1f49ee93d550d8a9fdb65904f22d89729c7b7ec, and R-168 independent 313d5b76caf43dc0750a2d3cbbda245e1e492d370f9c5be4accd9dc66b25e8f4. All verification counts remain unchanged: R-167 209/209, 138/138, 251/251 and R-168 340/340, 361/361, 288/288.\n\nThis is a provenance-selector and freshness correction only. It adds no theorem, candidate, response law, prediction, freeze, score, or selection. The common-alpha, many-edge rank-two/QPS, broken-sector GNS-gap, physical-response, prospective-freeze, Round-1, C6, CP1, physical Sector A, and Pre-A parents remain OPEN; there is no parent closure.\n\n",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000811",
+        "EXP-000812",
+        "R-167",
+        "R-168"
+      ],
+      "result_ids": [
+        "R-167",
+        "R-168"
+      ],
+      "linked_result_ids": [
+        "R-167",
+        "R-168"
+      ],
+      "result_link_basis": {
+        "R-167": "explicit_result_id",
+        "R-168": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -87398,7 +87925,7 @@
       "owner": "Codex",
       "claim": null,
       "gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
-      "note": "EXP-000809 / R-167 v2.0 closes only the finite-Gibbs resummation, fixed-edge corridor reduction, global Feshbach precursor and compressed-spin phase theorem. Live parents remain PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA, PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY, PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS and PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE. EXP-000810 / R-168 v1.1 proves current-version and map-only survivor emptiness plus the 48-component Gaussian M2 fingerprint; PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND remains open. Next: prove the actual fixed-edge onsite-interspersed history bound and split limit; build a quasi-local rank-two oscillator elimination and phasewise gap transfer; derive the M2 physical response/error budget; and obtain the external prospective freeze with common inputs and cryptographic remote verification. No candidate, prediction, physical Sector A result or Pre-A closure.",
+      "note": "EXP-000811 / R-167 v2.1 closes only the conditional two-orientation twentieth-history-moment fixed-edge corridor implication and the local full-oscillator edge parity-doublet/Ritz-cutoff theorem. Its translate-uniform local fifth Gibbs/elliptic and simultaneous-bond fifth-graph inputs are OPEN; common alpha, many-edge rank-two QPS transfer and the oscillator GNS gap remain OPEN. EXP-000812 / R-168 v1.2 closes only finite-regulator linear-probe second-order-response nonidentifiability and a synthetic minimum successor syntax/declared-binding schema. The actual M2 physical response/error budget, common inputs, admitted map/prediction and external prospective freeze remain OPEN. Next: prove the two R-167 input gates, then the thermodynamic rank-two/gap transfer; independently build and prospectively freeze a fully specified M2 physical response successor. No candidate, prediction, physical Sector A result or Pre-A closure. Exact OPEN IDs retained: PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA; PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY; PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS; PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE; PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING; PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION.",
       "created": "2026-08-02",
       "updated": "2026-08-11",
       "blocked_by": [],
@@ -91195,6 +91722,12 @@
         "authority": "CHANGELOG.md"
       },
       {
+        "id": "event:20260811-r-167-theorem-event-selector-repair-finalizes-t",
+        "kind": "accepted_event",
+        "label": "[R-167 theorem-event selector repair finalizes the v2.1 and v1.2 checkpoint hashes] - 2026-08-11",
+        "authority": "CHANGELOG.md"
+      },
+      {
         "id": "event:20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte",
         "kind": "accepted_event",
         "label": "[R-167 v1.7 gate-level synthesis PDF issued after strict proof validation] - 2026-08-11",
@@ -91255,6 +91788,24 @@
         "authority": "CHANGELOG.md"
       },
       {
+        "id": "event:20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f",
+        "kind": "accepted_event",
+        "label": "[R-167 v2.1 and R-168 v1.2 combined checkpoint final hash correction after integrated normalization] - 2026-08-11",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s",
+        "kind": "accepted_event",
+        "label": "[R-167 v2.1 and R-168 v1.2 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260811-r-167-v2-1-closes-the-conditional-twentieth-mom",
+        "kind": "accepted_event",
+        "label": "[R-167 v2.1 closes the conditional twentieth-moment corridor and local full-oscillator edge cluster] - 2026-08-11",
+        "authority": "CHANGELOG.md"
+      },
+      {
         "id": "event:20260811-r-168-v1-0-freezes-the-prospective-holdout-sche",
         "kind": "accepted_event",
         "label": "[R-168 v1.0 freezes the prospective holdout schema and audits current-tree non-readiness] - 2026-08-11",
@@ -91270,6 +91821,12 @@
         "id": "event:20260811-r-168-v1-1-proves-current-version-map-emptiness",
         "kind": "accepted_event",
         "label": "[R-168 v1.1 proves current-version map emptiness and the finite-torus M2 fingerprint] - 2026-08-11",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260811-r-168-v1-2-proves-linear-probe-response-noniden",
+        "kind": "accepted_event",
+        "label": "[R-168 v1.2 proves linear-probe response nonidentifiability and hardens the minimum successor schema] - 2026-08-11",
         "authority": "CHANGELOG.md"
       },
       {
@@ -96133,6 +96690,18 @@
         "authority": "explorations/log.jsonl"
       },
       {
+        "id": "exploration:EXP-000811",
+        "kind": "proof_exploration",
+        "label": "Close the twentieth-moment corridor implication and the full-oscillator local-edge parity cluster",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000812",
+        "kind": "proof_exploration",
+        "label": "Prove linear-probe response nonidentifiability and harden the minimum M2 successor contract",
+        "authority": "explorations/log.jsonl"
+      },
+      {
         "id": "gate:A1-KERNEL-CONV",
         "kind": "hypothesis",
         "label": "A1-KERNEL-CONV",
@@ -96535,6 +97104,12 @@
         "authority": "claims/GATES.md#pa-cp1-st8-q3lock-full-hamiltonian-two-orientation-static-gibbs-cutoff-unitary-resummation"
       },
       {
+        "id": "gate:PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
+        "kind": "gate",
+        "label": "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
+        "authority": "claims/GATES.md#pa-cp1-st8-q3lock-full-oscillator-edge-block-parity-doublet-cluster-and-uniform-onsite-spectral-cutoff-removal"
+      },
+      {
         "id": "gate:PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
         "kind": "gate",
         "label": "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
@@ -96607,6 +97182,24 @@
         "authority": "claims/GATES.md#pa-cp1-st8-q3lock-semiclassical-onsite-doublet-and-exact-low-band-tfim-compression"
       },
       {
+        "id": "gate:PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
+        "kind": "gate",
+        "label": "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
+        "authority": "claims/GATES.md#pa-cp1-st8-q3lock-simultaneous-bond-shear-fifth-graph-propagation"
+      },
+      {
+        "id": "gate:PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
+        "kind": "gate",
+        "label": "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
+        "authority": "claims/GATES.md#pa-cp1-st8-q3lock-translate-uniform-local-fifth-gibbs-moment-and-elliptic-embedding"
+      },
+      {
+        "id": "gate:PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION",
+        "kind": "gate",
+        "label": "PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION",
+        "authority": "claims/GATES.md#pa-cp1-st8-q3lock-two-orientation-twentieth-moment-fixed-edge-corridor-reduction"
+      },
+      {
         "id": "gate:PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS",
         "kind": "gate",
         "label": "PA-CP1-ST8-Q3LOCK-UNIVERSAL-ORBIT-SMEAR-DISTINCT-ALGEBRAIC-GROUND-DOUBLETS",
@@ -96625,10 +97218,22 @@
         "authority": "claims/GATES.md#pa-m2-ci8-finite-torus-gaussian-dispersion-fingerprint"
       },
       {
+        "id": "gate:PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY",
+        "kind": "gate",
+        "label": "PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY",
+        "authority": "claims/GATES.md#pa-m2-ci8-linear-probe-second-order-response-nonidentifiability"
+      },
+      {
         "id": "gate:PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
         "kind": "gate",
         "label": "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
         "authority": "claims/GATES.md#pa-m2-ci8-physical-response-channel-and-error-bound"
+      },
+      {
+        "id": "gate:PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA",
+        "kind": "gate",
+        "label": "PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA",
+        "authority": "claims/GATES.md#pa-m2-ci8-physical-response-successor-minimum-contract-schema"
       },
       {
         "id": "gate:PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
@@ -98617,6 +99222,12 @@
         "authority": "negative-results/registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-onsite-qp-lipschitz-stability"
       },
       {
+        "id": "negative:NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE",
+        "kind": "no_go",
+        "label": "identify a physical helicity or stiffness response from the scalar Lane-Q linear source alone",
+        "authority": "negative-results/registry.md#ng-2026-08-11-pre-a-m2-lane-q-linear-source-automatic-physical-stiffness-response"
+      },
+      {
         "id": "negative:NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
         "kind": "no_go",
         "label": "issue an actual prospective Round-1 holdout from the audited registered checkpoint",
@@ -98687,6 +99298,18 @@
         "kind": "no_go",
         "label": "infer the required fixed-edge history tail from static Gaussianity, endpoint symmetry and all finite moments",
         "authority": "negative-results/registry.md#ng-2026-08-11-pre-a-st8-q3lock-static-gaussian-symmetry-finite-moment-automatic-fixed-edge-history-tail"
+      },
+      {
+        "id": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
+        "kind": "no_go",
+        "label": "infer the uniform two-orientation twentieth history moment from static exponential-coordinate and fixed energy moments plus low-rung graph control",
+        "authority": "negative-results/registry.md#ng-2026-08-11-pre-a-st8-q3lock-static-moments-and-low-graph-automatic-twentieth-history-moment"
+      },
+      {
+        "id": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
+        "kind": "no_go",
+        "label": "infer a universal quadratic or polynomial-in-order bound for every normalized bond-shear graph moment from abstract positive-energy structure",
+        "authority": "negative-results/registry.md#ng-2026-08-11-pre-a-st8-q3lock-uniform-quadratic-in-m-all-moment-bond-shear-graph-transport"
       },
       {
         "id": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE",
@@ -109977,6 +110600,24 @@
         "basis": "explicit_result_id"
       },
       {
+        "from": "event:20260811-r-167-theorem-event-selector-repair-finalizes-t",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260811-r-167-theorem-event-selector-repair-finalizes-t",
+        "relation": "records_result",
+        "to": "result:R-167",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260811-r-167-theorem-event-selector-repair-finalizes-t",
+        "relation": "records_result",
+        "to": "result:R-168",
+        "basis": "explicit_result_id"
+      },
+      {
         "from": "event:20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte",
         "relation": "records",
         "to": "claim:C6-SPACETIME-SIGNATURE",
@@ -110271,6 +110912,66 @@
         "basis": "explicit_result_id"
       },
       {
+        "from": "event:20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f",
+        "relation": "records_result",
+        "to": "result:R-167",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f",
+        "relation": "records_result",
+        "to": "result:R-168",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s",
+        "relation": "records_result",
+        "to": "result:R-167",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s",
+        "relation": "records_result",
+        "to": "result:R-168",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260811-r-167-v2-1-closes-the-conditional-twentieth-mom",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260811-r-167-v2-1-closes-the-conditional-twentieth-mom",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260811-r-167-v2-1-closes-the-conditional-twentieth-mom",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260811-r-167-v2-1-closes-the-conditional-twentieth-mom",
+        "relation": "records_result",
+        "to": "result:R-167",
+        "basis": "explicit_result_id"
+      },
+      {
         "from": "event:20260811-r-168-v1-0-freezes-the-prospective-holdout-sche",
         "relation": "records",
         "to": "claim:C6-SPACETIME-SIGNATURE",
@@ -110320,6 +111021,24 @@
       },
       {
         "from": "event:20260811-r-168-v1-1-proves-current-version-map-emptiness",
+        "relation": "records_result",
+        "to": "result:R-168",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260811-r-168-v1-2-proves-linear-probe-response-noniden",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260811-r-168-v1-2-proves-linear-probe-response-noniden",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260811-r-168-v1-2-proves-linear-probe-response-noniden",
         "relation": "records_result",
         "to": "result:R-168",
         "basis": "explicit_result_id"
@@ -145755,6 +146474,156 @@
         "basis": "structured_formal_ref"
       },
       {
+        "from": "exploration:EXP-000811",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "assesses_gate",
+        "to": "gate:PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "assesses_gate",
+        "to": "gate:PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "assesses_gate",
+        "to": "gate:PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "assesses_gate",
+        "to": "gate:PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "assesses_gate",
+        "to": "gate:PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "assesses_gate",
+        "to": "gate:PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "assesses_gate",
+        "to": "gate:PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "assesses_gate",
+        "to": "gate:PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "continues",
+        "to": "exploration:EXP-000806",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "continues",
+        "to": "exploration:EXP-000809",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "records_task",
+        "to": "task:T-054",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000811",
+        "relation": "references_result",
+        "to": "result:R-167",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000812",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000812",
+        "relation": "assesses_gate",
+        "to": "gate:PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000812",
+        "relation": "assesses_gate",
+        "to": "gate:PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000812",
+        "relation": "assesses_gate",
+        "to": "gate:PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000812",
+        "relation": "assesses_gate",
+        "to": "gate:PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000812",
+        "relation": "continues",
+        "to": "exploration:EXP-000808",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000812",
+        "relation": "continues",
+        "to": "exploration:EXP-000810",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000812",
+        "relation": "records_task",
+        "to": "task:T-054",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000812",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000812",
+        "relation": "references_result",
+        "to": "result:R-168",
+        "basis": "structured_formal_ref"
+      },
+      {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
         "relation": "bears_on",
         "to": "claim:B1-RH-ENUM",
@@ -147771,6 +148640,12 @@
         "basis": "explicit_negative_event:20260810-advance-r-167-to-v1-3-and-reject-the-fixed-crit"
       },
       {
+        "from": "negative:NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE",
+        "relation": "bears_on",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_negative_event:20260811-r-168-v1-2-proves-linear-probe-response-noniden"
+      },
+      {
         "from": "negative:NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
         "relation": "bears_on",
         "to": "claim:C6-SPACETIME-SIGNATURE",
@@ -147835,6 +148710,18 @@
         "relation": "bears_on",
         "to": "claim:C6-SPACETIME-SIGNATURE",
         "basis": "explicit_negative_event:20260811-r-167-v2-0-resums-finite-gibbs-cutoffs-and-sepa"
+      },
+      {
+        "from": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
+        "relation": "bears_on",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_negative_event:20260811-r-167-v2-1-closes-the-conditional-twentieth-mom"
+      },
+      {
+        "from": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
+        "relation": "bears_on",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_negative_event:20260811-r-167-v2-1-closes-the-conditional-twentieth-mom"
       },
       {
         "from": "negative:NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE",

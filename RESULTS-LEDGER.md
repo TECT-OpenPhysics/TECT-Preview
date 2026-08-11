@@ -22,8 +22,8 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-168](#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | R-168 v1.1 is a scoped T0 exact/executed/audited additive result under EXP-000810. It retains the v1.0 protocol and 28-class hardened validator, proves that the exact current M1/M2/M5 map-only admitted set and every map-only all-PASS survivor set are empty, and closes an exact 48-component all-one finite-torus Gaussian M2 fingerprint. The physical response/error gate, actual candidate/map/prediction/freeze, external commitment, cryptographic remote verification, physical Sector A and Pre-A remain open |
-| [R-167](#r-167) | Weighted-energy, common-dynamics topology, orbit-smear carrier, local-strict and ground-gap route split | R-167 v2.0 is a scoped T0 analytic/exact/executed/audited additive result under EXP-000809. It retains v1.0--v1.9 and adds finite-Gibbs full-Hamiltonian two-orientation cutoff resummation, a fixed-bond-to-growing-corridor reduction, a below-Gamma global Feshbach/relative-form precursor, and the exact compressed finite-spin TFIM two-phase phasewise-gap theorem. Arbitrary contexts, the actual Q3 fixed-edge history input, common alpha, quasi-local oscillator block/QPS transfer and the oscillator GNS gap remain open; continuum, physical-empty comparison, C6, CP1, physical Sector A and Pre-A remain open |
+| [R-168](#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | R-168 v1.2 is a scoped T0 exact/executed/audited additive result under EXP-000812. It retains v1.0--v1.1, proves that a fixed linear scalar probe does not identify a second-order physical response before the quadratic contact and normalization are frozen, and closes a hardened minimum successor syntax/declared-binding schema. It creates no physical candidate, response law/map, prediction or freeze; the physical-response, Round-1, physical Sector A and Pre-A gates remain open |
+| [R-167](#r-167) | Weighted-energy, common-dynamics topology, orbit-smear carrier, local-strict and ground-gap route split | R-167 v2.1 is a scoped T0 analytic/exact/executed/audited additive result under EXP-000811. It retains v1.0--v2.0 and adds a conditional twentieth-history-moment fixed-edge corridor reduction plus a full-oscillator local-edge parity-doublet cluster with nested Ritz form-cutoff removal. The actual fifth Gibbs/elliptic and fifth-graph inputs, common alpha, quasi-local rank-two QPS transfer and oscillator GNS gap remain open; continuum, C6, CP1, physical Sector A and Pre-A remain open |
 | [R-166](#r-166) | Sparse production radial-Gram decomposition and global owner bound | Scoped T4 analytic/exact/executed/audited production-fibre theorem, strengthened in v1.1 without a new result ID. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / single fresh-`4p` R-153 fibre, the exact Fierz split, Pauli nonresonance, radial bounds and direct coefficient inequality give an explicit rational polynomial whose unique global minimum lies in `70<G_*<71` and is `-4/5+18740524635403/439505584128000>-4/5`. Thus the owner plus source Hessian is strictly above `1/10`, the scoped R-164 reduction permits `rho=3/20`, and the R-165 annulus is closed. Exact simultaneous `sin(4x),sin(8x)` arithmetic gives Gram `[[5/4,1],[1,3/2]]` and ratio `3/8` at `(1,-1)`, registering that the coefficient-one lemma cannot be copied rootwise. Primary `40/40` and independent Fraction `37/37` audits pass. The complete joint owner, nonlinear/revisit feedback, low variables, removal, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-165](#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | Scoped T4 analytic/exact/executed/audited production-fibre theorem. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / fresh-`4p` R-153 fibre, whitened past amplitude `G` and final direction `alpha` obey `K_owner(g)[alpha,alpha] >= P(G)|alpha|^2` for one explicit rational quartic polynomial. A sharp `5/6` Fourier separation lemma, exact A1 covariance enclosures, and R-130 derivative envelopes prove the R-164 owner target `K_owner>=-9I/10` for `0<=G<=21` and `G>=274`, reducing this fibre's noncompact amplitude problem to the bounded open annulus `21<G<274`; its closed certification domain `21<=G<=274` is compact. Primary `38/38` and independent Fraction `30/30` audits pass; the deterministic five-page PDF passed all-page visual QA. The open annulus, other harmonics and roots, cross blocks, nonlinear/revisit feedback, low variables, regulator/removal uniformity, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-164](#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | Scoped T4 analytic/exact/executed/audited direct-chart theorem. For every finite R-104 zero-control chart, the R-141 legal force is the orthogonal projection of the complete centered terminal scalar onto predictable first Gaussian chaos, so its squared source-dual norm is at most the scalar variance with sharp constant one. A7 `L2` convergence and the A1/A11 point-covariance trace give a cutoff-, chart-length-, and linear/isometric-refinement-uniform bound on that variance along the registered sharp-cube/dyadic sequence. A7 centering also makes the direct anchor nonnegative. Therefore a complete direct owner bound `K_owner>=-(10/11-rho)G_src` yields `mu=-1/110+rho`, `epsilon_v=max(0,5/11-rho/4)`, `epsilon_6=3/20`, and constant `B_*/rho`, without separate anchor or origin-force assumptions. The complete production owner, nonzero feedback, shifted low base, arbitrary graph metric transport, random/nonlinear/revisit/pathwise scope, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
@@ -197,10 +197,11 @@ policy in `governance/development-history.md`.
 **Result ID.**
 `PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT`.
 
-**Version.** R-168 v1.1 is established by `EXP-000810`. It retains
-`EXP-000807` v1.0 and the `EXP-000808` validator repair, then adds two narrowly
-closed mathematical/current-version children and one explicit physical-response
-successor without changing the T0 tier or claim-bearing status.
+**Version.** R-168 v1.2 is established by `EXP-000812`. It retains
+`EXP-000807` v1.0, the `EXP-000808` validator repair and `EXP-000810` v1.1,
+then adds a finite-regulator linear-probe nonidentifiability theorem, a hardened
+minimum successor syntax/declared-binding schema and one scoped negative
+without changing the T0 tier or claim-bearing status.
 
 **Retained v1.0 protocol.** A future Pre-A blind holdout must separate one
 candidate-neutral target estimand and raw-data estimator from every candidate-
@@ -247,18 +248,49 @@ exponents one and two. Neither completion is an admitted map or prediction.
 exactly one. This is finite-torus Gaussian mathematics, not a physical response
 channel or physical dispersion prediction.
 
+**v1.2 linear-probe nonidentifiability theorem.** At finite regulated volume,
+`H_d(t,J)=H(t)-JQ+(V/2)d(t)J^2 I` preserves the zero-source Hamiltonian and
+first source derivative for every admissible `d`. The scalar contact factors
+exactly, so the finite-beta free energy and every stable ground branch shift by
+`(V/2)d(t)J^2`. With the registered positive helicity-curvature convention the
+normalized second response shifts by `+d(t)`; conventional scalar
+susceptibility shifts by `-d(t)`. The exact rational fixture has contact
+free-energy difference `3/25`, Boltzmann exponent shift `-9/50`, stable branch
+indices `[0,0,0]`, curvatures `5/7` and `11/7`, and normalized shift `6/7`.
+Thus the fixed scalar linear probe does not identify the response before the
+quadratic contact, normalization and physical control law are frozen. This is
+not a no-go for a fully specified physical probe.
+
+**v1.2 hardened minimum successor schema.** Schema
+`tect/pre-a-m2-ci8-physical-response-successor-minimum-contract/1.1` requires
+the second-order source/contact law, compact or gauge action, state/reference,
+physical-control and response maps, limit order, prediction, six-term error
+budget, common inputs, every hard-row rerun, proof/run artifact bindings,
+independent validation and prospective firewall. Artifact references are
+repository-confined, case-exact, hash- and role-bound; rational fields use one
+canonical grammar and structured placeholder aliases fail closed. Primary,
+independent and integrated validators accept the synthetic positive and
+reordered fixtures and reject the frozen hostile and deterministic fuzz
+matrices without escaping exceptions. This closes only syntax and declared
+binding. The synthetic fixture creates no candidate, physical semantics,
+external commitment, response map, error proof or prediction.
+
 The hypothetical `PA-M2-CI8-RS-DISPERSION-MAP-v1` is DESIGN_ONLY and
 NOT_CREATED. Its required physical response channel, state/reference/units,
 limit order, six-term error budget, target-blind prospective firewall and
 independent verification remain absent. It creates no candidate, map,
 prediction, target, freeze, tag, score or selection.
 
-R-168 v1.1 closes exactly the four retained v1.0 subgates plus
-`PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET` and
-`PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT`.
+R-168 v1.2 cumulatively retains the four v1.0 subgates and the two v1.1
+children, then adds
+`PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY` and
+`PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA`.
 
 **Open gates.** `PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND` is OPEN.
-The parent `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` remains OPEN,
+No actual second-order source/contact law, compact or gauge action,
+state/reference realization, physical-control map, response map, six-term
+error proof, admitted prediction or prospective external commitment is
+supplied. The parent `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` remains OPEN,
 together with `PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER`,
 `PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT`,
 `PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION`, and
@@ -268,20 +300,24 @@ together with `PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER`,
 `NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE`.
 The v1.1 map-only repair boundary is
 `NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR`.
-Neither is a no-go for a substantively new future candidate and genuinely
+The v1.2 linear-probe boundary is
+`NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE`.
+It rejects automatic physical-response identification from the scalar linear
+source alone, not a fully specified future probe. None of these scoped
+boundaries is a no-go for a substantively new future candidate and genuinely
 prospective external target.
 
-**Boundary.** R-168 v1.1 creates no actual candidate or actual freeze, no physical response map,
+**Boundary.** R-168 v1.2 creates no actual candidate or actual freeze, no physical response law or map,
 error-controlled prediction, target, official freeze record, public commit,
 annotated tag, score or selection. It does not fix nature's functional, prove a
 below-empty sign or physical vacuum, close common Q3LOCK dynamics or its sector
 gap, advance C6 or CP1, or close physical Sector A or Pre-A.
 
-**Proven in:** C6 / [R-168 v1.1 certificate](strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md) and [machine manifest](strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json). The [combined R-167 v1.9 / R-168 v1.0 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf) remain historical v1.0 evidence only. No intermediate R-168 v1.1 PDF was issued during proof-first development; a later combined gate-level checkpoint is separate.
+**Proven in:** C6 / [R-168 v1.2 certificate](strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md) and [machine manifest](strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json). The current [combined R-167 v2.1 / R-168 v1.2 gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt) and [rendered 13-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf) are the issued v1.2 evidence. The earlier [combined R-167 v1.9 / R-168 v1.0 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf), and the [combined R-167 v2.0 / R-168 v1.1 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt) and [10-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf) remain historical evidence only. No per-lemma or intermediate R-168 v1.2 PDF was issued.
 
-**Tier:** T0 (claim-nonbearing scoped schema, current-version admission theorem
-and Gaussian mathematical fingerprint only; no actual holdout, candidate
-selection, physical Sector-A or Pre-A promotion).
+**Tier:** T0 (claim-nonbearing scoped schema, current-version admission,
+Gaussian fingerprint and finite-regulator nonidentifiability theorems only; no
+actual holdout, candidate selection, physical Sector-A or Pre-A promotion).
 
 **Publication target:** Pre-A evidence and validation protocol note.
 
@@ -329,7 +365,11 @@ closing either parent gate. `EXP-000809` establishes R-167 v2.0: it adds the
 finite-Gibbs full-Hamiltonian two-orientation resummation, fixed-edge corridor
 reduction, below-`Gamma` global Feshbach/relative-form precursor and exact
 compressed finite-spin two-phase phasewise-gap theorem, while registering three
-new implication/locality boundaries. It changes no result number or T0 tier.
+new implication/locality boundaries. It changes no result number or T0 tier. `EXP-000811` establishes R-167
+v2.1: it adds the conditional twentieth-history-moment fixed-edge corridor
+reduction and the full-oscillator local-edge parity-doublet cluster with nested
+Ritz form-cutoff removal, while registering two exact input gates and two
+scoped automatic-inference failures. It changes no result number or T0 tier.
 
 **Authority links.** The v1.1 `centered-weight cubic graph` and
 `prescribed-word` heat theorem are recorded under
@@ -418,6 +458,20 @@ finite-spin TFIM at an existentially small transverse ratio. The parents
 `PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS`,
 and `PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY` remain OPEN.
 
+R-167 v2.1 closes exactly two additive children:
+`PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION`
+and
+`PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL`.
+The first is a deterministic implication from a uniform two-orientation
+history moment and does not prove that input. The second is a local two-site
+full-oscillator min--max/relative-form/Ritz theorem and is not a many-edge QPS
+or GNS-gap transfer. The new input gates
+`PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING`
+and
+`PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION` are OPEN.
+The common-alpha, rank-two oscillator/QPS and broken-sector oscillator GNS-gap
+parents remain OPEN.
+
 **Negative-route authorities.** The exact fixed-power star/repeat obstruction
 is registered as
 `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE`.
@@ -465,6 +519,13 @@ The three v2.0 route boundaries are
 `NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL`,
 and
 `NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY`.
+The two v2.1 automatic-inference boundaries are
+`NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT`
+and
+`NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT`.
+The first rejects only an automatic polynomial all-order graph hierarchy, not
+the fixed fifth constant; the second rejects only automatic inference from
+static moments and the explicitly tested low graph range, not Q3 dynamics.
 
 **Statement.** For the exact finite-volume ST8/Q3LOCK Hamiltonian with
 `chi,c,g>0`, `lambda>=0`, bounded source, and centered weight
@@ -928,6 +989,31 @@ gap in each selected compressed phase for existential
 `|delta_eff|/(2J)<epsilon_Y`. It gives no explicit threshold, finite-torus exact
 degeneracy, rank-two oscillator transfer or oscillator GNS gap.
 
+**v2.1 twentieth-moment corridor and full-edge cluster.** For each translated
+edge and both partial-history orientations, a uniform endpoint-coordinate
+moment `M_20` gives the hard tail `c^2 M_20 L^-16` and corridor
+`2916 c^2 M_20 R^6 L^-16`. Choosing `L=R^(2/5)` gives `R^(-2/5)` and remains
+compatible with the separate factorial cutoff. This closes only the
+implication. Its exact sufficient inputs are a volume/source/translate-uniform
+local fifth Gibbs moment and one-site `|q|^10 k^(-5/2)` elliptic bound, plus a
+common-core/form-`C1` simultaneous-bond `K_e^5` graph estimate. Both inputs
+remain OPEN.
+
+For the exact full two-site oscillator edge, the aligned and misaligned
+low-band spaces have diagonal compressions `e_b` and `e_b+2J`, the high
+compression is at least `Gamma/6`, and the low/high coupling is at most
+`epsilon`. The aligned--misaligned cross term generally has norm `|f_b|` and
+is not set to zero. Under the stated positivity condition, parity-sector
+min--max gives exactly one even and one odd eigenvalue below the rest and
+`lambda_3-lambda_2>=g_b-e_b>0`. The corrected rational fixture has
+`d_2=-1/1000`, `e_b=139/1500000`, `J=4/125`, `epsilon=23/6250` and
+`g_b-e_b>=332047248/5188304375`. The independent relative-form bound is
+`(1-alpha)gamma_0-2beta=4430237/234375000`. Nested parity-preserving onsite
+spectral Ritz form restrictions decrease to the full-edge eigenvalues and
+carry these bounds to the full oscillator edge. Truncating `q` before
+squaring, a many-edge linked-cluster transfer and an oscillator GNS gap are
+not proved.
+
 **Boundary.** The v1.6 selected-tangent theorem is fixed-beta and confined to
 the registered source-tangent diagonal nets. Its raw finite-word conclusion
 is scalar-kernel and pointed finite-core Fell/GNS convergence, not globally
@@ -941,9 +1027,11 @@ norm corridor and proves local measured-Renyi sufficiency, but no onsite-
 interspersed local likelihood/tail estimate or split limit. Its onsite doublet
 theorem is fixed-`mu`, small-`h_sc` and existential. R-167 v2.0 adds a finite-
 volume static full-Gibbs theorem, conditional fixed-edge corridor, global
-Feshbach precursor and exact compressed finite-spin phasewise gap. None is the
-missing actual Q3 history input, quasi-local rank-two oscillator elimination or
-oscillator gap. All three R-167 parent gates and
+Feshbach precursor and exact compressed finite-spin phasewise gap. R-167 v2.1
+adds a sharper conditional twentieth-moment corridor and a local full-
+oscillator two-site edge cluster with Ritz form-cutoff removal. None proves the
+missing history moment inputs, common alpha, many-edge quasi-local rank-two
+oscillator elimination or oscillator GNS gap. All three R-167 parent gates and
 `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` remain open. The theorem
 does not prove volume-uniform
 direct projected `D,delta D` locality, a local net, a full canonical
@@ -953,12 +1041,13 @@ removal, continuum, a physical empty/preparation reference, a below-empty
 sign, C6, CP1, physical/full-Class-II Sector A or Pre-A. The published A5
 card remains only its seven-hypothesis T6 conditional composition.
 
-**Proven in:** C6 / [R-167 v2.0 certificate](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md) and [machine manifest](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json). The historical [combined R-167 v1.9 / R-168 v1.0 gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [rendered 15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf) remain v1.9 evidence only. The v1.8 checkpoint remains in [its certificate](strategy/pre-a-cp1-st8-q3lock-renyi-history-os-gap-reduction-route-split-certificate-260811.md), [single gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.tex.txt), and [rendered synthesis PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.pdf). Per the PDF-efficiency protocol, no per-lemma or intermediate v1.9 PDF was issued; the combined pair was issued only after the proof, formal, independent, integrated, source-form and visual-QA layers passed. That v0.8 PDF is historical evidence only and is not v2.0 evidence. No intermediate v2.0 PDF was issued during proof-first development; the later combined R-167 v2.0 / R-168 v1.1 checkpoint is separate.
+**Proven in:** C6 / [R-167 v2.1 certificate](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md) and [machine manifest](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json). The current [combined R-167 v2.1 / R-168 v1.2 gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt) and [rendered 13-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf) are the issued v2.1 evidence. The earlier [combined R-167 v1.9 / R-168 v1.0 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf), the [combined R-167 v2.0 / R-168 v1.1 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt) and [10-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf), and the [R-167 v1.8 synthesis PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.pdf) remain historical evidence only. No per-lemma or intermediate R-167 v2.1 PDF was issued.
 
 **Tier:** T0 (scoped selected-tangent, categorical orbit-smear, finite-region
 local-strict/finite-Gibbs, local-tail and fixed-edge reductions, existential
-onsite doublet, global Feshbach precursor and compressed-spin phase theorem; no
-quasi-local thermodynamic common-alpha, oscillator rank-two QPS, actual
+onsite doublet, global Feshbach precursor, compressed-spin phase theorem and
+local full-oscillator edge cluster; no actual fifth-history input, quasi-local
+thermodynamic common-alpha, many-edge oscillator rank-two QPS, actual
 oscillator GNS gap, Sector-A or Pre-A promotion).
 
 **Publication target:** Pre-A analytic methods note.

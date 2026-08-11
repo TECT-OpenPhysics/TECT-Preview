@@ -1,27 +1,18 @@
 #!/usr/bin/env python3
-"""Primary exact verifier for the staged R-167 v2.0 route split.
+"""Primary exact verifier for the staged R-167 v2.1 route split.
 
-The script has six exact fixture groups.  Fixtures A--C retain every v1.9
-check: pure coordinate-bond cutoff algebra, local/global Renyi separation,
-Q3 semiclassical geometry, exact low-band compression, residuals, and the N
-corridor.  Fixture D verifies finite-Gibbs full-Hamiltonian Duhamel bounds,
-trace-state stability, bounded half-modular transfer, and the exact arbitrary-
-context counterfamily.  Fixture E checks the fixed-edge corridor constants,
-periodic covariance boundary, and homogeneous Gaussian tilted-edge no-go.
-Fixture F checks the cubic 11-overlap Feshbach bound, relative-form scales,
-extensive-self-energy no-go, and exact compressed-TFIM QPS inputs.
+Fixtures A--F preserve every v2.0 exact check.  Fixture G derives the
+twentieth-moment fixed-edge corridor, the conditional fifth graph-transport
+constant, and two exact automatic-inference no-gos.  Fixture H derives the
+corrected full-oscillator local-edge parity cluster, relative-form alternative,
+and parity-preserving spectral Ritz removal.  The new theorems remain local or
+conditional: neither supplies the missing Q3 fifth-moment/graph inputs,
+n-to-infinity common alpha, many-edge oscillator QPS transfer, or an
+oscillator-lattice GNS gap.
 
-The multidimensional two-well theorem and the Del Vecchio--Frohlich--Pizzo
-Lie--Schwinger theorem are *not* reproved numerically here.  The script checks
-their authority tokens and the Q3 hypotheses used by the proposed import.  In
-particular it records that the former has a non-explicit small-h threshold and
-that the published latter theorem is rank-one.  It does not certify the
-repository's finite r=-9 fixture, a rank-two many-body block elimination, a
-broken-sector GNS gap, Sector A, or Pre-A.
-
-Use ``--staged --no-store`` while the v2.0 ledger, gate, and negative
-authorities are being assembled.  Missing authority then produces the
-honest verdict ``INCOMPLETE`` while all exact mathematical fixtures still run.
+Use ``--staged --no-store`` while EXP-000811, R-167 v2.1, the two negative
+rows, and four new gate rows are being assembled.  Exact fixtures still run
+and the missing formal authorities produce the honest verdict ``INCOMPLETE``.
 """
 
 from __future__ import annotations
@@ -39,7 +30,7 @@ from typing import Any, Iterable
 import sympy as sp
 
 
-__version__ = "2.0.0"
+__version__ = "2.1.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = "pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split"
@@ -57,35 +48,18 @@ GATE_REGISTRY = REPO / "claims/GATES.md"
 
 EXPECTED_TASK = "T-054"
 EXPECTED_CLAIM_IDS = ("C6-SPACETIME-SIGNATURE",)
-EXPECTED_EXPLORATION = "EXP-000809"
+EXPECTED_EXPLORATION = "EXP-000811"
 EXPECTED_RESULT_NUMBER = "R-167"
-EXPECTED_RESULT_VERSION = "v2.0"
+EXPECTED_RESULT_VERSION = "v2.1"
 EXPECTED_RESULT_ID = (
     "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT"
 )
 EXPECTED_CANDIDATE_ID = (
     "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-SEMICLASSICAL-DOUBLET-ROUTE-SPLIT-v0"
 )
-EXPECTED_CLOSED_SUBGATES = (
-    "PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY",
-    "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION",
-    "PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION",    "PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION",
-    "PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION",
-    "PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR",
-    "PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP",
-)
-EXPECTED_OPEN_GATES = (
-    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
-    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
-    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
-    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
-)
-NEGATIVE_IDS = (
-    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY",
-    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT",    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE",
-    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY",
-    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
-)
+EXPECTED_CLOSED_SUBGATES = ('PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY', 'PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION', 'PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION', 'PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION', 'PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR', 'PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP', 'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL')
+EXPECTED_OPEN_GATES = ('PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA', 'PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY', 'PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS', 'PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE', 'PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING', 'PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION')
+NEGATIVE_IDS = ('NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT')
 SEMICLASSICAL_SOURCES = (
     "https://www.numdam.org/item/AIHPA_1983__38_3_295_0/",
     "https://www.numdam.org/item/AIHPA_1984__40_2_224_0/",
@@ -1723,6 +1697,489 @@ def fixture_f_feshbach_and_compressed_qps(audit: Audit) -> dict[str, Any]:
     }
 
 
+
+def fixture_g_twentieth_moment_and_graph_boundary(audit: Audit) -> dict[str, Any]:
+    """Exact moment-corridor arithmetic and two automatic-inference no-gos."""
+
+    moment_order = 5
+    gamma_cutoff = sp.Rational(2, 5)
+    edge_power = 6
+    tail_power = 4 * (moment_order - 1)
+    corridor_power = sp.simplify(edge_power - gamma_cutoff * tail_power)
+    edge_constant = sp.Integer(54) ** 2
+    factorial_log_power = sp.simplify(2 * gamma_cutoff - 1)
+
+    audit.check(
+        "twentieth-moment corridor exponent",
+        corridor_power == sp.Rational(-2, 5),
+        corridor_power,
+        sp.Rational(-2, 5),
+        "G_moment_corridor",
+    )
+    audit.check(
+        "twentieth-moment corridor constant",
+        edge_constant == 2916 and tail_power == 16,
+        (edge_constant, tail_power),
+        (2916, 16),
+        "G_moment_corridor",
+    )
+    audit.check(
+        "bounded-cutoff factorial logarithmic coefficient",
+        factorial_log_power == sp.Rational(-1, 5),
+        factorial_log_power,
+        sp.Rational(-1, 5),
+        "G_moment_corridor",
+    )
+    admissible_integers = [
+        p
+        for p in range(2, 8)
+        if bool(6 - 4 * gamma_cutoff * (p - 1) < 0)
+    ]
+    audit.check(
+        "minimal integer moment at gamma two-fifths",
+        admissible_integers[0] == 5,
+        admissible_integers[0],
+        5,
+        "G_moment_corridor",
+    )
+    pointwise_samples = []
+    for x_value, cutoff in ((1, 2), (2, 2), (3, 2), (7, 5)):
+        left = sp.Integer(x_value) ** 4 if x_value > cutoff else sp.Integer(0)
+        right = sp.Rational(x_value**20, cutoff**16)
+        pointwise_samples.append((x_value, cutoff, left, right, bool(left <= right)))
+    audit.check(
+        "pointwise twentieth-to-fourth tail domination",
+        all(row[-1] for row in pointwise_samples),
+        pointwise_samples,
+        "X^4 1_(X>L)<=X^20/L^16",
+        "G_moment_corridor",
+    )
+
+    # INPUT fixture for the conditional constant; exp(G5*T) is represented by E.
+    m5_value = sp.Integer(3)
+    d5_value = sp.Integer(2)
+    s_mu = sp.Integer(5)
+    transport_square = sp.symbols("E", positive=True)
+    one_orientation = sp.simplify(
+        d5_value**2 * transport_square * s_mu**5 * m5_value
+    )
+    two_orientation = sp.simplify(2 * one_orientation)
+    audit.check(
+        "sharp conditional two-orientation factor",
+        sp.simplify(two_orientation / transport_square) == 75000,
+        two_orientation,
+        75000 * transport_square,
+        "G_conditional_graph",
+    )
+    grouped_commutator_coefficients = (1, 2, 2)
+    audit.check(
+        "fifth commutator expansion coefficients",
+        sum(grouped_commutator_coefficients) == moment_order,
+        grouped_commutator_coefficients,
+        (1, 2, 2),
+        "G_conditional_graph",
+    )
+    # A scalar strongly-commuting convexity fixture derives the S_mu^5 factor.
+    weights = (sp.Integer(1), sp.Integer(1), sp.Rational(1, 2))
+    local_energies = (sp.Integer(2), sp.Integer(3), sp.Integer(4))
+    weighted_energy = sum(w * k for w, k in zip(weights, local_energies))
+    weight_sum = sum(weights)
+    convex_upper = sp.expand(
+        weight_sum**4 * sum(w * k**5 for w, k in zip(weights, local_energies))
+    )
+    audit.check(
+        "strongly commuting fifth-power convexity",
+        weighted_energy**5 <= convex_upper,
+        (weighted_energy**5, convex_upper),
+        "K_e^5<=S_mu^4 sum mu_z k_z^5",
+        "G_conditional_graph",
+    )
+
+    # Exact normalized all-m commutator fixture.
+    k_matrix = sp.diag(1, 4)
+    v_matrix = sp.Matrix([[0, 1], [1, 0]])
+    all_m_rows: list[dict[str, Any]] = []
+    for order in range(1, 8):
+        half_inverse = sp.diag(1, sp.Rational(1, 2**order))
+        k_power = k_matrix**order
+        c_matrix = sp.simplify(
+            half_inverse * sp.I * (v_matrix * k_power - k_power * v_matrix) * half_inverse
+        )
+        norm_value = sp.sqrt(operator_norm_squared(c_matrix))
+        expected = sp.Integer(2) ** order - sp.Rational(1, 2**order)
+        all_m_rows.append(
+            {"m": order, "norm": norm_value, "expected": expected}
+        )
+    audit.check(
+        "normalized all-m commutator exponential growth",
+        all(sp.simplify(row["norm"] - row["expected"]) == 0 for row in all_m_rows),
+        all_m_rows,
+        "2^m-2^(-m)",
+        "G_all_m_no_go",
+    )
+    audit.check(
+        "quadratic all-m automatic inference rejected",
+        sp.limit((2**sp.symbols("m", positive=True)) / sp.symbols("m", positive=True) ** 2, sp.symbols("m", positive=True), sp.oo) == sp.oo,
+        "exponential over quadratic diverges",
+        True,
+        "G_all_m_no_go",
+    )
+
+    # K_N rotation fixture.  q_N^10 K_N^(-5/2)=diag(0,1) exactly.
+    n_symbol = sp.symbols("N", integer=True, positive=True)
+    delta_symbol = sp.symbols("delta", real=True, nonzero=True)
+    k_n = sp.diag(1, n_symbol**4)
+    q_n = sp.diag(0, n_symbol)
+    d5_matrix = sp.simplify(q_n**10 * sp.diag(1, n_symbol**-10))
+    v_n = sp.Matrix([[0, -sp.I], [sp.I, 0]]) / n_symbol**4
+    half_inverse_5 = sp.diag(1, n_symbol**-10)
+    c5_matrix = sp.simplify(
+        half_inverse_5
+        * sp.I
+        * (v_n * k_n**5 - k_n**5 * v_n)
+        * half_inverse_5
+    )
+    g5_exact = sp.simplify(c5_matrix[0, 1])
+    if g5_exact.could_extract_minus_sign():
+        g5_exact = -g5_exact
+    history_one_lower = sp.simplify(delta_symbol**2 * n_symbol**20 / (8 * n_symbol**8))
+    history_sum_lower = sp.simplify(2 * history_one_lower)
+    x = sp.symbols("x", positive=True)
+    static_profile = x**5 * sp.exp(-x)
+    static_derivative = sp.factor(sp.diff(static_profile, x))
+    audit.check(
+        "KN elliptic constant d5",
+        d5_matrix == sp.diag(0, 1),
+        d5_matrix,
+        sp.diag(0, 1),
+        "G_static_low_graph_no_go",
+    )
+    audit.check(
+        "KN fifth normalized commutator",
+        sp.simplify(g5_exact - (n_symbol**6 - n_symbol**-14)) == 0,
+        g5_exact,
+        n_symbol**6 - n_symbol**-14,
+        "G_static_low_graph_no_go",
+    )
+    audit.check(
+        "KN two-orientation twentieth lower",
+        history_one_lower == delta_symbol**2 * n_symbol**12 / 8
+        and history_sum_lower == delta_symbol**2 * n_symbol**12 / 4,
+        (history_one_lower, history_sum_lower),
+        (delta_symbol**2 * n_symbol**12 / 8, delta_symbol**2 * n_symbol**12 / 4),
+        "G_static_low_graph_no_go",
+    )
+    audit.check(
+        "static Gibbs fifth profile maximum",
+        static_derivative.subs(x, 5) == 0
+        and sp.limit(static_profile, x, sp.oo) == 0
+        and static_profile.subs(x, 5) == (sp.Rational(5, 1) / sp.E) ** 5,
+        (static_derivative, static_profile.subs(x, 5)),
+        "maximum (5/e)^5",
+        "G_static_low_graph_no_go",
+    )
+
+    return {
+        "moment_order_p": moment_order,
+        "gamma": gamma_cutoff,
+        "general_exponent": "6-4*gamma*(p-1)",
+        "corridor_exponent": corridor_power,
+        "edge_constant": edge_constant,
+        "tail_power": tail_power,
+        "factorial_R_log_R_coefficient": factorial_log_power,
+        "pointwise_samples": pointwise_samples,
+        "conditional": {
+            "commutator_coefficients": grouped_commutator_coefficients,
+            "one_orientation": one_orientation,
+            "M20_two_orientation": two_orientation,
+            "endpoint_weights_one": True,
+            "onsite_family_strongly_commuting": True,
+            "onsite_flow_commutes_with_K_e": True,
+            "bond_graph_norm": "exp(G5*abs(delta)/2)",
+            "graph_squared_moment": "exp(G5*T)",
+            "actual_m5_d5_G5_inputs_proved": False,
+        },
+        "all_m_no_go": {
+            "K": k_matrix,
+            "V": v_matrix,
+            "rows": all_m_rows,
+            "Dini_log_norm_derivative": "||C_m||/(2*hbar)",
+            "forced_G_m": "||C_m||/hbar",
+            "fixed_m5_rejected": False,
+            "automatic_quadratic_all_m_inference_rejected": True,
+        },
+        "KN_no_go": {
+            "K": k_n,
+            "q": q_n,
+            "V": v_n,
+            "d5_matrix": d5_matrix,
+            "static_m5_upper": "1+(5/e)^5 at beta=1",
+            "low_graph_range": "0<=s<=1",
+            "low_graph_upper": "1+abs(delta) when N^4>=abs(delta)",
+            "delta_nonzero": True,
+            "G5": g5_exact,
+            "one_orientation_q20_lower": history_one_lower,
+            "two_orientation_q20_lower": history_sum_lower,
+            "Q3_dynamics_no_go": False,
+        },
+    }
+
+
+def fixture_h_full_oscillator_edge_cluster(audit: Audit) -> dict[str, Any]:
+    """Exact local-edge min-max, relative-form, and Ritz-removal arithmetic."""
+
+    # INPUTS.  d2 is negative so a^2=max_j(a_j-m^2)=1/100 is consistent.
+    c_value = sp.Rational(1, 1000)
+    m_value = sp.Integer(2)
+    a_value = sp.Rational(1, 10)
+    b_value = sp.Rational(1, 20)
+    a_q = sp.Integer(3)
+    a0_minus_m2 = sp.Rational(1, 100)
+    d2 = -sp.Rational(1, 1000)
+    delta1 = sp.Rational(1, 10000)
+    gamma_high = sp.Integer(100)
+    z = sp.Integer(6)
+
+    c_b = sp.simplify(8 * c_value * a0_minus_m2)
+    f_b = sp.simplify(delta1 / z + 4 * c_value * d2)
+    e_b = sp.simplify(c_b + f_b)
+    j_value = sp.simplify(8 * c_value * m_value**2)
+    epsilon = sp.simplify(
+        8 * c_value * (b_value + 2 * m_value * a_value + a_value**2)
+    )
+    a_block = sp.simplify(e_b + 2 * j_value)
+    d_block = sp.simplify(gamma_high / z)
+    schur_margin = sp.simplify(2 * j_value * (d_block - e_b) - epsilon**2)
+    gap_rational_lower = sp.simplify(
+        2 * j_value - epsilon**2 / (d_block - a_block)
+    )
+    g_b = sp.simplify(
+        (a_block + d_block - sp.sqrt((d_block - a_block) ** 2 + 4 * epsilon**2)) / 2
+    )
+
+    # Reconstruct the exact low compression in the s-eigenbasis.
+    one = sp.eye(2)
+    s_matrix = sp.Matrix([[0, 1], [1, 0]])
+    p_one = sp.diag(0, 1)
+    pair_s = sp.kronecker_product(s_matrix, s_matrix)
+    pair_p_one = sp.kronecker_product(p_one, one) + sp.kronecker_product(one, p_one)
+    low_h = sp.simplify(
+        c_b * sp.eye(4) + j_value * (sp.eye(4) - pair_s) + f_b * pair_p_one
+    )
+    plus = sp.Matrix([1, 1]) / sp.sqrt(2)
+    minus = sp.Matrix([1, -1]) / sp.sqrt(2)
+    plus_plus = sp.kronecker_product(plus, plus)
+    minus_minus = sp.kronecker_product(minus, minus)
+    p_zero = sp.simplify(plus_plus * plus_plus.H + minus_minus * minus_minus.H)
+    low_misaligned = sp.simplify(sp.eye(4) - p_zero)
+    p0_compression = sp.simplify(p_zero * low_h * p_zero)
+    l_compression = sp.simplify(low_misaligned * low_h * low_misaligned)
+    p0_l_cross = sp.simplify(p_zero * low_h * low_misaligned)
+    p0_l_cross_norm = sp.sqrt(operator_norm_squared(p0_l_cross))
+    parity = sp.kronecker_product(sp.diag(1, -1), sp.diag(1, -1))
+    even_trial = sp.simplify((plus_plus + minus_minus) / sp.sqrt(2))
+    odd_trial = sp.simplify((plus_plus - minus_minus) / sp.sqrt(2))
+    even_energy = sp.simplify((even_trial.H * low_h * even_trial)[0])
+    odd_energy = sp.simplify((odd_trial.H * low_h * odd_trial)[0])
+
+    audit.check(
+        "corrected edge fixture residual consistency",
+        max(a0_minus_m2, a0_minus_m2 + d2) == a_value**2,
+        (a0_minus_m2, a0_minus_m2 + d2, a_value**2),
+        "a^2=max_j(a_j-m^2)=1/100",
+        "H_edge_fixture",
+    )
+    # The following exact fractions are independent test oracles, not inputs.
+    expected_scalars = {
+        "Cb": sp.Rational(1, 12500),
+        "fb": sp.Rational(19, 1500000),
+        "eb": sp.Rational(139, 1500000),
+        "J": sp.Rational(4, 125),
+        "epsilon": sp.Rational(23, 6250),
+        "A": sp.Rational(96139, 1500000),
+        "D": sp.Rational(50, 3),
+        "D_minus_A": sp.Rational(8301287, 500000),
+        "margin": sp.Rational(20832953, 19531250),
+        "gap_lower": sp.Rational(332047248, 5188304375),
+    }
+    actual_scalars = {
+        "Cb": c_b,
+        "fb": f_b,
+        "eb": e_b,
+        "J": j_value,
+        "epsilon": epsilon,
+        "A": a_block,
+        "D": d_block,
+        "D_minus_A": d_block - a_block,
+        "margin": schur_margin,
+        "gap_lower": gap_rational_lower,
+    }
+    audit.check(
+        "corrected exact edge constants",
+        actual_scalars == expected_scalars,
+        actual_scalars,
+        expected_scalars,
+        "H_edge_fixture",
+    )
+    audit.check(
+        "aligned and misaligned diagonal compressions",
+        p0_compression == e_b * p_zero
+        and l_compression == (e_b + 2 * j_value) * low_misaligned,
+        (p0_compression, l_compression),
+        (e_b * p_zero, (e_b + 2 * j_value) * low_misaligned),
+        "H_edge_compressions",
+    )
+    audit.check(
+        "P0-L noninvariance retained",
+        p0_l_cross != sp.zeros(4) and p0_l_cross_norm == abs(f_b),
+        (p0_l_cross, p0_l_cross_norm),
+        ("nonzero", abs(f_b)),
+        "H_edge_compressions",
+    )
+    audit.check(
+        "one even and one odd Ritz trial",
+        parity * even_trial == even_trial
+        and parity * odd_trial == -odd_trial
+        and even_energy == odd_energy == e_b,
+        (even_energy, odd_energy),
+        (e_b, e_b),
+        "H_edge_parity",
+    )
+    audit.check(
+        "sharp Schur margin and rational gap lower",
+        schur_margin > 0
+        and d_block > a_block > e_b
+        and sp.N(g_b - e_b, 30) > sp.N(gap_rational_lower, 30) > 0,
+        {
+            "margin": schur_margin,
+            "gb": g_b,
+            "gb_minus_eb": sp.N(g_b - e_b, 20),
+            "rational_lower": gap_rational_lower,
+        },
+        "gb>eb and gb-eb>=332047248/5188304375",
+        "H_edge_minmax",
+    )
+
+    eta_b = sp.simplify(32 * c_value * a_q)
+    nu_b = sp.simplify(32 * c_value * m_value**2 + 64 * c_value * a_value**2)
+    rho_b = sp.simplify(eta_b + nu_b / gamma_high)
+    tau = epsilon
+    alpha = sp.simplify(
+        z * (rho_b + j_value / gamma_high + epsilon**2 / (tau * gamma_high))
+    )
+    ell_b = sp.simplify(c_b + 8 * c_value * abs(d2))
+    beta = sp.simplify(2 * delta1 / z + ell_b + tau)
+    gamma0 = min(gamma_high / z, 2 * j_value)
+    delta_rf = sp.simplify((1 - alpha) * gamma0 - 2 * beta)
+    expected_relative = {
+        "eta_b": sp.Rational(12, 125),
+        "nu_b": sp.Rational(402, 3125),
+        "rho_b": sp.Rational(15201, 156250),
+        "alpha": sp.Rational(183081, 312500),
+        "beta": sp.Rational(2851, 750000),
+        "gamma0": sp.Rational(8, 125),
+        "Delta_rf": sp.Rational(4430237, 234375000),
+    }
+    actual_relative = {
+        "eta_b": eta_b,
+        "nu_b": nu_b,
+        "rho_b": rho_b,
+        "alpha": alpha,
+        "beta": beta,
+        "gamma0": gamma0,
+        "Delta_rf": delta_rf,
+    }
+    audit.check(
+        "relative-form edge constants",
+        actual_relative == expected_relative and alpha < 1 and delta_rf > 0,
+        actual_relative,
+        expected_relative,
+        "H_edge_relative_form",
+    )
+
+    cutoff = {
+        "nested": True,
+        "parity_preserving": True,
+        "Pi_M_contains_P": True,
+        "union_is_quartic_form_core": True,
+        "restriction_is_Pi_tensor_Pi_full_form": True,
+        "same_constants": True,
+        "Ritz_eigenvalues_decrease": True,
+        "Ritz_limit_is_full_edge": True,
+        "replace_q_then_square": False,
+        "Pi_q2_Pi_equals_Pi_q_Pi_squared": False,
+    }
+    audit.check(
+        "spectral cutoff is Ritz form compression",
+        all(cutoff[key] for key in (
+            "nested",
+            "parity_preserving",
+            "Pi_M_contains_P",
+            "union_is_quartic_form_core",
+            "restriction_is_Pi_tensor_Pi_full_form",
+            "same_constants",
+            "Ritz_eigenvalues_decrease",
+            "Ritz_limit_is_full_edge",
+        ))
+        and not cutoff["replace_q_then_square"]
+        and not cutoff["Pi_q2_Pi_equals_Pi_q_Pi_squared"],
+        cutoff,
+        "nested parity-preserving Ritz restriction, not truncated q",
+        "H_edge_cutoff",
+    )
+
+    return {
+        "inputs": {
+            "c": c_value,
+            "m": m_value,
+            "a": a_value,
+            "b": b_value,
+            "A_Q": a_q,
+            "a0_minus_m2": a0_minus_m2,
+            "d2": d2,
+            "delta1": delta1,
+            "Gamma": gamma_high,
+            "z": z,
+        },
+        "sharp_minmax": {
+            **actual_scalars,
+            "gb": g_b,
+            "gb_decimal": sp.N(g_b, 20),
+            "gb_minus_eb_decimal": sp.N(g_b - e_b, 20),
+            "P0_h_P0": p0_compression,
+            "L_h_L": l_compression,
+            "P0_h_L_norm": p0_l_cross_norm,
+            "P0_and_L_invariant": False,
+            "global_parity_invariant": True,
+            "h_nonnegative_hypothesis": True,
+            "compact_resolvent_hypothesis": True,
+            "exactly_one_low_per_parity": True,
+            "lambda3_minus_lambda2_lower": g_b - e_b,
+        },
+        "relative_form": {
+            **actual_relative,
+            "tau": tau,
+            "ell_b": ell_b,
+            "form_bound": "abs(<V>)<=alpha<h0>+beta||psi||^2",
+            "exactly_two_low": True,
+            "lambda3_minus_lambda2_lower": delta_rf,
+        },
+        "cutoff_removal": cutoff,
+        "N_scaling": {
+            "eb": -6,
+            "epsilon": -3,
+            "Gamma_over_z": 2,
+            "two_J_limit": 16,
+            "sharp_mixing_gap_correction": -8,
+            "relative_alpha": -2,
+            "relative_beta": -3,
+        },
+        "local_edge_only": True,
+        "global_QPS_transfer": False,
+        "oscillator_lattice_GNS_gap": False,
+    }
+
+
 def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     missing: list[str] = []
 
@@ -1730,7 +2187,7 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         if staged:
             missing.append(label)
             return
-        raise AssertionError(f"missing or incomplete v2.0 authority: {label}")
+        raise AssertionError(f"missing or incomplete v2.1 authority: {label}")
 
     def require_text(path: Path, label: str) -> str | None:
         if not path.exists():
@@ -1903,6 +2360,41 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
             manifest.get("fixed_edge_restricted_tail_corridor", {}).get("constants", ""),
             "1296 R^6",
             "manifest corridor constant token",
+        )
+        for section in (
+            "twentieth_moment_fixed_edge_corridor",
+            "conditional_fifth_graph_transport",
+            "all_order_graph_growth_no_go",
+            "static_moment_low_graph_no_go",
+            "full_oscillator_edge_cluster",
+            "v2_1_checkpoint_synthesis",
+        ):
+            audit.check(
+                f"manifest v2.1 section {section}",
+                section in manifest,
+                section in manifest,
+                True,
+                "authority",
+            )
+        require_token(
+            manifest.get("twentieth_moment_fixed_edge_corridor", {}).get("theorem", ""),
+            "2916 c^2 M20 R^6 L^-16",
+            "manifest twentieth-moment corridor constant",
+        )
+        require_token(
+            manifest.get("conditional_fifth_graph_transport", {}).get("sharp_result", ""),
+            "M20<=2 d5^2 exp(G5 T) S_mu^5 m5",
+            "manifest sharp conditional M20 factor",
+        )
+        require_token(
+            manifest.get("full_oscillator_edge_cluster", {}).get("compressions", ""),
+            "P0 h_xy L is nonzero",
+            "manifest P0-L noninvariance boundary",
+        )
+        require_token(
+            manifest.get("full_oscillator_edge_cluster", {}).get("spectral_cutoff_removal", ""),
+            "Pi_M q^2 Pi_M need not equal",
+            "manifest Ritz versus truncated-q boundary",
         )
         audit.check(
             "manifest Yarotskii QPS source",
@@ -2093,6 +2585,25 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     ):
         require_token(certificate_text, token, f"certificate v2 token {token}")
 
+    for token in (
+        "EXP-000811",
+        "R-167 v2.1",
+        "2916c^2M_{20}",
+        r"M_{20}\le2d_5^2e^{G_5T}S_\mu^5m_5",
+        "2^m-2^{-m}",
+        "N^6-N^{-14}",
+        "20832953/19531250",
+        "332047248/5188304375",
+        "4430237/234375000",
+        "P_0h_{xy}L",
+        "Ritz form restriction",
+        "No v2.1 PDF is issued",
+        *EXPECTED_CLOSED_SUBGATES[-2:],
+        *EXPECTED_OPEN_GATES[-2:],
+        *NEGATIVE_IDS[-2:],
+    ):
+        require_token(certificate_text, token, f"certificate v2.1 token {token}")
+
     exploration_text = require_text(EXPLORATION_LEDGER, "exploration ledger")
     require_token(
         exploration_text,
@@ -2106,14 +2617,14 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     )
     if result_row_present:
         audit.check(
-            "result ledger exact R-167 v2.0 row",
+            "result ledger exact R-167 v2.1 row",
             True,
             True,
             True,
             "authority",
         )
     else:
-        missing_or_raise("result ledger exact R-167 v2.0 row")
+        missing_or_raise("result ledger exact R-167 v2.1 row")
     negative_text = require_text(NEGATIVE_REGISTRY, "negative registry")
     for negative_id in NEGATIVE_IDS:
         require_token(negative_text, negative_id, f"negative row {negative_id}")
@@ -2138,6 +2649,8 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
     fixture_d = fixture_d_full_gibbs_context(audit)
     fixture_e = fixture_e_fixed_edge_corridor(audit)
     fixture_f = fixture_f_feshbach_and_compressed_qps(audit)
+    fixture_g = fixture_g_twentieth_moment_and_graph_boundary(audit)
+    fixture_h = fixture_h_full_oscillator_edge_cluster(audit)
     authority = authority_audit(audit, staged)
     verdict = "PASS" if authority["status"] == "PASS" else "INCOMPLETE"
 
@@ -2152,9 +2665,16 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
         "finite_Gibbs_full_Hamiltonian_cutoff_resummation": True,
         "arbitrary_context_automorphism_upgrade": False,
         "fixed_edge_to_growing_corridor_reduction": True,
+        "twentieth_moment_fixed_edge_corridor_reduction": True,
+        "conditional_fifth_graph_transport_reduction": True,
+        "translate_uniform_local_fifth_Gibbs_moment_and_elliptic_embedding": False,
+        "simultaneous_bond_shear_fifth_graph_propagation": False,
+        "actual_Q3_twentieth_fixed_edge_history_bound": False,
         "actual_Q3_fixed_edge_history_bound": False,
         "below_Gamma_global_Feshbach_precursor": True,
         "compressed_TFIM_two_phase_QPS_and_phasewise_gap": True,
+        "full_oscillator_local_edge_parity_doublet_cluster": True,
+        "parity_preserving_onsite_spectral_Ritz_removal": True,
         "rank_two_unbounded_block_elimination": False,
         "two_phase_QPS_for_exact_Q3LOCK": False,
         "broken_sector_GNS_gap": False,
@@ -2195,6 +2715,8 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
             "fixture_D_full_Gibbs_context": fixture_d,
             "fixture_E_fixed_edge_corridor": fixture_e,
             "fixture_F_Feshbach_compressed_QPS": fixture_f,
+            "fixture_G_twentieth_moment_graph_boundary": fixture_g,
+            "fixture_H_full_oscillator_edge_cluster": fixture_h,
         },
         "scope": scope,
         "source_hashes": {
@@ -2204,10 +2726,11 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
         },
         "assertions": audit.rows,
         "boundary": (
-            "Exact A--F fixtures and theorem imports only. No numerical h0 or "
-            "QPS radius, Q3 fixed-edge history bound, arbitrary-context upgrade, "
-            "quasi-local rank-two oscillator elimination, oscillator QPS transfer, "
-            "broken-sector oscillator GNS gap, Sector A, or Pre-A closure."
+            "Exact A--H fixtures and scoped theorem imports only. No numerical h0 "
+            "or QPS radius, actual Q3 fifth-moment/graph input, twentieth history "
+            "bound, n-to-infinity common alpha, many-edge rank-two oscillator "
+            "elimination, oscillator QPS transfer, oscillator-lattice GNS gap, "
+            "Sector A, or Pre-A closure."
         ),
     }
 

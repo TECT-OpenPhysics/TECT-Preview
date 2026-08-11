@@ -58,6 +58,12 @@ the ten frozen hard rows. It also closes a 48-component finite-torus Gaussian
 M2 fingerprint. Neither result is an admitted physical response map, an
 error-controlled prediction, or a prospective freeze; the parent gate remains
 OPEN.
+EXP-000812 / R-168 v1.2 additionally proves that a fixed linear scalar probe
+does not identify second-order response without a frozen quadratic contact and
+closes only the minimum successor syntax/declared-binding schema. It supplies
+no physical control law, actual candidate, state/reference realization,
+response map, error budget, prediction or external prospective commitment.
+The physical-response gate and this Round-1 parent remain OPEN.
 Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1
 into a contestant. No winner, shortlist, preferred PDE, physical vacuum,
 Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed.
@@ -149,6 +155,46 @@ components are exactly one. This is a dimensionless mathematical fingerprint,
 not a physical response channel, error-controlled observable prediction,
 admitted candidate map, or validation result.
 
+### **PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY**
+
+**Statement:** Determine whether a fixed scalar linear source observable alone
+identifies a second-order helicity-like or stiffness response when the
+quadratic contact term has not been frozen.
+
+**Status:** CLOSED AS A FINITE-REGULATOR NONIDENTIFIABILITY THEOREM ONLY
+(2026-08-11). EXP-000812 / R-168 v1.2 proves that
+`H_d(t,J)=H(t)-JQ+(V/2)d(t)J^2 I` has the same `H(t)` and first source
+derivative for every admissible `d`, while its finite-beta free energy and
+stable ground branch shift by `(V/2)d(t)J^2`. With the declared positive
+helicity-curvature convention, the normalized second response shifts by
+`+d(t)`; the conventional scalar susceptibility shifts by `-d(t)`. The exact
+Fraction fixture gives curvatures `5/7` and `11/7`, hence shift `6/7`. This
+shows only that the linear probe does not identify the response before the
+quadratic contact, normalization and physical control law are fixed. It is
+not a no-go for a fully specified physical probe and does not close the
+physical-response parent.
+
+### **PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA**
+
+**Statement:** Freeze a fail-closed minimum record shape for any future M2
+physical-response successor, including the second-order source law, compact or
+gauge action, state/reference contract, physical-control and response maps,
+limit order, prediction, six-term error budget, common inputs, hard-row rerun,
+proof artefacts, independent validation and prospective firewall.
+
+**Status:** CLOSED AS A SYNTACTIC AND DECLARED-BINDING SCHEMA CONTRACT ONLY
+(2026-08-11). EXP-000812 / R-168 v1.2 validates schema
+`tect/pre-a-m2-ci8-physical-response-successor-minimum-contract/1.1` with exact
+root fields, repository-confined case-exact artifact references and hashes,
+canonical rational grammar, structured non-placeholder payloads, mandatory
+substantive-change declarations, six named error terms, the frozen ten hard
+rows, and primary, independent and integrated verifier roles. The registered
+object is a synthetic fixture only. Passing it creates no candidate, physical
+law, state, response map, error bound, prediction or external commitment; the
+validators do not certify arbitrary free-text physical semantics or perform a
+prospective remote freeze. The physical-response and Round-1 parents remain
+OPEN.
+
 ### **PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND**
 
 **Statement:** Starting from the exact finite-torus Gaussian fingerprint,
@@ -164,6 +210,13 @@ and squared target-free completions give exponents one and two. The
 no candidate record, admitted map, prediction, target, freeze, tag, score or
 selection. The six required error terms, independent verification and
 prospective firewall remain unsupplied.
+
+EXP-000812 / R-168 v1.2 proves the linear-probe/contact
+nonidentifiability theorem and closes the synthetic minimum successor schema
+only. Neither supplies the actual second-order source/contact law, compact or
+gauge action, state/reference realization, physical-control map, response map,
+six error bounds, target-blind prediction or prospective external freeze.
+This parent remains OPEN.
 
 ### **PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER**
 
@@ -981,6 +1034,53 @@ separately defined smooth clipped-coordinate `Q_L` Hamiltonians. The actual
 translate-and-orientation-uniform onsite-interspersed Q3LOCK fixed-edge history
 estimate is not proved.
 
+### **PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION**
+
+**Statement:** Convert a translate- and orientation-uniform twentieth endpoint-
+coordinate moment for every partial split history and its adjoint into the hard
+fixed-edge tail required by the growing corridor.
+
+**Status:** CLOSED AS A DETERMINISTIC CONDITIONAL IMPLICATION ONLY
+(2026-08-11). EXP-000811 / R-167 v2.1 proves that, for
+`X_e=max(|q_x|,|q_y|)` and uniform two-orientation history moment `M_20`,
+`X_e^4 1_(X_e>L)<=L^-16 X_e^20` gives the hard edge tail
+`c^2 M_20 L^-16`. With `m_R<=54R^3`, the corridor is bounded by
+`2916 c^2 M_20 R^6 L^-16`; the choice `L=R^(2/5)` gives `R^(-2/5)` while the
+separate bounded-cutoff factorial has logarithm
+`-(1/5)R log R+O(R)`. This proves the implication only. It does not establish
+the uniform history moment.
+
+### **PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING**
+
+**Statement:** Prove, uniformly in finite volume, compact source, translate and
+site, the Gibbs fifth onsite-energy moment
+`sup phi_(Lambda,h)(k_(x,h)^5)<infinity` and the closed one-site quartic
+elliptic bound `sup || |q|^10 k_h^(-5/2)||<infinity` needed to embed endpoint
+coordinate twentieth moments into the weighted fifth-energy graph.
+
+**Status:** OPEN (2026-08-11). EXP-000811 / R-167 v2.1 identifies these as the
+exact static and elliptic inputs. Existing sharp-coordinate exponential
+moments do not include momentum and do not prove the fifth onsite-energy
+moment or the `k^(-5/2)` embedding. No such volume/source/translate-uniform
+bound is registered.
+
+### **PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION**
+
+**Statement:** On one common invariant form core, prove form-`C1` propagation
+of the weighted `K_e^5` graph under each simultaneous all-cross-bond shear,
+uniformly in volume, source, edge and split step, and hence through every
+partial history in both orientations.
+
+**Status:** OPEN (2026-08-11). EXP-000811 / R-167 v2.1 isolates the required
+constant
+`G_5=||K_e^(-5/2)(i/hbar)[V_x,K_e^5]K_e^(-5/2)||`, whose exact five-position
+commutator bound has coefficient pattern `1,2,2`. If this common-core/form-`C1`
+input and the local fifth-moment gate hold, then
+`M_20<=2 d_5^2 exp(G_5 T) S_mu^5 m_5`. Current graph control reaches only the
+stated low rungs, in particular `s<=1/2` in the existing route, and does not
+supply the two upper commutator rungs or simultaneous all-bond `K_e^5`
+propagation.
+
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
 **Statement:** Starting from the finite-region local-strict carrier, construct
@@ -1013,6 +1113,13 @@ not supply arbitrary bounded contexts or the actual translate-and-orientation-
 uniform onsite-interspersed Q3LOCK fixed-edge history estimate. The
 `n->infinity` limit and group/generator/KMS completion remain open.
 No exact Q3LOCK dynamics nonexistence is asserted.
+
+EXP-000811 / R-167 v2.1 closes only the deterministic twentieth-moment-to-
+fixed-edge corridor implication. The translate-uniform local fifth Gibbs
+moment/elliptic embedding and simultaneous-bond-shear fifth-graph propagation
+are new explicit OPEN inputs; the split limit, exhaustion Cauchy, group,
+inverse, generator and phase-KMS completion are also unchanged. This parent
+remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -1115,6 +1222,40 @@ Hamiltonian gap in each selected compressed phase. This gives no explicit
 `epsilon_Y` or `N_0`, no finite-torus exact degeneracy, no repository `r=-9`
 certification, no rank-two oscillator transfer, and no oscillator GNS gap.
 
+### **PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL**
+
+**Statement:** For the exact two-site full-oscillator edge form, prove a
+parity-resolved two-eigenvalue low cluster separated from the rest, derive an
+independent relative-form gap bound, and remove nested onsite spectral cutoffs
+without changing the Hamiltonian.
+
+**Status:** CLOSED AS A LOCAL TWO-SITE EDGE AND RITZ-FORM-CUTOFF THEOREM ONLY
+(2026-08-11). EXP-000811 / R-167 v2.1 sets
+`h_xy=((h_x-epsilon_0)+(h_y-epsilon_0))/6+B_xy`, with aligned low space `P0`,
+misaligned low space `L`, and high complement `Q`. The exact diagonal
+compressions are `P0 h_xy P0=e_b P0` and
+`L h_xy L=(e_b+2J)L`, while `Q h_xy Q>=(Gamma/6)Q` and
+`||Q h_xy(P0+L)||<=epsilon`. In general
+`||P0 h_xy L||=|f_b|` is nonzero; no invariance or block diagonalization is
+claimed. If `e_b>=0`, `J>0`, `Gamma/6>e_b`, and
+`epsilon^2<2J(Gamma/6-e_b)`, min--max and parity give exactly one even and one
+odd eigenvalue at most `e_b`, and
+`lambda_3-lambda_2>=g_b-e_b>0`, where
+`g_b=(e_b+2J+Gamma/6-sqrt((e_b+2J-Gamma/6)^2+4epsilon^2))/2`.
+
+The corrected exact fixture has `d_2=-1/1000`,
+`e_b=139/1500000`, `J=4/125`, `epsilon=23/6250`, and the rational bound
+`g_b-e_b>=332047248/5188304375`. Independently, with
+`gamma_0=min(Gamma/6,2J)`, the relative-form estimate gives
+`lambda_3-lambda_2>=(1-alpha)gamma_0-2beta`; the fixture has
+`alpha=183081/312500`, `beta=2851/750000`, and positive lower bound
+`4430237/234375000`. Nested parity-preserving onsite spectral projections
+containing the low band and forming a quartic form core give Ritz eigenvalues
+that decrease to the full-edge eigenvalues, so the lower bounds pass uniformly
+to the full oscillator edge. This does not certify replacing `q` by
+`Pi_M q Pi_M` before squaring, a many-edge linked-cluster interaction,
+thermodynamic two-phase QPS transfer, or an oscillator GNS gap.
+
 ### **PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS**
 
 **Statement:** Starting from the exact rank-two onsite band, prove a volume-
@@ -1137,6 +1278,12 @@ Ising scale. No rank-two unbounded theorem, uniform cutoff removal, quasi-local
 oscillator effective interaction, or exact oscillator two-phase QPS transfer
 is registered. This direct-import mismatch is not a no-go for the gate or for
 the actual Q3LOCK gap.
+
+EXP-000811 / R-167 v2.1 adds a cutoff-uniform local two-site parity-doublet
+cluster, including independent min--max and relative-form lower bounds. It is
+not a many-edge block diagonalization, linked-cluster construction or
+quasi-local two-phase interaction. The thermodynamic rank-two/QPS transfer
+remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
@@ -1165,6 +1312,10 @@ block/QPS transfer, beta-infinity oscillator selection and actual phasewise
 temporal mass remain open. This gate is
 independent of the common-alpha history gate and does not license a physical
 mass-gap claim.
+
+EXP-000811 / R-167 v2.1 proves only a local two-site full-oscillator edge
+cluster. It supplies no thermodynamic phase selection or sectorwise lattice
+coercivity estimate. The oscillator GNS-gap parent remains OPEN.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 

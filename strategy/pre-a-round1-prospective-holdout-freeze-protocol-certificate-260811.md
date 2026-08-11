@@ -1,15 +1,15 @@
-# R-168 v1.1 certificate: prospective holdout protocol, current-map audit, and M2 fingerprint
+# R-168 v1.2 certificate: prospective holdout protocol, linear-probe nonidentifiability, and minimum response contract
 
-- **Explorations retained:** `EXP-000807`; validator hardening correction `EXP-000808`
-- **Additive exploration:** `EXP-000810`
-- **Result:** `R-168`, version `v1.1`
+- **Explorations retained:** `EXP-000807`; validator hardening correction `EXP-000808`; map/fingerprint extension `EXP-000810`
+- **Additive exploration:** `EXP-000812`
+- **Result:** `R-168`, version `v1.2`
 - **Stable result ID:** `PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT`
 - **Claim context:** `C6-SPACETIME-SIGNATURE`
 - **Task:** `T-054`
 - **Tier:** `T0`, `claim_bearing: false`
 - **Date:** 2026-08-11
 
-R-168 v1.1 is cumulative: sections 1--8 retain the v1.0 protocol and audit, and sections 9--14 add the exact current-version map audit and M2 fingerprint.  It does not issue a prediction or a freeze.  The retained v1.0 layer closes the protocol layer
+R-168 v1.2 is cumulative: sections 1--8 retain the v1.0 protocol and audit, sections 9--15 retain the v1.1 current-version map audit, M2 fingerprint, and combined checkpoint, and sections 16--19 add the exact fixed-linear-probe curvature theorem and a hardened minimum physical-response successor schema whose formal authority is now registered in its exact syntactic and declared-binding scope. It does not issue a candidate, prediction, target, or freeze.  The retained v1.0 layer closes the protocol layer
 needed before a future blind Pre-A holdout can be issued and audits the exact
 registered state at commit `99157442831c0e44d425b5d5f8cd78856c57da53`.
 At that checkpoint there are no official freeze records, no admitted
@@ -19,14 +19,16 @@ therefore remains open.  The initially observed local `freeze/*` tag count is
 reported separately as a non-load-bearing live observation, not as an
 audited-commit fact or a historical PASS condition.
 
-The closed protocol subgates are exactly:
+The current cumulative closed-subgate set, after the staged authorities were registered, is exactly:
 
 1. `PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA`;
 2. `PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL`;
 3. `PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR`;
 4. `PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT`;
-5. `PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET`; and
-6. `PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT`.
+5. `PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET`;
+6. `PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT`;
+7. `PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY`; and
+8. `PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA`.
 
 The following gates remain open:
 
@@ -601,3 +603,287 @@ historical v0.8 source/PDF remains prior R-167 v1.9 / R-168 v1.0 evidence and
 is not current v2.0/v1.1 evidence.  This issuance changes no claim tier and
 closes none of the common-alpha, rank-two oscillator, oscillator GNS-gap,
 physical-response, prospective-freeze, physical Sector-A, or Pre-A parents.
+
+## 16. R-168 v1.2 fixed-linear-probe nonidentifiability theorem
+
+The additive exploration is `EXP-000812`.  Fix any finite-dimensional,
+finite-volume regulated Lane-Q Hamiltonian `H(t)`, a self-adjoint linear probe
+`Q`, a real source `J`, and a target-blind twice differentiable scalar
+`d(t)`.  Define
+
+\[
+ H_d(t,J)=H(t)-JQ+{V\over2}d(t)J^2 I.                 \tag{16.1}
+\]
+
+Every member of this family has exactly the same zero-source Hamiltonian and
+first source derivative,
+
+\[
+ H_d(t,0)=H(t),\qquad \partial_J H_d(t,0)=-Q.         \tag{16.2}
+\]
+
+Consequently the zero-source state, spectrum, field Hessian, and exact
+48-component finite-torus fingerprint are unchanged.  At finite beta use the
+sign convention
+
+\[
+ F_{\beta,d}(t,J)=-\beta^{-1}\log\operatorname{Tr}
+ e^{-\beta H_d(t,J)}.                                \tag{16.3}
+\]
+
+The contact is scalar, so it factors exactly:
+
+\[
+ Z_d(t,J)=e^{-\beta Vd(t)J^2/2}Z_0(t,J),\qquad
+ F_{\beta,d}(t,J)=F_{\beta,0}(t,J)+{V\over2}d(t)J^2. \tag{16.4}
+\]
+
+This certificate defines the helicity-like curvature with the **positive**
+sign
+
+\[
+ \Upsilon_d(t)=+{1\over V}\partial_J^2F_{\beta,d}(t,0),
+ \qquad \Upsilon_d-\Upsilon_0=+d(t).                 \tag{16.5}
+\]
+
+By contrast, the conventional scalar susceptibility is
+`-V^-1*d_J^2 F_beta`; the same positive contact shifts that quantity by
+`-d(t)`.  At beta infinity, scalar addition shifts every eigenvalue equally,
+so wherever the ground branch is stable,
+
+\[
+ E_{0,d}(t,J)=E_{0,0}(t,J)+{V\over2}d(t)J^2,
+ \qquad {1\over V}\partial_J^2(E_{0,d}-E_{0,0})=d(t). \tag{16.6}
+\]
+
+Thus even a completely fixed linear source observable does not identify a
+second-order physical response until the quadratic contact or diamagnetic
+term and its normalization are frozen.  This closes only
+`PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY` and supports
+the scoped negative
+`NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE`.
+It does not close `PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND`.
+
+## 17. Exact Fraction and integer-cross-product fixture
+
+The primary verifier uses `Fraction` throughout.  The independent verifier
+uses a separately implemented normalized integer-rational engine.  Both take
+
+```text
+V=7, beta=3/2, h=1/5,
+d_left=5/7, d_right=11/7, delta_d=6/7,
+H_0(J)=diag(-J, 4+J).
+```
+
+At `J=h`, the difference of scalar contact free energies is exactly `3/25`,
+and the finite-beta Boltzmann exponent shift is exactly `-9/50`.  The centered
+second difference divided by `V` is exactly `6/7`.  For `J=-h,0,+h`, the first
+diagonal branch remains the ground branch, with indices `[0,0,0]`.  The two
+normalized ground-energy curvatures are exactly `5/7` and `11/7`, hence their
+shift is again exactly `6/7`.  No floating-point logarithm, fitted number, or
+hardcoded derived response is used; the displayed rationals are labelled test
+oracles and are recomputed from the declared fixture inputs.
+
+The theorem is a nonidentifiability result, not a proposed contact law.  A
+source `J*phi` in the current real-scalar Lane-Q record measures a scalar
+order-parameter susceptibility.  It is not automatically the physical
+helicity or helium superfluid-density response, and the internal fingerprint
+does not repair that type mismatch.
+
+## 18. Hardened minimum physical helicity-response successor contract
+
+The schema-child identifier is
+`PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA`, with
+schema
+
+`tect/pre-a-m2-ci8-physical-response-successor-minimum-contract/1.1`.
+
+Its formal gate authority is now registered, so the child is **closed only as a
+syntactic and declared-binding schema contract**.  This does not validate physical
+semantics or close the physical-response or Round-1 parents.  Its exact root fields remain:
+
+`schema, contract_id, candidate_id, parent_candidate_id, status, fixture_only, candidate_created, version_delta, physical_control_map, probe_contract, state_reference_contract, response_definition, estimand_binding, critical_prediction, error_budget, common_input_ledger, hard_row_rerun, verification, prospective_firewall, no_overclaim`.
+
+Every artifact reference now has exactly
+`path, sha256, role, media_type`.  The path must be a normalized
+repository-relative POSIX path with no absolute prefix, drive, backslash, dot
+segment or parent traversal, embedded NUL, or length above 4096 characters.
+Every segment must use exact case-sensitive on-disk spelling and may not end
+in a space or dot; the resolved repository-relative POSIX spelling must equal
+the supplied path exactly.  The file must exist, match its normalized SHA-256,
+and satisfy the role-specific root, suffix and media-type rule.  `PurePath`,
+`resolve`, directory-listing, `is_file`, `stat`, hash and open `OSError`,
+`ValueError`, and `RuntimeError` failures become structured rejection rather
+than exceptions.  These checks apply to the source law, linear probe,
+quadratic contact, compact/gauge action, state-existence result,
+physical-control map, response map, raw estimator, proofs, all error scripts
+and run JSONs, and the three verifier roles.
+
+A substantive successor declaration is a unique list drawn only from
+
+`SECOND_ORDER_SOURCE_LAW, COMPACT_OR_GAUGE_ACTION, STATE_REFERENCE_CHANGE, PHYSICAL_CONTROL_MAP, REGULATOR_OR_LIMIT_CHANGE, ERROR_BOUND_PROOF, MICROSCOPIC_MAP_ONLY`.
+
+The first six entries are mandatory.  A map-only singleton, a missing
+mandatory item, an unknown value, a duplicate, or labels backed only by a
+map-only payload fail closed.  This records the exact reason that merely
+adding a linear source or microscopic map to the inertial Lane-Q Hamiltonian
+does not yet create an honest M2-v1 physical-response candidate.
+
+The contact, compact/gauge action, response, limit order and prediction are
+structured enums.  `NONE`, `ABSENT`, `UNSPECIFIED`, `NOT_SUPPLIED`,
+`NOT_CREATED`, `TBD`, `PLACEHOLDER`, `N/A`, `NA`, and `NOT_AVAILABLE` are never
+accepted as their payloads.  The exact limit order is
+
+`SOURCE_TO_ZERO, THERMODYNAMIC_LIMIT, REGULATOR_REMOVAL, CRITICAL_LIMIT_FROM_ORDERED_SIDE`;
+
+a permutation is rejected.  The prediction must bind its candidate ID to the
+contract candidate and its estimand ID to the candidate-neutral response
+estimand.  The physical-control-map fields `physical_variable`, `r_of_t`,
+`domain`, and `scaling_window`, and the prediction fields
+`predicted_relation`, `scaling_window`, and `corrections`, additionally reject
+`TARGET`, `HOLDOUT`, `DISCOVERY`, and `FORBIDDEN` tokens.  This finite lexical
+firewall is a syntax rule, not a proof of semantic target independence.
+
+The canonical positive-rational language used by both engines is
+`[1-9][0-9]*(?:/[1-9][0-9]*)?`, with an explicit maximum length of 128
+characters, followed by exact coprimality and canonical-spelling checks.  A
+slash form must have denominator at least two; a denominator-one value must use
+integer spelling.  Integer-conversion `ValueError` is caught in both engines.
+The grammar therefore rejects decimals, signs, zero, whitespace, leading
+zeros, zero denominators, unreduced fractions, and `1/1` or `3/1`.  In
+particular, `1/10`, `1/100`, `3/50`, and `1` are accepted, while `0.1`, `2/20`,
+` 1/10`, `1/1`, and `3/1` are rejected.
+
+Exactly six error terms are required:
+`finite_torus_spacing`, `regulator_removal`, `nonlinear_remainder`,
+`loop_or_renormalization`, `state_reference_transfer`, and `raw_estimator`.
+Every term binds an existing `codes/**/*.py` script ref, an existing
+`claims/*/runs/*/result.json` ref, and a unique top-level result key that
+actually exists in the run JSON.  All six result keys and all
+`(script, run, result-key)` composites are distinct.  At least two distinct
+proof refs are required.  The exact total must equal the sum and remain
+strictly below the common estimand margin.
+
+The input ledger rejects duplicate row IDs, duplicate source IDs,
+`VISIBLE_VALIDATION`, `NOT_AVAILABLE`, and any target, holdout, discovery or
+forbidden source ID.  Every section binds a nonempty unique subset of ledger
+source IDs.  The firewall's allowed-source list is compared with the ledger
+as an order-insensitive exact set.  Its forbidden-choice enum is also exact
+and contains no placeholder.  The hard-row object must have length ten and
+key set exactly `D00`--`D09`, with every value `PASS`; key order is immaterial.
+The primary, non-importing independent, and integrated verifier refs must be
+three distinct current `.py` paths under `codes/` with three distinct actual
+hashes.
+
+The positive fixture uses only extant repository scripts, the extant M2
+manifest, and extant v1.1 run JSONs.  Every such reference is explicitly
+`FIXTURE_ONLY_EXISTING_REPOSITORY_ARTIFACTS_NOT_FUTURE_CANDIDATE_EVIDENCE`.
+Those files exercise syntax, path, hash, role, media-type and result-key
+binding.  Their reuse does not assert that they contain a future physical
+source law, compact action, state proof, response map, error proof, candidate
+or prediction.  This avoids a circular stored self-hash: both engines compute
+current hashes at fixture-construction time, and no script hash is embedded in
+its own tracked source.
+
+The positive fixture still uses six exact bounds `1/100`, whose sum is
+`3/50 < 1/10`.  Its ten PASS rows remain syntax fixtures, not M2 evidence.  A
+reordered-positive metamorphic reverses the substantive list, ledger, error
+terms, hard-row insertion order and firewall lists and must still pass.  Each
+engine also rejects 48 deterministic malformed rational, NUL/overlong/alias
+path, placeholder and target-token, malformed-container, non-string extra-key,
+and unhashable-scalar fuzz cases without raising an exception.  Integer,
+`None`, and tuple extra dictionary keys are covered explicitly and produce
+structured rejection.
+
+The retained hostile suite plus the requested adversarial cases has 57 exact
+names and codes.  The additive cases are
+`map_only_payload_under_substantive_label`, `unknown_substantive_change`,
+`duplicate_substantive_change`, `unbound_probe_hash`,
+`probe_artifact_wrong_role`, `quadratic_contact_placeholder`,
+`compact_action_placeholder`, `state_existence_ref_unbound`,
+`response_map_ref_unbound`, `limit_order_placeholder`,
+`limit_order_permuted`, `prediction_placeholder`,
+`prediction_candidate_unbound`, `proof_ref_unbound`,
+`error_evidence_reused`, `error_result_key_missing`,
+`non_script_verifier`, `identical_verifier_hash`,
+`integrated_ref_missing`, `duplicate_input_id`, `duplicate_source_id`,
+`visible_validation_source`, `forbidden_source_id`,
+`source_section_unbound`, `forbidden_choices_placeholder`, `decimal_ratio`,
+`unreduced_ratio`, `whitespace_ratio`, `embedded_nul_artifact_path`,
+`overlong_artifact_path`, `overlong_rational_literal`,
+`trailing_dot_segment_artifact_path`,
+`trailing_space_segment_artifact_path`, `case_changed_artifact_path`,
+`free_semantic_placeholder`, `prediction_target_leakage`,
+`scaling_window_holdout_leakage`, `control_map_r_of_t_target_leakage`,
+`control_map_scaling_window_holdout_leakage`, and `denominator_one_ratio`.
+Both rational-length and denominator-one cases must include the structured
+code `NUMERIC_LITERAL_INVALID`.
+
+The validation boundary has three separate layers:
+
+1. **syntax and declared binding:** validated by the two staged engines;
+2. **semantic physical correctness:** not validated by artifact existence or
+   hashes, and still requires new physical content and proof; semantic truth,
+   change-evidence equivalence, result-key fitness, script/run provenance
+   equivalence, and source-class/used-for equivalence are not machine-proved;
+   and
+3. **external prospective freeze:** not supplied and not constructible from
+   this repository fixture.
+
+Accordingly, the schema validator cannot promote the 48-component internal
+fingerprint into a common-estimand prediction and cannot close
+`PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND`.
+
+## 19. Formalized authority and no-overclaim boundary
+
+During the initial four-file proof-first assembly, only the manifest, this
+certificate, the primary verifier, and the non-importing independent verifier
+changed.  At that historical staging checkpoint, `--staged` reported these
+exact missing authorities:
+
+1. `claims/GATES.md#PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY`;
+2. `claims/GATES.md#PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA`;
+3. `negative-results/registry.md#NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE`;
+4. `RESULTS-LEDGER.md#R-168-v1.2`; and
+5. `explorations/log.jsonl#EXP-000812`.
+
+All five authorities are now registered. The schema child is formally closed
+only in its syntactic and declared-binding scope; a passing synthetic validator
+is not physical evidence. The existing
+PA-M2-CI8-RS-DISPERSION-MAP-v1 object remains DESIGN_ONLY and NOT_CREATED.
+In particular, D03, D05, D06, and D08 remain non-PASS for a source-only M2
+extension, D07 still requires a real prospective holdout, and every
+common-input, external-custodian, cryptographic-remote, admitted-map, parent
+Round-1, physical Sector A, and Pre-A gate remains open.
+
+## 20. Combined R-167 v2.1 / R-168 v1.2 gate-level checkpoint issuance
+
+The historical proof-first sentence No intermediate v1.2 PDF is issued applied
+only to the earlier four-file staging batch. It is superseded by this single
+gate-level issuance; no per-lemma or intermediate PDF was issued.
+
+- Source:
+  claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt
+  (raw SHA-256
+  b5e21a1aa14492947fa2b0aa4a04d14e89bdc58dc862a77cb273a5905d3d5827).
+- PDF:
+  claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf
+  (raw SHA-256
+  a535317888cb712e06a15ef06aa9fef25b317d18830c69235cb798130987d4aa;
+  13 pages).
+- R-167 verification: primary 209/209, non-importing independent 138/138,
+  integrated 251/251.
+- R-168 verification: primary 340/340, non-importing independent 361/361,
+  integrated 288/288.
+- Extraction and render QA: pypdf 13/13 nonempty pages; pdfplumber 13/13
+  nonempty pages; all 13 rendered pages visually reviewed with zero clipping,
+  overlap, broken equations, unreadable identifiers, black glyphs, or
+  malformed page transitions; build OVERFULL-HBOX 0.
+
+The workflow issued one combined source/PDF pair only after the primary,
+non-importing independent, integrated, formal-authority, generated-surface,
+source-form, dual-extraction, and visual-review checks passed. This formally
+issues and strictly verifies only the scoped R-167 v2.1 and R-168 v1.2
+children. The physical-response, external-prospective-freeze, common-alpha,
+many-edge rank-two/QPS, broken-sector GNS-gap, Round-1, C6, CP1, physical
+Sector A, and Pre-A parents remain **OPEN**.
