@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
-"""Primary exact verifier for the staged R-167 v2.2 route split.
+"""Primary exact verifier for the staged R-167 v2.3 route split.
 
-Fixtures A--H preserve every v2.1 exact check and historical boundary.
-Fixture I checks the ninth-order virial sign/factor, terminating subset-shear
+Fixtures A--I preserve every v2.2 exact check and historical boundary.
+Fixture J checks the paired-history Gibbs-L2 rate, connected geometric QPS
+envelope, actual second-order onsite-resolvent connected coefficient and Ritz
+tail criterion, and the forward-local UHF automorphism obstruction.  Fixture I
+continues to check the ninth-order virial sign/factor, terminating subset-shear
 conjugation, fifth-word order/count budget, registered-periodic twentieth
 history corridor, and the rank-two automatic-gap counterfixture.  The actual
-fifth-moment/history conclusion is confined to the registered fixed-beta
-periodic compact-source family; n-to-infinity common alpha, connected rank-two
-oscillator/QPS transfer, and the broken-sector GNS gap remain open.
+implementer/history conclusion is confined to the registered fixed-beta
+periodic compact-source family.  Arbitrary-observable or all-exhaustion common
+alpha, all-order connected rank-two oscillator/QPS transfer, and the broken-
+sector GNS gap remain open.
 
-Use ``--staged --no-store`` while EXP-000813, R-167 v2.2, the new negative row
-and three new or changed gate rows are assembled; formal misses then produce
+Use ``--staged --no-store`` while EXP-000815, R-167 v2.3, the new negative row
+and three new closed gate rows are assembled; formal misses then produce
 the honest verdict ``INCOMPLETE``.
 """
 
@@ -29,7 +33,7 @@ from typing import Any, Iterable
 import sympy as sp
 
 
-__version__ = "2.2.0"
+__version__ = "2.3.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = "pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split"
@@ -47,18 +51,42 @@ GATE_REGISTRY = REPO / "claims/GATES.md"
 
 EXPECTED_TASK = "T-054"
 EXPECTED_CLAIM_IDS = ("C6-SPACETIME-SIGNATURE",)
-EXPECTED_EXPLORATION = "EXP-000813"
+EXPECTED_EXPLORATION = "EXP-000815"
 EXPECTED_RESULT_NUMBER = "R-167"
-EXPECTED_RESULT_VERSION = "v2.2"
+EXPECTED_RESULT_VERSION = "v2.3"
 EXPECTED_RESULT_ID = (
     "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT"
 )
 EXPECTED_CANDIDATE_ID = (
     "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-SEMICLASSICAL-DOUBLET-ROUTE-SPLIT-v0"
 )
-EXPECTED_CLOSED_SUBGATES = ('PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY', 'PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION', 'PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION', 'PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION', 'PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR', 'PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP', 'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING', 'PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION', 'PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR')
+EXPECTED_CLOSED_SUBGATES = ('PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY', 'PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION', 'PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION', 'PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION', 'PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR', 'PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP', 'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING', 'PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION', 'PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR', 'PA-CP1-ST8-Q3LOCK-REGISTERED-PERIODIC-SPLIT-IMPLEMENTER-TWO-SIDED-GIBBS-L2-HARD-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-ENVELOPE', 'PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-AND-RITZ-CUTOFF')
+V2_1_CLOSED_SUBGATES = (
+    'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION',
+    'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL',
+)
+V2_2_CLOSED_SUBGATES = (
+    'PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING',
+    'PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION',
+    'PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR',
+)
+V2_3_CLOSED_SUBGATES = (
+    'PA-CP1-ST8-Q3LOCK-REGISTERED-PERIODIC-SPLIT-IMPLEMENTER-TWO-SIDED-GIBBS-L2-HARD-CUTOFF-REMOVAL',
+    'PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-ENVELOPE',
+    'PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-AND-RITZ-CUTOFF',
+)
 EXPECTED_OPEN_GATES = ('PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA', 'PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY', 'PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS', 'PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE', 'PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY')
-NEGATIVE_IDS = ('NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP')
+NEGATIVE_IDS = ('NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY')
+V2_1_NEGATIVE_IDS = (
+    'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT',
+    'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT',
+)
+V2_2_NEGATIVE_IDS = (
+    'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP',
+)
+V2_3_NEGATIVE_IDS = (
+    'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY',
+)
 SEMICLASSICAL_SOURCES = (
     "https://www.numdam.org/item/AIHPA_1983__38_3_295_0/",
     "https://www.numdam.org/item/AIHPA_1984__40_2_224_0/",
@@ -2527,6 +2555,311 @@ def fixture_i_actual_q3_fifth_shear_and_rank_two(audit: Audit) -> dict[str, Any]
     }
 
 
+def fixture_j_v2_3_connected_and_implementer(audit: Audit) -> dict[str, Any]:
+    """Recompute the four v2.3 exact fixtures from labelled inputs."""
+
+    spatial_dimension = 3
+    coordination = 2 * spatial_dimension
+    box_side_upper_factor = 3
+    edge_growth_coefficient = coordination * box_side_upper_factor**2
+    paired_tail_constant = edge_growth_coefficient**2
+    squared_rate_constant = 2 * paired_tail_constant
+    cutoff_power = 16
+    cutoff_scale = Fraction(2, 5)
+    paired_corridor_exponent = Fraction(6) - cutoff_power * cutoff_scale
+    implementer_rate_exponent = paired_corridor_exponent / 2
+
+    audit.check(
+        "v2.3 paired tail and implementer constants",
+        paired_tail_constant == 2916
+        and squared_rate_constant == 5832
+        and paired_corridor_exponent == Fraction(-2, 5)
+        and implementer_rate_exponent == Fraction(-1, 5),
+        {
+            "paired_tail": paired_tail_constant,
+            "squared_rate": squared_rate_constant,
+            "paired_exponent": paired_corridor_exponent,
+            "rate_exponent": implementer_rate_exponent,
+        },
+        {
+            "paired_tail": 2916,
+            "squared_rate": 5832,
+            "paired_exponent": Fraction(-2, 5),
+            "rate_exponent": Fraction(-1, 5),
+        },
+        "J_implementer",
+    )
+
+    u, v = sp.symbols("u v", nonnegative=True)
+    cauchy_gap = sp.expand(2 * (u**2 + v**2) - (u + v) ** 2)
+    audit.check(
+        "v2.3 two-leg Cauchy identity",
+        sp.expand(cauchy_gap - (u - v) ** 2) == 0,
+        cauchy_gap,
+        (u - v) ** 2,
+        "J_implementer",
+    )
+
+    rate_rows = []
+    for base in (2, 5):
+        radius = base**5
+        cutoff = base**2
+        squared_rate = sp.Rational(
+            squared_rate_constant * radius**6,
+            cutoff**cutoff_power,
+        )
+        rate = sp.sqrt(squared_rate)
+        expected_rate = edge_growth_coefficient * sp.sqrt(2) / base
+        rate_rows.append(
+            {
+                "base": base,
+                "R": radius,
+                "L": cutoff,
+                "squared_rate": squared_rate,
+                "rate": rate,
+                "expected_rate": expected_rate,
+            }
+        )
+    audit.check(
+        "v2.3 exact R to L implementer rates",
+        all(sp.simplify(row["rate"] - row["expected_rate"]) == 0 for row in rate_rows),
+        rate_rows,
+        (27 * sp.sqrt(2), 54 * sp.sqrt(2) / 5),
+        "J_implementer",
+    )
+
+    z = coordination
+    exp_a = 2
+    kappa = Fraction(1, (z * exp_a) ** 2)
+    envelope_a = Fraction(1, 10**2)
+    ratio = z**2 * exp_a * kappa
+    qps_bound = envelope_a * kappa / (1 - ratio) ** 2
+    cutoff_index = 10
+    difference_envelope = envelope_a / cutoff_index
+    cutoff_qps_bound = difference_envelope * kappa / (1 - ratio) ** 2
+    rooted_walk_counts = tuple(z ** (2 * (size - 1)) for size in range(1, 5))
+    series_value = Fraction(1, 1) / (1 - ratio) ** 2
+    audit.check(
+        "v2.3 canonical connected-walk count",
+        rooted_walk_counts == (1, 36, 1296, 46656),
+        rooted_walk_counts,
+        (1, 36, 1296, 46656),
+        "J_connected_envelope",
+    )
+    audit.check(
+        "v2.3 geometric QPS envelope fixture",
+        ratio == Fraction(1, 2)
+        and series_value == 4
+        and qps_bound == Fraction(1, 3600),
+        {"r": ratio, "series": series_value, "bound": qps_bound},
+        {"r": Fraction(1, 2), "series": 4, "bound": Fraction(1, 3600)},
+        "J_connected_envelope",
+    )
+    audit.check(
+        "v2.3 separate cutoff difference envelope",
+        difference_envelope == Fraction(1, 1000)
+        and cutoff_qps_bound == Fraction(1, 36000),
+        {"A_M": difference_envelope, "bound": cutoff_qps_bound},
+        {"A_M": Fraction(1, 1000), "bound": Fraction(1, 36000)},
+        "J_connected_envelope",
+    )
+
+    diagonal_pairs = z
+    ordered_off_diagonal_pairs = 3 * z * (z - 1)
+    qps_pair_constant = 2 * z * exp_a + 9 * z * (z - 1) * exp_a**2
+    epsilon = Fraction(1, 10**2)
+    gamma = 2
+    second_order_bound = Fraction(qps_pair_constant) * epsilon**2 / gamma
+    tau_m = epsilon / cutoff_index
+    cutoff_difference_bound = (
+        2 * Fraction(qps_pair_constant) * epsilon * tau_m / gamma
+    )
+    corridor_input_exponents = {
+        "c": -4,
+        "b": 1,
+        "m": 1,
+        "a": -1,
+        "Gamma": 2,
+    }
+    bond_bracket_exponent = max(
+        corridor_input_exponents["b"],
+        corridor_input_exponents["m"] + corridor_input_exponents["a"],
+        2 * corridor_input_exponents["a"],
+    )
+    epsilon_exponent = corridor_input_exponents["c"] + bond_bracket_exponent
+    gamma_exponent = corridor_input_exponents["Gamma"]
+    second_order_exponent = 2 * epsilon_exponent - gamma_exponent
+    audit.check(
+        "v2.3 overlapping ordered-pair count",
+        diagonal_pairs == 6
+        and ordered_off_diagonal_pairs == 90
+        and qps_pair_constant == 1104,
+        {
+            "diagonal": diagonal_pairs,
+            "off_diagonal": ordered_off_diagonal_pairs,
+            "C_a": qps_pair_constant,
+        },
+        {"diagonal": 6, "off_diagonal": 90, "C_a": 1104},
+        "J_second_order",
+    )
+    audit.check(
+        "v2.3 second-order QPS and cutoff fixture",
+        second_order_bound == Fraction(69, 1250)
+        and tau_m == Fraction(1, 1000)
+        and cutoff_difference_bound == Fraction(69, 6250),
+        {
+            "second_order": second_order_bound,
+            "tau_M": tau_m,
+            "cutoff_difference": cutoff_difference_bound,
+        },
+        {
+            "second_order": Fraction(69, 1250),
+            "tau_M": Fraction(1, 1000),
+            "cutoff_difference": Fraction(69, 6250),
+        },
+        "J_second_order",
+    )
+    audit.check(
+        "v2.3 N-corridor second-order exponent",
+        epsilon_exponent == -3
+        and gamma_exponent == 2
+        and second_order_exponent == -8,
+        {
+            "inputs": corridor_input_exponents,
+            "bond_bracket": bond_bracket_exponent,
+            "epsilon": epsilon_exponent,
+            "Gamma": gamma_exponent,
+            "second_order": second_order_exponent,
+        },
+        {"epsilon": -3, "Gamma": 2, "second_order": -8},
+        "J_second_order",
+    )
+
+    hilbert_dimension = 2**4
+    vacuum = sp.zeros(hilbert_dimension, 1)
+    vacuum[0, 0] = 1
+
+    def high_vector(site: int) -> sp.Matrix:
+        vector = sp.zeros(hilbert_dimension, 1)
+        vector[1 << site, 0] = 1
+        return vector
+
+    resolvent = sp.diag(
+        *[
+            sp.Integer(0) if index == 0 else sp.Rational(1, index.bit_count())
+            for index in range(hilbert_dimension)
+        ]
+    )
+    t_f = high_vector(0) * vacuum.T
+    t_disjoint = high_vector(2) * vacuum.T
+    t_overlap = high_vector(0) * vacuum.T
+    disjoint_coefficient = t_disjoint.T * resolvent * t_f
+    overlapping_coefficient = t_overlap.T * resolvent * t_f
+    audit.check(
+        "v2.3 exact high-support disjoint cancellation",
+        disjoint_coefficient == sp.zeros(hilbert_dimension)
+        and overlapping_coefficient == vacuum * vacuum.T,
+        {
+            "disjoint_rank": disjoint_coefficient.rank(),
+            "overlap_rank": overlapping_coefficient.rank(),
+        },
+        {"disjoint_rank": 0, "overlap_rank": 1},
+        "J_second_order",
+    )
+
+    local_support = (1, 2, 3)
+    forward_support = tuple(site + 1 for site in local_support)
+    inverse_images = (3, 5)
+    total_sites = max(inverse_images)
+    pauli_z = sp.diag(1, -1)
+
+    def local_z(site: int) -> sp.Matrix:
+        factors = [sp.eye(2) for _ in range(total_sites)]
+        factors[site - 1] = pauli_z
+        return sp.kronecker_product(*factors)
+
+    inverse_difference = local_z(inverse_images[0]) - local_z(inverse_images[1])
+    inverse_difference_norm = max(
+        abs(inverse_difference[index, index])
+        for index in range(inverse_difference.rows)
+    )
+    audit.check(
+        "v2.3 UHF forward stabilization and inverse non-Cauchy fixture",
+        forward_support == (2, 3, 4)
+        and inverse_difference_norm == 2,
+        {
+            "forward_support": forward_support,
+            "inverse_images": inverse_images,
+            "inverse_difference_norm": inverse_difference_norm,
+        },
+        {
+            "forward_support": (2, 3, 4),
+            "inverse_images": (3, 5),
+            "inverse_difference_norm": 2,
+        },
+        "J_UHF",
+    )
+    audit.check(
+        "v2.3 theorem boundary flags",
+        True,
+        {
+            "implementer_not_arbitrary_observable": True,
+            "connected_envelope_conditional": True,
+            "second_order_not_all_order": True,
+            "uniform_tau_required": True,
+            "forward_limit_not_automatically_surjective": True,
+            "common_alpha_closed": False,
+            "broken_sector_GNS_gap_closed": False,
+        },
+        "three scoped children plus one implication no-go only",
+        "J_scope",
+    )
+
+    return {
+        "implementer": {
+            "paired_tail_constant": paired_tail_constant,
+            "squared_rate_constant": squared_rate_constant,
+            "paired_corridor_exponent": paired_corridor_exponent,
+            "rate_exponent": implementer_rate_exponent,
+            "rate_rows": rate_rows,
+            "arbitrary_observable_context": False,
+        },
+        "connected_envelope": {
+            "z": z,
+            "exp_a": exp_a,
+            "kappa": kappa,
+            "A": envelope_a,
+            "r": ratio,
+            "rooted_walk_counts": rooted_walk_counts,
+            "qps_bound": qps_bound,
+            "A_M_at_M_10": difference_envelope,
+            "cutoff_bound_at_M_10": cutoff_qps_bound,
+            "pointwise_only_sufficient": False,
+        },
+        "second_order": {
+            "diagonal_pairs": diagonal_pairs,
+            "ordered_off_diagonal_pairs": ordered_off_diagonal_pairs,
+            "C_a": qps_pair_constant,
+            "epsilon": epsilon,
+            "Gamma": gamma,
+            "qps_bound": second_order_bound,
+            "tau_M_at_M_10": tau_m,
+            "cutoff_difference_bound": cutoff_difference_bound,
+            "N_exponent": second_order_exponent,
+            "disjoint_coefficient_rank": disjoint_coefficient.rank(),
+            "overlap_coefficient_rank": overlapping_coefficient.rank(),
+            "all_order_elimination": False,
+        },
+        "UHF": {
+            "forward_local_support": forward_support,
+            "inverse_images": inverse_images,
+            "inverse_difference_norm": inverse_difference_norm,
+            "limit_surjective": False,
+            "Q3_dynamics_nonexistence": False,
+        },
+    }
+
+
 def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     missing: list[str] = []
 
@@ -2534,7 +2867,7 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         if staged:
             missing.append(label)
             return
-        raise AssertionError(f"missing or incomplete v2.2 authority: {label}")
+        raise AssertionError(f"missing or incomplete v2.3 authority: {label}")
 
     def require_text(path: Path, label: str) -> str | None:
         if not path.exists():
@@ -2720,7 +3053,13 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
             "actual_q3_twentieth_history_and_hard_cutoff_corridor",
             "rank_two_projection_gap_no_go",
             "connected_rank_two_qps_successor",
+            "registered_periodic_split_implementer_two_sided_gibbs_l2_hard_cutoff_removal",
+            "conditional_connected_cluster_geometric_qps_norm_envelope",
+            "second_order_connected_onsite_resolvent_qps_norm_and_ritz_cutoff",
+            "forward_local_automorphism_limit_no_go",
+            "v2_3_exact_fixture",
             "v2_2_checkpoint_synthesis",
+            "v2_3_checkpoint_synthesis",
         ):
             audit.check(
                 f"manifest retained/new section {section}",
@@ -2778,6 +3117,73 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
             manifest.get("actual_q3_twentieth_history_and_hard_cutoff_corridor", {}).get("moment", ""),
             "M20<=2 d5^2 exp(C5 T) S_mu^5 m5",
             "manifest v2.2 actual M20",
+        )
+        require_token(
+            manifest.get("registered_periodic_split_implementer_two_sided_gibbs_l2_hard_cutoff_removal", {}).get("paired_sum_input", ""),
+            "54 sqrt(2)",
+            "manifest v2.3 implementer rate",
+        )
+        require_token(
+            manifest.get("conditional_connected_cluster_geometric_qps_norm_envelope", {}).get("qps_bound", ""),
+            "A kappa/(1-r)^2",
+            "manifest v2.3 connected-envelope QPS bound",
+        )
+        require_token(
+            manifest.get("second_order_connected_onsite_resolvent_qps_norm_and_ritz_cutoff", {}).get("connectedness", ""),
+            "3z(z-1)",
+            "manifest v2.3 overlapping ordered-pair count",
+        )
+        require_token(
+            manifest.get("second_order_connected_onsite_resolvent_qps_norm_and_ritz_cutoff", {}).get("ritz_cutoff", ""),
+            "2 C_a epsilon tau_M/Gamma",
+            "manifest v2.3 Ritz Gram cutoff bound",
+        )
+        require_token(
+            manifest.get("forward_local_automorphism_limit_no_go", {}).get("failure", ""),
+            "||Z_N-Z_M||=2",
+            "manifest v2.3 UHF inverse non-Cauchy fixture",
+        )
+        expected_v23_fixture = {
+            "implementer": {
+                "paired_tail_constant": 2916,
+                "squared_rate_constant": 5832,
+                "R_32_L_4_rate": "27*sqrt(2)",
+                "R_3125_L_25_rate": "54*sqrt(2)/5",
+            },
+            "connected_envelope": {
+                "z": 6,
+                "exp_a": 2,
+                "kappa": "1/144",
+                "A": "1/100",
+                "r": "1/2",
+                "qps_bound": "1/3600",
+                "A_M_at_M_10": "1/1000",
+                "cutoff_bound_at_M_10": "1/36000",
+            },
+            "second_order": {
+                "diagonal_pairs": 6,
+                "ordered_off_diagonal_pairs": 90,
+                "C_a": 1104,
+                "epsilon": "1/100",
+                "Gamma": 2,
+                "qps_bound": "69/1250",
+                "tau_M_at_M_10": "1/1000",
+                "cutoff_difference_bound": "69/6250",
+                "N_exponent": -8,
+            },
+            "uhf": {
+                "forward_local_support": [2, 3, 4],
+                "inverse_images": [3, 5],
+                "inverse_difference_norm": 2,
+                "limit_surjective": False,
+            },
+        }
+        audit.check(
+            "manifest v2.3 exact fixture",
+            manifest.get("v2_3_exact_fixture") == expected_v23_fixture,
+            manifest.get("v2_3_exact_fixture"),
+            expected_v23_fixture,
+            "authority",
         )
         checkpoint_v22 = manifest.get("v2_2_checkpoint_synthesis")
         deferred_v22 = {
@@ -2893,6 +3299,131 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
                 "pdf_sha256": pdf_hash_v22,
             },
             "exact proof-first DEFERRED or exact cross-bound eight-field ISSUED checkpoint",
+            "authority",
+        )
+        checkpoint_v23 = manifest.get("v2_3_checkpoint_synthesis")
+        deferred_v23 = {
+            "status": "DEFERRED",
+            "pdf_issued": False,
+            "workflow": (
+                "No intermediate PDF is issued for R-167 v2.3. Preserve every "
+                "v2.2 and earlier source/PDF pair as historical evidence; issue "
+                "one R-167 v2.3 gate-level synthesis only after the primary, "
+                "non-importing independent, integrated, formal-authority, "
+                "generated-surface, source-form, freshness, dual-extraction, "
+                "strict-release, and visual-review gates pass. R-168 v1.3 "
+                "remains historical and is not reissued."
+            ),
+        }
+        issued_v23_fields = {
+            "status", "source", "pdf", "source_sha256", "pdf_sha256",
+            "pages", "workflow", "visual_qa",
+        }
+        issued_v23_status = (
+            "ISSUED AS ONE GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION"
+        )
+        issued_v23_workflow = (
+            "No per-lemma or intermediate PDF was issued. One R-167 v2.3 "
+            "gate-level synthesis source/PDF pair was issued only after the "
+            "primary, non-importing independent, integrated, formal-authority, "
+            "generated-surface, source-form, freshness, dual-extraction, "
+            "strict-release, and visual-review checks passed. R-168 v1.3 "
+            "remains historical and is not reissued."
+        )
+        source_rel_v23 = (
+            checkpoint_v23.get("source")
+            if isinstance(checkpoint_v23, dict)
+            else None
+        )
+        pdf_rel_v23 = (
+            checkpoint_v23.get("pdf")
+            if isinstance(checkpoint_v23, dict)
+            else None
+        )
+        source_path_v23 = (
+            REPO / source_rel_v23 if isinstance(source_rel_v23, str) else None
+        )
+        pdf_path_v23 = REPO / pdf_rel_v23 if isinstance(pdf_rel_v23, str) else None
+        pages_v23 = (
+            checkpoint_v23.get("pages")
+            if isinstance(checkpoint_v23, dict)
+            else None
+        )
+        pages_v23_valid = (
+            isinstance(pages_v23, int)
+            and not isinstance(pages_v23, bool)
+            and pages_v23 > 0
+        )
+        visual_qa_v23 = (
+            f"All {pages_v23} rendered pages were reviewed at readable resolution "
+            "with zero clipping, overlap, broken equations, unreadable identifiers, "
+            "black glyphs, or malformed page transitions; pypdf and pdfplumber each "
+            f"extracted {pages_v23}/{pages_v23} nonempty pages; the build reported "
+            "OVERFULL-HBOX 0."
+            if pages_v23_valid
+            else None
+        )
+        source_hash_actual_v23 = (
+            hashlib.sha256(source_path_v23.read_bytes()).hexdigest()
+            if source_path_v23 is not None and source_path_v23.is_file()
+            else None
+        )
+        pdf_hash_actual_v23 = (
+            hashlib.sha256(pdf_path_v23.read_bytes()).hexdigest()
+            if pdf_path_v23 is not None and pdf_path_v23.is_file()
+            else None
+        )
+        source_pin_v23 = (
+            checkpoint_v23.get("source_sha256")
+            if isinstance(checkpoint_v23, dict)
+            else None
+        )
+        pdf_pin_v23 = (
+            checkpoint_v23.get("pdf_sha256")
+            if isinstance(checkpoint_v23, dict)
+            else None
+        )
+        source_relative_valid_v23 = (
+            isinstance(source_rel_v23, str)
+            and source_rel_v23.startswith("claims/C6-SPACETIME-SIGNATURE/notes/")
+            and source_rel_v23.endswith(".tex.txt")
+            and ".." not in Path(source_rel_v23).parts
+        )
+        issued_v23_valid = (
+            isinstance(checkpoint_v23, dict)
+            and set(checkpoint_v23) == issued_v23_fields
+            and checkpoint_v23.get("status") == issued_v23_status
+            and source_relative_valid_v23
+            and isinstance(pdf_rel_v23, str)
+            and pdf_rel_v23 == source_rel_v23.removesuffix(".tex.txt") + ".pdf"
+            and checkpoint_v23.get("workflow") == issued_v23_workflow
+            and checkpoint_v23.get("visual_qa") == visual_qa_v23
+            and pages_v23_valid
+            and isinstance(source_pin_v23, str)
+            and len(source_pin_v23) == 64
+            and set(source_pin_v23) <= lowercase_hex
+            and isinstance(pdf_pin_v23, str)
+            and len(pdf_pin_v23) == 64
+            and set(pdf_pin_v23) <= lowercase_hex
+            and source_path_v23 is not None
+            and pdf_path_v23 is not None
+            and source_path_v23.is_file()
+            and pdf_path_v23.is_file()
+            and source_hash_actual_v23 == source_pin_v23
+            and pdf_hash_actual_v23 == pdf_pin_v23
+            and pdf_path_v23.stat().st_mtime_ns >= source_path_v23.stat().st_mtime_ns
+        )
+        audit.check(
+            "manifest v2.3 checkpoint lifecycle",
+            checkpoint_v23 == deferred_v23 or issued_v23_valid,
+            {
+                "metadata": checkpoint_v23,
+                "deferred_exact": checkpoint_v23 == deferred_v23,
+                "issued_exact": issued_v23_valid,
+                "source_sha256": source_hash_actual_v23,
+                "pdf_sha256": pdf_hash_actual_v23,
+            },
+            "exact proof-first DEFERRED or exact local eight-field ISSUED checkpoint",
             "authority",
         )
         audit.check(
@@ -3097,9 +3628,9 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         "P_0h_{xy}L",
         "Ritz form restriction",
         "No v2.1 PDF is issued",
-        *EXPECTED_CLOSED_SUBGATES[-2:],
+        *V2_1_CLOSED_SUBGATES,
         *EXPECTED_OPEN_GATES[-2:],
-        *NEGATIVE_IDS[-2:],
+        *V2_1_NEGATIVE_IDS,
     ):
         require_token(certificate_text, token, f"certificate v2.1 token {token}")
 
@@ -3112,11 +3643,26 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         "rank-two projection",
         "No v2.2 PDF is issued",
         "v2_2_checkpoint_synthesis",
-        *EXPECTED_CLOSED_SUBGATES[-3:],
+        *V2_2_CLOSED_SUBGATES,
         EXPECTED_OPEN_GATES[-1],
-        NEGATIVE_IDS[-1],
+        *V2_2_NEGATIVE_IDS,
     ):
         require_token(certificate_text, token, f"certificate v2.2 token {token}")
+
+    for token in (
+        "EXP-000815",
+        "R-167 v2.3",
+        r"54\sqrt2",
+        "1/3600",
+        "3z(z-1)",
+        "69/6250",
+        "No v2.3 PDF is issued",
+        "v2_3_checkpoint_synthesis",
+        "R-168 v1.3 remains historical and is not reissued",
+        *V2_3_CLOSED_SUBGATES,
+        *V2_3_NEGATIVE_IDS,
+    ):
+        require_token(certificate_text, token, f"certificate v2.3 token {token}")
 
     exploration_text = require_text(EXPLORATION_LEDGER, "exploration ledger")
     require_token(
@@ -3131,14 +3677,14 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     )
     if result_row_present:
         audit.check(
-            "result ledger exact R-167 v2.2 row",
+            "result ledger exact R-167 v2.3 row",
             True,
             True,
             True,
             "authority",
         )
     else:
-        missing_or_raise("result ledger exact R-167 v2.2 row")
+        missing_or_raise("result ledger exact R-167 v2.3 row")
     negative_text = require_text(NEGATIVE_REGISTRY, "negative registry")
     for negative_id in NEGATIVE_IDS:
         require_token(negative_text, negative_id, f"negative row {negative_id}")
@@ -3179,6 +3725,7 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
     fixture_g = fixture_g_twentieth_moment_and_graph_boundary(audit)
     fixture_h = fixture_h_full_oscillator_edge_cluster(audit)
     fixture_i = fixture_i_actual_q3_fifth_shear_and_rank_two(audit)
+    fixture_j = fixture_j_v2_3_connected_and_implementer(audit)
     authority = authority_audit(audit, staged)
     verdict = "PASS" if authority["status"] == "PASS" else "INCOMPLETE"
 
@@ -3199,6 +3746,14 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
         "simultaneous_bond_shear_fifth_graph_propagation": True,
         "actual_Q3_twentieth_fixed_edge_history_bound": True,
         "actual_Q3_fixed_edge_history_bound": True,
+        "registered_periodic_split_implementer_two_sided_Gibbs_L2_removal": True,
+        "arbitrary_observable_automorphism_estimate": False,
+        "conditional_connected_geometric_QPS_envelope": True,
+        "actual_second_order_connected_onsite_resolvent_QPS": True,
+        "second_order_uniform_Ritz_Gram_tail_required": True,
+        "all_order_connected_oscillator_elimination": False,
+        "forward_local_stabilization_implies_surjectivity": False,
+        "inverse_automorphisms_point_norm_Cauchy": False,
         "registered_periodic_compact_source_scope_only": True,
         "arbitrary_boundary_history_bound": False,
         "below_Gamma_global_Feshbach_precursor": True,
@@ -3248,6 +3803,7 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
             "fixture_G_twentieth_moment_graph_boundary": fixture_g,
             "fixture_H_full_oscillator_edge_cluster": fixture_h,
             "fixture_I_actual_Q3_fifth_shear_rank_two": fixture_i,
+            "fixture_J_v2_3_connected_and_implementer": fixture_j,
         },
         "scope": scope,
         "source_hashes": {
@@ -3257,12 +3813,13 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
         },
         "assertions": audit.rows,
         "boundary": (
-            "Exact A--I fixtures and scoped theorem imports only. The actual fifth-"
-            "moment/shear/history result is registered-periodic and compact-source "
-            "only. No numerical h0 or QPS radius, arbitrary-boundary history bound, "
-            "n-to-infinity common alpha, connected rank-two oscillator "
-            "elimination, oscillator QPS transfer, oscillator-lattice GNS gap, "
-            "Sector A, or Pre-A closure."
+            "Exact A--J fixtures and scoped theorem imports only. The actual fifth-"
+            "moment/shear/history and split-implementer results are registered-"
+            "periodic and compact-source only. The connected-envelope theorem is "
+            "conditional, and the onsite-resolvent QPS result is second order with "
+            "a separate uniform Gram-tail cutoff hypothesis. No arbitrary-observable "
+            "or all-exhaustion common alpha, all-order connected rank-two oscillator "
+            "elimination, oscillator-lattice GNS gap, Sector A, or Pre-A closure."
         ),
     }
 

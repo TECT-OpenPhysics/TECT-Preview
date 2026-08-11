@@ -1117,11 +1117,29 @@ the uniform history moment.
 
 **Status:** CLOSED IN THE REGISTERED FIXED-BETA FINITE-PERIODIC COMPACT-SOURCE SCOPE ONLY (2026-08-11). EXP-000813 / R-167 v2.2 gives `M20<=2 d5^2 exp(C5 T) S_mu^5 m5` for tested edge translates/orientations and partial or reverse split histories of total absolute time at most `T`. At `L=R^(2/5)`, the hard corridor is `2916 c^2 M20 R^(-2/5)` and the separate bounded-cutoff factorial logarithm is `-R log(R)/5+O(R)`. This is not an all-shape/exhaustion Cauchy theorem, common alpha, group/generator completion or KMS quotient.
 
+### **PA-CP1-ST8-Q3LOCK-REGISTERED-PERIODIC-SPLIT-IMPLEMENTER-TWO-SIDED-GIBBS-L2-HARD-CUTOFF-REMOVAL**
+
+**Statement:** In the registered fixed-beta finite-periodic compact-source Q3 family, prove mesh-uniform hard-coordinate-cutoff removal for every declared partial or reverse split implementer of total absolute bond time at most `T`, in the two-sided Gibbs Hilbert--Schmidt norm.
+
+**Status:** CLOSED IN THE REGISTERED FIXED-BETA FINITE-PERIODIC COMPACT-SOURCE SPLIT-IMPLEMENTER SCOPE ONLY (2026-08-11). EXP-000815 / R-167 v2.3 defines `||X||_(rho,#1)=||X rho^(1/2)||_2+||rho^(1/2)X||_2`. If the two history orientations satisfy `C_+ + C_- <= 2916 c^2 M20 R^6 L^-16`, the exact Duhamel telescope gives `||P-P_L||_(rho,#1) <= (T/hbar)sqrt(2(C_++C_-))`. At `L=R^(2/5)` this is at most `54 sqrt(2)|c| T hbar^-1 sqrt(M20) R^(-1/5)`. The estimate is uniform over the registered finite-periodic volumes, compact source set, split mesh, partial histories and reverse histories. It is an implementer estimate only: it does not control arbitrary observable conjugation, take the all-shape exhaustion limit, prove group/inverse closure, or construct the common alpha or KMS quotients.
+
+### **PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-ENVELOPE**
+
+**Statement:** Convert a uniform geometric envelope for connected interaction coefficients on a graph of maximum degree `z` into an explicit QPS interaction-norm bound and a dominated cutoff-convergence criterion.
+
+**Status:** CLOSED AS A DETERMINISTIC CONDITIONAL ENVELOPE-TO-QPS-NORM THEOREM ONLY (2026-08-11). EXP-000815 / R-167 v2.3 assumes connected coefficients `||Phi(X)|| <= A kappa^|X|`. A canonical rooted spanning tree and depth-first traversal inject every connected `X` containing a fixed root, with `|X|=n`, into at most `z^(2(n-1))` walks, while `diam(X)<=n-1`. Hence, for `r=z^2 exp(a) kappa<1`, `sup_x sum_(X contains x) |X| exp(a diam X)||Phi(X)|| <= A kappa/(1-r)^2`. If additionally `||Phi_M(X)-Phi(X)|| <= A_M kappa^|X|` uniformly in boundary, source and translate, with `A_M->0`, the same bound with `A_M` proves convergence in the QPS norm. The exact fixture `z=6`, `exp(a)=2`, `kappa=1/144`, `A=1/100` has `r=1/2` and bound `1/3600`. This theorem does not derive the geometric envelope for the actual all-order oscillator elimination.
+
+### **PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-AND-RITZ-CUTOFF**
+
+**Statement:** For the actual onsite-resolvent second-order coefficient about the rank-two band, prove disjoint-edge vanishing, a connected QPS-norm bound, and convergence under the declared parity-preserving Ritz/form cutoffs.
+
+**Status:** CLOSED FOR THE EXACT SECOND-ORDER ONSITE-RESOLVENT COEFFICIENT AND DECLARED RITZ/FORM CUTOFFS ONLY (2026-08-11). EXP-000815 / R-167 v2.3 uses `K_Q>=Gamma Q`, high-support preservation and `||Q B_e P||<=epsilon`. The coefficient `P B_e Q K_Q^(-1) Q B_f P` vanishes when `e` and `f` are disjoint and has norm at most `epsilon^2/Gamma` otherwise. For a root site, the diagonal pairs contribute at most `2z exp(a) epsilon^2/Gamma`; the at most `3z(z-1)` distinct overlapping ordered pairs contribute `9z(z-1) exp(2a) epsilon^2/Gamma`. Therefore `||Phi^(2)||_(QPS,a) <= C_a(z) epsilon^2/Gamma`, where `C_a(z)=2z exp(a)+9z(z-1)exp(2a)`; at `z=6`, `C_a(6)=12exp(a)+270exp(2a)`. Under the explicit Gram/resolvent cutoff contract `D_(e,M)=R_X^(1/2) Pi_M A_eP`, `||D_(e,M)||,||D_e||<=epsilon/sqrt(Gamma)` and `||D_(e,M)-D_e||<=tau_M/sqrt(Gamma)` uniformly with `tau_M->0`, the QPS-norm difference is at most `2 C_a(z) epsilon tau_M/Gamma`. Equivalently, the declared cutoffs commute with the onsite resolvent and use `R_(X,M)=Pi_M R_X Pi_M`. In the registered `N` corridor the second-order norm is `O(N^-8)=o(J)`. This is only the exact second-order coefficient; it supplies no all-order block diagonalization, remainder estimate, two-phase oscillator transfer or GNS gap.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
 
-**Status:** OPEN (2026-08-11). EXP-000813 / R-167 v2.2 shows by an exact rank-two local projection fixture that one even and one odd local kernel vector plus local edge gap one do not imply a volume-uniform lattice gap: the one-particle sector is `L_G/2` and a torus gap is at most `1-cos(2 pi/L)`. The counterfixture sharpens the required connected interaction and cutoff-compatibility contract; it is not a Q3 locality, local coercivity or gap no-go. The broader rank-two oscillator/QPS and broken-sector GNS-gap parents remain OPEN.
+**Status:** OPEN (2026-08-11). EXP-000813 / R-167 v2.2 shows by an exact rank-two local projection fixture that one even and one odd local kernel vector plus local edge gap one do not imply a volume-uniform lattice gap: the one-particle sector is `L_G/2` and a torus gap is at most `1-cos(2 pi/L)`. EXP-000815 / R-167 v2.3 closes only a deterministic geometric-envelope-to-QPS conversion and the exact second-order onsite-resolvent connected coefficient with the declared Ritz/form cutoff contract. It does not derive an all-order geometric envelope, sum the all-order transformation, control its remainder, transfer the oscillator phases, or construct a phasewise GNS intertwiner. The broader rank-two oscillator/QPS and broken-sector GNS-gap parents remain OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -1156,12 +1174,16 @@ uniform onsite-interspersed Q3LOCK fixed-edge history estimate. The
 `n->infinity` limit and group/generator/KMS completion remain open.
 No exact Q3LOCK dynamics nonexistence is asserted.
 
-EXP-000811 / R-167 v2.1 closes only the deterministic twentieth-moment-to-
-fixed-edge corridor implication. The translate-uniform local fifth Gibbs
-moment/elliptic embedding and simultaneous-bond-shear fifth-graph propagation
-are new explicit OPEN inputs; the split limit, exhaustion Cauchy, group,
-inverse, generator and phase-KMS completion are also unchanged. This parent
-remains OPEN.
+EXP-000813 / R-167 v2.2 closes the registered-periodic twentieth-history input.
+EXP-000815 / R-167 v2.3 converts it into mesh-uniform hard-cutoff removal for
+the finite-periodic split implementers in the two-sided Gibbs Hilbert--Schmidt
+norm. It does not control arbitrary observable conjugation or prove the
+`n->infinity` all-shape exhaustion limit, surjectivity, inverse Cauchy
+convergence, group/generator completion or phase-KMS quotients. The UHF
+counterfixture registered as
+`NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY`
+shows that forward local stabilization alone cannot supply those missing
+conclusions. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -1327,6 +1349,12 @@ not a many-edge block diagonalization, linked-cluster construction or
 quasi-local two-phase interaction. The thermodynamic rank-two/QPS transfer
 remains OPEN.
 
+EXP-000813 / R-167 v2.2 isolates the local-edge-to-global-gap failure.
+EXP-000815 / R-167 v2.3 supplies a conditional connected-set counting theorem
+and the actual second-order onsite-resolvent QPS coefficient with cutoff
+convergence. Neither is an all-order rank-two elimination or a two-phase
+oscillator QPS transfer. This parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -1358,6 +1386,11 @@ mass-gap claim.
 EXP-000811 / R-167 v2.1 proves only a local two-site full-oscillator edge
 cluster. It supplies no thermodynamic phase selection or sectorwise lattice
 coercivity estimate. The oscillator GNS-gap parent remains OPEN.
+
+The R-167 v2.3 second-order coefficient is `O(N^-8)=o(J)` only in its
+declared corridor. Without all-order remainder control, oscillator phase
+identification and a phasewise GNS intertwiner it implies no oscillator
+coercivity or gap. This parent remains OPEN.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 

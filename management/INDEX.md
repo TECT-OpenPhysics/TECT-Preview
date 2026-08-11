@@ -6,7 +6,7 @@
 Authorities: `claims/*/status.json`, `todo/todo.json`, `ROADMAP.md`, `RESULTS-LEDGER.md`, `negative-results/registry.md`, `claims/GATES.md`.
 
 **49 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 8 · T5: 10 · T6: 15 · T7: 3
-**168 reusable results** · **343 negative/audit records** · **147 registered gates/hypotheses**
+**168 reusable results** · **344 negative/audit records** · **150 registered gates/hypotheses**
 
 ## Live work
 

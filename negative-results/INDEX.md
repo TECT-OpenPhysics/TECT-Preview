@@ -5,7 +5,7 @@
 
 Authorities: `negative-results/registry.md`.
 
-**343 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 272 · retraction: 5
+**344 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 273 · retraction: 5
 
 Latest 25 records:
 
@@ -21,6 +21,7 @@ Latest 25 records:
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-ordered-ground-doublets-automatic-gns-gap) | no_go | infer a positive broken-sector GNS gap from two distinct ordered algebraic ground states, parity exchange, a fixed order witness and simple ground vectors |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-global-all-bond-renyi-volume-uniformity) | no_go | demand one volume-independent global sandwiched-Renyi bound for complete all-bond kicks |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-full-oscillator-local-parity-doublet-edge-gap-automatic-volume-uniform-lattice-gap) | no_go | infer a uniform lattice gap from a local parity doublet and edge gap one |
+| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-forward-local-automorphism-limit-automatic-surjectivity-and-inverse-cauchy) | no_go | infer a surjective limiting automorphism and inverse Cauchy convergence from exact forward local stabilization of finite-volume automorphisms |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-extensive-feshbach-self-energy-automatic-qps-locality) | no_go | promote a global extensive Feshbach self-energy norm bound automatically to a quasi-local two-phase QPS interaction norm |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-entropy-finite-moment-dynamic-gaussian-tail-inference) | no_go | promote small relative entropy, all-coefficient Gaussian reference moments and any fixed finite list of tilted moments to the dynamic Gaussian history tail required by the cutoff… |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-energy-form-entropy-finite-moment-automatic-sandwiched-renyi-upgrade) | no_go | infer one uniform `alpha>1` sandwiched-Renyi history estimate from vanishing entropy/energy excess, two-sided energy-form comparison and any fixed finite list of tilted moments |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-onsite-qp-lipschitz-stability) | no_go | propagate the ordinary bounded `q/p` commutator Lipschitz class through the exact quartic onsite flow |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity) | no_go | delete the centered spatial weight from the cubic graph multiplier while keeping a support-location-uniform constant |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-symmetric-sandwich-only-thermodynamic-cauchy) | no_go | infer a thermodynamic automorphism from convergence only in a symmetric energy sandwich |
-| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SUBCRITICAL-ENERGY-DAMPED-ONSITE-LIPSCHITZ-STABILITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-subcritical-energy-damped-onsite-lipschitz-stability) | no_go | repair the onsite `q/p` Lipschitz class with a fixed one-sided graph power `K^(-s)`, `s<1/2` |
 
 Search without loading the full registry:
 

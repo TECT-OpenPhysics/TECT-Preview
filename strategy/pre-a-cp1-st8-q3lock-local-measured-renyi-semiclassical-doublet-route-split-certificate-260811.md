@@ -1,12 +1,21 @@
-# R-167 v2.1 certificate: twentieth-moment corridor and full-oscillator local-edge cluster
+# R-167 v2.3 certificate: Gibbs-L2 implementers and connected second-order QPS control
 
-- **Exploration:** `EXP-000811` (additive successor to `EXP-000809`)
-- **Result:** `R-167`, additive version `v2.1`; no new result number
+- **Exploration:** `EXP-000815` (additive successor to `EXP-000813`)
+- **Result:** `R-167`, additive version `v2.3`; no new result number
 - **Stable result ID:** `PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT`
 - **Claim context:** `C6-SPACETIME-SIGNATURE`
 - **Task:** `T-054`
 - **Tier:** `T0`, `claim_bearing: false`
 - **Date:** 2026-08-11
+
+R-167 v2.3 preserves the complete issued v2.2 checkpoint and every earlier
+result below.  Sections 41--46 prove three more scoped children: two-sided
+Gibbs Hilbert--Schmidt removal for the declared split implementers, a
+conditional connected-envelope-to-QPS reduction, and the actual second-order
+onsite-resolvent connected QPS coefficient with a source-uniform cutoff
+criterion.  They also register an exact one-sided-UHF obstruction to inferring
+surjectivity and inverse convergence from forward local stabilization.  No
+v2.3 PDF is issued during this proof-first batch.
 
 R-167 v2.1 preserves the complete v2.0 certificate below and adds the conditional twentieth-moment fixed-edge corridor reduction and the full-oscillator local-edge parity-doublet compression/min--max and parity-preserving Ritz layers in Sections 21--30. It proves neither the required Q3 fifth-moment/fifth-graph inputs nor a lattice QPS or phasewise GNS gap, and it issues no intermediate PDF.
 
@@ -1980,3 +1989,295 @@ compact-action/background-probe/winding-law, ordered-state physical-mode and
 response-limit, six-term critical-estimand error-budget, physical-response,
 prospective-freeze, Round-1, C6, CP1, physical Sector A, and Pre-A parents
 remain **OPEN**. No parent closure follows.
+
+## 41. R-167 v2.3 additive scope and proof-first staging boundary
+
+This additive stage is `EXP-000815`, `R-167 v2.3`, at `T0` with
+`claim_bearing: false`.  It retains every v2.2 theorem and the exact issued
+`v2_2_checkpoint_synthesis` metadata.  The three new closed children are
+
+1. `PA-CP1-ST8-Q3LOCK-REGISTERED-PERIODIC-SPLIT-IMPLEMENTER-TWO-SIDED-GIBBS-L2-HARD-CUTOFF-REMOVAL`;
+2. `PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-ENVELOPE`;
+3. `PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-AND-RITZ-CUTOFF`.
+
+The new exact implication failure is
+`NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY`.
+It is a route boundary, not a nonexistence theorem for Q3 dynamics.
+
+The first child consumes the *paired* v2.2 forward/reverse tail authority; it
+does not silently promote one orientation into two.  The second is conditional
+on a geometric coefficient envelope.  The third is the actual second-order
+onsite-resolvent term only.  The all-exhaustion common-alpha and all-order
+connected oscillator-elimination parents remain open.
+
+## 42. Two-sided Gibbs-L2 removal for the declared split implementers
+
+Let `P` and `P_L` be one declared finite split product and its hard-coordinate
+cutoff product in a registered fixed-beta periodic volume with a compact
+source.  For the full Gibbs density `rho`, define
+
+\[
+ \|X\|_{\rho,\#1}
+ :=\|X\rho^{1/2}\|_2+\|\rho^{1/2}X\|_2 .                 \tag{42.1}
+\]
+
+For each changed bond layer, use the Duhamel ordering opposite to the Gibbs
+weight on that Hilbert--Schmidt leg.  All untouched factors are unitary, so
+telescoping a forward history and the reverse history separately gives
+
+\[
+ \|(P-P_L)\rho^{1/2}\|_2\le {T\over\hbar}\sqrt{C_+},
+ \qquad
+ \|\rho^{1/2}(P-P_L)\|_2\le {T\over\hbar}\sqrt{C_-}.     \tag{42.2}
+\]
+
+Here the total absolute bond time is at most `T`, uniformly in the declared
+mesh, partial history, reverse history, periodic volume, translate, and compact
+source.  Adding (42.2) and applying the two-variable Cauchy inequality yields
+
+\[
+ \|P-P_L\|_{\rho,\#1}
+ \le {T\over\hbar}(\sqrt{C_+}+\sqrt{C_-})
+ \le {T\over\hbar}\sqrt{2(C_++C_-)}.                    \tag{42.3}
+\]
+
+The v2.2 paired-sum authority is
+
+\[
+ C_++C_-\le 2916c^2M_{20}R^6L^{-16}.                    \tag{42.4}
+\]
+
+Since `2916=54^2`, choosing `L=R^{2/5}` in (42.3)--(42.4) gives the exact
+rate
+
+\[
+ \boxed{\displaystyle
+ \|P-P_L\|_{\rho,\#1}
+ \le {54\sqrt2\,|c|T\sqrt{M_{20}}\over\hbar}R^{-1/5}.}  \tag{42.5}
+\]
+
+The exact self-test points are `R=32,L=4`, where the dimensionless rate
+coefficient is `27*sqrt(2)`, and `R=3125,L=25`, where it is
+`54*sqrt(2)/5`.  Equation (42.5) contains no observable between a weighted
+leg and the implementer difference.  In particular, the v2.0 arbitrary-
+context obstruction remains applicable: (42.5) is not an arbitrary-observable
+automorphism estimate.
+
+## 43. A conditional connected geometric envelope implies the QPS norm
+
+Let the host graph have maximum degree `z` and fix a neighbor ordering.  For
+every finite connected set `X`, assume
+
+\[
+ \|\Phi(X)\|\le A\kappa^{|X|},
+ \qquad r:=z^2e^a\kappa<1.                               \tag{43.1}
+\]
+
+For each connected `n`-set containing a fixed root `x`, choose its canonical
+rooted spanning tree and traverse that tree by deterministic depth first
+search.  The resulting walk has length `2(n-1)` and recovers the visited vertex
+set, so this is an injection into at most `z^{2(n-1)}` walks.  Also
+`diam(X)<=n-1`.  Consequently
+
+\[
+\begin{aligned}
+ \sup_x\sum_{X\ni x}|X|e^{a\operatorname{diam}X}\|\Phi(X)\|
+ &\le A\kappa\sum_{n\ge1}n
+      (z^2e^a\kappa)^{n-1}\\
+ &= {A\kappa\over(1-r)^2}.                              \tag{43.2}
+\end{aligned}
+\]
+
+Cutoff convergence is a separate hypothesis, not a consequence of pointwise
+coefficient convergence.  If
+
+\[
+ \|\Phi_M(X)-\Phi(X)\|\le A_M\kappa^{|X|}               \tag{43.3}
+\]
+
+uniformly over the declared boundaries, compact sources and translates, with
+`A_M -> 0`, the same count gives
+
+\[
+ \|\Phi_M-\Phi\|_a\le {A_M\kappa\over(1-r)^2}\longrightarrow0. \tag{43.4}
+\]
+
+For the exact fixture `z=6`, `e^a=2`, `kappa=1/144`, and `A=1/100`, one has
+`r=1/2` and (43.2) is `1/3600`.  Taking `A_M=A/M` gives
+`A_10=1/1000` and the cutoff majorant `1/36000`.  This theorem converts an
+envelope into a QPS norm; it does not prove that the all-order Q3 coefficients
+obey (43.1) or (43.3).
+
+## 44. The actual second-order onsite-resolvent coefficient is connected
+
+Let `P` be the product low-band projection, `Q=1-P`, and
+
+\[
+ K=\sum_xk_x\ge\Gamma Q,
+ \qquad T_e=QB_eP,
+ \qquad \|T_e\|\le\epsilon.                              \tag{44.1}
+\]
+
+The actual second-order term is
+
+\[
+ \Psi^{(2)}=-\sum_{e,f}T_e^*(QKQ)^{-1}T_f.               \tag{44.2}
+\]
+
+The onsite sum `K` preserves every exact high-support sector.  Starting from
+the all-low space, `T_f` creates high support inside `f`; if `e` and `f` are
+disjoint, `T_e^*` cannot remove that support, and the final low projection
+kills the vector.  Hence the ordered `(e,f)` coefficient vanishes for disjoint
+edges.  Every remaining coefficient has norm at most
+`epsilon^2/Gamma`.
+
+Fix `x`.  There are at most `z` diagonal pairs `e=f` whose union contains `x`.
+For off-diagonal ordered overlapping pairs, those with `x in e` number at most
+`2z(z-1)`, and the remaining pairs with `x in f` number at most `z(z-1)`.
+Thus the safe off-diagonal count is `3z(z-1)`.  Diagonal supports have size two
+and diameter at most one; off-diagonal supports have size at most three and
+diameter at most two.  Therefore
+
+\[
+ \boxed{\displaystyle
+ \|\Psi^{(2)}\|_a
+ \le C_a{\epsilon^2\over\Gamma},\qquad
+ C_a=2ze^a+9z(z-1)e^{2a}.}                              \tag{44.3}
+\]
+
+For `z=6` and `e^a=2`, the two pair counts are `6` and `90`, and
+`C_a=12e^a+270e^{2a}=1104`.  With `epsilon=1/100` and `Gamma=2`, (44.3) is
+`69/1250`.  In the v2.1 corridor, `epsilon=O(N^{-3})` and
+`Gamma` is of order `N^2`; hence this second-order QPS norm is
+`O(N^{-8})=o(J)`.
+
+For the cutoff statement, let `Pi_M` be parity-preserving local Ritz/form
+projections containing `P` and commuting with the onsite resolvent.  Write
+
+\[
+ D_e=(QKQ)^{-1/2}T_e,
+ \qquad D_{e,M}=(QKQ)^{-1/2}\Pi_MT_e,
+ \qquad
+ \tau_M=\sup_e\|(1-\Pi_M)T_e\|.                          \tag{44.4}
+\]
+
+Assume `tau_M -> 0` uniformly over the registered compact source family.  Then
+
+\[
+ \|D_e\|,\|D_{e,M}\|\le{\epsilon\over\sqrt\Gamma},
+ \qquad
+ \|D_e-D_{e,M}\|\le{\tau_M\over\sqrt\Gamma}.           \tag{44.5}
+\]
+
+Subtracting the two Gram products and using the same connected-pair count
+gives
+
+\[
+ \|\Psi_M^{(2)}-\Psi^{(2)}\|_a
+ \le {2C_a\epsilon\tau_M\over\Gamma}\longrightarrow0.  \tag{44.6}
+\]
+
+At the exact fixture `tau_10=epsilon/10=1/1000`, the bound is `69/6250`.
+The uniform tail assumption in (44.4) is load-bearing.  The v2.1 statement
+that Ritz eigenvalues decrease to their full values does not by itself prove
+operator-norm convergence of these Gram factors.
+
+## 45. Forward local automorphism stabilization need not preserve inverses
+
+Let
+
+\[
+ \mathcal A=\bigotimes_{j\ge1}M_2
+\]
+
+be the one-sided UHF algebra.  For each `N`, let `alpha_N` be the automorphism
+that cyclically sends sites `1,...,N` to `2,...,N,1` and fixes all later sites.
+If `A` is supported in the first `m` sites, then for every `N>m`,
+
+\[
+ \alpha_N(A)=1\otimes A.                                \tag{45.1}
+\]
+
+Thus the forward automorphisms stabilize exactly on every local observable and
+converge pointwise on the quasi-local algebra to the unilateral right shift
+`sigma(A)=1 tensor A`.  Its range has identity in the first tensor factor, so
+`Z_1` is not in the range: `sigma` is a proper endomorphism, not an
+automorphism.  In the reverse direction,
+
+\[
+ \alpha_N^{-1}(Z_1)=Z_N,
+ \qquad \|Z_N-Z_M\|=2\quad(N\ne M),                     \tag{45.2}
+\]
+
+because a product eigenvector with opposite `Z` signs at sites `N` and `M`
+attains the upper bound two.  The verifier checks exact stabilization of the
+support `(1,2,3)` to `(2,3,4)` and the inverse pair `(N,M)=(3,5)`.
+
+This proves only the named negative implication.  It does not say that a Q3
+common alpha cannot exist; it says that forward local convergence alone cannot
+supply its surjectivity or point-norm convergence of inverses.
+
+## 46. Devil's-advocate audit, exact boundary, and checkpoint lifecycle
+
+1. **Objection -- the Gibbs-L2 implementer estimate already controls arbitrary
+   observable conjugations.  UPHELD as a boundary.**  Inserting an observable
+   changes the weighted leg and requires a bounded half-modular context or a
+   new argument.  Section 42 makes no such insertion.
+2. **Objection -- the connected-set count silently assumes cubic geometry.
+   DISMISSED.**  The proof uses only the explicitly declared maximum degree
+   `z` and a fixed neighbor order.  What remains conditional is the geometric
+   coefficient envelope, not the count.
+3. **Objection -- pointwise cutoff convergence is enough for (43.4).
+   UPHELD.**  It is not enough for the supremum-sum QPS norm.  The uniform
+   difference envelope with `A_M -> 0` is stated separately.
+4. **Objection -- Ritz monotonicity proves (44.6).  UPHELD.**  The conclusion
+   additionally requires resolvent-compatible parity projections and the
+   compact-family-uniform `tau_M -> 0` Gram-tail bound.
+5. **Objection -- the second-order estimate closes the all-order oscillator
+   elimination.  UPHELD as an overclaim.**  No higher connected coefficient,
+   convergence radius, quasi-local intertwiner, or phasewise GNS transfer is
+   proved.
+6. **Objection -- the UHF fixture is a nonexistence theorem for Q3 dynamics.
+   DISMISSED.**  It rejects one implication route only.  Independent inverse
+   Cauchy estimates could still yield a common automorphism group.
+
+The primary symbolic verifier and the non-importing standard-library verifier
+recompute all four v2.3 fixtures from labelled inputs.  Until the formal
+authorities are written, staged mode must report exactly the absent
+`EXP-000815` exploration row, the `R-167 v2.3` result row, the new UHF negative
+row, and the three new closed gate rows.
+
+No v2.3 PDF is issued in this proof-first package.  The manifest field
+`v2_3_checkpoint_synthesis` is `DEFERRED` with `pdf_issued: false`; every v2.2
+and earlier source/PDF pair remains historical.  The verifier also accepts a
+later exact eight-field issued lifecycle object with raw source/PDF hashes,
+positive page count, sibling source/PDF paths, freshness, and visual-QA text,
+so gate-level issuance will not require changing the proof code.
+R-168 v1.3 remains historical and is not reissued.
+
+Nothing in Sections 41--46 closes arbitrary-observable or all-exhaustion common
+alpha, inverse/group/generator completion, a KMS quotient, all-order connected
+rank-two oscillator elimination, the exact oscillator two-phase QPS theorem,
+phasewise intertwining, the broken-sector oscillator GNS gap, Round-1, C6,
+CP1, physical Sector A, or Pre-A.  All of those parents remain **OPEN**.
+
+## 47. R-167 v2.3-only gate-level checkpoint issuance
+
+The preceding `No v2.3 PDF is issued` sentence records the proof-first stage.
+After the primary, non-importing independent, integrated, formal-authority,
+generated-surface, source-form, freshness, dual-extraction, strict-release and
+visual-review gates passed, one R-167-only v2.3 gate-level synthesis was
+issued.  R-168 v1.3 remains historical and is not reissued.
+
+- Source: `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-l2-connected-qps-and-common-alpha-boundary-checkpoint-260811-v1.2.tex.txt`, 24694 bytes, raw SHA-256 `97ea211deebfb3cca75d265f055053fff882342a6802cd27f8998829a5c0e075`.
+- PDF: `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-l2-connected-qps-and-common-alpha-boundary-checkpoint-260811-v1.2.pdf`, 92221 bytes, 8 pages, raw SHA-256 `e8b8e58793a21c533785c59e06db5a82eb2c6e15ed0493de0218ea36b44a07ad`, and 11.1208383 seconds newer than the source.
+- Verification: primary `295/295` at raw script SHA-256 `ed9a57a81e484d99d957de01d54ec9e078447e332fbff5b909225740efd08a40`; non-importing independent `175/175` at raw script SHA-256 `c5cdffa7d01637024630ca98f55634793fa2b98e6dcdff6157c5ba3858ce5bb5`; integrated `304/304` at raw script SHA-256 `049f3005de45b4a0b22d5a4188861266ede45c9c11a159bc13a080b199141341`.
+- Extraction/build: pypdf extracted 8/8 nonempty pages and 20739 characters; pdfplumber extracted 8/8 nonempty pages and 20685 characters; each found all 27/27 required tokens.  The build reported `FORM PASS` and `OVERFULL-HBOX 0`.
+
+All 8 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 8/8 nonempty pages; the build reported OVERFULL-HBOX 0.
+
+This issuance changes no theorem tier or parent status.  Arbitrary-observable
+convergence, all-exhaustion common alpha, inverse/group/generator completion,
+all-order connected rank-two oscillator elimination, the exact oscillator
+two-phase QPS theorem, phasewise intertwining, the broken-sector oscillator
+GNS gap, Round-1, C6, CP1, physical Sector A and Pre-A all remain **OPEN**.

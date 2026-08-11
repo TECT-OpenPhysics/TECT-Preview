@@ -1775,39 +1775,44 @@ def v1_3_issuance_firewall_diagnostics() -> dict[str, Any]:
     component_contracts = (
         (
             "R-167 primary",
-            REPO / R167_V2_1_PRIMARY,
             253,
+            "d9d65080f84c0408200ba64c81449263cfd87095d8bdf1620211bc6fab6d1058",
         ),
         (
             "R-167 non-importing independent",
-            REPO / R167_V2_1_INDEPENDENT,
             154,
+            "74dc4a8758d204587963c4e41e720902fd0b66931c35024f7784adaaa09d0b38",
         ),
         (
             "R-167 integrated",
-            REPO / R167_V2_1_INTEGRATED,
             279,
+            "5985f84cdb427d1fb3b3ab8de49e025c0ef3b0767e4462879eaa77e5907ba1bc",
         ),
-        ("R-168 primary", PRIMARY, PRIMARY_FORMAL_ASSERTION_COUNT),
+        (
+            "R-168 primary",
+            423,
+            "69a9486b060c711679314806b302af85652c6d8317fccebba83578b5b2d397a9",
+        ),
         (
             "R-168 non-importing independent",
-            INDEPENDENT,
-            INDEPENDENT_FORMAL_ASSERTION_COUNT,
+            446,
+            "6b100dd08e3daac385fc67fa5627f0c9f8c5d9ff8aa2a416d30018e72a033c26",
         ),
-        ("R-168 integrated", SCRIPT, 349),
+        (
+            "R-168 integrated",
+            349,
+            "34af34a2bb45c50b68af0db88dfaf51004c3ab33d49c2c38464dd2fbed4f618e",
+        ),
     )
     component_tokens = {
-        label: (
-            path.is_file()
-            and text_has(
-                certificate,
-                (
-                    f"{label}: {count}/{count}; raw script SHA-256 "
-                    f"{artifact_sha256(path)}"
-                ),
-            )
+        label: text_has(
+            certificate,
+            (
+                f"{label}: {count}/{count}; raw script SHA-256 "
+                f"{issued_sha256}"
+            ),
         )
-        for label, path, count in component_contracts
+        for label, count, issued_sha256 in component_contracts
     }
     source_token = text_has(
         certificate,

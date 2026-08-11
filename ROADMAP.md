@@ -1096,18 +1096,37 @@ physical state, physical response limit or six-term physical estimand budget.
 The three precise M2 successor gates, physical-response parent and Round-1
 parent remain OPEN.
 
+EXP-000815 advances R-167 additively to v2.3. The registered-periodic
+twentieth-history corridor now gives mesh-uniform two-sided Gibbs Hilbert--
+Schmidt hard-cutoff removal for the declared split implementers, with rate
+`54 sqrt(2)|c|T hbar^-1 sqrt(M20)R^(-1/5)` at `L=R^(2/5)`. A conditional
+connected geometric envelope gives `A kappa/(1-z^2 exp(a)kappa)^2` QPS
+control, and the actual second-order onsite-resolvent coefficient is connected
+with bound `[2z exp(a)+9z(z-1)exp(2a)]epsilon^2/Gamma` and declared Ritz/form
+cutoff convergence. These are scoped children, not common alpha or an all-
+order oscillator transfer.
+
+EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
+proposed complex field, charge/action, gauge/bundle background, covariant
+derivative, contact and winding quotient are new model choices not derived or
+authorized by current M2-v0/R-168 authorities. Any future successor needs
+explicit operator authorization, a new T0 version, all D00--D09 rows rerun,
+and a genuinely prospective external holdout; the visible helium target cannot
+validate it retrospectively. R-168 remains v1.3, and no candidate is created.
+
 The primary
 `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` gate therefore remains
 open, together with the common-input ledger, independent opaque custodian
 commitment, admitted microscopic observable map/nonempty prediction, and
 cryptographic remote-verification gates. No target, freeze record, tag,
-prediction, score or candidate selection is created. The combined R-167
-v2.1 / R-168 v1.2 synthesis is the latest issued checkpoint. Per the PDF-
-efficiency protocol, EXP-000813 and EXP-000814 issue no per-lemma or
-intermediate PDF at the formal-authority stage; one combined v2.2/v1.3
-synthesis is deferred until proof, formal, independent, integrated, generated-
-surface, release and render-review gates all pass. Physical Sector A and Pre-A
-remain open.
+prediction, score or candidate selection is created. The combined R-167 v2.2 /
+R-168 v1.3 synthesis remains historical. Per the PDF-efficiency protocol,
+EXP-000815 and EXP-000816 issued no per-lemma or intermediate PDF at the
+formal-authority stage. After the proof, formal, independent, integrated,
+generated-surface, source-form, freshness, dual-extraction, strict-release and
+render-review gates passed, one R-167-only v2.3 gate-level synthesis source/PDF
+pair was issued. R-168 v1.3 remains historical and was not reissued. Physical
+Sector A and Pre-A remain open.
 
 The fixed-beta envelope is not yet the thermodynamic Hamiltonian `alpha`.
 Distinct algebraic ground states now exist on the separate universal

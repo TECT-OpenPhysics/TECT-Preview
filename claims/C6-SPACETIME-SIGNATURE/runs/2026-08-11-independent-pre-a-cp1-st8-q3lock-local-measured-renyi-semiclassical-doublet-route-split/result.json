@@ -1,7 +1,7 @@
 {
   "assertions": {
     "failed": 0,
-    "passed": 154,
+    "passed": 175,
     "rows": [
       {
         "actual": [
@@ -2426,6 +2426,157 @@
       },
       {
         "actual": {
+          "arbitrary_observable_context": false,
+          "cauchy_left_coefficients": [
+            1,
+            -2,
+            1
+          ],
+          "cauchy_square_coefficients": [
+            1,
+            -2,
+            1
+          ],
+          "paired_corridor_exponent": "-2/5",
+          "paired_tail_constant": 2916,
+          "paired_tail_square_root": 54,
+          "rate_exponent": "-1/5",
+          "rate_rows": [
+            {
+              "L": 4,
+              "R": 32,
+              "base": 2,
+              "expected_squared_rate": "1458",
+              "matches": true,
+              "squared_rate": "1458"
+            },
+            {
+              "L": 25,
+              "R": 3125,
+              "base": 5,
+              "expected_squared_rate": "5832/25",
+              "matches": true,
+              "squared_rate": "5832/25"
+            }
+          ],
+          "squared_rate_constant": 5832
+        },
+        "expected": "2916=54^2, squared rate 5832, R^-1/5 and two exact fixtures",
+        "group": "v2.3-implementer",
+        "name": "v2.3 paired-tail Gibbs-L2 arithmetic",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "left": [
+            1,
+            -2,
+            1
+          ],
+          "square": [
+            1,
+            -2,
+            1
+          ]
+        },
+        "expected": [
+          1,
+          -2,
+          1
+        ],
+        "group": "v2.3-implementer",
+        "name": "v2.3 two-variable Cauchy reconstruction",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "A": "1/100",
+          "A_M_at_M_10": "1/1000",
+          "cutoff_bound_at_M_10": "1/36000",
+          "exp_a": 2,
+          "geometric_derivative": "4",
+          "kappa": "1/144",
+          "pointwise_only_sufficient": false,
+          "qps_bound": "1/3600",
+          "r": "1/2",
+          "rooted_walk_counts": [
+            1,
+            36,
+            1296,
+            46656
+          ],
+          "z": 6
+        },
+        "expected": "z^(2(n-1)), r=1/2, 1/3600 and separate 1/36000 cutoff envelope",
+        "group": "v2.3-connected-envelope",
+        "name": "v2.3 connected geometric QPS envelope",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "C_a": 1104,
+          "Gamma": 2,
+          "N_exponent": -8,
+          "all_order_elimination": false,
+          "cutoff_difference_bound": "69/6250",
+          "diagonal_pairs": 6,
+          "disjoint_gram": "0",
+          "epsilon": "1/100",
+          "ordered_off_diagonal_pairs": 90,
+          "overlapping_gram": "1",
+          "qps_bound": "69/1250",
+          "tau_M_at_M_10": "1/1000"
+        },
+        "expected": "6 diagonal, 90 off-diagonal, C_a=1104, O(N^-8)",
+        "group": "v2.3-second-order",
+        "name": "v2.3 second-order connected QPS constants",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "disjoint": "0",
+          "overlap": "1"
+        },
+        "expected": {
+          "disjoint": 0,
+          "overlap": 1
+        },
+        "group": "v2.3-second-order",
+        "name": "v2.3 high-support disjoint cancellation",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "Q3_dynamics_nonexistence": false,
+          "forward_local_support": [
+            2,
+            3,
+            4
+          ],
+          "inverse_difference_norm": 2,
+          "inverse_images": [
+            3,
+            5
+          ],
+          "limit_surjective": false
+        },
+        "expected": "forward support 2,3,4; inverse images 3,5 differ by norm 2",
+        "group": "v2.3-UHF",
+        "name": "v2.3 UHF forward stabilization and inverse non-Cauchy",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "all_order": false,
+          "arbitrary_observable": false
+        },
+        "expected": "implementer only and second order only",
+        "group": "scope",
+        "name": "v2.3 scoped-boundary flags",
+        "status": "PASS"
+      },
+      {
+        "actual": {
           "KN": {
             "G5": "3486784400/4782969",
             "G5_formula": "3^6-3^-14",
@@ -3110,12 +3261,12 @@
         "actual": {
           "id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
           "number": "R-167",
-          "version": "v2.2"
+          "version": "v2.3"
         },
         "expected": {
           "id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
           "number": "R-167",
-          "version": "v2.2"
+          "version": "v2.3"
         },
         "group": "authority",
         "name": "manifest result identity",
@@ -3126,14 +3277,14 @@
           "claims": [
             "C6-SPACETIME-SIGNATURE"
           ],
-          "exploration": "EXP-000813",
+          "exploration": "EXP-000815",
           "task": "T-054"
         },
         "expected": {
           "claims": [
             "C6-SPACETIME-SIGNATURE"
           ],
-          "exploration": "EXP-000813",
+          "exploration": "EXP-000815",
           "task": "T-054"
         },
         "group": "authority",
@@ -3156,7 +3307,8 @@
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
-          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP"
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY"
         ],
         "expected": [
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY",
@@ -3166,7 +3318,8 @@
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
-          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP"
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY"
         ],
         "group": "authority",
         "name": "manifest negative IDs",
@@ -3185,7 +3338,10 @@
           "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
           "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
           "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
-          "PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR"
+          "PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR",
+          "PA-CP1-ST8-Q3LOCK-REGISTERED-PERIODIC-SPLIT-IMPLEMENTER-TWO-SIDED-GIBBS-L2-HARD-CUTOFF-REMOVAL",
+          "PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-ENVELOPE",
+          "PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-AND-RITZ-CUTOFF"
         ],
         "expected": [
           "PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY",
@@ -3199,7 +3355,10 @@
           "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
           "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
           "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
-          "PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR"
+          "PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR",
+          "PA-CP1-ST8-Q3LOCK-REGISTERED-PERIODIC-SPLIT-IMPLEMENTER-TWO-SIDED-GIBBS-L2-HARD-CUTOFF-REMOVAL",
+          "PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-ENVELOPE",
+          "PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-AND-RITZ-CUTOFF"
         ],
         "group": "authority",
         "name": "manifest closed subgates",
@@ -3305,7 +3464,49 @@
         "actual": true,
         "expected": true,
         "group": "authority",
+        "name": "manifest retained/new section registered_periodic_split_implementer_two_sided_gibbs_l2_hard_cutoff_removal",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "manifest retained/new section conditional_connected_cluster_geometric_qps_norm_envelope",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "manifest retained/new section second_order_connected_onsite_resolvent_qps_norm_and_ritz_cutoff",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "manifest retained/new section forward_local_automorphism_limit_no_go",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "manifest retained/new section v2_3_exact_fixture",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
         "name": "manifest retained/new section v2_2_checkpoint_synthesis",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "manifest retained/new section v2_3_checkpoint_synthesis",
         "status": "PASS"
       },
       {
@@ -3358,10 +3559,128 @@
         "status": "PASS"
       },
       {
+        "actual": {
+          "deferred_exact": false,
+          "issued_exact": true,
+          "metadata": {
+            "pages": 8,
+            "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-l2-connected-qps-and-common-alpha-boundary-checkpoint-260811-v1.2.pdf",
+            "pdf_sha256": "e8b8e58793a21c533785c59e06db5a82eb2c6e15ed0493de0218ea36b44a07ad",
+            "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-l2-connected-qps-and-common-alpha-boundary-checkpoint-260811-v1.2.tex.txt",
+            "source_sha256": "97ea211deebfb3cca75d265f055053fff882342a6802cd27f8998829a5c0e075",
+            "status": "ISSUED AS ONE GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+            "visual_qa": "All 8 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 8/8 nonempty pages; the build reported OVERFULL-HBOX 0.",
+            "workflow": "No per-lemma or intermediate PDF was issued. One R-167 v2.3 gate-level synthesis source/PDF pair was issued only after the primary, non-importing independent, integrated, formal-authority, generated-surface, source-form, freshness, dual-extraction, strict-release, and visual-review checks passed. R-168 v1.3 remains historical and is not reissued."
+          },
+          "pdf_sha256": "e8b8e58793a21c533785c59e06db5a82eb2c6e15ed0493de0218ea36b44a07ad",
+          "source_sha256": "97ea211deebfb3cca75d265f055053fff882342a6802cd27f8998829a5c0e075"
+        },
+        "expected": "exact proof-first DEFERRED or exact local eight-field ISSUED checkpoint",
+        "group": "authority",
+        "name": "manifest v2.3 checkpoint lifecycle",
+        "status": "PASS"
+      },
+      {
         "actual": "static, shear and M20 tokens",
         "expected": true,
         "group": "authority",
         "name": "manifest v2.2 theorem tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": "implementer, connected envelope, second-order Gram and UHF tokens",
+        "expected": true,
+        "group": "authority",
+        "name": "manifest v2.3 theorem tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "connected_envelope": {
+            "A": "1/100",
+            "A_M_at_M_10": "1/1000",
+            "cutoff_bound_at_M_10": "1/36000",
+            "exp_a": 2,
+            "kappa": "1/144",
+            "qps_bound": "1/3600",
+            "r": "1/2",
+            "z": 6
+          },
+          "implementer": {
+            "R_3125_L_25_rate": "54*sqrt(2)/5",
+            "R_32_L_4_rate": "27*sqrt(2)",
+            "paired_tail_constant": 2916,
+            "squared_rate_constant": 5832
+          },
+          "second_order": {
+            "C_a": 1104,
+            "Gamma": 2,
+            "N_exponent": -8,
+            "cutoff_difference_bound": "69/6250",
+            "diagonal_pairs": 6,
+            "epsilon": "1/100",
+            "ordered_off_diagonal_pairs": 90,
+            "qps_bound": "69/1250",
+            "tau_M_at_M_10": "1/1000"
+          },
+          "uhf": {
+            "forward_local_support": [
+              2,
+              3,
+              4
+            ],
+            "inverse_difference_norm": 2,
+            "inverse_images": [
+              3,
+              5
+            ],
+            "limit_surjective": false
+          }
+        },
+        "expected": {
+          "connected_envelope": {
+            "A": "1/100",
+            "A_M_at_M_10": "1/1000",
+            "cutoff_bound_at_M_10": "1/36000",
+            "exp_a": 2,
+            "kappa": "1/144",
+            "qps_bound": "1/3600",
+            "r": "1/2",
+            "z": 6
+          },
+          "implementer": {
+            "R_3125_L_25_rate": "54*sqrt(2)/5",
+            "R_32_L_4_rate": "27*sqrt(2)",
+            "paired_tail_constant": 2916,
+            "squared_rate_constant": 5832
+          },
+          "second_order": {
+            "C_a": 1104,
+            "Gamma": 2,
+            "N_exponent": -8,
+            "cutoff_difference_bound": "69/6250",
+            "diagonal_pairs": 6,
+            "epsilon": "1/100",
+            "ordered_off_diagonal_pairs": 90,
+            "qps_bound": "69/1250",
+            "tau_M_at_M_10": "1/1000"
+          },
+          "uhf": {
+            "forward_local_support": [
+              2,
+              3,
+              4
+            ],
+            "inverse_difference_norm": 2,
+            "inverse_images": [
+              3,
+              5
+            ],
+            "limit_surjective": false
+          }
+        },
+        "group": "authority",
+        "name": "manifest v2.3 exact fixture",
         "status": "PASS"
       },
       {
@@ -3393,7 +3712,7 @@
         "status": "PASS"
       },
       {
-        "actual": "This package proves the fifth-moment, elliptic, subset-shear, twentieth-history and hard-cutoff conclusions only for the registered fixed-beta finite periodic Q3 family with compact sources and the declared split histories. The shear form estimate itself is uniform only for tested nearest-neighbor subsets on finite subgraphs or periodic quotients of Z^3, or under an explicitly uniform cubic-polynomial-growth hypothesis. A maximum-degree-six hypothesis alone is insufficient because bounded-degree graphs may have exponential growth. An arbitrary boundary family is not promoted to the actual history theorem without both this growth control and its own uniform static Gibbs input. This package does not prove n-to-infinity Trotter convergence, all-shape or all-exhaustion Cauchy compatibility, all-exhaustion common alpha, group/generator completion, a phase-KMS quotient, an onsite-interspersed local measured-Renyi estimate, connected rank-two unbounded block diagonalization, QPS locality or cutoff convergence of an oscillator effective interaction, two-phase QPS for the exact oscillator lattice, beta-infinity phase identification, a broken-sector oscillator temporal mass or GNS gap, regulator removal, continuum, a same-Hamiltonian physical-empty comparison, a prospective blind validation result, C6, CP1, physical Sector A, or Pre-A closure. The rank-two fixture refutes only an automatic local-edge-to-global-gap inference; it is not a Q3 locality, local coercivity, or gap no-go.",
+        "actual": "This package proves the fifth-moment, elliptic, subset-shear, twentieth-history and hard-cutoff conclusions only for the registered fixed-beta finite periodic Q3 family with compact sources and the declared split histories. The v2.3 implementer estimate is a two-sided Gibbs Hilbert-Schmidt estimate for the split-product difference itself, not an arbitrary-observable conjugation estimate. The conditional connected-envelope theorem assumes maximum degree z, one uniform geometric coefficient envelope, and a separate uniform difference envelope for cutoff convergence. The second-order theorem concerns only the actual onsite-resolvent coefficient and requires parity-preserving cutoffs commuting with the onsite resolvent plus a source-uniform tail norm tau_M tending to zero; v2.1 Ritz monotonicity alone does not imply that hypothesis. The shear form estimate itself is uniform only for tested nearest-neighbor subsets on finite subgraphs or periodic quotients of Z^3, or under an explicitly uniform cubic-polynomial-growth hypothesis. A maximum-degree-six hypothesis alone is insufficient because bounded-degree graphs may have exponential growth. An arbitrary boundary family is not promoted to the actual history theorem without both this growth control and its own uniform static Gibbs input. This package does not prove n-to-infinity Trotter convergence, all-shape or all-exhaustion Cauchy compatibility, a surjective all-exhaustion common alpha, inverse or group/generator completion, a phase-KMS quotient, all-order connected rank-two unbounded block diagonalization, an all-order oscillator effective interaction or cutoff theorem, two-phase QPS for the exact oscillator lattice, beta-infinity phase identification, a broken-sector oscillator temporal mass or GNS gap, regulator removal, continuum, a same-Hamiltonian physical-empty comparison, a prospective blind validation result, C6, CP1, physical Sector A, or Pre-A closure. The UHF fixture rejects only automatic surjectivity and inverse-Cauchy inference from forward local stabilization; it is not a no-go for a Q3 common dynamics. The earlier rank-two fixture refutes only an automatic local-edge-to-global-gap inference; it is not a Q3 locality, local coercivity, or gap no-go.",
         "expected": "all boundary phrases present",
         "group": "authority",
         "name": "manifest no-overclaim boundary",
@@ -3414,17 +3733,24 @@
         "status": "PASS"
       },
       {
-        "actual": true,
+        "actual": "all v2.3 tokens present",
         "expected": true,
-        "group": "formal-authority",
-        "name": "formal exploration EXP-000813",
+        "group": "authority",
+        "name": "certificate v2.3 exact tokens",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal result R-167 v2.2",
+        "name": "formal exploration EXP-000815",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal-authority",
+        "name": "formal result R-167 v2.3",
         "status": "PASS"
       },
       {
@@ -3481,6 +3807,13 @@
         "expected": true,
         "group": "formal-authority",
         "name": "formal negative NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal-authority",
+        "name": "formal negative NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY",
         "status": "PASS"
       },
       {
@@ -3571,6 +3904,27 @@
         "actual": true,
         "expected": true,
         "group": "formal-authority",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-REGISTERED-PERIODIC-SPLIT-IMPLEMENTER-TWO-SIDED-GIBBS-L2-HARD-CUTOFF-REMOVAL",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal-authority",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-ENVELOPE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal-authority",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-AND-RITZ-CUTOFF",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal-authority",
         "name": "formal gate OPEN PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
         "status": "PASS"
       },
@@ -3603,38 +3957,38 @@
         "status": "PASS"
       },
       {
-        "actual": "74dc4a8758d204587963c4e41e720902fd0b66931c35024f7784adaaa09d0b38",
+        "actual": "c5cdffa7d01637024630ca98f55634793fa2b98e6dcdff6157c5ba3858ce5bb5",
         "expected": "64 lowercase hexadecimal characters",
         "group": "provenance",
         "name": "source hash codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py",
         "status": "PASS"
       },
       {
-        "actual": "08953b6347de71d41dc1266d97c118692a2556457137c05ec53a64bb46803476",
+        "actual": "4953e2e388715f62d8430f646fe096d8148a661359ec59fee96f2f2bf06e9366",
         "expected": "64 lowercase hexadecimal characters",
         "group": "provenance",
         "name": "source hash strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json",
         "status": "PASS"
       },
       {
-        "actual": "f73fbd7b03f849edcc4f6d0f864156d33c06ef1a9a9a6a85727f280453e505e5",
+        "actual": "6b2a9081f0ccf3d0f3fb8a45b604e85ce49872b33fd5a89b7c4cf05f22b1398b",
         "expected": "64 lowercase hexadecimal characters",
         "group": "provenance",
         "name": "source hash strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md",
         "status": "PASS"
       }
     ],
-    "total": 154
+    "total": 175
   },
   "authority": {
     "certificate": "E:/Dev/TECT/strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md",
-    "certificate_sha256": "f73fbd7b03f849edcc4f6d0f864156d33c06ef1a9a9a6a85727f280453e505e5",
+    "certificate_sha256": "6b2a9081f0ccf3d0f3fb8a45b604e85ce49872b33fd5a89b7c4cf05f22b1398b",
     "manifest": "E:/Dev/TECT/strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json",
-    "manifest_sha256": "08953b6347de71d41dc1266d97c118692a2556457137c05ec53a64bb46803476",
+    "manifest_sha256": "4953e2e388715f62d8430f646fe096d8148a661359ec59fee96f2f2bf06e9366",
     "missing": [],
     "status": "COMPLETE"
   },
-  "boundary": "This independent verifier checks the retained v2.1 fixtures and independently reconstructs the exact virial sign/factor, terminating subset-shear algebra, fifth-word budget, periodic actual-history corridor arithmetic, and rank-two automatic-gap counterfixture. The actual Q3 fifth moment and history theorem is restricted to the registered fixed-beta periodic compact-source family; it does not prove an arbitrary-boundary history bound, n-to-infinity Trotter convergence, all-shape Cauchy compatibility, all-exhaustion common alpha, group/generator completion, a phase-KMS quotient, connected rank-two unbounded block diagonalization, oscillator QPS transfer, an oscillator-lattice broken-sector temporal mass or GNS gap, regulator removal, a continuum, physical-empty comparison, prospective blind validation, C6, CP1, physical Sector A, or Pre-A closure. It also proves neither an onsite-interspersed local measured-Renyi estimate nor two-phase QPS for the exact oscillator lattice. The rank-two fixture is not a Q3 locality, coercivity, or gap no-go.",
+  "boundary": "This independent verifier retains every v2.2 fixture and independently reconstructs the paired-history Gibbs-L2 rate, connected geometric envelope, actual second-order onsite-resolvent coefficient, uniform Gram-tail cutoff bound, and UHF forward-limit obstruction. The actual Q3 history and split-implementer theorem is restricted to the registered fixed-beta periodic compact-source family and is not an arbitrary-observable estimate. The connected theorem is conditional, the Ritz statement requires a separate uniform tau_M tail, and the coefficient theorem is second order only. It does not prove an arbitrary-boundary history bound, n-to-infinity Trotter convergence, all-shape Cauchy compatibility, all-exhaustion common alpha, group/generator completion, a phase-KMS quotient, connected rank-two unbounded block diagonalization, all-order oscillator QPS transfer, an oscillator-lattice broken-sector temporal mass or GNS gap, regulator removal, a continuum, physical-empty comparison, prospective blind validation, C6, CP1, physical Sector A, or Pre-A closure. It proves neither an onsite-interspersed local measured-Renyi estimate nor two-phase QPS for the exact oscillator lattice. Neither the UHF fixture nor the earlier rank-two fixture is a Q3 dynamics, locality, coercivity, or gap no-go.",
   "claim_bearing": false,
   "claim_ids": [
     "C6-SPACETIME-SIGNATURE"
@@ -3651,7 +4005,10 @@
     "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
     "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
     "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
-    "PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR"
+    "PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR",
+    "PA-CP1-ST8-Q3LOCK-REGISTERED-PERIODIC-SPLIT-IMPLEMENTER-TWO-SIDED-GIBBS-L2-HARD-CUTOFF-REMOVAL",
+    "PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-ENVELOPE",
+    "PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-AND-RITZ-CUTOFF"
   ],
   "derived": {
     "C6_closed": false,
@@ -4305,12 +4662,16 @@
     },
     "Sector_A_closed": false,
     "actual_Q3_fixed_edge_history_bound_closed": true,
+    "actual_second_order_connected_onsite_resolvent_QPS_closed": true,
     "all_exhaustion_common_alpha_closed": false,
+    "all_order_connected_oscillator_elimination_closed": false,
     "arbitrary_boundary_history_bound_closed": false,
     "arbitrary_context_upgrade_closed": false,
+    "arbitrary_observable_automorphism_estimate_closed": false,
     "below_Gamma_Feshbach_precursor_closed": true,
     "broken_sector_GNS_gap_closed": false,
     "compressed_TFIM_two_phase_QPS_closed": true,
+    "conditional_connected_geometric_QPS_envelope_closed": true,
     "conditional_fifth_graph_transport_reduction_closed": true,
     "continuum_closed": false,
     "exact_low_band_TFIM": {
@@ -4373,6 +4734,7 @@
       "upper_edges": 432
     },
     "fixed_edge_to_growing_corridor_reduction_closed": true,
+    "forward_local_stabilization_implies_surjectivity": false,
     "full_Gibbs_context": {
       "Duhamel_rhs_strict_lower": "9/5",
       "bandwidth_factor": "2",
@@ -4466,6 +4828,7 @@
       "rho_two_trace": "1",
       "theta_pi_over_four_value": "289/64"
     },
+    "inverse_automorphisms_point_norm_Cauchy": false,
     "local_measured_Renyi_reduction": {
       "Holder_left_squared": "1/4",
       "Holder_right_squared": "23/64",
@@ -4602,6 +4965,7 @@
     "pure_bond_identity_closed": true,
     "rank_two_block_diagonalization_closed": false,
     "registered_periodic_compact_source_scope_only": true,
+    "registered_periodic_split_implementer_two_sided_Gibbs_L2_closed": true,
     "regulator_removal_closed": false,
     "residual_bound": {
       "A_Q_fixture": {
@@ -4701,6 +5065,7 @@
     "translate_uniform_local_fifth_Gibbs_moment_closed": true,
     "twentieth_moment_fixed_edge_corridor_reduction_closed": true,
     "two_phase_QPS_for_exact_oscillator_closed": false,
+    "uniform_Ritz_Gram_tail_required": true,
     "v2_1_full_oscillator_edge_cluster": {
       "N_scaling": {
         "D": 2,
@@ -5087,9 +5452,93 @@
         "registered_periodic_compact_source": true,
         "unbounded_trace_cyclicity": false
       }
+    },
+    "v2_3_connected_and_implementer": {
+      "UHF": {
+        "Q3_dynamics_nonexistence": false,
+        "forward_local_support": [
+          2,
+          3,
+          4
+        ],
+        "inverse_difference_norm": 2,
+        "inverse_images": [
+          3,
+          5
+        ],
+        "limit_surjective": false
+      },
+      "connected_envelope": {
+        "A": "1/100",
+        "A_M_at_M_10": "1/1000",
+        "cutoff_bound_at_M_10": "1/36000",
+        "exp_a": 2,
+        "geometric_derivative": "4",
+        "kappa": "1/144",
+        "pointwise_only_sufficient": false,
+        "qps_bound": "1/3600",
+        "r": "1/2",
+        "rooted_walk_counts": [
+          1,
+          36,
+          1296,
+          46656
+        ],
+        "z": 6
+      },
+      "implementer": {
+        "arbitrary_observable_context": false,
+        "cauchy_left_coefficients": [
+          1,
+          -2,
+          1
+        ],
+        "cauchy_square_coefficients": [
+          1,
+          -2,
+          1
+        ],
+        "paired_corridor_exponent": "-2/5",
+        "paired_tail_constant": 2916,
+        "paired_tail_square_root": 54,
+        "rate_exponent": "-1/5",
+        "rate_rows": [
+          {
+            "L": 4,
+            "R": 32,
+            "base": 2,
+            "expected_squared_rate": "1458",
+            "matches": true,
+            "squared_rate": "1458"
+          },
+          {
+            "L": 25,
+            "R": 3125,
+            "base": 5,
+            "expected_squared_rate": "5832/25",
+            "matches": true,
+            "squared_rate": "5832/25"
+          }
+        ],
+        "squared_rate_constant": 5832
+      },
+      "second_order": {
+        "C_a": 1104,
+        "Gamma": 2,
+        "N_exponent": -8,
+        "all_order_elimination": false,
+        "cutoff_difference_bound": "69/6250",
+        "diagonal_pairs": 6,
+        "disjoint_gram": "0",
+        "epsilon": "1/100",
+        "ordered_off_diagonal_pairs": 90,
+        "overlapping_gram": "1",
+        "qps_bound": "69/1250",
+        "tau_M_at_M_10": "1/1000"
+      }
     }
   },
-  "exploration_id": "EXP-000813",
+  "exploration_id": "EXP-000815",
   "negative_ids": [
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY",
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT",
@@ -5098,7 +5547,8 @@
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
-    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP"
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY"
   ],
   "open_gates": [
     "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
@@ -5109,19 +5559,19 @@
   ],
   "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
   "result_number": "R-167",
-  "result_version": "v2.2",
+  "result_version": "v2.3",
   "schema": "tect/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-independent-result/1.0",
-  "script_version": "2.2.0",
+  "script_version": "2.3.0",
   "source_hashes": {
-    "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py": "74dc4a8758d204587963c4e41e720902fd0b66931c35024f7784adaaa09d0b38",
-    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md": "f73fbd7b03f849edcc4f6d0f864156d33c06ef1a9a9a6a85727f280453e505e5",
-    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json": "08953b6347de71d41dc1266d97c118692a2556457137c05ec53a64bb46803476"
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py": "c5cdffa7d01637024630ca98f55634793fa2b98e6dcdff6157c5ba3858ce5bb5",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md": "6b2a9081f0ccf3d0f3fb8a45b604e85ce49872b33fd5a89b7c4cf05f22b1398b",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json": "4953e2e388715f62d8430f646fe096d8148a661359ec59fee96f2f2bf06e9366"
   },
   "summary": {
     "authority_status": "COMPLETE",
     "failed": 0,
-    "passed": 154,
-    "total": 154
+    "passed": 175,
+    "total": 175
   },
   "task_id": "T-054",
   "verdict": "PASS"

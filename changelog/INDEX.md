@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**605 accepted events** · latest 25 shown below · machine locator: `index.json`
+**608 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,9 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-11 | `20260811-r-167-v2-3-issued-checkpoint-lifecycle-wording` — [R-167 v2.3 issued checkpoint lifecycle wording and artifact pins corrected] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000815, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-3-issued-checkpoint-lifecycle-wording) |
+| 2026-08-11 | `20260811-r-167-v2-3-combined-gate-level-synthesis-pdf-is` — [R-167 v2.3 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000815, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-3-combined-gate-level-synthesis-pdf-is) |
+| 2026-08-11 | `20260811-r-167-v2-3-closes-split-implementer-cutoff-and` — [R-167 v2.3 closes split-implementer cutoff and two connected-QPS children] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000815, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-3-closes-split-implementer-cutoff-and) |
 | 2026-08-11 | `20260811-final3-r-167-v2-2-and-r-168-v1-3-issuance-pins` — [FINAL3 R-167 v2.2 and R-168 v1.3 issuance pins supersede event 604] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000813, EXP-000814, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-final3-r-167-v2-2-and-r-168-v1-3-issuance-pins) |
 | 2026-08-11 | `20260811-r-167-v2-2-and-r-168-v1-3-combined-checkpoint-f` — [R-167 v2.2 and R-168 v1.3 combined checkpoint FINAL2 pin correction after lifecycle-aware firewall hardening] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000813, EXP-000814, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-2-and-r-168-v1-3-combined-checkpoint-f) |
 | 2026-08-11 | `20260811-r-167-v2-2-and-r-168-v1-3-combined-gate-level-s` — [R-167 v2.2 and R-168 v1.3 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000813, EXP-000814, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-2-and-r-168-v1-3-combined-gate-level-s) |
@@ -39,9 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-11 | `20260811-r-167-v1-8-gate-level-synthesis-pdf-issued-afte` — [R-167 v1.8 gate-level synthesis PDF issued after strict proof validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v1-8-gate-level-synthesis-pdf-issued-afte) |
 | 2026-08-11 | `20260811-r-167-v1-8-isolates-fixed-trotter-renyi-history` — [R-167 v1.8 isolates fixed-Trotter, Renyi-history, and zero-temperature OS-gap reductions] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000805, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v1-8-isolates-fixed-trotter-renyi-history) |
 | 2026-08-11 | `20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte` — [R-167 v1.7 gate-level synthesis PDF issued after strict proof validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v1-7-gate-level-synthesis-pdf-issued-afte) |
-| 2026-08-11 | `20260811-r-167-v1-7-separates-the-finite-region-local-st` — [R-167 v1.7 separates the finite-region local-strict carrier, Gibbs entropy tail, and broken-sector gap gate] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000804, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v1-7-separates-the-finite-region-local-st) |
-| 2026-08-10 | `20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte` — [R-167 v1.6 gate-level synthesis PDF issued after strict proof validation] - 2026-08-10 | C6-SPACETIME-SIGNATURE, R-167 | [bounded page](pages/000569-000618.md#20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte) |
-| 2026-08-10 | `20260810-r-167-v1-6-closes-selected-raw-word-moments-and` — [R-167 v1.6 closes selected raw-word moments and a universal orbit-smear ground carrier] - 2026-08-10 | C6-SPACETIME-SIGNATURE, EXP-000803, R-167 | [bounded page](pages/000569-000618.md#20260810-r-167-v1-6-closes-selected-raw-word-moments-and) |
 
 ## Post-cutover pages
 
@@ -49,4 +49,4 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 569–605 | 37 | [000569-000618.md](pages/000569-000618.md) |
+| 569–608 | 40 | [000569-000618.md](pages/000569-000618.md) |
