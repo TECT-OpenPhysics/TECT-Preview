@@ -1,28 +1,20 @@
 #!/usr/bin/env python3
-"""Integrated verifier for EXP-000812 / R-168 v1.2.
+"""Integrated verifier for EXP-000814 / R-168 v1.3.
 
-The primary and non-importing independent engines are each executed twice via
-their public command-line interfaces in fresh child processes.  This verifier
-pins the exact current 340/340 and 361/361 engines and their frozen script
-hashes (the pre-formal staged sentinels were 333/333 and 353/353),
-reconstructs the fixed-linear-probe contact-curvature theorem with exact
-rationals and stable ground branches, and cross-checks the hardened minimum
-physical-response successor contract, all 57 named hostile classes, and all
-48 deterministic malformed fuzz cases.
+Both independent engines run twice through their public CLIs. This verifier
+pins the normalized v1.3 four-file package, accepts the exact proof-first
+407/407 and 430/430 contracts or authority-complete 423/423 and 446/446
+contracts, and preserves every v1.0--v1.2 contract. It cross-checks five new
+T0 children, four negatives, three open successors, and all 27 v1.3 hostile
+classes while retaining the 28/7/11/57/48 hostile-count contracts.
 
-``--staged`` is assembly-safe and fail-closed.  A not-yet-issued formal,
-stored-result, regenerated reader, or combined R-167 v2.1 / R-168 v1.2
-gate-level checkpoint is reported as ``MISSING`` and produces ``INCOMPLETE``
-with exit code zero.  Contradictions, malformed issued authorities, stale
-strict-mode results, and cross-engine mismatches remain failures.
-
-The issued R-167 v1.9 / R-168 v1.0 and R-167 v2.0 / R-168 v1.1 PDFs are
-strictly revalidated as historical evidence only.  The future
-``v1_2_checkpoint_synthesis`` and R-167 ``v2_1_checkpoint_synthesis`` fields
-are one cross-bound staged checkpoint: both must remain explicit deferred
-records until they are replaced by identical issued metadata.  This script
-never creates a candidate, physical response, map, prediction, target, freeze,
-tag, score, selection, note source, PDF, or formal authority.
+``--staged`` reports stale or missing formal, stored, generated, changelog, or
+checkpoint authorities without weakening contradiction checks. The issued
+v1.9/v1.0, v2.0/v1.1, and v2.1/v1.2 source/PDF pairs remain historical. The
+R-167 ``v2_2_checkpoint_synthesis`` and R-168 ``v1_3_checkpoint_synthesis``
+fields preserve their proof-first deferred history and now form exactly one
+issued checkpoint row. This script creates no candidate, response, map,
+prediction, freeze, tag, PDF, or formal authority.
 """
 
 from __future__ import annotations
@@ -36,11 +28,12 @@ import re
 import subprocess
 import sys
 import tempfile
+from fractions import Fraction
 from pathlib import Path
 from typing import Any, Iterable, Mapping
 
 
-__version__ = "1.2.0"
+__version__ = "1.3.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = "pre-a-round1-prospective-holdout-freeze-protocol"
@@ -48,7 +41,7 @@ SLUG = "pre-a-round1-prospective-holdout-freeze-protocol"
 TASK_ID = "T-054"
 CLAIM_IDS = ("C6-SPACETIME-SIGNATURE",)
 RESULT_NUMBER = "R-168"
-RESULT_VERSION = "v1.2"
+RESULT_VERSION = "v1.3"
 RESULT_ID = (
     "PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-"
     "READINESS-AUDIT"
@@ -56,11 +49,13 @@ RESULT_ID = (
 V1_0_EXPLORATION_ID = "EXP-000807"
 HARDENING_EXPLORATION_ID = "EXP-000808"
 V1_1_EXPLORATION_ID = "EXP-000810"
-EXPLORATION_ID = "EXP-000812"
+V1_2_EXPLORATION_ID = "EXP-000812"
+EXPLORATION_ID = "EXP-000814"
 PRIOR_EXPLORATION_IDS = (
     V1_0_EXPLORATION_ID,
     HARDENING_EXPLORATION_ID,
     V1_1_EXPLORATION_ID,
+    V1_2_EXPLORATION_ID,
 )
 PARENT_EXPLORATIONS = ("EXP-000791", *PRIOR_EXPLORATION_IDS)
 AUDITED_COMMIT = "99157442831c0e44d425b5d5f8cd78856c57da53"
@@ -73,10 +68,20 @@ V1_0_NEGATIVE_IDS = (
 V1_1_NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR",
 )
-PRIOR_NEGATIVE_IDS = (*V1_0_NEGATIVE_IDS, *V1_1_NEGATIVE_IDS)
-NEW_NEGATIVE_IDS = (
+V1_2_NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-"
     "STIFFNESS-RESPONSE",
+)
+PRIOR_NEGATIVE_IDS = (*V1_0_NEGATIVE_IDS, *V1_1_NEGATIVE_IDS, *V1_2_NEGATIVE_IDS)
+NEW_NEGATIVE_IDS = (
+    "NG-2026-08-11-PRE-A-M2-V0-ONE-REAL-SCALAR-AUTOMATIC-INTERNAL-U1-"
+    "WINDING-AND-HELICITY",
+    "NG-2026-08-11-PRE-A-M2-ONE-Q-PHASON-AUTOMATIC-PHYSICAL-"
+    "SUPERFLUID-DENSITY",
+    "NG-2026-08-11-PRE-A-M2-POSITIVE-LOCAL-INVERTIBILITY-AUTOMATIC-UNIT-"
+    "EXPONENT",
+    "NG-2026-08-11-PRE-A-M2-SIX-ABSOLUTE-ERRORS-AUTOMATIC-LOG-SLOPE-"
+    "CONTROL",
 )
 NEGATIVE_IDS = (*PRIOR_NEGATIVE_IDS, *NEW_NEGATIVE_IDS)
 REUSED_NEGATIVE_IDS = (
@@ -92,13 +97,22 @@ V1_1_CLOSED_SUBGATES = (
     "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
     "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
 )
-NEW_CLOSED_SUBGATES = (
+V1_2_CLOSED_SUBGATES = (
     "PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY",
     "PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA",
+)
+NEW_CLOSED_SUBGATES = (
+    "PA-M2-CI8-V0-REAL-SCALAR-INTERNAL-U1-TRIVIALITY-AND-NO-INTRINSIC-"
+    "WINDING",
+    "PA-M2-CI8-ONE-Q-AUXILIARY-PHASON-CURVATURE-AND-FINITE-TORUS-SECANT",
+    "PA-M2-CI8-HELICITY-TENSOR-CONTACT-SHIFT-NONIDENTIFIABILITY",
+    "PA-M2-CI8-ANALYTIC-MAP-INTEGER-EXPONENT-TRANSPORT",
+    "PA-M2-CI8-SIX-STAGE-RELATIVE-LOG-SLOPE-ERROR-TRANSPORT",
 )
 CLOSED_SUBGATES = (
     *V1_0_CLOSED_SUBGATES,
     *V1_1_CLOSED_SUBGATES,
+    *V1_2_CLOSED_SUBGATES,
     *NEW_CLOSED_SUBGATES,
 )
 PHYSICAL_RESPONSE_GATE = "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
@@ -110,13 +124,24 @@ V1_0_OPEN_GATES = (
     "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-"
     "VERIFICATION",
 )
-OPEN_GATES = (*V1_0_OPEN_GATES, PHYSICAL_RESPONSE_GATE)
+OPEN_SUCCESSOR_GATES = (
+    "PA-M2-SUCCESSOR-SUBSTANTIVE-COMPACT-ACTION-BACKGROUND-PROBE-AND-"
+    "WINDING-LAW",
+    "PA-M2-SUCCESSOR-ORDERED-STATE-PHYSICAL-MODE-AND-RESPONSE-LIMIT",
+    "PA-M2-SUCCESSOR-SIX-TERM-CRITICAL-ESTIMAND-ERROR-BUDGET",
+)
+OPEN_GATES = (*V1_0_OPEN_GATES, PHYSICAL_RESPONSE_GATE, *OPEN_SUCCESSOR_GATES)
 ALL_GATE_IDS = (*CLOSED_SUBGATES, *OPEN_GATES)
 V1_0_ALL_GATE_IDS = (*V1_0_CLOSED_SUBGATES, *V1_0_OPEN_GATES)
 V1_1_EXPLORATION_GATES = (
     *V1_1_CLOSED_SUBGATES,
     PHYSICAL_RESPONSE_GATE,
     *V1_0_OPEN_GATES,
+)
+V1_2_EXPLORATION_GATES = (
+    *V1_2_CLOSED_SUBGATES,
+    PHYSICAL_RESPONSE_GATE,
+    PARENT_GATE,
 )
 HARDENING_GATE_IDS = (
     "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
@@ -130,13 +155,22 @@ FINGERPRINT_COMPONENT_SHA256 = (
     "a00d2c537ba82ba12324d4b48d9a8190c84c1f071971d22dd37793ec36253eb9"
 )
 PRIMARY_SCRIPT_SHA256 = (
-    "78dd5b2bc79efe26e16f42f7c1f49ee93d550d8a9fdb65904f22d89729c7b7ec"
+    "69a9486b060c711679314806b302af85652c6d8317fccebba83578b5b2d397a9"
 )
 INDEPENDENT_SCRIPT_SHA256 = (
-    "313d5b76caf43dc0750a2d3cbbda245e1e492d370f9c5be4accd9dc66b25e8f4"
+    "6b100dd08e3daac385fc67fa5627f0c9f8c5d9ff8aa2a416d30018e72a033c26"
 )
-PRIMARY_ASSERTION_COUNT = 340
-INDEPENDENT_ASSERTION_COUNT = 361
+MANIFEST_SHA256 = "fdecf5dd6285e8bbe7115cabd59c2b86a8b2ba8d295acddf3fd18cdcb06cb676"
+CERTIFICATE_SHA256 = "d365ae6d1de71d01745063ada47d81279b9892b65e1dc9e0f013b6bb79c411f3"
+PROOF_FIRST_MANIFEST_STATUS = (
+    "R-168 v1.3 PROOF-FIRST T0 NON-CLAIM-BEARING FIVE-CHILD THEOREM PACKAGE; "
+    "FORMAL AUTHORITIES REGISTERED; COMBINED CHECKPOINT ISSUED; PHYSICAL RESPONSE, "
+    "ROUND-1, C6, CP1, PHYSICAL SECTOR A AND PRE-A OPEN"
+)
+PRIMARY_PROOF_FIRST_ASSERTION_COUNT = 407
+PRIMARY_FORMAL_ASSERTION_COUNT = 423
+INDEPENDENT_PROOF_FIRST_ASSERTION_COUNT = 430
+INDEPENDENT_FORMAL_ASSERTION_COUNT = 446
 HARD_ROWS = (
     "D00-ADMISSION",
     "D01-SAME-REFERENCE",
@@ -212,6 +246,13 @@ PRIMARY_SCOPE_EXPECTED = {
     "m2_linear_probe_response_nonidentifiability_closed": True,
     "m2_physical_response_channel_present": False,
     "m2_controlled_physical_error_bound_present": False,
+    "m2_real_scalar_internal_u1_present": False,
+    "m2_intrinsic_winding_present": False,
+    "m2_auxiliary_phason_curvature_scoped": True,
+    "m2_physical_superfluid_density_identified": False,
+    "m2_tensor_contact_nonidentifiability_closed": True,
+    "m2_analytic_integer_order_transport_closed": True,
+    "m2_six_stage_relative_error_transport_closed": True,
     "parent_gate_closed": False,
     "Pre_A_complete": False,
     "Sector_A_complete": False,
@@ -223,6 +264,44 @@ INDEPENDENT_SCOPE_EXPECTED = {
         if key != "protocol_schema_validated"
     },
     "protocol_schema_shape_validated": True,
+}
+
+V13_SUITE_SCHEMA = "tect/pre-a-m2-ci8-v1-3-theorem-suite/1.0"
+V13_AUTHORITY_SECTION_KEYS = (
+    "m2_v0_real_scalar_internal_u1_and_winding_audit",
+    "m2_one_q_auxiliary_phason_curvature_and_finite_torus_secant",
+    "m2_helicity_tensor_contact_shift_nonidentifiability",
+    "m2_analytic_map_integer_exponent_transport",
+    "m2_six_stage_relative_log_slope_error_transport",
+)
+V13_HOSTILE_CODES = {
+    "nontrivial_real_line_u1": "V13_U1_SCOPE_INVALID",
+    "intrinsic_real_h2_winding": "V13_U1_SCOPE_INVALID",
+    "spatial_translation_promoted_internal": "V13_U1_SCOPE_INVALID",
+    "phason_promoted_physical_density": "V13_PHASON_ALGEBRA_INVALID",
+    "phason_hessian_sign_flip": "V13_PHASON_ALGEBRA_INVALID",
+    "fixed_torus_continuous_twist": "V13_PHASON_ALGEBRA_INVALID",
+    "optimized_amplitude_torus_secant": "V13_PHASON_ALGEBRA_INVALID",
+    "one_q_promoted_exact_euler_solution": "V13_PHASON_ALGEBRA_INVALID",
+    "cubic_third_harmonic_removed": "V13_PHASON_ALGEBRA_INVALID",
+    "contact_shift_nonsymmetric": "V13_RESPONSE_ALGEBRA_INVALID",
+    "contact_shift_sign_flip": "V13_RESPONSE_ALGEBRA_INVALID",
+    "finite_beta_contact_omitted": "V13_RESPONSE_ALGEBRA_INVALID",
+    "ground_gap_hypothesis_removed": "V13_RESPONSE_ALGEBRA_INVALID",
+    "positive_invertibility_forces_unit_order": "V13_MAP_ALGEBRA_INVALID",
+    "x2_order_changed": "V13_MAP_ALGEBRA_INVALID",
+    "x3_order_changed": "V13_MAP_ALGEBRA_INVALID",
+    "six_absolute_errors_promoted": "V13_ERROR_ALGEBRA_INVALID",
+    "delta_equal_one": "V13_ERROR_ALGEBRA_INVALID",
+    "positive_floor_removed": "V13_ERROR_ALGEBRA_INVALID",
+    "vanishing_delta_not_required": "V13_ERROR_ALGEBRA_INVALID",
+    "candidate_or_parent_promoted": "V13_GLOBAL_SCOPE_INVALID",
+    "gl1_compact_connected_argument_removed": "V13_U1_SCOPE_INVALID",
+    "branch_amplitude_decoupled": "V13_PHASON_ALGEBRA_INVALID",
+    "analytic_zero_value_removed": "V13_MAP_ALGEBRA_INVALID",
+    "lambda_equal_one": "V13_ERROR_ALGEBRA_INVALID",
+    "initial_stage_unbound": "V13_ERROR_ALGEBRA_INVALID",
+    "adjacent_ratio_contract_removed": "V13_ERROR_ALGEBRA_INVALID",
 }
 
 FREEZE_SCHEMA = "tect/pre-a-round1-prospective-holdout-freeze/1.0"
@@ -653,15 +732,38 @@ R167_V2_1_OPEN_GATES = (
     "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
 )
 NEXT_CHECKPOINT_REQUIRED_TOKENS = (
-    "R-167 v2.1", "EXP-000811", "R-168 v1.2", EXPLORATION_ID, RESULT_ID,
+    "R-167 v2.1", "EXP-000811", "R-168 v1.2", V1_2_EXPLORATION_ID, RESULT_ID,
     *R167_V2_1_NEW_NEGATIVES, *R167_V2_1_CLOSED_GATES,
-    *R167_V2_1_OPEN_GATES, *NEW_NEGATIVE_IDS, *NEW_CLOSED_SUBGATES,
+    *R167_V2_1_OPEN_GATES, *V1_2_NEGATIVE_IDS, *V1_2_CLOSED_SUBGATES,
     PHYSICAL_RESPONSE_GATE, "209/209", "138/138", "340/340", "361/361",
     R167_V2_1_PRIMARY, R167_V2_1_INDEPENDENT, R167_V2_1_INTEGRATED,
     PRIMARY.relative_to(REPO).as_posix(),
     INDEPENDENT.relative_to(REPO).as_posix(),
     SCRIPT.relative_to(REPO).as_posix(),
     "no per-lemma or intermediate", "physical Sector A", "Pre-A",
+)
+
+R167_V2_2_COMPONENT_SCRIPT_SHA256 = (
+    "d9d65080f84c0408200ba64c81449263cfd87095d8bdf1620211bc6fab6d1058",
+    "74dc4a8758d204587963c4e41e720902fd0b66931c35024f7784adaaa09d0b38",
+)
+V1_3_FUTURE_CHECKPOINT_REQUIRED_TOKENS = (
+    "R-167 v2.2", "EXP-000813", "R-168 v1.3", EXPLORATION_ID,
+    *R167_V2_2_COMPONENT_SCRIPT_SHA256,
+    "253/253", "154/154",
+    PRIMARY_SCRIPT_SHA256,
+    INDEPENDENT_SCRIPT_SHA256,
+    R167_V2_1_PRIMARY,
+    R167_V2_1_INDEPENDENT,
+    R167_V2_1_INTEGRATED,
+    PRIMARY.relative_to(REPO).as_posix(),
+    INDEPENDENT.relative_to(REPO).as_posix(),
+    SCRIPT.relative_to(REPO).as_posix(),
+    "physical Sector A", "Pre-A",
+)
+V1_3_COMPONENT_COUNT_TOKEN_PAIRS = (
+    ("407/407", "430/430"),
+    ("423/423", "446/446"),
 )
 
 ROUND1_MANIFEST = (
@@ -1134,6 +1236,90 @@ def future_checkpoint_pair_diagnostics(
     }
 
 
+def _checkpoint_reader_texts(synthesis: Mapping[str, Any]) -> dict[str, str]:
+    texts = {"source": "", "pypdf": "", "pdfplumber": ""}
+    source = _confined_checkpoint_path(synthesis.get("source"), ".tex.txt")
+    pdf = _confined_checkpoint_path(synthesis.get("pdf"), ".pdf")
+    if source is not None and source.is_file():
+        try:
+            texts["source"] = source.read_text(encoding="utf-8")
+        except (OSError, UnicodeError):
+            pass
+    if pdf is not None and pdf.is_file():
+        try:
+            from pypdf import PdfReader
+
+            texts["pypdf"] = "\n".join(
+                page.extract_text() or "" for page in PdfReader(str(pdf)).pages
+            )
+        except Exception:
+            pass
+        try:
+            import pdfplumber
+
+            with pdfplumber.open(pdf) as document:
+                texts["pdfplumber"] = "\n".join(
+                    page.extract_text() or "" for page in document.pages
+                )
+        except Exception:
+            pass
+    return texts
+
+
+def future_v1_3_checkpoint_diagnostics(synthesis: Mapping[str, Any]) -> dict[str, Any]:
+    other_checkpoint: dict[str, Any] = {}
+    error: str | None = None
+    try:
+        other = json.loads(R167_MANIFEST.read_text(encoding="utf-8"))
+        other_checkpoint = as_mapping(other.get("v2_2_checkpoint_synthesis"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as caught:
+        error = str(caught)
+    deferred = (
+        set(synthesis) == {
+            "status", "source", "pdf", "source_sha256", "pdf_sha256", "pages", "workflow"
+        }
+        and set(other_checkpoint) == {"status", "workflow"}
+        and synthesis.get("status") == other_checkpoint.get("status") == "DEFERRED"
+        and all(synthesis.get(key) is None for key in (
+            "source", "pdf", "source_sha256", "pdf_sha256", "pages"
+        ))
+        and text_has(synthesis.get("workflow", ""), "No v1.3 PDF")
+        and text_has(synthesis.get("workflow", ""), "later combined gate-level synthesis")
+        and text_has(other_checkpoint.get("workflow", ""), "No intermediate PDF")
+        and text_has(other_checkpoint.get("workflow", ""), "R-167 v2.2")
+        and text_has(other_checkpoint.get("workflow", ""), "one combined gate-level synthesis")
+    )
+    issued = issued_checkpoint_lifecycle_diagnostics(
+        synthesis,
+        other_field="v2_2_checkpoint_synthesis",
+        required_tokens=V1_3_FUTURE_CHECKPOINT_REQUIRED_TOKENS,
+        workflow_versions=("R-167 v2.2", "R-168 v1.3"),
+    )
+    reader_texts = _checkpoint_reader_texts(synthesis)
+    count_contract = {
+        label: any(
+            all(text_has(value, token) for token in pair)
+            for pair in V1_3_COMPONENT_COUNT_TOKEN_PAIRS
+        )
+        for label, value in reader_texts.items()
+    }
+    issued["r168_count_contract"] = count_contract
+    issued["r168_count_contract_valid"] = (
+        bool(reader_texts["source"]) and all(count_contract.values())
+    )
+    issued["valid"] = issued["valid"] and issued["r168_count_contract_valid"]
+    return {
+        "r168_field": "v1_3_checkpoint_synthesis",
+        "r167_field": "v2_2_checkpoint_synthesis",
+        "r168_metadata": dict(synthesis),
+        "r167_metadata": other_checkpoint,
+        "shared_manifest_error": error,
+        "deferred_pair_valid": deferred,
+        "issued": issued,
+        "valid": issued["valid"],
+    }
+
+
 class Audit:
     """Separate contradictions from not-yet-issued staged authorities."""
 
@@ -1544,21 +1730,206 @@ def stored_against_fresh(
     return stored
 
 
+def v1_3_issuance_firewall_diagnostics() -> dict[str, Any]:
+    """Bind issued mutable authorities to the exact shared checkpoint contract."""
+
+    diagnostics: dict[str, Any] = {
+        "checkpoint": {},
+        "deferred_pair_valid": False,
+        "issued_checkpoint_valid": False,
+        "certificate_readable": False,
+        "certificate_tokens": {},
+        "certificate_issuance_valid": False,
+    }
+    try:
+        manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+        synthesis = as_mapping(manifest.get("v1_3_checkpoint_synthesis"))
+        checkpoint = future_v1_3_checkpoint_diagnostics(synthesis)
+        diagnostics["checkpoint"] = checkpoint
+        diagnostics["deferred_pair_valid"] = checkpoint["deferred_pair_valid"]
+        diagnostics["issued_checkpoint_valid"] = checkpoint["valid"]
+    except (OSError, UnicodeError, json.JSONDecodeError, KeyError) as error:
+        diagnostics["checkpoint_error"] = f"{type(error).__name__}: {error}"
+        return diagnostics
+
+    if not diagnostics["issued_checkpoint_valid"]:
+        return diagnostics
+
+    try:
+        certificate = CERTIFICATE.read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as error:
+        diagnostics["certificate_error"] = f"{type(error).__name__}: {error}"
+        return diagnostics
+    diagnostics["certificate_readable"] = True
+
+    metadata = as_mapping(
+        as_mapping(diagnostics["checkpoint"]).get("r168_metadata")
+    )
+    source = _confined_checkpoint_path(metadata.get("source"), ".tex.txt")
+    pdf = _confined_checkpoint_path(metadata.get("pdf"), ".pdf")
+    pages = metadata.get("pages")
+    if source is None or pdf is None or not source.is_file() or not pdf.is_file():
+        diagnostics["certificate_artifact_error"] = "checkpoint artefact unavailable"
+        return diagnostics
+
+    component_contracts = (
+        (
+            "R-167 primary",
+            REPO / R167_V2_1_PRIMARY,
+            253,
+        ),
+        (
+            "R-167 non-importing independent",
+            REPO / R167_V2_1_INDEPENDENT,
+            154,
+        ),
+        (
+            "R-167 integrated",
+            REPO / R167_V2_1_INTEGRATED,
+            279,
+        ),
+        ("R-168 primary", PRIMARY, PRIMARY_FORMAL_ASSERTION_COUNT),
+        (
+            "R-168 non-importing independent",
+            INDEPENDENT,
+            INDEPENDENT_FORMAL_ASSERTION_COUNT,
+        ),
+        ("R-168 integrated", SCRIPT, 349),
+    )
+    component_tokens = {
+        label: (
+            path.is_file()
+            and text_has(
+                certificate,
+                (
+                    f"{label}: {count}/{count}; raw script SHA-256 "
+                    f"{artifact_sha256(path)}"
+                ),
+            )
+        )
+        for label, path, count in component_contracts
+    }
+    source_token = text_has(
+        certificate,
+        (
+            f"Source: {metadata.get('source')} ({source.stat().st_size} bytes; "
+            f"raw SHA-256 {metadata.get('source_sha256')})"
+        ),
+    )
+    pdf_token = text_has(
+        certificate,
+        (
+            f"PDF: {metadata.get('pdf')} ({pdf.stat().st_size} bytes; raw SHA-256 "
+            f"{metadata.get('pdf_sha256')}; {pages} pages"
+        ),
+    )
+    qa_token = text_has(
+        certificate,
+        (
+            f"pypdf {pages}/{pages} nonempty pages; pdfplumber {pages}/{pages} "
+            f"nonempty pages; 77/77 required tokens in each extraction; all "
+            f"{pages} rendered pages were visually reviewed with zero clipping, "
+            "overlap, broken equations, unreadable identifiers, black glyphs, or "
+            "malformed page transitions; the one-pass MiKTeX build reported "
+            "OVERFULL-HBOX 0"
+        ),
+    )
+    exact_tokens = {
+        "heading": text_has(
+            certificate,
+            "Combined R-167 v2.2 / R-168 v1.3 gate-level checkpoint issuance",
+        ),
+        "proof_first_superseded_only_at_checkpoint": text_has(
+            certificate,
+            "superseded for the current result by this single gate-level issuance",
+        ),
+        "source_pin": source_token,
+        "pdf_pin_and_pages": pdf_token,
+        "component_counts_and_pins": all(component_tokens.values()),
+        "dual_extraction_and_visual_qa": qa_token,
+        "single_checkpoint_workflow": text_has(
+            certificate,
+            (
+                "issued one combined source/PDF pair only after the primary, "
+                "non-importing independent, integrated, formal-authority, "
+                "generated-surface, source-form, freshness, dual-extraction, "
+                "and visual-review checks passed"
+            ),
+        ),
+        "parents_remain_open": text_has(
+            certificate,
+            (
+                "physical-response, prospective-freeze, Round-1, C6, CP1, "
+                "physical Sector A, and Pre-A parents remain OPEN"
+            ),
+        ),
+    }
+    diagnostics["certificate_tokens"] = {
+        **exact_tokens,
+        "components": component_tokens,
+    }
+    diagnostics["certificate_issuance_valid"] = (
+        all(exact_tokens.values())
+        and CERTIFICATE.read_bytes().count(b"\r") == 0
+    )
+    return diagnostics
+
+
 def validate_firewall(audit: Audit) -> None:
-    audit.check(
-        "primary frozen v1.2 script SHA exact",
-        normalized_sha256(PRIMARY) == PRIMARY_SCRIPT_SHA256,
-        normalized_sha256(PRIMARY),
-        PRIMARY_SCRIPT_SHA256,
-        "firewall",
+    for label, path, expected in (
+        ("primary", PRIMARY, PRIMARY_SCRIPT_SHA256),
+        ("independent", INDEPENDENT, INDEPENDENT_SCRIPT_SHA256),
+    ):
+        raw = artifact_sha256(path)
+        normalized = normalized_sha256(path)
+        audit.check(
+            f"{label} frozen v1.3 raw and LF-normalized SHA exact",
+            raw == normalized == expected,
+            {"raw": raw, "LF_normalized": normalized},
+            {"raw": expected, "LF_normalized": expected},
+            "firewall",
+        )
+
+    lifecycle = v1_3_issuance_firewall_diagnostics()
+    issued_guard = (
+        lifecycle["issued_checkpoint_valid"]
+        and lifecycle["certificate_issuance_valid"]
     )
-    audit.check(
-        "independent frozen v1.2 script SHA exact",
-        normalized_sha256(INDEPENDENT) == INDEPENDENT_SCRIPT_SHA256,
-        normalized_sha256(INDEPENDENT),
-        INDEPENDENT_SCRIPT_SHA256,
-        "firewall",
-    )
+    for label, path, deferred_hash in (
+        ("manifest", MANIFEST, MANIFEST_SHA256),
+        ("certificate", CERTIFICATE, CERTIFICATE_SHA256),
+    ):
+        raw = artifact_sha256(path)
+        normalized = normalized_sha256(path)
+        deferred_exact = (
+            lifecycle["deferred_pair_valid"]
+            and raw == normalized == deferred_hash
+        )
+        issued_exact = issued_guard and raw == normalized
+        audit.check(
+            f"{label} v1.3 deferred hash or issued lifecycle exact",
+            deferred_exact or issued_exact,
+            {
+                "raw": raw,
+                "LF_normalized": normalized,
+                "deferred_exact": deferred_exact,
+                "issued_exact": issued_exact,
+                "lifecycle": lifecycle,
+            },
+            {
+                "deferred": {
+                    "raw": deferred_hash,
+                    "LF_normalized": deferred_hash,
+                    "cross_bound": True,
+                },
+                "issued": {
+                    "shared_exact_8_field_checkpoint": True,
+                    "certificate_issuance_tokens_exact": True,
+                    "raw_equals_LF_normalized": True,
+                },
+            },
+            "firewall",
+        )
     source = read_text(INDEPENDENT, audit, "independent source", core=True)
     if source is None:
         return
@@ -1640,6 +2011,14 @@ def validate_firewall(audit: Audit) -> None:
         "subprocess CLI with no component/importlib/runpy import",
         "firewall",
     )
+
+
+def expected_component_assertion_count(payload: Mapping[str, Any], label: str) -> int:
+    field = "formal_authority" if label == "primary" else "authority"
+    complete = as_mapping(payload.get(field)).get("status") == "COMPLETE"
+    if label == "primary":
+        return PRIMARY_FORMAL_ASSERTION_COUNT if complete else PRIMARY_PROOF_FIRST_ASSERTION_COUNT
+    return INDEPENDENT_FORMAL_ASSERTION_COUNT if complete else INDEPENDENT_PROOF_FIRST_ASSERTION_COUNT
 
 
 def validate_component(
@@ -1828,8 +2207,8 @@ def compare_v1_2(
         "same_zero_source_state_and_spectrum": True,
     }
     expected_linear = {
-        "closed_child_id": NEW_CLOSED_SUBGATES[0],
-        "negative_id": NEW_NEGATIVE_IDS[0],
+        "closed_child_id": V1_2_CLOSED_SUBGATES[0],
+        "negative_id": V1_2_NEGATIVE_IDS[0],
         "fixture": expected_fixture,
         "finite_beta": expected_finite,
         "beta_infinity": expected_ground,
@@ -1860,8 +2239,8 @@ def compare_v1_2(
     m_fraction = as_mapping(m_linear.get("fraction_fixture"))
     audit.check(
         "manifest v1.2 exact curvature rationals branches and boundary",
-        m_linear.get("closed_child_id") == NEW_CLOSED_SUBGATES[0]
-        and m_linear.get("negative_id") == NEW_NEGATIVE_IDS[0]
+        m_linear.get("closed_child_id") == V1_2_CLOSED_SUBGATES[0]
+        and m_linear.get("negative_id") == V1_2_NEGATIVE_IDS[0]
         and m_linear.get("candidate_created") is False
         and m_linear.get("physical_response_gate_closed") is False
         and m_fraction
@@ -2123,7 +2502,7 @@ def compare_v1_2(
     )
     audit.check(
         "manifest v1.2 minimum-contract exact schema enums and counts",
-        m_schema.get("closed_child_id") == NEW_CLOSED_SUBGATES[1]
+        m_schema.get("closed_child_id") == V1_2_CLOSED_SUBGATES[1]
         and m_schema.get("schema") == PHYSICAL_CONTRACT_SCHEMA
         and tuple(m_schema.get("root_fields", ())) == PHYSICAL_CONTRACT_ROOT_FIELDS
         and tuple(m_schema.get("artifact_ref_fields", ())) == PHYSICAL_CONTRACT_ARTIFACT_REF_FIELDS
@@ -2174,12 +2553,288 @@ def compare_v1_2(
         "hostile_count": 57,
         "fuzz_count": 48,
         "artifact_ref_count": 31,
-        "new_closed_children": list(NEW_CLOSED_SUBGATES),
-        "new_negative": NEW_NEGATIVE_IDS[0],
+        "new_closed_children": list(V1_2_CLOSED_SUBGATES),
+        "new_negative": V1_2_NEGATIVE_IDS[0],
         "physical_response_gate_closed": False,
         "parent_gate_closed": False,
     }
 
+
+
+def _manifest_v1_3_suite(manifest: Mapping[str, Any]) -> dict[str, Any]:
+    identity = as_mapping(manifest.get("m2_v1_3_identity_and_scope"))
+    keys = (
+        "schema", "result", "exploration_id", "claim_bearing", "tier",
+        "closed_child_ids", "negative_ids", "open_successor_gate_ids",
+    )
+    suite = {key: identity.get(key) for key in keys}
+    suite.update({
+        "real_scalar_internal_u1_and_winding": manifest.get(V13_AUTHORITY_SECTION_KEYS[0]),
+        "one_q_auxiliary_phason_curvature_and_finite_torus_secant": manifest.get(V13_AUTHORITY_SECTION_KEYS[1]),
+        "helicity_tensor_contact_shift_nonidentifiability": manifest.get(V13_AUTHORITY_SECTION_KEYS[2]),
+        "analytic_map_integer_exponent_transport": manifest.get(V13_AUTHORITY_SECTION_KEYS[3]),
+        "six_stage_relative_log_slope_error_transport": manifest.get(V13_AUTHORITY_SECTION_KEYS[4]),
+        "scope": identity.get("scope"),
+    })
+    return suite
+
+
+def compare_v1_3(
+    primary: dict[str, Any],
+    independent: dict[str, Any],
+    manifest: dict[str, Any],
+    audit: Audit,
+) -> dict[str, Any]:
+    p = as_mapping(primary.get("m2_v1_3_theorem_suite"))
+    i = as_mapping(independent.get("m2_v1_3_theorem_suite"))
+    m = _manifest_v1_3_suite(manifest)
+    pv = as_mapping(primary.get("m2_v1_3_theorem_suite_validation"))
+    iv = as_mapping(independent.get("m2_v1_3_theorem_suite_validation"))
+    audit.check(
+        "cross v1.3 primary independent manifest suites exact",
+        p == i == m and pv.get("valid") is True and iv.get("valid") is True
+        and as_list(pv.get("error_codes")) == [] and as_list(iv.get("error_codes")) == [],
+        {"p=m": p == m, "i=m": i == m, "pv": pv, "iv": iv},
+        "three equal suites and two valid reports", "cross_v1_3",
+    )
+    audit.check(
+        "cross v1.3 five children four negatives three successors T0 exact",
+        p.get("schema") == V13_SUITE_SCHEMA
+        and p.get("result") == f"{RESULT_NUMBER} {RESULT_VERSION}"
+        and p.get("exploration_id") == EXPLORATION_ID
+        and p.get("claim_bearing") is False and p.get("tier") == "T0"
+        and tuple(p.get("closed_child_ids", ())) == NEW_CLOSED_SUBGATES
+        and tuple(p.get("negative_ids", ())) == NEW_NEGATIVE_IDS
+        and tuple(p.get("open_successor_gate_ids", ())) == OPEN_SUCCESSOR_GATES,
+        {key: p.get(key) for key in (
+            "schema", "result", "exploration_id", "claim_bearing", "tier",
+            "closed_child_ids", "negative_ids", "open_successor_gate_ids",
+        )},
+        {"children": 5, "negatives": 4, "successors": 3, "tier": "T0"},
+        "cross_v1_3",
+    )
+
+    u1 = as_mapping(p.get("real_scalar_internal_u1_and_winding"))
+    audit.check(
+        "cross v1.3 GL1 theorem and H2 contractibility exact",
+        u1.get("closed_child_id") == NEW_CLOSED_SUBGATES[0]
+        and u1.get("negative_id") == NEW_NEGATIVE_IDS[0]
+        and u1.get("field_target") == "R"
+        and u1.get("pointwise_linear_group") == "GL(1,R)=R*"
+        and all(t in str(u1.get("theorem")) for t in (
+            "continuous real one-dimensional linear representation",
+            "compact and connected", "log", "compact subgroup", "trivial",
+        ))
+        and u1.get("configuration_space") == "H^2(T^3;R)"
+        and u1.get("contraction") == "C_s(phi)=(1-s)phi for 0<=s<=1"
+        and u1.get("intrinsic_winding_sectors") is False
+        and len(as_list(u1.get("scope_exclusions"))) == 3,
+        u1, "trivial GL1 image and contractible real H2 with three exclusions",
+        "cross_v1_3",
+    )
+
+    ph = as_mapping(p.get("one_q_auxiliary_phason_curvature_and_finite_torus_secant"))
+    fx = as_mapping(ph.get("fraction_fixture"))
+    audit.check(
+        "cross v1.3 one-Q general symbolic Hessian and 3k boundary exact",
+        ph.get("closed_child_id") == NEW_CLOSED_SUBGATES[1]
+        and ph.get("negative_id") == NEW_NEGATIVE_IDS[1]
+        and ph.get("sign_domain") == "s in {-1,+1}^3"
+        and ph.get("trial_family") == "phi=A*cos((q*s+a).x)"
+        and ph.get("density") == "f=A^2*(r+c*S(a))/4+3*g*A^4/32"
+        and ph.get("shear_polynomial") == "S(a)=sum_i(2*s_i*q*a_i+a_i^2)^2"
+        and ph.get("optimized_amplitude_squared") == "-4*(r+c*S(a))/(3*g)"
+        and ph.get("optimized_density") == "-(r+c*S(a))^2/(6*g)"
+        and ph.get("hessian_at_zero") == "-8*r*c*q^2/(3*g)*I_3"
+        and ph.get("symbolic_all_eight_signs") is True
+        and ph.get("symbolic_optimized_identity") is True
+        and ph.get("cubic_identity") == "cos(theta)^3=(3*cos(theta)+cos(3*theta))/4"
+        and ph.get("cubic_laurent_coefficients")
+        == {"-3": "1/8", "-1": "3/8", "1": "3/8", "3": "1/8"}
+        and ph.get("symbolic_cubic_identity") is True
+        and "3k harmonic" in str(ph.get("euler_boundary"))
+        and "not an exact Euler solution" in str(ph.get("euler_boundary")),
+        ph, "all signs, optimized Hessian, Laurent cube, third harmonic retained",
+        "cross_v1_3",
+    )
+    audit.check(
+        "cross v1.3 continuous-a auxiliary and fixed-torus discrete secant exact",
+        "auxiliary Bloch/supercell/thermodynamic" in str(ph.get("physical_boundary"))
+        and "not an internal-U(1) helicity modulus" in str(ph.get("physical_boundary"))
+        and all(t in str(ph.get("finite_torus_rule")) for t in (
+            "h=2*pi/L", "q=m*h", "integer multiples of h", "fixed-amplitude central secant",
+        ))
+        and ph.get("fixed_amplitude_continuum_curvature") == "2*c*A0^2*q^2"
+        and ph.get("fixed_amplitude_central_secant") == "c*A0^2*(4*q^2+h^2)/2"
+        and ph.get("finite_torus_secant_excess") == "c*A0^2*h^2/2"
+        and ph.get("relative_secant_correction") == "h^2/(4*q^2)=1/(4*m^2) when q=m*h",
+        ph, "continuous auxiliary; fixed torus only discrete fixed-amplitude secant",
+        "cross_v1_3",
+    )
+    audit.check(
+        "cross v1.3 canonical phason fixture exact",
+        fx.get("inputs") == {
+            "r": "-3", "c": "2", "q": "5", "g": "7",
+            "fundamental_reciprocal_step_h": "1",
+        }
+        and fx.get("optimized_amplitude_squared") == "4/7"
+        and fx.get("q_over_h_integer") == 5
+        and [fx.get(k) for k in (
+            "continuum_curvature", "finite_torus_secant",
+            "secant_correction", "relative_correction",
+        )] == ["400/7", "404/7", "4/7", "1/100"],
+        fx, ["4/7", "400/7", "404/7", "4/7", "1/100"], "cross_v1_3",
+    )
+
+    response = as_mapping(p.get("helicity_tensor_contact_shift_nonidentifiability"))
+    audit.check(
+        "cross v1.3 Kubo ground tensor contact shift exact",
+        response.get("closed_child_id") == NEW_CLOSED_SUBGATES[2]
+        and response.get("hamiltonian_family")
+        == "H(A)=H0-sum_i A_i*J_i+(1/2)*sum_ij A_i*T_ij*A_j"
+        and all(t in str(response.get("finite_beta_formula")) for t in (
+            "<T_ij>_beta", "integral_0^beta", "delta J_i(-i tau) delta J_j",
+        ))
+        and all(t in str(response.get("isolated_ground_formula")) for t in (
+            "<0|T_ij|0>", "2*Re sum_{n>0}", "E_n-E_0",
+        ))
+        and "positive gap" in str(as_list(response.get("hypotheses"))[-1])
+        and response.get("symmetric_contact_shift")
+        == "T_ij -> T_ij+V*D_ij*I with D=D^T"
+        and response.get("response_shift") == "Upsilon -> Upsilon+D"
+        and response.get("fixed_under_shift")
+        == ["H0", "J_i", "zero-source state", "zero-source spectrum"],
+        response, "finite-beta and gapped-ground formulas, symmetric +D ambiguity",
+        "cross_v1_3",
+    )
+
+    amap = as_mapping(p.get("analytic_map_integer_exponent_transport"))
+    poly = as_mapping(amap.get("hostile_polynomials"))
+    audit.check(
+        "cross v1.3 analytic R0 integer order x2 x3 local-diffeo boundary exact",
+        amap.get("closed_child_id") == NEW_CLOSED_SUBGATES[3]
+        and amap.get("negative_id") == NEW_NEGATIVE_IDS[2]
+        and amap.get("input_scaling") == "kappa(tau)=C*tau*(1+o(1)) with C>0"
+        and all(t in str(amap.get("hypothesis")) for t in (
+            "R(0)=0", "b_n*kappa^n", "b_n>0", "n>=1", "first nonzero analytic order",
+        ))
+        and "positive integer n" in str(amap.get("transport"))
+        and amap.get("integer_order") is True
+        and all(t in str(amap.get("unit_order_sufficient_condition")) for t in (
+            "R(0)=0", "R'(0)>0", "inverse-function theorem", "n=1",
+        ))
+        and amap.get("positive_one_sided_local_invertibility_alone_sufficient") is False
+        and poly.get("x_squared_coefficients") == ["0", "0", "1"]
+        and poly.get("x_squared_order") == 2
+        and poly.get("x_cubed_coefficients") == ["0", "0", "0", "1"]
+        and poly.get("x_cubed_order") == 3
+        and "locally invertible through zero" in str(poly.get("boundary")),
+        amap, "R(0)=0, n>=1, unit order only at nonzero derivative; x2/x3 hostiles",
+        "cross_v1_3",
+    )
+
+    transport = as_mapping(p.get("six_stage_relative_log_slope_error_transport"))
+    tf = as_mapping(transport.get("fraction_fixture"))
+    d0 = [Fraction(1, 10 * j) for j in range(1, 7)]
+    d1 = [Fraction(1, 10 * (j + 1)) for j in range(1, 7)]
+    lower = Fraction(1)
+    upper = Fraction(1)
+    for left, right in zip(d0, d1):
+        lower *= (1 - right) / (1 + left)
+        upper *= (1 + right) / (1 - left)
+    q = lambda x: str(x.numerator) if x.denominator == 1 else f"{x.numerator}/{x.denominator}"
+    audit.check(
+        "cross v1.3 R0-R6 adjacent floors rational envelope and lambda<1 abs-log exact",
+        transport.get("closed_child_id") == NEW_CLOSED_SUBGATES[4]
+        and transport.get("negative_id") == NEW_NEGATIVE_IDS[3]
+        and transport.get("stage_count") == 6 and transport.get("initial_stage_exact") is True
+        and transport.get("scale_domain") == "lambda>0 and lambda!=1"
+        and "R_0,...,R_6" in str(as_list(transport.get("hypotheses"))[0])
+        and "Rhat_0=R_0" in str(as_list(transport.get("hypotheses"))[0])
+        and "positive floor" in str(as_list(transport.get("hypotheses"))[1])
+        and "epsilon_j(s)/m_j(s)<1" in str(as_list(transport.get("hypotheses"))[2])
+        and transport.get("final_output_definition") == "X(s)=R_6(s) and Xhat(s)=Rhat_6(s)"
+        and "product_j" in str(transport.get("ratio_envelope"))
+        and "abs(log(lambda))" in str(transport.get("log_slope_bound"))
+        and tf.get("lower_ratio") == q(lower) == "9720191/14498297"
+        and tf.get("upper_ratio") == q(upper) == "93579917/62124699"
+        and tf.get("all_stage_outputs_positive") is True
+        and tf.get("all_delta_strictly_below_one") is True
+        and transport.get("six_absolute_errors_alone_sufficient") is False
+        and "tend to zero" in str(transport.get("exponent_transfer_condition")),
+        {"transport": transport, "derived": [q(lower), q(upper)]},
+        "six adjacent floors; exact L/U; lambda<1 covered by abs(log lambda)",
+        "cross_v1_3",
+    )
+
+    phost = as_mapping(primary.get("m2_v1_3_hostile_fixtures"))
+    ihost = as_mapping(independent.get("m2_v1_3_hostile_fixtures"))
+    mhost = as_mapping(manifest.get("m2_v1_3_hostile_fixtures"))
+    audit.check(
+        "cross v1.3 exact 27 hostile names and manifest codes",
+        set(phost) == set(ihost) == set(V13_HOSTILE_CODES)
+        and mhost.get("count") == 27 and as_mapping(mhost.get("cases")) == V13_HOSTILE_CODES,
+        {"primary": list(phost), "independent": list(ihost), "manifest": mhost},
+        V13_HOSTILE_CODES, "cross_v1_3_hostile",
+    )
+    for name, code in V13_HOSTILE_CODES.items():
+        pr = as_mapping(phost.get(name)); ir = as_mapping(ihost.get(name))
+        audit.check(
+            f"cross v1.3 hostile {name}",
+            pr.get("valid") is False and ir.get("valid") is False
+            and pr.get("expected_code_observed") is True
+            and ir.get("expected_code_observed") is True
+            and pr.get("expected_error_code") == ir.get("expected_error_code") == code
+            and code in as_list(pr.get("error_codes")) and code in as_list(ir.get("error_codes")),
+            {"primary": pr, "independent": ir}, {"valid": False, "code": code},
+            "cross_v1_3_hostile",
+        )
+
+    schema = as_mapping(manifest.get("m2_physical_response_successor_minimum_contract_schema"))
+    counts = [
+        len(as_mapping(primary.get("hostile_fixtures"))),
+        len(as_mapping(primary.get("map_only_repair_hostile_fixtures"))),
+        len(as_mapping(primary.get("successor_hostile_fixtures"))),
+        len(as_mapping(primary.get("m2_physical_response_successor_minimum_contract_hostile_fixtures"))),
+        as_mapping(primary.get("m2_physical_response_successor_minimum_contract_fuzz")).get("case_count"),
+    ]
+    audit.check(
+        "cross v1.3 retained 28 7 11 57 48 counts and 4096 path envelope",
+        counts == [28, 7, 11, 57, 48]
+        and schema.get("max_repository_relative_path_length") == 4096,
+        {"counts": counts, "path_envelope": schema.get("max_repository_relative_path_length")},
+        {"counts": [28, 7, 11, 57, 48], "path_envelope": 4096}, "cross_v1_3",
+    )
+    scope = as_mapping(p.get("scope"))
+    audit.check(
+        "cross v1.3 T0 no-overclaim parents open",
+        scope == {
+            "candidate_created": False, "physical_response_closed": False,
+            "round1_freeze_closed": False, "pre_a_complete": False,
+            "sector_a_complete": False, "checkpoint_synthesis": "PROOF-FIRST DEFERRED HISTORY; CURRENT COMBINED CHECKPOINT ISSUED",
+        }
+        and as_mapping(primary.get("scope")) == PRIMARY_SCOPE_EXPECTED
+        and as_mapping(independent.get("scope")) == INDEPENDENT_SCOPE_EXPECTED
+        and all(g in as_list(manifest.get("open_gates")) for g in (
+            PARENT_GATE, PHYSICAL_RESPONSE_GATE, *OPEN_SUCCESSOR_GATES,
+        ))
+        and all(t in str(manifest.get("no_overclaim")) for t in (
+            "T0", "claim_bearing:false", "No candidate", "physical response",
+            "Round-1", "C6", "CP1", "physical Sector A", "Pre-A",
+        )),
+        {"scope": scope, "open": manifest.get("open_gates"), "boundary": manifest.get("no_overclaim")},
+        "all physical and parent gates open", "cross_v1_3",
+    )
+    return {
+        "schema": V13_SUITE_SCHEMA, "closed_children": list(NEW_CLOSED_SUBGATES),
+        "negative_ids": list(NEW_NEGATIVE_IDS),
+        "open_successor_gates": list(OPEN_SUCCESSOR_GATES), "hostile_count": 27,
+        "retained_hostile_counts": counts, "path_length_envelope": 4096,
+        "phason_fixture": ["4/7", "400/7", "404/7", "4/7", "1/100"],
+        "log_slope_envelope": [q(lower), q(upper)],
+        "lambda_below_one_supported_by_absolute_log": True,
+        "claim_bearing": False, "tier": "T0", "parent_gate_closed": False,
+    }
 
 def compare_components(
     primary: dict[str, Any],
@@ -2645,6 +3300,7 @@ def compare_components(
     )
 
     v1_2 = compare_v1_2(primary, independent, manifest, audit)
+    v1_3 = compare_v1_3(primary, independent, manifest, audit)
 
     pboundary = as_mapping(primary.get("real_freeze_verification_boundary"))
     iboundary = as_mapping(independent.get("real_freeze_verification_boundary"))
@@ -2720,6 +3376,7 @@ def compare_components(
         "successor_status": "DESIGN_ONLY",
         "successor_candidate_created": False,
         "v1_2": v1_2,
+        "v1_3": v1_3,
     }
 
 
@@ -2752,13 +3409,10 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
             "manifest",
         )
     audit.check(
-        "manifest v1.2 theorem-ready status exact",
-        isinstance(manifest.get("status"), str)
-        and manifest.get("status", "").startswith("R-168 v1.2 THEOREM-READY")
-        and text_has(manifest.get("status", ""), "M2 PHYSICAL RESPONSE/ERROR")
-        and text_has(manifest.get("status", ""), "PARENT PRE-A GATES OPEN"),
+        "manifest v1.3 proof-first T0 status exact",
+        manifest.get("status") == PROOF_FIRST_MANIFEST_STATUS,
         manifest.get("status"),
-        "R-168 v1.2 THEOREM-READY with linear-probe theorem and physical-response/parent gates open",
+        PROOF_FIRST_MANIFEST_STATUS,
         "manifest",
     )
 
@@ -2964,6 +3618,27 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
         "manifest",
     )
 
+    v13_identity = as_mapping(manifest.get("m2_v1_3_identity_and_scope"))
+    placeholders = as_mapping(manifest.get("new_formal_authority_placeholders"))
+    audit.check(
+        "manifest v1.3 exact identity and formal placeholders",
+        v13_identity.get("schema") == V13_SUITE_SCHEMA
+        and v13_identity.get("result") == f"{RESULT_NUMBER} {RESULT_VERSION}"
+        and v13_identity.get("exploration_id") == EXPLORATION_ID
+        and v13_identity.get("claim_bearing") is False
+        and v13_identity.get("tier") == "T0"
+        and tuple(v13_identity.get("closed_child_ids", ())) == NEW_CLOSED_SUBGATES
+        and tuple(v13_identity.get("negative_ids", ())) == NEW_NEGATIVE_IDS
+        and tuple(v13_identity.get("open_successor_gate_ids", ())) == OPEN_SUCCESSOR_GATES
+        and placeholders.get("exploration_id") == EXPLORATION_ID
+        and tuple(placeholders.get("closed_child_ids", ())) == NEW_CLOSED_SUBGATES
+        and tuple(placeholders.get("negative_ids", ())) == NEW_NEGATIVE_IDS
+        and tuple(placeholders.get("open_gate_ids", ())) == OPEN_SUCCESSOR_GATES
+        and placeholders.get("result") == f"{RESULT_NUMBER} {RESULT_VERSION}",
+        {"identity": v13_identity, "placeholders": placeholders},
+        "five/four/three T0 non-claim-bearing placeholders", "manifest",
+    )
+
     route = as_mapping(manifest.get("route_status"))
     audit.check(
         "manifest route gates exact",
@@ -2971,7 +3646,8 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
         and route.get("external_gate") == OPEN_GATES[2]
         and route.get("internal_gate") == OPEN_GATES[3]
         and route.get("verification_gate") == OPEN_GATES[4]
-        and route.get("m2_successor_gate") == PHYSICAL_RESPONSE_GATE,
+        and route.get("m2_successor_gate") == PHYSICAL_RESPONSE_GATE
+        and tuple(route.get("open_successor_gates", ())) == OPEN_SUCCESSOR_GATES,
         route,
         {
             "parent": OPEN_GATES[0],
@@ -2979,6 +3655,7 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
             "internal": OPEN_GATES[3],
             "verification": OPEN_GATES[4],
             "m2_successor": PHYSICAL_RESPONSE_GATE,
+            "open_successors": OPEN_SUCCESSOR_GATES,
         },
         "manifest",
     )
@@ -2999,14 +3676,13 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
         )
     require_tokens(
         manifest.get("no_overclaim", ""),
-        "manifest v1.2 no-overclaim",
+        "manifest v1.3 no-overclaim",
         (
-            "does not create PA-M2-CI8-RS-DISPERSION-MAP-v1",
-            "physical response",
-            "error-controlled prediction",
-            "external gate",
-            "physical Sector A",
-            "Pre-A",
+            "T0", "claim_bearing:false", "real-line", "spatial phasons",
+            "one-Q", "not an exact Euler state", "contact nonidentifiability",
+            "analytic theorem", "six-stage theorem", "No candidate",
+            "physical response", "Round-1", "C6", "CP1",
+            "physical Sector A", "Pre-A",
         ),
         audit,
         core=True,
@@ -3072,7 +3748,7 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     future_metadata = as_mapping(manifest.get(NEXT_CHECKPOINT_FIELD))
     future = future_checkpoint_pair_diagnostics(future_metadata)
     audit.check(
-        "future R-168 v1.2 / R-167 v2.1 checkpoint fields cross-bound",
+        "historical R-168 v1.2 / R-167 v2.1 checkpoint fields cross-bound",
         future["deferred_pair_valid"]
         or as_mapping(future.get("issued")).get("shared_manifest_exact") is True,
         future,
@@ -3080,7 +3756,7 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
         "pdf_checkpoint",
     )
     audit.pending(
-        "combined R-167 v2.1 / R-168 v1.2 checkpoint lifecycle",
+        "historical combined R-167 v2.1 / R-168 v1.2 checkpoint lifecycle",
         future["valid"],
         future,
         {
@@ -3095,15 +3771,33 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
         },
         "pdf_checkpoint",
     )
+    v13_checkpoint_metadata = as_mapping(manifest.get("v1_3_checkpoint_synthesis"))
+    v13_checkpoint = future_v1_3_checkpoint_diagnostics(v13_checkpoint_metadata)
+    audit.check(
+        "future R-168 v1.3 / R-167 v2.2 checkpoint fields cross-bound",
+        v13_checkpoint["deferred_pair_valid"]
+        or as_mapping(v13_checkpoint.get("issued")).get("shared_manifest_exact") is True,
+        v13_checkpoint,
+        "one exact deferred pair or identical issued shared metadata",
+        "pdf_checkpoint",
+    )
+    audit.pending(
+        "combined R-167 v2.2 / R-168 v1.3 checkpoint lifecycle",
+        v13_checkpoint["valid"],
+        v13_checkpoint,
+        "one issued shared source/PDF pair after formal, generated, release and render gates",
+        "pdf_checkpoint",
+    )
     return {
         "historical_metadata": historical_metadata,
         "historical_valid": historical["valid"],
         "v2_historical_metadata": v2_metadata,
         "v2_historical_valid": v2_historical["valid"],
-        "future_metadata": future_metadata,
-        "future_cross_bound": future["deferred_pair_valid"]
-        or as_mapping(future.get("issued")).get("shared_manifest_exact") is True,
-        "future_valid": future["valid"],
+        "v3_historical_metadata": future_metadata,
+        "v3_historical_valid": future["valid"],
+        "future_metadata": v13_checkpoint_metadata,
+        "future_cross_bound": v13_checkpoint["deferred_pair_valid"],
+        "future_valid": v13_checkpoint["valid"],
     }
 
 
@@ -3213,6 +3907,21 @@ def validate_certificate(audit: Audit) -> str | None:
         core=True,
         group="certificate",
     )
+    require_tokens(
+        text,
+        "certificate v1.3 theorem hostile and no-overclaim contract",
+        (
+            EXPLORATION_ID, RESULT_VERSION, "T0", "claim_bearing: false",
+            *NEW_CLOSED_SUBGATES, *NEW_NEGATIVE_IDS, *OPEN_SUCCESSOR_GATES,
+            "GL(1", "H^2(T^3;R)", "3k harmonic", "fixed-amplitude",
+            "400/7", "404/7", "1/100", "Upsilon -> Upsilon+D",
+            "R(0)=0", "x^2", "x^3", "R_0(s),...,R_6(s)",
+            "abs(log(lambda))", "4096", "v1_3_checkpoint_synthesis",
+            "DEFERRED", "physical Sector A", "Pre-A",
+        ),
+        audit, core=True, group="certificate",
+    )
+
     audit.check(
         "certificate exact residual hard-row cells",
         all(
@@ -3287,7 +3996,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
     )
     if not result_ready:
         audit.pending(
-            "R-168 v1.2 result authority",
+            "R-168 v1.3 result authority",
             False,
             None if result_section is None else result_section[:900],
             f"{RESULT_NUMBER} {RESULT_VERSION} / {RESULT_ID} / {EXPLORATION_ID}",
@@ -3295,22 +4004,22 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         )
         if result_section is not None:
             audit.check(
-                "R-168 v1.1 authority retained while v1.2 is staged",
-                text_has(result_section, "R-168 v1.1")
-                and text_has(result_section, V1_1_EXPLORATION_ID),
+                "R-168 v1.2 authority retained while v1.3 is staged",
+                text_has(result_section, "R-168 v1.2")
+                and text_has(result_section, V1_2_EXPLORATION_ID),
                 result_section[:900],
-                "historical v1.1/EXP-000810 linkage",
+                "historical v1.2/EXP-000812 linkage",
                 "formal_history",
             )
     else:
         require_tokens(
             result_section,
-            "R-168 v1.2 result authority",
+            "R-168 v1.3 result authority",
             (
                 RESULT_NUMBER, RESULT_VERSION, RESULT_ID, EXPLORATION_ID,
                 *PRIOR_EXPLORATION_IDS, "T0", *NEGATIVE_IDS,
-                *NEW_CLOSED_SUBGATES, PHYSICAL_RESPONSE_GATE,
-                "linear", "second-order", "minimum", "schema", "actual",
+                *NEW_CLOSED_SUBGATES, *OPEN_SUCCESSOR_GATES, PHYSICAL_RESPONSE_GATE,
+                "real", "scalar", "one-Q", "tensor", "analytic", "six-stage",
                 "physical Sector A", "Pre-A",
             ),
             audit,
@@ -3326,10 +4035,14 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
             V1_1_NEGATIVE_IDS[0], V1_1_EXPLORATION_ID, RESULT_NUMBER,
             "map-only", "substantively new", "not a no-go",
         ),
-        NEW_NEGATIVE_IDS[0]: (
-            NEW_NEGATIVE_IDS[0], EXPLORATION_ID, RESULT_NUMBER,
+        V1_2_NEGATIVE_IDS[0]: (
+            V1_2_NEGATIVE_IDS[0], V1_2_EXPLORATION_ID, RESULT_NUMBER,
             "linear", "quadratic", "contact", "physical", "not",
         ),
+        NEW_NEGATIVE_IDS[0]: (NEW_NEGATIVE_IDS[0], EXPLORATION_ID, RESULT_NUMBER, "real", "scalar", "U1", "winding"),
+        NEW_NEGATIVE_IDS[1]: (NEW_NEGATIVE_IDS[1], EXPLORATION_ID, RESULT_NUMBER, "one-Q", "phason", "physical"),
+        NEW_NEGATIVE_IDS[2]: (NEW_NEGATIVE_IDS[2], EXPLORATION_ID, RESULT_NUMBER, "invertibility", "unit", "x^2", "x^3"),
+        NEW_NEGATIVE_IDS[3]: (NEW_NEGATIVE_IDS[3], EXPLORATION_ID, RESULT_NUMBER, "six", "absolute", "relative", "log"),
     }
     if negatives is not None:
         for negative, tokens in negative_tokens.items():
@@ -3415,12 +4128,25 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
             "formal_history",
         )
 
+    v1_2 = one_record(V1_2_EXPLORATION_ID, "formal_history")
+    if v1_2 is not None:
+        refs = as_mapping(v1_2.get("formal_refs"))
+        audit.check(
+            "EXP-000812 retained exact v1.2 identity sets",
+            v1_2.get("task_id") == TASK_ID
+            and v1_2.get("claim_ids") == list(CLAIM_IDS)
+            and refs.get("results") == [RESULT_NUMBER]
+            and refs.get("negatives") == list(V1_2_NEGATIVE_IDS)
+            and tuple(v1_2.get("gate_ids", ())) == V1_2_EXPLORATION_GATES,
+            v1_2, "historical v1.2 exact identity order", "formal_history",
+        )
+
     current = one_record(EXPLORATION_ID, "formal")
     if current is not None:
         refs = as_mapping(current.get("formal_refs"))
-        required_gates = {*NEW_CLOSED_SUBGATES, PARENT_GATE, PHYSICAL_RESPONSE_GATE}
+        required_gates = {*NEW_CLOSED_SUBGATES, *OPEN_SUCCESSOR_GATES, PARENT_GATE, PHYSICAL_RESPONSE_GATE}
         audit.check(
-            "EXP-000812 exact additive authority bindings",
+            "EXP-000814 exact additive authority bindings",
             current.get("task_id") == TASK_ID
             and current.get("claim_ids") == list(CLAIM_IDS)
             and refs.get("results") == [RESULT_NUMBER]
@@ -3435,10 +4161,10 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         )
         require_tokens(
             json.dumps(current, sort_keys=True),
-            "EXP-000812 proof and boundary",
+            "EXP-000814 proof and boundary",
             (
-                "H_d(t,J)", "linear", "quadratic contact", "6/7",
-                "minimum successor", "schema", "hostile", "deterministic fuzz",
+                "real", "scalar", "U1", "one-Q", "phason", "tensor",
+                "analytic", "six-stage", "x^2", "x^3", "hostile",
                 "physical response", "candidate", "external freeze",
                 "physical Sector A", "Pre-A",
             ),
@@ -3470,6 +4196,12 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
             V1_1_NEGATIVE_IDS,
             {repo_path(PRIMARY), repo_path(INDEPENDENT), repo_path(SCRIPT)},
             "formal_history",
+        ),        (
+            "R-168 v1.2 theorem changelog retained",
+            {CLAIM_IDS[0], V1_2_EXPLORATION_ID, RESULT_NUMBER},
+            V1_2_NEGATIVE_IDS,
+            {repo_path(PRIMARY), repo_path(INDEPENDENT), repo_path(SCRIPT)},
+            "formal_history",
         ),
     )
     historical_event_counts: dict[str, int] = {}
@@ -3488,38 +4220,45 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
                 group,
             )
 
-    v1_2_events = [
+    v1_3_events = [
         event
         for event in changelog or []
         if event_claim_set(event) == {CLAIM_IDS[0], EXPLORATION_ID, RESULT_NUMBER}
     ]
-    if not v1_2_events:
-        audit.pending("R-168 v1.2 changelog", False, 0, 1, "formal")
+    if not v1_3_events:
+        audit.pending("R-168 v1.3 changelog", False, 0, 1, "formal")
     else:
         audit.check(
-            "R-168 v1.2 changelog unique",
-            len(v1_2_events) == 1,
-            len(v1_2_events),
+            "R-168 v1.3 changelog unique",
+            len(v1_3_events) == 1,
+            len(v1_3_events),
             1,
             "formal",
         )
-    if len(v1_2_events) == 1:
-        event = v1_2_events[0]
+    if len(v1_3_events) == 1:
+        event = v1_3_events[0]
+        event_negatives = as_list(event.get("neg_results"))
+        event_scripts = as_list(event.get("scripts"))
+        expected_event_scripts = {repo_path(PRIMARY), repo_path(INDEPENDENT)}
         audit.check(
-            "R-168 v1.2 changelog authority sets",
-            event.get("neg_results") == list(NEW_NEGATIVE_IDS)
-            and {repo_path(PRIMARY), repo_path(INDEPENDENT), repo_path(SCRIPT)}
-            <= set(as_list(event.get("scripts"))),
-            event,
-            {"negative": NEW_NEGATIVE_IDS, "scripts": [repo_path(PRIMARY), repo_path(INDEPENDENT), repo_path(SCRIPT)]},
+            "R-168 v1.3 changelog theorem authority sets",
+            len(event_negatives) == len(NEW_NEGATIVE_IDS)
+            and set(event_negatives) == set(NEW_NEGATIVE_IDS)
+            and set(event_scripts) == expected_event_scripts,
+            {"negatives": event_negatives, "scripts": event_scripts},
+            {
+                "negatives": sorted(NEW_NEGATIVE_IDS),
+                "theorem_scripts": sorted(expected_event_scripts),
+            },
             "formal",
         )
         require_tokens(
             event.get("raw", ""),
-            "R-168 v1.2 changelog boundary",
+            "R-168 v1.3 changelog boundary",
             (
-                "linear", "second response", "quadratic", "minimum", "schema",
-                "no candidate", "physical response", "Sector A", "Pre-A",
+                "raw real-line", "internal-U1", "one-Q", "tensor", "analytic",
+                "six-stage", "creates no compact action", "physical response",
+                "physical Sector A", "Pre-A remain open",
             ),
             audit,
             core=True,
@@ -3528,11 +4267,12 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
     return {
         "exploration_count": len(explorations or []),
         "changelog_count": len(changelog or []),
-        "v1_2_exploration_matches": len(records_by_id.get(EXPLORATION_ID, [])),
+        "v1_3_exploration_matches": len(records_by_id.get(EXPLORATION_ID, [])),
+        "v1_2_exploration_matches": len(records_by_id.get(V1_2_EXPLORATION_ID, [])),
         "v1_1_exploration_matches": len(records_by_id.get(V1_1_EXPLORATION_ID, [])),
         "legacy_exploration_matches": len(records_by_id.get(V1_0_EXPLORATION_ID, [])),
         "hardening_exploration_matches": len(records_by_id.get(HARDENING_EXPLORATION_ID, [])),
-        "v1_2_event_matches": len(v1_2_events),
+        "v1_3_event_matches": len(v1_3_events),
         "historical_event_counts": historical_event_counts,
     }
 
@@ -3725,7 +4465,7 @@ def validate_generated(formal: dict[str, Any], audit: Audit) -> dict[str, Any]:
                 "expected_total": formal.get("changelog_count"),
                 "recent": len(recent),
             },
-            "current total and recent R-168 v1.2 theorem event",
+            "current total and recent R-168 v1.3 theorem event",
             "generated",
         )
 
@@ -3848,7 +4588,7 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
 
     components: dict[str, dict[str, Any]] = {}
     sentinels: dict[str, dict[str, Any]] = {}
-    with tempfile.TemporaryDirectory(prefix="tect-exp812-integrated-") as directory:
+    with tempfile.TemporaryDirectory(prefix="tect-exp814-integrated-") as directory:
         temporary = Path(directory)
         for label, component in (("primary", PRIMARY), ("independent", INDEPENDENT)):
             result = run_fresh_pair(component, temporary, audit, label)
@@ -3860,21 +4600,24 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
         INDEPENDENT_STORED, components.get("independent"), audit, "independent"
     )
     if "primary" in components:
-        validate_fresh_sentinel(sentinels["primary"], "primary", PRIMARY_ASSERTION_COUNT, audit)
+        primary_count = expected_component_assertion_count(components["primary"], "primary")
+        validate_fresh_sentinel(sentinels["primary"], "primary", primary_count, audit)
         validate_component(
-            components["primary"], "primary", PRIMARY_SCHEMA, PRIMARY_ASSERTION_COUNT, audit
+            components["primary"], "primary", PRIMARY_SCHEMA, primary_count, audit
         )
         validate_source_hashes(
             components["primary"], (PRIMARY, MANIFEST, CERTIFICATE), audit, "primary"
         )
     if "independent" in components:
-        validate_fresh_sentinel(sentinels["independent"], "independent", INDEPENDENT_ASSERTION_COUNT, audit)
+        independent_count = expected_component_assertion_count(
+            components["independent"], "independent"
+        )
+        validate_fresh_sentinel(
+            sentinels["independent"], "independent", independent_count, audit
+        )
         validate_component(
-            components["independent"],
-            "independent",
-            INDEPENDENT_SCHEMA,
-            INDEPENDENT_ASSERTION_COUNT,
-            audit,
+            components["independent"], "independent", INDEPENDENT_SCHEMA,
+            independent_count, audit,
         )
         validate_source_hashes(
             components["independent"],
@@ -3971,20 +4714,22 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "dedicated_R168_source_required": False,
             "dedicated_R168_PDF_required": False,
             "dedicated_R168_PDF_created_by_verifier": False,
-            "per_lemma_or_intermediate_v1_2_PDF_issued": False,
+            "per_lemma_or_intermediate_v1_3_PDF_issued": False,
             "historical_v1_9_v1_0_checkpoint_strictly_validated": checkpoint_state.get(
                 "historical_valid", False
             ),
-            "later_v2_1_v1_2_checkpoint_deferred_until_layers_pass": not checkpoint_state.get(
+            "later_v2_2_v1_3_checkpoint_deferred_until_layers_pass": not checkpoint_state.get(
                 "future_valid", False
             ),
-            "later_v2_1_v1_2_checkpoint_strictly_validated": checkpoint_state.get(
+            "later_v2_2_v1_3_checkpoint_strictly_validated": checkpoint_state.get(
                 "future_valid", False
             ),
             "shared_with_R167_manifest": True,
             "historical_manifest_metadata": checkpoint_state.get("historical_metadata", {}),
             "historical_v2_v1_1_checkpoint_strictly_validated": checkpoint_state.get("v2_historical_valid", False),
             "historical_v2_v1_1_manifest_metadata": checkpoint_state.get("v2_historical_metadata", {}),
+            "historical_v2_1_v1_2_checkpoint_strictly_validated": checkpoint_state.get("v3_historical_valid", False),
+            "historical_v2_1_v1_2_manifest_metadata": checkpoint_state.get("v3_historical_metadata", {}),
             "future_cross_bound": checkpoint_state.get("future_cross_bound", False),
             "future_manifest_metadata": checkpoint_state.get("future_metadata", {}),
         },
@@ -3995,6 +4740,11 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "finite_torus_mathematical_fingerprint_closed": True,
             "linear_probe_second_order_response_nonidentifiability_closed": True,
             "minimum_physical_response_contract_schema_closed": True,
+            "real_scalar_internal_u1_triviality_and_no_intrinsic_winding_closed": True,
+            "one_q_auxiliary_phason_curvature_and_finite_torus_secant_closed": True,
+            "tensor_contact_shift_nonidentifiability_closed": True,
+            "analytic_integer_exponent_transport_closed": True,
+            "six_stage_relative_log_slope_error_transport_closed": True,
             "actual_freeze_record_created": False,
             "git_tag_created": False,
             "external_target_commitment_present": False,

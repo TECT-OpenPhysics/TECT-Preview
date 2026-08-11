@@ -1018,6 +1018,22 @@ only for one local edge. The aligned--misaligned cross term is generally
 nonzero; no many-edge block diagonalization, QPS transfer, thermodynamic phase
 selection or oscillator GNS gap follows. All three R-167 parents remain OPEN.
 
+EXP-000813 advances R-167 additively to v2.2. In the registered fixed-beta
+finite-periodic compact-source Q3 family, a ninth-order virial identity with
+finite spectral cutoffs proves the local fifth Gibbs moment, and quartic Shubin
+graph induction proves the `|q|^10 k_h^(-5/2)` embedding. Direct shear
+conjugation and fifth-power weight allocation prove the fifth weighted graph
+for tested nearest-neighbor subsets on finite subgraphs or periodic quotients
+of `Z^3`, or an explicitly uniform cubic-growth family. Bounded degree six
+alone is insufficient. Together these inputs give
+`M20<=2d5^2 exp(C5T)S_mu^5m5` and close the actual hard corridor
+`2916c^2M20R^(-2/5)` at `L=R^(2/5)` only in the registered periodic scope.
+The new connected rank-two oscillator/QPS successor is OPEN: an exact local
+rank-two edge fixture has global one-particle Hamiltonian `L_G/2` and torus gap
+tending to zero, so local doublet plus edge gap does not automatically imply a
+lattice gap. Common alpha, connected QPS transfer, oscillator GNS gap and every
+physical parent remain OPEN.
+
 EXP-000807--808 / R-168 v1.0 separately freeze and harden the prospective Round-1 validation
 protocol and audits current readiness. It closes only the common estimand/map
 schema, provenance-order protocol, anti-leakage schema validator and exact
@@ -1067,19 +1083,31 @@ state/reference, control or response map, error-controlled prediction or
 external commitment. `PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND` and
 the Round-1 parent remain OPEN.
 
+EXP-000814 advances R-168 additively to v1.3 and closes five scoped T0,
+claim-nonbearing mathematical children: trivial continuous pointwise real-line
+internal `U(1)` and no intrinsic raw-field winding; the one-Q auxiliary
+curvature and fixed-torus fixed-amplitude secant; tensor contact-shift
+nonidentifiability; analytic integer leading-order exponent transport; and a
+six-stage adjacent-ratio relative log-slope bound. The exact fixtures derive
+the secant ratio `1/100`, retain the cubic third harmonic, test `x^2/x^3`, and
+require positive ratio floors with relative errors below one and vanishing at
+both scales. These results create no compact action, winding law, ordered
+physical state, physical response limit or six-term physical estimand budget.
+The three precise M2 successor gates, physical-response parent and Round-1
+parent remain OPEN.
+
 The primary
 `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` gate therefore remains
 open, together with the common-input ledger, independent opaque custodian
 commitment, admitted microscopic observable map/nonempty prediction, and
 cryptographic remote-verification gates. No target, freeze record, tag,
-prediction, score or candidate selection is created. The historical
-EXP-000806--808 checkpoint was issued only after strict validation as the
-single combined R-167 v1.9 / R-168 v1.0 source and 15-page v0.8 PDF; it is not
-evidence for v2.0/v1.1. Per the PDF-efficiency protocol, EXP-000809 and
-EXP-000810 issue no per-lemma or intermediate PDF during proof-first
-development. One later combined R-167 v2.0 / R-168 v1.1 synthesis is issued
-only after the proof, formal, independent and integrated layers all pass.
-Physical Sector A and Pre-A remain open.
+prediction, score or candidate selection is created. The combined R-167
+v2.1 / R-168 v1.2 synthesis is the latest issued checkpoint. Per the PDF-
+efficiency protocol, EXP-000813 and EXP-000814 issue no per-lemma or
+intermediate PDF at the formal-authority stage; one combined v2.2/v1.3
+synthesis is deferred until proof, formal, independent, integrated, generated-
+surface, release and render-review gates all pass. Physical Sector A and Pre-A
+remain open.
 
 The fixed-beta envelope is not yet the thermodynamic Hamiltonian `alpha`.
 Distinct algebraic ground states now exist on the separate universal

@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**600 accepted events** · latest 25 shown below · machine locator: `index.json`
+**605 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,11 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-11 | `20260811-final3-r-167-v2-2-and-r-168-v1-3-issuance-pins` — [FINAL3 R-167 v2.2 and R-168 v1.3 issuance pins supersede event 604] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000813, EXP-000814, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-final3-r-167-v2-2-and-r-168-v1-3-issuance-pins) |
+| 2026-08-11 | `20260811-r-167-v2-2-and-r-168-v1-3-combined-checkpoint-f` — [R-167 v2.2 and R-168 v1.3 combined checkpoint FINAL2 pin correction after lifecycle-aware firewall hardening] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000813, EXP-000814, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-2-and-r-168-v1-3-combined-checkpoint-f) |
+| 2026-08-11 | `20260811-r-167-v2-2-and-r-168-v1-3-combined-gate-level-s` — [R-167 v2.2 and R-168 v1.3 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000813, EXP-000814, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-2-and-r-168-v1-3-combined-gate-level-s) |
+| 2026-08-11 | `20260811-r-168-v1-3-closes-five-scoped-m2-mathematical-c` — [R-168 v1.3 closes five scoped M2 mathematical children and preserves every physical parent] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000814, R-168 | [bounded page](pages/000569-000618.md#20260811-r-168-v1-3-closes-five-scoped-m2-mathematical-c) |
+| 2026-08-11 | `20260811-r-167-v2-2-closes-registered-periodic-fifth-his` — [R-167 v2.2 closes registered-periodic fifth-history inputs and isolates the connected rank-two QPS successor] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000813, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-2-closes-registered-periodic-fifth-his) |
 | 2026-08-11 | `20260811-r-167-theorem-event-selector-repair-finalizes-t` — [R-167 theorem-event selector repair finalizes the v2.1 and v1.2 checkpoint hashes] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, EXP-000812, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-theorem-event-selector-repair-finalizes-t) |
 | 2026-08-11 | `20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f` — [R-167 v2.1 and R-168 v1.2 combined checkpoint final hash correction after integrated normalization] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, EXP-000812, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f) |
 | 2026-08-11 | `20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s` — [R-167 v2.1 and R-168 v1.2 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, EXP-000812, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s) |
@@ -37,11 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-11 | `20260811-r-167-v1-7-separates-the-finite-region-local-st` — [R-167 v1.7 separates the finite-region local-strict carrier, Gibbs entropy tail, and broken-sector gap gate] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000804, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v1-7-separates-the-finite-region-local-st) |
 | 2026-08-10 | `20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte` — [R-167 v1.6 gate-level synthesis PDF issued after strict proof validation] - 2026-08-10 | C6-SPACETIME-SIGNATURE, R-167 | [bounded page](pages/000569-000618.md#20260810-r-167-v1-6-gate-level-synthesis-pdf-issued-afte) |
 | 2026-08-10 | `20260810-r-167-v1-6-closes-selected-raw-word-moments-and` — [R-167 v1.6 closes selected raw-word moments and a universal orbit-smear ground carrier] - 2026-08-10 | C6-SPACETIME-SIGNATURE, EXP-000803, R-167 | [bounded page](pages/000569-000618.md#20260810-r-167-v1-6-closes-selected-raw-word-moments-and) |
-| 2026-08-10 | `20260810-r-167-v1-5-identifies-the-selected-hamiltonian` — [R-167 v1.5 identifies the selected Hamiltonian tangent nets with the fixed-beta OS mixture] - 2026-08-10 | C6-SPACETIME-SIGNATURE, EXP-000801, R-167 | [bounded page](pages/000569-000618.md#20260810-r-167-v1-5-identifies-the-selected-hamiltonian) |
-| 2026-08-10 | `20260810-r-167-v1-4-closes-the-fixed-beta-canonical-os-m` — [R-167 v1.4 closes the fixed-beta canonical OS-mixture common normal KMS envelope] - 2026-08-10 | C6-SPACETIME-SIGNATURE, EXP-000800, R-167 | [bounded page](pages/000569-000618.md#20260810-r-167-v1-4-closes-the-fixed-beta-canonical-os-m) |
-| 2026-08-10 | `20260810-advance-r-167-to-v1-3-and-reject-the-fixed-crit` — [Advance R-167 to v1.3 and reject the fixed critical Leibniz onsite route] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-advance-r-167-to-v1-3-and-reject-the-fixed-crit) |
-| 2026-08-10 | `20260810-exp-000798-r-167-v1-2-modular-cutoff-and-unitar` — [EXP-000798 / R-167 v1.2: modular cutoff and unitary resummation route split] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-exp-000798-r-167-v1-2-modular-cutoff-and-unitar) |
-| 2026-08-10 | `20260810-exp-000796-r-167-v1-1-weighted-cubic-graph-and` — [EXP-000796 / R-167 v1.1: weighted cubic graph and product-locality split] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-exp-000796-r-167-v1-1-weighted-cubic-graph-and) |
 
 ## Post-cutover pages
 
@@ -49,4 +49,4 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 569–600 | 32 | [000569-000618.md](pages/000569-000618.md) |
+| 569–605 | 37 | [000569-000618.md](pages/000569-000618.md) |

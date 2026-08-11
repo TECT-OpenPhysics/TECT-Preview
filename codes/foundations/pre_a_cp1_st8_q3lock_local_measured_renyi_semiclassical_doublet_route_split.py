@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
-"""Primary exact verifier for the staged R-167 v2.1 route split.
+"""Primary exact verifier for the staged R-167 v2.2 route split.
 
-Fixtures A--F preserve every v2.0 exact check.  Fixture G derives the
-twentieth-moment fixed-edge corridor, the conditional fifth graph-transport
-constant, and two exact automatic-inference no-gos.  Fixture H derives the
-corrected full-oscillator local-edge parity cluster, relative-form alternative,
-and parity-preserving spectral Ritz removal.  The new theorems remain local or
-conditional: neither supplies the missing Q3 fifth-moment/graph inputs,
-n-to-infinity common alpha, many-edge oscillator QPS transfer, or an
-oscillator-lattice GNS gap.
+Fixtures A--H preserve every v2.1 exact check and historical boundary.
+Fixture I checks the ninth-order virial sign/factor, terminating subset-shear
+conjugation, fifth-word order/count budget, registered-periodic twentieth
+history corridor, and the rank-two automatic-gap counterfixture.  The actual
+fifth-moment/history conclusion is confined to the registered fixed-beta
+periodic compact-source family; n-to-infinity common alpha, connected rank-two
+oscillator/QPS transfer, and the broken-sector GNS gap remain open.
 
-Use ``--staged --no-store`` while EXP-000811, R-167 v2.1, the two negative
-rows, and four new gate rows are being assembled.  Exact fixtures still run
-and the missing formal authorities produce the honest verdict ``INCOMPLETE``.
+Use ``--staged --no-store`` while EXP-000813, R-167 v2.2, the new negative row
+and three new or changed gate rows are assembled; formal misses then produce
+the honest verdict ``INCOMPLETE``.
 """
 
 from __future__ import annotations
@@ -30,7 +29,7 @@ from typing import Any, Iterable
 import sympy as sp
 
 
-__version__ = "2.1.0"
+__version__ = "2.2.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = "pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split"
@@ -48,18 +47,18 @@ GATE_REGISTRY = REPO / "claims/GATES.md"
 
 EXPECTED_TASK = "T-054"
 EXPECTED_CLAIM_IDS = ("C6-SPACETIME-SIGNATURE",)
-EXPECTED_EXPLORATION = "EXP-000811"
+EXPECTED_EXPLORATION = "EXP-000813"
 EXPECTED_RESULT_NUMBER = "R-167"
-EXPECTED_RESULT_VERSION = "v2.1"
+EXPECTED_RESULT_VERSION = "v2.2"
 EXPECTED_RESULT_ID = (
     "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT"
 )
 EXPECTED_CANDIDATE_ID = (
     "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-SEMICLASSICAL-DOUBLET-ROUTE-SPLIT-v0"
 )
-EXPECTED_CLOSED_SUBGATES = ('PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY', 'PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION', 'PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION', 'PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION', 'PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR', 'PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP', 'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL')
-EXPECTED_OPEN_GATES = ('PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA', 'PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY', 'PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS', 'PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE', 'PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING', 'PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION')
-NEGATIVE_IDS = ('NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT')
+EXPECTED_CLOSED_SUBGATES = ('PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY', 'PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION', 'PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION', 'PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION', 'PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR', 'PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP', 'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING', 'PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION', 'PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR')
+EXPECTED_OPEN_GATES = ('PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA', 'PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY', 'PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS', 'PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE', 'PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY')
+NEGATIVE_IDS = ('NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP')
 SEMICLASSICAL_SOURCES = (
     "https://www.numdam.org/item/AIHPA_1983__38_3_295_0/",
     "https://www.numdam.org/item/AIHPA_1984__40_2_224_0/",
@@ -2180,6 +2179,354 @@ def fixture_h_full_oscillator_edge_cluster(audit: Audit) -> dict[str, Any]:
     }
 
 
+
+def fixture_i_actual_q3_fifth_shear_and_rank_two(audit: Audit) -> dict[str, Any]:
+    """Exact v2.2 algebra, word budget, and local-to-global gap counterfixture."""
+
+    # Exact differential-operator check of the ninth-order virial identity.
+    x = sp.symbols("x", real=True)
+    hbar = sp.Integer(2)
+    chi = sp.Integer(3)
+    potential = x**4 / 4 + 2 * x**3 / 3 + 3 * x**2 / 2 + 5 * x
+    force = sp.diff(potential, x)
+    test_polynomial = x**14 + 2 * x**11 - 3 * x**7 + 5 * x**3 + 1
+
+    def p_apply(expression: sp.Expr, order: int = 1) -> sp.Expr:
+        result = expression
+        for _ in range(order):
+            result = -sp.I * hbar * sp.diff(result, x)
+        return sp.expand(result)
+
+    def h_apply(expression: sp.Expr) -> sp.Expr:
+        return sp.expand(p_apply(expression, 2) / (2 * chi) + potential * expression)
+
+    def a_apply(expression: sp.Expr) -> sp.Expr:
+        return sp.expand((x * p_apply(expression, 9) + p_apply(x * expression, 9)) / 2)
+
+    lhs = sp.expand(sp.I * (h_apply(a_apply(test_polynomial)) - a_apply(h_apply(test_polynomial))) / hbar)
+    force_sum = sp.Integer(0)
+    for j in range(9):
+        force_sum += x * p_apply(force * p_apply(test_polynomial, 8 - j), j)
+        force_sum += p_apply(force * p_apply(x * test_polynomial, 8 - j), j)
+    rhs = sp.expand(p_apply(test_polynomial, 10) / chi - force_sum / 2)
+    audit.check(
+        "v2.2 exact ninth-order virial sign and factor",
+        sp.expand(lhs - rhs) == 0,
+        sp.expand(lhs - rhs),
+        0,
+        "I_static_virial",
+    )
+    audit.check(
+        "v2.2 critical force energy order",
+        sp.Rational(1, 4) + 8 * sp.Rational(1, 2) + 3 * sp.Rational(1, 4) == 5,
+        (9, sp.Rational(1, 4) + 4 + sp.Rational(3, 4)),
+        (9, 5),
+        "I_static_graph",
+    )
+    graph_levels = tuple((m, 2 * m, 4 * m) for m in range(6))
+    audit.check(
+        "v2.2 quartic Shubin top degrees",
+        graph_levels[-1] == (5, 10, 20),
+        graph_levels[-1],
+        (5, 10, 20),
+        "I_static_graph",
+    )
+
+    # Exact terminating direct-shear conjugation for one commuting component.
+    delta, coupling, p_value, q_neighbour = sp.symbols(
+        "delta c p Q", real=True
+    )
+    transformed_kinetic = sp.expand(
+        (p_value + coupling * delta * q_neighbour) ** 2 / (2 * chi)
+    )
+    baseline_kinetic = p_value**2 / (2 * chi)
+    shear_increment = sp.expand(transformed_kinetic - baseline_kinetic)
+    expected_increment = sp.expand(
+        delta * coupling * p_value * q_neighbour / chi
+        + delta**2 * coupling**2 * q_neighbour**2 / (2 * chi)
+    )
+    audit.check(
+        "v2.2 exact direct subset-shear coefficients",
+        sp.expand(shear_increment - expected_increment) == 0,
+        shear_increment,
+        expected_increment,
+        "I_subset_shear",
+    )
+
+    choices = (0, 1, 2)  # K, delta R1, delta^2 R2
+    delta_degree = {0: 0, 1: 1, 2: 2}
+    energy_order = {
+        0: sp.Integer(1),
+        1: sp.Rational(3, 4),
+        2: sp.Rational(1, 2),
+    }
+    nonbaseline: list[tuple[tuple[int, ...], int, sp.Rational]] = []
+    for word in product(choices, repeat=5):
+        if all(letter == 0 for letter in word):
+            continue
+        nonbaseline.append(
+            (
+                word,
+                sum(delta_degree[letter] for letter in word),
+                sum((energy_order[letter] for letter in word), sp.Integer(0)),
+            )
+        )
+    degree_counts = {
+        degree: sum(row[1] == degree for row in nonbaseline)
+        for degree in range(1, 11)
+    }
+    audit.check(
+        "v2.2 every fifth word has delta and order at most five",
+        len(nonbaseline) == 3**5 - 1
+        and all(degree >= 1 and order <= 5 for _, degree, order in nonbaseline)
+        and sum(degree_counts.values()) == len(nonbaseline),
+        {
+            "words": len(nonbaseline),
+            "delta_range": (min(degree_counts), max(degree_counts)),
+            "max_order": max(row[2] for row in nonbaseline),
+        },
+        {"words": 242, "delta_range": (1, 10), "max_order": 5},
+        "I_fifth_words",
+    )
+    t_value = sp.Integer(2)
+    direct_word_majorant = sum(
+        multiplicity * t_value ** (degree - 1)
+        for degree, multiplicity in degree_counts.items()
+    )
+    polynomial_difference_at_t = sp.expand((1 + t_value + t_value**2) ** 5 - 1)
+    audit.check(
+        "v2.2 load-bearing linear step majorant",
+        t_value * direct_word_majorant == polynomial_difference_at_t,
+        (direct_word_majorant, polynomial_difference_at_t),
+        "difference=abs(delta)*C5(T) with T=2",
+        "I_fifth_words",
+    )
+    # Exact neighbor-weight allocations at the hostile fixture exp(-mu/4)=1/2.
+    residual_ratio = sp.Rational(1, 2)
+    mu_symbol, f_x = sp.symbols("mu f_x", positive=True)
+    worst_f_y = sp.exp(-mu_symbol) * f_x
+    worst_f_z = sp.exp(-mu_symbol) * f_x
+    r1_leftover = sp.simplify(
+        f_x / (f_x ** sp.Rational(1, 2) * worst_f_y ** sp.Rational(1, 4))
+    )
+    r2_leftover = sp.simplify(
+        f_x
+        / (
+            worst_f_y ** sp.Rational(1, 4)
+            * worst_f_z ** sp.Rational(1, 4)
+        )
+    )
+    residual_weight_bound = sp.simplify(
+        2 * ((1 + residual_ratio) / (1 - residual_ratio)) ** 3
+    )
+    audit.check(
+        "v2.2 exact R1/R2 neighbor-weight allocation",
+        sp.simplify(r1_leftover - sp.exp(mu_symbol / 4) * f_x ** sp.Rational(1, 4)) == 0
+        and sp.simplify(r2_leftover - sp.exp(mu_symbol / 2) * f_x ** sp.Rational(1, 2)) == 0,
+        (r1_leftover, r2_leftover),
+        (sp.exp(mu_symbol / 4) * f_x ** sp.Rational(1, 4), sp.exp(mu_symbol / 2) * f_x ** sp.Rational(1, 2)),
+        "I_weight_budget",
+    )
+    audit.check(
+        "v2.2 cubic residual weight sum",
+        residual_weight_bound == 54,
+        residual_weight_bound,
+        54,
+        "I_weight_budget",
+    )
+    maximum_local_insertions = max(
+        sum(letter != 0 for letter in word) for word, _, _ in nonbaseline
+    )
+    maximum_neighbor_incidences = max(
+        sum(1 if letter == 1 else 2 if letter == 2 else 0 for letter in word)
+        for word, _, _ in nonbaseline
+    )
+    edge_tuple_counts = tuple(
+        6**r for r in range(1, maximum_neighbor_incidences + 1)
+    )
+    commutator_order_drop = sp.Rational(3, 4)
+    audit.check(
+        "v2.2 cubic tuple and K5 allocation budget",
+        maximum_local_insertions == 5
+        and maximum_neighbor_incidences == 10
+        and edge_tuple_counts == tuple(6**r for r in range(1, 11))
+        and commutator_order_drop > 0
+        and all(5 - order >= 0 for _, _, order in nonbaseline),
+        {
+            "anchors": maximum_local_insertions,
+            "neighbor_incidences": maximum_neighbor_incidences,
+            "last_tuple_count": edge_tuple_counts[-1],
+            "commutator_order_drop": commutator_order_drop,
+        },
+        {"anchors": 5, "neighbor_incidences": 10, "last_tuple_count": 6**10, "commutator_order_drop": sp.Rational(3, 4)},
+        "I_weight_budget",
+    )
+    tree_sphere_terms = tuple(
+        6 * 5 ** (radius - 1) * residual_ratio**radius for radius in range(1, 7)
+    )
+    audit.check(
+        "v2.2 generic degree-six exponential-growth hostile",
+        all(tree_sphere_terms[index + 1] == sp.Rational(5, 2) * tree_sphere_terms[index] for index in range(5))
+        and tree_sphere_terms[-1] > tree_sphere_terms[0],
+        tree_sphere_terms,
+        "six-regular tree weighted spheres grow by 5/2",
+        "I_growth_hostile",
+    )
+
+    # Rank-two projection fixture on C^2 tensor C^2.
+    local_edge = sp.Matrix(
+        [
+            [0, 0, 0, 0],
+            [0, sp.Rational(1, 2), -sp.Rational(1, 2), 0],
+            [0, -sp.Rational(1, 2), sp.Rational(1, 2), 0],
+            [0, 0, 0, 1],
+        ]
+    )
+    local_spectrum = local_edge.eigenvals()
+    audit.check(
+        "v2.2 local rank-two projection spectrum",
+        local_edge**2 == local_edge
+        and local_edge.rank() == 2
+        and local_spectrum == {sp.Integer(0): 2, sp.Integer(1): 2},
+        {"rank": local_edge.rank(), "spectrum": local_spectrum},
+        {"rank": 2, "spectrum": {0: 2, 1: 2}},
+        "I_rank_two_local",
+    )
+
+    side = 4
+    cycle_edges = tuple((site, (site + 1) % side) for site in range(side))
+    dimension = 2**side
+    h_cycle = sp.zeros(dimension)
+    for x_site, y_site in cycle_edges:
+        for state in range(dimension):
+            bit_x = (state >> x_site) & 1
+            bit_y = (state >> y_site) & 1
+            if bit_x == bit_y == 1:
+                h_cycle[state, state] += 1
+            elif bit_x != bit_y:
+                h_cycle[state, state] += sp.Rational(1, 2)
+                swapped = state ^ (1 << x_site) ^ (1 << y_site)
+                h_cycle[swapped, state] -= sp.Rational(1, 2)
+    vacuum = sp.zeros(dimension, 1)
+    vacuum[0] = 1
+    w_vector = sp.zeros(dimension, 1)
+    for site in range(side):
+        w_vector[1 << site] = 1
+    kernel = h_cycle.nullspace()
+    audit.check(
+        "v2.2 connected cycle kernel vacuum plus W",
+        len(kernel) == 2
+        and h_cycle * vacuum == sp.zeros(dimension, 1)
+        and h_cycle * w_vector == sp.zeros(dimension, 1)
+        and sp.Matrix.hstack(vacuum, w_vector).rank() == 2,
+        {"nullity": len(kernel), "rank": h_cycle.rank()},
+        {"nullity": 2, "rank": dimension - 2},
+        "I_rank_two_global",
+    )
+    one_particle_indices = [1 << site for site in range(side)]
+    one_particle = h_cycle.extract(one_particle_indices, one_particle_indices)
+    laplacian = sp.zeros(side)
+    for x_site, y_site in cycle_edges:
+        laplacian[x_site, x_site] += 1
+        laplacian[y_site, y_site] += 1
+        laplacian[x_site, y_site] -= 1
+        laplacian[y_site, x_site] -= 1
+    audit.check(
+        "v2.2 one-particle half-Laplacian",
+        one_particle == laplacian / 2
+        and one_particle.eigenvals()
+        == {sp.Integer(0): 1, sp.Integer(1): 2, sp.Integer(2): 1},
+        {"matrix": one_particle, "spectrum": one_particle.eigenvals()},
+        "L_C4/2 with spectrum 0,1,1,2",
+        "I_rank_two_global",
+    )
+    audit.check(
+        "v2.2 torus gap upper fixture",
+        1 - sp.cos(2 * sp.pi / side) == 1
+        and sp.Integer(1) < 2 * sp.pi**2 / side**2,
+        (1 - sp.cos(2 * sp.pi / side), 2 * sp.pi**2 / side**2),
+        "1<pi^2/8",
+        "I_rank_two_global",
+    )
+
+    onsite_cutoff = 4
+    lifted = sp.zeros(onsite_cutoff**2)
+    for a in range(2):
+        for b in range(2):
+            low_column = 2 * a + b
+            full_column = onsite_cutoff * a + b
+            for c_index in range(2):
+                for d_index in range(2):
+                    low_row = 2 * c_index + d_index
+                    full_row = onsite_cutoff * c_index + d_index
+                    lifted[full_row, full_column] += local_edge[low_row, low_column]
+    for a in range(onsite_cutoff):
+        for b in range(onsite_cutoff):
+            index = onsite_cutoff * a + b
+            lifted[index, index] += max(a - 1, 0) + max(b - 1, 0)
+    lifted_spectrum = lifted.eigenvals()
+    positive_lifted = [value for value in lifted_spectrum if value > 0]
+    audit.check(
+        "v2.2 infinite-onsite lift finite-cutoff kernel and gap",
+        lifted_spectrum.get(sp.Integer(0)) == 2 and min(positive_lifted) == 1,
+        {"zero_multiplicity": lifted_spectrum.get(0), "first_positive": min(positive_lifted)},
+        {"zero_multiplicity": 2, "first_positive": 1},
+        "I_rank_two_lift",
+    )
+
+    return {
+        "static": {
+            "virial_identity_exact": True,
+            "force_placements": 9,
+            "critical_energy_order": 5,
+            "graph_levels_m_p_q": graph_levels,
+            "finite_spectral_cutoff_before_monotone_limit": True,
+            "unbounded_trace_cyclicity_used": False,
+            "registered_periodic_compact_source_scope": True,
+            "arbitrary_boundary_static_scope": False,
+        },
+        "shear": {
+            "increment": expected_increment,
+            "nonbaseline_words": len(nonbaseline),
+            "delta_degree_counts": degree_counts,
+            "C5_word_majorant_T2": direct_word_majorant,
+            "residual_weight_bound_at_exp_minus_mu_over_four_half": residual_weight_bound,
+            "edge_tuple_counts_neighbor_incidences_le_10": edge_tuple_counts,
+            "maximum_local_insertions": maximum_local_insertions,
+            "maximum_neighbor_incidences": maximum_neighbor_incidences,
+            "R1_leftover": r1_leftover,
+            "R2_leftover": r2_leftover,
+            "commutator_order_drop": commutator_order_drop,
+            "K5_multinomial_supplies_weights": True,
+            "K_ge_one_fills_slack": True,
+            "tested_nearest_neighbor_subset": True,
+            "finite_cubic_subgraph_or_periodic_quotient": True,
+            "uniform_cubic_polynomial_growth_required": True,
+            "generic_degree_six_promotion": False,
+            "degree_six_tree_sphere_terms": tree_sphere_terms,
+            "O_abs_delta_load_bearing": True,
+        },
+        "history": {
+            "M20": "2*d5^2*exp(C5*T)*S_mu^5*m5",
+            "hard_cutoff": "2916*c^2*M20*R^(-2/5)",
+            "factorial_log": "-R*log(R)/5+O(R)",
+            "registered_periodic_only": True,
+            "all_exhaustion_common_alpha": False,
+        },
+        "rank_two": {
+            "local_edge": local_edge,
+            "cycle_side": side,
+            "cycle_kernel_dimension": len(kernel),
+            "one_particle": one_particle,
+            "lift_cutoff": onsite_cutoff,
+            "lift_zero_multiplicity": lifted_spectrum.get(0),
+            "lift_first_positive": min(positive_lifted),
+            "automatic_global_gap_inference": False,
+            "Q3_gap_no_go": False,
+        },
+    }
+
+
 def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     missing: list[str] = []
 
@@ -2187,7 +2534,7 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         if staged:
             missing.append(label)
             return
-        raise AssertionError(f"missing or incomplete v2.1 authority: {label}")
+        raise AssertionError(f"missing or incomplete v2.2 authority: {label}")
 
     def require_text(path: Path, label: str) -> str | None:
         if not path.exists():
@@ -2368,9 +2715,15 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
             "static_moment_low_graph_no_go",
             "full_oscillator_edge_cluster",
             "v2_1_checkpoint_synthesis",
+            "actual_q3_static_fifth_moment_and_elliptic_embedding",
+            "direct_subset_shear_fifth_graph_propagation",
+            "actual_q3_twentieth_history_and_hard_cutoff_corridor",
+            "rank_two_projection_gap_no_go",
+            "connected_rank_two_qps_successor",
+            "v2_2_checkpoint_synthesis",
         ):
             audit.check(
-                f"manifest v2.1 section {section}",
+                f"manifest retained/new section {section}",
                 section in manifest,
                 section in manifest,
                 True,
@@ -2395,6 +2748,152 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
             manifest.get("full_oscillator_edge_cluster", {}).get("spectral_cutoff_removal", ""),
             "Pi_M q^2 Pi_M need not equal",
             "manifest Ritz versus truncated-q boundary",
+        )
+        require_token(
+            manifest.get("actual_q3_static_fifth_moment_and_elliptic_embedding", {}).get("virial_identity", ""),
+            "p_i^10/chi",
+            "manifest v2.2 virial identity",
+        )
+        require_token(
+            manifest.get("direct_subset_shear_fifth_graph_propagation", {}).get("fifth_form_bound", ""),
+            "O(|delta|)",
+            "manifest v2.2 load-bearing step factor",
+        )
+        require_token(
+            manifest.get("direct_subset_shear_fifth_graph_propagation", {}).get("fifth_form_bound", ""),
+            "f_x^(1/2)",
+            "manifest v2.2 R1 allocation",
+        )
+        require_token(
+            manifest.get("direct_subset_shear_fifth_graph_propagation", {}).get("uniformity_boundary", ""),
+            "Maximum degree at most six alone is not enough",
+            "manifest v2.2 cubic-growth boundary",
+        )
+        require_token(
+            manifest.get("direct_subset_shear_fifth_graph_propagation", {}).get("generic_degree_six_hostile", ""),
+            "6*5^(r-1)",
+            "manifest v2.2 degree-six hostile",
+        )
+        require_token(
+            manifest.get("actual_q3_twentieth_history_and_hard_cutoff_corridor", {}).get("moment", ""),
+            "M20<=2 d5^2 exp(C5 T) S_mu^5 m5",
+            "manifest v2.2 actual M20",
+        )
+        checkpoint_v22 = manifest.get("v2_2_checkpoint_synthesis")
+        deferred_v22 = {
+            "status": "DEFERRED",
+            "workflow": (
+                "No intermediate PDF is issued for R-167 v2.2. Preserve every "
+                "v2.1 and earlier source/PDF pair as historical evidence; issue or "
+                "update one combined gate-level synthesis only after the proof, "
+                "formal-authority, integrated, generated-surface, strict-release "
+                "and render-review gates pass."
+            ),
+        }
+        issued_fields = {
+            "status", "source", "pdf", "source_sha256", "pdf_sha256",
+            "pages", "workflow", "visual_qa",
+        }
+        issued_status = (
+            "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION"
+        )
+        issued_source = (
+            "claims/C6-SPACETIME-SIGNATURE/notes/"
+            "pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-"
+            "checkpoint-260811-v1.1.tex.txt"
+        )
+        issued_pdf = issued_source.removesuffix(".tex.txt") + ".pdf"
+        issued_workflow = (
+            "No per-lemma or intermediate PDF was issued. One combined R-167 v2.2 / "
+            "R-168 v1.3 gate-level synthesis source/PDF pair was issued only after "
+            "the primary, non-importing independent, integrated, formal-authority, "
+            "generated-surface, source-form, freshness, dual-extraction, and "
+            "visual-review checks passed."
+        )
+        r168_v13_checkpoint = None
+        try:
+            r168_v13_checkpoint = json.loads(
+                (
+                    REPO
+                    / "strategy/pre-a-round1-prospective-holdout-freeze-protocol-"
+                    "manifest.json"
+                ).read_text(encoding="utf-8")
+            ).get("v1_3_checkpoint_synthesis")
+        except (OSError, UnicodeError, json.JSONDecodeError):
+            pass
+        pages_v22 = checkpoint_v22.get("pages") if isinstance(checkpoint_v22, dict) else None
+        pages_v22_valid = (
+            isinstance(pages_v22, int)
+            and not isinstance(pages_v22, bool)
+            and pages_v22 > 0
+        )
+        visual_qa_v22 = (
+            f"All {pages_v22} rendered pages were reviewed at readable resolution "
+            "with zero clipping, overlap, broken equations, unreadable identifiers, "
+            "black glyphs, or malformed page transitions; pypdf and pdfplumber each "
+            f"extracted {pages_v22}/{pages_v22} nonempty pages; the build reported "
+            "OVERFULL-HBOX 0."
+            if pages_v22_valid
+            else None
+        )
+        source_path_v22 = REPO / issued_source
+        pdf_path_v22 = REPO / issued_pdf
+        source_hash_v22 = (
+            hashlib.sha256(source_path_v22.read_bytes()).hexdigest()
+            if source_path_v22.is_file()
+            else None
+        )
+        pdf_hash_v22 = (
+            hashlib.sha256(pdf_path_v22.read_bytes()).hexdigest()
+            if pdf_path_v22.is_file()
+            else None
+        )
+        lowercase_hex = set("0123456789abcdef")
+        source_pin_v22 = (
+            checkpoint_v22.get("source_sha256")
+            if isinstance(checkpoint_v22, dict)
+            else None
+        )
+        pdf_pin_v22 = (
+            checkpoint_v22.get("pdf_sha256")
+            if isinstance(checkpoint_v22, dict)
+            else None
+        )
+        issued_v22_valid = (
+            isinstance(checkpoint_v22, dict)
+            and set(checkpoint_v22) == issued_fields
+            and checkpoint_v22 == r168_v13_checkpoint
+            and checkpoint_v22.get("status") == issued_status
+            and checkpoint_v22.get("source") == issued_source
+            and checkpoint_v22.get("pdf") == issued_pdf
+            and checkpoint_v22.get("workflow") == issued_workflow
+            and checkpoint_v22.get("visual_qa") == visual_qa_v22
+            and pages_v22_valid
+            and isinstance(source_pin_v22, str)
+            and len(source_pin_v22) == 64
+            and set(source_pin_v22) <= lowercase_hex
+            and isinstance(pdf_pin_v22, str)
+            and len(pdf_pin_v22) == 64
+            and set(pdf_pin_v22) <= lowercase_hex
+            and source_path_v22.is_file()
+            and pdf_path_v22.is_file()
+            and source_hash_v22 == source_pin_v22
+            and pdf_hash_v22 == pdf_pin_v22
+            and pdf_path_v22.stat().st_mtime_ns >= source_path_v22.stat().st_mtime_ns
+        )
+        audit.check(
+            "manifest v2.2 checkpoint lifecycle",
+            checkpoint_v22 == deferred_v22 or issued_v22_valid,
+            {
+                "metadata": checkpoint_v22,
+                "shared_r168_v1_3": r168_v13_checkpoint,
+                "deferred_exact": checkpoint_v22 == deferred_v22,
+                "issued_exact": issued_v22_valid,
+                "source_sha256": source_hash_v22,
+                "pdf_sha256": pdf_hash_v22,
+            },
+            "exact proof-first DEFERRED or exact cross-bound eight-field ISSUED checkpoint",
+            "authority",
         )
         audit.check(
             "manifest Yarotskii QPS source",
@@ -2604,6 +3103,21 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     ):
         require_token(certificate_text, token, f"certificate v2.1 token {token}")
 
+    for token in (
+        "EXP-000813",
+        "R-167 v2.2",
+        "p_i^{10}",
+        r"C_5(T,\mu)|\delta|",
+        r"M_{20}\le2d_5^2e^{C_5T}S_\mu^5m_5",
+        "rank-two projection",
+        "No v2.2 PDF is issued",
+        "v2_2_checkpoint_synthesis",
+        *EXPECTED_CLOSED_SUBGATES[-3:],
+        EXPECTED_OPEN_GATES[-1],
+        NEGATIVE_IDS[-1],
+    ):
+        require_token(certificate_text, token, f"certificate v2.2 token {token}")
+
     exploration_text = require_text(EXPLORATION_LEDGER, "exploration ledger")
     require_token(
         exploration_text,
@@ -2617,20 +3131,33 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     )
     if result_row_present:
         audit.check(
-            "result ledger exact R-167 v2.1 row",
+            "result ledger exact R-167 v2.2 row",
             True,
             True,
             True,
             "authority",
         )
     else:
-        missing_or_raise("result ledger exact R-167 v2.1 row")
+        missing_or_raise("result ledger exact R-167 v2.2 row")
     negative_text = require_text(NEGATIVE_REGISTRY, "negative registry")
     for negative_id in NEGATIVE_IDS:
         require_token(negative_text, negative_id, f"negative row {negative_id}")
     gate_text = require_text(GATE_REGISTRY, "gate registry")
-    for gate_id in EXPECTED_CLOSED_SUBGATES + EXPECTED_OPEN_GATES:
-        require_token(gate_text, gate_id, f"gate row {gate_id}")
+    def require_gate_status(gate_id: str, status: str) -> None:
+        heading = f"### **{gate_id}**"
+        if gate_text is None or heading not in gate_text:
+            missing_or_raise(f"gate row {gate_id}")
+            return
+        block = gate_text.split(heading, 1)[1].split("\n### **", 1)[0]
+        if f"**Status:** {status}" not in block:
+            missing_or_raise(f"gate {gate_id} status {status}")
+            return
+        audit.check(f"gate {gate_id} status", True, status, status, "authority")
+
+    for gate_id in EXPECTED_CLOSED_SUBGATES:
+        require_gate_status(gate_id, "CLOSED")
+    for gate_id in EXPECTED_OPEN_GATES:
+        require_gate_status(gate_id, "OPEN")
 
     return {
         "status": "PASS" if not missing else "INCOMPLETE",
@@ -2651,6 +3178,7 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
     fixture_f = fixture_f_feshbach_and_compressed_qps(audit)
     fixture_g = fixture_g_twentieth_moment_and_graph_boundary(audit)
     fixture_h = fixture_h_full_oscillator_edge_cluster(audit)
+    fixture_i = fixture_i_actual_q3_fifth_shear_and_rank_two(audit)
     authority = authority_audit(audit, staged)
     verdict = "PASS" if authority["status"] == "PASS" else "INCOMPLETE"
 
@@ -2667,10 +3195,12 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
         "fixed_edge_to_growing_corridor_reduction": True,
         "twentieth_moment_fixed_edge_corridor_reduction": True,
         "conditional_fifth_graph_transport_reduction": True,
-        "translate_uniform_local_fifth_Gibbs_moment_and_elliptic_embedding": False,
-        "simultaneous_bond_shear_fifth_graph_propagation": False,
-        "actual_Q3_twentieth_fixed_edge_history_bound": False,
-        "actual_Q3_fixed_edge_history_bound": False,
+        "translate_uniform_local_fifth_Gibbs_moment_and_elliptic_embedding": True,
+        "simultaneous_bond_shear_fifth_graph_propagation": True,
+        "actual_Q3_twentieth_fixed_edge_history_bound": True,
+        "actual_Q3_fixed_edge_history_bound": True,
+        "registered_periodic_compact_source_scope_only": True,
+        "arbitrary_boundary_history_bound": False,
         "below_Gamma_global_Feshbach_precursor": True,
         "compressed_TFIM_two_phase_QPS_and_phasewise_gap": True,
         "full_oscillator_local_edge_parity_doublet_cluster": True,
@@ -2717,6 +3247,7 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
             "fixture_F_Feshbach_compressed_QPS": fixture_f,
             "fixture_G_twentieth_moment_graph_boundary": fixture_g,
             "fixture_H_full_oscillator_edge_cluster": fixture_h,
+            "fixture_I_actual_Q3_fifth_shear_rank_two": fixture_i,
         },
         "scope": scope,
         "source_hashes": {
@@ -2726,9 +3257,10 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
         },
         "assertions": audit.rows,
         "boundary": (
-            "Exact A--H fixtures and scoped theorem imports only. No numerical h0 "
-            "or QPS radius, actual Q3 fifth-moment/graph input, twentieth history "
-            "bound, n-to-infinity common alpha, many-edge rank-two oscillator "
+            "Exact A--I fixtures and scoped theorem imports only. The actual fifth-"
+            "moment/shear/history result is registered-periodic and compact-source "
+            "only. No numerical h0 or QPS radius, arbitrary-boundary history bound, "
+            "n-to-infinity common alpha, connected rank-two oscillator "
             "elimination, oscillator QPS transfer, oscillator-lattice GNS gap, "
             "Sector A, or Pre-A closure."
         ),

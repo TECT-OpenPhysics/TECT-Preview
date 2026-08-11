@@ -6,7 +6,7 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-07-28.
+exist here. Last updated: 2026-08-11.
 
 ## Current Sector-A frontier (R-113)
 
@@ -64,6 +64,7 @@ closes only the minimum successor syntax/declared-binding schema. It supplies
 no physical control law, actual candidate, state/reference realization,
 response map, error budget, prediction or external prospective commitment.
 The physical-response gate and this Round-1 parent remain OPEN.
+EXP-000814 / R-168 v1.3 closes five exact T0, claim-nonbearing mathematical children but creates no compact action, winding law, ordered physical state, physical response, six-term physical error budget, candidate, prediction or freeze. The physical-response and Round-1 parents remain OPEN.
 Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1
 into a contestant. No winner, shortlist, preferred PDE, physical vacuum,
 Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed.
@@ -194,6 +195,54 @@ law, state, response map, error bound, prediction or external commitment; the
 validators do not certify arbitrary free-text physical semantics or perform a
 prospective remote freeze. The physical-response and Round-1 parents remain
 OPEN.
+
+### **PA-M2-CI8-V0-REAL-SCALAR-INTERNAL-U1-TRIVIALITY-AND-NO-INTRINSIC-WINDING**
+
+**Statement:** Determine whether the raw one-component real M2-v0 scalar has a nontrivial continuous pointwise linear internal `U(1)` action or intrinsic winding sectors in raw `H^2(T^3;R)`.
+
+**Status:** CLOSED IN THE RAW REAL-LINE AND RAW-SOBOLEV SCOPE ONLY (2026-08-11). EXP-000814 / R-168 v1.3 proves every continuous `rho:U(1)->GL(1,R)` is trivial: its compact connected image lies in `R_(>0)` and logarithm sends it to the trivial compact subgroup of `(R,+)`. It contracts `H^2(T^3;R)` by `C_s(phi)=(1-s)phi`, so the raw vector space has no intrinsic winding sectors. This does not exclude spatial phasons, emergent complex amplitudes, defect-complement topology or supplied compact fields, and supplies no helicity or physical response.
+
+### **PA-M2-CI8-ONE-Q-AUXILIARY-PHASON-CURVATURE-AND-FINITE-TORUS-SECANT**
+
+**Statement:** For `phi=A cos((q s+a).x)`, derive the optimized continuous auxiliary phason curvature and the admissible fixed-periodic-torus fixed-amplitude reciprocal-step secant without promotion to physical response.
+
+**Status:** CLOSED FOR THE DECLARED ONE-Q AUXILIARY FAMILY ONLY (2026-08-11). EXP-000814 / R-168 v1.3 gives `f_min(a)=-(r+c S(a))^2/(6g)` and `Hess_a f_min(0)=-(8 r c q^2/(3g)) I_3`. At fixed torus `h=2 pi/L`, `q=mh`, only integer reciprocal shifts are admitted; the fixed-amplitude secant is `c A0^2(4q^2+h^2)/2`, with excess `c A0^2 h^2/2` and correction `1/(4m^2)`. The fixture derives `A0^2=4/7`, `400/7`, `404/7`, `4/7`, and `1/100`. The cubic Euler term generates a third harmonic, so this is neither an exact Euler state nor physical superfluid density.
+
+### **PA-M2-CI8-HELICITY-TENSOR-CONTACT-SHIFT-NONIDENTIFIABILITY**
+
+**Statement:** At finite regulator and volume, determine whether zero-source data and the linear probe tensor identify second-order helicity before the symmetric quadratic contact is frozen.
+
+**Status:** CLOSED AS A FINITE-REGULATOR TENSOR NONIDENTIFIABILITY THEOREM ONLY (2026-08-11). EXP-000814 / R-168 v1.3 proves the finite-beta Kubo/contact and isolated-simple-ground-state spectral formulas for `H(A)=H0-sum_i A_i J_i+(1/2)sum_ij A_i T_ij A_j`. Replacing `T_ij` by `T_ij+V D_ij I` for arbitrary real symmetric `D` preserves `H0`, all `J_i`, and zero-source state/spectrum while shifting response by exactly `D`. This is not a Lane-Q compact action, winding law, ordered state or physical response.
+
+### **PA-M2-CI8-ANALYTIC-MAP-INTEGER-EXPONENT-TRANSPORT**
+
+**Statement:** For a positive linear critical input and analytic response vanishing at zero, identify the transported leading exponent and the extra condition for unit exponent.
+
+**Status:** CLOSED IN THE DECLARED ANALYTIC COMPOSITION SCOPE ONLY (2026-08-11). EXP-000814 / R-168 v1.3 proves that `kappa(tau)=C tau(1+o(1))`, `C>0`, and first nonzero term `R(kappa)=b_n kappa^n+O(kappa^(n+1))` give exponent `n`. Unit exponent needs `n=1`, for example `R'(0)>0`. Positive local invertibility alone is insufficient: `x^2` and `x^3` give orders two and three.
+
+### **PA-M2-CI8-SIX-STAGE-RELATIVE-LOG-SLOPE-ERROR-TRANSPORT**
+
+**Statement:** Propagate six adjacent-ratio relative error bounds at two scales to an explicit final log-slope enclosure and state the exponent-transfer condition.
+
+**Status:** CLOSED IN THE POSITIVE ADJACENT-RATIO SCOPE ONLY (2026-08-11). EXP-000814 / R-168 v1.3 assumes positive stages, `Rhat_0=R_0`, positive adjacent-ratio floors and `delta_j=epsilon_j/m_j<1` at both scales. Telescoping gives the six-factor `L,U` envelope and `|nuhat-nu|<=max(-log L,log U)/|log lambda|` for `lambda>0`, `lambda!=1`. Exponent transfer additionally requires every relative error at both scales to vanish; six absolute errors alone are insufficient.
+
+### **PA-M2-SUCCESSOR-SUBSTANTIVE-COMPACT-ACTION-BACKGROUND-PROBE-AND-WINDING-LAW**
+
+**Statement:** Supply a substantively new M2 version with an actual compact or gauge action, background probe and justified winding law rather than importing internal `U(1)` into the raw real line.
+
+**Status:** OPEN (2026-08-11). EXP-000814 / R-168 v1.3 proves only raw real-line triviality and leaves spatial phasons, emergent complex fields and supplied compact structures outside scope. No substantive compact action, probe or winding law is registered.
+
+### **PA-M2-SUCCESSOR-ORDERED-STATE-PHYSICAL-MODE-AND-RESPONSE-LIMIT**
+
+**Statement:** Construct an ordered-state physical-mode quotient and source/contact-normalized response limit with declared state, reference, control law, units and limit order.
+
+**Status:** OPEN (2026-08-11). The one-Q curvature is auxiliary and variational, and tensor response is contact-shift nonidentifiable. EXP-000814 / R-168 v1.3 supplies neither an ordered physical state nor a physical-mode quotient and response limit.
+
+### **PA-M2-SUCCESSOR-SIX-TERM-CRITICAL-ESTIMAND-ERROR-BUDGET**
+
+**Statement:** Prove six named physical estimand error terms as positive adjacent-ratio relative bounds at both scales, with floors and vanishing relative errors sufficient for the target log-slope limit.
+
+**Status:** OPEN (2026-08-11). EXP-000814 / R-168 v1.3 proves only the abstract six-stage transport theorem. No six-term physical realization, positive stage-floor proof, scaling-limit budget or target-blind prediction is supplied.
 
 ### **PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND**
 
@@ -1052,34 +1101,27 @@ the uniform history moment.
 
 ### **PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING**
 
-**Statement:** Prove, uniformly in finite volume, compact source, translate and
-site, the Gibbs fifth onsite-energy moment
-`sup phi_(Lambda,h)(k_(x,h)^5)<infinity` and the closed one-site quartic
-elliptic bound `sup || |q|^10 k_h^(-5/2)||<infinity` needed to embed endpoint
-coordinate twentieth moments into the weighted fifth-energy graph.
+**Statement:** In the registered fixed-beta finite periodic Q3 volumes with compact sources, prove uniformly over sites/translates the Gibbs fifth onsite-energy moment and the one-site quartic elliptic embedding `|| |q|^10 k_h^(-5/2)||<infinity` needed for the endpoint twentieth moment.
 
-**Status:** OPEN (2026-08-11). EXP-000811 / R-167 v2.1 identifies these as the
-exact static and elliptic inputs. Existing sharp-coordinate exponential
-moments do not include momentum and do not prove the fifth onsite-energy
-moment or the `k^(-5/2)` embedding. No such volume/source/translate-uniform
-bound is registered.
+**Status:** CLOSED IN THE REGISTERED PERIODIC COMPACT-SOURCE SCOPE ONLY (2026-08-11). EXP-000813 / R-167 v2.2 uses the ninth-order virial observable `(q_i p_i^9+p_i^9 q_i)/2`, finite spectral cutoffs before monotone Gibbs summation, and the registered coordinate exponential estimate to prove the uniform local fifth moment without unbounded trace cyclicity. A compact-source quartic Shubin graph induction through order five gives `k_h^5<=C(1+sum_i p_i^10+|q|^20)` and `|| |q|^10 k_h^(-5/2)||<=C`. No arbitrary-boundary or unregistered-source extension is asserted.
 
 ### **PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION**
 
-**Statement:** On one common invariant form core, prove form-`C1` propagation
-of the weighted `K_e^5` graph under each simultaneous all-cross-bond shear,
-uniformly in volume, source, edge and split step, and hence through every
-partial history in both orientations.
+**Statement:** On the common Schwartz/form core, prove the weighted `K_e^5` graph propagation for tested nearest-neighbor bond subsets on finite subgraphs or periodic quotients of `Z^3`, or a separately declared family with a uniform cubic-polynomial-growth bound.
 
-**Status:** OPEN (2026-08-11). EXP-000811 / R-167 v2.1 isolates the required
-constant
-`G_5=||K_e^(-5/2)(i/hbar)[V_x,K_e^5]K_e^(-5/2)||`, whose exact five-position
-commutator bound has coefficient pattern `1,2,2`. If this common-core/form-`C1`
-input and the local fifth-moment gate hold, then
-`M_20<=2 d_5^2 exp(G_5 T) S_mu^5 m_5`. Current graph control reaches only the
-stated low rungs, in particular `s<=1/2` in the existing route, and does not
-supply the two upper commutator rungs or simultaneous all-bond `K_e^5`
-propagation.
+**Status:** CLOSED IN THE DECLARED CUBIC-GROWTH SUBSET-SHEAR SCOPE ONLY (2026-08-11). EXP-000813 / R-167 v2.2 proves `B_F(delta)^*K_eB_F(delta)=K_e+delta R1+delta^2 R2` and expands the fifth power. With `ord(k)=1`, `ord(p)=1/2`, `ord(q)=1/4`, neighbor-weight allocation leaves summable residuals bounded by `2[(1+exp(-mu/4))/(1-exp(-mu/4))]^3`; every nonbaseline word contains a load-bearing `delta`. Hence `|<psi,(B^*K_e^5B-K_e^5)psi>|<=C5(T,mu)|delta|<psi,K_e^5psi>` and partial/reverse tested-subset products of total absolute time at most `T` preserve the fifth graph. Maximum degree six alone is insufficient: a six-regular tree with `exp(-mu/4)=1/2` has residual sphere terms growing as `3(5/2)^(r-1)`. The Gibbs/history combination is retained only for the registered periodic compact-source family.
+
+### **PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR**
+
+**Statement:** Combine the registered periodic static fifth moment, onsite elliptic embedding and direct subset-shear fifth graph theorem to prove the actual two-orientation twentieth history moment and hard-cutoff corridor.
+
+**Status:** CLOSED IN THE REGISTERED FIXED-BETA FINITE-PERIODIC COMPACT-SOURCE SCOPE ONLY (2026-08-11). EXP-000813 / R-167 v2.2 gives `M20<=2 d5^2 exp(C5 T) S_mu^5 m5` for tested edge translates/orientations and partial or reverse split histories of total absolute time at most `T`. At `L=R^(2/5)`, the hard corridor is `2916 c^2 M20 R^(-2/5)` and the separate bounded-cutoff factorial logarithm is `-R log(R)/5+O(R)`. This is not an all-shape/exhaustion Cauchy theorem, common alpha, group/generator completion or KMS quotient.
+
+### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
+
+**Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
+
+**Status:** OPEN (2026-08-11). EXP-000813 / R-167 v2.2 shows by an exact rank-two local projection fixture that one even and one odd local kernel vector plus local edge gap one do not imply a volume-uniform lattice gap: the one-particle sector is `L_G/2` and a torus gap is at most `1-cos(2 pi/L)`. The counterfixture sharpens the required connected interaction and cutoff-compatibility contract; it is not a Q3 locality, local coercivity or gap no-go. The broader rank-two oscillator/QPS and broken-sector GNS-gap parents remain OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 

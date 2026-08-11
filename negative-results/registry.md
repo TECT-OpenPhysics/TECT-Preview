@@ -9,6 +9,11 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-11-PRE-A-M2-SIX-ABSOLUTE-ERRORS-AUTOMATIC-LOG-SLOPE-CONTROL](#ng-2026-08-11-pre-a-m2-six-absolute-errors-automatic-log-slope-control) | infer a controlled six-stage critical log slope from six absolute output errors alone | EXP-000814 / R-168 v1.3 gives `X(tau)=tau`, `Xhat(tau)=tau+epsilon`: fixed absolute error but different limiting dyadic log slopes. Require positive adjacent-ratio floors, relative errors below one at both scales and vanishing relative errors |
+| [NG-2026-08-11-PRE-A-M2-POSITIVE-LOCAL-INVERTIBILITY-AUTOMATIC-UNIT-EXPONENT](#ng-2026-08-11-pre-a-m2-positive-local-invertibility-automatic-unit-exponent) | infer unit critical exponent from positivity and local invertibility | `x^2` is positive and invertible on a positive half-neighborhood and `x^3` is locally invertible through zero, but their leading orders are two and three. Unit transport needs a nonzero linear term |
+| [NG-2026-08-11-PRE-A-M2-ONE-Q-PHASON-AUTOMATIC-PHYSICAL-SUPERFLUID-DENSITY](#ng-2026-08-11-pre-a-m2-one-q-phason-automatic-physical-superfluid-density) | promote one-Q auxiliary phason curvature or periodic secant to physical superfluid density | EXP-000814 / R-168 v1.3 gives only variational Bloch/supercell/thermodynamic curvature and a fixed-amplitude torus secant; the cubic Euler term generates a third harmonic. Supply compact action, probe/contact, ordered state and response limit |
+| [NG-2026-08-11-PRE-A-M2-V0-ONE-REAL-SCALAR-AUTOMATIC-INTERNAL-U1-WINDING-AND-HELICITY](#ng-2026-08-11-pre-a-m2-v0-one-real-scalar-automatic-internal-u1-winding-and-helicity) | infer nontrivial pointwise internal U1, intrinsic winding and helicity from one raw real scalar | every continuous `U(1)->GL(1,R)` representation is trivial and raw `H^2(T^3;R)` is contractible. Spatial phasons, emergent complex fields and supplied compact variables remain outside scope |
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP](#ng-2026-08-11-pre-a-st8-q3lock-full-oscillator-local-parity-doublet-edge-gap-automatic-volume-uniform-lattice-gap) | infer a uniform lattice gap from a local parity doublet and edge gap one | EXP-000813 / R-167 v2.2 constructs local spectrum `{0,0,1,1}` with global one-particle sector `L_G/2`; the torus gap is at most `1-cos(2 pi/L)`. This rejects only automatic inference, not Q3 locality or a future gap theorem |
 | [NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE](#ng-2026-08-11-pre-a-m2-lane-q-linear-source-automatic-physical-stiffness-response) | identify a physical helicity or stiffness response from the scalar Lane-Q linear source alone | EXP-000812 / R-168 v1.2 keeps the zero-source Hamiltonian and first source derivative fixed while a target-blind scalar `J^2` contact shifts normalized second curvature by an arbitrary declared `d(t)`. Freeze the quadratic contact, normalization and physical control law; this is not a no-go for a fully specified physical probe |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT](#ng-2026-08-11-pre-a-st8-q3lock-uniform-quadratic-in-m-all-moment-bond-shear-graph-transport) | infer a universal quadratic or polynomial-in-order bound for every normalized bond-shear graph moment from abstract positive-energy structure | `K=diag(1,4)` and `V=sigma_x` give right Dini slope `(2^m-2^-m)/(2 hbar)`, so any all-order exponent must grow exponentially in `m`. This rejects only the automatic hierarchy, not the fixed fifth graph constant or Q3 transport |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT](#ng-2026-08-11-pre-a-st8-q3lock-static-moments-and-low-graph-automatic-twentieth-history-moment) | infer the uniform two-orientation twentieth history moment from static exponential-coordinate and fixed energy moments plus low-rung graph control | an exact two-level `K_N` rotation retains the static moment bounds and all graph estimates in the stated range `0<=s<=1`, while the two-orientation twentieth coordinate history moment grows at least as `delta^2 N^12/4`. The missing fifth graph constant grows; this rejects automatic inference only, not Q3 dynamics |
@@ -348,6 +353,51 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-11-pre-a-m2-six-absolute-errors-automatic-log-slope-control"></a>
+### NG-2026-08-11-PRE-A-M2-SIX-ABSOLUTE-ERRORS-AUTOMATIC-LOG-SLOPE-CONTROL -- absolute stage errors do not control a critical log slope
+
+**Failure mode:** infer a controlled six-stage final log slope or exponent from six absolute output-error bounds without positive adjacent-ratio floors and relative control at both comparison scales.
+
+**Evidence:** EXP-000814 / R-168 v1.3 takes `X(tau)=tau` and `Xhat(tau)=tau+epsilon`. The absolute error is uniformly `epsilon`, but as `tau->0` the dyadic log slope of `X` is one and that of `Xhat` tends to zero. The exact six-stage theorem instead needs `delta_j(s)=epsilon_j(s)/m_j(s)<1` for every adjacent-ratio floor at both scales and vanishing relative errors for exponent transfer.
+
+**Consequence:** six named absolute errors are not by themselves a critical-estimand error budget. A future physical successor must prove positive stage floors, adjacent-ratio relative bounds and their scaling-limit decay. This does not reject that strengthened route.
+
+<a id="ng-2026-08-11-pre-a-m2-positive-local-invertibility-automatic-unit-exponent"></a>
+### NG-2026-08-11-PRE-A-M2-POSITIVE-LOCAL-INVERTIBILITY-AUTOMATIC-UNIT-EXPONENT -- local invertibility does not force unit leading order
+
+**Failure mode:** infer a unit critical exponent merely because a positive response map is locally invertible near zero.
+
+**Evidence:** EXP-000814 / R-168 v1.3 proves transport by the first nonzero analytic Taylor order. The map `x^2` is positive and invertible on `[0,epsilon)`, yet has leading order two; `x^3` is locally invertible through zero, yet has leading order three. Composing either with a linear critical input preserves that nonunit order.
+
+**Consequence:** unit exponent requires a nonzero linear term, for example `R(0)=0` and `R'(0)>0` under the declared regularity. This is not a no-go for a response map whose linear coefficient is independently proved.
+
+<a id="ng-2026-08-11-pre-a-m2-one-q-phason-automatic-physical-superfluid-density"></a>
+### NG-2026-08-11-PRE-A-M2-ONE-Q-PHASON-AUTOMATIC-PHYSICAL-SUPERFLUID-DENSITY -- auxiliary one-Q curvature is not automatically a physical density
+
+**Failure mode:** identify continuous one-Q phason curvature or a fixed-torus reciprocal-step secant with an internal-U1 helicity modulus or physical superfluid density.
+
+**Evidence:** EXP-000814 / R-168 v1.3 derives the variational density, optimized auxiliary Hessian and fixed-amplitude torus secant. At fixed `L`, only integer multiples of `h=2 pi/L` are admissible shifts. Moreover `cos^3(theta)=(3 cos(theta)+cos(3 theta))/4`, so the Euler equation generates a third harmonic and the one-Q trial is not automatically exact.
+
+**Consequence:** retain the result as Bloch/supercell/thermodynamic auxiliary elasticity only. A physical response needs a substantive compact action, background probe/contact convention, ordered physical state, mode quotient and response limit. This does not reject such a future construction.
+
+<a id="ng-2026-08-11-pre-a-m2-v0-one-real-scalar-automatic-internal-u1-winding-and-helicity"></a>
+### NG-2026-08-11-PRE-A-M2-V0-ONE-REAL-SCALAR-AUTOMATIC-INTERNAL-U1-WINDING-AND-HELICITY -- the raw real line supplies no nontrivial pointwise internal U1
+
+**Failure mode:** infer a nontrivial continuous pointwise internal `U(1)` action, intrinsic winding sectors and helicity directly from the one-component real M2-v0 field.
+
+**Evidence:** EXP-000814 / R-168 v1.3 proves every continuous `U(1)->GL(1,R)` representation is trivial: its compact connected image lies in `R_(>0)` and logarithm sends it to the trivial compact subgroup of `(R,+)`. Raw `H^2(T^3;R)` contracts by `C_s(phi)=(1-s)phi` and has no intrinsic winding sectors.
+
+**Consequence:** the raw real scalar alone does not supply internal-U1 winding or helicity. Spatial translation phases, emergent complex/two-component amplitudes, defect-complement topology and externally supplied compact fields remain outside the result and may define substantively new candidates.
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-full-oscillator-local-parity-doublet-edge-gap-automatic-volume-uniform-lattice-gap"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP -- local rank-two edge data do not force a lattice gap
+
+**Failure mode:** infer a volume-uniform many-edge lattice gap from a local rank-two kernel containing one even and one odd vector together with local edge gap one.
+
+**Evidence:** EXP-000813 / R-167 v2.2 uses onsite `C^2`, `n=|1><1|`, `phi^-=(|10>-|01>)/sqrt(2)`, and `h_xy=|phi^-><phi^-|+n_x n_y`. The local spectrum is `{0,0,1,1}`. On every finite connected graph the global one-particle restriction is `L_G/2`; on a torus the gap is at most `1-cos(2 pi/L)<=2 pi^2/L^2`. An infinite-onsite lift preserves the local kernel and edge gap while retaining the band.
+
+**Consequence:** connected quasi-local rank-two oscillator elimination, small effective interaction in a two-phase QPS norm, cutoff convergence in that norm and phasewise GNS intertwining remain separate obligations. This is not a Q3 locality, local coercivity or lattice-gap no-go.
 
 <a id="ng-2026-08-11-pre-a-m2-lane-q-linear-source-automatic-physical-stiffness-response"></a>
 ### NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE -- a scalar linear probe does not fix second-order physical response

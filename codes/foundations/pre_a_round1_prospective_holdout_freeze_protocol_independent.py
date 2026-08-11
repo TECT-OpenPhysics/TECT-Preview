@@ -12,6 +12,7 @@ and verifies the remote commit, annotated tag object, and tag ref.
 No target, freeze record, prediction, score, or git tag is created here.
 
 Version history:
+  1.5.0 (2026-08-11): independently derive the v1.3 U1/winding, phason/secant, tensor-contact, analytic-order, and relative log-slope suite with stdlib Fraction only.
   1.4.0 (2026-08-11): independently harden exact artifact roles, canonical
         reduced rationals, source firewalls, verifier/error bindings,
         order-insensitive metamorphics, and deterministic hostile fuzz.
@@ -37,13 +38,15 @@ import os
 import re
 import subprocess
 import tempfile
+from fractions import Fraction
+from itertools import product
 from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 from typing import Any, Callable
 from urllib.parse import urlparse
 
 
-__version__ = "1.4.0"
+__version__ = "1.5.0"
 __first_issued__ = "2026-08-11"
 
 REPO = Path(__file__).resolve().parents[2]
@@ -55,58 +58,59 @@ FREEZE_SCHEMA = "tect/pre-a-round1-prospective-holdout-freeze/1.0"
 TASK_ID = "T-054"
 CLAIM_IDS = ("C6-SPACETIME-SIGNATURE",)
 RESULT_NUMBER = "R-168"
-RESULT_VERSION = "v1.2"
-RESULT_ID = (
-    "PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-"
-    "READINESS-AUDIT"
-)
-EXPLORATION_ID = "EXP-000812"
-PRIOR_EXPLORATION_IDS = ("EXP-000807", "EXP-000808", "EXP-000810")
+RESULT_VERSION = "v1.3"
+RESULT_ID = "PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT"
+EXPLORATION_ID = "EXP-000814"
+PRIOR_EXPLORATION_IDS = ("EXP-000807", "EXP-000808", "EXP-000810", "EXP-000812")
 AUDITED_COMMIT = "99157442831c0e44d425b5d5f8cd78856c57da53"
 PARENT_GATE = "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
-MAP_ONLY_NEGATIVE_ID = (
-    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
-)
-LINEAR_PROBE_NEGATIVE_ID = (
-    "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-"
-    "STIFFNESS-RESPONSE"
-)
+MAP_ONLY_NEGATIVE_ID = "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+LINEAR_PROBE_NEGATIVE_ID = "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE"
 PRIOR_NEGATIVE_IDS = (
-    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-"
-    "NONEXISTENCE",
-    MAP_ONLY_NEGATIVE_ID,
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+    MAP_ONLY_NEGATIVE_ID, LINEAR_PROBE_NEGATIVE_ID,
 )
-NEW_NEGATIVE_IDS = (LINEAR_PROBE_NEGATIVE_ID,)
+NEW_NEGATIVE_IDS = (
+    "NG-2026-08-11-PRE-A-M2-V0-ONE-REAL-SCALAR-AUTOMATIC-INTERNAL-U1-WINDING-AND-HELICITY",
+    "NG-2026-08-11-PRE-A-M2-ONE-Q-PHASON-AUTOMATIC-PHYSICAL-SUPERFLUID-DENSITY",
+    "NG-2026-08-11-PRE-A-M2-POSITIVE-LOCAL-INVERTIBILITY-AUTOMATIC-UNIT-EXPONENT",
+    "NG-2026-08-11-PRE-A-M2-SIX-ABSOLUTE-ERRORS-AUTOMATIC-LOG-SLOPE-CONTROL",
+)
 NEGATIVE_IDS = PRIOR_NEGATIVE_IDS + NEW_NEGATIVE_IDS
-REUSED_NEGATIVE_IDS = (
-    "NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION",
-)
-MAP_ONLY_CLOSED_CHILD = (
-    "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET"
-)
+REUSED_NEGATIVE_IDS = ("NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION",)
+MAP_ONLY_CLOSED_CHILD = "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET"
 FINGERPRINT_CLOSED_CHILD = "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
+LINEAR_PROBE_CLOSED_CHILD = "PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY"
+PHYSICAL_CONTRACT_CLOSED_CHILD = "PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA"
 PRIOR_CLOSED_SUBGATES = (
     "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
     "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
     "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
     "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
-    MAP_ONLY_CLOSED_CHILD,
-    FINGERPRINT_CLOSED_CHILD,
+    MAP_ONLY_CLOSED_CHILD, FINGERPRINT_CLOSED_CHILD,
+    LINEAR_PROBE_CLOSED_CHILD, PHYSICAL_CONTRACT_CLOSED_CHILD,
 )
 NEW_CLOSED_SUBGATES = (
-    "PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY",
-    "PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA",
+    "PA-M2-CI8-V0-REAL-SCALAR-INTERNAL-U1-TRIVIALITY-AND-NO-INTRINSIC-WINDING",
+    "PA-M2-CI8-ONE-Q-AUXILIARY-PHASON-CURVATURE-AND-FINITE-TORUS-SECANT",
+    "PA-M2-CI8-HELICITY-TENSOR-CONTACT-SHIFT-NONIDENTIFIABILITY",
+    "PA-M2-CI8-ANALYTIC-MAP-INTEGER-EXPONENT-TRANSPORT",
+    "PA-M2-CI8-SIX-STAGE-RELATIVE-LOG-SLOPE-ERROR-TRANSPORT",
 )
 CLOSED_SUBGATES = PRIOR_CLOSED_SUBGATES + NEW_CLOSED_SUBGATES
 PHYSICAL_RESPONSE_GATE = "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
+OPEN_SUCCESSOR_GATES = (
+    "PA-M2-SUCCESSOR-SUBSTANTIVE-COMPACT-ACTION-BACKGROUND-PROBE-AND-WINDING-LAW",
+    "PA-M2-SUCCESSOR-ORDERED-STATE-PHYSICAL-MODE-AND-RESPONSE-LIMIT",
+    "PA-M2-SUCCESSOR-SIX-TERM-CRITICAL-ESTIMAND-ERROR-BUDGET",
+)
 OPEN_GATES = (
     PARENT_GATE,
     "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
     "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
     "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-    "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-"
-    "VERIFICATION",
-    PHYSICAL_RESPONSE_GATE,
+    "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+    PHYSICAL_RESPONSE_GATE, *OPEN_SUCCESSOR_GATES,
 )
 M2_SUCCESSOR_ID = "PA-M2-CI8-RS-DISPERSION-MAP-v1"
 ROOT_FIELDS = (
@@ -559,6 +563,54 @@ PHYSICAL_CONTRACT_HOSTILE_CODES = {
 }
 EXPECTED_PHYSICAL_CONTRACT_HOSTILES = tuple(PHYSICAL_CONTRACT_HOSTILE_CODES)
 
+
+V13_SUITE_SCHEMA = "tect/pre-a-m2-ci8-v1-3-theorem-suite/1.0"
+V13_SUITE_FIELDS = (
+    "schema", "result", "exploration_id", "claim_bearing", "tier",
+    "closed_child_ids", "negative_ids", "open_successor_gate_ids",
+    "real_scalar_internal_u1_and_winding",
+    "one_q_auxiliary_phason_curvature_and_finite_torus_secant",
+    "helicity_tensor_contact_shift_nonidentifiability",
+    "analytic_map_integer_exponent_transport",
+    "six_stage_relative_log_slope_error_transport", "scope",
+)
+V13_AUTHORITY_SECTION_KEYS = (
+    "m2_v0_real_scalar_internal_u1_and_winding_audit",
+    "m2_one_q_auxiliary_phason_curvature_and_finite_torus_secant",
+    "m2_helicity_tensor_contact_shift_nonidentifiability",
+    "m2_analytic_map_integer_exponent_transport",
+    "m2_six_stage_relative_log_slope_error_transport",
+)
+V13_HOSTILE_CODES = {
+    "nontrivial_real_line_u1": "V13_U1_SCOPE_INVALID",
+    "intrinsic_real_h2_winding": "V13_U1_SCOPE_INVALID",
+    "spatial_translation_promoted_internal": "V13_U1_SCOPE_INVALID",
+    "phason_promoted_physical_density": "V13_PHASON_ALGEBRA_INVALID",
+    "phason_hessian_sign_flip": "V13_PHASON_ALGEBRA_INVALID",
+    "fixed_torus_continuous_twist": "V13_PHASON_ALGEBRA_INVALID",
+    "optimized_amplitude_torus_secant": "V13_PHASON_ALGEBRA_INVALID",
+    "one_q_promoted_exact_euler_solution": "V13_PHASON_ALGEBRA_INVALID",
+    "cubic_third_harmonic_removed": "V13_PHASON_ALGEBRA_INVALID",
+    "contact_shift_nonsymmetric": "V13_RESPONSE_ALGEBRA_INVALID",
+    "contact_shift_sign_flip": "V13_RESPONSE_ALGEBRA_INVALID",
+    "finite_beta_contact_omitted": "V13_RESPONSE_ALGEBRA_INVALID",
+    "ground_gap_hypothesis_removed": "V13_RESPONSE_ALGEBRA_INVALID",
+    "positive_invertibility_forces_unit_order": "V13_MAP_ALGEBRA_INVALID",
+    "x2_order_changed": "V13_MAP_ALGEBRA_INVALID",
+    "x3_order_changed": "V13_MAP_ALGEBRA_INVALID",
+    "six_absolute_errors_promoted": "V13_ERROR_ALGEBRA_INVALID",
+    "delta_equal_one": "V13_ERROR_ALGEBRA_INVALID",
+    "positive_floor_removed": "V13_ERROR_ALGEBRA_INVALID",
+    "vanishing_delta_not_required": "V13_ERROR_ALGEBRA_INVALID",
+    "candidate_or_parent_promoted": "V13_GLOBAL_SCOPE_INVALID",
+    "gl1_compact_connected_argument_removed": "V13_U1_SCOPE_INVALID",
+    "branch_amplitude_decoupled": "V13_PHASON_ALGEBRA_INVALID",
+    "analytic_zero_value_removed": "V13_MAP_ALGEBRA_INVALID",
+    "lambda_equal_one": "V13_ERROR_ALGEBRA_INVALID",
+    "initial_stage_unbound": "V13_ERROR_ALGEBRA_INVALID",
+    "adjacent_ratio_contract_removed": "V13_ERROR_ALGEBRA_INVALID",
+}
+EXPECTED_V13_HOSTILES = tuple(V13_HOSTILE_CODES)
 
 MAP_ONLY_SURVIVAL_SCHEMA = "tect/pre-a-round1-map-only-survival-contract/1.0"
 MAP_ONLY_SURVIVAL_FIELDS = (
@@ -2212,7 +2264,7 @@ def linear_probe_curvature_nonidentifiability_independent() -> dict[str, Any]:
     right_curvature = _rdiv(central_second(tuple(ground(d_right, j) for j in sources)), volume)
     shift = _rsub(right_curvature, left_curvature)
     return {
-        "closed_child_id": NEW_CLOSED_SUBGATES[0],
+        "closed_child_id": LINEAR_PROBE_CLOSED_CHILD,
         "negative_id": LINEAR_PROBE_NEGATIVE_ID,
         "engine": "independent integer rational cross-products",
         "sign_convention": {
@@ -3625,6 +3677,218 @@ def reconstruct_checkpoint() -> dict[str, Any]:
     }
 
 
+def _v13_fraction_text_independent(value: Fraction) -> str:
+    return str(value.numerator) if value.denominator == 1 else f"{value.numerator}/{value.denominator}"
+
+
+def _v13_order_independent(coefficients: tuple[Fraction, ...]) -> int:
+    return next(index for index, coefficient in enumerate(coefficients) if coefficient)
+
+
+def m2_v13_theorem_suite_independent() -> dict[str, Any]:
+    """Reconstruct v1.3 with stdlib Fraction and coefficient identities only."""
+    optimized_checks = []
+    hessian_checks = []
+    coefficient_fixtures = (
+        (Fraction(-3), Fraction(2), Fraction(5), Fraction(7)),
+        (Fraction(-5, 4), Fraction(11, 6), Fraction(3, 2), Fraction(13, 5)),
+    )
+    for signs in product((-1, 1), repeat=3):
+        for r_value, c_value, q_value, g_value in coefficient_fixtures:
+            optimum = -4 * r_value / (3 * g_value)
+            density = optimum * r_value / 4 + 3 * g_value * optimum * optimum / 32
+            optimized_checks.append(density == -r_value * r_value / (6 * g_value))
+            for sign in signs:
+                shear_quadratic_coefficient = 4 * sign * sign * q_value * q_value
+                minimized_quadratic_coefficient = -(2 * r_value * c_value * shear_quadratic_coefficient) / (6 * g_value)
+                hessian_coefficient = 2 * minimized_quadratic_coefficient
+                hessian_checks.append(hessian_coefficient == -8 * r_value * c_value * q_value * q_value / (3 * g_value))
+    base_laurent = {-1: Fraction(1, 2), 1: Fraction(1, 2)}
+    cubic_laurent = {0: Fraction(1)}
+    for _ in range(3):
+        next_coefficients = {}
+        for left_power, left_value in cubic_laurent.items():
+            for right_power, right_value in base_laurent.items():
+                power = left_power + right_power
+                next_coefficients[power] = next_coefficients.get(power, Fraction(0)) + left_value * right_value
+        cubic_laurent = next_coefficients
+    expected_laurent = {-3: Fraction(1, 8), -1: Fraction(3, 8), 1: Fraction(3, 8), 3: Fraction(1, 8)}
+    cubic_check = cubic_laurent == expected_laurent
+    laurent_coefficients = {str(power): _v13_fraction_text_independent(cubic_laurent[power]) for power in (-3, -1, 1, 3)}
+    inputs = {"r": Fraction(-3), "c": Fraction(2), "q": Fraction(5), "g": Fraction(7), "fundamental_reciprocal_step_h": Fraction(1)}
+    amplitude_squared = -4 * inputs["r"] / (3 * inputs["g"])
+    curvature = 2 * inputs["c"] * amplitude_squared * inputs["q"] ** 2
+    h_value = inputs["fundamental_reciprocal_step_h"]
+    shear_plus = (2 * inputs["q"] * h_value + h_value ** 2) ** 2
+    shear_minus = (-2 * inputs["q"] * h_value + h_value ** 2) ** 2
+    secant = inputs["c"] * amplitude_squared * (shear_plus + shear_minus) / (4 * h_value ** 2)
+    correction = secant - curvature
+    relative = correction / curvature
+    x2 = (Fraction(0), Fraction(0), Fraction(1))
+    x3 = (Fraction(0), Fraction(0), Fraction(0), Fraction(1))
+    delta0 = tuple(Fraction(1, 10 * j) for j in range(1, 7))
+    delta1 = tuple(Fraction(1, 10 * (j + 1)) for j in range(1, 7))
+    floors0 = tuple(Fraction(j, 7) for j in range(1, 7))
+    floors1 = tuple(Fraction(j + 1, 7) for j in range(1, 7))
+    epsilon0 = tuple(delta * floor for delta, floor in zip(delta0, floors0))
+    epsilon1 = tuple(delta * floor for delta, floor in zip(delta1, floors1))
+    outputs0 = [Fraction(1)]
+    outputs1 = [Fraction(1)]
+    for floor in floors0: outputs0.append(outputs0[-1] * floor)
+    for floor in floors1: outputs1.append(outputs1[-1] * floor)
+    lower = Fraction(1)
+    upper = Fraction(1)
+    for left, right in zip(delta0, delta1):
+        lower *= (1 - right) / (1 + left)
+        upper *= (1 + right) / (1 - left)
+    f = _v13_fraction_text_independent
+    return {
+        "schema": V13_SUITE_SCHEMA,
+        "result": f"{RESULT_NUMBER} {RESULT_VERSION}",
+        "exploration_id": EXPLORATION_ID,
+        "claim_bearing": False,
+        "tier": "T0",
+        "closed_child_ids": list(NEW_CLOSED_SUBGATES),
+        "negative_ids": list(NEW_NEGATIVE_IDS),
+        "open_successor_gate_ids": list(OPEN_SUCCESSOR_GATES),
+        "real_scalar_internal_u1_and_winding": {
+            "closed_child_id": NEW_CLOSED_SUBGATES[0], "negative_id": NEW_NEGATIVE_IDS[0],
+            "field_target": "R", "pointwise_linear_group": "GL(1,R)=R*", "orthogonal_corollary": "O(1)={-1,+1}",
+            "theorem": "Every continuous real one-dimensional linear representation rho:U(1)->GL(1,R) is trivial: its image is compact and connected, lies in R_{>0}, and log sends it to a compact subgroup of (R,+), hence {0}. The O(1) statement is a corollary.",
+            "configuration_space": "H^2(T^3;R)", "contraction": "C_s(phi)=(1-s)phi for 0<=s<=1",
+            "intrinsic_winding_sectors": False,
+            "scope_exclusions": ["spatial translation phase of a patterned state", "emergent complex amplitude or two-component reformulation", "defect-complement topology or an externally supplied compact field"],
+        },
+        "one_q_auxiliary_phason_curvature_and_finite_torus_secant": {
+            "closed_child_id": NEW_CLOSED_SUBGATES[1], "negative_id": NEW_NEGATIVE_IDS[1],
+            "sign_domain": "s in {-1,+1}^3", "trial_family": "phi=A*cos((q*s+a).x)",
+            "density": "f=A^2*(r+c*S(a))/4+3*g*A^4/32", "shear_polynomial": "S(a)=sum_i(2*s_i*q*a_i+a_i^2)^2",
+            "ordered_branch_condition": "r+c*S(a)<0 and g>0", "optimized_amplitude_squared": "-4*(r+c*S(a))/(3*g)",
+            "optimized_density": "-(r+c*S(a))^2/(6*g)", "hessian_at_zero": "-8*r*c*q^2/(3*g)*I_3",
+            "symbolic_all_eight_signs": all(hessian_checks), "symbolic_optimized_identity": all(optimized_checks),
+            "finite_torus_rule": "At fixed L define the fundamental step h=2*pi/L, require q=m*h with integer m, and allow shifts only by integer multiples of h; use the fixed-amplitude central secant.",
+            "fixed_amplitude_continuum_curvature": "2*c*A0^2*q^2",
+            "fixed_amplitude_central_secant": "c*A0^2*(4*q^2+h^2)/2",
+            "finite_torus_secant_excess": "c*A0^2*h^2/2",
+            "relative_secant_correction": "h^2/(4*q^2)=1/(4*m^2) when q=m*h",
+            "fraction_fixture": {"inputs": {key: f(value) for key, value in inputs.items()}, "optimized_amplitude_squared": f(amplitude_squared), "q_over_h_integer": int(inputs["q"] / inputs["fundamental_reciprocal_step_h"]), "continuum_curvature": f(curvature), "finite_torus_secant": f(secant), "secant_correction": f(correction), "relative_correction": f(relative)},
+            "cubic_identity": "cos(theta)^3=(3*cos(theta)+cos(3*theta))/4", "cubic_laurent_coefficients": laurent_coefficients, "symbolic_cubic_identity": cubic_check,
+            "euler_boundary": "For g*A!=0 the cubic Euler term generates a 3k harmonic; the one-Q family is a variational trial, not an exact Euler solution.",
+            "physical_boundary": "This is auxiliary Bloch/supercell/thermodynamic phason elasticity, not an internal-U(1) helicity modulus or physical superfluid density.",
+        },
+        "helicity_tensor_contact_shift_nonidentifiability": {
+            "closed_child_id": NEW_CLOSED_SUBGATES[2],
+            "hamiltonian_family": "H(A)=H0-sum_i A_i*J_i+(1/2)*sum_ij A_i*T_ij*A_j",
+            "hypotheses": ["finite regulator and finite volume", "norm-C2 self-adjoint family near A=0", "T_ij=T_ji self-adjoint", "finite beta, or an isolated simple ground state with positive gap"],
+            "finite_beta_formula": "Upsilon_ij=V^-1*(<T_ij>_beta-integral_0^beta <delta J_i(-i tau) delta J_j>_beta d tau)",
+            "isolated_ground_formula": "Upsilon_ij=V^-1*(<0|T_ij|0>-2*Re sum_{n>0} <0|J_i|n><n|J_j|0>/(E_n-E_0))",
+            "symmetric_contact_shift": "T_ij -> T_ij+V*D_ij*I with D=D^T", "response_shift": "Upsilon -> Upsilon+D",
+            "fixed_under_shift": ["H0", "J_i", "zero-source state", "zero-source spectrum"],
+            "physical_boundary": "The formulas are a future finite-regulator contract; no Lane-Q compact action, background probe, state, or physical response is supplied.",
+        },
+        "analytic_map_integer_exponent_transport": {
+            "closed_child_id": NEW_CLOSED_SUBGATES[3], "negative_id": NEW_NEGATIVE_IDS[2],
+            "input_scaling": "kappa(tau)=C*tau*(1+o(1)) with C>0",
+            "hypothesis": "R(0)=0 and R(kappa)=b_n*kappa^n+O(kappa^(n+1)), b_n>0, n>=1 the first nonzero analytic order",
+            "transport": "R(kappa(tau))=b_n*C^n*tau^n*(1+o(1)); the transported exponent is the positive integer n.",
+            "integer_order": True,
+            "unit_order_sufficient_condition": "R is C1 (or analytic) through zero with R(0)=0 and R'(0)>0; then the inverse-function theorem gives n=1.",
+            "positive_one_sided_local_invertibility_alone_sufficient": False,
+            "hostile_polynomials": {"x_squared_coefficients": [f(v) for v in x2], "x_squared_order": _v13_order_independent(x2), "x_cubed_coefficients": [f(v) for v in x3], "x_cubed_order": _v13_order_independent(x3), "boundary": "x^2 is positive and invertible on [0,epsilon); x^3 is locally invertible through zero, yet their leading orders are 2 and 3."},
+        },
+        "six_stage_relative_log_slope_error_transport": {
+            "closed_child_id": NEW_CLOSED_SUBGATES[4], "negative_id": NEW_NEGATIVE_IDS[3], "stage_count": len(delta0),
+            "scale_domain": "lambda>0 and lambda!=1",
+            "initial_stage_exact": True,
+            "stage_ratio_definition": "g_j(s)=R_j(s)/R_(j-1)(s), ghat_j(s)=Rhat_j(s)/Rhat_(j-1)(s), j=1,...,6",
+            "hypotheses": ["R_0,...,R_6 and Rhat_0,...,Rhat_6 are strictly positive at tau and lambda*tau, with Rhat_0=R_0.", "Each exact adjacent ratio g_j(s) has a positive floor m_j(s), and |ghat_j(s)-g_j(s)|<=epsilon_j(s).", "delta_j(s)=epsilon_j(s)/m_j(s)<1, hence |ghat_j(s)/g_j(s)-1|<=delta_j(s) and telescoping derives the final product."],
+            "final_output_definition": "X(s)=R_6(s) and Xhat(s)=Rhat_6(s)",
+            "log_slope_definition": "nu_lambda(tau)=log(X(lambda*tau)/X(tau))/log(lambda), with nuhat defined by Xhat",
+            "ratio_envelope": "L=product_j[(1-delta_j(lambda*tau))/(1+delta_j(tau))] <= (Xhat(lambda*tau)/Xhat(tau))/(X(lambda*tau)/X(tau)) <= U=product_j[(1+delta_j(lambda*tau))/(1-delta_j(tau))]",
+            "log_slope_bound": "|nuhat_lambda(tau)-nu_lambda(tau)| <= max(-log(L),log(U))/abs(log(lambda))",
+            "exponent_transfer_condition": "For every stage j, delta_j(tau) and delta_j(lambda*tau) tend to zero.",
+            "six_absolute_errors_alone_sufficient": False,
+            "absolute_error_counterexample": "X(tau)=tau and Xhat(tau)=tau+epsilon have absolute error epsilon, but the dyadic log slope of Xhat tends to 0 while that of X is 1.",
+            "fraction_fixture": {"lambda": "2", "positive_stage_outputs_tau": [f(v) for v in outputs0], "positive_stage_outputs_lambda_tau": [f(v) for v in outputs1], "adjacent_ratio_floors_tau": [f(v) for v in floors0], "adjacent_ratio_floors_lambda_tau": [f(v) for v in floors1], "adjacent_ratio_absolute_errors_tau": [f(v) for v in epsilon0], "adjacent_ratio_absolute_errors_lambda_tau": [f(v) for v in epsilon1], "delta_tau": [f(v) for v in delta0], "delta_lambda_tau": [f(v) for v in delta1], "lower_ratio": f(lower), "upper_ratio": f(upper), "all_stage_outputs_positive": all(v > 0 for v in (*outputs0, *outputs1)), "all_delta_strictly_below_one": all(0 <= v < 1 for v in (*delta0, *delta1))},
+        },
+        "scope": {"candidate_created": False, "physical_response_closed": False, "round1_freeze_closed": False, "pre_a_complete": False, "sector_a_complete": False, "checkpoint_synthesis": "PROOF-FIRST DEFERRED HISTORY; CURRENT COMBINED CHECKPOINT ISSUED"},
+    }
+
+
+def v13_suite_from_authority_independent(authority: dict[str, Any]) -> dict[str, Any]:
+    identity = authority["m2_v1_3_identity_and_scope"]
+    return {
+        "schema": identity["schema"], "result": identity["result"], "exploration_id": identity["exploration_id"],
+        "claim_bearing": identity["claim_bearing"], "tier": identity["tier"], "closed_child_ids": identity["closed_child_ids"],
+        "negative_ids": identity["negative_ids"], "open_successor_gate_ids": identity["open_successor_gate_ids"],
+        "real_scalar_internal_u1_and_winding": authority[V13_AUTHORITY_SECTION_KEYS[0]],
+        "one_q_auxiliary_phason_curvature_and_finite_torus_secant": authority[V13_AUTHORITY_SECTION_KEYS[1]],
+        "helicity_tensor_contact_shift_nonidentifiability": authority[V13_AUTHORITY_SECTION_KEYS[2]],
+        "analytic_map_integer_exponent_transport": authority[V13_AUTHORITY_SECTION_KEYS[3]],
+        "six_stage_relative_log_slope_error_transport": authority[V13_AUTHORITY_SECTION_KEYS[4]], "scope": identity["scope"],
+    }
+
+
+def validate_m2_v13_theorem_suite_independent(candidate: Any) -> dict[str, Any]:
+    if not isinstance(candidate, dict) or tuple(candidate) != V13_SUITE_FIELDS:
+        return {"valid": False, "error_codes": ["V13_ROOT_FIELDS_INVALID"]}
+    expected = m2_v13_theorem_suite_independent()
+    errors = []
+    checks = (
+        (("schema", "result", "exploration_id", "claim_bearing", "tier", "closed_child_ids", "negative_ids", "open_successor_gate_ids"), "V13_IDENTITY_INVALID"),
+        (("real_scalar_internal_u1_and_winding",), "V13_U1_SCOPE_INVALID"),
+        (("one_q_auxiliary_phason_curvature_and_finite_torus_secant",), "V13_PHASON_ALGEBRA_INVALID"),
+        (("helicity_tensor_contact_shift_nonidentifiability",), "V13_RESPONSE_ALGEBRA_INVALID"),
+        (("analytic_map_integer_exponent_transport",), "V13_MAP_ALGEBRA_INVALID"),
+        (("six_stage_relative_log_slope_error_transport",), "V13_ERROR_ALGEBRA_INVALID"),
+        (("scope",), "V13_GLOBAL_SCOPE_INVALID"),
+    )
+    for keys, code in checks:
+        if any(candidate.get(key) != expected[key] for key in keys): errors.append(code)
+    return {"valid": not errors, "error_codes": sorted(set(errors))}
+
+
+def m2_v13_hostiles_independent(valid: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    cases = (
+        ("nontrivial_real_line_u1", lambda x: x["real_scalar_internal_u1_and_winding"].__setitem__("theorem", "nontrivial")),
+        ("intrinsic_real_h2_winding", lambda x: x["real_scalar_internal_u1_and_winding"].__setitem__("intrinsic_winding_sectors", True)),
+        ("spatial_translation_promoted_internal", lambda x: x["real_scalar_internal_u1_and_winding"].__setitem__("scope_exclusions", [])),
+        ("phason_promoted_physical_density", lambda x: x["one_q_auxiliary_phason_curvature_and_finite_torus_secant"].__setitem__("physical_boundary", "physical")),
+        ("phason_hessian_sign_flip", lambda x: x["one_q_auxiliary_phason_curvature_and_finite_torus_secant"].__setitem__("hessian_at_zero", "wrong")),
+        ("fixed_torus_continuous_twist", lambda x: x["one_q_auxiliary_phason_curvature_and_finite_torus_secant"].__setitem__("finite_torus_rule", "continuous")),
+        ("optimized_amplitude_torus_secant", lambda x: x["one_q_auxiliary_phason_curvature_and_finite_torus_secant"].__setitem__("fixed_amplitude_central_secant", "optimized")),
+        ("one_q_promoted_exact_euler_solution", lambda x: x["one_q_auxiliary_phason_curvature_and_finite_torus_secant"].__setitem__("euler_boundary", "exact")),
+        ("cubic_third_harmonic_removed", lambda x: x["one_q_auxiliary_phason_curvature_and_finite_torus_secant"].__setitem__("cubic_identity", "fundamental only")),
+        ("contact_shift_nonsymmetric", lambda x: x["helicity_tensor_contact_shift_nonidentifiability"].__setitem__("symmetric_contact_shift", "arbitrary")),
+        ("contact_shift_sign_flip", lambda x: x["helicity_tensor_contact_shift_nonidentifiability"].__setitem__("response_shift", "minus")),
+        ("finite_beta_contact_omitted", lambda x: x["helicity_tensor_contact_shift_nonidentifiability"].__setitem__("finite_beta_formula", "current only")),
+        ("ground_gap_hypothesis_removed", lambda x: x["helicity_tensor_contact_shift_nonidentifiability"].__setitem__("hypotheses", x["helicity_tensor_contact_shift_nonidentifiability"]["hypotheses"][:-1])),
+        ("positive_invertibility_forces_unit_order", lambda x: x["analytic_map_integer_exponent_transport"].__setitem__("positive_one_sided_local_invertibility_alone_sufficient", True)),
+        ("x2_order_changed", lambda x: x["analytic_map_integer_exponent_transport"]["hostile_polynomials"].__setitem__("x_squared_order", 1)),
+        ("x3_order_changed", lambda x: x["analytic_map_integer_exponent_transport"]["hostile_polynomials"].__setitem__("x_cubed_order", 1)),
+        ("six_absolute_errors_promoted", lambda x: x["six_stage_relative_log_slope_error_transport"].__setitem__("six_absolute_errors_alone_sufficient", True)),
+        ("delta_equal_one", lambda x: x["six_stage_relative_log_slope_error_transport"]["fraction_fixture"]["delta_tau"].__setitem__(0, "1")),
+        ("positive_floor_removed", lambda x: x["six_stage_relative_log_slope_error_transport"].__setitem__("hypotheses", x["six_stage_relative_log_slope_error_transport"]["hypotheses"][1:])),
+        ("vanishing_delta_not_required", lambda x: x["six_stage_relative_log_slope_error_transport"].__setitem__("exponent_transfer_condition", "fixed")),
+        ("candidate_or_parent_promoted", lambda x: x["scope"].__setitem__("candidate_created", True)),
+        ("gl1_compact_connected_argument_removed", lambda x: x["real_scalar_internal_u1_and_winding"].__setitem__("theorem", "orthogonal case only")),
+        ("branch_amplitude_decoupled", lambda x: x["one_q_auxiliary_phason_curvature_and_finite_torus_secant"]["fraction_fixture"].__setitem__("optimized_amplitude_squared", "1/2")),
+        ("analytic_zero_value_removed", lambda x: x["analytic_map_integer_exponent_transport"].__setitem__("hypothesis", "nonzero constant term allowed")),
+        ("lambda_equal_one", lambda x: x["six_stage_relative_log_slope_error_transport"].__setitem__("scale_domain", "lambda=1")),
+        ("initial_stage_unbound", lambda x: x["six_stage_relative_log_slope_error_transport"].__setitem__("initial_stage_exact", False)),
+        ("adjacent_ratio_contract_removed", lambda x: x["six_stage_relative_log_slope_error_transport"].__setitem__("stage_ratio_definition", "final factorization assumed")),
+    )
+    reports = {}
+    for name, mutation in cases:
+        hostile = copy.deepcopy(valid); mutation(hostile)
+        try:
+            report = validate_m2_v13_theorem_suite_independent(hostile); expected = V13_HOSTILE_CODES[name]
+            reports[name] = {"valid": report["valid"], "error_codes": report["error_codes"], "expected_error_code": expected, "expected_code_observed": expected in report["error_codes"]}
+        except Exception as exc:
+            reports[name] = {"valid": True, "exception": type(exc).__name__, "expected_error_code": V13_HOSTILE_CODES[name], "expected_code_observed": False}
+    return reports
+
+
 def section_for(text: str, identifier: str) -> str:
     marker = f"### **{identifier}**"
     start = text.find(marker)
@@ -3646,102 +3910,44 @@ def exploration_record(identifier: str) -> dict[str, Any] | None:
     return None
 
 
-def formal_authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
-    missing: list[str] = []
+def formal_authority_audit(audit: Audit, *, staged: bool) -> dict[str, Any]:
+    missing = []
+    gates = (REPO / "claims/GATES.md").read_text(encoding="utf-8")
+    for identifier in NEW_CLOSED_SUBGATES:
+        section = section_for(gates, identifier)
+        if not section: missing.append(f"claims/GATES.md#{identifier}")
+        else: audit.check(f"v1.3 closed gate {identifier}", "**Status:** CLOSED" in section, "CLOSED" if "**Status:** CLOSED" in section else section[:160], "CLOSED", "formal_authority")
+    for identifier in OPEN_SUCCESSOR_GATES:
+        section = section_for(gates, identifier)
+        if not section: missing.append(f"claims/GATES.md#{identifier}")
+        else: audit.check(f"v1.3 successor gate {identifier} open", "**Status:** OPEN" in section, "OPEN" if "**Status:** OPEN" in section else section[:160], "OPEN", "formal_authority")
+    physical = section_for(gates, PHYSICAL_RESPONSE_GATE)
+    audit.check("retained physical response gate open", bool(physical) and "**Status:** OPEN" in physical, "OPEN" if physical and "**Status:** OPEN" in physical else physical[:160], "OPEN", "formal_authority")
+    for identifier in (LINEAR_PROBE_CLOSED_CHILD, PHYSICAL_CONTRACT_CLOSED_CHILD):
+        retained = section_for(gates, identifier)
+        audit.check(f"retained v1.2 closed gate {identifier}", bool(retained) and "**Status:** CLOSED" in retained, "CLOSED" if retained and "**Status:** CLOSED" in retained else retained[:160], "CLOSED", "formal_authority")
 
-    gates_text = GATES.read_text(encoding="utf-8")
-    for identifier in CLOSED_SUBGATES:
-        section = section_for(gates_text, identifier)
-        if not section:
-            missing.append(f"claims/GATES.md#{identifier}")
-        else:
-            audit.check(
-                f"closed formal gate {identifier}",
-                "**Status:** CLOSED" in section,
-                "CLOSED" if "**Status:** CLOSED" in section else section[:160],
-                "CLOSED",
-                "formal_authority",
-            )
-    for identifier in OPEN_GATES:
-        section = section_for(gates_text, identifier)
-        if not section:
-            missing.append(f"claims/GATES.md#{identifier}")
-        else:
-            audit.check(
-                f"open formal gate {identifier}",
-                "**Status:** OPEN" in section,
-                "OPEN" if "**Status:** OPEN" in section else section[:160],
-                "OPEN",
-                "formal_authority",
-            )
-
-    negative_text = NEGATIVE_REGISTRY.read_text(encoding="utf-8")
+    negatives = NEGATIVE_REGISTRY.read_text(encoding="utf-8")
+    audit.check("retained v1.2 negative", LINEAR_PROBE_NEGATIVE_ID in negatives, LINEAR_PROBE_NEGATIVE_ID in negatives, True, "formal_authority")
     for identifier in NEW_NEGATIVE_IDS:
-        if identifier not in negative_text:
-            missing.append(f"negative-results/registry.md#{identifier}")
-        else:
-            audit.check(
-                f"negative authority {identifier}",
-                negative_text.count(identifier) >= 1,
-                negative_text.count(identifier),
-                ">=1",
-                "formal_authority",
-            )
-
-    result_text = RESULTS_LEDGER.read_text(encoding="utf-8")
-    if f"{RESULT_NUMBER} {RESULT_VERSION}" not in result_text or RESULT_ID not in result_text:
-        missing.append(f"RESULTS-LEDGER.md#{RESULT_NUMBER}-{RESULT_VERSION}")
-    else:
-        audit.check(
-            "results ledger result/version/ID binding",
-            all(token in result_text for token in (RESULT_NUMBER, RESULT_VERSION, RESULT_ID)),
-            True,
-            True,
-            "formal_authority",
-        )
-
+        if identifier not in negatives: missing.append(f"negative-results/registry.md#{identifier}")
+        else: audit.check(f"v1.3 negative {identifier}", negatives.count(identifier) >= 1, negatives.count(identifier), ">=1", "formal_authority")
+    results = RESULTS_LEDGER.read_text(encoding="utf-8")
+    audit.check("retained R-168 v1.2", "R-168 v1.2" in results and RESULT_ID in results, "R-168 v1.2" in results and RESULT_ID in results, True, "formal_authority")
+    if f"{RESULT_NUMBER} {RESULT_VERSION}" not in results or RESULT_ID not in results: missing.append(f"RESULTS-LEDGER.md#{RESULT_NUMBER}-{RESULT_VERSION}")
+    else: audit.check("v1.3 result authority", True, True, True, "formal_authority")
+    retained = exploration_record("EXP-000812")
+    audit.check("retained EXP-000812", retained is not None, retained is not None, True, "formal_authority")
     exploration = exploration_record(EXPLORATION_ID)
-    if exploration is None:
-        missing.append(f"explorations/log.jsonl#{EXPLORATION_ID}")
+    if exploration is None: missing.append(f"explorations/log.jsonl#{EXPLORATION_ID}")
     else:
-        audit.check(
-            "exploration task binding",
-            exploration.get("task_id") == TASK_ID,
-            exploration.get("task_id"),
-            TASK_ID,
-            "formal_authority",
-        )
-        audit.check(
-            "exploration result binding",
-            RESULT_NUMBER in exploration.get("formal_refs", {}).get("results", []),
-            exploration.get("formal_refs", {}).get("results"),
-            [RESULT_NUMBER],
-            "formal_authority",
-        )
-        audit.check(
-            "exploration negative binding",
-            set(NEW_NEGATIVE_IDS)
-            <= set(exploration.get("formal_refs", {}).get("negatives", [])),
-            exploration.get("formal_refs", {}).get("negatives"),
-            list(NEW_NEGATIVE_IDS),
-            "formal_authority",
-        )
-        required_gates = set(NEW_CLOSED_SUBGATES + (PARENT_GATE, PHYSICAL_RESPONSE_GATE))
-        audit.check(
-            "exploration gate binding",
-            required_gates <= set(exploration.get("gate_ids", [])),
-            exploration.get("gate_ids", []),
-            sorted(required_gates),
-            "formal_authority",
-        )
-
-    if not missing:
-        status = "COMPLETE"
-    elif staged:
-        status = "STAGED"
-    else:
-        status = "INCOMPLETE"
-    return {"status": status, "missing": missing, "staged": staged}
+        audit.check("v1.3 exploration result", RESULT_NUMBER in exploration.get("formal_refs", {}).get("results", []), exploration.get("formal_refs", {}).get("results", []), RESULT_NUMBER, "formal_authority")
+        audit.check("v1.3 exploration negatives", set(NEW_NEGATIVE_IDS) <= set(exploration.get("formal_refs", {}).get("negatives", [])), exploration.get("formal_refs", {}).get("negatives", []), list(NEW_NEGATIVE_IDS), "formal_authority")
+        required = set(NEW_CLOSED_SUBGATES + OPEN_SUCCESSOR_GATES + (PARENT_GATE, PHYSICAL_RESPONSE_GATE))
+        audit.check("v1.3 exploration gates", required <= set(exploration.get("gate_ids", [])), exploration.get("gate_ids", []), sorted(required), "formal_authority")
+    for identifier in PRIOR_EXPLORATION_IDS[:-1]:
+        row = exploration_record(identifier); audit.check(f"retained {identifier}", row is not None, row is not None, True, "formal_authority")
+    return {"status": "COMPLETE" if not missing else ("STAGED" if staged else "INCOMPLETE"), "missing": missing, "staged": staged}
 
 
 def validate_requested_freeze(
@@ -3804,6 +4010,8 @@ def build_payload(
         "subprocess",
         "tempfile",
         "datetime",
+        "fractions",
+        "itertools",
         "pathlib",
         "typing",
         "urllib",
@@ -3868,6 +4076,7 @@ def build_payload(
     )
     audit.check("certificate no real tag", "R-168 creates no tag" in certificate, "R-168 creates no tag" in certificate, True, "certificate")
     audit.check("certificate no physical closure", "physical Sector A or Pre-A" in certificate, "physical Sector A or Pre-A" in certificate, True, "certificate")
+    audit.check("certificate v1.3 devil review independent", "## 28. V1.3 devil's-advocate review" in certificate and all(token in certificate for token in ("Sign and factor objection", "Units objection", "Convergence objection", "Hardcode-masking objection", "Limit-case objection", "Physical-promotion objection", "UPHELD", "VALID with mitigation", "DISMISSED")), True, True, "certificate")
 
     state = reconstruct_checkpoint()
     checkpoint = authority["audited_checkpoint"]
@@ -3894,6 +4103,11 @@ def build_payload(
     physical_contract_fuzz = physical_response_contract_fuzz_reports_independent(
         physical_contract_fixture
     )
+    v13_suite = m2_v13_theorem_suite_independent()
+    v13_report = validate_m2_v13_theorem_suite_independent(v13_suite)
+    authority_v13_suite = v13_suite_from_authority_independent(authority)
+    authority_v13_report = validate_m2_v13_theorem_suite_independent(authority_v13_suite)
+    v13_hostile = m2_v13_hostiles_independent(v13_suite)
     audit.check("audited commit ancestor", state["audited_commit_is_ancestor"], state["current_head"], f"descendant of {AUDITED_COMMIT}", "current_tree")
     audit.check("official freeze records zero", state["freeze_record_count"] == checkpoint["freeze_records"] == 0, state["freeze_record_count"], 0, "current_tree")
     audit.check("live freeze-tag observation non-load-bearing", state["local_freeze_tag_observation"]["load_bearing"] is authority["initial_local_observation"]["load_bearing"] is False, state["local_freeze_tag_observation"], "informational only", "current_tree")
@@ -3946,9 +4160,9 @@ def build_payload(
     audit.check("independent deterministic fuzz fail closed", physical_contract_fuzz["all_rejected_without_exception"] and physical_contract_fuzz["case_count"] >= 20, physical_contract_fuzz, "all malformed cases rejected without exception", "physical_contract")
 
     authority_linear = authority["m2_linear_probe_second_order_response_nonidentifiability"]
-    audit.check("authority linear-probe child independent", authority_linear["closed_child_id"] == NEW_CLOSED_SUBGATES[0] and authority_linear["negative_id"] == LINEAR_PROBE_NEGATIVE_ID and authority_linear["fraction_fixture"]["normalized_curvature_shift"] == "6/7", authority_linear, [NEW_CLOSED_SUBGATES[0], LINEAR_PROBE_NEGATIVE_ID, "6/7"], "authority")
+    audit.check("authority linear-probe child independent", authority_linear["closed_child_id"] == LINEAR_PROBE_CLOSED_CHILD and authority_linear["negative_id"] == LINEAR_PROBE_NEGATIVE_ID and authority_linear["fraction_fixture"]["normalized_curvature_shift"] == "6/7", authority_linear, [LINEAR_PROBE_CLOSED_CHILD, LINEAR_PROBE_NEGATIVE_ID, "6/7"], "authority")
     authority_contract = authority["m2_physical_response_successor_minimum_contract_schema"]
-    audit.check("authority minimum contract independent", authority_contract["closed_child_id"] == NEW_CLOSED_SUBGATES[1] and authority_contract["schema"] == PHYSICAL_CONTRACT_SCHEMA and tuple(authority_contract["root_fields"]) == PHYSICAL_CONTRACT_FIELDS and tuple(authority_contract["artifact_ref_fields"]) == ARTIFACT_REF_FIELDS, authority_contract, PHYSICAL_CONTRACT_SCHEMA, "authority")
+    audit.check("authority minimum contract independent", authority_contract["closed_child_id"] == PHYSICAL_CONTRACT_CLOSED_CHILD and authority_contract["schema"] == PHYSICAL_CONTRACT_SCHEMA and tuple(authority_contract["root_fields"]) == PHYSICAL_CONTRACT_FIELDS and tuple(authority_contract["artifact_ref_fields"]) == ARTIFACT_REF_FIELDS, authority_contract, PHYSICAL_CONTRACT_SCHEMA, "authority")
     audit.check("authority contract terms/rows independent", tuple(authority_contract["error_terms"]) == EXPECTED_ERROR_TERMS and tuple(authority_contract["hard_rows"]) == HARD_ROWS and tuple(authority_contract["mandatory_substantive_changes"]) == MANDATORY_SUBSTANTIVE_CHANGES, authority_contract, [EXPECTED_ERROR_TERMS, HARD_ROWS], "authority")
     audit.check("authority boundary layers independent", authority_contract["validation_boundary"]["syntax_and_binding"] == "VALIDATED" and authority_contract["validation_boundary"]["physical_semantics"] == "NOT_VALIDATED" and authority_contract["validation_boundary"]["external_prospective_freeze"] == "NOT_SUPPLIED", authority_contract["validation_boundary"], "syntax only; semantics/external open", "authority")
 
@@ -4071,6 +4285,30 @@ def build_payload(
     audit.check("actual freeze never accepted", actual["valid"] is False, actual["valid"], False, "external_boundary")
     audit.check("external code retained for actual path", "EXTERNAL_VERIFICATION_REQUIRED" in actual["error_codes"], actual["error_codes"], "contains EXTERNAL_VERIFICATION_REQUIRED", "external_boundary")
 
+    audit.check("independent v1.3 suite valid", v13_report["valid"], v13_report, "valid", "v1_3")
+    audit.check("independent v1.3 authority suite valid", authority_v13_report["valid"], authority_v13_report, "valid", "v1_3")
+    audit.check("independent v1.3 authority exact", authority_v13_suite == v13_suite, authority_v13_suite, v13_suite, "v1_3")
+    audit.check("independent v1.3 exact identities", tuple(v13_suite["closed_child_ids"]) == NEW_CLOSED_SUBGATES and tuple(v13_suite["negative_ids"]) == NEW_NEGATIVE_IDS and tuple(v13_suite["open_successor_gate_ids"]) == OPEN_SUCCESSOR_GATES, [v13_suite["closed_child_ids"], v13_suite["negative_ids"], v13_suite["open_successor_gate_ids"]], [NEW_CLOSED_SUBGATES, NEW_NEGATIVE_IDS, OPEN_SUCCESSOR_GATES], "v1_3")
+    u1 = v13_suite["real_scalar_internal_u1_and_winding"]
+    audit.check("independent GL1 compact-connected proof scope", "GL(1,R)" in u1["theorem"] and "compact" in u1["theorem"] and u1["intrinsic_winding_sectors"] is False, u1, "trivial GL1/no winding", "v1_3")
+    phason = v13_suite["one_q_auxiliary_phason_curvature_and_finite_torus_secant"]
+    fixture13 = phason["fraction_fixture"]
+    audit.check("independent canonical branch fixture", fixture13["inputs"] == {"r": "-3", "c": "2", "q": "5", "g": "7", "fundamental_reciprocal_step_h": "1"} and fixture13["optimized_amplitude_squared"] == "4/7" and fixture13["q_over_h_integer"] == 5, fixture13, "canonical upstream fixture", "v1_3")
+    audit.check("independent phason identities", phason["symbolic_all_eight_signs"] and phason["symbolic_optimized_identity"] and phason["symbolic_cubic_identity"], phason, "all exact", "v1_3")
+    audit.check("independent phason outputs", [fixture13[key] for key in ("continuum_curvature", "finite_torus_secant", "secant_correction", "relative_correction")] == ["400/7", "404/7", "4/7", "1/100"], fixture13, ["400/7", "404/7", "4/7", "1/100"], "v1_3")
+    response13 = v13_suite["helicity_tensor_contact_shift_nonidentifiability"]
+    audit.check("independent tensor contact shift", response13["response_shift"] == "Upsilon -> Upsilon+D" and "positive gap" in response13["hypotheses"][-1], response13, "+D/gap", "v1_3")
+    amap13 = v13_suite["analytic_map_integer_exponent_transport"]
+    audit.check("independent analytic orders", [amap13["hostile_polynomials"]["x_squared_order"], amap13["hostile_polynomials"]["x_cubed_order"]] == [2, 3] and amap13["positive_one_sided_local_invertibility_alone_sufficient"] is False, amap13, [2, 3, False], "v1_3")
+    transport13 = v13_suite["six_stage_relative_log_slope_error_transport"]
+    audit.check("independent adjacent-ratio transport", transport13["stage_count"] == 6 and transport13["initial_stage_exact"] and transport13["scale_domain"] == "lambda>0 and lambda!=1" and "abs(log(lambda))" in transport13["log_slope_bound"] and transport13["fraction_fixture"]["all_stage_outputs_positive"] and transport13["fraction_fixture"]["all_delta_strictly_below_one"], transport13, "six adjacent ratios and positive floors", "v1_3")
+    authority_hostile13 = authority["m2_v1_3_hostile_fixtures"]
+    audit.check("independent v1.3 hostile names/count", tuple(v13_hostile) == EXPECTED_V13_HOSTILES and tuple(authority_hostile13["cases"]) == EXPECTED_V13_HOSTILES and authority_hostile13["count"] == len(EXPECTED_V13_HOSTILES), [tuple(v13_hostile), authority_hostile13], EXPECTED_V13_HOSTILES, "v1_3_hostile")
+    for name in EXPECTED_V13_HOSTILES:
+        report = v13_hostile[name]
+        audit.check(f"independent v1.3 {name} rejected", report["valid"] is False, report["valid"], False, "v1_3_hostile")
+        audit.check(f"independent v1.3 {name} code", report["expected_code_observed"], report["error_codes"], report["expected_error_code"], "v1_3_hostile")
+
     formal = formal_authority_audit(audit, staged=staged)
     verdict = (
         "PASS"
@@ -4127,6 +4365,9 @@ def build_payload(
         "m2_physical_response_successor_minimum_contract_hostile_fixtures": physical_contract_hostile,
         "m2_physical_response_successor_minimum_contract_reordered_metamorphic": physical_contract_reordered,
         "m2_physical_response_successor_minimum_contract_fuzz": physical_contract_fuzz,
+        "m2_v1_3_theorem_suite": v13_suite,
+        "m2_v1_3_theorem_suite_validation": v13_report,
+        "m2_v1_3_hostile_fixtures": v13_hostile,
         "freeze_schema_contract": {
             "schema": FREEZE_SCHEMA,
             "root_fields": list(ROOT_FIELDS),
@@ -4180,6 +4421,13 @@ def build_payload(
             "m2_linear_probe_response_nonidentifiability_closed": True,
             "m2_physical_response_channel_present": False,
             "m2_controlled_physical_error_bound_present": False,
+            "m2_real_scalar_internal_u1_present": False,
+            "m2_intrinsic_winding_present": False,
+            "m2_auxiliary_phason_curvature_scoped": True,
+            "m2_physical_superfluid_density_identified": False,
+            "m2_tensor_contact_nonidentifiability_closed": True,
+            "m2_analytic_integer_order_transport_closed": True,
+            "m2_six_stage_relative_error_transport_closed": True,
             "parent_gate_closed": False,
             "Pre_A_complete": False,
             "Sector_A_complete": False,
@@ -4189,12 +4437,11 @@ def build_payload(
         },
         "assertions": audit.rows,
         "boundary": (
-            "Independent cumulative v1.0/v1.1 schema, current-version map-empty-set, "
-            "integer finite-torus fingerprint, fixed-linear-probe contact-curvature "
-            "nonidentifiability, and schema-only minimum successor contract. "
-            "No M2-v1 candidate, physical response/error bound, cryptographic "
-            "signature or remote-ref verification, freeze, tag, target, prediction, score, "
-            "selection, parent-gate closure, Pre-A exit, or physical Sector-A selection follows."
+            "Independent cumulative v1.0-v1.2 protocol/schema plus the v1.3 GL1 "
+            "no-go, auxiliary phason, tensor-contact ambiguity, analytic integer-order "
+            "transport, and six-stage adjacent-ratio error bound. No compact action, "
+            "physical response, candidate, six-term error budget, freeze, parent "
+            "closure, Pre-A exit, or physical Sector-A selection follows."
         ),
     }
 

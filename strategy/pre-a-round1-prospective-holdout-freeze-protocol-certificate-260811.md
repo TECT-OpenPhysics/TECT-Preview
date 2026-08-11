@@ -1,25 +1,24 @@
-# R-168 v1.2 certificate: prospective holdout protocol, linear-probe nonidentifiability, and minimum response contract
+# R-168 v1.3 certificate: prospective holdout protocol and scoped M2 response-map theorems
 
-- **Explorations retained:** `EXP-000807`; validator hardening correction `EXP-000808`; map/fingerprint extension `EXP-000810`
-- **Additive exploration:** `EXP-000812`
-- **Result:** `R-168`, version `v1.2`
+- **Explorations retained:** `EXP-000807`, `EXP-000808`, `EXP-000810`, `EXP-000812`
+- **Additive exploration:** `EXP-000814`
+- **Result:** `R-168`, version `v1.3`
 - **Stable result ID:** `PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT`
 - **Claim context:** `C6-SPACETIME-SIGNATURE`
 - **Task:** `T-054`
 - **Tier:** `T0`, `claim_bearing: false`
 - **Date:** 2026-08-11
 
-R-168 v1.2 is cumulative: sections 1--8 retain the v1.0 protocol and audit, sections 9--15 retain the v1.1 current-version map audit, M2 fingerprint, and combined checkpoint, and sections 16--19 add the exact fixed-linear-probe curvature theorem and a hardened minimum physical-response successor schema whose formal authority is now registered in its exact syntactic and declared-binding scope. It does not issue a candidate, prediction, target, or freeze.  The retained v1.0 layer closes the protocol layer
-needed before a future blind Pre-A holdout can be issued and audits the exact
-registered state at commit `99157442831c0e44d425b5d5f8cd78856c57da53`.
-At that checkpoint there are no official freeze records, no admitted
-microscopic survivors, and no admitted M1, M2 or M5
-microscopic-map/prediction pair.  The parent prospective-evidence gate
-therefore remains open.  The initially observed local `freeze/*` tag count is
-reported separately as a non-load-bearing live observation, not as an
-audited-commit fact or a historical PASS condition.
+R-168 v1.3 is cumulative. Sections 1--20 retain every v1.0--v1.2
+protocol, current-version audit, fingerprint, nonidentifiability, schema, and
+issued v1.2 checkpoint statement. Sections 21--27 add five narrowly scoped
+mathematical children and four named shortcut rejections. They create no M2-v1
+candidate, physical response, target, prediction, freeze, or claim-tier change.
+The audited current-tree checkpoint remains commit
+`99157442831c0e44d425b5d5f8cd78856c57da53`; its zero freeze-record and zero
+admitted-survivor facts remain unchanged.
 
-The current cumulative closed-subgate set, after the staged authorities were registered, is exactly:
+The cumulative closed-child list used by this proof-first package is exactly:
 
 1. `PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA`;
 2. `PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL`;
@@ -27,17 +26,25 @@ The current cumulative closed-subgate set, after the staged authorities were reg
 4. `PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT`;
 5. `PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET`;
 6. `PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT`;
-7. `PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY`; and
-8. `PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA`.
+7. `PA-M2-CI8-LINEAR-PROBE-SECOND-ORDER-RESPONSE-NONIDENTIFIABILITY`;
+8. `PA-M2-CI8-PHYSICAL-RESPONSE-SUCCESSOR-MINIMUM-CONTRACT-SCHEMA`;
+9. `PA-M2-CI8-V0-REAL-SCALAR-INTERNAL-U1-TRIVIALITY-AND-NO-INTRINSIC-WINDING`;
+10. `PA-M2-CI8-ONE-Q-AUXILIARY-PHASON-CURVATURE-AND-FINITE-TORUS-SECANT`;
+11. `PA-M2-CI8-HELICITY-TENSOR-CONTACT-SHIFT-NONIDENTIFIABILITY`;
+12. `PA-M2-CI8-ANALYTIC-MAP-INTEGER-EXPONENT-TRANSPORT`; and
+13. `PA-M2-CI8-SIX-STAGE-RELATIVE-LOG-SLOPE-ERROR-TRANSPORT`.
 
-The following gates remain open:
+The complete open-gate list is:
 
 - `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE`;
 - `PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER`;
 - `PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT`;
 - `PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION`;
-- `PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION`; and
-- `PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND`.
+- `PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION`;
+- `PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND`;
+- `PA-M2-SUCCESSOR-SUBSTANTIVE-COMPACT-ACTION-BACKGROUND-PROBE-AND-WINDING-LAW`;
+- `PA-M2-SUCCESSOR-ORDERED-STATE-PHYSICAL-MODE-AND-RESPONSE-LIMIT`; and
+- `PA-M2-SUCCESSOR-SIX-TERM-CRITICAL-ESTIMAND-ERROR-BUDGET`.
 
 ## 1. Objects that must be frozen separately
 
@@ -887,3 +894,395 @@ issues and strictly verifies only the scoped R-167 v2.1 and R-168 v1.2
 children. The physical-response, external-prospective-freeze, common-alpha,
 many-edge rank-two/QPS, broken-sector GNS-gap, Round-1, C6, CP1, physical
 Sector A, and Pre-A parents remain **OPEN**.
+
+## 21. R-168 v1.3 additive scope
+
+The additive exploration is `EXP-000814`. The five new children are T0,
+`claim_bearing: false`, and are closed only in the exact statements below.
+They do not change the retained physical-response gate or any Round-1, C6,
+CP1, physical Sector-A, or Pre-A parent. The four additive negative IDs are:
+
+1. `NG-2026-08-11-PRE-A-M2-V0-ONE-REAL-SCALAR-AUTOMATIC-INTERNAL-U1-WINDING-AND-HELICITY`;
+2. `NG-2026-08-11-PRE-A-M2-ONE-Q-PHASON-AUTOMATIC-PHYSICAL-SUPERFLUID-DENSITY`;
+3. `NG-2026-08-11-PRE-A-M2-POSITIVE-LOCAL-INVERTIBILITY-AUTOMATIC-UNIT-EXPONENT`; and
+4. `NG-2026-08-11-PRE-A-M2-SIX-ABSOLUTE-ERRORS-AUTOMATIC-LOG-SLOPE-CONTROL`.
+
+## 22. Real one-dimensional internal U(1) and raw-field topology
+
+Let
+
+\[
+ \rho:U(1)\longrightarrow GL(1,\mathbb R)=\mathbb R^*
+\]
+
+be a continuous pointwise linear representation. Its image is compact and
+connected, contains 1, and therefore lies in the positive component
+`R_{>0}`. The logarithm sends the image to a compact additive subgroup of
+`R`. A nonzero additive subgroup contains all integer multiples of one of its
+nonzero elements and is unbounded. Hence the logarithmic image is `{0}` and
+`rho` is trivial. The familiar `O(1)={-1,+1}` conclusion is a corollary, not
+the theorem's full scope.
+
+The raw real Sobolev configuration space `H^2(T^3;R)` is a topological vector
+space and has the explicit contraction
+
+\[
+ C_s(\phi)=(1-s)\phi,\qquad 0\le s\le1.
+\]
+
+It therefore has no intrinsic winding sectors as a raw real-field target.
+This statement does not cover a spatial translation phase of a patterned
+state, an emergent complex or two-component amplitude, a defect-complement
+configuration space, or an externally supplied compact field. Thus it does
+not produce helicity or a physical superfluid response.
+
+## 23. One-Q auxiliary curvature and the periodic-torus secant
+
+Take `c>0`, `q>0`, a sign vector with $s_i\in\{-1,+1\}$, and the trial family
+
+\[
+ \phi(x)=A\cos((q s+a)\cdot x),\qquad
+ S(a)=\sum_i(2s_iqa_i+a_i^2)^2.
+\]
+
+Its averaged trial density is
+
+\[
+ f(A,a)={A^2\over4}\{r+cS(a)\}+{3gA^4\over32}.
+\]
+
+On the ordered branch `g>0` and `r+cS(a)<0`, exact minimization over
+`A^2` gives
+
+\[
+ A_*^2=-{4(r+cS(a))\over3g},\qquad
+ f_{\min}(a)=-{(r+cS(a))^2\over6g}.
+\]
+
+Since every `s_i^2=1`, all mixed second derivatives vanish at zero and
+
+\[
+ \operatorname{Hess}_a f_{\min}(0)
+ =-{8rcq^2\over3g}I_3.
+\]
+
+This continuous derivative is an auxiliary Bloch, supercell, or
+thermodynamic curvature. At fixed periodic torus size define the fundamental
+reciprocal step
+
+\[
+ h={2\pi\over L},\qquad q=m h,\quad m\in\mathbb N_{\ge1}.
+\]
+
+Only integer multiples of `h` are allowed shifts. At fixed amplitude `A_0`,
+the central secant along a coordinate is
+
+\[
+ {f(A_0,h e_i)+f(A_0,-h e_i)-2f(A_0,0)\over h^2}
+ ={cA_0^2\over2}(4q^2+h^2).
+\]
+
+The fixed-amplitude continuum curvature, finite-step excess, and relative
+correction are respectively
+
+\[
+ 2cA_0^2q^2,\qquad {cA_0^2h^2\over2},\qquad
+ {h^2\over4q^2}={1\over4m^2}.
+\]
+
+The canonical upstream fixture is
+
+```text
+r=-3, c=2, q=5, g=7, h=1, m=q/h=5.
+```
+
+It derives, rather than inserts,
+
+```text
+A_*^2=-4r/(3g)=4/7,
+continuum curvature=400/7,
+finite-torus secant=404/7,
+excess=4/7,
+relative correction=1/100.
+```
+
+The independent verifier expands
+`cos(theta)=(z+z^-1)/2` three times and obtains Laurent coefficients
+`{-3:1/8,-1:3/8,1:3/8,3:1/8}`. Equivalently,
+
+\[
+ \cos^3\theta={3\cos\theta+\cos3\theta\over4}.
+\]
+
+Thus the cubic Euler equation generates a `3k harmonic` for `g*A != 0`.
+The one-Q family is a variational trial and is not automatically an exact
+Euler solution. Its auxiliary phason stiffness is not an internal-U(1)
+helicity modulus or physical superfluid density.
+
+## 24. Finite-regulator tensor response and contact nonidentifiability
+
+For a finite-volume, finite-regulator norm-C2 family
+
+\[
+ H(A)=H_0-\sum_i A_iJ_i+{1\over2}\sum_{ij}A_iT_{ij}A_j,
+ \qquad T_{ij}=T_{ji},
+\]
+
+the finite-beta free-energy Hessian is
+
+\[
+ \Upsilon^{(\beta)}_{ij}={1\over V}
+ \left(\langle T_{ij}\rangle_\beta-
+ \int_0^\beta\langle\delta J_i(-i\tau)\delta J_j\rangle_\beta\,d\tau\right).
+\]
+
+For an isolated simple ground state with positive gap, analytic perturbation
+gives
+
+\[
+ \Upsilon^{(0)}_{ij}={1\over V}\left(
+ \langle0|T_{ij}|0\rangle-2\operatorname{Re}\sum_{n>0}
+ {\langle0|J_i|n\rangle\langle n|J_j|0\rangle\over E_n-E_0}
+ \right).
+\]
+
+For any target-blind real symmetric matrix `D`, the replacement
+
+\[
+ T_{ij}\mapsto T_{ij}+VD_{ij}I
+\]
+
+leaves `H_0`, every `J_i`, and the zero-source state and spectrum fixed, while
+shifting `Upsilon` by exactly `D`: `Upsilon+D`. Therefore even the full linear
+probe tensor does not identify the physical response until the quadratic
+contact/background convention is supplied. These are future finite-regulator
+formulas, not a present Lane-Q compact action, winding law, ordered state, or
+physical response.
+
+## 25. Analytic response-map integer exponent transport
+
+Assume a positive linear critical input
+
+\[
+ \kappa(\tau)=C\tau(1+o(1)),\qquad C>0,
+\]
+
+and an analytic response with `R(0)=0` and first nonzero Taylor order
+`n>=1`:
+
+\[
+ R(\kappa)=b_n\kappa^n+O(\kappa^{n+1}),
+ \qquad b_n>0,\quad n\in\mathbb N_{>0}.
+\]
+
+Then
+
+\[
+ R(\kappa(\tau))=b_nC^n\tau^n(1+o(1)).
+\]
+
+The transported exponent is the positive integer `n`. The unit exponent
+requires `n=1`; a sufficient local-diffeomorphism hypothesis is
+`R(0)=0` and `R'(0)>0` with `R` C1 (or analytic) through zero. Positive
+one-sided local invertibility alone is insufficient: `x^2` is positive and
+invertible on `[0,epsilon)`, while `x^3` is locally invertible through zero,
+but their leading orders are two and three.
+
+## 26. Six-stage adjacent-ratio relative log-slope transport
+
+Fix `lambda>0`, `lambda!=1`, and both scales
+`s in {tau,lambda*tau}`. Let exact and approximate stage outputs
+`R_0(s),...,R_6(s)` and `Rhat_0(s),...,Rhat_6(s)` be strictly positive, with
+`Rhat_0(s)=R_0(s)`. Define adjacent ratios
+
+\[
+ g_j(s)={R_j(s)\over R_{j-1}(s)},\qquad
+ \widehat g_j(s)={\widehat R_j(s)\over\widehat R_{j-1}(s)}.
+\]
+
+Suppose each exact ratio has a load-bearing positive floor
+`g_j(s)>=m_j(s)>0`, and
+
+\[
+ |\widehat g_j(s)-g_j(s)|\le\epsilon_j(s),\qquad
+ \delta_j(s)={\epsilon_j(s)\over m_j(s)}<1.
+\]
+
+Then `|ghat_j/g_j-1|<=delta_j`; telescoping, rather than assumption, gives the
+six-factor final ratio for `X(s)=R_6(s)` and `Xhat(s)=Rhat_6(s)`. Consequently
+
+\[
+ L=\prod_{j=1}^6{1-\delta_j(\lambda\tau)\over1+\delta_j(\tau)}
+ \le {\widehat X(\lambda\tau)/\widehat X(\tau)
+       \over X(\lambda\tau)/X(\tau)}
+ \le
+ U=\prod_{j=1}^6{1+\delta_j(\lambda\tau)\over1-\delta_j(\tau)}.
+\]
+
+With
+
+\[
+ \nu_\lambda(\tau)={\log(X(\lambda\tau)/X(\tau))\over\log\lambda}
+\]
+
+and the analogous `nuhat`,
+
+\[
+ |\widehat\nu_\lambda(\tau)-\nu_\lambda(\tau)|
+ \le {\max\{-\log L,\log U\}\over|\log\lambda|}.
+\]
+
+Exponent transfer needs every `delta_j(tau)` and
+`delta_j(lambda*tau)` to tend to zero. Six absolute errors alone do not give
+this: `X(tau)=tau` and `Xhat(tau)=tau+epsilon` have a fixed absolute-error
+bound, while the dyadic log slope of `Xhat` tends to zero and that of `X` is
+one.
+
+## 27. Proof-first staging and no-overclaim boundary
+
+At this exact four-file stage, the verifier's `--staged --no-store` path must
+report the following new formal authorities as missing while retaining every
+v1.2 authority:
+
+1. `claims/GATES.md#PA-M2-CI8-V0-REAL-SCALAR-INTERNAL-U1-TRIVIALITY-AND-NO-INTRINSIC-WINDING`;
+2. `claims/GATES.md#PA-M2-CI8-ONE-Q-AUXILIARY-PHASON-CURVATURE-AND-FINITE-TORUS-SECANT`;
+3. `claims/GATES.md#PA-M2-CI8-HELICITY-TENSOR-CONTACT-SHIFT-NONIDENTIFIABILITY`;
+4. `claims/GATES.md#PA-M2-CI8-ANALYTIC-MAP-INTEGER-EXPONENT-TRANSPORT`;
+5. `claims/GATES.md#PA-M2-CI8-SIX-STAGE-RELATIVE-LOG-SLOPE-ERROR-TRANSPORT`;
+6. `claims/GATES.md#PA-M2-SUCCESSOR-SUBSTANTIVE-COMPACT-ACTION-BACKGROUND-PROBE-AND-WINDING-LAW`;
+7. `claims/GATES.md#PA-M2-SUCCESSOR-ORDERED-STATE-PHYSICAL-MODE-AND-RESPONSE-LIMIT`;
+8. `claims/GATES.md#PA-M2-SUCCESSOR-SIX-TERM-CRITICAL-ESTIMAND-ERROR-BUDGET`;
+9. `negative-results/registry.md#NG-2026-08-11-PRE-A-M2-V0-ONE-REAL-SCALAR-AUTOMATIC-INTERNAL-U1-WINDING-AND-HELICITY`;
+10. `negative-results/registry.md#NG-2026-08-11-PRE-A-M2-ONE-Q-PHASON-AUTOMATIC-PHYSICAL-SUPERFLUID-DENSITY`;
+11. `negative-results/registry.md#NG-2026-08-11-PRE-A-M2-POSITIVE-LOCAL-INVERTIBILITY-AUTOMATIC-UNIT-EXPONENT`;
+12. `negative-results/registry.md#NG-2026-08-11-PRE-A-M2-SIX-ABSOLUTE-ERRORS-AUTOMATIC-LOG-SLOPE-CONTROL`;
+13. `RESULTS-LEDGER.md#R-168-v1.3`; and
+14. `explorations/log.jsonl#EXP-000814`.
+
+`v1_3_checkpoint_synthesis` is `DEFERRED`: source, PDF, hashes, and page count
+are all null. This package creates no run JSON, formal ledger entry, generated
+surface, integrated-verifier update, PDF, changelog event, commit, or tag.
+
+The three successor gates remain open for, respectively: a substantive compact
+action/background probe/winding law; an ordered-state physical-mode quotient
+and response limit; and a six-term critical-estimand error budget whose
+relative errors vanish in the required scaling limit. The current
+`PA-M2-CI8-RS-DISPERSION-MAP-v1` remains DESIGN_ONLY and NOT_CREATED.
+R-168 creates no tag. No cryptographic custodian-signature check, remote
+verification, physical superfluid response, candidate, prediction, Round-1
+closure, C6, CP1, physical Sector A or Pre-A conclusion follows.
+
+## 28. V1.3 devil's-advocate review
+
+The following review is load-bearing for the numerical and asymptotic
+statements above.
+
+1. **Sign and factor objection -- DISMISSED for the auxiliary theorem.** A
+   sign error in `S(a)`, the amplitude minimization, or the central secant
+   would change the Hessian or the `400/7` oracle. The primary engine
+   differentiates all eight sign choices symbolically. The independent engine
+   extracts the quadratic coefficient of
+   `(2*s_i*q*a_i+a_i^2)^2`, differentiates the minimized polynomial, expands
+   the Laurent cube, and derives the plus/minus secant before comparing with
+   the oracles. Both obtain `-8*r*c*q^2/(3*g)`, the secant factor `1/2`, and
+   Laurent coefficients `1/8,3/8,3/8,1/8`.
+
+2. **Tensor sign and contact-convention objection -- VALID with mitigation.**
+   This certificate defines `Upsilon=+V^-1 Hess_A F`. A susceptibility written
+   with the opposite sign changes the displayed current-current sign. The
+   theorem therefore freezes the positive free-energy-curvature convention,
+   includes the contact `T_ij`, and claims only the invariant shift
+   `Upsilon -> Upsilon+D`. It does not identify that tensor with a measured
+   helium response.
+
+3. **Units objection -- VALID with mitigation.** The quantities `q` and `h`
+   both have inverse-length units; `m=q/h` and `h^2/(4q^2)` are dimensionless.
+   The continuum curvature and secant share the units of `c*A_0^2*q^2`.
+   No map from these auxiliary units to a physical helicity or superfluid
+   density unit has been supplied, so the physical-response successor remains
+   open.
+
+4. **Finite-torus, amplitude, and limit-order objection -- VALID with
+   mitigation.** Continuous `a` does not preserve a fixed periodic torus.
+   Section 23 uses only reciprocal-lattice shifts there and explicitly keeps
+   `A_0` fixed. Reoptimizing the amplitude defines a different finite-step
+   observable. The continuous optimized Hessian is therefore labelled
+   Bloch/supercell/thermodynamic auxiliary, not a fixed-torus response.
+
+5. **Convergence objection -- UPHELD.** The identity
+   `h^2/(4q^2)=1/(4m^2)` tends to zero as `m` grows, but this package proves no
+   thermodynamic, regulator-removal, ordered-state, or physical-response limit.
+   Likewise the six-stage exponent transfers only when every relative
+   `delta_j` at both scales tends to zero. These missing limits remain in the
+   three open successor gates.
+
+6. **Hardcode-masking objection -- DISMISSED for the exact fixture.** The only
+   fixture inputs are `r=-3,c=2,q=5,g=7,h=1`. Both engines derive
+   `A_*^2=-4r/(3g)`, then the curvature, secant, excess, and relative correction.
+   The strings `4/7`, `400/7`, `404/7`, `4/7`, and `1/100` are explicit test
+   oracles, not pasted computational intermediates. The independent engine
+   imports neither the primary module nor its result JSON.
+
+7. **Limit-case objection -- DISMISSED or retained exactly as scoped.** For
+   `r>=0` the zero-shear ordered branch condition fails, so no positive
+   `A_*^2` conclusion is made. As `h->0` the algebraic secant excess vanishes,
+   but the physical limit remains UPHELD as missing. For `0<lambda<1` the
+   error bound uses `abs(log(lambda))`; `lambda=1` is excluded. As any
+   `delta_j->1`, the denominator bound degenerates and exponent transport is
+   not asserted. If `R'(0)=0`, the analytic order can be `n>1`; `x^2` and
+   `x^3` are the hostile witnesses against automatic unit exponent.
+
+8. **Physical-promotion objection -- UPHELD.** Nothing here supplies a compact
+   action, background probe, winding law, selected ordered state, physical-mode
+   quotient, response limit, six-term vanishing error budget, admitted map, or
+   prospective freeze. Therefore no physical superfluid-density, Round-1,
+   C6, CP1, physical Sector-A, or Pre-A closure follows.
+
+External review is invited specifically on the Kubo sign convention, the
+fixed-amplitude versus reoptimized finite-torus distinction, and the
+load-bearing adjacent-ratio factorization.
+
+## 29. Combined R-167 v2.2 / R-168 v1.3 gate-level checkpoint issuance
+
+The historical proof-first sentence `No v1.3 PDF or run JSON is created` applies only to
+the earlier four-file staging batch and is retained above as stage provenance.
+It is superseded for the current result by this single gate-level issuance; no
+per-lemma or intermediate PDF was issued.
+
+- Source:
+  claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.tex.txt
+  (33097 bytes; raw SHA-256
+  9eea5a425cef38c8741f40d000dc10ac46430598f62a1d55313748de35c277e3).
+- PDF:
+  claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.pdf
+  (415191 bytes; raw SHA-256
+  5ae80a7c5dd3f724411ee1b95fbf4db330f85123a4c3058a72f71900af9fdbf7;
+  11 pages; 129.247 seconds newer than the source).
+- R-167 primary: 253/253; raw script SHA-256
+  d9d65080f84c0408200ba64c81449263cfd87095d8bdf1620211bc6fab6d1058.
+- R-167 non-importing independent: 154/154; raw script SHA-256
+  74dc4a8758d204587963c4e41e720902fd0b66931c35024f7784adaaa09d0b38.
+- R-167 integrated: 279/279; raw script SHA-256
+  5985f84cdb427d1fb3b3ab8de49e025c0ef3b0767e4462879eaa77e5907ba1bc.
+- R-168 primary: 423/423; raw script SHA-256
+  69a9486b060c711679314806b302af85652c6d8317fccebba83578b5b2d397a9.
+- R-168 non-importing independent: 446/446; raw script SHA-256
+  6b100dd08e3daac385fc67fa5627f0c9f8c5d9ff8aa2a416d30018e72a033c26.
+- R-168 integrated: 349/349; raw script SHA-256
+  34af34a2bb45c50b68af0db88dfaf51004c3ab33d49c2c38464dd2fbed4f618e.
+- Extraction and render QA: pypdf 11/11 nonempty pages; pdfplumber 11/11
+  nonempty pages; 77/77 required tokens in each extraction; all 11 rendered
+  pages were visually reviewed with zero clipping, overlap, broken equations,
+  unreadable identifiers, black glyphs, or malformed page transitions; the
+  one-pass MiKTeX build reported OVERFULL-HBOX 0.
+
+The workflow issued one combined source/PDF pair only after the primary,
+non-importing independent, integrated, formal-authority, generated-surface,
+source-form, freshness, dual-extraction, and visual-review checks passed. This
+issues only the scoped R-167 v2.2 and R-168 v1.3 children. The all-exhaustion
+common-alpha, connected rank-two oscillator-elimination/QPS-norm and cutoff-
+compatibility, retained broader rank-two, broken-sector GNS-gap, substantive
+compact-action/background-probe/winding-law, ordered-state physical-mode and
+response-limit, six-term critical-estimand error-budget, physical-response,
+prospective-freeze, Round-1, C6, CP1, physical Sector A, and Pre-A parents
+remain **OPEN**. No parent closure follows.

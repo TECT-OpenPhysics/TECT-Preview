@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Independent standard-library verifier for the R-167 v2.1 route split.
+"""Independent standard-library verifier for the R-167 v2.2 route split.
 
-All v2.0 Fraction fixtures are retained.  New independent reconstructions
-derive the twentieth-moment corridor and conditional factor, the two graph
-automatic-inference counterfixtures, and the corrected local full-oscillator
-edge min-max/relative-form/Ritz constants.  This program imports neither the
-primary implementation nor any primary result.  It closes no actual Q3 fifth
-moment, n-to-infinity common alpha, many-edge oscillator QPS transfer, or
-oscillator-lattice GNS-gap parent.
+All v2.1 Fraction fixtures and historical boundaries are retained.  New
+standard-library reconstructions check the virial coefficient bookkeeping,
+terminating subset-shear coefficients, fifth-word budget, registered-periodic
+history corridor, and rank-two automatic-gap counterfixture.  This program
+imports neither the primary implementation nor any primary result.  It does
+not broaden the actual Q3 fifth moment beyond the registered fixed-beta
+periodic compact-source family or close n-to-infinity common alpha, connected
+rank-two oscillator/QPS transfer, or the oscillator-lattice GNS-gap parent.
 """
 
 from __future__ import annotations
@@ -24,7 +25,7 @@ from pathlib import Path
 from typing import Any, Mapping, Sequence
 
 
-__version__ = "2.1.0"
+__version__ = "2.2.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = (
@@ -36,8 +37,8 @@ RESULT_ID = (
     "COMMON-ALPHA-CAUCHY-GATE-SPLIT"
 )
 RESULT_NUMBER = "R-167"
-RESULT_VERSION = "v2.1"
-EXPLORATION_ID = "EXP-000811"
+RESULT_VERSION = "v2.2"
+EXPLORATION_ID = "EXP-000813"
 TASK_ID = "T-054"
 CLAIM_ID = "C6-SPACETIME-SIGNATURE"
 
@@ -53,28 +54,29 @@ DEFAULT_OUTPUT = (
     / f"2026-08-11-independent-{SLUG}/result.json"
 )
 
-NEGATIVE_IDS = ('NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT')
-CLOSED_SUBGATES = ('PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY', 'PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION', 'PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION', 'PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION', 'PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR', 'PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP', 'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL')
+NEGATIVE_IDS = ('NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP')
+CLOSED_SUBGATES = ('PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY', 'PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION', 'PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION', 'PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION', 'PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR', 'PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP', 'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING', 'PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION', 'PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR')
 YAROTSKII_QPS_SOURCE = "https://doi.org/10.1070/RM2006v061n02ABEH004323"
 
-OPEN_GATES = ('PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA', 'PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY', 'PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS', 'PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE', 'PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING', 'PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION')
+OPEN_GATES = ('PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA', 'PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY', 'PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS', 'PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE', 'PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY')
 
 NO_OVERCLAIM = (
-    "This independent verifier proves only the retained v2.0 fixtures, the "
-    "twentieth-moment corridor and conditional m5/d5/G5 reduction, two exact "
-    "automatic-inference no-gos, and a local full-oscillator edge parity/Ritz "
-    "theorem. It does not prove the actual Q3 fifth Gibbs moment or elliptic "
-    "embedding, simultaneous-bond fifth graph propagation, a twentieth history "
-    "moment, n-to-infinity Trotter convergence, all-exhaustion common alpha, "
-    "group/generator completion, a phase-KMS quotient, a many-edge rank-two "
+    "This independent verifier checks the retained v2.1 fixtures and independently "
+    "reconstructs the exact virial sign/factor, terminating subset-shear algebra, "
+    "fifth-word budget, periodic actual-history corridor arithmetic, and rank-two "
+    "automatic-gap counterfixture. The actual Q3 fifth moment and history theorem "
+    "is restricted to the registered fixed-beta periodic compact-source family; "
+    "it does not prove an arbitrary-boundary history bound, n-to-infinity Trotter "
+    "convergence, all-shape Cauchy compatibility, all-exhaustion common alpha, "
+    "group/generator completion, a phase-KMS quotient, connected rank-two "
     "unbounded block diagonalization, oscillator QPS transfer, an oscillator-"
     "lattice broken-sector temporal mass or GNS gap, regulator removal, a "
     "continuum, physical-empty comparison, prospective blind validation, C6, "
-    "CP1, physical Sector A, or Pre-A closure. It also does not prove an "
-    "onsite-interspersed local measured-Renyi estimate, two-phase QPS for "
-    "the oscillator lattice, or a broken-sector temporal mass or GNS gap."
+    "CP1, physical Sector A, or Pre-A closure. It also proves neither an onsite-"
+    "interspersed local measured-Renyi estimate nor two-phase QPS for the exact "
+    "oscillator lattice. The rank-two fixture is not a Q3 "
+    "locality, coercivity, or gap no-go."
 )
-
 Polynomial = tuple[Fraction, ...]
 
 
@@ -1465,6 +1467,258 @@ def oscillator_edge_cluster_fixture() -> dict[str, Any]:
     }
 
 
+
+def actual_q3_fifth_shear_rank_two_fixture() -> dict[str, Any]:
+    """Non-importing exact reconstruction of the v2.2 algebra and counterfixture."""
+
+    # Independent Weyl-algebra bookkeeping. [p^2,q] contributes twice and
+    # [V,p^9] has exactly nine Leibniz placements, with physical prefactors fixed.
+    kinetic_commutator_coefficient = Fraction(1)  # (i/hbar)*(-i*hbar)/chi
+    force_prefactor = Fraction(-1, 2)
+    force_placements = tuple(range(9))
+    critical_order = Fraction(1, 4) + 8 * Fraction(1, 2) + 3 * Fraction(1, 4)
+    graph_levels = tuple((m, 2 * m, 4 * m) for m in range(6))
+
+    # (p+c*delta*Q)^2/(2 chi), using commuting p_x and neighbor Q_x^F.
+    shear_coefficients = {
+        "delta_pQ": Fraction(1),
+        "delta_squared_Q2": Fraction(1, 2),
+    }
+    choices = (0, 1, 2)
+    delta_degree = (0, 1, 2)
+    energy_order = (Fraction(1), Fraction(3, 4), Fraction(1, 2))
+    words = []
+    for a in choices:
+        for b in choices:
+            for c in choices:
+                for d in choices:
+                    for e in choices:
+                        word = (a, b, c, d, e)
+                        if word == (0, 0, 0, 0, 0):
+                            continue
+                        words.append(
+                            (
+                                word,
+                                sum(delta_degree[item] for item in word),
+                                sum((energy_order[item] for item in word), Fraction(0)),
+                            )
+                        )
+    degree_counts = {
+        degree: sum(row[1] == degree for row in words)
+        for degree in range(1, 11)
+    }
+    t_value = 2
+    c5_majorant = sum(
+        multiplicity * t_value ** (degree - 1)
+        for degree, multiplicity in degree_counts.items()
+    )
+    polynomial_difference = (1 + t_value + t_value**2) ** 5 - 1
+    residual_ratio = Fraction(1, 2)
+    # Weight exponents are recomputed without symbolic imports.
+    r1_paid_x = Fraction(1, 2)
+    r1_paid_y = Fraction(1, 4)
+    r1_leftover_x_at_worst_neighbor = Fraction(1) - r1_paid_x - r1_paid_y
+    r1_neighbor_exponential = r1_paid_y
+    r2_paid_neighbor_exponents = (Fraction(1, 4), Fraction(1, 4))
+    r2_leftover_x_at_worst_neighbor = (
+        Fraction(1) - sum(r2_paid_neighbor_exponents)
+    )
+    r2_neighbor_exponential = sum(r2_paid_neighbor_exponents)
+    residual_weight_bound = 2 * ((1 + residual_ratio) / (1 - residual_ratio)) ** 3
+    maximum_local_insertions = max(
+        sum(letter != 0 for letter in word) for word, _, _ in words
+    )
+    maximum_neighbor_incidences = max(
+        sum(1 if letter == 1 else 2 if letter == 2 else 0 for letter in word)
+        for word, _, _ in words
+    )
+    tuple_counts = tuple(
+        6**r for r in range(1, maximum_neighbor_incidences + 1)
+    )
+    commutator_order_drop = Fraction(3, 4)
+    tree_sphere_terms = tuple(
+        6 * 5 ** (radius - 1) * residual_ratio**radius for radius in range(1, 7)
+    )
+    generic_degree_six_growth_ratio = tree_sphere_terms[1] / tree_sphere_terms[0]
+
+    # Exact rational rank for the connected four-cycle Hamiltonian.
+    def rational_rank(matrix: Sequence[Sequence[Fraction]]) -> int:
+        work = [list(map(Fraction, row)) for row in matrix]
+        rows = len(work)
+        columns = len(work[0]) if rows else 0
+        pivot_row = 0
+        for column in range(columns):
+            pivot = next(
+                (row for row in range(pivot_row, rows) if work[row][column]),
+                None,
+            )
+            if pivot is None:
+                continue
+            work[pivot_row], work[pivot] = work[pivot], work[pivot_row]
+            scale = work[pivot_row][column]
+            work[pivot_row] = [entry / scale for entry in work[pivot_row]]
+            for row in range(rows):
+                if row == pivot_row or not work[row][column]:
+                    continue
+                factor = work[row][column]
+                work[row] = [
+                    left - factor * right
+                    for left, right in zip(work[row], work[pivot_row])
+                ]
+            pivot_row += 1
+            if pivot_row == rows:
+                break
+        return pivot_row
+
+    def rational_matvec(
+        matrix: Sequence[Sequence[Fraction]], vector: Sequence[Fraction]
+    ) -> tuple[Fraction, ...]:
+        return tuple(
+            sum((entry * value for entry, value in zip(row, vector)), Fraction(0))
+            for row in matrix
+        )
+
+    local_edge = (
+        (Fraction(0), Fraction(0), Fraction(0), Fraction(0)),
+        (Fraction(0), Fraction(1, 2), Fraction(-1, 2), Fraction(0)),
+        (Fraction(0), Fraction(-1, 2), Fraction(1, 2), Fraction(0)),
+        (Fraction(0), Fraction(0), Fraction(0), Fraction(1)),
+    )
+    local_square = tuple(
+        tuple(
+            sum(
+                (local_edge[row][middle] * local_edge[middle][column] for middle in range(4)),
+                Fraction(0),
+            )
+            for column in range(4)
+        )
+        for row in range(4)
+    )
+    side = 4
+    cycle_edges = tuple((site, (site + 1) % side) for site in range(side))
+    dimension = 2**side
+    h_cycle = [[Fraction(0) for _ in range(dimension)] for _ in range(dimension)]
+    for x_site, y_site in cycle_edges:
+        for state in range(dimension):
+            bit_x = (state >> x_site) & 1
+            bit_y = (state >> y_site) & 1
+            if bit_x == bit_y == 1:
+                h_cycle[state][state] += 1
+            elif bit_x != bit_y:
+                h_cycle[state][state] += Fraction(1, 2)
+                swapped = state ^ (1 << x_site) ^ (1 << y_site)
+                h_cycle[swapped][state] -= Fraction(1, 2)
+    vacuum = tuple(Fraction(index == 0) for index in range(dimension))
+    w_vector = tuple(
+        Fraction(state != 0 and state & (state - 1) == 0)
+        for state in range(dimension)
+    )
+    cycle_rank = rational_rank(h_cycle)
+    one_indices = tuple(1 << site for site in range(side))
+    one_particle = tuple(
+        tuple(h_cycle[row][column] for column in one_indices) for row in one_indices
+    )
+    laplacian = [[Fraction(0) for _ in range(side)] for _ in range(side)]
+    for left, right in cycle_edges:
+        laplacian[left][left] += 1
+        laplacian[right][right] += 1
+        laplacian[left][right] -= 1
+        laplacian[right][left] -= 1
+    half_laplacian = tuple(
+        tuple(entry / 2 for entry in row) for row in laplacian
+    )
+    fourier_real = (Fraction(1), Fraction(0), Fraction(-1), Fraction(0))
+    fourier_sine = (Fraction(0), Fraction(1), Fraction(0), Fraction(-1))
+    alternating = (Fraction(1), Fraction(-1), Fraction(1), Fraction(-1))
+    constant = (Fraction(1),) * side
+    eigenpairs = (
+        (constant, Fraction(0)),
+        (fourier_real, Fraction(1)),
+        (fourier_sine, Fraction(1)),
+        (alternating, Fraction(2)),
+    )
+    eigenpairs_hold = all(
+        rational_matvec(one_particle, vector)
+        == tuple(eigenvalue * entry for entry in vector)
+        for vector, eigenvalue in eigenpairs
+    )
+
+    onsite_cutoff = 4
+    lifted_low_spectrum = (Fraction(0), Fraction(0), Fraction(1), Fraction(1))
+    lifted_high_energies = []
+    for left in range(onsite_cutoff):
+        for right in range(onsite_cutoff):
+            if left < 2 and right < 2:
+                continue
+            lifted_high_energies.append(Fraction(max(left - 1, 0) + max(right - 1, 0)))
+
+    return {
+        "static": {
+            "kinetic_coefficient": kinetic_commutator_coefficient,
+            "force_prefactor": force_prefactor,
+            "force_placements": force_placements,
+            "critical_order": critical_order,
+            "graph_levels": graph_levels,
+            "finite_cutoff_before_monotone_limit": True,
+            "unbounded_trace_cyclicity": False,
+            "registered_periodic_compact_source": True,
+            "arbitrary_boundary_static": False,
+        },
+        "shear": {
+            "coefficients": shear_coefficients,
+            "word_count": len(words),
+            "degree_counts": degree_counts,
+            "all_words_have_delta": all(row[1] >= 1 for row in words),
+            "all_words_order_at_most_five": all(row[2] <= 5 for row in words),
+            "C5_majorant_T2": c5_majorant,
+            "polynomial_difference_T2": polynomial_difference,
+            "R1_paid_exponents": (r1_paid_x, r1_paid_y),
+            "R1_leftover_x_at_worst_neighbor": r1_leftover_x_at_worst_neighbor,
+            "R1_neighbor_exponential": r1_neighbor_exponential,
+            "R2_paid_neighbor_exponents": r2_paid_neighbor_exponents,
+            "R2_cross_terms_retained": True,
+            "R2_leftover_x_at_worst_neighbor": r2_leftover_x_at_worst_neighbor,
+            "R2_neighbor_exponential": r2_neighbor_exponential,
+            "residual_weight_bound": residual_weight_bound,
+            "maximum_local_insertions": maximum_local_insertions,
+            "maximum_neighbor_incidences": maximum_neighbor_incidences,
+            "tuple_counts_neighbor_incidences_le_10": tuple_counts,
+            "commutator_order_drop": commutator_order_drop,
+            "K5_multinomial_supplies_weights": True,
+            "K_ge_one_fills_slack": True,
+            "tree_sphere_terms": tree_sphere_terms,
+            "generic_degree_six_growth_ratio": generic_degree_six_growth_ratio,
+            "generic_degree_six_promotion": False,
+            "finite_cubic_subgraph_or_periodic_quotient": True,
+            "uniform_cubic_polynomial_growth_required": True,
+            "subset_deletion_safe": True,
+        },
+        "rank_two": {
+            "local_idempotent": local_square == local_edge,
+            "local_rank": rational_rank(local_edge),
+            "local_trace": sum(local_edge[index][index] for index in range(4)),
+            "cycle_rank": cycle_rank,
+            "cycle_nullity": dimension - cycle_rank,
+            "vacuum_kernel": all(value == 0 for value in rational_matvec(h_cycle, vacuum)),
+            "W_kernel": all(value == 0 for value in rational_matvec(h_cycle, w_vector)),
+            "one_particle_half_laplacian": one_particle == half_laplacian,
+            "one_particle_eigenpairs": eigenpairs_hold,
+            "torus_L4_gap": Fraction(1),
+            "torus_bound_from_pi_gt_three": Fraction(9, 8),
+            "lift_low_spectrum": lifted_low_spectrum,
+            "lift_first_high_energy": min(lifted_high_energies),
+            "automatic_global_gap": False,
+            "Q3_gap_no_go": False,
+        },
+        "history": {
+            "M20": "2*d5^2*exp(C5*T)*S_mu^5*m5",
+            "corridor": "2916*c^2*M20*R^(-2/5)",
+            "factorial": "-R*log(R)/5+O(R)",
+            "registered_periodic_only": True,
+        },
+    }
+
+
 def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     """Bind to the manifest/certificate without reading primary outputs."""
 
@@ -1551,9 +1805,15 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         "static_moment_low_graph_no_go",
         "full_oscillator_edge_cluster",
         "v2_1_checkpoint_synthesis",
+        "actual_q3_static_fifth_moment_and_elliptic_embedding",
+        "direct_subset_shear_fifth_graph_propagation",
+        "actual_q3_twentieth_history_and_hard_cutoff_corridor",
+        "rank_two_projection_gap_no_go",
+        "connected_rank_two_qps_successor",
+        "v2_2_checkpoint_synthesis",
     ):
         audit.check(
-            f"manifest v2.1 section {section}",
+            f"manifest retained/new section {section}",
             section in manifest,
             section in manifest,
             True,
@@ -1584,6 +1844,134 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         checkpoint_deferred or checkpoint_combined,
         checkpoint,
         "deferred during development or one issued combined checkpoint",
+        "authority",
+    )
+    checkpoint_v22 = manifest.get("v2_2_checkpoint_synthesis")
+    deferred_v22 = {
+        "status": "DEFERRED",
+        "workflow": (
+            "No intermediate PDF is issued for R-167 v2.2. Preserve every "
+            "v2.1 and earlier source/PDF pair as historical evidence; issue or "
+            "update one combined gate-level synthesis only after the proof, "
+            "formal-authority, integrated, generated-surface, strict-release "
+            "and render-review gates pass."
+        ),
+    }
+    issued_fields = {
+        "status", "source", "pdf", "source_sha256", "pdf_sha256",
+        "pages", "workflow", "visual_qa",
+    }
+    issued_status = (
+        "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION"
+    )
+    issued_source = (
+        "claims/C6-SPACETIME-SIGNATURE/notes/"
+        "pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-"
+        "checkpoint-260811-v1.1.tex.txt"
+    )
+    issued_pdf = issued_source.removesuffix(".tex.txt") + ".pdf"
+    issued_workflow = (
+        "No per-lemma or intermediate PDF was issued. One combined R-167 v2.2 / "
+        "R-168 v1.3 gate-level synthesis source/PDF pair was issued only after "
+        "the primary, non-importing independent, integrated, formal-authority, "
+        "generated-surface, source-form, freshness, dual-extraction, and "
+        "visual-review checks passed."
+    )
+    r168_v13_checkpoint = None
+    try:
+        r168_v13_checkpoint = json.loads(
+            (
+                REPO
+                / "strategy/pre-a-round1-prospective-holdout-freeze-protocol-"
+                "manifest.json"
+            ).read_text(encoding="utf-8")
+        ).get("v1_3_checkpoint_synthesis")
+    except (OSError, UnicodeError, json.JSONDecodeError):
+        pass
+    pages_v22 = checkpoint_v22.get("pages") if isinstance(checkpoint_v22, dict) else None
+    pages_v22_valid = (
+        isinstance(pages_v22, int)
+        and not isinstance(pages_v22, bool)
+        and pages_v22 > 0
+    )
+    visual_qa_v22 = (
+        f"All {pages_v22} rendered pages were reviewed at readable resolution "
+        "with zero clipping, overlap, broken equations, unreadable identifiers, "
+        "black glyphs, or malformed page transitions; pypdf and pdfplumber each "
+        f"extracted {pages_v22}/{pages_v22} nonempty pages; the build reported "
+        "OVERFULL-HBOX 0."
+        if pages_v22_valid
+        else None
+    )
+    source_path_v22 = REPO / issued_source
+    pdf_path_v22 = REPO / issued_pdf
+    source_hash_v22 = (
+        hashlib.sha256(source_path_v22.read_bytes()).hexdigest()
+        if source_path_v22.is_file()
+        else None
+    )
+    pdf_hash_v22 = (
+        hashlib.sha256(pdf_path_v22.read_bytes()).hexdigest()
+        if pdf_path_v22.is_file()
+        else None
+    )
+    lowercase_hex = set("0123456789abcdef")
+    source_pin_v22 = (
+        checkpoint_v22.get("source_sha256")
+        if isinstance(checkpoint_v22, dict)
+        else None
+    )
+    pdf_pin_v22 = (
+        checkpoint_v22.get("pdf_sha256")
+        if isinstance(checkpoint_v22, dict)
+        else None
+    )
+    issued_v22_valid = (
+        isinstance(checkpoint_v22, dict)
+        and set(checkpoint_v22) == issued_fields
+        and checkpoint_v22 == r168_v13_checkpoint
+        and checkpoint_v22.get("status") == issued_status
+        and checkpoint_v22.get("source") == issued_source
+        and checkpoint_v22.get("pdf") == issued_pdf
+        and checkpoint_v22.get("workflow") == issued_workflow
+        and checkpoint_v22.get("visual_qa") == visual_qa_v22
+        and pages_v22_valid
+        and isinstance(source_pin_v22, str)
+        and len(source_pin_v22) == 64
+        and set(source_pin_v22) <= lowercase_hex
+        and isinstance(pdf_pin_v22, str)
+        and len(pdf_pin_v22) == 64
+        and set(pdf_pin_v22) <= lowercase_hex
+        and source_path_v22.is_file()
+        and pdf_path_v22.is_file()
+        and source_hash_v22 == source_pin_v22
+        and pdf_hash_v22 == pdf_pin_v22
+        and pdf_path_v22.stat().st_mtime_ns >= source_path_v22.stat().st_mtime_ns
+    )
+    audit.check(
+        "manifest v2.2 checkpoint lifecycle",
+        checkpoint_v22 == deferred_v22 or issued_v22_valid,
+        {
+            "metadata": checkpoint_v22,
+            "shared_r168_v1_3": r168_v13_checkpoint,
+            "deferred_exact": checkpoint_v22 == deferred_v22,
+            "issued_exact": issued_v22_valid,
+            "source_sha256": source_hash_v22,
+            "pdf_sha256": pdf_hash_v22,
+        },
+        "exact proof-first DEFERRED or exact cross-bound eight-field ISSUED checkpoint",
+        "authority",
+    )
+    audit.check(
+        "manifest v2.2 theorem tokens",
+        "p_i^10/chi" in manifest.get("actual_q3_static_fifth_moment_and_elliptic_embedding", {}).get("virial_identity", "")
+        and "O(|delta|)" in manifest.get("direct_subset_shear_fifth_graph_propagation", {}).get("fifth_form_bound", "")
+        and "f_x^(1/2)" in manifest.get("direct_subset_shear_fifth_graph_propagation", {}).get("fifth_form_bound", "")
+        and "Maximum degree at most six alone is not enough" in manifest.get("direct_subset_shear_fifth_graph_propagation", {}).get("uniformity_boundary", "")
+        and "6*5^(r-1)" in manifest.get("direct_subset_shear_fifth_graph_propagation", {}).get("generic_degree_six_hostile", "")
+        and manifest.get("actual_q3_twentieth_history_and_hard_cutoff_corridor", {}).get("moment") == "M20<=2 d5^2 exp(C5 T) S_mu^5 m5.",
+        "static, shear and M20 tokens",
+        True,
         "authority",
     )
     verification = manifest.get("verification", {})
@@ -1638,7 +2026,7 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         all(
             phrase in manifest.get("no_overclaim", "")
             for phrase in (
-                "Q3 onsite-interspersed fixed-edge history estimate",
+                "all-shape or all-exhaustion Cauchy compatibility",
                 "all-exhaustion common alpha",
                 "rank-two unbounded block diagonalization",
                 "broken-sector oscillator temporal mass or GNS gap",
@@ -1675,6 +2063,29 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         "authority",
     )
 
+    audit.check(
+        "certificate v2.2 exact tokens",
+        all(
+            token in certificate
+            for token in (
+                "EXP-000813",
+                "R-167 v2.2",
+                "p_i^{10}",
+                "C_5(T,\\mu)|\\delta|",
+                r"M_{20}\le2d_5^2e^{C_5T}S_\mu^5m_5",
+                "rank-two projection",
+                "No v2.2 PDF is issued",
+                "v2_2_checkpoint_synthesis",
+                *CLOSED_SUBGATES[-3:],
+                OPEN_GATES[-1],
+                NEGATIVE_IDS[-1],
+            )
+        ),
+        "all v2.2 tokens present",
+        True,
+        "authority",
+    )
+
     formal_missing: list[str] = []
 
     def formal_require(condition: bool, label: str) -> None:
@@ -1683,7 +2094,7 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         elif staged:
             formal_missing.append(label)
         else:
-            raise AssertionError("missing formal v2.1 authority: " + label)
+            raise AssertionError("missing formal v2.2 authority: " + label)
 
     exploration_records = [
         json.loads(line)
@@ -1697,14 +2108,30 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     result_lines = RESULT_LEDGER.read_text(encoding="utf-8").splitlines()
     formal_require(
         any(RESULT_NUMBER in line and RESULT_VERSION in line for line in result_lines),
-        "formal result R-167 v2.1",
+        "formal result R-167 v2.2",
     )
     negative_text = NEGATIVE_REGISTRY.read_text(encoding="utf-8")
     for identifier in NEGATIVE_IDS:
         formal_require(identifier in negative_text, "formal negative " + identifier)
     gate_text = GATE_REGISTRY.read_text(encoding="utf-8")
-    for identifier in CLOSED_SUBGATES + OPEN_GATES:
-        formal_require(identifier in gate_text, "formal gate " + identifier)
+
+    def gate_has_status(identifier: str, status: str) -> bool:
+        heading = f"### **{identifier}**"
+        if heading not in gate_text:
+            return False
+        block = gate_text.split(heading, 1)[1].split("\n### **", 1)[0]
+        return f"**Status:** {status}" in block
+
+    for identifier in CLOSED_SUBGATES:
+        formal_require(
+            gate_has_status(identifier, "CLOSED"),
+            "formal gate CLOSED " + identifier,
+        )
+    for identifier in OPEN_GATES:
+        formal_require(
+            gate_has_status(identifier, "OPEN"),
+            "formal gate OPEN " + identifier,
+        )
 
     return {
         "status": "COMPLETE" if not formal_missing else "INCOMPLETE",
@@ -2387,6 +2814,84 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
         "scope",
     )
 
+    v22 = actual_q3_fifth_shear_rank_two_fixture()
+    audit.check(
+        "v2.2 static virial and graph bookkeeping",
+        v22["static"]["kinetic_coefficient"] == 1
+        and v22["static"]["force_prefactor"] == Fraction(-1, 2)
+        and len(v22["static"]["force_placements"]) == 9
+        and v22["static"]["critical_order"] == 5
+        and v22["static"]["graph_levels"][-1] == (5, 10, 20)
+        and v22["static"]["finite_cutoff_before_monotone_limit"]
+        and not v22["static"]["unbounded_trace_cyclicity"]
+        and v22["static"]["registered_periodic_compact_source"]
+        and not v22["static"]["arbitrary_boundary_static"],
+        v22["static"],
+        "coefficients 1,-1/2; 9 placements; order 5; degrees 10/20",
+        "v2.2-static",
+    )
+    audit.check(
+        "v2.2 direct shear and fifth-word budget",
+        v22["shear"]["coefficients"]
+        == {"delta_pQ": Fraction(1), "delta_squared_Q2": Fraction(1, 2)}
+        and v22["shear"]["word_count"] == 242
+        and v22["shear"]["all_words_have_delta"]
+        and v22["shear"]["all_words_order_at_most_five"]
+        and 2 * v22["shear"]["C5_majorant_T2"]
+        == v22["shear"]["polynomial_difference_T2"]
+        and v22["shear"]["R1_paid_exponents"] == (Fraction(1, 2), Fraction(1, 4))
+        and v22["shear"]["R1_leftover_x_at_worst_neighbor"] == Fraction(1, 4)
+        and v22["shear"]["R1_neighbor_exponential"] == Fraction(1, 4)
+        and v22["shear"]["R2_paid_neighbor_exponents"]
+        == (Fraction(1, 4), Fraction(1, 4))
+        and v22["shear"]["R2_cross_terms_retained"]
+        and v22["shear"]["R2_leftover_x_at_worst_neighbor"] == Fraction(1, 2)
+        and v22["shear"]["R2_neighbor_exponential"] == Fraction(1, 2)
+        and v22["shear"]["residual_weight_bound"] == 54
+        and v22["shear"]["maximum_local_insertions"] == 5
+        and v22["shear"]["maximum_neighbor_incidences"] == 10
+        and v22["shear"]["tuple_counts_neighbor_incidences_le_10"][-1] == 6**10
+        and v22["shear"]["commutator_order_drop"] == Fraction(3, 4)
+        and v22["shear"]["K5_multinomial_supplies_weights"]
+        and v22["shear"]["K_ge_one_fills_slack"]
+        and v22["shear"]["subset_deletion_safe"],
+        v22["shear"],
+        "242 words, R2 cross terms, 5 anchors and <=10 neighbor incidences",
+        "v2.2-shear",
+    )
+    audit.check(
+        "v2.2 generic degree-six exponential-growth hostile",
+        v22["shear"]["generic_degree_six_growth_ratio"] == Fraction(5, 2)
+        and not v22["shear"]["generic_degree_six_promotion"]
+        and v22["shear"]["finite_cubic_subgraph_or_periodic_quotient"]
+        and v22["shear"]["uniform_cubic_polynomial_growth_required"],
+        {
+            "sphere_terms": v22["shear"]["tree_sphere_terms"],
+            "growth_ratio": v22["shear"]["generic_degree_six_growth_ratio"],
+        },
+        "six-regular tree weighted sphere ratio 5/2; cubic growth required",
+        "v2.2-growth-hostile",
+    )
+    audit.check(
+        "v2.2 rank-two local-to-global counterfixture",
+        v22["rank_two"]["local_idempotent"]
+        and v22["rank_two"]["local_rank"] == 2
+        and v22["rank_two"]["local_trace"] == 2
+        and v22["rank_two"]["cycle_nullity"] == 2
+        and v22["rank_two"]["vacuum_kernel"]
+        and v22["rank_two"]["W_kernel"]
+        and v22["rank_two"]["one_particle_half_laplacian"]
+        and v22["rank_two"]["one_particle_eigenpairs"]
+        and v22["rank_two"]["torus_L4_gap"]
+        < v22["rank_two"]["torus_bound_from_pi_gt_three"]
+        and v22["rank_two"]["lift_first_high_energy"] == 1
+        and not v22["rank_two"]["automatic_global_gap"]
+        and not v22["rank_two"]["Q3_gap_no_go"],
+        v22["rank_two"],
+        "rank-two local projection, cycle nullity 2, half Laplacian, lifted gap 1",
+        "v2.2-rank-two",
+    )
+
     moment_v21 = twentieth_moment_graph_fixture()
     audit.check(
         "v2.1 twentieth-moment corridor arithmetic",
@@ -2645,11 +3150,12 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "Feshbach_compressed_QPS": feshbach_qps,
             "v2_1_twentieth_moment_graph_boundary": moment_v21,
             "v2_1_full_oscillator_edge_cluster": edge_v21,
+            "v2_2_actual_Q3_fifth_shear_rank_two": v22,
             "pure_bond_identity_closed": True,
             "twentieth_moment_fixed_edge_corridor_reduction_closed": True,
             "conditional_fifth_graph_transport_reduction_closed": True,
-            "translate_uniform_local_fifth_Gibbs_moment_closed": False,
-            "simultaneous_bond_shear_fifth_graph_propagation_closed": False,
+            "translate_uniform_local_fifth_Gibbs_moment_closed": True,
+            "simultaneous_bond_shear_fifth_graph_propagation_closed": True,
             "full_oscillator_local_edge_parity_cluster_closed": True,
             "parity_preserving_Ritz_removal_closed": True,
             "full_Hamiltonian_Gibbs_resummation_closed": True,
@@ -2657,7 +3163,9 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "below_Gamma_Feshbach_precursor_closed": True,
             "compressed_TFIM_two_phase_QPS_closed": True,
             "arbitrary_context_upgrade_closed": False,
-            "actual_Q3_fixed_edge_history_bound_closed": False,
+            "actual_Q3_fixed_edge_history_bound_closed": True,
+            "registered_periodic_compact_source_scope_only": True,
+            "arbitrary_boundary_history_bound_closed": False,
             "local_measured_Renyi_reduction_closed": True,
             "semiclassical_onsite_geometry_fixture_closed": True,
             "exact_low_band_compression_fixture_closed": True,

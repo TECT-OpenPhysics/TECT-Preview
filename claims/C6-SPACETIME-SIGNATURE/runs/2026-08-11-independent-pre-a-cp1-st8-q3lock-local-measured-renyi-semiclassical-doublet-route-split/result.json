@@ -1,7 +1,7 @@
 {
   "assertions": {
     "failed": 0,
-    "passed": 138,
+    "passed": 154,
     "rows": [
       {
         "actual": [
@@ -2250,6 +2250,182 @@
       },
       {
         "actual": {
+          "arbitrary_boundary_static": false,
+          "critical_order": "5",
+          "finite_cutoff_before_monotone_limit": true,
+          "force_placements": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "force_prefactor": "-1/2",
+          "graph_levels": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              4
+            ],
+            [
+              2,
+              4,
+              8
+            ],
+            [
+              3,
+              6,
+              12
+            ],
+            [
+              4,
+              8,
+              16
+            ],
+            [
+              5,
+              10,
+              20
+            ]
+          ],
+          "kinetic_coefficient": "1",
+          "registered_periodic_compact_source": true,
+          "unbounded_trace_cyclicity": false
+        },
+        "expected": "coefficients 1,-1/2; 9 placements; order 5; degrees 10/20",
+        "group": "v2.2-static",
+        "name": "v2.2 static virial and graph bookkeeping",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "C5_majorant_T2": 8403,
+          "K5_multinomial_supplies_weights": true,
+          "K_ge_one_fills_slack": true,
+          "R1_leftover_x_at_worst_neighbor": "1/4",
+          "R1_neighbor_exponential": "1/4",
+          "R1_paid_exponents": [
+            "1/2",
+            "1/4"
+          ],
+          "R2_cross_terms_retained": true,
+          "R2_leftover_x_at_worst_neighbor": "1/2",
+          "R2_neighbor_exponential": "1/2",
+          "R2_paid_neighbor_exponents": [
+            "1/4",
+            "1/4"
+          ],
+          "all_words_have_delta": true,
+          "all_words_order_at_most_five": true,
+          "coefficients": {
+            "delta_pQ": "1",
+            "delta_squared_Q2": "1/2"
+          },
+          "commutator_order_drop": "3/4",
+          "degree_counts": {
+            "1": 5,
+            "10": 1,
+            "2": 15,
+            "3": 30,
+            "4": 45,
+            "5": 51,
+            "6": 45,
+            "7": 30,
+            "8": 15,
+            "9": 5
+          },
+          "finite_cubic_subgraph_or_periodic_quotient": true,
+          "generic_degree_six_growth_ratio": "5/2",
+          "generic_degree_six_promotion": false,
+          "maximum_local_insertions": 5,
+          "maximum_neighbor_incidences": 10,
+          "polynomial_difference_T2": 16806,
+          "residual_weight_bound": "54",
+          "subset_deletion_safe": true,
+          "tree_sphere_terms": [
+            "3",
+            "15/2",
+            "75/4",
+            "375/8",
+            "1875/16",
+            "9375/32"
+          ],
+          "tuple_counts_neighbor_incidences_le_10": [
+            6,
+            36,
+            216,
+            1296,
+            7776,
+            46656,
+            279936,
+            1679616,
+            10077696,
+            60466176
+          ],
+          "uniform_cubic_polynomial_growth_required": true,
+          "word_count": 242
+        },
+        "expected": "242 words, R2 cross terms, 5 anchors and <=10 neighbor incidences",
+        "group": "v2.2-shear",
+        "name": "v2.2 direct shear and fifth-word budget",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "growth_ratio": "5/2",
+          "sphere_terms": [
+            "3",
+            "15/2",
+            "75/4",
+            "375/8",
+            "1875/16",
+            "9375/32"
+          ]
+        },
+        "expected": "six-regular tree weighted sphere ratio 5/2; cubic growth required",
+        "group": "v2.2-growth-hostile",
+        "name": "v2.2 generic degree-six exponential-growth hostile",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "Q3_gap_no_go": false,
+          "W_kernel": true,
+          "automatic_global_gap": false,
+          "cycle_nullity": 2,
+          "cycle_rank": 14,
+          "lift_first_high_energy": "1",
+          "lift_low_spectrum": [
+            "0",
+            "0",
+            "1",
+            "1"
+          ],
+          "local_idempotent": true,
+          "local_rank": 2,
+          "local_trace": "2",
+          "one_particle_eigenpairs": true,
+          "one_particle_half_laplacian": true,
+          "torus_L4_gap": "1",
+          "torus_bound_from_pi_gt_three": "9/8",
+          "vacuum_kernel": true
+        },
+        "expected": "rank-two local projection, cycle nullity 2, half Laplacian, lifted gap 1",
+        "group": "v2.2-rank-two",
+        "name": "v2.2 rank-two local-to-global counterfixture",
+        "status": "PASS"
+      },
+      {
+        "actual": {
           "KN": {
             "G5": "3486784400/4782969",
             "G5_formula": "3^6-3^-14",
@@ -2934,12 +3110,12 @@
         "actual": {
           "id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
           "number": "R-167",
-          "version": "v2.1"
+          "version": "v2.2"
         },
         "expected": {
           "id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
           "number": "R-167",
-          "version": "v2.1"
+          "version": "v2.2"
         },
         "group": "authority",
         "name": "manifest result identity",
@@ -2950,14 +3126,14 @@
           "claims": [
             "C6-SPACETIME-SIGNATURE"
           ],
-          "exploration": "EXP-000811",
+          "exploration": "EXP-000813",
           "task": "T-054"
         },
         "expected": {
           "claims": [
             "C6-SPACETIME-SIGNATURE"
           ],
-          "exploration": "EXP-000811",
+          "exploration": "EXP-000813",
           "task": "T-054"
         },
         "group": "authority",
@@ -2979,7 +3155,8 @@
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY",
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
-          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT"
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP"
         ],
         "expected": [
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY",
@@ -2988,7 +3165,8 @@
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY",
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
           "NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
-          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT"
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
+          "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP"
         ],
         "group": "authority",
         "name": "manifest negative IDs",
@@ -3004,7 +3182,10 @@
           "PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR",
           "PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP",
           "PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION",
-          "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL"
+          "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
+          "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
+          "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
+          "PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR"
         ],
         "expected": [
           "PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY",
@@ -3015,7 +3196,10 @@
           "PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR",
           "PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP",
           "PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION",
-          "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL"
+          "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
+          "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
+          "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
+          "PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR"
         ],
         "group": "authority",
         "name": "manifest closed subgates",
@@ -3027,16 +3211,14 @@
           "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
           "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
           "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
-          "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
-          "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION"
+          "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY"
         ],
         "expected": [
           "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
           "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
           "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
           "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
-          "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
-          "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION"
+          "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY"
         ],
         "group": "authority",
         "name": "manifest open gates",
@@ -3046,42 +3228,84 @@
         "actual": true,
         "expected": true,
         "group": "authority",
-        "name": "manifest v2.1 section twentieth_moment_fixed_edge_corridor",
+        "name": "manifest retained/new section twentieth_moment_fixed_edge_corridor",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "authority",
-        "name": "manifest v2.1 section conditional_fifth_graph_transport",
+        "name": "manifest retained/new section conditional_fifth_graph_transport",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "authority",
-        "name": "manifest v2.1 section all_order_graph_growth_no_go",
+        "name": "manifest retained/new section all_order_graph_growth_no_go",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "authority",
-        "name": "manifest v2.1 section static_moment_low_graph_no_go",
+        "name": "manifest retained/new section static_moment_low_graph_no_go",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "authority",
-        "name": "manifest v2.1 section full_oscillator_edge_cluster",
+        "name": "manifest retained/new section full_oscillator_edge_cluster",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "authority",
-        "name": "manifest v2.1 section v2_1_checkpoint_synthesis",
+        "name": "manifest retained/new section v2_1_checkpoint_synthesis",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "manifest retained/new section actual_q3_static_fifth_moment_and_elliptic_embedding",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "manifest retained/new section direct_subset_shear_fifth_graph_propagation",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "manifest retained/new section actual_q3_twentieth_history_and_hard_cutoff_corridor",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "manifest retained/new section rank_two_projection_gap_no_go",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "manifest retained/new section connected_rank_two_qps_successor",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "authority",
+        "name": "manifest retained/new section v2_2_checkpoint_synthesis",
         "status": "PASS"
       },
       {
@@ -3099,6 +3323,45 @@
         "expected": "deferred during development or one issued combined checkpoint",
         "group": "authority",
         "name": "manifest PDF checkpoint lifecycle",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "deferred_exact": false,
+          "issued_exact": true,
+          "metadata": {
+            "pages": 11,
+            "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.pdf",
+            "pdf_sha256": "5ae80a7c5dd3f724411ee1b95fbf4db330f85123a4c3058a72f71900af9fdbf7",
+            "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.tex.txt",
+            "source_sha256": "9eea5a425cef38c8741f40d000dc10ac46430598f62a1d55313748de35c277e3",
+            "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+            "visual_qa": "All 11 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 11/11 nonempty pages; the build reported OVERFULL-HBOX 0.",
+            "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v2.2 / R-168 v1.3 gate-level synthesis source/PDF pair was issued only after the primary, non-importing independent, integrated, formal-authority, generated-surface, source-form, freshness, dual-extraction, and visual-review checks passed."
+          },
+          "pdf_sha256": "5ae80a7c5dd3f724411ee1b95fbf4db330f85123a4c3058a72f71900af9fdbf7",
+          "shared_r168_v1_3": {
+            "pages": 11,
+            "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.pdf",
+            "pdf_sha256": "5ae80a7c5dd3f724411ee1b95fbf4db330f85123a4c3058a72f71900af9fdbf7",
+            "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.tex.txt",
+            "source_sha256": "9eea5a425cef38c8741f40d000dc10ac46430598f62a1d55313748de35c277e3",
+            "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+            "visual_qa": "All 11 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 11/11 nonempty pages; the build reported OVERFULL-HBOX 0.",
+            "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v2.2 / R-168 v1.3 gate-level synthesis source/PDF pair was issued only after the primary, non-importing independent, integrated, formal-authority, generated-surface, source-form, freshness, dual-extraction, and visual-review checks passed."
+          },
+          "source_sha256": "9eea5a425cef38c8741f40d000dc10ac46430598f62a1d55313748de35c277e3"
+        },
+        "expected": "exact proof-first DEFERRED or exact cross-bound eight-field ISSUED checkpoint",
+        "group": "authority",
+        "name": "manifest v2.2 checkpoint lifecycle",
+        "status": "PASS"
+      },
+      {
+        "actual": "static, shear and M20 tokens",
+        "expected": true,
+        "group": "authority",
+        "name": "manifest v2.2 theorem tokens",
         "status": "PASS"
       },
       {
@@ -3130,7 +3393,7 @@
         "status": "PASS"
       },
       {
-        "actual": "This package does not prove either new fifth-moment/graph input, the actual Q3 onsite-interspersed twentieth fixed-edge history moment, an arbitrary bounded-context automorphism upgrade, n-to-infinity Trotter convergence, all-exhaustion common alpha, group/generator completion, a phase-KMS quotient, a quasi-local many-edge rank-two unbounded block diagonalization, QPS locality of an oscillator effective interaction, two-phase QPS for the exact oscillator lattice, beta-infinity oscillator phase identification, an oscillator-lattice broken-sector temporal mass or GNS gap, regulator removal, continuum, a same-Hamiltonian physical-empty comparison, a prospective blind validation result, C6, CP1, physical Sector A, or Pre-A closure. The edge theorem is local and uses Ritz form compression, not a truncated-coordinate Hamiltonian. In particular it does not prove an onsite-interspersed local measured-Renyi estimate, two-phase QPS for the oscillator lattice, or a broken-sector oscillator temporal mass or GNS gap. The v2.1 reductions do not prove the Q3 onsite-interspersed fixed-edge history estimate.",
+        "actual": "This package proves the fifth-moment, elliptic, subset-shear, twentieth-history and hard-cutoff conclusions only for the registered fixed-beta finite periodic Q3 family with compact sources and the declared split histories. The shear form estimate itself is uniform only for tested nearest-neighbor subsets on finite subgraphs or periodic quotients of Z^3, or under an explicitly uniform cubic-polynomial-growth hypothesis. A maximum-degree-six hypothesis alone is insufficient because bounded-degree graphs may have exponential growth. An arbitrary boundary family is not promoted to the actual history theorem without both this growth control and its own uniform static Gibbs input. This package does not prove n-to-infinity Trotter convergence, all-shape or all-exhaustion Cauchy compatibility, all-exhaustion common alpha, group/generator completion, a phase-KMS quotient, an onsite-interspersed local measured-Renyi estimate, connected rank-two unbounded block diagonalization, QPS locality or cutoff convergence of an oscillator effective interaction, two-phase QPS for the exact oscillator lattice, beta-infinity phase identification, a broken-sector oscillator temporal mass or GNS gap, regulator removal, continuum, a same-Hamiltonian physical-empty comparison, a prospective blind validation result, C6, CP1, physical Sector A, or Pre-A closure. The rank-two fixture refutes only an automatic local-edge-to-global-gap inference; it is not a Q3 locality, local coercivity, or gap no-go.",
         "expected": "all boundary phrases present",
         "group": "authority",
         "name": "manifest no-overclaim boundary",
@@ -3144,17 +3407,24 @@
         "status": "PASS"
       },
       {
-        "actual": true,
+        "actual": "all v2.2 tokens present",
         "expected": true,
-        "group": "formal-authority",
-        "name": "formal exploration EXP-000811",
+        "group": "authority",
+        "name": "certificate v2.2 exact tokens",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal result R-167 v2.1",
+        "name": "formal exploration EXP-000813",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal-authority",
+        "name": "formal result R-167 v2.2",
         "status": "PASS"
       },
       {
@@ -3210,140 +3480,161 @@
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY",
+        "name": "formal negative NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "name": "formal gate CLOSED PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
+        "name": "formal gate OPEN PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
         "status": "PASS"
       },
       {
         "actual": true,
         "expected": true,
         "group": "formal-authority",
-        "name": "formal gate PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
+        "name": "formal gate OPEN PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
         "status": "PASS"
       },
       {
-        "actual": "6d46d3fea15dc17f1f783ac8a04d1f08f7c2c2ae2dea50fa809fee3f2b345104",
+        "actual": true,
+        "expected": true,
+        "group": "formal-authority",
+        "name": "formal gate OPEN PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal-authority",
+        "name": "formal gate OPEN PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "formal-authority",
+        "name": "formal gate OPEN PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "74dc4a8758d204587963c4e41e720902fd0b66931c35024f7784adaaa09d0b38",
         "expected": "64 lowercase hexadecimal characters",
         "group": "provenance",
         "name": "source hash codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py",
         "status": "PASS"
       },
       {
-        "actual": "03547c9046974e02152ca3cff16311f59d5be8b7c5edeb17b8a993dfc32fee78",
+        "actual": "08953b6347de71d41dc1266d97c118692a2556457137c05ec53a64bb46803476",
         "expected": "64 lowercase hexadecimal characters",
         "group": "provenance",
         "name": "source hash strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json",
         "status": "PASS"
       },
       {
-        "actual": "63fbc52cf284c5e8a220af1434e88970fed02eedf3dc00a770fcbc9c7bea84ef",
+        "actual": "f73fbd7b03f849edcc4f6d0f864156d33c06ef1a9a9a6a85727f280453e505e5",
         "expected": "64 lowercase hexadecimal characters",
         "group": "provenance",
         "name": "source hash strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md",
         "status": "PASS"
       }
     ],
-    "total": 138
+    "total": 154
   },
   "authority": {
     "certificate": "E:/Dev/TECT/strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md",
-    "certificate_sha256": "63fbc52cf284c5e8a220af1434e88970fed02eedf3dc00a770fcbc9c7bea84ef",
+    "certificate_sha256": "f73fbd7b03f849edcc4f6d0f864156d33c06ef1a9a9a6a85727f280453e505e5",
     "manifest": "E:/Dev/TECT/strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json",
-    "manifest_sha256": "03547c9046974e02152ca3cff16311f59d5be8b7c5edeb17b8a993dfc32fee78",
+    "manifest_sha256": "08953b6347de71d41dc1266d97c118692a2556457137c05ec53a64bb46803476",
     "missing": [],
     "status": "COMPLETE"
   },
-  "boundary": "This independent verifier proves only the retained v2.0 fixtures, the twentieth-moment corridor and conditional m5/d5/G5 reduction, two exact automatic-inference no-gos, and a local full-oscillator edge parity/Ritz theorem. It does not prove the actual Q3 fifth Gibbs moment or elliptic embedding, simultaneous-bond fifth graph propagation, a twentieth history moment, n-to-infinity Trotter convergence, all-exhaustion common alpha, group/generator completion, a phase-KMS quotient, a many-edge rank-two unbounded block diagonalization, oscillator QPS transfer, an oscillator-lattice broken-sector temporal mass or GNS gap, regulator removal, a continuum, physical-empty comparison, prospective blind validation, C6, CP1, physical Sector A, or Pre-A closure. It also does not prove an onsite-interspersed local measured-Renyi estimate, two-phase QPS for the oscillator lattice, or a broken-sector temporal mass or GNS gap.",
+  "boundary": "This independent verifier checks the retained v2.1 fixtures and independently reconstructs the exact virial sign/factor, terminating subset-shear algebra, fifth-word budget, periodic actual-history corridor arithmetic, and rank-two automatic-gap counterfixture. The actual Q3 fifth moment and history theorem is restricted to the registered fixed-beta periodic compact-source family; it does not prove an arbitrary-boundary history bound, n-to-infinity Trotter convergence, all-shape Cauchy compatibility, all-exhaustion common alpha, group/generator completion, a phase-KMS quotient, connected rank-two unbounded block diagonalization, oscillator QPS transfer, an oscillator-lattice broken-sector temporal mass or GNS gap, regulator removal, a continuum, physical-empty comparison, prospective blind validation, C6, CP1, physical Sector A, or Pre-A closure. It also proves neither an onsite-interspersed local measured-Renyi estimate nor two-phase QPS for the exact oscillator lattice. The rank-two fixture is not a Q3 locality, coercivity, or gap no-go.",
   "claim_bearing": false,
   "claim_ids": [
     "C6-SPACETIME-SIGNATURE"
@@ -3357,7 +3648,10 @@
     "PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR",
     "PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP",
     "PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION",
-    "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL"
+    "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL",
+    "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
+    "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION",
+    "PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR"
   ],
   "derived": {
     "C6_closed": false,
@@ -4010,8 +4304,9 @@
       ]
     },
     "Sector_A_closed": false,
-    "actual_Q3_fixed_edge_history_bound_closed": false,
+    "actual_Q3_fixed_edge_history_bound_closed": true,
     "all_exhaustion_common_alpha_closed": false,
+    "arbitrary_boundary_history_bound_closed": false,
     "arbitrary_context_upgrade_closed": false,
     "below_Gamma_Feshbach_precursor_closed": true,
     "broken_sector_GNS_gap_closed": false,
@@ -4306,6 +4601,7 @@
     },
     "pure_bond_identity_closed": true,
     "rank_two_block_diagonalization_closed": false,
+    "registered_periodic_compact_source_scope_only": true,
     "regulator_removal_closed": false,
     "residual_bound": {
       "A_Q_fixture": {
@@ -4361,7 +4657,7 @@
       "sqrt_upper_certified_by_squaring": true
     },
     "semiclassical_onsite_geometry_fixture_closed": true,
-    "simultaneous_bond_shear_fifth_graph_propagation_closed": false,
+    "simultaneous_bond_shear_fifth_graph_propagation_closed": true,
     "source_firewall": {
       "allowed_roots": [
         "__future__",
@@ -4402,7 +4698,7 @@
         "E:/Dev/TECT/claims/GATES.md"
       ]
     },
-    "translate_uniform_local_fifth_Gibbs_moment_closed": false,
+    "translate_uniform_local_fifth_Gibbs_moment_closed": true,
     "twentieth_moment_fixed_edge_corridor_reduction_closed": true,
     "two_phase_QPS_for_exact_oscillator_closed": false,
     "v2_1_full_oscillator_edge_cluster": {
@@ -4642,9 +4938,158 @@
         ]
       ],
       "tail_power": 16
+    },
+    "v2_2_actual_Q3_fifth_shear_rank_two": {
+      "history": {
+        "M20": "2*d5^2*exp(C5*T)*S_mu^5*m5",
+        "corridor": "2916*c^2*M20*R^(-2/5)",
+        "factorial": "-R*log(R)/5+O(R)",
+        "registered_periodic_only": true
+      },
+      "rank_two": {
+        "Q3_gap_no_go": false,
+        "W_kernel": true,
+        "automatic_global_gap": false,
+        "cycle_nullity": 2,
+        "cycle_rank": 14,
+        "lift_first_high_energy": "1",
+        "lift_low_spectrum": [
+          "0",
+          "0",
+          "1",
+          "1"
+        ],
+        "local_idempotent": true,
+        "local_rank": 2,
+        "local_trace": "2",
+        "one_particle_eigenpairs": true,
+        "one_particle_half_laplacian": true,
+        "torus_L4_gap": "1",
+        "torus_bound_from_pi_gt_three": "9/8",
+        "vacuum_kernel": true
+      },
+      "shear": {
+        "C5_majorant_T2": 8403,
+        "K5_multinomial_supplies_weights": true,
+        "K_ge_one_fills_slack": true,
+        "R1_leftover_x_at_worst_neighbor": "1/4",
+        "R1_neighbor_exponential": "1/4",
+        "R1_paid_exponents": [
+          "1/2",
+          "1/4"
+        ],
+        "R2_cross_terms_retained": true,
+        "R2_leftover_x_at_worst_neighbor": "1/2",
+        "R2_neighbor_exponential": "1/2",
+        "R2_paid_neighbor_exponents": [
+          "1/4",
+          "1/4"
+        ],
+        "all_words_have_delta": true,
+        "all_words_order_at_most_five": true,
+        "coefficients": {
+          "delta_pQ": "1",
+          "delta_squared_Q2": "1/2"
+        },
+        "commutator_order_drop": "3/4",
+        "degree_counts": {
+          "1": 5,
+          "10": 1,
+          "2": 15,
+          "3": 30,
+          "4": 45,
+          "5": 51,
+          "6": 45,
+          "7": 30,
+          "8": 15,
+          "9": 5
+        },
+        "finite_cubic_subgraph_or_periodic_quotient": true,
+        "generic_degree_six_growth_ratio": "5/2",
+        "generic_degree_six_promotion": false,
+        "maximum_local_insertions": 5,
+        "maximum_neighbor_incidences": 10,
+        "polynomial_difference_T2": 16806,
+        "residual_weight_bound": "54",
+        "subset_deletion_safe": true,
+        "tree_sphere_terms": [
+          "3",
+          "15/2",
+          "75/4",
+          "375/8",
+          "1875/16",
+          "9375/32"
+        ],
+        "tuple_counts_neighbor_incidences_le_10": [
+          6,
+          36,
+          216,
+          1296,
+          7776,
+          46656,
+          279936,
+          1679616,
+          10077696,
+          60466176
+        ],
+        "uniform_cubic_polynomial_growth_required": true,
+        "word_count": 242
+      },
+      "static": {
+        "arbitrary_boundary_static": false,
+        "critical_order": "5",
+        "finite_cutoff_before_monotone_limit": true,
+        "force_placements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "force_prefactor": "-1/2",
+        "graph_levels": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            2,
+            4,
+            8
+          ],
+          [
+            3,
+            6,
+            12
+          ],
+          [
+            4,
+            8,
+            16
+          ],
+          [
+            5,
+            10,
+            20
+          ]
+        ],
+        "kinetic_coefficient": "1",
+        "registered_periodic_compact_source": true,
+        "unbounded_trace_cyclicity": false
+      }
     }
   },
-  "exploration_id": "EXP-000811",
+  "exploration_id": "EXP-000813",
   "negative_ids": [
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY",
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT",
@@ -4652,31 +5097,31 @@
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY",
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT",
-    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT"
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP"
   ],
   "open_gates": [
     "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
     "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
     "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
     "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
-    "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING",
-    "PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION"
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY"
   ],
   "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
   "result_number": "R-167",
-  "result_version": "v2.1",
+  "result_version": "v2.2",
   "schema": "tect/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-independent-result/1.0",
-  "script_version": "2.1.0",
+  "script_version": "2.2.0",
   "source_hashes": {
-    "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py": "6d46d3fea15dc17f1f783ac8a04d1f08f7c2c2ae2dea50fa809fee3f2b345104",
-    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md": "63fbc52cf284c5e8a220af1434e88970fed02eedf3dc00a770fcbc9c7bea84ef",
-    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json": "03547c9046974e02152ca3cff16311f59d5be8b7c5edeb17b8a993dfc32fee78"
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py": "74dc4a8758d204587963c4e41e720902fd0b66931c35024f7784adaaa09d0b38",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md": "f73fbd7b03f849edcc4f6d0f864156d33c06ef1a9a9a6a85727f280453e505e5",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json": "08953b6347de71d41dc1266d97c118692a2556457137c05ec53a64bb46803476"
   },
   "summary": {
     "authority_status": "COMPLETE",
     "failed": 0,
-    "passed": 138,
-    "total": 138
+    "passed": 154,
+    "total": 154
   },
   "task_id": "T-054",
   "verdict": "PASS"

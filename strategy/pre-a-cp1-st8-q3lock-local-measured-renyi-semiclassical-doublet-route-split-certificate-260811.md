@@ -1600,3 +1600,383 @@ children. The common-alpha, infinite-dimensional many-edge rank-two/QPS,
 broken-sector oscillator-lattice GNS-gap, physical-response,
 external-prospective-freeze, Round-1, C6, CP1, physical Sector A, and Pre-A
 parents remain **OPEN**.
+
+## 31. R-167 v2.2 additive checkpoint and exact scope
+
+This section records `EXP-000813`, `R-167 v2.2`, `T-054`, result ID
+`PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT`,
+and `claim_bearing: false`.  Every v2.1 theorem, negative, boundary, and issued
+source/PDF pair is preserved.  The new actual-history theorem below is confined
+to the already registered fixed-beta finite **periodic** Q3 family, uniformly
+over the registered compact source set, sites, tested edge translates and the
+two orientations of the declared split histories.  The direct subset-shear estimate is graph-theoretically uniform for tested
+nearest-neighbor subsets of finite subgraphs and periodic quotients of `Z^3`,
+or for a declared family with a uniform cubic-polynomial-growth bound.  Maximum
+degree at most six alone is insufficient: bounded-degree graphs may grow
+exponentially.  These facts also do not supply an arbitrary-boundary Gibbs
+input.  Thus the actual `m_5` and history conclusion is not broadened beyond
+the registered periodic family.
+
+The two input gates closed by Sections 32--36 are
+
+- `PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING`,
+- `PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION`.
+
+Their composition closes the scoped child
+`PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR`.
+
+## 32. Exact ninth-order virial identity without unbounded trace cyclicity
+
+Write the finite-volume polynomial Schrodinger operator as
+
+\[
+ H={1\over2\chi}\sum_i p_i^2+V(q),\qquad F_i=\partial_iV,
+ \qquad A_i={1\over2}(q_ip_i^9+p_i^9q_i).
+\]
+
+On the Schwartz core, repeated use of
+`[p_i^2,q_i]=-2i\hbar p_i` and
+`[V,p_i^9]=i\hbar\sum_{j=0}^8p_i^jF_ip_i^{8-j}` gives the exact sign and
+factor identity
+
+\[
+ {i\over\hbar}[H,A_i]={p_i^{10}\over\chi}
+ -{1\over2}\sum_{j=0}^8
+ \left(q_ip_i^jF_ip_i^{8-j}+p_i^jF_ip_i^{8-j}q_i\right).                 \tag{32.1}
+\]
+
+The registered finite-volume Q3 potential is polynomially confining.  Its
+eigenvectors are Schwartz, so (32.1) may first be paired with each eigenvector.
+For a spectral cutoff `P_N=1_{H\le N}`, multiply by the finite Gibbs weights and
+sum only over `P_N`.  This uses no cyclic permutation involving an unbounded
+operator.  Only after the positive estimates below are established is
+`N\uparrow\infty` taken by monotone convergence.
+
+## 33. Critical local Shubin--Young estimate and the fifth Gibbs moment
+
+For a fixed coordinate, `F_i` has coordinate degree at most three and is
+supported on a fixed Q3 star.  With anisotropic energy orders
+
+\[
+ \operatorname{ord}p={1\over2},\qquad
+ \operatorname{ord}q={1\over4},
+\]
+
+each word in the force sum of (32.1) has critical order at most
+`1/4+8/2+3/4=5`.  Normal ordering on the Schwartz core followed by scalar
+Young inequalities gives, uniformly over the registered compact source set,
+
+\[
+ \left|{1\over2}\sum_{j=0}^8
+ \langle q_ip_i^jF_ip_i^{8-j}+p_i^jF_ip_i^{8-j}q_i\rangle\right|
+ \le 9\epsilon\langle p_i^{10}\rangle
+   +C_\epsilon\langle1+Q_{\operatorname{star}(i)}^{20}\rangle .         \tag{33.1}
+\]
+
+Choose `9\epsilon<1/\chi`, insert (33.1) into the finite spectral sum of
+(32.1), and use the already registered fixed-beta periodic compact-source
+coordinate exponential estimate.  The right side is uniform in volume, site
+and translate.  Monotone convergence therefore gives
+
+\[
+ \sup_{\Lambda,h,x}\ \phi_{\Lambda,h}(p_x^{10})<\infty .               \tag{33.2}
+\]
+
+The compact family of shifted onsite quartic operators `k_h\ge1` satisfies the
+standard parameter-uniform Shubin graph induction through `m=5`:
+
+\[
+ \|k_h^{m/2}\psi\|^2\asymp
+ \sum_{|\beta|+|\alpha|/2\le m}\|q^\alpha p^\beta\psi\|^2,
+ \qquad 0\le m\le5.                                                     \tag{33.3}
+\]
+
+Its two directions give, as closed forms with uniform constants,
+
+\[
+ k_h^5\le C\left(1+\sum_i p_i^{10}+|q|^{20}\right),\qquad
+ |q|^{20}\le Ck_h^5,
+\]
+
+and hence
+`m_5=\sup\phi_{\Lambda,h}(k_{x,h}^5)<\infty` and
+`d_5=\sup_h\||q|^{10}k_h^{-5/2}\|<\infty`.  Equations (32.1)--(33.3), not a
+formal Gibbs trace commutator, discharge the static input gate.
+
+## 34. Exact direct conjugation for every tested cubic bond subset
+
+Fix a tested edge `e`, let `f_x=e^{-\mu d(x,e)}` with both endpoints assigned
+weight one, and put `K_e=\sum_xf_xk_x`.  For a tested nearest-neighbor bond
+subset `F` of the declared finite cubic subgraph or periodic quotient, define
+
+\[
+ V_F=-c\sum_{xy\in F}q_x\!\cdot q_y,\qquad
+ B_F(\delta)=e^{-i\delta V_F/\hbar},\qquad
+ Q_x^F=\sum_{y:xy\in F}q_y.
+\]
+
+Because all coordinates commute and `Q_x^F` contains only neighbours of `x`,
+
+\[
+ B_F(\delta)^*p_xB_F(\delta)=p_x+c\delta Q_x^F.
+\]
+
+The Baker--Campbell--Hausdorff expansion terminates after the second term and,
+exactly on Schwartz,
+
+\[
+ B_F(\delta)^*K_eB_F(\delta)=K_e+\delta R_1+\delta^2R_2,                \tag{34.1}
+\]
+
+where
+
+\[
+ R_1={c\over\chi}\sum_xf_xp_x\!\cdot Q_x^F,\qquad
+ R_2={c^2\over2\chi}\sum_xf_x|Q_x^F|^2.                               \tag{34.2}
+\]
+
+This proves the sign and both factors directly; no abstract commutator ladder
+is assumed.
+
+## 35. The load-bearing linear-in-step fifth-graph bound
+
+Expand `(K_e+\delta R_1+\delta^2R_2)^5` as a finite noncommutative word sum.
+Give `K_e,p,q` orders `1,1/2,1/4`.  Then `R_1` has order `3/4` and `R_2` order
+`1/2`.  The `K_e^5` multinomial supplies the weights allocated to all five
+slots.  For every nearest-neighbor pair `x\sim y`, weight comparability gives
+`e^{-\mu}f_x\le f_y\le e^\mu f_x`.  In an `R_1` monomial `f_xp_xq_y`, pay
+`f_x^{1/2}` to `p_x` and `f_y^{1/4}` to `q_y`; the unallocated coefficient is
+
+\[
+ {f_x\over f_x^{1/2}f_y^{1/4}}
+ \le e^{\mu/4}f_x^{1/4}.                                               \tag{35.1}
+\]
+
+An `R_2` anchor is not diagonal in one neighbor.  It expands as
+
+\[
+ f_x|Q_x^F|^2=f_x\sum_{y,z\sim x}q_y\!\cdot q_z.
+\]
+
+For each cross monomial pay `f_y^{1/4}` to `q_y` and `f_z^{1/4}` to `q_z`.
+The unallocated coefficient obeys
+
+\[
+ {f_x\over f_y^{1/4}f_z^{1/4}}
+ \le e^{\mu/2}f_x^{1/2}.                                               \tag{35.2}
+\]
+
+Commutators created while normal ordering have strictly lower anisotropic
+order, and `K_e\ge1` fills the resulting graph-power slack.  Since
+`0<f_x\le1`, the residual in (35.2) is no worse than a constant times
+`f_x^{1/4}`.  For finite subgraphs and periodic quotients of `Z^3`, comparison
+with the two endpoint-centered infinite cubic lattices gives
+
+\[
+ \sum_x f_x^{1/4}
+ \le2\left({1+e^{-\mu/4}\over1-e^{-\mu/4}}\right)^3.                   \tag{35.3}
+\]
+
+Let `n_1` and `n_2` be the numbers of `R_1` and `R_2` anchors in one
+fifth-power word.  There are at most `n_1+n_2\le5` nonbaseline anchors, but
+the unreduced neighbor-incidence count is
+`n_1+2n_2\le10` because every `R_2` cross term has two neighbor choices.
+Thus the safe local tuple count is at most `6^{n_1+2n_2}\le6^{10}`; no
+diagonal-only reduction of `R_2` is assumed.  Together with (35.3), this bounds
+the tuples on cubic volumes.  Deleting bonds preserves the estimate for every
+tested nearest-neighbor subset and its reverse.  This step uses cubic
+polynomial growth, not degree alone.  Indeed a six-regular tree has sphere sizes
+`6\cdot5^{r-1}`; when `e^{-\mu/4}=1/2`, its weighted sphere terms are
+`3(5/2)^{r-1}` and the residual sum diverges.  Thus no generic maximum-degree-
+six promotion is valid.
+
+Most importantly, every word except the baseline `K_e^5` contains at least one
+explicit `\delta`.  For `|\delta|\le T`, the remaining powers are absorbed into
+a parameter-explicit finite `C_5(T,\mu)`, giving
+
+\[
+ |\langle\psi,(B_F(\delta)^*K_e^5B_F(\delta)-K_e^5)\psi\rangle|
+ \le C_5(T,\mu)|\delta|\langle\psi,K_e^5\psi\rangle .                  \tag{35.4}
+\]
+
+The `O(|\delta|)` factor in (35.4) is load-bearing: a step-independent
+comparison would multiply once per Trotter rung and would not be uniform.
+The estimate is uniform for finite subgraphs and periodic quotients of `Z^3`,
+tested edges, tested nearest-neighbor subsets, and compact onsite sources.  A
+separate graph family requires an explicit uniform cubic-polynomial-growth
+hypothesis.  It does not cover a generic degree-six graph or claim an arbitrary-
+boundary static Gibbs theorem.
+
+Apply (35.4) at both `\delta` and `-\delta`.  Closed-form approximation gives
+onto invariance of `D(K_e^{5/2})` and
+
+\[
+ \|K_e^{5/2}B_F(\delta)K_e^{-5/2}\|
+ \le e^{C_5(T,\mu)|\delta|/2}.                                        \tag{35.5}
+\]
+
+The two-sided derivative at zero is the form-`C^1` statement and yields
+`G_5\le C_5`.  Thus products of partial or reverse subset shears with
+`\sum_j|\delta_j|\le T` obey the same exponential budget.  The onsite product
+factors commute with `K_e`.
+
+## 36. Actual periodic-history moment and hard-cutoff corridor
+
+Combining Sections 33 and 35 with the retained v2.1 convexity and endpoint
+embedding gives, in the registered periodic compact-source scope,
+
+\[
+ M_{20}\le2d_5^2e^{C_5T}S_\mu^5m_5.                                  \tag{36.1}
+\]
+
+The existing exact fixed-edge reduction therefore gives
+
+\[
+ \sigma_+(W_{R,L}^2)+\sigma_-(W_{R,L}^2)
+ \le2916c^2M_{20}R^6L^{-16}.                                         \tag{36.2}
+\]
+
+At `L=R^{2/5}`, (36.2) is `2916c^2M_{20}R^{-2/5}`, while the bounded-cutoff
+factorial has logarithm `-R\log R/5+O(R)`.  This closes the named actual-history
+child, but not `n\to\infty`, all-shape Cauchy convergence, all-exhaustion common
+alpha, a group or generator, or a KMS quotient.
+
+## 37. Exact rank-two local-edge counterexample to automatic global gap
+
+On each site take `\mathbb C^2`, `n=|1\rangle\langle1|`, and
+
+\[
+ |\phi^-_{xy}\rangle={|10\rangle-|01\rangle\over\sqrt2},\qquad
+ h_{xy}=|\phi^-_{xy}\rangle\langle\phi^-_{xy}|+n_xn_y.                \tag{37.1}
+\]
+
+In the ordered basis `(00,01,10,11)`, (37.1) is a rank-two projection with
+spectrum `{0,0,1,1}`.  Its kernel contains one even vector `|00\rangle` and one
+odd vector `(|10\rangle+|01\rangle)/\sqrt2`.
+
+Let `G` be finite and connected and `H_G=\sum_{xy\in E(G)}h_{xy}`.  Positivity
+and frustration freeness imply that a ground vector lies in every edge kernel.
+The `n_xn_y` term kills every occupied configuration containing an edge.  The
+antisymmetric projector equates coefficients of configurations related by one
+allowed token move.  The connected `k`-token graph is connected; for `k\ge2`
+one component contains a configuration with an occupied edge, hence all its
+coefficients vanish.  Therefore
+
+\[
+ \ker H_G=\operatorname{span}\{|\mathrm{vac}\rangle,|W_G\rangle\}.
+\]
+
+On the one-particle sector, `H_G=L_G/2`.  For the periodic `d`-torus of side
+`L`, the first Fourier mode gives
+
+\[
+ \operatorname{gap}(H_G)\le1-\cos(2\pi/L)
+ \le {2\pi^2\over L^2}\longrightarrow0.                              \tag{37.2}
+\]
+
+The infinite-onsite lift on `\ell^2(\mathbb N_0)` sets
+`K=z\sum_{r\ge2}(r-1)|r\rangle\langle r|` and adds
+`(K_x+K_y)/z` to every edge.  Each local edge still has the same rank-two
+kernel and gap one, while the one-particle band and (37.2) survive.
+
+This registers
+`NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP`.
+It refutes only the automatic local-edge-to-global inference.  It is not a Q3
+locality, local coercivity, or gap no-go.
+
+## 38. Surviving connected rank-two/QPS contract
+
+The counterexample sharpens, but does not close, the successor
+`PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY`.
+A successful proof must construct a parity-equivariant boundary/source-uniform
+quasi-local `U_\Lambda`, a uniform high-sector gap, and an effective connected
+interaction satisfying
+
+\[
+ \sup_x\sum_{X\ni x}|X|e^{a\operatorname{diam}X}\|\Phi_{\rm eff}(X)\|
+ <\epsilon_{\rm QPS}J,                                                 \tag{38.1}
+\]
+
+prove cutoff convergence in the same norm, and supply a phase/GNS
+intertwiner.  The older infinite-dimensional rank-two parent and the
+broken-sector GNS gate remain OPEN.
+
+## 39. Devil's-advocate audit and staging boundary
+
+1. **Objection -- (32.1) used `Tr(e^{-\beta H}[H,A])=0` for an unbounded
+   `A`.  DISMISSED.**  The proof pairs (32.1) with Schwartz eigenvectors, sums a
+   finite spectral cutoff, obtains positive uniform bounds, and only then takes
+   a monotone limit.  No unbounded trace cyclicity occurs.
+2. **Objection -- a critical force word consumes the full fifth order and
+   cannot be absorbed.  VALID with mitigation.**  The normal-order/Young lemma
+   exposes `9\epsilon p_i^{10}` and the registered coordinate twentieth moment;
+   choosing `9\epsilon<1/\chi` absorbs precisely the critical term.
+3. **Objection -- a simultaneous shear estimate for the complete bond set does
+   not cover ordered partial histories.  DISMISSED.**  Sections 34--35 start
+   with a tested nearest-neighbor subset `F` inside the cubic graph; deletion
+   preserves the cubic weight allocation, and the proof is invariant under
+   `\delta\mapsto-\delta`.
+4. **Objection -- a per-step constant destroys Trotter uniformity.  DISMISSED.**
+   Every nonbaseline word contains `\delta`, giving the load-bearing
+   `C_5|\delta|` form comparison and an exponential in
+   `\sum_j|\delta_j|`, not in the number of rungs.
+5. **Objection -- maximum degree six is enough for the residual weight sum.
+   UPHELD as a hostile.**  It is false on a six-regular tree, whose exponential
+   sphere growth defeats (35.3) for `e^{-\mu/4}=1/2`.  The shear theorem is
+   therefore cubic-growth scoped, and the actual conclusion (36.1) is further
+   restricted to the registered periodic family because only that family has
+   the static uniform Gibbs input used here.
+6. **Objection -- the rank-two example disproves the Q3 local edge theorem.
+   DISMISSED.**  It is a separate hopping-type frustration-free fixture and
+   rejects only an automatic inference.  Q3-specific connected elimination and
+   interaction-norm control could still establish a gap.
+
+No v2.2 PDF is issued.  The manifest field `v2_2_checkpoint_synthesis` is
+`DEFERRED`, and no intermediate PDF is created.  All v2.1 and earlier PDFs stay
+historical.  The common-alpha, connected rank-two/QPS, broken-sector GNS,
+Round-1, C6, CP1, physical Sector A, and Pre-A parents remain OPEN.
+
+## 40. Combined R-167 v2.2 / R-168 v1.3 gate-level checkpoint issuance
+
+The historical proof-first sentence `No v2.2 PDF is issued` applies only to
+the earlier four-file staging batch and is retained above as stage provenance.
+It is superseded for the current result by this single gate-level issuance; no
+per-lemma or intermediate PDF was issued.
+
+- Source:
+  claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.tex.txt
+  (33097 bytes; raw SHA-256
+  9eea5a425cef38c8741f40d000dc10ac46430598f62a1d55313748de35c277e3).
+- PDF:
+  claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.pdf
+  (415191 bytes; raw SHA-256
+  5ae80a7c5dd3f724411ee1b95fbf4db330f85123a4c3058a72f71900af9fdbf7;
+  11 pages; 129.247 seconds newer than the source).
+- R-167 primary: 253/253; raw script SHA-256
+  d9d65080f84c0408200ba64c81449263cfd87095d8bdf1620211bc6fab6d1058.
+- R-167 non-importing independent: 154/154; raw script SHA-256
+  74dc4a8758d204587963c4e41e720902fd0b66931c35024f7784adaaa09d0b38.
+- R-167 integrated: 279/279; raw script SHA-256
+  5985f84cdb427d1fb3b3ab8de49e025c0ef3b0767e4462879eaa77e5907ba1bc.
+- R-168 primary: 423/423; raw script SHA-256
+  69a9486b060c711679314806b302af85652c6d8317fccebba83578b5b2d397a9.
+- R-168 non-importing independent: 446/446; raw script SHA-256
+  6b100dd08e3daac385fc67fa5627f0c9f8c5d9ff8aa2a416d30018e72a033c26.
+- R-168 integrated: 349/349; raw script SHA-256
+  34af34a2bb45c50b68af0db88dfaf51004c3ab33d49c2c38464dd2fbed4f618e.
+- Extraction and render QA: pypdf 11/11 nonempty pages; pdfplumber 11/11
+  nonempty pages; 77/77 required tokens in each extraction; all 11 rendered
+  pages were visually reviewed with zero clipping, overlap, broken equations,
+  unreadable identifiers, black glyphs, or malformed page transitions; the
+  one-pass MiKTeX build reported OVERFULL-HBOX 0.
+
+The workflow issued one combined source/PDF pair only after the primary,
+non-importing independent, integrated, formal-authority, generated-surface,
+source-form, freshness, dual-extraction, and visual-review checks passed. This
+issues only the scoped R-167 v2.2 and R-168 v1.3 children. The all-exhaustion
+common-alpha, connected rank-two oscillator-elimination/QPS-norm and cutoff-
+compatibility, retained broader rank-two, broken-sector GNS-gap, substantive
+compact-action/background-probe/winding-law, ordered-state physical-mode and
+response-limit, six-term critical-estimand error-budget, physical-response,
+prospective-freeze, Round-1, C6, CP1, physical Sector A, and Pre-A parents
+remain **OPEN**. No parent closure follows.
