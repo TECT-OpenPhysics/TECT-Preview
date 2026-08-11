@@ -9,6 +9,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE](#ng-2026-08-11-pre-a-round1-current-tree-prospective-holdout-nonexistence) | issue an actual prospective Round-1 holdout from the audited registered checkpoint | commit `99157442831c0e44d425b5d5f8cd78856c57da53` has zero official freeze records, zero admitted microscopic survivors and no admitted M1/M2/M5 map/prediction pair; the separately reported zero local `freeze/*` tags is informational and non-load-bearing. Obtain external commitment, an admitted microscopic map/prediction and cryptographic remote verification; this is a current-snapshot audit, not a future no-go |
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY](#ng-2026-08-11-pre-a-st8-q3lock-global-all-bond-renyi-volume-uniformity) | demand one volume-independent global sandwiched-Renyi bound for complete all-bond kicks | an exact conditional low-doublet product reference gives a factor greater than one on each nontrivial disjoint bond and hence exponential volume growth, although the compressed coordinate probabilities are unchanged. Replace the global target by local measured-Renyi or restricted-tail control; this is not a full Q3 Gibbs counterexample |
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT](#ng-2026-08-11-pre-a-st8-q3lock-rank-one-unbounded-block-diagonalization-direct-broken-doublet-import) | import the published rank-one unbounded Lie--Schwinger theorem directly to finish the broken Q3 doublet phase | the theorem assumes one onsite vacuum and concludes a unique gapped ground state, while the required low space has dimension `2^|Lambda|`; choosing only the even onsite vector makes the reference gap exponentially smaller than the order-one Ising scale. Prove a rank-two band theorem or equivalent cutoff removal; this is an import mismatch, not a gap no-go |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE](#ng-2026-08-11-pre-a-st8-q3lock-energy-form-entropy-finite-moment-automatic-sandwiched-renyi-upgrade) | infer one uniform `alpha>1` sandwiched-Renyi history estimate from vanishing entropy/energy excess, two-sided energy-form comparison and any fixed finite list of tilted moments | an exact two-level family retains all those inputs and all-coefficient Gaussian reference moments while its sandwiched-Renyi divergence grows without bound. Require a genuine model-specific quasi-invariance or restricted-tail estimate; this is not a Q3LOCK dynamics counterexample |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT](#ng-2026-08-11-pre-a-st8-q3lock-direct-yarotsky-two-phase-gap-import) | import the two-phase Yarotsky quantum Pirogov--Sinai gap theorem directly from the Q3 infrared-order inequality and classical point minima | the exact Q3 onsite Hilbert space, product-reference, local-gap, first-order splitting and small-relative-perturbation hypotheses are not established. Build and control a low-doublet reference first; this is an import mismatch, not a no-go for an actual broken-sector gap |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0](#ng-2026-08-11-pre-a-st8-q3lock-raw-weyl-basic-resolvent-quartic-point-norm-c0) | make the exact unsplit quartic onsite flow point-norm continuous on an invariant concrete C-star carrier containing a raw momentum Weyl or basic momentum resolvent | exact full-Q3 translated packets at time `tau R^(-3)` give a positive norm-discontinuity lower bound for both labels. Retain the finite-region bounded local-strict/energy topology; full resolvent-algebra invariance under the unsplit flow remains open |
@@ -338,6 +341,75 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-11-pre-a-round1-current-tree-prospective-holdout-nonexistence"></a>
+### NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE -- the audited checkpoint cannot issue an actual prospective holdout
+
+**Failure mode:** treat the current hash-addressed Round-1 repository snapshot
+as if it already contained the external commitment, admitted microscopic map,
+frozen prediction and public remote provenance required for a real blind
+holdout.
+
+**Evidence:** EXP-000807--808 / R-168 v1.0 audit commit
+`99157442831c0e44d425b5d5f8cd78856c57da53` and finds zero official freeze
+records, zero locally registered `freeze/*` tags observed at audit execution,
+zero admitted microscopic survivors and no admitted M1, M2 or M5 microscopic-
+map/nonempty-prediction pair. M2's registered physical-prediction list is empty
+and its holdout flag is false. The tag count is an informational local
+observation only, not a stable blocker, remote query or cryptographic receipt.
+
+**Consequence:** no actual prospective freeze can be issued from that audited
+snapshot. A future route remains open after an independent custodian's signed
+opaque commitment, a candidate-neutral target contract, at least one admitted
+candidate-specific microscopic map and nonempty prediction, complete common-
+input ledger, separately authorized public remote commit/tag, and independent
+cryptographic remote-object/ref verification. No target, freeze record or tag
+is created here, and this is not a universal no-go for future candidates.
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-global-all-bond-renyi-volume-uniformity"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY -- a complete bond layer need not have volume-uniform global Renyi cost
+
+**Failure mode:** require one volume-independent global sandwiched-Renyi bound
+for every complete all-bond kick and use it as the history-tail input.
+
+**Evidence:** EXP-000806 / R-167 v1.9 uses the conditional low-doublet product
+reference `rho_1=diag(4/5,1/5)`, `rho_2=rho_1 tensor rho_1` and
+`U_theta=exp(i theta sigma_x tensor sigma_x)`. Exact arithmetic gives
+`Qtilde_2(U_theta rho_2 U_theta^*||rho_2)=((4+9 sin^2 theta)^2)/16`, equal to
+`289/64` at `theta=pi/4`. Tensor multiplicativity gives
+`24137569/262144` on three disjoint bonds and exponential growth on any number
+of nontrivial disjoint bonds. Yet spectral functions of the compressed
+coordinate `m sigma_x` commute with the kick and their local probabilities are
+unchanged.
+
+**Consequence:** the global quantum target is overstrong. The surviving route
+is a fixed-local-coordinate measured-Renyi likelihood bound or a direct
+restricted-tail domination theorem for onsite-interspersed histories. The
+fixture belongs to the conditional product-doublet reference; it is not an
+identity for full-oscillator tail projections and not a counterexample to the
+interacting Q3 Gibbs local route or common dynamics.
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-rank-one-unbounded-block-diagonalization-direct-broken-doublet-import"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT -- the published unique-vacuum theorem does not control a rank-two phase band
+
+**Failure mode:** apply the published Del Vecchio--Frohlich--Pizzo unbounded
+Lie--Schwinger theorem directly to the Q3 onsite doublet and cite its uniform
+gap as the target broken-sector gap.
+
+**Evidence:** the stated theorem assumes one onsite vector `Omega`, a positive
+gap on its orthogonal complement and tensor products of rank-one vacuum
+projections; it concludes a unique ground state with a uniform gap. The Q3
+low-band space instead has dimension `2^|Lambda|` and must retain both ordered
+phases. Choosing only the even onsite vector does not repair the mismatch:
+R-167 v1.9's semiclassical corridor makes the even/odd splitting exponentially
+small while the compressed Ising scale remains order one, so the required
+phase-blind rank-one small-coupling hypothesis is in the wrong regime.
+
+**Consequence:** prove a volume-uniform rank-two band block diagonalization
+that subtracts the exact low-band TFIM and controls the remaining interaction
+in a two-phase QPS norm, or prove equivalent spectral-cutoff removal preserving
+both phases and their gap. This is a direct-import mismatch, not a no-go for
+that successor and not a counterexample to the exact Q3LOCK gap.
 
 <a id="ng-2026-08-11-pre-a-st8-q3lock-energy-form-entropy-finite-moment-automatic-sandwiched-renyi-upgrade"></a>
 ### NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE -- current energy and entropy inputs do not imply history quasi-invariance

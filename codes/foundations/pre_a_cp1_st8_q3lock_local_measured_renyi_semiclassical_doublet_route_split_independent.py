@@ -1,0 +1,1758 @@
+#!/usr/bin/env python3
+"""Independent exact verifier for the R-167 v1.9 route split.
+
+This standard-library program reconstructs the finite algebra behind the
+R-167 v1.9 checkpoint without importing the primary implementation or reading
+any primary run result.  Its exact ``Fraction`` fixtures cover:
+
+* pure-bond multiplier invariance and the two cutoff-Hilbert--Schmidt
+  orientations on a finite diagonal model;
+* the full four-level order-two sandwiched-Renyi polynomial and its
+  multiplicative growth on disjoint bonds;
+* the local measured-Renyi Holder and fourth-moment layer-cake coefficients;
+* Q3 connectivity, Laplacian/Hessian spectra, and semiclassical scaling;
+* the exact low-doublet transverse-field Ising compression;
+* the centered one-bond residual algebra and a rational form-bound fixture;
+* every polynomial exponent in the proposed semiclassical N corridor; and
+* the manifest/certificate identity and no-overclaim boundary.
+
+The verifier closes no common-alpha, phase, or GNS-gap gate.  In particular,
+the Renyi fixture rejects only a volume-uniform *global* target in the stated
+conditional product reference; it is not a counterexample to a local
+coordinate-marginal bound for the interacting Q3 Gibbs state.
+"""
+
+from __future__ import annotations
+
+import argparse
+import ast
+import hashlib
+import json
+import math
+import os
+import tempfile
+from fractions import Fraction
+from pathlib import Path
+from typing import Any, Mapping, Sequence
+
+
+__version__ = "1.0.0"
+REPO = Path(__file__).resolve().parents[2]
+SCRIPT = Path(__file__).resolve()
+SLUG = (
+    "pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-"
+    "doublet-route-split"
+)
+RESULT_ID = (
+    "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-"
+    "COMMON-ALPHA-CAUCHY-GATE-SPLIT"
+)
+RESULT_NUMBER = "R-167"
+RESULT_VERSION = "v1.9"
+EXPLORATION_ID = "EXP-000806"
+TASK_ID = "T-054"
+CLAIM_ID = "C6-SPACETIME-SIGNATURE"
+
+MANIFEST = REPO / f"strategy/{SLUG}-manifest.json"
+CERTIFICATE = REPO / f"strategy/{SLUG}-certificate-260811.md"
+DEFAULT_OUTPUT = (
+    REPO
+    / "claims/C6-SPACETIME-SIGNATURE/runs"
+    / f"2026-08-11-independent-{SLUG}/result.json"
+)
+
+NEGATIVE_IDS = (
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-"
+    "VOLUME-UNIFORMITY",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-"
+    "DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT",
+)
+CLOSED_SUBGATES = (
+    "PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-"
+    "STATE-WEIGHTED-CUTOFF-IDENTITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-"
+    "REDUCTION",
+    "PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-"
+    "LOW-BAND-TFIM-COMPRESSION",
+)
+OPEN_GATES = (
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-"
+    "HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-"
+    "DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+)
+
+NO_OVERCLAIM = (
+    "This independent verifier proves only finite exact fixtures for the "
+    "pure-bond coordinate identity, local measured-Renyi reduction, Q3 "
+    "onsite geometry, low-band compression, and residual/corridor algebra. "
+    "It does not prove an onsite-interspersed local measured-Renyi or "
+    "restricted-tail estimate, n-to-infinity Trotter convergence, an "
+    "all-exhaustion common alpha, a phase-KMS quotient, a rank-two "
+    "unbounded block diagonalization, two-phase QPS for the oscillator "
+    "lattice, beta-infinity phase selection, a broken-sector temporal mass "
+    "or GNS gap, regulator removal, a continuum, a physical-empty "
+    "comparison, prospective blind validation, C6, CP1, physical Sector A, "
+    "or Pre-A closure."
+)
+
+Polynomial = tuple[Fraction, ...]
+
+
+def serial(value: Any) -> Any:
+    """Convert exact values to deterministic JSON-compatible objects."""
+
+    if isinstance(value, Fraction):
+        return str(value)
+    if isinstance(value, Path):
+        return str(value).replace("\\", "/")
+    if isinstance(value, dict):
+        return {str(key): serial(item) for key, item in value.items()}
+    if isinstance(value, set):
+        return [serial(item) for item in sorted(value)]
+    if isinstance(value, (list, tuple)):
+        return [serial(item) for item in value]
+    return value
+
+
+def canonical_bytes(payload: Mapping[str, Any]) -> bytes:
+    return json.dumps(
+        serial(dict(payload)),
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=True,
+    ).encode("utf-8")
+
+
+def normalized_sha256(path: Path) -> str:
+    raw = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(raw).hexdigest()
+
+
+def atomic_json(path: Path, payload: Mapping[str, Any]) -> None:
+    """Write a result atomically; self-test mode never calls this function."""
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    descriptor, temporary = tempfile.mkstemp(
+        prefix=path.name + ".", suffix=".tmp", dir=path.parent
+    )
+    try:
+        with os.fdopen(descriptor, "w", encoding="utf-8", newline="\n") as stream:
+            json.dump(
+                serial(dict(payload)),
+                stream,
+                indent=2,
+                sort_keys=True,
+                ensure_ascii=True,
+            )
+            stream.write("\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(temporary, path)
+    finally:
+        if os.path.exists(temporary):
+            os.unlink(temporary)
+
+
+class Audit:
+    """Fail-fast exact assertion ledger."""
+
+    def __init__(self) -> None:
+        self.rows: list[dict[str, Any]] = []
+
+    def check(
+        self,
+        name: str,
+        condition: bool,
+        actual: Any,
+        expected: Any,
+        group: str,
+    ) -> None:
+        if not condition:
+            raise AssertionError(
+                f"{group}: {name}: actual={actual!r}, expected={expected!r}"
+            )
+        self.rows.append(
+            {
+                "name": name,
+                "group": group,
+                "status": "PASS",
+                "actual": serial(actual),
+                "expected": serial(expected),
+            }
+        )
+
+
+def perfect_fraction_sqrt(value: Fraction) -> Fraction:
+    """Return an exact rational square root, rejecting non-square inputs."""
+
+    if value < 0:
+        raise ValueError("square root input must be nonnegative")
+    numerator = math.isqrt(value.numerator)
+    denominator = math.isqrt(value.denominator)
+    if numerator * numerator != value.numerator:
+        raise ValueError(f"numerator is not a square: {value}")
+    if denominator * denominator != value.denominator:
+        raise ValueError(f"denominator is not a square: {value}")
+    return Fraction(numerator, denominator)
+
+
+def poly_trim(value: Sequence[Fraction]) -> Polynomial:
+    entries = list(value)
+    while len(entries) > 1 and entries[-1] == 0:
+        entries.pop()
+    return tuple(entries)
+
+
+def poly_add(left: Polynomial, right: Polynomial) -> Polynomial:
+    size = max(len(left), len(right))
+    return poly_trim(
+        tuple(
+            (left[index] if index < len(left) else Fraction(0))
+            + (right[index] if index < len(right) else Fraction(0))
+            for index in range(size)
+        )
+    )
+
+
+def poly_scale(value: Polynomial, factor: Fraction) -> Polynomial:
+    return poly_trim(tuple(factor * entry for entry in value))
+
+
+def poly_mul(left: Polynomial, right: Polynomial) -> Polynomial:
+    output = [Fraction(0)] * (len(left) + len(right) - 1)
+    for left_index, left_value in enumerate(left):
+        for right_index, right_value in enumerate(right):
+            output[left_index + right_index] += left_value * right_value
+    return poly_trim(output)
+
+
+def poly_eval(value: Polynomial, argument: Fraction) -> Fraction:
+    output = Fraction(0)
+    for coefficient in reversed(value):
+        output = output * argument + coefficient
+    return output
+
+
+def source_firewall_fixture() -> dict[str, Any]:
+    """Verify that the program has only stdlib imports and authority inputs."""
+
+    tree = ast.parse(SCRIPT.read_text(encoding="utf-8"), filename=str(SCRIPT))
+    allowed_roots = {
+        "__future__",
+        "argparse",
+        "ast",
+        "fractions",
+        "hashlib",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "tempfile",
+        "typing",
+    }
+    imported_roots: set[str] = set()
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Import):
+            imported_roots.update(alias.name.split(".")[0] for alias in node.names)
+        elif isinstance(node, ast.ImportFrom):
+            imported_roots.add((node.module or "").split(".")[0])
+    return {
+        "imported_roots": sorted(imported_roots),
+        "allowed_roots": sorted(allowed_roots),
+        "forbidden_imports": sorted(imported_roots - allowed_roots),
+        "runtime_read_inputs": [SCRIPT, MANIFEST, CERTIFICATE],
+        "primary_module_imported": False,
+        "primary_result_consumed": False,
+    }
+
+
+def pure_bond_diagonal_fixture() -> dict[str, Any]:
+    """Recompute the multiplier and cutoff identities on four atoms exactly."""
+
+    # INPUT FIXTURE.  Phase units are multiples of pi, so all exponentials
+    # below are exactly +/-1 and no floating-point trigonometry is required.
+    weights = (
+        Fraction(1, 10),
+        Fraction(1, 5),
+        Fraction(3, 10),
+        Fraction(2, 5),
+    )
+    full_phase_units = (0, 1, 2, 3)
+    cutoff_phase_units = (0, 0, 2, 2)
+    coordinate_multiplier = (Fraction(-2), Fraction(0), Fraction(3), Fraction(5))
+    tail_projection = (Fraction(0), Fraction(0), Fraction(1), Fraction(1))
+
+    full_unitary = tuple(1 if entry % 2 == 0 else -1 for entry in full_phase_units)
+    cutoff_unitary = tuple(
+        1 if entry % 2 == 0 else -1 for entry in cutoff_phase_units
+    )
+    phase_difference_units = tuple(
+        full - cutoff
+        for full, cutoff in zip(full_phase_units, cutoff_phase_units)
+    )
+    multiplier_commutator = tuple(
+        unitary * value - value * unitary
+        for unitary, value in zip(full_unitary, coordinate_multiplier)
+    )
+    conjugated_tail = tuple(
+        unitary * projection * unitary
+        for unitary, projection in zip(full_unitary, tail_projection)
+    )
+
+    difference_square = tuple(
+        (full - cutoff) ** 2
+        for full, cutoff in zip(full_unitary, cutoff_unitary)
+    )
+    sine_square_expression = tuple(
+        0 if difference % 2 == 0 else 4
+        for difference in phase_difference_units
+    )
+    left_hilbert_schmidt_square = sum(
+        (weight * value for weight, value in zip(weights, difference_square)),
+        Fraction(0),
+    )
+    right_hilbert_schmidt_square = sum(
+        (weight * value for weight, value in zip(weights, difference_square)),
+        Fraction(0),
+    )
+    sine_functional = sum(
+        (weight * value for weight, value in zip(weights, sine_square_expression)),
+        Fraction(0),
+    )
+    w_square_coefficient = sum(
+        (
+            weight * difference * difference
+            for weight, difference in zip(weights, phase_difference_units)
+        ),
+        Fraction(0),
+    )
+    # Exact rational certification of pi^2 > 9 > 4 is enough for the bound.
+    pi_squared_strict_lower = Fraction(9)
+    cutoff_rhs_strict_lower = pi_squared_strict_lower * w_square_coefficient
+
+    return {
+        "weights": weights,
+        "full_phase_units_of_pi": full_phase_units,
+        "cutoff_phase_units_of_pi": cutoff_phase_units,
+        "phase_difference_units_of_pi": phase_difference_units,
+        "full_unitary_diagonal": full_unitary,
+        "cutoff_unitary_diagonal": cutoff_unitary,
+        "coordinate_multiplier": coordinate_multiplier,
+        "multiplier_commutator": multiplier_commutator,
+        "tail_projection": tail_projection,
+        "conjugated_tail": conjugated_tail,
+        "difference_square_diagonal": difference_square,
+        "sine_square_functional_diagonal": sine_square_expression,
+        "left_HS_square": left_hilbert_schmidt_square,
+        "right_HS_square": right_hilbert_schmidt_square,
+        "sine_functional": sine_functional,
+        "W_square_coefficient_before_pi_squared": w_square_coefficient,
+        "pi_squared_strict_lower": pi_squared_strict_lower,
+        "cutoff_rhs_strict_lower": cutoff_rhs_strict_lower,
+        "operator_norm_exponential_paid": False,
+        "onsite_interspersed_history_tail_proved": False,
+    }
+
+
+def qtilde_pair_polynomial(reference_a: Fraction, reference_b: Fraction) -> Polynomial:
+    """One two-level support block in the exact 4x4 Qtilde_2 trace."""
+
+    # With x=sin(theta)^2, the two evolved diagonal entries are affine in x;
+    # the squared off-diagonal magnitude is x(1-x)(a-b)^2.
+    diagonal_a = (reference_a, reference_b - reference_a)
+    diagonal_b = (reference_b, reference_a - reference_b)
+    off_diagonal_square = poly_scale(
+        (Fraction(0), Fraction(1), Fraction(-1)),
+        (reference_a - reference_b) ** 2,
+    )
+    geometric_mean = perfect_fraction_sqrt(reference_a * reference_b)
+    return poly_add(
+        poly_add(
+            poly_scale(poly_mul(diagonal_a, diagonal_a), 1 / reference_a),
+            poly_scale(poly_mul(diagonal_b, diagonal_b), 1 / reference_b),
+        ),
+        poly_scale(off_diagonal_square, Fraction(2) / geometric_mean),
+    )
+
+
+def global_qtilde2_fixture() -> dict[str, Any]:
+    """Reconstruct the 4x4 order-two sandwiched-Renyi polynomial exactly."""
+
+    # INPUT FIXTURE from the registered conditional low-doublet reference.
+    probability_even = Fraction(4, 5)
+    probability_odd = Fraction(1, 5)
+    q3_coordinate_count = 8
+    rho_two_diagonal = (
+        probability_even**2,
+        probability_even * probability_odd,
+        probability_even * probability_odd,
+        probability_odd**2,
+    )
+    coupled_pairs = ((0, 3), (1, 2))
+    q_polynomial: Polynomial = (Fraction(0),)
+    pair_polynomials = []
+    for left, right in coupled_pairs:
+        pair = qtilde_pair_polynomial(
+            rho_two_diagonal[left], rho_two_diagonal[right]
+        )
+        pair_polynomials.append(pair)
+        q_polynomial = poly_add(q_polynomial, pair)
+
+    # TEST ORACLE: the certificate's claimed ((4+9x)^2)/16 formula.
+    certificate_formula_oracle = poly_scale(
+        poly_mul((Fraction(4), Fraction(9)), (Fraction(4), Fraction(9))),
+        Fraction(1, 16),
+    )
+    evaluation_arguments = (
+        Fraction(0),
+        Fraction(1, 2),
+        Fraction(16, 25),
+        Fraction(144, 169),
+        Fraction(1),
+    )
+    evaluations = {
+        str(argument): poly_eval(q_polynomial, argument)
+        for argument in evaluation_arguments
+    }
+    single_bond_pi_over_four = evaluations[str(Fraction(1, 2))]
+    disjoint_bond_count = 3
+    disjoint_product = single_bond_pi_over_four**disjoint_bond_count
+
+    return {
+        "rho_one_diagonal": (probability_even, probability_odd),
+        "rho_two_diagonal": rho_two_diagonal,
+        "rho_two_trace": sum(rho_two_diagonal, Fraction(0)),
+        "coupled_4x4_index_pairs": coupled_pairs,
+        "q3_coordinate_count": q3_coordinate_count,
+        "physical_theta_coefficient_of_delta_c_m_squared_over_hbar": (
+            q3_coordinate_count
+        ),
+        "physical_theta_relation": (
+            "theta=8 delta c m^2/hbar=delta J/hbar"
+        ),
+        "pair_Qtilde2_polynomials": pair_polynomials,
+        "Qtilde2_polynomial": q_polynomial,
+        "certificate_formula_polynomial": certificate_formula_oracle,
+        "evaluations_by_sin_squared_theta": evaluations,
+        "theta_pi_over_four_value": single_bond_pi_over_four,
+        "disjoint_bond_count": disjoint_bond_count,
+        "disjoint_product_value": disjoint_product,
+        "global_volume_uniform_bound_rejected_in_fixture": True,
+        "compressed_doublet_coordinate_spectral_functions_commute_with_kick": True,
+        "projected_full_coordinate_tail_claimed": False,
+        "coordinate_scope": (
+            "Spectral functions of the compressed doublet coordinate "
+            "m sigma_x, not P 1_{q>L} P."
+        ),
+        "full_interacting_Q3_Gibbs_counterexample": False,
+        "local_measured_Renyi_rejected": False,
+        "common_alpha_closed": False,
+    }
+
+
+def measured_renyi_fixture() -> dict[str, Any]:
+    """Check discrete Holder and exact fourth-moment layer-cake coefficients."""
+
+    # INPUT FIXTURE for a normalized likelihood on a four-atom coordinate law.
+    reference = (
+        Fraction(1, 2),
+        Fraction(1, 4),
+        Fraction(1, 8),
+        Fraction(1, 8),
+    )
+    likelihood = (
+        Fraction(1, 2),
+        Fraction(1),
+        Fraction(3, 2),
+        Fraction(5, 2),
+    )
+    alpha = Fraction(2)
+    theta = (alpha - 1) / alpha
+    tilted = tuple(
+        reference_value * likelihood_value
+        for reference_value, likelihood_value in zip(reference, likelihood)
+    )
+    measured_q_alpha = sum(
+        (
+            reference_value * likelihood_value**int(alpha)
+            for reference_value, likelihood_value in zip(reference, likelihood)
+        ),
+        Fraction(0),
+    )
+    event_indices = (2, 3)
+    reference_event = sum((reference[index] for index in event_indices), Fraction(0))
+    tilted_event = sum((tilted[index] for index in event_indices), Fraction(0))
+    holder_left_squared = tilted_event**2
+    holder_right_squared = measured_q_alpha * reference_event
+
+    # INPUT FIXTURE for coefficients in the registered Gaussian-tail reduction.
+    gaussian_a = Fraction(14)
+    cutoff_L = Fraction(2)
+    measured_q_coefficient = Fraction(16, 9)
+    static_tail_coefficient = Fraction(9, 4)
+    b = theta * gaussian_a
+    q_root = perfect_fraction_sqrt(measured_q_coefficient)
+    static_root = perfect_fraction_sqrt(static_tail_coefficient)
+    one_orientation_amplitude = q_root * static_root
+    two_orientation_probability_prefactor = 2 * one_orientation_amplitude
+    layer_cake_polynomial = (
+        cutoff_L**4
+        + 2 * cutoff_L**2 / b
+        + Fraction(2) / (b * b)
+    )
+    one_orientation_layer_cake_coefficient = (
+        one_orientation_amplitude * layer_cake_polynomial
+    )
+    two_orientation_layer_cake_coefficient = (
+        2 * one_orientation_layer_cake_coefficient
+    )
+
+    return {
+        "reference_distribution": reference,
+        "likelihood": likelihood,
+        "tilted_distribution": tilted,
+        "reference_normalization": sum(reference, Fraction(0)),
+        "tilted_normalization": sum(tilted, Fraction(0)),
+        "alpha": alpha,
+        "theta": theta,
+        "measured_Q_alpha": measured_q_alpha,
+        "event_indices": event_indices,
+        "reference_event_probability": reference_event,
+        "tilted_event_probability": tilted_event,
+        "Holder_left_squared": holder_left_squared,
+        "Holder_right_squared": holder_right_squared,
+        "gaussian_a": gaussian_a,
+        "b_theta_a": b,
+        "cutoff_L": cutoff_L,
+        "Q_coefficient": measured_q_coefficient,
+        "static_tail_coefficient": static_tail_coefficient,
+        "Q_to_one_over_alpha": q_root,
+        "static_tail_to_theta": static_root,
+        "one_orientation_amplitude": one_orientation_amplitude,
+        "two_orientation_probability_prefactor": (
+            two_orientation_probability_prefactor
+        ),
+        "layer_cake_polynomial": layer_cake_polynomial,
+        "one_orientation_layer_cake_coefficient": (
+            one_orientation_layer_cake_coefficient
+        ),
+        "two_orientation_layer_cake_coefficient": (
+            two_orientation_layer_cake_coefficient
+        ),
+        "onsite_interspersed_likelihood_bound_proved": False,
+    }
+
+
+def cube_edges() -> tuple[tuple[int, int], ...]:
+    return tuple(
+        (left, left ^ bit)
+        for left in range(8)
+        for bit in (1, 2, 4)
+        if left < (left ^ bit)
+    )
+
+
+def cube_laplacian(edges: Sequence[tuple[int, int]]) -> tuple[tuple[int, ...], ...]:
+    matrix = [[0] * 8 for _ in range(8)]
+    for left, right in edges:
+        matrix[left][left] += 1
+        matrix[right][right] += 1
+        matrix[left][right] -= 1
+        matrix[right][left] -= 1
+    return tuple(tuple(row) for row in matrix)
+
+
+def integer_matvec(
+    matrix: Sequence[Sequence[int]], vector: Sequence[int]
+) -> tuple[int, ...]:
+    return tuple(
+        sum((entry * value for entry, value in zip(row, vector)), 0)
+        for row in matrix
+    )
+
+
+def semiclassical_cube_fixture() -> dict[str, Any]:
+    """Derive Q3 minima, Laplacian/Hessian spectrum, and one exact scaling row."""
+
+    edges = cube_edges()
+    laplacian = cube_laplacian(edges)
+    degrees = tuple(laplacian[index][index] for index in range(8))
+    walsh_rows = []
+    laplacian_spectrum = []
+    for mask in range(8):
+        vector = tuple(
+            -1 if ((mask & vertex).bit_count() % 2) else 1
+            for vertex in range(8)
+        )
+        eigenvalue = 2 * mask.bit_count()
+        applied = integer_matvec(laplacian, vector)
+        walsh_rows.append(
+            {
+                "mask": mask,
+                "vector": vector,
+                "eigenvalue": eigenvalue,
+                "applied": applied,
+                "expected": tuple(eigenvalue * entry for entry in vector),
+            }
+        )
+        laplacian_spectrum.append(eigenvalue)
+    laplacian_spectrum.sort()
+    laplacian_multiplicity = {
+        eigenvalue: laplacian_spectrum.count(eigenvalue)
+        for eigenvalue in sorted(set(laplacian_spectrum))
+    }
+
+    zero_sign_assignments = []
+    for bit_pattern in range(1 << 8):
+        signs = tuple(1 if bit_pattern & (1 << vertex) else -1 for vertex in range(8))
+        if all(signs[left] == signs[right] for left, right in edges):
+            zero_sign_assignments.append(signs)
+
+    # INPUT FIXTURE requested for exact finite scaling.
+    R = Fraction(16)
+    g = Fraction(1)
+    lam = Fraction(1)
+    chi = Fraction(1)
+    hbar = Fraction(1)
+    mu = lam / g
+    v = perfect_fraction_sqrt(R / g)
+    energy_scale = R * R / g
+    h_sc = hbar * g / (perfect_fraction_sqrt(chi) * R * perfect_fraction_sqrt(R))
+    hessian_spectrum = tuple(Fraction(2) + mu * value for value in laplacian_spectrum)
+    hessian_multiplicity = {
+        value: hessian_spectrum.count(value) for value in sorted(set(hessian_spectrum))
+    }
+
+    # On the locked path, ds=sqrt(8) dt and sqrt(2W)=2(1-t^2).
+    locked_path_integral_minus_one_to_one = Fraction(4, 3)
+    action_sqrt_radicand = 2
+    action_sqrt_coefficient = 4 * locked_path_integral_minus_one_to_one
+    action_square = action_sqrt_coefficient**2 * action_sqrt_radicand
+    harmonic_gap_sqrt_coefficient = energy_scale * h_sc
+    harmonic_gap_sqrt_radicand = 2
+    harmonic_gap_square = (
+        harmonic_gap_sqrt_coefficient**2 * harmonic_gap_sqrt_radicand
+    )
+
+    return {
+        "edges": edges,
+        "edge_count": len(edges),
+        "degrees": degrees,
+        "laplacian": laplacian,
+        "walsh_rows": walsh_rows,
+        "laplacian_spectrum": tuple(laplacian_spectrum),
+        "laplacian_multiplicity": laplacian_multiplicity,
+        "zero_sign_assignments": zero_sign_assignments,
+        "zero_sign_assignment_count": len(zero_sign_assignments),
+        "R": R,
+        "g": g,
+        "lambda": lam,
+        "chi": chi,
+        "hbar": hbar,
+        "mu": mu,
+        "v": v,
+        "E_star": energy_scale,
+        "h_sc": h_sc,
+        "hessian_spectrum": hessian_spectrum,
+        "hessian_multiplicity": hessian_multiplicity,
+        "locked_path_integral": locked_path_integral_minus_one_to_one,
+        "S0_sqrt_coefficient": action_sqrt_coefficient,
+        "S0_sqrt_radicand": action_sqrt_radicand,
+        "S0_square": action_square,
+        "Gamma_harm_sqrt_coefficient": harmonic_gap_sqrt_coefficient,
+        "Gamma_harm_sqrt_radicand": harmonic_gap_sqrt_radicand,
+        "Gamma_harm_square": harmonic_gap_square,
+        "numerical_h0_certified": False,
+        "many_body_phase_proved": False,
+    }
+
+
+def low_band_tfim_fixture() -> dict[str, Any]:
+    """Recompute all exact coefficients of the compressed bond Hamiltonian."""
+
+    # INPUT FIXTURE.
+    spatial_coordination = Fraction(6)
+    c = Fraction(2, 9)
+    m = Fraction(3, 2)
+    delta_one = Fraction(1, 10)
+    a_zero = Fraction(5, 2)
+    a_one = Fraction(251, 100)
+    internal_coordinate_count = Fraction(8)
+
+    d_two = a_one - a_zero
+    ising_J = internal_coordinate_count * c * m * m
+    bond_scalar = internal_coordinate_count * c * a_zero
+    bond_field_per_endpoint = 4 * c * d_two
+    bond_spin_coupling = -ising_J
+    shifted_bond_scalar = bond_scalar - ising_J
+    accumulated_site_field = spatial_coordination * bond_field_per_endpoint
+    delta_effective = delta_one + accumulated_site_field
+
+    return {
+        "z": spatial_coordination,
+        "c": c,
+        "m": m,
+        "delta_1": delta_one,
+        "a_0": a_zero,
+        "a_1": a_one,
+        "d_2": d_two,
+        "internal_coordinate_count": internal_coordinate_count,
+        "J": ising_J,
+        "bond_scalar_before_shift": bond_scalar,
+        "bond_field_per_endpoint": bond_field_per_endpoint,
+        "bond_spin_coupling": bond_spin_coupling,
+        "bond_scalar_removed_after_J_rewrite": shifted_bond_scalar,
+        "accumulated_site_field": accumulated_site_field,
+        "delta_eff": delta_effective,
+        "compression_exact": True,
+        "rank_two_high_mode_elimination_proved": False,
+    }
+
+
+def residual_bound_fixture(low_band: Mapping[str, Any]) -> dict[str, Any]:
+    """Recompute centered moments, the one-bond bound, and A_Q algebra."""
+
+    m = low_band["m"]
+    a_zero = low_band["a_0"]
+    a_one = low_band["a_1"]
+    c = low_band["c"]
+
+    # INPUT FIXTURE: fourth moments are specified upstream, not inferred.
+    b_zero_moment = a_zero**2 + Fraction(1, 4)
+    b_one_moment = a_one**2 + Fraction(9, 25)
+    a_squared_candidates = (a_zero - m * m, a_one - m * m)
+    b_squared_candidates = (
+        b_zero_moment - a_zero**2,
+        b_one_moment - a_one**2,
+    )
+    a_squared = max(a_squared_candidates)
+    b_squared = max(b_squared_candidates)
+    b = perfect_fraction_sqrt(b_squared)
+
+    # a=sqrt(26)/10.  Keep the non-square radical symbolic and verify it by
+    # squaring its coefficient/radicand representation.
+    a_sqrt_radicand = 26
+    a_sqrt_coefficient = Fraction(1, 10)
+    a_square_from_surd = a_sqrt_coefficient**2 * a_sqrt_radicand
+    bond_rational_part = 8 * c * (b + a_squared)
+    bond_sqrt_coefficient = 8 * c * 2 * m * a_sqrt_coefficient
+    bond_sqrt_radicand = a_sqrt_radicand
+    # Rational strict upper oracle sqrt(26)<51/10 follows from 26<2601/100.
+    sqrt_upper = Fraction(51, 10)
+    sqrt_upper_certified = Fraction(a_sqrt_radicand) < sqrt_upper**2
+    bond_rational_upper = bond_rational_part + bond_sqrt_coefficient * sqrt_upper
+
+    # Independent exact A_Q fixture: sqrt(epsilon_0+Gamma)=sqrt(9)=3.
+    residual_v = Fraction(4)
+    residual_gamma = Fraction(8)
+    residual_epsilon_zero = Fraction(1)
+    residual_g = Fraction(1)
+    aq_first = residual_v**2 / residual_gamma
+    aq_second = (
+        2
+        * perfect_fraction_sqrt(residual_epsilon_zero + residual_gamma)
+        / (residual_gamma * perfect_fraction_sqrt(residual_g))
+    )
+    a_q = aq_first + aq_second
+
+    young_t = Fraction(1, 2)
+    young_matrix = (
+        (young_t, Fraction(-1)),
+        (Fraction(-1), 1 / young_t),
+    )
+    young_determinant = (
+        young_matrix[0][0] * young_matrix[1][1]
+        - young_matrix[0][1] * young_matrix[1][0]
+    )
+
+    return {
+        "b_0": b_zero_moment,
+        "b_1": b_one_moment,
+        "a_squared_candidates": a_squared_candidates,
+        "a_squared": a_squared,
+        "a_sqrt_coefficient": a_sqrt_coefficient,
+        "a_sqrt_radicand": a_sqrt_radicand,
+        "a_square_from_surd": a_square_from_surd,
+        "b_squared_candidates": b_squared_candidates,
+        "b_squared": b_squared,
+        "b": b,
+        "bond_bound_rational_part": bond_rational_part,
+        "bond_bound_sqrt_coefficient": bond_sqrt_coefficient,
+        "bond_bound_sqrt_radicand": bond_sqrt_radicand,
+        "bond_bound_common_denominator_form": {
+            "numerator_rational": bond_rational_part * 225,
+            "numerator_sqrt_coefficient": bond_sqrt_coefficient * 225,
+            "denominator": 225,
+            "radicand": bond_sqrt_radicand,
+        },
+        "sqrt_upper": sqrt_upper,
+        "sqrt_upper_certified_by_squaring": sqrt_upper_certified,
+        "bond_bound_rational_upper": bond_rational_upper,
+        "A_Q_fixture": {
+            "v": residual_v,
+            "Gamma": residual_gamma,
+            "epsilon_0": residual_epsilon_zero,
+            "g": residual_g,
+            "first_term": aq_first,
+            "second_term": aq_second,
+            "A_Q": a_q,
+        },
+        "Young_t": young_t,
+        "Young_matrix": young_matrix,
+        "Young_determinant": young_determinant,
+        "Young_diagonal_nonnegative": (
+            young_matrix[0][0] >= 0 and young_matrix[1][1] >= 0
+        ),
+        "residual_inequality_proves_block_diagonalization": False,
+    }
+
+
+def corridor_exponent_fixture() -> dict[str, Any]:
+    """Derive all N powers from r=-N^4 and c=N^-4 algebraically."""
+
+    # INPUT EXPONENTS in powers of N.
+    input_exponents = {
+        "R": Fraction(4),
+        "c": Fraction(-4),
+        "g": Fraction(0),
+        "lambda": Fraction(0),
+        "chi": Fraction(0),
+        "hbar": Fraction(0),
+    }
+    R_exp = input_exponents["R"]
+    c_exp = input_exponents["c"]
+    g_exp = input_exponents["g"]
+    chi_exp = input_exponents["chi"]
+    hbar_exp = input_exponents["hbar"]
+
+    v_exp = (R_exp - g_exp) / 2
+    energy_exp = 2 * R_exp - g_exp
+    h_exp = hbar_exp + g_exp - chi_exp / 2 - 3 * R_exp / 2
+    j_exp = c_exp + 2 * v_exp
+    gamma_exp = energy_exp + h_exp
+    a_squared_exp = 2 * v_exp + h_exp
+    a_exp = a_squared_exp / 2
+    b_squared_exp = 4 * v_exp + h_exp
+    b_exp = b_squared_exp / 2
+    bond_bracket_term_exponents = {
+        "b": b_exp,
+        "2ma": v_exp + a_exp,
+        "a_squared": 2 * a_exp,
+    }
+    bond_bracket_exp = max(bond_bracket_term_exponents.values())
+    low_high_bond_exp = c_exp + bond_bracket_exp
+
+    # epsilon_0+Gamma has the harmonic exponent Gamma in this corridor.
+    epsilon_plus_gamma_exp = gamma_exp
+    aq_term_exponents = {
+        "v_squared_over_Gamma": 2 * v_exp - gamma_exp,
+        "sqrt_energy_over_Gamma_sqrt_g": (
+            epsilon_plus_gamma_exp / 2 - gamma_exp - g_exp / 2
+        ),
+    }
+    a_q_exp = max(aq_term_exponents.values())
+    c_a_q_exp = c_exp + a_q_exp
+    derived = {
+        "v": v_exp,
+        "E_star": energy_exp,
+        "h_sc": h_exp,
+        "J": j_exp,
+        "Gamma": gamma_exp,
+        "a": a_exp,
+        "b": b_exp,
+        "one_bond_low_high": low_high_bond_exp,
+        "cA_Q": c_a_q_exp,
+    }
+    # TEST ORACLE: the exponent table registered in the v1.9 certificate.
+    certificate_oracle = {
+        "v": Fraction(2),
+        "E_star": Fraction(8),
+        "h_sc": Fraction(-6),
+        "J": Fraction(0),
+        "Gamma": Fraction(2),
+        "a": Fraction(-1),
+        "b": Fraction(1),
+        "one_bond_low_high": Fraction(-3),
+        "cA_Q": Fraction(-2),
+    }
+    return {
+        "input_exponents": input_exponents,
+        "derived_exponents": derived,
+        "certificate_oracle": certificate_oracle,
+        "bond_bracket_term_exponents": bond_bracket_term_exponents,
+        "bond_bracket_dominant_exponent": bond_bracket_exp,
+        "A_Q_term_exponents": aq_term_exponents,
+        "A_Q_dominant_exponent": a_q_exp,
+        "J_leading_constant": Fraction(8),
+        "Gamma_leading_sqrt_coefficient": Fraction(1),
+        "Gamma_leading_sqrt_radicand": 2,
+        "finite_N_enclosure": False,
+        "two_phase_QPS_proved": False,
+    }
+
+
+def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
+    """Bind to the manifest/certificate without reading primary outputs."""
+
+    missing = [
+        str(path.relative_to(REPO)).replace("\\", "/")
+        for path in (MANIFEST, CERTIFICATE)
+        if not path.exists()
+    ]
+    if missing:
+        if not staged:
+            raise FileNotFoundError("missing authorities: " + ", ".join(missing))
+        return {
+            "status": "INCOMPLETE",
+            "missing": missing,
+            "manifest": None,
+            "certificate": None,
+        }
+
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    certificate = CERTIFICATE.read_text(encoding="utf-8")
+    certificate_flat = " ".join(certificate.split())
+    audit.check(
+        "manifest result identity",
+        (
+            manifest.get("result_id") == RESULT_ID
+            and manifest.get("result_number") == RESULT_NUMBER
+            and manifest.get("result_version") == RESULT_VERSION
+        ),
+        {
+            "id": manifest.get("result_id"),
+            "number": manifest.get("result_number"),
+            "version": manifest.get("result_version"),
+        },
+        {"id": RESULT_ID, "number": RESULT_NUMBER, "version": RESULT_VERSION},
+        "authority",
+    )
+    audit.check(
+        "manifest task/exploration identity",
+        (
+            manifest.get("task_id") == TASK_ID
+            and manifest.get("exploration_id") == EXPLORATION_ID
+            and manifest.get("claim_ids") == [CLAIM_ID]
+        ),
+        {
+            "task": manifest.get("task_id"),
+            "exploration": manifest.get("exploration_id"),
+            "claims": manifest.get("claim_ids"),
+        },
+        {"task": TASK_ID, "exploration": EXPLORATION_ID, "claims": [CLAIM_ID]},
+        "authority",
+    )
+    audit.check(
+        "manifest remains non-claim-bearing",
+        manifest.get("claim_bearing") is False,
+        manifest.get("claim_bearing"),
+        False,
+        "authority",
+    )
+    audit.check(
+        "manifest negative IDs",
+        tuple(manifest.get("negative_ids", ())) == NEGATIVE_IDS,
+        manifest.get("negative_ids"),
+        NEGATIVE_IDS,
+        "authority",
+    )
+    audit.check(
+        "manifest closed subgates",
+        tuple(manifest.get("closed_subgates", ())) == CLOSED_SUBGATES,
+        manifest.get("closed_subgates"),
+        CLOSED_SUBGATES,
+        "authority",
+    )
+    audit.check(
+        "manifest open gates",
+        tuple(manifest.get("open_gates", ())) == OPEN_GATES,
+        manifest.get("open_gates"),
+        OPEN_GATES,
+        "authority",
+    )
+    checkpoint = manifest.get("checkpoint_synthesis", {})
+    checkpoint_source = checkpoint.get("source")
+    checkpoint_pdf = checkpoint.get("pdf")
+    checkpoint_deferred = (
+        checkpoint_source is None
+        and checkpoint_pdf is None
+        and checkpoint.get("visual_qa") is None
+    )
+    checkpoint_combined = (
+        isinstance(checkpoint_source, str)
+        and isinstance(checkpoint_pdf, str)
+        and isinstance(checkpoint.get("source_sha256"), str)
+        and len(checkpoint["source_sha256"]) == 64
+        and isinstance(checkpoint.get("pdf_sha256"), str)
+        and len(checkpoint["pdf_sha256"]) == 64
+        and isinstance(checkpoint.get("pages"), int)
+        and checkpoint["pages"] > 0
+        and isinstance(checkpoint.get("visual_qa"), str)
+        and "COMBINED" in str(checkpoint.get("status", "")).upper()
+    )
+    audit.check(
+        "manifest PDF checkpoint lifecycle",
+        checkpoint_deferred or checkpoint_combined,
+        checkpoint,
+        "deferred during development or one issued combined checkpoint",
+        "authority",
+    )
+    verification = manifest.get("verification", {})
+    audit.check(
+        "manifest binds this independent verifier",
+        verification.get("independent_script")
+        == str(SCRIPT.relative_to(REPO)).replace("\\", "/"),
+        verification.get("independent_script"),
+        str(SCRIPT.relative_to(REPO)).replace("\\", "/"),
+        "authority",
+    )
+    audit.check(
+        "certificate identity tokens",
+        all(
+            token in certificate
+            for token in (
+                RESULT_ID,
+                RESULT_NUMBER,
+                RESULT_VERSION,
+                EXPLORATION_ID,
+                TASK_ID,
+                "claim_bearing: false",
+            )
+        ),
+        "all required tokens present",
+        True,
+        "authority",
+    )
+    audit.check(
+        "certificate global Renyi scope",
+        (
+            "not a full-Q3 Gibbs counterexample" in certificate_flat
+            and "does not reject a local measured-Renyi" in certificate_flat
+        ),
+        "scoped conditional-product negative",
+        True,
+        "authority",
+    )
+    audit.check(
+        "certificate common-alpha gate remains open",
+        (
+            OPEN_GATES[0] in certificate_flat
+            and "ONSITE-INTERSPERSED LOCAL HISTORY TAILS" in certificate_flat
+            and "REMAIN OPEN" in certificate_flat
+        ),
+        "open gate and missing input stated",
+        True,
+        "authority",
+    )
+    audit.check(
+        "manifest no-overclaim boundary",
+        all(
+            phrase in manifest.get("no_overclaim", "")
+            for phrase in (
+                "onsite-interspersed local measured-Renyi",
+                "all-exhaustion common alpha",
+                "rank-two unbounded block diagonalization",
+                "broken-sector temporal mass or GNS gap",
+                "physical Sector A",
+                "Pre-A closure",
+            )
+        ),
+        manifest.get("no_overclaim"),
+        "all boundary phrases present",
+        "authority",
+    )
+    return {
+        "status": "COMPLETE",
+        "missing": [],
+        "manifest": MANIFEST,
+        "certificate": CERTIFICATE,
+        "manifest_sha256": normalized_sha256(MANIFEST),
+        "certificate_sha256": normalized_sha256(CERTIFICATE),
+    }
+
+
+def build_payload(staged: bool = False) -> dict[str, Any]:
+    audit = Audit()
+
+    firewall = source_firewall_fixture()
+    audit.check(
+        "standard-library import firewall",
+        not firewall["forbidden_imports"],
+        firewall["imported_roots"],
+        firewall["allowed_roots"],
+        "independence",
+    )
+    audit.check(
+        "no primary import or result consumption",
+        (
+            not firewall["primary_module_imported"]
+            and not firewall["primary_result_consumed"]
+            and firewall["runtime_read_inputs"] == [SCRIPT, MANIFEST, CERTIFICATE]
+        ),
+        firewall,
+        "script plus two authority drafts only",
+        "independence",
+    )
+
+    pure = pure_bond_diagonal_fixture()
+    audit.check(
+        "pure-bond coordinate multiplier commutes",
+        pure["multiplier_commutator"] == (0, 0, 0, 0),
+        pure["multiplier_commutator"],
+        (0, 0, 0, 0),
+        "pure-bond",
+    )
+    audit.check(
+        "pure-bond coordinate tail invariant",
+        pure["conjugated_tail"] == pure["tail_projection"],
+        pure["conjugated_tail"],
+        pure["tail_projection"],
+        "pure-bond",
+    )
+    audit.check(
+        "cutoff functional-calculus diagonal identity",
+        pure["difference_square_diagonal"]
+        == pure["sine_square_functional_diagonal"],
+        pure["difference_square_diagonal"],
+        pure["sine_square_functional_diagonal"],
+        "pure-bond",
+    )
+    audit.check(
+        "two Hilbert-Schmidt orientations equal",
+        pure["left_HS_square"]
+        == pure["right_HS_square"]
+        == pure["sine_functional"]
+        == Fraction(12, 5),
+        {
+            "left": pure["left_HS_square"],
+            "right": pure["right_HS_square"],
+            "functional": pure["sine_functional"],
+        },
+        Fraction(12, 5),
+        "pure-bond",
+    )
+    audit.check(
+        "cutoff sine bound certified without floats",
+        pure["left_HS_square"] < pure["cutoff_rhs_strict_lower"],
+        pure["left_HS_square"],
+        {"strictly_below": pure["cutoff_rhs_strict_lower"], "using": "pi^2>9"},
+        "pure-bond",
+    )
+    audit.check(
+        "pure-bond theorem boundary",
+        (
+            not pure["operator_norm_exponential_paid"]
+            and not pure["onsite_interspersed_history_tail_proved"]
+        ),
+        pure,
+        "exact layer identity only; history estimate open",
+        "scope",
+    )
+
+    qtilde = global_qtilde2_fixture()
+    audit.check(
+        "4x4 reference normalized",
+        qtilde["rho_two_trace"] == 1,
+        qtilde["rho_two_trace"],
+        1,
+        "global-Renyi",
+    )
+    audit.check(
+        "exact 4x4 Qtilde2 polynomial",
+        qtilde["Qtilde2_polynomial"]
+        == qtilde["certificate_formula_polynomial"],
+        qtilde["Qtilde2_polynomial"],
+        qtilde["certificate_formula_polynomial"],
+        "global-Renyi",
+    )
+    audit.check(
+        "full Q3 bond-angle factor",
+        (
+            qtilde["q3_coordinate_count"] == 8
+            and qtilde[
+                "physical_theta_coefficient_of_delta_c_m_squared_over_hbar"
+            ]
+            == 8
+            and qtilde["physical_theta_relation"]
+            == "theta=8 delta c m^2/hbar=delta J/hbar"
+        ),
+        {
+            "coordinate_count": qtilde["q3_coordinate_count"],
+            "theta_coefficient": qtilde[
+                "physical_theta_coefficient_of_delta_c_m_squared_over_hbar"
+            ],
+            "relation": qtilde["physical_theta_relation"],
+        },
+        "theta=8 delta c m^2/hbar=delta J/hbar",
+        "global-Renyi",
+    )
+    audit.check(
+        "Qtilde2 identity angle",
+        qtilde["evaluations_by_sin_squared_theta"]["0"] == 1,
+        qtilde["evaluations_by_sin_squared_theta"]["0"],
+        1,
+        "global-Renyi",
+    )
+    audit.check(
+        "Qtilde2 pi-over-four value",
+        qtilde["theta_pi_over_four_value"] == Fraction(289, 64),
+        qtilde["theta_pi_over_four_value"],
+        Fraction(289, 64),
+        "global-Renyi",
+    )
+    audit.check(
+        "Qtilde2 independent rational-angle values",
+        (
+            qtilde["evaluations_by_sin_squared_theta"]["16/25"]
+            == Fraction(3721, 625)
+            and qtilde["evaluations_by_sin_squared_theta"]["144/169"]
+            == Fraction(243049, 28561)
+        ),
+        qtilde["evaluations_by_sin_squared_theta"],
+        {"16/25": Fraction(3721, 625), "144/169": Fraction(243049, 28561)},
+        "global-Renyi",
+    )
+    audit.check(
+        "three-disjoint-bond multiplicativity",
+        qtilde["disjoint_product_value"] == Fraction(24137569, 262144),
+        qtilde["disjoint_product_value"],
+        Fraction(24137569, 262144),
+        "global-Renyi",
+    )
+    audit.check(
+        "global-Renyi negative remains scoped",
+        (
+            qtilde["global_volume_uniform_bound_rejected_in_fixture"]
+            and qtilde[
+                "compressed_doublet_coordinate_spectral_functions_commute_with_kick"
+            ]
+            and not qtilde["projected_full_coordinate_tail_claimed"]
+            and not qtilde["full_interacting_Q3_Gibbs_counterexample"]
+            and not qtilde["local_measured_Renyi_rejected"]
+            and not qtilde["common_alpha_closed"]
+        ),
+        qtilde,
+        "conditional product-reference global target only",
+        "scope",
+    )
+
+    measured = measured_renyi_fixture()
+    audit.check(
+        "local likelihood distributions normalized",
+        measured["reference_normalization"] == measured["tilted_normalization"] == 1,
+        {
+            "reference": measured["reference_normalization"],
+            "tilted": measured["tilted_normalization"],
+        },
+        1,
+        "measured-Renyi",
+    )
+    audit.check(
+        "local measured Q2",
+        measured["measured_Q_alpha"] == Fraction(23, 16),
+        measured["measured_Q_alpha"],
+        Fraction(23, 16),
+        "measured-Renyi",
+    )
+    audit.check(
+        "discrete Holder event inequality",
+        measured["Holder_left_squared"] <= measured["Holder_right_squared"]
+        and measured["Holder_left_squared"] == Fraction(1, 4)
+        and measured["Holder_right_squared"] == Fraction(23, 64),
+        {
+            "left_squared": measured["Holder_left_squared"],
+            "right_squared": measured["Holder_right_squared"],
+        },
+        {"left_squared": Fraction(1, 4), "right_squared": Fraction(23, 64)},
+        "measured-Renyi",
+    )
+    audit.check(
+        "Holder exponent and Gaussian exponent",
+        measured["theta"] == Fraction(1, 2) and measured["b_theta_a"] == 7,
+        {"theta": measured["theta"], "b": measured["b_theta_a"]},
+        {"theta": Fraction(1, 2), "b": 7},
+        "measured-Renyi",
+    )
+    audit.check(
+        "two-orientation probability coefficient",
+        measured["two_orientation_probability_prefactor"] == 4,
+        measured["two_orientation_probability_prefactor"],
+        4,
+        "measured-Renyi",
+    )
+    audit.check(
+        "fourth-moment layer-cake polynomial",
+        measured["layer_cake_polynomial"] == Fraction(842, 49),
+        measured["layer_cake_polynomial"],
+        Fraction(842, 49),
+        "measured-Renyi",
+    )
+    audit.check(
+        "one- and two-orientation layer-cake coefficients",
+        (
+            measured["one_orientation_layer_cake_coefficient"]
+            == Fraction(1684, 49)
+            and measured["two_orientation_layer_cake_coefficient"]
+            == Fraction(3368, 49)
+        ),
+        {
+            "one": measured["one_orientation_layer_cake_coefficient"],
+            "two": measured["two_orientation_layer_cake_coefficient"],
+        },
+        {"one": Fraction(1684, 49), "two": Fraction(3368, 49)},
+        "measured-Renyi",
+    )
+    audit.check(
+        "measured-Renyi reduction boundary",
+        not measured["onsite_interspersed_likelihood_bound_proved"],
+        measured["onsite_interspersed_likelihood_bound_proved"],
+        False,
+        "scope",
+    )
+
+    cube = semiclassical_cube_fixture()
+    audit.check(
+        "Q3 edge and degree fixture",
+        cube["edge_count"] == 12 and cube["degrees"] == (3,) * 8,
+        {"edges": cube["edge_count"], "degrees": cube["degrees"]},
+        {"edges": 12, "degrees": (3,) * 8},
+        "Q3-semiclassical",
+    )
+    audit.check(
+        "Walsh diagonalization of cube Laplacian",
+        all(row["applied"] == row["expected"] for row in cube["walsh_rows"]),
+        cube["walsh_rows"],
+        "L chi_S = 2|S| chi_S",
+        "Q3-semiclassical",
+    )
+    audit.check(
+        "cube Laplacian spectrum",
+        cube["laplacian_multiplicity"] == {0: 1, 2: 3, 4: 3, 6: 1},
+        cube["laplacian_multiplicity"],
+        {0: 1, 2: 3, 4: 3, 6: 1},
+        "Q3-semiclassical",
+    )
+    audit.check(
+        "exactly two sign minima",
+        cube["zero_sign_assignment_count"] == 2
+        and set(cube["zero_sign_assignments"])
+        == {(1,) * 8, (-1,) * 8},
+        cube["zero_sign_assignments"],
+        {(1,) * 8, (-1,) * 8},
+        "Q3-semiclassical",
+    )
+    audit.check(
+        "cube Hessian spectrum at mu one",
+        cube["hessian_multiplicity"] == {2: 1, 4: 3, 6: 3, 8: 1},
+        cube["hessian_multiplicity"],
+        {2: 1, 4: 3, 6: 3, 8: 1},
+        "Q3-semiclassical",
+    )
+    audit.check(
+        "semiclassical normalization fixture",
+        (
+            cube["v"] == 4
+            and cube["E_star"] == 256
+            and cube["h_sc"] == Fraction(1, 64)
+            and cube["mu"] == 1
+        ),
+        {key: cube[key] for key in ("v", "E_star", "h_sc", "mu")},
+        {"v": 4, "E_star": 256, "h_sc": Fraction(1, 64), "mu": 1},
+        "Q3-semiclassical",
+    )
+    audit.check(
+        "exact locked action",
+        (
+            cube["S0_sqrt_coefficient"] == Fraction(16, 3)
+            and cube["S0_sqrt_radicand"] == 2
+            and cube["S0_square"] == Fraction(512, 9)
+        ),
+        {
+            "coefficient": cube["S0_sqrt_coefficient"],
+            "radicand": cube["S0_sqrt_radicand"],
+            "square": cube["S0_square"],
+        },
+        "16 sqrt(2)/3",
+        "Q3-semiclassical",
+    )
+    audit.check(
+        "harmonic gap scaling fixture",
+        (
+            cube["Gamma_harm_sqrt_coefficient"] == 4
+            and cube["Gamma_harm_sqrt_radicand"] == 2
+            and cube["Gamma_harm_square"] == 32
+        ),
+        {
+            "coefficient": cube["Gamma_harm_sqrt_coefficient"],
+            "radicand": cube["Gamma_harm_sqrt_radicand"],
+            "square": cube["Gamma_harm_square"],
+        },
+        "4 sqrt(2)",
+        "Q3-semiclassical",
+    )
+    audit.check(
+        "onsite theorem boundary",
+        not cube["numerical_h0_certified"] and not cube["many_body_phase_proved"],
+        cube,
+        "existential small-h onsite input only",
+        "scope",
+    )
+
+    low_band = low_band_tfim_fixture()
+    audit.check(
+        "low-band d2",
+        low_band["d_2"] == Fraction(1, 100),
+        low_band["d_2"],
+        Fraction(1, 100),
+        "low-band",
+    )
+    audit.check(
+        "exact low-band Ising coupling",
+        low_band["J"] == 4 and low_band["bond_spin_coupling"] == -4,
+        {"J": low_band["J"], "coupling": low_band["bond_spin_coupling"]},
+        {"J": 4, "coupling": -4},
+        "low-band",
+    )
+    audit.check(
+        "exact projected bond scalar and field",
+        (
+            low_band["bond_scalar_before_shift"] == Fraction(40, 9)
+            and low_band["bond_field_per_endpoint"] == Fraction(2, 225)
+            and low_band["bond_scalar_removed_after_J_rewrite"]
+            == Fraction(4, 9)
+        ),
+        {
+            "scalar": low_band["bond_scalar_before_shift"],
+            "field": low_band["bond_field_per_endpoint"],
+            "shift": low_band["bond_scalar_removed_after_J_rewrite"],
+        },
+        {
+            "scalar": Fraction(40, 9),
+            "field": Fraction(2, 225),
+            "shift": Fraction(4, 9),
+        },
+        "low-band",
+    )
+    audit.check(
+        "effective transverse field arithmetic",
+        (
+            low_band["accumulated_site_field"] == Fraction(4, 75)
+            and low_band["delta_eff"] == Fraction(23, 150)
+        ),
+        {
+            "field": low_band["accumulated_site_field"],
+            "delta_eff": low_band["delta_eff"],
+        },
+        {"field": Fraction(4, 75), "delta_eff": Fraction(23, 150)},
+        "low-band",
+    )
+    audit.check(
+        "low-band compression boundary",
+        low_band["compression_exact"]
+        and not low_band["rank_two_high_mode_elimination_proved"],
+        low_band,
+        "exact compression, high-mode theorem open",
+        "scope",
+    )
+
+    residual = residual_bound_fixture(low_band)
+    audit.check(
+        "centered a squared",
+        residual["a_squared"]
+        == residual["a_square_from_surd"]
+        == Fraction(13, 50),
+        {
+            "maximum": residual["a_squared"],
+            "surd_square": residual["a_square_from_surd"],
+        },
+        Fraction(13, 50),
+        "residual",
+    )
+    audit.check(
+        "centered b squared",
+        residual["b_squared"] == Fraction(9, 25) and residual["b"] == Fraction(3, 5),
+        {"b_squared": residual["b_squared"], "b": residual["b"]},
+        {"b_squared": Fraction(9, 25), "b": Fraction(3, 5)},
+        "residual",
+    )
+    audit.check(
+        "fourth-moment input arithmetic",
+        residual["b_0"] == Fraction(13, 2)
+        and residual["b_1"] == Fraction(66601, 10000),
+        {"b0": residual["b_0"], "b1": residual["b_1"]},
+        {"b0": Fraction(13, 2), "b1": Fraction(66601, 10000)},
+        "residual",
+    )
+    audit.check(
+        "one-bond residual exact surd coefficients",
+        (
+            residual["bond_bound_rational_part"] == Fraction(344, 225)
+            and residual["bond_bound_sqrt_coefficient"] == Fraction(8, 15)
+            and residual["bond_bound_sqrt_radicand"] == 26
+        ),
+        {
+            "rational": residual["bond_bound_rational_part"],
+            "sqrt_coefficient": residual["bond_bound_sqrt_coefficient"],
+            "radicand": residual["bond_bound_sqrt_radicand"],
+        },
+        "(344+120 sqrt(26))/225",
+        "residual",
+    )
+    audit.check(
+        "one-bond residual rational upper",
+        residual["sqrt_upper_certified_by_squaring"]
+        and residual["bond_bound_rational_upper"] == Fraction(956, 225),
+        {
+            "sqrt_upper": residual["sqrt_upper"],
+            "bound_upper": residual["bond_bound_rational_upper"],
+        },
+        Fraction(956, 225),
+        "residual",
+    )
+    audit.check(
+        "A_Q rational fixture",
+        residual["A_Q_fixture"]["A_Q"] == Fraction(11, 4),
+        residual["A_Q_fixture"],
+        Fraction(11, 4),
+        "residual",
+    )
+    audit.check(
+        "Young residual matrix positive semidefinite",
+        residual["Young_diagonal_nonnegative"]
+        and residual["Young_determinant"] == 0,
+        {
+            "matrix": residual["Young_matrix"],
+            "determinant": residual["Young_determinant"],
+        },
+        "PSD rank one",
+        "residual",
+    )
+    audit.check(
+        "residual theorem boundary",
+        not residual["residual_inequality_proves_block_diagonalization"],
+        residual["residual_inequality_proves_block_diagonalization"],
+        False,
+        "scope",
+    )
+
+    corridor = corridor_exponent_fixture()
+    audit.check(
+        "N corridor exponent table",
+        corridor["derived_exponents"] == corridor["certificate_oracle"],
+        corridor["derived_exponents"],
+        corridor["certificate_oracle"],
+        "corridor",
+    )
+    audit.check(
+        "N corridor low-high dominant terms",
+        corridor["bond_bracket_term_exponents"]
+        == {"b": 1, "2ma": 1, "a_squared": -2}
+        and corridor["bond_bracket_dominant_exponent"] == 1,
+        corridor["bond_bracket_term_exponents"],
+        {"b": 1, "2ma": 1, "a_squared": -2},
+        "corridor",
+    )
+    audit.check(
+        "N corridor A_Q dominance",
+        corridor["A_Q_term_exponents"]
+        == {
+            "v_squared_over_Gamma": 2,
+            "sqrt_energy_over_Gamma_sqrt_g": -1,
+        }
+        and corridor["A_Q_dominant_exponent"] == 2,
+        corridor["A_Q_term_exponents"],
+        {
+            "v_squared_over_Gamma": 2,
+            "sqrt_energy_over_Gamma_sqrt_g": -1,
+        },
+        "corridor",
+    )
+    audit.check(
+        "N corridor leading scales",
+        corridor["J_leading_constant"] == 8
+        and corridor["Gamma_leading_sqrt_radicand"] == 2,
+        {
+            "J": corridor["J_leading_constant"],
+            "Gamma_radicand": corridor["Gamma_leading_sqrt_radicand"],
+        },
+        "J tends to 8 and Gamma is asymptotic to sqrt(2) N^2",
+        "corridor",
+    )
+    audit.check(
+        "corridor theorem boundary",
+        not corridor["finite_N_enclosure"] and not corridor["two_phase_QPS_proved"],
+        corridor,
+        "asymptotic algebra only",
+        "scope",
+    )
+
+    for phrase in (
+        "onsite-interspersed local measured-Renyi",
+        "n-to-infinity Trotter convergence",
+        "all-exhaustion common alpha",
+        "phase-KMS quotient",
+        "rank-two unbounded block diagonalization",
+        "two-phase QPS",
+        "broken-sector temporal mass or GNS gap",
+        "regulator removal",
+        "continuum",
+        "physical-empty comparison",
+        "prospective blind validation",
+        "C6",
+        "CP1",
+        "physical Sector A",
+        "Pre-A closure",
+    ):
+        audit.check(
+            f"no-overclaim phrase {phrase}",
+            phrase in NO_OVERCLAIM,
+            phrase in NO_OVERCLAIM,
+            True,
+            "scope",
+        )
+
+    authority = authority_audit(audit, staged=staged)
+    source_paths = (SCRIPT, MANIFEST, CERTIFICATE)
+    source_hashes = {
+        str(path.relative_to(REPO)).replace("\\", "/"): normalized_sha256(path)
+        for path in source_paths
+        if path.exists()
+    }
+    for relative, digest in source_hashes.items():
+        audit.check(
+            f"source hash {relative}",
+            len(digest) == 64
+            and all(character in "0123456789abcdef" for character in digest),
+            digest,
+            "64 lowercase hexadecimal characters",
+            "provenance",
+        )
+
+    verdict = "PASS" if authority["status"] == "COMPLETE" else "INCOMPLETE"
+    passed = len(audit.rows)
+    return {
+        "schema": f"tect/{SLUG}-independent-result/1.0",
+        "script_version": __version__,
+        "result_id": RESULT_ID,
+        "result_number": RESULT_NUMBER,
+        "result_version": RESULT_VERSION,
+        "exploration_id": EXPLORATION_ID,
+        "task_id": TASK_ID,
+        "claim_ids": [CLAIM_ID],
+        "claim_bearing": False,
+        "verdict": verdict,
+        "summary": {
+            "passed": passed,
+            "failed": 0,
+            "total": passed,
+            "authority_status": authority["status"],
+        },
+        "assertions": {
+            "passed": passed,
+            "failed": 0,
+            "total": passed,
+            "rows": audit.rows,
+        },
+        "derived": {
+            "source_firewall": firewall,
+            "pure_bond_diagonal": pure,
+            "global_Qtilde2_product_no_go": qtilde,
+            "local_measured_Renyi_reduction": measured,
+            "Q3_semiclassical_cube": cube,
+            "exact_low_band_TFIM": low_band,
+            "residual_bound": residual,
+            "N_corridor": corridor,
+            "pure_bond_identity_closed": True,
+            "local_measured_Renyi_reduction_closed": True,
+            "semiclassical_onsite_geometry_fixture_closed": True,
+            "exact_low_band_compression_fixture_closed": True,
+            "onsite_interspersed_history_bound_closed": False,
+            "all_exhaustion_common_alpha_closed": False,
+            "rank_two_block_diagonalization_closed": False,
+            "two_phase_QPS_closed": False,
+            "broken_sector_GNS_gap_closed": False,
+            "physical_mass_gap_closed": False,
+            "regulator_removal_closed": False,
+            "continuum_closed": False,
+            "physical_empty_comparison_closed": False,
+            "C6_closed": False,
+            "CP1_closed": False,
+            "Sector_A_closed": False,
+            "Pre_A_closed": False,
+        },
+        "negative_ids": list(NEGATIVE_IDS),
+        "closed_subgates": list(CLOSED_SUBGATES),
+        "open_gates": list(OPEN_GATES),
+        "authority": authority,
+        "source_hashes": source_hashes,
+        "boundary": NO_OVERCLAIM,
+    }
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument(
+        "--self-test",
+        action="store_true",
+        help="derive twice and require byte-identical canonical payloads",
+    )
+    parser.add_argument(
+        "--staged",
+        action="store_true",
+        help="allow missing manifest/certificate and report INCOMPLETE",
+    )
+    parser.add_argument(
+        "--no-store",
+        action="store_true",
+        help="run all checks without writing a result JSON",
+    )
+    arguments = parser.parse_args()
+
+    payload = build_payload(staged=arguments.staged)
+    encoded = canonical_bytes(payload)
+    digest = hashlib.sha256(encoded).hexdigest()
+
+    if arguments.self_test:
+        repeated = build_payload(staged=arguments.staged)
+        repeated_encoded = canonical_bytes(repeated)
+        if encoded != repeated_encoded:
+            raise AssertionError("nondeterministic independent payload")
+        if digest != hashlib.sha256(repeated_encoded).hexdigest():
+            raise AssertionError("nondeterministic independent digest")
+        print(
+            f"SELF-TEST {payload['verdict']} {payload['summary']['passed']}/"
+            f"{payload['summary']['total']} | SHA256 {digest} | {RESULT_NUMBER} "
+            f"{RESULT_VERSION}"
+        )
+        if payload["authority"]["missing"]:
+            print("STAGED-MISSING " + ", ".join(payload["authority"]["missing"]))
+        return 0 if payload["verdict"] == "PASS" or arguments.staged else 1
+
+    if payload["verdict"] != "PASS" and not arguments.staged:
+        print(
+            f"INCOMPLETE {payload['summary']['passed']}/"
+            f"{payload['summary']['total']} | authority "
+            + ", ".join(payload["authority"]["missing"])
+        )
+        return 1
+
+    if not arguments.no_store:
+        atomic_json(arguments.output, payload)
+    label = "PASS" if payload["verdict"] == "PASS" else "STAGED"
+    print(
+        f"{label} {payload['summary']['passed']}/"
+        f"{payload['summary']['total']} | SHA256 {digest} | {RESULT_NUMBER} "
+        f"{RESULT_VERSION}"
+    )
+    print("NO-STORE" if arguments.no_store else arguments.output)
+    if payload["authority"]["missing"]:
+        print("STAGED-MISSING " + ", ".join(payload["authority"]["missing"]))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

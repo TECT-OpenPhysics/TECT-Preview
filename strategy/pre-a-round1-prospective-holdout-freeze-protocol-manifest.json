@@ -1,0 +1,218 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-v0",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "parent_explorations": [
+    "EXP-000791"
+  ],
+  "exploration_id": "EXP-000807",
+  "correction_exploration_ids": [
+    "EXP-000808"
+  ],
+  "result_id": "PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
+  "result_version": "v1.0",
+  "result_number": "R-168",
+  "claim_bearing": false,
+  "negative_ids": [
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION"
+  ],
+  "authority": "R-168 v1.0 proves a fail-closed schema-shape protocol for a future Pre-A blind holdout and audits a hash-addressed registered snapshot. At the audited checkpoint there are zero official freeze records, zero admitted microscopic survivors, and no admitted M1, M2 or M5 microscopic-map/prediction pair. Therefore no actual prospective holdout can be issued from that snapshot. The validator enforces exact structural keys and declared scalar/container types across the root, contestant, evidence, target, commitment, disclosure, observable, estimand, raw-estimator, candidate-map, prediction, allowed-input, robustness, provenance and scoring objects; requires nonempty root and target identity strings; requires target estimand_id and units to equal the common estimand; requires a nonempty candidate_id-bound prediction for an eligible admitted-map contestant; confines every hash-pinned path to a normalized relative POSIX path inside the repository; requires a parsed HTTPS URL with a hostname; and rejects the registered hostile alias, type, identity, mismatch, duplicate-map, source-reuse, traversal, temporal, hash, baseline and remote-anchor mutations. Its target firewall proves only that no declared target-bearing alias or undeclared payload field is admitted at the structurally controlled locations; it is not a proof against arbitrary target information steganographically encoded in allowed free text. It does not cryptographically verify a custodian signature or fetch and verify a remote tag. It creates no target, freeze record or tag and does not close the parent gate.",
+  "audited_checkpoint": {
+    "commit": "99157442831c0e44d425b5d5f8cd78856c57da53",
+    "date": "2026-08-11",
+    "freeze_records": 0,
+    "admitted_microscopic_survivors": 0,
+    "M1": {
+      "microscopic_map": false,
+      "non_fitting_validation_prediction": false
+    },
+    "M2": {
+      "physical_predictions": [],
+      "holdout_prediction": false
+    },
+    "M5": {
+      "microscopic_map": false,
+      "holdout_prediction": false
+    },
+    "verdict": "NOT_CLOSABLE_CURRENT_TREE"
+  },
+  "initial_local_observation": {
+    "freeze_tags": 0,
+    "scope": "informational live local freeze/* observation at initial audit execution; not an audited-commit fact, blocker, PASS condition or remote receipt",
+    "load_bearing": false,
+    "future_compatibility": "A future legitimate freeze tag may change this live observation without invalidating the historical R-168 checkpoint audit."
+  },
+  "freeze_schema": {
+    "schema": "tect/pre-a-round1-prospective-holdout-freeze/1.0",
+    "root_fields": [
+      "schema",
+      "freeze_id",
+      "prediction_id",
+      "freeze_version",
+      "round_id",
+      "parent_gate",
+      "status",
+      "claim_bearing",
+      "fixture_only",
+      "contestant_snapshot",
+      "evidence_snapshot",
+      "target_contract",
+      "observable_contract",
+      "prediction_contract",
+      "robustness_contract",
+      "provenance",
+      "scoring",
+      "no_overclaim"
+    ],
+    "target_fields": [
+      "target_id",
+      "custodian",
+      "protocol_or_accession",
+      "estimand_id",
+      "units",
+      "independence_group",
+      "blind",
+      "predictor_access_before_freeze",
+      "target_value_present",
+      "commitment",
+      "disclosure"
+    ],
+    "commitment_fields": [
+      "algorithm",
+      "commitment_hex",
+      "secret_key_custody",
+      "payload_schema",
+      "canonical_serialization",
+      "domain_separation",
+      "custodian_signature",
+      "public_key_fingerprint",
+      "issued_at_utc"
+    ],
+    "disclosure_fields": [
+      "status",
+      "not_before_utc",
+      "actual_at_utc"
+    ],
+    "prediction_fields": [
+      "candidate_id",
+      "predicted_relation",
+      "physical_output",
+      "theory_uncertainty",
+      "acceptance_rule",
+      "baseline_prediction",
+      "allowed_inputs",
+      "forbidden_knobs"
+    ],
+    "allowed_input_fields": [
+      "id",
+      "class",
+      "source",
+      "source_id",
+      "used_for"
+    ],
+    "robustness_fields": [
+      "volume",
+      "boundary",
+      "regulator",
+      "coefficients",
+      "implementation"
+    ],
+    "declared_type_contract": "Every declared scalar leaf has its exact Boolean, positive-integer, nonempty-string, digest/OID, UTC-time, null or enum type before semantic comparison; every declared container has its exact object/list type before descent. Contestant, evidence, observable, estimand, raw-estimator, candidate-map, provenance and scoring objects also reject undeclared keys. Remote URLs require scheme https and a nonempty parsed hostname.",
+    "semantic_split": "The target estimand and raw-data estimator are candidate-neutral. Each microscopic-to-observable map is candidate-specific and must carry its own theorem, script, hash, domain, state, reference, limit order, units, nuisance inputs and admission status.",
+    "minimum_candidate_condition": "The singular frozen prediction must name a nonempty candidate_id that is both score-eligible and backed by an admitted map, and its predicted_relation must be nonempty. This is the one-candidate instance of predictions uniquely keyed by candidate_id. M0 is the mandatory effective null baseline and cannot be scored as the microscopic winner.",
+    "lifecycle": "FROZEN_UNSCORED until the later disclosure event and execution of the unchanged frozen scorer."
+  },
+  "provenance_protocol": {
+    "order": "custodian commitment issued <= public remote freeze commit/tag < target disclosure <= unchanged frozen scorer execution",
+    "commitment": "Require HMAC-SHA256(K_custodian, domain_separator || 0x00 || RFC8785-JCS(canonical target payload)), with payload schema tect/pre-a-round1-holdout-target-payload/1.0, domain separator TECT-PRE-A-ROUND1-HOLDOUT-TARGET-v1, secret_key_custody=EXTERNAL_CUSTODIAN, and a custodian signature over the commitment metadata. A plain unkeyed hash or author-held key is not accepted.",
+    "path_policy": "Every hash-pinned path must be a normalized relative POSIX path, contain no drive, backslash, absolute prefix, dot segment or parent traversal, and resolve inside the repository. This validator checks the local file hash; the separate remote verifier must bind it to the fetched freeze commit.",
+    "remote_anchor": "Require the public remote commit SHA, remote receipt time, annotated freeze tag freeze/<PRED-ID>/v<N>, tag object ID and custodian signature. The present validator checks only schema shape and local hash pins; a future release verifier must cryptographically validate the signature and independently fetch/verify the remote objects. A local mtime or issued_on field is not temporal evidence.",
+    "official_record": "A future real freeze must use predictions/freezes/<PRED-ID>-freeze.md and a machine sidecar, then receive separate explicit authorization before the annotated git tag is created."
+  },
+  "hostile_fixtures": {
+    "root_extra": "Reject an undeclared root payload field.",
+    "empty_root_identity": "Reject empty freeze_id, prediction_id, round_id or no_overclaim strings directly.",
+    "empty_target_identity": "Reject empty target_id, custodian, protocol_or_accession, estimand_id or units strings directly.",
+    "target_estimand_mismatch": "Reject target estimand_id or units that differ from observable_contract.common_estimand.",
+    "target_leakage": "Reject a freeze containing the target value or reported interval.",
+    "hidden_sealed_payload": "Reject a sealed_payload hidden inside the exact commitment object.",
+    "target_alias": "Reject a target-bearing holdout_value alias.",
+    "temporal_order": "Reject disclosure not strictly after the public remote freeze.",
+    "hash_mutation": "Reject a changed candidate, evidence snapshot, map script, raw estimator or scorer hash.",
+    "path_traversal": "Reject absolute, parent-traversing, non-POSIX or repository-escaping hash paths.",
+    "independence": "Reject overlap between discovery/fitting evidence and the holdout independence group.",
+    "baseline_missing": "Reject a tournament with no unique M0 effective null baseline.",
+    "duplicate_candidate_map": "Reject candidate maps not uniquely keyed by candidate_id.",
+    "eligible_map_missing": "Reject zero eligible microscopic candidates or candidate maps with ABSENT, CONDITIONAL_POSTHOC or NOT_ADMITTED status.",
+    "unbound_prediction": "Reject a generic or unknown candidate prediction not bound to an eligible admitted map.",
+    "input_source_id_missing": "Reject an allowed input with no nonempty source_id.",
+    "input_discovery_source_id": "Reject an allowed input whose source_id is a discovery or forbidden-fit ID.",
+    "input_source_alias": "Reject an undeclared discovery_source_id alias in an exact allowed-input row.",
+    "nested_wrong_type": "Reject malformed nested target, commitment, disclosure, prediction and input shapes with structured error codes.",
+    "commitment_scalar_types": "Reject list-valued signatures and integer-valued commitment digests or public-key fingerprints.",
+    "provenance_oid_scalar_types": "Reject integer-valued commit and annotated-tag object IDs.",
+    "remote_url_no_hostname": "Reject an https URL shape with no parsed hostname.",
+    "input_scalar_types": "Reject list-valued input classes and null used_for fields without raising a set-membership exception.",
+    "estimand_scalar_type": "Reject a non-string common-estimand definition.",
+    "contestant_scalar_type": "Reject a non-string contestant role without raising a set-membership exception.",
+    "estimand_container_type": "Reject a non-object common_estimand with a structured error.",
+    "estimator_container_type": "Reject a non-object raw_estimator with a structured error.",
+    "remote_anchor": "Reject malformed or absent public commit/tag metadata. This is not cryptographic or remote verification."
+  },
+  "required_external_input": {
+    "gate_id": "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
+    "requirement": "An independent custodian must issue a signed opaque commitment for an undisclosed target payload, identify its protocol or accession, units and independence group, state the planned disclosure event, and attest that the authors had no access before the freeze.",
+    "status": "OPEN: NO SUCH COMMITMENT IS REGISTERED"
+  },
+  "required_internal_input": {
+    "gate_id": "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+    "requirement": "At least one actual microscopic contestant must acquire an admitted microscopic-to-observable map and a nonempty prediction derived without the holdout target, together with a complete per-parameter common-input ledger.",
+    "status": "OPEN: THE CURRENT ADMITTED SET IS EMPTY"
+  },
+  "status": "SCHEMA PROTOCOL READY; CURRENT TREE NOT FREEZE-READY; CRYPTOGRAPHIC REMOTE VERIFICATION AND PARENT PRE-A GATE OPEN",
+  "closed_subgates": [
+    "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
+    "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
+    "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
+    "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+  ],
+  "open_gates": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+    "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
+    "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
+    "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+    "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+  ],
+  "route_status": {
+    "closed_scope": "The machine schema, provenance-order shape checks, anti-leakage schema validation, and exact current-tree empty-admission audit.",
+    "not_closed": "No cryptographic custodian-signature verification, independent remote commit/tag/ref verification, real target commitment, official freeze record, annotated tag, admitted microscopic map, frozen candidate prediction, scored holdout, candidate selection, physical law, Sector A, or Pre-A exit.",
+    "parent_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+    "external_gate": "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
+    "internal_gate": "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+    "verification_gate": "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+  },
+  "checkpoint_synthesis": {
+    "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+    "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt",
+    "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf",
+    "source_sha256": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e",
+    "pdf_sha256": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
+    "pages": 15,
+    "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v1.9 / R-168 v1.0 gate-level synthesis source/PDF pair was issued only after the manifest, certificate, primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed.",
+    "visual_qa": "All 15 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 15 nonempty pages."
+  },
+  "verification": {
+    "proof_grade": "IN DEVELOPMENT",
+    "primary_script": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py",
+    "independent_script": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py",
+    "integrated_script": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py",
+    "certificate": "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md"
+  },
+  "no_overclaim": "This result is a schema-shape validator, not a cryptographic signature verifier or an independent remote-ref verifier. It is not an actual freeze and does not authorize a tag. It does not create an external blind target, prove a candidate microscopic observable map, freeze a prediction, score a holdout, select a winner, fix nature's functional, prove a physical vacuum or below-empty sign, close C6, CP1, physical Sector A, or Pre-A."
+}

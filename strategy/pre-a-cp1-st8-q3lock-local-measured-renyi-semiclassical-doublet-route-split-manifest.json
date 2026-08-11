@@ -1,0 +1,118 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-SEMICLASSICAL-DOUBLET-ROUTE-SPLIT-v0",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "parent_explorations": [
+    "EXP-000789",
+    "EXP-000805"
+  ],
+  "exploration_id": "EXP-000806",
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_version": "v1.9",
+  "result_number": "R-167",
+  "claim_bearing": false,
+  "negative_ids": [
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT"
+  ],
+  "authority": "R-167 v1.9 is an additive T0 route correction and onsite theorem. It proves exact pure-bond coordinate-tail invariance and an exact state-weighted cutoff identity; replaces the overstrong global volume-uniform sandwiched-Renyi target by a local coordinate-marginal measured-Renyi sufficient condition; proves that the global target grows exponentially already in the conditional low-doublet product reference; imports the standard multidimensional two-well semiclassical theorem after verifying every Q3 hypothesis and normalization; and derives the exact low-band transverse-field Ising compression and explicit low/high residual data. It does not prove the onsite-interspersed local history tail, the all-exhaustion common alpha, a rank-two unbounded block elimination, two-phase QPS for the exact oscillator lattice, or the broken-sector GNS gap.",
+  "pure_bond_tail_theorem": {
+    "setup": "V_cross=-c sum_<xy> q_x dot q_y, B_delta=exp(-i delta V_cross/hbar). Every bounded coordinate multiplier F(q_S) commutes with B_delta; affiliated weighted coordinate multipliers strongly commute on their natural finite-moment forms.",
+    "invariance": "B_delta^* F(q_S) B_delta=F(q_S) in both orientations. Coordinate tail projections, finite-moment weighted coordinate tails, and coordinate cutoff-tail squares are unchanged by a pure all-bond layer.",
+    "cutoff_identity": "For coordinate cutoff V_cross,L, W_L=V_cross-V_cross,L and B_delta,L=exp(-i delta V_cross,L/hbar), every finite-volume type-I normal state sigma with sigma(W_L^2)<infinity obeys both Hilbert-Schmidt identities ||(B_delta-B_delta,L)sigma^(1/2)||_2^2=||sigma^(1/2)(B_delta-B_delta,L)||_2^2=sigma(4 sin^2(delta W_L/(2hbar)))<=delta^2 sigma(W_L^2)/hbar^2.",
+    "consequence": "An exact state-weighted all-bond telescope pays no exp(C L^2) operator-norm multiplier. The missing input is the W_L^2 tail in intermediate onsite-interspersed history states, in both orientations.",
+    "scope": "This is an exact single-layer and telescope identity. It does not bound onsite history tails or prove convergence of the complete split product."
+  },
+  "local_measured_renyi_reduction": {
+    "setup": "For fixed finite S and alpha>1 put theta=(alpha-1)/alpha. Let nu_0,S be the reference distribution of X_S=max_(x in S)|q_x|, and nu_P,S^plus/minus the distributions after a partial history and its adjoint.",
+    "minimal_target": "Uniformly in volume, source, mesh, partial history and orientation, require nu_P,S^plus/minus(X_S>u)<=C_(alpha,T,S) nu_0,S(X_S>u)^theta for u>=L_0.",
+    "measured_renyi_sufficient": "A stronger checkable condition is the classical coordinate-algebra bound integral (d nu_P,S^plus/minus/d nu_0,S)^alpha d nu_0,S<=Q_(alpha,T,S). It is strictly weaker than global quantum sandwiched Renyi.",
+    "tail": "If nu_0,S(X_S>u)<=M_a|S|exp(-a u^2), Holder gives the two-orientation probability bound 2 Q^(1/alpha)(M_a|S|)^theta exp(-theta a L^2). Layer cake gives 2 Q^(1/alpha)(M_a|S|)^theta exp(-bL^2)(L^4+2L^2/b+2/b^2), b=theta a.",
+    "scope": "This closes only the fixed-finite-S implication from a local measured likelihood bound to a weighted coordinate tail. A growing corridor additionally requires a bound uniform over translates of the relevant fixed bond shapes, or an explicit growth envelope for Q_{alpha,T,S_R} that is absorbable as R and L grow. No such onsite-interspersed Q3LOCK bound or uniform-growth estimate is proved."
+  },
+  "global_renyi_product_no_go": {
+    "fixture": "rho_1=diag(4/5,1/5), rho_2=rho_1 tensor rho_1, q_e restricted to the doublet equals m sigma_x, and U_theta=exp(i theta sigma_x tensor sigma_x). For one full eight-component spatial bond, theta=8 delta c m^2/hbar=delta J/hbar; theta=delta c m^2/hbar is only a single-component channel.",
+    "exact_value": "Qtilde_2(U_theta rho_2 U_theta^*||rho_2)=((4+9 sin^2 theta)^2)/16. At theta=pi/4 this is 289/64; on three disjoint bonds tensor multiplicativity gives 24137569/262144.",
+    "consequence": "For every fixed bond angle theta not in pi Z the global sandwiched-Renyi quantity grows exponentially in the number of disjoint bonds, although every spectral function of the compressed coordinate m sigma_x commutes with the kick and its probability is unchanged. This is not an identity for P 1_{q>L} P in the full oscillator.",
+    "scope": "This rejects a volume-independent global Renyi bound for all-bond layers in the conditional low-doublet product reference. It is not a counterexample to full interacting Q3 Gibbs local measured Renyi, restricted-tail domination, or common dynamics."
+  },
+  "q3_semiclassical_onsite": {
+    "normalization": "For R=-r>0, mu=lambda/g>0, v=sqrt(R/g), E_star=R^2/g and h_sc=hbar g/(sqrt(chi) R^(3/2)), the shifted one-site operator is exactly E_star[-h_sc^2 Delta/2+W_mu], with W_mu=1/4 sum_e(x_e^2-1)^2+mu/4 sum_{Q3 edges}(x_e-x_f)^2(x_e^2+x_f^2).",
+    "geometry": "W_mu is coercive, has exactly two nondegenerate minima plus/minus the all-ones vector, Hessian 2I+mu L_Q3 with eigenvalues 2, 2+2mu (multiplicity 3), 2+4mu (multiplicity 3), and 2+6mu, and exact Agmon/instanton distance S_0=16 sqrt(2)/3.",
+    "imported_theorem": "For every fixed mu>0 there is h_0(mu)>0 such that 0<h_sc<h_0 gives a simple even/odd Aut(Q3)-singlet doublet. For every eta>0, delta_1=epsilon_1-epsilon_0<=E_star C_eta exp(-(S_0-eta)/h_sc); Gamma=epsilon_2-epsilon_0=E_star[sqrt(2)h_sc+O(h_sc^(3/2))]; m=<phi_0,q_e phi_1>=v[1+O(h_sc)]; a_j=<phi_j,q_e^2 phi_j>=v^2[1+O(h_sc)]; b_j=<phi_j,q_e^4 phi_j>=v^4[1+O(h_sc)]; and the safe localization consequence is a_1-a_0=O(v^2 h_sc). No exponential weighted-even-observable splitting rate is imported without a separate Agmon-overlap theorem.",
+    "sources": [
+      "https://www.numdam.org/item/AIHPA_1983__38_3_295_0/",
+      "https://www.numdam.org/item/AIHPA_1984__40_2_224_0/",
+      "https://doi.org/10.1080/03605308408820335",
+      "https://annals.math.princeton.edu/1984/120-1/p04",
+      "https://www.numdam.org/item/AIHPA_1985__42_2_127_0/"
+    ],
+    "scope": "This is an existential small-h_sc theorem for fixed mu>0. It does not certify a numerical h_0 for the repository's r=-9 fixture and is not a many-body phase or GNS-gap theorem."
+  },
+  "exact_low_band_compression": {
+    "definitions": "Let P span phi_0,phi_1; P_1=|phi_1><phi_1|; s=|phi_0><phi_1|+|phi_1><phi_0|; P q_e P=m s; P q_e^2 P=diag(a_0,a_1); d_2=a_1-a_0. On the periodic cubic lattice z=6.",
+    "hamiltonian": "After one scalar shift, the exact compression is H_low=J sum_<xy>(1-s_x s_y)+sum_x[delta_1+4c deg(x)d_2]P_1,x, with J=8cm^2. On a z=6 periodic cubic lattice this is delta_eff=delta_1+4zc d_2=delta_1+24c d_2. Open finite boxes have the exact site-dependent boundary field shown above.",
+    "residual_data": "With a^2=max_j(a_j-m^2)=||Qq_eP||^2 and b^2=max_j(b_j-a_j^2)=||Qq_e^2P||^2, one bond obeys ||(1-P_xP_y)B_xyP_xP_y||<=8c[b+2ma+a^2]. For k=h_site-epsilon_0-delta_1P_1>=Gamma Q, R_e=q_e-ms and every t>0, ||R_e psi||^2<=(1+t)a^2||Ppsi||^2+(1+t^(-1))A_Q<Qpsi,kQpsi>, A_Q=v^2/Gamma+2sqrt(epsilon_0+Gamma)/(Gamma sqrt(g)).",
+    "corridor": "For g=lambda=chi=hbar=1, r=-N^4, c=N^-4, h_sc=N^-6, J tends to 8, Gamma is asymptotic to sqrt(2)N^2, a=O(N^-1), b=O(N), the one-bond low/high block is O(N^-3), cA_Q=O(N^-2), the mixed-form coefficient c m sqrt(A_Q)=O(N^-1), delta_eff=O(N^-6)+O(N^8 exp(-(S_0-eta)N^6)), and the registered infrared quantity satisfies A_0 asymptotic to (2/9)N^4. Thus the model-side low/high ratios and effective field can vanish without collapsing the Ising scale or violating the IR lower condition.",
+    "scope": "The exact compression and residual reduction do not by themselves prove a quasi-local rank-two block diagonalization, phase selection, or a uniform broken-sector gap."
+  },
+  "unbounded_block_qps_boundary": {
+    "source": "https://arxiv.org/abs/2108.13907",
+    "mismatch": "The published Del Vecchio-Frohlich-Pizzo theorem assumes a rank-one onsite vacuum and concludes a unique ground state with a uniform gap. Its local projectors are tensor products of rank-one vacuum projections. The introductory degenerate-extension remark is not a stated theorem for a rank-two onsite band whose global low space has dimension 2^|Lambda|.",
+    "why_rank_one_fails": "Choosing phi_0 alone makes the onsite gap delta_1 exponentially small, while the desired Ising scale J stays order one in the semiclassical corridor, so the published small-coupling theorem cannot be applied phase-blindly.",
+    "surviving_route": "Prove a new volume-uniform rank-two band Lie-Schwinger/Feshbach theorem that subtracts the exact H_low block and yields a bounded effective spin interaction small enough for finite-dimensional two-phase QPS, or prove an equivalent spectral-cutoff removal theorem preserving both phases and a common positive gap.",
+    "scope": "This is a direct-import mismatch, not a no-go for a future rank-two unbounded block theorem and not a counterexample to the exact Q3LOCK broken-sector gap."
+  },
+  "status": "PARTIALLY RESOLVED: PURE-BOND TAIL INVARIANCE, LOCAL-MEASURED-RENYI SUFFICIENCY, THE SMALL-h_sc ONSITE DOUBLET, AND THE EXACT LOW-BAND COMPRESSION ARE CLOSED. BOTH PARENT MATHEMATICAL GATES REMAIN OPEN.",
+  "closed_subgates": [
+    "PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION",
+    "PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION"
+  ],
+  "retained_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIXED-TROTTER-LOCAL-STRICT-INDUCTIVE-EXHAUSTION-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE",
+    "PA-CP1-ST8-Q3LOCK-CONDITIONAL-DOUBLET-ISING-REFERENCE-GAP"
+  ],
+  "superseded_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-SANDWICHED-RENYI-TO-TWO-ORIENTATION-HISTORY-TAIL-CORRIDOR-REDUCTION"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "route_status": {
+    "closed_scope": "Exact pure-bond coordinate-tail invariance and state-weighted cutoff identity; local measured-Renyi sufficiency; the fixed-mu small-h_sc onsite doublet theorem; and exact low-band TFIM compression with explicit residual data.",
+    "not_closed": "No onsite-interspersed local history likelihood bound, n-to-infinity split convergence, all-exhaustion common alpha, phase-KMS quotient, rank-two unbounded low/high elimination, exact two-phase QPS transfer, beta-infinity phase selection, or broken-sector GNS gap.",
+    "next_dynamics_gate": "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "next_gap_gate": "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "prospective_holdout_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  },
+  "checkpoint_synthesis": {
+    "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+    "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt",
+    "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf",
+    "source_sha256": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e",
+    "pdf_sha256": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
+    "pages": 15,
+    "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v1.9 / R-168 v1.0 gate-level synthesis source/PDF pair was issued only after the manifest, certificate, primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed.",
+    "visual_qa": "All 15 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 15 nonempty pages."
+  },
+  "verification": {
+    "proof_grade": "IN DEVELOPMENT",
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_verify.py",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md"
+  },
+  "no_overclaim": "This package does not prove the onsite-interspersed local measured-Renyi or restricted-tail estimate, n-to-infinity Trotter convergence, all-exhaustion common alpha, phase-KMS quotient, a rank-two unbounded block diagonalization, two-phase QPS for the exact oscillator lattice, beta-infinity ground-state identification, the actual broken-sector temporal mass or GNS gap, regulator removal, continuum, a same-Hamiltonian physical-empty comparison, a prospective blind validation result, C6, CP1, physical Sector A, or Pre-A closure."
+}

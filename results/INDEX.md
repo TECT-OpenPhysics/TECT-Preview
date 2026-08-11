@@ -5,11 +5,12 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**167 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**168 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
-| [`R-167`](../RESULTS-LEDGER.md#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | T0 (scoped selected-tangent, categorical orbit-smear, finite-region local-strict/finite-Gibbs and v1.8 route-reduction theorem; no quasi-local thermodynamic common-alpha, actual G… |
+| [`R-168`](../RESULTS-LEDGER.md#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | T0 (scoped schema, protocol and current-checkpoint audit only; no actual holdout, candidate selection, physical Sector-A or Pre-A promotion). |
+| [`R-167`](../RESULTS-LEDGER.md#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | T0 (scoped selected-tangent, categorical orbit-smear, finite-region local-strict/finite-Gibbs, local-tail reduction and existential onsite-doublet theorem; no quasi-local thermody… |
 | [`R-166`](../RESULTS-LEDGER.md#r-166) | Sparse production radial-Gram decomposition and global owner bound | T4 (scoped exact finite production fibre; no promotion). |
 | [`R-165`](../RESULTS-LEDGER.md#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | T4 (scoped exact finite production fibre; no promotion). |
 | [`R-164`](../RESULTS-LEDGER.md#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | T4 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-146`](../RESULTS-LEDGER.md#r-146) | Relative zero-control anchor, endpoint-first anisotropic payment, and canonical-covariance scalar-sign boundary | T4 |
 | [`R-145`](../RESULTS-LEDGER.md#r-145) | Weighted trace-excess criterion and terminal anisotropic covariance sextic reduction | T4 |
 | [`R-144`](../RESULTS-LEDGER.md#r-144) | Uniform affine-residual Douglas one-use theorem and production-data boundary | T4. |
-| [`R-143`](../RESULTS-LEDGER.md#r-143) | Corrected q=5,6,7 feature contraction and common-noise anisotropy tail | T4. |
 
 Search without loading the full ledger:
 

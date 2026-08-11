@@ -35,18 +35,122 @@ reference/observable/input ledger, one non-fitting validation prediction, and
 one robustness envelope. Scoped failures may eliminate only the exact
 mechanism and parameter contract that was tested.
 
-**Status:** OPEN (2026-08-10). EXP-000791 freezes a bounded T-053 evidence-role
+**Status:** OPEN (2026-08-11). EXP-000791 freezes a bounded T-053 evidence-role
 inventory, common categorical matrix, explicit absence fields, reference
 rules, and robustness boundaries. It independently derives the M2 quadratic
 cone and computes that none of M1/M2/M5 survives all hard admission rows; M0
 remains the effective baseline. The visible helium target predates the new
 stiffness observable map, so its exact mismatch is retrospective and receives
-no validation credit. The parent gate therefore remains open until a genuinely
-prospective prediction or holdout and its microscopic observable map are
-frozen in an earlier immutable commit. Published EXP-000758--EXP-000790 remain
-bridge evidence and do not convert CP1 into a contestant. No winner, shortlist,
-preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional
-Sector-A closure is licensed.
+no validation credit. EXP-000807 / R-168 v1.0 now closes four schema and audit
+subgates: the common estimand/map split, prospective provenance-order protocol,
+anti-leakage schema validator, and exact current-checkpoint empty-admission
+audit. At audited commit `99157442831c0e44d425b5d5f8cd78856c57da53` there are
+zero official freeze records, zero locally registered `freeze/*` tags observed
+at audit execution, zero admitted microscopic survivors, and no admitted
+M1/M2/M5 map with a nonempty prediction. The tag observation is local only;
+no remote ref or custodian signature was verified. The parent gate remains
+open until a genuinely prospective external commitment and admitted
+microscopic observable map with a nonempty prediction are frozen before
+disclosure and independently verified.
+Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1
+into a contestant. No winner, shortlist, preferred PDE, physical vacuum,
+Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed.
+
+### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
+
+**Statement:** Specify one candidate-neutral target estimand and raw-data
+estimator, while requiring each microscopic contestant to carry its own
+candidate-specific microscopic-to-observable map, theorem/script/hash pins,
+domain, state, reference, limit order, units, nuisance inputs, uncertainty and
+admission status.
+
+**Status:** CLOSED AS A SCHEMA CONTRACT ONLY (2026-08-11). EXP-000807 / R-168
+v1.0 records the exact split and requires at least one admitted microscopic
+map with a nonempty frozen prediction; M0 is the mandatory effective null
+baseline and cannot be scored as the microscopic winner. No actual map or
+prediction is admitted by this schema theorem.
+
+### **PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL**
+
+**Statement:** Require the order `independent opaque custodian commitment <=
+public remote freeze commit/tag < target disclosure <= unchanged frozen scorer
+execution`, with hash-pinned contestant, evidence, observable, prediction,
+robustness and scoring contracts.
+
+**Status:** CLOSED AS A PROTOCOL SPECIFICATION ONLY (2026-08-11). EXP-000807--
+808 / R-168 v1.0 define the ordering and exact shape of an externally keyed,
+domain-separated canonical HMAC envelope, and require a public remote commit
+plus separately authorized annotated tag. They create no commitment, remote
+anchor, freeze record, target or tag and perform no cryptographic verification.
+
+### **PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR**
+
+**Statement:** Fail closed on target leakage, invalid temporal order, pinned-
+hash mutation, discovery/holdout evidence overlap, absent unique M0 baseline,
+missing eligible microscopic map, and malformed remote-anchor metadata.
+
+**Status:** CLOSED AS A DECLARED-FIELD SYNTACTIC VALIDATOR ONLY (2026-08-11).
+EXP-000807--808 / R-168 v1.0 enforce exact nested fields and declared types,
+candidate-bound predictions, target/common-estimand consistency, discovery-
+source separation, repo-confined hashes and parsed HTTPS anchors across 28
+hostile classes. This does not prove semantic target independence inside
+arbitrary free text, verify a cryptographic signature, independently fetch a
+remote object/ref, or turn a synthetic fixture into a real freeze.
+
+### **PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT**
+
+**Statement:** Reconstruct the registered checkpoint from hash-addressed
+records and determine whether any current microscopic contestant has both an
+admitted map and nonempty prospective prediction.
+
+**Status:** CLOSED FOR THE AUDITED CHECKPOINT ONLY (2026-08-11). EXP-000807--808 /
+R-168 v1.0 finds zero official freeze records, zero locally registered
+`freeze/*` tags observed at audit execution, zero admitted microscopic
+survivors, and no admitted M1/M2/M5 map/prediction pair at commit
+`99157442831c0e44d425b5d5f8cd78856c57da53`. The local tag observation is
+informational and non-load-bearing, not a remote query or cryptographic
+receipt; future legitimate tags do not invalidate the stable commit-blob
+audit. This is not a universal no-go for a future candidate or target.
+
+### **PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER**
+
+**Statement:** Before a real freeze, hash-pin every common input, inserted or
+matched parameter, unit conversion, nuisance input and allowed uncertainty
+range used by the baseline and every admitted microscopic candidate.
+
+**Status:** OPEN (2026-08-11). R-168 records the required fields, but the
+current candidate set has no complete per-parameter common-input ledger.
+
+### **PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT**
+
+**Statement:** Obtain an independent custodian's signed opaque high-entropy
+commitment to the undisclosed target payload, protocol/accession, units,
+independence group and planned disclosure event, with an attestation that the
+authors had no target access before the freeze.
+
+**Status:** OPEN (2026-08-11). No such commitment is registered. Repository
+proof work cannot manufacture the external target or repair prospective order
+after disclosure.
+
+### **PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION**
+
+**Statement:** Admit at least one actual microscopic contestant with a proved
+and hash-pinned microscopic-to-observable map and a nonempty prediction derived
+without the holdout target, together with the complete common-input ledger.
+
+**Status:** OPEN (2026-08-11). The audited admitted set is empty; M0 remains an
+effective null baseline only, and M1/M2/M5 have no admitted map/prediction pair.
+
+### **PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION**
+
+**Statement:** Cryptographically validate the custodian signature and
+independently fetch and verify the public remote freeze commit, annotated tag,
+tag object, referenced hashes and authenticated receipt before accepting a
+real freeze.
+
+**Status:** OPEN (2026-08-11). R-168 validates only schema shape and local hash
+pins. It performs no cryptographic signature validation and no independent
+remote commit/tag/object/ref fetch or verification.
 
 ### **PA-CP1-CL8-Q3-CUTOFF-VOLUME-INTERPOLATION-UNIFORM-PERIODIC-SHARP-SURFACE-PAIRING**
 
@@ -725,6 +829,22 @@ multiplier carrier. This does not prove growing-level Cauchy, a continuous
 group, generator, phase-KMS quotient, global strict topology, point-norm C0,
 or invariance of an inductive Weyl/resolvent C-star algebra.
 
+### **PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY**
+
+**Statement:** For the complete commuting coordinate-multiplier all-bond
+layer, prove exact invariance of local coordinate tails in both orientations
+and an exact state-weighted identity for replacing the bond potential by a
+coordinate cutoff.
+
+**Status:** CLOSED FOR A PURE ALL-BOND LAYER ONLY (2026-08-11). EXP-000806 /
+R-167 v1.9 proves that every bounded coordinate multiplier commutes with the
+bond layer and that, when `sigma(W_L^2)<infinity`, both Hilbert--Schmidt
+orientations equal
+`sigma(4 sin^2(delta W_L/(2 hbar))) <= delta^2 sigma(W_L^2)/hbar^2`.
+Thus the exact state-weighted pure-bond telescope pays no operator-norm
+`exp(C L^2)` multiplier. No bound is proved for `W_L^2` in intermediate
+onsite-interspersed history states or for the complete split-product limit.
+
 ### **PA-CP1-ST8-Q3LOCK-SANDWICHED-RENYI-TO-TWO-ORIENTATION-HISTORY-TAIL-CORRIDOR-REDUCTION**
 
 **Statement:** Starting from a common `alpha>1` sandwiched-Renyi bound for
@@ -732,14 +852,37 @@ every partial split history and its adjoint, derive the two-orientation
 projection and polynomial-weighted coordinate-tail estimates required to
 remove the coordinate cutoff and absorb the existing corridor loss.
 
-**Status:** CLOSED AS A CONDITIONAL SUFFICIENT REDUCTION ONLY (2026-08-11).
+**Status:** CLOSED AS A CONDITIONAL SUFFICIENT REDUCTION, SUPERSEDED AS THE
+ACTIVE TARGET BY LOCAL MEASURED-RENYI CONTROL (2026-08-11).
 With `theta=(alpha-1)/alpha`, `EXP-000805` / R-167 v1.8 proves
 `sigma_P(E)<=Q_alpha(P)^(1/alpha)rho(E)^theta` and the exact factor-two
 orientation sum. The Gaussian layer-cake tail has exponent
 `theta(a-d)` if the sandwiched divergence grows by at most `dL^2+o(L^2)`.
 The squared-seminorm corridor closes when this exponent exceeds `kappa_T`;
 the unsquared convention safely requires `2kappa_T`. The actual uniform
-Q3LOCK Renyi or direct restricted-tail hypothesis is not proved.
+Q3LOCK Renyi or direct restricted-tail hypothesis is not proved. EXP-000806 /
+R-167 v1.9 shows that the global volume-uniform quantum sandwiched-Renyi target
+is overstrong already in the conditional low-doublet product reference and
+replaces it as the active sufficient route by the local coordinate-marginal
+gate below. The v1.8 conditional inequality remains valid.
+
+### **PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION**
+
+**Statement:** On each fixed finite coordinate region, derive the required
+two-orientation Gaussian weighted history tail from a uniform classical
+Renyi likelihood bound for the coordinate marginal of every partial split
+history and its adjoint.
+
+**Status:** CLOSED AS A CONDITIONAL LOCAL SUFFICIENT REDUCTION ONLY
+(2026-08-11). With `theta=(alpha-1)/alpha`, EXP-000806 / R-167 v1.9 proves
+that a uniform local coordinate-marginal `L^alpha` likelihood bound `Q` gives
+the two-orientation fourth tail
+`2 Q^(1/alpha)(M_a|S|)^theta exp(-bL^2)
+(L^4+2L^2/b+2/b^2)`, `b=theta a`. This is strictly weaker than the rejected
+global quantum target. No such onsite-interspersed Q3LOCK local likelihood or
+restricted-tail bound is proved. Feeding a growing corridor also requires
+translation-uniform control on the fixed bond shapes or an explicit growth
+envelope for `Q_(alpha,T,S_R)` that remains absorbable as `R,L` grow.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -752,8 +895,8 @@ closure, and identify the exact zero-source finite-Hamiltonian generator and
 both fixed-beta phase KMS quotient representations on one noncollapsing
 spatial oscillator algebra.
 
-**Status:** OPEN, WITH FIXED-TROTTER EXHAUSTION COMPATIBILITY AND A
-CONDITIONAL SANDWICHED-RENYI TAIL REDUCTION CLOSED (2026-08-11). R-167 v1.7 supplies the finite-region
+**Status:** OPEN, WITH FIXED-TROTTER COMPATIBILITY, PURE-BOND TAIL INVARIANCE
+AND LOCAL-MEASURED-RENYI SUFFICIENCY CLOSED (2026-08-11). R-167 v1.7 supplies the finite-region
 local-strict carrier and exact subflow control, but the current bounded-cutoff
 corridor pays `exp(C L^2)`. The exact Gibbs character entropy bound gives
 only an inverse-logarithmic tail. The registered entropy/finite-moment
@@ -763,8 +906,12 @@ Gaussian history estimate. The missing target is a uniform bound for
 `(V-V_L)^2`-weighted analogue for every partial history, or a
 state-weighted all-bond resummation avoiding the exponential corridor loss.
 R-167 v1.8 proves the precise sandwiched-Renyi sufficient condition and a
-counterfixture to its automatic derivation, but it does not prove the
-hypothesis, the `n->infinity` limit, or the group/generator/KMS completion.
+counterfixture to its automatic derivation. R-167 v1.9 proves that pure bond
+layers preserve coordinate tails exactly, replaces the overstrong global
+Renyi target by a local measured-Renyi sufficient condition, and registers an
+exact disjoint-bond product counterexample to global volume uniformity. It does
+not prove the onsite-interspersed local likelihood/tail hypothesis, the
+`n->infinity` limit, or the group/generator/KMS completion.
 No exact Q3LOCK dynamics nonexistence is asserted.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
@@ -809,6 +956,42 @@ one-site enclosures, residual relative-form smallness, block reduction and
 infinite-dimensional two-phase perturbation theorem are absent, so this is
 not the exact Q3LOCK broken-sector gap.
 
+### **PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION**
+
+**Statement:** Normalize the isolated Q3 onsite oscillator in a semiclassical
+parameter, verify the two-well hypotheses, obtain the fixed-coupling small-
+parameter doublet theorem, and compute the exact rank-two compression and
+low/high residual data for the lattice Hamiltonian.
+
+**Status:** CLOSED IN THE EXISTENTIAL FIXED-`mu`, SMALL-`h_sc` ONSITE AND EXACT
+COMPRESSION SCOPE ONLY (2026-08-11). EXP-000806 / R-167 v1.9 proves that the
+dimensionless Q3 potential has exactly two nondegenerate minima, Hessian
+`2I+mu L_Q3`, and Agmon action `16 sqrt(2)/3`; the standard multidimensional
+two-well theorem then gives a simple even/odd onsite doublet for sufficiently
+small `h_sc` at fixed `mu>0`. The exact rank-two compression is a transverse-
+field Ising Hamiltonian with `J=8cm^2`, site field
+`delta_1+4c deg(x)(a_1-a_0)`, and explicit low/high residual quantities. This
+does not give a numerical threshold for the repository `r=-9` fixture or a
+many-body phase/GNS-gap theorem.
+
+### **PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS**
+
+**Statement:** Starting from the exact rank-two onsite band, prove a volume-
+uniform weighted relative-form block diagonalization or equivalent spectral-
+cutoff removal, subtract the exact low-band Ising block, and transfer the
+remaining effective finite-dimensional interaction through a two-phase
+quantum Pirogov--Sinai theorem while preserving both ordered sectors and a
+uniform positive excitation gap.
+
+**Status:** OPEN (2026-08-11). R-167 v1.9 supplies the onsite doublet, exact
+low-band compression, residual inputs and a nonempty asymptotic corridor. The
+published Del Vecchio--Frohlich--Pizzo theorem is rank-one and concludes a
+unique ground state; choosing only the even onsite vector fails in the desired
+corridor because its splitting is exponentially smaller than the order-one
+Ising scale. No rank-two unbounded theorem, uniform cutoff removal or exact
+two-phase QPS transfer is registered. This direct-import mismatch is not a
+no-go for the new gate or for the actual Q3LOCK gap.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -820,16 +1003,18 @@ dense invariant core:
 
 with `Delta>0`, separately in both parity-related sectors.
 
-**Status:** OPEN, WITH THE OS TEMPORAL-MASS EQUIVALENCE AND REFERENCE-MODEL
-ROUTES ISOLATED (2026-08-11). R-167 v1.6 proves two distinct algebraic
+**Status:** OPEN, WITH THE OS TEMPORAL-MASS EQUIVALENCE, SMALL-`h_sc` ONSITE
+DOUBLET AND EXACT LOW-BAND COMPRESSION ISOLATED (2026-08-11). R-167 v1.6 proves two distinct algebraic
 ground states only on the categorical orbit-smear carrier. R-167 v1.7 gives
 an exact system with two pure, disjoint, parity-related ordered ground states,
 simple ground vectors and a fixed central order witness, while each
 implementing spectrum is gapless. Distinct order and ground-state existence
 therefore do not supply the required coercive estimate. R-167 v1.8 supplies
 the exact zero-temperature OS/GNS criterion, isolated instanton action, and
-conditional doublet-Ising reference, but no actual phasewise temporal mass or
-relative-QPS reduction. This gate is
+conditional doublet-Ising reference. R-167 v1.9 proves the fixed-`mu`, small-
+`h_sc` onsite doublet and exact rank-two TFIM compression, but the volume-
+uniform rank-two block/QPS gate, beta-infinity selection and actual phasewise
+temporal mass remain open. This gate is
 independent of the common-alpha history gate and does not license a physical
 mass-gap claim.
 

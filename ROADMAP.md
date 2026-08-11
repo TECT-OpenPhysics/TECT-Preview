@@ -690,7 +690,7 @@ D — Gauge/matter topology.
 
 ---
 
-## Current priority view (refreshed 2026-08-10)
+## Current priority view (refreshed 2026-08-11)
 
 The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
@@ -930,6 +930,67 @@ twelve-page v0.7 gate-level synthesis source/PDF pair was then issued, and all
 rendered pages passed visual review. The published A5 result remains its
 seven-hypothesis T6 conditional composition. Physical/full-Class-II Sector A
 and Pre-A are not closed.
+
+EXP-000806 advances R-167 additively to v1.9 and sharpens both open parents.
+Because the complete all-bond potential is a coordinate multiplier, every
+coordinate-tail projection commutes with its kick. The exact two-orientation
+state-weighted cutoff identity controls the bond-layer replacement by
+`sigma((V_cross-V_cross,L)^2)` without the previous operator-norm
+`exp(C L^2)` multiplier. This closes
+`PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY`,
+but no such squared-tail estimate is proved after intervening onsite layers.
+
+The active history target is now local. For each fixed finite region, a
+coordinate-marginal measured-Renyi likelihood bound implies the precise two-
+orientation Gaussian fourth-tail estimate, closing
+`PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION` as a
+fixed-region conditional reduction only. A growing corridor still needs
+translate-uniform control on the relevant bond shapes or an explicit
+absorbable growth envelope for the local Renyi constant. An exact product-
+doublet fixture makes
+the global sandwiched-Renyi cost exponential in the number of disjoint bonds
+although local compressed-coordinate probabilities are unchanged. Therefore
+the global volume-uniform target is overstrong; the actual onsite-interspersed
+local likelihood/tail estimate, `n->infinity` split limit, common alpha,
+generator and phase-KMS quotients remain open.
+
+On the gap branch, exact semiclassical normalization gives a fixed-`mu`, small-
+`h_sc` simple Q3 onsite doublet, verified Hessian spectrum and action
+`16sqrt(2)/3`. The rank-two compression is exactly a transverse-field Ising
+Hamiltonian with `J=8cm^2` and explicit low/high residual data. This closes
+`PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION`
+only in its existential onsite and exact-compression scope. The next gate is
+`PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS`.
+The published unbounded block theorem is rank-one and unique-vacuum; it does
+not control the required `2^|Lambda|` low band, and selecting only the even
+onsite vector puts its exponentially small splitting against an order-one
+Ising scale. A rank-two theorem or equivalent cutoff removal, beta-infinity
+phase selection and the actual phasewise temporal mass/GNS gap remain open.
+
+EXP-000807--808 / R-168 v1.0 separately freeze and harden the prospective Round-1 validation
+protocol and audits current readiness. It closes only the common estimand/map
+schema, provenance-order protocol, anti-leakage schema validator and exact
+current-checkpoint empty-admission audit. At commit
+`99157442831c0e44d425b5d5f8cd78856c57da53` the audit finds zero official freeze
+records, zero locally registered `freeze/*` tags observed at audit execution,
+zero admitted microscopic survivors and no admitted M1/M2/M5 microscopic
+observable map/prediction pair. The repaired validator enforces exact declared
+fields and types, candidate-bound predictions, source separation, confined
+paths and the canonical keyed-HMAC envelope across 28 hostile classes. The tag
+observation is informational and non-load-bearing: no custodian signature or
+remote commit/tag/object/ref is cryptographically verified, and the syntactic
+firewall does not prove the absence of information hidden in arbitrary text.
+
+The primary
+`PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` gate therefore remains
+open, together with the common-input ledger, independent opaque custodian
+commitment, admitted microscopic observable map/nonempty prediction, and
+cryptographic remote-verification gates. No target, freeze record, tag,
+prediction, score or candidate selection is created. Per the PDF-efficiency
+protocol, EXP-000806 and EXP-000807 remain in the ledger, manifests,
+certificates and verifier artifacts until one later gate-level synthesis passes
+every proof, formal, independent and integrated check; no per-lemma or
+intermediate PDF is issued. Physical Sector A and Pre-A remain open.
 
 The fixed-beta envelope is not yet the thermodynamic Hamiltonian `alpha`.
 Distinct algebraic ground states now exist on the separate universal

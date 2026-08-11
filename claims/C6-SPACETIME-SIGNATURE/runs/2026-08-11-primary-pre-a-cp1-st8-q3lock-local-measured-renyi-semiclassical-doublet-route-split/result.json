@@ -1,0 +1,1503 @@
+{
+  "assertions": [
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "A_pure_bond",
+      "name": "fixture A density trace",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/2",
+        "47/300",
+        "179/7200"
+      ],
+      "expected": "all positive",
+      "group": "A_pure_bond",
+      "name": "fixture A density positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "group": "A_pure_bond",
+      "name": "coordinate multiplier commutes with full bond kick",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "4/3",
+        "4/3",
+        "4/3"
+      ],
+      "expected": "equal",
+      "group": "A_pure_bond",
+      "name": "two Hilbert-Schmidt orientations exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "4/3",
+      "expected": "4/3",
+      "group": "A_pure_bond",
+      "name": "state-weighted cutoff identity oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "-4/3 + pi**2",
+      "expected": ">0",
+      "group": "A_pure_bond",
+      "name": "sine quadratic upper bound fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/1",
+        "1/1",
+        "1/1"
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "group": "B_local_renyi",
+      "name": "fixture B probability normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/9",
+      "expected": "<=41/72",
+      "group": "B_local_renyi",
+      "name": "plus measured-Renyi Holder event",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/16",
+      "expected": "<=5/8",
+      "group": "B_local_renyi",
+      "name": "minus measured-Renyi Holder event",
+      "status": "PASS"
+    },
+    {
+      "actual": "261/16",
+      "expected": "261/16",
+      "group": "B_local_renyi",
+      "name": "weighted fourth-tail polynomial",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "B_global_renyi_no_go",
+      "name": "global sandwiched Q2 formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "289/64",
+      "expected": "289/64",
+      "group": "B_global_renyi_no_go",
+      "name": "one-bond Renyi oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "24137569/262144",
+      "expected": "24137569/262144",
+      "group": "B_global_renyi_no_go",
+      "name": "three-bond tensor multiplicativity oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "expected": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "group": "B_global_renyi_no_go",
+      "name": "local coordinate algebra commutes with doublet kick",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "8*c_bond*delta*m_bond**2/hbar_bond",
+        "8"
+      ],
+      "expected": [
+        "8*c_bond*delta*m_bond**2/hbar_bond",
+        8
+      ],
+      "group": "B_global_renyi_no_go",
+      "name": "full eight-component bond kick angle",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8,
+        12
+      ],
+      "expected": [
+        8,
+        12
+      ],
+      "group": "C_semiclassical_geometry",
+      "name": "Q3 vertices and edges",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "group": "C_semiclassical_geometry",
+      "name": "Q3 graph connected",
+      "status": "PASS"
+    },
+    {
+      "actual": "(lambda - 2)*(lambda - 6*mu - 2)*(lambda - 4*mu - 2)**3*(lambda - 2*mu - 2)**3",
+      "expected": "(lambda - 2)*(lambda - 6*mu - 2)*(lambda - 4*mu - 2)**3*(lambda - 2*mu - 2)**3",
+      "group": "C_semiclassical_geometry",
+      "name": "Q3 Hessian characteristic polynomial",
+      "status": "PASS"
+    },
+    {
+      "actual": "256*(mu + 1)**3*(2*mu + 1)**3*(3*mu + 1)",
+      "expected": "256*(mu + 1)**3*(2*mu + 1)**3*(3*mu + 1)",
+      "group": "C_semiclassical_geometry",
+      "name": "positive-mu minima nondegenerate",
+      "status": "PASS"
+    },
+    {
+      "actual": "16*sqrt(2)/3",
+      "expected": "16*sqrt(2)/3",
+      "group": "C_semiclassical_geometry",
+      "name": "locked collective action",
+      "status": "PASS"
+    },
+    {
+      "actual": "g**2*hbar**2/(2*R**3*chi)",
+      "expected": "g**2*hbar**2/(2*R**3*chi)",
+      "group": "C_semiclassical_normalization",
+      "name": "semiclassical kinetic normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/4",
+      "expected": "1/4",
+      "group": "C_semiclassical_normalization",
+      "name": "semiclassical quartic normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "lambda/(4*g)",
+      "expected": "lambda/(4*g)",
+      "group": "C_semiclassical_normalization",
+      "name": "semiclassical lock normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/27",
+        "144*sqrt(2)"
+      ],
+      "expected": [
+        "1/27",
+        "144*sqrt(2)"
+      ],
+      "group": "C_parameter_fixtures",
+      "name": "parameter fixture A h_sc and action",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/64",
+        "1024*sqrt(2)/3"
+      ],
+      "expected": [
+        "1/64",
+        "1024*sqrt(2)/3"
+      ],
+      "group": "C_parameter_fixtures",
+      "name": "parameter fixture B h_sc and action",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/729",
+        "3888*sqrt(2)"
+      ],
+      "expected": [
+        "1/729",
+        "3888*sqrt(2)"
+      ],
+      "group": "C_parameter_fixtures",
+      "name": "parameter fixture C h_sc and action",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "3*sqrt(2)",
+        "4*sqrt(2)",
+        "9*sqrt(2)"
+      ],
+      "expected": [
+        "3*sqrt(2)",
+        "4*sqrt(2)",
+        "9*sqrt(2)"
+      ],
+      "group": "C_parameter_fixtures",
+      "name": "harmonic gap fixtures",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "18",
+        "32/9",
+        "18"
+      ],
+      "expected": [
+        "18",
+        "32/9",
+        "18"
+      ],
+      "group": "C_parameter_fixtures",
+      "name": "A0 exact fixtures",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+      "expected": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "group": "C_low_band",
+      "name": "one-bond exact low-band compression",
+      "status": "PASS"
+    },
+    {
+      "actual": "-4*a_0*c*deg_x + 4*a_1*c*deg_x + delta_1",
+      "expected": "4*c*deg_x*(-a_0 + a_1) + delta_1",
+      "group": "C_low_band",
+      "name": "site-dependent boundary transverse coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "-24*a_0*c + 24*a_1*c + delta_1",
+      "expected": "24*c*(-a_0 + a_1) + delta_1",
+      "group": "C_low_band",
+      "name": "periodic cubic z=6 transverse coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "1/2",
+          "0"
+        ],
+        [
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "1/2",
+          "0"
+        ],
+        [
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "group": "C_moment_residual",
+      "name": "P q P equals m s",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "4/9",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "4/9",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "group": "C_moment_residual",
+      "name": "Q q P moment identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1/9",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "1/9",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "group": "C_moment_residual",
+      "name": "Q q squared P moment identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "4/9",
+        "1/9"
+      ],
+      "expected": [
+        "4/9",
+        "1/9"
+      ],
+      "group": "C_moment_residual",
+      "name": "moment residual fixture values",
+      "status": "PASS"
+    },
+    {
+      "actual": "16*sqrt(4777)/225 + 1232/225",
+      "expected": "<=10816/225",
+      "group": "C_moment_residual",
+      "name": "one-bond low-high residual bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/20 + sqrt(21)/5",
+      "expected": "9/20 + sqrt(21)/5",
+      "group": "C_centered_form",
+      "name": "centered form coefficient optimized",
+      "status": "PASS"
+    },
+    {
+      "actual": "2251/72 + 27*sqrt(21)/2",
+      "expected": ">0",
+      "group": "C_centered_form",
+      "name": "centered form finite hostile fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": -3,
+      "expected": -3,
+      "group": "C_asymptotic_corridor",
+      "name": "corridor low-high exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "group": "C_asymptotic_corridor",
+      "name": "corridor Ising scale exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": -2,
+      "expected": -2,
+      "group": "C_asymptotic_corridor",
+      "name": "corridor weighted high-mode exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1",
+      "expected": -1,
+      "group": "C_asymptotic_corridor",
+      "name": "corridor mixed anticommutator exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": -6,
+      "expected": -6,
+      "group": "C_asymptotic_corridor",
+      "name": "safe transverse renormalization exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": 4,
+      "expected": 4,
+      "group": "C_asymptotic_corridor",
+      "name": "A0 corridor exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*N**4/9",
+      "expected": "2*N**4/9",
+      "group": "C_asymptotic_corridor",
+      "name": "A0 corridor leading coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-SEMICLASSICAL-DOUBLET-ROUTE-SPLIT-v0",
+      "expected": "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-SEMICLASSICAL-DOUBLET-ROUTE-SPLIT-v0",
+      "group": "authority",
+      "name": "manifest candidate",
+      "status": "PASS"
+    },
+    {
+      "actual": "T-054",
+      "expected": "T-054",
+      "group": "authority",
+      "name": "manifest task",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "R-167",
+        "v1.9",
+        "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT"
+      ],
+      "expected": [
+        "R-167",
+        "v1.9",
+        "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT"
+      ],
+      "group": "authority",
+      "name": "manifest result identity",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "authority",
+      "name": "manifest claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION",
+        "PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION"
+      ],
+      "expected": [
+        "PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION",
+        "PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION"
+      ],
+      "group": "authority",
+      "name": "manifest closed subgates",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "expected": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "group": "authority",
+      "name": "manifest open gates",
+      "status": "PASS"
+    },
+    {
+      "actual": "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split.py",
+      "expected": "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split.py",
+      "group": "authority",
+      "name": "manifest primary script",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "https://www.numdam.org/item/AIHPA_1983__38_3_295_0/",
+        "https://www.numdam.org/item/AIHPA_1984__40_2_224_0/",
+        "https://doi.org/10.1080/03605308408820335",
+        "https://annals.math.princeton.edu/1984/120-1/p04",
+        "https://www.numdam.org/item/AIHPA_1985__42_2_127_0/"
+      ],
+      "expected": [
+        "https://www.numdam.org/item/AIHPA_1983__38_3_295_0/",
+        "https://www.numdam.org/item/AIHPA_1984__40_2_224_0/",
+        "https://doi.org/10.1080/03605308408820335",
+        "https://annals.math.princeton.edu/1984/120-1/p04",
+        "https://www.numdam.org/item/AIHPA_1985__42_2_127_0/"
+      ],
+      "group": "authority",
+      "name": "semiclassical source set",
+      "status": "PASS"
+    },
+    {
+      "actual": "https://arxiv.org/abs/2108.13907",
+      "expected": "https://arxiv.org/abs/2108.13907",
+      "group": "authority",
+      "name": "DFP source token",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "manifest safe d2 token",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "manifest no exponential d2 import token",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "manifest conditional Agmon-overlap token",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "manifest safe delta_eff corridor",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "manifest A0 corridor",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "manifest mixed anticommutator corridor",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "manifest full-bond angle factor",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "manifest periodic z=6 qualifier",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "manifest boundary field qualifier",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "manifest no-overclaim token rank-two unbounded block diagonalization",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "manifest no-overclaim token broken-sector temporal mass or GNS gap",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "manifest no-overclaim token Sector A",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "manifest no-overclaim token Pre-A closure",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token R-167",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token v1.9",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token EXP-000806",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token S_0={16",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token 24c",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token O(v^2h)",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token Agmon-overlap lemma",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token A_0",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token N^4",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token rank-one",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token rank-two",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token non-explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate token No statement here closes",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate semantic sqrt(2) token",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate semantic delta_eff token",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate full-bond factor 8 token",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "certificate periodic lattice qualifier",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "exploration row EXP-000806",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "result ledger R-167",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "result ledger v1.9",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "negative row NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "negative row NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "gate row PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "gate row PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "gate row PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "gate row PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "gate row PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "gate row PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "authority",
+      "name": "gate row PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+      "status": "PASS"
+    }
+  ],
+  "authority": {
+    "certificate_loaded": true,
+    "external_source_text_reproved": false,
+    "manifest_loaded": true,
+    "missing": [],
+    "status": "PASS"
+  },
+  "boundary": "Exact A/B/C fixtures, Q3 semiclassical import hypotheses, and low-band reduction only. No numerical h0, onsite-interspersed history likelihood bound, rank-two unbounded band elimination, two-phase QPS transfer, broken-sector GNS gap, Sector A, or Pre-A closure.",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-SEMICLASSICAL-DOUBLET-ROUTE-SPLIT-v0",
+  "claim_bearing": false,
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "closed_subgates": [
+    "PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION",
+    "PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION"
+  ],
+  "derived": {
+    "fixture_A_pure_bond_tail": {
+      "commutator_zero": true,
+      "inputs": {
+        "V_cut": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "W_tail": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "2"
+          ]
+        ],
+        "coordinate_multiplier": [
+          [
+            "2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "3"
+          ]
+        ],
+        "delta": "pi",
+        "hbar": "1",
+        "sigma": [
+          [
+            "1/2",
+            "1/10",
+            "0"
+          ],
+          [
+            "1/10",
+            "1/3",
+            "1/20"
+          ],
+          [
+            "0",
+            "1/20",
+            "1/6"
+          ]
+        ]
+      },
+      "left_orientation_hs_squared": "4/3",
+      "onsite_interspersed_history_tail_proved": false,
+      "pure_layer_only": true,
+      "quadratic_upper_bound": "pi**2",
+      "right_orientation_hs_squared": "4/3",
+      "spectral_sine_identity": "4/3"
+    },
+    "fixture_B_local_and_global_renyi": {
+      "global_product_no_go": {
+        "J": "8*c_bond*m_bond**2",
+        "counterexample_is_full_interacting_Q3_Gibbs": false,
+        "formula": "(9*sin(angle)**2 + 4)**2/16",
+        "full_bond_angle": "8*c_bond*delta*m_bond**2/hbar_bond",
+        "local_coordinate_probability_invariant": true,
+        "rho_one": [
+          [
+            "4/5",
+            "0"
+          ],
+          [
+            "0",
+            "1/5"
+          ]
+        ],
+        "single_component_angle": "c_bond*delta*m_bond**2/hbar_bond",
+        "theta_pi_over_four": "289/64",
+        "three_disjoint_bonds": "24137569/262144"
+      },
+      "local_measured_renyi": {
+        "Q2_minus": "5/4",
+        "Q2_plus": "41/36",
+        "b": "2/3",
+        "cutoff_L": "3/2",
+        "event_minus": "3/4",
+        "event_plus": "1/3",
+        "event_reference": "1/2",
+        "fourth_tail_polynomial": "261/16",
+        "gaussian_a": "4/3",
+        "minus": [
+          "1/4",
+          "1/2",
+          "1/4"
+        ],
+        "onsite_interspersed_likelihood_bound_proved": false,
+        "plus": [
+          "2/3",
+          "1/6",
+          "1/6"
+        ],
+        "reference": [
+          "1/2",
+          "1/3",
+          "1/6"
+        ],
+        "theta": "1/2"
+      }
+    },
+    "fixture_C_semiclassical_and_low_band": {
+      "A0_corridor": "2*N**4/9",
+      "corridor_exponents_in_N": {
+        "24c_d2": -6,
+        "A_Q": 2,
+        "E_star": 8,
+        "Gamma": 2,
+        "J": 0,
+        "a": -1,
+        "b": 1,
+        "c": -4,
+        "c_A_Q": -2,
+        "c_m_sqrt_A_Q": -1,
+        "d2": -2,
+        "h_sc": -6,
+        "m": 2,
+        "one_bond_low_high": -3,
+        "v": 2
+      },
+      "dfp_rank_one_boundary": {
+        "Q3_global_low_dimension": "2^|Lambda|",
+        "Q3_local_kernel_rank": 2,
+        "direct_import_closes_broken_sector_gap": false,
+        "introductory_degenerate_extension_is_rank2_band_theorem": false,
+        "phi0_only_gap": "delta_1 (exponentially small)",
+        "published_main_theorem_rank_one_vacuum": true,
+        "published_main_theorem_unique_ground_state": true,
+        "source": "https://arxiv.org/abs/2108.13907"
+      },
+      "low_band": {
+        "J": "8*c*m**2",
+        "centered_form_fixture": {
+          "A_Q": "9/20 + sqrt(21)/5",
+          "Gamma": "5",
+          "epsilon0": "1/4",
+          "epsilon_optimizer": "sqrt(21)/42",
+          "finite_fixture_lhs": "52/9",
+          "finite_fixture_rhs": "889/24 + 27*sqrt(21)/2",
+          "g": "1",
+          "v": "3/2"
+        },
+        "delta_eff": "-24*a_0*c + 24*a_1*c + delta_1",
+        "delta_site": "-4*a_0*c*deg_x + 4*a_1*c*deg_x + delta_1",
+        "moment_fixture": {
+          "a_j": [
+            "1/4",
+            "25/36"
+          ],
+          "a_squared": "4/9",
+          "actual_one_bond_offblock_norm_squared": "16*sqrt(4777)/225 + 1232/225",
+          "b_j": [
+            "25/144",
+            "625/1296"
+          ],
+          "b_squared": "1/9",
+          "m": "1/2",
+          "one_bond_bound": "104/15",
+          "q": [
+            [
+              "0",
+              "1/2",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "2/3"
+            ],
+            [
+              "0",
+              "2/3",
+              "0"
+            ]
+          ]
+        }
+      },
+      "normalization": {
+        "E_star": "R**2/g",
+        "h_sc": "g*hbar/(R**(3/2)*sqrt(chi))",
+        "kinetic_coefficient": "g**2*hbar**2/(2*R**3*chi)",
+        "lock_coefficient": "lambda/(4*g)",
+        "quartic_coefficient": "1/4",
+        "v": "sqrt(R)/sqrt(g)"
+      },
+      "parameter_fixtures": {
+        "A_repository_diagnostic": {
+          "A0": "18",
+          "E_star": "81",
+          "S0_over_h_sc": "144*sqrt(2)",
+          "classical_proxy_8c_v_squared": "72",
+          "finite_h_below_nonexplicit_h0_certified": false,
+          "h_sc": "1/27",
+          "harmonic_Gamma": "3*sqrt(2)",
+          "harmonic_epsilon0": "9*sqrt(2)/2 + 9 + 9*sqrt(6)/2",
+          "inputs": {
+            "R": 9,
+            "c": "1/1",
+            "chi": 1,
+            "g": 1,
+            "hbar": 1,
+            "lambda": 1,
+            "r": -9
+          },
+          "label": "A",
+          "mu": "1",
+          "v": "3"
+        },
+        "B_corridor_N2": {
+          "A0": "32/9",
+          "E_star": "256",
+          "S0_over_h_sc": "1024*sqrt(2)/3",
+          "classical_proxy_8c_v_squared": "8",
+          "finite_h_below_nonexplicit_h0_certified": false,
+          "h_sc": "1/64",
+          "harmonic_Gamma": "4*sqrt(2)",
+          "harmonic_epsilon0": "6*sqrt(2) + 12 + 6*sqrt(6)",
+          "inputs": {
+            "R": 16,
+            "c": "1/16",
+            "chi": 1,
+            "g": 1,
+            "hbar": 1,
+            "lambda": 1,
+            "r": -16
+          },
+          "label": "B",
+          "mu": "1",
+          "v": "4"
+        },
+        "C_corridor_N3": {
+          "A0": "18",
+          "E_star": "6561",
+          "S0_over_h_sc": "3888*sqrt(2)",
+          "classical_proxy_8c_v_squared": "8",
+          "finite_h_below_nonexplicit_h0_certified": false,
+          "h_sc": "1/729",
+          "harmonic_Gamma": "9*sqrt(2)",
+          "harmonic_epsilon0": "27*sqrt(2)/2 + 27 + 27*sqrt(6)/2",
+          "inputs": {
+            "R": 81,
+            "c": "1/81",
+            "chi": 1,
+            "g": 1,
+            "hbar": 1,
+            "lambda": 1,
+            "r": -81
+          },
+          "label": "C",
+          "mu": "1",
+          "v": "9"
+        }
+      },
+      "q3_graph": {
+        "S0": "16*sqrt(2)/3",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "hessian_characteristic": "(lambda - 2)*(lambda - 6*mu - 2)*(lambda - 4*mu - 2)**3*(lambda - 2*mu - 2)**3",
+        "laplacian": [
+          [
+            "3",
+            "-1",
+            "-1",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "3",
+            "0",
+            "-1",
+            "0",
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "0",
+            "3",
+            "-1",
+            "0",
+            "0",
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "-1",
+            "3",
+            "0",
+            "0",
+            "0",
+            "-1"
+          ],
+          [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "3",
+            "-1",
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0",
+            "0",
+            "-1",
+            "3",
+            "0",
+            "-1"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "-1",
+            "0",
+            "3",
+            "-1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1",
+            "0",
+            "-1",
+            "-1",
+            "3"
+          ]
+        ],
+        "locked_collective_integral_raw": "16*sqrt(2)/3",
+        "vertices": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "zero_set_reason": "W_mu=0 forces x_e^2=1; positive lock forces adjacent signs equal; connected Q3 leaves only plus/minus all-ones"
+      },
+      "semiclassical_import_scope": {
+        "coercive_polynomial": true,
+        "exact_Agmon_distance_from_R167": "16*sqrt(2)/3",
+        "exactly_two_connected_zeroes": true,
+        "exponential_d2_requires_extra_weighted_Agmon_lemma": true,
+        "extra_weighted_Agmon_lemma_registered": false,
+        "fixed_mu_positive": true,
+        "literature_theorem_reproved_by_script": false,
+        "nondegenerate_minima": true,
+        "repository_r_minus_9_certified": false,
+        "safe_d2_bound": "O(v^2 h_sc)",
+        "semiclassical_h0_explicit": false
+      }
+    }
+  },
+  "exploration_id": "EXP-000806",
+  "failed": 0,
+  "negative_ids": [
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT"
+  ],
+  "open_gates": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "passed": 96,
+  "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+  "result_number": "R-167",
+  "result_version": "v1.9",
+  "schema": "tect/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-primary-result/1.0",
+  "scope": {
+    "Pre_A_complete": false,
+    "Q3_semiclassical_hypotheses_and_normalization": true,
+    "Sector_A_complete": false,
+    "broken_sector_GNS_gap": false,
+    "exact_low_band_TFIM_compression": true,
+    "finite_r_minus_9_onsite_doublet_certified": false,
+    "global_volume_uniform_renyi_target_rejected_in_product_fixture": true,
+    "local_measured_renyi_sufficiency_reduction": true,
+    "pure_bond_coordinate_tail_identity": true,
+    "rank_two_unbounded_block_elimination": false,
+    "semiclassical_theorem_imported_not_reproved": true,
+    "two_phase_QPS_for_exact_Q3LOCK": false
+  },
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split.py": "7e0271a5acc7fc13fb9fb3ef036505928b8ff09f8d9e66a9d46c909f0bfad6b8",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md": "0e8466e753eea0b6904be718fce3be53f6425a77e30d08888b00d0ea2218dd54",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json": "79353861f33afb386c2afd279eb4f821e0a8e303b98da696bfb825b209fc7c26"
+  },
+  "summary": {
+    "authority_status": "PASS",
+    "failed": 0,
+    "passed": 96,
+    "total": 96
+  },
+  "task_id": "T-054",
+  "total": 96,
+  "verdict": "PASS"
+}

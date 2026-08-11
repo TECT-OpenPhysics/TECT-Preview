@@ -1,0 +1,2118 @@
+{
+  "actual_freeze_validation": {
+    "error_codes": [
+      "EXTERNAL_VERIFICATION_REQUIRED"
+    ],
+    "path": null,
+    "status": "ABSENT_BY_DESIGN",
+    "valid": false
+  },
+  "assertions": [
+    {
+      "actual": [
+        "__future__",
+        "argparse",
+        "ast",
+        "copy",
+        "datetime",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "re",
+        "subprocess",
+        "tempfile",
+        "typing",
+        "urllib"
+      ],
+      "expected": [
+        "__future__",
+        "argparse",
+        "ast",
+        "copy",
+        "datetime",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "re",
+        "subprocess",
+        "tempfile",
+        "typing",
+        "urllib"
+      ],
+      "group": "independence",
+      "name": "stdlib-only independent imports",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "__future__",
+        "argparse",
+        "ast",
+        "copy",
+        "datetime",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "re",
+        "subprocess",
+        "tempfile",
+        "typing",
+        "urllib"
+      ],
+      "expected": "no primary verifier module",
+      "group": "independence",
+      "name": "no primary module import",
+      "status": "PASS"
+    },
+    {
+      "actual": "tect/pre-a-route-split/1.0",
+      "expected": "tect/pre-a-route-split/1.0",
+      "group": "identity",
+      "name": "authority schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
+      "expected": "PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
+      "group": "identity",
+      "name": "result ID",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-168",
+      "expected": "R-168",
+      "group": "identity",
+      "name": "result number",
+      "status": "PASS"
+    },
+    {
+      "actual": "v1.0",
+      "expected": "v1.0",
+      "group": "identity",
+      "name": "result version",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-000807",
+      "expected": "EXP-000807",
+      "group": "identity",
+      "name": "exploration ID",
+      "status": "PASS"
+    },
+    {
+      "actual": "T-054",
+      "expected": "T-054",
+      "group": "identity",
+      "name": "task ID",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "expected": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "group": "identity",
+      "name": "claim context",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+      ],
+      "expected": [
+        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+      ],
+      "group": "identity",
+      "name": "negative IDs exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION"
+      ],
+      "expected": [
+        "NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION"
+      ],
+      "group": "identity",
+      "name": "reused negative IDs exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
+        "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
+        "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
+        "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+      ],
+      "expected": [
+        "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
+        "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
+        "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
+        "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+      ],
+      "group": "identity",
+      "name": "closed subgates exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
+        "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
+        "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+        "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+      ],
+      "expected": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
+        "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
+        "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+        "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+      ],
+      "group": "identity",
+      "name": "open gates exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "99157442831c0e44d425b5d5f8cd78856c57da53",
+      "expected": "99157442831c0e44d425b5d5f8cd78856c57da53",
+      "group": "identity",
+      "name": "authority audited commit",
+      "status": "PASS"
+    },
+    {
+      "actual": "tect/pre-a-round1-prospective-holdout-freeze/1.0",
+      "expected": "tect/pre-a-round1-prospective-holdout-freeze/1.0",
+      "group": "schema",
+      "name": "freeze schema exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "schema",
+        "freeze_id",
+        "prediction_id",
+        "freeze_version",
+        "round_id",
+        "parent_gate",
+        "status",
+        "claim_bearing",
+        "fixture_only",
+        "contestant_snapshot",
+        "evidence_snapshot",
+        "target_contract",
+        "observable_contract",
+        "prediction_contract",
+        "robustness_contract",
+        "provenance",
+        "scoring",
+        "no_overclaim"
+      ],
+      "expected": [
+        "schema",
+        "freeze_id",
+        "prediction_id",
+        "freeze_version",
+        "round_id",
+        "parent_gate",
+        "status",
+        "claim_bearing",
+        "fixture_only",
+        "contestant_snapshot",
+        "evidence_snapshot",
+        "target_contract",
+        "observable_contract",
+        "prediction_contract",
+        "robustness_contract",
+        "provenance",
+        "scoring",
+        "no_overclaim"
+      ],
+      "group": "schema",
+      "name": "root-field contract exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "target_id",
+        "custodian",
+        "protocol_or_accession",
+        "estimand_id",
+        "units",
+        "independence_group",
+        "blind",
+        "predictor_access_before_freeze",
+        "target_value_present",
+        "commitment",
+        "disclosure"
+      ],
+      "expected": [
+        "target_id",
+        "custodian",
+        "protocol_or_accession",
+        "estimand_id",
+        "units",
+        "independence_group",
+        "blind",
+        "predictor_access_before_freeze",
+        "target_value_present",
+        "commitment",
+        "disclosure"
+      ],
+      "group": "schema",
+      "name": "target-field contract exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "algorithm",
+        "commitment_hex",
+        "secret_key_custody",
+        "payload_schema",
+        "canonical_serialization",
+        "domain_separation",
+        "custodian_signature",
+        "public_key_fingerprint",
+        "issued_at_utc"
+      ],
+      "expected": [
+        "algorithm",
+        "commitment_hex",
+        "secret_key_custody",
+        "payload_schema",
+        "canonical_serialization",
+        "domain_separation",
+        "custodian_signature",
+        "public_key_fingerprint",
+        "issued_at_utc"
+      ],
+      "group": "schema",
+      "name": "commitment-field contract exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "status",
+        "not_before_utc",
+        "actual_at_utc"
+      ],
+      "expected": [
+        "status",
+        "not_before_utc",
+        "actual_at_utc"
+      ],
+      "group": "schema",
+      "name": "disclosure-field contract exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "candidate_id",
+        "predicted_relation",
+        "physical_output",
+        "theory_uncertainty",
+        "acceptance_rule",
+        "baseline_prediction",
+        "allowed_inputs",
+        "forbidden_knobs"
+      ],
+      "expected": [
+        "candidate_id",
+        "predicted_relation",
+        "physical_output",
+        "theory_uncertainty",
+        "acceptance_rule",
+        "baseline_prediction",
+        "allowed_inputs",
+        "forbidden_knobs"
+      ],
+      "group": "schema",
+      "name": "prediction-field contract exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "id",
+        "class",
+        "source",
+        "source_id",
+        "used_for"
+      ],
+      "expected": [
+        "id",
+        "class",
+        "source",
+        "source_id",
+        "used_for"
+      ],
+      "group": "schema",
+      "name": "allowed-input contract exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "volume",
+        "boundary",
+        "regulator",
+        "coefficients",
+        "implementation"
+      ],
+      "expected": [
+        "volume",
+        "boundary",
+        "regulator",
+        "coefficients",
+        "implementation"
+      ],
+      "group": "schema",
+      "name": "robustness-field contract exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py",
+      "expected": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py",
+      "group": "identity",
+      "name": "independent path binding",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
+      "expected": "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
+      "group": "identity",
+      "name": "external gate binding",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+      "expected": "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+      "group": "identity",
+      "name": "internal gate binding",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+      "expected": "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+      "group": "identity",
+      "name": "verification gate binding",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token R-168",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token v1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token EXP-000807",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate root fields",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate shape-only boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate no real tag",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate no physical closure",
+      "status": "PASS"
+    },
+    {
+      "actual": "99157442831c0e44d425b5d5f8cd78856c57da53",
+      "expected": "descendant of 99157442831c0e44d425b5d5f8cd78856c57da53",
+      "group": "current_tree",
+      "name": "audited commit ancestor",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "group": "current_tree",
+      "name": "official freeze records zero",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "count": 0,
+        "load_bearing": false,
+        "scope": "live local freeze/* refs at verification time",
+        "tags": []
+      },
+      "expected": "informational only",
+      "group": "current_tree",
+      "name": "live freeze-tag observation non-load-bearing",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "group": "current_tree",
+      "name": "admitted survivors zero",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-M0-ESTABLISHED-LOW-ENERGY-BASELINE-v0",
+        "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0",
+        "PA-M2-CI8-RS-v0",
+        "PA-M5-NL3-SV-v0"
+      ],
+      "expected": [
+        "PA-M0-ESTABLISHED-LOW-ENERGY-BASELINE-v0",
+        "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0",
+        "PA-M2-CI8-RS-v0",
+        "PA-M5-NL3-SV-v0"
+      ],
+      "group": "current_tree",
+      "name": "contestant sequence exact",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "microscopic_map": false,
+        "non_fitting_validation_prediction": false
+      },
+      "expected": {
+        "microscopic_map": false,
+        "non_fitting_validation_prediction": false
+      },
+      "group": "current_tree",
+      "name": "M1 map absent",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "microscopic_map": false,
+        "non_fitting_validation_prediction": false
+      },
+      "expected": {
+        "microscopic_map": false,
+        "non_fitting_validation_prediction": false
+      },
+      "group": "current_tree",
+      "name": "M1 prediction absent",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "holdout_prediction": false,
+        "physical_predictions": []
+      },
+      "expected": {
+        "holdout_prediction": false,
+        "physical_predictions": []
+      },
+      "group": "current_tree",
+      "name": "M2 predictions empty",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "holdout_prediction": false,
+        "physical_predictions": []
+      },
+      "expected": {
+        "holdout_prediction": false,
+        "physical_predictions": []
+      },
+      "group": "current_tree",
+      "name": "M2 holdout absent",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "holdout_prediction": false,
+        "microscopic_map": false
+      },
+      "expected": {
+        "holdout_prediction": false,
+        "microscopic_map": false
+      },
+      "group": "current_tree",
+      "name": "M5 map absent",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "holdout_prediction": false,
+        "microscopic_map": false
+      },
+      "expected": {
+        "holdout_prediction": false,
+        "microscopic_map": false
+      },
+      "group": "current_tree",
+      "name": "M5 holdout absent",
+      "status": "PASS"
+    },
+    {
+      "actual": "ABSENT",
+      "expected": "ABSENT",
+      "group": "current_tree",
+      "name": "M1 normalized map absent",
+      "status": "PASS"
+    },
+    {
+      "actual": "ABSENT; CONDITIONAL_STIFFNESS_MAP_DECLARED_ONLY_FOR_THE_VISIBLE_VALIDATION_TEST_BELOW",
+      "expected": "ABSENT; ...",
+      "group": "current_tree",
+      "name": "M2 normalized map absent",
+      "status": "PASS"
+    },
+    {
+      "actual": "ABSENT",
+      "expected": "ABSENT",
+      "group": "current_tree",
+      "name": "M5 normalized map absent",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "current_tree",
+      "name": "common input ledger incomplete",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "current_tree",
+      "name": "prospective prediction absent",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "parent gate open",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "Pre-A exit open",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "current tree not freeze ready",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NO_MACHINE_FREEZE_RECORD",
+        "NO_ADMITTED_MICROSCOPIC_SURVIVOR",
+        "M1_MAP_AND_PREDICTION_ABSENT",
+        "M2_PHYSICAL_PREDICTION_AND_HOLDOUT_ABSENT",
+        "M5_MAP_AND_HOLDOUT_ABSENT",
+        "PER_PARAMETER_COMMON_INPUT_LEDGER_INCOMPLETE",
+        "PROSPECTIVE_PREDICTION_NOT_FROZEN"
+      ],
+      "expected": [
+        "NO_MACHINE_FREEZE_RECORD",
+        "NO_ADMITTED_MICROSCOPIC_SURVIVOR",
+        "M1_MAP_AND_PREDICTION_ABSENT",
+        "M2_PHYSICAL_PREDICTION_AND_HOLDOUT_ABSENT",
+        "M5_MAP_AND_HOLDOUT_ABSENT",
+        "PER_PARAMETER_COMMON_INPUT_LEDGER_INCOMPLETE",
+        "PROSPECTIVE_PREDICTION_NOT_FROZEN"
+      ],
+      "group": "current_tree",
+      "name": "blocker set exact and ordered",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "schema",
+        "freeze_id",
+        "prediction_id",
+        "freeze_version",
+        "round_id",
+        "parent_gate",
+        "status",
+        "claim_bearing",
+        "fixture_only",
+        "contestant_snapshot",
+        "evidence_snapshot",
+        "target_contract",
+        "observable_contract",
+        "prediction_contract",
+        "robustness_contract",
+        "provenance",
+        "scoring",
+        "no_overclaim"
+      ],
+      "expected": [
+        "schema",
+        "freeze_id",
+        "prediction_id",
+        "freeze_version",
+        "round_id",
+        "parent_gate",
+        "status",
+        "claim_bearing",
+        "fixture_only",
+        "contestant_snapshot",
+        "evidence_snapshot",
+        "target_contract",
+        "observable_contract",
+        "prediction_contract",
+        "robustness_contract",
+        "provenance",
+        "scoring",
+        "no_overclaim"
+      ],
+      "group": "schema",
+      "name": "synthetic fixture root order",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "target_id",
+        "custodian",
+        "protocol_or_accession",
+        "estimand_id",
+        "units",
+        "independence_group",
+        "blind",
+        "predictor_access_before_freeze",
+        "target_value_present",
+        "commitment",
+        "disclosure"
+      ],
+      "expected": [
+        "target_id",
+        "custodian",
+        "protocol_or_accession",
+        "estimand_id",
+        "units",
+        "independence_group",
+        "blind",
+        "predictor_access_before_freeze",
+        "target_value_present",
+        "commitment",
+        "disclosure"
+      ],
+      "group": "schema",
+      "name": "synthetic target order",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "algorithm",
+        "commitment_hex",
+        "secret_key_custody",
+        "payload_schema",
+        "canonical_serialization",
+        "domain_separation",
+        "custodian_signature",
+        "public_key_fingerprint",
+        "issued_at_utc"
+      ],
+      "expected": [
+        "algorithm",
+        "commitment_hex",
+        "secret_key_custody",
+        "payload_schema",
+        "canonical_serialization",
+        "domain_separation",
+        "custodian_signature",
+        "public_key_fingerprint",
+        "issued_at_utc"
+      ],
+      "group": "schema",
+      "name": "synthetic commitment order",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "status",
+        "not_before_utc",
+        "actual_at_utc"
+      ],
+      "expected": [
+        "status",
+        "not_before_utc",
+        "actual_at_utc"
+      ],
+      "group": "schema",
+      "name": "synthetic disclosure order",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "candidate_id",
+        "predicted_relation",
+        "physical_output",
+        "theory_uncertainty",
+        "acceptance_rule",
+        "baseline_prediction",
+        "allowed_inputs",
+        "forbidden_knobs"
+      ],
+      "expected": [
+        "candidate_id",
+        "predicted_relation",
+        "physical_output",
+        "theory_uncertainty",
+        "acceptance_rule",
+        "baseline_prediction",
+        "allowed_inputs",
+        "forbidden_knobs"
+      ],
+      "group": "schema",
+      "name": "synthetic prediction order",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "id",
+        "class",
+        "source",
+        "source_id",
+        "used_for"
+      ],
+      "expected": [
+        "id",
+        "class",
+        "source",
+        "source_id",
+        "used_for"
+      ],
+      "group": "schema",
+      "name": "synthetic input order",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "volume",
+        "boundary",
+        "regulator",
+        "coefficients",
+        "implementation"
+      ],
+      "expected": [
+        "volume",
+        "boundary",
+        "regulator",
+        "coefficients",
+        "implementation"
+      ],
+      "group": "schema",
+      "name": "synthetic robustness order",
+      "status": "PASS"
+    },
+    {
+      "actual": "INDEPENDENT-FIXTURE-MICRO-v1",
+      "expected": "INDEPENDENT-FIXTURE-MICRO-v1",
+      "group": "schema",
+      "name": "candidate prediction bound",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "error_codes": [],
+        "errors": [],
+        "valid": true
+      },
+      "expected": "valid synthetic shape",
+      "group": "schema",
+      "name": "synthetic fixture shape valid",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "group": "schema",
+      "name": "target values absent",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "common_estimand",
+        "candidate_maps"
+      ],
+      "expected": [
+        "common_estimand",
+        "candidate_maps"
+      ],
+      "group": "schema",
+      "name": "common estimand separate",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "external_boundary",
+      "name": "purported real freeze rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "EXTERNAL_VERIFICATION_REQUIRED"
+      ],
+      "expected": [
+        "EXTERNAL_VERIFICATION_REQUIRED"
+      ],
+      "group": "external_boundary",
+      "name": "real rejection code exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "PLAUSIBLE-SHAPE-BUT-NOT-CRYPTOGRAPHICALLY-VERIFIED",
+      "expected": "shape present but verification absent",
+      "group": "external_boundary",
+      "name": "plausible signature not treated as verified",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "root_extra",
+        "empty_root_identity",
+        "empty_target_identity",
+        "target_estimand_mismatch",
+        "target_leakage",
+        "hidden_sealed_payload",
+        "target_alias",
+        "temporal_order",
+        "hash_mutation",
+        "path_traversal",
+        "independence",
+        "baseline_missing",
+        "duplicate_candidate_map",
+        "eligible_map_missing",
+        "unbound_prediction",
+        "input_source_id_missing",
+        "input_discovery_source_id",
+        "input_source_alias",
+        "nested_wrong_type",
+        "commitment_scalar_types",
+        "provenance_oid_scalar_types",
+        "remote_url_no_hostname",
+        "input_scalar_types",
+        "estimand_scalar_type",
+        "contestant_scalar_type",
+        "estimand_container_type",
+        "estimator_container_type",
+        "remote_anchor"
+      ],
+      "expected": [
+        "root_extra",
+        "empty_root_identity",
+        "empty_target_identity",
+        "target_estimand_mismatch",
+        "target_leakage",
+        "hidden_sealed_payload",
+        "target_alias",
+        "temporal_order",
+        "hash_mutation",
+        "path_traversal",
+        "independence",
+        "baseline_missing",
+        "duplicate_candidate_map",
+        "eligible_map_missing",
+        "unbound_prediction",
+        "input_source_id_missing",
+        "input_discovery_source_id",
+        "input_source_alias",
+        "nested_wrong_type",
+        "commitment_scalar_types",
+        "provenance_oid_scalar_types",
+        "remote_url_no_hostname",
+        "input_scalar_types",
+        "estimand_scalar_type",
+        "contestant_scalar_type",
+        "estimand_container_type",
+        "estimator_container_type",
+        "remote_anchor"
+      ],
+      "group": "hostile",
+      "name": "hostile fixture names exact",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "root_extra rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "ROOT_FIELDS_EXTRA"
+      ],
+      "expected": "ROOT_FIELDS_EXTRA",
+      "group": "hostile",
+      "name": "root_extra expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "empty_root_identity rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "ROOT_VALUES_INVALID",
+        "REMOTE_ANCHOR_INVALID"
+      ],
+      "expected": "ROOT_VALUES_INVALID",
+      "group": "hostile",
+      "name": "empty_root_identity expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "empty_target_identity rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "TARGET_CONTRACT_INVALID",
+        "TARGET_ESTIMAND_MISMATCH"
+      ],
+      "expected": "TARGET_CONTRACT_INVALID",
+      "group": "hostile",
+      "name": "empty_target_identity expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "target_estimand_mismatch rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "TARGET_ESTIMAND_MISMATCH"
+      ],
+      "expected": "TARGET_ESTIMAND_MISMATCH",
+      "group": "hostile",
+      "name": "target_estimand_mismatch expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "target_leakage rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "TARGET_CONTRACT_INVALID",
+        "TARGET_LEAKAGE"
+      ],
+      "expected": "TARGET_LEAKAGE",
+      "group": "hostile",
+      "name": "target_leakage expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "hidden_sealed_payload rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "TARGET_LEAKAGE",
+        "COMMITMENT_INVALID"
+      ],
+      "expected": "TARGET_LEAKAGE",
+      "group": "hostile",
+      "name": "hidden_sealed_payload expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "target_alias rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "TARGET_CONTRACT_INVALID",
+        "TARGET_LEAKAGE"
+      ],
+      "expected": "TARGET_LEAKAGE",
+      "group": "hostile",
+      "name": "target_alias expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "temporal_order rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "TEMPORAL_ORDER_INVALID"
+      ],
+      "expected": "TEMPORAL_ORDER_INVALID",
+      "group": "hostile",
+      "name": "temporal_order expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "hash_mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "HASH_FAILURE"
+      ],
+      "expected": "HASH_FAILURE",
+      "group": "hostile",
+      "name": "hash_mutation expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "path_traversal rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "HASH_FAILURE"
+      ],
+      "expected": "HASH_FAILURE",
+      "group": "hostile",
+      "name": "path_traversal expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "independence rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "INDEPENDENCE_OVERLAP"
+      ],
+      "expected": "INDEPENDENCE_OVERLAP",
+      "group": "hostile",
+      "name": "independence expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "baseline_missing rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "BASELINE_MISSING"
+      ],
+      "expected": "BASELINE_MISSING",
+      "group": "hostile",
+      "name": "baseline_missing expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "duplicate_candidate_map rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "MAP_CANDIDATE_DUPLICATE"
+      ],
+      "expected": "MAP_CANDIDATE_DUPLICATE",
+      "group": "hostile",
+      "name": "duplicate_candidate_map expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "eligible_map_missing rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "ELIGIBLE_MAP_MISSING",
+        "PREDICTION_CANDIDATE_UNBOUND"
+      ],
+      "expected": "ELIGIBLE_MAP_MISSING",
+      "group": "hostile",
+      "name": "eligible_map_missing expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "unbound_prediction rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PREDICTION_CANDIDATE_UNBOUND"
+      ],
+      "expected": "PREDICTION_CANDIDATE_UNBOUND",
+      "group": "hostile",
+      "name": "unbound_prediction expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "input_source_id_missing rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "INPUT_FIELDS_INVALID",
+        "INPUT_LEDGER_INVALID"
+      ],
+      "expected": "INPUT_FIELDS_INVALID",
+      "group": "hostile",
+      "name": "input_source_id_missing expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "input_discovery_source_id rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "DISCOVERY_REUSE"
+      ],
+      "expected": "DISCOVERY_REUSE",
+      "group": "hostile",
+      "name": "input_discovery_source_id expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "input_source_alias rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "INPUT_FIELDS_INVALID"
+      ],
+      "expected": "INPUT_FIELDS_INVALID",
+      "group": "hostile",
+      "name": "input_source_alias expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "nested_wrong_type rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "COMMITMENT_INVALID",
+        "TEMPORAL_ORDER_INVALID"
+      ],
+      "expected": "COMMITMENT_INVALID",
+      "group": "hostile",
+      "name": "nested_wrong_type expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "commitment_scalar_types rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "COMMITMENT_INVALID"
+      ],
+      "expected": "COMMITMENT_INVALID",
+      "group": "hostile",
+      "name": "commitment_scalar_types expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "provenance_oid_scalar_types rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "REMOTE_ANCHOR_INVALID"
+      ],
+      "expected": "REMOTE_ANCHOR_INVALID",
+      "group": "hostile",
+      "name": "provenance_oid_scalar_types expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "remote_url_no_hostname rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "REMOTE_ANCHOR_INVALID"
+      ],
+      "expected": "REMOTE_ANCHOR_INVALID",
+      "group": "hostile",
+      "name": "remote_url_no_hostname expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "input_scalar_types rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "INPUT_LEDGER_INVALID"
+      ],
+      "expected": "INPUT_LEDGER_INVALID",
+      "group": "hostile",
+      "name": "input_scalar_types expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "estimand_scalar_type rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "ESTIMAND_INVALID"
+      ],
+      "expected": "ESTIMAND_INVALID",
+      "group": "hostile",
+      "name": "estimand_scalar_type expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "contestant_scalar_type rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "CONTESTANTS_INVALID",
+        "ELIGIBLE_ROLE_INVALID"
+      ],
+      "expected": "CONTESTANTS_INVALID",
+      "group": "hostile",
+      "name": "contestant_scalar_type expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "estimand_container_type rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "ESTIMAND_INVALID",
+        "TARGET_ESTIMAND_MISMATCH",
+        "HASH_FAILURE"
+      ],
+      "expected": "ESTIMAND_INVALID",
+      "group": "hostile",
+      "name": "estimand_container_type expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "estimator_container_type rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "ESTIMAND_INVALID",
+        "HASH_FAILURE"
+      ],
+      "expected": "ESTIMAND_INVALID",
+      "group": "hostile",
+      "name": "estimator_container_type expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "remote_anchor rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "REMOTE_ANCHOR_INVALID"
+      ],
+      "expected": "REMOTE_ANCHOR_INVALID",
+      "group": "hostile",
+      "name": "remote_anchor expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "external_boundary",
+      "name": "actual freeze never accepted",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "EXTERNAL_VERIFICATION_REQUIRED"
+      ],
+      "expected": "contains EXTERNAL_VERIFICATION_REQUIRED",
+      "group": "external_boundary",
+      "name": "external code retained for actual path",
+      "status": "PASS"
+    },
+    {
+      "actual": "CLOSED",
+      "expected": "CLOSED",
+      "group": "formal_authority",
+      "name": "closed formal gate PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
+      "status": "PASS"
+    },
+    {
+      "actual": "CLOSED",
+      "expected": "CLOSED",
+      "group": "formal_authority",
+      "name": "closed formal gate PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
+      "status": "PASS"
+    },
+    {
+      "actual": "CLOSED",
+      "expected": "CLOSED",
+      "group": "formal_authority",
+      "name": "closed formal gate PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
+      "status": "PASS"
+    },
+    {
+      "actual": "CLOSED",
+      "expected": "CLOSED",
+      "group": "formal_authority",
+      "name": "closed formal gate PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+      "status": "PASS"
+    },
+    {
+      "actual": "OPEN",
+      "expected": "OPEN",
+      "group": "formal_authority",
+      "name": "open formal gate PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+      "status": "PASS"
+    },
+    {
+      "actual": "OPEN",
+      "expected": "OPEN",
+      "group": "formal_authority",
+      "name": "open formal gate PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
+      "status": "PASS"
+    },
+    {
+      "actual": "OPEN",
+      "expected": "OPEN",
+      "group": "formal_authority",
+      "name": "open formal gate PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
+      "status": "PASS"
+    },
+    {
+      "actual": "OPEN",
+      "expected": "OPEN",
+      "group": "formal_authority",
+      "name": "open formal gate PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+      "status": "PASS"
+    },
+    {
+      "actual": "OPEN",
+      "expected": "OPEN",
+      "group": "formal_authority",
+      "name": "open formal gate PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": ">=1",
+      "group": "formal_authority",
+      "name": "negative authority NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "formal_authority",
+      "name": "results ledger result/version/ID binding",
+      "status": "PASS"
+    },
+    {
+      "actual": "T-054",
+      "expected": "T-054",
+      "group": "formal_authority",
+      "name": "exploration task binding",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "R-168"
+      ],
+      "expected": [
+        "R-168"
+      ],
+      "group": "formal_authority",
+      "name": "exploration result binding",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+      ],
+      "expected": [
+        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+      ],
+      "group": "formal_authority",
+      "name": "exploration negative binding",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
+        "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
+        "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
+        "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
+        "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
+        "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+        "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+      ],
+      "expected": [
+        "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+        "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
+        "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+        "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
+        "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
+        "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
+        "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR"
+      ],
+      "group": "formal_authority",
+      "name": "exploration gate binding",
+      "status": "PASS"
+    }
+  ],
+  "authority": {
+    "missing": [],
+    "staged": false,
+    "status": "COMPLETE"
+  },
+  "boundary": "Independent schema-shape and audited-current-tree verification only. No cryptographic signature or remote-ref verification, real freeze, tag, target, prediction, score, parent-gate closure, Pre-A exit, or physical Sector-A selection follows.",
+  "claim_bearing": false,
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "closed_subgates": [
+    "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
+    "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
+    "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
+    "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+  ],
+  "current_tree": {
+    "M1": {
+      "microscopic_map": false,
+      "non_fitting_validation_prediction": false
+    },
+    "M2": {
+      "holdout_prediction": false,
+      "physical_predictions": []
+    },
+    "M5": {
+      "holdout_prediction": false,
+      "microscopic_map": false
+    },
+    "actual_freeze_ready": false,
+    "admitted_microscopic_survivor_count": 0,
+    "admitted_microscopic_survivors": [],
+    "audited_commit": "99157442831c0e44d425b5d5f8cd78856c57da53",
+    "audited_commit_is_ancestor": true,
+    "blockers": [
+      "NO_MACHINE_FREEZE_RECORD",
+      "NO_ADMITTED_MICROSCOPIC_SURVIVOR",
+      "M1_MAP_AND_PREDICTION_ABSENT",
+      "M2_PHYSICAL_PREDICTION_AND_HOLDOUT_ABSENT",
+      "M5_MAP_AND_HOLDOUT_ABSENT",
+      "PER_PARAMETER_COMMON_INPUT_LEDGER_INCOMPLETE",
+      "PROSPECTIVE_PREDICTION_NOT_FROZEN"
+    ],
+    "contestant_ids": [
+      "PA-M0-ESTABLISHED-LOW-ENERGY-BASELINE-v0",
+      "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0",
+      "PA-M2-CI8-RS-v0",
+      "PA-M5-NL3-SV-v0"
+    ],
+    "current_head": "99157442831c0e44d425b5d5f8cd78856c57da53",
+    "freeze_record_count": 0,
+    "freeze_records": [],
+    "local_freeze_tag_observation": {
+      "count": 0,
+      "load_bearing": false,
+      "scope": "live local freeze/* refs at verification time",
+      "tags": []
+    },
+    "normalized_map_status": {
+      "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": "ABSENT",
+      "PA-M2-CI8-RS-v0": "ABSENT; CONDITIONAL_STIFFNESS_MAP_DECLARED_ONLY_FOR_THE_VISIBLE_VALIDATION_TEST_BELOW",
+      "PA-M5-NL3-SV-v0": "ABSENT"
+    },
+    "parent_freeze_gate_closed": false,
+    "per_parameter_common_input_ledger_complete": false,
+    "pre_a_exit_conditions_met": false,
+    "prospective_prediction_frozen": false
+  },
+  "exploration_id": "EXP-000807",
+  "freeze_schema_contract": {
+    "allowed_input_fields": [
+      "id",
+      "class",
+      "source",
+      "source_id",
+      "used_for"
+    ],
+    "candidate_neutral_object": "common estimand and raw estimator",
+    "candidate_specific_object": "microscopic-to-observable map plus candidate_id-bound frozen prediction",
+    "commitment_definition": "HMAC-SHA256(external custodian key, domain separator || 0x00 || RFC8785-JCS canonical target payload)",
+    "commitment_fields": [
+      "algorithm",
+      "commitment_hex",
+      "secret_key_custody",
+      "payload_schema",
+      "canonical_serialization",
+      "domain_separation",
+      "custodian_signature",
+      "public_key_fingerprint",
+      "issued_at_utc"
+    ],
+    "disclosure_fields": [
+      "status",
+      "not_before_utc",
+      "actual_at_utc"
+    ],
+    "official_record_path": "predictions/freezes/<PRED-ID>-freeze.md",
+    "official_tag_pattern": "freeze/<PRED-ID>/v<N>",
+    "path_policy": "relative normalized POSIX path resolved inside repository",
+    "prediction_fields": [
+      "candidate_id",
+      "predicted_relation",
+      "physical_output",
+      "theory_uncertainty",
+      "acceptance_rule",
+      "baseline_prediction",
+      "allowed_inputs",
+      "forbidden_knobs"
+    ],
+    "required_temporal_order": "custodian commitment <= public remote freeze < target disclosure",
+    "robustness_fields": [
+      "volume",
+      "boundary",
+      "regulator",
+      "coefficients",
+      "implementation"
+    ],
+    "root_fields": [
+      "schema",
+      "freeze_id",
+      "prediction_id",
+      "freeze_version",
+      "round_id",
+      "parent_gate",
+      "status",
+      "claim_bearing",
+      "fixture_only",
+      "contestant_snapshot",
+      "evidence_snapshot",
+      "target_contract",
+      "observable_contract",
+      "prediction_contract",
+      "robustness_contract",
+      "provenance",
+      "scoring",
+      "no_overclaim"
+    ],
+    "schema": "tect/pre-a-round1-prospective-holdout-freeze/1.0",
+    "target_fields": [
+      "target_id",
+      "custodian",
+      "protocol_or_accession",
+      "estimand_id",
+      "units",
+      "independence_group",
+      "blind",
+      "predictor_access_before_freeze",
+      "target_value_present",
+      "commitment",
+      "disclosure"
+    ]
+  },
+  "hostile_fixtures": {
+    "baseline_missing": {
+      "error_codes": [
+        "BASELINE_MISSING"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "BASELINE_MISSING",
+      "valid": false
+    },
+    "commitment_scalar_types": {
+      "error_codes": [
+        "COMMITMENT_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "COMMITMENT_INVALID",
+      "valid": false
+    },
+    "contestant_scalar_type": {
+      "error_codes": [
+        "CONTESTANTS_INVALID",
+        "ELIGIBLE_ROLE_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "CONTESTANTS_INVALID",
+      "valid": false
+    },
+    "duplicate_candidate_map": {
+      "error_codes": [
+        "MAP_CANDIDATE_DUPLICATE"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "MAP_CANDIDATE_DUPLICATE",
+      "valid": false
+    },
+    "eligible_map_missing": {
+      "error_codes": [
+        "ELIGIBLE_MAP_MISSING",
+        "PREDICTION_CANDIDATE_UNBOUND"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "ELIGIBLE_MAP_MISSING",
+      "valid": false
+    },
+    "empty_root_identity": {
+      "error_codes": [
+        "ROOT_VALUES_INVALID",
+        "REMOTE_ANCHOR_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "ROOT_VALUES_INVALID",
+      "valid": false
+    },
+    "empty_target_identity": {
+      "error_codes": [
+        "TARGET_CONTRACT_INVALID",
+        "TARGET_ESTIMAND_MISMATCH"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "TARGET_CONTRACT_INVALID",
+      "valid": false
+    },
+    "estimand_container_type": {
+      "error_codes": [
+        "ESTIMAND_INVALID",
+        "TARGET_ESTIMAND_MISMATCH",
+        "HASH_FAILURE"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "ESTIMAND_INVALID",
+      "valid": false
+    },
+    "estimand_scalar_type": {
+      "error_codes": [
+        "ESTIMAND_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "ESTIMAND_INVALID",
+      "valid": false
+    },
+    "estimator_container_type": {
+      "error_codes": [
+        "ESTIMAND_INVALID",
+        "HASH_FAILURE"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "ESTIMAND_INVALID",
+      "valid": false
+    },
+    "hash_mutation": {
+      "error_codes": [
+        "HASH_FAILURE"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "HASH_FAILURE",
+      "valid": false
+    },
+    "hidden_sealed_payload": {
+      "error_codes": [
+        "TARGET_LEAKAGE",
+        "COMMITMENT_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "TARGET_LEAKAGE",
+      "valid": false
+    },
+    "independence": {
+      "error_codes": [
+        "INDEPENDENCE_OVERLAP"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "INDEPENDENCE_OVERLAP",
+      "valid": false
+    },
+    "input_discovery_source_id": {
+      "error_codes": [
+        "DISCOVERY_REUSE"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "DISCOVERY_REUSE",
+      "valid": false
+    },
+    "input_scalar_types": {
+      "error_codes": [
+        "INPUT_LEDGER_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "INPUT_LEDGER_INVALID",
+      "valid": false
+    },
+    "input_source_alias": {
+      "error_codes": [
+        "INPUT_FIELDS_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "INPUT_FIELDS_INVALID",
+      "valid": false
+    },
+    "input_source_id_missing": {
+      "error_codes": [
+        "INPUT_FIELDS_INVALID",
+        "INPUT_LEDGER_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "INPUT_FIELDS_INVALID",
+      "valid": false
+    },
+    "nested_wrong_type": {
+      "error_codes": [
+        "COMMITMENT_INVALID",
+        "TEMPORAL_ORDER_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "COMMITMENT_INVALID",
+      "valid": false
+    },
+    "path_traversal": {
+      "error_codes": [
+        "HASH_FAILURE"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "HASH_FAILURE",
+      "valid": false
+    },
+    "provenance_oid_scalar_types": {
+      "error_codes": [
+        "REMOTE_ANCHOR_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "REMOTE_ANCHOR_INVALID",
+      "valid": false
+    },
+    "remote_anchor": {
+      "error_codes": [
+        "REMOTE_ANCHOR_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "REMOTE_ANCHOR_INVALID",
+      "valid": false
+    },
+    "remote_url_no_hostname": {
+      "error_codes": [
+        "REMOTE_ANCHOR_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "REMOTE_ANCHOR_INVALID",
+      "valid": false
+    },
+    "root_extra": {
+      "error_codes": [
+        "ROOT_FIELDS_EXTRA"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "ROOT_FIELDS_EXTRA",
+      "valid": false
+    },
+    "target_alias": {
+      "error_codes": [
+        "TARGET_CONTRACT_INVALID",
+        "TARGET_LEAKAGE"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "TARGET_LEAKAGE",
+      "valid": false
+    },
+    "target_estimand_mismatch": {
+      "error_codes": [
+        "TARGET_ESTIMAND_MISMATCH"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "TARGET_ESTIMAND_MISMATCH",
+      "valid": false
+    },
+    "target_leakage": {
+      "error_codes": [
+        "TARGET_CONTRACT_INVALID",
+        "TARGET_LEAKAGE"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "TARGET_LEAKAGE",
+      "valid": false
+    },
+    "temporal_order": {
+      "error_codes": [
+        "TEMPORAL_ORDER_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "TEMPORAL_ORDER_INVALID",
+      "valid": false
+    },
+    "unbound_prediction": {
+      "error_codes": [
+        "PREDICTION_CANDIDATE_UNBOUND"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "PREDICTION_CANDIDATE_UNBOUND",
+      "valid": false
+    }
+  },
+  "negative_ids": [
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+  ],
+  "open_gates": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+    "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
+    "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
+    "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+    "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+  ],
+  "parent_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+  "real_freeze_verification_boundary": {
+    "custodian_signature_cryptographically_verified": false,
+    "independently_authenticated_receipt_present": false,
+    "real_freeze_acceptance_enabled": false,
+    "remote_annotated_tag_fetched_and_verified": false,
+    "remote_commit_fetched_and_verified": false,
+    "remote_tag_ref_fetched_and_verified": false,
+    "required_error_code": "EXTERNAL_VERIFICATION_REQUIRED",
+    "schema_shape_validated": true
+  },
+  "result_id": "PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
+  "result_number": "R-168",
+  "result_version": "v1.0",
+  "reused_negative_ids": [
+    "NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION"
+  ],
+  "schema": "tect/pre-a-round1-prospective-holdout-freeze-protocol-independent-result/1.0",
+  "scope": {
+    "Pre_A_complete": false,
+    "Sector_A_complete": false,
+    "actual_freeze_record_created": false,
+    "admitted_current_microscopic_map_present": false,
+    "cryptographic_signature_verifier_implemented": false,
+    "current_tree_readiness_audited": true,
+    "external_target_commitment_present": false,
+    "git_tag_created": false,
+    "independent_remote_ref_verifier_implemented": false,
+    "parent_gate_closed": false,
+    "prospective_prediction_present": false,
+    "protocol_schema_shape_validated": true
+  },
+  "script_version": "1.1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py": "8041a437f5c6a091a038d9ac6388beb09bcf949cc9e1d675b4e5e2bd08944126",
+    "strategy/pre-a-m0-established-low-energy-baseline-manifest.json": "4b475e1e96eb2167af52a6e73bf494cc9f2481b7988083e7474b8d4bc81f42ff",
+    "strategy/pre-a-m1-current-production-functional-candidate-manifest.json": "148bd9268e3885347e9766ec847680e41719f49ec3a7cc007c4908f25308c583",
+    "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json": "baef937db30afff664f60dac5f3828c6a2d94c083ea92928663996c087c0d840",
+    "strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json": "102b0d5f0053b1286bb9751ababadf4b13f94abafebaece5295e91a550e070bd",
+    "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json": "01803912d108499596c40bf30551150c704fe6adf49b2e43d86c41ce93bca608",
+    "strategy/pre-a-round1-frozen-quadratic-causal-admission-triage-manifest.json": "8d2a50fcbb70aaba7e6d8f13ed66d530c66c8f58e4bfc57da816238ad970c1d1",
+    "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "de0cbae48001f32bcde77e34f3d8249737fcee5679a06f7d508660ecc59bd4a0",
+    "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "2af87e50bb3b328c33400d6ac24c2c586b64c10b22dd411c0bbc65e8b6bf242b"
+  },
+  "summary": {
+    "failed": 0,
+    "passed": 153,
+    "total": 153
+  },
+  "synthetic_schema_validation": {
+    "fixture_digest": "7d967cdd9041f476ccd84431679104940460535d12bdfd1f0e169b0116e463dc",
+    "valid": true
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

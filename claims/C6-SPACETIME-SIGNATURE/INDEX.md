@@ -9,12 +9,13 @@
 
 **Falsifier.** A consistency requirement of the low-energy theory forcing a dimension $\neq 3+1$ or a Euclidean/degenerate signature in the IR.
 
-## (all notes)/  ·  10 proof units  ·  tier span T1
+## (all notes)/  ·  11 proof units  ·  tier span T1
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
 | `pre-a-q3lock-common-alpha-topology-critical-graph-route-split` | v0.4 | T1 | All-bond kick graph form and one-layer recurrence proved; subcritical finite-volume graph Trotter convergence proved conditionally on strong product … | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Prove a non-Leibniz or state-weighted critical onsite topology and thermodynamic boundary… |
 | `pre-a-q3lock-cubic-graph-product-locality-route-split` | v0.2 | T1 | Weighted cubic graph embedding, Q3 force multiplier, moving-center graph comparison, and prescribed-word heat simplex proved. Raw absolute animal and… | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Prove either the first-passage RT-PV response plus Hamiltonian energy-tail algebra, or th… |
+| `pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint` | v0.8 | T1 | Exact pure-bond state-weighted cutoff identity; fixed-finite-S measured-Renyi tail implication; fixed-mu, small-h Q3 onsite doublet; exact low-band T… | ANALYTIC + EXACT + primary + non-importing in… | Prove the local history-tail theorem and the rank-two band/QPS theorem; independently obt… |
 | `pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split` | v0.6 | T1 | Finite-region bounded local-strict, strong-star, compact-resolvent graph and two-sided energy topologies agree; exact onsite and all-bond subflows ar… | ANALYTIC + EXACT + primary + non-importing in… | Prove uniform two-orientation partial-history control and all-shape exhaustion common alp… |
 | `pre-a-q3lock-modular-cutoff-unitary-resummation-route-split` | v0.3 | T1 | Fixed-s star/repeat first-passage target rejected; all-order star and unique-path tree repaired. Modular-mean, structured multiplier, and coordinate-… | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Prove either all-bond unitary Trotter graph-Lipschitz closure or projected-Duhamel modula… |
 | `pre-a-q3lock-renyi-history-os-gap-reduction-route-split` | v0.7 | T1 | Fixed-Trotter compatibility; Renyi history-tail reduction; zero-T OS mass/gap equivalence; exact instanton minimum; conditional Ising reference gap. | ANALYTIC + EXACT + primary + non-importing in… | Prove uniform two-orientation cutoff domination and growing-stage Cauchy completion; sepa… |
