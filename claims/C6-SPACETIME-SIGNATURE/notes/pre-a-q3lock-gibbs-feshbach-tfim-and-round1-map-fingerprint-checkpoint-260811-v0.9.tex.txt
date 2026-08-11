@@ -1,0 +1,684 @@
+% Title: Pre-A Q3LOCK Gibbs, Feshbach, TFIM, and Round-1 Map Fingerprint Checkpoint
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v0.9 -- first issued 2026-08-11; this version issued 2026-08-11
+% Status: T0 claim-nonbearing synthesis of R-167 v2.0 and R-168 v1.1; physical Sector A and Pre-A remain open
+
+\section{Purpose and scope}
+
+This single gate-level checkpoint synthesizes \texttt{EXP-000809} and
+\texttt{EXP-000810}.  It advances reusable result \texttt{R-167 v2.0} and
+reusable result \texttt{R-168 v1.1} without changing a claim card or tier.
+Both results are \texttt{T0}, additive, and
+\texttt{claim\_bearing: false}.  Their stable result identifiers are
+
+\begin{enumerate}
+\item
+\url{PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT};
+\item
+\url{PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT}.
+\end{enumerate}
+
+R-167 v2.0 proves four narrow children.  In finite volume it derives two
+oppositely oriented Gibbs-weighted unitary cutoff bounds and trace-state
+stability from one static second moment.  It reduces a uniform fixed-edge
+restricted tail to one growing cubic corridor.  It gives a finite-volume,
+absolute-energy Feshbach and relative-form precursor.  Finally, it applies a
+two-phase quantum Pirogov--Sinai theorem to the exact \emph{compressed}
+finite-spin transverse-field Ising model.  These results do not provide the
+missing oscillator transfer.
+
+R-168 v1.1 proves two narrow children.  The exact current M1-v0, M2-v0, and
+M5-v0 candidate versions have no admitted map, and adding only a map while
+preserving all non-map data leaves zero all-PASS survivors.  Independently,
+the finite-torus Gaussian M2 kernel has an exact ordered 48-component
+node-axis fingerprint, every component equal to one.  No physical response
+map or candidate is created.
+
+The exact historical v0.8 combined source/PDF is prior evidence only for
+R-167 v1.9 and R-168 v1.0.  It is not current evidence for R-167 v2.0 or
+R-168 v1.1 and cannot satisfy this checkpoint.  No per-lemma or intermediate
+PDF was issued.  This v0.9 fragment is the one combined synthesis source for
+the present logical checkpoint; its sibling PDF may be issued only after all
+proof, formal-authority, integrated, source-form, freshness, and later
+render-review gates pass.
+
+\section{Closed children, negatives, and open gates}
+
+The four R-167 children closed by \texttt{EXP-000809} are exactly
+
+\begin{enumerate}
+\item
+\url{PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION};
+\item
+\url{PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION};
+\item
+\url{PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR};
+\item
+\url{PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP}.
+\end{enumerate}
+
+Its three new scoped negative results are exactly
+
+\begin{enumerate}
+\item
+\url{NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE};
+\item
+\url{NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY};
+\item
+\url{NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL}.
+\end{enumerate}
+
+The two R-168 children closed by \texttt{EXP-000810} are exactly
+
+\begin{enumerate}
+\item
+\url{PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET};
+\item
+\url{PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT}.
+\end{enumerate}
+
+Its new scoped negative is exactly
+
+\begin{quote}
+\url{NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR}.
+\end{quote}
+
+The new M2 successor gate is
+
+\begin{quote}
+\url{PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND}.
+\end{quote}
+
+The following mathematical and prospective parents remain open:
+
+\begin{enumerate}
+\item
+\url{PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA};
+\item
+\url{PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS};
+\item
+\url{PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY};
+\item
+\url{PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE};
+\item
+\url{PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER};
+\item
+\url{PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT};
+\item
+\url{PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION};
+\item
+\url{PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION}.
+\end{enumerate}
+
+\section{Finite-Gibbs two-orientation cutoff resummation}
+
+Let $H$ and $H_L=H-W_L$ be bounded-below finite-volume Hamiltonians on a
+common form domain, and set
+
+\[
+ \rho=Z^{-1}e^{-\beta H},\qquad
+ U(t)=e^{-itH/\hbar},\qquad U_L(t)=e^{-itH_L/\hbar}.       \tag{3.1}
+\]
+
+Assume the two strong Duhamel formulas on a common invariant form core and
+$\rho(W_L^2)<\infty$.  Put
+
+\[
+ \epsilon_L(t)={|t|\over\hbar}\rho(W_L^2)^{1/2}.          \tag{3.2}
+\]
+
+The ordering with the full flow adjacent to $\rho^{1/2}$ on the right gives
+
+\[
+ \|(U(t)-U_L(t))\rho^{1/2}\|_2\le\epsilon_L(t),           \tag{3.3}
+\]
+
+and the opposite ordering gives
+
+\[
+ \|\rho^{1/2}(U(t)-U_L(t))\|_2\le\epsilon_L(t).           \tag{3.4}
+\]
+
+No commutation of $\rho$ with $U_L$ is used.  Factoring the density-matrix
+difference into Hilbert--Schmidt products yields
+
+\[
+ \|\rho-U_L(t)\rho U_L(t)^*\|_1\le2\epsilon_L(t).         \tag{3.5}
+\]
+
+For a bounded context satisfying the half-modular identity
+
+\[
+ A\rho^{1/2}=\rho^{1/2}C_A,\qquad
+ C_A=\alpha_{-i\beta\hbar/2}(A),                         \tag{3.6}
+\]
+
+the right observable estimate is
+
+\[
+ \|[\alpha_t(A)-\alpha_t^{(L)}(A)]\rho^{1/2}\|_2
+ \le(\|A\|+\|C_A\|)\epsilon_L(t).                       \tag{3.7}
+\]
+
+Applying (3.6) separately to $A^*$ gives the left estimate with
+$\|C_{A^*}\|$.  One narrow sufficient class is a finite Bohr-projective
+decomposition $A=\sum_\omega A_\omega$ with
+$[H,A_\omega]=\omega A_\omega$, $|\omega|\le\Omega$, and finite
+$\sum_\omega\|A_\omega\|$.  This is not an arbitrary bounded-observable
+theorem.
+
+For the registered finite-volume Q3 hard/form cutoff pair, $H$ and $H_L$ are
+closed form sums on the common quartic form domain, $W_L$ is a real quadratic
+coordinate multiplier, and the existing finite-volume Gibbs moments control
+$W_L^2$.  Spectral or form truncation of $W_L$, bounded Duhamel, and then
+$S_2$ closure realize (3.3)--(3.5).  A separately defined smooth
+clipped-coordinate cutoff requires its own form-convergence audit.
+
+\section{Why arbitrary bounded contexts do not follow}
+
+For $0<p<1/2$, take
+
+\[
+ \rho_p=\operatorname{diag}(1-p,p),\quad
+ H={\pi\hbar\over t_0}P,\quad H_L=0,\quad
+ P=|1\rangle\langle1|,
+ \quad \beta={t_0\over\pi\hbar}\log{1-p\over p}.         \tag{4.1}
+\]
+
+Then $\rho_p$ is exactly Gibbs for $H$.  At $t=t_0$, both squared weighted
+unitary errors equal
+
+\[
+ \|(U-U_L)\rho_p^{1/2}\|_2^2
+ =\|\rho_p^{1/2}(U-U_L)\|_2^2=4p,                       \tag{4.2}
+\]
+
+while
+
+\[
+ \rho_p(W^2)={\pi^2\hbar^2p\over t_0^2}.                 \tag{4.3}
+\]
+
+For $A=\sigma_x$, the sum of the two squared one-sided automorphism errors is
+exactly $8$, but both evolved density matrices equal $\rho_p$, so their trace
+distance is exactly zero.  The needed half-modular norm diverges like
+$\sqrt{(1-p)/p}$.  Thus weighted-unitary cutoff control and trace-state
+stability do not automatically upgrade through every bounded context.  The
+finite Bohr-projective class above is not rejected.
+
+\section{Fixed-edge tail to a growing cubic corridor}
+
+For the induced nearest-neighbour edges $E_R$ of
+$C_R=[-R,R]^3$, exact counting gives
+
+\[
+ m_R=|E_R|=6R(2R+1)^2\le54R^3.                          \tag{5.1}
+\]
+
+If $W_{R,L}=\sum_{e\in E_R}w_{e,L}$, quadratic-form Cauchy gives
+
+\[
+ W_{R,L}^2\le m_R\sum_{e\in E_R}w_{e,L}^2.              \tag{5.2}
+\]
+
+A translate-, history-, and orientation-uniform fixed-edge estimate
+
+\[
+ \sup_{e\in E_R}\{\sigma_+(w_{e,L}^2)+\sigma_-(w_{e,L}^2)\}
+ \le c^2K_{\rm edge}(L)                                  \tag{5.3}
+\]
+
+therefore implies
+
+\[
+ \sigma_+(W_{R,L}^2)+\sigma_-(W_{R,L}^2)
+ \le m_R^2c^2K_{\rm edge}(L).                            \tag{5.4}
+\]
+
+For the displayed hard-tail fixture,
+
+\[
+ K_{\rm edge}(L)=4e^{-L^2}(L^4+2L^2+2),                 \tag{5.5}
+\]
+
+and $L_R=\sqrt R$, $c=1/3$ give the exact bound
+
+\[
+ 1296R^6e^{-R}(R^2+2R+2)\longrightarrow0.               \tag{5.6}
+\]
+
+These are hard-tail constants for
+$w_{e,L}=-c(q_x\mathbin\cdot q_y)1_{\{X_e>L\}}$, not constants for a smooth
+clipped-coordinate $Q_L$.  On a periodic cubic torus, translations leave
+three positive-bond direction orbits; cubic rotations are additionally
+needed to identify them.  The actual Q3 onsite-interspersed fixed-edge
+history estimate (5.3) remains open.
+
+Static Gaussianity does not supply (5.3).  Relative to a standard two-site
+Gaussian, the tilt
+
+\[
+ {d\nu_\kappa\over d\nu_0}(x,y)
+ =\sqrt{1-\kappa^2}e^{\kappa xy},\qquad\kappa={3\over4},  \tag{5.7}
+\]
+
+has all finite moments and the stated endpoint symmetries, but the
+order-two likelihood integral diverges because
+$1-4\kappa^2=-5/4<0$.  This is a homogeneous dimer or two-site implication
+counterfixture, not full one-site translation invariance on the cubic
+lattice and not a Q3 dynamics no-go.
+
+\section{Finite-volume Feshbach and relative-form precursor}
+
+Let $P_\Lambda=P^{\otimes\Lambda}$, $Q_\Lambda=1-P_\Lambda$, and let the
+unshifted positive onsite high-mode operator obey
+
+\[
+ K_\Lambda=\sum_xk_x\ge\Gamma\sum_xQ_x.                 \tag{6.1}
+\]
+
+In the finite-volume absolute-energy normalization, before subtracting any
+extensive low-band scalar, positivity gives
+
+\[
+ QHQ\ge\Gamma Q.                                         \tag{6.2}
+\]
+
+For real $E<\Gamma$, the exact low-band Feshbach operator is
+
+\[
+ F(E)=PHP-E-PHQ(QHQ-E)^{-1}QHP.                          \tag{6.3}
+\]
+
+This is finite-volume absolute-energy algebra, not thermodynamic isolation
+of a ground band.  On an arbitrary finite cubic subgraph a nearest-neighbour
+edge overlaps, including itself, with at most $11$ edges.  Equality holds
+only for bulk edges or sufficiently large periodic tori.  Boundary edges can
+have fewer overlaps.
+
+For $P_{xy}=P_xP_y$ and $Q_{xy}=1-P_{xy}$, the diagonal local-high
+compression is distinct from the full off-diagonal centered residual.  With
+Young parameters $u,t>0$, its coefficients are
+
+\[
+ \eta_b=8c(1+u^{-1})(1+t^{-1})A_Q,                       \tag{6.4}
+\]
+
+\[
+ \nu_b=16c[(1+u)m^2+(1+u^{-1})(1+t)a^2],                \tag{6.5}
+\]
+
+and summing six incident high forms gives
+
+\[
+ \zeta=6(\eta_b+\nu_b/\Gamma).                          \tag{6.6}
+\]
+
+At $u=t=1$,
+
+\[
+ \eta_b=32cA_Q,\qquad \nu_b=32cm^2+64ca^2.              \tag{6.7}
+\]
+
+The retained asymptotic corridor has full one-bond off-block norm
+$\epsilon=O(N^{-3})$ and diagonal relative-form coefficient
+$\zeta=O(N^{-2})$.  These are nonempty smallness precursors.  A global
+extensive Feshbach self-energy bound does not imply quasi-locality or a
+two-phase QPS interaction norm.
+
+Indeed, one high vector of energy $\Gamma$ coupled with amplitude $\epsilon$
+to $M$ orthogonal low vectors has exact self-energy
+
+\[
+ \Sigma_M(E)={\epsilon^2\over\Gamma-E}{\bf1}{\bf1}^{T}.  \tag{6.8}
+\]
+
+Its norm is extensive in $M$, but every off-diagonal entry is nonzero.  The
+missing linked-cluster or rank-two Lie--Schwinger locality is substantive.
+
+\section{Exact compressed-TFIM two-phase theorem}
+
+This theorem concerns only the exact compressed finite-spin Hamiltonian.  At
+zero effective transverse field, a forward star has local block
+
+\[
+ h_*^{(0)}=J\sum_{i=1}^3(1-s_0s_i),                     \tag{7.1}
+\]
+
+whose direct sixteen-configuration spectrum is
+
+\[
+ \{0^{\times2},(2J)^{\times6},(4J)^{\times6},
+   (6J)^{\times2}\}.                                    \tag{7.2}
+\]
+
+The phase selector is correctly normalized as
+$u\sum_x(1-s_x)$.  With the registered derivative convention, its split
+vector is
+
+\[
+ k=(0,-2).                                               \tag{7.3}
+\]
+
+The transverse perturbation is bounded, finite range, and parity invariant.
+The applicable two-phase authority is D. A. Yarotskii,
+\emph{Quantum Pirogov--Sinai theory}, Russian Math. Surveys 61:2 (2006),
+371--372,
+\url{https://doi.org/10.1070/RM2006v061n02ABEH004323}.
+The distinct single-phase CMP paper and \texttt{math-ph/0412040} are not the
+authority for this conclusion.
+
+There is an existential $\epsilon_Y>0$ such that the convention-clean
+condition
+
+\[
+ {|\delta_{\rm eff}|\over2J}<\epsilon_Y                  \tag{7.4}
+\]
+
+gives exactly two pure translation-invariant infinite-lattice compressed
+TFIM phases, exponential clustering, and a positive GNS Hamiltonian gap in
+each selected phase.  There is no explicit $\epsilon_Y$ or $N_0$, no
+certification of the repository's finite $r=-9$ diagnostic, and no rank-two
+oscillator elimination or oscillator GNS gap.
+
+\section{Current-version map-only admission theorem}
+
+The exact current versions M1-v0, M2-v0, and M5-v0 have no admitted
+candidate-specific microscopic-to-common-observable map.  The frozen survival
+rule is
+
+\begin{quote}
+survives if and only if every D00--D09 hard row is PASS.
+\end{quote}
+
+After a hypothetical map-only addition, the eight remaining non-map hard-row
+cells are exactly
+
+\begin{enumerate}
+\item M1: \texttt{D01=FAIL} and \texttt{D02=NOT\_ADMITTED};
+\item M2: \texttt{D03=NOT\_ADMITTED},
+\texttt{D05=NOT\_ADMITTED}, \texttt{D06=NOT\_TESTED}, and
+\texttt{D08=NOT\_ADMITTED};
+\item M5: \texttt{D04=FAIL} and \texttt{D05=FAIL}.
+\end{enumerate}
+
+Thus the current-version admitted-map cardinality is zero, and any new
+version adding only a response-map slot while preserving law, state,
+reference, boundary, regulator, dynamics, compactness, quotients, critical
+contract, validation contract, and robustness still has zero survivors.
+Adding inertial, compact, gauge, state, law, boundary, or regulator data is
+not map-only.  It creates a substantive new version that must rerun all ten
+hard rows.  The scoped negative rejects only a map-only promotion of the
+current preserved parent data.
+
+The missing M2 response slot is also logically underdetermined.  For
+$\kappa(t)=C|t|$, the two target-free completions
+
+\[
+ {\cal R}_1(\kappa)=\kappa/\kappa_0,\qquad
+ {\cal R}_2(\kappa)=(\kappa/\kappa_0)^2                  \tag{8.1}
+\]
+
+give exponents one and two from the same stiffness.  At $t=1/8$, doubling
+$t$ gives exact ratios two and four.  Neither completion is an admitted
+physical response map or prediction.
+
+\section{Exact M2 finite-torus fingerprint}
+
+Take
+
+\[
+ K(k)=r+c\sum_{j=1}^3(q^2-k_j^2)^2,\qquad
+ h={2\pi\over L},\qquad q=mh,\qquad m\in\mathbb N.        \tag{9.1}
+\]
+
+For each of the eight sign nodes $s\in\{+1,-1\}^3$, put $k_s=qs$.
+For axis $i$, define
+
+\[
+ d_\pm={K(k_s\pm he_i)-K(k_s)\over ch^4},\qquad
+ S={d_++d_-\over2},\qquad A={d_+-d_-\over2}.             \tag{9.2}
+\]
+
+Exact expansion gives
+
+\[
+ S=4m^2+1,\qquad A=4s_i m.                               \tag{9.3}
+\]
+
+With $\bar S_s=(S_{s,1}+S_{s,2}+S_{s,3})/3$, define
+
+\[
+ R_{s,i}={A\over S}{4m^2+1\over4s_i m}=1,
+ \qquad U_{s,i}={S\over\bar S_s}=1.                     \tag{9.4}
+\]
+
+Lexicographic ordering in the eight nodes, then $i=1,2,3$, then $(R,U)$
+gives exactly $8\cdot3\cdot2=48$ ordered components, all exactly one.  This
+is candidate-internal Gaussian mathematics, not a physical dispersion
+prediction.
+
+The hypothetical successor identifier
+\url{PA-M2-CI8-RS-DISPERSION-MAP-v1} occurs only in a design object with
+\texttt{status=DESIGN\_ONLY} and \texttt{candidate\_created=false}.  Its
+map, prediction, target, freeze, tag, score, selection, manifest, and hash
+remain semantically \texttt{NOT\_CREATED}; this status is not an unresolved
+draft placeholder.  R-168 v1.1 creates no actual candidate or map.
+
+The open response gate requires a target-blind physical channel and a frozen
+error bound of the form
+
+\[
+ |O_{\rm phys}-{\cal R}_{M2}|
+ \le\epsilon_{\rm torus}+\epsilon_{\rm regulator}
+ +\epsilon_{\rm nonlinear}+\epsilon_{\rm loop}
+ +\epsilon_{\rm state/ref}+\epsilon_{\rm estimator},     \tag{9.5}
+\]
+
+with every term computed from frozen inputs and the total strictly below the
+frozen acceptance margin before disclosure.  The fingerprint supplies none
+of these physical identifications or errors.
+
+\section{Prospective-freeze boundary}
+
+R-168 v1.1 retains the v1.0 fail-closed schema, its 28 hostile schema classes,
+and its seven stable current-checkpoint blockers.  It does not create or
+verify an external custodian commitment, target, candidate map, prediction,
+public remote commit, annotated tag, authenticated receipt, score, or
+selection.  A real prospective freeze still requires the temporal order
+
+\[
+ t_{\rm custodian}\le t_{\rm public\ freeze}
+ <t_{\rm disclosure}\le t_{\rm score},                  \tag{10.1}
+\]
+
+an externally keyed and signed canonical commitment, at least one admitted
+microscopic candidate map with a nonempty frozen physical prediction, a
+complete common-input ledger, and independent cryptographic remote-object and
+remote-ref verification.  The current-version no-go is not a no-go for a
+substantively new candidate prepared before disclosure.
+
+\section{Devil's-advocate}
+
+\begin{enumerate}
+\item \textbf{DISMISSED -- Duhamel orientation:} equations (3.3) and (3.4)
+use opposite orderings.  Only the adjacent full flow is commuted through the
+Gibbs square root.
+\item \textbf{UPHELD as an open condition -- observable context:} trace-state
+stability does not control arbitrary automorphisms.  The exact two-level
+fixture leaves a divergent half-modular cost visible.
+\item \textbf{UPHELD as an open condition -- covariance:} torus translations
+leave three edge directions.  The actual partial-history covariance and
+fixed-edge Q3 bound are not supplied.
+\item \textbf{DISMISSED -- overlap factor:} ten counts the other incident
+edges; the overlap Cauchy bound includes the edge itself and is at most
+eleven.
+\item \textbf{UPHELD as an open condition -- locality:} an extensive global
+self-energy estimate is not a connected-cluster or QPS norm.
+\item \textbf{DISMISSED -- theorem source:} the compressed two-phase theorem
+uses the cited Yarotskii RMS note and the enumerated forward-star data, not
+the single-phase CMP theorem.
+\item \textbf{UPHELD as a finite-parameter boundary:} the smallness radius is
+existential.  No displayed finite $N$ or $r=-9$ point is certified.
+\item \textbf{UPHELD as an oscillator boundary:} a phasewise gap in the exact
+compressed spin system is not an oscillator gap.
+\item \textbf{DISMISSED -- map-only arithmetic:} all eight residual cells are
+read from the frozen hard-row matrix, and the all-PASS rule is unchanged.
+\item \textbf{UPHELD as a physical-map boundary:} the exact 48-component
+fingerprint does not choose a response channel, units map, state/reference,
+or error budget.
+\item \textbf{DISMISSED -- prediction status:} the M2-v1 object is explicitly
+design-only and creates no map, target, prediction, or freeze.
+\item \textbf{UPHELD as the final scope boundary:} six closed children do not
+close the common-alpha, oscillator, prospective, Sector-A, or Pre-A parents.
+\end{enumerate}
+
+Independent adversarial review is invited especially on the unbounded
+Duhamel domain passage, disjoint-edge orthogonality in the Feshbach estimate,
+the precise two-phase theorem hypotheses, the frozen map-only scope, and the
+physical interpretation firewall for the M2 fingerprint.
+
+\section{Reproduction and evidence contract}
+
+The R-167 v2.0 primary, non-importing independent, and integrated scripts are
+
+\begin{enumerate}
+\item
+\url{codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split.py};
+\item
+\url{codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py};
+\item
+\url{codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_verify.py}.
+\end{enumerate}
+
+The R-168 v1.1 primary, non-importing independent, and integrated scripts are
+
+\begin{enumerate}
+\item
+\url{codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py};
+\item
+\url{codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py};
+\item
+\url{codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py}.
+\end{enumerate}
+
+From the repository root, run
+
+\begin{verbatim}
+Set-Location E:\Dev\TECT
+$py = 'E:\Dev\TECT.venv\Scripts\python.exe'
+$r167 = (
+  'codes\foundations\pre_a_cp1_st8_q3lock_' +
+  'local_measured_renyi_semiclassical_doublet_route_split'
+)
+& $py -X utf8 ($r167 + '.py')
+& $py -X utf8 ($r167 + '_independent.py')
+& $py -X utf8 ($r167 + '_verify.py')
+$r168 = (
+  'codes\foundations\pre_a_round1_' +
+  'prospective_holdout_freeze_protocol'
+)
+& $py -X utf8 ($r168 + '.py')
+& $py -X utf8 ($r168 + '_independent.py')
+& $py -X utf8 ($r168 + '_verify.py')
+\end{verbatim}
+
+The current proof-layer outputs are R-167 primary \texttt{PASS 153/153} and
+independent \texttt{PASS 117/117}, and R-168 primary
+\texttt{PASS 205/205} and independent \texttt{PASS 223/223}.  After the
+single combined checkpoint source/PDF, exact shared manifest metadata,
+formal authorities, stored-result freshness, generated surfaces, dual PDF
+extraction, and render review all pass, the expected integrated outputs are
+R-167 \texttt{PASS 220/220} and R-168 \texttt{PASS 262/262}.  These
+integrated totals are conditional targets until the later PDF and freshness
+checks complete; a failed check invalidates the total rather than weakening
+the gate.
+
+No PDF is built by this source-drafting step.  No per-lemma or intermediate
+PDF belongs to R-167 v2.0 or R-168 v1.1.  The eventual v0.9 PDF, if all gates
+pass, is the one current gate-level checkpoint; the historical v0.8 PDF
+remains strictly historical evidence and is not reused as current evidence.
+
+\section{Exact no-overclaim and dependency boundary}
+
+The dynamics parent is \textbf{OPEN}.  The finite-Gibbs estimate and
+fixed-edge corridor reduction do not prove the actual translate-, history-,
+source-, mesh-, orientation-, and exhaustion-uniform Q3 tail, the
+$n\mathbin\to\infty$ split limit, or the actual Q3 common alpha.
+
+The rank-two parent is \textbf{OPEN}.  The absolute-energy Feshbach estimate
+does not give quasi-local rank-two oscillator elimination, a rank-two
+oscillator QPS interaction, cutoff removal, or beta-infinity oscillator phase
+identification.
+
+The spectral parent is \textbf{OPEN}.  The compressed-spin phasewise gap is
+not an oscillator GNS gap, an observed temporal mass, or a physical mass gap.
+
+The M2 response parent is \textbf{OPEN}.  The exact Gaussian fingerprint is
+not a physical response map, observable prediction, error enclosure, or
+validation result.
+
+The prospective parent is \textbf{OPEN}.  No real prospective freeze,
+external target commitment, admitted candidate prediction, public remote
+anchor, authenticated receipt, or score exists.
+
+Nothing in this checkpoint proves regulator removal, continuum control,
+same-Hamiltonian physical-empty comparison, physical vacuum selection, C6,
+CP1, physical Sector A, or Pre-A closure.  The active
+\texttt{A5-SECTOR-A-SYNTHESIS} remains conditional at its registered scope.
+
+\section{Result footer}
+
+\begin{verbatim}
+Result ID:               PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-
+                         MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT;
+                         PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-
+                         PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT.
+Reusable results:        R-167 v2.0; R-168 v1.1.
+Explorations:            EXP-000809; EXP-000810.
+Precise statement:       Finite-Gibbs two-orientation cutoff resummation;
+                         fixed-edge corridor reduction; finite-volume
+                         Feshbach/relative-form precursor; exact compressed-
+                         TFIM two-phase theorem; current-version map-only
+                         empty set and exact 48-component M2 fingerprint.
+Claim context:           C6-SPACETIME-SIGNATURE; claim_bearing false.
+Closed children:         Four R-167 and two R-168 children, exactly the six
+                         identifiers listed in Section 2.
+Negative results:        Three R-167 and one R-168 scoped negatives, exactly
+                         the four identifiers listed in Section 2.
+New open gate:           PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND.
+Scope:                   T0 additive, claim-nonbearing exact/analytic result
+                         at finite-volume, compressed-spin, and finite-torus
+                         Gaussian scope; no oscillator or physical-map transfer.
+Dependencies:            R-167 v1.9; R-168 v1.0; EXP-000806, EXP-000807,
+                         EXP-000808; registered finite-Gibbs moments, low-band
+                         compression, and frozen ten-row survival rule; open
+                         fixed-edge, oscillator, custodian, and remote inputs.
+Evidence grade:          ANALYTIC + EXACT + primary + non-importing
+                         independent; integrated evidence remains conditional
+                         on the single final checkpoint lifecycle.
+Reproduction command:    Run the six commands in Section 12 from repository
+                         root, primary then independent then integrated.
+Expected output:         R-167: PASS 153/153, PASS 117/117, PASS 220/220.
+                         R-168: PASS 205/205, PASS 223/223, PASS 262/262.
+Falsification gate:      Any Duhamel order/context, edge count/tail factor,
+                         Feshbach sign/overlap/relative-form coefficient, star
+                         spectrum, selector/QPS hypothesis, hard-row cell,
+                         fingerprint order, hash, count, provenance, freshness,
+                         extraction, or scope mismatch.
+Tier before / after:     C6 T1 / C6 T1; no claim or tier change.
+No-overclaim statement:  No actual Q3 common alpha, rank-two oscillator
+                         elimination, oscillator GNS gap, physical response
+                         map, real prospective freeze, regulator removal,
+                         continuum, physical-empty sign, C6, CP1, physical
+                         Sector A, or Pre-A closure.
+Next required action:    Prove the actual fixed-edge Q3 history theorem and
+                         quasi-local rank-two oscillator transfer; derive a
+                         target-blind physical M2 response with a frozen error
+                         budget; obtain and verify a real prospective freeze
+                         before disclosure.
+PDF policy:              No per-lemma or intermediate PDF. Historical v0.8
+                         is prior evidence only; issue one v0.9 checkpoint
+                         only after every proof, formal, integrated, PDF,
+                         freshness, extraction, and visual gate passes.
+\end{verbatim}

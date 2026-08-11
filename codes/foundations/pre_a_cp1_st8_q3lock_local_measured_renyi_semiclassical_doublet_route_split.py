@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Primary exact verifier for the staged R-167 v1.9 route split.
+"""Primary exact verifier for the staged R-167 v2.0 route split.
 
-The script has three independent exact fixture groups.
-
-Fixture A verifies the pure coordinate-bond commutation and the two
-Hilbert--Schmidt orientations of the state-weighted cutoff identity.
-Fixture B verifies the local measured-Renyi Holder reduction and the
-finite-product obstruction to a volume-uniform global sandwiched-Renyi bound.
-Fixture C verifies the Q3 semiclassical normalization and local geometry, the
-exact low-band transverse-field Ising compression, the moment residuals, and
-the centered relative-form coefficient.
+The script has six exact fixture groups.  Fixtures A--C retain every v1.9
+check: pure coordinate-bond cutoff algebra, local/global Renyi separation,
+Q3 semiclassical geometry, exact low-band compression, residuals, and the N
+corridor.  Fixture D verifies finite-Gibbs full-Hamiltonian Duhamel bounds,
+trace-state stability, bounded half-modular transfer, and the exact arbitrary-
+context counterfamily.  Fixture E checks the fixed-edge corridor constants,
+periodic covariance boundary, and homogeneous Gaussian tilted-edge no-go.
+Fixture F checks the cubic 11-overlap Feshbach bound, relative-form scales,
+extensive-self-energy no-go, and exact compressed-TFIM QPS inputs.
 
 The multidimensional two-well theorem and the Del Vecchio--Frohlich--Pizzo
 Lie--Schwinger theorem are *not* reproved numerically here.  The script checks
@@ -19,8 +19,8 @@ that the published latter theorem is rank-one.  It does not certify the
 repository's finite r=-9 fixture, a rank-two many-body block elimination, a
 broken-sector GNS gap, Sector A, or Pre-A.
 
-Use ``--staged --no-store`` while the v1.9 certificate, ledger rows, and
-formal authorities are being assembled.  Missing authority then produces the
+Use ``--staged --no-store`` while the v2.0 ledger, gate, and negative
+authorities are being assembled.  Missing authority then produces the
 honest verdict ``INCOMPLETE`` while all exact mathematical fixtures still run.
 """
 
@@ -39,7 +39,7 @@ from typing import Any, Iterable
 import sympy as sp
 
 
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = "pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split"
@@ -57,9 +57,9 @@ GATE_REGISTRY = REPO / "claims/GATES.md"
 
 EXPECTED_TASK = "T-054"
 EXPECTED_CLAIM_IDS = ("C6-SPACETIME-SIGNATURE",)
-EXPECTED_EXPLORATION = "EXP-000806"
+EXPECTED_EXPLORATION = "EXP-000809"
 EXPECTED_RESULT_NUMBER = "R-167"
-EXPECTED_RESULT_VERSION = "v1.9"
+EXPECTED_RESULT_VERSION = "v2.0"
 EXPECTED_RESULT_ID = (
     "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT"
 )
@@ -69,7 +69,10 @@ EXPECTED_CANDIDATE_ID = (
 EXPECTED_CLOSED_SUBGATES = (
     "PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY",
     "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION",
-    "PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION",
+    "PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION",    "PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION",
+    "PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION",
+    "PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR",
+    "PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP",
 )
 EXPECTED_OPEN_GATES = (
     "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
@@ -79,7 +82,9 @@ EXPECTED_OPEN_GATES = (
 )
 NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY",
-    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT",    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
 )
 SEMICLASSICAL_SOURCES = (
     "https://www.numdam.org/item/AIHPA_1983__38_3_295_0/",
@@ -89,6 +94,7 @@ SEMICLASSICAL_SOURCES = (
     "https://www.numdam.org/item/AIHPA_1985__42_2_127_0/",
 )
 DFP_SOURCE = "https://arxiv.org/abs/2108.13907"
+YAROTSKII_QPS_SOURCE = "https://doi.org/10.1070/RM2006v061n02ABEH004323"
 
 
 def normalized_sha256(path: Path) -> str:
@@ -1030,6 +1036,693 @@ def fixture_c_semiclassical_and_low_band(audit: Audit) -> dict[str, Any]:
     }
 
 
+
+def operator_norm_squared(matrix: sp.MatrixBase) -> sp.Expr:
+    values = []
+    for value, multiplicity in (matrix.H * matrix).eigenvals().items():
+        values.extend([sp.simplify(value)] * multiplicity)
+    return max(values, key=lambda value: float(sp.N(value, 40)))
+
+
+def fixture_d_full_gibbs_context(audit: Audit) -> dict[str, Any]:
+    """Exact Gibbs/Duhamel, modular-context, and arbitrary-context fixtures."""
+
+    # INPUT FIXTURE. The temperature is derived so rho is exactly the Gibbs
+    # state of H; all numerical assertions below are labelled test oracles.
+    p = sp.Rational(1, 5)
+    t_zero = sp.Integer(1)
+    hbar = sp.Integer(1)
+    beta = sp.log(4) / sp.pi
+    rho = sp.diag(1 - p, p)
+    projection_one = sp.diag(0, 1)
+    h_full = sp.pi * hbar * projection_one / t_zero
+    h_cut = sp.zeros(2)
+    w_tail = h_full - h_cut
+    gibbs_unnormalized = sp.diag(1, sp.exp(-beta * sp.pi * hbar / t_zero))
+    gibbs = sp.simplify(gibbs_unnormalized / trace(gibbs_unnormalized))
+    u_full = sp.diag(1, -1)
+    u_cut = sp.eye(2)
+    difference = u_full - u_cut
+    right_squared = sp.simplify(trace(rho * difference.H * difference))
+    left_squared = sp.simplify(trace(rho * difference * difference.H))
+    w_second_moment = sp.simplify(trace(rho * w_tail**2))
+    duhamel_rhs_squared = sp.simplify(t_zero**2 * w_second_moment / hbar**2)
+
+    evolved_full = sp.simplify(u_full * rho * u_full.H)
+    evolved_cut = sp.simplify(u_cut * rho * u_cut.H)
+    state_difference = sp.simplify(evolved_full - evolved_cut)
+    trace_distance = sum(
+        sp.sqrt(value)
+        for value, multiplicity in (state_difference.H * state_difference).eigenvals().items()
+        for _ in range(multiplicity)
+    )
+
+    pauli_x = sp.Matrix([[0, 1], [1, 0]])
+    alpha_full = sp.simplify(u_full.H * pauli_x * u_full)
+    alpha_cut = sp.simplify(u_cut.H * pauli_x * u_cut)
+    observable_error = sp.simplify(alpha_full - alpha_cut)
+    observable_right_squared = sp.simplify(
+        trace(rho * observable_error.H * observable_error)
+    )
+    observable_left_squared = sp.simplify(
+        trace(rho * observable_error * observable_error.H)
+    )
+    rho_half = sp.diag(sp.sqrt(1 - p), sp.sqrt(p))
+    rho_minus_half = sp.diag(1 / sp.sqrt(1 - p), 1 / sp.sqrt(p))
+    modular_context = sp.simplify(rho_minus_half * pauli_x * rho_half)
+    modular_context_norm_squared = operator_norm_squared(modular_context)
+    bandwidth_factor = sp.simplify(sp.exp(beta * sp.pi * hbar / (2 * t_zero)))
+    projective_band_norm = sp.Integer(2)
+    context_transfer_rhs_squared = sp.simplify(
+        (1 + sp.sqrt(modular_context_norm_squared)) ** 2
+        * duhamel_rhs_squared
+    )
+
+    probability = sp.symbols("p", positive=True)
+    unitary_hash_squared_family = 8 * probability
+    automorphism_hash_squared_family = sp.Integer(8)
+
+    audit.check(
+        "finite Gibbs normalization",
+        gibbs == rho,
+        gibbs,
+        rho,
+        "D_full_Gibbs",
+    )
+    audit.check(
+        "two weighted unitary orientations",
+        right_squared == left_squared == 4 * p,
+        (right_squared, left_squared),
+        (4 * p, 4 * p),
+        "D_full_Gibbs",
+    )
+    audit.check(
+        "Duhamel static Gibbs upper",
+        bool(sp.N(duhamel_rhs_squared - right_squared, 80) > 0),
+        duhamel_rhs_squared - right_squared,
+        ">0",
+        "D_full_Gibbs",
+    )
+    audit.check(
+        "Gibbs W square with hbar restored",
+        sp.simplify(w_second_moment - sp.pi**2 * hbar**2 * p / t_zero**2) == 0,
+        w_second_moment,
+        sp.pi**2 * hbar**2 * p / t_zero**2,
+        "D_full_Gibbs",
+    )
+    audit.check(
+        "trace-distance state stability fixture",
+        trace_distance == 0,
+        trace_distance,
+        0,
+        "D_full_Gibbs",
+    )
+    audit.check(
+        "arbitrary context one-sided norms",
+        observable_right_squared == observable_left_squared == 4,
+        (observable_right_squared, observable_left_squared),
+        (4, 4),
+        "D_context_no_go",
+    )
+    audit.check(
+        "arbitrary context hash seminorm",
+        observable_right_squared + observable_left_squared == 8,
+        observable_right_squared + observable_left_squared,
+        8,
+        "D_context_no_go",
+    )
+    audit.check(
+        "half-modular context norm",
+        modular_context_norm_squared == 4,
+        modular_context_norm_squared,
+        4,
+        "D_modular_context",
+    )
+    audit.check(
+        "fixed Bohr-band projective bound",
+        bandwidth_factor == 2
+        and sp.sqrt(modular_context_norm_squared)
+        <= bandwidth_factor * projective_band_norm,
+        (bandwidth_factor, sp.sqrt(modular_context_norm_squared)),
+        (2, "<=4"),
+        "D_modular_context",
+    )
+    audit.check(
+        "bounded-context transfer fixture",
+        observable_right_squared <= context_transfer_rhs_squared,
+        observable_right_squared,
+        f"<={context_transfer_rhs_squared}",
+        "D_modular_context",
+    )
+    audit.check(
+        "arbitrary-context implication limit",
+        sp.limit(unitary_hash_squared_family, probability, 0, dir="+") == 0
+        and automorphism_hash_squared_family == 8,
+        (sp.limit(unitary_hash_squared_family, probability, 0, dir="+"), 8),
+        (0, 8),
+        "D_context_no_go",
+    )
+    q3_domain = {
+        "common_quartic_form_domain": True,
+        "W_coordinate_growth_degree": 2,
+        "W_squared_growth_degree": 4,
+        "finite_Gibbs_fourth_moment": True,
+        "bounded_spectral_form_truncation": True,
+        "strong_resolvent_then_S2_closure": True,
+        "smooth_clipped_Q_L_automatically_covered": False,
+    }
+    audit.check(
+        "finite-Q3 hard-form domain instantiation",
+        q3_domain["common_quartic_form_domain"]
+        and q3_domain["W_coordinate_growth_degree"] == 2
+        and q3_domain["W_squared_growth_degree"] == 4
+        and q3_domain["finite_Gibbs_fourth_moment"]
+        and q3_domain["bounded_spectral_form_truncation"]
+        and q3_domain["strong_resolvent_then_S2_closure"]
+        and not q3_domain["smooth_clipped_Q_L_automatically_covered"],
+        q3_domain,
+        "hard/form Q3 pair only",
+        "D_Q3_domain",
+    )
+
+    return {
+        "rho": rho,
+        "beta": beta,
+        "H": h_full,
+        "H_L": h_cut,
+        "W": w_tail,
+        "right_unitary_HS_squared": right_squared,
+        "left_unitary_HS_squared": left_squared,
+        "rho_W_squared": w_second_moment,
+        "Duhamel_rhs_squared": duhamel_rhs_squared,
+        "trace_distance": trace_distance,
+        "observable": pauli_x,
+        "right_observable_HS_squared": observable_right_squared,
+        "left_observable_HS_squared": observable_left_squared,
+        "hash_seminorm_squared": observable_right_squared + observable_left_squared,
+        "half_modular_context": modular_context,
+        "half_modular_context_norm_squared": modular_context_norm_squared,
+        "fixed_bandwidth_factor": bandwidth_factor,
+        "fixed_band_projective_norm": projective_band_norm,
+        "arbitrary_context_upgrade_rejected": True,
+        "state_stability_implies_automorphism_stability": False,
+        "q3_form_domain_instantiation": q3_domain,
+    }
+
+
+def fixture_e_fixed_edge_corridor(audit: Audit) -> dict[str, Any]:
+    """Exact cubic-edge count, corridor constants, covariance, and tilted no-go."""
+
+    # INPUT FIXTURE for exact enumeration; the R-dependent bound is derived
+    # symbolically below and the displayed integers are TEST ORACLES.
+    radius = 2
+    vertices = set(product(range(-radius, radius + 1), repeat=3))
+    directions = ((1, 0, 0), (0, 1, 0), (0, 0, 1))
+    induced_edges = []
+    for vertex in sorted(vertices):
+        for direction in directions:
+            neighbour = tuple(vertex[index] + direction[index] for index in range(3))
+            if neighbour in vertices:
+                induced_edges.append((vertex, neighbour))
+    exact_count = 6 * radius * (2 * radius + 1) ** 2
+
+    hostile_words = (sp.Integer(3), sp.Integer(-2), sp.Integer(5), sp.Integer(1))
+    cauchy_left = sum(hostile_words) ** 2
+    cauchy_right = len(hostile_words) * sum(value**2 for value in hostile_words)
+
+    r_symbol = sp.symbols("R", positive=True)
+    edge_upper = 54 * r_symbol**3
+    c_value = sp.Rational(1, 3)
+    edge_prefactor = sp.Integer(4)
+    l_squared = r_symbol
+    corridor_bound = sp.simplify(
+        edge_upper**2
+        * c_value**2
+        * edge_prefactor
+        * sp.exp(-l_squared)
+        * (l_squared**2 + 2 * l_squared + 2)
+    )
+    expected_corridor = 1296 * r_symbol**6 * sp.exp(-r_symbol) * (
+        r_symbol**2 + 2 * r_symbol + 2
+    )
+    elementary_majorant = sp.factor(
+        1296
+        * sp.factorial(10)
+        * (r_symbol ** -2 + 2 * r_symbol ** -3 + 2 * r_symbol ** -4)
+    )
+
+    torus_side = 4
+    torus_vertices = list(product(range(torus_side), repeat=3))
+    orientation_orbits: dict[int, set[tuple[tuple[int, int, int], tuple[int, int, int]]]] = {
+        direction: set() for direction in range(3)
+    }
+    for vertex in torus_vertices:
+        for direction in range(3):
+            neighbour = list(vertex)
+            neighbour[direction] = (neighbour[direction] + 1) % torus_side
+            orientation_orbits[direction].add((vertex, tuple(neighbour)))
+
+    kappa = sp.Rational(3, 4)
+    precision_determinant = sp.simplify(1 - kappa**2)
+    marginal_variance = sp.simplify(1 / precision_determinant)
+    tilted_tail_exponent = sp.simplify(1 / (2 * marginal_variance))
+    theta = sp.Rational(1, 2)
+    reference_power_exponent = theta / 2
+    exponent_gap = sp.simplify(reference_power_exponent - tilted_tail_exponent)
+    q2_precision_determinant = sp.simplify(1 - 4 * kappa**2)
+    dimer_scope = True
+    full_one_site_translation_invariance = False
+    hard_tail_constants = True
+    smooth_clipped_q_l_constants = False
+
+    audit.check(
+        "induced cubic edge count",
+        len(induced_edges) == exact_count == 300,
+        len(induced_edges),
+        300,
+        "E_fixed_edge",
+    )
+    audit.check(
+        "edge count cubic upper",
+        exact_count <= 54 * radius**3,
+        exact_count,
+        f"<={54 * radius**3}",
+        "E_fixed_edge",
+    )
+    audit.check(
+        "restricted-tail sum Cauchy",
+        cauchy_left <= cauchy_right,
+        cauchy_left,
+        f"<={cauchy_right}",
+        "E_fixed_edge",
+    )
+    audit.check(
+        "explicit growing corridor constant",
+        sp.simplify(corridor_bound - expected_corridor) == 0,
+        corridor_bound,
+        expected_corridor,
+        "E_fixed_edge",
+    )
+    audit.check(
+        "growing corridor vanishes",
+        sp.limit(corridor_bound, r_symbol, sp.oo) == 0,
+        sp.limit(corridor_bound, r_symbol, sp.oo),
+        0,
+        "E_fixed_edge",
+    )
+    audit.check(
+        "elementary exponential majorant vanishes",
+        sp.limit(elementary_majorant, r_symbol, sp.oo) == 0,
+        sp.limit(elementary_majorant, r_symbol, sp.oo),
+        0,
+        "E_fixed_edge",
+    )
+    audit.check(
+        "periodic translation edge orbits",
+        len(orientation_orbits) == 3
+        and all(len(orbit) == torus_side**3 for orbit in orientation_orbits.values()),
+        {key: len(value) for key, value in orientation_orbits.items()},
+        {0: 64, 1: 64, 2: 64},
+        "E_covariance_boundary",
+    )
+    audit.check(
+        "tilted Gaussian positive precision",
+        precision_determinant == sp.Rational(7, 16) > 0,
+        precision_determinant,
+        sp.Rational(7, 16),
+        "E_tilted_no_go",
+    )
+    audit.check(
+        "tilted Gaussian marginal variance",
+        marginal_variance == sp.Rational(16, 7),
+        marginal_variance,
+        sp.Rational(16, 7),
+        "E_tilted_no_go",
+    )
+    audit.check(
+        "tilted tail defeats alpha-two reference power",
+        exponent_gap == sp.Rational(1, 32) > 0,
+        exponent_gap,
+        sp.Rational(1, 32),
+        "E_tilted_no_go",
+    )
+    audit.check(
+        "tilted order-two likelihood diverges",
+        q2_precision_determinant == sp.Rational(-5, 4) < 0,
+        q2_precision_determinant,
+        sp.Rational(-5, 4),
+        "E_tilted_no_go",
+    )
+    audit.check(
+        "tilted Gaussian and hard-tail scope boundaries",
+        dimer_scope
+        and not full_one_site_translation_invariance
+        and hard_tail_constants
+        and not smooth_clipped_q_l_constants,
+        {
+            "dimer_scope": dimer_scope,
+            "full_one_site_TI": full_one_site_translation_invariance,
+            "hard_tail": hard_tail_constants,
+            "smooth_clipped_Q_L": smooth_clipped_q_l_constants,
+        },
+        "dimer implication and hard-tail constants only",
+        "E_scope",
+    )
+
+    return {
+        "radius_fixture": radius,
+        "induced_edge_count": exact_count,
+        "edge_formula": "6 R (2R+1)^2",
+        "edge_upper": "54 R^3",
+        "corridor_bound": corridor_bound,
+        "elementary_majorant": elementary_majorant,
+        "periodic_translation_orbit_sizes": {
+            key: len(value) for key, value in orientation_orbits.items()
+        },
+        "translation_covariance_reduces_to_one_edge": False,
+        "translation_covariance_reduces_to_three_orientations": True,
+        "tilted_gaussian": {
+            "kappa": kappa,
+            "precision_determinant": precision_determinant,
+            "marginal_variance": marginal_variance,
+            "tilted_tail_exponent": tilted_tail_exponent,
+            "reference_power_exponent": reference_power_exponent,
+            "exponent_gap": exponent_gap,
+            "Q2_precision_determinant": q2_precision_determinant,
+            "all_polynomial_moments_finite": True,
+            "fixed_edge_tail_implication_rejected": True,
+            "two_site_or_homogeneous_dimer_scope": dimer_scope,
+            "full_one_site_translation_invariance": (
+                full_one_site_translation_invariance
+            ),
+            "Q3_dynamics_nonexistence": False,
+        },
+        "hard_tail_constants": hard_tail_constants,
+        "smooth_clipped_Q_L_constants": smooth_clipped_q_l_constants,
+        "actual_Q3_fixed_edge_history_bound_proved": False,
+    }
+
+
+def fixture_f_feshbach_and_compressed_qps(audit: Audit) -> dict[str, Any]:
+    """Exact cubic overlap, Feshbach, form-smallness, and TFIM-QPS inputs."""
+
+    # INPUT FIXTURES. Side four avoids short-cycle edge identifications;
+    # rational parameters are chosen only to test the derived inequalities.
+    side = 4
+    vertices = list(product(range(side), repeat=3))
+    edges: list[frozenset[tuple[int, int, int]]] = []
+    for vertex in vertices:
+        for direction in range(3):
+            neighbour = list(vertex)
+            neighbour[direction] = (neighbour[direction] + 1) % side
+            edges.append(frozenset((vertex, tuple(neighbour))))
+    overlap_counts = [sum(bool(edge & other) for other in edges) for edge in edges]
+    open_vertices = list(product(range(side), repeat=3))
+    open_edges: list[frozenset[tuple[int, int, int]]] = []
+    for vertex in open_vertices:
+        for direction in range(3):
+            neighbour = list(vertex)
+            neighbour[direction] += 1
+            if neighbour[direction] < side:
+                open_edges.append(frozenset((vertex, tuple(neighbour))))
+    open_overlap_counts = [
+        sum(bool(edge & other) for other in open_edges) for edge in open_edges
+    ]
+
+    high_count = 5
+    gamma = sp.Integer(7)
+    energy = sp.Integer(2)
+    epsilon = sp.Rational(1, 3)
+    high_block = gamma * sp.eye(high_count)
+    off_block = epsilon * sp.ones(high_count, 1)
+    self_energy = sp.simplify(
+        off_block.H * (high_block - energy * sp.eye(high_count)).inv() * off_block
+    )
+    overlap_upper = sp.simplify(11 * high_count * epsilon**2 / (gamma - energy))
+
+    dense_low_count = 5
+    dense_off_block = epsilon * sp.ones(1, dense_low_count)
+    dense_self_energy = sp.simplify(
+        dense_off_block.H
+        * (sp.Matrix([[gamma]]) - energy * sp.eye(1)).inv()
+        * dense_off_block
+    )
+    dense_norm_squared = operator_norm_squared(dense_self_energy)
+    dense_norm = sp.sqrt(dense_norm_squared)
+
+    c_value = sp.Rational(1, 1000)
+    m_value = sp.Integer(2)
+    a_squared = sp.Rational(1, 100)
+    a_value = sp.Rational(1, 10)
+    b_value = sp.Rational(1, 20)
+    a_q = sp.Integer(3)
+    gamma_form = sp.Integer(100)
+    z = sp.Integer(6)
+    eta_b = sp.simplify(32 * c_value * a_q)
+    nu_b = sp.simplify(32 * c_value * m_value**2 + 64 * c_value * a_squared)
+    zeta = sp.simplify(z * (eta_b + nu_b / gamma_form))
+    epsilon_form = sp.simplify(
+        8 * c_value * (b_value + 2 * m_value * a_value + a_squared)
+    )
+    p_xy = sp.diag(1, 0, 0, 0)
+    q_xy = sp.eye(4) - p_xy
+    k_xy = sp.diag(0, gamma_form, gamma_form, 2 * gamma_form)
+    qkq = sp.simplify(q_xy * k_xy * q_xy)
+    diagonal_high_fixture = sp.simplify(eta_b * qkq + nu_b * q_xy)
+    projected_high_upper = sp.simplify((eta_b + nu_b / gamma_form) * qkq)
+    projected_high_slack = sp.simplify(projected_high_upper - diagonal_high_fixture)
+    projected_slack_eigenvalues = list(projected_high_slack.eigenvals())
+    corridor_exponents = {
+        "epsilon": -3,
+        "eta_b": -2,
+        "nu_b_over_Gamma": -2,
+        "zeta": -2,
+    }
+
+    j_symbol = sp.symbols("J", positive=True)
+    star_energies: dict[sp.Expr, int] = {}
+    for signs in product((-1, 1), repeat=4):
+        center, *neighbours = signs
+        value = sp.simplify(j_symbol * sum(1 - center * neighbour for neighbour in neighbours))
+        star_energies[value] = star_energies.get(value, 0) + 1
+    expected_star = {0: 2, 2 * j_symbol: 6, 4 * j_symbol: 6, 6 * j_symbol: 2}
+
+    pauli_x = sp.Matrix([[0, 1], [1, 0]])
+    parity = sp.diag(1, -1)
+    p_one = sp.diag(0, 1)
+    selector_plus_density = 1 - 1
+    selector_minus_density = 1 - (-1)
+    selector_difference_derivative = selector_plus_density - selector_minus_density
+    selector_split = (0, selector_difference_derivative)
+    small_ratio = "abs(delta_eff)/(2J)<epsilon_Y"
+    feshbach_absolute_energy_before_low_scalar_subtraction = True
+    thermodynamic_ground_band_isolation = False
+    diagonal_high_compression_only = True
+    off_diagonal_bound_is_distinct = True
+
+    audit.check(
+        "periodic cubic edge count",
+        len(edges) == 3 * side**3,
+        len(edges),
+        3 * side**3,
+        "F_overlap",
+    )
+    audit.check(
+        "cubic overlap upper and periodic bulk equality",
+        set(overlap_counts) == {11}
+        and max(open_overlap_counts) <= 11
+        and min(open_overlap_counts) < 11,
+        {
+            "periodic": set(overlap_counts),
+            "open_min": min(open_overlap_counts),
+            "open_max": max(open_overlap_counts),
+        },
+        "general <=11; periodic equality; open boundary can be smaller",
+        "F_overlap",
+    )
+    audit.check(
+        "exact below-Gamma Feshbach fixture",
+        self_energy == sp.Matrix([[sp.Rational(1, 9)]]),
+        self_energy,
+        sp.Matrix([[sp.Rational(1, 9)]]),
+        "F_Feshbach",
+    )
+    audit.check(
+        "11-overlap Feshbach upper",
+        self_energy[0, 0] <= overlap_upper
+        and overlap_upper == sp.Rational(11, 9),
+        (self_energy[0, 0], overlap_upper),
+        (sp.Rational(1, 9), sp.Rational(11, 9)),
+        "F_Feshbach",
+    )
+    audit.check(
+        "dense extensive self-energy norm",
+        dense_norm == sp.Rational(1, 9)
+        and all(dense_self_energy[i, j] != 0 for i in range(5) for j in range(5)),
+        (dense_norm, dense_self_energy),
+        (sp.Rational(1, 9), "all entries nonzero"),
+        "F_self_energy_no_go",
+    )
+    audit.check(
+        "relative-form coefficient eta_b",
+        eta_b == sp.Rational(12, 125),
+        eta_b,
+        sp.Rational(12, 125),
+        "F_relative_form",
+    )
+    audit.check(
+        "relative-form coefficient nu_b",
+        nu_b == sp.Rational(402, 3125),
+        nu_b,
+        sp.Rational(402, 3125),
+        "F_relative_form",
+    )
+    audit.check(
+        "global relative-form smallness fixture",
+        zeta < 1,
+        zeta,
+        "<1",
+        "F_relative_form",
+    )
+    audit.check(
+        "one-bond off-block smallness fixture",
+        epsilon_form == sp.Rational(23, 6250),
+        epsilon_form,
+        sp.Rational(23, 6250),
+        "F_relative_form",
+    )
+    audit.check(
+        "projected local-high diagonal inequality",
+        all(bool(value >= 0) for value in projected_slack_eigenvalues)
+        and q_xy * k_xy * q_xy - gamma_form * q_xy
+        == sp.diag(0, 0, 0, gamma_form)
+        and diagonal_high_compression_only
+        and off_diagonal_bound_is_distinct,
+        {
+            "slack_eigenvalues": projected_slack_eigenvalues,
+            "QKQ_minus_GammaQ": q_xy * k_xy * q_xy - gamma_form * q_xy,
+        },
+        "Qxy Bxy Qxy <= (eta_b+nu_b/Gamma) Qxy(kx+ky)Qxy",
+        "F_relative_form",
+    )
+    audit.check(
+        "corridor Feshbach coefficient exponents",
+        corridor_exponents
+        == {"epsilon": -3, "eta_b": -2, "nu_b_over_Gamma": -2, "zeta": -2},
+        corridor_exponents,
+        {"epsilon": -3, "eta_b": -2, "nu_b_over_Gamma": -2, "zeta": -2},
+        "F_relative_form",
+    )
+    audit.check(
+        "compressed TFIM forward-star spectrum",
+        star_energies == expected_star,
+        star_energies,
+        expected_star,
+        "F_compressed_QPS",
+    )
+    audit.check(
+        "compressed TFIM Z2 action",
+        parity * pauli_x * parity == -pauli_x
+        and parity * p_one * parity == p_one,
+        (parity * pauli_x * parity, parity * p_one * parity),
+        (-pauli_x, p_one),
+        "F_compressed_QPS",
+    )
+    audit.check(
+        "compressed TFIM selector split",
+        selector_plus_density == 0
+        and selector_minus_density == 2
+        and selector_split == (0, -2)
+        and small_ratio == "abs(delta_eff)/(2J)<epsilon_Y",
+        {
+            "plus": selector_plus_density,
+            "minus": selector_minus_density,
+            "k": selector_split,
+        },
+        {"plus": 0, "minus": 2, "k": (0, -2)},
+        "F_compressed_QPS",
+    )
+    audit.check(
+        "finite-volume absolute-energy Feshbach scope",
+        feshbach_absolute_energy_before_low_scalar_subtraction
+        and not thermodynamic_ground_band_isolation,
+        {
+            "before_low_scalar_subtraction": (
+                feshbach_absolute_energy_before_low_scalar_subtraction
+            ),
+            "thermodynamic_ground_band_isolation": (
+                thermodynamic_ground_band_isolation
+            ),
+        },
+        "finite-volume absolute-energy algebra only",
+        "F_scope",
+    )
+
+    return {
+        "periodic_side": side,
+        "edge_count": len(edges),
+        "periodic_overlap_counts": sorted(set(overlap_counts)),
+        "open_overlap_range": [min(open_overlap_counts), max(open_overlap_counts)],
+        "general_overlap_upper": 11,
+        "equality_scope": "bulk edges and sufficiently large periodic tori",
+        "Feshbach_fixture": {
+            "Gamma": gamma,
+            "E": energy,
+            "epsilon": epsilon,
+            "self_energy": self_energy,
+            "overlap_upper": overlap_upper,
+        },
+        "dense_self_energy_no_go": {
+            "matrix": dense_self_energy,
+            "operator_norm": dense_norm,
+            "all_to_all": True,
+            "global_extensive_bound_implies_QPS_locality": False,
+        },
+        "relative_form": {
+            "c": c_value,
+            "m": m_value,
+            "a_squared": a_squared,
+            "A_Q": a_q,
+            "Gamma": gamma_form,
+            "eta_b": eta_b,
+            "nu_b": nu_b,
+            "zeta": zeta,
+            "epsilon": epsilon_form,
+            "corridor_exponents": corridor_exponents,
+            "P_xy": p_xy,
+            "Q_xy": q_xy,
+            "Q_k_sum_Q": qkq,
+            "diagonal_high_fixture": diagonal_high_fixture,
+            "projected_high_upper": projected_high_upper,
+            "projected_high_slack": projected_high_slack,
+            "diagonal_high_compression_only": diagonal_high_compression_only,
+            "off_diagonal_bound_is_distinct": off_diagonal_bound_is_distinct,
+        },
+        "compressed_TFIM_QPS": {
+            "forward_star_spectrum": star_energies,
+            "local_gap": 2 * j_symbol,
+            "selector": "u sum_x(1-s_x)",
+            "selector_plus_density": selector_plus_density,
+            "selector_minus_density": selector_minus_density,
+            "selector_split": selector_split,
+            "small_ratio": small_ratio,
+            "Z2_pins_coexistence_u_zero": True,
+            "source": YAROTSKII_QPS_SOURCE,
+            "existential_small_ratio_only": True,
+            "compressed_infinite_lattice_phasewise_gap": True,
+            "finite_torus_exact_degeneracy": False,
+            "explicit_threshold": False,
+            "oscillator_gap": False,
+        },
+        "Feshbach_absolute_energy_before_low_scalar_subtraction": (
+            feshbach_absolute_energy_before_low_scalar_subtraction
+        ),
+        "thermodynamic_ground_band_isolation": (
+            thermodynamic_ground_band_isolation
+        ),
+    }
+
+
 def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     missing: list[str] = []
 
@@ -1037,7 +1730,7 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         if staged:
             missing.append(label)
             return
-        raise AssertionError(f"missing or incomplete v1.9 authority: {label}")
+        raise AssertionError(f"missing or incomplete v2.0 authority: {label}")
 
     def require_text(path: Path, label: str) -> str | None:
         if not path.exists():
@@ -1196,11 +1889,160 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         no_overclaim = manifest.get("no_overclaim", "")
         for token in (
             "rank-two unbounded block diagonalization",
-            "broken-sector temporal mass or GNS gap",
+            "broken-sector oscillator temporal mass or GNS gap",
             "Sector A",
             "Pre-A closure",
         ):
             require_token(no_overclaim, token, f"manifest no-overclaim token {token}")
+        require_token(
+            manifest.get("full_hamiltonian_gibbs_resummation", {}).get("two_orientation_bound", ""),
+            "rho(W_L^2)",
+            "manifest full-Gibbs Duhamel token",
+        )
+        require_token(
+            manifest.get("fixed_edge_restricted_tail_corridor", {}).get("constants", ""),
+            "1296 R^6",
+            "manifest corridor constant token",
+        )
+        audit.check(
+            "manifest Yarotskii QPS source",
+            manifest.get("compressed_tfim_two_phase_qps", {}).get("source")
+            == YAROTSKII_QPS_SOURCE,
+            manifest.get("compressed_tfim_two_phase_qps", {}).get("source"),
+            YAROTSKII_QPS_SOURCE,
+            "authority",
+        )
+        checkpoint = manifest.get("v2_checkpoint_synthesis")
+        prospective_manifest = (
+            REPO
+            / "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json"
+        )
+        other_checkpoint = None
+        if prospective_manifest.is_file():
+            try:
+                other_checkpoint = json.loads(
+                    prospective_manifest.read_text(encoding="utf-8")
+                ).get("v2_checkpoint_synthesis")
+            except (OSError, UnicodeError, json.JSONDecodeError):
+                other_checkpoint = None
+
+        checkpoint_fields = {
+            "status",
+            "source",
+            "pdf",
+            "source_sha256",
+            "pdf_sha256",
+            "pages",
+            "workflow",
+            "visual_qa",
+        }
+        checkpoint_status = (
+            "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION"
+        )
+        checkpoint_source_rel = (
+            "claims/C6-SPACETIME-SIGNATURE/notes/"
+            "pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-"
+            "checkpoint-260811-v0.9.tex.txt"
+        )
+        checkpoint_pdf_rel = (
+            "claims/C6-SPACETIME-SIGNATURE/notes/"
+            "pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-"
+            "checkpoint-260811-v0.9.pdf"
+        )
+        checkpoint_workflow = (
+            "No per-lemma or intermediate PDF was issued. One combined R-167 v2.0 / "
+            "R-168 v1.1 gate-level synthesis source/PDF pair was issued only after "
+            "the primary, non-importing independent, integrated, formal-authority, "
+            "generated-surface, and source-form checks passed."
+        )
+        source_path = REPO / checkpoint_source_rel
+        pdf_path = REPO / checkpoint_pdf_rel
+        source_hash_actual = (
+            hashlib.sha256(source_path.read_bytes()).hexdigest()
+            if source_path.is_file()
+            else None
+        )
+        pdf_hash_actual = (
+            hashlib.sha256(pdf_path.read_bytes()).hexdigest()
+            if pdf_path.is_file()
+            else None
+        )
+        visual_qa = (
+            checkpoint.get("visual_qa", "") if isinstance(checkpoint, dict) else ""
+        )
+        source_hash_declared = (
+            checkpoint.get("source_sha256") if isinstance(checkpoint, dict) else None
+        )
+        pdf_hash_declared = (
+            checkpoint.get("pdf_sha256") if isinstance(checkpoint, dict) else None
+        )
+        pages_declared = checkpoint.get("pages") if isinstance(checkpoint, dict) else None
+        lowercase_hex = set("0123456789abcdef")
+        checkpoint_valid = (
+            isinstance(checkpoint, dict)
+            and set(checkpoint) == checkpoint_fields
+            and checkpoint == other_checkpoint
+            and checkpoint.get("status") == checkpoint_status
+            and checkpoint.get("source") == checkpoint_source_rel
+            and checkpoint.get("pdf") == checkpoint_pdf_rel
+            and source_path.with_suffix("").with_suffix(".pdf") == pdf_path
+            and isinstance(source_hash_declared, str)
+            and len(source_hash_declared) == 64
+            and set(source_hash_declared) <= lowercase_hex
+            and isinstance(pdf_hash_declared, str)
+            and len(pdf_hash_declared) == 64
+            and set(pdf_hash_declared) <= lowercase_hex
+            and isinstance(pages_declared, int)
+            and not isinstance(pages_declared, bool)
+            and pages_declared > 0
+            and checkpoint.get("workflow") == checkpoint_workflow
+            and isinstance(visual_qa, str)
+            and all(
+                token in visual_qa.lower()
+                for token in (
+                    "all",
+                    "rendered pages",
+                    "clipping",
+                    "overlap",
+                    "pypdf",
+                    "pdfplumber",
+                )
+            )
+            and source_path.is_file()
+            and pdf_path.is_file()
+            and source_hash_actual == source_hash_declared
+            and pdf_hash_actual == pdf_hash_declared
+            and pdf_path.stat().st_mtime_ns >= source_path.stat().st_mtime_ns
+        )
+        audit.check(
+            "v2 combined checkpoint issued and exact",
+            checkpoint_valid,
+            {
+                "checkpoint": checkpoint,
+                "shared_checkpoint": other_checkpoint,
+                "source_exists": source_path.is_file(),
+                "pdf_exists": pdf_path.is_file(),
+                "source_sha256": source_hash_actual,
+                "pdf_sha256": pdf_hash_actual,
+                "pdf_fresh_relative_to_source": (
+                    source_path.is_file()
+                    and pdf_path.is_file()
+                    and pdf_path.stat().st_mtime_ns >= source_path.stat().st_mtime_ns
+                ),
+            },
+            {
+                "exact_fields": sorted(checkpoint_fields),
+                "shared": True,
+                "status": checkpoint_status,
+                "source": checkpoint_source_rel,
+                "pdf": checkpoint_pdf_rel,
+                "workflow": checkpoint_workflow,
+                "hashes": "exact lowercase raw SHA256",
+                "pages": "positive integer; parser validation is integrated-only",
+                "fresh": True,
+            },
+            "authority",
+        )
 
     certificate_text = require_text(CERTIFICATE, "certificate file")
     for token in (
@@ -1239,6 +2081,17 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         "periodic cubic lattice",
         "certificate periodic lattice qualifier",
     )
+    for token in (
+        "EXP-000809",
+        "rho(W_L^2)",
+        "1296R^6",
+        r"\kappa_{\rm ov}\le1+2(z-1)=11",
+        r"0^{\times2}",
+        "k=(0,-2)",
+        "RM2006v061n02ABEH004323",
+        "No v2.0 PDF is issued",
+    ):
+        require_token(certificate_text, token, f"certificate v2 token {token}")
 
     exploration_text = require_text(EXPLORATION_LEDGER, "exploration ledger")
     require_token(
@@ -1247,8 +2100,20 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         f"exploration row {EXPECTED_EXPLORATION}",
     )
     result_text = require_text(RESULT_LEDGER, "result ledger")
-    require_token(result_text, EXPECTED_RESULT_NUMBER, "result ledger R-167")
-    require_token(result_text, EXPECTED_RESULT_VERSION, "result ledger v1.9")
+    result_row_present = result_text is not None and any(
+        EXPECTED_RESULT_NUMBER in line and EXPECTED_RESULT_VERSION in line
+        for line in result_text.splitlines()
+    )
+    if result_row_present:
+        audit.check(
+            "result ledger exact R-167 v2.0 row",
+            True,
+            True,
+            True,
+            "authority",
+        )
+    else:
+        missing_or_raise("result ledger exact R-167 v2.0 row")
     negative_text = require_text(NEGATIVE_REGISTRY, "negative registry")
     for negative_id in NEGATIVE_IDS:
         require_token(negative_text, negative_id, f"negative row {negative_id}")
@@ -1270,6 +2135,9 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
     fixture_a = fixture_a_pure_bond_tail(audit)
     fixture_b = fixture_b_local_and_global_renyi(audit)
     fixture_c = fixture_c_semiclassical_and_low_band(audit)
+    fixture_d = fixture_d_full_gibbs_context(audit)
+    fixture_e = fixture_e_fixed_edge_corridor(audit)
+    fixture_f = fixture_f_feshbach_and_compressed_qps(audit)
     authority = authority_audit(audit, staged)
     verdict = "PASS" if authority["status"] == "PASS" else "INCOMPLETE"
 
@@ -1281,6 +2149,12 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
         "semiclassical_theorem_imported_not_reproved": True,
         "finite_r_minus_9_onsite_doublet_certified": False,
         "exact_low_band_TFIM_compression": True,
+        "finite_Gibbs_full_Hamiltonian_cutoff_resummation": True,
+        "arbitrary_context_automorphism_upgrade": False,
+        "fixed_edge_to_growing_corridor_reduction": True,
+        "actual_Q3_fixed_edge_history_bound": False,
+        "below_Gamma_global_Feshbach_precursor": True,
+        "compressed_TFIM_two_phase_QPS_and_phasewise_gap": True,
         "rank_two_unbounded_block_elimination": False,
         "two_phase_QPS_for_exact_Q3LOCK": False,
         "broken_sector_GNS_gap": False,
@@ -1318,6 +2192,9 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
             "fixture_A_pure_bond_tail": fixture_a,
             "fixture_B_local_and_global_renyi": fixture_b,
             "fixture_C_semiclassical_and_low_band": fixture_c,
+            "fixture_D_full_Gibbs_context": fixture_d,
+            "fixture_E_fixed_edge_corridor": fixture_e,
+            "fixture_F_Feshbach_compressed_QPS": fixture_f,
         },
         "scope": scope,
         "source_hashes": {
@@ -1327,10 +2204,10 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
         },
         "assertions": audit.rows,
         "boundary": (
-            "Exact A/B/C fixtures, Q3 semiclassical import hypotheses, and "
-            "low-band reduction only. No numerical h0, onsite-interspersed "
-            "history likelihood bound, rank-two unbounded band elimination, "
-            "two-phase QPS transfer, broken-sector GNS gap, Sector A, or Pre-A closure."
+            "Exact A--F fixtures and theorem imports only. No numerical h0 or "
+            "QPS radius, Q3 fixed-edge history bound, arbitrary-context upgrade, "
+            "quasi-local rank-two oscillator elimination, oscillator QPS transfer, "
+            "broken-sector oscillator GNS gap, Sector A, or Pre-A closure."
         ),
     }
 

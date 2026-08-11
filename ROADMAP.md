@@ -967,6 +967,34 @@ onsite vector puts its exponentially small splitting against an order-one
 Ising scale. A rank-two theorem or equivalent cutoff removal, beta-infinity
 phase selection and the actual phasewise temporal mass/GNS gap remain open.
 
+EXP-000809 advances the same R-167 additively to v2.0 without closing a
+parent. In finite volume, opposite Duhamel orderings give both static-full-Gibbs
+weighted-unitary cutoff bounds and trace-state stability from
+`rho(W_L^2)`. Bounded half-modular contexts and a finite Bohr-projective class
+transfer the estimate; an exact two-level Gibbs family rejects the arbitrary
+bounded-context upgrade. This closes
+`PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION`
+only in its finite-volume state-weighted scope.
+
+A uniform translate- and orientation-fixed-bond restricted-tail input now has
+an exact growing-corridor reduction:
+`m_R=6R(2R+1)^2<=54R^3`, `W^2<=m_R sum_e w_e^2`, and the declared hard-tail
+schedule gives `1296R^6 exp(-R)(R^2+2R+2)->0`. Translation leaves three cubic
+bond orientations. The actual Q3 onsite-interspersed fixed-edge history input
+is not proved, so the common-alpha parent remains OPEN.
+
+On the gap branch, the exact below-`Gamma` finite-volume Feshbach identity,
+at-most-11 overlap bound and diagonal relative-form corridor close only
+`PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR`.
+The global self-energy is extensive and carries no QPS locality. Separately,
+the exact compressed finite-spin TFIM has forward-star spectrum
+`{0 x2,2J x6,4J x6,6J x2}` and, for existential
+`|delta_eff|/(2J)<epsilon_Y`, two pure phases, clustering and a positive
+phasewise GNS gap. That closes
+`PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP`,
+not the rank-two oscillator transfer or oscillator gap. The rank-two/QPS and
+broken-sector oscillator parents remain OPEN.
+
 EXP-000807--808 / R-168 v1.0 separately freeze and harden the prospective Round-1 validation
 protocol and audits current readiness. It closes only the common estimand/map
 schema, provenance-order protocol, anti-leakage schema validator and exact
@@ -981,16 +1009,36 @@ observation is informational and non-load-bearing: no custodian signature or
 remote commit/tag/object/ref is cryptographically verified, and the syntactic
 firewall does not prove the absence of information hidden in arbitrary text.
 
+EXP-000810 advances R-168 additively to v1.1. The exact hash-pinned
+current M1-v0/M2-v0/M5-v0 map-only admitted set is empty. Even a hypothetical
+map-only new version leaves eight non-map hard-row cells non-PASS under the ten
+frozen rows, hence no all-PASS survivor. A state, law, dynamics, regulator,
+compactness or gauge repair is substantively new, requires a new version and
+must rerun every row; the result is not a future-candidate no-go.
+
+The exact M2 finite-torus Gaussian fingerprint has 48 ordered `R/U` components,
+all equal to one. It is mathematical, not a physical prediction. The old
+retrospective stiffness exponent is underdetermined without a physical
+response channel. `PA-M2-CI8-RS-DISPERSION-MAP-v1` remains DESIGN_ONLY and
+NOT_CREATED, while
+`PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND` is OPEN. No candidate,
+map, prediction, target, freeze, tag, score or selection is created; the
+common-input, external commitment, admitted-map/prediction, cryptographic
+remote-verification and parent Round-1 gates also remain OPEN.
+
 The primary
 `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` gate therefore remains
 open, together with the common-input ledger, independent opaque custodian
 commitment, admitted microscopic observable map/nonempty prediction, and
 cryptographic remote-verification gates. No target, freeze record, tag,
-prediction, score or candidate selection is created. Per the PDF-efficiency
-protocol, EXP-000806 and EXP-000807 remain in the ledger, manifests,
-certificates and verifier artifacts until one later gate-level synthesis passes
-every proof, formal, independent and integrated check; no per-lemma or
-intermediate PDF is issued. Physical Sector A and Pre-A remain open.
+prediction, score or candidate selection is created. The historical
+EXP-000806--808 checkpoint was issued only after strict validation as the
+single combined R-167 v1.9 / R-168 v1.0 source and 15-page v0.8 PDF; it is not
+evidence for v2.0/v1.1. Per the PDF-efficiency protocol, EXP-000809 and
+EXP-000810 issue no per-lemma or intermediate PDF during proof-first
+development. One later combined R-167 v2.0 / R-168 v1.1 synthesis is issued
+only after the proof, formal, independent and integrated layers all pass.
+Physical Sector A and Pre-A remain open.
 
 The fixed-beta envelope is not yet the thermodynamic Hamiltonian `alpha`.
 Distinct algebraic ground states now exist on the separate universal

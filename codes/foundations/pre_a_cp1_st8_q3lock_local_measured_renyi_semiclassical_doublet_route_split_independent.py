@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Independent exact verifier for the R-167 v1.9 route split.
+"""Independent exact verifier for the R-167 v2.0 route split.
 
 This standard-library program reconstructs the finite algebra behind the
-R-167 v1.9 checkpoint without importing the primary implementation or reading
+R-167 v2.0 checkpoint without importing the primary implementation or reading
 any primary run result.  Its exact ``Fraction`` fixtures cover:
 
 * pure-bond multiplier invariance and the two cutoff-Hilbert--Schmidt
@@ -13,10 +13,15 @@ any primary run result.  Its exact ``Fraction`` fixtures cover:
 * Q3 connectivity, Laplacian/Hessian spectra, and semiclassical scaling;
 * the exact low-doublet transverse-field Ising compression;
 * the centered one-bond residual algebra and a rational form-bound fixture;
-* every polynomial exponent in the proposed semiclassical N corridor; and
+* every polynomial exponent in the proposed semiclassical N corridor;
+* finite-Gibbs Duhamel, modular-context, and arbitrary-context fixtures;
+* the fixed-edge corridor, covariance, and tilted-Gaussian implication boundary;
+* the cubic Feshbach, relative-form, dense-self-energy, and compressed-TFIM
+  quantum-Pirogov--Sinai inputs; and
 * the manifest/certificate identity and no-overclaim boundary.
 
-The verifier closes no common-alpha, phase, or GNS-gap gate.  In particular,
+The verifier closes no common-alpha, rank-two oscillator, or oscillator
+GNS-gap parent gate.  In particular,
 the Renyi fixture rejects only a volume-uniform *global* target in the stated
 conditional product reference; it is not a counterexample to a local
 coordinate-marginal bound for the interacting Q3 Gibbs state.
@@ -36,7 +41,7 @@ from pathlib import Path
 from typing import Any, Mapping, Sequence
 
 
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = (
@@ -48,13 +53,17 @@ RESULT_ID = (
     "COMMON-ALPHA-CAUCHY-GATE-SPLIT"
 )
 RESULT_NUMBER = "R-167"
-RESULT_VERSION = "v1.9"
-EXPLORATION_ID = "EXP-000806"
+RESULT_VERSION = "v2.0"
+EXPLORATION_ID = "EXP-000809"
 TASK_ID = "T-054"
 CLAIM_ID = "C6-SPACETIME-SIGNATURE"
 
 MANIFEST = REPO / f"strategy/{SLUG}-manifest.json"
 CERTIFICATE = REPO / f"strategy/{SLUG}-certificate-260811.md"
+EXPLORATION_LEDGER = REPO / "explorations/log.jsonl"
+RESULT_LEDGER = REPO / "RESULTS-LEDGER.md"
+NEGATIVE_REGISTRY = REPO / "negative-results/registry.md"
+GATE_REGISTRY = REPO / "claims/GATES.md"
 DEFAULT_OUTPUT = (
     REPO
     / "claims/C6-SPACETIME-SIGNATURE/runs"
@@ -65,7 +74,12 @@ NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-"
     "VOLUME-UNIFORMITY",
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-"
-    "DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT",
+    "DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT",    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-"
+    "AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-"
+    "AUTOMATIC-QPS-LOCALITY",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-"
+    "MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL",
 )
 CLOSED_SUBGATES = (
     "PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-"
@@ -73,8 +87,17 @@ CLOSED_SUBGATES = (
     "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-"
     "REDUCTION",
     "PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-"
-    "LOW-BAND-TFIM-COMPRESSION",
+    "LOW-BAND-TFIM-COMPRESSION",    "PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-"
+    "CUTOFF-UNITARY-RESUMMATION",
+    "PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-"
+    "REDUCTION",
+    "PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-"
+    "SMALLNESS-PRECURSOR",
+    "PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-"
+    "PHASEWISE-GAP",
 )
+YAROTSKII_QPS_SOURCE = "https://doi.org/10.1070/RM2006v061n02ABEH004323"
+
 OPEN_GATES = (
     "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-"
     "HISTORY-COMMON-ALPHA",
@@ -86,8 +109,9 @@ OPEN_GATES = (
 
 NO_OVERCLAIM = (
     "This independent verifier proves only finite exact fixtures for the "
-    "pure-bond coordinate identity, local measured-Renyi reduction, Q3 "
-    "onsite geometry, low-band compression, and residual/corridor algebra. "
+    "v1.9 layers plus finite-Gibbs resummation, bounded modular contexts, "
+    "fixed-edge corridor reduction, global Feshbach algebra, and the exact "
+    "compressed-TFIM QPS hypotheses and imported phasewise theorem. "
     "It does not prove an onsite-interspersed local measured-Renyi or "
     "restricted-tail estimate, n-to-infinity Trotter convergence, an "
     "all-exhaustion common alpha, a phase-KMS quotient, a rank-two "
@@ -263,7 +287,15 @@ def source_firewall_fixture() -> dict[str, Any]:
         "imported_roots": sorted(imported_roots),
         "allowed_roots": sorted(allowed_roots),
         "forbidden_imports": sorted(imported_roots - allowed_roots),
-        "runtime_read_inputs": [SCRIPT, MANIFEST, CERTIFICATE],
+        "runtime_read_inputs": [
+            SCRIPT,
+            MANIFEST,
+            CERTIFICATE,
+            EXPLORATION_LEDGER,
+            RESULT_LEDGER,
+            NEGATIVE_REGISTRY,
+            GATE_REGISTRY,
+        ],
         "primary_module_imported": False,
         "primary_result_consumed": False,
     }
@@ -894,6 +926,334 @@ def corridor_exponent_fixture() -> dict[str, Any]:
     }
 
 
+
+def full_gibbs_context_fixture() -> dict[str, Any]:
+    """Reconstruct the two-level Gibbs/context family without matrix libraries."""
+
+    # INPUT FIXTURE; derived fractions below are checked against labelled
+    # TEST ORACLES in build_payload.
+    p = Fraction(1, 5)
+    weighted_unitary_right_squared = 4 * p
+    weighted_unitary_left_squared = 4 * p
+    rho_w_squared_pi_coefficient = p
+    pi_squared_lower = Fraction(9)
+    duhamel_rhs_strict_lower = pi_squared_lower * p
+    observable_right_squared = Fraction(4)
+    observable_left_squared = Fraction(4)
+    modular_norm_squared = (1 - p) / p
+    bandwidth_factor = perfect_fraction_sqrt((1 - p) / p)
+    projective_band_norm = Fraction(2)
+    return {
+        "p": p,
+        "weighted_unitary_right_squared": weighted_unitary_right_squared,
+        "weighted_unitary_left_squared": weighted_unitary_left_squared,
+        "rho_W_squared_coefficient_of_pi_hbar_over_t0_squared": (
+            rho_w_squared_pi_coefficient
+        ),
+        "pi_squared_strict_lower": pi_squared_lower,
+        "Duhamel_rhs_strict_lower": duhamel_rhs_strict_lower,
+        "trace_distance": Fraction(0),
+        "observable_right_squared": observable_right_squared,
+        "observable_left_squared": observable_left_squared,
+        "hash_seminorm_squared": observable_right_squared + observable_left_squared,
+        "half_modular_norm_squared": modular_norm_squared,
+        "bandwidth_factor": bandwidth_factor,
+        "projective_band_norm": projective_band_norm,
+        "family_unitary_hash_squared_coefficient_of_p": Fraction(8),
+        "family_automorphism_hash_squared": Fraction(8),
+        "unitary_family_limit_p_to_zero": Fraction(0),
+        "state_stability_implies_arbitrary_context_stability": False,
+        "q3_form_domain_instantiation": {
+            "common_quartic_form_domain": True,
+            "W_coordinate_growth_degree": 2,
+            "W_squared_growth_degree": 4,
+            "finite_Gibbs_fourth_moment": True,
+            "bounded_spectral_form_truncation": True,
+            "strong_resolvent_then_S2_closure": True,
+            "smooth_clipped_Q_L_automatically_covered": False,
+        },
+    }
+
+
+def fixed_edge_corridor_fixture() -> dict[str, Any]:
+    """Count cubic edges and derive the exact elementary corridor majorant."""
+
+    # INPUT FIXTURE for finite enumeration. The general constants and
+    # exponential-series majorant are derived from the displayed formulas.
+    radius = 2
+    vertices = set(
+        (x, y, z)
+        for x in range(-radius, radius + 1)
+        for y in range(-radius, radius + 1)
+        for z in range(-radius, radius + 1)
+    )
+    directions = ((1, 0, 0), (0, 1, 0), (0, 0, 1))
+    spatial_dimension = len(directions)
+    signed_direction_count = 2
+    edge_direction_coefficient = signed_direction_count * spatial_dimension
+    side_upper_coefficient = signed_direction_count + 1
+    edges = []
+    for vertex in sorted(vertices):
+        for direction in directions:
+            neighbour = tuple(
+                vertex[index] + direction[index]
+                for index in range(spatial_dimension)
+            )
+            if neighbour in vertices:
+                edges.append((vertex, neighbour))
+    formula_count = (
+        edge_direction_coefficient
+        * radius
+        * (signed_direction_count * radius + 1) ** (spatial_dimension - 1)
+    )
+    edge_upper_coefficient = (
+        edge_direction_coefficient
+        * side_upper_coefficient ** (spatial_dimension - 1)
+    )
+    upper_count = edge_upper_coefficient * radius**spatial_dimension
+
+    words = (Fraction(3), Fraction(-2), Fraction(5), Fraction(1))
+    cauchy_left = sum(words, Fraction(0)) ** 2
+    cauchy_right = len(words) * sum((value * value for value in words), Fraction(0))
+
+    # Derive the local tail prefactor from the v1.9 primitive inputs in
+    # 2 Q^(1/alpha) (M_a |S_e|)^theta.  For this exact fixture the weighted
+    # support is one, so its fractional power remains exactly one.
+    renyi_order = 2
+    theta = Fraction(renyi_order - 1, renyi_order)
+    renyi_bound = 4
+    renyi_root = math.isqrt(renyi_bound)
+    assert renyi_root**renyi_order == renyi_bound
+    marginal_tail_constant = Fraction(1, 2)
+    edge_support_size = len(("x", "y"))
+    weighted_support = marginal_tail_constant * edge_support_size
+    assert weighted_support == 1
+    local_tail_prefactor = 2 * renyi_root
+
+    # Combine m_R <= edge_upper_coefficient R^3, c=1/coupling_denominator,
+    # and the derived local tail prefactor.  Divisibility is checked before
+    # retaining the exact integer coefficient in the payload.
+    coupling_denominator = 3
+    prefactor_numerator = edge_upper_coefficient**2 * local_tail_prefactor
+    prefactor_denominator = coupling_denominator**2
+    assert prefactor_numerator % prefactor_denominator == 0
+    prefactor = prefactor_numerator // prefactor_denominator
+    factorial_ten = math.factorial(10)
+    majorant_powers = {"R^-2": 1, "R^-3": 2, "R^-4": 2}
+
+    side = 4
+    orbit_sizes = {
+        direction: side**spatial_dimension
+        for direction in range(spatial_dimension)
+    }
+
+    kappa = Fraction(3, 4)
+    precision_determinant = 1 - kappa * kappa
+    marginal_variance = 1 / precision_determinant
+    tilted_tail_exponent = 1 / (2 * marginal_variance)
+    reference_power_exponent = theta / 2
+    exponent_gap = reference_power_exponent - tilted_tail_exponent
+    q2_precision_determinant = 1 - renyi_order**2 * kappa * kappa
+    return {
+        "radius": radius,
+        "enumerated_edges": len(edges),
+        "formula_edges": formula_count,
+        "upper_edges": upper_count,
+        "Cauchy_left": cauchy_left,
+        "Cauchy_right": cauchy_right,
+        "corridor_prefactor": prefactor,
+        "factorial_ten": factorial_ten,
+        "elementary_majorant_powers": majorant_powers,
+        "elementary_majorant_limit": Fraction(0),
+        "periodic_translation_orbit_sizes": orbit_sizes,
+        "periodic_translation_orbit_count": len(orbit_sizes),
+        "translation_alone_gives_one_orbit": False,
+        "tilted_gaussian": {
+            "kappa": kappa,
+            "precision_determinant": precision_determinant,
+            "marginal_variance": marginal_variance,
+            "tilted_tail_exponent": tilted_tail_exponent,
+            "reference_power_exponent": reference_power_exponent,
+            "exponent_gap": exponent_gap,
+            "Q2_precision_determinant": q2_precision_determinant,
+            "all_moments_finite": precision_determinant > 0,
+            "fixed_edge_implication_rejected": exponent_gap > 0,
+            "two_site_or_homogeneous_dimer_scope": True,
+            "full_one_site_translation_invariance": False,
+        },
+        "hard_tail_constants": True,
+        "smooth_clipped_Q_L_constants": False,
+        "actual_Q3_fixed_edge_history_bound": False,
+    }
+
+
+def feshbach_compressed_qps_fixture() -> dict[str, Any]:
+    """Reconstruct overlap, Feshbach, form coefficients, and star spectrum."""
+
+    # INPUT FIXTURES for exact overlap and rational smallness checks.
+    # Expected values used later are explicitly TEST ORACLES.
+    side = 4
+    directions = tuple(range(3))
+    spatial_dimension = len(directions)
+    coordination_number = 2 * spatial_dimension
+    general_overlap_upper = 1 + 2 * (coordination_number - 1)
+    vertices = tuple(
+        (x, y, z)
+        for x in range(side)
+        for y in range(side)
+        for z in range(side)
+    )
+    edges = []
+    for vertex in vertices:
+        for direction in directions:
+            neighbour = list(vertex)
+            neighbour[direction] = (neighbour[direction] + 1) % side
+            edges.append(frozenset((vertex, tuple(neighbour))))
+    overlaps = tuple(sum(bool(edge & other) for other in edges) for edge in edges)
+    open_edges = []
+    for vertex in vertices:
+        for direction in directions:
+            neighbour = list(vertex)
+            neighbour[direction] += 1
+            if neighbour[direction] < side:
+                open_edges.append(frozenset((vertex, tuple(neighbour))))
+    open_overlaps = tuple(
+        sum(bool(edge & other) for other in open_edges) for edge in open_edges
+    )
+
+    high_count = 5
+    gamma = Fraction(7)
+    energy = Fraction(2)
+    epsilon = Fraction(1, 3)
+    self_energy = high_count * epsilon * epsilon / (gamma - energy)
+    overlap_upper = (
+        general_overlap_upper
+        * high_count
+        * epsilon
+        * epsilon
+        / (gamma - energy)
+    )
+    dense_entry = epsilon * epsilon / (gamma - energy)
+    dense_norm = high_count * dense_entry
+
+    c = Fraction(1, 1000)
+    m = Fraction(2)
+    a_squared = Fraction(1, 100)
+    a = Fraction(1, 10)
+    b = Fraction(1, 20)
+    a_q = Fraction(3)
+    gamma_form = Fraction(100)
+    young_u = Fraction(1)
+    young_t = Fraction(1)
+    eta_base_coefficient = 8
+    nu_base_coefficient = 16
+    residual_base_coefficient = 8
+    eta_multiplier = (
+        eta_base_coefficient
+        * (1 + 1 / young_u)
+        * (1 + 1 / young_t)
+    )
+    nu_m_multiplier = nu_base_coefficient * (1 + young_u)
+    nu_a_multiplier = (
+        nu_base_coefficient
+        * (1 + 1 / young_u)
+        * (1 + young_t)
+    )
+    eta_b = eta_multiplier * c * a_q
+    nu_b = nu_m_multiplier * c * m * m + nu_a_multiplier * c * a_squared
+    zeta = coordination_number * (eta_b + nu_b / gamma_form)
+    epsilon_form = residual_base_coefficient * c * (b + 2 * m * a + a_squared)
+    # Exact diagonal local-high reduction on Pxy=diag(1,0,0,0).
+    k_diagonal = (Fraction(0), gamma_form, gamma_form, 2 * gamma_form)
+    q_diagonal = (Fraction(0), Fraction(1), Fraction(1), Fraction(1))
+    high_diagonal = tuple(
+        eta_b * k_value + nu_b * q_value
+        for k_value, q_value in zip(k_diagonal, q_diagonal)
+    )
+    projected_upper = tuple(
+        (eta_b + nu_b / gamma_form) * k_value
+        for k_value in k_diagonal
+    )
+    projected_slack = tuple(
+        upper - actual for upper, actual in zip(projected_upper, high_diagonal)
+    )
+
+    spectrum: dict[int, int] = {}
+    star_site_count = 1 + len(directions)
+    for bits in range(2**star_site_count):
+        signs = tuple(
+            1 if bits & (1 << index) else -1
+            for index in range(star_site_count)
+        )
+        center = signs[0]
+        mismatches = sum(center != neighbour for neighbour in signs[1:])
+        coefficient = 2 * mismatches
+        spectrum[coefficient] = spectrum.get(coefficient, 0) + 1
+
+    selector_plus_density = 1 - 1
+    selector_minus_density = 1 - (-1)
+    selector_difference_derivative = selector_plus_density - selector_minus_density
+
+    return {
+        "edge_count": len(edges),
+        "periodic_overlap_values": sorted(set(overlaps)),
+        "open_overlap_range": [min(open_overlaps), max(open_overlaps)],
+        "general_overlap_upper": general_overlap_upper,
+        "equality_scope": "bulk edges and sufficiently large periodic tori",
+        "Feshbach": {
+            "Gamma": gamma,
+            "E": energy,
+            "epsilon": epsilon,
+            "self_energy": self_energy,
+            "overlap_upper": overlap_upper,
+        },
+        "dense_no_go": {
+            "matrix_size": high_count,
+            "entry": dense_entry,
+            "norm": dense_norm,
+            "off_diagonal_nonzero_count": high_count * (high_count - 1),
+            "automatic_QPS_locality": False,
+        },
+        "relative_form": {
+            "eta_b": eta_b,
+            "nu_b": nu_b,
+            "zeta": zeta,
+            "epsilon": epsilon_form,
+            "corridor_exponents": {
+                "epsilon": -3,
+                "eta_b": -2,
+                "nu_b_over_Gamma": -2,
+                "zeta": -2,
+            },
+            "P_xy_diagonal": (1, 0, 0, 0),
+            "Q_xy_diagonal": q_diagonal,
+            "k_x_plus_k_y_diagonal": k_diagonal,
+            "diagonal_high_fixture": high_diagonal,
+            "projected_high_upper": projected_upper,
+            "projected_high_slack": projected_slack,
+            "diagonal_high_compression_only": True,
+            "off_diagonal_bound_is_distinct": True,
+        },
+        "forward_star_spectrum_coefficients": spectrum,
+        "forward_star_expected": {0: 2, 2: 6, 4: 6, 6: 2},
+        "local_gap_coefficient_of_J": 2,
+        "selector": "u sum_x(1-s_x)",
+        "selector_plus_density": selector_plus_density,
+        "selector_minus_density": selector_minus_density,
+        "selector_split": (0, selector_difference_derivative),
+        "small_ratio": "abs(delta_eff)/(2J)<epsilon_Y",
+        "Z2_flips_s": True,
+        "Z2_fixes_P1": True,
+        "QPS_source": YAROTSKII_QPS_SOURCE,
+        "compressed_infinite_lattice_phasewise_gap": True,
+        "existential_small_ratio_only": True,
+        "finite_torus_exact_degeneracy": False,
+        "oscillator_gap": False,
+        "Feshbach_absolute_energy_before_low_scalar_subtraction": True,
+        "thermodynamic_ground_band_isolation": False,
+    }
+
+
 def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     """Bind to the manifest/certificate without reading primary outputs."""
 
@@ -1052,10 +1412,10 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         all(
             phrase in manifest.get("no_overclaim", "")
             for phrase in (
-                "onsite-interspersed local measured-Renyi",
+                "Q3 onsite-interspersed fixed-edge history estimate",
                 "all-exhaustion common alpha",
                 "rank-two unbounded block diagonalization",
-                "broken-sector temporal mass or GNS gap",
+                "broken-sector oscillator temporal mass or GNS gap",
                 "physical Sector A",
                 "Pre-A closure",
             )
@@ -1064,9 +1424,40 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         "all boundary phrases present",
         "authority",
     )
+    formal_missing: list[str] = []
+
+    def formal_require(condition: bool, label: str) -> None:
+        if condition:
+            audit.check(label, True, True, True, "formal-authority")
+        elif staged:
+            formal_missing.append(label)
+        else:
+            raise AssertionError("missing formal v2.0 authority: " + label)
+
+    exploration_records = [
+        json.loads(line)
+        for line in EXPLORATION_LEDGER.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    formal_require(
+        any(record.get("id") == EXPLORATION_ID for record in exploration_records),
+        "formal exploration " + EXPLORATION_ID,
+    )
+    result_lines = RESULT_LEDGER.read_text(encoding="utf-8").splitlines()
+    formal_require(
+        any(RESULT_NUMBER in line and RESULT_VERSION in line for line in result_lines),
+        "formal result R-167 v2.0",
+    )
+    negative_text = NEGATIVE_REGISTRY.read_text(encoding="utf-8")
+    for identifier in NEGATIVE_IDS:
+        formal_require(identifier in negative_text, "formal negative " + identifier)
+    gate_text = GATE_REGISTRY.read_text(encoding="utf-8")
+    for identifier in CLOSED_SUBGATES + OPEN_GATES:
+        formal_require(identifier in gate_text, "formal gate " + identifier)
+
     return {
-        "status": "COMPLETE",
-        "missing": [],
+        "status": "COMPLETE" if not formal_missing else "INCOMPLETE",
+        "missing": formal_missing,
         "manifest": MANIFEST,
         "certificate": CERTIFICATE,
         "manifest_sha256": normalized_sha256(MANIFEST),
@@ -1090,10 +1481,19 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
         (
             not firewall["primary_module_imported"]
             and not firewall["primary_result_consumed"]
-            and firewall["runtime_read_inputs"] == [SCRIPT, MANIFEST, CERTIFICATE]
+            and firewall["runtime_read_inputs"]
+            == [
+                SCRIPT,
+                MANIFEST,
+                CERTIFICATE,
+                EXPLORATION_LEDGER,
+                RESULT_LEDGER,
+                NEGATIVE_REGISTRY,
+                GATE_REGISTRY,
+            ]
         ),
         firewall,
-        "script plus two authority drafts only",
+        "script plus source authorities only",
         "independence",
     )
 
@@ -1538,6 +1938,204 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
         "scope",
     )
 
+    full_gibbs = full_gibbs_context_fixture()
+    audit.check(
+        "full-Gibbs two unitary orientations",
+        full_gibbs["weighted_unitary_right_squared"]
+        == full_gibbs["weighted_unitary_left_squared"]
+        == Fraction(4, 5),
+        {
+            "right": full_gibbs["weighted_unitary_right_squared"],
+            "left": full_gibbs["weighted_unitary_left_squared"],
+        },
+        Fraction(4, 5),
+        "full-Gibbs",
+    )
+    audit.check(
+        "full-Gibbs Duhamel strict rational lower",
+        full_gibbs["Duhamel_rhs_strict_lower"]
+        > full_gibbs["weighted_unitary_right_squared"],
+        full_gibbs["Duhamel_rhs_strict_lower"],
+        ">4/5 using pi^2>9",
+        "full-Gibbs",
+    )
+    audit.check(
+        "trace-state versus arbitrary-context separation",
+        full_gibbs["trace_distance"] == 0
+        and full_gibbs["hash_seminorm_squared"] == 8
+        and not full_gibbs["state_stability_implies_arbitrary_context_stability"],
+        full_gibbs,
+        "trace distance zero and automorphism hash squared eight",
+        "context-no-go",
+    )
+    audit.check(
+        "half-modular fixed-band fixture",
+        full_gibbs["half_modular_norm_squared"] == 4
+        and full_gibbs["bandwidth_factor"] == 2
+        and full_gibbs["projective_band_norm"] == 2,
+        full_gibbs,
+        "modular norm 2; projective upper 4",
+        "modular-context",
+    )
+    audit.check(
+        "finite-Q3 hard-form domain instantiation",
+        full_gibbs["q3_form_domain_instantiation"]
+        == {
+            "common_quartic_form_domain": True,
+            "W_coordinate_growth_degree": 2,
+            "W_squared_growth_degree": 4,
+            "finite_Gibbs_fourth_moment": True,
+            "bounded_spectral_form_truncation": True,
+            "strong_resolvent_then_S2_closure": True,
+            "smooth_clipped_Q_L_automatically_covered": False,
+        },
+        full_gibbs["q3_form_domain_instantiation"],
+        "hard/form Q3 pair only",
+        "full-Gibbs",
+    )
+    audit.check(
+        "arbitrary-context family limit",
+        full_gibbs["unitary_family_limit_p_to_zero"] == 0
+        and full_gibbs["family_automorphism_hash_squared"] == 8,
+        full_gibbs,
+        "unitary hash tends to zero, automorphism hash stays eight",
+        "context-no-go",
+    )
+
+    fixed_edge = fixed_edge_corridor_fixture()
+    # INDEPENDENT TEST ORACLES only: these literals are never inputs to
+    # fixed_edge_corridor_fixture; they detect drift in its derived values.
+    audit.check(
+        "induced cubic edge formula",
+        fixed_edge["enumerated_edges"]
+        == fixed_edge["formula_edges"]
+        == 300
+        and fixed_edge["formula_edges"] <= fixed_edge["upper_edges"],
+        fixed_edge,
+        "300 <= 432",
+        "fixed-edge",
+    )
+    audit.check(
+        "restricted-tail Cauchy fixture",
+        fixed_edge["Cauchy_left"] <= fixed_edge["Cauchy_right"],
+        {"left": fixed_edge["Cauchy_left"], "right": fixed_edge["Cauchy_right"]},
+        "left <= right",
+        "fixed-edge",
+    )
+    audit.check(
+        "explicit elementary corridor",
+        fixed_edge["corridor_prefactor"] == 1296
+        and fixed_edge["factorial_ten"] == 3628800
+        and fixed_edge["elementary_majorant_limit"] == 0,
+        fixed_edge,
+        "1296, 10!, limit zero",
+        "fixed-edge",
+    )
+    audit.check(
+        "periodic covariance has three direction orbits",
+        fixed_edge["periodic_translation_orbit_count"] == 3
+        and fixed_edge["periodic_translation_orbit_sizes"] == {0: 64, 1: 64, 2: 64}
+        and not fixed_edge["translation_alone_gives_one_orbit"],
+        fixed_edge,
+        "three translation orbits",
+        "covariance-boundary",
+    )
+    audit.check(
+        "homogeneous tilted Gaussian implication no-go",
+        fixed_edge["tilted_gaussian"]["precision_determinant"] == Fraction(7, 16)
+        and fixed_edge["tilted_gaussian"]["marginal_variance"] == Fraction(16, 7)
+        and fixed_edge["tilted_gaussian"]["exponent_gap"] == Fraction(1, 32)
+        and fixed_edge["tilted_gaussian"]["Q2_precision_determinant"] == Fraction(-5, 4)
+        and fixed_edge["tilted_gaussian"]["fixed_edge_implication_rejected"]
+        and fixed_edge["tilted_gaussian"]["two_site_or_homogeneous_dimer_scope"]
+        and not fixed_edge["tilted_gaussian"]["full_one_site_translation_invariance"]
+        and fixed_edge["hard_tail_constants"]
+        and not fixed_edge["smooth_clipped_Q_L_constants"],
+        fixed_edge["tilted_gaussian"],
+        "7/16, 16/7, 1/32, -5/4",
+        "tilted-no-go",
+    )
+
+    feshbach_qps = feshbach_compressed_qps_fixture()
+    # INDEPENDENT TEST ORACLES only: the overlap and rational coefficients
+    # below are compared against, never supplied to, the fixture computation.
+    audit.check(
+        "cubic overlap upper and periodic bulk equality",
+        feshbach_qps["edge_count"] == 192
+        and feshbach_qps["periodic_overlap_values"] == [11]
+        and feshbach_qps["open_overlap_range"][1] <= 11
+        and feshbach_qps["open_overlap_range"][0] < 11
+        and feshbach_qps["general_overlap_upper"] == 11,
+        {
+            "edges": feshbach_qps["edge_count"],
+            "periodic": feshbach_qps["periodic_overlap_values"],
+            "open": feshbach_qps["open_overlap_range"],
+        },
+        "general <=11; periodic equality; open boundary can be smaller",
+        "Feshbach",
+    )
+    audit.check(
+        "exact global Feshbach fixture",
+        feshbach_qps["Feshbach"]["self_energy"] == Fraction(1, 9)
+        and feshbach_qps["Feshbach"]["overlap_upper"] == Fraction(11, 9),
+        feshbach_qps["Feshbach"],
+        {"self_energy": Fraction(1, 9), "overlap_upper": Fraction(11, 9)},
+        "Feshbach",
+    )
+    audit.check(
+        "dense extensive self-energy no-go",
+        feshbach_qps["dense_no_go"]["norm"] == Fraction(1, 9)
+        and feshbach_qps["dense_no_go"]["off_diagonal_nonzero_count"] == 20
+        and not feshbach_qps["dense_no_go"]["automatic_QPS_locality"],
+        feshbach_qps["dense_no_go"],
+        "norm 1/9 with 20 nonzero off-diagonals",
+        "self-energy-no-go",
+    )
+    audit.check(
+        "relative-form coefficients and smallness",
+        feshbach_qps["relative_form"]["eta_b"] == Fraction(12, 125)
+        and feshbach_qps["relative_form"]["nu_b"] == Fraction(402, 3125)
+        and feshbach_qps["relative_form"]["zeta"] < 1
+        and feshbach_qps["relative_form"]["epsilon"] == Fraction(23, 6250),
+        feshbach_qps["relative_form"],
+        "exact rational coefficients with zeta < 1",
+        "relative-form",
+    )
+    audit.check(
+        "projected local-high diagonal inequality",
+        all(value >= 0 for value in feshbach_qps["relative_form"]["projected_high_slack"])
+        and feshbach_qps["relative_form"]["diagonal_high_compression_only"]
+        and feshbach_qps["relative_form"]["off_diagonal_bound_is_distinct"],
+        feshbach_qps["relative_form"],
+        "Qxy Bxy Qxy <= (eta_b+nu_b/Gamma) Qxy(kx+ky)Qxy",
+        "relative-form",
+    )
+    audit.check(
+        "compressed TFIM star spectrum and selector",
+        feshbach_qps["forward_star_spectrum_coefficients"]
+        == feshbach_qps["forward_star_expected"]
+        and feshbach_qps["selector"] == "u sum_x(1-s_x)"
+        and feshbach_qps["selector_plus_density"] == 0
+        and feshbach_qps["selector_minus_density"] == 2
+        and feshbach_qps["selector_split"] == (0, -2)
+        and feshbach_qps["small_ratio"] == "abs(delta_eff)/(2J)<epsilon_Y"
+        and feshbach_qps["Z2_flips_s"]
+        and feshbach_qps["Z2_fixes_P1"],
+        feshbach_qps,
+        {"spectrum": {0: 2, 2: 6, 4: 6, 6: 2}, "k": (0, -2)},
+        "compressed-QPS",
+    )
+    audit.check(
+        "compressed QPS scope boundary",
+        feshbach_qps["compressed_infinite_lattice_phasewise_gap"]
+        and feshbach_qps["existential_small_ratio_only"]
+        and not feshbach_qps["finite_torus_exact_degeneracy"]
+        and not feshbach_qps["oscillator_gap"],
+        feshbach_qps,
+        "compressed infinite-lattice phasewise theorem only",
+        "scope",
+    )
+
     corridor = corridor_exponent_fixture()
     audit.check(
         "N corridor exponent table",
@@ -1665,14 +2263,23 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "exact_low_band_TFIM": low_band,
             "residual_bound": residual,
             "N_corridor": corridor,
+            "full_Gibbs_context": full_gibbs,
+            "fixed_edge_corridor": fixed_edge,
+            "Feshbach_compressed_QPS": feshbach_qps,
             "pure_bond_identity_closed": True,
+            "full_Hamiltonian_Gibbs_resummation_closed": True,
+            "fixed_edge_to_growing_corridor_reduction_closed": True,
+            "below_Gamma_Feshbach_precursor_closed": True,
+            "compressed_TFIM_two_phase_QPS_closed": True,
+            "arbitrary_context_upgrade_closed": False,
+            "actual_Q3_fixed_edge_history_bound_closed": False,
             "local_measured_Renyi_reduction_closed": True,
             "semiclassical_onsite_geometry_fixture_closed": True,
             "exact_low_band_compression_fixture_closed": True,
             "onsite_interspersed_history_bound_closed": False,
             "all_exhaustion_common_alpha_closed": False,
             "rank_two_block_diagonalization_closed": False,
-            "two_phase_QPS_closed": False,
+            "two_phase_QPS_for_exact_oscillator_closed": False,
             "broken_sector_GNS_gap_closed": False,
             "physical_mass_gap_closed": False,
             "regulator_removal_closed": False,

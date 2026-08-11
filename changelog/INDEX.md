@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**591 accepted events** · latest 25 shown below · machine locator: `index.json`
+**595 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,10 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-11 | `20260811-r-167-v2-0-and-r-168-v1-1-combined-v0-9-proof-e` — [R-167 v2.0 and R-168 v1.1 combined v0.9 proof-evidence footer and hash correction] - 2026-08-11 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260811-r-167-v2-0-and-r-168-v1-1-combined-v0-9-proof-e) |
+| 2026-08-11 | `20260811-r-167-v2-0-and-r-168-v1-1-combined-gate-level-s` — [R-167 v2.0 and R-168 v1.1 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260811-r-167-v2-0-and-r-168-v1-1-combined-gate-level-s) |
+| 2026-08-11 | `20260811-r-168-v1-1-proves-current-version-map-emptiness` — [R-168 v1.1 proves current-version map emptiness and the finite-torus M2 fingerprint] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000810, R-168 | [bounded page](pages/000569-000618.md#20260811-r-168-v1-1-proves-current-version-map-emptiness) |
+| 2026-08-11 | `20260811-r-167-v2-0-resums-finite-gibbs-cutoffs-and-sepa` — [R-167 v2.0 resums finite-Gibbs cutoffs and separates compressed phases from oscillator transfer] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000809, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-0-resums-finite-gibbs-cutoffs-and-sepa) |
 | 2026-08-11 | `20260811-r-167-v1-9-and-r-168-v1-0-combined-gate-level-s` — [R-167 v1.9 and R-168 v1.0 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000806, EXP-000807, EXP-000808, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v1-9-and-r-168-v1-0-combined-gate-level-s) |
 | 2026-08-11 | `20260811-r-168-v1-0-hardens-the-prospective-schema-valid` — [R-168 v1.0 hardens the prospective schema validator after adversarial bypass audit] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000807, EXP-000808, R-168 | [bounded page](pages/000569-000618.md#20260811-r-168-v1-0-hardens-the-prospective-schema-valid) |
 | 2026-08-11 | `20260811-r-167-v1-9-integrated-verifier-linkage-correcti` — [R-167 v1.9 integrated-verifier linkage correction] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000806, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v1-9-integrated-verifier-linkage-correcti) |
@@ -38,10 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-10 | `20260810-pre-a-resolvent-lower-bound-adversarial-repair` — [PRE-A-RESOLVENT-LOWER-BOUND adversarial repair] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-pre-a-resolvent-lower-bound-adversarial-repair) |
 | 2026-08-10 | `20260810-pre-a-round1-and-weighted-energy-truth-first-ch` — [PRE-A-ROUND1-AND-WEIGHTED-ENERGY truth-first checkpoint] - 2026-08-10 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260810-pre-a-round1-and-weighted-energy-truth-first-ch) |
 | 2026-08-10 | `20260810-management-index-and-publication-routes-compact` — [MANAGEMENT-INDEX-AND-PUBLICATION-ROUTES compact authority navigation] - 2026-08-10 | — | [bounded page](pages/000569-000618.md#20260810-management-index-and-publication-routes-compact) |
-| 2026-08-10 | `20260810-correction-aggregate-index-cutover-formatting-a` — [CORRECTION AGGREGATE-INDEX-CUTOVER formatting and final shard scope] - 2026-08-10 | — | [bounded page](pages/000569-000618.md#20260810-correction-aggregate-index-cutover-formatting-a) |
-| 2026-08-10 | `20260810-aggregate-index-cutover-bounded-changelog-and-c` — [AGGREGATE-INDEX-CUTOVER bounded changelog and catalog readers] - 2026-08-10 | — | [bounded page](pages/000569-000618.md#20260810-aggregate-index-cutover-bounded-changelog-and-c) |
-| 2026-08-09 | `20260809-exp-000790-exact-result-identifier-linkage-2026` — [EXP-000790 exact result identifier linkage] - 2026-08-09 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
-| 2026-08-09 | `20260809-exp-000790-phasewise-os-kms-ground-cusp-counter` — [EXP-000790 phasewise OS-KMS, ground cusp, counterterm and empty-reference split] - 2026-08-09 | C6-SPACETIME-SIGNATURE | [legacy volume](../CHANGELOG.md) |
 
 ## Post-cutover pages
 
@@ -49,4 +49,4 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 569–591 | 23 | [000569-000618.md](pages/000569-000618.md) |
+| 569–595 | 27 | [000569-000618.md](pages/000569-000618.md) |

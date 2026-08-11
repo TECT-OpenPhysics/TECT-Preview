@@ -51,7 +51,13 @@ M1/M2/M5 map with a nonempty prediction. The tag observation is local only;
 no remote ref or custodian signature was verified. The parent gate remains
 open until a genuinely prospective external commitment and admitted
 microscopic observable map with a nonempty prediction are frozen before
-disclosure and independently verified.
+disclosure and independently verified. EXP-000810 / R-168 v1.1 proves that
+the exact current hash-pinned M1/M2/M5 map-only admitted set is empty, and
+that even a hypothetical map-only new version has no all-PASS survivor under
+the ten frozen hard rows. It also closes a 48-component finite-torus Gaussian
+M2 fingerprint. Neither result is an admitted physical response map, an
+error-controlled prediction, or a prospective freeze; the parent gate remains
+OPEN.
 Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1
 into a contestant. No winner, shortlist, preferred PDE, physical vacuum,
 Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed.
@@ -112,6 +118,53 @@ informational and non-load-bearing, not a remote query or cryptographic
 receipt; future legitimate tags do not invalidate the stable commit-blob
 audit. This is not a universal no-go for a future candidate or target.
 
+### **PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET**
+
+**Statement:** For the exact hash-pinned current M1-v0, M2-v0 and M5-v0
+records, determine the candidate-specific microscopic-map admission set, then
+test whether a hypothetical new version that changes only that map slot can
+satisfy the frozen ten-row all-PASS survival rule.
+
+**Status:** CLOSED FOR THE CURRENT VERSIONS AND MAP-ONLY EXTENSIONS ONLY
+(2026-08-11). EXP-000810 / R-168 v1.1 proves exact current cardinality zero.
+Under a hypothetical map-only new version, eight residual hard-row cells remain
+non-PASS: M1 has D01 FAIL and D02 NOT_ADMITTED; M2 has D03, D05 and D08
+NOT_ADMITTED plus D06 NOT_TESTED; M5 has D04 and D05 FAIL. Thus no M1/M2/M5
+parent law/state survives all ten rows after a map-only addition. Changing the
+state, law, dynamics, regulator, compactness or gauge data is substantively new
+and requires a new candidate version and a complete rerun. This is not a no-go
+for such a future candidate.
+
+### **PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT**
+
+**Statement:** For
+`K(k)=r+c sum_i(q^2-k_i^2)^2`, `h=2 pi/L`, `q=mh`, and the eight nodes
+`k_s=q s`, compute the ordered finite-difference ratios `R_(s,i)` and
+axis-uniformity ratios `U_(s,i)` for every node and coordinate axis.
+
+**Status:** CLOSED FOR THE EXACT GAUSSIAN FINITE-TORUS KERNEL ONLY
+(2026-08-11). EXP-000810 / R-168 v1.1 proves
+`R_(s,i)=U_(s,i)=1` for all eight nodes and three axes: all 48 ordered
+components are exactly one. This is a dimensionless mathematical fingerprint,
+not a physical response channel, error-controlled observable prediction,
+admitted candidate map, or validation result.
+
+### **PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND**
+
+**Statement:** Starting from the exact finite-torus Gaussian fingerprint,
+derive and hash-pin a target-blind physical response channel from the M2
+microscopic variables to the common Round-1 observable, with declared state,
+reference, units and limit order, and prove a complete comparison-error budget
+strictly below the frozen acceptance margin before target access.
+
+**Status:** OPEN (2026-08-11). EXP-000810 / R-168 v1.1 proves that the
+retrospective stiffness exponent is underdetermined without this map: identity
+and squared target-free completions give exponents one and two. The
+`PA-M2-CI8-RS-DISPERSION-MAP-v1` object is DESIGN_ONLY and NOT_CREATED; it has
+no candidate record, admitted map, prediction, target, freeze, tag, score or
+selection. The six required error terms, independent verification and
+prospective firewall remain unsupplied.
+
 ### **PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER**
 
 **Statement:** Before a real freeze, hash-pin every common input, inserted or
@@ -140,6 +193,9 @@ without the holdout target, together with the complete common-input ledger.
 
 **Status:** OPEN (2026-08-11). The audited admitted set is empty; M0 remains an
 effective null baseline only, and M1/M2/M5 have no admitted map/prediction pair.
+EXP-000810 / R-168 v1.1 strengthens this only for the exact current versions and
+map-only extensions. The M2 Gaussian fingerprint is not a response map, and
+`PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND` remains OPEN.
 
 ### **PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION**
 
@@ -845,6 +901,29 @@ Thus the exact state-weighted pure-bond telescope pays no operator-norm
 `exp(C L^2)` multiplier. No bound is proved for `W_L^2` in intermediate
 onsite-interspersed history states or for the complete split-product limit.
 
+### **PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION**
+
+**Statement:** In one finite volume, for self-adjoint lower-bounded `H` and
+`H_L=H-W_L`, the exact Gibbs state `rho=Z^-1 exp(-beta H)`, and a common form
+core on which `rho(W_L^2)<infinity`, bound both Gibbs-weighted orientations of
+the full-versus-cutoff unitary and the evolved density state.
+
+**Status:** CLOSED IN THE FINITE-VOLUME STATIC FULL-GIBBS SCOPE ONLY
+(2026-08-11). EXP-000809 / R-167 v2.0 proves, with one opposite Duhamel
+ordering per orientation,
+`||(U-U_L)rho^(1/2)||_2, ||rho^(1/2)(U-U_L)||_2
+ <= |t| rho(W_L^2)^(1/2)/hbar`, and
+`||rho-U_L rho U_L^*||_1 <= 2|t|rho(W_L^2)^(1/2)/hbar`.
+For bounded half-modular contexts
+`A rho^(1/2)=rho^(1/2)C_A` and the corresponding relation for `A^*`, the
+observable bounds transfer with factors `||A||+||C_A||` and
+`||A||+||C_(A^*)||`; a finite Bohr-projective class is a sufficient narrow
+example. The finite Q3 hard/form-cutoff pair is reached on its common quartic
+form domain by bounded form/spectral truncation and Hilbert--Schmidt closure.
+An exact two-level Gibbs fixture rejects an automatic arbitrary bounded-context
+upgrade. No onsite-interspersed history estimate, thermodynamic limit, or
+common alpha is proved.
+
 ### **PA-CP1-ST8-Q3LOCK-SANDWICHED-RENYI-TO-TWO-ORIENTATION-HISTORY-TAIL-CORRIDOR-REDUCTION**
 
 **Statement:** Starting from a common `alpha>1` sandwiched-Renyi bound for
@@ -884,6 +963,24 @@ restricted-tail bound is proved. Feeding a growing corridor also requires
 translation-uniform control on the fixed bond shapes or an explicit growth
 envelope for `Q_(alpha,T,S_R)` that remains absorbable as `R,L` grow.
 
+### **PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION**
+
+**Statement:** Convert a translate- and orientation-uniform two-orientation
+restricted-tail estimate for every fixed nearest-neighbour bond into one
+explicit growing cubic corridor estimate.
+
+**Status:** CLOSED AS A DETERMINISTIC CONDITIONAL REDUCTION ONLY
+(2026-08-11). EXP-000809 / R-167 v2.0 proves
+`m_R=6R(2R+1)^2<=54R^3` and the form inequality
+`W_(R,L)^2<=m_R sum_e w_(e,L)^2`. For the declared hard restricted-tail
+constants, `L_R=sqrt(R)` gives the explicit bound
+`1296 R^6 exp(-R)(R^2+2R+2) -> 0`. Translation covariance on a periodic cubic
+torus leaves three bond-direction orbits; cubic rotations are additionally
+needed to identify them. These are hard-tail constants, not constants for the
+separately defined smooth clipped-coordinate `Q_L` Hamiltonians. The actual
+translate-and-orientation-uniform onsite-interspersed Q3LOCK fixed-edge history
+estimate is not proved.
+
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
 **Statement:** Starting from the finite-region local-strict carrier, construct
@@ -909,9 +1006,12 @@ R-167 v1.8 proves the precise sandwiched-Renyi sufficient condition and a
 counterfixture to its automatic derivation. R-167 v1.9 proves that pure bond
 layers preserve coordinate tails exactly, replaces the overstrong global
 Renyi target by a local measured-Renyi sufficient condition, and registers an
-exact disjoint-bond product counterexample to global volume uniformity. It does
-not prove the onsite-interspersed local likelihood/tail hypothesis, the
-`n->infinity` limit, or the group/generator/KMS completion.
+exact disjoint-bond product counterexample to global volume uniformity.
+EXP-000809 / R-167 v2.0 adds the finite-volume static full-Gibbs two-orientation
+unitary resummation and the fixed-bond-to-growing-corridor reduction. These do
+not supply arbitrary bounded contexts or the actual translate-and-orientation-
+uniform onsite-interspersed Q3LOCK fixed-edge history estimate. The
+`n->infinity` limit and group/generator/KMS completion remain open.
 No exact Q3LOCK dynamics nonexistence is asserted.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
@@ -974,6 +1074,47 @@ field Ising Hamiltonian with `J=8cm^2`, site field
 does not give a numerical threshold for the repository `r=-9` fixture or a
 many-body phase/GNS-gap theorem.
 
+### **PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR**
+
+**Statement:** Before subtracting an extensive low-band scalar, derive the exact
+finite-volume below-one-high-mode Feshbach operator, a cubic bond-overlap bound,
+and a diagonal local-high relative-form corridor for the Q3 rank-two
+compression.
+
+**Status:** CLOSED AS A FINITE-VOLUME ABSOLUTE-ENERGY PRECURSOR ONLY
+(2026-08-11). EXP-000809 / R-167 v2.0 proves `QHQ>=Gamma Q` and, for
+`E<Gamma`,
+`F(E)=PHP-E-PHQ(QHQ-E)^(-1)QHP`. A cubic nearest-neighbour bond overlaps with
+at most 11 bonds, with equality only for bulk edges or sufficiently large
+periodic tori. For `Q_xy=1-P_xP_y`,
+`eta_b=8c(1+u^-1)(1+t^-1)A_Q`,
+`nu_b=16c[(1+u)m^2+(1+u^-1)(1+t)a^2]`, and
+`zeta=6(eta_b+nu_b/Gamma)`. At `u=t=1`,
+`eta_b=32cA_Q` and `nu_b=32cm^2+64ca^2`; the registered N corridor has the
+distinct off-block `epsilon=O(N^-3)` and diagonal relative-form
+`zeta=O(N^-2)`. This is global and extensive. It does not prove
+thermodynamic ground-band isolation, quasi-local block diagonalization,
+cutoff removal, or a two-phase QPS interaction norm.
+
+### **PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP**
+
+**Statement:** For the exact finite-spin transverse-field Ising compression,
+verify the two classical product phases and local gap, then apply the declared
+two-phase quantum Pirogov--Sinai theorem at an existentially small transverse
+ratio.
+
+**Status:** CLOSED FOR THE EXACT COMPRESSED FINITE-SPIN TFIM ONLY
+(2026-08-11). EXP-000809 / R-167 v2.0 proves that the forward-star block has
+spectrum `0` (multiplicity 2), `2J` (6), `4J` (6), and `6J` (2). With selector
+`u sum_x(1-s_x)` the convention-fixed split is `k=(0,-2)`. Yarotskii's
+two-phase theorem (Russian Math. Surveys 61:2 (2006), DOI
+`10.1070/RM2006v061n02ABEH004323`) gives, for an existential
+`|delta_eff|/(2J)<epsilon_Y`, exactly two pure translation-invariant
+infinite-lattice phases, exponential clustering, and a positive GNS
+Hamiltonian gap in each selected compressed phase. This gives no explicit
+`epsilon_Y` or `N_0`, no finite-torus exact degeneracy, no repository `r=-9`
+certification, no rank-two oscillator transfer, and no oscillator GNS gap.
+
 ### **PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS**
 
 **Statement:** Starting from the exact rank-two onsite band, prove a volume-
@@ -984,13 +1125,18 @@ quantum Pirogov--Sinai theorem while preserving both ordered sectors and a
 uniform positive excitation gap.
 
 **Status:** OPEN (2026-08-11). R-167 v1.9 supplies the onsite doublet, exact
-low-band compression, residual inputs and a nonempty asymptotic corridor. The
+low-band compression, residual inputs and a nonempty asymptotic corridor.
+EXP-000809 / R-167 v2.0 adds an exact below-`Gamma` finite-volume Feshbach and
+relative-form precursor and proves the two-phase phasewise-gap theorem for the
+exact compressed finite-spin TFIM. The Feshbach estimate is global and
+extensive, while the compressed theorem is not an oscillator transfer. The
 published Del Vecchio--Frohlich--Pizzo theorem is rank-one and concludes a
 unique ground state; choosing only the even onsite vector fails in the desired
 corridor because its splitting is exponentially smaller than the order-one
-Ising scale. No rank-two unbounded theorem, uniform cutoff removal or exact
-two-phase QPS transfer is registered. This direct-import mismatch is not a
-no-go for the new gate or for the actual Q3LOCK gap.
+Ising scale. No rank-two unbounded theorem, uniform cutoff removal, quasi-local
+oscillator effective interaction, or exact oscillator two-phase QPS transfer
+is registered. This direct-import mismatch is not a no-go for the gate or for
+the actual Q3LOCK gap.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
@@ -1012,8 +1158,10 @@ implementing spectrum is gapless. Distinct order and ground-state existence
 therefore do not supply the required coercive estimate. R-167 v1.8 supplies
 the exact zero-temperature OS/GNS criterion, isolated instanton action, and
 conditional doublet-Ising reference. R-167 v1.9 proves the fixed-`mu`, small-
-`h_sc` onsite doublet and exact rank-two TFIM compression, but the volume-
-uniform rank-two block/QPS gate, beta-infinity selection and actual phasewise
+`h_sc` onsite doublet and exact rank-two TFIM compression. EXP-000809 / R-167
+v2.0 proves a positive phasewise GNS gap only for the exact compressed
+finite-spin TFIM; it is not the oscillator gap. The volume-uniform rank-two
+block/QPS transfer, beta-infinity oscillator selection and actual phasewise
 temporal mass remain open. This gate is
 independent of the common-alpha history gate and does not license a physical
 mass-gap claim.

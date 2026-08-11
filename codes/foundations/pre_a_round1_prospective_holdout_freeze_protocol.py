@@ -17,6 +17,9 @@ create a git tag.  In particular, this script does not close
 ``PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE``, Pre-A, or Sector A.
 
 Version history:
+  1.3.0 (2026-08-11): add the exact current-version map-empty-set proof,
+        retrospective M2 response-map underdetermination, 48-component finite-
+        torus dispersion fingerprint, and DESIGN_ONLY successor-schema audit.
   1.2.0 (2026-08-11): enforce exact nested target and input schemas, bind one
         frozen candidate prediction to an eligible admitted map, add hostile
         alias/type fixtures, and make live freeze-tag observation non-binding.
@@ -36,13 +39,15 @@ import os
 import re
 import subprocess
 import tempfile
+from fractions import Fraction
+from itertools import product
 from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 from typing import Any, Callable
 from urllib.parse import urlparse
 
 
-__version__ = "1.2.0"
+__version__ = "1.3.0"
 __first_issued__ = "2026-08-11"
 __version_issued__ = "2026-08-11"
 
@@ -58,21 +63,32 @@ RESULT_ID = (
     "READINESS-AUDIT"
 )
 RESULT_NUMBER = "R-168"
-RESULT_VERSION = "v1.0"
-EXPLORATION_ID = "EXP-000807"
-NEGATIVE_IDS = (
+RESULT_VERSION = "v1.1"
+EXPLORATION_ID = "EXP-000810"
+PRIOR_EXPLORATION_IDS = ("EXP-000807", "EXP-000808")
+PRIOR_NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-"
     "NONEXISTENCE",
 )
+NEW_NEGATIVE_IDS = (
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR",
+)
+NEGATIVE_IDS = PRIOR_NEGATIVE_IDS + NEW_NEGATIVE_IDS
 REUSED_NEGATIVE_IDS = (
     "NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION",
 )
-CLOSED_SUBGATES = (
+PRIOR_CLOSED_SUBGATES = (
     "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
     "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
     "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
     "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
 )
+NEW_CLOSED_SUBGATES = (
+    "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+    "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+)
+CLOSED_SUBGATES = PRIOR_CLOSED_SUBGATES + NEW_CLOSED_SUBGATES
+PHYSICAL_RESPONSE_GATE = "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
 OPEN_GATES = (
     PARENT_GATE,
     "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
@@ -80,10 +96,15 @@ OPEN_GATES = (
     "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
     "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-"
     "VERIFICATION",
+    PHYSICAL_RESPONSE_GATE,
 )
+M2_SUCCESSOR_ID = "PA-M2-CI8-RS-DISPERSION-MAP-v1"
 
 FREEZE_DIRECTORY = REPO / "predictions/freezes"
 PREDICTION_LEDGER = REPO / "predictions/prediction-ledger.md"
+NEGATIVE_REGISTRY = REPO / "negative-results/registry.md"
+RESULTS_LEDGER = REPO / "RESULTS-LEDGER.md"
+EXPLORATION_LOG = REPO / "explorations/log.jsonl"
 GATE_REGISTRY = REPO / "claims/GATES.md"
 AUTHORITY_MANIFEST = (
     REPO / "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json"
@@ -272,6 +293,138 @@ FORBIDDEN_TARGET_VALUE_KEYS = {
 }
 HASH_RE = re.compile(r"[0-9a-f]{64}")
 OID_RE = re.compile(r"[0-9a-f]{40}")
+
+EXPECTED_BLOCKERS = (
+    "NO_MACHINE_FREEZE_RECORD",
+    "NO_ADMITTED_MICROSCOPIC_SURVIVOR",
+    "M1_MAP_AND_PREDICTION_ABSENT",
+    "M2_PHYSICAL_PREDICTION_AND_HOLDOUT_ABSENT",
+    "M5_MAP_AND_HOLDOUT_ABSENT",
+    "PER_PARAMETER_COMMON_INPUT_LEDGER_INCOMPLETE",
+    "PROSPECTIVE_PREDICTION_NOT_FROZEN",
+)
+SUCCESSOR_DESIGN_SCHEMA = "tect/pre-a-m2-ci8-rs-dispersion-map-successor-design/1.0"
+SUCCESSOR_DESIGN_FIELDS = (
+    "schema",
+    "design_id",
+    "hypothetical_candidate_id",
+    "parent_candidate_id",
+    "status",
+    "candidate_created",
+    "candidate_manifest",
+    "admission_status",
+    "microscopic_map_status",
+    "prediction_status",
+    "target_status",
+    "freeze_status",
+    "tag_status",
+    "score_status",
+    "selection_status",
+    "required_contract",
+    "no_overclaim",
+)
+SUCCESSOR_MANIFEST_FIELDS = ("path", "sha256")
+SUCCESSOR_REQUIRED_FIELDS = (
+    "physical_response_channel",
+    "candidate_neutral_estimand",
+    "limit_order",
+    "finite_torus_fingerprint",
+    "error_budget",
+    "prospective_input_firewall",
+    "independent_verification",
+    "open_gate",
+)
+SUCCESSOR_RESPONSE_FIELDS = (
+    "status",
+    "map",
+    "state_and_reference",
+    "units",
+    "proof",
+    "script",
+)
+SUCCESSOR_FINGERPRINT_FIELDS = (
+    "closed_child_id",
+    "ordered_component_count",
+    "status",
+)
+SUCCESSOR_ERROR_FIELDS = (
+    "status",
+    "terms",
+    "required_bound",
+    "margin_condition",
+)
+EXPECTED_ERROR_TERMS = (
+    "finite_torus_spacing",
+    "regulator_removal",
+    "nonlinear_remainder",
+    "loop_or_renormalization",
+    "state_reference_transfer",
+    "raw_estimator",
+)
+
+
+MAP_ONLY_SURVIVAL_SCHEMA = "tect/pre-a-round1-map-only-survival-contract/1.0"
+MAP_ONLY_SURVIVAL_FIELDS = (
+    "schema",
+    "source_path",
+    "source_sha256",
+    "hard_rows",
+    "survives_if",
+    "hypothetical_map_only_change",
+    "residual_hard_rows",
+    "map_only_survivor_ids",
+    "all_pass_after_map_only",
+    "substantive_new_version_requirements",
+    "boundary",
+)
+MAP_ONLY_CHANGE_FIELDS = (
+    "hypothetical_only",
+    "microscopic_map_after",
+    "preserved_fields",
+)
+MAP_ONLY_PRESERVED_FIELDS = (
+    "degrees_and_state_space",
+    "law_and_parameter_domain",
+    "reference_and_boundary",
+    "regulator_and_limit_order",
+    "kinetic_tensor_and_dynamics",
+    "compactness_and_gauge_structure",
+    "physical_modes_and_quotients",
+    "critical_data",
+    "prospective_prediction_and_validation",
+    "robustness_envelope",
+)
+MAP_ONLY_RESIDUAL_ORACLE = {
+    MICROSCOPIC_CANDIDATES[0]: {
+        "D01-SAME-REFERENCE": "FAIL",
+        "D02-KINETIC-TENSOR": "NOT_ADMITTED",
+    },
+    MICROSCOPIC_CANDIDATES[1]: {
+        "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+        "D05-COMPACT-WINDING": "NOT_ADMITTED",
+        "D06-CRITICAL-DATA": "NOT_TESTED",
+        "D08-ROBUSTNESS": "NOT_ADMITTED",
+    },
+    MICROSCOPIC_CANDIDATES[2]: {
+        "D04-SPEED-DISPERSION": "FAIL",
+        "D05-COMPACT-WINDING": "FAIL",
+    },
+}
+MAP_ONLY_SUBSTANTIVE_REQUIREMENTS = {
+    MICROSCOPIC_CANDIDATES[0]: (
+        "repair D01 through state, law or ensemble data",
+        "supply a conservative real-time kinetic law and tensor",
+    ),
+    MICROSCOPIC_CANDIDATES[1]: (
+        "supply compact or gauge configuration and winding or flux data",
+        "derive physical modes after constraints and quotients",
+        "derive critical data and robustness",
+    ),
+    MICROSCOPIC_CANDIDATES[2]: (
+        "change the law or nodes to repair rank-one D04 dispersion",
+        "supply a genuine compact gauge connection",
+    ),
+}
 
 
 def repo_path(path: Path) -> str:
@@ -1268,6 +1421,673 @@ def hostile_fixture_reports(valid: dict[str, Any]) -> dict[str, dict[str, Any]]:
     return reports
 
 
+
+def canonical_digest(value: Any) -> str:
+    encoded = json.dumps(
+        value, sort_keys=True, separators=(",", ":"), ensure_ascii=True
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def fraction_text(value: Fraction) -> str:
+    if value.denominator == 1:
+        return str(value.numerator)
+    return f"{value.numerator}/{value.denominator}"
+
+
+
+def build_map_only_survival_contract() -> dict[str, Any]:
+    triage = load_json(ROUND1_MANIFEST)
+    matrix = triage["categorical_matrix"]
+    hard_rows = list(triage["survival_rule"]["hard_rows"])
+    residual: dict[str, dict[str, str]] = {}
+    for candidate_id, row_oracle in MAP_ONLY_RESIDUAL_ORACLE.items():
+        residual[candidate_id] = {
+            row_id: matrix[candidate_id][row_id] for row_id in row_oracle
+        }
+    requirements = {
+        candidate_id: list(items)
+        for candidate_id, items in MAP_ONLY_SUBSTANTIVE_REQUIREMENTS.items()
+    }
+    return {
+        "schema": MAP_ONLY_SURVIVAL_SCHEMA,
+        "source_path": repo_path(ROUND1_MANIFEST),
+        "source_sha256": normalized_sha256(ROUND1_MANIFEST),
+        "hard_rows": hard_rows,
+        "survives_if": triage["survival_rule"]["survives_if"],
+        "hypothetical_map_only_change": {
+            "hypothetical_only": True,
+            "microscopic_map_after": "ADMITTED",
+            "preserved_fields": list(MAP_ONLY_PRESERVED_FIELDS),
+        },
+        "residual_hard_rows": residual,
+        "map_only_survivor_ids": [],
+        "all_pass_after_map_only": False,
+        "substantive_new_version_requirements": requirements,
+        "boundary": (
+            "A response-map-only extension preserving parent law/state/reference/"
+            "regulator data cannot clear the listed non-PASS hard rows."
+        ),
+    }
+
+
+def validate_map_only_survival_contract(contract: Any) -> dict[str, Any]:
+    errors: list[dict[str, str]] = []
+    row = exact_object(
+        contract,
+        MAP_ONLY_SURVIVAL_FIELDS,
+        errors,
+        "MAP_ONLY_SURVIVAL_FIELDS_INVALID",
+        "map_only_survival_contract",
+    )
+    triage = load_json(ROUND1_MANIFEST)
+    source_rule = triage["survival_rule"]
+    if (
+        row.get("schema") != MAP_ONLY_SURVIVAL_SCHEMA
+        or row.get("source_path") != repo_path(ROUND1_MANIFEST)
+        or not path_hash_valid(row.get("source_path"), row.get("source_sha256"))
+        or row.get("hard_rows") != source_rule["hard_rows"]
+        or row.get("survives_if") != source_rule["survives_if"]
+    ):
+        error(errors, "MAP_ONLY_SURVIVAL_RULE_INVALID", "frozen all-PASS rule changed")
+    change = exact_object(
+        row.get("hypothetical_map_only_change"),
+        MAP_ONLY_CHANGE_FIELDS,
+        errors,
+        "MAP_ONLY_CHANGE_SCOPE_INVALID",
+        "hypothetical_map_only_change",
+    )
+    if (
+        change.get("hypothetical_only") is not True
+        or change.get("microscopic_map_after") != "ADMITTED"
+        or not isinstance(change.get("preserved_fields"), list)
+        or tuple(change.get("preserved_fields", [])) != MAP_ONLY_PRESERVED_FIELDS
+    ):
+        error(errors, "MAP_ONLY_CHANGE_SCOPE_INVALID", "non-map structures were changed")
+    residual = row.get("residual_hard_rows")
+    source_residual = {
+        candidate_id: {
+            row_id: triage["categorical_matrix"][candidate_id][row_id]
+            for row_id in expected
+        }
+        for candidate_id, expected in MAP_ONLY_RESIDUAL_ORACLE.items()
+    }
+    if (
+        not isinstance(residual, dict)
+        or residual != MAP_ONLY_RESIDUAL_ORACLE
+        or residual != source_residual
+        or any(
+            verdict == "PASS"
+            for candidate_rows in source_residual.values()
+            for verdict in candidate_rows.values()
+        )
+    ):
+        error(errors, "MAP_ONLY_RESIDUAL_INVALID", "residual non-map hard rows changed")
+    requirements = row.get("substantive_new_version_requirements")
+    expected_requirements = {
+        candidate_id: list(items)
+        for candidate_id, items in MAP_ONLY_SUBSTANTIVE_REQUIREMENTS.items()
+    }
+    if requirements != expected_requirements:
+        error(
+            errors,
+            "MAP_ONLY_SUBSTANTIVE_CHANGE_INVALID",
+            "substantive non-map repair requirements changed",
+        )
+    if (
+        row.get("map_only_survivor_ids") != []
+        or row.get("all_pass_after_map_only") is not False
+    ):
+        error(
+            errors,
+            "MAP_ONLY_SURVIVOR_FALSE_PROMOTION",
+            "map-only extension cannot be an all-PASS survivor",
+        )
+    if not is_nonempty_string(row.get("boundary")):
+        error(errors, "MAP_ONLY_SURVIVAL_FIELDS_INVALID", "scope boundary missing")
+    return {
+        "valid": not errors,
+        "error_codes": [item["code"] for item in errors],
+        "errors": errors,
+    }
+
+
+def map_only_survival_hostile_reports(
+    valid: dict[str, Any],
+) -> dict[str, dict[str, Any]]:
+    fixtures: dict[str, tuple[str, Callable[[dict[str, Any]], None]]] = {
+        "hard_row_removed": (
+            "MAP_ONLY_SURVIVAL_RULE_INVALID",
+            lambda row: row["hard_rows"].pop(),
+        ),
+        "survival_rule_softened": (
+            "MAP_ONLY_SURVIVAL_RULE_INVALID",
+            lambda row: row.__setitem__("survives_if", "At least one hard row is PASS."),
+        ),
+        "m1_nonpass_promoted": (
+            "MAP_ONLY_RESIDUAL_INVALID",
+            lambda row: row["residual_hard_rows"][MICROSCOPIC_CANDIDATES[0]].__setitem__(
+                "D01-SAME-REFERENCE", "PASS"
+            ),
+        ),
+        "m2_nonpass_promoted": (
+            "MAP_ONLY_RESIDUAL_INVALID",
+            lambda row: row["residual_hard_rows"][MICROSCOPIC_CANDIDATES[1]].__setitem__(
+                "D05-COMPACT-WINDING", "PASS"
+            ),
+        ),
+        "m5_nonpass_promoted": (
+            "MAP_ONLY_RESIDUAL_INVALID",
+            lambda row: row["residual_hard_rows"][MICROSCOPIC_CANDIDATES[2]].__setitem__(
+                "D04-SPEED-DISPERSION", "PASS"
+            ),
+        ),
+        "preserved_regulator_removed": (
+            "MAP_ONLY_CHANGE_SCOPE_INVALID",
+            lambda row: row["hypothetical_map_only_change"]["preserved_fields"].remove(
+                "regulator_and_limit_order"
+            ),
+        ),
+        "map_only_survivor_fabricated": (
+            "MAP_ONLY_SURVIVOR_FALSE_PROMOTION",
+            lambda row: row["map_only_survivor_ids"].append(MICROSCOPIC_CANDIDATES[1]),
+        ),
+    }
+    reports: dict[str, dict[str, Any]] = {}
+    for name, (expected_code, mutation) in fixtures.items():
+        hostile = copy.deepcopy(valid)
+        mutation(hostile)
+        report = validate_map_only_survival_contract(hostile)
+        reports[name] = {
+            "valid": report["valid"],
+            "error_codes": report["error_codes"],
+            "expected_error_code": expected_code,
+            "expected_code_observed": expected_code in report["error_codes"],
+        }
+    return reports
+
+
+def current_version_map_only_audit() -> dict[str, Any]:
+    """Derive exact current maps and the stronger map-only survivor no-go."""
+
+    admission = load_json(ADMISSION_FREEZE)
+    contestants = admission["contestants"]
+    microscopic = [
+        row for row in contestants if row["candidate_id"] in MICROSCOPIC_CANDIDATES
+    ]
+    if [row["candidate_id"] for row in microscopic] != list(MICROSCOPIC_CANDIDATES):
+        raise AssertionError("current microscopic candidate order changed")
+
+    rows: list[dict[str, Any]] = []
+    admitted: list[str] = []
+    for frozen in microscopic:
+        candidate_id = frozen["candidate_id"]
+        path = REPO / frozen["path"]
+        candidate = load_json(path)
+        pin_matches = normalized_sha256(path) == frozen["normalized_sha256"]
+        if candidate.get("candidate_id") != candidate_id or not pin_matches:
+            raise AssertionError(f"current candidate pin mismatch: {candidate_id}")
+
+        normalized_status = admission["normalized_candidate_contracts"][candidate_id][
+            "microscopic_to_observable_map"
+        ]
+        if candidate_id == MICROSCOPIC_CANDIDATES[0]:
+            direct_value = candidate["observable_map"][
+                "map_to_round1_measured_observables"
+            ]
+            evidence = "observable_map.map_to_round1_measured_observables=false"
+            map_only_admitted = direct_value is not False
+        elif candidate_id == MICROSCOPIC_CANDIDATES[1]:
+            direct_value = {
+                "observable_map_key_present": "observable_map" in candidate,
+                "physical_predictions": candidate["input_prediction_accounting"][
+                    "physical_predictions"
+                ],
+                "holdout_prediction": candidate["input_prediction_accounting"][
+                    "holdout_prediction"
+                ],
+                "normalized_status": normalized_status,
+            }
+            evidence = (
+                "no observable_map; physical_predictions=[]; holdout_prediction=false; "
+                "normalized status ABSENT/conditional-posthoc"
+            )
+            map_only_admitted = not (
+                direct_value["observable_map_key_present"] is False
+                and direct_value["physical_predictions"] == []
+                and direct_value["holdout_prediction"] is False
+                and normalized_status.startswith("ABSENT;")
+            )
+        else:
+            direct_value = candidate["observable_map"]["map_to_measured_observables"]
+            evidence = "observable_map.map_to_measured_observables=false"
+            map_only_admitted = direct_value is not False
+
+        if map_only_admitted:
+            admitted.append(candidate_id)
+        rows.append(
+            {
+                "candidate_id": candidate_id,
+                "path": frozen["path"],
+                "pinned_sha256": frozen["normalized_sha256"],
+                "pin_matches": pin_matches,
+                "normalized_map_status": normalized_status,
+                "direct_value": direct_value,
+                "exact_map_evidence": evidence,
+                "map_only_admitted": map_only_admitted,
+                "canonical_record_digest": canonical_digest(candidate),
+            }
+        )
+
+    survival_contract = build_map_only_survival_contract()
+    return {
+        "closed_child_id": NEW_CLOSED_SUBGATES[0],
+        "source_freeze_path": repo_path(ADMISSION_FREEZE),
+        "source_freeze_sha256": normalized_sha256(ADMISSION_FREEZE),
+        "rows": rows,
+        "admitted_candidate_ids": admitted,
+        "cardinality": len(admitted),
+        "negative_id": NEW_NEGATIVE_IDS[0],
+        "same_version_repair_possible": False,
+        "map_only_new_version_all_pass_repair_possible": False,
+        "survival_contract": survival_contract,
+        "boundary": (
+            "Current maps are absent; even a hypothetical response-map-only new "
+            "version preserving parent law/state data retains non-PASS hard rows."
+        ),
+    }
+
+
+def exact_dispersion_fingerprint(mode_index: int = 3) -> dict[str, Any]:
+    """Compute the ordered 48-component M2 finite-torus fingerprint exactly."""
+
+    if not isinstance(mode_index, int) or isinstance(mode_index, bool) or mode_index < 1:
+        raise ValueError("mode_index must be a positive integer")
+    records: list[dict[str, Any]] = []
+    component_vector: list[str] = []
+    for node in product((-1, 1), repeat=3):
+        preliminary: list[dict[str, Any]] = []
+        for axis, sign in enumerate(node, start=1):
+            d_plus = (mode_index * mode_index - (sign * mode_index + 1) ** 2) ** 2
+            d_minus = (mode_index * mode_index - (sign * mode_index - 1) ** 2) ** 2
+            symmetric = Fraction(d_plus + d_minus, 2)
+            antisymmetric = Fraction(d_plus - d_minus, 2)
+            preliminary.append(
+                {
+                    "axis": axis,
+                    "sign": sign,
+                    "d_plus": d_plus,
+                    "d_minus": d_minus,
+                    "S": symmetric,
+                    "A": antisymmetric,
+                }
+            )
+        mean_symmetric = sum(
+            (row["S"] for row in preliminary), start=Fraction(0, 1)
+        ) / 3
+        for row in preliminary:
+            sign = row["sign"]
+            symmetric = row["S"]
+            antisymmetric = row["A"]
+            ratio_r = (
+                antisymmetric
+                / symmetric
+                * Fraction(4 * mode_index * mode_index + 1, 4 * sign * mode_index)
+            )
+            ratio_u = symmetric / mean_symmetric
+            records.append(
+                {
+                    "node": list(node),
+                    "axis": row["axis"],
+                    "d_plus": row["d_plus"],
+                    "d_minus": row["d_minus"],
+                    "S": fraction_text(symmetric),
+                    "A": fraction_text(antisymmetric),
+                    "S_bar": fraction_text(mean_symmetric),
+                    "R": fraction_text(ratio_r),
+                    "U": fraction_text(ratio_u),
+                }
+            )
+            component_vector.extend((fraction_text(ratio_r), fraction_text(ratio_u)))
+    return {
+        "closed_child_id": NEW_CLOSED_SUBGATES[1],
+        "mode_index_fixture": mode_index,
+        "node_count": len({tuple(row["node"]) for row in records}),
+        "node_axis_record_count": len(records),
+        "ordered_component_count": len(component_vector),
+        "component_order": "lexicographic node, axis 1..3, R then U",
+        "component_vector": component_vector,
+        "all_components_exactly_one": all(value == "1" for value in component_vector),
+        "records": records,
+        "fingerprint_sha256": canonical_digest(component_vector),
+        "physical_prediction": False,
+    }
+
+
+def retrospective_response_underdetermination() -> dict[str, Any]:
+    """Give two exact completions of the absent M2 response-map slot."""
+
+    t = Fraction(1, 8)
+    doubled = 2 * t
+    kappa = lambda value: value
+    identity = lambda value: value
+    square = lambda value: value * value
+    identity_ratio = identity(kappa(doubled)) / identity(kappa(t))
+    square_ratio = square(kappa(doubled)) / square(kappa(t))
+    return {
+        "current_candidate_id": MICROSCOPIC_CANDIDATES[1],
+        "fixture_t": fraction_text(t),
+        "same_stiffness_ratio": fraction_text(kappa(doubled) / kappa(t)),
+        "completion_identity": {
+            "definition": "R_1(kappa)=kappa/kappa_0",
+            "exact_scale_ratio": fraction_text(identity_ratio),
+            "exponent": 1,
+        },
+        "completion_square": {
+            "definition": "R_2(kappa)=(kappa/kappa_0)^2",
+            "exact_scale_ratio": fraction_text(square_ratio),
+            "exponent": 2,
+        },
+        "unique_physical_exponent_derivable": False,
+        "validation_credit": False,
+        "admitted_map_created": False,
+        "boundary": (
+            "Logical completions of a missing response slot only; neither completion "
+            "is an M2 candidate map or prediction."
+        ),
+    }
+
+
+def validate_successor_design(design: Any) -> dict[str, Any]:
+    errors: list[dict[str, str]] = []
+    root = exact_object(
+        design,
+        SUCCESSOR_DESIGN_FIELDS,
+        errors,
+        "SUCCESSOR_FIELDS_INVALID",
+        "m2_v1_successor_design",
+    )
+    if (
+        root.get("schema") != SUCCESSOR_DESIGN_SCHEMA
+        or root.get("design_id")
+        != "PA-M2-CI8-RS-DISPERSION-MAP-v1-SCHEMA-DESIGN"
+        or root.get("hypothetical_candidate_id") != M2_SUCCESSOR_ID
+        or root.get("parent_candidate_id") != MICROSCOPIC_CANDIDATES[1]
+        or root.get("status") != "DESIGN_ONLY"
+    ):
+        error(errors, "SUCCESSOR_ID_INVALID", "successor design identity changed")
+    manifest = exact_object(
+        root.get("candidate_manifest"),
+        SUCCESSOR_MANIFEST_FIELDS,
+        errors,
+        "SUCCESSOR_CREATION_FORBIDDEN",
+        "candidate_manifest",
+    )
+    if root.get("candidate_created") is not False or any(
+        manifest.get(field) is not None for field in SUCCESSOR_MANIFEST_FIELDS
+    ):
+        error(errors, "SUCCESSOR_CREATION_FORBIDDEN", "no candidate record may be materialized")
+    if root.get("admission_status") != "NOT_CREATED" or root.get(
+        "microscopic_map_status"
+    ) != "NOT_CREATED":
+        error(errors, "SUCCESSOR_PROMOTION_FORBIDDEN", "design cannot admit a map")
+    output_fields = (
+        "prediction_status",
+        "target_status",
+        "freeze_status",
+        "tag_status",
+        "score_status",
+        "selection_status",
+    )
+    if any(root.get(field) != "NOT_CREATED" for field in output_fields):
+        error(errors, "SUCCESSOR_OUTPUT_FORBIDDEN", "design cannot contain downstream outputs")
+    required = exact_object(
+        root.get("required_contract"),
+        SUCCESSOR_REQUIRED_FIELDS,
+        errors,
+        "SUCCESSOR_REQUIRED_CONTRACT_INVALID",
+        "required_contract",
+    )
+    response = exact_object(
+        required.get("physical_response_channel"),
+        SUCCESSOR_RESPONSE_FIELDS,
+        errors,
+        "SUCCESSOR_REQUIRED_CONTRACT_INVALID",
+        "physical_response_channel",
+    )
+    if response.get("status") != "REQUIRED_NOT_SUPPLIED" or any(
+        response.get(field) is not None for field in SUCCESSOR_RESPONSE_FIELDS[1:]
+    ):
+        error(errors, "SUCCESSOR_REQUIRED_CONTRACT_INVALID", "response map must remain absent")
+    if (
+        required.get("candidate_neutral_estimand") != "REQUIRED_NOT_SUPPLIED"
+        or required.get("limit_order") != "REQUIRED_NOT_SUPPLIED"
+        or required.get("prospective_input_firewall")
+        != "MUST_BE_FROZEN_BEFORE_TARGET_DISCLOSURE"
+        or required.get("independent_verification") != "REQUIRED_NOT_SUPPLIED"
+        or required.get("open_gate") != PHYSICAL_RESPONSE_GATE
+    ):
+        error(errors, "SUCCESSOR_REQUIRED_CONTRACT_INVALID", "required placeholders changed")
+    fingerprint = exact_object(
+        required.get("finite_torus_fingerprint"),
+        SUCCESSOR_FINGERPRINT_FIELDS,
+        errors,
+        "SUCCESSOR_FINGERPRINT_INVALID",
+        "finite_torus_fingerprint",
+    )
+    if (
+        fingerprint.get("closed_child_id") != NEW_CLOSED_SUBGATES[1]
+        or fingerprint.get("ordered_component_count") != 48
+        or fingerprint.get("status") != "MATHEMATICAL_FINGERPRINT_ONLY"
+    ):
+        error(errors, "SUCCESSOR_FINGERPRINT_INVALID", "fingerprint contract changed")
+    budget = exact_object(
+        required.get("error_budget"),
+        SUCCESSOR_ERROR_FIELDS,
+        errors,
+        "SUCCESSOR_ERROR_BUDGET_INVALID",
+        "error_budget",
+    )
+    if (
+        budget.get("status") != "REQUIRED_NOT_SUPPLIED"
+        or not isinstance(budget.get("terms"), list)
+        or tuple(budget.get("terms", [])) != EXPECTED_ERROR_TERMS
+        or not is_nonempty_string(budget.get("required_bound"))
+        or not is_nonempty_string(budget.get("margin_condition"))
+    ):
+        error(errors, "SUCCESSOR_ERROR_BUDGET_INVALID", "error budget is incomplete")
+    if not is_nonempty_string(root.get("no_overclaim")):
+        error(errors, "SUCCESSOR_FIELDS_INVALID", "successor scope is empty")
+    return {
+        "valid": not errors,
+        "error_codes": [row["code"] for row in errors],
+        "errors": errors,
+    }
+
+
+def successor_hostile_reports(valid: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    fixtures: dict[str, tuple[str, Callable[[dict[str, Any]], None]]] = {
+        "candidate_created": (
+            "SUCCESSOR_CREATION_FORBIDDEN",
+            lambda row: row.__setitem__("candidate_created", True),
+        ),
+        "candidate_manifest_materialized": (
+            "SUCCESSOR_CREATION_FORBIDDEN",
+            lambda row: row["candidate_manifest"].update(
+                {"path": "strategy/fake-m2-v1.json", "sha256": "0" * 64}
+            ),
+        ),
+        "admission_promoted": (
+            "SUCCESSOR_PROMOTION_FORBIDDEN",
+            lambda row: row.__setitem__("admission_status", "ADMITTED"),
+        ),
+        "map_promoted": (
+            "SUCCESSOR_PROMOTION_FORBIDDEN",
+            lambda row: row.__setitem__("microscopic_map_status", "ADMITTED"),
+        ),
+        "prediction_materialized": (
+            "SUCCESSOR_OUTPUT_FORBIDDEN",
+            lambda row: row.__setitem__("prediction_status", "PRESENT"),
+        ),
+        "target_materialized": (
+            "SUCCESSOR_OUTPUT_FORBIDDEN",
+            lambda row: row.__setitem__("target_status", "PRESENT"),
+        ),
+        "freeze_or_tag_materialized": (
+            "SUCCESSOR_OUTPUT_FORBIDDEN",
+            lambda row: row.update({"freeze_status": "FROZEN", "tag_status": "CREATED"}),
+        ),
+        "score_or_selection_materialized": (
+            "SUCCESSOR_OUTPUT_FORBIDDEN",
+            lambda row: row.update({"score_status": "SCORED", "selection_status": "SELECTED"}),
+        ),
+        "response_channel_smuggled": (
+            "SUCCESSOR_REQUIRED_CONTRACT_INVALID",
+            lambda row: row["required_contract"]["physical_response_channel"].update(
+                {"status": "SUPPLIED", "map": "posthoc identity"}
+            ),
+        ),
+        "error_budget_term_dropped": (
+            "SUCCESSOR_ERROR_BUDGET_INVALID",
+            lambda row: row["required_contract"]["error_budget"]["terms"].pop(),
+        ),
+        "fingerprint_dimension_changed": (
+            "SUCCESSOR_FINGERPRINT_INVALID",
+            lambda row: row["required_contract"]["finite_torus_fingerprint"].__setitem__(
+                "ordered_component_count", 47
+            ),
+        ),
+    }
+    reports: dict[str, dict[str, Any]] = {}
+    for name, (expected_code, mutation) in fixtures.items():
+        hostile = copy.deepcopy(valid)
+        mutation(hostile)
+        report = validate_successor_design(hostile)
+        reports[name] = {
+            "expected_error_code": expected_code,
+            "valid": report["valid"],
+            "error_codes": report["error_codes"],
+            "expected_code_observed": expected_code in report["error_codes"],
+        }
+    return reports
+
+
+def section_for(text: str, identifier: str) -> str:
+    marker = f"### **{identifier}**"
+    start = text.find(marker)
+    if start < 0:
+        return ""
+    end = text.find("\n### **", start + len(marker))
+    return text[start:] if end < 0 else text[start:end]
+
+
+def exploration_record(identifier: str) -> dict[str, Any] | None:
+    if not EXPLORATION_LOG.is_file():
+        return None
+    for line in EXPLORATION_LOG.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        if row.get("id") == identifier:
+            return row
+    return None
+
+
+def formal_authority_audit(audit: Audit, *, staged: bool) -> dict[str, Any]:
+    """Require additive v1.1 authorities, while supporting assembly staging."""
+
+    missing: list[str] = []
+    gates_text = GATE_REGISTRY.read_text(encoding="utf-8")
+    for identifier in NEW_CLOSED_SUBGATES:
+        section = section_for(gates_text, identifier)
+        if not section:
+            missing.append(f"claims/GATES.md#{identifier}")
+        else:
+            audit.check(
+                f"new closed gate {identifier}",
+                "**Status:** CLOSED" in section,
+                "CLOSED" if "**Status:** CLOSED" in section else section[:160],
+                "CLOSED",
+                "formal_authority",
+            )
+    section = section_for(gates_text, PHYSICAL_RESPONSE_GATE)
+    if not section:
+        missing.append(f"claims/GATES.md#{PHYSICAL_RESPONSE_GATE}")
+    else:
+        audit.check(
+            "physical response gate open",
+            "**Status:** OPEN" in section,
+            "OPEN" if "**Status:** OPEN" in section else section[:160],
+            "OPEN",
+            "formal_authority",
+        )
+
+    negative_text = NEGATIVE_REGISTRY.read_text(encoding="utf-8")
+    for identifier in NEW_NEGATIVE_IDS:
+        if identifier not in negative_text:
+            missing.append(f"negative-results/registry.md#{identifier}")
+        else:
+            audit.check(
+                f"new negative {identifier}",
+                negative_text.count(identifier) >= 1,
+                negative_text.count(identifier),
+                ">=1",
+                "formal_authority",
+            )
+
+    result_text = RESULTS_LEDGER.read_text(encoding="utf-8")
+    if f"{RESULT_NUMBER} {RESULT_VERSION}" not in result_text or RESULT_ID not in result_text:
+        missing.append(f"RESULTS-LEDGER.md#{RESULT_NUMBER}-{RESULT_VERSION}")
+    else:
+        audit.check(
+            "v1.1 result authority",
+            f"{RESULT_NUMBER} {RESULT_VERSION}" in result_text and RESULT_ID in result_text,
+            True,
+            True,
+            "formal_authority",
+        )
+
+    exploration = exploration_record(EXPLORATION_ID)
+    if exploration is None:
+        missing.append(f"explorations/log.jsonl#{EXPLORATION_ID}")
+    else:
+        audit.check(
+            "v1.1 exploration result binding",
+            RESULT_NUMBER in exploration.get("formal_refs", {}).get("results", []),
+            exploration.get("formal_refs", {}).get("results", []),
+            f"contains {RESULT_NUMBER}",
+            "formal_authority",
+        )
+        audit.check(
+            "v1.1 exploration negative binding",
+            set(NEW_NEGATIVE_IDS)
+            <= set(exploration.get("formal_refs", {}).get("negatives", [])),
+            exploration.get("formal_refs", {}).get("negatives", []),
+            list(NEW_NEGATIVE_IDS),
+            "formal_authority",
+        )
+        required_gates = set(NEW_CLOSED_SUBGATES + (PARENT_GATE, PHYSICAL_RESPONSE_GATE))
+        audit.check(
+            "v1.1 exploration gate binding",
+            required_gates <= set(exploration.get("gate_ids", [])),
+            exploration.get("gate_ids", []),
+            sorted(required_gates),
+            "formal_authority",
+        )
+
+    for identifier in PRIOR_EXPLORATION_IDS:
+        prior = exploration_record(identifier)
+        audit.check(
+            f"retained exploration {identifier}",
+            prior is not None,
+            prior is not None,
+            True,
+            "formal_authority",
+        )
+    status = "COMPLETE" if not missing else ("STAGED" if staged else "INCOMPLETE")
+    return {"status": status, "missing": missing, "staged": staged}
+
+
 def current_tree_state() -> dict[str, Any]:
     round1 = git_show_json(AUDITED_COMMIT, ROUND1_MANIFEST)
     admission = git_show_json(AUDITED_COMMIT, ADMISSION_FREEZE)
@@ -1368,6 +2188,15 @@ def run_audit(
     state = current_tree_state()
     authority = load_json(AUTHORITY_MANIFEST)
     certificate_text = AUTHORITY_CERTIFICATE.read_text(encoding="utf-8")
+    map_only = current_version_map_only_audit()
+    map_only_survival = map_only["survival_contract"]
+    map_only_survival_report = validate_map_only_survival_contract(map_only_survival)
+    map_only_survival_hostile = map_only_survival_hostile_reports(map_only_survival)
+    fingerprint = exact_dispersion_fingerprint()
+    underdetermination = retrospective_response_underdetermination()
+    successor_design = authority["m2_v1_successor_design"]
+    successor_report = validate_successor_design(successor_design)
+    successor_hostile = successor_hostile_reports(successor_design)
 
     audit.check(
         "canonical contestant order",
@@ -1400,15 +2229,30 @@ def run_audit(
     audit.check("parent freeze gate open", state["parent_freeze_gate_closed"] is False, state["parent_freeze_gate_closed"], False, "current_tree")
     audit.check("Pre-A exit open", state["pre_a_exit_conditions_met"] is False, state["pre_a_exit_conditions_met"], False, "current_tree")
     audit.check("current tree not freeze ready", state["actual_freeze_ready"] is False, state["actual_freeze_ready"], False, "current_tree")
-    audit.check("current blockers exact", state["blockers"] == [
-        "NO_MACHINE_FREEZE_RECORD",
-        "NO_ADMITTED_MICROSCOPIC_SURVIVOR",
-        "M1_MAP_AND_PREDICTION_ABSENT",
-        "M2_PHYSICAL_PREDICTION_AND_HOLDOUT_ABSENT",
-        "M5_MAP_AND_HOLDOUT_ABSENT",
-        "PER_PARAMETER_COMMON_INPUT_LEDGER_INCOMPLETE",
-        "PROSPECTIVE_PREDICTION_NOT_FROZEN",
-    ], state["blockers"], "exact seven stable blockers", "current_tree")
+    audit.check("current blockers exact", tuple(state["blockers"]) == EXPECTED_BLOCKERS, state["blockers"], "exact seven stable blockers", "current_tree")
+
+    audit.check("current-version map set empty", map_only["admitted_candidate_ids"] == [] and map_only["cardinality"] == 0, map_only["admitted_candidate_ids"], [], "map_only")
+    audit.check("current-version candidate pins exact", all(row["pin_matches"] for row in map_only["rows"]), [row["pin_matches"] for row in map_only["rows"]], [True, True, True], "map_only")
+    audit.check("current-version rows derived", [row["candidate_id"] for row in map_only["rows"]] == list(MICROSCOPIC_CANDIDATES), [row["candidate_id"] for row in map_only["rows"]], list(MICROSCOPIC_CANDIDATES), "map_only")
+    audit.check("same-version repair rejected", map_only["same_version_repair_possible"] is False and map_only["negative_id"] == NEW_NEGATIVE_IDS[0], map_only, "new version required", "map_only")
+    audit.check("frozen all-PASS survival contract valid", map_only_survival_report["valid"], map_only_survival_report, "valid", "map_only")
+    audit.check("frozen survival rule exact", map_only_survival["hard_rows"] == load_json(ROUND1_MANIFEST)["survival_rule"]["hard_rows"] and map_only_survival["survives_if"] == "Every hard row is PASS.", map_only_survival["survives_if"], "Every hard row is PASS.", "map_only")
+    audit.check("map-independent residual rows exact", map_only_survival["residual_hard_rows"] == MAP_ONLY_RESIDUAL_ORACLE, map_only_survival["residual_hard_rows"], MAP_ONLY_RESIDUAL_ORACLE, "map_only")
+    audit.check("map-only new version still has no survivor", map_only["map_only_new_version_all_pass_repair_possible"] is False and map_only_survival["map_only_survivor_ids"] == [] and map_only_survival["all_pass_after_map_only"] is False, map_only_survival, "empty survivor set", "map_only")
+    audit.check("non-map repairs require substantive new version", map_only_survival["substantive_new_version_requirements"] == {key: list(value) for key, value in MAP_ONLY_SUBSTANTIVE_REQUIREMENTS.items()}, map_only_survival["substantive_new_version_requirements"], MAP_ONLY_SUBSTANTIVE_REQUIREMENTS, "map_only")
+    audit.check("fingerprint node count", fingerprint["node_count"] == 8, fingerprint["node_count"], 8, "fingerprint")
+    audit.check("fingerprint node-axis count", fingerprint["node_axis_record_count"] == 24, fingerprint["node_axis_record_count"], 24, "fingerprint")
+    audit.check("fingerprint dimension", fingerprint["ordered_component_count"] == 48, fingerprint["ordered_component_count"], 48, "fingerprint")
+    audit.check("fingerprint all exact ones", fingerprint["all_components_exactly_one"] and fingerprint["component_vector"] == ["1"] * 48, fingerprint["component_vector"], ["1"] * 48, "fingerprint")
+    for mode_index in (1, 2, 3, 5):
+        mode_fingerprint = exact_dispersion_fingerprint(mode_index)
+        audit.check(f"fingerprint exact mode m={mode_index}", mode_fingerprint["all_components_exactly_one"] and mode_fingerprint["ordered_component_count"] == 48, [mode_fingerprint["all_components_exactly_one"], mode_fingerprint["ordered_component_count"]], [True, 48], "fingerprint")
+    audit.check("retrospective response exponents differ", underdetermination["completion_identity"]["exponent"] == 1 and underdetermination["completion_square"]["exponent"] == 2, underdetermination, "1 versus 2", "underdetermination")
+    audit.check("retrospective exact scale ratios", [underdetermination["completion_identity"]["exact_scale_ratio"], underdetermination["completion_square"]["exact_scale_ratio"]] == ["2", "4"], underdetermination, ["2", "4"], "underdetermination")
+    audit.check("retrospective map remains absent", underdetermination["admitted_map_created"] is False and underdetermination["validation_credit"] is False, underdetermination, "no map or credit", "underdetermination")
+    audit.check("successor design valid", successor_report["valid"], successor_report, "valid DESIGN_ONLY schema", "successor")
+    audit.check("successor exact hypothetical ID", successor_design["hypothetical_candidate_id"] == M2_SUCCESSOR_ID and successor_design["status"] == "DESIGN_ONLY", [successor_design["hypothetical_candidate_id"], successor_design["status"]], [M2_SUCCESSOR_ID, "DESIGN_ONLY"], "successor")
+    audit.check("successor creates nothing", successor_design["candidate_created"] is False and all(successor_design[field] == "NOT_CREATED" for field in ("admission_status", "microscopic_map_status", "prediction_status", "target_status", "freeze_status", "tag_status", "score_status", "selection_status")), successor_design, "all creation/promotion states absent", "successor")
 
     gate_text = GATE_REGISTRY.read_text(encoding="utf-8")
     prediction_text = PREDICTION_LEDGER.read_text(encoding="utf-8")
@@ -1416,10 +2260,12 @@ def run_audit(
     audit.check("authority result number", authority["result_number"] == RESULT_NUMBER, authority["result_number"], RESULT_NUMBER, "authority")
     audit.check("authority result version", authority["result_version"] == RESULT_VERSION, authority["result_version"], RESULT_VERSION, "authority")
     audit.check("authority exploration", authority["exploration_id"] == EXPLORATION_ID, authority["exploration_id"], EXPLORATION_ID, "authority")
+    audit.check("authority retained explorations", tuple(authority["prior_exploration_ids"]) == PRIOR_EXPLORATION_IDS, authority["prior_exploration_ids"], PRIOR_EXPLORATION_IDS, "authority")
     audit.check("authority task", authority["task_id"] == "T-054", authority["task_id"], "T-054", "authority")
     audit.check("authority claim context", authority["claim_ids"] == ["C6-SPACETIME-SIGNATURE"], authority["claim_ids"], ["C6-SPACETIME-SIGNATURE"], "authority")
     audit.check("authority claim nonbearing", authority["claim_bearing"] is False, authority["claim_bearing"], False, "authority")
     audit.check("authority negative IDs", tuple(authority["negative_ids"]) == NEGATIVE_IDS, authority["negative_ids"], NEGATIVE_IDS, "authority")
+    audit.check("authority new negative IDs", tuple(authority["new_negative_ids"]) == NEW_NEGATIVE_IDS, authority["new_negative_ids"], NEW_NEGATIVE_IDS, "authority")
     audit.check("authority reused negatives", tuple(authority["reused_negative_ids"]) == REUSED_NEGATIVE_IDS, authority["reused_negative_ids"], REUSED_NEGATIVE_IDS, "authority")
     audit.check("authority closed subgates", tuple(authority["closed_subgates"]) == CLOSED_SUBGATES, authority["closed_subgates"], CLOSED_SUBGATES, "authority")
     audit.check("authority open gates", tuple(authority["open_gates"]) == OPEN_GATES, authority["open_gates"], OPEN_GATES, "authority")
@@ -1432,8 +2278,14 @@ def run_audit(
     audit.check("authority prediction fields exact", tuple(authority["freeze_schema"]["prediction_fields"]) == PREDICTION_FIELDS, authority["freeze_schema"]["prediction_fields"], PREDICTION_FIELDS, "authority")
     audit.check("authority allowed-input fields exact", tuple(authority["freeze_schema"]["allowed_input_fields"]) == ALLOWED_INPUT_FIELDS, authority["freeze_schema"]["allowed_input_fields"], ALLOWED_INPUT_FIELDS, "authority")
     audit.check("authority robustness fields exact", tuple(authority["freeze_schema"]["robustness_fields"]) == ROBUSTNESS_FIELDS, authority["freeze_schema"]["robustness_fields"], ROBUSTNESS_FIELDS, "authority")
-    audit.check("authority protocol status", authority["status"] == "SCHEMA PROTOCOL READY; CURRENT TREE NOT FREEZE-READY; CRYPTOGRAPHIC REMOTE VERIFICATION AND PARENT PRE-A GATE OPEN", authority["status"], "schema protocol ready and verification gates open", "authority")
-    audit.check("certificate result linkage", RESULT_NUMBER in certificate_text and RESULT_ID in certificate_text and EXPLORATION_ID in certificate_text, True, True, "authority")
+    audit.check("authority protocol status", authority["status"].startswith("R-168 v1.1 THEOREM-READY"), authority["status"], "R-168 v1.1 THEOREM-READY ...", "authority")
+    audit.check("authority map-only child", authority["current_version_map_only_audit"]["closed_child_id"] == NEW_CLOSED_SUBGATES[0] and authority["current_version_map_only_audit"]["admitted_candidate_ids"] == [], authority["current_version_map_only_audit"], NEW_CLOSED_SUBGATES[0], "authority")
+    audit.check("authority frozen survival rule", authority["current_version_map_only_audit"]["frozen_survival_rule"]["hard_rows"] == map_only_survival["hard_rows"] and authority["current_version_map_only_audit"]["map_independent_or_non_map_only_residual_hard_rows"] == MAP_ONLY_RESIDUAL_ORACLE and authority["current_version_map_only_audit"]["map_only_new_version_survivor_ids"] == [], authority["current_version_map_only_audit"]["map_independent_or_non_map_only_residual_hard_rows"], MAP_ONLY_RESIDUAL_ORACLE, "authority")
+    audit.check("authority fingerprint child", authority["m2_finite_torus_dispersion_fingerprint"]["closed_child_id"] == NEW_CLOSED_SUBGATES[1] and authority["m2_finite_torus_dispersion_fingerprint"]["expected_component_vector"] == ["1"] * 48, authority["m2_finite_torus_dispersion_fingerprint"]["ordered_component_count"], 48, "authority")
+    audit.check("authority successor gate", authority["route_status"]["m2_successor_gate"] == PHYSICAL_RESPONSE_GATE, authority["route_status"]["m2_successor_gate"], PHYSICAL_RESPONSE_GATE, "authority")
+    audit.check("certificate result linkage", RESULT_NUMBER in certificate_text and RESULT_ID in certificate_text and EXPLORATION_ID in certificate_text and all(item in certificate_text for item in PRIOR_EXPLORATION_IDS), True, True, "authority")
+    audit.check("certificate v1.1 identities", all(item in certificate_text for item in (*NEW_CLOSED_SUBGATES, *NEW_NEGATIVE_IDS, PHYSICAL_RESPONSE_GATE, M2_SUCCESSOR_ID)), True, True, "authority")
+    audit.check("certificate fingerprint formula", "R_{s,i}" in certificate_text and "U_{s,i}" in certificate_text and "8*3*2=48" in certificate_text, True, True, "authority")
     audit.check("certificate exact stable empty counts", "N_{\\rm records}=0" in certificate_text and "N_{\\rm admitted\\ microscopic\\ survivors}=0" in certificate_text, True, True, "authority")
     audit.check("certificate live-tag boundary", "non-load-bearing live observation" in certificate_text and "future legitimate freeze tag" in certificate_text, True, True, "authority")
     audit.check("certificate temporal order", "t_{\\rm custodian}" in certificate_text and "t_{\\rm public\\ freeze}" in certificate_text and "t_{\\rm disclosure}" in certificate_text, True, True, "authority")
@@ -1501,8 +2353,46 @@ def run_audit(
         audit.check(f"{name} fixture rejected", report["valid"] is False, report["valid"], False, "hostile")
         audit.check(f"{name} expected code", report["expected_code_observed"], report["error_codes"], report["expected_error_code"], "hostile")
 
+    expected_map_only_survival_hostile = (
+        "hard_row_removed",
+        "survival_rule_softened",
+        "m1_nonpass_promoted",
+        "m2_nonpass_promoted",
+        "m5_nonpass_promoted",
+        "preserved_regulator_removed",
+        "map_only_survivor_fabricated",
+    )
+    authority_map_hostile = authority["map_only_repair_hostile_fixtures"]
+    audit.check("map-only survival hostile names exact", tuple(map_only_survival_hostile) == expected_map_only_survival_hostile and tuple(authority_map_hostile["cases"]) == expected_map_only_survival_hostile, tuple(map_only_survival_hostile), expected_map_only_survival_hostile, "map_only_hostile")
+    for name in expected_map_only_survival_hostile:
+        report = map_only_survival_hostile[name]
+        audit.check(f"map-only {name} rejected", report["valid"] is False, report["valid"], False, "map_only_hostile")
+        audit.check(f"map-only {name} expected code", report["expected_code_observed"], report["error_codes"], report["expected_error_code"], "map_only_hostile")
+
+    expected_successor_hostile = (
+        "candidate_created",
+        "candidate_manifest_materialized",
+        "admission_promoted",
+        "map_promoted",
+        "prediction_materialized",
+        "target_materialized",
+        "freeze_or_tag_materialized",
+        "score_or_selection_materialized",
+        "response_channel_smuggled",
+        "error_budget_term_dropped",
+        "fingerprint_dimension_changed",
+    )
+    authority_successor_hostile = authority["m2_v1_successor_hostile_fixtures"]
+    audit.check("successor hostile names exact", tuple(successor_hostile) == expected_successor_hostile, tuple(successor_hostile), expected_successor_hostile, "successor_hostile")
+    audit.check("successor hostile authority exact", tuple(authority_successor_hostile["cases"]) == expected_successor_hostile and authority_successor_hostile["v1_0_freeze_schema_hostile_count_preserved"] == 28 and authority_successor_hostile["successor_hostile_count"] == len(expected_successor_hostile) and authority_successor_hostile["total_hostile_class_count"] == 28 + len(expected_successor_hostile), authority_successor_hostile, {"v1_0": 28, "successor": len(expected_successor_hostile)}, "successor_hostile")
+    for name in expected_successor_hostile:
+        report = successor_hostile[name]
+        audit.check(f"successor {name} rejected", report["valid"] is False, report["valid"], False, "successor_hostile")
+        audit.check(f"successor {name} expected code", report["expected_code_observed"], report["error_codes"], report["expected_error_code"], "successor_hostile")
+
+    formal = formal_authority_audit(audit, staged=staged)
     actual_validation: dict[str, Any]
-    verdict = "PASS"
+    verdict = "PASS" if formal["status"] == "COMPLETE" else formal["status"]
     if freeze_manifest is None:
         actual_validation = {
             "status": "ABSENT_BY_DESIGN",
@@ -1519,7 +2409,7 @@ def run_audit(
             "valid": False,
             "reason": "Requested future freeze manifest does not yet exist.",
         }
-        verdict = "INCOMPLETE"
+        verdict = "STAGED" if staged else "INCOMPLETE"
     else:
         actual = load_json(freeze_manifest)
         report = validate_freeze_manifest(actual, allow_fixture=False)
@@ -1547,12 +2437,16 @@ def run_audit(
         "claim_ids": ["C6-SPACETIME-SIGNATURE"],
         "claim_bearing": False,
         "exploration_id": EXPLORATION_ID,
+        "prior_exploration_ids": list(PRIOR_EXPLORATION_IDS),
         "result_id": RESULT_ID,
         "result_number": RESULT_NUMBER,
         "result_version": RESULT_VERSION,
         "negative_ids": list(NEGATIVE_IDS),
+        "prior_negative_ids": list(PRIOR_NEGATIVE_IDS),
+        "new_negative_ids": list(NEW_NEGATIVE_IDS),
         "reused_negative_ids": list(REUSED_NEGATIVE_IDS),
         "closed_subgates": list(CLOSED_SUBGATES),
+        "new_closed_subgates": list(NEW_CLOSED_SUBGATES),
         "open_gates": list(OPEN_GATES),
         "parent_gate": PARENT_GATE,
         "verdict": verdict,
@@ -1592,6 +2486,15 @@ def run_audit(
             "synthetic_fixture_only": True,
         },
         "current_tree": state,
+        "current_version_map_only_audit": map_only,
+        "map_only_survival_validation": map_only_survival_report,
+        "map_only_repair_hostile_fixtures": map_only_survival_hostile,
+        "m2_retrospective_stiffness_map_underdetermination": underdetermination,
+        "m2_finite_torus_dispersion_fingerprint": fingerprint,
+        "m2_v1_successor_design_validation": successor_report,
+        "m2_v1_successor_design": successor_design,
+        "successor_hostile_fixtures": successor_hostile,
+        "formal_authority": formal,
         "synthetic_schema_validation": {
             "valid": valid_report["valid"],
             "error_codes": valid_report["error_codes"],
@@ -1621,6 +2524,9 @@ def run_audit(
             "external_target_commitment_present": False,
             "admitted_current_microscopic_map_present": False,
             "prospective_prediction_present": False,
+            "m2_v1_candidate_created": False,
+            "m2_physical_response_channel_present": False,
+            "m2_controlled_physical_error_bound_present": False,
             "parent_gate_closed": False,
             "Pre_A_complete": False,
             "Sector_A_complete": False,
@@ -1632,9 +2538,11 @@ def run_audit(
         },
         "assertions": audit.rows,
         "boundary": (
-            "Protocol/schema and exact current-tree absence audit only. No actual "
-            "freeze record, tag, target, candidate map, prediction, parent-gate "
-            "closure, Pre-A exit, or physical Sector-A selection follows."
+            "Cumulative v1.0 protocol plus exact current-version map-empty-set, "
+            "missing-response underdetermination, and finite-torus Gaussian fingerprint "
+            "only. No M2-v1 candidate, admitted map, physical response/error bound, "
+            "freeze, tag, target, prediction, score, selection, parent-gate closure, "
+            "Pre-A exit, or physical Sector-A selection follows."
         ),
     }
 
@@ -1673,9 +2581,11 @@ def main() -> int:
         f"admitted_survivors={state['admitted_microscopic_survivor_count']} "
         f"ready={str(state['actual_freeze_ready']).lower()}"
     )
-    if payload["verdict"] == "INCOMPLETE":
+    if payload["formal_authority"]["missing"]:
+        print("STAGED-MISSING " + ", ".join(payload["formal_authority"]["missing"]))
+    if payload["verdict"] == "INCOMPLETE" and "reason" in payload["actual_freeze_validation"]:
         print("authority: " + payload["actual_freeze_validation"]["reason"])
-    return 0
+    return 0 if payload["verdict"] == "PASS" or arguments.staged else 1
 
 
 if __name__ == "__main__":

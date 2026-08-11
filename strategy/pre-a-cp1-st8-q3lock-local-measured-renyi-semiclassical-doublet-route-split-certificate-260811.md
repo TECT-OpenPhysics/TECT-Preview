@@ -1,12 +1,14 @@
-# R-167 v1.9 certificate: local history tails and the Q3 onsite doublet
+# R-167 v2.0 certificate: Gibbs resummation, corridor reduction, and compressed phases
 
-- **Exploration:** `EXP-000806`
-- **Result:** `R-167`, additive version `v1.9`; no new result number
+- **Exploration:** `EXP-000809` (additive successor to `EXP-000806`)
+- **Result:** `R-167`, additive version `v2.0`; no new result number
 - **Stable result ID:** `PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT`
 - **Claim context:** `C6-SPACETIME-SIGNATURE`
 - **Task:** `T-054`
 - **Tier:** `T0`, `claim_bearing: false`
 - **Date:** 2026-08-11
+
+R-167 v2.0 preserves the complete v1.9 certificate below and adds the finite-Gibbs, fixed-edge corridor, global Feshbach, and compressed-phase layers in Sections 11--19. No v2.0 PDF is issued at this proof-first stage.
 
 R-167 v1.9 corrects the next target left by v1.8.  A global,
 volume-independent sandwiched-Renyi constant for every all-bond split layer is
@@ -23,7 +25,7 @@ to its low doublet and identifies the missing infinite-dimensional rank-two
 block theorem.  The exact common dynamics and broken-sector GNS gap remain
 open.
 
-The closed narrow subgates are exactly:
+The v1.9 closed narrow subgates retained here are exactly:
 
 1. `PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY`;
 2. `PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION`;
@@ -33,6 +35,7 @@ The parent gates remain open:
 
 - `PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA`;
 - `PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY`;
+- `PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS`;
 - `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE`.
 
 ## 1. Pure all-bond layers preserve coordinate tails exactly
@@ -543,3 +546,540 @@ Its honest status is:
 > ACTUAL PHASEWISE TEMPORAL MASS/GNS GAP REMAIN OPEN.
 
 No statement here closes C6, CP1, physical Sector A, or Pre-A.
+
+## 11. v2.0 additive checkpoint and formal staging boundary
+
+Sections 1--10 above are retained verbatim as the v1.9 foundation.  R-167
+v2.0 adds four narrow theorem-ready children and three scoped negatives under
+`EXP-000809`.  At this proof-first stage their formal ledger, gate and negative
+rows are intentionally absent; both verifiers must therefore report
+`INCOMPLETE` under `--staged` until the parent checkpoint writes those
+authorities.  No v2.0 PDF is issued here.
+
+The four proposed closed children are:
+
+1. `PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION`;
+2. `PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION`;
+3. `PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR`;
+4. `PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP`.
+
+Every parent gate listed in Section 10 remains open.
+
+## 12. Full-Hamiltonian finite-Gibbs cutoff resummation
+
+Let `H` and `H_L=H-W_L` be self-adjoint, bounded-below finite-volume
+Hamiltonians on a common form domain, and put
+
+\[
+ \rho=Z^{-1}e^{-\beta H},\quad
+ U(t)=e^{-itH/\hbar},\quad U_L(t)=e^{-itH_L/\hbar}.       \tag{12.1}
+\]
+
+Assume the two Duhamel formulas hold as strong limits on a common invariant
+form core and that `W_L rho^(1/2)` and `rho^(1/2) W_L` are Hilbert--Schmidt.
+For self-adjoint `W_L` this is the single static moment condition
+`rho(W_L^2)<infinity`.
+
+For the registered finite-volume Q3 hard/form-cutoff pair these hypotheses
+have a direct form-domain realization.  The full and cutoff Hamiltonians are
+closed form sums on the common quartic form domain, while `W_L` is a real
+quadratic coordinate multiplier, possibly restricted to a hard coordinate
+tail.  Thus `W_L^2` has quartic growth and the existing finite-volume Gibbs
+coordinate moments put `W_L rho^(1/2)` in `S_2`.  Truncate `W_L` spectrally
+or formwise to bounded `W_(L,M)`, apply bounded Duhamel, and pass first in
+strong-resolvent/unitary sense and then in `S_2` using
+`W_(L,M)rho^(1/2) -> W_Lrho^(1/2)`.  This discharges the displayed
+finite-volume hard/form-pair hypotheses.  A differently defined smooth
+clipped-coordinate cutoff still requires its own common-domain and form-
+convergence check.
+
+The first Duhamel ordering gives
+
+\[
+ U(t)-U_L(t)=-{i\over\hbar}\int_0^t
+ U_L(t-s)W_LU(s)\,ds.                                \tag{12.2}
+\]
+
+Multiplication on the right by `rho^(1/2)`, commutation of `rho` with the
+*full* `U(s)`, and left/right unitary invariance of the Hilbert--Schmidt norm
+give
+
+\[
+ \|(U(t)-U_L(t))\rho^{1/2}\|_2
+ \le {|t|\over\hbar}\rho(W_L^2)^{1/2}.                \tag{12.3}
+\]
+
+The opposite ordering,
+
+\[
+ U(t)-U_L(t)=-{i\over\hbar}\int_0^t
+ U(t-s)W_LU_L(s)\,ds,                                \tag{12.4}
+\]
+
+puts the commuting full flow next to `rho^(1/2)` on the left and yields
+
+\[
+ \|\rho^{1/2}(U(t)-U_L(t))\|_2
+ \le {|t|\over\hbar}\rho(W_L^2)^{1/2}.                \tag{12.5}
+\]
+
+No commutation of `rho` with `U_L` is used.  Factoring the difference of the
+two evolved density matrices into two Hilbert--Schmidt products gives
+
+\[
+ \|\rho-U_L(t)\rho U_L(t)^*\|_1
+ \le {2|t|\over\hbar}\rho(W_L^2)^{1/2}.               \tag{12.6}
+\]
+
+This is a full-Hamiltonian resummation: no intermediate split-history tail
+appears.  It is finite-volume and state-weighted, and by itself says nothing
+about an observable placed between the unitary difference and the Gibbs
+vector.
+
+### 12.1 Bounded half-modular and fixed-Bohr-band contexts
+
+For `alpha_t(A)=U(t)^* A U(t)`, suppose
+
+\[
+ A\rho^{1/2}=\rho^{1/2}C_A,\qquad
+ C_A=\alpha_{-i\beta\hbar/2}(A)                     \tag{12.7}
+\]
+
+extends boundedly.  Apply the same condition separately to `A^*`; this is the
+needed context for the left state seminorm.  A two-term telescoping of the
+automorphisms and (12.3)--(12.5), also at `-t`, gives
+
+\[
+ \begin{split}
+ \|[\alpha_t(A)-\alpha_t^{(L)}(A)]\rho^{1/2}\|_2
+ &\le (\|A\|+\|C_A\|)\varepsilon_L(t),\\
+ \|\rho^{1/2}[\alpha_t(A)-\alpha_t^{(L)}(A)]\|_2
+ &\le (\|A\|+\|C_{A^*}\|)\varepsilon_L(t),
+ \end{split}                                         \tag{12.8}
+\]
+
+where `epsilon_L(t)=|t|rho(W_L^2)^(1/2)/hbar`.
+
+A narrow sufficient class is a finite Bohr-frequency decomposition
+`A=sum_omega A_omega`, `[H,A_omega]=omega A_omega`, with
+`|omega|<=Omega` and finite projective norm `sum_omega||A_omega||`.  Then
+
+\[
+ \|C_A\|,\|C_{A^*}\|
+ \le e^{\beta\Omega/2}\sum_\omega\|A_\omega\|.       \tag{12.9}
+\]
+
+Equation (12.9) is not claimed for an arbitrary matrix-band condition with
+no dimension-independent Schur/projective norm.
+
+## 13. Exact arbitrary-context obstruction
+
+The first new negative is
+
+`NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE`.
+
+For `0<p<1/2`, take
+
+\[
+ \rho_p=\operatorname{diag}(1-p,p),\quad
+ H={\pi\hbar\over t_0}|1\rangle\langle1|,\quad H_L=0,
+ \quad
+ \beta={t_0\over\pi\hbar}\log{1-p\over p}.           \tag{13.1}
+\]
+
+Thus `rho_p` is exactly the Gibbs state of `H`.  At `t=t_0`, both squared
+weighted unitary errors are
+
+\[
+ \|(U-U_L)\rho_p^{1/2}\|_2^2
+ =\|\rho_p^{1/2}(U-U_L)\|_2^2=4p,                    \tag{13.2}
+\]
+
+whereas
+
+\[
+ \rho_p(W^2)={\pi^2\hbar^2\over t_0^2}p.             \tag{13.3}
+\]
+
+For `A=sigma_x`, `alpha_(t0)(A)-alpha_(t0)^(L)(A)=-2A`.
+Both one-sided state-weighted observable-error norms are exactly `2`, hence
+
+\[
+ \|\Delta\alpha(A)\rho_p^{1/2}\|_2^2
+ +\|\rho_p^{1/2}\Delta\alpha(A)\|_2^2=8.             \tag{13.4}
+\]
+
+Both evolved density matrices nevertheless equal `rho_p`, so their trace
+distance is exactly zero.  The missing half-modular norm is
+`sqrt((1-p)/p)`, which diverges as `p` decreases.  Therefore weighted-unitary
+and trace-state stability do not automatically pass an arbitrary bounded
+context.  This does not obstruct the class in Section 12.1 or prove Q3LOCK
+dynamics nonexistent.
+
+## 14. Uniform fixed-bond tail implies one growing corridor
+
+Let `C_R=[-R,R]^3` and let `E_R` be its induced nearest-neighbour edges.  Then
+
+\[
+ m_R:=|E_R|=6R(2R+1)^2\le54R^3.                       \tag{14.1}
+\]
+
+Write `W_(R,L)=sum_(e in E_R)w_(e,L)`.  Quadratic-form Cauchy gives
+
+\[
+ W_{R,L}^2\le m_R\sum_{e\in E_R}w_{e,L}^2.           \tag{14.2}
+\]
+
+For `w_(e,L)=-c(q_x dot q_y)1_(X_e>L)`,
+`w_(e,L)^2<=c^2 X_e^4 1_(X_e>L)`.  Hence a uniform
+two-orientation fixed-edge bound
+
+\[
+ \sup_{e\in E_R}\{\sigma_+(w_{e,L}^2)+
+ \sigma_-(w_{e,L}^2)\}\le c^2K_{\rm edge}(L)          \tag{14.3}
+\]
+
+implies
+
+\[
+ \sigma_+(W_{R,L}^2)+\sigma_-(W_{R,L}^2)
+ \le m_R^2c^2K_{\rm edge}(L).                        \tag{14.4}
+\]
+
+For the exact illustrative constants `alpha=2`, `theta=1/2`, `a=2`, `b=1`,
+`Q=4`, `M_a=1/2` and `|S_e|=2`, the v1.9 formula is
+
+\[
+ K_{\rm edge}(L)=4e^{-L^2}(L^4+2L^2+2).              \tag{14.5}
+\]
+
+These are hard-tail constants for
+`w_(e,L)=-c(q_x dot q_y)1_(X_e>L)`.  They are not the constants of a smooth
+clipped-coordinate `Q_L` Hamiltonian; that transfer would need a separate
+pointwise-domination and form-convergence audit.
+
+Choosing `L_R=sqrt(R)` and, only for the displayed constant, `c=1/3`, the
+right side is bounded by
+
+\[
+ 1296R^6e^{-R}(R^2+2R+2)\longrightarrow0.             \tag{14.6}
+\]
+
+The limit needs no asymptotic guess: `e^R>=R^10/10!` yields a rational
+majorant proportional to `R^-2+2R^-3+2R^-4`.
+
+On a periodic cubic torus, translations have three positive-edge orbits,
+one for each coordinate direction.  Translation covariance therefore
+reduces (14.3) to three canonical orientations, not one.  Cubic rotations
+are additionally needed to identify those three.  Open boundaries,
+nonuniform sources, local insertions, or ordered partial histories may break
+even translation covariance.  The child theorem closes only the deterministic
+reduction (14.2)--(14.6); the Q3LOCK fixed-edge history input (14.3) remains
+open.
+
+## 15. Homogeneous Gaussian tilted-edge implication no-go
+
+The second new implication negative is
+
+`NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL`.
+
+Relative to the standard Gaussian on one edge, define
+
+\[
+ {d\nu_\kappa\over d\nu_0}(x,y)
+ =\sqrt{1-\kappa^2}\,e^{\kappa xy},\qquad \kappa={3\over4}.              \tag{15.1}
+\]
+
+The tilted precision determinant is `1-kappa^2=7/16>0`; all polynomial
+moments are finite, and endpoint exchange and simultaneous sign reversal are
+exact symmetries.  Its one-coordinate variance is `16/7`, so its Gaussian
+tail exponent is `7/32`.  For `alpha=2`, the reference-power exponent is
+`theta/2=1/4`, leaving the positive exponent difference `1/32`.  Thus no
+finite constant can satisfy the fixed-edge Holder tail ratio for all large
+cutoffs.  Equivalently, the order-two likelihood integral diverges because
+the squared-tilt precision determinant is
+
+\[
+ 1-4\kappa^2=-{5\over4}<0.                            \tag{15.2}
+\]
+
+Regard the two endpoints as a two-site periodic cell, or repeat the same tilt
+on a homogeneous dimer family.  This is endpoint/two-site or dimer
+homogeneity, not full one-site translation invariance on the cubic lattice.
+The fixture shows only that Gaussian static tails, the stated symmetry and
+all finite moments do not imply (14.3).  It is not a Q3 history, locality or
+dynamics nonexistence theorem.
+
+## 16. Below-Gamma global Feshbach precursor and exact 11 overlap
+
+Let
+
+\[
+ P_\Lambda=P^{\otimes\Lambda},\quad Q_\Lambda=1-P_\Lambda,
+ \quad K_\Lambda=\sum_xk_x\ge\Gamma\sum_xQ_x.         \tag{16.1}
+\]
+
+Keep the absolute finite-volume Hamiltonian normalization in which the onsite
+ground scalar has been removed but no extensive scalar from rewriting the
+low-band TFIM has been subtracted.  The onsite splitting and every Q3 spatial
+square bond are then nonnegative.  Therefore
+
+\[
+ Q_\Lambda H Q_\Lambda\ge\Gamma Q_\Lambda.           \tag{16.2}
+\]
+
+If one later subtracts a volume-dependent low-band scalar, the absolute
+threshold in (16.2) shifts with it.  Accordingly `E<Gamma` below is
+finite-volume absolute-energy algebra, not thermodynamic isolation of a
+ground band.
+
+For every real `E<Gamma`, the exact Feshbach operator on the global low band
+is
+
+\[
+ F_\Lambda(E)=PHP-E-PHQ(QHQ-E)^{-1}QHP.               \tag{16.3}
+\]
+
+In an arbitrary finite cubic subgraph, one nearest-neighbour edge overlaps,
+including itself, with at most
+
+\[
+ \kappa_{\rm ov}\le1+2(z-1)=11\qquad(z\le6).          \tag{16.4}
+\]
+
+Equality holds for bulk edges and sufficiently large periodic tori;
+boundary edges can have fewer overlaps.  Disjoint local off-block images are
+orthogonal.  With the v1.9 one-bond
+constant
+
+\[
+ \epsilon=8c(b+2ma+a^2),                              \tag{16.5}
+\]
+
+the overlap Cauchy bound and (16.2) give
+
+\[
+ \|QHP\|^2\le11|E(\Lambda)|\epsilon^2,
+ \qquad
+ 0\le PHQ(QHQ-E)^{-1}QHP
+ \le {11|E(\Lambda)|\epsilon^2\over\Gamma-E}P.       \tag{16.6}
+\]
+
+For explicit relative-form bookkeeping, define
+
+\[
+ P_{xy}=P_xP_y,\qquad Q_{xy}=1-P_{xy}.                \tag{16.7}
+\]
+
+Apply two Young parameters `u,t>0` to the centered estimate (7.4).  The
+*diagonal local-high compression* of one bond has high-form coefficient
+
+\[
+ \eta_b=8c(1+u^{-1})(1+t^{-1})A_Q                    \tag{16.8}
+\]
+
+and local scalar coefficient
+
+\[
+ \nu_b=16c[(1+u)m^2+(1+u^{-1})(1+t)a^2].             \tag{16.9}
+\]
+
+Because
+`Q_(xy)(k_x+k_y)Q_(xy)>=Gamma Q_(xy)`, the precise projected inequality is
+
+\[
+ Q_{xy}B_{xy}Q_{xy}
+ \le(\eta_b+\nu_b/\Gamma)
+ Q_{xy}(k_x+k_y)Q_{xy}.                               \tag{16.10}
+\]
+
+Equation (16.10) is only the diagonal high compression.  It is not the
+different full centered-residual/off-diagonal estimate (16.5), whose norm
+constant is `epsilon=8c(b+2ma+a^2)`.  Summing the six diagonal high forms at
+one site gives
+
+\[
+ \zeta=6(\eta_b+\nu_b/\Gamma).                        \tag{16.11}
+\]
+
+At `u=t=1`, `eta_b=32cA_Q` and `nu_b=32cm^2+64ca^2`.
+The v1.9 corridor gives
+
+\[
+ \epsilon=O(N^{-3}),\qquad \zeta=O(N^{-2}).           \tag{16.12}
+\]
+
+There is therefore a nonempty relative-form smallness precursor.  Equations
+(16.3)--(16.10) are not a quasi-local rank-two Lie--Schwinger theorem or a
+QPS norm for the oscillator self-energy.
+
+## 17. Exact compressed-TFIM two-phase QPS theorem
+
+This section concerns only the finite-spin Hamiltonian (6.4).  At
+`delta_eff=0`, assign each positive-coordinate cubic bond exactly once.  A
+forward star contains the center and its three positive neighbours, with
+local block
+
+\[
+ h_*^{(0)}=J\sum_{i=1}^3(1-s_0s_i).                  \tag{17.1}
+\]
+
+Direct enumeration gives
+
+\[
+ \operatorname{spec}h_*^{(0)}=
+ \{0^{\times2},(2J)^{\times6},(4J)^{\times6},(6J)^{\times2}\}.          \tag{17.2}
+\]
+
+The two local ground vectors are the all-plus and all-minus `s` product
+vectors and the local gap is `2J`.  Introduce only for phase selection the auxiliary parameter
+`u sum_x(1-s_x)`.  With the convention
+`k_u=d(e_plus-e_minus)/du`, the plus/minus selector densities are `0` and
+`2`, so the first-order energy split is
+
+\[
+ k=(0,-2).                                             \tag{17.3}
+\]
+
+The physical transverse perturbation `delta_eff sum_x P_(1,x)` is bounded,
+finite range and invariant under the global onsite parity that sends
+`s_x` to `-s_x`.  Hence the coexistence surface is pinned locally to `u=0`.
+
+The applicable primary authority is D. A. Yarotskii, *Quantum
+Pirogov--Sinai theory*, Russian Math. Surveys 61:2 (2006), 371--372,
+<https://doi.org/10.1070/RM2006v061n02ABEH004323>,
+<https://www.mathnet.ru/eng/rm1728>.  Its stated two-phase theorem now has
+the load-bearing finite-dimensional product references, local gap, nonzero
+split vector and bounded finite-range perturbation.  Consequently there is
+an existential `epsilon_Y>0` such that
+
+\[
+ {|\delta_{\rm eff}|\over 2J}<\epsilon_Y              \tag{17.4}
+\]
+
+gives the two pure translation-invariant infinite-lattice compressed-TFIM
+phases, exponential clustering, and a positive GNS Hamiltonian gap in each
+selected phase.
+
+This does not assert finite-torus exact degeneracy, an explicit
+`epsilon_Y` or `N_0`, applicability to the finite `r=-9` diagnostic, a
+rank-two oscillator block transfer, or the oscillator broken-sector gap.
+The distinct single-phase CMP theorem `math-ph/0412040` is not the authority
+for (17.4).
+
+## 18. Extensive self-energy does not imply QPS locality
+
+The third new negative is
+
+`NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY`.
+
+Let one high vector of energy `Gamma` couple with equal amplitude `epsilon`
+to `M` orthogonal low vectors.  Below the high level, its exact self-energy is
+
+\[
+ \Sigma_M(E)={\epsilon^2\over\Gamma-E}{\bf1}{\bf1}^T.                  \tag{18.1}
+\]
+
+Its norm is `M epsilon^2/(Gamma-E)`, but every off-diagonal matrix element is
+nonzero.  Thus an extensive global norm bound such as (16.6) contains no
+interaction-decay, connected-cluster or polymer-locality information.  It
+cannot automatically be promoted to a two-phase QPS norm.  The fixture does
+not obstruct a linked-cluster, Lie--Schwinger or local resolvent expansion;
+that is precisely the remaining oscillator route.
+
+## 19. Adversarial review and updated parent verdicts
+
+1. **Objection -- sign/order:** (12.3) and (12.5) use the same Duhamel
+   ordering. **DISMISSED.** They explicitly use opposite orderings; only the
+   adjacent full flow commutes with `rho`.
+2. **Objection -- context:** trace-distance stability implies observable
+   dynamics. **UPHELD as an overreach.** Section 13 has zero trace distance
+   and constant automorphism error; bounded half-modular contexts are a real
+   extra hypothesis.
+3. **Objection -- covariance:** periodic translations identify every bond.
+   **UPHELD as an overreach.** They leave three orientation orbits; rotations
+   and covariance of the actual partial history are separate inputs.
+4. **Objection -- factor:** the cubic bond-overlap constant is ten.
+   **DISMISSED.** Ten is the number of *other* incident bonds; the quadratic
+   overlap bound includes the bond itself and therefore uses eleven.
+5. **Objection -- extensivity:** (16.6) is already a QPS interaction norm.
+   **UPHELD as an overreach.** Section 18 gives an exact dense self-energy with
+   the same extensive scaling.
+6. **Objection -- theorem source:** the single-phase CMP theorem proves the
+   two-phase TFIM claim. **DISMISSED.** Section 17 cites the distinct
+   Yarotskii two-phase RMS theorem and verifies its forward-star data.
+7. **Objection -- finite parameter:** the existential QPS radius includes
+   `r=-9` or a displayed finite `N`. **UPHELD.** No explicit radius or finite
+   onsite enclosure is available.
+8. **Objection -- closure:** the compressed phasewise gap is the oscillator
+   GNS gap. **UPHELD.** The rank-two quasi-local transfer and beta-infinity
+   oscillator phase identification remain open.
+
+9. **Objection -- units:** the Duhamel and Feshbach bounds mix incompatible
+   dimensions. **DISMISSED.** `|t|rho(W^2)^(1/2)/hbar` is dimensionless,
+   while `epsilon^2/(Gamma-E)` has energy units, exactly matching the two
+   quantities they bound.
+10. **Objection -- hardcode masking:** `11`, `1296`, and the star
+    multiplicities were pasted conclusions. **DISMISSED.** Both verifiers
+    derive the upper `11` from the cubic degree bound and realize equality on
+    a sufficiently large periodic fixture, `1296=54^2(1/3)^2 4`, and the
+    multiplicities by independent sixteen-configuration enumeration; their
+    displayed literals are labelled test oracles.
+11. **Objection -- convergence:** finite-volume Duhamel control is already a
+    thermodynamic or `n -> infinity` limit. **UPHELD as an overreach.** The
+    common form-core/Duhamel hypotheses are finite-volume, and all such limits
+    remain in the parent gate.
+
+External adversarial review is invited especially on the unbounded Duhamel
+domain hypotheses, the disjoint-edge orthogonality used in (16.6), and the
+scope of the cited two-phase Yarotskii theorem.
+
+The dynamics parent
+`PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA`
+remains open: (14.3), `n -> infinity`, all-shape exhaustion Cauchy,
+group/generator completion and the common phase-KMS quotient are missing.
+
+The rank-two parent
+`PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS`
+remains open: (16.6) is global/extensive and does not produce a quasi-local
+oscillator effective interaction or cutoff removal.
+
+The spectral parent
+`PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY`
+remains open: Section 17 proves a phasewise gap only for the exact compressed
+finite-spin TFIM, not for the oscillator lattice.
+
+`PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` also remains open.
+Nothing in v2.0 closes C6, CP1, physical Sector A, or Pre-A.
+
+## 20. Post-validation combined v0.9 checkpoint issuance
+
+After the proof-first package and only after the proof, formal-authority,
+integrated, source-form, freshness, extraction, and render-review gates passed,
+one combined R-167 v2.0 / R-168 v1.1 gate-level checkpoint was issued.
+Its exact artifacts are:
+
+1. source:
+   `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt`;
+2. source SHA-256:
+   `ca8b0fdc1c4881aa13e3311851c719d0b6a0dfb4b27e0bb30906f7bc77b04239`;
+3. PDF:
+   `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf`;
+4. PDF SHA-256:
+   `346595c8609be1e49fb33d87e5a469b01f9083c78d7a1fc89d3648b88ea4d243`;
+5. page count: exactly 10.
+
+The final R-167 v2.0 primary, non-importing independent, and integrated
+contracts are `PASS 153/153`, `PASS 117/117`, and `PASS 220/220`.  The final
+R-168 v1.1 contracts are `PASS 205/205`, `PASS 223/223`, and `PASS 262/262`.
+Both pypdf and pdfplumber extracted 10/10 nonempty pages.  The build log had
+zero Overfull `\hbox` warnings, and direct all-page review found zero
+clipping, overlap, broken equations, unreadable identifiers, black glyphs,
+malformed page transitions, or other visual defects.
+
+No per-lemma or intermediate PDF was issued.  The v0.9 source/PDF pair is the
+single combined post-validation checkpoint for these additive results.  The
+historical v0.8 source/PDF remains prior R-167 v1.9 / R-168 v1.0 evidence and
+is not current v2.0/v1.1 evidence.  This issuance changes no claim tier and
+closes none of the common-alpha, rank-two oscillator, oscillator GNS-gap,
+physical-response, prospective-freeze, physical Sector-A, or Pre-A parents.

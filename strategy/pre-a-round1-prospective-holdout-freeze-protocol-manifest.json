@@ -6,23 +6,26 @@
     "C6-SPACETIME-SIGNATURE"
   ],
   "parent_explorations": [
-    "EXP-000791"
+    "EXP-000791",
+    "EXP-000807",
+    "EXP-000808"
   ],
-  "exploration_id": "EXP-000807",
+  "exploration_id": "EXP-000810",
   "correction_exploration_ids": [
     "EXP-000808"
   ],
   "result_id": "PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
-  "result_version": "v1.0",
+  "result_version": "v1.1",
   "result_number": "R-168",
   "claim_bearing": false,
   "negative_ids": [
-    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
   ],
   "reused_negative_ids": [
     "NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION"
   ],
-  "authority": "R-168 v1.0 proves a fail-closed schema-shape protocol for a future Pre-A blind holdout and audits a hash-addressed registered snapshot. At the audited checkpoint there are zero official freeze records, zero admitted microscopic survivors, and no admitted M1, M2 or M5 microscopic-map/prediction pair. Therefore no actual prospective holdout can be issued from that snapshot. The validator enforces exact structural keys and declared scalar/container types across the root, contestant, evidence, target, commitment, disclosure, observable, estimand, raw-estimator, candidate-map, prediction, allowed-input, robustness, provenance and scoring objects; requires nonempty root and target identity strings; requires target estimand_id and units to equal the common estimand; requires a nonempty candidate_id-bound prediction for an eligible admitted-map contestant; confines every hash-pinned path to a normalized relative POSIX path inside the repository; requires a parsed HTTPS URL with a hostname; and rejects the registered hostile alias, type, identity, mismatch, duplicate-map, source-reuse, traversal, temporal, hash, baseline and remote-anchor mutations. Its target firewall proves only that no declared target-bearing alias or undeclared payload field is admitted at the structurally controlled locations; it is not a proof against arbitrary target information steganographically encoded in allowed free text. It does not cryptographically verify a custodian signature or fetch and verify a remote tag. It creates no target, freeze record or tag and does not close the parent gate.",
+  "authority": "R-168 v1.1 cumulatively retains the v1.0/EXP-000807 schema and current-checkpoint audit plus the EXP-000808 hardening correction. It proves from the exact hash-pinned current M1-v0, M2-v0 and M5-v0 candidate records that the map-only admitted set is empty. More strongly, the frozen all-hard-rows-PASS rule shows that a hypothetical new version adding only a response map while preserving law, state, reference, regulator and other non-map structures still yields no survivor: M1 retains D01 FAIL and D02 NOT_ADMITTED, M2 retains D03/D05/D06/D08 non-PASS, and M5 retains D04/D05 FAIL. Repairs using new kinetic, state, law, regulator, compact or gauge data are not map-only and require a substantively new candidate version. R-168 v1.1 also proves the exact 48-component finite-torus M2 Gaussian fingerprint and the retrospective response-map underdetermination. PA-M2-CI8-RS-DISPERSION-MAP-v1 remains DESIGN_ONLY and NOT_CREATED. No candidate, admitted map, prediction, target, freeze, tag, score or selection is created.",
   "audited_checkpoint": {
     "commit": "99157442831c0e44d425b5d5f8cd78856c57da53",
     "date": "2026-08-11",
@@ -175,27 +178,31 @@
     "requirement": "At least one actual microscopic contestant must acquire an admitted microscopic-to-observable map and a nonempty prediction derived without the holdout target, together with a complete per-parameter common-input ledger.",
     "status": "OPEN: THE CURRENT ADMITTED SET IS EMPTY"
   },
-  "status": "SCHEMA PROTOCOL READY; CURRENT TREE NOT FREEZE-READY; CRYPTOGRAPHIC REMOTE VERIFICATION AND PARENT PRE-A GATE OPEN",
+  "status": "R-168 v1.1 THEOREM-READY: v1.0 PROTOCOL RETAINED; CURRENT-VERSION MAP SET EMPTY; GAUSSIAN FINGERPRINT CLOSED; M2 PHYSICAL RESPONSE/ERROR, CRYPTOGRAPHIC REMOTE VERIFICATION AND PARENT PRE-A GATES OPEN",
   "closed_subgates": [
     "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
     "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
     "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
-    "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+    "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+    "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+    "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
   ],
   "open_gates": [
     "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
     "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
     "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
     "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-    "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+    "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+    "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
   ],
   "route_status": {
-    "closed_scope": "The machine schema, provenance-order shape checks, anti-leakage schema validation, and exact current-tree empty-admission audit.",
-    "not_closed": "No cryptographic custodian-signature verification, independent remote commit/tag/ref verification, real target commitment, official freeze record, annotated tag, admitted microscopic map, frozen candidate prediction, scored holdout, candidate selection, physical law, Sector A, or Pre-A exit.",
+    "closed_scope": "The v1.0 machine schema/provenance/current-checkpoint audit plus the exact current-version M1/M2/M5 map-only empty set and the 48-component finite-torus Gaussian M2 fingerprint.",
+    "not_closed": "No physical M2 response channel or controlled error bound, M2-v1 candidate, cryptographic custodian-signature verification, independent remote commit/tag/ref verification, real target commitment, official freeze record, annotated tag, admitted microscopic map, frozen candidate prediction, score, candidate selection, physical law, Sector A, or Pre-A exit.",
     "parent_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
     "external_gate": "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
     "internal_gate": "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-    "verification_gate": "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+    "verification_gate": "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+    "m2_successor_gate": "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
   },
   "checkpoint_synthesis": {
     "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
@@ -205,7 +212,8 @@
     "pdf_sha256": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
     "pages": 15,
     "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v1.9 / R-168 v1.0 gate-level synthesis source/PDF pair was issued only after the manifest, certificate, primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed.",
-    "visual_qa": "All 15 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 15 nonempty pages."
+    "visual_qa": "All 15 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 15 nonempty pages.",
+    "v1_1_pdf_policy": "No intermediate R-168 v1.1 PDF is issued by this additive four-file package. A later logical gate-level synthesis may be issued only after formal, independent and integrated verification."
   },
   "verification": {
     "proof_grade": "IN DEVELOPMENT",
@@ -214,5 +222,359 @@
     "integrated_script": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py",
     "certificate": "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md"
   },
-  "no_overclaim": "This result is a schema-shape validator, not a cryptographic signature verifier or an independent remote-ref verifier. It is not an actual freeze and does not authorize a tag. It does not create an external blind target, prove a candidate microscopic observable map, freeze a prediction, score a holdout, select a winner, fix nature's functional, prove a physical vacuum or below-empty sign, close C6, CP1, physical Sector A, or Pre-A."
+  "no_overclaim": "R-168 v1.1 retains the v1.0 schema-shape boundary and adds an exact current-version map-empty-set proof, the stronger frozen-all-PASS map-only repair no-go, a retrospective missing-map underdetermination theorem, a mathematical finite-torus Gaussian fingerprint, and a DESIGN_ONLY successor schema. It does not create PA-M2-CI8-RS-DISPERSION-MAP-v1 or any candidate, admitted map, physical response channel, error-controlled physical prediction, target, freeze, tag, score or selection. A candidate that adds kinetic, state, law, regulator, compact or gauge data is substantively new and must rerun all gates. Nothing here verifies a signature or remote ref, fixes nature's functional, proves a physical vacuum or below-empty sign, or closes C6, CP1, physical Sector A, or Pre-A.",
+  "prior_exploration_ids": [
+    "EXP-000807",
+    "EXP-000808"
+  ],
+  "prior_negative_ids": [
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+  ],
+  "new_negative_ids": [
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+  ],
+  "current_version_map_only_audit": {
+    "closed_child_id": "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+    "source_freeze": {
+      "path": "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json",
+      "normalized_sha256": "01803912d108499596c40bf30551150c704fe6adf49b2e43d86c41ce93bca608"
+    },
+    "criterion": "A current-version contestant is map-only admitted only if its own hash-pinned candidate record contains an admitted candidate-specific microscopic-to-common-observable response map. For survivor admission, the separately frozen rule also requires every hard discriminator row to be PASS. A retrospective diagnostic, inserted inertial lane, mathematical observable, or external relabel is not such a map.",
+    "rows": [
+      {
+        "candidate_id": "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0",
+        "path": "strategy/pre-a-m1-current-production-functional-candidate-manifest.json",
+        "normalized_sha256": "148bd9268e3885347e9766ec847680e41719f49ec3a7cc007c4908f25308c583",
+        "exact_map_evidence": "observable_map.map_to_round1_measured_observables=false",
+        "map_only_admitted": false
+      },
+      {
+        "candidate_id": "PA-M2-CI8-RS-v0",
+        "path": "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json",
+        "normalized_sha256": "baef937db30afff664f60dac5f3828c6a2d94c083ea92928663996c087c0d840",
+        "exact_map_evidence": "no observable_map object; physical_predictions=[]; holdout_prediction=false; normalized map status begins ABSENT and labels the stiffness relation conditional/posthoc",
+        "map_only_admitted": false
+      },
+      {
+        "candidate_id": "PA-M5-NL3-SV-v0",
+        "path": "strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json",
+        "normalized_sha256": "102b0d5f0053b1286bb9751ababadf4b13f94abafebaece5295e91a550e070bd",
+        "exact_map_evidence": "observable_map.map_to_measured_observables=false",
+        "map_only_admitted": false
+      }
+    ],
+    "admitted_candidate_ids": [],
+    "cardinality": 0,
+    "version_immutability_negative_id": "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR",
+    "boundary": "The exact current hash-pinned map set is empty, and a map-only new-version extension preserving the frozen law/state/reference/regulator data still has no all-PASS survivor. This is not a no-go for a substantively new candidate that changes the named non-map structures and reruns every hard row.",
+    "survival_rule_source": {
+      "path": "strategy/pre-a-round1-frozen-quadratic-causal-admission-triage-manifest.json",
+      "normalized_sha256": "8d2a50fcbb70aaba7e6d8f13ed66d530c66c8f58e4bfc57da816238ad970c1d1"
+    },
+    "frozen_survival_rule": {
+      "hard_rows": [
+        "D00-ADMISSION",
+        "D01-SAME-REFERENCE",
+        "D02-KINETIC-TENSOR",
+        "D03-PHYSICAL-ZERO-MODES",
+        "D04-SPEED-DISPERSION",
+        "D05-COMPACT-WINDING",
+        "D06-CRITICAL-DATA",
+        "D07-VALIDATION",
+        "D08-ROBUSTNESS",
+        "D09-PREDICTION-COST"
+      ],
+      "survives_if": "Every hard row is PASS."
+    },
+    "hypothetical_map_only_change": {
+      "hypothetical_only": true,
+      "microscopic_map_after": "ADMITTED",
+      "preserved_fields": [
+        "degrees_and_state_space",
+        "law_and_parameter_domain",
+        "reference_and_boundary",
+        "regulator_and_limit_order",
+        "kinetic_tensor_and_dynamics",
+        "compactness_and_gauge_structure",
+        "physical_modes_and_quotients",
+        "critical_data",
+        "prospective_prediction_and_validation",
+        "robustness_envelope"
+      ]
+    },
+    "map_only_new_version_survivor_ids": [],
+    "all_pass_after_map_only": false,
+    "substantive_new_version_requirements": {
+      "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": [
+        "repair the D01 same-reference failure by changing the state, law or ensemble",
+        "supply a conservative real-time kinetic law and tensor"
+      ],
+      "PA-M2-CI8-RS-v0": [
+        "supply compact or gauge configuration data and a winding or flux law",
+        "derive physical modes after constraints and quotients",
+        "derive critical data and a robustness envelope"
+      ],
+      "PA-M5-NL3-SV-v0": [
+        "change the law or node structure to repair the rank-one D04 dispersion failure",
+        "supply a genuine compact gauge connection to repair D05"
+      ]
+    },
+    "stronger_theorem": "Even a hypothetical new version whose only substantive change is an admitted response map leaves at least one frozen hard row non-PASS for each M1, M2 and M5 parent law/state. M1 retains D01 FAIL and lacks a conservative kinetic tensor; M2 retains D03, D05, D06 and D08 non-PASS; M5 retains D04 and D05 FAIL. Therefore the map-only survivor set remains empty. Repair by adding inertial, state, law, regulator, compact or gauge data is not map-only and defines a substantively new candidate version.",
+    "map_independent_or_non_map_only_residual_hard_rows": {
+      "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": {
+        "D01-SAME-REFERENCE": "FAIL",
+        "D02-KINETIC-TENSOR": "NOT_ADMITTED"
+      },
+      "PA-M2-CI8-RS-v0": {
+        "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+        "D05-COMPACT-WINDING": "NOT_ADMITTED",
+        "D06-CRITICAL-DATA": "NOT_TESTED",
+        "D08-ROBUSTNESS": "NOT_ADMITTED"
+      },
+      "PA-M5-NL3-SV-v0": {
+        "D04-SPEED-DISPERSION": "FAIL",
+        "D05-COMPACT-WINDING": "FAIL"
+      }
+    },
+    "map_only_repair_negative_id": "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+  },
+  "m2_retrospective_stiffness_map_underdetermination": {
+    "status": "EXACT_LOGICAL_UNDERDETERMINATION_OF_THE_MISSING_MAP_SLOT",
+    "current_candidate_id": "PA-M2-CI8-RS-v0",
+    "mathematical_input": "kappa(t)=C*|t| with C>0",
+    "completion_1": "R_1(kappa)=kappa/kappa_0 gives exponent 1",
+    "completion_2": "R_2(kappa)=(kappa/kappa_0)^2 gives exponent 2",
+    "finding": "Both are target-free mathematical completions of the currently absent response-channel slot, not admitted maps or candidate predictions. Therefore the old retrospective exponent 1 encodes an identity response choice and is not forced by the M2-v0 microscopic record.",
+    "validation_credit": false
+  },
+  "m2_finite_torus_dispersion_fingerprint": {
+    "closed_child_id": "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+    "scope": "exact Gaussian finite-torus kernel fingerprint only",
+    "kernel": "K(k)=r+c*sum_j(q^2-k_j^2)^2",
+    "torus_spacing": "h=2*pi/L",
+    "node_condition": "q=m*h with integer m>=1 and k_s=q*s for s in {+1,-1}^3",
+    "ordered_nodes": [
+      [
+        -1,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        1
+      ],
+      [
+        -1,
+        1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "axis_order": [
+      1,
+      2,
+      3
+    ],
+    "per_node_axis_definitions": {
+      "d_plus": "[K(k_s+h*e_i)-K(k_s)]/(c*h^4)",
+      "d_minus": "[K(k_s-h*e_i)-K(k_s)]/(c*h^4)",
+      "S": "(d_plus+d_minus)/2=4*m^2+1",
+      "A": "(d_plus-d_minus)/2=4*s_i*m",
+      "R": "(A/S)*(4*m^2+1)/(4*s_i*m)=1",
+      "S_bar": "(S_(s,1)+S_(s,2)+S_(s,3))/3",
+      "U": "S/S_bar=1"
+    },
+    "component_order": "lexicographic s, then i=1,2,3, then R,U",
+    "node_count": 8,
+    "axes_per_node": 3,
+    "components_per_axis": 2,
+    "ordered_component_count": 48,
+    "expected_component_vector": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "boundary": "The fingerprint is dimensionless Gaussian mathematics. It supplies neither a physical response channel nor a comparison error bound and is not a physical dispersion prediction."
+  },
+  "m2_v1_successor_design": {
+    "schema": "tect/pre-a-m2-ci8-rs-dispersion-map-successor-design/1.0",
+    "design_id": "PA-M2-CI8-RS-DISPERSION-MAP-v1-SCHEMA-DESIGN",
+    "hypothetical_candidate_id": "PA-M2-CI8-RS-DISPERSION-MAP-v1",
+    "parent_candidate_id": "PA-M2-CI8-RS-v0",
+    "status": "DESIGN_ONLY",
+    "candidate_created": false,
+    "candidate_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "admission_status": "NOT_CREATED",
+    "microscopic_map_status": "NOT_CREATED",
+    "prediction_status": "NOT_CREATED",
+    "target_status": "NOT_CREATED",
+    "freeze_status": "NOT_CREATED",
+    "tag_status": "NOT_CREATED",
+    "score_status": "NOT_CREATED",
+    "selection_status": "NOT_CREATED",
+    "required_contract": {
+      "physical_response_channel": {
+        "status": "REQUIRED_NOT_SUPPLIED",
+        "map": null,
+        "state_and_reference": null,
+        "units": null,
+        "proof": null,
+        "script": null
+      },
+      "candidate_neutral_estimand": "REQUIRED_NOT_SUPPLIED",
+      "limit_order": "REQUIRED_NOT_SUPPLIED",
+      "finite_torus_fingerprint": {
+        "closed_child_id": "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+        "ordered_component_count": 48,
+        "status": "MATHEMATICAL_FINGERPRINT_ONLY"
+      },
+      "error_budget": {
+        "status": "REQUIRED_NOT_SUPPLIED",
+        "terms": [
+          "finite_torus_spacing",
+          "regulator_removal",
+          "nonlinear_remainder",
+          "loop_or_renormalization",
+          "state_reference_transfer",
+          "raw_estimator"
+        ],
+        "required_bound": "|O_phys-R_m2| <= sum_j epsilon_j",
+        "margin_condition": "sum_j epsilon_j < frozen acceptance margin before target access"
+      },
+      "prospective_input_firewall": "MUST_BE_FROZEN_BEFORE_TARGET_DISCLOSURE",
+      "independent_verification": "REQUIRED_NOT_SUPPLIED",
+      "open_gate": "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
+    },
+    "no_overclaim": "A design schema is not a candidate record. The hypothetical ID is NOT_CREATED and carries no admitted map, prediction, target, freeze, tag, score or selection."
+  },
+  "new_formal_authority_placeholders": {
+    "exploration_id": "EXP-000810",
+    "closed_child_ids": [
+      "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+      "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
+    ],
+    "negative_ids": [
+      "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+    ],
+    "open_gate_ids": [
+      "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
+    ],
+    "release_rule": "--staged may report these authorities missing while the four-file theorem package is assembled; a non-staged release requires the exploration, result, gate and negative authorities."
+  },
+  "m2_v1_successor_hostile_fixtures": {
+    "v1_0_freeze_schema_hostile_count_preserved": 28,
+    "successor_hostile_count": 11,
+    "total_hostile_class_count": 39,
+    "cases": {
+      "candidate_created": "SUCCESSOR_CREATION_FORBIDDEN",
+      "candidate_manifest_materialized": "SUCCESSOR_CREATION_FORBIDDEN",
+      "admission_promoted": "SUCCESSOR_PROMOTION_FORBIDDEN",
+      "map_promoted": "SUCCESSOR_PROMOTION_FORBIDDEN",
+      "prediction_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN",
+      "target_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN",
+      "freeze_or_tag_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN",
+      "score_or_selection_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN",
+      "response_channel_smuggled": "SUCCESSOR_REQUIRED_CONTRACT_INVALID",
+      "error_budget_term_dropped": "SUCCESSOR_ERROR_BUDGET_INVALID",
+      "fingerprint_dimension_changed": "SUCCESSOR_FINGERPRINT_INVALID"
+    },
+    "boundary": "These cases test that a DESIGN_ONLY successor cannot be promoted or populated. They create no candidate, map, prediction, target, freeze, tag, score or selection."
+  },
+  "map_only_repair_hostile_fixtures": {
+    "count": 7,
+    "cases": {
+      "hard_row_removed": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+      "survival_rule_softened": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+      "m1_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+      "m2_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+      "m5_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+      "preserved_regulator_removed": "MAP_ONLY_CHANGE_SCOPE_INVALID",
+      "map_only_survivor_fabricated": "MAP_ONLY_SURVIVOR_FALSE_PROMOTION"
+    },
+    "checks": "Reject deletion or softening of the all-PASS rule, promotion of the exact M1/M2/M5 residual cells, removal of regulator preservation from the map-only scope, and fabrication of a survivor.",
+    "total_hostile_class_count_with_v1_0_and_successor": 46
+  },
+  "v2_checkpoint_synthesis": {
+    "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+    "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt",
+    "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf",
+    "source_sha256": "ca8b0fdc1c4881aa13e3311851c719d0b6a0dfb4b27e0bb30906f7bc77b04239",
+    "pdf_sha256": "346595c8609be1e49fb33d87e5a469b01f9083c78d7a1fc89d3648b88ea4d243",
+    "pages": 10,
+    "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v2.0 / R-168 v1.1 gate-level synthesis source/PDF pair was issued only after the primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed.",
+    "visual_qa": "All 10 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 10 nonempty pages."
+  }
 }

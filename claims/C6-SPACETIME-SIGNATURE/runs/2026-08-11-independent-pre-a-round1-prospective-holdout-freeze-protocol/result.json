@@ -89,17 +89,30 @@
       "status": "PASS"
     },
     {
-      "actual": "v1.0",
-      "expected": "v1.0",
+      "actual": "v1.1",
+      "expected": "v1.1",
       "group": "identity",
       "name": "result version",
       "status": "PASS"
     },
     {
-      "actual": "EXP-000807",
-      "expected": "EXP-000807",
+      "actual": "EXP-000810",
+      "expected": "EXP-000810",
       "group": "identity",
       "name": "exploration ID",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "EXP-000807",
+        "EXP-000808"
+      ],
+      "expected": [
+        "EXP-000807",
+        "EXP-000808"
+      ],
+      "group": "identity",
+      "name": "retained exploration IDs",
       "status": "PASS"
     },
     {
@@ -129,13 +142,26 @@
     },
     {
       "actual": [
-        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
       ],
       "expected": [
-        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
       ],
       "group": "identity",
       "name": "negative IDs exact",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+      ],
+      "expected": [
+        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+      ],
+      "group": "identity",
+      "name": "new negative IDs exact",
       "status": "PASS"
     },
     {
@@ -154,13 +180,17 @@
         "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
         "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
         "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
-        "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+        "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+        "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+        "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
       ],
       "expected": [
         "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
         "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
         "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
-        "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+        "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+        "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+        "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
       ],
       "group": "identity",
       "name": "closed subgates exact",
@@ -172,14 +202,16 @@
         "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
         "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
         "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-        "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+        "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+        "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
       ],
       "expected": [
         "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
         "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
         "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
         "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-        "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+        "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+        "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
       ],
       "group": "identity",
       "name": "open gates exact",
@@ -419,7 +451,7 @@
       "actual": true,
       "expected": true,
       "group": "certificate",
-      "name": "certificate token v1.0",
+      "name": "certificate token v1.1",
       "status": "PASS"
     },
     {
@@ -433,6 +465,13 @@
       "actual": true,
       "expected": true,
       "group": "certificate",
+      "name": "certificate token EXP-000810",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
       "name": "certificate token EXP-000807",
       "status": "PASS"
     },
@@ -440,7 +479,21 @@
       "actual": true,
       "expected": true,
       "group": "certificate",
+      "name": "certificate token EXP-000808",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
       "name": "certificate token NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR",
       "status": "PASS"
     },
     {
@@ -469,6 +522,20 @@
       "expected": true,
       "group": "certificate",
       "name": "certificate token PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
       "status": "PASS"
     },
     {
@@ -510,6 +577,20 @@
       "actual": true,
       "expected": true,
       "group": "certificate",
+      "name": "certificate token PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
+      "name": "certificate token PA-M2-CI8-RS-DISPERSION-MAP-v1",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "certificate",
       "name": "certificate root fields",
       "status": "PASS"
     },
@@ -535,7 +616,7 @@
       "status": "PASS"
     },
     {
-      "actual": "99157442831c0e44d425b5d5f8cd78856c57da53",
+      "actual": "4a08d13c584d889ff9ae55d015958e5a36bef464",
       "expected": "descendant of 99157442831c0e44d425b5d5f8cd78856c57da53",
       "group": "current_tree",
       "name": "audited commit ancestor",
@@ -739,6 +820,545 @@
       ],
       "group": "current_tree",
       "name": "blocker set exact and ordered",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "group": "map_only",
+      "name": "map-only set independently empty",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "group": "map_only",
+      "name": "map-only pins independently match",
+      "status": "PASS"
+    },
+    {
+      "actual": 3,
+      "expected": 3,
+      "group": "map_only",
+      "name": "map-only exact row count",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "admitted_candidate_ids": [],
+        "cardinality": 0,
+        "closed_child_id": "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+        "map_only_new_version_all_pass_repair_possible": false,
+        "negative_id": "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR",
+        "rows": [
+          {
+            "candidate_id": "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0",
+            "map_absent": true,
+            "map_only_admitted": false,
+            "normalized_map_status": "ABSENT",
+            "path": "strategy/pre-a-m1-current-production-functional-candidate-manifest.json",
+            "pin_matches": true,
+            "pinned_sha256": "148bd9268e3885347e9766ec847680e41719f49ec3a7cc007c4908f25308c583",
+            "source_test": "M1 direct false map field"
+          },
+          {
+            "candidate_id": "PA-M2-CI8-RS-v0",
+            "map_absent": true,
+            "map_only_admitted": false,
+            "normalized_map_status": "ABSENT; CONDITIONAL_STIFFNESS_MAP_DECLARED_ONLY_FOR_THE_VISIBLE_VALIDATION_TEST_BELOW",
+            "path": "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json",
+            "pin_matches": true,
+            "pinned_sha256": "baef937db30afff664f60dac5f3828c6a2d94c083ea92928663996c087c0d840",
+            "source_test": "M2 missing map object plus empty physical/holdout outputs"
+          },
+          {
+            "candidate_id": "PA-M5-NL3-SV-v0",
+            "map_absent": true,
+            "map_only_admitted": false,
+            "normalized_map_status": "ABSENT",
+            "path": "strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json",
+            "pin_matches": true,
+            "pinned_sha256": "102b0d5f0053b1286bb9751ababadf4b13f94abafebaece5295e91a550e070bd",
+            "source_test": "M5 direct false map field"
+          }
+        ],
+        "same_version_repair_possible": false,
+        "survival_contract": {
+          "all_pass_after_map_only": false,
+          "boundary": "Map-only extension leaves non-PASS hard rows.",
+          "hard_rows": [
+            "D00-ADMISSION",
+            "D01-SAME-REFERENCE",
+            "D02-KINETIC-TENSOR",
+            "D03-PHYSICAL-ZERO-MODES",
+            "D04-SPEED-DISPERSION",
+            "D05-COMPACT-WINDING",
+            "D06-CRITICAL-DATA",
+            "D07-VALIDATION",
+            "D08-ROBUSTNESS",
+            "D09-PREDICTION-COST"
+          ],
+          "hypothetical_map_only_change": {
+            "hypothetical_only": true,
+            "microscopic_map_after": "ADMITTED",
+            "preserved_fields": [
+              "degrees_and_state_space",
+              "law_and_parameter_domain",
+              "reference_and_boundary",
+              "regulator_and_limit_order",
+              "kinetic_tensor_and_dynamics",
+              "compactness_and_gauge_structure",
+              "physical_modes_and_quotients",
+              "critical_data",
+              "prospective_prediction_and_validation",
+              "robustness_envelope"
+            ]
+          },
+          "map_only_survivor_ids": [],
+          "residual_hard_rows": {
+            "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": {
+              "D01-SAME-REFERENCE": "FAIL",
+              "D02-KINETIC-TENSOR": "NOT_ADMITTED"
+            },
+            "PA-M2-CI8-RS-v0": {
+              "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+              "D05-COMPACT-WINDING": "NOT_ADMITTED",
+              "D06-CRITICAL-DATA": "NOT_TESTED",
+              "D08-ROBUSTNESS": "NOT_ADMITTED"
+            },
+            "PA-M5-NL3-SV-v0": {
+              "D04-SPEED-DISPERSION": "FAIL",
+              "D05-COMPACT-WINDING": "FAIL"
+            }
+          },
+          "schema": "tect/pre-a-round1-map-only-survival-contract/1.0",
+          "source_path": "strategy/pre-a-round1-frozen-quadratic-causal-admission-triage-manifest.json",
+          "source_sha256": "8d2a50fcbb70aaba7e6d8f13ed66d530c66c8f58e4bfc57da816238ad970c1d1",
+          "substantive_new_version_requirements": {
+            "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": [
+              "repair D01 through state, law or ensemble data",
+              "supply a conservative real-time kinetic law and tensor"
+            ],
+            "PA-M2-CI8-RS-v0": [
+              "supply compact or gauge configuration and winding or flux data",
+              "derive physical modes after constraints and quotients",
+              "derive critical data and robustness"
+            ],
+            "PA-M5-NL3-SV-v0": [
+              "change the law or nodes to repair rank-one D04 dispersion",
+              "supply a genuine compact gauge connection"
+            ]
+          },
+          "survives_if": "Every hard row is PASS."
+        }
+      },
+      "expected": "new version required",
+      "group": "map_only",
+      "name": "same-version repair independently rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "error_codes": [],
+        "errors": [],
+        "valid": true
+      },
+      "expected": "valid",
+      "group": "map_only",
+      "name": "independent all-PASS contract valid",
+      "status": "PASS"
+    },
+    {
+      "actual": "Every hard row is PASS.",
+      "expected": "Every hard row is PASS.",
+      "group": "map_only",
+      "name": "independent frozen survival rule exact",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": {
+          "D01-SAME-REFERENCE": "FAIL",
+          "D02-KINETIC-TENSOR": "NOT_ADMITTED"
+        },
+        "PA-M2-CI8-RS-v0": {
+          "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+          "D05-COMPACT-WINDING": "NOT_ADMITTED",
+          "D06-CRITICAL-DATA": "NOT_TESTED",
+          "D08-ROBUSTNESS": "NOT_ADMITTED"
+        },
+        "PA-M5-NL3-SV-v0": {
+          "D04-SPEED-DISPERSION": "FAIL",
+          "D05-COMPACT-WINDING": "FAIL"
+        }
+      },
+      "expected": {
+        "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": {
+          "D01-SAME-REFERENCE": "FAIL",
+          "D02-KINETIC-TENSOR": "NOT_ADMITTED"
+        },
+        "PA-M2-CI8-RS-v0": {
+          "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+          "D05-COMPACT-WINDING": "NOT_ADMITTED",
+          "D06-CRITICAL-DATA": "NOT_TESTED",
+          "D08-ROBUSTNESS": "NOT_ADMITTED"
+        },
+        "PA-M5-NL3-SV-v0": {
+          "D04-SPEED-DISPERSION": "FAIL",
+          "D05-COMPACT-WINDING": "FAIL"
+        }
+      },
+      "group": "map_only",
+      "name": "independent residual blockers exact",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "all_pass_after_map_only": false,
+        "boundary": "Map-only extension leaves non-PASS hard rows.",
+        "hard_rows": [
+          "D00-ADMISSION",
+          "D01-SAME-REFERENCE",
+          "D02-KINETIC-TENSOR",
+          "D03-PHYSICAL-ZERO-MODES",
+          "D04-SPEED-DISPERSION",
+          "D05-COMPACT-WINDING",
+          "D06-CRITICAL-DATA",
+          "D07-VALIDATION",
+          "D08-ROBUSTNESS",
+          "D09-PREDICTION-COST"
+        ],
+        "hypothetical_map_only_change": {
+          "hypothetical_only": true,
+          "microscopic_map_after": "ADMITTED",
+          "preserved_fields": [
+            "degrees_and_state_space",
+            "law_and_parameter_domain",
+            "reference_and_boundary",
+            "regulator_and_limit_order",
+            "kinetic_tensor_and_dynamics",
+            "compactness_and_gauge_structure",
+            "physical_modes_and_quotients",
+            "critical_data",
+            "prospective_prediction_and_validation",
+            "robustness_envelope"
+          ]
+        },
+        "map_only_survivor_ids": [],
+        "residual_hard_rows": {
+          "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": {
+            "D01-SAME-REFERENCE": "FAIL",
+            "D02-KINETIC-TENSOR": "NOT_ADMITTED"
+          },
+          "PA-M2-CI8-RS-v0": {
+            "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+            "D05-COMPACT-WINDING": "NOT_ADMITTED",
+            "D06-CRITICAL-DATA": "NOT_TESTED",
+            "D08-ROBUSTNESS": "NOT_ADMITTED"
+          },
+          "PA-M5-NL3-SV-v0": {
+            "D04-SPEED-DISPERSION": "FAIL",
+            "D05-COMPACT-WINDING": "FAIL"
+          }
+        },
+        "schema": "tect/pre-a-round1-map-only-survival-contract/1.0",
+        "source_path": "strategy/pre-a-round1-frozen-quadratic-causal-admission-triage-manifest.json",
+        "source_sha256": "8d2a50fcbb70aaba7e6d8f13ed66d530c66c8f58e4bfc57da816238ad970c1d1",
+        "substantive_new_version_requirements": {
+          "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": [
+            "repair D01 through state, law or ensemble data",
+            "supply a conservative real-time kinetic law and tensor"
+          ],
+          "PA-M2-CI8-RS-v0": [
+            "supply compact or gauge configuration and winding or flux data",
+            "derive physical modes after constraints and quotients",
+            "derive critical data and robustness"
+          ],
+          "PA-M5-NL3-SV-v0": [
+            "change the law or nodes to repair rank-one D04 dispersion",
+            "supply a genuine compact gauge connection"
+          ]
+        },
+        "survives_if": "Every hard row is PASS."
+      },
+      "expected": "empty",
+      "group": "map_only",
+      "name": "independent map-only survivor set empty",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": [
+          "repair D01 through state, law or ensemble data",
+          "supply a conservative real-time kinetic law and tensor"
+        ],
+        "PA-M2-CI8-RS-v0": [
+          "supply compact or gauge configuration and winding or flux data",
+          "derive physical modes after constraints and quotients",
+          "derive critical data and robustness"
+        ],
+        "PA-M5-NL3-SV-v0": [
+          "change the law or nodes to repair rank-one D04 dispersion",
+          "supply a genuine compact gauge connection"
+        ]
+      },
+      "expected": {
+        "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": [
+          "repair D01 through state, law or ensemble data",
+          "supply a conservative real-time kinetic law and tensor"
+        ],
+        "PA-M2-CI8-RS-v0": [
+          "supply compact or gauge configuration and winding or flux data",
+          "derive physical modes after constraints and quotients",
+          "derive critical data and robustness"
+        ],
+        "PA-M5-NL3-SV-v0": [
+          "change the law or nodes to repair rank-one D04 dispersion",
+          "supply a genuine compact gauge connection"
+        ]
+      },
+      "group": "map_only",
+      "name": "independent substantive repair boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8,
+        24,
+        48
+      ],
+      "expected": [
+        8,
+        24,
+        48
+      ],
+      "group": "fingerprint",
+      "name": "integer fingerprint dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "expected": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "group": "fingerprint",
+      "name": "integer fingerprint all ones",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        48
+      ],
+      "expected": [
+        true,
+        48
+      ],
+      "group": "fingerprint",
+      "name": "integer fingerprint m=1",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        48
+      ],
+      "expected": [
+        true,
+        48
+      ],
+      "group": "fingerprint",
+      "name": "integer fingerprint m=2",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        48
+      ],
+      "expected": [
+        true,
+        48
+      ],
+      "group": "fingerprint",
+      "name": "integer fingerprint m=4",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        48
+      ],
+      "expected": [
+        true,
+        48
+      ],
+      "group": "fingerprint",
+      "name": "integer fingerprint m=7",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "admitted_map_created": false,
+        "exponents": [
+          1,
+          2
+        ],
+        "identity_response_ratio": 2,
+        "same_stiffness_ratio": 2,
+        "square_response_ratio": 4,
+        "unique_physical_exponent_derivable": false,
+        "validation_credit": false
+      },
+      "expected": "2 versus 4 / exponents 1 versus 2",
+      "group": "underdetermination",
+      "name": "response countermodels differ",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "admitted_map_created": false,
+        "exponents": [
+          1,
+          2
+        ],
+        "identity_response_ratio": 2,
+        "same_stiffness_ratio": 2,
+        "square_response_ratio": 4,
+        "unique_physical_exponent_derivable": false,
+        "validation_credit": false
+      },
+      "expected": "no map or credit",
+      "group": "underdetermination",
+      "name": "response countermodels create no map",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "error_codes": [],
+        "errors": [],
+        "valid": true
+      },
+      "expected": "valid DESIGN_ONLY schema",
+      "group": "successor",
+      "name": "successor design independently valid",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PA-M2-CI8-RS-DISPERSION-MAP-v1",
+        "DESIGN_ONLY"
+      ],
+      "expected": [
+        "PA-M2-CI8-RS-DISPERSION-MAP-v1",
+        "DESIGN_ONLY"
+      ],
+      "group": "successor",
+      "name": "successor ID and status exact",
       "status": "PASS"
     },
     {
@@ -1511,6 +2131,376 @@
       "status": "PASS"
     },
     {
+      "actual": [
+        "hard_row_removed",
+        "survival_rule_softened",
+        "m1_nonpass_promoted",
+        "m2_nonpass_promoted",
+        "m5_nonpass_promoted",
+        "preserved_regulator_removed",
+        "map_only_survivor_fabricated"
+      ],
+      "expected": [
+        "hard_row_removed",
+        "survival_rule_softened",
+        "m1_nonpass_promoted",
+        "m2_nonpass_promoted",
+        "m5_nonpass_promoted",
+        "preserved_regulator_removed",
+        "map_only_survivor_fabricated"
+      ],
+      "group": "map_only_hostile",
+      "name": "independent map-only hostile names exact",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "map_only_hostile",
+      "name": "map-only hard_row_removed rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "MAP_ONLY_SURVIVAL_RULE_INVALID"
+      ],
+      "expected": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+      "group": "map_only_hostile",
+      "name": "map-only hard_row_removed expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "map_only_hostile",
+      "name": "map-only survival_rule_softened rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "MAP_ONLY_SURVIVAL_RULE_INVALID"
+      ],
+      "expected": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+      "group": "map_only_hostile",
+      "name": "map-only survival_rule_softened expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "map_only_hostile",
+      "name": "map-only m1_nonpass_promoted rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "MAP_ONLY_RESIDUAL_INVALID"
+      ],
+      "expected": "MAP_ONLY_RESIDUAL_INVALID",
+      "group": "map_only_hostile",
+      "name": "map-only m1_nonpass_promoted expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "map_only_hostile",
+      "name": "map-only m2_nonpass_promoted rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "MAP_ONLY_RESIDUAL_INVALID"
+      ],
+      "expected": "MAP_ONLY_RESIDUAL_INVALID",
+      "group": "map_only_hostile",
+      "name": "map-only m2_nonpass_promoted expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "map_only_hostile",
+      "name": "map-only m5_nonpass_promoted rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "MAP_ONLY_RESIDUAL_INVALID"
+      ],
+      "expected": "MAP_ONLY_RESIDUAL_INVALID",
+      "group": "map_only_hostile",
+      "name": "map-only m5_nonpass_promoted expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "map_only_hostile",
+      "name": "map-only preserved_regulator_removed rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "MAP_ONLY_CHANGE_SCOPE_INVALID"
+      ],
+      "expected": "MAP_ONLY_CHANGE_SCOPE_INVALID",
+      "group": "map_only_hostile",
+      "name": "map-only preserved_regulator_removed expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "map_only_hostile",
+      "name": "map-only map_only_survivor_fabricated rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "MAP_ONLY_SURVIVOR_FALSE_PROMOTION"
+      ],
+      "expected": "MAP_ONLY_SURVIVOR_FALSE_PROMOTION",
+      "group": "map_only_hostile",
+      "name": "map-only map_only_survivor_fabricated expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "candidate_created",
+        "candidate_manifest_materialized",
+        "admission_promoted",
+        "map_promoted",
+        "prediction_materialized",
+        "target_materialized",
+        "freeze_or_tag_materialized",
+        "score_or_selection_materialized",
+        "response_channel_smuggled",
+        "error_budget_term_dropped",
+        "fingerprint_dimension_changed"
+      ],
+      "expected": [
+        "candidate_created",
+        "candidate_manifest_materialized",
+        "admission_promoted",
+        "map_promoted",
+        "prediction_materialized",
+        "target_materialized",
+        "freeze_or_tag_materialized",
+        "score_or_selection_materialized",
+        "response_channel_smuggled",
+        "error_budget_term_dropped",
+        "fingerprint_dimension_changed"
+      ],
+      "group": "successor_hostile",
+      "name": "successor hostile names exact",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "boundary": "These cases test that a DESIGN_ONLY successor cannot be promoted or populated. They create no candidate, map, prediction, target, freeze, tag, score or selection.",
+        "cases": {
+          "admission_promoted": "SUCCESSOR_PROMOTION_FORBIDDEN",
+          "candidate_created": "SUCCESSOR_CREATION_FORBIDDEN",
+          "candidate_manifest_materialized": "SUCCESSOR_CREATION_FORBIDDEN",
+          "error_budget_term_dropped": "SUCCESSOR_ERROR_BUDGET_INVALID",
+          "fingerprint_dimension_changed": "SUCCESSOR_FINGERPRINT_INVALID",
+          "freeze_or_tag_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN",
+          "map_promoted": "SUCCESSOR_PROMOTION_FORBIDDEN",
+          "prediction_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN",
+          "response_channel_smuggled": "SUCCESSOR_REQUIRED_CONTRACT_INVALID",
+          "score_or_selection_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN",
+          "target_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN"
+        },
+        "successor_hostile_count": 11,
+        "total_hostile_class_count": 39,
+        "v1_0_freeze_schema_hostile_count_preserved": 28
+      },
+      "expected": {
+        "successor": 11,
+        "v1_0": 28
+      },
+      "group": "successor_hostile",
+      "name": "successor hostile authority exact",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "successor_hostile",
+      "name": "successor candidate_created rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "SUCCESSOR_CREATION_FORBIDDEN"
+      ],
+      "expected": "SUCCESSOR_CREATION_FORBIDDEN",
+      "group": "successor_hostile",
+      "name": "successor candidate_created expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "successor_hostile",
+      "name": "successor candidate_manifest_materialized rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "SUCCESSOR_CREATION_FORBIDDEN"
+      ],
+      "expected": "SUCCESSOR_CREATION_FORBIDDEN",
+      "group": "successor_hostile",
+      "name": "successor candidate_manifest_materialized expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "successor_hostile",
+      "name": "successor admission_promoted rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "SUCCESSOR_PROMOTION_FORBIDDEN"
+      ],
+      "expected": "SUCCESSOR_PROMOTION_FORBIDDEN",
+      "group": "successor_hostile",
+      "name": "successor admission_promoted expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "successor_hostile",
+      "name": "successor map_promoted rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "SUCCESSOR_PROMOTION_FORBIDDEN"
+      ],
+      "expected": "SUCCESSOR_PROMOTION_FORBIDDEN",
+      "group": "successor_hostile",
+      "name": "successor map_promoted expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "successor_hostile",
+      "name": "successor prediction_materialized rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "SUCCESSOR_OUTPUT_FORBIDDEN"
+      ],
+      "expected": "SUCCESSOR_OUTPUT_FORBIDDEN",
+      "group": "successor_hostile",
+      "name": "successor prediction_materialized expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "successor_hostile",
+      "name": "successor target_materialized rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "SUCCESSOR_OUTPUT_FORBIDDEN"
+      ],
+      "expected": "SUCCESSOR_OUTPUT_FORBIDDEN",
+      "group": "successor_hostile",
+      "name": "successor target_materialized expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "successor_hostile",
+      "name": "successor freeze_or_tag_materialized rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "SUCCESSOR_OUTPUT_FORBIDDEN"
+      ],
+      "expected": "SUCCESSOR_OUTPUT_FORBIDDEN",
+      "group": "successor_hostile",
+      "name": "successor freeze_or_tag_materialized expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "successor_hostile",
+      "name": "successor score_or_selection_materialized rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "SUCCESSOR_OUTPUT_FORBIDDEN"
+      ],
+      "expected": "SUCCESSOR_OUTPUT_FORBIDDEN",
+      "group": "successor_hostile",
+      "name": "successor score_or_selection_materialized expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "successor_hostile",
+      "name": "successor response_channel_smuggled rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "SUCCESSOR_REQUIRED_CONTRACT_INVALID"
+      ],
+      "expected": "SUCCESSOR_REQUIRED_CONTRACT_INVALID",
+      "group": "successor_hostile",
+      "name": "successor response_channel_smuggled expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "successor_hostile",
+      "name": "successor error_budget_term_dropped rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "SUCCESSOR_ERROR_BUDGET_INVALID"
+      ],
+      "expected": "SUCCESSOR_ERROR_BUDGET_INVALID",
+      "group": "successor_hostile",
+      "name": "successor error_budget_term_dropped expected code",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "successor_hostile",
+      "name": "successor fingerprint_dimension_changed rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "SUCCESSOR_FINGERPRINT_INVALID"
+      ],
+      "expected": "SUCCESSOR_FINGERPRINT_INVALID",
+      "group": "successor_hostile",
+      "name": "successor fingerprint_dimension_changed expected code",
+      "status": "PASS"
+    },
+    {
       "actual": false,
       "expected": false,
       "group": "external_boundary",
@@ -1555,6 +2545,20 @@
       "status": "PASS"
     },
     {
+      "actual": "CLOSED",
+      "expected": "CLOSED",
+      "group": "formal_authority",
+      "name": "closed formal gate PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+      "status": "PASS"
+    },
+    {
+      "actual": "CLOSED",
+      "expected": "CLOSED",
+      "group": "formal_authority",
+      "name": "closed formal gate PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+      "status": "PASS"
+    },
+    {
       "actual": "OPEN",
       "expected": "OPEN",
       "group": "formal_authority",
@@ -1590,10 +2594,17 @@
       "status": "PASS"
     },
     {
+      "actual": "OPEN",
+      "expected": "OPEN",
+      "group": "formal_authority",
+      "name": "open formal gate PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
+      "status": "PASS"
+    },
+    {
       "actual": 2,
       "expected": ">=1",
       "group": "formal_authority",
-      "name": "negative authority NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+      "name": "negative authority NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR",
       "status": "PASS"
     },
     {
@@ -1623,10 +2634,10 @@
     },
     {
       "actual": [
-        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
       ],
       "expected": [
-        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+        "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
       ],
       "group": "formal_authority",
       "name": "exploration negative binding",
@@ -1634,10 +2645,9 @@
     },
     {
       "actual": [
-        "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
-        "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
-        "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
-        "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+        "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+        "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+        "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
         "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
         "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
         "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
@@ -1645,15 +2655,10 @@
         "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
       ],
       "expected": [
-        "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-        "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
-        "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
-        "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
-        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
-        "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
-        "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
-        "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
-        "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR"
+        "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+        "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
+        "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
       ],
       "group": "formal_authority",
       "name": "exploration gate binding",
@@ -1665,7 +2670,7 @@
     "staged": false,
     "status": "COMPLETE"
   },
-  "boundary": "Independent schema-shape and audited-current-tree verification only. No cryptographic signature or remote-ref verification, real freeze, tag, target, prediction, score, parent-gate closure, Pre-A exit, or physical Sector-A selection follows.",
+  "boundary": "Independent cumulative v1.0 schema plus current-version map-empty-set, response underdetermination, integer finite-torus fingerprint, and DESIGN_ONLY successor audit. No M2-v1 candidate, physical response/error bound, cryptographic signature or remote-ref verification, freeze, tag, target, prediction, score, selection, parent-gate closure, Pre-A exit, or physical Sector-A selection follows.",
   "claim_bearing": false,
   "claim_ids": [
     "C6-SPACETIME-SIGNATURE"
@@ -1674,7 +2679,9 @@
     "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
     "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
     "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
-    "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+    "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+    "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+    "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
   ],
   "current_tree": {
     "M1": {
@@ -1709,7 +2716,7 @@
       "PA-M2-CI8-RS-v0",
       "PA-M5-NL3-SV-v0"
     ],
-    "current_head": "99157442831c0e44d425b5d5f8cd78856c57da53",
+    "current_head": "4a08d13c584d889ff9ae55d015958e5a36bef464",
     "freeze_record_count": 0,
     "freeze_records": [],
     "local_freeze_tag_observation": {
@@ -1728,7 +2735,115 @@
     "pre_a_exit_conditions_met": false,
     "prospective_prediction_frozen": false
   },
-  "exploration_id": "EXP-000807",
+  "current_version_map_only_audit": {
+    "admitted_candidate_ids": [],
+    "cardinality": 0,
+    "closed_child_id": "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+    "map_only_new_version_all_pass_repair_possible": false,
+    "negative_id": "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR",
+    "rows": [
+      {
+        "candidate_id": "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0",
+        "map_absent": true,
+        "map_only_admitted": false,
+        "normalized_map_status": "ABSENT",
+        "path": "strategy/pre-a-m1-current-production-functional-candidate-manifest.json",
+        "pin_matches": true,
+        "pinned_sha256": "148bd9268e3885347e9766ec847680e41719f49ec3a7cc007c4908f25308c583",
+        "source_test": "M1 direct false map field"
+      },
+      {
+        "candidate_id": "PA-M2-CI8-RS-v0",
+        "map_absent": true,
+        "map_only_admitted": false,
+        "normalized_map_status": "ABSENT; CONDITIONAL_STIFFNESS_MAP_DECLARED_ONLY_FOR_THE_VISIBLE_VALIDATION_TEST_BELOW",
+        "path": "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json",
+        "pin_matches": true,
+        "pinned_sha256": "baef937db30afff664f60dac5f3828c6a2d94c083ea92928663996c087c0d840",
+        "source_test": "M2 missing map object plus empty physical/holdout outputs"
+      },
+      {
+        "candidate_id": "PA-M5-NL3-SV-v0",
+        "map_absent": true,
+        "map_only_admitted": false,
+        "normalized_map_status": "ABSENT",
+        "path": "strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json",
+        "pin_matches": true,
+        "pinned_sha256": "102b0d5f0053b1286bb9751ababadf4b13f94abafebaece5295e91a550e070bd",
+        "source_test": "M5 direct false map field"
+      }
+    ],
+    "same_version_repair_possible": false,
+    "survival_contract": {
+      "all_pass_after_map_only": false,
+      "boundary": "Map-only extension leaves non-PASS hard rows.",
+      "hard_rows": [
+        "D00-ADMISSION",
+        "D01-SAME-REFERENCE",
+        "D02-KINETIC-TENSOR",
+        "D03-PHYSICAL-ZERO-MODES",
+        "D04-SPEED-DISPERSION",
+        "D05-COMPACT-WINDING",
+        "D06-CRITICAL-DATA",
+        "D07-VALIDATION",
+        "D08-ROBUSTNESS",
+        "D09-PREDICTION-COST"
+      ],
+      "hypothetical_map_only_change": {
+        "hypothetical_only": true,
+        "microscopic_map_after": "ADMITTED",
+        "preserved_fields": [
+          "degrees_and_state_space",
+          "law_and_parameter_domain",
+          "reference_and_boundary",
+          "regulator_and_limit_order",
+          "kinetic_tensor_and_dynamics",
+          "compactness_and_gauge_structure",
+          "physical_modes_and_quotients",
+          "critical_data",
+          "prospective_prediction_and_validation",
+          "robustness_envelope"
+        ]
+      },
+      "map_only_survivor_ids": [],
+      "residual_hard_rows": {
+        "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": {
+          "D01-SAME-REFERENCE": "FAIL",
+          "D02-KINETIC-TENSOR": "NOT_ADMITTED"
+        },
+        "PA-M2-CI8-RS-v0": {
+          "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+          "D05-COMPACT-WINDING": "NOT_ADMITTED",
+          "D06-CRITICAL-DATA": "NOT_TESTED",
+          "D08-ROBUSTNESS": "NOT_ADMITTED"
+        },
+        "PA-M5-NL3-SV-v0": {
+          "D04-SPEED-DISPERSION": "FAIL",
+          "D05-COMPACT-WINDING": "FAIL"
+        }
+      },
+      "schema": "tect/pre-a-round1-map-only-survival-contract/1.0",
+      "source_path": "strategy/pre-a-round1-frozen-quadratic-causal-admission-triage-manifest.json",
+      "source_sha256": "8d2a50fcbb70aaba7e6d8f13ed66d530c66c8f58e4bfc57da816238ad970c1d1",
+      "substantive_new_version_requirements": {
+        "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": [
+          "repair D01 through state, law or ensemble data",
+          "supply a conservative real-time kinetic law and tensor"
+        ],
+        "PA-M2-CI8-RS-v0": [
+          "supply compact or gauge configuration and winding or flux data",
+          "derive physical modes after constraints and quotients",
+          "derive critical data and robustness"
+        ],
+        "PA-M5-NL3-SV-v0": [
+          "change the law or nodes to repair rank-one D04 dispersion",
+          "supply a genuine compact gauge connection"
+        ]
+      },
+      "survives_if": "Every hard row is PASS."
+    }
+  },
+  "exploration_id": "EXP-000810",
   "freeze_schema_contract": {
     "allowed_input_fields": [
       "id",
@@ -2050,17 +3165,757 @@
       "valid": false
     }
   },
+  "m2_finite_torus_dispersion_fingerprint": {
+    "all_components_exactly_one": true,
+    "closed_child_id": "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+    "component_vector": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "fingerprint_sha256": "a00d2c537ba82ba12324d4b48d9a8190c84c1f071971d22dd37793ec36253eb9",
+    "mode_index_fixture": 4,
+    "node_axis_record_count": 24,
+    "node_count": 8,
+    "ordered_component_count": 48,
+    "physical_prediction": false,
+    "records": [
+      {
+        "A": -16,
+        "R": "1",
+        "R_cross_products": [
+          -1040,
+          -1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 1,
+        "d_minus": 81,
+        "d_plus": 49,
+        "node": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A": -16,
+        "R": "1",
+        "R_cross_products": [
+          -1040,
+          -1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 2,
+        "d_minus": 81,
+        "d_plus": 49,
+        "node": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A": -16,
+        "R": "1",
+        "R_cross_products": [
+          -1040,
+          -1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 3,
+        "d_minus": 81,
+        "d_plus": 49,
+        "node": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A": -16,
+        "R": "1",
+        "R_cross_products": [
+          -1040,
+          -1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 1,
+        "d_minus": 81,
+        "d_plus": 49,
+        "node": [
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "A": -16,
+        "R": "1",
+        "R_cross_products": [
+          -1040,
+          -1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 2,
+        "d_minus": 81,
+        "d_plus": 49,
+        "node": [
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "A": 16,
+        "R": "1",
+        "R_cross_products": [
+          1040,
+          1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 3,
+        "d_minus": 49,
+        "d_plus": 81,
+        "node": [
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "A": -16,
+        "R": "1",
+        "R_cross_products": [
+          -1040,
+          -1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 1,
+        "d_minus": 81,
+        "d_plus": 49,
+        "node": [
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "A": 16,
+        "R": "1",
+        "R_cross_products": [
+          1040,
+          1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 2,
+        "d_minus": 49,
+        "d_plus": 81,
+        "node": [
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "A": -16,
+        "R": "1",
+        "R_cross_products": [
+          -1040,
+          -1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 3,
+        "d_minus": 81,
+        "d_plus": 49,
+        "node": [
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "A": -16,
+        "R": "1",
+        "R_cross_products": [
+          -1040,
+          -1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 1,
+        "d_minus": 81,
+        "d_plus": 49,
+        "node": [
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "A": 16,
+        "R": "1",
+        "R_cross_products": [
+          1040,
+          1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 2,
+        "d_minus": 49,
+        "d_plus": 81,
+        "node": [
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "A": 16,
+        "R": "1",
+        "R_cross_products": [
+          1040,
+          1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 3,
+        "d_minus": 49,
+        "d_plus": 81,
+        "node": [
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "A": 16,
+        "R": "1",
+        "R_cross_products": [
+          1040,
+          1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 1,
+        "d_minus": 49,
+        "d_plus": 81,
+        "node": [
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A": -16,
+        "R": "1",
+        "R_cross_products": [
+          -1040,
+          -1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 2,
+        "d_minus": 81,
+        "d_plus": 49,
+        "node": [
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A": -16,
+        "R": "1",
+        "R_cross_products": [
+          -1040,
+          -1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 3,
+        "d_minus": 81,
+        "d_plus": 49,
+        "node": [
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A": 16,
+        "R": "1",
+        "R_cross_products": [
+          1040,
+          1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 1,
+        "d_minus": 49,
+        "d_plus": 81,
+        "node": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "A": -16,
+        "R": "1",
+        "R_cross_products": [
+          -1040,
+          -1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 2,
+        "d_minus": 81,
+        "d_plus": 49,
+        "node": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "A": 16,
+        "R": "1",
+        "R_cross_products": [
+          1040,
+          1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 3,
+        "d_minus": 49,
+        "d_plus": 81,
+        "node": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "A": 16,
+        "R": "1",
+        "R_cross_products": [
+          1040,
+          1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 1,
+        "d_minus": 49,
+        "d_plus": 81,
+        "node": [
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "A": 16,
+        "R": "1",
+        "R_cross_products": [
+          1040,
+          1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 2,
+        "d_minus": 49,
+        "d_plus": 81,
+        "node": [
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "A": -16,
+        "R": "1",
+        "R_cross_products": [
+          -1040,
+          -1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 3,
+        "d_minus": 81,
+        "d_plus": 49,
+        "node": [
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "A": 16,
+        "R": "1",
+        "R_cross_products": [
+          1040,
+          1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 1,
+        "d_minus": 49,
+        "d_plus": 81,
+        "node": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "A": 16,
+        "R": "1",
+        "R_cross_products": [
+          1040,
+          1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 2,
+        "d_minus": 49,
+        "d_plus": 81,
+        "node": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "A": 16,
+        "R": "1",
+        "R_cross_products": [
+          1040,
+          1040
+        ],
+        "S": 65,
+        "U": "1",
+        "U_cross_products": [
+          195,
+          195
+        ],
+        "axis": 3,
+        "d_minus": 49,
+        "d_plus": 81,
+        "node": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "m2_retrospective_stiffness_map_underdetermination": {
+    "admitted_map_created": false,
+    "exponents": [
+      1,
+      2
+    ],
+    "identity_response_ratio": 2,
+    "same_stiffness_ratio": 2,
+    "square_response_ratio": 4,
+    "unique_physical_exponent_derivable": false,
+    "validation_credit": false
+  },
+  "m2_v1_successor_design": {
+    "admission_status": "NOT_CREATED",
+    "candidate_created": false,
+    "candidate_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "design_id": "PA-M2-CI8-RS-DISPERSION-MAP-v1-SCHEMA-DESIGN",
+    "freeze_status": "NOT_CREATED",
+    "hypothetical_candidate_id": "PA-M2-CI8-RS-DISPERSION-MAP-v1",
+    "microscopic_map_status": "NOT_CREATED",
+    "no_overclaim": "A design schema is not a candidate record. The hypothetical ID is NOT_CREATED and carries no admitted map, prediction, target, freeze, tag, score or selection.",
+    "parent_candidate_id": "PA-M2-CI8-RS-v0",
+    "prediction_status": "NOT_CREATED",
+    "required_contract": {
+      "candidate_neutral_estimand": "REQUIRED_NOT_SUPPLIED",
+      "error_budget": {
+        "margin_condition": "sum_j epsilon_j < frozen acceptance margin before target access",
+        "required_bound": "|O_phys-R_m2| <= sum_j epsilon_j",
+        "status": "REQUIRED_NOT_SUPPLIED",
+        "terms": [
+          "finite_torus_spacing",
+          "regulator_removal",
+          "nonlinear_remainder",
+          "loop_or_renormalization",
+          "state_reference_transfer",
+          "raw_estimator"
+        ]
+      },
+      "finite_torus_fingerprint": {
+        "closed_child_id": "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+        "ordered_component_count": 48,
+        "status": "MATHEMATICAL_FINGERPRINT_ONLY"
+      },
+      "independent_verification": "REQUIRED_NOT_SUPPLIED",
+      "limit_order": "REQUIRED_NOT_SUPPLIED",
+      "open_gate": "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
+      "physical_response_channel": {
+        "map": null,
+        "proof": null,
+        "script": null,
+        "state_and_reference": null,
+        "status": "REQUIRED_NOT_SUPPLIED",
+        "units": null
+      },
+      "prospective_input_firewall": "MUST_BE_FROZEN_BEFORE_TARGET_DISCLOSURE"
+    },
+    "schema": "tect/pre-a-m2-ci8-rs-dispersion-map-successor-design/1.0",
+    "score_status": "NOT_CREATED",
+    "selection_status": "NOT_CREATED",
+    "status": "DESIGN_ONLY",
+    "tag_status": "NOT_CREATED",
+    "target_status": "NOT_CREATED"
+  },
+  "m2_v1_successor_design_validation": {
+    "error_codes": [],
+    "errors": [],
+    "valid": true
+  },
+  "map_only_repair_hostile_fixtures": {
+    "hard_row_removed": {
+      "error_codes": [
+        "MAP_ONLY_SURVIVAL_RULE_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+      "valid": false
+    },
+    "m1_nonpass_promoted": {
+      "error_codes": [
+        "MAP_ONLY_RESIDUAL_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "MAP_ONLY_RESIDUAL_INVALID",
+      "valid": false
+    },
+    "m2_nonpass_promoted": {
+      "error_codes": [
+        "MAP_ONLY_RESIDUAL_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "MAP_ONLY_RESIDUAL_INVALID",
+      "valid": false
+    },
+    "m5_nonpass_promoted": {
+      "error_codes": [
+        "MAP_ONLY_RESIDUAL_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "MAP_ONLY_RESIDUAL_INVALID",
+      "valid": false
+    },
+    "map_only_survivor_fabricated": {
+      "error_codes": [
+        "MAP_ONLY_SURVIVOR_FALSE_PROMOTION"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "MAP_ONLY_SURVIVOR_FALSE_PROMOTION",
+      "valid": false
+    },
+    "preserved_regulator_removed": {
+      "error_codes": [
+        "MAP_ONLY_CHANGE_SCOPE_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "MAP_ONLY_CHANGE_SCOPE_INVALID",
+      "valid": false
+    },
+    "survival_rule_softened": {
+      "error_codes": [
+        "MAP_ONLY_SURVIVAL_RULE_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+      "valid": false
+    }
+  },
+  "map_only_survival_validation": {
+    "error_codes": [],
+    "errors": [],
+    "valid": true
+  },
   "negative_ids": [
-    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+  ],
+  "new_closed_subgates": [
+    "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+    "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
+  ],
+  "new_negative_ids": [
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
   ],
   "open_gates": [
     "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
     "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
     "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
     "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-    "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+    "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+    "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
   ],
   "parent_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+  "prior_exploration_ids": [
+    "EXP-000807",
+    "EXP-000808"
+  ],
+  "prior_negative_ids": [
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+  ],
   "real_freeze_verification_boundary": {
     "custodian_signature_cryptographically_verified": false,
     "independently_authenticated_receipt_present": false,
@@ -2073,7 +3928,7 @@
   },
   "result_id": "PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
   "result_number": "R-168",
-  "result_version": "v1.0",
+  "result_version": "v1.1",
   "reused_negative_ids": [
     "NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION"
   ],
@@ -2088,29 +3943,122 @@
     "external_target_commitment_present": false,
     "git_tag_created": false,
     "independent_remote_ref_verifier_implemented": false,
+    "m2_controlled_physical_error_bound_present": false,
+    "m2_physical_response_channel_present": false,
+    "m2_v1_candidate_created": false,
     "parent_gate_closed": false,
     "prospective_prediction_present": false,
     "protocol_schema_shape_validated": true
   },
-  "script_version": "1.1.0",
+  "script_version": "1.2.0",
   "source_hashes": {
-    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py": "8041a437f5c6a091a038d9ac6388beb09bcf949cc9e1d675b4e5e2bd08944126",
+    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py": "3a62f05075b82428da8b8b5f63c34d36c5146d37391e8e7f3bd6428c1729d38f",
     "strategy/pre-a-m0-established-low-energy-baseline-manifest.json": "4b475e1e96eb2167af52a6e73bf494cc9f2481b7988083e7474b8d4bc81f42ff",
     "strategy/pre-a-m1-current-production-functional-candidate-manifest.json": "148bd9268e3885347e9766ec847680e41719f49ec3a7cc007c4908f25308c583",
     "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json": "baef937db30afff664f60dac5f3828c6a2d94c083ea92928663996c087c0d840",
     "strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json": "102b0d5f0053b1286bb9751ababadf4b13f94abafebaece5295e91a550e070bd",
     "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json": "01803912d108499596c40bf30551150c704fe6adf49b2e43d86c41ce93bca608",
     "strategy/pre-a-round1-frozen-quadratic-causal-admission-triage-manifest.json": "8d2a50fcbb70aaba7e6d8f13ed66d530c66c8f58e4bfc57da816238ad970c1d1",
-    "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "de0cbae48001f32bcde77e34f3d8249737fcee5679a06f7d508660ecc59bd4a0",
-    "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "2af87e50bb3b328c33400d6ac24c2c586b64c10b22dd411c0bbc65e8b6bf242b"
+    "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "fe28e8189ac2c679767c7b19959ae0f3b45400e39b538f7dcdc262b32b6da042",
+    "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "3dc61ace4ee789e7c0628885b93e087d78c513a859046fd22fb7b751608da941"
+  },
+  "successor_hostile_fixtures": {
+    "admission_promoted": {
+      "error_codes": [
+        "SUCCESSOR_PROMOTION_FORBIDDEN"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "SUCCESSOR_PROMOTION_FORBIDDEN",
+      "valid": false
+    },
+    "candidate_created": {
+      "error_codes": [
+        "SUCCESSOR_CREATION_FORBIDDEN"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "SUCCESSOR_CREATION_FORBIDDEN",
+      "valid": false
+    },
+    "candidate_manifest_materialized": {
+      "error_codes": [
+        "SUCCESSOR_CREATION_FORBIDDEN"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "SUCCESSOR_CREATION_FORBIDDEN",
+      "valid": false
+    },
+    "error_budget_term_dropped": {
+      "error_codes": [
+        "SUCCESSOR_ERROR_BUDGET_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "SUCCESSOR_ERROR_BUDGET_INVALID",
+      "valid": false
+    },
+    "fingerprint_dimension_changed": {
+      "error_codes": [
+        "SUCCESSOR_FINGERPRINT_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "SUCCESSOR_FINGERPRINT_INVALID",
+      "valid": false
+    },
+    "freeze_or_tag_materialized": {
+      "error_codes": [
+        "SUCCESSOR_OUTPUT_FORBIDDEN"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "SUCCESSOR_OUTPUT_FORBIDDEN",
+      "valid": false
+    },
+    "map_promoted": {
+      "error_codes": [
+        "SUCCESSOR_PROMOTION_FORBIDDEN"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "SUCCESSOR_PROMOTION_FORBIDDEN",
+      "valid": false
+    },
+    "prediction_materialized": {
+      "error_codes": [
+        "SUCCESSOR_OUTPUT_FORBIDDEN"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "SUCCESSOR_OUTPUT_FORBIDDEN",
+      "valid": false
+    },
+    "response_channel_smuggled": {
+      "error_codes": [
+        "SUCCESSOR_REQUIRED_CONTRACT_INVALID"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "SUCCESSOR_REQUIRED_CONTRACT_INVALID",
+      "valid": false
+    },
+    "score_or_selection_materialized": {
+      "error_codes": [
+        "SUCCESSOR_OUTPUT_FORBIDDEN"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "SUCCESSOR_OUTPUT_FORBIDDEN",
+      "valid": false
+    },
+    "target_materialized": {
+      "error_codes": [
+        "SUCCESSOR_OUTPUT_FORBIDDEN"
+      ],
+      "expected_code_observed": true,
+      "expected_error_code": "SUCCESSOR_OUTPUT_FORBIDDEN",
+      "valid": false
+    }
   },
   "summary": {
     "failed": 0,
-    "passed": 153,
-    "total": 153
+    "passed": 223,
+    "total": 223
   },
   "synthetic_schema_validation": {
-    "fixture_digest": "7d967cdd9041f476ccd84431679104940460535d12bdfd1f0e169b0116e463dc",
+    "fixture_digest": "b295cbb6d010789929f3453d18e915947ed45d152675764250141a8bd2472905",
     "valid": true
   },
   "task_id": "T-054",

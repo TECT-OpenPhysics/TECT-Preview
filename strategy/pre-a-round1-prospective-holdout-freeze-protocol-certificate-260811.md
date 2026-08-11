@@ -1,14 +1,15 @@
-# R-168 v1.0 certificate: prospective holdout freeze protocol and current-tree readiness
+# R-168 v1.1 certificate: prospective holdout protocol, current-map audit, and M2 fingerprint
 
-- **Exploration:** `EXP-000807`; validator hardening correction `EXP-000808`
-- **Result:** `R-168`, version `v1.0`
+- **Explorations retained:** `EXP-000807`; validator hardening correction `EXP-000808`
+- **Additive exploration:** `EXP-000810`
+- **Result:** `R-168`, version `v1.1`
 - **Stable result ID:** `PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT`
 - **Claim context:** `C6-SPACETIME-SIGNATURE`
 - **Task:** `T-054`
 - **Tier:** `T0`, `claim_bearing: false`
 - **Date:** 2026-08-11
 
-R-168 does not issue a prediction or a freeze.  It closes the protocol layer
+R-168 v1.1 is cumulative: sections 1--8 retain the v1.0 protocol and audit, and sections 9--14 add the exact current-version map audit and M2 fingerprint.  It does not issue a prediction or a freeze.  The retained v1.0 layer closes the protocol layer
 needed before a future blind Pre-A holdout can be issued and audits the exact
 registered state at commit `99157442831c0e44d425b5d5f8cd78856c57da53`.
 At that checkpoint there are no official freeze records, no admitted
@@ -23,7 +24,9 @@ The closed protocol subgates are exactly:
 1. `PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA`;
 2. `PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL`;
 3. `PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR`;
-4. `PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT`.
+4. `PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT`;
+5. `PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET`; and
+6. `PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT`.
 
 The following gates remain open:
 
@@ -31,7 +34,8 @@ The following gates remain open:
 - `PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER`;
 - `PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT`;
 - `PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION`;
-- `PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION`.
+- `PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION`; and
+- `PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND`.
 
 ## 1. Objects that must be frozen separately
 
@@ -384,3 +388,216 @@ freeze, target, prediction, score, candidate selection or tag is created.
 Nothing here fixes nature's functional, proves a below-empty sign, selects a
 physical vacuum, establishes common Q3LOCK dynamics or a sector gap, closes
 C6 or CP1, or closes physical Sector A or Pre-A.
+## 9. R-168 v1.1 cumulative extension
+
+Sections 1--8 are the retained `EXP-000807` / `EXP-000808` v1.0 protocol,
+hardening audit, 28 hostile schema classes, and seven stable readiness
+blockers.  `EXP-000810` adds two closed mathematical children and one scoped
+current-version no-go without changing any v1.0 conclusion:
+
+1. `PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET`;
+2. `PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT`; and
+3. `NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR`.
+
+The new open successor gate is
+`PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND`.
+The stable result ID remains
+`PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT`,
+now at `R-168 v1.1`.
+
+## 10. Exact current-version map-only empty set
+
+The current contestant versions are fixed by the normalized hashes in
+`pre-a-round1-admission-discriminator-freeze-260810-v1.0.json`.  Reading the
+candidate records themselves gives:
+
+| Current version | Exact map evidence | Map-only admitted |
+|---|---|---:|
+| `PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0` | `observable_map.map_to_round1_measured_observables=false` | no |
+| `PA-M2-CI8-RS-v0` | no `observable_map`; `physical_predictions=[]`; `holdout_prediction=false`; the normalized stiffness relation is `ABSENT` and posthoc | no |
+| `PA-M5-NL3-SV-v0` | `observable_map.map_to_measured_observables=false` | no |
+
+Thus the set of current hash-pinned versions carrying an admitted
+candidate-specific microscopic-to-common-observable map is exactly empty.
+This is derived row by row; it is not inferred from the pre-existing empty
+survivor list.
+
+Changing any one of those exact candidate records to add or admit a map
+changes its content and therefore leaves the pinned version.  That observation
+is only the first layer.  The non-tautological second layer binds the frozen
+survival rule:
+
+```text
+survives iff every D00--D09 hard row is PASS
+```
+
+and reads the map-independent or non-map-only residual cells directly from the
+frozen categorical matrix:
+
+| Parent law/state preserved | Residual hard rows after a hypothetical map-only addition |
+|---|---|
+| `M1-v0` | `D01=FAIL`; `D02=NOT_ADMITTED` because no conservative real-time kinetic law/tensor is supplied |
+| `M2-v0` | `D03=NOT_ADMITTED`, `D05=NOT_ADMITTED`, `D06=NOT_TESTED`, `D08=NOT_ADMITTED` |
+| `M5-v0` | `D04=FAIL`, `D05=FAIL` |
+
+Consequently, even a hypothetical new version that changes only the
+microscopic response-map slot while preserving law, state space, reference,
+boundary, regulator, dynamics, compactness, quotient data, critical contract,
+validation contract, and robustness has no all-PASS survivor.  M2's D05 cell
+includes an absent compact configuration and winding/flux law; those objects
+cannot be supplied by relabelling an observable response map.  M1 requires a
+conservative kinetic law and a D01 state/law/ensemble repair.  M5 requires a
+dispersion-changing isolated-node/law repair and a genuine compact gauge
+connection.
+
+Adding inertial, compact, gauge, state, law, boundary, or regulator data is
+therefore not a map-only repair.  It defines a substantively new candidate
+version and must rerun all ten hard rows.  The scoped negative above rejects
+only map-only promotion under preserved parent law/state data; it is not a
+no-go for such a substantively new candidate.
+
+Two executable engines also reject seven hostile attempts to manufacture this
+conclusion: removing a hard row, softening the all-PASS rule, promoting the M1,
+M2, or M5 residual cells, dropping regulator preservation from the map-only
+scope, or fabricating a survivor.
+
+## 11. Why the retrospective M2 stiffness map is underdetermined
+
+Let the exact mathematical stiffness behave as
+
+\[
+  \kappa(t)=C|t|,\qquad C>0.                              \tag{11.1}
+\]
+
+The current M2-v0 record does not specify the physical response channel.  Two
+target-free completions of that missing slot are
+
+\[
+  {\cal R}_1(\kappa)=\kappa/\kappa_0,
+  \qquad
+  {\cal R}_2(\kappa)=(\kappa/\kappa_0)^2.                \tag{11.2}
+\]
+
+They yield exponents one and two, respectively, from the same exact
+stiffness.  At the rational fixture `t=1/8`, doubling `t` gives exact response
+ratios two and four.  These are logical completions of an absent schema slot,
+not admitted physical maps or candidate predictions.  Therefore the old
+retrospective exponent one encodes the identity-response choice; it is not
+forced by the M2-v0 microscopic record and receives no prospective validation
+credit.
+
+## 12. Exact 48-component finite-torus fingerprint
+
+Take the Gaussian M2 kernel
+
+\[
+ K(k)=r+c\sum_{j=1}^3(q^2-k_j^2)^2,
+ \qquad h={2\pi\over L},\qquad q=mh,\qquad m\in\mathbb N. \tag{12.1}
+\]
+
+For every sign node `s` in `{+1,-1}^3`, put `k_s=q s`.  For each axis `i`
+define the dimensionless one-step increments
+
+\[
+ d_\pm={K(k_s\pm h e_i)-K(k_s)\over c h^4},\quad
+ S={d_++d_-\over2},\quad A={d_+-d_-\over2}.             \tag{12.2}
+\]
+
+Direct expansion gives
+
+\[
+ S=4m^2+1,\qquad A=4s_i m.                               \tag{12.3}
+\]
+
+With `bar S_s=(S_{s,1}+S_{s,2}+S_{s,3})/3`, the two
+dimensionless components at every node-axis pair are
+
+\[
+ R_{s,i}={A\over S}{4m^2+1\over4s_i m}=1,
+ \qquad
+ U_{s,i}={S\over\bar S_s}=1.                             \tag{12.4}
+\]
+
+The declared ordering is lexicographic in the eight sign nodes, then
+`i=1,2,3`, then `(R,U)`.  It therefore has exactly
+`8*3*2=48` components, all exactly one.  Primary `Fraction` arithmetic and a
+non-importing independent integer cross-multiplication engine reconstruct the
+whole ordered vector.  This is a finite-torus Gaussian fingerprint, not a
+physical dispersion prediction.
+
+## 13. Schema-only M2 successor design
+
+The hypothetical identifier
+
+`PA-M2-CI8-RS-DISPERSION-MAP-v1`
+
+appears only in a machine-validated design object with
+`status=DESIGN_ONLY`, `candidate_created=false`, and every admission, map,
+prediction, target, freeze, tag, score, and selection status equal to
+`NOT_CREATED`.  Its manifest path and hash are null.
+
+The design requires, but does not supply, a physical response channel, a
+candidate-neutral estimand, state/reference and unit conventions, order of
+limits, a complete prospective input firewall, independent implementation,
+and a controlled error budget.  The new hostile suite rejects candidate
+materialization, in-place admission, map promotion, prediction/target/freeze/
+tag/score/selection payloads, smuggled response maps, incomplete error terms,
+and a mutated fingerprint dimension.  These successor hostile cases are
+additive; the 28 v1.0 hostile freeze-schema classes remain exact and unchanged.
+
+## 14. Precise open physical-response and error-bound gate
+
+`PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND` remains open until a
+new candidate version, frozen before target access, supplies a target-blind
+map from its microscopic field/state/reference and all nuisance inputs to the
+candidate-neutral estimand, with units, quotients, polarizations, and limit
+order fixed.  It must prove a reproducible bound of the form
+
+\[
+ |O_{\rm phys}-{\cal R}_{M2}|
+ \leq \epsilon_{\rm torus}+\epsilon_{\rm regulator}
+      +\epsilon_{\rm nonlinear}+\epsilon_{\rm loop}
+      +\epsilon_{\rm state/ref}+\epsilon_{\rm estimator},             \tag{14.1}
+\]
+
+where every term is computed from frozen inputs and the total is strictly
+smaller than the frozen acceptance margin before disclosure.  The Gaussian
+fingerprint alone supplies none of these physical identifications or error
+terms.
+
+The scripts expose staged formal checks for `EXP-000810`, the two child gates,
+the new negative, the open response gate, and `R-168 v1.1`.  Staging is only a
+package-assembly mode; a release PASS requires the append-only authorities.
+No v1.1 PDF is issued here.
+
+## 15. Post-validation combined v0.9 checkpoint issuance
+
+After the proof-first package and only after the proof, formal-authority,
+integrated, source-form, freshness, extraction, and render-review gates passed,
+one combined R-167 v2.0 / R-168 v1.1 gate-level checkpoint was issued.
+Its exact artifacts are:
+
+1. source:
+   `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt`;
+2. source SHA-256:
+   `ca8b0fdc1c4881aa13e3311851c719d0b6a0dfb4b27e0bb30906f7bc77b04239`;
+3. PDF:
+   `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf`;
+4. PDF SHA-256:
+   `346595c8609be1e49fb33d87e5a469b01f9083c78d7a1fc89d3648b88ea4d243`;
+5. page count: exactly 10.
+
+The final R-167 v2.0 primary, non-importing independent, and integrated
+contracts are `PASS 153/153`, `PASS 117/117`, and `PASS 220/220`.  The final
+R-168 v1.1 contracts are `PASS 205/205`, `PASS 223/223`, and `PASS 262/262`.
+Both pypdf and pdfplumber extracted 10/10 nonempty pages.  The build log had
+zero Overfull `\hbox` warnings, and direct all-page review found zero
+clipping, overlap, broken equations, unreadable identifiers, black glyphs,
+malformed page transitions, or other visual defects.
+
+No per-lemma or intermediate PDF was issued.  The v0.9 source/PDF pair is the
+single combined post-validation checkpoint for these additive results.  The
+historical v0.8 source/PDF remains prior R-167 v1.9 / R-168 v1.0 evidence and
+is not current v2.0/v1.1 evidence.  This issuance changes no claim tier and
+closes none of the common-alpha, rank-two oscillator, oscillator GNS-gap,
+physical-response, prospective-freeze, physical Sector-A, or Pre-A parents.

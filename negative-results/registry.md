@@ -9,6 +9,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR](#ng-2026-08-11-pre-a-round1-current-version-map-only-admission-repair) | repair the exact current M1/M2/M5 admission result by adding only an externally relabelled map slot | EXP-000810 / R-168 v1.1 leaves eight frozen non-map hard-row cells non-PASS and hence no all-PASS survivor. A state, law, dynamics, regulator, compactness or gauge change is substantively new and must be versioned and fully rerun; this is not a no-go for such a future candidate |
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE](#ng-2026-08-11-pre-a-st8-q3lock-weighted-unitary-cutoff-automatic-arbitrary-context-automorphism-l2-upgrade) | promote static Gibbs weighted-unitary cutoff control automatically through every bounded observable context | the exact two-level Gibbs fixture has squared weighted-unitary errors `4p` and zero evolved-state trace distance, while both contextual automorphism errors have norm two and sum-`#` square eight. Retain a bounded half-modular or finite Bohr-projective class; the common-alpha gate remains open |
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL](#ng-2026-08-11-pre-a-st8-q3lock-static-gaussian-symmetry-finite-moment-automatic-fixed-edge-history-tail) | infer the required fixed-edge history tail from static Gaussianity, endpoint symmetry and all finite moments | the `kappa=3/4` tilted Gaussian has variance `16/7`, tail exponent `7/32<1/4`, and squared-likelihood precision determinant `-5/4`. This rejects only the two-site/dimer implication, not a full one-site-translation-invariant Q3 history theorem |
+| [NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY](#ng-2026-08-11-pre-a-st8-q3lock-extensive-feshbach-self-energy-automatic-qps-locality) | promote a global extensive Feshbach self-energy norm bound automatically to a quasi-local two-phase QPS interaction norm | one high vector coupled equally to `M` low vectors gives an all-ones self-energy of norm `M epsilon^2/(Gamma-E)` with every off-diagonal nonzero. A linked-cluster, Lie--Schwinger or local resolvent expansion remains open |
 | [NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE](#ng-2026-08-11-pre-a-round1-current-tree-prospective-holdout-nonexistence) | issue an actual prospective Round-1 holdout from the audited registered checkpoint | commit `99157442831c0e44d425b5d5f8cd78856c57da53` has zero official freeze records, zero admitted microscopic survivors and no admitted M1/M2/M5 map/prediction pair; the separately reported zero local `freeze/*` tags is informational and non-load-bearing. Obtain external commitment, an admitted microscopic map/prediction and cryptographic remote verification; this is a current-snapshot audit, not a future no-go |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY](#ng-2026-08-11-pre-a-st8-q3lock-global-all-bond-renyi-volume-uniformity) | demand one volume-independent global sandwiched-Renyi bound for complete all-bond kicks | an exact conditional low-doublet product reference gives a factor greater than one on each nontrivial disjoint bond and hence exponential volume growth, although the compressed coordinate probabilities are unchanged. Replace the global target by local measured-Renyi or restricted-tail control; this is not a full Q3 Gibbs counterexample |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT](#ng-2026-08-11-pre-a-st8-q3lock-rank-one-unbounded-block-diagonalization-direct-broken-doublet-import) | import the published rank-one unbounded Lie--Schwinger theorem directly to finish the broken Q3 doublet phase | the theorem assumes one onsite vacuum and concludes a unique gapped ground state, while the required low space has dimension `2^|Lambda|`; choosing only the even onsite vector makes the reference gap exponentially smaller than the order-one Ising scale. Prove a rank-two band theorem or equivalent cutoff removal; this is an import mismatch, not a gap no-go |
@@ -341,6 +345,83 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-11-pre-a-round1-current-version-map-only-admission-repair"></a>
+### NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR -- an external map relabel does not repair the frozen non-map failures
+
+**Failure mode:** treat the exact current hash-pinned M1-v0, M2-v0 and M5-v0
+records as admitted after adding only a map field, while preserving their law,
+state, reference, boundary, regulator, dynamics, compactness, quotient, critical,
+validation and robustness data.
+
+**Evidence:** EXP-000810 / R-168 v1.1 applies the frozen ten-row all-PASS rule.
+The current map-only admitted set has cardinality zero. After the hypothetical
+map-only addition, eight hard-row cells remain non-PASS: M1 D01 FAIL and D02
+NOT_ADMITTED; M2 D03, D05 and D08 NOT_ADMITTED plus D06 NOT_TESTED; M5 D04 and
+D05 FAIL. Thus every current parent retains at least one non-map blocker.
+
+**Consequence:** an external relabel or added response-map slot cannot repair
+the exact current-version admission result. Changing state, law, kinetic data,
+regulator, compactness or gauge structure defines a substantively new candidate
+version and requires all hard rows to be rerun. This is not a no-go for such a
+future candidate, physical response map or genuinely prospective freeze.
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-weighted-unitary-cutoff-automatic-arbitrary-context-automorphism-l2-upgrade"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE -- static weighted-unitary control does not survive every bounded context
+
+**Failure mode:** infer arbitrary bounded-context automorphism convergence from
+the two Gibbs-weighted unitary cutoff estimates, or even from those estimates
+plus exact stability of the evolved density state.
+
+**Evidence:** EXP-000809 / R-167 v2.0 uses
+`rho_p=diag(1-p,p)`, `H=(pi hbar/t_0)|1><1|`, `H_L=0`, and `A=sigma_x`.
+Both squared weighted-unitary errors are `4p`, and
+`rho_p(W^2)=pi^2 hbar^2 p/t_0^2`, while the two one-sided weighted
+automorphism-error norms are exactly two and their sum-`#` square is eight.
+Both evolved density matrices equal `rho_p`, so their trace distance is zero.
+The missing half-modular context norm diverges as `p->0`.
+
+**Consequence:** retain only bounded half-modular contexts, including the
+proved finite Bohr-projective class, or prove a model-specific contextual core.
+This is not a no-go for that narrow core or for Q3LOCK dynamics. The common-
+alpha parent remains open.
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-static-gaussian-symmetry-finite-moment-automatic-fixed-edge-history-tail"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL -- static symmetric Gaussian data do not imply the dynamic edge tail
+
+**Failure mode:** derive the required two-orientation fixed-edge history tail
+from static Gaussianity, endpoint exchange/global-sign symmetry and finiteness
+of all polynomial moments alone.
+
+**Evidence:** EXP-000809 / R-167 v2.0 tilts a standard two-coordinate Gaussian
+by `sqrt(1-kappa^2) exp(kappa xy)` with `kappa=3/4`. The precision determinant
+is `7/16`, so the tilted law is Gaussian with all moments and the declared
+symmetries. Each marginal variance is `16/7`; its tail exponent is `7/32`,
+strictly below the order-two reference-power exponent `1/4`. The squared-
+likelihood precision determinant is `-5/4`, so the required Holder likelihood
+integral diverges.
+
+**Consequence:** prove a model-specific onsite-interspersed fixed-edge history
+estimate or another dynamic quasi-invariance input. This fixture is a two-site
+or homogeneous-dimer implication no-go only. It is not a fully one-site-
+translation-invariant lattice fixture and not a Q3 locality or dynamics
+nonexistence theorem.
+
+<a id="ng-2026-08-11-pre-a-st8-q3lock-extensive-feshbach-self-energy-automatic-qps-locality"></a>
+### NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY -- a global extensive self-energy bound contains no locality data
+
+**Failure mode:** promote the finite-volume extensive Feshbach self-energy norm
+bound automatically to a decaying-interaction or two-phase QPS norm.
+
+**Evidence:** EXP-000809 / R-167 v2.0 couples one high vector with amplitude
+`epsilon` to each of `M` orthonormal low vectors. The exact self-energy is
+`epsilon^2/(Gamma-E)` times the `M`-by-`M` all-ones matrix. Its operator norm is
+`M epsilon^2/(Gamma-E)`, but every off-diagonal matrix element is nonzero.
+
+**Consequence:** the global below-`Gamma` estimate cannot be promoted
+automatically to quasi-local QPS control. A linked-cluster, Lie--Schwinger or
+local resolvent expansion may still establish the required interaction decay;
+this is not a no-go for those routes or for the oscillator phase theorem.
 
 <a id="ng-2026-08-11-pre-a-round1-current-tree-prospective-holdout-nonexistence"></a>
 ### NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE -- the audited checkpoint cannot issue an actual prospective holdout

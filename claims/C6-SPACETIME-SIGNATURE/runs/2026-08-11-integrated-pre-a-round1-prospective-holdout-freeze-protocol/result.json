@@ -2,7 +2,7 @@
   "assertions": {
     "failed": 0,
     "missing": 0,
-    "passed": 218,
+    "passed": 262,
     "rows": [
       {
         "actual": "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json",
@@ -38,13 +38,30 @@
       },
       {
         "actual": [
-          "EXP-000791"
+          "EXP-000791",
+          "EXP-000807",
+          "EXP-000808"
         ],
         "expected": [
-          "EXP-000791"
+          "EXP-000791",
+          "EXP-000807",
+          "EXP-000808"
         ],
         "group": "manifest",
         "name": "manifest exact parent_explorations",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "EXP-000807",
+          "EXP-000808"
+        ],
+        "expected": [
+          "EXP-000807",
+          "EXP-000808"
+        ],
+        "group": "manifest",
+        "name": "manifest exact prior_exploration_ids",
         "status": "PASS"
       },
       {
@@ -59,8 +76,8 @@
         "status": "PASS"
       },
       {
-        "actual": "EXP-000807",
-        "expected": "EXP-000807",
+        "actual": "EXP-000810",
+        "expected": "EXP-000810",
         "group": "manifest",
         "name": "manifest exact exploration_id",
         "status": "PASS"
@@ -80,8 +97,8 @@
         "status": "PASS"
       },
       {
-        "actual": "v1.0",
-        "expected": "v1.0",
+        "actual": "v1.1",
+        "expected": "v1.1",
         "group": "manifest",
         "name": "manifest exact result_version",
         "status": "PASS"
@@ -95,13 +112,37 @@
       },
       {
         "actual": [
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+        ],
+        "expected": [
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+        ],
+        "group": "manifest",
+        "name": "manifest exact negative_ids",
+        "status": "PASS"
+      },
+      {
+        "actual": [
           "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
         ],
         "expected": [
           "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
         ],
         "group": "manifest",
-        "name": "manifest exact negative_ids",
+        "name": "manifest exact prior_negative_ids",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+        ],
+        "expected": [
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+        ],
+        "group": "manifest",
+        "name": "manifest exact new_negative_ids",
         "status": "PASS"
       },
       {
@@ -120,13 +161,17 @@
           "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
           "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
           "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
-          "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+          "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+          "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+          "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
         ],
         "expected": [
           "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
           "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
           "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
-          "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+          "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+          "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+          "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
         ],
         "group": "manifest",
         "name": "manifest exact closed_subgates",
@@ -138,17 +183,26 @@
           "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
           "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
           "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-          "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+          "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+          "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
         ],
         "expected": [
           "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
           "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
           "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
           "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-          "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+          "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+          "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
         ],
         "group": "manifest",
         "name": "manifest exact open_gates",
+        "status": "PASS"
+      },
+      {
+        "actual": "R-168 v1.1 THEOREM-READY: v1.0 PROTOCOL RETAINED; CURRENT-VERSION MAP SET EMPTY; GAUSSIAN FINGERPRINT CLOSED; M2 PHYSICAL RESPONSE/ERROR, CRYPTOGRAPHIC REMOTE VERIFICATION AND PARENT PRE-A GATES OPEN",
+        "expected": "R-168 v1.1 THEOREM-READY with physical-response and parent gates open",
+        "group": "manifest",
+        "name": "manifest v1.1 theorem-ready status exact",
         "status": "PASS"
       },
       {
@@ -441,21 +495,468 @@
           "unbound_prediction"
         ],
         "group": "manifest",
-        "name": "manifest exact 28 hostile classes",
+        "name": "manifest exact retained 28 hostile classes",
         "status": "PASS"
       },
       {
         "actual": {
-          "closed_scope": "The machine schema, provenance-order shape checks, anti-leakage schema validation, and exact current-tree empty-admission audit.",
+          "admitted_candidate_ids": [],
+          "all_pass_after_map_only": false,
+          "boundary": "The exact current hash-pinned map set is empty, and a map-only new-version extension preserving the frozen law/state/reference/regulator data still has no all-PASS survivor. This is not a no-go for a substantively new candidate that changes the named non-map structures and reruns every hard row.",
+          "cardinality": 0,
+          "closed_child_id": "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+          "criterion": "A current-version contestant is map-only admitted only if its own hash-pinned candidate record contains an admitted candidate-specific microscopic-to-common-observable response map. For survivor admission, the separately frozen rule also requires every hard discriminator row to be PASS. A retrospective diagnostic, inserted inertial lane, mathematical observable, or external relabel is not such a map.",
+          "frozen_survival_rule": {
+            "hard_rows": [
+              "D00-ADMISSION",
+              "D01-SAME-REFERENCE",
+              "D02-KINETIC-TENSOR",
+              "D03-PHYSICAL-ZERO-MODES",
+              "D04-SPEED-DISPERSION",
+              "D05-COMPACT-WINDING",
+              "D06-CRITICAL-DATA",
+              "D07-VALIDATION",
+              "D08-ROBUSTNESS",
+              "D09-PREDICTION-COST"
+            ],
+            "survives_if": "Every hard row is PASS."
+          },
+          "hypothetical_map_only_change": {
+            "hypothetical_only": true,
+            "microscopic_map_after": "ADMITTED",
+            "preserved_fields": [
+              "degrees_and_state_space",
+              "law_and_parameter_domain",
+              "reference_and_boundary",
+              "regulator_and_limit_order",
+              "kinetic_tensor_and_dynamics",
+              "compactness_and_gauge_structure",
+              "physical_modes_and_quotients",
+              "critical_data",
+              "prospective_prediction_and_validation",
+              "robustness_envelope"
+            ]
+          },
+          "map_independent_or_non_map_only_residual_hard_rows": {
+            "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": {
+              "D01-SAME-REFERENCE": "FAIL",
+              "D02-KINETIC-TENSOR": "NOT_ADMITTED"
+            },
+            "PA-M2-CI8-RS-v0": {
+              "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+              "D05-COMPACT-WINDING": "NOT_ADMITTED",
+              "D06-CRITICAL-DATA": "NOT_TESTED",
+              "D08-ROBUSTNESS": "NOT_ADMITTED"
+            },
+            "PA-M5-NL3-SV-v0": {
+              "D04-SPEED-DISPERSION": "FAIL",
+              "D05-COMPACT-WINDING": "FAIL"
+            }
+          },
+          "map_only_new_version_survivor_ids": [],
+          "map_only_repair_negative_id": "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR",
+          "rows": [
+            {
+              "candidate_id": "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0",
+              "exact_map_evidence": "observable_map.map_to_round1_measured_observables=false",
+              "map_only_admitted": false,
+              "normalized_sha256": "148bd9268e3885347e9766ec847680e41719f49ec3a7cc007c4908f25308c583",
+              "path": "strategy/pre-a-m1-current-production-functional-candidate-manifest.json"
+            },
+            {
+              "candidate_id": "PA-M2-CI8-RS-v0",
+              "exact_map_evidence": "no observable_map object; physical_predictions=[]; holdout_prediction=false; normalized map status begins ABSENT and labels the stiffness relation conditional/posthoc",
+              "map_only_admitted": false,
+              "normalized_sha256": "baef937db30afff664f60dac5f3828c6a2d94c083ea92928663996c087c0d840",
+              "path": "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json"
+            },
+            {
+              "candidate_id": "PA-M5-NL3-SV-v0",
+              "exact_map_evidence": "observable_map.map_to_measured_observables=false",
+              "map_only_admitted": false,
+              "normalized_sha256": "102b0d5f0053b1286bb9751ababadf4b13f94abafebaece5295e91a550e070bd",
+              "path": "strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json"
+            }
+          ],
+          "source_freeze": {
+            "normalized_sha256": "01803912d108499596c40bf30551150c704fe6adf49b2e43d86c41ce93bca608",
+            "path": "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json"
+          },
+          "stronger_theorem": "Even a hypothetical new version whose only substantive change is an admitted response map leaves at least one frozen hard row non-PASS for each M1, M2 and M5 parent law/state. M1 retains D01 FAIL and lacks a conservative kinetic tensor; M2 retains D03, D05, D06 and D08 non-PASS; M5 retains D04 and D05 FAIL. Therefore the map-only survivor set remains empty. Repair by adding inertial, state, law, regulator, compact or gauge data is not map-only and defines a substantively new candidate version.",
+          "substantive_new_version_requirements": {
+            "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": [
+              "repair the D01 same-reference failure by changing the state, law or ensemble",
+              "supply a conservative real-time kinetic law and tensor"
+            ],
+            "PA-M2-CI8-RS-v0": [
+              "supply compact or gauge configuration data and a winding or flux law",
+              "derive physical modes after constraints and quotients",
+              "derive critical data and a robustness envelope"
+            ],
+            "PA-M5-NL3-SV-v0": [
+              "change the law or node structure to repair the rank-one D04 dispersion failure",
+              "supply a genuine compact gauge connection to repair D05"
+            ]
+          },
+          "survival_rule_source": {
+            "normalized_sha256": "8d2a50fcbb70aaba7e6d8f13ed66d530c66c8f58e4bfc57da816238ad970c1d1",
+            "path": "strategy/pre-a-round1-frozen-quadratic-causal-admission-triage-manifest.json"
+          },
+          "version_immutability_negative_id": "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+        },
+        "expected": {
+          "cardinality": 0,
+          "hard_rows": [
+            "D00-ADMISSION",
+            "D01-SAME-REFERENCE",
+            "D02-KINETIC-TENSOR",
+            "D03-PHYSICAL-ZERO-MODES",
+            "D04-SPEED-DISPERSION",
+            "D05-COMPACT-WINDING",
+            "D06-CRITICAL-DATA",
+            "D07-VALIDATION",
+            "D08-ROBUSTNESS",
+            "D09-PREDICTION-COST"
+          ],
+          "residual_cells": 8
+        },
+        "group": "manifest",
+        "name": "manifest exact map-only empty-set and frozen all-PASS contract",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "cases": {
+            "hard_row_removed": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+            "m1_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+            "m2_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+            "m5_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+            "map_only_survivor_fabricated": "MAP_ONLY_SURVIVOR_FALSE_PROMOTION",
+            "preserved_regulator_removed": "MAP_ONLY_CHANGE_SCOPE_INVALID",
+            "survival_rule_softened": "MAP_ONLY_SURVIVAL_RULE_INVALID"
+          },
+          "checks": "Reject deletion or softening of the all-PASS rule, promotion of the exact M1/M2/M5 residual cells, removal of regulator preservation from the map-only scope, and fabrication of a survivor.",
+          "count": 7,
+          "total_hostile_class_count_with_v1_0_and_successor": 46
+        },
+        "expected": {
+          "cases": {
+            "hard_row_removed": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+            "m1_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+            "m2_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+            "m5_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+            "map_only_survivor_fabricated": "MAP_ONLY_SURVIVOR_FALSE_PROMOTION",
+            "preserved_regulator_removed": "MAP_ONLY_CHANGE_SCOPE_INVALID",
+            "survival_rule_softened": "MAP_ONLY_SURVIVAL_RULE_INVALID"
+          },
+          "count": 7,
+          "total": 46
+        },
+        "group": "manifest",
+        "name": "manifest exact seven map-only hostile classes",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "axes_per_node": 3,
+          "axis_order": [
+            1,
+            2,
+            3
+          ],
+          "boundary": "The fingerprint is dimensionless Gaussian mathematics. It supplies neither a physical response channel nor a comparison error bound and is not a physical dispersion prediction.",
+          "closed_child_id": "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+          "component_order": "lexicographic s, then i=1,2,3, then R,U",
+          "components_per_axis": 2,
+          "expected_component_vector": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "kernel": "K(k)=r+c*sum_j(q^2-k_j^2)^2",
+          "node_condition": "q=m*h with integer m>=1 and k_s=q*s for s in {+1,-1}^3",
+          "node_count": 8,
+          "ordered_component_count": 48,
+          "ordered_nodes": [
+            [
+              -1,
+              -1,
+              -1
+            ],
+            [
+              -1,
+              -1,
+              1
+            ],
+            [
+              -1,
+              1,
+              -1
+            ],
+            [
+              -1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              1
+            ],
+            [
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "per_node_axis_definitions": {
+            "A": "(d_plus-d_minus)/2=4*s_i*m",
+            "R": "(A/S)*(4*m^2+1)/(4*s_i*m)=1",
+            "S": "(d_plus+d_minus)/2=4*m^2+1",
+            "S_bar": "(S_(s,1)+S_(s,2)+S_(s,3))/3",
+            "U": "S/S_bar=1",
+            "d_minus": "[K(k_s-h*e_i)-K(k_s)]/(c*h^4)",
+            "d_plus": "[K(k_s+h*e_i)-K(k_s)]/(c*h^4)"
+          },
+          "scope": "exact Gaussian finite-torus kernel fingerprint only",
+          "torus_spacing": "h=2*pi/L"
+        },
+        "expected": {
+          "axes": 3,
+          "components": 2,
+          "nodes": 8,
+          "ordered": 48,
+          "vector": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        "group": "manifest",
+        "name": "manifest exact ordered 48-component Gaussian fingerprint contract",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "manifest",
+        "name": "manifest fingerprint definitions required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "manifest",
+        "name": "manifest retrospective missing-map underdetermination required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "admission_status": "NOT_CREATED",
+          "candidate_created": false,
+          "candidate_manifest": {
+            "path": null,
+            "sha256": null
+          },
+          "design_id": "PA-M2-CI8-RS-DISPERSION-MAP-v1-SCHEMA-DESIGN",
+          "freeze_status": "NOT_CREATED",
+          "hypothetical_candidate_id": "PA-M2-CI8-RS-DISPERSION-MAP-v1",
+          "microscopic_map_status": "NOT_CREATED",
+          "no_overclaim": "A design schema is not a candidate record. The hypothetical ID is NOT_CREATED and carries no admitted map, prediction, target, freeze, tag, score or selection.",
+          "parent_candidate_id": "PA-M2-CI8-RS-v0",
+          "prediction_status": "NOT_CREATED",
+          "required_contract": {
+            "candidate_neutral_estimand": "REQUIRED_NOT_SUPPLIED",
+            "error_budget": {
+              "margin_condition": "sum_j epsilon_j < frozen acceptance margin before target access",
+              "required_bound": "|O_phys-R_m2| <= sum_j epsilon_j",
+              "status": "REQUIRED_NOT_SUPPLIED",
+              "terms": [
+                "finite_torus_spacing",
+                "regulator_removal",
+                "nonlinear_remainder",
+                "loop_or_renormalization",
+                "state_reference_transfer",
+                "raw_estimator"
+              ]
+            },
+            "finite_torus_fingerprint": {
+              "closed_child_id": "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+              "ordered_component_count": 48,
+              "status": "MATHEMATICAL_FINGERPRINT_ONLY"
+            },
+            "independent_verification": "REQUIRED_NOT_SUPPLIED",
+            "limit_order": "REQUIRED_NOT_SUPPLIED",
+            "open_gate": "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
+            "physical_response_channel": {
+              "map": null,
+              "proof": null,
+              "script": null,
+              "state_and_reference": null,
+              "status": "REQUIRED_NOT_SUPPLIED",
+              "units": null
+            },
+            "prospective_input_firewall": "MUST_BE_FROZEN_BEFORE_TARGET_DISCLOSURE"
+          },
+          "schema": "tect/pre-a-m2-ci8-rs-dispersion-map-successor-design/1.0",
+          "score_status": "NOT_CREATED",
+          "selection_status": "NOT_CREATED",
+          "status": "DESIGN_ONLY",
+          "tag_status": "NOT_CREATED",
+          "target_status": "NOT_CREATED"
+        },
+        "expected": {
+          "all outputs": "NOT_CREATED",
+          "candidate_created": false,
+          "status": "DESIGN_ONLY"
+        },
+        "group": "manifest",
+        "name": "manifest DESIGN_ONLY successor creates nothing",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "boundary": "These cases test that a DESIGN_ONLY successor cannot be promoted or populated. They create no candidate, map, prediction, target, freeze, tag, score or selection.",
+          "cases": {
+            "admission_promoted": "SUCCESSOR_PROMOTION_FORBIDDEN",
+            "candidate_created": "SUCCESSOR_CREATION_FORBIDDEN",
+            "candidate_manifest_materialized": "SUCCESSOR_CREATION_FORBIDDEN",
+            "error_budget_term_dropped": "SUCCESSOR_ERROR_BUDGET_INVALID",
+            "fingerprint_dimension_changed": "SUCCESSOR_FINGERPRINT_INVALID",
+            "freeze_or_tag_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN",
+            "map_promoted": "SUCCESSOR_PROMOTION_FORBIDDEN",
+            "prediction_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN",
+            "response_channel_smuggled": "SUCCESSOR_REQUIRED_CONTRACT_INVALID",
+            "score_or_selection_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN",
+            "target_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN"
+          },
+          "successor_hostile_count": 11,
+          "total_hostile_class_count": 39,
+          "v1_0_freeze_schema_hostile_count_preserved": 28
+        },
+        "expected": {
+          "successor": 11,
+          "total": 39,
+          "v1_0": 28
+        },
+        "group": "manifest",
+        "name": "manifest exact retained-plus-successor hostile counts",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "closed_scope": "The v1.0 machine schema/provenance/current-checkpoint audit plus the exact current-version M1/M2/M5 map-only empty set and the 48-component finite-torus Gaussian M2 fingerprint.",
           "external_gate": "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
           "internal_gate": "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-          "not_closed": "No cryptographic custodian-signature verification, independent remote commit/tag/ref verification, real target commitment, official freeze record, annotated tag, admitted microscopic map, frozen candidate prediction, scored holdout, candidate selection, physical law, Sector A, or Pre-A exit.",
+          "m2_successor_gate": "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
+          "not_closed": "No physical M2 response channel or controlled error bound, M2-v1 candidate, cryptographic custodian-signature verification, independent remote commit/tag/ref verification, real target commitment, official freeze record, annotated tag, admitted microscopic map, frozen candidate prediction, score, candidate selection, physical law, Sector A, or Pre-A exit.",
           "parent_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
           "verification_gate": "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
         },
         "expected": {
           "external": "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
           "internal": "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+          "m2_successor": "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
           "parent": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
           "verification": "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
         },
@@ -495,12 +996,12 @@
         "actual": [],
         "expected": "all required tokens present",
         "group": "manifest",
-        "name": "manifest no-overclaim required tokens",
+        "name": "manifest v1.1 no-overclaim required tokens",
         "status": "PASS"
       },
       {
         "actual": {
-          "metadata": {
+          "expected_metadata_core": {
             "pages": 15,
             "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf",
             "pdf_sha256": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
@@ -510,36 +1011,7 @@
             "visual_qa": "All 15 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 15 nonempty pages.",
             "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v1.9 / R-168 v1.0 gate-level synthesis source/PDF pair was issued only after the manifest, certificate, primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed."
           },
-          "shared_manifest_error": null,
-          "shared_manifest_exact": true
-        },
-        "expected": {
-          "pages": 15,
-          "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf",
-          "pdf_sha256": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
-          "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt",
-          "source_sha256": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e",
-          "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
-          "visual_qa": "All 15 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 15 nonempty pages.",
-          "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v1.9 / R-168 v1.0 gate-level synthesis source/PDF pair was issued only after the manifest, certificate, primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed."
-        },
-        "group": "pdf_economy",
-        "name": "manifest exact shared combined R-167/R-168 checkpoint",
-        "status": "PASS"
-      },
-      {
-        "actual": {
-          "expected_metadata": {
-            "pages": 15,
-            "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf",
-            "pdf_sha256": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
-            "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt",
-            "source_sha256": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e",
-            "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
-            "visual_qa": "All 15 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 15 nonempty pages.",
-            "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v1.9 / R-168 v1.0 gate-level synthesis source/PDF pair was issued only after the manifest, certificate, primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed."
-          },
-          "metadata_exact": true,
+          "metadata_core_exact": true,
           "pdf_exists": true,
           "pdf_fresh_relative_to_source": true,
           "pdf_mtime_ns": 1786406875767731300,
@@ -552,54 +1024,133 @@
           "pypdf_missing_tokens": [],
           "pypdf_nonempty_pages": 15,
           "pypdf_pages": 15,
+          "r167_history_label_exact": true,
+          "r168_history_label_exact": true,
+          "shared_manifest_core_exact": true,
+          "shared_manifest_error": null,
+          "source_exists": true,
+          "source_missing_tokens": [],
+          "source_mtime_ns": 1786406859129977300,
+          "source_sha256": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e",
+          "valid": true
+        },
+        "expected": {
+          "pages": 15,
+          "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf",
+          "pdf_sha256": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
+          "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt",
+          "source_sha256": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e",
+          "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+          "visual_qa": "All 15 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 15 nonempty pages.",
+          "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v1.9 / R-168 v1.0 gate-level synthesis source/PDF pair was issued only after the manifest, certificate, primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed."
+        },
+        "group": "pdf_history",
+        "name": "historical shared v1.9/v1.0 checkpoint metadata and labels exact",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "expected_metadata_core": {
+            "pages": 15,
+            "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf",
+            "pdf_sha256": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
+            "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt",
+            "source_sha256": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e",
+            "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+            "visual_qa": "All 15 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 15 nonempty pages.",
+            "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v1.9 / R-168 v1.0 gate-level synthesis source/PDF pair was issued only after the manifest, certificate, primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed."
+          },
+          "metadata_core_exact": true,
+          "pdf_exists": true,
+          "pdf_fresh_relative_to_source": true,
+          "pdf_mtime_ns": 1786406875767731300,
+          "pdf_sha256": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
+          "pdfplumber_error": null,
+          "pdfplumber_missing_tokens": [],
+          "pdfplumber_nonempty_pages": 15,
+          "pdfplumber_pages": 15,
+          "pypdf_error": null,
+          "pypdf_missing_tokens": [],
+          "pypdf_nonempty_pages": 15,
+          "pypdf_pages": 15,
+          "r167_history_label_exact": true,
+          "r168_history_label_exact": true,
+          "shared_manifest_core_exact": true,
+          "shared_manifest_error": null,
+          "source_exists": true,
+          "source_missing_tokens": [],
+          "source_mtime_ns": 1786406859129977300,
+          "source_sha256": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e",
+          "valid": true
+        },
+        "expected": {
+          "fresh": true,
+          "pages": 15,
+          "pdf_sha256": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
+          "pdfplumber": "all nonempty and all tokens",
+          "pypdf": "all nonempty and all tokens",
+          "source_sha256": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e"
+        },
+        "group": "pdf_history",
+        "name": "historical checkpoint hashes freshness pages and two-parser extraction",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "declared_hashes_valid": true,
+          "declared_pages_positive": true,
+          "issued_metadata": true,
+          "metadata": {
+            "pages": 10,
+            "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf",
+            "pdf_sha256": "346595c8609be1e49fb33d87e5a469b01f9083c78d7a1fc89d3648b88ea4d243",
+            "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt",
+            "source_sha256": "ca8b0fdc1c4881aa13e3311851c719d0b6a0dfb4b27e0bb30906f7bc77b04239",
+            "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+            "visual_qa": "All 10 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 10 nonempty pages.",
+            "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v2.0 / R-168 v1.1 gate-level synthesis source/PDF pair was issued only after the primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed."
+          },
+          "paired_paths": true,
+          "pdf_exists": true,
+          "pdf_fresh_relative_to_source": true,
+          "pdf_mtime_ns": 1786422859639342700,
+          "pdf_path_valid": true,
+          "pdf_sha256": "346595c8609be1e49fb33d87e5a469b01f9083c78d7a1fc89d3648b88ea4d243",
+          "pdfplumber_error": null,
+          "pdfplumber_missing_tokens": [],
+          "pdfplumber_nonempty_pages": 10,
+          "pdfplumber_pages": 10,
+          "pypdf_error": null,
+          "pypdf_missing_tokens": [],
+          "pypdf_nonempty_pages": 10,
+          "pypdf_pages": 10,
           "shared_manifest_error": null,
           "shared_manifest_exact": true,
           "source_exists": true,
           "source_missing_tokens": [],
-          "source_mtime_ns": 1786406859129977300,
-          "source_sha256": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e"
+          "source_mtime_ns": 1786422646796942700,
+          "source_path_valid": true,
+          "source_sha256": "ca8b0fdc1c4881aa13e3311851c719d0b6a0dfb4b27e0bb30906f7bc77b04239",
+          "valid": true,
+          "visual_qa_declared": true,
+          "workflow_exact_scope": true
         },
         "expected": {
-          "pdf_mtime_ns": ">= source_mtime_ns",
-          "pdf_sha256": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
-          "pdfplumber": "15/15 nonempty pages",
-          "pypdf": "15/15 nonempty pages",
-          "required_tokens": [
-            "R-168",
-            "v1.0",
-            "EXP-000807",
-            "EXP-000808",
-            "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
-            "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
-            "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
-            "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
-            "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
-            "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
-            "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
-            "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-            "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
-            "EXTERNAL_VERIFICATION_REQUIRED",
-            "exactly seven stable blockers",
-            "Reproduction and evidence contract",
-            "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py",
-            "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py",
-            "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py",
-            "PASS 125/125",
-            "PASS 153/153",
-            "PASS 218/218",
-            "cryptographic or remote freeze verification",
-            "semantic free-text target-independence proof",
-            "physical Sector A",
-            "Pre-A closure"
-          ],
-          "source_sha256": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e"
+          "confined paired source/PDF": true,
+          "fresh": true,
+          "hashes": "metadata-derived and exact",
+          "issued": true,
+          "pages": "positive metadata-derived count",
+          "pdfplumber": "all pages nonempty and all tokens",
+          "pypdf": "all pages nonempty and all tokens",
+          "shared": true
         },
-        "group": "pdf_economy",
-        "name": "combined checkpoint hashes freshness pages extraction scope reproduction",
+        "group": "pdf_checkpoint",
+        "name": "later combined R-167 v2.0 / R-168 v1.1 checkpoint lifecycle",
         "status": "PASS"
       },
       {
-        "actual": 16684,
+        "actual": 26654,
         "expected": ">0",
         "group": "files",
         "name": "certificate nonempty",
@@ -662,6 +1213,20 @@
         "status": "PASS"
       },
       {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "certificate",
+        "name": "certificate v1.1 additive proof and no-overclaim contract required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "certificate",
+        "name": "certificate exact residual hard-row cells",
+        "status": "PASS"
+      },
+      {
         "actual": 0,
         "expected": 0,
         "group": "certificate",
@@ -669,7 +1234,7 @@
         "status": "PASS"
       },
       {
-        "actual": 77010,
+        "actual": 108469,
         "expected": ">0",
         "group": "files",
         "name": "independent source nonempty",
@@ -704,6 +1269,8 @@
           "pathlib",
           "typing",
           "pypdf",
+          "pdfplumber",
+          "pypdf",
           "pdfplumber"
         ],
         "expected": "subprocess CLI with no component/importlib/runpy import",
@@ -719,7 +1286,7 @@
         "status": "PASS"
       },
       {
-        "actual": "PASS 125/125",
+        "actual": "PASS 205/205",
         "expected": "PASS|STAGED|INCOMPLETE count/count",
         "group": "freshness",
         "name": "primary A normalized CLI sentinel",
@@ -733,7 +1300,7 @@
         "status": "PASS"
       },
       {
-        "actual": "PASS 125/125",
+        "actual": "PASS 205/205",
         "expected": "PASS|STAGED|INCOMPLETE count/count",
         "group": "freshness",
         "name": "primary B normalized CLI sentinel",
@@ -741,8 +1308,8 @@
       },
       {
         "actual": {
-          "a": "bb6a9dec9bd3b41fee0a07926d128fbe79566bca829809ba3e06bf5d8a1e8d6e",
-          "b": "bb6a9dec9bd3b41fee0a07926d128fbe79566bca829809ba3e06bf5d8a1e8d6e"
+          "a": "d80a9eeb946bcba4d86d8b3775f22581e9479610229a9b1da95d82e50f6645c0",
+          "b": "d80a9eeb946bcba4d86d8b3775f22581e9479610229a9b1da95d82e50f6645c0"
         },
         "expected": "equal canonical hashes",
         "group": "freshness",
@@ -751,24 +1318,41 @@
       },
       {
         "actual": {
-          "a": "6704af2010cd2ffa1be2a4e9d6c79634884569c613df7ff0021ad84e778a011b",
-          "b": "6704af2010cd2ffa1be2a4e9d6c79634884569c613df7ff0021ad84e778a011b",
+          "a": "a6943dc113a825da20ed9fa6d5433877480144b13fa2e39d8dfb2d714469f5e3",
+          "b": "a6943dc113a825da20ed9fa6d5433877480144b13fa2e39d8dfb2d714469f5e3",
           "sentinels": [
             {
-              "passed": 125,
+              "passed": 205,
               "status": "PASS",
-              "total": 125
+              "total": 205
             },
             {
-              "passed": 125,
+              "passed": 205,
               "status": "PASS",
-              "total": 125
+              "total": 205
             }
           ]
         },
         "expected": "equal normalized hashes and sentinels",
         "group": "freshness",
         "name": "primary normalized deterministic payload",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "group": "freshness",
+        "name": "primary staged invocation metadata explicit",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "missing": [],
+          "status": "COMPLETE"
+        },
+        "expected": "formal_authority without staged",
+        "group": "freshness",
+        "name": "primary normalization removes staged flag",
         "status": "PASS"
       },
       {
@@ -805,7 +1389,7 @@
             "PA-M2-CI8-RS-v0",
             "PA-M5-NL3-SV-v0"
           ],
-          "current_head": "99157442831c0e44d425b5d5f8cd78856c57da53",
+          "current_head": "4a08d13c584d889ff9ae55d015958e5a36bef464",
           "freeze_record_count": 0,
           "freeze_records": [],
           "normalized_map_status": {
@@ -831,7 +1415,7 @@
         "status": "PASS"
       },
       {
-        "actual": "PASS 153/153 | SHA256 4b7fa325e86ab821a2761233beeebd56c79540df811560cbdd5f810910ea8233 | PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
+        "actual": "PASS 223/223 | SHA256 ca41af4cbb5e07b27b314e858303a55fa118fd53620fab4b926382b94fd0ec6b | PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
         "expected": "PASS|STAGED|INCOMPLETE count/count",
         "group": "freshness",
         "name": "independent A normalized CLI sentinel",
@@ -845,7 +1429,7 @@
         "status": "PASS"
       },
       {
-        "actual": "PASS 153/153 | SHA256 4b7fa325e86ab821a2761233beeebd56c79540df811560cbdd5f810910ea8233 | PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
+        "actual": "PASS 223/223 | SHA256 ca41af4cbb5e07b27b314e858303a55fa118fd53620fab4b926382b94fd0ec6b | PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
         "expected": "PASS|STAGED|INCOMPLETE count/count",
         "group": "freshness",
         "name": "independent B normalized CLI sentinel",
@@ -853,8 +1437,8 @@
       },
       {
         "actual": {
-          "a": "4b7fa325e86ab821a2761233beeebd56c79540df811560cbdd5f810910ea8233",
-          "b": "4b7fa325e86ab821a2761233beeebd56c79540df811560cbdd5f810910ea8233"
+          "a": "ca41af4cbb5e07b27b314e858303a55fa118fd53620fab4b926382b94fd0ec6b",
+          "b": "ca41af4cbb5e07b27b314e858303a55fa118fd53620fab4b926382b94fd0ec6b"
         },
         "expected": "equal canonical hashes",
         "group": "freshness",
@@ -863,18 +1447,18 @@
       },
       {
         "actual": {
-          "a": "b3bdd0fc887b1d60879ef68999cd4ac0078bdc81a5fea3ebe6308e1e9bba1fdc",
-          "b": "b3bdd0fc887b1d60879ef68999cd4ac0078bdc81a5fea3ebe6308e1e9bba1fdc",
+          "a": "6b15df7ff021411d920866878f21c0573cbef2e6f13b97d77b4bd31ea0a44038",
+          "b": "6b15df7ff021411d920866878f21c0573cbef2e6f13b97d77b4bd31ea0a44038",
           "sentinels": [
             {
-              "passed": 153,
+              "passed": 223,
               "status": "PASS",
-              "total": 153
+              "total": 223
             },
             {
-              "passed": 153,
+              "passed": 223,
               "status": "PASS",
-              "total": 153
+              "total": 223
             }
           ]
         },
@@ -934,7 +1518,7 @@
             "PA-M2-CI8-RS-v0",
             "PA-M5-NL3-SV-v0"
           ],
-          "current_head": "99157442831c0e44d425b5d5f8cd78856c57da53",
+          "current_head": "4a08d13c584d889ff9ae55d015958e5a36bef464",
           "freeze_record_count": 0,
           "freeze_records": [],
           "normalized_map_status": {
@@ -954,8 +1538,8 @@
       },
       {
         "actual": {
-          "fresh": "6704af2010cd2ffa1be2a4e9d6c79634884569c613df7ff0021ad84e778a011b",
-          "stored": "6704af2010cd2ffa1be2a4e9d6c79634884569c613df7ff0021ad84e778a011b"
+          "fresh": "a6943dc113a825da20ed9fa6d5433877480144b13fa2e39d8dfb2d714469f5e3",
+          "stored": "a6943dc113a825da20ed9fa6d5433877480144b13fa2e39d8dfb2d714469f5e3"
         },
         "expected": "equal canonical hashes after staged-flag normalization",
         "group": "freshness",
@@ -964,12 +1548,29 @@
       },
       {
         "actual": {
-          "fresh": "b3bdd0fc887b1d60879ef68999cd4ac0078bdc81a5fea3ebe6308e1e9bba1fdc",
-          "stored": "b3bdd0fc887b1d60879ef68999cd4ac0078bdc81a5fea3ebe6308e1e9bba1fdc"
+          "fresh": "6b15df7ff021411d920866878f21c0573cbef2e6f13b97d77b4bd31ea0a44038",
+          "stored": "6b15df7ff021411d920866878f21c0573cbef2e6f13b97d77b4bd31ea0a44038"
         },
         "expected": "equal canonical hashes after staged-flag normalization",
         "group": "freshness",
         "name": "independent stored equals fresh",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "passed": 205,
+          "status": "PASS",
+          "total": 205
+        },
+        "expected": {
+          "passed": 205,
+          "status": [
+            "PASS"
+          ],
+          "total": 205
+        },
+        "group": "freshness",
+        "name": "primary fresh-twice exact CLI count",
         "status": "PASS"
       },
       {
@@ -1005,10 +1606,23 @@
         "status": "PASS"
       },
       {
-        "actual": "EXP-000807",
-        "expected": "EXP-000807",
+        "actual": "EXP-000810",
+        "expected": "EXP-000810",
         "group": "component",
         "name": "primary exact exploration_id",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "EXP-000807",
+          "EXP-000808"
+        ],
+        "expected": [
+          "EXP-000807",
+          "EXP-000808"
+        ],
+        "group": "component",
+        "name": "primary exact prior_exploration_ids",
         "status": "PASS"
       },
       {
@@ -1026,10 +1640,23 @@
         "status": "PASS"
       },
       {
-        "actual": "v1.0",
-        "expected": "v1.0",
+        "actual": "v1.1",
+        "expected": "v1.1",
         "group": "component",
         "name": "primary exact result_version",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+        ],
+        "expected": [
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+        ],
+        "group": "component",
+        "name": "primary exact negative_ids",
         "status": "PASS"
       },
       {
@@ -1040,7 +1667,18 @@
           "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
         ],
         "group": "component",
-        "name": "primary exact negative_ids",
+        "name": "primary exact prior_negative_ids",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+        ],
+        "expected": [
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+        ],
+        "group": "component",
+        "name": "primary exact new_negative_ids",
         "status": "PASS"
       },
       {
@@ -1059,16 +1697,33 @@
           "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
           "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
           "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
-          "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+          "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+          "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+          "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
         ],
         "expected": [
           "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
           "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
           "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
-          "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+          "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+          "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+          "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
         ],
         "group": "component",
         "name": "primary exact closed_subgates",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+          "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
+        ],
+        "expected": [
+          "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+          "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
+        ],
+        "group": "component",
+        "name": "primary exact new_closed_subgates",
         "status": "PASS"
       },
       {
@@ -1077,14 +1732,16 @@
           "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
           "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
           "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-          "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+          "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+          "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
         ],
         "expected": [
           "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
           "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
           "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
           "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-          "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+          "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+          "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
         ],
         "group": "component",
         "name": "primary exact open_gates",
@@ -1108,19 +1765,19 @@
       },
       {
         "actual": {
-          "rows": 125,
+          "rows": 205,
           "summary": {
             "actual_freeze_status": "ABSENT_BY_DESIGN",
             "current_tree_ready": false,
             "failed": 0,
-            "passed": 125,
-            "total": 125
+            "passed": 205,
+            "total": 205
           }
         },
         "expected": {
           "all": "PASS",
           "failed": 0,
-          "rows": 125
+          "rows": 205
         },
         "group": "component",
         "name": "primary exact assertion count",
@@ -1144,28 +1801,64 @@
           "external_target_commitment_present": false,
           "git_tag_created": false,
           "independent_remote_ref_verifier_implemented": false,
+          "m2_controlled_physical_error_bound_present": false,
+          "m2_physical_response_channel_present": false,
+          "m2_v1_candidate_created": false,
           "parent_gate_closed": false,
           "prospective_prediction_present": false,
           "protocol_schema_validated": true
         },
-        "expected": "all promotion/issuance flags false",
+        "expected": {
+          "Pre_A_complete": false,
+          "Sector_A_complete": false,
+          "actual_freeze_record_created": false,
+          "admitted_current_microscopic_map_present": false,
+          "cryptographic_signature_verifier_implemented": false,
+          "current_tree_readiness_audited": true,
+          "external_target_commitment_present": false,
+          "git_tag_created": false,
+          "independent_remote_ref_verifier_implemented": false,
+          "m2_controlled_physical_error_bound_present": false,
+          "m2_physical_response_channel_present": false,
+          "m2_v1_candidate_created": false,
+          "parent_gate_closed": false,
+          "prospective_prediction_present": false,
+          "protocol_schema_validated": true
+        },
         "group": "component",
-        "name": "primary exact no-overclaim scope",
+        "name": "primary all scope booleans exact",
         "status": "PASS"
       },
       {
         "actual": {
-          "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py": "8c146174bd22f5d790d0062b8629d74f8b69fa4289caa400897df3363b11a276",
-          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "de0cbae48001f32bcde77e34f3d8249737fcee5679a06f7d508660ecc59bd4a0",
-          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "2af87e50bb3b328c33400d6ac24c2c586b64c10b22dd411c0bbc65e8b6bf242b"
+          "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py": "01bba625caf70fa6a6fc857d096ba21c14a1facc551b2c274f3920d85959b671",
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "fe28e8189ac2c679767c7b19959ae0f3b45400e39b538f7dcdc262b32b6da042",
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "3dc61ace4ee789e7c0628885b93e087d78c513a859046fd22fb7b751608da941"
         },
         "expected": {
-          "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py": "8c146174bd22f5d790d0062b8629d74f8b69fa4289caa400897df3363b11a276",
-          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "de0cbae48001f32bcde77e34f3d8249737fcee5679a06f7d508660ecc59bd4a0",
-          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "2af87e50bb3b328c33400d6ac24c2c586b64c10b22dd411c0bbc65e8b6bf242b"
+          "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py": "01bba625caf70fa6a6fc857d096ba21c14a1facc551b2c274f3920d85959b671",
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "fe28e8189ac2c679767c7b19959ae0f3b45400e39b538f7dcdc262b32b6da042",
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "3dc61ace4ee789e7c0628885b93e087d78c513a859046fd22fb7b751608da941"
         },
         "group": "freshness",
         "name": "primary source hashes exact",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "passed": 223,
+          "status": "PASS",
+          "total": 223
+        },
+        "expected": {
+          "passed": 223,
+          "status": [
+            "PASS"
+          ],
+          "total": 223
+        },
+        "group": "freshness",
+        "name": "independent fresh-twice exact CLI count",
         "status": "PASS"
       },
       {
@@ -1201,10 +1894,23 @@
         "status": "PASS"
       },
       {
-        "actual": "EXP-000807",
-        "expected": "EXP-000807",
+        "actual": "EXP-000810",
+        "expected": "EXP-000810",
         "group": "component",
         "name": "independent exact exploration_id",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "EXP-000807",
+          "EXP-000808"
+        ],
+        "expected": [
+          "EXP-000807",
+          "EXP-000808"
+        ],
+        "group": "component",
+        "name": "independent exact prior_exploration_ids",
         "status": "PASS"
       },
       {
@@ -1222,10 +1928,23 @@
         "status": "PASS"
       },
       {
-        "actual": "v1.0",
-        "expected": "v1.0",
+        "actual": "v1.1",
+        "expected": "v1.1",
         "group": "component",
         "name": "independent exact result_version",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+        ],
+        "expected": [
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+        ],
+        "group": "component",
+        "name": "independent exact negative_ids",
         "status": "PASS"
       },
       {
@@ -1236,7 +1955,18 @@
           "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
         ],
         "group": "component",
-        "name": "independent exact negative_ids",
+        "name": "independent exact prior_negative_ids",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+        ],
+        "expected": [
+          "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+        ],
+        "group": "component",
+        "name": "independent exact new_negative_ids",
         "status": "PASS"
       },
       {
@@ -1255,16 +1985,33 @@
           "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
           "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
           "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
-          "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+          "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+          "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+          "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
         ],
         "expected": [
           "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
           "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
           "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
-          "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+          "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+          "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+          "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
         ],
         "group": "component",
         "name": "independent exact closed_subgates",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+          "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
+        ],
+        "expected": [
+          "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+          "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
+        ],
+        "group": "component",
+        "name": "independent exact new_closed_subgates",
         "status": "PASS"
       },
       {
@@ -1273,14 +2020,16 @@
           "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
           "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
           "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-          "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+          "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+          "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
         ],
         "expected": [
           "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
           "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
           "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
           "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-          "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+          "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+          "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
         ],
         "group": "component",
         "name": "independent exact open_gates",
@@ -1304,17 +2053,17 @@
       },
       {
         "actual": {
-          "rows": 153,
+          "rows": 223,
           "summary": {
             "failed": 0,
-            "passed": 153,
-            "total": 153
+            "passed": 223,
+            "total": 223
           }
         },
         "expected": {
           "all": "PASS",
           "failed": 0,
-          "rows": 153
+          "rows": 223
         },
         "group": "component",
         "name": "independent exact assertion count",
@@ -1338,37 +2087,56 @@
           "external_target_commitment_present": false,
           "git_tag_created": false,
           "independent_remote_ref_verifier_implemented": false,
+          "m2_controlled_physical_error_bound_present": false,
+          "m2_physical_response_channel_present": false,
+          "m2_v1_candidate_created": false,
           "parent_gate_closed": false,
           "prospective_prediction_present": false,
           "protocol_schema_shape_validated": true
         },
-        "expected": "all promotion/issuance flags false",
+        "expected": {
+          "Pre_A_complete": false,
+          "Sector_A_complete": false,
+          "actual_freeze_record_created": false,
+          "admitted_current_microscopic_map_present": false,
+          "cryptographic_signature_verifier_implemented": false,
+          "current_tree_readiness_audited": true,
+          "external_target_commitment_present": false,
+          "git_tag_created": false,
+          "independent_remote_ref_verifier_implemented": false,
+          "m2_controlled_physical_error_bound_present": false,
+          "m2_physical_response_channel_present": false,
+          "m2_v1_candidate_created": false,
+          "parent_gate_closed": false,
+          "prospective_prediction_present": false,
+          "protocol_schema_shape_validated": true
+        },
         "group": "component",
-        "name": "independent exact no-overclaim scope",
+        "name": "independent all scope booleans exact",
         "status": "PASS"
       },
       {
         "actual": {
-          "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py": "8041a437f5c6a091a038d9ac6388beb09bcf949cc9e1d675b4e5e2bd08944126",
+          "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py": "3a62f05075b82428da8b8b5f63c34d36c5146d37391e8e7f3bd6428c1729d38f",
           "strategy/pre-a-m0-established-low-energy-baseline-manifest.json": "4b475e1e96eb2167af52a6e73bf494cc9f2481b7988083e7474b8d4bc81f42ff",
           "strategy/pre-a-m1-current-production-functional-candidate-manifest.json": "148bd9268e3885347e9766ec847680e41719f49ec3a7cc007c4908f25308c583",
           "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json": "baef937db30afff664f60dac5f3828c6a2d94c083ea92928663996c087c0d840",
           "strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json": "102b0d5f0053b1286bb9751ababadf4b13f94abafebaece5295e91a550e070bd",
           "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json": "01803912d108499596c40bf30551150c704fe6adf49b2e43d86c41ce93bca608",
           "strategy/pre-a-round1-frozen-quadratic-causal-admission-triage-manifest.json": "8d2a50fcbb70aaba7e6d8f13ed66d530c66c8f58e4bfc57da816238ad970c1d1",
-          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "de0cbae48001f32bcde77e34f3d8249737fcee5679a06f7d508660ecc59bd4a0",
-          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "2af87e50bb3b328c33400d6ac24c2c586b64c10b22dd411c0bbc65e8b6bf242b"
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "fe28e8189ac2c679767c7b19959ae0f3b45400e39b538f7dcdc262b32b6da042",
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "3dc61ace4ee789e7c0628885b93e087d78c513a859046fd22fb7b751608da941"
         },
         "expected": {
-          "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py": "8041a437f5c6a091a038d9ac6388beb09bcf949cc9e1d675b4e5e2bd08944126",
+          "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py": "3a62f05075b82428da8b8b5f63c34d36c5146d37391e8e7f3bd6428c1729d38f",
           "strategy/pre-a-m0-established-low-energy-baseline-manifest.json": "4b475e1e96eb2167af52a6e73bf494cc9f2481b7988083e7474b8d4bc81f42ff",
           "strategy/pre-a-m1-current-production-functional-candidate-manifest.json": "148bd9268e3885347e9766ec847680e41719f49ec3a7cc007c4908f25308c583",
           "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json": "baef937db30afff664f60dac5f3828c6a2d94c083ea92928663996c087c0d840",
           "strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json": "102b0d5f0053b1286bb9751ababadf4b13f94abafebaece5295e91a550e070bd",
           "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json": "01803912d108499596c40bf30551150c704fe6adf49b2e43d86c41ce93bca608",
           "strategy/pre-a-round1-frozen-quadratic-causal-admission-triage-manifest.json": "8d2a50fcbb70aaba7e6d8f13ed66d530c66c8f58e4bfc57da816238ad970c1d1",
-          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "de0cbae48001f32bcde77e34f3d8249737fcee5679a06f7d508660ecc59bd4a0",
-          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "2af87e50bb3b328c33400d6ac24c2c586b64c10b22dd411c0bbc65e8b6bf242b"
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "fe28e8189ac2c679767c7b19959ae0f3b45400e39b538f7dcdc262b32b6da042",
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "3dc61ace4ee789e7c0628885b93e087d78c513a859046fd22fb7b751608da941"
         },
         "group": "freshness",
         "name": "independent source hashes exact",
@@ -1387,8 +2155,8 @@
       {
         "actual": [
           true,
-          "99157442831c0e44d425b5d5f8cd78856c57da53",
-          "99157442831c0e44d425b5d5f8cd78856c57da53"
+          "4a08d13c584d889ff9ae55d015958e5a36bef464",
+          "4a08d13c584d889ff9ae55d015958e5a36bef464"
         ],
         "expected": "ancestor and equal observed HEAD",
         "group": "cross_core",
@@ -1520,7 +2288,7 @@
               "PA-M2-CI8-RS-v0",
               "PA-M5-NL3-SV-v0"
             ],
-            "current_head": "99157442831c0e44d425b5d5f8cd78856c57da53",
+            "current_head": "4a08d13c584d889ff9ae55d015958e5a36bef464",
             "freeze_record_count": 0,
             "freeze_records": [],
             "local_freeze_tag_observation": {
@@ -1572,7 +2340,7 @@
               "PA-M2-CI8-RS-v0",
               "PA-M5-NL3-SV-v0"
             ],
-            "current_head": "99157442831c0e44d425b5d5f8cd78856c57da53",
+            "current_head": "4a08d13c584d889ff9ae55d015958e5a36bef464",
             "freeze_record_count": 0,
             "freeze_records": [],
             "local_freeze_tag_observation": {
@@ -2097,11 +2865,11 @@
         "actual": [
           {
             "error_codes": [],
-            "fixture_digest": "ce11d6e1826dae00ed7a34550cfb1ff65c8025d22421828c38b153f451ab01ae",
+            "fixture_digest": "184831d99529f9cc8671f26472790dfbea871e67292ec8d3da43023f4820fb0a",
             "valid": true
           },
           {
-            "fixture_digest": "7d967cdd9041f476ccd84431679104940460535d12bdfd1f0e169b0116e463dc",
+            "fixture_digest": "b295cbb6d010789929f3453d18e915947ed45d152675764250141a8bd2472905",
             "valid": true
           }
         ],
@@ -2989,6 +3757,991 @@
       },
       {
         "actual": {
+          "independent": [
+            "D00-ADMISSION",
+            "D01-SAME-REFERENCE",
+            "D02-KINETIC-TENSOR",
+            "D03-PHYSICAL-ZERO-MODES",
+            "D04-SPEED-DISPERSION",
+            "D05-COMPACT-WINDING",
+            "D06-CRITICAL-DATA",
+            "D07-VALIDATION",
+            "D08-ROBUSTNESS",
+            "D09-PREDICTION-COST"
+          ],
+          "manifest": [
+            "D00-ADMISSION",
+            "D01-SAME-REFERENCE",
+            "D02-KINETIC-TENSOR",
+            "D03-PHYSICAL-ZERO-MODES",
+            "D04-SPEED-DISPERSION",
+            "D05-COMPACT-WINDING",
+            "D06-CRITICAL-DATA",
+            "D07-VALIDATION",
+            "D08-ROBUSTNESS",
+            "D09-PREDICTION-COST"
+          ],
+          "primary": [
+            "D00-ADMISSION",
+            "D01-SAME-REFERENCE",
+            "D02-KINETIC-TENSOR",
+            "D03-PHYSICAL-ZERO-MODES",
+            "D04-SPEED-DISPERSION",
+            "D05-COMPACT-WINDING",
+            "D06-CRITICAL-DATA",
+            "D07-VALIDATION",
+            "D08-ROBUSTNESS",
+            "D09-PREDICTION-COST"
+          ]
+        },
+        "expected": [
+          "D00-ADMISSION",
+          "D01-SAME-REFERENCE",
+          "D02-KINETIC-TENSOR",
+          "D03-PHYSICAL-ZERO-MODES",
+          "D04-SPEED-DISPERSION",
+          "D05-COMPACT-WINDING",
+          "D06-CRITICAL-DATA",
+          "D07-VALIDATION",
+          "D08-ROBUSTNESS",
+          "D09-PREDICTION-COST"
+        ],
+        "group": "cross_v1_1",
+        "name": "cross exact ten frozen hard rows",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": {
+            "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": {
+              "D01-SAME-REFERENCE": "FAIL",
+              "D02-KINETIC-TENSOR": "NOT_ADMITTED"
+            },
+            "PA-M2-CI8-RS-v0": {
+              "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+              "D05-COMPACT-WINDING": "NOT_ADMITTED",
+              "D06-CRITICAL-DATA": "NOT_TESTED",
+              "D08-ROBUSTNESS": "NOT_ADMITTED"
+            },
+            "PA-M5-NL3-SV-v0": {
+              "D04-SPEED-DISPERSION": "FAIL",
+              "D05-COMPACT-WINDING": "FAIL"
+            }
+          },
+          "manifest": {
+            "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": {
+              "D01-SAME-REFERENCE": "FAIL",
+              "D02-KINETIC-TENSOR": "NOT_ADMITTED"
+            },
+            "PA-M2-CI8-RS-v0": {
+              "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+              "D05-COMPACT-WINDING": "NOT_ADMITTED",
+              "D06-CRITICAL-DATA": "NOT_TESTED",
+              "D08-ROBUSTNESS": "NOT_ADMITTED"
+            },
+            "PA-M5-NL3-SV-v0": {
+              "D04-SPEED-DISPERSION": "FAIL",
+              "D05-COMPACT-WINDING": "FAIL"
+            }
+          },
+          "primary": {
+            "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": {
+              "D01-SAME-REFERENCE": "FAIL",
+              "D02-KINETIC-TENSOR": "NOT_ADMITTED"
+            },
+            "PA-M2-CI8-RS-v0": {
+              "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+              "D05-COMPACT-WINDING": "NOT_ADMITTED",
+              "D06-CRITICAL-DATA": "NOT_TESTED",
+              "D08-ROBUSTNESS": "NOT_ADMITTED"
+            },
+            "PA-M5-NL3-SV-v0": {
+              "D04-SPEED-DISPERSION": "FAIL",
+              "D05-COMPACT-WINDING": "FAIL"
+            }
+          }
+        },
+        "expected": {
+          "cells": {
+            "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0": {
+              "D01-SAME-REFERENCE": "FAIL",
+              "D02-KINETIC-TENSOR": "NOT_ADMITTED"
+            },
+            "PA-M2-CI8-RS-v0": {
+              "D03-PHYSICAL-ZERO-MODES": "NOT_ADMITTED",
+              "D05-COMPACT-WINDING": "NOT_ADMITTED",
+              "D06-CRITICAL-DATA": "NOT_TESTED",
+              "D08-ROBUSTNESS": "NOT_ADMITTED"
+            },
+            "PA-M5-NL3-SV-v0": {
+              "D04-SPEED-DISPERSION": "FAIL",
+              "D05-COMPACT-WINDING": "FAIL"
+            }
+          },
+          "count": 8
+        },
+        "group": "cross_v1_1",
+        "name": "cross exact eight residual hard-row cells",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": [],
+          "manifest": [],
+          "primary": [],
+          "rows": [
+            {
+              "candidate_id": "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0",
+              "map_only_admitted": false,
+              "path": "strategy/pre-a-m1-current-production-functional-candidate-manifest.json",
+              "sha256": "148bd9268e3885347e9766ec847680e41719f49ec3a7cc007c4908f25308c583"
+            },
+            {
+              "candidate_id": "PA-M2-CI8-RS-v0",
+              "map_only_admitted": false,
+              "path": "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json",
+              "sha256": "baef937db30afff664f60dac5f3828c6a2d94c083ea92928663996c087c0d840"
+            },
+            {
+              "candidate_id": "PA-M5-NL3-SV-v0",
+              "map_only_admitted": false,
+              "path": "strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json",
+              "sha256": "102b0d5f0053b1286bb9751ababadf4b13f94abafebaece5295e91a550e070bd"
+            }
+          ]
+        },
+        "expected": {
+          "admitted": [],
+          "cardinality": 0,
+          "rows": 3
+        },
+        "group": "cross_v1_1",
+        "name": "cross exact current-version map-only admitted cardinality zero",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "error_codes": [],
+            "errors": [],
+            "valid": true
+          },
+          {
+            "error_codes": [],
+            "errors": [],
+            "valid": true
+          }
+        ],
+        "expected": {
+          "error_codes": [],
+          "errors": [],
+          "valid": true
+        },
+        "group": "cross_v1_1",
+        "name": "cross map-only survival validators exact and valid",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent_count": 48,
+          "independent_sha": "a00d2c537ba82ba12324d4b48d9a8190c84c1f071971d22dd37793ec36253eb9",
+          "manifest_count": 48,
+          "primary_count": 48,
+          "primary_sha": "a00d2c537ba82ba12324d4b48d9a8190c84c1f071971d22dd37793ec36253eb9",
+          "vector": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        "expected": {
+          "count": 48,
+          "sha256": "a00d2c537ba82ba12324d4b48d9a8190c84c1f071971d22dd37793ec36253eb9",
+          "vector": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        "group": "cross_v1_1",
+        "name": "cross ordered 48-component fingerprint all ones and SHA exact",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": {
+            "hard_row_removed": {
+              "error_codes": [
+                "MAP_ONLY_SURVIVAL_RULE_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+              "valid": false
+            },
+            "m1_nonpass_promoted": {
+              "error_codes": [
+                "MAP_ONLY_RESIDUAL_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_RESIDUAL_INVALID",
+              "valid": false
+            },
+            "m2_nonpass_promoted": {
+              "error_codes": [
+                "MAP_ONLY_RESIDUAL_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_RESIDUAL_INVALID",
+              "valid": false
+            },
+            "m5_nonpass_promoted": {
+              "error_codes": [
+                "MAP_ONLY_RESIDUAL_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_RESIDUAL_INVALID",
+              "valid": false
+            },
+            "map_only_survivor_fabricated": {
+              "error_codes": [
+                "MAP_ONLY_SURVIVOR_FALSE_PROMOTION"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_SURVIVOR_FALSE_PROMOTION",
+              "valid": false
+            },
+            "preserved_regulator_removed": {
+              "error_codes": [
+                "MAP_ONLY_CHANGE_SCOPE_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_CHANGE_SCOPE_INVALID",
+              "valid": false
+            },
+            "survival_rule_softened": {
+              "error_codes": [
+                "MAP_ONLY_SURVIVAL_RULE_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+              "valid": false
+            }
+          },
+          "manifest": {
+            "cases": {
+              "hard_row_removed": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+              "m1_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+              "m2_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+              "m5_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+              "map_only_survivor_fabricated": "MAP_ONLY_SURVIVOR_FALSE_PROMOTION",
+              "preserved_regulator_removed": "MAP_ONLY_CHANGE_SCOPE_INVALID",
+              "survival_rule_softened": "MAP_ONLY_SURVIVAL_RULE_INVALID"
+            },
+            "checks": "Reject deletion or softening of the all-PASS rule, promotion of the exact M1/M2/M5 residual cells, removal of regulator preservation from the map-only scope, and fabrication of a survivor.",
+            "count": 7,
+            "total_hostile_class_count_with_v1_0_and_successor": 46
+          },
+          "primary": {
+            "hard_row_removed": {
+              "error_codes": [
+                "MAP_ONLY_SURVIVAL_RULE_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+              "valid": false
+            },
+            "m1_nonpass_promoted": {
+              "error_codes": [
+                "MAP_ONLY_RESIDUAL_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_RESIDUAL_INVALID",
+              "valid": false
+            },
+            "m2_nonpass_promoted": {
+              "error_codes": [
+                "MAP_ONLY_RESIDUAL_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_RESIDUAL_INVALID",
+              "valid": false
+            },
+            "m5_nonpass_promoted": {
+              "error_codes": [
+                "MAP_ONLY_RESIDUAL_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_RESIDUAL_INVALID",
+              "valid": false
+            },
+            "map_only_survivor_fabricated": {
+              "error_codes": [
+                "MAP_ONLY_SURVIVOR_FALSE_PROMOTION"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_SURVIVOR_FALSE_PROMOTION",
+              "valid": false
+            },
+            "preserved_regulator_removed": {
+              "error_codes": [
+                "MAP_ONLY_CHANGE_SCOPE_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_CHANGE_SCOPE_INVALID",
+              "valid": false
+            },
+            "survival_rule_softened": {
+              "error_codes": [
+                "MAP_ONLY_SURVIVAL_RULE_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+              "valid": false
+            }
+          }
+        },
+        "expected": {
+          "cases": {
+            "hard_row_removed": "MAP_ONLY_SURVIVAL_RULE_INVALID",
+            "m1_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+            "m2_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+            "m5_nonpass_promoted": "MAP_ONLY_RESIDUAL_INVALID",
+            "map_only_survivor_fabricated": "MAP_ONLY_SURVIVOR_FALSE_PROMOTION",
+            "preserved_regulator_removed": "MAP_ONLY_CHANGE_SCOPE_INVALID",
+            "survival_rule_softened": "MAP_ONLY_SURVIVAL_RULE_INVALID"
+          },
+          "count": 7
+        },
+        "group": "cross_v1_1",
+        "name": "cross exact seven map-only hostile classes",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": {
+            "admission_status": "NOT_CREATED",
+            "candidate_created": false,
+            "candidate_manifest": {
+              "path": null,
+              "sha256": null
+            },
+            "design_id": "PA-M2-CI8-RS-DISPERSION-MAP-v1-SCHEMA-DESIGN",
+            "freeze_status": "NOT_CREATED",
+            "hypothetical_candidate_id": "PA-M2-CI8-RS-DISPERSION-MAP-v1",
+            "microscopic_map_status": "NOT_CREATED",
+            "no_overclaim": "A design schema is not a candidate record. The hypothetical ID is NOT_CREATED and carries no admitted map, prediction, target, freeze, tag, score or selection.",
+            "parent_candidate_id": "PA-M2-CI8-RS-v0",
+            "prediction_status": "NOT_CREATED",
+            "required_contract": {
+              "candidate_neutral_estimand": "REQUIRED_NOT_SUPPLIED",
+              "error_budget": {
+                "margin_condition": "sum_j epsilon_j < frozen acceptance margin before target access",
+                "required_bound": "|O_phys-R_m2| <= sum_j epsilon_j",
+                "status": "REQUIRED_NOT_SUPPLIED",
+                "terms": [
+                  "finite_torus_spacing",
+                  "regulator_removal",
+                  "nonlinear_remainder",
+                  "loop_or_renormalization",
+                  "state_reference_transfer",
+                  "raw_estimator"
+                ]
+              },
+              "finite_torus_fingerprint": {
+                "closed_child_id": "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+                "ordered_component_count": 48,
+                "status": "MATHEMATICAL_FINGERPRINT_ONLY"
+              },
+              "independent_verification": "REQUIRED_NOT_SUPPLIED",
+              "limit_order": "REQUIRED_NOT_SUPPLIED",
+              "open_gate": "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
+              "physical_response_channel": {
+                "map": null,
+                "proof": null,
+                "script": null,
+                "state_and_reference": null,
+                "status": "REQUIRED_NOT_SUPPLIED",
+                "units": null
+              },
+              "prospective_input_firewall": "MUST_BE_FROZEN_BEFORE_TARGET_DISCLOSURE"
+            },
+            "schema": "tect/pre-a-m2-ci8-rs-dispersion-map-successor-design/1.0",
+            "score_status": "NOT_CREATED",
+            "selection_status": "NOT_CREATED",
+            "status": "DESIGN_ONLY",
+            "tag_status": "NOT_CREATED",
+            "target_status": "NOT_CREATED"
+          },
+          "manifest": {
+            "admission_status": "NOT_CREATED",
+            "candidate_created": false,
+            "candidate_manifest": {
+              "path": null,
+              "sha256": null
+            },
+            "design_id": "PA-M2-CI8-RS-DISPERSION-MAP-v1-SCHEMA-DESIGN",
+            "freeze_status": "NOT_CREATED",
+            "hypothetical_candidate_id": "PA-M2-CI8-RS-DISPERSION-MAP-v1",
+            "microscopic_map_status": "NOT_CREATED",
+            "no_overclaim": "A design schema is not a candidate record. The hypothetical ID is NOT_CREATED and carries no admitted map, prediction, target, freeze, tag, score or selection.",
+            "parent_candidate_id": "PA-M2-CI8-RS-v0",
+            "prediction_status": "NOT_CREATED",
+            "required_contract": {
+              "candidate_neutral_estimand": "REQUIRED_NOT_SUPPLIED",
+              "error_budget": {
+                "margin_condition": "sum_j epsilon_j < frozen acceptance margin before target access",
+                "required_bound": "|O_phys-R_m2| <= sum_j epsilon_j",
+                "status": "REQUIRED_NOT_SUPPLIED",
+                "terms": [
+                  "finite_torus_spacing",
+                  "regulator_removal",
+                  "nonlinear_remainder",
+                  "loop_or_renormalization",
+                  "state_reference_transfer",
+                  "raw_estimator"
+                ]
+              },
+              "finite_torus_fingerprint": {
+                "closed_child_id": "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+                "ordered_component_count": 48,
+                "status": "MATHEMATICAL_FINGERPRINT_ONLY"
+              },
+              "independent_verification": "REQUIRED_NOT_SUPPLIED",
+              "limit_order": "REQUIRED_NOT_SUPPLIED",
+              "open_gate": "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
+              "physical_response_channel": {
+                "map": null,
+                "proof": null,
+                "script": null,
+                "state_and_reference": null,
+                "status": "REQUIRED_NOT_SUPPLIED",
+                "units": null
+              },
+              "prospective_input_firewall": "MUST_BE_FROZEN_BEFORE_TARGET_DISCLOSURE"
+            },
+            "schema": "tect/pre-a-m2-ci8-rs-dispersion-map-successor-design/1.0",
+            "score_status": "NOT_CREATED",
+            "selection_status": "NOT_CREATED",
+            "status": "DESIGN_ONLY",
+            "tag_status": "NOT_CREATED",
+            "target_status": "NOT_CREATED"
+          },
+          "primary": {
+            "admission_status": "NOT_CREATED",
+            "candidate_created": false,
+            "candidate_manifest": {
+              "path": null,
+              "sha256": null
+            },
+            "design_id": "PA-M2-CI8-RS-DISPERSION-MAP-v1-SCHEMA-DESIGN",
+            "freeze_status": "NOT_CREATED",
+            "hypothetical_candidate_id": "PA-M2-CI8-RS-DISPERSION-MAP-v1",
+            "microscopic_map_status": "NOT_CREATED",
+            "no_overclaim": "A design schema is not a candidate record. The hypothetical ID is NOT_CREATED and carries no admitted map, prediction, target, freeze, tag, score or selection.",
+            "parent_candidate_id": "PA-M2-CI8-RS-v0",
+            "prediction_status": "NOT_CREATED",
+            "required_contract": {
+              "candidate_neutral_estimand": "REQUIRED_NOT_SUPPLIED",
+              "error_budget": {
+                "margin_condition": "sum_j epsilon_j < frozen acceptance margin before target access",
+                "required_bound": "|O_phys-R_m2| <= sum_j epsilon_j",
+                "status": "REQUIRED_NOT_SUPPLIED",
+                "terms": [
+                  "finite_torus_spacing",
+                  "regulator_removal",
+                  "nonlinear_remainder",
+                  "loop_or_renormalization",
+                  "state_reference_transfer",
+                  "raw_estimator"
+                ]
+              },
+              "finite_torus_fingerprint": {
+                "closed_child_id": "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+                "ordered_component_count": 48,
+                "status": "MATHEMATICAL_FINGERPRINT_ONLY"
+              },
+              "independent_verification": "REQUIRED_NOT_SUPPLIED",
+              "limit_order": "REQUIRED_NOT_SUPPLIED",
+              "open_gate": "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
+              "physical_response_channel": {
+                "map": null,
+                "proof": null,
+                "script": null,
+                "state_and_reference": null,
+                "status": "REQUIRED_NOT_SUPPLIED",
+                "units": null
+              },
+              "prospective_input_firewall": "MUST_BE_FROZEN_BEFORE_TARGET_DISCLOSURE"
+            },
+            "schema": "tect/pre-a-m2-ci8-rs-dispersion-map-successor-design/1.0",
+            "score_status": "NOT_CREATED",
+            "selection_status": "NOT_CREATED",
+            "status": "DESIGN_ONLY",
+            "tag_status": "NOT_CREATED",
+            "target_status": "NOT_CREATED"
+          }
+        },
+        "expected": {
+          "candidate_created": false,
+          "states": "NOT_CREATED",
+          "status": "DESIGN_ONLY"
+        },
+        "group": "cross_v1_1",
+        "name": "cross DESIGN_ONLY successor and all NOT_CREATED states exact",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "error_codes": [],
+            "errors": [],
+            "valid": true
+          },
+          {
+            "error_codes": [],
+            "errors": [],
+            "valid": true
+          }
+        ],
+        "expected": {
+          "error_codes": [],
+          "errors": [],
+          "valid": true
+        },
+        "group": "cross_v1_1",
+        "name": "cross successor design validators exact and valid",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": {
+            "admission_promoted": {
+              "error_codes": [
+                "SUCCESSOR_PROMOTION_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_PROMOTION_FORBIDDEN",
+              "valid": false
+            },
+            "candidate_created": {
+              "error_codes": [
+                "SUCCESSOR_CREATION_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_CREATION_FORBIDDEN",
+              "valid": false
+            },
+            "candidate_manifest_materialized": {
+              "error_codes": [
+                "SUCCESSOR_CREATION_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_CREATION_FORBIDDEN",
+              "valid": false
+            },
+            "error_budget_term_dropped": {
+              "error_codes": [
+                "SUCCESSOR_ERROR_BUDGET_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_ERROR_BUDGET_INVALID",
+              "valid": false
+            },
+            "fingerprint_dimension_changed": {
+              "error_codes": [
+                "SUCCESSOR_FINGERPRINT_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_FINGERPRINT_INVALID",
+              "valid": false
+            },
+            "freeze_or_tag_materialized": {
+              "error_codes": [
+                "SUCCESSOR_OUTPUT_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_OUTPUT_FORBIDDEN",
+              "valid": false
+            },
+            "map_promoted": {
+              "error_codes": [
+                "SUCCESSOR_PROMOTION_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_PROMOTION_FORBIDDEN",
+              "valid": false
+            },
+            "prediction_materialized": {
+              "error_codes": [
+                "SUCCESSOR_OUTPUT_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_OUTPUT_FORBIDDEN",
+              "valid": false
+            },
+            "response_channel_smuggled": {
+              "error_codes": [
+                "SUCCESSOR_REQUIRED_CONTRACT_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_REQUIRED_CONTRACT_INVALID",
+              "valid": false
+            },
+            "score_or_selection_materialized": {
+              "error_codes": [
+                "SUCCESSOR_OUTPUT_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_OUTPUT_FORBIDDEN",
+              "valid": false
+            },
+            "target_materialized": {
+              "error_codes": [
+                "SUCCESSOR_OUTPUT_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_OUTPUT_FORBIDDEN",
+              "valid": false
+            }
+          },
+          "manifest": {
+            "boundary": "These cases test that a DESIGN_ONLY successor cannot be promoted or populated. They create no candidate, map, prediction, target, freeze, tag, score or selection.",
+            "cases": {
+              "admission_promoted": "SUCCESSOR_PROMOTION_FORBIDDEN",
+              "candidate_created": "SUCCESSOR_CREATION_FORBIDDEN",
+              "candidate_manifest_materialized": "SUCCESSOR_CREATION_FORBIDDEN",
+              "error_budget_term_dropped": "SUCCESSOR_ERROR_BUDGET_INVALID",
+              "fingerprint_dimension_changed": "SUCCESSOR_FINGERPRINT_INVALID",
+              "freeze_or_tag_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN",
+              "map_promoted": "SUCCESSOR_PROMOTION_FORBIDDEN",
+              "prediction_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN",
+              "response_channel_smuggled": "SUCCESSOR_REQUIRED_CONTRACT_INVALID",
+              "score_or_selection_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN",
+              "target_materialized": "SUCCESSOR_OUTPUT_FORBIDDEN"
+            },
+            "successor_hostile_count": 11,
+            "total_hostile_class_count": 39,
+            "v1_0_freeze_schema_hostile_count_preserved": 28
+          },
+          "primary": {
+            "admission_promoted": {
+              "error_codes": [
+                "SUCCESSOR_PROMOTION_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_PROMOTION_FORBIDDEN",
+              "valid": false
+            },
+            "candidate_created": {
+              "error_codes": [
+                "SUCCESSOR_CREATION_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_CREATION_FORBIDDEN",
+              "valid": false
+            },
+            "candidate_manifest_materialized": {
+              "error_codes": [
+                "SUCCESSOR_CREATION_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_CREATION_FORBIDDEN",
+              "valid": false
+            },
+            "error_budget_term_dropped": {
+              "error_codes": [
+                "SUCCESSOR_ERROR_BUDGET_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_ERROR_BUDGET_INVALID",
+              "valid": false
+            },
+            "fingerprint_dimension_changed": {
+              "error_codes": [
+                "SUCCESSOR_FINGERPRINT_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_FINGERPRINT_INVALID",
+              "valid": false
+            },
+            "freeze_or_tag_materialized": {
+              "error_codes": [
+                "SUCCESSOR_OUTPUT_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_OUTPUT_FORBIDDEN",
+              "valid": false
+            },
+            "map_promoted": {
+              "error_codes": [
+                "SUCCESSOR_PROMOTION_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_PROMOTION_FORBIDDEN",
+              "valid": false
+            },
+            "prediction_materialized": {
+              "error_codes": [
+                "SUCCESSOR_OUTPUT_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_OUTPUT_FORBIDDEN",
+              "valid": false
+            },
+            "response_channel_smuggled": {
+              "error_codes": [
+                "SUCCESSOR_REQUIRED_CONTRACT_INVALID"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_REQUIRED_CONTRACT_INVALID",
+              "valid": false
+            },
+            "score_or_selection_materialized": {
+              "error_codes": [
+                "SUCCESSOR_OUTPUT_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_OUTPUT_FORBIDDEN",
+              "valid": false
+            },
+            "target_materialized": {
+              "error_codes": [
+                "SUCCESSOR_OUTPUT_FORBIDDEN"
+              ],
+              "expected_code_observed": true,
+              "expected_error_code": "SUCCESSOR_OUTPUT_FORBIDDEN",
+              "valid": false
+            }
+          }
+        },
+        "expected": {
+          "successor": 11,
+          "total": 39,
+          "v1_0": 28
+        },
+        "group": "cross_v1_1",
+        "name": "cross exact eleven successor hostile classes",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": {
+            "Pre_A_complete": false,
+            "Sector_A_complete": false,
+            "actual_freeze_record_created": false,
+            "admitted_current_microscopic_map_present": false,
+            "cryptographic_signature_verifier_implemented": false,
+            "current_tree_readiness_audited": true,
+            "external_target_commitment_present": false,
+            "git_tag_created": false,
+            "independent_remote_ref_verifier_implemented": false,
+            "m2_controlled_physical_error_bound_present": false,
+            "m2_physical_response_channel_present": false,
+            "m2_v1_candidate_created": false,
+            "parent_gate_closed": false,
+            "prospective_prediction_present": false,
+            "protocol_schema_shape_validated": true
+          },
+          "primary": {
+            "Pre_A_complete": false,
+            "Sector_A_complete": false,
+            "actual_freeze_record_created": false,
+            "admitted_current_microscopic_map_present": false,
+            "cryptographic_signature_verifier_implemented": false,
+            "current_tree_readiness_audited": true,
+            "external_target_commitment_present": false,
+            "git_tag_created": false,
+            "independent_remote_ref_verifier_implemented": false,
+            "m2_controlled_physical_error_bound_present": false,
+            "m2_physical_response_channel_present": false,
+            "m2_v1_candidate_created": false,
+            "parent_gate_closed": false,
+            "prospective_prediction_present": false,
+            "protocol_schema_validated": true
+          }
+        },
+        "expected": {
+          "independent": {
+            "Pre_A_complete": false,
+            "Sector_A_complete": false,
+            "actual_freeze_record_created": false,
+            "admitted_current_microscopic_map_present": false,
+            "cryptographic_signature_verifier_implemented": false,
+            "current_tree_readiness_audited": true,
+            "external_target_commitment_present": false,
+            "git_tag_created": false,
+            "independent_remote_ref_verifier_implemented": false,
+            "m2_controlled_physical_error_bound_present": false,
+            "m2_physical_response_channel_present": false,
+            "m2_v1_candidate_created": false,
+            "parent_gate_closed": false,
+            "prospective_prediction_present": false,
+            "protocol_schema_shape_validated": true
+          },
+          "primary": {
+            "Pre_A_complete": false,
+            "Sector_A_complete": false,
+            "actual_freeze_record_created": false,
+            "admitted_current_microscopic_map_present": false,
+            "cryptographic_signature_verifier_implemented": false,
+            "current_tree_readiness_audited": true,
+            "external_target_commitment_present": false,
+            "git_tag_created": false,
+            "independent_remote_ref_verifier_implemented": false,
+            "m2_controlled_physical_error_bound_present": false,
+            "m2_physical_response_channel_present": false,
+            "m2_v1_candidate_created": false,
+            "parent_gate_closed": false,
+            "prospective_prediction_present": false,
+            "protocol_schema_validated": true
+          }
+        },
+        "group": "cross_v1_1",
+        "name": "cross all component scope booleans exact",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "independent": {
+            "admitted_map_created": false,
+            "exponents": [
+              1,
+              2
+            ],
+            "identity_response_ratio": 2,
+            "same_stiffness_ratio": 2,
+            "square_response_ratio": 4,
+            "unique_physical_exponent_derivable": false,
+            "validation_credit": false
+          },
+          "primary": {
+            "admitted_map_created": false,
+            "boundary": "Logical completions of a missing response slot only; neither completion is an M2 candidate map or prediction.",
+            "completion_identity": {
+              "definition": "R_1(kappa)=kappa/kappa_0",
+              "exact_scale_ratio": "2",
+              "exponent": 1
+            },
+            "completion_square": {
+              "definition": "R_2(kappa)=(kappa/kappa_0)^2",
+              "exact_scale_ratio": "4",
+              "exponent": 2
+            },
+            "current_candidate_id": "PA-M2-CI8-RS-v0",
+            "fixture_t": "1/8",
+            "same_stiffness_ratio": "2",
+            "unique_physical_exponent_derivable": false,
+            "validation_credit": false
+          }
+        },
+        "expected": {
+          "credit": false,
+          "exponents": [
+            1,
+            2
+          ],
+          "map": false,
+          "ratios": [
+            2,
+            4
+          ]
+        },
+        "group": "cross_v1_1",
+        "name": "cross retrospective missing-response countermodels exact boundary",
+        "status": "PASS"
+      },
+      {
+        "actual": {
           "independent": {
             "custodian_signature_cryptographically_verified": false,
             "independently_authenticated_receipt_present": false,
@@ -3048,35 +4801,35 @@
         "status": "PASS"
       },
       {
-        "actual": 247689,
+        "actual": 256127,
         "expected": ">0",
         "group": "files",
         "name": "gate registry nonempty",
         "status": "PASS"
       },
       {
-        "actual": 633242,
+        "actual": 636931,
         "expected": ">0",
         "group": "files",
         "name": "results ledger nonempty",
         "status": "PASS"
       },
       {
-        "actual": 670175,
+        "actual": 677233,
         "expected": ">0",
         "group": "files",
         "name": "negative registry nonempty",
         "status": "PASS"
       },
       {
-        "actual": 808,
+        "actual": 810,
         "expected": ">=1",
         "group": "formal",
         "name": "exploration ledger parses",
         "status": "PASS"
       },
       {
-        "actual": 591,
+        "actual": 595,
         "expected": ">=1",
         "group": "formal",
         "name": "changelog parses",
@@ -3111,6 +4864,20 @@
         "status": "PASS"
       },
       {
+        "actual": "### **PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET**\n\n**Statement:** For the exact hash-pinned current M1-v0, M2-v0 and M5-v0\nrecords, determine the candidate-specific microscopic-map admission set, then\ntest whether a hypothetical new version that changes only that map slot can\nsatisfy the frozen ten-row all-PASS survival rule.\n\n**Status:** CLOSED FOR THE CURRENT VERSIONS AND MAP-ONLY EXTENSIONS ONLY\n(2026-08-11). EXP-000810 / R-168 v1.1 proves exact current cardinality zero.",
+        "expected": "explicit CLOSED status",
+        "group": "formal",
+        "name": "closed gate PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+        "status": "PASS"
+      },
+      {
+        "actual": "### **PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT**\n\n**Statement:** For\n`K(k)=r+c sum_i(q^2-k_i^2)^2`, `h=2 pi/L`, `q=mh`, and the eight nodes\n`k_s=q s`, compute the ordered finite-difference ratios `R_(s,i)` and\naxis-uniformity ratios `U_(s,i)` for every node and coordinate axis.\n\n**Status:** CLOSED FOR THE EXACT GAUSSIAN FINITE-TORUS KERNEL ONLY\n(2026-08-11). EXP-000810 / R-168 v1.1 proves\n`R_(s,i)=U_(s,i)=1` for all eight nodes and three axes: all 48 ordered\ncomponents are exactly ",
+        "expected": "explicit CLOSED status",
+        "group": "formal",
+        "name": "closed gate PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+        "status": "PASS"
+      },
+      {
         "actual": "### **PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE**\n\n**Statement:** Before scoring or selecting any Pre-A round-one candidate,\nfreeze the complete evidence and clue register with an explicit role for each\nitem, admit every contestant under the same minimum manifest fields, separate\nbridge infrastructure from contestants, and declare one common\nreference/observable/input ledger, one non-fitting validation prediction, and\none robustness envelope. Scoped failures may eliminate only the exac",
         "expected": "explicit OPEN status",
         "group": "formal",
@@ -3132,7 +4899,7 @@
         "status": "PASS"
       },
       {
-        "actual": "### **PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION**\n\n**Statement:** Admit at least one actual microscopic contestant with a proved\nand hash-pinned microscopic-to-observable map and a nonempty prediction derived\nwithout the holdout target, together with the complete common-input ledger.\n\n**Status:** OPEN (2026-08-11). The audited admitted set is empty; M0 remains an\neffective null baseline only, and M1/M2/M5 have no admitted map/prediction pair.\n",
+        "actual": "### **PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION**\n\n**Statement:** Admit at least one actual microscopic contestant with a proved\nand hash-pinned microscopic-to-observable map and a nonempty prediction derived\nwithout the holdout target, together with the complete common-input ledger.\n\n**Status:** OPEN (2026-08-11). The audited admitted set is empty; M0 remains an\neffective null baseline only, and M1/M2/M5 have no admitted map/prediction pair.\nEXP-000810 / R-168 v1.1 st",
         "expected": "explicit OPEN status",
         "group": "formal",
         "name": "open gate PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
@@ -3146,31 +4913,45 @@
         "status": "PASS"
       },
       {
-        "actual": [],
-        "expected": "all required tokens present",
+        "actual": "### **PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND**\n\n**Statement:** Starting from the exact finite-torus Gaussian fingerprint,\nderive and hash-pin a target-blind physical response channel from the M2\nmicroscopic variables to the common Round-1 observable, with declared state,\nreference, units and limit order, and prove a complete comparison-error budget\nstrictly below the frozen acceptance margin before target access.\n\n**Status:** OPEN (2026-08-11). EXP-000810 / R-168 v1.1 proves that th",
+        "expected": "explicit OPEN status",
         "group": "formal",
-        "name": "R-168 result authority required tokens",
+        "name": "open gate PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
         "status": "PASS"
       },
       {
         "actual": [],
         "expected": "all required tokens present",
         "group": "formal",
-        "name": "R-168 negative authority required tokens",
+        "name": "R-168 v1.1 result authority required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "negative authority NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR required tokens",
         "status": "PASS"
       },
       {
         "actual": "NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION",
         "expected": "existing section",
-        "group": "formal",
+        "group": "formal_history",
         "name": "reused negative authority retained",
         "status": "PASS"
       },
       {
         "actual": 1,
         "expected": 1,
-        "group": "formal",
-        "name": "EXP-000807 unique record",
+        "group": "formal_history",
+        "name": "EXP-000807 retained unique record",
         "status": "PASS"
       },
       {
@@ -3178,15 +4959,6 @@
           "claims": [
             "C6-SPACETIME-SIGNATURE"
           ],
-          "formal_refs": {
-            "events": [],
-            "negatives": [
-              "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
-            ],
-            "results": [
-              "R-168"
-            ]
-          },
           "gates": [
             "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
             "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
@@ -3198,6 +4970,15 @@
             "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
             "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
           ],
+          "refs": {
+            "events": [],
+            "negatives": [
+              "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+            ],
+            "results": [
+              "R-168"
+            ]
+          },
           "task": "T-054"
         },
         "expected": {
@@ -3223,22 +5004,15 @@
           ],
           "task": "T-054"
         },
-        "group": "formal",
-        "name": "EXP-000807 exact identity sets",
-        "status": "PASS"
-      },
-      {
-        "actual": [],
-        "expected": "all required tokens present",
-        "group": "formal",
-        "name": "EXP-000807 scope boundary required tokens",
+        "group": "formal_history",
+        "name": "EXP-000807 retained exact identity sets",
         "status": "PASS"
       },
       {
         "actual": 1,
         "expected": 1,
-        "group": "formal",
-        "name": "EXP-000808 unique repair record",
+        "group": "formal_history",
+        "name": "EXP-000808 retained unique repair record",
         "status": "PASS"
       },
       {
@@ -3246,19 +5020,19 @@
           "claims": [
             "C6-SPACETIME-SIGNATURE"
           ],
-          "formal_refs": {
-            "events": [],
-            "negatives": [],
-            "results": [
-              "R-168"
-            ]
-          },
           "gates": [
             "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
             "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
             "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
             "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
           ],
+          "refs": {
+            "events": [],
+            "negatives": [],
+            "results": [
+              "R-168"
+            ]
+          },
           "task": "T-054"
         },
         "expected": {
@@ -3277,22 +5051,75 @@
           ],
           "task": "T-054"
         },
-        "group": "formal",
-        "name": "EXP-000808 exact repair identity sets",
-        "status": "PASS"
-      },
-      {
-        "actual": [],
-        "expected": "all required tokens present",
-        "group": "formal",
-        "name": "EXP-000808 repair and boundary required tokens",
+        "group": "formal_history",
+        "name": "EXP-000808 retained exact repair identity sets",
         "status": "PASS"
       },
       {
         "actual": 1,
         "expected": 1,
         "group": "formal",
-        "name": "R-168 theorem changelog unique",
+        "name": "EXP-000810 unique record",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "claims": [
+            "C6-SPACETIME-SIGNATURE"
+          ],
+          "formal_refs": {
+            "events": [],
+            "negatives": [
+              "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+            ],
+            "results": [
+              "R-168"
+            ]
+          },
+          "gates": [
+            "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+            "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+            "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
+            "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+            "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
+            "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
+            "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+            "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+          ],
+          "task": "T-054"
+        },
+        "expected": {
+          "claims": [
+            "C6-SPACETIME-SIGNATURE"
+          ],
+          "new_negatives": [
+            "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+          ],
+          "required_gates": [
+            "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
+            "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND",
+            "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+            "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+          ],
+          "result": "R-168",
+          "task": "T-054"
+        },
+        "group": "formal",
+        "name": "EXP-000810 exact additive authority bindings",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "formal",
+        "name": "EXP-000810 proof and boundary required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "group": "formal_history",
+        "name": "R-168 v1.0 theorem changelog retained unique",
         "status": "PASS"
       },
       {
@@ -3325,23 +5152,16 @@
             "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py"
           ]
         },
-        "expected": "exact claim/result/exploration, negative, and verifier sets",
-        "group": "formal",
-        "name": "R-168 theorem changelog exact sets",
-        "status": "PASS"
-      },
-      {
-        "actual": [],
-        "expected": "all required tokens present",
-        "group": "formal",
-        "name": "R-168 theorem changelog boundary required tokens",
+        "expected": "historical negative and primary/independent scripts",
+        "group": "formal_history",
+        "name": "R-168 v1.0 theorem changelog retained exact sets",
         "status": "PASS"
       },
       {
         "actual": 1,
         "expected": 1,
-        "group": "formal",
-        "name": "R-168 hardening changelog unique",
+        "group": "formal_history",
+        "name": "R-168 v1.0 hardening changelog retained unique",
         "status": "PASS"
       },
       {
@@ -3375,16 +5195,69 @@
             "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py"
           ]
         },
-        "expected": "exact repair/exploration/result, negative, and verifier sets",
+        "expected": "historical repair identities, negative, and all three scripts",
+        "group": "formal_history",
+        "name": "R-168 v1.0 hardening changelog retained exact sets",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
         "group": "formal",
-        "name": "R-168 hardening changelog exact sets",
+        "name": "R-168 v1.1 changelog unique",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "claim_ids": [
+            "C6-SPACETIME-SIGNATURE",
+            "EXP-000810",
+            "R-168"
+          ],
+          "date": "2026-08-11",
+          "header": "[R-168 v1.1 proves current-version map emptiness and the finite-torus M2 fingerprint] - 2026-08-11",
+          "id": "20260811-r-168-v1-1-proves-current-version-map-emptiness",
+          "keywords": [
+            "M2",
+            "Pre-A",
+            "Round-1",
+            "fingerprint",
+            "map-only",
+            "prospective"
+          ],
+          "neg_results": [
+            "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+          ],
+          "notes": [
+            "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json",
+            "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md"
+          ],
+          "raw": "## [R-168 v1.1 proves current-version map emptiness and the finite-torus M2 fingerprint] - 2026-08-11\n\nEXP-000810 advances R-168 v1.1 at T0. The exact current-version and hypothetical map-only all-PASS survivor sets are empty under the ten frozen rows, with eight residual non-map cells. The finite-torus M2 Gaussian fingerprint has 48 ordered components, all exactly one, but it is not a physical response or prediction. PA-M2-CI8-RS-DISPERSION-MAP-v1 remains DESIGN_ONLY and NOT_CREATED: there is no candidate, admitted map, prediction, target, freeze, tag, score or selection. The physical response/error, external provenance, Sector A and Pre-A gates remain open.\n\n",
+          "scripts": [
+            "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py",
+            "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py",
+            "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py"
+          ]
+        },
+        "expected": {
+          "new_negatives": [
+            "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+          ],
+          "scripts": [
+            "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py",
+            "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py",
+            "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py"
+          ]
+        },
+        "group": "formal",
+        "name": "R-168 v1.1 changelog authority sets",
         "status": "PASS"
       },
       {
         "actual": [],
         "expected": "all required tokens present",
         "group": "formal",
-        "name": "R-168 hardening changelog boundary required tokens",
+        "name": "R-168 v1.1 changelog boundary required tokens",
         "status": "PASS"
       },
       {
@@ -3423,17 +5296,19 @@
       },
       {
         "actual": {
-          "count": 331,
-          "entries": 331,
+          "count": 335,
+          "entries": 335,
           "required_present": {
-            "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE": true
+            "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE": true,
+            "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR": true
           },
           "schema": "tect/negative-index/1.0"
         },
         "expected": {
           "count": "len(entries)",
           "required": [
-            "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+            "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+            "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
           ],
           "schema": "tect/negative-index/1.0"
         },
@@ -3450,13 +5325,16 @@
       },
       {
         "actual": {
-          "count": 124,
-          "entries": 124,
+          "count": 131,
+          "entries": 131,
           "required_present": {
+            "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT": true,
+            "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND": true,
             "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION": true,
             "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA": true,
             "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION": true,
             "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT": true,
+            "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET": true,
             "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE": true,
             "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT": true,
             "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER": true,
@@ -3472,11 +5350,14 @@
             "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
             "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
             "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+            "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+            "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT",
             "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
             "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
             "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
             "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-            "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+            "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+            "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
           ],
           "schema": "tect/gate-index/1.0"
         },
@@ -3493,10 +5374,10 @@
       },
       {
         "actual": {
-          "expected_total": 591,
+          "expected_total": 595,
           "recent": 25,
           "schema": "tect/changelog-index/2.0",
-          "total": 591
+          "total": 595
         },
         "expected": "current total and recent R-168 theorem event",
         "group": "generated",
@@ -3504,7 +5385,7 @@
         "status": "PASS"
       },
       {
-        "actual": 4186,
+        "actual": 4225,
         "expected": ">0",
         "group": "files",
         "name": "result reader nonempty",
@@ -3518,7 +5399,7 @@
         "status": "PASS"
       },
       {
-        "actual": 8409,
+        "actual": 8435,
         "expected": ">0",
         "group": "files",
         "name": "negative reader nonempty",
@@ -3560,7 +5441,7 @@
         "status": "PASS"
       },
       {
-        "actual": 8103,
+        "actual": 8409,
         "expected": ">0",
         "group": "files",
         "name": "changelog reader nonempty",
@@ -3574,7 +5455,7 @@
         "status": "PASS"
       },
       {
-        "actual": 3220876,
+        "actual": 3237565,
         "expected": ">0",
         "group": "files",
         "name": "proof-evidence map nonempty",
@@ -3762,12 +5643,194 @@
       {
         "actual": {
           "shards": 15,
-          "total": 3817,
+          "total": 3819,
           "valid": 15
         },
         "expected": "valid shard hashes/counts and total",
         "group": "generated",
         "name": "catalog manifest and shards current",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-round1-prospective-holdout-freeze-protocol/result.json": {
+            "catalog": [
+              {
+                "bytes": 107496,
+                "claims": [
+                  "C6-SPACETIME-SIGNATURE"
+                ],
+                "first_issued": null,
+                "kind": "run-artefact",
+                "lifecycle": "ACTIVE",
+                "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
+                "sha256_12": "c62115381702",
+                "tag": null,
+                "version": null,
+                "version_issued": null
+              }
+            ],
+            "exact": true,
+            "expected": {
+              "bytes": 107496,
+              "sha256_12": "c62115381702"
+            }
+          },
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-round1-prospective-holdout-freeze-protocol/result.json": {
+            "catalog": [
+              {
+                "bytes": 148599,
+                "claims": [
+                  "C6-SPACETIME-SIGNATURE"
+                ],
+                "first_issued": null,
+                "kind": "run-artefact",
+                "lifecycle": "ACTIVE",
+                "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
+                "sha256_12": "c6df24bb0cb5",
+                "tag": null,
+                "version": null,
+                "version_issued": null
+              }
+            ],
+            "exact": true,
+            "expected": {
+              "bytes": 148599,
+              "sha256_12": "c6df24bb0cb5"
+            }
+          },
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-round1-prospective-holdout-freeze-protocol/result.json": {
+            "catalog": [
+              {
+                "bytes": 112796,
+                "claims": [
+                  "C6-SPACETIME-SIGNATURE"
+                ],
+                "first_issued": null,
+                "kind": "run-artefact",
+                "lifecycle": "ACTIVE",
+                "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
+                "sha256_12": "15b1dec85378",
+                "tag": null,
+                "version": null,
+                "version_issued": null
+              }
+            ],
+            "exact": true,
+            "expected": {
+              "bytes": 112796,
+              "sha256_12": "15b1dec85378"
+            }
+          },
+          "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py": {
+            "catalog": [
+              {
+                "bytes": 114306,
+                "claims": [],
+                "first_issued": "2026-08-11",
+                "kind": "code",
+                "lifecycle": "ACTIVE",
+                "path": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py",
+                "sha256_12": "01bba625caf7",
+                "tag": null,
+                "version": "v1.3.0",
+                "version_issued": null
+              }
+            ],
+            "exact": true,
+            "expected": {
+              "bytes": 114306,
+              "sha256_12": "01bba625caf7"
+            }
+          },
+          "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py": {
+            "catalog": [
+              {
+                "bytes": 108469,
+                "claims": [],
+                "first_issued": "2026-08-11",
+                "kind": "code",
+                "lifecycle": "ACTIVE",
+                "path": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py",
+                "sha256_12": "3a62f05075b8",
+                "tag": null,
+                "version": "v1.2.0",
+                "version_issued": null
+              }
+            ],
+            "exact": true,
+            "expected": {
+              "bytes": 108469,
+              "sha256_12": "3a62f05075b8"
+            }
+          },
+          "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py": {
+            "catalog": [
+              {
+                "bytes": 124259,
+                "claims": [],
+                "first_issued": null,
+                "kind": "code",
+                "lifecycle": "ACTIVE",
+                "path": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py",
+                "sha256_12": "a79088b41c21",
+                "tag": null,
+                "version": "v1.1.0",
+                "version_issued": null
+              }
+            ],
+            "exact": true,
+            "expected": {
+              "bytes": 124259,
+              "sha256_12": "a79088b41c21"
+            }
+          },
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": {
+            "catalog": [
+              {
+                "bytes": 26654,
+                "claims": [],
+                "first_issued": null,
+                "kind": "other",
+                "lifecycle": "ACTIVE",
+                "path": "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md",
+                "sha256_12": "fe28e8189ac2",
+                "tag": null,
+                "version": null,
+                "version_issued": null
+              }
+            ],
+            "exact": true,
+            "expected": {
+              "bytes": 26654,
+              "sha256_12": "fe28e8189ac2"
+            }
+          },
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": {
+            "catalog": [
+              {
+                "bytes": 30204,
+                "claims": [],
+                "first_issued": null,
+                "kind": "other",
+                "lifecycle": "ACTIVE",
+                "path": "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json",
+                "sha256_12": "3dc61ace4ee7",
+                "tag": null,
+                "version": null,
+                "version_issued": null
+              }
+            ],
+            "exact": true,
+            "expected": {
+              "bytes": 30204,
+              "sha256_12": "3dc61ace4ee7"
+            }
+          }
+        },
+        "expected": "one exact current bytes/sha256_12 entry per proof, verifier, authority, and run artifact",
+        "group": "generated",
+        "name": "catalog R-168 artifact bytes and hashes current",
         "status": "PASS"
       },
       {
@@ -3792,9 +5855,9 @@
         "status": "PASS"
       }
     ],
-    "total": 218
+    "total": 262
   },
-  "boundary": "This result is a schema-shape validator, not a cryptographic signature verifier or an independent remote-ref verifier. It is not an actual freeze and does not authorize a tag. It does not create an external blind target, prove a candidate microscopic observable map, freeze a prediction, score a holdout, select a winner, fix nature's functional, prove a physical vacuum or below-empty sign, close C6, CP1, physical Sector A, or Pre-A.",
+  "boundary": "R-168 v1.1 retains the v1.0 schema-shape boundary and adds an exact current-version map-empty-set proof, the stronger frozen-all-PASS map-only repair no-go, a retrospective missing-map underdetermination theorem, a mathematical finite-torus Gaussian fingerprint, and a DESIGN_ONLY successor schema. It does not create PA-M2-CI8-RS-DISPERSION-MAP-v1 or any candidate, admitted map, physical response channel, error-controlled physical prediction, target, freeze, tag, score or selection. A candidate that adds kinetic, state, law, regulator, compact or gauge data is substantively new and must rerun all gates. Nothing here verifies a signature or remote ref, fixes nature's functional, proves a physical vacuum or below-empty sign, or closes C6, CP1, physical Sector A, or Pre-A.",
   "claim_bearing": false,
   "claim_ids": [
     "C6-SPACETIME-SIGNATURE"
@@ -3803,15 +5866,17 @@
     "PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA",
     "PA-ROUND1-PROSPECTIVE-FREEZE-PROVENANCE-PROTOCOL",
     "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
-    "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT"
+    "PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT",
+    "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+    "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
   ],
   "component_summaries": {
     "independent": {
       "schema": "tect/pre-a-round1-prospective-holdout-freeze-protocol-independent-result/1.0",
       "summary": {
         "failed": 0,
-        "passed": 153,
-        "total": 153
+        "passed": 223,
+        "total": 223
       },
       "verdict": "PASS"
     },
@@ -3821,8 +5886,8 @@
         "actual_freeze_status": "ABSENT_BY_DESIGN",
         "current_tree_ready": false,
         "failed": 0,
-        "passed": 125,
-        "total": 125
+        "passed": 205,
+        "total": 205
       },
       "verdict": "PASS"
     }
@@ -3834,10 +5899,14 @@
     "admitted_microscopic_survivors": 0,
     "allowed_input_source_id_firewall": true,
     "audited_commit": "99157442831c0e44d425b5d5f8cd78856c57da53",
+    "base_hostile_count": 28,
     "candidate_prediction_bound": true,
     "custodian_signature_cryptographically_verified": false,
+    "fingerprint_ordered_component_count": 48,
+    "fingerprint_sha256": "a00d2c537ba82ba12324d4b48d9a8190c84c1f071971d22dd37793ec36253eb9",
     "freeze_records": 0,
     "freeze_schema": "tect/pre-a-round1-prospective-holdout-freeze/1.0",
+    "hard_row_count": 10,
     "hostile_error_codes": {
       "baseline_missing": "BASELINE_MISSING",
       "commitment_scalar_types": "COMMITMENT_INVALID",
@@ -3870,6 +5939,8 @@
     },
     "keyed_RFC8785_JCS_HMAC_shape_required": true,
     "live_freeze_tag_observation_load_bearing": false,
+    "map_only_admitted_count": 0,
+    "map_only_hostile_count": 7,
     "nested_field_contracts": {
       "allowed_input_fields": [
         "id",
@@ -3952,6 +6023,7 @@
     "remote_commit_fetched_and_verified": false,
     "remote_tag_ref_fetched_and_verified": false,
     "repository_confined_POSIX_paths": true,
+    "residual_hard_row_cell_count": 8,
     "root_fields": [
       "schema",
       "freeze_id",
@@ -3971,41 +6043,55 @@
       "provenance",
       "scoring",
       "no_overclaim"
-    ]
+    ],
+    "stable_blocker_count": 7,
+    "successor_candidate_created": false,
+    "successor_hostile_count": 11,
+    "successor_status": "DESIGN_ONLY"
   },
-  "exploration_id": "EXP-000807",
+  "exploration_id": "EXP-000810",
   "failures": [],
   "formal_workflow": {
-    "changelog_count": 591,
-    "exploration_count": 808,
-    "exploration_matches": 1,
+    "changelog_count": 595,
+    "exploration_count": 810,
     "hardening_event_matches": 1,
     "hardening_exploration_matches": 1,
-    "theorem_event_matches": 1
+    "legacy_event_matches": 1,
+    "legacy_exploration_matches": 1,
+    "v1_1_event_matches": 1,
+    "v1_1_exploration_matches": 1
   },
   "generated_surfaces": {
-    "catalog_total": 3817,
-    "changelog_count": 591,
-    "exploration_count": 808,
-    "gate_count": 124,
-    "negative_count": 331,
+    "catalog_total": 3819,
+    "changelog_count": 595,
+    "exploration_count": 810,
+    "gate_count": 131,
+    "negative_count": 335,
     "result_count": 168
   },
   "hardening_exploration_id": "EXP-000808",
   "missing_authorities": [],
   "negative_ids": [
-    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
+  ],
+  "new_closed_subgates": [
+    "PA-ROUND1-CURRENT-VERSION-M1-M2-M5-MAP-ONLY-ADMISSION-EMPTY-SET",
+    "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT"
+  ],
+  "new_negative_ids": [
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR"
   ],
   "normalized_fresh_sentinels": {
     "independent": {
-      "passed": 153,
+      "passed": 223,
       "status": "PASS",
-      "total": 153
+      "total": 223
     },
     "primary": {
-      "passed": 125,
+      "passed": 205,
       "status": "PASS",
-      "total": 125
+      "total": 205
     }
   },
   "open_gates": [
@@ -4013,33 +6099,56 @@
     "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
     "PA-ROUND1-INDEPENDENT-CUSTODIAN-OPAQUE-TARGET-COMMITMENT",
     "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
-    "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION"
+    "PA-ROUND1-CRYPTOGRAPHIC-CUSTODIAN-SIGNATURE-AND-REMOTE-FREEZE-VERIFICATION",
+    "PA-M2-CI8-PHYSICAL-RESPONSE-CHANNEL-AND-ERROR-BOUND"
   ],
   "parent_explorations": [
-    "EXP-000791"
+    "EXP-000791",
+    "EXP-000807",
+    "EXP-000808"
   ],
   "parent_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
   "pdf_efficiency": {
-    "combined_gate_level_checkpoint_deferred_during_development": false,
-    "combined_gate_level_checkpoint_strictly_validated": true,
     "dedicated_R168_PDF_created_by_verifier": false,
     "dedicated_R168_PDF_required": false,
     "dedicated_R168_source_required": false,
-    "manifest_checkpoint_synthesis": {
+    "future_manifest_metadata": {
+      "pages": 10,
+      "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf",
+      "pdf_sha256": "346595c8609be1e49fb33d87e5a469b01f9083c78d7a1fc89d3648b88ea4d243",
+      "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt",
+      "source_sha256": "ca8b0fdc1c4881aa13e3311851c719d0b6a0dfb4b27e0bb30906f7bc77b04239",
+      "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+      "visual_qa": "All 10 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 10 nonempty pages.",
+      "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v2.0 / R-168 v1.1 gate-level synthesis source/PDF pair was issued only after the primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed."
+    },
+    "historical_manifest_metadata": {
       "pages": 15,
       "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf",
       "pdf_sha256": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
       "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt",
       "source_sha256": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e",
       "status": "ISSUED AS ONE COMBINED GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+      "v1_1_pdf_policy": "No intermediate R-168 v1.1 PDF is issued by this additive four-file package. A later logical gate-level synthesis may be issued only after formal, independent and integrated verification.",
       "visual_qa": "All 15 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 15 nonempty pages.",
       "workflow": "No per-lemma or intermediate PDF was issued. One combined R-167 v1.9 / R-168 v1.0 gate-level synthesis source/PDF pair was issued only after the manifest, certificate, primary, non-importing independent, integrated, formal-authority, generated-surface, and source-form checks passed."
     },
+    "historical_v1_9_v1_0_checkpoint_strictly_validated": true,
+    "later_v2_0_v1_1_checkpoint_deferred_until_layers_pass": false,
+    "later_v2_0_v1_1_checkpoint_strictly_validated": true,
+    "per_lemma_or_intermediate_v1_1_PDF_issued": false,
     "shared_with_R167_manifest": true
   },
+  "prior_exploration_ids": [
+    "EXP-000807",
+    "EXP-000808"
+  ],
+  "prior_negative_ids": [
+    "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE"
+  ],
   "result_id": "PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
   "result_number": "R-168",
-  "result_version": "v1.0",
+  "result_version": "v1.1",
   "reused_negative_ids": [
     "NG-2026-08-09-PRE-A-ROUND1-UNFROZEN-TOURNAMENT-SELECTION"
   ],
@@ -4051,10 +6160,15 @@
     "actual_freeze_record_created": false,
     "admitted_current_microscopic_map_present": false,
     "current_tree_readiness_audited": true,
+    "current_version_map_only_empty_set_closed": true,
     "custodian_signature_cryptographically_verified": false,
     "external_target_commitment_present": false,
+    "finite_torus_mathematical_fingerprint_closed": true,
     "freeze_schema_shape_validated": true,
     "git_tag_created": false,
+    "m2_controlled_physical_error_bound_present": false,
+    "m2_physical_response_channel_present": false,
+    "m2_v1_candidate_created": false,
     "parent_gate_closed": false,
     "physical_Sector_A_complete": false,
     "prospective_prediction_present": false,
@@ -4062,25 +6176,25 @@
     "remote_commit_fetched_and_verified": false,
     "remote_tag_ref_fetched_and_verified": false
   },
-  "script_version": "1.0.1",
+  "script_version": "1.1.0",
   "source_hashes": {
     "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
     "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e",
-    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-round1-prospective-holdout-freeze-protocol/result.json": "40be9378c5b868551d5431a4bb1b6c7572443803a1240e269e1817c6f1f07efb",
-    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-round1-prospective-holdout-freeze-protocol/result.json": "6c430a733391ef3fe6a357309e10e5b6fcc3ee59bcef24fd334768b44382db9c",
-    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-round1-prospective-holdout-freeze-protocol/result.json": "1bd4950479cc17cc42a4093f3d4d4084b545aab352f6125df7068f34d4f15478",
-    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py": "8c146174bd22f5d790d0062b8629d74f8b69fa4289caa400897df3363b11a276",
-    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py": "8041a437f5c6a091a038d9ac6388beb09bcf949cc9e1d675b4e5e2bd08944126",
-    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py": "9d8ee914bc3eca6d70409916a284a7ef2568ee6d68d04501a7e13625aed23181",
-    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json": "79353861f33afb386c2afd279eb4f821e0a8e303b98da696bfb825b209fc7c26",
-    "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "de0cbae48001f32bcde77e34f3d8249737fcee5679a06f7d508660ecc59bd4a0",
-    "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "2af87e50bb3b328c33400d6ac24c2c586b64c10b22dd411c0bbc65e8b6bf242b"
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-round1-prospective-holdout-freeze-protocol/result.json": "c621153817022ed353a908c94b8da4214718957e1b4cf2afa5e1e5e88019f71e",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-round1-prospective-holdout-freeze-protocol/result.json": "c6df24bb0cb541f32007dee6615c07c4685db9bf7e06975ed1b2134a3c2124c8",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-round1-prospective-holdout-freeze-protocol/result.json": "15b1dec8537860fba930cdb11ba94dd632e0a25910d522fe49e9484e90e31be4",
+    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py": "01bba625caf70fa6a6fc857d096ba21c14a1facc551b2c274f3920d85959b671",
+    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py": "3a62f05075b82428da8b8b5f63c34d36c5146d37391e8e7f3bd6428c1729d38f",
+    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py": "a79088b41c21f3fe43a526e61b4821f43d2c52e098fe5cb4a7116902905c9539",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json": "0f3141a604244f559bba078166f3855b0498a0d812028d0825b6946e15526f6d",
+    "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "fe28e8189ac2c679767c7b19959ae0f3b45400e39b538f7dcdc262b32b6da042",
+    "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "3dc61ace4ee789e7c0628885b93e087d78c513a859046fd22fb7b751608da941"
   },
   "summary": {
     "failed": 0,
     "missing": 0,
-    "passed": 218,
-    "total": 218
+    "passed": 262,
+    "total": 262
   },
   "task_id": "T-054",
   "verdict": "PASS"
