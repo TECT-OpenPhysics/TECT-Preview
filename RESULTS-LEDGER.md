@@ -23,7 +23,7 @@ policy in `governance/development-history.md`.
 | ID | Result | Summary |
 |---|---|---|
 | [R-168](#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | R-168 v1.3 is a scoped T0 analytic/exact/executed/audited additive result under EXP-000814. It retains v1.0--v1.2 and closes five mathematical children without creating a compact action, physical response, candidate, prediction or freeze; physical-response, Round-1, Sector A and Pre-A remain open |
-| [R-167](#r-167) | Weighted-energy, common-dynamics topology, orbit-smear carrier, local-strict and ground-gap route split | R-167 v2.4 is a scoped T0 analytic/exact/executed/audited additive result under EXP-000818. It retains every v2.3 child, proves fixed-finite faithful-standard-form point-strong-star observable cutoff removal, a conditional bidirectional all-shape Cauchy-to-C0 completion theorem, and the first local rank-two homological generator with QPS/Ritz control; actual all-shape Q3 common alpha, all-order oscillator elimination, oscillator GNS gap, C6, Sector A and Pre-A remain open |
+| [R-167](#r-167) | Weighted-energy, common-dynamics topology, orbit-smear carrier, local-strict and ground-gap route split | R-167 v2.5 is a scoped T0 analytic/exact/executed/audited additive result under EXP-000825. It retains every v2.4 child and proves the complete third-order low-block coefficient and connected ordered-triple QPS bound at fixed finite spatial volume and fixed finite parity-preserving onsite Ritz cutoff; actual all-shape Q3 common alpha, cutoff-uniform or all-order oscillator elimination, oscillator GNS gap, C6, Sector A and Pre-A remain open |
 | [R-166](#r-166) | Sparse production radial-Gram decomposition and global owner bound | Scoped T4 analytic/exact/executed/audited production-fibre theorem, strengthened in v1.1 without a new result ID. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / single fresh-`4p` R-153 fibre, the exact Fierz split, Pauli nonresonance, radial bounds and direct coefficient inequality give an explicit rational polynomial whose unique global minimum lies in `70<G_*<71` and is `-4/5+18740524635403/439505584128000>-4/5`. Thus the owner plus source Hessian is strictly above `1/10`, the scoped R-164 reduction permits `rho=3/20`, and the R-165 annulus is closed. Exact simultaneous `sin(4x),sin(8x)` arithmetic gives Gram `[[5/4,1],[1,3/2]]` and ratio `3/8` at `(1,-1)`, registering that the coefficient-one lemma cannot be copied rootwise. Primary `40/40` and independent Fraction `37/37` audits pass. The complete joint owner, nonlinear/revisit feedback, low variables, removal, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-165](#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | Scoped T4 analytic/exact/executed/audited production-fibre theorem. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / fresh-`4p` R-153 fibre, whitened past amplitude `G` and final direction `alpha` obey `K_owner(g)[alpha,alpha] >= P(G)|alpha|^2` for one explicit rational quartic polynomial. A sharp `5/6` Fourier separation lemma, exact A1 covariance enclosures, and R-130 derivative envelopes prove the R-164 owner target `K_owner>=-9I/10` for `0<=G<=21` and `G>=274`, reducing this fibre's noncompact amplitude problem to the bounded open annulus `21<G<274`; its closed certification domain `21<=G<=274` is compact. Primary `38/38` and independent Fraction `30/30` audits pass; the deterministic five-page PDF passed all-page visual QA. The open annulus, other harmonics and roots, cross blocks, nonlinear/revisit feedback, low variables, regulator/removal uniformity, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
 | [R-164](#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | Scoped T4 analytic/exact/executed/audited direct-chart theorem. For every finite R-104 zero-control chart, the R-141 legal force is the orthogonal projection of the complete centered terminal scalar onto predictable first Gaussian chaos, so its squared source-dual norm is at most the scalar variance with sharp constant one. A7 `L2` convergence and the A1/A11 point-covariance trace give a cutoff-, chart-length-, and linear/isometric-refinement-uniform bound on that variance along the registered sharp-cube/dyadic sequence. A7 centering also makes the direct anchor nonnegative. Therefore a complete direct owner bound `K_owner>=-(10/11-rho)G_src` yields `mu=-1/110+rho`, `epsilon_v=max(0,5/11-rho/4)`, `epsilon_6=3/20`, and constant `B_*/rho`, without separate anchor or origin-force assumptions. The complete production owner, nonzero feedback, shifted low base, arbitrary graph metric transport, random/nonlinear/revisit/pathwise scope, removal, T-050/A13, phase/PDE, Nelson/measure and Sector-A closure remain open |
@@ -417,6 +417,15 @@ equivariant rank-two homological generator with sharp QPS/Ritz control and its
 exact second-order low-block match. It registers two all-order/norm-smallness
 boundaries without changing the result number, T0 tier or claim-bearing
 status.
+`EXP-000825` establishes R-167 v2.5. At every fixed finite spatial volume
+`Lambda` and fixed finite parity-preserving onsite Ritz cutoff `M`, it computes
+the complete third-order low block of two sequential rotations, proves exact
+disconnected-spectator cancellation and connected support for every nonzero
+ordered edge triple, and gives a conservative finite-cutoff QPS bound. It also
+registers the canonical one-site compact-cylinder split-bond point-norm C0
+obstruction. It changes neither the result number, T0 tier nor claim-bearing
+status and supplies no spatial-volume-uniform, cutoff-uniform, unbounded,
+thermodynamic or all-order theorem.
 
 **Authority links.** The v1.1 `centered-weight cubic graph` and
 `prescribed-word` heat theorem are recorded under
@@ -554,6 +563,28 @@ nor KMS quotients. The third is only the first homological coefficient and its
 exact second-order low-block match. The common-alpha, connected-rank-two,
 broader rank-two and broken-sector GNS-gap parents remain OPEN.
 
+R-167 v2.5 closes exactly one further scoped child:
+`PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-THIRD-ORDER-LINKED-RANK-TWO-LOW-BLOCK-COEFFICIENT`.
+For fixed finite `Lambda` and fixed finite parity-preserving onsite Ritz cutoff
+`M`, write `V_d=A direct-sum C`, `T=QVP`, `R=(QKQ)^(-1)`, `D=RT`,
+`G=D-D^*`, `Z=R(DA-CD)` and `G_2=Z-Z^*`. The sequential rotations
+`exp(lambda G)` and `exp(lambda^2 G_2)` have complete third-order low block
+
+`Theta^(3)=T^*RCRT-(1/2){A,T^*R^2T}`.
+
+Every nonzero ordered edge triple has connected union with at most four
+vertices and diameter at most three, and
+
+`||Theta^(3)||_a <= 48z(2z-1)^2 exp(3a) epsilon^2`
+`(rho_(M,Lambda)/Gamma+a_(M,Lambda)/Gamma^2)`.
+
+The constants `rho_(M,Lambda)` and `a_(M,Lambda)` are fixed-volume/cutoff
+quantities; no `Lambda`-uniform or `M`-uniform bound, third-order `tau_M`
+estimate, thermodynamic limit, unbounded coefficient, fourth-order term,
+convergent BCH/Lie--Schwinger series, phase intertwiner or oscillator GNS gap
+follows. The common-alpha, connected-rank-two, broader rank-two and broken-
+sector GNS-gap parents remain OPEN.
+
 **Negative-route authorities.** The exact fixed-power star/repeat obstruction
 is registered as
 `NG-2026-08-10-PRE-A-ST8-Q3LOCK-FIXED-S-COEFFICIENTWISE-FIRST-PASSAGE-BRANCH-RESPONSE`.
@@ -631,6 +662,15 @@ reject linked-cluster reorganization. The second uses harmonic Ritz cutoffs to
 show that finite-cutoff boundedness does not imply a cutoff-uniform ordinary
 operator-norm Schrieffer--Wolff ratio at fixed `Gamma`; it does not reject
 relative-form, graph-norm or QPS routes.
+The v2.5 carrier boundary is
+`NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0`.
+For every nonzero compact one-site `K`, the multiplier implementation of the
+canonical split bond subflow has norm jump at least `||K||`; a rank-one fixture
+has exact jump one. Unitized compacts do not contain `K tensor I`, while the
+multiplier algebra contains it but does not make the action point-norm C0.
+This differs from the earlier raw momentum-resolvent fixture and rejects only
+that canonical compact-cylinder carrier/action pair, not unsplit dynamics,
+other carriers or common-alpha existence.
 
 **Statement.** For the exact finite-volume ST8/Q3LOCK Hamiltonian with
 `chi,c,g>0`, `lambda>=0`, bounded source, and centered weight
@@ -1225,6 +1265,48 @@ proved. A disconnected-spectator scalar-Feshbach fixture has mixed coefficient
 ordinary norm-smallness ratio at fixed `Gamma=2`. These reject only the two
 named automatic promotions.
 
+**v2.5 fixed-finite-volume/Ritz complete third-order child.** Fix one finite
+spatial volume `Lambda` and one finite parity-preserving onsite Ritz cutoff
+`M`, so every block below is bounded. With `V_d=A direct-sum C`, `T=QVP`,
+`R=(QKQ)^(-1)`, `D=RT`, `G=D-D^*`, `Z=R(DA-CD)` and `G_2=Z-Z^*`, one has
+`[G,K]=-V_od` and `[G_2,K]=-[G,V_d]`. Expanding the sequential rotations
+`exp(lambda G)` and `exp(lambda^2G_2)` through order three and projecting to
+the low block gives the complete coefficient
+
+`Theta^(3)=(1/2)P[G,[G,V_d]]P`
+`=T^*RCRT-(1/2){A,T^*R^2T}`.
+
+Its ordered edge-triple coefficient is
+
+`T_e^*RC_fRT_g-(1/2)(A_fT_e^*R^2T_g+T_e^*R^2T_gA_f)`.
+
+A retained component disconnected from the other two cancels exactly, and
+the other disconnected unions vanish by the onsite high-support sectors.
+Thus every nonzero union is connected, has at most four vertices and diameter
+at most three. With
+`rho_(M,Lambda)=sup_f||R^(1/2)C_fR^(1/2)||` and
+`a_(M,Lambda)=sup_f||A_f||`, a safe rooted ordered-triple count yields
+
+`||Theta^(3)||_a <= 48z(2z-1)^2 exp(3a) epsilon^2`
+`(rho_(M,Lambda)/Gamma+a_(M,Lambda)/Gamma^2)`.
+
+The scalar fixture `Gamma=2`, `epsilon=1/10`, `A=1/3`, `C=5/3` gives
+`Z=-1/30` and `Theta^(3)=1/300`; the pure-offdiagonal case gives zero. Exact
+noncommutative rectangular-block data independently check the sign,
+anticommutator factor and discarded projected terms. No constant here is
+claimed uniform in `Lambda` or `M`, and no third-order cutoff-tail estimate,
+unbounded coefficient, fourth order, all-order convergence or phase transfer
+is proved.
+
+For the separate canonical split bond subflow on
+`L2(R^8) tensor L2(R^8)`, every nonzero compact cylinder `K tensor I` in the
+multiplier algebra has a nonzero point-norm jump. For a normalized rank-one
+Laplace-product vector, the exact supremum is one and the rational test point
+has overlap `4/5`, projection distance `3/5` and squared distance `9/25`.
+The unitized compact algebra excludes the cylinder, while its multiplier
+algebra includes it without point-norm C0. This is neither the prior raw
+momentum-resolvent obstruction nor a common-alpha nonexistence theorem.
+
 **Boundary.** The v1.6 selected-tangent theorem is fixed-beta and confined to
 the registered source-tangent diagonal nets. Its raw finite-word conclusion
 is scalar-kernel and pointed finite-core Fell/GNS convergence, not globally
@@ -1253,8 +1335,13 @@ shape Cauchy-to-C0 completion theorem and the first local homological generator
 with its exact second-order match. It does not prove a common-representation
 thermodynamic rate, the actual all-shape Q3 Cauchy hypotheses, a surjective
 Q3 common alpha, generator/KMS identification, a convergent all-order
-oscillator elimination, phase transfer or an oscillator GNS gap. The theorem
-does not prove volume-uniform
+oscillator elimination, phase transfer or an oscillator GNS gap.
+R-167 v2.5 adds only the complete third-order low-block coefficient and
+connected ordered-triple QPS bound at fixed finite `Lambda` and fixed finite
+`M`, together with the canonical compact-cylinder split-bond carrier
+obstruction. It proves no spatial-volume or thermodynamic limit, no uniform
+Ritz removal, no all-order oscillator elimination and no common-alpha
+nonexistence. The theorem does not prove volume-uniform
 direct projected `D,delta D` locality, a local net, a full canonical
 momentum/Weyl bridge, polynomial local-generator identification, phase-KMS
 quotient identification, a broken-sector GNS or physical mass gap, regulator
@@ -1262,15 +1349,16 @@ removal, continuum, a physical empty/preparation reference, a below-empty
 sign, C6, CP1, physical/full-Class-II Sector A or Pre-A. The published A5
 card remains only its seven-hypothesis T6 conditional composition.
 
-**Proven in:** C6 / [R-167 v2.4 certificate](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md) and [machine manifest](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json). The [R-167 v2.4-only gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fixed-standard-form-c0-homological-generator-boundary-checkpoint-260812-v1.3.tex.txt) and [rendered 9-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fixed-standard-form-c0-homological-generator-boundary-checkpoint-260812-v1.3.pdf) are now the issued v2.4 evidence after strict validation, dual extraction and full-page visual review. The previous [combined R-167 v2.1 / R-168 v1.2 gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt) and [rendered 13-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf), the earlier [combined R-167 v1.9 / R-168 v1.0 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf), the [combined R-167 v2.0 / R-168 v1.1 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt) and [10-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf), and the [R-167 v1.8 synthesis PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.pdf) remain historical evidence only. The [combined R-167 v2.2 / R-168 v1.3 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.tex.txt) and [rendered 11-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.pdf) also remain historical evidence. The [R-167 v2.3-only gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-l2-connected-qps-and-common-alpha-boundary-checkpoint-260811-v1.2.tex.txt) and [rendered 8-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-l2-connected-qps-and-common-alpha-boundary-checkpoint-260811-v1.2.pdf) remain the issued v2.3 evidence after strict validation and full-page visual review. R-168 v1.3 remains historical and is not reissued; no per-lemma or intermediate v2.4 PDF was issued.
+**Proven in:** C6 / [R-167 v2.5 certificate](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md) and [machine manifest](strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json). The [R-167 v2.5-only gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fixed-volume-ritz-third-order-and-compact-cylinder-boundary-checkpoint-260812-v1.4.tex.txt) and [rendered 9-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fixed-volume-ritz-third-order-and-compact-cylinder-boundary-checkpoint-260812-v1.4.pdf) are the latest issued R-167 evidence after strict validation, dual extraction and full-page visual review. The [R-167 v2.4-only source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fixed-standard-form-c0-homological-generator-boundary-checkpoint-260812-v1.3.tex.txt) and [rendered 9-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fixed-standard-form-c0-homological-generator-boundary-checkpoint-260812-v1.3.pdf), the previous [combined R-167 v2.1 / R-168 v1.2 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt) and [rendered 13-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf), the earlier [combined R-167 v1.9 / R-168 v1.0 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf), the [combined R-167 v2.0 / R-168 v1.1 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt) and [10-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf), and the [R-167 v1.8 synthesis PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-renyi-history-os-gap-reduction-route-split-260811-v0.7.pdf) remain historical evidence only. The [combined R-167 v2.2 / R-168 v1.3 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.tex.txt) and [rendered 11-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.pdf), together with the [R-167 v2.3-only source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-l2-connected-qps-and-common-alpha-boundary-checkpoint-260811-v1.2.tex.txt) and [rendered 8-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-l2-connected-qps-and-common-alpha-boundary-checkpoint-260811-v1.2.pdf), also remain historical evidence. No per-lemma or intermediate v2.5 PDF was issued; R-168 v1.3 remains historical and is not reissued.
 
 **Tier:** T0 (scoped selected-tangent, categorical orbit-smear, finite-region
 local-strict/finite-Gibbs, registered-periodic fifth-history and split-
 implementer theorem, fixed-finite faithful-standard-form point-strong-star
 upgrade, conditional geometric-QPS and bidirectional-C0 completion theorems,
 exact second-order onsite-resolvent coefficient, first local homological
-generator, compressed-spin phase theorem and local full-oscillator edge
-cluster; no actual all-exhaustion Q3 common alpha, all-order connected many-edge
+generator, fixed-finite-volume/Ritz complete third-order low-block coefficient,
+compressed-spin phase theorem and local full-oscillator edge cluster; no actual
+all-exhaustion Q3 common alpha, cutoff-uniform or all-order connected many-edge
 rank-two QPS, oscillator GNS gap, Sector-A or Pre-A promotion).
 
 **Publication target:** Pre-A analytic methods note.

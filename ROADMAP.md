@@ -716,7 +716,12 @@ the global-Fourier-second-moment cutoff route and the ordinary unweighted basic-
 resolvent core cannot be uniform.  EXP-000793 records the failed first-draft
 operator-norm inference and repairs it with a nonreal resolvent parameter,
 fixed-norm Weyl-displaced Schwartz inputs, exact cancellation and an explicit
-`Omega(R^3)` cutoff norm lower bound.  EXP-000794 / R-167, corrected in
+`Omega(R^3)` cutoff norm lower bound. EXP-000821 is a correction-only
+authority-linkage record: it registers the two finite-support/form-domain
+closed children and the two scoped refuted-route headings already frozen in
+EXP-000792, with the ordinary basic-resolvent route retaining the EXP-000793
+proof repair and both existing negative authorities. It adds no theorem,
+result or negative result. EXP-000794 / R-167, corrected in
 EXP-000795, closes the exact second weighted-energy moment, minimal
 three-half-energy moment, three-quarter energy-domain propagation, boundary
 position multiplier, and a conditional two-sided thermodynamic-Cauchy
@@ -1117,6 +1122,16 @@ closure holds only in the displayed EXP-000782 sufficient regime, while the
 EXP-000790 OS/KMS systems are phasewise abstract reconstructions, not one
 common Hamiltonian-derived `alpha`.
 
+EXP-000820 is the companion authority-linkage correction for the six
+historically open EXP-000790 children. It registers the still-open
+DLR-to-common-`alpha` KMS, beta-infinity ground-selection,
+connected-susceptibility/GNS-Poincare, enlarged-counterterm continuum,
+physical-empty-reference, and cross-candidate C0/N1--N5 composition headings.
+The common-`alpha` obligation is carried by the active all-shape successor;
+the GNS obligation is split between the closed criterion-only equivalence and
+the actual open coercivity theorem. This is linkage only and changes no
+theorem, result, negative result, claim or tier.
+
 EXP-000818 advances R-167 additively to v2.4 without closing a parent. For one
 fixed finite faithful Gibbs standard representation at a time, the two v2.3
 Hilbert--Schmidt legs imply implementer strong-star and bounded-observable
@@ -1138,6 +1153,30 @@ cutoff boundedness does not supply cutoff-uniform ordinary operator-norm
 Schrieffer--Wolff smallness. Linked-cluster, relative-form, graph-norm and QPS
 routes remain open.
 
+EXP-000825 advances R-167 additively to v2.5 without closing a parent. At one
+fixed finite spatial volume `Lambda` and one fixed finite parity-preserving
+onsite Ritz cutoff `M`, two sequential homological rotations have complete
+third-order low block
+`Theta^(3)=T^*RCRT-(1/2){A,T^*R^2T}`. Every nonzero ordered edge triple has
+connected union with at most four vertices and diameter at most three, and a
+safe rooted count gives
+`48z(2z-1)^2exp(3a)epsilon^2`
+`(rho_(M,Lambda)/Gamma+a_(M,Lambda)/Gamma^2)` in the QPS norm. The constants
+are not asserted uniform in spatial volume or Ritz cutoff. No thermodynamic
+limit, third-order cutoff-tail estimate, unbounded coefficient, fourth-order
+recursion, all-order convergence or phase transfer follows.
+
+The same checkpoint registers a separate canonical compact-cylinder boundary:
+for `c!=0` the split bond subflow has a norm jump at least `||K||` on every
+nonzero one-site compact cylinder `K tensor I`; an exact rank-one fixture has
+jump one and rational squared distance `9/25`. Unitized compacts exclude that
+cylinder, while the multiplier algebra includes it without point-norm C0.
+This differs from the prior raw momentum-resolvent obstruction and is not a
+no-go for unsplit dynamics, another carrier or common-alpha existence. Actual
+all-shape Q3 common alpha, generator/KMS identification, cutoff-uniform and
+all-order rank-two oscillator elimination, broken-sector GNS gap, physical
+Sector A and Pre-A remain open.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or
@@ -1153,15 +1192,20 @@ commitment, admitted microscopic observable map/nonempty prediction, and
 cryptographic remote-verification gates. No target, freeze record, tag,
 prediction, score or candidate selection is created. The combined R-167 v2.2 /
 R-168 v1.3 synthesis remains historical. Per the PDF-efficiency protocol,
-EXP-000815, EXP-000816, EXP-000817 and EXP-000818 issued no per-lemma or
-intermediate PDF at their formal-authority stages. After the v2.3 proof,
+EXP-000815, EXP-000816, EXP-000817, EXP-000818 and EXP-000825 issued no per-
+lemma or intermediate PDF at their formal-authority stages. After the v2.3 proof,
 formal, independent, integrated,
 generated-surface, source-form, freshness, dual-extraction, strict-release and
 render-review gates passed, one R-167-only v2.3 gate-level synthesis source/PDF
 pair was issued. After the v2.4 proof, formal, independent, integrated,
 generated-surface, source-form, freshness, dual-extraction, strict-release and
 render-review gates passed, one R-167-only v2.4 gate-level synthesis source/PDF
-pair was issued; R-168 v1.3 remains historical and is not reissued. Actual
+pair was issued; R-168 v1.3 remains historical and is not reissued.
+After the v2.5 proof, formal, independent, integrated, generated-surface,
+source-form, freshness, dual-extraction, strict-release and render-review gates
+passed, one R-167-only v2.5 gate-level synthesis source/PDF pair was issued;
+R-168 v1.3 remains historical and is not reissued. No per-lemma or intermediate
+v2.5 PDF was issued, and no theorem tier or parent status changed. Actual
 all-shape Q3 common `alpha`, generator/KMS identification,
 all-order connected rank-two oscillator transfer, broken-sector GNS gap,
 physical Sector A and Pre-A remain open.

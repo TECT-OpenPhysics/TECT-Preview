@@ -9,6 +9,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0](#ng-2026-08-12-pre-a-st8-q3lock-canonical-one-site-compact-cylinder-bond-subflow-point-norm-c0) | use canonical one-site compact cylinders as a point-norm C0 carrier for the split Q3 bond subflow | EXP-000825 / R-167 v2.5 proves a norm jump at least `||K||` for every nonzero compact `K`, with exact rank-one supremum one. Unitized compacts exclude `K tensor I`; the multiplier algebra includes it but the action is not point-norm C0. This is not common-alpha nonexistence |
 | [NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS](#ng-2026-08-12-pre-a-st8-q3lock-second-order-disjoint-vanishing-automatic-all-order-global-feshbach-connectedness) | infer connectedness of the raw all-order global scalar Feshbach map from second-order disjoint-edge vanishing | EXP-000818 / R-167 v2.4 uses a disconnected low spectator: the scalar resolvent denominator creates a nonzero mixed `Z_X tensor Z_Y` self-energy coefficient `-1/800`. Linked-cluster subtraction and local resolvent expansions remain open |
 | [NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY](#ng-2026-08-12-pre-a-st8-q3lock-ritz-cutoff-ordinary-bounded-operator-sw-smallness-uniformity) | infer cutoff-uniform ordinary operator-norm Schrieffer--Wolff smallness from finite Ritz boundedness | harmonic number cutoffs give `||B_M||/Gamma>=(M+1)/8` at fixed `Gamma=2`, reaching at least `2` at `M=15`. Relative-form, graph-norm and QPS routes remain open |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY](#ng-2026-08-11-pre-a-st8-q3lock-forward-local-automorphism-limit-automatic-surjectivity-and-inverse-cauchy) | infer a surjective limiting automorphism and inverse Cauchy convergence from exact forward local stabilization of finite-volume automorphisms | EXP-000815 / R-167 v2.3 uses cyclic shifts on the one-sided UHF algebra: every local observable stabilizes forward to the unilateral right shift, but the limit is a proper endomorphism and the inverse images of the first-site Pauli `Z` are pairwise norm-distance two |
@@ -356,6 +357,37 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-12-pre-a-st8-q3lock-canonical-one-site-compact-cylinder-bond-subflow-point-norm-c0"></a>
+### NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0 -- the canonical split bond subflow is not point-norm C0 on nonzero one-site compact cylinders
+
+**Failure mode:** use the canonical one-site compact-cylinder carrier for the
+split Q3 bond subflow and infer point-norm continuity at time zero.
+
+**Evidence:** EXP-000825 / R-167 v2.5 takes
+`H_x=H_y=L2(R^8)`,
+`B_delta=exp(i c delta q_x dot q_y/hbar)` with `c!=0`, `hbar>0`, and
+`beta_delta=Ad(B_delta)`. For every nonzero compact `K` on `H_x`, direct-
+integral decomposition of the formal cylinder `A=K tensor I` gives, whenever
+`delta!=0`,
+
+`||beta_delta(A)-A||`
+`=sup_s||M_s^*KM_s-K|| >= ||K||`.
+
+For the normalized rank-one fixture
+`psi(q)=2^-4 exp[-(1/2)sum_(j=1)^8|q_j|]`, the supremum is exactly one. With
+`c=hbar=1`, `delta_n=1/n` and `r_n=(n/2)e_1`, the overlap is `4/5`, the
+projection distance is `3/5`, and its square is `9/25`. The unitized compact
+algebra on `H_x tensor H_y` does not contain `K tensor I`; its nonunital
+compact ideal has multiplier algebra `B(H_x tensor H_y)`, which contains the
+cylinder but retains the norm jump.
+
+**Consequence:** the canonical compact-cylinder split-bond carrier/action pair
+cannot supply point-norm C0 dynamics. This is distinct from the earlier raw
+momentum-resolvent bond-kick obstruction. It does not rule out unsplit
+dynamics, another local-strict carrier, state-weighted convergence, orbit
+smearing or a common alpha constructed by another route, and it is not a
+common-alpha nonexistence theorem.
 
 <a id="ng-2026-08-12-pre-a-st8-q3lock-second-order-disjoint-vanishing-automatic-all-order-global-feshbach-connectedness"></a>
 ### NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS -- a raw global scalar Feshbach denominator can couple a disconnected low spectator

@@ -1,12 +1,21 @@
-# R-167 v2.3 certificate: Gibbs-L2 implementers and connected second-order QPS control
+# R-167 v2.5 certificate: fixed-finite-volume/Ritz third order and compact-cylinder boundary
 
-- **Exploration:** `EXP-000815` (additive successor to `EXP-000813`)
-- **Result:** `R-167`, additive version `v2.3`; no new result number
+- **Exploration:** `EXP-000825` (additive successor to `EXP-000818`)
+- **Result:** `R-167`, additive version `v2.5`; no new result number
 - **Stable result ID:** `PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT`
 - **Claim context:** `C6-SPACETIME-SIGNATURE`
 - **Task:** `T-054`
 - **Tier:** `T0`, `claim_bearing: false`
-- **Date:** 2026-08-11
+- **Date:** 2026-08-12
+
+R-167 v2.5 preserves the complete issued v2.4 checkpoint and every earlier
+result below. Sections 55--60 prove the complete third-order low block of two
+sequential homological rotations at each fixed finite spatial volume and fixed
+finite onsite Ritz cutoff, expand it as linked ordered edge triples, and give a
+conservative finite-volume/cutoff QPS bound. They also register the canonical one-site compact-cylinder split-bond
+point-norm C0 obstruction. No cutoff-uniform or unbounded third-order theorem,
+all-order series, QPS phase transfer, common alpha, or GNS result follows. No
+v2.5 PDF is issued during this proof-first batch.
 
 R-167 v2.3 preserves the complete issued v2.2 checkpoint and every earlier
 result below.  Sections 41--46 prove three more scoped children: two-sided
@@ -2469,7 +2478,7 @@ For each edge let
 
 \[
  T_e=QB_eP,\qquad \|T_e\|\le\epsilon,\qquad
- D_e=RT_e,qquad G_e=D_e-D_e^*.                          \tag{51.2}
+ D_e=RT_e,\qquad G_e=D_e-D_e^*.                         \tag{51.2}
 \]
 
 Assume that `K`, `P` and every `B_e` commute with the declared global parity.
@@ -2714,3 +2723,469 @@ Cauchy hypothesis, all-exhaustion common alpha, identified generator and KMS
 quotients, all-order connected rank-two oscillator elimination, exact oscillator
 two-phase QPS, phasewise intertwining, broken-sector oscillator GNS gap,
 Round-1, C6, CP1, physical Sector A and Pre-A all remain **OPEN**.
+
+## 55. R-167 v2.5 additive scope and formal staging boundary
+
+R-167 v2.5 records `EXP-000825` and preserves Sections 1--54, including the
+complete issued v2.4 source/PDF metadata, without alteration. It closes exactly
+
+`PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-THIRD-ORDER-LINKED-RANK-TWO-LOW-BLOCK-COEFFICIENT`.
+
+The result is `T0`, `claim_bearing: false`. It is an actual algebraic theorem
+for every fixed finite spatial volume `Lambda` and fixed finite
+parity-preserving onsite Ritz cutoff `M`, not a conditional envelope for a
+coefficient that has not been constructed. Both finiteness hypotheses are
+essential: every block in the following calculation is bounded. No
+spatial-volume or thermodynamic limit, `Lambda`-uniform coefficient bound, or
+third-order cutoff-tail quantity `tau_M` is declared or estimated here.
+
+The new negative row is exactly
+
+`NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0`.
+
+It concerns only the canonical compact-cylinder carrier for the split bond
+subflow. The actual common-alpha parent and the connected all-order rank-two
+parent remain open.
+
+## 56. Complete third-order low block after two sequential rotations
+
+Fix one finite spatial volume `Lambda` and one finite parity-preserving onsite
+Ritz cutoff `M`, and write
+
+\[
+H(\lambda)=K+\lambda(V_{\rm d}+V_{\rm od}),\qquad
+ V_{\rm d}=A\oplus C,\qquad T=QVP.                    \tag{56.1}
+\]
+
+Retain the v2.4 parity hypotheses: `K`, `P` and `V` commute with the declared
+global parity. Consequently `R`, `D`, `G` and the second generator `G_2` below
+commute with parity. The sequential rotations therefore preserve the declared
+parity sectors.
+
+Normalize the low energy so that `PKP=0`, and suppose `QKQ` is invertible with
+`QKQ >= Gamma Q`. Put
+
+\[
+ R=(QKQ)^{-1},\qquad D=RT,\qquad G=D-D^*.             \tag{56.2}
+\]
+
+Here and below `R` is extended by zero on `P`. Direct block multiplication
+gives
+
+\[
+ [G,K]=-V_{\rm od}.                                   \tag{56.3}
+\]
+
+The first sequential transform is
+
+\[
+ H_1(\lambda)=e^{\lambda G}H(\lambda)e^{-\lambda G}.
+\]
+
+Collecting powers through order three and using (56.3) gives
+
+\[
+\begin{aligned}
+H_1(\lambda)={}&K+\lambda V_{\rm d}
+ +\lambda^2\left([G,V_{\rm d}]+{1\over2}[G,V_{\rm od}]\right)\\
+&+\lambda^3\left({1\over2}[G,[G,V_{\rm d}]]
+                 +{1\over3}[G,[G,V_{\rm od}]]\right)
+ +O(\lambda^4).                                      \tag{56.4}
+\end{aligned}
+\]
+
+The remaining second-order off-diagonal block is removed without changing the
+first generator. Define
+
+\[
+ Z=R(DA-CD),\qquad G_2=Z-Z^*.                         \tag{56.5}
+\]
+
+Since the `QP` block of `[G,V_d]` is `DA-CD`,
+
+\[
+ [G_2,K]=-[G,V_{\rm d}].                              \tag{56.6}
+\]
+
+Apply the second sequential transform
+
+\[
+ H_2(\lambda)=e^{\lambda^2G_2}H_1(\lambda)e^{-\lambda^2G_2}.
+\]
+
+At order `lambda^2`, equation (56.6) cancels `[G,V_d]`. At order
+`lambda^3`, the new term `[G_2,V_d]` is off diagonal. Also `G` and
+`V_od` are off diagonal, so `[G,V_od]` is block diagonal and
+`[G,[G,V_od]]` is off diagonal. Therefore the complete low block at order
+three is
+
+\[
+ \Theta^{(3)}={1\over2}P[G,[G,V_{\rm d}]]P.           \tag{56.7}
+\]
+
+A final block multiplication, with `D=RT`, yields the closed formula
+
+\[
+ \boxed{\Theta^{(3)}
+ =T^*RCR T-{1\over2}\{A,T^*R^2T\}.}                  \tag{56.8}
+\]
+
+Equation (56.8) is the complete coefficient for the specified two sequential
+rotations. It is not merely one selected diagram or the cubic part of a scalar
+global Feshbach denominator.
+
+## 57. Linked edge triples and a conservative finite-cutoff QPS bound
+
+Resolve the local blocks as `T=sum_e T_e`, `A=sum_f A_f`, and
+`C=sum_f C_f`. The ordered `(e,f,g)` contribution to (56.8) is
+
+\[
+ \Theta^{(3)}_{efg}
+ =T_e^*RC_fRT_g
+ -{1\over2}\left(A_fT_e^*R^2T_g+T_e^*R^2T_gA_f\right).       \tag{57.1}
+\]
+
+Suppose first that the retained edge `f` is disconnected from `e union g`.
+On the exact high-support sector created by `T_g`, the `f` block of `C_f`
+is the same retained spectator operator as `A_f`; it commutes with `R`,
+`T_e`, and `T_g`. Hence
+
+\[
+ T_e^*RC_fRT_g=A_fT_e^*R^2T_g=T_e^*R^2T_gA_f,         \tag{57.2}
+\]
+
+and (57.1) vanishes exactly. If another component is disconnected, the exact
+onsite high-support decomposition makes the relevant `T_e^*...T_g` block
+orthogonal. Thus every nonzero ordered triple has connected union. A connected
+union of three edges has at most four vertices and diameter at most three.
+
+At this fixed `(Lambda,M)` define
+
+\[
+ \rho_{M,\Lambda}=\sup_f\|R^{1/2}C_fR^{1/2}\|,
+ \qquad a_{M,\Lambda}=\sup_f\|A_f\|.                 \tag{57.3}
+\]
+
+If `||T_e|| <= epsilon` and `||R|| <= 1/Gamma`, then
+
+\[
+ \|T_e^*RC_fRT_g\|\le {\epsilon^2\rho_{M,\Lambda}\over\Gamma},
+ \qquad
+ {1\over2}\|\{A_f,T_e^*R^2T_g\}\|
+ \le {\epsilon^2a_{M,\Lambda}\over\Gamma^2}.        \tag{57.4}
+\]
+
+Therefore every ordered triple obeys
+
+\[
+ \|\Theta^{(3)}_{efg}\|
+ \le\epsilon^2\left({\rho_{M,\Lambda}\over\Gamma}
+                    +{a_{M,\Lambda}\over\Gamma^2}\right). \tag{57.5}
+\]
+
+For a graph of maximum degree `z`, root a nonzero connected union at one
+vertex. An oriented spanning walk contributes at most `z(2z-1)^2` choices;
+six orderings and two safe root incidences give the deliberately loose count
+
+\[
+ N_{3,\rm root}\le12z(2z-1)^2.                        \tag{57.6}
+\]
+
+The interaction norm contributes `|X| <= 4`, while `diam(X) <= 3`. Combining
+(57.5)--(57.6) gives
+
+\[
+ \boxed{\|\Theta^{(3)}\|_a
+ \le48z(2z-1)^2e^{3a}\epsilon^2
+ \left({\rho_{M,\Lambda}\over\Gamma}
+       +{a_{M,\Lambda}\over\Gamma^2}\right).}       \tag{57.7}
+\]
+
+No optimality is claimed for the constant in (57.7). The rooted combinatorial
+factor is independent of `Lambda`, but `rho_{M,Lambda}` and `a_{M,Lambda}`
+are fixed-volume quantities; no volume-uniform bound is claimed.
+
+## 58. Exact third-order fixtures and retained rational data
+
+For the two-block scalar fixture
+
+\[
+ \Gamma=2,\qquad \epsilon={1\over10},\qquad
+ A={1\over3},\qquad C={5\over3},                      \tag{58.1}
+\]
+
+one has `D=1/20` and
+
+\[
+ Z=R(DA-CD)=-{1\over30}.                              \tag{58.2}
+\]
+
+Both the nested commutator (56.7) and the block formula (56.8) give
+
+\[
+ \Theta^{(3)}={1\over300}.                            \tag{58.3}
+\]
+
+The pure-offdiagonal limit `A=C=0` gives `Z=0` and
+`Theta^(3)=0`, as required by the `P/Q` block grading.
+
+The scalar fixture does not test ordering.  A second exact fixture therefore
+uses a two-dimensional low block and a three-dimensional high block:
+
+\[
+ K_Q=\begin{pmatrix}2&0&0\\0&3&0\\0&0&5\end{pmatrix},\qquad
+ A=\begin{pmatrix}1&2\\2&-1\end{pmatrix},\qquad
+ C=\begin{pmatrix}3&1&0\\1&-2&2\\0&2&4\end{pmatrix},
+ \tag{58.4}
+\]
+
+\[
+ T={1\over10}\begin{pmatrix}1&2\\0&-1\\3&1\end{pmatrix},\qquad
+ R=K_Q^{-1}.
+ \tag{58.5}
+\]
+
+Exact noncommutative multiplication, without simultaneous diagonalization,
+gives
+
+\[
+ D=RT=\begin{pmatrix}
+ 1/20&1/10\\0&-1/30\\3/50&1/50
+ \end{pmatrix},\qquad
+ S=DA-CD=\begin{pmatrix}
+ 1/10&-4/15\\-71/300&-13/75\\-7/50&13/150
+ \end{pmatrix},                                      \tag{58.6}
+\]
+
+\[
+ Z=RS=\begin{pmatrix}
+ 1/20&-2/15\\-71/900&-13/225\\-7/250&13/750
+ \end{pmatrix}.                                      \tag{58.7}
+\]
+
+Embedding these blocks into the full `P direct-sum Q` space yields
+
+\[
+ Q[G_2,K]P=-S,\qquad
+ Q\bigl([G_2,K]+[G,V_{\rm d}]\bigr)P=0,              \tag{58.8}
+\]
+
+and independently checks both discarded projected terms,
+
+\[
+ P[G_2,V_{\rm d}]P=0,\qquad
+ P[G,[G,V_{\rm od}]]P=0.                             \tag{58.9}
+\]
+
+The three factors in (56.8) are
+
+\[
+ T^*R^2T=\begin{pmatrix}61/10000&31/5000\\31/5000&259/22500\end{pmatrix},
+ \quad
+ T^*RCRT=\begin{pmatrix}219/10000&53/3750\\53/3750&451/22500\end{pmatrix},
+ \tag{58.10}
+\]
+
+\[
+ {1\over2}\{A,T^*R^2T\}
+ =\begin{pmatrix}37/2000&317/18000\\317/18000&1/1125\end{pmatrix}.
+ \tag{58.11}
+\]
+
+Thus both the nested-commutator calculation and the block formula give
+
+\[
+ \Theta^{(3)}=\begin{pmatrix}
+ 17/5000&-313/90000\\-313/90000&431/22500
+ \end{pmatrix}.                                      \tag{58.12}
+\]
+
+This fixture is still at one fixed finite `Lambda` and one fixed finite `M`;
+it supplies no spatial-volume-uniform or cutoff-uniform conclusion.
+
+The v2.1 exact rational fixture supplies
+
+\[
+ \rho_{M,\Lambda}={15201\over156250},\quad
+ \epsilon={23\over6250},\quad \Gamma=100,\quad
+ a_{M,\Lambda}={96139\over1500000},\quad z=6,\quad e^a=2. \tag{58.13}
+\]
+
+Equation (57.5) becomes
+
+\[
+ {7770533371\over585937500000000000},                 \tag{58.14}
+\]
+
+and the safe QPS bound (57.7) is
+
+\[
+ {2820703613673\over762939453125000}.                 \tag{58.15}
+\]
+
+The primary SymPy engine constructs the scalar and noncommutative block
+matrices and both commutator forms. The independent verifier uses only
+`fractions.Fraction`, including exact matrix products for the two-by-three
+fixture; it imports neither the primary module nor a primary result file.
+
+## 59. Canonical compact-cylinder split-bond point-norm obstruction
+
+Let
+
+\[
+ {\cal H}_x={\cal H}_y=L^2(\mathbb R^8),\qquad
+ B_\delta=\exp\left({ic\delta\over\hbar}q_x\mathbin\cdot q_y\right),
+ \qquad \beta_\delta=\operatorname{Ad}(B_\delta).      \tag{59.1}
+\]
+
+Assume `c != 0` and `hbar > 0`. For a nonzero compact `K` on `H_x`, take the
+formal one-site cylinder `A=K tensor I`. Direct-integral decomposition over
+`q_y` gives whenever `c delta/hbar != 0`,
+
+\[
+ \|\beta_\delta(A)-A\|
+ =\operatorname*{ess\,sup}_{r\in\mathbb R^8}
+ \|M_{c\delta r/\hbar}^*KM_{c\delta r/\hbar}-K\|
+ =\sup_{s\in\mathbb R^8}\|M_s^*KM_s-K\|.             \tag{59.2}
+\]
+
+The modulations `M_s` converge weakly to zero as `|s|` tends to infinity.
+Compactness then gives `K M_s xi -> 0` for every fixed vector `xi`, and hence
+
+\[
+ \sup_s\|M_s^*KM_s-K\|\ge\|K\|.                      \tag{59.3}
+\]
+
+Thus, for nonzero coupling `c`, the multiplier action has a nonzero norm jump
+at every `delta != 0`.
+For an exact rank-one fixture set
+
+\[
+ \psi(q)=2^{-4}\exp\left[-{1\over2}\sum_{j=1}^8|q_j|\right],
+ \qquad K=P_\psi.                                     \tag{59.4}
+\]
+
+The vector is normalized and
+
+\[
+ \langle\psi,M_s\psi\rangle
+ =\prod_{j=1}^8{1\over1+s_j^2}.                       \tag{59.5}
+\]
+
+Consequently the exact supremum in (59.2) is one. With `c=hbar=1`,
+`delta_n=1/n`, and `r_n=(n/2)e_1`, the modulation parameter is `s=e_1/2` and
+
+\[
+ |\langle\psi,M_s\psi\rangle|={4\over5},\qquad
+ \|P_{M_s\psi}-P_\psi\|={3\over5},\qquad
+ \|P_{M_s\psi}-P_\psi\|^2={9\over25}.                \tag{59.6}
+\]
+
+The unitized compact algebra on `H_x tensor H_y` does not contain
+`K tensor I`: the infinite `H_y` multiplicity prevents compactness modulo a
+scalar. The multiplier algebra `M(K(H_x tensor H_y))=B(H_x tensor H_y)` of
+the nonunital compact ideal admits the cylinder, but (59.2)--(59.3) show that
+its canonical split-bond action is not point-norm C0.
+
+This does not rule out the unsplit dynamics, another local-strict algebra,
+state-weighted convergence, orbit-smearing, or a common alpha constructed by
+a different route.
+
+## 60. Devil's-advocate audit and exact v2.5 checkpoint lifecycle
+
+1. **Objection -- (56.8) omits a third-order BCH term. DISMISSED.** Equation
+   (56.4) contains both nested third-order terms. The term with `V_od` is off
+   diagonal after the final commutator, and the second-rotation term
+   `[G_2,V_d]` is also off diagonal. Projection leaves exactly (56.7).
+2. **Objection -- the second generator has the wrong sign. DISMISSED.** The
+   `QP` block of `[G,V_d]` is `DA-CD`; multiplying by `R` gives (56.5), and
+   direct multiplication gives `[G_2,K]=-[G,V_d]`.
+3. **Objection -- the anticommutator has a missing factor. DISMISSED.** The
+   outer factor `1/2` in (56.7) produces exactly one `T^*RCRT` and
+   `-(1/2){A,T^*R^2T}`.
+4. **Objection -- the scalar fixture could hide an ordering or sign error.
+   DISMISSED.** Equations (58.4)--(58.12) use noncommuting two-by-two and
+   three-by-three diagonal blocks and exact rectangular products. They check
+   `S=DA-CD`, `Q[G_2,K]P=-S`, the second-offdiagonal cancellation, both
+   projected discarded terms, and the full nonscalar matrix (58.12).
+5. **Objection -- disconnected spectators survive as in the v2.4 scalar
+   Feshbach fixture. DISMISSED for this coefficient.** Equation (57.2) is an
+   exact cancellation in the local unperturbed-resolvent expansion. The v2.4
+   negative concerned a different raw global scalar denominator.
+6. **Objection -- the connected support can exceed four sites. DISMISSED.** A
+   connected union of three graph edges has at most four vertices and diameter
+   at most three, including repeated-edge cases.
+7. **Objection -- (57.7) is sharp. UPHELD as an overclaim.** The factor
+   `12z(2z-1)^2` is a safe overcount and the factor four uses only `|X|<=4`.
+8. **Objection -- finite volume/Ritz boundedness implies volume- and
+   cutoff-uniform third order. UPHELD as an overclaim.** Both
+   `rho_{M,Lambda}` and `a_{M,Lambda}` may grow with `Lambda` or `M`. No
+   spatial-volume limit, volume-uniform bound or third-order `tau_M` estimate
+   is stated.
+9. **Objection -- the calculation closes all orders because finite matrices
+   have exponentials. UPHELD as an overclaim.** The registered theorem is the
+   complete coefficient through order three only. It gives no uniform series,
+   fourth-order coefficient, linked recursion, or phase transfer.
+10. **Objection -- the compact-cylinder fixture proves common-alpha
+   nonexistence. UPHELD as an overclaim.** It rejects one canonical split-bond
+   carrier/action pair only. The unsplit and other carrier routes remain open.
+11. **Objection -- the rank-one overlap is a vector distance rather than a
+    projection distance. DISMISSED.** Equation (59.6) uses
+    `||P_u-P_v||^2=1-|<u,v>|^2`, giving `9/25`, not the squared vector norm.
+12. **Objection -- the compact-cylinder no-go duplicates the raw local
+    resolvent bond-kick negative. DISMISSED.** The older result tested one
+    basic bounded momentum resolvent of the unbounded `p_x`. Section 59 tests every nonzero one-site
+    compact cylinder and the exact dichotomy between the unitized compact
+    algebra and the multiplier of the nonunital compact ideal.
+
+The primary and non-importing independent engines recompute every v2.5 exact
+fixture. In staged mode the formal misses are exactly four: `EXP-000825`, the
+`R-167 v2.5` result row, the one new negative row, and the one new closed gate
+row. Every v2.4 and earlier formal authority is required and retained.
+
+No v2.5 PDF is issued in this proof-first package. The manifest field
+`v2_5_checkpoint_synthesis` is exactly
+
+```text
+status: DEFERRED
+pdf_issued: false
+```
+
+Its workflow is R-167-only. Every v2.4 and earlier issued source/PDF pair and
+all exact hashes, page counts, workflows, and visual-QA strings remain
+historical evidence. R-168 v1.3 remains historical and is not reissued.
+
+Nothing in Sections 55--60 closes cutoff-uniform or unbounded third order,
+all-order connected rank-two elimination, BCH or Lie-Schwinger convergence,
+QPS phase transfer, actual all-shape Q3 common alpha, an identified generator
+or KMS quotient, exact oscillator two-phase QPS, phasewise intertwining, the
+broken-sector oscillator GNS gap, Round-1, C6, CP1, physical Sector A, or
+Pre-A. All remain **OPEN**.
+
+## 61. R-167 v2.5-only gate-level checkpoint issuance
+
+The Section 60 statements `No v2.5 PDF is issued`, exactly `DEFERRED`, and
+`pdf_issued: false` record the proof-first stage. After the primary,
+non-importing independent, integrated, formal-authority, generated-surface,
+source-form, freshness, dual-extraction, strict-release and visual-review
+gates passed, one R-167-only v2.5 gate-level synthesis was issued. R-168
+v1.3 remains historical and is not reissued.
+
+- Source: `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fixed-volume-ritz-third-order-and-compact-cylinder-boundary-checkpoint-260812-v1.4.tex.txt`, 26297 bytes, 647 lines, raw SHA-256 `bdef7067f72be44b1b90dc652dd7e6713b52b5865d03dec1253f58146c418d8c`.
+- PDF: `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fixed-volume-ritz-third-order-and-compact-cylinder-boundary-checkpoint-260812-v1.4.pdf`, 102404 bytes, 9 pages, raw SHA-256 `f8df8e4b7fc29ed6083e29c6bd4d6a6dfbe258900b21b4fb54aaa4a3718d406c`, and 792.6360841 seconds newer than the source.
+- Verification: primary `384/384` at raw script SHA-256 `9d667e615879985fa32dfb9540109769cd830e53aebb8c226f8b3a1008dea94c`; non-importing independent `218/218` at `f3e8bc777a2756f67168b3afea72f8a2365a7efc7f1a78e8b6ac3e5add3a7b71`; integrated `369/369` at `6a3ccc658817fdf715509e80acf8dd993691019d7db455942811cbe63389ae5a`.
+- Extraction/build: pypdf and pdfplumber each extracted 9/9 nonempty pages and found all 39/39 required tokens. The build reported `FORM PASS` and `OVERFULL-HBOX 0`; the PDF has no forms, JavaScript or encryption.
+
+All 9 pages rendered at 180 dpi were reviewed at readable resolution with zero
+clipping, overlap, broken equations, unreadable identifiers, black glyphs, or
+malformed page transitions.
+
+This issuance changes no theorem tier or parent status. It packages only the
+fixed-finite-volume and fixed-finite-Ritz complete third-order linked rank-two
+low-block coefficient, its connected ordered-triple QPS bound, and the scoped
+canonical compact-cylinder split-bond point-norm obstruction already recorded
+by `EXP-000825` / R-167 v2.5. Spatial-volume-uniform or cutoff-uniform third
+order, Ritz removal, fourth-order or all-order oscillator elimination, the
+actual all-shape Q3 common alpha, generator/KMS identification, exact
+oscillator two-phase QPS, phasewise intertwining, the broken-sector oscillator
+GNS gap, Round-1, C6, CP1, physical Sector A and Pre-A all remain **OPEN**.

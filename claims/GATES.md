@@ -6,7 +6,7 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-08-11.
+exist here. Last updated: 2026-08-12.
 
 ## Current Sector-A frontier (R-113)
 
@@ -585,6 +585,91 @@ empty/preparation branch, positive limiting specific gap, renormalized stress-
 tensor comparison or below-empty-space conclusion is supplied.  EXP-000817
 repairs only the missing gate heading.
 
+### **PA-CP1-ST8-Q3LOCK-DLR-TO-COMMON-ALPHA-KMS-IDENTIFICATION**
+
+**Statement:** Identify both parity-related Euclidean DLR/periodic-OS systems
+as algebraic `beta`-KMS states of one phase-, state- and `beta`-independent
+thermodynamic-limit real-time automorphism group obtained from the exact Q3LOCK
+Hamiltonians.
+
+**Status:** OPEN HISTORICALLY (2026-08-09; historical heading registered
+2026-08-12). EXP-000790 reconstructs each ordered phase only as its own
+abstract stochastically positive OS/KMS system. Phasewise OS/KMS
+reconstruction is not common-`alpha` identification. The remaining obligation
+is absorbed into the active successor
+`PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA`,
+which still requires the actual all-shape two-orientation Q3 estimates and the
+Hamiltonian/KMS quotient identification.
+
+### **PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION**
+
+**Statement:** Starting from one common Q3LOCK dynamics, control the
+`beta -> infinity` phase limits and prove that the two source-selected
+time-zero tangents are distinct algebraic ground states before making any
+broken-sector spectral statement.
+
+**Status:** OPEN HISTORICALLY (2026-08-09; historical heading registered
+2026-08-12). This remains an active obligation in the common-`alpha` to
+broken-sector-GNS chain. The fixed-lattice source cusp and locally normal
+time-zero tangents of EXP-000790 do not supply a common generator, and the
+finite-volume orbit-smear/symmetric ground evidence of EXP-000789 is not a
+selected broken-phase algebraic ground state.
+
+### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-CONNECTED-SUSCEPTIBILITY-AND-GNS-POINCARE-GATE**
+
+**Statement:** In each selected broken algebraic ground sector, prove kernel
+simplicity and a connected susceptibility/coercive Poincare estimate strong
+enough to establish a positive implementing-Hamiltonian gap, or exhibit a
+state-vector obstruction.
+
+**Status:** OPEN HISTORICALLY (2026-08-09; historical heading registered
+2026-08-12). The historical obligation is now split exactly: the criterion-only
+child `PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE` is
+CLOSED, while the actual model-dependent child
+`PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY` remains OPEN. The
+EXP-000790 block-variance inequality is a necessary falsifier/criterion, not a
+proof of kernel simplicity or positive Q3LOCK sector coercivity.
+
+### **PA-CP1-ST8-Q3LOCK-A-TO-ZERO-ENLARGED-COUNTERTERM-REGULAR-CONTINUUM**
+
+**Statement:** Construct an `a -> 0` regulator trajectory in the full
+symmetry-allowed Q3LOCK counterterm family, prove uniform coercivity,
+reflection-positive tightness and full-sequence identification, and
+reconstruct the limiting regular continuum state.
+
+**Status:** OPEN (2026-08-09; historical heading registered 2026-08-12).
+EXP-000790 classifies exactly the 19-dimensional invariant quartic and
+four-dimensional invariant quadratic bases. It proves no counterterm flow,
+uniform continuum estimates, regulator removal, limiting OS state or
+non-Gaussian continuum theorem.
+
+### **PA-CP1-ST8-Q3LOCK-PHYSICAL-EMPTY-SPACE-REFERENCE**
+
+**Statement:** Preregister a normalized non-equilibrium preparation or
+constrained branch representing the physical empty reference, compare it with
+the candidate through one same-Hamiltonian finite-regulator contract, and prove
+a positive limiting specific gap before asserting a below-empty sign.
+
+**Status:** OPEN (2026-08-09; historical heading registered 2026-08-12).
+EXP-000790 closes only the finite-volume finite-regulator same-Hamiltonian
+comparison contract. It supplies neither a physical empty branch nor a
+positive specific relative gap; another equilibrium KMS/ground phase and the
+ordered symmetric ground are not strict physical-empty comparators.
+
+### **PA-PRE-A-C0-N1-N5-VALIDATION**
+
+**Statement:** Compose the candidate-independent C0 and N1--N5 obligations
+across every admitted microscopic candidate using preregistered bridge
+observables, physical-reference and emergence tests, and compare the resulting
+complete chains under the common Pre-A evidence rules.
+
+**Status:** OPEN (historical cross-candidate composition heading registered
+2026-08-12). This is not the V1 blind prospective-validation gate and cannot be
+closed by one candidate's fixed-lattice theorem, relative ranking, or
+retrospective fit. No admitted route yet supplies the complete C0/N1--N5
+composition through physical reference, continuum, and emergent-observable
+identification.
+
 ### **PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE**
 
 **Statement:** Starting from the exact fixed-lattice quartic oscillator
@@ -628,6 +713,58 @@ backbone real-time product/energy-tail theorem and the fixed-beta fifth-energy
 moment plus modular-cutoff locality theorem below.
 Common `alpha`, KMS identification, algebraic ground-state promotion, GNS gap,
 continuum removal, physical empty space, C6, CP1 and Pre-A remain open.
+
+### **PA-CP1-ST8-Q3LOCK-PHASE-INDEPENDENT-LOCAL-POLYNOMIAL-CCR-DERIVATION**
+
+**Statement:** On the finite-support polynomial CCR star-algebra, show that
+the exact local commutator derivation is independent of the containing finite
+volume and fixed before either sign phase is selected.
+
+**Status:** CLOSED IN THE FINITE-SUPPORT POLYNOMIAL CCR ALGEBRA SCOPE ONLY
+(2026-08-10; historical heading registered 2026-08-12). EXP-000792 proves the
+algebraic local derivation consistency. It does not prove closability on a
+C-star carrier, exponentiation, thermodynamic Cauchy convergence, common
+real-time dynamics or KMS identification.
+
+### **PA-CP1-ST8-Q3LOCK-SOURCE-UNIFORM-WEIGHTED-FIRST-LOCAL-ENERGY-CONE**
+
+**Statement:** For compact sources in the declared uniform range, construct a
+positive finite-volume local-energy decomposition, derive the exact bond
+current and prove the first exponentially weighted energy-cone propagation
+bound uniformly in phase and containing volume.
+
+**Status:** CLOSED IN THE FINITE-VOLUME QUADRATIC-FORM FIRST-ENERGY-CONE SCOPE
+ONLY (2026-08-10; historical heading registered 2026-08-12). EXP-000792 proves
+the current `J_xy=(c/(4 chi)){p_x+p_y,q_x-q_y}` and the sharp first weighted
+form bound. Higher graph moments, cutoff removal, thermodynamic dynamics and
+common-`alpha` KMS identification do not follow.
+
+### **PA-CP1-ST8-Q3LOCK-FOURIER-CUTOFF-UNIFORM-OPERATOR-NORM-LR-VIA-GLOBAL-SECOND-MOMENT**
+
+**Statement:** Obtain a cutoff-uniform operator-norm Lieb--Robinson velocity
+for the exact quartic by applying the bounded-Weyl theorem to
+Fourier--Stieltjes cutoffs agreeing with the Q3LOCK potential on expanding
+balls.
+
+**Status:** REFUTED IN THIS GLOBAL-SECOND-MOMENT BOUNDED-WEYL ROUTE ONLY
+(2026-08-10; historical heading registered 2026-08-12). EXP-000792 and
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-FOURIER-SECOND-MOMENT-UNIFORM-NORM-LR-CUTOFF`
+prove `kappa_R>=3(g+3 lambda)R^2`, so that theorem's speed diverges at least
+quadratically. This does not refute exact common dynamics or an energy-weighted
+locality theorem.
+
+### **PA-CP1-ST8-Q3LOCK-BASIC-RESOLVENT-UNWEIGHTED-POLYNOMIAL-GENERATOR-CORE**
+
+**Statement:** Use ordinary unweighted basic resolvents as a cutoff-uniform
+bounded generator core for the exact Q3LOCK cubic force.
+
+**Status:** REFUTED IN THIS ORDINARY UNWEIGHTED BASIC-RESOLVENT ROUTE ONLY
+(2026-08-10; historical heading registered 2026-08-12). The first EXP-000792
+inference was incomplete and is corrected by EXP-000793. Fixed-norm
+Weyl-displaced test vectors prove the exact sandwich has no bounded extension
+and yield the `Omega(R^3)` cutoff lower bound registered as
+`NG-2026-08-10-PRE-A-ST8-Q3LOCK-BASIC-RESOLVENT-CUBIC-FORCE-UNWEIGHTED-CORE`.
+An energy-damped core or different invariance proof remains open.
 
 ### **PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE**
 
@@ -1265,13 +1402,41 @@ resolvent-compatible Ritz projections,
 `(1/2)P[G,V_od]P=-sum_(e,f)T_e^*RT_f`, matching the v2.3 second-order
 onsite-resolvent coefficient.  No third-order coefficient, convergent BCH or
 Lie--Schwinger series, all-order connected QPS interaction, phase intertwiner
-or oscillator GNS gap follows.
+or oscillator GNS gap followed from this v2.4 child; the distinct fixed-
+finite-volume/Ritz third-order child is registered next.
+
+### **PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-THIRD-ORDER-LINKED-RANK-TWO-LOW-BLOCK-COEFFICIENT**
+
+**Statement:** For the exact rank-two low band at one fixed finite spatial
+volume `Lambda` and one fixed finite parity-preserving onsite Ritz cutoff `M`,
+compute the complete third-order low block after the first two sequential
+homological rotations, prove that every nonzero ordered edge triple has
+connected union, and give an explicit finite-cutoff QPS bound.
+
+**Status:** CLOSED IN FIXED FINITE SPATIAL VOLUME AND FIXED FINITE PARITY-
+PRESERVING ONSITE RITZ SCOPE ONLY (2026-08-12). EXP-000825 / R-167 v2.5
+writes `V_d=A direct-sum C`, `T=QVP`, `R=(QKQ)^(-1)`, `D=RT`,
+`G=D-D^*`, `Z=R(DA-CD)` and `G_2=Z-Z^*`. The sequential rotations
+`exp(lambda G)` and `exp(lambda^2G_2)` have complete third-order low block
+`Theta^(3)=T^*RCRT-(1/2){A,T^*R^2T}`. For ordered edges `(e,f,g)`, a
+retained spectator disconnected from the other two cancels exactly and the
+other disconnected unions vanish by the onsite high-support sectors; every
+nonzero union is connected, has at most four vertices and diameter at most
+three. With
+`rho_(M,Lambda)=sup_f||R^(1/2)C_fR^(1/2)||` and
+`a_(M,Lambda)=sup_f||A_f||`, a safe rooted count gives
+`||Theta^(3)||_a<=48z(2z-1)^2exp(3a)epsilon^2`
+`(rho_(M,Lambda)/Gamma+a_(M,Lambda)/Gamma^2)`.
+Neither constant is asserted uniform in `Lambda` or `M`. No spatial-volume or
+thermodynamic limit, third-order Ritz-tail `tau_M` estimate, unbounded
+coefficient, fourth-order term, convergent all-order transformation, phase
+intertwiner, exact oscillator two-phase QPS theorem or GNS gap follows.
 
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
 
-**Status:** OPEN (2026-08-12). EXP-000813 / R-167 v2.2 shows by an exact rank-two local projection fixture that one even and one odd local kernel vector plus local edge gap one do not imply a volume-uniform lattice gap: the one-particle sector is `L_G/2` and a torus gap is at most `1-cos(2 pi/L)`. EXP-000815 / R-167 v2.3 closes only a deterministic geometric-envelope-to-QPS conversion and the exact second-order onsite-resolvent connected coefficient with the declared Ritz/form cutoff contract. EXP-000818 / R-167 v2.4 adds the first parity-equivariant local homological generator, its sharp QPS/Ritz bound and exact second-order low-block match. A disconnected-spectator fixture shows that raw global scalar Feshbach resolvents need not preserve connectedness, and a harmonic Ritz fixture shows that ordinary bounded-operator Schrieffer--Wolff smallness need not be cutoff uniform at fixed `Gamma`. These results do not derive an all-order geometric envelope, sum the all-order transformation, control its remainder, transfer the oscillator phases, or construct a phasewise GNS intertwiner. The broader rank-two oscillator/QPS and broken-sector GNS-gap parents remain OPEN.
+**Status:** OPEN (2026-08-12). EXP-000813 / R-167 v2.2 shows by an exact rank-two local projection fixture that one even and one odd local kernel vector plus local edge gap one do not imply a volume-uniform lattice gap: the one-particle sector is `L_G/2` and a torus gap is at most `1-cos(2 pi/L)`. EXP-000815 / R-167 v2.3 closes only a deterministic geometric-envelope-to-QPS conversion and the exact second-order onsite-resolvent connected coefficient with the declared Ritz/form cutoff contract. EXP-000818 / R-167 v2.4 adds the first parity-equivariant local homological generator, its sharp QPS/Ritz bound and exact second-order low-block match. EXP-000825 / R-167 v2.5 adds the complete third-order low-block coefficient and connected ordered-triple QPS bound only at fixed finite `Lambda` and fixed finite `M`; its constants are not volume or cutoff uniform. A disconnected-spectator fixture shows that raw global scalar Feshbach resolvents need not preserve connectedness, and a harmonic Ritz fixture shows that ordinary bounded-operator Schrieffer--Wolff smallness need not be cutoff uniform at fixed `Gamma`. These results do not derive a fourth-order recursion or all-order geometric envelope, sum a uniform transformation, control its remainder or Ritz removal, transfer the oscillator phases, or construct a phasewise GNS intertwiner. The broader rank-two oscillator/QPS and broken-sector GNS-gap parents remain OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -1285,7 +1450,7 @@ both fixed-beta phase KMS quotient representations on one noncollapsing
 spatial oscillator algebra.
 
 **Status:** OPEN, WITH FIXED-TROTTER COMPATIBILITY, PURE-BOND TAIL INVARIANCE
-AND LOCAL-MEASURED-RENYI SUFFICIENCY CLOSED (2026-08-11). R-167 v1.7 supplies the finite-region
+AND LOCAL-MEASURED-RENYI SUFFICIENCY CLOSED (2026-08-12). R-167 v1.7 supplies the finite-region
 local-strict carrier and exact subflow control, but the current bounded-cutoff
 corridor pays `exp(C L^2)`. The exact Gibbs character entropy bound gives
 only an inverse-logarithmic tail. The registered entropy/finite-moment
@@ -1320,7 +1485,14 @@ The UHF
 counterfixture registered as
 `NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY`
 shows that forward local stabilization alone cannot supply those missing
-conclusions. This parent remains OPEN.
+conclusions. EXP-000825 additionally shows that the canonical one-site compact-
+cylinder split-bond action has a point-norm jump on every nonzero compact
+cylinder admitted by the multiplier algebra. The unitized compacts exclude
+that cylinder, and the multiplier algebra includes it without making the
+action point-norm C0. This is distinct from the prior raw momentum-resolvent
+obstruction and rejects only that carrier/action pair: it proves neither
+unsplit-dynamics failure nor common-alpha nonexistence. This parent remains
+OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -1494,9 +1666,13 @@ equivariant homological generator, proves its QPS/Ritz bound and recovers that
 second-order coefficient from its low-block commutator. The disconnected-
 spectator and harmonic-Ritz fixtures reject only automatic raw-global-
 Feshbach connectedness and cutoff-uniform ordinary bounded-operator smallness.
-No third-order term, convergent all-order transformation, connected remainder,
-phase intertwiner or two-phase oscillator QPS transfer is proved. This parent
-remains OPEN.
+EXP-000825 / R-167 v2.5 computes the complete third-order low block and proves
+connected ordered-triple support with a QPS bound only at fixed finite
+`Lambda` and fixed finite `M`. Its constants are not uniform in volume or
+cutoff. No fourth-order recursion, third-order Ritz-tail estimate, unbounded
+or convergent all-order transformation, connected remainder, phase
+intertwiner or two-phase oscillator QPS transfer is proved. This parent remains
+OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
