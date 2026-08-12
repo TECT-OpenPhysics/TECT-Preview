@@ -5,12 +5,14 @@
 
 Authorities: `negative-results/registry.md`.
 
-**344 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 273 · retraction: 5
+**346 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 275 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-second-order-disjoint-vanishing-automatic-all-order-global-feshbach-connectedness) | no_go | infer connectedness of the raw all-order global scalar Feshbach map from second-order disjoint-edge vanishing |
+| [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-ritz-cutoff-ordinary-bounded-operator-sw-smallness-uniformity) | no_go | infer cutoff-uniform ordinary operator-norm Schrieffer--Wolff smallness from finite Ritz boundedness |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-weighted-unitary-cutoff-automatic-arbitrary-context-automorphism-l2-upgrade) | no_go | promote static Gibbs weighted-unitary cutoff control automatically through every bounded observable context |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-uniform-quadratic-in-m-all-moment-bond-shear-graph-transport) | no_go | infer a universal quadratic or polynomial-in-order bound for every normalized bond-shear graph moment from abstract positive-energy structure |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-static-moments-and-low-graph-automatic-twentieth-history-moment) | no_go | infer the uniform two-orientation twentieth history moment from static exponential-coordinate and fixed energy moments plus low-rung graph control |
@@ -34,8 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-11-PRE-A-M2-ONE-Q-PHASON-AUTOMATIC-PHYSICAL-SUPERFLUID-DENSITY`](registry.md#ng-2026-08-11-pre-a-m2-one-q-phason-automatic-physical-superfluid-density) | no_go | promote one-Q auxiliary phason curvature or periodic secant to physical superfluid density |
 | [`NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE`](registry.md#ng-2026-08-11-pre-a-m2-lane-q-linear-source-automatic-physical-stiffness-response) | no_go | identify a physical helicity or stiffness response from the scalar Lane-Q linear source alone |
 | [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-ONSITE-QP-LIPSCHITZ-STABILITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-onsite-qp-lipschitz-stability) | no_go | propagate the ordinary bounded `q/p` commutator Lipschitz class through the exact quartic onsite flow |
-| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-UNWEIGHTED-MOVING-SITE-CUBIC-GRAPH-UNIFORMITY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-unweighted-moving-site-cubic-graph-uniformity) | no_go | delete the centered spatial weight from the cubic graph multiplier while keeping a support-location-uniform constant |
-| [`NG-2026-08-10-PRE-A-ST8-Q3LOCK-SYMMETRIC-SANDWICH-ONLY-THERMODYNAMIC-CAUCHY`](registry.md#ng-2026-08-10-pre-a-st8-q3lock-symmetric-sandwich-only-thermodynamic-cauchy) | no_go | infer a thermodynamic automorphism from convergence only in a symmetric energy sandwich |
 
 Search without loading the full registry:
 

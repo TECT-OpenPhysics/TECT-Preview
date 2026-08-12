@@ -690,7 +690,7 @@ D — Gauge/matter topology.
 
 ---
 
-## Current priority view (refreshed 2026-08-11)
+## Current priority view (refreshed 2026-08-12)
 
 The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
@@ -1106,6 +1106,38 @@ with bound `[2z exp(a)+9z(z-1)exp(2a)]epsilon^2/Gamma` and declared Ritz/form
 cutoff convergence. These are scoped children, not common alpha or an all-
 order oscillator transfer.
 
+EXP-000817 is an authority-linkage correction to EXP-000790, not a new
+theorem. It registers the four already-proved historical headings for
+phasewise periodic abstract OS/KMS reconstruction, the fixed-lattice zero-
+temperature source cusp and time-zero tangent selection, the full
+`Aut(Q3) x Z2` one-loop invariant counterterm-basis classification, and the
+finite-volume finite-regulator same-Hamiltonian empty-reference comparison
+contract. It also makes the positive-`lambda` parent scope explicit: phase
+closure holds only in the displayed EXP-000782 sufficient regime, while the
+EXP-000790 OS/KMS systems are phasewise abstract reconstructions, not one
+common Hamiltonian-derived `alpha`.
+
+EXP-000818 advances R-167 additively to v2.4 without closing a parent. For one
+fixed finite faithful Gibbs standard representation at a time, the two v2.3
+Hilbert--Schmidt legs imply implementer strong-star and bounded-observable
+point-strong-star convergence; the fixed-member rate is
+`54|c|T sqrt(M20)R0^3L^-8/hbar` per leg. The moving-family `R^(-1/5)` corridor
+is not a common-representation rate. A separate deterministic theorem turns
+bidirectional all-shape point-norm Cauchy control on one common dense unital
+star algebra into a unique C0 automorphism group, but supplies no actual Q3
+Cauchy estimate, generator identity or KMS quotient.
+
+On the rank-two branch, the first local parity-equivariant homological
+generator satisfies `||G||_a<=2z exp(a)epsilon/Gamma`, has a compatible Ritz-
+tail bound, and its second-order low block exactly reproduces the v2.3 onsite-
+resolvent coefficient. A disconnected low spectator produces a raw scalar-
+Feshbach mixed coefficient `-1/800`, so second-order disjoint vanishing does
+not automatically imply all-order global connectedness. Harmonic Ritz cutoffs
+give ordinary smallness ratio at least `(M+1)/8` at fixed `Gamma=2`, so finite-
+cutoff boundedness does not supply cutoff-uniform ordinary operator-norm
+Schrieffer--Wolff smallness. Linked-cluster, relative-form, graph-norm and QPS
+routes remain open.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or
@@ -1121,12 +1153,18 @@ commitment, admitted microscopic observable map/nonempty prediction, and
 cryptographic remote-verification gates. No target, freeze record, tag,
 prediction, score or candidate selection is created. The combined R-167 v2.2 /
 R-168 v1.3 synthesis remains historical. Per the PDF-efficiency protocol,
-EXP-000815 and EXP-000816 issued no per-lemma or intermediate PDF at the
-formal-authority stage. After the proof, formal, independent, integrated,
+EXP-000815, EXP-000816, EXP-000817 and EXP-000818 issued no per-lemma or
+intermediate PDF at their formal-authority stages. After the v2.3 proof,
+formal, independent, integrated,
 generated-surface, source-form, freshness, dual-extraction, strict-release and
 render-review gates passed, one R-167-only v2.3 gate-level synthesis source/PDF
-pair was issued. R-168 v1.3 remains historical and was not reissued. Physical
-Sector A and Pre-A remain open.
+pair was issued. After the v2.4 proof, formal, independent, integrated,
+generated-surface, source-form, freshness, dual-extraction, strict-release and
+render-review gates passed, one R-167-only v2.4 gate-level synthesis source/PDF
+pair was issued; R-168 v1.3 remains historical and is not reissued. Actual
+all-shape Q3 common `alpha`, generator/KMS identification,
+all-order connected rank-two oscillator transfer, broken-sector GNS gap,
+physical Sector A and Pre-A remain open.
 
 The fixed-beta envelope is not yet the thermodynamic Hamiltonian `alpha`.
 Distinct algebraic ground states now exist on the separate universal

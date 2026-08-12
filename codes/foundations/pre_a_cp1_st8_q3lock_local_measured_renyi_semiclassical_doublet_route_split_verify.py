@@ -1,25 +1,25 @@
 #!/usr/bin/env python3
-"""Integrated verifier for EXP-000815 / R-167 v2.3.
+"""Integrated verifier for EXP-000818 / R-167 v2.4.
 
 The primary and non-importing independent engines are each executed twice in
 fresh child processes. Invocation-only metadata is normalized, component
 payloads must be deterministic, and stored results must equal fresh payloads.
-The exact proof-first 289/289 and 169/169 contracts are accepted before formal
-authority; the authority-complete contracts are 295/295 and 175/175.
+The authority-complete component contracts are exactly 343/343 and 198/198.
 Under --staged, absent formal/generated authorities and stored runs are
 reported as MISSING while contradictions remain hard failures.
 
-Every v1.9--v2.2 reduction and all four issued combined checkpoint PDFs remain
-strictly validated historical evidence. New exact cross-engine checks bind the
-registered-periodic split-implementer Gibbs-L2 rate, conditional connected
-geometric QPS envelope and cutoff domination, actual second-order
-onsite-resolvent coefficient and Ritz-tail bound, and the forward-local UHF
-surjectivity obstruction.
+Every v1.9--v2.3 reduction and every issued checkpoint PDF remains strictly
+validated historical evidence. New exact cross-engine checks bind the fixed-
+finite faithful-standard-form strong-star upgrade, conditional bidirectional
+all-shape Cauchy-to-C0 completion arithmetic, first local homological generator
+and Ritz/QPS bounds, and the two exact automatic-promotion obstructions.
 
 The issued R-167 v2_2_checkpoint_synthesis / R-168
 v1_3_checkpoint_synthesis pair remains historical. The local-only R-167
-v2_3_checkpoint_synthesis is accepted only as the exact three-field deferred
-record or one exact eight-field issued checkpoint; R-168 v1.3 is not reissued.
+v2_3_checkpoint_synthesis is retained as issued historical evidence. The new
+local-only v2_4_checkpoint_synthesis is lifecycle-aware: it is the exact
+three-field deferred record before issuance or the exact eight-field issued
+record after proof validation. R-168 v1.3 is historical and is not reissued.
 This script creates no note, PDF, formal authority, or stored component result.
 """
 
@@ -39,7 +39,7 @@ from pathlib import Path
 from typing import Any, Iterable, Mapping
 
 
-__version__ = "2.3.0"
+__version__ = "2.4.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = (
@@ -52,10 +52,10 @@ RESULT_ID = (
     "COMMON-ALPHA-CAUCHY-GATE-SPLIT"
 )
 RESULT_NUMBER = "R-167"
-PRIOR_RESULT_VERSION = "v2.2"
-RESULT_VERSION = "v2.3"
-PRIOR_EXPLORATION_ID = "EXP-000813"
-EXPLORATION_ID = "EXP-000815"
+PRIOR_RESULT_VERSION = "v2.3"
+RESULT_VERSION = "v2.4"
+PRIOR_EXPLORATION_ID = "EXP-000815"
+EXPLORATION_ID = "EXP-000818"
 TASK_ID = "T-054"
 CLAIM_ID = "C6-SPACETIME-SIGNATURE"
 CANDIDATE_ID = (
@@ -93,12 +93,20 @@ V2_2_CLOSED_SUBGATES = (
     "PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-"
     "AND-HARD-CUTOFF-CORRIDOR",
 )
-NEW_CLOSED_SUBGATES = (
+V2_3_CLOSED_SUBGATES = (
     "PA-CP1-ST8-Q3LOCK-REGISTERED-PERIODIC-SPLIT-IMPLEMENTER-TWO-SIDED-"
     "GIBBS-L2-HARD-CUTOFF-REMOVAL",
     "PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-"
     "ENVELOPE",
     "PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-"
+    "AND-RITZ-CUTOFF",
+)
+NEW_CLOSED_SUBGATES = (
+    "PA-CP1-ST8-Q3LOCK-FIXED-FINITE-FAITHFUL-GIBBS-STANDARD-FORM-POINT-"
+    "STRONGSTAR-OBSERVABLE-CUTOFF-REMOVAL",
+    "PA-CP1-ST8-Q3LOCK-CONDITIONAL-BIDIRECTIONAL-ALL-SHAPE-POINT-NORM-"
+    "CAUCHY-C0-AUTOMORPHISM-COMPLETION",
+    "PA-CP1-ST8-Q3LOCK-FIRST-LOCAL-HOMOLOGICAL-RANK-TWO-GENERATOR-QPS-NORM-"
     "AND-RITZ-CUTOFF",
 )
 PRIOR_CLOSED_SUBGATES = (
@@ -109,6 +117,7 @@ PRIOR_CLOSED_SUBGATES = (
 CLOSED_SUBGATES = (
     *PRIOR_CLOSED_SUBGATES,
     *V2_2_CLOSED_SUBGATES,
+    *V2_3_CLOSED_SUBGATES,
     *NEW_CLOSED_SUBGATES,
 )
 V2_1_OPEN_INPUTS = (
@@ -150,15 +159,22 @@ V2_2_NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-"
     "DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP",
 )
-NEW_NEGATIVE_IDS = (
+V2_3_NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-"
     "AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY",
+)
+NEW_NEGATIVE_IDS = (
+    "NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-"
+    "AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS",
+    "NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-"
+    "SW-SMALLNESS-UNIFORMITY",
 )
 PRIOR_NEGATIVE_IDS = (
     *V1_9_NEGATIVE_IDS,
     *V2_0_NEGATIVE_IDS,
     *V2_1_NEGATIVE_IDS,
     *V2_2_NEGATIVE_IDS,
+    *V2_3_NEGATIVE_IDS,
 )
 NEGATIVE_IDS = (*PRIOR_NEGATIVE_IDS, *NEW_NEGATIVE_IDS)
 REUSED_NEGATIVE_IDS = (
@@ -192,15 +208,15 @@ MANIFEST = REPO / f"strategy/{SLUG}-manifest.json"
 CERTIFICATE = REPO / f"strategy/{SLUG}-certificate-260811.md"
 PRIMARY_STORED = REPO / (
     "claims/C6-SPACETIME-SIGNATURE/runs/"
-    f"2026-08-11-primary-{SLUG}/result.json"
+    f"2026-08-12-primary-{SLUG}-v2-4/result.json"
 )
 INDEPENDENT_STORED = REPO / (
     "claims/C6-SPACETIME-SIGNATURE/runs/"
-    f"2026-08-11-independent-{SLUG}/result.json"
+    f"2026-08-12-independent-{SLUG}-v2-4/result.json"
 )
 DEFAULT_OUTPUT = REPO / (
     "claims/C6-SPACETIME-SIGNATURE/runs/"
-    f"2026-08-11-integrated-{SLUG}/result.json"
+    f"2026-08-12-integrated-{SLUG}-v2-4/result.json"
 )
 PROSPECTIVE_MANIFEST = (
     REPO / "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json"
@@ -326,6 +342,7 @@ R168_V1_2_CHECKPOINT_FIELD = "v1_2_checkpoint_synthesis"
 FUTURE_CHECKPOINT_FIELD = "v2_2_checkpoint_synthesis"
 R168_FUTURE_CHECKPOINT_FIELD = "v1_3_checkpoint_synthesis"
 V2_3_CHECKPOINT_FIELD = "v2_3_checkpoint_synthesis"
+V2_4_CHECKPOINT_FIELD = "v2_4_checkpoint_synthesis"
 M2_COMPONENT_COUNT_TOKENS: tuple[str, ...] = ("340/340", "361/361")
 NEXT_CHECKPOINT_REQUIRED_TOKENS = (
     "R-167 v2.1",
@@ -406,7 +423,7 @@ V2_3_ISSUED_WORKFLOW = (
     "remains historical and is not reissued."
 )
 V2_3_CHECKPOINT_REQUIRED_TOKENS = (
-    "R-167 v2.3", EXPLORATION_ID, *NEW_CLOSED_SUBGATES, *NEW_NEGATIVE_IDS,
+    "R-167 v2.3", "EXP-000815", *V2_3_CLOSED_SUBGATES, *V2_3_NEGATIVE_IDS,
     "ed9a57a81e484d99d957de01d54ec9e078447e332fbff5b909225740efd08a40",
     "c5cdffa7d01637024630ca98f55634793fa2b98e6dcdff6157c5ba3858ce5bb5",
     "295/295", "175/175", "304/304",
@@ -415,6 +432,57 @@ V2_3_CHECKPOINT_REQUIRED_TOKENS = (
     SCRIPT.relative_to(REPO).as_posix(),
     "R-168 v1.3", "historical", "not reissued",
     "physical Sector A", "Pre-A",
+)
+V2_4_DEFERRED_CHECKPOINT = {
+    "status": "DEFERRED",
+    "pdf_issued": False,
+    "workflow": (
+        "No intermediate PDF is issued for R-167 v2.4. Preserve every v2.3 "
+        "and earlier source/PDF pair as historical evidence; issue one R-167-only "
+        "v2.4 gate-level synthesis after the primary, non-importing independent, "
+        "integrated, formal-authority, generated-surface, source-form, freshness, "
+        "dual-extraction, strict-release, and visual-review gates pass. R-168 v1.3 "
+        "remains historical and is not reissued."
+    ),
+}
+V2_4_ISSUED_FIELDS = {
+    "status", "source", "pdf", "source_sha256", "pdf_sha256", "pages",
+    "workflow", "visual_qa",
+}
+V2_4_ISSUED_STATUS = "ISSUED AS ONE GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION"
+V2_4_ISSUED_WORKFLOW = (
+    "No per-lemma or intermediate PDF was issued. One R-167 v2.4 "
+    "gate-level synthesis source/PDF pair was issued only after the "
+    "primary, non-importing independent, integrated, formal-authority, "
+    "generated-surface, source-form, freshness, dual-extraction, "
+    "strict-release, and visual-review checks passed. R-168 v1.3 "
+    "remains historical and is not reissued."
+)
+V2_4_CHECKPOINT_REQUIRED_TOKENS = (
+    "R-167 v2.4",
+    EXPLORATION_ID,
+    *NEW_CLOSED_SUBGATES,
+    *NEW_NEGATIVE_IDS,
+    "62298845ace416840c85698d5aa6016099a1b532c1de9c3f6e88acd15912ad37",
+    "9d5f1d0bc2032841632361099a238fe9958e31c06d7bb13d6c6be33518c75a80",
+    "343/343",
+    "198/198",
+    "341/341",
+    PRIMARY.relative_to(REPO).as_posix(),
+    INDEPENDENT.relative_to(REPO).as_posix(),
+    SCRIPT.relative_to(REPO).as_posix(),
+    "fixed finite faithful",
+    "point-strong-star",
+    "bidirectional all-shape",
+    "C0 automorphism",
+    "homological generator",
+    "-1/800",
+    "(M+1)/8",
+    "R-168 v1.3",
+    "historical",
+    "not reissued",
+    "physical Sector A",
+    "Pre-A",
 )
 EXPECTED_V2_3_FIXTURE = {
     "implementer": {
@@ -451,17 +519,68 @@ EXPECTED_V2_3_FIXTURE = {
         "limit_surjective": False,
     },
 }
+EXPECTED_V2_4_FIXTURE = {
+    "standard_form": {
+        "R0": 32,
+        "L_4_per_leg": "27",
+        "L_4_two_leg": "27*sqrt(2)",
+        "L_8_per_leg": "27/256",
+        "L_8_two_leg": "27*sqrt(2)/256",
+        "rotation_n_3_leg_squared": "2/5",
+        "rotation_n_7_leg_squared": "2/25",
+        "rotation_n_3_observable_squared": "36/25",
+        "rotation_n_7_observable_squared": "196/625",
+    },
+    "c0_completion": {
+        "n": 10,
+        "m": 20,
+        "T": 1,
+        "generator_difference": "1/20",
+        "positive_cauchy_bound": "1/10",
+        "negative_cauchy_bound": "1/10",
+        "limit_error_bound_at_n": "1/5",
+    },
+    "first_generator": {
+        "z": 6,
+        "exp_a": 2,
+        "epsilon": "1/100",
+        "Gamma": 2,
+        "tau_M": "1/1000",
+        "edge_norm_bound": "1/200",
+        "qps_bound": "3/25",
+        "edge_cutoff_bound": "1/2000",
+        "qps_cutoff_bound": "3/250",
+        "second_order_scalar": "-1/20000",
+    },
+    "spectator_feshbach": {
+        "Gamma": 2,
+        "E": 0,
+        "epsilon": "1/10",
+        "spectator_energies": [0, 1],
+        "coupling_weights_squared": [1, 4],
+        "resolvent_diagonal": ["1/2", "1/3"],
+        "self_energy_mixed_ZZ": "-1/800",
+        "feshbach_mixed_ZZ": "1/800",
+    },
+    "ritz_norm_hostile": {
+        "c": "1/4",
+        "Gamma": 2,
+        "M_values": [3, 15],
+        "bond_expectations": [4, 16],
+        "smallness_lower_bounds": ["1/2", "2"],
+    },
+}
 
 PRIMARY_SCHEMA = f"tect/{SLUG}-primary-result/1.0"
 INDEPENDENT_SCHEMA = f"tect/{SLUG}-independent-result/1.0"
 INTEGRATED_SCHEMA = f"tect/{SLUG}-integrated-result/1.0"
-PRIMARY_PROOF_FIRST_ASSERTIONS = 289
-PRIMARY_FORMAL_ASSERTIONS = 295
-INDEPENDENT_PROOF_FIRST_ASSERTIONS = 169
-INDEPENDENT_FORMAL_ASSERTIONS = 175
+PRIMARY_PROOF_FIRST_ASSERTIONS = 337
+PRIMARY_FORMAL_ASSERTIONS = 343
+INDEPENDENT_PROOF_FIRST_ASSERTIONS = 192
+INDEPENDENT_FORMAL_ASSERTIONS = 198
 EXPECTED_COMPONENT_SCRIPT_SHA256 = {
-    "primary": "ed9a57a81e484d99d957de01d54ec9e078447e332fbff5b909225740efd08a40",
-    "independent": "c5cdffa7d01637024630ca98f55634793fa2b98e6dcdff6157c5ba3858ce5bb5",
+    "primary": "62298845ace416840c85698d5aa6016099a1b532c1de9c3f6e88acd15912ad37",
+    "independent": "9d5f1d0bc2032841632361099a238fe9958e31c06d7bb13d6c6be33518c75a80",
 }
 
 
@@ -899,7 +1018,7 @@ def validate_independence(audit: Audit) -> None:
         if isinstance(node, ast.Constant) and isinstance(node.value, str)
     ]
     forbidden_fragments = (
-        f"2026-08-11-primary-{SLUG}",
+        f"2026-08-12-primary-{SLUG}-v2-4",
         PRIMARY_STORED.relative_to(REPO).as_posix(),
     )
     consumed = [
@@ -1178,6 +1297,68 @@ def checkpoint_lifecycle_diagnostics(
         and diagnostics["pdfplumber_pages"] == pages
         and diagnostics["pdfplumber_nonempty_pages"] == pages
         and diagnostics["pdfplumber_missing_tokens"] == []
+    )
+    return diagnostics
+
+
+def v2_4_checkpoint_lifecycle_diagnostics(
+    synthesis: Mapping[str, Any],
+) -> dict[str, Any]:
+    """Validate the local R-167-only v2.4 issued checkpoint exactly."""
+
+    diagnostics = checkpoint_lifecycle_diagnostics(
+        synthesis,
+        other_field=None,
+        required_tokens=V2_4_CHECKPOINT_REQUIRED_TOKENS,
+        workflow_tokens=(
+            "No per-lemma or intermediate PDF was issued",
+            "R-167 v2.4",
+            "primary",
+            "non-importing independent",
+            "integrated",
+            "formal-authority",
+            "generated-surface",
+            "source-form",
+            "freshness",
+            "dual-extraction",
+            "strict-release",
+            "visual-review",
+            "R-168 v1.3",
+            "historical",
+            "not reissued",
+        ),
+    )
+    pages = synthesis.get("pages")
+    expected_visual_qa = (
+        f"All {pages} rendered pages were reviewed at readable resolution "
+        "with zero clipping, overlap, broken equations, unreadable identifiers, "
+        "black glyphs, or malformed page transitions; pypdf and pdfplumber each "
+        f"extracted {pages}/{pages} nonempty pages; the build reported "
+        "OVERFULL-HBOX 0."
+        if isinstance(pages, int) and not isinstance(pages, bool) and pages > 0
+        else None
+    )
+    diagnostics["status_exact"] = synthesis.get("status") == V2_4_ISSUED_STATUS
+    diagnostics["workflow_exact"] = (
+        synthesis.get("workflow") == V2_4_ISSUED_WORKFLOW
+    )
+    diagnostics["visual_qa_exact"] = (
+        expected_visual_qa is not None
+        and synthesis.get("visual_qa") == expected_visual_qa
+    )
+    diagnostics["expected_visual_qa"] = expected_visual_qa
+    diagnostics["r168_historical_not_reissued"] = (
+        diagnostics["workflow_exact"]
+        and text_has(synthesis.get("workflow", ""), "R-168 v1.3")
+        and text_has(synthesis.get("workflow", ""), "historical")
+        and text_has(synthesis.get("workflow", ""), "not reissued")
+    )
+    diagnostics["valid"] = (
+        diagnostics["valid"]
+        and diagnostics["status_exact"]
+        and diagnostics["workflow_exact"]
+        and diagnostics["visual_qa_exact"]
+        and diagnostics["r168_historical_not_reissued"]
     )
     return diagnostics
 
@@ -1653,6 +1834,60 @@ def validate_checkpoint_synthesis(
     details["v2_3_metadata"] = v2_3_metadata
     details["v2_3_deferred_exact"] = v2_3_deferred_exact
     details["v2_3_valid"] = v2_3_lifecycle["valid"]
+    v2_4_metadata = as_mapping(manifest.get(V2_4_CHECKPOINT_FIELD))
+    v2_4_deferred_exact = dict(v2_4_metadata) == V2_4_DEFERRED_CHECKPOINT
+    v2_4_pages = v2_4_metadata.get("pages")
+    v2_4_expected_visual_qa = (
+        f"All {v2_4_pages} rendered pages were reviewed at readable resolution "
+        "with zero clipping, overlap, broken equations, unreadable identifiers, "
+        "black glyphs, or malformed page transitions; pypdf and pdfplumber each "
+        f"extracted {v2_4_pages}/{v2_4_pages} nonempty pages; the build reported "
+        "OVERFULL-HBOX 0."
+        if isinstance(v2_4_pages, int)
+        and not isinstance(v2_4_pages, bool)
+        and v2_4_pages > 0
+        else None
+    )
+    v2_4_issued_metadata_exact = (
+        set(v2_4_metadata) == V2_4_ISSUED_FIELDS
+        and v2_4_metadata.get("status") == V2_4_ISSUED_STATUS
+        and v2_4_metadata.get("workflow") == V2_4_ISSUED_WORKFLOW
+        and v2_4_expected_visual_qa is not None
+        and v2_4_metadata.get("visual_qa") == v2_4_expected_visual_qa
+    )
+    v2_4_lifecycle = v2_4_checkpoint_lifecycle_diagnostics(v2_4_metadata)
+    audit.check(
+        "local-only R-167 v2.4 checkpoint metadata contract",
+        v2_4_deferred_exact or v2_4_issued_metadata_exact,
+        v2_4_metadata,
+        "exact three-field deferred or exact-shape eight-field issued metadata",
+        "pdf_checkpoint_v2_4",
+    )
+    audit.pending(
+        "local-only R-167 v2.4 gate-level checkpoint lifecycle",
+        v2_4_issued_metadata_exact and v2_4_lifecycle["valid"],
+        {
+            "deferred_exact": v2_4_deferred_exact,
+            "issued_metadata_exact": v2_4_issued_metadata_exact,
+            "diagnostics": v2_4_lifecycle,
+        },
+        {
+            "local_only": True,
+            "issued": True,
+            "R168_v1_3": "historical and not reissued",
+            "confined_sibling_source_pdf": True,
+            "raw_hashes": True,
+            "positive_pages": True,
+            "fresh_dual_parser_artifact": True,
+            "required_tokens_in_source_and_both_extractors": True,
+            "visual_qa_exact": True,
+        },
+        "pdf_checkpoint_v2_4",
+    )
+    details["v2_4_metadata"] = v2_4_metadata
+    details["v2_4_deferred_exact"] = v2_4_deferred_exact
+    details["v2_4_issued_metadata_exact"] = v2_4_issued_metadata_exact
+    details["v2_4_valid"] = v2_4_lifecycle["valid"]
     return details
 
 
@@ -1683,17 +1918,16 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
             "manifest",
         )
     audit.check(
-        "manifest v2.3 three-child theorem-ready status with parents open",
+        "manifest v2.4 three-child theorem-ready status with parents open",
         all(
             text_has(manifest.get("status", ""), token)
             for token in (
-                "REGISTERED-PERIODIC", "SPLIT-IMPLEMENTER",
-                "CONNECTED GEOMETRIC-ENVELOPE", "SECOND-ORDER ONSITE-RESOLVENT",
-                "THEOREM-READY", "REMAIN OPEN",
+                "FIXED-FINITE", "STRONGSTAR", "BIDIRECTIONAL ALL-SHAPE",
+                "HOMOLOGICAL GENERATOR", "REMAIN OPEN",
             )
         ),
         manifest.get("status"),
-        "three v2.3 narrow children theorem-ready; all named parents open",
+        "three v2.4 narrow children resolved; all named parents open",
         "manifest",
     )
     sections = (
@@ -1733,6 +1967,13 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
         "forward_local_automorphism_limit_no_go",
         "v2_3_exact_fixture",
         V2_3_CHECKPOINT_FIELD,
+        "fixed_finite_faithful_gibbs_standard_form_point_strongstar_observable_cutoff_removal",
+        "conditional_bidirectional_all_shape_point_norm_cauchy_c0_automorphism_completion",
+        "first_local_homological_rank_two_generator_qps_norm_and_ritz_cutoff",
+        "global_scalar_feshbach_disconnected_spectator_no_go",
+        "ritz_cutoff_ordinary_bounded_operator_sw_smallness_no_go",
+        "v2_4_exact_fixture",
+        V2_4_CHECKPOINT_FIELD,
     )
     for section in sections:
         audit.check(
@@ -2017,7 +2258,7 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     uhf_v23 = as_mapping(manifest.get("forward_local_automorphism_limit_no_go"))
     audit.check(
         "manifest v2.3 split-implementer Gibbs-L2 theorem",
-        implementer_v23.get("gate_id") == NEW_CLOSED_SUBGATES[0]
+        implementer_v23.get("gate_id") == V2_3_CLOSED_SUBGATES[0]
         and all(text_has(implementer_v23, token) for token in (
             "||X||_(rho,#1)", "sqrt(2(C_plus+C_minus))", "2916 c^2 M20",
             "54 sqrt(2)", "R^(-1/5)", "arbitrary bounded observable",
@@ -2028,7 +2269,7 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     )
     audit.check(
         "manifest v2.3 connected geometric envelope and cutoff domination",
-        connected_v23.get("gate_id") == NEW_CLOSED_SUBGATES[1]
+        connected_v23.get("gate_id") == V2_3_CLOSED_SUBGATES[1]
         and all(text_has(connected_v23, token) for token in (
             "z^(2(n-1))", "A kappa/(1-r)^2", "A_M kappa/(1-r)^2",
             "Pointwise coefficient convergence", "conditional",
@@ -2039,7 +2280,7 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     )
     audit.check(
         "manifest v2.3 second-order connected coefficient and Ritz tail",
-        second_v23.get("gate_id") == NEW_CLOSED_SUBGATES[2]
+        second_v23.get("gate_id") == V2_3_CLOSED_SUBGATES[2]
         and all(text_has(second_v23, token) for token in (
             "disjoint e and f vanishes", "3z(z-1)",
             "2z exp(a)+9z(z-1)exp(2a)", "O(N^-8)",
@@ -2051,34 +2292,124 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     )
     audit.check(
         "manifest v2.3 UHF no-go and exact fixture bundle",
-        uhf_v23.get("negative_id") == NEW_NEGATIVE_IDS[0]
+        uhf_v23.get("negative_id") == V2_3_NEGATIVE_IDS[0]
         and all(text_has(uhf_v23, token) for token in (
             "unilateral right shift", "proper endomorphism", "Z_N",
             "||Z_N-Z_M||=2", "does not reject a Q3 common alpha",
         ))
         and manifest.get("v2_3_exact_fixture") == EXPECTED_V2_3_FIXTURE,
         {"uhf": uhf_v23, "fixture": manifest.get("v2_3_exact_fixture")},
-        {"negative_id": NEW_NEGATIVE_IDS[0], "fixture": EXPECTED_V2_3_FIXTURE},
+        {"negative_id": V2_3_NEGATIVE_IDS[0], "fixture": EXPECTED_V2_3_FIXTURE},
         "manifest_v2_3_math",
+    )
+    standard_v24 = as_mapping(
+        manifest.get(
+            "fixed_finite_faithful_gibbs_standard_form_point_strongstar_observable_cutoff_removal"
+        )
+    )
+    c0_v24 = as_mapping(
+        manifest.get(
+            "conditional_bidirectional_all_shape_point_norm_cauchy_c0_automorphism_completion"
+        )
+    )
+    generator_v24 = as_mapping(
+        manifest.get("first_local_homological_rank_two_generator_qps_norm_and_ritz_cutoff")
+    )
+    spectator_v24 = as_mapping(
+        manifest.get("global_scalar_feshbach_disconnected_spectator_no_go")
+    )
+    ritz_v24 = as_mapping(
+        manifest.get("ritz_cutoff_ordinary_bounded_operator_sw_smallness_no_go")
+    )
+    audit.check(
+        "manifest v2.4 fixed-faithful-standard-form strong-star theorem",
+        standard_v24.get("gate_id") == NEW_CLOSED_SUBGATES[0]
+        and all(text_has(standard_v24, token) for token in (
+            "xi B(H) is dense", "strong-star", "P_L^* A P_L",
+            "54 sqrt(2)", "R0^3 L^(-8)", "not a strong-star rate",
+        )),
+        standard_v24,
+        "fixed-member two-leg strong-star and bounded-observable conclusion only",
+        "manifest_v2_4_math",
+    )
+    audit.check(
+        "manifest v2.4 conditional bidirectional all-shape C0 completion",
+        c0_v24.get("gate_id") == NEW_CLOSED_SUBGATES[1]
+        and all(text_has(c0_v24, token) for token in (
+            "both alpha_lambda^t(A) and alpha_lambda^(-t)(A)",
+            "full directed set", "unique exhaustion-independent",
+            "C0 automorphism group", "no Q3 all-shape Cauchy estimate",
+            "no KMS-state convergence",
+        )),
+        c0_v24,
+        "conditional bidirectional Cauchy theorem with generator/KMS boundary",
+        "manifest_v2_4_math",
+    )
+    audit.check(
+        "manifest v2.4 first local homological generator and Ritz/QPS bounds",
+        generator_v24.get("gate_id") == NEW_CLOSED_SUBGATES[2]
+        and all(text_has(generator_v24, token) for token in (
+            "G_e=R T_e-T_e^* R", "[K,G]=V_od", "epsilon/Gamma",
+            "2 z exp(a) epsilon/Gamma", "tau_M/Gamma",
+            "-sum_(e,f)T_e^* R T_f", "no third-order coefficient",
+        )),
+        generator_v24,
+        "first parity-equivariant homological coefficient and second-order match only",
+        "manifest_v2_4_math",
+    )
+    audit.check(
+        "manifest v2.4 disconnected-spectator Feshbach boundary",
+        spectator_v24.get("negative_id") == NEW_NEGATIVE_IDS[0]
+        and all(text_has(spectator_v24, token) for token in (
+            "disconnected X plus Y", "-epsilon^2/8=-1/800",
+            "+1/800", "raw all-order global scalar Feshbach",
+            "does not reject a linked-cluster subtraction",
+        )),
+        spectator_v24,
+        "raw global scalar-Feshbach connectedness implication only",
+        "manifest_v2_4_boundary",
+    )
+    audit.check(
+        "manifest v2.4 Ritz ordinary-norm SW smallness boundary",
+        ritz_v24.get("negative_id") == NEW_NEGATIVE_IDS[1]
+        and all(text_has(ritz_v24, token) for token in (
+            "sqrt(M/2)", "M+1", "(M+1)/8", "M=3", "M=15",
+            "does not reject relative-form smallness",
+        )),
+        ritz_v24,
+        "fixed-Gamma ordinary bounded-operator norm route only",
+        "manifest_v2_4_boundary",
+    )
+    audit.check(
+        "manifest v2.4 exact fixture bundle",
+        manifest.get("v2_4_exact_fixture") == EXPECTED_V2_4_FIXTURE,
+        manifest.get("v2_4_exact_fixture"),
+        EXPECTED_V2_4_FIXTURE,
+        "manifest_v2_4_fixture",
     )
     require_tokens(
         manifest.get("no_overclaim", ""),
-        "manifest v2.3 no-overclaim boundary",
+        "manifest v2.4 no-overclaim boundary",
         (
-            "registered fixed-beta finite periodic Q3 family",
-            "finite subgraphs or periodic quotients of Z^3",
-            "maximum-degree-six hypothesis alone is insufficient",
+            "preserves every v2.3 and earlier conclusion",
+            "rho^(1/2) cyclic for the right commutant",
+            "qualitative implementer strong-star convergence",
+            "point-strong-star conjugation",
+            "R0^3 L^(-8)",
+            "changes the volume/state/representation",
+            "one common C-star algebra",
+            "all-shape locally-uniform-in-time point-norm Cauchy",
+            "identifies no local generator",
+            "proves no KMS statement",
+            "no third-order",
+            "convergent BCH/Lie-Schwinger series",
+            "not linked-cluster reorganization",
+            "not relative-form, graph-norm, or QPS routes",
             "all-exhaustion common alpha",
-            "connected rank-two unbounded block diagonalization",
+            "rank-two unbounded block diagonalization",
             "broken-sector oscillator temporal mass or GNS gap",
             "prospective blind validation",
             "physical Sector A", "Pre-A closure",
-            "not a Q3 locality, local coercivity, or gap no-go",
-            "two-sided Gibbs Hilbert-Schmidt",
-            "arbitrary-observable conjugation estimate",
-            "second order",
-            "source-uniform tail norm",
-            "forward local stabilization",
         ),
         audit,
         core=True,
@@ -2236,6 +2567,49 @@ def validate_certificate(audit: Audit) -> str | None:
         audit,
         core=True,
         group="certificate_v2_3",
+    )
+    require_tokens(
+        text,
+        "certificate additive v2.4 theorem and exact boundary",
+        (
+            EXPLORATION_ID, f"{RESULT_NUMBER} {RESULT_VERSION}",
+            *NEW_CLOSED_SUBGATES, *NEW_NEGATIVE_IDS,
+            "Fix one finite periodic Q3 volume",
+            "faithful Gibbs density",
+            r"54\sqrt2", r"R_0^3L^{-8}", "point-strong-star",
+            "both nets", "full directed set", "C0 automorphism group",
+            r"\|G_e\|=\|D_e\|", r"2ze^a{\epsilon\over\Gamma}",
+            r"{1\over2}P[G,V_{\rm od}]P",
+            "-1/800", "+1/800", r"{M+1\over8}",
+            "No v2.4 PDF is issued", "v2_4_checkpoint_synthesis",
+            "R-168 v1.3 remains historical and is not reissued",
+            "All remain OPEN",
+        ),
+        audit,
+        core=True,
+        group="certificate_v2_4",
+    )
+    audit.check(
+        "certificate v2.4 additive sections follow issued v2.3 history",
+        text_has(text, "## 47. R-167 v2.3-only gate-level checkpoint issuance")
+        and text_has(text, "## 48. R-167 v2.4 additive scope")
+        and text.index("## 47. R-167 v2.3-only gate-level checkpoint issuance")
+        < text.index("## 48. R-167 v2.4 additive scope"),
+        "section 47 before section 48",
+        "historical issuance precedes additive v2.4 proof-first sections",
+        "certificate_v2_4",
+    )
+    audit.check(
+        "certificate local-only v2.4 deferred lifecycle and parent firewall",
+        all(text_has(text, token) for token in (
+            "exactly DEFERRED", "pdf_issued: false", "future checkpoint",
+            "R-167-only", "actual all-shape Q3 Cauchy hypothesis",
+            "all-order connected rank-two oscillator elimination",
+            "broken-sector oscillator GNS gap", "physical Sector A or Pre-A",
+        )),
+        "v2.4 lifecycle and final boundary",
+        "deferred-only local checkpoint and all broad parents open",
+        "certificate_v2_4",
     )
     audit.check(
         "certificate LF-only",
@@ -3318,6 +3692,155 @@ def compare_exact_core(
         "cross_v2_3_UHF",
     )
 
+    pv24 = as_mapping(pd.get("fixture_K_v2_4_standard_form_C0_and_generator"))
+    iv24 = as_mapping(ider.get("v2_4_standard_form_C0_and_generator"))
+    pstandard = as_mapping(pv24.get("standard_form"))
+    istandard = as_mapping(iv24.get("standard_form"))
+    p_fixed_rows = [as_mapping(row) for row in as_list(pstandard.get("fixed_rows"))]
+    i_fixed_rows = [as_mapping(row) for row in as_list(istandard.get("fixed_rows"))]
+    audit.check(
+        "cross v2.4 fixed-member standard-form implementer rates",
+        [row.get("R0") for row in p_fixed_rows]
+        == [row.get("R0") for row in i_fixed_rows] == [32, 32]
+        and [row.get("L") for row in p_fixed_rows]
+        == [row.get("L") for row in i_fixed_rows] == [4, 8]
+        and [as_fraction(row.get("per_leg")) for row in p_fixed_rows]
+        == [as_fraction(row.get("per_leg")) for row in i_fixed_rows]
+        == [Fraction(27), Fraction(27, 256)]
+        and [as_fraction(row.get("two_leg_squared")) for row in i_fixed_rows]
+        == [Fraction(1458), Fraction(729, 32768)]
+        and pstandard.get("fixed_member_only") is True
+        and istandard.get("fixed_member_only") is True
+        and pstandard.get("moving_family_rate") is False
+        and istandard.get("moving_family_rate") is False,
+        {"primary": pstandard, "independent": istandard},
+        "R0=32; L=4,8; per-leg 27,27/256; moving-family rate false",
+        "cross_v2_4_standard_form",
+    )
+    p_rot = [as_mapping(row) for row in as_list(pstandard.get("rotation_rows"))]
+    i_rot = [as_mapping(row) for row in as_list(istandard.get("rotation_rows"))]
+    audit.check(
+        "cross v2.4 faithful two-leg rotation and observable probe",
+        [row.get("n") for row in p_rot] == [row.get("n") for row in i_rot] == [3, 7]
+        and [as_fraction(row.get("plus_squared")) for row in p_rot]
+        == [as_fraction(row.get("plus_squared")) for row in i_rot]
+        == [Fraction(2, 5), Fraction(2, 25)]
+        and [as_fraction(row.get("minus_squared")) for row in p_rot]
+        == [as_fraction(row.get("minus_squared")) for row in i_rot]
+        == [Fraction(2, 5), Fraction(2, 25)]
+        and [as_fraction(row.get("observable_squared")) for row in p_rot]
+        == [as_fraction(row.get("observable_squared")) for row in i_rot]
+        == [Fraction(36, 25), Fraction(196, 625)]
+        and all(row.get("core_bound_holds") is True for row in i_rot),
+        {"primary": p_rot, "independent": i_rot},
+        "n=3,7; both legs 2/5,2/25; observable 36/25,196/625",
+        "cross_v2_4_standard_form",
+    )
+    pc0 = as_mapping(pv24.get("C0_completion"))
+    ic0 = as_mapping(iv24.get("C0_completion"))
+    audit.check(
+        "cross v2.4 conditional bidirectional C0 arithmetic",
+        pc0.get("n") == ic0.get("n") == 10
+        and pc0.get("m") == ic0.get("m") == 20
+        and pc0.get("T") == ic0.get("T") == 1
+        and as_fraction(pc0.get("generator_difference"))
+        == as_fraction(ic0.get("generator_difference")) == Fraction(1, 20)
+        and as_fraction(pc0.get("positive_cauchy_bound"))
+        == as_fraction(ic0.get("positive_cauchy_bound")) == Fraction(1, 10)
+        and as_fraction(pc0.get("negative_cauchy_bound"))
+        == as_fraction(ic0.get("negative_cauchy_bound")) == Fraction(1, 10)
+        and as_fraction(pc0.get("limit_error_bound"))
+        == as_fraction(ic0.get("limit_error_bound")) == Fraction(1, 5),
+        {"primary": pc0, "independent": ic0},
+        "n=10,m=20,T=1; difference 1/20; both signs 1/10; limit 1/5",
+        "cross_v2_4_c0",
+    )
+    audit.check(
+        "cross v2.4 C0 theorem remains conditional and unidentified",
+        pc0.get("actual_Q3_Cauchy") is False
+        and ic0.get("actual_Q3_Cauchy") is False
+        and pc0.get("generator_identified") is False
+        and ic0.get("generator_identified") is False
+        and pc0.get("KMS_identified") is False
+        and ic0.get("KMS_identified") is False,
+        {"primary": pc0, "independent": ic0},
+        "actual Q3 Cauchy, generator and KMS identification all false",
+        "cross_v2_4_scope",
+    )
+    pgen = as_mapping(pv24.get("first_generator"))
+    igen = as_mapping(iv24.get("first_generator"))
+    audit.check(
+        "cross v2.4 sharp first-generator QPS and Ritz constants",
+        as_fraction(pgen.get("edge_norm_bound"))
+        == as_fraction(igen.get("edge_norm_bound")) == Fraction(1, 200)
+        and as_fraction(pgen.get("qps_bound"))
+        == as_fraction(igen.get("qps_bound")) == Fraction(3, 25)
+        and as_fraction(pgen.get("edge_cutoff_bound"))
+        == as_fraction(igen.get("edge_cutoff_bound")) == Fraction(1, 2000)
+        and as_fraction(pgen.get("qps_cutoff_bound"))
+        == as_fraction(igen.get("qps_cutoff_bound")) == Fraction(3, 250)
+        and as_fraction(pgen.get("second_order_scalar"))
+        == as_fraction(igen.get("second_order_scalar")) == Fraction(-1, 20000),
+        {"primary": pgen, "independent": igen},
+        "1/200, 3/25, 1/2000, 3/250, and -1/20000",
+        "cross_v2_4_generator",
+    )
+    audit.check(
+        "cross v2.4 first-generator parity and all-order boundary",
+        igen.get("parity_equivariant") is True
+        and [as_fraction(item) for item in as_list(igen.get("homological_amplitudes"))]
+        == [Fraction(1, 100), Fraction(1, 100)]
+        and pgen.get("third_order") is False
+        and igen.get("third_order") is False
+        and pgen.get("all_order") is False
+        and igen.get("all_order") is False,
+        {"primary": pgen, "independent": igen},
+        "parity and homological identity exact; third/all-order false",
+        "cross_v2_4_generator",
+    )
+    pspectator = as_mapping(pv24.get("spectator_Feshbach"))
+    ispectator = as_mapping(iv24.get("spectator_Feshbach"))
+    audit.check(
+        "cross v2.4 disconnected-spectator scalar-Feshbach coefficient",
+        as_fraction(pspectator.get("self_energy_mixed_ZZ"))
+        == as_fraction(ispectator.get("self_energy_mixed_ZZ")) == Fraction(-1, 800)
+        and as_fraction(pspectator.get("feshbach_mixed_ZZ"))
+        == as_fraction(ispectator.get("feshbach_mixed_ZZ")) == Fraction(1, 800)
+        and pspectator.get("raw_global_connectedness") is False
+        and ispectator.get("raw_global_connectedness") is False,
+        {"primary": pspectator, "independent": ispectator},
+        "self-energy -1/800, Feshbach +1/800, raw connectedness false",
+        "cross_v2_4_boundary",
+    )
+    pritz = as_mapping(pv24.get("Ritz_norm_hostile"))
+    iritz = as_mapping(iv24.get("Ritz_norm_hostile"))
+    p_ritz_rows = [as_mapping(row) for row in as_list(pritz.get("rows"))]
+    i_ritz_rows = [as_mapping(row) for row in as_list(iritz.get("rows"))]
+    audit.check(
+        "cross v2.4 harmonic-Ritz ordinary-norm lower bounds",
+        [row.get("M") for row in p_ritz_rows]
+        == [row.get("M") for row in i_ritz_rows] == [3, 15]
+        and [row.get("bond_expectation") for row in p_ritz_rows]
+        == [row.get("bond_expectation") for row in i_ritz_rows] == [4, 16]
+        and [as_fraction(row.get("smallness_lower")) for row in p_ritz_rows]
+        == [as_fraction(row.get("smallness_lower")) for row in i_ritz_rows]
+        == [Fraction(1, 2), Fraction(2)]
+        and pritz.get("ordinary_norm_uniform") is False
+        and iritz.get("ordinary_norm_uniform") is False
+        and pritz.get("relative_form_no_go") is False
+        and iritz.get("relative_form_no_go") is False,
+        {"primary": pritz, "independent": iritz},
+        "M=3,15; bond 4,16; lower 1/2,2; relative-form route unrefuted",
+        "cross_v2_4_boundary",
+    )
+    audit.check(
+        "cross v2.4 component fixture agrees with manifest fixture",
+        manifest.get("v2_4_exact_fixture") == EXPECTED_V2_4_FIXTURE,
+        manifest.get("v2_4_exact_fixture"),
+        EXPECTED_V2_4_FIXTURE,
+        "cross_v2_4_manifest",
+    )
+
     primary_scope = as_mapping(primary.get("scope"))
     primary_true = (
         "finite_Gibbs_full_Hamiltonian_cutoff_resummation",
@@ -3336,6 +3859,11 @@ def compare_exact_core(
         "registered_periodic_split_implementer_two_sided_Gibbs_L2_removal",
         "conditional_connected_geometric_QPS_envelope",
         "actual_second_order_connected_onsite_resolvent_QPS",
+        "fixed_finite_faithful_standard_form_implementer_strongstar",
+        "fixed_finite_point_strongstar_bounded_observable_conjugation",
+        "conditional_bidirectional_all_shape_C0_completion",
+        "first_local_homological_rank_two_generator_QPS_Ritz",
+        "first_generator_second_order_low_block_match",
     )
     primary_false = (
         "arbitrary_boundary_history_bound",
@@ -3349,6 +3877,11 @@ def compare_exact_core(
         "all_order_connected_oscillator_elimination",
         "forward_local_stabilization_implies_surjectivity",
         "inverse_automorphisms_point_norm_Cauchy",
+        "actual_Q3_all_shape_point_norm_Cauchy",
+        "local_generator_identified",
+        "KMS_quotient_identified",
+        "moving_family_R_minus_one_fifth_strongstar_rate",
+        "third_order_generator_coefficient",
     )
     independent_true = (
         "full_Hamiltonian_Gibbs_resummation_closed",
@@ -3366,6 +3899,11 @@ def compare_exact_core(
         "registered_periodic_split_implementer_two_sided_Gibbs_L2_closed",
         "conditional_connected_geometric_QPS_envelope_closed",
         "actual_second_order_connected_onsite_resolvent_QPS_closed",
+        "fixed_finite_faithful_standard_form_implementer_strongstar_closed",
+        "fixed_finite_point_strongstar_bounded_observable_conjugation_closed",
+        "conditional_bidirectional_all_shape_C0_completion_closed",
+        "first_local_homological_rank_two_generator_QPS_Ritz_closed",
+        "first_generator_second_order_low_block_match_closed",
     )
     independent_false = (
         "arbitrary_context_upgrade_closed",
@@ -3387,9 +3925,14 @@ def compare_exact_core(
         "all_order_connected_oscillator_elimination_closed",
         "forward_local_stabilization_implies_surjectivity",
         "inverse_automorphisms_point_norm_Cauchy",
+        "actual_Q3_all_shape_point_norm_Cauchy_closed",
+        "local_generator_identified",
+        "KMS_quotient_identified",
+        "moving_family_R_minus_one_fifth_strongstar_rate_closed",
+        "third_order_generator_coefficient_closed",
     )
     audit.check(
-        "all narrow v2.0/v2.1/v2.2/v2.3 children true in both components",
+        "all narrow v2.0/v2.1/v2.2/v2.3/v2.4 children true in both components",
         all(primary_scope.get(key) is True for key in primary_true)
         and all(ider.get(key) is True for key in independent_true),
         {
@@ -3462,25 +4005,42 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         serialized = json.dumps(record, sort_keys=True)
         refs = as_mapping(record.get("formal_refs"))
         audit.pending(
-            f"{EXPLORATION_ID} exact provenance",
+            f"{EXPLORATION_ID} identity and lifecycle",
             record.get("schema") == "tect/proof-exploration/1.0"
             and record.get("task_id") == TASK_ID
             and record.get("claim_ids") == [CLAIM_ID]
-            and record.get("verdict") == "advanced"
-            and RESULT_NUMBER in as_list(refs.get("results"))
-            and set(NEW_NEGATIVE_IDS).issubset(set(as_list(refs.get("negatives"))))
-            and all(
-                text_has(serialized, token)
-                for token in (
-                    *NEW_CLOSED_SUBGATES,
-                    OPEN_GATES[0],
-                    OPEN_GATES[1],
-                    OPEN_GATES[3],
-                    OPEN_GATES[4],
-                )
-            ),
+            and record.get("verdict") == "advanced",
             record,
-            "exact task/claim/result/negative/gate provenance",
+            "exact schema/task/claim and advanced verdict",
+            "formal",
+        )
+        audit.pending(
+            f"{EXPLORATION_ID} formal result and negative references",
+            as_list(refs.get("results")) == [RESULT_NUMBER]
+            and set(as_list(refs.get("negatives"))) == set(NEW_NEGATIVE_IDS),
+            refs,
+            {"results": [RESULT_NUMBER], "negatives": list(NEW_NEGATIVE_IDS)},
+            "formal",
+        )
+        audit.pending(
+            f"{EXPLORATION_ID} exact closed-child gate set",
+            set(as_list(record.get("gate_ids"))) == set(NEW_CLOSED_SUBGATES),
+            record.get("gate_ids"),
+            list(NEW_CLOSED_SUBGATES),
+            "formal",
+        )
+        audit.pending(
+            f"{EXPLORATION_ID} proof boundary and continuation",
+            record.get("related") == [{"id": PRIOR_EXPLORATION_ID, "relation": "continues"}]
+            and all(text_has(serialized, token) for token in (
+                "fixed finite faithful Gibbs standard representation",
+                "both time signs", "C0 automorphism group",
+                "homological generator", "-1/800", "(M+1)/8",
+                "actual all-shape Q3 common alpha", "all-order connected rank-two",
+                "oscillator GNS gap", "physical Sector A", "Pre-A closure",
+            )),
+            record,
+            "exact prior link, theorem findings and broad-parent boundary",
             "formal",
         )
 
@@ -3509,6 +4069,11 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
                     "twentieth",
                     "full-oscillator",
                     "Ritz",
+                    "strong-star",
+                    "bidirectional",
+                    "homological",
+                    "-1/800",
+                    "(M+1)/8",
                     *CLOSED_SUBGATES,
                     *OPEN_GATES[:-1],
                     "connected rank-two oscillator/QPS successor",
@@ -3529,7 +4094,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         for negative_id in NEW_NEGATIVE_IDS:
             require_tokens(
                 negatives,
-                f"v2.3 negative authority {negative_id}",
+                f"v2.4 negative authority {negative_id}",
                 (negative_id,),
                 audit,
             )
@@ -3574,10 +4139,30 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
                     "CLOSED retained under EXP-000813/R-167 v2.2",
                     "formal_history",
                 )
+        for gate in V2_3_CLOSED_SUBGATES:
+            section = heading_section(gates, gate)
+            audit.pending(
+                f"historical v2.3 closed gate section {gate}",
+                section is not None,
+                section,
+                "section",
+                "formal_history",
+            )
+            if section is not None:
+                audit.pending(
+                    f"historical v2.3 closed gate retained {gate}",
+                    re.search(r"\*\*Status:\*\*\s*CLOSED", section, re.I)
+                    is not None
+                    and text_has(section, "EXP-000815")
+                    and text_has(section, "R-167 v2.3"),
+                    section,
+                    "CLOSED retained under EXP-000815/R-167 v2.3",
+                    "formal_history",
+                )
         for gate in NEW_CLOSED_SUBGATES:
             section = heading_section(gates, gate)
             audit.pending(
-                f"v2.3 closed gate section {gate}",
+                f"v2.4 closed gate section {gate}",
                 section is not None,
                 section,
                 "section",
@@ -3585,7 +4170,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
             )
             if section is not None:
                 audit.pending(
-                    f"v2.3 closed gate scoped status {gate}",
+                    f"v2.4 closed gate scoped status {gate}",
                     re.search(r"\*\*Status:\*\*\s*CLOSED", section, re.I)
                     is not None
                     and text_has(section, EXPLORATION_ID)
@@ -3615,7 +4200,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
 
     strategy_index = read_text(REPO / "strategy/INDEX.md", audit, "strategy index")
     if strategy_index is not None:
-        require_tokens(strategy_index, "strategy v2.3 links", (MANIFEST.name, CERTIFICATE.name), audit)
+        require_tokens(strategy_index, "strategy v2.4 links", (MANIFEST.name, CERTIFICATE.name), audit)
 
     todo = load_json(REPO / "todo/todo.json", audit, "TODO authority")
     if todo is not None:
@@ -3624,7 +4209,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         if len(tasks) == 1:
             serialized = json.dumps(tasks[0], sort_keys=True)
             audit.pending(
-                f"{TASK_ID} in-progress v2.3 linkage",
+                f"{TASK_ID} in-progress v2.4 linkage",
                 tasks[0].get("status") == "in_progress"
                 and tasks[0].get("gate") == OPEN_GATES[3]
                 and all(
@@ -3632,14 +4217,15 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
                     for token in (
                         EXPLORATION_ID,
                         RESULT_VERSION,
-                        "all-shape common alpha",
-                        "connected rank-two oscillator QPS",
+                        "actual all-shape Q3 common alpha",
+                        "complete connected all-order rank-two interaction",
+                        "broken-sector GNS gap",
                         "physical Sector A",
-                        "Pre-A remain open",
+                        "Pre-A",
                     )
                 ),
                 tasks[0],
-                "in_progress on Round-1 with exact v2.3 scoped successor note",
+                "in_progress on Round-1 with exact v2.4 scoped successor note",
                 "formal",
             )
 
@@ -3647,7 +4233,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
     if theorem_map is not None:
         require_tokens(
             json.dumps(theorem_map, sort_keys=True),
-            "Sector-A theorem map v2.3 scope",
+            "Sector-A theorem map v2.4 scope",
             (RESULT_NUMBER, RESULT_VERSION, EXPLORATION_ID, *CLOSED_SUBGATES, *OPEN_GATES, "Pre-A"),
             audit,
         )
@@ -3658,15 +4244,15 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         for event in changelog or []
         if {CLAIM_ID, EXPLORATION_ID, RESULT_NUMBER}
         <= set(as_list(event.get("claim_ids")))
-        and text_has(event.get("raw", event.get("header", "")), "R-167 v2.3")
+        and text_has(event.get("raw", event.get("header", "")), "R-167 v2.4")
         and not text_has(event.get("raw", event.get("header", "")), "combined gate-level synthesis PDF issued")
         and "hash-correction" not in set(as_list(event.get("keywords")))
     ]
     if not v2_events:
-        audit.pending("R-167 v2.3 changelog", False, 0, 1, "formal")
+        audit.pending("R-167 v2.4 changelog", False, 0, 1, "formal")
     else:
         audit.check(
-            "R-167 v2.3 changelog unique",
+            "R-167 v2.4 changelog unique",
             len(v2_events) == 1,
             len(v2_events),
             1,
@@ -3675,7 +4261,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
     if len(v2_events) == 1:
         event = v2_events[0]
         audit.check(
-            "R-167 v2.3 changelog authority sets",
+            "R-167 v2.4 changelog authority sets",
             set(NEW_NEGATIVE_IDS) <= set(as_list(event.get("neg_results")))
             and {
                 PRIMARY.relative_to(REPO).as_posix(),
@@ -3694,16 +4280,18 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         )
         require_tokens(
             event.get("raw", ""),
-            "R-167 v2.3 changelog theorem and boundary",
+            "R-167 v2.4 changelog theorem and boundary",
             (
-                "two-sided Gibbs Hilbert-Schmidt",
-                "R^(-1/5)",
-                "connected-cluster",
-                "geometric coefficient envelope",
-                "second-order onsite-resolvent",
-                "UHF",
+                "fixed finite faithful Gibbs standard representation",
+                "point-strong-star",
+                "R0^3 L^-8",
+                "both time signs",
+                "C0 automorphism group",
+                "homological generator",
+                "-1/800",
+                "(M+1)/8",
                 "remain open",
-                "No PDF is issued",
+                "No v2.4 PDF is issued",
             ),
             audit,
             core=True,
@@ -3711,10 +4299,10 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
 
     proof_map = read_text(REPO / "theory/proof-evidence-map.md", audit, "proof-evidence map")
     if proof_map is not None:
-        require_tokens(proof_map, "proof-evidence v2.3 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
+        require_tokens(proof_map, "proof-evidence v2.4 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
     proof_json = load_json(REPO / "verification/proof-evidence-map.json", audit, "proof-evidence JSON")
     if proof_json is not None:
-        require_tokens(json.dumps(proof_json, sort_keys=True), "proof-evidence JSON v2.3 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
+        require_tokens(json.dumps(proof_json, sort_keys=True), "proof-evidence JSON v2.4 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
 
     locator_specs = (
         (
@@ -3919,7 +4507,7 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
 
     components: dict[str, dict[str, Any]] = {}
     sentinels: dict[str, str] = {}
-    with tempfile.TemporaryDirectory(prefix="tect-exp811-integrated-") as directory:
+    with tempfile.TemporaryDirectory(prefix="tect-exp818-integrated-") as directory:
         temporary = Path(directory)
         for label, component in (("primary", PRIMARY), ("independent", INDEPENDENT)):
             result = run_fresh_pair(component, temporary, audit, label)
@@ -4022,6 +4610,19 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "simultaneous_bond_shear_fifth_graph_propagation": True,
             "actual_Q3_twentieth_fixed_edge_history_bound": True,
             "registered_periodic_compact_source_scope_only": True,
+            "registered_periodic_split_implementer_two_sided_Gibbs_L2_removal": True,
+            "conditional_connected_geometric_QPS_envelope": True,
+            "actual_second_order_connected_onsite_resolvent_QPS": True,
+            "fixed_finite_faithful_standard_form_implementer_strongstar": True,
+            "fixed_finite_point_strongstar_bounded_observable_conjugation": True,
+            "conditional_bidirectional_all_shape_C0_completion": True,
+            "first_local_homological_rank_two_generator_QPS_Ritz": True,
+            "first_generator_second_order_low_block_match": True,
+            "actual_Q3_all_shape_point_norm_Cauchy": False,
+            "local_generator_identified": False,
+            "KMS_quotient_identified": False,
+            "moving_family_R_minus_one_fifth_strongstar_rate": False,
+            "third_order_generator_coefficient": False,
             "arbitrary_boundary_history_bound": False,
             "below_Gamma_global_Feshbach_precursor": True,
             "compressed_finite_spin_TFIM_two_phase_QPS_and_phasewise_gap": True,
@@ -4050,8 +4651,8 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
         "source_hashes": source_hashes,
         "formal_workflow": formal,
         "pdf_efficiency": {
-            "dedicated_R167_v2_2_source_required": False,
-            "dedicated_R167_v2_2_PDF_required": False,
+            "dedicated_R167_v2_4_source_required_during_proof_first": False,
+            "dedicated_R167_v2_4_PDF_required_during_proof_first": False,
             "PDF_created_by_this_verifier": False,
             "historical_v1_9_v1_0_checkpoint_strictly_validated": checkpoint_state.get(
                 "v1_9_v1_0_historical_valid", False
@@ -4059,8 +4660,8 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "historical_v2_0_v1_1_checkpoint_strictly_validated": checkpoint_state.get(
                 "v2_0_v1_1_historical_valid", False
             ),
-            "historical_checkpoints_are_v2_2_evidence": False,
-            "per_lemma_or_intermediate_v2_2_PDF_issued": False,
+            "historical_checkpoints_are_v2_4_evidence": False,
+            "per_lemma_or_intermediate_v2_4_PDF_issued": False,
             "historical_v2_1_v1_2_checkpoint_strictly_validated": checkpoint_state.get(
                 "v2_1_v1_2_historical_valid", False
             ),
@@ -4086,6 +4687,15 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
                 "v2_0_v1_1_historical_metadata", {}
             ),
             "future_checkpoint_metadata": checkpoint_state.get("future_metadata", {}),
+            "historical_v2_3_checkpoint_strictly_validated": checkpoint_state.get(
+                "v2_3_valid", False
+            ),
+            "local_only_v2_4_checkpoint_deferred_exact": checkpoint_state.get(
+                "v2_4_deferred_exact", False
+            ),
+            "local_only_v2_4_checkpoint_metadata": checkpoint_state.get(
+                "v2_4_metadata", {}
+            ),
             "certificate_present": certificate is not None,
         },
         "missing_authorities": audit.missing,

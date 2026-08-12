@@ -9,6 +9,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS](#ng-2026-08-12-pre-a-st8-q3lock-second-order-disjoint-vanishing-automatic-all-order-global-feshbach-connectedness) | infer connectedness of the raw all-order global scalar Feshbach map from second-order disjoint-edge vanishing | EXP-000818 / R-167 v2.4 uses a disconnected low spectator: the scalar resolvent denominator creates a nonzero mixed `Z_X tensor Z_Y` self-energy coefficient `-1/800`. Linked-cluster subtraction and local resolvent expansions remain open |
+| [NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY](#ng-2026-08-12-pre-a-st8-q3lock-ritz-cutoff-ordinary-bounded-operator-sw-smallness-uniformity) | infer cutoff-uniform ordinary operator-norm Schrieffer--Wolff smallness from finite Ritz boundedness | harmonic number cutoffs give `||B_M||/Gamma>=(M+1)/8` at fixed `Gamma=2`, reaching at least `2` at `M=15`. Relative-form, graph-norm and QPS routes remain open |
 | [NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY](#ng-2026-08-11-pre-a-st8-q3lock-forward-local-automorphism-limit-automatic-surjectivity-and-inverse-cauchy) | infer a surjective limiting automorphism and inverse Cauchy convergence from exact forward local stabilization of finite-volume automorphisms | EXP-000815 / R-167 v2.3 uses cyclic shifts on the one-sided UHF algebra: every local observable stabilizes forward to the unilateral right shift, but the limit is a proper endomorphism and the inverse images of the first-site Pauli `Z` are pairwise norm-distance two |
 | [NG-2026-08-11-PRE-A-M2-SIX-ABSOLUTE-ERRORS-AUTOMATIC-LOG-SLOPE-CONTROL](#ng-2026-08-11-pre-a-m2-six-absolute-errors-automatic-log-slope-control) | infer a controlled six-stage critical log slope from six absolute output errors alone | EXP-000814 / R-168 v1.3 gives `X(tau)=tau`, `Xhat(tau)=tau+epsilon`: fixed absolute error but different limiting dyadic log slopes. Require positive adjacent-ratio floors, relative errors below one at both scales and vanishing relative errors |
 | [NG-2026-08-11-PRE-A-M2-POSITIVE-LOCAL-INVERTIBILITY-AUTOMATIC-UNIT-EXPONENT](#ng-2026-08-11-pre-a-m2-positive-local-invertibility-automatic-unit-exponent) | infer unit critical exponent from positivity and local invertibility | `x^2` is positive and invertible on a positive half-neighborhood and `x^3` is locally invertible through zero, but their leading orders are two and three. Unit transport needs a nonzero linear term |
@@ -354,6 +356,49 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-12-pre-a-st8-q3lock-second-order-disjoint-vanishing-automatic-all-order-global-feshbach-connectedness"></a>
+### NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS -- a raw global scalar Feshbach denominator can couple a disconnected low spectator
+
+**Failure mode:** infer that exact disjoint-edge vanishing of the v2.3 second-
+order onsite-resolvent coefficient automatically makes the raw all-order global
+scalar Feshbach self-energy a connected interaction.
+
+**Evidence:** EXP-000818 / R-167 v2.4 takes a disconnected `X tensor Y` system.
+The `X` factor has two low and two high states, high energy `Gamma=2`, and
+low--high coupling `(1/10)diag(1,2)`. The entirely low spectator has
+`h_Y=diag(0,1)`. At scalar `E=0`, the raw self-energy is
+`(1/100)diag(1,4) tensor diag(1/2,1/3)`. Its mixed
+`Z_X tensor Z_Y` coefficient is `-1/800`, although the original Hamiltonian
+has no `X--Y` interaction. The scalar denominator retained the disconnected
+spectator energy.
+
+**Consequence:** second-order disjoint-pair vanishing does not by itself prove
+all-order connectedness of a raw global scalar Feshbach map. A linked-cluster
+subtraction, local resolvent expansion or connected Lie--Schwinger construction
+remains a viable route. This is not a no-go for such reorganizations, Q3
+locality, the rank-two oscillator transfer or a future GNS-gap theorem.
+
+<a id="ng-2026-08-12-pre-a-st8-q3lock-ritz-cutoff-ordinary-bounded-operator-sw-smallness-uniformity"></a>
+### NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY -- finite Ritz boundedness does not give cutoff-uniform ordinary-norm smallness
+
+**Failure mode:** infer that each finite onsite Ritz cutoff makes the bond
+operator bounded and therefore supplies a cutoff-uniform ordinary bounded-
+operator Schrieffer--Wolff smallness ratio at a fixed high-sector gap.
+
+**Evidence:** EXP-000818 / R-167 v2.4 uses the harmonic number cutoff
+`Pi_M=span{|0>,...,|M>}` and `q=(a+a^*)/sqrt(2)`. Although every
+`Pi_M q Pi_M` is bounded, its norm is at least `sqrt(M/2)`. On two sites,
+`<M,0|(q_x-q_y)^2|M,0>=M+1`. For
+`B_M=(1/4)(Pi_M tensor Pi_M)(q_x-q_y)^2(Pi_M tensor Pi_M)` and fixed
+`Gamma=2`, `||B_M||/Gamma>=(M+1)/8`, which is at least `1/2` at `M=3` and
+at least `2` at `M=15`.
+
+**Consequence:** finite-cutoff boundedness alone cannot justify a cutoff-
+uniform ordinary operator-norm Schrieffer--Wolff expansion at fixed `Gamma`.
+Relative-form smallness, weighted graph norms, local QPS estimates and the
+declared resolvent-compatible Ritz-tail route remain open. This is not a no-go
+for rank-two block diagonalization or the actual Q3LOCK gap.
 
 <a id="ng-2026-08-11-pre-a-st8-q3lock-forward-local-automorphism-limit-automatic-surjectivity-and-inverse-cauchy"></a>
 ### NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY -- forward local stabilization need not yield an automorphism

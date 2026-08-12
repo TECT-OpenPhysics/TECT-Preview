@@ -2281,3 +2281,436 @@ convergence, all-exhaustion common alpha, inverse/group/generator completion,
 all-order connected rank-two oscillator elimination, the exact oscillator
 two-phase QPS theorem, phasewise intertwining, the broken-sector oscillator
 GNS gap, Round-1, C6, CP1, physical Sector A and Pre-A all remain **OPEN**.
+
+## 48. R-167 v2.4 additive scope and proof-first boundary
+
+This additive stage is `EXP-000818`, `R-167 v2.4`, at `T0` with
+`claim_bearing: false`.  It retains every v2.3 theorem, negative result and
+the exact issued `v2_3_checkpoint_synthesis` metadata.  The three new closed
+children are
+
+1. `PA-CP1-ST8-Q3LOCK-FIXED-FINITE-FAITHFUL-GIBBS-STANDARD-FORM-POINT-STRONGSTAR-OBSERVABLE-CUTOFF-REMOVAL`;
+2. `PA-CP1-ST8-Q3LOCK-CONDITIONAL-BIDIRECTIONAL-ALL-SHAPE-POINT-NORM-CAUCHY-C0-AUTOMORPHISM-COMPLETION`;
+3. `PA-CP1-ST8-Q3LOCK-FIRST-LOCAL-HOMOLOGICAL-RANK-TWO-GENERATOR-QPS-NORM-AND-RITZ-CUTOFF`.
+
+The two new exact implication failures are
+
+1. `NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS`;
+2. `NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY`.
+
+The first theorem is actual but fixed-member: it works in one faithful Gibbs
+standard representation at a time.  The second is deterministic and
+conditional on an all-shape bidirectional point-norm Cauchy hypothesis which
+has not been proved for Q3.  The third is the first parity-equivariant
+homological coefficient and its exact second-order low-block identity only.
+No third-order coefficient is promoted in this version.
+
+## 49. Fixed faithful Gibbs standard form upgrades both implementer legs
+
+Fix one finite periodic Q3 volume, compact source, inverse temperature, split
+mesh/history and radius `R0`.  Let `rho` be its faithful Gibbs density on
+`H`, let
+
+\[
+ {cal K}={\mathfrak S}_2(H),\qquad \xi=\rho^{1/2},
+ \qquad \pi(A)X=AX,                                      \tag{49.1}
+\]
+
+and let `P_L,P` be the cutoff and exact split implementers.  Define the two
+ordinary Hilbert--Schmidt errors
+
+\[
+ e_+(L)=\|(P-P_L)\xi\|_2,
+ \qquad
+ e_-(L)=\|(P^*-P_L^*)\xi\|_2
+       =\|\xi(P-P_L)\|_2.                               \tag{49.2}
+\]
+
+The equality in the second line is only invariance of the Hilbert--Schmidt
+norm under adjoint.  It does not use a modular commutation.  At fixed `R0`,
+the paired v2.3 authority gives separately
+
+\[
+ e_\pm(L)\le {54|c|T\sqrt{M_{20}}\over\hbar}
+                    R_0^3L^{-8},                         \tag{49.3}
+\]
+
+and gives the sum bound
+
+\[
+ e_+(L)+e_-(L)
+ \le {54\sqrt2|c|T\sqrt{M_{20}}\over\hbar}
+                    R_0^3L^{-8}.                         \tag{49.4}
+\]
+
+Faithfulness of `rho` means that `xi` has dense range.  Hence
+
+\[
+ \{\xi C:C\in B(H)\}                                   \tag{49.5}
+\]
+
+is dense in `S2(H)`: approximate the left vector of every finite-rank
+operator by vectors in `ran(xi)`.  For the right-commutant core (49.5),
+
+\[
+ \|(P-P_L)\xi C\|_2\le e_+(L)\|C\|,
+ \qquad
+ \|(P^*-P_L^*)\xi C\|_2\le e_-(L)\|C\|.                \tag{49.6}
+\]
+
+All implementers are unitary, so uniform boundedness extends (49.6) from the
+dense core to all of `S2(H)`.  Thus left multiplication by `P_L` converges
+strong-star to left multiplication by `P`.
+
+For a fixed `A in B(H)` and a fixed `eta in S2(H)`, write
+
+\[
+\begin{aligned}
+ &(P_L^*AP_L-P^*AP)\eta\\
+ &\quad=P_L^*A(P_L-P)\eta+(P_L^*-P^*)AP\eta .            \tag{49.7}
+\end{aligned}
+\]
+
+The first term tends to zero by strong convergence and the second by strong
+convergence of the adjoints at the fixed vector `AP eta`.  Replacing `A` by
+`A^*` proves the adjoint statement.  Therefore
+
+\[
+ \pi(P_L^*AP_L)\longrightarrow\pi(P^*AP)
+ \quad\hbox{point-strong-star for every fixed }A.         \tag{49.8}
+\]
+
+The quantitative claim stops at (49.3)--(49.6).  Equation (49.7) gives
+qualitative convergence for arbitrary fixed bounded observables; it is not a
+new two-sided Gibbs-L2 channel estimate.  More importantly, the optimized
+choice `L=R^(2/5)` changes the volume, density and standard representation.
+Its `R^(-1/5)` corridor is therefore not a strong-star rate on one common
+Hilbert space.  For the exact fixed-member fixture `R0=32`, the per-leg
+coefficients at `L=4,8` are `27` and `27/256`; the two-leg coefficients are
+`27*sqrt(2)` and `27*sqrt(2)/256`.
+
+An independent two-dimensional standard-form probe uses
+
+\[
+ \rho=\operatorname{diag}(1/5,4/5),\qquad
+ U_n={1\over n^2+1}
+ \begin{pmatrix}n^2-1&-2n\\2n&n^2-1\end{pmatrix}.        \tag{49.9}
+\]
+
+For `P=I`, both squared legs equal `4/(n^2+1)`.  At `n=3,7` these are
+`2/5,2/25`.  With `A=diag(1,-1)`, the squared weighted conjugation errors are
+`16n^2/(n^2+1)^2`, namely `36/25,196/625`.  This finite probe checks both
+directions and their decay; it is not used to infer the infinite-dimensional
+theorem.
+
+## 50. Conditional bidirectional all-shape Cauchy completion
+
+Let `A` be one common unital C-star algebra, let `A0` be a norm-dense unital
+star subalgebra, and let `D` be the directed set containing every declared
+finite shape and cutoff.  For each `lambda in D`, let
+`alpha_lambda^t` be a point-norm continuous automorphism group of `A`.
+Assume that, for every `A in A0` and every finite `T`, both nets
+
+\[
+ \alpha_\lambda^t(A),\qquad \alpha_\lambda^{-t}(A)       \tag{50.1}
+\]
+
+are point-norm Cauchy uniformly for `0<=t<=T` across the full directed set,
+not merely along one exhaustion.
+
+Because every `alpha_lambda^t` is isometric, the two limits extend uniquely
+from `A0` to all of `A`; call them `alpha^t` and `beta^t`.  Norm limits
+preserve linearity, products, stars and the unit.  To pass the group law, add
+and subtract one fixed limiting argument:
+
+\[
+\begin{aligned}
+ &\|\alpha_\lambda^s(\alpha_\lambda^t(A))
+       -\alpha^s(\alpha^t(A))\|\\
+ &\quad\le
+ \|\alpha_\lambda^t(A)-\alpha^t(A)\|
+ +\|\alpha_\lambda^s(\alpha^t(A))-\alpha^s(\alpha^t(A))\|.
+                                                               \tag{50.2}
+\end{aligned}
+\]
+
+Both terms tend to zero.  The finite identities therefore give
+
+\[
+ \alpha^{s+t}=\alpha^s\alpha^t,
+ \qquad \alpha^t\beta^t=\beta^t\alpha^t={\rm id}.       \tag{50.3}
+\]
+
+Thus `beta^t=alpha^(-t)`, and every `alpha^t` is an automorphism.  Uniform
+convergence on compact time intervals preserves continuity on `A0`; for
+general `A`, a fixed `A0` approximation and isometry leave a `2||A-A0||`
+error.  Hence `alpha` is a point-norm continuous `C0` automorphism group.
+Since the net is Cauchy over all of `D`, the limit is exhaustion-independent.
+
+For the exact arithmetic probe, take inner Hamiltonians
+`H_n=(1+1/n)diag(0,1)` on `M2`.  At `n=10,m=20,T=1`,
+`||H_n-H_m||=1/20`; the Duhamel automorphism bound is `1/10` for both time
+signs, and the bound from `n=10` to the limiting Hamiltonian is `1/5`.
+
+This theorem is conditional.  It does not prove (50.1) for Q3, identify the
+abstract `C0` generator with the formal local derivation or specify its
+domain, or pass finite-volume Gibbs states to a KMS state or phase quotient.
+
+## 51. First parity-equivariant local homological generator
+
+Let `P` be the product rank-two low-band projection, `Q=1-P`, and
+
+\[
+ KP=0,\qquad K=\sum_xk_x\ge\Gamma Q,
+ \qquad R=Q(QKQ)^{-1}Q.                                  \tag{51.1}
+\]
+
+For each edge let
+
+\[
+ T_e=QB_eP,\qquad \|T_e\|\le\epsilon,\qquad
+ D_e=RT_e,qquad G_e=D_e-D_e^*.                          \tag{51.2}
+\]
+
+Assume that `K`, `P` and every `B_e` commute with the declared global parity.
+Then `R,T_e,D_e,G_e` are parity equivariant and `G_e^*=-G_e`.
+
+The single global resolvent `R` in (51.1) is load-bearing for the commutator
+calculation.  Locality is not assumed from its notation.  Rather, `K`
+preserves exact onsite high-support sectors and `T_e` creates high support
+only inside `e`.  On `ran(T_e)`, every site outside `e` stays in the kernel of
+its onsite `k_x`, so the restriction `RT_e` is the corresponding edge-local
+onsite resolvent.  This supplies an edge-supported representative for the
+global low/high block (51.2).
+
+Relative to `P direct-sum Q`, `G_e` is the skew block matrix with off-diagonal
+entry `D_e`.  Therefore its norm is sharp at the block level:
+
+\[
+ \|G_e\|=\|D_e\|\le{\epsilon\over\Gamma},               \tag{51.3}
+\]
+
+not twice this value.  On a graph of degree `z`, its edge-interaction QPS
+norm obeys
+
+\[
+ \|G\|_a
+ \le 2ze^a{\epsilon\over\Gamma}.                       \tag{51.4}
+\]
+
+Let `Pi_M` be parity preserving, contain `P`, and commute with the onsite
+resolvent on these sectors.  Put
+
+\[
+ G_{e,M}=R\Pi_MT_e-T_e^*\Pi_MR,
+ \qquad \tau_M=\sup_e\|(1-\Pi_M)T_e\|.                  \tag{51.5}
+\]
+
+The same sharp block identity gives
+
+\[
+ \|G_e-G_{e,M}\|\le{\tau_M\over\Gamma},
+ \qquad
+ \|G-G_M\|_a\le2ze^a{\tau_M\over\Gamma}.              \tag{51.6}
+\]
+
+Finally `KD_e=T_e`, `D_eK=0`, `KD_e^*=0`, and `D_e^*K=T_e^*`.  Hence, for
+`G=sum_eG_e` and `V_od=sum_e(T_e+T_e^*)`,
+
+\[
+ [K,G]=V_{\rm od},\qquad [G,K]=-V_{\rm od}.              \tag{51.7}
+\]
+
+The exact low-block second-order commutator is
+
+\[
+ {1\over2}P[G,V_{\rm od}]P
+ =-\sum_{e,f}T_e^*RT_f,                                  \tag{51.8}
+\]
+
+which is precisely the v2.3 onsite-resolvent coefficient.  Equation (51.8)
+is an algebraic coefficient identity after first-order off-diagonal
+cancellation.  It is not a convergence theorem for a BCH or Lie--Schwinger
+series.
+
+For `z=6`, `e^a=2`, `epsilon=1/100`, `Gamma=2` and
+`tau_M=1/1000`, the exact bounds are
+
+\[
+ \|G_e\|\le {1\over200},\quad \|G\|_a\le {3\over25},
+ \quad \|G_e-G_{e,M}\|\le {1\over2000},
+ \quad \|G-G_M\|_a\le {3\over250}.                     \tag{51.9}
+\]
+
+On the four-level parity fixture
+
+\[
+ P=\operatorname{diag}(1,1,0,0),\quad
+ K=\operatorname{diag}(0,0,2,2),\quad
+ \Theta=\operatorname{diag}(1,-1,1,-1),                 \tag{51.10}
+\]
+
+take `T=epsilon(|3><1|+|4><2|)`.  Direct matrix multiplication verifies
+parity, skew adjointness, (51.7), and
+
+\[
+ {1\over2}P[G,T+T^*]P
+ =-{\epsilon^2\over\Gamma}P=-{1\over20000}P.            \tag{51.11}
+\]
+
+No third-order coefficient, all-order connected interaction, convergence
+radius, phasewise intertwiner or oscillator GNS gap follows.
+
+## 52. Two exact boundaries against automatic all-order promotion
+
+### 52.1 A disconnected low-block spectator enters a scalar Feshbach denominator
+
+Let subsystem `X` have two low and two high states, with high energy
+`Gamma=2` and low-to-high coupling
+
+\[
+ T_X=\epsilon\operatorname{diag}(1,2),
+ \qquad \epsilon={1\over10}.                             \tag{52.1}
+\]
+
+Let the disconnected spectator `Y` be entirely in the retained low block,
+with `h_Y=diag(0,1)`.  The original Hamiltonian is an `X` term plus a `Y`
+term and contains no mixed interaction.  With the global product low
+projection and scalar `E=0`, however, the raw Feshbach self-energy is
+
+\[
+ \Sigma(0)=\epsilon^2\operatorname{diag}(1,4)
+       \mathbin\otimes\operatorname{diag}(1/2,1/3).      \tag{52.2}
+\]
+
+Using `Z=diag(1,-1)`, the mixed `Z_X tensor Z_Y` coefficient of (52.2) is
+
+\[
+ {\epsilon^2\over4}(1-4)(1/2-1/3)
+ =-{\epsilon^2\over8}=-{1\over800}.                     \tag{52.3}
+\]
+
+Thus the raw Feshbach operator `PHP-E-Sigma(E)` has mixed coefficient
+`+1/800`.  The mechanism is exact: the scalar global denominator remembers
+the energy of a disconnected retained spectator.  This does not contradict
+the v2.3 second-order coefficient, whose resolvent is the unperturbed onsite
+`R` and whose disjoint ordered edge pairs vanish.  It blocks only the
+automatic inference from that second-order fact to all-order connectedness of
+the raw global scalar Feshbach map.  Linked-cluster subtraction and local
+resolvent expansions remain possible.
+
+### 52.2 Finite Ritz boundedness is not cutoff-uniform SW smallness
+
+Let
+
+\[
+ \Pi_M=\sum_{n=0}^M|n\rangle\langle n|,
+ \qquad q={a+a^*\over\sqrt2}.                            \tag{52.4}
+\]
+
+Every `Pi_M q Pi_M` is a bounded finite matrix, but
+
+\[
+ \|\Pi_Mq\Pi_M\|\ge\sqrt{M/2}.                          \tag{52.5}
+\]
+
+For the correctly compressed quadratic bond, not the square of a truncated
+coordinate,
+
+\[
+ \langle M,0|(q_x-q_y)^2|M,0\rangle=M+1.                \tag{52.6}
+\]
+
+Choose `B_M=(1/4)(Pi_M tensor Pi_M)(q_x-q_y)^2(Pi_M tensor Pi_M)` and keep
+`Gamma=2` fixed.  Then
+
+\[
+ {\|B_M\|\over\Gamma}\ge {M+1\over8}.                  \tag{52.7}
+\]
+
+The lower bound is `1/2` at `M=3` and `2` at `M=15`.  Thus boundedness at
+each finite Ritz cutoff does not yield a cutoff-uniform ordinary
+bounded-operator norm Schrieffer--Wolff smallness hypothesis.  This narrow
+negative says nothing against the relative-form, graph-norm, connected-QPS or
+resolvent-compatible Ritz-tail routes.
+
+## 53. Devil's-advocate audit and v2.4 checkpoint lifecycle
+
+1. **Objection -- two Gibbs-L2 legs still cannot control arbitrary bounded
+   observables.  DISMISSED only in the fixed standard representation.**
+   The two legs give strong and adjoint-strong convergence on the dense
+   right-commutant core, then uniform boundedness gives strong-star on all
+   Hilbert--Schmidt vectors.  This proves (49.8), not an observable-inserted
+   Gibbs-L2 estimate.
+2. **Objection -- the `R^(-1/5)` rate is now a strong-star thermodynamic
+   rate.  UPHELD as an overclaim.**  That corridor changes `R`, `rho` and the
+   representation.  Only fixed `R0` with `L` tending to infinity is used in
+   Section 49.
+3. **Objection -- forward Cauchy alone is enough for an automorphism.
+   UPHELD.**  The v2.3 UHF fixture forbids this shortcut.  Section 50 assumes
+   Cauchy control for both signs on the full all-shape directed set.
+4. **Objection -- the conditional theorem identifies the Q3 generator and
+   KMS phases.  UPHELD as an overclaim.**  It gives an abstract `C0` group
+   only after its hypotheses; no generator domain or state limit is supplied.
+5. **Objection -- the triangle inequality gives a factor two in (51.3).
+   DISMISSED.**  `G_e` is one skew off-diagonal block matrix, so its norm is
+   exactly the norm of `D_e`.
+6. **Objection -- a global resolvent was silently called local.  DISMISSED.**
+   Section 51 retains one global `R` in every commutator and proves locality
+   only for its restriction to the exact high-support sector created by
+   `T_e`.
+7. **Objection -- (51.8) closes the all-order oscillator elimination.
+   UPHELD as an overclaim.**  It is the first generator and second-order
+   low-block identity only; no third-order or convergent series is asserted.
+8. **Objection -- the spectator negative duplicates the old extensive
+   self-energy no-go.  DISMISSED.**  The old fixture shows that one global
+   extensive norm contains no decay data.  Equations (52.2)--(52.3) show a
+   different mechanism: a disconnected retained low-block spectator enters
+   the scalar resolvent and creates an exact mixed coefficient.
+9. **Objection -- every finite Ritz interaction is bounded, so ordinary SW
+   smallness is uniform.  DISMISSED.**  Equations (52.6)--(52.7) give a
+   linearly growing lower bound at fixed `Gamma`.
+
+The primary symbolic verifier and the non-importing standard-library verifier
+recompute every v2.4 rational fixture from labelled inputs.  During the
+proof-first stage, staged mode must report exactly any formal authorities not
+yet written: the `EXP-000818` exploration row, the `R-167 v2.4` result row,
+the two new negative rows and the three new closed gate rows.
+
+No v2.4 PDF is issued in this proof-first package.  The manifest field
+`v2_4_checkpoint_synthesis` is exactly `DEFERRED` with `pdf_issued: false`.
+Every v2.3 and earlier source/PDF pair remains historical.  A future
+checkpoint, if issued after all proof, formal-authority, integrated,
+generated-surface, strict-release and render-review gates pass, is R-167-only.
+R-168 v1.3 remains historical and is not reissued.
+
+Nothing in Sections 48--53 closes the actual all-shape Q3 Cauchy hypothesis,
+the all-exhaustion common alpha, an identified generator, a KMS quotient,
+all-order connected rank-two oscillator elimination, exact oscillator
+two-phase QPS, phasewise intertwining, the broken-sector oscillator GNS gap,
+Round-1, C6, CP1, physical Sector A or Pre-A.  All remain **OPEN**.
+
+## 54. R-167 v2.4-only gate-level checkpoint issuance
+
+The Section 53 statements `No v2.4 PDF is issued`, exactly `DEFERRED`, and
+`pdf_issued: false` record the proof-first stage. After the primary,
+non-importing independent, integrated, formal-authority, generated-surface,
+source-form, freshness, dual-extraction, strict-release and visual-review
+gates passed, one R-167-only v2.4 gate-level synthesis was issued. R-168
+v1.3 remains historical and is not reissued.
+
+- Source: `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fixed-standard-form-c0-homological-generator-boundary-checkpoint-260812-v1.3.tex.txt`, 26310 bytes, raw SHA-256 `571b743300582374f410b37b713f3da561cbfea6d82763cc61d2b95d3f00ce4c`.
+- PDF: `claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fixed-standard-form-c0-homological-generator-boundary-checkpoint-260812-v1.3.pdf`, 100192 bytes, 9 pages, raw SHA-256 `c2cf206bd3d515a298b825f1bc5fa418b003717ecae3945c8c4ed3eb62e0595d`, and 135.5822994 seconds newer than the source.
+- Verification: primary `343/343` at raw script SHA-256 `62298845ace416840c85698d5aa6016099a1b532c1de9c3f6e88acd15912ad37`; non-importing independent `198/198` at raw script SHA-256 `9d5f1d0bc2032841632361099a238fe9958e31c06d7bb13d6c6be33518c75a80`; integrated `341/341` at raw script SHA-256 `87d3c52fbc9f1d468dd11a378670e32529ae454cd70c427965480aafd1634b82`.
+- Extraction/build: pypdf extracted 9/9 nonempty pages and pdfplumber extracted 9/9 nonempty pages. The Tectonic-managed build reported `FORM PASS` and `OVERFULL-HBOX 0`.
+
+All 9 rendered pages were reviewed at readable resolution with zero clipping,
+overlap, broken equations, unreadable identifiers, black glyphs, or malformed
+page transitions; pypdf and pdfplumber each extracted 9/9 nonempty pages; the
+build reported OVERFULL-HBOX 0.
+
+This issuance changes no theorem tier or parent status. The actual all-shape Q3
+Cauchy hypothesis, all-exhaustion common alpha, identified generator and KMS
+quotients, all-order connected rank-two oscillator elimination, exact oscillator
+two-phase QPS, phasewise intertwining, broken-sector oscillator GNS gap,
+Round-1, C6, CP1, physical Sector A and Pre-A all remain **OPEN**.

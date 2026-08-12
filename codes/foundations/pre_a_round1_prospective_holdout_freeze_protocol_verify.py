@@ -1507,6 +1507,7 @@ def invocation_view(payload: dict[str, Any] | None) -> dict[str, Any] | None:
             authority.pop("staged", None)
     current_tree = copied.get("current_tree")
     if isinstance(current_tree, dict):
+        current_tree.pop("current_head", None)
         current_tree.pop("local_freeze_tag_observation", None)
     fixture_field = "m2_physical_response_successor_minimum_contract_fixture"
     if fixture_field in copied:
@@ -1514,9 +1515,27 @@ def invocation_view(payload: dict[str, Any] | None) -> dict[str, Any] | None:
     assertions = copied.get("assertions")
     if isinstance(assertions, list):
         for assertion in assertions:
+            if not isinstance(assertion, dict):
+                continue
+            name = assertion.get("name")
+            actual = assertion.get("actual")
             if (
-                isinstance(assertion, dict)
-                and assertion.get("group") == "physical_contract"
+                assertion.get("group") == "authority"
+                and name == "audited commit is ancestor"
+                and isinstance(actual, list)
+                and len(actual) == 2
+                and actual[0] == AUDITED_COMMIT
+                and isinstance(actual[1], str)
+            ):
+                actual[1] = "<CURRENT-INVOCATION-HEAD>"
+            elif (
+                assertion.get("group") == "current_tree"
+                and name == "audited commit ancestor"
+                and isinstance(actual, str)
+            ):
+                assertion["actual"] = "<CURRENT-INVOCATION-HEAD>"
+            if (
+                assertion.get("group") == "physical_contract"
                 and isinstance(assertion.get("name"), str)
                 and (
                     assertion["name"].startswith("minimum contract")

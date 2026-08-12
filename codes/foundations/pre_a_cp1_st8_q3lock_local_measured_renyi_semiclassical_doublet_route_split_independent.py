@@ -1,18 +1,14 @@
 #!/usr/bin/env python3
-"""Independent standard-library verifier for the R-167 v2.3 route split.
+"""Independent standard-library verifier for the R-167 v2.4 route split.
 
-All v2.2 Fraction fixtures and historical boundaries are retained.  New
-standard-library reconstructions check the paired-history Gibbs-L2 rate,
-connected geometric QPS envelope, actual second-order onsite-resolvent
-connected coefficient and Ritz-tail criterion, and the forward-local UHF
-automorphism obstruction.  Retained reconstructions check virial bookkeeping,
-terminating subset-shear coefficients, fifth-word budget, registered-periodic
-history corridor, and rank-two automatic-gap counterfixture.  This program
-imports neither the primary implementation nor any primary result.  It does
-not broaden the actual Q3 history/implementer result beyond the registered
-fixed-beta periodic compact-source family or close arbitrary-observable or
-all-exhaustion common alpha, all-order connected oscillator/QPS transfer, or
-the oscillator-lattice GNS-gap parent.
+All v2.3 Fraction fixtures and historical boundaries are retained.  New
+standard-library reconstructions check the fixed-member standard-form rates,
+the conditional bidirectional C0 arithmetic, the sharp first homological
+generator and Ritz/QPS constants, and the two new automatic-promotion hostile
+fixtures.  This program imports neither the primary implementation nor any
+primary result.  It does not turn the fixed-standard-representation theorem
+or the conditional completion theorem into an actual all-shape Q3 common
+alpha, and it closes no all-order oscillator/QPS or GNS-gap parent.
 """
 
 from __future__ import annotations
@@ -29,7 +25,7 @@ from pathlib import Path
 from typing import Any, Mapping, Sequence
 
 
-__version__ = "2.3.0"
+__version__ = "2.4.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = (
@@ -41,8 +37,8 @@ RESULT_ID = (
     "COMMON-ALPHA-CAUCHY-GATE-SPLIT"
 )
 RESULT_NUMBER = "R-167"
-RESULT_VERSION = "v2.3"
-EXPLORATION_ID = "EXP-000815"
+RESULT_VERSION = "v2.4"
+EXPLORATION_ID = "EXP-000818"
 TASK_ID = "T-054"
 CLAIM_ID = "C6-SPACETIME-SIGNATURE"
 
@@ -55,11 +51,11 @@ GATE_REGISTRY = REPO / "claims/GATES.md"
 DEFAULT_OUTPUT = (
     REPO
     / "claims/C6-SPACETIME-SIGNATURE/runs"
-    / f"2026-08-11-independent-{SLUG}/result.json"
+    / f"2026-08-12-independent-{SLUG}-v2-4/result.json"
 )
 
-NEGATIVE_IDS = ('NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY')
-CLOSED_SUBGATES = ('PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY', 'PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION', 'PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION', 'PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION', 'PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR', 'PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP', 'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING', 'PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION', 'PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR', 'PA-CP1-ST8-Q3LOCK-REGISTERED-PERIODIC-SPLIT-IMPLEMENTER-TWO-SIDED-GIBBS-L2-HARD-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-ENVELOPE', 'PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-AND-RITZ-CUTOFF')
+NEGATIVE_IDS = ('NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY', 'NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS', 'NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY')
+CLOSED_SUBGATES = ('PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY', 'PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION', 'PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION', 'PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION', 'PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR', 'PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP', 'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING', 'PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION', 'PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR', 'PA-CP1-ST8-Q3LOCK-REGISTERED-PERIODIC-SPLIT-IMPLEMENTER-TWO-SIDED-GIBBS-L2-HARD-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-ENVELOPE', 'PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-AND-RITZ-CUTOFF', 'PA-CP1-ST8-Q3LOCK-FIXED-FINITE-FAITHFUL-GIBBS-STANDARD-FORM-POINT-STRONGSTAR-OBSERVABLE-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-CONDITIONAL-BIDIRECTIONAL-ALL-SHAPE-POINT-NORM-CAUCHY-C0-AUTOMORPHISM-COMPLETION', 'PA-CP1-ST8-Q3LOCK-FIRST-LOCAL-HOMOLOGICAL-RANK-TWO-GENERATOR-QPS-NORM-AND-RITZ-CUTOFF')
 V2_1_CLOSED_SUBGATES = (
     'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION',
     'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL',
@@ -74,6 +70,11 @@ V2_3_CLOSED_SUBGATES = (
     'PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-ENVELOPE',
     'PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-AND-RITZ-CUTOFF',
 )
+V2_4_CLOSED_SUBGATES = (
+    'PA-CP1-ST8-Q3LOCK-FIXED-FINITE-FAITHFUL-GIBBS-STANDARD-FORM-POINT-STRONGSTAR-OBSERVABLE-CUTOFF-REMOVAL',
+    'PA-CP1-ST8-Q3LOCK-CONDITIONAL-BIDIRECTIONAL-ALL-SHAPE-POINT-NORM-CAUCHY-C0-AUTOMORPHISM-COMPLETION',
+    'PA-CP1-ST8-Q3LOCK-FIRST-LOCAL-HOMOLOGICAL-RANK-TWO-GENERATOR-QPS-NORM-AND-RITZ-CUTOFF',
+)
 V2_1_NEGATIVE_IDS = (
     'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT',
     'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT',
@@ -84,29 +85,35 @@ V2_2_NEGATIVE_IDS = (
 V2_3_NEGATIVE_IDS = (
     'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY',
 )
+V2_4_NEGATIVE_IDS = (
+    'NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS',
+    'NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY',
+)
 YAROTSKII_QPS_SOURCE = "https://doi.org/10.1070/RM2006v061n02ABEH004323"
 
 OPEN_GATES = ('PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA', 'PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY', 'PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS', 'PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE', 'PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY')
 
 NO_OVERCLAIM = (
-    "This independent verifier retains every v2.2 fixture and independently "
-    "reconstructs the paired-history Gibbs-L2 rate, connected geometric envelope, "
-    "actual second-order onsite-resolvent coefficient, uniform Gram-tail cutoff "
-    "bound, and UHF forward-limit obstruction. The actual Q3 history and split-"
-    "implementer theorem is restricted to the registered fixed-beta periodic "
-    "compact-source family and is not an arbitrary-observable estimate. The "
-    "connected theorem is conditional, the Ritz statement requires a separate "
-    "uniform tau_M tail, and the coefficient theorem is second order only. It does "
-    "not prove an arbitrary-boundary history bound, n-to-infinity Trotter "
-    "convergence, all-shape Cauchy compatibility, all-exhaustion common alpha, "
-    "group/generator completion, a phase-KMS quotient, connected rank-two "
-    "unbounded block diagonalization, all-order oscillator QPS transfer, an "
-    "oscillator-lattice broken-sector temporal mass or GNS gap, regulator removal, "
-    "a continuum, physical-empty comparison, prospective blind validation, C6, "
-    "CP1, physical Sector A, or Pre-A closure. It proves neither an onsite-"
-    "interspersed local measured-Renyi estimate nor two-phase QPS for the exact "
-    "oscillator lattice. Neither the UHF fixture nor the earlier rank-two fixture "
-    "is a Q3 dynamics, locality, coercivity, or gap no-go."
+    "This independent verifier retains every v2.3 fixture and reconstructs the "
+    "fixed-member standard-form rates and matrix probe, conditional bidirectional "
+    "C0 arithmetic, sharp first homological generator and Ritz/QPS constants, and "
+    "the disconnected-spectator and Ritz ordinary-norm hostile fixtures without "
+    "importing the primary implementation. The standard-form result is one fixed "
+    "finite faithful Gibbs representation at a time; the moving R^(-1/5) corridor "
+    "is not a common-representation strong-star rate. The C0 theorem assumes, but "
+    "does not prove, all-shape point-norm Cauchy control for both signs. It identifies "
+    "no local generator and no phase-KMS quotient. The generator result is the first "
+    "parity-equivariant coefficient and exact second-order low-block match only, not "
+    "a third-order or all-order series. The two new negatives reject only automatic "
+    "raw global scalar-Feshbach connectedness and cutoff-uniform ordinary bounded-"
+    "operator SW smallness; they do not reject linked-cluster or relative-form/QPS "
+    "routes. This verifier proves no arbitrary-boundary history bound, n-to-infinity "
+    "Trotter convergence, all-shape Cauchy compatibility, all-exhaustion common "
+    "alpha, onsite-interspersed local measured-Renyi estimate, rank-two unbounded "
+    "block diagonalization, all-order oscillator transfer, two-phase QPS for the "
+    "exact oscillator lattice, broken-sector temporal mass or GNS gap, regulator "
+    "removal, continuum, physical-empty comparison, prospective blind validation, "
+    "C6, CP1, physical Sector A, or Pre-A closure."
 )
 Polynomial = tuple[Fraction, ...]
 
@@ -1908,6 +1915,182 @@ def v2_3_connected_and_implementer_fixture() -> dict[str, Any]:
     }
 
 
+def v2_4_standard_form_c0_and_generator_fixture() -> dict[str, Any]:
+    """Independent Fraction reconstruction of every v2.4 exact fixture."""
+
+    spatial_dimension = 3
+    coordination = 2 * spatial_dimension
+    box_side_upper_factor = 3
+    edge_growth_coefficient = coordination * box_side_upper_factor**2
+    fixed_radius = 2**5
+    fixed_rows = []
+    for cutoff in (2**2, 2**3):
+        per_leg = Fraction(
+            edge_growth_coefficient * fixed_radius**3,
+            cutoff**8,
+        )
+        fixed_rows.append(
+            {
+                "R0": fixed_radius,
+                "L": cutoff,
+                "per_leg": per_leg,
+                "two_leg_squared": 2 * per_leg**2,
+            }
+        )
+
+    rotation_rows = []
+    for index in (3, 7):
+        denominator = index**2 + 1
+        cosine = Fraction(index**2 - 1, denominator)
+        sine = Fraction(2 * index, denominator)
+        leg_squared = Fraction(4, denominator)
+        observable_squared = Fraction(16 * index**2, denominator**2)
+        core_squared = leg_squared * Fraction(1, 5)
+        rotation_rows.append(
+            {
+                "n": index,
+                "cosine": cosine,
+                "sine": sine,
+                "unitarity_residual": cosine**2 + sine**2 - 1,
+                "plus_squared": leg_squared,
+                "minus_squared": leg_squared,
+                "observable_squared": observable_squared,
+                "core_squared": core_squared,
+                "core_bound_holds": core_squared <= leg_squared,
+            }
+        )
+
+    c0_n = 10
+    c0_m = 20
+    time_window = 1
+    generator_difference = abs(Fraction(1, c0_n) - Fraction(1, c0_m))
+    positive_cauchy_bound = 2 * time_window * generator_difference
+    negative_cauchy_bound = 2 * time_window * generator_difference
+    limit_error_bound = Fraction(2 * time_window, c0_n)
+    exponent_composition = 2 + 3
+    exponent_inverse = 2 + (-2)
+
+    exp_a = 2
+    epsilon = Fraction(1, 100)
+    gamma = 2
+    tau_m = Fraction(1, 1000)
+    parity_labels = (1, -1, 1, -1)
+    transition_pairs = ((2, 0), (3, 1))
+    parity_equivariant = all(
+        parity_labels[high] == parity_labels[low]
+        for high, low in transition_pairs
+    )
+    d_amplitudes = tuple(epsilon / gamma for _ in transition_pairs)
+    skew_entries = tuple(
+        (high, low, amplitude, low, high, -amplitude)
+        for (high, low), amplitude in zip(transition_pairs, d_amplitudes)
+    )
+    homological_amplitudes = tuple(gamma * amplitude for amplitude in d_amplitudes)
+    edge_norm_bound = max(abs(amplitude) for amplitude in d_amplitudes)
+    qps_bound = 2 * coordination * exp_a * edge_norm_bound
+    edge_cutoff_bound = tau_m / gamma
+    qps_cutoff_bound = 2 * coordination * exp_a * edge_cutoff_bound
+    second_order_scalar = -(epsilon**2) / gamma
+
+    spectator_gamma = 2
+    spectator_delta = 1
+    spectator_epsilon = Fraction(1, 10)
+    coupling_weights_squared = (1, 4)
+    spectator_resolvent = (
+        Fraction(1, spectator_gamma),
+        Fraction(1, spectator_gamma + spectator_delta),
+    )
+    self_energy_diagonal = tuple(
+        spectator_epsilon**2 * weight * resolvent
+        for weight in coupling_weights_squared
+        for resolvent in spectator_resolvent
+    )
+    self_energy_mixed = (
+        self_energy_diagonal[0]
+        - self_energy_diagonal[1]
+        - self_energy_diagonal[2]
+        + self_energy_diagonal[3]
+    ) / 4
+    spectator_low_diagonal = (0, 1, 0, 1)
+    feshbach_diagonal = tuple(
+        low - sigma
+        for low, sigma in zip(spectator_low_diagonal, self_energy_diagonal)
+    )
+    feshbach_mixed = (
+        feshbach_diagonal[0]
+        - feshbach_diagonal[1]
+        - feshbach_diagonal[2]
+        + feshbach_diagonal[3]
+    ) / 4
+
+    bond_coefficient = Fraction(1, 4)
+    ritz_gamma = 2
+    ritz_rows = []
+    for cutoff in (3, 15):
+        q_norm_lower_squared = Fraction(cutoff, 2)
+        bond_expectation = cutoff + 1
+        smallness_lower = bond_coefficient * bond_expectation / ritz_gamma
+        ritz_rows.append(
+            {
+                "M": cutoff,
+                "q_norm_lower_squared": q_norm_lower_squared,
+                "bond_expectation": bond_expectation,
+                "smallness_lower": smallness_lower,
+            }
+        )
+
+    return {
+        "standard_form": {
+            "fixed_rows": fixed_rows,
+            "rotation_rows": rotation_rows,
+            "faithful_rho_determinant": Fraction(4, 25),
+            "fixed_member_only": True,
+            "moving_family_rate": False,
+        },
+        "C0_completion": {
+            "n": c0_n,
+            "m": c0_m,
+            "T": time_window,
+            "generator_difference": generator_difference,
+            "positive_cauchy_bound": positive_cauchy_bound,
+            "negative_cauchy_bound": negative_cauchy_bound,
+            "limit_error_bound": limit_error_bound,
+            "composition_exponent": exponent_composition,
+            "inverse_exponent": exponent_inverse,
+            "actual_Q3_Cauchy": False,
+            "generator_identified": False,
+            "KMS_identified": False,
+        },
+        "first_generator": {
+            "parity_labels": parity_labels,
+            "transition_pairs": transition_pairs,
+            "parity_equivariant": parity_equivariant,
+            "d_amplitudes": d_amplitudes,
+            "skew_entries": skew_entries,
+            "homological_amplitudes": homological_amplitudes,
+            "edge_norm_bound": edge_norm_bound,
+            "qps_bound": qps_bound,
+            "edge_cutoff_bound": edge_cutoff_bound,
+            "qps_cutoff_bound": qps_cutoff_bound,
+            "second_order_scalar": second_order_scalar,
+            "third_order": False,
+            "all_order": False,
+        },
+        "spectator_Feshbach": {
+            "resolvent": spectator_resolvent,
+            "self_energy_diagonal": self_energy_diagonal,
+            "self_energy_mixed_ZZ": self_energy_mixed,
+            "feshbach_mixed_ZZ": feshbach_mixed,
+            "raw_global_connectedness": False,
+        },
+        "Ritz_norm_hostile": {
+            "rows": ritz_rows,
+            "ordinary_norm_uniform": False,
+            "relative_form_no_go": False,
+        },
+    }
+
+
 def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     """Bind to the manifest/certificate without reading primary outputs."""
 
@@ -2006,6 +2189,13 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         "v2_3_exact_fixture",
         "v2_2_checkpoint_synthesis",
         "v2_3_checkpoint_synthesis",
+        "fixed_finite_faithful_gibbs_standard_form_point_strongstar_observable_cutoff_removal",
+        "conditional_bidirectional_all_shape_point_norm_cauchy_c0_automorphism_completion",
+        "first_local_homological_rank_two_generator_qps_norm_and_ritz_cutoff",
+        "global_scalar_feshbach_disconnected_spectator_no_go",
+        "ritz_cutoff_ordinary_bounded_operator_sw_smallness_no_go",
+        "v2_4_exact_fixture",
+        "v2_4_checkpoint_synthesis",
     ):
         audit.check(
             f"manifest retained/new section {section}",
@@ -2274,6 +2464,120 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         "exact proof-first DEFERRED or exact local eight-field ISSUED checkpoint",
         "authority",
     )
+    checkpoint_v24 = manifest.get("v2_4_checkpoint_synthesis")
+    deferred_v24 = {
+        "status": "DEFERRED",
+        "pdf_issued": False,
+        "workflow": (
+            "No intermediate PDF is issued for R-167 v2.4. Preserve every "
+            "v2.3 and earlier source/PDF pair as historical evidence; issue "
+            "one R-167-only v2.4 gate-level synthesis after the primary, "
+            "non-importing independent, integrated, formal-authority, "
+            "generated-surface, source-form, freshness, dual-extraction, "
+            "strict-release, and visual-review gates pass. R-168 v1.3 "
+            "remains historical and is not reissued."
+        ),
+    }
+    issued_v24_fields = {
+        "status", "source", "pdf", "source_sha256", "pdf_sha256",
+        "pages", "workflow", "visual_qa",
+    }
+    issued_v24_workflow = (
+        "No per-lemma or intermediate PDF was issued. One R-167 v2.4 "
+        "gate-level synthesis source/PDF pair was issued only after the "
+        "primary, non-importing independent, integrated, formal-authority, "
+        "generated-surface, source-form, freshness, dual-extraction, "
+        "strict-release, and visual-review checks passed. R-168 v1.3 "
+        "remains historical and is not reissued."
+    )
+    source_rel_v24 = (
+        checkpoint_v24.get("source") if isinstance(checkpoint_v24, dict) else None
+    )
+    pdf_rel_v24 = (
+        checkpoint_v24.get("pdf") if isinstance(checkpoint_v24, dict) else None
+    )
+    source_path_v24 = (
+        REPO / source_rel_v24 if isinstance(source_rel_v24, str) else None
+    )
+    pdf_path_v24 = REPO / pdf_rel_v24 if isinstance(pdf_rel_v24, str) else None
+    pages_v24 = (
+        checkpoint_v24.get("pages") if isinstance(checkpoint_v24, dict) else None
+    )
+    pages_v24_valid = (
+        isinstance(pages_v24, int)
+        and not isinstance(pages_v24, bool)
+        and pages_v24 > 0
+    )
+    visual_qa_v24 = (
+        f"All {pages_v24} rendered pages were reviewed at readable resolution "
+        "with zero clipping, overlap, broken equations, unreadable identifiers, "
+        "black glyphs, or malformed page transitions; pypdf and pdfplumber each "
+        f"extracted {pages_v24}/{pages_v24} nonempty pages; the build reported "
+        "OVERFULL-HBOX 0."
+        if pages_v24_valid
+        else None
+    )
+    source_hash_actual_v24 = (
+        hashlib.sha256(source_path_v24.read_bytes()).hexdigest()
+        if source_path_v24 is not None and source_path_v24.is_file()
+        else None
+    )
+    pdf_hash_actual_v24 = (
+        hashlib.sha256(pdf_path_v24.read_bytes()).hexdigest()
+        if pdf_path_v24 is not None and pdf_path_v24.is_file()
+        else None
+    )
+    source_pin_v24 = (
+        checkpoint_v24.get("source_sha256")
+        if isinstance(checkpoint_v24, dict)
+        else None
+    )
+    pdf_pin_v24 = (
+        checkpoint_v24.get("pdf_sha256")
+        if isinstance(checkpoint_v24, dict)
+        else None
+    )
+    issued_v24_valid = (
+        isinstance(checkpoint_v24, dict)
+        and set(checkpoint_v24) == issued_v24_fields
+        and checkpoint_v24.get("status")
+        == "ISSUED AS ONE GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION"
+        and isinstance(source_rel_v24, str)
+        and source_rel_v24.startswith("claims/C6-SPACETIME-SIGNATURE/notes/")
+        and source_rel_v24.endswith(".tex.txt")
+        and ".." not in Path(source_rel_v24).parts
+        and isinstance(pdf_rel_v24, str)
+        and pdf_rel_v24 == source_rel_v24.removesuffix(".tex.txt") + ".pdf"
+        and checkpoint_v24.get("workflow") == issued_v24_workflow
+        and checkpoint_v24.get("visual_qa") == visual_qa_v24
+        and pages_v24_valid
+        and isinstance(source_pin_v24, str)
+        and len(source_pin_v24) == 64
+        and set(source_pin_v24) <= lowercase_hex
+        and isinstance(pdf_pin_v24, str)
+        and len(pdf_pin_v24) == 64
+        and set(pdf_pin_v24) <= lowercase_hex
+        and source_path_v24 is not None
+        and pdf_path_v24 is not None
+        and source_path_v24.is_file()
+        and pdf_path_v24.is_file()
+        and source_hash_actual_v24 == source_pin_v24
+        and pdf_hash_actual_v24 == pdf_pin_v24
+        and pdf_path_v24.stat().st_mtime_ns >= source_path_v24.stat().st_mtime_ns
+    )
+    audit.check(
+        "manifest v2.4 checkpoint lifecycle",
+        checkpoint_v24 == deferred_v24 or issued_v24_valid,
+        {
+            "metadata": checkpoint_v24,
+            "deferred_exact": checkpoint_v24 == deferred_v24,
+            "issued_exact": issued_v24_valid,
+            "source_sha256": source_hash_actual_v24,
+            "pdf_sha256": pdf_hash_actual_v24,
+        },
+        "exact proof-first DEFERRED or exact R-167-only eight-field ISSUED checkpoint",
+        "authority",
+    )
     audit.check(
         "manifest v2.2 theorem tokens",
         "p_i^10/chi" in manifest.get("actual_q3_static_fifth_moment_and_elliptic_embedding", {}).get("virial_identity", "")
@@ -2348,6 +2652,92 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         manifest.get("v2_3_exact_fixture") == expected_v23_fixture,
         manifest.get("v2_3_exact_fixture"),
         expected_v23_fixture,
+        "authority",
+    )
+    audit.check(
+        "manifest v2.4 theorem and negative tokens",
+        "R0^3 L^(-8)" in manifest.get(
+            "fixed_finite_faithful_gibbs_standard_form_point_strongstar_observable_cutoff_removal",
+            {},
+        ).get("fixed_member_bound", "")
+        and "not a strong-star rate" in manifest.get(
+            "fixed_finite_faithful_gibbs_standard_form_point_strongstar_observable_cutoff_removal",
+            {},
+        ).get("boundary", "")
+        and "both alpha_lambda^t(A) and alpha_lambda^(-t)(A)" in manifest.get(
+            "conditional_bidirectional_all_shape_point_norm_cauchy_c0_automorphism_completion",
+            {},
+        ).get("hypotheses", "")
+        and "(1/2)P[G,V_od]P=-sum_(e,f)T_e^* R T_f" in manifest.get(
+            "first_local_homological_rank_two_generator_qps_norm_and_ritz_cutoff",
+            {},
+        ).get("second_order_match", "")
+        and "+1/800" in manifest.get(
+            "global_scalar_feshbach_disconnected_spectator_no_go", {}
+        ).get("failure", "")
+        and "(M+1)/8" in manifest.get(
+            "ritz_cutoff_ordinary_bounded_operator_sw_smallness_no_go", {}
+        ).get("failure", ""),
+        "standard-form, C0, generator, spectator and Ritz tokens",
+        True,
+        "authority",
+    )
+    expected_v24_fixture = {
+        "standard_form": {
+            "R0": 32,
+            "L_4_per_leg": "27",
+            "L_4_two_leg": "27*sqrt(2)",
+            "L_8_per_leg": "27/256",
+            "L_8_two_leg": "27*sqrt(2)/256",
+            "rotation_n_3_leg_squared": "2/5",
+            "rotation_n_7_leg_squared": "2/25",
+            "rotation_n_3_observable_squared": "36/25",
+            "rotation_n_7_observable_squared": "196/625",
+        },
+        "c0_completion": {
+            "n": 10,
+            "m": 20,
+            "T": 1,
+            "generator_difference": "1/20",
+            "positive_cauchy_bound": "1/10",
+            "negative_cauchy_bound": "1/10",
+            "limit_error_bound_at_n": "1/5",
+        },
+        "first_generator": {
+            "z": 6,
+            "exp_a": 2,
+            "epsilon": "1/100",
+            "Gamma": 2,
+            "tau_M": "1/1000",
+            "edge_norm_bound": "1/200",
+            "qps_bound": "3/25",
+            "edge_cutoff_bound": "1/2000",
+            "qps_cutoff_bound": "3/250",
+            "second_order_scalar": "-1/20000",
+        },
+        "spectator_feshbach": {
+            "Gamma": 2,
+            "E": 0,
+            "epsilon": "1/10",
+            "spectator_energies": [0, 1],
+            "coupling_weights_squared": [1, 4],
+            "resolvent_diagonal": ["1/2", "1/3"],
+            "self_energy_mixed_ZZ": "-1/800",
+            "feshbach_mixed_ZZ": "1/800",
+        },
+        "ritz_norm_hostile": {
+            "c": "1/4",
+            "Gamma": 2,
+            "M_values": [3, 15],
+            "bond_expectations": [4, 16],
+            "smallness_lower_bounds": ["1/2", "2"],
+        },
+    }
+    audit.check(
+        "manifest v2.4 exact fixture",
+        manifest.get("v2_4_exact_fixture") == expected_v24_fixture,
+        manifest.get("v2_4_exact_fixture"),
+        expected_v24_fixture,
         "authority",
     )
     verification = manifest.get("verification", {})
@@ -2485,6 +2875,32 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         "authority",
     )
 
+    audit.check(
+        "certificate v2.4 exact tokens",
+        all(
+            token in certificate
+            for token in (
+                "EXP-000818",
+                "R-167 v2.4",
+                "R_0^3L^{-8}",
+                "point-strong-star",
+                "bidirectional all-shape Cauchy",
+                "\\|G\\|_a\\le {3\\over25}",
+                "-{1\\over20000}P",
+                "-{1\\over800}",
+                "{M+1\\over8}",
+                "No v2.4 PDF is issued",
+                "v2_4_checkpoint_synthesis",
+                "R-168 v1.3 remains historical and is not reissued",
+                *V2_4_CLOSED_SUBGATES,
+                *V2_4_NEGATIVE_IDS,
+            )
+        ),
+        "all v2.4 tokens present",
+        True,
+        "authority",
+    )
+
     formal_missing: list[str] = []
 
     def formal_require(condition: bool, label: str) -> None:
@@ -2493,7 +2909,7 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         elif staged:
             formal_missing.append(label)
         else:
-            raise AssertionError("missing formal v2.3 authority: " + label)
+            raise AssertionError("missing formal v2.4 authority: " + label)
 
     exploration_records = [
         json.loads(line)
@@ -2507,7 +2923,7 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     result_lines = RESULT_LEDGER.read_text(encoding="utf-8").splitlines()
     formal_require(
         any(RESULT_NUMBER in line and RESULT_VERSION in line for line in result_lines),
-        "formal result R-167 v2.3",
+        "formal result R-167 v2.4",
     )
     negative_text = NEGATIVE_REGISTRY.read_text(encoding="utf-8")
     for identifier in NEGATIVE_IDS:
@@ -3380,6 +3796,122 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
         "scope",
     )
 
+    v24 = v2_4_standard_form_c0_and_generator_fixture()
+    standard_v24 = v24["standard_form"]
+    audit.check(
+        "v2.4 fixed-member standard-form rates",
+        standard_v24["fixed_rows"]
+        == [
+            {
+                "R0": 32,
+                "L": 4,
+                "per_leg": Fraction(27),
+                "two_leg_squared": Fraction(1458),
+            },
+            {
+                "R0": 32,
+                "L": 8,
+                "per_leg": Fraction(27, 256),
+                "two_leg_squared": Fraction(729, 32768),
+            },
+        ]
+        and standard_v24["faithful_rho_determinant"] == Fraction(4, 25)
+        and standard_v24["fixed_member_only"]
+        and not standard_v24["moving_family_rate"],
+        standard_v24,
+        "R0=32; per-leg 27 and 27/256; fixed member only",
+        "v2.4-standard-form",
+    )
+    rotation_v24 = standard_v24["rotation_rows"]
+    audit.check(
+        "v2.4 nonimporting standard-form matrix probe",
+        all(row["unitarity_residual"] == 0 for row in rotation_v24)
+        and [row["plus_squared"] for row in rotation_v24]
+        == [Fraction(2, 5), Fraction(2, 25)]
+        and [row["minus_squared"] for row in rotation_v24]
+        == [Fraction(2, 5), Fraction(2, 25)]
+        and [row["observable_squared"] for row in rotation_v24]
+        == [Fraction(36, 25), Fraction(196, 625)]
+        and all(row["core_bound_holds"] for row in rotation_v24),
+        rotation_v24,
+        "two faithful legs, right-core bound and observable convergence",
+        "v2.4-standard-form",
+    )
+    c0_v24 = v24["C0_completion"]
+    audit.check(
+        "v2.4 bidirectional C0 completion arithmetic",
+        c0_v24["generator_difference"] == Fraction(1, 20)
+        and c0_v24["positive_cauchy_bound"]
+        == c0_v24["negative_cauchy_bound"]
+        == Fraction(1, 10)
+        and c0_v24["limit_error_bound"] == Fraction(1, 5)
+        and c0_v24["composition_exponent"] == 5
+        and c0_v24["inverse_exponent"] == 0
+        and not c0_v24["actual_Q3_Cauchy"]
+        and not c0_v24["generator_identified"]
+        and not c0_v24["KMS_identified"],
+        c0_v24,
+        "1/20, bidirectional 1/10, limit 1/5; conditional only",
+        "v2.4-C0",
+    )
+    generator_v24 = v24["first_generator"]
+    audit.check(
+        "v2.4 sharp parity homological generator",
+        generator_v24["parity_equivariant"]
+        and generator_v24["homological_amplitudes"]
+        == (Fraction(1, 100), Fraction(1, 100))
+        and generator_v24["edge_norm_bound"] == Fraction(1, 200)
+        and generator_v24["qps_bound"] == Fraction(3, 25)
+        and generator_v24["edge_cutoff_bound"] == Fraction(1, 2000)
+        and generator_v24["qps_cutoff_bound"] == Fraction(3, 250)
+        and generator_v24["second_order_scalar"] == -Fraction(1, 20000)
+        and not generator_v24["third_order"]
+        and not generator_v24["all_order"],
+        generator_v24,
+        "parity, [K,G]=V_od, 1/200, 3/25, 3/250, -1/20000",
+        "v2.4-generator",
+    )
+    spectator_v24 = v24["spectator_Feshbach"]
+    audit.check(
+        "v2.4 disconnected spectator Feshbach coefficient",
+        spectator_v24["resolvent"] == (Fraction(1, 2), Fraction(1, 3))
+        and spectator_v24["self_energy_mixed_ZZ"] == -Fraction(1, 800)
+        and spectator_v24["feshbach_mixed_ZZ"] == Fraction(1, 800)
+        and not spectator_v24["raw_global_connectedness"],
+        spectator_v24,
+        "raw scalar Feshbach mixed coefficient +1/800",
+        "v2.4-spectator-no-go",
+    )
+    ritz_v24 = v24["Ritz_norm_hostile"]
+    audit.check(
+        "v2.4 Ritz ordinary-norm hostile fixture",
+        [row["bond_expectation"] for row in ritz_v24["rows"]] == [4, 16]
+        and [row["smallness_lower"] for row in ritz_v24["rows"]]
+        == [Fraction(1, 2), Fraction(2)]
+        and not ritz_v24["ordinary_norm_uniform"]
+        and not ritz_v24["relative_form_no_go"],
+        ritz_v24,
+        "M=3,15 give fixed-Gamma lower bounds 1/2,2",
+        "v2.4-Ritz-no-go",
+    )
+    audit.check(
+        "v2.4 scoped-boundary flags",
+        standard_v24["fixed_member_only"]
+        and not standard_v24["moving_family_rate"]
+        and not c0_v24["actual_Q3_Cauchy"]
+        and not generator_v24["third_order"]
+        and not generator_v24["all_order"],
+        {
+            "fixed_member": standard_v24["fixed_member_only"],
+            "moving_rate": standard_v24["moving_family_rate"],
+            "actual_Q3_Cauchy": c0_v24["actual_Q3_Cauchy"],
+            "third_order": generator_v24["third_order"],
+            "all_order": generator_v24["all_order"],
+        },
+        "three scoped children plus two implication no-gos",
+        "scope",
+    )
+
     moment_v21 = twentieth_moment_graph_fixture()
     audit.check(
         "v2.1 twentieth-moment corridor arithmetic",
@@ -3640,6 +4172,7 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "v2_1_full_oscillator_edge_cluster": edge_v21,
             "v2_2_actual_Q3_fifth_shear_rank_two": v22,
             "v2_3_connected_and_implementer": v23,
+            "v2_4_standard_form_C0_and_generator": v24,
             "pure_bond_identity_closed": True,
             "twentieth_moment_fixed_edge_corridor_reduction_closed": True,
             "conditional_fifth_graph_transport_reduction_closed": True,
@@ -3655,8 +4188,18 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "actual_Q3_fixed_edge_history_bound_closed": True,
             "registered_periodic_split_implementer_two_sided_Gibbs_L2_closed": True,
             "arbitrary_observable_automorphism_estimate_closed": False,
+            "fixed_finite_faithful_standard_form_implementer_strongstar_closed": True,
+            "fixed_finite_point_strongstar_bounded_observable_conjugation_closed": True,
+            "moving_family_R_minus_one_fifth_strongstar_rate_closed": False,
+            "conditional_bidirectional_all_shape_C0_completion_closed": True,
+            "actual_Q3_all_shape_point_norm_Cauchy_closed": False,
+            "local_generator_identified": False,
+            "KMS_quotient_identified": False,
             "conditional_connected_geometric_QPS_envelope_closed": True,
             "actual_second_order_connected_onsite_resolvent_QPS_closed": True,
+            "first_local_homological_rank_two_generator_QPS_Ritz_closed": True,
+            "first_generator_second_order_low_block_match_closed": True,
+            "third_order_generator_coefficient_closed": False,
             "uniform_Ritz_Gram_tail_required": True,
             "all_order_connected_oscillator_elimination_closed": False,
             "forward_local_stabilization_implies_surjectivity": False,
