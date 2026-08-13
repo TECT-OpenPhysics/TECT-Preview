@@ -1216,6 +1216,24 @@ existence on another carrier. All five parents remain OPEN. No per-lemma or
 intermediate v2.7 PDF is issued; synthesis is deferred until the next logical
 gate-level checkpoint.
 
+EXP-000831 / R-167 v2.8 advances one further child without closing a parent.
+For each fixed complete limiting onsite spectral cluster, the registered
+zero-source periodic large-`N` corridor has an eventual fixed-rank Ritz space
+whose exact ground doublet is the local-SW low block. The absolute onsite
+ceiling and the exact coordinate estimate give `Gamma_N>=N^2/sqrt(2)` and
+`J_(M,N)<=121`; rerunning the BDL majorant over the fixed local data makes its
+witnesses uniform in sufficiently large `N`. If
+`N^2>3872sqrt(2)max(alpha_M,beta_M^-1)`, the exact Ritz-restricted model
+interpolation endpoint `lambda=1` has a volume-extensive remainder bounded by
+`1936alpha_M|Lambda|exp[-(ln 8)N sqrt(beta_M/(968sqrt(2)))]`. This is neither
+an arbitrary-Ritz nor an `M`-uniform/full-oscillator theorem. Separately, every
+nonconstant bounded continuous configuration multiplier has a finite-volume
+point-norm jump under the exact full Hamiltonian; the lower bound is its range
+diameter and, for real multipliers, the exact limit is its oscillation. This
+strictly strengthens the v2.7 raw-Weyl special case without rejecting other
+topologies or carriers. All five parents remain OPEN. No v2.8 PDF is issued at
+this proof-first stage.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

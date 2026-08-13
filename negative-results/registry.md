@@ -9,6 +9,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONCONSTANT-CB-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0](#ng-2026-08-13-pre-a-st8-q3lock-nonconstant-cb-configuration-multiplier-full-hamiltonian-point-norm-c0) | include a nonconstant bounded continuous configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian | EXP-000831 / R-167 v2.8 proves the range-diameter lower bound, and exact oscillation for real multipliers. This strictly strengthens the v2.7 raw-Weyl special case and does not reject other topologies or carriers |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE](#ng-2026-08-13-pre-a-st8-q3lock-gevrey-two-asymptotic-remainder-automatic-all-order-sw-convergence) | infer convergent all-order SW from a Gevrey-two majorant and optimally scaled asymptotic remainder | EXP-000828 / R-167 v2.7 gives an actual integral function with exact coefficients `(-1)^n(n!)^2`, a Gevrey-two remainder, and zero formal convergence radius. This does not prove that the actual Q3 SW series diverges |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0](#ng-2026-08-13-pre-a-st8-q3lock-raw-configuration-weyl-full-hamiltonian-point-norm-c0) | include a nonzero raw configuration Weyl character in a point-norm C0 carrier equivariant for the exact finite-volume full Q3 Hamiltonian | a Galilean high-momentum Gaussian gives the sharp small-time norm limit two. This finite-volume carrier obstruction does not reject strong, local-strict, smeared or other common-alpha routes |
 | [NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-HIGH-HIGH-INSERTION-CUTOFF](#ng-2026-08-12-pre-a-st8-q3lock-low-high-ritz-tail-automatic-uniform-high-high-insertion-cutoff) | infer uniform high-high-insertion Ritz convergence from an exact low-high Ritz tail alone | EXP-000826 / R-167 v2.6 has `tau_M=0` but, for the uniformly bounded family `C_j=|e_1+e_j><e_1+e_j|`, the hostile choice `j=M+1` leaves insertion-tail norm and Gram difference one. Each fixed `j` is eventually exact; only the missing uniform supremum fails |
@@ -361,6 +362,39 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-nonconstant-cb-configuration-multiplier-full-hamiltonian-point-norm-c0"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONCONSTANT-CB-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0 -- nonconstant bounded continuous configuration multipliers obstruct finite-volume point-norm C0 dynamics
+
+**Failure mode:** put a nonconstant bounded continuous configuration
+multiplier `M_f` in a concrete C-star carrier equivariant for the exact
+finite-volume full Q3 Hamiltonian and infer point-norm `C0` continuity of its
+orbit.
+
+**Evidence:** EXP-000831 / R-167 v2.8 fixes `H=P^2/(2chi)+V(Q)`, with the exact
+real semibounded coercive finite-volume Q3 polynomial potential. For arbitrary
+`x,y`, take a narrow Gaussian at `x` and boost it by `p_t=chi(y-x)/t`. Its free
+evolution reaches `y`, while the spreading vanishes as `t->0`. The Galilean
+centers remain in a fixed compact segment for `|s|<=|t|`; polynomial
+multiplication is therefore uniformly bounded on the translated Gaussian
+family, and Duhamel comparison with the full flow costs `O(|t|)`. Sending first
+`t->0` and then the Gaussian width to zero gives
+
+`liminf_(t->0,t!=0)||alpha_t(M_f)-M_f||>=diam f(R^d)`.
+
+For real bounded continuous `f`, subtracting the midpoint scalar gives the
+matching upper bound, hence
+
+`lim_(t->0,t!=0)||alpha_t(M_f)-M_f||=osc(f)=sup f-inf f`.
+
+**Consequence:** every nonconstant bounded continuous configuration
+multiplier is excluded from an equivariant finite-volume point-norm `C0`
+carrier for this full Hamiltonian. This strictly strengthens the v2.7 raw
+configuration Weyl record, recovered by `f(q)=exp(i xi dot q)`, while leaving
+that older append-only authority intact. It does not reject strong or
+strong-star dynamics, local-strict or energy topology,
+temporal/energy/resolvent smears, smaller continuous-element algebras,
+fixed-beta OS envelopes or common alpha on another carrier.
 
 <a id="ng-2026-08-13-pre-a-st8-q3lock-gevrey-two-asymptotic-remainder-automatic-all-order-sw-convergence"></a>
 ### NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE -- a Gevrey-two asymptotic remainder does not imply a convergent all-order SW series

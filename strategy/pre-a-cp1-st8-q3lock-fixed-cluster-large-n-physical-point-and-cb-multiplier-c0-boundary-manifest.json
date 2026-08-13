@@ -1,0 +1,93 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-fixed-cluster-large-n-physical-point-and-cb-multiplier-c0-boundary/1.0",
+  "package_id": "PA-CP1-ST8-Q3LOCK-FIXED-CLUSTER-LARGE-N-PHYSICAL-POINT-AND-CB-MULTIPLIER-C0-BOUNDARY-v1",
+  "package_version": "1.0.0",
+  "issued": "2026-08-13",
+  "task_id": "T-054",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "claim_bearing": false,
+  "result_number": "R-167",
+  "result_version": "v2.8",
+  "exploration_id": "EXP-000831",
+  "continues_exploration_id": "EXP-000828",
+  "closed_gate_id": "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FIXED-COMPLETE-SPECTRAL-CLUSTER-RITZ-LARGE-N-PHYSICAL-LAMBDA-ONE-LOCAL-SW-STRETCHED-EXPONENTIAL-EXTENSIVE-REMAINDER",
+  "negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONCONSTANT-CB-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0"
+  ],
+  "retained_boundary_id": "NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY",
+  "authority": "R-167 v2.8 is additive to v2.7. Along the registered zero-source periodic asymptotic corridor r=-N^4, c=N^-4, each fixed complete spectral-cluster onsite Ritz family admits one sufficiently-large-N physical-lambda-one local-SW theorem. The onsite Ritz dimension is fixed, the rank-two ground doublet is the SW low block, and the Bravyi-DiVincenzo-Loss proof is uniformized over the resulting N-uniform onsite norm-gap ratio. Separately, every nonconstant bounded continuous configuration multiplier obstructs point-norm C0 dynamics for the exact finite-volume full Hamiltonian. Both statements are claim-nonbearing T0 results with all five parent gates open.",
+  "literature": {
+    "semiclassical": "B. Simon, Semiclassical analysis of low lying eigenvalues I. Non-degenerate minima: asymptotic expansions, Ann. IHP 38 (1983) 295-308, with the published erratum",
+    "local_sw": "S. Bravyi, D. P. DiVincenzo and D. Loss, Schrieffer-Wolff transformation for quantum many-body systems, Annals of Physics 326 (2011) 2793-2826, arXiv:1105.0675",
+    "used_scope": "Simon fixed-eigenvalue cluster asymptotics select the fixed finite Ritz family. The BDL Section 4.4 recurrence, Proposition 4.2 and Lemma 4.2 are rerun uniformly over the fixed locality, degree, strength and bounded normalized onsite ratio. No standard-SW growing-order comparison is imported."
+  },
+  "fixed_complete_spectral_cluster_ritz": {
+    "corridor": "Set g=lambda=chi=hbar=1, r=-N^4, c=N^-4, E_star=N^8 and h=N^-6. Then h_site,N=E_star[-h^2 Delta/2+W_1].",
+    "cutoff": "Choose a fixed complete limiting harmonic/tunnelling cluster endpoint d_M>=4 with nu_(d_M-1)<nu_(d_M), and C_M strictly between those excitation levels. Let Pi_(M,N)=1_[(-infinity,E_star h C_M)](h_site,N-epsilon_(0,N)). For sufficiently large N it has rank d_M, preserves parity and Aut(Q3), contains the exact ground doublet, and commutes with h_site,N.",
+    "low_high_split": "The finite onsite Ritz Hilbert space is ran Pi_(M,N). Its SW low projector P_(0,N) has rank two and spans phi_(0,N),phi_(1,N); Q_(M,N)=Pi_(M,N)-P_(0,N). The infinite complement is not part of the BDL Hamiltonian.",
+    "absolute_energy_ceiling": "Choose D_M>e_well+C_M. Simon fixed-level asymptotics give an existential N_M such that ||h_site,N Pi_(M,N)||<=D_M N^2 for N>=N_M. D_M includes the ground energy; a shifted-width bound alone is not used.",
+    "gap_and_ratio": "With k_(M,N)=Pi_(M,N)[h_site,N-epsilon_(0,N)-delta_(1,N)P_(1,N)]Pi_(M,N), ker k_(M,N)=ran P_(0,N), Gamma_N=epsilon_(2,N)-epsilon_(0,N)>=N^2/sqrt(2), ||k_(M,N)||<=D_M N^2 and ||k_(M,N)||/Gamma_N<=sqrt(2)D_M.",
+    "scope": "Zero source, periodic coordination z=6, fixed complete spectral-cluster Ritz dimension, and sufficiently large N only. An arbitrary Ritz family or the full unbounded oscillator is excluded."
+  },
+  "physical_point_bound": {
+    "coordinate_inequality": "For y>=0, y<=(y-1)^2+5/4 because the difference is (y-3/2)^2. Hence |x|^2<=4W_1+10 in eight components.",
+    "compressed_coordinate": "Since W_1<=K_h as forms on the spectral subspace, ||Pi_(M,N)|q|^2Pi_(M,N)||<=N^4[10+4D_M N^-6].",
+    "bond_and_strength": "For B_e=(c/2)|q_x-q_y|^2, ||B_(e,M,N)||<=20+8D_M N^-6. The periodic onsite allocation adds at most delta_(1,N)/3 per bond, so J_(M,N)<=120+48D_M N^-6+2delta_(1,N)<=121 after enlarging N_M.",
+    "uniform_bdl_witnesses": "After dividing the interaction by J_(M,N), locality two, degree six and strength one are fixed. Rerunning the BDL majorant with ||k_(M,N)||/Gamma_N<=sqrt(2)D_M gives alpha_M,beta_M>0 common to all N>=N_M. They remain existential and may depend on M and the fixed decomposition.",
+    "smallness": "At the interpolation endpoint lambda=1, eta=J_(M,N)<=121. If N^2>3872sqrt(2)max(alpha_M,beta_M^-1), then eta<min(beta_M Gamma_N/32,Gamma_N/(32alpha_M)).",
+    "order": "n_N=floor[sqrt(beta_M Gamma_N/(8J_(M,N)))]>=floor[N sqrt(beta_M/(968sqrt(2)))].",
+    "remainder": "The local-SW ground-energy error is at most 1936alpha_M|Lambda|exp[-(ln 8)N sqrt(beta_M/(968sqrt(2)))].",
+    "physical_word_firewall": "Physical lambda=1 means only the exact interpolation endpoint of the zero-source Ritz-restricted Hamiltonian along the registered asymptotic model corridor. It is not a physical-world parameter claim, a certified finite-N instance, or full-oscillator cutoff removal."
+  },
+  "exact_fixture": {
+    "inputs": {
+      "alpha": "1",
+      "beta": "1",
+      "J": "121",
+      "N": 74,
+      "Gamma_lower": "5476/sqrt(2)",
+      "volume": "|Lambda|"
+    },
+    "threshold_square_margin": 113,
+    "n_star": 2,
+    "rho": "1369/sqrt(2)",
+    "ratio": "121sqrt(2)/1369",
+    "fixed_order_bound": "7086244/1874161 |Lambda|",
+    "interpretation": "A synthetic worst-case theorem arithmetic oracle only. It does not certify the actual Q3 values alpha_M=beta_M=1 or N_M<=74."
+  },
+  "configuration_multiplier_boundary": {
+    "negative_id": "NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONCONSTANT-CB-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0",
+    "setup": "In fixed finite volume let H=P^2/(2chi)+V(Q), where V is the real semibounded coercive Q3 polynomial and H is self-adjoint. For f in C_b(R^d), let M_f be multiplication by f and alpha_t=Ad(exp(itH/hbar)).",
+    "lower_bound": "For every f in C_b(R^d), liminf_(t->0,t!=0)||alpha_t(M_f)-M_f||>=diam f(R^d).",
+    "real_case": "For every bounded continuous real f, the limit exists and equals osc(f)=sup f-inf f.",
+    "proof": "Fix x,y and a narrow Gaussian at x, boost it by p_t=chi(y-x)/t, and compare the full and free flows. The free packet reaches y while its spreading vanishes as t->0. Along |s|<=|t| the Galilean centers stay on a compact segment, so polynomial multiplication has a uniform Gaussian L2 bound and Duhamel costs O(|t|). Then send the Gaussian width to zero and take the supremum over x,y. For real f the scalar-midpoint upper bound equals osc(f).",
+    "nonduplication": "This strictly strengthens the v2.7 raw-configuration-Weyl negative, recovered by f(q)=exp(i xi.q) with range diameter two. The older record remains immutable history.",
+    "scope": "Finite-volume point-norm obstruction only. It does not reject strong or strong-star dynamics, local-strict or energy topology, temporal/energy/resolvent smears, smaller continuous-element algebras, fixed-beta OS envelopes, or common-alpha existence on another carrier."
+  },
+  "gate_resolution": {
+    "closed_subgates": [
+      "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FIXED-COMPLETE-SPECTRAL-CLUSTER-RITZ-LARGE-N-PHYSICAL-LAMBDA-ONE-LOCAL-SW-STRETCHED-EXPONENTIAL-EXTENSIVE-REMAINDER"
+    ],
+    "retained_open_parents": [
+      "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+      "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+      "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+      "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+      "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+    ]
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_cluster_large_n_physical_point_and_cb_multiplier_c0_boundary.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_cluster_large_n_physical_point_and_cb_multiplier_c0_boundary_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_cluster_large_n_physical_point_and_cb_multiplier_c0_boundary_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-primary-pre-a-cp1-st8-q3lock-fixed-cluster-large-n-physical-point-and-cb-multiplier-c0-boundary/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-independent-pre-a-cp1-st8-q3lock-fixed-cluster-large-n-physical-point-and-cb-multiplier-c0-boundary/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-integrated-pre-a-cp1-st8-q3lock-fixed-cluster-large-n-physical-point-and-cb-multiplier-c0-boundary/result.json"
+  },
+  "checkpoint_synthesis": {
+    "status": "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+    "pdf_issued": false,
+    "workflow": "Proof-first manifest, certificate, executable checks, formal authority and run JSON only; no per-lemma or intermediate PDF."
+  },
+  "no_overclaim": "This T0 claim-nonbearing package closes one zero-source periodic fixed-complete-spectral-cluster Ritz large-N local-SW child at the model interpolation endpoint lambda=1 and registers one finite-volume point-norm carrier obstruction. It proves no certified finite-N physical instance, no arbitrary-Ritz or M-uniform cutoff removal, no full-oscillator theorem, no standard-SW growing-order transfer, no convergent all-order transformation, no phase or QPS transfer, no common alpha or KMS identification, no broken-sector GNS or physical mass gap, no regulator removal or continuum, no physical empty-space comparison, no Round-1, C6, CP1, physical Sector A, or Pre-A closure."
+}

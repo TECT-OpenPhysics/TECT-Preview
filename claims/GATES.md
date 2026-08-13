@@ -76,6 +76,12 @@ remainder child and two scoped negative authorities. It creates no candidate,
 common estimand, prospective prediction, custodian commitment, freeze or
 score. Round-1 remains OPEN.
 
+EXP-000831 / R-167 v2.8 adds one claim-nonbearing fixed-complete-cluster,
+sufficiently-large-`N` Ritz-restricted local-SW child and one scoped
+configuration-multiplier point-norm boundary. It creates no candidate, common
+estimand, microscopic observable map, prospective prediction, custodian
+commitment, freeze or score. Round-1 remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -1571,6 +1577,49 @@ order-dependent standard/local gauge comparison does not transfer the growing
 order automatically. It proves no convergent all-order series, `M`-uniform
 bound, physical `lambda=1` regime, phase transfer or GNS result.
 
+### **PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FIXED-COMPLETE-SPECTRAL-CLUSTER-RITZ-LARGE-N-PHYSICAL-LAMBDA-ONE-LOCAL-SW-STRETCHED-EXPONENTIAL-EXTENSIVE-REMAINDER**
+
+**Statement:** Along the registered zero-source periodic asymptotic corridor
+`g=lambda=chi=hbar=1`, `r=-N^4`, `c=N^-4`, choose one fixed complete limiting
+harmonic/tunnelling spectral-cluster endpoint `d_M>=4`. Use the resulting
+rank-`d_M` onsite spectral Ritz space, with the exact rank-two ground doublet
+as the local-SW low block, and prove a sufficiently-large-`N` volume-extensive
+stretched-exponential local-SW ground-energy remainder at the exact
+Ritz-restricted interpolation endpoint `lambda=1`.
+
+**Status:** CLOSED FOR THE REGISTERED ZERO-SOURCE PERIODIC FIXED-COMPLETE-
+SPECTRAL-CLUSTER RITZ FAMILY, SUFFICIENTLY LARGE `N`, AND THE EXACT MODEL
+INTERPOLATION ENDPOINT ONLY (2026-08-13). EXP-000831 / R-167 v2.8 fixes a
+complete limiting cluster cutoff `C_M` between `nu_(d_M-1)` and `nu_(d_M)`.
+For all sufficiently large `N`,
+`Pi_(M,N)=1_[(-infinity,N^2 C_M)](h_site,N-epsilon_(0,N))` has rank `d_M`,
+preserves parity and `Aut(Q3)`, and contains the exact ground doublet
+`P_(0,N)`. Choosing `D_M>e_well+C_M` gives the absolute ceiling
+`||h_site,N Pi_(M,N)||<=D_M N^2`; the shifted spectral width alone is not used.
+The normalized onsite operator has kernel `ran P_(0,N)`,
+`Gamma_N>=N^2/sqrt(2)`, and `||k_(M,N)||/Gamma_N<=sqrt(2)D_M`.
+
+The coordinate inequality `y<=(y-1)^2+5/4`, whose difference is
+`(y-3/2)^2`, gives `|x|^2<=4W_1+10`. Consequently
+`||Pi_(M,N)|q|^2Pi_(M,N)||<=N^4(10+4D_M N^-6)`, each compressed bond is at
+most `20+8D_M N^-6`, and the periodic coordination-six augmented interaction
+has local strength `J_(M,N)<=120+48D_M N^-6+2delta_(1,N)<=121`. Rerunning the
+Bravyi--DiVincenzo--Loss Section 4.4 recurrence uniformly over the fixed
+locality, degree, unit strength and bounded onsite norm-gap ratio produces
+`alpha_M,beta_M>0` common to all sufficiently large `N`. If
+`N^2>3872sqrt(2)max(alpha_M,beta_M^-1)`, the exact interpolation endpoint
+satisfies the smallness condition and the admissible order obeys
+`n_N>=floor[N sqrt(beta_M/(968sqrt(2)))]`. The local-SW ground-energy error is
+at most
+
+`1936alpha_M|Lambda| exp[-(ln 8)N sqrt(beta_M/(968sqrt(2)))]`.
+
+Here `physical lambda=1` means only the exact interpolation endpoint of this
+registered Ritz-restricted model corridor. This is not a certified finite-`N`
+physical instance, an arbitrary-Ritz or `M`-uniform theorem, full-oscillator
+cutoff removal, a standard-SW growing-order theorem, a convergent
+transformation, phase transfer, common alpha or a GNS-gap result.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -1585,6 +1634,14 @@ stretched-exponential energy remainder. It neither transfers that growing
 order to standard SW nor supplies `M`-uniform Ritz removal, a physical
 `lambda=1` theorem, a convergent oscillator transformation, phase
 intertwining or a GNS gap. This parent remains OPEN.
+
+EXP-000831 / R-167 v2.8 reaches the exact interpolation endpoint `lambda=1`
+only after fixing one complete onsite spectral cluster and taking sufficiently
+large `N` along the registered zero-source corridor. Its BDL witnesses are
+uniform in `N` for that fixed cluster, not in `M`, and the infinite onsite
+complement is excluded from the local-SW Hamiltonian. It supplies no
+full-oscillator block diagonalization, standard-SW growing-order transfer,
+phase intertwiner or GNS map. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -1649,6 +1706,16 @@ character has point-norm jump two at time zero under the exact finite-volume
 full Q3 Hamiltonian. This removes that raw label from an equivariant
 point-norm `C0` carrier, but does not reject local-strict, strong, orbit-smear,
 energy/resolvent-smoothed or other common-alpha constructions. This parent
+remains OPEN.
+
+EXP-000831 / R-167 v2.8 strengthens the raw-Weyl obstruction: every
+nonconstant bounded continuous configuration multiplier has a nonzero
+finite-volume point-norm jump under the exact full Hamiltonian, with lower
+bound equal to the diameter of its range and exact oscillation for real
+multipliers. This excludes those raw multipliers from an equivariant
+point-norm `C0` carrier, but does not reject strong or strong-star dynamics,
+local-strict or energy topologies, temporal/energy/resolvent smears, smaller
+continuous-element algebras or common alpha on another carrier. This parent
 remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
@@ -1838,6 +1905,14 @@ and imposing sufficiently small scaled coupling. Its Gevrey-two asymptotic
 counterfixture shows why this does not yield convergent all-order QPS or
 uniform Ritz removal. This parent remains OPEN.
 
+EXP-000831 / R-167 v2.8 fixes one complete finite spectral cluster before
+taking `N` large. The resulting physical-interpolation-point local-SW
+remainder neither controls growth in the cluster label nor includes the
+infinite onsite complement. The existing ordinary bounded-operator Ritz
+uniformity obstruction therefore remains applicable, and no full-oscillator
+cutoff removal, connected QPS interaction or two-phase transfer follows. This
+parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -1884,6 +1959,11 @@ phasewise GNS intertwiner or coercivity estimate. This parent remains OPEN.
 EXP-000828 / R-167 v2.7 changes neither phase identification nor the missing
 oscillator GNS coercivity. A fixed-`M` local-SW ground-energy remainder is not
 a phasewise infinite-volume spectral-gap theorem. This parent remains OPEN.
+
+EXP-000831 / R-167 v2.8 is a finite-dimensional Ritz-restricted ground-energy
+remainder theorem. It identifies neither ordered infinite-volume oscillator
+phases nor their GNS representations and proves no sectorwise coercivity or
+spectral gap. This parent remains OPEN.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 
