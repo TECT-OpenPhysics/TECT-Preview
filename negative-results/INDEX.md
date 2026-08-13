@@ -5,7 +5,7 @@
 
 Authorities: `negative-results/registry.md`.
 
-**363 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 292 · retraction: 5
+**364 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 293 · retraction: 5
 
 Latest 25 records:
 
@@ -16,6 +16,7 @@ Latest 25 records:
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-SELECTOR-ADD-SUBTRACT-AUTOMATIC-ZERO-SOURCE-TRANSFER`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-selector-add-subtract-automatic-zero-source-transfer) | no_go | remove the bounded selector by putting it in the reference and subtracting it as a small perturbation |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-RITZ-CORNER-UCP-AUTOMATIC-ASYMPTOTIC-MULTIPLICATIVITY-AND-DYNAMICS-INTERTWINING`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-ritz-corner-ucp-automatic-asymptotic-multiplicativity-and-dynamics-intertwining) | no_go | infer norm-asymptotic multiplication and generator intertwining from strong convergence of Ritz projections and the corner UCP state pullback |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-raw-configuration-weyl-full-hamiltonian-point-norm-c0) | no_go | include a nonzero raw configuration Weyl character in a point-norm C0 carrier equivariant for the exact finite-volume full Q3 Hamiltonian |
+| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-POINTWISE-POSITIVE-TIME-TRACE-CLASS-AUTOMATIC-SHORT-TIME-L1-DOMINATION`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-pointwise-positive-time-trace-class-automatic-short-time-l1-domination) | no_go | infer an integrable short-time Duhamel majorant from trace-class energy dressing at every separately fixed positive time |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONESSENTIALLY-CONSTANT-LINFINITY-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-nonessentially-constant-linfinity-configuration-multiplier-full-hamiltonian-point-norm-c0) | no_go | include a nonessentially-constant bounded measurable configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONCONSTANT-CB-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-nonconstant-cb-configuration-multiplier-full-hamiltonian-point-norm-c0) | no_go | include a nonconstant bounded continuous configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-gevrey-two-asymptotic-remainder-automatic-all-order-sw-convergence) | no_go | infer convergent all-order SW from a Gevrey-two majorant and optimally scaled asymptotic remainder |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-static-moments-and-low-graph-automatic-twentieth-history-moment) | no_go | infer the uniform two-orientation twentieth history moment from static exponential-coordinate and fixed energy moments plus low-rung graph control |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-static-gaussian-symmetry-finite-moment-automatic-fixed-edge-history-tail) | no_go | infer the required fixed-edge history tail from static Gaussianity, endpoint symmetry and all finite moments |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-RAW-WEYL-BASIC-RESOLVENT-QUARTIC-POINT-NORM-C0`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-raw-weyl-basic-resolvent-quartic-point-norm-c0) | no_go | make the exact unsplit quartic onsite flow point-norm continuous on an invariant concrete C-star carrier containing a raw momentum Weyl or basic momentum resolvent |
-| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-rank-one-unbounded-block-diagonalization-direct-broken-doublet-import) | no_go | import the published rank-one unbounded Lie--Schwinger theorem directly to finish the broken Q3 doublet phase |
 
 Search without loading the full registry:
 

@@ -9,6 +9,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-POINTWISE-POSITIVE-TIME-TRACE-CLASS-AUTOMATIC-SHORT-TIME-L1-DOMINATION](#ng-2026-08-13-pre-a-st8-q3lock-pointwise-positive-time-trace-class-automatic-short-time-l1-domination) | infer an integrable short-time Duhamel majorant from trace-class energy dressing at every separately fixed positive time | for one compact-resolvent pair `h=V=diag(1,2,...)`, the dressed trace is finite for every `t>0` but behaves as `t^-2`, and the exact two-sided Holder majorant behaves as `1/s` at each endpoint |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-DIMENSION-NORMALIZED-SCHATTEN-SMALLNESS-AUTOMATIC-DFFR-TRANSITION-OR-CONTOUR-SMALLNESS](#ng-2026-08-13-pre-a-st8-q3lock-dimension-normalized-schatten-smallness-automatic-dffr-transition-or-contour-smallness) | replace the raw local DFFR transition/contour norm by a dimension-normalized Schatten norm | a fixed rank-two high-sector transition has operator norm and a selected transition amplitude exactly one while its normalized Schatten `p`-norm is `(2/m)^(1/p)->0` |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-POSITIVE-TIME-ENERGY-DRESSED-TRACE-CONTROL-AUTOMATIC-DFFR-CONTOUR-ENTRY](#ng-2026-08-13-pre-a-st8-q3lock-fixed-positive-time-energy-dressed-trace-control-automatic-dffr-contour-entry) | infer DFFR contour entry from trace-class control at each fixed positive imaginary time | for `h_m=mQ_m`, `V_m=Q_m`, the dressed trace is `m exp(-tm)->0` at every fixed `t>0`, but its supremum over arbitrarily short times is `m` |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-WITNESS-SEPARATED-RITZ-PULLBACKS-AUTOMATIC-LOCALLY-NORMAL-LIMITS](#ng-2026-08-13-pre-a-st8-q3lock-fixed-witness-separated-ritz-pullbacks-automatic-locally-normal-limits) | infer locally normal full-oscillator limits from fixed-witness separated Ritz-corner pullback states alone | parity-related vector states retain one fixed odd witness and norm separation, yet escaping high-energy mass leaves every cluster singular on the compacts when uniform local energy tightness is absent |
@@ -373,6 +374,31 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-pointwise-positive-time-trace-class-automatic-short-time-l1-domination"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-POINTWISE-POSITIVE-TIME-TRACE-CLASS-AUTOMATIC-SHORT-TIME-L1-DOMINATION -- pointwise positive-time trace class is not short-time L1 domination
+
+**Failure mode.** Infer an integrable short-time majorant for the first
+imaginary-time Duhamel coefficient merely because the energy-dressed
+perturbation is trace class at every separately fixed positive time.
+
+**Evidence.** EXP-000840 / R-167 v3.6 takes one fixed Hilbert space
+`l^2(N_(>=1))` and the compact-resolvent pair `h=V=diag(1,2,...)`. Then
+`||exp(-th/2)V exp(-th/2)||_1=exp(-t)/(1-exp(-t))^2` is finite for every
+`t>0` but is asymptotic to `t^-2`. More directly, the Holder majorant for a
+fixed inverse temperature is
+`g_beta(s)=sqrt(F(2s)F(2(beta-s)))`, which is asymptotic to a positive
+constant divided by `s` at one endpoint and symmetrically at the other. It is
+not locally L1.
+
+**Consequence.** Pointwise positive-time trace class does not automatically
+give the integrable majorant used by the v3.6 first-Duhamel Ritz-passage lemma.
+The scope is narrow: because `V=h` commutes with `h`, the actual fixed-beta
+cross integrand is `h exp(-beta h)`, constant in the simplex variable and
+trace class. The fixture therefore does not reject the first Duhamel
+coefficient, DFFR entry, or a future transition-resolved/time-integrated
+estimate. It strengthens the earlier moving-dimension fixed-time boundary
+only against automatic one-time L1 domination.
 
 <a id="ng-2026-08-13-pre-a-st8-q3lock-dimension-normalized-schatten-smallness-automatic-dffr-transition-or-contour-smallness"></a>
 ### NG-2026-08-13-PRE-A-ST8-Q3LOCK-DIMENSION-NORMALIZED-SCHATTEN-SMALLNESS-AUTOMATIC-DFFR-TRANSITION-OR-CONTOUR-SMALLNESS -- normalized Schatten norms can hide a fixed transition

@@ -1330,6 +1330,23 @@ alpha, beta-infinity phase selection, full-oscillator phase theorem or GNS
 gap follows. The historical beta-infinity gate and all five active parents
 remain OPEN. No v3.5 PDF is issued.
 
+EXP-000840 / R-167 v3.6 retains every v3.5 child and adds two scoped T0
+results. First, the inherited full-oscillator fixed-lattice DLR and
+ground-order theorems are specialized exactly to
+`g=lambda=chi=hbar=1`, `r=-N^4`, `c=N^-4`: every `N>=2`,
+`beta>=9/5` has a strict source cusp and two parity-related Euclidean DLR
+phases, while the beta-first ground sequence has explicit positive
+`rho_(star,N)`, a source cusp and oppositely ordered locally normal time-zero
+tangent candidates. The finite-volume full-gap bound retains the denominator
+`m_(L,N)^2`; only its limsup coefficient uses `rho_(star,N)`. Second, an
+`L1` majorant permits spectral-Ritz passage through the first Duhamel
+coefficient. One exact fixture proves that pointwise positive-time trace class
+does not automatically supply that short-time `L1` premise. No common alpha,
+algebraic ground-state identification, DFFR/Ritz branch identity, all-order
+contour theorem or broken-sector GNS gap follows. The historical
+beta-infinity gate and all five active parents remain OPEN. No v3.6 PDF is
+issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

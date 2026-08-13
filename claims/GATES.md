@@ -119,6 +119,11 @@ four exact implication failures. It creates no contestant, microscopic
 observable map, common estimand, prospective prediction, custodian
 commitment, freeze or score. Round-1 remains OPEN.
 
+EXP-000840 / R-167 v3.6 adds one exact registered-corridor specialization and
+one conditional first-Duhamel cutoff lemma. It creates no contestant,
+microscopic observable map, common estimand, prospective prediction,
+custodian commitment, freeze or score. Round-1 remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -691,6 +696,13 @@ energy-tightness premise. It proves no full-Q3 KMS or ground identity, common
 generator, beta-to-infinity phase selection or phasewise gap. The
 positive-imaginary-time trace-class limit is not a beta-to-infinity state
 theorem. This historical gate remains OPEN.
+
+EXP-000840 / R-167 v3.6 specializes already proved Euclidean full-oscillator
+DLR and equal-time ground-order results to the registered `N>=2` corridor, but
+the time-zero tangent candidates are not identified as algebraic ground states
+of one common target dynamics. The first-Duhamel trace lemma supplies neither
+that dynamics nor a beta-to-infinity KMS passage. This historical gate remains
+OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-CONNECTED-SUSCEPTIBILITY-AND-GNS-POINCARE-GATE**
 
@@ -1964,6 +1976,43 @@ full-oscillator cutoff removal at fixed `N,t>0`, not an undressed DFFR block
 estimate, a uniform `t->0` contour bound, an `N`-uniform theorem or a real-time
 dynamics result.
 
+### **PA-CP1-ST8-Q3LOCK-REGISTERED-LARGE-N-CORRIDOR-FULL-OSCILLATOR-DLR-COEXISTENCE-GROUND-ORDER-CUSP-AND-TIME-ZERO-TANGENT-SPECIALIZATION**
+
+**Statement:** Insert the registered large-`N` parameters into the existing
+full-oscillator infrared, ground-order and source-tangent theorems and derive
+one explicit temperature corridor without any Ritz cutoff passage.
+
+**Status:** CLOSED AS AN EXACT SPECIALIZATION OF THE INHERITED FULL-OSCILLATOR
+RESULTS ONLY (2026-08-13). EXP-000840 / R-167 v3.6 sets
+`g=lambda=chi=hbar=1`, `r=-N^4`, `c=N^-4`, and proves for every integer
+`N>=2` that `theta_Q=N^4/6`, `A_0=2N^4/9>I_3` and
+`beta_*(N)<4896/2741<9/5`. Hence every `beta>=9/5` lies in the inherited
+strict Euclidean DLR coexistence regime, with two parity-related tempered DLR
+states and a pressure cusp. It also gives
+`rho_*(N)=N^4/6-J_3N^2/(2sqrt(2))>0`, the exact ground-energy cusp, the
+finite-volume bound `Delta_L<=1/(2V m_L^2)`, and only the justified limit
+`limsup_L V Delta_L<=1/(2rho_*)`. The locally normal time-zero tangent
+candidates retain opposite order, but no common real-time alpha, algebraic
+ground identity, DFFR-branch identification, purity, phase completeness or
+positive broken-sector GNS gap is proved.
+
+### **PA-CP1-ST8-Q3LOCK-POSITIVE-TIME-TRACE-RITZ-REMOVAL-PLUS-L1-DOMINATED-FIRST-DUHAMEL-INTEGRAL-REDUCTION**
+
+**Statement:** Upgrade pointwise positive-time trace-norm Ritz removal to the
+first imaginary-time Duhamel integral under one explicit integrable spectral
+majorant.
+
+**Status:** CLOSED AS A CONDITIONAL FIRST-DUHAMEL RITZ-PASSAGE THEOREM ONLY
+(2026-08-13). EXP-000840 / R-167 v3.6 proves that for compact-resolvent
+`h>=0`, commuting `B>=0` and `V=B^(1/2) C B^(1/2)` with `||C||<=1`,
+`K_beta(s)=exp(-(beta-s)h)V exp(-s h)` satisfies
+`||K_beta(s)||_1<=g_beta(s):=sqrt(F_B(2s)F_B(2(beta-s)))`, where
+`F_B(t)=Tr(B exp(-th))`. If `g_beta` is integrable, increasing spectral Ritz
+compressions converge to `K_beta` in `L1((0,beta);S_1)`, so the first Duhamel
+coefficient passes to the full oscillator. The hypothesis is not proved for
+Q3 and the result sums no multiple insertions, contour entropy or complete
+DFFR expansion.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -2026,6 +2075,12 @@ imaginary-time energy-dressed form perturbation. Its corner maps are UCP but
 have exact norm-one multiplication and generator defects, so they do not
 construct a block diagonalization, connected QPS interaction, algebra
 intertwiner or phasewise oscillator map. This parent remains OPEN.
+
+EXP-000840 / R-167 v3.6 bypasses Ritz cutoffs for the inherited Euclidean DLR
+corridor and conditionally passes only the first imaginary-time Duhamel
+coefficient. It constructs no connected rank-two elimination, all-order QPS
+interaction, phase intertwiner or oscillator GNS map. This parent remains
+OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -2140,6 +2195,12 @@ a compatible multiplicative embedding. The norm-one corner generator defect
 and the absence of all-shape dynamics estimates leave the common-alpha and
 Hamiltonian-to-phase quotient obligations untouched. This parent remains
 OPEN.
+
+EXP-000840 / R-167 v3.6 proves exact full-oscillator Euclidean DLR coexistence
+on the registered corridor and a conditional imaginary-time first-coefficient
+limit, not a spatial point-norm C0 automorphism group. It supplies no
+all-shape Cauchy estimates, common generator or Hamiltonian-to-phase quotient.
+This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -2386,6 +2447,12 @@ Neither result supplies the full-oscillator two-phase QPS theorem, equilibrium
 identity, cutoff-stable phase classification or a uniform excitation gap.
 This parent remains OPEN.
 
+EXP-000840 / R-167 v3.6 directly places the registered corridor inside the
+already proved full-oscillator Euclidean DLR coexistence regime, but does not
+classify all phases, identify the DFFR branches, or supply a two-phase QPS
+intertwiner and common real-time dynamics. The symmetric finite-volume gap
+upper bound is not a positive broken-sector gap. This parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -2483,6 +2550,12 @@ ground states of a common target dynamics, establish the energy identity or
 centered form core, or transfer a positive gap. The positive-imaginary-time
 trace-class limit does not close any of those GNS obligations. This parent
 remains OPEN.
+
+EXP-000840 / R-167 v3.6 gives opposite ordered time-zero tangent candidates
+and a collapse upper bound for the symmetric full finite-volume gap. It does
+not identify a common target generator, prove the ground-state energy identity
+on a centered form core, or establish positive coercivity in either broken
+sector. This parent remains OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 

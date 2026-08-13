@@ -1,0 +1,147 @@
+{
+  "schema": "tect/pre-a-q3lock-registered-large-n-corridor-l1-first-duhamel/1.0",
+  "package_id": "pre-a-cp1-st8-q3lock-registered-large-n-corridor-and-l1-first-duhamel-route-split",
+  "version": "R-167 v3.6",
+  "date": "2026-08-13",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-000840",
+  "prior_exploration_id": "EXP-000839",
+  "claim_bearing": false,
+  "closed_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-REGISTERED-LARGE-N-CORRIDOR-FULL-OSCILLATOR-DLR-COEXISTENCE-GROUND-ORDER-CUSP-AND-TIME-ZERO-TANGENT-SPECIALIZATION",
+    "PA-CP1-ST8-Q3LOCK-POSITIVE-TIME-TRACE-RITZ-REMOVAL-PLUS-L1-DOMINATED-FIRST-DUHAMEL-INTEGRAL-REDUCTION"
+  ],
+  "negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-POINTWISE-POSITIVE-TIME-TRACE-CLASS-AUTOMATIC-SHORT-TIME-L1-DOMINATION"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-POSITIVE-TIME-ENERGY-DRESSED-TRACE-CONTROL-AUTOMATIC-DFFR-CONTOUR-ENTRY",
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-NORM-SEPARATED-PARITY-KMS-PAIRS-AUTOMATIC-DISTINCT-GROUND-LIMITS",
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP"
+  ],
+  "open_parent_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "historical_open_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION"
+  ],
+  "registered_corridor": {
+    "parameters": "Set g=lambda=chi=hbar=1, r=-N^4 and c=N^-4 for an integer N>=2 in the exact positive-lambda full-oscillator Q3LOCK model.",
+    "phase_quantities": "The inherited collective well scale and infrared strength become theta_Q=N^4/6 and A0=8 c theta_Q^2=2N^4/9. Since I3<51/100, A0>I3 for every N>=2.",
+    "thermal_threshold": "Let rho_N=sqrt(I3/A0)=3 sqrt(I3/2)/N^2 and beta_star_N=3 I3 atanh(rho_N)/rho_N. The function atanh(rho)/rho is increasing on (0,1), so beta_star_N decreases in N. Moreover rho_N^2<=9(51/100)/32 and atanh(rho)/rho<=1/(1-rho^2), whence beta_star_N<4896/2741<9/5. Thus every N>=2 and beta>=9/5 lies strictly in the inherited EXP-000782 sufficient phase regime.",
+    "finite_beta_conclusion": "For every N>=2 and beta>=9/5, the exact full-oscillator fixed-lattice model has a strict zero-source pressure cusp and at least two distinct parity-related tempered Euclidean DLR tangent states with opposite collective magnetizations. EXP-000781 supplies their locally normal time-zero restrictions and local Gibbs/DLR energy tightness; EXP-000790 supplies separate phasewise abstract OS/KMS reconstructions, not one common pre-existing alpha.",
+    "order_density": "For x_(beta,N)>0 solving x tanh(x)=3 beta/(2N^4), delta_(beta,N)=N^4[tanh(x)/(6x)-I3/(2beta)]>0. The endpoint pressure slopes are at least sqrt(delta_(beta,N))/8 in absolute value and the DLR magnetizations are at least plus/minus sqrt(delta_(beta,N)).",
+    "ground_quantities": "The inherited half-Watson constant J3 obeys J3^2<=I3<51/100. Therefore rho_star_N=N^4/6-J3 N^2/(2 sqrt(2))=N^2[N^2/6-J3/(2sqrt(2))]>0 for every N>=2.",
+    "ground_conclusion": "Along the inherited beta-first dyadic ground sequence, liminf <S_L^2>/V^2>=rho_star_N, the full finite-volume gap obeys Delta_L^full<=1/(2 V m_L^2) and limsup V Delta_L^full<=1/(2 rho_star_N), and the ground-energy density has e_N(h)-e_N(0)<=-|h|sqrt(rho_star_N)/8. Source differentiation plus local energy compactness gives two distinct parity-related locally normal time-zero tangent candidates with Q_0 expectation at least plus/minus sqrt(rho_star_N).",
+    "novelty_boundary": "The parent EXP-000782/789/790 theorems are unchanged. The new result is the exact simultaneous specialization to the registered large-N model corridor, including one N-independent beta threshold and explicit N-dependent ground-order constants. It bypasses Ritz cutoff passage but does not identify the DFFR Ritz branches with the full-oscillator DLR branches."
+  },
+  "l1_first_duhamel_reduction": {
+    "setup": "Let h>=0 have compact resolvent, let B>=0 commute with h, and let V=B^(1/2) C B^(1/2) for a contraction C. Put F_B(t)=Tr(B exp(-t h)). For beta>0 define K_beta(s)=exp[-(beta-s)h] V exp(-s h), 0<s<beta.",
+    "trace_bound": "Schatten Holder factorization gives ||K_beta(s)||_1<=g_beta(s):=sqrt(F_B(2s) F_B(2(beta-s))).",
+    "ritz_passage": "If g_beta belongs to L1(0,beta) and Pi_M are increasing spectral projections commuting with h, then Pi_M K_beta(s) Pi_M converges to K_beta(s) in trace norm for every s, is dominated by g_beta, and converges in L1((0,beta);S1). Hence the first Duhamel coefficient integral passes through the spectral Ritz limit in trace norm.",
+    "boundary": "This is a conditional first-coefficient reduction. It is neither a DFFR transition-norm estimate nor a contour expansion, and it supplies no Q3 short-time integrable majorant."
+  },
+  "short_time_obstruction": {
+    "fixture": "On l2(N_{>=1}), let h e_n=n e_n and V=B=h. Then for every t>0 the one-time dressed operator exp(-t h/2)V exp(-t h/2) is trace class with norm F_B(t)=sum_(n>=1)n exp(-tn)=exp(-t)/(1-exp(-t))^2.",
+    "failure": "F_B(t) is asymptotic to t^-2 as t decreases to zero and is not locally L1. Thus pointwise positive-time trace class does not automatically supply the short-time L1 domination used by the conditional reduction.",
+    "firewall": "For this commuting fixture the actual fixed-beta cross integrand K_beta(s)=h exp(-beta h) is constant in s and trace class. The fixture does not refute existence of the first Duhamel coefficient, DFFR entry, or a different transition-resolved/time-integrated estimate. It strictly sharpens the earlier moving-dimension fixed-time boundary only at the level of automatic one-time L1 domination."
+  },
+  "exact_fixture": {
+    "corridor": {
+      "inputs": {
+        "N": "2",
+        "I3_upper": "51/100",
+        "common_beta": "9/5"
+      },
+      "derived": {
+        "theta_Q": "8/3",
+        "A0": "32/9",
+        "rho_squared_upper": "459/3200",
+        "beta_upper": "4896/2741",
+        "strict_beta_margin": "189/13705",
+        "A0_above_I3_upper": true
+      }
+    },
+    "ground": {
+      "inputs": {
+        "N": "2",
+        "J3_upper_from_I3": "sqrt(51/100)"
+      },
+      "derived": {
+        "rho_star_lower": "8/3-sqrt(102)/10",
+        "rho_star_positive": true,
+        "gap_volume_coefficient_upper": "1/[2 rho_star_2]"
+      }
+    },
+    "duhamel": {
+      "inputs": {
+        "h_diagonal": ["1", "2", "3"],
+        "B_diagonal": ["1", "2", "3"],
+        "C_diagonal": ["1", "-1", "1"],
+        "beta": "1",
+        "s": "1/3",
+        "Ritz_rank": "2"
+      },
+      "derived": {
+        "cross_trace_norm": "E^(-1)+2E^(-2)+3E^(-3)",
+        "holder_bound_squared": "[E^(-2/3)+2E^(-4/3)+3E^(-2)]*[E^(-4/3)+2E^(-8/3)+3E^(-4)]",
+        "Ritz_tail": "3E^(-3)",
+        "holder_strict": true
+      }
+    },
+    "short_time": {
+      "inputs": {
+        "sample_t": "log(2)",
+        "partial_rank": "4"
+      },
+      "derived": {
+        "full_trace": "2",
+        "partial_trace": "13/8",
+        "tail": "3/8",
+        "small_time_power": "-2",
+        "locally_L1": false,
+        "fixed_beta_cross_trace": "E^(-1)/(1-E^(-1))^2"
+      }
+    }
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_registered_large_n_corridor_and_l1_first_duhamel_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_registered_large_n_corridor_and_l1_first_duhamel_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_registered_large_n_corridor_and_l1_first_duhamel_route_split_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-primary-pre-a-cp1-st8-q3lock-registered-large-n-corridor-and-l1-first-duhamel-route-split/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-independent-pre-a-cp1-st8-q3lock-registered-large-n-corridor-and-l1-first-duhamel-route-split/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-integrated-pre-a-cp1-st8-q3lock-registered-large-n-corridor-and-l1-first-duhamel-route-split/result.json",
+    "staged_lifecycle": "Before formal integration, run all three scripts with --staged --no-store. No run JSON or formal authority is written by this five-file proof package."
+  },
+  "formal_integration_contract": {
+    "event_ordinal": 632,
+    "event_id": "20260813-r-167-v3-6-registered-corridor-full-oscillator",
+    "event_title": "R-167 v3.6 registered corridor full-oscillator phases and L1 Duhamel reduction",
+    "event_keywords": ["EXP-000840", "R-167-v3.6", "DLR-coexistence", "full-oscillator", "ground-order", "large-N-corridor", "no-parent-closure", "short-time-L1"],
+    "theorem_map_version": "1.28.0",
+    "expected_post_formal_counts": {
+      "claims": 49,
+      "results": 168,
+      "gates": 190,
+      "negatives": 364,
+      "explorations": 840,
+      "events": 632,
+      "tasks": 54,
+      "catalog": 3923
+    },
+    "required_links": "EXP-000840, event 632, T-054, ROADMAP, strategy index, proof-evidence map, theorem map 1.28.0, generated compact surfaces, two exact scoped CLOSED results, one new short-time no-go, three reused boundaries, all five OPEN parents, and the historical beta-infinity gate remaining OPEN."
+  },
+  "checkpoint_synthesis": {
+    "status": "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+    "pdf_issued": false,
+    "workflow": "Proof-first manifest, certificate and three executable verifiers only. No v3.6 PDF is issued."
+  },
+  "no_overclaim": "R-167 v3.6 closes only the exact specialization of inherited full-oscillator Euclidean DLR, equal-time ground-order, ground-energy cusp and time-zero tangent results to the registered large-N model corridor, plus a conditional L1-dominated first-Duhamel spectral-Ritz reduction. It proves no common phase-independent real-time alpha, algebraic ground-state identity for the time-zero candidates, purity or exhaustive phase classification, DFFR/Ritz branch identity, DFFR contour entry, automatic Q3 short-time L1 majorant, positive broken-sector GNS gap, continuum or regulator removal, mass gap, physical vacuum or empty-space comparison, Round-1, C6, CP1, physical Sector A or Pre-A. All five active parent gates and the historical beta-infinity gate remain OPEN."
+}

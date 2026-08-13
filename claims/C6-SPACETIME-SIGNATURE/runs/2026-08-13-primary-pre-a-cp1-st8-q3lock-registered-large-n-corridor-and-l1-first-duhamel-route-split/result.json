@@ -1,0 +1,181 @@
+{
+  "assertions": [
+    {
+      "actual": "(['PA-CP1-ST8-Q3LOCK-REGISTERED-LARGE-N-CORRIDOR-FULL-OSCILLATOR-DLR-COEXISTENCE-GROUND-ORDER-CUSP-AND-TIME-ZERO-TANGENT-SPECIALIZATION', 'PA-CP1-ST8-Q3LOCK-POSITIVE-TIME-TRACE-RITZ-REMOVAL-PLUS-L1-DOMINATED-FIRST-DUHAMEL-INTEGRAL-REDUCTION'], ['NG-2026-08-13-PRE-A-ST8-Q3LOCK-POINTWISE-POSITIVE-TIME-TRACE-CLASS-AUTOMATIC-SHORT-TIME-L1-DOMINATION'])",
+      "expected": "(('PA-CP1-ST8-Q3LOCK-REGISTERED-LARGE-N-CORRIDOR-FULL-OSCILLATOR-DLR-COEXISTENCE-GROUND-ORDER-CUSP-AND-TIME-ZERO-TANGENT-SPECIALIZATION', 'PA-CP1-ST8-Q3LOCK-POSITIVE-TIME-TRACE-RITZ-REMOVAL-PLUS-L1-DOMINATED-FIRST-DUHAMEL-INTEGRAL-REDUCTION'), ['NG-2026-08-13-PRE-A-ST8-Q3LOCK-POINTWISE-POSITIVE-TIME-TRACE-CLASS-AUTOMATIC-SHORT-TIME-L1-DOMINATION'])",
+      "group": "topology",
+      "name": "manifest topology",
+      "status": "PASS"
+    },
+    {
+      "actual": "('8/3', '32/9')",
+      "expected": "('8/3', '32/9')",
+      "group": "corridor",
+      "name": "corridor theta and A0",
+      "status": "PASS"
+    },
+    {
+      "actual": "32/9",
+      "expected": ">51/100",
+      "group": "corridor",
+      "name": "corridor phase inequality",
+      "status": "PASS"
+    },
+    {
+      "actual": "459/3200",
+      "expected": "459/3200",
+      "group": "corridor",
+      "name": "rho squared upper",
+      "status": "PASS"
+    },
+    {
+      "actual": "4896/2741",
+      "expected": "4896/2741",
+      "group": "corridor",
+      "name": "common beta exact upper",
+      "status": "PASS"
+    },
+    {
+      "actual": "189/13705",
+      "expected": "189/13705",
+      "group": "corridor",
+      "name": "common beta strict margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "8/3-sqrt(102)/10",
+      "expected": "8/3-sqrt(102)/10",
+      "group": "ground",
+      "name": "ground lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "duhamel",
+      "name": "Duhamel contraction",
+      "status": "PASS"
+    },
+    {
+      "actual": "E^(-1)+2E^(-2)+3E^(-3)",
+      "expected": "E^(-1)+2E^(-2)+3E^(-3)",
+      "group": "duhamel",
+      "name": "Duhamel trace fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "[E^(-2/3)+2E^(-4/3)+3E^(-2)]*[E^(-4/3)+2E^(-8/3)+3E^(-4)]",
+      "expected": "[E^(-2/3)+2E^(-4/3)+3E^(-2)]*[E^(-4/3)+2E^(-8/3)+3E^(-4)]",
+      "group": "duhamel",
+      "name": "Duhamel Holder fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "3E^(-3)",
+      "expected": "3E^(-3)",
+      "group": "duhamel",
+      "name": "Duhamel Ritz tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "('2', '13/8')",
+      "expected": "('2', '13/8')",
+      "group": "short_time",
+      "name": "short-time full and partial traces",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/8",
+      "expected": "3/8",
+      "group": "short_time",
+      "name": "short-time tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "('-2', False)",
+      "expected": "('-2', False)",
+      "group": "short_time",
+      "name": "short-time power and nonintegrability",
+      "status": "PASS"
+    },
+    {
+      "actual": "required tokens present",
+      "expected": "all required tokens present",
+      "group": "certificate",
+      "name": "certificate theorem tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-167 v3.6 closes only the exact specialization of inherited full-oscillator Euclidean DLR, equal-time ground-order, ground-energy cusp and time-zero tangent results to the registered large-N model corridor, plus a conditional L1-dominated first-Duhamel spectral-Ritz reduction. It proves no common phase-independent real-time alpha, algebraic ground-state identity for the time-zero candidates, purity or exhaustive phase classification, DFFR/Ritz branch identity, DFFR contour entry, automatic Q3 short-time L1 majorant, positive broken-sector GNS gap, continuum or regulator removal, mass gap, physical vacuum or empty-space comparison, Round-1, C6, CP1, physical Sector A or Pre-A. All five active parent gates and the historical beta-infinity gate remain OPEN.",
+      "expected": "scope firewalls",
+      "group": "scope",
+      "name": "no-overclaim",
+      "status": "PASS"
+    },
+    {
+      "actual": "ASCII LF final-LF",
+      "expected": "ASCII LF final-LF",
+      "group": "format",
+      "name": "source format",
+      "status": "PASS"
+    },
+    {
+      "actual": "all formal tokens present",
+      "expected": "all formal tokens present",
+      "group": "formal",
+      "name": "formal authority links",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "corridor": {
+      "A0": "32/9",
+      "A0_above_I3_upper": true,
+      "beta_upper": "4896/2741",
+      "ground_lower": "8/3-sqrt(102)/10",
+      "ground_lower_positive": true,
+      "rho_squared_upper": "459/3200",
+      "strict_beta_margin": "189/13705",
+      "symbolic": {
+        "A0": "2*N**4/9",
+        "beta_star_N": "sqrt(2)*sqrt(I_3)*N**2*atanh(3*sqrt(2)*sqrt(I_3)/(2*N**2))",
+        "rho_N": "3*sqrt(2)*sqrt(I_3)/(2*N**2)",
+        "rho_star_N": "-sqrt(2)*J_3*N**2/4 + N**4/6",
+        "theta_Q": "N**4/6"
+      },
+      "theta_Q": "8/3"
+    },
+    "duhamel": {
+      "Ritz_tail": "3E^(-3)",
+      "contraction_norm": 1,
+      "cross_trace_norm": "E^(-1)+2E^(-2)+3E^(-3)",
+      "holder_bound_squared": "[E^(-2/3)+2E^(-4/3)+3E^(-2)]*[E^(-4/3)+2E^(-8/3)+3E^(-4)]",
+      "holder_difference_factor": "q**8*(q - 1)**2*(6*q**6 + 3*q**4 + 6*q**3 + 3*q**2 + 2)",
+      "holder_factor_identity": true,
+      "holder_strict": true
+    },
+    "short_time": {
+      "closed_form": "exp(t)/(exp(t) - 1)**2",
+      "fixed_beta_cross_trace": "E^(-1)/(1-E^(-1))^2",
+      "full_trace": "2",
+      "locally_L1": false,
+      "partial_trace": "13/8",
+      "scaled_limit": "1",
+      "small_time_power": "-2",
+      "tail": "3/8"
+    }
+  },
+  "mode": "formal",
+  "schema": "tect/pre-a-q3lock-registered-large-n-corridor-l1-first-duhamel-run/1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_registered_large_n_corridor_and_l1_first_duhamel_route_split.py": "4bdb27f19f25b66010d16681dd524cc7cba2a16083f0810a5843e296fac148fd",
+    "strategy/pre-a-cp1-st8-q3lock-registered-large-n-corridor-and-l1-first-duhamel-route-split-certificate-260813.md": "a2d89599738532cbed92d9ee716c510d0e6b38a8979cbcbb4a5454bbf4b6618f",
+    "strategy/pre-a-cp1-st8-q3lock-registered-large-n-corridor-and-l1-first-duhamel-route-split-manifest.json": "1ebfe570f6bbaa217ae52f07894bed0df279ae5a1b6d5c52259564bdd734d53d"
+  },
+  "summary": {
+    "failed": 0,
+    "passed": 18,
+    "status": "PASS"
+  },
+  "version": "R-167 v3.6"
+}
