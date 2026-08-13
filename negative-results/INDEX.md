@@ -5,7 +5,7 @@
 
 Authorities: `negative-results/registry.md`.
 
-**356 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 285 · retraction: 5
+**357 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 286 · retraction: 5
 
 Latest 25 records:
 
@@ -14,6 +14,7 @@ Latest 25 records:
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-defect-automatic-n-dependent-two-phase-radius-entry) | no_go | infer eventual two-phase theorem entry from defect `theta_N->0` and positive radius `r_N>0` separately at each `N` |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-SELECTOR-ADD-SUBTRACT-AUTOMATIC-ZERO-SOURCE-TRANSFER`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-selector-add-subtract-automatic-zero-source-transfer) | no_go | remove the bounded selector by putting it in the reference and subtracting it as a small perturbation |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-raw-configuration-weyl-full-hamiltonian-point-norm-c0) | no_go | include a nonzero raw configuration Weyl character in a point-norm C0 carrier equivariant for the exact finite-volume full Q3 Hamiltonian |
+| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONESSENTIALLY-CONSTANT-LINFINITY-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-nonessentially-constant-linfinity-configuration-multiplier-full-hamiltonian-point-norm-c0) | no_go | include a nonessentially-constant bounded measurable configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONCONSTANT-CB-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-nonconstant-cb-configuration-multiplier-full-hamiltonian-point-norm-c0) | no_go | include a nonconstant bounded continuous configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-gevrey-two-asymptotic-remainder-automatic-all-order-sw-convergence) | no_go | infer convergent all-order SW from a Gevrey-two majorant and optimally scaled asymptotic remainder |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-finite-gaps-plus-weakstar-states-automatic-target-generator-and-gns-gap-transfer) | no_go | infer a prescribed target generator and GNS gap from weak-star convergent finite ground states with uniformly positive finite gaps |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-full-oscillator-local-parity-doublet-edge-gap-automatic-volume-uniform-lattice-gap) | no_go | infer a uniform lattice gap from a local parity doublet and edge gap one |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-forward-local-automorphism-limit-automatic-surjectivity-and-inverse-cauchy) | no_go | infer a surjective limiting automorphism and inverse Cauchy convergence from exact forward local stabilization of finite-volume automorphisms |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-extensive-feshbach-self-energy-automatic-qps-locality) | no_go | promote a global extensive Feshbach self-energy norm bound automatically to a quasi-local two-phase QPS interaction norm |
-| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-entropy-finite-moment-dynamic-gaussian-tail-inference) | no_go | promote small relative entropy, all-coefficient Gaussian reference moments and any fixed finite list of tilted moments to the dynamic Gaussian history tail required by the cutoff… |
 
 Search without loading the full registry:
 

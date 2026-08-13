@@ -92,6 +92,12 @@ mathematical children and one implication failure. It creates no contestant,
 microscopic observable map, common estimand, prospective prediction,
 custodian commitment, freeze or score. Round-1 remains OPEN.
 
+EXP-000835 / R-167 v3.1 adds one claim-nonbearing finite-volume
+essential-range multiplier theorem and its joint standard-cylinder scalarity
+corollary. It creates no contestant, microscopic observable map, common
+estimand, prospective prediction, custodian commitment, freeze or score.
+Round-1 remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -1771,6 +1777,29 @@ gives `H|_(Omega-perp)>=Delta`. No exact-Q3 target dynamics, generator
 convergence, energy identity, centered form-core property or broken-sector
 GNS gap is proved.
 
+### **PA-CP1-ST8-Q3LOCK-LINFINITY-CONFIGURATION-MULTIPLIER-ESSENTIAL-RANGE-FULL-HAMILTONIAN-NORM-JUMP-AND-JOINT-STANDARD-CYLINDER-SCALARITY**
+
+**Statement:** For the exact finite-volume full Q3 Hamiltonian, extend the
+configuration-multiplier norm-jump theorem from continuous functions to all
+bounded measurable multipliers using the diameter of the essential range, and
+combine it with the isolated-bond modulation-commutant theorem to classify the
+simultaneously continuous canonical standard one-site cylinder.
+
+**Status:** CLOSED AT FIXED FINITE VOLUME AND INSIDE THE CANONICAL STANDARD
+ONE-SITE CYLINDER ONLY (2026-08-13). EXP-000835 / R-167 v3.1 proves, for every
+`f in L_infinity(R^(8|Lambda|))`,
+`liminf_(t->0,t!=0)||alpha_t(M_f)-M_f||>=diam essran(f)` by
+Lebesgue-point Galilean packets and a fixed-packet polynomial Duhamel estimate
+valid for both time signs. For real `f`, scalar midpoint subtraction gives the
+matching upper bound and the exact limit equals the essential oscillation.
+Combining this with the v3.0 isolated-bilinear-bond classification gives
+`C(beta^(xy)) intersect C(alpha^Lambda) intersect j_x(B(L2(R^8)))=C I`.
+This classifies simultaneous point-norm continuity only in the raw canonical
+standard one-site cylinder. It neither classifies either full continuous
+algebra nor excludes multi-site compacts, temporal smears, resolvent or
+interaction-dressed carriers, local-strict or strong-star dynamics, or a
+common thermodynamic alpha.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -1806,6 +1835,11 @@ criterion, but constructs no oscillator block diagonalization, connected QPS
 interaction, cutoff-compatible phase intertwiner or GNS map. Direct
 full-oscillator theorem applicability or cutoff-stable passage is also not
 proved. This parent remains OPEN.
+
+EXP-000835 / R-167 v3.1 sharpens a finite-volume raw configuration-multiplier
+boundary and a canonical standard-cylinder intersection. It constructs no
+rank-two block diagonalization, connected QPS interaction, cutoff-compatible
+phase intertwiner or GNS map. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -1887,6 +1921,16 @@ the isolated bilinear bond flow and proves that uniform summable
 single-toggle shell responses would imply bidirectional all-shape Cauchy
 convergence. It proves no such response weights for exact quartic Q3 and
 identifies no Hamiltonian-to-OS phase quotient. This parent remains OPEN.
+
+EXP-000835 / R-167 v3.1 proves that every nonessentially-constant
+`L_infinity` configuration multiplier has a full-Hamiltonian point-norm jump
+at least the diameter of its essential range and that the raw standard
+one-site cylinder simultaneously continuous for one isolated bond and the
+full flow is scalar. This strictly strengthens the earlier raw-multiplier
+boundary but leaves dressed, multi-site, smeared, resolvent, local-strict,
+strong-star and state-weighted carriers open. The background-uniform dressed
+bond-form commutator and summable exact-Q3 shell weights remain unproved, so
+this parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -2103,6 +2147,11 @@ are not supplied by the finite-onsite existential source, and no
 full-oscillator block diagonalization, connected QPS interaction or phase
 transfer is proved. This parent remains OPEN.
 
+EXP-000835 / R-167 v3.1 is a fixed-finite-volume multiplier and standard-
+cylinder theorem. It supplies neither an infinite-dimensional two-phase QPS
+theorem nor cutoff-stable passage, a common radius, phase selection or a
+phasewise oscillator intertwiner. This parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -2169,6 +2218,12 @@ positivity, the energy identity and the centered form-core property. Its exact
 `M_2` fixture shows that weak-star ground-state convergence and uniformly
 positive finite gaps alone do not identify that generator. None of the
 model-dependent Q3 premises is established. This parent remains OPEN.
+
+EXP-000835 / R-167 v3.1 classifies finite-volume raw multipliers and one
+canonical standard-cylinder intersection only. It constructs no ordered
+zero-temperature phase, common target generator, centered form core,
+sectorwise Poincare inequality or positive broken-sector implementer. This
+parent remains OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 

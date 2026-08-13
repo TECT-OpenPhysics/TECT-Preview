@@ -9,6 +9,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONESSENTIALLY-CONSTANT-LINFINITY-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0](#ng-2026-08-13-pre-a-st8-q3lock-nonessentially-constant-linfinity-configuration-multiplier-full-hamiltonian-point-norm-c0) | include a nonessentially-constant bounded measurable configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian | EXP-000835 / R-167 v3.1 proves a lower bound by the diameter of the essential range and the exact essential oscillation for real multipliers. It strictly strengthens the v2.8 `C_b` result and the v2.7 raw-Weyl special case without rejecting dressed, smeared or weaker-topology carriers |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER](#ng-2026-08-13-pre-a-st8-q3lock-finite-gaps-plus-weakstar-states-automatic-target-generator-and-gns-gap-transfer) | infer a prescribed target generator and GNS gap from weak-star convergent finite ground states with uniformly positive finite gaps | on `M_2`, `H_n=n|1><1|` has gap `n>=1` and a constant ground state, but `delta_n(|1><0|)=in|1><0|` is not norm Cauchy |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-SELECTOR-ADD-SUBTRACT-AUTOMATIC-ZERO-SOURCE-TRANSFER](#ng-2026-08-13-pre-a-st8-q3lock-selector-add-subtract-automatic-zero-source-transfer) | remove the bounded selector by putting it in the reference and subtracting it as a small perturbation | the all-minus forward-star vector gives reference energy `u` and counterselector expectation `-u`, hence relative ratio one for every `N,u`; additionally `3beta_N/u` diverges at fixed `N` as `u->0`. This rejects only that single-phase removal argument |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY](#ng-2026-08-13-pre-a-st8-q3lock-vanishing-defect-automatic-n-dependent-two-phase-radius-entry) | infer eventual two-phase theorem entry from defect `theta_N->0` and positive radius `r_N>0` separately at each `N` | `theta_N=N^-3` and `r_N=N^-4` both vanish but `theta_N>r_N` for every `N>=2`. Require a common positive lower radius or quantitative comparison |
@@ -366,6 +367,32 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-nonessentially-constant-linfinity-configuration-multiplier-full-hamiltonian-point-norm-c0"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONESSENTIALLY-CONSTANT-LINFINITY-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0 -- bounded measurable configuration multipliers obstruct finite-volume point-norm C0 dynamics
+
+**Failure mode.** Include a nonessentially-constant multiplication operator
+`M_f`, with merely `f in L_infinity(R^(8|Lambda|))`, in a concrete C-star
+carrier on which the exact finite-volume full-Q3 Hamiltonian acts point-norm
+continuously.
+
+**Evidence.** EXP-000835 / R-167 v3.1 chooses Lebesgue points in two
+positive-measure essential-range level sets and uses high-momentum Galilean
+packets whose free density moves between them in time `t`. Polynomial
+Duhamel control at each fixed packet width is `O(|t|)` for both signs.
+Consequently
+`liminf_(t->0,t!=0)||alpha_t(M_f)-M_f||>=diam essran(f)`; for real `f`,
+midpoint subtraction gives the matching upper bound and exact essential
+oscillation. This strictly strengthens the v2.8 bounded-continuous
+configuration-multiplier authority and contains the v2.7 raw configuration
+Weyl result as a special case.
+
+**Consequence.** Remove nonessentially-constant raw configuration multipliers
+from an equivariant finite-volume point-norm C0 carrier. This does not prove
+common-alpha nonexistence, and does not reject multi-site compacts, temporal
+smears, resolvent-smoothed or interaction-dressed carriers, bounded-strict or
+strong-star dynamics, or state-weighted representations. Earlier negative
+records remain immutable history.
 
 <a id="ng-2026-08-13-pre-a-st8-q3lock-finite-gaps-plus-weakstar-states-automatic-target-generator-and-gns-gap-transfer"></a>
 ### NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER -- finite gaps and weak-star states do not identify the target generator

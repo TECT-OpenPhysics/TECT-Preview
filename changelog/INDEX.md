@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**626 accepted events** · latest 25 shown below · machine locator: `index.json`
+**627 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-13 | `20260813-r-167-v3-1-essential-range-multiplier-and-joint` — [R-167 v3.1 essential-range multiplier and joint cylinder scalarity] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000835, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-1-essential-range-multiplier-and-joint) |
 | 2026-08-13 | `20260813-r-167-v3-0-closes-zero-source-star-bond-flow-sh` — [R-167 v3.0 closes zero-source star, bond-flow shell, and GNS-gap transfer reductions] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000834, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-0-closes-zero-source-star-bond-flow-sh) |
 | 2026-08-13 | `20260813-selector-full-oscillator-and-maximal-continuous` — [Selector full-oscillator and maximal continuous-element route split] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000833, R-167 | [bounded page](pages/000619-000668.md#20260813-selector-full-oscillator-and-maximal-continuous) |
 | 2026-08-13 | `20260813-r-167-v2-8-closes-fixed-cluster-large-n-physica` — [R-167 v2.8 closes fixed-cluster large-N physical-point local-SW remainder and strengthens the configuration-multiplier boundary] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000831, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v2-8-closes-fixed-cluster-large-n-physica) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-11 | `20260811-final3-r-167-v2-2-and-r-168-v1-3-issuance-pins` — [FINAL3 R-167 v2.2 and R-168 v1.3 issuance pins supersede event 604] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000813, EXP-000814, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-final3-r-167-v2-2-and-r-168-v1-3-issuance-pins) |
 | 2026-08-11 | `20260811-r-167-v2-2-and-r-168-v1-3-combined-checkpoint-f` — [R-167 v2.2 and R-168 v1.3 combined checkpoint FINAL2 pin correction after lifecycle-aware firewall hardening] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000813, EXP-000814, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-2-and-r-168-v1-3-combined-checkpoint-f) |
 | 2026-08-11 | `20260811-r-167-v2-2-and-r-168-v1-3-combined-gate-level-s` — [R-167 v2.2 and R-168 v1.3 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000813, EXP-000814, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-2-and-r-168-v1-3-combined-gate-level-s) |
-| 2026-08-11 | `20260811-r-168-v1-3-closes-five-scoped-m2-mathematical-c` — [R-168 v1.3 closes five scoped M2 mathematical children and preserves every physical parent] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000814, R-168 | [bounded page](pages/000569-000618.md#20260811-r-168-v1-3-closes-five-scoped-m2-mathematical-c) |
 
 ## Post-cutover pages
 
@@ -49,5 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 619–626 | 8 | [000619-000668.md](pages/000619-000668.md) |
+| 619–627 | 9 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

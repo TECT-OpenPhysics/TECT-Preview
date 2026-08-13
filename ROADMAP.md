@@ -1265,6 +1265,19 @@ identity and a centered form core. The `M_2` fixture shows finite gaps and
 weak-star states alone do not identify the target generator. All five parents
 remain OPEN. No v3.0 PDF is issued.
 
+EXP-000835 / R-167 v3.1 retains every v3.0 child and adds one scoped T0
+finite-volume theorem. Lebesgue-point Galilean packets extend the exact
+full-Hamiltonian configuration-multiplier norm jump to all
+`L_infinity` multipliers, with lower bound `diam essran(f)` and exact
+essential oscillation for real `f`. Together with the v3.0 bond-modulation
+classification, the canonical standard one-site cylinder simultaneously
+continuous for one isolated bond and the full flow is scalar. This strictly
+strengthens the prior raw multiplier boundaries but does not classify either
+full continuous algebra or reject dressed, smeared, resolvent, local-strict,
+strong-star or state-weighted carriers. The exact-Q3 background-uniform
+dressed bond-form commutator, summable shells, common alpha, full-oscillator
+two-phase transfer and target GNS gap remain OPEN. No v3.1 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

@@ -1,0 +1,131 @@
+{
+  "schema": "tect/pre-a-q3lock-linfinity-multiplier-joint-cylinder/1.0",
+  "package_id": "pre-a-cp1-st8-q3lock-linfinity-multiplier-and-joint-standard-cylinder-route-split",
+  "version": "R-167 v3.1",
+  "date": "2026-08-13",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-000835",
+  "prior_exploration_id": "EXP-000834",
+  "claim_bearing": false,
+  "closed_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LINFINITY-CONFIGURATION-MULTIPLIER-ESSENTIAL-RANGE-FULL-HAMILTONIAN-NORM-JUMP-AND-JOINT-STANDARD-CYLINDER-SCALARITY"
+  ],
+  "negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONESSENTIALLY-CONSTANT-LINFINITY-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0"
+  ],
+  "strictly_strengthened_historical_negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONCONSTANT-CB-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0",
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0"
+  ],
+  "historical_bond_negative_subsumed_by_v3_0_classification_ids": [
+    "NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0"
+  ],
+  "open_parent_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "finite_full_hamiltonian": {
+    "setup": "On one fixed finite Q3 volume Lambda, identify the configuration Hilbert space with L2(R^d), d=8|Lambda|. Let H=P^2/(2chi)+V(Q), U_t=exp(-itH/hbar), and alpha_t(A)=U_t^* A U_t, where V is the exact real semibounded coercive Q3 polynomial and H is the self-adjoint closure of its Schwartz-core realization.",
+    "multiplier": "For f in L_infinity(R^d), let M_f be multiplication by f and define D_ess(f)=diameter(essential range of f)=sup{|a-b|:a,b belong to the essential range of f}.",
+    "lower_bound": "For every f in L_infinity(R^d), liminf as t tends to zero through nonzero values of ||alpha_t(M_f)-M_f|| is at least D_ess(f). Thus a nonessentially-constant bounded measurable configuration multiplier is not a point-norm C0 element of the exact finite-volume full-Hamiltonian action.",
+    "real_exact_limit": "If f is real, D_ess(f)=ess sup f-ess inf f. Scalar midpoint subtraction gives ||alpha_t(M_f)-M_f||<=D_ess(f) for every t, so the two-sided nonzero-time limit exists and equals D_ess(f).",
+    "scope": "The theorem is finite-volume and concerns multiplication operators in the canonical Schrodinger representation. It neither classifies every continuous element of the full action nor excludes compact, temporally smeared, resolvent-smoothed, dressed, strict-topology, strong-star or state-weighted carriers."
+  },
+  "lebesgue_packet_proof": {
+    "essential_range_selection": "Given a,b in the essential range and eta>0, the level sets {|f-a|<eta} and {|f-b|<eta} have positive measure. Choose Lebesgue points x,y of precise representatives in those sets and a normalized compactly supported smooth approximate-identity packet phi_(x,epsilon).",
+    "boost": "For t nonzero put p_t=chi(y-x)/t and psi_(t,epsilon)=exp(i p_t.Q/hbar)phi_(x,epsilon). The boost commutes with M_f, so its time-zero expectation is the packet average at x.",
+    "free_density_transport": "For the free group U_t^0, the exact Galilean identity yields |U_t^0 psi_(t,epsilon)(q)|^2=|U_t^0 phi_(x,epsilon)(q-(y-x))|^2. Only the modulus is used; the boosted vector itself need not converge because of its divergent phase.",
+    "two_sided_compact_segment": "For s between zero and t, s/t belongs to [0,1] for both signs of t. The translated packet centers lie on the fixed compact segment x+(s/t)(y-x).",
+    "polynomial_duhamel": "If deg V=m, polynomial translation gives |V(q+a)|<=C_(x,y,V)(1+|q|^m) uniformly for a on that compact segment. Free evolution preserves Schwartz space with locally bounded seminorms. At every fixed epsilon this yields sup_s ||V U_s^0 psi_(t,epsilon)||<=C_epsilon and ||(U_t-U_t^0)psi_(t,epsilon)||<=C_epsilon |t|/hbar.",
+    "expectation_and_limits": "The operator norm dominates the absolute moving-vector expectation. First take the two-sided limit t->0 at fixed x,y,epsilon; then use the approximate identity at the Lebesgue points and finally let eta->0. Taking the supremum over essential-range a,b proves the lower bound.",
+    "quantifier_order": "The safe order is eta, then the two Lebesgue points, then fixed epsilon, then two-sided t->0, then epsilon->0, then eta->0. No epsilon-uniform Duhamel constant is asserted or required."
+  },
+  "joint_standard_cylinder": {
+    "embedding": "For finite Lambda containing a nearest-neighbor bond {x,y}, let j_x(A)=A tensor I_(Lambda minus {x}). Let beta^(xy) be the isolated nonzero bilinear bond flow and alpha^Lambda the exact full-Q3 finite-volume flow.",
+    "prior_bond_classification": "R-167 v3.0 proves that the beta^(xy) point-norm continuous standard cylinders j_x(A) are exactly j_x(M_f) with f in L_infinity(R^8).",
+    "scalar_intersection": "The new full-Hamiltonian theorem applied to the lifted multiplier f(q_x) makes alpha^Lambda point-norm continuity equivalent to f being essentially constant. Therefore C(beta^(xy)) intersect C(alpha^Lambda) intersect j_x(B(L2(R^8))) equals the scalar multiples of I_Lambda.",
+    "boundary": "This is a simultaneous-continuity classification only inside the canonical standard one-site cylinder. It is not a classification of either full continuous-element algebra and is not a no-go for unsplit common dynamics, dressed embeddings, multi-site compacts, temporal smears, resolvent carriers, local-strict carriers or weaker topologies."
+  },
+  "nonduplication": {
+    "current_strongest_boundary": "The new L_infinity result strictly strengthens the v2.8 C_b multiplier negative and contains the v2.7 raw configuration Weyl jump as the case f(q)=exp(i xi.q), whose essential-range diameter is two. The v3.0 multiplication-MASA classification already contains the older nonzero compact-cylinder bond obstruction.",
+    "append_only_history": "All earlier negatives remain immutable historical records. The new negative is the current strongest configuration-multiplier boundary; no separate joint-cylinder negative is registered because joint scalarity is a direct positive corollary of the CLOSED theorem."
+  },
+  "surviving_positive_route": {
+    "statement": "A viable spatial common-alpha route must avoid requiring a nontrivial canonical one-site cylinder to be simultaneously point-norm continuous for every isolated bond subflow and the full Hamiltonian. The v3.0 background-uniform summable single-toggle shell theorem remains the exact sufficient target.",
+    "missing_model_lemma": "For an interaction-adapted or dressed core, prove compatible embeddings and a background-uniform bounded bond-form commutator estimate whose distance profile has summable Z3 shells. Duhamel differentiation would then produce the v3.0 single-toggle weights. No such exact-Q3 estimate or noncollapsing dressed core is proved here.",
+    "literature_firewall": "The audited oscillator and resolvent-algebra dynamics theorems use bounded intersite interactions, subquadratic or Fourier-regular forces, or other hypotheses not met simultaneously by the exact quartic onsite plus unbounded bilinear Q3 coupling. They are not imported as exact-Q3 common-alpha theorems."
+  },
+  "exact_fixture": {
+    "real_step": {
+      "essential_values": [-2, 3],
+      "midpoint": "1/2",
+      "diameter": "5",
+      "midpoint_upper_bound": "5",
+      "packet_gap": "5"
+    },
+    "complex_step": {
+      "essential_values": [[0, 0], [1, 1], [-1, 0]],
+      "pairwise_squared_distances": [2, 1, 5],
+      "diameter_squared": "5",
+      "scope": "lower-bound-only"
+    },
+    "galilean": {
+      "chi": "7/3",
+      "x": [1, -2],
+      "y": [4, 6],
+      "times": ["2/5", "-2/5"],
+      "positive_displacement": [3, 8],
+      "negative_displacement": [3, 8]
+    },
+    "polynomial_translation": {
+      "degree": 4,
+      "coefficients": ["1/2", "-1", "2", "-3/2", "5/2"],
+      "coefficient_l1": "15/2",
+      "segment_radius": 3,
+      "safe_envelope": "9735/2"
+    },
+    "joint_truth_table": {
+      "offdiagonal_bond_distance": "2",
+      "nonscalar_multiplier_bond_distance": "0",
+      "nonscalar_multiplier_full_h_lower": "5",
+      "scalar_bond_distance": "0",
+      "scalar_full_h_distance": "0"
+    }
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_linfinity_multiplier_and_joint_standard_cylinder_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_linfinity_multiplier_and_joint_standard_cylinder_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_linfinity_multiplier_and_joint_standard_cylinder_route_split_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-primary-pre-a-cp1-st8-q3lock-linfinity-multiplier-and-joint-standard-cylinder-route-split/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-independent-pre-a-cp1-st8-q3lock-linfinity-multiplier-and-joint-standard-cylinder-route-split/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-integrated-pre-a-cp1-st8-q3lock-linfinity-multiplier-and-joint-standard-cylinder-route-split/result.json",
+    "staged_lifecycle": "Before formal integration, run all three scripts with --staged --no-store. No run JSON or formal authority is written by this five-file proof package."
+  },
+  "formal_integration_contract": {
+    "event_id": 627,
+    "theorem_map_version": "1.23.0",
+    "expected_post_formal_counts": {
+      "claims": 49,
+      "results": 168,
+      "gates": 182,
+      "negatives": 357,
+      "explorations": 835,
+      "events": 627,
+      "tasks": 54,
+      "catalog": 3883
+    },
+    "required_links": "EXP-000835, event 627, T-054, ROADMAP, strategy index, proof-evidence map, theorem map, generated compact surfaces, one CLOSED scoped gate, one strengthened negative, and all five OPEN parents."
+  },
+  "checkpoint_synthesis": {
+    "status": "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+    "pdf_issued": false,
+    "workflow": "Proof-first manifest, certificate and three executable verifiers only. No v3.1 PDF is issued."
+  },
+  "no_overclaim": "R-167 v3.1 closes one finite-volume standard-cylinder classification child and registers one strengthened configuration-multiplier negative. It does not classify the full continuous-element algebra of the full Hamiltonian or bond flow; it excludes no multi-site compact, temporal-smear, resolvent-smoothed, interaction-dressed, local-strict, strong-star or state-weighted carrier. It proves no exact-Q3 summable shell weights, spatial common alpha, two-phase full-oscillator transfer, target-generator convergence, GNS gap, regulator removal, continuum, physical empty-space comparison, Round-1, C6, CP1, physical Sector A or Pre-A. All five active parent gates remain OPEN."
+}
