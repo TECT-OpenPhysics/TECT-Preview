@@ -1347,6 +1347,21 @@ contour theorem or broken-sector GNS gap follows. The historical
 beta-infinity gate and all five active parents remain OPEN. No v3.6 PDF is
 issued.
 
+EXP-000841 / R-167 v3.7 retains every v3.6 child and adds one scoped T0
+result. For `h>=0`, an affine form envelope `B=a h+bI` and
+`V=B^(1/2)CB^(1/2)`, asymmetric trace-class/operator-norm factorizations on
+the two imaginary-time half intervals give an integrable `s^(-1/2)` endpoint
+majorant, an `S_1`-valued first-Duhamel Bochner integral, its exact scalar
+trace identity, and `L1((0,beta);S_1)` spectral-Ritz removal. The inherited
+exact-Q3 edge envelope has this cutoff removal for every fixed `N,beta>0`,
+with an explicit heat-trace coefficient independent of `M`. This repairs the
+route without contradicting the v3.6 negative, which rejected only the
+symmetric Holder majorant. It proves no higher-order simplex or contour
+convergence, DFFR transition entry or branch identity, `N`-uniform heat
+trace, common alpha, algebraic ground identification or broken-sector GNS
+gap. The historical beta-infinity gate and all five active parents remain
+OPEN. No v3.7 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

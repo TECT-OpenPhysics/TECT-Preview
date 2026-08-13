@@ -124,6 +124,11 @@ one conditional first-Duhamel cutoff lemma. It creates no contestant,
 microscopic observable map, common estimand, prospective prediction,
 custodian commitment, freeze or score. Round-1 remains OPEN.
 
+EXP-000841 / R-167 v3.7 adds one claim-nonbearing first-Duhamel
+full-oscillator cutoff-removal theorem. It creates no contestant, microscopic
+observable map, common estimand, prospective prediction, custodian
+commitment, freeze or score. Round-1 remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -703,6 +708,12 @@ the time-zero tangent candidates are not identified as algebraic ground states
 of one common target dynamics. The first-Duhamel trace lemma supplies neither
 that dynamics nor a beta-to-infinity KMS passage. This historical gate remains
 OPEN.
+
+EXP-000841 / R-167 v3.7 removes the spectral Ritz cutoff from the exact
+fixed-`N`, fixed-positive-`beta` first Duhamel edge coefficient by an
+affine-form Gibbs-trace estimate. It constructs neither the common target
+dynamics nor a beta-to-infinity phase selection or ground-state
+identification. This historical gate remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-CONNECTED-SUSCEPTIBILITY-AND-GNS-POINCARE-GATE**
 
@@ -2013,6 +2024,29 @@ coefficient passes to the full oscillator. The hypothesis is not proved for
 Q3 and the result sums no multiple insertions, contour entropy or complete
 DFFR expansion.
 
+### **PA-CP1-ST8-Q3LOCK-AFFINE-FORM-GIBBS-TRACE-HALF-INTERVAL-L1-FIRST-DUHAMEL-AND-SPECTRAL-RITZ-REMOVAL**
+
+**Statement:** For a Gibbs-trace reference and an affine relative-form
+envelope `B=a h+bI`, prove an integrable half-interval trace-ideal majorant
+for the first imaginary-time Duhamel insertion and remove commuting spectral
+Ritz projections in trace norm.
+
+**Status:** CLOSED FOR THE FIRST DUHAMEL INSERTION AT EACH FIXED MODEL AND
+POSITIVE INVERSE TEMPERATURE ONLY (2026-08-13). EXP-000841 / R-167 v3.7
+proves that, for `h>=0` with `exp(-t h)` trace class, `a,b>=0`, and
+`V=B^(1/2) C B^(1/2)` with `B=a h+bI` and `||C||<=1`,
+`K_beta(s)=exp(-(beta-s)h)V exp(-s h)` obeys the two half-interval bounds
+`A_beta[sqrt(b)+sqrt(a/(2es))]` and
+`A_beta[sqrt(b)+sqrt(a/(2e(beta-s)))]`, where
+`A_beta=Tr(B^(1/2)exp(-beta h/2))`. Hence
+`integral ||K_beta(s)||_1 ds<=A_beta[beta sqrt(b)+2sqrt(a beta/e)]`, and
+spectral Ritz compressions converge in `L1((0,beta);S_1)` and after
+integration. The exact Q3 edge has `a=alpha_N`, `b=beta_N`, so this removes
+the cutoff from its full-oscillator first coefficient for each fixed
+`N,beta>0`. It proves no higher-insertion simplex estimate, contour entropy
+sum, DFFR transition-norm entry, `N`-uniform heat trace, common real-time
+dynamics or phase identification.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -2079,6 +2113,12 @@ intertwiner or phasewise oscillator map. This parent remains OPEN.
 EXP-000840 / R-167 v3.6 bypasses Ritz cutoffs for the inherited Euclidean DLR
 corridor and conditionally passes only the first imaginary-time Duhamel
 coefficient. It constructs no connected rank-two elimination, all-order QPS
+interaction, phase intertwiner or oscillator GNS map. This parent remains
+OPEN.
+
+EXP-000841 / R-167 v3.7 makes that first-coefficient cutoff passage
+unconditional for the affine Q3 edge form envelope at each fixed `N,beta`,
+but it still constructs no connected rank-two elimination, all-order QPS
 interaction, phase intertwiner or oscillator GNS map. This parent remains
 OPEN.
 
@@ -2198,6 +2238,11 @@ OPEN.
 
 EXP-000840 / R-167 v3.6 proves exact full-oscillator Euclidean DLR coexistence
 on the registered corridor and a conditional imaginary-time first-coefficient
+limit, not a spatial point-norm C0 automorphism group. It supplies no
+all-shape Cauchy estimates, common generator or Hamiltonian-to-phase quotient.
+This parent remains OPEN.
+
+EXP-000841 / R-167 v3.7 proves a trace-norm imaginary-time first-insertion
 limit, not a spatial point-norm C0 automorphism group. It supplies no
 all-shape Cauchy estimates, common generator or Hamiltonian-to-phase quotient.
 This parent remains OPEN.
@@ -2453,6 +2498,12 @@ classify all phases, identify the DFFR branches, or supply a two-phase QPS
 intertwiner and common real-time dynamics. The symmetric finite-volume gap
 upper bound is not a positive broken-sector gap. This parent remains OPEN.
 
+EXP-000841 / R-167 v3.7 removes spectral Ritz cutoffs only from one
+imaginary-time Duhamel insertion. It supplies no infinite-dimensional
+two-phase QPS theorem, branch classification, phase intertwiner, common
+real-time dynamics or uniform positive excitation gap. This parent remains
+OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -2556,6 +2607,11 @@ and a collapse upper bound for the symmetric full finite-volume gap. It does
 not identify a common target generator, prove the ground-state energy identity
 on a centered form core, or establish positive coercivity in either broken
 sector. This parent remains OPEN.
+
+EXP-000841 / R-167 v3.7 is an imaginary-time first-coefficient trace theorem.
+It neither identifies the tangent candidates as ground states of a common
+target generator nor proves a centered-core Poincare/coercivity estimate or a
+positive broken-sector GNS gap. This parent remains OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 

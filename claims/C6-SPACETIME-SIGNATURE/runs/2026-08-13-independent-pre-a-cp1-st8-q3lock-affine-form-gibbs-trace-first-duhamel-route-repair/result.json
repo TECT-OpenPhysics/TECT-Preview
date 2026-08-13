@@ -1,0 +1,162 @@
+{
+  "assertions": [
+    {
+      "actual": "['PA-CP1-ST8-Q3LOCK-AFFINE-FORM-GIBBS-TRACE-HALF-INTERVAL-L1-FIRST-DUHAMEL-AND-SPECTRAL-RITZ-REMOVAL']",
+      "expected": "['PA-CP1-ST8-Q3LOCK-AFFINE-FORM-GIBBS-TRACE-HALF-INTERVAL-L1-FIRST-DUHAMEL-AND-SPECTRAL-RITZ-REMOVAL']",
+      "group": "topology",
+      "name": "manifest topology",
+      "status": "PASS"
+    },
+    {
+      "actual": "stdlib-only independent lane",
+      "expected": "stdlib-only independent lane",
+      "group": "independence",
+      "name": "independent imports",
+      "status": "PASS"
+    },
+    {
+      "actual": "('8', Fraction(-1, 2))",
+      "expected": "('8', '>-1')",
+      "group": "theorem",
+      "name": "half-interval calculus",
+      "status": "PASS"
+    },
+    {
+      "actual": "['3', '5', '11']",
+      "expected": "['3', '5', '11']",
+      "group": "fixture",
+      "name": "fixture affine spectrum",
+      "status": "PASS"
+    },
+    {
+      "actual": "(True, True, 1)",
+      "expected": "(True, True, 1)",
+      "group": "fixture",
+      "name": "fixture contraction",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(33)[exp(-4s)+exp(-4(beta-s))]+5exp(-beta)",
+      "expected": "sqrt(33)[exp(-4s)+exp(-4(beta-s))]+5exp(-beta)",
+      "group": "fixture",
+      "name": "fixture pointwise_trace_norm",
+      "status": "PASS"
+    },
+    {
+      "actual": "255*sqrt(33)/512+5*log(4)/4",
+      "expected": "255*sqrt(33)/512+5*log(4)/4",
+      "group": "fixture",
+      "name": "fixture integrated_trace_norm",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5*log(4)/4",
+      "expected": "-5*log(4)/4",
+      "group": "fixture",
+      "name": "fixture integrated_scalar_trace",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(3)+sqrt(5)/2+sqrt(11)/16",
+      "expected": "sqrt(3)+sqrt(5)/2+sqrt(11)/16",
+      "group": "fixture",
+      "name": "fixture A_beta",
+      "status": "PASS"
+    },
+    {
+      "actual": "A_beta[log(4)*sqrt(3)+2*sqrt(2*log(4)/e)]",
+      "expected": "A_beta[log(4)*sqrt(3)+2*sqrt(2*log(4)/e)]",
+      "group": "fixture",
+      "name": "fixture majorant_integral",
+      "status": "PASS"
+    },
+    {
+      "actual": "255*sqrt(33)/512",
+      "expected": "255*sqrt(33)/512",
+      "group": "fixture",
+      "name": "fixture rank_two_tail_integral",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "fixture",
+      "name": "fixture rank_three_tail_integral",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "fixture",
+      "name": "fixture strict majorant",
+      "status": "PASS"
+    },
+    {
+      "actual": "all anchors present",
+      "expected": "all anchors present",
+      "group": "certificate",
+      "name": "certificate anchors",
+      "status": "PASS"
+    },
+    {
+      "actual": "ASCII LF final-LF",
+      "expected": "ASCII LF final-LF",
+      "group": "format",
+      "name": "source format",
+      "status": "PASS"
+    },
+    {
+      "actual": "all formal tokens present",
+      "expected": "all formal tokens present",
+      "group": "formal",
+      "name": "formal authority links",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "fixture": {
+      "A_beta": "sqrt(3)+sqrt(5)/2+sqrt(11)/16",
+      "B_diagonal": [
+        "3",
+        "5",
+        "11"
+      ],
+      "C_norm": 1,
+      "C_selfadjoint": true,
+      "C_unitary": true,
+      "V_middle": "-5",
+      "V_swap": "sqrt(33)",
+      "integrated_scalar_trace": "-5*log(4)/4",
+      "integrated_trace_norm": "255*sqrt(33)/512+5*log(4)/4",
+      "majorant_integral": "A_beta[log(4)*sqrt(3)+2*sqrt(2*log(4)/e)]",
+      "majorant_strict": true,
+      "pointwise_trace_norm": "sqrt(33)[exp(-4s)+exp(-4(beta-s))]+5exp(-beta)",
+      "rank_three_tail_integral": "0",
+      "rank_two_tail_integral": "255*sqrt(33)/512",
+      "trace_is_s_independent": true
+    },
+    "half_interval": {
+      "endpoint_integrable": "True",
+      "endpoint_power": "-1/2",
+      "integral_identity": "True",
+      "integral_square_coefficient": "8",
+      "maximum_exponential": "-1",
+      "maximum_squared": "1/2/(e*s)",
+      "stationary_point": "1/2/s",
+      "target_square_coefficient": "8"
+    }
+  },
+  "mode": "formal",
+  "schema": "tect/pre-a-q3lock-affine-form-gibbs-trace-first-duhamel-independent-run/1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_affine_form_gibbs_trace_first_duhamel_route_repair_independent.py": "895ca2b1a3ab676900f9e2e9d811c7bbc703472610c614cd81cffd98b633eb75",
+    "strategy/pre-a-cp1-st8-q3lock-affine-form-gibbs-trace-first-duhamel-route-repair-certificate-260813.md": "f6feacada5aad87866aad61c4df7ddbced56c442ea7a39e33baf6c3380d9e313",
+    "strategy/pre-a-cp1-st8-q3lock-affine-form-gibbs-trace-first-duhamel-route-repair-manifest.json": "e1ff9168cb2d6eef22b85a657b6a17cef1e095e70de9b3d7d78710d98c0140c3"
+  },
+  "summary": {
+    "failed": 0,
+    "passed": 16,
+    "status": "PASS"
+  },
+  "version": "R-167 v3.7"
+}

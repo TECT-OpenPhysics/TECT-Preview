@@ -1,0 +1,105 @@
+{
+  "schema": "tect/pre-a-q3lock-affine-form-gibbs-trace-first-duhamel/1.0",
+  "package_id": "pre-a-cp1-st8-q3lock-affine-form-gibbs-trace-first-duhamel-route-repair",
+  "version": "R-167 v3.7",
+  "date": "2026-08-13",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-000841",
+  "prior_exploration_id": "EXP-000840",
+  "claim_bearing": false,
+  "closed_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-AFFINE-FORM-GIBBS-TRACE-HALF-INTERVAL-L1-FIRST-DUHAMEL-AND-SPECTRAL-RITZ-REMOVAL"
+  ],
+  "negative_ids": [],
+  "reused_negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-POINTWISE-POSITIVE-TIME-TRACE-CLASS-AUTOMATIC-SHORT-TIME-L1-DOMINATION",
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-POSITIVE-TIME-ENERGY-DRESSED-TRACE-CONTROL-AUTOMATIC-DFFR-CONTOUR-ENTRY"
+  ],
+  "open_parent_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "historical_open_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION"
+  ],
+  "abstract_theorem": {
+    "setup": "Let h>=0 be self-adjoint with exp(-t h) trace class for every t>0. Fix a,b>=0, put B=a h+b I, and let the symmetric form perturbation have the Kato factorization V=B^(1/2) C B^(1/2) with C=C* and ||C||<=1. For beta>0 put A_beta=Tr[B^(1/2)exp(-beta h/2)] and K_beta(s)=exp[-(beta-s)h]V exp(-s h), 0<s<beta.",
+    "half_interval_bound": "For 0<s<=beta/2, ||K_beta(s)||_1<=A_beta[sqrt(b)+sqrt(a/(2 e s))]. For beta/2<=s<beta, ||K_beta(s)||_1<=A_beta[sqrt(b)+sqrt(a/(2 e (beta-s)))]. Both bounds follow by using one Gibbs-dressed B^(1/2) factor in trace norm and the other in operator norm.",
+    "integrability": "The two half-interval majorants are integrable and give integral_0^beta ||K_beta(s)||_1 ds<=A_beta[beta sqrt(b)+2 sqrt(a beta/e)]. Thus the first Duhamel operator coefficient exists as an S1-valued Bochner integral without the symmetric Holder-majorant premise used in R-167 v3.6.",
+    "ritz_passage": "If Pi_M are increasing finite-rank spectral projections of h with Pi_M->I strongly, then K_(beta,M)(s)=Pi_M K_beta(s) Pi_M converges pointwise in trace norm and in L1((0,beta);S1). Consequently the compressed first Duhamel operator integrals converge in trace norm to the full-oscillator coefficient.",
+    "trace_identity": "For every 0<s<beta, trace cyclicity gives Tr K_beta(s)=Tr[C B exp(-beta h)], hence Tr integral_0^beta K_beta(s) ds=beta Tr[C B exp(-beta h)].",
+    "heat_trace_bound": "Writing Z_h(t)=Tr exp(-t h), A_beta<=sqrt(a)sqrt(2/(e beta)) Z_h(beta/4)+sqrt(b)Z_h(beta/2).",
+    "boundary": "This is an exact first-Duhamel and spectral-Ritz-removal theorem. It does not control higher Duhamel coefficients, time-simplex combinatorics, contour entropy or DFFR transition norms."
+  },
+  "q3_application": {
+    "setup": "For one exact Q3 reference edge at fixed N, the inherited relative-form estimate has -B_(e,N)<=V_(e,N)<=B_(e,N) with B_(e,N)=alpha_N h^0_(e,N)+beta_N I. The confining edge reference h^0_(e,N) has compact resolvent and finite Gibbs trace.",
+    "conclusion": "For every fixed N and physical beta>0, the full-oscillator first Duhamel edge coefficient is trace class and is the trace-norm limit of its spectral Ritz compressions. No extra short-time L1 premise is needed.",
+    "explicit_majorant": "Using Z_(0,e,N)(t)<=Z_(k_N)(t/6)^2, A_(beta,e,N)<=sqrt(alpha_N)sqrt(2/(e beta))Z_(k_N)(beta/24)^2+sqrt(beta_N)Z_(k_N)(beta/12)^2. The theorem is dimension-free in the cutoff M for each fixed N,beta.",
+    "uniformity_boundary": "No N-uniform assertion follows unless uniform heat-trace and relative-form inputs are proved separately. This application is not a DFFR contour entry theorem."
+  },
+  "relation_to_v3_6": {
+    "repair": "R-167 v3.6 correctly showed that the symmetric Schatten-Holder majorant g_beta(s)=sqrt(F_B(2s)F_B(2(beta-s))) need not be integrable. R-167 v3.7 uses a different one-sided trace-class/operator-norm factorization on the two half intervals and proves the actual first coefficient is integrable for affine B=a h+b I.",
+    "history": "The v3.6 negative remains immutable and valid: it rejects automatic integrability of that symmetric majorant, not existence of a sharper majorant or of the coefficient itself."
+  },
+  "exact_fixture": {
+    "inputs": {
+      "h_diagonal": ["0", "1", "4"],
+      "a": "2",
+      "b": "3",
+      "beta": "log(4)",
+      "C": "swap levels 0 and 4; act as -1 on level 1",
+      "Ritz_rank": "2"
+    },
+    "derived": {
+      "B_diagonal": ["3", "5", "11"],
+      "V_nonzero": ["V_02=V_20=sqrt(33)", "V_11=-5"],
+      "pointwise_trace_norm": "sqrt(33)[exp(-4s)+exp(-4(beta-s))]+5exp(-beta)",
+      "integrated_trace_norm": "255*sqrt(33)/512+5*log(4)/4",
+      "integrated_scalar_trace": "-5*log(4)/4",
+      "A_beta": "sqrt(3)+sqrt(5)/2+sqrt(11)/16",
+      "majorant_integral": "A_beta[log(4)*sqrt(3)+2*sqrt(2*log(4)/e)]",
+      "majorant_strict": true,
+      "rank_two_tail_integral": "255*sqrt(33)/512",
+      "rank_three_tail_integral": "0"
+    }
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_affine_form_gibbs_trace_first_duhamel_route_repair.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_affine_form_gibbs_trace_first_duhamel_route_repair_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_affine_form_gibbs_trace_first_duhamel_route_repair_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-primary-pre-a-cp1-st8-q3lock-affine-form-gibbs-trace-first-duhamel-route-repair/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-independent-pre-a-cp1-st8-q3lock-affine-form-gibbs-trace-first-duhamel-route-repair/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-integrated-pre-a-cp1-st8-q3lock-affine-form-gibbs-trace-first-duhamel-route-repair/result.json",
+    "staged_lifecycle": "Before formal integration, run all three scripts with --staged --no-store. No run JSON or formal authority is written by this five-file proof package."
+  },
+  "formal_integration_contract": {
+    "event_ordinal": 633,
+    "event_id": "20260813-r-167-v3-7-affine-form-gibbs-trace-first-duhame",
+    "event_title": "R-167 v3.7 affine-form Gibbs-trace first-Duhamel route repair",
+    "event_keywords": ["EXP-000841", "R-167-v3.7", "affine-form-bound", "first-Duhamel", "Gibbs-trace", "half-interval-majorant", "no-parent-closure", "spectral-Ritz-removal"],
+    "theorem_map_version": "1.29.0",
+    "expected_post_formal_counts": {
+      "claims": 49,
+      "results": 168,
+      "gates": 191,
+      "negatives": 364,
+      "explorations": 841,
+      "events": 633,
+      "tasks": 54,
+      "catalog": 3931
+    },
+    "required_links": "EXP-000841, event 633, T-054, ROADMAP, strategy index, proof-evidence map, theorem map 1.29.0, generated compact surfaces, one exact scoped CLOSED result, two reused short-time/contour boundaries, all five OPEN parents, and the historical beta-infinity gate remaining OPEN."
+  },
+  "checkpoint_synthesis": {
+    "status": "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+    "pdf_issued": false,
+    "workflow": "Proof-first manifest, certificate and three executable verifiers only. No v3.7 PDF is issued."
+  },
+  "no_overclaim": "R-167 v3.7 closes only the affine-form Gibbs-trace half-interval L1 theorem and the resulting first-Duhamel spectral-Ritz removal, including its exact fixed-N Q3 edge application. It proves no all-order Duhamel or contour convergence, no DFFR transition-norm entry or branch identification, no N-uniform heat-trace bound, no common phase-independent real-time alpha, no algebraic ground-state identity for the time-zero candidates, no purity or exhaustive phase classification, no positive broken-sector GNS gap, no continuum or regulator removal, no mass gap, physical vacuum or empty-space comparison, Round-1, C6, CP1, physical Sector A or Pre-A. All five active parent gates and the historical beta-infinity gate remain OPEN."
+}
