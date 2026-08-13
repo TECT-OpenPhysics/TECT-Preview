@@ -169,6 +169,38 @@ into its microscopic input.  Failure to derive the necessary fermionic,
 gauge, or bound-state structure excludes the candidate from a microscopic
 account of ordinary matter, even if it supplies another partial QFT bridge.
 
+### 4.4 Condensed-matter mechanisms as constrained analogue searches
+
+Condensed-matter systems are evidence-rich analogue laboratories for possible
+emergence mechanisms.  They can show, in controlled microscopic models, how
+collective order, gaps, quasiparticles, compact phases, defects, topology, and
+effective gauge-like responses arise.  They are therefore useful both for
+generating TECT microscopic candidate structures and for constructing concrete
+counterexamples to overbroad emergence claims.
+
+They are not direct evidence that the physical vacuum is a material condensate
+or that a successful material mechanism transfers unchanged to spacetime.  A
+laboratory system normally has an underlying material lattice or medium, a
+preferred rest frame, an externally supplied time and Hamiltonian, and an
+effective-theory validity range.  Those inherited structures must be accounted
+for rather than silently identified with the physical vacuum.
+
+The permitted analogue-search use is:
+
+```text
+verified condensed-matter emergence mechanism
+  -> abstract structural requirement for a TECT candidate
+  -> candidate-specific derivation without importing the material background
+  -> tests of Lorentz/cone protection, gauge/matter content, atomic recovery,
+     relational-time status, and universal gravity response
+```
+
+An analogue motivates a candidate only when the required structure is stated
+independently of the material realization.  It is rejected as a vacuum argument
+if its effect depends essentially on a fixed medium frame, external clock,
+inserted gauge field, material constitutive data, or an unexplained transfer of
+laboratory scales to the physical vacuum.
+
 ## 5. Candidate-neutral comparison rule
 
 The M0 established low-energy baseline is retained as the comparison standard.
