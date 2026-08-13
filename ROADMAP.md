@@ -1177,6 +1177,27 @@ all-shape Q3 common alpha, generator/KMS identification, cutoff-uniform and
 all-order rank-two oscillator elimination, broken-sector GNS gap, physical
 Sector A and Pre-A remain open.
 
+EXP-000826 as corrected by EXP-000827 advances R-167 v2.6 without closing a parent. At each fixed finite
+onsite Ritz cutoff, every separately fixed standard-SW coefficient has
+connected edge-cluster support. For each fixed order and cutoff, sufficiently
+small scaled coupling also gives a volume-extensive ground-energy truncation
+error with volume-independent constants. These statements neither converge
+the all-order series nor cover physical `lambda=1` automatically.
+
+For the actual zero-source Q3 blocks, a uniform weighted high-block estimate
+and finite-rank low-high ranges give volume- and Ritz-uniform QPS bounds and
+Ritz removal for the third- and fourth-order coefficients only. At fixed
+finite `Lambda,M`, the complete sequential coefficient is
+`Theta4_seq=(1/2){F,B}-S^*RS`; the standard-SW gauge differs by
+`-[K_P,A]`. Direct-resolvent additivity cancels each disconnected
+multivariate fourth-order permutation aggregate before the connected
+ordered-tuple bound is applied. The bounded insertion-family fixture shows why
+`tau_M` alone is
+not uniform, and the two-qubit orbit-smear fixture rejects automatic spatial
+locality from seed labels. No fifth-order or all-order remainder, phase
+transfer, common alpha, GNS gap, Round-1, C6, CP1, physical Sector A or Pre-A
+closure follows.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or
@@ -1205,7 +1226,13 @@ After the v2.5 proof, formal, independent, integrated, generated-surface,
 source-form, freshness, dual-extraction, strict-release and render-review gates
 passed, one R-167-only v2.5 gate-level synthesis source/PDF pair was issued;
 R-168 v1.3 remains historical and is not reissued. No per-lemma or intermediate
-v2.5 PDF was issued, and no theorem tier or parent status changed. Actual
+v2.5 PDF was issued. No per-lemma or intermediate v2.6 PDF was issued. After
+the v2.6 primary, non-importing independent, integrated, formal-authority,
+generated-surface, source-form, freshness, dual-extraction, strict-release and
+visual-review gates passed, one R-167-only v2.6 gate-level synthesis source/PDF
+pair was issued; R-168 v1.3 remains historical and is not reissued. No new
+theorem, result number, result version, tier, gate or parent status follows from
+packaging. Actual
 all-shape Q3 common `alpha`, generator/KMS identification,
 all-order connected rank-two oscillator transfer, broken-sector GNS gap,
 physical Sector A and Pre-A remain open.

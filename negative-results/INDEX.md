@@ -5,7 +5,7 @@
 
 Authorities: `negative-results/registry.md`.
 
-**347 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 276 · retraction: 5
+**349 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 278 · retraction: 5
 
 Latest 25 records:
 
@@ -13,6 +13,8 @@ Latest 25 records:
 |---|---|---|
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-second-order-disjoint-vanishing-automatic-all-order-global-feshbach-connectedness) | no_go | infer connectedness of the raw all-order global scalar Feshbach map from second-order disjoint-edge vanishing |
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-ritz-cutoff-ordinary-bounded-operator-sw-smallness-uniformity) | no_go | infer cutoff-uniform ordinary operator-norm Schrieffer--Wolff smallness from finite Ritz boundedness |
+| [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-SPATIAL-LOCAL-NET`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-orbit-smear-seed-support-automatic-spatial-local-net) | no_go | infer commuting spatial local algebras from formally disjoint seed labels after temporal orbit smearing |
+| [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-HIGH-HIGH-INSERTION-CUTOFF`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-low-high-ritz-tail-automatic-uniform-high-high-insertion-cutoff) | no_go | infer uniform high-high-insertion Ritz convergence from an exact low-high Ritz tail alone |
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-canonical-one-site-compact-cylinder-bond-subflow-point-norm-c0) | no_go | use canonical one-site compact cylinders as a point-norm C0 carrier for the split Q3 bond subflow |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-weighted-unitary-cutoff-automatic-arbitrary-context-automorphism-l2-upgrade) | no_go | promote static Gibbs weighted-unitary cutoff control automatically through every bounded observable context |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-uniform-quadratic-in-m-all-moment-bond-shear-graph-transport) | no_go | infer a universal quadratic or polynomial-in-order bound for every normalized bond-shear graph moment from abstract positive-energy structure |
@@ -34,8 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-11-PRE-A-M2-V0-ONE-REAL-SCALAR-AUTOMATIC-INTERNAL-U1-WINDING-AND-HELICITY`](registry.md#ng-2026-08-11-pre-a-m2-v0-one-real-scalar-automatic-internal-u1-winding-and-helicity) | no_go | infer nontrivial pointwise internal U1, intrinsic winding and helicity from one raw real scalar |
 | [`NG-2026-08-11-PRE-A-M2-SIX-ABSOLUTE-ERRORS-AUTOMATIC-LOG-SLOPE-CONTROL`](registry.md#ng-2026-08-11-pre-a-m2-six-absolute-errors-automatic-log-slope-control) | no_go | infer a controlled six-stage critical log slope from six absolute output errors alone |
 | [`NG-2026-08-11-PRE-A-M2-POSITIVE-LOCAL-INVERTIBILITY-AUTOMATIC-UNIT-EXPONENT`](registry.md#ng-2026-08-11-pre-a-m2-positive-local-invertibility-automatic-unit-exponent) | no_go | infer unit critical exponent from positivity and local invertibility |
-| [`NG-2026-08-11-PRE-A-M2-ONE-Q-PHASON-AUTOMATIC-PHYSICAL-SUPERFLUID-DENSITY`](registry.md#ng-2026-08-11-pre-a-m2-one-q-phason-automatic-physical-superfluid-density) | no_go | promote one-Q auxiliary phason curvature or periodic secant to physical superfluid density |
-| [`NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE`](registry.md#ng-2026-08-11-pre-a-m2-lane-q-linear-source-automatic-physical-stiffness-response) | no_go | identify a physical helicity or stiffness response from the scalar Lane-Q linear source alone |
 
 Search without loading the full registry:
 

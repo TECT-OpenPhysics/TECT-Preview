@@ -1,26 +1,24 @@
 #!/usr/bin/env python3
-"""Integrated verifier for EXP-000825 / R-167 v2.5.
+"""Integrated verifier for EXP-000826/EXP-000827 and R-167 v2.6.
 
 The primary and non-importing independent engines are each executed twice in
 fresh child processes. Invocation-only metadata is normalized, component
 payloads must be deterministic, and stored results must equal fresh payloads.
-The authority-complete component contracts are exactly 384/384 and 218/218.
-Under --staged, absent formal/generated authorities and stored runs are
-reported as MISSING while contradictions remain hard failures.
+The authority-complete v2.6 component contracts are exactly 442/442 and
+246/246; their proof-first contracts are 440/440 and 244/244.
 
-Every v1.9--v2.4 reduction and every issued checkpoint PDF remains strictly
-validated historical evidence. New exact cross-engine checks bind the complete
-third-order linked low block at fixed finite spatial volume and fixed finite
-onsite Ritz cutoff, its scalar and noncommutative fixtures, the retained rational
-QPS bound, and the compact-cylinder carrier obstruction.
+Every v1.9--v2.5 reduction and issued checkpoint remains strict historical
+evidence. Fifty-six additive checks bind the corrected zero-source augmented
+edge mapping, fixed-order BDL scope, complete sequential and standard-gauge
+fourth-order coefficients, exact weighted QPS constants, two scoped no-gos,
+append-only EXP-000826/EXP-000827 and event-617/event-618 semantics, the
+strict event-619 issuance, malformed events 620--621, and finalized event-622 artifact-pin lifecycle, and the four-CLOSED/
+five-OPEN authority firewall.
 
-The issued R-167 v2_2_checkpoint_synthesis / R-168
-v1_3_checkpoint_synthesis pair remains historical. The local-only R-167
-v2_3_checkpoint_synthesis is retained as issued historical evidence. The new
-local-only v2_4_checkpoint_synthesis remains issued historical evidence. The
-new local-only v2_5_checkpoint_synthesis is lifecycle-aware: it is the exact
-three-field deferred record before issuance or the exact eight-field issued
-record after proof validation. R-168 v1.3 is historical and is not reissued.
+The local-only v2_6_checkpoint_synthesis is lifecycle-aware: exactly the
+three-field deferred record is accepted before issuance, and exactly the
+fresh eight-field issued record is accepted after proof/PDF validation.
+R-168 v1.3 remains historical and is never reissued by this package.
 This script creates no note, PDF, formal authority, or stored component result.
 """
 
@@ -40,7 +38,7 @@ from pathlib import Path
 from typing import Any, Iterable, Mapping
 
 
-__version__ = "2.5.0"
+__version__ = "2.6.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = (
@@ -53,10 +51,11 @@ RESULT_ID = (
     "COMMON-ALPHA-CAUCHY-GATE-SPLIT"
 )
 RESULT_NUMBER = "R-167"
-PRIOR_RESULT_VERSION = "v2.4"
-RESULT_VERSION = "v2.5"
-PRIOR_EXPLORATION_ID = "EXP-000818"
-EXPLORATION_ID = "EXP-000825"
+PRIOR_RESULT_VERSION = "v2.5"
+RESULT_VERSION = "v2.6"
+PRIOR_EXPLORATION_ID = "EXP-000825"
+EXPLORATION_ID = "EXP-000826"
+SCOPE_CORRECTION_EXPLORATION_ID = "EXP-000827"
 TASK_ID = "T-054"
 CLAIM_ID = "C6-SPACETIME-SIGNATURE"
 CANDIDATE_ID = (
@@ -110,9 +109,19 @@ V2_4_CLOSED_SUBGATES = (
     "PA-CP1-ST8-Q3LOCK-FIRST-LOCAL-HOMOLOGICAL-RANK-TWO-GENERATOR-QPS-NORM-"
     "AND-RITZ-CUTOFF",
 )
-NEW_CLOSED_SUBGATES = (
+V2_5_CLOSED_SUBGATES = (
     "PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-THIRD-ORDER-"
     "LINKED-RANK-TWO-LOW-BLOCK-COEFFICIENT",
+)
+NEW_CLOSED_SUBGATES = (
+    "PA-CP1-ST8-Q3LOCK-FIXED-RITZ-STANDARD-SW-EVERY-FIXED-ORDER-LINKED-"
+    "CLUSTER-COEFFICIENTS",
+    "PA-CP1-ST8-Q3LOCK-FIXED-RITZ-EACH-FIXED-ORDER-SMALL-COUPLING-VOLUME-"
+    "EXTENSIVE-SW-GROUND-ENERGY-APPROXIMATION",
+    "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-Q3-THIRD-FOURTH-ORDER-COEFFICIENT-QPS-"
+    "AND-RITZ-CUTOFF",
+    "PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-FOURTH-ORDER-"
+    "SEQUENTIAL-LOW-BLOCK-AND-STANDARD-SW-GAUGE-CROSSWALK",
 )
 PRIOR_CLOSED_SUBGATES = (
     *V1_9_CLOSED_SUBGATES,
@@ -124,6 +133,7 @@ CLOSED_SUBGATES = (
     *V2_2_CLOSED_SUBGATES,
     *V2_3_CLOSED_SUBGATES,
     *V2_4_CLOSED_SUBGATES,
+    *V2_5_CLOSED_SUBGATES,
     *NEW_CLOSED_SUBGATES,
 )
 V2_1_OPEN_INPUTS = (
@@ -140,6 +150,10 @@ OPEN_GATES = (
     "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
     "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-"
     "NORM-AND-CUTOFF-COMPATIBILITY",
+)
+V2_6_RECORD_GATE_IDS = (
+    *NEW_CLOSED_SUBGATES,
+    OPEN_GATES[4], OPEN_GATES[2], OPEN_GATES[0], OPEN_GATES[1], OPEN_GATES[3],
 )
 V1_9_NEGATIVE_IDS = (
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-"
@@ -175,9 +189,15 @@ V2_4_NEGATIVE_IDS = (
     "NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-"
     "SW-SMALLNESS-UNIFORMITY",
 )
-NEW_NEGATIVE_IDS = (
+V2_5_NEGATIVE_IDS = (
     "NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-"
     "BOND-SUBFLOW-POINT-NORM-C0",
+)
+NEW_NEGATIVE_IDS = (
+    "NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-"
+    "HIGH-HIGH-INSERTION-CUTOFF",
+    "NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-"
+    "SPATIAL-LOCAL-NET",
 )
 PRIOR_NEGATIVE_IDS = (
     *V1_9_NEGATIVE_IDS,
@@ -186,6 +206,7 @@ PRIOR_NEGATIVE_IDS = (
     *V2_2_NEGATIVE_IDS,
     *V2_3_NEGATIVE_IDS,
     *V2_4_NEGATIVE_IDS,
+    *V2_5_NEGATIVE_IDS,
 )
 NEGATIVE_IDS = (*PRIOR_NEGATIVE_IDS, *NEW_NEGATIVE_IDS)
 REUSED_NEGATIVE_IDS = (
@@ -219,15 +240,15 @@ MANIFEST = REPO / f"strategy/{SLUG}-manifest.json"
 CERTIFICATE = REPO / f"strategy/{SLUG}-certificate-260811.md"
 PRIMARY_STORED = REPO / (
     "claims/C6-SPACETIME-SIGNATURE/runs/"
-    f"2026-08-12-primary-{SLUG}-v2-5/result.json"
+    f"2026-08-12-primary-{SLUG}-v2-6/result.json"
 )
 INDEPENDENT_STORED = REPO / (
     "claims/C6-SPACETIME-SIGNATURE/runs/"
-    f"2026-08-12-independent-{SLUG}-v2-5/result.json"
+    f"2026-08-12-independent-{SLUG}-v2-6/result.json"
 )
 DEFAULT_OUTPUT = REPO / (
     "claims/C6-SPACETIME-SIGNATURE/runs/"
-    f"2026-08-12-integrated-{SLUG}-v2-5/result.json"
+    f"2026-08-12-integrated-{SLUG}-v2-6/result.json"
 )
 PROSPECTIVE_MANIFEST = (
     REPO / "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json"
@@ -523,9 +544,9 @@ V2_5_ISSUED_WORKFLOW = (
 )
 V2_5_CHECKPOINT_REQUIRED_TOKENS = (
     "R-167 v2.5",
-    EXPLORATION_ID,
-    *NEW_CLOSED_SUBGATES,
-    *NEW_NEGATIVE_IDS,
+    "EXP-000825",
+    *V2_5_CLOSED_SUBGATES,
+    *V2_5_NEGATIVE_IDS,
     "9d667e615879985fa32dfb9540109769cd830e53aebb8c226f8b3a1008dea94c",
     "f3e8bc777a2756f67168b3afea72f8a2365a7efc7f1a78e8b6ac3e5add3a7b71",
     "384/384",
@@ -709,16 +730,153 @@ EXPECTED_V2_5_FIXTURE = {
     },
 }
 
+EXPECTED_V2_6_FIXTURE = {'bdl_fixed_order': {'onsite_low_rank': 2,
+                     'zero_source_fixed_M': True,
+                     'finite_connected_graph_min_degree': 1,
+                     'incident_partition_nonnegative': True,
+                     'incident_partition_sum': 'sum_(e containing x) omega_(x,e)=1',
+                     'periodic_incident_weight': 'omega_(x,e)=1/z',
+                     'augmented_edge': 'tilde '
+                                       'B_(e,M)=B_(e,M)+delta_1[omega_(x,e)P_(1,x)+omega_(y,e)P_(1,y)]',
+                     'onsite_allocation_identity': 'sum_e '
+                                                   'delta_1[omega_(x,e)P_(1,x)+omega_(y,e)P_(1,y)]=delta_1 '
+                                                   'sum_x P_(1,x)',
+                     'physical_model_at_lambda_one': True,
+                     'connected_edge_limit': '|C|<=n',
+                     'support_limit': 'n+1',
+                     'diameter_limit': 'n',
+                     'rooted_ordered_count_factor': '(n!)^2 z^n',
+                     'fourth_rooted_ordered_count_factor': '576 z^4',
+                     'fourth_qps_count_factor': '2880 z^4',
+                     'onsite_product_projection_below_edge_low_projection': True,
+                     'qf_onsite_sum_max_eigenvalue': 1,
+                     'pf_onsite_sum_norm': 2},
+ 'scalar_fourth_order': {'Gamma': 2,
+                         'T': '1/10',
+                         'A': '1/3',
+                         'C': '5/3',
+                         'B': '1/200',
+                         'F': '1/400',
+                         'S': '-1/15',
+                         'Theta4_seq': '-1591/720000',
+                         'Theta4_std': '-1591/720000'},
+ 'noncommutative_fourth_order': {'K_Q': [[2, 0, 0], [0, 3, 0], [0, 0, 5]],
+                                 'A': [[1, 2], [2, -1]],
+                                 'C': [[3, 1, 0], [1, -2, 2], [0, 2, 4]],
+                                 'T': [['1/10', '1/5'], ['0', '-1/10'], ['3/10', '1/10']],
+                                 'B': [['23/1000', '2/125'], ['2/125', '19/750']],
+                                 'F': [['61/10000', '31/5000'], ['31/5000', '259/22500']],
+                                 'S_star_R_S': [['37247/1350000', '-176/84375'],
+                                                ['-176/84375', '15887/337500']],
+                                 'Theta4_seq': [['-1476947/54000000', '128339/54000000'],
+                                                ['128339/54000000', '-52517/1125000']],
+                                 'K_P': [['0', '-857/135000'], ['857/135000', '0']],
+                                 'Theta4_std': [['-35249/18000000', '-557261/54000000'],
+                                                ['-557261/54000000', '-243251/3375000']]},
+ 'disconnected_fourth_order': {'Gamma_x': 2,
+                               'T_x': '1/5',
+                               'Gamma_y': 3,
+                               'T_y': '1/7',
+                               'mixed_BF': '1/8820',
+                               'mixed_S_star_R_S': '1/8820',
+                               'Theta4': '69827/324135000',
+                               'sum_of_local_Theta4': '69827/324135000',
+                               'direct_resolvent_cross_identity': True,
+                               'all_disconnected_multivariate_fourth_coefficients_vanish': True},
+ 'weighted_zero_source_q3': {'rho_b': '15201/156250',
+                             'a': '96139/1500000',
+                             'delta1': '1/10000',
+                             'z': 6,
+                             'Gamma': 100,
+                             'epsilon': '23/6250',
+                             'a_tilde': '32063/500000',
+                             'rho_tilde': '2918597/30000000',
+                             'w': '584161/6000000',
+                             'per3': '3888206603/292968750000000000',
+                             'third_qps_factor': 278784,
+                             'third_qps': '1411418996889/381469726562500',
+                             'per4': '28578738599866921/21972656250000000000000000',
+                             'fourth_qps_factor': 59719680,
+                             'fourth_qps': '2314877826589220601/29802322387695312500',
+                             'exp_aQPS': 2,
+                             'rho_tilde_dominates_a_tilde_over_Gamma': True},
+ 'low_high_tail_hostile': {'high_space': 'ell2({e_j:j>=1})',
+                           'K_equals_R_equals_Q': True,
+                           'T': '|e_1><p|',
+                           'Pi_M': 'projection onto p,e_1,...,e_M',
+                           'C_j': '|e_1+e_j><e_1+e_j|',
+                           'uniform_C_j_norm': 2,
+                           'tau_M': 0,
+                           'hostile_choice': 'j=M+1',
+                           'insertion_tail': 1,
+                           'Gram_difference': 1,
+                           'each_fixed_j_eventually_exact': True,
+                           'uniform_over_j_cutoff': False},
+ 'orbit_smear': {'cosine_integral': '1/5',
+                 'positive_sine_integral': '2/5',
+                 'negative_sine_integral': '-2/5',
+                 'commutator': '-(8i/25)Y tensor Y',
+                 'commutator_norm': '8/25',
+                 'seed_supports_disjoint': True,
+                 'smeared_algebras_commute': False}}
+
+V2_6_CHECKPOINT_FIELD = "v2_6_checkpoint_synthesis"
+V2_6_DEFERRED_CHECKPOINT = {
+    "status": "DEFERRED",
+    "pdf_issued": False,
+    "workflow": (
+        "No intermediate PDF is issued for R-167 v2.6. Preserve every v2.5 "
+        "and earlier source/PDF pair as historical evidence; issue one R-167-only "
+        "v2.6 gate-level synthesis after the primary, non-importing independent, "
+        "integrated, formal-authority, generated-surface, source-form, freshness, "
+        "dual-extraction, strict-release, and visual-review gates pass. R-168 v1.3 "
+        "remains historical and is not reissued."
+    ),
+}
+V2_6_ISSUED_FIELDS = {
+    "status", "source", "pdf", "source_sha256", "pdf_sha256", "pages",
+    "workflow", "visual_qa",
+}
+V2_6_ISSUED_STATUS = "ISSUED AS ONE GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION"
+V2_6_ISSUED_WORKFLOW = (
+    "No per-lemma or intermediate PDF was issued. One R-167 v2.6 "
+    "gate-level synthesis source/PDF pair was issued only after the "
+    "primary, non-importing independent, integrated, formal-authority, "
+    "generated-surface, source-form, freshness, dual-extraction, "
+    "strict-release, and visual-review checks passed. R-168 v1.3 "
+    "remains historical and is not reissued."
+)
+V2_6_CHECKPOINT_REQUIRED_TOKENS = (
+    "R-167 v2.6", EXPLORATION_ID, SCOPE_CORRECTION_EXPLORATION_ID,
+    *NEW_CLOSED_SUBGATES, *NEW_NEGATIVE_IDS,
+    "f0f177b3b7c03f4e02795499cc5d5a8e432388269d51ab1d323a85c3974a6077",
+    "a54eb34db7944a2423963409cea7205ec362a31ed0259e23ba34c303b4213253",
+    "442/442", "246/246", "425/425",
+    PRIMARY.relative_to(REPO).as_posix(),
+    INDEPENDENT.relative_to(REPO).as_posix(),
+    SCRIPT.relative_to(REPO).as_posix(),
+    "32063/500000", "2918597/30000000", "584161/6000000",
+    "1411418996889/381469726562500",
+    "2314877826589220601/29802322387695312500",
+    "-1591/720000", "69827/324135000", "8/25",
+    "R-168 v1.3", "historical", "not reissued",
+    "physical lambda=1", "all-order", "physical Sector A", "Pre-A",
+)
+
 PRIMARY_SCHEMA = f"tect/{SLUG}-primary-result/1.0"
 INDEPENDENT_SCHEMA = f"tect/{SLUG}-independent-result/1.0"
 INTEGRATED_SCHEMA = f"tect/{SLUG}-integrated-result/1.0"
-PRIMARY_PROOF_FIRST_ASSERTIONS = 380
-PRIMARY_FORMAL_ASSERTIONS = 384
-INDEPENDENT_PROOF_FIRST_ASSERTIONS = 214
-INDEPENDENT_FORMAL_ASSERTIONS = 218
+PRIMARY_PROOF_FIRST_ASSERTIONS = 440
+PRIMARY_FORMAL_ASSERTIONS = 442
+INDEPENDENT_PROOF_FIRST_ASSERTIONS = 244
+INDEPENDENT_FORMAL_ASSERTIONS = 246
 EXPECTED_COMPONENT_SCRIPT_SHA256 = {
-    "primary": "9d667e615879985fa32dfb9540109769cd830e53aebb8c226f8b3a1008dea94c",
-    "independent": "f3e8bc777a2756f67168b3afea72f8a2365a7efc7f1a78e8b6ac3e5add3a7b71",
+    "primary": "f0f177b3b7c03f4e02795499cc5d5a8e432388269d51ab1d323a85c3974a6077",
+    "independent": "a54eb34db7944a2423963409cea7205ec362a31ed0259e23ba34c303b4213253",
+}
+EXPECTED_AUTHORITY_SHA256 = {
+    "manifest": "d681de07a07a16aa393316cd35aeb5889c471bc4959de1979170b288b23775bc",
+    "certificate": "883c0328ba00c62b0a4a3b559f4ff01cf6f38c31135503f2246642f8e777e01f",
 }
 
 
@@ -1166,7 +1324,7 @@ def validate_independence(audit: Audit) -> None:
         if isinstance(node, ast.Constant) and isinstance(node.value, str)
     ]
     forbidden_fragments = (
-        f"2026-08-12-primary-{SLUG}-v2-5",
+        f"2026-08-12-primary-{SLUG}-v2-6",
         PRIMARY_STORED.relative_to(REPO).as_posix(),
     )
     consumed = [
@@ -1563,6 +1721,57 @@ def v2_5_checkpoint_lifecycle_diagnostics(
     )
     diagnostics["valid"] = (
         diagnostics["valid"]
+        and diagnostics["status_exact"]
+        and diagnostics["workflow_exact"]
+        and diagnostics["visual_qa_exact"]
+        and diagnostics["r168_historical_not_reissued"]
+    )
+    return diagnostics
+
+
+def v2_6_checkpoint_lifecycle_diagnostics(
+    synthesis: Mapping[str, Any],
+) -> dict[str, Any]:
+    """Validate the local R-167-only v2.6 issued checkpoint exactly."""
+
+    diagnostics = checkpoint_lifecycle_diagnostics(
+        synthesis,
+        other_field=None,
+        required_tokens=V2_6_CHECKPOINT_REQUIRED_TOKENS,
+        workflow_tokens=(
+            "No per-lemma or intermediate PDF was issued", "R-167 v2.6",
+            "primary", "non-importing independent", "integrated",
+            "formal-authority", "generated-surface", "source-form",
+            "freshness", "dual-extraction", "strict-release", "visual-review",
+            "R-168 v1.3", "historical", "not reissued",
+        ),
+    )
+    pages = synthesis.get("pages")
+    expected_visual_qa = (
+        f"All {pages} rendered pages were reviewed at readable resolution "
+        "with zero clipping, overlap, broken equations, unreadable identifiers, "
+        "black glyphs, or malformed page transitions; pypdf and pdfplumber each "
+        f"extracted {pages}/{pages} nonempty pages; the build reported "
+        "OVERFULL-HBOX 0."
+        if isinstance(pages, int) and not isinstance(pages, bool) and pages > 0
+        else None
+    )
+    diagnostics["status_exact"] = synthesis.get("status") == V2_6_ISSUED_STATUS
+    diagnostics["workflow_exact"] = synthesis.get("workflow") == V2_6_ISSUED_WORKFLOW
+    diagnostics["visual_qa_exact"] = (
+        expected_visual_qa is not None
+        and synthesis.get("visual_qa") == expected_visual_qa
+    )
+    diagnostics["expected_visual_qa"] = expected_visual_qa
+    diagnostics["r168_historical_not_reissued"] = (
+        diagnostics["workflow_exact"]
+        and text_has(synthesis.get("workflow", ""), "R-168 v1.3")
+        and text_has(synthesis.get("workflow", ""), "historical")
+        and text_has(synthesis.get("workflow", ""), "not reissued")
+    )
+    diagnostics["valid"] = (
+        diagnostics["valid"]
+        and set(synthesis) == V2_6_ISSUED_FIELDS
         and diagnostics["status_exact"]
         and diagnostics["workflow_exact"]
         and diagnostics["visual_qa_exact"]
@@ -2180,16 +2389,16 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
             "manifest",
         )
     audit.check(
-        "manifest v2.5 fixed-volume/Ritz third-order status with parents open",
+        "manifest v2.6 corrected zero-source fixed-order status with parents open",
         all(
             text_has(manifest.get("status", ""), token)
             for token in (
-                "R-167 V2.5", "COMPLETE THIRD-ORDER", "FIXED FINITE RITZ",
-                "COMPACT-CYLINDER", "REMAIN OPEN",
+                "R-167 V2.6", "FIXED-RITZ EVERY-FIXED-ORDER", "ZERO-SOURCE Q3",
+                "FOURTH-ORDER", "REMAIN OPEN",
             )
         ),
         manifest.get("status"),
-        "one v2.5 fixed-(Lambda,M) child and one narrow no-go; parents open",
+        "four corrected v2.6 children and two narrow no-gos; parents open",
         "manifest",
     )
     sections = (
@@ -2663,7 +2872,7 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     )
     audit.check(
         "manifest v2.5 complete sequential third-order low block",
-        third_v25.get("gate_id") == NEW_CLOSED_SUBGATES[0]
+        third_v25.get("gate_id") == V2_5_CLOSED_SUBGATES[0]
         and all(text_has(third_v25, token) for token in (
             "fixed finite spatial volume Lambda", "fixed finite parity-preserving onsite Ritz cutoff M",
             "[G,K]=-V_od", "[G2,K]=-[G,V_d]",
@@ -2700,7 +2909,7 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     )
     audit.check(
         "manifest v2.5 compact-cylinder exact obstruction and carrier",
-        cylinder_v25.get("negative_id") == NEW_NEGATIVE_IDS[0]
+        cylinder_v25.get("negative_id") == V2_5_NEGATIVE_IDS[0]
         and all(text_has(cylinder_v25, token) for token in (
             "d=8", "c nonzero", "K tensor I", "sup_s",
             "4/5", "3/5", "9/25", "exact supremum is one",
@@ -2736,30 +2945,16 @@ def validate_manifest(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     )
     require_tokens(
         manifest.get("no_overclaim", ""),
-        "manifest v2.5 no-overclaim boundary",
+        "manifest v2.6 no-overclaim boundary",
         (
-            "preserves every v2.4 and earlier conclusion",
-            "complete lambda^3 low block",
-            "fixed finite spatial volume Lambda",
-            "fixed finite parity-preserving onsite Ritz cutoff M",
-            "linked ordered-edge-triple cancellation",
-            "no Lambda-uniform constants",
-            "no spatial-volume or thermodynamic limit",
-            "no tau cutoff estimate",
-            "no cutoff-uniform or unbounded statement",
-            "no convergent BCH or Lie-Schwinger series",
-            "no all-order connected interaction",
-            "no QPS phase transfer or GNS intertwiner",
-            "compact-cylinder",
-            "multiplier algebra of the nonunital compact ideal",
-            "fails point-norm C0",
-            "not a no-go for an unsplit dynamics",
-            "existence of a common alpha by another route",
-            "all-exhaustion common alpha",
-            "rank-two unbounded block diagonalization",
-            "broken-sector oscillator temporal mass or GNS gap",
-            "prospective blind validation",
-            "physical Sector A", "Pre-A closure",
+            "preserves every v2.5 and earlier conclusion",
+            "zero source", "every fixed order n", "fixed finite Ritz cutoff M",
+            "does not assert convergence of the full series",
+            "sufficiently small scaled coupling", "not automatically for physical lambda=1",
+            "third- and fourth-order coefficients", "not a rank-two unbounded block diagonalization",
+            "no actual all-shape or all-exhaustion Cauchy compatibility",
+            "all-exhaustion common alpha", "broken-sector oscillator temporal mass or GNS gap",
+            "Round-1", "C6", "CP1", "physical Sector A", "Pre-A closure",
         ),
         audit,
         core=True,
@@ -2953,8 +3148,8 @@ def validate_certificate(audit: Audit) -> str | None:
         text,
         "certificate additive v2.5 theorem fixtures and boundary",
         (
-            EXPLORATION_ID, f"{RESULT_NUMBER} {RESULT_VERSION}",
-            *NEW_CLOSED_SUBGATES, *NEW_NEGATIVE_IDS,
+            "EXP-000825", "R-167 v2.5",
+            *V2_5_CLOSED_SUBGATES, *V2_5_NEGATIVE_IDS,
             "fixed finite spatial volume", "fixed finite onsite Ritz cutoff",
             r"\Theta^{(3)}={1\over2}P[G,[G,V_{\rm d}]]P",
             r"{1\over300}", "Q[G_2,K]P=-S",
@@ -3004,11 +3199,79 @@ def validate_certificate(audit: Audit) -> str | None:
         "deferred-only local checkpoint and all broad parents open",
         "certificate_v2_4",
     )
+    checkpoint = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    checkpoint_meta = as_mapping(checkpoint.get(V2_6_CHECKPOINT_FIELD))
+    checkpoint_deferred = checkpoint_meta == V2_6_DEFERRED_CHECKPOINT
+    checkpoint_issued = v2_6_checkpoint_lifecycle_diagnostics(checkpoint_meta)
+    heading_67 = "## 67. Devil's-advocate audit and exact v2.6 lifecycle"
+    heading_68 = "## 68. R-167 v2.6-only gate-level checkpoint issuance"
+    certificate_lines = text.splitlines()
+    heading_67_count = certificate_lines.count(heading_67)
+    heading_68_count = certificate_lines.count(heading_68)
+    section_68_start = (
+        certificate_lines.index(heading_68) + 1
+        if heading_68_count == 1 else len(certificate_lines)
+    )
+    section_68_end = next(
+        (
+            index for index in range(section_68_start, len(certificate_lines))
+            if certificate_lines[index].startswith("## ")
+        ),
+        len(certificate_lines),
+    )
+    section_68 = "\n".join(certificate_lines[section_68_start:section_68_end])
+    component_paths = (PRIMARY, INDEPENDENT, SCRIPT)
+    component_tokens = tuple(
+        token
+        for path in component_paths
+        for token in (path.relative_to(REPO).as_posix(), raw_sha256(path))
+    )
+    issuance_exact_tokens = (
+        checkpoint_meta.get("source"), checkpoint_meta.get("pdf"),
+        checkpoint_meta.get("source_sha256"), checkpoint_meta.get("pdf_sha256"),
+        "11 pages", "442/442", "246/246", "425/425",
+        *component_tokens, *OPEN_GATES,
+    )
+    issuance_semantic_tokens = (
+        "The Section 67 statements", "No v2.6 PDF is issued", "DEFERRED",
+        "pdf_issued: false", "EXP-000826 as corrected by EXP-000827",
+        "zero-source", "first two", "children", "pypdf", "pdfplumber",
+        "11/11 nonempty pages", "OVERFULL-HBOX 0",
+        "no forms, JavaScript or encryption", "All 11 pages", "zero clipping",
+        "overlap", "broken equations", "unreadable identifiers",
+        "black glyphs", "malformed page transitions",
+        "R-168 v1.3 remains historical and is not reissued",
+        "all five parent gates remain OPEN",
+        "no new theorem", "no new result number", "no new result version",
+        "no tier change", "no gate closure", "no parent closure", "OPEN",
+    )
+    baseline_certificate = (
+        checkpoint_deferred
+        and raw_sha256(CERTIFICATE) == EXPECTED_AUTHORITY_SHA256["certificate"]
+        and heading_68_count == 0
+    )
+    issued_certificate = (
+        not checkpoint_deferred
+        and checkpoint_issued.get("valid") is True
+        and checkpoint_meta.get("pages") == 11
+        and heading_67_count == 1
+        and heading_68_count == 1
+        and certificate_lines.index(heading_67) < certificate_lines.index(heading_68)
+        and all(isinstance(token, str) and token in section_68 for token in issuance_exact_tokens)
+        and all(text_has(section_68, token) for token in issuance_semantic_tokens)
+    )
     audit.check(
-        "certificate LF-only",
-        CERTIFICATE.read_bytes().count(b"\r") == 0,
-        CERTIFICATE.read_bytes().count(b"\r"),
-        0,
+        "certificate LF-only and exact v2.6 deferred/issued lifecycle",
+        CERTIFICATE.read_bytes().count(b"\r") == 0
+        and (baseline_certificate or issued_certificate),
+        {
+            "cr_bytes": CERTIFICATE.read_bytes().count(b"\r"),
+            "deferred": checkpoint_deferred,
+            "baseline": baseline_certificate,
+            "issued": issued_certificate,
+            "section_68_heading_count": heading_68_count,
+        },
+        "LF-only with exact Section 67 baseline or one ordered Section 68 issuance",
         "certificate",
     )
     return text
@@ -4602,23 +4865,23 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
             "formal",
         )
         audit.pending(
-            f"{EXPLORATION_ID} exact closed-child gate set",
-            as_list(record.get("gate_ids")) == list(NEW_CLOSED_SUBGATES),
+            f"{EXPLORATION_ID} exact child-and-parent gate set",
+            as_list(record.get("gate_ids")) == list(V2_6_RECORD_GATE_IDS),
             record.get("gate_ids"),
-            list(NEW_CLOSED_SUBGATES),
+            list(V2_6_RECORD_GATE_IDS),
             "formal",
         )
         audit.pending(
             f"{EXPLORATION_ID} proof boundary and continuation",
             record.get("related") == [{"id": PRIOR_EXPLORATION_ID, "relation": "continues"}]
             and all(text_has(record.get("title", ""), token) for token in (
-                "fixed finite", "Ritz", "third-order", "compact-cylinder",
+                "fixed-Ritz", "fixed-order SW", "zero-source Q3", "third/fourth",
             ))
             and all(text_has(serialized, token) for token in (
-                "fixed finite spatial volume", "onsite Ritz",
-                "complete third-order", "linked rank-two low block",
-                "canonical compact-cylinder", "spatial-volume", "thermodynamic",
-                "M-uniform", "all-order", "common-alpha nonexistence", "GNS gap",
+                "fixed finite Ritz cutoff", "every separately fixed order",
+                "zero-source Q3", "orders three and four", "standard-SW gauge",
+                "n-to-infinity", "physical lambda=1", "all-order",
+                "common alpha", "GNS gap",
             )),
             record,
             "exact prior link, theorem findings and broad-parent boundary",
@@ -4729,7 +4992,8 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
                     *CLOSED_SUBGATES,
                     *OPEN_GATES[:-1],
                     "connected rank-two oscillator/QPS successor",
-                    *NEGATIVE_IDS,
+                    *PRIOR_NEGATIVE_IDS,
+                    *V2_5_NEGATIVE_IDS,
                     "T0",
                 ),
                 audit,
@@ -4743,7 +5007,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
             PRIOR_NEGATIVE_IDS,
             audit,
         )
-        for negative_id in NEW_NEGATIVE_IDS:
+        for negative_id in V2_5_NEGATIVE_IDS:
             require_tokens(
                 negatives,
                 f"v2.5 negative authority {negative_id}",
@@ -4831,7 +5095,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
                     "CLOSED retained under EXP-000818/R-167 v2.4",
                     "formal_history",
                 )
-        for gate in NEW_CLOSED_SUBGATES:
+        for gate in V2_5_CLOSED_SUBGATES:
             section = heading_section(gates, gate)
             audit.pending(
                 f"v2.5 closed gate section {gate}",
@@ -4845,10 +5109,10 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
                     f"v2.5 closed gate scoped status {gate}",
                     re.search(r"\*\*Status:\*\*\s*CLOSED", section, re.I)
                     is not None
-                    and text_has(section, EXPLORATION_ID)
-                    and text_has(section, RESULT_VERSION),
+                    and text_has(section, "EXP-000825")
+                    and text_has(section, "v2.5"),
                     section,
-                    f"scoped CLOSED under {EXPLORATION_ID}/{RESULT_NUMBER} {RESULT_VERSION}",
+                    "scoped CLOSED under EXP-000825/R-167 v2.5",
                     "formal",
                 )
         exp820_sections = [heading_section(gates, gate) for gate in exp820_gates]
@@ -4925,7 +5189,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         if len(tasks) == 1:
             serialized = json.dumps(tasks[0], sort_keys=True)
             audit.pending(
-                f"{TASK_ID} in-progress v2.5 linkage",
+                f"{TASK_ID} in-progress v2.6 corrected linkage",
                 tasks[0].get("status") == "in_progress"
                 and tasks[0].get("gate") == OPEN_GATES[3]
                 and all(
@@ -4934,9 +5198,10 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
                         EXPLORATION_ID,
                         RESULT_VERSION,
                         "actual all-shape Q3 common alpha",
-                        "complete third-order rank-two low-block coefficient",
-                        "fixed finite spatial volume Lambda",
-                        "fixed finite parity-preserving onsite Ritz cutoff M",
+                        "EXP-000827",
+                        "zero-source",
+                        "fourth-order",
+                        "fixed-order",
                         "all-order",
                         "broken-sector GNS gap",
                         "physical Sector A",
@@ -4944,7 +5209,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
                     )
                 ),
                 tasks[0],
-                "in_progress on Round-1 with exact v2.5 scoped successor note",
+                "in_progress on Round-1 with exact v2.6 corrected scope note",
                 "formal",
             )
 
@@ -4952,7 +5217,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
     if theorem_map is not None:
         require_tokens(
             json.dumps(theorem_map, sort_keys=True),
-            "Sector-A theorem map v2.5 scope",
+            "Sector-A theorem map v2.6 corrected scope",
             (RESULT_NUMBER, RESULT_VERSION, EXPLORATION_ID, *CLOSED_SUBGATES, *OPEN_GATES, "Pre-A"),
             audit,
         )
@@ -4963,15 +5228,19 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         for event in changelog or []
         if {CLAIM_ID, EXPLORATION_ID, RESULT_NUMBER}
         <= set(as_list(event.get("claim_ids")))
-        and text_has(event.get("raw", event.get("header", "")), "R-167 v2.5")
+        and text_has(event.get("raw", event.get("header", "")), "R-167 v2.6")
         and not text_has(event.get("raw", event.get("header", "")), "combined gate-level synthesis PDF issued")
         and "hash-correction" not in set(as_list(event.get("keywords")))
+        and not any(
+            str(keyword).startswith("artifact-pin-correction")
+            for keyword in as_list(event.get("keywords"))
+        )
     ]
     if not v2_events:
-        audit.pending("R-167 v2.5 changelog", False, 0, 1, "formal")
+        audit.pending("R-167 v2.6 changelog", False, 0, 1, "formal")
     else:
         audit.check(
-            "R-167 v2.5 changelog unique",
+            "R-167 v2.6 theorem-event unique",
             len(v2_events) == 1,
             len(v2_events),
             1,
@@ -4980,7 +5249,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
     if len(v2_events) == 1:
         event = v2_events[0]
         audit.check(
-            "R-167 v2.5 changelog authority sets",
+            "R-167 v2.6 theorem-event authority sets",
             set(NEW_NEGATIVE_IDS) <= set(as_list(event.get("neg_results")))
             and {
                 PRIMARY.relative_to(REPO).as_posix(),
@@ -4999,21 +5268,20 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         )
         require_tokens(
             event.get("raw", ""),
-            "R-167 v2.5 changelog theorem and boundary",
+            "R-167 v2.6 theorem-event and boundary",
             (
-                "fixed finite spatial volume",
-                "onsite Ritz",
-                "complete third-order",
-                "linked",
-                "Theta",
-                "compact-cylinder",
-                "9/25",
-                "No Lambda-uniform",
-                "thermodynamic",
-                "cutoff-uniform",
+                "fixed finite onsite Ritz cutoff",
+                "every separately fixed order",
+                "zero-source Q3",
+                "third/fourth",
+                "Theta4_seq",
+                "1/8820",
+                "physical lambda=1",
                 "all-order",
-                "remain open",
-                "No v2.5 PDF is issued",
+                "common alpha",
+                "GNS gap",
+                "remain OPEN",
+                "No v2.6 PDF is issued",
             ),
             audit,
             core=True,
@@ -5021,10 +5289,10 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
 
     proof_map = read_text(REPO / "theory/proof-evidence-map.md", audit, "proof-evidence map")
     if proof_map is not None:
-        require_tokens(proof_map, "proof-evidence v2.5 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
+        require_tokens(proof_map, "proof-evidence v2.6 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
     proof_json = load_json(REPO / "verification/proof-evidence-map.json", audit, "proof-evidence JSON")
     if proof_json is not None:
-        require_tokens(json.dumps(proof_json, sort_keys=True), "proof-evidence JSON v2.5 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
+        require_tokens(json.dumps(proof_json, sort_keys=True), "proof-evidence JSON v2.6 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
 
     locator_specs = (
         (
@@ -5084,7 +5352,7 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
 
     generated_specs = (
         (REPO / "negative-results/INDEX.md", "negative index", NEGATIVE_IDS),
-        (REPO / "changelog/INDEX.md", "changelog index", (EXPLORATION_ID, RESULT_VERSION)),
+        (REPO / "changelog/INDEX.md", "changelog index", (EXPLORATION_ID, SCOPE_CORRECTION_EXPLORATION_ID, RESULT_VERSION)),
     )
     for path, label, tokens in generated_specs:
         text = read_text(path, audit, label)
@@ -5218,6 +5486,468 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
     }
 
 
+
+def validate_v2_6_additive(
+    manifest: Mapping[str, Any], certificate: str | None,
+    components: Mapping[str, Mapping[str, Any]], audit: Audit,
+) -> dict[str, Any]:
+    """Add exactly 56 meaningful v2.6 rows in the declared 12/15/16/13 split."""
+
+    p = as_mapping(components.get("primary")); i = as_mapping(components.get("independent"))
+    pd = as_mapping(p.get("derived")); ide = as_mapping(i.get("derived"))
+    pv = as_mapping(pd.get("fixture_M_v2_6_fixed_order_fourth_weighted_and_no_gos"))
+    iv = as_mapping(ide.get("v2_6_fixed_order_fourth_weighted_and_no_gos"))
+    mf = as_mapping(manifest.get("v2_6_exact_fixture"))
+    pb = as_mapping(pv.get("bdl_fixed_order")); ib = as_mapping(iv.get("bdl_fixed_order"))
+    ps = as_mapping(pv.get("scalar_fourth_order")); ins = as_mapping(iv.get("scalar_fourth_order"))
+    pn = as_mapping(pv.get("noncommutative_fourth_order")); inn = as_mapping(iv.get("noncommutative_fourth_order"))
+    pdis = as_mapping(pv.get("disconnected_fourth_order")); idis = as_mapping(iv.get("disconnected_fourth_order"))
+    pw = as_mapping(pv.get("weighted_zero_source_Q3")); iw = as_mapping(iv.get("weighted_zero_source_Q3"))
+    pt = as_mapping(pv.get("low_high_tail_hostile")); it = as_mapping(iv.get("low_high_tail_hostile"))
+    po = as_mapping(pv.get("orbit_smear")); io = as_mapping(iv.get("orbit_smear"))
+    ph = as_mapping(p.get("source_hashes")); ih = as_mapping(i.get("source_hashes"))
+    def add(group: str, specs: list[tuple[str, bool, Any, Any]]) -> None:
+        for name, condition, actual, expected in specs:
+            audit.check(name, bool(condition), actual, expected, group)
+
+    pk=PRIMARY.relative_to(REPO).as_posix(); ik=INDEPENDENT.relative_to(REPO).as_posix()
+    mk=MANIFEST.relative_to(REPO).as_posix(); ck=CERTIFICATE.relative_to(REPO).as_posix()
+    pc=as_mapping(p.get("summary")); ic=as_mapping(i.get("summary"))
+    pformal=as_mapping(p.get("authority")).get("status") in {"PASS","COMPLETE"}
+    iformal=as_mapping(i.get("authority")).get("status") in {"PASS","COMPLETE"}
+    manifest_raw=raw_sha256(MANIFEST)
+    certificate_raw=raw_sha256(CERTIFICATE)
+    manifest_checkpoint=as_mapping(manifest.get(V2_6_CHECKPOINT_FIELD))
+    manifest_deferred=manifest_checkpoint==V2_6_DEFERRED_CHECKPOINT
+    manifest_issued=v2_6_checkpoint_lifecycle_diagnostics(manifest_checkpoint).get("valid") is True
+    primary_manifest_pin=(manifest_deferred and ph.get(mk)==EXPECTED_AUTHORITY_SHA256["manifest"] and manifest_raw==EXPECTED_AUTHORITY_SHA256["manifest"]) or (manifest_issued and ph.get(mk)==manifest_raw)
+    independent_manifest_pin=(manifest_deferred and ih.get(mk)==EXPECTED_AUTHORITY_SHA256["manifest"] and manifest_raw==EXPECTED_AUTHORITY_SHA256["manifest"]) or (manifest_issued and ih.get(mk)==manifest_raw)
+    dual_manifest_pin=primary_manifest_pin and independent_manifest_pin and ph.get(mk)==ih.get(mk)==manifest_raw
+    primary_certificate_pin=(manifest_deferred and ph.get(ck)==EXPECTED_AUTHORITY_SHA256["certificate"] and certificate_raw==EXPECTED_AUTHORITY_SHA256["certificate"]) or (manifest_issued and ph.get(ck)==certificate_raw)
+    independent_certificate_pin=(manifest_deferred and ih.get(ck)==EXPECTED_AUTHORITY_SHA256["certificate"] and certificate_raw==EXPECTED_AUTHORITY_SHA256["certificate"]) or (manifest_issued and ih.get(ck)==certificate_raw)
+    dual_certificate_pin=(
+        primary_certificate_pin
+        and independent_certificate_pin
+        and ph.get(ck)==ih.get(ck)==certificate_raw
+    )
+    add("v2_6_component_freshness", [
+      ("v2.6 primary identity/lists",p.get("result_version")==RESULT_VERSION and p.get("exploration_id")==EXPLORATION_ID and p.get("negative_ids")==list(NEGATIVE_IDS) and p.get("closed_subgates")==list(CLOSED_SUBGATES) and p.get("open_gates")==list(OPEN_GATES),p.get("result_version"),"v2.6 exact lists"),
+      ("v2.6 independent identity/lists",i.get("result_version")==RESULT_VERSION and i.get("exploration_id")==EXPLORATION_ID and i.get("negative_ids")==list(NEGATIVE_IDS) and i.get("closed_subgates")==list(CLOSED_SUBGATES) and i.get("open_gates")==list(OPEN_GATES),i.get("result_version"),"v2.6 exact lists"),
+      ("v2.6 primary 440/442 contract",pc.get("passed")== (442 if pformal else 440) and pc.get("failed")==0 and pc.get("total")==pc.get("passed"),pc,{"proof_first":440,"formal":442}),
+      ("v2.6 independent 244/246 contract",ic.get("passed")== (246 if iformal else 244) and ic.get("failed")==0 and ic.get("total")==ic.get("passed"),ic,{"proof_first":244,"formal":246}),
+      ("v2.6 primary authority pins",primary_manifest_pin and primary_certificate_pin,{mk:ph.get(mk),ck:ph.get(ck),"manifest_raw":manifest_raw,"certificate_raw":certificate_raw,"deferred":manifest_deferred,"issued":manifest_issued},{"manifest":"frozen deferred pin or issued raw self-consistency","certificate":"frozen deferred pin or issued raw self-consistency"}),
+      ("v2.6 independent authority pins",independent_manifest_pin and independent_certificate_pin,{mk:ih.get(mk),ck:ih.get(ck),"manifest_raw":manifest_raw,"certificate_raw":certificate_raw,"deferred":manifest_deferred,"issued":manifest_issued},{"manifest":"frozen deferred pin or issued raw self-consistency","certificate":"frozen deferred pin or issued raw self-consistency"}),
+      ("v2.6 manifest raw pin",(manifest_deferred and manifest_raw==EXPECTED_AUTHORITY_SHA256["manifest"]) or (manifest_issued and dual_manifest_pin),{"raw":manifest_raw,"deferred":manifest_deferred,"issued":manifest_issued,"primary":ph.get(mk),"independent":ih.get(mk)},"deferred d681... or issued raw hash mirrored by both components"),
+      ("v2.6 certificate raw pin",(manifest_deferred and certificate_raw==EXPECTED_AUTHORITY_SHA256["certificate"]) or (manifest_issued and dual_certificate_pin),{"raw":certificate_raw,"deferred":manifest_deferred,"issued":manifest_issued,"primary":ph.get(ck),"independent":ih.get(ck)},"deferred 883c... or issued raw hash mirrored by both components"),
+      ("v2.6 primary raw pin",raw_sha256(PRIMARY)==ph.get(pk)==EXPECTED_COMPONENT_SCRIPT_SHA256["primary"],{"raw":raw_sha256(PRIMARY),"payload":ph.get(pk)},EXPECTED_COMPONENT_SCRIPT_SHA256["primary"]),
+      ("v2.6 independent raw pin",raw_sha256(INDEPENDENT)==ih.get(ik)==EXPECTED_COMPONENT_SCRIPT_SHA256["independent"],{"raw":raw_sha256(INDEPENDENT),"payload":ih.get(ik)},EXPECTED_COMPONENT_SCRIPT_SHA256["independent"]),
+      ("v2.6 correction mirrored",dual_manifest_pin and pb.get("zero_source_fixed_M") is True and ib.get("zero_source_fixed_M") is True and as_fraction(pw.get("third_qps"))==as_fraction(iw.get("third_qps"))==Fraction(1411418996889,381469726562500) and manifest.get("scope_correction_exploration_id")==SCOPE_CORRECTION_EXPLORATION_ID,{"correction":manifest.get("scope_correction_exploration_id"),"manifest_raw":manifest_raw,"primary":ph.get(mk),"independent":ih.get(mk)},"both components mirror current manifest and EXP-000827"),
+      ("v2.6 fresh two-engine fixture contract",p.get("schema")==PRIMARY_SCHEMA and i.get("schema")==INDEPENDENT_SCHEMA and p.get("verdict") in {"PASS","INCOMPLETE"} and i.get("verdict") in {"PASS","INCOMPLETE"} and bool(pv) and bool(iv),[p.get("verdict"),i.get("verdict")],"fresh fixture M payloads"),
+    ])
+    bdl=as_mapping(manifest.get("fixed_ritz_standard_sw_every_fixed_order_linked_cluster_coefficients")); src=as_mapping(bdl.get("primary_source")); ass=str(bdl.get("exact_assumptions",""))
+    energy=as_mapping(manifest.get("fixed_ritz_each_fixed_order_small_coupling_volume_extensive_sw_ground_energy_approximation")); weighted=as_mapping(manifest.get("zero_source_q3_third_fourth_order_coefficient_qps_and_ritz_cutoff"))
+    fourth=as_mapping(manifest.get("fixed_finite_volume_and_ritz_complete_fourth_order_sequential_low_block_and_standard_sw_gauge_crosswalk")); low=as_mapping(manifest.get("low_high_ritz_tail_automatic_uniform_high_high_insertion_cutoff_no_go")); orbit=as_mapping(manifest.get("orbit_smear_seed_support_automatic_spatial_local_net_no_go"))
+    add("v2_6_manifest", [
+      ("v2.6 manifest identity",manifest.get("result_version")==RESULT_VERSION and manifest.get("exploration_id")==EXPLORATION_ID and manifest.get("scope_correction_exploration_id")==SCOPE_CORRECTION_EXPLORATION_ID and manifest.get("negative_ids")==list(NEGATIVE_IDS) and manifest.get("closed_subgates")==list(CLOSED_SUBGATES),manifest.get("result_version"),"exact v2.6 lists"),
+      ("v2.6 scoped status",all(text_has(manifest.get("status",""),x) for x in ("R-167 V2.6","ZERO-SOURCE Q3","THIRD/FOURTH","ALL-ORDER CONVERGENCE","REMAIN OPEN")),manifest.get("status"),"four children scoped, parents open"),
+      ("v2.6 append-only correction mapping",all(text_has(manifest.get("authority",""),x) for x in ("EXP-000826","EXP-000827","zero-source","tilde B")) and certificate is not None and all(text_has(certificate,x) for x in ("EXP-000826 as corrected by EXP-000827","R_{XY}S_{XY}","32063/500000","2918597/30000000")),manifest.get("authority"),"manifest+certificate correction"),
+      ("v2.6 BDL provenance",src.get("doi")=="https://doi.org/10.1016/j.aop.2011.06.004" and src.get("arxiv")=="https://arxiv.org/abs/1105.0675" and all(text_has(src.get("location",""),x) for x in ("Theorem 2","p. 33")),src,"BDL 2011 theorem location"),
+      ("v2.6 augmented-edge allocation",all(text_has(ass,x) for x in ("finite connected zero-source Q3","deg(x)>=1","omega_(x,e)>=0","sum_(e containing x) omega_(x,e)=1","tilde B_(e,M)=","delta_1 sum_x P_(1,x)","H_M(1)","arbitrary finite rank")),ass,"exact zero-source mapping"),
+      ("v2.6 linked theorem/count",all(text_has(bdl,x) for x in ("every fixed n","standard-SW","connected","|C|<=n","(n!)^2 z^n","support is at most n+1","diameter at most n")),bdl,"fixed-n connected+safe count"),
+      ("v2.6 extensive energy theorem",all(text_has(energy.get("scaled_coupling",""),x) for x in ("eta=lambda J_M","each fixed truncation order n","independent of |Lambda|","|Lambda||eta|^(n+1)","standard/local truncations")),energy.get("scaled_coupling"),"fixed-(n,M) extensive error"),
+      ("v2.6 energy firewall",all(text_has(energy,x) for x in ("depend on n, M, J_M","volume shrinking","not an all-order","No claim is made at physical lambda=1","no uniformity in M","limit n to infinity")),energy,"no all-order/M-uniform/lambda-one"),
+      ("v2.6 weighted block constants",all(text_has(weighted.get("local_block_hypotheses",""),x) for x in ("a_tilde:=a+2delta_1/z","rho_tilde:=rho_b+delta_1/(z Gamma)","32063/500000","2918597/30000000","max(rho_tilde,a_tilde/Gamma)","584161/6000000","adds no cross leg")),weighted.get("local_block_hypotheses"),"exact augmented W"),
+      ("v2.6 coefficient/Ritz scope",all(text_has(weighted,x) for x in ("per3=","per4=","finite rank","third- and fourth-order","converges in operator norm","no fifth-order estimate","all-order recursion convergence")),weighted,"orders 3,4 only"),
+      ("v2.6 sequential formula",text_has(fourth.get("sequential_formula",""),"Theta4_seq=(1/2){F,B}-S*RS") and all(text_has(fourth.get("sequential_formula",""),x) for x in ("B=T*RT","F=T*R^2T")) and text_has(fourth.get("setup",""),"S=RTA-CRT"),fourth,"complete fixed-(Lambda,M) formula"),
+      ("v2.6 direct additivity boundary",all(text_has(fourth.get("linked_boundary",""),x) for x in ("additive on disjoint components","B_X tensor F_Y","disconnected multivariate fourth-order edge coefficient vanishes","no equality of sequential and standard coefficient matrices")),fourth.get("linked_boundary"),"per-aggregate cancellation"),
+      ("v2.6 standard gauge crosswalk",all(text_has(fourth.get("standard_gauge",""),x) for x in ("K_P=(1/2)P[G2,G]P","Theta4_std=Theta4_seq-[K_P,A]","S1=L(V_od)","S2=-L[V_d,S1]","H_eff,4")),fourth.get("standard_gauge"),"BDL recursion crosswalk"),
+      ("v2.6 two no-go scopes",low.get("negative_id")==NEW_NEGATIVE_IDS[0] and orbit.get("negative_id")==NEW_NEGATIVE_IDS[1] and all(text_has(low,x) for x in ("j=M+1","Gram difference","not a no-go for the actual Q3")) and all(text_has(orbit,x) for x in ("formally disjoint seeds","8i/25","does not reject the orbit-smear")),{"low":low,"orbit":orbit},"two narrow fixtures"),
+      ("v2.6 exact fixture/no-overclaim",manifest.get("v2_6_exact_fixture")==EXPECTED_V2_6_FIXTURE and all(text_has(manifest.get("no_overclaim",""),x) for x in ("every fixed order n","third- and fourth-order coefficients","not automatically for physical lambda=1","all-exhaustion common alpha","broken-sector oscillator temporal mass or GNS gap","Pre-A closure")),mf,"exact literal+broad firewall"),
+    ])
+    fm=lambda x:as_fraction_matrix(x)
+    add("v2_6_cross", [
+      ("cross v2.6 zero-source allocation",pb.get("zero_source_fixed_M") is True and ib.get("zero_source_fixed_M") is True and pb.get("finite_connected_graph_min_degree")==ib.get("finite_connected_graph_min_degree")==1 and pb.get("incident_partition_nonnegative") is True and ib.get("incident_partition_nonnegative") is True and pb.get("onsite_allocation_identity") is True and ib.get("onsite_allocation_identity") is True and as_mapping(mf.get("bdl_fixed_order")).get("physical_model_at_lambda_one") is True,{"p":pb,"i":ib},"exact augmented mapping"),
+      ("cross v2.6 connected support/counts",pb.get("connected_edge_limit")==ib.get("connected_edge_limit")=="|C|<=n" and pb.get("support_limit")==ib.get("support_limit")=="n+1" and pb.get("diameter_limit")==ib.get("diameter_limit")=="n" and int(pb.get("fourth_rooted_ordered_count"))==int(ib.get("fourth_rooted_ordered_count"))==746496 and int(pb.get("fourth_qps_count"))==int(ib.get("fourth_qps_count"))==3732480,{"p":pb,"i":ib},"|C|<=n; 746496/3732480"),
+      ("cross v2.6 scalar fourth order",all(as_fraction(ps.get(k))==as_fraction(ins.get(k)) for k in ("T","A","C","B","F","S","Theta4_seq","Theta4_std")) and as_fraction(ps.get("Theta4_seq"))==Fraction(-1591,720000),{"p":ps,"i":ins},"-1591/720000"),
+      ("cross v2.6 noncommutative B/F",fm(pn.get("B"))==fm(inn.get("B")) and fm(pn.get("F"))==fm(inn.get("F")),{"B":pn.get("B"),"F":pn.get("F")},"exact matrices"),
+      ("cross v2.6 noncommutative S*RS",fm(pn.get("S_star_R_S"))==fm(inn.get("S_star_R_S")),pn.get("S_star_R_S"),inn.get("S_star_R_S")),
+      ("cross v2.6 sequential nested",fm(pn.get("Theta4_seq"))==fm(pn.get("Theta4_seq_nested"))==fm(inn.get("Theta4_seq"))==fm(inn.get("Theta4_seq_nested")),pn.get("Theta4_seq"),"nested/direct equality"),
+      ("cross v2.6 K_P gauge",fm(pn.get("K_P"))==fm(inn.get("K_P"))==[[Fraction(0),Fraction(-857,135000)],[Fraction(857,135000),Fraction(0)]],pn.get("K_P"),"+-857/135000"),
+      ("cross v2.6 standard recursion/crosswalk",fm(pn.get("Theta4_std_crosswalk"))==fm(pn.get("Theta4_std_recursion"))==fm(inn.get("Theta4_std_crosswalk"))==fm(inn.get("Theta4_std_recursion")),pn.get("Theta4_std_crosswalk"),"gauge=BDL recursion"),
+      ("cross v2.6 disconnected mixed aggregate",as_fraction(pdis.get("mixed_BF"))==as_fraction(pdis.get("mixed_S_star_R_S"))==as_fraction(idis.get("mixed_BF"))==as_fraction(idis.get("mixed_S_star_R_S"))==Fraction(1,8820),{"p":pdis,"i":idis},"1/8820 cancellation"),
+      ("cross v2.6 disconnected remainder",as_fraction(pdis.get("Theta4"))==as_fraction(pdis.get("local_sum"))==as_fraction(idis.get("Theta4"))==as_fraction(idis.get("local_sum"))==Fraction(69827,324135000) and all(x.get("direct_resolvent_cross_identity") is True and x.get("all_disconnected_multivariate_fourth_coefficients_vanish") is True for x in (pdis,idis)),{"p":pdis,"i":idis},"69827/324135000 additive"),
+      ("cross v2.6 augmented constants",all(as_fraction(pw.get(k))==as_fraction(iw.get(k))==v for k,v in (("delta1",Fraction(1,10000)),("a_tilde",Fraction(32063,500000)),("rho_tilde",Fraction(2918597,30000000)),("w",Fraction(584161,6000000)))) and bool(pw.get("rho_tilde_dominates_a_tilde_over_Gamma")) and iw.get("rho_tilde_dominates_a_tilde_over_Gamma") is True,{"p":pw,"i":iw},"delta/a/rho/w exact"),
+      ("cross v2.6 third QPS",as_fraction(pw.get("per3"))==as_fraction(iw.get("per3"))==Fraction(3888206603,292968750000000000) and int(pw.get("third_factor"))==int(iw.get("third_factor"))==278784 and as_fraction(pw.get("third_qps"))==as_fraction(iw.get("third_qps"))==Fraction(1411418996889,381469726562500),{"p":pw.get("third_qps"),"i":iw.get("third_qps")},"corrected third envelope"),
+      ("cross v2.6 fourth QPS",as_fraction(pw.get("per4"))==as_fraction(iw.get("per4"))==Fraction(28578738599866921,21972656250000000000000000) and int(pw.get("fourth_factor"))==int(iw.get("fourth_factor"))==59719680 and as_fraction(pw.get("fourth_qps"))==as_fraction(iw.get("fourth_qps"))==Fraction(2314877826589220601,29802322387695312500),{"p":pw.get("fourth_qps"),"i":iw.get("fourth_qps")},"corrected fourth envelope"),
+      ("cross v2.6 Ritz/all-order firewall",pw.get("Ritz_removed_orders")==iw.get("Ritz_removed_orders")==[3,4] and pw.get("all_order") is False and iw.get("all_order") is False and pb.get("physical_lambda_one") is False and ib.get("physical_lambda_one") is False and ib.get("full_series_convergence_required") is False,{"p":pw,"i":iw},"orders 3,4; no all-order/lambda-one"),
+      ("cross v2.6 high-high hostile",as_fraction(pt.get("tau_M"))==as_fraction(it.get("tau_squared"))==0 and as_fraction(pt.get("insertion_tail"))==as_fraction(it.get("insertion_tail_norm_squared"))==1 and as_fraction(pt.get("Gram_difference"))==as_fraction(it.get("Gram_difference"))==1 and as_fraction(pt.get("uniform_C_j_norm"))==as_fraction(it.get("uniform_C_j_norm"))==2 and pt.get("uniform_over_j_cutoff") is False and it.get("uniform_over_j_cutoff") is False,{"p":pt,"i":it},"tau=0; insertion/Gram=1"),
+      ("cross v2.6 orbit smear",all(as_fraction(po.get(k))==as_fraction(io.get(k))==v for k,v in (("cosine_integral",Fraction(1,5)),("positive_sine_integral",Fraction(2,5)),("negative_sine_integral",Fraction(-2,5)),("commutator_norm",Fraction(8,25)))) and po.get("automatic_spatial_local_net") is False and io.get("automatic_spatial_local_net") is False and as_fraction(io.get("commutator_imaginary"))==Fraction(-8,25),{"p":po,"i":io},"exact 8/25 noncommutation"),
+    ])
+
+    def raw_jsonl(q: Path) -> list[dict[str, Any]]:
+        try:
+            return [json.loads(x) for x in q.read_text(encoding="utf-8").splitlines() if x.strip()]
+        except (OSError, UnicodeError, json.JSONDecodeError):
+            return []
+    exps=raw_jsonl(REPO/"explorations/log.jsonl"); events=raw_jsonl(REPO/"changelog/log.jsonl")
+    e826=[x for x in exps if x.get("id")==EXPLORATION_ID]
+    e827=[x for x in exps if x.get("id")==SCOPE_CORRECTION_EXPLORATION_ID]
+    ev617=[x for x in events if x.get("id")=="20260812-r-167-v2-6-closes-fixed-order-sw-coefficients-z"]
+    ev618=[x for x in events if x.get("id")=="20260812-r-167-v2-6-authority-correction-restores-zero-s"]
+    rt=(REPO/"RESULTS-LEDGER.md").read_text(encoding="utf-8")
+    nt=(REPO/"negative-results/registry.md").read_text(encoding="utf-8")
+    gt=(REPO/"claims/GATES.md").read_text(encoding="utf-8")
+    todo=json.loads((REPO/"todo/todo.json").read_text(encoding="utf-8"))
+    life_meta=as_mapping(manifest.get(V2_6_CHECKPOINT_FIELD))
+    life=v2_6_checkpoint_lifecycle_diagnostics(life_meta)
+    deferred=life_meta==V2_6_DEFERRED_CHECKPOINT
+    e826x=e826[0] if len(e826)==1 else {}; e827x=e827[0] if len(e827)==1 else {}; x617=ev617[0] if len(ev617)==1 else {}; x618=ev618[0] if len(ev618)==1 else {}
+    rsec=heading_section(rt,RESULT_NUMBER) or ""
+    closed={g:bool((q:=heading_section(gt,g)) and re.search(r"\*\*Status:\*\*\s*CLOSED",q,re.I) and text_has(q,EXPLORATION_ID) and text_has(q,SCOPE_CORRECTION_EXPLORATION_ID)) for g in NEW_CLOSED_SUBGATES}
+    opened={g:bool((q:=heading_section(gt,g)) and re.search(r"\*\*Status:\*\*\s*OPEN",q,re.I)) for g in OPEN_GATES}
+    counts={"claims":len([x for x in (REPO/"claims").iterdir() if x.is_dir() and not x.name.startswith("_") and (x/"status.json").is_file()]),"results":len(re.findall(r"^### R-\d+",rt,re.M)),"gates":len(re.findall(r"^### \*\*[^*]+\*\*",gt,re.M)),"negatives":len(re.findall(r"^### ",nt,re.M)),"explorations":len(exps),"events":len(events),"tasks":len(as_list(todo.get("tasks")))}
+    tr=[x for x in as_list(todo.get("tasks")) if isinstance(x,dict) and x.get("id")==TASK_ID]
+    taskok=len(tr)==1 and tr[0].get("status")=="in_progress" and tr[0].get("gate")==OPEN_GATES[3] and all(text_has(tr[0],x) for x in (EXPLORATION_ID,SCOPE_CORRECTION_EXPLORATION_ID,"zero-source","fourth-order","all-order","Pre-A"))
+    issuance_event_id="20260812-r-167-v2-6-combined-gate-level-synthesis-pdf-is"
+    issuance_phrase="R-167 v2.6 combined gate-level synthesis PDF issued"
+    issuance_expected_header="[R-167 v2.6 combined gate-level synthesis PDF issued after strict validation] - 2026-08-12"
+    issuance_expected_keywords=[
+        "PDF", "R-167-v2.6", "R-168-not-reissued", "dual-extraction",
+        "gate-level-synthesis", "no-parent-closure", "visual-QA",
+    ]
+    issuance_candidate_keywords={"PDF","R-167-v2.6","gate-level-synthesis"}
+    issuance_semantic_candidates=[
+        event for event in events
+        if text_has(event.get("header",""),issuance_phrase)
+        or issuance_candidate_keywords<=set(as_list(event.get("keywords")))
+    ]
+    issuance_event=(
+        issuance_semantic_candidates[0]
+        if len(issuance_semantic_candidates)==1 else {}
+    )
+    issuance_raw=issuance_event.get("raw","")
+    checkpoint_source=(
+        "claims/C6-SPACETIME-SIGNATURE/notes/"
+        "pre-a-q3lock-zero-source-fixed-order-fourth-linked-and-orbit-locality-"
+        "boundary-checkpoint-260812-v1.5.tex.txt"
+    )
+    checkpoint_pdf=checkpoint_source.removesuffix(".tex.txt")+".pdf"
+    issuance_expected_notes=[
+        checkpoint_source, checkpoint_pdf,
+        CERTIFICATE.relative_to(REPO).as_posix(),
+        MANIFEST.relative_to(REPO).as_posix(),
+    ]
+    issuance_expected_scripts=[
+        PRIMARY.relative_to(REPO).as_posix(),
+        INDEPENDENT.relative_to(REPO).as_posix(),
+        SCRIPT.relative_to(REPO).as_posix(),
+    ]
+    issuance_dynamic_hashes=[
+        life_meta.get("source_sha256"), life_meta.get("pdf_sha256"),
+        manifest_raw, raw_sha256(PRIMARY), raw_sha256(INDEPENDENT),
+        raw_sha256(SCRIPT), certificate_raw,
+    ]
+    issuance_workflow_tokens=(
+        "No per-lemma or intermediate PDF was issued", "R-167-only",
+        "only after", "primary", "non-importing independent", "integrated",
+        "formal-authority", "generated-surface", "source-form", "freshness",
+        "dual-extraction", "strict-release", "visual-review",
+    )
+    issuance_no_promotion_tokens=(
+        "no new theorem", "no new result number", "no new result version",
+        "no tier change", "no gate closure", "no parent closure",
+    )
+    historical_619_pins=(
+        "a7d04d63344cce1d0d03f2ea1afeb84a52ae0c4db3417967c5b8e7bafc8e15a2",
+        "dadb462d0d0fb7cbf76956102b9dc245dac1d9a3f350e61df447baef54e7927c",
+        "58259070e11d54d7460f38119d94429bafe3d50f29af8fe096910e9615173018",
+        "d43e3374da2227b643f56f585a2124ae46d6c156e58ae5c9f74527269e57f64c",
+        "f0f177b3b7c03f4e02795499cc5d5a8e432388269d51ab1d323a85c3974a6077",
+        "a54eb34db7944a2423963409cea7205ec362a31ed0259e23ba34c303b4213253",
+        "68ecec6853b322afd3fd3358b18fd06998486680c855cd4db47545303452ea7b",
+    )
+    historical_619_raw_sha256=(
+        "6733f9b7f3ac1e40a2741d36b115c7f63a32f287f1596fdf6e6b84c9828e5db4"
+    )
+    event619_metadata_exact=(
+        len(issuance_semantic_candidates)==1
+        and issuance_event.get("id")==issuance_event_id
+        and issuance_event.get("date")=="2026-08-12"
+        and issuance_event.get("header")==issuance_expected_header
+        and issuance_raw.startswith("## "+issuance_expected_header+"\n\n")
+        and issuance_event.get("claim_ids")==[
+            CLAIM_ID,EXPLORATION_ID,SCOPE_CORRECTION_EXPLORATION_ID,RESULT_NUMBER,
+        ]
+        and issuance_event.get("neg_results")==[]
+        and issuance_event.get("notes")==issuance_expected_notes
+        and issuance_event.get("scripts")==issuance_expected_scripts
+        and issuance_event.get("keywords")==issuance_expected_keywords
+    )
+    strict_historical_event619=(
+        event619_metadata_exact
+        and hashlib.sha256(issuance_raw.encode("utf-8")).hexdigest()
+            == historical_619_raw_sha256
+        and all(pin in issuance_raw for pin in historical_619_pins)
+        and all(token in issuance_raw for token in (
+            "442/442","246/246","425/425","11-page","11/11 nonempty pages",
+            "OVERFULL-HBOX 0",
+        ))
+        and all(text_has(issuance_raw,token) for token in issuance_workflow_tokens)
+        and all(text_has(issuance_raw,token) for token in issuance_no_promotion_tokens)
+        and text_has(issuance_raw,"R-168 v1.3 remains historical and is not reissued")
+        and text_has(issuance_raw,"all five parent gates remain OPEN")
+    )
+    initial_619_current_pins=(
+        life.get("valid") is True
+        and life_meta.get("source")==checkpoint_source
+        and life_meta.get("pdf")==checkpoint_pdf
+        and life_meta.get("source_sha256")==historical_619_pins[0]
+        and life_meta.get("pdf_sha256")==historical_619_pins[1]
+        and manifest_raw==historical_619_pins[2]
+        and certificate_raw==historical_619_pins[3]
+        and raw_sha256(PRIMARY)==historical_619_pins[4]
+        and raw_sha256(INDEPENDENT)==historical_619_pins[5]
+        and raw_sha256(SCRIPT)==historical_619_pins[6]
+        and life_meta.get("workflow")==V2_6_ISSUED_WORKFLOW
+        and life_meta.get("pages")==11
+        and life.get("pypdf_pages")==life.get("pypdf_nonempty_pages")==11
+        and life.get("pdfplumber_pages")==life.get("pdfplumber_nonempty_pages")==11
+    )
+    strict_initial_event619=(
+        strict_historical_event619
+        and initial_619_current_pins
+    )
+
+    malformed_event620_id="20260813-r-167-v2-6-artifact-footer-and-issuance-pins-co"
+    malformed_event620_phrase="R-167 v2.6 artifact footer and issuance pins corrected"
+    malformed_event620_header=(
+        "[R-167 v2.6 artifact footer and issuance pins corrected; "
+        "event 619 superseded] - 2026-08-13"
+    )
+    malformed_event620_keywords=[
+        "R-167-v2.6", "artifact-pin-correction", "event-619-superseded",
+        "footer-contract", "no-parent-closure",
+    ]
+    malformed_event620_candidate_keywords={
+        "R-167-v2.6", "artifact-pin-correction", "event-619-superseded",
+    }
+    malformed_event620_candidates=[
+        event for event in events
+        if event.get("id")==malformed_event620_id
+        or text_has(event.get("header",""),malformed_event620_phrase)
+        or malformed_event620_candidate_keywords<=set(as_list(event.get("keywords")))
+    ]
+    malformed_event620=(
+        malformed_event620_candidates[0]
+        if len(malformed_event620_candidates)==1 else {}
+    )
+    malformed_event620_raw=malformed_event620.get("raw","")
+    strict_malformed_event620=(
+        len(malformed_event620_candidates)==1
+        and malformed_event620.get("id")==malformed_event620_id
+        and malformed_event620.get("date")=="2026-08-13"
+        and malformed_event620.get("header")==malformed_event620_header
+        and malformed_event620.get("claim_ids")==[
+            CLAIM_ID,EXPLORATION_ID,SCOPE_CORRECTION_EXPLORATION_ID,RESULT_NUMBER,
+        ]
+        and malformed_event620.get("neg_results")==[]
+        and malformed_event620.get("notes")==["a","b","c","d"]
+        and malformed_event620.get("scripts")==["e","f","g"]
+        and malformed_event620.get("keywords")==malformed_event620_keywords
+        and malformed_event620_raw==(
+            "## "+malformed_event620_header+"\n\nDRY\n\n"
+        )
+        and hashlib.sha256(malformed_event620_raw.encode("utf-8")).hexdigest()
+            == "e5bb7e7d10ee1543d4cec24750c7e2923ca31e0c812e6e46fc518c7c622c09ec"
+    )
+
+    nearfinal_event621_id="20260813-r-167-v2-6-artifact-footer-and-issuance-pin-cor"
+    nearfinal_event621_phrase=(
+        "R-167 v2.6 artifact footer and issuance pin correction finalized"
+    )
+    nearfinal_event621_header=(
+        "[R-167 v2.6 artifact footer and issuance pin correction finalized; "
+        "malformed event 620 superseded] - 2026-08-13"
+    )
+    nearfinal_event621_keywords=[
+        "R-167-v2.6", "artifact-pin-correction-final", "event-620-superseded",
+        "footer-contract", "no-parent-closure",
+    ]
+    nearfinal_event621_candidate_keywords={
+        "R-167-v2.6", "artifact-pin-correction-final", "event-620-superseded",
+    }
+    nearfinal_event621_candidates=[
+        event for event in events
+        if event.get("id")==nearfinal_event621_id
+        or text_has(event.get("header",""),nearfinal_event621_phrase)
+        or nearfinal_event621_candidate_keywords<=set(as_list(event.get("keywords")))
+    ]
+    nearfinal_event621=(
+        nearfinal_event621_candidates[0]
+        if len(nearfinal_event621_candidates)==1 else {}
+    )
+    nearfinal_event621_raw=nearfinal_event621.get("raw","")
+    strict_nearfinal_event621=(
+        len(nearfinal_event621_candidates)==1
+        and nearfinal_event621.get("id")==nearfinal_event621_id
+        and nearfinal_event621.get("date")=="2026-08-13"
+        and nearfinal_event621.get("header")==nearfinal_event621_header
+        and nearfinal_event621.get("claim_ids")==[
+            CLAIM_ID,EXPLORATION_ID,SCOPE_CORRECTION_EXPLORATION_ID,RESULT_NUMBER,
+        ]
+        and nearfinal_event621.get("neg_results")==[]
+        and nearfinal_event621.get("notes")==issuance_expected_notes
+        and nearfinal_event621.get("scripts")==issuance_expected_scripts
+        and nearfinal_event621.get("keywords")==nearfinal_event621_keywords
+        and hashlib.sha256(nearfinal_event621_raw.encode("utf-8")).hexdigest()
+            == "1569aaadc2492f2b795d42dc234b3f91b6383de61c53472a005496509c7694cc"
+        and "Pypdf" in nearfinal_event621_raw
+        and "pypdf" not in nearfinal_event621_raw
+        and all(pin in nearfinal_event621_raw for pin in (
+            "b0e34fe6b5a0ca126526a07ba8cc5023898dfdfe333df087f8a86a815ae9b732",
+            "2820479b12a317d26bac33d4a73e1b8864a706ed9b0ba6e23ac8edc441eeb1bd",
+            "dfc9cba71bcce497b5b144feed5daab83cc1fc9519a7bff2edae0c28c6ad4f6f",
+            "83b6770f2c10b5e2ee8b803504a79fdd4242be758d6d66aaadc2b52a4b569200",
+            "f0f177b3b7c03f4e02795499cc5d5a8e432388269d51ab1d323a85c3974a6077",
+            "a54eb34db7944a2423963409cea7205ec362a31ed0259e23ba34c303b4213253",
+            "16d081425c0f20a1564fec7bca678c1e8666fe497ade995b751e860191e1384c",
+        ))
+    )
+
+    final_event622_id="20260813-r-167-v2-6-artifact-pin-correction-finalized-af"
+    final_event622_phrase=(
+        "R-167 v2.6 artifact pin correction finalized after extractor-token audit"
+    )
+    final_event622_header=(
+        "[R-167 v2.6 artifact pin correction finalized after extractor-token "
+        "audit; events 620 and 621 superseded] - 2026-08-13"
+    )
+    final_event622_keywords=[
+        "R-167-v2.6", "artifact-pin-correction-final-v2",
+        "event-621-superseded", "footer-contract", "no-parent-closure",
+    ]
+    final_event622_candidate_keywords={
+        "R-167-v2.6", "artifact-pin-correction-final-v2",
+        "event-621-superseded",
+    }
+    final_event622_candidates=[
+        event for event in events
+        if event.get("id")==final_event622_id
+        or text_has(event.get("header",""),final_event622_phrase)
+        or final_event622_candidate_keywords<=set(as_list(event.get("keywords")))
+    ]
+    final_event622=(
+        final_event622_candidates[0]
+        if len(final_event622_candidates)==1 else {}
+    )
+    final_event622_raw=final_event622.get("raw","")
+    final_event622_scope_tokens=(
+        "Events 620 and 621 are non-authoritative administrative pin records "
+        "and are superseded in full by this event",
+        "Event 619 is superseded ONLY for its artifact/source/PDF/manifest/"
+        "certificate/integrated-script pins",
+        "required footer labels", "lowercase pypdf extractor token",
+        "mathematics, result number, result version, tier, gate statuses, "
+        "parent statuses, and no-overclaim boundary are unchanged",
+        "four scoped CLOSED children", "two scoped negative authorities",
+        "all five parent gates remain OPEN",
+        "R-168 v1.3 remains historical and is not reissued",
+    )
+    final_event622_dynamic_tokens=(
+        "PASS 442/442 primary", "PASS 246/246 non-importing independent",
+        "PASS 425/425 integrated", "11 pages", "11/11 nonempty pages",
+        "pypdf", "pdfplumber", "OVERFULL-HBOX 0",
+    )
+    final_event622_qa_tokens=(
+        "All 11 pages", "visually reviewed", "zero clipping", "overlap",
+        "broken equations", "unreadable identifiers", "black glyphs",
+        "malformed page transitions", "no forms, JavaScript or encryption",
+    )
+    strict_final_event622=(
+        len(final_event622_candidates)==1
+        and final_event622.get("id")==final_event622_id
+        and final_event622.get("date")=="2026-08-13"
+        and final_event622.get("header")==final_event622_header
+        and final_event622_raw.startswith("## "+final_event622_header+"\n\n")
+        and final_event622.get("claim_ids")==[
+            CLAIM_ID,EXPLORATION_ID,SCOPE_CORRECTION_EXPLORATION_ID,RESULT_NUMBER,
+        ]
+        and final_event622.get("neg_results")==[]
+        and final_event622.get("notes")==issuance_expected_notes
+        and final_event622.get("scripts")==issuance_expected_scripts
+        and final_event622.get("keywords")==final_event622_keywords
+        and final_event622_id not in {
+            event.get("id") for event in issuance_semantic_candidates
+        }
+        and not text_has(final_event622.get("header",""),issuance_phrase)
+        and not issuance_candidate_keywords<=set(as_list(final_event622.get("keywords")))
+        and len(malformed_event620_candidates)==1
+        and len(nearfinal_event621_candidates)==1
+        and life.get("valid") is True
+        and life_meta.get("source")==checkpoint_source
+        and life_meta.get("pdf")==checkpoint_pdf
+        and life_meta.get("workflow")==V2_6_ISSUED_WORKFLOW
+        and life_meta.get("pages")==11
+        and life.get("pypdf_pages")==life.get("pypdf_nonempty_pages")==11
+        and life.get("pdfplumber_pages")==life.get("pdfplumber_nonempty_pages")==11
+        and all(isinstance(path,str) and path in final_event622_raw for path in issuance_expected_notes)
+        and all(isinstance(path,str) and path in final_event622_raw for path in issuance_expected_scripts)
+        and all(isinstance(digest,str) and digest in final_event622_raw for digest in issuance_dynamic_hashes)
+        and all(text_has(final_event622_raw,token) for token in final_event622_scope_tokens)
+        and all(token in final_event622_raw for token in final_event622_dynamic_tokens)
+        and all(text_has(final_event622_raw,token) for token in final_event622_qa_tokens)
+    )
+    issuance_stage_ok=(
+        (
+            deferred
+            and counts.get("events")==618
+            and len(issuance_semantic_candidates)==0
+            and len(malformed_event620_candidates)==0
+            and len(nearfinal_event621_candidates)==0
+            and len(final_event622_candidates)==0
+        )
+        or (
+            not deferred
+            and counts.get("events")==619
+            and len(issuance_semantic_candidates)==1
+            and len(malformed_event620_candidates)==0
+            and len(nearfinal_event621_candidates)==0
+            and len(final_event622_candidates)==0
+            and strict_initial_event619
+        )
+        or (
+            not deferred
+            and life.get("valid") is True
+            and counts.get("events")==622
+            and len(issuance_semantic_candidates)==1
+            and strict_historical_event619
+            and len(malformed_event620_candidates)==1
+            and strict_malformed_event620
+            and len(nearfinal_event621_candidates)==1
+            and strict_nearfinal_event621
+            and len(final_event622_candidates)==1
+            and strict_final_event622
+        )
+    )
+    add("v2_6_formal_lifecycle", [
+      ("v2.6 dual checkpoint lifecycle",deferred or life.get("valid") is True,{"deferred":deferred,"issued":life},"exact 3-field deferred or 8-field issued"),
+      ("EXP-000826 unique identity",len(e826)==1 and e826x.get("schema")=="tect/proof-exploration/1.0" and e826x.get("task_id")==TASK_ID and e826x.get("claim_ids")==[CLAIM_ID] and e826x.get("verdict")=="advanced",e826,"one exact theorem record"),
+      ("EXP-000826 refs/gates/continuation",e826x.get("formal_refs")=={"events":[],"negatives":list(NEW_NEGATIVE_IDS),"results":[RESULT_NUMBER]} and e826x.get("gate_ids")==list(V2_6_RECORD_GATE_IDS) and e826x.get("related")==[{"id":PRIOR_EXPLORATION_ID,"relation":"continues"}],e826x,"4 children+5 parents; continues EXP-000825"),
+      ("EXP-000827 unique identity",len(e827)==1 and e827x.get("schema")=="tect/proof-exploration/1.0" and e827x.get("task_id")==TASK_ID and e827x.get("claim_ids")==[CLAIM_ID] and e827x.get("verdict")=="advanced",e827,"one exact correction record"),
+      ("EXP-000827 correction semantics",e827x.get("related")==[{"id":EXPLORATION_ID,"relation":"corrects"}] and e827x.get("formal_refs")=={"events":[],"negatives":list(NEW_NEGATIVE_IDS),"results":[RESULT_NUMBER]} and e827x.get("gate_ids")==list(V2_6_RECORD_GATE_IDS) and all(text_has(e827x,x) for x in ("zero-source","delta_1 P_1","1411418996889","2314877826589220601","four v2.6 children","five parent gates open")),e827x,"scope/constants only"),
+      ("event 617 immutable history",len(ev617)==1 and x617.get("claim_ids")==[CLAIM_ID,EXPLORATION_ID,RESULT_NUMBER] and set(x617.get("neg_results",[]))==set(NEW_NEGATIVE_IDS),x617,"unique theorem history"),
+      ("event 617 stale values preserved",all(text_has(x617.get("raw",""),x) for x in ("1420642437753/381469726562500","2345231533369183929/29802322387695312500","No v2.6 PDF is issued")),x617.get("raw"),"immutable values pending correction"),
+      ("event 618 correction identity",len(ev618)==1 and x618.get("claim_ids")==[CLAIM_ID,SCOPE_CORRECTION_EXPLORATION_ID,RESULT_NUMBER] and set(x618.get("neg_results",[]))==set(NEW_NEGATIVE_IDS) and {PRIMARY.relative_to(REPO).as_posix(),INDEPENDENT.relative_to(REPO).as_posix()}<=set(x618.get("scripts",[])),x618,"exact claims/negatives/scripts"),
+      ("event 618 limited supersession",all(text_has(x618.get("raw",""),x) for x in ("supersedes event 617 in exactly two respects","zero-source fixed-M Q3 statements","1411418996889/381469726562500","278784","2314877826589220601/29802322387695312500","59719680","creates no new result number or version","closes no parent")),x618.get("raw"),"scope+constants only"),
+      ("R-167 v2.6 corrected authority",all(text_has(rsec,x) for x in ("R-167 v2.6",EXPLORATION_ID,SCOPE_CORRECTION_EXPLORATION_ID,"zero-source","fourth-order","fixed order","remain OPEN")),rsec,"corrected result scope"),
+      ("v2.6 scoped negative authorities",all(nt.count(x)>=2 for x in NEW_NEGATIVE_IDS) and all(text_has(nt,x) for x in ("high-high insertion","orbit smearing","not a no-go")),{x:nt.count(x) for x in NEW_NEGATIVE_IDS},"two registry index/detail authorities"),
+      ("v2.6 four CLOSED/five OPEN",len(closed)==4 and len(opened)==5 and all(closed.values()) and all(opened.values()),{"closed":closed,"open":opened},"4 CLOSED / 5 OPEN"),
+      ("v2.6 exact counts/T-054",all(counts.get(k)==v for k,v in {"claims":49,"results":168,"gates":172,"negatives":349,"explorations":827,"tasks":54}.items()) and taskok and issuance_stage_ok,{"counts":counts,"task":tr,"deferred_exact":deferred,"checkpoint_valid":life.get("valid"),"semantic_issuance_candidates":len(issuance_semantic_candidates),"malformed_event620_candidates":len(malformed_event620_candidates),"nearfinal_event621_candidates":len(nearfinal_event621_candidates),"final_event622_candidates":len(final_event622_candidates),"strict_historical_event619":strict_historical_event619,"strict_initial_event619":strict_initial_event619,"strict_malformed_event620":strict_malformed_event620,"strict_nearfinal_event621":strict_nearfinal_event621,"strict_final_event622":strict_final_event622},"49/168/172/349/827/(618 exact deferred, 619 exact initial issued, or 622 exact finalized correction)/54 + corrected T-054"),
+    ])
+    return {"lifecycle":life,"deferred_exact":deferred,"counts":counts,
+            "groups":{"v2_6_component_freshness":12,"v2_6_manifest":15,
+                      "v2_6_cross":16,"v2_6_formal_lifecycle":13}}
+
 def build_payload(staged: bool = False) -> dict[str, Any]:
     audit = Audit(staged)
     manifest = load_json(MANIFEST, audit, "manifest", core=True) or {}
@@ -5229,7 +5959,7 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
 
     components: dict[str, dict[str, Any]] = {}
     sentinels: dict[str, str] = {}
-    with tempfile.TemporaryDirectory(prefix="tect-exp825-integrated-") as directory:
+    with tempfile.TemporaryDirectory(prefix="tect-exp826-integrated-") as directory:
         temporary = Path(directory)
         for label, component in (("primary", PRIMARY), ("independent", INDEPENDENT)):
             result = run_fresh_pair(component, temporary, audit, label)
@@ -5253,6 +5983,7 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
         audit.check("fresh exact cross-comparison", False, sorted(components), ["primary", "independent"], "cross_math")
 
     formal = validate_formal(audit)
+    v26_additive = validate_v2_6_additive(manifest, certificate, components, audit)
     passed = sum(row["status"] == "PASS" for row in audit.rows)
     source_paths = (
         SCRIPT,
@@ -5342,6 +6073,14 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "first_generator_second_order_low_block_match": True,
             "fixed_finite_volume_and_Ritz_third_order_low_block_coefficient": True,
             "fixed_finite_volume_and_Ritz_third_order_linked_triple_QPS_bound": True,
+            "fixed_Ritz_standard_SW_every_fixed_order_linked_coefficients": True,
+            "fixed_Ritz_each_fixed_order_small_coupling_extensive_energy": True,
+            "zero_source_Q3_third_fourth_coefficient_QPS_Ritz": True,
+            "fixed_finite_fourth_order_sequential_standard_gauge_crosswalk": True,
+            "all_order_SW_convergence": False,
+            "physical_lambda_one_SW_smallness": False,
+            "all_order_connected_oscillator_elimination": False,
+            "orbit_smear_seed_support_automatic_spatial_local_net": False,
             "third_order_cutoff_uniform": False,
             "third_order_unbounded": False,
             "third_order_tau_cutoff_bound": False,
@@ -5377,9 +6116,10 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
         },
         "source_hashes": source_hashes,
         "formal_workflow": formal,
+        "v2_6_additive_validation": v26_additive,
         "pdf_efficiency": {
-            "dedicated_R167_v2_5_source_required_during_proof_first": False,
-            "dedicated_R167_v2_5_PDF_required_during_proof_first": False,
+            "dedicated_R167_v2_6_source_required_during_proof_first": False,
+            "dedicated_R167_v2_6_PDF_required_during_proof_first": False,
             "PDF_created_by_this_verifier": False,
             "historical_v1_9_v1_0_checkpoint_strictly_validated": checkpoint_state.get(
                 "v1_9_v1_0_historical_valid", False
@@ -5387,8 +6127,8 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "historical_v2_0_v1_1_checkpoint_strictly_validated": checkpoint_state.get(
                 "v2_0_v1_1_historical_valid", False
             ),
-            "historical_checkpoints_are_v2_5_evidence": False,
-            "per_lemma_or_intermediate_v2_5_PDF_issued": False,
+            "historical_checkpoints_are_v2_6_evidence": False,
+            "per_lemma_or_intermediate_v2_6_PDF_issued": False,
             "historical_v2_1_v1_2_checkpoint_strictly_validated": checkpoint_state.get(
                 "v2_1_v1_2_historical_valid", False
             ),
@@ -5432,6 +6172,13 @@ def build_payload(staged: bool = False) -> dict[str, Any]:
             "local_only_v2_5_checkpoint_metadata": checkpoint_state.get(
                 "v2_5_metadata", {}
             ),
+            "local_only_v2_6_checkpoint_metadata": manifest.get(V2_6_CHECKPOINT_FIELD, {}),
+            "local_only_v2_6_checkpoint_deferred_exact": (
+                manifest.get(V2_6_CHECKPOINT_FIELD) == V2_6_DEFERRED_CHECKPOINT
+            ),
+            "local_only_v2_6_checkpoint_issued_valid": as_mapping(
+                v26_additive.get("lifecycle")
+            ).get("valid", False),
             "certificate_present": certificate is not None,
         },
         "missing_authorities": audit.missing,

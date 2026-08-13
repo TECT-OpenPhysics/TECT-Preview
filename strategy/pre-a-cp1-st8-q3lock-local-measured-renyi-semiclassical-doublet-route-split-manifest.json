@@ -13,11 +13,13 @@
     "EXP-000811",
     "EXP-000813",
     "EXP-000815",
-    "EXP-000818"
+    "EXP-000818",
+    "EXP-000825"
   ],
-  "exploration_id": "EXP-000825",
+  "exploration_id": "EXP-000826",
+  "scope_correction_exploration_id": "EXP-000827",
   "result_id": "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
-  "result_version": "v2.5",
+  "result_version": "v2.6",
   "result_number": "R-167",
   "claim_bearing": false,
   "negative_ids": [
@@ -32,13 +34,15 @@
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY",
     "NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS",
     "NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY",
-    "NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0"
+    "NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0",
+    "NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-HIGH-HIGH-INSERTION-CUTOFF",
+    "NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-SPATIAL-LOCAL-NET"
   ],
   "reused_negative_ids": [
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE",
     "NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT"
   ],
-  "authority": "R-167 v2.5 is additive to v2.4 and preserves every earlier theorem, boundary, issued source/PDF pair, and negative result. At every fixed finite spatial volume Lambda and fixed finite parity-preserving onsite Ritz cutoff M, two sequential block rotations give the complete third-order low-block coefficient Theta^(3)=T* R C R T-(1/2){A,T* R^2 T}. Its ordered edge-triple expansion cancels every retained disconnected spectator exactly; every nonzero union is connected, has support at most four and diameter at most three, and obeys the conservative finite-volume QPS bound 48 z(2z-1)^2 exp(3a) epsilon^2(rho_(M,Lambda)/Gamma+a_(M,Lambda)/Gamma^2). This is an actual fixed-finite-volume-and-Ritz third-order result only; neither the displayed constants nor the coefficient are asserted uniform in Lambda. Separately, for nonzero coupling c the canonical one-site compact-cylinder bond subflow fails point-norm C0 on every nonzero compact cylinder: the unitized compacts do not contain K tensor I, while the multiplier algebra M(K(H_x tensor H_y))=B(H_x tensor H_y) of the nonunital compact ideal contains it but has a norm jump at every nonzero time. No spatial-volume or thermodynamic limit, cutoff-uniform or unbounded third-order theorem, all-order or BCH convergence, QPS phase transfer, actual all-shape Q3 common alpha, identified generator/KMS quotient, broken-sector GNS gap, Round-1, C6, CP1, physical Sector A, or Pre-A closure follows.",
+  "authority": "R-167 v2.6, established by EXP-000826 as scope-and-constant corrected by EXP-000827, is additive to v2.5 and preserves every earlier theorem, boundary, negative result, and issued source/PDF field at its exact historical value. On a finite connected zero-source Q3 spatial graph with deg(x)>=1, choose nonnegative incident weights omega_(x,e) summing to one at each x (periodically omega_(x,e)=1/z) and restore the onsite delta_1 P_1 term edgewise in tilde B_(e,M). Then H_M(lambda)=sum_x k_(x,M)+lambda sum_e tilde B_(e,M), so H_M(1) is the exact physical zero-source fixed-M Q3 Hamiltonian up to its removed scalar. At every fixed finite parity-preserving onsite Ritz cutoff M, the Bravyi-DiVincenzo-Loss standard Schrieffer-Wolff coefficient of every fixed order n is a sum over connected edge clusters C with |C|<=n; rank-two onsite ground degeneracy is allowed because the local low projector may have arbitrary finite rank. At each fixed n and M, sufficiently small scaled coupling |lambda|J_M for J_M=max_x sum_(e containing x)||tilde B_(e,M)|| gives standard- and local-SW ground-energy errors O(|Lambda|(|lambda|J_M)^(n+1)), with constants and thresholds allowed to depend on n, M, J_M, ||k_M||/Gamma and graph degree. For the actual zero-source Q3 augmented blocks, the augmented relative-form estimate ||R^(1/2)Q tilde B_f Q R^(1/2)||<=w_tilde=max(rho_tilde,a_tilde/Gamma)+2epsilon/Gamma, where a_tilde=a+2delta_1/z and rho_tilde=rho_b+delta_1/(z Gamma) and finite-rank E=R^(1/2)T yield volume- and Ritz-uniform third- and fourth-order coefficient QPS bounds and norm cutoff removal. At fixed finite Lambda,M, the complete sequential fourth-order low block is Theta4_seq=(1/2){F,B}-S*RS, with B=T*RT, F=T*R^2T and S=RTA-CRT; it differs from the standard-SW gauge by Theta4_std=Theta4_seq-[K_P,A], K_P=(1/2)P[G2,G]P. These are fixed-order coefficient statements, not all-order series convergence, physical lambda=1 control, phase transfer, or a GNS-gap theorem.",
   "pure_bond_tail_theorem": {
     "setup": "V_cross=-c sum_<xy> q_x dot q_y, B_delta=exp(-i delta V_cross/hbar). Every bounded coordinate multiplier F(q_S) commutes with B_delta; affiliated weighted coordinate multipliers strongly commute on their natural finite-moment forms.",
     "invariance": "B_delta^* F(q_S) B_delta=F(q_S) in both orientations. Coordinate tail projections, finite-moment weighted coordinate tails, and coordinate cutoff-tail squares are unchanged by a pure all-bond layer.",
@@ -86,7 +90,7 @@
     "surviving_route": "Prove a new volume-uniform rank-two band Lie-Schwinger/Feshbach theorem that subtracts the exact H_low block and yields a bounded effective spin interaction small enough for finite-dimensional two-phase QPS, or prove an equivalent spectral-cutoff removal theorem preserving both phases and a common positive gap.",
     "scope": "This is a direct-import mismatch, not a no-go for a future rank-two unbounded block theorem and not a counterexample to the exact Q3LOCK broken-sector gap."
   },
-  "status": "PARTIALLY RESOLVED: R-167 V2.5 ADDS THE COMPLETE THIRD-ORDER LINKED RANK-TWO LOW-BLOCK COEFFICIENT AT EACH FIXED FINITE RITZ CUTOFF AND A CANONICAL COMPACT-CYLINDER BOND-SUBFLOW POINT-NORM C0 NO-GO; CUTOFF-UNIFORM OR UNBOUNDED THIRD ORDER, ALL-ORDER CONNECTED RANK-TWO/QPS, ACTUAL ALL-SHAPE Q3 COMMON-ALPHA, IDENTIFIED GENERATOR/KMS, BROKEN-SECTOR GNS, ROUND-1, C6, CP1, PHYSICAL SECTOR A, AND PRE-A REMAIN OPEN.",
+  "status": "PARTIALLY RESOLVED: R-167 V2.6 ADDS FIXED-RITZ EVERY-FIXED-ORDER STANDARD-SW LINKED COEFFICIENTS, EACH-FIXED-ORDER SMALL-COUPLING EXTENSIVE SW ENERGY CONTROL, ACTUAL ZERO-SOURCE Q3 THIRD/FOURTH COEFFICIENT QPS AND RITZ REMOVAL, AND THE COMPLETE FIXED-FINITE FOURTH-ORDER SEQUENTIAL/STANDARD-GAUGE CROSSWALK; ALL-ORDER CONVERGENCE, PHYSICAL LAMBDA=1, PHASE TRANSFER, COMMON ALPHA, GNS GAP, ROUND-1, C6, CP1, PHYSICAL SECTOR A, AND PRE-A REMAIN OPEN.",
   "closed_subgates": [
     "PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY",
     "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION",
@@ -106,7 +110,11 @@
     "PA-CP1-ST8-Q3LOCK-FIXED-FINITE-FAITHFUL-GIBBS-STANDARD-FORM-POINT-STRONGSTAR-OBSERVABLE-CUTOFF-REMOVAL",
     "PA-CP1-ST8-Q3LOCK-CONDITIONAL-BIDIRECTIONAL-ALL-SHAPE-POINT-NORM-CAUCHY-C0-AUTOMORPHISM-COMPLETION",
     "PA-CP1-ST8-Q3LOCK-FIRST-LOCAL-HOMOLOGICAL-RANK-TWO-GENERATOR-QPS-NORM-AND-RITZ-CUTOFF",
-    "PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-THIRD-ORDER-LINKED-RANK-TWO-LOW-BLOCK-COEFFICIENT"
+    "PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-THIRD-ORDER-LINKED-RANK-TWO-LOW-BLOCK-COEFFICIENT",
+    "PA-CP1-ST8-Q3LOCK-FIXED-RITZ-STANDARD-SW-EVERY-FIXED-ORDER-LINKED-CLUSTER-COEFFICIENTS",
+    "PA-CP1-ST8-Q3LOCK-FIXED-RITZ-EACH-FIXED-ORDER-SMALL-COUPLING-VOLUME-EXTENSIVE-SW-GROUND-ENERGY-APPROXIMATION",
+    "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-Q3-THIRD-FOURTH-ORDER-COEFFICIENT-QPS-AND-RITZ-CUTOFF",
+    "PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-FOURTH-ORDER-SEQUENTIAL-LOW-BLOCK-AND-STANDARD-SW-GAUGE-CROSSWALK"
   ],
   "retained_gate_ids": [
     "PA-CP1-ST8-Q3LOCK-FIXED-TROTTER-LOCAL-STRICT-INDUCTIVE-EXHAUSTION-COMPATIBILITY",
@@ -124,8 +132,8 @@
     "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY"
   ],
   "route_status": {
-    "closed_scope": "Every v2.4 scope; at each fixed finite spatial volume Lambda and fixed finite parity-preserving onsite Ritz cutoff M, the complete third-order low-block coefficient after the first and second sequential homological rotations, its exact disconnected-spectator cancellation, connected ordered-edge-triple support bound, conservative finite-volume QPS estimate, and exact two-by-two and v2.1 rational fixtures.",
-    "not_closed": "No spatial-volume or thermodynamic limit and no Lambda-uniform third-order constant; no cutoff-uniform or unbounded third-order theorem and no declared tau cutoff estimate at third order; no convergent BCH or Lie-Schwinger series; no all-order connected rank-two oscillator elimination, QPS phase transfer, phase/GNS intertwiner, or oscillator-lattice broken-sector GNS gap; no actual n-to-infinity or all-shape Q3 Cauchy estimate, identified local generator, or KMS quotient. The compact-cylinder no-go is only for the canonical split bond subflow.",
+    "closed_scope": "Every v2.5 scope; fixed-Ritz every-fixed-order standard-SW linked coefficients; for each fixed order and Ritz cutoff, sufficiently-small-coupling volume-extensive standard/local SW ground-energy approximation; actual zero-source Q3 uniform third/fourth coefficient QPS bounds and Ritz norm removal; complete fixed-finite fourth-order sequential low block and exact standard-SW gauge crosswalk.",
+    "not_closed": "No n-to-infinity or global SW convergence, no M-uniform small-coupling threshold and no physical lambda=1 conclusion; no fifth or higher unbounded Q3 coefficient, all-order QPS construction, phase transfer or broken-sector GNS gap; no actual all-shape common alpha, generator or KMS quotient. The two new negatives reject only automatic implications from weaker data.",
     "next_dynamics_gate": "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
     "next_gap_gate": "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
     "retained_rank_two_parent": "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
@@ -143,13 +151,13 @@
     "historical_scope": "Historical combined R-167 v1.9 / R-168 v1.0 checkpoint only; it is not a v2.0 issue."
   },
   "verification": {
-    "proof_grade": "R-167 V2.5 PROOF-FIRST SCOPED ANALYTIC/EXACT/EXECUTED/AUDITED CHILD AND NEGATIVE STAGED FOR FORMAL AUTHORITY; EVERY ISSUED V2.4 AND EARLIER CHECKPOINT IS RETAINED; R-168 V1.3 REMAINS HISTORICAL AND IS NOT REISSUED; CUTOFF-UNIFORM OR UNBOUNDED THIRD ORDER, ALL-ORDER CONNECTED RANK-TWO/QPS, ACTUAL ALL-SHAPE Q3 COMMON-ALPHA, IDENTIFIED GENERATOR/KMS, BROKEN-SECTOR GNS-GAP, ROUND-1, C6, CP1, PHYSICAL SECTOR A AND PRE-A PARENTS REMAIN OPEN",
+    "proof_grade": "R-167 V2.6 FOUR-FILE PROOF-FIRST SCOPED ANALYTIC/EXACT/EXECUTED/AUDITED CHILDREN AND NEGATIVES STAGED FOR FORMAL AUTHORITY; EVERY V2.5 AND EARLIER ISSUED FIELD IS RETAINED; R-168 V1.3 REMAINS HISTORICAL AND IS NOT REISSUED; ALL-ORDER CONVERGENCE, PHYSICAL LAMBDA=1, PHASE TRANSFER, COMMON ALPHA, GNS GAP, ROUND-1, C6, CP1, PHYSICAL SECTOR A AND PRE-A REMAIN OPEN",
     "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split.py",
     "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py",
     "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_verify.py",
     "certificate": "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md"
   },
-  "no_overclaim": "This package preserves every v2.4 and earlier conclusion at its issued scope. The new positive theorem is exactly the complete lambda^3 low block produced by two sequential rotations at each fixed finite spatial volume Lambda and fixed finite parity-preserving onsite Ritz cutoff M. It proves the displayed linked ordered-edge-triple cancellation and a deliberately conservative finite-volume QPS bound, but it supplies no Lambda-uniform constants, no spatial-volume or thermodynamic limit, no tau cutoff estimate at this order, no cutoff-uniform or unbounded statement, no fourth or higher coefficient, no convergent BCH or Lie-Schwinger series, no all-order connected interaction, and no QPS phase transfer or GNS intertwiner. The compact-cylinder negative concerns only the canonical split bond unitary on a one-site compact-cylinder carrier: unitized compacts reject the cylinder, and M(K(H_x tensor H_y))=B(H_x tensor H_y), the multiplier algebra of the nonunital compact ideal, admits it but fails point-norm C0. It is not a no-go for an unsplit dynamics, a different local-strict carrier, state-weighted convergence, orbit-smearing, or existence of a common alpha by another route. This package does not close actual n-to-infinity Q3 convergence or all-shape or all-exhaustion Cauchy compatibility, all-exhaustion common alpha, an identified local generator, a phase-KMS quotient, rank-two unbounded block diagonalization or any all-order connected rank-two construction, exact oscillator two-phase QPS, beta-infinity phase identification, a broken-sector oscillator temporal mass or GNS gap, regulator removal, continuum, a same-Hamiltonian physical-empty comparison, prospective blind validation, Round-1, C6, CP1, physical Sector A, or Pre-A closure.",
+  "no_overclaim": "This package preserves every v2.5 and earlier conclusion and issued field at its historical value. At zero source, BDL Theorem 2 gives connected standard-SW coefficients separately at every fixed order n and fixed finite Ritz cutoff M; it does not assert convergence of the full series. The volume-extensive energy approximation is separately for each fixed n, fixed M and sufficiently small scaled coupling |lambda|J_M, not automatically for physical lambda=1, uniformly in M, or as n tends to infinity. The zero-source Q3 result constructs and removes the Ritz cutoff only for the third- and fourth-order coefficients using the stated uniform relative-form block constants and finite-rank low-high legs. It is not a rank-two unbounded block diagonalization or an all-order construction, a convergent BCH/Lie-Schwinger series, a QPS phase transfer, or a phasewise GNS intertwiner. The first negative rejects deriving high-high insertions from the low-high tail alone; the second rejects deriving a commuting spatial local net from formal seed supports after temporal orbit smearing. Neither is a nonexistence theorem for stronger weighted cutoff hypotheses or for every orbit-smeared carrier. No actual all-shape or all-exhaustion Cauchy compatibility, all-exhaustion common alpha, identified generator or KMS quotient, exact oscillator two-phase QPS, broken-sector oscillator temporal mass or GNS gap, regulator removal, continuum, physical-empty comparison, Round-1, C6, CP1, physical Sector A, or Pre-A closure follows.",
   "full_hamiltonian_gibbs_resummation": {
     "hypotheses": "In one finite volume let H and H_L=H-W_L be self-adjoint and bounded below, let rho=Z^-1 exp(-beta H), and assume the two Duhamel formulas hold on a common invariant form core with W_L rho^(1/2) and rho^(1/2) W_L Hilbert-Schmidt; equivalently rho(W_L^2)<infinity for self-adjoint W_L.",
     "two_orientation_bound": "For U(t)=exp(-itH/hbar) and U_L(t)=exp(-itH_L/hbar), both ||(U-U_L)rho^(1/2)||_2 and ||rho^(1/2)(U-U_L)||_2 are at most |t| rho(W_L^2)^(1/2)/hbar. One opposite Duhamel ordering is used per orientation; rho commutes only with the full U.",
@@ -354,8 +362,15 @@
       "N_exponent": -8
     },
     "uhf": {
-      "forward_local_support": [2, 3, 4],
-      "inverse_images": [3, 5],
+      "forward_local_support": [
+        2,
+        3,
+        4
+      ],
+      "inverse_images": [
+        3,
+        5
+      ],
       "inverse_difference_norm": 2,
       "limit_surjective": false
     }
@@ -435,18 +450,36 @@
       "Gamma": 2,
       "E": 0,
       "epsilon": "1/10",
-      "spectator_energies": [0, 1],
-      "coupling_weights_squared": [1, 4],
-      "resolvent_diagonal": ["1/2", "1/3"],
+      "spectator_energies": [
+        0,
+        1
+      ],
+      "coupling_weights_squared": [
+        1,
+        4
+      ],
+      "resolvent_diagonal": [
+        "1/2",
+        "1/3"
+      ],
       "self_energy_mixed_ZZ": "-1/800",
       "feshbach_mixed_ZZ": "1/800"
     },
     "ritz_norm_hostile": {
       "c": "1/4",
       "Gamma": 2,
-      "M_values": [3, 15],
-      "bond_expectations": [4, 16],
-      "smallness_lower_bounds": ["1/2", "2"]
+      "M_values": [
+        3,
+        15
+      ],
+      "bond_expectations": [
+        4,
+        16
+      ],
+      "smallness_lower_bounds": [
+        "1/2",
+        "2"
+      ]
     }
   },
   "v2_2_checkpoint_synthesis": {
@@ -510,22 +543,211 @@
       "qps_factor": "48z(2z-1)^2exp(3a)"
     },
     "noncommutative_third_order": {
-      "K_Q": [[2, 0, 0], [0, 3, 0], [0, 0, 5]],
-      "A": [[1, 2], [2, -1]],
-      "C": [[3, 1, 0], [1, -2, 2], [0, 2, 4]],
-      "T": [["1/10", "1/5"], ["0", "-1/10"], ["3/10", "1/10"]],
-      "R": [["1/2", "0", "0"], ["0", "1/3", "0"], ["0", "0", "1/5"]],
-      "D": [["1/20", "1/10"], ["0", "-1/30"], ["3/50", "1/50"]],
-      "S": [["1/10", "-4/15"], ["-71/300", "-13/75"], ["-7/50", "13/150"]],
-      "Z": [["1/20", "-2/15"], ["-71/900", "-13/225"], ["-7/250", "13/750"]],
-      "QP_commutator_G2_K": [["-1/10", "4/15"], ["71/300", "13/75"], ["7/50", "-13/150"]],
-      "second_offdiagonal_residual": [["0", "0"], ["0", "0"], ["0", "0"]],
-      "P_commutator_G2_Vd_P": [["0", "0"], ["0", "0"]],
-      "P_double_commutator_G_G_Vod_P": [["0", "0"], ["0", "0"]],
-      "Gram": [["61/10000", "31/5000"], ["31/5000", "259/22500"]],
-      "high": [["219/10000", "53/3750"], ["53/3750", "451/22500"]],
-      "anticommutator": [["37/2000", "317/18000"], ["317/18000", "1/1125"]],
-      "Theta": [["17/5000", "-313/90000"], ["-313/90000", "431/22500"]],
+      "K_Q": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "A": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "C": [
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          1,
+          -2,
+          2
+        ],
+        [
+          0,
+          2,
+          4
+        ]
+      ],
+      "T": [
+        [
+          "1/10",
+          "1/5"
+        ],
+        [
+          "0",
+          "-1/10"
+        ],
+        [
+          "3/10",
+          "1/10"
+        ]
+      ],
+      "R": [
+        [
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/5"
+        ]
+      ],
+      "D": [
+        [
+          "1/20",
+          "1/10"
+        ],
+        [
+          "0",
+          "-1/30"
+        ],
+        [
+          "3/50",
+          "1/50"
+        ]
+      ],
+      "S": [
+        [
+          "1/10",
+          "-4/15"
+        ],
+        [
+          "-71/300",
+          "-13/75"
+        ],
+        [
+          "-7/50",
+          "13/150"
+        ]
+      ],
+      "Z": [
+        [
+          "1/20",
+          "-2/15"
+        ],
+        [
+          "-71/900",
+          "-13/225"
+        ],
+        [
+          "-7/250",
+          "13/750"
+        ]
+      ],
+      "QP_commutator_G2_K": [
+        [
+          "-1/10",
+          "4/15"
+        ],
+        [
+          "71/300",
+          "13/75"
+        ],
+        [
+          "7/50",
+          "-13/150"
+        ]
+      ],
+      "second_offdiagonal_residual": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "P_commutator_G2_Vd_P": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "P_double_commutator_G_G_Vod_P": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "Gram": [
+        [
+          "61/10000",
+          "31/5000"
+        ],
+        [
+          "31/5000",
+          "259/22500"
+        ]
+      ],
+      "high": [
+        [
+          "219/10000",
+          "53/3750"
+        ],
+        [
+          "53/3750",
+          "451/22500"
+        ]
+      ],
+      "anticommutator": [
+        [
+          "37/2000",
+          "317/18000"
+        ],
+        [
+          "317/18000",
+          "1/1125"
+        ]
+      ],
+      "Theta": [
+        [
+          "17/5000",
+          "-313/90000"
+        ],
+        [
+          "-313/90000",
+          "431/22500"
+        ]
+      ],
       "fixed_finite_Lambda_and_M_only": true,
       "volume_uniform": false
     },
@@ -564,5 +786,274 @@
     "pages": 9,
     "workflow": "No per-lemma or intermediate PDF was issued. One R-167 v2.5 gate-level synthesis source/PDF pair was issued only after the primary, non-importing independent, integrated, formal-authority, generated-surface, source-form, freshness, dual-extraction, strict-release, and visual-review checks passed. R-168 v1.3 remains historical and is not reissued.",
     "visual_qa": "All 9 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 9/9 nonempty pages; the build reported OVERFULL-HBOX 0."
+  },
+  "fixed_ritz_standard_sw_every_fixed_order_linked_cluster_coefficients": {
+    "gate_id": "PA-CP1-ST8-Q3LOCK-FIXED-RITZ-STANDARD-SW-EVERY-FIXED-ORDER-LINKED-CLUSTER-COEFFICIENTS",
+    "primary_source": {
+      "authors": "Sergey Bravyi, David P. DiVincenzo, and Daniel Loss",
+      "title": "Schrieffer-Wolff transformation for quantum many-body systems",
+      "journal": "Annals of Physics 326 (2011) 2793-2826",
+      "doi": "https://doi.org/10.1016/j.aop.2011.06.004",
+      "arxiv": "https://arxiv.org/abs/1105.0675",
+      "location": "Section 4.3, especially Theorem 2 (arXiv PDF p. 33)"
+    },
+    "exact_assumptions": "At fixed M on a finite connected zero-source Q3 spatial graph with deg(x)>=1, each onsite Ritz space is finite dimensional; H0=sum_x k_(x,M)>=0, P0=tensor_x P_x is the tensor product of onsite ground projectors, and every onsite excitation gap is at least Gamma. Choose omega_(x,e)>=0 on incident edges with sum_(e containing x) omega_(x,e)=1; on the periodic coordination-z graph use omega_(x,e)=1/z. For e={x,y}, define tilde B_(e,M)=B_(e,M)+delta_1[omega_(x,e)P_(1,x)+omega_(y,e)P_(1,y)], V_M=sum_e tilde B_(e,M), H_M(lambda)=sum_x k_(x,M)+lambda V_M, and J_M=max_x sum_(e containing x)||tilde B_(e,M)||. The onsite allocation identity sum_e delta_1[omega_(x,e)P_(1,x)+omega_(y,e)P_(1,y)]=delta_1 sum_x P_(1,x) makes H_M(1) exactly the physical zero-source fixed-M Q3 Hamiltonian up to the removed scalar. The onsite ground projector may have arbitrary finite rank, hence the Q3 rank-two P_x is allowed. The subtraction k=h_site-epsilon_0-delta_1 P_1 makes phi_0 and phi_1 exact zero modes of H0, while the allocated term restores their physical splitting at lambda=1. Constants may depend on M, J_M, ||k_M||/Gamma and degree.",
+    "linked_theorem": "For every fixed n, the multivariate standard-SW coefficient H_eff,n=sum_C K_(n,C) has K_(n,C)=0 unless C is connected and |C|<=n, and K_(n,C) acts only on the vertex support Lambda(C). This fixed-coefficient theorem needs no convergence of the full SW series.",
+    "count": "A safe rooted ordered connected n-edge tuple count is (n!)^2 z^n: choose one of n! edge-growth orders, then at step j use at most jz incidences. Thus support is at most n+1 and diameter at most n. The count is deliberately nonoptimal.",
+    "boundary": "Fixed finite M and fixed n only. The theorem does not provide an M-uniform coefficient norm, n-to-infinity convergence, an all-order QPS sum, or physical lambda=1 control."
+  },
+  "fixed_ritz_each_fixed_order_small_coupling_volume_extensive_sw_ground_energy_approximation": {
+    "gate_id": "PA-CP1-ST8-Q3LOCK-FIXED-RITZ-EACH-FIXED-ORDER-SMALL-COUPLING-VOLUME-EXTENSIVE-SW-GROUND-ENERGY-APPROXIMATION",
+    "primary_source": "Bravyi-DiVincenzo-Loss 2011, Theorems 1, 3 and 4 and the Section 4 normalization above.",
+    "scaled_coupling": "For H_M(lambda)=sum_x k_(x,M)+lambda V_M with V_M=sum_e tilde B_(e,M) and J_M=max_x sum_(e containing x)||tilde B_(e,M)||, write eta=lambda J_M after normalizing the augmented fixed-M interaction to local strength one. The physical zero-source fixed-M Q3 Hamiltonian is H_M(1), where eta=J_M. For each fixed truncation order n there are positive epsilon_(c,n,M) and C_(n,M), independent of |Lambda|, such that |eta|<epsilon_(c,n,M) gives |E_0(H_M(lambda))-E_0(H_SW,std^[n](lambda))| and |E_0(H_M(lambda))-E_0(H_SW,loc^[n](lambda))| at most C_(n,M)|Lambda||eta|^(n+1). The standard/local truncations are related inside P0 by a low-space unitary up to the same extensive order.",
+    "dependence": "The threshold and constant may depend on n, M, J_M, ||k_M||/Gamma and graph degree. In the local-SW proof the displayed fixed-order scale degrades as Omega(Gamma n^-2) after unit-strength normalization.",
+    "convergence_boundary": "The global standard-SW analytic radius obtained from the total operator norm scales at best as Gamma/(16||V_M||), hence generally as 1/|Lambda|; the local all-order radius quoted in the paper is also volume shrinking. The fixed-order extensive theorem is therefore not an all-order volume-uniform convergence theorem.",
+    "scope": "No claim is made at physical lambda=1 unless its scaled coupling separately satisfies the fixed-(n,M) hypothesis; no uniformity in M or limit n to infinity is asserted."
+  },
+  "zero_source_q3_third_fourth_order_coefficient_qps_and_ritz_cutoff": {
+    "gate_id": "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-Q3-THIRD-FOURTH-ORDER-COEFFICIENT-QPS-AND-RITZ-CUTOFF",
+    "local_block_hypotheses": "At zero source let B_f be the bare nonnegative Q3 edge interaction and tilde B_f its onsite-allocated physical edge. Relative to the rank-two local projector P_f set A_f=P_f B_f P_f, tilde A_f=P_f tilde B_f P_f, L_f=Q_f B_f P_f=Q_f tilde B_f P_f, U_f=Q_f B_f Q_f, and tilde U_f=Q_f tilde B_f Q_f. Define k_f:=k_x+k_y. Use ||A_f||<=a, ||L_f||<=epsilon and 0<=U_f<=rho_b k_f as quadratic forms. The onsite projections obey P_(1,x)P_(1,y)<=P_f; hence on Q_f the eigenvalue-two branch of P_(1,x)+P_(1,y) is removed and 0<=Q_f[P_(1,x)+P_(1,y)]Q_f<=Q_f<=k_f/Gamma, while ||P_f[P_(1,x)+P_(1,y)]P_f||=2. The allocated onsite term is diagonal in the local P_f/Q_f decomposition, so it adds no cross leg. For periodic omega=1/z, ||tilde A_f||<=a_tilde:=a+2delta_1/z and 0<=tilde U_f<=rho_tilde k_f with rho_tilde:=rho_b+delta_1/(z Gamma). For the registered inputs delta_1=1/10000, z=6 and Gamma=100, a_tilde=32063/500000 and rho_tilde=2918597/30000000. In the global Q decomposition the augmented local-high and outside-high locally-low diagonal sectors are orthogonal, so their sandwiched contribution is max(rho_tilde,a_tilde/Gamma); here rho_tilde>=a_tilde/Gamma. Adding the unchanged two cross legs gives ||W_f||<=w_tilde for W_f=R^(1/2)Q tilde B_f Q R^(1/2), w_tilde=max(rho_tilde,a_tilde/Gamma)+2epsilon/Gamma=584161/6000000.",
+    "coefficient_bounds": "Let T_e=Q tilde B_e P and E_e=R^(1/2)T_e. Then ||E_e||<=epsilon/sqrt(Gamma). Every connected ordered third-order coefficient is at most per3=epsilon^2(w_tilde/Gamma+a_tilde/Gamma^2). Every connected ordered fourth-order sequential coefficient is at most per4=epsilon^4/Gamma^3+(epsilon^2/Gamma)(w_tilde+a_tilde/Gamma)^2.",
+    "qps_bounds": "For disjoint components X,Y, the direct formula Theta4_seq=(1/2){F,B}-S*RS is additive. B and F split into single-component pieces. Its cross-double term is S_XY=-(T_X tensor D_Y+D_X tensor T_Y)=-(K_X+K_Y)(D_X tensor D_Y), hence R_XY S_XY=-D_X tensor D_Y and S_XY* R_XY S_XY=B_X tensor F_Y+F_X tensor B_Y. These are exactly the mixed terms in (1/2){F,B}, so every disconnected multivariate fourth-order edge coefficient vanishes; orthogonal single-excitation sectors leave Theta4_X tensor P_Y+P_X tensor Theta4_Y. Therefore the safe connected rooted count applies. Retaining the v2.5 safe third-order count gives ||Theta3||_aQPS<=48z(2z-1)^2 exp(3aQPS) per3. The safe fourth-order count is 5(4!)^2 z^4=2880 z^4, so ||Theta4||_aQPS<=2880 z^4 exp(4aQPS) per4. Both constants are independent of spatial volume and Ritz cutoff for the declared zero-source Q3 block constants.",
+    "ritz_removal": "For nested parity-preserving onsite spectral Ritz projections Pi_M containing P and commuting with K, Pi_M tends strongly to one. Each local E_e is finite rank, hence Pi_M E_e tends to E_e in norm; the uniformly bounded compressions Pi_M W_f Pi_M converge strongly, and their action on the finite-rank ranges converges in norm. Every fixed connected third- and fourth-order coefficient therefore converges in operator norm, and the finite rooted cluster counts pass this convergence to the displayed QPS norms.",
+    "boundary": "This closes the actual unbounded zero-source Q3 coefficient construction and Ritz removal only at orders three and four. It supplies no fifth-order estimate, all-order recursion convergence, physical phase transfer or GNS gap."
+  },
+  "fixed_finite_volume_and_ritz_complete_fourth_order_sequential_low_block_and_standard_sw_gauge_crosswalk": {
+    "gate_id": "PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-FOURTH-ORDER-SEQUENTIAL-LOW-BLOCK-AND-STANDARD-SW-GAUGE-CROSSWALK",
+    "setup": "At fixed finite Lambda,M retain H=K+lambda(V_d+V_od), V_d=A direct-sum C, T=QVP, R=(QKQ)^(-1), D=RT, G=D-D*, S=RTA-CRT, Z=RS and G2=Z-Z*. A third generator may remove the order-three off-diagonal block but cannot change the order-four low block.",
+    "sequential_formula": "With B=T*RT and F=T*R^2T, the complete sequential fourth-order low block is Theta4_seq=(1/8)P ad_G^3(V_od)P+(1/2)P[G2,[G,V_d]]P=(1/2){F,B}-S*RS. Equivalently Theta4_seq=(1/2){F,B}-S*RS.",
+    "standard_gauge": "For the direct-rotation standard-SW gauge, K_P=(1/2)P[G2,G]P and Theta4_std=Theta4_seq-[K_P,A]. The equality is independently checked from the BDL recursion S1=L(V_od), S2=-L[V_d,S1], S3=(L ad_V_d)^2(S1)+(1/3)L ad_S1^2(V_od), H_eff,4=(1/2)P[S3,V_od]P-(1/24)P ad_S1^3(V_od)P.",
+    "linked_boundary": "BDL Theorem 2 supplies connected support for the standard-gauge coefficient. Independently, the direct sequential formula is additive on disjoint components: its S_XY*R_XY S_XY term equals B_X tensor F_Y+F_X tensor B_Y and cancels the mixed part of (1/2){F,B}. Thus every disconnected multivariate fourth-order edge coefficient vanishes before applying the connected rooted count. The low-space gauge commutator gives the fixed-order crosswalk; no equality of sequential and standard coefficient matrices is claimed when A is non-scalar.",
+    "scope": "Complete algebraic coefficient and gauge crosswalk at fixed finite Lambda,M; not a BCH convergence theorem or an all-order oscillator elimination."
+  },
+  "low_high_ritz_tail_automatic_uniform_high_high_insertion_cutoff_no_go": {
+    "negative_id": "NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-HIGH-HIGH-INSERTION-CUTOFF",
+    "fixture": "Let H=Cp direct-sum ell2({e_j:j>=1}), K=R=Q, T=|e_1><p|, and Pi_M project onto p,e_1,...,e_M. For j>=2 put C_j=|e_1+e_j><e_1+e_j|, so ||C_j||=2 uniformly. For every M>=1, tau_M=||(1-Pi_M)T||=0. Choosing j=M+1 nevertheless gives ||(1-Pi_M)C_j Pi_M T||=1 and the Gram difference ||(C_jT)^*(C_jT)-(Pi_M C_j Pi_M T)^*(Pi_M C_j Pi_M T)||=1.",
+    "consequence": "Even an exact low-high Ritz leg does not automatically give cutoff convergence uniformly over a bounded high-high insertion family.",
+    "surviving_route": "For each fixed j the compression is eventually exact once M>=j. Uniform relative-form control of W together with compact or finite-rank low-high ranges supplies the separate uniformity used by the Q3 fixed-order route.",
+    "scope": "This bounded-family counterexample concerns the missing supremum over insertions. It is not a no-go for the actual Q3 weighted W estimate or for fixed-insertion Ritz convergence."
+  },
+  "orbit_smear_seed_support_automatic_spatial_local_net_no_go": {
+    "negative_id": "NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-SPATIAL-LOCAL-NET",
+    "fixture": "On two qubits take H=X tensor X. For formally disjoint seeds Z tensor I and I tensor Z, smear the first with f_+(t)=exp(-t)1_(t>=0) and the second with f_-(t)=exp(t)1_(t<=0). The exact integrals are int f_+ cos(2t)=int f_- cos(2t)=1/5, int f_+ sin(2t)=2/5 and int f_- sin(2t)=-2/5. Thus A_+=(1/5)ZI+(2/5)YX and B_-=(1/5)IZ-(2/5)XY.",
+    "failure": "[A_+,B_-]=-(8i/25)Y tensor Y and its operator norm is exactly 8/25, despite disjoint formal seed supports.",
+    "scope": "Temporal orbit-smearing does not automatically produce commuting spatial local algebras from seed labels. This does not reject the orbit-smear C*-carrier, all possible local-net constructions, or a locality theorem with additional propagation estimates."
+  },
+  "v2_6_exact_fixture": {
+    "bdl_fixed_order": {
+      "onsite_low_rank": 2,
+      "zero_source_fixed_M": true,
+      "finite_connected_graph_min_degree": 1,
+      "incident_partition_nonnegative": true,
+      "incident_partition_sum": "sum_(e containing x) omega_(x,e)=1",
+      "periodic_incident_weight": "omega_(x,e)=1/z",
+      "augmented_edge": "tilde B_(e,M)=B_(e,M)+delta_1[omega_(x,e)P_(1,x)+omega_(y,e)P_(1,y)]",
+      "onsite_allocation_identity": "sum_e delta_1[omega_(x,e)P_(1,x)+omega_(y,e)P_(1,y)]=delta_1 sum_x P_(1,x)",
+      "physical_model_at_lambda_one": true,
+      "connected_edge_limit": "|C|<=n",
+      "support_limit": "n+1",
+      "diameter_limit": "n",
+      "rooted_ordered_count_factor": "(n!)^2 z^n",
+      "fourth_rooted_ordered_count_factor": "576 z^4",
+      "fourth_qps_count_factor": "2880 z^4",
+      "onsite_product_projection_below_edge_low_projection": true,
+      "qf_onsite_sum_max_eigenvalue": 1,
+      "pf_onsite_sum_norm": 2
+    },
+    "scalar_fourth_order": {
+      "Gamma": 2,
+      "T": "1/10",
+      "A": "1/3",
+      "C": "5/3",
+      "B": "1/200",
+      "F": "1/400",
+      "S": "-1/15",
+      "Theta4_seq": "-1591/720000",
+      "Theta4_std": "-1591/720000"
+    },
+    "noncommutative_fourth_order": {
+      "K_Q": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "A": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "C": [
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          1,
+          -2,
+          2
+        ],
+        [
+          0,
+          2,
+          4
+        ]
+      ],
+      "T": [
+        [
+          "1/10",
+          "1/5"
+        ],
+        [
+          "0",
+          "-1/10"
+        ],
+        [
+          "3/10",
+          "1/10"
+        ]
+      ],
+      "B": [
+        [
+          "23/1000",
+          "2/125"
+        ],
+        [
+          "2/125",
+          "19/750"
+        ]
+      ],
+      "F": [
+        [
+          "61/10000",
+          "31/5000"
+        ],
+        [
+          "31/5000",
+          "259/22500"
+        ]
+      ],
+      "S_star_R_S": [
+        [
+          "37247/1350000",
+          "-176/84375"
+        ],
+        [
+          "-176/84375",
+          "15887/337500"
+        ]
+      ],
+      "Theta4_seq": [
+        [
+          "-1476947/54000000",
+          "128339/54000000"
+        ],
+        [
+          "128339/54000000",
+          "-52517/1125000"
+        ]
+      ],
+      "K_P": [
+        [
+          "0",
+          "-857/135000"
+        ],
+        [
+          "857/135000",
+          "0"
+        ]
+      ],
+      "Theta4_std": [
+        [
+          "-35249/18000000",
+          "-557261/54000000"
+        ],
+        [
+          "-557261/54000000",
+          "-243251/3375000"
+        ]
+      ]
+    },
+    "disconnected_fourth_order": {
+      "Gamma_x": 2,
+      "T_x": "1/5",
+      "Gamma_y": 3,
+      "T_y": "1/7",
+      "mixed_BF": "1/8820",
+      "mixed_S_star_R_S": "1/8820",
+      "Theta4": "69827/324135000",
+      "sum_of_local_Theta4": "69827/324135000",
+      "direct_resolvent_cross_identity": true,
+      "all_disconnected_multivariate_fourth_coefficients_vanish": true
+    },
+    "weighted_zero_source_q3": {
+      "rho_b": "15201/156250",
+      "a": "96139/1500000",
+      "delta1": "1/10000",
+      "z": 6,
+      "Gamma": 100,
+      "epsilon": "23/6250",
+      "a_tilde": "32063/500000",
+      "rho_tilde": "2918597/30000000",
+      "w": "584161/6000000",
+      "per3": "3888206603/292968750000000000",
+      "third_qps_factor": 278784,
+      "third_qps": "1411418996889/381469726562500",
+      "per4": "28578738599866921/21972656250000000000000000",
+      "fourth_qps_factor": 59719680,
+      "fourth_qps": "2314877826589220601/29802322387695312500",
+      "exp_aQPS": 2,
+      "rho_tilde_dominates_a_tilde_over_Gamma": true
+    },
+    "low_high_tail_hostile": {
+      "high_space": "ell2({e_j:j>=1})",
+      "K_equals_R_equals_Q": true,
+      "T": "|e_1><p|",
+      "Pi_M": "projection onto p,e_1,...,e_M",
+      "C_j": "|e_1+e_j><e_1+e_j|",
+      "uniform_C_j_norm": 2,
+      "tau_M": 0,
+      "hostile_choice": "j=M+1",
+      "insertion_tail": 1,
+      "Gram_difference": 1,
+      "each_fixed_j_eventually_exact": true,
+      "uniform_over_j_cutoff": false
+    },
+    "orbit_smear": {
+      "cosine_integral": "1/5",
+      "positive_sine_integral": "2/5",
+      "negative_sine_integral": "-2/5",
+      "commutator": "-(8i/25)Y tensor Y",
+      "commutator_norm": "8/25",
+      "seed_supports_disjoint": true,
+      "smeared_algebras_commute": false
+    }
+  },
+  "v2_6_checkpoint_synthesis": {
+    "status": "ISSUED AS ONE GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION",
+    "source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-zero-source-fixed-order-fourth-linked-and-orbit-locality-boundary-checkpoint-260812-v1.5.tex.txt",
+    "pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-zero-source-fixed-order-fourth-linked-and-orbit-locality-boundary-checkpoint-260812-v1.5.pdf",
+    "source_sha256": "33ada05c34a1518cee80ba67590ea1d7fce6bc438d9f0b58ad8c5e99f724749a",
+    "pdf_sha256": "5b230d77583fd936a93f519ccbf7c292c75a12ffd983ee66fdbb3576a13e913e",
+    "pages": 11,
+    "workflow": "No per-lemma or intermediate PDF was issued. One R-167 v2.6 gate-level synthesis source/PDF pair was issued only after the primary, non-importing independent, integrated, formal-authority, generated-surface, source-form, freshness, dual-extraction, strict-release, and visual-review checks passed. R-168 v1.3 remains historical and is not reissued.",
+    "visual_qa": "All 11 rendered pages were reviewed at readable resolution with zero clipping, overlap, broken equations, unreadable identifiers, black glyphs, or malformed page transitions; pypdf and pdfplumber each extracted 11/11 nonempty pages; the build reported OVERFULL-HBOX 0."
   }
 }

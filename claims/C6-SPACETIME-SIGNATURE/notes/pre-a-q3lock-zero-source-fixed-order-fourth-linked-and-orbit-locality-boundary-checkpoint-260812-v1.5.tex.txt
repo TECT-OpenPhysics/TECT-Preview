@@ -1,0 +1,717 @@
+% Title: Pre-A Q3LOCK Zero-Source Fixed-Order Fourth-Order Linkedness and Orbit-Locality Boundary Checkpoint
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.5 -- first issued 2026-08-12; this version issued 2026-08-12
+% Status: T0 claim-nonbearing synthesis of R-167 v2.6; R-167-only gate-level source; physical Sector A and Pre-A remain open
+% Revision history: v1.5 (2026-08-12), first source issue for the corrected zero-source fixed-order, fourth-order, and two-no-go checkpoint
+
+\section{Purpose and scope}
+
+This R-167-only gate-level checkpoint synthesizes \texttt{EXP-000826 as
+corrected by EXP-000827} and records reusable result \texttt{R-167 v2.6}
+without changing a claim card or tier.  The result remains additive,
+\texttt{T0}, and \texttt{claim\_bearing: false}.  Its stable result ID is
+
+\begin{quote}
+\url{PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT}.
+\end{quote}
+
+Append-only provenance is retained.  Changelog event 617 and
+\texttt{EXP-000826} remain immutable history.  Event 618 and
+\texttt{EXP-000827} supersede the earlier wording in exactly two respects:
+the first two Bravyi--DiVincenzo--Loss children are zero-source fixed-\(M\)
+Q3 statements, and the bare-edge third/fourth QPS values are replaced by the
+augmented-edge values derived below.  The correction creates no new result
+number or version.  Event 617 must be read only as corrected by event 618.
+
+R-167 v2.6 has four distinct positive scopes.  In the \mbox{\texttt{zero-source fixed-Ritz}}
+setting, \mbox{\texttt{each separately fixed}} standard-SW coefficient has connected support.  At
+fixed \((n,M)\) and sufficiently small coupling, fixed-order effective ground
+energies have a volume-extensive error estimate.  For the actual zero-source
+Q3 blocks, only orders three and four have the displayed volume- and
+Ritz-uniform coefficient-QPS bounds and Ritz removal.  At fixed finite
+\(\Lambda,M\), the complete sequential fourth-order coefficient and its
+standard-SW gauge crosswalk are exact finite-matrix statements.
+
+None of these scopes takes \(n\) to infinity, proves convergence of an
+all-order series, verifies physical lambda=1 smallness, transfers a spin phase,
+or proves an oscillator GNS gap.  R-168 v1.3 remains historical and is not
+reissued.  No R-168 count, hash, theorem, or lifecycle field belongs here.
+
+\section{Exactly four CLOSED children, two negatives, and five OPEN \mbox{parents}}
+
+The four children closed in their corrected scopes are exactly
+
+\begin{enumerate}
+\item \url{PA-CP1-ST8-Q3LOCK-FIXED-RITZ-STANDARD-SW-EVERY-FIXED-ORDER-LINKED-CLUSTER-COEFFICIENTS};
+\item \url{PA-CP1-ST8-Q3LOCK-FIXED-RITZ-EACH-FIXED-ORDER-SMALL-COUPLING-VOLUME-EXTENSIVE-SW-GROUND-ENERGY-APPROXIMATION};
+\item \url{PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-Q3-THIRD-FOURTH-ORDER-COEFFICIENT-QPS-AND-RITZ-CUTOFF};
+\item \url{PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-FOURTH-ORDER-SEQUENTIAL-LOW-BLOCK-AND-STANDARD-SW-GAUGE-CROSSWALK}.
+\end{enumerate}
+
+The first two IDs carry the explicit zero-source fixed-\(M\) qualifier from
+\texttt{EXP-000827}.  The third is actual Q3 but only through orders three and
+four.  The fourth is fixed finite \(\Lambda,M\) algebra.  The two negative
+authorities are exactly
+
+\begin{enumerate}
+\item \url{NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-HIGH-HIGH-INSERTION-CUTOFF};
+\item \url{NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-SPATIAL-LOCAL-NET}.
+\end{enumerate}
+
+They refute only the named automatic implications.  They do not invalidate
+the weighted Q3 fixed-order route or rule out an orbit-smear carrier equipped
+with an independent propagation theorem.  The five load-bearing gates recorded
+with this checkpoint remain \textbf{OPEN}:
+
+\begin{enumerate}
+\item \url{PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY};
+\item \url{PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS};
+\item \url{PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA};
+\item \url{PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY};
+\item \url{PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE}.
+\end{enumerate}
+
+Neither the four scoped closures nor the two implication failures close any
+parent in this list.
+
+\section{Exact zero-source augmented-edge mapping}
+
+Fix one parity-preserving onsite Ritz cutoff \(M\) on a finite connected
+zero-source Q3 graph \(G=(\Lambda,E)\), with \(\deg(x)\ge1\) and maximum
+degree \(z\).  Put
+
+\begin{equation}
+ H_0=\sum_x k_{x,M}\ge0,\qquad P_0=\bigotimes_xP_x,
+ \qquad k_{x,M}\ge\Gamma(1-P_x).                       \tag{3.1}
+\end{equation}
+
+Each \(P_x\) has rank two, which is allowed by the finite-rank onsite ground
+projector formulation.  Choose nonnegative incident weights satisfying
+
+\begin{equation}
+ \omega_{x,e}\ge0,\qquad\sum_{e\ni x}\omega_{x,e}=1.   \tag{3.2}
+\end{equation}
+
+On a periodic coordination-\(z\) graph use \(\omega_{x,e}=1/z\).  For
+\(e=\{x,y\}\), define
+
+\begin{align}
+ \widetilde B_{e,M}
+ &=B_{e,M}+\delta_1(\omega_{x,e}P_{1,x}+\omega_{y,e}P_{1,y}),\tag{3.3}\\
+ V_M&=\sum_e\widetilde B_{e,M},\qquad
+ J_M=\max_x\sum_{e\ni x}\|\widetilde B_{e,M}\|,       \tag{3.4}\\
+ H_M(\lambda)&=\sum_xk_{x,M}+\lambda V_M.              \tag{3.5}
+\end{align}
+
+The incident partition gives the exact allocation identity
+
+\begin{equation}
+ \sum_{e=\{x,y\}}\delta_1(\omega_{x,e}P_{1,x}
+ +\omega_{y,e}P_{1,y})=\delta_1\sum_xP_{1,x}.           \tag{3.6}
+\end{equation}
+
+Consequently \(H_M(1)\) is the physical zero-source fixed-\(M\) Q3
+Hamiltonian, up to the scalar already removed from every onsite term.  The
+auxiliary \(k=h_{\rm site}-\epsilon_0-\delta_1P_1\) has the declared rank-two
+zero eigenspace; (3.6) restores the physical splitting at \(\lambda=1\).
+Omitting this allocation was the mapping defect corrected by
+\texttt{EXP-000827}.
+\section{Fixed-order linked coefficients and energy accuracy}
+
+The literature authority is Sergey Bravyi, David P. DiVincenzo, and Daniel
+Loss, \emph{Schrieffer--Wolff transformation for quantum many-body systems},
+Annals of Physics \textbf{326} (2011), 2793--2826,
+\url{https://doi.org/10.1016/j.aop.2011.06.004}, arXiv:1105.0675.
+Section 4.3, especially Theorem 2 on arXiv PDF page 33, supplies the
+coefficientwise linked-cluster statement.  The separately scoped fixed-order
+energy and standard/local gauge comparisons are those cited in the proof
+certificate.
+
+At each fixed \(M\), the zero-source augmented family (3.3)--(3.5) satisfies
+the finite-dimensional hypotheses.  For every separately fixed order \(n\),
+the standard-SW multivariate coefficient decomposes as
+
+\begin{equation}
+ H_{{\rm eff},n}=\sum_CK_{n,C},\qquad
+ K_{n,C}=0\quad\hbox{unless }C\hbox{ is connected and }|C|\le n.
+ \tag{4.1}
+\end{equation}
+
+The operator \(K_{n,C}\) acts only on the vertices of \(C\).  A nonzero
+coefficient has support at most \(n+1\) and diameter at most \(n\).  A safe,
+nonoptimal rooted ordered count is
+
+\begin{equation}
+ N_{n,{\rm root}}\le(n!)^2z^n.                          \tag{4.2}
+\end{equation}
+
+At fourth order this is \(576z^4\); paying support at most five gives the safe
+\(2880z^4\) QPS count.
+
+Normalize the fixed-\(M\) augmented interaction to local strength one and put
+\(\eta=\lambda J_M\).  For every separately fixed \((n,M)\), there are
+positive constants \(\epsilon_{c,n,M}\) and \(C_{n,M}\), independent of
+\(|\Lambda|\), such that \(|\eta|<\epsilon_{c,n,M}\) implies
+
+\begin{align}
+ |E_0(H_M(\lambda))-E_0(H_{{\rm eff,std}}^{[n]}(\lambda))|
+ &\le C_{n,M}|\Lambda|\,|\eta|^{n+1},\notag\\
+ |E_0(H_M(\lambda))-E_0(H_{{\rm eff,loc}}^{[n]}(\lambda))|
+ &\le C_{n,M}|\Lambda|\,|\eta|^{n+1}.                 \tag{4.3}
+\end{align}
+
+The physical fixed-\(M\) point has \(\lambda=1\) and \(\eta=J_M\), but no
+proof here places \(J_M\) below the required threshold.  Equation (4.1) is
+coefficientwise and proves no convergence of the full formal series.  Equation
+(4.3) is separately fixed in \(n,M\); it is not an all-order volume-uniform
+convergence theorem.
+
+\section{Actual Q3 weighted blocks and seven corrected rationals}
+
+At zero source put \(k_f=k_x+k_y\), \(P_f=P_xP_y\), and \(Q_f=1-P_f\).
+For the bare and augmented edges define
+
+\begin{align}
+ A_f&=P_fB_fP_f,&\widetilde A_f&=P_f\widetilde B_fP_f,\notag\\
+ L_f&=Q_fB_fP_f=Q_f\widetilde B_fP_f,&
+ U_f&=Q_fB_fQ_f,\quad\widetilde U_f=Q_f\widetilde B_fQ_f.\tag{5.1}
+\end{align}
+
+The allocated onsite term is block diagonal in the local \(P_f/Q_f\)
+decomposition, so the cross leg is unchanged.  Since
+\(P_{1,x}P_{1,y}\le P_f\), the eigenvalue-two branch of
+\(P_{1,x}+P_{1,y}\) lies in \(P_f\) and is removed on \(Q_f\).  Hence
+
+\begin{equation}
+ 0\le Q_f(P_{1,x}+P_{1,y})Q_f\le Q_f\le{k_f\over\Gamma},
+ \qquad\|P_f(P_{1,x}+P_{1,y})P_f\|=2.                  \tag{5.2}
+\end{equation}
+
+Starting from
+
+\begin{equation}
+ \|A_f\|\le a,\qquad\|L_f\|\le\epsilon,
+ \qquad0\le U_f\le\rho_b k_f,                          \tag{5.3}
+\end{equation}
+
+the periodic choice gives
+
+\begin{equation}
+ \widetilde a=a+{2\delta_1\over z},\qquad
+ \widetilde\rho=\rho_b+{\delta_1\over z\Gamma}.        \tag{5.4}
+\end{equation}
+
+With \(K\ge\Gamma Q\), \(R=(QKQ)^{-1}\), and
+\(W_f=R^{1/2}Q\widetilde B_fQR^{1/2}\), the augmented local-high and
+outside-high locally-low sectors are orthogonal local diagonal blocks.  Their
+contribution is a maximum, not a sum.  Adding the two unchanged cross legs
+gives
+
+\begin{equation}
+ \boxed{\|W_f\|\le w_{\rm tilde}:=
+ \max\!\left(\widetilde\rho,{\widetilde a\over\Gamma}\right)
+ +{2\epsilon\over\Gamma}.}                             \tag{5.5}
+\end{equation}
+
+For
+
+\begin{equation}
+ \rho_b={15201\over156250},\quad a={96139\over1500000},
+ \quad\delta_1={1\over10000},\quad\epsilon={23\over6250},
+ \quad\Gamma=100,\quad z=6,\quad e^{a_{\rm QPS}}=2,    \tag{5.6}
+\end{equation}
+
+the \(\widetilde\rho\) branch dominates
+\(\widetilde a/\Gamma\).  The seven corrected exact rational oracles are
+
+\begin{verbatim}
+a_tilde = 32063/500000
+rho_tilde = 2918597/30000000
+w_tilde = 584161/6000000
+per3 = 3888206603/292968750000000000
+QPS3 = 1411418996889/381469726562500
+per4 = 28578738599866921/21972656250000000000000000
+QPS4 = 2314877826589220601/29802322387695312500
+\end{verbatim}
+
+Thus event 617's third-order value
+\texttt{1420642437753/381469726562500} is superseded by
+\texttt{1411418996889/381469726562500}; its fourth-order value
+\texttt{2345231533369183929/29802322387695312500} is superseded by
+\texttt{2314877826589220601/29802322387695312500}.
+
+Put \(T_e=Q\widetilde B_eP\) and \(E_e=R^{1/2}T_e\), so
+\(|E_e|\le\epsilon/\sqrt\Gamma\).  The third-order envelope and QPS
+bound are
+
+\begin{align}
+ p_3&=\epsilon^2\left({w_{\rm tilde}\over\Gamma}
+                    +{\widetilde a\over\Gamma^2}\right),\tag{5.7}\\
+ \|\Theta^{(3)}\|_{a_{\rm QPS}}
+ &\le48z(2z-1)^2e^{3a_{\rm QPS}}p_3.                   \tag{5.8}
+\end{align}
+
+The exact factor is \(278784\), yielding QPS3 above.  For fourth order use the
+actual augmented blocks \(A=P\widetilde VP\), \(C=Q\widetilde VQ\), with
+\(\widetilde V=\sum_f\widetilde B_f\), and define
+
+\begin{equation}
+ B=T^*RT,\qquad F=T^*R^2T,\qquad S=RTA-CRT.             \tag{5.9}
+\end{equation}
+
+Then
+
+\begin{align}
+ p_4&={\epsilon^4\over\Gamma^3}
+ +{\epsilon^2\over\Gamma}
+  \left(w_{\rm tilde}+{\widetilde a\over\Gamma}\right)^2,\tag{5.10}\\
+ \|\Theta^{(4)}\|_{a_{\rm QPS}}
+ &\le2880z^4e^{4a_{\rm QPS}}p_4.                      \tag{5.11}
+\end{align}
+
+The exact factor is \(59719680\), yielding QPS4 above.  Direct additivity and
+the triangle inequality over connected ordered contributions justify this
+sequential coefficient count.  It is not based on the false claim that every
+individual disconnected ordering vanishes.
+\section{Complete fourth order and the standard-SW gauge crosswalk}
+
+At fixed finite \(\Lambda,M\), use the actual augmented family of Section 3.
+Let \(D=RT\), \(G=D-D^*\), \(Z=RS\), and \(G_2=Z-Z^*\).  Expanding the two
+sequential rotations through order four gives
+
+\begin{equation}
+ \Theta^{(4)}_{\rm seq}
+ ={1\over8}P\operatorname{ad}_G^3(V_{\rm od})P
+ +{1\over2}P[G_2,[G,V_{\rm d}]]P.                     \tag{6.1}
+\end{equation}
+
+A third homological generator that removes the residual order-three
+off-diagonal block changes no order-four low block because its commutator with
+\(K\) is off diagonal.  Exact block multiplication gives the complete
+coefficient
+
+\begin{equation}
+ \boxed{\Theta^{(4)}_{\rm seq}={1\over2}\{F,B\}-S^*RS.}\tag{6.2}
+\end{equation}
+
+For the scalar fixture \(\Gamma=2\), \(T=1/10\), \(A=1/3\), and \(C=5/3\),
+
+\begin{equation}
+ B={1\over200},\qquad F={1\over400},\qquad S=-{1\over15},
+ \qquad\Theta^{(4)}_{\rm seq}=-{1591\over720000}.       \tag{6.3}
+\end{equation}
+
+The exact raw oracle is \texttt{-1591/720000}.  The sequential gauge is not
+generally the direct-rotation standard-SW gauge.  Their order-three relative
+low-space unitary has generator
+
+\begin{equation}
+ K_P={1\over2}P[G_2,G]P,\qquad
+ \boxed{\Theta^{(4)}_{\rm std}=\Theta^{(4)}_{\rm seq}-[K_P,A].}\tag{6.4}
+\end{equation}
+
+For the retained noncommutative fixture, exact arithmetic gives
+
+\begin{equation}
+ B=\begin{pmatrix}23/1000&2/125\\2/125&19/750\end{pmatrix},\quad
+ F=\begin{pmatrix}61/10000&31/5000\\31/5000&259/22500\end{pmatrix},\tag{6.5}
+\end{equation}
+
+\begin{equation}
+ S^*RS=\begin{pmatrix}
+ 37247/1350000&-176/84375\\-176/84375&15887/337500
+ \end{pmatrix},                                         \tag{6.6}
+\end{equation}
+
+\begin{equation}
+ \Theta^{(4)}_{\rm seq}=\begin{pmatrix}
+ -1476947/54000000&128339/54000000\\
+ 128339/54000000&-52517/1125000
+ \end{pmatrix},                                         \tag{6.7}
+\end{equation}
+
+\begin{equation}
+ K_P=\begin{pmatrix}0&-857/135000\\857/135000&0\end{pmatrix},\quad
+ \Theta^{(4)}_{\rm std}=\begin{pmatrix}
+ -35249/18000000&-557261/54000000\\
+ -557261/54000000&-243251/3375000
+ \end{pmatrix}.                                         \tag{6.8}
+\end{equation}
+
+Thus the gauges visibly differ when \(A\) is nonscalar.  The independent
+direct-rotation recursion with the off-diagonal inverse Liouvillian reproduces
+(6.8) exactly.  When \(A\) is scalar, \([K_P,A]=0\) and they coincide.
+
+\section{Direct additivity and disconnected fixture}
+
+Sequential linkedness is not inferred from a factorization of global
+homological generators.  Let \(X,Y\) be disjoint components.  The operators
+\(B,F\) split into one-component pieces, while the full source is
+
+\begin{equation}
+ S=S_X\otimes P_Y+P_X\otimes S_Y
+ -(T_X\otimes D_Y+D_X\otimes T_Y).                     \tag{7.1}
+\end{equation}
+
+The single-excitation terms from \(DA\) cancel the corresponding \(CD\)
+terms.  On the double-excitation sector,
+
+\begin{align}
+ S_{XY}&=-(T_X\otimes D_Y+D_X\otimes T_Y)
+       =-(K_X+K_Y)(D_X\otimes D_Y),\notag\\
+ R_{XY}S_{XY}&=-D_X\otimes D_Y,                         \tag{7.2}\\
+ S_{XY}^*R_{XY}S_{XY}
+ &=B_X\otimes F_Y+F_X\otimes B_Y.                      \tag{7.3}
+\end{align}
+
+Equation (7.3) is exactly the mixed part of
+\((1/2)\{F,B\}\).  The orthogonal single-excitation sectors leave only
+\(\Theta_X^{(4)}\otimes P_Y+P_X\otimes\Theta_Y^{(4)}\).  Thus each
+\mbox{\texttt{disconnected multivariate coefficient}} at fourth order cancels after its required
+permutation aggregate.  No assertion says every individual ordered term
+vanishes, and no global-generator factorization is asserted.  The triangle
+inequality over the remaining connected ordered contributions gives the safe
+\(2880z^4\) factor in (5.11).
+
+For a direct product fixture, take \(\Gamma_X=2,T_X=1/5\) and
+\(\Gamma_Y=3,T_Y=1/7\), with both diagonal perturbation blocks zero.  The
+mixed \(BF\) contribution is \(1/8820\); the mixed \(S^*RS\) contribution is
+also \(1/8820\) and cancels it.  Therefore
+
+\begin{equation}
+ \Theta^{(4)}_{X\sqcup Y}
+ ={(1/5)^4\over2^3}+{(1/7)^4\over3^3}
+ ={69827\over324135000}.                                \tag{7.4}
+\end{equation}
+
+The raw oracle is \texttt{69827/324135000}.  This fixture executes the direct
+resolvent identities; the fixed-order literature theorem independently gives
+connected support for the standard coefficient.
+
+\section{Fixed-order spectral-Ritz removal}
+
+Let \(\Pi_M\) be nested parity-preserving onsite spectral Ritz projections
+containing \(P\), commuting with \(K\), and converging strongly to one.  Each
+local \(E_e=R^{1/2}T_e\) has finite rank because its low domain is finite rank.
+Consequently
+
+\begin{equation}
+ \Pi_ME_e\longrightarrow E_e\quad\hbox{in operator norm}.\tag{8.1}
+\end{equation}
+
+The compressions \(\Pi_MW_f\Pi_M\) are uniformly bounded and converge
+strongly.  Strong convergence becomes norm convergence only after restriction
+to the finitely many finite-rank ranges entering one fixed connected
+coefficient.  This proves operator-norm convergence of every fixed connected
+third- and fourth-order coefficient.  The finite rooted counts then give the
+corresponding QPS-norm Ritz removal uniformly in spatial volume.
+
+No global operator-norm convergence of \(W_f\) is claimed.  The argument is
+special to orders three and four; it supplies neither a fifth-order modulus
+nor summability over all orders.
+
+\newpage
+
+\section{Two exact failures of automatic promotion}
+
+\subsection{A zero low--high tail does not control a moving insertion family}
+
+Let
+
+\begin{equation}
+ {\cal H}=\mathbb Cp\oplus\ell^2\{e_j:j\ge1\},\qquad
+ K=R=Q,\qquad T=|e_1\rangle\langle p|,                  \tag{9.1}
+\end{equation}
+
+and let \(\Pi_M\) project onto \(p,e_1,\ldots,e_M\).  For every \(M\ge1\),
+
+\begin{equation}
+ \tau_M=\|(1-\Pi_M)T\|=0.                              \tag{9.2}
+\end{equation}
+
+For \(j\ge2\), define the uniformly bounded positive family
+
+\begin{equation}
+ C_j=|e_1+e_j\rangle\langle e_1+e_j|,\qquad\|C_j\|=2.   \tag{9.3}
+\end{equation}
+
+Choosing \(j=M+1\) gives
+
+\begin{align}
+ \|(1-\Pi_M)C_j\Pi_MT\|&=1,                            \tag{9.4}\\
+ \|(C_jT)^*(C_jT)-(\Pi_MC_j\Pi_MT)^*(\Pi_MC_j\Pi_MT)\|&=1.\tag{9.5}
+\end{align}
+
+Every fixed \(C_j\) becomes exact once \(M\ge j\), but the supremum over the
+moving family fails.  Thus even an exactly zero low--high tail does not
+automatically control a uniform high--high insertion cutoff.  The actual Q3
+route instead uses (5.5) and finite-rank ranges.
+
+\subsection{Orbit-smearing labels do not automatically define a spatial net}
+
+On two qubits take \(H=X\otimes X\) and
+\(\alpha_t=\operatorname{Ad}(e^{itH})\).  Formally disjoint seeds evolve as
+
+\begin{align}
+ \alpha_t(ZI)&=\cos(2t)ZI+\sin(2t)YX,\notag\\
+ \alpha_t(IZ)&=\cos(2t)IZ+\sin(2t)XY.                  \tag{9.6}
+\end{align}
+
+Smear the first with \(f_+(t)=e^{-t}{\bf1}_{t\ge0}\) and the second with
+\(f_-(t)=e^t{\bf1}_{t\le0}\).  Both have \(L^1\) norm one, and
+
+\begin{equation}
+ \int f_\pm(t)\cos(2t)dt={1\over5},\quad
+ \int f_+(t)\sin(2t)dt={2\over5},\quad
+ \int f_-(t)\sin(2t)dt=-{2\over5}.                    \tag{9.7}
+\end{equation}
+
+Thus
+
+\begin{equation}
+ A_+={1\over5}ZI+{2\over5}YX,\qquad
+ B_-={1\over5}IZ-{2\over5}XY,                           \tag{9.8}
+\end{equation}
+
+but
+
+\begin{equation}
+ [A_+,B_-]=-{8i\over25}Y\otimes Y,
+ \qquad\|[A_+,B_-]\|={8\over25}.                       \tag{9.9}
+\end{equation}
+
+The raw norm oracle is \texttt{8/25}.  Temporal orbit smearing does not
+automatically turn formal seed support into commuting spatial local algebras.
+This is not a no-go for every orbit-smear C-star carrier, for a construction
+with propagation estimates, or for every possible local net.
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{DISMISSED -- the onsite physical splitting was omitted:} that
+defect is exactly why \texttt{EXP-000827} corrects \texttt{EXP-000826}.
+Equation (3.6) restores \(\delta_1\sum_xP_{1,x}\) at the physical zero-source
+point.
+\item \textbf{DISMISSED -- local rank two violates the linked-cluster
+hypotheses:} the finite-dimensional construction permits a finite-rank onsite
+ground projector, and the fixed Ritz gap separates the next level.
+\item \textbf{UPHELD as an overclaim -- a coefficient theorem proves all-order
+convergence:} the linked theorem is separately fixed in \(n\).  It assumes and
+proves no convergence of the complete series.
+\item \textbf{UPHELD as an overclaim -- the energy estimate holds at physical
+lambda=1:} it requires \(|\lambda|J_M\) below a threshold depending on fixed
+\(n,M\).  No physical smallness check is supplied.
+\item \textbf{DISMISSED -- bare diagonal constants can be reused:} equations
+(5.2)--(5.5) recompute the augmented low and high blocks, select the orthogonal
+direct-sum maximum, and retain only the genuinely unchanged cross leg.
+\item \textbf{UPHELD as a false shortcut -- strong Ritz convergence is global
+norm convergence of \(W_f\):} only its action on finitely many finite-rank
+ranges is promoted to norm convergence.
+\item \textbf{DISMISSED -- (6.2) is a selected diagram:} (6.1) contains the
+complete projected order-four terms after the two sequential rotations, and
+exact block multiplication gives (6.2).
+\item \textbf{UPHELD -- sequential and standard gauges have equal nonscalar
+matrices:} (6.4) is their exact low-space unitary crosswalk, and
+(6.7)--(6.8) display the difference.
+\item \textbf{DISMISSED -- every disconnected ordered term vanishes:} that is
+not claimed.  Equations (7.1)--(7.3) cancel each disconnected multivariate
+permutation aggregate, sufficient for direct additivity and the connected
+triangle bound.
+\item \textbf{DISMISSED -- \(\tau_M=0\) controls every bounded insertion
+family:} the moving family (9.3) has insertion tail and Gram difference one.
+\item \textbf{UPHELD as an overclaim -- the Pauli fixture rejects all
+orbit-smear carriers:} it rejects only automatic spatial commutativity inferred
+from seed labels without a propagation/locality theorem.
+\item \textbf{UPHELD as an overclaim -- orders three and four close the
+oscillator parent:} no fifth-order envelope, order summability, phasewise
+intertwiner, or broken-sector GNS coercivity estimate is supplied.
+\item \textbf{VALID with mitigation -- passing verification closes physical
+parents:} the engines bind formulas, authorities, hashes, lifecycle, and scope
+only.  Passing changes no claim tier and closes none of the five open parents.
+\end{enumerate}
+
+Independent adversarial review is invited especially on the zero-source onsite
+allocation, finite-rank ground projector hypothesis, fixed-order versus
+all-order quantifiers, physical-\(\lambda=1\) smallness boundary, the orthogonal
+maximum in (5.5), all seven exact fractions, fourth-order signs and factors,
+the standard/sequential gauge correction, disconnected resolvent cancellation,
+finite-rank Ritz restriction, both counterfixtures, and every scope firewall.
+
+\section{Reproduction and exact verification pins}
+
+The R-167 v2.6 primary, non-importing independent, and integrated scripts are
+
+\begin{enumerate}
+\item \url{codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split.py};
+\item \url{codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_independent.py};
+\item \url{codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_semiclassical_doublet_route_split_verify.py}.
+\end{enumerate}
+
+From the repository root, run
+
+\begin{verbatim}
+Set-Location E:\Dev\TECT
+$py = 'E:\Dev\TECT.venv\Scripts\python.exe'
+$r167 = (
+  'codes\foundations\pre_a_cp1_st8_q3lock_' +
+  'local_measured_renyi_semiclassical_doublet_route_split'
+)
+& $py -X utf8 ($r167 + '.py') --no-store
+& $py -X utf8 ($r167 + '_independent.py') --no-store
+& $py -X utf8 ($r167 + '_verify.py') --no-store
+\end{verbatim}
+
+The expected authority-complete totals are primary \texttt{PASS 442/442},
+non-importing independent \texttt{PASS 246/246}, and integrated
+\texttt{PASS 425/425}.  The exact raw script SHA-256 pins are
+
+\begin{verbatim}
+R-167 primary:
+f0f177b3b7c03f4e02795499cc5d5a8e432388269d51ab1d323a85c3974a6077
+R-167 independent:
+a54eb34db7944a2423963409cea7205ec362a31ed0259e23ba34c303b4213253
+R-167 integrated:
+4d075cad0122cdf94b2c422fba361af9a00626050808936c8848c8fb6ac06399
+\end{verbatim}
+
+The independent pin is its raw script hash, not a canonical stdout payload
+hash.  The primary symbolic and non-importing standard-library rational
+engines independently recompute every new matrix and fraction.  The integrated
+engine binds them to both exploration records, events 617/618, R-167 v2.6,
+all four closed and five open gates, both negative authorities, generated
+surfaces, stored runs, and checkpoint lifecycle.  Any missing check invalidates
+the total.
+
+Source-form validation uses
+
+\begin{verbatim}
+$note = (
+  'claims\C6-SPACETIME-SIGNATURE\notes\' +
+  'pre-a-q3lock-zero-source-fixed-order-fourth-linked-' +
+  'and-orbit-locality-boundary-checkpoint-260812-v1.5.tex.txt'
+)
+& $py -X utf8 verification\scripts\build_note_pdf.py `
+  --no-compile $note
+\end{verbatim}
+
+The source-form command creates no PDF.  No per-lemma or intermediate PDF is
+issued.  This source is the one R-167-only v2.6 gate-level checkpoint source;
+its paired PDF may be issued only after the primary, non-importing independent,
+integrated, formal-authority, generated-surface, source-form, freshness,
+dual-extraction, strict-release, and visual-review gates pass.  Before issuance
+the lifecycle is exactly the three-field \texttt{DEFERRED} record.  After
+issuance it must have exactly the eight fields \texttt{status},
+\texttt{source}, \texttt{pdf}, \texttt{source\_sha256},
+\texttt{pdf\_sha256}, \texttt{pages}, \texttt{workflow}, and
+\texttt{visual\_qa}.
+
+R-168 v1.3 remains historical and is not reissued; no R-168 count or hash is
+introduced by this checkpoint.
+\section{Exact no-overclaim and dependency boundary}
+
+The connected rank-two oscillator-elimination parent is \textbf{OPEN}.
+Fixed-order linked support, exact third/fourth coefficients, and fixed-order
+Ritz removal give no fifth-order coefficient envelope, no \(n\)-summability,
+no convergent global or local SW series, no boundary/source-uniform unbounded
+elimination, and no physical lambda=1 theorem.
+
+The broader infinite-dimensional rank-two and broken-sector spectral parents
+are \textbf{OPEN}.  Nothing here gives an exact oscillator two-phase QPS,
+phasewise intertwiner, temporal-mass estimate, oscillator-lattice GNS
+coercivity, broken-sector GNS gap, or physical mass gap.
+
+The common-alpha parent is \textbf{OPEN}.  The orbit-smear counterfixture
+rejects automatic spatial commutativity from formal seed labels; it does not
+rule out another carrier, an unsplit construction, state-weighted convergence,
+a propagation-controlled orbit-smear algebra, or common-alpha existence.
+There is no all-shape/all-exhaustion Q3 Cauchy estimate, identified local
+generator, or KMS quotient.
+
+The Round-1 parent is \textbf{OPEN}.  The result changes neither the evidence
+role freeze nor the prospective holdout state.  It does not promote internal
+T0 evidence to a physical claim.
+
+Nothing here proves regulator removal, continuum control, same-Hamiltonian
+physical-empty comparison, a below-empty free-energy sign, physical vacuum
+selection, emergent time, a universal propagation cone, gravity, C6 emergence,
+CP1, physical Sector A, or Pre-A closure.  The
+\texttt{C6-SPACETIME-SIGNATURE} claim card and tier are unchanged.
+
+\section{Result footer}
+
+\begin{verbatim}
+Result ID:               PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-
+                         MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT.
+Reusable result:         R-167 v2.6.
+Active exploration:      EXP-000826 as corrected by EXP-000827.
+Event provenance:        Event 617 remains historical; event 618 supersedes
+                         its source qualifier and two QPS constants only.
+Precise statement:       At zero source and each fixed M, every separately
+                         fixed standard-SW coefficient is linked; for fixed
+                         (n,M) and sufficiently small coupling the fixed-order
+                         ground-energy error is volume extensive; actual Q3
+                         orders three/four have the stated QPS/Ritz bounds;
+                         and fixed finite (Lambda,M) has the complete sequential
+                         fourth-order coefficient and standard-SW gauge
+                         crosswalk.
+Scope:                   T0 additive analytic/exact R-167 v2.6 at zero source
+                         and fixed order/cutoff only; no load-bearing parent,
+                         claim tier, Sector A, C6, CP1, or Pre-A closure.
+Dependencies:            R-167 v2.5; EXP-000826 as corrected by EXP-000827;
+                         Bravyi-DiVincenzo-Loss fixed-order linked-cluster
+                         theorem; zero-source incident onsite allocation and
+                         augmented-edge low/high block estimates.
+Precise positive scope:  Zero-source fixed-M standard-SW connected
+                         coefficients at every separately fixed order n;
+                         fixed-(n,M) small-coupling volume-extensive energy
+                         accuracy; actual zero-source Q3 third/fourth QPS and
+                         Ritz removal; complete fixed-(Lambda,M) sequential
+                         fourth order and standard-SW gauge crosswalk.
+Closed children:         Exactly the four IDs in Section 2, in their corrected
+                         scopes.
+Negative results:        Exactly the two automatic-implication failures in
+                         Section 2.
+Open parents:            Exactly the five load-bearing IDs in Section 2 remain
+                         OPEN.
+Core fourth order:       Theta4_seq=(1/2){F,B}-S*RS;
+                         Theta4_std=Theta4_seq-[K_P,A].
+Exact scalar oracle:     -1591/720000.
+Disconnected oracle:    Equal mixed 1/8820 terms cancel; local sum is
+                         69827/324135000.
+Orbit-smear oracle:      Commutator norm 8/25.
+Corrected a_tilde:       32063/500000.
+Corrected rho_tilde:     2918597/30000000.
+Corrected w_tilde:       584161/6000000.
+Corrected QPS3:          1411418996889/381469726562500.
+Corrected QPS4:          2314877826589220601/29802322387695312500.
+Evidence grade:          ANALYTIC + EXACT + primary + non-importing
+                         independent + integrated; R-167-only checkpoint.
+Reproduction command:    Run the three final verifier commands in Section 11
+                         from repository root, each with --no-store.
+Expected output:         PASS 442/442; PASS 246/246; PASS 425/425.
+Primary raw SHA-256:     f0f177b3b7c03f4e02795499cc5d5a8e432388269d51ab1d323a85c3974a6077.
+Independent raw SHA-256: a54eb34db7944a2423963409cea7205ec362a31ed0259e23ba34c303b4213253.
+Integrated raw SHA-256:  4d075cad0122cdf94b2c422fba361af9a00626050808936c8848c8fb6ac06399.
+Falsification gate:      Any zero-source allocation, fixed-order quantifier,
+                         small-coupling, augmented block, exact fraction,
+                         fourth-order sign/factor, gauge, additivity, Ritz,
+                         counterfixture, assertion-count, hash, provenance, or
+                         scope mismatch.
+Tier before / after:     C6 T1 / C6 T1; no claim or tier change.
+No-overclaim statement:  No n-to-infinity or all-order convergence, physical
+                         lambda=1 smallness, fifth-order or unbounded
+                         oscillator elimination, phase transfer, actual Q3
+                         common alpha, generator/KMS quotient, oscillator GNS
+                         gap, Round-1, regulator removal, continuum,
+                         physical-empty sign, C6, CP1, physical Sector A, or
+                         Pre-A closure.
+Next required action:    Prove a remainder-controlled or convergent all-order
+                         weighted recursion and a viable spatially local
+                         carrier before any oscillator phase/GNS or common-
+                         alpha promotion.
+PDF policy:              No per-lemma or intermediate PDF. One R-167-only v2.6
+                         gate-level pair is issued only after all proof,
+                         authority, extraction, release, and visual gates.
+R-168 firewall:          R-168 v1.3 remains historical and is not reissued;
+                         no R-168 verification count or hash is part of this
+                         document.
+\end{verbatim}

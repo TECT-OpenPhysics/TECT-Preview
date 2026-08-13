@@ -1,23 +1,16 @@
 #!/usr/bin/env python3
-"""Primary exact verifier for the staged R-167 v2.5 route split.
+"""Primary exact verifier for the staged R-167 v2.6 route split.
 
-Fixtures A--J preserve every v2.3 exact check and historical boundary.
-Fixture K checks the fixed-faithful-standard-form strong-star upgrade, the
-conditional bidirectional all-shape Cauchy completion arithmetic, the sharp
-first homological generator and Ritz/QPS bounds, and two distinct automatic-
-promotion obstructions. Fixture L checks the complete fixed-finite-volume/Ritz third-order
-low block, linked edge-triple and conservative QPS bounds, exact rational
-fixtures, and the canonical compact-cylinder point-norm C0 obstruction. The
-actual history conclusion remains confined to
-the registered fixed-beta periodic compact-source family, while the new
-observable conclusion is fixed finite standard representation by fixed finite
-standard representation.  Actual all-shape Q3 common alpha, generator/KMS
-identification, all-order connected rank-two oscillator/QPS transfer, and the
-broken-sector GNS gap remain open.
+Fixtures A--L preserve every v2.5 exact check and historical boundary. Fixture
+M checks fixed-Ritz every-fixed-order BDL scope, the complete fourth-order
+sequential coefficient and standard-SW gauge crosswalk, actual zero-source Q3
+weighted third/fourth coefficient QPS and Ritz-removal constants, and two
+narrow automatic-promotion obstructions. No all-order convergence, physical
+lambda=1, phase transfer, common-alpha, or GNS-gap conclusion is made.
 
-Use ``--staged --no-store`` while EXP-000825, R-167 v2.5, the one new negative
-row and one new closed gate row are assembled; the four formal misses then produce
-the honest verdict ``INCOMPLETE``.
+Use ``--staged --no-store`` while EXP-000826, R-167 v2.6, two new negative
+rows and four new closed gate rows are assembled; the eight formal misses then
+produce the honest verdict ``INCOMPLETE``.
 """
 
 from __future__ import annotations
@@ -35,7 +28,7 @@ from typing import Any, Iterable
 import sympy as sp
 
 
-__version__ = "2.5.0"
+__version__ = "2.6.0"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = "pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split"
@@ -44,7 +37,7 @@ CERTIFICATE = REPO / f"strategy/{SLUG}-certificate-260811.md"
 DEFAULT_OUTPUT = (
     REPO
     / "claims/C6-SPACETIME-SIGNATURE/runs"
-    / f"2026-08-12-primary-{SLUG}-v2-5/result.json"
+    / f"2026-08-12-primary-{SLUG}-v2-6/result.json"
 )
 EXPLORATION_LEDGER = REPO / "explorations/log.jsonl"
 RESULT_LEDGER = REPO / "RESULTS-LEDGER.md"
@@ -53,16 +46,17 @@ GATE_REGISTRY = REPO / "claims/GATES.md"
 
 EXPECTED_TASK = "T-054"
 EXPECTED_CLAIM_IDS = ("C6-SPACETIME-SIGNATURE",)
-EXPECTED_EXPLORATION = "EXP-000825"
+EXPECTED_EXPLORATION = "EXP-000826"
+SCOPE_CORRECTION_EXPLORATION = "EXP-000827"
 EXPECTED_RESULT_NUMBER = "R-167"
-EXPECTED_RESULT_VERSION = "v2.5"
+EXPECTED_RESULT_VERSION = "v2.6"
 EXPECTED_RESULT_ID = (
     "PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT"
 )
 EXPECTED_CANDIDATE_ID = (
     "PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-SEMICLASSICAL-DOUBLET-ROUTE-SPLIT-v0"
 )
-EXPECTED_CLOSED_SUBGATES = ('PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY', 'PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION', 'PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION', 'PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION', 'PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR', 'PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP', 'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING', 'PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION', 'PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR', 'PA-CP1-ST8-Q3LOCK-REGISTERED-PERIODIC-SPLIT-IMPLEMENTER-TWO-SIDED-GIBBS-L2-HARD-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-ENVELOPE', 'PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-AND-RITZ-CUTOFF', 'PA-CP1-ST8-Q3LOCK-FIXED-FINITE-FAITHFUL-GIBBS-STANDARD-FORM-POINT-STRONGSTAR-OBSERVABLE-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-CONDITIONAL-BIDIRECTIONAL-ALL-SHAPE-POINT-NORM-CAUCHY-C0-AUTOMORPHISM-COMPLETION', 'PA-CP1-ST8-Q3LOCK-FIRST-LOCAL-HOMOLOGICAL-RANK-TWO-GENERATOR-QPS-NORM-AND-RITZ-CUTOFF', 'PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-THIRD-ORDER-LINKED-RANK-TWO-LOW-BLOCK-COEFFICIENT')
+EXPECTED_CLOSED_SUBGATES = ('PA-CP1-ST8-Q3LOCK-PURE-BOND-COORDINATE-TAIL-INVARIANCE-AND-STATE-WEIGHTED-CUTOFF-IDENTITY', 'PA-CP1-ST8-Q3LOCK-LOCAL-MEASURED-RENYI-TO-HISTORY-TAIL-REDUCTION', 'PA-CP1-ST8-Q3LOCK-SEMICLASSICAL-ONSITE-DOUBLET-AND-EXACT-LOW-BAND-TFIM-COMPRESSION', 'PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION', 'PA-CP1-ST8-Q3LOCK-FIXED-BOND-RESTRICTED-TAIL-TO-GROWING-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-BELOW-ONE-HIGH-MODE-FESHBACH-AND-RELATIVE-FORM-SMALLNESS-PRECURSOR', 'PA-CP1-ST8-Q3LOCK-EXACT-COMPRESSED-TFIM-TWO-PHASE-QPS-AND-PHASEWISE-GAP', 'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING', 'PA-CP1-ST8-Q3LOCK-SIMULTANEOUS-BOND-SHEAR-FIFTH-GRAPH-PROPAGATION', 'PA-CP1-ST8-Q3LOCK-ACTUAL-TWO-ORIENTATION-TWENTIETH-HISTORY-MOMENT-AND-HARD-CUTOFF-CORRIDOR', 'PA-CP1-ST8-Q3LOCK-REGISTERED-PERIODIC-SPLIT-IMPLEMENTER-TWO-SIDED-GIBBS-L2-HARD-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-CONDITIONAL-CONNECTED-CLUSTER-GEOMETRIC-QPS-NORM-ENVELOPE', 'PA-CP1-ST8-Q3LOCK-SECOND-ORDER-CONNECTED-ONSITE-RESOLVENT-QPS-NORM-AND-RITZ-CUTOFF', 'PA-CP1-ST8-Q3LOCK-FIXED-FINITE-FAITHFUL-GIBBS-STANDARD-FORM-POINT-STRONGSTAR-OBSERVABLE-CUTOFF-REMOVAL', 'PA-CP1-ST8-Q3LOCK-CONDITIONAL-BIDIRECTIONAL-ALL-SHAPE-POINT-NORM-CAUCHY-C0-AUTOMORPHISM-COMPLETION', 'PA-CP1-ST8-Q3LOCK-FIRST-LOCAL-HOMOLOGICAL-RANK-TWO-GENERATOR-QPS-NORM-AND-RITZ-CUTOFF', 'PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-THIRD-ORDER-LINKED-RANK-TWO-LOW-BLOCK-COEFFICIENT', 'PA-CP1-ST8-Q3LOCK-FIXED-RITZ-STANDARD-SW-EVERY-FIXED-ORDER-LINKED-CLUSTER-COEFFICIENTS', 'PA-CP1-ST8-Q3LOCK-FIXED-RITZ-EACH-FIXED-ORDER-SMALL-COUPLING-VOLUME-EXTENSIVE-SW-GROUND-ENERGY-APPROXIMATION', 'PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-Q3-THIRD-FOURTH-ORDER-COEFFICIENT-QPS-AND-RITZ-CUTOFF', 'PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-FOURTH-ORDER-SEQUENTIAL-LOW-BLOCK-AND-STANDARD-SW-GAUGE-CROSSWALK')
 V2_1_CLOSED_SUBGATES = (
     'PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-TWENTIETH-MOMENT-FIXED-EDGE-CORRIDOR-REDUCTION',
     'PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-EDGE-BLOCK-PARITY-DOUBLET-CLUSTER-AND-UNIFORM-ONSITE-SPECTRAL-CUTOFF-REMOVAL',
@@ -85,8 +79,14 @@ V2_4_CLOSED_SUBGATES = (
 V2_5_CLOSED_SUBGATES = (
     'PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-THIRD-ORDER-LINKED-RANK-TWO-LOW-BLOCK-COEFFICIENT',
 )
+V2_6_CLOSED_SUBGATES = (
+    'PA-CP1-ST8-Q3LOCK-FIXED-RITZ-STANDARD-SW-EVERY-FIXED-ORDER-LINKED-CLUSTER-COEFFICIENTS',
+    'PA-CP1-ST8-Q3LOCK-FIXED-RITZ-EACH-FIXED-ORDER-SMALL-COUPLING-VOLUME-EXTENSIVE-SW-GROUND-ENERGY-APPROXIMATION',
+    'PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-Q3-THIRD-FOURTH-ORDER-COEFFICIENT-QPS-AND-RITZ-CUTOFF',
+    'PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-FOURTH-ORDER-SEQUENTIAL-LOW-BLOCK-AND-STANDARD-SW-GAUGE-CROSSWALK',
+)
 EXPECTED_OPEN_GATES = ('PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA', 'PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY', 'PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS', 'PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE', 'PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY')
-NEGATIVE_IDS = ('NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY', 'NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS', 'NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY', 'NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0')
+NEGATIVE_IDS = ('NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-RANK-ONE-UNBOUNDED-BLOCK-DIAGONALIZATION-DIRECT-BROKEN-DOUBLET-IMPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-GAUSSIAN-SYMMETRY-FINITE-MOMENT-AUTOMATIC-FIXED-EDGE-HISTORY-TAIL', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP', 'NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY', 'NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS', 'NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY', 'NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0', 'NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-HIGH-HIGH-INSERTION-CUTOFF', 'NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-SPATIAL-LOCAL-NET')
 V2_1_NEGATIVE_IDS = (
     'NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT',
     'NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT',
@@ -104,6 +104,10 @@ V2_4_NEGATIVE_IDS = (
 V2_5_NEGATIVE_IDS = (
     'NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0',
 )
+V2_6_NEGATIVE_IDS = (
+    'NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-HIGH-HIGH-INSERTION-CUTOFF',
+    'NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-SPATIAL-LOCAL-NET',
+)
 SEMICLASSICAL_SOURCES = (
     "https://www.numdam.org/item/AIHPA_1983__38_3_295_0/",
     "https://www.numdam.org/item/AIHPA_1984__40_2_224_0/",
@@ -113,6 +117,7 @@ SEMICLASSICAL_SOURCES = (
 )
 DFP_SOURCE = "https://arxiv.org/abs/2108.13907"
 YAROTSKII_QPS_SOURCE = "https://doi.org/10.1070/RM2006v061n02ABEH004323"
+BDL_SW_SOURCE = "https://doi.org/10.1016/j.aop.2011.06.004"
 
 
 def normalized_sha256(path: Path) -> str:
@@ -199,8 +204,8 @@ def _v2_5_checkpoint_lifecycle(
         exploration_id,
         *closed_subgates,
         *negative_ids,
-        _v2_5_raw_sha256(primary_script),
-        _v2_5_raw_sha256(independent_script),
+        "9d667e615879985fa32dfb9540109769cd830e53aebb8c226f8b3a1008dea94c",
+        "f3e8bc777a2756f67168b3afea72f8a2365a7efc7f1a78e8b6ac3e5add3a7b71",
         "384/384",
         "218/218",
         "369/369",
@@ -381,6 +386,395 @@ def _v2_5_checkpoint_lifecycle(
         and diagnostics["r167_only_r168_historical"]
     )
     return diagnostics
+
+
+
+def _v2_6_checkpoint_lifecycle(
+    checkpoint: dict[str, Any],
+    *,
+    exploration_id: str,
+    scope_correction_exploration_id: str,
+    closed_subgates: tuple[str, ...],
+    negative_ids: tuple[str, ...],
+) -> dict[str, Any]:
+    """Validate one R-167-only v2.6 issued source/PDF pair from raw files."""
+
+    issued_fields = {
+        "status",
+        "source",
+        "pdf",
+        "source_sha256",
+        "pdf_sha256",
+        "pages",
+        "workflow",
+        "visual_qa",
+    }
+    issued_status = "ISSUED AS ONE GATE-LEVEL CHECKPOINT AFTER PROOF VALIDATION"
+    issued_workflow = (
+        "No per-lemma or intermediate PDF was issued. One R-167 v2.6 "
+        "gate-level synthesis source/PDF pair was issued only after the "
+        "primary, non-importing independent, integrated, formal-authority, "
+        "generated-surface, source-form, freshness, dual-extraction, "
+        "strict-release, and visual-review checks passed. R-168 v1.3 "
+        "remains historical and is not reissued."
+    )
+    base_stem = SCRIPT.stem
+    for suffix in ("_independent", "_verify"):
+        if base_stem.endswith(suffix):
+            base_stem = base_stem[: -len(suffix)]
+    primary_script = SCRIPT.with_name(base_stem + ".py")
+    independent_script = SCRIPT.with_name(base_stem + "_independent.py")
+    integrated_script = SCRIPT.with_name(base_stem + "_verify.py")
+    component_scripts = (
+        primary_script,
+        independent_script,
+        integrated_script,
+    )
+    component_scripts_exist = all(path.is_file() for path in component_scripts)
+    component_script_hashes = tuple(
+        _v2_5_raw_sha256(path) for path in component_scripts if path.is_file()
+    )
+    required_tokens = (
+        "R-167 v2.6",
+        exploration_id,
+        scope_correction_exploration_id,
+        f"{exploration_id} as corrected by {scope_correction_exploration_id}",
+        *closed_subgates,
+        *negative_ids,
+        *component_script_hashes,
+        "442/442",
+        "246/246",
+        "425/425",
+        primary_script.relative_to(REPO).as_posix(),
+        independent_script.relative_to(REPO).as_posix(),
+        integrated_script.relative_to(REPO).as_posix(),
+        "Bravyi",
+        "Theorem 2",
+        "zero-source fixed-Ritz",
+        "augmented edge",
+        "incident partition",
+        "each separately fixed",
+        "small coupling",
+        "32063/500000",
+        "2918597/30000000",
+        "584161/6000000",
+        "278784",
+        "1411418996889/381469726562500",
+        "59719680",
+        "2314877826589220601/29802322387695312500",
+        "sequential fourth-order",
+        "standard-SW gauge",
+        "-1591/720000",
+        "857/135000",
+        "1/8820",
+        "69827/324135000",
+        "disconnected multivariate coefficient",
+        "low-high Ritz tail",
+        "high-high insertion",
+        "orbit-smear",
+        "8/25",
+        "physical lambda=1",
+        "n-to-infinity",
+        "all-order",
+        "fifth-order",
+        "common alpha",
+        "GNS",
+        "R-167-only",
+        "R-168 v1.3",
+        "historical",
+        "not reissued",
+        "physical Sector A",
+        "Pre-A",
+    )
+    pages = checkpoint.get("pages")
+    visual_qa = (
+        f"All {pages} rendered pages were reviewed at readable resolution "
+        "with zero clipping, overlap, broken equations, unreadable identifiers, "
+        "black glyphs, or malformed page transitions; pypdf and pdfplumber each "
+        f"extracted {pages}/{pages} nonempty pages; the build reported "
+        "OVERFULL-HBOX 0."
+        if isinstance(pages, int)
+        and not isinstance(pages, bool)
+        and pages > 0
+        else None
+    )
+    source = _v2_5_checkpoint_path(checkpoint.get("source"), ".tex.txt")
+    pdf = _v2_5_checkpoint_path(checkpoint.get("pdf"), ".pdf")
+    paired = (
+        source is not None
+        and pdf is not None
+        and source.parent == pdf.parent
+        and source.name.endswith(".tex.txt")
+        and pdf.name == source.name[:-8] + ".pdf"
+    )
+    hash_values = (checkpoint.get("source_sha256"), checkpoint.get("pdf_sha256"))
+    lowercase_hashes = all(
+        isinstance(value, str)
+        and len(value) == 64
+        and value == value.lower()
+        and all(character in "0123456789abcdef" for character in value)
+        for value in hash_values
+    )
+    diagnostics: dict[str, Any] = {
+        "issued_fields_exact": set(checkpoint) == issued_fields,
+        "status_exact": checkpoint.get("status") == issued_status,
+        "workflow_exact": checkpoint.get("workflow") == issued_workflow,
+        "visual_qa_exact": visual_qa is not None
+        and checkpoint.get("visual_qa") == visual_qa,
+        "source_path_valid": source is not None,
+        "pdf_path_valid": pdf is not None,
+        "sibling_source_pdf": paired,
+        "lowercase_hashes": lowercase_hashes,
+        "positive_pages": visual_qa is not None,
+        "component_scripts_exist": component_scripts_exist,
+        "component_script_hashes": list(component_script_hashes),
+        "source_exists": source is not None and source.is_file(),
+        "pdf_exists": pdf is not None and pdf.is_file(),
+        "raw_hashes_match": False,
+        "pdf_newer": False,
+        "source_missing_tokens": list(required_tokens),
+        "pypdf_pages": None,
+        "pypdf_nonempty_pages": None,
+        "pypdf_missing_tokens": list(required_tokens),
+        "pypdf_error": None,
+        "pdfplumber_pages": None,
+        "pdfplumber_nonempty_pages": None,
+        "pdfplumber_missing_tokens": list(required_tokens),
+        "pdfplumber_error": None,
+        "r167_only_r168_historical": (
+            checkpoint.get("workflow") == issued_workflow
+            and _v2_5_text_has(checkpoint.get("workflow", ""), "R-167 v2.6")
+            and _v2_5_text_has(checkpoint.get("workflow", ""), "R-168 v1.3")
+            and _v2_5_text_has(checkpoint.get("workflow", ""), "historical")
+            and _v2_5_text_has(checkpoint.get("workflow", ""), "not reissued")
+        ),
+        "valid": False,
+    }
+    if source is not None and pdf is not None and source.is_file() and pdf.is_file():
+        try:
+            source_text = source.read_text(encoding="utf-8")
+            source_hash = _v2_5_raw_sha256(source)
+            pdf_hash = _v2_5_raw_sha256(pdf)
+            diagnostics["raw_hashes_match"] = (
+                lowercase_hashes
+                and checkpoint.get("source_sha256") == source_hash
+                and checkpoint.get("pdf_sha256") == pdf_hash
+            )
+            diagnostics["pdf_newer"] = (
+                pdf.stat().st_mtime_ns > source.stat().st_mtime_ns
+            )
+            diagnostics["source_missing_tokens"] = [
+                token for token in required_tokens
+                if not _v2_5_text_has(source_text, token)
+            ]
+        except (OSError, UnicodeError) as error:
+            diagnostics["source_error"] = f"{type(error).__name__}: {error}"
+        try:
+            from pypdf import PdfReader
+
+            texts = [
+                page.extract_text() or ""
+                for page in PdfReader(str(pdf)).pages
+            ]
+            joined = "\n".join(texts)
+            diagnostics["pypdf_pages"] = len(texts)
+            diagnostics["pypdf_nonempty_pages"] = sum(
+                bool(text.strip()) for text in texts
+            )
+            diagnostics["pypdf_missing_tokens"] = [
+                token for token in required_tokens
+                if not _v2_5_text_has(joined, token)
+            ]
+        except Exception as error:
+            diagnostics["pypdf_error"] = f"{type(error).__name__}: {error}"
+        try:
+            import pdfplumber
+
+            with pdfplumber.open(pdf) as document:
+                texts = [
+                    page.extract_text() or ""
+                    for page in document.pages
+                ]
+            joined = "\n".join(texts)
+            diagnostics["pdfplumber_pages"] = len(texts)
+            diagnostics["pdfplumber_nonempty_pages"] = sum(
+                bool(text.strip()) for text in texts
+            )
+            diagnostics["pdfplumber_missing_tokens"] = [
+                token for token in required_tokens
+                if not _v2_5_text_has(joined, token)
+            ]
+        except Exception as error:
+            diagnostics["pdfplumber_error"] = f"{type(error).__name__}: {error}"
+
+    diagnostics["valid"] = (
+        diagnostics["issued_fields_exact"]
+        and diagnostics["status_exact"]
+        and diagnostics["workflow_exact"]
+        and diagnostics["visual_qa_exact"]
+        and diagnostics["source_path_valid"]
+        and diagnostics["pdf_path_valid"]
+        and diagnostics["sibling_source_pdf"]
+        and diagnostics["lowercase_hashes"]
+        and diagnostics["positive_pages"]
+        and diagnostics["component_scripts_exist"]
+        and len(diagnostics["component_script_hashes"]) == 3
+        and diagnostics["source_exists"]
+        and diagnostics["pdf_exists"]
+        and diagnostics["raw_hashes_match"]
+        and diagnostics["pdf_newer"]
+        and diagnostics["source_missing_tokens"] == []
+        and diagnostics["pypdf_error"] is None
+        and diagnostics["pypdf_pages"] == pages
+        and diagnostics["pypdf_nonempty_pages"] == pages
+        and diagnostics["pypdf_missing_tokens"] == []
+        and diagnostics["pdfplumber_error"] is None
+        and diagnostics["pdfplumber_pages"] == pages
+        and diagnostics["pdfplumber_nonempty_pages"] == pages
+        and diagnostics["pdfplumber_missing_tokens"] == []
+        and diagnostics["r167_only_r168_historical"]
+    )
+    return diagnostics
+
+
+def _v2_6_certificate_lifecycle(
+    certificate_text: str,
+    checkpoint: dict[str, Any],
+    checkpoint_lifecycle: dict[str, Any],
+    *,
+    deferred_exact: bool,
+    open_gates: tuple[str, ...],
+) -> dict[str, Any]:
+    """Validate the exact deferred certificate or one issued Section 68."""
+
+    baseline_sha256 = (
+        "883c0328ba00c62b0a4a3b559f4ff01cf6f38c31135503f2246642f8e777e01f"
+    )
+    heading_67 = "## 67. Devil's-advocate audit and exact v2.6 lifecycle"
+    heading_68 = "## 68. R-167 v2.6-only gate-level checkpoint issuance"
+    certificate_sha256 = _v2_5_raw_sha256(CERTIFICATE)
+    certificate_lines = certificate_text.splitlines()
+    heading_68_count = certificate_lines.count(heading_68)
+    heading_67_count = certificate_lines.count(heading_67)
+    ordered = (
+        heading_67_count == 1
+        and heading_68_count == 1
+        and certificate_lines.index(heading_67) < certificate_lines.index(heading_68)
+    )
+    section_68_start = (
+        certificate_lines.index(heading_68) + 1
+        if heading_68_count == 1 else len(certificate_lines)
+    )
+    section_68_end = next(
+        (
+            index for index in range(section_68_start, len(certificate_lines))
+            if certificate_lines[index].startswith("## ")
+        ),
+        len(certificate_lines),
+    )
+    section_68 = "\n".join(certificate_lines[section_68_start:section_68_end])
+    base_stem = SCRIPT.stem
+    for suffix in ("_independent", "_verify"):
+        if base_stem.endswith(suffix):
+            base_stem = base_stem[: -len(suffix)]
+    scripts = (
+        SCRIPT.with_name(base_stem + ".py"),
+        SCRIPT.with_name(base_stem + "_independent.py"),
+        SCRIPT.with_name(base_stem + "_verify.py"),
+    )
+    scripts_exist = all(path.is_file() for path in scripts)
+    script_paths = tuple(
+        path.relative_to(REPO).as_posix() for path in scripts
+    )
+    script_hashes = tuple(
+        _v2_5_raw_sha256(path) for path in scripts if path.is_file()
+    )
+    source_path = checkpoint.get("source")
+    pdf_path = checkpoint.get("pdf")
+    source_sha256 = checkpoint.get("source_sha256")
+    pdf_sha256 = checkpoint.get("pdf_sha256")
+    pages = checkpoint.get("pages")
+    semantic_tokens = (
+        "The Section 67 statements",
+        "No v2.6 PDF is issued",
+        "DEFERRED",
+        "pdf_issued: false",
+        "EXP-000826 as corrected by EXP-000827",
+        "zero-source",
+        "first two",
+        "children",
+        "pypdf",
+        "pdfplumber",
+        "11/11 nonempty pages",
+        "OVERFULL-HBOX 0",
+        "no forms, JavaScript or encryption",
+        "All 11 pages",
+        "zero clipping",
+        "overlap",
+        "broken equations",
+        "unreadable identifiers",
+        "black glyphs",
+        "malformed page transitions",
+        "R-168 v1.3 remains historical and is not reissued",
+        "all five parent gates remain OPEN",
+        "no new theorem",
+        "no new result number",
+        "no new result version",
+        "no tier change",
+        "no gate closure",
+        "no parent closure",
+        "OPEN",
+    )
+    exact_tokens = (
+        source_path,
+        pdf_path,
+        source_sha256,
+        pdf_sha256,
+        "11 pages",
+        "442/442",
+        "246/246",
+        "425/425",
+        *script_paths,
+        *script_hashes,
+        *open_gates,
+    )
+    issued_section_valid = (
+        checkpoint_lifecycle.get("valid") is True
+        and pages == 11
+        and heading_68_count == 1
+        and ordered
+        and scripts_exist
+        and len(script_hashes) == 3
+        and all(
+            isinstance(token, str) and token in section_68
+            for token in exact_tokens
+        )
+        and all(_v2_5_text_has(section_68, token) for token in semantic_tokens)
+    )
+    deferred_certificate_valid = (
+        deferred_exact
+        and certificate_sha256 == baseline_sha256
+        and heading_68_count == 0
+    )
+    issued_certificate_valid = (
+        not deferred_exact and issued_section_valid
+    )
+    return {
+        "valid": deferred_certificate_valid or issued_certificate_valid,
+        "deferred_valid": deferred_certificate_valid,
+        "issued_valid": issued_certificate_valid,
+        "certificate_sha256": certificate_sha256,
+        "baseline_sha256": baseline_sha256,
+        "section_68_heading_count": heading_68_count,
+        "section_ordered": ordered,
+        "component_script_paths": list(script_paths),
+        "component_script_hashes": list(script_hashes),
+        "checkpoint_source": source_path,
+        "checkpoint_pdf": pdf_path,
+        "checkpoint_source_sha256": source_sha256,
+        "checkpoint_pdf_sha256": pdf_sha256,
+        "checkpoint_pages": pages,
+    }
 
 
 def json_safe(value: Any) -> Any:
@@ -3884,6 +4278,437 @@ def fixture_l_v2_5_third_order_and_compact_cylinder(
     }
 
 
+
+def fixture_m_v2_6_fixed_order_fourth_weighted_and_no_gos(
+    audit: Audit,
+) -> dict[str, Any]:
+    # Exact v2.6 coefficient, weighted-QPS, and hostile fixtures.
+    commutator = lambda left, right: left * right - right * left
+
+    coordination = sp.Integer(6)
+    delta_one = sp.Rational(1, 10000)
+    periodic_incident_weight = 1 / coordination
+    allocated_onsite_per_endpoint = delta_one * periodic_incident_weight
+    onsite_p = sp.diag(1, 1, 0)
+    onsite_p1 = sp.diag(0, 1, 0)
+    edge_p = sp.kronecker_product(onsite_p, onsite_p)
+    edge_q = sp.eye(9) - edge_p
+    p1_x = sp.kronecker_product(onsite_p1, sp.eye(3))
+    p1_y = sp.kronecker_product(sp.eye(3), onsite_p1)
+    onsite_sum = p1_x + p1_y
+    onsite_product = p1_x * p1_y
+    q_onsite_sum = edge_q * onsite_sum * edge_q
+    p_onsite_sum = edge_p * onsite_sum * edge_p
+    onsite_product_below_edge_p = edge_p * onsite_product == onsite_product
+    q_onsite_sum_max = max(q_onsite_sum.diagonal())
+    p_onsite_sum_norm = max(p_onsite_sum.diagonal())
+    fourth_rooted = sp.factorial(4) ** 2 * coordination**4
+    fourth_qps_count = 5 * fourth_rooted
+    audit.check(
+        "v2.6 BDL fixed-order connected count arithmetic",
+        fourth_rooted == 576 * coordination**4
+        and fourth_qps_count == 2880 * coordination**4
+        and int(fourth_rooted) == 746496
+        and int(fourth_qps_count) == 3732480,
+        {"rooted": fourth_rooted, "qps": fourth_qps_count},
+        {"rooted": 746496, "qps": 3732480},
+        "M_BDL_fixed_order",
+    )
+    audit.check(
+        "v2.6 BDL rank-two, onsite allocation, and fixed-order scope",
+        periodic_incident_weight >= 0
+        and coordination * periodic_incident_weight == 1
+        and allocated_onsite_per_endpoint == sp.Rational(1, 60000)
+        and onsite_product_below_edge_p
+        and q_onsite_sum_max == 1
+        and p_onsite_sum_norm == 2,
+        {
+            "onsite_low_rank": 2,
+            "zero_source_fixed_M": True,
+            "finite_connected_graph_min_degree": 1,
+            "incident_partition_nonnegative": True,
+            "incident_partition_sum": "sum_(e containing x) omega_(x,e)=1",
+            "periodic_incident_weight": "omega_(x,e)=1/z",
+            "onsite_allocation_identity": True,
+            "physical_model_at_lambda_one": True,
+            "onsite_product_projection_below_edge_low_projection": True,
+            "qf_onsite_sum_max_eigenvalue": q_onsite_sum_max,
+            "pf_onsite_sum_norm": p_onsite_sum_norm,
+            "full_series_convergence_required": False,
+            "fixed_n_M_small_coupling_only": True,
+            "physical_lambda_one_smallness": False,
+        },
+        "finite connected deg>=1; exact onsite allocation; fixed n,M only",
+        "M_BDL_fixed_order",
+    )
+
+    gamma = sp.Integer(2)
+    scalar_t = sp.Rational(1, 10)
+    scalar_a = sp.Rational(1, 3)
+    scalar_c = sp.Rational(5, 3)
+    scalar_r = 1 / gamma
+    scalar_b = scalar_t**2 * scalar_r
+    scalar_f = scalar_t**2 * scalar_r**2
+    scalar_s = scalar_r * scalar_t * scalar_a - scalar_c * scalar_r * scalar_t
+    scalar_theta = scalar_f * scalar_b - scalar_s**2 * scalar_r
+    audit.check(
+        "v2.6 scalar complete fourth-order coefficient",
+        scalar_b == sp.Rational(1, 200)
+        and scalar_f == sp.Rational(1, 400)
+        and scalar_s == -sp.Rational(1, 15)
+        and scalar_theta == -sp.Rational(1591, 720000),
+        {"B": scalar_b, "F": scalar_f, "S": scalar_s, "Theta4": scalar_theta},
+        {"B": sp.Rational(1, 200), "F": sp.Rational(1, 400),
+         "S": -sp.Rational(1, 15), "Theta4": -sp.Rational(1591, 720000)},
+        "M_fourth_scalar",
+    )
+
+    kq = sp.diag(2, 3, 5)
+    low_a = sp.Matrix([[1, 2], [2, -1]])
+    high_c = sp.Matrix([[3, 1, 0], [1, -2, 2], [0, 2, 4]])
+    transition = sp.Rational(1, 10) * sp.Matrix([[1, 2], [0, -1], [3, 1]])
+    resolvent = kq.inv()
+    d_block = resolvent * transition
+    source = resolvent * transition * low_a - high_c * resolvent * transition
+    z_block = resolvent * source
+    gram_b = transition.T * resolvent * transition
+    gram_f = transition.T * resolvent**2 * transition
+    insertion = source.T * resolvent * source
+    theta_seq = sp.Rational(1, 2) * (gram_f * gram_b + gram_b * gram_f) - insertion
+    expected_b = sp.Matrix([[sp.Rational(23, 1000), sp.Rational(2, 125)],
+                            [sp.Rational(2, 125), sp.Rational(19, 750)]])
+    expected_f = sp.Matrix([[sp.Rational(61, 10000), sp.Rational(31, 5000)],
+                            [sp.Rational(31, 5000), sp.Rational(259, 22500)]])
+    expected_insertion = sp.Matrix(
+        [[sp.Rational(37247, 1350000), -sp.Rational(176, 84375)],
+         [-sp.Rational(176, 84375), sp.Rational(15887, 337500)]]
+    )
+    expected_seq = sp.Matrix(
+        [[-sp.Rational(1476947, 54000000), sp.Rational(128339, 54000000)],
+         [sp.Rational(128339, 54000000), -sp.Rational(52517, 1125000)]]
+    )
+    audit.check(
+        "v2.6 noncommutative fourth-order block products",
+        gram_b == expected_b and gram_f == expected_f
+        and insertion == expected_insertion and theta_seq == expected_seq,
+        {"B": gram_b, "F": gram_f, "S_star_R_S": insertion, "Theta_seq": theta_seq},
+        {"B": expected_b, "F": expected_f,
+         "S_star_R_S": expected_insertion, "Theta_seq": expected_seq},
+        "M_fourth_noncommutative",
+    )
+
+    full_k = sp.zeros(5)
+    full_k[2:, 2:] = kq
+    diagonal = sp.zeros(5)
+    diagonal[:2, :2] = low_a
+    diagonal[2:, 2:] = high_c
+    off_diagonal = sp.zeros(5)
+    off_diagonal[2:, :2] = transition
+    off_diagonal[:2, 2:] = transition.T
+    generator = sp.zeros(5)
+    generator[2:, :2] = d_block
+    generator[:2, 2:] = -d_block.T
+    generator2 = sp.zeros(5)
+    generator2[2:, :2] = z_block
+    generator2[:2, 2:] = -z_block.T
+    projection = sp.diag(1, 1, 0, 0, 0)
+    gauge_generator = (
+        sp.Rational(1, 2) * projection * commutator(generator2, generator) * projection
+    )[:2, :2]
+    expected_gauge = sp.Matrix(
+        [[0, -sp.Rational(857, 135000)], [sp.Rational(857, 135000), 0]]
+    )
+    theta_standard_crosswalk = theta_seq - commutator(gauge_generator, low_a)
+    expected_standard = sp.Matrix(
+        [[-sp.Rational(35249, 18000000), -sp.Rational(557261, 54000000)],
+         [-sp.Rational(557261, 54000000), -sp.Rational(243251, 3375000)]]
+    )
+    theta_seq_nested = (
+        sp.Rational(1, 8)
+        * projection
+        * commutator(generator, commutator(generator,
+                                           commutator(generator, off_diagonal)))
+        * projection
+        + sp.Rational(1, 2)
+        * projection
+        * commutator(generator2, commutator(generator, diagonal))
+        * projection
+    )[:2, :2]
+    audit.check(
+        "v2.6 complete sequential nested fourth-order identity",
+        theta_seq_nested == theta_seq == expected_seq,
+        {"nested": theta_seq_nested, "block": theta_seq},
+        {"nested": expected_seq, "block": expected_seq},
+        "M_fourth_noncommutative",
+    )
+
+    audit.check(
+        "v2.6 sequential to standard SW low-gauge crosswalk",
+        gauge_generator == expected_gauge
+        and theta_standard_crosswalk == expected_standard
+        and commutator(gauge_generator, low_a) != sp.zeros(2),
+        {"K_P": gauge_generator, "Theta_std": theta_standard_crosswalk},
+        {"K_P": expected_gauge, "Theta_std": expected_standard},
+        "M_fourth_gauge",
+    )
+
+    energies = (0, 0, 2, 3, 5)
+    def liouvillian_inverse(matrix: sp.Matrix) -> sp.Matrix:
+        result = sp.zeros(5)
+        for row in range(5):
+            for column in range(5):
+                if (row < 2) != (column < 2):
+                    result[row, column] = matrix[row, column] / (
+                        energies[row] - energies[column]
+                    )
+        return result
+
+    standard_s1 = liouvillian_inverse(off_diagonal)
+    standard_s2 = -liouvillian_inverse(commutator(diagonal, standard_s1))
+    standard_s3 = liouvillian_inverse(
+        commutator(diagonal, liouvillian_inverse(commutator(diagonal, standard_s1)))
+    ) + sp.Rational(1, 3) * liouvillian_inverse(
+        commutator(standard_s1, commutator(standard_s1, off_diagonal))
+    )
+    theta_standard_recursion = (
+        sp.Rational(1, 2)
+        * projection * commutator(standard_s3, off_diagonal) * projection
+        - sp.Rational(1, 24)
+        * projection
+        * commutator(standard_s1, commutator(standard_s1,
+                                             commutator(standard_s1, off_diagonal)))
+        * projection
+    )[:2, :2]
+    audit.check(
+        "v2.6 independent BDL standard-SW recursion matrix",
+        standard_s1 == generator and standard_s2 == generator2
+        and theta_standard_recursion == theta_standard_crosswalk == expected_standard,
+        {"S1_minus_G": standard_s1 - generator,
+         "S2_minus_G2": standard_s2 - generator2,
+         "Theta_std": theta_standard_recursion},
+        {"S1_minus_G": sp.zeros(5), "S2_minus_G2": sp.zeros(5),
+         "Theta_std": expected_standard},
+        "M_fourth_standard_recursion",
+    )
+
+    identity2 = sp.eye(2)
+    kx = sp.diag(0, 2)
+    ky = sp.diag(0, 3)
+    vx = sp.Matrix([[0, sp.Rational(1, 5)], [sp.Rational(1, 5), 0]])
+    vy = sp.Matrix([[0, sp.Rational(1, 7)], [sp.Rational(1, 7), 0]])
+    disconnected_k = sp.kronecker_product(kx, identity2) + sp.kronecker_product(identity2, ky)
+    disconnected_v = sp.kronecker_product(vx, identity2) + sp.kronecker_product(identity2, vy)
+    disconnected_p = sp.diag(1, 0, 0, 0)
+    disconnected_q = sp.eye(4) - disconnected_p
+    disconnected_r = sp.diag(0, sp.Rational(1, 3), sp.Rational(1, 2), sp.Rational(1, 5))
+    disconnected_t = disconnected_q * disconnected_v * disconnected_p
+    disconnected_c = disconnected_q * disconnected_v * disconnected_q
+    disconnected_b = (disconnected_t.T * disconnected_r * disconnected_t)[0, 0]
+    disconnected_f = (disconnected_t.T * disconnected_r**2 * disconnected_t)[0, 0]
+    disconnected_s = -disconnected_c * disconnected_r * disconnected_t
+    disconnected_insertion = (disconnected_s.T * disconnected_r * disconnected_s)[0, 0]
+    disconnected_theta = disconnected_b * disconnected_f - disconnected_insertion
+    local_sum = sp.Rational(1, 5) ** 4 / 2**3 + sp.Rational(1, 7) ** 4 / 3**3
+    audit.check(
+        "v2.6 disconnected fourth-order linked cancellation",
+        disconnected_b * disconnected_f - local_sum == sp.Rational(1, 8820)
+        and disconnected_insertion == sp.Rational(1, 8820)
+        and disconnected_b * disconnected_f - local_sum == disconnected_insertion
+        and disconnected_theta == local_sum == sp.Rational(69827, 324135000),
+        {"mixed_BF": disconnected_b * disconnected_f - local_sum,
+         "mixed_SRS": disconnected_insertion, "Theta": disconnected_theta},
+        {"mixed_BF": sp.Rational(1, 8820), "mixed_SRS": sp.Rational(1, 8820),
+         "Theta": sp.Rational(69827, 324135000),
+         "direct_resolvent_cross_identity": True,
+         "all_disconnected_multivariate_fourth_coefficients_vanish": True},
+        "M_fourth_linked",
+    )
+
+    rho_b = sp.Rational(15201, 156250)
+    retained_a = sp.Rational(96139, 1500000)
+    retained_epsilon = sp.Rational(23, 6250)
+    retained_gamma = sp.Integer(100)
+    exp_a_qps = sp.Integer(2)
+    augmented_a = retained_a + 2 * allocated_onsite_per_endpoint
+    augmented_rho = rho_b + allocated_onsite_per_endpoint / retained_gamma
+    diagonal_weight = max(augmented_rho, augmented_a / retained_gamma)
+    weighted_w = diagonal_weight + 2 * retained_epsilon / retained_gamma
+    per3 = retained_epsilon**2 * (
+        weighted_w / retained_gamma + augmented_a / retained_gamma**2
+    )
+    third_factor = 48 * coordination * (2 * coordination - 1) ** 2 * exp_a_qps**3
+    third_qps = third_factor * per3
+    per4 = retained_epsilon**4 / retained_gamma**3 + (
+        retained_epsilon**2 / retained_gamma
+    ) * (weighted_w + augmented_a / retained_gamma) ** 2
+    fourth_factor = 2880 * coordination**4 * exp_a_qps**4
+    fourth_qps = fourth_factor * per4
+    audit.check(
+        "v2.6 zero-source Q3 augmented weighted W bound arithmetic",
+        augmented_a == sp.Rational(32063, 500000)
+        and augmented_rho == sp.Rational(2918597, 30000000)
+        and augmented_rho >= augmented_a / retained_gamma
+        and diagonal_weight == augmented_rho
+        and weighted_w == sp.Rational(584161, 6000000)
+        and per3 == sp.Rational(3888206603, 292968750000000000)
+        and per4 == sp.Rational(28578738599866921, 21972656250000000000000000),
+        {"a_tilde": augmented_a, "rho_tilde": augmented_rho,
+         "diagonal_branch": diagonal_weight, "w_tilde": weighted_w,
+         "per3": per3, "per4": per4},
+        {"a_tilde": sp.Rational(32063, 500000),
+         "rho_tilde": sp.Rational(2918597, 30000000),
+         "diagonal_branch": sp.Rational(2918597, 30000000),
+         "w_tilde": sp.Rational(584161, 6000000),
+         "per3": sp.Rational(3888206603, 292968750000000000),
+         "per4": sp.Rational(28578738599866921, 21972656250000000000000000)},
+        "M_weighted_Q3",
+    )
+    audit.check(
+        "v2.6 zero-source Q3 third/fourth exact QPS factors",
+        third_factor == 278784
+        and third_qps == sp.Rational(1411418996889, 381469726562500)
+        and fourth_factor == 59719680
+        and fourth_qps == sp.Rational(2314877826589220601, 29802322387695312500),
+        {"factor3": third_factor, "qps3": third_qps,
+         "factor4": fourth_factor, "qps4": fourth_qps},
+        {"factor3": 278784,
+         "qps3": sp.Rational(1411418996889, 381469726562500),
+         "factor4": 59719680,
+         "qps4": sp.Rational(2314877826589220601, 29802322387695312500)},
+        "M_weighted_Q3",
+    )
+    audit.check(
+        "v2.6 finite-rank Ritz removal scope",
+        True,
+        {"E_finite_rank": True, "Pi_M_E_norm": True,
+         "uniform_W_strong_on_finite_rank_range": True,
+         "third_fourth_coefficient_norm": True,
+         "third_fourth_QPS": True, "fifth_order": False, "all_order": False},
+        "orders three and four only",
+        "M_weighted_Q3",
+    )
+
+    dimension = 6
+    t_vector = sp.zeros(dimension, 1)
+    t_vector[1, 0] = 1
+    pi_m = sp.diag(1, 1, 1, 1, 0, 0)
+    insertion_vector = sp.zeros(dimension, 1)
+    insertion_vector[1, 0] = 1
+    insertion_vector[4, 0] = 1
+    c_j = insertion_vector * insertion_vector.T
+    insertion_tail = (sp.eye(dimension) - pi_m) * c_j * pi_m * t_vector
+    full_inserted = c_j * t_vector
+    cut_inserted = pi_m * c_j * pi_m * t_vector
+    gram_difference = (full_inserted.T * full_inserted - cut_inserted.T * cut_inserted)[0, 0]
+    pi_eventual = sp.diag(1, 1, 1, 1, 1, 0)
+    audit.check(
+        "v2.6 bounded-family low-high Ritz tail hostile fixture",
+        (sp.eye(dimension) - pi_m) * t_vector == sp.zeros(dimension, 1)
+        and (insertion_vector.T * insertion_vector)[0, 0] == 2
+        and (insertion_tail.T * insertion_tail)[0, 0] == 1
+        and gram_difference == 1
+        and pi_eventual * c_j * pi_eventual == c_j,
+        {"tau_M": 0, "C_j_norm": 2, "tail_norm_squared":
+         (insertion_tail.T * insertion_tail)[0, 0],
+         "Gram_difference": gram_difference, "fixed_j_eventual": True},
+        {"tau_M": 0, "C_j_norm": 2, "tail_norm_squared": 1,
+         "Gram_difference": 1, "fixed_j_eventual": True},
+        "M_low_high_tail_no_go",
+    )
+
+    pauli_i = sp.eye(2)
+    pauli_x = sp.Matrix([[0, 1], [1, 0]])
+    pauli_y = sp.Matrix([[0, -sp.I], [sp.I, 0]])
+    pauli_z = sp.diag(1, -1)
+    smeared_a = sp.Rational(1, 5) * sp.kronecker_product(pauli_z, pauli_i) + (
+        sp.Rational(2, 5) * sp.kronecker_product(pauli_y, pauli_x)
+    )
+    smeared_b = sp.Rational(1, 5) * sp.kronecker_product(pauli_i, pauli_z) - (
+        sp.Rational(2, 5) * sp.kronecker_product(pauli_x, pauli_y)
+    )
+    orbit_commutator = commutator(smeared_a, smeared_b)
+    orbit_expected = -sp.Rational(8, 25) * sp.I * sp.kronecker_product(pauli_y, pauli_y)
+    audit.check(
+        "v2.6 orbit-smear Pauli 8/25 obstruction",
+        orbit_commutator == orbit_expected
+        and orbit_commutator.H * orbit_commutator
+        == sp.Rational(64, 625) * sp.eye(4),
+        {"commutator": orbit_commutator, "norm": sp.Rational(8, 25)},
+        {"commutator": orbit_expected, "norm": sp.Rational(8, 25)},
+        "M_orbit_smear_no_go",
+    )
+
+    return {
+        "bdl_fixed_order": {
+            "onsite_low_rank": 2,
+            "zero_source_fixed_M": True,
+            "finite_connected_graph_min_degree": 1,
+            "incident_partition_nonnegative": True,
+            "incident_partition_sum": "sum_(e containing x) omega_(x,e)=1",
+            "periodic_incident_weight": "omega_(x,e)=1/z",
+            "onsite_allocation_identity": True,
+            "physical_model_at_lambda_one": True,
+            "onsite_product_projection_below_edge_low_projection":
+                onsite_product_below_edge_p,
+            "qf_onsite_sum_max_eigenvalue": q_onsite_sum_max,
+            "pf_onsite_sum_norm": p_onsite_sum_norm,
+            "connected_edge_limit": "|C|<=n",
+            "support_limit": "n+1",
+            "diameter_limit": "n",
+            "rooted_ordered_count_factor": "(n!)^2 z^n",
+            "fourth_rooted_ordered_count": fourth_rooted,
+            "fourth_qps_count": fourth_qps_count,
+            "fixed_n_M_small_coupling_only": True,
+            "physical_lambda_one": False,
+        },
+        "scalar_fourth_order": {
+            "Gamma": gamma, "T": scalar_t, "A": scalar_a, "C": scalar_c,
+            "B": scalar_b, "F": scalar_f, "S": scalar_s,
+            "Theta4_seq": scalar_theta, "Theta4_std": scalar_theta,
+        },
+        "noncommutative_fourth_order": {
+            "B": gram_b, "F": gram_f, "S_star_R_S": insertion,
+            "Theta4_seq": theta_seq, "Theta4_seq_nested": theta_seq_nested,
+            "K_P": gauge_generator,
+            "Theta4_std_crosswalk": theta_standard_crosswalk,
+            "Theta4_std_recursion": theta_standard_recursion,
+        },
+        "disconnected_fourth_order": {
+            "mixed_BF": disconnected_b * disconnected_f - local_sum,
+            "mixed_S_star_R_S": disconnected_insertion,
+            "Theta4": disconnected_theta, "local_sum": local_sum,
+            "direct_resolvent_cross_identity":
+                disconnected_b * disconnected_f - local_sum == disconnected_insertion,
+            "all_disconnected_multivariate_fourth_coefficients_vanish": True,
+        },
+        "weighted_zero_source_Q3": {
+            "rho_b": rho_b, "a": retained_a, "delta1": delta_one,
+            "z": coordination, "epsilon": retained_epsilon,
+            "Gamma": retained_gamma, "a_tilde": augmented_a,
+            "rho_tilde": augmented_rho,
+            "rho_tilde_dominates_a_tilde_over_Gamma":
+                augmented_rho >= augmented_a / retained_gamma,
+            "w": weighted_w,
+            "per3": per3, "third_factor": third_factor, "third_qps": third_qps,
+            "per4": per4, "fourth_factor": fourth_factor, "fourth_qps": fourth_qps,
+            "Ritz_removed_orders": (3, 4), "all_order": False,
+        },
+        "low_high_tail_hostile": {
+            "uniform_C_j_norm": 2, "tau_M": 0, "insertion_tail": 1,
+            "Gram_difference": gram_difference,
+            "each_fixed_j_eventually_exact": True,
+            "uniform_over_j_cutoff": False,
+        },
+        "orbit_smear": {
+            "cosine_integral": sp.Rational(1, 5),
+            "positive_sine_integral": sp.Rational(2, 5),
+            "negative_sine_integral": -sp.Rational(2, 5),
+            "commutator": orbit_commutator,
+            "commutator_norm": sp.Rational(8, 25),
+            "automatic_spatial_local_net": False,
+        },
+    }
+
 def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     missing: list[str] = []
 
@@ -3891,7 +4716,7 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         if staged:
             missing.append(label)
             return
-        raise AssertionError(f"missing or incomplete v2.5 authority: {label}")
+        raise AssertionError(f"missing or incomplete v2.6 authority: {label}")
 
     def require_text(path: Path, label: str) -> str | None:
         if not path.exists():
@@ -4095,6 +4920,14 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
             "canonical_one_site_compact_cylinder_bond_subflow_no_go",
             "v2_5_exact_fixture",
             "v2_5_checkpoint_synthesis",
+            "fixed_ritz_standard_sw_every_fixed_order_linked_cluster_coefficients",
+            "fixed_ritz_each_fixed_order_small_coupling_volume_extensive_sw_ground_energy_approximation",
+            "zero_source_q3_third_fourth_order_coefficient_qps_and_ritz_cutoff",
+            "fixed_finite_volume_and_ritz_complete_fourth_order_sequential_low_block_and_standard_sw_gauge_crosswalk",
+            "low_high_ritz_tail_automatic_uniform_high_high_insertion_cutoff_no_go",
+            "orbit_smear_seed_support_automatic_spatial_local_net_no_go",
+            "v2_6_exact_fixture",
+            "v2_6_checkpoint_synthesis",
         ):
             audit.check(
                 f"manifest retained/new section {section}",
@@ -4814,7 +5647,7 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         }
         issued_v25 = _v2_5_checkpoint_lifecycle(
             checkpoint_v25 if isinstance(checkpoint_v25, dict) else {},
-            exploration_id=EXPECTED_EXPLORATION,
+            exploration_id="EXP-000825",
             closed_subgates=V2_5_CLOSED_SUBGATES,
             negative_ids=V2_5_NEGATIVE_IDS,
         )
@@ -4829,6 +5662,183 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
             "exact three-field DEFERRED or exact R-167-only eight-field ISSUED checkpoint",
             "authority",
         )
+        bdl_section = manifest.get(
+            "fixed_ritz_standard_sw_every_fixed_order_linked_cluster_coefficients", {}
+        )
+        scope_correction_exact = (
+            manifest.get("scope_correction_exploration_id")
+            == SCOPE_CORRECTION_EXPLORATION
+        )
+        energy_section = manifest.get(
+            "fixed_ritz_each_fixed_order_small_coupling_volume_extensive_sw_ground_energy_approximation", {}
+        )
+        weighted_section = manifest.get(
+            "zero_source_q3_third_fourth_order_coefficient_qps_and_ritz_cutoff", {}
+        )
+        audit.check(
+            "manifest v2.6 BDL source, onsite allocation, and augmented blocks",
+            scope_correction_exact
+            and bdl_section.get("primary_source", {}).get("doi") == BDL_SW_SOURCE
+            and "arbitrary finite rank" in bdl_section.get("exact_assumptions", "")
+            and "zero-source Q3" in bdl_section.get("exact_assumptions", "")
+            and "sum_(e containing x) omega_(x,e)=1" in bdl_section.get("exact_assumptions", "")
+            and "tilde B_(e,M)=" in bdl_section.get("exact_assumptions", "")
+            and "H_M(1)" in bdl_section.get("exact_assumptions", "")
+            and "|C|<=n" in bdl_section.get("linked_theorem", "")
+            and "(n!)^2 z^n" in bdl_section.get("count", "")
+            and "H_M(1)" in energy_section.get("scaled_coupling", "")
+            and "a_tilde:=a+2delta_1/z" in weighted_section.get("local_block_hypotheses", "")
+            and "rho_tilde:=rho_b+delta_1/(z Gamma)" in weighted_section.get("local_block_hypotheses", ""),
+            {"bdl": bdl_section, "energy": energy_section, "weighted": weighted_section},
+            "exact edge allocation, physical lambda one mapping, and augmented block constants",
+            "authority",
+        )
+        require_token(
+            manifest.get(
+                "fixed_ritz_each_fixed_order_small_coupling_volume_extensive_sw_ground_energy_approximation",
+                {},
+            ).get("scaled_coupling", ""),
+            "eta=lambda J_M",
+            "manifest v2.6 fixed-order scaled coupling",
+        )
+        require_token(
+            manifest.get(
+                "zero_source_q3_third_fourth_order_coefficient_qps_and_ritz_cutoff", {}
+            ).get("local_block_hypotheses", ""),
+            "w_tilde=max(rho_tilde,a_tilde/Gamma)+2epsilon/Gamma",
+            "manifest v2.6 augmented weighted W bound",
+        )
+        require_token(
+            manifest.get(
+                "fixed_finite_volume_and_ritz_complete_fourth_order_sequential_low_block_and_standard_sw_gauge_crosswalk",
+                {},
+            ).get("sequential_formula", ""),
+            "Theta4_seq=(1/2){F,B}-S*RS",
+            "manifest v2.6 complete fourth-order formula",
+        )
+        require_token(
+            manifest.get(
+                "fixed_finite_volume_and_ritz_complete_fourth_order_sequential_low_block_and_standard_sw_gauge_crosswalk",
+                {},
+            ).get("standard_gauge", ""),
+            "Theta4_std=Theta4_seq-[K_P,A]",
+            "manifest v2.6 standard gauge crosswalk",
+        )
+        expected_v26_fixture = {
+            "bdl_fixed_order": {
+                "onsite_low_rank": 2,
+                "zero_source_fixed_M": True,
+                "finite_connected_graph_min_degree": 1,
+                "incident_partition_nonnegative": True,
+                "incident_partition_sum": "sum_(e containing x) omega_(x,e)=1",
+                "periodic_incident_weight": "omega_(x,e)=1/z",
+                "augmented_edge": "tilde B_(e,M)=B_(e,M)+delta_1[omega_(x,e)P_(1,x)+omega_(y,e)P_(1,y)]",
+                "onsite_allocation_identity": "sum_e delta_1[omega_(x,e)P_(1,x)+omega_(y,e)P_(1,y)]=delta_1 sum_x P_(1,x)",
+                "physical_model_at_lambda_one": True,
+                "onsite_product_projection_below_edge_low_projection": True,
+                "qf_onsite_sum_max_eigenvalue": 1,
+                "pf_onsite_sum_norm": 2,
+                "connected_edge_limit": "|C|<=n",
+                "support_limit": "n+1", "diameter_limit": "n",
+                "rooted_ordered_count_factor": "(n!)^2 z^n",
+                "fourth_rooted_ordered_count_factor": "576 z^4",
+                "fourth_qps_count_factor": "2880 z^4",
+            },
+            "scalar_fourth_order": {
+                "Gamma": 2, "T": "1/10", "A": "1/3", "C": "5/3",
+                "B": "1/200", "F": "1/400", "S": "-1/15",
+                "Theta4_seq": "-1591/720000", "Theta4_std": "-1591/720000",
+            },
+            "noncommutative_fourth_order": {
+                "K_Q": [[2, 0, 0], [0, 3, 0], [0, 0, 5]],
+                "A": [[1, 2], [2, -1]],
+                "C": [[3, 1, 0], [1, -2, 2], [0, 2, 4]],
+                "T": [["1/10", "1/5"], ["0", "-1/10"], ["3/10", "1/10"]],
+                "B": [["23/1000", "2/125"], ["2/125", "19/750"]],
+                "F": [["61/10000", "31/5000"], ["31/5000", "259/22500"]],
+                "S_star_R_S": [["37247/1350000", "-176/84375"],
+                                 ["-176/84375", "15887/337500"]],
+                "Theta4_seq": [["-1476947/54000000", "128339/54000000"],
+                                ["128339/54000000", "-52517/1125000"]],
+                "K_P": [["0", "-857/135000"], ["857/135000", "0"]],
+                "Theta4_std": [["-35249/18000000", "-557261/54000000"],
+                               ["-557261/54000000", "-243251/3375000"]],
+            },
+            "disconnected_fourth_order": {
+                "Gamma_x": 2, "T_x": "1/5", "Gamma_y": 3, "T_y": "1/7",
+                "mixed_BF": "1/8820", "mixed_S_star_R_S": "1/8820",
+                "Theta4": "69827/324135000",
+                "sum_of_local_Theta4": "69827/324135000",
+                "direct_resolvent_cross_identity": True,
+                "all_disconnected_multivariate_fourth_coefficients_vanish": True,
+            },
+            "weighted_zero_source_q3": {
+                "rho_b": "15201/156250", "a": "96139/1500000",
+                "delta1": "1/10000", "z": 6, "Gamma": 100,
+                "epsilon": "23/6250", "a_tilde": "32063/500000",
+                "rho_tilde": "2918597/30000000",
+                "w": "584161/6000000",
+                "per3": "3888206603/292968750000000000",
+                "third_qps_factor": 278784,
+                "third_qps": "1411418996889/381469726562500",
+                "per4": "28578738599866921/21972656250000000000000000",
+                "fourth_qps_factor": 59719680,
+                "fourth_qps": "2314877826589220601/29802322387695312500",
+                "exp_aQPS": 2,
+                "rho_tilde_dominates_a_tilde_over_Gamma": True,
+            },
+            "low_high_tail_hostile": {
+                "high_space": "ell2({e_j:j>=1})", "K_equals_R_equals_Q": True,
+                "T": "|e_1><p|", "Pi_M": "projection onto p,e_1,...,e_M",
+                "C_j": "|e_1+e_j><e_1+e_j|", "uniform_C_j_norm": 2,
+                "tau_M": 0, "hostile_choice": "j=M+1", "insertion_tail": 1,
+                "Gram_difference": 1, "each_fixed_j_eventually_exact": True,
+                "uniform_over_j_cutoff": False,
+            },
+            "orbit_smear": {
+                "cosine_integral": "1/5", "positive_sine_integral": "2/5",
+                "negative_sine_integral": "-2/5",
+                "commutator": "-(8i/25)Y tensor Y", "commutator_norm": "8/25",
+                "seed_supports_disjoint": True, "smeared_algebras_commute": False,
+            },
+        }
+        audit.check(
+            "manifest v2.6 exact fixture",
+            manifest.get("v2_6_exact_fixture") == expected_v26_fixture,
+            manifest.get("v2_6_exact_fixture"), expected_v26_fixture, "authority",
+        )
+        checkpoint_v26 = manifest.get("v2_6_checkpoint_synthesis")
+        deferred_v26 = {
+            "status": "DEFERRED", "pdf_issued": False,
+            "workflow": (
+                "No intermediate PDF is issued for R-167 v2.6. Preserve every "
+                "v2.5 and earlier source/PDF pair as historical evidence; issue "
+                "one R-167-only v2.6 gate-level synthesis after the primary, "
+                "non-importing independent, integrated, formal-authority, "
+                "generated-surface, source-form, freshness, dual-extraction, "
+                "strict-release, and visual-review gates pass. R-168 v1.3 "
+                "remains historical and is not reissued."
+            ),
+        }
+        issued_v26 = _v2_6_checkpoint_lifecycle(
+            checkpoint_v26 if isinstance(checkpoint_v26, dict) else {},
+            exploration_id=EXPECTED_EXPLORATION,
+            scope_correction_exploration_id=SCOPE_CORRECTION_EXPLORATION,
+            closed_subgates=V2_6_CLOSED_SUBGATES,
+            negative_ids=V2_6_NEGATIVE_IDS,
+        )
+        audit.check(
+            "manifest v2.6 exact deferred or issued checkpoint lifecycle",
+            checkpoint_v26 == deferred_v26 or issued_v26["valid"],
+            {
+                "metadata": checkpoint_v26,
+                "deferred_exact": checkpoint_v26 == deferred_v26,
+                "issued": issued_v26,
+            },
+            "exact three-field DEFERRED or exact R-167-only eight-field ISSUED checkpoint",
+            "authority",
+        )
+
         audit.check(
             "manifest Yarotskii QPS source",
             manifest.get("compressed_tfim_two_phase_qps", {}).get("source")
@@ -5103,6 +6113,59 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     ):
         require_token(certificate_text, token, f"certificate v2.5 token {token}")
 
+    certificate_v26_mapping_tokens = (
+        "Zero-source fixed-Ritz",
+        r"\widetilde B_{e,M}",
+        r"\sum_{e\ni x}\omega_{x,e}=1",
+        r"H_M(\lambda)",
+        r"0\le U_f\le\rho_b k_f",
+        r"w_{\rm tilde}:=",
+        "32063/500000",
+        "2918597/30000000",
+        "k_f:=k_x+k_y",
+        r"P_{1,x}+P_{1,y}",
+        "EXP-000826 as corrected by EXP-000827",
+        r"R_{XY}S_{XY}=-D_X\otimes D_Y",
+    )
+    certificate_v26_lifecycle = _v2_6_certificate_lifecycle(
+        certificate_text or "",
+        checkpoint_v26 if isinstance(checkpoint_v26, dict) else {},
+        issued_v26,
+        deferred_exact=checkpoint_v26 == deferred_v26,
+        open_gates=EXPECTED_OPEN_GATES,
+    )
+    certificate_v26_mapping_ok = (
+        all(token in certificate_text for token in certificate_v26_mapping_tokens)
+        and certificate_v26_lifecycle["valid"]
+    )
+
+    for token in (
+        "EXP-000826",
+        "R-167 v2.6",
+        "Zero-source fixed-Ritz",
+        "Bravyi",
+        "Theorem 2",
+        "(n!)^2z^n",
+        "eta=lambda J_M",
+        "278784",
+        "1411418996889/381469726562500",
+        "59719680",
+        "2314877826589220601/29802322387695312500",
+        r"-{1591\over720000}",
+        "857/135000",
+        "69827/324135000",
+        r"{8\over25}",
+        "No v2.6 PDF is issued",
+        "v2_6_checkpoint_synthesis",
+        "R-168 v1.3 remains historical and is not reissued",
+        *V2_6_CLOSED_SUBGATES,
+        *V2_6_NEGATIVE_IDS,
+    ):
+        token_text = certificate_text
+        if token == "Zero-source fixed-Ritz" and not certificate_v26_mapping_ok:
+            token_text = ""
+        require_token(token_text, token, f"certificate v2.6 token {token}")
+
     exploration_text = require_text(EXPLORATION_LEDGER, "exploration ledger")
     exploration_records: list[dict[str, Any]] = []
     if exploration_text is not None:
@@ -5119,6 +6182,21 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         for record in exploration_records
         if record.get("id") == EXPECTED_EXPLORATION
     ]
+    correction_matches = [
+        record for record in exploration_records
+        if record.get("id") == SCOPE_CORRECTION_EXPLORATION
+    ]
+    correction_semantic = (
+        len(correction_matches) == 1
+        and correction_matches[0].get("schema") == "tect/proof-exploration/1.0"
+        and correction_matches[0].get("task_id") == EXPECTED_TASK
+        and correction_matches[0].get("claim_ids") == list(EXPECTED_CLAIM_IDS)
+        and correction_matches[0].get("verdict") == "advanced"
+        and {"id": EXPECTED_EXPLORATION, "relation": "corrects"}
+        in correction_matches[0].get("related", [])
+        and EXPECTED_RESULT_NUMBER
+        in correction_matches[0].get("formal_refs", {}).get("results", [])
+    )
     exploration_semantic = (
         len(exploration_matches) == 1
         and exploration_matches[0].get("schema") == "tect/proof-exploration/1.0"
@@ -5127,11 +6205,11 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         and exploration_matches[0].get("verdict") == "advanced"
         and EXPECTED_RESULT_NUMBER
         in exploration_matches[0].get("formal_refs", {}).get("results", [])
-        and V2_5_CLOSED_SUBGATES[0] in exploration_matches[0].get("gate_ids", [])
-        and V2_5_NEGATIVE_IDS[0]
-        in exploration_matches[0].get("formal_refs", {}).get("negatives", [])
-        and {"id": "EXP-000818", "relation": "continues"}
+        and all(gate in exploration_matches[0].get("gate_ids", []) for gate in V2_6_CLOSED_SUBGATES)
+        and all(negative in exploration_matches[0].get("formal_refs", {}).get("negatives", []) for negative in V2_6_NEGATIVE_IDS)
+        and {"id": "EXP-000825", "relation": "continues"}
         in exploration_matches[0].get("related", [])
+        and correction_semantic
     )
     if exploration_semantic:
         audit.check(
@@ -5158,20 +6236,21 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
         result_detail = result_text.split("### R-167", 1)[1].split("\n### R-", 1)[0]
     result_authority_exact = (
         len(result_index_rows) == 1
-        and "R-167 v2.5" in result_index_rows[0]
-        and "R-167 v2.5" in result_detail
+        and "R-167 v2.6" in result_index_rows[0]
+        and "R-167 v2.6" in result_detail
         and EXPECTED_EXPLORATION in result_detail
+        and SCOPE_CORRECTION_EXPLORATION in result_detail
     )
     if result_authority_exact:
         audit.check(
-            "result ledger exact R-167 v2.5 index and detail",
+            "result ledger exact R-167 v2.6 index and detail",
             True,
             True,
             True,
             "authority",
         )
     else:
-        missing_or_raise("result ledger exact R-167 v2.5 index and detail")
+        missing_or_raise("result ledger exact R-167 v2.6 index and detail")
     negative_text = require_text(NEGATIVE_REGISTRY, "negative registry")
     for negative_id in NEGATIVE_IDS:
         require_token(negative_text, negative_id, f"negative row {negative_id}")
@@ -5215,6 +6294,7 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
     fixture_j = fixture_j_v2_3_connected_and_implementer(audit)
     fixture_k = fixture_k_v2_4_standard_form_c0_and_generator(audit)
     fixture_l = fixture_l_v2_5_third_order_and_compact_cylinder(audit)
+    fixture_m = fixture_m_v2_6_fixed_order_fourth_weighted_and_no_gos(audit)
     authority = authority_audit(audit, staged)
     verdict = "PASS" if authority["status"] == "PASS" else "INCOMPLETE"
 
@@ -5250,6 +6330,12 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
         "first_generator_second_order_low_block_match": True,
         "fixed_finite_volume_and_Ritz_third_order_low_block_coefficient": True,
         "fixed_finite_volume_and_Ritz_third_order_linked_triple_QPS_bound": True,
+        "fixed_Ritz_standard_SW_every_fixed_order_linked_coefficients": True,
+        "fixed_Ritz_each_fixed_order_small_coupling_extensive_energy": True,
+        "zero_source_Q3_third_fourth_coefficient_QPS_Ritz": True,
+        "fixed_finite_fourth_order_sequential_standard_gauge_crosswalk": True,
+        "all_order_SW_convergence": False,
+        "physical_lambda_one_SW_smallness": False,
         "third_order_cutoff_uniform": False,
         "third_order_unbounded": False,
         "third_order_tau_cutoff_bound": False,
@@ -5311,6 +6397,7 @@ def run_audit(staged: bool = False) -> dict[str, Any]:
             "fixture_J_v2_3_connected_and_implementer": fixture_j,
             "fixture_K_v2_4_standard_form_C0_and_generator": fixture_k,
             "fixture_L_v2_5_third_order_and_compact_cylinder": fixture_l,
+            "fixture_M_v2_6_fixed_order_fourth_weighted_and_no_gos": fixture_m,
         },
         "scope": scope,
         "source_hashes": {

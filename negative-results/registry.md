@@ -9,6 +9,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-HIGH-HIGH-INSERTION-CUTOFF](#ng-2026-08-12-pre-a-st8-q3lock-low-high-ritz-tail-automatic-uniform-high-high-insertion-cutoff) | infer uniform high-high-insertion Ritz convergence from an exact low-high Ritz tail alone | EXP-000826 / R-167 v2.6 has `tau_M=0` but, for the uniformly bounded family `C_j=|e_1+e_j><e_1+e_j|`, the hostile choice `j=M+1` leaves insertion-tail norm and Gram difference one. Each fixed `j` is eventually exact; only the missing uniform supremum fails |
+| [NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-SPATIAL-LOCAL-NET](#ng-2026-08-12-pre-a-st8-q3lock-orbit-smear-seed-support-automatic-spatial-local-net) | infer commuting spatial local algebras from formally disjoint seed labels after temporal orbit smearing | EXP-000826 / R-167 v2.6 gives a two-qubit fixture whose one-sided exponential smears have commutator `-(8i/25)Y tensor Y`, norm `8/25`. This does not reject the orbit-smear carrier or locality with extra propagation estimates |
 | [NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0](#ng-2026-08-12-pre-a-st8-q3lock-canonical-one-site-compact-cylinder-bond-subflow-point-norm-c0) | use canonical one-site compact cylinders as a point-norm C0 carrier for the split Q3 bond subflow | EXP-000825 / R-167 v2.5 proves a norm jump at least `||K||` for every nonzero compact `K`, with exact rank-one supremum one. Unitized compacts exclude `K tensor I`; the multiplier algebra includes it but the action is not point-norm C0. This is not common-alpha nonexistence |
 | [NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS](#ng-2026-08-12-pre-a-st8-q3lock-second-order-disjoint-vanishing-automatic-all-order-global-feshbach-connectedness) | infer connectedness of the raw all-order global scalar Feshbach map from second-order disjoint-edge vanishing | EXP-000818 / R-167 v2.4 uses a disconnected low spectator: the scalar resolvent denominator creates a nonzero mixed `Z_X tensor Z_Y` self-energy coefficient `-1/800`. Linked-cluster subtraction and local resolvent expansions remain open |
 | [NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY](#ng-2026-08-12-pre-a-st8-q3lock-ritz-cutoff-ordinary-bounded-operator-sw-smallness-uniformity) | infer cutoff-uniform ordinary operator-norm Schrieffer--Wolff smallness from finite Ritz boundedness | harmonic number cutoffs give `||B_M||/Gamma>=(M+1)/8` at fixed `Gamma=2`, reaching at least `2` at `M=15`. Relative-form, graph-norm and QPS routes remain open |
@@ -357,6 +359,48 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-12-pre-a-st8-q3lock-low-high-ritz-tail-automatic-uniform-high-high-insertion-cutoff"></a>
+### NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-HIGH-HIGH-INSERTION-CUTOFF -- a zero low-high Ritz tail does not control a bounded high-high insertion family uniformly
+
+**Failure mode:** infer cutoff convergence uniformly over a bounded family of
+high-high insertions from an exact low-high Ritz leg or the scalar tail
+`tau_M=||(1-Pi_M)T||` alone.
+
+**Evidence:** EXP-000826 / R-167 v2.6 takes
+`H=Cp direct-sum ell2({e_j:j>=1})`, `K=R=Q`, `T=|e_1><p|`, and lets `Pi_M`
+project onto `p,e_1,...,e_M`. For `j>=2`, set
+`C_j=|e_1+e_j><e_1+e_j|`; then `||C_j||=2` uniformly and `tau_M=0` for every
+`M`. Choosing `j=M+1` gives
+`||(1-Pi_M)C_j Pi_M T||=1`, and the full-minus-compressed inserted Gram is
+exactly one. For every fixed `j`, the compression is eventually exact once
+`M>=j`; the failure is precisely the unproved supremum over the insertion
+family.
+
+**Consequence:** an exact first-generator or low-high Gram tail does not by
+itself control uniform high-high insertions at the next orders. The actual
+zero-source Q3 route survives because it separately uses a uniform
+relative-form bound for `W` and finite-rank low-high ranges. This is not a
+no-go for that weighted route or for fixed-insertion Ritz convergence.
+
+<a id="ng-2026-08-12-pre-a-st8-q3lock-orbit-smear-seed-support-automatic-spatial-local-net"></a>
+### NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-SPATIAL-LOCAL-NET -- temporal orbit smearing does not preserve formal seed locality automatically
+
+**Failure mode:** treat formal disjointness of seed labels as sufficient for
+their temporal orbit smears to generate commuting spatial local algebras.
+
+**Evidence:** EXP-000826 / R-167 v2.6 takes two qubits with `H=X tensor X` and the
+formally disjoint seeds `Z tensor I` and `I tensor Z`. Smear the first with
+`f_+(t)=exp(-t)1_(t>0)` and the second with
+`f_-(t)=exp(t)1_(t<0)`. The exact cosine integrals are `1/5`, while the sine
+integrals are `2/5` and `-2/5`. Thus
+`A_+=(1/5)ZI+(2/5)YX`, `B_-=(1/5)IZ-(2/5)XY`, and
+`[A_+,B_-]=-(8i/25)Y tensor Y`, whose operator norm is `8/25`.
+
+**Consequence:** temporal orbit smearing does not automatically turn seed
+support labels into a spatial local net. This does not reject the orbit-smear
+C-star carrier, every possible local-net construction, common-alpha existence,
+or a locality theorem with additional propagation estimates.
 
 <a id="ng-2026-08-12-pre-a-st8-q3lock-canonical-one-site-compact-cylinder-bond-subflow-point-norm-c0"></a>
 ### NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0 -- the canonical split bond subflow is not point-norm C0 on nonzero one-site compact cylinders

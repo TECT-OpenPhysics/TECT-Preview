@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**616 accepted events** · latest 25 shown below · machine locator: `index.json`
+**622 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,12 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-13 | `20260813-r-167-v2-6-artifact-pin-correction-finalized-af` — [R-167 v2.6 artifact pin correction finalized after extractor-token audit; events 620 and 621 superseded] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000826, EXP-000827, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v2-6-artifact-pin-correction-finalized-af) |
+| 2026-08-13 | `20260813-r-167-v2-6-artifact-footer-and-issuance-pin-cor` — [R-167 v2.6 artifact footer and issuance pin correction finalized; malformed event 620 superseded] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000826, EXP-000827, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v2-6-artifact-footer-and-issuance-pin-cor) |
+| 2026-08-13 | `20260813-r-167-v2-6-artifact-footer-and-issuance-pins-co` — [R-167 v2.6 artifact footer and issuance pins corrected; event 619 superseded] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000826, EXP-000827, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v2-6-artifact-footer-and-issuance-pins-co) |
+| 2026-08-12 | `20260812-r-167-v2-6-combined-gate-level-synthesis-pdf-is` — [R-167 v2.6 combined gate-level synthesis PDF issued after strict validation] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000826, EXP-000827, R-167 | [bounded page](pages/000619-000668.md#20260812-r-167-v2-6-combined-gate-level-synthesis-pdf-is) |
+| 2026-08-12 | `20260812-r-167-v2-6-authority-correction-restores-zero-s` — [R-167 v2.6 authority correction restores zero-source onsite allocation and exact QPS constants] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000827, R-167 | [bounded page](pages/000569-000618.md#20260812-r-167-v2-6-authority-correction-restores-zero-s) |
+| 2026-08-12 | `20260812-r-167-v2-6-closes-fixed-order-sw-coefficients-z` — [R-167 v2.6 closes fixed-order SW coefficients, zero-source third/fourth QPS cutoff, and the fourth-order gauge crosswalk] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000826, R-167 | [bounded page](pages/000569-000618.md#20260812-r-167-v2-6-closes-fixed-order-sw-coefficients-z) |
 | 2026-08-12 | `20260812-r-167-v2-5-combined-gate-level-synthesis-pdf-is` — [R-167 v2.5 combined gate-level synthesis PDF issued after strict validation] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000825, R-167 | [bounded page](pages/000569-000618.md#20260812-r-167-v2-5-combined-gate-level-synthesis-pdf-is) |
 | 2026-08-12 | `20260812-r-167-v2-5-closes-the-fixed-finite-third-order` — [R-167 v2.5 closes the fixed-finite third-order linked coefficient and compact-cylinder route boundary] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000825, R-167 | [bounded page](pages/000569-000618.md#20260812-r-167-v2-5-closes-the-fixed-finite-third-order) |
 | 2026-08-12 | `20260812-exp-000792-child-gate-authority-linkage-repaire` — [EXP-000792 child-gate authority linkage repaired] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000792, EXP-000793, EXP-000821 | [bounded page](pages/000569-000618.md#20260812-exp-000792-child-gate-authority-linkage-repaire) |
@@ -36,12 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-11 | `20260811-r-167-theorem-event-selector-repair-finalizes-t` — [R-167 theorem-event selector repair finalizes the v2.1 and v1.2 checkpoint hashes] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, EXP-000812, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-theorem-event-selector-repair-finalizes-t) |
 | 2026-08-11 | `20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f` — [R-167 v2.1 and R-168 v1.2 combined checkpoint final hash correction after integrated normalization] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, EXP-000812, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f) |
 | 2026-08-11 | `20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s` — [R-167 v2.1 and R-168 v1.2 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, EXP-000812, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s) |
-| 2026-08-11 | `20260811-r-168-v1-2-proves-linear-probe-response-noniden` — [R-168 v1.2 proves linear-probe response nonidentifiability and hardens the minimum successor schema] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000812, R-168 | [bounded page](pages/000569-000618.md#20260811-r-168-v1-2-proves-linear-probe-response-noniden) |
-| 2026-08-11 | `20260811-r-167-v2-1-closes-the-conditional-twentieth-mom` — [R-167 v2.1 closes the conditional twentieth-moment corridor and local full-oscillator edge cluster] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-1-closes-the-conditional-twentieth-mom) |
-| 2026-08-11 | `20260811-r-167-v2-0-and-r-168-v1-1-combined-v0-9-proof-e` — [R-167 v2.0 and R-168 v1.1 combined v0.9 proof-evidence footer and hash correction] - 2026-08-11 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260811-r-167-v2-0-and-r-168-v1-1-combined-v0-9-proof-e) |
-| 2026-08-11 | `20260811-r-167-v2-0-and-r-168-v1-1-combined-gate-level-s` — [R-167 v2.0 and R-168 v1.1 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260811-r-167-v2-0-and-r-168-v1-1-combined-gate-level-s) |
-| 2026-08-11 | `20260811-r-168-v1-1-proves-current-version-map-emptiness` — [R-168 v1.1 proves current-version map emptiness and the finite-torus M2 fingerprint] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000810, R-168 | [bounded page](pages/000569-000618.md#20260811-r-168-v1-1-proves-current-version-map-emptiness) |
-| 2026-08-11 | `20260811-r-167-v2-0-resums-finite-gibbs-cutoffs-and-sepa` — [R-167 v2.0 resums finite-Gibbs cutoffs and separates compressed phases from oscillator transfer] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000809, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-0-resums-finite-gibbs-cutoffs-and-sepa) |
 
 ## Post-cutover pages
 
@@ -49,4 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 569–616 | 48 | [000569-000618.md](pages/000569-000618.md) |
+| 619–622 | 4 | [000619-000668.md](pages/000619-000668.md) |
+| 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

@@ -69,6 +69,8 @@ Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1
 into a contestant. No winner, shortlist, preferred PDE, physical vacuum,
 Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed.
 
+EXP-000826 as corrected by EXP-000827 / R-167 v2.6 adds four claim-nonbearing mathematical children and two scoped route failures only. It creates no candidate, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -1432,11 +1434,116 @@ thermodynamic limit, third-order Ritz-tail `tau_M` estimate, unbounded
 coefficient, fourth-order term, convergent all-order transformation, phase
 intertwiner, exact oscillator two-phase QPS theorem or GNS gap follows.
 
+### **PA-CP1-ST8-Q3LOCK-FIXED-RITZ-STANDARD-SW-EVERY-FIXED-ORDER-LINKED-CLUSTER-COEFFICIENTS**
+
+**Statement:** At zero source and each fixed finite parity-preserving onsite
+Ritz cutoff `M`, apply the standard Schrieffer--Wolff linked-cluster theorem at
+every separately fixed order `n` and identify the support of each coefficient.
+
+**Status:** CLOSED FOR ZERO-SOURCE Q3 AT EVERY FIXED ORDER AND FIXED FINITE RITZ
+CUTOFF ONLY (2026-08-12). EXP-000826 as corrected by EXP-000827 / R-167
+v2.6 chooses
+nonnegative incident weights `omega_(x,e)` summing to one at every vertex of a
+finite connected graph with `deg(x)>=1` (periodically `omega=1/z`) and defines
+`tilde B_(e,M)=B_(e,M)+delta_1[omega_(x,e)P_(1,x)+omega_(y,e)P_(1,y)]`.
+Thus `H_M(lambda)=sum_x k_(x,M)+lambda sum_e tilde B_(e,M)` and the allocation
+identity makes `H_M(1)` the physical zero-source fixed-`M` Q3 Hamiltonian up
+to the removed scalar. The Bravyi--DiVincenzo--Loss hypotheses allow the
+rank-two onsite ground projector. For every fixed `n`, the standard-SW
+coefficient is a sum over connected edge clusters `C` with `|C|<=n`, acts on
+at most `n+1` sites and has diameter at most `n`; `(n!)^2 z^n` is a safe
+rooted ordered count. This coefficient theorem requires no convergence of the
+full series. It supplies no `M`-uniform coefficient bound, `n->infinity`
+convergence, all-order QPS sum or physical `lambda=1` smallness control.
+
+### **PA-CP1-ST8-Q3LOCK-FIXED-RITZ-EACH-FIXED-ORDER-SMALL-COUPLING-VOLUME-EXTENSIVE-SW-GROUND-ENERGY-APPROXIMATION**
+
+**Statement:** At zero source, each separately fixed order `n`, and each fixed
+onsite Ritz cutoff `M`, control the finite-volume ground energy of standard-
+and local-SW truncations at sufficiently small scaled coupling by a
+volume-extensive remainder with volume-independent constants.
+
+**Status:** CLOSED FOR ZERO-SOURCE Q3 AT EACH FIXED ORDER AND SUFFICIENTLY SMALL
+SCALED COUPLING AT FIXED RITZ CUTOFF ONLY (2026-08-12). Under EXP-000826
+as corrected by EXP-000827, the augmented R-167 v2.6 family `H_M(lambda)`
+above writes
+`J_M=max_x sum_(e containing x)||tilde B_(e,M)||` and
+`eta=lambda J_M`. For each fixed `(n,M)` there are positive
+`epsilon_(c,n,M)` and `C_(n,M)`, independent of `|Lambda|`, for which both
+standard- and local-SW ground-energy errors are at most
+`C_(n,M)|Lambda||eta|^(n+1)`. The physical zero-source fixed-`M` point is
+`lambda=1`, hence `eta=J_M`; the theorem applies there only if the same
+small-coupling condition is separately met. The threshold and constant may
+depend on `n`, `M`, `J_M`, `||k_M||/Gamma` and graph degree. This is not an
+all-order volume-uniform convergence theorem or a result uniform in `M`.
+
+### **PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-Q3-THIRD-FOURTH-ORDER-COEFFICIENT-QPS-AND-RITZ-CUTOFF**
+
+**Statement:** For the actual zero-source Q3 augmented edge blocks, prove
+volume- and Ritz-uniform QPS bounds and spectral-Ritz removal for the connected
+third- and fourth-order coefficients under the declared relative-form
+constants.
+
+**Status:** CLOSED FOR THE ACTUAL ZERO-SOURCE Q3 COEFFICIENTS AT ORDERS THREE
+AND FOUR ONLY (2026-08-12). EXP-000826 as corrected by EXP-000827 /
+R-167 v2.6 uses
+`tilde B_f`, with `a_tilde=a+2delta_1/z=32063/500000` and
+`rho_tilde=rho_b+delta_1/(z Gamma)=2918597/30000000`. The augmented local-high
+and outside-high locally-low sectors are orthogonal diagonal blocks, and
+`rho_tilde>=a_tilde/Gamma`, so
+`||W_f||<=w_tilde=max(rho_tilde,a_tilde/Gamma)+2epsilon/Gamma`
+with `w_tilde=584161/6000000` for
+`W_f=R^(1/2)Q tilde B_f Q R^(1/2)`. With
+`T_e=Q tilde B_e P` and `E_e=R^(1/2)T_e`, each third-order term is bounded by
+`per3=epsilon^2(w_tilde/Gamma+a_tilde/Gamma^2)` and each fourth-order
+sequential term by
+`per4=epsilon^4/Gamma^3+(epsilon^2/Gamma)(w_tilde+a_tilde/Gamma)^2`.
+The exact retained QPS values are
+`1411418996889/381469726562500` at order three and
+`2314877826589220601/29802322387695312500` at order four. For disjoint tensor
+components `X,Y`, the direct sequential formula has a cross-double sector
+`S_XY=-(T_X tensor D_Y+D_X tensor T_Y)` with
+`R_XY S_XY=-D_X tensor D_Y`; consequently
+`S_XY^*R_XY S_XY=B_X tensor F_Y+F_X tensor B_Y`, exactly cancelling the mixed
+part of `(1/2){F,B}`. Orthogonal single-excitation sectors leave the local sum,
+so every disconnected multivariate fourth-order coefficient vanishes after
+its permutation aggregate and the safe connected rooted factor `59719680`
+applies by the triangle inequality over connected ordered contributions.
+Finite-rank
+low-high ranges and strong spectral Ritz convergence give coefficient- and
+QPS-norm removal at these two orders. No fifth-order estimate, all-order
+recursion convergence, phase transfer or GNS gap follows.
+
+### **PA-CP1-ST8-Q3LOCK-FIXED-FINITE-VOLUME-AND-RITZ-COMPLETE-FOURTH-ORDER-SEQUENTIAL-LOW-BLOCK-AND-STANDARD-SW-GAUGE-CROSSWALK**
+
+**Statement:** At fixed finite spatial volume and fixed finite Ritz cutoff,
+compute the complete sequential fourth-order low block and cross it to the
+direct-rotation standard-SW gauge without identifying distinct gauges.
+
+**Status:** CLOSED AT FIXED FINITE `Lambda,M` FOR THE COMPLETE FOURTH-ORDER
+COEFFICIENT AND GAUGE CROSSWALK ONLY (2026-08-12). EXP-000826 as corrected by EXP-000827 / R-167 v2.6 sets
+`B=T^*RT`, `F=T^*R^2T`, `S=RTA-CRT` and proves
+`Theta4_seq=(1/2){F,B}-S^*RS`. In the direct-rotation standard-SW gauge,
+`K_P=(1/2)P[G_2,G]P` and
+`Theta4_std=Theta4_seq-[K_P,A]`. The scalar fixture gives
+`-1591/720000` in both gauges. The noncommutative fixture has
+`K_P[1,2]=-857/135000` and distinct sequential and standard matrices. For disjoint tensor components, the full source is
+`S=S_X tensor P_Y+P_X tensor S_Y-(T_X tensor D_Y+D_X tensor T_Y)` and the
+direct-resolvent identity `R_XY S_XY=-D_X tensor D_Y` gives
+`S_XY^*R_XY S_XY=B_X tensor F_Y+F_X tensor B_Y`, cancelling the mixed
+permutation aggregate in `(1/2){F,B}` and leaving only the two local fourth-
+order blocks. The disconnected tensor-product fixture executes this general
+identity: it cancels equal mixed contributions `1/8820` and leaves the local
+sum `69827/324135000`. This is neither a global-generator factorization, a BCH
+convergence theorem nor an all-order oscillator elimination.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
 
 **Status:** OPEN (2026-08-12). EXP-000813 / R-167 v2.2 shows by an exact rank-two local projection fixture that one even and one odd local kernel vector plus local edge gap one do not imply a volume-uniform lattice gap: the one-particle sector is `L_G/2` and a torus gap is at most `1-cos(2 pi/L)`. EXP-000815 / R-167 v2.3 closes only a deterministic geometric-envelope-to-QPS conversion and the exact second-order onsite-resolvent connected coefficient with the declared Ritz/form cutoff contract. EXP-000818 / R-167 v2.4 adds the first parity-equivariant local homological generator, its sharp QPS/Ritz bound and exact second-order low-block match. EXP-000825 / R-167 v2.5 adds the complete third-order low-block coefficient and connected ordered-triple QPS bound only at fixed finite `Lambda` and fixed finite `M`; its constants are not volume or cutoff uniform. A disconnected-spectator fixture shows that raw global scalar Feshbach resolvents need not preserve connectedness, and a harmonic Ritz fixture shows that ordinary bounded-operator Schrieffer--Wolff smallness need not be cutoff uniform at fixed `Gamma`. These results do not derive a fourth-order recursion or all-order geometric envelope, sum a uniform transformation, control its remainder or Ritz removal, transfer the oscillator phases, or construct a phasewise GNS intertwiner. The broader rank-two oscillator/QPS and broken-sector GNS-gap parents remain OPEN.
+
+The corrected R-167 v2.6 authority supplies zero-source fixed-Ritz standard-SW linked coefficients at every separately fixed order, zero-source each-fixed-order small-coupling extensive energy control, and actual zero-source Q3 coefficient/Ritz control only through orders three and four. It does not sum a uniform transformation, control a fifth- or all-order remainder, transfer either phase, or construct a GNS intertwiner. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -1493,6 +1600,8 @@ action point-norm C0. This is distinct from the prior raw momentum-resolvent
 obstruction and rejects only that carrier/action pair: it proves neither
 unsplit-dynamics failure nor common-alpha nonexistence. This parent remains
 OPEN.
+
+EXP-000826 as corrected by EXP-000827 / R-167 v2.6 does not advance the actual all-shape common-alpha estimate. Its two-qubit fixture shows only that temporal orbit smearing of formally disjoint seeds need not automatically create commuting spatial local algebras; it does not reject the orbit-smear carrier or common-alpha existence. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -1674,6 +1783,8 @@ or convergent all-order transformation, connected remainder, phase
 intertwiner or two-phase oscillator QPS transfer is proved. This parent remains
 OPEN.
 
+EXP-000826 as corrected by EXP-000827 / R-167 v2.6 removes the Ritz cutoff for the actual zero-source Q3 third- and fourth-order coefficients and gives a fixed-finite fourth-order gauge crosswalk. The result is fixed order: it supplies no `M`-uniform all-order transformation, connected remainder, phase intertwiner or two-phase oscillator QPS transfer. This parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -1714,6 +1825,8 @@ exact second-order match. It supplies neither the all-order remainder nor the
 phasewise intertwiner, so this parent remains OPEN.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
+
+The corrected R-167 v2.6 authority is a zero-source fixed-order coefficient theorem. It supplies neither ordered oscillator phase identification nor a phasewise GNS intertwiner or coercivity estimate. This parent remains OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 
