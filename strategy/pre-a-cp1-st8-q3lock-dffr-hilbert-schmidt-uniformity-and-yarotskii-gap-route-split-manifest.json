@@ -1,0 +1,172 @@
+{
+  "schema": "tect/pre-a-q3lock-dffr-hs-uniformity-yarotskii-gap/1.0",
+  "package_id": "pre-a-cp1-st8-q3lock-dffr-hilbert-schmidt-uniformity-and-yarotskii-gap-route-split",
+  "version": "R-167 v3.4",
+  "date": "2026-08-13",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-000838",
+  "prior_exploration_id": "EXP-000837",
+  "claim_bearing": false,
+  "closed_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-CONDITIONAL-M-UNIFORM-DFFR-HILBERT-SCHMIDT-SIMULTANEOUS-ENTRY-REDUCTION",
+    "PA-CP1-ST8-Q3LOCK-FIXED-RITZ-YAROTSKII-RELATIVE-SPLIT-AND-CONDITIONAL-PHASEWISE-GNS-GAP-REDUCTION"
+  ],
+  "negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-UNIFORM-RELATIVE-FORM-AND-OPERATOR-BLOCK-BOUNDS-AUTOMATIC-M-UNIFORM-DFFR-HILBERT-SCHMIDT-ENTRY"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-DIRECT-YAROTSKY-TWO-PHASE-GAP-IMPORT",
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP"
+  ],
+  "open_parent_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "historical_open_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION"
+  ],
+  "conditional_simultaneous_dffr_entry": {
+    "family": "Let M range over finite complete parity-preserving onsite Ritz labels. Fix lambda_0 in (0,1) and one N_ref independent of M. For every M and every N>=N_ref, assume the same finite interaction range, two reference patterns and complete DFFR two-level setup.",
+    "peierls": "Assume kappa_(M,N)>=kappa_0>0 and D_(M,N)>=c N^2-C with kappa_0,c>0 and C>=0 independent of M and N.",
+    "hilbert_schmidt_blocks": "Assume the actual DFFR equation (5.21) Hilbert-Schmidt constants satisfy epsilon_ll<=A_ll/N^2, epsilon_lh<=A_lh/N, epsilon_hl<=A_hl/N and epsilon_hh<=A_hh, with all A constants independent of M and N.",
+    "uniform_theorem_constants": "Assume the DFFR theorem constants obey inf_(M,N) epsilon_0(M,N)>=epsilon_*>0 and inf_(M,N) kappa_bar(M,N)>=kappa_bar_*>0 over this family. These are hypotheses, not consequences of fixed-M entry.",
+    "denominator": "For N^2>=2C/c put K_N=kappa_0+cN^2-C>0. Then kappa_(M,N)+D_(M,N)>=K_N uniformly in M.",
+    "majorant": "q_N=max{lambda_0 A_ll/(kappa_0 N^2), lambda_0 sqrt[A_lh A_hl/(N^2 kappa_0 K_N)], lambda_0 A_hh/K_N, lambda_0 A_hl/(N K_N), lambda_0 A_lh/(N K_N)}.",
+    "conclusion": "Because q_N tends to zero, every N>=N_ref with N^2>=2C/c and q_N<epsilon_* and every beta with exp(-beta kappa_bar_*)<epsilon_* enter DFFR Theorem 5.2 simultaneously for every M. This is a sufficient criterion reduction only; it does not prove that exact Q3 satisfies a common N_ref, the M-uniform Hilbert-Schmidt or theorem-radius hypotheses, and does not pass any phase to the full oscillator."
+  },
+  "hilbert_schmidt_obstruction": {
+    "spaces": "For integers m,N>=1 take onsite H_m=C^(m+2), a rank-two low projection p_m and q_m=I-p_m. On one edge put P_m=p_m tensor p_m, Q_m=I-P_m and R_m=q_m tensor q_m, so rank R_m=m^2.",
+    "reference": "Fix J>0. Let R_dis be the projection onto the two disagreeing low labels and h_(m,N)^0=N^2 Q_m+2J R_dis. Put V_(m,N)=R_m. The strict sign J>0 gives exactly the two aligned low zero labels.",
+    "relative_and_operator_bounds": "Since 0<=R_m<=Q_m, |V_(m,N)|<=N^-2 h_(m,N)^0 with beta=0. Its low-low and mixed blocks vanish and ||Q_m V_(m,N) Q_m||_op=1 for every m.",
+    "hilbert_schmidt_failure": "Nevertheless ||Q_m V_(m,N) Q_m||_HS=sqrt(rank R_m)=m. At lambda_0=1/2 and edge support size two, epsilon_hh=4m, so even with the favourable high penalty D_N=N^2 the DFFR high-high entry is 2m/(kappa+N^2). For each fixed m it tends to zero as N tends to infinity, while for every fixed N its supremum over m is infinite.",
+    "scope": "Uniform relative-form decay and a uniform operator-norm high-high block therefore do not imply M-uniform DFFR Hilbert-Schmidt entry. This is distinct from the existing ordinary-operator Schrieffer-Wolff cutoff obstruction because the present operator block stays exactly one; multiplicity in the unnormalized Hilbert-Schmidt norm is the sole failure mechanism."
+  },
+  "relative_split_lemma": {
+    "setup": "Let h be a nonnegative finite-dimensional local reference with P=projection onto ker h, Q=I-P, h>=g Q for g>0 and ||h||=L. Let V be selfadjoint and satisfy |V(psi,psi)|<=alpha h(psi,psi)+epsilon ||psi||^2.",
+    "factorization": "With B=alpha h+epsilon I, the two-sided form bound gives V=B^(1/2) C B^(1/2) for a selfadjoint contraction C.",
+    "split": "Define V_r=Q V Q and V_b=V-V_r. Then |V_r(psi,psi)|<=a h(psi,psi), a=alpha+epsilon/g, and ||V_b||<=b, b=epsilon+2 sqrt[epsilon(alpha L+epsilon)].",
+    "q3_rates": "For one fixed Ritz M, the grouped v1.9 input has epsilon_N=3 beta_N, alpha_N=O_M(N^-2), beta_N=O_M(N^-3), g_(M,N)>=g_(0,M)>0 and L_(M,N)=O_M(N^2). Hence a_(M,N)=O_M(N^-2) and b_(M,N)=O_M(N^-3/2).",
+    "boundary": "The split is exact finite-dimensional algebra. By itself it neither supplies a Yarotskii two-phase neighbourhood nor identifies a phase or a GNS Hamiltonian."
+  },
+  "conditional_yarotskii_gap_reduction": {
+    "premise": "Fix M. Assume an N-independent positive rectangle a_(Y,M),b_(Y,M) for the finite-dimensional two-product Yarotskii theory that accepts the gap-normalized split bounds a<a_(Y,M), b/g<b_(Y,M) for the fixed support/range family, including the exact two product zero kernels, positive local gap, smooth bounded odd source and nonzero first-order source splitting.",
+    "entry": "The relative-split rates imply eventual entry for this fixed M. Parity exchanges the two product patterns and sends the odd source to its negative, so the unique smooth coexistence surface is pinned to zero source.",
+    "conclusion": "Under that explicit rectangle and applicability premise, Yarotskii's 2006 two-phase theorem supplies exactly two pure translation-invariant ground-state branches at coexistence, exponential clustering and a positive phasewise implementing Hamiltonian spectral gap in each branch. No numerical lower gap and no N- or M-uniform gap is asserted.",
+    "branch_firewall": "The Yarotskii branches are not automatically the DFFR low-temperature branches or their beta-to-infinity limits. Any such identification requires a separate common-algebra continuation or uniqueness hypothesis and is not proved here.",
+    "full_oscillator_firewall": "The source assumes finite-dimensional onsite spin space. The conditional fixed-M result gives no M-uniform rectangle, full-oscillator two-phase theorem, cutoff-stable states, common dynamics or exact-Q3 GNS gap."
+  },
+  "literature_scope": {
+    "dffr_1996": "N. Datta, R. Fernandez, J. Frohlich and L. Rey-Bellet, Low-Temperature Phase Diagrams of Quantum Lattice Systems. II. Convergent Perturbation Expansions and Stability in Systems with Infinite Degeneracy, Helvetica Physica Acta 69 (1996), 752-820, equations (4.10), (5.21)-(5.22) and Theorem 5.2. The interaction norm is Hilbert-Schmidt; finite-dimensional norm equivalence carries an onsite-dimension factor.",
+    "dffr_boson_boundary": "The same paper states that its Section 5.2 contour expansion does not apply to bosonic systems with arbitrarily large onsite occupation without a regularity condition obtained, for Gibbs states, from a suitable hardcore condition. Its infinite-degeneracy title does not provide an infinite-onsite Q3 theorem.",
+    "yarotsky_2006_single_phase": "D. A. Yarotsky, Ground states in relatively bounded quantum perturbations of classical lattice systems, Communications in Mathematical Physics 261 (2006), 799-819, Theorems 1-2. It permits infinite-dimensional onsite spaces for a unique product reference and motivates the exact relative-plus-bounded split, but it does not prove zero-source two-phase coexistence.",
+    "yarotskii_2006_two_phase": "D. A. Yarotskii, Pirogov-Sinai theory for relatively bounded quantum perturbations of classical lattice models, Russian Mathematical Surveys 61:2 (2006), 371-372, DOI 10.1070/RM2006v061n02ABEH004323. Its two-phase announcement assumes finite-dimensional onsite spin space and an existential sufficiently small neighbourhood; clause (e) states a spectral gap in each ground state. It supplies no M-uniform rectangle."
+  },
+  "exact_fixture": {
+    "simultaneous_entry": {
+      "inputs": {
+        "lambda": "1/2",
+        "N_ref": "1",
+        "kappa_0": "2",
+        "c": "1",
+        "C_offset": "1",
+        "epsilon_star": "1/4",
+        "kappa_bar_star": "1/2",
+        "N": "5",
+        "A_ll": "2",
+        "A_lh": "3",
+        "A_hl": "3",
+        "A_hh": "5",
+        "beta": "6*log(2)"
+      },
+      "derived": {
+        "K_N": "26",
+        "low_low": "1/50",
+        "paired": "3*sqrt(13)/260",
+        "high_high": "5/52",
+        "high_low": "3/260",
+        "low_high": "3/260",
+        "thermal": "1/8",
+        "maximum": "1/8",
+        "strict_entry": true
+      }
+    },
+    "relative_split": {
+      "inputs": {
+        "h_diagonal": ["0", "0", "16", "N^2"],
+        "N": "10",
+        "alpha": "1/N^2",
+        "beta_edge": "1/N^3",
+        "group_size": "3"
+      },
+      "derived": {
+        "g": "16",
+        "L": "100",
+        "epsilon": "3/1000",
+        "a": "163/16000",
+        "cross": "sqrt(3009)/1000",
+        "b": "(3+2*sqrt(3009))/1000"
+      }
+    },
+    "hs_obstruction": {
+      "inputs": {
+        "N": "5",
+        "m": "4",
+        "J": "1",
+        "onsite_dimension": "6",
+        "low_rank": "2",
+        "lambda": "1/2",
+        "support_size": "2",
+        "kappa": "1",
+        "D": "N^2"
+      },
+      "derived": {
+        "P_rank": "4",
+        "Q_rank": "32",
+        "R_rank": "16",
+        "relative_alpha": "1/25",
+        "high_high_operator_norm": "1",
+        "high_high_HS_norm": "4",
+        "epsilon_hh": "16",
+        "high_high_entry": "4/13",
+        "exceeds_epsilon_star": true
+      }
+    }
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_dffr_hilbert_schmidt_uniformity_and_yarotskii_gap_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_dffr_hilbert_schmidt_uniformity_and_yarotskii_gap_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_dffr_hilbert_schmidt_uniformity_and_yarotskii_gap_route_split_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-primary-pre-a-cp1-st8-q3lock-dffr-hilbert-schmidt-uniformity-and-yarotskii-gap-route-split/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-independent-pre-a-cp1-st8-q3lock-dffr-hilbert-schmidt-uniformity-and-yarotskii-gap-route-split/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-integrated-pre-a-cp1-st8-q3lock-dffr-hilbert-schmidt-uniformity-and-yarotskii-gap-route-split/result.json",
+    "staged_lifecycle": "Before formal integration, run all three scripts with --staged --no-store. No run JSON or formal authority is written by this five-file proof package."
+  },
+  "formal_integration_contract": {
+    "event_id": 630,
+    "theorem_map_version": "1.26.0",
+    "expected_post_formal_counts": {
+      "claims": 49,
+      "results": 168,
+      "gates": 186,
+      "negatives": 359,
+      "explorations": 838,
+      "events": 630,
+      "tasks": 54,
+      "catalog": 3907
+    },
+    "required_links": "EXP-000838, event 630, T-054, ROADMAP, strategy index, proof-evidence map, theorem map, generated compact surfaces, two conditional CLOSED reductions, one new exact Hilbert-Schmidt no-go, three reused boundaries, all five OPEN parents, and the historical beta-infinity gate remaining OPEN."
+  },
+  "checkpoint_synthesis": {
+    "status": "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+    "pdf_issued": false,
+    "workflow": "Proof-first manifest, certificate and three executable verifiers only. No v3.4 PDF is issued."
+  },
+  "no_overclaim": "R-167 v3.4 closes only an abstract conditional M-uniform DFFR simultaneous-entry reduction and an exact fixed-Ritz relative-split plus conditional Yarotskii phasewise-GNS-gap reduction. It also proves that uniform relative-form decay and uniform operator-block bounds alone do not provide M-uniform DFFR Hilbert-Schmidt entry. It does not establish the required M-uniform Hilbert-Schmidt bounds, DFFR thresholds, Yarotskii rectangle, DFFR/Yarotskii branch identity, Ritz removal, full-oscillator phases, common spatial algebra, common-alpha, target-generator convergence, exact-Q3 GNS gap, mass gap, regulator removal, continuum, physical vacuum or empty-space comparison, Round-1, C6, CP1, physical Sector A or Pre-A. All five active parent gates and the historical beta-infinity gate remain OPEN."
+}

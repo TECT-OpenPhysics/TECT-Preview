@@ -1301,6 +1301,20 @@ full-oscillator cutoff removal, common alpha, exact-Q3 beta-infinity selection
 and the broken-sector GNS gap remain OPEN. All five active parents remain
 OPEN. No v3.3 PDF is issued.
 
+EXP-000838 / R-167 v3.4 retains every v3.3 child and adds two scoped T0
+conditional reductions. First, one common onset, uniform actual DFFR
+Hilbert--Schmidt block bounds and uniform theorem thresholds would imply
+simultaneous `M`-uniform entry; an exact rank-growing fixture proves that
+uniform relative-form and operator-block bounds alone do not supply those
+Hilbert--Schmidt inputs. Second, at each fixed Ritz label the inherited
+two-sided form bound has an exact relative-plus-bounded split. The fixed-`M`
+Yarotskii conclusion still requires a separately assumed `N`-independent
+admissible rectangle, while transfer to the DFFR or exact-Q3 phases separately
+requires branch identification. No actual
+cutoff passage, full-oscillator phase theorem, common alpha or exact-Q3 GNS
+gap follows. The historical beta-infinity gate and all five active parents
+remain OPEN. No v3.4 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

@@ -1,0 +1,257 @@
+{
+  "assertions": [
+    {
+      "actual": "('tect/pre-a-q3lock-dffr-hs-uniformity-yarotskii-gap/1.0', 'R-167 v3.4', 'EXP-000838')",
+      "expected": "('exact schema', 'R-167 v3.4', 'EXP-000838')",
+      "group": "manifest",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "(['PA-CP1-ST8-Q3LOCK-CONDITIONAL-M-UNIFORM-DFFR-HILBERT-SCHMIDT-SIMULTANEOUS-ENTRY-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FIXED-RITZ-YAROTSKII-RELATIVE-SPLIT-AND-CONDITIONAL-PHASEWISE-GNS-GAP-REDUCTION'], ['NG-2026-08-13-PRE-A-ST8-Q3LOCK-UNIFORM-RELATIVE-FORM-AND-OPERATOR-BLOCK-BOUNDS-AUTOMATIC-M-UNIFORM-DFFR-HILBERT-SCHMIDT-ENTRY'], 5)",
+      "expected": "(('PA-CP1-ST8-Q3LOCK-CONDITIONAL-M-UNIFORM-DFFR-HILBERT-SCHMIDT-SIMULTANEOUS-ENTRY-REDUCTION', 'PA-CP1-ST8-Q3LOCK-FIXED-RITZ-YAROTSKII-RELATIVE-SPLIT-AND-CONDITIONAL-PHASEWISE-GNS-GAP-REDUCTION'), ['NG-2026-08-13-PRE-A-ST8-Q3LOCK-UNIFORM-RELATIVE-FORM-AND-OPERATOR-BLOCK-BOUNDS-AUTOMATIC-M-UNIFORM-DFFR-HILBERT-SCHMIDT-ENTRY'], 5)",
+      "group": "manifest",
+      "name": "manifest scoped topology",
+      "status": "PASS"
+    },
+    {
+      "actual": "Let M range over finite complete parity-preserving onsite Ritz labels. Fix lambda_0 in (0,1) and one N_ref independent of M. For every M and every N>=N_ref, assume the same finite interaction range, two reference patterns and complete DFFR two-level setup.",
+      "expected": "one common onset",
+      "group": "uniformity",
+      "name": "uniform N_ref premise",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'simultaneous_entry': {'inputs': {'lambda': '1/2', 'N_ref': '1', 'kappa_0': '2', 'c': '1', 'C_offset': '1', 'epsilon_star': '1/4', 'kappa_bar_star': '1/2', 'N': '5', 'A_ll': '2', 'A_lh': '3', 'A_hl': '3', 'A_hh': '5', 'beta': '6*log(2)'}, 'derived': {'K_N': '26', 'low_low': '1/50', 'paired': '3*sqrt(13)/260', 'high_high': '5/52', 'high_low': '3/260', 'low_high': '3/260', 'thermal': '1/8', 'maximum': '1/8', 'strict_entry': True}}, 'relative_split': {'inputs': {'h_diagonal': ['0', '0', '16', 'N^2'], 'N': '10', 'alpha': '1/N^2', 'beta_edge': '1/N^3', 'group_size': '3'}, 'derived': {'g': '16', 'L': '100', 'epsilon': '3/1000', 'a': '163/16000', 'cross': 'sqrt(3009)/1000', 'b': '(3+2*sqrt(3009))/1000'}}, 'hs_obstruction': {'inputs': {'N': '5', 'm': '4', 'J': '1', 'onsite_dimension': '6', 'low_rank': '2', 'lambda': '1/2', 'support_size': '2', 'kappa': '1', 'D': 'N^2'}, 'derived': {'P_rank': '4', 'Q_rank': '32', 'R_rank': '16', 'relative_alpha': '1/25', 'high_high_operator_norm': '1', 'high_high_HS_norm': '4', 'epsilon_hh': '16', 'high_high_entry': '4/13', 'exceeds_epsilon_star': True}}}",
+      "expected": "{'simultaneous_entry': {'inputs': {'lambda': '1/2', 'N_ref': '1', 'kappa_0': '2', 'c': '1', 'C_offset': '1', 'epsilon_star': '1/4', 'kappa_bar_star': '1/2', 'N': '5', 'A_ll': '2', 'A_lh': '3', 'A_hl': '3', 'A_hh': '5', 'beta': '6*log(2)'}, 'derived': {'K_N': '26', 'low_low': '1/50', 'paired': '3*sqrt(13)/260', 'high_high': '5/52', 'high_low': '3/260', 'low_high': '3/260', 'thermal': '1/8', 'maximum': '1/8', 'strict_entry': True}}, 'relative_split': {'inputs': {'h_diagonal': ['0', '0', '16', 'N^2'], 'N': '10', 'alpha': '1/N^2', 'beta_edge': '1/N^3', 'group_size': '3'}, 'derived': {'g': '16', 'L': '100', 'epsilon': '3/1000', 'a': '163/16000', 'cross': 'sqrt(3009)/1000', 'b': '(3+2*sqrt(3009))/1000'}}, 'hs_obstruction': {'inputs': {'N': '5', 'm': '4', 'J': '1', 'onsite_dimension': '6', 'low_rank': '2', 'lambda': '1/2', 'support_size': '2', 'kappa': '1', 'D': 'N^2'}, 'derived': {'P_rank': '4', 'Q_rank': '32', 'R_rank': '16', 'relative_alpha': '1/25', 'high_high_operator_norm': '1', 'high_high_HS_norm': '4', 'epsilon_hh': '16', 'high_high_entry': '4/13', 'exceeds_epsilon_star': True}}}",
+      "group": "oracle",
+      "name": "exact fixture agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": "26",
+      "expected": "26",
+      "group": "dffr",
+      "name": "simultaneous denominator",
+      "status": "PASS"
+    },
+    {
+      "actual": "['1/50', '3*sqrt(13)/260', '5/52', '3/260', '3/260']",
+      "expected": "['1/50', '3*sqrt(13)/260', '5/52', '3/260', '3/260']",
+      "group": "dffr",
+      "name": "simultaneous five nonthermal formula identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'K_N': '26', 'low_low': '1/50', 'paired': '3*sqrt(13)/260', 'high_high': '5/52', 'high_low': '3/260', 'low_high': '3/260', 'thermal': '1/8', 'maximum': '1/8', 'strict_entry': True}",
+      "expected": "derived maximum below derived threshold",
+      "group": "dffr",
+      "name": "thermal and strict entry",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'low_low': 1/(2*N**2), 'paired': 3*sqrt(2)/(4*N*sqrt(N**2 + 1)), 'high_high': 5/(2*(N**2 + 1)), 'high_low': 3/(2*N*(N**2 + 1)), 'low_high': 3/(2*N*(N**2 + 1))}",
+      "expected": "all zero limits",
+      "group": "dffr",
+      "name": "all DFFR majorants vanish",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'g': '16', 'L': '100', 'epsilon': '3/1000', 'a': '163/16000', 'cross': 'sqrt(3009)/1000', 'b': '(3+2*sqrt(3009))/1000'}",
+      "expected": "derived gap ceiling and grouped epsilon",
+      "group": "split",
+      "name": "split spectral data",
+      "status": "PASS"
+    },
+    {
+      "actual": "163/16000",
+      "expected": "163/16000",
+      "group": "split",
+      "name": "split relative coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'contraction_squared_identity': True, 'pvp_norm': 3/1000, 'pvq_norm': sqrt(3009)/1000, 'qvq_ratio': 163/16000, 'vb_bound': 3/1000 + sqrt(3009)/500, 'a': 163/16000, 'b': (3 + 2*sqrt(3009))/1000}",
+      "expected": "contraction and exact triangle bound",
+      "group": "split",
+      "name": "split bounded coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "(1, 2*sqrt(3))",
+      "expected": "(1, 2*sqrt(3))",
+      "group": "split",
+      "name": "split asymptotic rates",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'P_rank': '4', 'Q_rank': '32', 'R_rank': '16', 'relative_alpha': '1/25', 'high_high_operator_norm': '1', 'high_high_HS_norm': '4', 'epsilon_hh': '16', 'high_high_entry': '4/13', 'exceeds_epsilon_star': True}",
+      "expected": "tensor ranks",
+      "group": "negative",
+      "name": "obstruction ranks",
+      "status": "PASS"
+    },
+    {
+      "actual": "(5, 4, 1)",
+      "expected": "m,N>=1 and J>0",
+      "group": "negative",
+      "name": "obstruction positive reference premise",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'P_rank': '4', 'Q_rank': '32', 'R_rank': '16', 'relative_alpha': '1/25', 'high_high_operator_norm': '1', 'high_high_HS_norm': '4', 'epsilon_hh': '16', 'high_high_entry': '4/13', 'exceeds_epsilon_star': True}",
+      "expected": "operator one and HS multiplicity m",
+      "group": "negative",
+      "name": "operator versus Hilbert-Schmidt separation",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'P_rank': '4', 'Q_rank': '32', 'R_rank': '16', 'relative_alpha': '1/25', 'high_high_operator_norm': '1', 'high_high_HS_norm': '4', 'epsilon_hh': '16', 'high_high_entry': '4/13', 'exceeds_epsilon_star': True}",
+      "expected": "derived entry above epsilon star",
+      "group": "negative",
+      "name": "obstruction criterion entry",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'fixed_m_large_n': 0, 'fixed_n_large_m': oo}",
+      "expected": "{'fixed_m_large_n': 0, 'fixed_n_large_m': oo}",
+      "group": "negative",
+      "name": "obstruction two limit orders",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "certificate",
+      "name": "certificate theorem contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "certificate",
+      "name": "certificate no-overclaim contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "three source scopes",
+      "expected": "distinct DFFR, Yarotsky and Yarotskii roles",
+      "group": "literature",
+      "name": "literature scope separation",
+      "status": "PASS"
+    },
+    {
+      "actual": "HS multiplicity only",
+      "expected": "not SW operator growth or theorem-radius shrinkage",
+      "group": "negative",
+      "name": "nonduplicate negative mechanism",
+      "status": "PASS"
+    },
+    {
+      "actual": "({'status': 'DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT', 'pdf_issued': False, 'workflow': 'Proof-first manifest, certificate and three executable verifiers only. No v3.4 PDF is issued.'}, {'event_id': 630, 'theorem_map_version': '1.26.0', 'expected_post_formal_counts': {'claims': 49, 'results': 168, 'gates': 186, 'negatives': 359, 'explorations': 838, 'events': 630, 'tasks': 54, 'catalog': 3907}, 'required_links': 'EXP-000838, event 630, T-054, ROADMAP, strategy index, proof-evidence map, theorem map, generated compact surfaces, two conditional CLOSED reductions, one new exact Hilbert-Schmidt no-go, three reused boundaries, all five OPEN parents, and the historical beta-infinity gate remaining OPEN.'})",
+      "expected": "no PDF and staged-first event 630",
+      "group": "lifecycle",
+      "name": "proof-first lifecycle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "formal",
+      "name": "formal authority aggregate",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "hs_obstruction": {
+      "derived": {
+        "P_rank": "4",
+        "Q_rank": "32",
+        "R_rank": "16",
+        "epsilon_hh": "16",
+        "exceeds_epsilon_star": true,
+        "high_high_HS_norm": "4",
+        "high_high_entry": "4/13",
+        "high_high_operator_norm": "1",
+        "relative_alpha": "1/25"
+      },
+      "inputs": {
+        "D": "N^2",
+        "J": "1",
+        "N": "5",
+        "kappa": "1",
+        "lambda": "1/2",
+        "low_rank": "2",
+        "m": "4",
+        "onsite_dimension": "6",
+        "support_size": "2"
+      }
+    },
+    "relative_split": {
+      "derived": {
+        "L": "100",
+        "a": "163/16000",
+        "b": "(3+2*sqrt(3009))/1000",
+        "cross": "sqrt(3009)/1000",
+        "epsilon": "3/1000",
+        "g": "16"
+      },
+      "inputs": {
+        "N": "10",
+        "alpha": "1/N^2",
+        "beta_edge": "1/N^3",
+        "group_size": "3",
+        "h_diagonal": [
+          "0",
+          "0",
+          "16",
+          "N^2"
+        ]
+      }
+    },
+    "simultaneous_entry": {
+      "derived": {
+        "K_N": "26",
+        "high_high": "5/52",
+        "high_low": "3/260",
+        "low_high": "3/260",
+        "low_low": "1/50",
+        "maximum": "1/8",
+        "paired": "3*sqrt(13)/260",
+        "strict_entry": true,
+        "thermal": "1/8"
+      },
+      "inputs": {
+        "A_hh": "5",
+        "A_hl": "3",
+        "A_lh": "3",
+        "A_ll": "2",
+        "C_offset": "1",
+        "N": "5",
+        "N_ref": "1",
+        "beta": "6*log(2)",
+        "c": "1",
+        "epsilon_star": "1/4",
+        "kappa_0": "2",
+        "kappa_bar_star": "1/2",
+        "lambda": "1/2"
+      }
+    }
+  },
+  "mode": "formal",
+  "package_id": "pre-a-cp1-st8-q3lock-dffr-hilbert-schmidt-uniformity-and-yarotskii-gap-route-split",
+  "schema": "tect/verification-run/1.0",
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_dffr_hilbert_schmidt_uniformity_and_yarotskii_gap_route_split.py": "c77d63ca26a905765bd0f1e42e8744a19cf87b9ff231f823bf6fcdee87fd0555",
+    "strategy/pre-a-cp1-st8-q3lock-dffr-hilbert-schmidt-uniformity-and-yarotskii-gap-route-split-certificate-260813.md": "76a0c75ba4f5fb1078dc24c27c77e3612906693d3cece54765790cf2e63a635e",
+    "strategy/pre-a-cp1-st8-q3lock-dffr-hilbert-schmidt-uniformity-and-yarotskii-gap-route-split-manifest.json": "649b67aeead9392aed24b5fcc5d164e5247bc3eff587b06fee1fbbef716c3d1a"
+  },
+  "summary": {
+    "failed": 0,
+    "missing": 0,
+    "passed": 23,
+    "total": 23
+  },
+  "verdict": "PASS"
+}

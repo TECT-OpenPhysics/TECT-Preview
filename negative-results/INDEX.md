@@ -5,13 +5,14 @@
 
 Authorities: `negative-results/registry.md`.
 
-**358 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 287 · retraction: 5
+**359 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 288 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-defect-automatic-n-dependent-two-phase-radius-entry) | no_go | infer eventual two-phase theorem entry from defect `theta_N->0` and positive radius `r_N>0` separately at each `N` |
+| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-UNIFORM-RELATIVE-FORM-AND-OPERATOR-BLOCK-BOUNDS-AUTOMATIC-M-UNIFORM-DFFR-HILBERT-SCHMIDT-ENTRY`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-uniform-relative-form-and-operator-block-bounds-automatic-m-uniform-dffr-hilbert-schmidt-entry) | no_go | infer simultaneous cutoff-uniform DFFR entry from uniform relative-form decay and a uniformly bounded high-high operator block |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-SELECTOR-ADD-SUBTRACT-AUTOMATIC-ZERO-SOURCE-TRANSFER`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-selector-add-subtract-automatic-zero-source-transfer) | no_go | remove the bounded selector by putting it in the reference and subtracting it as a small perturbation |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-raw-configuration-weyl-full-hamiltonian-point-norm-c0) | no_go | include a nonzero raw configuration Weyl character in a point-norm C0 carrier equivariant for the exact finite-volume full Q3 Hamiltonian |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONESSENTIALLY-CONSTANT-LINFINITY-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-nonessentially-constant-linfinity-configuration-multiplier-full-hamiltonian-point-norm-c0) | no_go | include a nonessentially-constant bounded measurable configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-ordered-ground-doublets-automatic-gns-gap) | no_go | infer a positive broken-sector GNS gap from two distinct ordered algebraic ground states, parity exchange, a fixed order witness and simple ground vectors |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-global-all-bond-renyi-volume-uniformity) | no_go | demand one volume-independent global sandwiched-Renyi bound for complete all-bond kicks |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-full-oscillator-local-parity-doublet-edge-gap-automatic-volume-uniform-lattice-gap) | no_go | infer a uniform lattice gap from a local parity doublet and edge gap one |
-| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-forward-local-automorphism-limit-automatic-surjectivity-and-inverse-cauchy) | no_go | infer a surjective limiting automorphism and inverse Cauchy convergence from exact forward local stabilization of finite-volume automorphisms |
 
 Search without loading the full registry:
 

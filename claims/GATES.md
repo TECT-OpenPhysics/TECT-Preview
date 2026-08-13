@@ -109,6 +109,11 @@ child. It creates no contestant, microscopic observable map, common estimand,
 prospective prediction, custodian commitment, freeze or score. Round-1
 remains OPEN.
 
+EXP-000838 / R-167 v3.4 adds two claim-nonbearing conditional reductions and
+one exact Hilbert--Schmidt multiplicity obstruction. It creates no contestant,
+microscopic observable map, common estimand, prospective prediction,
+custodian commitment, freeze or score. Round-1 remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -668,6 +673,12 @@ after fixing one finite Ritz label `M` and one sufficiently large `N`. It
 supplies neither the exact-Q3 common spatial algebra and generator nor an
 `M`-uniform cutoff passage identifying the source-selected full-oscillator
 phases. This historical exact-Q3/common-alpha gate remains OPEN.
+
+EXP-000838 / R-167 v3.4 isolates sufficient hypotheses for simultaneous
+`M`-uniform DFFR entry and for a conditional fixed-Ritz Yarotskii phasewise
+gap theorem, but proves neither those uniform hypotheses nor cutoff-stable
+phase identification. This historical exact-Q3/common-alpha gate remains
+OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-CONNECTED-SUSCEPTIBILITY-AND-GNS-POINCARE-GATE**
 
@@ -1867,6 +1878,42 @@ removal, full-oscillator two-phase theorem, common alpha, phase quotient,
 purity, extremality or GNS gap. This fixed Ritz conclusion does not pass to
 the full onsite oscillator.
 
+### **PA-CP1-ST8-Q3LOCK-CONDITIONAL-M-UNIFORM-DFFR-HILBERT-SCHMIDT-SIMULTANEOUS-ENTRY-REDUCTION**
+
+**Statement:** Reduce simultaneous DFFR entry over all complete finite Ritz
+labels to one common onset, uniform Peierls and high-penalty constants, the
+actual four Hilbert--Schmidt block bounds of DFFR equation (5.21), and uniform
+positive lower bounds on the theorem thresholds.
+
+**Status:** CLOSED AS AN ABSTRACT CONDITIONAL SUFFICIENT-CRITERION REDUCTION
+ONLY (2026-08-13). EXP-000838 / R-167 v3.4 assumes one `N_ref` independent of
+`M`, `kappa_(M,N)>=kappa_0`, `D_(M,N)>=cN^2-C`, the uniform block bounds
+`epsilon_ll=O(N^-2)`, `epsilon_lh,epsilon_hl=O(N^-1)`,
+`epsilon_hh=O(1)`, and uniform positive DFFR theorem thresholds. With
+`K_N=kappa_0+cN^2-C`, all five nonthermal entries in equation (5.22) tend to
+zero uniformly in `M`, giving simultaneous entry once the stated hypotheses
+hold. Exact Q3 is not proved to satisfy the common onset, Hilbert--Schmidt
+bounds or theorem thresholds, and no cutoff phase passage follows.
+
+### **PA-CP1-ST8-Q3LOCK-FIXED-RITZ-YAROTSKII-RELATIVE-SPLIT-AND-CONDITIONAL-PHASEWISE-GNS-GAP-REDUCTION**
+
+**Statement:** Convert the fixed-Ritz grouped relative-form bound into an
+explicit relatively bounded plus bounded split and state the exact additional
+Yarotskii two-phase neighbourhood needed for phasewise GNS gaps.
+
+**Status:** CLOSED AS A FIXED-RITZ CONDITIONAL REDUCTION ONLY (2026-08-13).
+EXP-000838 / R-167 v3.4 proves, for `B=alpha h+epsilon I` and
+`V=B^(1/2)CB^(1/2)`, that `V_r=QVQ` obeys relative coefficient
+`a=alpha+epsilon/g` while `V_b=V-V_r` obeys
+`b=epsilon+2sqrt(epsilon(alpha L+epsilon))`. The registered fixed-`M` rates
+give `a=O_M(N^-2)` and `b=O_M(N^-3/2)`. If a positive `N`-independent
+Yarotskii rectangle accepts `a` and `b/g` for that fixed finite Ritz family,
+then parity pins coexistence to zero source and the cited theorem supplies two
+pure translation-invariant ground branches, clustering and a positive
+phasewise implementing spectral gap. The rectangle, its numerical gap, the
+DFFR/Yarotskii branch identity, `M`-uniformity and full-oscillator passage are
+not proved.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -1917,6 +1964,12 @@ EXP-000837 / R-167 v3.3 verifies DFFR entry directly for each fixed complete
 Ritz space, but constructs no oscillator block diagonalization, `M`-uniform
 connected QPS interaction, cutoff convergence in that norm or phasewise
 oscillator GNS intertwiner. This parent remains OPEN.
+
+EXP-000838 / R-167 v3.4 proves that uniform relative-form and operator-block
+bounds do not by themselves control the unnormalized DFFR Hilbert--Schmidt
+multiplicity, and closes only conditional entry and fixed-Ritz gap reductions.
+It constructs no oscillator elimination, cutoff-compatible QPS norm or
+phasewise intertwiner. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -2019,6 +2072,11 @@ EXP-000837 / R-167 v3.3 is a static fixed-Ritz phase theorem. It constructs
 no compatible all-shape spatial embeddings, thermodynamic point-norm C0
 action, Hamiltonian-to-OS quotient, common phase KMS dynamics or fixed
 exact-Q3 separator. This parent remains OPEN.
+
+EXP-000838 / R-167 v3.4 is likewise static and cutoff-indexed. Its exact
+Hilbert--Schmidt obstruction and conditional gap reduction construct no
+compatible spatial carrier, all-shape Cauchy estimate, common dynamics or
+Hamiltonian-to-phase quotient. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -2252,6 +2310,12 @@ theorem threshold are not controlled as `M` grows, so no full-oscillator
 cutoff removal, infinite-dimensional two-phase transfer or uniform positive
 excitation gap follows. This parent remains OPEN.
 
+EXP-000838 / R-167 v3.4 makes that cutoff failure exact: operator-norm block
+control can coexist with an unbounded Hilbert--Schmidt multiplicity. Its
+Yarotskii route is explicitly conditional at each fixed Ritz label and gives
+no `M`-uniform rectangle, phase passage or oscillator intertwiner. This parent
+remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -2335,6 +2399,12 @@ EXP-000837 / R-167 v3.3 gives distinct ordered fixed-Ritz ground states but no
 common infinite-volume oscillator dynamics, positive implementing
 Hamiltonian, phasewise Poincare inequality, energy identity or centered form
 core. It proves no broken-sector GNS gap. This parent remains OPEN.
+
+EXP-000838 / R-167 v3.4 identifies an exact fixed-Ritz relative-plus-bounded
+split and a conditional route to the cited phasewise GNS-gap conclusion. It
+does not prove the required Yarotskii neighbourhood, identify those branches
+with the DFFR limits, construct the common oscillator dynamics or transfer a
+uniform gap through cutoff removal. This parent remains OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 

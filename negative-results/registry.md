@@ -9,6 +9,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-UNIFORM-RELATIVE-FORM-AND-OPERATOR-BLOCK-BOUNDS-AUTOMATIC-M-UNIFORM-DFFR-HILBERT-SCHMIDT-ENTRY](#ng-2026-08-13-pre-a-st8-q3lock-uniform-relative-form-and-operator-block-bounds-automatic-m-uniform-dffr-hilbert-schmidt-entry) | infer simultaneous cutoff-uniform DFFR entry from uniform relative-form decay and a uniformly bounded high-high operator block | a rank-`m^2` high-high projection has operator norm one but Hilbert--Schmidt norm `m`; at edge support two and `lambda_0=1/2`, the DFFR entry is `2m/(kappa+N^2)`, so each fixed `m` enters as `N->infinity` while the supremum over `m` diverges for every fixed `N` |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-NORM-SEPARATED-PARITY-KMS-PAIRS-AUTOMATIC-DISTINCT-GROUND-LIMITS](#ng-2026-08-13-pre-a-st8-q3lock-finite-norm-separated-parity-kms-pairs-automatic-distinct-ground-limits) | infer distinct beta-to-infinity ground limits from finite-n norm-separated parity KMS pairs without one fixed noncollapsing witness | on `C([-1,1])` with trivial dynamics, `ev_(1/n)` and `ev_(-1/n)` are pure, extremal, factorial KMS states at norm distance two for every `n`, yet both converge weak-star to `ev_0`; their exact separators depend on `n` and the fixed odd coordinate split is `2/n` |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONESSENTIALLY-CONSTANT-LINFINITY-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0](#ng-2026-08-13-pre-a-st8-q3lock-nonessentially-constant-linfinity-configuration-multiplier-full-hamiltonian-point-norm-c0) | include a nonessentially-constant bounded measurable configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian | EXP-000835 / R-167 v3.1 proves a lower bound by the diameter of the essential range and the exact essential oscillation for real multipliers. It strictly strengthens the v2.8 `C_b` result and the v2.7 raw-Weyl special case without rejecting dressed, smeared or weaker-topology carriers |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER](#ng-2026-08-13-pre-a-st8-q3lock-finite-gaps-plus-weakstar-states-automatic-target-generator-and-gns-gap-transfer) | infer a prescribed target generator and GNS gap from weak-star convergent finite ground states with uniformly positive finite gaps | on `M_2`, `H_n=n|1><1|` has gap `n>=1` and a constant ground state, but `delta_n(|1><0|)=in|1><0|` is not norm Cauchy |
@@ -368,6 +369,32 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-uniform-relative-form-and-operator-block-bounds-automatic-m-uniform-dffr-hilbert-schmidt-entry"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-UNIFORM-RELATIVE-FORM-AND-OPERATOR-BLOCK-BOUNDS-AUTOMATIC-M-UNIFORM-DFFR-HILBERT-SCHMIDT-ENTRY -- Hilbert--Schmidt multiplicity defeats cutoff-uniform entry
+
+**Failure mode.** Infer simultaneous `M`-uniform DFFR entry from a relative
+form coefficient uniform in the cutoff and a uniformly bounded high-high
+operator block, without controlling the actual unnormalized Hilbert--Schmidt
+blocks in DFFR equation (5.21).
+
+**Evidence.** EXP-000838 / R-167 v3.4 takes integers `m,N>=1`, fixed `J>0`,
+one-site space `C^(m+2)`, a rank-two low projection, and on one edge the
+reference `h^0_(m,N)=N^2 Q_m+2J R_dis`. The high-high perturbation
+`V_(m,N)=R_m=q_m tensor q_m` has `rank R_m=m^2`, satisfies the exact relative
+bound `0<=V_(m,N)<=N^-2 h^0_(m,N)`, has vanishing low and mixed blocks, and
+has high-high operator norm exactly one. Nevertheless its Hilbert--Schmidt
+norm is `m`. With edge support two and `lambda_0=1/2`,
+`epsilon_hh=4m` and the DFFR high-high criterion entry is
+`2m/(kappa+N^2)`. Thus it vanishes for each fixed cutoff as `N->infinity`,
+but its supremum over `m` is infinite for every fixed `N`.
+
+**Consequence.** Uniform relative-form and operator-block bounds do not imply
+the `M`-uniform Hilbert--Schmidt estimates required for simultaneous DFFR
+entry. This is not a no-go for a different dimension-normalized expansion or
+for a future direct infinite-onsite theorem. It is distinct from the earlier
+ordinary-operator Schrieffer--Wolff cutoff obstruction because the operator
+norm here stays exactly one; multiplicity alone causes the failure.
 
 <a id="ng-2026-08-13-pre-a-st8-q3lock-finite-norm-separated-parity-kms-pairs-automatic-distinct-ground-limits"></a>
 ### NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-NORM-SEPARATED-PARITY-KMS-PAIRS-AUTOMATIC-DISTINCT-GROUND-LIMITS -- finite-step norm separation need not survive a zero-temperature limit
