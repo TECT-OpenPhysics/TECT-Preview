@@ -1,0 +1,223 @@
+{
+  "schema": "tect/pre-a-q3lock-ritz-corner-energy-tightness-positive-time-trace/1.0",
+  "package_id": "pre-a-cp1-st8-q3lock-ritz-corner-energy-tightness-and-positive-time-trace-route-split",
+  "version": "R-167 v3.5",
+  "date": "2026-08-13",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-000839",
+  "prior_exploration_id": "EXP-000838",
+  "claim_bearing": false,
+  "closed_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-RITZ-CORNER-PULLBACK-FIXED-WITNESS-AND-LOCAL-ENERGY-TIGHTNESS-STATE-PASSAGE",
+    "PA-CP1-ST8-Q3LOCK-POSITIVE-IMAGINARY-TIME-ENERGY-DRESSED-TRACE-CLASS-RITZ-REMOVAL"
+  ],
+  "negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-DIMENSION-NORMALIZED-SCHATTEN-SMALLNESS-AUTOMATIC-DFFR-TRANSITION-OR-CONTOUR-SMALLNESS",
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-POSITIVE-TIME-ENERGY-DRESSED-TRACE-CONTROL-AUTOMATIC-DFFR-CONTOUR-ENTRY",
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-WITNESS-SEPARATED-RITZ-PULLBACKS-AUTOMATIC-LOCALLY-NORMAL-LIMITS",
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-RITZ-CORNER-UCP-AUTOMATIC-ASYMPTOTIC-MULTIPLICATIVITY-AND-DYNAMICS-INTERTWINING"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-UNIFORM-RELATIVE-FORM-AND-OPERATOR-BLOCK-BOUNDS-AUTOMATIC-M-UNIFORM-DFFR-HILBERT-SCHMIDT-ENTRY",
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-NORM-SEPARATED-PARITY-KMS-PAIRS-AUTOMATIC-DISTINCT-GROUND-LIMITS",
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER"
+  ],
+  "open_parent_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "historical_open_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION"
+  ],
+  "ritz_corner_state_passage": {
+    "corner_maps": "Let H be separable and let P_M be increasing finite-rank parity-invariant projections converging strongly to I. For each finite X, C_(M,X)(A)=P_(M,X) A P_(M,X), viewed in B(P_(M,X)H_X) with unit P_(M,X), is unital completely positive. Spatial compatibility gives a global UCP map C_M on the bounded local inductive algebra. The family is projective under compression in M; the corner inclusions are not unital inductive homomorphisms.",
+    "parity_and_witness": "If omega_M^- = omega_M^+ o Theta_M and one fixed local selfadjoint odd contraction B satisfies omega_M^+(C_M(B))>=m and omega_M^-(C_M(B))<=-m for one m>0, then the pullbacks omega_tilde_M^sigma=omega_M^sigma o C_M have joint weak-star cluster subnets omega^sigma, obey omega^-=omega^+ o Theta and ||omega^+-omega^-||>=2m.",
+    "energy_tightness": "Assume that for every finite X there is one fixed K_X>=0 with compact resolvent and local pullback densities rho_(M,X)^sigma satisfying Tr(rho_(M,X)^sigma K_X)<=E_X uniformly in M and sigma. For E_R=1_[0,R](K_X), delta_(M,X,R)=Tr rho(1-E_R)<=E_X/R and ||rho-E_R rho E_R||_1<=2 sqrt(E_X/R). Finite-rank corner compactness plus this modulus yields local trace-norm precompactness, compatible density matrices and locally normal cluster states.",
+    "prior_credit": "EXP-000781 certificate Section 6 already supplied the compact-resolvent energy-tail compactness principle for Q3LOCK local Gibbs reductions. R-167 v3.5 does not reclaim that result. Its new content is the parity-compatible corner UCP pullback, one fixed witness surviving the pullback, the explicit gentle trace-norm modulus, and the singular energy-escape fixture showing why the energy premise is necessary.",
+    "boundary": "Weak-star compactness and a fixed witness alone preserve distinct parity-related states on the bounded algebra, but do not imply that their limits are locally normal. No KMS, ground-state, GNS-gap or dynamics statement follows."
+  },
+  "compression_dynamics_firewall": {
+    "multiplication_defect": "For every projection P, C_P(AB)-C_P(A)C_P(B)=P A(I-P)B P. On l2(N_0), with P_M onto e_0,...,e_(M-1), A=S^* and B=S for the unilateral shift, the defect is the rank-one projection onto e_(M-1), hence has operator norm one for every M.",
+    "generator_defect": "For delta(A)=i[H,A] and delta_P(A)=i[PHP,A] on the corner, C_P(delta A)-delta_P(C_P A)=i(PH(I-P)AP-PA(I-P)HP). This cross-boundary term need not vanish or converge in norm.",
+    "boundary": "The UCP pullback transfers states and fixed bounded expectations. It does not automatically transfer products, derivations, dynamics, KMS boundary conditions or ground-state inequalities. This exact fixture does not preclude stronger convergence on a separately controlled core or under separately proved cross-boundary estimates."
+  },
+  "positive_time_trace_class_passage": {
+    "abstract_setup": "Let h>=0 have compact resolvent, P=1_{0}(h) have finite rank r, Q=I-P, and suppose Z_0(t)=Tr exp(-t h) and Z_1(t)=Tr(h exp(-t h)) are finite for the fixed t>0. If V is selfadjoint and -B<=V<=B for B=alpha h+epsilon I, then V=B^(1/2) C B^(1/2) for a selfadjoint contraction C.",
+    "trace_bound": "T_t=exp(-t h/2) V exp(-t h/2) is trace class and ||T_t||_1<=alpha Z_1(t)+epsilon Z_0(t). For spectral Ritz projections Pi_M commuting with h and increasing strongly to I, ||Pi_M T_t Pi_M-T_t||_1 tends to zero.",
+    "dressed_blocks": "The exact dressed estimates are ||PVP||_op<=epsilon, ||PVP||_HS<=epsilon sqrt(r), ||P V Q exp(-t h/2)||_HS<=sqrt(epsilon Tr_Q[(alpha h+epsilon I)exp(-t h)]), and ||exp(-t h/2) QVQ exp(-t h/2)||_1<=Tr_Q[(alpha h+epsilon I)exp(-t h)]. They are not undressed DFFR (5.21) constants.",
+    "q3_edge": "For h_0=(k_x+k_y)/6+J(1-s_x s_y) with J>0, assume s=s^*, ||s||<=1 and [k,s]=0 on one site. The two-site bond penalty is positive and commutes with k_x+k_y. Define Z_k(u)=Tr exp(-u k). Dropping that commuting positive penalty gives Z_(0,e)(t)<=Z_k(t/6)^2. The scalar inequality x exp(-t x)<=2 exp(-t x/2)/(e t), followed by the same positive-penalty trace bound at t/2, gives Z_(1,e)(t)<=2 Z_k(t/12)^2/(e t). Hence a residual bounded by alpha_N h_0+beta_N I obeys ||T_(N,t)||_1<=2 alpha_N Z_k(t/12)^2/(e t)+beta_N Z_k(t/6)^2.",
+    "uniformity_boundary": "For each fixed N and t>0 with the displayed heat traces finite, spectral Ritz removal is genuine trace-norm convergence. Any N-uniform conclusion requires separately proved N-uniform heat-trace control. The theorem gives neither t=0 trace control nor a DFFR contour norm, transition-amplitude estimate, simplex summability or phase passage."
+  },
+  "exact_obstructions": {
+    "dimension_normalized_schatten": "On C direct-sum C^m let Q be the high projection, h=N^2 Q and V=|f_1><f_2|+|f_2><f_1|. Then |V|<=N^-2 h and ||V||_op=1, while the dimension-normalized Schatten p quantity m^(-1/p)||V||_p=(2/m)^(1/p) tends to zero. The fixed transition matrix element remains one. Thus dimension-normalized Schatten smallness is not an automatic DFFR transition or contour smallness statement.",
+    "fixed_positive_time": "On C direct-sum C^m put h_m=mQ_m and V_m=Q_m. For every fixed t>0, ||exp(-t h_m/2)V_m exp(-t h_m/2)||_1=m exp(-tm) tends to zero, but for every t_0>0 its supremum over 0<t<=t_0 is m. Positive-time trace decay therefore supplies no t=0 or short-time-uniform DFFR contour entry.",
+    "energy_escape": "Let e_+,e_- and f_n^+,f_n^- be orthonormal, parity exchange plus and minus, and psi_n^sigma=sqrt(m_0)e_sigma+sqrt(1-m_0)f_n^sigma with 0<m_0<1. Their vector states have norm distance two and the fixed compact odd witness B_0=|e_+><e_+|-|e_-><e_-| has expectations plus/minus m_0. Against compact A the limits retain only m_0<e_sigma,Ae_sigma>, so the missing mass 1-m_0 is singular. For K f_n^sigma=n f_n^sigma the energy is (1-m_0)n and diverges. Fixed-witness separation without local energy tightness does not force locally normal limits.",
+    "ritz_corner_ucp_dynamics": "For every cutoff rank M, the unilateral-shift fixture with A=S^*, B=S has C_M(AB)-C_M(A)C_M(B) equal to the rank-one projection onto the last retained basis vector, with norm one. With H=S+S^* and observable S, the generator defect i(P_M H Q_M S P_M-P_M S Q_M H P_M) also has rank and norm one. Therefore Ritz-corner UCP pullback does not automatically imply asymptotic multiplicativity or dynamics intertwining. Core-specific or cross-boundary convergence under additional hypotheses remains possible."
+  },
+  "exact_fixture": {
+    "corner_ucp": {
+      "inputs": {
+        "ambient_dimension": "4",
+        "corner_rank": "2",
+        "test_matrix": [["1", "2", "3", "4"], ["2", "0", "5", "6"], ["3", "5", "7", "8"], ["4", "6", "8", "9"]]
+      },
+      "derived": {
+        "compressed_matrix": [["1", "2"], ["2", "0"]],
+        "unital": true,
+        "parity_compatible": true,
+        "kadison_defect": [["25", "39"], ["39", "61"]],
+        "kadison_defect_determinant": "4"
+      }
+    },
+    "compression_defects": {
+      "inputs": {
+        "shift_dimension": "4",
+        "cutoff_rank": "3"
+      },
+      "derived": {
+        "product_defect_diagonal": ["0", "0", "1"],
+        "product_defect_rank": "1",
+        "product_defect_operator_norm": "1",
+        "generator_defect_diagonal": ["0", "0", "I"],
+        "generator_defect_rank": "1",
+        "generator_defect_operator_norm": "1"
+      }
+    },
+    "energy_tightness": {
+      "inputs": {
+        "K_diagonal": ["0", "4"],
+        "high_amplitude": "1/4",
+        "R": "2"
+      },
+      "derived": {
+        "energy": "1/4",
+        "tail_probability": "1/16",
+        "energy_markov_bound": "1/8",
+        "trace_tail_norm": "sqrt(61)/16",
+        "gentle_bound": "sqrt(2)/2",
+        "strict_gentle_check": true
+      }
+    },
+    "positive_time_trace": {
+      "inputs": {
+        "h_diagonal": ["0", "0", "2", "4"],
+        "alpha": "1/4",
+        "epsilon": "1/8",
+        "t": "log(2)",
+        "kernel_rank": "2"
+      },
+      "derived": {
+        "Z0": "37/16",
+        "Z1": "3/4",
+        "trace_norm": "61/128",
+        "trace_bound": "61/128",
+        "low_operator_bound": "1/8",
+        "low_HS_bound": "sqrt(2)/8",
+        "mixed_HS_bound": "sqrt(29)/32",
+        "high_trace_bound": "29/128",
+        "last_Ritz_tail": "9/128"
+      }
+    },
+    "q3_edge_heat_trace": {
+      "inputs": {
+        "k_diagonal": ["0", "0", "12"],
+        "s_diagonal": ["1", "-1", "0"],
+        "fixture_scope": "actual-compatible selfadjoint-contraction fixture with high-sector zero",
+        "J": "1",
+        "N": "4",
+        "alpha": "1/N^2",
+        "beta_edge": "1/N^3",
+        "t": "log(2)"
+      },
+      "derived": {
+        "edge_Z0": "97/32",
+        "edge_Z1": "85/32",
+        "Zk_t_over_6_squared": "81/16",
+        "Zk_t_over_12_squared": "25/4",
+        "residual_trace": "437/2048",
+        "residual_upper_bound": "81/1024+25/(32*E*log(2))",
+        "strict_upper_check": true
+      }
+    },
+    "normalized_schatten": {
+      "inputs": {
+        "N": "4",
+        "m": "8",
+        "p": "2"
+      },
+      "derived": {
+        "relative_alpha": "1/16",
+        "operator_norm": "1",
+        "unnormalized_Sp": "sqrt(2)",
+        "normalized_Sp": "1/2",
+        "fixed_transition": "1",
+        "large_m_limit": "0"
+      }
+    },
+    "fixed_positive_time": {
+      "inputs": {
+        "m": "8",
+        "t": "log(2)"
+      },
+      "derived": {
+        "dressed_trace": "1/32",
+        "short_time_supremum": "8",
+        "fixed_t_large_m_limit": "0",
+        "raw_HS_norm": "2*sqrt(2)"
+      }
+    },
+    "energy_escape": {
+      "inputs": {
+        "m0": "1/4",
+        "n": "8"
+      },
+      "derived": {
+        "plus_witness": "1/4",
+        "minus_witness": "-1/4",
+        "state_norm_distance": "2",
+        "compact_mass": "1/4",
+        "escaped_mass": "3/4",
+        "energy": "6"
+      }
+    }
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_ritz_corner_energy_tightness_and_positive_time_trace_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_ritz_corner_energy_tightness_and_positive_time_trace_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_ritz_corner_energy_tightness_and_positive_time_trace_route_split_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-primary-pre-a-cp1-st8-q3lock-ritz-corner-energy-tightness-and-positive-time-trace-route-split/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-independent-pre-a-cp1-st8-q3lock-ritz-corner-energy-tightness-and-positive-time-trace-route-split/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-integrated-pre-a-cp1-st8-q3lock-ritz-corner-energy-tightness-and-positive-time-trace-route-split/result.json",
+    "staged_lifecycle": "Before formal integration, run all three scripts with --staged --no-store. No run JSON or formal authority is written by this five-file proof package."
+  },
+  "formal_integration_contract": {
+    "event_ordinal": 631,
+    "event_id": "20260813-r-167-v3-5-ritz-corner-state-passage-and-positi",
+    "event_title": "R-167 v3.5 Ritz-corner state passage and positive-time trace-class cutoff removal",
+    "event_keywords": ["EXP-000839", "R-167-v3.5", "Ritz-corner-UCP", "cutoff-state-passage", "energy-tightness", "fixed-witness", "no-parent-closure", "positive-time-trace-class"],
+    "theorem_map_version": "1.27.0",
+    "expected_post_formal_counts": {
+      "claims": 49,
+      "results": 168,
+      "gates": 188,
+      "negatives": 363,
+      "explorations": 839,
+      "events": 631,
+      "tasks": 54,
+      "catalog": 3915
+    },
+    "required_links": "EXP-000839, event 631, T-054, ROADMAP, strategy index, proof-evidence map, theorem map 1.27.0, generated compact surfaces, two exact scoped CLOSED results, four new no-go results including norm-one Ritz-corner multiplication and generator defects, three reused state/dynamics/cutoff firewalls, all five OPEN parents, and the historical beta-infinity gate remaining OPEN."
+  },
+  "checkpoint_synthesis": {
+    "status": "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+    "pdf_issued": false,
+    "workflow": "Proof-first manifest, certificate and three executable verifiers only. No v3.5 PDF is issued."
+  },
+  "no_overclaim": "R-167 v3.5 closes only a Ritz-corner UCP pullback plus fixed-witness and local-energy-tightness state-passage theorem, and a fixed-positive-imaginary-time energy-dressed trace-class spectral-Ritz-removal theorem. It proves no N-uniform heat-trace estimate, t=0 trace bound, DFFR transition or contour smallness, dimension-free unnormalized Hilbert-Schmidt entry, asymptotic Ritz-corner multiplicativity or dynamics intertwining, DFFR phase passage, all-exhaustion state convergence, infinite-volume dynamics, KMS property, ground-state selection, target generator, GNS gap, full-oscillator two-phase theorem, common-alpha, mass gap, regulator removal, continuum, physical vacuum or empty-space comparison, Round-1, C6, CP1, physical Sector A or Pre-A. All five active parent gates and the historical beta-infinity gate remain OPEN."
+}

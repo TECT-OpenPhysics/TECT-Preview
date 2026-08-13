@@ -9,6 +9,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-DIMENSION-NORMALIZED-SCHATTEN-SMALLNESS-AUTOMATIC-DFFR-TRANSITION-OR-CONTOUR-SMALLNESS](#ng-2026-08-13-pre-a-st8-q3lock-dimension-normalized-schatten-smallness-automatic-dffr-transition-or-contour-smallness) | replace the raw local DFFR transition/contour norm by a dimension-normalized Schatten norm | a fixed rank-two high-sector transition has operator norm and a selected transition amplitude exactly one while its normalized Schatten `p`-norm is `(2/m)^(1/p)->0` |
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-POSITIVE-TIME-ENERGY-DRESSED-TRACE-CONTROL-AUTOMATIC-DFFR-CONTOUR-ENTRY](#ng-2026-08-13-pre-a-st8-q3lock-fixed-positive-time-energy-dressed-trace-control-automatic-dffr-contour-entry) | infer DFFR contour entry from trace-class control at each fixed positive imaginary time | for `h_m=mQ_m`, `V_m=Q_m`, the dressed trace is `m exp(-tm)->0` at every fixed `t>0`, but its supremum over arbitrarily short times is `m` |
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-WITNESS-SEPARATED-RITZ-PULLBACKS-AUTOMATIC-LOCALLY-NORMAL-LIMITS](#ng-2026-08-13-pre-a-st8-q3lock-fixed-witness-separated-ritz-pullbacks-automatic-locally-normal-limits) | infer locally normal full-oscillator limits from fixed-witness separated Ritz-corner pullback states alone | parity-related vector states retain one fixed odd witness and norm separation, yet escaping high-energy mass leaves every cluster singular on the compacts when uniform local energy tightness is absent |
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-RITZ-CORNER-UCP-AUTOMATIC-ASYMPTOTIC-MULTIPLICATIVITY-AND-DYNAMICS-INTERTWINING](#ng-2026-08-13-pre-a-st8-q3lock-ritz-corner-ucp-automatic-asymptotic-multiplicativity-and-dynamics-intertwining) | infer norm-asymptotic multiplication and generator intertwining from strong convergence of Ritz projections and the corner UCP state pullback | unilateral-shift fixtures leave rank-one multiplication and generator cross-corner defects of operator norm one for every cutoff |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-UNIFORM-RELATIVE-FORM-AND-OPERATOR-BLOCK-BOUNDS-AUTOMATIC-M-UNIFORM-DFFR-HILBERT-SCHMIDT-ENTRY](#ng-2026-08-13-pre-a-st8-q3lock-uniform-relative-form-and-operator-block-bounds-automatic-m-uniform-dffr-hilbert-schmidt-entry) | infer simultaneous cutoff-uniform DFFR entry from uniform relative-form decay and a uniformly bounded high-high operator block | a rank-`m^2` high-high projection has operator norm one but Hilbert--Schmidt norm `m`; at edge support two and `lambda_0=1/2`, the DFFR entry is `2m/(kappa+N^2)`, so each fixed `m` enters as `N->infinity` while the supremum over `m` diverges for every fixed `N` |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-NORM-SEPARATED-PARITY-KMS-PAIRS-AUTOMATIC-DISTINCT-GROUND-LIMITS](#ng-2026-08-13-pre-a-st8-q3lock-finite-norm-separated-parity-kms-pairs-automatic-distinct-ground-limits) | infer distinct beta-to-infinity ground limits from finite-n norm-separated parity KMS pairs without one fixed noncollapsing witness | on `C([-1,1])` with trivial dynamics, `ev_(1/n)` and `ev_(-1/n)` are pure, extremal, factorial KMS states at norm distance two for every `n`, yet both converge weak-star to `ev_0`; their exact separators depend on `n` and the fixed odd coordinate split is `2/n` |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONESSENTIALLY-CONSTANT-LINFINITY-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0](#ng-2026-08-13-pre-a-st8-q3lock-nonessentially-constant-linfinity-configuration-multiplier-full-hamiltonian-point-norm-c0) | include a nonessentially-constant bounded measurable configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian | EXP-000835 / R-167 v3.1 proves a lower bound by the diameter of the essential range and the exact essential oscillation for real multipliers. It strictly strengthens the v2.8 `C_b` result and the v2.7 raw-Weyl special case without rejecting dressed, smeared or weaker-topology carriers |
@@ -369,6 +373,85 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-dimension-normalized-schatten-smallness-automatic-dffr-transition-or-contour-smallness"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-DIMENSION-NORMALIZED-SCHATTEN-SMALLNESS-AUTOMATIC-DFFR-TRANSITION-OR-CONTOUR-SMALLNESS -- normalized Schatten norms can hide a fixed transition
+
+**Failure mode.** Replace the unnormalized local Hilbert--Schmidt and
+transition bounds used by DFFR with a dimension-normalized Schatten norm, and
+infer the same contour smallness uniformly in the onsite dimension.
+
+**Evidence.** EXP-000839 / R-167 v3.5 takes a high sector of dimension `m`,
+`h_(m,N)=N^2 Q_m`, and
+`V_m=|f_1><f_2|+|f_2><f_1|`. Then
+`-Q_m<=V_m<=Q_m<=N^-2 h_(m,N)`, while the operator norm and the selected
+transition amplitude are exactly one. For every finite `p`, however, the
+dimension-normalized Schatten norm is `(2/m)^(1/p)` and tends to zero.
+
+**Consequence.** Dimension-normalized Schatten smallness does not
+automatically control the individual transition or the raw local norm needed
+by the cited DFFR contour theorem. This rejects only the literal norm
+substitution. It does not rule out a redesigned weighted infinite-onsite
+contour expansion.
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-fixed-positive-time-energy-dressed-trace-control-automatic-dffr-contour-entry"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-POSITIVE-TIME-ENERGY-DRESSED-TRACE-CONTROL-AUTOMATIC-DFFR-CONTOUR-ENTRY -- fixed positive time does not control the contour simplex
+
+**Failure mode.** Infer DFFR contour entry from a trace-class estimate that is
+valid separately at every fixed positive imaginary time, without controlling
+the arbitrarily short time intervals in the Duhamel simplex.
+
+**Evidence.** EXP-000839 / R-167 v3.5 uses
+`h_m=mQ_m` and `V_m=Q_m` on `C direct-sum C^m`. The dressed trace norm is
+`m exp(-tm)`, which tends to zero as `m->infinity` for every fixed `t>0`, but
+`sup_(0<t<=t_0) m exp(-tm)=m` because times can approach zero.
+
+**Consequence.** Fixed-positive-time energy-dressed trace control does not
+automatically give the short-time uniformity required for DFFR contour entry.
+This is not a no-go for a genuinely time-integrated or simplex-summed theorem;
+it isolates the missing small-time estimate.
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-fixed-witness-separated-ritz-pullbacks-automatic-locally-normal-limits"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-WITNESS-SEPARATED-RITZ-PULLBACKS-AUTOMATIC-LOCALLY-NORMAL-LIMITS -- a fixed witness does not prevent singular energy escape
+
+**Failure mode.** Infer locally normal full-oscillator cluster states from
+parity-related Ritz-corner pullbacks that remain separated by one fixed
+bounded odd witness, without a uniform local-energy tightness estimate.
+
+**Evidence.** EXP-000839 / R-167 v3.5 takes orthogonal fixed vectors `e_+`,
+`e_-` and escaping orthonormal vectors `f_n^+`, `f_n^-`, with parity swapping
+the signs, and
+`psi_n^sigma=sqrt(m_0)e_sigma+sqrt(1-m_0)f_n^sigma` for `0<m_0<1`. The vector
+states have norm distance two and the fixed compact odd witness
+`|e_+><e_+|-|e_-><e_-|` has expectations `+m_0,-m_0`. Yet every compact
+observable sees only mass `m_0` in the limit, so every cluster has a singular
+part. For an energy with `K f_n^sigma=n f_n^sigma`, the expectation diverges
+as `(1-m_0)n`.
+
+**Consequence.** Fixed-witness separation survives while local normality
+fails through energy escape. A fixed compact-resolvent local energy bound, or
+another genuine normal-compactness mechanism, is necessary. This is distinct
+from the earlier witness-collapse fixture, where no fixed separator survives
+and the two limits coincide.
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-ritz-corner-ucp-automatic-asymptotic-multiplicativity-and-dynamics-intertwining"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-RITZ-CORNER-UCP-AUTOMATIC-ASYMPTOTIC-MULTIPLICATIVITY-AND-DYNAMICS-INTERTWINING -- norm-one cross-corner defects survive every cutoff
+
+**Failure mode.** Infer norm-asymptotic multiplicativity and dynamics or
+generator intertwining merely from strong convergence of finite-rank Ritz
+projections and the validity of the corner UCP state pullback.
+
+**Evidence.** EXP-000839 / R-167 v3.5 writes the exact defects
+`C_P(AB)-C_P(A)C_P(B)=PA(1-P)BP` and
+`C_P(delta A)-delta_P(C_P A)=i(PH(1-P)AP-PA(1-P)HP)`. On
+`l^2(N_0)`, the unilateral shift with its first-`M` projection gives a moving
+rank-one projection of operator norm one in both the multiplication and
+generator fixtures for every `M`.
+
+**Consequence.** The Ritz corner UCP map transfers states but does not
+automatically transfer products or dynamics in operator norm. The result does
+not rule out strong convergence, convergence on a separately controlled
+core, or exact-Q3 cross-boundary estimates that make these defects small.
 
 <a id="ng-2026-08-13-pre-a-st8-q3lock-uniform-relative-form-and-operator-block-bounds-automatic-m-uniform-dffr-hilbert-schmidt-entry"></a>
 ### NG-2026-08-13-PRE-A-ST8-Q3LOCK-UNIFORM-RELATIVE-FORM-AND-OPERATOR-BLOCK-BOUNDS-AUTOMATIC-M-UNIFORM-DFFR-HILBERT-SCHMIDT-ENTRY -- Hilbert--Schmidt multiplicity defeats cutoff-uniform entry

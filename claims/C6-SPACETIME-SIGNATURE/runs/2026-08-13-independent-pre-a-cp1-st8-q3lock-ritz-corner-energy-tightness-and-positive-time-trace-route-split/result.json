@@ -1,0 +1,340 @@
+{
+  "assertions": [
+    {
+      "actual": "('tect/pre-a-q3lock-ritz-corner-energy-tightness-positive-time-trace/1.0', 'R-167 v3.5', 'EXP-000839')",
+      "expected": "('exact schema', 'R-167 v3.5', 'EXP-000839')",
+      "group": "manifest",
+      "name": "manifest exact identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "(['PA-CP1-ST8-Q3LOCK-RITZ-CORNER-PULLBACK-FIXED-WITNESS-AND-LOCAL-ENERGY-TIGHTNESS-STATE-PASSAGE', 'PA-CP1-ST8-Q3LOCK-POSITIVE-IMAGINARY-TIME-ENERGY-DRESSED-TRACE-CLASS-RITZ-REMOVAL'], ['NG-2026-08-13-PRE-A-ST8-Q3LOCK-DIMENSION-NORMALIZED-SCHATTEN-SMALLNESS-AUTOMATIC-DFFR-TRANSITION-OR-CONTOUR-SMALLNESS', 'NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-POSITIVE-TIME-ENERGY-DRESSED-TRACE-CONTROL-AUTOMATIC-DFFR-CONTOUR-ENTRY', 'NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-WITNESS-SEPARATED-RITZ-PULLBACKS-AUTOMATIC-LOCALLY-NORMAL-LIMITS', 'NG-2026-08-13-PRE-A-ST8-Q3LOCK-RITZ-CORNER-UCP-AUTOMATIC-ASYMPTOTIC-MULTIPLICATIVITY-AND-DYNAMICS-INTERTWINING'], ['NG-2026-08-13-PRE-A-ST8-Q3LOCK-UNIFORM-RELATIVE-FORM-AND-OPERATOR-BLOCK-BOUNDS-AUTOMATIC-M-UNIFORM-DFFR-HILBERT-SCHMIDT-ENTRY', 'NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-NORM-SEPARATED-PARITY-KMS-PAIRS-AUTOMATIC-DISTINCT-GROUND-LIMITS', 'NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER'])",
+      "expected": "(('PA-CP1-ST8-Q3LOCK-RITZ-CORNER-PULLBACK-FIXED-WITNESS-AND-LOCAL-ENERGY-TIGHTNESS-STATE-PASSAGE', 'PA-CP1-ST8-Q3LOCK-POSITIVE-IMAGINARY-TIME-ENERGY-DRESSED-TRACE-CLASS-RITZ-REMOVAL'), ('NG-2026-08-13-PRE-A-ST8-Q3LOCK-DIMENSION-NORMALIZED-SCHATTEN-SMALLNESS-AUTOMATIC-DFFR-TRANSITION-OR-CONTOUR-SMALLNESS', 'NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-POSITIVE-TIME-ENERGY-DRESSED-TRACE-CONTROL-AUTOMATIC-DFFR-CONTOUR-ENTRY', 'NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-WITNESS-SEPARATED-RITZ-PULLBACKS-AUTOMATIC-LOCALLY-NORMAL-LIMITS', 'NG-2026-08-13-PRE-A-ST8-Q3LOCK-RITZ-CORNER-UCP-AUTOMATIC-ASYMPTOTIC-MULTIPLICATIVITY-AND-DYNAMICS-INTERTWINING'), 'three reused and five parents')",
+      "group": "manifest",
+      "name": "manifest exact topology",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'corner_ucp': {'inputs': {'ambient_dimension': '4', 'corner_rank': '2', 'test_matrix': [['1', '2', '3', '4'], ['2', '0', '5', '6'], ['3', '5', '7', '8'], ['4', '6', '8', '9']]}, 'derived': {'compressed_matrix': [['1', '2'], ['2', '0']], 'unital': True, 'parity_compatible': True, 'kadison_defect': [['25', '39'], ['39', '61']], 'kadison_defect_determinant': '4'}}, 'compression_defects': {'inputs': {'shift_dimension': '4', 'cutoff_rank': '3'}, 'derived': {'product_defect_diagonal': ['0', '0', '1'], 'product_defect_rank': '1', 'product_defect_operator_norm': '1', 'generator_defect_diagonal': ['0', '0', 'I'], 'generator_defect_rank': '1', 'generator_defect_operator_norm': '1'}}, 'energy_tightness': {'inputs': {'K_diagonal': ['0', '4'], 'high_amplitude': '1/4', 'R': '2'}, 'derived': {'energy': '1/4', 'tail_probability': '1/16', 'energy_markov_bound': '1/8', 'trace_tail_norm': 'sqrt(61)/16', 'gentle_bound': 'sqrt(2)/2', 'strict_gentle_check': True}}, 'positive_time_trace': {'inputs': {'h_diagonal': ['0', '0', '2', '4'], 'alpha': '1/4', 'epsilon': '1/8', 't': 'log(2)', 'kernel_rank': '2'}, 'derived': {'Z0': '37/16', 'Z1': '3/4', 'trace_norm': '61/128', 'trace_bound': '61/128', 'low_operator_bound': '1/8', 'low_HS_bound': 'sqrt(2)/8', 'mixed_HS_bound': 'sqrt(29)/32', 'high_trace_bound': '29/128', 'last_Ritz_tail': '9/128'}}, 'q3_edge_heat_trace': {'inputs': {'k_diagonal': ['0', '0', '12'], 's_diagonal': ['1', '-1', '0'], 'fixture_scope': 'actual-compatible selfadjoint-contraction fixture with high-sector zero', 'J': '1', 'N': '4', 'alpha': '1/N^2', 'beta_edge': '1/N^3', 't': 'log(2)'}, 'derived': {'edge_Z0': '97/32', 'edge_Z1': '85/32', 'Zk_t_over_6_squared': '81/16', 'Zk_t_over_12_squared': '25/4', 'residual_trace': '437/2048', 'residual_upper_bound': '81/1024+25/(32*E*log(2))', 'strict_upper_check': True}}, 'normalized_schatten': {'inputs': {'N': '4', 'm': '8', 'p': '2'}, 'derived': {'relative_alpha': '1/16', 'operator_norm': '1', 'unnormalized_Sp': 'sqrt(2)', 'normalized_Sp': '1/2', 'fixed_transition': '1', 'large_m_limit': '0'}}, 'fixed_positive_time': {'inputs': {'m': '8', 't': 'log(2)'}, 'derived': {'dressed_trace': '1/32', 'short_time_supremum': '8', 'fixed_t_large_m_limit': '0', 'raw_HS_norm': '2*sqrt(2)'}}, 'energy_escape': {'inputs': {'m0': '1/4', 'n': '8'}, 'derived': {'plus_witness': '1/4', 'minus_witness': '-1/4', 'state_norm_distance': '2', 'compact_mass': '1/4', 'escaped_mass': '3/4', 'energy': '6'}}}",
+      "expected": "{'corner_ucp': {'inputs': {'ambient_dimension': '4', 'corner_rank': '2', 'test_matrix': [['1', '2', '3', '4'], ['2', '0', '5', '6'], ['3', '5', '7', '8'], ['4', '6', '8', '9']]}, 'derived': {'compressed_matrix': [['1', '2'], ['2', '0']], 'unital': True, 'parity_compatible': True, 'kadison_defect': [['25', '39'], ['39', '61']], 'kadison_defect_determinant': '4'}}, 'compression_defects': {'inputs': {'shift_dimension': '4', 'cutoff_rank': '3'}, 'derived': {'product_defect_diagonal': ['0', '0', '1'], 'product_defect_rank': '1', 'product_defect_operator_norm': '1', 'generator_defect_diagonal': ['0', '0', 'I'], 'generator_defect_rank': '1', 'generator_defect_operator_norm': '1'}}, 'energy_tightness': {'inputs': {'K_diagonal': ['0', '4'], 'high_amplitude': '1/4', 'R': '2'}, 'derived': {'energy': '1/4', 'tail_probability': '1/16', 'energy_markov_bound': '1/8', 'trace_tail_norm': 'sqrt(61)/16', 'gentle_bound': 'sqrt(2)/2', 'strict_gentle_check': True}}, 'positive_time_trace': {'inputs': {'h_diagonal': ['0', '0', '2', '4'], 'alpha': '1/4', 'epsilon': '1/8', 't': 'log(2)', 'kernel_rank': '2'}, 'derived': {'Z0': '37/16', 'Z1': '3/4', 'trace_norm': '61/128', 'trace_bound': '61/128', 'low_operator_bound': '1/8', 'low_HS_bound': 'sqrt(2)/8', 'mixed_HS_bound': 'sqrt(29)/32', 'high_trace_bound': '29/128', 'last_Ritz_tail': '9/128'}}, 'q3_edge_heat_trace': {'inputs': {'k_diagonal': ['0', '0', '12'], 's_diagonal': ['1', '-1', '0'], 'fixture_scope': 'actual-compatible selfadjoint-contraction fixture with high-sector zero', 'J': '1', 'N': '4', 'alpha': '1/N^2', 'beta_edge': '1/N^3', 't': 'log(2)'}, 'derived': {'edge_Z0': '97/32', 'edge_Z1': '85/32', 'Zk_t_over_6_squared': '81/16', 'Zk_t_over_12_squared': '25/4', 'residual_trace': '437/2048', 'residual_upper_bound': '81/1024+25/(32*E*log(2))', 'strict_upper_check': True}}, 'normalized_schatten': {'inputs': {'N': '4', 'm': '8', 'p': '2'}, 'derived': {'relative_alpha': '1/16', 'operator_norm': '1', 'unnormalized_Sp': 'sqrt(2)', 'normalized_Sp': '1/2', 'fixed_transition': '1', 'large_m_limit': '0'}}, 'fixed_positive_time': {'inputs': {'m': '8', 't': 'log(2)'}, 'derived': {'dressed_trace': '1/32', 'short_time_supremum': '8', 'fixed_t_large_m_limit': '0', 'raw_HS_norm': '2*sqrt(2)'}}, 'energy_escape': {'inputs': {'m0': '1/4', 'n': '8'}, 'derived': {'plus_witness': '1/4', 'minus_witness': '-1/4', 'state_norm_distance': '2', 'compact_mass': '1/4', 'escaped_mass': '3/4', 'energy': '6'}}}",
+      "group": "oracle",
+      "name": "independent exact fixture agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'defect': [[Fraction(25, 1), Fraction(39, 1)], [Fraction(39, 1), Fraction(61, 1)]], 'determinant': Fraction(4, 1)}",
+      "expected": "positive sample Kadison defect and parity pair compression",
+      "group": "corner",
+      "name": "independent corner positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'product_defect_diagonal': ['0', '0', '1'], 'product_defect_rank': '1', 'product_defect_operator_norm': '1', 'generator_defect_diagonal': ['0', '0', 'I'], 'generator_defect_rank': '1', 'generator_defect_operator_norm': '1'}",
+      "expected": "rank-one norm-one boundary defect",
+      "group": "corner_firewall",
+      "name": "independent multiplication defect",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'product_defect_diagonal': ['0', '0', '1'], 'product_defect_rank': '1', 'product_defect_operator_norm': '1', 'generator_defect_diagonal': ['0', '0', 'I'], 'generator_defect_rank': '1', 'generator_defect_operator_norm': '1'}",
+      "expected": "rank-one norm-one cross-boundary coefficient",
+      "group": "corner_firewall",
+      "name": "independent generator defect identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'tail_probability': Fraction(1, 16), 'markov': Fraction(1, 8), 'trace_tail_squared': Fraction(61, 256), 'gentle_squared': Fraction(1, 2)}",
+      "expected": "delta<=E/R and compression error below gentle modulus",
+      "group": "tightness",
+      "name": "independent energy-tail inequalities",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'weights': (Fraction(1, 1), Fraction(1, 1), Fraction(1, 4), Fraction(1, 16)), 'envelope': (Fraction(1, 8), Fraction(1, 8), Fraction(5, 8), Fraction(9, 8)), 'dressed': (Fraction(1, 8), Fraction(-1, 8), Fraction(5, 32), Fraction(-9, 128)), 'trace_norm': Fraction(61, 128), 'trace_bound': Fraction(61, 128), 'high_trace': Fraction(29, 128)}",
+      "expected": "trace norm saturates envelope bound",
+      "group": "trace",
+      "name": "independent trace factorization fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(1, 8), Fraction(-1, 8), Fraction(5, 32), Fraction(-9, 128))",
+      "expected": "decreasing high spectral tail in fixture",
+      "group": "trace",
+      "name": "independent Ritz tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "97/32",
+      "expected": "81/16",
+      "group": "q3_heat",
+      "name": "independent Q3 heat partition bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(85, 32), Fraction(437, 2048))",
+      "expected": "strict derived bounds",
+      "group": "q3_heat",
+      "name": "independent Q3 energy and residual bounds",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'relative_alpha': '1/16', 'operator_norm': '1', 'unnormalized_Sp': 'sqrt(2)', 'normalized_Sp': '1/2', 'fixed_transition': '1', 'large_m_limit': '0'}",
+      "expected": "normalization shrinks while fixed channel is one",
+      "group": "negative",
+      "name": "independent normalized Schatten separation",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.03125000000000001, 0.0002441406250000001, 7.450580596923833e-09]",
+      "expected": "decreasing fixed-time samples and supremum m",
+      "group": "negative",
+      "name": "independent fixed-time decay versus short-time supremum",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'plus_witness': '1/4', 'minus_witness': '-1/4', 'state_norm_distance': '2', 'compact_mass': '1/4', 'escaped_mass': '3/4', 'energy': '6'}",
+      "expected": "positive singular mass and growing energy coefficient",
+      "group": "negative",
+      "name": "independent energy escape",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "certificate",
+      "name": "certificate theorem tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "certificate",
+      "name": "certificate boundary tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'event_ordinal': 631, 'event_id': '20260813-r-167-v3-5-ritz-corner-state-passage-and-positi', 'event_title': 'R-167 v3.5 Ritz-corner state passage and positive-time trace-class cutoff removal', 'event_keywords': ['EXP-000839', 'R-167-v3.5', 'Ritz-corner-UCP', 'cutoff-state-passage', 'energy-tightness', 'fixed-witness', 'no-parent-closure', 'positive-time-trace-class'], 'theorem_map_version': '1.27.0', 'expected_post_formal_counts': {'claims': 49, 'results': 168, 'gates': 188, 'negatives': 363, 'explorations': 839, 'events': 631, 'tasks': 54, 'catalog': 3915}, 'required_links': 'EXP-000839, event 631, T-054, ROADMAP, strategy index, proof-evidence map, theorem map 1.27.0, generated compact surfaces, two exact scoped CLOSED results, four new no-go results including norm-one Ritz-corner multiplication and generator defects, three reused state/dynamics/cutoff firewalls, all five OPEN parents, and the historical beta-infinity gate remaining OPEN.'}",
+      "expected": "exact event id, catalog target and no PDF",
+      "group": "lifecycle",
+      "name": "proof-first lifecycle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "formal",
+      "name": "formal authority aggregate",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "compression_defects": {
+      "derived": {
+        "generator_defect_diagonal": [
+          "0",
+          "0",
+          "I"
+        ],
+        "generator_defect_operator_norm": "1",
+        "generator_defect_rank": "1",
+        "product_defect_diagonal": [
+          "0",
+          "0",
+          "1"
+        ],
+        "product_defect_operator_norm": "1",
+        "product_defect_rank": "1"
+      },
+      "inputs": {
+        "cutoff_rank": "3",
+        "shift_dimension": "4"
+      }
+    },
+    "corner_ucp": {
+      "derived": {
+        "compressed_matrix": [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "2",
+            "0"
+          ]
+        ],
+        "kadison_defect": [
+          [
+            "25",
+            "39"
+          ],
+          [
+            "39",
+            "61"
+          ]
+        ],
+        "kadison_defect_determinant": "4",
+        "parity_compatible": true,
+        "unital": true
+      },
+      "inputs": {
+        "ambient_dimension": "4",
+        "corner_rank": "2",
+        "test_matrix": [
+          [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          [
+            "2",
+            "0",
+            "5",
+            "6"
+          ],
+          [
+            "3",
+            "5",
+            "7",
+            "8"
+          ],
+          [
+            "4",
+            "6",
+            "8",
+            "9"
+          ]
+        ]
+      }
+    },
+    "energy_escape": {
+      "derived": {
+        "compact_mass": "1/4",
+        "energy": "6",
+        "escaped_mass": "3/4",
+        "minus_witness": "-1/4",
+        "plus_witness": "1/4",
+        "state_norm_distance": "2"
+      },
+      "inputs": {
+        "m0": "1/4",
+        "n": "8"
+      }
+    },
+    "energy_tightness": {
+      "derived": {
+        "energy": "1/4",
+        "energy_markov_bound": "1/8",
+        "gentle_bound": "sqrt(2)/2",
+        "strict_gentle_check": true,
+        "tail_probability": "1/16",
+        "trace_tail_norm": "sqrt(61)/16"
+      },
+      "inputs": {
+        "K_diagonal": [
+          "0",
+          "4"
+        ],
+        "R": "2",
+        "high_amplitude": "1/4"
+      }
+    },
+    "fixed_positive_time": {
+      "derived": {
+        "dressed_trace": "1/32",
+        "fixed_t_large_m_limit": "0",
+        "raw_HS_norm": "2*sqrt(2)",
+        "short_time_supremum": "8"
+      },
+      "inputs": {
+        "m": "8",
+        "t": "log(2)"
+      }
+    },
+    "normalized_schatten": {
+      "derived": {
+        "fixed_transition": "1",
+        "large_m_limit": "0",
+        "normalized_Sp": "1/2",
+        "operator_norm": "1",
+        "relative_alpha": "1/16",
+        "unnormalized_Sp": "sqrt(2)"
+      },
+      "inputs": {
+        "N": "4",
+        "m": "8",
+        "p": "2"
+      }
+    },
+    "positive_time_trace": {
+      "derived": {
+        "Z0": "37/16",
+        "Z1": "3/4",
+        "high_trace_bound": "29/128",
+        "last_Ritz_tail": "9/128",
+        "low_HS_bound": "sqrt(2)/8",
+        "low_operator_bound": "1/8",
+        "mixed_HS_bound": "sqrt(29)/32",
+        "trace_bound": "61/128",
+        "trace_norm": "61/128"
+      },
+      "inputs": {
+        "alpha": "1/4",
+        "epsilon": "1/8",
+        "h_diagonal": [
+          "0",
+          "0",
+          "2",
+          "4"
+        ],
+        "kernel_rank": "2",
+        "t": "log(2)"
+      }
+    },
+    "q3_edge_heat_trace": {
+      "derived": {
+        "Zk_t_over_12_squared": "25/4",
+        "Zk_t_over_6_squared": "81/16",
+        "edge_Z0": "97/32",
+        "edge_Z1": "85/32",
+        "residual_trace": "437/2048",
+        "residual_upper_bound": "81/1024+25/(32*E*log(2))",
+        "strict_upper_check": true
+      },
+      "inputs": {
+        "J": "1",
+        "N": "4",
+        "alpha": "1/N^2",
+        "beta_edge": "1/N^3",
+        "fixture_scope": "actual-compatible selfadjoint-contraction fixture with high-sector zero",
+        "k_diagonal": [
+          "0",
+          "0",
+          "12"
+        ],
+        "s_diagonal": [
+          "1",
+          "-1",
+          "0"
+        ],
+        "t": "log(2)"
+      }
+    }
+  },
+  "mode": "formal",
+  "package_id": "pre-a-cp1-st8-q3lock-ritz-corner-energy-tightness-and-positive-time-trace-route-split",
+  "schema": "tect/verification-run/1.0",
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_ritz_corner_energy_tightness_and_positive_time_trace_route_split_independent.py": "82b6205d03c4cf591c8e731dc0f173ec6ad95b5ae33a769ac2598764c2531961",
+    "strategy/pre-a-cp1-st8-q3lock-ritz-corner-energy-tightness-and-positive-time-trace-route-split-certificate-260813.md": "40ed4e305c611c01c0b8eaeef90f1595696519e1b31afacb72de0a2fe29a7c92",
+    "strategy/pre-a-cp1-st8-q3lock-ritz-corner-energy-tightness-and-positive-time-trace-route-split-manifest.json": "ec4a735cebd22897887a45abb5beeed9ab4278ab4c202e71c617c006be92580d"
+  },
+  "summary": {
+    "failed": 0,
+    "missing": 0,
+    "passed": 18,
+    "total": 18
+  },
+  "verdict": "PASS"
+}

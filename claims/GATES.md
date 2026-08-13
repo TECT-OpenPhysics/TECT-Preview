@@ -114,6 +114,11 @@ one exact Hilbert--Schmidt multiplicity obstruction. It creates no contestant,
 microscopic observable map, common estimand, prospective prediction,
 custodian commitment, freeze or score. Round-1 remains OPEN.
 
+EXP-000839 / R-167 v3.5 adds two claim-nonbearing cutoff-passage lemmas and
+four exact implication failures. It creates no contestant, microscopic
+observable map, common estimand, prospective prediction, custodian
+commitment, freeze or score. Round-1 remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -679,6 +684,13 @@ EXP-000838 / R-167 v3.4 isolates sufficient hypotheses for simultaneous
 gap theorem, but proves neither those uniform hypotheses nor cutoff-stable
 phase identification. This historical exact-Q3/common-alpha gate remains
 OPEN.
+
+EXP-000839 / R-167 v3.5 gives parity-compatible Ritz-corner state pullbacks
+and locally normal cluster states only under a fixed-witness and uniform local
+energy-tightness premise. It proves no full-Q3 KMS or ground identity, common
+generator, beta-to-infinity phase selection or phasewise gap. The
+positive-imaginary-time trace-class limit is not a beta-to-infinity state
+theorem. This historical gate remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-CONNECTED-SUSCEPTIBILITY-AND-GNS-POINCARE-GATE**
 
@@ -1914,6 +1926,44 @@ phasewise implementing spectral gap. The rectangle, its numerical gap, the
 DFFR/Yarotskii branch identity, `M`-uniformity and full-oscillator passage are
 not proved.
 
+### **PA-CP1-ST8-Q3LOCK-RITZ-CORNER-PULLBACK-FIXED-WITNESS-AND-LOCAL-ENERGY-TIGHTNESS-STATE-PASSAGE**
+
+**Statement:** Put all finite-Ritz states on one full bounded local oscillator
+algebra by parity-compatible corner UCP pullback, preserve one fixed odd
+witness, and identify the precise local-energy condition that upgrades
+weak-star clusters to locally normal states.
+
+**Status:** CLOSED AS A CONDITIONAL STATE-PASSAGE THEOREM ONLY (2026-08-13).
+EXP-000839 / R-167 v3.5 proves that
+`C_(M,X)(A)=P_(M,X) A P_(M,X)` is unital completely positive into the corner
+algebra, spatially compatible and projective in `M`. A single fixed local odd
+selfadjoint contraction with a uniform split survives every joint weak-star
+cluster and separates the parity pair by at least `2m`. If one fixed
+compact-resolvent `K_X` per finite region obeys a uniform local energy bound,
+then the spectral tail is at most `E_X/R`, the gentle cutoff error is at most
+`2 sqrt(E_X/R)`, and the local densities are trace-norm precompact; the
+cluster states are locally normal. The compactness principle is credited to
+EXP-000781. No dynamics, KMS condition, ground identity, purity, phase
+classification or GNS gap is proved.
+
+### **PA-CP1-ST8-Q3LOCK-POSITIVE-IMAGINARY-TIME-ENERGY-DRESSED-TRACE-CLASS-RITZ-REMOVAL**
+
+**Statement:** Remove spectral Ritz projections from a relatively form-
+bounded perturbation after a fixed positive imaginary-time energy dressing,
+with exact trace-class and low/high block bounds.
+
+**Status:** CLOSED FOR EACH FIXED POSITIVE IMAGINARY TIME AND FIXED MODEL ONLY
+(2026-08-13). EXP-000839 / R-167 v3.5 proves that if
+`-B<=V<=B`, `B=alpha h+epsilon I`, then
+`T_t=e^(-th/2) V e^(-th/2)` is trace class and
+`||T_t||_1<=alpha Tr(h e^(-th))+epsilon Tr(e^(-th))`; commuting spectral
+Ritz compressions converge to `T_t` in trace norm. For the exact Q3 edge the
+commuting positive sign penalty gives the explicit bound
+`2alpha_N Z_k(t/12)^2/(e t)+beta_N Z_k(t/6)^2`. This is an actual
+full-oscillator cutoff removal at fixed `N,t>0`, not an undressed DFFR block
+estimate, a uniform `t->0` contour bound, an `N`-uniform theorem or a real-time
+dynamics result.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -1970,6 +2020,12 @@ bounds do not by themselves control the unnormalized DFFR Hilbert--Schmidt
 multiplicity, and closes only conditional entry and fixed-Ritz gap reductions.
 It constructs no oscillator elimination, cutoff-compatible QPS norm or
 phasewise intertwiner. This parent remains OPEN.
+
+EXP-000839 / R-167 v3.5 removes Ritz projections only from a fixed-positive-
+imaginary-time energy-dressed form perturbation. Its corner maps are UCP but
+have exact norm-one multiplication and generator defects, so they do not
+construct a block diagonalization, connected QPS interaction, algebra
+intertwiner or phasewise oscillator map. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -2077,6 +2133,13 @@ EXP-000838 / R-167 v3.4 is likewise static and cutoff-indexed. Its exact
 Hilbert--Schmidt obstruction and conditional gap reduction construct no
 compatible spatial carrier, all-shape Cauchy estimate, common dynamics or
 Hamiltonian-to-phase quotient. This parent remains OPEN.
+
+EXP-000839 / R-167 v3.5 places Ritz states on one bounded full-oscillator
+local algebra by UCP pullback, but this is a static state construction and not
+a compatible multiplicative embedding. The norm-one corner generator defect
+and the absence of all-shape dynamics estimates leave the common-alpha and
+Hamiltonian-to-phase quotient obligations untouched. This parent remains
+OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -2316,6 +2379,13 @@ Yarotskii route is explicitly conditional at each fixed Ritz label and gives
 no `M`-uniform rectangle, phase passage or oscillator intertwiner. This parent
 remains OPEN.
 
+EXP-000839 / R-167 v3.5 proves locally normal full-algebra cluster states only
+after assuming a fixed odd witness and uniform local energy tightness, and it
+removes Ritz cutoffs only from positive-time energy-dressed perturbations.
+Neither result supplies the full-oscillator two-phase QPS theorem, equilibrium
+identity, cutoff-stable phase classification or a uniform excitation gap.
+This parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -2405,6 +2475,14 @@ split and a conditional route to the cited phasewise GNS-gap conclusion. It
 does not prove the required Yarotskii neighbourhood, identify those branches
 with the DFFR limits, construct the common oscillator dynamics or transfer a
 uniform gap through cutoff removal. This parent remains OPEN.
+
+EXP-000839 / R-167 v3.5 separates parity-related Ritz-corner cluster states
+and proves their local normality only under explicit fixed-witness and local-
+energy-tightness premises. It does not prove that the cluster states are
+ground states of a common target dynamics, establish the energy identity or
+centered form core, or transfer a positive gap. The positive-imaginary-time
+trace-class limit does not close any of those GNS obligations. This parent
+remains OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 

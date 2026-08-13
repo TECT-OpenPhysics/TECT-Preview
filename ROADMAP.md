@@ -1315,6 +1315,21 @@ cutoff passage, full-oscillator phase theorem, common alpha or exact-Q3 GNS
 gap follows. The historical beta-infinity gate and all five active parents
 remain OPEN. No v3.4 PDF is issued.
 
+EXP-000839 / R-167 v3.5 retains every v3.4 child and adds two scoped T0
+cutoff-passage results. Ritz-corner compression gives a common full-oscillator
+state carrier by UCP pullback; one fixed odd witness survives, and a uniform
+fixed-local-energy bound gives the explicit `2 sqrt(E_X/R)` trace-norm
+tightness modulus and locally normal clusters. Separately, positive imaginary
+time makes a relative-form perturbation trace class and removes commuting
+spectral Ritz cutoffs in trace norm at every fixed `N,t>0`. Four exact
+fixtures show why dimension-normalized Schatten norms, fixed-positive-time
+trace estimates, witness separation without energy tightness, and UCP corner
+compression without cross-boundary control do not supply the missing contour,
+normality or dynamics conclusions. No full-Q3 equilibrium identity, common
+alpha, beta-infinity phase selection, full-oscillator phase theorem or GNS
+gap follows. The historical beta-infinity gate and all five active parents
+remain OPEN. No v3.5 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or
