@@ -201,6 +201,42 @@ if its effect depends essentially on a fixed medium frame, external clock,
 inserted gauge field, material constitutive data, or an unexplained transfer of
 laboratory scales to the physical vacuum.
 
+### 4.5 Radiative energy transfer and thermal recovery tests
+
+Radiative heat transfer across dilute space is not a fourth mechanical form of
+transport separate from light.  In the established low-energy description, a
+hot source emits electromagnetic radiation, usually with a broad thermal
+spectrum; the radiation propagates through vacuum and deposits energy in an
+absorber, where it becomes internal thermal excitation.  Coherent light and
+thermal radiation are thus different states and statistical preparations of
+the same electromagnetic sector, not evidence for a material heat-carrying
+vacuum medium.
+
+For a microscopic candidate, the relevant recovery and falsifier chain is:
+
+```text
+candidate low-energy QFT
+  -> massless electromagnetic propagation and coupling to matter
+  -> emission, transmission, absorption, and energy conservation
+  -> thermal equilibrium/KMS or equivalent statistical state description
+  -> blackbody spectrum, detailed balance, and zero net exchange at equal
+     temperature
+```
+
+The standard blackbody and radiative-equilibrium relations are downstream
+benchmarks, not microscopic inputs.  A candidate fails this recovery test if
+it needs a material vacuum carrier, cannot define emission and absorption on a
+common dynamics, violates energy balance or detailed balance, or cannot obtain
+the thermal spectrum and equilibrium zero-net-flux relation in its declared
+low-energy regime.
+
+Reading-H has no established role in this chain at present.  Its registered
+results are relative free-energy rankings inside enumerated condensate
+ensembles; they do not establish `F[Reading-H] < F[0]`, a physical empty
+reference, an electromagnetic sector, photons, KMS radiation, or thermal
+transport.  It may become a candidate state/reference only after those
+separate structures are derived on one common Hamiltonian.
+
 ## 5. Candidate-neutral comparison rule
 
 The M0 established low-energy baseline is retained as the comparison standard.

@@ -1234,6 +1234,22 @@ strictly strengthens the v2.7 raw-Weyl special case without rejecting other
 topologies or carriers. All five parents remain OPEN. No v2.8 PDF is issued at
 this proof-first stage.
 
+EXP-000833 / R-167 v2.9 retains every v2.8 child and adds four scoped T0
+children: the sufficiently-large-`N` exact full-oscillator single-phase
+transfer after adding a bounded spectral-doublet selector, the maximal
+continuous part of each finite exact full-Hamiltonian action, the maximal
+uniformly continuous all-finite-shape product envelope with fixed-beta KMS
+compactness, and the maximal continuous part of the fixed-beta OS mixture
+preserving two distinct KMS restrictions. Three exact fixtures reject
+automatic selector removal, automatic entry of a vanishing defect into an
+`N`-dependent two-phase radius, and automatic all-shape Cauchy convergence or
+a unique phase quotient from the categorical envelope. The selector theorem
+is exact on the infinite-dimensional onsite Hilbert space but only for the
+selected Hamiltonian. The finite/product/OS continuous parts are maximal for
+their given actions, yet the alternating-`M_2` fixture proves that categorical
+uniform continuity and KMS compactness do not supply all-shape Cauchy
+convergence or a unique phase quotient. All five parents remain OPEN. No v2.9
+PDF is issued.
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

@@ -1,0 +1,120 @@
+{
+    "schema":  "tect/pre-a-q3lock-selector-continuous-envelope/1.0",
+    "package_id":  "pre-a-cp1-st8-q3lock-selector-yarotsky-maximal-continuous-kms-envelope-route-split",
+    "version":  "R-167 v2.9",
+    "date":  "2026-08-13",
+    "task_id":  "T-054",
+    "claim_ids":  [
+                      "C6-SPACETIME-SIGNATURE"
+                  ],
+    "exploration_id":  "EXP-000833",
+    "prior_exploration_id":  "EXP-000831",
+    "claim_bearing":  false,
+    "closed_gate_ids":  [
+                            "PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-BOUNDED-DOUBLET-SELECTOR-YAROTSKY-SINGLE-PHASE-TRANSFER",
+                            "PA-CP1-ST8-Q3LOCK-FIXED-FINITE-FULL-HAMILTONIAN-BOUNDED-LOCAL-STRICT-C0-AND-MAXIMAL-CONTINUOUS-ELEMENT-KMS-CORE",
+                            "PA-CP1-ST8-Q3LOCK-ALL-FINITE-ZERO-SOURCE-UNIFORM-CONTINUOUS-ELEMENT-PRODUCT-ENVELOPE-AND-FIXED-BETA-KMS-COMPACTNESS",
+                            "PA-CP1-ST8-Q3LOCK-FIXED-BETA-OS-MIXTURE-MAXIMAL-CONTINUOUS-ELEMENT-DISTINCT-PHASE-KMS-CORE"
+                        ],
+    "negative_ids":  [
+                         "NG-2026-08-13-PRE-A-ST8-Q3LOCK-SELECTOR-ADD-SUBTRACT-AUTOMATIC-ZERO-SOURCE-TRANSFER",
+                         "NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY",
+                         "NG-2026-08-13-PRE-A-ST8-Q3LOCK-CATEGORICAL-UNIFORM-CONTINUOUS-ELEMENT-KMS-ENVELOPE-AUTOMATIC-ALL-SHAPE-CAUCHY-AND-UNIQUE-PHASE-QUOTIENT"
+                     ],
+    "open_parent_gate_ids":  [
+                                 "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+                                 "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+                                 "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+                                 "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+                                 "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+                             ],
+    "full_oscillator_selector_single_phase":  {
+                                                  "source":  "https://arxiv.org/abs/math-ph/0412040",
+                                                  "reference":  "D. A. Yarotsky, Commun. Math. Phys. 261 (2006), 799-819, Theorem 1",
+                                                  "setup":  "On the registered zero-source large-N corridor let P_N be the exact even/odd onsite doublet, s_N exchange its two parity eigenvectors, p_N^-=(P_N-s_N)/2, and k_N=h_site,N-epsilon_(0,N)-delta_(1,N)P_(1,N)\u003e=Gamma_N(1-P_N). For a fixed 0\u003cu\u003c=1 add the bounded selector u sum_x p_(x,N)^- to the exact full-oscillator Hamiltonian. Allocate it as u[p_x^-+p_y^-]/6 on each positive cubic edge and group the three positive edges at x into the forward star Lambda_*={0,e_1,e_2,e_3}.",
+                                                  "reference_star":  "h_(x,N)^u=sum_(i=1)^3[(k_x+k_(x+e_i))/6+J_N(1-s_x s_(x+e_i))+u(p_x^-+p_(x+e_i)^-)/6] is classical for the product partition {p_N^+,p_N^-,high spectral projections}, has the unique kernel (Omega_N^+)^(tensor 4), and exact local gap g_(star,N)(u)=min{u,2J_N+u/6,Gamma_N/6+J_N}. For sufficiently large N with J_N\u003e=1 this equals u.",
+                                                  "relative_form":  "The v1.9 edge residual estimate |V_(e,N)(psi,psi)|\u003c=alpha_N h_(e,N)^0(psi,psi)+beta_N||psi||^2 and selector positivity give |phi_(x,N)(psi,psi)|\u003c=alpha_N h_(x,N)^u(psi,psi)+3beta_N||psi||^2. After division by the exact gap u, Yarotsky inputs are alpha_N and 3beta_N/u.",
+                                                  "quantitative_onset":  "Choose witnesses C_alpha,C_beta,N_1 with alpha_N\u003c=C_alpha N^-2, beta_N\u003c=C_beta N^-3 and J_N\u003e=1 for N\u003e=N_1. If a_Y,b_Y are the existential Theorem-1 admissibility constants for dimension three and Lambda_*, then N_*(u)=max{N_1,ceil(sqrt(C_alpha/a_Y)),ceil((3C_beta/(u b_Y))^(1/3))}. Every N\u003e=N_*(u) satisfies the theorem.",
+                                                  "conclusion":  "For every fixed 0\u003cu\u003c=1 and all sufficiently large N, the exact selected full-oscillator Hamiltonian has a nondegenerate ground vector and a positive volume-independent finite-volume spectral gap in every periodic volume, a thermodynamic weak-star ground-state limit, exponential clustering for bounded local observables, and weak-star analyticity only for parameters whose forms or resolvents are analytic inside the same admissible region. Parity gives the opposite selector theorem.",
+                                                  "boundary":  "The source is the bounded spectral-doublet selector, not the physical linear source. The theorem is exact on the full infinite-dimensional onsite Hilbert space but does not remove the selector, prove zero-source coexistence, identify a common real-time algebra, or prove a broken-sector GNS Hamiltonian gap. The Yarotsky constants and numerical onset are existential."
+                                              },
+    "finite_full_h_continuous_core":  {
+                                          "definition":  "For each exact finite-volume full Q3 Hamiltonian H_Lambda put alpha_t=Ad exp(itH_Lambda/hbar) and C(H_Lambda)={A in B(H_Lambda):||alpha_t(A)-A||-\u003e0}.",
+                                          "theorem":  "On B(H_Lambda)=M(K(H_Lambda)) the full action is bounded-strict, equivalently bounded-strong-star, continuous. C(H_Lambda) is the maximal invariant unital C-star subalgebra on which the action is point-norm C0; it contains K(H_Lambda). Every L1 temporal smear B_f=int f(s)alpha_s(B)ds lies in C(H_Lambda) and obeys ||alpha_t(B_f)-B_f||\u003c=||B||||f(.-t)-f||_1. Smooth compactly supported smears satisfy delta(B_f)=-B_(f\u0027) and form a norm-generator core.",
+                                          "energy_topology":  "With K_Lambda=1+H_Lambda-E_(0,Lambda), compact resolvent makes K_Lambda^-s compact. The exact action is isometric C0 for q_s(A)=||AK_Lambda^-s||+||K_Lambda^-s A||.",
+                                          "kms_and_multiplier_boundary":  "Every finite Gibbs state restricts to a beta-KMS state on C(H_Lambda). Combined with R-167 v2.8, C(H_Lambda) intersects the bounded continuous configuration multipliers exactly in C times the identity."
+                                      },
+    "all_finite_uniform_continuous_product":  {
+                                                  "definition":  "In M=product_Lambda B(H_Lambda), with diagonal exact actions, C_u consists of bounded families A such that sup_Lambda||alpha_t^Lambda(A_Lambda)-A_Lambda|| tends to zero.",
+                                                  "theorem":  "C_u is the maximal invariant unital C-star subalgebra carrying the diagonal point-norm C0 action and is the norm closure of coordinatewise L1 temporal smears. Each coordinate evaluation is a surjective equivariant quotient C_u-\u003eC(H_Lambda), and the smooth generators intertwine. The existing universal L1 orbit-smear carrier embeds equivariantly. At fixed beta, finite Gibbs evaluation states and all of their weak-star cluster points are beta-KMS on C_u.",
+                                                  "boundary":  "C_u is categorical and beta/state independent, but it has no spatial net, no exhaustion-identification relation, and no claim that a single local seed has Cauchy images across shapes."
+                                              },
+    "fixed_beta_os_mixture_continuous_core":  {
+                                                  "definition":  "For the previously reconstructed fixed-beta mixture W-star system (M_beta,alpha^beta,psi_+,psi_-), let A_(beta,c)={X:||alpha_t^beta(X)-X||-\u003e0}.",
+                                                  "theorem":  "A_(beta,c) is the weak-star dense maximal invariant norm-C0 C-star subalgebra of M_beta. Smooth temporal smears are a generator core. The two normal beta-KMS phase states restrict to distinct beta-KMS states: if B distinguishes them and int f=1, invariance gives psi_+(B_f)-psi_-(B_f)=psi_+(B)-psi_-(B).",
+                                                  "boundary":  "This is fixed-beta and phase-pair derived. It does not identify exact finite Hamiltonian exhaustions with the OS mixture, construct a beta-independent spatial quasi-local algebra, or select a ground state."
+                                              },
+    "selector_add_subtract_no_go":  {
+                                        "negative_id":  "NG-2026-08-13-PRE-A-ST8-Q3LOCK-SELECTOR-ADD-SUBTRACT-AUTOMATIC-ZERO-SOURCE-TRANSFER",
+                                        "fixture":  "Put the selector in the reference and subtract it in the perturbation to recover the zero-source Hamiltonian. On the all-minus forward-star vector the reference expectation is u and the counterselector expectation is -u, so the normalized relative ratio is exactly one for every N and u. Also 3beta_N/u diverges at fixed N as u tends to zero.",
+                                        "scope":  "This rejects only automatic selector removal through the same one-phase small-relative-form theorem. It is not a no-go for zero-source phases by a genuine two-phase method."
+                                    },
+    "n_dependent_radius_no_go":  {
+                                     "negative_id":  "NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY",
+                                     "fixture":  "Let theta_N=N^-3 be a defect and r_N=N^-4 the positive theorem radius. Both tend to zero, but theta_N\u003er_N for every N\u003e=2.",
+                                     "scope":  "Vanishing oscillator defects plus a separately existential positive radius for each N do not imply eventual two-phase theorem entry. A common positive lower radius or a quantitative comparison is required. This grants the doublet reference and is distinct from the earlier classical-minima direct-import mismatch."
+                                 },
+    "categorical_exhaustion_no_go":  {
+                                         "negative_id":  "NG-2026-08-13-PRE-A-ST8-Q3LOCK-CATEGORICAL-UNIFORM-CONTINUOUS-ELEMENT-KMS-ENVELOPE-AUTOMATIC-ALL-SHAPE-CAUCHY-AND-UNIQUE-PHASE-QUOTIENT",
+                                         "fixture":  "On M2 take H_(2m)=0, H_(2m+1)=diag(0,1), and A_n=sigma_x. The generators are uniformly bounded, so A belongs to C_u. At t=pi/2 the evolved observables alternate between sigma_x and sigma_y and have distance sqrt(2). At beta=log 2, the Gibbs expectation of E_22 alternates between 1/2 and 1/3; the odd KMS oracle is omega(E_12 alpha_(i beta)(E_21))=1/3=omega(E_21 E_12).",
+                                         "scope":  "This rejects only the implication from categorical C0/KMS compactness to all-shape Cauchy convergence or a unique phase quotient. It is not a Q3 thermodynamic nonexistence theorem."
+                                     },
+    "exact_fixture":  {
+                          "selector":  {
+                                           "z":  6,
+                                           "dimension":  3,
+                                           "J":  "8",
+                                           "Gamma":  "100",
+                                           "u":  "1",
+                                           "edge_plus_plus":  "0",
+                                           "edge_minus_minus":  "1/3",
+                                           "edge_plus_minus":  "97/6",
+                                           "edge_plus_high":  "74/3",
+                                           "star_kernel_dimension":  1,
+                                           "star_gap":  "1",
+                                           "alpha":  "1/100",
+                                           "beta":  "1/1000",
+                                           "normalized_beta":  "3/1000",
+                                           "selector_removal_ratio":  "1"
+                                       },
+                          "radius":  {
+                                         "sample_N":  2,
+                                         "defect":  "1/8",
+                                         "radius":  "1/16",
+                                         "eventual_entry":  false
+                                     },
+                          "categorical":  {
+                                              "evolved_distance_squared":  "2",
+                                              "even_gibbs":  "1/2",
+                                              "odd_gibbs":  "1/3",
+                                              "odd_kms_left":  "1/3",
+                                              "odd_kms_right":  "1/3",
+                                              "all_shape_cauchy":  false,
+                                              "unique_kms_cluster":  false
+                                          }
+                      },
+    "verification":  {
+                         "primary_script":  "codes/foundations/pre_a_cp1_st8_q3lock_selector_yarotsky_maximal_continuous_kms_envelope_route_split.py",
+                         "independent_script":  "codes/foundations/pre_a_cp1_st8_q3lock_selector_yarotsky_maximal_continuous_kms_envelope_route_split_independent.py",
+                         "integrated_script":  "codes/foundations/pre_a_cp1_st8_q3lock_selector_yarotsky_maximal_continuous_kms_envelope_route_split_verify.py",
+                         "primary_result":  "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-primary-pre-a-cp1-st8-q3lock-selector-yarotsky-maximal-continuous-kms-envelope-route-split/result.json",
+                         "independent_result":  "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-independent-pre-a-cp1-st8-q3lock-selector-yarotsky-maximal-continuous-kms-envelope-route-split/result.json",
+                         "integrated_result":  "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-integrated-pre-a-cp1-st8-q3lock-selector-yarotsky-maximal-continuous-kms-envelope-route-split/result.json"
+                     },
+    "checkpoint_synthesis":  {
+                                 "status":  "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+                                 "pdf_issued":  false,
+                                 "workflow":  "Proof-first manifest, certificate, three executable verifiers, formal authority and run JSON only. No v2.9 PDF is issued."
+                             },
+    "no_overclaim":  "R-167 v2.9 closes four scoped T0 children and registers three implication failures. It proves a full-oscillator single selected phase only after adding a bounded spectral-doublet selector; it proves no selector removal, zero-source coexistence, M-independent two-phase QPS radius, broken-sector GNS Hamiltonian gap, common thermodynamic alpha; all five active parent gates remain OPEN. It proves no spatial quasi-locality, all-shape Cauchy identification, unique KMS quotient, Round-1, C6, CP1, physical Sector A or Pre-A."
+}

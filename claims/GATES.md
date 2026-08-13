@@ -82,6 +82,10 @@ configuration-multiplier point-norm boundary. It creates no candidate, common
 estimand, microscopic observable map, prospective prediction, custodian
 commitment, freeze or score. Round-1 remains OPEN.
 
+EXP-000833 / R-167 v2.9 closes four claim-nonbearing scoped mathematical
+children and registers three implication failures. It creates no contestant,
+microscopic observable map, common estimand, prospective prediction,
+custodian commitment, freeze or score. Round-1 remains OPEN.
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -1620,6 +1624,83 @@ physical instance, an arbitrary-Ritz or `M`-uniform theorem, full-oscillator
 cutoff removal, a standard-SW growing-order theorem, a convergent
 transformation, phase transfer, common alpha or a GNS-gap result.
 
+### **PA-CP1-ST8-Q3LOCK-FULL-OSCILLATOR-BOUNDED-DOUBLET-SELECTOR-YAROTSKY-SINGLE-PHASE-TRANSFER**
+
+**Statement:** For the exact full infinite-dimensional onsite oscillator on the
+registered zero-source periodic cubic corridor, add a fixed bounded spectral-
+doublet selector and prove eventual entry into Yarotsky's relatively bounded
+single-phase regime without a Ritz cutoff.
+
+**Status:** CLOSED FOR EACH FIXED `0<u<=1`, SUFFICIENTLY LARGE `N`, THE
+REGISTERED ADMISSIBLE PERIODIC CUBIC FAMILY, AND THE SELECTED PHASE ONLY
+(2026-08-13). EXP-000833 / R-167 v2.9 uses
+`p_N^-=(P_N-s_N)/2=|Omega_N^-><Omega_N^-|` and groups the three positive
+edges at a site into one forward star. The exact classical reference has
+unique product kernel `(Omega_N^+)^(tensor 4)` and local gap
+`g_(star,N)(u)=min{u,2J_N+u/6,Gamma_N/6+J_N}`; for sufficiently large `N`
+this equals `u`. The v1.9 residual form estimate groups to
+`|phi_(x,N)|<=alpha_N h_(x,N)^u+3beta_N`, hence the normalized Yarotsky
+inputs are `alpha_N` and `3beta_N/u`. Since `alpha_N=O(N^-2)` and
+`beta_N=O(N^-3)`, every fixed selector eventually satisfies the existential
+Theorem-1 admissibility constants. The selected exact full-oscillator
+Hamiltonian therefore has a nondegenerate finite-volume ground vector, a
+positive gap independent of periodic spatial volume, a weak-star
+thermodynamic ground-state limit and exponential clustering of bounded local
+observables. Parity gives the opposite-selector statement. The selector is
+not the physical linear source. This proves no selector removal, zero-source
+coexistence, `N`-uniform gap, common dynamics, broken-sector GNS gap or
+physical phase selection.
+
+### **PA-CP1-ST8-Q3LOCK-FIXED-FINITE-FULL-HAMILTONIAN-BOUNDED-LOCAL-STRICT-C0-AND-MAXIMAL-CONTINUOUS-ELEMENT-KMS-CORE**
+
+**Statement:** For each exact finite-volume full Q3 Hamiltonian, identify the
+maximal point-norm continuous subalgebra inside the bounded multiplier algebra
+and its strict/energy-topology, temporal-smear and finite-Gibbs KMS structure.
+
+**Status:** CLOSED AT EACH FIXED FINITE VOLUME ONLY (2026-08-13). EXP-000833 /
+R-167 v2.9 proves that `C(H_Lambda)={A:||alpha_t(A)-A||->0}` is the maximal
+invariant unital C-star subalgebra of `B(H_Lambda)=M(K(H_Lambda))` carrying
+point-norm C0 dynamics. The full action is bounded-strict, equivalently
+bounded-strong-star, continuous; `K(H_Lambda)` and all bounded-strict L1
+temporal smears lie in the continuous part, smooth smears form a generator
+core, and compact resolvent gives C0 control in
+`q_s(A)=||AK^-s||+||K^-s A||` for every `s>0`. Finite Gibbs states restrict
+to beta-KMS states. Together with R-167 v2.8, the only bounded continuous
+configuration multipliers in this norm-continuous part are scalars. This is
+finite-volume and supplies no spatial common-alpha limit.
+
+### **PA-CP1-ST8-Q3LOCK-ALL-FINITE-ZERO-SOURCE-UNIFORM-CONTINUOUS-ELEMENT-PRODUCT-ENVELOPE-AND-FIXED-BETA-KMS-COMPACTNESS**
+
+**Statement:** On the product of all exact finite-shape Hamiltonian
+representations, construct the maximal coordinate-uniform norm-continuous
+element algebra and determine precisely what fixed-beta Gibbs compactness does
+and does not imply.
+
+**Status:** CLOSED AS A CATEGORICAL PRODUCT ENVELOPE ONLY (2026-08-13).
+EXP-000833 / R-167 v2.9 proves that
+`C_u={A: sup_Lambda||alpha_t^Lambda(A_Lambda)-A_Lambda||->0}` is the maximal
+invariant unital C-star algebra carrying the diagonal point-norm C0 action.
+It is the norm closure of temporal smears using the same L1 kernel in every
+coordinate; each coordinate map is a surjective equivariant quotient onto
+`C(H_Lambda)`. Fixed-beta Gibbs evaluations are KMS and every weak-star
+cluster remains KMS on the common analytic smear core. This product has no
+spatial seed identification, and therefore proves neither all-shape Cauchy
+convergence nor a common thermodynamic Q3 dynamics.
+
+### **PA-CP1-ST8-Q3LOCK-FIXED-BETA-OS-MIXTURE-MAXIMAL-CONTINUOUS-ELEMENT-DISTINCT-PHASE-KMS-CORE**
+
+**Statement:** In the already reconstructed fixed-beta canonical OS-mixture
+W-star system, identify the maximal norm-continuous C-star part and preserve
+the two distinct phase KMS states on it.
+
+**Status:** CLOSED INSIDE THE FIXED-BETA OS-MIXTURE REPRESENTATION ONLY
+(2026-08-13). EXP-000833 / R-167 v2.9 proves that the norm-continuous part is
+a weak-star dense maximal invariant C-star subalgebra; temporal smooth smears
+form a generator core. Both normal phase states restrict to beta-KMS states
+and remain distinct after smearing any bounded distinguishing witness with an
+integral-one kernel. This supplies a target continuous core but no
+exhaustion-independent Hamiltonian-to-OS homomorphism and no common-alpha
+closure.
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -1643,6 +1724,11 @@ complement is excluded from the local-SW Hamiltonian. It supplies no
 full-oscillator block diagonalization, standard-SW growing-order transfer,
 phase intertwiner or GNS map. This parent remains OPEN.
 
+EXP-000833 / R-167 v2.9 reaches the exact full onsite oscillator only after
+adding a fixed bounded doublet selector. It is a single selected-phase
+relative-form theorem, not a zero-source block diagonalization, connected QPS
+interaction, selector-removal result, or phasewise GNS intertwiner. This
+parent remains OPEN.
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
 **Statement:** Starting from the finite-region local-strict carrier, construct
@@ -1853,6 +1939,13 @@ to the full oscillator edge. This does not certify replacing `q` by
 `Pi_M q Pi_M` before squaring, a many-edge linked-cluster interaction,
 thermodynamic two-phase QPS transfer, or an oscillator GNS gap.
 
+EXP-000833 / R-167 v2.9 identifies three maximal continuous-element cores:
+each finite full-Hamiltonian core, the categorical uniform product core, and
+the fixed-beta OS-mixture core. The exact alternating `M_2` fixture shows that
+a categorical common C0 envelope and KMS compactness do not imply all-shape
+Cauchy convergence or a unique phase quotient. No spatial seed-identifying
+Hamiltonian-to-OS map or two-sign all-shape estimate is proved. This parent
+remains OPEN.
 ### **PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS**
 
 **Statement:** Starting from the exact rank-two onsite band, prove a volume-
@@ -1913,6 +2006,11 @@ uniformity obstruction therefore remains applicable, and no full-oscillator
 cutoff removal, connected QPS interaction or two-phase transfer follows. This
 parent remains OPEN.
 
+EXP-000833 / R-167 v2.9 proves a full-oscillator theorem only at fixed
+nonzero bounded selector. The exact add--subtract fixture has normalized
+counterselector ratio one, and vanishing defects need not enter separately
+shrinking theorem radii. Thus neither selector removal nor the zero-source
+two-phase QPS transfer follows. This parent remains OPEN.
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -1965,6 +2063,12 @@ remainder theorem. It identifies neither ordered infinite-volume oscillator
 phases nor their GNS representations and proves no sectorwise coercivity or
 spectral gap. This parent remains OPEN.
 
+EXP-000833 / R-167 v2.9 gives, for each fixed selected system, a
+volume-independent finite-volume gap and a weak-star thermodynamic state. The
+source theorem does not identify the common Q3 dynamics, its GNS Hamiltonian
+or the required invariant core, and the selector is not removed. Therefore no
+broken-sector coercive estimate or physical mass gap follows. This parent
+remains OPEN.
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**

@@ -9,6 +9,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-SELECTOR-ADD-SUBTRACT-AUTOMATIC-ZERO-SOURCE-TRANSFER](#ng-2026-08-13-pre-a-st8-q3lock-selector-add-subtract-automatic-zero-source-transfer) | remove the bounded selector by putting it in the reference and subtracting it as a small perturbation | the all-minus forward-star vector gives reference energy `u` and counterselector expectation `-u`, hence relative ratio one for every `N,u`; additionally `3beta_N/u` diverges at fixed `N` as `u->0`. This rejects only that single-phase removal argument |
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY](#ng-2026-08-13-pre-a-st8-q3lock-vanishing-defect-automatic-n-dependent-two-phase-radius-entry) | infer eventual two-phase theorem entry from defect `theta_N->0` and positive radius `r_N>0` separately at each `N` | `theta_N=N^-3` and `r_N=N^-4` both vanish but `theta_N>r_N` for every `N>=2`. Require a common positive lower radius or quantitative comparison |
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-CATEGORICAL-UNIFORM-CONTINUOUS-ELEMENT-KMS-ENVELOPE-AUTOMATIC-ALL-SHAPE-CAUCHY-AND-UNIQUE-PHASE-QUOTIENT](#ng-2026-08-13-pre-a-st8-q3lock-categorical-uniform-continuous-element-kms-envelope-automatic-all-shape-cauchy-and-unique-phase-quotient) | infer all-shape Cauchy convergence and a unique phase quotient from the categorical continuous/KMS envelope | alternating `M_2` with `H_(2m)=0`, `H_(2m+1)=diag(0,1)`, `A_n=sigma_x` has uniform C0 membership but distance `sqrt(2)` at `t=pi/2`; at `beta=log 2`, Gibbs `E_22` expectations alternate `1/2,1/3` while the odd KMS identity is exact |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONCONSTANT-CB-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0](#ng-2026-08-13-pre-a-st8-q3lock-nonconstant-cb-configuration-multiplier-full-hamiltonian-point-norm-c0) | include a nonconstant bounded continuous configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian | EXP-000831 / R-167 v2.8 proves the range-diameter lower bound, and exact oscillation for real multipliers. This strictly strengthens the v2.7 raw-Weyl special case and does not reject other topologies or carriers |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE](#ng-2026-08-13-pre-a-st8-q3lock-gevrey-two-asymptotic-remainder-automatic-all-order-sw-convergence) | infer convergent all-order SW from a Gevrey-two majorant and optimally scaled asymptotic remainder | EXP-000828 / R-167 v2.7 gives an actual integral function with exact coefficients `(-1)^n(n!)^2`, a Gevrey-two remainder, and zero formal convergence radius. This does not prove that the actual Q3 SW series diverges |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0](#ng-2026-08-13-pre-a-st8-q3lock-raw-configuration-weyl-full-hamiltonian-point-norm-c0) | include a nonzero raw configuration Weyl character in a point-norm C0 carrier equivariant for the exact finite-volume full Q3 Hamiltonian | a Galilean high-momentum Gaussian gives the sharp small-time norm limit two. This finite-volume carrier obstruction does not reject strong, local-strict, smeared or other common-alpha routes |
@@ -363,6 +366,58 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
 
+<a id="ng-2026-08-13-pre-a-st8-q3lock-selector-add-subtract-automatic-zero-source-transfer"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-SELECTOR-ADD-SUBTRACT-AUTOMATIC-ZERO-SOURCE-TRANSFER -- selector add--subtract is not a small zero-source perturbation
+
+**Failure mode:** add the bounded spectral-doublet selector to the classical
+reference, subtract it in the perturbation, and infer the zero-source theorem
+by the same single-phase relative-form estimate.
+
+**Evidence:** EXP-000833 / R-167 v2.9 evaluates the all-minus forward-star
+vector. Its selected reference energy is exactly `u` and the counterselector
+expectation is exactly `-u`, so the normalized relative ratio is one for every
+`N` and `u`. At each fixed `N`, the other normalized input `3beta_N/u`
+diverges as `u->0`.
+
+**Consequence:** the add--subtract bookkeeping does not remove the selector
+inside the registered perturbative neighborhood. This is not a zero-source or
+two-phase no-go; a genuinely uniform two-phase theorem or a different
+reference decomposition remains open.
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-vanishing-defect-automatic-n-dependent-two-phase-radius-entry"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY -- vanishing defects need not enter shrinking theorem radii
+
+**Failure mode:** infer eventual entry into a two-phase theorem from a defect
+`theta_N->0` and a separately positive theorem radius `r_N>0` for each `N`.
+
+**Evidence:** EXP-000833 / R-167 v2.9 takes
+`theta_N=N^-3` and `r_N=N^-4`. Both sequences are positive and tend to zero,
+but `theta_N/r_N=N`, so `theta_N>r_N` for every `N>=2`.
+
+**Consequence:** a common positive lower radius or an explicit quantitative
+comparison is load-bearing. This grants the doublet/reference inputs and is
+distinct from the older direct-import mismatch; it is not a no-go for a
+future two-phase theorem.
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-categorical-uniform-continuous-element-kms-envelope-automatic-all-shape-cauchy-and-unique-phase-quotient"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-CATEGORICAL-UNIFORM-CONTINUOUS-ELEMENT-KMS-ENVELOPE-AUTOMATIC-ALL-SHAPE-CAUCHY-AND-UNIQUE-PHASE-QUOTIENT -- categorical continuity and KMS compactness do not identify an exhaustion limit
+
+**Failure mode:** infer all-shape Cauchy convergence and one unique phase
+quotient from the maximal uniform continuous-element product envelope and
+fixed-beta KMS compactness.
+
+**Evidence:** EXP-000833 / R-167 v2.9 uses
+`H_(2m)=0`, `H_(2m+1)=diag(0,1)` and `A_n=sigma_x` in `M_2`. The generators
+are uniformly bounded, hence `A` belongs to the categorical continuous part,
+but at `t=pi/2` the evolved observables alternate between `sigma_x` and
+`sigma_y` at distance `sqrt(2)`. At `beta=log 2`, the Gibbs expectation of
+`E_22` alternates between `1/2` and `1/3`, while the odd-system KMS oracle is
+exactly `omega(E_12 alpha_(i beta)(E_21))=1/3=omega(E_21E_12)`.
+
+**Consequence:** categorical C0/KMS structure alone supplies neither
+pairwise-union Cauchy convergence nor a unique KMS quotient. This is not a Q3
+thermodynamic nonexistence theorem; compatible spatial embeddings and actual
+Hamiltonian estimates remain open.
 <a id="ng-2026-08-13-pre-a-st8-q3lock-nonconstant-cb-configuration-multiplier-full-hamiltonian-point-norm-c0"></a>
 ### NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONCONSTANT-CB-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0 -- nonconstant bounded continuous configuration multipliers obstruct finite-volume point-norm C0 dynamics
 
