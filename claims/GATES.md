@@ -6,7 +6,7 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-08-12.
+exist here. Last updated: 2026-08-13.
 
 ## Current Sector-A frontier (R-113)
 
@@ -70,6 +70,11 @@ into a contestant. No winner, shortlist, preferred PDE, physical vacuum,
 Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed.
 
 EXP-000826 as corrected by EXP-000827 / R-167 v2.6 adds four claim-nonbearing mathematical children and two scoped route failures only. It creates no candidate, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN.
+
+EXP-000828 / R-167 v2.7 adds one claim-nonbearing fixed-`M` local-SW
+remainder child and two scoped negative authorities. It creates no candidate,
+common estimand, prospective prediction, custodian commitment, freeze or
+score. Round-1 remains OPEN.
 
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
@@ -1537,6 +1542,35 @@ identity: it cancels equal mixed contributions `1/8820` and leaves the local
 sum `69827/324135000`. This is neither a global-generator factorization, a BCH
 convergence theorem nor an all-order oscillator elimination.
 
+### **PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FIXED-RITZ-LOCAL-SW-GEVREY-TWO-ADMISSIBLE-OPTIMAL-SCALE-TRUNCATION-EXTENSIVE-GROUND-ENERGY-REMAINDER**
+
+**Statement:** At zero source and each fixed finite parity-preserving onsite
+Ritz cutoff `M`, derive the local-SW Gevrey-two interaction majorant and use
+one explicit admissible order on the optimal `|eta|^(-1/2)` scale to obtain a
+volume-extensive stretched-exponential ground-energy remainder.
+
+**Status:** CLOSED FOR ZERO-SOURCE Q3 LOCAL SW AT FIXED FINITE RITZ CUTOFF AND
+SUFFICIENTLY SMALL SCALED COUPLING ONLY (2026-08-13). EXP-000828 / R-167 v2.7
+normalizes the fixed-`M` augmented interaction to strength one and writes
+`eta=lambda J_M`. The Bravyi--DiVincenzo--Loss Section 4.4 proof gives
+fixed-`M` witnesses `alpha_M,beta_M>0`, independent of order and spatial
+volume but allowed to depend on `M`, the fixed local decomposition, degree and
+`sup_x||k_(x,M)||/Gamma`. With
+`rho_(n,M)=beta_M Gamma/n^2`, the local-SW order-`n` ground-energy error is at
+most
+`2alpha_M|Lambda||eta|(|eta|/rho_(n,M))^n`
+whenever
+`|eta|<min(rho_(n,M)/4,Gamma/(32alpha_M))`. If
+`0<|eta|<min(beta_M Gamma/32,Gamma/(32alpha_M))`, then
+`n_*=floor(sqrt(beta_M Gamma/(8|eta|)))` is admissible and gives
+`16alpha_M|Lambda||eta| exp[-(ln 8)sqrt(beta_M Gamma/(8|eta|))]`.
+The same construction supplies a fixed-`M` Gevrey-two generated-interaction
+majorant. The displayed `n_*` is an explicit admissible optimal-scale choice,
+not the exact discrete minimizer. This result is local-SW only: the
+order-dependent standard/local gauge comparison does not transfer the growing
+order automatically. It proves no convergent all-order series, `M`-uniform
+bound, physical `lambda=1` regime, phase transfer or GNS result.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -1544,6 +1578,13 @@ convergence theorem nor an all-order oscillator elimination.
 **Status:** OPEN (2026-08-12). EXP-000813 / R-167 v2.2 shows by an exact rank-two local projection fixture that one even and one odd local kernel vector plus local edge gap one do not imply a volume-uniform lattice gap: the one-particle sector is `L_G/2` and a torus gap is at most `1-cos(2 pi/L)`. EXP-000815 / R-167 v2.3 closes only a deterministic geometric-envelope-to-QPS conversion and the exact second-order onsite-resolvent connected coefficient with the declared Ritz/form cutoff contract. EXP-000818 / R-167 v2.4 adds the first parity-equivariant local homological generator, its sharp QPS/Ritz bound and exact second-order low-block match. EXP-000825 / R-167 v2.5 adds the complete third-order low-block coefficient and connected ordered-triple QPS bound only at fixed finite `Lambda` and fixed finite `M`; its constants are not volume or cutoff uniform. A disconnected-spectator fixture shows that raw global scalar Feshbach resolvents need not preserve connectedness, and a harmonic Ritz fixture shows that ordinary bounded-operator Schrieffer--Wolff smallness need not be cutoff uniform at fixed `Gamma`. These results do not derive a fourth-order recursion or all-order geometric envelope, sum a uniform transformation, control its remainder or Ritz removal, transfer the oscillator phases, or construct a phasewise GNS intertwiner. The broader rank-two oscillator/QPS and broken-sector GNS-gap parents remain OPEN.
 
 The corrected R-167 v2.6 authority supplies zero-source fixed-Ritz standard-SW linked coefficients at every separately fixed order, zero-source each-fixed-order small-coupling extensive energy control, and actual zero-source Q3 coefficient/Ritz control only through orders three and four. It does not sum a uniform transformation, control a fifth- or all-order remainder, transfer either phase, or construct a GNS intertwiner. This parent remains OPEN.
+
+EXP-000828 / R-167 v2.7 adds a fixed-`M`, sufficiently-small-coupling
+local-SW Gevrey-two majorant and one explicit admissible optimal-scale
+stretched-exponential energy remainder. It neither transfers that growing
+order to standard SW nor supplies `M`-uniform Ritz removal, a physical
+`lambda=1` theorem, a convergent oscillator transformation, phase
+intertwining or a GNS gap. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -1602,6 +1643,13 @@ unsplit-dynamics failure nor common-alpha nonexistence. This parent remains
 OPEN.
 
 EXP-000826 as corrected by EXP-000827 / R-167 v2.6 does not advance the actual all-shape common-alpha estimate. Its two-qubit fixture shows only that temporal orbit smearing of formally disjoint seeds need not automatically create commuting spatial local algebras; it does not reject the orbit-smear carrier or common-alpha existence. This parent remains OPEN.
+
+EXP-000828 / R-167 v2.7 proves that every nonzero raw configuration Weyl
+character has point-norm jump two at time zero under the exact finite-volume
+full Q3 Hamiltonian. This removes that raw label from an equivariant
+point-norm `C0` carrier, but does not reject local-strict, strong, orbit-smear,
+energy/resolvent-smoothed or other common-alpha constructions. This parent
+remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -1785,6 +1833,11 @@ OPEN.
 
 EXP-000826 as corrected by EXP-000827 / R-167 v2.6 removes the Ritz cutoff for the actual zero-source Q3 third- and fourth-order coefficients and gives a fixed-finite fourth-order gauge crosswalk. The result is fixed order: it supplies no `M`-uniform all-order transformation, connected remainder, phase intertwiner or two-phase oscillator QPS transfer. This parent remains OPEN.
 
+EXP-000828 / R-167 v2.7 controls a local-SW remainder only after fixing `M`
+and imposing sufficiently small scaled coupling. Its Gevrey-two asymptotic
+counterfixture shows why this does not yield convergent all-order QPS or
+uniform Ritz removal. This parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -1824,9 +1877,15 @@ coercivity or gap. R-167 v2.4 adds only the first homological generator and
 exact second-order match. It supplies neither the all-order remainder nor the
 phasewise intertwiner, so this parent remains OPEN.
 
-## A6/A7 full derivative Class-II composite and renormalisation gates
+The corrected R-167 v2.6 authority is a zero-source fixed-order coefficient
+theorem. It supplies neither ordered oscillator phase identification nor a
+phasewise GNS intertwiner or coercivity estimate. This parent remains OPEN.
 
-The corrected R-167 v2.6 authority is a zero-source fixed-order coefficient theorem. It supplies neither ordered oscillator phase identification nor a phasewise GNS intertwiner or coercivity estimate. This parent remains OPEN.
+EXP-000828 / R-167 v2.7 changes neither phase identification nor the missing
+oscillator GNS coercivity. A fixed-`M` local-SW ground-energy remainder is not
+a phasewise infinite-volume spectral-gap theorem. This parent remains OPEN.
+
+## A6/A7 full derivative Class-II composite and renormalisation gates
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 

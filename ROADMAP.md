@@ -1198,6 +1198,24 @@ locality from seed labels. No fifth-order or all-order remainder, phase
 transfer, common alpha, GNS gap, Round-1, C6, CP1, physical Sector A or Pre-A
 closure follows.
 
+EXP-000828 advances R-167 v2.7 without closing a parent. At each fixed finite
+parity-preserving onsite Ritz cutoff `M`, the local-SW proof has a fixed-`M`
+Gevrey-two generated-interaction majorant and an explicit volume-extensive
+remainder. For sufficiently small `eta=lambda J_M`, the admissible order
+`n_*=floor(sqrt(beta_M Gamma/(8|eta|)))` gives the stretched-exponential
+envelope
+`16alpha_M|Lambda||eta| exp[-(ln 8)sqrt(beta_M Gamma/(8|eta|))]`.
+This is local-SW only and is not uniform in `M`; physical `lambda=1` remains
+conditional on separate smallness. An exact integral fixture shows that the
+matching Gevrey-two asymptotic remainder does not imply convergence, without
+proving divergence of the actual Q3 series. A separate high-momentum Gaussian
+fixture proves the sharp point-norm jump two for every nonzero raw
+configuration Weyl character under the exact finite-volume full Q3
+Hamiltonian. That result excludes one raw point-norm carrier, not common-alpha
+existence on another carrier. All five parents remain OPEN. No per-lemma or
+intermediate v2.7 PDF is issued; synthesis is deferred until the next logical
+gate-level checkpoint.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

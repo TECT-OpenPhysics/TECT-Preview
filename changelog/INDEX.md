@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**622 accepted events** · latest 25 shown below · machine locator: `index.json`
+**623 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-13 | `20260813-r-167-v2-7-closes-fixed-ritz-local-sw-gevrey-tw` — [R-167 v2.7 closes fixed-Ritz local-SW Gevrey-two admissible optimal-scale truncation and registers the raw-Weyl norm boundary] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000828, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v2-7-closes-fixed-ritz-local-sw-gevrey-tw) |
 | 2026-08-13 | `20260813-r-167-v2-6-artifact-pin-correction-finalized-af` — [R-167 v2.6 artifact pin correction finalized after extractor-token audit; events 620 and 621 superseded] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000826, EXP-000827, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v2-6-artifact-pin-correction-finalized-af) |
 | 2026-08-13 | `20260813-r-167-v2-6-artifact-footer-and-issuance-pin-cor` — [R-167 v2.6 artifact footer and issuance pin correction finalized; malformed event 620 superseded] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000826, EXP-000827, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v2-6-artifact-footer-and-issuance-pin-cor) |
 | 2026-08-13 | `20260813-r-167-v2-6-artifact-footer-and-issuance-pins-co` — [R-167 v2.6 artifact footer and issuance pins corrected; event 619 superseded] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000826, EXP-000827, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v2-6-artifact-footer-and-issuance-pins-co) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-11 | `20260811-r-167-v2-2-closes-registered-periodic-fifth-his` — [R-167 v2.2 closes registered-periodic fifth-history inputs and isolates the connected rank-two QPS successor] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000813, R-167 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-2-closes-registered-periodic-fifth-his) |
 | 2026-08-11 | `20260811-r-167-theorem-event-selector-repair-finalizes-t` — [R-167 theorem-event selector repair finalizes the v2.1 and v1.2 checkpoint hashes] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, EXP-000812, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-theorem-event-selector-repair-finalizes-t) |
 | 2026-08-11 | `20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f` — [R-167 v2.1 and R-168 v1.2 combined checkpoint final hash correction after integrated normalization] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, EXP-000812, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-1-and-r-168-v1-2-combined-checkpoint-f) |
-| 2026-08-11 | `20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s` — [R-167 v2.1 and R-168 v1.2 combined gate-level synthesis PDF issued after strict validation] - 2026-08-11 | C6-SPACETIME-SIGNATURE, EXP-000811, EXP-000812, R-167, R-168 | [bounded page](pages/000569-000618.md#20260811-r-167-v2-1-and-r-168-v1-2-combined-gate-level-s) |
 
 ## Post-cutover pages
 
@@ -49,5 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 619–622 | 4 | [000619-000668.md](pages/000619-000668.md) |
+| 619–623 | 5 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

@@ -5,12 +5,14 @@
 
 Authorities: `negative-results/registry.md`.
 
-**349 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 278 · retraction: 5
+**351 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 280 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-raw-configuration-weyl-full-hamiltonian-point-norm-c0) | no_go | include a nonzero raw configuration Weyl character in a point-norm C0 carrier equivariant for the exact finite-volume full Q3 Hamiltonian |
+| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-gevrey-two-asymptotic-remainder-automatic-all-order-sw-convergence) | no_go | infer convergent all-order SW from a Gevrey-two majorant and optimally scaled asymptotic remainder |
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-second-order-disjoint-vanishing-automatic-all-order-global-feshbach-connectedness) | no_go | infer connectedness of the raw all-order global scalar Feshbach map from second-order disjoint-edge vanishing |
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-ritz-cutoff-ordinary-bounded-operator-sw-smallness-uniformity) | no_go | infer cutoff-uniform ordinary operator-norm Schrieffer--Wolff smallness from finite Ritz boundedness |
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-SPATIAL-LOCAL-NET`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-orbit-smear-seed-support-automatic-spatial-local-net) | no_go | infer commuting spatial local algebras from formally disjoint seed labels after temporal orbit smearing |
@@ -34,8 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR`](registry.md#ng-2026-08-11-pre-a-round1-current-version-map-only-admission-repair) | no_go | repair the exact current M1/M2/M5 admission result by adding only an externally relabelled map slot |
 | [`NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE`](registry.md#ng-2026-08-11-pre-a-round1-current-tree-prospective-holdout-nonexistence) | no_go | issue an actual prospective Round-1 holdout from the audited registered checkpoint |
 | [`NG-2026-08-11-PRE-A-M2-V0-ONE-REAL-SCALAR-AUTOMATIC-INTERNAL-U1-WINDING-AND-HELICITY`](registry.md#ng-2026-08-11-pre-a-m2-v0-one-real-scalar-automatic-internal-u1-winding-and-helicity) | no_go | infer nontrivial pointwise internal U1, intrinsic winding and helicity from one raw real scalar |
-| [`NG-2026-08-11-PRE-A-M2-SIX-ABSOLUTE-ERRORS-AUTOMATIC-LOG-SLOPE-CONTROL`](registry.md#ng-2026-08-11-pre-a-m2-six-absolute-errors-automatic-log-slope-control) | no_go | infer a controlled six-stage critical log slope from six absolute output errors alone |
-| [`NG-2026-08-11-PRE-A-M2-POSITIVE-LOCAL-INVERTIBILITY-AUTOMATIC-UNIT-EXPONENT`](registry.md#ng-2026-08-11-pre-a-m2-positive-local-invertibility-automatic-unit-exponent) | no_go | infer unit critical exponent from positivity and local invertibility |
 
 Search without loading the full registry:
 

@@ -140,6 +140,35 @@ declared physical reason, light does not follow the derived cone, clock response
 requires an independent rule, or the weak/long-distance response fails the
 predeclared gravity and equivalence tests.
 
+### 4.3 Atomic and chemical structure as a downstream recovery test
+
+Atomic shell structure, discrete spectra, the periodic organization of the
+elements, and stable chemistry are non-optional downstream recovery tests for
+any candidate proposed as a microscopic physical theory.  They are not direct
+evidence selecting one microscopic candidate: distinct microscopic theories may
+share the same low-energy effective QED and fermionic content.  They therefore
+cannot be inserted as microscopic premises or used to infer a unique TECT
+structure.
+
+The required recovery chain is:
+
+```text
+microscopic candidate
+  -> controlled low-energy QFT with an electromagnetic sector and charged
+     fermionic degrees of freedom
+  -> spin/statistics and Pauli exclusion, gauge coupling, and bound-state
+     spectral problem
+  -> atomic energy levels, shell filling, and spectral selection rules
+  -> periodic trends, stable bonds, and declared chemical/material tests
+```
+
+At the appropriate later stage, a candidate must reproduce predeclared
+dimensionless spectral ratios, degeneracies, selection rules, and bound-state
+stability without placing the atomic Hamiltonian or observed element data back
+into its microscopic input.  Failure to derive the necessary fermionic,
+gauge, or bound-state structure excludes the candidate from a microscopic
+account of ordinary matter, even if it supplies another partial QFT bridge.
+
 ## 5. Candidate-neutral comparison rule
 
 The M0 established low-energy baseline is retained as the comparison standard.

@@ -1,0 +1,97 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-fixed-ritz-gevrey-two-truncation-and-raw-configuration-weyl-c0-boundary/1.0",
+  "package_id": "PA-CP1-ST8-Q3LOCK-FIXED-RITZ-GEVREY-TWO-TRUNCATION-AND-RAW-CONFIGURATION-WEYL-C0-BOUNDARY-v1",
+  "package_version": "1.0.0",
+  "issued": "2026-08-13",
+  "task_id": "T-054",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "claim_bearing": false,
+  "result_number": "R-167",
+  "result_version": "v2.7",
+  "exploration_id": "EXP-000828",
+  "continues_exploration_id": "EXP-000827",
+  "closed_gate_id": "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FIXED-RITZ-LOCAL-SW-GEVREY-TWO-ADMISSIBLE-OPTIMAL-SCALE-TRUNCATION-EXTENSIVE-GROUND-ENERGY-REMAINDER",
+  "negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE",
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0"
+  ],
+  "authority": "R-167 v2.7 is additive to v2.6. For each fixed finite parity-preserving onsite Ritz cutoff M, the Bravyi-DiVincenzo-Loss local-SW proof constants give an n- and volume-independent fixed-M Gevrey-two majorant, an explicit fixed-order remainder, and a stretched-exponential remainder at one admissible optimal-scale truncation at sufficiently small scaled coupling eta=lambda J_M. This is local-SW and fixed-M only. Separately, every nonzero raw configuration Weyl character has sharp point-norm jump two at time zero under the exact finite-volume full Q3 Hamiltonian. The first conclusion does not imply all-order convergence; the second is a carrier boundary, not common-alpha nonexistence.",
+  "literature": {
+    "primary": "S. Bravyi, D. P. DiVincenzo and D. Loss, Schrieffer-Wolff transformation for quantum many-body systems, Annals of Physics 326 (2011) 2793-2826, arXiv:1105.0675",
+    "used_scope": "Section 4.4, especially Lemma 4.2 and Eqs. (4.31)-(4.33), (4.36)-(4.38), supplies the local-SW generated-interaction and garbage bounds. The admissible optimal-scale truncation corollary below is an explicit algebraic inference from those bounds. Section 4.5 does not supply an n-uniform standard/local gauge-transfer constant."
+  },
+  "fixed_ritz_local_sw": {
+    "setup": "Fix M. Put Vhat_M=V_M/J_M, eta=lambda J_M, ||Vhat_M||_1=1, H0,M=sum_x k_(x,M), k_(x,M)>=Gamma(1-P_x), and h_M=sup_x||k_(x,M)||/Gamma<infinity. The finite spatial graph has bounded degree and the same zero-source augmented-edge decomposition as R-167 v2.6.",
+    "proof_constants": "There are alpha_M,beta_M>0 independent of n, eta and |Lambda| after M, the local decomposition, degree and h_M are fixed. They may depend on those fixed data and are not uniform in M.",
+    "rho": "rho_(n,M)=beta_M Gamma/n^2",
+    "generated_interaction_bound": "For r>=1 choose the local-SW truncation n=r+1. Then ||V_M^(r)||_1<=alpha_M[((r+1)^2)/(beta_M Gamma)]^r<=alpha_M[4e^2/(beta_M Gamma)]^r(r!)^2.",
+    "fixed_order_remainder": "For n>=1 and |eta|<min(rho_(n,M)/4,Gamma/(32alpha_M)), the local-SW nth-order ground-energy error is at most 2alpha_M beta_M Gamma |Lambda| n^(-2)(|eta|/rho_(n,M))^(n+1), equivalently 2alpha_M |Lambda||eta|(|eta|/rho_(n,M))^n.",
+    "admissible_optimal_scale_order": "If 0<|eta|<min(beta_M Gamma/32,Gamma/(32alpha_M)), set x=sqrt(beta_M Gamma/(8|eta|)) and n_star=floor(x). Then n_star>=2, |eta|/rho_(n_star,M)<=1/8, and the local-SW ground-energy error is at most 16alpha_M|Lambda||eta| exp[-(ln 8)sqrt(beta_M Gamma/(8|eta|))]. This explicit choice has the optimal Gevrey-two scale n_star proportional to |eta|^(-1/2); it is not asserted to minimize the bound exactly.",
+    "physical_point": "The physical zero-source fixed-M point is lambda=1 and eta=J_M. The theorem applies there only if J_M satisfies the displayed smallness condition. No such physical-point or M-uniform estimate is asserted here.",
+    "standard_sw_firewall": "The BDL standard/local comparison theorem has an order-dependent comparison constant and is proved at fixed order. The admissible order n_star grows like |eta|^(-1/2), so the stretched-exponential local-SW remainder is not transferred automatically to standard SW.",
+    "scope": "Fixed finite M, bounded-degree finite spatial volume, local-SW energy remainder, sufficiently small scaled coupling. No M-uniformity, physical lambda=1 conclusion, convergent transformation, standard-SW optimal-scale remainder, phase transfer or GNS result."
+  },
+  "exact_fixture": {
+    "inputs": {
+      "alpha": "1",
+      "beta": "1",
+      "Gamma": "1",
+      "eta": "1/800",
+      "volume": 12
+    },
+    "x": "10",
+    "n_star": 10,
+    "rho": "1/100",
+    "ratio": "1/8",
+    "fixed_order_bound": "3/107374182400",
+    "stretched_exponential_envelope": "3/13421772800",
+    "fixed_to_envelope_ratio": "1/8"
+  },
+  "gevrey_two_convergence_boundary": {
+    "negative_id": "NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE",
+    "fixture": "For t>=0, F(t)=integral_0^infinity integral_0^infinity exp(-s-u)/(1+t s u) ds du. The exact finite geometric identity gives coefficients (-1)^n(n!)^2 and remainder magnitude at most t^(N+1)((N+1)!)^2.",
+    "ratio_test": "For every t!=0 the absolute ratio of consecutive formal terms is (n+1)^2|t|, which tends to infinity; the formal convergence radius is zero.",
+    "consequence": "Even an actual function with an exact Gevrey-two asymptotic remainder need not have a convergent all-order power series.",
+    "scope": "This rejects one automatic inference. It does not prove divergence of the actual Q3 local-SW or standard-SW series."
+  },
+  "raw_configuration_weyl_boundary": {
+    "negative_id": "NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0",
+    "setup": "In any fixed finite Q3 volume let d=8|Lambda|, P=-i hbar grad, T=P^2/(2chi), H=T+V(Q), where V is the real exact zero- or compact-source Q3 polynomial of degree at most four. Put U_t=exp(-itH/hbar), alpha_t(A)=U_t^*AU_t and W_xi=exp(i xi.Q), xi!=0.",
+    "free_relative_orbit": "For H=T, W_xi^* alpha_t^0(W_xi)=exp(i hbar t|xi|^2/(2chi))exp(i(t/chi)xi.P).",
+    "packet": "For a normalized Gaussian phi_sigma and p_t=[chi pi/(t|xi|^2)-hbar/2]xi, psi_t=exp(i p_t.Q/hbar)phi_sigma. The free relative expectation is exactly -exp[-hbar^2 t^2|xi|^2/(4chi^2 sigma^2)].",
+    "duhamel": "Galilean translation keeps s p_t/chi bounded for |s|<=|t|. Polynomial V times the translated fixed Gaussian or W_xi Gaussian has a uniform L2 bound, so Duhamel gives ||(U_t-U_t^0)psi_t||+||(U_t-U_t^0)W_xi psi_t||=O(|t|).",
+    "conclusion": "lim_(t->0,t!=0)||alpha_t(W_xi)-W_xi||=2.",
+    "nonduplication": "The v1.7 negative uses high-position packets for raw momentum Weyl/basic momentum resolvent labels and gives a positive lower bound. The v1.5 negative says only that [H,W_xi] is unbounded. This result instead treats raw configuration Weyl labels under the full Hamiltonian and proves the sharp norm limit two.",
+    "scope": "Finite-volume norm-topology obstruction only. It does not reject W-star strong or strong-star dynamics, local-strict or energy topology, temporal smears, smaller continuous-element algebras, fixed-beta OS envelopes, or common-alpha existence on another carrier."
+  },
+  "surviving_routes": {
+    "local_sw": "To pass M to infinity or prove a convergent all-order oscillator elimination, construct one support-aware weighted interaction Banach scale closed under homological inversion and commutators, with all-generated-word Ritz convergence in that same norm and at most exponential connected growth after aggregation.",
+    "common_alpha": "Treat raw configuration characters as W-star/local-strict labels or smear seeds. A norm-C0 common algebra must instead be generated by Hamiltonian-derived temporal, energy or resolvent smoothed continuous elements, and spatial locality must be proved by two-sign propagation or commutator decay rather than seed labels."
+  },
+  "gate_resolution": {
+    "closed_subgates": [
+      "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FIXED-RITZ-LOCAL-SW-GEVREY-TWO-ADMISSIBLE-OPTIMAL-SCALE-TRUNCATION-EXTENSIVE-GROUND-ENERGY-REMAINDER"
+    ],
+    "retained_open_parents": [
+      "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+      "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+      "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+      "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+      "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+    ]
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_ritz_gevrey_two_truncation_and_raw_configuration_weyl_c0_boundary.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_ritz_gevrey_two_truncation_and_raw_configuration_weyl_c0_boundary_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_ritz_gevrey_two_truncation_and_raw_configuration_weyl_c0_boundary_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-primary-pre-a-cp1-st8-q3lock-fixed-ritz-gevrey-two-truncation-and-raw-configuration-weyl-c0-boundary/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-independent-pre-a-cp1-st8-q3lock-fixed-ritz-gevrey-two-truncation-and-raw-configuration-weyl-c0-boundary/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-integrated-pre-a-cp1-st8-q3lock-fixed-ritz-gevrey-two-truncation-and-raw-configuration-weyl-c0-boundary/result.json"
+  },
+  "checkpoint_synthesis": {
+    "status": "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+    "pdf_issued": false,
+    "workflow": "Proof-first manifest, certificate, executable checks, formal authority and run JSON only; no per-lemma or intermediate PDF."
+  },
+  "no_overclaim": "This T0 claim-nonbearing package closes one fixed-M local-SW admissible optimal-scale truncation child and records two scoped negative boundaries. It proves neither a convergent all-order SW transformation nor divergence of the actual Q3 series; neither an M-uniform nor physical-lambda-one result; neither a standard-SW optimal-scale remainder nor fifth-order unbounded-Q3 control; neither phase transfer, common alpha, KMS identification, a spatial quasi-local carrier, a broken-sector GNS or physical mass gap, regulator removal, continuum, physical empty-space comparison, Round-1, C6, CP1, physical Sector A, or Pre-A closure."
+}

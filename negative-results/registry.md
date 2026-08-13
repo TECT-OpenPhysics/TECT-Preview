@@ -9,6 +9,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE](#ng-2026-08-13-pre-a-st8-q3lock-gevrey-two-asymptotic-remainder-automatic-all-order-sw-convergence) | infer convergent all-order SW from a Gevrey-two majorant and optimally scaled asymptotic remainder | EXP-000828 / R-167 v2.7 gives an actual integral function with exact coefficients `(-1)^n(n!)^2`, a Gevrey-two remainder, and zero formal convergence radius. This does not prove that the actual Q3 SW series diverges |
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0](#ng-2026-08-13-pre-a-st8-q3lock-raw-configuration-weyl-full-hamiltonian-point-norm-c0) | include a nonzero raw configuration Weyl character in a point-norm C0 carrier equivariant for the exact finite-volume full Q3 Hamiltonian | a Galilean high-momentum Gaussian gives the sharp small-time norm limit two. This finite-volume carrier obstruction does not reject strong, local-strict, smeared or other common-alpha routes |
 | [NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-HIGH-HIGH-INSERTION-CUTOFF](#ng-2026-08-12-pre-a-st8-q3lock-low-high-ritz-tail-automatic-uniform-high-high-insertion-cutoff) | infer uniform high-high-insertion Ritz convergence from an exact low-high Ritz tail alone | EXP-000826 / R-167 v2.6 has `tau_M=0` but, for the uniformly bounded family `C_j=|e_1+e_j><e_1+e_j|`, the hostile choice `j=M+1` leaves insertion-tail norm and Gram difference one. Each fixed `j` is eventually exact; only the missing uniform supremum fails |
 | [NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-SPATIAL-LOCAL-NET](#ng-2026-08-12-pre-a-st8-q3lock-orbit-smear-seed-support-automatic-spatial-local-net) | infer commuting spatial local algebras from formally disjoint seed labels after temporal orbit smearing | EXP-000826 / R-167 v2.6 gives a two-qubit fixture whose one-sided exponential smears have commutator `-(8i/25)Y tensor Y`, norm `8/25`. This does not reject the orbit-smear carrier or locality with extra propagation estimates |
 | [NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0](#ng-2026-08-12-pre-a-st8-q3lock-canonical-one-site-compact-cylinder-bond-subflow-point-norm-c0) | use canonical one-site compact cylinders as a point-norm C0 carrier for the split Q3 bond subflow | EXP-000825 / R-167 v2.5 proves a norm jump at least `||K||` for every nonzero compact `K`, with exact rank-one supremum one. Unitized compacts exclude `K tensor I`; the multiplier algebra includes it but the action is not point-norm C0. This is not common-alpha nonexistence |
@@ -359,6 +361,58 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-gevrey-two-asymptotic-remainder-automatic-all-order-sw-convergence"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE -- a Gevrey-two asymptotic remainder does not imply a convergent all-order SW series
+
+**Failure mode:** infer convergence of an all-order Schrieffer--Wolff power
+series from a Gevrey-two coefficient majorant and an optimally scaled
+asymptotic remainder alone.
+
+**Evidence:** EXP-000828 / R-167 v2.7 takes, for `t>=0`,
+`F(t)=integral_0^infinity integral_0^infinity`
+`exp(-s-u)/(1+t s u) ds du`. The finite geometric identity gives
+
+`F(t)=sum_(n=0)^N (-1)^n(n!)^2 t^n+R_N(t)`,
+
+with `|R_N(t)|<=t^(N+1)((N+1)!)^2`. Thus an actual function has the declared
+Gevrey-two asymptotic control, while the ratio of consecutive formal terms is
+`(n+1)^2|t|` and tends to infinity for every `t!=0`. Its formal convergence
+radius is zero.
+
+**Consequence:** Gevrey-two growth and a stretched-exponential optimally
+scaled truncation error do not automatically yield a convergent all-order
+series. This fixture does not prove that the actual Q3 local-SW or standard-SW
+series diverges, and it does not obstruct a future Borel or other resummation
+theorem with additional input.
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-raw-configuration-weyl-full-hamiltonian-point-norm-c0"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0 -- the exact finite-volume full Hamiltonian has norm jump two on every nonzero raw configuration Weyl character
+
+**Failure mode:** put a nonzero raw configuration character
+`W_xi=exp(i xi dot Q)` in a concrete C-star carrier that is equivariant for
+the exact finite-volume full Q3 Hamiltonian and infer point-norm `C0`
+continuity of its orbit.
+
+**Evidence:** EXP-000828 / R-167 v2.7 fixes a finite Q3 volume and
+`H=P^2/(2chi)+V(Q)`, with the exact real zero- or compact-source polynomial
+potential of degree at most four. For a normalized Gaussian choose
+`p_t=[chi pi/(t|xi|^2)-hbar/2]xi`. The free relative Weyl expectation on the
+boosted packet is exactly
+`-exp[-hbar^2 t^2|xi|^2/(4chi^2 sigma^2)]`. Galilean translation keeps
+`s p_t/chi` bounded for `|s|<=|t|`; polynomial multiplication on the
+translated Gaussian family is uniformly bounded, so Duhamel comparison with
+the full Hamiltonian costs `O(|t|)`. Hence
+
+`lim_(t->0,t!=0)||alpha_t(W_xi)-W_xi||=2`.
+
+**Consequence:** no equivariant concrete C-star carrier containing that raw
+configuration label can have point-norm `C0` full-Hamiltonian dynamics. This
+is distinct from the earlier unbounded-generator-core result and the raw
+momentum-Weyl/basic-resolvent obstruction. It is finite-volume and
+norm-topological only: strong or strong-star dynamics, local-strict or energy
+topologies, temporal smears, smaller continuous-element algebras, and common
+alpha on another carrier remain open.
 
 <a id="ng-2026-08-12-pre-a-st8-q3lock-low-high-ritz-tail-automatic-uniform-high-high-insertion-cutoff"></a>
 ### NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-HIGH-HIGH-INSERTION-CUTOFF -- a zero low-high Ritz tail does not control a bounded high-high insertion family uniformly
