@@ -98,6 +98,12 @@ corollary. It creates no contestant, microscopic observable map, common
 estimand, prospective prediction, custodian commitment, freeze or score.
 Round-1 remains OPEN.
 
+EXP-000836 / R-167 v3.2 adds one claim-nonbearing abstract conditional
+zero-temperature transfer theorem and one fixed-witness collapse negative.
+It creates no contestant, microscopic observable map, common estimand,
+prospective prediction, custodian commitment, freeze or score. Round-1
+remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -643,6 +649,14 @@ broken-sector-GNS chain. The fixed-lattice source cusp and locally normal
 time-zero tangents of EXP-000790 do not supply a common generator, and the
 finite-volume orbit-smear/symmetric ground evidence of EXP-000789 is not a
 selected broken-phase algebraic ground state.
+
+EXP-000836 / R-167 v3.2 closes only an abstract conditional transfer: on one
+already identified common algebra, common-core generator convergence carries
+beta-to-infinity KMS limits to algebraic ground states, and one fixed bounded
+odd witness keeps the parity pair distinct. Exact Q3 still lacks the common
+spatial algebra, phase KMS families, target-generator convergence and fixed
+noncollapsing separator required by that theorem. This historical gate
+remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-CONNECTED-SUSCEPTIBILITY-AND-GNS-POINCARE-GATE**
 
@@ -1800,6 +1814,26 @@ algebra nor excludes multi-site compacts, temporal smears, resolvent or
 interaction-dressed carriers, local-strict or strong-star dynamics, or a
 common thermodynamic alpha.
 
+### **PA-CP1-ST8-Q3LOCK-COMMON-TARGET-GENERATOR-ZERO-TEMPERATURE-KMS-AND-FIXED-ODD-WITNESS-DISTINCT-GROUND-STATE-TRANSFER**
+
+**Statement:** On one common identified C-star algebra, transfer two
+beta-to-infinity KMS sequences to distinct algebraic ground states of one
+target dynamics from common graph-core generator convergence, parity
+intertwining and one fixed bounded odd noncollapsing witness.
+
+**Status:** CLOSED AS AN ABSTRACT CONDITIONAL TRANSFER THEOREM ONLY
+(2026-08-13). EXP-000836 / R-167 v3.2 applies Araki's differential KMS
+inequality in the physical-time convention to obtain
+`-i hbar omega_n(A*delta_n(A))>=-||A||^2/beta_n`. Weak-star state convergence
+and norm convergence of the generators on a common graph core pass ground
+positivity and invariance to the target group. Parity intertwining passes by
+graph closure. A fixed selfadjoint odd contraction `B` with
+`liminf omega_n^+(B)>=m_0>0` gives
+`||omega_+-omega_-||>=2m_0`. The theorem assumes rather than constructs the
+common algebra, phase KMS sequences, generator convergence and fixed bounded
+odd witness. It proves no exact-Q3 beta-infinity state, purity, disjointness,
+clustering, simple ground kernel or broken-sector GNS gap.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -1840,6 +1874,11 @@ EXP-000835 / R-167 v3.1 sharpens a finite-volume raw configuration-multiplier
 boundary and a canonical standard-cylinder intersection. It constructs no
 rank-two block diagonalization, connected QPS interaction, cutoff-compatible
 phase intertwiner or GNS map. This parent remains OPEN.
+
+EXP-000836 / R-167 v3.2 transfers ground positivity only after one common
+algebra and common target generator have already been identified. It supplies
+no oscillator elimination, connected QPS interaction, cutoff-compatible
+phase intertwiner or fixed exact-Q3 order witness. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -1931,6 +1970,12 @@ boundary but leaves dressed, multi-site, smeared, resolvent, local-strict,
 strong-star and state-weighted carriers open. The background-uniform dressed
 bond-form commutator and summable exact-Q3 shell weights remain unproved, so
 this parent remains OPEN.
+
+EXP-000836 / R-167 v3.2 assumes one identified common algebra, phase KMS
+families and common-core target-generator convergence. It proves none of the
+all-shape Q3 Cauchy estimates, spatial embeddings, Hamiltonian/OS quotient
+identification or fixed exact-Q3 separator needed to instantiate those
+assumptions. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -2152,6 +2197,12 @@ cylinder theorem. It supplies neither an infinite-dimensional two-phase QPS
 theorem nor cutoff-stable passage, a common radius, phase selection or a
 phasewise oscillator intertwiner. This parent remains OPEN.
 
+EXP-000836 / R-167 v3.2 is an abstract limiting-state transfer after the
+common algebra, two KMS sequences, common generator and fixed witness are
+given. It supplies no infinite-dimensional two-phase QPS theorem,
+cutoff-stable passage, phase construction or oscillator intertwiner. This
+parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -2223,6 +2274,12 @@ EXP-000835 / R-167 v3.1 classifies finite-volume raw multipliers and one
 canonical standard-cylinder intersection only. It constructs no ordered
 zero-temperature phase, common target generator, centered form core,
 sectorwise Poincare inequality or positive broken-sector implementer. This
+parent remains OPEN.
+
+EXP-000836 / R-167 v3.2 proves algebraic ground positivity and distinctness
+only under a common-target generator limit and a fixed odd separator. It does
+not supply phasewise Poincare coercivity, a positive implementing Hamiltonian,
+a centered form core, kernel simplicity or a broken-sector GNS gap. This
 parent remains OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**

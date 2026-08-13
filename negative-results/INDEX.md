@@ -5,7 +5,7 @@
 
 Authorities: `negative-results/registry.md`.
 
-**357 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 286 · retraction: 5
+**358 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 287 · retraction: 5
 
 Latest 25 records:
 
@@ -17,6 +17,7 @@ Latest 25 records:
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONESSENTIALLY-CONSTANT-LINFINITY-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-nonessentially-constant-linfinity-configuration-multiplier-full-hamiltonian-point-norm-c0) | no_go | include a nonessentially-constant bounded measurable configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONCONSTANT-CB-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-nonconstant-cb-configuration-multiplier-full-hamiltonian-point-norm-c0) | no_go | include a nonconstant bounded continuous configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-gevrey-two-asymptotic-remainder-automatic-all-order-sw-convergence) | no_go | infer convergent all-order SW from a Gevrey-two majorant and optimally scaled asymptotic remainder |
+| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-NORM-SEPARATED-PARITY-KMS-PAIRS-AUTOMATIC-DISTINCT-GROUND-LIMITS`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-finite-norm-separated-parity-kms-pairs-automatic-distinct-ground-limits) | no_go | infer distinct beta-to-infinity ground limits from finite-n norm-separated parity KMS pairs without one fixed noncollapsing witness |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-finite-gaps-plus-weakstar-states-automatic-target-generator-and-gns-gap-transfer) | no_go | infer a prescribed target generator and GNS gap from weak-star convergent finite ground states with uniformly positive finite gaps |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-CATEGORICAL-UNIFORM-CONTINUOUS-ELEMENT-KMS-ENVELOPE-AUTOMATIC-ALL-SHAPE-CAUCHY-AND-UNIQUE-PHASE-QUOTIENT`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-categorical-uniform-continuous-element-kms-envelope-automatic-all-shape-cauchy-and-unique-phase-quotient) | no_go | infer all-shape Cauchy convergence and a unique phase quotient from the categorical continuous/KMS envelope |
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-second-order-disjoint-vanishing-automatic-all-order-global-feshbach-connectedness) | no_go | infer connectedness of the raw all-order global scalar Feshbach map from second-order disjoint-edge vanishing |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-GLOBAL-ALL-BOND-RENYI-VOLUME-UNIFORMITY`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-global-all-bond-renyi-volume-uniformity) | no_go | demand one volume-independent global sandwiched-Renyi bound for complete all-bond kicks |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-FULL-OSCILLATOR-LOCAL-PARITY-DOUBLET-EDGE-GAP-AUTOMATIC-VOLUME-UNIFORM-LATTICE-GAP`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-full-oscillator-local-parity-doublet-edge-gap-automatic-volume-uniform-lattice-gap) | no_go | infer a uniform lattice gap from a local parity doublet and edge gap one |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-forward-local-automorphism-limit-automatic-surjectivity-and-inverse-cauchy) | no_go | infer a surjective limiting automorphism and inverse Cauchy convergence from exact forward local stabilization of finite-volume automorphisms |
-| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-extensive-feshbach-self-energy-automatic-qps-locality) | no_go | promote a global extensive Feshbach self-energy norm bound automatically to a quasi-local two-phase QPS interaction norm |
 
 Search without loading the full registry:
 

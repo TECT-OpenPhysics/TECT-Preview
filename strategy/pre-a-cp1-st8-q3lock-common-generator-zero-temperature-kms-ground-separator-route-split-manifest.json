@@ -1,0 +1,119 @@
+{
+  "schema": "tect/pre-a-q3lock-common-generator-kms-ground-separator/1.0",
+  "package_id": "pre-a-cp1-st8-q3lock-common-generator-zero-temperature-kms-ground-separator-route-split",
+  "version": "R-167 v3.2",
+  "date": "2026-08-13",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-000836",
+  "prior_exploration_id": "EXP-000835",
+  "claim_bearing": false,
+  "closed_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-COMMON-TARGET-GENERATOR-ZERO-TEMPERATURE-KMS-AND-FIXED-ODD-WITNESS-DISTINCT-GROUND-STATE-TRANSFER"
+  ],
+  "negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-NORM-SEPARATED-PARITY-KMS-PAIRS-AUTOMATIC-DISTINCT-GROUND-LIMITS"
+  ],
+  "historical_open_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION"
+  ],
+  "open_parent_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "conditional_transfer": {
+    "common_algebra": "Let A be one unital C-star algebra. Let alpha be one target point-norm C0 automorphism group with closed generator delta, and let D be a unital star-subalgebra that is a graph core for delta.",
+    "thermal_sequences": "Let beta_n tend to infinity. For each sign sigma in {+,-}, let alpha_n^sigma be a point-norm C0 group on the same identified algebra A, with generator delta_n^sigma and beta_n-KMS state omega_n^sigma. Require D to lie in every generator domain.",
+    "generator_and_state_limits": "For every A in D, ||delta_n^sigma(A)-delta(A)|| tends to zero, and omega_n^sigma tends weak-star to omega_sigma.",
+    "differential_kms": "With physical time alpha_t=Ad exp(itH/hbar), the strip width is beta_n hbar and Araki's differential KMS inequality is -i beta_n hbar omega_n^sigma(A* delta_n^sigma(A)) >= s(x_n,y_n), where x_n=omega_n^sigma(A*A), y_n=omega_n^sigma(AA*), and s(x,y)=x log(x/y) with the standard extended boundary values.",
+    "safe_entropy_bound": "For x,y>0, log(x/y)>=1-y/x gives s(x,y)>=x-y>=-y. The same lower bound holds at the extended boundary. Hence -i hbar omega_n^sigma(A*delta_n^sigma(A))>=-||A||^2/beta_n.",
+    "ground_limit": "Weak-star state convergence plus norm generator convergence passes the energy form to the limit. The graph-core property extends -i hbar omega_sigma(A*delta(A))>=0 and omega_sigma(delta(A))=0 from D to Dom(delta). Thus both omega_+ and omega_- are algebraic ground states of the same target alpha.",
+    "parity": "Let Theta be an involutive linear star-automorphism with Theta(D)=D. Require omega_n^-=omega_n^+ o Theta and delta_n^- o Theta=Theta o delta_n^+ on D. The limits give omega_-=omega_+ o Theta and delta o Theta=Theta o delta, hence alpha o Theta=Theta o alpha.",
+    "fixed_separator": "Require a fixed selfadjoint Theta-odd B in A with ||B||<=1 and liminf_n omega_n^+(B)>=m_0>0. Then omega_+(B)>=m_0, omega_-(B)<=-m_0, and ||omega_+-omega_-||>=2m_0. The two target ground states are distinct.",
+    "scope": "This is an abstract conditional transfer theorem. It does not construct the common algebra, the finite-temperature identified actions, their generator convergence, or the fixed noncollapsing odd witness for exact Q3."
+  },
+  "q3_application_boundary": {
+    "source_cusp": "EXP-000790 supplies a zero-temperature source cusp and parity-related time-zero tangent candidates. Uniform fourth moments can turn the unbounded coordinate order label into a bounded odd truncation, but current authority does not identify those candidates as beta-to-infinity KMS limits on one Hamiltonian-derived common algebra.",
+    "thermal_separator": "The EXP-000782 finite-beta infrared separator decays to zero along beta-to-infinity and therefore cannot itself serve as the fixed m_0 witness.",
+    "missing_inputs": "To apply the theorem to exact Q3 one must still prove a noncollapsing common spatial carrier, both phase KMS families on it for beta_n tending to infinity, common-core target-generator convergence, and a fixed bounded odd witness with a uniform sign separation.",
+    "gap_boundary": "The conclusion is ground-state positivity and distinctness only. A broken-sector GNS gap additionally needs the phasewise Poincare, positive implementation, energy identity, and centered form-core hypotheses isolated by R-167 v3.0."
+  },
+  "collapse_negative": {
+    "algebra": "Take A=C([-1,1]), alpha_n^+=alpha_n^-=alpha=id, delta_n^+=delta_n^-=delta=0, D=A, beta_n=n, and Theta(f)(q)=f(-q).",
+    "states": "Let omega_n^+=ev_(1/n) and omega_n^-=ev_(-1/n). Every state is beta_n-KMS for the trivial dynamics; these two states are pure, extremal, parity related, and norm-distance two for every n.",
+    "collapse": "Both sequences converge weak-star to ev_0. For the fixed odd contraction B(q)=q, omega_n^+(B)=1/n tends to zero, so the uniform separator premise fails exactly.",
+    "consequence": "Finite-n distinctness, purity, extremality, parity relation, a common algebra, and even exact common generator equality do not imply distinct beta-to-infinity ground limits without a fixed noncollapsing witness. The fixture does not assume or refute thermodynamic phase separation."
+  },
+  "exact_fixture": {
+    "differential_kms_matrix": {
+      "beta_energy": "log(2)",
+      "ground_weight": "2/3",
+      "excited_weight": "1/3",
+      "raising_x": "2/3",
+      "raising_y": "1/3",
+      "raising_lhs": "2*log(2)/3",
+      "raising_entropy": "2*log(2)/3",
+      "lowering_x": "1/3",
+      "lowering_y": "2/3",
+      "lowering_lhs": "-log(2)/3",
+      "lowering_entropy": "-log(2)/3",
+      "safe_lower_bound": "-2/3"
+    },
+    "fixed_separator": {
+      "witness_norm": "1",
+      "m_0": "3/4",
+      "plus_value": "3/4",
+      "minus_value": "-3/4",
+      "state_distance_lower_bound": "3/2"
+    },
+    "collapsing_kms": {
+      "sample_n": [2, 3, 5, 8],
+      "plus_points": ["1/2", "1/3", "1/5", "1/8"],
+      "minus_points": ["-1/2", "-1/3", "-1/5", "-1/8"],
+      "fixed_witness_gaps": ["1", "2/3", "2/5", "1/4"],
+      "finite_state_norm_distance": "2",
+      "common_weakstar_limit": "0",
+      "uniform_fixed_witness_separator": false
+    },
+    "entropy_boundary": {
+      "s_0_3": "0",
+      "s_2_0": "+infinity",
+      "s_0_0": "0"
+    }
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_common_generator_zero_temperature_kms_ground_separator_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_common_generator_zero_temperature_kms_ground_separator_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_common_generator_zero_temperature_kms_ground_separator_route_split_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-primary-pre-a-cp1-st8-q3lock-common-generator-zero-temperature-kms-ground-separator-route-split/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-independent-pre-a-cp1-st8-q3lock-common-generator-zero-temperature-kms-ground-separator-route-split/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-integrated-pre-a-cp1-st8-q3lock-common-generator-zero-temperature-kms-ground-separator-route-split/result.json",
+    "staged_lifecycle": "Before formal integration, run all three scripts with --staged --no-store. No run JSON or formal authority is written by this five-file proof package."
+  },
+  "formal_integration_contract": {
+    "event_id": 628,
+    "theorem_map_version": "1.24.0",
+    "expected_post_formal_counts": {
+      "claims": 49,
+      "results": 168,
+      "gates": 183,
+      "negatives": 358,
+      "explorations": 836,
+      "events": 628,
+      "tasks": 54,
+      "catalog": 3891
+    },
+    "required_links": "EXP-000836, event 628, T-054, ROADMAP, strategy index, proof-evidence map, theorem map, generated compact surfaces, one conditional CLOSED scoped gate, one collapse negative, and all five OPEN parents."
+  },
+  "checkpoint_synthesis": {
+    "status": "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+    "pdf_issued": false,
+    "workflow": "Proof-first manifest, certificate and three executable verifiers only. No v3.2 PDF is issued."
+  },
+  "no_overclaim": "R-167 v3.2 closes one abstract conditional KMS-to-distinct-ground-state transfer child and registers one fixed-witness collapse negative. It does not construct an exact-Q3 common spatial algebra, all-shape dynamics, beta-to-infinity phase families, common-core generator convergence, or a fixed noncollapsing odd separator. It proves no beta-infinity KMS state, purity, extremality, factoriality, disjointness, clustering, simple ground kernel, broken-sector GNS gap, mass gap, full-oscillator two-phase QPS theorem, selector removal, regulator removal, continuum, physical vacuum or empty-space comparison, Round-1, C6, CP1, physical Sector A or Pre-A. All five active parent gates remain OPEN."
+}

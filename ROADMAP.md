@@ -1278,6 +1278,18 @@ strong-star or state-weighted carriers. The exact-Q3 background-uniform
 dressed bond-form commutator, summable shells, common alpha, full-oscillator
 two-phase transfer and target GNS gap remain OPEN. No v3.1 PDF is issued.
 
+EXP-000836 / R-167 v3.2 retains every v3.1 child and adds one scoped T0
+abstract conditional transfer theorem. Araki's differential KMS inequality,
+weak-star state convergence and common graph-core generator convergence pass
+beta-to-infinity KMS sequences to algebraic ground states of one target
+dynamics; parity and one fixed bounded odd witness keep the two limits
+distinct. A `C([-1,1])` fixture shows that finite-step pure, extremal,
+factorial parity KMS pairs can stay at norm distance two yet collapse to one
+weak-star limit when their separator depends on `n`. Exact Q3 still lacks the
+common spatial carrier, phase KMS families, target-generator convergence and
+fixed noncollapsing separator. The historical beta-infinity gate and all five
+active parents remain OPEN. No v3.2 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or
