@@ -1,0 +1,151 @@
+{
+  "assertions": [
+    {
+      "actual": "(['PA-CP1-ST8-Q3LOCK-SOURCE-SYMMETRIC-L1-ORBIT-SMEAR-CARRIER-AND-SELECTED-TANGENT-KMS-PAIR'], ['NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-AUTOMATIC-ZERO-SOURCE-QUOTIENT-FACTORIZATION'])",
+      "expected": "(['PA-CP1-ST8-Q3LOCK-SOURCE-SYMMETRIC-L1-ORBIT-SMEAR-CARRIER-AND-SELECTED-TANGENT-KMS-PAIR'], ['NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-AUTOMATIC-ZERO-SOURCE-QUOTIENT-FACTORIZATION'])",
+      "group": "topology",
+      "name": "manifest topology",
+      "status": "PASS"
+    },
+    {
+      "actual": "Fix the microscopic Q3 regulator N and a symmetric compact source interval I=[-h_0,h_0]. For each finite periodic Lambda and h in I use the exact Hamiltonian H_(Lambda,N)(h), its physical real-time group alpha_t^(Lambda,h)=Ad exp[it H_(Lambda,N)(h)/hbar], and finite-support rational configuration characters W_(Lambda,xi).",
+      "expected": "fixed N symmetric source family",
+      "group": "theorem",
+      "name": "carrier norm family",
+      "status": "PASS"
+    },
+    {
+      "actual": "physical beta/mathematical beta*hbar KMS",
+      "expected": "physical beta/mathematical beta*hbar KMS",
+      "group": "theorem",
+      "name": "physical KMS strip",
+      "status": "PASS"
+    },
+    {
+      "actual": "Exact Q3 parity intertwines H_(Lambda,N)(h) with H_(Lambda,N)(-h). Symmetry of I therefore induces the isometric involution gamma A_(xi,f)=A_(-xi,f), commuting with theta.",
+      "expected": "same-carrier parity",
+      "group": "theorem",
+      "name": "parity covariance",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'M3': '(64*C_4)^(3/4)', 'moment_factor': '64', 'remainder_denominator': 6, 'boundary_lower_equals_d': True, 'd': 'r*sqrt(8)*m_0/2', 'distance_lower_bound': '2*d', 'root_factor_numeric': 2.8284271247461903}",
+      "expected": "derived fourth factor, factorial and one-half",
+      "group": "separator",
+      "name": "separator arithmetic",
+      "status": "PASS"
+    },
+    {
+      "actual": "The bound |sin z-z|<=|z|^3/6 and Gibbs invariance give the exact bridge varphi_n^+(b)=rho_n^+(sin(rX))>=d and varphi_n^-(b)=rho_n^-(sin(rX))<=-d eventually. Hence every selected joint categorical cluster pair obeys varphi_+(b)>=d, varphi_-(b)<=-d and ||varphi_+-varphi_-||>=2d.",
+      "expected": "concrete-to-categorical invariant smear separates",
+      "group": "separator",
+      "name": "separator state distance",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "fixture",
+      "name": "M2 zero-source kernel",
+      "status": "PASS"
+    },
+    {
+      "actual": "(1-exp(-i*1))^2/(i*1)",
+      "expected": "(1-exp(-i))^2/i",
+      "group": "fixture",
+      "name": "M2 coefficient numerical derivation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.8452878799605975",
+      "expected": "16 sin(1/2)^4",
+      "group": "fixture",
+      "name": "M2 sine modulus derivation",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "fixture",
+      "name": "M2 factorization failure",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'canonical_map': 'Because 0 belongs to I, the identity on formal generators extends to a canonical surjective equivariant star homomorphism q_0:A_(N,I)->A_(N,{0}).', 'factorization_criterion': 'A state omega on A_(N,I) factors through q_0 if and only if omega(k^*k)=0 for every k in ker q_0, equivalently omega vanishes on ker q_0.', 'route_boundary': 'The fact h_n->0 does not itself establish this kernel condition.'}",
+      "expected": "kernel criterion and no shortcut",
+      "group": "quotient",
+      "name": "quotient iff and boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'carrier': 'Let n range over the positive integers and I_2=[-1,1]. Form the analogous unital source-family orbit-smear carrier A_M2 by the supremum over every declared pair (n,h) with h in I_2, using the seed B=sigma_x and H_n(h)=n h D. The zero-source carrier uses all (n,0), and restriction of the supremum defines the canonical quotient q_0^M2:A_M2->A_(M2,0).', 'inputs': {'n': 'positive integer', 'I_2': '[-1,1]', 'hbar': '1', 'D': 'diag(0,1)', 'H_n(h)': 'n h D', 'h_n': '1/n', 'B': 'sigma_x', 'f': '1_[0,1]-1_[1,2]'}, 'derived': {'zero_source_image': '0', 'coefficient': '(1-exp(-i))^2/i', 'nonzero_source_image': 'c E_01+conj(c) E_10', 'modulus_squared': '16 sin(1/2)^4', 'square': '16 sin(1/2)^4 I_2', 'factorization_failure': True}, 'scope': 'This is the analogous M2 source-family orbit-smear carrier over all positive integers n and h in I_2, with the declared seed B=sigma_x; B is not a Q3 rational-character label. The fixture refutes only the automatic inference from h_n->0 to zero-source quotient factorization. It is not a Q3LOCK counterexample and supplies no statement about the selected Q3 tangent states beyond the need to prove the kernel condition.'}",
+      "expected": "self-contained explicit non-Q3 carrier",
+      "group": "scope",
+      "name": "analogous fixture scope",
+      "status": "PASS"
+    },
+    {
+      "actual": "all required tokens present",
+      "expected": "all required tokens present",
+      "group": "certificate",
+      "name": "certificate audit tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-167 v3.8 closes only the fixed-N source-symmetric categorical L1 orbit-smear carrier and the selected physical-beta tangent KMS pair, with mathematical KMS parameter beta hbar, on that carrier. It proves no zero-source quotient factorization, no exact Q3 thermodynamic zero-source or spatial common alpha, no all-exhaustion Cauchy theorem, no algebraic ground-state identification, purity, extremality or positive broken-sector GNS gap, no beta-infinity selection, continuum or regulator removal, mass gap, physical vacuum or empty-space comparison, Round-1, C6, CP1, physical Sector A or Pre-A. All five active parent gates and both historical gates remain OPEN.",
+      "expected": "scope firewalls",
+      "group": "scope",
+      "name": "no-overclaim",
+      "status": "PASS"
+    },
+    {
+      "actual": "AST ASCII LF final-LF",
+      "expected": "AST ASCII LF final-LF",
+      "group": "format",
+      "name": "source AST and format",
+      "status": "PASS"
+    },
+    {
+      "actual": "all formal tokens present",
+      "expected": "all formal tokens present",
+      "group": "formal",
+      "name": "formal authority links",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "fixture": {
+      "coefficient": "(1-exp(-i*1))^2/(i*1)",
+      "coefficient_identity": true,
+      "factorization_failure": true,
+      "modulus_squared": "16*sin(1/2)^4",
+      "modulus_squared_identity": true,
+      "numeric_modulus_squared": 0.8452878799605975,
+      "square_scalar": true,
+      "strictly_positive": true,
+      "zero_source_integral": "0"
+    },
+    "separator": {
+      "M3": "(64*C_4)^(3/4)",
+      "boundary_lower_equals_d": true,
+      "d": "r*sqrt(8)*m_0/2",
+      "distance_lower_bound": "2*d",
+      "moment_factor": "64",
+      "remainder_denominator": 6,
+      "root_factor_numeric": 2.8284271247461903
+    }
+  },
+  "mode": "formal",
+  "schema": "tect/pre-a-q3lock-source-symmetric-orbit-smear-kms-quotient-independent-run/1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_symmetric_orbit_smear_kms_quotient_route_split_independent.py": "1b5696870e50072267e7497c43abf1a3ff435f139bda45c83976b94e0b2882a6",
+    "strategy/pre-a-cp1-st8-q3lock-source-symmetric-orbit-smear-kms-quotient-route-split-certificate-260813.md": "a836fa78d9b4e35fa68ae3c3ac33b60f2544fe81f9aff9c4d43b22e015412f12",
+    "strategy/pre-a-cp1-st8-q3lock-source-symmetric-orbit-smear-kms-quotient-route-split-manifest.json": "86ef774c62f0d46cafcc4d0a15be99d7129ff7e1f42d29f47016a8c3c76bd679"
+  },
+  "summary": {
+    "failed": 0,
+    "passed": 16,
+    "status": "PASS"
+  },
+  "version": "R-167 v3.8"
+}

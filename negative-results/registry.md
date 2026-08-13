@@ -9,6 +9,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-AUTOMATIC-ZERO-SOURCE-QUOTIENT-FACTORIZATION](#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-automatic-zero-source-quotient-factorization) | infer zero-source quotient factorization of source-family weak-star clusters merely from `h_n->0` | on `M_2`, `H_n(h)=nh diag(0,1)`, `h_n=1/n` and one signed `L1` orbit smear give `q_0(a)=0` but `a* a=16 sin(1/2)^4 I_2` along every `n` |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-POINTWISE-POSITIVE-TIME-TRACE-CLASS-AUTOMATIC-SHORT-TIME-L1-DOMINATION](#ng-2026-08-13-pre-a-st8-q3lock-pointwise-positive-time-trace-class-automatic-short-time-l1-domination) | infer an integrable short-time Duhamel majorant from trace-class energy dressing at every separately fixed positive time | for one compact-resolvent pair `h=V=diag(1,2,...)`, the dressed trace is finite for every `t>0` but behaves as `t^-2`, and the exact two-sided Holder majorant behaves as `1/s` at each endpoint |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-DIMENSION-NORMALIZED-SCHATTEN-SMALLNESS-AUTOMATIC-DFFR-TRANSITION-OR-CONTOUR-SMALLNESS](#ng-2026-08-13-pre-a-st8-q3lock-dimension-normalized-schatten-smallness-automatic-dffr-transition-or-contour-smallness) | replace the raw local DFFR transition/contour norm by a dimension-normalized Schatten norm | a fixed rank-two high-sector transition has operator norm and a selected transition amplitude exactly one while its normalized Schatten `p`-norm is `(2/m)^(1/p)->0` |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-POSITIVE-TIME-ENERGY-DRESSED-TRACE-CONTROL-AUTOMATIC-DFFR-CONTOUR-ENTRY](#ng-2026-08-13-pre-a-st8-q3lock-fixed-positive-time-energy-dressed-trace-control-automatic-dffr-contour-entry) | infer DFFR contour entry from trace-class control at each fixed positive imaginary time | for `h_m=mQ_m`, `V_m=Q_m`, the dressed trace is `m exp(-tm)->0` at every fixed `t>0`, but its supremum over arbitrarily short times is `m` |
@@ -374,6 +375,28 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-automatic-zero-source-quotient-factorization"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-AUTOMATIC-ZERO-SOURCE-QUOTIENT-FACTORIZATION -- vanishing source does not imply zero-source quotient factorization
+
+**Failure mode.** Infer that weak-star cluster states on the source-family
+orbit-smear carrier factor through its canonical zero-source quotient merely
+because the selected sources satisfy `h_n->0`.
+
+**Evidence.** EXP-000842 / R-167 v3.8 takes `hbar=1`,
+`D=diag(0,1)`, `H_n(h)=nhD`, `h_n=1/n`, `B=sigma_x`, and
+`f=1_[0,1]-1_[1,2]`. For the orbit-smear symbol `a=A_(B,f)`, the zero-source
+orbit is constant and `integral f=0`, so `q_0(a)=0`. At `(n,h_n)`, however,
+`pi_(n,h_n)(a)=cE_01+bar(c)E_10`, `c=(1-exp(-i))^2/i`, and therefore
+`pi_(n,h_n)(a* a)=16 sin(1/2)^4 I_2>0`, independently of `n`. Every
+normalized state has that same nonzero expectation and every weak-star
+cluster violates the kernel criterion.
+
+**Consequence.** Scalar source convergence alone does not imply
+`omega(k* k)=0` on `ker q_0`, the exact necessary and sufficient condition for
+factorization. A model-specific exact-Q3 kernel estimate remains necessary.
+This `M_2` family is not a Q3LOCK counterexample and proves no failure of the
+selected Q3 tangents themselves.
 
 <a id="ng-2026-08-13-pre-a-st8-q3lock-pointwise-positive-time-trace-class-automatic-short-time-l1-domination"></a>
 ### NG-2026-08-13-PRE-A-ST8-Q3LOCK-POINTWISE-POSITIVE-TIME-TRACE-CLASS-AUTOMATIC-SHORT-TIME-L1-DOMINATION -- pointwise positive-time trace class is not short-time L1 domination

@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**633 accepted events** · latest 25 shown below · machine locator: `index.json`
+**634 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-13 | `20260813-r-167-v3-8-source-symmetric-orbit-smear-kms-quo` — [R-167 v3.8 source-symmetric orbit-smear KMS quotient route split] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000842, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-8-source-symmetric-orbit-smear-kms-quo) |
 | 2026-08-13 | `20260813-r-167-v3-7-affine-form-gibbs-trace-first-duhame` — [R-167 v3.7 affine-form Gibbs-trace first-Duhamel route repair] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000841, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-7-affine-form-gibbs-trace-first-duhame) |
 | 2026-08-13 | `20260813-r-167-v3-6-registered-corridor-full-oscillator` — [R-167 v3.6 registered corridor full-oscillator phases and L1 Duhamel reduction] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000840, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-6-registered-corridor-full-oscillator) |
 | 2026-08-13 | `20260813-r-167-v3-5-ritz-corner-state-passage-and-positi` — [R-167 v3.5 Ritz-corner state passage and positive-time trace-class cutoff removal] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000839, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-5-ritz-corner-state-passage-and-positi) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-12 | `20260812-record-the-candidate-neutral-qft-bridge-and-yan` — [Record the candidate-neutral QFT bridge and Yang--Mills evidence role] - 2026-08-12 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260812-record-the-candidate-neutral-qft-bridge-and-yan) |
 | 2026-08-12 | `20260812-r-167-v2-4-combined-gate-level-synthesis-pdf-is` — [R-167 v2.4 combined gate-level synthesis PDF issued after strict validation] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000818, R-167 | [bounded page](pages/000569-000618.md#20260812-r-167-v2-4-combined-gate-level-synthesis-pdf-is) |
 | 2026-08-12 | `20260812-r-167-v2-4-closes-three-scoped-standard-form-c0` — [R-167 v2.4 closes three scoped standard-form C0 and first-generator children] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000818, R-167 | [bounded page](pages/000569-000618.md#20260812-r-167-v2-4-closes-three-scoped-standard-form-c0) |
-| 2026-08-12 | `20260812-exp-000790-historical-gate-authority-and-positi` — [EXP-000790 historical gate authority and positive-lambda scope repaired] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000790, EXP-000817 | [bounded page](pages/000569-000618.md#20260812-exp-000790-historical-gate-authority-and-positi) |
 
 ## Post-cutover pages
 
@@ -49,5 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 619–633 | 15 | [000619-000668.md](pages/000619-000668.md) |
+| 619–634 | 16 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

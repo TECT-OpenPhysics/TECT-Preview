@@ -1362,6 +1362,21 @@ trace, common alpha, algebraic ground identification or broken-sector GNS
 gap. The historical beta-infinity gate and all five active parents remain
 OPEN. No v3.7 PDF is issued.
 
+EXP-000842 / R-167 v3.8 retains every v3.7 child and adds one scoped T0
+result. At fixed microscopic `N`, the source-symmetric supremum completion of
+all finite-periodic `L1` orbit smears carries one source-, sign-, state- and
+`beta`-independent categorical point-norm `C0` action and parity. The selected
+`+/-h_n` Gibbs pullbacks have a distinct physical-`beta` KMS cluster pair,
+equivalently a mathematical `(beta hbar)`-KMS pair, separated by one fixed
+sine-smear observable. A canonical zero-source quotient exists, with an exact
+kernel-square factorization criterion; the new `M_2` fixture shows that
+`h_n->0` alone does not force the criterion. The selected pair is not proved
+to factor through that quotient, and the carrier is not a spatial all-
+exhaustion thermodynamic action. The historical DLR-to-common-alpha and beta-
+infinity gates and all five active parents remain OPEN. No algebraic ground
+identity, broken-sector GNS gap, Round-1, C6, CP1, physical Sector A or Pre-A
+closure follows. No v3.8 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

@@ -129,6 +129,11 @@ full-oscillator cutoff-removal theorem. It creates no contestant, microscopic
 observable map, common estimand, prospective prediction, custodian
 commitment, freeze or score. Round-1 remains OPEN.
 
+EXP-000842 / R-167 v3.8 adds one claim-nonbearing fixed-`N` categorical
+carrier/KMS child and one scoped quotient-factorization failure. It creates no
+contestant, microscopic observable map, common estimand, prospective
+prediction, custodian commitment, freeze or score. Round-1 remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -661,6 +666,16 @@ is absorbed into the active successor
 which still requires the actual all-shape two-orientation Q3 estimates and the
 Hamiltonian/KMS quotient identification.
 
+EXP-000842 / R-167 v3.8 places the selected `+/-` source Gibbs tangent nets on
+one source-family categorical orbit-smear action and obtains distinct
+physical-`beta` KMS cluster states, equivalently mathematical
+`(beta hbar)`-KMS states, for that action. The carrier is a supremum completion
+over finite volumes and sources, not a spatial all-exhaustion limit, and the
+selected states are not shown to factor through its zero-source quotient. It
+therefore does not identify the two zero-source DLR/OS phases as KMS states of
+one exact-Q3 thermodynamic Hamiltonian action. This historical gate remains
+OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION**
 
 **Statement:** Starting from one common Q3LOCK dynamics, control the
@@ -714,6 +729,12 @@ fixed-`N`, fixed-positive-`beta` first Duhamel edge coefficient by an
 affine-form Gibbs-trace estimate. It constructs neither the common target
 dynamics nor a beta-to-infinity phase selection or ground-state
 identification. This historical gate remains OPEN.
+
+EXP-000842 / R-167 v3.8 gives a distinct selected KMS pair only at one fixed
+positive physical inverse temperature on a source-family categorical carrier.
+It proves neither zero-source quotient factorization nor a beta-infinity
+limit, target-generator convergence or algebraic ground positivity. This
+historical gate remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-CONNECTED-SUSCEPTIBILITY-AND-GNS-POINCARE-GATE**
 
@@ -2047,6 +2068,40 @@ the cutoff from its full-oscillator first coefficient for each fixed
 sum, DFFR transition-norm entry, `N`-uniform heat trace, common real-time
 dynamics or phase identification.
 
+### **PA-CP1-ST8-Q3LOCK-SOURCE-SYMMETRIC-L1-ORBIT-SMEAR-CARRIER-AND-SELECTED-TANGENT-KMS-PAIR**
+
+**Statement:** At fixed microscopic Q3 regulator `N`, complete the exact finite
+periodic Hamiltonians over one symmetric compact source interval into one
+source-, sign-, state- and `beta`-independent categorical `L1` orbit-smear
+`C*`-dynamical system, carry parity to that carrier, and put the selected
+`+/-` source-tangent Gibbs nets on one common action as a distinct fixed-
+physical-`beta` KMS cluster pair.
+
+**Status:** CLOSED FOR THE FIXED-`N` SOURCE-FAMILY CATEGORICAL CARRIER AND
+SELECTED FIXED-PHYSICAL-`BETA` TANGENT KMS PAIR ONLY (2026-08-13).
+EXP-000842 / R-167 v3.8 fixes `I=[-h_0,h_0]` and completes the formal orbit-
+smear algebra in `||a||_(N,I)=sup_(Lambda,h in I)||pi_(Lambda,h)(a)||`, where
+`pi_(Lambda,h)(A_(xi,f))=integral f(t)alpha_t^(Lambda,h)(W_(Lambda,xi))dt`.
+Kernel translation gives one point-norm `C0` action `theta`, and the symmetric
+source interval makes `gamma(A_(xi,f))=A_(-xi,f)` an isometric parity
+automorphism commuting with `theta`. Physical inverse temperature `beta`
+corresponds to mathematical KMS parameter and strip width `beta hbar`. The
+paired selected Gibbs pullbacks have joint weak-star cluster states
+`varphi_- = varphi_+ o gamma`, both `(beta hbar)`-KMS for `theta`.
+
+With the inherited fixed local order and fourth-moment bounds, choose one
+rational `r>0` with `r^2(64C_4)^(3/4)<=3sqrt(8)m_0` and one probability kernel
+`f`. The fixed selfadjoint contraction
+`b=[A_(xi,f)-A_(-xi,f)]/(2i)`, `xi=r(1,...,1)`, obeys
+`varphi_+(b)>=d`, `varphi_-(b)<=-d`, `d=r sqrt(8)m_0/2>0`, so the limits are
+distinct. The canonical equivariant quotient `q_0:A_(N,I)->A_(N,{0})`
+exists, but the selected states are not proved to factor through it.
+Factorization is equivalent to `varphi(k* k)=0` for every `k in ker q_0`; the
+exact `M2` fixture registered below shows that `h_n->0` alone does not imply
+this condition. The carrier is categorical, not a spatial all-exhaustion
+thermodynamic action. No algebraic ground state, GNS gap, purity, phase
+completeness or parent closure follows.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -2121,6 +2176,11 @@ unconditional for the affine Q3 edge form envelope at each fixed `N,beta`,
 but it still constructs no connected rank-two elimination, all-order QPS
 interaction, phase intertwiner or oscillator GNS map. This parent remains
 OPEN.
+
+EXP-000842 / R-167 v3.8 constructs a categorical source-family orbit-smear
+carrier and a fixed-physical-`beta` KMS pair, not an oscillator block
+diagonalization, connected QPS interaction, cutoff-compatible phase
+intertwiner or oscillator GNS map. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -2246,6 +2306,12 @@ EXP-000841 / R-167 v3.7 proves a trace-norm imaginary-time first-insertion
 limit, not a spatial point-norm C0 automorphism group. It supplies no
 all-shape Cauchy estimates, common generator or Hamiltonian-to-phase quotient.
 This parent remains OPEN.
+
+EXP-000842 / R-167 v3.8 supplies one source-symmetric categorical common
+action, but no spatial net, compatible embeddings, all-shape Cauchy estimate,
+zero-source quotient factorization or Hamiltonian-to-zero-source-phase
+identification. The exact `M2` fixture shows why `h_n->0` alone cannot supply
+the missing quotient condition. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -2504,6 +2570,11 @@ two-phase QPS theorem, branch classification, phase intertwiner, common
 real-time dynamics or uniform positive excitation gap. This parent remains
 OPEN.
 
+EXP-000842 / R-167 v3.8 proves a fixed-`N`, fixed-physical-`beta` categorical
+KMS-pair theorem. It supplies no infinite-dimensional two-phase QPS theorem,
+cutoff-stable branch classification, phase intertwiner, spatial common action
+or uniform positive excitation gap. This parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -2612,6 +2683,11 @@ EXP-000841 / R-167 v3.7 is an imaginary-time first-coefficient trace theorem.
 It neither identifies the tangent candidates as ground states of a common
 target generator nor proves a centered-core Poincare/coercivity estimate or a
 positive broken-sector GNS gap. This parent remains OPEN.
+
+EXP-000842 / R-167 v3.8 separates two fixed-physical-`beta` KMS clusters on a
+categorical carrier. It proves no zero-temperature ground identity, positive
+implementing Hamiltonian, phasewise Poincare inequality, centered form core,
+kernel simplicity or broken-sector GNS gap. This parent remains OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 
