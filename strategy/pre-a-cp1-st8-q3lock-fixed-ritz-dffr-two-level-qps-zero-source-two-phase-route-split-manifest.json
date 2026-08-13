@@ -1,0 +1,147 @@
+{
+  "schema": "tect/pre-a-q3lock-fixed-ritz-dffr-two-level-qps/1.0",
+  "package_id": "pre-a-cp1-st8-q3lock-fixed-ritz-dffr-two-level-qps-zero-source-two-phase-route-split",
+  "version": "R-167 v3.3",
+  "date": "2026-08-13",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-000837",
+  "prior_exploration_id": "EXP-000836",
+  "claim_bearing": false,
+  "closed_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIXED-RITZ-DFFR-TWO-LEVEL-QPS-LARGE-N-ZERO-SOURCE-TWO-PHASE-AND-GROUND-LIMIT"
+  ],
+  "negative_ids": [],
+  "reused_negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY"
+  ],
+  "open_parent_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "historical_open_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION"
+  ],
+  "fixed_ritz_setup": {
+    "onsite_space": "Fix one complete parity-preserving onsite spectral-cluster Ritz label M with dimension d_M independent of N. For all sufficiently large N, the retained onsite space has rank d_M, contains the exact even/odd doublet, and the compressed onsite energy has norm at most D_M N^2.",
+    "classical_reference": "On each forward star use h_(x,N)^0=sum_(i=1)^3[(k_x+k_(x+e_i))/6+J_N(1-s_x s_(x+e_i))]. In the tensor product spectral basis this is a classical finite-range m-potential with exactly the all-plus and all-minus periodic zero-energy configurations.",
+    "spectral_data": "For large N, 1<=J_N<=J_M^* because J_N tends to 8, Gamma_N>=c_Gamma,M N^2, and the exact local star gap is min{2J_N,Gamma_N/6+J_N}. On each positive edge the residual obeys |V_(e,N)(psi,psi)|<=alpha_N h_(e,N)^0(psi,psi)+beta_N ||psi||^2 with alpha_N<=C_alpha,M N^-2 and beta_N<=C_beta,M N^-3; grouping three positive edges changes only the additive term to 3 beta_N.",
+    "source": "Add the bounded parity-odd parameter h sum_x s_(x,N), allocated over the fixed-range interaction. Its all-plus/all-minus energy-density derivatives differ by two, and the residual is h-independent."
+  },
+  "peierls_charging": {
+    "sampling": "Choose a fixed sampling cube W_a larger than the star range and the period one reference patterns. A defective cube contains either a high site or two opposite low labels; in the latter case a nearest-neighbour path contains a disagreeing low edge.",
+    "bounded_overlap": "There is a finite geometric constant C_a such that the number S of defective sampling cubes is at most C_a(L+H), and the number S_high of high-defect cubes is at most C_a H, where L is the number of disagreeing low edges and H the number of high sites.",
+    "energy": "The classical energy is at least 2J_N L+Gamma_N H. For J_N>=1 and Gamma_N>1, kappa_M=1/(2C_a) and D_(M,N)=(Gamma_N-1)/(2C_a) give E(gamma)>kappa_M S(gamma)+D_(M,N) S_high(gamma). Thus kappa_M>0 is N-independent and D_(M,N)>=c_M Gamma_N-C'_M is of order N^2.",
+    "boundary": "No claim kappa_M=1 or D_(M,N)=Gamma_N/6 is made. The constants depend on the fixed sampling geometry and M only through the declared fixed data."
+  },
+  "dffr_block_reduction": {
+    "factorization": "On each positive edge put B_(e,N)=alpha_N h_(e,N)^0+beta_N I. The two-sided form bound and finite dimension give V_(e,N)=B_(e,N)^(1/2) C_(e,N) B_(e,N)^(1/2) with a selfadjoint contraction C_(e,N).",
+    "projections": "Let P_X^0 be the tensor product of the onsite doublet projectors on the two-site edge support, and Q_X^0=I-P_X^0. Both commute with B_(e,N).",
+    "operator_blocks": "The fixed-M energy ceiling and the O(1) low-reference spectrum give ||P phi P||=O_M(N^-2), ||Q phi Q||=O_M(1), and ||Q phi P||+||P phi Q||=O_M(N^-1).",
+    "hilbert_schmidt": "DFFR uses Hilbert-Schmidt interaction bounds. On a two-site edge, the safe DFFR equation (4.10) estimate ||T||_HS<=d_M^2||T|| converts the three operator estimates with one N-independent factor.",
+    "lambda_convention": "The lambda in DFFR (5.21)-(5.22) is an exponential-support bookkeeping parameter, not the physical interpolation endpoint. Fix lambda_0=1/2 and define the auxiliary family Q_(X,N)(lambda)=(lambda/lambda_0)^(s(X)) V_(X,N), so Q_N(lambda_0)=V_N is exactly the physical t=1 residual. Since an edge has s(X)=2, equation (5.21) holds throughout the auxiliary family with epsilon_(alpha,delta,N)=lambda_0^(-2)||V_(alpha,delta,N)||_HS=4||V_(alpha,delta,N)||_HS; the source derivative is zero.",
+    "criterion": "DFFR Theorem 5.2 requires the maximum of exp(-beta kappa_bar), lambda epsilon_ll/kappa, lambda sqrt(epsilon_lh epsilon_hl/[kappa(kappa+D)]), lambda epsilon_hh/(kappa+D), lambda epsilon_hl/(kappa+D), and lambda epsilon_lh/(kappa+D) to be below epsilon_0. The five nonthermal terms are respectively O(N^-2), O(N^-2), O(N^-2), O(N^-3), and O(N^-3).",
+    "uniformity": "For fixed d_M, fixed range, two reference patterns, fixed kappa_M, and lambda_0, the contour combinatorics and threshold epsilon_0 are N-independent; D_(M,N) is retained explicitly and only improves the high-sector denominators. Hence there are N_M and beta_M such that the physical residual enters for N>=N_M and beta>=beta_M."
+  },
+  "phase_conclusion": {
+    "regular_diagram": "DFFR Theorem 5.2 yields a regular smooth deformation of the two-pattern zero-temperature diagram and two stable low-temperature phases at its maximal-coexistence point.",
+    "zero_source_pin": "Parity sends h to -h, exchanges the two reference patterns and the two stable phases, and leaves the residual invariant. Uniqueness of the regular maximal-coexistence point therefore pins it exactly to h=0.",
+    "order": "Define q_(M,N,beta) as the maximum of the six DFFR (5.22) entries, or the fixed monotone contour majorant used in that proof; it tends to zero as N and beta grow at fixed M. DFF I Theorem 2.2 and equation (2.81), as invoked by DFFR II, make the stable expectations of the bounded Ritz sign s_(x,N) differ from the plus/minus reference values by O(q_(M,N,beta)). Existentially enlarge N_M and beta_M until this error is below the chosen one-quarter target; the two expectations then have opposite nonzero signs and are distinct.",
+    "ground_limits": "For each fixed M and each sufficiently large fixed N, beta-to-infinity cluster limits of the two stable phases are distinct ordered ground states of the same fixed-Ritz zero-source Hamiltonian.",
+    "scope": "The conclusion is fixed M and large N. It is not uniform in M and supplies no Ritz removal, full-oscillator phase theorem, common spatial algebra, common-alpha, Hamiltonian-to-OS quotient, GNS implementation or spectral gap."
+  },
+  "literature_scope": {
+    "dffr_1996": "N. Datta, R. Fernandez, J. Frohlich and L. Rey-Bellet, Low-Temperature Phase Diagrams of Quantum Lattice Systems. II. Convergent Perturbation Expansions and Stability in Systems with Infinite Degeneracy, Helvetica Physica Acta 69 (1996), 752-820, Theorem 5.2 and equations (5.21)-(5.22).",
+    "dff_1996_ground_limit": "N. Datta, R. Fernandez and J. Frohlich, Low-temperature phase diagrams of quantum lattice systems. I. Stability for quantum perturbations of classical systems with finitely-many ground states, Journal of Statistical Physics 84 (1996), 455-534, Theorem 2.2 and equation (2.81), as invoked by DFFR II for convergence of stable phase expectations to ground-state expectations as beta tends to infinity.",
+    "yarotskii_boundary": "D. A. Yarotskii, Pirogov-Sinai theory for relatively bounded quantum perturbations of classical lattice models, Russian Math. Surveys 61:2 (2006), 371-372, gives only an existential small neighbourhood for each finite-dimensional model. The present fixed-M proof instead verifies the explicit DFFR two-level criterion and does not infer a common radius from pointwise radii."
+  },
+  "exact_fixture": {
+    "inputs": {
+      "overlap": "8",
+      "kappa": "1/16",
+      "gamma": "N^2",
+      "high_penalty": "(N^2-1)/16",
+      "lambda": "1/2",
+      "support_size": "2",
+      "onsite_dimension": "4",
+      "hs_support_factor": "16",
+      "decay_absorption_factor": "4",
+      "combined_block_factor": "64"
+    },
+    "block_bounds": {
+      "B_ll": "2/N^2+1/N^3",
+      "B_hh": "10+1/N^3",
+      "B_lh_squared": "(2/N^2+1/N^3)*(10+1/N^3)"
+    },
+    "criterion_scaled_limits": {
+      "N2_low_low": "1024",
+      "N2_low_high_squared": "5242880",
+      "N2_high_high": "5120",
+      "N3_one_way_squared": "5242880"
+    },
+    "thermal": {
+      "kappa_bar": "1/32",
+      "beta": "64*log(2)",
+      "term": "1/4",
+      "role": "arithmetic identity only; epsilon_0 is unspecified, so this beta is not asserted to enter the theorem"
+    },
+    "peierls_sample": {
+      "N": "4",
+      "high_sites": "3",
+      "disagreeing_edges": "5",
+      "defective_cubes_upper": "64",
+      "high_defect_cubes_upper": "24",
+      "energy_lower": "58",
+      "charged_upper": "53/2",
+      "strict_margin": "63/2"
+    },
+    "order_target": {
+      "existential_error_target": "1/4",
+      "plus_order_lower": "3/4",
+      "minus_order_upper": "-3/4",
+      "order_gap_lower": "3/2",
+      "role": "target arithmetic after q_(M,N,beta) is chosen sufficiently small; not a computed DFF constant"
+    },
+    "parity": {
+      "plus_derivative": "1",
+      "minus_derivative": "-1",
+      "difference": "2",
+      "coexistence_source": "0"
+    }
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_ritz_dffr_two_level_qps_zero_source_two_phase_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_ritz_dffr_two_level_qps_zero_source_two_phase_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_ritz_dffr_two_level_qps_zero_source_two_phase_route_split_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-primary-pre-a-cp1-st8-q3lock-fixed-ritz-dffr-two-level-qps-zero-source-two-phase-route-split/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-independent-pre-a-cp1-st8-q3lock-fixed-ritz-dffr-two-level-qps-zero-source-two-phase-route-split/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-integrated-pre-a-cp1-st8-q3lock-fixed-ritz-dffr-two-level-qps-zero-source-two-phase-route-split/result.json",
+    "staged_lifecycle": "Before formal integration, run all three scripts with --staged --no-store. No run JSON or formal authority is written by this five-file proof package."
+  },
+  "formal_integration_contract": {
+    "event_id": 629,
+    "theorem_map_version": "1.25.0",
+    "expected_post_formal_counts": {
+      "claims": 49,
+      "results": 168,
+      "gates": 184,
+      "negatives": 358,
+      "explorations": 837,
+      "events": 629,
+      "tasks": 54,
+      "catalog": 3899
+    },
+    "required_links": "EXP-000837, event 629, T-054, ROADMAP, strategy index, proof-evidence map, theorem map, generated compact surfaces, one fixed-M CLOSED scoped gate, no new negative, the reused shrinking-radius negative, all five OPEN parents, and historical PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION remaining OPEN in its exact-Q3/common-alpha scope."
+  },
+  "checkpoint_synthesis": {
+    "status": "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+    "pdf_issued": false,
+    "workflow": "Proof-first manifest, certificate and three executable verifiers only. No v3.3 PDF is issued."
+  },
+  "no_overclaim": "R-167 v3.3 closes one fixed-complete-spectral-cluster Ritz, sufficiently-large-N, low-temperature DFFR two-level QPS child at the physical zero-source endpoint. It proves two stable parity-related fixed-Ritz phases and their distinct ordered beta-to-infinity ground-state limits. Historical PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION remains OPEN in its exact-Q3/common-alpha scope. It proves no M-uniform or full-oscillator passage, cutoff removal, common spatial algebra, all-shape dynamics, common-alpha, Hamiltonian-to-OS phase quotient, GNS implementation or gap, mass gap, regulator removal, continuum, physical vacuum or empty-space comparison, Round-1, C6, CP1, physical Sector A or Pre-A. All five active parent gates remain OPEN."
+}

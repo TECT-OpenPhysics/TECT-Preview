@@ -1290,6 +1290,17 @@ common spatial carrier, phase KMS families, target-generator convergence and
 fixed noncollapsing separator. The historical beta-infinity gate and all five
 active parents remain OPEN. No v3.2 PDF is issued.
 
+EXP-000837 / R-167 v3.3 retains every v3.2 child and adds one scoped T0
+fixed-Ritz theorem. For each fixed complete spectral-cluster Ritz label `M`,
+bounded-overlap two-level Peierls charging and relative-form low/high block
+estimates verify DFFR Theorem 5.2 at the physical residual endpoint for
+sufficiently large `N` and sufficiently low temperature. Parity pins maximal
+coexistence to zero source, and the two stable ordered phases retain distinct
+beta-to-infinity ground-state limits. The result is not uniform in `M`;
+full-oscillator cutoff removal, common alpha, exact-Q3 beta-infinity selection
+and the broken-sector GNS gap remain OPEN. All five active parents remain
+OPEN. No v3.3 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

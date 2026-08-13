@@ -104,6 +104,11 @@ It creates no contestant, microscopic observable map, common estimand,
 prospective prediction, custodian commitment, freeze or score. Round-1
 remains OPEN.
 
+EXP-000837 / R-167 v3.3 adds one claim-nonbearing fixed-Ritz mathematical
+child. It creates no contestant, microscopic observable map, common estimand,
+prospective prediction, custodian commitment, freeze or score. Round-1
+remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -657,6 +662,12 @@ odd witness keeps the parity pair distinct. Exact Q3 still lacks the common
 spatial algebra, phase KMS families, target-generator convergence and fixed
 noncollapsing separator required by that theorem. This historical gate
 remains OPEN.
+
+EXP-000837 / R-167 v3.3 constructs ordered beta-to-infinity ground limits only
+after fixing one finite Ritz label `M` and one sufficiently large `N`. It
+supplies neither the exact-Q3 common spatial algebra and generator nor an
+`M`-uniform cutoff passage identifying the source-selected full-oscillator
+phases. This historical exact-Q3/common-alpha gate remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-CONNECTED-SUSCEPTIBILITY-AND-GNS-POINCARE-GATE**
 
@@ -1834,6 +1845,28 @@ common algebra, phase KMS sequences, generator convergence and fixed bounded
 odd witness. It proves no exact-Q3 beta-infinity state, purity, disjointness,
 clustering, simple ground kernel or broken-sector GNS gap.
 
+### **PA-CP1-ST8-Q3LOCK-FIXED-RITZ-DFFR-TWO-LEVEL-QPS-LARGE-N-ZERO-SOURCE-TWO-PHASE-AND-GROUND-LIMIT**
+
+**Statement:** For every fixed complete parity-preserving spectral-cluster
+Ritz label `M`, verify the explicit DFFR two-level quantum Pirogov--Sinai
+criterion at the physical residual endpoint, pin coexistence to zero source by
+parity, and retain two distinct ordered beta-to-infinity ground-state limits.
+
+**Status:** CLOSED AT FIXED RITZ `M`, SUFFICIENTLY LARGE `N` AND SUFFICIENTLY
+LOW TEMPERATURE ONLY (2026-08-13). EXP-000837 / R-167 v3.3 proves a strict
+bounded-overlap two-level Peierls estimate with `kappa_M=1/(2C_a)` and
+`D_(M,N)=(Gamma_N-1)/(2C_a)`. Relative-form factorization gives low-low,
+mixed and high-high Hilbert--Schmidt blocks of orders `O_M(N^-2)`,
+`O_M(N^-1)` and `O_M(1)`. With
+`Q_(X,N)(lambda)=(lambda/lambda_0)^(s(X))V_(X,N)` and `lambda_0=1/2`, every
+nonthermal term of DFFR equation (5.22) tends to zero. DFFR therefore supplies
+two stable phases; parity pins their unique coexistence point to zero source,
+and DFF I ground-limit control preserves opposite bounded sign order as beta
+tends to infinity. The theorem is not uniform in `M` and proves no Ritz
+removal, full-oscillator two-phase theorem, common alpha, phase quotient,
+purity, extremality or GNS gap. This fixed Ritz conclusion does not pass to
+the full onsite oscillator.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -1879,6 +1912,11 @@ EXP-000836 / R-167 v3.2 transfers ground positivity only after one common
 algebra and common target generator have already been identified. It supplies
 no oscillator elimination, connected QPS interaction, cutoff-compatible
 phase intertwiner or fixed exact-Q3 order witness. This parent remains OPEN.
+
+EXP-000837 / R-167 v3.3 verifies DFFR entry directly for each fixed complete
+Ritz space, but constructs no oscillator block diagonalization, `M`-uniform
+connected QPS interaction, cutoff convergence in that norm or phasewise
+oscillator GNS intertwiner. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -1976,6 +2014,11 @@ families and common-core target-generator convergence. It proves none of the
 all-shape Q3 Cauchy estimates, spatial embeddings, Hamiltonian/OS quotient
 identification or fixed exact-Q3 separator needed to instantiate those
 assumptions. This parent remains OPEN.
+
+EXP-000837 / R-167 v3.3 is a static fixed-Ritz phase theorem. It constructs
+no compatible all-shape spatial embeddings, thermodynamic point-norm C0
+action, Hamiltonian-to-OS quotient, common phase KMS dynamics or fixed
+exact-Q3 separator. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -2203,6 +2246,12 @@ given. It supplies no infinite-dimensional two-phase QPS theorem,
 cutoff-stable passage, phase construction or oscillator intertwiner. This
 parent remains OPEN.
 
+EXP-000837 / R-167 v3.3 proves two stable zero-source phases and ordered
+ground limits only at fixed finite `d_M`. The Hilbert--Schmidt conversion and
+theorem threshold are not controlled as `M` grows, so no full-oscillator
+cutoff removal, infinite-dimensional two-phase transfer or uniform positive
+excitation gap follows. This parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -2281,6 +2330,11 @@ only under a common-target generator limit and a fixed odd separator. It does
 not supply phasewise Poincare coercivity, a positive implementing Hamiltonian,
 a centered form core, kernel simplicity or a broken-sector GNS gap. This
 parent remains OPEN.
+
+EXP-000837 / R-167 v3.3 gives distinct ordered fixed-Ritz ground states but no
+common infinite-volume oscillator dynamics, positive implementing
+Hamiltonian, phasewise Poincare inequality, energy identity or centered form
+core. It proves no broken-sector GNS gap. This parent remains OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 

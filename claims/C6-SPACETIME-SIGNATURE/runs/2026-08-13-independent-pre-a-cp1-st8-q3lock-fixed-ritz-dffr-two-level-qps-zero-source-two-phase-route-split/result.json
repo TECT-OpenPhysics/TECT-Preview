@@ -1,0 +1,221 @@
+{
+  "assertions": [
+    {
+      "actual": "('tect/pre-a-q3lock-fixed-ritz-dffr-two-level-qps/1.0', 'pre-a-cp1-st8-q3lock-fixed-ritz-dffr-two-level-qps-zero-source-two-phase-route-split', 'R-167 v3.3', '2026-08-13')",
+      "expected": "exact staged identity",
+      "group": "identity",
+      "name": "manifest identity independent parse",
+      "status": "PASS"
+    },
+    {
+      "actual": "(['PA-CP1-ST8-Q3LOCK-FIXED-RITZ-DFFR-TWO-LEVEL-QPS-LARGE-N-ZERO-SOURCE-TWO-PHASE-AND-GROUND-LIMIT'], [], ['NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY'], ['PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION'])",
+      "expected": "one CLOSED, no new negative, one reused boundary, one historical OPEN",
+      "group": "identity",
+      "name": "authority topology independent parse",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'overlap': '8', 'kappa': '1/16', 'gamma': 'N^2', 'high_penalty': '(N^2-1)/16', 'lambda': '1/2', 'support_size': '2', 'onsite_dimension': '4', 'hs_support_factor': '16', 'decay_absorption_factor': '4', 'combined_block_factor': '64'}",
+      "expected": "{'overlap': '8', 'kappa': '1/16', 'gamma': 'N^2', 'high_penalty': '(N^2-1)/16', 'lambda': '1/2', 'support_size': '2', 'onsite_dimension': '4', 'hs_support_factor': '16', 'decay_absorption_factor': '4', 'combined_block_factor': '64'}",
+      "group": "inputs",
+      "name": "independent exact inputs",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'B_ll': '2/N^2+1/N^3', 'B_hh': '10+1/N^3', 'B_lh_squared': '(2/N^2+1/N^3)*(10+1/N^3)'}",
+      "expected": "{'B_ll': '2/N^2+1/N^3', 'B_hh': '10+1/N^3', 'B_lh_squared': '(2/N^2+1/N^3)*(10+1/N^3)'}",
+      "group": "block_bounds",
+      "name": "independent exact block_bounds",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'N2_low_low': '1024', 'N2_low_high_squared': '5242880', 'N2_high_high': '5120', 'N3_one_way_squared': '5242880'}",
+      "expected": "{'N2_low_low': '1024', 'N2_low_high_squared': '5242880', 'N2_high_high': '5120', 'N3_one_way_squared': '5242880'}",
+      "group": "criterion_scaled_limits",
+      "name": "independent exact criterion_scaled_limits",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'kappa_bar': '1/32', 'beta': '64*log(2)', 'term': '1/4', 'role': 'arithmetic identity only; epsilon_0 is unspecified, so this beta is not asserted to enter the theorem'}",
+      "expected": "{'kappa_bar': '1/32', 'beta': '64*log(2)', 'term': '1/4', 'role': 'arithmetic identity only; epsilon_0 is unspecified, so this beta is not asserted to enter the theorem'}",
+      "group": "thermal",
+      "name": "independent exact thermal",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'N': '4', 'high_sites': '3', 'disagreeing_edges': '5', 'defective_cubes_upper': '64', 'high_defect_cubes_upper': '24', 'energy_lower': '58', 'charged_upper': '53/2', 'strict_margin': '63/2'}",
+      "expected": "{'N': '4', 'high_sites': '3', 'disagreeing_edges': '5', 'defective_cubes_upper': '64', 'high_defect_cubes_upper': '24', 'energy_lower': '58', 'charged_upper': '53/2', 'strict_margin': '63/2'}",
+      "group": "peierls_sample",
+      "name": "independent exact peierls_sample",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'existential_error_target': '1/4', 'plus_order_lower': '3/4', 'minus_order_upper': '-3/4', 'order_gap_lower': '3/2', 'role': 'target arithmetic after q_(M,N,beta) is chosen sufficiently small; not a computed DFF constant'}",
+      "expected": "{'existential_error_target': '1/4', 'plus_order_lower': '3/4', 'minus_order_upper': '-3/4', 'order_gap_lower': '3/2', 'role': 'target arithmetic after q_(M,N,beta) is chosen sufficiently small; not a computed DFF constant'}",
+      "group": "order_target",
+      "name": "independent exact order_target",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'plus_derivative': '1', 'minus_derivative': '-1', 'difference': '2', 'coexistence_source': '0'}",
+      "expected": "{'plus_derivative': '1', 'minus_derivative': '-1', 'difference': '2', 'coexistence_source': '0'}",
+      "group": "parity",
+      "name": "independent exact parity",
+      "status": "PASS"
+    },
+    {
+      "actual": "20",
+      "expected": "20",
+      "group": "criterion",
+      "name": "generic polynomial product for mixed blocks",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(1024, 1), Fraction(5242880, 1), Fraction(5120, 1), Fraction(5242880, 1))",
+      "expected": "positive finite leading coefficients",
+      "group": "criterion",
+      "name": "four representative scaled limits finite positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "('5242880', '5242880')",
+      "expected": "same upstream mixed-block product",
+      "group": "criterion",
+      "name": "mixed adjoint blocks have equal norm bounds",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'N': '4', 'high_sites': '3', 'disagreeing_edges': '5', 'defective_cubes_upper': '64', 'high_defect_cubes_upper': '24', 'energy_lower': '58', 'charged_upper': '53/2', 'strict_margin': '63/2'}",
+      "expected": "positive exact residual",
+      "group": "peierls",
+      "name": "Peierls sample is strict",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'existential_error_target': '1/4', 'plus_order_lower': '3/4', 'minus_order_upper': '-3/4', 'order_gap_lower': '3/2', 'role': 'target arithmetic after q_(M,N,beta) is chosen sufficiently small; not a computed DFF constant'}",
+      "expected": "derived target with role firewall",
+      "group": "order",
+      "name": "order target is existential not a DFF constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'kappa_bar': '1/32', 'beta': '64*log(2)', 'term': '1/4', 'role': 'arithmetic identity only; epsilon_0 is unspecified, so this beta is not asserted to enter the theorem'}",
+      "expected": "arithmetic identity only",
+      "group": "criterion",
+      "name": "thermal sample role firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'plus_derivative': '1', 'minus_derivative': '-1', 'difference': '2', 'coexistence_source': '0'}",
+      "expected": "splitting 2 and source 0",
+      "group": "parity",
+      "name": "parity derivatives independently solve zero source",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'imports': ['__future__', 'argparse', 'hashlib', 'json', 'os', 'pathlib', 'sympy', 'tempfile', 'typing'], 'dynamic': []}",
+      "expected": "symbolic primary and no dynamic execution",
+      "group": "independence",
+      "name": "primary source firewall no dynamic execution",
+      "status": "PASS"
+    },
+    {
+      "actual": "['__future__', 'argparse', 'ast', 'fractions', 'hashlib', 'json', 'math', 'os', 'pathlib', 'tempfile', 'typing']",
+      "expected": "no primary or symbolic import",
+      "group": "independence",
+      "name": "independent source does not import primary or sympy",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "certificate",
+      "name": "independent certificate precision contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "scope tokens",
+      "expected": "all present",
+      "group": "certificate",
+      "name": "independent no-overclaim contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "formal",
+      "name": "independent formal aggregate",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "block_bounds": {
+      "B_hh": "10+1/N^3",
+      "B_lh_squared": "(2/N^2+1/N^3)*(10+1/N^3)",
+      "B_ll": "2/N^2+1/N^3"
+    },
+    "criterion_scaled_limits": {
+      "N2_high_high": "5120",
+      "N2_low_high_squared": "5242880",
+      "N2_low_low": "1024",
+      "N3_one_way_squared": "5242880"
+    },
+    "inputs": {
+      "combined_block_factor": "64",
+      "decay_absorption_factor": "4",
+      "gamma": "N^2",
+      "high_penalty": "(N^2-1)/16",
+      "hs_support_factor": "16",
+      "kappa": "1/16",
+      "lambda": "1/2",
+      "onsite_dimension": "4",
+      "overlap": "8",
+      "support_size": "2"
+    },
+    "order_target": {
+      "existential_error_target": "1/4",
+      "minus_order_upper": "-3/4",
+      "order_gap_lower": "3/2",
+      "plus_order_lower": "3/4",
+      "role": "target arithmetic after q_(M,N,beta) is chosen sufficiently small; not a computed DFF constant"
+    },
+    "parity": {
+      "coexistence_source": "0",
+      "difference": "2",
+      "minus_derivative": "-1",
+      "plus_derivative": "1"
+    },
+    "peierls_sample": {
+      "N": "4",
+      "charged_upper": "53/2",
+      "defective_cubes_upper": "64",
+      "disagreeing_edges": "5",
+      "energy_lower": "58",
+      "high_defect_cubes_upper": "24",
+      "high_sites": "3",
+      "strict_margin": "63/2"
+    },
+    "thermal": {
+      "beta": "64*log(2)",
+      "kappa_bar": "1/32",
+      "role": "arithmetic identity only; epsilon_0 is unspecified, so this beta is not asserted to enter the theorem",
+      "term": "1/4"
+    }
+  },
+  "mode": "formal",
+  "package_id": "pre-a-cp1-st8-q3lock-fixed-ritz-dffr-two-level-qps-zero-source-two-phase-route-split",
+  "schema": "tect/verification-run/1.0",
+  "script_version": "1.0.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_ritz_dffr_two_level_qps_zero_source_two_phase_route_split_independent.py": "52472e79a2ddbb859e3e137f30c09a8bc8a1967284e2b7d8c947d828a19e55bc",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-ritz-dffr-two-level-qps-zero-source-two-phase-route-split-certificate-260813.md": "737d183facd1870071b626538b9acc25d5c8ba84f3ed79518b78a69ee2f6bfb4",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-ritz-dffr-two-level-qps-zero-source-two-phase-route-split-manifest.json": "db22eeb1b1a3e40a5ecb40a5c50f14c356e5a8d3eab3b25d20823a118501b66a"
+  },
+  "summary": {
+    "failed": 0,
+    "missing": 0,
+    "passed": 21,
+    "total": 21
+  },
+  "verdict": "PASS"
+}
