@@ -9,6 +9,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER](#ng-2026-08-13-pre-a-st8-q3lock-finite-gaps-plus-weakstar-states-automatic-target-generator-and-gns-gap-transfer) | infer a prescribed target generator and GNS gap from weak-star convergent finite ground states with uniformly positive finite gaps | on `M_2`, `H_n=n|1><1|` has gap `n>=1` and a constant ground state, but `delta_n(|1><0|)=in|1><0|` is not norm Cauchy |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-SELECTOR-ADD-SUBTRACT-AUTOMATIC-ZERO-SOURCE-TRANSFER](#ng-2026-08-13-pre-a-st8-q3lock-selector-add-subtract-automatic-zero-source-transfer) | remove the bounded selector by putting it in the reference and subtracting it as a small perturbation | the all-minus forward-star vector gives reference energy `u` and counterselector expectation `-u`, hence relative ratio one for every `N,u`; additionally `3beta_N/u` diverges at fixed `N` as `u->0`. This rejects only that single-phase removal argument |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY](#ng-2026-08-13-pre-a-st8-q3lock-vanishing-defect-automatic-n-dependent-two-phase-radius-entry) | infer eventual two-phase theorem entry from defect `theta_N->0` and positive radius `r_N>0` separately at each `N` | `theta_N=N^-3` and `r_N=N^-4` both vanish but `theta_N>r_N` for every `N>=2`. Require a common positive lower radius or quantitative comparison |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-CATEGORICAL-UNIFORM-CONTINUOUS-ELEMENT-KMS-ENVELOPE-AUTOMATIC-ALL-SHAPE-CAUCHY-AND-UNIQUE-PHASE-QUOTIENT](#ng-2026-08-13-pre-a-st8-q3lock-categorical-uniform-continuous-element-kms-envelope-automatic-all-shape-cauchy-and-unique-phase-quotient) | infer all-shape Cauchy convergence and a unique phase quotient from the categorical continuous/KMS envelope | alternating `M_2` with `H_(2m)=0`, `H_(2m+1)=diag(0,1)`, `A_n=sigma_x` has uniform C0 membership but distance `sqrt(2)` at `t=pi/2`; at `beta=log 2`, Gibbs `E_22` expectations alternate `1/2,1/3` while the odd KMS identity is exact |
@@ -365,6 +366,27 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-13-pre-a-st8-q3lock-finite-gaps-plus-weakstar-states-automatic-target-generator-and-gns-gap-transfer"></a>
+### NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER -- finite gaps and weak-star states do not identify the target generator
+
+**Failure mode:** infer convergence to a prescribed target dynamics and a
+positive target GNS gap from weak-star convergence of finite-volume ground
+states and one uniform positive lower bound on the finite gaps.
+
+**Evidence:** EXP-000834 / R-167 v3.0 takes `A=M_2`,
+`omega_n=|0><0|`, `H_n=n|1><1|`, and `hbar=1`. Every state is the same simple
+ground state and the finite gap is `n>=1`. For `A=|1><0|`,
+`delta_n(A)=i[H_n,A]=inA`, `Var_(omega_n)(A)=1`, and
+`-i omega_n(A^*delta_n(A))=n`. Nevertheless
+`||delta_m(A)-delta_n(A)||=|m-n|`, so the local generators are not norm
+Cauchy and no prescribed target generator is identified.
+
+**Consequence:** weak-star state convergence plus uniformly positive finite
+gaps does not by itself determine a target dynamics or transfer a target GNS
+gap. This is distinct from the post-hoc direct-sum obstruction and does not
+rule out transfer once local-generator convergence, the target energy
+identity and the centered form-core property are proved.
 
 <a id="ng-2026-08-13-pre-a-st8-q3lock-selector-add-subtract-automatic-zero-source-transfer"></a>
 ### NG-2026-08-13-PRE-A-ST8-Q3LOCK-SELECTOR-ADD-SUBTRACT-AUTOMATIC-ZERO-SOURCE-TRANSFER -- selector add--subtract is not a small zero-source perturbation

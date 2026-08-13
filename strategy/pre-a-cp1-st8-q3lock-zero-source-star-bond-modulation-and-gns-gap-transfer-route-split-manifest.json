@@ -1,0 +1,148 @@
+{
+  "schema": "tect/pre-a-q3lock-zero-source-star-bond-gns-transfer/1.0",
+  "package_id": "pre-a-cp1-st8-q3lock-zero-source-star-bond-modulation-and-gns-gap-transfer-route-split",
+  "version": "R-167 v3.0",
+  "date": "2026-08-13",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-000834",
+  "prior_exploration_id": "EXP-000833",
+  "claim_bearing": false,
+  "closed_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FULL-OSCILLATOR-TWO-PRODUCT-FORWARD-STAR-GAP-AND-COMMON-TWO-PHASE-RADIUS-REDUCTION",
+    "PA-CP1-ST8-Q3LOCK-BILINEAR-BOND-FLOW-MODULATION-COMMUTANT-CLASSIFICATION-AND-SUMMABLE-SHELL-C0-REDUCTION",
+    "PA-CP1-ST8-Q3LOCK-UNIFORM-FINITE-POINCARE-LOCAL-GENERATOR-CONVERGENCE-TO-GNS-GAP-TRANSFER"
+  ],
+  "negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER"
+  ],
+  "open_parent_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "zero_source_forward_star": {
+    "setup": "Let P_N=|Omega_N^+><Omega_N^+|+|Omega_N^-><Omega_N^-|, Q_N=1-P_N, k_N P_N=P_N k_N=0, and k_N restricted to Q_N >=Gamma_N Q_N on the exact full onsite oscillator. Assume Gamma_N=min sigma(k_N restricted to Q_N)>0 is an attained eigenvalue, as it is for the compact-resolvent Q3 onsite operator. Let s_N have eigenvalues +1 and -1 on Omega_N^+ and Omega_N^-, respectively, and vanish on Q_N, and let J_N>0. On each positive cubic edge e=(x,x+e_i), put h_(e,N)^0=(k_(x,N)+k_(x+e_i,N))/6+J_N(1-s_(x,N)s_(x+e_i,N)). Group the three positive edges at x into h_(x,N)^0.",
+    "exact_kernel_and_gap": "The kernel of h_(x,N)^0 is exactly the span of the two four-site products (Omega_N^+)^(tensor 4) and (Omega_N^-)^(tensor 4). Its exact attained positive spectral threshold is g_(star,N)^0=min{2J_N,Gamma_N/6+J_N}. A one-neighbour low-label disagreement attains 2J_N and one high neighbour attains Gamma_N/6+J_N.",
+    "large_N_corridor": "Along the registered v1.9 corridor, g_(star,N)^0 tends to 16. After enlarging N_1, J_N>=1 and g_(star,N)^0>=g_0=1.",
+    "grouped_relative_form": "If every inherited edge residual obeys |V_(e,N)(psi,psi)|<=alpha_N h_(e,N)^0(psi,psi)+beta_N||psi||^2, then phi_(x,N)=sum_(i=1)^3 V_((x,x+e_i),N) obeys |phi_(x,N)|<=alpha_N h_(x,N)^0+3beta_N||psi||^2. Define H_N(t,h)=sum_x[h_(x,N)^0+t phi_(x,N)]+h sum_x s_(x,N); by the inherited exact edge decomposition H_N(1,0) is the physical zero-source Hamiltonian up to the already declared scalar. After normalization by g_(star,N)^0 the inputs are alpha_N and 3beta_N/g_(star,N)^0.",
+    "conditional_common_radius": "Assume constants a_2,b_2>0 depend only on dimension three, the fixed forward-star support/range, and its normalized two-ground-pattern Peierls/local-gap datum, and are independent of onsite dimension, spectral cutoff, N, and the upper reference spectrum. In addition, assume the corresponding parity-equivariant two-phase theorem applies directly to the exact infinite-dimensional form reference, or that its finite-cutoff conclusions pass through a separately assumed cutoff-stable compactness and identification theorem. Whenever alpha<a_2 and beta_prime<b_2, assume this theorem has the declared two-phase conclusion. If alpha_N<=C_alpha N^-2, beta_N<=C_beta N^-3, and g_(star,N)^0>=g_0 for N>=N_1, then every N>=N_*=1+max{N_1,floor(sqrt(C_alpha/a_2)),floor((3C_beta/(g_0 b_2))^(1/3))} enters strictly.",
+    "coexistence_pin": "Use the exactly parity-odd bounded probe h sum_x s_(x,N). Parity maps h to -h and the two product energy derivatives differ by 2 per site. Conditional on the common theorem rectangle and its local coexistence graph, the nonzero derivative splitting pins that graph to h=0. At interpolation endpoint t=1 this is the physical zero-source full oscillator.",
+    "boundary": "The exact kernel, gap, grouped form bound, and conditional entry reduction are proved. Neither direct full-oscillator applicability nor a cutoff-stable passage theorem nor the dimension/cutoff/N-independent constants a_2,b_2 are proved. Yarotskii's 2006 theorem has finite-dimensional onsite spaces and an existential small radius, so it does not supply these premises. No zero-source two-phase full-oscillator theorem is claimed."
+  },
+  "bond_modulation_classification": {
+    "setup": "Let H_x=H_y=L2(R^8), M_s=exp(i s.q_x), B_t=exp(i(c t/hbar)q_x.q_y), c!=0, and beta_t=Ad(B_t) with beta_t(C)=B_t^* C B_t.",
+    "fiber_identity": "Under the direct integral over q_y, ||beta_t(A tensor I)-A tensor I||=ess sup_y ||M_((ct/hbar)y)^* A M_((ct/hbar)y)-A|| for A in B(H_x). For t!=0 scaling is a measure-class bijection. The function F_A(s)=||M_s^*AM_s-A|| is lower semicontinuous, so its essential supremum is its supremum.",
+    "classification": "For c!=0, beta is point-norm continuous at zero on the cylinder A tensor I if and only if sup_s F_A(s)=0, if and only if A commutes with every M_s, if and only if A belongs to the multiplication MASA L_infinity(R^8). Thus C(beta) intersect (B(H_x) tensor I)=L_infinity(R^8) tensor I.",
+    "scope": "This classifies only standard one-site cylinders for the isolated bilinear bond flow, not the full two-site continuous-element algebra. In particular K(H_x tensor H_y) remains continuous, while K(H_x) tensor I is not two-site compact. This strengthens the v2.5 compact-cylinder analysis and does not prove failure of the unsplit exact Q3 dynamics or of a dressed or weaker-topology spatial embedding."
+  },
+  "summable_single_toggle_shell_reduction": {
+    "setup": "Let one common unital C-star algebra A carry point-norm C0 automorphism groups alpha_F for finite interaction-label backgrounds F, and let D be a norm-dense unital star-subalgebra. Fix a finite seed support X and assign every interaction label j an integer shell r(j), assigning the finitely many core labels shell zero. Require local finiteness: {j:r(j)<=R} is finite for every R.",
+    "primitive_hypothesis": "For every A in D and T>0 there are weights w_j(A,T)>=0 such that, uniformly for every finite intermediate background F not containing j and every t in [-T,T], ||alpha_(F union {j})^t(A)-alpha_F^t(A)||<=w_j(A,T). Put B_r(A,T)=sum_(j:r(j)=r)w_j(A,T) and assume sum_r B_r(A,T)<infinity.",
+    "telescope": "If F and G contain every label through shell R, telescope F to F union G and G to F union G in arbitrary orders. Background-uniformity gives sup_(|t|<=T)||alpha_F^t(A)-alpha_G^t(A)||<=sum_(j in F symmetric_difference G)w_j(A,T)<=sum_(r>R)B_r(A,T), which tends to zero.",
+    "conclusion": "The full directed net is point-norm Cauchy on D uniformly on compact time intervals for both signs. Isometry and density extend the limits to A; the existing v2.4 bidirectional completion gives one exhaustion-independent point-norm C0 automorphism group with products, stars, group law, inverse, and surjectivity.",
+    "boundary": "This is a deterministic sufficient reduction. No summable single-toggle weights are proved for the exact quartic Q3 Hamiltonian. Total-generator temporal smoothing alone does not localize the unbounded boundary-bond commutators and does not verify the premise."
+  },
+  "gns_gap_transfer": {
+    "setup": "Let A be unital and let D be a common unital star-core contained in the domains of every delta_n and delta. Let omega_n converge weak-star to omega and delta_n(A) converge in norm to delta(A) for every A in D. Assume each omega_n is invariant under its delta_n-dynamics, so the finite energy form is real. Let delta=d/dt alpha_t at zero for an omega-invariant target point-norm C0 group alpha. Assume liminf Delta_n>=Delta>0 and -i hbar omega_n(A^*delta_n(A))>=Delta_n[omega_n(A^*A)-|omega_n(A)|^2].",
+    "limit_form": "Weak-star state convergence and norm convergence of delta_n(A) pass the inequality to -i hbar omega(A^*delta(A))>=Delta[omega(A^*A)-|omega(A)|^2] on D.",
+    "implementation": "Assume the target GNS group has positive implementer H, H Omega=0, and -i hbar omega(A^*delta(A))=<pi(A)Omega,H pi(A)Omega>. If C_D={pi(A)Omega-omega(A)Omega:A in D} is a linear form core for H^(1/2) on Omega-perp, form closure gives H restricted to Omega-perp >=Delta. Hence the target GNS ground vector is simple and the GNS gap is at least Delta.",
+    "boundary": "This theorem transfers a gap only after target dynamics, local-generator convergence, positivity, the energy identity, and the centered form-core property are established. It proves none of those model-dependent Q3 premises."
+  },
+  "finite_gap_state_limit_no_go": {
+    "negative_id": "NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER",
+    "fixture": "On M2 let omega_n=|0><0| and H_n=n|1><1|. Every state is the same simple ground state and every gap is n>=1. For A=|1><0| and hbar=1, delta_n(A)=i n A, the variance is 1, and -i omega_n(A^*delta_n(A))=n. But ||delta_m(A)-delta_n(A)||=|m-n|, so the local generators are not norm Cauchy and no prescribed target generator is identified.",
+    "scope": "Weak-star convergence of finite ground states plus a uniform finite-volume gap does not automatically identify the target dynamics or transfer a target GNS gap. This is distinct from the post-hoc direct-sum negative, which concerns combining phasewise systems after reconstruction."
+  },
+  "literature_scope": {
+    "yarotskii_2006": "D. A. Yarotskii, Pirogov-Sinai theory for relatively bounded quantum perturbations of classical lattice models, Russian Mathematical Surveys 61:2 (2006), 371-372, DOI 10.1070/RM2006v061n02ABEH004323. This two-phase result is finite-onsite and has an existential small radius; it is scope calibration, not a direct Q3 import. The distinct single-phase infinite-onsite source is Ground states in relatively bounded quantum perturbations of classical lattice systems, Commun. Math. Phys. 261 (2006), 799-819, arXiv:math-ph/0412040.",
+    "oscillator_lr": "B. Nachtergaele, H. Raz, B. Schlein and R. Sims, arXiv:0712.3820, treats unbounded harmonic coupling plus anharmonic onsite V under V' in L1 and a Fourier first-moment condition; a quartic onsite potential fails that hypothesis. L. Amour, P. Levy-Bruhl and J. Nourrigat, arXiv:0904.2717, uses a subquadratic/Fourier-regular perturbation class. Neither closes exact quartic Q3.",
+    "gap_calibration": "B. Nachtergaele, R. Sims and A. Young, arXiv:2010.15337, obtains GNS gaps for bounded-spin frustration-free/LTQO systems. J. Henheik and S. Teufel, arXiv:2012.15238, explicitly assumes gapped finite volumes generate the same infinite-volume dynamics. These calibrate the missing bridge and are not imported as exact Q3 theorems."
+  },
+  "exact_fixture": {
+    "star": {
+      "z": 6,
+      "dimension": 3,
+      "J": "8",
+      "Gamma": "96",
+      "kernel_dimension": 2,
+      "low_disagreement": "16",
+      "high_neighbour": "24",
+      "high_centre": "72",
+      "gap": "16",
+      "alpha": "1/100",
+      "beta": "1/1000",
+      "normalized_beta": "3/16000"
+    },
+    "radius": {
+      "C_alpha": "16",
+      "C_beta": "8",
+      "a_2": "1",
+      "b_2": "1",
+      "g_0": "1",
+      "N_1": 10,
+      "N_star": 11,
+      "strict_alpha_at_N_star": true,
+      "strict_beta_at_N_star": true
+    },
+    "bond": {
+      "offdiagonal_modulation_distance": "2",
+      "diagonal_modulation_distance": "0",
+      "nonzero_time_supremum": "2"
+    },
+    "shell": {
+      "radius": 4,
+      "tail": "1/16",
+      "cauchy_bound": "1/16"
+    },
+    "gns": {
+      "Delta": "3",
+      "coefficient": "2/5",
+      "variance": "4/25",
+      "energy": "12/25",
+      "gap_ratio": "3"
+    },
+    "negative": {
+      "sample_n": 7,
+      "finite_gap": "7",
+      "uniform_lower_gap": "1",
+      "state_distance": "0",
+      "generator_norm": "7",
+      "next_generator_distance": "1"
+    }
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_zero_source_star_bond_modulation_and_gns_gap_transfer_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_zero_source_star_bond_modulation_and_gns_gap_transfer_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_zero_source_star_bond_modulation_and_gns_gap_transfer_route_split_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-primary-pre-a-cp1-st8-q3lock-zero-source-star-bond-modulation-and-gns-gap-transfer-route-split/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-independent-pre-a-cp1-st8-q3lock-zero-source-star-bond-modulation-and-gns-gap-transfer-route-split/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-integrated-pre-a-cp1-st8-q3lock-zero-source-star-bond-modulation-and-gns-gap-transfer-route-split/result.json",
+    "staged_lifecycle": "Before formal integration, run all three scripts with --staged --no-store. No run JSON or formal authority is written by this five-file package."
+  },
+  "formal_integration_contract": {
+    "event_id": 626,
+    "theorem_map_version": "1.22.0",
+    "expected_post_formal_counts": {
+      "claims": 49,
+      "results": 168,
+      "gates": 181,
+      "negatives": 356,
+      "explorations": 834,
+      "events": 626,
+      "tasks": 54,
+      "catalog": 3875
+    },
+    "required_links": "EXP-000834, event 626, T-054, ROADMAP, strategy index, proof-evidence map, theorem map, generated compact surfaces, three CLOSED scoped gates, one negative, and all five OPEN parents."
+  },
+  "checkpoint_synthesis": {
+    "status": "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+    "pdf_issued": false,
+    "workflow": "Proof-first manifest, certificate and three executable verifiers only. No v3.0 PDF is issued."
+  },
+  "no_overclaim": "R-167 v3.0 closes three scoped T0 reduction/classification/transfer children and registers one implication failure. It proves neither direct full-oscillator two-phase theorem applicability or a cutoff-stable passage theorem, nor the dimension-uniform two-phase theorem radius or zero-source full-oscillator coexistence; it proves no exact-Q3 summable shell estimate or actual all-shape common alpha; it proves no Q3 target-generator convergence, centered GNS form-core property, or broken-sector GNS gap. All five active parent gates remain OPEN. It proves no regulator removal, continuum, physical empty-space comparison, Round-1, C6, CP1, physical Sector A or Pre-A."
+}

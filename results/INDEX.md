@@ -10,7 +10,7 @@ Authorities: `RESULTS-LEDGER.md`.
 | ID | Result | Tier/scope |
 |---|---|---|
 | [`R-168`](../RESULTS-LEDGER.md#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | T0 (claim-nonbearing scoped schema, current-version admission, Gaussian fingerprint, finite-regulator nonidentifiability and exact v1.3 mathematical transport children only; no ac… |
-| [`R-167`](../RESULTS-LEDGER.md#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | T0 (scoped selected-tangent, categorical orbit-smear, finite-region local-strict/finite-Gibbs, registered-periodic fifth-history and split- implementer theorem, fixed-finite faith… |
+| [`R-167`](../RESULTS-LEDGER.md#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | T0 (scoped zero-source star/common-radius, bond-flow/shell and abstract GNS-gap transfer results; selected-tangent, categorical orbit-smear, finite-region local-strict/finite-Gibb… |
 | [`R-166`](../RESULTS-LEDGER.md#r-166) | Sparse production radial-Gram decomposition and global owner bound | T4 (scoped exact finite production fibre; no promotion). |
 | [`R-165`](../RESULTS-LEDGER.md#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | T4 (scoped exact finite production fibre; no promotion). |
 | [`R-164`](../RESULTS-LEDGER.md#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | T4 |

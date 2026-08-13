@@ -86,6 +86,12 @@ EXP-000833 / R-167 v2.9 closes four claim-nonbearing scoped mathematical
 children and registers three implication failures. It creates no contestant,
 microscopic observable map, common estimand, prospective prediction,
 custodian commitment, freeze or score. Round-1 remains OPEN.
+
+EXP-000834 / R-167 v3.0 adds three claim-nonbearing scoped
+mathematical children and one implication failure. It creates no contestant,
+microscopic observable map, common estimand, prospective prediction,
+custodian commitment, freeze or score. Round-1 remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -1701,6 +1707,70 @@ and remain distinct after smearing any bounded distinguishing witness with an
 integral-one kernel. This supplies a target continuous core but no
 exhaustion-independent Hamiltonian-to-OS homomorphism and no common-alpha
 closure.
+### **PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-FULL-OSCILLATOR-TWO-PRODUCT-FORWARD-STAR-GAP-AND-COMMON-TWO-PHASE-RADIUS-REDUCTION**
+
+**Statement:** Determine the exact two-product forward-star kernel and attained
+positive threshold of the exact zero-source full oscillator, then reduce
+two-phase entry to a dimension-, cutoff- and `N`-independent theorem.
+
+**Status:** CLOSED FOR THE EXACT FORWARD-STAR SPECTRUM AND CONDITIONAL
+COMMON-RADIUS REDUCTION ONLY (2026-08-13). EXP-000834 / R-167 v3.0 sets
+`P_N=|Omega_N^+><Omega_N^+|+|Omega_N^-><Omega_N^-|`, `Q_N=1-P_N`,
+`k_N P_N=P_N k_N=0`, and
+`Gamma_N=min sigma(k_N|Q_N)>0`, attained. High labels have
+`(k_N,s_N)=(lambda,0)` with `lambda>=Gamma_N`, and the lower envelope is
+attained. Grouping the three positive cubic edges gives exactly the all-plus
+and all-minus four-site product kernels and the attained threshold
+`g^0_(star,N)=min{2J_N,Gamma_N/6+J_N}`.
+
+The grouped residual has normalized inputs
+`(alpha_N,3beta_N/g^0_(star,N))`. Strict large-`N` entry follows conditional
+on both (i) a two-phase rectangle independent of onsite dimension, cutoff and
+`N`, and (ii) direct applicability to the infinite-dimensional form reference
+or a separately proved cutoff-stable compactness and identification theorem.
+Neither premise is proved, so no zero-source full-oscillator two-phase theorem
+follows and the parent gates remain OPEN.
+
+### **PA-CP1-ST8-Q3LOCK-BILINEAR-BOND-FLOW-MODULATION-COMMUTANT-CLASSIFICATION-AND-SUMMABLE-SHELL-C0-REDUCTION**
+
+**Statement:** Classify the point-norm continuous standard one-site cylinders
+of the isolated bilinear bond flow and reduce bidirectional all-shape Cauchy
+convergence to uniform summable single-toggle shell responses.
+
+**Status:** CLOSED FOR THE ISOLATED BOND-FLOW CYLINDER CLASSIFICATION AND THE
+ABSTRACT SUMMABLE-SHELL REDUCTION ONLY (2026-08-13). EXP-000834 / R-167 v3.0
+proves
+`C(beta) intersect (B(L2(R^8)) tensor I)=L_infinity(R^8) tensor I`.
+The direct-integral norm is an essential supremum of modulation-orbit
+differences; lower semicontinuity and nonzero-time measure-class scaling make
+it the full supremum. This classifies only standard one-site cylinders, not
+the full two-site continuous algebra.
+
+Independently, assign every interaction label a locally finite integer shell,
+with finite core labels in shell zero. A single-toggle estimate uniform over
+every finite intermediate background, insertion order and both time signs,
+with summable shell totals, telescopes through pairwise unions to the full
+directed all-shape Cauchy estimate. No such estimates are proved for exact
+quartic Q3, so the common-alpha parent remains OPEN.
+
+### **PA-CP1-ST8-Q3LOCK-UNIFORM-FINITE-POINCARE-LOCAL-GENERATOR-CONVERGENCE-TO-GNS-GAP-TRANSFER**
+
+**Statement:** Transfer uniform finite-volume Poincare inequalities to a
+positive target GNS gap once states and local generators converge to one
+prespecified invariant target dynamics and the centered local core is a form
+core.
+
+**Status:** CLOSED AS AN ABSTRACT GAP-TRANSFER THEOREM ONLY (2026-08-13).
+EXP-000834 / R-167 v3.0 assumes a common star-core in all generator domains,
+weak-star state convergence, norm convergence of local generators, finite
+state invariance, and a positive liminf of the finite Poincare constants. The
+inequality passes to the limit. If the invariant target group has positive
+implementer `H`, `H Omega=0`, the energy identity holds, and the centered
+local space is a linear form core for `H^(1/2)` on `Omega-perp`, form closure
+gives `H|_(Omega-perp)>=Delta`. No exact-Q3 target dynamics, generator
+convergence, energy identity, centered form-core property or broken-sector
+GNS gap is proved.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -1729,6 +1799,14 @@ adding a fixed bounded doublet selector. It is a single selected-phase
 relative-form theorem, not a zero-source block diagonalization, connected QPS
 interaction, selector-removal result, or phasewise GNS intertwiner. This
 parent remains OPEN.
+
+EXP-000834 / R-167 v3.0 identifies the exact zero-source
+forward-star two-kernel threshold and a conditional common-radius entry
+criterion, but constructs no oscillator block diagonalization, connected QPS
+interaction, cutoff-compatible phase intertwiner or GNS map. Direct
+full-oscillator theorem applicability or cutoff-stable passage is also not
+proved. This parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
 **Statement:** Starting from the finite-region local-strict carrier, construct
@@ -1803,6 +1881,12 @@ point-norm `C0` carrier, but does not reject strong or strong-star dynamics,
 local-strict or energy topologies, temporal/energy/resolvent smears, smaller
 continuous-element algebras or common alpha on another carrier. This parent
 remains OPEN.
+
+EXP-000834 / R-167 v3.0 classifies standard cylinders for
+the isolated bilinear bond flow and proves that uniform summable
+single-toggle shell responses would imply bidirectional all-shape Cauchy
+convergence. It proves no such response weights for exact quartic Q3 and
+identifies no Hamiltonian-to-OS phase quotient. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -2011,6 +2095,14 @@ nonzero bounded selector. The exact add--subtract fixture has normalized
 counterselector ratio one, and vanishing defects need not enter separately
 shrinking theorem radii. Thus neither selector removal nor the zero-source
 two-phase QPS transfer follows. This parent remains OPEN.
+
+EXP-000834 / R-167 v3.0 reduces zero-source two-phase entry
+to a dimension-, cutoff- and `N`-independent theorem rectangle plus direct
+infinite-dimensional applicability or cutoff-stable passage. Those premises
+are not supplied by the finite-onsite existential source, and no
+full-oscillator block diagonalization, connected QPS interaction or phase
+transfer is proved. This parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -2070,6 +2162,13 @@ or the required invariant core, and the selector is not removed. Therefore no
 broken-sector coercive estimate or physical mass gap follows. This parent
 remains OPEN.
 ## A6/A7 full derivative Class-II composite and renormalisation gates
+
+EXP-000834 / R-167 v3.0 proves an abstract GNS-gap transfer
+only after local-generator convergence to one prespecified target dynamics,
+positivity, the energy identity and the centered form-core property. Its exact
+`M_2` fixture shows that weak-star ground-state convergence and uniformly
+positive finite gaps alone do not identify that generator. None of the
+model-dependent Q3 premises is established. This parent remains OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 

@@ -1250,6 +1250,21 @@ their given actions, yet the alternating-`M_2` fixture proves that categorical
 uniform continuity and KMS compactness do not supply all-shape Cauchy
 convergence or a unique phase quotient. All five parents remain OPEN. No v2.9
 PDF is issued.
+EXP-000834 / R-167 v3.0 retains every v2.9 child and adds three scoped T0
+children. The exact zero-source full-oscillator forward star has precisely the
+two all-sign product kernels and attained threshold
+`min{2J_N,Gamma_N/6+J_N}`; a dimension-, cutoff- and `N`-independent
+two-phase rectangle plus direct infinite-dimensional applicability or
+cutoff-stable passage would give strict large-`N` entry, but those premises
+are not proved. The isolated bilinear bond flow admits exactly the
+multiplication-MASA standard cylinders, and uniform summable single-toggle
+shell responses would imply bidirectional all-shape C0 convergence; no exact-
+Q3 shell responses are proved. Uniform finite Poincare inequalities transfer
+to a target GNS gap only with local-generator convergence, the target energy
+identity and a centered form core. The `M_2` fixture shows finite gaps and
+weak-star states alone do not identify the target generator. All five parents
+remain OPEN. No v3.0 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

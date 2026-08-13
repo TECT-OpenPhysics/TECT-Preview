@@ -5,7 +5,7 @@
 
 Authorities: `negative-results/registry.md`.
 
-**355 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 284 · retraction: 5
+**356 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 285 · retraction: 5
 
 Latest 25 records:
 
@@ -16,6 +16,7 @@ Latest 25 records:
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-raw-configuration-weyl-full-hamiltonian-point-norm-c0) | no_go | include a nonzero raw configuration Weyl character in a point-norm C0 carrier equivariant for the exact finite-volume full Q3 Hamiltonian |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONCONSTANT-CB-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-nonconstant-cb-configuration-multiplier-full-hamiltonian-point-norm-c0) | no_go | include a nonconstant bounded continuous configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-gevrey-two-asymptotic-remainder-automatic-all-order-sw-convergence) | no_go | infer convergent all-order SW from a Gevrey-two majorant and optimally scaled asymptotic remainder |
+| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-finite-gaps-plus-weakstar-states-automatic-target-generator-and-gns-gap-transfer) | no_go | infer a prescribed target generator and GNS gap from weak-star convergent finite ground states with uniformly positive finite gaps |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-CATEGORICAL-UNIFORM-CONTINUOUS-ELEMENT-KMS-ENVELOPE-AUTOMATIC-ALL-SHAPE-CAUCHY-AND-UNIQUE-PHASE-QUOTIENT`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-categorical-uniform-continuous-element-kms-envelope-automatic-all-shape-cauchy-and-unique-phase-quotient) | no_go | infer all-shape Cauchy convergence and a unique phase quotient from the categorical continuous/KMS envelope |
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-second-order-disjoint-vanishing-automatic-all-order-global-feshbach-connectedness) | no_go | infer connectedness of the raw all-order global scalar Feshbach map from second-order disjoint-edge vanishing |
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-ritz-cutoff-ordinary-bounded-operator-sw-smallness-uniformity) | no_go | infer cutoff-uniform ordinary operator-norm Schrieffer--Wolff smallness from finite Ritz boundedness |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-forward-local-automorphism-limit-automatic-surjectivity-and-inverse-cauchy) | no_go | infer a surjective limiting automorphism and inverse Cauchy convergence from exact forward local stabilization of finite-volume automorphisms |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-EXTENSIVE-FESHBACH-SELF-ENERGY-AUTOMATIC-QPS-LOCALITY`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-extensive-feshbach-self-energy-automatic-qps-locality) | no_go | promote a global extensive Feshbach self-energy norm bound automatically to a quasi-local two-phase QPS interaction norm |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENTROPY-FINITE-MOMENT-DYNAMIC-GAUSSIAN-TAIL-INFERENCE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-entropy-finite-moment-dynamic-gaussian-tail-inference) | no_go | promote small relative entropy, all-coefficient Gaussian reference moments and any fixed finite list of tilted moments to the dynamic Gaussian history tail required by the cutoff… |
-| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-ENERGY-FORM-ENTROPY-FINITE-MOMENT-AUTOMATIC-SANDWICHED-RENYI-UPGRADE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-energy-form-entropy-finite-moment-automatic-sandwiched-renyi-upgrade) | no_go | infer one uniform `alpha>1` sandwiched-Renyi history estimate from vanishing entropy/energy excess, two-sided energy-form comparison and any fixed finite list of tilted moments |
 
 Search without loading the full registry:
 
