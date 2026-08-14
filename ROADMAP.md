@@ -1469,6 +1469,24 @@ center extraction, physical-empty reference, global vacuum, BCC resurrection,
 C6 advancement, physical Sector-A result or Pre-A closure follows.
 `C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN. No R-169 v1.0 PDF is issued.
 
+EXP-000852 / R-169 v1.1 retains every v1.0 result and adds one exact
+hash-pinned neutral-P1 route filter. Conditional on
+`A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`, the declared twelve-mode field on
+`T^3_16` has exactly 128 modulus-max centers, the BCC translation lattice and
+the v1.0 truncated-octahedron Voronoi cells; its squared `L2` norm is
+`49152|A|^2`. R-157 therefore places it strictly above the zero reference by
+more than `6144|A|^2` and gives a radial derivative above
+`12288|A|^2`, excluding that explicit family from unconstrained critical,
+local/metastable and global branches. A separate exact counterfixture shows
+that a value-gap perturbation bound alone does not imply radial or local
+exclusion. The registered Reading-H object remains `Q/G_*`, and no authority
+supplies its deterministic map, normalization or energy/ensemble intertwiner
+to the pinned `Psi`; the current B1/B3 ranking is therefore neither promoted
+nor refuted. The P1 fixture child is scoped CLOSED, while
+`PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE`,
+`C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN. No new negative result is
+registered, and no R-169 v1.1 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

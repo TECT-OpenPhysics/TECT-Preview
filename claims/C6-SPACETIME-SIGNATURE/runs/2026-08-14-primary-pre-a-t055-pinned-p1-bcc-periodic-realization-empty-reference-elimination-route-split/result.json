@@ -1,0 +1,252 @@
+{
+  "assertions": 17,
+  "certificate_hash": "9efe082096eb9a05494a7e44e8fc5c5f4b37b4916d8f4d831188a0cb88a5b46f",
+  "checks": [
+    {
+      "actual": "b62ee37609cbe493eeb9d7d0d9b1fb9fcd94f8d1a86907b8714135e6a8026ca8",
+      "expected": "b62ee37609cbe493eeb9d7d0d9b1fb9fcd94f8d1a86907b8714135e6a8026ca8",
+      "group": "provenance",
+      "name": "source hash r157_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "2394353f3b6bdcb35d20cd706d10bf272045c4e12d3abfdcc17e46a5c6fb294f",
+      "expected": "2394353f3b6bdcb35d20cd706d10bf272045c4e12d3abfdcc17e46a5c6fb294f",
+      "group": "provenance",
+      "name": "source hash r157_primary",
+      "status": "PASS"
+    },
+    {
+      "actual": "cc4010827ef901fb06771882c941eabdc4804d3f080f0e5b908d55a992d9c265",
+      "expected": "cc4010827ef901fb06771882c941eabdc4804d3f080f0e5b908d55a992d9c265",
+      "group": "provenance",
+      "name": "source hash r157_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": "53638415caabd3a44f69903c93fdbb7d9a4c5c008d63de6c2908b0bda25dd687",
+      "expected": "53638415caabd3a44f69903c93fdbb7d9a4c5c008d63de6c2908b0bda25dd687",
+      "group": "provenance",
+      "name": "source hash r157_integrated",
+      "status": "PASS"
+    },
+    {
+      "actual": "f42812ef61ff5be9472f5a760b76fef879bc336f3a698d3e02938e0562f13bf3",
+      "expected": "f42812ef61ff5be9472f5a760b76fef879bc336f3a698d3e02938e0562f13bf3",
+      "group": "provenance",
+      "name": "source hash r158_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "f482c5c60e50d0d6591a769e13c923576b735860a7e785519f5adb55500705f2",
+      "expected": "f482c5c60e50d0d6591a769e13c923576b735860a7e785519f5adb55500705f2",
+      "group": "provenance",
+      "name": "source hash r169_v1_0_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "3a4b2d853992d2b4495da7a4ad1619fda21170f72247f3d549a0bb051680a98f",
+      "expected": "3a4b2d853992d2b4495da7a4ad1619fda21170f72247f3d549a0bb051680a98f",
+      "group": "provenance",
+      "name": "source hash reading_h_object",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "group": "field",
+      "name": "twelve-mode support",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'values': [-1, -1, -1, -1, -1, -1, 3, 3], 'maxima': [[-1, -1, -1], [1, 1, 1]]}",
+      "expected": "two equal-sign maxima",
+      "group": "field",
+      "name": "multiaffine extrema",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'center_count': 128, 'period_count_mod_torus': 128, 'antiperiod_count': 0}",
+      "expected": "128 centers=periods and no anti-period",
+      "group": "lattice",
+      "name": "centers and exact periods",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'torus_volume': 4096, 'cell_volume': 32, 'cell_count': 128}",
+      "expected": "4096/32=128",
+      "group": "lattice",
+      "name": "cell-volume quotient",
+      "status": "PASS"
+    },
+    {
+      "actual": "49152",
+      "expected": "49152",
+      "group": "energy",
+      "name": "Fourier norm",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'energy': '719818750025582338837/109863281250000000', 'radial': '2101675000076747016511/164794921875000000'}",
+      "expected": "energy>6144 and radial>12288",
+      "group": "energy",
+      "name": "strict inherited margins",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'value': '719818750025582338837/5400000000000000000000-delta', 'radial': '2101675000076747016511/8100000000000000000000-delta_r'}",
+      "expected": "separate g/delta and kappa/delta_r",
+      "group": "scope",
+      "name": "separate perturbation conclusions",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'value': 'F_tilde[Psi]-F_tilde[0]>=(g-delta)||Psi||_2^2, so every nonzero field remains above the reference.', 'radial': '<D F_tilde(Psi),Psi>>=(kappa-delta_r)||Psi||_2^2, so nonzero unconstrained critical and local-minimum branches remain excluded.'}",
+      "expected": "value only reference sign; radial only critical/local exclusion",
+      "group": "scope",
+      "name": "semantic value/radial firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'roots': ['1/2', '5/6'], 'second': ['-2', '10/3'], 'energy': '25/108'}",
+      "expected": "nonzero higher local minimum despite value gap",
+      "group": "scope",
+      "name": "value-only counterfixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "scope tokens present",
+      "expected": "scope tokens present",
+      "group": "scope",
+      "name": "certificate scope",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "antiperiod_count": 0,
+    "cell_count": 128,
+    "cell_volume": 32,
+    "center_count": 128,
+    "cube_maximum": 3,
+    "cube_minimum": -1,
+    "cube_vertex_values": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      3,
+      3
+    ],
+    "energy_above_integer_floor": true,
+    "energy_coefficient": "719818750025582338837/109863281250000000",
+    "g": "719818750025582338837/5400000000000000000000",
+    "kappa": "2101675000076747016511/8100000000000000000000",
+    "maximum_vertices": [
+      [
+        -1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "norm_coefficient": 49152,
+    "period_count_mod_torus": 128,
+    "periods_equal_centers": true,
+    "radial_above_integer_floor": true,
+    "radial_coefficient": "2101675000076747016511/164794921875000000",
+    "radial_perturbation_remainder": "2101675000076747016511/8100000000000000000000-delta_r",
+    "scalar_factor": "4*(p*q + p*r + q*r)",
+    "support": [
+      [
+        -4,
+        -4,
+        0
+      ],
+      [
+        -4,
+        0,
+        -4
+      ],
+      [
+        -4,
+        0,
+        4
+      ],
+      [
+        -4,
+        4,
+        0
+      ],
+      [
+        0,
+        -4,
+        -4
+      ],
+      [
+        0,
+        -4,
+        4
+      ],
+      [
+        0,
+        4,
+        -4
+      ],
+      [
+        0,
+        4,
+        4
+      ],
+      [
+        4,
+        -4,
+        0
+      ],
+      [
+        4,
+        0,
+        -4
+      ],
+      [
+        4,
+        0,
+        4
+      ],
+      [
+        4,
+        4,
+        0
+      ]
+    ],
+    "support_count": 12,
+    "torus_volume": 4096,
+    "value_only_local_minimum_energy": "25/108",
+    "value_only_local_minimum_squared_amplitude": "5/6",
+    "value_only_second_derivatives": [
+      "-2",
+      "10/3"
+    ],
+    "value_only_stationary_polynomial_coefficients": [
+      "3",
+      "-4",
+      "5/4"
+    ],
+    "value_only_stationary_squared_amplitudes": [
+      "1/2",
+      "5/6"
+    ],
+    "value_perturbation_remainder": "719818750025582338837/5400000000000000000000-delta"
+  },
+  "manifest_hash": "e627140dd4ef4bf6a7f1b16f9e31f0ea12e4d009f40938164675d4237e771451",
+  "mode": "formal",
+  "schema": "tect/pre-a-t055-pinned-p1-bcc-periodic-realization-primary/1.0",
+  "source_hash": "536b25d836ec8bc22567495e8d14c1b8a5128153c54672aac6a9b1400cb3a184",
+  "verdict": "PASS",
+  "version": "1.0.0"
+}

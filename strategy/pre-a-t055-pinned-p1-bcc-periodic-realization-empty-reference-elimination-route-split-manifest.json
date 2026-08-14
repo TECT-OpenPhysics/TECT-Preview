@@ -1,0 +1,214 @@
+{
+  "schema": "tect/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination/1.0",
+  "slug": "pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split",
+  "version": "R-169 v1.1",
+  "issued": "2026-08-14",
+  "tier": "T0",
+  "claim_bearing": false,
+  "task_id": "T-055",
+  "exploration_id": "EXP-000852",
+  "result_id": "R-169",
+  "claim_ids": [
+    "A2-FULL-PRODUCTION-WELLPOSED",
+    "B1-RH-ENUM",
+    "B3-RH-TESTED-STRUCTURE-RANKING",
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "closed_gate_ids": [
+    "PA-T055-PINNED-P1-BCC-PERIODIC-REALIZATION-EMPTY-REFERENCE-EXCLUSION"
+  ],
+  "open_gate_ids": [
+    "PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE",
+    "C6-BCC-PREMISE-BLOCKED",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "new_negative_ids": [],
+  "reused_negative_ids": [
+    "NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM",
+    "NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN"
+  ],
+  "source_authorities": {
+    "r157_manifest": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/pinned_functional_unique_zero_global_minimizer_manifest.json",
+      "sha256": "b62ee37609cbe493eeb9d7d0d9b1fb9fcd94f8d1a86907b8714135e6a8026ca8"
+    },
+    "r157_primary": {
+      "path": "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer.py",
+      "sha256": "2394353f3b6bdcb35d20cd706d10bf272045c4e12d3abfdcc17e46a5c6fb294f"
+    },
+    "r157_independent": {
+      "path": "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_independent.py",
+      "sha256": "cc4010827ef901fb06771882c941eabdc4804d3f080f0e5b908d55a992d9c265"
+    },
+    "r157_integrated": {
+      "path": "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py",
+      "sha256": "53638415caabd3a44f69903c93fdbb7d9a4c5c008d63de6c2908b0bda25dd687"
+    },
+    "r158_manifest": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json",
+      "sha256": "f42812ef61ff5be9472f5a760b76fef879bc336f3a698d3e02938e0562f13bf3"
+    },
+    "r169_v1_0_manifest": {
+      "path": "strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-manifest.json",
+      "sha256": "f482c5c60e50d0d6591a769e13c923576b735860a7e785519f5adb55500705f2"
+    },
+    "reading_h_object": {
+      "path": "claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/claims/B1-RH-ENUM/Reading-H/notes/reading-h-cfull-referee-package-260610-v1.1.tex.txt",
+      "sha256": "3a4b2d853992d2b4495da7a4ad1619fda21170f72247f3d549a0bb051680a98f"
+    }
+  },
+  "inherited_r157_theorem": {
+    "hypothesis": "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL for the exact hash-pinned neutral P1/A2 functional on H^2(T^3_16;C^3), eta_shell=0, with the registered positive regularizers and unconstrained linear field space",
+    "energy_gap_g": "719818750025582338837/5400000000000000000000",
+    "radial_gap_kappa": "2101675000076747016511/8100000000000000000000",
+    "energy_statement": "F_P1[Psi]-F_P1[0]>=g||Psi||_2^2, with g>1/8",
+    "radial_statement": "<D F_P1(Psi),Psi>>=kappa||Psi||_2^2, with kappa>1/4",
+    "consequence": "Every nonzero field is strictly above the zero reference and is not an unconstrained critical point, local minimum, metastable equilibrium, or global minimizer."
+  },
+  "exact_fixture_inputs": {
+    "dimension": 3,
+    "torus_side": 16,
+    "frequency_scale": 4,
+    "active_coordinates_per_mode": 2,
+    "internal_norm_squared": 1,
+    "amplitude_nonzero": true
+  },
+  "bcc_periodic_realization": {
+    "torus": "T^3_16=R^3/(16Z^3)",
+    "internal_vector": "u in C^3 with ||u||=1",
+    "amplitude": "A in C, A!=0",
+    "frequency_support": "S=4{(+/-1,+/-1,0),(+/-1,0,+/-1),(0,+/-1,+/-1)}",
+    "field": "Psi_A(x)=A u sum_(n in S) exp(2 pi i n dot x/16)",
+    "scalar_factor": "f(x)=4[pq+pr+qr], p=cos(pi x_1/2), q=cos(pi x_2/2), r=cos(pi x_3/2)",
+    "center_rule": "C_A=argmax_(x in T^3_16)|Psi_A(x)|",
+    "center_set": "C_A=(4Z^3 union ((2,2,2)+4Z^3))/16Z^3",
+    "center_count": 128,
+    "translation_lattice": "4Z^3 union ((2,2,2)+4Z^3)",
+    "cell": "the R-169 v1.0 BCC Euclidean Voronoi truncated octahedron P, periodically descended to T^3_16",
+    "cell_volume": 32,
+    "l2_norm_squared": "49152|A|^2",
+    "energy_margin": "[719818750025582338837/109863281250000000]|A|^2>6144|A|^2",
+    "radial_margin": "[2101675000076747016511/164794921875000000]|A|^2>12288|A|^2"
+  },
+  "realization_proof": {
+    "center_extremum": "The multiaffine polynomial pq+pr+qr has cube-vertex values 3 or -1. Its absolute maximum is 3, attained only at (p,q,r)=(1,1,1) and (-1,-1,-1).",
+    "translation": "Fourier uniqueness makes a field translation require phase +1 on every support vector. The resulting period group is the declared BCC lattice. An absolute-value anti-period is impossible because the support contains n_1,n_2,n_1+n_2, whose phases cannot all be -1.",
+    "norm": "The twelve distinct torus characters are orthogonal and the torus volume is 16^3.",
+    "cell_count": "16^3/32=128 agrees with the exact center enumeration."
+  },
+  "perturbation_transfer": {
+    "value_premise": "For F_tilde=F_P1+R, require R[Psi]-R[0]>=-delta||Psi||_2^2 with 0<=delta<g.",
+    "value_conclusion": "F_tilde[Psi]-F_tilde[0]>=(g-delta)||Psi||_2^2, so every nonzero field remains above the reference.",
+    "radial_premise": "Separately require <D R(Psi),Psi>>=-delta_r||Psi||_2^2 with 0<=delta_r<kappa.",
+    "radial_conclusion": "<D F_tilde(Psi),Psi>>=(kappa-delta_r)||Psi||_2^2, so nonzero unconstrained critical and local-minimum branches remain excluded.",
+    "firewall": "The value premise alone does not imply the radial conclusion."
+  },
+  "value_only_counterfixture": {
+    "base": "F_0(x)=x^2 with base gap g_0=1",
+    "remainder": "R(x)=-(3/4)x^2+x^2(x^2-1)^2",
+    "value_bound": "R(x)-R(0)>=-(3/4)x^2 with 3/4<g_0",
+    "total": "F_tilde(x)=(1/4)x^2+x^2(x^2-1)^2>0 for x!=0",
+    "nonzero_stationary_squared_amplitudes": ["1/2", "5/6"],
+    "local_minimum_squared_amplitude": "5/6",
+    "local_minimum_energy": "25/108",
+    "consequence": "A strict positive value gap above zero can coexist with a nonzero higher local minimum; a separate radial derivative premise is indispensable."
+  },
+  "reading_h_interface_audit": {
+    "registered_source_object": "Reading-H uses a finite momentum-shell point set Q with amplitudes and compares it with the isotropic Gaussian-Hartree dressing G_*.",
+    "missing_fields": [
+      "a deterministic Q/G_* to Psi or covariance/composite map",
+      "Fourier phase and C^3 polarization conventions",
+      "torus and reciprocal-shell embedding",
+      "intensity-to-L2 normalization",
+      "reference image and motif/center tie rule",
+      "periodic Voronoi/Delaunay extraction",
+      "an exact or error-budgeted energy and ensemble intertwiner"
+    ],
+    "consequence": "The explicit BCC field is a P1 realization and route filter, not a Reading-H extraction. The current B1/B3 relative ranking is neither promoted nor refuted."
+  },
+  "ensemble_and_model_boundaries": {
+    "r158": "At fixed charge the zero field and radial direction are not admissible; Omega_mu=F_P1-mu Q is a changed functional. The registered R-158 state nevertheless remains above the original neutral zero reference and has uniform registered local observables.",
+    "excluded": [
+      "fixed norm or fixed charge",
+      "grand-canonical or chemical-potential functional",
+      "compact CP2 target",
+      "conserved or alternative dynamics",
+      "historical nonvariational backend",
+      "signed A7 covariance-normal composite",
+      "eta_shell nonzero",
+      "retuned coefficients, removed regularizers, or another functional",
+      "infinite-volume, thermodynamic, regulator-removal, renormalized quantum, or continuum transfer"
+    ]
+  },
+  "test_oracles": {
+    "cube_vertex_multiset": [-1, -1, -1, -1, -1, -1, 3, 3],
+    "support_count": 12,
+    "center_count": 128,
+    "torus_volume": 4096,
+    "cell_volume": 32,
+    "l2_coefficient": 49152,
+    "energy_floor_integer": 6144,
+    "radial_floor_integer": 12288,
+    "value_only_stationary_squared_amplitudes": ["1/2", "5/6"],
+    "value_only_local_minimum_energy": "25/108"
+  },
+  "formal_integration": {
+    "event_ordinal": 640,
+    "event_title": "R-169 v1.1 pinned P1 BCC periodic realization empty-reference exclusion route split",
+    "event_id": "20260814-r-169-v1-1-pinned-p1-bcc-periodic-realization-e",
+    "event_claim_ids": [
+      "A2-FULL-PRODUCTION-WELLPOSED",
+      "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+      "B1-RH-ENUM",
+      "B3-RH-TESTED-STRUCTURE-RANKING",
+      "C6-BCC-PREMISE-BLOCKED",
+      "C6-SPACETIME-SIGNATURE",
+      "EXP-000852",
+      "R-169"
+    ],
+    "event_keywords": [
+      "EXP-000852",
+      "R-169-v1.1",
+      "bcc-periodic-field",
+      "empty-reference-exclusion",
+      "no-new-negative",
+      "p1-neutral-functional",
+      "reading-h-interface-open",
+      "route-filter"
+    ],
+    "event_notes": [
+      "strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-manifest.json",
+      "strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-certificate-260814.md",
+      "claims/GATES.md",
+      "RESULTS-LEDGER.md"
+    ],
+    "event_scripts": [
+      "codes/foundations/pre_a_t055_pinned_p1_bcc_periodic_realization_empty_reference_elimination_route_split.py",
+      "codes/foundations/pre_a_t055_pinned_p1_bcc_periodic_realization_empty_reference_elimination_route_split_independent.py",
+      "codes/foundations/pre_a_t055_pinned_p1_bcc_periodic_realization_empty_reference_elimination_route_split_verify.py"
+    ],
+    "event_raw_tokens": [
+      "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+      "128 centers",
+      "49152",
+      "Reading-H interface remains OPEN",
+      "No new negative",
+      "C6-BCC-PREMISE-BLOCKED remains OPEN",
+      "No R-169 v1.1 PDF is issued"
+    ],
+    "theorem_map_version": "1.36.0",
+    "expected_post_counts": {
+      "claims": 49,
+      "results": 169,
+      "gates": 200,
+      "negatives": 369,
+      "explorations": 853,
+      "events": 640,
+      "tasks": 55,
+      "catalog": 3987
+    },
+    "no_new_negative": true,
+    "no_pdf": true
+  },
+  "no_overclaim": "This T0, claim-nonbearing package gives one exact smooth P1 BCC-periodic field, deterministic modulus-max center set, BCC Voronoi cell extraction, and inherited R-157 empty-reference/critical-point exclusion. It does not identify the field with Reading-H Q or G_*, construct a physical-empty reference, validate the hash-pinned functional as Nature's canonical theory, cover constrained or retuned models, pass thermodynamic or continuum limits, select a vacuum, resurrect B3-BCC-STRUCT, or close Round-1, C6, physical Sector A, or Pre-A. No R-169 v1.1 PDF is issued."
+}

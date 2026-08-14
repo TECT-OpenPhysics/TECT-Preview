@@ -22,7 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-169](#r-169) | Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction | R-169 v1.0 is a scoped T0 analytic/exact/executed/audited result under EXP-000851. It proves one exact BCC Voronoi fixture, an uncountable pairwise-nonsimilar affine-combinatorial realization family, a matched-renormalization conditional below-reference sign theorem and a transverse-stability reduction. It computes no TECT realization energy, supplies no physical-empty reference, and does not resurrect B3-BCC-STRUCT or advance C6 |
+| [R-169](#r-169) | Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction | R-169 v1.1 is the current scoped T0 analytic/exact/executed/audited result under EXP-000852. It retains v1.0 and constructs one exact twelve-mode BCC-periodic field in the hash-pinned neutral P1/A2 space, extracts its 128 modulus-max centers and BCC Voronoi cells, and conditionally applies R-157 to exclude that family from the zero-reference, critical, local/metastable and global branches. No registered Reading-H `Q/G_*`-to-`Psi` map or energy intertwiner exists, so the current B1/B3 ranking is neither promoted nor refuted and C6 remains blocked |
 | [R-168](#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | R-168 v1.3 is a scoped T0 analytic/exact/executed/audited additive result under EXP-000814. It retains v1.0--v1.2 and closes five mathematical children without creating a compact action, physical response, candidate, prediction or freeze; physical-response, Round-1, Sector A and Pre-A remain open |
 | [R-167](#r-167) | Registered-corridor full-oscillator coexistence, categorical dynamics and exact source-ground transfer | R-167 v4.2 is the current scoped T0 analytic/exact/executed/audited additive result under EXP-000846. It retains every v4.1 child and conditionally proves integrated-orbit-smear all-shape shell Cauchy convergence, a point-norm C0 spatial-subalgebra action, an equivariant surjective quotient of the categorical carrier, and same-periodic-net transfer of the v4.0 ground pair. The exact-Q3 toggle weights, a raw/local oscillator common alpha, DLR/KMS branch identity and the broken-sector GNS gap remain open |
 | [R-166](#r-166) | Sparse production radial-Gram decomposition and global owner bound | Scoped T4 analytic/exact/executed/audited production-fibre theorem, strengthened in v1.1 without a new result ID. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / single fresh-`4p` R-153 fibre, the exact Fierz split, Pauli nonresonance, radial bounds and direct coefficient inequality give an explicit rational polynomial whose unique global minimum lies in `70<G_*<71` and is `-4/5+18740524635403/439505584128000>-4/5`. Thus the owner plus source Hessian is strictly above `1/10`, the scoped R-164 reduction permits `rho=3/20`, and the R-165 annulus is closed. Exact simultaneous `sin(4x),sin(8x)` arithmetic gives Gram `[[5/4,1],[1,3/2]]` and ratio `3/8` at `(1,-1)`, registering that the coefficient-one lemma cannot be copied rootwise. Primary `40/40` and independent Fraction `37/37` audits pass. The complete joint owner, nonlinear/revisit feedback, low variables, removal, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
@@ -247,6 +247,43 @@ it lies below the reference but is a saddle. This also proves that a common
 counterterm basis with free nonconstant finite parts does not determine the
 relative sign.
 
+**Exact pinned-P1 BCC realization and elimination.** EXP-000852 / R-169 v1.1
+retains every v1.0 result and, conditional on
+`A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`, works in the exact hash-pinned
+neutral P1/A2 space `H^2(T^3_16;C^3)` with `eta_shell=0`. For one unit internal
+vector `u`, nonzero amplitude `A`, and the twelve frequencies
+`S=4{(+/-1,+/-1,0),(+/-1,0,+/-1),(0,+/-1,+/-1)}`, it defines
+`Psi_A(x)=A u sum_(n in S) exp(2 pi i n dot x/16)`. Its scalar factor is
+`4(pq+pr+qr)`, where `p=cos(pi x_1/2)` and cyclically. The exact modulus-max
+center set is
+`[4Z^3 union ((2,2,2)+4Z^3)]/16Z^3`, with 128 centers. Its exact translation
+lattice is the same BCC lattice; there is no modulus anti-period. The v1.0
+Voronoi truncated octahedron has volume 32, so it descends to an exact
+128-cell torus tiling. Fourier orthogonality gives
+`||Psi_A||_2^2=49152|A|^2`.
+
+The inherited R-157 constants then give
+`F_P1[Psi_A]-F_P1[0]>6144|A|^2` and
+`<D F_P1(Psi_A),Psi_A>>12288|A|^2`. Hence this explicit nonzero family is
+strictly above the zero reference and is not an unconstrained critical point,
+local minimum, metastable equilibrium or global minimizer. The value-transfer
+premise `R[Psi]-R[0]>=-delta||Psi||^2`, `delta<g`, preserves only the positive
+reference gap; critical/local exclusion separately requires the radial bound
+`<DR(Psi),Psi>>=-delta_r||Psi||^2`, `delta_r<kappa`. The exact scalar fixture
+`F_tilde(x)=(1/4)x^2+x^2(x^2-1)^2` has a nonzero strict local minimum at
+`x^2=5/6` with value `25/108`, proving that the value premise alone cannot
+supply the radial conclusion.
+
+**Reading-H interface boundary.** The registered Reading-H object is a finite
+momentum-shell point set `Q` with amplitudes compared with the isotropic
+Gaussian-Hartree dressing `G_*`. No current authority fixes a deterministic
+`Q/G_*`-to-`Psi` or covariance/composite map, Fourier phases, `C^3`
+polarizations, torus embedding, intensity-to-`L2` normalization, reference
+image, center/cell rule, or exact/error-budgeted energy and ensemble
+intertwiner. The explicit field above is therefore a P1 realization and route
+filter, not a Reading-H extraction. R-158 remains a changed fixed-charge or
+grand-canonical variational problem and does not contradict R-157.
+
 **Negative-route authorities.** R-169 v1.0 registers
 `NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION`
 and
@@ -256,15 +293,20 @@ It retains the retired BCC-selection authority
 `NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR`, and the same-
 Hamiltonian equilibrium-reference boundary
 `NG-2026-08-09-PRE-A-ST8-Q3LOCK-EQUILIBRIUM-PHASE-AS-STRICT-EMPTY-REFERENCE`.
+R-169 v1.1 registers no new negative and reuses
+`NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM` together with
+`NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`.
 
-**Boundary.** This is a T0, claim-nonbearing geometry and conditional transfer
-result. It freezes a proof-ready candidate contract but computes no canonical
-TECT or Reading-H realization energy, proves no center extraction or complete
-enumeration, identifies no physical or cosmic empty space, and proves no
-global vacuum, BCC resurrection, C6 spacetime conclusion, physical Sector-A
-result, or Pre-A closure. `C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN.
+**Boundary.** This is a T0, claim-nonbearing geometry, explicit P1 route-filter
+and conditional transfer result. It extracts centers and cells only for the
+declared twelve-mode P1 fixture. It computes no canonical TECT or Reading-H
+realization energy, proves no Reading-H extraction or complete enumeration,
+identifies no physical or cosmic empty space, and proves no global vacuum,
+BCC resurrection, C6 spacetime conclusion, physical Sector-A result, or Pre-A
+closure. `PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE`,
+`C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN.
 
-**Proven in:** The [R-169 v1.0 certificate](strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.0 PDF is issued.
+**Proven in:** The [R-169 v1.1 certificate](strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.1 PDF is issued. The [R-169 v1.0 certificate](strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-manifest.json) remain the prior proof-first authority.
 
 **Tier:** T0 (claim-nonbearing scoped exact geometry, conditional sign/stability
 transfer and exact logical obstructions only).

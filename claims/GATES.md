@@ -159,6 +159,12 @@ a TECT realization, parent functional/reference pair, counterterm finite
 parts, error budget, transverse form, prospective prediction, custodian
 commitment, or score. Round-1 remains OPEN.
 
+EXP-000852 / R-169 v1.1 constructs and rejects one exact BCC-periodic field
+inside the already hash-pinned neutral P1/A2 functional. It supplies no
+Reading-H-to-field map, admitted microscopic observable map, common estimand,
+prospective prediction, custodian commitment, freeze or score. Round-1
+remains OPEN.
+
 ### **PA-T055-TRUNCATED-OCTAHEDRON-BCC-VORONOI-AND-AFFINE-REALIZATION-FAMILY**
 
 **Statement:** Separate metric-regular, Euclidean-lattice-Voronoi, affine-
@@ -203,6 +209,49 @@ relative competitor ranking plus positive transverse curvature need not beat
 the reference, and that a negative reference sign need not imply stability.
 No TECT realization energy, physical-empty reference, global minimizer, or
 continuum model instance is proved.
+
+### **PA-T055-PINNED-P1-BCC-PERIODIC-REALIZATION-EMPTY-REFERENCE-EXCLUSION**
+
+**Statement:** Construct one deterministic smooth BCC-periodic field inside
+the exact hash-pinned neutral P1/A2 torus, extract its centers and Euclidean
+Voronoi cells without a visual rule, and decide its empty-reference sign and
+unconstrained equilibrium status using the registered R-157 theorem.
+
+**Status:** CLOSED ONLY FOR THE DECLARED FIXED-TORUS P1 REALIZATION
+(2026-08-14). EXP-000852 / R-169 v1.1 takes the twelve modes
+`S=4{(+/-1,+/-1,0),(+/-1,0,+/-1),(0,+/-1,+/-1)}` and
+`Psi_A=A u sum_(n in S) exp(2 pi i n dot x/16)`, `A!=0`, `||u||=1`.
+Its modulus maxima are exactly the 128 points of
+`[4Z^3 union ((2,2,2)+4Z^3)]/16Z^3`; its exact translation lattice is the
+same, and the periodic Euclidean Voronoi cells are the R-169 v1.0 BCC
+truncated octahedra of volume 32. Fourier orthogonality gives
+`||Psi_A||_2^2=49152|A|^2`. The inherited R-157 bounds yield
+`F_P1[Psi_A]-F_P1[0]>6144|A|^2` and
+`<D F_P1(Psi_A),Psi_A>>12288|A|^2`, so this family is neither a
+below-reference winner nor an unconstrained critical, local-minimum,
+metastable or global-minimum branch. This closes no constrained, retuned,
+infinite-volume, quantum or Reading-H realization.
+
+### **PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE**
+
+**Statement:** Before applying the pinned P1 elimination theorem to
+Reading-H, freeze a deterministic `Q/G_*` field or covariance/composite map,
+Fourier phases and three-component polarizations, torus and shell embedding,
+amplitude/intensity normalization, reference image, center and tie rule,
+periodic cell construction, and an exact or error-budgeted energy/ensemble
+intertwiner; otherwise declare and independently govern the changed
+constraint, functional or observable owner.
+
+**Status:** OPEN (2026-08-14). EXP-000852 / R-169 v1.1 audits the live
+authorities and finds no registered Reading-H `Q/G_* -> Psi` map or equivalent
+covariance/composite bridge. Reading-H uses a momentum-shell point set with
+amplitudes and an isotropic Gaussian-Hartree dressing, while R-157 acts on the
+hash-pinned unconstrained `H^2(T^3_16;C^3)` field. A hash-identical nonzero
+embedding would be eliminated by R-157. Fixed charge/norm, chemical potential,
+compact target, conserved dynamics, nonzero shell bias, retuned coefficients,
+removed regularizers or another functional are genuine escape routes only
+after their new owners and matched reference/stability/limit proofs are
+frozen. The current B1/B3 relative ranking is neither promoted nor refuted.
 
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
@@ -5271,6 +5320,13 @@ combinatorial nonuniqueness family, and conditional matched-renormalization
 sign/transverse-stability reductions. It computes no canonical TECT or
 Reading-H realization energy and identifies no physical-empty reference. The
 retired BCC premise is not resurrected; this gate and its physical programme
+remain OPEN.
+
+EXP-000852 / R-169 v1.1 rejects one explicit BCC-periodic field family inside
+the fixed neutral P1/A2 functional with an exact positive empty-reference
+margin. It does not identify that field with Reading-H, construct a physical
+empty reference, or show that every TECT realization is in the P1 scope. The
+Reading-H interface remains OPEN, so this gate and its physical programme
 remain OPEN.
 
 
