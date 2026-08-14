@@ -1,0 +1,118 @@
+{
+  "schema": "tect/pre-a-q3lock-finite-source-ground-residual-transfer-and-clipped-order-separation-route-split/1.0",
+  "package_id": "pre-a-cp1-st8-q3lock-finite-source-ground-residual-transfer-and-clipped-order-separation-route-split",
+  "version": "R-167 v3.9",
+  "date": "2026-08-13",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-000843",
+  "prior_exploration_id": "EXP-000842",
+  "claim_bearing": false,
+  "closed_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FINITE-SOURCE-GROUND-RESIDUAL-TRANSFER-AND-CLIPPED-ORDER-SEPARATION"
+  ],
+  "negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-EXACT-TARGET-GENERATOR-AND-SEPARATION-AUTOMATIC-TARGET-GROUNDNESS"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER"
+  ],
+  "open_parent_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "historical_open_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION",
+    "PA-CP1-ST8-Q3LOCK-DLR-TO-COMMON-ALPHA-KMS-IDENTIFICATION"
+  ],
+  "ground_residual_transfer": {
+    "setup": "Let (A,alpha) be one unital C*-system with closed generator delta, let hbar>0, and let D be a unital star-subalgebra that is a graph core for delta. Fix one sign sigma in {-1,+1}. For each n let pi_n be a unital representation, put A_n=pi_n(A), and let Omega_n be a normalized ground vector of the self-adjoint H_n(sigma h_n)=H_n(0)-sigma h_n S_n with ground energy E_n, where H_n(0), H_n(sigma h_n), and S_n are self-adjoint operators or forms under the declared pairings. Every A in D is required to lie in the represented commutator and vector/form domains used below. The theorem is applied separately to the two signs.",
+    "finite_energy_identity": "Let hat omega_n(T)=<Omega_n,T Omega_n> on the declared represented pairings and tilde omega_n=hat omega_n o pi_n on A. With delta_n^0(A_n)=(i/hbar)[H_n(0),A_n], assume the quadratic-form commutator identity cal E_n(A)=q_(H_n(sigma h_n)-E_n)[A_n Omega_n]=-i hbar hat omega_n(A_n^* delta_n^0(A_n))-sigma h_n hat omega_n(A_n^*[S_n,A_n])>=0.",
+    "target_decomposition": "Define d_n(A)=delta_n^0(A_n)-pi_n(delta A), in the declared form/vector sense, and R_n(A)=sigma h_n hat omega_n(A_n^*[S_n,A_n])+i hbar hat omega_n(A_n^*d_n(A)). Then -i hbar tilde omega_n(A^*delta A)=cal E_n(A)+R_n(A).",
+    "hypothesis": "Assume the pullback states tilde omega_n converge weak-star to omega on A and the complex combined scalar residual satisfies |R_n(A)|->0 for every A in D.",
+    "conclusion": "Weak-star passage gives -i hbar omega(A^*delta A)>=0 on D. Positivity for 1+zA for every complex z forces omega(delta A)=0. Graph-core closure extends both statements to Dom(delta), so omega is alpha-invariant and is an algebraic alpha-ground state.",
+    "sufficient_corollary": "A stronger sufficient premise is that d_n(A) is bounded with ||d_n(A)||->0 and sigma h_n hat omega_n(A_n^*[S_n,A_n])->0 separately for every A in D. The theorem itself needs only the combined expectation-level residual.",
+    "scope": "This is a conditional abstract target-carrier theorem. It constructs neither the exact-Q3 common target carrier nor its represented domain/core identifications, and it does not prove the Q3 combined residual estimate."
+  },
+  "clipped_order_separation": {
+    "setup": "Let the two candidate states have locally normal extensions omega_+ and omega_- to one local von Neumann algebra M_X, related by a normal parity automorphism gamma. Let Q be a self-adjoint operator affiliated with M_X, gamma(Q)=-Q, omega_+(Q)>=m>0 and omega_+(|Q|^4)<=M_4.",
+    "clip": "For R>0 put B_R=clip(Q/R,-1,1). Functional calculus gives ||B_R||<=1, gamma(B_R)=-B_R and omega_+(B_R)>=d_R:=m/R-M_4/R^4. Choose R with d_R>0.",
+    "carrier": "Assume a parity-stable unital C*-carrier B inside M_X has strong-star dense unit ball. Normality, Kaplansky density and parity/self-adjoint symmetrization give, for any 0<epsilon<d_R, one fixed odd self-adjoint contraction b in B with |omega_+(b)-omega_+(B_R)|<epsilon.",
+    "conclusion": "The same fixed b obeys omega_+(b)>=d_R-epsilon, omega_-(b)<=-(d_R-epsilon), and ||omega_+|_B-omega_-|_B||>=2(d_R-epsilon). B_R itself is not claimed to belong to B."
+  },
+  "exact_m3_fixture": {
+    "inputs": {
+      "algebra": "M_3(C)",
+      "hbar": "1",
+      "sigma": "{-1,+1}",
+      "Q": "diag(-1,0,1)",
+      "K": "Q^2",
+      "h_n": "1/n",
+      "S_n": "2nQ",
+      "H_n^sigma": "K-sigma h_n S_n=K-2sigma Q",
+      "omega_sigma": "vector state of e_sigma, the Q-eigenvector with eigenvalue sigma",
+      "A_sigma": "|e_0><e_sigma|"
+    },
+    "derived": {
+      "finite_source_ground_eigenvalue": "-1",
+      "source_ground_unique": true,
+      "finite_source_excitation_form": "1",
+      "target_generator_defect": "0",
+      "source_scalar_residual": "-2",
+      "combined_residual": "-2",
+      "target_energy_form": "-1",
+      "target_decomposition_rhs": "-1",
+      "parity_related": true,
+      "fixed_order_separated": true,
+      "target_groundness": false
+    },
+    "route_boundary": "Here h_n->0 but h_n S_n=2Q does not vanish. The target K-generator is exact, the two weak-star limits are parity related and separated by the fixed bounded order Q, but the source scalar term does not vanish. The combined residual equals -2, the target energy form on A_sigma equals -1, and the limit state is not a K-ground state. Thus vanishing source is not a residual estimate. This growing-selector fixture is not Q3LOCK."
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_finite_source_ground_residual_transfer_and_clipped_order_separation_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_finite_source_ground_residual_transfer_and_clipped_order_separation_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_finite_source_ground_residual_transfer_and_clipped_order_separation_route_split_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-primary-pre-a-cp1-st8-q3lock-finite-source-ground-residual-transfer-and-clipped-order-separation-route-split/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-independent-pre-a-cp1-st8-q3lock-finite-source-ground-residual-transfer-and-clipped-order-separation-route-split/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-13-integrated-pre-a-cp1-st8-q3lock-finite-source-ground-residual-transfer-and-clipped-order-separation-route-split/result.json",
+    "staged_lifecycle": "Before formal integration, run all three scripts with --staged --no-store. No run JSON or formal authority is written by this five-file proof package."
+  },
+  "formal_integration_contract": {
+    "event_ordinal": 635,
+    "event_id": "20260813-r-167-v3-9-finite-source-ground-residual-transf",
+    "event_title": "R-167 v3.9 finite-source ground residual transfer and clipped-order separation route split",
+    "event_keywords": [
+      "EXP-000843",
+      "R-167-v3.9",
+      "clipped-order-separation",
+      "combined-scalar-residual",
+      "finite-source-ground",
+      "no-gns-gap-claim",
+      "target-ground-transfer",
+      "vanishing-source-residual-no-go"
+    ],
+    "theorem_map_version": "1.31.0",
+    "expected_post_formal_counts": {
+      "claims": 49,
+      "results": 168,
+      "gates": 193,
+      "negatives": 366,
+      "explorations": 843,
+      "events": 635,
+      "tasks": 54,
+      "catalog": 3947
+    },
+    "required_links": "EXP-000843, event 635, T-054, ROADMAP, strategy index, proof-evidence map, theorem map 1.31.0, generated compact surfaces, one exact scoped CLOSED result, one exact new negative, one reused contextual boundary, all five OPEN parents, and both historical gates remaining OPEN."
+  },
+  "checkpoint_synthesis": {
+    "status": "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+    "pdf_issued": false,
+    "workflow": "Proof-first manifest, certificate and three executable verifiers only. No v3.9 PDF is issued."
+  },
+  "no_overclaim": "R-167 v3.9 closes only a conditional abstract finite-source combined-residual ground-state transfer and a conditional clipped-order carrier separation lemma. It proves no exact-Q3 common target representation/core or combined residual estimate, no selected Q3 target ground state, no zero-source quotient factorization, no all-exhaustion thermodynamic or spatial common alpha, no KMS-to-ground identification without the residual premise, no purity, factoriality, disjointness, phase exhaustion or positive broken-sector GNS gap, no regulator removal, continuum, mass gap, physical vacuum or empty-space comparison, Round-1, C6, CP1, physical Sector A or Pre-A. All five active parent gates and both historical gates remain OPEN."
+}

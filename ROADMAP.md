@@ -1377,6 +1377,26 @@ infinity gates and all five active parents remain OPEN. No algebraic ground
 identity, broken-sector GNS gap, Round-1, C6, CP1, physical Sector A or Pre-A
 closure follows. No v3.8 PDF is issued.
 
+EXP-000843 / R-167 v3.9 retains every v3.8 child and adds one conditional T0
+abstract result. For finite-source exact ground vectors represented over one
+identified target graph core, weak-star convergence plus the single complex
+combined residual `|R_n^sigma(A)|->0` transfers the target ground inequality;
+the `1+zA` test and graph closure give invariance and algebraic groundness.
+Separately, local normality, an odd order first-moment floor, a fourth-moment
+bound and parity-stable strong-star unit-ball density produce one fixed odd
+carrier contraction separating the two states. The exact `M_3(C)` fixture has
+`h_n->0`, exact target generator and fixed parity/order separation but residual
+`-2` and target form `-1`, so vanishing source alone is insufficient. The
+scoped child
+`PA-CP1-ST8-Q3LOCK-FINITE-SOURCE-GROUND-RESIDUAL-TRANSFER-AND-CLIPPED-ORDER-SEPARATION`
+is CLOSED conditionally; the exact negative
+`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-EXACT-TARGET-GENERATOR-AND-SEPARATION-AUTOMATIC-TARGET-GROUNDNESS`
+is registered. The historical beta-infinity and DLR-to-common-alpha gates and
+all five active parents remain OPEN. No exact-Q3 target representation/core or
+residual, selected target ground pair, spatial common alpha, broken-sector GNS
+gap, Round-1, C6, CP1, physical Sector A or Pre-A closure follows. No v3.9 PDF
+is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

@@ -134,6 +134,10 @@ carrier/KMS child and one scoped quotient-factorization failure. It creates no
 contestant, microscopic observable map, common estimand, prospective
 prediction, custodian commitment, freeze or score. Round-1 remains OPEN.
 
+EXP-000843 / R-167 v3.9 adds only two conditional abstract lemmas and one
+non-Q3 logical fixture. It selects no evidence role or candidate functional
+and freezes no Round-1 manifest. This parent remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -676,6 +680,11 @@ therefore does not identify the two zero-source DLR/OS phases as KMS states of
 one exact-Q3 thermodynamic Hamiltonian action. This historical gate remains
 OPEN.
 
+EXP-000843 / R-167 v3.9 assumes one target carrier/action and its represented
+graph core; it does not identify the inherited DLR tangent branches with
+states on that carrier or prove the Q3 combined residual. This historical gate
+remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION**
 
 **Statement:** Starting from one common Q3LOCK dynamics, control the
@@ -735,6 +744,12 @@ positive physical inverse temperature on a source-family categorical carrier.
 It proves neither zero-source quotient factorization nor a beta-infinity
 limit, target-generator convergence or algebraic ground positivity. This
 historical gate remains OPEN.
+
+EXP-000843 / R-167 v3.9 starts from finite-source exact ground vectors and
+gives target groundness only under a separately assumed vanishing combined
+residual on one represented graph core. It constructs no exact-Q3 beta-to-
+infinity KMS family or selected target ground pair. This historical gate
+remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-CONNECTED-SUSCEPTIBILITY-AND-GNS-POINCARE-GATE**
 
@@ -2102,6 +2117,32 @@ this condition. The carrier is categorical, not a spatial all-exhaustion
 thermodynamic action. No algebraic ground state, GNS gap, purity, phase
 completeness or parent closure follows.
 
+### **PA-CP1-ST8-Q3LOCK-FINITE-SOURCE-GROUND-RESIDUAL-TRANSFER-AND-CLIPPED-ORDER-SEPARATION**
+
+**Statement:** On one target unital point-norm `C0` `C*` system, transfer weak-
+star limits of finite-source exact ground vectors to algebraic ground states
+from one vanishing complex combined expectation-level residual on a unital
+star graph core; separately, realize a locally normal fourth-moment-controlled
+unbounded odd order parameter by one fixed odd selfadjoint contraction in a
+parity-stable strong-star-dense carrier.
+
+**Status:** CLOSED ONLY AS A CONDITIONAL ABSTRACT TARGET-GROUND TRANSFER AND
+CONDITIONAL CLIPPED-ORDER CARRIER-SEPARATION LEMMA (2026-08-13).
+EXP-000843 / R-167 v3.9 fixes one sign at a time and assumes the represented vector/form
+domains and exact quadratic-form commutator identity. With
+`cal E_n(A)>=0` and
+`R_n^sigma(A)=sigma h_n hat omega_n(A_n^*[S_n,A_n])`
+`+i hbar hat omega_n(A_n^*d_n(A))`, `|R_n^sigma(A)|->0` gives
+`-i hbar omega(A^*delta A)>=0`; testing `1+zA`, graph-core closure and
+generator differentiation give target invariance and algebraic groundness.
+Separately, `B_R=clip(Q/R,-1,1)` obeys
+`omega_+(B_R)>=d_R=m/R-M_4/R^4`; local normality plus parity-stable strong-
+star unit-ball density yields one odd contraction `b` with state distance at
+least `2(d_R-epsilon)`. The exact `M3` fixture has `h_n->0` and exact target
+generator but `R_n=-2` and target form `-1`. No exact-Q3 target
+representation/core, Q3 residual estimate, selected Q3 ground state, spatial
+common `alpha` or GNS gap follows.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -2181,6 +2222,10 @@ EXP-000842 / R-167 v3.8 constructs a categorical source-family orbit-smear
 carrier and a fixed-physical-`beta` KMS pair, not an oscillator block
 diagonalization, connected QPS interaction, cutoff-compatible phase
 intertwiner or oscillator GNS map. This parent remains OPEN.
+
+EXP-000843 / R-167 v3.9 supplies no oscillator elimination, connected QPS
+interaction, cutoff-compatible phase intertwiner or oscillator GNS map. This
+parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -2312,6 +2357,10 @@ action, but no spatial net, compatible embeddings, all-shape Cauchy estimate,
 zero-source quotient factorization or Hamiltonian-to-zero-source-phase
 identification. The exact `M2` fixture shows why `h_n->0` alone cannot supply
 the missing quotient condition. This parent remains OPEN.
+
+EXP-000843 / R-167 v3.9 assumes the target common `C0` system and strong-star-
+dense local carrier; it proves neither exact-Q3 all-shape Cauchy convergence
+nor the common spatial `alpha` or represented core. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -2575,6 +2624,10 @@ KMS-pair theorem. It supplies no infinite-dimensional two-phase QPS theorem,
 cutoff-stable branch classification, phase intertwiner, spatial common action
 or uniform positive excitation gap. This parent remains OPEN.
 
+EXP-000843 / R-167 v3.9 supplies no infinite-dimensional block
+diagonalization, two-phase QPS theorem, cutoff passage or branch identity.
+This parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -2688,6 +2741,11 @@ EXP-000842 / R-167 v3.8 separates two fixed-physical-`beta` KMS clusters on a
 categorical carrier. It proves no zero-temperature ground identity, positive
 implementing Hamiltonian, phasewise Poincare inequality, centered form core,
 kernel simplicity or broken-sector GNS gap. This parent remains OPEN.
+
+EXP-000843 / R-167 v3.9 transfers only algebraic ground positivity under a
+combined residual and separates states conditionally. It supplies no
+Poincare coercivity, centered form core, simple kernel or positive broken-
+sector GNS gap. This parent remains OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 
