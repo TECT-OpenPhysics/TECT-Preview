@@ -138,6 +138,11 @@ EXP-000843 / R-167 v3.9 adds only two conditional abstract lemmas and one
 non-Q3 logical fixture. It selects no evidence role or candidate functional
 and freezes no Round-1 manifest. This parent remains OPEN.
 
+EXP-000844 / R-167 v4.0 closes one exact-Q3 categorical ground-pair child
+only. It creates no contestant, microscopic observable map, common estimand,
+prospective prediction, custodian commitment, freeze or score. Round-1
+remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -685,6 +690,12 @@ graph core; it does not identify the inherited DLR tangent branches with
 states on that carrier or prove the Q3 combined residual. This historical gate
 remains OPEN.
 
+EXP-000844 / R-167 v4.0 closes the combined residual for exact mesoscopic-
+source ground vectors on the existing zero-source categorical orbit-smear
+carrier. It does not identify the Euclidean DLR/OS branches as KMS states of a
+spatial all-exhaustion exact-Q3 Hamiltonian action. This historical gate
+remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION**
 
 **Statement:** Starting from one common Q3LOCK dynamics, control the
@@ -750,6 +761,12 @@ gives target groundness only under a separately assumed vanishing combined
 residual on one represented graph core. It constructs no exact-Q3 beta-to-
 infinity KMS family or selected target ground pair. This historical gate
 remains OPEN.
+
+EXP-000844 / R-167 v4.0 constructs distinct exact-Q3 algebraic ground states
+from diagonal mesoscopic finite-volume source grounds on the zero-source
+categorical carrier. These states are not obtained as a `beta -> infinity`
+limit and are not proved equal to the EXP-000790 iterated fixed-source
+tangents. This historical gate remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-CONNECTED-SUSCEPTIBILITY-AND-GNS-POINCARE-GATE**
 
@@ -2143,6 +2160,40 @@ generator but `R_n=-2` and target form `-1`. No exact-Q3 target
 representation/core, Q3 residual estimate, selected Q3 ground state, spatial
 common `alpha` or GNS gap follows.
 
+### **PA-CP1-ST8-Q3LOCK-MESOSCOPIC-SOURCE-EXACT-GROUND-RESIDUAL-CLOSURE-AND-ZERO-SOURCE-ORBIT-SMEAR-GROUND-PAIR**
+
+**Statement:** On the already constructed exact-Q3 zero-source categorical
+orbit-smear `C*` system, choose exact finite-volume parity-related source
+grounds in a mesoscopic window `h_L V^2 -> infinity`, `h_L V -> 0`, close the
+finite-source combined residual on one explicit bandlimited star graph core,
+and retain one fixed odd bounded witness separating the joint weak-star ground
+limits.
+
+**Status:** CLOSED FOR THE EXACT-Q3 MESOSCOPIC-SOURCE DIAGONAL GROUND PAIR ON
+THE ZERO-SOURCE CATEGORICAL ORBIT-SMEAR CARRIER ONLY (2026-08-14).
+EXP-000844 / R-167 v4.0 takes `V=L^3` and exact grounds of
+`H_L(0)-sigma h_L S_L`. The trial-doublet comparison and source-uniform
+coercivity give
+`sigma <S_L>/V >= m_L-C_e/(h_L V^2)` and
+`eta_L <= C_e/V+C_S h_L V`; the choice `h_L=h_* V^(-3/2)` therefore keeps a
+fixed order floor and makes `eta_L -> 0`. On the zero-source orbit-smear
+carrier, compact-Arveson smears form a unital star graph core `D_bl`, exact
+finite-volume equivariance makes the generator defect zero, and the
+represented form estimate gives `|R_L^sigma(A)|=O(h_L V)->0` for every
+`A in D_bl`. R-167 v3.9 then makes every joint cluster a parity-related pair
+of algebraic ground states for the same categorical zero-source action.
+
+The source-uniform fourth moment and a fixed rational sine witness yield one
+odd selfadjoint contraction `b` with eventual expectations at least `d/2`
+and at most `-d/2`, so the two limits are distinct and have norm distance at
+least `d`. These diagonal `h_L` clusters are not proved equal to the
+EXP-000790 iterated fixed-`h` tangents, EXP-000781 finite-temperature DLR
+tangents, or R-167 v3.8 source-family KMS states. The carrier is categorical
+and nonspatial. No zero-source quotient factorization for v3.8, spatial all-
+exhaustion or raw quasi-local oscillator common `alpha`, purity, factoriality,
+phase exhaustion, positive broken-sector GNS gap, regulator/continuum removal,
+physical vacuum, C6, CP1, physical Sector A or Pre-A closure follows.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -2226,6 +2277,11 @@ intertwiner or oscillator GNS map. This parent remains OPEN.
 EXP-000843 / R-167 v3.9 supplies no oscillator elimination, connected QPS
 interaction, cutoff-compatible phase intertwiner or oscillator GNS map. This
 parent remains OPEN.
+
+EXP-000844 / R-167 v4.0 works directly with exact finite-volume source ground
+vectors and the zero-source categorical carrier. It supplies no oscillator
+block diagonalization, connected QPS interaction, cutoff-compatible phase
+intertwiner or oscillator GNS map. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -2361,6 +2417,12 @@ the missing quotient condition. This parent remains OPEN.
 EXP-000843 / R-167 v3.9 assumes the target common `C0` system and strong-star-
 dense local carrier; it proves neither exact-Q3 all-shape Cauchy convergence
 nor the common spatial `alpha` or represented core. This parent remains OPEN.
+
+EXP-000844 / R-167 v4.0 closes the model-specific residual on the existing
+zero-source categorical orbit-smear action, not on a spatial local net. It
+proves no all-shape Cauchy estimate, compatible spatial embeddings, raw
+oscillator thermodynamic action or DLR/KMS quotient identification. This
+parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -2628,6 +2690,12 @@ EXP-000843 / R-167 v3.9 supplies no infinite-dimensional block
 diagonalization, two-phase QPS theorem, cutoff passage or branch identity.
 This parent remains OPEN.
 
+EXP-000844 / R-167 v4.0 constructs a pair of categorical algebraic ground
+states from exact full-oscillator finite-volume source grounds, but supplies
+no infinite-dimensional rank-two block diagonalization, two-phase QPS
+classification, cutoff-stable branch intertwiner or uniform excitation gap.
+This parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -2746,6 +2814,12 @@ EXP-000843 / R-167 v3.9 transfers only algebraic ground positivity under a
 combined residual and separates states conditionally. It supplies no
 Poincare coercivity, centered form core, simple kernel or positive broken-
 sector GNS gap. This parent remains OPEN.
+
+EXP-000844 / R-167 v4.0 now verifies exact-Q3 categorical groundness and
+fixed-witness separation for the mesoscopic diagonal pair. It supplies no
+phasewise Poincare inequality, centered GNS form core, simple implementing
+kernel, disjointness or positive broken-sector spectral gap. This parent
+remains OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 

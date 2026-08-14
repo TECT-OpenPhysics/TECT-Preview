@@ -1,0 +1,138 @@
+{
+  "schema": "tect/pre-a-q3lock-mesoscopic-source-ground-orbit-smear-transfer-route-split/1.0",
+  "package_id": "pre-a-cp1-st8-q3lock-mesoscopic-source-ground-orbit-smear-transfer-route-split",
+  "version": "R-167 v4.0",
+  "date": "2026-08-14",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-000844",
+  "prior_exploration_id": "EXP-000843",
+  "claim_bearing": false,
+  "closed_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-MESOSCOPIC-SOURCE-EXACT-GROUND-RESIDUAL-CLOSURE-AND-ZERO-SOURCE-ORBIT-SMEAR-GROUND-PAIR"
+  ],
+  "negative_ids": [],
+  "reused_negative_ids": [
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-EXACT-TARGET-GENERATOR-AND-SEPARATION-AUTOMATIC-TARGET-GROUNDNESS",
+    "NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-AUTOMATIC-ZERO-SOURCE-QUOTIENT-FACTORIZATION",
+    "NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-SPATIAL-LOCAL-NET"
+  ],
+  "open_parent_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "historical_open_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION",
+    "PA-CP1-ST8-Q3LOCK-DLR-TO-COMMON-ALPHA-KMS-IDENTIFICATION"
+  ],
+  "inherited_exact_inputs": {
+    "model": "On the EXP-000789 dyadic periodic cubes, V=L^3, H_L(h)=H_L(0)-hS_L, S_L=sum_y Q_y, Q_y=8^(-1/2)sum_e q_(y,e), K_L=H_L(0)-E_(0,L)>=0, and hbar,chi,c,g,lambda>0 with A_0>J_3^2.",
+    "ground_order": "The unique even zero-source ground Omega_L and Phi_L=S_L Omega_L/||S_L Omega_L|| give m_L^2=<Omega_L,S_L^2 Omega_L>/V^2 with liminf m_L^2>=rho_*>0. The normalized Psi_L^sigma=(Omega_L+sigma Phi_L)/sqrt(2) has <S_L>=sigma V m_L and zero-source excess epsilon_L<=hbar^2/(4 chi V m_L^2).",
+    "eventual_constants": "After discarding a finite prefix, m_L^2>=rho_*/2. Define m_0=sqrt(rho_*/2) and C_e=hbar^2/(2 chi rho_*), so m_L>=m_0 and epsilon_L<=C_e/V.",
+    "source_ground": "For each h>0 and sigma in {-1,+1}, the real confining finite-volume Schrodinger operator H_L(sigma h) has compact resolvent and a positivity-improving heat semigroup, hence a unique strictly positive ground phi_L^sigma. Translation invariance fixes it, and parity maps phi_L^+ to phi_L^-.",
+    "authority_anchors": [
+      "EXP-000780 source-uniform coercivity and ground-energy upper bound",
+      "EXP-000781 local-normal compactness boundary",
+      "EXP-000789 ground order and approximate doublets",
+      "EXP-000790 source convention, cusp and iterated-tangent boundary",
+      "EXP-000792 sharp source-uniform coercivity",
+      "R-167 v1.6 zero-source orbit-smear carrier",
+      "R-167 v3.8 source-family KMS quotient boundary",
+      "R-167 v3.9 combined-residual transfer"
+    ]
+  },
+  "mesoscopic_source_selection": {
+    "definitions": "Let h_L>0 tend to zero and discard a finite prefix so that h_L<=h_0. Let s_L^sigma=<phi_L^sigma,S_L phi_L^sigma> and eta_L^sigma=<phi_L^sigma,K_L phi_L^sigma>. Use Psi_L^sigma as a trial vector for H_L(sigma h_L).",
+    "exact_trial_inequality": "eta_L^sigma+h_L(V m_L-sigma s_L^sigma)<=epsilon_L<=C_e/V.",
+    "order_bound": "sigma s_L^sigma/V>=m_L-C_e/(h_L V^2).",
+    "near_ground_bound": "If |s_L^sigma|<=C_S V, then eta_L^sigma<=C_e/V+C_S h_L V.",
+    "general_window": "The two sufficient asymptotic conditions are h_L V^2->infinity and h_L V->0. The first retains nonzero order and the second kills the extensive source residual.",
+    "canonical_choice": "For h_L=h_* V^(-3/2), h_L V^2=h_* V^(1/2)->infinity, h_L V=h_* V^(-1/2)->0, sigma s_L^sigma/V>=m_0-(C_e/h_*)V^(-1/2), and eta_L^sigma<=C_e V^(-1)+h_* C_S V^(-1/2)->0.",
+    "fixed_order_floor": "Put m_*=m_0/2=sqrt(rho_*/8). For all sufficiently large L, sigma s_L^sigma/V>=m_*."
+  },
+  "source_uniform_coercivity": {
+    "parameters": "Fix 0<gamma<g/32, a compact source interval |h|<=h_0, and a>0. Put C_gamma=max_(rho>=0)[h_0 rho-(r/2)rho^2-(g/32-gamma)rho^4].",
+    "positive_form": "K_(L,h)=H_L(h)+C_gamma V>=sum_x[p_x^2/(2chi)+gamma |q_x|^4]+(c/2)sum_<xy>|q_x-q_y|^2.",
+    "position_bound": "EXP-000792 gives sum_(x in X)|q_x|^2<=a K_(L,h)+|X|/(4 a gamma). The centered even trial gives E_L(h)<=E_(0,L)<=A_s V.",
+    "constants": "Define B_a=a(A_s+C_gamma)+(4 a gamma)^(-1). Then S_L^2<=a V K_L+B_a V^2 as a zero-source quadratic-form inequality, while every exact source ground obeys <S_L^2><=B_a V^2 and hence |s_L^sigma|/V<=C_S:=sqrt(B_a).",
+    "fourth_moment": "Source coercivity and translation invariance give <|Q_0|^4>_(phi_L^sigma)<=C_4:=(A_s+C_gamma)/gamma. No additive derived constant is inserted."
+  },
+  "zero_source_target": {
+    "carrier": "Use the R-167 v1.6 unital separable zero-source categorical carrier A_H^0 with ||A||_H=sup_L||pi_L^0(A)||, exact equivariance pi_L^0(theta_t A)=alpha_t^(L,0)(pi_L^0(A)), point-norm C0 shift theta, and generator delta_H.",
+    "parity": "Zero-source finite-volume parity induces an isometric involution gamma on A_H^0, gamma theta_t=theta_t gamma, and the source-ground pullbacks satisfy omega_L^-=omega_L^+ o gamma.",
+    "graph_core": "Let D_bl be the unital star-algebra generated by theta_g(B)=int g(t)theta_t(B)dt for B in A_H^0 and Schwartz g with compact Fourier support. Bandwidths add under products and flip under star. Bandlimited approximate identities converge in the graph norm of delta_H, so D_bl is a graph core.",
+    "exact_defect": "Differentiating exact equivariance in norm gives delta_L^0(pi_L^0(A))=pi_L^0(delta_H A) for A in D_bl. Thus the R-167 v3.9 generator defect d_L(A) is exactly zero."
+  },
+  "form_domain_and_energy_transfer": {
+    "spectral_bound": "For A in D_bl choose R_A with Sp_theta(A) subset [-R_A,R_A]. Arveson energy transfer and spectral-tail integration give q_(K_L)[pi_L^0(A)phi]<=||A||_H^2(eta_L+hbar R_A).",
+    "domains": "The spectral estimate applies to A, A^* and their products, so they preserve Dom(K_L^(1/2)). The bound S_L^2<=a V K_L+B_a V^2 makes S_L K_L^(1/2)-bounded and makes the zero-source and source quadratic forms share one form domain.",
+    "pairing_rule": "Every occurrence of A_L^*[S_L,A_L] denotes the represented form pairing <A_L phi,S_L A_L phi>-<A_L phi,A_L S_L phi>. It is not asserted to be a bounded operator commutator."
+  },
+  "combined_residual_closure": {
+    "state": "Let omega_L^sigma(A)=<phi_L^sigma,pi_L^0(A)phi_L^sigma> on A_H^0 and A_L=pi_L^0(A).",
+    "energy_identity": "For A in D_bl, the exact quadratic-form commutator identity is cal E_L^sigma(A)=q_(H_L(sigma h_L)-E_L(sigma h_L))[A_L phi_L^sigma]=-i hbar omega_L^sigma(A^*delta_H A)-sigma h_L <phi_L^sigma,A_L^*[S_L,A_L]phi_L^sigma>=0.",
+    "residual": "Since d_L(A)=0, R_L^sigma(A)=sigma h_L <phi_L^sigma,A_L^*[S_L,A_L]phi_L^sigma>.",
+    "bound": "|R_L^sigma(A)|<=h_L||A||_H^2{sqrt[a V(eta_L+hbar R_A)+B_a V^2]+sqrt[a V eta_L+B_a V^2]}=O(h_L V)->0.",
+    "conclusion": "R-167 v3.9 applies separately to both signs. Every joint weak-star cluster pair consists of theta-invariant algebraic ground states of the same zero-source categorical system. The R-167 v1.6 negative-Arveson estimate with eta_L->0 gives an independent proof of groundness."
+  },
+  "fixed_witness_separation": {
+    "static_witness": "Put X=sqrt(8)Q_0, M_3=(64 C_4)^(3/4), and choose one fixed positive rational r_w with r_w^2 M_3<=3 sqrt(8)m_*. Then d=r_w sqrt(8)m_*/2>0 and eventually omega_L^+(sin(r_w X))>=d while omega_L^-(sin(r_w X))<=-d.",
+    "carrier_witness": "For fixed T>0 let f_T(t)=T^(-1)(1-|t|/T)_+ and xi=r_w(1,...,1). The single b=[A_(xi,f_T)-A_(-xi,f_T)]/(2i) lies in A_H^0, is odd, self-adjoint and contractive.",
+    "smear_error": "Zero-source near-invariance gives |omega_L^sigma(b)-omega_L^sigma(sin(r_w X))|<=(16/15)sqrt(2T eta_L/hbar)->0.",
+    "separation": "Eventually omega_L^+(b)>=d/2 and omega_L^-(b)<=-d/2. Every joint cluster pair obeys omega_-=omega_+ o gamma and ||omega_+-omega_-||>=d."
+  },
+  "branch_and_scope_split": {
+    "EXP781": "EXP-000781 concerns fixed-positive-beta Euclidean DLR and locally normal time-zero tangent states, not these zero-temperature carrier grounds.",
+    "EXP790": "EXP-000790 first takes L->infinity at fixed h and then h->0. The present h_L diagonal clusters are not proved equal to those iterated tangent candidates because no near-zero uniform finite-size rate is available.",
+    "v1_6": "R-167 v1.6 used hand-built zero-source approximate doublets. The new theorem starts from exact finite-volume plus/minus source ground vectors and closes the model-specific R-167 v3.9 residual on an explicit graph core.",
+    "v3_8": "R-167 v3.8 is a fixed-beta source-family KMS theorem whose selected states are not proved to factor through its zero-source quotient. The present theorem evaluates source-ground vectors directly through zero-source representations and proves no v3.8 quotient factorization.",
+    "categorical_boundary": "A_H^0 is categorical and nonspatial. It is not the sought all-exhaustion quasi-local raw oscillator dynamics, and temporal smearing does not create a spatial local net."
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_mesoscopic_source_ground_orbit_smear_transfer_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_mesoscopic_source_ground_orbit_smear_transfer_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_mesoscopic_source_ground_orbit_smear_transfer_route_split_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-cp1-st8-q3lock-mesoscopic-source-ground-orbit-smear-transfer-route-split/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-independent-pre-a-cp1-st8-q3lock-mesoscopic-source-ground-orbit-smear-transfer-route-split/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-integrated-pre-a-cp1-st8-q3lock-mesoscopic-source-ground-orbit-smear-transfer-route-split/result.json",
+    "staged_lifecycle": "Before formal integration, run all three scripts with --staged --no-store. No run JSON or formal authority is written by this five-file package."
+  },
+  "formal_integration_contract": {
+    "event_ordinal": 636,
+    "event_id": "20260814-r-167-v4-0-mesoscopic-source-ground-orbit-smear",
+    "event_title": "R-167 v4.0 mesoscopic source-ground orbit-smear transfer route split",
+    "event_keywords": [
+      "EXP-000844",
+      "R-167-v4.0",
+      "categorical-ground-pair",
+      "exact-q3-residual",
+      "mesoscopic-source",
+      "no-new-negative",
+      "orbit-smear",
+      "zero-source-target"
+    ],
+    "theorem_map_version": "1.32.0",
+    "expected_post_formal_counts": {
+      "claims": 49,
+      "results": 168,
+      "gates": 194,
+      "negatives": 366,
+      "explorations": 844,
+      "events": 636,
+      "tasks": 54,
+      "catalog": 3955
+    },
+    "required_links": "EXP-000844, event 636, T-054, ROADMAP, strategy index, proof-evidence map, theorem map 1.32.0, generated compact surfaces, one exact scoped CLOSED child, zero new negatives, three reused boundaries, all five active parents and both historical gates remaining OPEN."
+  },
+  "checkpoint_synthesis": {
+    "status": "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+    "pdf_issued": false,
+    "workflow": "Proof-first manifest, certificate and three executable verifiers only. No v4.0 PDF is issued."
+  },
+  "no_overclaim": "R-167 v4.0 proves only that exact finite-volume plus/minus mesoscopic-source Q3 ground vectors yield a fixed-witness-separated pair of algebraic ground states on the already constructed zero-source categorical orbit-smear carrier, with the R-167 v3.9 combined residual closed on an explicit bandlimited graph core. These are new diagonal h_L clusters, not the EXP-000790 iterated fixed-h tangents, EXP-000781 fixed-beta DLR tangents, or R-167 v3.8 fixed-beta source-family KMS states. It proves no zero-source quotient factorization for v3.8, no beta-infinity KMS limit, no DLR/OS identification, no spatial all-exhaustion or quasi-local raw oscillator common alpha, no purity, factoriality, disjointness, phase exhaustion or positive broken-sector GNS gap, no regulator removal, continuum, mass gap, physical vacuum or empty-space comparison, Round-1, C6, CP1, physical Sector A or Pre-A. All five active parent gates and both historical gates remain OPEN, and no new negative result is registered."
+}

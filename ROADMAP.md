@@ -1397,6 +1397,25 @@ residual, selected target ground pair, spatial common alpha, broken-sector GNS
 gap, Round-1, C6, CP1, physical Sector A or Pre-A closure follows. No v3.9 PDF
 is issued.
 
+EXP-000844 / R-167 v4.0 retains every v3.9 child and closes one exact-Q3
+scoped T0 result. On the existing zero-source categorical orbit-smear system,
+exact finite-volume grounds at sources `+/-h_L` with
+`h_LV^2->infinity` and `h_LV->0` retain a uniform signed order floor while
+their zero-source excess energy tends to zero. Compact-Arveson smears give an
+explicit unital star graph core, exact finite-volume equivariance makes the
+target-generator defect zero, and source-uniform form coercivity proves that
+the v3.9 combined residual vanishes. Joint weak-star clusters are therefore a
+distinct parity-related algebraic ground pair for one zero-source categorical
+action, separated by one fixed sine-smear contraction. The CLOSED child is
+`PA-CP1-ST8-Q3LOCK-MESOSCOPIC-SOURCE-EXACT-GROUND-RESIDUAL-CLOSURE-AND-ZERO-SOURCE-ORBIT-SMEAR-GROUND-PAIR`.
+No new negative result is added; the v3.9 residual, v3.8 quotient and orbit-
+smear spatial-locality boundaries remain valid. These diagonal mesoscopic
+clusters are not identified with the EXP-000790 iterated tangents,
+EXP-000781 DLR tangents or v3.8 KMS pair. Both historical gates and all five
+active parents remain OPEN. No spatial all-exhaustion common alpha, DLR/KMS
+branch identification, positive broken-sector GNS gap, Round-1, C6, CP1,
+physical Sector A or Pre-A closure follows. No v4.0 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or
