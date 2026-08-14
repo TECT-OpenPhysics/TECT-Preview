@@ -6,14 +6,15 @@
 Authorities: `claims/*/status.json`, `todo/todo.json`, `ROADMAP.md`, `RESULTS-LEDGER.md`, `negative-results/registry.md`, `claims/GATES.md`.
 
 **49 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 8 · T5: 10 · T6: 15 · T7: 3
-**168 reusable results** · **367 negative/audit records** · **195 registered gates/hypotheses**
+**168 reusable results** · **367 negative/audit records** · **196 registered gates/hypotheses**
 
 ## Live work
 
 | Task | State | Claim | Gate | Task summary |
 |---|---|---|---|---|
-| `T-054` | in_progress | — | PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE | Pre-A evidence register and candidate-functional tournament |
+| `T-055` | in_progress | C6-SPACETIME-SIGNATURE | C6-BCC-PREMISE-BLOCKED | Geometry-first truncated-octahedron candidate triage: enumerate realizations and test empty-reference sign before structural use |
 | `T-006` | next | B1-RH-ENUM | — | De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check |
+| `T-054` | next | — | PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE | Pre-A evidence register and candidate-functional tournament |
 | `T-032` | blocked | A1-PRODUCTION-KERNEL-MANIFEST | — | Operator-independent certification and main-proof-line decision for the canonical N-001 scalar-slice manifest before any T5 package |
 | `T-048` | blocked | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE | A11: prove the true-increment stabilised relative log-Laplace bound |
 

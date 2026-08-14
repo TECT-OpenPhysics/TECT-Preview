@@ -148,6 +148,11 @@ reduction and one finite-source route no-go. It creates no contestant,
 microscopic observable map, common estimand, prospective prediction,
 custodian commitment, freeze or score. Round-1 remains OPEN.
 
+EXP-000846 / R-167 v4.2 adds one conditional integrated-orbit-smear spatial
+quotient and same-net ground-transfer child. It creates no contestant,
+microscopic observable map, common estimand, prospective prediction,
+custodian commitment, freeze or score. Round-1 remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -707,6 +712,11 @@ identifies the Euclidean DLR/OS branches with those states nor constructs a
 spatial all-exhaustion exact-Q3 Hamiltonian action. This historical gate
 remains OPEN.
 
+EXP-000846 / R-167 v4.2 conditionally factors only the v4.0 diagonal
+mesoscopic ground pair through one integrated-smear spatial quotient. It
+identifies neither the Euclidean DLR/OS branches nor any fixed-beta KMS branch
+with those states. This historical gate remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION**
 
 **Statement:** Starting from one common Q3LOCK dynamics, control the
@@ -783,6 +793,11 @@ EXP-000845 / R-167 v4.1 analyzes the GNS implementations of the same diagonal
 mesoscopic ground pair. It constructs no `beta -> infinity` KMS family and
 does not identify the pair with the EXP-000790 iterated fixed-source tangents.
 This historical gate remains OPEN.
+
+EXP-000846 / R-167 v4.2 transfers that same diagonal pair to a conditional
+spatial quotient using the registered periodic net. It constructs no
+`beta -> infinity` KMS family and does not identify the pair with the
+EXP-000790 iterated fixed-source tangents. This historical gate remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-CONNECTED-SUSCEPTIBILITY-AND-GNS-POINCARE-GATE**
 
@@ -2249,6 +2264,61 @@ coercive estimate, simple kernel, broken-sector GNS gap or physical mass gap
 is proved. The carrier remains categorical and nonspatial, and both historical
 gates and all five active parents remain OPEN.
 
+### **PA-CP1-ST8-Q3LOCK-INTEGRATED-ORBIT-SMEAR-SHELL-CAUCHY-SPATIAL-QUOTIENT-AND-SAME-NET-GROUND-TRANSFER**
+
+**Statement:** For the zero-source categorical configuration-Weyl orbit-smear
+carrier and the registered periodic exact-Q3 backgrounds, give sufficient
+all-shape integrated-toggle hypotheses that produce one spatial quasi-local
+subalgebra, an equivariant quotient of the categorical action, and a
+same-periodic-net transfer of the v4.0 ground pair.
+
+**Status:** CLOSED AS A CONDITIONAL INTEGRATED-TOGGLE, SPATIAL-QUOTIENT AND
+SAME-NET GROUND-TRANSFER THEOREM ONLY (2026-08-14). EXP-000846 / R-167 v4.2
+works with the exact v1.6 finite-support rational configuration label set
+`Xi_Q`. For `X=supp(xi)`, every comparison lies in the directed tail
+`Lambda(F) contains X`. The toggle universe includes every label changing a
+finite Hamiltonian: site activations and onsite Q3 terms, interaction bonds,
+and tagged boundary corrections. Admitted backgrounds have finite
+single-toggle paths to an auxiliary union, and the registered periodic v4.0
+path enters every common-pattern filter neighbourhood `N_R(X)`.
+
+Assume, uniformly over admitted intermediate backgrounds, boundary histories,
+insertion orders, compact time shifts and both time orientations,
+
+`sup_(|s|<=T)||G_(F+e)(xi,tau_s f)-G_F(xi,tau_s f)||
+ <=w_e(xi,f,T)`,
+
+with `sum_e w_e(xi,f,T)<infinity`. The symmetric-difference telescope gives
+
+`sup_(|s|<=T)||G_F(xi,tau_s f)-G_G(xi,tau_s f)||
+ <=sum_(e in F triangle G)w_e
+ <=sum_(r>R)B_r ->0`.
+
+For products, the exact derived toggle weight is
+
+`w_e(P,T)<=sum_j w_e(xi_j,f_j,T)
+                 product_(k!=j)||f_k||_1`.
+
+Thus integrated smears and their star-polynomials have all-shape norm limits
+in `B_ql`. They generate one spatial subalgebra `B_sp` with a point-norm `C0`
+action `theta_sp`. Periodic supremum contractivity and `C_c^1` density in
+`L1` give a surjective equivariant star-homomorphism
+`q_sp:A_H^0->B_sp`. Completion in the categorical norm proves
+`||J_L pi_L^0(a)-q_sp(a)||->0`; hence `q_sp(k)=0` implies
+`||pi_L^0(k)||->0` on the same periodic path used by v4.0. The two v4.0
+cluster states therefore annihilate `ker(q_sp)`, factor uniquely to parity-
+related `theta_sp`-ground states, and remain separated by the same fixed
+witness with norm distance at least `d`.
+
+The summable integrated-toggle weights are hypotheses, not proved exact-Q3
+estimates. `B_sp` is a spatial quasi-local subalgebra, not a seed-indexed
+commuting local net or the raw oscillator algebra. Only the v4.0 diagonal
+ground pair is transferred: no EXP-000790, EXP-000781 DLR, v3.8 KMS or v3.4
+Yarotskii branch identity, positive GNS gap, regulator/continuum removal,
+physical vacuum, C6, CP1, physical Sector A or Pre-A closure follows. No new
+negative result is registered. Both historical gates and all five active
+parents remain OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -2342,6 +2412,11 @@ EXP-000845 / R-167 v4.1 supplies an exact categorical GNS Rayleigh reduction
 and a global finite-source gap-collapse trial, but no oscillator elimination,
 connected QPS interaction, cutoff-compatible phase intertwiner or oscillator
 GNS map. This parent remains OPEN.
+
+EXP-000846 / R-167 v4.2 conditionally realizes integrated categorical smears
+in one spatial subalgebra and transfers the v4.0 states, but supplies no
+oscillator elimination, connected QPS interaction, cutoff-compatible phase
+intertwiner or oscillator GNS map. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -2488,6 +2563,12 @@ EXP-000845 / R-167 v4.1 works inside the same nonspatial categorical action.
 The bandlimited represented form core does not provide all-shape Cauchy
 estimates, compatible spatial embeddings, a raw oscillator thermodynamic
 action or DLR/KMS quotient identification. This parent remains OPEN.
+
+EXP-000846 / R-167 v4.2 proves the all-shape/C0 conclusion only conditionally
+for integrated orbit smears under summable toggle weights that are not proved
+for exact Q3. Its `B_sp` is not a seed-indexed commuting local net or the raw
+oscillator algebra, and no DLR/KMS branch is identified. This parent remains
+OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -2766,6 +2847,12 @@ diagonalization, two-phase QPS classification or cutoff-stable branch
 intertwiner. Its full finite-source gap upper bound tends to zero and is not a
 positive phasewise excitation-gap theorem. This parent remains OPEN.
 
+EXP-000846 / R-167 v4.2 conditionally transfers the existing diagonal ground
+pair to a spatial integrated-smear quotient. It proves no infinite-dimensional
+rank-two block diagonalization, two-phase QPS classification, cutoff-stable
+branch intertwiner or positive phasewise excitation gap. This parent remains
+OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -2898,6 +2985,11 @@ no positive `D_bl` Poincare lower bound. The global `L`-dependent branch-
 switching trial makes the full mesoscopic-source finite gaps vanish but does
 not decide the phasewise target gap. Kernel simplicity, positive coercivity,
 disjointness and a broken-sector spectral gap remain OPEN.
+
+EXP-000846 / R-167 v4.2 conditionally factors the same two ground states
+through a spatial integrated-smear quotient and preserves their fixed witness.
+It supplies no positive Poincare lower bound, simple kernel, disjointness or
+broken-sector spectral gap. This parent remains OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 

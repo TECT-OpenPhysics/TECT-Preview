@@ -1433,6 +1433,23 @@ active parents remain OPEN. No spatial all-exhaustion common alpha, simple
 kernel, broken-sector GNS gap, physical mass gap, Round-1, C6, CP1, physical
 Sector A or Pre-A closure follows. No v4.1 PDF is issued.
 
+EXP-000846 / R-167 v4.2 retains every v4.1 child and closes one conditional
+integrated-orbit-smear theorem. On the `X`-directed all-shape background tail,
+summable one-toggle weights over onsite/site, bond and tagged boundary labels,
+admitted union refinements and common-pattern cross-comparison with the
+registered periodic path yield norm limits for the integrated configuration-
+Weyl smears and their star-polynomials. The limits generate a spatial
+subalgebra `B_sp` with a point-norm `C0` action. Periodic contractivity gives a
+surjective equivariant quotient `q_sp:A_H^0->B_sp`; completed same-net
+approximation makes its kernel vanish in the v4.0 finite representations, so
+the diagonal ground pair factors uniquely, remains ground and parity-related,
+and retains its fixed witness. The integrated-toggle weights are not proved
+for exact Q3, and `B_sp` is not a seed-indexed commuting local net or raw
+oscillator algebra. No EXP-000790, DLR, KMS or Yarotskii branch identity and no
+positive GNS gap follows. No new negative result is registered. Both
+historical gates and all five active parents remain OPEN. Round-1, C6, CP1,
+physical Sector A and Pre-A remain open. No v4.2 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or
