@@ -5,12 +5,14 @@
 
 Authorities: `negative-results/registry.md`.
 
-**367 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 296 · retraction: 5
+**369 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 298 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION`](registry.md#ng-2026-08-14-pre-a-t055-truncated-octahedron-combinatorics-automatic-finite-realization-enumeration) | no_go | infer a finite exhaustive realization list from truncated-octahedron face combinatorics alone |
+| [`NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`](registry.md#ng-2026-08-14-pre-a-t055-common-counterterm-basis-unfixed-finite-parts-automatic-empty-reference-sign) | no_go | infer a scheme-independent candidate/reference sign from a common counterterm basis whose nonconstant finite parts remain free |
 | [`NG-2026-08-14-PRE-A-ST8-Q3LOCK-MESOSCOPIC-SOURCE-FULL-FINITE-GAP-AUTOMATIC-UNIFORM-POINCARE-TRANSFER`](registry.md#ng-2026-08-14-pre-a-st8-q3lock-mesoscopic-source-full-finite-gap-automatic-uniform-poincare-transfer) | no_go | use the unique mesoscopic-source full finite-volume gaps as a positive uniform Poincare input for the categorical phase limit |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-EXACT-TARGET-GENERATOR-AND-SEPARATION-AUTOMATIC-TARGET-GROUNDNESS`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-exact-target-generator-and-separation-automatic-target-groundness) | no_go | infer target groundness from `h_n->0`, an exact target generator and fixed parity/order separation without controlling the combined source residual |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-AUTOMATIC-ZERO-SOURCE-QUOTIENT-FACTORIZATION`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-automatic-zero-source-quotient-factorization) | no_go | infer zero-source quotient factorization of source-family weak-star clusters merely from `h_n->0` |
@@ -34,8 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-SPATIAL-LOCAL-NET`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-orbit-smear-seed-support-automatic-spatial-local-net) | no_go | infer commuting spatial local algebras from formally disjoint seed labels after temporal orbit smearing |
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-HIGH-HIGH-INSERTION-CUTOFF`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-low-high-ritz-tail-automatic-uniform-high-high-insertion-cutoff) | no_go | infer uniform high-high-insertion Ritz convergence from an exact low-high Ritz tail alone |
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-canonical-one-site-compact-cylinder-bond-subflow-point-norm-c0) | no_go | use canonical one-site compact cylinders as a point-norm C0 carrier for the split Q3 bond subflow |
-| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-weighted-unitary-cutoff-automatic-arbitrary-context-automorphism-l2-upgrade) | no_go | promote static Gibbs weighted-unitary cutoff control automatically through every bounded observable context |
-| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-uniform-quadratic-in-m-all-moment-bond-shear-graph-transport) | no_go | infer a universal quadratic or polynomial-in-order bound for every normalized bond-shear graph moment from abstract positive-energy structure |
 
 Search without loading the full registry:
 

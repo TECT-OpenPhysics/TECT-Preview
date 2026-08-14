@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-169](#r-169) | Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction | R-169 v1.0 is a scoped T0 analytic/exact/executed/audited result under EXP-000851. It proves one exact BCC Voronoi fixture, an uncountable pairwise-nonsimilar affine-combinatorial realization family, a matched-renormalization conditional below-reference sign theorem and a transverse-stability reduction. It computes no TECT realization energy, supplies no physical-empty reference, and does not resurrect B3-BCC-STRUCT or advance C6 |
 | [R-168](#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | R-168 v1.3 is a scoped T0 analytic/exact/executed/audited additive result under EXP-000814. It retains v1.0--v1.2 and closes five mathematical children without creating a compact action, physical response, candidate, prediction or freeze; physical-response, Round-1, Sector A and Pre-A remain open |
 | [R-167](#r-167) | Registered-corridor full-oscillator coexistence, categorical dynamics and exact source-ground transfer | R-167 v4.2 is the current scoped T0 analytic/exact/executed/audited additive result under EXP-000846. It retains every v4.1 child and conditionally proves integrated-orbit-smear all-shape shell Cauchy convergence, a point-norm C0 spatial-subalgebra action, an equivariant surjective quotient of the categorical carrier, and same-periodic-net transfer of the v4.0 ground pair. The exact-Q3 toggle weights, a raw/local oscillator common alpha, DLR/KMS branch identity and the broken-sector GNS gap remain open |
 | [R-166](#r-166) | Sparse production radial-Gram decomposition and global owner bound | Scoped T4 analytic/exact/executed/audited production-fibre theorem, strengthened in v1.1 without a new result ID. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / single fresh-`4p` R-153 fibre, the exact Fierz split, Pauli nonresonance, radial bounds and direct coefficient inequality give an explicit rational polynomial whose unique global minimum lies in `70<G_*<71` and is `-4/5+18740524635403/439505584128000>-4/5`. Thus the owner plus source Hessian is strictly above `1/10`, the scoped R-164 reduction permits `rho=3/20`, and the R-165 annulus is closed. Exact simultaneous `sin(4x),sin(8x)` arithmetic gives Gram `[[5/4,1],[1,3/2]]` and ratio `3/8` at `(1,-1)`, registering that the coefficient-one lemma cannot be copied rootwise. Primary `40/40` and independent Fraction `37/37` audits pass. The complete joint owner, nonlinear/revisit feedback, low variables, removal, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
@@ -190,6 +191,85 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-169"></a>
+### R-169 -- Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction
+
+**Result ID.** `PA-T055-TRUNCATED-OCTAHEDRON-REALIZATION-AND-EMPTY-REFERENCE-SIGN-ROUTE-SPLIT`.
+
+**Exact geometry.** EXP-000851 / R-169 v1.0 proves that
+`L=4 Z^3 union ((2,2,2)+4 Z^3)` has the Voronoi cell
+`P={|x_i|<=2, sigma dot x<=3 for every sigma in {+1,-1}^3}`. Its vertices
+are the 24 signed permutations of `(0,1,2)`; it has 36 edges, six square and
+eight regular-hexagonal faces, and volume 32. The omitted lattice-vector
+inequalities follow from the parity representation `v=2n` and
+`2 sum_i |n_i|<=sum_i n_i^2` outside the fourteen relevant vectors.
+
+For `D_t=diag(t,1,t^-1)`, `t>1`, the pair `D_t P+D_t L` remains a
+determinant-one affine face-to-face translational tiling with the same face
+incidence. The descendants of the six quadrilateral facets have opposite-cell
+translation lengths `{4t,4,4/t}`, whose similarity-invariant ratio is `t^2`.
+Thus the family is uncountable and pairwise nonsimilar. The result is
+deliberately affine-combinatorial: `D_t P` is not claimed to be the Euclidean
+Voronoi or Wigner--Seitz cell of `D_t L`. The family is a nonuniqueness witness,
+not a complete lattice, nonlattice, multimotif, nonmonohedral, or extracted-
+statistical classification.
+
+**Matched sign theorem.** Candidate and preregistered zero/disordered
+reference are compared in one regulated parent with the same state or
+configuration space, measure or algebra, ensemble, units, physical volume,
+boundary prescription, bare couplings, counterterm basis, coefficient
+trajectory including finite parts, and renormalization conditions. With the
+thermodynamic van-Hove limit taken before the regulator limit, the certified
+uniform inequality
+`Deltahat+e_num+e_TD+e_UV+e_sch<=-eta`, `eta>0`, implies
+`Delta F_ren<=-eta<0`. Only a common state-independent scalar cancels
+automatically. For every nonconstant counterterm the candidate/reference
+observable difference remains and its finite part must be fixed or uniformly
+budgeted. Strict finite-regulator negativity without one uniform margin is
+insufficient.
+
+**Transverse stability.** Full regulated stationarity is required on the full
+admissible tangent, and limiting stationarity must either be assumed or follow
+from certified gradient convergence. After removing the exact symmetry/gauge orbit, identified limiting
+transverse forms and a certified uniform lower margin `kappa>0` give limiting
+transverse coercivity. A controlled local Hessian remainder then gives strict
+local stability modulo the declared symmetry group. This is local, not global
+or exhaustive, selection.
+
+**Exact route separation.** For
+`Phi_(alpha,tau)=x^2(x^2-1)^2+alpha(2x^2-x^4)+(1-tau x^2)y^2+y^4`, with the
+`z` zero mode removed, the candidate `(1,0,0)` relative to `(0,0,0)` has sign
+`alpha`, the tested competitor `(2,0,0)` has value `36-8alpha`, and the
+transverse Hessian is `diag(8-8alpha,2-2tau)`. At `(1/4,0)` the candidate is
+stable and beats that competitor but lies above the reference; at `(-1/4,2)`
+it lies below the reference but is a saddle. This also proves that a common
+counterterm basis with free nonconstant finite parts does not determine the
+relative sign.
+
+**Negative-route authorities.** R-169 v1.0 registers
+`NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION`
+and
+`NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`.
+It retains the retired BCC-selection authority
+`R-2026-06-23-b3-bcc-structural-selection`, the absolute-anchor boundary
+`NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR`, and the same-
+Hamiltonian equilibrium-reference boundary
+`NG-2026-08-09-PRE-A-ST8-Q3LOCK-EQUILIBRIUM-PHASE-AS-STRICT-EMPTY-REFERENCE`.
+
+**Boundary.** This is a T0, claim-nonbearing geometry and conditional transfer
+result. It freezes a proof-ready candidate contract but computes no canonical
+TECT or Reading-H realization energy, proves no center extraction or complete
+enumeration, identifies no physical or cosmic empty space, and proves no
+global vacuum, BCC resurrection, C6 spacetime conclusion, physical Sector-A
+result, or Pre-A closure. `C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN.
+
+**Proven in:** The [R-169 v1.0 certificate](strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.0 PDF is issued.
+
+**Tier:** T0 (claim-nonbearing scoped exact geometry, conditional sign/stability
+transfer and exact logical obstructions only).
+
+**Publication target:** Pre-A geometry and reference-sign route note.
 
 <a id="r-168"></a>
 ### R-168 -- Prospective holdout freeze protocol and current-tree readiness audit

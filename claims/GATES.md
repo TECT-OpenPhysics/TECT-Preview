@@ -6,7 +6,7 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-08-13.
+exist here. Last updated: 2026-08-14.
 
 ## Current Sector-A frontier (R-113)
 
@@ -152,6 +152,57 @@ EXP-000846 / R-167 v4.2 adds one conditional integrated-orbit-smear spatial
 quotient and same-net ground-transfer child. It creates no contestant,
 microscopic observable map, common estimand, prospective prediction,
 custodian commitment, freeze or score. Round-1 remains OPEN.
+
+EXP-000851 / R-169 v1.0 adds two scoped T0, claim-nonbearing reductions and
+two exact implication failures. It freezes neither a Reading-H center rule nor
+a TECT realization, parent functional/reference pair, counterterm finite
+parts, error budget, transverse form, prospective prediction, custodian
+commitment, or score. Round-1 remains OPEN.
+
+### **PA-T055-TRUNCATED-OCTAHEDRON-BCC-VORONOI-AND-AFFINE-REALIZATION-FAMILY**
+
+**Statement:** Separate metric-regular, Euclidean-lattice-Voronoi, affine-
+combinatorial, and extracted-statistical meanings of a truncated octahedron;
+prove one exact BCC Voronoi realization and one explicit continuous family of
+pairwise nonsimilar affine-combinatorial translational realizations.
+
+**Status:** CLOSED ONLY FOR THE DECLARED BCC FIXTURE AND AFFINE FAMILY
+(2026-08-14). EXP-000851 / R-169 v1.0 proves that
+`L=4 Z^3 union ((2,2,2)+4 Z^3)` has Voronoi cell
+`P={|x_i|<=2, sigma dot x<=3 for sigma in {+1,-1}^3}`, with the 24 signed
+permutations of `(0,1,2)`, 36 edges, six square and eight regular-hexagonal
+faces, and volume 32. For `D_t=diag(t,1,t^-1)`, `t>1`, the tilings
+`D_t P+D_t L` are volume-preserving affine face-to-face translational tilings.
+The descendants of the six quadrilateral facets have neighbour-translation
+length ratio `t^2`, so distinct `t` give pairwise nonsimilar noncubic
+affine-combinatorial realizations. An affine image is not asserted to be the
+Euclidean Voronoi or Wigner--Seitz cell of `D_t L`. This one-parameter witness
+is not a complete Euclidean-Voronoi, nonlattice, multimotif, nonmonohedral, or
+Reading-H extraction classification.
+
+### **PA-T055-MATCHED-RENORMALIZATION-EMPTY-REFERENCE-SIGN-AND-TRANSVERSE-STABILITY-REDUCTION**
+
+**Statement:** Put every realization and the preregistered zero/disordered
+reference in one regulated parent with a common renormalization prescription,
+freeze thermodynamic-then-continuum limit order, and reduce a below-reference
+sign and strict local stability modulo exact symmetries to certified uniform
+error and transverse-form margins.
+
+**Status:** CLOSED ONLY AS A CONDITIONAL SIGN/STABILITY TRANSFER THEOREM
+(2026-08-14). EXP-000851 / R-169 v1.0 proves that a uniform certified bound
+`Deltahat+e_num+e_TD+e_UV+e_sch<=-eta`, `eta>0`, along the frozen path implies
+`Delta F_ren<=-eta<0`. Candidate and reference must share the parent space,
+measure or algebra, units, volume, ensemble, boundary data, bare couplings,
+counterterm basis, coefficient trajectory including finite parts, and
+renormalization conditions. Only a common state-independent scalar cancels;
+state-dependent counterterm differences remain. Full regulated and limiting
+stationarity, tangent-space identification and a uniform positive transverse Hessian form margin,
+with a controlled local remainder, yield strict local stability modulo the
+declared symmetry group. The exact polynomial fixture separately shows that
+relative competitor ranking plus positive transverse curvature need not beat
+the reference, and that a negative reference sign need not imply stability.
+No TECT realization energy, physical-empty reference, global minimizer, or
+continuum model instance is proved.
 
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
@@ -5214,6 +5265,13 @@ the historical backend are separate scopes, not residuals of this gate.
 **Statement:** C6-SPACETIME-SIGNATURE previously depended on B3-BCC-STRUCT for a physical BCC-structure premise. B3-BCC-STRUCT is REFUTED/RETIRED (R-2026-06-23-b3-bcc-structural-selection); its only survivor B3-RH-TESTED-STRUCTURE-RANKING supplies a restricted relative ranking within the tested ensemble, which does NOT supply a BCC-structure premise. C6 therefore has no valid structural input.
 
 **Discharge path:** BLOCKED -- operator review required (2026-06-23). To unblock, a physical BCC structure must be re-established (F[Psi_min]<F[0], lambda_min^perp>=0 symmetry-projected, N->inf on the canonical PDE background); only then may C6 depend on it.
+
+EXP-000851 / R-169 v1.0 proves one exact BCC Voronoi fixture, an affine-
+combinatorial nonuniqueness family, and conditional matched-renormalization
+sign/transverse-stability reductions. It computes no canonical TECT or
+Reading-H realization energy and identifies no physical-empty reference. The
+retired BCC premise is not resurrected; this gate and its physical programme
+remain OPEN.
 
 
 <a id="a3-h1-dim3-q4-kernel"></a>

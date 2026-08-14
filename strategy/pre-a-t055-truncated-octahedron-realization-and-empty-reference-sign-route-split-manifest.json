@@ -1,0 +1,196 @@
+{
+  "schema": "tect/pre-a-t055-truncated-octahedron-realization-empty-reference-sign/1.0",
+  "slug": "pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split",
+  "version": "R-169 v1.0",
+  "issued": "2026-08-14",
+  "tier": "T0",
+  "claim_bearing": false,
+  "task_id": "T-055",
+  "exploration_id": "EXP-000851",
+  "result_id": "R-169",
+  "claim_ids": [
+    "B3-BCC-STRUCT",
+    "B3-RH-TESTED-STRUCTURE-RANKING",
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "closed_gate_ids": [
+    "PA-T055-TRUNCATED-OCTAHEDRON-BCC-VORONOI-AND-AFFINE-REALIZATION-FAMILY",
+    "PA-T055-MATCHED-RENORMALIZATION-EMPTY-REFERENCE-SIGN-AND-TRANSVERSE-STABILITY-REDUCTION"
+  ],
+  "new_negative_ids": [
+    "NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION",
+    "NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN"
+  ],
+  "reused_negative_ids": [
+    "R-2026-06-23-b3-bcc-structural-selection",
+    "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR",
+    "NG-2026-08-09-PRE-A-ST8-Q3LOCK-EQUILIBRIUM-PHASE-AS-STRICT-EMPTY-REFERENCE"
+  ],
+  "source_authorities": {
+    "geometry_priority": [
+      "EXP-000847",
+      "EXP-000848",
+      "EXP-000849",
+      "EXP-000850"
+    ],
+    "retired_bcc_claim": "claims/B3-BCC-STRUCT/claim.md",
+    "restricted_reading_h_ranking": "claims/B3-RH-TESTED-STRUCTURE-RANKING/claim.md",
+    "canonical_discrete_functional": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+    "blocked_parent": "claims/GATES.md#c6-bcc-premise-blocked"
+  },
+  "geometry_semantics": {
+    "metric_regular": "A metric-regular Archimedean truncated octahedron has six square and eight regular-hexagonal faces. The exact BCC Voronoi fixture below is one realization, fixed up to Euclidean similarity and orientation inside the declared lattice construction.",
+    "affine_combinatorial": "An invertible affine image retains the face lattice and translational tiling but generally loses square and regular-hexagonal metric data and is not asserted to remain a Euclidean Voronoi cell.",
+    "extracted_statistical": "A Reading-H extraction must freeze its center rule, thresholds, tie breaking, boundary convention, and defect policy before any Voronoi/Delaunay face statistic is evaluated.",
+    "firewall": "Metric-regular, affine-combinatorial, and extracted-statistical meanings are different candidate classes and may not be switched after seeing energy or stability data."
+  },
+  "standard_bcc_voronoi_fixture": {
+    "lattice": "L=span_Z{(4,0,0),(0,4,0),(2,2,2)}=4Z^3 union ((2,2,2)+4Z^3)",
+    "cell": "P={x in R^3: |x_i|<=2 and sigma dot x<=3 for every sigma in {+1,-1}^3}",
+    "voronoi_proof": "The 14 displayed inequalities are the bisectors for the six vectors +/-4e_i and eight vectors 2sigma. For every other v=2n in L, parity gives 2 sum_i |n_i|<=sum_i n_i^2; the box inequalities imply x dot v<=|v|^2/2. Hence P=Vor_L(0).",
+    "vertices": "the 24 permutations of (0,+/-1,+/-2)",
+    "faces": "six square faces with four vertices and eight regular-hexagonal faces with six vertices",
+    "f_vector": "(24,36,14)",
+    "fundamental_volume": "32"
+  },
+  "affine_realization_family": {
+    "map": "D_t=diag(t,1,t^(-1)), t>1, det(D_t)=1",
+    "tiling": "D_t P tiles R^3 by translations D_t L because an invertible affine map preserves the original face-to-face translational partition.",
+    "invariant": "The descendants of the six quadrilateral facets have opposite-cell translation lengths {4t,4,4/t}; their maximum/minimum ratio is t^2.",
+    "consequence": "Distinct t>1 give pairwise nonsimilar noncubic affine-combinatorial realizations. Therefore truncated-octahedron combinatorics alone cannot have a finite exhaustive realization list.",
+    "boundary": "D_t P is not claimed to be the Euclidean Voronoi cell of D_t L. Nonlattice, multimotif, nonmonohedral, and statistically extracted realizations are not classified."
+  },
+  "candidate_manifest_contract": {
+    "required_geometry_fields": "candidate_id, geometry_semantics, center_rule_id, input_field_hash, regulator, box, boundary, equivalence_group, realization_parameters, face_incidence_or_statistic, defect_policy",
+    "required_energy_fields": "parent_functional_hash, state_or_configuration_space, candidate_constraint, reference_constraint, beta_or_ground_convention, units, physical_volume, counterterm_basis, coefficient_trajectory, finite_parts, renormalization_conditions, limit_order",
+    "required_stability_fields": "stationarity_scope, exact_symmetry_group, symmetry_tangent, full_admissible_tangent, transverse_projector, Hessian_form, numerical_error, thermodynamic_error, continuum_error, scheme_error",
+    "competitors": "At minimum: the metric-regular BCC Voronoi fixture, one declared noncubic affine-combinatorial realization, the preregistered zero/disordered reference, and one non-truncated negative control.",
+    "anti_postselection": "Every center rule, geometry meaning, competitor, reference, normalization, counterterm finite part, and limit order is frozen before the sign calculation."
+  },
+  "matched_renormalization": {
+    "functional": "Gamma_ren_(a,L)[phi]=Gamma_bare_(a,L)[phi]+sum_(nu=0)^m c_nu(a) O_(nu,a,L)[phi], with O_0[phi]=V_L",
+    "matching": "Candidate and reference use one parent configuration/state space, measure or algebra, beta or ground convention, physical volume, boundary conditions, units, bare couplings, counterterm basis, coefficient trajectory including finite parts, and renormalization conditions.",
+    "relative_density": "Delta_(a,L)^r=V_L^(-1){Gamma_ren_(a,L)[phi_r]-Gamma_ren_(a,L)[phi_0]}",
+    "scalar_cancellation": "The common state-independent scalar c_0(a)V_L cancels exactly from Delta_(a,L)^r.",
+    "state_dependent_terms": "For nu>=1 the common coefficients do not make O_nu[phi_r]-O_nu[phi_0] vanish. Those terms remain in the relative density and their finite parts must be fixed or uniformly budgeted.",
+    "reference_boundary": "The symbol 0 denotes the preregistered constrained zero/disordered reference, not automatically physical or cosmic empty space and not automatically another unconstrained equilibrium phase."
+  },
+  "signed_limit_reduction": {
+    "order": "d_a^r=lim_(L->infinity along the declared van-Hove sequence) Delta_(a,L)^r, then DeltaF_ren^r=lim_(a downarrow 0) d_a^r; no exchange of limits is asserted.",
+    "certified_errors": "|Delta_(a,L)^r-Deltahat_(a,L)^r|<=e_num, |Delta_(a,L)^r-d_a^r|<=e_TD, |d_a^r-DeltaF_ren^r|<=e_UV, and every allowed residual finite-scheme change contributes at most e_sch.",
+    "sign_gate": "If Deltahat_(a,L)^r+e_num+e_TD+e_UV+e_sch<=-eta for one eta>0 eventually along the frozen limit path, then DeltaF_ren^r<=-eta<0.",
+    "rejection_gate": "If Deltahat_(a,L)^r-(e_num+e_TD+e_UV+e_sch)>=0 eventually, the declared realization does not beat the preregistered reference on that path.",
+    "finite_regulator_firewall": "Strictly negative values at each finite regulator without one uniform margin can converge to zero, as Delta_n=-1/n does."
+  },
+  "transverse_stability_reduction": {
+    "stationarity": "D Gamma_ren_(a,L)[phi_r]=0 on the full admissible regulated tangent, not only inside the candidate ansatz; the identified limiting candidate is stationary on the limiting symmetry slice, either as a premise or by certified gradient convergence with vanishing residual.",
+    "slice": "N_(a,L)^r is the orthogonal complement of the exact symmetry/gauge orbit tangent inside the full admissible tangent.",
+    "curvature": "lambda_perp_(a,L)=inf_{v in N, ||v||=1}<v,D^2 Gamma_ren_(a,L)[phi_r]v>",
+    "certification": "With identified limiting transverse forms and total form error e_H, the bound lambdahat_perp-e_H>=kappa>0 eventually gives limiting transverse coercivity at least kappa.",
+    "local_minimum": "If the limiting candidate is stationary on the symmetry slice and the limiting Hessian is locally M-Lipschitz there, then Gamma(phi_r+v)-Gamma(phi_r)>=(kappa/4)||v||^2 for ||v||<=kappa/(2M).",
+    "firewall": "Nonnegative curvature gives only semistability; sign plus local stability does not prove global or exhaustive selection."
+  },
+  "exact_fixture_inputs": {
+    "dimension": 3,
+    "axis_bound": "2",
+    "diagonal_bound": "3",
+    "lattice_basis": [
+      [4, 0, 0],
+      [0, 4, 0],
+      [2, 2, 2]
+    ],
+    "affine_t": "2",
+    "renormalization": {
+      "candidate_bare": "-3/5",
+      "reference_bare": "2/5",
+      "common_scalar": "7/3",
+      "positive_common_scale": "5/2",
+      "unfixed_finite_shift": "2"
+    },
+    "sign_certificate": {
+      "estimate": "-7/5",
+      "errors": ["1/10", "1/20", "1/20", "1/10"],
+      "eta": "1"
+    },
+    "polynomial_cases": [
+      {"alpha": "1/4", "tau": "0", "label": "ranking_stable_but_above_reference"},
+      {"alpha": "-1/4", "tau": "2", "label": "below_reference_but_transverse_saddle"}
+    ],
+    "points": {
+      "candidate": [1, 0, 0],
+      "reference": [0, 0, 0],
+      "tested_competitor": [2, 0, 0]
+    }
+  },
+  "test_oracles": {
+    "geometry": {
+      "plane_count": 14,
+      "vertex_count": 24,
+      "quadrilateral_faces": 6,
+      "hexagonal_faces": 8,
+      "edge_count": 36,
+      "euler_characteristic": 2,
+      "lattice_determinant": "32",
+      "affine_determinant": "1",
+      "affine_quadrilateral_translation_ratio": "4"
+    },
+    "renormalization": {
+      "bare_difference": "-1",
+      "common_scalar_difference": "-1",
+      "scaled_difference": "-5/2",
+      "candidate_specific_shifted_difference": "1",
+      "error_sum": "3/10",
+      "certified_upper": "-11/10",
+      "uniform_margin_pass": true
+    },
+    "polynomial": {
+      "positive_case_candidate": "1/4",
+      "positive_case_competitor": "34",
+      "positive_case_hessian": ["6", "2"],
+      "negative_case_candidate": "-1/4",
+      "negative_case_competitor": "38",
+      "negative_case_hessian": ["10", "-2"]
+    }
+  },
+  "new_negative_boundaries": {
+    "finite_enumeration": "The continuous D_t family rejects a finite exhaustive list inferred from combinatorics alone. A finite scan requires a preregistered parameter domain, equivalence relation, resolution, and coverage bound.",
+    "finite_parts": "A common counterterm basis with unfixed nonconstant finite parts does not identify the relative sign. The exact polynomial fixture changes the relative sign and transverse Hessian under shared symmetry-allowed finite directions while a common scalar still cancels."
+  },
+  "formal_integration": {
+    "event_ordinal": 639,
+    "event_title": "R-169 v1.0 truncated-octahedron realization and empty-reference sign route split",
+    "event_id": "20260814-r-169-v1-0-truncated-octahedron-realization-and",
+    "theorem_map_version": "1.35.0",
+    "expected_preformal_counts": {
+      "claims": 49,
+      "results": 168,
+      "gates": 196,
+      "negatives": 367,
+      "explorations": 850,
+      "events": 638,
+      "tasks": 55,
+      "catalog": 3971
+    },
+    "expected_postformal_counts": {
+      "claims": 49,
+      "results": 169,
+      "gates": 198,
+      "negatives": 369,
+      "explorations": 851,
+      "events": 639,
+      "tasks": 55,
+      "catalog": 3979
+    },
+    "theorem_map_keys": [
+      "closed_r169_v1_0_scoped_gates",
+      "r169_v1_0_new_negatives",
+      "r169_v1_0_reused_negatives",
+      "r169_v1_0_open_gates"
+    ],
+    "open_gates": [
+      "C6-BCC-PREMISE-BLOCKED",
+      "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+    ]
+  },
+  "no_overclaim": "This package classifies one exact BCC Voronoi fixture and an affine-combinatorial realization family, then proves a matched-scheme conditional sign/stability reduction and exact route obstructions. It computes no TECT realization energy, proves no Reading-H center extraction, no exhaustive realization classification, no physical-empty reference, no global vacuum, no BCC resurrection, no C6 spacetime conclusion, and no Sector-A or Pre-A closure. C6-BCC-PREMISE-BLOCKED and the Round-1 parent remain OPEN. No R-169 v1.0 PDF is issued."
+}

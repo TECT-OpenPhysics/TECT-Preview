@@ -9,6 +9,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION](#ng-2026-08-14-pre-a-t055-truncated-octahedron-combinatorics-automatic-finite-realization-enumeration) | infer a finite exhaustive realization list from truncated-octahedron face combinatorics alone | the exact BCC Voronoi cell has a determinant-one affine family `D_t P+D_t L`, `t>1`, whose quadrilateral-facet neighbour-translation ratio is `t^2`; the members are pairwise nonsimilar, while the affine images are not claimed to remain Euclidean Voronoi cells |
+| [NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN](#ng-2026-08-14-pre-a-t055-common-counterterm-basis-unfixed-finite-parts-automatic-empty-reference-sign) | infer a scheme-independent candidate/reference sign from a common counterterm basis whose nonconstant finite parts remain free | a shared even quadratic/quartic finite direction changes both the exact relative sign and transverse Hessian in the polynomial fixture; only a common state-independent scalar cancels automatically |
 | [NG-2026-08-14-PRE-A-ST8-Q3LOCK-MESOSCOPIC-SOURCE-FULL-FINITE-GAP-AUTOMATIC-UNIFORM-POINCARE-TRANSFER](#ng-2026-08-14-pre-a-st8-q3lock-mesoscopic-source-full-finite-gap-automatic-uniform-poincare-transfer) | use the unique mesoscopic-source full finite-volume gaps as a positive uniform Poincare input for the categorical phase limit | the fixed v4.0 witness controls the overlap of the opposite source grounds, and an exact orthogonal branch-switching trial gives `Delta_(L,sigma)^full <=[32 sqrt(B_a)/(r_w^2 rho_*)]h_L V ->0`; this global moving direction does not decide the fixed-carrier phasewise GNS gap |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-EXACT-TARGET-GENERATOR-AND-SEPARATION-AUTOMATIC-TARGET-GROUNDNESS](#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-exact-target-generator-and-separation-automatic-target-groundness) | infer target groundness from `h_n->0`, an exact target generator and fixed parity/order separation without controlling the combined source residual | on `M_3(C)`, `Q=diag(-1,0,1)`, `K=Q^2`, `h_n=1/n` and `S_n=2nQ` give exact generator defect zero and separated parity ground vectors for `H_n^sigma=K-2sigma Q`, but the source residual is `-2` and the target ground form is `-1` |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-AUTOMATIC-ZERO-SOURCE-QUOTIENT-FACTORIZATION](#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-automatic-zero-source-quotient-factorization) | infer zero-source quotient factorization of source-family weak-star clusters merely from `h_n->0` | on `M_2`, `H_n(h)=nh diag(0,1)`, `h_n=1/n` and one signed `L1` orbit smear give `q_0(a)=0` but `a* a=16 sin(1/2)^4 I_2` along every `n` |
@@ -377,6 +379,50 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-14-pre-a-t055-truncated-octahedron-combinatorics-automatic-finite-realization-enumeration"></a>
+### NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION -- face combinatorics do not give a finite realization list
+
+**Failure mode.** Infer that the truncated-octahedron face lattice determines
+a finite exhaustive set of geometric realizations without freezing metric,
+lattice, motif, extraction and equivalence semantics.
+
+**Evidence.** EXP-000851 / R-169 v1.0 starts from the exact BCC Voronoi pair
+`P,L` and applies `D_t=diag(t,1,t^-1)`, `t>1`. Every `D_t P+D_t L` is a
+volume-preserving affine face-to-face translational tiling with the same face
+incidence. The descendants of the six quadrilateral facets have opposite-cell
+translation lengths `{4t,4,4/t}`, so their maximum/minimum ratio is `t^2`.
+This similarity invariant distinguishes every `t>1`.
+
+**Consequence.** There are already uncountably many pairwise nonsimilar
+affine-combinatorial realizations. A finite scan requires a preregistered
+parameter domain, equivalence relation, resolution and coverage guarantee.
+The affine images are not asserted to be Euclidean Voronoi or Wigner--Seitz
+cells of `D_t L`; the result is not a complete Euclidean lattice, nonlattice,
+multimotif, nonmonohedral or Reading-H extraction classification.
+
+<a id="ng-2026-08-14-pre-a-t055-common-counterterm-basis-unfixed-finite-parts-automatic-empty-reference-sign"></a>
+### NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN -- a common basis with free finite parts does not fix the relative sign
+
+**Failure mode.** Infer a regulator-independent below-reference sign merely
+because candidate and reference use the same counterterm basis, while a
+nonconstant symmetry-allowed finite coefficient remains unfixed.
+
+**Evidence.** EXP-000851 / R-169 v1.0 uses
+`Phi_(alpha,tau)=x^2(x^2-1)^2+alpha(2x^2-x^4)+(1-tau x^2)y^2+y^4`, with the
+exact `z`-translation zero mode projected out. At the candidate `(1,0,0)`,
+reference `(0,0,0)` and tested competitor `(2,0,0)`, the relative sign is
+`alpha`, the competitor value is `36-8alpha`, and the transverse Hessian is
+`diag(8-8alpha,2-2tau)`. At `(alpha,tau)=(1/4,0)` the candidate beats the
+tested competitor and is strictly locally stable but lies above the reference.
+At `(-1/4,2)` it lies below the reference but is a transverse saddle.
+
+**Consequence.** A common state-independent scalar cancels, but a shared
+nonconstant counterterm contributes its candidate/reference observable
+difference and can change both sign and stability. Fix the coefficient
+trajectory including finite parts and renormalization conditions, or prove a
+margin uniform over the allowed finite-scheme class. This fixture is not a
+TECT sign calculation and identifies no physical-empty reference.
 
 <a id="ng-2026-08-14-pre-a-st8-q3lock-mesoscopic-source-full-finite-gap-automatic-uniform-poincare-transfer"></a>
 ### NG-2026-08-14-PRE-A-ST8-Q3LOCK-MESOSCOPIC-SOURCE-FULL-FINITE-GAP-AUTOMATIC-UNIFORM-POINCARE-TRANSFER -- the mesoscopic full gap cannot be the uniform phasewise Poincare input

@@ -1450,6 +1450,25 @@ positive GNS gap follows. No new negative result is registered. Both
 historical gates and all five active parents remain OPEN. Round-1, C6, CP1,
 physical Sector A and Pre-A remain open. No v4.2 PDF is issued.
 
+EXP-000851 / R-169 v1.0 advances T-055 only at T0, claim-nonbearing scope.
+It proves one exact metric BCC Voronoi truncated octahedron, then separates it
+from the continuous determinant-one affine-combinatorial tiling family
+`D_t P+D_t L`. The family has similarity invariant `t^2` but is not asserted
+to remain Euclidean Voronoi, so truncated-octahedron combinatorics alone does
+not yield a finite exhaustive realization list. Separately, one matched-
+renormalization theorem transfers a uniform certified below-reference margin
+through the frozen thermodynamic-then-regulator limits, and one transverse-
+form theorem reduces strict local stability modulo exact symmetries to full
+regulated and limiting stationarity, tangent identification and a uniform
+positive Hessian margin.
+Only common state-independent scalars cancel; nonconstant state-dependent
+counterterm differences and their finite parts remain. The exact polynomial
+fixture separates relative competitor ranking, below-reference sign and
+transverse stability. No canonical TECT or Reading-H realization energy,
+center extraction, physical-empty reference, global vacuum, BCC resurrection,
+C6 advancement, physical Sector-A result or Pre-A closure follows.
+`C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN. No R-169 v1.0 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

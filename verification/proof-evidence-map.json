@@ -6,8 +6,8 @@
   },
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
-    "RESULTS-LEDGER.md": "f5958dc1fe5c9d011fcc8626615be60b0aeca37369f7f70b1b614d8ff43cb70d",
-    "changelog/log.jsonl": "28efb32b8a7140c7f7d4ba5e93a2cd573849157ac6446d5c5295485ea300cc06",
+    "RESULTS-LEDGER.md": "e5443b397bd38eb51c0116633736452a9728011f845aeb231e3afcea0ee335e5",
+    "changelog/log.jsonl": "48f2b639658354cd7294bc31ca6e56c5e67bf800dc0007c94ebad16f54a9a7a6",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -57,26 +57,26 @@
     "claims/F1-COSMO-DARK-SECTOR/status.json": "41e0c2e92f754fc2a2f8501b95169d98c0f3cfc130be27ae9d31246c406b5179",
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
-    "claims/GATES.md": "27d5d0b6f061e28e4c0a436e4730ce10129b0190a7358b2a22881f1174f6ad11",
-    "explorations/log.jsonl": "ea57b2bb893d68c96613c5725ff46f7479d10c132ee54090ab4b1b68885c68c4",
-    "negative-results/registry.md": "76b62ab10280a4bd8671606a6b82ba7fd1faf58d03dd8f4875bb523c6319a7b2",
+    "claims/GATES.md": "274f9ab244d66c472c26434a2406cc5f27a4b1476d669297ecd1d1cd24346d7d",
+    "explorations/log.jsonl": "1284f92d6b0be77a9ae3416ee64da2a04853659f06855dae1d7b4e95476e47bb",
+    "negative-results/registry.md": "2c6d7fddb99649e47c5ac4a6ee7a61d94a22e0ba327a7d04409b9ee3f2d15a3d",
     "todo/todo.json": "8abb549e920472e79ec1685fb382bb85cae851e318a4812f5c008cede86f5e08"
   },
   "coverage": {
     "status_cards": 49,
     "active_claims": 48,
     "refuted_claims": 1,
-    "reusable_results": 168,
-    "negative_records": 367,
-    "proof_explorations": 849,
+    "reusable_results": 169,
+    "negative_records": 369,
+    "proof_explorations": 851,
     "exploration_verdicts": {
-      "advanced": 518,
+      "advanced": 520,
       "failed": 235,
       "inconclusive": 67,
       "parked": 29
     },
     "process_grade_lessons": 3,
-    "accepted_events": 638,
+    "accepted_events": 639,
     "tasks": 55,
     "live_tasks": 10,
     "completed_tasks": 45,
@@ -89,7 +89,7 @@
     "unordered_root_pdfs": 9,
     "proof_notes_without_sibling_pdf": 19,
     "proof_notes_with_incomplete_historical_footer": 118,
-    "run_json": 773,
+    "run_json": 776,
     "claim_manifests": 124,
     "bundle_manifests": 40,
     "bundle_embedded_manifests": 45
@@ -1490,6 +1490,7 @@
       }
     ],
     "claim_unbound_result_ids": [
+      "R-169",
       "R-164",
       "R-163",
       "R-129",
@@ -2604,6 +2605,14 @@
           "EXP-000846",
           "R-167"
         ]
+      },
+      {
+        "event": "20260814-r-169-v1-0-truncated-octahedron-realization-and",
+        "claim_ids": [
+          "C6-BCC-PREMISE-BLOCKED",
+          "EXP-000851",
+          "R-169"
+        ]
       }
     ],
     "event_unregistered_negative_tags": [
@@ -3076,7 +3085,7 @@
       ],
       "definition": {
         "statement": "C6-SPACETIME-SIGNATURE previously depended on B3-BCC-STRUCT for a physical BCC-structure premise. B3-BCC-STRUCT is REFUTED/RETIRED (R-2026-06-23-b3-bcc-structural-selection); its only survivor B3-RH-TESTED-STRUCTURE-RANKING supplies a restricted relative ranking within the tested ensemble, which does NOT supply a BCC-structure premise. C6 therefore has no valid structural input.",
-        "discharge_path": "BLOCKED -- operator review required (2026-06-23). To unblock, a physical BCC structure must be re-established (F[Psi_min]<F[0], lambda_min^perp>=0 symmetry-projected, N->inf on the canonical PDE background); only then may C6 depend on it. <a id=\"a3-h1-dim3-q4-kernel\"></a>",
+        "discharge_path": "BLOCKED -- operator review required (2026-06-23). To unblock, a physical BCC structure must be re-established (F[Psi_min]<F[0], lambda_min^perp>=0 symmetry-projected, N->inf on the canonical PDE background); only then may C6 depend on it. EXP-000851 / R-169 v1.0 proves one exact BCC Voronoi fixture, an affine- combinatorial nonuniqueness family, and conditional matched-renormalization sign/transverse-stability reductions. It computes no canonical TECT or Reading-H realization energy and identifies no physical-empty reference. The retired BCC premise is not resurrected; this gate and its physical programme remain OPEN. <a id=\"a3-h1-dim3-q4-kernel\"></a>",
         "statement_summary": "C6-SPACETIME-SIGNATURE previously depended on B3-BCC-STRUCT for a physical BCC-structure premise. B3-BCC-STRUCT is REFUTED/RETIRED (R-2026-06-23-b3-bcc-structural-selection); its only survivor B3-RH-TESTED-STRUCTURE-RANKING supplies a restricted relative ranking within the tested ensemble, which does NOT supply a BCC-structure premise. C6 therefore has no valid structural input.",
         "status_summary": ""
       },
@@ -3205,7 +3214,7 @@
       ],
       "definition": {
         "statement": "Before scoring or selecting any Pre-A round-one candidate, freeze the complete evidence and clue register with an explicit role for each item, admit every contestant under the same minimum manifest fields, separate bridge infrastructure from contestants, and declare one common reference/observable/input ledger, one non-fitting validation prediction, and one robustness envelope. Scoped failures may eliminate only the exact mechanism and parameter contract that was tested.",
-        "status": "OPEN (2026-08-11). EXP-000791 freezes a bounded T-053 evidence-role inventory, common categorical matrix, explicit absence fields, reference rules, and robustness boundaries. It independently derives the M2 quadratic cone and computes that none of M1/M2/M5 survives all hard admission rows; M0 remains the effective baseline. The visible helium target predates the new stiffness observable map, so its exact mismatch is retrospective and receives no validation credit. EXP-000807 / R-168 v1.0 now closes four schema and audit subgates: the common estimand/map split, prospective provenance-order protocol, anti-leakage schema validator, and exact current-checkpoint empty-admission audit. At audited commit `99157442831c0e44d425b5d5f8cd78856c57da53` there are zero official freeze records, zero locally registered `freeze/*` tags observed at audit execution, zero admitted microscopic survivors, and no admitted M1/M2/M5 map with a nonempty prediction. The tag observation is local only; no remote ref or custodian signature was verified. The parent gate remains open until a genuinely prospective external commitment and admitted microscopic observable map with a nonempty prediction are frozen before disclosure and independently verified. EXP-000810 / R-168 v1.1 proves that the exact current hash-pinned M1/M2/M5 map-only admitted set is empty, and that even a hypothetical map-only new version has no all-PASS survivor under the ten frozen hard rows. It also closes a 48-component finite-torus Gaussian M2 fingerprint. Neither result is an admitted physical response map, an error-controlled prediction, or a prospective freeze; the parent gate remains OPEN. EXP-000812 / R-168 v1.2 additionally proves that a fixed linear scalar probe does not identify second-order response without a frozen quadratic contact and closes only the minimum successor syntax/declared-binding schema. It supplies no physical control law, actual candidate, state/reference realization, response map, error budget, prediction or external prospective commitment. The physical-response gate and this Round-1 parent remain OPEN. EXP-000814 / R-168 v1.3 closes five exact T0, claim-nonbearing mathematical children but creates no compact action, winding law, ordered physical state, physical response, six-term physical error budget, candidate, prediction or freeze. The physical-response and Round-1 parents remain OPEN. Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1 into a contestant. No winner, shortlist, preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed. EXP-000826 as corrected by EXP-000827 / R-167 v2.6 adds four claim-nonbearing mathematical children and two scoped route failures only. It creates no candidate, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000828 / R-167 v2.7 adds one claim-nonbearing fixed-`M` local-SW remainder child and two scoped negative authorities. It creates no candidate, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000831 / R-167 v2.8 adds one claim-nonbearing fixed-complete-cluster, sufficiently-large-`N` Ritz-restricted local-SW child and one scoped configuration-multiplier point-norm boundary. It creates no candidate, common estimand, microscopic observable map, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000833 / R-167 v2.9 closes four claim-nonbearing scoped mathematical children and registers three implication failures. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000834 / R-167 v3.0 adds three claim-nonbearing scoped mathematical children and one implication failure. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000835 / R-167 v3.1 adds one claim-nonbearing finite-volume essential-range multiplier theorem and its joint standard-cylinder scalarity corollary. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000836 / R-167 v3.2 adds one claim-nonbearing abstract conditional zero-temperature transfer theorem and one fixed-witness collapse negative. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000837 / R-167 v3.3 adds one claim-nonbearing fixed-Ritz mathematical child. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000838 / R-167 v3.4 adds two claim-nonbearing conditional reductions and one exact Hilbert--Schmidt multiplicity obstruction. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000839 / R-167 v3.5 adds two claim-nonbearing cutoff-passage lemmas and four exact implication failures. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000840 / R-167 v3.6 adds one exact registered-corridor specialization and one conditional first-Duhamel cutoff lemma. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000841 / R-167 v3.7 adds one claim-nonbearing first-Duhamel full-oscillator cutoff-removal theorem. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000842 / R-167 v3.8 adds one claim-nonbearing fixed-`N` categorical carrier/KMS child and one scoped quotient-factorization failure. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000843 / R-167 v3.9 adds only two conditional abstract lemmas and one non-Q3 logical fixture. It selects no evidence role or candidate functional and freezes no Round-1 manifest. This parent remains OPEN. EXP-000844 / R-167 v4.0 closes one exact-Q3 categorical ground-pair child only. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000845 / R-167 v4.1 adds one scoped categorical GNS form-core/Rayleigh reduction and one finite-source route no-go. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000846 / R-167 v4.2 adds one conditional integrated-orbit-smear spatial quotient and same-net ground-transfer child. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN.",
+        "status": "OPEN (2026-08-11). EXP-000791 freezes a bounded T-053 evidence-role inventory, common categorical matrix, explicit absence fields, reference rules, and robustness boundaries. It independently derives the M2 quadratic cone and computes that none of M1/M2/M5 survives all hard admission rows; M0 remains the effective baseline. The visible helium target predates the new stiffness observable map, so its exact mismatch is retrospective and receives no validation credit. EXP-000807 / R-168 v1.0 now closes four schema and audit subgates: the common estimand/map split, prospective provenance-order protocol, anti-leakage schema validator, and exact current-checkpoint empty-admission audit. At audited commit `99157442831c0e44d425b5d5f8cd78856c57da53` there are zero official freeze records, zero locally registered `freeze/*` tags observed at audit execution, zero admitted microscopic survivors, and no admitted M1/M2/M5 map with a nonempty prediction. The tag observation is local only; no remote ref or custodian signature was verified. The parent gate remains open until a genuinely prospective external commitment and admitted microscopic observable map with a nonempty prediction are frozen before disclosure and independently verified. EXP-000810 / R-168 v1.1 proves that the exact current hash-pinned M1/M2/M5 map-only admitted set is empty, and that even a hypothetical map-only new version has no all-PASS survivor under the ten frozen hard rows. It also closes a 48-component finite-torus Gaussian M2 fingerprint. Neither result is an admitted physical response map, an error-controlled prediction, or a prospective freeze; the parent gate remains OPEN. EXP-000812 / R-168 v1.2 additionally proves that a fixed linear scalar probe does not identify second-order response without a frozen quadratic contact and closes only the minimum successor syntax/declared-binding schema. It supplies no physical control law, actual candidate, state/reference realization, response map, error budget, prediction or external prospective commitment. The physical-response gate and this Round-1 parent remain OPEN. EXP-000814 / R-168 v1.3 closes five exact T0, claim-nonbearing mathematical children but creates no compact action, winding law, ordered physical state, physical response, six-term physical error budget, candidate, prediction or freeze. The physical-response and Round-1 parents remain OPEN. Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1 into a contestant. No winner, shortlist, preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed. EXP-000826 as corrected by EXP-000827 / R-167 v2.6 adds four claim-nonbearing mathematical children and two scoped route failures only. It creates no candidate, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000828 / R-167 v2.7 adds one claim-nonbearing fixed-`M` local-SW remainder child and two scoped negative authorities. It creates no candidate, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000831 / R-167 v2.8 adds one claim-nonbearing fixed-complete-cluster, sufficiently-large-`N` Ritz-restricted local-SW child and one scoped configuration-multiplier point-norm boundary. It creates no candidate, common estimand, microscopic observable map, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000833 / R-167 v2.9 closes four claim-nonbearing scoped mathematical children and registers three implication failures. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000834 / R-167 v3.0 adds three claim-nonbearing scoped mathematical children and one implication failure. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000835 / R-167 v3.1 adds one claim-nonbearing finite-volume essential-range multiplier theorem and its joint standard-cylinder scalarity corollary. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000836 / R-167 v3.2 adds one claim-nonbearing abstract conditional zero-temperature transfer theorem and one fixed-witness collapse negative. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000837 / R-167 v3.3 adds one claim-nonbearing fixed-Ritz mathematical child. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000838 / R-167 v3.4 adds two claim-nonbearing conditional reductions and one exact Hilbert--Schmidt multiplicity obstruction. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000839 / R-167 v3.5 adds two claim-nonbearing cutoff-passage lemmas and four exact implication failures. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000840 / R-167 v3.6 adds one exact registered-corridor specialization and one conditional first-Duhamel cutoff lemma. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000841 / R-167 v3.7 adds one claim-nonbearing first-Duhamel full-oscillator cutoff-removal theorem. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000842 / R-167 v3.8 adds one claim-nonbearing fixed-`N` categorical carrier/KMS child and one scoped quotient-factorization failure. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000843 / R-167 v3.9 adds only two conditional abstract lemmas and one non-Q3 logical fixture. It selects no evidence role or candidate functional and freezes no Round-1 manifest. This parent remains OPEN. EXP-000844 / R-167 v4.0 closes one exact-Q3 categorical ground-pair child only. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000845 / R-167 v4.1 adds one scoped categorical GNS form-core/Rayleigh reduction and one finite-source route no-go. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000846 / R-167 v4.2 adds one conditional integrated-orbit-smear spatial quotient and same-net ground-transfer child. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000851 / R-169 v1.0 adds two scoped T0, claim-nonbearing reductions and two exact implication failures. It freezes neither a Reading-H center rule nor a TECT realization, parent functional/reference pair, counterterm finite parts, error budget, transverse form, prospective prediction, custodian commitment, or score. Round-1 remains OPEN.",
         "statement_summary": "Before scoring or selecting any Pre-A round-one candidate, freeze the complete evidence and clue register with an explicit role for each item, admit every contestant under the same minimum manifest fields, separate bridge infrastructure from contestants, and declare one common reference/observable/input ledger, one non-fitting validation prediction, and one robustness envelope. Scoped failures may eliminate only the exact mechanism and parameter contract that was tested.",
         "status_summary": "OPEN (2026-08-11). EXP-000791 freezes a bounded T-053 evidence-role inventory, common categorical matrix, explicit absence fields, reference rules, and robustness boundaries. It independently derives the M2 quadratic cone and computes that none of M1/M2/M5 survives all hard admission rows; M0 remains the effective baseline. The visible helium target predates the new stiffness observable map, so its exact mismatch is retrospective and receives no validation credit. EXP-000807 / R-168 v1.0 now closes four schema and audit subgates: the common estimand/map split, prospective provenance-order protocol, anti-leakage schema validator, and exact current-checkpoint empty-admission audit. At audited commit `99157442831c0e44d425b5d5f8cd78856c57da53` there are zero official freeze records, zero locally registered `freeze/*` tags observed at audit execution, zero admitted microscopic survivors, and no admitted M1/M2/M5 map with a nonempty prediction. The tag observation is local only; no remote ref or custodian signature was verified. The parent gate remains open until a genuinely prospective external commitment and admitted microscopic observable map with a nonempty prediction are frozen before disclosure and independently verified. EXP-000810 / R-168 v1.1 proves that the exact current hash-pinned M1/M2/M5 map-only admitted set is empty, and that even a hypothetical map-only new version has no all-PASS survivor under the ten frozen hard rows. It also closes a 48-component finite-torus Gaussian M2 fingerprint. Neither result is an admitted physical response map, an error-controlled prediction, or a prospective freeze; the parent gate remains OPEN. EXP-000812 / R-168 v1.2 additionally proves that a fixed linear scalar probe does not identify second-order response without a frozen quadratic contact and closes only the minimum successor syntax/declared-binding schema. It supplies no physical control law, actual candidate, state/reference realization, response map, error budget, prediction or external prospective commitment. The physical-response gate and this Round-1 parent remain OPEN. EXP-000814 / R-168 v1.3 closes five exact T0, claim-nonbearing mathematical children but creates no compact action, winding law, ordered physical state, physical response, six-term physical error budget, candidate, prediction or freeze. The physical-response and Round-1 parents remain OPEN. Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1 into a contestant. No winner, shortlist, preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed."
       },
@@ -8128,9 +8137,10 @@
         "exploration_ids": [
           "EXP-000832",
           "EXP-000848",
-          "EXP-000849"
+          "EXP-000849",
+          "EXP-000850"
         ],
-        "latest_exploration_id": "EXP-000849",
+        "latest_exploration_id": "EXP-000850",
         "accepted_event_ids": [
           "20260605-m1-migration-sector-b-evidence-chain-migrated-r",
           "20260605-m1-reorg-archive-per-tag-layout-first-tsv2-theo",
@@ -8626,21 +8636,25 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [
+          "NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION",
+          "NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
           "R-2026-07-16-N001-BCC-SEED-COLLAPSE",
           "R-2026-06-23-b3-bcc-structural-selection"
         ],
         "exploration_ids": [
           "EXP-000591",
           "EXP-000592",
-          "EXP-000847"
+          "EXP-000847",
+          "EXP-000851"
         ],
-        "latest_exploration_id": "EXP-000847",
+        "latest_exploration_id": "EXP-000851",
         "accepted_event_ids": [
           "20260623-migration-batch4-b3-reframe-continuum",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
-          "20260623-operator-review2-a2v12-b4-open-c6-blocked"
+          "20260623-operator-review2-a2v12-b4-open-c6-blocked",
+          "20260814-r-169-v1-0-truncated-octahedron-realization-and"
         ],
-        "latest_event_id": "20260623-operator-review2-a2v12-b4-open-c6-blocked",
+        "latest_event_id": "20260814-r-169-v1-0-truncated-octahedron-realization-and",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -8698,18 +8712,23 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [
+          "NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION",
+          "NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
           "R-2026-06-23-b3-bcc-structural-selection"
         ],
         "exploration_ids": [
           "EXP-000832",
           "EXP-000847",
-          "EXP-000848"
+          "EXP-000848",
+          "EXP-000850",
+          "EXP-000851"
         ],
-        "latest_exploration_id": "EXP-000848",
+        "latest_exploration_id": "EXP-000851",
         "accepted_event_ids": [
-          "20260623-operator-verdicts-b3-retire-b4-massgap-scope"
+          "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
+          "20260814-r-169-v1-0-truncated-octahedron-realization-and"
         ],
-        "latest_event_id": "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
+        "latest_event_id": "20260814-r-169-v1-0-truncated-octahedron-realization-and",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "ESTIMATOR-UPGRADE"
@@ -10406,12 +10425,15 @@
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-independent-pre-a-cp1-st8-q3lock-categorical-ground-bandlimited-gns-poincare-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-independent-pre-a-cp1-st8-q3lock-integrated-orbit-smear-spatial-quotient-ground-transfer-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-independent-pre-a-cp1-st8-q3lock-mesoscopic-source-ground-orbit-smear-transfer-route-split/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-independent-pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-integrated-pre-a-cp1-st8-q3lock-categorical-ground-bandlimited-gns-poincare-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-integrated-pre-a-cp1-st8-q3lock-integrated-orbit-smear-spatial-quotient-ground-transfer-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-integrated-pre-a-cp1-st8-q3lock-mesoscopic-source-ground-orbit-smear-transfer-route-split/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-integrated-pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-cp1-st8-q3lock-categorical-ground-bandlimited-gns-poincare-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-cp1-st8-q3lock-integrated-orbit-smear-spatial-quotient-ground-transfer-route-split/result.json",
-          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-cp1-st8-q3lock-mesoscopic-source-ground-orbit-smear-transfer-route-split/result.json"
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-cp1-st8-q3lock-mesoscopic-source-ground-orbit-smear-transfer-route-split/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split/result.json"
         ],
         "manifests": [],
         "bundle_manifests": [],
@@ -10423,6 +10445,8 @@
           "R-167"
         ],
         "negative_tags": [
+          "NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION",
+          "NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
           "NG-2026-08-14-PRE-A-ST8-Q3LOCK-MESOSCOPIC-SOURCE-FULL-FINITE-GAP-AUTOMATIC-UNIFORM-POINCARE-TRANSFER",
           "NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-EXACT-TARGET-GENERATOR-AND-SEPARATION-AUTOMATIC-TARGET-GROUNDNESS",
           "NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-AUTOMATIC-ZERO-SOURCE-QUOTIENT-FACTORIZATION",
@@ -10668,9 +10692,11 @@
           "EXP-000846",
           "EXP-000847",
           "EXP-000848",
-          "EXP-000849"
+          "EXP-000849",
+          "EXP-000850",
+          "EXP-000851"
         ],
-        "latest_exploration_id": "EXP-000849",
+        "latest_exploration_id": "EXP-000851",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -10810,9 +10836,10 @@
           "20260813-r-167-v3-9-finite-source-ground-residual-transf",
           "20260814-r-167-v4-0-mesoscopic-source-ground-orbit-smear",
           "20260814-r-167-v4-1-categorical-ground-bandlimited-gns-p",
-          "20260814-r-167-v4-2-integrated-orbit-smear-spatial-quoti"
+          "20260814-r-167-v4-2-integrated-orbit-smear-spatial-quoti",
+          "20260814-r-169-v1-0-truncated-octahedron-realization-and"
         ],
-        "latest_event_id": "20260814-r-167-v4-2-integrated-orbit-smear-spatial-quoti",
+        "latest_event_id": "20260814-r-169-v1-0-truncated-octahedron-realization-and",
         "live_task_gate_ids": [
           "C6-BCC-PREMISE-BLOCKED"
         ],
@@ -11735,6 +11762,42 @@
     }
   ],
   "reusable_results": [
+    {
+      "id": "R-169",
+      "anchor": "r-169",
+      "title": "Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction",
+      "summary": "R-169 v1.0 is a scoped T0 analytic/exact/executed/audited result under EXP-000851. It proves one exact BCC Voronoi fixture, an uncountable pairwise-nonsimilar affine-combinatorial realization family, a matched-renormalization conditional below-reference sign theorem and a transverse-stability reduction. It computes no TECT realization energy, supplies no physical-empty reference, and does not resurrect B3-BCC-STRUCT or advance C6",
+      "detail_title": "Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction",
+      "detail": {
+        "result_id": "`PA-T055-TRUNCATED-OCTAHEDRON-REALIZATION-AND-EMPTY-REFERENCE-SIGN-ROUTE-SPLIT`.",
+        "exact_geometry": "EXP-000851 / R-169 v1.0 proves that `L=4 Z^3 union ((2,2,2)+4 Z^3)` has the Voronoi cell `P={|x_i|<=2, sigma dot x<=3 for every sigma in {+1,-1}^3}`. Its vertices are the 24 signed permutations of `(0,1,2)`; it has 36 edges, six square and eight regular-hexagonal faces, and volume 32. The omitted lattice-vector inequalities follow from the parity representation `v=2n` and `2 sum_i |n_i|<=sum_i n_i^2` outside the fourteen relevant vectors. For `D_t=diag(t,1,t^-1)`, `t>1`, the pair `D_t P+D_t L` remains a determinant-one affine face-to-face translational tiling with the same face incidence. The descendants of the six quadrilateral facets have opposite-cell translation lengths `{4t,4,4/t}`, whose similarity-invariant ratio is `t^2`. Thus the family is uncountable and pairwise nonsimilar. The result is deliberately affine-combinatorial: `D_t P` is not claimed to be the Euclidean Voronoi or Wigner--Seitz cell of `D_t L`. The family is a nonuniqueness witness, not a complete lattice, nonlattice, multimotif, nonmonohedral, or extracted- statistical classification.",
+        "matched_sign_theorem": "Candidate and preregistered zero/disordered reference are compared in one regulated parent with the same state or configuration space, measure or algebra, ensemble, units, physical volume, boundary prescription, bare couplings, counterterm basis, coefficient trajectory including finite parts, and renormalization conditions. With the thermodynamic van-Hove limit taken before the regulator limit, the certified uniform inequality `Deltahat+e_num+e_TD+e_UV+e_sch<=-eta`, `eta>0`, implies `Delta F_ren<=-eta<0`. Only a common state-independent scalar cancels automatically. For every nonconstant counterterm the candidate/reference observable difference remains and its finite part must be fixed or uniformly budgeted. Strict finite-regulator negativity without one uniform margin is insufficient.",
+        "transverse_stability": "Full regulated stationarity is required on the full admissible tangent, and limiting stationarity must either be assumed or follow from certified gradient convergence. After removing the exact symmetry/gauge orbit, identified limiting transverse forms and a certified uniform lower margin `kappa>0` give limiting transverse coercivity. A controlled local Hessian remainder then gives strict local stability modulo the declared symmetry group. This is local, not global or exhaustive, selection.",
+        "exact_route_separation": "For `Phi_(alpha,tau)=x^2(x^2-1)^2+alpha(2x^2-x^4)+(1-tau x^2)y^2+y^4`, with the `z` zero mode removed, the candidate `(1,0,0)` relative to `(0,0,0)` has sign `alpha`, the tested competitor `(2,0,0)` has value `36-8alpha`, and the transverse Hessian is `diag(8-8alpha,2-2tau)`. At `(1/4,0)` the candidate is stable and beats that competitor but lies above the reference; at `(-1/4,2)` it lies below the reference but is a saddle. This also proves that a common counterterm basis with free nonconstant finite parts does not determine the relative sign.",
+        "negative_route_authorities": "R-169 v1.0 registers `NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION` and `NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`. It retains the retired BCC-selection authority `R-2026-06-23-b3-bcc-structural-selection`, the absolute-anchor boundary `NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR`, and the same- Hamiltonian equilibrium-reference boundary `NG-2026-08-09-PRE-A-ST8-Q3LOCK-EQUILIBRIUM-PHASE-AS-STRICT-EMPTY-REFERENCE`.",
+        "boundary": "This is a T0, claim-nonbearing geometry and conditional transfer result. It freezes a proof-ready candidate contract but computes no canonical TECT or Reading-H realization energy, proves no center extraction or complete enumeration, identifies no physical or cosmic empty space, and proves no global vacuum, BCC resurrection, C6 spacetime conclusion, physical Sector-A result, or Pre-A closure. `C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN.",
+        "proven_in": "The [R-169 v1.0 certificate](strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.0 PDF is issued.",
+        "tier": "T0 (claim-nonbearing scoped exact geometry, conditional sign/stability transfer and exact logical obstructions only).",
+        "publication_target": "Pre-A geometry and reference-sign route note."
+      },
+      "normalized_detail": {
+        "statement": "",
+        "proof_anchor": "The [R-169 v1.0 certificate](strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.0 PDF is issued.",
+        "reuse": "",
+        "boundary": "This is a T0, claim-nonbearing geometry and conditional transfer result. It freezes a proof-ready candidate contract but computes no canonical TECT or Reading-H realization energy, proves no center extraction or complete enumeration, identifies no physical or cosmic empty space, and proves no global vacuum, BCC resurrection, C6 spacetime conclusion, physical Sector-A result, or Pre-A closure. `C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN.",
+        "publication_target": "Pre-A geometry and reference-sign route note."
+      },
+      "claim_refs": [],
+      "claim_ref_basis": {},
+      "family_refs": [],
+      "accepted_event_ids": [
+        "20260814-r-169-v1-0-truncated-octahedron-realization-and"
+      ],
+      "co_recorded_negative_tags": [
+        "NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
+        "NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION"
+      ]
+    },
     {
       "id": "R-168",
       "anchor": "r-168",
@@ -18378,6 +18441,54 @@
     }
   ],
   "negative_records": [
+    {
+      "tag": "NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION",
+      "anchor": "ng-2026-08-14-pre-a-t055-truncated-octahedron-combinatorics-automatic-finite-realization-enumeration",
+      "branch": "infer a finite exhaustive realization list from truncated-octahedron face combinatorics alone",
+      "summary": "the exact BCC Voronoi cell has a determinant-one affine family `D_t P+D_t L`, `t>1`, whose quadrilateral-facet neighbour-translation ratio is `t^2`; the members are pairwise nonsimilar, while the affine images are not claimed to remain Euclidean Voronoi cells",
+      "detail_title": "face combinatorics do not give a finite realization list",
+      "detail": {
+        "failure_mode": "Infer that the truncated-octahedron face lattice determines a finite exhaustive set of geometric realizations without freezing metric, lattice, motif, extraction and equivalence semantics.",
+        "evidence": "EXP-000851 / R-169 v1.0 starts from the exact BCC Voronoi pair `P,L` and applies `D_t=diag(t,1,t^-1)`, `t>1`. Every `D_t P+D_t L` is a volume-preserving affine face-to-face translational tiling with the same face incidence. The descendants of the six quadrilateral facets have opposite-cell translation lengths `{4t,4,4/t}`, so their maximum/minimum ratio is `t^2`. This similarity invariant distinguishes every `t>1`.",
+        "consequence": "There are already uncountably many pairwise nonsimilar affine-combinatorial realizations. A finite scan requires a preregistered parameter domain, equivalence relation, resolution and coverage guarantee. The affine images are not asserted to be Euclidean Voronoi or Wigner--Seitz cells of `D_t L`; the result is not a complete Euclidean lattice, nonlattice, multimotif, nonmonohedral or Reading-H extraction classification."
+      },
+      "kind": "no_go",
+      "claim_refs": [
+        "B3-BCC-STRUCT",
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "B3-BCC-STRUCT": "explicit_negative_event:20260814-r-169-v1-0-truncated-octahedron-realization-and",
+        "B3-RH-TESTED-STRUCTURE-RANKING": "explicit_negative_event:20260814-r-169-v1-0-truncated-octahedron-realization-and",
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260814-r-169-v1-0-truncated-octahedron-realization-and"
+      },
+      "family_refs": []
+    },
+    {
+      "tag": "NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
+      "anchor": "ng-2026-08-14-pre-a-t055-common-counterterm-basis-unfixed-finite-parts-automatic-empty-reference-sign",
+      "branch": "infer a scheme-independent candidate/reference sign from a common counterterm basis whose nonconstant finite parts remain free",
+      "summary": "a shared even quadratic/quartic finite direction changes both the exact relative sign and transverse Hessian in the polynomial fixture; only a common state-independent scalar cancels automatically",
+      "detail_title": "a common basis with free finite parts does not fix the relative sign",
+      "detail": {
+        "failure_mode": "Infer a regulator-independent below-reference sign merely because candidate and reference use the same counterterm basis, while a nonconstant symmetry-allowed finite coefficient remains unfixed.",
+        "evidence": "EXP-000851 / R-169 v1.0 uses `Phi_(alpha,tau)=x^2(x^2-1)^2+alpha(2x^2-x^4)+(1-tau x^2)y^2+y^4`, with the exact `z`-translation zero mode projected out. At the candidate `(1,0,0)`, reference `(0,0,0)` and tested competitor `(2,0,0)`, the relative sign is `alpha`, the competitor value is `36-8alpha`, and the transverse Hessian is `diag(8-8alpha,2-2tau)`. At `(alpha,tau)=(1/4,0)` the candidate beats the tested competitor and is strictly locally stable but lies above the reference. At `(-1/4,2)` it lies below the reference but is a transverse saddle.",
+        "consequence": "A common state-independent scalar cancels, but a shared nonconstant counterterm contributes its candidate/reference observable difference and can change both sign and stability. Fix the coefficient trajectory including finite parts and renormalization conditions, or prove a margin uniform over the allowed finite-scheme class. This fixture is not a TECT sign calculation and identifies no physical-empty reference."
+      },
+      "kind": "no_go",
+      "claim_refs": [
+        "B3-BCC-STRUCT",
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "B3-BCC-STRUCT": "explicit_negative_event:20260814-r-169-v1-0-truncated-octahedron-realization-and",
+        "B3-RH-TESTED-STRUCTURE-RANKING": "explicit_negative_event:20260814-r-169-v1-0-truncated-octahedron-realization-and",
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260814-r-169-v1-0-truncated-octahedron-realization-and"
+      },
+      "family_refs": []
+    },
     {
       "tag": "NG-2026-08-14-PRE-A-ST8-Q3LOCK-MESOSCOPIC-SOURCE-FULL-FINITE-GAP-AUTOMATIC-UNIFORM-POINCARE-TRANSFER",
       "anchor": "ng-2026-08-14-pre-a-st8-q3lock-mesoscopic-source-full-finite-gap-automatic-uniform-poincare-transfer",
@@ -68078,6 +68189,123 @@
       "task_id": "T-055",
       "title": "Use growing-bubble coarsening as a dynamical negative-control diagnostic for Reading-H cell candidates",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "This is research governance, not a claim that either lane is physically correct. It does not reopen the refuted BCC card, promote Reading-H over the empty reference, or close any Q3LOCK, Pre-A, C6, QFT, or physical-vacuum gate.",
+      "claim_ids": [
+        "B1-RH-ENUM",
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The two lines answer different questions. Geometry-first work tests whether a candidate microscopic structure is selected at all; Q3LOCK tests which analytical transitions are legitimate in a tractable interacting oscillator system. Treating a Q3LOCK result as geometry selection, or a geometric resemblance as common dynamics or a GNS gap, would repeat recorded scope errors.",
+      "evidence_refs": [
+        "claims/B3-RH-TESTED-STRUCTURE-RANKING/claim.md#scope-strict",
+        "claims/C6-SPACETIME-SIGNATURE/claim.md#next-required-action",
+        "strategy/pre-a-qft-bridge-evidence-role-and-successor-order-260812.md#candidate-neutral-bridge"
+      ],
+      "finding": "T-055 is the sole active structural-selection lane: it must establish a declared truncated-octahedron realization, negative empty-reference renormalized energy, transverse stability, and controlled limits. T-054/Q3LOCK is an auxiliary mathematical lane: it preserves reusable common-dynamics, phase-selection, gap, counterterm, and no-go tools. Results may transfer only as explicitly verified general lemmas or diagnostics; neither lane supplies the other lane's physical premise.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "R-2026-06-23-b3-bcc-structural-selection"
+        ],
+        "results": [
+          "R-167"
+        ]
+      },
+      "gate_ids": [
+        "C6-BCC-PREMISE-BLOCKED",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-000850",
+      "method": [
+        "Geometry lane order: freeze center/cell extraction and competitors; compare F_ren[realization]-F_ren[0]; test symmetry-projected transverse Hessian; test finite-volume, thermodynamic, and continuum behavior; only then ask propagation/QFT questions.",
+        "Q3LOCK lane order: preserve exact ground-selection, common-dynamics, phasewise-gap, and continuum obligations and their registered negative controls.",
+        "Interface rule: every transferred lemma names its hypotheses, regulator, observable algebra, limit order, and whether it is structural, dynamical, or merely diagnostic.",
+        "Forbidden transfers: no Q3LOCK phase/gap result implies a Reading-H truncated-octahedron vacuum; no foam or geometry result implies common alpha, emergent time, or a physical mass gap.",
+        "Review the allocation at each logical gate: a failed geometry sign/stability test redirects the candidate set; a Q3LOCK no-go refines tools but does not veto untested geometry."
+      ],
+      "next_action": "Begin T-055 with the minimal candidate/competitor and center-extraction manifest. Keep T-054 available only for bounded Q3LOCK proof work that produces reusable lemmas or decisive route filters with stated interface conditions.",
+      "provenance": "contemporaneous",
+      "question": "How should the truncated-octahedron/Reading-H structural candidate and Q3LOCK proof programme be arranged so that each can advance or fail without importing an unproved conclusion from the other?",
+      "recorded_at": "2026-08-14T03:24:23Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000849",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-14",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-055",
+      "title": "Freeze the geometry-first and Q3LOCK auxiliary lanes with a no-cross-promotion interface",
+      "verdict": "advanced"
+    },
+    {
+      "boundary": "This is T0 and claim_bearing:false. It computes no canonical TECT or Reading-H realization energy, proves no center extraction or exhaustive geometric classification, identifies no physical or cosmic empty reference, and proves no global vacuum, BCC resurrection, C6 spacetime conclusion, physical Sector-A result or Pre-A closure. C6-BCC-PREMISE-BLOCKED and Round-1 remain OPEN. No R-169 v1.0 PDF is issued.",
+      "claim_ids": [
+        "B3-BCC-STRUCT",
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The package turns the geometry-first priority into exact, reproducible candidate semantics and identifies the two load-bearing physical tests without pretending to have run them on a canonical TECT realization. The continuous affine family defeats finite post-hoc enumeration, and the finite-part fixture prevents a scheme-dependent sign from being called vacuum selection.",
+      "evidence_refs": [
+        "strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-manifest.json#standard_bcc_voronoi_fixture",
+        "strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-manifest.json#signed_limit_reduction",
+        "strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-certificate-260814.md#3-exact-bcc-voronoi-fixture",
+        "strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-certificate-260814.md#6-signed-limit-theorem",
+        "strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-certificate-260814.md#7-transverse-hessian-theorem",
+        "codes/foundations/pre_a_t055_truncated_octahedron_realization_and_empty_reference_sign_route_split.py#main",
+        "codes/foundations/pre_a_t055_truncated_octahedron_realization_and_empty_reference_sign_route_split_independent.py#main",
+        "codes/foundations/pre_a_t055_truncated_octahedron_realization_and_empty_reference_sign_route_split_verify.py#main",
+        "claims/GATES.md#pa-t055-truncated-octahedron-bcc-voronoi-and-affine-realization-family",
+        "claims/GATES.md#pa-t055-matched-renormalization-empty-reference-sign-and-transverse-stability-reduction",
+        "RESULTS-LEDGER.md#r-169"
+      ],
+      "finding": "R-169 v1.0 proves one exact metric BCC Voronoi truncated octahedron and an uncountable pairwise-nonsimilar determinant-one affine-combinatorial translational family, while explicitly rejecting Euclidean-Voronoi promotion of the affine images. It separately proves conditional matched-renormalization below-reference sign and transverse-stability transfers. A common state-independent scalar cancels, but nonconstant state-dependent counterterm differences remain. Exact fixtures show that combinatorics alone cannot give a finite exhaustive realization list and that relative ranking, below-reference sign and transverse stability are logically independent.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION",
+          "NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
+          "R-2026-06-23-b3-bcc-structural-selection",
+          "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR",
+          "NG-2026-08-09-PRE-A-ST8-Q3LOCK-EQUILIBRIUM-PHASE-AS-STRICT-EMPTY-REFERENCE"
+        ],
+        "results": [
+          "R-169"
+        ]
+      },
+      "gate_ids": [
+        "PA-T055-TRUNCATED-OCTAHEDRON-BCC-VORONOI-AND-AFFINE-REALIZATION-FAMILY",
+        "PA-T055-MATCHED-RENORMALIZATION-EMPTY-REFERENCE-SIGN-AND-TRANSVERSE-STABILITY-REDUCTION",
+        "C6-BCC-PREMISE-BLOCKED",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-000851",
+      "method": [
+        "Prove an exact BCC lattice Voronoi fixture from its fourteen bisectors, enumerate its vertices and faces, and verify its fundamental volume independently.",
+        "Apply a determinant-one diagonal affine family, derive a similarity invariant from opposite quadrilateral-facet neighbour translations, and keep the affine-combinatorial family separate from Euclidean Voronoi semantics.",
+        "Put candidate and reference in one regulated parent with matched finite counterterms and frozen thermodynamic-then-regulator limits, then propagate a certified uniform relative-density margin.",
+        "Require full regulated and limiting stationarity, exact symmetry removal, tangent identification and a uniform transverse form margin, and test the logical separations on an exact rational polynomial fixture."
+      ],
+      "next_action": "Freeze one actual Reading-H or TECT realization map and preregistered reference in the R-169 candidate manifest, then compute the matched relative density with a uniform error margin before attempting the separately required full transverse-stability and limit checks.",
+      "provenance": "contemporaneous",
+      "question": "What exact geometry and matched-renormalization conditions are required before a truncated-octahedron realization can be tested against a preregistered zero or disordered reference without resurrecting the retired BCC premise?",
+      "recorded_at": "2026-08-14T03:51:39Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000850",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-14",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-055",
+      "title": "Separate truncated-octahedron realization semantics and reduce the empty-reference sign and transverse stability",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -92484,6 +92712,70 @@
       "result_link_basis": {
         "R-167": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260814-r-169-v1-0-truncated-octahedron-realization-and",
+      "date": "2026-08-14",
+      "header": "[R-169 v1.0 truncated-octahedron realization and empty-reference sign route split] - 2026-08-14",
+      "claim_ids": [
+        "B3-BCC-STRUCT",
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "C6-BCC-PREMISE-BLOCKED",
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-000851",
+        "R-169"
+      ],
+      "keywords": [
+        "EXP-000851",
+        "R-169-v1.0",
+        "affine-combinatorial",
+        "common-finite-parts",
+        "empty-reference-sign",
+        "metric-regular",
+        "transverse-Hessian",
+        "truncated-octahedron"
+      ],
+      "negative_results": [
+        "NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
+        "NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION"
+      ],
+      "notes": [
+        "strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-manifest.json",
+        "strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-certificate-260814.md",
+        "claims/GATES.md",
+        "RESULTS-LEDGER.md",
+        "negative-results/registry.md"
+      ],
+      "scripts": [
+        "codes/foundations/pre_a_t055_truncated_octahedron_realization_and_empty_reference_sign_route_split.py",
+        "codes/foundations/pre_a_t055_truncated_octahedron_realization_and_empty_reference_sign_route_split_independent.py",
+        "codes/foundations/pre_a_t055_truncated_octahedron_realization_and_empty_reference_sign_route_split_verify.py"
+      ],
+      "raw": "## [R-169 v1.0 truncated-octahedron realization and empty-reference sign route split] - 2026-08-14\n\nEXP-000851 records R-169 v1.0 as a scoped T0, claim-nonbearing geometry and conditional transfer result. The exact BCC lattice fixture has one metric-regular truncated-octahedron Voronoi cell with 24 vertices, 36 edges, six square faces and eight regular-hexagonal faces. Its determinant-one diagonal images form an uncountable pairwise-nonsimilar affine-combinatorial translational family. They are not promoted to Euclidean Voronoi cells, so combinatorics alone does not give a finite exhaustive realization list.\n\nThe matched-renormalization theorem compares a candidate and preregistered zero/disordered reference inside one parent with the same units, volume, ensemble, boundary data, bare couplings, counterterm basis, coefficient trajectory including finite parts, and renormalization conditions. A common scalar cancels, but state-dependent counterterm differences remain. A uniform certified relative-density margin transfers through the frozen thermodynamic-then-regulator limits. Full regulated and limiting stationarity, tangent identification and a uniform transverse Hessian form margin are separately required for strict local stability modulo exact symmetries.\n\nThe exact polynomial fixture separates competitor ranking, below-reference sign and transverse stability, and proves that a common counterterm basis with unfixed nonconstant finite parts does not determine the relative sign. The result computes no canonical TECT or Reading-H realization energy, proves no physical-empty reference or global vacuum, and does not resurrect B3-BCC-STRUCT. C6-BCC-PREMISE-BLOCKED remains OPEN, as does Round-1. No R-169 v1.0 PDF is issued.\n\n",
+      "claim_refs": [
+        "B3-BCC-STRUCT",
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "B3-BCC-STRUCT": "explicit_claim_ids",
+        "B3-RH-TESTED-STRUCTURE-RANKING": "explicit_claim_ids",
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "C6-BCC-PREMISE-BLOCKED",
+        "EXP-000851",
+        "R-169"
+      ],
+      "result_ids": [
+        "R-169"
+      ],
+      "linked_result_ids": [
+        "R-169"
+      ],
+      "result_link_basis": {
+        "R-169": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -97335,6 +97627,12 @@
         "id": "event:20260814-r-167-v4-2-integrated-orbit-smear-spatial-quoti",
         "kind": "accepted_event",
         "label": "[R-167 v4.2 integrated orbit-smear spatial quotient ground transfer route split] - 2026-08-14",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260814-r-169-v1-0-truncated-octahedron-realization-and",
+        "kind": "accepted_event",
+        "label": "[R-169 v1.0 truncated-octahedron realization and empty-reference sign route split] - 2026-08-14",
         "authority": "CHANGELOG.md"
       },
       {
@@ -102432,6 +102730,18 @@
         "authority": "explorations/log.jsonl"
       },
       {
+        "id": "exploration:EXP-000850",
+        "kind": "proof_exploration",
+        "label": "Freeze the geometry-first and Q3LOCK auxiliary lanes with a no-cross-promotion interface",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000851",
+        "kind": "proof_exploration",
+        "label": "Separate truncated-octahedron realization semantics and reduce the empty-reference sign and transverse stability",
+        "authority": "explorations/log.jsonl"
+      },
+      {
         "id": "gate:A1-KERNEL-CONV",
         "kind": "hypothesis",
         "label": "A1-KERNEL-CONV",
@@ -103384,6 +103694,18 @@
         "kind": "gate",
         "label": "PA-ROUND1-TARGET-INDEPENDENCE-AND-ANTI-LEAKAGE-SCHEMA-VALIDATOR",
         "authority": "claims/GATES.md#pa-round1-target-independence-and-anti-leakage-schema-validator"
+      },
+      {
+        "id": "gate:PA-T055-MATCHED-RENORMALIZATION-EMPTY-REFERENCE-SIGN-AND-TRANSVERSE-STABILITY-REDUCTION",
+        "kind": "gate",
+        "label": "PA-T055-MATCHED-RENORMALIZATION-EMPTY-REFERENCE-SIGN-AND-TRANSVERSE-STABILITY-REDUCTION",
+        "authority": "claims/GATES.md#pa-t055-matched-renormalization-empty-reference-sign-and-transverse-stability-reduction"
+      },
+      {
+        "id": "gate:PA-T055-TRUNCATED-OCTAHEDRON-BCC-VORONOI-AND-AFFINE-REALIZATION-FAMILY",
+        "kind": "gate",
+        "label": "PA-T055-TRUNCATED-OCTAHEDRON-BCC-VORONOI-AND-AFFINE-REALIZATION-FAMILY",
+        "authority": "claims/GATES.md#pa-t055-truncated-octahedron-bcc-voronoi-and-affine-realization-family"
       },
       {
         "id": "gate:PRED-G-FREEZE",
@@ -105582,6 +105904,18 @@
         "authority": "negative-results/registry.md#ng-2026-08-14-pre-a-st8-q3lock-mesoscopic-source-full-finite-gap-automatic-uniform-poincare-transfer"
       },
       {
+        "id": "negative:NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
+        "kind": "no_go",
+        "label": "infer a scheme-independent candidate/reference sign from a common counterterm basis whose nonconstant finite parts remain free",
+        "authority": "negative-results/registry.md#ng-2026-08-14-pre-a-t055-common-counterterm-basis-unfixed-finite-parts-automatic-empty-reference-sign"
+      },
+      {
+        "id": "negative:NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION",
+        "kind": "no_go",
+        "label": "infer a finite exhaustive realization list from truncated-octahedron face combinatorics alone",
+        "authority": "negative-results/registry.md#ng-2026-08-14-pre-a-t055-truncated-octahedron-combinatorics-automatic-finite-realization-enumeration"
+      },
+      {
         "id": "negative:NG-2026-legacy-classical-hbar",
         "kind": "no_go",
         "label": "classical-field-theoretic derivation of $\\hbar$ (8 routes)",
@@ -106636,6 +106970,12 @@
         "kind": "accepted_result",
         "label": "Prospective holdout freeze protocol and current-tree readiness audit",
         "authority": "RESULTS-LEDGER.md#r-168"
+      },
+      {
+        "id": "result:R-169",
+        "kind": "accepted_result",
+        "label": "Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction",
+        "authority": "RESULTS-LEDGER.md#r-169"
       },
       {
         "id": "task:T-001",
@@ -118001,6 +118341,42 @@
         "from": "event:20260814-r-167-v4-2-integrated-orbit-smear-spatial-quoti",
         "relation": "records_result",
         "to": "result:R-167",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260814-r-169-v1-0-truncated-octahedron-realization-and",
+        "relation": "records",
+        "to": "claim:B3-BCC-STRUCT",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-r-169-v1-0-truncated-octahedron-realization-and",
+        "relation": "records",
+        "to": "claim:B3-RH-TESTED-STRUCTURE-RANKING",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-r-169-v1-0-truncated-octahedron-realization-and",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-r-169-v1-0-truncated-octahedron-realization-and",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260814-r-169-v1-0-truncated-octahedron-realization-and",
+        "relation": "records_negative",
+        "to": "negative:NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260814-r-169-v1-0-truncated-octahedron-realization-and",
+        "relation": "records_result",
+        "to": "result:R-169",
         "basis": "explicit_result_id"
       },
       {
@@ -156140,6 +156516,150 @@
         "basis": "structured_formal_ref"
       },
       {
+        "from": "exploration:EXP-000850",
+        "relation": "assesses",
+        "to": "claim:B1-RH-ENUM",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000850",
+        "relation": "assesses",
+        "to": "claim:B3-RH-TESTED-STRUCTURE-RANKING",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000850",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000850",
+        "relation": "assesses_gate",
+        "to": "gate:C6-BCC-PREMISE-BLOCKED",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000850",
+        "relation": "assesses_gate",
+        "to": "gate:PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000850",
+        "relation": "continues",
+        "to": "exploration:EXP-000849",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000850",
+        "relation": "records_task",
+        "to": "task:T-055",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000850",
+        "relation": "references_negative",
+        "to": "negative:R-2026-06-23-b3-bcc-structural-selection",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000850",
+        "relation": "references_result",
+        "to": "result:R-167",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "assesses",
+        "to": "claim:B3-BCC-STRUCT",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "assesses",
+        "to": "claim:B3-RH-TESTED-STRUCTURE-RANKING",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "assesses_gate",
+        "to": "gate:C6-BCC-PREMISE-BLOCKED",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "assesses_gate",
+        "to": "gate:PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "assesses_gate",
+        "to": "gate:PA-T055-MATCHED-RENORMALIZATION-EMPTY-REFERENCE-SIGN-AND-TRANSVERSE-STABILITY-REDUCTION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "assesses_gate",
+        "to": "gate:PA-T055-TRUNCATED-OCTAHEDRON-BCC-VORONOI-AND-AFFINE-REALIZATION-FAMILY",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "continues",
+        "to": "exploration:EXP-000850",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "records_task",
+        "to": "task:T-055",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-09-PRE-A-ST8-Q3LOCK-EQUILIBRIUM-PHASE-AS-STRICT-EMPTY-REFERENCE",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "references_negative",
+        "to": "negative:R-2026-06-23-b3-bcc-structural-selection",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000851",
+        "relation": "references_result",
+        "to": "result:R-169",
+        "basis": "structured_formal_ref"
+      },
+      {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
         "relation": "bears_on",
         "to": "claim:B1-RH-ENUM",
@@ -158394,6 +158914,42 @@
         "relation": "bears_on",
         "to": "claim:C6-SPACETIME-SIGNATURE",
         "basis": "explicit_negative_event:20260814-r-167-v4-1-categorical-ground-bandlimited-gns-p"
+      },
+      {
+        "from": "negative:NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
+        "relation": "bears_on",
+        "to": "claim:B3-BCC-STRUCT",
+        "basis": "explicit_negative_event:20260814-r-169-v1-0-truncated-octahedron-realization-and"
+      },
+      {
+        "from": "negative:NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
+        "relation": "bears_on",
+        "to": "claim:B3-RH-TESTED-STRUCTURE-RANKING",
+        "basis": "explicit_negative_event:20260814-r-169-v1-0-truncated-octahedron-realization-and"
+      },
+      {
+        "from": "negative:NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
+        "relation": "bears_on",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_negative_event:20260814-r-169-v1-0-truncated-octahedron-realization-and"
+      },
+      {
+        "from": "negative:NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION",
+        "relation": "bears_on",
+        "to": "claim:B3-BCC-STRUCT",
+        "basis": "explicit_negative_event:20260814-r-169-v1-0-truncated-octahedron-realization-and"
+      },
+      {
+        "from": "negative:NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION",
+        "relation": "bears_on",
+        "to": "claim:B3-RH-TESTED-STRUCTURE-RANKING",
+        "basis": "explicit_negative_event:20260814-r-169-v1-0-truncated-octahedron-realization-and"
+      },
+      {
+        "from": "negative:NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION",
+        "relation": "bears_on",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_negative_event:20260814-r-169-v1-0-truncated-octahedron-realization-and"
       },
       {
         "from": "negative:NG-2026-legacy-classical-hbar",

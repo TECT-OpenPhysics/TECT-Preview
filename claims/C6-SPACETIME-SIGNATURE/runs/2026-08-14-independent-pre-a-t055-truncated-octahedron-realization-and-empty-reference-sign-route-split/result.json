@@ -1,0 +1,144 @@
+{
+  "assertions": [
+    {
+      "actual": "exact topology",
+      "expected": "exact topology",
+      "group": "topology",
+      "name": "identity and topology",
+      "status": "PASS"
+    },
+    {
+      "actual": "affine tile only",
+      "expected": "affine tile only",
+      "group": "theorem",
+      "name": "affine-voronoi semantic firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "matched scheme",
+      "expected": "matched scheme",
+      "group": "theorem",
+      "name": "matched finite parts and limit order",
+      "status": "PASS"
+    },
+    {
+      "actual": "limit stationarity or gradient passage is explicit",
+      "expected": "limit stationarity or gradient passage is explicit",
+      "group": "theorem",
+      "name": "limiting stationarity before local minimum",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'plane_count': 14, 'vertex_count': 24, 'vertices_match_permutation_formula': True, 'quadrilateral_faces': 6, 'hexagonal_faces': 8, 'edge_count': 36, 'euler_characteristic': 2, 'lattice_determinant': '32', 'affine_determinant': '1', 'affine_quadrilateral_translation_ratio': '4', 'finite_parity_redundancy_audit': True, 'finite_parity_witness_count': 326}",
+      "expected": "{'plane_count': 14, 'vertex_count': 24, 'quadrilateral_faces': 6, 'hexagonal_faces': 8, 'edge_count': 36, 'euler_characteristic': 2, 'lattice_determinant': '32', 'affine_determinant': '1', 'affine_quadrilateral_translation_ratio': '4'}",
+      "group": "derivation",
+      "name": "independent exact geometry",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'bare_difference': '-1', 'common_scalar_difference': '-1', 'scaled_difference': '-5/2', 'candidate_specific_shifted_difference': '1', 'error_sum': '3/10', 'certified_upper': '-11/10', 'uniform_margin_pass': True, 'finite_sequence_all_negative': True, 'finite_sequence_limit': '0'}",
+      "expected": "{'bare_difference': '-1', 'common_scalar_difference': '-1', 'scaled_difference': '-5/2', 'candidate_specific_shifted_difference': '1', 'error_sum': '3/10', 'certified_upper': '-11/10', 'uniform_margin_pass': True}",
+      "group": "derivation",
+      "name": "independent exact renormalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'ranking_stable_but_above_reference': {'candidate': '1/4', 'reference': '0', 'relative_sign': '1/4', 'competitor': '34', 'candidate_stationary': True, 'reference_stationary': True, 'transverse_hessian': ['6', '2'], 'candidate_beats_tested_competitor': True, 'strict_transverse_stability': True}, 'below_reference_but_transverse_saddle': {'candidate': '-1/4', 'reference': '0', 'relative_sign': '-1/4', 'competitor': '38', 'candidate_stationary': True, 'reference_stationary': True, 'transverse_hessian': ['10', '-2'], 'candidate_beats_tested_competitor': True, 'strict_transverse_stability': False}}",
+      "expected": "{'positive_case_candidate': '1/4', 'positive_case_competitor': '34', 'positive_case_hessian': ['6', '2'], 'negative_case_candidate': '-1/4', 'negative_case_competitor': '38', 'negative_case_hessian': ['10', '-2']}",
+      "group": "derivation",
+      "name": "independent exact polynomial split",
+      "status": "PASS"
+    },
+    {
+      "actual": "required certificate tokens",
+      "expected": "required certificate tokens",
+      "group": "certificate",
+      "name": "certificate scope tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'imports': ['__future__', 'argparse', 'ast', 'fractions', 'hashlib', 'itertools', 'json', 'os', 'pathlib', 'tempfile', 'typing'], 'forbidden_calls': []}",
+      "expected": "stdlib, no float/complex/dynamic execution, ASCII LF",
+      "group": "format",
+      "name": "stdlib exact-arithmetic AST firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "all formal tokens present",
+      "expected": "all formal tokens present",
+      "group": "formal",
+      "name": "formal authority links",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "geometry": {
+      "affine_determinant": "1",
+      "affine_quadrilateral_translation_ratio": "4",
+      "edge_count": 36,
+      "euler_characteristic": 2,
+      "finite_parity_redundancy_audit": true,
+      "finite_parity_witness_count": 326,
+      "hexagonal_faces": 8,
+      "lattice_determinant": "32",
+      "plane_count": 14,
+      "quadrilateral_faces": 6,
+      "vertex_count": 24,
+      "vertices_match_permutation_formula": true
+    },
+    "polynomial": {
+      "below_reference_but_transverse_saddle": {
+        "candidate": "-1/4",
+        "candidate_beats_tested_competitor": true,
+        "candidate_stationary": true,
+        "competitor": "38",
+        "reference": "0",
+        "reference_stationary": true,
+        "relative_sign": "-1/4",
+        "strict_transverse_stability": false,
+        "transverse_hessian": [
+          "10",
+          "-2"
+        ]
+      },
+      "ranking_stable_but_above_reference": {
+        "candidate": "1/4",
+        "candidate_beats_tested_competitor": true,
+        "candidate_stationary": true,
+        "competitor": "34",
+        "reference": "0",
+        "reference_stationary": true,
+        "relative_sign": "1/4",
+        "strict_transverse_stability": true,
+        "transverse_hessian": [
+          "6",
+          "2"
+        ]
+      }
+    },
+    "renormalization": {
+      "bare_difference": "-1",
+      "candidate_specific_shifted_difference": "1",
+      "certified_upper": "-11/10",
+      "common_scalar_difference": "-1",
+      "error_sum": "3/10",
+      "finite_sequence_all_negative": true,
+      "finite_sequence_limit": "0",
+      "scaled_difference": "-5/2",
+      "uniform_margin_pass": true
+    }
+  },
+  "mode": "formal",
+  "schema": "tect/pre-a-t055-truncated-octahedron-sign-independent-run/1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_t055_truncated_octahedron_realization_and_empty_reference_sign_route_split_independent.py": "03e52c28ba14e863347abe81eca62fc7480eaac9a0be50a0c6dc4eb7b46cdcd2",
+    "strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-certificate-260814.md": "ac9587cce10cb000eff45b57a44ca3c6e5b376ee281abe036a57740255932fae",
+    "strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-manifest.json": "f482c5c60e50d0d6591a769e13c923576b735860a7e785519f5adb55500705f2"
+  },
+  "summary": {
+    "failed": 0,
+    "passed": 10,
+    "status": "PASS"
+  },
+  "version": "R-169 v1.0"
+}

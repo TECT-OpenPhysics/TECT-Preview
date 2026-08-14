@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**638 accepted events** · latest 25 shown below · machine locator: `index.json`
+**639 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-14 | `20260814-r-169-v1-0-truncated-octahedron-realization-and` — [R-169 v1.0 truncated-octahedron realization and empty-reference sign route split] - 2026-08-14 | B3-BCC-STRUCT, B3-RH-TESTED-STRUCTURE-RANKING, C6-BCC-PREMISE-BLOCKED, C6-SPACETIME-SIGNATURE, EXP-000851, R-169 | [bounded page](pages/000619-000668.md#20260814-r-169-v1-0-truncated-octahedron-realization-and) |
 | 2026-08-14 | `20260814-r-167-v4-2-integrated-orbit-smear-spatial-quoti` — [R-167 v4.2 integrated orbit-smear spatial quotient ground transfer route split] - 2026-08-14 | C6-SPACETIME-SIGNATURE, EXP-000846, R-167 | [bounded page](pages/000619-000668.md#20260814-r-167-v4-2-integrated-orbit-smear-spatial-quoti) |
 | 2026-08-14 | `20260814-r-167-v4-1-categorical-ground-bandlimited-gns-p` — [R-167 v4.1 categorical ground bandlimited GNS Poincare route split] - 2026-08-14 | C6-SPACETIME-SIGNATURE, EXP-000845, R-167 | [bounded page](pages/000619-000668.md#20260814-r-167-v4-1-categorical-ground-bandlimited-gns-p) |
 | 2026-08-14 | `20260814-r-167-v4-0-mesoscopic-source-ground-orbit-smear` — [R-167 v4.0 mesoscopic source-ground orbit-smear transfer route split] - 2026-08-14 | C6-SPACETIME-SIGNATURE, EXP-000844, R-167 | [bounded page](pages/000619-000668.md#20260814-r-167-v4-0-mesoscopic-source-ground-orbit-smear) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-12 | `20260812-r-167-v2-6-closes-fixed-order-sw-coefficients-z` — [R-167 v2.6 closes fixed-order SW coefficients, zero-source third/fourth QPS cutoff, and the fourth-order gauge crosswalk] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000826, R-167 | [bounded page](pages/000569-000618.md#20260812-r-167-v2-6-closes-fixed-order-sw-coefficients-z) |
 | 2026-08-12 | `20260812-r-167-v2-5-combined-gate-level-synthesis-pdf-is` — [R-167 v2.5 combined gate-level synthesis PDF issued after strict validation] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000825, R-167 | [bounded page](pages/000569-000618.md#20260812-r-167-v2-5-combined-gate-level-synthesis-pdf-is) |
 | 2026-08-12 | `20260812-r-167-v2-5-closes-the-fixed-finite-third-order` — [R-167 v2.5 closes the fixed-finite third-order linked coefficient and compact-cylinder route boundary] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000825, R-167 | [bounded page](pages/000569-000618.md#20260812-r-167-v2-5-closes-the-fixed-finite-third-order) |
-| 2026-08-12 | `20260812-exp-000792-child-gate-authority-linkage-repaire` — [EXP-000792 child-gate authority linkage repaired] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000792, EXP-000793, EXP-000821 | [bounded page](pages/000569-000618.md#20260812-exp-000792-child-gate-authority-linkage-repaire) |
 
 ## Post-cutover pages
 
@@ -49,5 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 619–638 | 20 | [000619-000668.md](pages/000619-000668.md) |
+| 619–639 | 21 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |
