@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001",
+  "status": "frozen-intake",
+  "task_id": "T-055",
+  "claim_ids": [
+    "B3-BCC-STRUCT",
+    "C1-LORENTZ-KIN",
+    "C2-LORENTZ-EMERGENT",
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": ["C6-BCC-PREMISE-BLOCKED"],
+  "questions": [
+    "Which truncated-octahedron statements are exact geometry or integration methods rather than BCC vacuum-selection claims?",
+    "Which BCC global-selection arguments survive corrected coefficients, hostile competitor checks, and current conventions?",
+    "Does any source compare the candidate and empty/disordered reference with one Hamiltonian and common normalization?",
+    "Which anisotropy and Brillouin-zone bounds remain reusable after the BCC premise is removed?",
+    "Which claims require thermodynamic, continuum, stability, or error-control work before current use?"
+  ],
+  "source_globs": [
+    "Docs/math/TECT-Math320*.tex.txt",
+    "Docs/math/TECT-Math339*.tex.txt",
+    "Docs/math/TECT-Math396*.tex.txt",
+    "Docs/math/TECT-Math399*.tex.txt",
+    "Docs/math/TECT-Math400*.tex.txt",
+    "Docs/math/TECT-Math57*.tex.txt",
+    "Docs/math/TECT-Math_IR_Bound-v4*.tex.txt",
+    "Codes/supplementary/Math320*.py",
+    "Codes/supplementary/Math396*.py",
+    "Codes/supplementary/Math400*.py",
+    "Codes/supplementary/Math57*.py",
+    "Codes/supplementary/Math_IR_Bound*.py",
+    "Runs/math396/*.json",
+    "Runs/math400/*.json"
+  ],
+  "exclude_globs": ["**/__pycache__/**"],
+  "required_checks": [
+    "full SHA-256 preservation and source dependency closure",
+    "production-kernel convention and normalization crosswalk",
+    "computed-number versus printed-verdict consistency",
+    "same-Hamiltonian candidate-minus-empty-reference sign",
+    "transverse stability and competitor coverage",
+    "thermodynamic, continuum, and error-control scope",
+    "separate exact truncated-octahedron geometry from physical selection"
+  ],
+  "expected_honest_outcomes": [
+    "Exact truncated-octahedron and Brillouin-zone methods may remain reusable.",
+    "The legacy BCC structural/vacuum-selection lineage contains superseded and refuted branches.",
+    "No legacy relative ranking may be promoted to a below-empty-reference result without the current reference contract."
+  ],
+  "boundary": "This intake preserves and triages candidate sources. It does not promote C1, C2, C6, T-055, BCC selection, physical vacuum selection, a common causal cone, or spacetime emergence.",
+  "next_step": "Complete per-source extraction and dependency/run closure, then execute the frozen checks before any current integration."
+}

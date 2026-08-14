@@ -6,8 +6,8 @@
   },
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
-    "RESULTS-LEDGER.md": "36ea4098ba4490640dad4cdf9a30d34aba5993ae31591492918ed59301484d6d",
-    "changelog/log.jsonl": "574e2b3656d49cf68f56ce314c95061e50ed8c7d54fd47cf1d3bea749e9f21b3",
+    "RESULTS-LEDGER.md": "92058c45dafb510d3bdd2cc988a19804984e8a9d1cdc2ab706fcdcabd8c6af84",
+    "changelog/log.jsonl": "9a6828b82dece89d93995e59c69e68baf429c84270f056cbf60d967bed2029f9",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -57,10 +57,10 @@
     "claims/F1-COSMO-DARK-SECTOR/status.json": "41e0c2e92f754fc2a2f8501b95169d98c0f3cfc130be27ae9d31246c406b5179",
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
-    "claims/GATES.md": "03502d54f456d9c1a61466c16e8653d7d6f14f0f9b8c24e202ca83dc6a40dd5e",
-    "explorations/log.jsonl": "f1d732580b7ec173dda0ac3a2a581fa42b26888c8d4274b569c828c039574787",
+    "claims/GATES.md": "9a88f57edabddc3c3b4d05b6007428e51e7970ed966181036d7d9a76365f1708",
+    "explorations/log.jsonl": "1b6a0134373f33afcf131b058e5c2cb4afb5ae6ed207546369405e7e2e729285",
     "negative-results/registry.md": "638049557a5488630fd21c16f82a089f4206fdb18f924400fbac0dae8bcc93b6",
-    "todo/todo.json": "0197e039f79bad0cc996ca1783ca3c4155dc0dd1a136bca241d1a296be55b27c"
+    "todo/todo.json": "1baffdf5eaec5cceed0e41f5ef3099bdda084f5740f88e1476a35c863a8a8eac"
   },
   "coverage": {
     "status_cards": 49,
@@ -68,20 +68,20 @@
     "refuted_claims": 1,
     "reusable_results": 169,
     "negative_records": 372,
-    "proof_explorations": 858,
+    "proof_explorations": 861,
     "exploration_verdicts": {
-      "advanced": 524,
+      "advanced": 527,
       "failed": 235,
       "inconclusive": 70,
       "parked": 29
     },
     "process_grade_lessons": 3,
-    "accepted_events": 641,
-    "tasks": 55,
-    "live_tasks": 10,
+    "accepted_events": 645,
+    "tasks": 57,
+    "live_tasks": 12,
     "completed_tasks": 45,
     "open_gates": 18,
-    "current_route_gates": 19,
+    "current_route_gates": 21,
     "sectors": 6,
     "proof_notes": 414,
     "proof_pdfs": 395,
@@ -89,7 +89,7 @@
     "unordered_root_pdfs": 9,
     "proof_notes_without_sibling_pdf": 19,
     "proof_notes_with_incomplete_historical_footer": 118,
-    "run_json": 782,
+    "run_json": 785,
     "claim_manifests": 124,
     "bundle_manifests": 40,
     "bundle_embedded_manifests": 45
@@ -2631,6 +2631,19 @@
           "EXP-000858",
           "R-169"
         ]
+      },
+      {
+        "event": "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
+        "claim_ids": [
+          "EXP-000860",
+          "R-169"
+        ]
+      },
+      {
+        "event": "20260814-correct-t-057-to-selective-main-line-legacy-pre",
+        "claim_ids": [
+          "EXP-000861"
+        ]
       }
     ],
     "event_unregistered_negative_tags": [
@@ -2707,11 +2720,13 @@
         "C6-BCC-PREMISE-BLOCKED",
         "GAP-3",
         "H-SUPPRESSION-DISCHARGE",
+        "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
         "PRED-G-FREEZE",
         "SCHEME-2LOOP"
       ],
       "live_tasks": [
-        "T-055"
+        "T-055",
+        "T-057"
       ]
     },
     {
@@ -2759,6 +2774,32 @@
       "claim": "C6-SPACETIME-SIGNATURE",
       "gate": "C6-BCC-PREMISE-BLOCKED",
       "note": "Operator priority 2026-08-14. The object is truncated-octahedron geometry, not BCC as a premise. Use natural analogues only as calibrated diagnostics: BCC Voronoi cells for exact 14-face combinatorics, Kelvin-type foams for interface observables, the named Weaire--Phelan two-cell partition as an interface-energy negative control, and growing-bubble coarsening for rescaled cell-topology/defect attractor tests. Derive any one-, two-, three- or higher-motif candidate class from the frozen Reading-H soft spectrum, symmetry representations, conserved quantities and resonances; preregister its component cutoff and full allowed invariant basis rather than adding motifs post hoc. For every two-motif candidate, derive the complete A/B cross-coupling and resonant-phase energy, prove boundedness and compare the stable mixed branch against pure A, pure B and disordered reference under one renormalization convention; a changed charge ensemble is a distinct owner. An algorithmic Reading-H gradient-flow parameter is not physical time. First freeze center-extraction alternatives, enumerate BCC and non-BCC realizations under one renormalization convention, and test F_ren[realization]-F_ren[0] < 0. Only a surviving sign proceeds to transverse Hessian stability and thermodynamic/continuum control. Q3LOCK is auxiliary evidence.",
+      "created": "2026-08-14",
+      "updated": "2026-08-14",
+      "blocked_by": [],
+      "status_normalized": "in_progress"
+    },
+    {
+      "id": "T-056",
+      "title": "Literature-first proof gate and legacy-evidence audit rollout",
+      "status": "in_progress",
+      "owner": "Codex",
+      "claim": null,
+      "gate": "LITERATURE-FIRST-APPLICABILITY-AUDIT",
+      "note": "Create applicability records for live QFT/GR/Reading-H routes; block promotion until source, hypothesis crosswalk, reproduction and independent objection dispositions are recorded.",
+      "created": "2026-08-14",
+      "updated": "2026-08-14",
+      "blocked_by": [],
+      "status_normalized": "in_progress"
+    },
+    {
+      "id": "T-057",
+      "title": "Selective legacy preservation, retrieval, and gate-by-gate revalidation",
+      "status": "in_progress",
+      "owner": "AI+operator",
+      "claim": "C6-SPACETIME-SIGNATURE",
+      "gate": "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
+      "note": "Policy: governance/legacy-research-knowledge-base.md. Contents remains the maintained full corpus; no wholesale copy or all-path completion target remains. TECT retains all 66 existing compatibility payloads, 49 newly selected readable reference copies, 115 selected source identities, 24 reviewed assessments, and the 50-source LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001 batch. FTS5 plus deterministic hashed-TFIDF retrieval uses hash-verified repository copies, with dense multilingual semantics explicitly unconfigured until a local model is pinned. Next: complete exact per-source extraction and dependency closure for the active batch, rerun under current conventions, independently audit, and integrate or reject only the surviving methods and results. Resolve other legacy claim pointers on demand from live gates. Selection, copies, summaries, search, or matching hashes do not change a claim tier or close a physical-vacuum, C6, Sector A, or Pre-A gate.",
       "created": "2026-08-14",
       "updated": "2026-08-14",
       "blocked_by": [],
@@ -3103,7 +3144,7 @@
       ],
       "definition": {
         "statement": "C6-SPACETIME-SIGNATURE previously depended on B3-BCC-STRUCT for a physical BCC-structure premise. B3-BCC-STRUCT is REFUTED/RETIRED (R-2026-06-23-b3-bcc-structural-selection); its only survivor B3-RH-TESTED-STRUCTURE-RANKING supplies a restricted relative ranking within the tested ensemble, which does NOT supply a BCC-structure premise. C6 therefore has no valid structural input.",
-        "discharge_path": "BLOCKED -- operator review required (2026-06-23). To unblock, a physical BCC structure must be re-established (F[Psi_min]<F[0], lambda_min^perp>=0 symmetry-projected, N->inf on the canonical PDE background); only then may C6 depend on it. EXP-000851 / R-169 v1.0 proves one exact BCC Voronoi fixture, an affine- combinatorial nonuniqueness family, and conditional matched-renormalization sign/transverse-stability reductions. It computes no canonical TECT or Reading-H realization energy and identifies no physical-empty reference. The retired BCC premise is not resurrected; this gate and its physical programme remain OPEN. EXP-000852 / R-169 v1.1 rejects one explicit BCC-periodic field family inside the fixed neutral P1/A2 functional with an exact positive empty-reference margin. It does not identify that field with Reading-H, construct a physical empty reference, or show that every TECT realization is in the P1 scope. The Reading-H interface remains OPEN, so this gate and its physical programme remain OPEN. EXP-000858 / R-169 v1.2 closes only covariance/mean-field type separation, deterministic equivariant nonextraction, scalar nonlinear-convention and side-16 shell-commensurability children. It constructs no Reading-H mean field, matched full energy, below-empty branch, stable realization or continuum physical state. The Reading-H interface, this gate and its physical programme remain OPEN. <a id=\"a3-h1-dim3-q4-kernel\"></a>",
+        "discharge_path": "BLOCKED -- operator review required (2026-06-23). To unblock, a physical BCC structure must be re-established (F[Psi_min]<F[0], lambda_min^perp>=0 symmetry-projected, N->inf on the canonical PDE background); only then may C6 depend on it. EXP-000851 / R-169 v1.0 proves one exact BCC Voronoi fixture, an affine- combinatorial nonuniqueness family, and conditional matched-renormalization sign/transverse-stability reductions. It computes no canonical TECT or Reading-H realization energy and identifies no physical-empty reference. The retired BCC premise is not resurrected; this gate and its physical programme remain OPEN. EXP-000852 / R-169 v1.1 rejects one explicit BCC-periodic field family inside the fixed neutral P1/A2 functional with an exact positive empty-reference margin. It does not identify that field with Reading-H, construct a physical empty reference, or show that every TECT realization is in the P1 scope. The Reading-H interface remains OPEN, so this gate and its physical programme remain OPEN. EXP-000858 / R-169 v1.2 closes only covariance/mean-field type separation, deterministic equivariant nonextraction, scalar nonlinear-convention and side-16 shell-commensurability children. It constructs no Reading-H mean field, matched full energy, below-empty branch, stable realization or continuum physical state. The Reading-H interface, this gate and its physical programme remain OPEN. EXP-000860 / R-169 v1.3 identifies one explicit native zero-phase BCC branch and proves that it loses to the isotropic `G_*` reference. It supplies no physical-empty sign, transverse or continuum stability, limit theorem, or candidate-completeness result. This is not a resurrection of the retired BCC premise; this gate and its physical programme remain OPEN. <a id=\"a3-h1-dim3-q4-kernel\"></a>",
         "statement_summary": "C6-SPACETIME-SIGNATURE previously depended on B3-BCC-STRUCT for a physical BCC-structure premise. B3-BCC-STRUCT is REFUTED/RETIRED (R-2026-06-23-b3-bcc-structural-selection); its only survivor B3-RH-TESTED-STRUCTURE-RANKING supplies a restricted relative ranking within the tested ensemble, which does NOT supply a BCC-structure premise. C6 therefore has no valid structural input.",
         "status_summary": ""
       },
@@ -3197,7 +3238,7 @@
       "live_tasks": [],
       "definition": {
         "statement": "Falsifiability: at least one observable deviation predicted before fitting",
-        "status": "OPEN ## Named gates | Gate | Summary | |---|---| | [**STEP-5B**](#step-5b) | CLOSED-CONDITIONAL … | | [**G3PB-III**](#g3pb-iii) | CLOSED@CROSS-CHECK | | [**G1PP-3B-HEX**](#g1pp-3b-hex) | CLOSED within H-layer scope … | | [**ESTIMATOR-UPGRADE**](#estimator-upgrade) | CLOSED@CONTROLLED-ERROR … | | [**ROBUSTNESS-MU2**](#robustness-mu2) | CLOSED@[x0.5,x2]-2ND-CUMULANT | | [**H-SUPPRESSION-DISCHARGE**](#h-suppression-discharge) | OPEN | | [**G-A0-DUI**](#g-a0-dui) | CLOSED | | [**M-ENDPOINT**](#m-endpoint) | RESOLVED | | [**GHAT3-Q0**](#ghat3-q0) | OPEN … | | [**GHAT4-PERTRANSFER**](#ghat4-pertransfer) | OPEN | | [**R-U6-1**](#r-u6-1) | DISCHARGED 2026-06-12 … | | [**H-ENDPOINT-THINNESS-ACCEPTED**](#h-endpoint-thinness-accepted) | REMOVED 2026-06-12 … | | [**H-NONLATTICE-REMAINDER-EXCLUDED**](#h-nonlattice-remainder-excluded) | RECLASSIFIED 2026-06-13 … | | [**R-U6-2**](#r-u6-2) | DISCHARGED 2026-06-12 … | | [**DR2-SHARE**](#dr2-share) | MOOT for the lattice mainline … | | [**CP-UNITARITY**](#cp-unitarity) | OPEN | | [**SCHEME-2LOOP**](#scheme-2loop) | OPEN … | | [**PRED-G-FREEZE**](#pred-g-freeze) | OPEN | <a id=\"step-5b\"></a>",
+        "status": "OPEN ## Named gates | Gate | Summary | |---|---| | [**STEP-5B**](#step-5b) | CLOSED-CONDITIONAL … | | [**G3PB-III**](#g3pb-iii) | CLOSED@CROSS-CHECK | | [**G1PP-3B-HEX**](#g1pp-3b-hex) | CLOSED within H-layer scope … | | [**ESTIMATOR-UPGRADE**](#estimator-upgrade) | CLOSED@CONTROLLED-ERROR … | | [**ROBUSTNESS-MU2**](#robustness-mu2) | CLOSED@[x0.5,x2]-2ND-CUMULANT | | [**H-SUPPRESSION-DISCHARGE**](#h-suppression-discharge) | OPEN | | [**G-A0-DUI**](#g-a0-dui) | CLOSED | | [**M-ENDPOINT**](#m-endpoint) | RESOLVED | | [**GHAT3-Q0**](#ghat3-q0) | OPEN … | | [**GHAT4-PERTRANSFER**](#ghat4-pertransfer) | OPEN | | [**R-U6-1**](#r-u6-1) | DISCHARGED 2026-06-12 … | | [**H-ENDPOINT-THINNESS-ACCEPTED**](#h-endpoint-thinness-accepted) | REMOVED 2026-06-12 … | | [**H-NONLATTICE-REMAINDER-EXCLUDED**](#h-nonlattice-remainder-excluded) | RECLASSIFIED 2026-06-13 … | | [**R-U6-2**](#r-u6-2) | DISCHARGED 2026-06-12 … | | [**DR2-SHARE**](#dr2-share) | MOOT for the lattice mainline … | | [**CP-UNITARITY**](#cp-unitarity) | OPEN | | [**SCHEME-2LOOP**](#scheme-2loop) | OPEN … | | [**PRED-G-FREEZE**](#pred-g-freeze) | OPEN | | [**LITERATURE-FIRST-APPLICABILITY-AUDIT**](#literature-first-applicability-audit) | OPEN; T-056 rollout | | [**LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION**](#legacy-selective-index-and-on-demand-revalidation) | OPEN; T-057 rollout | <a id=\"step-5b\"></a>",
         "statement_summary": "Falsifiability: at least one observable deviation predicted before fitting",
         "status_summary": "OPEN"
       },
@@ -3223,6 +3264,44 @@
       "path": "claims/GATES.md#h-suppression-discharge"
     },
     {
+      "id": "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
+      "owners": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_card_owners": [],
+      "live_task_owners": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "live_tasks": [
+        "T-057"
+      ],
+      "definition": {
+        "statement": "Preserve exact path/hash provenance, readable copies, reviewed assessments, and generated navigation for legacy sources selected by a live task/claim/gate question. Before integration, every load-bearing import must receive a current applicability and revalidation disposition. The maintained Contents corpus is not a bulk-copy or whole-corpus completion target.",
+        "status": "OPEN (2026-08-14). T-057 retains all 66 existing compatibility payloads, preserves readable copies of 49 newly selected important sources, normalizes 24 reviewed research records over 115 selected source identities, and freezes a 50-source first T-055 batch. The first batch still requires exact per-source extraction, dependency closure, current-convention reruns, independent audit, and formal integration or rejection. Search, summaries, copies, and matching hashes do not close a physical claim or change a tier.",
+        "source": "`governance/legacy-research-knowledge-base.md`, `archive/legacy/RESEARCH-INDEX.md`, and task `T-057`. ## Named hypotheses | Hypothesis | Summary | |---|---| | [**H-LAYER**](#h-layer) | DISCHARGED@T7 … | | [**A1-KERNEL-CONV**](#a1-kernel-conv) | DEFINITIONAL INPUT … | | [**G1-OFFDIAG-MARGIN**](#g1-offdiag-margin) | CLOSED@2026-06-10 … | | [**G2-EXTERNAL-REFEREE**](#g2-external-referee) | OPEN … | | [**G3-OPERATOR-SIGNOFF**](#g3-operator-signoff) | CLOSED@2026-06-10 … | | [**EXT-EXTREMAL**](#ext-extremal) | T2 CONJECTURE … | | [**H-ADM-COH**](#h-adm-coh) | Unrestricted-class closure via DR-2 … | | [**H-ANCHOR**](#h-anchor) | Off-anchor neighbourhood = ROBUSTNESS-MU2 … | | [**SC-SCOPE**](#sc-scope) | The all-orders lift is OPEN until ALL FOUR named inputs are completed … | | [**H-A0**](#h-a0) | REPLACED 2026-06-06 by H-ANCHOR + G-A0-DUI via the sign-decomposition theorem … | | [**H-SUPPRESSION**](#h-suppression) | H-SUPPRESSION-DISCHARGE | | [**H-LEGACY-CHAIN**](#h-legacy-chain) | `governance/migration-plan.md` M2 | | [**H-CP2-BUNDLE-DATA**](#h-cp2-bundle-data) | Migration … | | [**A2-H1-KERNEL-POSITIVITY**](#a2-h1-kernel-positivity) | SATISFIED@anchor (mu^2>0) … | | [**A2-H2-SEXTIC-COERCIVITY**](#a2-h2-sextic-coercivity) | SATISFIED@anchor (gamma>0) … | | [**C6-BCC-PREMISE-BLOCKED**](#c6-bcc-premise-blocked) | BLOCKED -- BCC-structure premise unavailable … | | [**A3-H1-DIM3-Q4-KERNEL**](#a3-h1-dim3-q4-kernel) | d=3 with q^4 kernel => D<0 … | | [**A3-H2-IR-POSITIVITY**](#a3-h2-ir-positivity) | mu^2>0 => K>=mu^2>0 (IR finite) … | | [**A1-SHELL-POSITIVITY**](#a1-shell-positivity) | Y>0, Z<0, m_sh^2>0 (analytic branch) … | | [**A3-GRAPHWISE-CONVERGENCE**](#a3-graphwise-convergence) | CLOSED@spectral (T6 ratified 2026-06-23); lattice=Route B open … | <a id=\"h-layer\"></a>",
+        "statement_summary": "Preserve exact path/hash provenance, readable copies, reviewed assessments, and generated navigation for legacy sources selected by a live task/claim/gate question. Before integration, every load-bearing import must receive a current applicability and revalidation disposition. The maintained Contents corpus is not a bulk-copy or whole-corpus completion target.",
+        "status_summary": "OPEN (2026-08-14). T-057 retains all 66 existing compatibility payloads, preserves readable copies of 49 newly selected important sources, normalizes 24 reviewed research records over 115 selected source identities, and freezes a 50-source first T-055 batch. The first batch still requires exact per-source extraction, dependency closure, current-convention reruns, independent audit, and formal integration or rejection. Search, summaries, copies, and matching hashes do not close a physical claim or change a tier."
+      },
+      "path": "claims/GATES.md#legacy-selective-index-and-on-demand-revalidation"
+    },
+    {
+      "id": "LITERATURE-FIRST-APPLICABILITY-AUDIT",
+      "owners": [],
+      "claim_card_owners": [],
+      "live_task_owners": [],
+      "live_tasks": [
+        "T-056"
+      ],
+      "definition": {
+        "statement": "Before a new substantive route, T4-or-higher result, promotion, or physical conclusion uses an external, legacy, or earlier internal theorem as a load-bearing input, record the exact target, stable source locator, hypothesis-to-model crosswalk, imported conclusion and scope, independent-check disposition, adversarial checks, and the residual proposition. A failed or unassessed load-bearing hypothesis blocks promotion; a search result or citation alone does not discharge this gate.",
+        "status": "OPEN (2026-08-14). T-056 owns the initial QFT/GR/Reading-H audit for `B1-RH-ENUM`, `C4-GRAVITY-1LOOP`, `C5-NEWTON-G`, and `C6-SPACETIME-SIGNATURE`. The policy and enforcement contract are installed, but the initial applicability records and their independent objection dispositions are not complete. Closure of this rollout gate would certify only that those declared imports were classified under the policy; it would not prove novelty, validate every item in the literature, or promote any physical claim.",
+        "source": "`governance/literature-first-proof-gate.md`; task `T-056`. <a id=\"legacy-selective-index-and-on-demand-revalidation\"></a>",
+        "statement_summary": "Before a new substantive route, T4-or-higher result, promotion, or physical conclusion uses an external, legacy, or earlier internal theorem as a load-bearing input, record the exact target, stable source locator, hypothesis-to-model crosswalk, imported conclusion and scope, independent-check disposition, adversarial checks, and the residual proposition. A failed or unassessed load-bearing hypothesis blocks promotion; a search result or citation alone does not discharge this gate.",
+        "status_summary": "OPEN (2026-08-14). T-056 owns the initial QFT/GR/Reading-H audit for `B1-RH-ENUM`, `C4-GRAVITY-1LOOP`, `C5-NEWTON-G`, and `C6-SPACETIME-SIGNATURE`. The policy and enforcement contract are installed, but the initial applicability records and their independent objection dispositions are not complete. Closure of this rollout gate would certify only that those declared imports were classified under the policy; it would not prove novelty, validate every item in the literature, or promote any physical claim."
+      },
+      "path": "claims/GATES.md#literature-first-applicability-audit"
+    },
+    {
       "id": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
       "owners": [],
       "claim_card_owners": [],
@@ -3232,7 +3311,7 @@
       ],
       "definition": {
         "statement": "Before scoring or selecting any Pre-A round-one candidate, freeze the complete evidence and clue register with an explicit role for each item, admit every contestant under the same minimum manifest fields, separate bridge infrastructure from contestants, and declare one common reference/observable/input ledger, one non-fitting validation prediction, and one robustness envelope. Scoped failures may eliminate only the exact mechanism and parameter contract that was tested.",
-        "status": "OPEN (2026-08-11). EXP-000791 freezes a bounded T-053 evidence-role inventory, common categorical matrix, explicit absence fields, reference rules, and robustness boundaries. It independently derives the M2 quadratic cone and computes that none of M1/M2/M5 survives all hard admission rows; M0 remains the effective baseline. The visible helium target predates the new stiffness observable map, so its exact mismatch is retrospective and receives no validation credit. EXP-000807 / R-168 v1.0 now closes four schema and audit subgates: the common estimand/map split, prospective provenance-order protocol, anti-leakage schema validator, and exact current-checkpoint empty-admission audit. At audited commit `99157442831c0e44d425b5d5f8cd78856c57da53` there are zero official freeze records, zero locally registered `freeze/*` tags observed at audit execution, zero admitted microscopic survivors, and no admitted M1/M2/M5 map with a nonempty prediction. The tag observation is local only; no remote ref or custodian signature was verified. The parent gate remains open until a genuinely prospective external commitment and admitted microscopic observable map with a nonempty prediction are frozen before disclosure and independently verified. EXP-000810 / R-168 v1.1 proves that the exact current hash-pinned M1/M2/M5 map-only admitted set is empty, and that even a hypothetical map-only new version has no all-PASS survivor under the ten frozen hard rows. It also closes a 48-component finite-torus Gaussian M2 fingerprint. Neither result is an admitted physical response map, an error-controlled prediction, or a prospective freeze; the parent gate remains OPEN. EXP-000812 / R-168 v1.2 additionally proves that a fixed linear scalar probe does not identify second-order response without a frozen quadratic contact and closes only the minimum successor syntax/declared-binding schema. It supplies no physical control law, actual candidate, state/reference realization, response map, error budget, prediction or external prospective commitment. The physical-response gate and this Round-1 parent remain OPEN. EXP-000814 / R-168 v1.3 closes five exact T0, claim-nonbearing mathematical children but creates no compact action, winding law, ordered physical state, physical response, six-term physical error budget, candidate, prediction or freeze. The physical-response and Round-1 parents remain OPEN. Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1 into a contestant. No winner, shortlist, preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed. EXP-000826 as corrected by EXP-000827 / R-167 v2.6 adds four claim-nonbearing mathematical children and two scoped route failures only. It creates no candidate, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000828 / R-167 v2.7 adds one claim-nonbearing fixed-`M` local-SW remainder child and two scoped negative authorities. It creates no candidate, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000831 / R-167 v2.8 adds one claim-nonbearing fixed-complete-cluster, sufficiently-large-`N` Ritz-restricted local-SW child and one scoped configuration-multiplier point-norm boundary. It creates no candidate, common estimand, microscopic observable map, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000833 / R-167 v2.9 closes four claim-nonbearing scoped mathematical children and registers three implication failures. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000834 / R-167 v3.0 adds three claim-nonbearing scoped mathematical children and one implication failure. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000835 / R-167 v3.1 adds one claim-nonbearing finite-volume essential-range multiplier theorem and its joint standard-cylinder scalarity corollary. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000836 / R-167 v3.2 adds one claim-nonbearing abstract conditional zero-temperature transfer theorem and one fixed-witness collapse negative. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000837 / R-167 v3.3 adds one claim-nonbearing fixed-Ritz mathematical child. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000838 / R-167 v3.4 adds two claim-nonbearing conditional reductions and one exact Hilbert--Schmidt multiplicity obstruction. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000839 / R-167 v3.5 adds two claim-nonbearing cutoff-passage lemmas and four exact implication failures. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000840 / R-167 v3.6 adds one exact registered-corridor specialization and one conditional first-Duhamel cutoff lemma. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000841 / R-167 v3.7 adds one claim-nonbearing first-Duhamel full-oscillator cutoff-removal theorem. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000842 / R-167 v3.8 adds one claim-nonbearing fixed-`N` categorical carrier/KMS child and one scoped quotient-factorization failure. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000843 / R-167 v3.9 adds only two conditional abstract lemmas and one non-Q3 logical fixture. It selects no evidence role or candidate functional and freezes no Round-1 manifest. This parent remains OPEN. EXP-000844 / R-167 v4.0 closes one exact-Q3 categorical ground-pair child only. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000845 / R-167 v4.1 adds one scoped categorical GNS form-core/Rayleigh reduction and one finite-source route no-go. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000846 / R-167 v4.2 adds one conditional integrated-orbit-smear spatial quotient and same-net ground-transfer child. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000851 / R-169 v1.0 adds two scoped T0, claim-nonbearing reductions and two exact implication failures. It freezes neither a Reading-H center rule nor a TECT realization, parent functional/reference pair, counterterm finite parts, error budget, transverse form, prospective prediction, custodian commitment, or score. Round-1 remains OPEN. EXP-000852 / R-169 v1.1 constructs and rejects one exact BCC-periodic field inside the already hash-pinned neutral P1/A2 functional. It supplies no Reading-H-to-field map, admitted microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000858 / R-169 v1.2 closes only two T0 interface-audit children. It separates covariance data from a selected mean field and proves exact nonlinear-convention and side-16 commensurability firewalls, but creates no Reading-H realization, admitted microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN.",
+        "status": "OPEN (2026-08-11). EXP-000791 freezes a bounded T-053 evidence-role inventory, common categorical matrix, explicit absence fields, reference rules, and robustness boundaries. It independently derives the M2 quadratic cone and computes that none of M1/M2/M5 survives all hard admission rows; M0 remains the effective baseline. The visible helium target predates the new stiffness observable map, so its exact mismatch is retrospective and receives no validation credit. EXP-000807 / R-168 v1.0 now closes four schema and audit subgates: the common estimand/map split, prospective provenance-order protocol, anti-leakage schema validator, and exact current-checkpoint empty-admission audit. At audited commit `99157442831c0e44d425b5d5f8cd78856c57da53` there are zero official freeze records, zero locally registered `freeze/*` tags observed at audit execution, zero admitted microscopic survivors, and no admitted M1/M2/M5 map with a nonempty prediction. The tag observation is local only; no remote ref or custodian signature was verified. The parent gate remains open until a genuinely prospective external commitment and admitted microscopic observable map with a nonempty prediction are frozen before disclosure and independently verified. EXP-000810 / R-168 v1.1 proves that the exact current hash-pinned M1/M2/M5 map-only admitted set is empty, and that even a hypothetical map-only new version has no all-PASS survivor under the ten frozen hard rows. It also closes a 48-component finite-torus Gaussian M2 fingerprint. Neither result is an admitted physical response map, an error-controlled prediction, or a prospective freeze; the parent gate remains OPEN. EXP-000812 / R-168 v1.2 additionally proves that a fixed linear scalar probe does not identify second-order response without a frozen quadratic contact and closes only the minimum successor syntax/declared-binding schema. It supplies no physical control law, actual candidate, state/reference realization, response map, error budget, prediction or external prospective commitment. The physical-response gate and this Round-1 parent remain OPEN. EXP-000814 / R-168 v1.3 closes five exact T0, claim-nonbearing mathematical children but creates no compact action, winding law, ordered physical state, physical response, six-term physical error budget, candidate, prediction or freeze. The physical-response and Round-1 parents remain OPEN. Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1 into a contestant. No winner, shortlist, preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed. EXP-000826 as corrected by EXP-000827 / R-167 v2.6 adds four claim-nonbearing mathematical children and two scoped route failures only. It creates no candidate, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000828 / R-167 v2.7 adds one claim-nonbearing fixed-`M` local-SW remainder child and two scoped negative authorities. It creates no candidate, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000831 / R-167 v2.8 adds one claim-nonbearing fixed-complete-cluster, sufficiently-large-`N` Ritz-restricted local-SW child and one scoped configuration-multiplier point-norm boundary. It creates no candidate, common estimand, microscopic observable map, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000833 / R-167 v2.9 closes four claim-nonbearing scoped mathematical children and registers three implication failures. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000834 / R-167 v3.0 adds three claim-nonbearing scoped mathematical children and one implication failure. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000835 / R-167 v3.1 adds one claim-nonbearing finite-volume essential-range multiplier theorem and its joint standard-cylinder scalarity corollary. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000836 / R-167 v3.2 adds one claim-nonbearing abstract conditional zero-temperature transfer theorem and one fixed-witness collapse negative. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000837 / R-167 v3.3 adds one claim-nonbearing fixed-Ritz mathematical child. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000838 / R-167 v3.4 adds two claim-nonbearing conditional reductions and one exact Hilbert--Schmidt multiplicity obstruction. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000839 / R-167 v3.5 adds two claim-nonbearing cutoff-passage lemmas and four exact implication failures. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000840 / R-167 v3.6 adds one exact registered-corridor specialization and one conditional first-Duhamel cutoff lemma. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000841 / R-167 v3.7 adds one claim-nonbearing first-Duhamel full-oscillator cutoff-removal theorem. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000842 / R-167 v3.8 adds one claim-nonbearing fixed-`N` categorical carrier/KMS child and one scoped quotient-factorization failure. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000843 / R-167 v3.9 adds only two conditional abstract lemmas and one non-Q3 logical fixture. It selects no evidence role or candidate functional and freezes no Round-1 manifest. This parent remains OPEN. EXP-000844 / R-167 v4.0 closes one exact-Q3 categorical ground-pair child only. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000845 / R-167 v4.1 adds one scoped categorical GNS form-core/Rayleigh reduction and one finite-source route no-go. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000846 / R-167 v4.2 adds one conditional integrated-orbit-smear spatial quotient and same-net ground-transfer child. It creates no contestant, microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000851 / R-169 v1.0 adds two scoped T0, claim-nonbearing reductions and two exact implication failures. It freezes neither a Reading-H center rule nor a TECT realization, parent functional/reference pair, counterterm finite parts, error budget, transverse form, prospective prediction, custodian commitment, or score. Round-1 remains OPEN. EXP-000852 / R-169 v1.1 constructs and rejects one exact BCC-periodic field inside the already hash-pinned neutral P1/A2 functional. It supplies no Reading-H-to-field map, admitted microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000858 / R-169 v1.2 closes only two T0 interface-audit children. It separates covariance data from a selected mean field and proves exact nonlinear-convention and side-16 commensurability firewalls, but creates no Reading-H realization, admitted microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN. EXP-000860 / R-169 v1.3 owns one exact native Reading-H zero-phase BCC orbit/cell and the inherited native Q-versus-`G_*` comparison. It supplies no admitted microscopic observable map, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN.",
         "statement_summary": "Before scoring or selecting any Pre-A round-one candidate, freeze the complete evidence and clue register with an explicit role for each item, admit every contestant under the same minimum manifest fields, separate bridge infrastructure from contestants, and declare one common reference/observable/input ledger, one non-fitting validation prediction, and one robustness envelope. Scoped failures may eliminate only the exact mechanism and parameter contract that was tested.",
         "status_summary": "OPEN (2026-08-11). EXP-000791 freezes a bounded T-053 evidence-role inventory, common categorical matrix, explicit absence fields, reference rules, and robustness boundaries. It independently derives the M2 quadratic cone and computes that none of M1/M2/M5 survives all hard admission rows; M0 remains the effective baseline. The visible helium target predates the new stiffness observable map, so its exact mismatch is retrospective and receives no validation credit. EXP-000807 / R-168 v1.0 now closes four schema and audit subgates: the common estimand/map split, prospective provenance-order protocol, anti-leakage schema validator, and exact current-checkpoint empty-admission audit. At audited commit `99157442831c0e44d425b5d5f8cd78856c57da53` there are zero official freeze records, zero locally registered `freeze/*` tags observed at audit execution, zero admitted microscopic survivors, and no admitted M1/M2/M5 map with a nonempty prediction. The tag observation is local only; no remote ref or custodian signature was verified. The parent gate remains open until a genuinely prospective external commitment and admitted microscopic observable map with a nonempty prediction are frozen before disclosure and independently verified. EXP-000810 / R-168 v1.1 proves that the exact current hash-pinned M1/M2/M5 map-only admitted set is empty, and that even a hypothetical map-only new version has no all-PASS survivor under the ten frozen hard rows. It also closes a 48-component finite-torus Gaussian M2 fingerprint. Neither result is an admitted physical response map, an error-controlled prediction, or a prospective freeze; the parent gate remains OPEN. EXP-000812 / R-168 v1.2 additionally proves that a fixed linear scalar probe does not identify second-order response without a frozen quadratic contact and closes only the minimum successor syntax/declared-binding schema. It supplies no physical control law, actual candidate, state/reference realization, response map, error budget, prediction or external prospective commitment. The physical-response gate and this Round-1 parent remain OPEN. EXP-000814 / R-168 v1.3 closes five exact T0, claim-nonbearing mathematical children but creates no compact action, winding law, ordered physical state, physical response, six-term physical error budget, candidate, prediction or freeze. The physical-response and Round-1 parents remain OPEN. Published EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1 into a contestant. No winner, shortlist, preferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional Sector-A closure is licensed."
       },
@@ -3251,7 +3330,7 @@
       "definition": {
         "statement": "Pre-registered input freeze for an independent $a_{\\rm BCC}$ → $G$ prediction",
         "status": "OPEN",
-        "source": "`predictions/prediction-ledger.md` ## Named hypotheses | Hypothesis | Summary | |---|---| | [**H-LAYER**](#h-layer) | DISCHARGED@T7 … | | [**A1-KERNEL-CONV**](#a1-kernel-conv) | DEFINITIONAL INPUT … | | [**G1-OFFDIAG-MARGIN**](#g1-offdiag-margin) | CLOSED@2026-06-10 … | | [**G2-EXTERNAL-REFEREE**](#g2-external-referee) | OPEN … | | [**G3-OPERATOR-SIGNOFF**](#g3-operator-signoff) | CLOSED@2026-06-10 … | | [**EXT-EXTREMAL**](#ext-extremal) | T2 CONJECTURE … | | [**H-ADM-COH**](#h-adm-coh) | Unrestricted-class closure via DR-2 … | | [**H-ANCHOR**](#h-anchor) | Off-anchor neighbourhood = ROBUSTNESS-MU2 … | | [**SC-SCOPE**](#sc-scope) | The all-orders lift is OPEN until ALL FOUR named inputs are completed … | | [**H-A0**](#h-a0) | REPLACED 2026-06-06 by H-ANCHOR + G-A0-DUI via the sign-decomposition theorem … | | [**H-SUPPRESSION**](#h-suppression) | H-SUPPRESSION-DISCHARGE | | [**H-LEGACY-CHAIN**](#h-legacy-chain) | `governance/migration-plan.md` M2 | | [**H-CP2-BUNDLE-DATA**](#h-cp2-bundle-data) | Migration … | | [**A2-H1-KERNEL-POSITIVITY**](#a2-h1-kernel-positivity) | SATISFIED@anchor (mu^2>0) … | | [**A2-H2-SEXTIC-COERCIVITY**](#a2-h2-sextic-coercivity) | SATISFIED@anchor (gamma>0) … | | [**C6-BCC-PREMISE-BLOCKED**](#c6-bcc-premise-blocked) | BLOCKED -- BCC-structure premise unavailable … | | [**A3-H1-DIM3-Q4-KERNEL**](#a3-h1-dim3-q4-kernel) | d=3 with q^4 kernel => D<0 … | | [**A3-H2-IR-POSITIVITY**](#a3-h2-ir-positivity) | mu^2>0 => K>=mu^2>0 (IR finite) … | | [**A1-SHELL-POSITIVITY**](#a1-shell-positivity) | Y>0, Z<0, m_sh^2>0 (analytic branch) … | | [**A3-GRAPHWISE-CONVERGENCE**](#a3-graphwise-convergence) | CLOSED@spectral (T6 ratified 2026-06-23); lattice=Route B open … | <a id=\"h-layer\"></a>",
+        "source": "`predictions/prediction-ledger.md` <a id=\"literature-first-applicability-audit\"></a>",
         "statement_summary": "Pre-registered input freeze for an independent $a_{\\rm BCC}$ → $G$ prediction",
         "status_summary": "OPEN"
       },
@@ -3330,8 +3409,10 @@
           "AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT",
           "NG-2026-legacy-convention"
         ],
-        "exploration_ids": [],
-        "latest_exploration_id": "",
+        "exploration_ids": [
+          "EXP-000860"
+        ],
+        "latest_exploration_id": "EXP-000860",
         "accepted_event_ids": [
           "20260605-m1-migration-sector-b-evidence-chain-migrated-r",
           "20260605-m1-reorg-archive-per-tag-layout-first-tsv2-theo",
@@ -3347,9 +3428,10 @@
           "20260613-b5-promoted-t6-conditional-t7-scope-on-the-admi",
           "20260613-b5-t7-scope-assignment-operator-confirmed-b5-be",
           "20260613-freeze-block-patches-main-line-synthesis-v1-5-s",
-          "20260720-align-sector-a-a1-a5-and-roadmap-records-2026-0"
+          "20260720-align-sector-a-a1-a5-and-roadmap-records-2026-0",
+          "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati"
         ],
-        "latest_event_id": "20260720-align-sector-a-a1-a5-and-roadmap-records-2026-0",
+        "latest_event_id": "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -3540,9 +3622,10 @@
           "EXP-000589",
           "EXP-000591",
           "EXP-000624",
-          "EXP-000858"
+          "EXP-000858",
+          "EXP-000860"
         ],
-        "latest_exploration_id": "EXP-000858",
+        "latest_exploration_id": "EXP-000860",
         "accepted_event_ids": [
           "20260717-register-p1-production-functional-variational-a",
           "20260717-close-p1-reference-functional-variational-scaff",
@@ -6354,9 +6437,10 @@
           "EXP-000725",
           "EXP-000852",
           "EXP-000856",
-          "EXP-000858"
+          "EXP-000858",
+          "EXP-000860"
         ],
-        "latest_exploration_id": "EXP-000858",
+        "latest_exploration_id": "EXP-000860",
         "accepted_event_ids": [
           "20260717-start-a2-full-production-pde-proof-candidate-20",
           "20260717-close-a2-full-production-nonlinear-mapping-audi",
@@ -8180,9 +8264,11 @@
           "EXP-000855",
           "EXP-000856",
           "EXP-000857",
-          "EXP-000858"
+          "EXP-000858",
+          "EXP-000859",
+          "EXP-000860"
         ],
-        "latest_exploration_id": "EXP-000858",
+        "latest_exploration_id": "EXP-000860",
         "accepted_event_ids": [
           "20260605-m1-migration-sector-b-evidence-chain-migrated-r",
           "20260605-m1-reorg-archive-per-tag-layout-first-tsv2-theo",
@@ -8267,9 +8353,11 @@
           "20260612-all-four-t-013-synthesis-notes-confirmed-and-re",
           "20260729-add-deduplicated-registered-results-synthesis-2",
           "20260814-r-169-v1-1-pinned-p1-bcc-periodic-realization-e",
-          "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface"
+          "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
+          "20260814-adopt-literature-first-proof-gate-and-legacy-ev",
+          "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati"
         ],
-        "latest_event_id": "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
+        "latest_event_id": "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -8549,8 +8637,10 @@
           "R-011"
         ],
         "negative_tags": [],
-        "exploration_ids": [],
-        "latest_exploration_id": "",
+        "exploration_ids": [
+          "EXP-000860"
+        ],
+        "latest_exploration_id": "EXP-000860",
         "accepted_event_ids": [
           "20260605-m1-migration-sector-b-evidence-chain-migrated-r",
           "20260605-m1-reorg-archive-per-tag-layout-first-tsv2-theo",
@@ -8601,9 +8691,10 @@
           "20260612-prop-a-v1-3-metadata-patch-residual-draft-clear",
           "20260612-main-line-synthesis-capstone-written-t-013-pare",
           "20260612-main-line-synthesis-t013-260612-published-opera",
-          "20260612-all-four-t-013-synthesis-notes-confirmed-and-re"
+          "20260612-all-four-t-013-synthesis-notes-confirmed-and-re",
+          "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati"
         ],
-        "latest_event_id": "20260612-all-four-t-013-synthesis-notes-confirmed-and-re",
+        "latest_event_id": "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -8689,16 +8780,19 @@
           "EXP-000591",
           "EXP-000592",
           "EXP-000847",
-          "EXP-000851"
+          "EXP-000851",
+          "EXP-000861"
         ],
-        "latest_exploration_id": "EXP-000851",
+        "latest_exploration_id": "EXP-000861",
         "accepted_event_ids": [
           "20260623-migration-batch4-b3-reframe-continuum",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
           "20260623-operator-review2-a2v12-b4-open-c6-blocked",
-          "20260814-r-169-v1-0-truncated-octahedron-realization-and"
+          "20260814-r-169-v1-0-truncated-octahedron-realization-and",
+          "20260814-legacy-research-knowledge-base-cutover-and-firs",
+          "20260814-correct-t-057-to-selective-main-line-legacy-pre"
         ],
-        "latest_event_id": "20260814-r-169-v1-0-truncated-octahedron-realization-and",
+        "latest_event_id": "20260814-correct-t-057-to-selective-main-line-legacy-pre",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -8775,16 +8869,18 @@
           "EXP-000855",
           "EXP-000856",
           "EXP-000857",
-          "EXP-000858"
+          "EXP-000858",
+          "EXP-000860"
         ],
-        "latest_exploration_id": "EXP-000858",
+        "latest_exploration_id": "EXP-000860",
         "accepted_event_ids": [
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
           "20260814-r-169-v1-0-truncated-octahedron-realization-and",
           "20260814-r-169-v1-1-pinned-p1-bcc-periodic-realization-e",
-          "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface"
+          "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
+          "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati"
         ],
-        "latest_event_id": "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
+        "latest_event_id": "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "ESTIMATOR-UPGRADE"
@@ -9919,12 +10015,16 @@
         "negative_tags": [
           "NG-2026-08-03-PRE-A-CP1-FINITE-C1-EQUILIBRIUM-STRICT-CONE"
         ],
-        "exploration_ids": [],
-        "latest_exploration_id": "",
-        "accepted_event_ids": [
-          "20260729-add-deduplicated-registered-results-synthesis-2"
+        "exploration_ids": [
+          "EXP-000861"
         ],
-        "latest_event_id": "20260729-add-deduplicated-registered-results-synthesis-2",
+        "latest_exploration_id": "EXP-000861",
+        "accepted_event_ids": [
+          "20260729-add-deduplicated-registered-results-synthesis-2",
+          "20260814-legacy-research-knowledge-base-cutover-and-firs",
+          "20260814-correct-t-057-to-selective-main-line-legacy-pre"
+        ],
+        "latest_event_id": "20260814-correct-t-057-to-selective-main-line-legacy-pre",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "H-SUPPRESSION-DISCHARGE"
@@ -9981,14 +10081,17 @@
         "negative_tags": [],
         "exploration_ids": [
           "EXP-000623",
-          "EXP-000624"
+          "EXP-000624",
+          "EXP-000861"
         ],
-        "latest_exploration_id": "EXP-000624",
+        "latest_exploration_id": "EXP-000861",
         "accepted_event_ids": [
           "20260802-boundary-and-massless-mode-criticality-research",
-          "20260802-pre-a-evidence-first-model-selection-charter-re"
+          "20260802-pre-a-evidence-first-model-selection-charter-re",
+          "20260814-legacy-research-knowledge-base-cutover-and-firs",
+          "20260814-correct-t-057-to-selective-main-line-legacy-pre"
         ],
-        "latest_event_id": "20260802-pre-a-evidence-first-model-selection-charter-re",
+        "latest_event_id": "20260814-correct-t-057-to-selective-main-line-legacy-pre",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -10099,11 +10202,14 @@
         "result_ids": [],
         "negative_tags": [],
         "exploration_ids": [
-          "EXP-000824"
+          "EXP-000824",
+          "EXP-000859"
         ],
-        "latest_exploration_id": "EXP-000824",
-        "accepted_event_ids": [],
-        "latest_event_id": "",
+        "latest_exploration_id": "EXP-000859",
+        "accepted_event_ids": [
+          "20260814-adopt-literature-first-proof-gate-and-legacy-ev"
+        ],
+        "latest_event_id": "20260814-adopt-literature-first-proof-gate-and-legacy-ev",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "SCHEME-2LOOP"
@@ -10163,10 +10269,14 @@
         "negative_tags": [
           "R-2026-legacy-newtonG-label"
         ],
-        "exploration_ids": [],
-        "latest_exploration_id": "",
-        "accepted_event_ids": [],
-        "latest_event_id": "",
+        "exploration_ids": [
+          "EXP-000859"
+        ],
+        "latest_exploration_id": "EXP-000859",
+        "accepted_event_ids": [
+          "20260814-adopt-literature-first-proof-gate-and-legacy-ev"
+        ],
+        "latest_event_id": "20260814-adopt-literature-first-proof-gate-and-legacy-ev",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "GAP-3",
@@ -10483,18 +10593,21 @@
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-independent-pre-a-cp1-st8-q3lock-mesoscopic-source-ground-orbit-smear-transfer-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-independent-pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-independent-pre-a-t055-reading-h-covariance-to-p1-interface-route-split/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-independent-pre-a-t055-reading-h-native-owner-bcc-route-termination/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-independent-pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-integrated-pre-a-cp1-st8-q3lock-categorical-ground-bandlimited-gns-poincare-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-integrated-pre-a-cp1-st8-q3lock-integrated-orbit-smear-spatial-quotient-ground-transfer-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-integrated-pre-a-cp1-st8-q3lock-mesoscopic-source-ground-orbit-smear-transfer-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-integrated-pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-integrated-pre-a-t055-reading-h-covariance-to-p1-interface-route-split/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-integrated-pre-a-t055-reading-h-native-owner-bcc-route-termination/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-integrated-pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-cp1-st8-q3lock-categorical-ground-bandlimited-gns-poincare-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-cp1-st8-q3lock-integrated-orbit-smear-spatial-quotient-ground-transfer-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-cp1-st8-q3lock-mesoscopic-source-ground-orbit-smear-transfer-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-t055-reading-h-covariance-to-p1-interface-route-split/result.json",
+          "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-t055-reading-h-native-owner-bcc-route-termination/result.json",
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split/result.json"
         ],
         "manifests": [],
@@ -10766,9 +10879,12 @@
           "EXP-000855",
           "EXP-000856",
           "EXP-000857",
-          "EXP-000858"
+          "EXP-000858",
+          "EXP-000859",
+          "EXP-000860",
+          "EXP-000861"
         ],
-        "latest_exploration_id": "EXP-000858",
+        "latest_exploration_id": "EXP-000861",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -10911,14 +11027,20 @@
           "20260814-r-167-v4-2-integrated-orbit-smear-spatial-quoti",
           "20260814-r-169-v1-0-truncated-octahedron-realization-and",
           "20260814-r-169-v1-1-pinned-p1-bcc-periodic-realization-e",
-          "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface"
+          "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
+          "20260814-adopt-literature-first-proof-gate-and-legacy-ev",
+          "20260814-legacy-research-knowledge-base-cutover-and-firs",
+          "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
+          "20260814-correct-t-057-to-selective-main-line-legacy-pre"
         ],
-        "latest_event_id": "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
+        "latest_event_id": "20260814-correct-t-057-to-selective-main-line-legacy-pre",
         "live_task_gate_ids": [
-          "C6-BCC-PREMISE-BLOCKED"
+          "C6-BCC-PREMISE-BLOCKED",
+          "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION"
         ],
         "route_gate_ids": [
-          "C6-BCC-PREMISE-BLOCKED"
+          "C6-BCC-PREMISE-BLOCKED",
+          "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION"
         ]
       }
     },
@@ -11840,7 +11962,7 @@
       "id": "R-169",
       "anchor": "r-169",
       "title": "Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction",
-      "summary": "R-169 v1.2 is the current scoped T0 analytic/exact/executed/audited result under EXP-000858. It retains v1.0--v1.1 and adds the exact Reading-H scalar/covariance crosswalk, a conditional commensurate P1 lift, deterministic equivariant nonextraction from covariance-only data, literal side-16 shell noncommensurability and the bare nonlinear convention firewall. Three automatic bridges are rejected, but no full Reading-H-to-P1 energy/ensemble intertwiner, physical-empty sign, vacuum, C6 result or Pre-A closure follows",
+      "summary": "R-169 v1.3 is the current scoped T0 analytic/exact/executed/audited result under EXP-000860. It retains v1.0--v1.2, identifies the registered native zero-phase equal-amplitude Reading-H BCC orbit and regular truncated-octahedron cells, specializes the native B1/B2 theorem to show that branch loses to `G_*`, and strengthens the direct P1 rescaling firewall. No generic Reading-H realization/full-energy bridge, physical-empty sign, vacuum, C6 result or Pre-A closure follows",
       "detail_title": "Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction",
       "detail": {
         "result_id": "`PA-T055-TRUNCATED-OCTAHEDRON-REALIZATION-AND-EMPTY-REFERENCE-SIGN-ROUTE-SPLIT`.",
@@ -11854,17 +11976,20 @@
         "equivariant_nonextraction": "A stationary covariance is fixed by every translation. A deterministic translation-equivariant section therefore has a translation-fixed, hence constant, output; preserving centering or nonzero- shell support forces `Psi=0`. The isotropic `G_*` alone cannot select a nonzero BCC mean. A phase, origin, orientation, source, random or set-valued symmetry-breaking datum is a new necessary input.",
         "exact_side_16_shell_obstruction": "Treating the literal registered `q_0=0.6801747616=212554613/312500000` as exact, rational Machin bounds prove `3 pi^2/64<q_0^2<4 pi^2/64`. Hence the exact side-16 reciprocal `q_0` shell is empty. Replacing it by `pi sqrt(3)/8` gives only the eight `{+/-1}^3` modes, which cannot receive the twelve Reading-H BCC `{110}` directions support-preservingly. The R-169 v1.1 support `4{110}` has index square 32 and is a wavelength-rescaled combinatorial realization, not an on-shell identity.",
         "bare_nonlinear_convention_firewall": "For the common printed `lambda=-43/100`, `gamma=81/50`, the Reading-H scalar density uses `(lambda/2)phi^4+(gamma/3)phi^6` while pinned P1 uses `(lambda/4)phi^4+(gamma/6)phi^6` on the scalar ray. Their defect is `phi^4(108phi^2-43)/400`; it changes sign at `phi^2=43/108`, equals `-1/400` at `phi^2=1/4`, and equals `11/1600` at `phi^2=1/2`. No constant amplitude rescaling satisfies both `s^4=2` and `s^6=2`. This is only a bare- density crosswalk, not a difference or ordering of the full Hartree and P1 functionals. The determinant, trial-mass, mixed, gap, quadratic, family, lock, Class-II and reference terms and the fixed-norm versus unconstrained ensemble remain separately owned.",
-        "negative_route_authorities": "R-169 v1.0 registers `NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION` and `NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`. It retains the retired BCC-selection authority `R-2026-06-23-b3-bcc-structural-selection`, the absolute-anchor boundary `NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR`, and the same- Hamiltonian equilibrium-reference boundary `NG-2026-08-09-PRE-A-ST8-Q3LOCK-EQUILIBRIUM-PHASE-AS-STRICT-EMPTY-REFERENCE`. R-169 v1.1 registers no new negative and reuses `NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM` together with `NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`. R-169 v1.2 registers `NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION`, `NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING` and `NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER`. It reuses the R-157 nonzero-equilibrium boundary and the v1.0 finite-part empty-reference boundary.",
-        "boundary": "This is a T0, claim-nonbearing geometry, explicit P1 route-filter, covariance/composite crosswalk and exact interface-firewall result. It closes only the two v1.2 scoped children and extracts centers and cells only for the declared v1.1 twelve-mode P1 fixture. It constructs no full Reading-H mean field or energy/ensemble intertwiner, computes no canonical TECT realization energy, identifies no physical or cosmic empty space, and proves no global vacuum, BCC resurrection, C6 spacetime conclusion, physical Sector-A result, or Pre-A closure. `PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE`, `C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN.",
-        "proven_in": "The [R-169 v1.2 certificate](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.2 PDF is issued. The [R-169 v1.1 certificate](strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-manifest.json) remain the prior proof-first authority. The R-169 v1.0 certificate and manifest remain earlier proof-first history.",
+        "native_reading_h_bcc_orbit_and_cell": "EXP-000860 / R-169 v1.3 fixes the registered equal-amplitude, zero-phase, twelve-mode Reading-H branch `Q_BCC=(q_0/sqrt(2)){110}` and exposes its origin orbit. With `alpha=q_0/sqrt(2)` and `ell=2 pi/alpha`, its real field is `phi_(A,o)=4A(pq+pr+qr)`. For `A>0`, the multiaffine equality cases are exactly the two all-equal cube corners, both with value `12A`; hence `argmax phi`, `argmax |phi|`, and `argmax phi^2` equal `o+[ell Z^3 union ((ell/2,ell/2,ell/2)+ell Z^3)]`. The Euclidean Voronoi cell is the scaled v1.0 BCC fixture with 24 vertices, 36 edges, six square faces, eight regular-hexagonal faces, and volume `ell^3/2`. The origin is an orbit coordinate owned by the phase-complete field, not information recovered from the translation-invariant covariance.",
+        "native_owner_sign_and_natural_torus": "The full antipodal convention gives `I=12A^2`. At the production endpoint `I=1/500`, the registered branch lies in the native B1/B2 admissible class, and the existing theorem specializes to `F_RH[Q_BCC,A]-F_RH[G_*]>0`. Thus this exact geometry-bearing branch loses to the isotropic reference in the native Reading-H owner; no P1 inheritance is used. On the natural torus of side `N ell`, the support stays exactly on shell, the squared norm is `(N ell)^3 I`, and there are `2N^3` BCC cells. This is a declared domain owner, not the hash-pinned side-16 P1 owner, and the comparison says nothing about `F_RH[G_*]-F_empty`.",
+        "global_rescaling_and_side_16_firewall": "Even allowing one constant field scale `s` and one positive global energy scale `c_E`, matching the quartic and sextic terms requires `c_E s^4=c_E s^6=2`, hence `s^2=1` and `c_E=2`. The exact quadratic coefficients then contradict the required equality. The literal side-16 `{110}` image also has the wrong radius; the near-radial `{111}` shell has only eight modes, while the natural-torus realization changes the owner. A small wave-number discrepancy is not a Bohr mean-square error budget: distinct equal-intensity frequencies can remain separated by `2I`. Consequently neither a constant rescaling nor commensuration alone supplies a full Reading-H-to-P1 functional or ensemble intertwiner.",
+        "negative_route_authorities": "R-169 v1.0 registers `NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION` and `NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`. It retains the retired BCC-selection authority `R-2026-06-23-b3-bcc-structural-selection`, the absolute-anchor boundary `NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR`, and the same- Hamiltonian equilibrium-reference boundary `NG-2026-08-09-PRE-A-ST8-Q3LOCK-EQUILIBRIUM-PHASE-AS-STRICT-EMPTY-REFERENCE`. R-169 v1.1 registers no new negative and reuses `NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM` together with `NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`. R-169 v1.2 registers `NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION`, `NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING` and `NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER`. It reuses the R-157 nonzero-equilibrium boundary and the v1.0 finite-part empty-reference boundary. R-169 v1.3 registers no new negative and reuses `NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION`, `NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING`, `NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER` and `R-2026-06-23-b3-bcc-structural-selection`.",
+        "boundary": "This is a T0, claim-nonbearing geometry, native-owner route termination, explicit P1 route-filter, covariance/composite crosswalk and exact interface-firewall result. V1.3 closes only the declared native zero-phase BCC orbit/cell and `Q_BCC`-versus-`G_*` child and strengthens the retained v1.2 crosswalk. It constructs no generic Reading-H mean field or full energy/ensemble intertwiner, computes no physical-empty sign, and proves no transverse or continuum stability, global vacuum, BCC resurrection, C6 spacetime conclusion, physical Sector-A result, or Pre-A closure. `PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE`, `C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN.",
+        "proven_in": "The [R-169 v1.3 certificate](strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.3 PDF is issued. The [R-169 v1.2 certificate](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-manifest.json) remain the prior proof-first authority. The R-169 v1.1 and v1.0 certificates and manifests remain earlier proof-first history.",
         "tier": "T0 (claim-nonbearing scoped exact geometry, conditional sign/stability transfer and exact logical obstructions only).",
         "publication_target": "Pre-A geometry and reference-sign route note."
       },
       "normalized_detail": {
         "statement": "",
-        "proof_anchor": "The [R-169 v1.2 certificate](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.2 PDF is issued. The [R-169 v1.1 certificate](strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-manifest.json) remain the prior proof-first authority. The R-169 v1.0 certificate and manifest remain earlier proof-first history.",
+        "proof_anchor": "The [R-169 v1.3 certificate](strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.3 PDF is issued. The [R-169 v1.2 certificate](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-manifest.json) remain the prior proof-first authority. The R-169 v1.1 and v1.0 certificates and manifests remain earlier proof-first history.",
         "reuse": "",
-        "boundary": "This is a T0, claim-nonbearing geometry, explicit P1 route-filter, covariance/composite crosswalk and exact interface-firewall result. It closes only the two v1.2 scoped children and extracts centers and cells only for the declared v1.1 twelve-mode P1 fixture. It constructs no full Reading-H mean field or energy/ensemble intertwiner, computes no canonical TECT realization energy, identifies no physical or cosmic empty space, and proves no global vacuum, BCC resurrection, C6 spacetime conclusion, physical Sector-A result, or Pre-A closure. `PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE`, `C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN.",
+        "boundary": "This is a T0, claim-nonbearing geometry, native-owner route termination, explicit P1 route-filter, covariance/composite crosswalk and exact interface-firewall result. V1.3 closes only the declared native zero-phase BCC orbit/cell and `Q_BCC`-versus-`G_*` child and strengthens the retained v1.2 crosswalk. It constructs no generic Reading-H mean field or full energy/ensemble intertwiner, computes no physical-empty sign, and proves no transverse or continuum stability, global vacuum, BCC resurrection, C6 spacetime conclusion, physical Sector-A result, or Pre-A closure. `PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE`, `C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN.",
         "publication_target": "Pre-A geometry and reference-sign route note."
       },
       "claim_refs": [],
@@ -11873,7 +11998,9 @@
       "accepted_event_ids": [
         "20260814-r-169-v1-0-truncated-octahedron-realization-and",
         "20260814-r-169-v1-1-pinned-p1-bcc-periodic-realization-e",
-        "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface"
+        "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
+        "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
+        "20260814-correct-t-057-to-selective-main-line-legacy-pre"
       ],
       "co_recorded_negative_tags": [
         "NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
@@ -68918,6 +69045,180 @@
       "task_id": "T-055",
       "title": "Separate Reading-H covariance data from a pinned-P1 mean and audit direct shell and energy bridges",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "This is a research-governance decision, not a theorem, a literature-completeness claim, a claim-tier change, or a validation of any existing QFT, GR, Reading-H, BCC, or Yang--Mills route. The initial audit task does not itself establish that any source applies.",
+      "claim_ids": [
+        "B1-RH-ENUM",
+        "C4-GRAVITY-1LOOP",
+        "C5-NEWTON-G",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The gate redirects effort from re-proving standard mathematics to the first unmet model-specific hypothesis while preventing named theorems, legacy claims, or prior TECT outputs from being silently widened or treated as certified premises.",
+      "evidence_refs": [
+        "governance/literature-first-proof-gate.md#2-mandatory-applicability-record",
+        "governance/claim-standard.md#5-registration--amendment-procedure",
+        "governance/tier-system.md#1-maturity-tiers-tsv2",
+        "strategy/pre-a-qft-bridge-evidence-role-and-successor-order-260812.md#2-bridge-order",
+        "claims/B3-BCC-STRUCT/status.json#statement"
+      ],
+      "finding": "TECT already distinguishes scoped claims, hypotheses, scripts, and negative results, but did not require a literature applicability decision before new proof work or load-bearing reuse. The binding gate now requires a primary-source locator, hypothesis crosswalk, exact imported scope, reproduction or independent-check disposition, adversarial checks, and a residual-or-stop decision. Legacy and current internal results remain usable only at their live registered strength; a refuted result is a negative control, and a script PASS is not an analytic proof audit.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "R-2026-06-23-b3-bcc-structural-selection"
+        ],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-000859",
+      "method": [
+        "Compare the current claim, tier, reproduction, exploration, and QFT-bridge controls with the missing literature-applicability requirement.",
+        "Specify a source-pinned hypothesis-to-model crosswalk, independent-check disposition, adversarial checks, and residual-proposition rule.",
+        "Require the same audit for legacy and current internal results before either supports a promotion or physical conclusion.",
+        "Register a phased audit task for the live Reading-H, QFT, and GR route set."
+      ],
+      "next_action": "Under T-056, create source-pinned applicability records for B1-RH-ENUM, C4-GRAVITY-1LOOP, C5-NEWTON-G, and C6-SPACETIME-SIGNATURE before any related physical promotion or new load-bearing proof import.",
+      "provenance": "contemporaneous",
+      "question": "How should TECT prevent duplicated proofs of known mathematics while preventing uncritical reuse of legacy, external, or internal results?",
+      "recorded_at": "2026-08-14T06:00:00Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-08-14",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-056",
+      "title": "Adopt a literature-first proof gate and legacy-evidence audit",
+      "verdict": "advanced"
+    },
+    {
+      "boundary": "This is T0 and claim_bearing:false. It closes only the declared equal-amplitude zero-phase native Reading-H orbit/cell and Q_BCC-versus-G_* comparison and strengthens the retained direct-P1 firewall. It supplies no generic Reading-H realization or full energy/ensemble intertwiner, no sign for G_* relative to a physical empty or disordered reference, no transverse or continuum stability, no candidate completeness, no vacuum selection, no C6 or Round-1 closure, and no physical Sector A or Pre-A closure. No R-169 v1.3 PDF is issued.",
+      "claim_ids": [
+        "A1-KERNEL-CONV",
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "A2-FULL-PRODUCTION-WELLPOSED",
+        "B1-RH-ENUM",
+        "B2-PROPA-HLAYER",
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The route now terminates honestly at the strongest owner-supported statement: one exact geometry-bearing native branch and its native loss against G_*. The same calculation prevents its geometric realization from being misreported as a pinned-P1 or physical-empty comparison and exposes the remaining generic interface and reference-sign obligations.",
+      "evidence_refs": [
+        "strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-manifest.json#center_and_cell_theorem",
+        "strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-manifest.json#native_owner_sign",
+        "strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-manifest.json#global_rescaling_no_go",
+        "strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-certificate-260814.md#4-exact-center-lattice",
+        "strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-certificate-260814.md#5-the-regular-truncated-octahedron-cell",
+        "strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-certificate-260814.md#7-native-reading-h-sign-specialization",
+        "strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-certificate-260814.md#8-side-16-commensurability-firewall",
+        "strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-certificate-260814.md#9-stronger-direct-p1-rescaling-obstruction",
+        "strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-certificate-260814.md#11-nonduplication-and-route-verdict",
+        "codes/foundations/pre_a_t055_reading_h_native_owner_bcc_route_termination.py#main",
+        "codes/foundations/pre_a_t055_reading_h_native_owner_bcc_route_termination_independent.py#main",
+        "codes/foundations/pre_a_t055_reading_h_native_owner_bcc_route_termination_verify.py#main",
+        "claims/GATES.md#pa-t055-reading-h-native-zero-phase-bcc-orbit-cell-and-gstar-sign",
+        "claims/GATES.md#pa-t055-reading-h-pinned-p1-nonlinear-convention-and-torus-commensurability-crosswalk",
+        "RESULTS-LEDGER.md#r-169",
+        "explorations/log.jsonl#exp-000858"
+      ],
+      "finding": "For A>0 the native field is phi=4A(pq+pr+qr); its only absolute maxima are the two all-equal cosine corners, both positive, so argmax phi, argmax |phi| and argmax phi^2 give one translated BCC lattice. Its Euclidean Voronoi cell is the regular truncated octahedron with 24 vertices, 36 edges, six squares, eight regular hexagons and volume ell^3/2. The natural torus preserves the exact shell and has 2N^3 cells. At I=1/500 the inherited B1/B2 theorem gives F_RH[Q_BCC,A]-F_RH[G_*]>0, so this explicit branch loses to the isotropic reference in the native owner. A direct constant field/global-energy rescaling first forces s^2=1 and c_E=2 from the quartic and sextic terms and then fails the exact quadratic equality; the side-16 and natural-torus owners likewise do not identify the full functionals.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION",
+          "NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING",
+          "NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER",
+          "R-2026-06-23-b3-bcc-structural-selection"
+        ],
+        "results": [
+          "R-169"
+        ]
+      },
+      "gate_ids": [
+        "PA-T055-READING-H-NATIVE-ZERO-PHASE-BCC-ORBIT-CELL-AND-GSTAR-SIGN",
+        "PA-T055-READING-H-PINNED-P1-NONLINEAR-CONVENTION-AND-TORUS-COMMENSURABILITY-CROSSWALK",
+        "PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE",
+        "C6-BCC-PREMISE-BLOCKED",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-000860",
+      "method": [
+        "Synthesize the registered twelve signed {110} modes with their equal real amplitudes and origin parameter, solve the multiaffine extrema exactly, identify the translation lattice, and scale the exact BCC Voronoi fixture.",
+        "Derive the Bohr intensity and natural-torus normalization, cell count, and translation covariance without treating covariance-only data as an absolute origin owner.",
+        "Specialize the existing B1/B2 native theorem at the production intensity to compare the explicit BCC branch with G_* inside the Reading-H owner.",
+        "Test both the side-16 commensuration and the most permissive direct constant-polarization bridge with one field scale and one positive global energy scale, while keeping the fixed-charge ensemble escape separate."
+      ],
+      "next_action": "Freeze a generic Reading-H realization/reference interface or an explicitly changed owner, then prove a matched physical-empty sign, full stationarity, transverse stability and controlled limits before any C6 or Round-1 use.",
+      "provenance": "contemporaneous",
+      "question": "What exact real-space realization is owned by the registered equal-amplitude zero-phase Reading-H BCC branch, how does it compare with the native isotropic reference, and can a direct rescaling or commensuration identify it with pinned P1?",
+      "recorded_at": "2026-08-14T07:13:29Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000858",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-14",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-055",
+      "title": "Terminate the registered native Reading-H BCC branch at its exact orbit, cell and native G_* comparison",
+      "verdict": "advanced"
+    },
+    {
+      "boundary": "This is a research-governance and storage-scope correction. Selection, copying, summary, search, or a matching hash does not validate a legacy conclusion, promote a claim, establish a physical empty-reference sign, or close C6, Sector A, Pre-A, or the QFT bridge.",
+      "claim_ids": [
+        "B3-BCC-STRUCT",
+        "C1-LORENTZ-KIN",
+        "C2-LORENTZ-EMERGENT",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This scope keeps the eventual main line self-contained for important research while avoiding redundant storage, thousands of low-value files, and a false completion metric based on corpus size rather than proof relevance.",
+      "evidence_refs": [
+        "governance/legacy-research-knowledge-base.md#1-purpose-and-authority-boundary",
+        "archive/legacy/CONTENTS-REFERENCE.md#retention-rule",
+        "archive/legacy/RESEARCH-INDEX.md#research-records",
+        "archive/legacy/batches/LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001/source-set.json#sources",
+        "archive/legacy/registry/records/LEG-T055-BCC-SELECTION-LINEAGE-001.json#record_id",
+        "archive/legacy/registry/records/LEG-T055-TRUNCATED-OCTAHEDRON-BZ-001.json#record_id",
+        "archive/legacy/migration/events.jsonl#leg-mig-20260814-0006"
+      ],
+      "finding": "The complete Contents tree need not be migrated or terminally classified. The useful durable unit is a gate-linked selected source set with exact path/hash provenance, readable copies of important sources, reviewed achievements and counterevidence, and current-convention revalidation before integration. The 66 existing compatibility payloads, 49 newly selected readable reference copies, 115 source cards, 24 reviewed assessments, and 14 nonempty generated views preserve the current useful organization without the duplicate raw-object vault or full tracked inventory.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "R-2026-06-23-b3-bcc-structural-selection"
+        ],
+        "results": []
+      },
+      "gate_ids": [
+        "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
+        "C6-BCC-PREMISE-BLOCKED"
+      ],
+      "id": "EXP-000861",
+      "method": [
+        "Audit the complete Contents tree, the existing 66 compatibility payloads, the selected source cards, reviewed assessments, generated views, and the first T-055 batch.",
+        "Separate whole-corpus planning information from sources already selected as important to a live proof question.",
+        "Remove the duplicate content-addressed object layer, tracked 7,503-path inventory, and empty generated views while retaining selected provenance and reviewed interpretation.",
+        "Preserve newly selected important sources once at readable origin-mirroring paths and verify every selected source against the maintained Contents bytes."
+      ],
+      "next_action": "Use the same gate-linked selection rule for future legacy work: preserve important source copies and assessments, then revalidate only the material needed by the active proof gate.",
+      "provenance": "contemporaneous",
+      "question": "How should the main repository retain useful legacy research without copying the complete maintained Contents tree or losing important source text when only the main line remains?",
+      "recorded_at": "2026-08-14T07:34:38Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000859",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-14",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-057",
+      "title": "Correct legacy intake to selective main-line preservation",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -93532,6 +93833,218 @@
       "result_link_basis": {
         "R-169": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260814-adopt-literature-first-proof-gate-and-legacy-ev",
+      "date": "2026-08-14",
+      "header": "[Adopt literature-first proof gate and legacy-evidence audit] - 2026-08-14",
+      "claim_ids": [
+        "B1-RH-ENUM",
+        "C4-GRAVITY-1LOOP",
+        "C5-NEWTON-G",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "keywords": [
+        "T-056",
+        "applicability-crosswalk",
+        "independent-check",
+        "legacy-audit",
+        "literature-first"
+      ],
+      "negative_results": [],
+      "notes": [
+        "governance/literature-first-proof-gate.md",
+        "governance/claim-standard.md",
+        "governance/tier-system.md"
+      ],
+      "scripts": [],
+      "raw": "## [Adopt literature-first proof gate and legacy-evidence audit] - 2026-08-14\n\nAdded a binding literature-first proof gate. Before substantive proof work, a promotion, or a load-bearing legacy/external import, the research record must pin a primary source, crosswalk every hypothesis to the declared model, record an independent-check disposition and adversarial checks, and identify the residual proposition or stop decision. The same audit now applies to earlier TECT results: provenance, a named theorem, or a passing script cannot silently become a certified premise. T-056 begins the phased audit of the live Reading-H, QFT, and GR path without changing any claim tier.\n\n",
+      "claim_refs": [
+        "B1-RH-ENUM",
+        "C4-GRAVITY-1LOOP",
+        "C5-NEWTON-G",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "B1-RH-ENUM": "explicit_claim_ids",
+        "C4-GRAVITY-1LOOP": "explicit_claim_ids",
+        "C5-NEWTON-G": "explicit_claim_ids",
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [],
+      "result_ids": [],
+      "linked_result_ids": [],
+      "result_link_basis": {}
+    },
+    {
+      "id": "20260814-legacy-research-knowledge-base-cutover-and-firs",
+      "date": "2026-08-14",
+      "header": "[Legacy research knowledge-base cutover and first T-055 intake] - 2026-08-14",
+      "claim_ids": [
+        "B3-BCC-STRUCT",
+        "C1-LORENTZ-KIN",
+        "C2-LORENTZ-EMERGENT",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "keywords": [
+        "T-057",
+        "content-addressed",
+        "empty-reference",
+        "hybrid-search",
+        "legacy-corpus",
+        "provenance",
+        "truncated-octahedron"
+      ],
+      "negative_results": [],
+      "notes": [
+        "governance/legacy-research-knowledge-base.md",
+        "archive/legacy/RESEARCH-INDEX.md",
+        "archive/legacy/batches/LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001/manifest.json",
+        "archive/legacy/migration/events.jsonl",
+        "claims/GATES.md"
+      ],
+      "scripts": [
+        "verification/scripts/legacy_research.py",
+        "verification/scripts/legacy_search.py"
+      ],
+      "raw": "## [Legacy research knowledge-base cutover and first T-055 intake] - 2026-08-14\n\nEstablished a non-destructive legacy research knowledge base without changing any claim tier. The complete frozen Contents corpus now has a 7,503-path hash and disposition census; all 66 prior compatibility payloads remain in place, 115 exact source objects are preserved, and 24 reviewed research records generate sector, claim, and gate views. The first 50-source T-055 intake separates BCC-selection counterevidence from reusable truncated-octahedron Brillouin-zone methods. Offline FTS5 plus deterministic hashed-TFIDF retrieval returns exact source and line provenance; multilingual aliases are ASCII-escaped metadata, and a dense semantic model remains explicitly unconfigured. The registered T-057 gate remains OPEN pending per-source extraction, dependency closure, current-convention reruns, independent audit, and formal integration or rejection.\n\n",
+      "claim_refs": [
+        "B3-BCC-STRUCT",
+        "C1-LORENTZ-KIN",
+        "C2-LORENTZ-EMERGENT",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "B3-BCC-STRUCT": "explicit_claim_ids",
+        "C1-LORENTZ-KIN": "explicit_claim_ids",
+        "C2-LORENTZ-EMERGENT": "explicit_claim_ids",
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [],
+      "result_ids": [],
+      "linked_result_ids": [],
+      "result_link_basis": {}
+    },
+    {
+      "id": "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
+      "date": "2026-08-14",
+      "header": "[R-169 v1.3 Reading-H native-owner BCC realization route termination] - 2026-08-14",
+      "claim_ids": [
+        "A1-KERNEL-CONV",
+        "B1-RH-ENUM",
+        "B2-PROPA-HLAYER",
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-000860",
+        "R-169"
+      ],
+      "keywords": [
+        "EXP-000860",
+        "R-169-v1.3",
+        "bcc-center-lattice",
+        "declared-native-owner",
+        "isotropic-reference-wins",
+        "no-physical-empty-claim",
+        "reading-h-route-termination",
+        "truncated-octahedron"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-manifest.json",
+        "strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-certificate-260814.md",
+        "claims/GATES.md",
+        "RESULTS-LEDGER.md"
+      ],
+      "scripts": [
+        "codes/foundations/pre_a_t055_reading_h_native_owner_bcc_route_termination.py",
+        "codes/foundations/pre_a_t055_reading_h_native_owner_bcc_route_termination_independent.py",
+        "codes/foundations/pre_a_t055_reading_h_native_owner_bcc_route_termination_verify.py"
+      ],
+      "raw": "## [R-169 v1.3 Reading-H native-owner BCC realization route termination] - 2026-08-14\n\nEXP-000860 records R-169 v1.3 as an additive T0, claim-nonbearing route termination in the native Reading-H owner. For the registered equal-amplitude zero-phase BCC branch, exact synthesis gives the BCC center lattice and regular truncated-octahedron Voronoi cells. The B1/B2 native theorem specializes to a strict loss against the isotropic G_* reference.\n\nOn the natural commensurate torus the support remains exactly on shell. This is a declared domain owner, not the side-16 pinned owner. Even after allowing a constant amplitude and positive global energy scale, the quartic and sextic coefficients force s^2=1 and c_E=2, while the quadratic coefficients contradict the required equality. No direct full-functional or ensemble bridge follows.\n\nThe physical empty reference remains OPEN. The Reading-H-to-P1 interface remains OPEN. C6 remains OPEN, and Round-1, physical Sector A, and Pre-A remain open. No R-169 v1.3 PDF is issued.\n\n",
+      "claim_refs": [
+        "A1-KERNEL-CONV",
+        "B1-RH-ENUM",
+        "B2-PROPA-HLAYER",
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "A1-KERNEL-CONV": "explicit_claim_ids",
+        "B1-RH-ENUM": "explicit_claim_ids",
+        "B2-PROPA-HLAYER": "explicit_claim_ids",
+        "B3-RH-TESTED-STRUCTURE-RANKING": "explicit_claim_ids",
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000860",
+        "R-169"
+      ],
+      "result_ids": [
+        "R-169"
+      ],
+      "linked_result_ids": [
+        "R-169"
+      ],
+      "result_link_basis": {
+        "R-169": "explicit_result_id"
+      }
+    },
+    {
+      "id": "20260814-correct-t-057-to-selective-main-line-legacy-pre",
+      "date": "2026-08-14",
+      "header": "[Correct T-057 to selective main-line legacy preservation] - 2026-08-14",
+      "claim_ids": [
+        "B3-BCC-STRUCT",
+        "C1-LORENTZ-KIN",
+        "C2-LORENTZ-EMERGENT",
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-000861"
+      ],
+      "keywords": [
+        "Contents",
+        "EXP-000861",
+        "T-057",
+        "legacy-audit",
+        "reference-copy",
+        "selective-preservation"
+      ],
+      "negative_results": [],
+      "notes": [
+        "governance/legacy-research-knowledge-base.md",
+        "archive/legacy/CONTENTS-REFERENCE.md",
+        "archive/legacy/RESEARCH-INDEX.md",
+        "archive/legacy/migration/events.jsonl",
+        "claims/GATES.md"
+      ],
+      "scripts": [
+        "verification/scripts/legacy_research.py",
+        "verification/scripts/legacy_search.py"
+      ],
+      "raw": "## [Correct T-057 to selective main-line legacy preservation] - 2026-08-14\n\nEXP-000861 records a storage and completion-scope correction for T-057. Contents remains the maintained full corpus, while TECT selectively preserves the material judged important to live proof gates: all 66 existing compatibility payloads, 49 newly selected readable reference copies, 115 source identities, 24 reviewed assessments, and the first 50-source T-055 batch. The unreleased duplicate SHA-256 object vault, tracked 7,503-path inventory, and empty generated views were removed. The complete-corpus wording of the preceding T-057 event is superseded only for storage and completion scope; R-169 v1.3 and event 644 are unaffected. Selection, copying, summaries, search, and matching hashes do not promote a claim or close the physical-empty, C6, Sector A, or Pre-A gates.\n\n",
+      "claim_refs": [
+        "B3-BCC-STRUCT",
+        "C1-LORENTZ-KIN",
+        "C2-LORENTZ-EMERGENT",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "B3-BCC-STRUCT": "explicit_claim_ids",
+        "C1-LORENTZ-KIN": "explicit_claim_ids",
+        "C2-LORENTZ-EMERGENT": "explicit_claim_ids",
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000861"
+      ],
+      "result_ids": [
+        "R-169"
+      ],
+      "linked_result_ids": [
+        "R-169"
+      ],
+      "result_link_basis": {
+        "R-169": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -94254,6 +94767,32 @@
       "claim": "C6-SPACETIME-SIGNATURE",
       "gate": "C6-BCC-PREMISE-BLOCKED",
       "note": "Operator priority 2026-08-14. The object is truncated-octahedron geometry, not BCC as a premise. Use natural analogues only as calibrated diagnostics: BCC Voronoi cells for exact 14-face combinatorics, Kelvin-type foams for interface observables, the named Weaire--Phelan two-cell partition as an interface-energy negative control, and growing-bubble coarsening for rescaled cell-topology/defect attractor tests. Derive any one-, two-, three- or higher-motif candidate class from the frozen Reading-H soft spectrum, symmetry representations, conserved quantities and resonances; preregister its component cutoff and full allowed invariant basis rather than adding motifs post hoc. For every two-motif candidate, derive the complete A/B cross-coupling and resonant-phase energy, prove boundedness and compare the stable mixed branch against pure A, pure B and disordered reference under one renormalization convention; a changed charge ensemble is a distinct owner. An algorithmic Reading-H gradient-flow parameter is not physical time. First freeze center-extraction alternatives, enumerate BCC and non-BCC realizations under one renormalization convention, and test F_ren[realization]-F_ren[0] < 0. Only a surviving sign proceeds to transverse Hessian stability and thermodynamic/continuum control. Q3LOCK is auxiliary evidence.",
+      "created": "2026-08-14",
+      "updated": "2026-08-14",
+      "blocked_by": [],
+      "status_normalized": "in_progress"
+    },
+    {
+      "id": "T-056",
+      "title": "Literature-first proof gate and legacy-evidence audit rollout",
+      "status": "in_progress",
+      "owner": "Codex",
+      "claim": null,
+      "gate": "LITERATURE-FIRST-APPLICABILITY-AUDIT",
+      "note": "Create applicability records for live QFT/GR/Reading-H routes; block promotion until source, hypothesis crosswalk, reproduction and independent objection dispositions are recorded.",
+      "created": "2026-08-14",
+      "updated": "2026-08-14",
+      "blocked_by": [],
+      "status_normalized": "in_progress"
+    },
+    {
+      "id": "T-057",
+      "title": "Selective legacy preservation, retrieval, and gate-by-gate revalidation",
+      "status": "in_progress",
+      "owner": "AI+operator",
+      "claim": "C6-SPACETIME-SIGNATURE",
+      "gate": "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
+      "note": "Policy: governance/legacy-research-knowledge-base.md. Contents remains the maintained full corpus; no wholesale copy or all-path completion target remains. TECT retains all 66 existing compatibility payloads, 49 newly selected readable reference copies, 115 selected source identities, 24 reviewed assessments, and the 50-source LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001 batch. FTS5 plus deterministic hashed-TFIDF retrieval uses hash-verified repository copies, with dense multilingual semantics explicitly unconfigured until a local model is pinned. Next: complete exact per-source extraction and dependency closure for the active batch, rerun under current conventions, independently audit, and integrate or reject only the surviving methods and results. Resolve other legacy claim pointers on demand from live gates. Selection, copies, summaries, search, or matching hashes do not change a claim tier or close a physical-vacuum, C6, Sector A, or Pre-A gate.",
       "created": "2026-08-14",
       "updated": "2026-08-14",
       "blocked_by": [],
@@ -98368,6 +98907,24 @@
         "authority": "CHANGELOG.md"
       },
       {
+        "id": "event:20260814-adopt-literature-first-proof-gate-and-legacy-ev",
+        "kind": "accepted_event",
+        "label": "[Adopt literature-first proof gate and legacy-evidence audit] - 2026-08-14",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260814-correct-t-057-to-selective-main-line-legacy-pre",
+        "kind": "accepted_event",
+        "label": "[Correct T-057 to selective main-line legacy preservation] - 2026-08-14",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260814-legacy-research-knowledge-base-cutover-and-firs",
+        "kind": "accepted_event",
+        "label": "[Legacy research knowledge-base cutover and first T-055 intake] - 2026-08-14",
+        "authority": "CHANGELOG.md"
+      },
+      {
         "id": "event:20260814-r-167-v4-0-mesoscopic-source-ground-orbit-smear",
         "kind": "accepted_event",
         "label": "[R-167 v4.0 mesoscopic source-ground orbit-smear transfer route split] - 2026-08-14",
@@ -98401,6 +98958,12 @@
         "id": "event:20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
         "kind": "accepted_event",
         "label": "[R-169 v1.2 Reading-H covariance-to-P1 interface route split] - 2026-08-14",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
+        "kind": "accepted_event",
+        "label": "[R-169 v1.3 Reading-H native-owner BCC realization route termination] - 2026-08-14",
         "authority": "CHANGELOG.md"
       },
       {
@@ -103552,6 +104115,24 @@
         "authority": "explorations/log.jsonl"
       },
       {
+        "id": "exploration:EXP-000859",
+        "kind": "proof_exploration",
+        "label": "Adopt a literature-first proof gate and legacy-evidence audit",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000860",
+        "kind": "proof_exploration",
+        "label": "Terminate the registered native Reading-H BCC branch at its exact orbit, cell and native G_* comparison",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000861",
+        "kind": "proof_exploration",
+        "label": "Correct legacy intake to selective main-line preservation",
+        "authority": "explorations/log.jsonl"
+      },
+      {
         "id": "gate:A1-KERNEL-CONV",
         "kind": "hypothesis",
         "label": "A1-KERNEL-CONV",
@@ -103844,6 +104425,18 @@
         "kind": "gate",
         "label": "H-SUPPRESSION-DISCHARGE",
         "authority": "claims/GATES.md#h-suppression-discharge"
+      },
+      {
+        "id": "gate:LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
+        "kind": "gate",
+        "label": "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
+        "authority": "claims/GATES.md#legacy-selective-index-and-on-demand-revalidation"
+      },
+      {
+        "id": "gate:LITERATURE-FIRST-APPLICABILITY-AUDIT",
+        "kind": "gate",
+        "label": "LITERATURE-FIRST-APPLICABILITY-AUDIT",
+        "authority": "claims/GATES.md#literature-first-applicability-audit"
       },
       {
         "id": "gate:M-ENDPOINT",
@@ -104522,6 +105115,12 @@
         "kind": "gate",
         "label": "PA-T055-READING-H-COVARIANCE-MEAN-FIELD-TYPE-SEPARATION-AND-EQUIVARIANT-NONEXTRACTION",
         "authority": "claims/GATES.md#pa-t055-reading-h-covariance-mean-field-type-separation-and-equivariant-nonextraction"
+      },
+      {
+        "id": "gate:PA-T055-READING-H-NATIVE-ZERO-PHASE-BCC-ORBIT-CELL-AND-GSTAR-SIGN",
+        "kind": "gate",
+        "label": "PA-T055-READING-H-NATIVE-ZERO-PHASE-BCC-ORBIT-CELL-AND-GSTAR-SIGN",
+        "authority": "claims/GATES.md#pa-t055-reading-h-native-zero-phase-bcc-orbit-cell-and-gstar-sign"
       },
       {
         "id": "gate:PA-T055-READING-H-PINNED-P1-NONLINEAR-CONVENTION-AND-TORUS-COMMENSURABILITY-CROSSWALK",
@@ -108157,6 +108756,18 @@
         "id": "task:T-055",
         "kind": "task",
         "label": "Geometry-first truncated-octahedron candidate triage: enumerate realizations and test empty-reference sign before structural use",
+        "authority": "todo/todo.json"
+      },
+      {
+        "id": "task:T-056",
+        "kind": "task",
+        "label": "Literature-first proof gate and legacy-evidence audit rollout",
+        "authority": "todo/todo.json"
+      },
+      {
+        "id": "task:T-057",
+        "kind": "task",
+        "label": "Selective legacy preservation, retrieval, and gate-by-gate revalidation",
         "authority": "todo/todo.json"
       }
     ],
@@ -119154,6 +119765,84 @@
         "basis": "explicit_result_id"
       },
       {
+        "from": "event:20260814-adopt-literature-first-proof-gate-and-legacy-ev",
+        "relation": "records",
+        "to": "claim:B1-RH-ENUM",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-adopt-literature-first-proof-gate-and-legacy-ev",
+        "relation": "records",
+        "to": "claim:C4-GRAVITY-1LOOP",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-adopt-literature-first-proof-gate-and-legacy-ev",
+        "relation": "records",
+        "to": "claim:C5-NEWTON-G",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-adopt-literature-first-proof-gate-and-legacy-ev",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-correct-t-057-to-selective-main-line-legacy-pre",
+        "relation": "records",
+        "to": "claim:B3-BCC-STRUCT",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-correct-t-057-to-selective-main-line-legacy-pre",
+        "relation": "records",
+        "to": "claim:C1-LORENTZ-KIN",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-correct-t-057-to-selective-main-line-legacy-pre",
+        "relation": "records",
+        "to": "claim:C2-LORENTZ-EMERGENT",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-correct-t-057-to-selective-main-line-legacy-pre",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-correct-t-057-to-selective-main-line-legacy-pre",
+        "relation": "records_result",
+        "to": "result:R-169",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260814-legacy-research-knowledge-base-cutover-and-firs",
+        "relation": "records",
+        "to": "claim:B3-BCC-STRUCT",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-legacy-research-knowledge-base-cutover-and-firs",
+        "relation": "records",
+        "to": "claim:C1-LORENTZ-KIN",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-legacy-research-knowledge-base-cutover-and-firs",
+        "relation": "records",
+        "to": "claim:C2-LORENTZ-EMERGENT",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-legacy-research-knowledge-base-cutover-and-firs",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
         "from": "event:20260814-r-167-v4-0-mesoscopic-source-ground-orbit-smear",
         "relation": "records",
         "to": "claim:C6-SPACETIME-SIGNATURE",
@@ -119317,6 +120006,42 @@
       },
       {
         "from": "event:20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
+        "relation": "records_result",
+        "to": "result:R-169",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
+        "relation": "records",
+        "to": "claim:A1-KERNEL-CONV",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
+        "relation": "records",
+        "to": "claim:B1-RH-ENUM",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
+        "relation": "records",
+        "to": "claim:B2-PROPA-HLAYER",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
+        "relation": "records",
+        "to": "claim:B3-RH-TESTED-STRUCTURE-RANKING",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
         "relation": "records_result",
         "to": "result:R-169",
         "basis": "explicit_result_id"
@@ -158202,6 +158927,216 @@
         "basis": "structured_formal_ref"
       },
       {
+        "from": "exploration:EXP-000859",
+        "relation": "assesses",
+        "to": "claim:B1-RH-ENUM",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000859",
+        "relation": "assesses",
+        "to": "claim:C4-GRAVITY-1LOOP",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000859",
+        "relation": "assesses",
+        "to": "claim:C5-NEWTON-G",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000859",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000859",
+        "relation": "assesses_gate",
+        "to": "gate:PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000859",
+        "relation": "records_task",
+        "to": "task:T-056",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000859",
+        "relation": "references_negative",
+        "to": "negative:R-2026-06-23-b3-bcc-structural-selection",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "assesses",
+        "to": "claim:A1-KERNEL-CONV",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "assesses",
+        "to": "claim:A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "assesses",
+        "to": "claim:A2-FULL-PRODUCTION-WELLPOSED",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "assesses",
+        "to": "claim:B1-RH-ENUM",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "assesses",
+        "to": "claim:B2-PROPA-HLAYER",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "assesses",
+        "to": "claim:B3-RH-TESTED-STRUCTURE-RANKING",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "assesses_gate",
+        "to": "gate:C6-BCC-PREMISE-BLOCKED",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "assesses_gate",
+        "to": "gate:PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "assesses_gate",
+        "to": "gate:PA-T055-READING-H-NATIVE-ZERO-PHASE-BCC-ORBIT-CELL-AND-GSTAR-SIGN",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "assesses_gate",
+        "to": "gate:PA-T055-READING-H-PINNED-P1-NONLINEAR-CONVENTION-AND-TORUS-COMMENSURABILITY-CROSSWALK",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "assesses_gate",
+        "to": "gate:PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "continues",
+        "to": "exploration:EXP-000858",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "records_task",
+        "to": "task:T-055",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "references_negative",
+        "to": "negative:R-2026-06-23-b3-bcc-structural-selection",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000860",
+        "relation": "references_result",
+        "to": "result:R-169",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000861",
+        "relation": "assesses",
+        "to": "claim:B3-BCC-STRUCT",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000861",
+        "relation": "assesses",
+        "to": "claim:C1-LORENTZ-KIN",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000861",
+        "relation": "assesses",
+        "to": "claim:C2-LORENTZ-EMERGENT",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000861",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000861",
+        "relation": "assesses_gate",
+        "to": "gate:C6-BCC-PREMISE-BLOCKED",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000861",
+        "relation": "assesses_gate",
+        "to": "gate:LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000861",
+        "relation": "continues",
+        "to": "exploration:EXP-000859",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000861",
+        "relation": "records_task",
+        "to": "task:T-057",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000861",
+        "relation": "references_negative",
+        "to": "negative:R-2026-06-23-b3-bcc-structural-selection",
+        "basis": "structured_formal_ref"
+      },
+      {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
         "relation": "bears_on",
         "to": "claim:B1-RH-ENUM",
@@ -161919,6 +162854,24 @@
         "from": "task:T-055",
         "relation": "targets",
         "to": "gate:C6-BCC-PREMISE-BLOCKED",
+        "basis": "canonical"
+      },
+      {
+        "from": "task:T-056",
+        "relation": "targets",
+        "to": "gate:LITERATURE-FIRST-APPLICABILITY-AUDIT",
+        "basis": "canonical"
+      },
+      {
+        "from": "task:T-057",
+        "relation": "advances",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "canonical"
+      },
+      {
+        "from": "task:T-057",
+        "relation": "targets",
+        "to": "gate:LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
         "basis": "canonical"
       }
     ]

@@ -1510,6 +1510,22 @@ reference, surviving stable realization or complete candidate class follows.
 `C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN. Physical Sector A and Pre-A
 remain open. No R-169 v1.2 PDF is issued.
 
+EXP-000860 / R-169 v1.3 retains v1.0--v1.2 and closes one further scoped T0,
+claim-nonbearing native-owner child. The registered equal-amplitude zero-phase
+Reading-H `{110}` branch has an exact translated BCC center orbit and regular
+truncated-octahedron Euclidean Voronoi cells, and the existing B1/B2 native
+theorem specializes to show that this explicit branch lies strictly above the
+isotropic `G_*` reference. On its natural commensurate torus the shell,
+normalization and cells are exact. This is a declared owner rather than the
+side-16 pinned-P1 owner. Even one constant amplitude scale plus one positive
+global energy scale cannot match the direct Reading-H and P1 functionals,
+because the quartic/sextic match fixes `s^2=1`, `c_E=2` and the quadratic
+coefficients then contradict equality. No generic Reading-H realization or
+full energy/ensemble bridge, physical-empty sign, transverse/continuum
+stability, candidate completeness, vacuum selection, C6 result or Round-1
+freeze follows. Physical Sector A and Pre-A remain open. No R-169 v1.3 PDF is
+issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

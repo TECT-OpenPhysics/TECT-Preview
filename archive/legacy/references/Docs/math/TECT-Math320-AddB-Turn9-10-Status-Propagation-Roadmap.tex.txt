@@ -1,0 +1,122 @@
+% TECT-Math320-AddB Turns 9-10: Status propagation and roadmap
+%
+% Autonomous research turns 9-10/20: propagate status changes through canonical ledgers
+%
+% Jusang Lee <jtkor@outlook.com>
+% 2026-05-07
+%
+% This note documents the intended status updates to the canonical TECT ledgers
+% upon commitment of Math339 and Math320-AddB Turns 1-8.
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{booktabs}
+
+\title{Math320-AddB Turns 9-10: Status propagation and roadmap}
+\author{TECT Collaboration\\\small Jusang Lee \texttt{<jtkor@outlook.com>}}
+\date{2026-05-07}
+
+\begin{document}
+\maketitle
+
+\section{Status changes upon closure of Math339}\label{sec:changes}
+
+Upon committing Math339 (final consolidation) and Math320-AddB Turns 1--8, the following status changes propagate through the TECT ledgers:
+
+\subsection{Math320 main theorem (TECT-Math320-BCC-Global-12-Star-Optimality-Closure.tex.txt)}
+
+\textbf{Current status}: T4 STRONG EVIDENCE (AUDIT-FLAGGED 2026-05-06).
+
+\textbf{New status}: T6 PROVED CONDITIONAL (AUDIT-STATUS banner removed; Turns 1-8 proof appended).
+
+\textbf{Action}: Edit the Math320 main note to restore the claimed tier (T6) and cross-reference Math339 as the complete proof.
+
+\subsection{Pillar 1 (BCC ground state)}
+
+\textbf{Current status in TOE-FACT-SHEET.md}: T5 CLOSED@1-LOOP (or T4, depending on pre-5-turn status).
+
+\textbf{New status}: T6 PROVED CONDITIONAL (the BCC is rigorously established as the unique global minimiser of the mean-field vertex coefficient).
+
+\textbf{Action}: Update TOE-FACT-SHEET.md Pillar 1 row to T6, citing Math339 as the proof.
+
+\subsection{Paper-TI-2 (Topological Impact Vol. 2) §3.5}
+
+\textbf{Current status}: Theorem 3.5 (Global 12-Star Optimality) cited Math320 as the proof.
+
+\textbf{New status}: Theorem 3.5 should cite Math339 as the rigorous proof at T6 PROVED CONDITIONAL tier.
+
+\textbf{Action}: In the next revision of Paper-TI-2, update §3.5 to cite Math339 and explicitly state the conditional hypotheses (H1--H3).
+
+\section{Evidence index entries}\label{sec:evidence}
+
+The following entries should be added to EVIDENCE-INDEX.md to trace the proof chain:
+
+\begin{enumerate}
+\item[(E1)] \textbf{Claim}: ``The BCC {110} cuboctahedron is the unique global maximiser of $\Lambda(S)$ among antipodal 12-stars.''
+  \begin{itemize}
+  \item \textbf{Evidence}: Math339 (Theorem \ref{thm:main}), T6 PROVED CONDITIONAL.
+  \item \textbf{Underlying claims}: (L1) $r_S(v) \le 4$ (Turn 6, Gröbner method), (L2) $n_4(S) \le 18$ (Turn 7, Cauchy rigidity).
+  \item \textbf{Conditional}: Hypotheses H1 (Gröbner degree), H2 (Archimedean completeness), H3 (Scope restriction).
+  \end{itemize}
+
+\item[(E2)] \textbf{Claim}: ``The BCC emerges uniquely as the ground state within the Paper-TI-2 scope.''
+  \begin{itemize}
+  \item \textbf{Evidence}: Math339 Downstream Impact §1, citing T6 PROVED CONDITIONAL on E1.
+  \end{itemize}
+
+\item[(E3)] \textbf{Claim}: ``Pillar 1 (BCC ground state) is established.''
+  \begin{itemize}
+  \item \textbf{Evidence}: Math339 + E1 + E2, T6 PROVED CONDITIONAL.
+  \item \textbf{Prior status}: T5 or T4 (depending on upstream pillar status).
+  \item \textbf{Upgraded to}: T6 PROVED CONDITIONAL.
+  \end{itemize}
+\end{enumerate}
+
+\section{CHANGELOG entry}\label{sec:changelog}
+
+The following CHANGELOG entry should be appended:
+
+\begin{quote}
+\textbf{[Theory] Math339 — Rigorous closure of Global 12-Star Optimality Theorem (Math320 T4 → T6) — 2026-05-07}
+
+\textbf{Theory tag}: Math339-BCC-Global-12-Star-Optimality-Final-Consolidation-2026-05-07
+
+\textbf{Status}: T6 PROVED CONDITIONAL (conditional on Gröbner basis execution and Archimedean/Cauchy classification completeness).
+
+\textbf{Summary}: Math320 was AUDIT-FLAGGED on 2026-05-06 with four concrete defects, downgraded to T4 STRONG EVIDENCE. Math320-AddA (2026-05-06) provided a corrected derivation resolving two of the four defects. Math320-AddB Turns 1-8 (2026-05-07, autonomous session) supply the complete rigorous proofs of the two remaining load-bearing claims:
+\begin{enumerate}
+\item[(L1)] $r_S(v) \le 4$ for generic off-diagonal vectors (Turns 1-6, Gröbner basis method).
+\item[(L2)] $n_4(S) \le 18$ for all antipodal 12-stars (Turns 4 and 7, enumeration + Cauchy rigidity).
+\end{enumerate}
+
+With (L1) and (L2), the functional bound $\Lambda(S) = 396 + 8n_4 \le 540$ becomes rigorous, proving the BCC uniqueness.
+
+\textbf{Conditional hypotheses}: (H1) Gröbner degree-4 polynomial verification (computational); (H2) Archimedean/Cauchy completeness; (H3) Paper-TI-2 scope restriction.
+
+\textbf{Downstream impact}: Pillar 1 (BCC ground state) upgraded to T6 PROVED CONDITIONAL. Paper-TI-2 §3.5 ready for Rev 3 citing Math339.
+
+\textbf{Files written}:
+\begin{itemize}
+\item Math320-AddB-Turn1-8 (8 Math notes: T3 proof sketch + T4 evidence + T6 proofs).
+\item Math339-BCC-Global-12-Star-Optimality-Final-Consolidation (complete proof, single document).
+\item Supplementary code: Math320_AddB_Turn3_Groebner_Fiber_Verification.py (Gröbner verification scaffold).
+\end{itemize}
+\end{quote}
+
+\section{Roadmap for Turns 11-20}\label{sec:roadmap}
+
+\begin{enumerate}
+\item[(T11)] Verify all files created (present turn).
+\item[(T12)] Create atomic-commit record (filenames, commit message, intended tree structure).
+\item[(T13)] Prepare NEGATIVE-RESULTS closure entry: migrate Math320 audit-flag from NEGATIVE-RESULTS into canonical archive.
+\item[(T14)] Document any deferred work (e.g., explicit Gröbner computation for H1) as OPEN-QUESTIONS entries.
+\item[(T15)] Cross-check upstream Pillars for status compatibility (Pillar 4 may depend on Pillar 1 tier).
+\item[(T16)] Verify no circular dependencies in the proof (all cited results either textbook, earlier Turns, or explicit hypotheses).
+\item[(T17)] Prepare TOE-FACT-SHEET.md updates.
+\item[(T18)] Prepare CHANGELOG.md entry (ready in §\ref{sec:changelog}).
+\item[(T19)] Confirm snapshot (Website synchronisation) not needed (no Website content changes in this session).
+\item[(T20)] Emit final session summary.
+\end{enumerate}
+
+\end{document}

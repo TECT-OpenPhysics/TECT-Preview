@@ -4,12 +4,18 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 1 · Next up 2 · Blocked 2 · Backlog 5 · Done (compatibility history) 45
+Counts: In progress 3 · Next up 2 · Blocked 2 · Backlog 5 · Done (compatibility history) 45
 
 ## In progress
 
 - **T-055** Geometry-first truncated-octahedron candidate triage: enumerate realizations and test empty-reference sign before structural use  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: C6-BCC-PREMISE-BLOCKED)_
   - Operator priority 2026-08-14. The object is truncated-octahedron geometry, not BCC as a premise. Use natural analogues only as calibrated diagnostics: BCC Voronoi cells for exact 14-face combinatorics, Kelvin-type foams for interface observables, the named Weaire--Phelan two-cell partition as an interface-energy negative control, and growing-bubble coarsening for rescaled cell-topology/defect attractor tests. Derive any one-, two-, three- or higher-motif candidate class from the frozen Reading-H soft spectrum, symmetry representations, conserved quantities and resonances; preregister its component cutoff and full allowed invariant basis rather than adding motifs post hoc. For every two-motif candidate, derive the complete A/B cross-coupling and resonant-phase energy, prove boundedness and compare the stable mixed branch against pure A, pure B and disordered reference under one renormalization convention; a changed charge ensemble is a distinct owner. An algorithmic Reading-H gradient-flow parameter is not physical time. First freeze center-extraction alternatives, enumerate BCC and non-BCC realizations under one renormalization convention, and test F_ren[realization]-F_ren[0] < 0. Only a surviving sign proceeds to transverse Hessian stability and thermodynamic/continuum control. Q3LOCK is auxiliary evidence.
+  - _updated 2026-08-14_
+- **T-056** Literature-first proof gate and legacy-evidence audit rollout  _(owner: Codex; gate: LITERATURE-FIRST-APPLICABILITY-AUDIT)_
+  - Create applicability records for live QFT/GR/Reading-H routes; block promotion until source, hypothesis crosswalk, reproduction and independent objection dispositions are recorded.
+  - _updated 2026-08-14_
+- **T-057** Selective legacy preservation, retrieval, and gate-by-gate revalidation  _(owner: AI+operator; claim: C6-SPACETIME-SIGNATURE; gate: LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION)_
+  - Policy: governance/legacy-research-knowledge-base.md. Contents remains the maintained full corpus; no wholesale copy or all-path completion target remains. TECT retains all 66 existing compatibility payloads, 49 newly selected readable reference copies, 115 selected source identities, 24 reviewed assessments, and the 50-source LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001 batch. FTS5 plus deterministic hashed-TFIDF retrieval uses hash-verified repository copies, with dense multilingual semantics explicitly unconfigured until a local model is pinned. Next: complete exact per-source extraction and dependency closure for the active batch, rerun under current conventions, independently audit, and integrate or reject only the surviving methods and results. Resolve other legacy claim pointers on demand from live gates. Selection, copies, summaries, search, or matching hashes do not change a claim tier or close a physical-vacuum, C6, Sector A, or Pre-A gate.
   - _updated 2026-08-14_
 
 ## Next up

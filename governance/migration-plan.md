@@ -1,81 +1,76 @@
-# Migration Plan — legacy corpus → verification-first repository (binding)
+# Migration Plan -- legacy corpus to verification-first repository
 
-**Issued**: 2026-06-05.
-**Legacy corpus**: the 2024–2026 repository (`TECT2/Contents`): ≈440 math notes
-(`Docs/math/TECT-Math*.tex.txt`), solvers and tools (`Codes/`), run archives
-(`Runs/`), status ledgers (`Docs/status/`), website tree (`Website/`).
+**Issued:** 2026-06-05. **Revised:** 2026-08-14.
+**Legacy source:** the separately maintained `E:/Dev/Contents` tree.
+
+The detailed selective-index, assessment, search, and completion rules are in
+`governance/legacy-research-knowledge-base.md`.
 
 ## 1. Principles
 
-1. **Pull-based, never bulk.** Content migrates only when a claim card needs
-   it. The claim card is the demand signal; migration without a consuming
-   claim is forbidden.
-2. **Re-validation at the boundary.** A legacy result enters at its translated
-   tier (`governance/tier-system.md` §4) and rises only through TSv2
-   procedures. Migration itself never promotes.
-3. **Everything is ledgered.** Every legacy file touched gets a row in
-   `archive/MIGRATION-LEDGER.md` with a disposition. Files never migrated will
-   eventually get a terminal disposition (`DROPPED` or `COLD-ARCHIVE`) so that
-   the ledger converges to a complete account of the legacy corpus.
-4. **Traceability is two-way.** Archive copies keep original filenames and
-   live in the per-tag layout `archive/legacy/{notes/<TheoryTag>/, scripts/,
-   artefacts/<TheoryTag>/}` (all versions of a tag together; scripts flat so
-   sibling imports stay runnable). The ORIGINAL legacy path of every file is
-   recorded in its ledger row; `archive/legacy/INDEX.md` is the per-tag
-   lookup table. New notes cite their archive sources; the ledger links both
-   directions.
+1. **Selective indexing.** A current task, claim, gate, result, or negative
+   result selects the legacy sources worth recording. There is no bulk-copy or
+   whole-corpus retirement target.
+2. **Revalidation at the boundary.** Legacy material enters current proof only
+   after its assumptions, conventions, scope, and evidence have been checked
+   under TSv2 procedures. Migration itself never promotes a claim.
+3. **Exact provenance.** Selected references carry a relative Contents path,
+   byte count, SHA-256, assessment, and append-only intake event. Existing
+   compatibility copies keep their issued paths.
+4. **Negative results are assets.** Refuted or superseded routes are indexed so
+   the main proof does not repeat them.
+5. **Preserve important selections.** Sources accepted into a reviewed
+   main-line batch receive readable repository copies. Unselected corpus
+   material remains only in Contents.
 
 ## 2. Dispositions
 
 | Disposition | Meaning |
 |---|---|
-| MIGRATED-VERBATIM | copied verbatim into the per-tag layout under `archive/legacy/`; cited as evidence as-is |
-| REWRITTEN | modernised into `claims/<ID>/notes/...` (`.tex.txt` fragment, TSv2 footer); archive copy kept |
-| SUPERSEDED | content replaced by a newer TECT result; archive copy kept for history |
-| DROPPED | not carried forward (reason recorded) |
-| COLD-ARCHIVE | retained only in the frozen legacy repo; no copy here |
+| MIGRATED-VERBATIM | byte-exact compatibility copy under `archive/legacy/` |
+| REWRITTEN | current-form note under a claim or theory authority; archive source retained |
+| SUPERSEDED | replaced by a later result but retained as lineage |
+| DROPPED | excluded with a recorded reason |
+| COLD-ARCHIVE | retained in Contents, with no repository copy |
 
-## 3. Phases
+## 3. Workflow
 
-- **M0 — Freeze (immediate).** The legacy repository becomes read-only
-  reference. New results land only here. Claim cards cite legacy evidence with
-  the `legacy:` prefix (path relative to the legacy repo root).
-- **M1 — Demand-driven migration (continuous).** When work touches a claim:
-  migrate exactly the evidence chain that the card cites — note(s), the
-  scripts that generated cited numbers, and the run JSONs. Re-run scripts
-  where feasible; record the re-validation result in the ledger row.
-- **M2 — Pointer resolution.** A claim card is "migration-clean" when its
-  `legacy_evidence` contains no `legacy:` pointers (all resolved to
-  `archive/...` or rewritten `theory/...` paths). **T7 requires
-  migration-clean** (linter rule). P2 artefacts may only cite
-  migration-clean claims.
-- **M3 — Terminal sweep (end state).** Remaining legacy files get terminal
-  dispositions; the legacy repo is retired to cold storage.
+- **M0 -- Maintain source.** Contents continues as the external legacy source;
+  new current results land only in TECT.
+- **M1 -- Gate-driven selection.** For a live question, freeze a batch and
+  index the smallest relevant source and dependency set.
+- **M2 -- Revalidate and reconcile.** Extract assumptions, results, failures,
+  and contradiction boundaries; reproduce or independently audit as needed.
+- **M3 -- Integrate or terminate.** Replace `legacy:` pointers with current
+  evidence, a refutation, supersession, reasoned waiver, or terminal archive
+  disposition. T7 requires migration-clean claim dependencies.
 
-## 4. Priority order for M1
+The process repeats on demand. It does not end by classifying every file in
+Contents.
 
-1. Claims on the critical path (Sector B: `B1-RH-ENUM`, `B2-PROPA-HLAYER` —
-   the Math426/435/437/440/441/442 chain and its scripts).
-2. Claims cited by the first Minimal Review Packet (Packet A).
-3. T7-candidates (legacy-PROVED entries) — package construction doubles as
-   migration.
-4. Everything else on demand.
+## 4. Priority
 
-## 5. What does NOT migrate
+1. the active main-proof gate and its direct dependencies;
+2. unresolved `legacy:` pointers on current claims;
+3. evidence needed by a review or publication package;
+4. reusable methods and counterevidence discovered during those audits.
 
-- Legacy process machinery superseded by this governance (mirror-sync
-  scripts, website generators bound to the old tree, snapshot pipeline).
-  Lessons learned are already encoded in `governance/`; the code is
-  COLD-ARCHIVE.
-- Legacy status ledgers (`TOE-FACT-SHEET.md`, etc.) — translated once into
-  seeded claim cards (done 2026-06-05); thereafter historical documents,
-  COLD-ARCHIVE.
-- Session handoffs, operator logs → never (P0-class content).
+The first post-cutover selection is the T-055 geometry, BCC-refutation,
+empty-reference, and truncated-octahedron method set.
 
-## 6. Quality gate per migrated item
+## 5. Material not copied by default
 
-Checklist recorded in the ledger row: original path; disposition; target path;
-consuming claim IDs; convention check against the corrected production kernel
-($r_{\rm braz}=K(q_0)=\mu^2$ lineage — stale-convention content must be
-flagged or corrected on entry); re-validation evidence (re-run artefact or
-reasoned waiver); date; operator sign-off for anything feeding a T6+ claim.
+- mirrors, backups, merged compilations, VCS internals, and generated outputs;
+- superseded process machinery and old website pipelines;
+- third-party or licensed paper collections;
+- session handoffs, credentials, private operator logs, and large arrays not
+  required by a current reproduction package.
+
+Their existence may be noted in planning context, but that is not evidence.
+
+## 6. Quality gate per integrated item
+
+Record the original relative path, disposition, target or source ID, consuming
+claim/gate, convention comparison, revalidation evidence or reasoned waiver,
+date, and required sign-off. A passing historical script alone is not an
+analytic audit or a current physical conclusion.

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tect://archive/legacy/registry/schema-v1",
+  "title": "TECT legacy research registry",
+  "type": "object",
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["schema_version", "source_id", "snapshot_id", "origin_path", "sha256", "bytes", "compatibility_paths", "source_kind", "canonicality", "storage_class", "source_location", "copy_encoding", "preservation"]
+    },
+    "record": {
+      "type": "object",
+      "required": ["schema_version", "record_id", "title", "source_tags", "source_ids", "pinned_source_ids_sha256", "sectors", "claims", "gates", "topics", "legacy_purpose", "legacy_conclusion", "achievements", "negative_findings", "contradictions", "assumptions", "reusable_elements", "current_assessment", "evidence_role", "status_axes", "tsv2_ceiling", "no_overclaim", "next_actions", "review"]
+    }
+  },
+  "enums": {
+    "sectors": ["A", "B", "C", "D", "E", "F"],
+    "canonicality": ["CANONICAL_RAW", "DUPLICATE_ALIAS", "GENERATED_DERIVATIVE", "VCS_METADATA", "EXTERNAL_REFERENCE", "BUILD_NOISE"],
+    "storage_class": ["compatibility-copy", "reference-copy", "contents-reference"],
+    "source_location": ["compatibility-copy", "reference-copy", "contents-reference"],
+    "copy_encoding": ["raw", "base64-json", "none"],
+    "preservation": ["inventoried", "verified-copy", "missing"],
+    "extraction": ["pending", "reviewed", "needs-review"],
+    "revalidation": ["not-run", "pass", "fail", "waived", "not-applicable"],
+    "integration": ["unmapped", "mapped", "candidate", "integrated", "terminal"],
+    "current_assessment": ["unreviewed", "reusable", "revalidate-required", "partially-reusable", "superseded", "refuted", "context-only"],
+    "evidence_role": ["candidate-support", "counterevidence", "method", "provenance", "negative-control", "dependency", "context"]
+  }
+}

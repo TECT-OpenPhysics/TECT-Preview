@@ -1,0 +1,163 @@
+{
+  "assertions": 12,
+  "certificate_hash": "95e6c830fea183cf440aa0173d079351b0983da028f34b31470066b1badc6594",
+  "checks": [
+    {
+      "actual": "{'exploration_id': 'EXP-000860', 'version': 'R-169 v1.3', 'claim_bearing': False}",
+      "expected": "EXP-000860 / R-169 v1.3 / false",
+      "group": "identity",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'reading_h_cfull': '3a4b2d853992d2b4495da7a4ad1619fda21170f72247f3d549a0bb051680a98f', 'reading_h_coefficients': '98c20da09ad60ee2a6148383da28895a9e136bcdb0a56127adcb6feb8389e2a4', 'math424_native_owner': 'e9c7d8d80eea491652241cad1b7139b9a23e92696d8d4dac7bd387534e2f1895', 'b2_t7_proposition': '7a2c21b5d92d2978eb6446c09f56c6d79fadd8ce180f25709e617df081b63284', 'r169_v1_0_manifest': 'f482c5c60e50d0d6591a769e13c923576b735860a7e785519f5adb55500705f2', 'r169_v1_1_manifest': 'e627140dd4ef4bf6a7f1b16f9e31f0ea12e4d009f40938164675d4237e771451', 'r169_v1_2_manifest': 'a5638670ed6196fe0760409a807b68bb27743e5f603e29fbcdca02a5719814f5', 'p1_manifest': '88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565', 'r157_manifest': 'b62ee37609cbe493eeb9d7d0d9b1fb9fcd94f8d1a86907b8714135e6a8026ca8', 'r158_manifest': 'f42812ef61ff5be9472f5a760b76fef879bc336f3a698d3e02938e0562f13bf3'}",
+      "expected": "{'reading_h_cfull': '3a4b2d853992d2b4495da7a4ad1619fda21170f72247f3d549a0bb051680a98f', 'reading_h_coefficients': '98c20da09ad60ee2a6148383da28895a9e136bcdb0a56127adcb6feb8389e2a4', 'math424_native_owner': 'e9c7d8d80eea491652241cad1b7139b9a23e92696d8d4dac7bd387534e2f1895', 'b2_t7_proposition': '7a2c21b5d92d2978eb6446c09f56c6d79fadd8ce180f25709e617df081b63284', 'r169_v1_0_manifest': 'f482c5c60e50d0d6591a769e13c923576b735860a7e785519f5adb55500705f2', 'r169_v1_1_manifest': 'e627140dd4ef4bf6a7f1b16f9e31f0ea12e4d009f40938164675d4237e771451', 'r169_v1_2_manifest': 'a5638670ed6196fe0760409a807b68bb27743e5f603e29fbcdca02a5719814f5', 'p1_manifest': '88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565', 'r157_manifest': 'b62ee37609cbe493eeb9d7d0d9b1fb9fcd94f8d1a86907b8714135e6a8026ca8', 'r158_manifest': 'f42812ef61ff5be9472f5a760b76fef879bc336f3a698d3e02938e0562f13bf3'}",
+      "group": "provenance",
+      "name": "frozen source hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'support_count': 12, 'support_antipodal': True, 'support_zero_sum': [0, 0, 0], 'minimum_angle_cosine': '1/2'}",
+      "expected": "exact registered support",
+      "group": "geometry",
+      "name": "support derivation",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'corner_maximum': 3, 'corner_minimum': -1, 'equality_corners': [[-1, -1, -1], [1, 1, 1]], 'equality_values': [3, 3]}",
+      "expected": "both equality corners positive",
+      "group": "geometry",
+      "name": "corner and sign derivation",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[0, 0, 0], [1, 1, 1]]",
+      "expected": "two BCC residues",
+      "group": "geometry",
+      "name": "BCC residue derivation",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'voronoi_vertex_count': 24, 'edge_count': 36, 'square_face_count': 6, 'hexagon_face_count': 8, 'cell_volume_coefficient': '1/2'}",
+      "expected": "24/36/(6+8), determinant 1/2",
+      "group": "geometry",
+      "name": "cell combinatorics and determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'production_amplitude_square': '1/6000', 'bohr_mean': '1/500', 'centers_per_conventional_cube': '2'}",
+      "expected": "A^2=1/6000, M=1/500, density 2",
+      "group": "normalization",
+      "name": "normalization derivation",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'side16_q0_above_shell_three': True, 'side16_nearest_radial_count': 8, 'side16_bcc_direction_count': 12, 'bohr_snap_error_coefficient': '2'}",
+      "expected": "off shell, 8-vs-12, 2I",
+      "group": "interface",
+      "name": "side-16 firewall derivation",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'angle': True, 'packing': True, 'region': True}",
+      "expected": "all strict",
+      "group": "native-sign",
+      "name": "native membership arithmetic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'forced_s_square': '1', 'forced_energy_scale': '2', 'p1_quadratic_lower': '5020336473/5000000000', 'reading_h_quadratic': '2088867638653044543805315898093361/9536743164062500000000000000000000', 'quadratic_gap': '7486664269382233776507184101906639/9536743164062500000000000000000000', 'quadratic_contradiction': True}",
+      "expected": "forced 1/2 and positive exact gap",
+      "group": "interface",
+      "name": "global-rescaling contradiction",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'production_p1_charge': '512/125', 'r158_intensity_ratio': '5375/54'}",
+      "expected": "exact changed-owner values",
+      "group": "ensemble",
+      "name": "ensemble arithmetic",
+      "status": "PASS"
+    },
+    {
+      "actual": "['PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE', 'No P1 or R-157 premise is used', 'does not compare either state with an empty', 'no new negative is registered', 'No R-169 v1.3 PDF is issued']",
+      "expected": "['PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE', 'No P1 or R-157 premise is used', 'does not compare either state with an empty', 'no new negative is registered', 'No R-169 v1.3 PDF is issued']",
+      "group": "scope",
+      "name": "certificate boundary",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "absolute_corner_maximum": 3,
+    "angle_membership": true,
+    "bohr_mean": "1/500",
+    "bohr_snap_error_coefficient": "2",
+    "cell_volume_coefficient": "1/2",
+    "center_residues_mod_two": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "centers_per_conventional_cube": "2",
+    "corner_maximum": 3,
+    "corner_minimum": -1,
+    "edge_count": 36,
+    "equality_corners": [
+      [
+        -1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "equality_values": [
+      3,
+      3
+    ],
+    "forced_energy_scale": "2",
+    "forced_s_square": "1",
+    "hexagon_face_count": 8,
+    "minimum_angle_cosine": "1/2",
+    "natural_torus_center_count": "2*N**3",
+    "natural_torus_norm_coefficient": "N**3/500",
+    "operating_region_membership": true,
+    "p1_quadratic_lower": "5020336473/5000000000",
+    "packing_membership": true,
+    "production_amplitude_square": "1/6000",
+    "production_p1_charge": "512/125",
+    "quadratic_contradiction": true,
+    "quadratic_gap": "7486664269382233776507184101906639/9536743164062500000000000000000000",
+    "r158_intensity_ratio": "5375/54",
+    "reading_h_quadratic": "2088867638653044543805315898093361/9536743164062500000000000000000000",
+    "side16_bcc_direction_count": 12,
+    "side16_nearest_radial_count": 8,
+    "side16_q0_above_shell_three": true,
+    "side16_shell_three_gap": "21583800249063331760720835349256075071556647176562187497146924143171/1303910299507724075041659259312565190106821433408185839653015136718750000000000",
+    "square_face_count": 6,
+    "support_antipodal": true,
+    "support_count": 12,
+    "support_zero_sum": [
+      0,
+      0,
+      0
+    ],
+    "voronoi_vertex_count": 24
+  },
+  "manifest_hash": "3ff66a08efa8838f01da13e5aeacae5bcc5a9de6d696b28ddfbaae9d3a724c21",
+  "mode": "formal",
+  "schema": "tect/pre-a-t055-reading-h-native-owner-bcc-route-termination-independent/1.0",
+  "source_hash": "b3bd2c4fba85d7600246490b3edcb21c9a0adb3395b8faf453f2df140f29716e",
+  "verdict": "PASS",
+  "version": "1.0.0"
+}

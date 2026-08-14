@@ -37,10 +37,15 @@ Changelog:
   1.4.0 (2026-08-10) freeze the legacy full catalog JSON and emit a thin current
         manifest with one bounded JSON shard per artefact kind.
   1.4.1 (2026-08-10) remove trailing whitespace from the compact summary line.
+  1.5.0 (2026-08-14) classify normalized legacy source objects, research
+        records and generated legacy syntheses; import exact many-to-many
+        claim links from the generated legacy research index.
+  1.5.1 (2026-08-14) replace the duplicate raw-object layer with readable,
+        selectively preserved reference copies and compact source metadata.
 """
-__version__ = "1.4.1"
+__version__ = "1.5.1"
 __first_issued__ = "2026-06-05"
-__version_issued__ = "2026-08-10"
+__version_issued__ = "2026-08-14"
 
 import argparse
 import datetime as _dt
@@ -80,6 +85,8 @@ KINDS = [
     ("archive-note",     "Migrated legacy notes (immutable)"),
     ("archive-script",   "Migrated legacy scripts (runnable)"),
     ("archive-artefact", "Migrated legacy run artefacts (immutable)"),
+    ("legacy-research-record", "Reviewed legacy research records"),
+    ("legacy-research-view", "Generated legacy sector, claim, and gate views"),
     ("run-artefact",     "Fresh run artefacts (TSv2 evidence)"),
     ("code",             "Domain codes"),
     ("verification",     "Verification harness"),
@@ -95,6 +102,12 @@ KIND_ORDER = {k: i for i, (k, _) in enumerate(KINDS)}
 
 def classify(rel: str) -> str:
     p = rel.replace("\\", "/")
+    if p.startswith("archive/legacy/registry/sources/") or p.startswith("archive/legacy/registry/records/"):
+        return "legacy-research-record"
+    if p.startswith("archive/legacy/views/") or p in {
+        "archive/legacy/RESEARCH-INDEX.md", "archive/legacy/CONTENTS-REFERENCE.md"
+    }:
+        return "legacy-research-view"
     if p.startswith("claims/") and p.endswith(("claim.md", "status.json")):
         return "claim-card"
     if p.startswith("claims/") and "/notes/" in p:
@@ -111,9 +124,15 @@ def classify(rel: str) -> str:
         return "synthesis"
     if p.startswith("archive/legacy/notes/"):
         return "archive-note"
+    if p.startswith("archive/legacy/references/Docs/"):
+        return "archive-note"
     if p.startswith("archive/legacy/scripts/"):
         return "archive-script"
+    if p.startswith("archive/legacy/references/Codes/"):
+        return "archive-script"
     if p.startswith("archive/legacy/artefacts/"):
+        return "archive-artefact"
+    if p.startswith("archive/legacy/references/Runs/"):
         return "archive-artefact"
     if p.startswith("codes/"):
         return "code"
@@ -151,6 +170,26 @@ def claim_links():
             for ev in card.get("legacy_evidence", []):
                 if isinstance(ev, str) and ev.startswith("archive/"):
                     links.setdefault(ev, set()).add(cid)
+    legacy_index = REPO / "verification" / "legacy-research-index.json"
+    if legacy_index.exists():
+        try:
+            legacy = json.loads(legacy_index.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            legacy = {}
+        for record in legacy.get("records", []):
+            claims = {cid for cid in record.get("claims", []) if isinstance(cid, str)}
+            if not claims:
+                continue
+            record_path = f"archive/legacy/registry/records/{record.get('record_id')}.json"
+            links.setdefault(record_path, set()).update(claims)
+            for cid in claims:
+                links.setdefault(f"archive/legacy/views/claims/{cid}.md", set()).add(cid)
+            for source in record.get("sources", []):
+                sid = source.get("source_id")
+                if sid:
+                    links.setdefault(f"archive/legacy/registry/sources/{sid}.json", set()).update(claims)
+                for compat in source.get("compatibility_paths", []):
+                    links.setdefault(compat, set()).update(claims)
     return links
 
 

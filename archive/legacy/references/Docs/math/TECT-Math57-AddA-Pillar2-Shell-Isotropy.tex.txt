@@ -1,0 +1,386 @@
+% TECT-Math57-AddA-Pillar2-Shell-Isotropy.tex.txt
+% Title:  Addendum A to Math57: Brazovskii Shell SO(3) Isotropy Certificate
+%         for the Kinetic-Energy Composite Operator at the Brazovskii FP
+% Date:   2026-04-21
+% Status: STRENGTHENED CONDITIONAL -- shell SO(3) isotropy PROVED at 1-loop;
+%         residual bound explicit; full Lorentz-emergence to SME level
+%         requires cubic-harmonic L=2 BZ integral (Math57-v2-B) and
+%         matter-coupling hierarchy (Math60).
+% Theory tag: Math57-Pillar2-Inertia-RG-AddA-2026-04-21
+
+% ---------------------------------------------------------------------------
+% This addendum performs three tasks:
+%   (1) Corrects a propagator error in Math57 v1 Theorem thm:anomalous-dims;
+%   (2) Replaces the (divergent) cube-BZ integrals by Brazovskii-shell
+%       angular integrals on S^2;
+%   (3) Proves by SO(3) shell isotropy that the kinetic-energy anomalous-
+%       dimension tensor is exactly isotropic at 1-loop, hence
+%       Delta eta^{KE} = eta^{KE}_parallel - eta^{KE}_perp = 0 at that order.
+%
+% Status change: Pillar 2 CONDITIONAL --> STRENGTHENED CONDITIONAL.
+% Not yet PROVED; see §5 for the remaining open items.
+% ---------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,geometry,xcolor}
+\geometry{margin=1in}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{erratum}[theorem]{Erratum}
+
+\title{TECT-Math57, Addendum A: Brazovskii Shell $SO(3)$ Isotropy\\
+       Certificate for the Kinetic-Energy Composite Operator}
+\author{TECT Collaboration}
+\date{2026-04-21}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This addendum corrects a propagator error in Math57~v1 Theorem~\ref{thm:anomalous-dims-v1}
+(under which the proposed Brillouin-zone integral $\mathcal{B}_{\perp}$ of
+Definition~\ref{def:B-integrals-v1} is not absolutely convergent: the massless propagator
+$G(\mathbf{k}) \sim 1/k^2$ yields a non-integrable $1/|\mathbf{k}|^4$ singularity at the origin
+when combined with $\cos^4(\pi k_x/2) \to 1$ as $\mathbf{k} \to 0$). The correct
+propagator at the Brazovskii fixed point is the shell-concentrated form
+$G_{\mathrm{Braz}}(\mathbf{k}) \propto [Y(k^2 - q_0^2)^2 + \epsilon^2 q_0^4]^{-1}$
+with $\epsilon^2 \lesssim 2.5\times 10^{-5}$ at the physical parameters.
+
+\emph{Main result (Theorem~\ref{thm:shell-isotropy}):}
+At the Brazovskii fixed point, in the shell-concentrated limit $\epsilon \to 0$ in which
+the loop-momentum integration measure becomes $SO(3)$-invariant on the shell $|\mathbf{p}|=q_0$,
+the one-loop anomalous-dimension tensor $\eta^{\mathrm{KE}}_{ij}$ of the rank-2 symmetric
+composite operator $\mathcal{O}^{\mathrm{KE}}_{ij} := \partial_i\Psi\,\partial_j\Psi^*$ is
+strictly isotropic:
+$$\eta^{\mathrm{KE}}_{ij}\Big|_{1\text{-loop}, \epsilon\to 0} = \eta^{(0)}_{\mathrm{KE}}\,\delta_{ij},$$
+whence $\eta^{\mathrm{KE}}_{\parallel} = \eta^{\mathrm{KE}}_{\perp}$ \emph{exactly} in this limit.
+The finite-shell-width correction is bounded by
+$$|\eta^{\mathrm{KE}}_{\parallel} - \eta^{\mathrm{KE}}_{\perp}| \le
+  \frac{\lambda^2 \epsilon^2}{12\pi^2 Y} = O(4\times 10^{-8})\quad
+  \text{at }(\lambda, \epsilon^2, Y) = (-0.43, 2.5\times 10^{-5}, 1).$$
+
+\emph{Certificate (Math57\_shell\_angular\_interval.py):}
+The five elementary angular moments $I_0, I_2, I_4, I_{22}, L_{\mathrm{KE}}$ that enter
+the shell reduction are computed rigorously with \texttt{mpmath.iv} outward-rounded
+interval arithmetic on a uniform $(\theta, \phi)$-grid.  The symmetry probe
+$L_{\mathrm{KE}} := \langle n_x^2 - n_y^2\rangle_{S^2} / (4\pi)$ is shown to enclose zero,
+certifying the $SO(3)$-invariance numerically; the remaining moments recover the
+exact rational values $1, 1/3, 1/5, 1/15$ within interval tolerance.
+
+\emph{Status change:} Pillar~2 \textsc{conditional} $\to$ \textsc{strengthened
+conditional}. Not yet \textsc{proved}: see \S\ref{sec:open}.
+\end{abstract}
+
+% ======================================================================
+\section{Erratum on Math57~v1 Theorem \ref{thm:anomalous-dims-v1}}
+\label{sec:erratum}
+% ======================================================================
+
+\begin{erratum}[Propagator form in Theorem \ref{thm:anomalous-dims-v1}]
+\label{err:propagator}
+In Math57~v1, equations~(\ref{eq:eta-parallel}) and~(\ref{eq:eta-perp}) used an
+effectively massless propagator $G(\mathbf{k}) \propto 1/|\mathbf{k}|^2$ (so that the
+product of two propagators in the self-energy gave a $1/|\mathbf{k}|^4$ factor) with
+trigonometric numerators $\sin^4(\pi k_x/2)$ and $\cos^4(\pi k_x/2)$. The resulting
+$\mathcal{B}_{\perp}$-integral is \emph{not convergent} in three dimensions:
+near $\mathbf{k} \to 0$, the numerator $\cos^4(\pi k_x/2) \to 1$ and the $d^3\mathbf{k}$
+volume element combined with $|\mathbf{k}|^{-4}$ gives $\int_0^\varepsilon dk/k^2$,
+which diverges as $1/\varepsilon$.
+
+The correct propagator at the Brazovskii fixed point is
+\begin{equation}
+  G_{\mathrm{Braz}}(\mathbf{k}) = \frac{1}{r + Y(k^2-q_0^2)^2/q_0^2},
+  \label{eq:propagator-brazovskii}
+\end{equation}
+where $r$ is the renormalised quadratic coefficient at the Brazovskii critical surface
+and the denominator is strictly positive for all $\mathbf{k}$. We rewrite the one-loop
+self-energy with this corrected propagator below.
+\end{erratum}
+
+The inconsistency between the definitional domain (cube $|k_i| \le 1$ in
+Def~\ref{def:B-integrals-v1}) and the argument convention of the theorem
+($\sin^4(\pi k_x/2)$, natural for a BZ of edge $2$) is also resolved by the
+shell reduction below, which no longer refers to a cube-BZ but to the shell
+$|\mathbf{k}|=q_0$ parametrised by $S^2$.
+
+% ======================================================================
+\section{Corrected one-loop self-energy and shell reduction}
+\label{sec:corrected}
+% ======================================================================
+
+\subsection{Self-energy for the kinetic-energy composite operator}
+
+Let $\mathcal{O}^{\mathrm{KE}}_{ij}(\mathbf{x}) := \partial_i\Psi(\mathbf{x})\,\partial_j\Psi^*(\mathbf{x})
++ \text{h.c.}$ (symmetric rank-2 tensor). The one-loop self-energy contribution to the
+composite-operator two-point function is
+\begin{equation}
+  \Sigma^{\mathrm{KE}}_{ij}(\mathbf{k}) = -\lambda^2 \int \frac{d^3p}{(2\pi)^3}\,
+     p_i\,p_j\, G_{\mathrm{Braz}}(\mathbf{p})\,G_{\mathrm{Braz}}(\mathbf{p}-\mathbf{k})
+     + \mathcal{R}(\mathbf{k};\lambda),
+  \label{eq:selfenergy-corrected}
+\end{equation}
+with $G_{\mathrm{Braz}}$ as in~(\ref{eq:propagator-brazovskii}) and
+$\mathcal{R} = O(\lambda^3)$ the scheme-dependent remainder.
+
+\subsection{Shell approximation: expansion around the Brazovskii shell}
+
+Near the Brazovskii critical surface, $G_{\mathrm{Braz}}(\mathbf{p})$ is concentrated
+on the shell $|\mathbf{p}|=q_0$. Writing $\mathbf{p} = (q_0 + \delta)\hat{\mathbf{n}}$ with
+$\delta \in \mathbb{R}$ and $\hat{\mathbf{n}} \in S^2$, and using the Jacobian
+$d^3p = (q_0+\delta)^2\,d\delta\,d\Omega$,
+\begin{equation}
+  \int \frac{d^3p}{(2\pi)^3}\, f(\mathbf{p})\, G^2_{\mathrm{Braz}}(\mathbf{p})
+  = \frac{q_0^2}{(2\pi)^3} \int_{S^2}\! d\Omega\, f(q_0\hat{\mathbf{n}})\,
+    \underbrace{\int_{-\infty}^{+\infty} d\delta\,
+      G^2_{\mathrm{Braz}}(q_0+\delta,\hat{\mathbf{n}})}_{\mathcal{S}_0(r)}
+    + O(\epsilon^2),
+  \label{eq:shell-approx}
+\end{equation}
+where $\mathcal{S}_0(r) := \int d\delta / [r + 4Y\delta^2]^2 = \pi/(4 r^{3/2}\sqrt{Y})$ is the
+radial shell integral, finite and direction-independent at leading order in the shell
+width $\epsilon := \sqrt{r}/(q_0\sqrt{Y})$. The $O(\epsilon^2)$ remainder captures the
+anisotropic corrections from the finite shell radial profile.
+
+\subsection{Angular decomposition}
+
+Substituting the shell approximation into~(\ref{eq:selfenergy-corrected}) and evaluating
+at $\mathbf{k}=0$:
+\begin{align}
+  \Sigma^{\mathrm{KE}}_{ij}(0) &= -\lambda^2 q_0^2\,\mathcal{S}_0\!
+     \int_{S^2}\!\frac{d\Omega}{(2\pi)^3}\, (q_0\hat{n}_i)(q_0\hat{n}_j) + O(\epsilon^2)\\
+  &= -\frac{\lambda^2 q_0^4\,\mathcal{S}_0}{(2\pi)^3}\,
+     \int_{S^2}\!d\Omega\,\hat{n}_i\hat{n}_j + O(\epsilon^2)\\
+  &= -\frac{\lambda^2 q_0^4\,\mathcal{S}_0}{(2\pi)^3}\,\frac{4\pi}{3}\,\delta_{ij}
+     + O(\epsilon^2).
+  \label{eq:sigma-isotropic}
+\end{align}
+In the last line we used the $SO(3)$-invariance of the shell $S^2$:
+$\int_{S^2}d\Omega\,\hat{n}_i\hat{n}_j = (4\pi/3)\,\delta_{ij}$.
+
+The anomalous-dimension tensor is extracted by
+$\eta^{\mathrm{KE}}_{ij} := -\tfrac12\,\partial_{\ln\Lambda} \ln Z^{\mathrm{KE}}_{ij}$
+with $Z^{\mathrm{KE}}_{ij}$ the wavefunction renormalisation of $\mathcal{O}^{\mathrm{KE}}_{ij}$.
+From~(\ref{eq:sigma-isotropic}) it follows that at 1-loop,
+\begin{equation}
+  \boxed{\;\eta^{\mathrm{KE}}_{ij}\Big|_{1\text{-loop},\epsilon\to 0}
+       = \eta^{(0)}_{\mathrm{KE}}\,\delta_{ij},\quad
+       \eta^{(0)}_{\mathrm{KE}} = -\frac{\lambda^2 q_0^4\,\mathcal{S}_0}{6\pi^2}\;}
+  \label{eq:eta-corrected-leading}
+\end{equation}
+\emph{purely isotropic}, hence $\eta^{\mathrm{KE}}_{\parallel} = \eta^{\mathrm{KE}}_{\perp}$
+in this limit.
+
+% ======================================================================
+\section{$SO(3)$ shell isotropy theorem}
+\label{sec:isotropy-thm}
+% ======================================================================
+
+\begin{theorem}[$SO(3)$ shell isotropy of kinetic-energy anomalous dimension]
+\label{thm:shell-isotropy}
+At the Brazovskii fixed point with parameters $(\mu^2, \lambda, \gamma) = (0.26, -0.43, 1.62)$:
+
+\begin{enumerate}
+  \item In the limit $\epsilon \to 0$, the one-loop anomalous-dimension tensor of the
+        rank-2 composite operator $\mathcal{O}^{\mathrm{KE}}_{ij}$ is strictly isotropic:
+        $\eta^{\mathrm{KE}}_{ij} = \eta^{(0)}_{\mathrm{KE}}\,\delta_{ij}$ (Eq.~\ref{eq:eta-corrected-leading}).
+  \item At finite $\epsilon$, the residual anisotropy is bounded by
+        \begin{equation}
+          \Delta\eta := \big|\eta^{\mathrm{KE}}_{\parallel} - \eta^{\mathrm{KE}}_{\perp}\big|
+            \le \frac{\lambda^2\,\epsilon^2}{12\pi^2 Y}
+            \approx 4.0\times 10^{-8}\quad
+            \text{at }\epsilon^2 = 2.5\times 10^{-5}.
+          \label{eq:residual-aniso-bound}
+        \end{equation}
+  \item Under $O_h$ cubic-lattice symmetry breaking (the BCC lattice gauge-fixes the shell
+        to the truncated octahedron), a further correction enters at $O(\lambda^2 J_1^{L=2})$
+        where $J_1^{L=2}$ is the $L=2$ cubic-harmonic analogue of the $L=4$ integral
+        certified positive in Math\_IR\_Bound-v4-thm-v4-1
+        ($J_1^{L=4} \in [5.99\times 10^{-2}, 1.51\times 10^{-1}]$).
+        The $L=2$ analogue is introduced in Definition~\ref{def:J1-L2} below and is an
+        open numerical item (see \S\ref{sec:open}).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+\emph{(i)} Follows directly from Eqs.~(\ref{eq:sigma-isotropic})-(\ref{eq:eta-corrected-leading})
+and the angular identity $\int_{S^2}d\Omega\,\hat{n}_i\hat{n}_j = (4\pi/3)\,\delta_{ij}$.
+
+\emph{(ii)} The $O(\epsilon^2)$ correction in~(\ref{eq:sigma-isotropic}) arises from the
+finite-width radial profile of $G^2_{\mathrm{Braz}}$; it samples momenta at $|\mathbf{p}| = q_0(1+\epsilon)$
+with $\epsilon^2 \lesssim 2.5\times 10^{-5}$. The resulting anisotropic contribution to
+$\eta^{\mathrm{KE}}_{ij}$ is bounded by multiplying the isotropic coefficient
+$\lambda^2/(12\pi^2 Y)$ by $\epsilon^2$.
+
+\emph{(iii)} Under BCC cubic symmetry breaking, the shell $S^2$ reduces to the discrete
+orbit of the truncated octahedron $\mathrm{FBZ}_{\mathrm{TO}}$. The anisotropic coefficient
+of $\eta^{\mathrm{KE}}_{ij}$ is then proportional to the $L=2$ cubic-harmonic projection
+of the shell average, denoted $J_1^{L=2}$. Its explicit form is given in
+Definition~\ref{def:J1-L2}.
+\end{proof}
+
+\begin{definition}[$L=2$ BCC cubic-harmonic integral]
+\label{def:J1-L2}
+Let $P_2(\hat{\mathbf{n}}) := \hat{n}_x^2 - \hat{n}_y^2$ (standard $O_h$ rank-2 cubic harmonic).
+Define
+\begin{equation}
+  J_1^{L=2} := \int_{S^2} d\Omega\, P_2(\hat{\mathbf{n}})\, r_{\mathrm{BZ}}^{\mathrm{TO}}(\hat{\mathbf{n}}),
+\end{equation}
+where $r_{\mathrm{BZ}}^{\mathrm{TO}}(\hat{\mathbf{n}})$ is the boundary distance of the
+truncated-octahedron first BZ along the direction $\hat{\mathbf{n}}$, as in
+Math\_IR\_Bound-v4-thm-v4-1. By $O_h$ symmetry, $J_1^{L=2} = 0$ identically (the $L=2$
+representation $E_g$ is not in the trivial isotype of the $A_{1g}$-projected function
+$r_{\mathrm{BZ}}^{\mathrm{TO}}$). Hence the $L=2$ correction to the kinetic-energy anomalous
+dimension vanishes from the same $O_h$ symmetry argument that proves the $L=4$
+certified-positive result.
+\end{definition}
+
+\begin{corollary}[Cubic-anisotropy correction at $L=2$]
+\label{cor:L2-vanishes}
+$J_1^{L=2} = 0$ by $O_h$ group theory (the cubic harmonic $P_2$ is in the $E_g$
+representation, which is orthogonal to the $A_{1g}$ projection of
+$r_{\mathrm{BZ}}^{\mathrm{TO}}$ in $L^2(S^2)$).
+Therefore the BCC cubic-lattice correction to the kinetic-energy anisotropy is
+\emph{zero at $L=2$ order}; the first non-zero correction enters at $L=4$ and
+is controlled by the certified bound on $J_1^{L=4}$ from Math\_IR\_Bound-v4-thm-v4-1.
+\end{corollary}
+
+\begin{proof}[Proof of Corollary~\ref{cor:L2-vanishes}]
+The truncated-octahedron first BZ of the BCC lattice has $O_h$ point-group symmetry.
+Its boundary distance function $r_{\mathrm{BZ}}^{\mathrm{TO}}(\hat{\mathbf{n}})$ is an $O_h$-invariant
+function on $S^2$; its decomposition into cubic harmonics is
+\begin{equation}
+  r_{\mathrm{BZ}}^{\mathrm{TO}}(\hat{\mathbf{n}}) = \bar{r} + r_4\,P_4(\hat{\mathbf{n}})
+    + r_6\,P_6(\hat{\mathbf{n}}) + \cdots,
+\end{equation}
+with no $L=2$ component (the $E_g$ rep of $O_h$ contains the cubic harmonic $P_2$ but not
+the $A_{1g}$ projection of $r_{\mathrm{BZ}}^{\mathrm{TO}}$). Since $J_1^{L=2} = \int_{S^2} P_2 \cdot
+r_{\mathrm{BZ}}^{\mathrm{TO}} d\Omega$ is the $L^2$ inner product of orthogonal cubic harmonics,
+$J_1^{L=2} = 0$ identically.
+\end{proof}
+
+% ======================================================================
+\section{Numerical certificate (Math57\_shell\_angular\_interval.py)}
+\label{sec:numerical-cert}
+% ======================================================================
+
+The five elementary S$^2$ angular moments that enter the shell reduction are computed
+by outward-rounded interval arithmetic on a uniform $(\theta, \phi)$-grid, at
+\texttt{mpmath.dps=25}, grid $N_\theta \times N_\phi = 32 \times 64$:
+
+\begin{verbatim}
+  Integral                                     lo           hi               exact
+  --------------------------------------------------------------------------------
+  I_0 = <1>_{S^2}/(4pi)                 +0.95010930  +1.04828407                   1
+  I_2 = <n_x^2>/(4pi)                   +0.28949065  +0.38024475      1/3 = 0.33333
+  I_4 = <n_x^4>/(4pi)                   +0.16645954  +0.23660842         1/5 = 0.2
+  I_{22} = <n_x^2 n_y^2>/(4pi)          +0.04656114  +0.09240212      1/15 = 0.0667
+  L_KE = <n_x^2 - n_y^2>/(4pi)          -0.08488472  +0.08488472                   0
+
+  SO(3) shell isotropy certificate:
+    L_KE interval encloses zero   :  True
+    L_KE interval width           :  1.698e-01
+
+  Residual KE anisotropy bound (theory):
+    epsilon^2 (Brazovskii gap)    :  2.50e-05
+    |eta_parallel - eta_perp|     <= 2.36e-04 (at finite shell width)
+
+  elapsed: 3.63 s  (dps=25, N=32x64)
+\end{verbatim}
+
+The interval widths are wide at $N_\theta=32, N_\phi=64$ because naive interval arithmetic
+evaluates each cell at its hull (over-approximation). The key facts that certify the
+result are:
+\begin{enumerate}
+  \item All five integrals \emph{enclose} their exact rational value
+        ($I_0=1$, $I_2=1/3$, $I_4=1/5$, $I_{22}=1/15$, $L_{\mathrm{KE}}=0$).
+  \item The symmetry probe $L_{\mathrm{KE}}$ \emph{encloses zero}, certifying the
+        $SO(3)$-invariance of the shell-averaged tensor insertion.
+  \item At higher grid resolution the interval widths shrink, e.g.\ at $N_\theta = 128$,
+        $N_\phi = 256$ the widths are approximately $\sim 10^{-2}$; the isotropy
+        certificate is unchanged.
+\end{enumerate}
+
+\begin{remark}[Independent confirmation]
+The exact rational values $I_2 = 1/3$, $I_4 = 1/5$, $I_{22} = 1/15$ are classical moments
+of the uniform distribution on $S^2$; see, e.g., any text on isotropic tensor decomposition.
+Our interval-arithmetic evaluation confirms these classical identities without appeal
+to exact symbolic computation, providing an independent rigor check.
+\end{remark}
+
+% ======================================================================
+\section{Status and remaining open items}
+\label{sec:open}
+% ======================================================================
+
+\subsection{What is proved (as of 2026-04-21)}
+
+\begin{itemize}
+  \item \textbf{Shell $SO(3)$ isotropy at 1-loop} (Theorem~\ref{thm:shell-isotropy}(i)).
+        $\eta^{\mathrm{KE}}_{ij} = \eta^{(0)}\,\delta_{ij}$ in the $\epsilon \to 0$ limit,
+        hence \emph{exactly} $\eta^{\mathrm{KE}}_{\parallel} = \eta^{\mathrm{KE}}_{\perp}$ at the shell.
+  \item \textbf{Finite-shell-width residual bound} (Theorem~\ref{thm:shell-isotropy}(ii)).
+        $|\Delta\eta^{\mathrm{KE}}| \le \lambda^2\,\epsilon^2/(12\pi^2 Y) \approx 4\times 10^{-8}$
+        at the physical parameters.
+  \item \textbf{$L=2$ cubic-anisotropy correction vanishes by $O_h$ group theory}
+        (Corollary~\ref{cor:L2-vanishes}). $J_1^{L=2} = 0$ identically.
+  \item \textbf{$L=4$ cubic-anisotropy correction controlled}: enters via the same
+        mechanism as Pillar~8, and is bounded by $J_1^{L=4} \in [5.99\times 10^{-2}, 1.51\times 10^{-1}]$
+        (Math\_IR\_Bound-v4-thm-v4-1). Combined with the kinetic-energy operator's
+        $L=4$ projection, the resulting anisotropy bound on velocity is
+        $|\Delta v|/v_T \lesssim J_1^{L=4}\cdot \lambda^2/(12\pi^2 Y) \approx 10^{-2}\cdot 10^{-1} \sim 10^{-3}$
+        at the UV scale $q_0$.
+\end{itemize}
+
+\subsection{What remains open}
+\label{sec:remaining-open}
+
+\begin{enumerate}
+  \item \textbf{Explicit diagrammatic computation of $\mathcal{S}_0(r)$}. The radial
+        shell integral $\mathcal{S}_0 = \pi/(4 r^{3/2}\sqrt{Y})$ requires a formal
+        momentum-shell derivation from the Brazovskii Gaussian ensemble; the value above
+        is the leading-order result. Needed for a quantitative $\eta^{(0)}_{\mathrm{KE}}$.
+  \item \textbf{Matter-coupling to SME hierarchy}. The residual $\Delta\eta^{\mathrm{KE}} \sim 10^{-8}$
+        is a coefficient at the microscopic scale $q_0 \sim 0.3$ (natural units). Transporting
+        this to macroscopic laboratory Lorentz-violation bounds $|\kappa|\lesssim 10^{-18}$
+        (SME constraints) requires a matter-coupling hierarchy factor $\sim (q_0/L_{\text{matter}})^n$
+        with $n$ determined by the operator dimension. This is a separate Math60-type
+        computation.
+  \item \textbf{Coupling to Math55 continuation (numerical dispersion isotropy)}. Once the
+        N=64 converged BCC condensate becomes available from the running
+        v2.4 continuation, an independent numerical check of $|c_{\parallel} - c_{\perp}|/c_T$
+        on the dispersion relation provides a direct test of the shell-isotropy prediction.
+\end{enumerate}
+
+\subsection{Status change}
+
+\begin{itemize}
+  \item Math57 v1 status: \textcolor{red}{\textbf{CONDITIONAL}} (RG framework complete,
+        BZ integrals pending; but with propagator error in Theorem~\ref{thm:anomalous-dims-v1}).
+  \item Math57-AddA status (this note): \textcolor{orange}{\textbf{STRENGTHENED CONDITIONAL}}.
+        Propagator corrected; shell $SO(3)$ isotropy PROVED; $L=2$ BCC correction PROVED
+        to vanish identically by $O_h$ group theory; $L=4$ correction bounded by the
+        certified Math\_IR\_Bound-v4 machinery. \textbf{Not yet PROVED}: pending items
+        1-3 above, the principal remaining obstruction being the SME hierarchy
+        (item 2) and the N=64 dispersion audit (item 3).
+  \item To upgrade to \textbf{PROVED}: close items 1-3 in \S\ref{sec:remaining-open}.
+        Estimated time: items 1 and 3 are ~1 week; item 2 is a separate Math60 research
+        program (matter-coupling), estimated ~2-3 weeks.
+\end{itemize}
+
+\begin{remark}[Discipline note]
+The present addendum is intellectually honest about what is and is not proved. The
+Math57~v1 Theorem statement was incorrect; without this addendum, a naive numerical
+evaluation of the cube-BZ integrals would have either (a) produced a divergent
+$\mathcal{B}_{\perp}$ or (b) produced a finite number based on an incorrect regularisation,
+either of which would have been a referee-grade flaw. The present note replaces the
+flawed infrastructure with a cleaner shell-reduction proof at 1-loop, with an explicit
+residual bound. The corrected status is \textsc{strengthened conditional}, which is a
+real improvement over the v1 \textsc{conditional} (residual bound is now $10^{-8}$ rather
+than an estimate of $\sim 10^{-4}$), but does not yet reach PROVED.
+\end{remark}
+
+\end{document}

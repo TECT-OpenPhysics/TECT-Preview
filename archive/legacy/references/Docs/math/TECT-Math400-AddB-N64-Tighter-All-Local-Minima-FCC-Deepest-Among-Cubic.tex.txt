@@ -1,0 +1,249 @@
+% =====================================================================
+% TECT-Math400-AddB -- N=64 tighter convergence Math383 §6 re-run reveals
+%                     all four candidate lattices (BCC, FCC, HEX,
+%                     lamellar) are TRUE LOCAL MINIMA at mu^2=-1, with
+%                     n_neg=0 negative eigenvalues per lattice. The
+%                     N=32 5-negative-eigenvalue saddle interpretation
+%                     of BCC was a finite-size + insufficient-
+%                     convergence artefact. New full-N^3 hierarchy:
+%                     lamellar < FCC < HEX < BCC. Among cosmological-
+%                     isotropy-compatible (cubic point group) options
+%                     {BCC, FCC}, FCC is the deeper local minimum.
+%
+% Status:        REVISION OF MATH400 + MATH400-AddA INTERPRETATION
+%                (binding). BCC-as-saddle reading is WITHDRAWN. The
+%                Math82-AddH BCC-as-vacuum claim is partially
+%                rehabilitated as "BCC is one of multiple coexisting
+%                local minima at deep mu^2", though FCC remains deeper
+%                among cubic-isotropy-friendly options.
+% Audit class:   Numerical-precision-driven re-audit (operator-supplied
+%                N=64 tighter-convergence run).
+% Trigger:       Operator-PC execution of Math383 §6 script at N=64,
+%                max_iters=10000, file
+%                AddA_mu2_-1p0_N64_tighter.log uploaded 2026-05-11.
+% Theory tag:    Math400-AddB
+% Date:          2026-05-11
+% =====================================================================
+
+\section*{TECT-Math400-AddB. N=64 tighter Math383 §6 re-run: all four lattices are true local minima; FCC deeper than BCC among cubic-point-group options}
+
+\subsection*{0. Audit-status banner}
+
+Math400 main note (this session) and Math400-AddA (this session) operated under the assumption — derived from the Math383 §6 N=32 run uploaded earlier — that the BCC condensate at $\mu^{2}=-1$ has 5 significant negative Hessian eigenvalues, i.e., is a SADDLE-5 in the full $N^{3}$ Brazovskii functional. This was a load-bearing premise for Reading B (frozen-in non-equilibrium BCC saddle as cosmologically-relevant kinetic phase) and Reading F (BCC-as-thermodynamic-min REJECTED).
+
+The operator-supplied $N=64$ tighter-convergence run (file \texttt{AddA\_mu2\_-1p0\_N64\_tighter.log}, max\_iters=10000, gtol=1e-7) reveals that ALL FOUR candidate lattices (BCC, FCC, HEX, lamellar) are TRUE LOCAL MINIMA at $\mu^{2}=-1$, each with $n_{\rm neg}=0$ significant negative eigenvalues. The 5-negative-eigenvalue verdict for BCC at $N=32$ was a finite-size + insufficient-convergence artefact, not a physical saddle.
+
+This Math400-AddB withdraws Reading F's REJECTED status (partial rehabilitation: BCC IS a stable local minimum at deep $\mu^{2}$, just not the global minimum among the four-lattice test set), reframes Reading B (frozen-in interpretation no longer required at deep $\mu^{2}$; BCC is a true local min that thermodynamic equilibrium WOULD allow if it were the only candidate, but FCC is deeper and lamellar is deeper still), and identifies a new structural finding: \textbf{among cosmological-isotropy-compatible (cubic point group) candidates $\{$BCC, FCC$\}$, FCC is the deeper local minimum at $\mu^{2}=-1$.}
+
+\subsection*{1. The N=64 tighter-convergence numerical result}
+
+\begin{verbatim}
+Operating point: mu^2 = -1.0, N = 64, L = 124.40072
+Solver: L-BFGS-B, max_iters = 10000, f_tol = 1e-7
+
+Lattice    F_converged     F/V          <Psi^2>     |grad|/sqrt(V)  n_neg
+BCC       -3.3445e+05     -1.7372e-01   5.4758e-01   3.90e-07         0
+FCC       -3.9796e+05     -2.0672e-01   6.0643e-01   4.63e-07         0
+HEX       -3.6940e+05     -1.9188e-01   5.8893e-01   5.75e-07         0
+lamellar  -4.3240e+05     -2.2460e-01   6.4864e-01   1.11e-07         0
+
+Lowest 6 eigenvalues per lattice:
+BCC:       all +0.01665 (6-fold degenerate, the Goldstone-like cluster, all positive)
+FCC:       +0.00387, +0.00388, +0.00400, +0.00986, +0.01237, +0.01237 (all positive)
+HEX:       all near +0.20 (3-fold + 3-fold positive cluster)
+lamellar:  all +2.06 (single-mode degenerate, all positive)
+
+PRE-REGISTERED VERDICT: FAIL (lamellar < BCC).
+\end{verbatim}
+
+\paragraph{Convergence quality.} All four lattices reached $|\nabla F|/\sqrt{V} \sim 10^{-7}$, more than two orders of magnitude tighter than the $N=32$ run ($\sim 10^{-6}$ for HEX, $\sim 10^{-1}$ for unconverged BCC at $\mu^{2}=-1$ in earlier upload). The $N=64$ result is the publication-grade convergence on the full $N^{3}$ Brazovskii free energy.
+
+\paragraph{Hessian / Goldstone diagnostic.} BCC's lowest 6 eigenvalues are all $+1.67\times 10^{-2}$, exactly degenerate to the displayed precision. This is the 6-fold near-Goldstone cluster (3 broken translations $+$ 3 broken rotations of $\mathrm{SO}(3)\to D_{4h}$) — all positive, confirming BCC IS a true local min, not a saddle. The eigenvalues are not exactly zero because of the discrete-grid effect (lattice pinning, Math387) which gives the Goldstones a small mass.
+
+FCC's lowest eigenvalues split into 3 modes near $+0.004$ and 3 modes near $+0.012$ — also positive, also a true local min. The split degeneracy is consistent with FCC's 4-mode structure with broken rotations splitting into "3 translational + 1 longitudinal" patterns.
+
+HEX's 6 lowest eigenvalues are all near $+0.20$ — a relatively large gap, consistent with HEX's uniaxial structure forming a stiffer hexagonal lattice with no soft direction.
+
+Lamellar's lowest eigenvalue is $+2.06$ — the largest gap of all four — reflecting the rigid 1D modulation structure.
+
+\subsection*{2. Math400 §0 verdict revision}
+
+\paragraph{2.1 BCC is a true local min, not a saddle.}
+Math400 §1 stated: ``the BCC stationary point is a SADDLE (consistent with Math383 §6's report of 5 significant negative eigenvalues at the BCC seed)''. This statement is REVISED. Math400-AddB confirms: BCC at $\mu^{2}=-1$ is a TRUE LOCAL MINIMUM in the full $N^{3}$ Brazovskii functional, with $n_{\rm neg}=0$, $|\nabla|/\sqrt V = 3.9\times 10^{-7}$, lowest eigenvalue cluster $+1.67\times 10^{-2}$ (6-fold degenerate Goldstone-like band).
+
+The N=32 5-negative-eigenvalue claim was a numerical artefact of (a) coarser grid resolution → quantised wavevectors that don't exactly respect lattice symmetry → spurious near-zero eigenvalues that classification thresholds may have flagged as "negative", and (b) insufficient L-BFGS-B convergence (the N=32 BCC at μ²=-1 had |grad|=0.18 — completely unconverged). The N=64 with max_iters=10000 reaches a converged genuine local min.
+
+\paragraph{2.2 Math82-AddH BCC-as-vacuum partial rehabilitation.}
+Math400 §0 stated: ``Math82-AddH "BCC condensation at canonical $\mu^{2}=+0.005$" interpretation: T6 PROVED CONDITIONAL $\to$ T0 REFUTED.'' The REFUTATION was partly based on the saddle-5 reading of BCC. With BCC at $\mu^{2}=-1$ now a confirmed true local min, the REFUTATION at $\mu^{2}=-1$ is partially withdrawn: BCC IS a thermodynamically stable phase at deep $\mu^{2}$, just not the global minimum among the four-lattice test set.
+
+However, the REFUTATION at $\mu^{2}=+0.005$ has not yet been re-tested at $N=64$ tighter-convergence settings. The Math82-AddH operating point is $\mu^{2}=+0.005$, not $\mu^{2}=-1$. Until the analogous $N=64$, max\_iters=10000 run is performed at $\mu^{2}=+0.005$, the saddle-5 BCC verdict at the canonical operating point STANDS as a provisional finding. Math400-AddC is queued to re-test BCC at $\mu^{2}=+0.005$ with N=64 tight settings.
+
+\paragraph{2.3 Updated tier classification.}
+
+\begin{itemize}
+\item \textbf{Math82-AddH "BCC is a thermodynamically stable phase at deep $\mu^{2}$"}: now \textbf{T6 PROVED CONDITIONAL on $\mu^{2}=-1$ N=64 numerics} (n\_neg=0 at $\mu^{2}=-1$ confirmed).
+\item \textbf{Math82-AddH "BCC is the GLOBAL MIN among $\{$BCC, FCC, HEX, lamellar$\}$ at deep $\mu^{2}$"}: \textbf{T0 REFUTED}. Lamellar is deeper by factor 1.29 in F/V; FCC is deeper by 1.19.
+\item \textbf{Math82-AddH "BCC is a thermodynamically stable phase at $\mu^{2}=+0.005$"}: \textbf{T2 CONJECTURE pending Math400-AddC re-test}.
+\item \textbf{Math383 §2 K-table}: \textbf{T0 REFUTED} (Math400 §3 first-principles re-derivation stands).
+\item \textbf{Math383 main claim "BCC global min at canonical TECT parameters"}: \textbf{T0 REFUTED} (FCC is deeper at $\mu^{2}=-1$; lamellar is deeper still but cosmologically rejected per Math400-AddA).
+\end{itemize}
+
+\subsection*{3. Among cosmological-isotropy-compatible candidates: FCC deeper than BCC}
+
+The cosmological-isotropy filter (Math400-AddA §1) accepts cubic-point-group candidates and rejects uniaxial candidates. From the four-lattice test set $\{$BCC, FCC, HEX, lamellar$\}$:
+\begin{itemize}
+\item BCC: cubic $O_{h}$ point group $\Rightarrow$ ACCEPT.
+\item FCC: cubic $O_{h}$ point group $\Rightarrow$ ACCEPT.
+\item HEX: hexagonal $D_{6h}$ point group $\Rightarrow$ REJECT (uniaxial).
+\item lamellar: $D_{\infty h}$ $\Rightarrow$ REJECT (uniaxial).
+\end{itemize}
+
+Cosmological-isotropy-allowed candidates at $\mu^{2}=-1$:
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$\Lambda$ & $\mathcal{F}/V$ at $\mu^{2}=-1$ (N=64) & $\langle\Psi^{2}\rangle$ & lowest eig \\
+\hline
+BCC & $-0.1737$ & $0.5476$ & $+0.0166$ \\
+FCC & $-0.2067$ & $0.6064$ & $+0.0039$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{FCC is deeper than BCC by $\Delta\mathcal{F}/V = -3.30\times 10^{-2}$, a factor of $1.19$.}
+
+In thermodynamic equilibrium at $\mu^{2}=-1$ with the cosmological-isotropy constraint, the system would prefer FCC over BCC. The Math82-AddH "BCC condensation" choice was based on a single-channel reduction projecting from the 3-channel SU(3) family-locked direction, which forces BCC by construction. In the multi-channel formulation (Reading E), the actual ground state may be neither BCC nor FCC.
+
+\paragraph{Implication for TECT vacuum identification.} If TECT condensation is required to be both (a) thermodynamically stable and (b) cosmological-isotropy-compatible, then \textbf{FCC is preferred over BCC at $\mu^{2}=-1$}. Pillar 4's BCC-vacuum sub-task should be reformulated as either:
+\begin{enumerate}
+\item ``FCC vacuum'' — Math82-AddH-style production simulations should be re-run with FCC seed, and Pillar 4--11 should be re-derived assuming an FCC ground state. The Goldstone count for FCC: 3 broken translations $+$ 3 broken rotations of $\mathrm{SO}(3)\to D_{4h}$ — the same as BCC modulo possible sign/phase reorganisation.
+\item ``Multi-channel ground state different from FCC$_{\rm single-channel}$''  (Reading E) — Math382 PyTorch 3-channel cross-validation will identify the true multi-channel vacuum, which may project differently in single-channel.
+\item ``Either BCC or FCC, depending on dynamics'' — both are local minima; the universe could land in either depending on initial conditions during the cosmological quench. This requires a kinetic-rate computation to determine which basin captures the universe.
+\end{enumerate}
+
+\subsection*{4. N=64 vs N=32 multi-shell deficit comparison}
+
+Comparing $\langle\Psi^{2}\rangle$ at N=32 (single-shell-dominated) vs N=64 (multi-shell-active):
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$\Lambda$ & $\langle\Psi^{2}\rangle$ N=32 & $\langle\Psi^{2}\rangle$ N=64 & N=64/N=32 \\
+\hline
+BCC & $0.142$ & $0.548$ & $3.85\times$ \\
+FCC & $0.156$ & $0.606$ & $3.89\times$ \\
+HEX & $0.149$ & $0.589$ & $3.96\times$ \\
+lamellar & $0.165$ & $0.649$ & $3.93\times$ \\
+\hline
+\end{tabular}
+\end{center}
+All four lattices show $\langle\Psi^{2}\rangle$ INCREASING by factor $\sim 3.9$ from N=32 to N=64. This is the MULTI-SHELL EFFECT: at higher resolution the field admits higher-harmonic Fourier components ($\cos(2qz)$, $\cos(3qz)$, etc.) that lower the energy below the single-shell SMA prediction.
+
+Math399 corrected single-shell SMA prediction for lamellar at $\mu^{2}=-1$ (with first-principles K's): $\langle\Psi^{2}\rangle = 0.4399$.
+N=32 lamellar: $0.165$ (apparently less than SMA — but the seed was UNDER-amplitude $A_{\rm seed}=0.66$ giving $A^{2}/2=0.22 \ne 0.44$; not single-shell SMA prediction's amplitude).
+N=64 lamellar: $0.649$ (47\% larger than SMA prediction).
+
+The multi-shell effect at N=64 shifts the lamellar minimum to $A=0.91$, $\langle\Psi^{2}\rangle = 0.65$, $\mathcal{F}/V = -0.225$ — well below the single-shell SMA $-0.168$. The grain of truth in Math383 §1-4's "lamellar isn't deep" claim was correct \emph{within single-shell SMA}; multi-shell relaxation deepens lamellar significantly.
+
+\paragraph{Why does N=64 reveal multi-shell content that N=32 missed?} Because at N=32, $L=62.20$ and the FFT $k$-grid has spacing $\Delta k = 2\pi/L = 0.101$. The wavevector $q_{0}=0.6802$ requires lattice points at integer multiples of $q_{0}/\Delta k = 6.73$ — non-integer, so $q_{0}$ doesn't lie on the grid exactly. Higher harmonics at $2q_{0}=1.36$, $3q_{0}=2.04$ are at indices $13.46$, $20.18$ — also non-integer. At N=64, $L=124.40$ and $\Delta k = 0.0505$; $q_{0}/\Delta k = 13.46$, still non-integer, but the higher-harmonic content has more grid resolution to express itself accurately. Math400-AddD (queued) will repeat at $L$ tuned so $q_{0}\cdot L/(2\pi)$ is integer to eliminate this residual.
+
+\subsection*{5. Updated reading framework (post-Math400-AddB)}
+
+\begin{itemize}
+\item \textbf{Reading A (lamellar TECT vacuum)}: REJECTED on cosmological-isotropy grounds (Math400-AddA §1). Numerically deepest at $\mu^{2}=-1$ (F/V=-0.225) but cosmologically inappropriate. Closed.
+\item \textbf{Reading B (no canonical condensation; frozen-in non-equilibrium BCC)}: REVISED. At $\mu^{2}=-1$, BCC is now confirmed a TRUE LOCAL MIN (N=64 n\_neg=0); the frozen-in interpretation is no longer required to explain its existence. However, BCC is NOT the GLOBAL min — FCC is deeper. The kinetic-frozen reading would say the universe ended up in BCC rather than FCC because the cosmological quench rate did not allow BCC$\to$FCC transition. Reading B at deep $\mu^{2}$ is now: ``BCC is one of multiple local minima, and the cosmological dynamics selected BCC over FCC.''
+\item \textbf{Reading C (BCC restricted-symmetric is true min)}: CONFIRMED at $\mu^{2}=-1$ (Math400-AddB result). In free $N^{3}$ field space, BCC is a true local min with positive Hessian.
+\item \textbf{Reading D (cosmological-isotropy-friendly extended lattice search)}: STILL HIGHLY RELEVANT. Among the original 4-lattice test set, FCC is deeper than BCC. Among extended cubic candidates $\{$A15, $\sigma$, gyroid, diamond$\}$, some may be deeper still. Math401 priority is unchanged.
+\item \textbf{Reading E (multi-channel reformulation)}: STILL HIGHLY RELEVANT. The single-channel reduction's family-locked direction $\hat z_{0}=(1,1,1)/\sqrt{3}$ may force a sub-optimal projection. Math382 priority is unchanged.
+\item \textbf{Reading F (Math82-AddH BCC = thermodynamic min at canonical $\mu^{2}=+0.005$)}: STATUS DEPENDS ON Math400-AddC (the analogous N=64 tight re-test at $\mu^{2}=+0.005$). Provisional REJECT pending re-test.
+\item \textbf{NEW Reading G (FCC TECT vacuum)}: at $\mu^{2}=-1$, FCC is the deepest cosmological-isotropy-compatible candidate. Pillar 4 sub-task 2 may be reformulated with FCC vacuum instead of BCC. Goldstone count for $\mathrm{SO}(3)\to T_{d}$ (FCC point group): 3 translations $+$ 3 rotations $=$ 6 (same count as BCC modulo discrete-symmetry fine print).
+\end{itemize}
+
+\subsection*{6. Devil's-advocate (CLAUDE.md §6.3 + §6.3.4 + §6.3.5(a))}
+
+\textbf{Objection $\alpha$ (concrete):} The N=64 result may have lattice-pinning Goldstones disguised as positive eigenvalues. The 6-fold-degenerate $+1.67\times 10^{-2}$ cluster for BCC is suspicious — these could be near-zero Goldstones with positive shifts from lattice pinning, masking a true zero eigenvalue.
+
+\emph{VALID-with-mitigation}. The lowest-eigenvalue cluster at $+0.0166$ is consistent with the Brazovskii Model A pinned-Goldstone band. If we extrapolated to the continuum limit ($N\to\infty$, $L\to\infty$, $\Delta k\to 0$, lattice-pinning $\to 0$), the cluster would shift toward zero. The question is whether it would become NEGATIVE in the continuum limit (saddle) or remain at zero (pure Goldstones). Math387 (Peierls-Nabarro lattice-pinning analysis, this session earlier) suggests the pinning shift is positive of order $\Delta E_{\rm PN}\sim 10^{-2}$ at $N=64$, consistent with the observed shift. So the cluster is plausibly true Goldstones $+$ positive PN shift, NOT a saddle. Mitigation: continuum-limit extrapolation $N=128, 256, \ldots$ would resolve, but is computationally expensive. Provisional reading: BCC at $\mu^{2}=-1$ is a true local min.
+
+\textbf{Objection $\beta$ (concrete):} The N=32 $\to$ N=64 multi-shell deepening (factor $\sim 3.9$ in $\langle\Psi^{2}\rangle$) is suspicious. The lattice manifold at N=64 should still have only the first-shell modes for a "pure lamellar" or "pure BCC" configuration — the multi-shell deepening means the script is finding configurations OFF the pure-lattice manifold. So the N=64 "lamellar" $\mathcal{F}/V=-0.225$ is not really lamellar in the pure sense.
+
+\emph{VALID and confirms the multi-shell interpretation}. The "lamellar" produced by Math383 §6 at N=64 is not a single $\cos(q_{0}z)$ but a multi-harmonic 1D modulation. In the Brazovskii physics this is a soliton-like 1D structure (e.g., Toda-lattice solitons). The energy is lower than pure-cosine lamellar but the symmetry is the same (1D modulation, $\mathrm{SO}(2)$ residual). The cosmological-isotropy filter (Math400-AddA §1) still rejects this multi-harmonic lamellar. So the conclusion is unchanged.
+
+\textbf{Objection $\gamma$ (concrete):} The Math82-AddH operating point is $\mu^{2}=+0.005$, not $\mu^{2}=-1$. The Math400-AddB result at $\mu^{2}=-1$ does not directly bear on Math82-AddH. The N=32 saddle-5 verdict at $\mu^{2}=+0.005$ may still hold even though the analogous verdict at $\mu^{2}=-1$ is now overturned.
+
+\emph{DISMISSED with clarification}. Math400-AddB explicitly does not claim to overturn the $\mu^{2}=+0.005$ saddle-5 verdict. §2.2 above states: ``the REFUTATION at $\mu^{2}=+0.005$ has not yet been re-tested at $N=64$ tighter-convergence settings.'' Math400-AddC is queued to perform exactly this test. Pending Math400-AddC, the Math82-AddH claim remains in T2 CONJECTURE.
+
+\subsection*{7. Quantitative sanity check (CLAUDE.md §6.3.4)}
+
+\textbf{Order-of-magnitude $\mathcal{F}/V$ at $\mu^{2}=-1$.} Estimate $\sim |\mu^{2}|\cdot\langle\Psi^{2}\rangle/2 \sim 1\cdot 0.55/2 = 0.27$. Numerical: $\sim 0.17$ to $0.22$. Within factor 1.6. \textbf{PASS}.
+
+\textbf{Multi-shell deepening factor.} N=32 $\to$ N=64 deepening: $|F/V|$ ratio for lamellar $0.225/0.159 = 1.42$, for BCC $0.174/0.076 = 2.30$. The deepening factors should be of order 1 to a few — consistent. \textbf{PASS}.
+
+\textbf{Hessian eigenvalue magnitude.} BCC's lowest $+0.0166$ corresponds to mass-squared $m^{2}\sim 0.017$ in TECT units. With $q_{0}=0.68$, ratio $m/q_{0}\sim 0.19$ — sub-shell-mass, consistent with Goldstone-band structure. FCC's lowest $+0.004$ is even smaller, consistent with FCC's softer eigenmode structure. \textbf{PASS}.
+
+\textbf{Convergence quality.} $|\nabla|/\sqrt V = 1\text{--}6\times 10^{-7}$ across all four lattices — three orders of magnitude better than N=32 unconverged BCC ($|\nabla|=0.18$). Publication-grade. \textbf{PASS}.
+
+\textbf{Sign-direction physics.} The hierarchy lamellar $<$ FCC $<$ HEX $<$ BCC at $\mu^{2}=-1$ runs OPPOSITE to the Math383 §1-4 single-shell SMA hierarchy (which was BCC $<$ FCC $<$ HEX $<$ lamellar with corrected K's). The reversal is multi-shell-driven: lattices with more independent first-shell modes (BCC: 6) have less freedom for higher-harmonic relaxation than lattices with fewer (lamellar: 1), because the higher harmonics of fewer modes can fill more 3D Fourier-space room without symmetry constraints. Sign is consistent. \textbf{PASS}.
+
+\subsection*{8. Closure: deliverables of this note}
+
+\begin{enumerate}
+\item Math400 §0 BCC-saddle-5 verdict at $\mu^{2}=-1$ is REVISED. New verdict: BCC at $\mu^{2}=-1$ is a TRUE LOCAL MIN ($n_{\rm neg}=0$, $|\nabla|/\sqrt V = 3.9\times 10^{-7}$, lowest eig $+1.66\times 10^{-2}$).
+\item BCC at $\mu^{2}=+0.005$ saddle verdict remains PROVISIONAL pending Math400-AddC ($N=64$ tight re-test at canonical operating point).
+\item Math82-AddH "BCC stable phase at deep $\mu^{2}$": T6 CONFIRMED at $\mu^{2}=-1$.
+\item Math82-AddH "BCC global min": T0 REFUTED (FCC deeper, lamellar deeper still but cosmologically rejected).
+\item NEW Reading G: \textbf{FCC TECT vacuum} — among cubic-isotropy-compatible candidates, FCC is the deeper local minimum at $\mu^{2}=-1$ (FCC F/V $=-0.207$ vs BCC $-0.174$, FCC deeper by factor 1.19). Pillar 4 sub-task 2 should consider FCC reformulation.
+\item Updated priority queue:
+\begin{enumerate}
+\item Math400-AddC (immediate): $N=64$ tight re-test of all 4 lattices at $\mu^{2}=+0.005$ (Math82-AddH operating point). Decides Reading F.
+\item Math401: extend Math383 §6 to A15, $\sigma$, gyroid, diamond at $N=64$.
+\item Math382: 3-channel SU(3) PyTorch cross-validation.
+\item Math402: Pillar 4 reformulation under either BCC OR FCC vacuum (depending on which is deeper at the canonical operating point); or under Reading B kinetic framework.
+\end{enumerate}
+\end{enumerate}
+
+\subsection*{9. Theoretical-completion direction}
+
+The N=64 tighter-convergence run is the third successive operator-driven correction in this session. The pattern of corrections has been:
+\begin{enumerate}
+\item Math399: operator demanded foundation-first audit $\to$ Math383 §3-4 arithmetic error revealed.
+\item Math400-AddA: operator demanded cosmological isotropy filter $\to$ Reading A (lamellar) rejected.
+\item Math400-AddB (this note): operator supplied higher-resolution numerical run $\to$ N=32 saddle-5 verdict for BCC overturned; FCC emerges as deeper-than-BCC isotropy-friendly candidate.
+\end{enumerate}
+
+The cumulative effect is a substantial reorganisation of the TECT vacuum identification programme:
+
+\begin{itemize}
+\item Math82-AddH BCC-as-vacuum: PARTIALLY REHABILITATED (true local min) but DEMOTED FROM PRIMARY (FCC is deeper).
+\item Pillar 4: NOT closed under either BCC or FCC; awaits Math400-AddC + Math401 + Math382 trilogy.
+\item Honest scope: the TECT canonical vacuum is currently \textbf{either BCC, FCC, an extended-cubic candidate (A15/$\sigma$/gyroid), or a multi-channel structure not yet identified}. Settling the question requires:
+\begin{itemize}
+\item Math400-AddC: re-test at $\mu^{2}=+0.005$ to confirm whether BCC and FCC are both local minima at the canonical operating point.
+\item Math401: extend test set to cubic Frank-Kasper / gyroid candidates.
+\item Math382: multi-channel SU(3) audit.
+\end{itemize}
+\end{itemize}
+
+The pillar status, post-Math400-AddB:
+
+\begin{center}
+\begin{tabular}{|c|l|}
+\hline
+Pillar & Updated status \\
+\hline
+4 (geometric closure) & T2 CONJECTURE pending vacuum identification (Math400-AddC + Math401 + Math382) \\
+5 (topological) & T7 PROVED (independent of vacuum choice) \\
+6 (Goldstone) & T4 STRONG EVIDENCE (count to be re-confirmed for chosen vacuum) \\
+7 (gauge) & T7 PROVED (independent of vacuum choice) \\
+8 (matter) & T7 PROVED (independent of vacuum choice) \\
+9 (Yukawa) & T7 PROVED (independent of vacuum choice) \\
+10 (mass) & T0+T2 (no-go + phase-transition) — independent of vacuum choice \\
+11 (cosmology) & T2 CONJECTURE — DM-from-defect interpretation depends on vacuum \\
+\hline
+\end{tabular}
+\end{center}
+
+The honest path forward is the Math400-AddC + Math401 + Math382 trilogy, with operator-led decision on which reading to canonise based on the combined evidence.
+
+% =====================================================================
+% End of TECT-Math400-AddB.
+% =====================================================================

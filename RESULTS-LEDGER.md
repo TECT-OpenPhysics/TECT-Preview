@@ -22,7 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-169](#r-169) | Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction | R-169 v1.2 is the current scoped T0 analytic/exact/executed/audited result under EXP-000858. It retains v1.0--v1.1 and adds the exact Reading-H scalar/covariance crosswalk, a conditional commensurate P1 lift, deterministic equivariant nonextraction from covariance-only data, literal side-16 shell noncommensurability and the bare nonlinear convention firewall. Three automatic bridges are rejected, but no full Reading-H-to-P1 energy/ensemble intertwiner, physical-empty sign, vacuum, C6 result or Pre-A closure follows |
+| [R-169](#r-169) | Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction | R-169 v1.3 is the current scoped T0 analytic/exact/executed/audited result under EXP-000860. It retains v1.0--v1.2, identifies the registered native zero-phase equal-amplitude Reading-H BCC orbit and regular truncated-octahedron cells, specializes the native B1/B2 theorem to show that branch loses to `G_*`, and strengthens the direct P1 rescaling firewall. No generic Reading-H realization/full-energy bridge, physical-empty sign, vacuum, C6 result or Pre-A closure follows |
 | [R-168](#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | R-168 v1.3 is a scoped T0 analytic/exact/executed/audited additive result under EXP-000814. It retains v1.0--v1.2 and closes five mathematical children without creating a compact action, physical response, candidate, prediction or freeze; physical-response, Round-1, Sector A and Pre-A remain open |
 | [R-167](#r-167) | Registered-corridor full-oscillator coexistence, categorical dynamics and exact source-ground transfer | R-167 v4.2 is the current scoped T0 analytic/exact/executed/audited additive result under EXP-000846. It retains every v4.1 child and conditionally proves integrated-orbit-smear all-shape shell Cauchy convergence, a point-norm C0 spatial-subalgebra action, an equivariant surjective quotient of the categorical carrier, and same-periodic-net transfer of the v4.0 ground pair. The exact-Q3 toggle weights, a raw/local oscillator common alpha, DLR/KMS branch identity and the broken-sector GNS gap remain open |
 | [R-166](#r-166) | Sparse production radial-Gram decomposition and global owner bound | Scoped T4 analytic/exact/executed/audited production-fibre theorem, strengthened in v1.1 without a new result ID. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / single fresh-`4p` R-153 fibre, the exact Fierz split, Pauli nonresonance, radial bounds and direct coefficient inequality give an explicit rational polynomial whose unique global minimum lies in `70<G_*<71` and is `-4/5+18740524635403/439505584128000>-4/5`. Thus the owner plus source Hessian is strictly above `1/10`, the scoped R-164 reduction permits `rho=3/20`, and the R-165 annulus is closed. Exact simultaneous `sin(4x),sin(8x)` arithmetic gives Gram `[[5/4,1],[1,3/2]]` and ratio `3/8` at `(1,-1)`, registering that the coefficient-one lemma cannot be copied rootwise. Primary `40/40` and independent Fraction `37/37` audits pass. The complete joint owner, nonlinear/revisit feedback, low variables, removal, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
@@ -323,6 +323,40 @@ functionals. The determinant, trial-mass, mixed, gap, quadratic, family, lock,
 Class-II and reference terms and the fixed-norm versus unconstrained ensemble
 remain separately owned.
 
+**Native Reading-H BCC orbit and cell.** EXP-000860 / R-169 v1.3 fixes the
+registered equal-amplitude, zero-phase, twelve-mode Reading-H branch
+`Q_BCC=(q_0/sqrt(2)){110}` and exposes its origin orbit. With
+`alpha=q_0/sqrt(2)` and `ell=2 pi/alpha`, its real field is
+`phi_(A,o)=4A(pq+pr+qr)`. For `A>0`, the multiaffine equality cases are exactly
+the two all-equal cube corners, both with value `12A`; hence `argmax phi`,
+`argmax |phi|`, and `argmax phi^2` equal
+`o+[ell Z^3 union ((ell/2,ell/2,ell/2)+ell Z^3)]`. The Euclidean Voronoi cell
+is the scaled v1.0 BCC fixture with 24 vertices, 36 edges, six square faces,
+eight regular-hexagonal faces, and volume `ell^3/2`. The origin is an orbit
+coordinate owned by the phase-complete field, not information recovered from
+the translation-invariant covariance.
+
+**Native-owner sign and natural torus.** The full antipodal convention gives
+`I=12A^2`. At the production endpoint `I=1/500`, the registered branch lies in
+the native B1/B2 admissible class, and the existing theorem specializes to
+`F_RH[Q_BCC,A]-F_RH[G_*]>0`. Thus this exact geometry-bearing branch loses to
+the isotropic reference in the native Reading-H owner; no P1 inheritance is
+used. On the natural torus of side `N ell`, the support stays exactly on shell,
+the squared norm is `(N ell)^3 I`, and there are `2N^3` BCC cells. This is a
+declared domain owner, not the hash-pinned side-16 P1 owner, and the comparison
+says nothing about `F_RH[G_*]-F_empty`.
+
+**Global-rescaling and side-16 firewall.** Even allowing one constant field
+scale `s` and one positive global energy scale `c_E`, matching the quartic and
+sextic terms requires `c_E s^4=c_E s^6=2`, hence `s^2=1` and `c_E=2`. The
+exact quadratic coefficients then contradict the required equality. The
+literal side-16 `{110}` image also has the wrong radius; the near-radial
+`{111}` shell has only eight modes, while the natural-torus realization changes
+the owner. A small wave-number discrepancy is not a Bohr mean-square error
+budget: distinct equal-intensity frequencies can remain separated by `2I`.
+Consequently neither a constant rescaling nor commensuration alone supplies a
+full Reading-H-to-P1 functional or ensemble intertwiner.
+
 **Negative-route authorities.** R-169 v1.0 registers
 `NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION`
 and
@@ -344,17 +378,24 @@ and
 It reuses the R-157 nonzero-equilibrium boundary and the v1.0 finite-part
 empty-reference boundary.
 
-**Boundary.** This is a T0, claim-nonbearing geometry, explicit P1 route-filter,
-covariance/composite crosswalk and exact interface-firewall result. It closes
-only the two v1.2 scoped children and extracts centers and cells only for the
-declared v1.1 twelve-mode P1 fixture. It constructs no full Reading-H mean
-field or energy/ensemble intertwiner, computes no canonical TECT realization
-energy, identifies no physical or cosmic empty space, and proves no global
-vacuum, BCC resurrection, C6 spacetime conclusion, physical Sector-A result,
-or Pre-A closure. `PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE`,
+R-169 v1.3 registers no new negative and reuses
+`NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION`,
+`NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING`,
+`NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER`
+and `R-2026-06-23-b3-bcc-structural-selection`.
+
+**Boundary.** This is a T0, claim-nonbearing geometry, native-owner route
+termination, explicit P1 route-filter, covariance/composite crosswalk and exact
+interface-firewall result. V1.3 closes only the declared native zero-phase BCC
+orbit/cell and `Q_BCC`-versus-`G_*` child and strengthens the retained v1.2
+crosswalk. It constructs no generic Reading-H mean field or full energy/ensemble
+intertwiner, computes no physical-empty sign, and proves no transverse or
+continuum stability, global vacuum, BCC resurrection, C6 spacetime conclusion,
+physical Sector-A result, or Pre-A closure.
+`PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE`,
 `C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN.
 
-**Proven in:** The [R-169 v1.2 certificate](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.2 PDF is issued. The [R-169 v1.1 certificate](strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-manifest.json) remain the prior proof-first authority. The R-169 v1.0 certificate and manifest remain earlier proof-first history.
+**Proven in:** The [R-169 v1.3 certificate](strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.3 PDF is issued. The [R-169 v1.2 certificate](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-manifest.json) remain the prior proof-first authority. The R-169 v1.1 and v1.0 certificates and manifests remain earlier proof-first history.
 
 **Tier:** T0 (claim-nonbearing scoped exact geometry, conditional sign/stability
 transfer and exact logical obstructions only).

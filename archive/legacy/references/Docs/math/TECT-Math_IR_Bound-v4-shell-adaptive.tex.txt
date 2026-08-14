@@ -1,0 +1,473 @@
+% TECT-Math_IR_Bound-v4-shell-adaptive.tex.txt
+% Theory tag: Math_IR_Bound-anisotropy-v4-shell-adaptive-2026-04-21
+% Status (per PROOF-COMPLETION-CHECKLIST.md):  PROVED
+%   LC (Logical closure):  ✓
+%   SB (Sign/bound closure): ✓ via rigorous mpmath.iv interval enclosure
+%   CM (Current-mainline alignment): ✓  (q_0, mu^2, lambda, gamma, eps^2)
+%                                         of Math57-v2 / PDE/bz_eta_integrator.py
+%   RP (Reproducibility): ✓  PDE/bz_shell_adaptive.py  (deterministic)
+%
+% Purpose:
+%   Promote Pillar 8 (emergent Lorentz invariance) from NEAR-FINAL
+%   CONDITIONAL to PROVED by providing a rigorous interval-arithmetic
+%   certificate that the 1-loop cubic-anisotropy coefficient c_4(eps)
+%   at the TECT mainline Brazovskii fixed point is strictly positive.
+% ---------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=2.3cm]{geometry}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{certificate}{Numerical Certificate}
+
+\newcommand{\BZ}{\mathrm{BZ}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\Vol}{\operatorname{Vol}}
+
+\title{Shell-adaptive Interval Certificate for the 1-loop \\
+       Anisotropy Coefficient $c_{4}(\epsilon)$ at the \\
+       TECT Brazovskii Fixed Point}
+\author{Lee, Jusang \\ \texttt{jtkor@outlook.com}}
+\date{2026-04-21 (closure of Pillar 8)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We close Pillar~8 (emergent Lorentz invariance) of the TECT theoretical
+framework by a rigorous interval-arithmetic enclosure of the 1-loop
+cubic-anisotropy coefficient
+\begin{equation}
+\label{eq:c4-def}
+  c_{4}(\epsilon)\;=\;\frac{1}{(2\pi)^{3}}
+  \int_{\Omega_{\BZ}}\!d^{3}k\;
+  \frac{P_{4}(\hat k)}{m^{2}+(|k|^{2}-q_{0}^{2})^{2}},
+  \qquad m^{2}=\epsilon^{2}q_{0}^{4},
+\end{equation}
+at the TECT mainline $(q_{0},\mu^{2},\lambda,\gamma,\epsilon^{2})=
+(0.6801747616,\,5\times 10^{-3},\,-0.43,\,1.62,\,1.081\times 10^{-2})$.
+Here $P_{4}(\hat n)=\sum_{i=1}^{3}\hat n_{i}^{4}-3/5$ is the $A_{1g}$
+cubic harmonic of weight $L=4$, $\omega^{2}(k)=m^{2}+(|k|^{2}-q_{0}^{2})^{2}$
+is the Brazovskii propagator, and $\Omega_{\BZ}$ is the truncated
+octahedron $\{|k_{i}|\le B=1,\;|k_{1}|+|k_{2}|+|k_{3}|\le A=3/2\}$.
+
+The peak of the integrand on the Brazovskii shell $|k|=q_{0}$ defeats
+naive cell-wise interval arithmetic.  We bypass this obstruction by
+(i)~factoring the Brazovskii denominator over the reals,
+\begin{equation}
+\label{eq:factorisation-intro}
+  m^{2}+(r^{2}-q_{0}^{2})^{2}
+  \;=\;\bigl((r-p)^{2}+q^{2}\bigr)\bigl((r+p)^{2}+q^{2}\bigr),
+\end{equation}
+with $R=\sqrt{q_{0}^{4}+m^{2}}$, $p=\sqrt{(R+q_{0}^{2})/2}$,
+$q=\sqrt{(R-q_{0}^{2})/2}$, and (ii)~expressing the radial integral
+in closed form,
+\begin{equation}
+\label{eq:F-primitive-intro}
+  F(r)\;:=\;\int_{0}^{r}\!\frac{r'^{2}}{m^{2}+(r'^{2}-q_{0}^{2})^{2}}dr'
+  \;=\;\frac{1}{8p}\ln\!\frac{(r-p)^{2}+q^{2}}{(r+p)^{2}+q^{2}}
+   \;+\;\frac{1}{4q}\!\left[\arctan\!\tfrac{r-p}{q}
+                             +\arctan\!\tfrac{r+p}{q}\right],
+\end{equation}
+with $F(0)=0$.  The integrand of~\eqref{eq:c4-def} thereby reduces to
+a 2D angular integral over the $O_{h}$ fundamental domain, on which
+cell-wise interval arithmetic converges without dependency
+blow-up at the shell.  Finally, using the exact identity
+$\int_{D'}\!P_{4}\,d\Omega=0$ on the fundamental domain, we apply
+a centered-form shift $F(r)\to F(r)-F_{0}$ with $F_{0}:=F(B)$, which
+does not alter the true integral but shrinks the cell-wise integrand
+magnitude by a factor of $\sim 40$ and thereby the interval enclosure
+width by the same factor.
+
+At grid resolution $N\times N$ with $N=64$ and \texttt{mpmath} decimal
+precision $40$, we obtain the rigorous enclosure
+\begin{equation}
+\label{eq:main-enclosure}
+  c_{4}(\epsilon)\;\in\;
+  [\,+1.402\times 10^{-3},\;+2.368\times 10^{-3}\,],
+\end{equation}
+which is strictly positive, certifying that the cubic-anisotropy
+coupling is infrared-irrelevant at the TECT fixed point and hence
+that four-dimensional Lorentz invariance emerges as a low-energy
+symmetry.  This closes all four criteria of the TECT Proof-Completion
+Checklist for Pillar~8.
+\end{abstract}
+
+\section{Statement}
+
+Let $(q_{0},\epsilon^{2})$ be the TECT mainline as above.  Define
+$m^{2}=\epsilon^{2}q_{0}^{4}$ and the coefficient $c_{4}(\epsilon)$
+of~\eqref{eq:c4-def}.  The 1-loop anomalous dimension of the
+cubic-anisotropy operator is
+\[
+  \gamma_{44}\;=\;-\mathcal{N}\,\lambda^{2}\,c_{4}(\epsilon),
+  \qquad \mathcal{N}>0,
+\]
+where $\mathcal{N}$ is a positive kinematic prefactor collecting the
+external-leg normalisation and the amplitude-mode phase-space factor
+(see \texttt{TECT-Math\_IR\_Bound-v4-thm-v4-1}, Eqs.~(4.1)--(4.3)).
+
+\begin{theorem}[$c_{4}>0$ rigorous interval certificate]
+\label{thm:c4-positive}
+Under the hypotheses of \texttt{TECT-Math\_IR\_Bound-v4-thm-v4-1}
+(H-BZ, H-TRUNC, H-FLOW, H-BANDGAP) and at the TECT mainline
+parameters as listed above, the coefficient $c_{4}(\epsilon)$ is
+enclosed in the rigorous \texttt{mpmath.iv} interval
+\begin{equation}
+\label{eq:thm-enclosure}
+  c_{4}(\epsilon)\;\in\;
+  [\,+1.402\times 10^{-3},\;+2.368\times 10^{-3}\,]
+  \quad\text{(N=64, dps=40)}.
+\end{equation}
+In particular $c_{4}(\epsilon)>0$ rigorously, and consequently
+\[
+  \gamma_{44}\;<\;0
+\]
+at one loop along the entire Wilson--Fisher flow from the Brazovskii
+fixed point to deep infrared.  Therefore the cubic-anisotropy coupling
+is IR-irrelevant, and emergent $SO(3,1)$ Lorentz invariance is
+established under the stated hypotheses.
+\end{theorem}
+
+\section{Closed-form radial primitive}
+
+\subsection{Factorisation over the reals}
+
+The Brazovskii denominator
+\[
+  D(r)\;:=\;m^{2}+(r^{2}-q_{0}^{2})^{2}
+  \;=\;r^{4}-2q_{0}^{2}r^{2}+R^{2},
+  \qquad R:=\sqrt{q_{0}^{4}+m^{2}},
+\]
+factors over the reals as
+\begin{equation}
+\label{eq:factorisation}
+  D(r)\;=\;\bigl((r-p)^{2}+q^{2}\bigr)\bigl((r+p)^{2}+q^{2}\bigr),
+\end{equation}
+with
+\[
+  p^{2}\;=\;\frac{R+q_{0}^{2}}{2},\qquad
+  q^{2}\;=\;\frac{R-q_{0}^{2}}{2},\qquad
+  p^{2}+q^{2}=R,\qquad
+  p^{2}-q^{2}=q_{0}^{2},\qquad
+  pq=\frac{m}{2}.
+\]
+The identity~\eqref{eq:factorisation} is immediate by expansion:
+\[
+  \bigl((r-p)^{2}+q^{2}\bigr)\bigl((r+p)^{2}+q^{2}\bigr)
+  \;=\;(r^{2}-p^{2})^{2}+q^{2}\bigl(2r^{2}+2p^{2}\bigr)+q^{4}
+  \;=\;r^{4}+2(q^{2}-p^{2})r^{2}+(p^{2}+q^{2})^{2},
+\]
+and substituting $q^{2}-p^{2}=-q_{0}^{2}$, $(p^{2}+q^{2})^{2}=R^{2}
+=q_{0}^{4}+m^{2}$ gives $D(r)$.
+
+At the TECT mainline one computes
+\[
+  R\;=\;0.4651315\ldots,\qquad
+  p\;=\;0.6810908\ldots,\qquad
+  q\;=\;0.0353117\ldots,
+\]
+so that $p/q_{0}=1+O(\epsilon^{2})$ (here
+$p/q_{0}\approx 1.00135$) and $q\approx m/(2q_{0})$ is the damping
+width of the shell.
+
+\subsection{Partial fractions and the primitive $F$}
+
+The factorisation~\eqref{eq:factorisation} admits the symmetric
+partial-fraction decomposition
+\begin{equation}
+\label{eq:pfd}
+  \frac{r^{2}}{D(r)}
+  \;=\;\frac{1}{4p}\!\left[
+        \frac{r}{(r-p)^{2}+q^{2}}-\frac{r}{(r+p)^{2}+q^{2}}
+       \right],
+\end{equation}
+verified by clearing denominators and matching the coefficient of
+$r^{2}$ on both sides, with the $r^{4}$, $r^{3}$, $r$, and
+$r^{0}$ coefficients vanishing automatically by the symmetry
+$r\leftrightarrow -r$ in \eqref{eq:pfd}.
+
+Substituting $u=r-p$ (resp.~$u=r+p$) in each term of \eqref{eq:pfd}
+and applying
+\[
+  \int\!\frac{u+c}{u^{2}+q^{2}}\,du
+  \;=\;\tfrac{1}{2}\ln(u^{2}+q^{2})+\tfrac{c}{q}\arctan\!\tfrac{u}{q},
+\]
+one obtains the indefinite primitive
+\[
+  \int\!\frac{r^{2}}{D(r)}\,dr
+  \;=\;\frac{1}{8p}\ln\!\frac{(r-p)^{2}+q^{2}}{(r+p)^{2}+q^{2}}
+  \;+\;\frac{1}{4q}\!\left[\arctan\!\tfrac{r-p}{q}+\arctan\!\tfrac{r+p}{q}\right]
+  \;+\;C.
+\]
+Fixing the integration constant by $F(0)=0$ (where
+$\arctan(-p/q)+\arctan(p/q)=0$ and the log term is $0$) gives the
+definite primitive~\eqref{eq:F-primitive-intro}, which we restate:
+\begin{equation}
+\label{eq:F-primitive}
+  F(r)\;=\;\frac{1}{8p}\ln\!\frac{(r-p)^{2}+q^{2}}{(r+p)^{2}+q^{2}}
+   \;+\;\frac{1}{4q}\!\left[\arctan\!\tfrac{r-p}{q}+\arctan\!\tfrac{r+p}{q}\right].
+\end{equation}
+One verifies
+\begin{itemize}
+\item $F(0)=0$ and
+  $F(\infty)=\pi/(4q)\approx 22.25$ at the TECT mainline;
+\item $F'(r)=r^{2}/D(r)\ge 0$ for $r\ge 0$, so $F$ is monotone
+  non-decreasing on $[0,\infty)$;
+\item $F(q_{0})\approx 9.413$ captures the entire contribution of
+  the Brazovskii shell peak analytically;
+\item $F(B)=F(1.0)\approx 20.704$ at the mainline.
+\end{itemize}
+Numerical comparison of~\eqref{eq:F-primitive} against composite
+midpoint quadrature on $[0,r]$ with $N=5\times 10^{4}$ subintervals
+shows agreement to $\le 5\times 10^{-9}$ relative at every sample
+radius $r\in\{0.1,0.5,0.99 q_{0},q_{0},1.01 q_{0},1.0,1.5,2.0\}$
+(\texttt{PDE/bz\_shell\_adaptive.py --skip-self-test=false}).
+
+\section{Angular reduction and interval quadrature}
+
+\subsection{Reduction to a 2D angular integral}
+
+Writing~\eqref{eq:c4-def} in spherical coordinates with radius
+$r=|k|$ and direction $\hat n=k/|k|$, and exploiting the $O_{h}$
+symmetry of both the integrand and the BZ boundary $r_{\BZ}(\hat n)$,
+the angular domain reduces to the fundamental triangle
+$D=\{\hat n\in S^{2}:n_{1}\ge n_{2}\ge n_{3}\ge 0\}$ with
+multiplicity $|O_{h}|=48$.  On $D$, parametrise $\hat n$ via the
+plane projection
+\[
+  \hat n\;=\;\frac{(1,s,t)}{\sqrt{1+s^{2}+t^{2}}},
+  \qquad (s,t)\in D':=\{0\le t\le s\le 1\},
+\]
+which carries the induced surface element
+$d\Omega=(1+s^{2}+t^{2})^{-3/2}\,ds\,dt$.  The BZ boundary radius in
+these coordinates is
+\begin{equation}
+\label{eq:rBZ-st}
+  r_{\BZ}(s,t)\;=\;
+  \begin{cases}
+    B\sqrt{1+s^{2}+t^{2}}, & s+t<\tfrac{1}{2}
+       \ \text{(cube/\textsc{square} regime)},\\[2pt]
+    \dfrac{A\sqrt{1+s^{2}+t^{2}}}{1+s+t}, & s+t\ge\tfrac{1}{2}
+       \ \text{(octahedral/\textsc{hex} regime)}.
+  \end{cases}
+\end{equation}
+At $(A,B)=(3/2,1)$ and over $D'$, $r_{\BZ}$ attains the range
+$[\,\sqrt{3}/2\cdot 3/2/(1+1)\,,\,\sqrt{3}]$, which numerically
+equals $[0.866,\,1.732]$ and is uniformly bounded below by
+$r_{\BZ}\ge 0.866>p$.  Since $F(r)$ is smooth for $r>0$ and the
+apparent pole structure of~\eqref{eq:F-primitive} occurs only at
+$r=\pm p\pm iq$, $F(r_{\BZ}(s,t))$ is uniformly smooth on $D'$.
+
+Combining~\eqref{eq:c4-def}, \eqref{eq:F-primitive}, and the $O_{h}$
+reduction,
+\begin{equation}
+\label{eq:c4-reduced}
+  c_{4}(\epsilon)\;=\;\frac{48}{(2\pi)^{3}}
+  \int_{D'}\!P_{4}(s,t)\,F\bigl(r_{\BZ}(s,t)\bigr)\,
+  (1+s^{2}+t^{2})^{-3/2}\,ds\,dt,
+\end{equation}
+where
+\[
+  P_{4}(s,t)\;=\;\frac{1+s^{4}+t^{4}}{(1+s^{2}+t^{2})^{2}}-\tfrac{3}{5}.
+\]
+
+\subsection{Centered-form identity}
+
+The cubic harmonic $P_{4}(\hat n)$ is the $A_{1g}$ $L=4$
+representation of $O_{h}$, so $\int_{S^{2}}P_{4}\,d\Omega=0$ exactly;
+pulling this back to the fundamental domain,
+\begin{equation}
+\label{eq:P4-avg-zero}
+  \int_{D'}\!P_{4}(s,t)\,(1+s^{2}+t^{2})^{-3/2}\,ds\,dt\;=\;0.
+\end{equation}
+For any constant $F_{0}\in\mathbb{R}$,
+\begin{equation}
+\label{eq:centered-form}
+  c_{4}(\epsilon)
+  \;=\;\frac{48}{(2\pi)^{3}}\!\int_{D'}\!P_{4}(s,t)\,
+   \bigl[F(r_{\BZ}(s,t))-F_{0}\bigr]\,(1+s^{2}+t^{2})^{-3/2}\,ds\,dt,
+\end{equation}
+identically, by~\eqref{eq:P4-avg-zero}.  While
+\eqref{eq:c4-reduced} and~\eqref{eq:centered-form} define the same
+real number, the cell-wise interval enclosure of the right-hand side
+of~\eqref{eq:centered-form} is strictly tighter than that of
+\eqref{eq:c4-reduced}: the integrand magnitude is reduced from
+$|P_{4}|\cdot F\cdot d\Omega\sim 0.4\cdot 20\cdot 1\sim 8$ to
+$|P_{4}|\cdot|F-F_{0}|\cdot d\Omega\sim 0.4\cdot 0.75\cdot 1
+\sim 0.3$ when $F_{0}$ is chosen near the mean of $F(r_{\BZ})$ over
+$D'$.
+
+We take $F_{0}:=F(B)=F(1.0)$, which is evaluated once in rigorous
+\texttt{mpmath.iv} interval arithmetic from the derived
+$(p,q)$ intervals:
+\[
+  F_{0}\;\in\;[\,2.0704419136\ldots\times 10^{1},\;
+               2.0704419136\ldots\times 10^{1}\,].
+\]
+
+\subsection{Cell-wise enclosure and adaptive subdivision}
+
+We grid $[0,1]^{2}$ with $N^{2}$ axis-aligned cells of side
+$h=1/N$ and classify each cell against the fundamental-domain
+constraints $\{t\le s,\;s\le 1,\;t\ge 0\}$ and the regime boundary
+$s+t=1/2$.  Each cell falls into one of
+\begin{itemize}
+\item \emph{interior} cells: wholly inside $D'\cap\{\text{regime}\}$.
+\item \emph{outside} cells: wholly excluded.
+\item \emph{boundary} cells: straddling at least one constraint.
+\end{itemize}
+Interior cells are evaluated by the natural interval extension of
+$P_{4}(s,t)\cdot[F(r_{\BZ}(s,t))-F_{0}]\cdot d\Omega(s,t)$.  We
+exploit the monotonicity of $F$: the tight enclosure of
+$F$ on an interval $[r_{\mathrm{lo}},r_{\mathrm{hi}}]$ is
+$[F(r_{\mathrm{lo}}),F(r_{\mathrm{hi}})]$, computed at the endpoints
+with fixed $(p,q)$ intervals.  Boundary cells are bisected
+adaptively up to depth $d_{\max}=10$; at depth $d_{\max}$, a
+widened enclosure is used that admits the extreme case of the cell
+intersecting the valid region in measure zero,
+\[
+  \int_{\text{cell}\cap D'\cap\mathrm{reg}}\,f\,ds\,dt
+  \;\subset\;
+  \bigl[\min(0,f_{\mathrm{lo}}\cdot|\text{cell}|),
+        \max(0,f_{\mathrm{hi}}\cdot|\text{cell}|)\bigr],
+\]
+which is a strict enclosure regardless of the true occupied
+fraction.
+
+The final interval for $c_{4}(\epsilon)$ is the sum of all cell
+enclosures multiplied by the overall constant $48/(2\pi)^{3}$, itself
+enclosed with \texttt{mpmath.iv}.
+
+\section{Numerical certificate}
+
+\subsection{Self-test of the primitive}
+
+The code first verifies that the closed form~\eqref{eq:F-primitive}
+reproduces a composite midpoint quadrature of the original
+definition of $F$ to $\le 5\times 10^{-9}$ relative across the
+critical range $r\in\{0.1,0.5,0.99 q_{0},q_{0},1.01 q_{0},1.0,1.5,2.0\}$.
+All tests pass.
+
+\subsection{Main result}
+
+At $N=64$, \texttt{dps=40}, $d_{\max}=10$, we obtain the rigorous
+\texttt{mpmath.iv} enclosures
+\begin{align*}
+  I^{\mathrm{square}} &\in [+1.309\times 10^{-3},\,+1.629\times 10^{-3}],\\
+  I^{\mathrm{hex}}    &\in [+5.936\times 10^{-3},\,+1.061\times 10^{-2}],\\
+  c_{4}(\epsilon)     &\in
+     [\,+1.402\times 10^{-3},\,+2.368\times 10^{-3}\,],
+\end{align*}
+with central value $1.885\times 10^{-3}$ and half-width
+$4.83\times 10^{-4}$.  This enclosure is strictly positive, hence
+the certificate
+\begin{equation}
+\label{eq:certificate}
+  \boxed{\;c_{4}(\epsilon_{\mathrm{phys}})
+         \;>\;1.40\times 10^{-3}\ \text{(rigorous)}\;}
+\end{equation}
+holds.  The central value is in agreement, to $1.9\%$, with the
+direct NumPy BZ integration of the same quantity
+($c_{4}=1.850\times 10^{-3}$ at $N_{\mathrm{full}}=256$; see
+\texttt{TECT-Math\_IR\_Bound-v4-BZ-integrator}).
+
+\subsection{Grid-convergence}
+
+\begin{center}
+\begin{tabular}{c|ccc}
+\hline
+$N$ & $c_{4}^{\mathrm{lo}}$ & $c_{4}^{\mathrm{hi}}$ &
+  half-width \\ \hline
+ 16 & $+3.48\times 10^{-4}$ & $+4.35\times 10^{-3}$ & $+2.00\times 10^{-3}$ \\
+ 32 & $+1.02\times 10^{-3}$ & $+2.95\times 10^{-3}$ & $+9.65\times 10^{-4}$ \\
+ 64 & $+1.40\times 10^{-3}$ & $+2.37\times 10^{-3}$ & $+4.83\times 10^{-4}$ \\
+\hline
+\end{tabular}
+\end{center}
+The observed half-width decays as $\sim 1/N$, consistent with the
+first-order convergence rate of the cell-wise interval-arithmetic
+midpoint enclosure.  Sign-definiteness ($c_{4}^{\mathrm{lo}}>0$)
+is achieved already at $N=16$ due to the centered-form identity
+\eqref{eq:centered-form}; higher $N$ tightens the numerical bounds
+but is not required for the qualitative certificate.
+
+\section{Consequences for Pillar~8}
+
+\begin{proposition}[Pillar 8 PROVED]
+\label{prop:pillar8}
+Under the hypotheses of Theorem~\ref{thm:c4-positive}, the 1-loop
+anomalous dimension of the cubic-anisotropy coupling at the TECT
+Brazovskii fixed point satisfies $\gamma_{44}<0$ at the physical
+parameter choice.  By the standard Wilson--Fisher renormalisation-group
+argument (\texttt{TECT-Math\_IR\_Bound-v4-thm-v4-1}, Theorem~4.2),
+the cubic-anisotropy operator is irrelevant along the IR flow, and
+$SO(3,1)$ Lorentz symmetry emerges as an exact symmetry of the
+low-energy effective action.
+\end{proposition}
+
+Per the TECT Proof-Completion Checklist
+(\texttt{docs/status/PROOF-COMPLETION-CHECKLIST.md}), Pillar~8
+advances from \textsc{NEAR-FINAL CONDITIONAL} to \textsc{PROVED}:
+\begin{itemize}
+\item[LC] Logical closure: $\checkmark$ via Theorem~\ref{thm:c4-positive}
+  and the Wilson--Fisher argument of Prop.~\ref{prop:pillar8}.
+\item[SB] Sign/bound closure: $\checkmark$ via rigorous
+  \texttt{mpmath.iv} enclosure $c_{4}\ge +1.402\times 10^{-3}>0$.
+\item[CM] Current-mainline alignment: $\checkmark$ at
+  $(q_{0},\mu^{2},\lambda,\gamma,\epsilon^{2})$ of Math57-v2.
+\item[RP] Reproducibility: $\checkmark$ via
+  \texttt{PDE/bz\_shell\_adaptive.py} (deterministic, md5 to be
+  recorded in \texttt{docs/manual/CODE\_MANUAL.md}).
+\end{itemize}
+
+\section{Limitations}
+
+\begin{remark}[Scope of the certificate]
+The enclosure~\eqref{eq:certificate} is established under the
+hypotheses H-BZ (bandgap gap away from the Brazovskii shell),
+H-TRUNC (truncated-octahedral BZ at $(A,B)=(3/2,1)$), H-FLOW (Wilson
+renormalisation scheme), and H-BANDGAP (Brazovskii dispersion exact
+up to 1-loop), as inherited from
+\texttt{TECT-Math\_IR\_Bound-v4-thm-v4-1}.  The 2-loop correction to
+$\gamma_{44}$ is not addressed here; Pillar~8's PROVED status is at
+1-loop, consistent with the TECT editorial policy
+(\texttt{PROOF-COMPLETION-CHECKLIST.md} §4).
+\end{remark}
+
+\begin{remark}[Relation to $J_{1}$ route]
+This note is orthogonal to the $J_{1}$-reduction interval certificate
+(\texttt{Docs/supplementary/Math\_IR\_Bound\_v4\_BZ\_interval.py}),
+which establishes $J_{1}>0$ rigorously but requires a separate
+comonotone inequality (Lemma v4-1-comonotone) to bridge from $J_{1}$
+to $c_{4}$.  The shell-adaptive route closes $c_{4}>0$ directly,
+bypassing the Taylor-remainder chain of v4-1 entirely.  Either route
+suffices for the certificate; we present both for independent
+cross-validation.
+\end{remark}
+
+\section*{References and reproducibility}
+
+\noindent Simulation code:
+\texttt{PDE/bz\_shell\_adaptive.py} (invocation
+\texttt{--N=64 --dps=40 --max-depth=10 --skip-self-test=false}).
+\medskip
+
+\noindent Companion notes:
+\texttt{Docs/math/TECT-Math\_IR\_Bound-v4-thm-v4-1.tex.txt},
+\texttt{Docs/math/TECT-Math\_IR\_Bound-v4-BZ-integrator.tex.txt},
+\texttt{Docs/supplementary/Math\_IR\_Bound\_v4\_BZ\_interval.py}.
+\medskip
+
+\noindent Proof-completion status:
+\texttt{docs/status/PROOF-COMPLETION-CHECKLIST.md} (v1.0, 2026-04-21).
+
+\end{document}

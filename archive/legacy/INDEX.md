@@ -1,5 +1,11 @@
 # archive/legacy — per-tag index
 
+This is the permanent compatibility/reproduction index for migration batches
+1--4. The normalized cross-sector knowledge entry point is
+[`RESEARCH-INDEX.md`](RESEARCH-INDEX.md); selected source identities live in
+`registry/`, and generated claim/sector/gate views live in `views/`. Contents
+remains the maintained source; the registry covers only selected references.
+
 | Tag | Notes (all versions) | Script | Artefacts | Consuming claims | Batch |
 |---|---|---|---|---|---|
 | Math426 | G4 kernel-convention reconciliation + AddA + AddB | `scripts/Math426_g4_kernel_reconciliation.py` | `artefacts/Math426/g4_kernel_reconciliation.json` | A1 | batch 1 (2026-06-05) |
@@ -15,7 +21,7 @@
 | Math431 | G1''-3 LAM/HEX/FCC races PASS (v1.0) | `scripts/Math431_g1pp3_lam_hex_fcc.py` | `artefacts/Math431/g1pp3_lam_hex_fcc.json` | B1 (+H-LAYER) | batch 2 (2026-06-05) |
 | Math432 | G3' two-shell ensemble race PASS (v1.0, v1.1) | `scripts/Math432_g3prime_multishell_ensemble.py` | `artefacts/Math432/g3prime_multishell_ensemble.json` | B1 (+H-LAYER) | batch 2 (2026-06-05) |
 | Math434 | S15.5 independent audit of Reading-H T5 candidacy + AddA promotion record | `scripts/Math434_lam_exact_wick_bracket.py` | `artefacts/Math434/lam_exact_wick_bracket.json`, `artefacts/Math434/state.json` | B1 (+H-LAYER) | batch 2 (2026-06-05) |
-| Math436 | G1''-3b HEX exact-Wick bracket PASS (v1.0, v1.1) | `scripts/Math436_hex_exact_wick_bracket.py` | `artefacts/Math436/hex_exact_wick_bracket.json` | B1 (+H-LAYER) | batch 2 (2026-06-05) |
+| Math436 | G1''-3b HEX exact-Wick bracket PASS (v1.0, v1.1) | `scripts/Math436_hex_exact_wick_bracket.py` | `artefacts/Math436/hex_exact_wick_bracket.json`, `artefacts/Math436/state.json` | B1 (+H-LAYER) | batch 2 (2026-06-05) |
 | Math374 | (script-only migration: import dependency) | `scripts/Math374_canonical_BCC_hessian.py` | — | A1, B2 (indirect) | batch 1 (2026-06-05) |
 | Math400 | (script-only migration: import dependency) | `scripts/Math400_AddE_brazovskii_one_loop.py` | — | A1, B2 (indirect) | batch 1 (2026-06-05) |
 | Math424 | (script-only migration: import dependency) | `scripts/Math424_AddA_reading_uniqueness.py` | — | A1, B2 (indirect) | batch 1 (2026-06-05) |

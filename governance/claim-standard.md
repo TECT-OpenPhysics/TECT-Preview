@@ -15,6 +15,8 @@ claims/<ID>/
                 #  v1.1; all versions kept; naming-and-versioning.md §3;
                 #  PDF via build_note_pdf.py)
   (optional) assumptions.md, proof-sketch.md — for large cards
+  literature-applicability.md  # mandatory before a substantive T4+ entry,
+                               # promotion, or load-bearing external/legacy import
 ```
 
 The claim folder is the full verification package in one place: card +
@@ -84,10 +86,15 @@ Optional: `soft_dependencies`, `closure_depth` (C1–C3), `proof_maturity`
 ## 5. Registration / amendment procedure
 
 1. Write or amend `claims/<ID>/` (card + json).
-2. Run `python verification/scripts/lint_claims.py` → exit 0.
-3. Regenerate ledger: `--render`.
-4. Append a `CHANGELOG.md` entry referencing the claim ID.
-5. One git commit containing all of the above (atomic set).
+2. Before a substantive T4+ entry, a promotion, or a load-bearing external or
+   legacy import, add `literature-applicability.md` under the
+   literature-first proof gate. Its source locator, hypothesis crosswalk,
+   independent-check disposition, and residual proposition are mandatory;
+   `NOT-YET-ASSESSED` or `FAILED` blocks a T6/T7 or physical conclusion.
+3. Run `python verification/scripts/lint_claims.py` → exit 0.
+4. Regenerate ledger: `--render`.
+5. Append a `CHANGELOG.md` entry referencing the claim ID.
+6. One git commit containing all of the above (atomic set).
 
 Tier **promotions** additionally require, inside `claim.md`: a
 devil's-advocate section (≥3 concrete objections with verdicts), a quantitative

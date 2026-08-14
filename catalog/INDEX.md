@@ -5,28 +5,30 @@ Compact generated reader surface. The complete current machine inventory is
 `../CATALOG.md` is a frozen compatibility volume at commit `4db22f4e`
 for historical verifiers and no longer grows.
 
-**3995 artefacts** · **49 live claim cards** ·
+**4219 artefacts** · **49 live claim cards** ·
 130 superseded artefacts retained
 
 ## By kind
 
 | Kind | Artefacts | Canonical bytes |
 |---|---:|---:|
-| Claim cards (registry layer) (`claim-card`) | 600 | 5,030,201 |
+| Claim cards (registry layer) (`claim-card`) | 600 | 5,031,297 |
 | Working proof notes (on claim cards) (`proof-note`) | 902 | 107,630,218 |
 | Theory synthesis documents (Layer 2) (`synthesis`) | 345 | 7,749,956 |
-| Migrated legacy notes (immutable) (`archive-note`) | 34 | 592,937 |
-| Migrated legacy scripts (runnable) (`archive-script`) | 16 | 243,058 |
-| Migrated legacy run artefacts (immutable) (`archive-artefact`) | 16 | 260,921 |
-| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 992 | 28,686,330 |
-| Domain codes (`code`) | 727 | 16,380,637 |
-| Verification harness (`verification`) | 40 | 9,980,396 |
+| Migrated legacy notes (immutable) (`archive-note`) | 72 | 1,509,315 |
+| Migrated legacy scripts (runnable) (`archive-script`) | 22 | 319,000 |
+| Migrated legacy run artefacts (immutable) (`archive-artefact`) | 21 | 302,036 |
+| Reviewed legacy research records (`legacy-research-record`) | 139 | 159,456 |
+| Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 164,777 |
+| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 995 | 28,718,430 |
+| Domain codes (`code`) | 730 | 16,439,297 |
+| Verification harness (`verification`) | 43 | 10,287,304 |
 | Papers (publication layer) (`paper`) | 1 | 546 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
-| Registries and ledgers (`registry`) | 42 | 1,516,631 |
-| Governance policies (`policy`) | 19 | 176,302 |
-| Root documents (`root-doc`) | 14 | 1,631,670 |
-| Other tracked files (`other`) | 243 | 10,752,216 |
+| Registries and ledgers (`registry`) | 42 | 1,524,039 |
+| Governance policies (`policy`) | 21 | 190,736 |
+| Root documents (`root-doc`) | 14 | 1,637,689 |
+| Other tracked files (`other`) | 252 | 10,851,274 |
 
 ## Use
 

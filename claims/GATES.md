@@ -172,6 +172,11 @@ Reading-H realization, admitted microscopic observable map, common estimand,
 prospective prediction, custodian commitment, freeze or score. Round-1
 remains OPEN.
 
+EXP-000860 / R-169 v1.3 owns one exact native Reading-H zero-phase BCC
+orbit/cell and the inherited native Q-versus-`G_*` comparison. It supplies no
+admitted microscopic observable map, common estimand, prospective prediction,
+custodian commitment, freeze or score. Round-1 remains OPEN.
+
 ### **PA-T055-TRUNCATED-OCTAHEDRON-BCC-VORONOI-AND-AFFINE-REALIZATION-FAMILY**
 
 **Statement:** Separate metric-regular, Euclidean-lattice-Voronoi, affine-
@@ -292,6 +297,35 @@ is only a wavelength-rescaled combinatorial realization. A tolerance,
 projection, domain change, off-shell lift, parameter retuning or full-energy
 bridge remains a separately governed construction.
 
+EXP-000860 / R-169 v1.3 strengthens this retained-CLOSED firewall. Even after
+allowing one constant amplitude `s` and positive global energy scale `c_E`,
+quartic and sextic matching gives `c_E s^4=c_E s^6=2`, hence `s^2=1` and
+`c_E=2`; the exact quadratic coefficients then contradict the required
+equality. The natural torus is a declared owner change, not the side-16 pinned
+owner.
+
+### **PA-T055-READING-H-NATIVE-ZERO-PHASE-BCC-ORBIT-CELL-AND-GSTAR-SIGN**
+
+**Statement:** Fix the registered equal-amplitude zero-phase Reading-H BCC
+`{110}` branch with an origin parameter, derive its sign-invariant center
+orbit and Euclidean Voronoi cell, and specialize its native comparison with
+`G_*` without transferring either state to pinned P1 or a physical-empty
+owner.
+
+**Status:** CLOSED ONLY FOR THE DECLARED EQUAL-AMPLITUDE ZERO-PHASE NATIVE
+READING-H ORBIT AND G_* COMPARISON (2026-08-14). EXP-000860 / R-169 v1.3
+derives `phi=4A(pq+pr+qr)` for the registered twelve signed `{110}` modes and
+`A>0`. The two all-equal cube corners both give `+12A`, so `argmax phi`,
+`argmax |phi|`, and `argmax phi^2` are the same translated BCC lattice
+`o+[ell Z^3 union ((ell/2,ell/2,ell/2)+ell Z^3)]`. Its Euclidean Voronoi cell
+has 24 vertices, 36 edges, six square faces, eight regular-hexagonal faces,
+and volume `ell^3/2`. On the natural torus the exact shell, intensity and cell
+count are preserved. Specializing the existing B1/B2 native theorem gives
+`F_RH[Q_BCC,A]-F_RH[G_*]>0`: this branch loses to the isotropic reference in
+the native Reading-H owner. This proves no sign for `F_RH[G_*]-F_empty`, no
+generic phase/nonuniform or covariance-only realization, no Reading-H-to-P1
+map, no transverse or continuum stability, and no physical selection.
+
 ### **PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE**
 
 **Statement:** Before applying the pinned P1 elimination theorem to
@@ -321,6 +355,12 @@ support-preserving side-16 P1 shell. The parent remains OPEN for an explicit
 phase/origin/polarization map or covariance/composite owner, a declared
 commensuration or off-shell approximation with an error budget, and a matched
 full functional, reference, ensemble and limit theorem.
+
+EXP-000860 / R-169 v1.3 owns phase and origin only for `Q_BCC` and proves
+only its native Q-versus-`G_*` sign. `G_*` still has no selected mean/cell or
+physical-empty reference image, and the natural torus is a declared domain
+escape rather than a side-16 P1 bridge. No generic realization or full
+intertwiner follows. The parent remains OPEN.
 
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
@@ -5004,6 +5044,8 @@ the historical backend are separate scopes, not residuals of this gate.
 | [**CP-UNITARITY**](#cp-unitarity) | OPEN |
 | [**SCHEME-2LOOP**](#scheme-2loop) | OPEN … |
 | [**PRED-G-FREEZE**](#pred-g-freeze) | OPEN |
+| [**LITERATURE-FIRST-APPLICABILITY-AUDIT**](#literature-first-applicability-audit) | OPEN; T-056 rollout |
+| [**LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION**](#legacy-selective-index-and-on-demand-revalidation) | OPEN; T-057 rollout |
 
 <a id="step-5b"></a>
 ### **STEP-5B**
@@ -5217,6 +5259,48 @@ the historical backend are separate scopes, not residuals of this gate.
 
 **Source:** `predictions/prediction-ledger.md`
 
+<a id="literature-first-applicability-audit"></a>
+### **LITERATURE-FIRST-APPLICABILITY-AUDIT**
+
+**Statement:** Before a new substantive route, T4-or-higher result, promotion,
+or physical conclusion uses an external, legacy, or earlier internal theorem as
+a load-bearing input, record the exact target, stable source locator,
+hypothesis-to-model crosswalk, imported conclusion and scope, independent-check
+disposition, adversarial checks, and the residual proposition. A failed or
+unassessed load-bearing hypothesis blocks promotion; a search result or citation
+alone does not discharge this gate.
+
+**Status:** OPEN (2026-08-14). T-056 owns the initial QFT/GR/Reading-H audit for
+`B1-RH-ENUM`, `C4-GRAVITY-1LOOP`, `C5-NEWTON-G`, and
+`C6-SPACETIME-SIGNATURE`. The policy and enforcement contract are installed,
+but the initial applicability records and their independent objection
+dispositions are not complete. Closure of this rollout gate would certify only
+that those declared imports were classified under the policy; it would not
+prove novelty, validate every item in the literature, or promote any physical
+claim.
+
+**Source:** `governance/literature-first-proof-gate.md`; task `T-056`.
+
+<a id="legacy-selective-index-and-on-demand-revalidation"></a>
+### **LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION**
+
+**Statement:** Preserve exact path/hash provenance, readable copies, reviewed
+assessments, and generated navigation for legacy sources selected by a live
+task/claim/gate question. Before integration, every load-bearing import must
+receive a current applicability and revalidation disposition. The maintained
+Contents corpus is not a bulk-copy or whole-corpus completion target.
+
+**Status:** OPEN (2026-08-14). T-057 retains all 66 existing compatibility
+payloads, preserves readable copies of 49 newly selected important sources,
+normalizes 24 reviewed research records over 115 selected source identities,
+and freezes a 50-source first T-055 batch. The first batch still requires exact
+per-source extraction, dependency closure, current-convention reruns,
+independent audit, and formal integration or rejection. Search, summaries,
+copies, and matching hashes do not close a physical claim or change a tier.
+
+**Source:** `governance/legacy-research-knowledge-base.md`,
+`archive/legacy/RESEARCH-INDEX.md`, and task `T-057`.
+
 
 ## Named hypotheses
 
@@ -5404,6 +5488,12 @@ side-16 shell-commensurability children. It constructs no Reading-H mean
 field, matched full energy, below-empty branch, stable realization or
 continuum physical state. The Reading-H interface, this gate and its physical
 programme remain OPEN.
+
+EXP-000860 / R-169 v1.3 identifies one explicit native zero-phase BCC branch
+and proves that it loses to the isotropic `G_*` reference. It supplies no
+physical-empty sign, transverse or continuum stability, limit theorem, or
+candidate-completeness result. This is not a resurrection of the retired BCC
+premise; this gate and its physical programme remain OPEN.
 
 
 <a id="a3-h1-dim3-q4-kernel"></a>

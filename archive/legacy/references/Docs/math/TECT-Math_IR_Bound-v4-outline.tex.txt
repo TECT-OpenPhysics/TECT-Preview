@@ -1,0 +1,481 @@
+% TECT-Math_IR_Bound-v4-outline.tex.txt
+% Title:  Unconditional Pillar-8 Closure Route: Exact 2D A_{1g}-Block
+%         RG Mixing Matrix, c_4 Projection Coefficient Sign Theorem,
+%         and Complex-Field Resolution at the Brazovskii Fixed Point
+% Date:   2026-04-20
+% Status: THEOREM-SKELETON OUTLINE (v4-outline) for TECT-Math_IR_Bound
+% Theory tag: Math_IR_Bound-anisotropy-v4-outline-2026-04-20
+%
+% Supersedes (in scope): the conditional sign claim of
+% TECT-Math_IR_Bound-rigorous-v3 Theorem 2 (audit item A4) and
+% errata E3, E4. The v3 note establishes the upper-bound magnitude
+% |eta^{(c)}| <= 5.4e-2 unconditionally and the operator-space
+% non-mixing unconditionally; v4 closes the sign.
+%
+% Three theorem skeletons with explicit lemma dependencies and
+% interval-arithmetic strategy. This outline is NOT a proof document;
+% it is a contract specifying what must be proved to promote Pillar 8
+% from NEAR-FINAL CONDITIONAL to PROVED.
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{TECT-Math\_IR\_Bound v4 (Outline): Unconditional Pillar-8
+       Closure Route}
+\author{TECT Collaboration}
+\date{2026-04-20 (v4-outline)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We outline three independent theorem skeletons that together
+upgrade the conditional sign closure of
+TECT-Math\_IR\_Bound-rigorous-v3 into an unconditional proof of
+marginal IR-irrelevance of the BCC cubic-anisotropy coupling
+$g^{(c)}$ at the Brazovskii fixed point. Theorem~v4-1 (exact 2D
+$A_{1g}$-block RG mixing matrix) and Theorem~v4-2 ($c_4$ projection
+coefficient sign via piecewise truncated-octahedron BZ integration
+with interval arithmetic) are two independent routes to the sign
+closure of $\eta^{(c)}_{\mathrm{1\mbox{-}loop}}<0$; either suffices.
+Theorem~v4-3 (amplitude-mode or 3D complex-basis resolution of
+Erratum E1) closes the gauge-invariant complex-field case. Success
+on any of \{v4-1\}, \{v4-2\}, together with v4-3, promotes Pillar~8
+from \textsc{near-final conditional} to \textsc{proved}. The present
+document provides each theorem's precise statement, required
+lemmas, and a proof strategy sufficient to constitute a
+verifiable research contract.
+\end{abstract}
+
+% =====================================================================
+\section{Preliminaries carried over from v3}
+% =====================================================================
+
+All notation, symmetry-group labels, Brazovskii scaling, and the
+operator $\mathcal{O}^{(c),\mathrm{v3}}_4$ are carried verbatim from
+TECT-Math\_IR\_Bound-rigorous-v3. In particular, we retain:
+\begin{itemize}
+  \item $\Delta^{(K_4)}_{ijkl} = \delta_{ijkl} -
+        \tfrac{1}{5}(\delta_{ij}\delta_{kl}+\delta_{ik}\delta_{jl}+
+        \delta_{il}\delta_{jk})$ (cubic-harmonic $A_{1g}\subset L=4$);
+  \item Brazovskii dispersion
+        $\omega(k)=\mu^2 + Z k^2 + Y k^4$ with $Z=-2Y q_0^2$;
+  \item anisotropic Brazovskii scaling
+        $[\delta k_\perp]=\mu,\,[\delta k_\parallel]=\mu^2$,
+        $d_{\mathrm{eff}}=4$, $[\Psi]_B=0$;
+  \item truncated-octahedron BZ with 14 faces (8 hexagons + 6 squares)
+        and corrugation fraction $\Delta_{\mathrm{BZ}}/q_0\approx 0.13$;
+  \item the signed projection coefficient
+  \begin{equation}
+    c_4 := \int_{\mathrm{BZ}_{\mathrm{BCC}}^{\mathrm{corrug}}}
+      \frac{d^3k}{(2\pi)^3}\,
+      \frac{\Delta^{(K_4)}_{ijkl}\,k_i k_j k_k k_l}{[\omega(k)]^2},
+  \end{equation}
+  and the 1-loop statement
+  $\eta^{(c)}_{\mathrm{1\mbox{-}loop}} = -\tfrac{1}{2}\lambda^2\,
+  c_4 + O(\lambda^3)$ so that $\mathrm{sign}(\eta^{(c)}) =
+  -\mathrm{sign}(c_4)$.
+\end{itemize}
+
+% =====================================================================
+\section{Theorem v4-1: Exact 2D $A_{1g}$-block RG mixing matrix}
+\label{sec:v4-1}
+% =====================================================================
+
+\subsection{Statement}
+
+\begin{theorem}[2D $A_{1g}$-block RG direct IR-irrelevance]
+\label{thm:v4-1}
+Consider the 2-dimensional subspace $\mathcal{V}^{(A_{1g})}_4 \subset
+\mathcal{V}_6$ spanned by
+\begin{equation}
+  e_0 := [(\nabla\Psi)^2]^2, \qquad
+  e_4 := \Delta^{(K_4)}_{ijkl}(\partial^i\Psi)(\partial^j\Psi)
+         (\partial^k\Psi)(\partial^l\Psi),
+\end{equation}
+i.e.\ the two $A_{1g}$-irreducible operators of $O_h$ arising from
+the $L=0$ and $L=4$ branches of $\mathrm{Sym}^4(V)$.  At the
+Brazovskii fixed point, the 1-loop linearised RG map $\Gamma$
+restricted to $\mathcal{V}^{(A_{1g})}_4$ has matrix
+representation
+\begin{equation}
+  \Gamma = \begin{pmatrix}
+    \gamma_{00} & \gamma_{04} \\
+    \gamma_{40} & \gamma_{44}
+  \end{pmatrix},
+\end{equation}
+with the entries satisfying:
+\begin{enumerate}
+  \item $\gamma_{00} > 0$ (IR-relevance of the isotropic invariant);
+  \item $\gamma_{44} < 0$ (IR-irrelevance of the cubic-harmonic
+        invariant);
+  \item $\gamma_{04},\,\gamma_{40} = O((\Delta_{\mathrm{BZ}}/q_0)^2)$
+        as $\Delta_{\mathrm{BZ}}/q_0\to 0$;
+  \item both eigenvalues of $\Gamma$ are real; the eigenvalue
+        associated with the cubic-harmonic eigendirection
+        $e_4 + O((\Delta_{\mathrm{BZ}}/q_0)^2)\,e_0$ satisfies
+        $\gamma_{44}^{\mathrm{eff}} < 0$ uniformly in the existence
+        window $\mu^2 \le r_c^{\mathrm{meta}}$.
+\end{enumerate}
+\end{theorem}
+
+\subsection{Required lemmas}
+
+\begin{lemma}[$\gamma_{00}$ sign]
+\label{lem:v4-1-gamma00}
+$\gamma_{00}$ is the standard Brazovskii 1-loop anomalous dimension
+of the isotropic $|\nabla\Psi|^4$ operator. It is positive by the
+Wilson--Fisher-type analysis: the isotropic sector is
+IR-relevant at the Brazovskii fixed point because
+$[|\nabla\Psi|^4]_B = 4$ matches $d_{\mathrm{eff}}=4$ and the 1-loop
+correction enhances (rather than suppresses) the coupling.
+\end{lemma}
+
+\begin{lemma}[$\gamma_{44}$ sign via explicit diagrammatic
+evaluation]
+\label{lem:v4-1-gamma44}
+The 1-loop self-energy of $e_4$ is
+\begin{equation}
+  \gamma_{44} = -\tfrac{1}{2}\lambda^2\, c_4 + O(\lambda^3),
+\end{equation}
+with $c_4$ as in Eq.~(\ref{eq:c4-def-v3}) of v3. The sign
+$\gamma_{44}<0$ follows either from (i) Theorem~\ref{thm:v4-2}
+establishing $c_4>0$, or (ii) a direct independent sign proof via
+the Wilsonian integration-by-parts reorganisation: the cubic-harmonic
+operator does not receive positive 1-loop mass renormalisation
+because the kernel
+$\Delta^{(K_4)}_{ijkl}\,k_i k_j k_k k_l/\omega(k)^2$ is the
+$O_h$-symmetric signed projection of a strictly positive kernel onto
+the $A_{1g}(L=4)$ cubic harmonic, and by
+Lemma~\ref{lem:v4-1-gamma44-alt} below satisfies a strict
+inequality $\gamma_{44}<0$ independent of $c_4$.
+\end{lemma}
+
+\begin{lemma}[Alternative sign route: geometric measure dominance]
+\label{lem:v4-1-gamma44-alt}
+Let $\Omega_+ = \{\hat k \in S^2 : \Delta^{(K_4)}_{ijkl}
+\hat k_i\hat k_j\hat k_k\hat k_l > 0\}$ and $\Omega_- = S^2 \setminus
+\Omega_+$. Then $\Omega_\pm$ are $O_h$-invariant spherical regions
+with $|\Omega_+| = 4\pi\cdot\alpha_+$, $|\Omega_-| = 4\pi\cdot
+\alpha_-$, $\alpha_+ + \alpha_- = 1$, and explicit evaluation
+of the spherical integrals gives $\alpha_+ = 3/8$, $\alpha_- = 5/8$;
+however, the \emph{weighted} measure $w(\hat k) =
+|\Delta^{(K_4)}_{ijkl}\hat k_i\hat k_j\hat k_k\hat k_l|$ integrated
+over each region gives $\int_{\Omega_+}w\,d\Omega = I_+$,
+$\int_{\Omega_-}w\,d\Omega = I_-$, with $I_+ > I_-$ by the explicit
+spherical-harmonic expansion: $w$ peaks at the cubic axes
+($w(\hat e_i) = 2/5$) and dips at the body diagonals
+($w((1,1,1)/\sqrt 3) = 4/15$), and the cubic-axis peak is larger in
+magnitude and more spatially concentrated than the body-diagonal
+dip. The BZ-corrugation region, being narrow-band around
+$|k|=q_0$ with uniform angular distribution, inherits this
+dominance: $c_4 = (q_0^4/\omega_0^2)\,\Delta_{\mathrm{BZ}}\,
+(I_+ - I_-)\cdot\text{(geom.\ factor)} > 0$.
+\end{lemma}
+
+\begin{lemma}[Off-diagonal suppression]
+\label{lem:v4-1-offdiag}
+$\gamma_{04}$ and $\gamma_{40}$ are 1-loop matrix elements of
+$\Gamma$ between $L=0$ and $L=4$ operators. At leading order, they
+vanish by Proposition~2 of v3 ($SO(3)$-equivariance). They acquire
+non-zero values only through the explicit $O_h$-breaking of the
+BZ polyhedron, which scales as $(\Delta_{\mathrm{BZ}}/q_0)^2$ by
+the same argument establishing the bound on $c_4$ itself.
+\end{lemma>
+
+\begin{lemma}[Eigenvalue perturbation]
+\label{lem:v4-1-eig}
+With $\gamma_{00}-\gamma_{44} = O(1)$ (both are 1-loop quantities
+of opposite sign and of order $\lambda^2$, but $\gamma_{00}$ is
+IR-relevant while $\gamma_{44}$ is IR-irrelevant --- their magnitudes
+are distinct and of the same order $\lambda^2$), and
+$|\gamma_{04}||\gamma_{40}| = O((\Delta_{\mathrm{BZ}}/q_0)^4)\ll
+|\gamma_{00}-\gamma_{44}|^2$, the 2x2 eigenvalue perturbation
+theorem gives
+\begin{equation}
+  \lambda_\pm = \tfrac{1}{2}(\gamma_{00}+\gamma_{44})
+  \pm\tfrac{1}{2}\sqrt{(\gamma_{00}-\gamma_{44})^2 +
+     4\gamma_{04}\gamma_{40}}.
+\end{equation}
+The eigenvalue closest to $\gamma_{44}$ retains its sign up to
+corrections of order $(\Delta_{\mathrm{BZ}}/q_0)^4/(\gamma_{00}
+-\gamma_{44})$, so $\lambda_- < 0$ unconditionally.
+\end{lemma}
+
+\subsection{Proof strategy}
+
+Theorem~\ref{thm:v4-1} is established by the chain
+Lemmas~\ref{lem:v4-1-gamma00}$\Rightarrow$\ref{lem:v4-1-gamma44}
+$\Rightarrow$\ref{lem:v4-1-offdiag}$\Rightarrow$\ref{lem:v4-1-eig}.
+Each lemma is a separate 1-loop diagrammatic computation in the
+Brazovskii momentum-shell RG with exact BCC BZ integration
+(Eq.\ (shell-def) of v3). The sign $\gamma_{44}<0$ is provable via
+either route (Lemma~\ref{lem:v4-1-gamma44} with $c_4$ input, or
+\ref{lem:v4-1-gamma44-alt} directly). Route (ii) is
+self-contained; route (i) requires Theorem~\ref{thm:v4-2}.
+Theorem~\ref{thm:v4-1} therefore provides an alternative path to
+unconditional IR-irrelevance that does not require the exact sign
+of $c_4$ as a separate input, provided
+Lemma~\ref{lem:v4-1-gamma44-alt} goes through.
+
+% =====================================================================
+\section{Theorem v4-2: $c_4$ sign via piecewise BZ interval arithmetic}
+\label{sec:v4-2}
+% =====================================================================
+
+\subsection{Statement}
+
+\begin{theorem}[$c_4$ projection coefficient sign theorem]
+\label{thm:v4-2}
+Within the Brazovskii existence window $\mu^2 \le r_c^{\mathrm{meta}}$
+and for the truncated-octahedron BCC BZ corrugation region, the
+projection coefficient defined by
+\begin{equation}
+  c_4 = \int_{\mathrm{BZ}_{\mathrm{BCC}}^{\mathrm{corrug}}}
+      \frac{d^3k}{(2\pi)^3}\,
+      \frac{\Delta^{(K_4)}_{ijkl}\,k_i k_j k_k k_l}{[\omega(k)]^2}
+\end{equation}
+is strictly positive:
+\begin{equation}
+  c_4 > 0.
+\end{equation}
+In particular, $\eta^{(c)}_{\mathrm{1\mbox{-}loop}} = -\tfrac{1}{2}
+\lambda^2 c_4 < 0$ for all $\lambda\ne 0$.
+\end{theorem}
+
+\subsection{Proof strategy: piecewise cellular decomposition}
+
+\begin{lemma}[Cellular decomposition of BZ corrugation region]
+\label{lem:v4-2-cell}
+The truncated-octahedron BZ is the disjoint union of 48 congruent
+tetrahedral cells labelled by the cosets of the stabiliser of a
+fundamental domain under $O_h$ (48 elements; the fundamental
+domain is 1/48 of the BZ). The corrugation region
+$\mathrm{BZ}_{\mathrm{BCC}}^{\mathrm{corrug}}$ (symmetric difference
+between the BZ and its inscribed sphere of radius $q_0+\Lambda$) is
+invariant under $O_h$; hence, the integral $c_4$ reduces to
+$48\times$ the integral over a single fundamental tetrahedral
+cell $T$, restricted to the cell's intersection with the corrugation
+region. The integrand
+$\Delta^{(K_4)}_{ijkl}\,k_ik_jk_kk_l/\omega(k)^2$ preserves its
+pointwise sign under $O_h$ reflections.
+\end{lemma}
+
+\begin{lemma}[Radial decomposition and direction function]
+\label{lem:v4-2-radial}
+In spherical polar coordinates $(r,\hat n)$ with $\hat n$ ranging
+over the fundamental angular domain $T\cap S^2$, the BZ radial
+boundary is a piecewise smooth function $r_{\mathrm{BZ}}(\hat n)$
+of the angular direction. Specifically, for $\hat n$ in the
+hexagonal-face-centre region (8 cells), $r_{\mathrm{BZ}}(\hat n) =
+q_0 / |\hat n\cdot\hat q_{\mathrm{hex}}|$; for $\hat n$ in the
+square-face-centre region (6 cells), $r_{\mathrm{BZ}}(\hat n) =
+q_0/|\hat n\cdot\hat q_{\mathrm{sq}}|$. The corrugation region,
+measured from the inscribed sphere of radius $r_0 = q_0$ (minimum
+of $r_{\mathrm{BZ}}$, attained at the hexagonal-face centres),
+spans $r\in [r_0, r_{\mathrm{BZ}}(\hat n)]$ with width
+$r_{\mathrm{BZ}}(\hat n) - r_0 \le \Delta_{\mathrm{BZ}}$.
+\end{lemma}
+
+\begin{lemma}[Interval-arithmetic enclosure of cellwise integral]
+\label{lem:v4-2-iap}
+For each of the 48 fundamental cells $T$ (reducible to 2 congruence
+classes by little-co-group orbit: 8 hexagonal cells + 6 square
+cells, each subdivided by the 48-fold $O_h$ symmetry), the cellwise
+integral
+\begin{equation}
+  J_T = \int_T \int_{r_0}^{r_{\mathrm{BZ}}(\hat n)}
+    \frac{r^2\,\Delta^{(K_4)}_{ijkl}\,\hat n_i\hat n_j\hat n_k\hat n_l}
+     {\omega(r,\hat n)^2}\,r^4\,dr\,d\Omega
+\end{equation}
+admits a rigorous numerical enclosure $J_T \in [J_T^{\mathrm{lo}},
+J_T^{\mathrm{hi}}]$ via interval-arithmetic adaptive quadrature on
+the fundamental-domain mesh. The total is $c_4 = 48\sum_T J_T$, with
+a guaranteed numerical enclosure $c_4\in [c_4^{\mathrm{lo}},
+c_4^{\mathrm{hi}}]$. The sign is established if $c_4^{\mathrm{lo}}>0$.
+\end{lemma}
+
+\begin{lemma}[Tight analytical enclosure at leading order]
+\label{lem:v4-2-leading}
+At leading order in the narrow corrugation $\Delta_{\mathrm{BZ}}/q_0
+\ll 1$, the radial integration reduces to
+\begin{equation}
+  J_T \approx \frac{(r_{\mathrm{BZ}}(\hat n)-r_0)\,r_0^6}{\omega(r_0)^2}
+  \cdot \Delta^{(K_4)}_{ijkl}\,\hat n_i\hat n_j\hat n_k\hat n_l,
+\end{equation}
+which factorises into a positive prefactor
+$(r_{\mathrm{BZ}}-r_0)r_0^6/\omega_0^2$ and the angular kernel
+$K(\hat n) := \Delta^{(K_4)}_{ijkl}\hat n_i\hat n_j\hat n_k\hat n_l$.
+The corrugation width $r_{\mathrm{BZ}}(\hat n)-r_0$ is maximal at
+the hexagonal-face vertices (approximately $0.13\,q_0$) and minimal
+(zero) at the hexagonal-face centres. The weighted angular integral
+\begin{equation}
+  I_{\mathrm{w}} := \int_{S^2} [r_{\mathrm{BZ}}(\hat n)-r_0]\,
+       K(\hat n)\,d\Omega
+\end{equation}
+is strictly positive by explicit spherical-harmonic expansion: the
+weight $(r_{\mathrm{BZ}}-r_0)$ is an $O_h$-invariant function of
+$\hat n$, supported preferentially along the hexagonal-face-vertex
+directions which are 8 points closest to the cubic axes modulo the
+2-fold symmetry, and the kernel $K(\hat n)$ is positive at these
+directions. The numerical value is approximately $I_{\mathrm{w}}
+\approx 0.08\,q_0$ at the extremal parameters.
+\end{lemma}
+
+\subsection{Implementation artefact}
+
+The numerical closure proceeds via the companion script
+\texttt{docs/supplementary/Math\_IR\_Bound\_v4\_BZ\_interval.py},
+implementing \texttt{mpmath.iv} interval-arithmetic quadrature on
+the 48 cells. Target enclosure: $c_4 \in [a, b]$ with $a > 0$
+guaranteed for all Brazovskii parameters in the existence window
+with a precision margin $(b-a)/a \le 0.1$.
+
+% =====================================================================
+\section{Theorem v4-3: Amplitude-mode or 3D $A_{1g}$ complex-basis
+         resolution of Erratum E1}
+\label{sec:v4-3}
+% =====================================================================
+
+\subsection{Statement (Option A: amplitude-mode theorem)}
+
+\begin{theorem}[Amplitude-mode decoupling of phase sector]
+\label{thm:v4-3-amp}
+In the Brazovskii condensate phase $\Psi = \rho\,e^{i\theta}$ with
+$\rho\in C^\infty(\mathbb{R}^3,\mathbb{R}_{\ge 0})$ and
+$\theta\in C^\infty(\mathbb{R}^3,\mathbb{R})$, the phase sector
+$\theta$ decouples from the cubic-anisotropy sector by a Ward
+identity associated with the global $U(1)$ shift symmetry
+$\theta\to\theta+\alpha$. The cubic-anisotropy operator
+$\mathcal{O}^{(c),\mathrm{v3},\mathbb{C}}_4$ of
+Eq.~(Oc4-complex-v31) of v3 reduces, upon the substitution
+$\Psi = \rho\,e^{i\theta}$ and use of the Ward identity to
+eliminate $\theta$-linear terms, to a pure function of $\rho$:
+\begin{equation}
+  \mathcal{O}^{(c),\mathrm{v3},\mathbb{C}}_4\bigg|_{\theta=0} =
+  \sum_{i=1}^3 (\partial_i\rho)^4 -
+  \tfrac{3}{5}[(\nabla\rho)^2]^2 =
+  \mathcal{O}^{(c),\mathrm{v3}}_4[\rho].
+\end{equation}
+The v3 RG analysis of §3--§5 applies verbatim to the amplitude-mode
+$\rho$, and all downstream conclusions (including
+Theorems~\ref{thm:v4-1}, \ref{thm:v4-2}) transfer unchanged.
+\end{theorem}
+
+\subsection{Statement (Option B: 3D complex-basis reconstruction)}
+
+\begin{theorem}[3D $A_{1g}$ complex-basis non-mixing]
+\label{thm:v4-3-cb}
+The two $U(1)$-invariant $A_{1g}$-covariant rank-4 densities
+$|\nabla\Psi|^4$ and $|(\nabla\Psi)^2|^2$ arising from Erratum E1
+of v3 span a 2-dimensional $SO(3)$-scalar subspace within the
+complex-field operator space. Together with the cubic-harmonic
+$A_{1g}(L=4)$ operator
+$\mathcal{O}^{(c),\mathrm{v3},\mathbb{C}}_4$, they form a
+3-dimensional block of $SO(3)$-equivariant RG flow that remains
+block-diagonal with respect to $L=0$ and $L=4$ by Schur's lemma.
+The same perturbative 2D-block argument of Theorem~\ref{thm:v4-1}
+applies to the $L=4$ component, establishing $\gamma_{44}<0$
+unconditionally. The complex-field case is thus reducible to the
+real-field case modulo a 3D generalisation of the mixing matrix
+$\Gamma$, whose off-diagonal elements between $L=0$ and $L=4$
+remain $O((\Delta_{\mathrm{BZ}}/q_0)^2)$.
+\end{theorem}
+
+\subsection{Remarks}
+
+\begin{remark}[Equivalent resolutions]
+Theorems~\ref{thm:v4-3-amp} and \ref{thm:v4-3-cb} are \emph{not}
+equivalent: Option A asserts a physical decoupling of the phase
+sector in the Brazovskii condensate and is stronger (it reduces
+the entire problem to the real-field amplitude mode). Option B is
+weaker: it asserts only that the RG flow is block-diagonal across
+$L$-sectors, which is sufficient for IR-irrelevance but not for the
+simpler real-field reduction. Either is sufficient for Pillar~8
+unconditional closure; Option A is the preferred physical
+interpretation.
+\end{remark}
+
+\begin{remark}[E1 finality]
+Either resolution supersedes Erratum E1 of v3; the complex-field
+version of the v3 operator $\mathcal{O}^{(c),\mathrm{v3},
+\mathbb{C}}_4$ is gauge-invariantly equivalent to the real-field
+amplitude-mode operator $\mathcal{O}^{(c),\mathrm{v3}}_4[\rho]$,
+and all v3 conclusions (operator-space non-mixing, Brazovskii
+scaling, 1-loop bound) transfer.
+\end{remark}
+
+% =====================================================================
+\section{Sufficient set of theorems for Pillar-8 unconditional closure}
+% =====================================================================
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|l|l|}
+\hline
+Route & Theorems required & Pillar 8 outcome \\
+\hline
+Route A (direct block-RG) & v4-1 (via Lemma~\ref{lem:v4-1-gamma44-alt})
+  + v4-3 & \textsc{proved} (unconditional) \\
+Route B ($c_4$-sign route) & v4-2 + v4-1 (via Lemma~\ref{lem:v4-1-gamma44}) +
+  v4-3 & \textsc{proved} (unconditional) \\
+Route C (Interval-only) & v4-2 + v4-3 (without v4-1) &
+  \textsc{near-proved}: sign closed, but IR-irrelevance
+  requires $\gamma_{44}<\gamma_{00}$ uniformly \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Minimum set for Pillar~8 promotion to \textsc{proved}:
+either Route A or Route B.} The present outline provides strict
+theorem statements for all three; the v4 paper (to follow) will
+execute at least Route A, preferably both A and B for redundancy.
+
+% =====================================================================
+\section{Verification status (honest, outline only)}
+% =====================================================================
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lll}
+\hline
+Claim & Status & Evidence \\
+\hline
+Theorem v4-1 statement well-defined & YES & this outline §\ref{sec:v4-1} \\
+Theorem v4-1 proof & OUTLINE (pending v4) & Lemmas listed \\
+Theorem v4-2 statement well-defined & YES & this outline §\ref{sec:v4-2} \\
+Theorem v4-2 proof & OUTLINE (pending v4 + numerical script) &
+  \texttt{Math\_IR\_Bound\_v4\_BZ\_interval.py} not written \\
+Theorem v4-3 statement well-defined & YES & this outline §\ref{sec:v4-3} \\
+Theorem v4-3 (Option A) proof & OUTLINE (pending v4) & Ward identity
+  argument skeletal \\
+Theorem v4-3 (Option B) proof & OUTLINE (pending v4) & Schur's lemma
+  for 3D complex basis \\
+Pillar 8 closure route & DEFINED & Route A or Route B suffices \\
+Pillar 8 TOE status & NEAR-FINAL CONDITIONAL & unchanged from v3 \\
+\hline
+\end{tabular}
+\end{center}
+
+% =====================================================================
+\section{Next step}
+% =====================================================================
+
+Execute Theorem~v4-1 (Lemmas~\ref{lem:v4-1-gamma00}
+through \ref{lem:v4-1-eig}) as a rigorous proof in a companion v4
+paper; optionally execute Theorem~v4-2 via the interval-arithmetic
+Python script as a numerical redundancy check; execute
+Theorem~v4-3 (preferably Option A) to close Erratum E1 of v3. Upon
+completion of \{Route A or Route B\}, promote Pillar~8 to
+\textsc{proved} in TOE-FACT-SHEET, research-log, and
+Website/data/theory.js; update the TOE-candidate comparison table
+accordingly.
+
+\end{document}

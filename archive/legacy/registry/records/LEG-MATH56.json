@@ -1,0 +1,66 @@
+{
+  "achievements": [
+    "Separates several numerical false positives from admissible restricted-cone solutions."
+  ],
+  "assumptions": [
+    "Fixed BCC branch",
+    "Finite spectral cutoff",
+    "Production continuation inputs"
+  ],
+  "claims": [
+    "B4-CONE-CURVATURE-ANCHOR",
+    "B4-MASS-GAP"
+  ],
+  "contradictions": [],
+  "current_assessment": "partially-reusable",
+  "evidence_role": "method",
+  "gates": [
+    "C6-BCC-PREMISE-BLOCKED"
+  ],
+  "legacy_conclusion": "Guarded residual, Hessian, and cutoff tests were proposed as a restricted continuation protocol.",
+  "legacy_purpose": "Define acceptance guards that distinguish genuine BCC continuation solutions from numerical artifacts.",
+  "negative_findings": [
+    "The protocol does not turn a local Hessian eigenvalue into a thermodynamic or Yang-Mills mass gap."
+  ],
+  "next_actions": [
+    "Reuse guards only after the T-055 candidate and reference Hamiltonian are fixed."
+  ],
+  "no_overclaim": "No global vacuum selection or physical spectral gap follows.",
+  "pinned_source_ids_sha256": "5f9ca981f712259d15cc0e8cbf1afd0487db400d15f3f2d69d145df7abc57d10",
+  "record_id": "LEG-MATH56",
+  "reusable_elements": [
+    "Residual and Hessian guard definitions",
+    "Failure diagnostics for continuation"
+  ],
+  "review": {
+    "record_version": "1.0.0",
+    "reviewed_on": "2026-08-14",
+    "status": "reviewed"
+  },
+  "schema_version": "1.0.0",
+  "sectors": [
+    "B"
+  ],
+  "source_ids": [
+    "LEG-SRC-5D4BADB8DC0C4CFD",
+    "LEG-SRC-CEA9EB600210F880",
+    "LEG-SRC-F9C3B78D9E1A89DE"
+  ],
+  "source_tags": [
+    "Math56"
+  ],
+  "status_axes": {
+    "extraction": "reviewed",
+    "integration": "integrated",
+    "preservation": "verified-copy",
+    "revalidation": "waived"
+  },
+  "title": "Guarded quotient and Hessian-jump audit lineage",
+  "topics": [
+    "guarded quotient",
+    "Hessian",
+    "continuation",
+    "mass-gap scope"
+  ],
+  "tsv2_ceiling": "T5 restricted numerical protocol"
+}

@@ -5,6 +5,12 @@ Dispositions: MIGRATED-VERBATIM / REWRITTEN / SUPERSEDED / DROPPED /
 COLD-ARCHIVE. A claim is migration-clean when its `legacy_evidence` has no
 unresolved `legacy:` pointer.
 
+From 2026-08-14 onward, selected corpus intake is recorded in the path/hash
+source registry, reviewed records, and append-only event stream defined by
+`governance/legacy-research-knowledge-base.md`. This Markdown ledger remains
+the compatibility authority for batches 1--4; it is not a second mutable
+registry for later batches.
+
 **Target layout** (since 2026-06-05 reorganisation): migrated files live under
 `archive/legacy/` in the per-tag layout — `notes/<TheoryTag>/` (all versions
 together), `scripts/` (flat, runnable as-is), `artefacts/<TheoryTag>/`. The
@@ -107,6 +113,7 @@ All dispositions in this batch are MIGRATED-VERBATIM.
 | `Docs/math/TECT-Math436-G1pp3b-HEX-Exact-Wick-Bracket-PASS-260604-v1.1.tex.txt` | B1 (canonical) | note (text) | SIGNED 2026-06-05 |
 | `Codes/supplementary/Math436_hex_exact_wick_bracket.py` | B1 | re-run 49/49 PASS | SIGNED 2026-06-05 |
 | `Runs/math/Math436/hex_exact_wick_bracket.json` | B1 | reproduced within 1e-9 | SIGNED 2026-06-05 |
+| `Runs/math/Math436/state.json` | B1 (checkpoint provenance) | byte-identical checkpoint state; normalized-ledger omission repaired 2026-08-14 | SIGNED 2026-06-05 |
 
 ## Translation events (not file migrations)
 

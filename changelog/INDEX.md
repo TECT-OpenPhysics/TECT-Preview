@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**641 accepted events** · latest 25 shown below · machine locator: `index.json`
+**645 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,10 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-14 | `20260814-correct-t-057-to-selective-main-line-legacy-pre` — [Correct T-057 to selective main-line legacy preservation] - 2026-08-14 | B3-BCC-STRUCT, C1-LORENTZ-KIN, C2-LORENTZ-EMERGENT, C6-SPACETIME-SIGNATURE, EXP-000861 | [bounded page](pages/000619-000668.md#20260814-correct-t-057-to-selective-main-line-legacy-pre) |
+| 2026-08-14 | `20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati` — [R-169 v1.3 Reading-H native-owner BCC realization route termination] - 2026-08-14 | A1-KERNEL-CONV, B1-RH-ENUM, B2-PROPA-HLAYER, B3-RH-TESTED-STRUCTURE-RANKING, C6-SPACETIME-SIGNATURE, EXP-000860, R-169 | [bounded page](pages/000619-000668.md#20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati) |
+| 2026-08-14 | `20260814-legacy-research-knowledge-base-cutover-and-firs` — [Legacy research knowledge-base cutover and first T-055 intake] - 2026-08-14 | B3-BCC-STRUCT, C1-LORENTZ-KIN, C2-LORENTZ-EMERGENT, C6-SPACETIME-SIGNATURE | [bounded page](pages/000619-000668.md#20260814-legacy-research-knowledge-base-cutover-and-firs) |
+| 2026-08-14 | `20260814-adopt-literature-first-proof-gate-and-legacy-ev` — [Adopt literature-first proof gate and legacy-evidence audit] - 2026-08-14 | B1-RH-ENUM, C4-GRAVITY-1LOOP, C5-NEWTON-G, C6-SPACETIME-SIGNATURE | [bounded page](pages/000619-000668.md#20260814-adopt-literature-first-proof-gate-and-legacy-ev) |
 | 2026-08-14 | `20260814-r-169-v1-2-reading-h-covariance-to-p1-interface` — [R-169 v1.2 Reading-H covariance-to-P1 interface route split] - 2026-08-14 | A1-PRODUCTION-FUNCTIONAL-REALISATION, A2-FULL-PRODUCTION-WELLPOSED, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, B1-RH-ENUM, B3-RH-TESTED-STRUCTURE-RANKING, C6-BCC-PREMISE-BLOCKED, C6-SPACETIME-SIGNATURE, EXP-000858, R-169 | [bounded page](pages/000619-000668.md#20260814-r-169-v1-2-reading-h-covariance-to-p1-interface) |
 | 2026-08-14 | `20260814-r-169-v1-1-pinned-p1-bcc-periodic-realization-e` — [R-169 v1.1 pinned P1 BCC periodic realization empty-reference exclusion route split] - 2026-08-14 | A2-FULL-PRODUCTION-WELLPOSED, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, B1-RH-ENUM, B3-RH-TESTED-STRUCTURE-RANKING, C6-BCC-PREMISE-BLOCKED, C6-SPACETIME-SIGNATURE, EXP-000852, R-169 | [bounded page](pages/000619-000668.md#20260814-r-169-v1-1-pinned-p1-bcc-periodic-realization-e) |
 | 2026-08-14 | `20260814-r-169-v1-0-truncated-octahedron-realization-and` — [R-169 v1.0 truncated-octahedron realization and empty-reference sign route split] - 2026-08-14 | B3-BCC-STRUCT, B3-RH-TESTED-STRUCTURE-RANKING, C6-BCC-PREMISE-BLOCKED, C6-SPACETIME-SIGNATURE, EXP-000851, R-169 | [bounded page](pages/000619-000668.md#20260814-r-169-v1-0-truncated-octahedron-realization-and) |
@@ -38,10 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-13 | `20260813-r-167-v2-7-closes-fixed-ritz-local-sw-gevrey-tw` — [R-167 v2.7 closes fixed-Ritz local-SW Gevrey-two admissible optimal-scale truncation and registers the raw-Weyl norm boundary] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000828, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v2-7-closes-fixed-ritz-local-sw-gevrey-tw) |
 | 2026-08-13 | `20260813-r-167-v2-6-artifact-pin-correction-finalized-af` — [R-167 v2.6 artifact pin correction finalized after extractor-token audit; events 620 and 621 superseded] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000826, EXP-000827, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v2-6-artifact-pin-correction-finalized-af) |
 | 2026-08-13 | `20260813-r-167-v2-6-artifact-footer-and-issuance-pin-cor` — [R-167 v2.6 artifact footer and issuance pin correction finalized; malformed event 620 superseded] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000826, EXP-000827, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v2-6-artifact-footer-and-issuance-pin-cor) |
-| 2026-08-13 | `20260813-r-167-v2-6-artifact-footer-and-issuance-pins-co` — [R-167 v2.6 artifact footer and issuance pins corrected; event 619 superseded] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000826, EXP-000827, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v2-6-artifact-footer-and-issuance-pins-co) |
-| 2026-08-12 | `20260812-r-167-v2-6-combined-gate-level-synthesis-pdf-is` — [R-167 v2.6 combined gate-level synthesis PDF issued after strict validation] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000826, EXP-000827, R-167 | [bounded page](pages/000619-000668.md#20260812-r-167-v2-6-combined-gate-level-synthesis-pdf-is) |
-| 2026-08-12 | `20260812-r-167-v2-6-authority-correction-restores-zero-s` — [R-167 v2.6 authority correction restores zero-source onsite allocation and exact QPS constants] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000827, R-167 | [bounded page](pages/000569-000618.md#20260812-r-167-v2-6-authority-correction-restores-zero-s) |
-| 2026-08-12 | `20260812-r-167-v2-6-closes-fixed-order-sw-coefficients-z` — [R-167 v2.6 closes fixed-order SW coefficients, zero-source third/fourth QPS cutoff, and the fourth-order gauge crosswalk] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000826, R-167 | [bounded page](pages/000569-000618.md#20260812-r-167-v2-6-closes-fixed-order-sw-coefficients-z) |
 
 ## Post-cutover pages
 
@@ -49,5 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 619–641 | 23 | [000619-000668.md](pages/000619-000668.md) |
+| 619–645 | 27 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

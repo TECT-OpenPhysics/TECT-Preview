@@ -137,6 +137,13 @@ dependencies; hypotheses; evidence grade; falsification gate; reproduction
 command + expected output; tier (before/after); no-overclaim statement; next
 required action. Schema and footer template: `governance/claim-standard.md`.
 
+**Literature-first and legacy-audit gate (binding):** before a new substantive
+claim, a tier promotion, or a load-bearing reuse of external or legacy material,
+the exact source, hypothesis-to-model crosswalk, independent-check disposition,
+and remaining novel proposition must be recorded under
+`governance/literature-first-proof-gate.md`. A source name, legacy label, or
+verification-script PASS alone is not an accepted premise.
+
 `CLAIMS.md` is **generated** from `claims/*/status.json` by
 `verification/scripts/lint_claims.py --render`. Hand-editing `CLAIMS.md` is
 forbidden (single-source-of-truth rule; this kills the mirror-drift failure
@@ -209,8 +216,14 @@ Three tiers, defined in `governance/publication-tiers.md` (binding):
 
 ## 13. Migration from the legacy corpus
 
-Pull-based, re-validated, ledgered. Policy: `governance/migration-plan.md`.
-Bulk copying is forbidden.
+`E:/Dev/Contents` remains the maintained full legacy source. TECT selectively
+pins path/hash metadata and assessments and preserves readable copies of
+sources judged important to live proof gates; it does not bulk-copy or
+classify the complete corpus.
+Promotion into current proof remains gate-driven, revalidated, and ledgered;
+selection, preservation, summary, or search ranking never promotes a claim.
+Policies: `governance/migration-plan.md` and
+`governance/legacy-research-knowledge-base.md`.
 
 ## 14. AI-collaborator protocol
 

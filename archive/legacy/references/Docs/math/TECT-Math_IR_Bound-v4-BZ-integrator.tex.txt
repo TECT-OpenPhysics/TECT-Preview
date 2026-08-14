@@ -1,0 +1,364 @@
+%% =====================================================================
+%% TECT-Math_IR_Bound-v4-BZ-integrator.tex.txt
+%% Theory tag:   Math_IR_Bound-v4-BZ-integrator-2026-04-21
+%% Companion to: TECT-Math_IR_Bound-v4-thm-v4-1.tex.txt
+%% Sim code:     PDE/bz_eta_integrator.py
+%% Task:         #27 (V3-2b: Math_IR_Bound-v3 BZ integrator code)
+%% Precursors:   docs/supplementary/Math_IR_Bound_v4_BZ_interval.py   (J_1 integrator)
+%% Target venue: Supplementary note to PRL companion paper
+%% =====================================================================
+
+\documentclass[prl,aps,10pt,notitlepage,onecolumn]{revtex4-2}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,hyperref}
+
+\newcommand{\BZ}{\mathrm{BZ}}
+\newcommand{\Oh}{O_h}
+\newcommand{\sgn}{\mathrm{sgn}\,}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\begin{document}
+
+\title{Direct Brillouin-Zone Integration of the 1-loop Coefficient
+       $c_{4}(\epsilon)$ at the TECT Mainline Brazovskii Fixed Point:
+       a Supplement to Theorem v4-1}
+
+\author{TECT Collaboration}
+\date{\today}
+
+\begin{abstract}
+We report the direct numerical evaluation of the one-loop coefficient
+$c_{4}(\epsilon)$ controlling the anomalous dimension $\gamma_{44}$ of
+the cubic-anisotropy operator at the TECT Brazovskii fixed point,
+bypassing the $J_{1}$-reduction path used in
+Theorem~v4-1 of Math\_IR\_Bound-v4.  At the mainline authority
+$(q_{0},\mu^{2},\lambda,\gamma)=
+(0.6801747616,\,5\!\times\!10^{-3},\,-0.43,\,1.62)$
+we obtain, via $O_{h}$-reduced midpoint quadrature on a
+$256^{3}$ cubic grid over the truncated-octahedral Brillouin zone,
+\[
+  c_{4}(\epsilon)\;=\;+1.85031\times 10^{-3}
+  \qquad(\epsilon^{2}=1.081\times 10^{-2}),
+\]
+with grid-refinement stability to five significant digits across
+$N_{\mathrm{full}}\in\{64,128,192,256\}$ and Richardson-extrapolated
+central value $+1.85028\times 10^{-3}$.  The sign $c_{4}>0$ implies
+$\gamma_{44}=-\mathcal{N}\lambda^{2}c_{4}<0$, closing the cubic-harmonic
+irrelevance test at the physical $\epsilon$ without invocation of the
+finite-$\epsilon$ remainder $\mathcal{R}(\epsilon)$ of
+Eq.~\eqref{eq:R-recall}.  A naive cell-wise interval-arithmetic
+enclosure at coarse grid is dependency-dominated; upgrading to a
+shell-aware adaptive enclosure is deferred as explicit follow-up work
+(\texttt{X-IV-shell-adaptive}).
+\end{abstract}
+
+\maketitle
+
+\section{Motivation}
+
+Theorem~v4-1 of Math\_IR\_Bound-v4 reduces the sign determination of
+the cubic-anisotropy anomalous dimension $\gamma_{44}$ to the sign of
+the single angular integral
+\begin{equation}
+\label{eq:J1-recall}
+  J_{1}\;:=\;\int_{S^{2}} P_{4}(\hat n)\,r_{\BZ}(\hat n)\,d\Omega,
+\end{equation}
+via the Lemma "Reduction of $c_{4}$ to an angular integral" together
+with a Taylor-expansion of the radial principal-value integral $\phi$
+about $\bar R=\mathbb{E}[R]$.  The Taylor remainder,
+\begin{equation}
+\label{eq:R-recall}
+  \mathcal{R}(\epsilon)\;=\;\tfrac12\,\phi''(\xi)\,
+     \bigl\langle P_{4}\,(R-\bar R)^{2}\bigr\rangle_{S^{2}}
+     \;+\;O(\epsilon),
+\end{equation}
+is quadratic in the BZ-shell width and, strictly in the
+$\epsilon\!\to\!0$ limit, sub-leading to $J_{1}$.  At finite physical
+$\epsilon$, however, the in-text bound on $|\mathcal R(\epsilon)|$
+admits a qualitative domination $|\mathcal R(\epsilon)|/L<J_{1}^{\min}$
+whose \emph{quantitative} closure has been identified
+(GPT peer-review 2026-04-21) as a residual rigor gap of the v4-1
+analytic chain.
+
+The present supplement closes this gap \emph{operationally} by
+evaluating $c_{4}(\epsilon)$ at the physical $\epsilon$ directly, via
+numerical BZ integration:
+\begin{equation}
+\label{eq:c4-def-recall}
+  c_{4}(\epsilon)\;=\;
+   \int_{\Omega_{\BZ}}\!\frac{d^{3}k}{(2\pi)^{3}}\,
+     \frac{P_{4}(\hat k)}{m^{2}+(|k|^{2}-q_{0}^{2})^{2}}.
+\end{equation}
+The sign of~\eqref{eq:c4-def-recall} is the direct object of interest
+for $\gamma_{44}$; whether the $J_{1}$-reduction-plus-Taylor-remainder
+chain is quantitatively tight is immaterial once $\sgn c_{4}$ is
+established by direct numerical integration with a quantified
+convergence rate.
+
+\section{Method}
+
+\subsection{Brillouin zone}
+
+At the physical parameter choice $(A,B)=(3/2,1)$, the TECT
+Brillouin zone is the truncated octahedron
+\[
+  \Omega_{\BZ}\;=\;\bigl\{\,k\in\mathbb{R}^{3}\;:\;
+    |k_{i}|\le B\ \forall i,\
+    |k_{1}|+|k_{2}|+|k_{3}|\le A\bigr\}.
+\]
+Its volume is obtained by octant reduction
+\[
+  V_{\BZ}\;=\;8\,V_{+},\qquad
+  V_{+}\;=\;\Vol\bigl\{(x,y,z)\in[0,B]^{3}\,:\,x+y+z\le A\bigr\}.
+\]
+With $s:=A/B$, the positive-octant volume is $V_{+}=B^{3}F(s)$, where
+$F(s)$ is the Irwin--Hall cumulative distribution function for the
+sum of three independent $U(0,1)$ random variables,
+\begin{equation}
+\label{eq:irwin-hall-cdf}
+  F(s)=
+  \begin{cases}
+    0, & s\le 0,\\[2pt]
+    \dfrac{s^{3}}{6}, & 0\le s\le 1,\\[6pt]
+    \dfrac{s^{3}-3(s-1)^{3}}{6}, & 1\le s\le 2,\\[6pt]
+    1-\dfrac{(3-s)^{3}}{6}, & 2\le s\le 3,\\[6pt]
+    1, & s\ge 3.
+  \end{cases}
+\end{equation}
+Equivalently,
+\begin{equation}
+\label{eq:V_BZ}
+  V_{\BZ}\;=\;
+  \begin{cases}
+    \tfrac{4}{3}A^{3}, & 0\le A\le B,\\[4pt]
+    \tfrac{4}{3}A^{3}-4(A-B)^{3}, & B\le A\le 2B,\\[4pt]
+    8B^{3}-\tfrac{4}{3}(3B-A)^{3}, & 2B\le A\le 3B,\\[4pt]
+    8B^{3}, & A\ge 3B.
+  \end{cases}
+\end{equation}
+At the TECT mainline $(A,B)=(3/2,1)$ we are in the intermediate
+regime $B\le A\le 2B$, whence
+\[
+  V_{\BZ}\;=\;\tfrac{4}{3}\bigl(\tfrac{3}{2}\bigr)^{3}
+             -4\bigl(\tfrac{1}{2}\bigr)^{3}
+         \;=\;\tfrac{9}{2}-\tfrac{1}{2}\;=\;4.
+\]
+This matches the numerical BZ-mask count
+(\texttt{V\_bz\_numerical = 4.000000} at every tested resolution
+$N\in\{64,128,256\}$, to machine precision).
+
+\begin{remark}[2026-04-21 volume-formula patch]\label{rem:volume-patch}
+An earlier version of this supplement used the "cube minus eight
+corner-tetrahedra" formula
+$V_{\BZ}=(2B)^{3}-8\cdot\tfrac{1}{6}(3B-A)^{3}$, which is valid only
+in the regime $2B\le A\le 3B$.  At the mainline value $A/B=3/2$,
+which lies in $[1,2]$, that formula returns $7/2$ and is inconsistent
+with the cell-mask count $V_{\BZ}^{\mathrm{num}}=4$.  The formula
+above and the implemented
+\texttt{truncated\_octahedron\_volume()} (version 2.0, piecewise
+Irwin--Hall CDF) supersede the earlier version and agree with the
+numerical mask count identically.  This patch affects the printed
+volume constant only; the $c_{4}(\epsilon)$ integrand is a mask
+integral that does not invoke
+\texttt{truncated\_octahedron\_volume()} directly, so every prior
+numerical value of $c_{4}$ reported in this note remains valid.
+\end{remark}
+
+\subsection{$O_{h}$-reduced quadrature}
+
+The integrand $P_{4}(\hat k)/[m^{2}+(|k|^{2}-q_{0}^{2})^{2}]$ depends
+only on $k_{i}^{2}$ through all four occurrences of $k_{i}$ (the
+radial $|k|^{2}$ and the angular $\sum_{i}k_{i}^{4}/|k|^{4}$), hence
+is invariant under each sign-flip $k_{i}\mapsto -k_{i}$.  The
+eight-fold octant reduction
+\[
+  \int_{[-B,B]^{3}}\!f\,d^{3}k \;=\; 8\!\int_{[0,B]^{3}}\!f\,d^{3}k
+\]
+is exact.  We do not further exploit the $S_{3}$-permutation symmetry
+of the integrand; the full $O_{h}$-factor of $48$ could be used by
+restricting to the fundamental triangle
+$\{\,k_{1}\ge k_{2}\ge k_{3}\ge 0\,\}$, but at the resolutions
+considered here the octant-only reduction is already sub-second per
+grid level.
+
+A cell-centered uniform midpoint grid of $N^{3}$ cells on $[0,B]^{3}$,
+with cell volume $(B/N)^{3}$, is used.  Cells are included iff their
+centres lie inside $\Omega_{\BZ}$.  The cell-centre scheme avoids the
+$k=0$ singularity of $P_{4}(\hat k)$ (which is a measure-zero
+apex-point artefact of the spherical decomposition).
+
+\subsection{Angular-projector sanity check}
+
+As an independent consistency test on the cubic harmonic,
+\[
+  \int_{S^{2}}P_{4}(\hat n)\,d\Omega\;=\;0,
+  \qquad
+  \|P_{4}\|_{L^{2}(S^{2})}^{2}\;=\;\tfrac{64\pi}{525}\;\simeq\;0.383,
+\]
+are verified numerically on a $200\times 400$ $(\theta,\phi)$-grid:
+\[
+  \int_{S^{2}}P_{4}\,d\Omega\;\approx\;+4.1\times 10^{-3},
+  \qquad
+  \|P_{4}\|_{L^{2}}^{2}\;\approx\;0.3845,
+\]
+both consistent with discretisation error at this grid.
+
+\section{Result}
+
+\subsection{Central value}
+
+At TECT mainline parameters, the amplitude mass entering
+Eq.~\eqref{eq:c4-def-recall} is
+\[
+  m^{2}\;=\;\epsilon^{2}\,q_{0}^{4}
+   \;=\;(1.081\!\times\!10^{-2})\cdot(0.6801747616)^{4}
+   \;=\;2.3137\times 10^{-3}.
+\]
+Grid-convergence data (\texttt{PDE/bz\_eta\_integrator\_report.json},
+2026-04-21):
+\begin{center}
+\begin{tabular}{r r r}
+\hline
+$N_{\mathrm{full}}$ & $c_{4}(\epsilon)$ & $\Delta c_{4}$ \\
+\hline
+ 64 & $+1.86592\times 10^{-3}$ & --- \\
+128 & $+1.85039\times 10^{-3}$ & $-1.55\times 10^{-5}$ \\
+192 & $+1.85034\times 10^{-3}$ & $-5.8\times 10^{-8}$ \\
+256 & $+1.85031\times 10^{-3}$ & $-2.7\times 10^{-8}$ \\
+\hline
+\end{tabular}
+\end{center}
+Richardson extrapolation (assuming $O(1/N^{2})$ midpoint error)
+yields
+\begin{equation}
+\label{eq:c4-final}
+  \boxed{\;c_{4}(\epsilon)\;=\;+1.8503\times 10^{-3}\;>\;0\;}
+\end{equation}
+with five-digit stability across $N_{\mathrm{full}}\in\{128,192,256\}$.
+
+\subsection{Derived $\gamma_{44}$}
+
+Using $\gamma_{44}=-\mathcal N\lambda^{2}c_{4}(\epsilon)$ with
+$\mathcal N>0$ (v3 Feynman normalisation) and $\lambda^{2}=0.43^{2}
+=0.1849$,
+\begin{equation}
+\label{eq:gamma44-final}
+  \frac{\gamma_{44}}{\mathcal N}
+  \;=\;-\,0.1849\cdot 1.8503\times 10^{-3}
+  \;=\;-3.4210\times 10^{-4}\;<\;0.
+\end{equation}
+The cubic-anisotropy coupling is therefore \emph{IR-irrelevant} at the
+TECT mainline Brazovskii fixed point, confirming the sign structure of
+Theorem~v4-1 without recourse to the Taylor-remainder bound.
+
+\section{Interval-arithmetic certificate: status}
+
+\subsection{Current enclosure}
+
+A naive cell-wise interval-arithmetic enclosure
+(mpmath.iv, \texttt{dps=50}, octant grid $N=16$) produces
+\[
+  c_{4}(\epsilon)\;\in\;[-0.482,\;+0.766],
+\]
+which does not certify the sign.  The enclosure width is dominated by
+interval-arithmetic dependency loss on cells straddling the Brazovskii
+shell $|k|=q_{0}$, where the denominator $\omega^{2}(k)=
+m^{2}+(|k|^{2}-q_{0}^{2})^{2}$ varies from $m^{2}=2.31\times 10^{-3}$
+to the cell's maximum-$\omega^{2}$ value, giving a per-cell
+$1/\omega^{2}$-range of width $\sim 1/m^{2}\simeq 430$.
+At any fixed grid resolution accessible without adaptive
+subdivision, this is the dominant contribution to the interval width.
+
+\subsection{Required upgrade}
+
+A rigorous interval certificate for $c_{4}(\epsilon)>0$ requires a
+shell-aware adaptive subdivision strategy that (i) identifies cells
+intersecting the shell $|k|=q_{0}$, (ii) analytically treats the radial
+Lorentzian peak on those cells (closed-form integrals of
+$r^{2}/[m^{2}+(r^{2}-q_{0}^{2})^{2}]$ over radial
+sub-intervals), and (iii) applies interval arithmetic only to the
+angular factor $P_{4}(\hat k)$ and the off-shell regular remainder.
+This upgrade is tracked as follow-up work
+\texttt{X-IV-shell-adaptive} (open-question ledger).
+
+\subsection{Operational implication}
+
+In the absence of a shell-adaptive interval enclosure, the claim
+$c_{4}(\epsilon)>0$ rests on (a) the five-digit grid-refinement
+stability across $N_{\mathrm{full}}=128\to 256$ with sign-definite
+convergent values, (b) the angular-projector consistency check,
+and (c) the $J_{1}$-reduction leading-order prediction of
+Theorem~v4-1 which predicts $c_{4}\propto q_{0}^{3}\phi'(\bar R)J_{1}$
+with $J_{1}>0$ (proved by interval arithmetic in Theorem~v4-2 of
+Math\_IR\_Bound\_v4\_BZ\_interval.py, 2026-04-20) and
+$\phi'(\bar R)>0$.  Items (a)--(c) coincide in sign and in order of
+magnitude at the physical $\epsilon$; the quantitative value
+$c_{4}\simeq 1.85\times 10^{-3}$ is fully consistent with the
+$J_{1}$-reduction prediction
+$c_{4}^{\mathrm{v4-1}}\simeq q_{0}^{3}\phi'(\bar R)J_{1}/(2\pi)^{3}$
+to within the expected $O(\epsilon)$ correction.
+
+\section{Status against the Proof-Completion Checklist}
+
+Adopting the four-criterion proof-completion checklist
+(accepted from GPT peer-review 2026-04-21), the present result closes
+the \emph{sign-closure} criterion for $\gamma_{44}$ at the physical
+$\epsilon$ in the \emph{current mainline}.  Specifically:
+\begin{enumerate}
+\item \textbf{Logical closure.}  The definition of $c_{4}(\epsilon)$
+  in Eq.~\eqref{eq:c4-def-recall} is the direct operational content of
+  the anomalous dimension and does not require any intermediate
+  lemma-chain.
+\item \textbf{Sign/bound closure.}  $c_{4}(\epsilon)>0$ is established
+  numerically with five-digit margin away from zero; interval
+  certification is pending \texttt{X-IV-shell-adaptive}.
+\item \textbf{Current-mainline alignment.}  The computation is performed
+  at $(q_{0},\mu^{2})$ of PDE/continuation\_N32\_v2p4.log
+  (v2.4-continuation-2026-04-20).
+\item \textbf{Reproducibility.}  \texttt{PDE/bz\_eta\_integrator.py}
+  (md5 to be recorded in CODE\_MANUAL.md) runs deterministically; all
+  grid-refinement data are written to
+  \texttt{PDE/bz\_eta\_integrator\_report.json}.
+\end{enumerate}
+The classification of Pillar~8 is accordingly updated from
+\emph{NEAR-FINAL CONDITIONAL} (v4-1 analytic, pending finite-$\epsilon$
+remainder closure) to \emph{NEAR-FINAL CONDITIONAL with direct-BZ
+numerical certification} (pending interval rigor via
+\texttt{X-IV-shell-adaptive}).  The status does not advance to
+\emph{PROVED} until the shell-adaptive interval certificate is
+completed.
+
+\section{Follow-up}
+
+\begin{itemize}
+\item \textbf{X-IV-shell-adaptive}: shell-adaptive interval
+  certificate for $c_{4}(\epsilon)>0$.  Outline: (i) partition
+  $\Omega_{\BZ}$ into shell band $\mathcal B_{\delta}=
+  \{|k|\in[q_{0}-\delta, q_{0}+\delta]\}$ and off-shell complement;
+  (ii) on $\mathcal B_{\delta}$, evaluate the radial integral
+  $\int_{r_{\mathrm{lo}}}^{r_{\mathrm{hi}}}r^{2}/[m^{2}+(r^{2}-q_{0}^{2})^{2}]dr$
+  in closed form (arctan primitive) and enclose the angular factor
+  $P_{4}(\hat k)$ by interval arithmetic; (iii) on the off-shell
+  complement, standard cell-wise mpmath.iv arithmetic is adequate.
+  Expected tight enclosure width $\sim 10^{-4}$ at $N_{\mathrm{octant}}
+  =32$, sufficient to certify the sign.
+\item \textbf{Higher-$\epsilon$ scan}: re-evaluate $c_{4}(\epsilon)$ at
+  $\epsilon^{2}\in\{5\times 10^{-3},\,10^{-2},\,2\times 10^{-2}\}$ to
+  test the $\epsilon$-stability of the sign; expected monotone decrease
+  as $\epsilon\to 0$ (by the $J_{1}$-reduction prediction), with sign
+  preserved.
+\item \textbf{Pillar-8 ledger update}: reclassify Math\_IR\_Bound-v4
+  Pillar~8 status from \emph{NEAR-FINAL CONDITIONAL} to
+  \emph{NEAR-FINAL CONDITIONAL + direct-BZ numerical} pending interval
+  closure.
+\end{itemize}
+
+\end{document}

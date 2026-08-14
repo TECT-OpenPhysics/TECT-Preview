@@ -21,10 +21,10 @@ record.
 | T7 | DISCHARGED-THEOREM | unconditional within the declared physical domain | no hidden assumption + **public reproducibility package** + external reproduction possible + dual independent audit |
 
 **T7 prohibition list** (any one blocks T7): unexecuted script; estimator-only
-with no error bound; hidden inherited assumption; single-point result without
-declared scope; observed value inserted but called predicted; unclosed
-admissible competitor class; unresolved convention ambiguity; missing public
-reproducibility package.
+with no error bound; hidden inherited assumption; unreviewed load-bearing
+legacy or external result; single-point result without declared scope; observed
+value inserted but called predicted; unclosed admissible competitor class;
+unresolved convention ambiguity; missing public reproducibility package.
 
 **Promotion path** is strict T(n) → T(n+1) unless the result is a one-shot
 textbook argument (justify in the card). Every promotion to T6/T7 requires the
