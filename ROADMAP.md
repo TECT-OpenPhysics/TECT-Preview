@@ -1416,6 +1416,23 @@ active parents remain OPEN. No spatial all-exhaustion common alpha, DLR/KMS
 branch identification, positive broken-sector GNS gap, Round-1, C6, CP1,
 physical Sector A or Pre-A closure follows. No v4.0 PDF is issued.
 
+EXP-000845 / R-167 v4.1 retains every v4.0 child and closes one further
+scoped T0 categorical GNS reduction. For each v4.0 ground state, the canonical
+implementing-energy identity holds on `D_bl`, and centered bandlimited GNS
+vectors form an `H_sigma^(1/2)` form core on the vacuum orthogonal complement.
+The exact Rayleigh quotient therefore equals the phasewise Poincare constant,
+while parity unitarily intertwines the two implementing Hamiltonians and makes
+their constants equal. The exact opposite-source overlap and global
+branch-switching trial also prove
+`Delta_(L,sigma)^full <=[32sqrt(B_a)/(r_w^2rho_*)]h_LV->0`, registering
+`NG-2026-08-14-PRE-A-ST8-Q3LOCK-MESOSCOPIC-SOURCE-FULL-FINITE-GAP-AUTOMATIC-UNIFORM-POINCARE-TRANSFER`.
+That moving finite-volume direction does not refute a phasewise target gap;
+the remaining burden is one positive common-`Delta`, fixed-`D_bl` coercive
+lower bound after the selected limit. Both historical gates and all five
+active parents remain OPEN. No spatial all-exhaustion common alpha, simple
+kernel, broken-sector GNS gap, physical mass gap, Round-1, C6, CP1, physical
+Sector A or Pre-A closure follows. No v4.1 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

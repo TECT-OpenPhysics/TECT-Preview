@@ -9,6 +9,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-14-PRE-A-ST8-Q3LOCK-MESOSCOPIC-SOURCE-FULL-FINITE-GAP-AUTOMATIC-UNIFORM-POINCARE-TRANSFER](#ng-2026-08-14-pre-a-st8-q3lock-mesoscopic-source-full-finite-gap-automatic-uniform-poincare-transfer) | use the unique mesoscopic-source full finite-volume gaps as a positive uniform Poincare input for the categorical phase limit | the fixed v4.0 witness controls the overlap of the opposite source grounds, and an exact orthogonal branch-switching trial gives `Delta_(L,sigma)^full <=[32 sqrt(B_a)/(r_w^2 rho_*)]h_L V ->0`; this global moving direction does not decide the fixed-carrier phasewise GNS gap |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-EXACT-TARGET-GENERATOR-AND-SEPARATION-AUTOMATIC-TARGET-GROUNDNESS](#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-exact-target-generator-and-separation-automatic-target-groundness) | infer target groundness from `h_n->0`, an exact target generator and fixed parity/order separation without controlling the combined source residual | on `M_3(C)`, `Q=diag(-1,0,1)`, `K=Q^2`, `h_n=1/n` and `S_n=2nQ` give exact generator defect zero and separated parity ground vectors for `H_n^sigma=K-2sigma Q`, but the source residual is `-2` and the target ground form is `-1` |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-AUTOMATIC-ZERO-SOURCE-QUOTIENT-FACTORIZATION](#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-automatic-zero-source-quotient-factorization) | infer zero-source quotient factorization of source-family weak-star clusters merely from `h_n->0` | on `M_2`, `H_n(h)=nh diag(0,1)`, `h_n=1/n` and one signed `L1` orbit smear give `q_0(a)=0` but `a* a=16 sin(1/2)^4 I_2` along every `n` |
 | [NG-2026-08-13-PRE-A-ST8-Q3LOCK-POINTWISE-POSITIVE-TIME-TRACE-CLASS-AUTOMATIC-SHORT-TIME-L1-DOMINATION](#ng-2026-08-13-pre-a-st8-q3lock-pointwise-positive-time-trace-class-automatic-short-time-l1-domination) | infer an integrable short-time Duhamel majorant from trace-class energy dressing at every separately fixed positive time | for one compact-resolvent pair `h=V=diag(1,2,...)`, the dressed trace is finite for every `t>0` but behaves as `t^-2`, and the exact two-sided Holder majorant behaves as `1/s` at each endpoint |
@@ -376,6 +377,40 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-14-pre-a-st8-q3lock-mesoscopic-source-full-finite-gap-automatic-uniform-poincare-transfer"></a>
+### NG-2026-08-14-PRE-A-ST8-Q3LOCK-MESOSCOPIC-SOURCE-FULL-FINITE-GAP-AUTOMATIC-UNIFORM-POINCARE-TRANSFER -- the mesoscopic full gap cannot be the uniform phasewise Poincare input
+
+**Failure mode.** Infer a positive uniform finite-volume Poincare constant,
+and hence a categorical phasewise GNS gap, from the unique exact grounds of
+the mesoscopic source Hamiltonians used in EXP-000844.
+
+**Evidence.** EXP-000845 / R-167 v4.1 uses the exact source grounds
+`phi_L^sigma`, their common energy and the fixed v4.0 contraction `b`. Put
+`c_L=<phi_L^+,phi_L^->`. The expectation split at least `d` and the exact
+vector-state trace distance give `1-c_L^2>=d^2/4`. For the plus-source
+Hamiltonian,
+
+`zeta_L=(phi_L^--c_L phi_L^+)/sqrt(1-c_L^2)`
+
+is orthogonal to its unique ground and has exact excitation-form energy
+`2h_L s_L^+/(1-c_L^2)`. Since `s_L^+<=sqrt(B_a)V` and
+`d=r_w sqrt(rho_*)/2`, parity and min--max give
+
+`Delta_(L,sigma)^full
+ <=[32 sqrt(B_a)/(r_w^2 rho_*)]h_L V ->0`.
+
+For the canonical choice `h_L=h_*V^(-3/2)`, the upper bound is a derived
+constant times `V^(-1/2)`.
+
+**Consequence.** The full mesoscopic-source finite gaps cannot discharge the
+positive-liminf finite-Poincare premise of the R-167 v3.0 transfer theorem.
+The trial is a global, `L`-dependent switch between the two parity branches.
+It need not come from one fixed element of the categorical bandlimited core,
+so this result does not prove that either phasewise target GNS gap vanishes.
+The remaining honest target is a common positive Rayleigh lower bound for
+every fixed `D_bl` element after its form and variance pass to the selected
+cluster. This is a model-specific route no-go, not a no-gap theorem for Q3LOCK.
 
 <a id="ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-exact-target-generator-and-separation-automatic-target-groundness"></a>
 ### NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-EXACT-TARGET-GENERATOR-AND-SEPARATION-AUTOMATIC-TARGET-GROUNDNESS -- vanishing source, exact target generator and separation do not imply target groundness

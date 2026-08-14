@@ -143,6 +143,11 @@ only. It creates no contestant, microscopic observable map, common estimand,
 prospective prediction, custodian commitment, freeze or score. Round-1
 remains OPEN.
 
+EXP-000845 / R-167 v4.1 adds one scoped categorical GNS form-core/Rayleigh
+reduction and one finite-source route no-go. It creates no contestant,
+microscopic observable map, common estimand, prospective prediction,
+custodian commitment, freeze or score. Round-1 remains OPEN.
+
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
 **Statement:** Specify one candidate-neutral target estimand and raw-data
@@ -696,6 +701,12 @@ carrier. It does not identify the Euclidean DLR/OS branches as KMS states of a
 spatial all-exhaustion exact-Q3 Hamiltonian action. This historical gate
 remains OPEN.
 
+EXP-000845 / R-167 v4.1 proves the centered bandlimited GNS form-core and
+energy identity only for the v4.0 categorical ground pair. It neither
+identifies the Euclidean DLR/OS branches with those states nor constructs a
+spatial all-exhaustion exact-Q3 Hamiltonian action. This historical gate
+remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION**
 
 **Statement:** Starting from one common Q3LOCK dynamics, control the
@@ -767,6 +778,11 @@ from diagonal mesoscopic finite-volume source grounds on the zero-source
 categorical carrier. These states are not obtained as a `beta -> infinity`
 limit and are not proved equal to the EXP-000790 iterated fixed-source
 tangents. This historical gate remains OPEN.
+
+EXP-000845 / R-167 v4.1 analyzes the GNS implementations of the same diagonal
+mesoscopic ground pair. It constructs no `beta -> infinity` KMS family and
+does not identify the pair with the EXP-000790 iterated fixed-source tangents.
+This historical gate remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-CONNECTED-SUSCEPTIBILITY-AND-GNS-POINCARE-GATE**
 
@@ -2194,6 +2210,45 @@ exhaustion or raw quasi-local oscillator common `alpha`, purity, factoriality,
 phase exhaustion, positive broken-sector GNS gap, regulator/continuum removal,
 physical vacuum, C6, CP1, physical Sector A or Pre-A closure follows.
 
+### **PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-CATEGORICAL-GROUND-BANDLIMITED-GNS-ENERGY-FORM-CORE-AND-PARITY-POINCARE-REDUCTION**
+
+**Statement:** For the exact-Q3 categorical ground pair already constructed
+on the zero-source orbit-smear action, identify the implementing energy form
+on the compact-Arveson algebra, prove that its centered GNS vectors are an
+`H^(1/2)` form core, and reduce both parity-related phase gaps to one explicit
+bandlimited Rayleigh/Poincare lower bound.
+
+**Status:** CLOSED FOR THE CATEGORICAL ENERGY IDENTITY, CENTERED BANDLIMITED
+FORM CORE, PARITY GAP EQUALITY AND EXACT RAYLEIGH REDUCTION ONLY (2026-08-14).
+EXP-000845 / R-167 v4.1 proves for each v4.0 ground state `omega_sigma` that
+
+`-i hbar omega_sigma(A^*delta_H(A))
+ =||H_sigma^(1/2)[pi_sigma(A)Omega_sigma-omega_sigma(A)Omega_sigma]||^2`
+
+for every `A in D_bl`. Compact spectral cutoffs followed by cyclic
+approximation show that these centered vectors form a linear form core for
+`H_sigma^(1/2)` on `Omega_sigma^perp`, without assuming a simple kernel.
+Consequently the state-vector Poincare constant is exactly the infimum of the
+displayed energy divided by `Var_(omega_sigma)(A)` over fixed
+`A in D_bl`. Positivity itself forces `ker H_sigma=C Omega_sigma`. Parity
+implements a unitary equivalence between the two GNS Hamiltonians, so their
+Rayleigh constants are equal.
+
+The same package proves a route boundary for the finite source systems. If
+`c_L=<phi_L^+,phi_L^->`, the fixed v4.0 witness gives
+`1-c_L^2>=d^2/4`; the orthogonal branch-switching trial then yields
+
+`Delta_(L,sigma)^full
+ <=[32 sqrt(B_a)/(r_w^2 rho_*)]h_L V ->0`.
+
+Thus the full mesoscopic-source finite gap cannot furnish a positive uniform
+Poincare input. This global `L`-dependent trial does not refute a phasewise
+target gap. The remaining obligation is one common positive lower bound for
+every fixed `D_bl` element after passage to the selected cluster; no such
+coercive estimate, simple kernel, broken-sector GNS gap or physical mass gap
+is proved. The carrier remains categorical and nonspatial, and both historical
+gates and all five active parents remain OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY**
 
 **Statement:** Construct a parity-equivariant boundary/source-uniform quasi-local oscillator elimination with a uniform high-sector gap, a connected effective interaction small in a two-phase QPS norm, spectral-cutoff convergence in that same norm, and a phasewise GNS intertwiner to the oscillator system.
@@ -2282,6 +2337,11 @@ EXP-000844 / R-167 v4.0 works directly with exact finite-volume source ground
 vectors and the zero-source categorical carrier. It supplies no oscillator
 block diagonalization, connected QPS interaction, cutoff-compatible phase
 intertwiner or oscillator GNS map. This parent remains OPEN.
+
+EXP-000845 / R-167 v4.1 supplies an exact categorical GNS Rayleigh reduction
+and a global finite-source gap-collapse trial, but no oscillator elimination,
+connected QPS interaction, cutoff-compatible phase intertwiner or oscillator
+GNS map. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**
 
@@ -2423,6 +2483,11 @@ zero-source categorical orbit-smear action, not on a spatial local net. It
 proves no all-shape Cauchy estimate, compatible spatial embeddings, raw
 oscillator thermodynamic action or DLR/KMS quotient identification. This
 parent remains OPEN.
+
+EXP-000845 / R-167 v4.1 works inside the same nonspatial categorical action.
+The bandlimited represented form core does not provide all-shape Cauchy
+estimates, compatible spatial embeddings, a raw oscillator thermodynamic
+action or DLR/KMS quotient identification. This parent remains OPEN.
 
 ### **PA-CP1-ST8-Q3LOCK-PHASEWISE-GNS-GAP-OS-TEMPORAL-MASS-EQUIVALENCE**
 
@@ -2696,6 +2761,11 @@ no infinite-dimensional rank-two block diagonalization, two-phase QPS
 classification, cutoff-stable branch intertwiner or uniform excitation gap.
 This parent remains OPEN.
 
+EXP-000845 / R-167 v4.1 proves no infinite-dimensional rank-two block
+diagonalization, two-phase QPS classification or cutoff-stable branch
+intertwiner. Its full finite-source gap upper bound tends to zero and is not a
+positive phasewise excitation-gap theorem. This parent remains OPEN.
+
 ### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**
 
 **Statement:** After the ordered ground states have been identified in the
@@ -2820,6 +2890,14 @@ fixed-witness separation for the mesoscopic diagonal pair. It supplies no
 phasewise Poincare inequality, centered GNS form core, simple implementing
 kernel, disjointness or positive broken-sector spectral gap. This parent
 remains OPEN.
+
+EXP-000845 / R-167 v4.1 now proves the exact implementing-energy identity,
+the centered compact-Arveson `D_bl` form-core property, parity equality of the
+two Rayleigh constants and the fixed-carrier coercivity equivalence. It proves
+no positive `D_bl` Poincare lower bound. The global `L`-dependent branch-
+switching trial makes the full mesoscopic-source finite gaps vanish but does
+not decide the phasewise target gap. Kernel simplicity, positive coercivity,
+disjointness and a broken-sector spectral gap remain OPEN.
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 

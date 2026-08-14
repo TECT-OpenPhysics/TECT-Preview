@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**636 accepted events** · latest 25 shown below · machine locator: `index.json`
+**637 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-14 | `20260814-r-167-v4-1-categorical-ground-bandlimited-gns-p` — [R-167 v4.1 categorical ground bandlimited GNS Poincare route split] - 2026-08-14 | C6-SPACETIME-SIGNATURE, EXP-000845, R-167 | [bounded page](pages/000619-000668.md#20260814-r-167-v4-1-categorical-ground-bandlimited-gns-p) |
 | 2026-08-14 | `20260814-r-167-v4-0-mesoscopic-source-ground-orbit-smear` — [R-167 v4.0 mesoscopic source-ground orbit-smear transfer route split] - 2026-08-14 | C6-SPACETIME-SIGNATURE, EXP-000844, R-167 | [bounded page](pages/000619-000668.md#20260814-r-167-v4-0-mesoscopic-source-ground-orbit-smear) |
 | 2026-08-13 | `20260813-r-167-v3-9-finite-source-ground-residual-transf` — [R-167 v3.9 finite-source ground residual transfer and clipped-order separation route split] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000843, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-9-finite-source-ground-residual-transf) |
 | 2026-08-13 | `20260813-r-167-v3-8-source-symmetric-orbit-smear-kms-quo` — [R-167 v3.8 source-symmetric orbit-smear KMS quotient route split] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000842, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-8-source-symmetric-orbit-smear-kms-quo) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-12 | `20260812-r-167-v2-5-closes-the-fixed-finite-third-order` — [R-167 v2.5 closes the fixed-finite third-order linked coefficient and compact-cylinder route boundary] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000825, R-167 | [bounded page](pages/000569-000618.md#20260812-r-167-v2-5-closes-the-fixed-finite-third-order) |
 | 2026-08-12 | `20260812-exp-000792-child-gate-authority-linkage-repaire` — [EXP-000792 child-gate authority linkage repaired] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000792, EXP-000793, EXP-000821 | [bounded page](pages/000569-000618.md#20260812-exp-000792-child-gate-authority-linkage-repaire) |
 | 2026-08-12 | `20260812-exp-000790-remaining-open-child-authority-linka` — [EXP-000790 remaining open-child authority linkage repaired] - 2026-08-12 | C6-SPACETIME-SIGNATURE, EXP-000790, EXP-000817, EXP-000820 | [bounded page](pages/000569-000618.md#20260812-exp-000790-remaining-open-child-authority-linka) |
-| 2026-08-12 | `20260812-record-the-candidate-neutral-qft-bridge-and-yan` — [Record the candidate-neutral QFT bridge and Yang--Mills evidence role] - 2026-08-12 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000569-000618.md#20260812-record-the-candidate-neutral-qft-bridge-and-yan) |
 
 ## Post-cutover pages
 
@@ -49,5 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 619–636 | 18 | [000619-000668.md](pages/000619-000668.md) |
+| 619–637 | 19 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

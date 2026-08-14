@@ -5,12 +5,13 @@
 
 Authorities: `negative-results/registry.md`.
 
-**366 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 295 · retraction: 5
+**367 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 296 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-08-14-PRE-A-ST8-Q3LOCK-MESOSCOPIC-SOURCE-FULL-FINITE-GAP-AUTOMATIC-UNIFORM-POINCARE-TRANSFER`](registry.md#ng-2026-08-14-pre-a-st8-q3lock-mesoscopic-source-full-finite-gap-automatic-uniform-poincare-transfer) | no_go | use the unique mesoscopic-source full finite-volume gaps as a positive uniform Poincare input for the categorical phase limit |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-EXACT-TARGET-GENERATOR-AND-SEPARATION-AUTOMATIC-TARGET-GROUNDNESS`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-exact-target-generator-and-separation-automatic-target-groundness) | no_go | infer target groundness from `h_n->0`, an exact target generator and fixed parity/order separation without controlling the combined source residual |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-AUTOMATIC-ZERO-SOURCE-QUOTIENT-FACTORIZATION`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-automatic-zero-source-quotient-factorization) | no_go | infer zero-source quotient factorization of source-family weak-star clusters merely from `h_n->0` |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-defect-automatic-n-dependent-two-phase-radius-entry) | no_go | infer eventual two-phase theorem entry from defect `theta_N->0` and positive radius `r_N>0` separately at each `N` |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-canonical-one-site-compact-cylinder-bond-subflow-point-norm-c0) | no_go | use canonical one-site compact cylinders as a point-norm C0 carrier for the split Q3 bond subflow |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-WEIGHTED-UNITARY-CUTOFF-AUTOMATIC-ARBITRARY-CONTEXT-AUTOMORPHISM-L2-UPGRADE`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-weighted-unitary-cutoff-automatic-arbitrary-context-automorphism-l2-upgrade) | no_go | promote static Gibbs weighted-unitary cutoff control automatically through every bounded observable context |
 | [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-UNIFORM-QUADRATIC-IN-M-ALL-MOMENT-BOND-SHEAR-GRAPH-TRANSPORT`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-uniform-quadratic-in-m-all-moment-bond-shear-graph-transport) | no_go | infer a universal quadratic or polynomial-in-order bound for every normalized bond-shear graph moment from abstract positive-energy structure |
-| [`NG-2026-08-11-PRE-A-ST8-Q3LOCK-STATIC-MOMENTS-AND-LOW-GRAPH-AUTOMATIC-TWENTIETH-HISTORY-MOMENT`](registry.md#ng-2026-08-11-pre-a-st8-q3lock-static-moments-and-low-graph-automatic-twentieth-history-moment) | no_go | infer the uniform two-orientation twentieth history moment from static exponential-coordinate and fixed energy moments plus low-rung graph control |
 
 Search without loading the full registry:
 

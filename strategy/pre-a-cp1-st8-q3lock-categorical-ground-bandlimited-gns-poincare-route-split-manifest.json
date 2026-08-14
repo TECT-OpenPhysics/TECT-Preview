@@ -1,0 +1,131 @@
+{
+  "schema": "tect/pre-a-q3lock-categorical-ground-bandlimited-gns-poincare-route-split/1.0",
+  "package_id": "pre-a-cp1-st8-q3lock-categorical-ground-bandlimited-gns-poincare-route-split",
+  "version": "R-167 v4.1",
+  "date": "2026-08-14",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-000845",
+  "prior_exploration_id": "EXP-000844",
+  "claim_bearing": false,
+  "closed_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ZERO-SOURCE-CATEGORICAL-GROUND-BANDLIMITED-GNS-ENERGY-FORM-CORE-AND-PARITY-POINCARE-REDUCTION"
+  ],
+  "negative_ids": [
+    "NG-2026-08-14-PRE-A-ST8-Q3LOCK-MESOSCOPIC-SOURCE-FULL-FINITE-GAP-AUTOMATIC-UNIFORM-POINCARE-TRANSFER"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-11-PRE-A-ST8-Q3LOCK-ORDERED-GROUND-DOUBLETS-AUTOMATIC-GNS-GAP"
+  ],
+  "open_parent_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-INFINITE-DIMENSIONAL-RANK-TWO-BAND-BLOCK-DIAGONALIZATION-AND-TWO-PHASE-QPS",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "historical_open_gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BETA-INFINITY-GROUND-STATE-SELECTION",
+    "PA-CP1-ST8-Q3LOCK-DLR-TO-COMMON-ALPHA-KMS-IDENTIFICATION"
+  ],
+  "inherited_v4_0_inputs": {
+    "categorical_system": "R-167 v4.0 supplies the unital separable zero-source categorical C-star system (A_H^0,theta), its closed generator delta_H, the compact-Arveson unital star graph core D_bl, exact finite-volume representations pi_L^0, and parity gamma with gamma theta_t=theta_t gamma.",
+    "ground_pair": "Along one joint mesoscopic-source cluster, omega_L^sigma converges weak-star to omega_sigma for sigma in {-1,+1}; each omega_sigma is a theta-invariant algebraic ground state, omega_-=omega_+ o gamma, and one fixed contraction b separates the states.",
+    "finite_source": "For H_L(sigma h_L)=H_L(0)-sigma h_L S_L, the exact source grounds phi_L^sigma obey |s_L^sigma|<=C_S V with C_S=sqrt(B_a), h_L V^2->infinity, h_L V->0, and cal E_L^sigma(A)=-i hbar omega_L^sigma(A^*delta_H A)-R_L^sigma(A) with R_L^sigma(A)->0 for each A in D_bl.",
+    "witness_constants": "The v4.0 witness has d=r_w sqrt(rho_*)/2>0, omega_L^+(b)>=d/2, omega_L^-(b)<=-d/2 eventually, and ||b||<=1. Here r_w is one fixed positive rational and B_a, rho_* are derived positive constants.",
+    "authority_anchors": [
+      "EXP-000789 zero-source O(1/V) full-gap upper bound",
+      "EXP-000790 exact broken-sector Poincare test",
+      "R-167 v1.8 conditional OS temporal-mass/GNS-gap equivalence",
+      "R-167 v3.0 conditional finite-Poincare target-gap transfer",
+      "R-167 v3.4 conditional fixed-Ritz Yarotskii route",
+      "R-167 v4.0 categorical exact-Q3 ground pair and residual closure"
+    ]
+  },
+  "gns_energy_identity": {
+    "implementation": "For either sigma, theta invariance gives the canonical covariant GNS implementation U_sigma(t)pi_sigma(A)Omega_sigma=pi_sigma(theta_t A)Omega_sigma. Groundness fixes U_sigma(t)=exp(i t H_sigma/hbar) with H_sigma>=0 and H_sigma Omega_sigma=0.",
+    "vector_identity": "For A in D_bl subset Dom(delta_H), differentiating the covariant identity in GNS norm gives H_sigma pi_sigma(A)Omega_sigma=-i hbar pi_sigma(delta_H A)Omega_sigma.",
+    "energy_identity": "Therefore -i hbar omega_sigma(A^*delta_H A)=<pi_sigma(A)Omega_sigma,H_sigma pi_sigma(A)Omega_sigma>=||H_sigma^(1/2)pi_sigma(A)Omega_sigma||^2. Since H_sigma Omega_sigma=0, centering A does not change this energy.",
+    "scope": "The identity uses only invariance, ground positivity and A in Dom(delta_H). It assumes neither faithfulness, purity, factoriality nor a simple zero-energy kernel."
+  },
+  "centered_bandlimited_form_core": {
+    "centered_space": "C_sigma={pi_sigma(A)Omega_sigma-omega_sigma(A)Omega_sigma:A in D_bl} is a linear subspace of Dom(H_sigma^(1/2)) intersect Omega_sigma^perp.",
+    "spectral_cutoff": "For xi in Dom(H_sigma^(1/2)) intersect Omega_sigma^perp choose chi_R in C_c^infinity(R) with chi_R(E)->1 on E>=0 and chi_R(H_sigma)xi->xi in the form norm ||zeta||^2+||H_sigma^(1/2)zeta||^2.",
+    "orbit_smear_realisation": "Choose a Schwartz g_R with compact Fourier support and hat g_R(E/hbar)=chi_R(E) on the positive implementing spectrum. Then pi_sigma(theta_(g_R)(B))Omega_sigma=chi_R(H_sigma)pi_sigma(B)Omega_sigma, and theta_(g_R)(B) belongs to D_bl.",
+    "two_stage_approximation": "First approximate xi by cyclic vectors pi_sigma(B_n)Omega_sigma. At fixed R, the compact energy support makes H_sigma^(1/2) bounded on the filtered range, so Hilbert convergence of the filtered vectors upgrades to form convergence. Subtract their Omega_sigma projections and then diagonalize in R,n.",
+    "conclusion": "C_sigma is a form core for H_sigma^(1/2) on Omega_sigma^perp even if ker(H_sigma) is not known to be one-dimensional."
+  },
+  "rayleigh_and_parity_reduction": {
+    "variance": "The centered-vector norm is Var_(omega_sigma)(A)=omega_sigma(A^*A)-|omega_sigma(A)|^2.",
+    "rayleigh_equality": "Delta_sigma^P=inf_(A in D_bl, Var>0){-i hbar omega_sigma(A^*delta_H A)/Var_(omega_sigma)(A)} equals inf sigma(H_sigma restricted to Omega_sigma^perp), because the centered D_bl vectors are a form core.",
+    "simple_kernel": "If Delta_sigma^P>0, then every zero-energy vector orthogonal to Omega_sigma vanishes. Thus ker(H_sigma)=C Omega_sigma and H_sigma restricted to Omega_sigma^perp is at least Delta_sigma^P.",
+    "parity_unitary": "The isometry W_gamma pi_-(A)Omega_-=pi_+(gamma(A))Omega_+ extends to a unitary, and gamma theta_t=theta_t gamma gives W_gamma H_- W_gamma^*=H_+. Consequently Delta_-^P=Delta_+^P.",
+    "parity_scope": "This is parity-twisted unitary equivalence. It proves no untwisted quasi-equivalence, purity, factoriality or disjointness statement."
+  },
+  "finite_source_gap_collapse": {
+    "overlap": "Choose the positive phases and put c_L=<phi_L^+,phi_L^->. The fixed contraction b has an expectation split at least d, while the norm distance of two vector states is 2 sqrt(1-c_L^2). Hence 1-c_L^2>=d^2/4 eventually.",
+    "orthogonal_trial": "For H_L(+h_L), zeta_L=(phi_L^--c_L phi_L^+)/sqrt(1-c_L^2) is orthogonal to its unique ground. The common form domain and H_L(+h_L)=H_L(-h_L)-2h_L S_L give q_(H_L(+h_L)-E_L(h_L))[zeta_L]=2 h_L s_L^+/(1-c_L^2). Parity gives the same statement for the other sign.",
+    "exact_upper_bound": "The full finite-volume source gap obeys Delta_(L,sigma)^full<=8 C_S h_L V/d^2=[32 sqrt(B_a)/(r_w^2 rho_*)] h_L V->0.",
+    "canonical_rate": "For h_L=h_* V^(-3/2), Delta_(L,sigma)^full<=[32 sqrt(B_a)h_*/(r_w^2 rho_*)]V^(-1/2).",
+    "route_boundary": "The L-dependent zeta_L is a global parity-branch-switching trial. Its collapse blocks using the full finite-source gap as a positive uniform Poincare input, but does not refute a positive phasewise target gap on the fixed D_bl core."
+  },
+  "fixed_carrier_limit_coercivity": {
+    "finite_form": "For fixed A in D_bl put cal E_L^sigma(A)=q_(H_L(sigma h_L)-E_L(h_L))[pi_L^0(A)phi_L^sigma].",
+    "limit_identity": "Along the selected joint cluster, v4.0 residual closure and weak-star convergence give cal E_L^sigma(A)->-i hbar omega_sigma(A^*delta_H A), while Var_(omega_L^sigma)(A)->Var_(omega_sigma)(A).",
+    "exact_equivalence": "For any Delta>0, H_sigma restricted to Omega_sigma^perp is at least Delta if and only if lim_L[cal E_L^sigma(A)-Delta Var_(omega_L^sigma)(A)]>=0 for every fixed A in D_bl. By parity it suffices to prove one sign.",
+    "order_of_operations": "The common Delta must hold after fixing the carrier element and passing its form and variance to the selected cluster. The vanishing full finite gap is an infimum over L-dependent global directions; inf_A lim_L and lim_L inf_A cannot be interchanged.",
+    "remaining_open_input": "No uniform positive D_bl coercive lower bound is proved. That phasewise bound, or an independently identified Yarotskii/QPS branch with cutoff-stable intertwining to this carrier, remains the load-bearing GNS-gap input."
+  },
+  "nonduplication_and_scope": {
+    "EXP789": "EXP-000789 proves an O(1/V) full-gap upper bound at exactly zero source using the odd collective trial S_L Omega_L. The new bound is for unique nonzero mesoscopic-source grounds and uses the fixed carrier witness to control the parity-ground overlap.",
+    "EXP790_v1_8": "EXP-000790 gives the abstract Poincare test, and R-167 v1.8 assumes an invariant centered form core and simple kernel for its OS temporal-mass equivalence. Neither constructs this actual categorical GNS form core.",
+    "v3_0": "R-167 v3.0 assumes the target energy identity, centered form core, positive uniform finite Poincare constants and local-generator convergence. The present theorem discharges the first two target premises on D_bl but proves that the full finite-source gaps cannot provide the third.",
+    "v3_4": "R-167 v3.4 is conditional at each fixed Ritz label and supplies no M-uniform passage or identification of Yarotskii branches with the v4.0 categorical clusters.",
+    "v4_0": "R-167 v4.0 constructs the exact-Q3 categorical ground pair and D_bl graph core but explicitly leaves the represented centered form core, simple kernel and positive GNS gap open. The present theorem closes the first item and reduces the last two to one exact Rayleigh inequality.",
+    "negative_split": "The new negative result rejects only automatic uniform-Poincare transfer from the full mesoscopic-source finite gaps. The reused ordered-ground-doublets negative remains the broader abstract warning that order, distinctness and parity alone do not imply a GNS gap."
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_categorical_ground_bandlimited_gns_poincare_route_split.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_categorical_ground_bandlimited_gns_poincare_route_split_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_categorical_ground_bandlimited_gns_poincare_route_split_verify.py",
+    "primary_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-primary-pre-a-cp1-st8-q3lock-categorical-ground-bandlimited-gns-poincare-route-split/result.json",
+    "independent_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-independent-pre-a-cp1-st8-q3lock-categorical-ground-bandlimited-gns-poincare-route-split/result.json",
+    "integrated_result": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-14-integrated-pre-a-cp1-st8-q3lock-categorical-ground-bandlimited-gns-poincare-route-split/result.json",
+    "staged_lifecycle": "Before formal integration, run all three scripts with --staged --no-store. No run JSON or formal authority is written by this five-file package."
+  },
+  "formal_integration_contract": {
+    "event_ordinal": 637,
+    "event_id": "20260814-r-167-v4-1-categorical-ground-bandlimited-gns-p",
+    "event_title": "R-167 v4.1 categorical ground bandlimited GNS Poincare route split",
+    "event_keywords": [
+      "EXP-000845",
+      "R-167-v4.1",
+      "bandlimited-form-core",
+      "categorical-ground",
+      "finite-source-gap-collapse",
+      "gns-poincare",
+      "parity-gap-equality",
+      "route-no-go"
+    ],
+    "theorem_map_version": "1.33.0",
+    "expected_post_formal_counts": {
+      "claims": 49,
+      "results": 168,
+      "gates": 195,
+      "negatives": 367,
+      "explorations": 845,
+      "events": 637,
+      "tasks": 54,
+      "catalog": 3963
+    },
+    "required_links": "EXP-000845, event 637, T-054, ROADMAP, strategy index, proof-evidence map, theorem map 1.33.0, generated compact surfaces, one exact scoped CLOSED child, one new scoped negative, one reused negative, all five active parents and both historical gates remaining OPEN."
+  },
+  "checkpoint_synthesis": {
+    "status": "DEFERRED UNTIL THE NEXT LOGICAL GATE-LEVEL CHECKPOINT",
+    "pdf_issued": false,
+    "workflow": "Proof-first manifest, certificate and three executable verifiers only. No v4.1 PDF is issued."
+  },
+  "no_overclaim": "R-167 v4.1 proves only the exact implementing-energy identity, centered compact-Arveson D_bl GNS form-core property, parity-twisted gap equality, Rayleigh/Poincare reduction, fixed-carrier limit-coercivity equivalence, and a model-specific upper bound showing that the full mesoscopic-source finite-volume gaps vanish. It proves no positive D_bl Poincare constant, simple kernel, broken-sector GNS gap, physical mass gap, purity, factoriality, disjointness or phase exhaustion. The finite-gap upper bound is a global L-dependent branch-switching obstruction, not a phasewise target-gap no-go. The v4.0 categorical states remain new diagonal h_L clusters, not identified with EXP-000790 iterated fixed-source tangents, EXP-000781 DLR tangents, v3.8 KMS states, or v3.4 fixed-Ritz Yarotskii branches. It proves no beta-infinity KMS limit, DLR/OS identification, spatial all-exhaustion or raw quasi-local oscillator common alpha, regulator removal, continuum, physical vacuum or empty-space comparison, Round-1, C6, CP1, physical Sector A or Pre-A closure. Both historical gates and all five active parent gates remain OPEN. One new scoped negative result is registered and the ordered-ground-doublets boundary is reused."
+}
