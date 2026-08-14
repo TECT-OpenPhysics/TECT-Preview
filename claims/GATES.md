@@ -165,6 +165,13 @@ Reading-H-to-field map, admitted microscopic observable map, common estimand,
 prospective prediction, custodian commitment, freeze or score. Round-1
 remains OPEN.
 
+EXP-000858 / R-169 v1.2 closes only two T0 interface-audit children. It
+separates covariance data from a selected mean field and proves exact
+nonlinear-convention and side-16 commensurability firewalls, but creates no
+Reading-H realization, admitted microscopic observable map, common estimand,
+prospective prediction, custodian commitment, freeze or score. Round-1
+remains OPEN.
+
 ### **PA-T055-TRUNCATED-OCTAHEDRON-BCC-VORONOI-AND-AFFINE-REALIZATION-FAMILY**
 
 **Statement:** Separate metric-regular, Euclidean-lattice-Voronoi, affine-
@@ -232,6 +239,59 @@ below-reference winner nor an unconstrained critical, local-minimum,
 metastable or global-minimum branch. This closes no constrained, retuned,
 infinite-volume, quantum or Reading-H realization.
 
+### **PA-T055-READING-H-COVARIANCE-MEAN-FIELD-TYPE-SEPARATION-AND-EQUIVARIANT-NONEXTRACTION**
+
+**Statement:** Separate the registered Reading-H phase-complete shell field
+and Gaussian-Hartree covariance data from a deterministic P1 mean field, give
+their exact covariance/composite maps, and decide whether stationary
+covariance-only data can equivariantly select a nonzero BCC mean.
+
+**Status:** CLOSED ONLY FOR THE DECLARED TYPE SEPARATION, CONDITIONAL LIFT,
+AND DETERMINISTIC EQUIVARIANT NONEXTRACTION (2026-08-14).
+EXP-000858 / R-169 v1.2 proves that antipodal coefficients
+`c_-k=conj(c_k)` give the real finite
+Bohr field `phi_Q(x)=sum_k c_k exp(i k dot x)` and positive-definite covariance
+`C_Q(z)=sum_k |c_k|^2 exp(i k dot z)`, with `C_Q(0)=I`. An integrable
+nonnegative isotropic dressing `G_*` similarly gives a radial covariance
+`C_*`. With the registered lock projector `P_0=z_0 z_0^dagger/3`, the kernels
+`K_Q=C_Q P_0` and `K_*=C_* P_0` are deterministic covariance/composite
+objects, not selected P1 fields or energy maps. If the phase-complete support
+is already contained in `(2 pi/16)Z^3`, the chosen scalar-polarized lift has
+`||Psi_Q||_2^2=4096 I`; fixed Reading-H intensity is therefore a fixed-norm,
+not unconstrained, P1 owner. Finally, a deterministic translation-equivariant
+section sends a translation-fixed covariance input to a translation-fixed
+output, hence to a constant field and to zero when centering or nonzero-shell
+support is preserved. A nonzero BCC mean requires extra phase, origin,
+orientation, source, random or set-valued symmetry-breaking data. No full
+Reading-H realization or energy intertwiner is constructed.
+
+### **PA-T055-READING-H-PINNED-P1-NONLINEAR-CONVENTION-AND-TORUS-COMMENSURABILITY-CROSSWALK**
+
+**Statement:** Compare the registered Reading-H and pinned-P1 scalar
+nonlinear conventions exactly, and test whether the registered Reading-H
+shell and BCC directions embed support-preservingly into the exact side-16 P1
+reciprocal shell.
+
+**Status:** CLOSED ONLY AS AN EXACT CONVENTION AND COMMENSURABILITY FIREWALL
+(2026-08-14). EXP-000858 / R-169 v1.2 derives
+`V_RH-V_P1=phi^4(108 phi^2-43)/400` for the common printed
+`lambda=-43/100`, `gamma=81/50`. The defect changes sign at
+`phi^2=43/108`, equals `-1/400` at `phi^2=1/4`, and equals `11/1600` at
+`phi^2=1/2`; no candidate-independent scalar offset repairs it. A constant
+amplitude rescaling with unchanged energy units would require both `s^4=2`
+and `s^6=2`, which is impossible. These are bare-density statements only:
+the Hartree determinant, trial-mass, mixed and gap terms and the P1 quadratic,
+family, lock, Class-II and reference owners are not identified. Independently,
+exact rational Machin bounds give
+`3 pi^2/64<q_0^2<4 pi^2/64` for the literal registered
+`q_0=0.6801747616`, so its exact side-16 reciprocal shell is empty. Even after
+reinterpreting `q_0=pi sqrt(3)/8`, the shell has only the eight `{+/-1}^3`
+modes and cannot receive the twelve Reading-H BCC `{110}` directions
+support-preservingly. The R-169 v1.1 support `4{110}` has index square 32 and
+is only a wavelength-rescaled combinatorial realization. A tolerance,
+projection, domain change, off-shell lift, parameter retuning or full-energy
+bridge remains a separately governed construction.
+
 ### **PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE**
 
 **Statement:** Before applying the pinned P1 elimination theorem to
@@ -252,6 +312,15 @@ compact target, conserved dynamics, nonzero shell bias, retuned coefficients,
 removed regularizers or another functional are genuine escape routes only
 after their new owners and matched reference/stability/limit proofs are
 frozen. The current B1/B3 relative ranking is neither promoted nor refuted.
+
+EXP-000858 / R-169 v1.2 rules out three automatic shortcuts: covariance-only
+data cannot deterministically and equivariantly select a nonzero BCC mean;
+shared printed scalar constants do not identify the Reading-H Hartree and
+pinned-P1 energies; and the registered Reading-H BCC shell is not an exact
+support-preserving side-16 P1 shell. The parent remains OPEN for an explicit
+phase/origin/polarization map or covariance/composite owner, a declared
+commensuration or off-shell approximation with an error budget, and a matched
+full functional, reference, ensemble and limit theorem.
 
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
@@ -5328,6 +5397,13 @@ margin. It does not identify that field with Reading-H, construct a physical
 empty reference, or show that every TECT realization is in the P1 scope. The
 Reading-H interface remains OPEN, so this gate and its physical programme
 remain OPEN.
+
+EXP-000858 / R-169 v1.2 closes only covariance/mean-field type separation,
+deterministic equivariant nonextraction, scalar nonlinear-convention and
+side-16 shell-commensurability children. It constructs no Reading-H mean
+field, matched full energy, below-empty branch, stable realization or
+continuum physical state. The Reading-H interface, this gate and its physical
+programme remain OPEN.
 
 
 <a id="a3-h1-dim3-q4-kernel"></a>

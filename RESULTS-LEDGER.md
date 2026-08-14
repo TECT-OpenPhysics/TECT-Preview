@@ -22,7 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-169](#r-169) | Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction | R-169 v1.1 is the current scoped T0 analytic/exact/executed/audited result under EXP-000852. It retains v1.0 and constructs one exact twelve-mode BCC-periodic field in the hash-pinned neutral P1/A2 space, extracts its 128 modulus-max centers and BCC Voronoi cells, and conditionally applies R-157 to exclude that family from the zero-reference, critical, local/metastable and global branches. No registered Reading-H `Q/G_*`-to-`Psi` map or energy intertwiner exists, so the current B1/B3 ranking is neither promoted nor refuted and C6 remains blocked |
+| [R-169](#r-169) | Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction | R-169 v1.2 is the current scoped T0 analytic/exact/executed/audited result under EXP-000858. It retains v1.0--v1.1 and adds the exact Reading-H scalar/covariance crosswalk, a conditional commensurate P1 lift, deterministic equivariant nonextraction from covariance-only data, literal side-16 shell noncommensurability and the bare nonlinear convention firewall. Three automatic bridges are rejected, but no full Reading-H-to-P1 energy/ensemble intertwiner, physical-empty sign, vacuum, C6 result or Pre-A closure follows |
 | [R-168](#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | R-168 v1.3 is a scoped T0 analytic/exact/executed/audited additive result under EXP-000814. It retains v1.0--v1.2 and closes five mathematical children without creating a compact action, physical response, candidate, prediction or freeze; physical-response, Round-1, Sector A and Pre-A remain open |
 | [R-167](#r-167) | Registered-corridor full-oscillator coexistence, categorical dynamics and exact source-ground transfer | R-167 v4.2 is the current scoped T0 analytic/exact/executed/audited additive result under EXP-000846. It retains every v4.1 child and conditionally proves integrated-orbit-smear all-shape shell Cauchy convergence, a point-norm C0 spatial-subalgebra action, an equivariant surjective quotient of the categorical carrier, and same-periodic-net transfer of the v4.0 ground pair. The exact-Q3 toggle weights, a raw/local oscillator common alpha, DLR/KMS branch identity and the broken-sector GNS gap remain open |
 | [R-166](#r-166) | Sparse production radial-Gram decomposition and global owner bound | Scoped T4 analytic/exact/executed/audited production-fibre theorem, strengthened in v1.1 without a new result ID. On the fixed side-16 exact nonaliased antipodal `p:2p` strict-past / single fresh-`4p` R-153 fibre, the exact Fierz split, Pauli nonresonance, radial bounds and direct coefficient inequality give an explicit rational polynomial whose unique global minimum lies in `70<G_*<71` and is `-4/5+18740524635403/439505584128000>-4/5`. Thus the owner plus source Hessian is strictly above `1/10`, the scoped R-164 reduction permits `rho=3/20`, and the R-165 annulus is closed. Exact simultaneous `sin(4x),sin(8x)` arithmetic gives Gram `[[5/4,1],[1,3/2]]` and ratio `3/8` at `(1,-1)`, registering that the coefficient-one lemma cannot be copied rootwise. Primary `40/40` and independent Fraction `37/37` audits pass. The complete joint owner, nonlinear/revisit feedback, low variables, removal, T-050/A13, phase/PDE/morphology, Nelson/measure and Sector-A closure remain open |
@@ -284,6 +284,45 @@ intertwiner. The explicit field above is therefore a P1 realization and route
 filter, not a Reading-H extraction. R-158 remains a changed fixed-charge or
 grand-canonical variational problem and does not contradict R-157.
 
+**Reading-H covariance/composite crosswalk.** EXP-000858 / R-169 v1.2
+retains v1.0--v1.1 and uses the registered phase-complete convention
+`c_-k=conj(c_k)` to synthesize the real finite Bohr field
+`phi_Q(x)=sum_k c_k exp(i k dot x)`. Its positive-definite covariance is
+`C_Q(z)=sum_k |c_k|^2 exp(i k dot z)`, with `C_Q(0)=I`; the integrable
+nonnegative isotropic Gaussian-Hartree dressing gives a radial covariance
+`C_*`. With `P_0=z_0 z_0^dagger/3`, `C_Q P_0` and `C_* P_0` are exact
+covariance/composite kernels, not selected P1 fields or energy maps. If the
+phase-complete support is already contained in `(2 pi/16)Z^3`, the chosen
+scalar-polarized lift has squared norm `4096 I` and normalized outer-product
+covariance `C_Q P_0`. Thus fixed Reading-H intensity becomes a fixed P1 norm.
+
+**Equivariant nonextraction.** A stationary covariance is fixed by every
+translation. A deterministic translation-equivariant section therefore has a
+translation-fixed, hence constant, output; preserving centering or nonzero-
+shell support forces `Psi=0`. The isotropic `G_*` alone cannot select a
+nonzero BCC mean. A phase, origin, orientation, source, random or set-valued
+symmetry-breaking datum is a new necessary input.
+
+**Exact side-16 shell obstruction.** Treating the literal registered
+`q_0=0.6801747616=212554613/312500000` as exact, rational Machin bounds prove
+`3 pi^2/64<q_0^2<4 pi^2/64`. Hence the exact side-16 reciprocal `q_0` shell
+is empty. Replacing it by `pi sqrt(3)/8` gives only the eight `{+/-1}^3`
+modes, which cannot receive the twelve Reading-H BCC `{110}` directions
+support-preservingly. The R-169 v1.1 support `4{110}` has index square 32 and
+is a wavelength-rescaled combinatorial realization, not an on-shell identity.
+
+**Bare nonlinear convention firewall.** For the common printed
+`lambda=-43/100`, `gamma=81/50`, the Reading-H scalar density uses
+`(lambda/2)phi^4+(gamma/3)phi^6` while pinned P1 uses
+`(lambda/4)phi^4+(gamma/6)phi^6` on the scalar ray. Their defect is
+`phi^4(108phi^2-43)/400`; it changes sign at `phi^2=43/108`, equals
+`-1/400` at `phi^2=1/4`, and equals `11/1600` at `phi^2=1/2`. No constant
+amplitude rescaling satisfies both `s^4=2` and `s^6=2`. This is only a bare-
+density crosswalk, not a difference or ordering of the full Hartree and P1
+functionals. The determinant, trial-mass, mixed, gap, quadratic, family, lock,
+Class-II and reference terms and the fixed-norm versus unconstrained ensemble
+remain separately owned.
+
 **Negative-route authorities.** R-169 v1.0 registers
 `NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION`
 and
@@ -297,16 +336,25 @@ R-169 v1.1 registers no new negative and reuses
 `NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM` together with
 `NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`.
 
-**Boundary.** This is a T0, claim-nonbearing geometry, explicit P1 route-filter
-and conditional transfer result. It extracts centers and cells only for the
-declared twelve-mode P1 fixture. It computes no canonical TECT or Reading-H
-realization energy, proves no Reading-H extraction or complete enumeration,
-identifies no physical or cosmic empty space, and proves no global vacuum,
-BCC resurrection, C6 spacetime conclusion, physical Sector-A result, or Pre-A
-closure. `PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE`,
+R-169 v1.2 registers
+`NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION`,
+`NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING`
+and
+`NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER`.
+It reuses the R-157 nonzero-equilibrium boundary and the v1.0 finite-part
+empty-reference boundary.
+
+**Boundary.** This is a T0, claim-nonbearing geometry, explicit P1 route-filter,
+covariance/composite crosswalk and exact interface-firewall result. It closes
+only the two v1.2 scoped children and extracts centers and cells only for the
+declared v1.1 twelve-mode P1 fixture. It constructs no full Reading-H mean
+field or energy/ensemble intertwiner, computes no canonical TECT realization
+energy, identifies no physical or cosmic empty space, and proves no global
+vacuum, BCC resurrection, C6 spacetime conclusion, physical Sector-A result,
+or Pre-A closure. `PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE`,
 `C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN.
 
-**Proven in:** The [R-169 v1.1 certificate](strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.1 PDF is issued. The [R-169 v1.0 certificate](strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-truncated-octahedron-realization-and-empty-reference-sign-route-split-manifest.json) remain the prior proof-first authority.
+**Proven in:** The [R-169 v1.2 certificate](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.2 PDF is issued. The [R-169 v1.1 certificate](strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-manifest.json) remain the prior proof-first authority. The R-169 v1.0 certificate and manifest remain earlier proof-first history.
 
 **Tier:** T0 (claim-nonbearing scoped exact geometry, conditional sign/stability
 transfer and exact logical obstructions only).

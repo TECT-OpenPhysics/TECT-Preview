@@ -1487,6 +1487,29 @@ nor refuted. The P1 fixture child is scoped CLOSED, while
 `C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN. No new negative result is
 registered, and no R-169 v1.1 PDF is issued.
 
+EXP-000858 / R-169 v1.2 retains v1.0--v1.1 and closes two further scoped T0,
+claim-nonbearing children. Phase-complete Reading-H shell data have an exact
+real scalar synthesis and positive-definite covariance; the isotropic
+Gaussian-Hartree dressing gives a radial covariance, and multiplication by the
+registered rank-one internal projector gives a covariance/composite P1
+crosswalk. Under an additional exact side-16 commensurability hypothesis, the
+chosen scalar-polarized lift has squared `L2` norm `4096 I` and the declared
+outer-product covariance.
+
+Three automatic promotions fail exactly. Centered stationary covariance-only
+data cannot deterministically and translation-equivariantly select a nonzero
+BCC mean. The literal registered `q_0` has no exact side-16 reciprocal shell,
+and its shell-three reinterpretation has eight `{111}` modes rather than the
+twelve Reading-H BCC `{110}` directions. The historical Reading-H scalar and
+pinned P1 nonlinear densities differ by
+`phi^4(108phi^2-43)/400`, which changes sign at `phi^2=43/108`.
+
+No full Reading-H-to-P1 energy or ensemble intertwiner, physical-empty
+reference, surviving stable realization or complete candidate class follows.
+`PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE`,
+`C6-BCC-PREMISE-BLOCKED` and Round-1 remain OPEN. Physical Sector A and Pre-A
+remain open. No R-169 v1.2 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

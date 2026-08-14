@@ -1,0 +1,144 @@
+{
+  "assertions": 14,
+  "certificate_hash": "22158d8dd853b20768c6b193f2b9b6da60c819c5d641e319380ba6ae1ea8787e",
+  "checks": [
+    {
+      "actual": "{'schema': 'tect/pre-a-t055-reading-h-covariance-to-p1-interface/1.0', 'exploration_id': 'EXP-000858', 'version': 'R-169 v1.2'}",
+      "expected": "exact package identity",
+      "group": "authority",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "authority",
+      "name": "source authority hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'phase_complete_fixture': True, 'fixture_intensity': '89/72', 'covariance_at_zero': '89/72', 'covariance_gram_spectrum': {'20/9': 1, '107/144 - sqrt(5689)/144': 1, 'sqrt(5689)/144 + 107/144': 1}, 'covariance_gram_psd': True, 'p0_trace': '1', 'p0_rank': 1, 'p0_idempotent': True, 'lift_norm_coefficient': 4096, 'phase_field_origin': '7/6', 'phase_field_shift': '-1/6', 'covariance_origin_invariant': True, 'pi_bracket_width': '6085608583163580348/85491174268586215007305145263671875', 'q0_above_shell_three_gap': '21583800249063331760720835349256075071556647176562187497146924143171/1303910299507724075041659259312565190106821433408185839653015136718750000000000', 'q0_below_shell_four_gap': '61126964182890209317888727993564279768363083257406318681059712080508172791/396381207304833730496408164266183392744424054399132728576660156250000000000', 'q0_strictly_between_shells': True, 'commensurate_shell_count': 8, 'reading_h_bcc_count': 12, 'r169_v1_1_index_square': 32, 'nonlinear_defect': 'phi**4*(108*phi**2 - 43)/400', 'nonlinear_crossing': '43/108', 'negative_defect': '-1/400', 'positive_defect': '11/1600', 'quartic_match': 'Eq(s**4, 2)', 'sextic_match': 'Eq(s**6, 2)', 'rescale_contradiction': '4', 'rescale_incompatible': True, 'oracle_volume': 4096}",
+      "expected": "real and C_Q(0)=I",
+      "group": "covariance",
+      "name": "phase-complete real synthesis",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'20/9': 1, '107/144 - sqrt(5689)/144': 1, 'sqrt(5689)/144 + 107/144': 1}",
+      "expected": "exact nonnegative spectrum",
+      "group": "covariance",
+      "name": "positive covariance fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'p0_trace': '1', 'p0_rank': 1, 'p0_idempotent': True}",
+      "expected": "rank-one projector",
+      "group": "covariance",
+      "name": "registered P0 projector",
+      "status": "PASS"
+    },
+    {
+      "actual": "4096",
+      "expected": "4096",
+      "group": "lift",
+      "name": "conditional lift norm",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'phase_field_origin': '7/6', 'phase_field_shift': '-1/6', 'covariance_origin_invariant': True}",
+      "expected": "field changes and covariance does not",
+      "group": "nonextraction",
+      "name": "phase cannot come from covariance",
+      "status": "PASS"
+    },
+    {
+      "actual": "6085608583163580348/85491174268586215007305145263671875",
+      "expected": "<1/12500000000000000",
+      "group": "commensurability",
+      "name": "Machin enclosure precision",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'q0_above_shell_three_gap': '21583800249063331760720835349256075071556647176562187497146924143171/1303910299507724075041659259312565190106821433408185839653015136718750000000000', 'q0_below_shell_four_gap': '61126964182890209317888727993564279768363083257406318681059712080508172791/396381207304833730496408164266183392744424054399132728576660156250000000000'}",
+      "expected": "two positive exact rational gaps",
+      "group": "commensurability",
+      "name": "literal q0 between shells",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'commensurate_shell_count': 8, 'reading_h_bcc_count': 12, 'r169_v1_1_index_square': 32}",
+      "expected": "{'commensurate_shell_count': 8, 'reading_h_bcc_count': 12, 'r169_v1_1_index_square': 32}",
+      "group": "commensurability",
+      "name": "shell cardinality obstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'nonlinear_crossing': '43/108', 'negative_defect': '-1/400', 'positive_defect': '11/1600'}",
+      "expected": "{'nonlinear_crossing': '43/108', 'negative_defect': '-1/400', 'positive_defect': '11/1600'}",
+      "group": "energy",
+      "name": "nonlinear sign crosswalk",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'quartic_match': 'Eq(s**4, 2)', 'sextic_match': 'Eq(s**6, 2)', 'rescale_contradiction': '4'}",
+      "expected": "incompatible fourth and sixth powers",
+      "group": "energy",
+      "name": "constant rescale obstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": "all theorem and audit sections",
+      "expected": "all theorem and audit sections",
+      "group": "scope",
+      "name": "certificate proof and DA",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "full-energy firewall",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "commensurate_shell_count": 8,
+    "covariance_at_zero": "89/72",
+    "covariance_gram_psd": true,
+    "covariance_gram_spectrum": {
+      "107/144 - sqrt(5689)/144": 1,
+      "20/9": 1,
+      "sqrt(5689)/144 + 107/144": 1
+    },
+    "covariance_origin_invariant": true,
+    "fixture_intensity": "89/72",
+    "lift_norm_coefficient": 4096,
+    "negative_defect": "-1/400",
+    "nonlinear_crossing": "43/108",
+    "nonlinear_defect": "phi**4*(108*phi**2 - 43)/400",
+    "oracle_volume": 4096,
+    "p0_idempotent": true,
+    "p0_rank": 1,
+    "p0_trace": "1",
+    "phase_complete_fixture": true,
+    "phase_field_origin": "7/6",
+    "phase_field_shift": "-1/6",
+    "pi_bracket_width": "6085608583163580348/85491174268586215007305145263671875",
+    "positive_defect": "11/1600",
+    "q0_above_shell_three_gap": "21583800249063331760720835349256075071556647176562187497146924143171/1303910299507724075041659259312565190106821433408185839653015136718750000000000",
+    "q0_below_shell_four_gap": "61126964182890209317888727993564279768363083257406318681059712080508172791/396381207304833730496408164266183392744424054399132728576660156250000000000",
+    "q0_strictly_between_shells": true,
+    "quartic_match": "Eq(s**4, 2)",
+    "r169_v1_1_index_square": 32,
+    "reading_h_bcc_count": 12,
+    "rescale_contradiction": "4",
+    "rescale_incompatible": true,
+    "sextic_match": "Eq(s**6, 2)"
+  },
+  "manifest_hash": "a5638670ed6196fe0760409a807b68bb27743e5f603e29fbcdca02a5719814f5",
+  "mode": "formal",
+  "schema": "tect/pre-a-t055-reading-h-covariance-to-p1-interface-primary/1.0",
+  "source_hash": "39a70311ee882793829f329da693695a19dd453df4efa09d4e1a63f0b5d2c9a5",
+  "verdict": "PASS",
+  "version": "1.0.0"
+}

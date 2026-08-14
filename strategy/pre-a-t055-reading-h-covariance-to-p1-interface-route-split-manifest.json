@@ -1,0 +1,189 @@
+{
+  "schema": "tect/pre-a-t055-reading-h-covariance-to-p1-interface/1.0",
+  "slug": "pre-a-t055-reading-h-covariance-to-p1-interface-route-split",
+  "version": "R-169 v1.2",
+  "issued": "2026-08-14",
+  "tier": "T0",
+  "claim_bearing": false,
+  "task_id": "T-055",
+  "exploration_id": "EXP-000858",
+  "result_id": "R-169",
+  "claim_ids": [
+    "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+    "A2-FULL-PRODUCTION-WELLPOSED",
+    "B1-RH-ENUM",
+    "B3-RH-TESTED-STRUCTURE-RANKING",
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "closed_gate_ids": [
+    "PA-T055-READING-H-COVARIANCE-MEAN-FIELD-TYPE-SEPARATION-AND-EQUIVARIANT-NONEXTRACTION",
+    "PA-T055-READING-H-PINNED-P1-NONLINEAR-CONVENTION-AND-TORUS-COMMENSURABILITY-CROSSWALK"
+  ],
+  "open_gate_ids": [
+    "PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE",
+    "C6-BCC-PREMISE-BLOCKED",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "new_negative_ids": [
+    "NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION",
+    "NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING",
+    "NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER"
+  ],
+  "reused_negative_ids": [
+    "NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM",
+    "NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN"
+  ],
+  "source_authorities": {
+    "reading_h_cfull": {
+      "path": "claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/claims/B1-RH-ENUM/Reading-H/notes/reading-h-cfull-referee-package-260610-v1.1.tex.txt",
+      "sha256": "3a4b2d853992d2b4495da7a4ad1619fda21170f72247f3d549a0bb051680a98f"
+    },
+    "reading_h_coefficients": {
+      "path": "claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-chi-link-bypass-260610-v1.1.tex.txt",
+      "sha256": "98c20da09ad60ee2a6148383da28895a9e136bcdb0a56127adcb6feb8389e2a4"
+    },
+    "math424": {
+      "path": "archive/legacy/scripts/Math424_AddA_reading_uniqueness.py",
+      "sha256": "e9c7d8d80eea491652241cad1b7139b9a23e92696d8d4dac7bd387534e2f1895"
+    },
+    "p1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r157_manifest": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/pinned_functional_unique_zero_global_minimizer_manifest.json",
+      "sha256": "b62ee37609cbe493eeb9d7d0d9b1fb9fcd94f8d1a86907b8714135e6a8026ca8"
+    },
+    "r158_manifest": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json",
+      "sha256": "f42812ef61ff5be9472f5a760b76fef879bc336f3a698d3e02938e0562f13bf3"
+    },
+    "r169_v1_1_manifest": {
+      "path": "strategy/pre-a-t055-pinned-p1-bcc-periodic-realization-empty-reference-elimination-route-split-manifest.json",
+      "sha256": "e627140dd4ef4bf6a7f1b16f9e31f0ea12e4d009f40938164675d4237e771451"
+    }
+  },
+  "reading_h_type_split": {
+    "source_object": "Q is a finite antipodal momentum-shell set with phase-complete coefficients c_k; G_* is the centered isotropic Gaussian-Hartree spectral dressing.",
+    "target_object": "Psi in H^2(T^3_16;C^3) is a classical mean or condensate field for the hash-pinned P1 functional.",
+    "coefficient_convention": "c_-k=conj(c_k), I=sum_k |c_k|^2",
+    "scalar_synthesis": "phi_Q(x)=sum_(k in Q)c_k exp(i k dot x), a real finite Bohr-almost-periodic field",
+    "discrete_covariance": "C_Q(z)=M_x[phi_Q(x+z)phi_Q(x)]=sum_k |c_k|^2 exp(i k dot z), C_Q(0)=I",
+    "continuous_covariance": "If G_*>=0 and integral G_* d^3q<infinity, C_*(z)=integral exp(i q dot z)G_*(q)d^3q is positive definite and radial.",
+    "internal_projector": "u_0=z_0/sqrt(3), P_0=u_0 u_0^dagger=z_0 z_0^dagger/3",
+    "composite_embedding": "K_Q(z)=C_Q(z)P_0 and K_*(z)=C_*(z)P_0 are covariance/composite kernels, not deterministic P1 fields or energy maps."
+  },
+  "conditional_commensurate_lift": {
+    "hypotheses": "Q is finite and contained in (2pi/16)Z^3, all c_n are phase-complete, and the registered internal direction u_0 is chosen.",
+    "field": "Psi_Q(x)=u_0 sum_n c_n exp(2pi i n dot x/16)",
+    "norm": "||Psi_Q||_2^2=16^3 sum_n |c_n|^2=4096 I",
+    "covariance": "16^-3 integral Psi_Q(x+z)Psi_Q(x)^dagger dx=C_Q(z)P_0",
+    "boundary": "This is a chosen scalar-polarized torus lift. It is not a Reading-H-to-P1 energy or ensemble intertwiner, and fixed I becomes fixed P1 norm."
+  },
+  "equivariant_nonextraction": {
+    "statement": "A deterministic translation-equivariant section from stationary covariance-only data to a mean field maps a translation-fixed input to a translation-fixed output. The output is spatially constant and is zero if centering or nonzero-shell support is preserved.",
+    "consequence": "G_* alone cannot select a nonzero BCC mean field. A phase/origin/orientation seed, random or set-valued symmetry breaking, or another non-invariant datum is necessary.",
+    "scope": "This does not obstruct phase-complete (Q,c), covariance/composite observables, or an explicitly symmetry-broken model."
+  },
+  "torus_commensurability": {
+    "torus_side": 16,
+    "literal_q0": "212554613/312500000",
+    "reciprocal_modes": "k_n=(pi/8)n, n in Z^3",
+    "machin_formula": "pi=16 atan(1/5)-4 atan(1/239), with alternating rational upper and lower sums",
+    "exact_bracket": "3pi^2/64<q0^2<4pi^2/64",
+    "literal_consequence": "(8q0/pi)^2 lies strictly between 3 and 4, so the exact side-16 q0 shell is empty.",
+    "commensurate_reinterpretation": "Replacing q0 by pi sqrt(3)/8 gives only the eight n=(+/-1,+/-1,+/-1) modes.",
+    "bcc_boundary": "The twelve Reading-H BCC {110} directions cannot inject support-preservingly into that eight-mode shell. The R-169 v1.1 support 4{110} has |n|^2=32 and is a wavelength-rescaled combinatorial lift only.",
+    "escape": "A tolerance, shell projection, domain change, off-shell lift, or q0 redefinition requires a declared map and error budget."
+  },
+  "nonlinear_convention_firewall": {
+    "parameters": "lambda=-43/100, gamma=81/50",
+    "reading_h_bare": "V_RH(phi)=(lambda/2)phi^4+(gamma/3)phi^6",
+    "p1_reference": "V_P1(phi u_0)=(lambda/4)phi^4+(gamma/6)phi^6 for ||u_0||=1",
+    "defect": "V_RH-V_P1=phi^4(108phi^2-43)/400",
+    "pointwise_crossing": "phi^2=43/108",
+    "negative_fixture": "phi^2=1/4 gives -1/400",
+    "positive_fixture": "phi^2=1/2 gives 11/1600",
+    "rescaling_obstruction": "A fixed amplitude rescaling with unchanged energy units would require s^4=2 and s^6=2 simultaneously.",
+    "full_energy_firewall": "The displayed defect is only the bare nonlinear-density mismatch. Math424 also contains Hartree determinant, trial-mass, mixed A-M, and gap terms; P1 has different quadratic parameters plus family, lock, and Class-II terms. No ordering of the full functionals follows."
+  },
+  "ensemble_firewall": {
+    "fixed_intensity": "The conditional lift sends fixed Reading-H I to fixed ||Psi||_2^2=4096I.",
+    "r157": "R-157 is an unconstrained neutral-field theorem. Its energy inequality may test a specified P1 field, but its unconstrained critical/local conclusion is not a constrained-tangent theorem and it does not compare the Reading-H Hartree functional.",
+    "r158": "R-158 demonstrates that a fixed-charge or chemical-potential problem is a changed variational owner and can admit nonzero shell states without contradicting R-157."
+  },
+  "test_oracles": {
+    "torus_volume": 4096,
+    "literal_q0": "212554613/312500000",
+    "index_square_lower_integer": 3,
+    "index_square_upper_integer": 4,
+    "commensurate_shell_count": 8,
+    "reading_h_bcc_count": 12,
+    "r169_v1_1_index_square": 32,
+    "nonlinear_crossing": "43/108",
+    "negative_defect": "-1/400",
+    "positive_defect": "11/1600",
+    "quartic_rescale_power": 4,
+    "sextic_rescale_power": 6
+  },
+  "formal_integration": {
+    "event_ordinal": 641,
+    "event_title": "R-169 v1.2 Reading-H covariance-to-P1 interface route split",
+    "event_id": "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
+    "event_claim_ids": [
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "A2-FULL-PRODUCTION-WELLPOSED",
+      "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+      "B1-RH-ENUM",
+      "B3-RH-TESTED-STRUCTURE-RANKING",
+      "C6-BCC-PREMISE-BLOCKED",
+      "C6-SPACETIME-SIGNATURE",
+      "EXP-000858",
+      "R-169"
+    ],
+    "event_keywords": [
+      "EXP-000858",
+      "R-169-v1.2",
+      "covariance-mean-type",
+      "equivariant-nonextraction",
+      "factor-two-crosswalk",
+      "p1-energy-intertwiner",
+      "reading-h-interface-open",
+      "side16-commensurability"
+    ],
+    "event_notes": [
+      "strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-manifest.json",
+      "strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-certificate-260814.md",
+      "claims/GATES.md",
+      "RESULTS-LEDGER.md",
+      "negative-results/registry.md"
+    ],
+    "event_scripts": [
+      "codes/foundations/pre_a_t055_reading_h_covariance_to_p1_interface_route_split.py",
+      "codes/foundations/pre_a_t055_reading_h_covariance_to_p1_interface_route_split_independent.py",
+      "codes/foundations/pre_a_t055_reading_h_covariance_to_p1_interface_route_split_verify.py"
+    ],
+    "event_raw_tokens": [
+      "centered mean",
+      "Psi=0",
+      "43/108",
+      "{110}",
+      "Reading-H interface remains OPEN",
+      "C6-BCC-PREMISE-BLOCKED remains OPEN",
+      "No R-169 v1.2 PDF is issued"
+    ],
+    "theorem_map_version": "1.37.0",
+    "expected_post_counts": {
+      "claims": 49,
+      "results": 169,
+      "gates": 202,
+      "negatives": 372,
+      "explorations": 858,
+      "events": 641,
+      "tasks": 55,
+      "catalog": 3995
+    },
+    "no_pdf": true
+  },
+  "no_overclaim": "This T0, claim-nonbearing package proves a covariance/composite map, a conditional phase-complete commensurate torus lift, deterministic equivariant nonextraction from covariance-only data, literal side-16 shell noncommensurability, and a bare nonlinear convention firewall. It does not provide a Reading-H-to-P1 full energy or ensemble intertwiner, select a mean field from G_*, validate a physical empty reference, transfer the B1/B3 ranking, resurrect B3-BCC-STRUCT, or close C6, Round-1, physical Sector A, or Pre-A. No R-169 v1.2 PDF is issued."
+}

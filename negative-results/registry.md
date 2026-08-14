@@ -9,6 +9,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION](#ng-2026-08-14-pre-a-t055-isotropic-gaussian-covariance-automatic-nonzero-bcc-mean-field-extraction) | deterministically and translation-equivariantly extract a nonzero BCC mean field from the stationary isotropic Gaussian-Hartree covariance alone | a translation-fixed covariance input must map under any deterministic equivariant section to a translation-fixed, hence constant, output; preserving centering or nonzero-shell support forces that output to zero |
+| [NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING](#ng-2026-08-14-pre-a-t055-reading-h-bcc-110-on-shell-automatic-side16-torus-embedding) | treat the registered Reading-H BCC `{110}` shell as an automatic exact on-shell support-preserving embedding in the side-16 pinned P1 torus | exact rational Machin bounds place the literal registered `q_0` strictly between the side-16 index-square 3 and 4 shells; even the commensurate reinterpretation has only eight `{+/-1}^3` modes for twelve BCC directions |
+| [NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER](#ng-2026-08-14-pre-a-t055-reading-h-scalar-constants-automatic-pinned-p1-energy-intertwiner) | infer an ordering-preserving Reading-H-to-pinned-P1 energy identity from shared printed scalar couplings or one constant amplitude normalization | the exact bare-density defect is `phi^4(108phi^2-43)/400`, which changes sign, while coefficient matching would require the incompatible conditions `s^4=2` and `s^6=2` |
 | [NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION](#ng-2026-08-14-pre-a-t055-truncated-octahedron-combinatorics-automatic-finite-realization-enumeration) | infer a finite exhaustive realization list from truncated-octahedron face combinatorics alone | the exact BCC Voronoi cell has a determinant-one affine family `D_t P+D_t L`, `t>1`, whose quadrilateral-facet neighbour-translation ratio is `t^2`; the members are pairwise nonsimilar, while the affine images are not claimed to remain Euclidean Voronoi cells |
 | [NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN](#ng-2026-08-14-pre-a-t055-common-counterterm-basis-unfixed-finite-parts-automatic-empty-reference-sign) | infer a scheme-independent candidate/reference sign from a common counterterm basis whose nonconstant finite parts remain free | a shared even quadratic/quartic finite direction changes both the exact relative sign and transverse Hessian in the polynomial fixture; only a common state-independent scalar cancels automatically |
 | [NG-2026-08-14-PRE-A-ST8-Q3LOCK-MESOSCOPIC-SOURCE-FULL-FINITE-GAP-AUTOMATIC-UNIFORM-POINCARE-TRANSFER](#ng-2026-08-14-pre-a-st8-q3lock-mesoscopic-source-full-finite-gap-automatic-uniform-poincare-transfer) | use the unique mesoscopic-source full finite-volume gaps as a positive uniform Poincare input for the categorical phase limit | the fixed v4.0 witness controls the overlap of the opposite source grounds, and an exact orthogonal branch-switching trial gives `Delta_(L,sigma)^full <=[32 sqrt(B_a)/(r_w^2 rho_*)]h_L V ->0`; this global moving direction does not decide the fixed-carrier phasewise GNS gap |
@@ -379,6 +382,70 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY](#ng-2026-07-31-a13-bounded-multiplier-to-shell-decay) | infer production mixed/far dyadic decay from a bounded frozen coefficient | a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1) |
 | [NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY](#ng-2026-07-31-a13-fixed-heat-uniform-transversality) | obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law | dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open |
 | [NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION](#ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification) | identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase | the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled |
+
+<a id="ng-2026-08-14-pre-a-t055-isotropic-gaussian-covariance-automatic-nonzero-bcc-mean-field-extraction"></a>
+### NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION -- stationary covariance does not select a nonzero mean
+
+**Failure mode.** Infer that the registered centered isotropic Gaussian-
+Hartree covariance `G_*` canonically determines a nonzero BCC P1 mean field by
+a deterministic translation-equivariant rule.
+
+**Evidence.** EXP-000858 / R-169 v1.2 distinguishes the covariance input from
+the mean-field target. A stationary covariance is fixed by every translation.
+Equivariance therefore forces its deterministic image to be fixed by every
+translation and hence spatially constant. If the section also preserves
+centering or nonzero-shell support, that constant is zero. The exact
+phase-complete coefficient fixture separately shows that translating the
+field changes its phase while leaving every covariance weight unchanged.
+
+**Consequence.** A nonzero BCC mean requires a phase, origin, orientation,
+source, random or set-valued symmetry-breaking datum not present in `G_*`.
+This does not obstruct covariance/composite observables, phase-complete
+`(Q,c)` data, or an explicitly symmetry-broken owner.
+
+<a id="ng-2026-08-14-pre-a-t055-reading-h-bcc-110-on-shell-automatic-side16-torus-embedding"></a>
+### NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING -- the registered BCC shell is not automatically a side-16 P1 shell
+
+**Failure mode.** Identify the Reading-H BCC `{110}` directions with an exact
+support-preserving on-shell mode set of the hash-pinned side-16 P1 torus
+without declaring a shell projection, tolerance, domain change or parameter
+reinterpretation.
+
+**Evidence.** EXP-000858 / R-169 v1.2 treats the printed
+`q_0=0.6801747616` as the exact rational `212554613/312500000`. Exact Machin
+upper and lower bounds prove
+`3 pi^2/64<q_0^2<4 pi^2/64`, so no integer side-16 reciprocal vector has that
+length. If `q_0` is instead redefined as `pi sqrt(3)/8`, the exact shell has
+only the eight vectors `{+/-1}^3`, fewer than the twelve Reading-H BCC
+directions. The R-169 v1.1 support `4{110}` has index square 32 and is a
+wavelength-rescaled combinatorial fixture, not an on-shell identity.
+
+**Consequence.** A support-preserving exact side-16 lift is unavailable under
+the registered literal shell data. Off-shell fields, a different torus,
+shell projection, tolerance or retuned `q_0` remain possible only with an
+explicit map and error/energy owner. This is not a universal no-map theorem.
+
+<a id="ng-2026-08-14-pre-a-t055-reading-h-scalar-constants-automatic-pinned-p1-energy-intertwiner"></a>
+### NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER -- shared scalar symbols do not identify the energies
+
+**Failure mode.** Infer that the Reading-H Hartree comparison and the
+hash-pinned P1 functional have the same energy ordering because they print the
+same scalar `lambda,gamma`, or try to repair the mismatch by one constant
+field-amplitude normalization.
+
+**Evidence.** EXP-000858 / R-169 v1.2 derives on the scalar-polarized ray
+`V_RH-V_P1=phi^4(108phi^2-43)/400`. The defect is `-1/400` at
+`phi^2=1/4`, `11/1600` at `phi^2=1/2`, and crosses at `43/108`, so it is not
+a candidate-independent scalar offset. Matching the quartic coefficients by
+`Psi=s phi u_0` requires `s^4=2`; matching the sextic coefficients requires
+`s^6=2`; cubing and squaring give the exact contradiction `8!=4`.
+
+**Consequence.** The direct scalar formula is not an ordering-preserving full-
+energy intertwiner. The calculation concerns only bare nonlinear densities:
+the Reading-H determinant, trial mass, mixed and gap terms and the P1
+quadratic, family, lock, Class-II and reference data remain different owners.
+A separately registered retuning, counterterm or full-functional theorem is
+not ruled out.
 
 <a id="ng-2026-08-14-pre-a-t055-truncated-octahedron-combinatorics-automatic-finite-realization-enumeration"></a>
 ### NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION -- face combinatorics do not give a finite realization list

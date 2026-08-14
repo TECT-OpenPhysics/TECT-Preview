@@ -5,13 +5,16 @@
 
 Authorities: `negative-results/registry.md`.
 
-**369 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 298 · retraction: 5
+**372 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 301 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
 | [`NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION`](registry.md#ng-2026-08-14-pre-a-t055-truncated-octahedron-combinatorics-automatic-finite-realization-enumeration) | no_go | infer a finite exhaustive realization list from truncated-octahedron face combinatorics alone |
+| [`NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER`](registry.md#ng-2026-08-14-pre-a-t055-reading-h-scalar-constants-automatic-pinned-p1-energy-intertwiner) | no_go | infer an ordering-preserving Reading-H-to-pinned-P1 energy identity from shared printed scalar couplings or one constant amplitude normalization |
+| [`NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING`](registry.md#ng-2026-08-14-pre-a-t055-reading-h-bcc-110-on-shell-automatic-side16-torus-embedding) | no_go | treat the registered Reading-H BCC `{110}` shell as an automatic exact on-shell support-preserving embedding in the side-16 pinned P1 torus |
+| [`NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION`](registry.md#ng-2026-08-14-pre-a-t055-isotropic-gaussian-covariance-automatic-nonzero-bcc-mean-field-extraction) | no_go | deterministically and translation-equivariantly extract a nonzero BCC mean field from the stationary isotropic Gaussian-Hartree covariance alone |
 | [`NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`](registry.md#ng-2026-08-14-pre-a-t055-common-counterterm-basis-unfixed-finite-parts-automatic-empty-reference-sign) | no_go | infer a scheme-independent candidate/reference sign from a common counterterm basis whose nonconstant finite parts remain free |
 | [`NG-2026-08-14-PRE-A-ST8-Q3LOCK-MESOSCOPIC-SOURCE-FULL-FINITE-GAP-AUTOMATIC-UNIFORM-POINCARE-TRANSFER`](registry.md#ng-2026-08-14-pre-a-st8-q3lock-mesoscopic-source-full-finite-gap-automatic-uniform-poincare-transfer) | no_go | use the unique mesoscopic-source full finite-volume gaps as a positive uniform Poincare input for the categorical phase limit |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-EXACT-TARGET-GENERATOR-AND-SEPARATION-AUTOMATIC-TARGET-GROUNDNESS`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-exact-target-generator-and-separation-automatic-target-groundness) | no_go | infer target groundness from `h_n->0`, an exact target generator and fixed parity/order separation without controlling the combined source residual |
@@ -33,9 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-CATEGORICAL-UNIFORM-CONTINUOUS-ELEMENT-KMS-ENVELOPE-AUTOMATIC-ALL-SHAPE-CAUCHY-AND-UNIQUE-PHASE-QUOTIENT`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-categorical-uniform-continuous-element-kms-envelope-automatic-all-shape-cauchy-and-unique-phase-quotient) | no_go | infer all-shape Cauchy convergence and a unique phase quotient from the categorical continuous/KMS envelope |
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-SECOND-ORDER-DISJOINT-VANISHING-AUTOMATIC-ALL-ORDER-GLOBAL-FESHBACH-CONNECTEDNESS`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-second-order-disjoint-vanishing-automatic-all-order-global-feshbach-connectedness) | no_go | infer connectedness of the raw all-order global scalar Feshbach map from second-order disjoint-edge vanishing |
 | [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-RITZ-CUTOFF-ORDINARY-BOUNDED-OPERATOR-SW-SMALLNESS-UNIFORMITY`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-ritz-cutoff-ordinary-bounded-operator-sw-smallness-uniformity) | no_go | infer cutoff-uniform ordinary operator-norm Schrieffer--Wolff smallness from finite Ritz boundedness |
-| [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-ORBIT-SMEAR-SEED-SUPPORT-AUTOMATIC-SPATIAL-LOCAL-NET`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-orbit-smear-seed-support-automatic-spatial-local-net) | no_go | infer commuting spatial local algebras from formally disjoint seed labels after temporal orbit smearing |
-| [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-LOW-HIGH-RITZ-TAIL-AUTOMATIC-UNIFORM-HIGH-HIGH-INSERTION-CUTOFF`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-low-high-ritz-tail-automatic-uniform-high-high-insertion-cutoff) | no_go | infer uniform high-high-insertion Ritz convergence from an exact low-high Ritz tail alone |
-| [`NG-2026-08-12-PRE-A-ST8-Q3LOCK-CANONICAL-ONE-SITE-COMPACT-CYLINDER-BOND-SUBFLOW-POINT-NORM-C0`](registry.md#ng-2026-08-12-pre-a-st8-q3lock-canonical-one-site-compact-cylinder-bond-subflow-point-norm-c0) | no_go | use canonical one-site compact cylinders as a point-norm C0 carrier for the split Q3 bond subflow |
 
 Search without loading the full registry:
 
