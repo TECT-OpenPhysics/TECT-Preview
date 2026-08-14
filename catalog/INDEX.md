@@ -5,30 +5,30 @@ Compact generated reader surface. The complete current machine inventory is
 `../CATALOG.md` is a frozen compatibility volume at commit `4db22f4e`
 for historical verifiers and no longer grows.
 
-**4219 artefacts** · **49 live claim cards** ·
+**4228 artefacts** · **49 live claim cards** ·
 130 superseded artefacts retained
 
 ## By kind
 
 | Kind | Artefacts | Canonical bytes |
 |---|---:|---:|
-| Claim cards (registry layer) (`claim-card`) | 600 | 5,031,297 |
+| Claim cards (registry layer) (`claim-card`) | 600 | 5,033,122 |
 | Working proof notes (on claim cards) (`proof-note`) | 902 | 107,630,218 |
 | Theory synthesis documents (Layer 2) (`synthesis`) | 345 | 7,749,956 |
 | Migrated legacy notes (immutable) (`archive-note`) | 72 | 1,509,315 |
 | Migrated legacy scripts (runnable) (`archive-script`) | 22 | 319,000 |
 | Migrated legacy run artefacts (immutable) (`archive-artefact`) | 21 | 302,036 |
-| Reviewed legacy research records (`legacy-research-record`) | 139 | 159,456 |
-| Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 164,777 |
-| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 995 | 28,718,430 |
-| Domain codes (`code`) | 730 | 16,439,297 |
-| Verification harness (`verification`) | 43 | 10,287,304 |
+| Reviewed legacy research records (`legacy-research-record`) | 140 | 164,393 |
+| Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
+| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 998 | 28,782,255 |
+| Domain codes (`code`) | 733 | 16,531,195 |
+| Verification harness (`verification`) | 43 | 10,325,176 |
 | Papers (publication layer) (`paper`) | 1 | 546 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
-| Registries and ledgers (`registry`) | 42 | 1,524,039 |
-| Governance policies (`policy`) | 21 | 190,736 |
-| Root documents (`root-doc`) | 14 | 1,637,689 |
-| Other tracked files (`other`) | 252 | 10,851,274 |
+| Registries and ledgers (`registry`) | 42 | 1,528,961 |
+| Governance policies (`policy`) | 21 | 191,479 |
+| Root documents (`root-doc`) | 14 | 1,641,446 |
+| Other tracked files (`other`) | 254 | 10,895,675 |
 
 ## Use
 

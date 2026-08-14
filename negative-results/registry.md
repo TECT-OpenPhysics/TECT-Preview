@@ -10231,6 +10231,21 @@ are separately closed.
 
 **Consequence:** `B3-BCC-STRUCT` RETIRED/REFUTED (T0). The original "BCC energy condensate structure is selected" claim is withdrawn. The operator (2026-06-23) rejected the reframe of B3 onto B1: B1's $\Delta F_{\rm enum}[\mathcal R]>0$ is only a RELATIVE ranking within the tested ordered-reading ensemble $\mathcal E_{\rm tested}$; it does NOT imply $F[\mathcal R_H]<F[0]$ nor $H_{\mathcal R_H}\succeq0$ under unrestricted variations, and must not be conflated with Math400's disordered-collapse/saddle result. Only the restricted ranking projection survives, carried as the separate B1-dependent card `B3-RH-TESTED-STRUCTURE-RANKING` (T4, estimator grade). Physical BCC condensate existence/stability/global selection is NOT established; re-establishing it requires certifying $F[\Psi_{\min}]<F[0]$, $\lambda_{\min}^\perp\ge0$ under symmetry projection, and $N\to\infty$ on the canonical PDE background.
 
+**Append-only correction (2026-08-14; EXP-000862 / R-169 v1.4):** The stored
+Math396 finite periodic run is off-grid-confounded and cannot certify exact
+on-shell Bohr or continuum empty dominance; v1.4 does not claim that this
+mismatch was the sole cause of the old collapse. Reconstructing the scalar
+common-Bohr owner from the Math396 formula/parameters and the exact Math424
+moments gives, at fixed `I=1/500`,
+`0 < BCC < FCC < HEX < LAM`, while all four derivatives are nonzero. Its
+unconstrained radial minima instead obey `LAM < HEX < FCC < BCC < 0`.
+Thus the blanket collapse/saddle leg is withdrawn as exact Bohr evidence,
+but BCC is still worst among these four radial branches. This corrected bare
+owner is not the full Reading-H Hartree functional, an A1/P1 owner, or a
+physical-empty comparison and supplies no transverse stability or limit
+theorem. The original B3 selection claim therefore remains retired; no new
+negative result is created.
+
 <a id="audit-2026-07-17-a3-galerkin-ball-underbound"></a>
 ### AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND -- A3 v2.1 exact-Galerkin evolution underbound
 

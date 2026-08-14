@@ -1526,6 +1526,21 @@ stability, candidate completeness, vacuum selection, C6 result or Round-1
 freeze follows. Physical Sector A and Pre-A remain open. No R-169 v1.3 PDF is
 issued.
 
+EXP-000862 / R-169 v1.4 retains v1.0--v1.3 and closes one narrow T0,
+claim-nonbearing reconstructed common-Bohr scalar owner audit. Exact
+signed-support counting and normalization give the four corrected cubic
+polynomials. At fixed `I=1/500`, `0 < BCC < FCC < HEX < LAM` and every
+derivative is nonzero; radial minimization instead gives
+`LAM < HEX < FCC < BCC < 0`. The preserved finite Math396 run is
+off-grid-confounded and does not bind the exact Bohr or continuum owner, but
+v1.4 does not claim that this mismatch uniquely caused the old collapse.
+The existing B3 retirement receives a dated correction and remains in force;
+no new negative is registered. The full Reading-H Hartree, A1/P1,
+physical-empty, transverse-stability and controlled-limit owners remain
+unidentified. The selective legacy rollout, Reading-H interface, physical-
+empty, C6 and Round-1 gates remain OPEN. Physical Sector A and Pre-A remain
+open. No R-169 v1.4 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

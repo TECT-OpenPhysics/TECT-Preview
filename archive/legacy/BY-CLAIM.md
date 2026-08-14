@@ -60,7 +60,7 @@ Reproduction: `cd archive/legacy/scripts && python Math437_step5_class_closure.p
 - `archive/legacy/notes/Math194/TECT-Math194-BCC-uniqueness-among-3D-crystallographic-competitors.tex.txt (refuted: script re-run -> BCC rank 9)`
 - `archive/legacy/notes/Math383/TECT-Math383-BCC-vs-Competitors-Analytical-and-Numerical.tex.txt (refuted by Math400)`
 
-Reproduction: `python archive/legacy/scripts/Math194_brazovskii_lattice_ranking.py`
+Reproduction: `python codes/foundations/pre_a_t055_legacy_sma_common_bohr_moment_radial_owner_route_split_verify.py`
 
 ## B3-RH-TESTED-STRUCTURE-RANKING — Reading-H is selected within the tested ordered-reading ensemble (estimator grade)  (T4)
 

@@ -177,6 +177,11 @@ orbit/cell and the inherited native Q-versus-`G_*` comparison. It supplies no
 admitted microscopic observable map, common estimand, prospective prediction,
 custodian commitment, freeze or score. Round-1 remains OPEN.
 
+EXP-000862 / R-169 v1.4 closes only a reconstructed common-Bohr scalar
+moment/radial-owner audit. It creates no admitted microscopic observable map,
+common estimand, prospective prediction, custodian commitment, freeze or
+score. Round-1 remains OPEN.
+
 ### **PA-T055-TRUNCATED-OCTAHEDRON-BCC-VORONOI-AND-AFFINE-REALIZATION-FAMILY**
 
 **Statement:** Separate metric-regular, Euclidean-lattice-Voronoi, affine-
@@ -361,6 +366,35 @@ only its native Q-versus-`G_*` sign. `G_*` still has no selected mean/cell or
 physical-empty reference image, and the natural torus is a declared domain
 escape rather than a side-16 P1 bridge. No generic realization or full
 intertwiner follows. The parent remains OPEN.
+
+EXP-000862 / R-169 v1.4 supplies only a reconstructed scalar common-Bohr
+owner audit. It constructs no generic Reading-H realization, `G_*` image,
+full functional/ensemble bridge, or physical-empty comparator. The parent
+remains OPEN.
+
+### **PA-T055-LEGACY-SMA-COMMON-BOHR-MOMENT-RADIAL-OWNER-AND-PRODUCTION-ENDPOINT-AUDIT**
+
+**Statement:** Reconstruct one exact equal-amplitude zero-phase scalar
+common-Bohr owner from the Math396 scalar-SMA formula and parameters and the
+Math424 signed supports, then separate its fixed-intensity endpoint from its
+unconstrained radial minima and from finite-grid, full-Hartree, A1/P1 and
+physical-empty owners.
+
+**Status:** CLOSED ONLY FOR THE DECLARED RECONSTRUCTED SCALAR COMMON-BOHR
+OWNER AND FOUR REGISTERED FAMILIES (2026-08-14). EXP-000862 / R-169 v1.4
+independently recounts `N2,N4,N6` for LAM, HEX, FCC and BCC and obtains
+`K4=(3/2,5/2,27/8,15/4)` and `K6=(5/2,85/9,125/8,220/9)` in that order.
+At `I=1/500`, the exact values obey `0 < BCC < FCC < HEX < LAM`, and all
+four derivatives are nonzero. The exact larger positive radial critical
+points are local minima and obey `LAM < HEX < FCC < BCC < 0` in energy.
+The cosine/signed-Fourier factor is fixed by `a_cos=2c_fourier`; the HEX
+relation basis is used only for zero-sum counting. The preserved Math396 run
+is off-grid-confounded finite provenance and cannot certify the exact
+on-shell Bohr or continuum sign. The result does not claim that off-grid
+mismatch uniquely caused the old collapse. It is not the full Reading-H
+Hartree owner, the A1 side-16 `F_decl` or `F_ref`, or a matched physical-empty
+comparison, and proves no transverse/PDE/continuum stability or candidate
+selection. B3 remains REFUTED/RETIRED.
 
 ### **PA-ROUND1-COMMON-ESTIMAND-AND-CANDIDATE-MAP-SCHEMA**
 
@@ -1048,6 +1082,10 @@ EXP-000790 closes only the finite-volume finite-regulator same-Hamiltonian
 comparison contract. It supplies neither a physical empty branch nor a
 positive specific relative gap; another equilibrium KMS/ground phase and the
 ordered symmetric ground are not strict physical-empty comparators.
+
+EXP-000862 / R-169 v1.4 compares a reconstructed bare scalar owner with its
+own algebraic zero only. It supplies no matched physical-empty branch, full
+Reading-H Hartree parent, or limiting specific gap. This gate remains OPEN.
 
 ### **PA-PRE-A-C0-N1-N5-VALIDATION**
 
@@ -5301,6 +5339,12 @@ copies, and matching hashes do not close a physical claim or change a tier.
 **Source:** `governance/legacy-research-knowledge-base.md`,
 `archive/legacy/RESEARCH-INDEX.md`, and task `T-057`.
 
+EXP-000862 / R-169 v1.4 performs one narrow current applicability audit over
+the selected Math396/399/400/424 sources and records it in
+`LEG-T055-COMMON-BOHR-FDECL-001`. It does not revalidate the broad lineage or
+complete the remaining selected-source dependency and applicability audits.
+This gate remains OPEN.
+
 
 ## Named hypotheses
 
@@ -5494,6 +5538,14 @@ and proves that it loses to the isotropic `G_*` reference. It supplies no
 physical-empty sign, transverse or continuum stability, limit theorem, or
 candidate-completeness result. This is not a resurrection of the retired BCC
 premise; this gate and its physical programme remain OPEN.
+
+EXP-000862 / R-169 v1.4 corrects one historical scalar-SMA evidentiary leg:
+the exact reconstructed radial order is `LAM < HEX < FCC < BCC < 0`, so BCC
+is worst among the four declared minima, while the finite collapse remains
+off-grid-confounded and nonbinding for the Bohr/continuum owner. No full
+Hartree physical-empty sign, transverse stability, limit theorem, or
+candidate-completeness result follows. B3 remains retired; this gate and its
+physical programme remain OPEN.
 
 
 <a id="a3-h1-dim3-q4-kernel"></a>

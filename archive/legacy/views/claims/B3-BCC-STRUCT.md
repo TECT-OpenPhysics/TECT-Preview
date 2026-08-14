@@ -4,7 +4,7 @@
 
 Current claim: **BCC structural selection among tested ordered condensates** | tier `T0` | lifecycle `REFUTED`.
 
-Linked reviewed records: **4**.
+Linked reviewed records: **5**.
 
 ### LEG-MATH194 -- Crystallographic competitor ranking refutation
 
@@ -148,6 +148,47 @@ Reusable elements:
 - Available run artifacts
 
 Boundary: This intake does not revive or newly refute every BCC model, select an alternative vacuum, prove a truncated-octahedron microstructure, or close T-055/C6.
+
+### LEG-T055-COMMON-BOHR-FDECL-001 -- T-055 reconstructed common-Bohr scalar moment and radial-owner revalidation
+
+Assessment: `partially-reusable` | role: `counterevidence` | re-validation: `pass`
+
+Revalidate a narrow nine-source legacy single-mode chain on one reconstructed common-Bohr owner and separate reusable arithmetic from nonapplicable finite-grid or full-Hartree interpretations.
+
+Legacy conclusion: The sources contain reusable exact counting and polynomial-minimization machinery, but their physical hierarchy and collapse language mix coefficient, grid and variational-owner conventions and are not imported unchanged.
+
+Sources:
+
+- `Contents/Codes/supplementary/Math424_AddA_reading_uniqueness.py (compatibility copy: archive/legacy/scripts/Math424_AddA_reading_uniqueness.py)`
+- `Contents/Docs/math/TECT-Math396-Math383-Numerical-NEAR-REFUTATION-BCC-Global-Min.tex.txt (reference copy: archive/legacy/references/Docs/math/TECT-Math396-Math383-Numerical-NEAR-REFUTATION-BCC-Global-Min.tex.txt.source.json)`
+- `Contents/Codes/supplementary/Math396_AddA_symmetry_preserved.py (reference copy: archive/legacy/references/Codes/supplementary/Math396_AddA_symmetry_preserved.py.source.json)`
+- `Contents/Runs/math396/math396_AddA_symmetry_mu2_-1.0000_N32.json (reference copy: archive/legacy/references/Runs/math396/math396_AddA_symmetry_mu2_-1.0000_N32.json)`
+- `Contents/Codes/supplementary/Math400_AddE_brazovskii_one_loop.py (compatibility copy: archive/legacy/scripts/Math400_AddE_brazovskii_one_loop.py)`
+- `Contents/Runs/math396/math396_AddA_symmetry_mu2_+0.0050_N32_perturb.json (reference copy: archive/legacy/references/Runs/math396/math396_AddA_symmetry_mu2_+0.0050_N32_perturb.json)`
+- `Contents/Docs/math/TECT-Math399-Math383-Arithmetic-Audit-and-SMA-Hierarchy-Reversal.tex.txt (reference copy: archive/legacy/references/Docs/math/TECT-Math399-Math383-Arithmetic-Audit-and-SMA-Hierarchy-Reversal.tex.txt.source.json)`
+- `Contents/Runs/math396/math396_AddA_symmetry_mu2_+0.0050_N32.json (reference copy: archive/legacy/references/Runs/math396/math396_AddA_symmetry_mu2_+0.0050_N32.json)`
+- `Contents/Docs/math/TECT-Math400-Math82-AddH-BCC-Refuted-Lamellar-Is-True-Vacuum.tex.txt (reference copy: archive/legacy/references/Docs/math/TECT-Math400-Math82-AddH-BCC-Refuted-Lamellar-Is-True-Vacuum.tex.txt.source.json)`
+
+Achievements:
+
+- Revalidates the exact signed-mode zero-sum counts N2, N4 and N6 for the declared LAM, HEX, FCC and BCC single-shell families.
+- Derives the normalized reconstructed common-Bohr bare polynomials, exact production-endpoint values and derivatives, and the exact nonzero radial minima and ordering.
+- Pins a narrow nine-source set, including the preserved Math396 runs, and classifies their finite periodic collapse as off-grid-confounded evidence that does not transfer to the exact on-shell common-Bohr owner.
+
+Negative or inconclusive findings:
+
+- The Math396 production wave numbers are not reciprocal modes of its finite periodic box, so its stored collapse is off-grid-confounded and is not exact on-shell Bohr or continuum evidence; this audit does not establish the sole cause of the collapse.
+- The Math400 trial-mass construction belongs to a different quadratic/Hartree owner and is not substitutable for the on-shell Bohr coefficient.
+- Bare radial negativity supplies neither a full Reading-H Hartree comparison nor an A1/P1 or physical-empty sign, transverse stability, candidate completeness, or controlled limits.
+
+Reusable elements:
+
+- Exact zero-sum mode-count enumeration
+- Normalized moment-ratio conversion
+- Cubic radial stationary-point algebra
+- Finite-grid commensurability diagnostics
+
+Boundary: Revalidation pass means that this narrow nine-source current audit and exact arithmetic passed. It does not revalidate the broad lineage, accept every legacy conclusion, identify the bare zero with physical empty space, establish a full Reading-H Hartree or A1/P1 minimizer, resurrect BCC selection, close C6, or close Pre-A.
 
 ## No-overclaim
 
