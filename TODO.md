@@ -9,7 +9,7 @@ Counts: In progress 1 · Next up 2 · Blocked 2 · Backlog 5 · Done (compatibil
 ## In progress
 
 - **T-055** Geometry-first truncated-octahedron candidate triage: enumerate realizations and test empty-reference sign before structural use  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: C6-BCC-PREMISE-BLOCKED)_
-  - Operator priority 2026-08-14. The object of study is truncated-octahedron geometry, not BCC as a premise. First enumerate BCC and non-BCC realizations under one renormalization convention, define the empty/disordered reference, and seek F_ren[realization]-F_ren[0] < 0. Only a surviving sign proceeds to symmetry-projected transverse Hessian stability and thermodynamic/continuum control. Q3LOCK is auxiliary evidence, not this lane.
+  - Operator priority 2026-08-14. The object is truncated-octahedron geometry, not BCC as a premise. Use natural analogues only as calibrated diagnostics: BCC Voronoi cells for exact 14-face combinatorics, Kelvin-type foams for interface observables, lower-area foam competitors as negative controls, and growing-bubble coarsening for rescaled cell-topology/defect attractor tests. An algorithmic Reading-H gradient-flow parameter is not physical time. First freeze center-extraction alternatives, enumerate BCC and non-BCC realizations under one renormalization convention, and test F_ren[realization]-F_ren[0] < 0. Only a surviving sign proceeds to transverse Hessian stability and thermodynamic/continuum control. Q3LOCK is auxiliary evidence.
   - _updated 2026-08-14_
 
 ## Next up
