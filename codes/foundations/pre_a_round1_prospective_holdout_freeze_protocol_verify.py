@@ -9,7 +9,10 @@ T0 children, four negatives, three open successors, and all 27 v1.3 hostile
 classes while retaining the 28/7/11/57/48 hostile-count contracts.
 
 ``--staged`` reports stale or missing formal, stored, generated, changelog, or
-checkpoint authorities without weakening contradiction checks. The issued
+checkpoint authorities without weakening contradiction checks. Historical
+changelog and negative identities are resolved through their complete locator
+sets; rolling ``recent`` readers are checked only for current counts and
+window metadata. The issued
 v1.9/v1.0, v2.0/v1.1, and v2.1/v1.2 source/PDF pairs remain historical. The
 R-167 ``v2_2_checkpoint_synthesis`` and R-168 ``v1_3_checkpoint_synthesis``
 fields preserve their proof-first deferred history and now form exactly one
@@ -33,7 +36,7 @@ from pathlib import Path
 from typing import Any, Iterable, Mapping
 
 
-__version__ = "1.3.0"
+__version__ = "1.3.1"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = "pre-a-round1-prospective-holdout-freeze-protocol"
@@ -1496,6 +1499,10 @@ def invocation_view(payload: dict[str, Any] | None) -> dict[str, Any] | None:
     those hashes test syntax/existence only and include the result files being
     refreshed, so their values are normalized while every theorem, identity,
     path, role, result key, formal binding, and non-fixture hash remains exact.
+    The integrated output is also catalog-bound, so its emitted SHA is a
+    self-reference. Only that one comparison hash is replaced by an invocation
+    placeholder; the live catalog still checks actual bytes and SHA before the
+    payload is emitted.
     """
 
     if payload is None:
@@ -1512,9 +1519,59 @@ def invocation_view(payload: dict[str, Any] | None) -> dict[str, Any] | None:
     fixture_field = "m2_physical_response_successor_minimum_contract_fixture"
     if fixture_field in copied:
         copied[fixture_field] = _normalize_fixture_hashes(copied[fixture_field])
+    output_key = repo_path(DEFAULT_OUTPUT)
+    source_hashes = copied.get("source_hashes")
+    if isinstance(source_hashes, dict) and output_key in source_hashes:
+        source_hashes[output_key] = "<CURRENT-INVOCATION-OUTPUT-SHA256>"
+
+    def normalize_output_node(value: Any) -> Any:
+        if isinstance(value, dict):
+            return {
+                key: (
+                    "<CURRENT-INVOCATION-OUTPUT-BYTES>"
+                    if key == "bytes"
+                    else "<CURRENT-INVOCATION-OUTPUT-SHA256_12>"
+                    if key == "sha256_12"
+                    else normalize_output_node(item)
+                )
+                for key, item in value.items()
+            }
+        if isinstance(value, list):
+            return [normalize_output_node(item) for item in value]
+        return value
+
+    def normalize_output_references(value: Any) -> Any:
+        if isinstance(value, dict):
+            output_path = value.get("path") == output_key
+            return {
+                key: (
+                    "<CURRENT-INVOCATION-OUTPUT-BYTES>"
+                    if key == "bytes" and output_path
+                    else "<CURRENT-INVOCATION-OUTPUT-SHA256>"
+                    if output_path and key == "sha256"
+                    else "<CURRENT-INVOCATION-OUTPUT-SHA256_12>"
+                    if output_path and key == "sha256_12"
+                    else normalize_output_node(item)
+                    if key == output_key and isinstance(item, dict)
+                    else normalize_output_references(item)
+                )
+                for key, item in value.items()
+            }
+        if isinstance(value, list):
+            return [normalize_output_references(item) for item in value]
+        return value
+
+    if "cross_derived" in copied:
+        copied["cross_derived"] = normalize_output_references(copied["cross_derived"])
+
     assertions = copied.get("assertions")
-    if isinstance(assertions, list):
-        for assertion in assertions:
+    assertion_rows = (
+        assertions.get("rows")
+        if isinstance(assertions, dict)
+        else assertions
+    )
+    if isinstance(assertion_rows, list):
+        for assertion in assertion_rows:
             if not isinstance(assertion, dict):
                 continue
             name = assertion.get("name")
@@ -1547,6 +1604,26 @@ def invocation_view(payload: dict[str, Any] | None) -> dict[str, Any] | None:
                         assertion[field] = _normalize_fixture_hashes(
                             assertion[field]
                         )
+            if assertion.get("name") == "catalog R-168 artifact bytes and hashes current":
+                for field in ("actual", "expected"):
+                    value = assertion.get(field)
+                    if isinstance(value, dict) and output_key in value:
+                        value[output_key] = normalize_output_node(value[output_key])
+            if assertion.get("group") == "freshness":
+                if isinstance(assertion.get("actual"), dict) and "exact deterministic payload" in str(name):
+                    assertion["actual"] = {
+                        key: "<CURRENT-FRESH-PAYLOAD-SHA256>"
+                        for key in assertion["actual"]
+                    }
+                elif "normalized CLI sentinel" in str(name) and isinstance(assertion.get("actual"), str):
+                    assertion["actual"] = re.sub(
+                        r"SHA256 [0-9a-f]{64}",
+                        "SHA256 <CURRENT-FRESH-PAYLOAD>",
+                        assertion["actual"],
+                    )
+            for field in ("actual", "expected"):
+                if field in assertion:
+                    assertion[field] = normalize_output_references(assertion[field])
     return copied
 
 
@@ -3945,6 +4022,23 @@ def validate_certificate(audit: Audit) -> str | None:
         ),
         audit, core=True, group="certificate",
     )
+    require_tokens(
+        text,
+        "certificate rolling-reader locator correction",
+        (
+            "EXP-000866",
+            "generated-reader locator correction",
+            "full changelog locator",
+            "full negative locator",
+            "bounded recent reader",
+            "no theorem scope change",
+            "integrated output self-reference",
+            "invocation placeholder",
+        ),
+        audit,
+        core=True,
+        group="certificate",
+    )
 
     audit.check(
         "certificate exact residual hard-row cells",
@@ -4297,6 +4391,9 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         "legacy_exploration_matches": len(records_by_id.get(V1_0_EXPLORATION_ID, [])),
         "hardening_exploration_matches": len(records_by_id.get(HARDENING_EXPLORATION_ID, [])),
         "v1_3_event_matches": len(v1_3_events),
+        "v1_3_event_ids": [
+            event.get("id") for event in v1_3_events if isinstance(event.get("id"), str)
+        ],
         "historical_event_counts": historical_event_counts,
     }
 
@@ -4449,6 +4546,115 @@ def validate_catalog(audit: Audit) -> dict[str, Any]:
     return {"total": manifest.get("total", 0), "inventory": inventory}
 
 
+def validate_changelog_locators(
+    index: dict[str, Any], formal: dict[str, Any], audit: Audit
+) -> dict[str, Any]:
+    """Validate the complete changelog locator set, not its rolling reader."""
+
+    expected_total = formal.get("changelog_count")
+    specs = [row for row in as_list(index.get("locators")) if isinstance(row, dict)]
+    all_entries: list[dict[str, Any]] = []
+    shard_checks: list[dict[str, Any]] = []
+    for spec in specs:
+        relative = spec.get("path")
+        path = REPO / relative if isinstance(relative, str) else None
+        payload = load_json(path, audit, f"changelog locator shard {relative}") if path else None
+        entries = [row for row in as_list(as_mapping(payload).get("entries")) if isinstance(row, dict)]
+        first_ordinal = spec.get("first_ordinal")
+        last_ordinal = spec.get("last_ordinal")
+        expected_range = Path(relative).stem if isinstance(relative, str) else None
+        valid = (
+            path is not None
+            and payload is not None
+            and payload.get("schema") == "tect/changelog-locators/1.0"
+            and payload.get("count") == len(entries) == spec.get("count")
+            and payload.get("range") == expected_range
+            and artifact_sha256(path) == spec.get("sha256")
+            and path.stat().st_size == spec.get("bytes")
+        )
+        shard_checks.append(
+            {
+                "path": relative,
+                "valid": valid,
+                "count": len(entries),
+                "range": payload.get("range") if payload else None,
+            }
+        )
+        all_entries.extend(entries)
+
+    identifiers = [row.get("id") for row in all_entries]
+    target_event_ids = [
+        value for value in as_list(formal.get("v1_3_event_ids")) if isinstance(value, str)
+    ]
+    target_event_id = target_event_ids[0] if len(target_event_ids) == 1 else None
+    ordinals = [row.get("ordinal") for row in all_entries]
+    ordinals_are_ints = all(isinstance(ordinal, int) for ordinal in ordinals)
+    contract = (
+        index.get("schema") == "tect/changelog-index/2.0"
+        and index.get("total") == expected_total
+        and bool(specs)
+        and all(row.get("valid") for row in shard_checks)
+        and len(all_entries) == expected_total
+        and len(set(identifiers)) == len(identifiers)
+        and ordinals_are_ints
+        and sorted(ordinals) == list(range(1, expected_total + 1))
+        and target_event_id is not None
+        and target_event_id in identifiers
+    )
+    audit.pending(
+        "changelog complete locator current",
+        contract,
+        {
+            "schema": index.get("schema"),
+            "index_total": index.get("total"),
+            "expected_total": expected_total,
+            "shards": shard_checks,
+            "entries": len(all_entries),
+            "unique_ids": len(set(identifiers)),
+            "target_event_id": target_event_id,
+            "target_present": target_event_id in identifiers if target_event_id else False,
+        },
+        "all locator shards hash/count/range-bind to the full accepted-event set and contain the historical R-168 event",
+        "generated",
+    )
+
+    missing_target = [row for row in all_entries if row.get("id") != target_event_id]
+    substituted_target = [
+        {**row, "id": "__UNDECLARED_EVENT_SUBSTITUTE__"}
+        if row.get("id") == target_event_id
+        else row
+        for row in all_entries
+    ]
+
+    def accepts(rows: list[dict[str, Any]]) -> bool:
+        return (
+            target_event_id is not None
+            and len(rows) == expected_total
+            and target_event_id in [row.get("id") for row in rows]
+        )
+
+    audit.check(
+        "changelog locator deletion mutation rejected",
+        not accepts(missing_target),
+        not accepts(missing_target),
+        True,
+        "generated",
+    )
+    audit.check(
+        "changelog locator substitution mutation rejected",
+        not accepts(substituted_target),
+        not accepts(substituted_target),
+        True,
+        "generated",
+    )
+    return {
+        "contract": contract,
+        "entries": all_entries,
+        "identifiers": identifiers,
+        "shards": shard_checks,
+    }
+
+
 def validate_generated(formal: dict[str, Any], audit: Audit) -> dict[str, Any]:
     results = validate_locator(
         REPO / "results/index.json",
@@ -4475,23 +4681,22 @@ def validate_generated(formal: dict[str, Any], audit: Audit) -> dict[str, Any]:
     if changelog is not None:
         recent = as_list(changelog.get("recent"))
         audit.pending(
-            "changelog locator current",
+            "changelog rolling reader metadata current",
             changelog.get("schema") == "tect/changelog-index/2.0"
             and changelog.get("total") == formal.get("changelog_count")
-            and any(
-                isinstance(row, dict)
-                and EXPLORATION_ID in row.get("claim_ids", [])
-                for row in recent
-            ),
+            and changelog.get("recent_count") == len(recent)
+            and len(recent) <= changelog.get("total", 0),
             {
                 "schema": changelog.get("schema"),
                 "total": changelog.get("total"),
                 "expected_total": formal.get("changelog_count"),
+                "recent_count": changelog.get("recent_count"),
                 "recent": len(recent),
             },
-            "current total and recent R-168 v1.3 theorem event",
+            "current total and bounded recent-window metadata",
             "generated",
         )
+        validate_changelog_locators(changelog, formal, audit)
 
     result_count = as_mapping(results).get("count")
     negative_count = as_mapping(negatives).get("count")
@@ -4505,7 +4710,7 @@ def validate_generated(formal: dict[str, Any], audit: Audit) -> dict[str, Any]:
         (
             REPO / "negative-results/INDEX.md",
             "negative reader",
-            (*NEGATIVE_IDS, f"{negative_count} registered records"),
+            (f"{negative_count} registered records",),
         ),
         (
             REPO / "claims/GATES-INDEX.md",
@@ -4524,7 +4729,7 @@ def validate_generated(formal: dict[str, Any], audit: Audit) -> dict[str, Any]:
         (
             REPO / "changelog/INDEX.md",
             "changelog reader",
-            (RESULT_NUMBER, EXPLORATION_ID, f"{formal.get('changelog_count')} accepted events"),
+            (f"{formal.get('changelog_count')} accepted events",),
         ),
     )
     for path, label, tokens in generated_texts:

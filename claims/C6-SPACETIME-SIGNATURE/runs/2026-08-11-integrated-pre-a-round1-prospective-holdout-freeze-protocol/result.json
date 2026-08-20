@@ -2,7 +2,7 @@
   "assertions": {
     "failed": 0,
     "missing": 0,
-    "passed": 349,
+    "passed": 362,
     "rows": [
       {
         "actual": "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json",
@@ -1601,7 +1601,7 @@
         "status": "PASS"
       },
       {
-        "actual": 58003,
+        "actual": 59599,
         "expected": ">0",
         "group": "files",
         "name": "certificate nonempty",
@@ -1675,6 +1675,13 @@
         "expected": "all required tokens present",
         "group": "certificate",
         "name": "certificate v1.3 theorem hostile and no-overclaim contract required tokens",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": "all required tokens present",
+        "group": "certificate",
+        "name": "certificate rolling-reader locator correction required tokens",
         "status": "PASS"
       },
       {
@@ -1838,7 +1845,7 @@
       },
       {
         "actual": {
-          "LF_normalized": "46a79f584e29cea91b9998ec9aef71d619f1bdd5f20ab84e05c704da3a7399ca",
+          "LF_normalized": "e1bf8d284fb1d116db6f11d935f736f62d8165ad39b191ab2ef1ecac6ed1ddc6",
           "deferred_exact": false,
           "issued_exact": true,
           "lifecycle": {
@@ -1937,7 +1944,7 @@
             "deferred_pair_valid": false,
             "issued_checkpoint_valid": true
           },
-          "raw": "46a79f584e29cea91b9998ec9aef71d619f1bdd5f20ab84e05c704da3a7399ca"
+          "raw": "e1bf8d284fb1d116db6f11d935f736f62d8165ad39b191ab2ef1ecac6ed1ddc6"
         },
         "expected": {
           "deferred": {
@@ -2040,8 +2047,8 @@
       },
       {
         "actual": {
-          "a": "ae4c9d18b9fb0f2f61cf0ba3fc2d2028fbc53a7745d910254f35415e8e32be74",
-          "b": "ae4c9d18b9fb0f2f61cf0ba3fc2d2028fbc53a7745d910254f35415e8e32be74"
+          "a": "1e9eb9e0a17c84302131b0d7239f77c269f3eff57719ca8b6406da2c3a20e17a",
+          "b": "1e9eb9e0a17c84302131b0d7239f77c269f3eff57719ca8b6406da2c3a20e17a"
         },
         "expected": "equal canonical hashes",
         "group": "freshness",
@@ -2050,8 +2057,8 @@
       },
       {
         "actual": {
-          "a": "db265eaa8bb890739939b0b245a8bdcfc0ac86cd085b01147f367b48ed07233e",
-          "b": "db265eaa8bb890739939b0b245a8bdcfc0ac86cd085b01147f367b48ed07233e",
+          "a": "7058fe6c51bb9a5d2916efb990fc4c51a2ad020fed0de16f849d2b9cf69edad9",
+          "b": "7058fe6c51bb9a5d2916efb990fc4c51a2ad020fed0de16f849d2b9cf69edad9",
           "sentinels": [
             {
               "passed": 423,
@@ -2121,7 +2128,6 @@
             "PA-M2-CI8-RS-v0",
             "PA-M5-NL3-SV-v0"
           ],
-          "current_head": "7bc9946d7c42cfeda3cc36b5b0e79b26382245a2",
           "freeze_record_count": 0,
           "freeze_records": [],
           "normalized_map_status": {
@@ -2147,7 +2153,7 @@
         "status": "PASS"
       },
       {
-        "actual": "PASS 446/446 | SHA256 83a547a2268a1c928523bf5916326fa3edc656be0f0258fe8864f36d19cd67b8 | PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
+        "actual": "PASS 446/446 | SHA256 e45312c95093c68d449ba3bbf944b79ea79e703236055d5b17f1b97923d423ea | PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
         "expected": "PASS|STAGED|INCOMPLETE count/count",
         "group": "freshness",
         "name": "independent A normalized CLI sentinel",
@@ -2161,7 +2167,7 @@
         "status": "PASS"
       },
       {
-        "actual": "PASS 446/446 | SHA256 83a547a2268a1c928523bf5916326fa3edc656be0f0258fe8864f36d19cd67b8 | PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
+        "actual": "PASS 446/446 | SHA256 e45312c95093c68d449ba3bbf944b79ea79e703236055d5b17f1b97923d423ea | PA-ROUND1-PROSPECTIVE-HOLDOUT-FREEZE-PROTOCOL-AND-CURRENT-TREE-READINESS-AUDIT",
         "expected": "PASS|STAGED|INCOMPLETE count/count",
         "group": "freshness",
         "name": "independent B normalized CLI sentinel",
@@ -2169,8 +2175,8 @@
       },
       {
         "actual": {
-          "a": "83a547a2268a1c928523bf5916326fa3edc656be0f0258fe8864f36d19cd67b8",
-          "b": "83a547a2268a1c928523bf5916326fa3edc656be0f0258fe8864f36d19cd67b8"
+          "a": "e45312c95093c68d449ba3bbf944b79ea79e703236055d5b17f1b97923d423ea",
+          "b": "e45312c95093c68d449ba3bbf944b79ea79e703236055d5b17f1b97923d423ea"
         },
         "expected": "equal canonical hashes",
         "group": "freshness",
@@ -2179,8 +2185,8 @@
       },
       {
         "actual": {
-          "a": "159f82b2f702f7cbb2f36f4705b86ff33e5309228e8e77c34aecbb79f2709246",
-          "b": "159f82b2f702f7cbb2f36f4705b86ff33e5309228e8e77c34aecbb79f2709246",
+          "a": "b6aae87d74d2a8f3802148c329b89e30b2d355d93bea77a42eb5b724335c084c",
+          "b": "b6aae87d74d2a8f3802148c329b89e30b2d355d93bea77a42eb5b724335c084c",
           "sentinels": [
             {
               "passed": 446,
@@ -2250,7 +2256,6 @@
             "PA-M2-CI8-RS-v0",
             "PA-M5-NL3-SV-v0"
           ],
-          "current_head": "7bc9946d7c42cfeda3cc36b5b0e79b26382245a2",
           "freeze_record_count": 0,
           "freeze_records": [],
           "normalized_map_status": {
@@ -2270,8 +2275,8 @@
       },
       {
         "actual": {
-          "fresh": "db265eaa8bb890739939b0b245a8bdcfc0ac86cd085b01147f367b48ed07233e",
-          "stored": "db265eaa8bb890739939b0b245a8bdcfc0ac86cd085b01147f367b48ed07233e"
+          "fresh": "7058fe6c51bb9a5d2916efb990fc4c51a2ad020fed0de16f849d2b9cf69edad9",
+          "stored": "7058fe6c51bb9a5d2916efb990fc4c51a2ad020fed0de16f849d2b9cf69edad9"
         },
         "expected": "equal canonical hashes after staged-flag normalization",
         "group": "freshness",
@@ -2280,8 +2285,8 @@
       },
       {
         "actual": {
-          "fresh": "159f82b2f702f7cbb2f36f4705b86ff33e5309228e8e77c34aecbb79f2709246",
-          "stored": "159f82b2f702f7cbb2f36f4705b86ff33e5309228e8e77c34aecbb79f2709246"
+          "fresh": "b6aae87d74d2a8f3802148c329b89e30b2d355d93bea77a42eb5b724335c084c",
+          "stored": "b6aae87d74d2a8f3802148c329b89e30b2d355d93bea77a42eb5b724335c084c"
         },
         "expected": "equal canonical hashes after staged-flag normalization",
         "group": "freshness",
@@ -2635,12 +2640,12 @@
       {
         "actual": {
           "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py": "69a9486b060c711679314806b302af85652c6d8317fccebba83578b5b2d397a9",
-          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "46a79f584e29cea91b9998ec9aef71d619f1bdd5f20ab84e05c704da3a7399ca",
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "e1bf8d284fb1d116db6f11d935f736f62d8165ad39b191ab2ef1ecac6ed1ddc6",
           "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "636006db6cccf211bc07f8984cdc28f9e8f16c90dc25b46776d682abde24b76e"
         },
         "expected": {
           "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py": "69a9486b060c711679314806b302af85652c6d8317fccebba83578b5b2d397a9",
-          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "46a79f584e29cea91b9998ec9aef71d619f1bdd5f20ab84e05c704da3a7399ca",
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "e1bf8d284fb1d116db6f11d935f736f62d8165ad39b191ab2ef1ecac6ed1ddc6",
           "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "636006db6cccf211bc07f8984cdc28f9e8f16c90dc25b46776d682abde24b76e"
         },
         "group": "freshness",
@@ -2999,7 +3004,7 @@
           "strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json": "102b0d5f0053b1286bb9751ababadf4b13f94abafebaece5295e91a550e070bd",
           "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json": "01803912d108499596c40bf30551150c704fe6adf49b2e43d86c41ce93bca608",
           "strategy/pre-a-round1-frozen-quadratic-causal-admission-triage-manifest.json": "8d2a50fcbb70aaba7e6d8f13ed66d530c66c8f58e4bfc57da816238ad970c1d1",
-          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "46a79f584e29cea91b9998ec9aef71d619f1bdd5f20ab84e05c704da3a7399ca",
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "e1bf8d284fb1d116db6f11d935f736f62d8165ad39b191ab2ef1ecac6ed1ddc6",
           "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "636006db6cccf211bc07f8984cdc28f9e8f16c90dc25b46776d682abde24b76e"
         },
         "expected": {
@@ -3011,7 +3016,7 @@
           "strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json": "102b0d5f0053b1286bb9751ababadf4b13f94abafebaece5295e91a550e070bd",
           "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json": "01803912d108499596c40bf30551150c704fe6adf49b2e43d86c41ce93bca608",
           "strategy/pre-a-round1-frozen-quadratic-causal-admission-triage-manifest.json": "8d2a50fcbb70aaba7e6d8f13ed66d530c66c8f58e4bfc57da816238ad970c1d1",
-          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "46a79f584e29cea91b9998ec9aef71d619f1bdd5f20ab84e05c704da3a7399ca",
+          "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "e1bf8d284fb1d116db6f11d935f736f62d8165ad39b191ab2ef1ecac6ed1ddc6",
           "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "636006db6cccf211bc07f8984cdc28f9e8f16c90dc25b46776d682abde24b76e"
         },
         "group": "freshness",
@@ -3031,8 +3036,8 @@
       {
         "actual": [
           true,
-          "7bc9946d7c42cfeda3cc36b5b0e79b26382245a2",
-          "7bc9946d7c42cfeda3cc36b5b0e79b26382245a2"
+          "db7056533f14e717bcc761d8ad545ac5e233432f",
+          "db7056533f14e717bcc761d8ad545ac5e233432f"
         ],
         "expected": "ancestor and equal observed HEAD",
         "group": "cross_core",
@@ -3164,7 +3169,7 @@
               "PA-M2-CI8-RS-v0",
               "PA-M5-NL3-SV-v0"
             ],
-            "current_head": "7bc9946d7c42cfeda3cc36b5b0e79b26382245a2",
+            "current_head": "db7056533f14e717bcc761d8ad545ac5e233432f",
             "freeze_record_count": 0,
             "freeze_records": [],
             "local_freeze_tag_observation": {
@@ -3216,7 +3221,7 @@
               "PA-M2-CI8-RS-v0",
               "PA-M5-NL3-SV-v0"
             ],
-            "current_head": "7bc9946d7c42cfeda3cc36b5b0e79b26382245a2",
+            "current_head": "db7056533f14e717bcc761d8ad545ac5e233432f",
             "freeze_record_count": 0,
             "freeze_records": [],
             "local_freeze_tag_observation": {
@@ -6025,7 +6030,7 @@
               "media_type": "text/x-python",
               "path": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py",
               "role": "RAW_ESTIMATOR",
-              "sha256": "a29d4e907a453f7df46bb9002934271099afb9f77e4dcb5e4adfe296a8c4ef53"
+              "sha256": "1a141b5043c3ccd880df568b51e0f07100fced6765c07386cd30089b337600cd"
             },
             "source_ids": [
               "SYNTHETIC-DERIVED-001"
@@ -6144,7 +6149,7 @@
                   "media_type": "application/json",
                   "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
                   "role": "ERROR_RUN",
-                  "sha256": "6e781e596555b610d845215bbe702ce0e439e2d74acab7a47f926e06e5fa1895"
+                  "sha256": "581b669815eee39403817e272f28e927c55a8261bef2bbc96f9715d47a4765c9"
                 },
                 "script_ref": {
                   "media_type": "text/x-python",
@@ -6162,7 +6167,7 @@
                   "media_type": "application/json",
                   "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
                   "role": "ERROR_RUN",
-                  "sha256": "6298a7fe0b732edf3f17cb4b2a11f0251b788249087c8d7b7db2a02b372460eb"
+                  "sha256": "3a95731dd2d0993e55df83aaf88dcec62b4ea6c9678f8e3ab3f3d8f369256cc3"
                 },
                 "script_ref": {
                   "media_type": "text/x-python",
@@ -6180,13 +6185,13 @@
                   "media_type": "application/json",
                   "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
                   "role": "ERROR_RUN",
-                  "sha256": "b6958771d365c5313ec036a3368a327343ef545c6013e597298b9dc8f518ae0f"
+                  "sha256": "0c6d85e77ff2842d6c417883a0d10d74cb7b7f4d93f6f8b831ab234cebf50acc"
                 },
                 "script_ref": {
                   "media_type": "text/x-python",
                   "path": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py",
                   "role": "ERROR_SCRIPT",
-                  "sha256": "a29d4e907a453f7df46bb9002934271099afb9f77e4dcb5e4adfe296a8c4ef53"
+                  "sha256": "1a141b5043c3ccd880df568b51e0f07100fced6765c07386cd30089b337600cd"
                 },
                 "uniform_domain": "SYNTHETIC_COMPACT_FIXTURE_DOMAIN"
               },
@@ -6198,7 +6203,7 @@
                   "media_type": "application/json",
                   "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
                   "role": "ERROR_RUN",
-                  "sha256": "6e781e596555b610d845215bbe702ce0e439e2d74acab7a47f926e06e5fa1895"
+                  "sha256": "581b669815eee39403817e272f28e927c55a8261bef2bbc96f9715d47a4765c9"
                 },
                 "script_ref": {
                   "media_type": "text/x-python",
@@ -6216,7 +6221,7 @@
                   "media_type": "application/json",
                   "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
                   "role": "ERROR_RUN",
-                  "sha256": "6298a7fe0b732edf3f17cb4b2a11f0251b788249087c8d7b7db2a02b372460eb"
+                  "sha256": "3a95731dd2d0993e55df83aaf88dcec62b4ea6c9678f8e3ab3f3d8f369256cc3"
                 },
                 "script_ref": {
                   "media_type": "text/x-python",
@@ -6234,13 +6239,13 @@
                   "media_type": "application/json",
                   "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
                   "role": "ERROR_RUN",
-                  "sha256": "b6958771d365c5313ec036a3368a327343ef545c6013e597298b9dc8f518ae0f"
+                  "sha256": "0c6d85e77ff2842d6c417883a0d10d74cb7b7f4d93f6f8b831ab234cebf50acc"
                 },
                 "script_ref": {
                   "media_type": "text/x-python",
                   "path": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py",
                   "role": "ERROR_SCRIPT",
-                  "sha256": "a29d4e907a453f7df46bb9002934271099afb9f77e4dcb5e4adfe296a8c4ef53"
+                  "sha256": "1a141b5043c3ccd880df568b51e0f07100fced6765c07386cd30089b337600cd"
                 },
                 "uniform_domain": "SYNTHETIC_COMPACT_FIXTURE_DOMAIN"
               }
@@ -6288,7 +6293,7 @@
                 "media_type": "application/json",
                 "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
                 "role": "ERROR_RUN",
-                "sha256": "6e781e596555b610d845215bbe702ce0e439e2d74acab7a47f926e06e5fa1895"
+                "sha256": "581b669815eee39403817e272f28e927c55a8261bef2bbc96f9715d47a4765c9"
               },
               "script_ref": {
                 "media_type": "text/x-python",
@@ -6306,7 +6311,7 @@
                 "media_type": "application/json",
                 "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
                 "role": "ERROR_RUN",
-                "sha256": "6298a7fe0b732edf3f17cb4b2a11f0251b788249087c8d7b7db2a02b372460eb"
+                "sha256": "3a95731dd2d0993e55df83aaf88dcec62b4ea6c9678f8e3ab3f3d8f369256cc3"
               },
               "script_ref": {
                 "media_type": "text/x-python",
@@ -6324,13 +6329,13 @@
                 "media_type": "application/json",
                 "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
                 "role": "ERROR_RUN",
-                "sha256": "b6958771d365c5313ec036a3368a327343ef545c6013e597298b9dc8f518ae0f"
+                "sha256": "0c6d85e77ff2842d6c417883a0d10d74cb7b7f4d93f6f8b831ab234cebf50acc"
               },
               "script_ref": {
                 "media_type": "text/x-python",
                 "path": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py",
                 "role": "ERROR_SCRIPT",
-                "sha256": "a29d4e907a453f7df46bb9002934271099afb9f77e4dcb5e4adfe296a8c4ef53"
+                "sha256": "1a141b5043c3ccd880df568b51e0f07100fced6765c07386cd30089b337600cd"
               },
               "uniform_domain": "SYNTHETIC_COMPACT_FIXTURE_DOMAIN"
             },
@@ -6342,7 +6347,7 @@
                 "media_type": "application/json",
                 "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
                 "role": "ERROR_RUN",
-                "sha256": "6e781e596555b610d845215bbe702ce0e439e2d74acab7a47f926e06e5fa1895"
+                "sha256": "581b669815eee39403817e272f28e927c55a8261bef2bbc96f9715d47a4765c9"
               },
               "script_ref": {
                 "media_type": "text/x-python",
@@ -6360,7 +6365,7 @@
                 "media_type": "application/json",
                 "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
                 "role": "ERROR_RUN",
-                "sha256": "6298a7fe0b732edf3f17cb4b2a11f0251b788249087c8d7b7db2a02b372460eb"
+                "sha256": "3a95731dd2d0993e55df83aaf88dcec62b4ea6c9678f8e3ab3f3d8f369256cc3"
               },
               "script_ref": {
                 "media_type": "text/x-python",
@@ -6378,13 +6383,13 @@
                 "media_type": "application/json",
                 "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
                 "role": "ERROR_RUN",
-                "sha256": "b6958771d365c5313ec036a3368a327343ef545c6013e597298b9dc8f518ae0f"
+                "sha256": "0c6d85e77ff2842d6c417883a0d10d74cb7b7f4d93f6f8b831ab234cebf50acc"
               },
               "script_ref": {
                 "media_type": "text/x-python",
                 "path": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py",
                 "role": "ERROR_SCRIPT",
-                "sha256": "a29d4e907a453f7df46bb9002934271099afb9f77e4dcb5e4adfe296a8c4ef53"
+                "sha256": "1a141b5043c3ccd880df568b51e0f07100fced6765c07386cd30089b337600cd"
               },
               "uniform_domain": "SYNTHETIC_COMPACT_FIXTURE_DOMAIN"
             }
@@ -6453,7 +6458,7 @@
             "media_type": "text/x-python",
             "path": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py",
             "role": "VERIFIER_INTEGRATED",
-            "sha256": "a29d4e907a453f7df46bb9002934271099afb9f77e4dcb5e4adfe296a8c4ef53"
+            "sha256": "1a141b5043c3ccd880df568b51e0f07100fced6765c07386cd30089b337600cd"
           },
           "primary_ref": {
             "media_type": "text/x-python",
@@ -8625,35 +8630,35 @@
         "status": "PASS"
       },
       {
-        "actual": 277611,
+        "actual": 393694,
         "expected": ">0",
         "group": "files",
         "name": "gate registry nonempty",
         "status": "PASS"
       },
       {
-        "actual": 654652,
+        "actual": 743683,
         "expected": ">0",
         "group": "files",
         "name": "results ledger nonempty",
         "status": "PASS"
       },
       {
-        "actual": 692954,
+        "actual": 747704,
         "expected": ">0",
         "group": "files",
         "name": "negative registry nonempty",
         "status": "PASS"
       },
       {
-        "actual": 816,
+        "actual": 866,
         "expected": ">=1",
         "group": "formal",
         "name": "exploration ledger parses",
         "status": "PASS"
       },
       {
-        "actual": 608,
+        "actual": 648,
         "expected": ">=1",
         "group": "formal",
         "name": "changelog parses",
@@ -9539,8 +9544,8 @@
       },
       {
         "actual": {
-          "count": 168,
-          "entries": 168,
+          "count": 170,
+          "entries": 170,
           "required_present": {
             "R-168": true
           },
@@ -9566,8 +9571,8 @@
       },
       {
         "actual": {
-          "count": 344,
-          "entries": 344,
+          "count": 372,
+          "entries": 372,
           "required_present": {
             "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE": true,
             "NG-2026-08-11-PRE-A-M2-ONE-Q-PHASON-AUTOMATIC-PHYSICAL-SUPERFLUID-DENSITY": true,
@@ -9605,8 +9610,8 @@
       },
       {
         "actual": {
-          "count": 150,
-          "entries": 150,
+          "count": 206,
+          "entries": 206,
           "required_present": {
             "PA-M2-CI8-ANALYTIC-MAP-INTEGER-EXPONENT-TRANSPORT": true,
             "PA-M2-CI8-FINITE-TORUS-GAUSSIAN-DISPERSION-FINGERPRINT": true,
@@ -9674,18 +9679,141 @@
       },
       {
         "actual": {
-          "expected_total": 608,
+          "expected_total": 648,
           "recent": 25,
+          "recent_count": 25,
           "schema": "tect/changelog-index/2.0",
-          "total": 608
+          "total": 648
         },
-        "expected": "current total and recent R-168 v1.3 theorem event",
+        "expected": "current total and bounded recent-window metadata",
         "group": "generated",
-        "name": "changelog locator current",
+        "name": "changelog rolling reader metadata current",
         "status": "PASS"
       },
       {
-        "actual": 4225,
+        "actual": "changelog/locators/000001-000100.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "changelog locator shard changelog/locators/000001-000100.json parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "changelog/locators/000101-000200.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "changelog locator shard changelog/locators/000101-000200.json parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "changelog/locators/000201-000300.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "changelog locator shard changelog/locators/000201-000300.json parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "changelog/locators/000301-000400.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "changelog locator shard changelog/locators/000301-000400.json parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "changelog/locators/000401-000500.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "changelog locator shard changelog/locators/000401-000500.json parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "changelog/locators/000501-000600.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "changelog locator shard changelog/locators/000501-000600.json parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "changelog/locators/000601-000700.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "changelog locator shard changelog/locators/000601-000700.json parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "entries": 648,
+          "expected_total": 648,
+          "index_total": 648,
+          "schema": "tect/changelog-index/2.0",
+          "shards": [
+            {
+              "count": 100,
+              "path": "changelog/locators/000001-000100.json",
+              "range": "000001-000100",
+              "valid": true
+            },
+            {
+              "count": 100,
+              "path": "changelog/locators/000101-000200.json",
+              "range": "000101-000200",
+              "valid": true
+            },
+            {
+              "count": 100,
+              "path": "changelog/locators/000201-000300.json",
+              "range": "000201-000300",
+              "valid": true
+            },
+            {
+              "count": 100,
+              "path": "changelog/locators/000301-000400.json",
+              "range": "000301-000400",
+              "valid": true
+            },
+            {
+              "count": 100,
+              "path": "changelog/locators/000401-000500.json",
+              "range": "000401-000500",
+              "valid": true
+            },
+            {
+              "count": 100,
+              "path": "changelog/locators/000501-000600.json",
+              "range": "000501-000600",
+              "valid": true
+            },
+            {
+              "count": 48,
+              "path": "changelog/locators/000601-000700.json",
+              "range": "000601-000700",
+              "valid": true
+            }
+          ],
+          "target_event_id": "20260811-r-168-v1-3-closes-five-scoped-m2-mathematical-c",
+          "target_present": true,
+          "unique_ids": 648
+        },
+        "expected": "all locator shards hash/count/range-bind to the full accepted-event set and contain the historical R-168 event",
+        "group": "generated",
+        "name": "changelog complete locator current",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "generated",
+        "name": "changelog locator deletion mutation rejected",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "group": "generated",
+        "name": "changelog locator substitution mutation rejected",
+        "status": "PASS"
+      },
+      {
+        "actual": 4399,
         "expected": ">0",
         "group": "files",
         "name": "result reader nonempty",
@@ -9699,7 +9827,7 @@
         "status": "PASS"
       },
       {
-        "actual": 8458,
+        "actual": 9569,
         "expected": ">0",
         "group": "files",
         "name": "negative reader nonempty",
@@ -9727,7 +9855,7 @@
         "status": "PASS"
       },
       {
-        "actual": 4069,
+        "actual": 4453,
         "expected": ">0",
         "group": "files",
         "name": "management reader nonempty",
@@ -9741,7 +9869,7 @@
         "status": "PASS"
       },
       {
-        "actual": 8901,
+        "actual": 9274,
         "expected": ">0",
         "group": "files",
         "name": "changelog reader nonempty",
@@ -9755,7 +9883,7 @@
         "status": "PASS"
       },
       {
-        "actual": 3280215,
+        "actual": 3641204,
         "expected": ">0",
         "group": "files",
         "name": "proof-evidence map nonempty",
@@ -9878,6 +10006,20 @@
         "status": "PASS"
       },
       {
+        "actual": "verification/catalog/kinds/legacy-research-record.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard verification/catalog/kinds/legacy-research-record.json parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/legacy-research-view.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard verification/catalog/kinds/legacy-research-view.json parses",
+        "status": "PASS"
+      },
+      {
         "actual": "verification/catalog/kinds/run-artefact.json",
         "expected": "dict",
         "group": "files",
@@ -9942,9 +10084,9 @@
       },
       {
         "actual": {
-          "shards": 15,
-          "total": 3826,
-          "valid": 15
+          "shards": 17,
+          "total": 4240,
+          "valid": 17
         },
         "expected": "valid shard hashes/counts and total",
         "group": "generated",
@@ -9956,7 +10098,7 @@
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-round1-prospective-holdout-freeze-protocol/result.json": {
             "catalog": [
               {
-                "bytes": 309284,
+                "bytes": 309283,
                 "claims": [
                   "C6-SPACETIME-SIGNATURE"
                 ],
@@ -9964,7 +10106,7 @@
                 "kind": "run-artefact",
                 "lifecycle": "ACTIVE",
                 "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
-                "sha256_12": "6298a7fe0b73",
+                "sha256_12": "3a95731dd2d0",
                 "tag": null,
                 "version": null,
                 "version_issued": null
@@ -9972,14 +10114,14 @@
             ],
             "exact": true,
             "expected": {
-              "bytes": 309284,
-              "sha256_12": "6298a7fe0b73"
+              "bytes": 309283,
+              "sha256_12": "3a95731dd2d0"
             }
           },
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-round1-prospective-holdout-freeze-protocol/result.json": {
             "catalog": [
               {
-                "bytes": 469909,
+                "bytes": 474673,
                 "claims": [
                   "C6-SPACETIME-SIGNATURE"
                 ],
@@ -9987,7 +10129,7 @@
                 "kind": "run-artefact",
                 "lifecycle": "ACTIVE",
                 "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
-                "sha256_12": "b6958771d365",
+                "sha256_12": "0c6d85e77ff2",
                 "tag": null,
                 "version": null,
                 "version_issued": null
@@ -9995,14 +10137,14 @@
             ],
             "exact": true,
             "expected": {
-              "bytes": 469909,
-              "sha256_12": "b6958771d365"
+              "bytes": 474673,
+              "sha256_12": "0c6d85e77ff2"
             }
           },
           "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-round1-prospective-holdout-freeze-protocol/result.json": {
             "catalog": [
               {
-                "bytes": 314486,
+                "bytes": 314485,
                 "claims": [
                   "C6-SPACETIME-SIGNATURE"
                 ],
@@ -10010,7 +10152,7 @@
                 "kind": "run-artefact",
                 "lifecycle": "ACTIVE",
                 "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-round1-prospective-holdout-freeze-protocol/result.json",
-                "sha256_12": "6e781e596555",
+                "sha256_12": "581b669815ee",
                 "tag": null,
                 "version": null,
                 "version_issued": null
@@ -10018,8 +10160,8 @@
             ],
             "exact": true,
             "expected": {
-              "bytes": 314486,
-              "sha256_12": "6e781e596555"
+              "bytes": 314485,
+              "sha256_12": "581b669815ee"
             }
           },
           "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py": {
@@ -10067,34 +10209,34 @@
           "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py": {
             "catalog": [
               {
-                "bytes": 197855,
+                "bytes": 207164,
                 "claims": [],
                 "first_issued": null,
                 "kind": "code",
                 "lifecycle": "ACTIVE",
                 "path": "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py",
-                "sha256_12": "a29d4e907a45",
+                "sha256_12": "1a141b5043c3",
                 "tag": null,
-                "version": "v1.3.0",
+                "version": "v1.3.1",
                 "version_issued": null
               }
             ],
             "exact": true,
             "expected": {
-              "bytes": 197855,
-              "sha256_12": "a29d4e907a45"
+              "bytes": 207164,
+              "sha256_12": "1a141b5043c3"
             }
           },
           "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": {
             "catalog": [
               {
-                "bytes": 58003,
+                "bytes": 59599,
                 "claims": [],
                 "first_issued": null,
                 "kind": "other",
                 "lifecycle": "ACTIVE",
                 "path": "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md",
-                "sha256_12": "46a79f584e29",
+                "sha256_12": "e1bf8d284fb1",
                 "tag": null,
                 "version": null,
                 "version_issued": null
@@ -10102,8 +10244,8 @@
             ],
             "exact": true,
             "expected": {
-              "bytes": 58003,
-              "sha256_12": "46a79f584e29"
+              "bytes": 59599,
+              "sha256_12": "e1bf8d284fb1"
             }
           },
           "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": {
@@ -10141,7 +10283,7 @@
         "status": "PASS"
       },
       {
-        "actual": 1893,
+        "actual": 2069,
         "expected": ">0",
         "group": "files",
         "name": "catalog reader nonempty",
@@ -10155,7 +10297,7 @@
         "status": "PASS"
       }
     ],
-    "total": 349
+    "total": 362
   },
   "boundary": "R-168 v1.3 is T0 and claim_bearing:false. The real-line result excludes only pointwise continuous one-dimensional linear internal U1 actions on the raw real scalar and raw H^2 field space; it does not exclude spatial phasons, emergent complex amplitudes, defect-complement topology or supplied compact fields. The one-Q result is an auxiliary variational/Bloch-supercell/thermodynamic curvature and a fixed-periodic-torus fixed-amplitude secant, not an exact Euler state or physical superfluid density. The tensor theorem proves contact nonidentifiability, not a Lane-Q response. The analytic theorem needs a linear critical input and first nonzero analytic order. The six-stage theorem needs positive adjacent-ratio floors, delta_j<1 at both scales and delta_j->0 for exponent transfer. No candidate, map, prediction, freeze, physical response, Round-1, C6, CP1, physical Sector A or Pre-A closes.",
   "claim_bearing": false,
@@ -10431,8 +10573,8 @@
   "exploration_id": "EXP-000814",
   "failures": [],
   "formal_workflow": {
-    "changelog_count": 608,
-    "exploration_count": 816,
+    "changelog_count": 648,
+    "exploration_count": 866,
     "hardening_exploration_matches": 1,
     "historical_event_counts": {
       "R-168 v1.0 hardening changelog retained": 1,
@@ -10443,16 +10585,19 @@
     "legacy_exploration_matches": 1,
     "v1_1_exploration_matches": 1,
     "v1_2_exploration_matches": 1,
+    "v1_3_event_ids": [
+      "20260811-r-168-v1-3-closes-five-scoped-m2-mathematical-c"
+    ],
     "v1_3_event_matches": 1,
     "v1_3_exploration_matches": 1
   },
   "generated_surfaces": {
-    "catalog_total": 3826,
-    "changelog_count": 608,
-    "exploration_count": 816,
-    "gate_count": 150,
-    "negative_count": 344,
-    "result_count": 168
+    "catalog_total": 4240,
+    "changelog_count": 648,
+    "exploration_count": 866,
+    "gate_count": 206,
+    "negative_count": 372,
+    "result_count": 170
   },
   "hardening_exploration_id": "EXP-000808",
   "missing_authorities": [],
@@ -10612,27 +10757,27 @@
     "six_stage_relative_log_slope_error_transport_closed": true,
     "tensor_contact_shift_nonidentifiability_closed": true
   },
-  "script_version": "1.3.0",
+  "script_version": "1.3.1",
   "source_hashes": {
     "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf": "346595c8609be1e49fb33d87e5a469b01f9083c78d7a1fc89d3648b88ea4d243",
     "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt": "ca8b0fdc1c4881aa13e3311851c719d0b6a0dfb4b27e0bb30906f7bc77b04239",
     "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf": "a83084c2ad66210dddeac71f7ec8efb0705554a68362cec1c7055e20e0185e4a",
     "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt": "89dae8bbf53f299676aa98a56db35fe8b00d1b672f7fb068f6c17810b985412e",
-    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-round1-prospective-holdout-freeze-protocol/result.json": "6298a7fe0b732edf3f17cb4b2a11f0251b788249087c8d7b7db2a02b372460eb",
-    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-round1-prospective-holdout-freeze-protocol/result.json": "b6958771d365c5313ec036a3368a327343ef545c6013e597298b9dc8f518ae0f",
-    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-round1-prospective-holdout-freeze-protocol/result.json": "6e781e596555b610d845215bbe702ce0e439e2d74acab7a47f926e06e5fa1895",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-round1-prospective-holdout-freeze-protocol/result.json": "3a95731dd2d0993e55df83aaf88dcec62b4ea6c9678f8e3ab3f3d8f369256cc3",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-integrated-pre-a-round1-prospective-holdout-freeze-protocol/result.json": "0c6d85e77ff2842d6c417883a0d10d74cb7b7f4d93f6f8b831ab234cebf50acc",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-round1-prospective-holdout-freeze-protocol/result.json": "581b669815eee39403817e272f28e927c55a8261bef2bbc96f9715d47a4765c9",
     "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py": "69a9486b060c711679314806b302af85652c6d8317fccebba83578b5b2d397a9",
     "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py": "6b100dd08e3daac385fc67fa5627f0c9f8c5d9ff8aa2a416d30018e72a033c26",
-    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py": "a29d4e907a453f7df46bb9002934271099afb9f77e4dcb5e4adfe296a8c4ef53",
-    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json": "4953e2e388715f62d8430f646fe096d8148a661359ec59fee96f2f2bf06e9366",
-    "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "46a79f584e29cea91b9998ec9aef71d619f1bdd5f20ab84e05c704da3a7399ca",
+    "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py": "1a141b5043c3ccd880df568b51e0f07100fced6765c07386cd30089b337600cd",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json": "3109034cf863d9d629e553b145425e8ab71ed401c9b3696c2ff04499928b6c7b",
+    "strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md": "e1bf8d284fb1d116db6f11d935f736f62d8165ad39b191ab2ef1ecac6ed1ddc6",
     "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json": "636006db6cccf211bc07f8984cdc28f9e8f16c90dc25b46776d682abde24b76e"
   },
   "summary": {
     "failed": 0,
     "missing": 0,
-    "passed": 349,
-    "total": 349
+    "passed": 362,
+    "total": 362
   },
   "task_id": "T-054",
   "verdict": "PASS"

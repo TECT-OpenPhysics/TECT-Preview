@@ -1286,3 +1286,28 @@ compact-action/background-probe/winding-law, ordered-state physical-mode and
 response-limit, six-term critical-estimand error-budget, physical-response,
 prospective-freeze, Round-1, C6, CP1, physical Sector A, and Pre-A parents
 remain **OPEN**. No parent closure follows.
+
+## 30. EXP-000866 generated-reader locator correction
+
+The historical R-168 v1.3 integrated verifier exposed a generated-reader
+contract defect after later append-only events moved `EXP-000814` outside the
+bounded recent readers. The correction is verification-only: historical
+identity is now checked against the complete changelog locator shards and the
+complete negative locator. The full changelog locator and full negative locator
+are the historical authorities, while `changelog/INDEX.md`, `negative-results/INDEX.md`
+and `changelog/index.json.recent` are treated as bounded recent readers whose
+contract is current count and window metadata only. The full locator checks
+bind schema, shard range, byte count, SHA-256, unique ordinals and the complete
+accepted-event count. Deleting the historical event or substituting an
+unrelated identifier is an explicit rejected mutation.
+
+This `EXP-000866` correction does not change any theorem, result scope, tier,
+negative authority, gate status, candidate, prediction, freeze, C6, Round-1,
+Sector-A or Pre-A conclusion. It records no new mathematical result and no
+new negative. There is no theorem scope change. The corrected verifier is version
+`1.3.1`; its historical
+`R-168 integrated: 349/349` issuance pin above remains retained as the prior
+checkpoint record, while the current generated-reader locator correction is
+re-executed against the live 648-event tree. The integrated output
+self-reference is normalized to an invocation placeholder only for stored/fresh
+comparison; the live catalog still binds the actual output bytes and SHA.

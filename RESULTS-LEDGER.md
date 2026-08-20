@@ -648,6 +648,18 @@ gap, advance C6 or CP1, or close physical Sector A or Pre-A.
 
 **Proven in:** C6 / [R-168 v1.3 certificate](strategy/pre-a-round1-prospective-holdout-freeze-protocol-certificate-260811.md) and [machine manifest](strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json). The previous [combined R-167 v2.1 / R-168 v1.2 gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.tex.txt) and [rendered 13-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-twentieth-moment-edge-cluster-and-m2-response-contract-checkpoint-260811-v1.0.pdf) are the issued v1.2 evidence. The earlier [combined R-167 v1.9 / R-168 v1.0 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.tex.txt) and [15-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-renyi-doublet-and-prospective-freeze-checkpoint-260811-v0.8.pdf), and the [combined R-167 v2.0 / R-168 v1.1 source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.tex.txt) and [10-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-gibbs-feshbach-tfim-and-round1-map-fingerprint-checkpoint-260811-v0.9.pdf) remain historical evidence only. The v1.2 combined PDF was the latest issued synthesis at the formal-authority stage; no intermediate R-168 v1.3 PDF was issued by the earlier four-file proof-first package. The current [combined R-167 v2.2 / R-168 v1.3 gate-level synthesis source](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.tex.txt) and [rendered 11-page PDF](claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint-260811-v1.1.pdf) are now the issued v1.3 evidence after strict validation.
 
+**Generated-reader correction (EXP-000866).** The historical R-168 v1.3
+integrated verifier is corrected to resolve historical event and negative
+identities through the complete generated locator sets rather than the rolling
+recent readers. Current reader files remain bounded summaries and are checked
+only for their current counts and window metadata. The correction rejects
+deletion or substitution of the historical locator identity and changes no
+theorem scope, tier, negative authority, gate status, candidate, prediction,
+freeze, C6, Round-1, Sector-A or Pre-A conclusion. No new result or negative is
+registered. The integrated output self-reference is normalized to an invocation
+placeholder only for stored/fresh comparison; the live catalog still checks the
+actual output bytes and SHA.
+
 **Tier:** T0 (claim-nonbearing scoped schema, current-version admission,
 Gaussian fingerprint, finite-regulator nonidentifiability and exact v1.3
 mathematical transport children only; no actual holdout, physical response,

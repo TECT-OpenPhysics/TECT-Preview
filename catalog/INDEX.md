@@ -20,15 +20,15 @@ for historical verifiers and no longer grows.
 | Migrated legacy run artefacts (immutable) (`archive-artefact`) | 21 | 302,036 |
 | Reviewed legacy research records (`legacy-research-record`) | 140 | 164,393 |
 | Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
-| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1001 | 28,823,103 |
-| Domain codes (`code`) | 736 | 16,595,895 |
-| Verification harness (`verification`) | 43 | 10,359,153 |
+| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1001 | 28,827,865 |
+| Domain codes (`code`) | 736 | 16,604,415 |
+| Verification harness (`verification`) | 43 | 10,368,576 |
 | Papers (publication layer) (`paper`) | 1 | 546 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
-| Registries and ledgers (`registry`) | 42 | 1,531,998 |
+| Registries and ledgers (`registry`) | 42 | 1,531,939 |
 | Governance policies (`policy`) | 21 | 192,846 |
-| Root documents (`root-doc`) | 14 | 1,645,550 |
-| Other tracked files (`other`) | 256 | 10,962,464 |
+| Root documents (`root-doc`) | 14 | 1,646,349 |
+| Other tracked files (`other`) | 256 | 10,974,398 |
 
 ## Use
 
