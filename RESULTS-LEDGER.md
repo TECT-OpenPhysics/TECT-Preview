@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-170](#r-170) | Initial QFT/GR/Reading-H literature-applicability audit | R-170 v1.0 is the scoped T0 claim-nonbearing audit under EXP-000863. It completes exactly the initial four-record rollout: B1 APPLIES only to its current `C_full` Q-versus-`G_*` theorem; C4 and C5 remain NOT-YET-ASSESSED; and the present C6 BCC-premised route DOES-NOT-APPLY while alternatives remain NOT-YET-ASSESSED. The policy remains binding, no tier or lifecycle changes, and no physical, Sector-A, or Pre-A gate closes |
 | [R-169](#r-169) | Truncated-octahedron realization semantics, native Reading-H ownership, and corrected common-Bohr radial audit | R-169 v1.4 is the current scoped T0 analytic/exact/executed/audited result under EXP-000862. It retains v1.0--v1.3, reconstructs one corrected scalar common-Bohr owner from the legacy formula and exact signed moments, separates fixed intensity from radial minimization, and qualifies one off-grid-confounded historical collapse leg without reopening B3. No full-Hartree/P1 bridge, physical-empty sign, stability/limit theorem, C6 result or Pre-A closure follows |
 | [R-168](#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | R-168 v1.3 is a scoped T0 analytic/exact/executed/audited additive result under EXP-000814. It retains v1.0--v1.2 and closes five mathematical children without creating a compact action, physical response, candidate, prediction or freeze; physical-response, Round-1, Sector A and Pre-A remain open |
 | [R-167](#r-167) | Registered-corridor full-oscillator coexistence, categorical dynamics and exact source-ground transfer | R-167 v4.2 is the current scoped T0 analytic/exact/executed/audited additive result under EXP-000846. It retains every v4.1 child and conditionally proves integrated-orbit-smear all-shape shell Cauchy convergence, a point-norm C0 spatial-subalgebra action, an equivariant surjective quotient of the categorical carrier, and same-periodic-net transfer of the v4.0 ground pair. The exact-Q3 toggle weights, a raw/local oscillator common alpha, DLR/KMS branch identity and the broken-sector GNS gap remain open |
@@ -191,6 +192,54 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-170"></a>
+### R-170 -- Initial QFT/GR/Reading-H literature-applicability audit
+
+**Result ID.**
+`PA-T056-INITIAL-QFT-GR-READING-H-LITERATURE-APPLICABILITY-AUDIT`.
+
+**Version.** R-170 v1.0 is established by EXP-000863 as a T0,
+claim-nonbearing source, hypothesis-crosswalk, reproduction, adversarial, and
+stop-decision audit.
+
+**Initial four-record result.** `B1-RH-ENUM` is `APPLIES` only for
+`F_total[Q]>F_total[G_*]` on the registered finite real-antipodal `C_full`
+class and certified region, given `A1-KERNEL-CONV`. It imports no
+physical-empty, P1, BCC, C6, volume, regulator, thermodynamic, continuum, or
+zero-temperature statement. `C4-GRAVITY-1LOOP` and `C5-NEWTON-G` are
+`NOT-YET-ASSESSED` and their load-bearing use stops: the located Contents
+items are bounded discovery candidates, not admitted sources, and their
+current dependency, convention, reproduction, and limit crosswalks are
+incomplete. The present `C6-SPACETIME-SIGNATURE` BCC inheritance route
+`DOES-NOT-APPLY` because `B3-BCC-STRUCT` remains refuted and retired. This is
+not a universal no-go; non-BCC alternatives remain `NOT-YET-ASSESSED`.
+
+**Gate and residuals.** `LITERATURE-FIRST-APPLICABILITY-AUDIT` closes only as
+`CLOSED@INITIAL-FOUR-RECORDS`. The policy remains binding for every future
+load-bearing import. T-057, the Reading-H-to-P1 interface, physical-empty
+reference, `SCHEME-2LOOP`, `GAP-3`, `PRED-G-FREEZE`,
+`C6-BCC-PREMISE-BLOCKED`, and Round-1 remain open. No new negative is
+registered; the existing B3 negative is reused only as premise-status
+authority.
+
+**Boundary.** This audit changes no claim tier or lifecycle and imports no
+Einstein--Hilbert theorem, Newton-constant relation or prediction, emergent
+dimension, Lorentzian signature, physical vacuum, physical Sector-A result,
+or Pre-A closure.
+
+**Proven in:** The
+[R-170 v1.0 certificate](strategy/pre-a-t056-initial-qft-gr-reading-h-literature-applicability-audit-certificate-260814.md),
+[machine manifest](strategy/pre-a-t056-initial-qft-gr-reading-h-literature-applicability-audit-manifest.json),
+four claim-local applicability records, three independent/cross-check scripts,
+and three canonical run JSON artefacts are the proof-first authority.
+No R-170 v1.0 PDF is issued.
+
+**Tier:** T0 (claim-nonbearing applicability classification and quarantine
+audit).
+
+**Publication target:** Internal verification-governance and Pre-A
+applicability audit.
 
 <a id="r-169"></a>
 ### R-169 -- Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction

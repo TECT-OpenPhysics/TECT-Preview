@@ -1541,6 +1541,20 @@ unidentified. The selective legacy rollout, Reading-H interface, physical-
 empty, C6 and Round-1 gates remain OPEN. Physical Sector A and Pre-A remain
 open. No R-169 v1.4 PDF is issued.
 
+EXP-000863 / R-170 v1.0 completes exactly the initial T-056
+QFT/GR/Reading-H literature-applicability rollout at T0, claim-nonbearing
+scope. B1-RH-ENUM applies only to the registered `C_full`
+candidate-versus-`G_*` ordering and supplies no physical-empty or P1 transfer.
+C4-GRAVITY-1LOOP and C5-NEWTON-G remain `NOT-YET-ASSESSED` and import
+nothing. The present C6 BCC-premised inheritance route `DOES-NOT-APPLY`
+because B3 remains refuted and retired, while non-BCC alternatives remain
+`NOT-YET-ASSESSED`. `LITERATURE-FIRST-APPLICABILITY-AUDIT` closes only as
+`CLOSED@INITIAL-FOUR-RECORDS`, and the policy remains binding. T-057, the
+Reading-H interface, physical-empty, `SCHEME-2LOOP`, `GAP-3`,
+`PRED-G-FREEZE`, C6, and Round-1 remain open. No tier or lifecycle change,
+new negative, physical Sector-A result, or Pre-A closure follows. No R-170
+v1.0 PDF is issued.
+
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

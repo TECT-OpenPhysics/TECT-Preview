@@ -76,6 +76,11 @@ remainder child and two scoped negative authorities. It creates no candidate,
 common estimand, prospective prediction, custodian commitment, freeze or
 score. Round-1 remains OPEN.
 
+EXP-000863 / R-170 v1.0 classifies four initial literature-applicability
+records only. It creates no candidate, admitted microscopic observable map,
+common estimand, prospective prediction, custodian commitment, freeze or
+score. The literature policy remains binding and Round-1 remains OPEN.
+
 EXP-000831 / R-167 v2.8 adds one claim-nonbearing fixed-complete-cluster,
 sufficiently-large-`N` Ritz-restricted local-SW child and one scoped
 configuration-multiplier point-norm boundary. It creates no candidate, common
@@ -371,6 +376,11 @@ EXP-000862 / R-169 v1.4 supplies only a reconstructed scalar common-Bohr
 owner audit. It constructs no generic Reading-H realization, `G_*` image,
 full functional/ensemble bridge, or physical-empty comparator. The parent
 remains OPEN.
+
+EXP-000863 / R-170 v1.0 reuses the live B1 theorem only at its registered
+`C_full` comparison scope and explicitly blocks transfer from `Q>G_*` to a
+Reading-H-to-P1 map, physical-empty comparison, or C6 premise. This interface
+gate remains OPEN.
 
 ### **PA-T055-LEGACY-SMA-COMMON-BOHR-MOMENT-RADIAL-OWNER-AND-PRODUCTION-ENDPOINT-AUDIT**
 
@@ -1086,6 +1096,10 @@ ordered symmetric ground are not strict physical-empty comparators.
 EXP-000862 / R-169 v1.4 compares a reconstructed bare scalar owner with its
 own algebraic zero only. It supplies no matched physical-empty branch, full
 Reading-H Hartree parent, or limiting specific gap. This gate remains OPEN.
+
+EXP-000863 / R-170 v1.0 records that the applicable B1 comparison is only
+`F_total[Q]>F_total[G_*]`; it imports no sign between `G_*` and a physical
+empty reference. This gate remains OPEN.
 
 ### **PA-PRE-A-C0-N1-N5-VALIDATION**
 
@@ -5052,6 +5066,10 @@ the historical backend are separate scopes, not residuals of this gate.
 
 **Status:** OPEN (ledger seeded)
 
+EXP-000863 / R-170 v1.0 leaves the constants and convention provenance needed
+for any imported gravity or Newton-constant route unassessed. GAP-3 remains
+OPEN.
+
 <a id="gap-4"></a>
 ### **GAP-4**
 
@@ -5082,7 +5100,7 @@ the historical backend are separate scopes, not residuals of this gate.
 | [**CP-UNITARITY**](#cp-unitarity) | OPEN |
 | [**SCHEME-2LOOP**](#scheme-2loop) | OPEN … |
 | [**PRED-G-FREEZE**](#pred-g-freeze) | OPEN |
-| [**LITERATURE-FIRST-APPLICABILITY-AUDIT**](#literature-first-applicability-audit) | OPEN; T-056 rollout |
+| [**LITERATURE-FIRST-APPLICABILITY-AUDIT**](#literature-first-applicability-audit) | CLOSED@INITIAL-FOUR-RECORDS; EXP-000863 / R-170 v1.0 |
 | [**LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION**](#legacy-selective-index-and-on-demand-revalidation) | OPEN; T-057 rollout |
 
 <a id="step-5b"></a>
@@ -5286,6 +5304,10 @@ the historical backend are separate scopes, not residuals of this gate.
 
 **Status:** OPEN (recommended)
 
+EXP-000863 / R-170 v1.0 classifies the current C4 import as
+`NOT-YET-ASSESSED`; it does not establish a common two-loop scheme or current
+owner. SCHEME-2LOOP remains OPEN.
+
 **Source:** legacy: Pillar-3 record
 
 <a id="pred-g-freeze"></a>
@@ -5294,6 +5316,10 @@ the historical backend are separate scopes, not residuals of this gate.
 **Statement:** Pre-registered input freeze for an independent $a_{\rm BCC}$ → $G$ prediction
 
 **Status:** OPEN
+
+EXP-000863 / R-170 v1.0 classifies the current C5 import as
+`NOT-YET-ASSESSED`; candidate algebraic relations do not freeze an independent
+prediction of `G`. PRED-G-FREEZE remains OPEN.
 
 **Source:** `predictions/prediction-ledger.md`
 
@@ -5308,16 +5334,21 @@ disposition, adversarial checks, and the residual proposition. A failed or
 unassessed load-bearing hypothesis blocks promotion; a search result or citation
 alone does not discharge this gate.
 
-**Status:** OPEN (2026-08-14). T-056 owns the initial QFT/GR/Reading-H audit for
-`B1-RH-ENUM`, `C4-GRAVITY-1LOOP`, `C5-NEWTON-G`, and
-`C6-SPACETIME-SIGNATURE`. The policy and enforcement contract are installed,
-but the initial applicability records and their independent objection
-dispositions are not complete. Closure of this rollout gate would certify only
-that those declared imports were classified under the policy; it would not
-prove novelty, validate every item in the literature, or promote any physical
-claim.
+**Status:** CLOSED@INITIAL-FOUR-RECORDS (2026-08-14). EXP-000863 / R-170 v1.0
+completes exactly the initial T-056 records for `B1-RH-ENUM`,
+`C4-GRAVITY-1LOOP`, `C5-NEWTON-G`, and `C6-SPACETIME-SIGNATURE`. B1 is
+`APPLIES` only to its live `C_full` matched Reading-H comparison
+`F_total[Q]>F_total[G_*]`. C4 and C5 are `NOT-YET-ASSESSED` for load-bearing
+use. The present C6 BCC-premised inheritance route `DOES-NOT-APPLY`, while
+non-BCC alternatives remain unassessed. This closure certifies only that the
+four declared imports received the required records and independent objection
+audit. The policy remains binding for every future load-bearing import; no
+claim tier or lifecycle, physical conclusion, T-057 route, or other gate is
+closed by this rollout.
 
-**Source:** `governance/literature-first-proof-gate.md`; task `T-056`.
+**Source:** `governance/literature-first-proof-gate.md`; the four claim-local
+`literature-applicability.md` records; the R-170 v1.0 manifest and certificate;
+task `T-056`.
 
 <a id="legacy-selective-index-and-on-demand-revalidation"></a>
 ### **LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION**
@@ -5344,6 +5375,10 @@ the selected Math396/399/400/424 sources and records it in
 `LEG-T055-COMMON-BOHR-FDECL-001`. It does not revalidate the broad lineage or
 complete the remaining selected-source dependency and applicability audits.
 This gate remains OPEN.
+
+EXP-000863 / R-170 v1.0 records discovery-only candidate locators for C4 and
+C5 but admits neither as a load-bearing source. Selection, dependency closure,
+revalidation, and integration remain T-057 work. This gate remains OPEN.
 
 
 ## Named hypotheses
@@ -5546,6 +5581,13 @@ off-grid-confounded and nonbinding for the Bohr/continuum owner. No full
 Hartree physical-empty sign, transverse stability, limit theorem, or
 candidate-completeness result follows. B3 remains retired; this gate and its
 physical programme remain OPEN.
+
+EXP-000863 / R-170 v1.0 classifies only the present BCC-premised C6
+inheritance route as `DOES-NOT-APPLY`: the retired B3 premise cannot supply a
+physical structure, and the cited anisotropy source neither derives three
+spatial dimensions nor constructs one temporal direction or a Lorentzian
+kinetic sign. Non-BCC C6 alternatives remain `NOT-YET-ASSESSED`. This gate is
+still BLOCKED and the C6 physical programme remains OPEN.
 
 
 <a id="a3-h1-dim3-q4-kernel"></a>
