@@ -490,6 +490,14 @@ physical-empty gate, `C6-BCC-PREMISE-BLOCKED`, and Round-1 remain OPEN.
 
 **Proven in:** The [R-169 v1.4 certificate](strategy/pre-a-t055-legacy-sma-common-bohr-moment-radial-owner-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-legacy-sma-common-bohr-moment-radial-owner-route-split-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.4 PDF is issued. The [R-169 v1.3 certificate](strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-manifest.json) remain the prior proof-first authority. The R-169 v1.2, v1.1 and v1.0 certificates and manifests remain earlier proof-first history.
 
+**Historical reader correction (EXP-000871).** The four T-055 historical
+verifiers now locate their own append-only events by immutable event ID,
+accept monotone later global counts, and bind the current superseding R-169
+source hashes instead of treating v1.2/v1.3/v1.4 history as preformal. This
+repairs regression-reader lifecycle drift only; it changes no native-owner,
+common-Bohr, physical-empty, P1, Hartree, stability, C6, Sector-A or Pre-A
+mathematical scope.
+
 **Tier:** T0 (claim-nonbearing scoped exact geometry, conditional sign/stability
 transfer and exact logical obstructions only).
 

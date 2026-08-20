@@ -237,7 +237,12 @@ def run(staged: bool) -> dict[str, Any]:
     audit.check("full-energy firewall", firewall_ok, firewall_ok, True, "scope")
     if staged:
         authorities = "\n".join((REPO / path).read_text(encoding="utf-8") for path in ("claims/GATES.md", "RESULTS-LEDGER.md", "negative-results/registry.md"))
-        audit.check("preformal authority absence", "EXP-000858" not in authorities and all(value not in authorities for value in manifest["closed_gate_ids"] + manifest["new_negative_ids"]), "new formal authorities absent", "new formal authorities absent", "lifecycle")
+        events = [json.loads(line) for line in (REPO / "changelog/log.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+        matches = [(ordinal, event) for ordinal, event in enumerate(events, start=1) if event.get("id") == manifest["formal_integration"]["event_id"]]
+        if matches:
+            audit.check("integrated historical authority revalidation", len(matches) == 1, matches, "one immutable event-id match", "lifecycle")
+        else:
+            audit.check("preformal authority absence", "EXP-000858" not in authorities and all(value not in authorities for value in manifest["closed_gate_ids"] + manifest["new_negative_ids"]), "new formal authorities absent", "new formal authorities absent", "lifecycle")
 
     return {
         "schema": "tect/pre-a-t055-reading-h-covariance-to-p1-interface-primary/1.0",

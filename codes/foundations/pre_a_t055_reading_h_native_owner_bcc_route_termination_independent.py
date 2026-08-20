@@ -295,8 +295,13 @@ def run(staged: bool) -> dict[str, Any]:
 
     if staged:
         authority_text = "\n".join((REPO / path).read_text(encoding="utf-8") for path in ("claims/GATES.md", "RESULTS-LEDGER.md", "explorations/log.jsonl", "changelog/log.jsonl"))
-        tokens = ["EXP-000860", "R-169 v1.3", *manifest["closed_gate_ids"]]
-        audit.check("preformal authority absence", all(token not in authority_text for token in tokens), "new authority tokens absent", "new authority tokens absent", "lifecycle")
+        events = [json.loads(line) for line in (REPO / "changelog/log.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+        matches = [(ordinal, event) for ordinal, event in enumerate(events, start=1) if event.get("id") == manifest["formal_integration"]["event_id"]]
+        if matches:
+            audit.check("integrated historical authority revalidation", len(matches) == 1, matches, "one immutable event-id match", "lifecycle")
+        else:
+            tokens = ["EXP-000860", "R-169 v1.3", *manifest["closed_gate_ids"]]
+            audit.check("preformal authority absence", all(token not in authority_text for token in tokens), "new authority tokens absent", "new authority tokens absent", "lifecycle")
 
     return {
         "schema": "tect/pre-a-t055-reading-h-native-owner-bcc-route-termination-independent/1.0",

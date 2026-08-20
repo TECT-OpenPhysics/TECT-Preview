@@ -217,10 +217,15 @@ def run(staged: bool) -> dict[str, Any]:
             (REPO / path).read_text(encoding="utf-8")
             for path in ("claims/GATES.md", "RESULTS-LEDGER.md", "negative-results/registry.md")
         )
-        absent = "EXP-000858" not in authorities and all(
-            identifier not in authorities for identifier in manifest["closed_gate_ids"] + manifest["new_negative_ids"]
-        )
-        audit.check("preformal authority absence", absent, absent, True, "lifecycle")
+        events = [json.loads(line) for line in (REPO / "changelog/log.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+        matches = [(ordinal, event) for ordinal, event in enumerate(events, start=1) if event.get("id") == manifest["formal_integration"]["event_id"]]
+        if matches:
+            audit.check("integrated historical authority revalidation", len(matches) == 1, matches, "one immutable event-id match", "lifecycle")
+        else:
+            absent = "EXP-000858" not in authorities and all(
+                identifier not in authorities for identifier in manifest["closed_gate_ids"] + manifest["new_negative_ids"]
+            )
+            audit.check("preformal authority absence", absent, absent, True, "lifecycle")
 
     return {
         "schema": "tect/pre-a-t055-reading-h-covariance-to-p1-interface-independent/1.0",

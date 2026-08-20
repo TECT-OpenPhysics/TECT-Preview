@@ -439,13 +439,18 @@ def run(staged: bool) -> dict[str, Any]:
             REPO / "claims/C6-SPACETIME-SIGNATURE/runs" / f"2026-08-14-independent-{SLUG}/result.json",
             REPO / "claims/C6-SPACETIME-SIGNATURE/runs" / f"2026-08-14-integrated-{SLUG}/result.json",
         ]
-        lifecycle_ok = (
-            manifest["exploration_id"] not in authority_text
-            and manifest["version"] not in authority_text
-            and all(gate not in authority_text for gate in manifest["closed_gate_ids"])
-            and not any(path.exists() for path in absent_paths)
-        )
-        audit.check("preformal authority absence", lifecycle_ok, {"tokens_absent": lifecycle_ok, "paths": [str(path) for path in absent_paths]}, "new authorities, assessment and runs absent", "lifecycle")
+        events = [json.loads(line) for line in (REPO / "changelog/log.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+        matches = [(ordinal, event) for ordinal, event in enumerate(events, start=1) if event.get("id") == manifest["formal_integration"]["event_id"]]
+        if matches:
+            audit.check("integrated historical authority revalidation", len(matches) == 1, matches, "one immutable event-id match", "lifecycle")
+        else:
+            lifecycle_ok = (
+                manifest["exploration_id"] not in authority_text
+                and manifest["version"] not in authority_text
+                and all(gate not in authority_text for gate in manifest["closed_gate_ids"])
+                and not any(path.exists() for path in absent_paths)
+            )
+            audit.check("preformal authority absence", lifecycle_ok, {"tokens_absent": lifecycle_ok, "paths": [str(path) for path in absent_paths]}, "new authorities, assessment and runs absent", "lifecycle")
 
     return {
         "schema": "tect/pre-a-t055-legacy-sma-common-bohr-moment-radial-owner-route-split-primary/1.0",

@@ -109,6 +109,14 @@ def negative_section(markdown: str, heading: str) -> str:
     return matches[0]
 
 
+def historical_result_section(markdown: str) -> str:
+    pattern = re.compile(r"^### R-169\b([\s\S]*?)(?=^### R-|\Z)", re.MULTILINE)
+    matches = pattern.findall(markdown)
+    if len(matches) != 1:
+        raise AssertionError(f"expected one R-169 result section, found {len(matches)}")
+    return matches[0]
+
+
 def live_counts() -> dict[str, int]:
     summary = json.loads((REPO / "verification/catalog-summary.json").read_text(encoding="utf-8"))
     return {
@@ -154,12 +162,19 @@ def staged_audit(audit: Audit) -> None:
     results = (REPO / "RESULTS-LEDGER.md").read_text(encoding="utf-8")
     explorations = (REPO / "explorations/log.jsonl").read_text(encoding="utf-8")
     events = (REPO / "changelog/log.jsonl").read_text(encoding="utf-8")
-    audit.check("preformal authority absence", all(token not in gates + results + explorations + events for token in ("EXP-000852", "R-169 v1.1", CLOSED, INTERFACE_OPEN)), "new formal tokens absent", "new formal tokens absent", "lifecycle")
     expected = json.loads(MANIFEST.read_text(encoding="utf-8"))["formal_integration"]["expected_post_counts"]
-    current = live_counts()
-    deltas = {"claims": 0, "results": 0, "gates": 2, "negatives": 0, "explorations": 1, "events": 1, "tasks": 0, "catalog": 8}
-    projected = {key: current[key] + deltas[key] for key in current}
-    audit.check("preformal count projection", projected == expected, projected, expected, "lifecycle")
+    events_json = parse_json_lines(REPO / "changelog/log.jsonl")
+    matches = [(ordinal, event) for ordinal, event in enumerate(events_json, start=1) if event.get("id") == json.loads(MANIFEST.read_text(encoding="utf-8"))["formal_integration"]["event_id"]]
+    if matches:
+        current = live_counts()
+        audit.check("integrated historical authority revalidation", len(matches) == 1, matches, "one immutable event-id match", "lifecycle")
+        audit.check("append-only current counts", all(current[key] >= int(expected[key]) for key in expected), current, expected, "lifecycle")
+    else:
+        audit.check("preformal authority absence", all(token not in gates + results + explorations + events for token in ("EXP-000852", "R-169 v1.1", CLOSED, INTERFACE_OPEN)), "new formal tokens absent", "new formal tokens absent", "lifecycle")
+        current = live_counts()
+        deltas = {"claims": 0, "results": 0, "gates": 2, "negatives": 0, "explorations": 1, "events": 1, "tasks": 0, "catalog": 8}
+        projected = {key: current[key] + deltas[key] for key in current}
+        audit.check("preformal count projection", projected == expected, projected, expected, "lifecycle")
 
 
 def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str, Any], fresh_independent: dict[str, Any]) -> None:
@@ -176,7 +191,8 @@ def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str
     audit.check("one explicit open interface", "EXP-000852" in interface and "R-169 v1.1" in interface and "OPEN" in interface and "CLOSED" not in interface, "unique OPEN interface", "unique OPEN interface", "formal")
     audit.check("C6 and Round-1 remain open", all("EXP-000852" in value and "remain OPEN" in value for value in parents), "two OPEN annotations", "two OPEN annotations", "formal")
     audit.check("no new negative and reused links", manifest["new_negative_ids"] == [] and all(negative_section(negatives, value) for value in REUSED_NEGATIVES), "zero new, two reused", "zero new, two reused", "formal")
-    audit.check("R-169 current authority", all(token in results for token in ("### R-169", "R-169 v1.1", "EXP-000852", "current proof-first authority", "R-169 v1.0 certificate", "prior proof-first authority", "No R-169 v1.1 PDF")), "v1.1 current/v1.0 prior", "v1.1 current/v1.0 prior", "formal")
+    r169_section = historical_result_section(results)
+    audit.check("R-169 historical authority", all(token in r169_section for token in ("R-169 v1.1", "EXP-000852", "R-169 v1.4")), "v1.1 history and current successor", "v1.1 history and current successor", "formal")
     audit.check("roadmap and strategy linkage", all(token in roadmap and token in strategy_index for token in ("EXP-000852", "R-169 v1.1")), "both surfaces linked", "both surfaces linked", "formal")
 
     records = [record for record in parse_json_lines(REPO / "explorations/log.jsonl") if record.get("id") == "EXP-000852"]
@@ -186,25 +202,27 @@ def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str
     audit.check("EXP gate order", record.get("gate_ids") == [CLOSED, INTERFACE_OPEN, *PARENT_OPEN], record.get("gate_ids"), [CLOSED, INTERFACE_OPEN, *PARENT_OPEN], "formal")
 
     events = parse_json_lines(REPO / "changelog/log.jsonl")
-    event = events[-1]
     contract = manifest["formal_integration"]
+    matches = [(ordinal, candidate) for ordinal, candidate in enumerate(events, start=1) if candidate.get("id") == contract["event_id"]]
+    unique_event = len(matches) == 1
+    ordinal, event = matches[0] if unique_event else (None, {})
     exact_header = f"[{contract['event_title']}] - 2026-08-14"
-    audit.check("event 640 identity", len(events) == contract["event_ordinal"] and event.get("id") == contract["event_id"] and event.get("header") == exact_header, {"count": len(events), "id": event.get("id"), "header": event.get("header")}, {"count": contract["event_ordinal"], "id": contract["event_id"], "header": exact_header}, "formal")
+    audit.check("event 640 historical identity", unique_event and ordinal == contract["event_ordinal"] and event.get("id") == contract["event_id"] and event.get("header") == exact_header, {"total_events": len(events), "ordinal": ordinal, "id": event.get("id"), "header": event.get("header")}, {"ordinal": contract["event_ordinal"], "id": contract["event_id"], "header": exact_header}, "formal")
     audit.check("event exact linkage", event.get("claim_ids") == contract["event_claim_ids"] and event.get("keywords") == contract["event_keywords"] and event.get("notes") == contract["event_notes"] and event.get("scripts") == contract["event_scripts"], {key: event.get(key) for key in ("claim_ids", "keywords", "notes", "scripts")}, "exact claims/keywords/notes/scripts", "formal")
     audit.check("event no-new-negative scope", event.get("neg_results") == [] and all(token in event.get("raw", "") for token in contract["event_raw_tokens"]) and ".pdf" not in event.get("raw", ""), {"neg": event.get("neg_results"), "raw_tokens": [token for token in contract["event_raw_tokens"] if token in event.get("raw", "")]}, "no negatives, all raw tokens, no .pdf", "formal")
 
     theorem_map = json.loads((REPO / "governance/sector-a-theorem-map.json").read_text(encoding="utf-8"))
     priority = theorem_map["research_priority"]
-    audit.check("theorem map v1.36", theorem_map.get("version") == contract["theorem_map_version"] and "EXP-000852" in priority.get("latest_cp1_checkpoint", "") and priority.get("closed_r169_v1_1_scoped_gates") == [CLOSED] and priority.get("open_r169_v1_1_interface_gates") == [INTERFACE_OPEN] and priority.get("r169_v1_1_reused_negatives") == REUSED_NEGATIVES, {"version": theorem_map.get("version"), "latest": priority.get("latest_cp1_checkpoint", "")[:20]}, "v1.36 exact arrays", "formal")
+    actual_version = tuple(int(part) for part in theorem_map.get("version", "0.0.0").split("."))
+    required_version = tuple(int(part) for part in contract["theorem_map_version"].split("."))
+    audit.check("theorem map historical arrays", actual_version >= required_version and priority.get("latest_cp1_checkpoint") and priority.get("closed_r169_v1_1_scoped_gates") == [CLOSED] and priority.get("open_r169_v1_1_interface_gates") == [INTERFACE_OPEN] and priority.get("r169_v1_1_reused_negatives") == REUSED_NEGATIVES, {"version": theorem_map.get("version"), "latest": priority.get("latest_cp1_checkpoint", "")[:20]}, "version at least v1.36 with exact arrays", "formal")
 
     tasks = json.loads((REPO / "todo/todo.json").read_text(encoding="utf-8"))["tasks"]
     matches = [task for task in tasks if task.get("id") == "T-055"]
     audit.check("stable T-055 routing", len(matches) == 1 and matches[0].get("owner") and matches[0].get("note") and matches[0].get("gate") == "C6-BCC-PREMISE-BLOCKED", matches, "one owner/note/gate-stable T-055", "formal")
     current_counts = live_counts()
     expected_counts = dict(contract["expected_post_counts"])
-    if not DEFAULT_OUTPUT.exists():
-        expected_counts["catalog"] -= 1
-    audit.check("exact post counts", current_counts == expected_counts, current_counts, expected_counts, "formal")
+    audit.check("append-only post counts", all(current_counts[key] >= int(expected_counts[key]) for key in expected_counts), current_counts, expected_counts, "formal")
 
     stored_primary = json.loads(PRIMARY_RESULT.read_text(encoding="utf-8"))
     stored_independent = json.loads(INDEPENDENT_RESULT.read_text(encoding="utf-8"))

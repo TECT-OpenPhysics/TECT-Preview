@@ -1227,23 +1227,28 @@ def run(staged: bool) -> dict[str, Any]:
             manifest["version"],
             *manifest["closed_gate_ids"],
         ]
-        lifecycle_ok = (
-            all(token not in authority_text for token in new_tokens)
-            and not any(path.exists() for path in absent_paths)
-        )
-        audit.check(
-            "preformal lifecycle absence",
-            lifecycle_ok,
-            {
-                "tokens_absent": all(token not in authority_text for token in new_tokens),
-                "absent_paths": {
-                    str(path.relative_to(REPO)): not path.exists()
-                    for path in absent_paths
+        events = load_json_lines(REPO / "changelog/log.jsonl")
+        matches = [(ordinal, event) for ordinal, event in enumerate(events, start=1) if event.get("id") == manifest["formal_integration"]["event_id"]]
+        if matches:
+            audit.check("integrated historical authority revalidation", len(matches) == 1, matches, "one immutable event-id match", "lifecycle")
+        else:
+            lifecycle_ok = (
+                all(token not in authority_text for token in new_tokens)
+                and not any(path.exists() for path in absent_paths)
+            )
+            audit.check(
+                "preformal lifecycle absence",
+                lifecycle_ok,
+                {
+                    "tokens_absent": all(token not in authority_text for token in new_tokens),
+                    "absent_paths": {
+                        str(path.relative_to(REPO)): not path.exists()
+                        for path in absent_paths
+                    },
                 },
-            },
-            "new authorities, legacy record and all runs absent",
-            "lifecycle",
-        )
+                "new authorities, legacy record and all runs absent",
+                "lifecycle",
+            )
     else:
         formal_lifecycle(manifest, audit)
 

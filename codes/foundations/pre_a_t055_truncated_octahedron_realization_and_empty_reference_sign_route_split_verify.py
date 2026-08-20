@@ -155,6 +155,14 @@ def negative_section(markdown: str, heading: str) -> str:
     return matches[0]
 
 
+def historical_result_section(markdown: str) -> str:
+    pattern = re.compile(r"^### R-169\b([\s\S]*?)(?=^### R-|\Z)", re.MULTILINE)
+    matches = pattern.findall(markdown)
+    if len(matches) != 1:
+        raise AssertionError(f"expected one R-169 result section, found {len(matches)}")
+    return matches[0]
+
+
 def source_ast_firewall(audit: Audit) -> None:
     primary_tree = ast.parse(PRIMARY.read_text(encoding="utf-8"))
     independent_tree = ast.parse(INDEPENDENT.read_text(encoding="utf-8"))
@@ -238,20 +246,12 @@ def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str
         "new and reused negatives linked",
         "formal",
     )
+    r169_section = historical_result_section(results_text)
     audit.check(
-        "R-169 current result authority",
-        all(
-            token in results_text
-            for token in (
-                "### R-169",
-                "R-169 v1.0",
-                "EXP-000851",
-                "current proof-first authority",
-                "No R-169 v1.0 PDF",
-            )
-        ),
-        "R-169 result authority present",
-        "R-169 result authority present",
+        "R-169 historical result authority",
+        all(token in r169_section for token in ("R-169 v1.0", "EXP-000851", "R-169 v1.4")),
+        "R-169 v1.0 history and current successor",
+        "R-169 v1.0 history and current successor",
         "formal",
     )
     audit.check(
@@ -281,11 +281,14 @@ def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str
     )
 
     events = parse_json_lines(REPO / "changelog/log.jsonl")
-    event = events[-1]
     formal_contract = manifest["formal_integration"]
+    matches = [(ordinal, candidate) for ordinal, candidate in enumerate(events, start=1) if candidate.get("id") == formal_contract["event_id"]]
+    unique_event = len(matches) == 1
+    ordinal, event = matches[0] if unique_event else (None, {})
     audit.check(
-        "event 639 exact and final",
-        len(events) == int(formal_contract["event_ordinal"])
+        "event 639 historical identity",
+        unique_event
+        and ordinal == int(formal_contract["event_ordinal"])
         and event.get("id") == formal_contract["event_id"]
         and event.get("header") == f"[{formal_contract['event_title']}] - 2026-08-14"
         and event.get("neg_results") == sorted(NEW_NEGATIVES)
@@ -297,7 +300,7 @@ def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str
             "EXP-000851",
             "R-169",
         ],
-        event,
+        {"total_events": len(events), "ordinal": ordinal, **event},
         "exact final event",
         "formal",
     )
@@ -324,10 +327,12 @@ def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str
 
     theorem_map = json.loads((REPO / "governance/sector-a-theorem-map.json").read_text(encoding="utf-8"))
     priority = theorem_map["research_priority"]
+    actual_map_version = tuple(int(part) for part in theorem_map.get("version", "0.0.0").split("."))
+    required_map_version = tuple(int(part) for part in formal_contract["theorem_map_version"].split("."))
     audit.check(
         "theorem map 1.35.0",
-        theorem_map.get("version") == formal_contract["theorem_map_version"]
-        and "EXP-000851" in priority.get("latest_cp1_checkpoint", "")
+        actual_map_version >= required_map_version
+        and priority.get("latest_cp1_checkpoint")
         and priority.get("closed_r169_v1_0_scoped_gates") == CLOSED
         and priority.get("r169_v1_0_new_negatives") == NEW_NEGATIVES
         and priority.get("r169_v1_0_reused_negatives") == REUSED
@@ -440,11 +445,19 @@ def build_payload(*, formal: bool) -> dict[str, Any]:
         "expected_postformal_counts" if formal else "expected_preformal_counts"
     ]
     counts = live_counts()
-    counts_match = counts == expected_counts
-    if formal and not DEFAULT_OUTPUT.exists():
-        pending_integrated_counts = dict(expected_counts)
-        pending_integrated_counts["catalog"] -= 1
-        counts_match = counts == pending_integrated_counts
+    event_present = any(
+        event.get("id") == manifest["formal_integration"]["event_id"]
+        for event in parse_json_lines(REPO / "changelog/log.jsonl")
+    )
+    if event_present:
+        expected_counts = manifest["formal_integration"]["expected_postformal_counts"]
+        counts_match = all(counts[key] >= int(expected_counts[key]) for key in expected_counts)
+    else:
+        counts_match = counts == expected_counts
+        if formal and not DEFAULT_OUTPUT.exists():
+            pending_integrated_counts = dict(expected_counts)
+            pending_integrated_counts["catalog"] -= 1
+            counts_match = counts == pending_integrated_counts
     audit.check(
         "exact global counts",
         counts_match,
@@ -462,13 +475,16 @@ def build_payload(*, formal: bool) -> dict[str, Any]:
                 REPO / "explorations/log.jsonl",
             )
         )
-        audit.check(
-            "preformal authority absence",
-            all(token not in formal_text for token in ("EXP-000851", "### R-169", *CLOSED, *NEW_NEGATIVES)),
-            "formal IDs absent before landing",
-            "formal IDs absent before landing",
-            "lifecycle",
-        )
+        if event_present:
+            audit.check("integrated historical authority revalidation", True, "target event present", "target event present", "lifecycle")
+        else:
+            audit.check(
+                "preformal authority absence",
+                all(token not in formal_text for token in ("EXP-000851", "### R-169", *CLOSED, *NEW_NEGATIVES)),
+                "formal IDs absent before landing",
+                "formal IDs absent before landing",
+                "lifecycle",
+            )
     else:
         formal_audit(audit, manifest, fresh_primary, fresh_independent)
 

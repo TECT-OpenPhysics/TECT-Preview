@@ -115,6 +115,14 @@ def negative_section(markdown: str, heading: str) -> str:
     return matches[0]
 
 
+def historical_result_section(markdown: str) -> str:
+    pattern = re.compile(r"^### R-169\b([\s\S]*?)(?=^### R-|\Z)", re.MULTILINE)
+    matches = pattern.findall(markdown)
+    if len(matches) != 1:
+        raise AssertionError(f"expected one R-169 result section, found {len(matches)}")
+    return matches[0]
+
+
 def live_counts() -> dict[str, int]:
     summary = json.loads((REPO / "verification/catalog-summary.json").read_text(encoding="utf-8"))
     return {
@@ -199,15 +207,22 @@ def staged_audit(audit: Audit, manifest: dict[str, Any]) -> None:
         (REPO / path).read_text(encoding="utf-8")
         for path in ("claims/GATES.md", "RESULTS-LEDGER.md", "explorations/log.jsonl", "changelog/log.jsonl")
     )
-    new_tokens = ["EXP-000860", "R-169 v1.3", *CLOSED]
-    audit.check("preformal authority absence", all(token not in authorities for token in new_tokens), "new authority tokens absent", "new authority tokens absent", "lifecycle")
-    current = live_counts()
-    deltas = {"claims": 0, "results": 0, "gates": 1, "negatives": 0, "explorations": 1, "events": 1, "tasks": 0, "catalog": 0}
-    projected = {key: current[key] + deltas[key] for key in current}
-    missing_run_count = sum(not path.exists() for path in (PRIMARY_RESULT, INDEPENDENT_RESULT, DEFAULT_OUTPUT))
-    projected["catalog"] = catalog_inventory_count() + missing_run_count
+    events = parse_json_lines(REPO / "changelog/log.jsonl")
+    matches = [(ordinal, event) for ordinal, event in enumerate(events, start=1) if event.get("id") == manifest["formal_integration"]["event_id"]]
     expected = manifest["formal_integration"]["expected_post_counts"]
-    audit.check("preformal count projection", projected == expected, projected, expected, "lifecycle")
+    if matches:
+        current = live_counts()
+        audit.check("integrated historical authority revalidation", len(matches) == 1, matches, "one immutable event-id match", "lifecycle")
+        audit.check("append-only current counts", all(current[key] >= int(expected[key]) for key in expected), current, expected, "lifecycle")
+    else:
+        new_tokens = ["EXP-000860", "R-169 v1.3", *CLOSED]
+        audit.check("preformal authority absence", all(token not in authorities for token in new_tokens), "new authority tokens absent", "new authority tokens absent", "lifecycle")
+        current = live_counts()
+        deltas = {"claims": 0, "results": 0, "gates": 1, "negatives": 0, "explorations": 1, "events": 1, "tasks": 0, "catalog": 0}
+        projected = {key: current[key] + deltas[key] for key in current}
+        missing_run_count = sum(not path.exists() for path in (PRIMARY_RESULT, INDEPENDENT_RESULT, DEFAULT_OUTPUT))
+        projected["catalog"] = catalog_inventory_count() + missing_run_count
+        audit.check("preformal count projection", projected == expected, projected, expected, "lifecycle")
 
 
 def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str, Any], fresh_independent: dict[str, Any]) -> None:
@@ -225,16 +240,9 @@ def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str
     audit.check("generic interface and parents remain open", all("EXP-000860" in value and "R-169 v1.3" in value and "OPEN" in value for value in open_sections), "three unique OPEN annotations", "three unique OPEN annotations", "formal")
     audit.check("reused negative authorities", all(negative_section(negatives, identifier) for identifier in REUSED_NEGATIVES), "four reused negative sections", "four reused negative sections", "formal")
 
-    result_tokens = (
-        "### R-169",
-        "R-169 v1.3",
-        "EXP-000860",
-        "current proof-first authority",
-        "R-169 v1.2 certificate",
-        "prior proof-first authority",
-        "No R-169 v1.3 PDF",
-    )
-    audit.check("R-169 current authority", all(token in results for token in result_tokens), [token for token in result_tokens if token in results], list(result_tokens), "formal")
+    result_tokens = ("R-169 v1.3", "EXP-000860", "R-169 v1.4")
+    r169_section = historical_result_section(results)
+    audit.check("R-169 historical authority", all(token in r169_section for token in result_tokens), [token for token in result_tokens if token in r169_section], list(result_tokens), "formal")
     audit.check("roadmap and strategy linkage", all(token in roadmap and token in strategy_index for token in ("EXP-000860", "R-169 v1.3")), "both surfaces linked", "both surfaces linked", "formal")
 
     records = [record for record in parse_json_lines(REPO / "explorations/log.jsonl") if record.get("id") == "EXP-000860"]
@@ -271,9 +279,11 @@ def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str
 
     theorem_map = json.loads((REPO / "governance/sector-a-theorem-map.json").read_text(encoding="utf-8"))
     priority = theorem_map["research_priority"]
+    actual_map_version = tuple(int(part) for part in theorem_map.get("version", "0.0.0").split("."))
+    required_map_version = tuple(int(part) for part in contract["theorem_map_version"].split("."))
     map_ok = (
-        theorem_map.get("version") == contract["theorem_map_version"]
-        and "EXP-000860" in priority.get("latest_cp1_checkpoint", "")
+        actual_map_version >= required_map_version
+        and priority.get("latest_cp1_checkpoint")
         and priority.get("closed_r169_v1_3_scoped_gates") == CLOSED
         and priority.get("strengthened_r169_v1_3_scoped_gates") == STRENGTHENED
         and priority.get("open_r169_v1_3_interface_gates") == [OPEN[0]]
@@ -289,9 +299,7 @@ def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str
 
     current_counts = live_counts()
     expected_counts = dict(contract["expected_post_counts"])
-    if not DEFAULT_OUTPUT.exists():
-        expected_counts["catalog"] -= 1
-    audit.check("exact post counts", current_counts == expected_counts, current_counts, expected_counts, "formal")
+    audit.check("append-only post counts", all(current_counts[key] >= int(expected_counts[key]) for key in expected_counts), current_counts, expected_counts, "formal")
 
     stored_primary = json.loads(PRIMARY_RESULT.read_text(encoding="utf-8"))
     stored_independent = json.loads(INDEPENDENT_RESULT.read_text(encoding="utf-8"))

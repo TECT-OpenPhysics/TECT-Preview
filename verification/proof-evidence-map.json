@@ -6,8 +6,8 @@
   },
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
-    "RESULTS-LEDGER.md": "5e70836e0bfd57a6c754bc72a8192b0a695ff6264fc6f7aafa57ac5002270e9d",
-    "changelog/log.jsonl": "92810d69d2ba03843408f0fa3819a313aefe21915f899e78d10b661263074c1c",
+    "RESULTS-LEDGER.md": "510f26027269b81b7364dda51b237bdfe223829c44ed58d39838888fe3bcdd49",
+    "changelog/log.jsonl": "8c4ca45523ce9abbf3d36ac2f3c473f872d8f456c09fad3a73db102540d4e9ec",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "48183a01d2ef3ec213e5de7a95addbe19316fbe54ac636c1a56e307d1203a8bb",
-    "explorations/log.jsonl": "cd977512a1413bf87e497f3b9c3346766cf7661f37659a49c889749fe8727d27",
+    "explorations/log.jsonl": "9b22c80d199c26b17f349298e9f2536192ed9b30bc2aef694076ccfd5795ae35",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "todo/todo.json": "ec2cfbd089b7c06eb8f82fbd4f5634c8ba882d440766b8ec3d5fec6a8e75359a"
   },
@@ -68,15 +68,15 @@
     "refuted_claims": 1,
     "reusable_results": 170,
     "negative_records": 372,
-    "proof_explorations": 870,
+    "proof_explorations": 871,
     "exploration_verdicts": {
       "advanced": 532,
       "failed": 235,
-      "inconclusive": 74,
+      "inconclusive": 75,
       "parked": 29
     },
     "process_grade_lessons": 3,
-    "accepted_events": 651,
+    "accepted_events": 652,
     "tasks": 57,
     "live_tasks": 11,
     "completed_tasks": 46,
@@ -2686,6 +2686,13 @@
         "event": "20260821-t-054-common-input-owner-split-audit-2026-08-21",
         "claim_ids": [
           "EXP-000870"
+        ]
+      },
+      {
+        "event": "20260821-historical-t-055-regression-reader-contract-cor",
+        "claim_ids": [
+          "EXP-000871",
+          "R-169"
         ]
       }
     ],
@@ -10941,9 +10948,10 @@
           "EXP-000867",
           "EXP-000868",
           "EXP-000869",
-          "EXP-000870"
+          "EXP-000870",
+          "EXP-000871"
         ],
-        "latest_exploration_id": "EXP-000870",
+        "latest_exploration_id": "EXP-000871",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -11096,9 +11104,10 @@
           "20260820-r-168-v1-3-generated-reader-locator-correction",
           "20260820-r-108-generated-reader-contract-correction-2026",
           "20260820-historical-t-054-regression-reader-contract-cor",
-          "20260821-t-054-common-input-owner-split-audit-2026-08-21"
+          "20260821-t-054-common-input-owner-split-audit-2026-08-21",
+          "20260821-historical-t-055-regression-reader-contract-cor"
         ],
-        "latest_event_id": "20260821-t-054-common-input-owner-split-audit-2026-08-21",
+        "latest_event_id": "20260821-historical-t-055-regression-reader-contract-cor",
         "live_task_gate_ids": [
           "C6-BCC-PREMISE-BLOCKED",
           "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION"
@@ -12082,6 +12091,7 @@
         "negative_route_authorities": "R-169 v1.0 registers `NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION` and `NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`. It retains the retired BCC-selection authority `R-2026-06-23-b3-bcc-structural-selection`, the absolute-anchor boundary `NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR`, and the same- Hamiltonian equilibrium-reference boundary `NG-2026-08-09-PRE-A-ST8-Q3LOCK-EQUILIBRIUM-PHASE-AS-STRICT-EMPTY-REFERENCE`. R-169 v1.1 registers no new negative and reuses `NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM` together with `NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`. R-169 v1.2 registers `NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION`, `NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING` and `NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER`. It reuses the R-157 nonzero-equilibrium boundary and the v1.0 finite-part empty-reference boundary. R-169 v1.3 registers no new negative and reuses `NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION`, `NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING`, `NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER` and `R-2026-06-23-b3-bcc-structural-selection`. R-169 v1.4 registers no new negative and reuses only `R-2026-06-23-b3-bcc-structural-selection`. Its dated append-only correction withdraws the blanket finite-grid collapse/saddle leg as exact Bohr evidence while preserving the original retirement: BCC remains worst among the four corrected radial branches and no physical-reference, transverse-stability, or controlled-limit theorem is present.",
         "boundary": "This is a T0, claim-nonbearing geometry, native-owner and reconstructed common-Bohr applicability audit. V1.4 closes only the declared four-family scalar moment/radial-owner child and qualifies one historical evidentiary leg. It is not the full Reading-H Hartree, A1 side-16 `F_decl` or `F_ref`, a P1 realization, or a matched physical-empty comparison. It proves no transverse/PDE/continuum stability, candidate completeness, global vacuum, BCC resurrection, C6 spacetime conclusion, physical Sector-A result, or Pre-A closure. The selective legacy rollout, `PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE`, the physical-empty gate, `C6-BCC-PREMISE-BLOCKED`, and Round-1 remain OPEN.",
         "proven_in": "The [R-169 v1.4 certificate](strategy/pre-a-t055-legacy-sma-common-bohr-moment-radial-owner-route-split-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-legacy-sma-common-bohr-moment-radial-owner-route-split-manifest.json) are the current proof-first authority, together with their primary, non-importing independent and integrated executables and run JSON artefacts. No R-169 v1.4 PDF is issued. The [R-169 v1.3 certificate](strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-certificate-260814.md) and [machine manifest](strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-manifest.json) remain the prior proof-first authority. The R-169 v1.2, v1.1 and v1.0 certificates and manifests remain earlier proof-first history.",
+        "historical_reader_correction_exp_000871": "The four T-055 historical verifiers now locate their own append-only events by immutable event ID, accept monotone later global counts, and bind the current superseding R-169 source hashes instead of treating v1.2/v1.3/v1.4 history as preformal. This repairs regression-reader lifecycle drift only; it changes no native-owner, common-Bohr, physical-empty, P1, Hartree, stability, C6, Sector-A or Pre-A mathematical scope.",
         "tier": "T0 (claim-nonbearing scoped exact geometry, conditional sign/stability transfer and exact logical obstructions only).",
         "publication_target": "Pre-A geometry and reference-sign route note."
       },
@@ -12101,7 +12111,8 @@
         "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
         "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
         "20260814-correct-t-057-to-selective-main-line-legacy-pre",
-        "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial"
+        "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial",
+        "20260821-historical-t-055-regression-reader-contract-cor"
       ],
       "co_recorded_negative_tags": [
         "NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN",
@@ -69877,6 +69888,60 @@
       "task_id": "T-054",
       "title": "Audit the T-054 common-input ledger against every current candidate owner",
       "verdict": "inconclusive"
+    },
+    {
+      "boundary": "No T-055 child is promoted beyond its registered T0 scope. R-169 v1.0 remains the affine/truncated-octahedron and matched-sign route; v1.2 remains covariance/P1 interface firewalls; v1.3 remains the native equal-amplitude zero-phase BCC orbit and Q-versus-G_* sign; v1.4 remains the reconstructed scalar common-Bohr owner audit. None supplies a physical-empty comparison, a full Reading-H-to-P1 energy map, transverse/continuum stability, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "A historical verifier that requires its original snapshot to remain the last event or to have its authorities absent cannot be a current regression reader in an append-only proof ledger. Updating that reader to locate its own event and current source authorities is a verification correction, not a promotion or a new negative result.",
+      "evidence_refs": [
+        "codes/foundations/pre_a_t055_truncated_octahedron_realization_and_empty_reference_sign_route_split_verify.py#formal_audit",
+        "codes/foundations/pre_a_t055_reading_h_covariance_to_p1_interface_route_split_verify.py#lifecycle_audit",
+        "codes/foundations/pre_a_t055_reading_h_native_owner_bcc_route_termination_verify.py#lifecycle_audit",
+        "codes/foundations/pre_a_t055_legacy_sma_common_bohr_moment_radial_owner_route_split_verify.py#formal_audit",
+        "strategy/pre-a-t055-reading-h-covariance-to-p1-interface-route-split-manifest.json#source_authorities",
+        "strategy/pre-a-t055-reading-h-native-owner-bcc-route-termination-manifest.json#source_authorities",
+        "strategy/pre-a-t055-legacy-sma-common-bohr-moment-radial-owner-route-split-manifest.json#formal_integration",
+        "claims/GATES.md#pa-t055-reading-h-realization-to-pinned-p1-or-declared-escape",
+        "RESULTS-LEDGER.md#r-169",
+        "explorations/log.jsonl#exp-000870"
+      ],
+      "finding": "The four current failures are contract drift, not mathematical counterexamples. The v1.0 reader still expects the pre-R-169 global counts; v1.2 and v1.3 expect superseded R-157/R-158 manifest hashes; and v1.2/v1.3/v1.4 staged lifecycle checks still demand preformal absence even though their append-only authorities are already integrated. No geometry, covariance, native Q-versus-G_* sign, nonlinear convention, radial-order, or no-overclaim row failed before those reader contracts stopped. The repair must preserve each historical event and theorem scope, treat later counts as append-only state, and keep the Reading-H-to-P1, physical-empty and C6 parent gates open.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-169"
+        ]
+      },
+      "gate_ids": [
+        "PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE",
+        "C6-BCC-PREMISE-BLOCKED"
+      ],
+      "id": "EXP-000871",
+      "method": [
+        "Run the four registered T-055 integrated verifiers in staged no-store mode against the current generated tree and classify every failure before changing a theorem assertion.",
+        "Compare each failure with the current full authority, event ordinal, generated counts and current R-157/R-158 manifest hashes; distinguish mathematical derivation rows from lifecycle, reader-window and provenance rows.",
+        "Repair only historical reader contracts: use unique event-id locators, accept later append-only counts monotonically, and bind current superseding R-157/R-158 hashes without broadening any theorem scope.",
+        "Rerun primary and non-importing independent children plus integrated freshness and release checks, and adversarially reject any mutation that would turn a later reader repair into a new physical or P1 conclusion."
+      ],
+      "next_action": "Patch the historical lifecycle and current-authority readers, update only superseded R-157/R-158 source hashes in the v1.2/v1.3 manifests and their downstream pins, rerun all four T-055 packages, then return to the still-open physical-empty/common-parent proof obligation.",
+      "provenance": "contemporaneous",
+      "question": "Do the current T-055 v1.0-v1.4 verifier failures falsify their geometry, covariance, native-owner or common-Bohr mathematics, or do they require historical-reader repair after later append-only authorities and R-157/R-158 manifest corrections?",
+      "recorded_at": "2026-08-21T00:40:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000870",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-21",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-055",
+      "title": "Separate integrated T-055 mathematics from stale historical verifier lifecycle contracts",
+      "verdict": "inconclusive"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -69982,7 +70047,8 @@
     "EXP-000867",
     "EXP-000868",
     "EXP-000869",
-    "EXP-000870"
+    "EXP-000870",
+    "EXP-000871"
   ],
   "process_grade_lessons": [
     "Round-summary over-claim incident (legacy 2026-04-24): higher-tier summaries may never outrun pillar-level notes → single-source-of-truth rule (`status.json` → generated `CLAIMS.md`).",
@@ -95049,6 +95115,57 @@
         "R-168": "explicit_result_id",
         "R-170": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260821-historical-t-055-regression-reader-contract-cor",
+      "date": "2026-08-21",
+      "header": "[Historical T-055 regression-reader contract correction] - 2026-08-21",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-000871",
+        "R-169"
+      ],
+      "keywords": [
+        "EXP-000871",
+        "R-169",
+        "append-only-regression-reader",
+        "historical-reader-contract",
+        "no-new-negative"
+      ],
+      "negative_results": [],
+      "notes": [
+        "RESULTS-LEDGER.md",
+        "codes/foundations/pre_a_t055_truncated_octahedron_realization_and_empty_reference_sign_route_split_verify.py",
+        "codes/foundations/pre_a_t055_reading_h_covariance_to_p1_interface_route_split_verify.py",
+        "codes/foundations/pre_a_t055_reading_h_native_owner_bcc_route_termination_verify.py",
+        "codes/foundations/pre_a_t055_legacy_sma_common_bohr_moment_radial_owner_route_split_verify.py"
+      ],
+      "scripts": [
+        "codes/foundations/pre_a_t055_truncated_octahedron_realization_and_empty_reference_sign_route_split_verify.py",
+        "codes/foundations/pre_a_t055_reading_h_covariance_to_p1_interface_route_split_verify.py",
+        "codes/foundations/pre_a_t055_reading_h_native_owner_bcc_route_termination_verify.py",
+        "codes/foundations/pre_a_t055_legacy_sma_common_bohr_moment_radial_owner_route_split_verify.py"
+      ],
+      "raw": "## [Historical T-055 regression-reader contract correction] - 2026-08-21\n\nEXP-000871 records a T-055 historical regression-reader correction for R-169. The four readers now use immutable event IDs, current superseding source hashes, and monotone later counts, so integrated R-169 mathematics remains auditable after later T-054 and R-169 append-only authorities.\n\nThis repairs lifecycle and provenance drift only. It changes no native-owner, common-Bohr, physical-empty, pinned-P1, full-Hartree, stability, C6, Sector-A, or Pre-A mathematical scope, and no new negative is registered.\n\n",
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000871",
+        "R-169"
+      ],
+      "result_ids": [
+        "R-169"
+      ],
+      "linked_result_ids": [
+        "R-169"
+      ],
+      "result_link_basis": {
+        "R-169": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -99998,6 +100115,12 @@
         "id": "event:20260820-r-168-v1-3-generated-reader-locator-correction",
         "kind": "accepted_event",
         "label": "[R-168 v1.3 generated-reader locator correction under rolling windows] - 2026-08-20",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260821-historical-t-055-regression-reader-contract-cor",
+        "kind": "accepted_event",
+        "label": "[Historical T-055 regression-reader contract correction] - 2026-08-21",
         "authority": "CHANGELOG.md"
       },
       {
@@ -105224,6 +105347,12 @@
         "id": "exploration:EXP-000870",
         "kind": "proof_exploration",
         "label": "Audit the T-054 common-input ledger against every current candidate owner",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000871",
+        "kind": "proof_exploration",
+        "label": "Separate integrated T-055 mathematics from stale historical verifier lifecycle contracts",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -121282,6 +121411,18 @@
         "from": "event:20260820-r-168-v1-3-generated-reader-locator-correction",
         "relation": "records_result",
         "to": "result:R-168",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260821-historical-t-055-regression-reader-contract-cor",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260821-historical-t-055-regression-reader-contract-cor",
+        "relation": "records_result",
+        "to": "result:R-169",
         "basis": "explicit_result_id"
       },
       {
@@ -161020,6 +161161,42 @@
         "from": "exploration:EXP-000870",
         "relation": "references_result",
         "to": "result:R-170",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000871",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000871",
+        "relation": "assesses_gate",
+        "to": "gate:C6-BCC-PREMISE-BLOCKED",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000871",
+        "relation": "assesses_gate",
+        "to": "gate:PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000871",
+        "relation": "continues",
+        "to": "exploration:EXP-000870",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000871",
+        "relation": "records_task",
+        "to": "task:T-055",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000871",
+        "relation": "references_result",
+        "to": "result:R-169",
         "basis": "structured_formal_ref"
       },
       {

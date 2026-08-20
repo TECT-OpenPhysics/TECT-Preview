@@ -205,7 +205,12 @@ def run(staged: bool) -> dict[str, Any]:
     if staged:
         gates = (REPO / "claims/GATES.md").read_text(encoding="utf-8")
         results = (REPO / "RESULTS-LEDGER.md").read_text(encoding="utf-8")
-        audit.check("preformal authority absence", "EXP-000852" not in gates and "R-169 v1.1" not in results, "new authority absent", "new authority absent", "lifecycle")
+        events = [json.loads(line) for line in (REPO / "changelog/log.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+        matches = [event for event in events if event.get("id") == manifest["formal_integration"]["event_id"]]
+        if matches:
+            audit.check("integrated historical authority revalidation", len(matches) == 1, matches, "one immutable event-id match", "lifecycle")
+        else:
+            audit.check("preformal authority absence", "EXP-000852" not in gates and "R-169 v1.1" not in results, "new authority absent", "new authority absent", "lifecycle")
 
     return {
         "schema": "tect/pre-a-t055-pinned-p1-bcc-periodic-realization-primary/1.0",

@@ -242,22 +242,29 @@ def staged_audit(audit: Audit, manifest: dict[str, Any]) -> None:
     )
     new_tokens = [manifest["exploration_id"], manifest["version"], *CLOSED]
     absent_paths = (PRIMARY_RESULT, INDEPENDENT_RESULT, DEFAULT_OUTPUT, LEGACY_RECORD)
-    audit.check(
-        "preformal authority absence",
-        all(token not in authorities for token in new_tokens) and not any(path.exists() for path in absent_paths),
-        "new authority tokens and owned outputs absent",
-        "new authority tokens and owned outputs absent",
-        "lifecycle",
-    )
-    current = live_counts()
-    projected = dict(current)
-    for key, delta in {"gates": 1, "explorations": 1, "events": 1}.items():
-        projected[key] += delta
-    projected["catalog"] = catalog_inventory_count() + int(not LEGACY_RECORD.exists()) + sum(
-        not path.exists() for path in (PRIMARY_RESULT, INDEPENDENT_RESULT, DEFAULT_OUTPUT)
-    )
+    events = parse_json_lines(REPO / "changelog/log.jsonl")
+    matches = [(ordinal, event) for ordinal, event in enumerate(events, start=1) if event.get("id") == manifest["formal_integration"]["event_id"]]
     expected = manifest["formal_integration"]["expected_post_counts"]
-    audit.check("preformal count projection", projected == expected, projected, expected, "lifecycle")
+    if matches:
+        current = live_counts()
+        audit.check("integrated historical authority revalidation", len(matches) == 1, matches, "one immutable event-id match", "lifecycle")
+        audit.check("append-only current counts", all(current[key] >= int(expected[key]) for key in expected), current, expected, "lifecycle")
+    else:
+        audit.check(
+            "preformal authority absence",
+            all(token not in authorities for token in new_tokens) and not any(path.exists() for path in absent_paths),
+            "new authority tokens and owned outputs absent",
+            "new authority tokens and owned outputs absent",
+            "lifecycle",
+        )
+        current = live_counts()
+        projected = dict(current)
+        for key, delta in {"gates": 1, "explorations": 1, "events": 1}.items():
+            projected[key] += delta
+        projected["catalog"] = catalog_inventory_count() + int(not LEGACY_RECORD.exists()) + sum(
+            not path.exists() for path in (PRIMARY_RESULT, INDEPENDENT_RESULT, DEFAULT_OUTPUT)
+        )
+        audit.check("preformal count projection", projected == expected, projected, expected, "lifecycle")
 
 
 def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str, Any], fresh_independent: dict[str, Any]) -> None:
@@ -383,8 +390,10 @@ def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str
 
     theorem_map = json.loads((REPO / "governance/sector-a-theorem-map.json").read_text(encoding="utf-8"))
     priority = theorem_map["research_priority"]
+    actual_map_version = tuple(int(part) for part in theorem_map.get("version", "0.0.0").split("."))
+    required_map_version = tuple(int(part) for part in contract["theorem_map_version"].split("."))
     map_ok = (
-        theorem_map.get("version") == contract["theorem_map_version"]
+        actual_map_version >= required_map_version
         and "EXP-000862" in priority.get("latest_cp1_checkpoint", "")
         and priority.get("closed_r169_v1_4_scoped_gates") == CLOSED
         and priority.get("open_r169_v1_4_interface_gates") == OPEN
@@ -442,9 +451,7 @@ def formal_audit(audit: Audit, manifest: dict[str, Any], fresh_primary: dict[str
 
     current_counts = live_counts()
     expected_counts = dict(contract["expected_post_counts"])
-    if not DEFAULT_OUTPUT.exists():
-        expected_counts["catalog"] -= 1
-    audit.check("exact post counts", current_counts == expected_counts, current_counts, expected_counts, "formal")
+    audit.check("append-only post counts", all(current_counts[key] >= int(expected_counts[key]) for key in expected_counts), current_counts, expected_counts, "formal")
 
     stored_primary = json.loads(PRIMARY_RESULT.read_text(encoding="utf-8"))
     stored_independent = json.loads(INDEPENDENT_RESULT.read_text(encoding="utf-8"))
