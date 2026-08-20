@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "48183a01d2ef3ec213e5de7a95addbe19316fbe54ac636c1a56e307d1203a8bb",
-    "explorations/log.jsonl": "936c482293455aa3602c01bb6866e9526b489323e0f23871bf4c02f1e3237d02",
+    "explorations/log.jsonl": "3ee095d30d12658490548d405d8d9bd8de46027bc83ce449dd9dd87eb302115a",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "todo/todo.json": "ec2cfbd089b7c06eb8f82fbd4f5634c8ba882d440766b8ec3d5fec6a8e75359a"
   },
@@ -68,11 +68,11 @@
     "refuted_claims": 1,
     "reusable_results": 170,
     "negative_records": 372,
-    "proof_explorations": 866,
+    "proof_explorations": 867,
     "exploration_verdicts": {
       "advanced": 532,
       "failed": 235,
-      "inconclusive": 70,
+      "inconclusive": 71,
       "parked": 29
     },
     "process_grade_lessons": 3,
@@ -6440,9 +6440,10 @@
           "EXP-000856",
           "EXP-000858",
           "EXP-000860",
-          "EXP-000865"
+          "EXP-000865",
+          "EXP-000867"
         ],
-        "latest_exploration_id": "EXP-000865",
+        "latest_exploration_id": "EXP-000867",
         "accepted_event_ids": [
           "20260717-start-a2-full-production-pde-proof-candidate-20",
           "20260717-close-a2-full-production-nonlinear-mapping-audi",
@@ -10909,9 +10910,10 @@
           "EXP-000863",
           "EXP-000864",
           "EXP-000865",
-          "EXP-000866"
+          "EXP-000866",
+          "EXP-000867"
         ],
-        "latest_exploration_id": "EXP-000866",
+        "latest_exploration_id": "EXP-000867",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -69609,6 +69611,65 @@
       "task_id": "T-054",
       "title": "Repair the R-168 generated-reader locator contract under rolling windows",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "This is a T0 route audit only. It proves no physical phase, candidate selection, compact or gauge action, microscopic observable map, prediction, external target commitment, C6 result, Sector-A result, or Pre-A completion. It creates no new result or negative authority and does not close A13 or T-050.",
+      "claim_ids": [
+        "A2-FULL-PRODUCTION-WELLPOSED",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "Closing this gate from a vacuous or baseline-only ledger would violate the registered minimum_candidate_condition and collapse the distinction between discovery constraints, bridge infrastructure, the effective null, and microscopic contestants. The honest route is to keep the parent and common-input gate open while requiring one candidate with an admitted map, a nonempty target-free prediction, and a ledger row for every shared and candidate-specific input before any prospective freeze.",
+      "evidence_refs": [
+        "claims/GATES.md#pa-round1-per-parameter-common-input-ledger",
+        "claims/GATES.md#pa-round1-admissible-microscopic-candidate-map-and-frozen-prediction",
+        "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json#required_internal_input",
+        "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json#freeze_schema",
+        "strategy/pre-a-round1-evidence-clue-freeze-260810-v1.0.json#completeness",
+        "strategy/pre-a-m0-established-low-energy-baseline-manifest.json#input_prediction_accounting",
+        "strategy/pre-a-m1-current-production-functional-candidate-manifest.json#input_prediction_accounting",
+        "strategy/pre-a-pa-m2-ci8-rs-dual-lane-manifest.json#input_prediction_accounting",
+        "strategy/pre-a-pa-m5-nl3-sv-candidate-manifest.json#input_prediction_accounting",
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol.py#current",
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_independent.py#current",
+        "codes/foundations/pre_a_round1_prospective_holdout_freeze_protocol_verify.py#current"
+      ],
+      "finding": "The common-input gate cannot close non-vacuously at the current checkpoint. The evidence-role freeze supplies a categorical role matrix, and R-168 supplies the declared ledger schema, but the live R-168 manifest explicitly records required_internal_input.status=OPEN because the current admitted set is empty. M0 is an effective null baseline and cannot be scored as the microscopic winner. M1, M2, and M5 have no admitted microscopic-to-observable map with a nonempty target-free prediction: their input sets, state/reference contracts, regulators and laws are candidate-specific and not a common ledger for an admitted tournament. A ledger containing only M0 would therefore be a baseline record, not the required common-input ledger before a real freeze. The existing three R-168 lanes verify the empty-set/schema boundary and do not manufacture the missing candidate or external commitment.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-168",
+          "R-170"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
+        "PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION"
+      ],
+      "id": "EXP-000867",
+      "method": [
+        "Read the live Round-1 parent, common-input-ledger, candidate-map, and evidence-role gate contracts together with the R-168 freeze manifest.",
+        "Compare the M0 baseline and current M1, M2, and M5 manifests for inserted or matched inputs, state/reference, law, regulator, units, nuisance ranges, candidate maps, and prediction status.",
+        "Apply the minimum_candidate_condition and test whether a ledger containing only M0 or a categorical role matrix would satisfy the gate without promoting a baseline or an unadmitted candidate.",
+        "Run the existing primary, independent, and integrated R-168 lanes as the current empty-set and schema integrity controls; separate those checks from a non-vacuous common-input proof."
+      ],
+      "next_action": "Do not close the common-input gate from M0 or a categorical matrix. Register a new candidate version only after its microscopic map, target-free prediction and parameter ledger are available; then rerun the common-input, admission and prospective-freeze contracts before revisiting A13/T-050.",
+      "provenance": "contemporaneous",
+      "question": "Can PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER be closed now from the existing M0/M1/M2/M5 manifests and the R-168/R-170 audit, or does closure require a nonempty admitted microscopic candidate and candidate-neutral ledger?",
+      "recorded_at": "2026-08-20T14:15:22Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000866",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-20",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Test whether the T-054 common-input ledger can close with an empty admitted microscopic set",
+      "verdict": "inconclusive"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -69710,7 +69771,8 @@
     "EXP-000847",
     "EXP-000853",
     "EXP-000855",
-    "EXP-000856"
+    "EXP-000856",
+    "EXP-000867"
   ],
   "process_grade_lessons": [
     "Round-summary over-claim incident (legacy 2026-04-24): higher-tier summaries may never outrun pillar-level notes → single-source-of-truth rule (`status.json` → generated `CLAIMS.md`).",
@@ -104754,6 +104816,12 @@
         "id": "exploration:EXP-000866",
         "kind": "proof_exploration",
         "label": "Repair the R-168 generated-reader locator contract under rolling windows",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000867",
+        "kind": "proof_exploration",
+        "label": "Test whether the T-054 common-input ledger can close with an empty admitted microscopic set",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -160280,6 +160348,60 @@
         "from": "exploration:EXP-000866",
         "relation": "references_result",
         "to": "result:R-168",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000867",
+        "relation": "assesses",
+        "to": "claim:A2-FULL-PRODUCTION-WELLPOSED",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000867",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000867",
+        "relation": "assesses_gate",
+        "to": "gate:PA-ROUND1-ADMISSIBLE-MICROSCOPIC-CANDIDATE-MAP-AND-FROZEN-PREDICTION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000867",
+        "relation": "assesses_gate",
+        "to": "gate:PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000867",
+        "relation": "assesses_gate",
+        "to": "gate:PA-ROUND1-PER-PARAMETER-COMMON-INPUT-LEDGER",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000867",
+        "relation": "continues",
+        "to": "exploration:EXP-000866",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000867",
+        "relation": "records_task",
+        "to": "task:T-054",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000867",
+        "relation": "references_result",
+        "to": "result:R-168",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000867",
+        "relation": "references_result",
+        "to": "result:R-170",
         "basis": "structured_formal_ref"
       },
       {
