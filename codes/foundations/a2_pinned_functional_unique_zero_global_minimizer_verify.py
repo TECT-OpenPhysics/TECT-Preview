@@ -77,6 +77,28 @@ def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def current_round1_task_scope(todo_lookup: dict[str, dict[str, Any]]) -> tuple[bool, bool]:
+    """Read the rolling T-054/T-050 state without requiring retired prose."""
+    t054 = todo_lookup.get("T-054", {})
+    t050 = todo_lookup.get("T-050", {})
+    t054_note = str(t054.get("note", ""))
+    t050_note = str(t050.get("note", ""))
+    t054_current = (
+        t054.get("status") == "in_progress"
+        and t054.get("gate") == "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        and "T-054" in t054_note
+        and "Pre-A" in t054_note
+    )
+    t050_parked = (
+        t050.get("status") == "backlog"
+        and t050.get("gate") == "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+        and "A13" in t050_note
+        and "parked" in t050_note.lower()
+        and "complete finite production cylinder" in t050_note
+    )
+    return t054_current, t050_parked
+
+
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -302,8 +324,9 @@ def main() -> int:
     audit.check("records", "claim narrative", RESULT_ID in claim_text and "exponential" in claim_text.lower(), RESULT_ID, "registered")
     audit.check("records", "status synchronized", status.get("no_overclaim") == manifest.get("no_overclaim") and "R-157" in status.get("statement", ""), status.get("no_overclaim"), manifest.get("no_overclaim"))
     audit.check("records", "T-052 analytically superseded", todo_lookup["T-052"]["status"] == "done" and "R-157" in todo_lookup["T-052"]["note"], todo_lookup["T-052"], "done by R-157")
-    audit.check("records", "T-054 advances after M1 rejection", todo_lookup["T-054"]["status"] == "in_progress" and "R-157" in todo_lookup["T-054"]["note"] and "M1" in todo_lookup["T-054"]["note"], todo_lookup["T-054"], "in progress")
-    audit.check("records", "T-050 quantitative boundary", "L_R" in todo_lookup["T-050"]["note"] and "U_0" in todo_lookup["T-050"]["note"], todo_lookup["T-050"]["note"], "exact sufficient-radius boundary")
+    t054_current, t050_parked = current_round1_task_scope(todo_lookup)
+    audit.check("records", "T-054 current Round-1 scope", t054_current, todo_lookup.get("T-054"), "in_progress on PA-ROUND1 evidence-role gate")
+    audit.check("records", "T-050 parked complete-cylinder boundary", t050_parked, todo_lookup.get("T-050"), "backlog A13 with complete finite production-cylinder reopen condition")
     audit.check("records", "changelog entry", "R-157" in changelog_text and "unique-zero" in changelog_text.lower(), LEDGER_ID, "registered")
     audit.check("records", "theorem map", "R-157" in json.dumps(theorem_map, sort_keys=True), LEDGER_ID, "registered")
     audit.check("records", "proof map", "R-157" in proof_map and all(identifier in proof_map for identifier in EXPLORATION_IDS), EXPLORATION_IDS, "registered")

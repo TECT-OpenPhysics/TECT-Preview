@@ -2994,6 +2994,16 @@ measure, any phase/PDE/morphology, or Sector A.
   ensemble-mechanism and model-discrimination note after independent external
   review.
 
+- **Historical regression-reader correction (EXP-000869).**  The R-157,
+  R-158, and PA-M5 regression contracts now read the current T-054
+  `PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE` state and the parked
+  T-050/A13 complete-production-cylinder condition instead of retired
+  route-specific prose.  R-157 passes 144/144, R-158 passes 155/155, and the
+  M5 reader passes 156/156; nested R-157 output is temporary, so a regression
+  check cannot overwrite a stored theorem artifact.  This repairs historical
+  reader scope only and changes none of the R-157/R-158 mathematical owners,
+  ensemble boundaries, or T-054 admission decisions.
+
 <a id="r-157"></a>
 ### R-157 -- Pinned P1 unique-zero critical point, global minimizer, and exponential gradient-flow decay
 

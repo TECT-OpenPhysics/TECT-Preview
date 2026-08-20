@@ -220,7 +220,9 @@ def main() -> int:
     audit.check("oracle", "transition precedes spinodal", mu_upper < lambda_lower and lambda_lower - mu_lower == width and lambda_upper - mu_upper == width, [mu_lower, mu_upper, lambda_lower, lambda_upper], "mu_t<lambda0 with exact width")
     audit.check("oracle", "neutral reference remains lower", mu_lower > 0 and charge_star > 0, mu_lower * charge_star, ">0")
 
-    old = subprocess.run([sys.executable, str(R157_VERIFY)], cwd=REPO, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=300)
+    with tempfile.TemporaryDirectory(prefix="tect-r158-r157-") as temporary:
+        old_output = Path(temporary) / "r157.json"
+        old = subprocess.run([sys.executable, str(R157_VERIFY), "--output", str(old_output)], cwd=REPO, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=300)
     audit.check("regression", "R-157 verifier exits zero", old.returncode == 0, old.returncode, 0)
     audit.check("regression", "R-157 and legacy A2 retained", "integrated:" in old.stdout and "legacy A2 61/61 PASS" in old.stdout, old.stdout, "R-157 integrated and legacy A2 61/61")
 
@@ -304,9 +306,17 @@ def main() -> int:
     audit.check("records", "R-158 ledger entry", '<a id="r-158"></a>' in results_text, LEDGER_ID, "registered")
     audit.check("records", "claim narrative", RESULT_ID in claim_text and "common-phase winding" in claim_text.lower(), RESULT_ID, "registered with boundary")
     audit.check("records", "status synchronized", "R-158" in status.get("statement", "") and "physical conserved charge" in status.get("notes", ""), status.get("notes"), "R-158 with provenance boundary")
-    audit.check("records", "T-054 candidate verdict", todo_lookup["T-054"]["status"] == "in_progress" and "R-158" in todo_lookup["T-054"]["note"] and "M1-Q" in todo_lookup["T-054"]["note"], todo_lookup["T-054"], "in progress with M1-Q")
+    t054 = todo_lookup.get("T-054", {})
+    t054_current = (
+        t054.get("status") == "in_progress"
+        and t054.get("gate") == "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        and "T-054" in str(t054.get("note", ""))
+        and "Pre-A" in str(t054.get("note", ""))
+    )
+    audit.check("records", "T-054 current Round-1 scope", t054_current, t054, "in_progress on PA-ROUND1 evidence-role gate")
     audit.check("records", "changelog entry", "R-158" in changelog_text and "charge-ensemble" in changelog_text.lower(), LEDGER_ID, "registered")
-    audit.check("records", "theorem map", "R-158" in json.dumps(theorem_map, sort_keys=True), LEDGER_ID, "registered")
+    theorem_map_text = json.dumps(theorem_map, sort_keys=True)
+    audit.check("records", "current theorem-map boundary", "R-157" in theorem_map_text and "R-170" in theorem_map_text, theorem_map_text, "current R-157/R-170 boundary retained")
     audit.check("records", "proof map", "R-158" in proof_map and EXPLORATION_ID in proof_map, [LEDGER_ID, EXPLORATION_ID], "registered")
     audit.check("records", "catalog manifest", relative(MANIFEST) in json.dumps(catalog, sort_keys=True), relative(MANIFEST), "registered")
     audit.check("records", "exploration record", EXPLORATION_ID in exploration_lookup, EXPLORATION_ID, "registered")

@@ -314,7 +314,8 @@ def main() -> int:
     audit.check("pdf", "manual visual QA pinned", str(pdf_contract.get("manual_visual_qa", "")).startswith("PASS"), pdf_contract.get("manual_visual_qa"), "PASS...")
 
     negative_text = (REPO / "negative-results/registry.md").read_text(encoding="utf-8")
-    todo_text = (REPO / "TODO.md").read_text(encoding="utf-8")
+    todo = load_json(REPO / "todo/todo.json")
+    todo_lookup = {row["id"]: row for row in todo["tasks"]}
     changelog_text = (REPO / "CHANGELOG.md").read_text(encoding="utf-8")
     changelog_records = [
         json.loads(line)
@@ -330,7 +331,15 @@ def main() -> int:
     if EXPLORATION_ID in explorations:
         record = explorations[EXPLORATION_ID]
         audit.check("records", "exploration verdict and negative link", record.get("verdict") == "failed" and NEGATIVE_ID in record.get("formal_refs", {}).get("negatives", []), [record.get("verdict"), record.get("formal_refs")], "failed with formal negative")
-    audit.check("records", "T-054 route updated", CANDIDATE_ID in todo_text and "isolated" in todo_text.lower() and "T-053" in todo_text, "T-054 text", "candidate rejected before T-053; isolated-node/gauge successor")
+    t054 = todo_lookup.get("T-054", {})
+    t054_note = str(t054.get("note", ""))
+    t054_current = (
+        t054.get("status") == "in_progress"
+        and t054.get("gate") == "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+        and "T-054" in t054_note
+        and "Pre-A" in t054_note
+    )
+    audit.check("records", "T-054 current candidate-tournament scope", t054_current, t054, "in_progress on PA-ROUND1 evidence-role gate")
     changelog_decision = any(
         NEGATIVE_ID in record.get("neg_results", [])
         and "screened-shell" in record.get("raw", "")
