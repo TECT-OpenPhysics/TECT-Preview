@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**653 accepted events** · latest 25 shown below · machine locator: `index.json`
+**654 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-21 | `20260821-t-055-common-parent-audit-keeps-physical-empty` — [T-055 common-parent audit keeps physical-empty comparator unowned] - 2026-08-21 | C6-SPACETIME-SIGNATURE, EXP-000873, R-168, R-169 | [bounded page](pages/000619-000668.md#20260821-t-055-common-parent-audit-keeps-physical-empty) |
 | 2026-08-21 | `20260821-t-054-common-input-ledger-audit-leaves-current` — [T-054 common-input ledger audit leaves current Pre-A contestants unadmitted] - 2026-08-21 | C6-SPACETIME-SIGNATURE, EXP-000872 | [bounded page](pages/000619-000668.md#20260821-t-054-common-input-ledger-audit-leaves-current) |
 | 2026-08-21 | `20260821-historical-t-055-regression-reader-contract-cor` — [Historical T-055 regression-reader contract correction] - 2026-08-21 | C6-SPACETIME-SIGNATURE, EXP-000871, R-169 | [bounded page](pages/000619-000668.md#20260821-historical-t-055-regression-reader-contract-cor) |
 | 2026-08-21 | `20260821-t-054-common-input-owner-split-audit-2026-08-21` — [T-054 common-input owner split audit] - 2026-08-21 | A2-FULL-PRODUCTION-WELLPOSED, C6-SPACETIME-SIGNATURE, EXP-000870 | [bounded page](pages/000619-000668.md#20260821-t-054-common-input-owner-split-audit-2026-08-21) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-13 | `20260813-r-167-v3-6-registered-corridor-full-oscillator` — [R-167 v3.6 registered corridor full-oscillator phases and L1 Duhamel reduction] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000840, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-6-registered-corridor-full-oscillator) |
 | 2026-08-13 | `20260813-r-167-v3-5-ritz-corner-state-passage-and-positi` — [R-167 v3.5 Ritz-corner state passage and positive-time trace-class cutoff removal] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000839, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-5-ritz-corner-state-passage-and-positi) |
 | 2026-08-13 | `20260813-r-167-v3-4-dffr-hilbert-schmidt-uniformity-and` — [R-167 v3.4 DFFR Hilbert-Schmidt uniformity and conditional Yarotskii gap reductions] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000838, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-4-dffr-hilbert-schmidt-uniformity-and) |
-| 2026-08-13 | `20260813-r-167-v3-3-fixed-ritz-dffr-two-level-qps-zero-s` — [R-167 v3.3 fixed-Ritz DFFR two-level QPS zero-source two-phase theorem] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000837, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-3-fixed-ritz-dffr-two-level-qps-zero-s) |
 
 ## Post-cutover pages
 
@@ -49,5 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 619–653 | 35 | [000619-000668.md](pages/000619-000668.md) |
+| 619–654 | 36 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |
