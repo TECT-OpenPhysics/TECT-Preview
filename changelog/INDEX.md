@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**650 accepted events** · latest 25 shown below · machine locator: `index.json`
+**651 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-21 | `20260821-t-054-common-input-owner-split-audit-2026-08-21` — [T-054 common-input owner split audit] - 2026-08-21 | A2-FULL-PRODUCTION-WELLPOSED, C6-SPACETIME-SIGNATURE, EXP-000870 | [bounded page](pages/000619-000668.md#20260821-t-054-common-input-owner-split-audit-2026-08-21) |
 | 2026-08-20 | `20260820-historical-t-054-regression-reader-contract-cor` — [Historical T-054 regression-reader contract correction] - 2026-08-20 | A2-FULL-PRODUCTION-WELLPOSED, C6-SPACETIME-SIGNATURE, EXP-000869, R-157, R-158 | [bounded page](pages/000619-000668.md#20260820-historical-t-054-regression-reader-contract-cor) |
 | 2026-08-20 | `20260820-r-108-generated-reader-contract-correction-2026` — [R-108 generated-reader contract correction] - 2026-08-20 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, C6-SPACETIME-SIGNATURE, EXP-000868, R-108 | [bounded page](pages/000619-000668.md#20260820-r-108-generated-reader-contract-correction-2026) |
 | 2026-08-20 | `20260820-r-168-v1-3-generated-reader-locator-correction` — [R-168 v1.3 generated-reader locator correction under rolling windows] - 2026-08-20 | C6-SPACETIME-SIGNATURE, EXP-000866, R-168 | [bounded page](pages/000619-000668.md#20260820-r-168-v1-3-generated-reader-locator-correction) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-13 | `20260813-r-167-v3-3-fixed-ritz-dffr-two-level-qps-zero-s` — [R-167 v3.3 fixed-Ritz DFFR two-level QPS zero-source two-phase theorem] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000837, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-3-fixed-ritz-dffr-two-level-qps-zero-s) |
 | 2026-08-13 | `20260813-r-167-v3-2-common-generator-zero-temperature-km` — [R-167 v3.2 common-generator zero-temperature KMS and fixed-witness transfer] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000836, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-2-common-generator-zero-temperature-km) |
 | 2026-08-13 | `20260813-r-167-v3-1-essential-range-multiplier-and-joint` — [R-167 v3.1 essential-range multiplier and joint cylinder scalarity] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000835, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-1-essential-range-multiplier-and-joint) |
-| 2026-08-13 | `20260813-r-167-v3-0-closes-zero-source-star-bond-flow-sh` — [R-167 v3.0 closes zero-source star, bond-flow shell, and GNS-gap transfer reductions] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000834, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-0-closes-zero-source-star-bond-flow-sh) |
 
 ## Post-cutover pages
 
@@ -49,5 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 619–650 | 32 | [000619-000668.md](pages/000619-000668.md) |
+| 619–651 | 33 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |
