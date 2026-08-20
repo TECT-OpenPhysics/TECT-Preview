@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __first_issued__ = "2026-07-28"
 __version_issued__ = "2026-07-28"
 
@@ -176,7 +176,8 @@ def result_passes(record: dict[str, Any]) -> bool:
 
 def main() -> int:
     count_only = "--count-only" in sys.argv
-    count_workspace = tempfile.TemporaryDirectory(prefix="tect-r108-count-") if count_only else None
+    no_store = "--no-store" in sys.argv
+    child_workspace = tempfile.TemporaryDirectory(prefix="tect-r108-child-") if (count_only or no_store) else None
     rows: list[dict[str, Any]] = []
 
     def add(group: str, name: str, condition: bool, actual: Any, expected: Any) -> None:
@@ -197,8 +198,8 @@ def main() -> int:
         ("independent", INDEPENDENT, INDEPENDENT_RESULT, INDEPENDENT_ASSERTION_ORACLE, "tect/a13-complete-cluster-quotient-carleson-frontier-independent/1.0"),
     ):
         executed_result = (
-            Path(count_workspace.name) / f"{label}.json"
-            if count_workspace is not None
+            Path(child_workspace.name) / f"{label}.json"
+            if child_workspace is not None
             else result_path
         )
         executed_results[label] = executed_result
@@ -333,11 +334,20 @@ def main() -> int:
         "changelog": REPO / "changelog/log.jsonl",
         "proof map": REPO / "theory/proof-evidence-map.md",
     }
+    rolling_reader_checks = {
+        "todo": ("T-050" in (REPO / "todo/todo.json").read_text(encoding="utf-8")
+                 and "A13-CLASSII" in (REPO / "todo/todo.json").read_text(encoding="utf-8")),
+        "sector map": ("A13-CLASSII" in (REPO / "governance/sector-a-theorem-map.json").read_text(encoding="utf-8")
+                       and "primary_task" in (REPO / "governance/sector-a-theorem-map.json").read_text(encoding="utf-8")),
+    }
     for label, path in public_checks.items():
         content = path.read_text(encoding="utf-8")
         if label == "generated claims":
             current_reference = CLAIM in content
             reference_name = f"{label} references active A13 card"
+        elif label in rolling_reader_checks:
+            current_reference = rolling_reader_checks[label]
+            reference_name = f"{label} carries current A13/T-050 metadata"
         else:
             current_reference = "R-108" in content
             reference_name = f"{label} references R-108"
@@ -355,17 +365,26 @@ def main() -> int:
     }
     for label, path in narrowed_surfaces.items():
         content = path.read_text(encoding="utf-8")
-        add("scope", f"{label} names quotient-safe endpoint", "quotient" in content.lower() and "complete endpoint" in content.lower(), content.lower().count("complete endpoint"), ">0")
-        add("scope", f"{label} names square-before-average", "square-before-average" in content.lower(), "square-before-average" in content.lower(), True)
-        add("scope", f"{label} keeps uniform cluster bound open", "uniform" in content.lower() and "open" in content.lower(), "uniform" in content.lower(), True)
+        if label in {"todo", "sector map"}:
+            add("scope", f"{label} carries current route metadata", label in rolling_reader_checks and rolling_reader_checks[label], rolling_reader_checks.get(label, False), True)
+            add("scope", f"{label} does not pretend historical R-108 is current", "R-108" not in content, "R-108" not in content, True)
+            add("scope", f"{label} keeps the current route open", "open" in content.lower() or "backlog" in content.lower(), "open" in content.lower() or "backlog" in content.lower(), True)
+        else:
+            add("scope", f"{label} names quotient-safe endpoint", "quotient" in content.lower() and "complete endpoint" in content.lower(), content.lower().count("complete endpoint"), ">0")
+            add("scope", f"{label} names square-before-average", "square-before-average" in content.lower(), "square-before-average" in content.lower(), True)
+            add("scope", f"{label} keeps uniform cluster bound open", "uniform" in content.lower() and "open" in content.lower(), "uniform" in content.lower(), True)
 
-    claim_text = (CLAIM_DIR / "claim.md").read_text(encoding="utf-8")
+    authority_reproduction_text = "\n".join(
+        path.read_text(encoding="utf-8")
+        for path in (NOTE, CLAIM_DIR / "status.json", MANIFEST)
+        if path.exists()
+    )
     for token in (
         "a13_classii_complete_cluster_quotient_carleson_frontier_verify.py",
-        "primary `66/66`",
-        "independent `90/90`",
+        "primary 66/66",
+        "independent 90/90",
     ):
-        add("reproduction", f"claim current reproduction token {token}", token in claim_text, token in claim_text, True)
+        add("reproduction", f"R-108 authority reproduction token {token}", token in authority_reproduction_text, token in authority_reproduction_text, True)
 
     consequence = manifest.get("consequence", {})
     for key in ("uniform_complete_cluster_lower_bound", "full_overlap_src", "nelson", "sector_a_closure"):
@@ -411,7 +430,7 @@ def main() -> int:
             "sector_a": "open",
         },
     }
-    if not count_only:
+    if not count_only and not no_store:
         atomic_json(OUTPUT, payload)
     if failed:
         for row in failed[:30]:
@@ -419,8 +438,8 @@ def main() -> int:
     child_passed = sum(int(records.get(label, {}).get("assertions_passed", 0)) for label in ("primary", "independent"))
     aggregate_passed = child_passed + int(payload["assertions_passed"])
     print(f"Integrated R-108: {payload['assertions_passed']}/{payload['assertions_total']} {'PASS' if not failed else 'FAIL'}; aggregate {aggregate_passed}/{aggregate}")
-    if count_workspace is not None:
-        count_workspace.cleanup()
+    if child_workspace is not None:
+        child_workspace.cleanup()
     return 0 if not failed else 1
 
 

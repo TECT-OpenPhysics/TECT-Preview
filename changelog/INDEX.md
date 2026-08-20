@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**648 accepted events** · latest 25 shown below · machine locator: `index.json`
+**649 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-20 | `20260820-r-108-generated-reader-contract-correction-2026` — [R-108 generated-reader contract correction] - 2026-08-20 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, C6-SPACETIME-SIGNATURE, EXP-000868, R-108 | [bounded page](pages/000619-000668.md#20260820-r-108-generated-reader-contract-correction-2026) |
 | 2026-08-20 | `20260820-r-168-v1-3-generated-reader-locator-correction` — [R-168 v1.3 generated-reader locator correction under rolling windows] - 2026-08-20 | C6-SPACETIME-SIGNATURE, EXP-000866, R-168 | [bounded page](pages/000619-000668.md#20260820-r-168-v1-3-generated-reader-locator-correction) |
 | 2026-08-14 | `20260814-r-170-v1-0-initial-literature-applicability-aud` — [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | B1-RH-ENUM, C4-GRAVITY-1LOOP, C5-NEWTON-G, C6-SPACETIME-SIGNATURE, EXP-000863, R-170 | [bounded page](pages/000619-000668.md#20260814-r-170-v1-0-initial-literature-applicability-aud) |
 | 2026-08-14 | `20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial` — [R-169 v1.4 legacy SMA common-Bohr moment radial-owner route split] - 2026-08-14 | A1-KERNEL-CONV, A1-PRODUCTION-FUNCTIONAL-REALISATION, B1-RH-ENUM, B2-PROPA-HLAYER, B3-BCC-STRUCT, B3-RH-TESTED-STRUCTURE-RANKING, C6-SPACETIME-SIGNATURE, EXP-000862, R-169 | [bounded page](pages/000619-000668.md#20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-13 | `20260813-r-167-v3-1-essential-range-multiplier-and-joint` — [R-167 v3.1 essential-range multiplier and joint cylinder scalarity] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000835, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-1-essential-range-multiplier-and-joint) |
 | 2026-08-13 | `20260813-r-167-v3-0-closes-zero-source-star-bond-flow-sh` — [R-167 v3.0 closes zero-source star, bond-flow shell, and GNS-gap transfer reductions] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000834, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-0-closes-zero-source-star-bond-flow-sh) |
 | 2026-08-13 | `20260813-selector-full-oscillator-and-maximal-continuous` — [Selector full-oscillator and maximal continuous-element route split] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000833, R-167 | [bounded page](pages/000619-000668.md#20260813-selector-full-oscillator-and-maximal-continuous) |
-| 2026-08-13 | `20260813-r-167-v2-8-closes-fixed-cluster-large-n-physica` — [R-167 v2.8 closes fixed-cluster large-N physical-point local-SW remainder and strengthens the configuration-multiplier boundary] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000831, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v2-8-closes-fixed-cluster-large-n-physica) |
 
 ## Post-cutover pages
 
@@ -49,5 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 619–648 | 30 | [000619-000668.md](pages/000619-000668.md) |
+| 619–649 | 31 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

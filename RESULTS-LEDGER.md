@@ -6355,6 +6355,17 @@ lower bound. `OVERLAP_src`, Nelson, cutoff/floor removal, interacting-measure
 construction, Sector-A closure, and T5--T7 promotion remain open. Tier stays
 T4.
 
+**Generated-reader contract correction (EXP-000868).** The historical R-108
+primary, independent and integrated mathematics remains unchanged. The prior
+integrated failure came from requiring the compact current `todo/todo.json`
+and `governance/sector-a-theorem-map.json` readers to repeat historical R-108
+tokens, and from requiring reproduction strings in the claim card rather than
+the hash-pinned note/status/manifest authorities. The corrected verifier uses
+full authoritative locators for R-108 identity, checks current readers only
+for current A13/T-050 metadata, and honors `--no-store` so freshness runs do
+not rewrite the stored artifact. This is a verification-only repair; it does
+not close the uniform lower bound or any Sector-A route.
+
 **Proven in.** Claim
 `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
 `classii-complete-cluster-quotient-carleson-frontier-260728-v1.0`, with
