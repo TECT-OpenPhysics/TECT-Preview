@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**656 accepted events** · latest 25 shown below · machine locator: `index.json`
+**657 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-21 | `20260821-a13-joint-source-verifier-reader-drift-correcti` — [A13 joint-source verifier reader-drift correction] - 2026-08-21 | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000877 | [bounded page](pages/000619-000668.md#20260821-a13-joint-source-verifier-reader-drift-correcti) |
 | 2026-08-21 | `20260821-a10-dependency-ledger-repair-after-a11-action-c` — [A10 dependency ledger repair after A11 action closure] - 2026-08-21 | A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE, A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, A9-CLASSII-SMART-PATH-CANCELLATION, EXP-000876, R-055, R-056 | [bounded page](pages/000619-000668.md#20260821-a10-dependency-ledger-repair-after-a11-action-c) |
 | 2026-08-21 | `20260821-a9-dependency-ledger-repair-after-a10-action-re` — [A9 dependency ledger repair after A10 action-reconstruction closure] - 2026-08-21 | A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE, A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, A9-CLASSII-SMART-PATH-CANCELLATION, EXP-000875, R-055, R-056, R-108, R-166 | [bounded page](pages/000619-000668.md#20260821-a9-dependency-ledger-repair-after-a10-action-re) |
 | 2026-08-21 | `20260821-t-055-common-parent-audit-keeps-physical-empty` — [T-055 common-parent audit keeps physical-empty comparator unowned] - 2026-08-21 | C6-SPACETIME-SIGNATURE, EXP-000873, R-168, R-169 | [bounded page](pages/000619-000668.md#20260821-t-055-common-parent-audit-keeps-physical-empty) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-13 | `20260813-r-167-v3-9-finite-source-ground-residual-transf` — [R-167 v3.9 finite-source ground residual transfer and clipped-order separation route split] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000843, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-9-finite-source-ground-residual-transf) |
 | 2026-08-13 | `20260813-r-167-v3-8-source-symmetric-orbit-smear-kms-quo` — [R-167 v3.8 source-symmetric orbit-smear KMS quotient route split] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000842, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-8-source-symmetric-orbit-smear-kms-quo) |
 | 2026-08-13 | `20260813-r-167-v3-7-affine-form-gibbs-trace-first-duhame` — [R-167 v3.7 affine-form Gibbs-trace first-Duhamel route repair] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000841, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-7-affine-form-gibbs-trace-first-duhame) |
-| 2026-08-13 | `20260813-r-167-v3-6-registered-corridor-full-oscillator` — [R-167 v3.6 registered corridor full-oscillator phases and L1 Duhamel reduction] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000840, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-6-registered-corridor-full-oscillator) |
 
 ## Post-cutover pages
 
@@ -49,5 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 619–656 | 38 | [000619-000668.md](pages/000619-000668.md) |
+| 619–657 | 39 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |
