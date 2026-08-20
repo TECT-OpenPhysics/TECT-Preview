@@ -28,7 +28,6 @@ Full task ledger: [TODO.md](../TODO.md). Detailed staged plan: [ROADMAP.md](../R
 | [`GAP-3`](../claims/GATES.md#gap-3) | C5-NEWTON-G, E1-HIGGS-EW, E3-GAUGE-COUPLINGS, E4-FERMION-MASSES, E5-CKM-MIXING, E6-PMNS-NEUTRINO |
 | [`A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION`](../claims/GATES.md#a6-classii-full-field-bare-concentration) | A6-CLASSII-K-COMPOSITE-DEFINITION, A6-CLASSII-UV-POWER-COUNTING, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE |
 | [`GAP-4`](../claims/GATES.md#gap-4) | F1-COSMO-DARK-SECTOR, F2-BARYOGENESIS, F3-INFLATION-CMB |
-| [`A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION`](../claims/GATES.md#a10-classii-multiscale-action-decomposition) | A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, A9-CLASSII-SMART-PATH-CANCELLATION |
 | [`A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE`](../claims/GATES.md#a10-classii-stabilised-relative-log-laplace) | A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, A9-CLASSII-SMART-PATH-CANCELLATION |
 | [`A6-CLASSII-COUNTERTERM-CLOSURE`](../claims/GATES.md#a6-classii-counterterm-closure) | A6-CLASSII-K-COMPOSITE-DEFINITION, A6-CLASSII-UV-POWER-COUNTING |
 | [`A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND`](../claims/GATES.md#a11-classii-adapted-source-square-bound) | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION |
@@ -40,6 +39,7 @@ Full task ledger: [TODO.md](../TODO.md). Detailed staged plan: [ROADMAP.md](../R
 | [`C6-BCC-PREMISE-BLOCKED`](../claims/GATES.md#c6-bcc-premise-blocked) | C6-SPACETIME-SIGNATURE |
 | [`CP-UNITARITY`](../claims/GATES.md#cp-unitarity) | D4-QUANTUM-CONSISTENCY |
 | [`ESTIMATOR-UPGRADE`](../claims/GATES.md#estimator-upgrade) | B3-RH-TESTED-STRUCTURE-RANKING |
+| [`H-SUPPRESSION-DISCHARGE`](../claims/GATES.md#h-suppression-discharge) | C1-LORENTZ-KIN |
 
 ## Reader routes
 

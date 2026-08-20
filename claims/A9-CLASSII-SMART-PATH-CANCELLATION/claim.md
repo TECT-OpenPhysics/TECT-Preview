@@ -222,10 +222,12 @@ threshold is sharply \(\theta=1\), and exhibits a common-phase direction with
 \(Q_j^{\rm fr}=0\) but a negative cumulative covariance-trace commutator.
 Such directions must be entropy-controlled, not excluded. A10 further proves
 that the shell sum equals the actual endpoint energy plus a positive past-
-energy term, so the naive one-gate composition has the wrong sign. The active
-cores are `A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION` and
-`A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE`; a sharp rectangular-cube
-independent-innovation and uniform-`L4` filtration subgate is closed.
+energy term, so the naive one-gate composition has the wrong sign. The
+`A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION` core is now closed by the
+registered A11 true-increment determinant theorem.  The remaining active
+core is `A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE`; its source-square
+budget must still be proved.  A sharp rectangular-cube independent-
+innovation and uniform-`L4` filtration subgate is closed.
 
 ## Reproduction
 

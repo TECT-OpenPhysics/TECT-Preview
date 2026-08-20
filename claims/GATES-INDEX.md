@@ -5,14 +5,13 @@
 
 Authorities: `claims/GATES.md`, `claims/*/status.json`.
 
-**206 registered definitions** · **18 claim-card gate listings** · **11 live hypothesis listings**.
+**206 registered definitions** · **17 claim-card gate listings** · **11 live hypothesis listings**.
 The tables report claim-card fields exactly; they do not reinterpret registry status.
-Audit flags: 1 listed gate(s) lack an explicit Status field; 2 are still listed by cards although the registry status begins CLOSED.
+Audit flags: 1 listed gate(s) lack an explicit Status field; 1 are still listed by cards although the registry status begins CLOSED.
 These source mismatches are preserved for follow-up rather than silently normalized.
 
 | Gate | Claims | Current status summary |
 |---|---|---|
-| [`A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION`](GATES.md#a10-classii-multiscale-action-decomposition) | A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, A9-CLASSII-SMART-PATH-CANCELLATION | CLOSED@A11-TRUE-INCREMENT-DETERMINANT (2026-07-21). A10 proves exactly `Q_j^fr+C_j=V_j-V_(j-1)+q_(B(phi_(j-1)))(D phi_(… |
 | [`A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE`](GATES.md#a10-classii-stabilised-relative-log-laplace) | A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, A9-CLASSII-SMART-PATH-CANCELLATION | OPEN AS A HISTORICAL Q-RELATIVE BRANCH; SUPERSEDED ON THE ACTIVE TRUE-INCREMENT COMPOSITION (2026-07-21). A10 proves th… |
 | [`A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND`](GATES.md#a11-classii-adapted-source-square-bound) | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | OPEN (2026-07-21), ANALYTICALLY REDUCED BUT THE FIRST BUDGET ROUTE REFUTED BY A12. The true-increment determinant is `-… |
 | [`A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE`](GATES.md#a11-classii-true-increment-stabilised-log-laplace) | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | OPEN, BLOCKED IN PROOF ORDER BY `A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND` (2026-07-21). The historical A10 bound for `t… |

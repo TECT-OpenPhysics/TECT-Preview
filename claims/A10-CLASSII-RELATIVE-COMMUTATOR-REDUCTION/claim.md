@@ -154,8 +154,10 @@ Thus, with \(V_0=0\),
 \]
 
 This falsifies the naive composition: the actual energy is the shell sum
-minus \(E_J\). Closing `A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION`
-requires either a true-increment determinant theorem or an upper form bound
+minus \(E_J\). The action-reconstruction gate is closed through the
+registered A11 true-increment determinant theorem. The upper form bound
+below is retained only as the rejected alternative and is not a claim of
+closure:
 
 \[
 \mathbb E_\nu E_J\le\alpha_dH(\nu\mid\gamma_J)
@@ -163,7 +165,8 @@ requires either a true-increment determinant theorem or an upper form bound
 +K_d\mathbb E_\nu\|\phi_J\|_4^4+C_d.
 \]
 
-No such estimate is claimed here.
+No such upper-form estimate is claimed or needed for the true-increment
+branch.
 
 ## Conditional Nelson composition
 
@@ -174,8 +177,8 @@ of the one-dimensional M. Riesz partial-sum bound gives a cutoff-uniform
 `A10-CLASSII-DYADIC-FILTRATION-REALISATION` subgate; it does not cover
 overlapping smooth Littlewood--Paley increments.
 
-Assume both the action upper form bound above and the still-open relative form
-bound. If
+After the A11 action-reconstruction closure, assume only the still-open
+stabilised relative form bound. If
 
 \[
 C_{\rm fr}=C_{\rm sh}(L)M_R^4c_{\rm sym}^{-2}\beta_B^2
@@ -199,9 +202,9 @@ then \(B_6>0\) and some \(p>1\) with \(p\alpha<1\) imply
 \le p(C_\theta+C_d)+\frac{4pL^3A_4^3}{27B_6^2}
 \]
 
-uniformly in the cutoff. This is an implication, not closure: both
-`A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION` and
-`A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE` remain open.
+uniformly in the cutoff. This remains an implication, not closure: only
+`A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE` remains open on this A10
+dependency path, and the A7 Nelson estimate is not closed.
 
 ## Reproduction
 
