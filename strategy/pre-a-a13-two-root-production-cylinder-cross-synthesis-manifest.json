@@ -1,0 +1,144 @@
+{
+  "schema": "tect/pre-a-a13-two-root-production-cylinder-cross-synthesis/1.0",
+  "audit_id": "A13-TWO-ROOT-PRODUCTION-CYLINDER-CROSS-SYNTHESIS",
+  "result_id": "R-174",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000889",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Exact two-root production-cylinder cross-synthesis and diagonal-owner boundary",
+  "purpose": "Join the registered A1 k,2k Fourier chart to an explicit two-root cross-synthesis algebra and identify the exact term that a diagonal covariance sum omits.",
+  "inputs": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r150_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_production_antipodal_last_insertion_zero_cross_boundary_manifest.json",
+      "sha256": "ac8e55e4090dc2b819c6700b97f4dc2508f65f33d261134c1b4aa9ff6f458a43"
+    },
+    "r151_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_two_root_endpoint_hessian_uniform_local_gap_boundary_manifest.json",
+      "sha256": "933db5a5cee43a821ce8e464fcacfedd22c46b854dd6bca08ce3de61e8521ed7"
+    },
+    "a13_status": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+      "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "torus_length": "16",
+    "volume": "4096",
+    "root_multipliers": [
+      1,
+      2
+    ],
+    "wave_formula": "2*pi/L",
+    "first_root_formula": "pi/8",
+    "second_root_formula": "pi/4",
+    "nonzero_fixture": {
+      "amp1": "1",
+      "amp2": "1",
+      "w1": "1",
+      "w2": "2",
+      "c1": "1",
+      "s1": "0",
+      "c2": "0",
+      "s2": "1",
+      "cross": "-1"
+    }
+  },
+  "theorem_markers": [
+    "same_root_cross_zero",
+    "cross_block_formula",
+    "field_cross_formula",
+    "current_cross_formula",
+    "same_phase_cross_zero",
+    "equal_frequency_cross_zero",
+    "nonzero_cross_fixture"
+  ],
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R174.lean",
+      "sha256": "d905dd8fca1a812cae9b2b8e143e9089a9cc35b679d904890605872dedbf612f"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_a13_two_root_production_cylinder_cross_synthesis.py",
+      "sha256": "911c74b7e90d9ac6363f3b5a0374465ecc0317325b83858b333d124c3df0609e"
+    },
+    "independent": {
+      "path": "codes/foundations/lean_a13_two_root_production_cylinder_cross_synthesis_independent.py",
+      "sha256": "3c09957a1867e1d7782ba9e14dd8fa10256ecb5813c8cc95fcf93a0a8fafeba8"
+    },
+    "verifier": {
+      "path": "codes/foundations/lean_a13_two_root_production_cylinder_cross_synthesis_verify.py",
+      "sha256": "bb3cdaba93553f007b52f54a8e28b25671bb97456ca32a611857fffbe65aa510"
+    },
+    "certificate": {
+      "path": "strategy/pre-a-a13-two-root-production-cylinder-cross-synthesis-certificate-260821.md",
+      "sha256": "ab5d0a68eb9d342357919b5879908f63c5c3c54bee8c426c561ddaf19996bf88"
+    },
+    "note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-two-root-production-cylinder-cross-synthesis-260821.md",
+      "sha256": "d05cea37f7ba89162d2078d673408723e3f30fe648b94518b17fc06380e441d5"
+    }
+  },
+  "formal_integration": {
+    "event_id": "20260821-r-174-two-root-production-cylinder-cross-synthe",
+    "event_ordinal": 669,
+    "event_claim_ids": [
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "EXP-000889",
+      "R-174"
+    ],
+    "event_raw_tokens": [
+      "EXP-000889",
+      "R-174",
+      "two-root production-cylinder",
+      "cross-synthesis",
+      "diagonal covariance sum",
+      "No R-174 PDF"
+    ],
+    "expected_counts": {
+      "claims": 49,
+      "results": 174,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 889,
+      "events": 669,
+      "tasks": 57,
+      "catalog": 4301
+    },
+    "primary_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r174-two-root-production-cylinder-cross-synthesis/primary.json",
+    "independent_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r174-two-root-production-cylinder-cross-synthesis/independent.json",
+    "integrated_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r174-two-root-production-cylinder-cross-synthesis/integrated.json",
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [],
+    "no_pdf": true
+  },
+  "hostile_mutations": [
+    "replace the nonzero cross fixture with zero",
+    "delete the cross-block term while retaining diagonal covariances",
+    "promote the exact cylinder interface to A13 closure",
+    "claim the two-root sum proves a physical phase",
+    "insert a Lean sorry or axiom token",
+    "replace an authority hash",
+    "change a root multiplier without changing the dyadic relation",
+    "remove the no-overclaim boundary"
+  ],
+  "boundary": "The kernel and exact lanes prove only the finite two-root synthesis identities and the nonzero cross-block fixture. They do not prove the complete A1/A7 production owner, the R-125 forest or returned-low placement, source/sextic one-use, T-050, A13, Nelson, an interacting measure, phase selection, PDE replacement, removal or continuum limits, physical-empty comparison, or Sector-A closure.",
+  "next_action": "Use these exact cross blocks as mandatory inputs when freezing one canonical finite production cylinder. Add the actual square-root bases, heat/root incidence, complement, historical-low, forest, returned mean, and differentiate the complete scalar owner once; then test the T-050 threshold with every block retained exactly once."
+}
