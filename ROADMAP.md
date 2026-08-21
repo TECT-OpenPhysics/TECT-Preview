@@ -1617,6 +1617,13 @@ The registered three-packet fixture has norms `14` and `45`, pairing `-3`, and
 defect `621`.  This is only finite algebra: the production temporal map,
 partition/cutoff/revisit uniformity, complete same-root packet, `OVERLAP_src`,
 Nelson, Sector-A, Pre-A and all limit routes remain open. No R-185 PDF is issued.
+EXP-000901 / R-186 is a T0, claim-nonbearing Lean checkpoint for the R-081
+temporal packet algebra.  It binds the weighted mean `3/2`, covariance `5/2`,
+Douglas value `81/10`, complete-packet endpoint/sum `29/200`, and retained
+fresh-times-future cross term `6/25`.  This is only finite algebra: the
+production temporal map, progressive/revisit uniformity, complete same-root
+lower bound, `OVERLAP_src`, Nelson, Sector-A, Pre-A and all limit routes remain
+open. No R-186 PDF is issued.
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7

@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**185 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**186 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-186`](../RESULTS-LEDGER.md#r-186) | Temporal packet algebra Lean cross-check | T0 |
 | [`R-185`](../RESULTS-LEDGER.md#r-185) | Finite packet Cauchy Lean cross-check | T0 |
 | [`R-184`](../RESULTS-LEDGER.md#r-184) | Two-block Douglas identity Lean cross-check | T0 |
 | [`R-183`](../RESULTS-LEDGER.md#r-183) | Diagonal reserve margin for the feedback-pulled cross-Hessian | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-164`](../RESULTS-LEDGER.md#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | T4 |
 | [`R-163`](../RESULTS-LEDGER.md#r-163) | Full-lattice weighted-resolvent dyadic-forest gap and exact reduced-action threshold | T4 |
 | [`R-162`](../RESULTS-LEDGER.md#r-162) | Resolvent-controlled pure-dyadic recursive-chain uniform neighbourhood gap | T4 |
-| [`R-161`](../RESULTS-LEDGER.md#r-161) | Summable covariance jets and a growing affine-root-union uniform neighbourhood | T4 |
 
 Search without loading the full ledger:
 
