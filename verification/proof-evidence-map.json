@@ -6,8 +6,8 @@
   },
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
-    "RESULTS-LEDGER.md": "df174e8fe57763b21d3e6e8f000ca3b77f5329e13104a71d7231affe89309251",
-    "changelog/log.jsonl": "7b9950dd53758de2b142bf4ee73295b44291874b43b1f08bde120ac50dcd00f9",
+    "RESULTS-LEDGER.md": "d6a10f3e29456c1a111724997a849a28c0e31aa76e5e6c1ba32136d77d54d7e8",
+    "changelog/log.jsonl": "cab4efe7f21c98921fb5a97b349f249801c64a43d7560eab91a9c50e383dfa41",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "3ee4cde55ada6b1c6202dd9a2c50479bd767ce1bcd813d4b9c69c15676135028",
+    "explorations/log.jsonl": "48d7d4298b0977310e5ad9d7a69eee4712b896e29599aa52572d7d3f2c5699c2",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "todo/todo.json": "ec2cfbd089b7c06eb8f82fbd4f5634c8ba882d440766b8ec3d5fec6a8e75359a"
   },
@@ -66,17 +66,17 @@
     "status_cards": 49,
     "active_claims": 48,
     "refuted_claims": 1,
-    "reusable_results": 171,
+    "reusable_results": 172,
     "negative_records": 372,
-    "proof_explorations": 886,
+    "proof_explorations": 887,
     "exploration_verdicts": {
-      "advanced": 542,
+      "advanced": 543,
       "failed": 235,
       "inconclusive": 79,
       "parked": 30
     },
     "process_grade_lessons": 3,
-    "accepted_events": 666,
+    "accepted_events": 667,
     "tasks": 57,
     "live_tasks": 11,
     "completed_tasks": 46,
@@ -89,7 +89,7 @@
     "unordered_root_pdfs": 9,
     "proof_notes_without_sibling_pdf": 19,
     "proof_notes_with_incomplete_historical_footer": 118,
-    "run_json": 799,
+    "run_json": 800,
     "claim_manifests": 124,
     "bundle_manifests": 40,
     "bundle_embedded_manifests": 45
@@ -1482,6 +1482,7 @@
       }
     ],
     "claim_unbound_result_ids": [
+      "R-172",
       "R-170",
       "R-169",
       "R-164",
@@ -2794,6 +2795,14 @@
           "A1-PFR-VARIATIONAL-MISMATCH",
           "EXP-000886"
         ]
+      },
+      {
+        "event": "20260821-a1-class-ii-owner-mismatch-lean-cross-check-202",
+        "claim_ids": [
+          "A1-CLASSII-OWNER-MISMATCH-LEAN-CROSSCHECK",
+          "EXP-000887",
+          "R-172"
+        ]
       }
     ],
     "event_unregistered_negative_tags": [
@@ -3674,6 +3683,7 @@
           "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-reference-functional-closure/result.json",
           "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-variational-audit/closure-probe.json",
           "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-variational-audit/result.json",
+          "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-08-21-a1-classii-owner-mismatch-lean-crosscheck/result.json",
           "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-08-21-lean-a1-nonlinear-mismatch-crosscheck/result.json",
           "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/promotion-evidence/2026-07-17-jusang-independent/FILE-SHA256.json",
           "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/promotion-evidence/2026-07-17-jusang-independent/environment.json",
@@ -3709,9 +3719,10 @@
           "EXP-000860",
           "EXP-000862",
           "EXP-000885",
-          "EXP-000886"
+          "EXP-000886",
+          "EXP-000887"
         ],
-        "latest_exploration_id": "EXP-000886",
+        "latest_exploration_id": "EXP-000887",
         "accepted_event_ids": [
           "20260717-register-p1-production-functional-variational-a",
           "20260717-close-p1-reference-functional-variational-scaff",
@@ -3721,9 +3732,10 @@
           "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
           "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial",
           "20260821-a13-t-050-production-cylinder-scratch-route-bou",
-          "20260821-a1-nonlinear-gradient-mismatch-lean-cross-check"
+          "20260821-a1-nonlinear-gradient-mismatch-lean-cross-check",
+          "20260821-a1-class-ii-owner-mismatch-lean-cross-check-202"
         ],
-        "latest_event_id": "20260821-a1-nonlinear-gradient-mismatch-lean-cross-check",
+        "latest_event_id": "20260821-a1-class-ii-owner-mismatch-lean-cross-check-202",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -6256,9 +6268,10 @@
           "EXP-000881",
           "EXP-000883",
           "EXP-000884",
-          "EXP-000885"
+          "EXP-000885",
+          "EXP-000887"
         ],
-        "latest_exploration_id": "EXP-000885",
+        "latest_exploration_id": "EXP-000887",
         "accepted_event_ids": [
           "20260721-close-t-049-negatively-with-the-a13-relative-ph",
           "20260721-complete-a13-gate-record-synchronization-and-re",
@@ -6434,9 +6447,10 @@
           "20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0",
           "20260821-a13-r-058-authority-repair-and-lean-budget-cros",
           "20260821-a13-r-166-authority-repair-and-lean-radial-gram",
-          "20260821-a13-t-050-production-cylinder-scratch-route-bou"
+          "20260821-a13-t-050-production-cylinder-scratch-route-bou",
+          "20260821-a1-class-ii-owner-mismatch-lean-cross-check-202"
         ],
-        "latest_event_id": "20260821-a13-t-050-production-cylinder-scratch-route-bou",
+        "latest_event_id": "20260821-a1-class-ii-owner-mismatch-lean-cross-check-202",
         "live_task_gate_ids": [
           "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
         ],
@@ -12159,6 +12173,36 @@
     }
   ],
   "reusable_results": [
+    {
+      "id": "R-172",
+      "anchor": "r-172",
+      "title": "A1 Class-II owner mismatch Lean cross-check",
+      "summary": "R-172 v1.0 is a scoped T0 claim-nonbearing exact coefficient audit under EXP-000887. It derives cKK beta_X^2=3/320 and cJK alpha_X beta_X=3/400 with common positive mass denominator, so the declared and historical residual Class-II owners are not interchangeable. This does not close the full A1 variation, A13, Sector-A or Pre-A",
+      "detail_title": "A1 Class-II owner mismatch Lean cross-check",
+      "detail": {
+        "result_id": "R-172 v1.0, recorded under EXP-000887.",
+        "scope": "This is a finite exact owner-interface result for the hash-pinned A1 production manifest. The declared Class-II K energy contributes the `cKK beta_X^2` numerator, while the historical residual uses `cJK alpha_X beta_X`. The common denominator is `M_X^2+rho_regularizer`, with the manifest value strictly positive.",
+        "exact_coefficient_witness": "The registered rational values give `cKK beta_X^2=3/320`, `cJK alpha_X beta_X=3/400`, and numerator difference `3/1600`. Consequently the two coefficients remain distinct after division by the same positive denominator. The Lean kernel checks the numerator fixture, denominator positivity, exact difference formula, and non-equality. The primary reads and hashes the A1 manifest, the non-importing Fraction lane derives the same record, and the integrated verifier rejects eight hostile mutations.",
+        "owner_consequence": "The historical residual cannot be silently treated as the real gradient of the declared Class-II K term. A canonical finite production cylinder must choose and hash one owner before any A13 joint sextic estimate is attempted; this result does not choose a repaired full functional by itself.",
+        "boundary": "No spatial K-current or divergence variation, full A1 functional identity, solver integration, minimizer, continuum, physical vacuum, Sector-A, Pre-A, or A13 closure follows. The A1 standalone backend remains at its existing discrete variational-matrix scope. No claim tier or lifecycle changes, no new negative result is registered, and no R-172 PDF is issued.",
+        "proven_in": "[R-172 certificate](strategy/pre-a-a1-classii-owner-mismatch-lean-crosscheck-certificate-260821.md), [primary script](verification/scripts/lean_a1_classii_owner_mismatch_crosscheck.py), [independent script](codes/foundations/a1_classii_owner_mismatch_crosscheck_independent.py), [integrated verifier](codes/foundations/a1_classii_owner_mismatch_crosscheck_verify.py), and the pinned [Lean entrypoint](verification/lean/Tect/A1ClassIIOwnerMismatch.lean). The saved JSON artefact reports the exact coefficient difference and the Lean compile result.",
+        "tier": "T0 claim-nonbearing exact owner-interface audit; no claim tier or lifecycle change."
+      },
+      "normalized_detail": {
+        "statement": "",
+        "proof_anchor": "[R-172 certificate](strategy/pre-a-a1-classii-owner-mismatch-lean-crosscheck-certificate-260821.md), [primary script](verification/scripts/lean_a1_classii_owner_mismatch_crosscheck.py), [independent script](codes/foundations/a1_classii_owner_mismatch_crosscheck_independent.py), [integrated verifier](codes/foundations/a1_classii_owner_mismatch_crosscheck_verify.py), and the pinned [Lean entrypoint](verification/lean/Tect/A1ClassIIOwnerMismatch.lean). The saved JSON artefact reports the exact coefficient difference and the Lean compile result.",
+        "reuse": "",
+        "boundary": "No spatial K-current or divergence variation, full A1 functional identity, solver integration, minimizer, continuum, physical vacuum, Sector-A, Pre-A, or A13 closure follows. The A1 standalone backend remains at its existing discrete variational-matrix scope. No claim tier or lifecycle changes, no new negative result is registered, and no R-172 PDF is issued.",
+        "publication_target": ""
+      },
+      "claim_refs": [],
+      "claim_ref_basis": {},
+      "family_refs": [],
+      "accepted_event_ids": [
+        "20260821-a1-class-ii-owner-mismatch-lean-cross-check-202"
+      ],
+      "co_recorded_negative_tags": []
+    },
     {
       "id": "R-171",
       "anchor": "r-171",
@@ -70944,6 +70988,58 @@
       "task_id": null,
       "title": "Kernel-check the A1 nonlinear owner mismatch before selecting a production cylinder",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "The cKK/cJK result does not formalise the spatial K current, divergence, full A1 variation, proposed F_ref, solver integration, minimizer, continuum, physical vacuum, Sector-A, Pre-A, or A13 closure. No claim tier, lifecycle, gate, or negative-result status changes.",
+      "claim_ids": [
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The historical residual cannot be silently treated as the real gradient of the declared Class-II K term. A canonical finite production cylinder must select and hash one complete owner before the A13 joint sextic estimate; this finite coefficient result does not repair or select the full functional.",
+      "evidence_refs": [
+        "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json#known_obstruction",
+        "strategy/pre-a-a1-classii-owner-mismatch-lean-crosscheck-manifest.json#theorem_markers",
+        "strategy/pre-a-a1-classii-owner-mismatch-lean-crosscheck-certificate-260821.md#Exact-coefficient-witness",
+        "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/notes/a1-classii-owner-mismatch-lean-crosscheck-260821.md#A1-Class-II-owner-mismatch-Lean-cross-check",
+        "verification/lean/Tect/A1ClassIIOwnerMismatch.lean#coefficient_difference",
+        "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-08-21-a1-classii-owner-mismatch-lean-crosscheck/result.json#derived",
+        "RESULTS-LEDGER.md#r-172",
+        "claims/GATES.md#A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "finding": "The declared Class-II K numerator is cKK beta_X^2 = 3/320, while the historical residual numerator is cJK alpha_X beta_X = 3/400. Their difference is 3/1600. The shared denominator M_X^2 + classii_mass_regularizer is strictly positive, so the two coefficients are unequal after division. The Lean kernel proves the exact numerator fixture, denominator positivity, difference formula, and non-equality; primary, independent, and integrated bridges agree.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-172"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "id": "EXP-000887",
+      "method": [
+        "Read alpha_X, beta_X, M_X, classii_mass_regularizer, cJK, and cKK from the hash-pinned A1 production manifest and convert them to exact rational values.",
+        "Compile the ASCII Lean entrypoint with the pinned Lean 4.32.1 and Mathlib v4.32.1 Lake lock; reject sorry, admit, axiom, and unsafe tokens.",
+        "Compare the Lean coefficient identity with a non-importing Python standard-library Fraction calculation and run eight hostile mutations covering owner, denominator, scope, and Lean escape-token overclaims."
+      ],
+      "next_action": "Freeze a hash-pinned canonical finite production cylinder using one explicit A1 owner, including actual field/current syntheses, square-root bases, raw/past/future covariances, heat/root incidence, complement, historical-low, forest, and returned-mean placement. Then differentiate that scalar once and certify the complete joint sextic and earlier-root/cross-root owner, with Lean cross-checks for every exact rational consequence.",
+      "provenance": "contemporaneous",
+      "question": "Does the hash-pinned A1 Class-II K term have a nonzero coefficient mismatch between the declared cKK beta_X^2 owner and the historical cJK alpha_X beta_X residual after the common mass regularizer is retained?",
+      "recorded_at": "2026-08-21T09:54:50Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000886",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-21",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Kernel-check the A1 Class-II owner mismatch before selecting a production cylinder",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -96921,6 +97017,64 @@
       "result_ids": [],
       "linked_result_ids": [],
       "result_link_basis": {}
+    },
+    {
+      "id": "20260821-a1-class-ii-owner-mismatch-lean-cross-check-202",
+      "date": "2026-08-21",
+      "header": "[A1 Class-II owner mismatch Lean cross-check] - 2026-08-21",
+      "claim_ids": [
+        "A1-CLASSII-OWNER-MISMATCH-LEAN-CROSSCHECK",
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "EXP-000887",
+        "R-172"
+      ],
+      "keywords": [
+        "A1-classii-owner-mismatch",
+        "EXP-000887",
+        "lean-cross-check",
+        "no-tier-change",
+        "owner-interface"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-a1-classii-owner-mismatch-lean-crosscheck-manifest.json",
+        "strategy/pre-a-a1-classii-owner-mismatch-lean-crosscheck-certificate-260821.md",
+        "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/notes/a1-classii-owner-mismatch-lean-crosscheck-260821.md",
+        "verification/lean/Tect/A1ClassIIOwnerMismatch.lean",
+        "verification/scripts/lean_a1_classii_owner_mismatch_crosscheck.py",
+        "codes/foundations/a1_classii_owner_mismatch_crosscheck_independent.py",
+        "codes/foundations/a1_classii_owner_mismatch_crosscheck_verify.py",
+        "RESULTS-LEDGER.md"
+      ],
+      "scripts": [
+        "verification/scripts/lean_a1_classii_owner_mismatch_crosscheck.py",
+        "codes/foundations/a1_classii_owner_mismatch_crosscheck_independent.py",
+        "codes/foundations/a1_classii_owner_mismatch_crosscheck_verify.py"
+      ],
+      "raw": "## [A1 Class-II owner mismatch Lean cross-check] - 2026-08-21\n\nEXP-000887 records R-172 as an additive T0 claim-nonbearing A1 Class-II owner audit. The A1-CLASSII-OWNER-MISMATCH-LEAN-CROSSCHECK proves from the hash-pinned manifest that cKK beta_X^2 = 3/320 while cJK alpha_X beta_X = 3/400, with numerator difference 3/1600 and a common positive mass denominator.\n\nThe declared K-energy owner and historical residual owner are therefore not interchangeable. This finite result fixes an owner-interface obligation before the canonical A13 production cylinder is selected; it does not choose a repaired full functional.\n\nNo claim tier or lifecycle changes. No new negative result is registered. No full A1, A13, continuum, physical-vacuum, Sector-A, or Pre-A conclusion follows. No R-172 PDF is issued.\n\n",
+      "claim_refs": [
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "claim_ref_basis": {
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION": "explicit_claim_ids",
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "A1-CLASSII-OWNER-MISMATCH-LEAN-CROSSCHECK",
+        "EXP-000887",
+        "R-172"
+      ],
+      "result_ids": [
+        "R-172"
+      ],
+      "linked_result_ids": [
+        "R-172"
+      ],
+      "result_link_basis": {
+        "R-172": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -101870,6 +102024,12 @@
         "id": "event:20260820-r-168-v1-3-generated-reader-locator-correction",
         "kind": "accepted_event",
         "label": "[R-168 v1.3 generated-reader locator correction under rolling windows] - 2026-08-20",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260821-a1-class-ii-owner-mismatch-lean-cross-check-202",
+        "kind": "accepted_event",
+        "label": "[A1 Class-II owner mismatch Lean cross-check] - 2026-08-21",
         "authority": "CHANGELOG.md"
       },
       {
@@ -107285,6 +107445,12 @@
         "authority": "explorations/log.jsonl"
       },
       {
+        "id": "exploration:EXP-000887",
+        "kind": "proof_exploration",
+        "label": "Kernel-check the A1 Class-II owner mismatch before selecting a production cylinder",
+        "authority": "explorations/log.jsonl"
+      },
+      {
         "id": "gate:A1-KERNEL-CONV",
         "kind": "hypothesis",
         "label": "A1-KERNEL-CONV",
@@ -111603,6 +111769,12 @@
         "kind": "accepted_result",
         "label": "Actual A7 plane-wave endpoint secant sign witness",
         "authority": "RESULTS-LEDGER.md#r-171"
+      },
+      {
+        "id": "result:R-172",
+        "kind": "accepted_result",
+        "label": "A1 Class-II owner mismatch Lean cross-check",
+        "authority": "RESULTS-LEDGER.md#r-172"
       },
       {
         "id": "task:T-001",
@@ -123334,6 +123506,24 @@
         "from": "event:20260820-r-168-v1-3-generated-reader-locator-correction",
         "relation": "records_result",
         "to": "result:R-168",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260821-a1-class-ii-owner-mismatch-lean-cross-check-202",
+        "relation": "records",
+        "to": "claim:A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260821-a1-class-ii-owner-mismatch-lean-cross-check-202",
+        "relation": "records",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260821-a1-class-ii-owner-mismatch-lean-cross-check-202",
+        "relation": "records_result",
+        "to": "result:R-172",
         "basis": "explicit_result_id"
       },
       {
@@ -164159,6 +164349,48 @@
         "relation": "continues",
         "to": "exploration:EXP-000885",
         "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000887",
+        "relation": "assesses",
+        "to": "claim:A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000887",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000887",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000887",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000887",
+        "relation": "continues",
+        "to": "exploration:EXP-000886",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000887",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000887",
+        "relation": "references_result",
+        "to": "result:R-172",
+        "basis": "structured_formal_ref"
       },
       {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",

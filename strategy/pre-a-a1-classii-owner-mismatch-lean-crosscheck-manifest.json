@@ -1,0 +1,126 @@
+{
+  "schema": "tect/a1-classii-owner-mismatch-lean-crosscheck/1.0",
+  "slug": "pre-a-a1-classii-owner-mismatch-lean-crosscheck",
+  "version": "A1 Class-II owner mismatch Lean cross-check v1.0",
+  "issued": "2026-08-21",
+  "tier": "T0",
+  "claim_bearing": false,
+  "claim_id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+  "exploration_id": "EXP-000887",
+  "audit_id": "A1-CLASSII-OWNER-MISMATCH-LEAN-CROSSCHECK",
+  "result_id": "R-172",
+  "question": "Does the hash-pinned A1 Class-II K term have a coefficient mismatch between the declared cKK beta_X^2 owner and the implemented cJK alpha_X beta_X residual?",
+  "scope": "Only the finite rational coefficient core read from the hash-pinned A1 production manifest. The common positive mass denominator is retained, but no spatial K current, divergence, full variation, solver, minimizer, or continuum statement is formalised.",
+  "inputs": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/A1ClassIIOwnerMismatch.lean",
+      "sha256": "70826a11c336710f469518794e890ccce4a5c273b870f12a7cf1cc292db49f76"
+    }
+  },
+  "lean_inputs": {
+    "alpha_key": "alpha_X",
+    "beta_key": "beta_X",
+    "mass_key": "M_X",
+    "mass_regularizer_key": "classii_mass_regularizer",
+    "cjk_key": "cJK",
+    "ckk_key": "cKK",
+    "alpha": "3/10",
+    "beta": "1/4",
+    "mass": "2/1",
+    "mass_regularizer": "1/1000000000000",
+    "cjk": "1/10",
+    "ckk": "3/20",
+    "expected_declared_numerator": "3/320",
+    "expected_residual_numerator": "3/400",
+    "expected_numerator_difference": "3/1600"
+  },
+  "theorem_markers": [
+    "numerator_fixture",
+    "mass_denom_positive",
+    "coefficient_difference",
+    "coefficients_are_not_equal"
+  ],
+  "artifacts": {
+    "lean_entrypoint": "verification/lean/Tect/A1ClassIIOwnerMismatch.lean",
+    "primary_script": "verification/scripts/lean_a1_classii_owner_mismatch_crosscheck.py",
+    "independent_script": "codes/foundations/a1_classii_owner_mismatch_crosscheck_independent.py",
+    "integrated_script": "codes/foundations/a1_classii_owner_mismatch_crosscheck_verify.py",
+    "certificate": "strategy/pre-a-a1-classii-owner-mismatch-lean-crosscheck-certificate-260821.md",
+    "note": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/notes/a1-classii-owner-mismatch-lean-crosscheck-260821.md",
+    "integrated_result": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-08-21-a1-classii-owner-mismatch-lean-crosscheck/result.json"
+  },
+  "hostile_mutations": [
+    "replace the declared cKK beta_X^2 numerator by the residual numerator",
+    "replace the residual cJK alpha_X beta_X numerator by the declared numerator",
+    "zero the exact numerator difference",
+    "make the common mass denominator non-positive",
+    "assert cKK and cJK owners are interchangeable",
+    "promote the coefficient mismatch to a full spatial variational identity",
+    "promote the mismatch to a continuum, minimizer, or physical-vacuum theorem",
+    "allow sorry, admit, axiom, or unsafe in the Lean source"
+  ],
+  "formal_integration": {
+    "expected_counts": {
+      "claims": 49,
+      "results": 172,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 887,
+      "events": 667,
+      "tasks": 57,
+      "catalog": 4280
+    },
+    "event_title": "A1 Class-II owner mismatch Lean cross-check",
+    "event_id": "20260821-a1-class-ii-owner-mismatch-lean-cross-check-202",
+    "event_claim_ids": [
+      "A1-CLASSII-OWNER-MISMATCH-LEAN-CROSSCHECK",
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "EXP-000887",
+      "R-172"
+    ],
+    "event_keywords": [
+      "A1-classii-owner-mismatch",
+      "EXP-000887",
+      "lean-cross-check",
+      "no-tier-change",
+      "owner-interface"
+    ],
+    "event_notes": [
+      "strategy/pre-a-a1-classii-owner-mismatch-lean-crosscheck-manifest.json",
+      "strategy/pre-a-a1-classii-owner-mismatch-lean-crosscheck-certificate-260821.md",
+      "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/notes/a1-classii-owner-mismatch-lean-crosscheck-260821.md",
+      "verification/lean/Tect/A1ClassIIOwnerMismatch.lean",
+      "verification/scripts/lean_a1_classii_owner_mismatch_crosscheck.py",
+      "codes/foundations/a1_classii_owner_mismatch_crosscheck_independent.py",
+      "codes/foundations/a1_classii_owner_mismatch_crosscheck_verify.py",
+      "RESULTS-LEDGER.md"
+    ],
+    "event_raw_tokens": [
+      "A1 Class-II owner mismatch Lean cross-check",
+      "cKK beta_X^2",
+      "cJK alpha_X beta_X",
+      "A1-CLASSII-OWNER-MISMATCH-LEAN-CROSSCHECK",
+      "No claim tier or lifecycle changes",
+      "No new negative result is registered",
+      "No full A1, A13, continuum, physical-vacuum, Sector-A, or Pre-A conclusion follows"
+    ],
+    "no_new_negative_ids": [],
+    "no_pdf": true
+  },
+  "no_overclaim": "This T0 claim-nonbearing audit proves only that the exact manifest Class-II declared numerator cKK beta_X^2 differs from the historical residual numerator cJK alpha_X beta_X after the same positive mass denominator. It does not formalise the spatial K current, divergence, full functional variation, cKK/cJK repair, A13 owner, solver, minimizer, continuum, physical vacuum, Sector-A, or Pre-A result. No tier, lifecycle, gate, negative, or physical conclusion changes.",
+  "run_contract": {
+    "source_hash_mode": "SHA-256 fail closed",
+    "independent_mode": "stdlib Fraction only; no import of the primary or integrated verifier",
+    "lean_escape_tokens": [
+      "sorry",
+      "admit",
+      "axiom",
+      "unsafe"
+    ]
+  }
+}

@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-172](#r-172) | A1 Class-II owner mismatch Lean cross-check | R-172 v1.0 is a scoped T0 claim-nonbearing exact coefficient audit under EXP-000887. It derives cKK beta_X^2=3/320 and cJK alpha_X beta_X=3/400 with common positive mass denominator, so the declared and historical residual Class-II owners are not interchangeable. This does not close the full A1 variation, A13, Sector-A or Pre-A |
 | [R-171](#r-171) | Actual A7 plane-wave endpoint secant sign witness | R-171 v1.0 is a scoped T4 analytic/exact/executed endpoint component-energy result under EXP-000878. For the hash-pinned A1/A7 L=16 model, one real dual-lattice plane wave has strictly positive deterministic Class-II energy while zero has energy zero, so the endpoint secant to zero is strictly negative. This is not a full A1/Hartree/physical-vacuum result; A13, T-050, Sector-A and Pre-A remain open |
 | [R-170](#r-170) | Initial QFT/GR/Reading-H literature-applicability audit | R-170 v1.0 is the scoped T0 claim-nonbearing audit under EXP-000863. It completes exactly the initial four-record rollout: B1 APPLIES only to its current `C_full` Q-versus-`G_*` theorem; C4 and C5 remain NOT-YET-ASSESSED; and the present C6 BCC-premised route DOES-NOT-APPLY while alternatives remain NOT-YET-ASSESSED. The policy remains binding, no tier or lifecycle changes, and no physical, Sector-A, or Pre-A gate closes |
 | [R-169](#r-169) | Truncated-octahedron realization semantics, native Reading-H ownership, and corrected common-Bohr radial audit | R-169 v1.4 is the current scoped T0 analytic/exact/executed/audited result under EXP-000862. It retains v1.0--v1.3, reconstructs one corrected scalar common-Bohr owner from the legacy formula and exact signed moments, separates fixed intensity from radial minimization, and qualifies one off-grid-confounded historical collapse leg without reopening B3. No full-Hartree/P1 bridge, physical-empty sign, stability/limit theorem, C6 result or Pre-A closure follows |
@@ -244,6 +245,48 @@ The exact bracket identity and positivity core additionally pass the pinned
 reporting `LEAN R-171 PASS 18/18`.
 
 **Tier.** T4 scoped analytic/exact/executed result; no claim tier or lifecycle change.
+<a id="r-172"></a>
+### R-172 -- A1 Class-II owner mismatch Lean cross-check
+
+**Result ID.** R-172 v1.0, recorded under EXP-000887.
+
+**Scope.** This is a finite exact owner-interface result for the hash-pinned
+A1 production manifest. The declared Class-II K energy contributes the
+`cKK beta_X^2` numerator, while the historical residual uses
+`cJK alpha_X beta_X`. The common denominator is
+`M_X^2+rho_regularizer`, with the manifest value strictly positive.
+
+**Exact coefficient witness.** The registered rational values give
+`cKK beta_X^2=3/320`, `cJK alpha_X beta_X=3/400`, and numerator difference
+`3/1600`. Consequently the two coefficients remain distinct after division by
+the same positive denominator. The Lean kernel checks the numerator fixture,
+denominator positivity, exact difference formula, and non-equality. The
+primary reads and hashes the A1 manifest, the non-importing Fraction lane
+derives the same record, and the integrated verifier rejects eight hostile
+mutations.
+
+**Owner consequence.** The historical residual cannot be silently treated as
+the real gradient of the declared Class-II K term. A canonical finite
+production cylinder must choose and hash one owner before any A13 joint
+sextic estimate is attempted; this result does not choose a repaired full
+functional by itself.
+
+**Boundary.** No spatial K-current or divergence variation, full A1
+functional identity, solver integration, minimizer, continuum, physical
+vacuum, Sector-A, Pre-A, or A13 closure follows. The A1 standalone backend
+remains at its existing discrete variational-matrix scope. No claim tier or
+lifecycle changes, no new negative result is registered, and no R-172 PDF is
+issued.
+
+**Proven in:** [R-172 certificate](strategy/pre-a-a1-classii-owner-mismatch-lean-crosscheck-certificate-260821.md),
+[primary script](verification/scripts/lean_a1_classii_owner_mismatch_crosscheck.py),
+[independent script](codes/foundations/a1_classii_owner_mismatch_crosscheck_independent.py),
+[integrated verifier](codes/foundations/a1_classii_owner_mismatch_crosscheck_verify.py),
+and the pinned [Lean entrypoint](verification/lean/Tect/A1ClassIIOwnerMismatch.lean).
+The saved JSON artefact reports the exact coefficient difference and the Lean
+compile result.
+
+**Tier.** T0 claim-nonbearing exact owner-interface audit; no claim tier or lifecycle change.
 <a id="r-170"></a>
 ### R-170 -- Initial QFT/GR/Reading-H literature-applicability audit
 
