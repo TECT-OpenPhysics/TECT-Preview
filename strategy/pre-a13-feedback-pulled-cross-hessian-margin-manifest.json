@@ -1,0 +1,83 @@
+{
+  "schema": "tect/lean-a13-feedback-pulled-cross-hessian-margin/1.0",
+  "audit_id": "A13-FEEDBACK-PULLED-CROSS-HESSIAN-MARGIN",
+  "result_id": "R-182",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000897",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Lean cross-check of the feedback-pulled cross-Hessian margin",
+  "purpose": "Combine the actual R-178 active cross-owner coefficient with the R-181 feedback incidence and kernel-check the exact negative pulled Hessian. This is a finite necessary-margin diagnostic, not a production sign theorem.",
+  "inputs": {
+    "r178_manifest": {
+      "path": "strategy/pre-a-a13-two-root-complete-cross-owner-differentiation-manifest.json",
+      "sha256": "1525819f394df3352e0a870e1742361b9bbe2fa2e870af41fa1a57932db05864"
+    },
+    "r181_manifest": {
+      "path": "strategy/pre-a-a13-two-root-feedback-mixed-gram-crosscheck-manifest.json",
+      "sha256": "3893ad4c0cb14452f35a760c540260679507d3145f471e817c04d425e2a1306f"
+    },
+    "a13_status": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+      "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "cross_coefficients": {"field": "2", "current": "3", "ordered": "5"},
+    "active_phase": {"c1": "1", "s1": "0", "c2": "1", "s2": "0", "w1": "1", "w2": "2"},
+    "feedback_gain": "1/2",
+    "fixture": {"x": "0", "y": "1", "cross_defect": "-8", "pulled_defect": "-8"}
+  },
+  "theorem_markers": [
+    "feedback_pulled_hessian",
+    "cross_hessian_quadratic",
+    "pulled_hessian_quadratic",
+    "pulled_negative_fixture"
+  ],
+  "files": {
+    "lean_entrypoint": {"path": "verification/lean/Tect/R182.lean", "sha256": "6ad5c96b4035d7bf511458c6e3a2e12408afce1d8c7c9660247a67115cf11611"},
+    "primary": {"path": "verification/scripts/lean_a13_feedback_pulled_cross_hessian_margin.py", "sha256": "0cda0e10433e58cebea127ab9ccc6a0c810dbac9492094f7164b6e341d4fb082"},
+    "independent": {"path": "codes/foundations/lean_a13_feedback_pulled_cross_hessian_margin_independent.py", "sha256": "c428bd346e6befbb05332f87f87465c65e28ce41cb57f5566387420a3a132f83"},
+    "verifier": {"path": "codes/foundations/lean_a13_feedback_pulled_cross_hessian_margin_verify.py", "sha256": "a2e453c7400120908a271d65d92c23e19a4b047a003c4fb08a85d8a6e5d41066"},
+    "certificate": {"path": "strategy/pre-a13-feedback-pulled-cross-hessian-margin-certificate-260821.md", "sha256": "eb7c82a443f0aaf9b0da697cdc6ec8b032bba795eb8f25ccbf7ea228f19ee5ef"},
+    "note": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-feedback-pulled-cross-hessian-margin-260821.md", "sha256": "56837d46f7c87d858621ee59e63f4dfa5b3bca73f9dd4c8424682d1a79e77989"}
+  },
+  "formal_integration": {
+    "event_id": "20260821-r-182-feedback-pulled-cross-hessian-margin-2026",
+    "event_ordinal": 678,
+    "event_claim_ids": ["A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION", "EXP-000897", "R-182"],
+    "event_raw_tokens": ["EXP-000897", "R-182", "pulled cross-Hessian", "Lean", "No R-182 PDF"],
+    "expected_counts": {"claims": 49, "results": 182, "gates": 206, "negatives": 372, "explorations": 897, "events": 678, "tasks": 57, "catalog": 4381},
+    "primary_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r182-feedback-pulled-cross-hessian-margin/primary.json",
+    "independent_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r182-feedback-pulled-cross-hessian-margin/independent.json",
+    "integrated_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r182-feedback-pulled-cross-hessian-margin/integrated.json",
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [],
+    "no_pdf": true
+  },
+  "hostile_mutations": [
+    "change the actual active cross coefficient",
+    "change the R-181 feedback gain",
+    "replace the pulled negative fixture",
+    "erase the cross Hessian",
+    "mark A13 closed",
+    "mark Sector-A closed",
+    "replace an authority hash",
+    "insert a Lean sorry or axiom token"
+  ],
+  "boundary": "R-182 proves only the finite active R-178 cross-Hessian coefficient, its congruence through the R-181 feedback matrix, the exact pulled matrix [[-2,4],[4,-8]], the factored quadratic -2*(x-2*y)^2, and one negative fixture. It does not prove the full production owner, heat/forest/complement/returned-low terms, source/sextic one-use, finite collar, T-050/A13, Sector-A, physical-empty, removal, continuum or Pre-A closure. The negative block is a necessary margin diagnostic; it is not a new negative result or a global instability theorem. No gate closure, tier change, new negative or PDF follows.",
+  "next_action": "Insert the actual heat, forest, complement, returned-low, source and sextic diagonal terms into the same pulled phase Hessian and prove an owner-complete lower bound that dominates this exact negative cross block, or record a scoped failure if the margin cannot be paid once."
+}

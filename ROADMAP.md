@@ -1589,6 +1589,13 @@ R-177 two-root feedback block.  It binds the actual beta=1/2 incidence to
 envelope defect, and leaves the production spatial mixed Gram, source/sextic
 one-use, T-050, A13, Sector-A, physical-empty, Pre-A and limit routes open.
 No R-181 PDF is issued.
+EXP-000897 / R-182 is a T0, claim-nonbearing Lean checkpoint for the
+feedback-pulled cross-Hessian margin.  It combines the active R-178 coefficient
+with the R-181 feedback matrix, proving `H=[[-8,8],[8,-8]]`,
+`T^T H T=[[-2,4],[4,-8]]`, and the negative quadratic `-2*(x-2*y)^2`.
+This is a necessary margin diagnostic only: heat, forest, low, source, sextic,
+T-050, A13, Sector-A, physical-empty, Pre-A and limit routes remain open.
+No R-182 PDF is issued.
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7

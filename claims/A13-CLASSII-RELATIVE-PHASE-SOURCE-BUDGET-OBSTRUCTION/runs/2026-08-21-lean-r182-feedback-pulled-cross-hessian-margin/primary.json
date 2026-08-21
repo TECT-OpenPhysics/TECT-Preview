@@ -1,0 +1,275 @@
+{
+  "assertion_count": 24,
+  "assertions": [
+    {
+      "actual": "A13-FEEDBACK-PULLED-CROSS-HESSIAN-MARGIN",
+      "expected": "A13-FEEDBACK-PULLED-CROSS-HESSIAN-MARGIN",
+      "name": "manifest identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "no new negatives",
+      "pass": true
+    },
+    {
+      "actual": "1525819f394df3352e0a870e1742361b9bbe2fa2e870af41fa1a57932db05864",
+      "expected": "1525819f394df3352e0a870e1742361b9bbe2fa2e870af41fa1a57932db05864",
+      "name": "input r178_manifest",
+      "pass": true
+    },
+    {
+      "actual": "3893ad4c0cb14452f35a760c540260679507d3145f471e817c04d425e2a1306f",
+      "expected": "3893ad4c0cb14452f35a760c540260679507d3145f471e817c04d425e2a1306f",
+      "name": "input r181_manifest",
+      "pass": true
+    },
+    {
+      "actual": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd",
+      "expected": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd",
+      "name": "input a13_status",
+      "pass": true
+    },
+    {
+      "actual": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "expected": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "name": "input lean_toolchain",
+      "pass": true
+    },
+    {
+      "actual": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "expected": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "name": "input lakefile",
+      "pass": true
+    },
+    {
+      "actual": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "expected": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "name": "input lake_manifest",
+      "pass": true
+    },
+    {
+      "actual": {
+        "current": "3",
+        "field": "2",
+        "ordered": "5"
+      },
+      "expected": {
+        "current": 3,
+        "field": 2,
+        "ordered": 5
+      },
+      "name": "R-178 coefficients",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1",
+        "2"
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "name": "R-178 active weights",
+      "pass": true
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "name": "R-181 feedback gain",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        "ACTIVE"
+      ],
+      "expected": [
+        false,
+        "ACTIVE"
+      ],
+      "name": "A13 remains open",
+      "pass": true
+    },
+    {
+      "actual": "-8",
+      "expected": -8,
+      "name": "active cross Hessian coefficient",
+      "pass": true
+    },
+    {
+      "actual": [
+        [
+          "-8",
+          "8"
+        ],
+        [
+          "8",
+          "-8"
+        ]
+      ],
+      "expected": [
+        [
+          "-8",
+          "8"
+        ],
+        [
+          "8",
+          "-8"
+        ]
+      ],
+      "name": "cross Hessian",
+      "pass": true
+    },
+    {
+      "actual": [
+        [
+          "-2",
+          "4"
+        ],
+        [
+          "4",
+          "-8"
+        ]
+      ],
+      "expected": [
+        [
+          "-2",
+          "4"
+        ],
+        [
+          "4",
+          "-8"
+        ]
+      ],
+      "name": "feedback pullback",
+      "pass": true
+    },
+    {
+      "actual": "-8*(x - y)**2",
+      "expected": "-8*(x - y)**2",
+      "name": "cross quadratic factor",
+      "pass": true
+    },
+    {
+      "actual": "-2*(x - 2*y)**2",
+      "expected": "-2*(x - 2*y)**2",
+      "name": "pulled quadratic factor",
+      "pass": true
+    },
+    {
+      "actual": "-8",
+      "expected": "-8",
+      "name": "cross negative fixture",
+      "pass": true
+    },
+    {
+      "actual": "-8",
+      "expected": "-8",
+      "name": "pulled negative fixture",
+      "pass": true
+    },
+    {
+      "actual": {
+        "-10": 1,
+        "0": 1
+      },
+      "expected": {
+        "-10": 1,
+        "0": 1
+      },
+      "name": "pulled eigenvalues",
+      "pass": true
+    },
+    {
+      "actual": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+      "expected": "pinned toolchain",
+      "name": "lake available",
+      "pass": true
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "Lean compile",
+      "pass": true
+    },
+    {
+      "actual": [
+        "",
+        ""
+      ],
+      "expected": [
+        "",
+        ""
+      ],
+      "name": "Lean clean output",
+      "pass": true
+    }
+  ],
+  "audit_id": "A13-FEEDBACK-PULLED-CROSS-HESSIAN-MARGIN",
+  "boundary": "R-182 proves only the finite active R-178 cross-Hessian coefficient, its congruence through the R-181 feedback matrix, the exact pulled matrix [[-2,4],[4,-8]], the factored quadratic -2*(x-2*y)^2, and one negative fixture. It does not prove the full production owner, heat/forest/complement/returned-low terms, source/sextic one-use, finite collar, T-050/A13, Sector-A, physical-empty, removal, continuum or Pre-A closure. The negative block is a necessary margin diagnostic; it is not a new negative result or a global instability theorem. No gate closure, tier change, new negative or PDF follows.",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "derived": {
+    "a13_gate_closed": false,
+    "active_weights": {
+      "c1": "1",
+      "c2": "1",
+      "s1": "0",
+      "s2": "0",
+      "w1": "1",
+      "w2": "2"
+    },
+    "authority_hashes_ok": true,
+    "boundary_present": true,
+    "cross_coefficients": {
+      "current": "3",
+      "field": "2",
+      "ordered": "5"
+    },
+    "cross_fixture": "-8",
+    "cross_hessian": [
+      [
+        "-8",
+        "8"
+      ],
+      [
+        "8",
+        "-8"
+      ]
+    ],
+    "cross_quadratic": "-8*(x - y)**2",
+    "feedback_gain": "1/2",
+    "hessian_coefficient": "-8",
+    "lean_escape_tokens_absent": true,
+    "pulled_eigenvalues": {
+      "-10": 1,
+      "0": 1
+    },
+    "pulled_fixture": "-8",
+    "pulled_hessian": [
+      [
+        "-2",
+        "4"
+      ],
+      [
+        "4",
+        "-8"
+      ]
+    ],
+    "pulled_quadratic": "-2*(x - 2*y)**2",
+    "sector_a_closed": false
+  },
+  "recorded_at": "2026-08-21T14:44:31.772581Z",
+  "result_id": "R-182",
+  "run_kind": "primary",
+  "schema": "tect/lean-kernel-crosscheck/1.0",
+  "verdict": "PASS"
+}

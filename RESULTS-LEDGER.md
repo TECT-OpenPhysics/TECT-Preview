@@ -27,6 +27,7 @@ policy in `governance/development-history.md`.
 | [R-177](#r-177) | A1 two-root common-heat and root-incidence ledger | R-177 v1.0 is a T0 claim-nonbearing Lean ledger under EXP-000892. It binds the actual R-176 `k,2k` covariance roots to the finite order common heat -> root 1 -> root 2 -> future residual, proves the two-replica variance and feedback identities, and rejects mean-only or independently replicated heat substitutions. The complete owner, source/sextic windows, T-050, A13, Sector-A and Pre-A remain open |
 | [R-178](#r-178) | Complete two-root cross-owner phase differentiation | R-178 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000893. It retains the field-field, current-current and ordered field-current R-174 blocks, differentiates both root directions exactly, and proves their sum is zero by global phase invariance; the ordered block is active in the registered fixture. The production sign, heat/forest/complement/returned-low/source/sextic owner, T-050, A13, Sector-A and Pre-A remain open |
 | [R-179](#r-179) | Future-variance and forest owner-half coefficient ledger | R-179 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000894. It rechecks the R-125/R-136 coefficient `P=F/2-V/4`, the replica form `2P=F-V/2`, and the exact constant-translation omission defect. The analytic forest, production source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
+| [R-182](#r-182) | Feedback-pulled cross-Hessian margin Lean cross-check | R-182 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000897. It combines the active R-178 cross coefficient with the R-181 feedback map and proves the exact pulled Hessian `[-2,4;4,-8]` with eigenvalues -10 and 0. The diagonal production owner, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-181](#r-181) | Finite two-root feedback mixed-Gram Lean cross-check | R-181 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000896. It binds the R-177 beta=1/2 root-2 feedback map, exact Gram `[[5/4,1/2],[1/2,1]]`, and positive envelope defect. The production spatial mixed Gram, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-180](#r-180) | Lean scalar triangular majorant cross-check | R-180 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000895. It rechecks the finite geometric majorant algebra, abstract C=5 positivity, the rational fixture, and the registered exponent margins 7/60 and 1/12. The production mixed-Gram envelope, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-176](#r-176) | Actual A1 two-root principal Cholesky covariance witnesses | R-176 v1.0 is a T0 claim-nonbearing Lean cross-check under EXP-000891. From the hash-pinned A1 symbol it reconstructs positive pivot chains at `k` and `2k`, builds inverse-transpose principal factors `U` with `C=U U^T`, and duplicates them into six-real covariance roots. Heat/root incidence, the complete owner, T-050, A13, Sector-A and Pre-A remain open |
@@ -339,6 +340,35 @@ Sector-A or Pre-A. No tier change, gate closure, new negative or PDF follows.
 
 **Proven in:** [R-179 certificate](strategy/pre-a-a13-future-variance-forest-owner-half-ledger-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R179.lean), [primary script](verification/scripts/lean_a13_future_variance_forest_owner_half_ledger.py), [independent script](codes/foundations/lean_a13_future_variance_forest_owner_half_ledger_independent.py), [integrated verifier](codes/foundations/lean_a13_future_variance_forest_owner_half_ledger_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-future-variance-forest-owner-half-ledger-260821.md), and the saved run artefacts. No R-179 PDF is issued.
 
+<a id="r-182"></a>
+### R-182 -- Feedback-pulled cross-Hessian margin Lean cross-check
+
+**Result ID.** `R-182` is a T0, claim-nonbearing Lean checkpoint under
+`EXP-000897`.
+
+**Exact result.** At the registered active phase, the R-178 field/current
+coefficients and weights give the cross-Hessian coefficient
+`-(2+3*1*2)=-8`, hence `H=[[-8,8],[8,-8]]`.  Pulling it through the actual
+R-181 feedback matrix `T=[[1,0],[1/2,1]]` gives
+`T^T H T=[[-2,4],[4,-8]]`.  Lean proves the factorizations
+`-8*(x-y)^2` and `-2*(x-2*y)^2`; the fixture `(0,1)` is `-8` before and
+after pullback, and the pulled eigenvalues are `-10` and `0`.
+
+**Verification.** The primary SymPy lane derives the active coefficient,
+matrices, quadratic forms, eigenvalues, and fixture from R-178/R-181 inputs
+before compiling the pinned Lean source. The independent lane uses only stdlib
+`Fraction` arithmetic and exact 2 by 2 matrix multiplication. The integrated
+lane checks hashes, theorem markers, Lean escape-token absence, independent
+imports, complete derived-value agreement, eight hostile mutations, and formal
+append-only topology/freshness.
+
+**Boundary.** This is a finite necessary-margin diagnostic, not the complete
+production Hessian or a global instability theorem. Heat, forest, complement,
+returned-low, source, sextic, R-102, R-125, T-050, A13, matching, the absolute
+anchor, Nelson, a measure, physical-empty, removal, continuum limits, Sector-A
+and Pre-A remain open. No tier change, gate closure, new negative or PDF follows.
+
+**Proven in:** [R-182 certificate](strategy/pre-a13-feedback-pulled-cross-hessian-margin-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R182.lean), [primary script](verification/scripts/lean_a13_feedback_pulled_cross_hessian_margin.py), [independent script](codes/foundations/lean_a13_feedback_pulled_cross_hessian_margin_independent.py), [integrated verifier](codes/foundations/lean_a13_feedback_pulled_cross_hessian_margin_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-feedback-pulled-cross-hessian-margin-260821.md), and the saved run artefacts. No R-182 PDF is issued.
 <a id="r-181"></a>
 ### R-181 -- Finite two-root feedback mixed-Gram Lean cross-check
 
