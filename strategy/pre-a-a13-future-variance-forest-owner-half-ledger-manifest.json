@@ -1,0 +1,35 @@
+{
+  "schema": "tect/lean-a13-future-variance-forest-owner-half-ledger/1.0",
+  "audit_id": "A13-FUTURE-VARIANCE-FOREST-OWNER-HALF-LEDGER",
+  "result_id": "R-179",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000894",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Future-variance and forest owner-half coefficient ledger",
+  "purpose": "Cross-check the exact one-use coefficient in the R-125/R-136 future-variance minus forest owner and expose the variance omission defect with Lean and independent rational arithmetic.",
+  "inputs": {
+    "r125_manifest": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_conditional_variance_forest_bridge_root_shell_operator_boundary_manifest.json", "sha256": "64d0d5ee851a49c5f85994f71616b4d51def2bca701abea6d006a578d8d44e2f"},
+    "r136_manifest": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_common_heat_replica_raw_sequential_owner_boundary_manifest.json", "sha256": "5b844c23b6acab430c6e2f2b4cbd339eb28f559f02d7817c01a749d58ed88dd9"},
+    "r177_manifest": {"path": "strategy/pre-a-a13-two-root-heat-incidence-ledger-manifest.json", "sha256": "8085e63cab49157972cbc8b23718d15a33f1b60ce509e91f9c2975a2f50258ac"},
+    "r178_manifest": {"path": "strategy/pre-a-a13-two-root-complete-cross-owner-differentiation-manifest.json", "sha256": "1525819f394df3352e0a870e1742361b9bbe2fa2e870af41fa1a57932db05864"},
+    "lean_toolchain": {"path": "verification/lean/lean-toolchain", "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"},
+    "lakefile": {"path": "verification/lean/lakefile.toml", "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"},
+    "lake_manifest": {"path": "verification/lean/lake-manifest.json", "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"}
+  },
+  "registered_inputs": {"owner_formula": "P=F/2-V/4", "replica_formula": "2P=F-V/2", "constant_translation_fixture": {"forest": "0", "variance": "4", "s": "1"}, "owner_terms": ["forest_half", "future_variance_quarter_rebate"]},
+  "theorem_markers": ["replica_owner_half", "omission_cost", "constant_translation", "positive_variance_rebate", "zero_variance_rebate"],
+  "files": {
+    "lean_entrypoint": {"path": "verification/lean/Tect/R179.lean", "sha256": "2dd817cc78591e466e48b3c5cb84696143500004355f3837f7b6a7480d8265c3"},
+    "primary": {"path": "verification/scripts/lean_a13_future_variance_forest_owner_half_ledger.py", "sha256": "63aab85d0c9f398f9c5ec83c7a72906b6b9735fa5ffd990dd06dc96e3629d7f4"},
+    "independent": {"path": "codes/foundations/lean_a13_future_variance_forest_owner_half_ledger_independent.py", "sha256": "8732c60c9def8db404db6204e60e8758d4d44b31115aae2273d4c51681fd8945"},
+    "verifier": {"path": "codes/foundations/lean_a13_future_variance_forest_owner_half_ledger_verify.py", "sha256": "f4330b506cdcedf9c10c06d27e7667aaa823fd37701d8ccfd9e29e7a14a6d69d"},
+    "certificate": {"path": "strategy/pre-a-a13-future-variance-forest-owner-half-ledger-certificate-260821.md", "sha256": "e7a589b23ecef2eaaf616a6dc5d8c106b45daeda5c7ea35621f1071bc1a98cd4"},
+    "note": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-future-variance-forest-owner-half-ledger-260821.md", "sha256": "eca4772848022e15be392499b00170420e7829287304c58dcb681a610da7346c"}
+  },
+  "formal_integration": {"event_id": "20260821-r-179-future-variance-forest-owner-half-ledger", "event_ordinal": 675, "event_claim_ids": ["A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION", "EXP-000894", "R-179"], "event_raw_tokens": ["EXP-000894", "R-179", "future-variance", "owner-half", "Lean", "No R-179 PDF"], "expected_counts": {"claims": 49, "results": 179, "gates": 206, "negatives": 372, "explorations": 894, "events": 675, "tasks": 57, "catalog": 4351}, "primary_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r179-future-variance-forest-owner-half-ledger/primary.json", "independent_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r179-future-variance-forest-owner-half-ledger/independent.json", "integrated_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r179-future-variance-forest-owner-half-ledger/integrated.json", "no_new_negative_ids": [], "reused_negative_ids": [], "no_pdf": true},
+  "hostile_mutations": ["drop the variance quarter rebate", "replace the owner formula by forest/2", "change the two-replica factor", "erase the constant-translation defect", "turn nonnegative variance into a signed assumption", "mark A13 or Sector-A closed", "replace an R-125 or R-136 authority hash", "insert a Lean sorry or axiom token"],
+  "boundary": "R-179 proves only the exact finite owner-half coefficient identities P=F/2-V/4, 2P=F-V/2, the constant-translation omission defect and the monotone nonpositive variance rebate. It does not prove the analytic R-125 forest, production current/source/sextic one-use, T-050, A13, Nelson, an interacting measure, physical-empty comparison, removal, continuum limits, Sector-A or Pre-A closure. No gate closure, tier change, new negative or PDF follows.",
+  "next_action": "Insert the actual differentiated R-178 cross owner and incidence terms into the R-125 owner-half formula, then prove or refute the production source/sextic one-use and finite-collar margins without double-spending the variance rebate."
+}

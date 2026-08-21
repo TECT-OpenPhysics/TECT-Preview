@@ -1568,6 +1568,13 @@ production sign. Heat, complement, historical-low, forest, returned-mean,
 source/sextic one-use, T-050, A13, Sector-A, physical-empty and limit routes
 remain open. No R-178 PDF is issued.
 
+EXP-000894 / R-179 rechecks the R-125/R-136 owner-half coefficient in the
+same finite two-root route: `P=F/2-V/4`, `2P=F-V/2`, and the constant-
+translation fixture exposes the exact `V/4` omission cost. This is coefficient
+bookkeeping, not the analytic forest or source/sextic one-use theorem. The
+complete production owner, T-050, A13, physical-empty, Sector-A, Pre-A and
+limit routes remain open. No R-179 PDF is issued.
+
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7

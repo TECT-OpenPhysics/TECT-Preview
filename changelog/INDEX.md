@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**674 accepted events** · latest 25 shown below · machine locator: `index.json`
+**675 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-21 | `20260821-r-179-future-variance-forest-owner-half-ledger` — [R-179 future-variance forest owner-half ledger] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000894, R-179 | [bounded page](pages/000669-000718.md#20260821-r-179-future-variance-forest-owner-half-ledger) |
 | 2026-08-21 | `20260821-r-178-event-673-script-path-correction-2026-08` — [R-178 event 673 script path correction] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, R-178 | [bounded page](pages/000669-000718.md#20260821-r-178-event-673-script-path-correction-2026-08) |
 | 2026-08-21 | `20260821-r-178-complete-cross-owner-phase-differentiatio` — [R-178 complete cross-owner phase differentiation] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000893, R-178 | [bounded page](pages/000669-000718.md#20260821-r-178-complete-cross-owner-phase-differentiatio) |
 | 2026-08-21 | `20260821-r-177-two-root-heat-incidence-ledger-2026-08-21` — [R-177 two-root heat incidence ledger] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000892, R-177 | [bounded page](pages/000669-000718.md#20260821-r-177-two-root-heat-incidence-ledger-2026-08-21) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-21 | `20260821-t-054-common-input-ledger-audit-leaves-current` — [T-054 common-input ledger audit leaves current Pre-A contestants unadmitted] - 2026-08-21 | C6-SPACETIME-SIGNATURE, EXP-000872 | [bounded page](pages/000619-000668.md#20260821-t-054-common-input-ledger-audit-leaves-current) |
 | 2026-08-21 | `20260821-historical-t-055-regression-reader-contract-cor` — [Historical T-055 regression-reader contract correction] - 2026-08-21 | C6-SPACETIME-SIGNATURE, EXP-000871, R-169 | [bounded page](pages/000619-000668.md#20260821-historical-t-055-regression-reader-contract-cor) |
 | 2026-08-21 | `20260821-t-054-common-input-owner-split-audit-2026-08-21` — [T-054 common-input owner split audit] - 2026-08-21 | A2-FULL-PRODUCTION-WELLPOSED, C6-SPACETIME-SIGNATURE, EXP-000870 | [bounded page](pages/000619-000668.md#20260821-t-054-common-input-owner-split-audit-2026-08-21) |
-| 2026-08-20 | `20260820-historical-t-054-regression-reader-contract-cor` — [Historical T-054 regression-reader contract correction] - 2026-08-20 | A2-FULL-PRODUCTION-WELLPOSED, C6-SPACETIME-SIGNATURE, EXP-000869, R-157, R-158 | [bounded page](pages/000619-000668.md#20260820-historical-t-054-regression-reader-contract-cor) |
 
 ## Post-cutover pages
 
@@ -49,6 +49,6 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 669–674 | 6 | [000669-000718.md](pages/000669-000718.md) |
+| 669–675 | 7 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

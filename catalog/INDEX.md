@@ -5,30 +5,30 @@ Compact generated reader surface. The complete current machine inventory is
 `../CATALOG.md` is a frozen compatibility volume at commit `4db22f4e`
 for historical verifiers and no longer grows.
 
-**4341 artefacts** · **49 live claim cards** ·
+**4351 artefacts** · **49 live claim cards** ·
 130 superseded artefacts retained
 
 ## By kind
 
 | Kind | Artefacts | Canonical bytes |
 |---|---:|---:|
-| Claim cards (registry layer) (`claim-card`) | 604 | 5,068,509 |
-| Working proof notes (on claim cards) (`proof-note`) | 910 | 107,638,850 |
+| Claim cards (registry layer) (`claim-card`) | 604 | 5,068,581 |
+| Working proof notes (on claim cards) (`proof-note`) | 911 | 107,639,313 |
 | Theory synthesis documents (Layer 2) (`synthesis`) | 345 | 7,749,956 |
 | Migrated legacy notes (immutable) (`archive-note`) | 72 | 1,509,315 |
 | Migrated legacy scripts (runnable) (`archive-script`) | 22 | 319,000 |
 | Migrated legacy run artefacts (immutable) (`archive-artefact`) | 21 | 302,036 |
 | Reviewed legacy research records (`legacy-research-record`) | 140 | 164,393 |
 | Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
-| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1028 | 29,286,543 |
-| Domain codes (`code`) | 755 | 16,768,624 |
-| Verification harness (`verification`) | 71 | 10,808,850 |
+| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1031 | 29,302,896 |
+| Domain codes (`code`) | 757 | 16,783,269 |
+| Verification harness (`verification`) | 73 | 10,828,412 |
 | Papers (publication layer) (`paper`) | 1 | 546 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
-| Registries and ledgers (`registry`) | 42 | 1,538,325 |
+| Registries and ledgers (`registry`) | 42 | 1,539,022 |
 | Governance policies (`policy`) | 21 | 195,650 |
-| Root documents (`root-doc`) | 14 | 1,672,723 |
-| Other tracked files (`other`) | 275 | 11,380,361 |
+| Root documents (`root-doc`) | 14 | 1,675,406 |
+| Other tracked files (`other`) | 277 | 11,397,275 |
 
 ## Use
 
