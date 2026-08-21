@@ -1,0 +1,127 @@
+{
+  "schema": "tect/lean-kernel-crosscheck/1.0",
+  "audit_id": "A13-DUPLICATED-COVARIANCE-SQUARE-ROOT-BASIS",
+  "result_id": "R-175",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000890",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Canonical duplicated square-root basis for the two-root covariance block",
+  "purpose": "Freeze the block-level square-root and complex-rotation interface needed by the R-174 two-root production-cylinder synthesis without claiming existence of the actual A1 square-root bases or a complete owner.",
+  "inputs": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r150_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_production_antipodal_last_insertion_zero_cross_boundary_manifest.json",
+      "sha256": "ac8e55e4090dc2b819c6700b97f4dc2508f65f33d261134c1b4aa9ff6f458a43"
+    },
+    "r174_manifest": {
+      "path": "strategy/pre-a-a13-two-root-production-cylinder-cross-synthesis-manifest.json",
+      "sha256": "f0aff366385b3857407f6d2340c4bdf96860359a679d1e5760f40b691a1ae043"
+    },
+    "a13_status": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+      "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "dimension": 3,
+    "basis_fixture": [
+      [2, 0, 0],
+      [1, 3, 0],
+      [0, 1, 4]
+    ]
+  },
+  "theorem_markers": [
+    "duplicate_transpose_mul",
+    "duplicate_commutes_with_complexStructure",
+    "duplicated_square_root",
+    "duplicated_basis_preserves_complex_structure"
+  ],
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R175.lean",
+      "sha256": "967cf2bad70e86854c952b97accebff7673636920ec639552b5a9655553e3e2f"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_a13_duplicated_covariance_square_root_basis.py",
+      "sha256": "6c874d8ab69384f29748ea21802048c35c70f26759a043f8e0ff7377884c197d"
+    },
+    "independent": {
+      "path": "codes/foundations/lean_a13_duplicated_covariance_square_root_basis_independent.py",
+      "sha256": "139d598194a714475105c8ac4afa2935a4f9c639c2e27b85fbd9d1aebcaeb1a1"
+    },
+    "verifier": {
+      "path": "codes/foundations/lean_a13_duplicated_covariance_square_root_basis_verify.py",
+      "sha256": "3cbc0e42759af9e1a6dc9db6fff532e19c4d1b36355c40978a3c21236d2b28bd"
+    },
+    "certificate": {
+      "path": "strategy/pre-a-a13-duplicated-covariance-square-root-basis-certificate-260821.md",
+      "sha256": "793a222c703efeafb7959921fdec5ea1a546300f6e6bfa9810cf631ad758a135"
+    },
+    "note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-duplicated-covariance-square-root-basis-260821.md",
+      "sha256": "3f77c65ca5f367fe5b2537eec69e6428c853a84044f877c7f9e5c729beedd663"
+    }
+  },
+  "formal_integration": {
+    "event_id": "20260821-r-175-duplicated-covariance-square-root-basis-i",
+    "event_ordinal": 670,
+    "event_claim_ids": [
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "EXP-000890",
+      "R-175"
+    ],
+    "event_raw_tokens": [
+      "EXP-000890",
+      "R-175",
+      "duplicated covariance",
+      "square-root basis",
+      "complex-structure interface",
+      "No R-175 PDF"
+    ],
+    "expected_counts": {
+      "claims": 49,
+      "results": 175,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 890,
+      "events": 670,
+      "tasks": 57,
+      "catalog": 4311
+    },
+    "primary_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r175-duplicated-covariance-square-root-basis/primary.json",
+    "independent_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r175-duplicated-covariance-square-root-basis/independent.json",
+    "integrated_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r175-duplicated-covariance-square-root-basis/integrated.json",
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [],
+    "no_pdf": true
+  },
+  "hostile_mutations": [
+    "replace the square-root identity by a diagonal-only covariance claim",
+    "delete the complex-structure commutation identity",
+    "change the basis dimension without changing the fixture",
+    "promote the supplied fixture to an actual A1 square-root existence theorem",
+    "insert a Lean sorry or axiom token",
+    "replace an authority hash",
+    "change the rotation fixture without recomputation",
+    "remove the boundary denying A13 closure"
+  ],
+  "boundary": "The kernel and exact lanes prove only the duplicated block identities once a square-root witness L is supplied. They do not prove existence or canonical selection of the actual A1 square-root bases, heat/root incidence, complement, historical-low, forest, returned mean, source/sextic one-use, complete owner, T-050, A13, Nelson, an interacting measure, phase selection, PDE replacement, physical-empty comparison, removal, continuum limits, Sector-A or Pre-A closure.",
+  "next_action": "Instantiate the interface with the actual A1 C(k) and C(2k) square-root witnesses, then freeze raw/past/future covariances and heat/root incidence before differentiating the complete scalar owner with every R-174 cross block retained once."
+}

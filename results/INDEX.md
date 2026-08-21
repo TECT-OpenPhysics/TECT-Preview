@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**174 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**175 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-175`](../RESULTS-LEDGER.md#r-175) | Canonical duplicated covariance square-root basis interface | T0 claim-nonbearing exact kernel/interface cross-check; no claim tier or lifecycle change. |
 | [`R-174`](../RESULTS-LEDGER.md#r-174) | Exact two-root production-cylinder cross-synthesis boundary | T0 |
 | [`R-173`](../RESULTS-LEDGER.md#r-173) | R-163 deterministic dyadic-forest Lean margin core | T0 claim-nonbearing exact kernel cross-check; no claim tier or lifecycle change. |
 | [`R-172`](../RESULTS-LEDGER.md#r-172) | A1 Class-II owner mismatch Lean cross-check | T0 claim-nonbearing exact owner-interface audit; no claim tier or lifecycle change. |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-153`](../RESULTS-LEDGER.md#r-153) | Production strict-past conditional Hessian and weighted-collar boundary | T4 |
 | [`R-152`](../RESULTS-LEDGER.md#r-152) | Affine-past curvature and nonlinear/multi-root globalization boundary | T4 |
 | [`R-151`](../RESULTS-LEDGER.md#r-151) | Direct two-root endpoint Hessian and uniform local source gap | T4 |
-| [`R-150`](../RESULTS-LEDGER.md#r-150) | Production antipodal last-insertion zero-cross boundary | T4 |
 
 Search without loading the full ledger:
 

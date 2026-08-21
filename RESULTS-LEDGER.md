@@ -24,6 +24,7 @@ policy in `governance/development-history.md`.
 |---|---|---|
 | [R-173](#r-173) | R-163 deterministic dyadic-forest Lean margin core | R-173 v1.0 is a scoped T0 claim-nonbearing kernel cross-check under EXP-000888. Lean, a Fraction-only independent lane, and an integrated hash/mutation lane recheck the exact rational margins 13/100>1/10, -1/110, -10/11, 3/20<27/100, the recursive guard, and the third-derivative fixture. It does not prove the analytic forest estimates or close A13, T-050, Sector-A or Pre-A |
 | [R-174](#r-174) | Exact two-root production-cylinder cross-synthesis boundary | R-174 v1.0 is a scoped T0 claim-nonbearing interface result under EXP-000889. The hash-pinned A1 `k,2k` chart has ordered cross blocks that are nonzero pointwise even though one-period sine/cosine averages vanish; Lean and a Fraction-only lane recheck the exact algebra. The complete square-root/heat/root/forest/low/returned-mean/source/sextic owner remains open, as do T-050, A13, Sector-A and Pre-A |
+| [R-175](#r-175) | Canonical duplicated covariance square-root basis interface | R-175 v1.0 is a T0 claim-nonbearing exact interface under EXP-000890. A supplied `L L^T=C` yields `G G^T=Gamma` for `G=diag(L,L)` and preserves the six-real complex structure; actual A1 square-root existence/selection and the complete owner remain open |
 | [R-172](#r-172) | A1 Class-II owner mismatch Lean cross-check | R-172 v1.0 is a scoped T0 claim-nonbearing exact coefficient audit under EXP-000887. It derives cKK beta_X^2=3/320 and cJK alpha_X beta_X=3/400 with common positive mass denominator, so the declared and historical residual Class-II owners are not interchangeable. This does not close the full A1 variation, A13, Sector-A or Pre-A |
 | [R-171](#r-171) | Actual A7 plane-wave endpoint secant sign witness | R-171 v1.0 is a scoped T4 analytic/exact/executed endpoint component-energy result under EXP-000878. For the hash-pinned A1/A7 L=16 model, one real dual-lattice plane wave has strictly positive deterministic Class-II energy while zero has energy zero, so the endpoint secant to zero is strictly negative. This is not a full A1/Hartree/physical-vacuum result; A13, T-050, Sector-A and Pre-A remain open |
 | [R-170](#r-170) | Initial QFT/GR/Reading-H literature-applicability audit | R-170 v1.0 is the scoped T0 claim-nonbearing audit under EXP-000863. It completes exactly the initial four-record rollout: B1 APPLIES only to its current `C_full` Q-versus-`G_*` theorem; C4 and C5 remain NOT-YET-ASSESSED; and the present C6 BCC-premised route DOES-NOT-APPLY while alternatives remain NOT-YET-ASSESSED. The policy remains binding, no tier or lifecycle changes, and no physical, Sector-A, or Pre-A gate closes |
@@ -247,7 +248,39 @@ The exact bracket identity and positivity core additionally pass the pinned
 reporting `LEAN R-171 PASS 18/18`.
 
 **Tier.** T4 scoped analytic/exact/executed result; no claim tier or lifecycle change.
-<a id="r-173"></a>
+<a id="r-175"></a>
+### R-175 -- Canonical duplicated covariance square-root basis interface
+
+**Result ID.** `R-175` is a T0, claim-nonbearing exact interface result under
+EXP-000890. It supplies the block identity needed after R-174 without selecting
+an actual A1 square-root witness.
+
+**Exact result.** For a finite index type and a supplied matrix `L` with
+`L L^T=C`, put `G=diag(L,L)`, `Gamma=diag(C,C)`, and
+`J=[[0,-I],[I,0]]`. Then `G G^T=Gamma` and `J G=G J`; consequently the
+duplicated covariance also commutes with `J`. The primary and independent lanes
+rebuild these products from the same test witness, whose leading principal
+minors are positive.
+
+**Verification.** `verification/lean/Tect/R175.lean` proves the generic block
+identities over an arbitrary finite index type and commutative ring. The primary
+SymPy lane derives the symbolic products and the independent lane uses only
+stdlib `Fraction` matrix arithmetic. The integrated verifier checks pinned
+authorities, hashes, AST/import independence, eight hostile mutations and the
+formal topology.
+
+**Boundary.** The fixture is not the actual A1 `C(k)` or `C(2k)` square root.
+R-175 does not prove existence or canonical selection of those roots, heat/root
+incidence, complement, historical-low, forest, returned mean, source/sextic
+one-use, the complete scalar owner, T-050, A13, Nelson, a measure, phase/PDE,
+physical-empty, removal, continuum limits, Sector-A or Pre-A closure. No new
+negative, tier change, gate closure or PDF follows.
+
+**Proven in:** [R-175 certificate](strategy/pre-a-a13-duplicated-covariance-square-root-basis-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R175.lean), [primary script](verification/scripts/lean_a13_duplicated_covariance_square_root_basis.py), [independent script](codes/foundations/lean_a13_duplicated_covariance_square_root_basis_independent.py), [integrated verifier](codes/foundations/lean_a13_duplicated_covariance_square_root_basis_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-duplicated-covariance-square-root-basis-260821.md), and the saved run artefacts. No R-175 PDF is issued.
+
+**Tier.** T0 claim-nonbearing exact kernel/interface cross-check; no claim tier or lifecycle change.
+
+<a id="r-174"></a>
 ### R-174 -- Exact two-root production-cylinder cross-synthesis boundary
 
 **Result ID.** `R-174`.
@@ -278,6 +311,7 @@ placement or the complete scalar owner. It does not close T-050, A13, Nelson,
 a measure, phase/PDE, physical-empty, removal, continuum, Sector-A or Pre-A.
 No new negative, tier change, gate closure or PDF follows.
 
+<a id="r-173"></a>
 ### R-173 -- R-163 deterministic dyadic-forest Lean margin core
 
 **Result ID.** R-173 v1.0, recorded under EXP-000888.
