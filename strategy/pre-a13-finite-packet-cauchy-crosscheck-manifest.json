@@ -1,0 +1,147 @@
+{
+  "schema": "tect/lean-a13-finite-packet-cauchy-crosscheck/1.0",
+  "audit_id": "A13-FINITE-PACKET-CAUCHY-CROSSCHECK",
+  "result_id": "R-185",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000900",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "R-185 finite packet Cauchy Lean cross-check",
+  "purpose": "Kernel cross-check the finite packet Cauchy--Schwarz inequality used after R-081 temporal packet factorisation, without importing the production map or the overlap-stable progressive theorem.",
+  "inputs": {
+    "r081_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_cartan_tail_adapted_near_temporal_reduction_manifest.json",
+      "sha256": "bb23e56992b741af27be75ef44e1e007fad4adbb309bbd71e42c0357db5ceff7"
+    },
+    "a13_status": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+      "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "source": ["2", "-1", "3"],
+    "control": ["4", "5", "-2"],
+    "expected": {
+      "source_norm": "14",
+      "control_norm": "45",
+      "pairing": "-3",
+      "gap": "621"
+    }
+  },
+  "theorem_markers": [
+    "finite_packet_cauchy_bound",
+    "three_packet_fixture",
+    "three_packet_gap"
+  ],
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R185.lean",
+      "sha256": "ee045805613333437b6b46aaaf1384bb05d0b46af95b14d784716805eeaa09d7"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_a13_finite_packet_cauchy_crosscheck.py",
+      "sha256": "68811ec1141f9e1851f4a6bd88bd131251186147c01dfa4d03a06f6caac0d90d"
+    },
+    "independent": {
+      "path": "codes/foundations/lean_a13_finite_packet_cauchy_crosscheck_independent.py",
+      "sha256": "65adc5d78f03e4973a3e9a50b20cf4e6544b941e0bb8b6e610a290c344e2f1bf"
+    },
+    "verifier": {
+      "path": "codes/foundations/lean_a13_finite_packet_cauchy_crosscheck_verify.py",
+      "sha256": "d02fb1acc08e24d7db22d599b03c9621829f4be6549b61d5a8ff4d5a6f366998"
+    },
+    "certificate": {
+      "path": "strategy/pre-a13-finite-packet-cauchy-crosscheck-certificate-260822.md",
+      "sha256": "b048c653e8d1dda7a4c620ab94b52458f5f0eec3ce678e676ba8112cc4f781d6"
+    },
+    "note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-finite-packet-cauchy-crosscheck-260822.md",
+      "sha256": "d58f833623f7e87b8a8ca3d34731eab75a22336064ebb41d74e037b21b37d62c"
+    }
+  },
+  "hostile_mutations": [
+    "change the source norm",
+    "change the control norm",
+    "change the packet pairing",
+    "change the exact Cauchy defect",
+    "replace the contraction by a failing assertion",
+    "promote the finite packet inequality to OVERLAP_src closure",
+    "promote the finite packet inequality to an A13 gate closure",
+    "insert a Lean sorry, admit, axiom, or unsafe escape"
+  ],
+  "boundary": {
+    "a13_gate_closed": false,
+    "overlap_src_closed": false,
+    "text": "R-185 proves only a finite rational packet Cauchy--Schwarz inequality and a three-packet fixture. It does not identify the production temporal map, prove arbitrary partition or revisit uniformity, prove the complete same-root packet, close OVERLAP_src or Nelson, construct an interacting measure, or close Sector-A, Pre-A, or any limit."
+  },
+  "formal_integration": {
+    "expected_counts": {
+      "claims": 49,
+      "results": 185,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 900,
+      "events": 681,
+      "tasks": 57,
+      "catalog": 4411
+    },
+    "event_ordinal": 681,
+    "event_title": "R-185 finite packet Cauchy Lean cross-check",
+    "event_id": "20260822-r-185-finite-packet-cauchy-lean-cross-check-202",
+    "event_claim_ids": [
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "EXP-000900",
+      "R-185"
+    ],
+    "event_keywords": [
+      "EXP-000900",
+      "Lean",
+      "R-185",
+      "cauchy-schwarz",
+      "finite-packet",
+      "no-overlap-closure",
+      "route-split",
+      "temporal-factorisation"
+    ],
+    "event_notes": [
+      "strategy/pre-a13-finite-packet-cauchy-crosscheck-manifest.json",
+      "strategy/pre-a13-finite-packet-cauchy-crosscheck-certificate-260822.md",
+      "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-finite-packet-cauchy-crosscheck-260822.md",
+      "RESULTS-LEDGER.md",
+      "ROADMAP.md",
+      "strategy/INDEX.md"
+    ],
+    "event_scripts": [
+      "verification/scripts/lean_a13_finite_packet_cauchy_crosscheck.py",
+      "codes/foundations/lean_a13_finite_packet_cauchy_crosscheck_independent.py",
+      "codes/foundations/lean_a13_finite_packet_cauchy_crosscheck_verify.py"
+    ],
+    "event_raw_tokens": [
+      "EXP-000900",
+      "R-185",
+      "finite packet Cauchy",
+      "Lean",
+      "OVERLAP_src remain open",
+      "No R-185 PDF"
+    ],
+    "primary_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r185-finite-packet-cauchy-crosscheck/primary.json",
+    "independent_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r185-finite-packet-cauchy-crosscheck/independent.json",
+    "integrated_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r185-finite-packet-cauchy-crosscheck/integrated.json",
+    "no_new_negative_ids": [],
+    "no_pdf": true
+  },
+  "no_overclaim": "This T0 claim-nonbearing package kernel-checks only the finite packet Cauchy--Schwarz inequality and its registered fixture. It does not prove the R-081 production temporal factorisation, arbitrary progressive/revisit uniformity, OVERLAP_src, Nelson, an interacting measure, Sector-A, Pre-A, or a tier or gate closure."
+}

@@ -29,6 +29,7 @@ policy in `governance/development-history.md`.
 | [R-179](#r-179) | Future-variance and forest owner-half coefficient ledger | R-179 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000894. It rechecks the R-125/R-136 coefficient `P=F/2-V/4`, the replica form `2P=F-V/2`, and the exact constant-translation omission defect. The analytic forest, production source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-183](#r-183) | Diagonal reserve margin for the feedback-pulled cross-Hessian | R-183 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000898. It proves the exact reserve condition `d1-a>0` and `d2-a>=a^2/(d1-a)`, the isotropic threshold `d>=2a`, and the registered `a=8` subthreshold fixture. The actual heat/forest/low/source/sextic owner, T-050, A13, Sector-A and Pre-A remain open |
 | [R-184](#r-184) | Two-block Douglas identity Lean cross-check | R-184 v1.0 is a T0 claim-nonbearing kernel cross-check under EXP-000899. It proves the exact finite identity `||s||^2||h||^2-<s,h>^2=(s1*h2-s2*h1)^2` and the associated two-block contraction used by the R-081 temporal overlap reduction. The production temporal factorisation, arbitrary progressive/revisit uniformity, `OVERLAP_src`, Nelson, Sector-A and Pre-A remain open |
+| [R-185](#r-185) | Finite packet Cauchy Lean cross-check | R-185 v1.0 is a T0 claim-nonbearing kernel cross-check under EXP-000900. It proves the general finite rational packet Cauchy--Schwarz bound and a three-packet defect fixture used after R-081 temporal factorisation. The production map, partition/revisit uniformity, `OVERLAP_src`, Nelson, Sector-A and Pre-A remain open |
 | [R-182](#r-182) | Feedback-pulled cross-Hessian margin Lean cross-check | R-182 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000897. It combines the active R-178 cross coefficient with the R-181 feedback map and proves the exact pulled Hessian `[-2,4;4,-8]` with eigenvalues -10 and 0. The diagonal production owner, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-181](#r-181) | Finite two-root feedback mixed-Gram Lean cross-check | R-181 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000896. It binds the R-177 beta=1/2 root-2 feedback map, exact Gram `[[5/4,1/2],[1/2,1]]`, and positive envelope defect. The production spatial mixed Gram, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-180](#r-180) | Lean scalar triangular majorant cross-check | R-180 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000895. It rechecks the finite geometric majorant algebra, abstract C=5 positivity, the rational fixture, and the registered exponent margins 7/60 and 1/12. The production mixed-Gram envelope, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
@@ -341,6 +342,31 @@ A13, Nelson, a measure, physical-empty comparison, removal, continuum limits,
 Sector-A or Pre-A. No tier change, gate closure, new negative or PDF follows.
 
 **Proven in:** [R-179 certificate](strategy/pre-a-a13-future-variance-forest-owner-half-ledger-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R179.lean), [primary script](verification/scripts/lean_a13_future_variance_forest_owner_half_ledger.py), [independent script](codes/foundations/lean_a13_future_variance_forest_owner_half_ledger_independent.py), [integrated verifier](codes/foundations/lean_a13_future_variance_forest_owner_half_ledger_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-future-variance-forest-owner-half-ledger-260821.md), and the saved run artefacts. No R-179 PDF is issued.
+
+<a id="r-185"></a>
+### R-185 -- Finite packet Cauchy Lean cross-check
+
+**Result ID.** `R-185` is a T0, claim-nonbearing finite-packet kernel
+cross-check under `EXP-000900`.
+
+**Statement.** For every finite set `s` and rational functions `f,g`, the
+Lean theorem `finite_packet_cauchy_bound` proves
+`(sum f_i*g_i)^2 <= (sum f_i^2)*(sum g_i^2)`.  The registered three-packet
+fixture `(2,-1,3)` and `(4,5,-2)` has source norm `14`, control norm `45`,
+pairing `-3`, and exact defect `621`.
+
+**Verification.** The pinned Lean kernel, primary arithmetic lane, and
+stdlib-only independent lane agree.  The integrated verifier checks source
+and dependency hashes, theorem markers, eight hostile mutations, event
+linkage, generated counts, and stored-versus-fresh results.
+
+**Boundary.** This is the finite algebraic input after temporal factorisation.
+It does not identify the production temporal map, establish partition/cutoff/
+revisit uniformity, prove the complete same-root packet, close `OVERLAP_src` or
+Nelson, construct an interacting measure, or close Sector-A, Pre-A, or any
+limit.  No gate, tier, or negative-result status changes.
+
+**Proven in:** [R-185 certificate](strategy/pre-a13-finite-packet-cauchy-crosscheck-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R185.lean), [primary script](verification/scripts/lean_a13_finite_packet_cauchy_crosscheck.py), [independent script](codes/foundations/lean_a13_finite_packet_cauchy_crosscheck_independent.py), [integrated verifier](codes/foundations/lean_a13_finite_packet_cauchy_crosscheck_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-finite-packet-cauchy-crosscheck-260822.md), and the saved run artefacts. No R-185 PDF is issued.
 
 <a id="r-184"></a>
 ### R-184 -- Two-block Douglas identity Lean cross-check

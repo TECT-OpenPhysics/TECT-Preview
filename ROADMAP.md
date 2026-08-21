@@ -1611,6 +1611,12 @@ For rational source and control coordinates it proves the exact wedge-square
 gap and the associated contraction.  This is not the production temporal
 factorisation or arbitrary progressive/revisit estimate: `OVERLAP_src`, Nelson,
 Sector-A, Pre-A and all limit routes remain open. No R-184 PDF is issued.
+EXP-000900 / R-185 is a T0, claim-nonbearing Lean checkpoint for the general
+finite packet Cauchy--Schwarz inequality used after R-081 temporal factorisation.
+The registered three-packet fixture has norms `14` and `45`, pairing `-3`, and
+defect `621`.  This is only finite algebra: the production temporal map,
+partition/cutoff/revisit uniformity, complete same-root packet, `OVERLAP_src`,
+Nelson, Sector-A, Pre-A and all limit routes remain open. No R-185 PDF is issued.
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7
