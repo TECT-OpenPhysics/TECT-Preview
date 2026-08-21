@@ -2,9 +2,19 @@
 
 This is the repository-pinned Lean 4/Mathlib lane for important exact results.
 The entry points currently include `Tect/R171.lean`, which kernel-checks the
-rational Class-II bracket identity and positivity used by R-171, and
+rational Class-II bracket identity and positivity used by R-171,
 `Tect/R057.lean`, which kernel-checks the ordered-field arithmetic consequence
-of the R-057 sharp-cube budget lower bound.
+of the R-057 sharp-cube budget lower bound, `Tect/R058.lean`, which checks the
+exact-B budget comparison used by R-058, and `Tect/R166.lean`, which checks the
+exact rational radial-Gram consequences used by R-166.
+
+For every important exact result, this lane is now the repository policy:
+ship a small kernel-checked Lean source, pin and hash-check the authoritative
+inputs, reject `sorry`, `admit`, `axiom`, and `unsafe`, run a non-importing
+independent verifier, and store a JSON result with the theorem boundary. The
+Lean check is a cross-verification of the encoded exact consequence; it is not
+allowed to silently import or replace the analytic operator, Fourier,
+probability, functional, or limit theorem that supplied its hypotheses.
 
 From this directory, after Lean/elan is installed:
 
