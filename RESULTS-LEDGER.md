@@ -24,6 +24,7 @@ policy in `governance/development-history.md`.
 |---|---|---|
 | [R-173](#r-173) | R-163 deterministic dyadic-forest Lean margin core | R-173 v1.0 is a scoped T0 claim-nonbearing kernel cross-check under EXP-000888. Lean, a Fraction-only independent lane, and an integrated hash/mutation lane recheck the exact rational margins 13/100>1/10, -1/110, -10/11, 3/20<27/100, the recursive guard, and the third-derivative fixture. It does not prove the analytic forest estimates or close A13, T-050, Sector-A or Pre-A |
 | [R-174](#r-174) | Exact two-root production-cylinder cross-synthesis boundary | R-174 v1.0 is a scoped T0 claim-nonbearing interface result under EXP-000889. The hash-pinned A1 `k,2k` chart has ordered cross blocks that are nonzero pointwise even though one-period sine/cosine averages vanish; Lean and a Fraction-only lane recheck the exact algebra. The complete square-root/heat/root/forest/low/returned-mean/source/sextic owner remains open, as do T-050, A13, Sector-A and Pre-A |
+| [R-176](#r-176) | Actual A1 two-root principal Cholesky covariance witnesses | R-176 v1.0 is a T0 claim-nonbearing Lean cross-check under EXP-000891. From the hash-pinned A1 symbol it reconstructs positive pivot chains at `k` and `2k`, builds inverse-transpose principal factors `U` with `C=U U^T`, and duplicates them into six-real covariance roots. Heat/root incidence, the complete owner, T-050, A13, Sector-A and Pre-A remain open |
 | [R-175](#r-175) | Canonical duplicated covariance square-root basis interface | R-175 v1.0 is a T0 claim-nonbearing exact interface under EXP-000890. A supplied `L L^T=C` yields `G G^T=Gamma` for `G=diag(L,L)` and preserves the six-real complex structure; actual A1 square-root existence/selection and the complete owner remain open |
 | [R-172](#r-172) | A1 Class-II owner mismatch Lean cross-check | R-172 v1.0 is a scoped T0 claim-nonbearing exact coefficient audit under EXP-000887. It derives cKK beta_X^2=3/320 and cJK alpha_X beta_X=3/400 with common positive mass denominator, so the declared and historical residual Class-II owners are not interchangeable. This does not close the full A1 variation, A13, Sector-A or Pre-A |
 | [R-171](#r-171) | Actual A7 plane-wave endpoint secant sign witness | R-171 v1.0 is a scoped T4 analytic/exact/executed endpoint component-energy result under EXP-000878. For the hash-pinned A1/A7 L=16 model, one real dual-lattice plane wave has strictly positive deterministic Class-II energy while zero has energy zero, so the endpoint secant to zero is strictly negative. This is not a full A1/Hartree/physical-vacuum result; A13, T-050, Sector-A and Pre-A remain open |
@@ -249,6 +250,35 @@ reporting `LEAN R-171 PASS 18/18`.
 
 **Tier.** T4 scoped analytic/exact/executed result; no claim tier or lifecycle change.
 <a id="r-175"></a>
+### R-176 -- Actual A1 two-root principal Cholesky covariance witnesses
+
+**Result ID.** `R-176` is a T0, claim-nonbearing Lean cross-check under
+`EXP-000891`.
+
+**Exact result.** Reconstruct the A1 family-lock mass `M` from the registered
+family masses, lock projector and `z0`. For `A(a)=a I+M`, the two registered
+roots `k=(pi/8,0,0)` and `2k=(pi/4,0,0)` have positive leading Cholesky
+pivots. The lower factor `L` therefore gives `A=L L^T`; its inverse-transpose
+`U=L^(-T)` is an actual finite witness for `C=A^(-1)=U U^T`. Duplication gives
+the six-real root `G=diag(U,U)` for `Gamma=diag(C,C)`.
+
+**Verification.** The pinned Lean kernel proves the symbolic 3 by 3 lower-
+triangular Gram identity. The primary SymPy lane derives both A1 roots and
+checks the covariance and duplicated-root residuals; the independent lane
+rebuilds the numerical matrices with only the Python standard library and
+checks a rational Gram fixture. The integrated lane pins R-150, R-174, R-175,
+the A1/status authorities, hashes, AST/import independence and hostile
+mutations.
+
+**Boundary.** This finite instantiation does not select a global measurable
+root field or freeze heat/root incidence, raw/past/future covariance,
+complement, historical-low, forest, returned mean, source/sextic one-use, or
+the complete scalar owner. T-050, A13, Nelson, a measure, phase/PDE,
+physical-empty, removal, continuum, Sector-A and Pre-A remain open. No tier
+change, gate closure, new negative or PDF follows.
+
+**Proven in:** [R-176 certificate](strategy/pre-a-a13-a1-two-root-cholesky-covariance-witness-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R176.lean), [primary script](verification/scripts/lean_a13_a1_two_root_cholesky_covariance_witness.py), [independent script](codes/foundations/lean_a13_a1_two_root_cholesky_covariance_witness_independent.py), [integrated verifier](codes/foundations/lean_a13_a1_two_root_cholesky_covariance_witness_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-a1-two-root-cholesky-covariance-witness-260821.md), and the saved run artefacts. No R-176 PDF is issued.
+
 ### R-175 -- Canonical duplicated covariance square-root basis interface
 
 **Result ID.** `R-175` is a T0, claim-nonbearing exact interface result under

@@ -1,0 +1,137 @@
+{
+  "schema": "tect/lean-kernel-crosscheck/1.0",
+  "audit_id": "A13-A1-TWO-ROOT-CHOLESKY-COVARIANCE-WITNESS",
+  "result_id": "R-176",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000891",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Actual A1 two-root principal Cholesky covariance witnesses",
+  "purpose": "Instantiate the registered A1 k and 2k covariance blocks with explicit inverse-transpose principal Cholesky witnesses and cross-check the exact Gram template in Lean without claiming the complete A13 owner.",
+  "inputs": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r150_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_production_antipodal_last_insertion_zero_cross_boundary_manifest.json",
+      "sha256": "ac8e55e4090dc2b819c6700b97f4dc2508f65f33d261134c1b4aa9ff6f458a43"
+    },
+    "r174_manifest": {
+      "path": "strategy/pre-a-a13-two-root-production-cylinder-cross-synthesis-manifest.json",
+      "sha256": "f0aff366385b3857407f6d2340c4bdf96860359a679d1e5760f40b691a1ae043"
+    },
+    "r175_manifest": {
+      "path": "strategy/pre-a-a13-duplicated-covariance-square-root-basis-manifest.json",
+      "sha256": "0a9319ad329b5b397bb2752717065a1e97d52f54bd6031de010c02a3abdc4a8c"
+    },
+    "a13_status": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+      "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "dimension": 3,
+    "torus_length": "16",
+    "volume": "4096",
+    "root_multipliers": [1, 2],
+    "wave_formula": "2*pi/L",
+    "kinetic_formula": "r+Z*(m*pi/L)^2+Y*(m*pi/L)^4",
+    "mass_oracle": [
+      ["1/10", "-1/20", "-1/20"],
+      ["-1/20", "13/100", "-1/20"],
+      ["-1/20", "-1/20", "17/100"]
+    ],
+    "factor_method": "A=L L^T, U=L^(-T), C=A^(-1)=U U^T",
+    "primary_residual_tolerance": "1e-55",
+    "independent_residual_tolerance": "2e-13"
+  },
+  "theorem_markers": [
+    "lower3_gram",
+    "lower3_gram_entrywise"
+  ],
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R176.lean",
+      "sha256": "84e9c0c31c5c96d394b1e1b9e50687320f80386af2415e47d17b967e2d5d4c61"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_a13_a1_two_root_cholesky_covariance_witness.py",
+      "sha256": "88163ad7752a8ceca583996b02de5b865f5f4a033bbc2c8be265cdbce3965d7e"
+    },
+    "independent": {
+      "path": "codes/foundations/lean_a13_a1_two_root_cholesky_covariance_witness_independent.py",
+      "sha256": "dd1464c2b8c65114f8051970db6e6ca81f6ff3316d290bdfaed35cfa688299e8"
+    },
+    "verifier": {
+      "path": "codes/foundations/lean_a13_a1_two_root_cholesky_covariance_witness_verify.py",
+      "sha256": "ecff12931aaacb2de4df0dcd687c6aaf25ccf0e58e858d17258af1b4eccafb7c"
+    },
+    "certificate": {
+      "path": "strategy/pre-a-a13-a1-two-root-cholesky-covariance-witness-certificate-260821.md",
+      "sha256": "05b64642605928dd3f90b4d27b1552cb02f5c1e2d544917a52440823076367c0"
+    },
+    "note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-a1-two-root-cholesky-covariance-witness-260821.md",
+      "sha256": "2603b36d0b559b50aea17e754c459a4fcbc8d26198cb4c9a0cdce9d662a590be"
+    }
+  },
+  "formal_integration": {
+    "event_id": "20260821-r-176-a1-two-root-cholesky-covariance-witnesses",
+    "event_ordinal": 671,
+    "event_claim_ids": [
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "EXP-000891",
+      "R-176"
+    ],
+    "event_raw_tokens": [
+      "EXP-000891",
+      "R-176",
+      "A1 two-root Cholesky",
+      "actual covariance roots",
+      "Lean",
+      "no R-176 PDF"
+    ],
+    "expected_counts": {
+      "claims": 49,
+      "results": 176,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 891,
+      "events": 671,
+      "tasks": 57,
+      "catalog": 4321
+    },
+    "primary_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r176-a1-two-root-cholesky-covariance-witness/primary.json",
+    "independent_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r176-a1-two-root-cholesky-covariance-witness/independent.json",
+    "integrated_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r176-a1-two-root-cholesky-covariance-witness/integrated.json",
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [],
+    "no_pdf": true
+  },
+  "hostile_mutations": [
+    "promote the finite witnesses to a canonical A1 existence theorem",
+    "delete positivity of either actual Cholesky pivot chain",
+    "replace an actual A1 root by the supplied R-175 test fixture",
+    "replace an authority hash",
+    "mark A13 or Sector-A closed",
+    "delete the inverse-transpose covariance identity",
+    "change the registered 2k root without recomputation",
+    "insert a Lean sorry or axiom token"
+  ],
+  "boundary": "R-176 reconstructs the exact A1 family-lock mass and the positive pivot chains at k and 2k, then supplies the inverse-transpose principal Cholesky factors U with C=U U^T and duplicated six-real roots. Lean proves the symbolic lower-triangular Gram identity; the executable lanes evaluate the registered pi-dependent roots and residuals. This does not prove a canonical global square-root selection, heat/root incidence, complement, historical-low, forest, returned mean, source/sextic one-use, the complete scalar owner, T-050, A13, Nelson, an interacting measure, phase selection, PDE replacement, physical-empty comparison, removal, continuum limits, Sector-A or Pre-A closure. No gate closure, tier change, new negative or PDF follows.",
+  "next_action": "Use these actual k and 2k roots in the same R-174 cylinder, then freeze raw/past/future covariance and heat/root incidence before differentiating the complete scalar owner with every ordered cross block retained exactly once."
+}
