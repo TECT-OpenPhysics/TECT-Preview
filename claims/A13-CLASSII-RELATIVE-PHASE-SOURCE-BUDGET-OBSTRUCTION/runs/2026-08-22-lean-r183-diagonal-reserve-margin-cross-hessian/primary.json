@@ -1,0 +1,278 @@
+{
+  "assertion_count": 26,
+  "assertions": [
+    {
+      "actual": "A13-DIAGONAL-RESERVE-MARGIN-CROSS-HESSIAN",
+      "expected": "A13-DIAGONAL-RESERVE-MARGIN-CROSS-HESSIAN",
+      "name": "manifest identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "no new negatives",
+      "pass": true
+    },
+    {
+      "actual": "6171a278d5ea2a9b9702bcd57f8bddf0820c7d5e4a51449de55af2b65feb6f94",
+      "expected": "6171a278d5ea2a9b9702bcd57f8bddf0820c7d5e4a51449de55af2b65feb6f94",
+      "name": "input r182_manifest",
+      "pass": true
+    },
+    {
+      "actual": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd",
+      "expected": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd",
+      "name": "input a13_status",
+      "pass": true
+    },
+    {
+      "actual": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "expected": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "name": "input lean_toolchain",
+      "pass": true
+    },
+    {
+      "actual": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "expected": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "name": "input lakefile",
+      "pass": true
+    },
+    {
+      "actual": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "expected": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "name": "input lake_manifest",
+      "pass": true
+    },
+    {
+      "actual": {
+        "current": "3",
+        "field": "2",
+        "ordered": "5"
+      },
+      "expected": {
+        "current": 3,
+        "field": 2,
+        "ordered": 5
+      },
+      "name": "R-182 coefficient source",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1",
+        "2"
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "name": "R-182 active weights",
+      "pass": true
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "name": "R-182 feedback gain",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        "ACTIVE"
+      ],
+      "expected": [
+        false,
+        "ACTIVE"
+      ],
+      "name": "A13 remains open",
+      "pass": true
+    },
+    {
+      "actual": "8",
+      "expected": 8,
+      "name": "active reserve scale",
+      "pass": true
+    },
+    {
+      "actual": "16",
+      "expected": "16",
+      "name": "isotropic threshold",
+      "pass": true
+    },
+    {
+      "actual": [
+        [
+          "8",
+          "8"
+        ],
+        [
+          "8",
+          "8"
+        ]
+      ],
+      "expected": [
+        [
+          "8",
+          "8"
+        ],
+        [
+          "8",
+          "8"
+        ]
+      ],
+      "name": "threshold reserve matrix",
+      "pass": true
+    },
+    {
+      "actual": "8*(x + y)**2",
+      "expected": "8*(x + y)**2",
+      "name": "threshold quadratic",
+      "pass": true
+    },
+    {
+      "actual": "2*(3*x + 2*y)**2",
+      "expected": "8*(3*x/2 + y)**2",
+      "name": "threshold pulled quadratic",
+      "pass": true
+    },
+    {
+      "actual": "8",
+      "expected": "8",
+      "name": "asymmetric remainder",
+      "pass": true
+    },
+    {
+      "actual": "8*(x**2 + 2*x*y + 2*y**2)",
+      "expected": "8*y**2 + 8*(x + y)**2",
+      "name": "asymmetric completion",
+      "pass": true
+    },
+    {
+      "actual": "-2",
+      "expected": "-2",
+      "name": "below threshold",
+      "pass": true
+    },
+    {
+      "actual": "-2",
+      "expected": "-2",
+      "name": "pulled subthreshold fixture",
+      "pass": true
+    },
+    {
+      "actual": "8",
+      "expected": "8",
+      "name": "necessary-reserve witness",
+      "pass": true
+    },
+    {
+      "actual": [
+        [
+          "20",
+          "16"
+        ],
+        [
+          "16",
+          "16"
+        ]
+      ],
+      "expected": "derived pulled matrix",
+      "name": "asymmetric pulled matrix",
+      "pass": true
+    },
+    {
+      "actual": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+      "expected": "pinned toolchain",
+      "name": "lake available",
+      "pass": true
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "Lean compile",
+      "pass": true
+    },
+    {
+      "actual": [
+        "",
+        ""
+      ],
+      "expected": [
+        "",
+        ""
+      ],
+      "name": "Lean clean output",
+      "pass": true
+    }
+  ],
+  "audit_id": "A13-DIAGONAL-RESERVE-MARGIN-CROSS-HESSIAN",
+  "boundary": "R-183 proves the exact finite 2x2 reserve criterion for the R-182 cross block under the registered beta=1/2 pullback: the original diagonal reserves p=d1-a and q=d2-a are sufficient when p>0 and q>=a^2/p, and the witness x=-a/p,y=1 makes this condition necessary for nonnegativity. In the isotropic case the exact threshold is d>=2a; with a=8 it is d>=16, while d=15 has a negative relative-phase fixture. This is a conditional finite margin theorem only. It does not identify the heat, forest, complement, returned-low, source or sextic terms with d1,d2, prove their production lower bounds, close T-050/A13, close Sector-A, compare physical-empty states, or establish removal, continuum, Nelson or measure results. No gate closure, tier change, new negative or PDF follows.",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "derived": {
+    "a13_gate_closed": false,
+    "active_cross_scale": "8",
+    "asymmetric_pulled_matrix": [
+      [
+        "20",
+        "16"
+      ],
+      [
+        "16",
+        "16"
+      ]
+    ],
+    "asymmetric_quadratic": "8*(x**2 + 2*x*y + 2*y**2)",
+    "asymmetric_reserves": {
+      "d1": "16",
+      "d2": "24",
+      "p": "8",
+      "q": "16",
+      "remainder": "8"
+    },
+    "authority_hashes_ok": true,
+    "below_fixture": "-2",
+    "below_threshold": "15",
+    "boundary_present": true,
+    "feedback_gain": "1/2",
+    "isotropic_positive": true,
+    "isotropic_subthreshold_negative": true,
+    "lean_escape_tokens_absent": true,
+    "necessary_reserve_witness": "8",
+    "pulled_subthreshold_fixture": "-2",
+    "sector_a_closed": false,
+    "threshold": "16",
+    "threshold_matrix": [
+      [
+        "8",
+        "8"
+      ],
+      [
+        "8",
+        "8"
+      ]
+    ],
+    "threshold_pulled_matrix": [
+      [
+        "18",
+        "12"
+      ],
+      [
+        "12",
+        "8"
+      ]
+    ],
+    "threshold_pulled_quadratic": "2*(3*x + 2*y)**2",
+    "threshold_quadratic": "8*(x + y)**2"
+  },
+  "recorded_at": "2026-08-21T15:16:54.543987Z",
+  "result_id": "R-183",
+  "run_kind": "primary",
+  "schema": "tect/lean-kernel-crosscheck/1.0",
+  "verdict": "PASS"
+}

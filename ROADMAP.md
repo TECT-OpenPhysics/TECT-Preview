@@ -1596,6 +1596,15 @@ with the R-181 feedback matrix, proving `H=[[-8,8],[8,-8]]`,
 This is a necessary margin diagnostic only: heat, forest, low, source, sextic,
 T-050, A13, Sector-A, physical-empty, Pre-A and limit routes remain open.
 No R-182 PDF is issued.
+EXP-000898 / R-183 is a T0, claim-nonbearing Lean checkpoint for the
+diagonal reserve required by the R-182 negative cross block. For cross scale
+`a`, the exact finite acceptance condition is `d1-a>0` and
+`d2-a>=a^2/(d1-a)`; isotropic reserves require `d>=2a`, so the registered
+`a=8` threshold is 16 and `d=15` retains a negative relative-phase fixture.
+This is only a conditional reserve-budget test: actual heat, forest,
+complement, returned-low, source and sextic terms are not yet mapped to the
+reserve variables, and T-050, A13, Sector-A, physical-empty, Pre-A and limit
+routes remain open. No R-183 PDF is issued.
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7

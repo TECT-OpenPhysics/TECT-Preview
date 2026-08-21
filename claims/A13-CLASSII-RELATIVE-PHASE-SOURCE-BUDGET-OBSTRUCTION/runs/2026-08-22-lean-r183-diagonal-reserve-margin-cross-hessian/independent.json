@@ -1,0 +1,72 @@
+{
+  "assertion_count": 19,
+  "assertions": [
+    {
+      "name": "independent exact reserve-margin arithmetic",
+      "pass": true
+    }
+  ],
+  "audit_id": "A13-DIAGONAL-RESERVE-MARGIN-CROSS-HESSIAN",
+  "boundary": "R-183 proves the exact finite 2x2 reserve criterion for the R-182 cross block under the registered beta=1/2 pullback: the original diagonal reserves p=d1-a and q=d2-a are sufficient when p>0 and q>=a^2/p, and the witness x=-a/p,y=1 makes this condition necessary for nonnegativity. In the isotropic case the exact threshold is d>=2a; with a=8 it is d>=16, while d=15 has a negative relative-phase fixture. This is a conditional finite margin theorem only. It does not identify the heat, forest, complement, returned-low, source or sextic terms with d1,d2, prove their production lower bounds, close T-050/A13, close Sector-A, compare physical-empty states, or establish removal, continuum, Nelson or measure results. No gate closure, tier change, new negative or PDF follows.",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "derived": {
+    "a13_gate_closed": false,
+    "active_cross_scale": "8",
+    "asymmetric_pulled_matrix": [
+      [
+        "20",
+        "16"
+      ],
+      [
+        "16",
+        "16"
+      ]
+    ],
+    "asymmetric_quadratic": "8*(x**2 + 2*x*y + 2*y**2)",
+    "asymmetric_reserves": {
+      "d1": "16",
+      "d2": "24",
+      "p": "8",
+      "q": "16",
+      "remainder": "8"
+    },
+    "authority_hashes_ok": true,
+    "below_fixture": "-2",
+    "below_threshold": "15",
+    "boundary_present": true,
+    "feedback_gain": "1/2",
+    "isotropic_positive": true,
+    "isotropic_subthreshold_negative": true,
+    "lean_escape_tokens_absent": true,
+    "necessary_reserve_witness": "8",
+    "pulled_subthreshold_fixture": "-2",
+    "sector_a_closed": false,
+    "threshold": "16",
+    "threshold_matrix": [
+      [
+        "8",
+        "8"
+      ],
+      [
+        "8",
+        "8"
+      ]
+    ],
+    "threshold_pulled_matrix": [
+      [
+        "18",
+        "12"
+      ],
+      [
+        "12",
+        "8"
+      ]
+    ],
+    "threshold_pulled_quadratic": "2*(3*x + 2*y)**2",
+    "threshold_quadratic": "8*(x + y)**2"
+  },
+  "result_id": "R-183",
+  "run_kind": "independent",
+  "schema": "tect/lean-kernel-crosscheck/1.0",
+  "verdict": "PASS"
+}

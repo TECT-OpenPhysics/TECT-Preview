@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**182 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**183 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-183`](../RESULTS-LEDGER.md#r-183) | Diagonal reserve margin for the feedback-pulled cross-Hessian | T0 |
 | [`R-182`](../RESULTS-LEDGER.md#r-182) | Feedback-pulled cross-Hessian margin Lean cross-check | T0 |
 | [`R-181`](../RESULTS-LEDGER.md#r-181) | Finite two-root feedback mixed-Gram Lean cross-check | T0 |
 | [`R-180`](../RESULTS-LEDGER.md#r-180) | Lean scalar triangular majorant cross-check | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-161`](../RESULTS-LEDGER.md#r-161) | Summable covariance jets and a growing affine-root-union uniform neighbourhood | T4 |
 | [`R-160`](../RESULTS-LEDGER.md#r-160) | Weighted-Schur growing affine root-union origin gaps | T4 |
 | [`R-159`](../RESULTS-LEDGER.md#r-159) | Pure-dyadic regulator-uniform local neighbourhood gap and exact normal-ordering boundary | T4 |
-| [`R-158`](../RESULTS-LEDGER.md#r-158) | Exact charge-ensemble first-order shell transition and neutral-reference boundary | T6 |
 
 Search without loading the full ledger:
 

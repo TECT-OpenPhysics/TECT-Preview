@@ -27,6 +27,7 @@ policy in `governance/development-history.md`.
 | [R-177](#r-177) | A1 two-root common-heat and root-incidence ledger | R-177 v1.0 is a T0 claim-nonbearing Lean ledger under EXP-000892. It binds the actual R-176 `k,2k` covariance roots to the finite order common heat -> root 1 -> root 2 -> future residual, proves the two-replica variance and feedback identities, and rejects mean-only or independently replicated heat substitutions. The complete owner, source/sextic windows, T-050, A13, Sector-A and Pre-A remain open |
 | [R-178](#r-178) | Complete two-root cross-owner phase differentiation | R-178 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000893. It retains the field-field, current-current and ordered field-current R-174 blocks, differentiates both root directions exactly, and proves their sum is zero by global phase invariance; the ordered block is active in the registered fixture. The production sign, heat/forest/complement/returned-low/source/sextic owner, T-050, A13, Sector-A and Pre-A remain open |
 | [R-179](#r-179) | Future-variance and forest owner-half coefficient ledger | R-179 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000894. It rechecks the R-125/R-136 coefficient `P=F/2-V/4`, the replica form `2P=F-V/2`, and the exact constant-translation omission defect. The analytic forest, production source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
+| [R-183](#r-183) | Diagonal reserve margin for the feedback-pulled cross-Hessian | R-183 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000898. It proves the exact reserve condition `d1-a>0` and `d2-a>=a^2/(d1-a)`, the isotropic threshold `d>=2a`, and the registered `a=8` subthreshold fixture. The actual heat/forest/low/source/sextic owner, T-050, A13, Sector-A and Pre-A remain open |
 | [R-182](#r-182) | Feedback-pulled cross-Hessian margin Lean cross-check | R-182 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000897. It combines the active R-178 cross coefficient with the R-181 feedback map and proves the exact pulled Hessian `[-2,4;4,-8]` with eigenvalues -10 and 0. The diagonal production owner, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-181](#r-181) | Finite two-root feedback mixed-Gram Lean cross-check | R-181 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000896. It binds the R-177 beta=1/2 root-2 feedback map, exact Gram `[[5/4,1/2],[1/2,1]]`, and positive envelope defect. The production spatial mixed Gram, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-180](#r-180) | Lean scalar triangular majorant cross-check | R-180 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000895. It rechecks the finite geometric majorant algebra, abstract C=5 positivity, the rational fixture, and the registered exponent margins 7/60 and 1/12. The production mixed-Gram envelope, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
@@ -339,6 +340,30 @@ A13, Nelson, a measure, physical-empty comparison, removal, continuum limits,
 Sector-A or Pre-A. No tier change, gate closure, new negative or PDF follows.
 
 **Proven in:** [R-179 certificate](strategy/pre-a-a13-future-variance-forest-owner-half-ledger-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R179.lean), [primary script](verification/scripts/lean_a13_future_variance_forest_owner_half_ledger.py), [independent script](codes/foundations/lean_a13_future_variance_forest_owner_half_ledger_independent.py), [integrated verifier](codes/foundations/lean_a13_future_variance_forest_owner_half_ledger_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-future-variance-forest-owner-half-ledger-260821.md), and the saved run artefacts. No R-179 PDF is issued.
+
+<a id="r-183"></a>
+### R-183 -- Diagonal reserve margin for the feedback-pulled cross-Hessian
+
+**Result ID.** `R-183` is a T0, claim-nonbearing Lean checkpoint under
+EXP-000898.
+
+**Exact result.** For cross magnitude `a` and diagonal reserves `d1,d2`, set
+`p=d1-a` and `q=d2-a`. The beta=1/2 feedback pullback is nonnegative whenever
+`p>0` and `q>=a^2/p`, by the exact square completion
+`p*(x+(a/p)y)^2+(q-a^2/p)y^2`. The witness `(-a/p,1)` evaluates to
+`q-a^2/p`, so the same inequality is necessary for a nonnegative original
+form when `p>0`. In the isotropic case the exact threshold is `d>=2a`.
+For the registered R-182 scale `a=8`, the threshold is `d>=16`; `d=15` has
+the relative-phase value `-2` and remains negative after the pullback.
+
+**Scope.** Lean proves the rational identities, the primary SymPy lane derives
+the values from R-182, and an independent stdlib Fraction lane agrees. This
+is a finite reserve-budget criterion only. It does not identify actual
+heat/forest/complement/returned-low/source/sextic terms with the abstract
+reserves, prove a production lower bound, close T-050/A13, or advance
+Sector-A, physical-empty, Nelson, measure, removal or continuum claims.
+
+**Proven in:** [R-183 certificate](strategy/pre-a13-diagonal-reserve-margin-cross-hessian-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R183.lean), [primary script](verification/scripts/lean_a13_diagonal_reserve_margin_cross_hessian.py), [independent script](codes/foundations/lean_a13_diagonal_reserve_margin_cross_hessian_independent.py), [integrated verifier](codes/foundations/lean_a13_diagonal_reserve_margin_cross_hessian_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-diagonal-reserve-margin-cross-hessian-260822.md), and the saved run artefacts. No R-183 PDF is issued.
 
 <a id="r-182"></a>
 ### R-182 -- Feedback-pulled cross-Hessian margin Lean cross-check

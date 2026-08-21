@@ -1,0 +1,154 @@
+{
+  "schema": "tect/lean-a13-diagonal-reserve-margin-cross-hessian/1.0",
+  "audit_id": "A13-DIAGONAL-RESERVE-MARGIN-CROSS-HESSIAN",
+  "result_id": "R-183",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000898",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Lean cross-check of the diagonal reserve required by the pulled cross-Hessian",
+  "purpose": "Convert the R-182 negative cross block into an exact necessary and sufficient diagonal-reserve margin for the beta=1/2 feedback chart. This is a conditional budget criterion, not the missing production owner estimate.",
+  "inputs": {
+    "r182_manifest": {
+      "path": "strategy/pre-a13-feedback-pulled-cross-hessian-margin-manifest.json",
+      "sha256": "6171a278d5ea2a9b9702bcd57f8bddf0820c7d5e4a51449de55af2b65feb6f94"
+    },
+    "a13_status": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+      "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "feedback_gain_source": "R-182 registered beta=1/2",
+    "cross_scale_source": "R-182 active coefficient -(field+current*w1*w2)",
+    "cases": {
+      "below_threshold_delta": "1",
+      "asymmetric_extra": "8"
+    },
+    "expected": {
+      "active_cross_scale": "8",
+      "isotropic_threshold": "16",
+      "below_fixture": "-2",
+      "asymmetric_remainder": "8"
+    },
+    "fixture": {
+      "x": "1",
+      "original_y": "-1",
+      "pulled_y": "-3/2"
+    }
+  },
+  "theorem_markers": [
+    "pulled_reserve_matrix",
+    "reserve_completion",
+    "necessary_reserve_witness",
+    "isotropic_completion",
+    "isotropic_failure_below"
+  ],
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R183.lean",
+      "sha256": "f06edbdab5f8a51baf3a57a202e2b9aaa5936fbffc391cc9a296f36522de2b8e"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_a13_diagonal_reserve_margin_cross_hessian.py",
+      "sha256": "370f9aecb1a68eb482382e91e3dcbed5f2593db769354032631e240bc7d4d3aa"
+    },
+    "independent": {
+      "path": "codes/foundations/lean_a13_diagonal_reserve_margin_cross_hessian_independent.py",
+      "sha256": "bd045b95cf334d3a95159b56f207e76eca9a8fb67e2065c600b2847cf5ef47c9"
+    },
+    "verifier": {
+      "path": "codes/foundations/lean_a13_diagonal_reserve_margin_cross_hessian_verify.py",
+      "sha256": "41b5888bac8673d847d44f6e2a516ac85c539aeb8d0f4678896e7ef50eda2e7d"
+    },
+    "certificate": {
+      "path": "strategy/pre-a13-diagonal-reserve-margin-cross-hessian-certificate-260822.md",
+      "sha256": "a6cef916aa4f1ed2d2495953b21b3ea6ff4eac50ae4e7ec21de28c5e02cbc7fc"
+    },
+    "note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-diagonal-reserve-margin-cross-hessian-260822.md",
+      "sha256": "cad11bc830f1d3a1e195425446870ab28c967feb4f3da758e481566f28da270c"
+    }
+  },
+  "formal_integration": {
+    "event_id": "20260822-r-183-diagonal-reserve-margin-cross-hessian-thr",
+    "event_ordinal": 679,
+    "event_claim_ids": [
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "EXP-000898",
+      "R-183"
+    ],
+    "event_raw_tokens": [
+      "EXP-000898",
+      "R-183",
+      "reserve margin",
+      "Lean",
+      "No R-183 PDF"
+    ],
+    "event_keywords": [
+      "EXP-000898",
+      "Lean",
+      "R-183",
+      "cross-Hessian",
+      "necessary-bound",
+      "pulled",
+      "reserve-margin",
+      "route-split",
+      "threshold"
+    ],
+    "event_notes": [
+      "strategy/pre-a13-diagonal-reserve-margin-cross-hessian-manifest.json",
+      "strategy/pre-a13-diagonal-reserve-margin-cross-hessian-certificate-260822.md",
+      "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-diagonal-reserve-margin-cross-hessian-260822.md",
+      "RESULTS-LEDGER.md",
+      "ROADMAP.md",
+      "strategy/INDEX.md"
+    ],
+    "event_scripts": [
+      "verification/scripts/lean_a13_diagonal_reserve_margin_cross_hessian.py",
+      "codes/foundations/lean_a13_diagonal_reserve_margin_cross_hessian_independent.py",
+      "codes/foundations/lean_a13_diagonal_reserve_margin_cross_hessian_verify.py"
+    ],
+    "expected_counts": {
+      "claims": 49,
+      "results": 183,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 898,
+      "events": 679,
+      "tasks": 57,
+      "catalog": 4391
+    },
+    "primary_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r183-diagonal-reserve-margin-cross-hessian/primary.json",
+    "independent_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r183-diagonal-reserve-margin-cross-hessian/independent.json",
+    "integrated_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r183-diagonal-reserve-margin-cross-hessian/integrated.json",
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [],
+    "no_pdf": true
+  },
+  "hostile_mutations": [
+    "change the R-182 active cross scale",
+    "change the beta=1/2 feedback gain",
+    "lower the isotropic reserve threshold",
+    "alter the asymmetric completion remainder",
+    "erase the necessary-reserve witness",
+    "mark A13 closed",
+    "mark Sector-A closed",
+    "insert a Lean sorry or axiom token"
+  ],
+  "boundary": "R-183 proves the exact finite 2x2 reserve criterion for the R-182 cross block under the registered beta=1/2 pullback: the original diagonal reserves p=d1-a and q=d2-a are sufficient when p>0 and q>=a^2/p, and the witness x=-a/p,y=1 makes this condition necessary for nonnegativity. In the isotropic case the exact threshold is d>=2a; with a=8 it is d>=16, while d=15 has a negative relative-phase fixture. This is a conditional finite margin theorem only. It does not identify the heat, forest, complement, returned-low, source or sextic terms with d1,d2, prove their production lower bounds, close T-050/A13, close Sector-A, compare physical-empty states, or establish removal, continuum, Nelson or measure results. No gate closure, tier change, new negative or PDF follows.",
+  "next_action": "Map every actual heat, forest, complement, returned-low, source and sextic contribution into the two diagonal reserve variables and prove that the production lower bounds meet this exact threshold once, or record the resulting scoped margin failure."
+}
