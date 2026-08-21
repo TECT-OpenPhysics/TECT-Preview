@@ -1,0 +1,95 @@
+{
+  "schema": "tect/a13-a1-arbitrary-polarization-two-mode/1.0",
+  "audit_id": "A13-A1-ARBITRARY-POLARIZATION-TWO-MODE",
+  "result_id": "R-190",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000905",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "R-190 A1 arbitrary-polarization two-mode positivity Lean cross-check",
+  "purpose": "Extend the actual A1 F_ref two-mode production-cylinder diagnostic from the e3 slice to arbitrary complex internal polarization vectors, retaining the positive Class-II quadratic form and proving a uniform rational lower bound without promoting the finite slice to the complete A13 owner.",
+  "inputs": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a1_backend": {
+      "path": "codes/foundations/n001_variational_backend.py",
+      "sha256": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+    },
+    "a13_status": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+      "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "mode_indices": [1, 2],
+    "polarization": "arbitrary v1,v2 in C^3",
+    "field": "Psi(x)=v1 cos(2 pi x/16)+v2 cos(4 pi x/16)",
+    "measure": "normalized x-average on the side-16 one-dimensional torus",
+    "pi_coarse_interval": {"lower": "6283/2000", "upper": "22/7"},
+    "q_lower_target": "1/16",
+    "machin_terms": 32,
+    "backend_scope": "F_ref normalized by volume; eta_shell=0; actual family and lock matrices retained; Class-II generators and positive quadratic form retained",
+    "moment_symbols": {"A": "||v1||^2", "B": "||v2||^2", "C": "Re <v1,v2>", "s": "A+B"},
+    "moment_bounds": {"quartic_upper": "9/16", "sextic_lower": "1/8"},
+    "derived_coefficients": {
+      "quartic_A": "387/6400",
+      "sextic_C": "27/800",
+      "lower_q": "1/16",
+      "discriminant": "-195831/40960000",
+      "classii_ac_minus_b2_positive": true
+    }
+  },
+  "theorem_markers": [
+    "lowerPoly_factor",
+    "lowerPoly_positive",
+    "arbitrary_two_mode_nonnegative",
+    "arbitrary_two_mode_strict"
+  ],
+  "files": {
+    "lean_entrypoint": {"path": "verification/lean/Tect/R190.lean", "sha256": "ff727c64bceb67d99062c0a740fb507548e213012044fc6d2dea67e85f88d66f"},
+    "primary": {"path": "verification/scripts/lean_a13_a1_arbitrary_polarization_two_mode.py", "sha256": "1b126c886d4ccb0299ea199547b62cd6ab0932299aaff4df0e145728af7a29f2"},
+    "independent": {"path": "codes/foundations/lean_a13_a1_arbitrary_polarization_two_mode_independent.py", "sha256": "69efbbf7fec4d2932c51ed0e87c847254c25299d7dd640d8d8960ad378b2d104"},
+    "verifier": {"path": "codes/foundations/lean_a13_a1_arbitrary_polarization_two_mode_verify.py", "sha256": "77725fdbb467e87363dcd2c38cae3fcea829f04edac6d7e7016baf6c435ffea4"},
+    "certificate": {"path": "strategy/pre-a13-a1-arbitrary-polarization-two-mode-certificate-260822.md", "sha256": "4b01e02d78e4719a982ecdd349d0a8282aef664e28583e031541b084beedcd67"},
+    "note": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-a1-arbitrary-polarization-two-mode-260822.md", "sha256": "008a7364b96d5000ff5c403991959e5e6e5ad545de2b98d205acb2f36a3ad9ad"}
+  },
+  "hostile_mutations": [
+    "change the hash-pinned A1 r,Z,Y,family,lock or Class-II coefficient inputs",
+    "turn eta_shell on or import the declared F_decl nonlinear prefactors",
+    "weaken the Machin enclosure or replace the derived 1/16 quadratic target",
+    "drop the family/lock positive-semidefinite quadratic contribution",
+    "make the Class-II coefficient matrix indefinite or omit its cross-term condition",
+    "replace the exact vector moment bounds I4<=9s^2/16 or I6>=s^3/8",
+    "promote the finite arbitrary-polarization slice to the complete A13 owner or close its gates",
+    "insert a Lean sorry, admit, axiom or unsafe escape"
+  ],
+  "boundary": "R-190 proves only positivity of the hash-pinned A1 F_ref on the side-16 n=1,2 cylinder for arbitrary complex internal polarization vectors, using the positive actual Class-II quadratic form and exact vector moment bounds. It does not prove arbitrary-spectrum positivity, assemble the complete heat/root/forest/complement/returned-low/source/sextic owner, prove a controlled-shell one-use or progressive/revisit estimate, or close A13, T-050, Sector-A, Pre-A, physical-empty, continuum, or any other limit.",
+  "formal_integration": {
+    "event_id": "20260822-r-190-a1-arbitrary-polarization-two-mode-positi",
+    "event_ordinal": 686,
+    "event_claim_ids": ["A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE", "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION", "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION", "EXP-000905", "R-190"],
+    "event_keywords": ["A1-arbitrary-polarization", "A13-open", "EXP-000905", "Lean", "R-190", "two-mode", "uniform-positivity"],
+    "event_notes": ["strategy/pre-a13-a1-arbitrary-polarization-two-mode-manifest.json", "strategy/pre-a13-a1-arbitrary-polarization-two-mode-certificate-260822.md", "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-a1-arbitrary-polarization-two-mode-260822.md", "RESULTS-LEDGER.md", "ROADMAP.md", "strategy/INDEX.md"],
+    "event_scripts": ["verification/scripts/lean_a13_a1_arbitrary_polarization_two_mode.py", "codes/foundations/lean_a13_a1_arbitrary_polarization_two_mode_independent.py", "codes/foundations/lean_a13_a1_arbitrary_polarization_two_mode_verify.py"],
+    "event_raw_tokens": ["EXP-000905", "R-190", "A1 arbitrary-polarization", "two-mode", "Lean", "No R-190 PDF"],
+    "expected_counts": {"claims": 49, "results": 190, "gates": 206, "negatives": 372, "explorations": 905, "events": 686, "tasks": 57, "catalog": 4463},
+    "no_new_negative_ids": [],
+    "no_pdf": true
+  },
+  "no_overclaim": "This T0 claim-nonbearing package is a finite arbitrary-polarization A1 F_ref slice diagnostic with a Lean algebraic lower-bound theorem. It is not the complete A13 production owner and creates no gate closure, tier change, negative result, physical selection, continuum limit or PDF."
+}

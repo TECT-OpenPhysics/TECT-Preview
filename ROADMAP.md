@@ -1648,6 +1648,15 @@ This is not an arbitrary-polarization or active-Class-II estimate and does not
 assemble the complete adapted heat/forest/returned-low/source owner.  A13,
 T-050, controlled-shell one-use, progressive/revisit, Sector-A, Pre-A and all
 limit routes remain open. No R-189 PDF is issued.
+EXP-000905 / R-190 is a T0, claim-nonbearing Lean checkpoint for the actual A1
+`F_ref` on the side-16 n=1,2 cylinder with arbitrary complex internal
+polarizations. Exact vector-valued quartic moments, Jensen's sextic lower bound,
+the positive Class-II coefficient matrix, and the Machin-derived quadratic
+margin reduce the slice to a strictly positive rational cubic. This is a
+finite field-space extension of R-189, not the complete heat/forest/
+returned-low/source/sextic owner. A13, T-050, controlled-shell one-use,
+progressive/revisit, Sector-A, Pre-A and all limit routes remain open. No R-190
+PDF is issued.
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7
