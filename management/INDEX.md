@@ -30,7 +30,6 @@ Full task ledger: [TODO.md](../TODO.md). Detailed staged plan: [ROADMAP.md](../R
 | [`GAP-4`](../claims/GATES.md#gap-4) | F1-COSMO-DARK-SECTOR, F2-BARYOGENESIS, F3-INFLATION-CMB |
 | [`A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE`](../claims/GATES.md#a10-classii-stabilised-relative-log-laplace) | A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, A9-CLASSII-SMART-PATH-CANCELLATION |
 | [`A6-CLASSII-COUNTERTERM-CLOSURE`](../claims/GATES.md#a6-classii-counterterm-closure) | A6-CLASSII-K-COMPOSITE-DEFINITION, A6-CLASSII-UV-POWER-COUNTING |
-| [`A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND`](../claims/GATES.md#a11-classii-adapted-source-square-bound) | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION |
 | [`A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE`](../claims/GATES.md#a11-classii-true-increment-stabilised-log-laplace) | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION |
 | [`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`](../claims/GATES.md#a13-classii-controlled-shell-energy-one-use) | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION |
 | [`A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`](../claims/GATES.md#a13-classii-full-progressive-revisit-extension) | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION |
@@ -40,6 +39,7 @@ Full task ledger: [TODO.md](../TODO.md). Detailed staged plan: [ROADMAP.md](../R
 | [`CP-UNITARITY`](../claims/GATES.md#cp-unitarity) | D4-QUANTUM-CONSISTENCY |
 | [`ESTIMATOR-UPGRADE`](../claims/GATES.md#estimator-upgrade) | B3-RH-TESTED-STRUCTURE-RANKING |
 | [`H-SUPPRESSION-DISCHARGE`](../claims/GATES.md#h-suppression-discharge) | C1-LORENTZ-KIN |
+| [`PRED-G-FREEZE`](../claims/GATES.md#pred-g-freeze) | C5-NEWTON-G |
 
 ## Reader routes
 

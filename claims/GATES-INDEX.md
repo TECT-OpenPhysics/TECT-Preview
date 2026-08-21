@@ -5,7 +5,7 @@
 
 Authorities: `claims/GATES.md`, `claims/*/status.json`.
 
-**206 registered definitions** · **17 claim-card gate listings** · **11 live hypothesis listings**.
+**206 registered definitions** · **16 claim-card gate listings** · **11 live hypothesis listings**.
 The tables report claim-card fields exactly; they do not reinterpret registry status.
 Audit flags: 1 listed gate(s) lack an explicit Status field; 1 are still listed by cards although the registry status begins CLOSED.
 These source mismatches are preserved for follow-up rather than silently normalized.
@@ -13,8 +13,7 @@ These source mismatches are preserved for follow-up rather than silently normali
 | Gate | Claims | Current status summary |
 |---|---|---|
 | [`A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE`](GATES.md#a10-classii-stabilised-relative-log-laplace) | A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, A9-CLASSII-SMART-PATH-CANCELLATION | OPEN AS A HISTORICAL Q-RELATIVE BRANCH; SUPERSEDED ON THE ACTIVE TRUE-INCREMENT COMPOSITION (2026-07-21). A10 proves th… |
-| [`A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND`](GATES.md#a11-classii-adapted-source-square-bound) | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | OPEN (2026-07-21), ANALYTICALLY REDUCED BUT THE FIRST BUDGET ROUTE REFUTED BY A12. The true-increment determinant is `-… |
-| [`A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE`](GATES.md#a11-classii-true-increment-stabilised-log-laplace) | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | OPEN, BLOCKED IN PROOF ORDER BY `A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND` (2026-07-21). The historical A10 bound for `t… |
+| [`A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE`](GATES.md#a11-classii-true-increment-stabilised-log-laplace) | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | OPEN (2026-08-21), WITH THE COARSE SOURCE-SQUARE ANTECEDENT AVAILABLE BUT INSUFFICIENT FOR THE PRODUCTION BUDGET. The h… |
 | [`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`](GATES.md#a13-classii-controlled-shell-energy-one-use) | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | OPEN (reviewed 2026-07-28), SOLE CANONICAL OBJECTIVE AFTER THE ARCHITECTURE NOGOS. The translation-model reduction prov… |
 | [`A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`](GATES.md#a13-classii-full-progressive-revisit-extension) | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | CURRENT CHILD; REDUCED-NOT-CLOSED; R-104 FIXED-CHART ASSEMBLY, R-105 COMMON-ROOT REPRESENTATION AUDIT, R-106 GIBBS-ENDP… |
 | [`A6-CLASSII-COUNTERTERM-CLOSURE`](GATES.md#a6-classii-counterterm-closure) | A6-CLASSII-K-COMPOSITE-DEFINITION, A6-CLASSII-UV-POWER-COUNTING | OPEN, COMPOSITE SUBGATE CLOSED (2026-07-20). The bare Gaussian-reference growth and the current `K_A` are classified. T… |

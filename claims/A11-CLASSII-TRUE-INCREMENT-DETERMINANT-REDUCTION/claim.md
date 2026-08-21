@@ -109,7 +109,10 @@ and checks the proof PDF contract.
 
 1. The direct past-energy upper-form route is refuted and retired.
 2. The true-increment telescope and determinant are now closed.
-3. Prove `A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND`:
+3. Use the registered `R-056` source-square reduction. It proves the
+   literal cutoff-uniform inequality below, but its coefficient-blind
+   production-budget use is unavailable: `R-057` gives the sharp-cube lower
+   bound and `R-058` rejects the current standalone exact-B allocation.
 
    \[
    \sum_j\|G_j^*B(P_{\le j-1}\phi)D P_{\le j-1}\phi\|_2^2
@@ -119,7 +122,9 @@ and checks the proof PDF contract.
 4. Prove `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` for
    (	heta I_j+\mathcal C_j), not for the historical
    (	heta Q_j^{\rm fr}+\mathcal C_j).
-5. Recompute the explicit sextic budget and only then reassemble the A7
+5. Retain the exact-B output shell and determinant resolvent, or replace the
+   separated route by a joint source-potential/redesigned-increment estimate;
+   recompute the explicit sextic budget and only then reassemble the A7
    Nelson argument.
 
 ## Devil's-advocate self-test
@@ -133,9 +138,10 @@ and checks the proof PDF contract.
 3. **DISMISSED -- the determinant source has negative sign.**  Completing
    the square gives the positive term above; both executable routes verify
    it by deterministic quadrature.
-4. **UPHELD -- A10's individual (L^4) projector estimate closes the new
-   source sum.**  It does not.  A genuine cutoff-uniform (L^6)
-   vector-valued or multilinear sharp-cube theorem is still required.
+4. **UPHELD -- the literal coarse source-square bound closes the production
+   route.**  R-056 does prove the cutoff-uniform inequality, but R-057 shows
+   that its separated coefficient-blind constant misses the production
+   target, while R-058 defeats the current standalone exact-B allocation.
 5. **UPHELD -- rational (B(P_{\le j}\phi)) is band-limited.**  It is not.
    The positive floor removes a singularity but does not create polynomial
    Fourier support.
@@ -143,8 +149,9 @@ and checks the proof PDF contract.
    from the required variable by
    (	heta q_{B(x_j)}(Dx_j)), exactly the refuted past-energy term.
 7. **UPHELD as an overclaim -- this closes A7 or establishes T5/T6.**  It
-   closes only a scoped T4 structural reduction.  The two named analytic
-   gates remain open; no interacting measure or higher-tier closure follows.
+   closes only a scoped T4 structural reduction.  The true-increment
+   stabilised log-Laplace and production-compatible exact-B/joint routes
+   remain open; no interacting measure or higher-tier closure follows.
 
 ## Reproduction
 
@@ -163,8 +170,12 @@ A11-CLASSII-TRUE-INCREMENT-INTEGRATED-PASS
 
 ## Boundary
 
-This claim does not prove the adapted source-square estimate, the new
-stabilised relative log-Laplace estimate, a positive remaining production
-sextic budget, the A7 Nelson bound, an interacting full three-component Gibbs
-measure, regulator or floor removal, infinite volume, a phase transition,
-BCC existence or selection, T5, T6, or T7.
+`R-056` proves the literal adapted source-square estimate in its fixed-floor
+sharp-cube scope. This claim does not prove a production-compatible exact-B
+or resolvent-sharpened budget, the new stabilised relative log-Laplace
+estimate, a positive remaining production sextic budget, the A7 Nelson bound,
+an interacting full three-component Gibbs measure, regulator or floor removal,
+infinite volume, a phase transition, BCC existence or selection, T5, T6, or
+T7. `R-057` and `R-058` remain the registered negative boundaries for the
+separated and standalone allocations; the exact-B/joint successor remains
+open.

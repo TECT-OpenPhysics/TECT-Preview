@@ -3518,23 +3518,36 @@ sharp-cube geometry. It must use a genuine `L6` vector-valued maximal/square
 function or multilinear paraproduct theorem; individual `L4` projection
 stability and polynomial Fourier-support shortcuts are insufficient.
 
-**Status:** OPEN (2026-07-21), ANALYTICALLY REDUCED BUT THE FIRST BUDGET ROUTE
-REFUTED BY A12. The true-increment
+**Status:** CLOSED FOR THE LITERAL CUTOFF-UNIFORM SOURCE-SQUARE INEQUALITY
+(2026-08-21; R-056), WITH THE PRODUCTION-COMPATIBLE BUDGET ROUTE CLOSED
+NEGATIVELY/SPLIT. R-056 proves the literal
+cutoff-uniform estimate
+`sum_j ||G_j^* B(P_<=j-1 phi) D P_<=j-1 phi||_2^2 <= C_src ||phi||_6^6`
+with
+`C_src=(beta_op^2/c_sym) M_R^2 M_6^4 Q_6^2`. The true-increment
 determinant is
 `-0.5 log det_2(I+pT_j)+0.5 p^2<ell_j,(I+pT_j)^(-1)ell_j>` with
 `ell_j=G_j^*B(phi_(j-1))D phi_(j-1)`. A scalar source family proves that no
 Hilbert--Schmidt-only estimate can delete this positive term. A9 already
-controls the summed Hilbert--Schmidt part by a terminal quartic. The present
-source-square is therefore the first surviving load-bearing analytic gate.
+controls the summed Hilbert--Schmidt part by a terminal quartic. The
+production-compatible exact-B/joint source-square is therefore the first
+surviving load-bearing analytic gate.
 A12 proves a cutoff-uniform coarse form with
 `C_src=(beta_op^2/c_sym) M_R^2 M_6^4 Q_6^2`, where
 `beta_op=0.0423749999999894` is the sharp production Pauli/Fierz operator
-constant and `beta_op^2/c_sym=0.016570372383568618`.  Exact dyadic boundary
+constant and `beta_op^2/c_sym=0.016570372383568618`. Exact dyadic boundary
 modulation now gives `M_6>=8`, `Q_6>=8sqrt(3)`, and
 `M_6^4 Q_6^2>=786432`, so the separated norm route cannot meet the isolated
 production target.  The same witness refutes the coefficient-blind scalar
 six-linear envelope.  The surviving gate must retain the exact null identity
 `B(X)JX=0`, the output shell, and preferably the determinant resolvent.
+
+The literal analytic inequality is therefore reusable, but it does not close
+the production-compatible alternative in the original statement. R-057 closes
+the separated coefficient-blind budget negatively, and R-058 closes the
+current standalone exact-B source/sextic allocation negatively without proving
+the exact source constant infinite. The exact-B output-shell/resolvent and
+joint source-potential or redesigned-increment routes remain open.
 
 ### **A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE**
 
@@ -4803,14 +4816,18 @@ cutoff-uniform entropy or log-Laplace bound for
 budget for `(1-theta)I_j`, retain a strict positive production sextic
 remainder, and exhibit `p>1` with total entropy coefficient below `1/p`.
 
-**Status:** OPEN, BLOCKED IN PROOF ORDER BY
-`A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND` (2026-07-21). The historical A10
+**Status:** OPEN (2026-08-21), WITH THE COARSE SOURCE-SQUARE ANTECEDENT
+AVAILABLE BUT INSUFFICIENT FOR THE PRODUCTION BUDGET. The historical A10
 bound for `theta Q_j^fr+C_j` is not the required statement: the two variables
-differ by the positive past energy whose direct upper form is refuted. After
-the source theorem, the determinant contribution has conditional budget
+differ by the positive past energy whose direct upper form is refuted. The
+remaining theorem must retain the exact-B output shell and determinant
+resolvent, or use a joint source-potential/redesigned-increment route. Its
+conditional determinant contribution has budget
 `-alpha_f H-s^2 C_fr/(4 alpha_f) E||phi||_4^4`
 `-s^2 C_src/(2 alpha_f) E||phi||_6^6`, `s=1-theta`. All constants and the
-remaining sextic reserve must be recomputed before any A7 Nelson conclusion.
+remaining sextic reserve must be recomputed before any A7 Nelson conclusion;
+R-057 and R-058 rule out the separated and current standalone allocations,
+not the exact-B/joint theorem.
 
 ### **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION**
 

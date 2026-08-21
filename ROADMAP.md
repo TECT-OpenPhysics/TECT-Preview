@@ -605,8 +605,12 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   The two R-093 coarse critical rows and absolute per-revisit sixth-moment
   summation remain retired; complete `H_N`, REG, `OVERLAP_src`, Nelson, and
   Sector A remain open.
-The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
-is blocked pending that redesign. The separate
+The literal A11 adapted source-square inequality is supplied by R-056, but
+its separated coefficient-blind production budget is ruled out by R-057 and
+the current standalone exact-B allocation is ruled out by R-058. The
+historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
+therefore remains blocked pending an exact-B/resolvent or joint-source
+redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
 regulariser removal, infinite volume, phase transition, BCC, and T7 remain
 outside the current Sector-A theorem.
@@ -1956,8 +1960,9 @@ SA-F4 dependency order; it is not a cross-programme priority ranking.
    with spatial smoothing, treat bounded near width as positive Young slack,
    or infer a full progressive lower bound from the restricted R-075 graph.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
-   A13 redesign fixes the relative variable and budget. Do not reuse a
-   standalone source-square antecedent or the historical
+   A13 redesign fixes the relative variable and budget. The coarse source-
+   square inequality is available, but it is not a production budget; do not
+   reuse it as though it were exact-B control or reuse the historical
    `theta Q_j^fr+C_j` variable.
 4. **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION** — separately classify the
    unmodified spatial Gibbs law across all Class-II null branches; the
