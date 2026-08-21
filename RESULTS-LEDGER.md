@@ -25,6 +25,7 @@ policy in `governance/development-history.md`.
 | [R-173](#r-173) | R-163 deterministic dyadic-forest Lean margin core | R-173 v1.0 is a scoped T0 claim-nonbearing kernel cross-check under EXP-000888. Lean, a Fraction-only independent lane, and an integrated hash/mutation lane recheck the exact rational margins 13/100>1/10, -1/110, -10/11, 3/20<27/100, the recursive guard, and the third-derivative fixture. It does not prove the analytic forest estimates or close A13, T-050, Sector-A or Pre-A |
 | [R-174](#r-174) | Exact two-root production-cylinder cross-synthesis boundary | R-174 v1.0 is a scoped T0 claim-nonbearing interface result under EXP-000889. The hash-pinned A1 `k,2k` chart has ordered cross blocks that are nonzero pointwise even though one-period sine/cosine averages vanish; Lean and a Fraction-only lane recheck the exact algebra. The complete square-root/heat/root/forest/low/returned-mean/source/sextic owner remains open, as do T-050, A13, Sector-A and Pre-A |
 | [R-177](#r-177) | A1 two-root common-heat and root-incidence ledger | R-177 v1.0 is a T0 claim-nonbearing Lean ledger under EXP-000892. It binds the actual R-176 `k,2k` covariance roots to the finite order common heat -> root 1 -> root 2 -> future residual, proves the two-replica variance and feedback identities, and rejects mean-only or independently replicated heat substitutions. The complete owner, source/sextic windows, T-050, A13, Sector-A and Pre-A remain open |
+| [R-178](#r-178) | Complete two-root cross-owner phase differentiation | R-178 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000893. It retains the field-field, current-current and ordered field-current R-174 blocks, differentiates both root directions exactly, and proves their sum is zero by global phase invariance; the ordered block is active in the registered fixture. The production sign, heat/forest/complement/returned-low/source/sextic owner, T-050, A13, Sector-A and Pre-A remain open |
 | [R-176](#r-176) | Actual A1 two-root principal Cholesky covariance witnesses | R-176 v1.0 is a T0 claim-nonbearing Lean cross-check under EXP-000891. From the hash-pinned A1 symbol it reconstructs positive pivot chains at `k` and `2k`, builds inverse-transpose principal factors `U` with `C=U U^T`, and duplicates them into six-real covariance roots. Heat/root incidence, the complete owner, T-050, A13, Sector-A and Pre-A remain open |
 | [R-175](#r-175) | Canonical duplicated covariance square-root basis interface | R-175 v1.0 is a T0 claim-nonbearing exact interface under EXP-000890. A supplied `L L^T=C` yields `G G^T=Gamma` for `G=diag(L,L)` and preserves the six-real complex structure; actual A1 square-root existence/selection and the complete owner remain open |
 | [R-172](#r-172) | A1 Class-II owner mismatch Lean cross-check | R-172 v1.0 is a scoped T0 claim-nonbearing exact coefficient audit under EXP-000887. It derives cKK beta_X^2=3/320 and cJK alpha_X beta_X=3/400 with common positive mass denominator, so the declared and historical residual Class-II owners are not interchangeable. This does not close the full A1 variation, A13, Sector-A or Pre-A |
@@ -279,6 +280,35 @@ physical-empty comparison, removal, continuum limits, Sector-A or Pre-A. No
 tier change, gate closure, new negative or PDF follows.
 
 **Proven in:** [R-177 certificate](strategy/pre-a-a13-two-root-heat-incidence-ledger-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R177.lean), [primary script](verification/scripts/lean_a13_two_root_heat_incidence_ledger.py), [independent script](codes/foundations/lean_a13_two_root_heat_incidence_ledger_independent.py), [integrated verifier](codes/foundations/lean_a13_two_root_heat_incidence_ledger_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-two-root-heat-incidence-ledger-260821.md), and the saved run artefacts. No R-177 PDF is issued.
+
+<a id="r-178"></a>
+### R-178 -- Complete two-root cross-owner phase differentiation
+
+**Result ID.** `R-178` is a T0, claim-nonbearing Lean checkpoint under
+`EXP-000893`.
+
+**Exact result.** The finite two-root cross owner retains all three R-174
+blocks: field-field, current-current, and ordered field-current. For the
+registered coefficients `f=2`, `v=3`, `o=5`, the R-174 fixture has ordered
+value `-1` while the first and second blocks vanish. Lean proves the generic
+first and second phase derivatives and their exact cancellation. In the
+registered derivative fixture the values are `d1=8` and `d2=-8`; at the
+ordered-active phase the ordered block contributes nonzero derivative `5`.
+
+**Verification.** `verification/lean/Tect/R178.lean` proves the complete-cross
+derivative identities and the global-phase sum. The primary SymPy lane binds
+the chart to the actual R-176 roots and R-177 incidence result; the
+independent lane recomputes the rational values with the standard library
+only. The integrated lane checks package hashes, AST/import independence,
+eight hostile mutations and formal topology.
+
+**Boundary.** This differentiates one finite cross owner only. It does not
+determine a production sign, heat/forest/complement/returned-low terms,
+source/sextic one-use, T-050, A13, Nelson, a measure, phase selection,
+physical-empty comparison, removal, continuum limits, Sector-A or Pre-A. No
+tier change, gate closure, new negative or PDF follows.
+
+**Proven in:** [R-178 certificate](strategy/pre-a-a13-two-root-complete-cross-owner-differentiation-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R178.lean), [primary script](verification/scripts/lean_a13_two_root_complete_cross_owner_differentiation.py), [independent script](codes/foundations/lean_a13_two_root_complete_cross_owner_differentiation_independent.py), [integrated verifier](codes/foundations/lean_a13_two_root_complete_cross_owner_differentiation_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-two-root-complete-cross-owner-differentiation-260821.md), and the saved run artefacts. No R-178 PDF is issued.
 
 <a id="r-175"></a>
 ### R-176 -- Actual A1 two-root principal Cholesky covariance witnesses

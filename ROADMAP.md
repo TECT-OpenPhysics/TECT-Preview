@@ -1559,6 +1559,15 @@ Reading-H interface, physical-empty, `SCHEME-2LOOP`, `GAP-3`,
 new negative, physical Sector-A result, or Pre-A closure follows. No R-170
 v1.0 PDF is issued.
 
+EXP-000893 / R-178 is a T0, claim-nonbearing Lean checkpoint for the next
+finite A13 owner obligation. It retains all three R-174 cross blocks in one
+two-root owner, differentiates both root directions exactly, and verifies the
+opposite derivatives sum to zero by global phase invariance; the ordered block
+is active in the registered fixture. This is not phase selection or a
+production sign. Heat, complement, historical-low, forest, returned-mean,
+source/sextic one-use, T-050, A13, Sector-A, physical-empty and limit routes
+remain open. No R-178 PDF is issued.
+
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7

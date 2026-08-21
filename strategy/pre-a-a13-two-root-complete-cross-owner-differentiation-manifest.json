@@ -1,0 +1,98 @@
+{
+  "schema": "tect/lean-a13-two-root-complete-cross-owner-differentiation/1.0",
+  "audit_id": "A13-TWO-ROOT-COMPLETE-CROSS-OWNER-DIFFERENTIATION",
+  "result_id": "R-178",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000893",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Two-root complete cross-owner phase differentiation",
+  "purpose": "Insert all three R-174 ordered cross blocks into one finite phase owner and differentiate both root phase directions exactly. The result detects cross-block omission but does not assign a production sign.",
+  "inputs": {
+    "r174_manifest": {
+      "path": "strategy/pre-a-a13-two-root-production-cylinder-cross-synthesis-manifest.json",
+      "sha256": "f0aff366385b3857407f6d2340c4bdf96860359a679d1e5760f40b691a1ae043"
+    },
+    "r176_manifest": {
+      "path": "strategy/pre-a-a13-a1-two-root-cholesky-covariance-witness-manifest.json",
+      "sha256": "93776dab165e7b6dcf703ee592246e2135edf2ff327127c6f8ea6bdb24cd850e"
+    },
+    "r176_run": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r176-a1-two-root-cholesky-covariance-witness/integrated.json",
+      "sha256": "7faf807e7706b4854f7eb1ecfbe5d79255be4cdd725c2446027bdcbf77aadfa6"
+    },
+    "r177_manifest": {
+      "path": "strategy/pre-a-a13-two-root-heat-incidence-ledger-manifest.json",
+      "sha256": "8085e63cab49157972cbc8b23718d15a33f1b60ce509e91f9c2975a2f50258ac"
+    },
+    "r177_run": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r177-two-root-heat-incidence-ledger/integrated.json",
+      "sha256": "b40f40e83f81118a022f0c115e90ff56989af10abe14be4574bd412853beafe4"
+    },
+    "a13_status": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+      "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "cross_coefficients": {"field": "2", "current": "3", "ordered": "5"},
+    "fixture": {"a1": "1", "a2": "1", "w1": "1", "w2": "2", "c1": "1", "s1": "0", "c2": "0", "s2": "1"},
+    "ordered_active_phase": {"c1": "1", "s1": "0", "c2": "1", "s2": "0"},
+    "root_labels": ["k", "2k"],
+    "cross_owner_blocks": ["field-field", "current-current", "ordered-field-current"],
+    "derivative_convention": "D1 cos(delta)=-sin(delta), D1 sin(delta)=cos(delta); D2=-D1"
+  },
+  "theorem_markers": [
+    "complete_cross_d1",
+    "complete_cross_d2",
+    "phase_derivative_sum_zero",
+    "ordered_block_is_retained",
+    "ordered_block_nonzero_fixture"
+  ],
+  "files": {
+    "lean_entrypoint": {"path": "verification/lean/Tect/R178.lean", "sha256": "41ae3a43c1fbef21f6a0702cd8602be055dbe35f82c1ea8e318ff12bdfec7c7e"},
+    "primary": {"path": "verification/scripts/lean_a13_two_root_complete_cross_owner_differentiation.py", "sha256": "4c4b6b08a6db9f4c9662660e8a2b99c4ddef4519877dd9e6a836e28d5e2f41f8"},
+    "independent": {"path": "codes/foundations/lean_a13_two_root_complete_cross_owner_differentiation_independent.py", "sha256": "9ac8a2883ab91741efc0b344fbf2e91c1ec1f5b9b4b2ec83c9dc5eb050561d08"},
+    "verifier": {"path": "codes/foundations/lean_a13_two_root_complete_cross_owner_differentiation_verify.py", "sha256": "cde31967d0cf0ffe8aff4fcc6bb5790134232562656f49e15e327abf2cc5f4a0"},
+    "certificate": {"path": "strategy/pre-a-a13-two-root-complete-cross-owner-differentiation-certificate-260821.md", "sha256": "31b00364acc1cf6b686d0a8918cd147fdfffe0cb2813dc92dc1f2ca464db0421"},
+    "note": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-two-root-complete-cross-owner-differentiation-260821.md", "sha256": "51a3899d195bcc703bed13a8e7d504a23847b35e142f88a233951935735b5415"}
+  },
+  "formal_integration": {
+    "event_id": "20260821-r-178-complete-cross-owner-phase-differentiatio",
+    "event_ordinal": 673,
+    "event_claim_ids": ["A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION", "EXP-000893", "R-178"],
+    "event_raw_tokens": ["EXP-000893", "R-178", "complete cross-owner", "ordered block", "Lean", "No R-178 PDF"],
+    "expected_counts": {"claims": 49, "results": 178, "gates": 206, "negatives": 372, "explorations": 893, "events": 674, "tasks": 57, "catalog": 4341},
+    "primary_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r178-two-root-complete-cross-owner-differentiation/primary.json",
+    "independent_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r178-two-root-complete-cross-owner-differentiation/independent.json",
+    "integrated_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r178-two-root-complete-cross-owner-differentiation/integrated.json",
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [],
+    "no_pdf": true
+  },
+  "hostile_mutations": [
+    "delete the ordered field-current block",
+    "replace the actual R-176 roots by a supplied placeholder",
+    "identify the phase derivative with a scalar owner sign",
+    "drop the current-current block",
+    "claim phase derivative sum zero selects a physical phase",
+    "mark A13 or Sector-A closed",
+    "replace an authority hash",
+    "insert a Lean sorry or axiom token"
+  ],
+  "boundary": "R-178 differentiates a finite phase cross-owner containing the three R-174 blocks with independent coefficients and proves the opposite root-direction derivatives sum to zero. The integrated fixture detects omission of the ordered block and binds the chart to the actual R-176 roots and R-177 incidence predecessor. This does not determine the sign of the complete production owner, the heat/forest/complement/returned-low terms, source/sextic one-use, T-050, A13, Nelson, an interacting measure, phase selection, physical-empty comparison, removal, continuum limits, Sector-A or Pre-A closure. No gate closure, tier change, new negative or PDF follows.",
+  "next_action": "Add the heat, complement, historical-low, forest and returned-mean terms to this differentiated finite owner, then test whether the R-125 future-variance rebate and source/sextic windows can control the remaining derivative without reusing a cross block."
+}
