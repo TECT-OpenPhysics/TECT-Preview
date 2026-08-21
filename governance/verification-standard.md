@@ -78,6 +78,37 @@ Each core result requires at least **two of three**:
 
 The card records which routes exist. One-route results cap at T4.
 
+### 5.1 Kernel cross-verification for important results
+
+For this standard, an **important result** is any new or materially revised
+result at T4+ that contains an exact algebraic identity, a sign/ordering
+inequality, a finite-dimensional matrix calculation, or a finite combinatorial
+claim that can be expressed in a decidable Lean theorem. Such results MUST
+carry a kernel-checked cross-verification lane when the relevant proposition is
+formalizable without importing an unproved axiom. The Lean lane is an
+additional independent formulation; it does not replace the analytic proof,
+the independent executable, or the scope and limit hypotheses.
+
+The minimum Lean package is:
+
+1. a repository-pinned `lean-toolchain` and `lakefile` (including exact
+   dependency revisions);
+2. a source theorem with no `sorry`, `admit`, `axiom`, or `unsafe` escape;
+3. a deterministic command of the form
+   `lake env lean <entrypoint>.lean` with the toolchain version recorded;
+4. a bridge showing that the Lean inputs are the same hash-pinned inputs used
+   by the result manifest, or a precise statement that the theorem is
+   parameterised and which hypotheses remain to be instantiated; and
+5. an integrated verifier check for exit status, source/dependency hashes,
+   theorem-entry markers, and the stored-versus-fresh run contract.
+
+When a result is not suitable for Lean (for example, an unformalised
+thermodynamic limit or a theorem whose essential hypothesis is still open),
+the certificate MUST say why, and the result remains subject to the ordinary
+two-of-three rule. A Lean PASS proves only the proposition encoded in the
+Lean file; it never promotes a claim tier, closes a physical gate, or proves
+that two differently normalised functionals are the same.
+
 ## 6. Quantitative sanity checks (mandatory with any numerical claim)
 
 At least one explicit check from: dimensional analysis; order-of-magnitude;

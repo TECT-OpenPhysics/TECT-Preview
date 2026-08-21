@@ -1,0 +1,150 @@
+{
+  "schema": "tect/lean-kernel-crosscheck/1.0",
+  "run_kind": "lean-kernel-crosscheck",
+  "result_id": "R-171",
+  "claim_ids": [
+    "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+    "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+  ],
+  "verdict": "PASS",
+  "assertion_count": 18,
+  "assertions": [
+    {
+      "name": "Lean entrypoint exists",
+      "pass": true,
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R171.lean",
+      "expected": true
+    },
+    {
+      "name": "Lean toolchain pin exists",
+      "pass": true,
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\lean-toolchain",
+      "expected": true
+    },
+    {
+      "name": "Lakefile exists",
+      "pass": true,
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\lakefile.toml",
+      "expected": true
+    },
+    {
+      "name": "Lake dependency lock exists",
+      "pass": true,
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\lake-manifest.json",
+      "expected": true
+    },
+    {
+      "name": "lake executable is available",
+      "pass": true,
+      "actual": "C:\\Users\\NaEun\\.elan\\bin\\lake.exe",
+      "expected": "PATH or elan bin"
+    },
+    {
+      "name": "R-171 manifest identity",
+      "pass": true,
+      "actual": "R-171",
+      "expected": "R-171"
+    },
+    {
+      "name": "manifest input hash a1_manifest",
+      "pass": true,
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "manifest input hash a7_manifest",
+      "pass": true,
+      "actual": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+      "expected": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"
+    },
+    {
+      "name": "manifest input hash a7_status",
+      "pass": true,
+      "actual": "d6d5b341cb0ff18137618395234999b07d55bcdcf6d86c3b86f4d68fc4752288",
+      "expected": "d6d5b341cb0ff18137618395234999b07d55bcdcf6d86c3b86f4d68fc4752288"
+    },
+    {
+      "name": "manifest input hash a13_status",
+      "pass": true,
+      "actual": "774652d15115a6e43f2cc25f49b3018d70b41d3edec30cf23607062c6227539b",
+      "expected": "774652d15115a6e43f2cc25f49b3018d70b41d3edec30cf23607062c6227539b"
+    },
+    {
+      "name": "manifest input hash pauli_source",
+      "pass": true,
+      "actual": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+      "expected": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+    },
+    {
+      "name": "Mathlib lock entry unique",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Mathlib lock revision",
+      "pass": true,
+      "actual": "v4.32.1",
+      "expected": "v4.32.1"
+    },
+    {
+      "name": "Lean theorem markers present",
+      "pass": true,
+      "actual": [
+        "bracket_numerator_identity",
+        "bracket_positive",
+        "bracket_numerator_coefficients_positive",
+        "endpoint_secant_sign"
+      ],
+      "expected": [
+        "bracket_numerator_identity",
+        "bracket_positive",
+        "bracket_numerator_coefficients_positive",
+        "endpoint_secant_sign"
+      ]
+    },
+    {
+      "name": "Lean escape tokens absent",
+      "pass": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Lean kernel compile",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Lean stdout is clean",
+      "pass": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "Lean stderr is clean",
+      "pass": true,
+      "actual": "",
+      "expected": ""
+    }
+  ],
+  "command": [
+    "C:\\Users\\NaEun\\.elan\\bin\\lake.exe",
+    "env",
+    "lean",
+    "Tect\\R171.lean"
+  ],
+  "toolchain": "leanprover/lean4:v4.32.1",
+  "source_hashes": {
+    "toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "lakefile": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+    "lake_manifest": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+    "entrypoint": "26128b83862abd3ed33388e710d32ddce39fc22b1c6fec2cff78eb9ad1c75bff"
+  },
+  "lean_stdout": "",
+  "lean_stderr": "",
+  "recorded_at": "2026-08-21T03:38:40.869661Z",
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "boundary": "Kernel-checks only the exact R-171 bracket identity and positivity route; no full A1 action, A13/T-050 closure, physical-empty sign, Gibbs/Nelson estimate, or continuum limit follows.",
+  "artifact": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r171-kernel-crosscheck/result.json"
+}

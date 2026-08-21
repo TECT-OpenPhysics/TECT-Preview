@@ -238,6 +238,10 @@ result is registered and no R-171 v1.0 PDF is issued.
 [primary script](codes/foundations/pre-a-a7_actual_plane_wave_endpoint_secant_sign_witness.py),
 [independent script](codes/foundations/pre-a-a7_actual_plane_wave_endpoint_secant_sign_witness_independent.py),
 and [integrated verifier](codes/foundations/pre-a-a7_actual_plane_wave_endpoint_secant_sign_witness_verify.py).
+The exact bracket identity and positivity core additionally pass the pinned
+[Lean entrypoint](verification/lean/Tect/R171.lean), with the saved
+[kernel-cross-check artefact](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r171-kernel-crosscheck/result.json)
+reporting `LEAN R-171 PASS 18/18`.
 
 **Tier.** T4 scoped analytic/exact/executed result; no claim tier or lifecycle change.
 <a id="r-170"></a>

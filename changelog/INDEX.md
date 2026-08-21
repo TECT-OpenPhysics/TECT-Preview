@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**658 accepted events** · latest 25 shown below · machine locator: `index.json`
+**659 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-21 | `20260821-r-171-lean-kernel-cross-check-and-important-res` — [R-171 Lean kernel cross-check and important-result policy] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE, EXP-000879, R-171 | [bounded page](pages/000619-000668.md#20260821-r-171-lean-kernel-cross-check-and-important-res) |
 | 2026-08-21 | `20260821-r-171-actual-a7-plane-wave-endpoint-secant-sign` — [R-171 actual A7 plane-wave endpoint secant sign witness] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE, EXP-000878, R-171 | [bounded page](pages/000619-000668.md#20260821-r-171-actual-a7-plane-wave-endpoint-secant-sign) |
 | 2026-08-21 | `20260821-a13-joint-source-verifier-reader-drift-correcti` — [A13 joint-source verifier reader-drift correction] - 2026-08-21 | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000877 | [bounded page](pages/000619-000668.md#20260821-a13-joint-source-verifier-reader-drift-correcti) |
 | 2026-08-21 | `20260821-a10-dependency-ledger-repair-after-a11-action-c` — [A10 dependency ledger repair after A11 action closure] - 2026-08-21 | A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE, A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, A9-CLASSII-SMART-PATH-CANCELLATION, EXP-000876, R-055, R-056 | [bounded page](pages/000619-000668.md#20260821-a10-dependency-ledger-repair-after-a11-action-c) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-14 | `20260814-r-167-v4-1-categorical-ground-bandlimited-gns-p` — [R-167 v4.1 categorical ground bandlimited GNS Poincare route split] - 2026-08-14 | C6-SPACETIME-SIGNATURE, EXP-000845, R-167 | [bounded page](pages/000619-000668.md#20260814-r-167-v4-1-categorical-ground-bandlimited-gns-p) |
 | 2026-08-14 | `20260814-r-167-v4-0-mesoscopic-source-ground-orbit-smear` — [R-167 v4.0 mesoscopic source-ground orbit-smear transfer route split] - 2026-08-14 | C6-SPACETIME-SIGNATURE, EXP-000844, R-167 | [bounded page](pages/000619-000668.md#20260814-r-167-v4-0-mesoscopic-source-ground-orbit-smear) |
 | 2026-08-13 | `20260813-r-167-v3-9-finite-source-ground-residual-transf` — [R-167 v3.9 finite-source ground residual transfer and clipped-order separation route split] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000843, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-9-finite-source-ground-residual-transf) |
-| 2026-08-13 | `20260813-r-167-v3-8-source-symmetric-orbit-smear-kms-quo` — [R-167 v3.8 source-symmetric orbit-smear KMS quotient route split] - 2026-08-13 | C6-SPACETIME-SIGNATURE, EXP-000842, R-167 | [bounded page](pages/000619-000668.md#20260813-r-167-v3-8-source-symmetric-orbit-smear-kms-quo) |
 
 ## Post-cutover pages
 
@@ -49,5 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 619–658 | 40 | [000619-000668.md](pages/000619-000668.md) |
+| 619–659 | 41 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

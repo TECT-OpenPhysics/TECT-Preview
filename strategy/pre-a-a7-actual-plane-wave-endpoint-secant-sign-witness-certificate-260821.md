@@ -92,7 +92,26 @@ commensurability, the point witness, and the lower bound.
   A13/T-050 joint owner. Nelson, measure, phase/morphology, physical-empty,
   Sector-A and Pre-A implications are not inferred.
 
-## 5. Stored boundary
+<a id="lean-kernel-cross-check"></a>
+## 5. Lean kernel cross-check
+
+The exact algebraic core is independently checked by the repository-pinned
+Lean 4.32.1/Mathlib v4.32.1 lane. `Tect/R171.lean` proves the bracket
+denominator identity, ordered-field positivity under explicit `a,b,c,eps>0`
+hypotheses, and the nonzero pointwise endpoint factor. The bridge verifies the
+five R-171 authority hashes, the Lake dependency lock, theorem markers, and
+the absence of `sorry`, `admit`, `axiom`, and `unsafe` escape tokens before
+running:
+
+`lake env lean Tect/R171.lean`
+
+The saved bridge artefact reports `LEAN R-171 PASS 18/18` at
+`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r171-kernel-crosscheck/result.json`.
+This is an additive kernel cross-check of the local exact identity; it does
+not replace the SymPy/Fraction lanes and does not promote the result or close
+the full A1/A13/T-050, physical-empty, Gibbs/Nelson, or continuum obligations.
+
+## 6. Stored boundary
 
 This result is saved as R-171 / EXP-000878 under the existing A7 and A13
 authorities. It is a model-level relative-sign boundary, not a vacuum

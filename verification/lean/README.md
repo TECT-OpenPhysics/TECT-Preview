@@ -1,0 +1,21 @@
+# TECT Lean cross-verification lane
+
+This is the repository-pinned Lean 4/Mathlib lane for important exact results.
+The initial entry point is `Tect/R171.lean`, which kernel-checks the rational
+Class-II bracket identity and positivity used by R-171.
+
+From this directory, after Lean/elan is installed:
+
+```powershell
+lake env lean Tect/R171.lean
+```
+
+The theorem is intentionally parameterised by the positive coefficients and
+regulariser. A result package must separately hash-check the manifest inputs
+before treating the theorem as a cross-check of a concrete run. A successful
+Lean compile does not close A13/T-050, the full A1 action, the physical-empty
+comparison, or any continuum/thermodynamic limit.
+
+The exact toolchain and Mathlib revision are pinned by `lean-toolchain`,
+`lakefile.toml`, and the generated `lake-manifest.json` dependency lock;
+`.lake/` and generated input modules are local build state.

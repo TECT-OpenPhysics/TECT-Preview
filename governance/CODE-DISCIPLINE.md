@@ -71,6 +71,24 @@ Every script MUST:
   re-run and attack the result. The `reviews/` archive records adversarial
   passes; reviewer-found defects are credited.
 
+## 5. Lean cross-check discipline
+
+When §5.1 of `verification-standard.md` applies, Lean is a third, kernel-
+checked formulation rather than a decorative annotation.
+
+- Pin the Lean toolchain and every dependency in the repository. Do not rely
+  on a globally selected Lean version or an unrecorded editor build.
+- Keep manifest-derived inputs in a generated or explicitly hash-checked
+  module. Do not paste a derived decimal into Lean and call it a proof.
+- Lean sources must compile without `sorry`, `admit`, `axiom`, `unsafe`, or
+  dynamic code execution. The integrated lane must reject those escape forms.
+- The Lean theorem must expose its hypotheses (sign, domain, regulator,
+  dimension, and normalisation) instead of hiding them in definitions.
+- A Lean PASS is reported alongside the ordinary primary and independent
+  runs, with source/toolchain/dependency hashes and a fresh stored artefact.
+  It is not a substitute for a missing limit theorem, ensemble identification,
+  physical reference, or competitor-exhaustiveness result.
+
 ---
 
 ## Enforcement
