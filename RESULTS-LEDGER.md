@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-173](#r-173) | R-163 deterministic dyadic-forest Lean margin core | R-173 v1.0 is a scoped T0 claim-nonbearing kernel cross-check under EXP-000888. Lean, a Fraction-only independent lane, and an integrated hash/mutation lane recheck the exact rational margins 13/100>1/10, -1/110, -10/11, 3/20<27/100, the recursive guard, and the third-derivative fixture. It does not prove the analytic forest estimates or close A13, T-050, Sector-A or Pre-A |
 | [R-172](#r-172) | A1 Class-II owner mismatch Lean cross-check | R-172 v1.0 is a scoped T0 claim-nonbearing exact coefficient audit under EXP-000887. It derives cKK beta_X^2=3/320 and cJK alpha_X beta_X=3/400 with common positive mass denominator, so the declared and historical residual Class-II owners are not interchangeable. This does not close the full A1 variation, A13, Sector-A or Pre-A |
 | [R-171](#r-171) | Actual A7 plane-wave endpoint secant sign witness | R-171 v1.0 is a scoped T4 analytic/exact/executed endpoint component-energy result under EXP-000878. For the hash-pinned A1/A7 L=16 model, one real dual-lattice plane wave has strictly positive deterministic Class-II energy while zero has energy zero, so the endpoint secant to zero is strictly negative. This is not a full A1/Hartree/physical-vacuum result; A13, T-050, Sector-A and Pre-A remain open |
 | [R-170](#r-170) | Initial QFT/GR/Reading-H literature-applicability audit | R-170 v1.0 is the scoped T0 claim-nonbearing audit under EXP-000863. It completes exactly the initial four-record rollout: B1 APPLIES only to its current `C_full` Q-versus-`G_*` theorem; C4 and C5 remain NOT-YET-ASSESSED; and the present C6 BCC-premised route DOES-NOT-APPLY while alternatives remain NOT-YET-ASSESSED. The policy remains binding, no tier or lifecycle changes, and no physical, Sector-A, or Pre-A gate closes |
@@ -245,6 +246,20 @@ The exact bracket identity and positivity core additionally pass the pinned
 reporting `LEAN R-171 PASS 18/18`.
 
 **Tier.** T4 scoped analytic/exact/executed result; no claim tier or lifecycle change.
+<a id="r-173"></a>
+### R-173 -- R-163 deterministic dyadic-forest Lean margin core
+
+**Result ID.** R-173 v1.0, recorded under EXP-000888.
+
+**Scope.** This is a T0, claim-nonbearing kernel cross-check of exact rational consequences already printed by the registered R-163 deterministic finite-forest certificate. It does not revise the R-163 T4 theorem or select a new owner.
+
+**Exact checked content.** The pinned Lean source proves the retained gap `4/25-3/100=13/100>1/10`, the T-050 threshold arithmetic `5/11-9/20=1/220`, `-1/110`, and `-10/11`, the sextic window `3/20<27/100`, the recursive tangent guard `(100/97)^4<13/10`, and the source third-derivative fixture `1296/5`. The primary runner hashes the R-163 inputs and compiles Lean 4.32.1 with the locked Lake manifest; a non-importing Fraction lane independently derives the same values; the integrated lane checks hashes, scope, eight hostile mutations and stored-run topology.
+
+**Boundary.** Lean checks only these exact rational consequences. It does not prove the analytic dyadic-forest estimates, A1/A7 operator hypotheses, random or nonlinear past-dependent laws, revisit or branching control, the complete A13 owner, T-050, Nelson or measure construction, floor/removal or continuum limits, physical phase selection, Sector-A, physical vacuum or Pre-A closure. No claim tier or lifecycle change, no new negative result, no gate closure and no physical conclusion follows.
+
+**Proven in:** [R-173 certificate](strategy/pre-a-a13-r163-dyadic-forest-lean-crosscheck-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R163.lean), [primary script](verification/scripts/lean_r163_dyadic_forest_crosscheck.py), [independent script](codes/foundations/lean_r163_dyadic_forest_crosscheck_independent.py), [integrated verifier](codes/foundations/lean_r163_dyadic_forest_crosscheck_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-r163-dyadic-forest-lean-crosscheck-260821.md), and the saved primary/independent/integrated JSON artefacts. No R-173 PDF is issued.
+
+**Tier.** T0 claim-nonbearing exact kernel cross-check; no claim tier or lifecycle change.
 <a id="r-172"></a>
 ### R-172 -- A1 Class-II owner mismatch Lean cross-check
 

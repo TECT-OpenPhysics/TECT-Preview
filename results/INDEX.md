@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**172 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**173 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-173`](../RESULTS-LEDGER.md#r-173) | R-163 deterministic dyadic-forest Lean margin core | T0 claim-nonbearing exact kernel cross-check; no claim tier or lifecycle change. |
 | [`R-172`](../RESULTS-LEDGER.md#r-172) | A1 Class-II owner mismatch Lean cross-check | T0 claim-nonbearing exact owner-interface audit; no claim tier or lifecycle change. |
 | [`R-171`](../RESULTS-LEDGER.md#r-171) | Actual A7 plane-wave endpoint secant sign witness | T4 scoped analytic/exact/executed result; no claim tier or lifecycle change. |
 | [`R-170`](../RESULTS-LEDGER.md#r-170) | Initial QFT/GR/Reading-H literature-applicability audit | T0 (claim-nonbearing applicability classification and quarantine audit). |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-151`](../RESULTS-LEDGER.md#r-151) | Direct two-root endpoint Hessian and uniform local source gap | T4 |
 | [`R-150`](../RESULTS-LEDGER.md#r-150) | Production antipodal last-insertion zero-cross boundary | T4 |
 | [`R-149`](../RESULTS-LEDGER.md#r-149) | Cross-synthesis Stein owner, radial-slice boundary, and full-internal companion positivity | T4 |
-| [`R-148`](../RESULTS-LEDGER.md#r-148) | Canonical fresh-prefix rank obstruction, active-spectator lift boundary, and coefficient-parameter Hessian correction | T4 |
 
 Search without loading the full ledger:
 

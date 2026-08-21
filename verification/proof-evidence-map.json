@@ -6,8 +6,8 @@
   },
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
-    "RESULTS-LEDGER.md": "d6a10f3e29456c1a111724997a849a28c0e31aa76e5e6c1ba32136d77d54d7e8",
-    "changelog/log.jsonl": "cab4efe7f21c98921fb5a97b349f249801c64a43d7560eab91a9c50e383dfa41",
+    "RESULTS-LEDGER.md": "a74c94c2bc8cd31a613a113f4a7c9274c496fa60ffb4fc8322aade805824d4a6",
+    "changelog/log.jsonl": "4275a52f12ba9b639cd3f7f13c7202a549c5da16d10c3ede43df173f346b2b91",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "48d7d4298b0977310e5ad9d7a69eee4712b896e29599aa52572d7d3f2c5699c2",
+    "explorations/log.jsonl": "e28b3f4b0f5583938a0baadcdc183b66a29d9f022a3f2b507e37684827c3e597",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "todo/todo.json": "ec2cfbd089b7c06eb8f82fbd4f5634c8ba882d440766b8ec3d5fec6a8e75359a"
   },
@@ -66,17 +66,17 @@
     "status_cards": 49,
     "active_claims": 48,
     "refuted_claims": 1,
-    "reusable_results": 172,
+    "reusable_results": 173,
     "negative_records": 372,
-    "proof_explorations": 887,
+    "proof_explorations": 888,
     "exploration_verdicts": {
-      "advanced": 543,
+      "advanced": 544,
       "failed": 235,
       "inconclusive": 79,
       "parked": 30
     },
     "process_grade_lessons": 3,
-    "accepted_events": 667,
+    "accepted_events": 668,
     "tasks": 57,
     "live_tasks": 11,
     "completed_tasks": 46,
@@ -89,7 +89,7 @@
     "unordered_root_pdfs": 9,
     "proof_notes_without_sibling_pdf": 19,
     "proof_notes_with_incomplete_historical_footer": 118,
-    "run_json": 800,
+    "run_json": 803,
     "claim_manifests": 124,
     "bundle_manifests": 40,
     "bundle_embedded_manifests": 45
@@ -2803,6 +2803,13 @@
           "EXP-000887",
           "R-172"
         ]
+      },
+      {
+        "event": "20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026",
+        "claim_ids": [
+          "EXP-000888",
+          "R-173"
+        ]
       }
     ],
     "event_unregistered_negative_tags": [
@@ -5134,6 +5141,9 @@
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-independent-actual-a7-plane-wave-endpoint-secant-sign-witness/result.json",
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-integrated-actual-a7-plane-wave-endpoint-secant-sign-witness/result.json",
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r058-budget-crosscheck/result.json",
+          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r163-dyadic-forest-crosscheck/independent.json",
+          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r163-dyadic-forest-crosscheck/integrated.json",
+          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r163-dyadic-forest-crosscheck/primary.json",
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r166-radial-gram-crosscheck/result.json",
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r171-kernel-crosscheck/result.json",
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-primary-actual-a7-plane-wave-endpoint-secant-sign-witness/result.json"
@@ -5251,6 +5261,7 @@
       },
       "evidence_links": {
         "result_ids": [
+          "R-173",
           "R-171",
           "R-166",
           "R-165",
@@ -6269,9 +6280,10 @@
           "EXP-000883",
           "EXP-000884",
           "EXP-000885",
-          "EXP-000887"
+          "EXP-000887",
+          "EXP-000888"
         ],
-        "latest_exploration_id": "EXP-000887",
+        "latest_exploration_id": "EXP-000888",
         "accepted_event_ids": [
           "20260721-close-t-049-negatively-with-the-a13-relative-ph",
           "20260721-complete-a13-gate-record-synchronization-and-re",
@@ -6448,9 +6460,10 @@
           "20260821-a13-r-058-authority-repair-and-lean-budget-cros",
           "20260821-a13-r-166-authority-repair-and-lean-radial-gram",
           "20260821-a13-t-050-production-cylinder-scratch-route-bou",
-          "20260821-a1-class-ii-owner-mismatch-lean-cross-check-202"
+          "20260821-a1-class-ii-owner-mismatch-lean-cross-check-202",
+          "20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026"
         ],
-        "latest_event_id": "20260821-a1-class-ii-owner-mismatch-lean-cross-check-202",
+        "latest_event_id": "20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026",
         "live_task_gate_ids": [
           "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
         ],
@@ -12174,6 +12187,39 @@
   ],
   "reusable_results": [
     {
+      "id": "R-173",
+      "anchor": "r-173",
+      "title": "R-163 deterministic dyadic-forest Lean margin core",
+      "summary": "R-173 v1.0 is a scoped T0 claim-nonbearing kernel cross-check under EXP-000888. Lean, a Fraction-only independent lane, and an integrated hash/mutation lane recheck the exact rational margins 13/100>1/10, -1/110, -10/11, 3/20<27/100, the recursive guard, and the third-derivative fixture. It does not prove the analytic forest estimates or close A13, T-050, Sector-A or Pre-A",
+      "detail_title": "R-163 deterministic dyadic-forest Lean margin core",
+      "detail": {
+        "result_id": "R-173 v1.0, recorded under EXP-000888.",
+        "scope": "This is a T0, claim-nonbearing kernel cross-check of exact rational consequences already printed by the registered R-163 deterministic finite-forest certificate. It does not revise the R-163 T4 theorem or select a new owner.",
+        "exact_checked_content": "The pinned Lean source proves the retained gap `4/25-3/100=13/100>1/10`, the T-050 threshold arithmetic `5/11-9/20=1/220`, `-1/110`, and `-10/11`, the sextic window `3/20<27/100`, the recursive tangent guard `(100/97)^4<13/10`, and the source third-derivative fixture `1296/5`. The primary runner hashes the R-163 inputs and compiles Lean 4.32.1 with the locked Lake manifest; a non-importing Fraction lane independently derives the same values; the integrated lane checks hashes, scope, eight hostile mutations and stored-run topology.",
+        "boundary": "Lean checks only these exact rational consequences. It does not prove the analytic dyadic-forest estimates, A1/A7 operator hypotheses, random or nonlinear past-dependent laws, revisit or branching control, the complete A13 owner, T-050, Nelson or measure construction, floor/removal or continuum limits, physical phase selection, Sector-A, physical vacuum or Pre-A closure. No claim tier or lifecycle change, no new negative result, no gate closure and no physical conclusion follows.",
+        "proven_in": "[R-173 certificate](strategy/pre-a-a13-r163-dyadic-forest-lean-crosscheck-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R163.lean), [primary script](verification/scripts/lean_r163_dyadic_forest_crosscheck.py), [independent script](codes/foundations/lean_r163_dyadic_forest_crosscheck_independent.py), [integrated verifier](codes/foundations/lean_r163_dyadic_forest_crosscheck_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-r163-dyadic-forest-lean-crosscheck-260821.md), and the saved primary/independent/integrated JSON artefacts. No R-173 PDF is issued.",
+        "tier": "T0 claim-nonbearing exact kernel cross-check; no claim tier or lifecycle change."
+      },
+      "normalized_detail": {
+        "statement": "",
+        "proof_anchor": "[R-173 certificate](strategy/pre-a-a13-r163-dyadic-forest-lean-crosscheck-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R163.lean), [primary script](verification/scripts/lean_r163_dyadic_forest_crosscheck.py), [independent script](codes/foundations/lean_r163_dyadic_forest_crosscheck_independent.py), [integrated verifier](codes/foundations/lean_r163_dyadic_forest_crosscheck_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-r163-dyadic-forest-lean-crosscheck-260821.md), and the saved primary/independent/integrated JSON artefacts. No R-173 PDF is issued.",
+        "reuse": "",
+        "boundary": "Lean checks only these exact rational consequences. It does not prove the analytic dyadic-forest estimates, A1/A7 operator hypotheses, random or nonlinear past-dependent laws, revisit or branching control, the complete A13 owner, T-050, Nelson or measure construction, floor/removal or continuum limits, physical phase selection, Sector-A, physical vacuum or Pre-A closure. No claim tier or lifecycle change, no new negative result, no gate closure and no physical conclusion follows.",
+        "publication_target": ""
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "proof_anchor_exact"
+      },
+      "family_refs": [],
+      "accepted_event_ids": [
+        "20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026"
+      ],
+      "co_recorded_negative_tags": []
+    },
+    {
       "id": "R-172",
       "anchor": "r-172",
       "title": "A1 Class-II owner mismatch Lean cross-check",
@@ -12731,7 +12777,8 @@
       "claim_ref_basis": {},
       "family_refs": [],
       "accepted_event_ids": [
-        "20260804-a13-t-050-close-deterministic-dyadic-forest-nei"
+        "20260804-a13-t-050-close-deterministic-dyadic-forest-nei",
+        "20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026"
       ],
       "co_recorded_negative_tags": []
     },
@@ -71040,6 +71087,56 @@
       "task_id": "T-050",
       "title": "Kernel-check the A1 Class-II owner mismatch before selecting a production cylinder",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "No analytic dyadic-forest estimate, complete A13 owner, random/nonlinear/revisit control, T-050 closure, Nelson or measure construction, floor/removal or continuum limit, phase selection, physical vacuum, Sector-A or Pre-A conclusion follows. No A13 gate closure, tier/lifecycle change or new negative result is registered.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "This is an additive kernel cross-check of exact rational consequences, not a formalization of the analytic forest estimates. Keeping the package T0 and claim-nonbearing prevents a local arithmetic PASS from being used as a complete A13/T-050 owner or physical result.",
+      "evidence_refs": [
+        "strategy/pre-a-a13-r163-dyadic-forest-lean-crosscheck-manifest.json#registered_constants",
+        "strategy/pre-a-a13-r163-dyadic-forest-lean-crosscheck-certificate-260821.md#exact-result",
+        "verification/lean/Tect/R163.lean#audit_margin_bundle",
+        "verification/scripts/lean_r163_dyadic_forest_crosscheck.py#main",
+        "codes/foundations/lean_r163_dyadic_forest_crosscheck_independent.py#main",
+        "codes/foundations/lean_r163_dyadic_forest_crosscheck_verify.py#main",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json#scope"
+      ],
+      "finding": "The Lean kernel proves 4/25-3/100=13/100>1/10, 5/11-9/20=1/220, the reduced-action floor -1/110, the adverse owner floor -10/11, 3/20<27/100, (100/97)^4<13/10, and the source third-derivative fixture 1296/5. The Fraction lane and integrated lane agree and all pinned hashes match.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-173"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "id": "EXP-000888",
+      "method": [
+        "Read the hash-pinned R-163 manifest and primary/independent result diagnostics, then freeze the six rational consequences as explicit Lean Rat propositions.",
+        "Compile verification/lean/Tect/R163.lean with the repository Lean 4.32.1 and Lake lock, rejecting sorry, admit, axiom and unsafe escape tokens.",
+        "Recompute the same values with a non-importing Python Fraction lane, hash the authority/toolchain inputs, and run the integrated hostile-mutation and lifecycle verifier."
+      ],
+      "next_action": "Use these Lean-checked inequalities only as acceptance thresholds after one hash-pinned finite production cylinder supplies all A13 owner blocks. Keep both A13 gates open until that cylinder, joint owner, and independent analytic controls are registered.",
+      "provenance": "contemporaneous",
+      "question": "Can the exact rational margin and threshold consequences recorded by R-163 be independently checked by the pinned Lean kernel without importing the analytic forest estimates or closing A13?",
+      "recorded_at": "2026-08-21T10:29:38Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000887",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-21",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Kernel-cross-check the R-163 deterministic dyadic-forest margin core",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -97075,6 +97172,60 @@
       "result_link_basis": {
         "R-172": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026",
+      "date": "2026-08-21",
+      "header": "[R-173 R-163 dyadic-forest Lean cross-check] - 2026-08-21",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "EXP-000888",
+        "R-173"
+      ],
+      "keywords": [
+        "EXP-000888",
+        "Lean cross-check",
+        "No R-173 PDF",
+        "R-173",
+        "deterministic dyadic forest",
+        "no A13 gate closure"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-a13-r163-dyadic-forest-lean-crosscheck-manifest.json",
+        "strategy/pre-a-a13-r163-dyadic-forest-lean-crosscheck-certificate-260821.md",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-r163-dyadic-forest-lean-crosscheck-260821.md",
+        "RESULTS-LEDGER.md",
+        "strategy/INDEX.md"
+      ],
+      "scripts": [
+        "verification/scripts/lean_r163_dyadic_forest_crosscheck.py",
+        "codes/foundations/lean_r163_dyadic_forest_crosscheck_independent.py",
+        "codes/foundations/lean_r163_dyadic_forest_crosscheck_verify.py"
+      ],
+      "raw": "## [R-173 R-163 dyadic-forest Lean cross-check] - 2026-08-21\n\nEXP-000888 records R-173 as an additive T0, claim-nonbearing Lean cross-check of the exact rational margin core printed by R-163. The deterministic dyadic forest thresholds are checked by the pinned Lean kernel, a non-importing Fraction lane, and an integrated hash and mutation lane.\n\nThe cross-check covers only 13/100>1/10, -1/110, -10/11, 3/20<27/100, the recursive tangent guard, and the source third-derivative fixture. It does not import the analytic forest estimates or the complete A13 owner.\n\nThis is no A13 gate closure: both A13 gates, T-050, Sector-A, physical vacuum, Pre-A and the relevant limits remain open. No new negative result, tier or lifecycle change follows. No R-173 PDF is issued.\n\n",
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000888",
+        "R-173"
+      ],
+      "result_ids": [
+        "R-163",
+        "R-173"
+      ],
+      "linked_result_ids": [
+        "R-163",
+        "R-173"
+      ],
+      "result_link_basis": {
+        "R-163": "explicit_result_id",
+        "R-173": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -102108,6 +102259,12 @@
         "id": "event:20260821-r-171-lean-runner-offline-bootstrap-repair-2026",
         "kind": "accepted_event",
         "label": "[R-171 Lean runner offline bootstrap repair] - 2026-08-21",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026",
+        "kind": "accepted_event",
+        "label": "[R-173 R-163 dyadic-forest Lean cross-check] - 2026-08-21",
         "authority": "CHANGELOG.md"
       },
       {
@@ -107451,6 +107608,12 @@
         "authority": "explorations/log.jsonl"
       },
       {
+        "id": "exploration:EXP-000888",
+        "kind": "proof_exploration",
+        "label": "Kernel-cross-check the R-163 deterministic dyadic-forest margin core",
+        "authority": "explorations/log.jsonl"
+      },
+      {
         "id": "gate:A1-KERNEL-CONV",
         "kind": "hypothesis",
         "label": "A1-KERNEL-CONV",
@@ -111775,6 +111938,12 @@
         "kind": "accepted_result",
         "label": "A1 Class-II owner mismatch Lean cross-check",
         "authority": "RESULTS-LEDGER.md#r-172"
+      },
+      {
+        "id": "result:R-173",
+        "kind": "accepted_result",
+        "label": "R-163 deterministic dyadic-forest Lean margin core",
+        "authority": "RESULTS-LEDGER.md#r-173"
       },
       {
         "id": "task:T-001",
@@ -123776,6 +123945,24 @@
         "from": "event:20260821-r-171-lean-runner-offline-bootstrap-repair-2026",
         "relation": "records_result",
         "to": "result:R-171",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026",
+        "relation": "records",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026",
+        "relation": "records_result",
+        "to": "result:R-163",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026",
+        "relation": "records_result",
+        "to": "result:R-173",
         "basis": "explicit_result_id"
       },
       {
@@ -164393,6 +164580,42 @@
         "basis": "structured_formal_ref"
       },
       {
+        "from": "exploration:EXP-000888",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000888",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000888",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000888",
+        "relation": "continues",
+        "to": "exploration:EXP-000887",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000888",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000888",
+        "relation": "references_result",
+        "to": "result:R-173",
+        "basis": "structured_formal_ref"
+      },
+      {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
         "relation": "bears_on",
         "to": "claim:B1-RH-ENUM",
@@ -167664,6 +167887,12 @@
       },
       {
         "from": "result:R-171",
+        "relation": "bears_on",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "proof_anchor_exact"
+      },
+      {
+        "from": "result:R-173",
         "relation": "bears_on",
         "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
         "basis": "proof_anchor_exact"

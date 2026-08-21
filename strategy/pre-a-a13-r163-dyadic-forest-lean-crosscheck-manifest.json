@@ -1,0 +1,137 @@
+{
+  "schema": "tect/pre-a-a13-r163-dyadic-forest-lean-crosscheck/1.0",
+  "audit_id": "A13-R163-DYADIC-FOREST-LEAN-CROSSCHECK",
+  "result_id": "R-173",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000888",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Lean cross-check of the R-163 deterministic dyadic-forest margin core",
+  "purpose": "Verify the exact rational margin and threshold consequences printed by R-163 without importing its analytic forest estimates.",
+  "inputs": {
+    "r163_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_full_lattice_weighted_resolvent_dyadic_forest_uniform_neighborhood_gap_boundary_manifest.json",
+      "sha256": "c33bdf426604375568aaa82065b8f607e270828e0a708c6347179b5949ed87b8"
+    },
+    "r163_primary_result": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-04-primary-full-lattice-weighted-resolvent-dyadic-forest-uniform-neighborhood-gap-boundary/result.json",
+      "sha256": "86f72faa09e126ad2d2f292c8d770f17e1b73ab4f91227db3b910cb6220ddb05"
+    },
+    "r163_independent_result": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-04-independent-full-lattice-weighted-resolvent-dyadic-forest-uniform-neighborhood-gap-boundary/result.json",
+      "sha256": "62643a9c948dec576960f3965fbc1cb24d05a34d7d8a9e243652ee5a8399f53a"
+    },
+    "a13_status": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+      "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"
+    },
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R163.lean",
+      "sha256": "e012f95185ae6777fe4398265a3a21c53c470ebcfdbbd6b2acab623b8de6c1db"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_constants": {
+    "origin_gap": "4/25",
+    "origin_gap_loss": "3/100",
+    "retained_gap": "13/100",
+    "target_gap": "1/10",
+    "epsilon_v_limit": "5/11",
+    "explicit_source_coefficient": "9/20",
+    "coefficient_headroom": "1/220",
+    "reduced_action_hessian_floor": "-1/110",
+    "owner_adverse_floor": "-10/11",
+    "epsilon_6": "3/20",
+    "epsilon_6_limit": "27/100",
+    "recursive_tangent_guard": "(100/97)^4 < 13/10",
+    "source_third_derivative_fixture": "1296/5"
+  },
+  "theorem_markers": [
+    "retained_coefficient_gap",
+    "t050_threshold_arithmetic",
+    "sextic_window",
+    "recursive_tangent_guard",
+    "source_third_derivative_fixture",
+    "audit_margin_bundle"
+  ],
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R163.lean",
+      "sha256": "e012f95185ae6777fe4398265a3a21c53c470ebcfdbbd6b2acab623b8de6c1db"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_r163_dyadic_forest_crosscheck.py",
+      "sha256": "664be910f7efd0b6c7a6237492ca9c0c5920af6390b345464214159f7241e6f3"
+    },
+    "independent": {
+      "path": "codes/foundations/lean_r163_dyadic_forest_crosscheck_independent.py",
+      "sha256": "00bcedd38619f3663925b4bf92ddde1786b5c5b37745d80bc08e198c12e39f52"
+    },
+    "verifier": {
+      "path": "codes/foundations/lean_r163_dyadic_forest_crosscheck_verify.py",
+      "sha256": "567f56ff244e1853d5b251d2f062e6834a94a470ece1a6cfe78bdd6a2d597f63"
+    },
+    "certificate": {
+      "path": "strategy/pre-a-a13-r163-dyadic-forest-lean-crosscheck-certificate-260821.md",
+      "sha256": "2ff6d97c48e60ceb3537a2950d273177d86dd7b6821c0588b8f530b14f4b9f81"
+    },
+    "note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-r163-dyadic-forest-lean-crosscheck-260821.md",
+      "sha256": "4a500653ec5da4fd73a983cf2a547cf80c4dfcba4dfaa857f8aa84653559f6cf"
+    }
+  },
+  "formal_integration": {
+    "event_id": "20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026",
+    "event_ordinal": 668,
+    "event_claim_ids": [
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "EXP-000888",
+      "R-173"
+    ],
+    "event_raw_tokens": [
+      "EXP-000888",
+      "R-173",
+      "Lean cross-check",
+      "deterministic dyadic forest",
+      "no A13 gate closure",
+      "No R-173 PDF"
+    ],
+    "expected_counts": {
+      "claims": 49,
+      "results": 173,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 888,
+      "events": 668,
+      "tasks": 57,
+      "catalog": 4290
+    },
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [],
+    "no_pdf": true
+  },
+  "hostile_mutations": [
+    "replace 13/100 retained gap with 1/20",
+    "flip the source headroom sign",
+    "replace -10/11 owner floor",
+    "promote the finite margin to A13 closure",
+    "remove the analytic-boundary disclaimer",
+    "insert a Lean sorry or axiom token",
+    "replace the R-163 authority hash",
+    "claim nonlinear or revisit control"
+  ],
+  "boundary": "The Lean kernel checks only exact rational consequences of the registered R-163 certificate. It does not prove the analytic dyadic-forest estimates, the A1/A7 operator hypotheses, random or nonlinear past-dependent laws, revisit or branching control, the complete A13 owner, T-050, Nelson or measure construction, floor/removal or continuum limits, physical phase selection, or Sector-A closure.",
+  "next_action": "Use the checked margins as acceptance thresholds when a single authority-owned production cylinder supplies all owner blocks. Do not infer those blocks from the Lean arithmetic alone."
+}
