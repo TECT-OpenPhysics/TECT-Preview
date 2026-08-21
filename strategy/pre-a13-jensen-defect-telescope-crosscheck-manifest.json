@@ -1,0 +1,93 @@
+{
+  "schema": "tect/lean-a13-jensen-defect-telescope-crosscheck/1.0",
+  "audit_id": "A13-JENSEN-DEFECT-TELESCOPE-CROSSCHECK",
+  "result_id": "R-188",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000903",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "R-188 signed Jensen-defect telescope Lean cross-check",
+  "purpose": "Kernel-check the finite adapted quadratic-coefficient Jensen-defect telescope, its exact secant plus defect split, and the strict failure of an absolute defect payment while keeping the production NEAR owner open.",
+  "inputs": {
+    "r081_manifest": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_cartan_tail_adapted_near_temporal_reduction_manifest.json", "sha256": "bb23e56992b741af27be75ef44e1e007fad4adbb309bbd71e42c0357db5ceff7"},
+    "a13_status": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json", "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"},
+    "lean_toolchain": {"path": "verification/lean/lean-toolchain", "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"},
+    "lakefile": {"path": "verification/lean/lakefile.toml", "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"},
+    "lake_manifest": {"path": "verification/lean/lake-manifest.json", "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"}
+  },
+  "registered_inputs": {
+    "c": "2/5",
+    "root_values": ["-1", "1"],
+    "next_values": ["-1", "1"],
+    "expected": {
+      "j0": "29/25",
+      "j1_minus": "9/25",
+      "j1_plus": "49/25",
+      "j2_minus_minus": "9/25",
+      "j2_minus_plus": "9/25",
+      "j2_plus_minus": "49/25",
+      "j2_plus_plus": "49/25",
+      "dH1_minus": "-4/5",
+      "dH1_plus": "4/5",
+      "dH2_all_zero": true,
+      "secant1": "0",
+      "secant2_plus_plus": "49/25",
+      "defect1_minus": "-4/5",
+      "defect1_plus": "4/5",
+      "defect2_plus_plus": "-49/25",
+      "signed_endpoint_mean": "0",
+      "absolute_first_defect_mean": "4/5",
+      "telescope_residual_max": "0",
+      "recombination_residual_max": "0"
+    }
+  },
+  "theorem_markers": [
+    "jensen_defect_telescope",
+    "jensen_defect_fixture",
+    "signed_endpoint_mean_zero",
+    "absolute_jensen_defect_positive",
+    "secant_defect_recombination_fixture"
+  ],
+  "files": {
+    "lean_entrypoint": {"path": "verification/lean/Tect/R188.lean", "sha256": "167c1b63c1eb5b251ae31976c528fe8b6f455fe9c805ef2323547d1297d5a96a"},
+    "primary": {"path": "verification/scripts/lean_a13_jensen_defect_telescope_crosscheck.py", "sha256": "049bc94296b69b7d34ed57603923facbb2794d81e14e305ea1665f0c98291313"},
+    "independent": {"path": "codes/foundations/lean_a13_jensen_defect_telescope_crosscheck_independent.py", "sha256": "d728cff6bda2c570033bbb6351571c33a1ca789b0155134d2fead6d772bd305a"},
+    "verifier": {"path": "codes/foundations/lean_a13_jensen_defect_telescope_crosscheck_verify.py", "sha256": "4b6f058adcae4958a068414ec19b1a91f2921d4f8e0f222ec53201971ad5b9e7"},
+    "certificate": {"path": "strategy/pre-a13-jensen-defect-telescope-crosscheck-certificate-260822.md", "sha256": "6a7136e033e48948273513761c0f8ec8544ad22e11bbe145898005c5ef4412dd"},
+    "note": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-jensen-defect-telescope-crosscheck-260822.md", "sha256": "45893d7469dfe8f19ce3cc558aadbb227b751263a2537f36a90255f038bf1a5c"}
+  },
+  "hostile_mutations": [
+    "change the conditional Jensen baseline j0",
+    "change the signed first Jensen increment",
+    "erase the second-root defect increment",
+    "change the signed endpoint mean",
+    "replace the absolute defect mean by zero",
+    "promote the telescope to the production adapted NEAR operator",
+    "promote the telescope to OVERLAP_src or an A13 gate closure",
+    "insert a Lean sorry, admit, axiom, or unsafe escape"
+  ],
+  "boundary": {
+    "a13_gate_closed": false,
+    "overlap_src_closed": false,
+    "production_map_identified": false,
+    "text": "R-188 proves only a finite rational quadratic-coefficient Jensen-defect telescope: the signed defect increments recombine with the secant to the endpoint difference, their endpoint mean is zero, and an absolute first-defect payment is strictly positive. It does not identify the production adapted operator, prove the complete signed NEAR owner, progressive/revisit uniformity, OVERLAP_src, Nelson, an interacting measure, or any Sector-A, Pre-A, limit, tier, or gate result."
+  },
+  "formal_integration": {
+    "expected_counts": {"claims": 49, "results": 188, "gates": 206, "negatives": 372, "explorations": 903, "events": 684, "tasks": 57, "catalog": 4441},
+    "event_ordinal": 684,
+    "event_title": "R-188 signed Jensen-defect telescope Lean cross-check",
+    "event_id": "20260822-r-188-signed-jensen-defect-telescope-lean-cross",
+    "event_claim_ids": ["A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION", "EXP-000903", "R-188"],
+    "event_keywords": ["EXP-000903", "Jensen-defect", "Lean", "NEAR-owner-open", "R-081", "R-188", "absolute-payment-no-go", "signed-telescope"],
+    "event_notes": ["strategy/pre-a13-jensen-defect-telescope-crosscheck-manifest.json", "strategy/pre-a13-jensen-defect-telescope-crosscheck-certificate-260822.md", "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-jensen-defect-telescope-crosscheck-260822.md", "RESULTS-LEDGER.md", "ROADMAP.md", "strategy/INDEX.md"],
+    "event_scripts": ["verification/scripts/lean_a13_jensen_defect_telescope_crosscheck.py", "codes/foundations/lean_a13_jensen_defect_telescope_crosscheck_independent.py", "codes/foundations/lean_a13_jensen_defect_telescope_crosscheck_verify.py"],
+    "event_raw_tokens": ["EXP-000903", "R-188", "signed Jensen-defect telescope", "Lean", "signed endpoint mean remains open", "No R-188 PDF"],
+    "primary_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r188-jensen-defect-telescope-crosscheck/primary.json",
+    "independent_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r188-jensen-defect-telescope-crosscheck/independent.json",
+    "integrated_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r188-jensen-defect-telescope-crosscheck/integrated.json",
+    "no_new_negative_ids": [],
+    "no_pdf": true
+  },
+  "no_overclaim": "This T0 claim-nonbearing package kernel-checks only the finite quadratic Jensen-defect telescope and its absolute-payment warning. It does not prove the production adapted NEAR operator or any complete progressive/revisit, OVERLAP_src, Nelson, measure, Sector-A, Pre-A, tier, or gate result."
+}

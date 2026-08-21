@@ -32,6 +32,7 @@ policy in `governance/development-history.md`.
 | [R-185](#r-185) | Finite packet Cauchy Lean cross-check | R-185 v1.0 is a T0 claim-nonbearing kernel cross-check under EXP-000900. It proves the general finite rational packet Cauchy--Schwarz bound and a three-packet defect fixture used after R-081 temporal factorisation. The production map, partition/revisit uniformity, `OVERLAP_src`, Nelson, Sector-A and Pre-A remain open |
 | [R-186](#r-186) | Temporal packet algebra Lean cross-check | R-186 v1.0 is a T0 claim-nonbearing kernel cross-check under EXP-000901. It proves the registered temporal weighted Cauchy/Douglas fixture and the complete-packet telescope, including the retained fresh-times-future cross term `6/25`. The production map, progressive/revisit uniformity, `OVERLAP_src`, Nelson, Sector-A and Pre-A remain open |
 | [R-187](#r-187) | Adapted NEAR obstruction Lean cross-check | R-187 v1.0 is a T0 claim-nonbearing kernel cross-check under EXP-000902. It separates zero conditional first variation from nonzero root-square innovation, records the signed control-control slack, and checks a bounded Doob fixture. The production adapted operator, complete same-root bound, `OVERLAP_src`, Nelson, Sector-A and Pre-A remain open |
+| [R-188](#r-188) | Signed Jensen-defect telescope Lean cross-check | R-188 v1.0 is a T0 claim-nonbearing kernel cross-check under EXP-000903. It proves the finite quadratic signed Jensen-defect telescope, exact secant-plus-defect recombination, zero signed endpoint mean, and strict positive absolute first-defect payment. The production adapted NEAR owner, `OVERLAP_src`, Nelson, Sector-A and Pre-A remain open |
 | [R-182](#r-182) | Feedback-pulled cross-Hessian margin Lean cross-check | R-182 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000897. It combines the active R-178 cross coefficient with the R-181 feedback map and proves the exact pulled Hessian `[-2,4;4,-8]` with eigenvalues -10 and 0. The diagonal production owner, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-181](#r-181) | Finite two-root feedback mixed-Gram Lean cross-check | R-181 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000896. It binds the R-177 beta=1/2 root-2 feedback map, exact Gram `[[5/4,1/2],[1/2,1]]`, and positive envelope defect. The production spatial mixed Gram, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-180](#r-180) | Lean scalar triangular majorant cross-check | R-180 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000895. It rechecks the finite geometric majorant algebra, abstract C=5 positivity, the rational fixture, and the registered exponent margins 7/60 and 1/12. The production mixed-Gram envelope, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
@@ -423,6 +424,35 @@ interacting measure, or close Sector-A, Pre-A, or any limit.  No gate, tier, or
 negative-result status changes.
 
 **Proven in:** [R-187 certificate](strategy/pre-a13-adapted-near-obstruction-crosscheck-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R187.lean), [primary script](verification/scripts/lean_a13_adapted_near_obstruction_crosscheck.py), [independent script](codes/foundations/lean_a13_adapted_near_obstruction_crosscheck_independent.py), [integrated verifier](codes/foundations/lean_a13_adapted_near_obstruction_crosscheck_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-adapted-near-obstruction-crosscheck-260822.md), and the saved run artefacts. No R-187 PDF is issued.
+
+<a id="r-188"></a>
+### R-188 -- Signed Jensen-defect telescope Lean cross-check
+
+**Result ID.** `R-188` is a T0, claim-nonbearing finite diagnostic
+cross-check under `EXP-000903`.
+
+**Exact result.** For `A=e2(1+(2/5)e1)` and `H(x)=x^2` on two Rademacher
+roots, the conditional quadratic values are `J0=29/25`, `J1(-1)=9/25`,
+`J1(1)=49/25`, and `J2=A^2`. The signed identity
+`dH1+dH2=J2-J0` holds for every rational coefficient and root. At the
+registered coefficient the first defect increments are `-4/5` and `4/5`, the
+second increment vanishes, the signed endpoint mean is zero, and the mean
+absolute first-defect payment is `4/5>0`.
+
+**Verification.** The pinned Lean entrypoint, primary exact-Fraction lane, and
+stdlib-only independent lane agree. The integrated verifier checks package and
+dependency hashes, theorem markers, AST/import independence, eight hostile
+mutations, append-only event/exploration linkage, generated counts, and stored
+freshness.
+
+**Boundary.** This finite telescope does not identify the A1 production
+adapted operator, prove the complete signed square-trace-forest NEAR owner,
+root-resolved FAR, progressive/revisit uniformity, `OVERLAP_src`, controlled-
+shell one-use, Nelson, an interacting measure, any limit, Sector-A, Pre-A, or
+any tier or gate result. The absolute defect must remain in the signed complete
+packet until the production owner is assembled. No R-188 PDF is issued.
+
+**Proven in:** [R-188 certificate](strategy/pre-a13-jensen-defect-telescope-crosscheck-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R188.lean), [primary script](verification/scripts/lean_a13_jensen_defect_telescope_crosscheck.py), [independent script](codes/foundations/lean_a13_jensen_defect_telescope_crosscheck_independent.py), [integrated verifier](codes/foundations/lean_a13_jensen_defect_telescope_crosscheck_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-jensen-defect-telescope-crosscheck-260822.md), and the saved run artefacts. No R-188 PDF is issued.
 
 <a id="r-184"></a>
 ### R-184 -- Two-block Douglas identity Lean cross-check

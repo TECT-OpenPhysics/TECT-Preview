@@ -1631,6 +1631,14 @@ with root-square innovations `+4/5` and `-4/5`, the signed pair slacks
 finite diagnostic: the production adapted operator, complete same-root lower
 bound, progressive/revisit uniformity, `OVERLAP_src`, Nelson, Sector-A, Pre-A
 and all limit routes remain open. No R-187 PDF is issued.
+EXP-000903 / R-188 is a T0, claim-nonbearing Lean checkpoint for the signed
+Jensen-defect telescope in the finite quadratic adapted coefficient fixture.
+It proves the exact secant-plus-defect recombination, zero signed endpoint
+mean, and strict absolute first-defect payment `4/5`.  The result explains why
+the Jensen branch must remain in the signed complete packet, but does not
+identify the production adapted operator or close the complete NEAR owner,
+progressive/revisit uniformity, `OVERLAP_src`, controlled-shell one-use,
+Nelson, Sector-A, Pre-A or any limit route. No R-188 PDF is issued.
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7
