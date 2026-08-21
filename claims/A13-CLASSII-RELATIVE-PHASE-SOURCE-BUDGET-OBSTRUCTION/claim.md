@@ -1674,6 +1674,22 @@ Fierz/resolvent estimates, joint-source cancellation, A11/A13 one-use,
 Nelson, physical-empty, Sector-A, Pre-A, or any regulator/thermodynamic/
 continuum limit.
 
+For the R-166 fixed-fibre radial-Gram boundary, the pinned Lean 4.32.1 kernel
+cross-check is:
+
+```powershell
+E:\Dev\TECT.venv\Scripts\python.exe -B -X utf8 verification/scripts/lean_r166_radial_gram_crosscheck.py
+```
+
+Expected output is `LEAN R-166 PASS 61/61`; the artifact is
+`runs/2026-08-21-lean-r166-radial-gram-crosscheck/result.json`.  The kernel
+checks only exact rational consequences of the registered R-166 certificate:
+the lower-bound decomposition, derivative/curvature signs, rho and
+semiconvexity arithmetic, and the `3/8` two-harmonic counterdirection.  It
+does not reprove the Pauli-Fierz analytic split, Fourier/resonance estimates,
+the complete multi-root owner, progressive/revisit control, A13/T-050,
+Nelson/measure, removal, Sector-A, or any thermodynamic/continuum limit.
+
 The current proof note must pass the standard form check, zero-overfull gate,
 extracted-text debris check, and all-page Poppler visual QA.
 
@@ -3537,6 +3553,14 @@ T5--T7 promotion remain open. Tier stays T4.
   A13 open-gate list, and the Lean kernel cross-check records the exact
   ordered-field budget implication without changing the tier or closing any
   A11/A13/T-050 or Sector-A route.
+
+- 2026-08-21: Repaired the R-166 authority bridge after its live verifier
+  contract and integrated-result hash drifted from the current A13 card.
+  The restored 210/210 package now has a pinned Lean 4.32.1 rational
+  cross-check (`LEAN R-166 PASS 61/61`) for the global lower decomposition,
+  bracket signs, rho/semiconvexity constants, and two-harmonic ratio.  This
+  remains a fixed sparse-fibre arithmetic cross-check only; it does not close
+  the complete multi-root owner, A13/T-050, Nelson, Sector-A, or any limit.
 
 - 2026-07-21: Registered the relative-phase source-budget obstruction at
   scoped T4.

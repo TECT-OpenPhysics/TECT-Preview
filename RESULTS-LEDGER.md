@@ -2572,6 +2572,16 @@ generalized Gram is `[[5/4,1],[1,3/2]]`, its minimum eigenvalue is
 requires the successor to retain the complete joint cross-root sextic Gram.
 It does not refute the single-pair theorem or the complete production action.
 
+**Kernel cross-check.** EXP-000884 repairs the R-166 authority bridge after
+the live verifier contract and integrated-result hash drifted from the current
+A13 card. The pinned Lean 4.32.1 source `Tect/R166.lean` compiles with
+`LEAN R-166 PASS 61/61` and proves only the exact rational consequences of
+the registered certificate: the lower-bound decomposition, derivative and
+curvature signs, rho/semiconvexity constants, and the `3/8` two-harmonic
+counterdirection. It does not reprove the Pauli-Fierz analytic split,
+Fourier/resonance estimates, complete multi-root owner, progressive/revisit
+control, A13/T-050, Nelson/measure, removal, Sector-A, or any limit.
+
 **Boundary.** This is one affine principal-fibre theorem. It does not cover
 additional past harmonics, other final roots, the complete joint cross-root
 owner, shifted low
