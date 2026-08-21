@@ -1583,6 +1583,12 @@ This does not construct the production R-102 mixed-Gram envelope or prove the
 source/sextic one-use, finite-collar headroom, T-050, A13, Sector-A,
 physical-empty, Pre-A or limit routes. No R-180 PDF is issued.
 
+EXP-000896 / R-181 is a T0, claim-nonbearing Lean checkpoint for the finite
+R-177 two-root feedback block.  It binds the actual beta=1/2 incidence to
+`T(x,y)=(x,x/2+y)`, proves `T^T T=[[5/4,1/2],[1/2,1]]` and the positive
+envelope defect, and leaves the production spatial mixed Gram, source/sextic
+one-use, T-050, A13, Sector-A, physical-empty, Pre-A and limit routes open.
+No R-181 PDF is issued.
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7

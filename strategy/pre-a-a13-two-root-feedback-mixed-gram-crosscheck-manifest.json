@@ -1,0 +1,133 @@
+{
+  "schema": "tect/lean-a13-two-root-feedback-mixed-gram-crosscheck/1.0",
+  "audit_id": "A13-TWO-ROOT-FEEDBACK-MIXED-GRAM-LEAN-CROSSCHECK",
+  "result_id": "R-181",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000896",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Lean cross-check of the finite two-root feedback mixed Gram",
+  "purpose": "Bind the R-177 actual incidence beta=1/2 to a finite lower-triangular feedback operator and kernel-check its exact Gram and one-use envelope. This is a finite owner-coordinate lemma, not the production spatial mixed-Gram theorem.",
+  "inputs": {
+    "r177_manifest": {
+      "path": "strategy/pre-a-a13-two-root-heat-incidence-ledger-manifest.json",
+      "sha256": "8085e63cab49157972cbc8b23718d15a33f1b60ce509e91f9c2975a2f50258ac"
+    },
+    "r176_manifest": {
+      "path": "strategy/pre-a-a13-a1-two-root-cholesky-covariance-witness-manifest.json",
+      "sha256": "93776dab165e7b6dcf703ee592246e2135edf2ff327127c6f8ea6bdb24cd850e"
+    },
+    "a13_status": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+      "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "dimension": 3,
+    "feedback_gain": "1/2",
+    "envelope_constant": "2",
+    "owner_order": ["common_heat", "root_1", "root_2", "future_residual"],
+    "root_multipliers": [1, 2],
+    "feedback_matrix_formula": "T=[[1,0],[beta,1]] with beta=1/2",
+    "mixed_gram_formula": "T^T T=[[1+beta^2,beta],[beta,1]]",
+    "fixture": {
+      "x": "1",
+      "y": "2",
+      "source_norm": "5",
+      "output_norm": "29/4",
+      "defect": "11/4"
+    }
+  },
+  "theorem_markers": [
+    "feedback_formula",
+    "gram_matrix_is_feedback_transpose_feedback",
+    "gram_quadratic",
+    "feedback_defect_decomposition",
+    "feedback_mixed_gram_bound",
+    "feedback_bound_strict_off_zero",
+    "feedback_zero_defect"
+  ],
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R181.lean",
+      "sha256": "5cf86f54e02bdc45f1f74f96ba3d7d2c79266eb2867e0e05d4892a9e8c19d2c4"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_a13_two_root_feedback_mixed_gram_crosscheck.py",
+      "sha256": "971da9760db40a81c8f222cf54b781e475d4f4a13ca84db20fb3d380304be9a1"
+    },
+    "independent": {
+      "path": "codes/foundations/lean_a13_two_root_feedback_mixed_gram_crosscheck_independent.py",
+      "sha256": "a89e6d8c6bce354187c3e2ea69fe83cd17e293588b54373866d5c599edd8ea41"
+    },
+    "verifier": {
+      "path": "codes/foundations/lean_a13_two_root_feedback_mixed_gram_crosscheck_verify.py",
+      "sha256": "562d26c69e6ef17e09d1baebad2ac6709b8b44be78e035f6b9ed8d8500f95584"
+    },
+    "certificate": {
+      "path": "strategy/pre-a-a13-two-root-feedback-mixed-gram-crosscheck-certificate-260821.md",
+      "sha256": "4acf2437584d29b4a7766719e87515901cfff24dd7c921d598f2927786a86cdd"
+    },
+    "note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-two-root-feedback-mixed-gram-crosscheck-260821.md",
+      "sha256": "1387c616f255290a44e59c653131448af103c178aa6857568a9928d114c5e40f"
+    }
+  },
+  "formal_integration": {
+    "event_id": "20260821-r-181-two-root-feedback-mixed-gram-cross-check",
+    "event_ordinal": 677,
+    "event_claim_ids": [
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "EXP-000896",
+      "R-181"
+    ],
+    "event_raw_tokens": [
+      "EXP-000896",
+      "R-181",
+      "feedback mixed-Gram",
+      "Lean",
+      "No R-181 PDF"
+    ],
+    "expected_counts": {
+      "claims": 49,
+      "results": 181,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 896,
+      "events": 677,
+      "tasks": 57,
+      "catalog": 4371
+    },
+    "primary_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r181-two-root-feedback-mixed-gram-crosscheck/primary.json",
+    "independent_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r181-two-root-feedback-mixed-gram-crosscheck/independent.json",
+    "integrated_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r181-two-root-feedback-mixed-gram-crosscheck/integrated.json",
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [],
+    "no_pdf": true
+  },
+  "hostile_mutations": [
+    "change the registered beta feedback gain",
+    "lower the declared finite envelope constant",
+    "replace the exact fixture defect",
+    "reorder the common-heat/root incidence",
+    "change a root multiplier without changing the dyadic relation",
+    "mark A13 closed",
+    "remove the finite owner boundary",
+    "insert a Lean sorry or axiom token"
+  ],
+  "boundary": "R-181 proves only the finite R-177 incidence operator T(x,y)=(x,x/2+y), its exact Gram, the defect decomposition for envelope 2, and the strict off-zero bound. It does not construct the A1 production spatial response, R-102 complete product covariance, R-125 forest/variance owner, source/sextic q ledger, finite collar, T-050/A13, Sector-A, physical-empty, removal, continuum or Pre-A closure. No gate closure, tier change, new negative or PDF follows.",
+  "next_action": "Use this exact feedback block as one mandatory factor in the canonical finite production response. Add the actual spatial root/current maps and R-178 ordered cross blocks, then prove or refute the full owner-complete mixed-Gram envelope before spending source/sextic or collar margins."
+}
