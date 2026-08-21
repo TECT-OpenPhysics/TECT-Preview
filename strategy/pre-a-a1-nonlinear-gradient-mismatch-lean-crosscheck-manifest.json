@@ -1,0 +1,104 @@
+{
+  "schema": "tect/a1-nonlinear-gradient-mismatch-lean-crosscheck/1.0",
+  "slug": "pre-a-a1-nonlinear-gradient-mismatch-lean-crosscheck",
+  "version": "A1-PFR-VARIATIONAL-MISMATCH Lean cross-check v1.0",
+  "issued": "2026-08-21",
+  "tier": "T0",
+  "claim_bearing": false,
+  "claim_id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+  "exploration_id": "EXP-000886",
+  "audit_id": "A1-PFR-VARIATIONAL-MISMATCH-LEAN-CROSSCHECK",
+  "question": "Does the pinned A1 nonlinear density have the exact factor-two real-gradient mismatch recorded against R_exec, independently of the spatial and Class-II terms?",
+  "scope": "Only the scalar nonlinear core at rho=1/4 with lambda and gamma read from the hash-pinned A1 production manifest. This is an exact owner-mismatch cross-check, not a full functional variation, cKK/cJK audit, shell-measure audit, PDE theorem, minimizer result, or continuum result.",
+  "inputs": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    }
+  },
+  "lean_inputs": {
+    "lambda_key": "lambda",
+    "gamma_key": "gamma",
+    "fixture_rho": "1/4",
+    "lambda": "-43/100",
+    "gamma": "81/50"
+  },
+  "theorem_markers": [
+    "declared_is_twice_residual",
+    "manifest_fixture",
+    "equality_zeroes"
+  ],
+  "artifacts": {
+    "lean_entrypoint": "verification/lean/Tect/A1NonlinearMismatch.lean",
+    "primary_script": "verification/scripts/lean_a1_nonlinear_mismatch_crosscheck.py",
+    "independent_script": "codes/foundations/a1_nonlinear_mismatch_crosscheck_independent.py",
+    "integrated_script": "codes/foundations/a1_nonlinear_mismatch_crosscheck_verify.py",
+    "certificate": "strategy/pre-a-a1-nonlinear-gradient-mismatch-lean-crosscheck-certificate-260821.md",
+    "note": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/notes/a1-nonlinear-mismatch-lean-crosscheck-260821.md",
+    "integrated_result": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-08-21-lean-a1-nonlinear-mismatch-crosscheck/result.json"
+  },
+  "hostile_mutations": [
+    "replace the declared gradient coefficient by the residual coefficient",
+    "replace the residual coefficient by the declared gradient coefficient",
+    "change the fixture rho away from the manifest value",
+    "change lambda or gamma without changing the pinned A1 manifest",
+    "claim the cKK/cJK mismatch was formalised by this scalar theorem",
+    "promote the scalar mismatch to a full continuum or solver theorem",
+    "promote the mismatch to a negative result or physical-vacuum conclusion",
+    "allow sorry, admit, axiom, or unsafe in the Lean source"
+  ],
+  "formal_integration": {
+    "expected_counts": {
+      "claims": 49,
+      "results": 171,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 886,
+      "events": 666,
+      "tasks": 57
+    },
+    "event_title": "A1 nonlinear gradient mismatch Lean cross-check",
+    "event_id": "20260821-a1-nonlinear-gradient-mismatch-lean-cross-check",
+    "event_claim_ids": [
+      "A1-PFR-VARIATIONAL-MISMATCH",
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "EXP-000886"
+    ],
+    "event_keywords": [
+      "EXP-000886",
+      "A1-PFR-VARIATIONAL-MISMATCH",
+      "lean-cross-check",
+      "nonlinear-gradient",
+      "owner-interface",
+      "no-tier-change"
+    ],
+    "event_notes": [
+      "strategy/pre-a-a1-nonlinear-gradient-mismatch-lean-crosscheck-manifest.json",
+      "strategy/pre-a-a1-nonlinear-gradient-mismatch-lean-crosscheck-certificate-260821.md",
+      "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/notes/a1-nonlinear-mismatch-lean-crosscheck-260821.md",
+      "verification/lean/Tect/A1NonlinearMismatch.lean",
+      "verification/scripts/lean_a1_nonlinear_mismatch_crosscheck.py",
+      "codes/foundations/a1_nonlinear_mismatch_crosscheck_independent.py",
+      "codes/foundations/a1_nonlinear_mismatch_crosscheck_verify.py",
+      "claims/GATES.md",
+      "RESULTS-LEDGER.md"
+    ],
+    "event_raw_tokens": [
+      "A1 nonlinear gradient mismatch Lean cross-check",
+      "declared nonlinear gradient is twice the implemented residual coefficient",
+      "A1-PFR-VARIATIONAL-MISMATCH remains an owner-interface obstruction",
+      "cKK/cJK and shell-measure issues remain outside this scalar check",
+      "No claim tier or lifecycle changes",
+      "No new negative result is registered",
+      "No physical, Sector-A, Pre-A, or continuum conclusion follows"
+    ],
+    "no_new_negative_ids": [],
+    "no_pdf": true
+  },
+  "no_overclaim": "This T0 claim-nonbearing audit proves only the exact rational factor-two relation between the declared A1 nonlinear real-gradient coefficient and the implemented scalar residual coefficient, plus one nonzero manifest fixture. It does not formalise the cKK/cJK Class-II mismatch, shell-measure mismatch, full spatial variation, solver integration, minimizer, continuum, physical vacuum, Sector-A, or Pre-A result. A1 remains a standalone discrete backend result with its historical source audit failure; no tier, lifecycle, gate, negative, or physical conclusion changes.",
+  "run_contract": {
+    "source_hash_mode": "SHA-256 fail closed",
+    "independent_mode": "stdlib Fraction only; no import of the primary or integrated verifier",
+    "lean_escape_tokens": ["sorry", "admit", "axiom", "unsafe"]
+  }
+}

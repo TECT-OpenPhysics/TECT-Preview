@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**665 accepted events** · latest 25 shown below · machine locator: `index.json`
+**666 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-21 | `20260821-a1-nonlinear-gradient-mismatch-lean-cross-check` — [A1 nonlinear gradient mismatch Lean cross-check] - 2026-08-21 | A1-PFR-VARIATIONAL-MISMATCH, A1-PRODUCTION-FUNCTIONAL-REALISATION, EXP-000886 | [bounded page](pages/000619-000668.md#20260821-a1-nonlinear-gradient-mismatch-lean-cross-check) |
 | 2026-08-21 | `20260821-a13-t-050-production-cylinder-scratch-route-bou` — [A13 T-050 production-cylinder scratch route boundary] - 2026-08-21 | A1-PRODUCTION-FUNCTIONAL-REALISATION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000885, R-166 | [bounded page](pages/000619-000668.md#20260821-a13-t-050-production-cylinder-scratch-route-bou) |
 | 2026-08-21 | `20260821-a13-r-166-authority-repair-and-lean-radial-gram` — [A13 R-166 authority repair and Lean radial-Gram cross-check] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000884, R-166 | [bounded page](pages/000619-000668.md#20260821-a13-r-166-authority-repair-and-lean-radial-gram) |
 | 2026-08-21 | `20260821-a13-r-058-authority-repair-and-lean-budget-cros` — [A13 R-058 authority repair and Lean budget cross-check] - 2026-08-21 | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A12-CLASSII-SOURCE-SQUARE-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000883, R-058 | [bounded page](pages/000619-000668.md#20260821-a13-r-058-authority-repair-and-lean-budget-cros) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-14 | `20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati` — [R-169 v1.3 Reading-H native-owner BCC realization route termination] - 2026-08-14 | A1-KERNEL-CONV, B1-RH-ENUM, B2-PROPA-HLAYER, B3-RH-TESTED-STRUCTURE-RANKING, C6-SPACETIME-SIGNATURE, EXP-000860, R-169 | [bounded page](pages/000619-000668.md#20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati) |
 | 2026-08-14 | `20260814-legacy-research-knowledge-base-cutover-and-firs` — [Legacy research knowledge-base cutover and first T-055 intake] - 2026-08-14 | B3-BCC-STRUCT, C1-LORENTZ-KIN, C2-LORENTZ-EMERGENT, C6-SPACETIME-SIGNATURE | [bounded page](pages/000619-000668.md#20260814-legacy-research-knowledge-base-cutover-and-firs) |
 | 2026-08-14 | `20260814-adopt-literature-first-proof-gate-and-legacy-ev` — [Adopt literature-first proof gate and legacy-evidence audit] - 2026-08-14 | B1-RH-ENUM, C4-GRAVITY-1LOOP, C5-NEWTON-G, C6-SPACETIME-SIGNATURE | [bounded page](pages/000619-000668.md#20260814-adopt-literature-first-proof-gate-and-legacy-ev) |
-| 2026-08-14 | `20260814-r-169-v1-2-reading-h-covariance-to-p1-interface` — [R-169 v1.2 Reading-H covariance-to-P1 interface route split] - 2026-08-14 | A1-PRODUCTION-FUNCTIONAL-REALISATION, A2-FULL-PRODUCTION-WELLPOSED, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, B1-RH-ENUM, B3-RH-TESTED-STRUCTURE-RANKING, C6-BCC-PREMISE-BLOCKED, C6-SPACETIME-SIGNATURE, EXP-000858, R-169 | [bounded page](pages/000619-000668.md#20260814-r-169-v1-2-reading-h-covariance-to-p1-interface) |
 
 ## Post-cutover pages
 
@@ -49,5 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 619–665 | 47 | [000619-000668.md](pages/000619-000668.md) |
+| 619–666 | 48 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

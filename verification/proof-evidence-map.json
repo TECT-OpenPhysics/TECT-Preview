@@ -7,7 +7,7 @@
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
     "RESULTS-LEDGER.md": "df174e8fe57763b21d3e6e8f000ca3b77f5329e13104a71d7231affe89309251",
-    "changelog/log.jsonl": "667abc2cc0ed15a6d34bbd1c76f2df215a370893a734f07ec6bc21cd7352ef68",
+    "changelog/log.jsonl": "7b9950dd53758de2b142bf4ee73295b44291874b43b1f08bde120ac50dcd00f9",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "78a6b6749e82c906cc614639226b74b8a6bd7cd391f6ba41bc4a326100607735",
+    "explorations/log.jsonl": "3ee4cde55ada6b1c6202dd9a2c50479bd767ce1bcd813d4b9c69c15676135028",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "todo/todo.json": "ec2cfbd089b7c06eb8f82fbd4f5634c8ba882d440766b8ec3d5fec6a8e75359a"
   },
@@ -68,15 +68,15 @@
     "refuted_claims": 1,
     "reusable_results": 171,
     "negative_records": 372,
-    "proof_explorations": 885,
+    "proof_explorations": 886,
     "exploration_verdicts": {
-      "advanced": 541,
+      "advanced": 542,
       "failed": 235,
       "inconclusive": 79,
       "parked": 30
     },
     "process_grade_lessons": 3,
-    "accepted_events": 665,
+    "accepted_events": 666,
     "tasks": 57,
     "live_tasks": 11,
     "completed_tasks": 46,
@@ -89,7 +89,7 @@
     "unordered_root_pdfs": 9,
     "proof_notes_without_sibling_pdf": 19,
     "proof_notes_with_incomplete_historical_footer": 118,
-    "run_json": 798,
+    "run_json": 799,
     "claim_manifests": 124,
     "bundle_manifests": 40,
     "bundle_embedded_manifests": 45
@@ -2787,6 +2787,13 @@
           "EXP-000885",
           "R-166"
         ]
+      },
+      {
+        "event": "20260821-a1-nonlinear-gradient-mismatch-lean-cross-check",
+        "claim_ids": [
+          "A1-PFR-VARIATIONAL-MISMATCH",
+          "EXP-000886"
+        ]
       }
     ],
     "event_unregistered_negative_tags": [
@@ -3667,6 +3674,7 @@
           "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-reference-functional-closure/result.json",
           "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-variational-audit/closure-probe.json",
           "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-variational-audit/result.json",
+          "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-08-21-lean-a1-nonlinear-mismatch-crosscheck/result.json",
           "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/promotion-evidence/2026-07-17-jusang-independent/FILE-SHA256.json",
           "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/promotion-evidence/2026-07-17-jusang-independent/environment.json",
           "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/promotion-evidence/2026-07-17-jusang-independent/promotion-evidence.json",
@@ -3700,9 +3708,10 @@
           "EXP-000858",
           "EXP-000860",
           "EXP-000862",
-          "EXP-000885"
+          "EXP-000885",
+          "EXP-000886"
         ],
-        "latest_exploration_id": "EXP-000885",
+        "latest_exploration_id": "EXP-000886",
         "accepted_event_ids": [
           "20260717-register-p1-production-functional-variational-a",
           "20260717-close-p1-reference-functional-variational-scaff",
@@ -3711,9 +3720,10 @@
           "20260802-pre-a-evidence-first-model-selection-charter-re",
           "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
           "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial",
-          "20260821-a13-t-050-production-cylinder-scratch-route-bou"
+          "20260821-a13-t-050-production-cylinder-scratch-route-bou",
+          "20260821-a1-nonlinear-gradient-mismatch-lean-cross-check"
         ],
-        "latest_event_id": "20260821-a13-t-050-production-cylinder-scratch-route-bou",
+        "latest_event_id": "20260821-a1-nonlinear-gradient-mismatch-lean-cross-check",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -70890,6 +70900,50 @@
       "task_id": "T-050",
       "title": "Audit the exploratory A13 production-cylinder scratch against the canonical owner contract",
       "verdict": "parked"
+    },
+    {
+      "boundary": "The cKK versus cJK Class-II mismatch, shell-energy measure, complete spatial variation, historical solver integration, minimizer, continuum/PDE, physical vacuum, Sector-A and Pre-A remain outside this check. No tier, lifecycle, gate or negative-result status changes.",
+      "claim_ids": [
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION"
+      ],
+      "decision_reason": "This confirms the existing A1-PFR-VARIATIONAL-MISMATCH at an exact registered point and prevents treating the standalone backend residual as the gradient of the declared historical density. It is a cross-check of the scalar nonlinear core, not a new full-functional theorem.",
+      "evidence_refs": [
+        "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json#known_obstruction",
+        "strategy/pre-a-a1-nonlinear-gradient-mismatch-lean-crosscheck-manifest.json#theorem_markers",
+        "strategy/pre-a-a1-nonlinear-gradient-mismatch-lean-crosscheck-certificate-260821.md#Exact-result",
+        "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/notes/a1-nonlinear-mismatch-lean-crosscheck-260821.md#A1-nonlinear-mismatch",
+        "verification/lean/Tect/A1NonlinearMismatch.lean#manifest_fixture",
+        "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-08-21-lean-a1-nonlinear-mismatch-crosscheck/result.json#derived"
+      ],
+      "finding": "The declared nonlinear real-gradient coefficient is exactly 2*(lambda*rho+gamma*rho^2), while the audited residual coefficient is lambda*rho+gamma*rho^2. At the manifest fixture lambda=-43/100, gamma=81/50, rho=1/4, the residual is -1/160, the declared coefficient is -1/80, and their difference is -1/160. The exact scalar equality set is rho=0 or rho=43/162. The primary Lean bridge, independent Fraction lane and integrated mutation firewall pass.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [],
+      "id": "EXP-000886",
+      "method": [
+        "Read lambda and gamma from the hash-pinned A1 production manifest and use the registered fixture rho=1/4.",
+        "Compile the ASCII Lean entrypoint with the pinned Lean 4.32.1 and Mathlib v4.32.1 Lake lock; reject sorry, admit, axiom and unsafe tokens.",
+        "Compare the Lean bridge with a non-importing Python standard-library Fraction calculation and run eight hostile mutations covering coefficient, fixture, scope and escape-token overclaims."
+      ],
+      "next_action": "Freeze the canonical finite production-cylinder owner only after the declared-energy versus residual convention is chosen explicitly; then audit complete current syntheses, covariances, root incidence and cross-root terms. Revisit the cKK/cJK and shell-measure mismatches as separate owner obligations.",
+      "provenance": "contemporaneous",
+      "question": "Does a kernel-checked scalar calculation independently confirm the factor-two mismatch between the declared A1 nonlinear density and the implemented residual before a canonical production-cylinder owner is selected?",
+      "recorded_at": "2026-08-21T09:28:44Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000885",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-21",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": null,
+      "title": "Kernel-check the A1 nonlinear owner mismatch before selecting a production cylinder",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -96821,6 +96875,52 @@
       "result_ids": [],
       "linked_result_ids": [],
       "result_link_basis": {}
+    },
+    {
+      "id": "20260821-a1-nonlinear-gradient-mismatch-lean-cross-check",
+      "date": "2026-08-21",
+      "header": "[A1 nonlinear gradient mismatch Lean cross-check] - 2026-08-21",
+      "claim_ids": [
+        "A1-PFR-VARIATIONAL-MISMATCH",
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "EXP-000886"
+      ],
+      "keywords": [
+        "A1-PFR-VARIATIONAL-MISMATCH",
+        "EXP-000886",
+        "lean-cross-check",
+        "no-tier-change",
+        "nonlinear-gradient",
+        "owner-interface"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-a1-nonlinear-gradient-mismatch-lean-crosscheck-manifest.json",
+        "strategy/pre-a-a1-nonlinear-gradient-mismatch-lean-crosscheck-certificate-260821.md",
+        "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/notes/a1-nonlinear-mismatch-lean-crosscheck-260821.md",
+        "verification/lean/Tect/A1NonlinearMismatch.lean",
+        "claims/GATES.md",
+        "RESULTS-LEDGER.md"
+      ],
+      "scripts": [
+        "verification/scripts/lean_a1_nonlinear_mismatch_crosscheck.py",
+        "codes/foundations/a1_nonlinear_mismatch_crosscheck_independent.py",
+        "codes/foundations/a1_nonlinear_mismatch_crosscheck_verify.py"
+      ],
+      "raw": "## [A1 nonlinear gradient mismatch Lean cross-check] - 2026-08-21\n\nEXP-000886 records the A1 nonlinear gradient mismatch Lean cross-check as an additive claim-nonbearing audit. The declared nonlinear gradient is twice the implemented residual coefficient at the exact manifest fixture, and the A1-PFR-VARIATIONAL-MISMATCH remains an owner-interface obstruction. The cKK/cJK and shell-measure issues remain outside this scalar check. No claim tier or lifecycle changes, no new negative result is registered, and no physical, Sector-A, Pre-A, or continuum conclusion follows.\n\n",
+      "claim_refs": [
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION"
+      ],
+      "claim_ref_basis": {
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "A1-PFR-VARIATIONAL-MISMATCH",
+        "EXP-000886"
+      ],
+      "result_ids": [],
+      "linked_result_ids": [],
+      "result_link_basis": {}
     }
   ],
   "all_tasks": [
@@ -101770,6 +101870,12 @@
         "id": "event:20260820-r-168-v1-3-generated-reader-locator-correction",
         "kind": "accepted_event",
         "label": "[R-168 v1.3 generated-reader locator correction under rolling windows] - 2026-08-20",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260821-a1-nonlinear-gradient-mismatch-lean-cross-check",
+        "kind": "accepted_event",
+        "label": "[A1 nonlinear gradient mismatch Lean cross-check] - 2026-08-21",
         "authority": "CHANGELOG.md"
       },
       {
@@ -107170,6 +107276,12 @@
         "id": "exploration:EXP-000885",
         "kind": "proof_exploration",
         "label": "Audit the exploratory A13 production-cylinder scratch against the canonical owner contract",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000886",
+        "kind": "proof_exploration",
+        "label": "Kernel-check the A1 nonlinear owner mismatch before selecting a production cylinder",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -123223,6 +123335,12 @@
         "relation": "records_result",
         "to": "result:R-168",
         "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260821-a1-nonlinear-gradient-mismatch-lean-cross-check",
+        "relation": "records",
+        "to": "claim:A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "basis": "explicit_claim_ids"
       },
       {
         "from": "event:20260821-a10-dependency-ledger-repair-after-a11-action-c",
@@ -164029,6 +164147,18 @@
         "relation": "references_result",
         "to": "result:R-166",
         "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000886",
+        "relation": "assesses",
+        "to": "claim:A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000886",
+        "relation": "continues",
+        "to": "exploration:EXP-000885",
+        "basis": "structured_related_ref"
       },
       {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",

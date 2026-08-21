@@ -1,0 +1,208 @@
+{
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "A1-PFR-VARIATIONAL-MISMATCH-LEAN-CROSSCHECK",
+      "expected": "A1-PFR-VARIATIONAL-MISMATCH-LEAN-CROSSCHECK",
+      "name": "manifest identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim-nonbearing",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "no new negatives",
+      "pass": true
+    },
+    {
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "name": "A1 authority hash",
+      "pass": true
+    },
+    {
+      "actual": 1,
+      "expected": "EXP-000886",
+      "name": "exploration identity",
+      "pass": true
+    },
+    {
+      "actual": [
+        [
+          666,
+          "20260821-a1-nonlinear-gradient-mismatch-lean-cross-check"
+        ]
+      ],
+      "expected": [
+        666,
+        "20260821-a1-nonlinear-gradient-mismatch-lean-cross-check"
+      ],
+      "name": "event identity",
+      "pass": true
+    },
+    {
+      "actual": [
+        "A1-PFR-VARIATIONAL-MISMATCH",
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "EXP-000886"
+      ],
+      "expected": [
+        "A1-PFR-VARIATIONAL-MISMATCH",
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "EXP-000886"
+      ],
+      "name": "event claims and no negatives",
+      "pass": true
+    },
+    {
+      "actual": 3,
+      "expected": 3,
+      "name": "three source ASTs parse",
+      "pass": true
+    },
+    {
+      "actual": [
+        "__future__",
+        "argparse",
+        "fractions",
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "expected": "stdlib",
+      "name": "independent stdlib only",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": [
+        "sorry",
+        "admit",
+        "axiom",
+        "unsafe"
+      ],
+      "name": "Lean escape tokens absent",
+      "pass": true
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "primary PASS",
+      "pass": true
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "independent PASS",
+      "pass": true
+    },
+    {
+      "actual": {
+        "declared_equals_twice_residual": true,
+        "declared_gradient_coefficient": "-1/80",
+        "difference": "-1/160",
+        "gamma": "81/50",
+        "lambda": "-43/100",
+        "residual_coefficient": "-1/160",
+        "rho": "1/4"
+      },
+      "expected": {
+        "declared_equals_twice_residual": true,
+        "declared_gradient_coefficient": "-1/80",
+        "difference": "-1/160",
+        "gamma": "81/50",
+        "lambda": "-43/100",
+        "residual_coefficient": "-1/160",
+        "rho": "1/4"
+      },
+      "name": "derived records agree",
+      "pass": true
+    },
+    {
+      "actual": {
+        "declared_equals_twice_residual": true,
+        "declared_gradient_coefficient": "-1/80",
+        "difference": "-1/160",
+        "gamma": "81/50",
+        "lambda": "-43/100",
+        "residual_coefficient": "-1/160",
+        "rho": "1/4"
+      },
+      "expected": "factor-two nonzero mismatch",
+      "name": "acceptance predicate",
+      "pass": true
+    },
+    {
+      "actual": [
+        {
+          "label": "replace the declared gradient coefficient by the residual coefficient",
+          "rejected": true
+        },
+        {
+          "label": "replace the residual coefficient by the declared gradient coefficient",
+          "rejected": true
+        },
+        {
+          "label": "change the fixture rho away from the manifest value",
+          "rejected": true
+        },
+        {
+          "label": "change lambda or gamma without changing the pinned A1 manifest",
+          "rejected": true
+        },
+        {
+          "label": "claim the cKK/cJK mismatch was formalised by this scalar theorem",
+          "rejected": true
+        },
+        {
+          "label": "promote the scalar mismatch to a full continuum or solver theorem",
+          "rejected": true
+        },
+        {
+          "label": "promote the mismatch to a negative result or physical-vacuum conclusion",
+          "rejected": true
+        },
+        {
+          "label": "allow sorry, admit, axiom, or unsafe in the Lean source",
+          "rejected": true
+        }
+      ],
+      "expected": "all rejected",
+      "name": "hostile mutations rejected",
+      "pass": true
+    }
+  ],
+  "audit_id": "A1-PFR-VARIATIONAL-MISMATCH-LEAN-CROSSCHECK",
+  "boundary": "This T0 claim-nonbearing audit proves only the exact rational factor-two relation between the declared A1 nonlinear real-gradient coefficient and the implemented scalar residual coefficient, plus one nonzero manifest fixture. It does not formalise the cKK/cJK Class-II mismatch, shell-measure mismatch, full spatial variation, solver integration, minimizer, continuum, physical vacuum, Sector-A, or Pre-A result. A1 remains a standalone discrete backend result with its historical source audit failure; no tier, lifecycle, gate, negative, or physical conclusion changes.",
+  "children": {
+    "independent": {
+      "declared_equals_twice_residual": true,
+      "declared_gradient_coefficient": "-1/80",
+      "difference": "-1/160",
+      "gamma": "81/50",
+      "lambda": "-43/100",
+      "residual_coefficient": "-1/160",
+      "rho": "1/4"
+    },
+    "primary_assertions": 13
+  },
+  "claim_id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+  "derived": {
+    "declared_equals_twice_residual": true,
+    "declared_gradient_coefficient": "-1/80",
+    "difference": "-1/160",
+    "gamma": "81/50",
+    "lambda": "-43/100",
+    "residual_coefficient": "-1/160",
+    "rho": "1/4"
+  },
+  "mode": "formal",
+  "run_kind": "integrated",
+  "schema": "tect/a1-nonlinear-gradient-mismatch-lean-crosscheck/1.0",
+  "verdict": "PASS"
+}
