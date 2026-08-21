@@ -1,0 +1,82 @@
+{
+  "schema": "tect/lean-a13-adapted-near-obstruction-crosscheck/1.0",
+  "audit_id": "A13-ADAPTED-NEAR-OBSTRUCTION-CROSSCHECK",
+  "result_id": "R-187",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000902",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "R-187 adapted NEAR obstruction Lean cross-check",
+  "purpose": "Kernel cross-check the finite nonlinear adapted-NEAR fixture, signed control-control slack, and bounded Doob fixture used to delimit the still-open production operator estimate.",
+  "inputs": {
+    "r081_manifest": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_cartan_tail_adapted_near_temporal_reduction_manifest.json", "sha256": "bb23e56992b741af27be75ef44e1e007fad4adbb309bbd71e42c0357db5ceff7"},
+    "a13_status": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json", "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"},
+    "lean_toolchain": {"path": "verification/lean/lean-toolchain", "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"},
+    "lakefile": {"path": "verification/lean/lakefile.toml", "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"},
+    "lake_manifest": {"path": "verification/lean/lake-manifest.json", "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"}
+  },
+  "registered_inputs": {
+    "nonlinear_c": "2/5",
+    "root_values": ["-1", "1"],
+    "next_values": ["-1", "1"],
+    "gamma": "1/20",
+    "theta_values": ["0", "1/10", "1/2"],
+    "expected": {
+      "conditional_mean_plus": "0",
+      "conditional_mean_minus": "0",
+      "conditional_square_plus": "49/25",
+      "conditional_square_minus": "9/25",
+      "mean_square": "29/25",
+      "root_deviation_plus": "4/5",
+      "root_deviation_minus": "-4/5",
+      "ledger_a": "39/80",
+      "ledger_b": "121/240",
+      "ledger_slack": "1/120",
+      "ledger_moment": "120",
+      "pair_slacks": ["-19/120", "-23/120", "-13/40"],
+      "doob_square_sum": "2",
+      "doob_terminal_l2": "2",
+      "doob_terminal_l6": "32",
+      "doob_square_l6": "8",
+      "doob_l6_holds": true
+    }
+  },
+  "theorem_markers": ["nonlinear_mean_fixture", "nonlinear_square_deviation_fixture", "adapted_ledger_fixture", "control_control_pair_slack_fixture", "finite_doob_fixture"],
+  "files": {
+    "lean_entrypoint": {"path": "verification/lean/Tect/R187.lean", "sha256": "277931ee2c18abaf769bf958257a8eae9e975ad2de7f82dcae3ba6e49053d472"},
+    "primary": {"path": "verification/scripts/lean_a13_adapted_near_obstruction_crosscheck.py", "sha256": "d38bbefb28388316daa6f134d17391965b861f27ee7188d1c963f396daca2850"},
+    "independent": {"path": "codes/foundations/lean_a13_adapted_near_obstruction_crosscheck_independent.py", "sha256": "527a55f3f33d9c00dbc237f753f3a6017f8f3cb73bc025bad6415f88aa76b80b"},
+    "verifier": {"path": "codes/foundations/lean_a13_adapted_near_obstruction_crosscheck_verify.py", "sha256": "4042c2250365fd3199065544f4efb17cc6a3cbe95789da169da9c5aed3990b04"},
+    "certificate": {"path": "strategy/pre-a13-adapted-near-obstruction-crosscheck-certificate-260822.md", "sha256": "edb87263f7e5636746231664187adbccee8b5f574bd9ca640ae1ef8764c8a623"},
+    "note": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-adapted-near-obstruction-crosscheck-260822.md", "sha256": "aa04852daed6c320092f1e20d31edc222227e9aa8056d5e3508dd21952466d67"}
+  },
+  "hostile_mutations": [
+    "erase the nonlinear conditional means",
+    "change the root square deviations",
+    "change the adapted ledger coefficients",
+    "change the signed control-control slack",
+    "change the finite Doob fixture",
+    "promote the fixture to the complete adapted NEAR operator",
+    "promote the fixture to OVERLAP_src or an A13 gate closure",
+    "insert a Lean sorry, admit, axiom, or unsafe escape"
+  ],
+  "boundary": {"a13_gate_closed": false, "overlap_src_closed": false, "text": "R-187 proves only finite rational adapted-NEAR fixtures: nonlinear conditional means versus square innovations, the signed control-control slack, and a bounded Doob L6 witness. It does not prove the production adapted operator, the complete same-root lower bound, progressive/revisit uniformity, OVERLAP_src, Nelson, an interacting measure, or any Sector-A, Pre-A, or limit result."},
+  "formal_integration": {
+    "expected_counts": {"claims": 49, "results": 187, "gates": 206, "negatives": 372, "explorations": 902, "events": 683, "tasks": 57, "catalog": 4431},
+    "event_ordinal": 683,
+    "event_title": "R-187 adapted NEAR obstruction Lean cross-check",
+    "event_id": "20260822-r-187-adapted-near-obstruction-lean-cross-check",
+    "event_claim_ids": ["A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION", "EXP-000902", "R-187"],
+    "event_keywords": ["EXP-000902", "Lean", "R-081", "R-187", "adapted-NEAR", "no-overlap-closure", "route-split", "signed-slack"],
+    "event_notes": ["strategy/pre-a13-adapted-near-obstruction-crosscheck-manifest.json", "strategy/pre-a13-adapted-near-obstruction-crosscheck-certificate-260822.md", "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-adapted-near-obstruction-crosscheck-260822.md", "RESULTS-LEDGER.md", "ROADMAP.md", "strategy/INDEX.md"],
+    "event_scripts": ["verification/scripts/lean_a13_adapted_near_obstruction_crosscheck.py", "codes/foundations/lean_a13_adapted_near_obstruction_crosscheck_independent.py", "codes/foundations/lean_a13_adapted_near_obstruction_crosscheck_verify.py"],
+    "event_raw_tokens": ["EXP-000902", "R-187", "adapted NEAR obstruction", "Lean", "OVERLAP_src remain open", "No R-187 PDF"],
+    "primary_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r187-adapted-near-obstruction-crosscheck/primary.json",
+    "independent_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r187-adapted-near-obstruction-crosscheck/independent.json",
+    "integrated_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r187-adapted-near-obstruction-crosscheck/integrated.json",
+    "no_new_negative_ids": [],
+    "no_pdf": true
+  },
+  "no_overclaim": "This T0 claim-nonbearing package kernel-checks only finite adapted-NEAR fixtures. It does not prove the production adapted operator or any complete progressive/revisit, OVERLAP_src, Nelson, measure, Sector-A, Pre-A, tier, or gate result."
+}

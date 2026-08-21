@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**186 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**187 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-187`](../RESULTS-LEDGER.md#r-187) | Adapted NEAR obstruction Lean cross-check | T0 |
 | [`R-186`](../RESULTS-LEDGER.md#r-186) | Temporal packet algebra Lean cross-check | T0 |
 | [`R-185`](../RESULTS-LEDGER.md#r-185) | Finite packet Cauchy Lean cross-check | T0 |
 | [`R-184`](../RESULTS-LEDGER.md#r-184) | Two-block Douglas identity Lean cross-check | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-165`](../RESULTS-LEDGER.md#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | T4 (scoped exact finite production fibre; no promotion). |
 | [`R-164`](../RESULTS-LEDGER.md#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | T4 |
 | [`R-163`](../RESULTS-LEDGER.md#r-163) | Full-lattice weighted-resolvent dyadic-forest gap and exact reduced-action threshold | T4 |
-| [`R-162`](../RESULTS-LEDGER.md#r-162) | Resolvent-controlled pure-dyadic recursive-chain uniform neighbourhood gap | T4 |
 
 Search without loading the full ledger:
 

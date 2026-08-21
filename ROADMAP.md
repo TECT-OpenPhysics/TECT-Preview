@@ -1624,6 +1624,13 @@ fresh-times-future cross term `6/25`.  This is only finite algebra: the
 production temporal map, progressive/revisit uniformity, complete same-root
 lower bound, `OVERLAP_src`, Nelson, Sector-A, Pre-A and all limit routes remain
 open. No R-186 PDF is issued.
+EXP-000902 / R-187 is a T0, claim-nonbearing Lean checkpoint for the finite
+adapted-NEAR obstruction fixtures.  It binds zero conditional first variation
+with root-square innovations `+4/5` and `-4/5`, the signed pair slacks
+`-19/120`, `-23/120`, `-13/40`, and a bounded Doob witness.  This is only a
+finite diagnostic: the production adapted operator, complete same-root lower
+bound, progressive/revisit uniformity, `OVERLAP_src`, Nelson, Sector-A, Pre-A
+and all limit routes remain open. No R-187 PDF is issued.
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7
