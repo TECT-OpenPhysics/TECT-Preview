@@ -1,0 +1,150 @@
+{
+  "schema": "tect/lean-a13-two-block-douglas-crosscheck/1.0",
+  "audit_id": "A13-TWO-BLOCK-DOUGLAS-CROSSCHECK",
+  "result_id": "R-184",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000899",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "R-184 two-block Douglas identity Lean cross-check",
+  "purpose": "Kernel cross-check the exact finite two-block Cauchy-Douglas identity used by R-081's temporal overlap reduction, without importing the full progressive or production theorem.",
+  "inputs": {
+    "r081_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_cartan_tail_adapted_near_temporal_reduction_manifest.json",
+      "sha256": "bb23e56992b741af27be75ef44e1e007fad4adbb309bbd71e42c0357db5ceff7"
+    },
+    "a13_status": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+      "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "s1": "3",
+    "s2": "4",
+    "h1": "5",
+    "h2": "-2",
+    "expected": {
+      "source_norm": "25",
+      "control_norm": "29",
+      "pairing": "7",
+      "wedge": "-26",
+      "gap": "676"
+    }
+  },
+  "theorem_markers": [
+    "two_block_douglas_identity",
+    "two_block_douglas_bound",
+    "fixture_identity",
+    "fixture_gap"
+  ],
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R184.lean",
+      "sha256": "3cf283bc0ffaad0f78166884f10c7211d27cb3a5b74c55364fbff575ffd8b788"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_a13_two_block_douglas_crosscheck.py",
+      "sha256": "35b8746cf6119ac8ee98bb9a729d944c6a8e6572d6a6b0184173573593313d0e"
+    },
+    "independent": {
+      "path": "codes/foundations/lean_a13_two_block_douglas_crosscheck_independent.py",
+      "sha256": "82a80bfa2c4e4607f8297990b3aaebcf87d8284fb0bafce6db7c47dfe41d13fd"
+    },
+    "verifier": {
+      "path": "codes/foundations/lean_a13_two_block_douglas_crosscheck_verify.py",
+      "sha256": "bbaea0d54d14b5b441cc8c4cf81572915cd71a2f4054ca045802d7675a7dcfcd"
+    },
+    "certificate": {
+      "path": "strategy/pre-a13-two-block-douglas-crosscheck-certificate-260822.md",
+      "sha256": "1c174cea47d4e8b350e1296bca8cec007939d959924fe9c60ce82e3610dd14ac"
+    },
+    "note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-two-block-douglas-crosscheck-260822.md",
+      "sha256": "379bccc9808b8643b1a665a4976e10318daa0860823cfc0e793d3ce9c35abeff"
+    }
+  },
+  "hostile_mutations": [
+    "change the exact source-control pairing",
+    "change the determinant wedge",
+    "change the Douglas gap",
+    "replace the contraction bound by a failing assertion",
+    "promote the finite identity to an overlap_src closure",
+    "promote the finite identity to an A13 closure",
+    "insert a Lean sorry, admit, axiom, or unsafe escape"
+  ],
+  "boundary": {
+    "a13_gate_closed": false,
+    "overlap_src_closed": false,
+    "text": "R-184 proves only a finite two-block rational identity and its contraction consequence. It does not instantiate the production temporal maps, prove arbitrary partition or revisit uniformity, prove the complete same-root packet, close OVERLAP_src or Nelson, construct an interacting measure, or close Sector-A or Pre-A."
+  },
+  "formal_integration": {
+    "expected_counts": {
+      "claims": 49,
+      "results": 184,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 899,
+      "events": 680,
+      "tasks": 57,
+      "catalog": 4401
+    },
+    "event_ordinal": 680,
+    "event_title": "R-184 two-block Douglas identity Lean cross-check",
+    "event_id": "20260822-r-184-two-block-douglas-identity-lean-cross-che",
+    "event_claim_ids": [
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "EXP-000899",
+      "R-184"
+    ],
+    "event_keywords": [
+      "EXP-000899",
+      "Lean",
+      "R-184",
+      "douglas-contraction",
+      "finite-identity",
+      "no-overlap-closure",
+      "route-split",
+      "two-block"
+    ],
+    "event_notes": [
+      "strategy/pre-a13-two-block-douglas-crosscheck-manifest.json",
+      "strategy/pre-a13-two-block-douglas-crosscheck-certificate-260822.md",
+      "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-two-block-douglas-crosscheck-260822.md",
+      "RESULTS-LEDGER.md",
+      "ROADMAP.md",
+      "strategy/INDEX.md"
+    ],
+    "event_scripts": [
+      "verification/scripts/lean_a13_two_block_douglas_crosscheck.py",
+      "codes/foundations/lean_a13_two_block_douglas_crosscheck_independent.py",
+      "codes/foundations/lean_a13_two_block_douglas_crosscheck_verify.py"
+    ],
+    "event_raw_tokens": [
+      "EXP-000899",
+      "R-184",
+      "two-block Douglas",
+      "Lean",
+      "OVERLAP_src remains open",
+      "No R-184 PDF"
+    ],
+    "primary_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r184-two-block-douglas-crosscheck/primary.json",
+    "independent_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r184-two-block-douglas-crosscheck/independent.json",
+    "integrated_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r184-two-block-douglas-crosscheck/integrated.json",
+    "no_new_negative_ids": [],
+    "no_pdf": true
+  },
+  "no_overclaim": "This T0 claim-nonbearing package kernel-checks only the finite two-block identity and its contraction consequence. It does not prove the R-081 production temporal factorisation, arbitrary progressive/revisit uniformity, OVERLAP_src, Nelson, an interacting measure, Sector-A, Pre-A, or a tier or gate closure."
+}

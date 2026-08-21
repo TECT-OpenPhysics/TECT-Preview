@@ -28,6 +28,7 @@ policy in `governance/development-history.md`.
 | [R-178](#r-178) | Complete two-root cross-owner phase differentiation | R-178 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000893. It retains the field-field, current-current and ordered field-current R-174 blocks, differentiates both root directions exactly, and proves their sum is zero by global phase invariance; the ordered block is active in the registered fixture. The production sign, heat/forest/complement/returned-low/source/sextic owner, T-050, A13, Sector-A and Pre-A remain open |
 | [R-179](#r-179) | Future-variance and forest owner-half coefficient ledger | R-179 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000894. It rechecks the R-125/R-136 coefficient `P=F/2-V/4`, the replica form `2P=F-V/2`, and the exact constant-translation omission defect. The analytic forest, production source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-183](#r-183) | Diagonal reserve margin for the feedback-pulled cross-Hessian | R-183 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000898. It proves the exact reserve condition `d1-a>0` and `d2-a>=a^2/(d1-a)`, the isotropic threshold `d>=2a`, and the registered `a=8` subthreshold fixture. The actual heat/forest/low/source/sextic owner, T-050, A13, Sector-A and Pre-A remain open |
+| [R-184](#r-184) | Two-block Douglas identity Lean cross-check | R-184 v1.0 is a T0 claim-nonbearing kernel cross-check under EXP-000899. It proves the exact finite identity `||s||^2||h||^2-<s,h>^2=(s1*h2-s2*h1)^2` and the associated two-block contraction used by the R-081 temporal overlap reduction. The production temporal factorisation, arbitrary progressive/revisit uniformity, `OVERLAP_src`, Nelson, Sector-A and Pre-A remain open |
 | [R-182](#r-182) | Feedback-pulled cross-Hessian margin Lean cross-check | R-182 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000897. It combines the active R-178 cross coefficient with the R-181 feedback map and proves the exact pulled Hessian `[-2,4;4,-8]` with eigenvalues -10 and 0. The diagonal production owner, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-181](#r-181) | Finite two-root feedback mixed-Gram Lean cross-check | R-181 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000896. It binds the R-177 beta=1/2 root-2 feedback map, exact Gram `[[5/4,1/2],[1/2,1]]`, and positive envelope defect. The production spatial mixed Gram, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-180](#r-180) | Lean scalar triangular majorant cross-check | R-180 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000895. It rechecks the finite geometric majorant algebra, abstract C=5 positivity, the rational fixture, and the registered exponent margins 7/60 and 1/12. The production mixed-Gram envelope, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
@@ -340,6 +341,35 @@ A13, Nelson, a measure, physical-empty comparison, removal, continuum limits,
 Sector-A or Pre-A. No tier change, gate closure, new negative or PDF follows.
 
 **Proven in:** [R-179 certificate](strategy/pre-a-a13-future-variance-forest-owner-half-ledger-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R179.lean), [primary script](verification/scripts/lean_a13_future_variance_forest_owner_half_ledger.py), [independent script](codes/foundations/lean_a13_future_variance_forest_owner_half_ledger_independent.py), [integrated verifier](codes/foundations/lean_a13_future_variance_forest_owner_half_ledger_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-future-variance-forest-owner-half-ledger-260821.md), and the saved run artefacts. No R-179 PDF is issued.
+
+<a id="r-184"></a>
+### R-184 -- Two-block Douglas identity Lean cross-check
+
+**Result ID.** `R-184` is a T0, claim-nonbearing kernel cross-check under
+`EXP-000899`.
+
+**Exact result.** For rational source coordinates `s=(s1,s2)` and control
+coordinates `h=(h1,h2)`, the pinned Lean theorem proves
+`(s1*h1+s2*h2)^2+(s1*h2-s2*h1)^2=(s1^2+s2^2)(h1^2+h2^2)`.  Hence the two-block
+pairing obeys the exact contraction bound
+`<s,h>^2 <= ||s||^2 ||h||^2`.  The registered fixture `(s1,s2,h1,h2)=(3,4,5,-2)`
+has source norm `25`, control norm `29`, pairing `7`, wedge `-26`, and gap
+`676=26^2`.
+
+**Verification.** The primary lane reads the hash-pinned R-081 manifest and
+A13 status, compiles the pinned Lean entrypoint, and derives the exact values.
+The independent lane uses only stdlib `Fraction` arithmetic.  The integrated
+lane checks package/dependency hashes, theorem markers, AST/import independence,
+hostile boundary mutations, append-only event linkage, and stored-versus-fresh
+runs.
+
+**Boundary.** This is only a finite two-block algebraic cross-check.  It does
+not instantiate the production temporal maps, prove arbitrary partition or
+revisit uniformity, establish the complete same-root packet, close
+`OVERLAP_src` or Nelson, construct an interacting measure, or close Sector-A
+or Pre-A.  No tier change, gate closure, new negative or PDF follows.
+
+**Proven in:** [R-184 certificate](strategy/pre-a13-two-block-douglas-crosscheck-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R184.lean), [primary script](verification/scripts/lean_a13_two_block_douglas_crosscheck.py), [independent script](codes/foundations/lean_a13_two_block_douglas_crosscheck_independent.py), [integrated verifier](codes/foundations/lean_a13_two_block_douglas_crosscheck_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-two-block-douglas-crosscheck-260822.md), and the saved run artefacts. No R-184 PDF is issued.
 
 <a id="r-183"></a>
 ### R-183 -- Diagonal reserve margin for the feedback-pulled cross-Hessian

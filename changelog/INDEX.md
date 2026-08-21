@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**679 accepted events** · latest 25 shown below · machine locator: `index.json`
+**680 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-22 | `20260822-r-184-two-block-douglas-identity-lean-cross-che` — [R-184 two-block Douglas identity Lean cross-check] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000899, R-184 | [bounded page](pages/000669-000718.md#20260822-r-184-two-block-douglas-identity-lean-cross-che) |
 | 2026-08-22 | `20260822-r-183-diagonal-reserve-margin-cross-hessian-thr` — [R-183 diagonal reserve margin cross-Hessian threshold] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000898, R-183 | [bounded page](pages/000669-000718.md#20260822-r-183-diagonal-reserve-margin-cross-hessian-thr) |
 | 2026-08-21 | `20260821-r-182-feedback-pulled-cross-hessian-margin-2026` — [R-182 feedback-pulled cross-Hessian margin] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000897, R-182 | [bounded page](pages/000669-000718.md#20260821-r-182-feedback-pulled-cross-hessian-margin-2026) |
 | 2026-08-21 | `20260821-r-181-two-root-feedback-mixed-gram-cross-check` — [R-181 two-root feedback mixed-Gram cross-check] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000896, R-181 | [bounded page](pages/000669-000718.md#20260821-r-181-two-root-feedback-mixed-gram-cross-check) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-21 | `20260821-r-171-actual-a7-plane-wave-endpoint-secant-sign` — [R-171 actual A7 plane-wave endpoint secant sign witness] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE, EXP-000878, R-171 | [bounded page](pages/000619-000668.md#20260821-r-171-actual-a7-plane-wave-endpoint-secant-sign) |
 | 2026-08-21 | `20260821-a13-joint-source-verifier-reader-drift-correcti` — [A13 joint-source verifier reader-drift correction] - 2026-08-21 | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000877 | [bounded page](pages/000619-000668.md#20260821-a13-joint-source-verifier-reader-drift-correcti) |
 | 2026-08-21 | `20260821-a10-dependency-ledger-repair-after-a11-action-c` — [A10 dependency ledger repair after A11 action closure] - 2026-08-21 | A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE, A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, A9-CLASSII-SMART-PATH-CANCELLATION, EXP-000876, R-055, R-056 | [bounded page](pages/000619-000668.md#20260821-a10-dependency-ledger-repair-after-a11-action-c) |
-| 2026-08-21 | `20260821-a9-dependency-ledger-repair-after-a10-action-re` — [A9 dependency ledger repair after A10 action-reconstruction closure] - 2026-08-21 | A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE, A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, A9-CLASSII-SMART-PATH-CANCELLATION, EXP-000875, R-055, R-056, R-108, R-166 | [bounded page](pages/000619-000668.md#20260821-a9-dependency-ledger-repair-after-a10-action-re) |
 
 ## Post-cutover pages
 
@@ -49,6 +49,6 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 669–679 | 11 | [000669-000718.md](pages/000669-000718.md) |
+| 669–680 | 12 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

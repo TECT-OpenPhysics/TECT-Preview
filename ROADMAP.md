@@ -1605,6 +1605,12 @@ This is only a conditional reserve-budget test: actual heat, forest,
 complement, returned-low, source and sextic terms are not yet mapped to the
 reserve variables, and T-050, A13, Sector-A, physical-empty, Pre-A and limit
 routes remain open. No R-183 PDF is issued.
+EXP-000899 / R-184 is a T0, claim-nonbearing Lean checkpoint for the
+finite two-block Douglas identity used by R-081's temporal overlap reduction.
+For rational source and control coordinates it proves the exact wedge-square
+gap and the associated contraction.  This is not the production temporal
+factorisation or arbitrary progressive/revisit estimate: `OVERLAP_src`, Nelson,
+Sector-A, Pre-A and all limit routes remain open. No R-184 PDF is issued.
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7
