@@ -6,8 +6,8 @@
   },
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
-    "RESULTS-LEDGER.md": "a52e53361e12861d76de340092a9a0ea78be8228440a48745b36ce8682d9adfa",
-    "changelog/log.jsonl": "ff48daf57b8b238bc58160141efd49f64ca20ab95f734aa90fcf46259cff6d22",
+    "RESULTS-LEDGER.md": "8e1bda9069cd58511d974f17a11f74b338eb87f94ed69d9d4637d9c9863727d4",
+    "changelog/log.jsonl": "806fb2651f3e470802b403d07c8234f1967748c4c6108e419295d6450fb3140a",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -15,7 +15,7 @@
     "claims/A1-SCALAR-ANALYTIC-BRANCH/status.json": "dcefd787c02c13e8c8f71f85bb7b80e73dc1fff5d4cd74a2ed7e55a461767ab2",
     "claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/status.json": "1a6c06dcdb98ffbc4e8cd4903ba72a2b015d957f894f5e6fe0b3b84b77dba985",
     "claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/status.json": "8475f399135afa407b3c20fa3415863377acc32daf2939ace837191d1235ad70",
-    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/status.json": "e2bfaa8bc00b72a95a2fa7890d8550ff5486e9599f3c485c4e8c552f8bf0047c",
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/status.json": "fb3aa80bf84999c776f59e542f03c3f2769c97ada8106210ffb71260bd9b21b3",
     "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json": "88b7043fd31c2800019a53ce6f3d46a43fe9b049e981b76ac84ac074712c0008",
     "claims/A2-FULL-PRODUCTION-WELLPOSED/status.json": "bdc6fdf00145eec8290d110a81cd54512a237da62418f18819c2f291bc0702fd",
     "claims/A2-PDE-WELLPOSED/status.json": "d20a1a7211f496ac08080275807b6c8e659e3e4ecd2b1ffe8143545ed234c89f",
@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "9001575d80a03f123505ce51c46471404999cfbf354a05620e771e6ed92b39a2",
+    "explorations/log.jsonl": "ae91f6ef928c6875bcd84bfbd888b552f4e95e0c4ea53f32be693feb8d42125c",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "todo/todo.json": "ec2cfbd089b7c06eb8f82fbd4f5634c8ba882d440766b8ec3d5fec6a8e75359a"
   },
@@ -68,15 +68,15 @@
     "refuted_claims": 1,
     "reusable_results": 171,
     "negative_records": 372,
-    "proof_explorations": 881,
+    "proof_explorations": 882,
     "exploration_verdicts": {
-      "advanced": 538,
+      "advanced": 539,
       "failed": 235,
       "inconclusive": 79,
       "parked": 29
     },
     "process_grade_lessons": 3,
-    "accepted_events": 661,
+    "accepted_events": 662,
     "tasks": 57,
     "live_tasks": 11,
     "completed_tasks": 46,
@@ -89,7 +89,7 @@
     "unordered_root_pdfs": 9,
     "proof_notes_without_sibling_pdf": 19,
     "proof_notes_with_incomplete_historical_footer": 118,
-    "run_json": 795,
+    "run_json": 796,
     "claim_manifests": 124,
     "bundle_manifests": 40,
     "bundle_embedded_manifests": 45
@@ -2759,6 +2759,13 @@
           "EXP-000881",
           "R-171"
         ]
+      },
+      {
+        "event": "20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0",
+        "claim_ids": [
+          "EXP-000882",
+          "R-057"
+        ]
       }
     ],
     "event_unregistered_negative_tags": [
@@ -4179,17 +4186,19 @@
           "EXP-000875",
           "EXP-000876",
           "EXP-000877",
-          "EXP-000880"
+          "EXP-000880",
+          "EXP-000882"
         ],
-        "latest_exploration_id": "EXP-000880",
+        "latest_exploration_id": "EXP-000882",
         "accepted_event_ids": [
           "20260721-a11-true-increment-determinant-closes-action-re",
           "20260821-a9-dependency-ledger-repair-after-a10-action-re",
           "20260821-a10-dependency-ledger-repair-after-a11-action-c",
           "20260821-a13-joint-source-verifier-reader-drift-correcti",
-          "20260821-a11-source-square-gate-split-after-r-056-r-058"
+          "20260821-a11-source-square-gate-split-after-r-056-r-058",
+          "20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0"
         ],
-        "latest_event_id": "20260821-a11-source-square-gate-split-after-r-056-r-058",
+        "latest_event_id": "20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0",
         "live_task_gate_ids": [
           "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE"
         ],
@@ -4226,8 +4235,8 @@
       "scope": "PROVED-ANALYTIC-REDUCTION-AND-SCALAR-BUDGET-NOGO@FIXED-FLOOR-SHARP-CUBE on L=16 for the A1 production coefficients, three complex components in the six-real convention, rho_regularizer=1e-12, a common real-even scalar regulator with supremum M_R, and the strict sharp rectangular-cube dyadic filtration. The original cutoff-uniform reduction remains valid. T-047 is closed negatively by the exact Riesz boundary-modulation lower bound and an independent finite rational countercertificate. A13 closes T-049 negatively as a production-budget gate while leaving finiteness of the exact-B source constant unclassified; the surviving constructive route is a joint source-potential or redesigned-increment estimate.",
       "falsifier": "Failure of the Pauli identities, a>=0, c>=0, ac-b^2>0, B(X)JX=0, or 0<=B(psi)<=4(a+2b+c)|psi|^2 I_6 at the fixed floor; a wrong N_(j-1)+1 shell boundary, physical 2pi/L factor, covariance convention, derivative-direction factor, or M_R^2 regulator power; failure of the strict-dyadic qualitative multiplier theorem; failure of the exact boundary-modulation identity, the L6 Riesz norm 2, the finite rational countercertificate, M_6>=8, Q_6>=8sqrt(3), or H_6>=786432; treating the coefficient-blind no-go as a counterexample to the exact-B shell source; or any authority hash, PDF QA, non-importing, assertion-count, or cross-route failure falsifies the pinned package.",
       "next_action": "No A12 gate remains open. Continue under A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE by retaining the local potential and noncentral determinant in one estimate or redesigning the true increment. Do not retry the separated scalar route or standalone deterministic exact-B source absorption.",
-      "notes": "T4 PROVED-ANALYTIC-REDUCTION plus exact scalar-budget no-go. The original reduction and beta_op^2/c_sym=0.016570372383568618 remain valid. Boundary modulation and the exact L6 Riesz norm give M_6>=8, Q_6>=8sqrt(3), H_6>=786432, 26545 times the source-only target; an independent finite Gaussian-integer witness already gives H_6>=184.54034191803735. The same witness refutes the coefficient-blind six-linear envelope. A13 preserves exact B and the output shell but finds a relative-phase carrier above gamma/3, closing the standalone production budget negatively while leaving source-constant finiteness open. Baseline 65/65, obstruction primary 36/36, independent 25/25, and integrated 83/83 pass.",
-      "last_review": "2026-07-21",
+      "notes": "T4 PROVED-ANALYTIC-REDUCTION plus exact scalar-budget no-go. The original reduction and beta_op^2/c_sym=0.016570372383568618 remain valid. Boundary modulation and the exact L6 Riesz norm give M_6>=8, Q_6>=8sqrt(3), H_6>=786432, 26545 times the source-only target; an independent finite Gaussian-integer witness already gives H_6>=184.54034191803735. The same witness refutes the coefficient-blind six-linear envelope. A13 preserves exact B and the output shell but finds a relative-phase carrier above gamma/3, closing the standalone production budget negatively while leaving source-constant finiteness open. Baseline 65/65, obstruction primary 36/36, independent 25/25, and integrated 83/83 pass. EXP-000882 adds a Lean 4.32.1 kernel cross-check of the ordered-field arithmetic consequence at 18/18; it does not reprove the analytic Riesz inputs or close the exact-B successor.",
+      "last_review": "2026-08-21",
       "reproduction": {
         "command": "python codes/foundations/a12_classii_sharp_cube_budget_obstruction_verify.py",
         "expected": "Baseline A12: 65/65 and A12-CLASSII-SOURCE-SQUARE-REDUCTION-INTEGRATED-PASS; obstruction primary 36/36; independent 25/25; ASSERTS: 83/83; A12-CLASSII-SHARP-CUBE-BUDGET-OBSTRUCTION-INTEGRATED-PASS; exit 0.",
@@ -4278,7 +4287,8 @@
           "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-sharp-cube-obstruction/result.json",
           "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-source-square/result.json",
           "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-primary-sharp-cube-obstruction/result.json",
-          "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-primary-source-square/result.json"
+          "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-primary-source-square/result.json",
+          "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-08-21-lean-r057-kernel-crosscheck/result.json"
         ],
         "manifests": [
           "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/classii_sharp_cube_budget_obstruction_manifest.json",
@@ -4296,16 +4306,18 @@
           "NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET"
         ],
         "exploration_ids": [
-          "EXP-000880"
+          "EXP-000880",
+          "EXP-000882"
         ],
-        "latest_exploration_id": "EXP-000880",
+        "latest_exploration_id": "EXP-000882",
         "accepted_event_ids": [
           "20260721-prove-the-sharp-cube-class-ii-source-square-ana",
           "20260721-refute-the-separated-sharp-cube-source-budget-a",
           "20260721-complete-a13-gate-record-synchronization-and-re",
-          "20260821-a11-source-square-gate-split-after-r-056-r-058"
+          "20260821-a11-source-square-gate-split-after-r-056-r-058",
+          "20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0"
         ],
-        "latest_event_id": "20260821-a11-source-square-gate-split-after-r-056-r-058",
+        "latest_event_id": "20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -6376,9 +6388,10 @@
           "20260821-r-171-actual-a7-plane-wave-endpoint-secant-sign",
           "20260821-r-171-lean-kernel-cross-check-and-important-res",
           "20260821-a11-source-square-gate-split-after-r-056-r-058",
-          "20260821-r-171-lean-runner-offline-bootstrap-repair-2026"
+          "20260821-r-171-lean-runner-offline-bootstrap-repair-2026",
+          "20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0"
         ],
-        "latest_event_id": "20260821-r-171-lean-runner-offline-bootstrap-repair-2026",
+        "latest_event_id": "20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0",
         "live_task_gate_ids": [
           "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
         ],
@@ -16813,6 +16826,7 @@
       "detail": {
         "statement": "For the strict dyadic centered cube projections on the three-torus, boundary modulation embeds the tensor product of three one-dimensional Riesz projections. Since the exact `L6` Riesz norm is two, the A12 constants satisfy `M_6>=8`, `Q_6>=8sqrt(3)`, and `H_6=M_6^4Q_6^2>=3*8^6=786432`. The coefficient-blind scalar six-linear envelope has the same lower bound. Hence neither route can meet the isolated production target `H_6<29.62571266025876`.",
         "where_proved": "`A12-CLASSII-SOURCE-SQUARE-REDUCTION`, proof note `classii-sharp-cube-scalar-budget-obstruction-260721-v1.0`. A finite Gaussian-integer polynomial independently certifies `H_6>=184.54034191803735` by exact triple-convolution arithmetic. The baseline A12 verifier passes 65/65; obstruction primary 36/36, non-importing independent 25/25, and integrated 83/83 PASS. The five-page PDF passes form, zero-overfull, and full visual QA.",
+        "kernel_cross_check": "EXP-000882 adds a pinned Lean 4.32.1 check of the ordered-field arithmetic core: from the registered inputs `M_6>=8` and `Q_6^2>=192`, `Tect/R057.lean` proves `786432<=M_6^4 Q_6^2`, and `norm_num` proves the endpoint product and the strict gap to `29.62571266025876`. The artifact records `LEAN R-057 PASS 18/18`; it does not reprove the analytic Riesz estimates or the exact-B source.",
         "reuse": "This is a general warning for sharp centered Fourier-cube source estimates: a pointwise multiplier bound and a symbol-size bound do not produce a small multilinear `L6` norm because boundary modulation contains Riesz projection tensor products. It also isolates the viable null-form structure for derivative internal-current models. In the production Class-II metric, the global-phase complex structure satisfies `B(X)JX=0`; the actual source also retains an output shell and a determinant resolvent.",
         "tier_publication_target": "Exact negative result housed in the scoped T4 A12 claim; no tier promotion. T-047 is closed negatively, not positively. The active successor is `A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND`. No exact-source bound, positive sextic reserve, A11 log-Laplace closure, Nelson measure, T5, T6, or T7 is claimed."
       },
@@ -16834,7 +16848,8 @@
       ],
       "accepted_event_ids": [
         "20260721-refute-the-separated-sharp-cube-source-budget-a",
-        "20260821-a11-source-square-gate-split-after-r-056-r-058"
+        "20260821-a11-source-square-gate-split-after-r-056-r-058",
+        "20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0"
       ],
       "co_recorded_negative_tags": [
         "NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET"
@@ -70614,6 +70629,62 @@
       "task_id": "T-050",
       "title": "Harden the Lean runner against offline elan wrapper failure",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "The Lean result does not reprove M_6>=8 or Q_6^2>=192, does not prove the exact source constant infinite, and does not close A11, A13, T-050, A7, Sector-A, Pre-A, physical-empty, or any continuum/thermodynamic limit.",
+      "claim_ids": [
+        "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+        "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION"
+      ],
+      "decision_reason": "R-057 is an important exact obstruction already used to split A11's coarse source-square route. A kernel check of its arithmetic core catches factor or target transcription errors without pretending to formalize the analytic operator theorem. It is additive cross-verification, not a new negative or gate closure.",
+      "evidence_refs": [
+        "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/classii_sharp_cube_budget_obstruction_manifest.json#theorem",
+        "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/classii_sharp_cube_budget_obstruction_manifest.json#budget",
+        "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-sharp-cube-scalar-budget-obstruction-260721-v1.0.tex.txt#3.5",
+        "verification/lean/Tect/R057.lean#boundary_product",
+        "verification/lean/Tect/R057.lean#sharp_boundary_arithmetic",
+        "verification/lean/Tect/R057.lean#production_target_gap",
+        "verification/scripts/lean_r057_kernel_crosscheck.py#main",
+        "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-08-21-lean-r057-kernel-crosscheck/result.json#verdict",
+        "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-sharp-cube-obstruction/result.json#assertions"
+      ],
+      "finding": "The Lean kernel compiles a 18/18 cross-check. Its ordered-field theorem proves the exact arithmetic implication from the registered analytic lower-bound inputs, and norm_num proves 8^4*192=786432 and 29.62571266025876<786432. The existing A12 package independently remains PASS at 83/83. This confirms the numerical negative boundary while leaving the Riesz/sharp-cube analytic inputs, exact-B source, A11 log-Laplace, A13/T-050, and all physical/limit gates outside scope.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET"
+        ],
+        "results": [
+          "R-057"
+        ]
+      },
+      "gate_ids": [
+        "A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND",
+        "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "id": "EXP-000882",
+      "method": [
+        "Read the hash-pinned A12 sharp-budget manifest and its R-057 theorem/budget fields.",
+        "Formalize in Lean over the rationals that m >= 8 and q2 >= 192 imply 786432 <= m^4*q2, and prove the exact endpoint product and target comparison by norm_num.",
+        "Hash-check the A12 authority inputs, reject sorry/admit/axiom/unsafe, compile the Lean source with the pinned local toolchain, and rerun the existing A12 primary/independent/integrated package."
+      ],
+      "next_action": "Keep the R-057 separated budget route closed negatively and pursue only the exact-B output-shell/resolvent or joint source-potential/redesigned-increment route after the complete finite production cylinder is frozen.",
+      "provenance": "contemporaneous",
+      "question": "Can Lean independently verify the exact ordered-field arithmetic consequence H_6 >= 786432 > 29.62571266025876 used by the registered R-057 negative boundary without importing the analytic Riesz estimate or closing the exact-B successor?",
+      "recorded_at": "2026-08-21T08:00:50Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000881",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-21",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Kernel-cross-check the exact R-057 sharp-cube budget obstruction",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -96325,6 +96396,60 @@
       "result_link_basis": {
         "R-171": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0",
+      "date": "2026-08-21",
+      "header": "[R-057 Lean kernel arithmetic cross-check] - 2026-08-21",
+      "claim_ids": [
+        "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+        "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "EXP-000882",
+        "R-057"
+      ],
+      "keywords": [
+        "EXP-000882",
+        "Lean-kernel-crosscheck",
+        "R-057",
+        "arithmetic",
+        "budget-boundary",
+        "no-new-negative",
+        "sharp-cube"
+      ],
+      "negative_results": [],
+      "notes": [
+        "verification/lean/Tect/R057.lean",
+        "verification/scripts/lean_r057_kernel_crosscheck.py",
+        "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-08-21-lean-r057-kernel-crosscheck/result.json",
+        "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-sharp-cube-obstruction/result.json",
+        "explorations/log.jsonl"
+      ],
+      "scripts": [],
+      "raw": "## [R-057 Lean kernel arithmetic cross-check] - 2026-08-21\n\nEXP-000882 records an additive Lean kernel cross-check of the exact R-057 sharp-cube budget arithmetic. From the registered inputs M_6 >= 8 and Q_6^2 >= 192, Lean proves 786432 <= M_6^4 Q_6^2; it also proves the exact endpoint product 8^4*192=786432 and the registered target 29.62571266025876 is strictly smaller.\n\nThe A12 primary, independent, and integrated package remains PASS at 83/83. This cross-check verifies only the ordered-field arithmetic consequence: it does not reprove the analytic Riesz estimates, import the exact-B source, close the A11 log-Laplace or A13/T-050 routes, or advance Sector-A, Pre-A, physical-empty, or any limit. No new negative result or tier change is registered and no PDF is issued.\n\n",
+      "claim_refs": [
+        "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+        "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "claim_ref_basis": {
+        "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION": "explicit_claim_ids",
+        "A12-CLASSII-SOURCE-SQUARE-REDUCTION": "explicit_claim_ids",
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000882",
+        "R-057"
+      ],
+      "result_ids": [
+        "R-057"
+      ],
+      "linked_result_ids": [
+        "R-057"
+      ],
+      "result_link_basis": {
+        "R-057": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -101304,6 +101429,12 @@
         "id": "event:20260821-historical-t-055-regression-reader-contract-cor",
         "kind": "accepted_event",
         "label": "[Historical T-055 regression-reader contract correction] - 2026-08-21",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0",
+        "kind": "accepted_event",
+        "label": "[R-057 Lean kernel arithmetic cross-check] - 2026-08-21",
         "authority": "CHANGELOG.md"
       },
       {
@@ -106626,6 +106757,12 @@
         "id": "exploration:EXP-000881",
         "kind": "proof_exploration",
         "label": "Harden the Lean runner against offline elan wrapper failure",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000882",
+        "kind": "proof_exploration",
+        "label": "Kernel-cross-check the exact R-057 sharp-cube budget obstruction",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -122798,6 +122935,30 @@
         "from": "event:20260821-historical-t-055-regression-reader-contract-cor",
         "relation": "records_result",
         "to": "result:R-169",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0",
+        "relation": "records",
+        "to": "claim:A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0",
+        "relation": "records",
+        "to": "claim:A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0",
+        "relation": "records",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0",
+        "relation": "records_result",
+        "to": "result:R-057",
         "basis": "explicit_result_id"
       },
       {
@@ -163196,6 +163357,60 @@
         "from": "exploration:EXP-000881",
         "relation": "references_result",
         "to": "result:R-171",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000882",
+        "relation": "assesses",
+        "to": "claim:A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000882",
+        "relation": "assesses",
+        "to": "claim:A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000882",
+        "relation": "assesses_gate",
+        "to": "gate:A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000882",
+        "relation": "assesses_gate",
+        "to": "gate:A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000882",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000882",
+        "relation": "continues",
+        "to": "exploration:EXP-000881",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000882",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000882",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000882",
+        "relation": "references_result",
+        "to": "result:R-057",
         "basis": "structured_formal_ref"
       },
       {

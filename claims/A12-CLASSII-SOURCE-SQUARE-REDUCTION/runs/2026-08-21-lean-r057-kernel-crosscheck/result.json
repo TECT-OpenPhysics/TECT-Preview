@@ -1,0 +1,159 @@
+{
+  "schema": "tect/lean-kernel-crosscheck/1.0",
+  "run_kind": "lean-kernel-crosscheck",
+  "result_id": "R-057-LEAN-KERNEL-CROSSCHECK",
+  "claim_ids": [
+    "A12-CLASSII-SOURCE-SQUARE-REDUCTION"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-057"
+    ],
+    "negatives": [
+      "NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET"
+    ],
+    "events": []
+  },
+  "verdict": "PASS",
+  "assertion_count": 18,
+  "assertions": [
+    {
+      "name": "Lean entrypoint exists",
+      "pass": true,
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R057.lean",
+      "expected": true
+    },
+    {
+      "name": "Lean toolchain pin exists",
+      "pass": true,
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\lean-toolchain",
+      "expected": true
+    },
+    {
+      "name": "Lakefile exists",
+      "pass": true,
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\lakefile.toml",
+      "expected": true
+    },
+    {
+      "name": "Lake dependency lock exists",
+      "pass": true,
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\lake-manifest.json",
+      "expected": true
+    },
+    {
+      "name": "lake executable is available",
+      "pass": true,
+      "actual": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+      "expected": "PATH or pinned local toolchain"
+    },
+    {
+      "name": "A12 sharp-budget manifest hash",
+      "pass": true,
+      "actual": "e16ad41f192505ca17a7c249705e30ec51771877505a9e833cd900e863580213",
+      "expected": "e16ad41f192505ca17a7c249705e30ec51771877505a9e833cd900e863580213"
+    },
+    {
+      "name": "R-057 authority schema",
+      "pass": true,
+      "actual": "tect/a12-classii-sharp-cube-budget-obstruction-manifest/1.0",
+      "expected": "tect/a12-classii-sharp-cube-budget-obstruction-manifest/1.0"
+    },
+    {
+      "name": "authority hash a1_manifest",
+      "pass": true,
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "authority hash a12_manifest",
+      "pass": true,
+      "actual": "f1e12ad869fff0e5ac51b8dbfbb04fe9b13ac46f108cce8f60bed05c1acfb5d5",
+      "expected": "f1e12ad869fff0e5ac51b8dbfbb04fe9b13ac46f108cce8f60bed05c1acfb5d5"
+    },
+    {
+      "name": "authority hash a12_note",
+      "pass": true,
+      "actual": "58478d509382dd4a435ad6ff09efc75e320b7e27f17deb8b3aa9e8106a669d55",
+      "expected": "58478d509382dd4a435ad6ff09efc75e320b7e27f17deb8b3aa9e8106a669d55"
+    },
+    {
+      "name": "Lean theorem markers present",
+      "pass": true,
+      "actual": [
+        "boundary_product",
+        "sharp_boundary_arithmetic",
+        "production_target_gap"
+      ],
+      "expected": [
+        "boundary_product",
+        "sharp_boundary_arithmetic",
+        "production_target_gap"
+      ]
+    },
+    {
+      "name": "sharp lower bridge marker",
+      "pass": true,
+      "actual": "786432",
+      "expected": true
+    },
+    {
+      "name": "production target rational bridge marker",
+      "pass": true,
+      "actual": "2962571266025876 / 100000000000000",
+      "expected": true
+    },
+    {
+      "name": "registered target below sharp lower",
+      "pass": true,
+      "actual": "740642816506469/25000000000000",
+      "expected": "<786432"
+    },
+    {
+      "name": "Lean escape tokens absent",
+      "pass": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Lean kernel compile",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Lean stdout is clean",
+      "pass": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "Lean stderr is clean",
+      "pass": true,
+      "actual": "",
+      "expected": ""
+    }
+  ],
+  "command": [
+    "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+    "env",
+    "lean",
+    "Tect\\R057.lean"
+  ],
+  "toolchain": "leanprover/lean4:v4.32.1",
+  "source_hashes": {
+    "toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "lakefile": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+    "lake_manifest": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+    "entrypoint": "f84b62a71c932662a950871ea8aa0e156b683d8a28df11e3fc6732c23d28ace7",
+    "a12_manifest": "e16ad41f192505ca17a7c249705e30ec51771877505a9e833cd900e863580213"
+  },
+  "sharp_lower": 786432,
+  "target_derived": "29.62571266025876",
+  "lean_stdout": "",
+  "lean_stderr": "",
+  "recorded_at": "2026-08-21T07:59:56.703833Z",
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "boundary": "Kernel-checks only the exact ordered-field arithmetic consequence of the registered R-057 lower-bound inputs. It does not reprove the Riesz norm, the analytic sharp-cube estimates, the exact-B source, A11 log-Laplace, A13/T-050, physical-empty, or any limit.",
+  "artifact": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-08-21-lean-r057-kernel-crosscheck/result.json"
+}

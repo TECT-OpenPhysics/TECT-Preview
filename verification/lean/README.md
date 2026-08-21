@@ -1,8 +1,10 @@
 # TECT Lean cross-verification lane
 
 This is the repository-pinned Lean 4/Mathlib lane for important exact results.
-The initial entry point is `Tect/R171.lean`, which kernel-checks the rational
-Class-II bracket identity and positivity used by R-171.
+The entry points currently include `Tect/R171.lean`, which kernel-checks the
+rational Class-II bracket identity and positivity used by R-171, and
+`Tect/R057.lean`, which kernel-checks the ordered-field arithmetic consequence
+of the R-057 sharp-cube budget lower bound.
 
 From this directory, after Lean/elan is installed:
 

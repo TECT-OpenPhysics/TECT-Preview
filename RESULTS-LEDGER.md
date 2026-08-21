@@ -9829,6 +9829,13 @@ baseline A12 verifier passes 65/65; obstruction primary 36/36, non-importing
 independent 25/25, and integrated 83/83 PASS.  The five-page PDF passes form,
 zero-overfull, and full visual QA.
 
+**Kernel cross-check.** EXP-000882 adds a pinned Lean 4.32.1 check of the
+ordered-field arithmetic core: from the registered inputs `M_6>=8` and
+`Q_6^2>=192`, `Tect/R057.lean` proves `786432<=M_6^4 Q_6^2`, and `norm_num`
+proves the endpoint product and the strict gap to `29.62571266025876`.
+The artifact records `LEAN R-057 PASS 18/18`; it does not reprove the
+analytic Riesz estimates or the exact-B source.
+
 **Reuse.** This is a general warning for sharp centered Fourier-cube source
 estimates: a pointwise multiplier bound and a symbol-size bound do not produce
 a small multilinear `L6` norm because boundary modulation contains Riesz

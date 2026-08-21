@@ -29,7 +29,13 @@
   "reproduction": {
     "command": "python codes/foundations/a12_classii_sharp_cube_budget_obstruction_verify.py",
     "expected": "Baseline A12: 65/65 and A12-CLASSII-SOURCE-SQUARE-REDUCTION-INTEGRATED-PASS; obstruction primary 36/36; independent 25/25; ASSERTS: 83/83; A12-CLASSII-SHARP-CUBE-BUDGET-OBSTRUCTION-INTEGRATED-PASS; exit 0.",
-    "status": "AVAILABLE"
+    "status": "AVAILABLE",
+    "lean_crosscheck": {
+      "command": "python verification/scripts/lean_r057_kernel_crosscheck.py",
+      "expected": "LEAN R-057 PASS 18/18; pinned Lean 4.32.1 ordered-field arithmetic core only",
+      "artifact": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-08-21-lean-r057-kernel-crosscheck/result.json",
+      "status": "PASS"
+    }
   },
   "legacy_pillar": [],
   "tier_legacy": "n/a (new card 2026-07-21)",
@@ -52,13 +58,16 @@
     "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-primary-sharp-cube-obstruction/result.json (36/36 PASS)",
     "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-independent-sharp-cube-obstruction/result.json (25/25 PASS)",
     "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-sharp-cube-obstruction/result.json (83/83 PASS)",
+    "verification/lean/Tect/R057.lean (kernel arithmetic cross-check)",
+    "verification/scripts/lean_r057_kernel_crosscheck.py",
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-08-21-lean-r057-kernel-crosscheck/result.json (18/18 PASS)",
     "negative-results/registry.md#ng-2026-07-21-a12-sharp-cube-scalar-budget"
   ],
   "t7_candidate": false,
   "no_overclaim": "This claim closes T-047 only as a negative result for the separated H_6 and coefficient-blind scalar-envelope routes. A13 separately closes the production-compatible standalone exact-B source allocation, but neither claim proves the exact source constant infinite. A12 does not establish a positive production sextic reserve, prove the true-increment stabilised log-Laplace estimate, close the A7 self-coupled Nelson theorem, construct the interacting full three-component measure, remove the floor or regulator, take infinite volume, prove a phase transition or BCC selection, or justify T5, T6, or T7.",
   "next_action": "No A12 gate remains open. Continue under A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE by retaining the local potential and noncentral determinant in one estimate or redesigning the true increment. Do not retry the separated scalar route or standalone deterministic exact-B source absorption.",
-  "last_review": "2026-07-21",
+  "last_review": "2026-08-21",
   "closure_depth": "C1",
   "proof_maturity": "S1",
-  "notes": "T4 PROVED-ANALYTIC-REDUCTION plus exact scalar-budget no-go. The original reduction and beta_op^2/c_sym=0.016570372383568618 remain valid. Boundary modulation and the exact L6 Riesz norm give M_6>=8, Q_6>=8sqrt(3), H_6>=786432, 26545 times the source-only target; an independent finite Gaussian-integer witness already gives H_6>=184.54034191803735. The same witness refutes the coefficient-blind six-linear envelope. A13 preserves exact B and the output shell but finds a relative-phase carrier above gamma/3, closing the standalone production budget negatively while leaving source-constant finiteness open. Baseline 65/65, obstruction primary 36/36, independent 25/25, and integrated 83/83 pass."
+  "notes": "T4 PROVED-ANALYTIC-REDUCTION plus exact scalar-budget no-go. The original reduction and beta_op^2/c_sym=0.016570372383568618 remain valid. Boundary modulation and the exact L6 Riesz norm give M_6>=8, Q_6>=8sqrt(3), H_6>=786432, 26545 times the source-only target; an independent finite Gaussian-integer witness already gives H_6>=184.54034191803735. The same witness refutes the coefficient-blind six-linear envelope. A13 preserves exact B and the output shell but finds a relative-phase carrier above gamma/3, closing the standalone production budget negatively while leaving source-constant finiteness open. Baseline 65/65, obstruction primary 36/36, independent 25/25, and integrated 83/83 pass. EXP-000882 adds a Lean 4.32.1 kernel cross-check of the ordered-field arithmetic consequence at 18/18; it does not reprove the analytic Riesz inputs or close the exact-B successor."
 }

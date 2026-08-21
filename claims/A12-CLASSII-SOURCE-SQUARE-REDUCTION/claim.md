@@ -165,6 +165,15 @@ open under A13; A12 has no remaining gate.
 python codes/foundations/a12_classii_sharp_cube_budget_obstruction_verify.py
 ```
 
+The exact arithmetic boundary also has a pinned Lean kernel cross-check:
+
+```powershell
+python verification/scripts/lean_r057_kernel_crosscheck.py
+```
+
+This second lane proves only the ordered-field consequence of the registered
+analytic inputs, not the Riesz norm or the exact-B source.
+
 Expected:
 
 ```text
@@ -262,3 +271,7 @@ transition or BCC selection, or justify T5, T6, or T7.
   B and the output shell but found an internal relative-phase carrier above
   the complete source-only budget. T-049 is closed negatively; A12's theorem,
   tier, and evidence are unchanged.
+- 2026-08-21: EXP-000882 added a Lean 4.32.1 kernel cross-check of the exact
+  arithmetic core `M_6^4 Q_6^2>=786432>29.62571266025876`, PASS 18/18. The
+  analytic lower-bound inputs and the exact-B successor remain outside this
+  cross-check; tier and open-route scope are unchanged.
