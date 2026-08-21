@@ -24,6 +24,7 @@ policy in `governance/development-history.md`.
 |---|---|---|
 | [R-173](#r-173) | R-163 deterministic dyadic-forest Lean margin core | R-173 v1.0 is a scoped T0 claim-nonbearing kernel cross-check under EXP-000888. Lean, a Fraction-only independent lane, and an integrated hash/mutation lane recheck the exact rational margins 13/100>1/10, -1/110, -10/11, 3/20<27/100, the recursive guard, and the third-derivative fixture. It does not prove the analytic forest estimates or close A13, T-050, Sector-A or Pre-A |
 | [R-174](#r-174) | Exact two-root production-cylinder cross-synthesis boundary | R-174 v1.0 is a scoped T0 claim-nonbearing interface result under EXP-000889. The hash-pinned A1 `k,2k` chart has ordered cross blocks that are nonzero pointwise even though one-period sine/cosine averages vanish; Lean and a Fraction-only lane recheck the exact algebra. The complete square-root/heat/root/forest/low/returned-mean/source/sextic owner remains open, as do T-050, A13, Sector-A and Pre-A |
+| [R-177](#r-177) | A1 two-root common-heat and root-incidence ledger | R-177 v1.0 is a T0 claim-nonbearing Lean ledger under EXP-000892. It binds the actual R-176 `k,2k` covariance roots to the finite order common heat -> root 1 -> root 2 -> future residual, proves the two-replica variance and feedback identities, and rejects mean-only or independently replicated heat substitutions. The complete owner, source/sextic windows, T-050, A13, Sector-A and Pre-A remain open |
 | [R-176](#r-176) | Actual A1 two-root principal Cholesky covariance witnesses | R-176 v1.0 is a T0 claim-nonbearing Lean cross-check under EXP-000891. From the hash-pinned A1 symbol it reconstructs positive pivot chains at `k` and `2k`, builds inverse-transpose principal factors `U` with `C=U U^T`, and duplicates them into six-real covariance roots. Heat/root incidence, the complete owner, T-050, A13, Sector-A and Pre-A remain open |
 | [R-175](#r-175) | Canonical duplicated covariance square-root basis interface | R-175 v1.0 is a T0 claim-nonbearing exact interface under EXP-000890. A supplied `L L^T=C` yields `G G^T=Gamma` for `G=diag(L,L)` and preserves the six-real complex structure; actual A1 square-root existence/selection and the complete owner remain open |
 | [R-172](#r-172) | A1 Class-II owner mismatch Lean cross-check | R-172 v1.0 is a scoped T0 claim-nonbearing exact coefficient audit under EXP-000887. It derives cKK beta_X^2=3/320 and cJK alpha_X beta_X=3/400 with common positive mass denominator, so the declared and historical residual Class-II owners are not interchangeable. This does not close the full A1 variation, A13, Sector-A or Pre-A |
@@ -249,6 +250,36 @@ The exact bracket identity and positivity core additionally pass the pinned
 reporting `LEAN R-171 PASS 18/18`.
 
 **Tier.** T4 scoped analytic/exact/executed result; no claim tier or lifecycle change.
+<a id="r-177"></a>
+### R-177 -- A1 two-root common-heat and root-incidence ledger
+
+**Result ID.** `R-177` is a T0, claim-nonbearing Lean ledger under
+`EXP-000892`.
+
+**Exact result.** The actual R-176 A1 `k` and `2k` covariance roots are placed
+in the finite owner order `common_heat -> root_1 -> root_2 ->
+future_residual`. For the structural feedback fixture
+`g2(h,r1,r2)=h+(1/2)g1(h,r1)+r2`, Lean proves the two-replica variance identity,
+common-heat cancellation in a replica difference, non-cancellation when heat
+is independently replicated, and the nonzero root-1 feedback contribution to
+root 2 and the endpoint. The exact `1,-1` fixture has mean zero and positive
+variance, so a conditional mean cannot replace the future-variance rebate.
+
+**Verification.** `verification/lean/Tect/R177.lean` proves the seven theorem
+markers. The primary lane binds the ledger to the hash-pinned R-176 integrated
+actual roots and the R-150/R-125/R-136/R-174 boundaries; the independent lane
+recomputes the rational identities with the standard library only. The
+integrated lane checks source hashes, AST/import independence, eight hostile
+mutations, and the formal topology.
+
+**Boundary.** This freezes incidence bookkeeping only. It does not prove the
+complete scalar owner, the R-125 forest, a nonlocal projector sign,
+source/sextic one-use, T-050, A13, Nelson, a measure, phase/PDE selection,
+physical-empty comparison, removal, continuum limits, Sector-A or Pre-A. No
+tier change, gate closure, new negative or PDF follows.
+
+**Proven in:** [R-177 certificate](strategy/pre-a-a13-two-root-heat-incidence-ledger-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R177.lean), [primary script](verification/scripts/lean_a13_two_root_heat_incidence_ledger.py), [independent script](codes/foundations/lean_a13_two_root_heat_incidence_ledger_independent.py), [integrated verifier](codes/foundations/lean_a13_two_root_heat_incidence_ledger_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-two-root-heat-incidence-ledger-260821.md), and the saved run artefacts. No R-177 PDF is issued.
+
 <a id="r-175"></a>
 ### R-176 -- Actual A1 two-root principal Cholesky covariance witnesses
 

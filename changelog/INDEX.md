@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**671 accepted events** · latest 25 shown below · machine locator: `index.json`
+**672 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-21 | `20260821-r-177-two-root-heat-incidence-ledger-2026-08-21` — [R-177 two-root heat incidence ledger] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000892, R-177 | [bounded page](pages/000669-000718.md#20260821-r-177-two-root-heat-incidence-ledger-2026-08-21) |
 | 2026-08-21 | `20260821-r-176-a1-two-root-cholesky-covariance-witnesses` — [R-176 A1 two-root Cholesky covariance witnesses] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000891, R-176 | [bounded page](pages/000669-000718.md#20260821-r-176-a1-two-root-cholesky-covariance-witnesses) |
 | 2026-08-21 | `20260821-r-175-duplicated-covariance-square-root-basis-i` — [R-175 duplicated covariance square-root basis interface] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000890, R-175 | [bounded page](pages/000669-000718.md#20260821-r-175-duplicated-covariance-square-root-basis-i) |
 | 2026-08-21 | `20260821-r-174-two-root-production-cylinder-cross-synthe` — [R-174 two-root production-cylinder cross-synthesis boundary] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000889, R-174 | [bounded page](pages/000669-000718.md#20260821-r-174-two-root-production-cylinder-cross-synthe) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-20 | `20260820-historical-t-054-regression-reader-contract-cor` — [Historical T-054 regression-reader contract correction] - 2026-08-20 | A2-FULL-PRODUCTION-WELLPOSED, C6-SPACETIME-SIGNATURE, EXP-000869, R-157, R-158 | [bounded page](pages/000619-000668.md#20260820-historical-t-054-regression-reader-contract-cor) |
 | 2026-08-20 | `20260820-r-108-generated-reader-contract-correction-2026` — [R-108 generated-reader contract correction] - 2026-08-20 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, C6-SPACETIME-SIGNATURE, EXP-000868, R-108 | [bounded page](pages/000619-000668.md#20260820-r-108-generated-reader-contract-correction-2026) |
 | 2026-08-20 | `20260820-r-168-v1-3-generated-reader-locator-correction` — [R-168 v1.3 generated-reader locator correction under rolling windows] - 2026-08-20 | C6-SPACETIME-SIGNATURE, EXP-000866, R-168 | [bounded page](pages/000619-000668.md#20260820-r-168-v1-3-generated-reader-locator-correction) |
-| 2026-08-14 | `20260814-r-170-v1-0-initial-literature-applicability-aud` — [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | B1-RH-ENUM, C4-GRAVITY-1LOOP, C5-NEWTON-G, C6-SPACETIME-SIGNATURE, EXP-000863, R-170 | [bounded page](pages/000619-000668.md#20260814-r-170-v1-0-initial-literature-applicability-aud) |
 
 ## Post-cutover pages
 
@@ -49,6 +49,6 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 669–671 | 3 | [000669-000718.md](pages/000669-000718.md) |
+| 669–672 | 4 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

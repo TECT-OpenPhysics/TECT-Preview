@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**176 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**177 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-177`](../RESULTS-LEDGER.md#r-177) | A1 two-root common-heat and root-incidence ledger | T0 |
 | [`R-176`](../RESULTS-LEDGER.md#r-176) | Actual A1 two-root principal Cholesky covariance witnesses | T0 |
 | [`R-175`](../RESULTS-LEDGER.md#r-175) | Canonical duplicated covariance square-root basis interface | T0 claim-nonbearing exact kernel/interface cross-check; no claim tier or lifecycle change. |
 | [`R-174`](../RESULTS-LEDGER.md#r-174) | Exact two-root production-cylinder cross-synthesis boundary | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-155`](../RESULTS-LEDGER.md#r-155) | Affine source-reuse factor-three endpoint and global origin gap | T4 |
 | [`R-154`](../RESULTS-LEDGER.md#r-154) | Disjoint multipair factor-three resonance graph and origin-Hessian gap | T4 |
 | [`R-153`](../RESULTS-LEDGER.md#r-153) | Production strict-past conditional Hessian and weighted-collar boundary | T4 |
-| [`R-152`](../RESULTS-LEDGER.md#r-152) | Affine-past curvature and nonlinear/multi-root globalization boundary | T4 |
 
 Search without loading the full ledger:
 
