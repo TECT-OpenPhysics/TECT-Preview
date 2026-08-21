@@ -7,7 +7,7 @@
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
     "RESULTS-LEDGER.md": "a52e53361e12861d76de340092a9a0ea78be8228440a48745b36ce8682d9adfa",
-    "changelog/log.jsonl": "7686ca6f1e294af7d89cf0bd20b016db14db33708ae4f70c68461a322fceb3a0",
+    "changelog/log.jsonl": "ff48daf57b8b238bc58160141efd49f64ca20ab95f734aa90fcf46259cff6d22",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "014b7ad0f8eae5834e8c560aa367e1000141d00f9354ae95555fae4dcb1c787e",
+    "explorations/log.jsonl": "9001575d80a03f123505ce51c46471404999cfbf354a05620e771e6ed92b39a2",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "todo/todo.json": "ec2cfbd089b7c06eb8f82fbd4f5634c8ba882d440766b8ec3d5fec6a8e75359a"
   },
@@ -68,15 +68,15 @@
     "refuted_claims": 1,
     "reusable_results": 171,
     "negative_records": 372,
-    "proof_explorations": 880,
+    "proof_explorations": 881,
     "exploration_verdicts": {
-      "advanced": 537,
+      "advanced": 538,
       "failed": 235,
       "inconclusive": 79,
       "parked": 29
     },
     "process_grade_lessons": 3,
-    "accepted_events": 660,
+    "accepted_events": 661,
     "tasks": 57,
     "live_tasks": 11,
     "completed_tasks": 46,
@@ -2751,6 +2751,13 @@
           "R-056",
           "R-057",
           "R-058"
+        ]
+      },
+      {
+        "event": "20260821-r-171-lean-runner-offline-bootstrap-repair-2026",
+        "claim_ids": [
+          "EXP-000881",
+          "R-171"
         ]
       }
     ],
@@ -6194,9 +6201,10 @@
           "EXP-000877",
           "EXP-000878",
           "EXP-000879",
-          "EXP-000880"
+          "EXP-000880",
+          "EXP-000881"
         ],
-        "latest_exploration_id": "EXP-000880",
+        "latest_exploration_id": "EXP-000881",
         "accepted_event_ids": [
           "20260721-close-t-049-negatively-with-the-a13-relative-ph",
           "20260721-complete-a13-gate-record-synchronization-and-re",
@@ -6367,9 +6375,10 @@
           "20260821-a13-joint-source-verifier-reader-drift-correcti",
           "20260821-r-171-actual-a7-plane-wave-endpoint-secant-sign",
           "20260821-r-171-lean-kernel-cross-check-and-important-res",
-          "20260821-a11-source-square-gate-split-after-r-056-r-058"
+          "20260821-a11-source-square-gate-split-after-r-056-r-058",
+          "20260821-r-171-lean-runner-offline-bootstrap-repair-2026"
         ],
-        "latest_event_id": "20260821-a11-source-square-gate-split-after-r-056-r-058",
+        "latest_event_id": "20260821-r-171-lean-runner-offline-bootstrap-repair-2026",
         "live_task_gate_ids": [
           "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
         ],
@@ -12123,7 +12132,8 @@
       "family_refs": [],
       "accepted_event_ids": [
         "20260821-r-171-actual-a7-plane-wave-endpoint-secant-sign",
-        "20260821-r-171-lean-kernel-cross-check-and-important-res"
+        "20260821-r-171-lean-kernel-cross-check-and-important-res",
+        "20260821-r-171-lean-runner-offline-bootstrap-repair-2026"
       ],
       "co_recorded_negative_tags": []
     },
@@ -70555,6 +70565,55 @@
       "task_id": "T-050",
       "title": "Split the A11 source-square estimate from the refuted separated production budget",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "This repair does not enlarge R-171, A13, T-050, A7, physical-empty, Sector-A, Pre-A, or continuum claims. A successful rerun still proves only the encoded R-171 algebraic proposition.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "A stored Lean PASS is not reproducible if the standard runner selects an elan shim that requires network access even though the exact pinned binaries are installed locally. Resolving the local binary by the repository toolchain pin preserves offline reproducibility without weakening the hash, lock, escape-token, or kernel checks.",
+      "evidence_refs": [
+        "verification/lean/lean-toolchain#toolchain",
+        "verification/lean/lakefile.toml#mathlib",
+        "verification/lean/lake-manifest.json#mathlib",
+        "verification/lean/Tect/R171.lean#kernel-source",
+        "verification/scripts/lean_r171_kernel_crosscheck.py#find_lake",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r171-kernel-crosscheck/result.json#previous-run"
+      ],
+      "finding": "The repository and remote are clean and the pinned Lean toolchain files are present, but the elan wrapper fails before compilation because it attempts a network self-update and the host is offline. The matching local toolchain lake executable compiles Tect/R171.lean with exit code 0. This is an environment/bootstrap defect in the runner, not a theorem failure; the bridge must prefer the exact local pinned toolchain before the elan wrapper.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-171"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+      ],
+      "id": "EXP-000881",
+      "method": [
+        "Re-run the repository Lean bridge with the current pinned toolchain and inspect the exact process failure.",
+        "Compare the elan wrapper path with the installed toolchain-local lake executable and compile Tect/R171.lean directly.",
+        "Make the bridge prefer a local lake whose toolchain directory matches the repository pin, while retaining PATH and elan fallbacks, then rerun the kernel compile and hash bridge."
+      ],
+      "next_action": "Patch the runner, rerun the stored Lean artifact, and retain the existing open A13/T-050 obligations.",
+      "provenance": "contemporaneous",
+      "question": "Does the R-171 Lean cross-check remain reproducible when elan has a pinned local toolchain but its wrapper cannot self-update because the network is unavailable?",
+      "recorded_at": "2026-08-21T07:51:21Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000880",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-21",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Harden the Lean runner against offline elan wrapper failure",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -96220,6 +96279,52 @@
         "R-057": "explicit_result_id",
         "R-058": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260821-r-171-lean-runner-offline-bootstrap-repair-2026",
+      "date": "2026-08-21",
+      "header": "[R-171 Lean runner offline bootstrap repair] - 2026-08-21",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "EXP-000881",
+        "R-171"
+      ],
+      "keywords": [
+        "EXP-000881",
+        "Lean-kernel-crosscheck",
+        "R-171",
+        "no-new-negative",
+        "offline-toolchain",
+        "reproducibility"
+      ],
+      "negative_results": [],
+      "notes": [
+        "verification/lean/README.md",
+        "verification/scripts/lean_r171_kernel_crosscheck.py",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r171-kernel-crosscheck/result.json",
+        "explorations/log.jsonl"
+      ],
+      "scripts": [],
+      "raw": "## [R-171 Lean runner offline bootstrap repair] - 2026-08-21\n\nEXP-000881 records an additive R-171 Lean runner repair after a controlled rerun exposed an offline elan-wrapper bootstrap failure. The repository pin and local toolchain were present, but the elan shim attempted a network self-update before Lean started; the exact toolchain-local lake binary compiled Tect/R171.lean with exit code zero and a clean kernel output.\n\nThe bridge now resolves the lake binary from the directory encoding of the pinned lean-toolchain before PATH or the elan shim. The stored R-171 artifact was refreshed and reports LEAN R-171 PASS 18/18 with the exact source and Mathlib lock hashes. This is a reproducibility repair only: it does not close A13/T-050, A7, the full A1 action, physical-empty, Sector-A, Pre-A, or any continuum limit. No new negative result is registered and no PDF is issued.\n\n",
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000881",
+        "R-171"
+      ],
+      "result_ids": [
+        "R-171"
+      ],
+      "linked_result_ids": [
+        "R-171"
+      ],
+      "result_link_basis": {
+        "R-171": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -101211,6 +101316,12 @@
         "id": "event:20260821-r-171-lean-kernel-cross-check-and-important-res",
         "kind": "accepted_event",
         "label": "[R-171 Lean kernel cross-check and important-result policy] - 2026-08-21",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260821-r-171-lean-runner-offline-bootstrap-repair-2026",
+        "kind": "accepted_event",
+        "label": "[R-171 Lean runner offline bootstrap repair] - 2026-08-21",
         "authority": "CHANGELOG.md"
       },
       {
@@ -106509,6 +106620,12 @@
         "id": "exploration:EXP-000880",
         "kind": "proof_exploration",
         "label": "Split the A11 source-square estimate from the refuted separated production budget",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000881",
+        "kind": "proof_exploration",
+        "label": "Harden the Lean runner against offline elan wrapper failure",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -122715,6 +122832,18 @@
       },
       {
         "from": "event:20260821-r-171-lean-kernel-cross-check-and-important-res",
+        "relation": "records_result",
+        "to": "result:R-171",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260821-r-171-lean-runner-offline-bootstrap-repair-2026",
+        "relation": "records",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260821-r-171-lean-runner-offline-bootstrap-repair-2026",
         "relation": "records_result",
         "to": "result:R-171",
         "basis": "explicit_result_id"
@@ -163031,6 +163160,42 @@
         "from": "exploration:EXP-000880",
         "relation": "references_result",
         "to": "result:R-058",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000881",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000881",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000881",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000881",
+        "relation": "continues",
+        "to": "exploration:EXP-000880",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000881",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000881",
+        "relation": "references_result",
+        "to": "result:R-171",
         "basis": "structured_formal_ref"
       },
       {

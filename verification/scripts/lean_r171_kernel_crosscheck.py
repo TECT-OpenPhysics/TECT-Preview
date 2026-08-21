@@ -53,11 +53,24 @@ def sha256(path: Path) -> str:
 
 
 def find_lake() -> str | None:
+    home = Path.home()
+    # Prefer the binary inside the exact locally installed toolchain.  The
+    # elan shim may attempt a network self-update even when that toolchain is
+    # already present, which makes an otherwise offline-reproducible check
+    # fail before Lean starts.  Elan's directory encoding is derived from the
+    # repository pin rather than duplicated as a version literal.
+    pin = TOOLCHAIN.read_text(encoding="utf-8").strip()
+    encoded = pin.replace("/", "--").replace(":", "---")
+    toolchain_bin = home / ".elan" / "toolchains" / encoded / "bin"
+    local_name = "lake.exe" if os.name == "nt" else "lake"
+    local_lake = toolchain_bin / local_name
+    if local_lake.is_file():
+        return str(local_lake)
+
     found = shutil.which("lake")
     if found:
         return found
     candidates = []
-    home = Path.home()
     if os.name == "nt":
         candidates.extend((home / ".elan" / "bin" / "lake.exe", home / ".elan" / "bin" / "lake"))
     else:

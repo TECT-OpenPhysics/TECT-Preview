@@ -10,6 +10,11 @@ From this directory, after Lean/elan is installed:
 lake env lean Tect/R171.lean
 ```
 
+The repository runner first resolves `lake` from the locally installed
+toolchain whose directory encoding matches `lean-toolchain`, then falls back
+to PATH/elan.  This keeps the check reproducible when the elan shim cannot
+reach its update service but the pinned compiler is already installed.
+
 The theorem is intentionally parameterised by the positive coefficients and
 regulariser. A result package must separately hash-check the manifest inputs
 before treating the theorem as a cross-check of a concrete run. A successful
