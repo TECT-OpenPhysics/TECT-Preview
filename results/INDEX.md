@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**179 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**180 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-180`](../RESULTS-LEDGER.md#r-180) | Lean scalar triangular majorant cross-check | T0 |
 | [`R-179`](../RESULTS-LEDGER.md#r-179) | Future-variance and forest owner-half coefficient ledger | T0 |
 | [`R-178`](../RESULTS-LEDGER.md#r-178) | Complete two-root cross-owner phase differentiation | T0 |
 | [`R-177`](../RESULTS-LEDGER.md#r-177) | A1 two-root common-heat and root-incidence ledger | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-158`](../RESULTS-LEDGER.md#r-158) | Exact charge-ensemble first-order shell transition and neutral-reference boundary | T6 |
 | [`R-157`](../RESULTS-LEDGER.md#r-157) | Pinned P1 unique-zero critical point, global minimizer, and exponential gradient-flow decay | T6 |
 | [`R-156`](../RESULTS-LEDGER.md#r-156) | Shifted-state intrinsic Hessian and nonzero-neighbourhood gap boundary | T4 |
-| [`R-155`](../RESULTS-LEDGER.md#r-155) | Affine source-reuse factor-three endpoint and global origin gap | T4 |
 
 Search without loading the full ledger:
 

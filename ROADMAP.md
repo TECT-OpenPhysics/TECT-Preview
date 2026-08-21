@@ -1575,6 +1575,14 @@ bookkeeping, not the analytic forest or source/sextic one-use theorem. The
 complete production owner, T-050, A13, physical-empty, Sector-A, Pre-A and
 limit routes remain open. No R-179 PDF is issued.
 
+EXP-000895 / R-180 is a T0, claim-nonbearing Lean checkpoint for the
+scalar summation input of the R-140 predictable triangular one-use theorem. It
+kernel-checks the finite geometric identity, abstract C=5 positivity, the
+rational fixture, and the registered exponent margins `7/60` and `1/12`.
+This does not construct the production R-102 mixed-Gram envelope or prove the
+source/sextic one-use, finite-collar headroom, T-050, A13, Sector-A,
+physical-empty, Pre-A or limit routes. No R-180 PDF is issued.
+
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7

@@ -1,0 +1,139 @@
+{
+  "schema": "tect/lean-a13-scalar-triangular-majorant-crosscheck/1.0",
+  "audit_id": "A13-SCALAR-TRIANGULAR-MAJORANT-LEAN-CROSSCHECK",
+  "result_id": "R-180",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000895",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Lean cross-check of the scalar triangular one-use majorant",
+  "purpose": "Kernel-check the finite geometric-series identity, envelope positivity, and exact exponent margins used by the R-140 predictable triangular one-use theorem without importing the missing production mixed-Gram envelope.",
+  "inputs": {
+    "r140_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_predictable_triangular_mixed_gram_source_graph_feshbach_boundary_manifest.json",
+      "sha256": "971a966bf72a04af10dec65e7850384e628c5215bbe75092fe6cb93033fb4144"
+    },
+    "r179_manifest": {
+      "path": "strategy/pre-a-a13-future-variance-forest-owner-half-ledger-manifest.json",
+      "sha256": "de67b5f7ff9591a0955176a758bbc8d0c38288cc4132fe4f4d532ceeba1e05e5"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "exponents": {
+      "beta": "7/5",
+      "s": "2/3",
+      "gamma": "7/12"
+    },
+    "margins": {
+      "beta_half_minus_gamma": "7/60",
+      "s_minus_gamma": "1/12"
+    },
+    "fixture": {
+      "u": "3/4",
+      "v": "1/4",
+      "q": "2",
+      "rho": "1/2",
+      "near": "8/3",
+      "far_high": "6",
+      "hFive": "26/3",
+      "geom_base": "1/2",
+      "geom_terms": 4,
+      "geom_value": "15/8"
+    },
+    "envelope_hypotheses": "0<u<1, 0<v<u, 1<q, 0<rho<1"
+  },
+  "theorem_markers": [
+    "geom_closed",
+    "geom_nonneg",
+    "geom_le_inv_one_sub",
+    "near_pos",
+    "far_high_pos",
+    "hFive_pos",
+    "hFive_fixture",
+    "geom_fixture",
+    "production_exponent_margins"
+  ],
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R180.lean",
+      "sha256": "b3a7832e47645ddada8c283caa5e14ce8a62645812fb8f313866da199e0f4c14"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_a13_scalar_triangular_majorant_crosscheck.py",
+      "sha256": "82495cb502a0021bae2c417127c465e2235cc184b8e9d6a2d05d7191dcc83f76"
+    },
+    "independent": {
+      "path": "codes/foundations/lean_a13_scalar_triangular_majorant_crosscheck_independent.py",
+      "sha256": "dcbb367222e9b85310f8249a8b4ba04d1e1f0c62c36d0436070d806c241dc5de"
+    },
+    "verifier": {
+      "path": "codes/foundations/lean_a13_scalar_triangular_majorant_crosscheck_verify.py",
+      "sha256": "22b630f34a092b131b86835a564b772afb7827d81da05e83f260dd2a792265e4"
+    },
+    "certificate": {
+      "path": "strategy/pre-a-a13-scalar-triangular-majorant-crosscheck-certificate-260821.md",
+      "sha256": "7f057c7f746dfc04138afea3797d021fe043d262b139f4bf3519658751046433"
+    },
+    "note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-scalar-triangular-majorant-crosscheck-260821.md",
+      "sha256": "43af5082eb6b022c3cf89f243809269651c33ba9b827c84773bbf2d9e33542b1"
+    }
+  },
+  "formal_integration": {
+    "event_id": "20260821-r-180-lean-scalar-triangular-majorant-cross-che",
+    "event_ordinal": 676,
+    "event_claim_ids": [
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "EXP-000895",
+      "R-180"
+    ],
+    "event_raw_tokens": [
+      "EXP-000895",
+      "R-180",
+      "scalar triangular",
+      "Lean",
+      "No R-180 PDF"
+    ],
+    "expected_counts": {
+      "claims": 49,
+      "results": 180,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 895,
+      "events": 676,
+      "tasks": 57,
+      "catalog": 4361
+    },
+    "primary_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r180-scalar-triangular-majorant-crosscheck/primary.json",
+    "independent_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r180-scalar-triangular-majorant-crosscheck/independent.json",
+    "integrated_run_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r180-scalar-triangular-majorant-crosscheck/integrated.json",
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [],
+    "no_pdf": true
+  },
+  "hostile_mutations": [
+    "change the near geometric component",
+    "change the far-high geometric component",
+    "replace the closed C=5 fixture",
+    "erase the finite geometric-series identity",
+    "erase the beta-half minus gamma margin",
+    "erase the s minus gamma margin",
+    "mark A13 or Sector-A closed",
+    "insert a Lean sorry or axiom token"
+  ],
+  "boundary": "R-180 proves only the finite geometric-series identity, positivity of the abstract C=5 scalar majorant under the registered envelope hypotheses, the exact fixture H5=26/3 and geometric sum 15/8, and the production exponent margins beta/2-gamma=7/60 and s-gamma=1/12. It does not construct the production R-102 mixed-Gram envelope, prove the conditional owner intertwiner, establish the source/sextic one-use ledger, finite-collar headroom, matching, an absolute anchor, T-050, A13, Nelson, an interacting measure, physical-empty comparison, removal, continuum limits, Sector-A or Pre-A closure. No gate closure, tier change, new negative or PDF follows.",
+  "next_action": "Use the exact scalar margins only as an input to the owner-complete production mixed-Gram task. Construct and differentiate the full R-102 response with R-125 future variance, R-063 forest, mean/low endpoint and root incidence retained once; then prove or refute a uniform envelope before spending any finite-collar or source/sextic margin."
+}

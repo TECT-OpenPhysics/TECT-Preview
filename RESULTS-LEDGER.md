@@ -27,6 +27,7 @@ policy in `governance/development-history.md`.
 | [R-177](#r-177) | A1 two-root common-heat and root-incidence ledger | R-177 v1.0 is a T0 claim-nonbearing Lean ledger under EXP-000892. It binds the actual R-176 `k,2k` covariance roots to the finite order common heat -> root 1 -> root 2 -> future residual, proves the two-replica variance and feedback identities, and rejects mean-only or independently replicated heat substitutions. The complete owner, source/sextic windows, T-050, A13, Sector-A and Pre-A remain open |
 | [R-178](#r-178) | Complete two-root cross-owner phase differentiation | R-178 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000893. It retains the field-field, current-current and ordered field-current R-174 blocks, differentiates both root directions exactly, and proves their sum is zero by global phase invariance; the ordered block is active in the registered fixture. The production sign, heat/forest/complement/returned-low/source/sextic owner, T-050, A13, Sector-A and Pre-A remain open |
 | [R-179](#r-179) | Future-variance and forest owner-half coefficient ledger | R-179 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000894. It rechecks the R-125/R-136 coefficient `P=F/2-V/4`, the replica form `2P=F-V/2`, and the exact constant-translation omission defect. The analytic forest, production source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
+| [R-180](#r-180) | Lean scalar triangular majorant cross-check | R-180 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000895. It rechecks the finite geometric majorant algebra, abstract C=5 positivity, the rational fixture, and the registered exponent margins 7/60 and 1/12. The production mixed-Gram envelope, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-176](#r-176) | Actual A1 two-root principal Cholesky covariance witnesses | R-176 v1.0 is a T0 claim-nonbearing Lean cross-check under EXP-000891. From the hash-pinned A1 symbol it reconstructs positive pivot chains at `k` and `2k`, builds inverse-transpose principal factors `U` with `C=U U^T`, and duplicates them into six-real covariance roots. Heat/root incidence, the complete owner, T-050, A13, Sector-A and Pre-A remain open |
 | [R-175](#r-175) | Canonical duplicated covariance square-root basis interface | R-175 v1.0 is a T0 claim-nonbearing exact interface under EXP-000890. A supplied `L L^T=C` yields `G G^T=Gamma` for `G=diag(L,L)` and preserves the six-real complex structure; actual A1 square-root existence/selection and the complete owner remain open |
 | [R-172](#r-172) | A1 Class-II owner mismatch Lean cross-check | R-172 v1.0 is a scoped T0 claim-nonbearing exact coefficient audit under EXP-000887. It derives cKK beta_X^2=3/320 and cJK alpha_X beta_X=3/400 with common positive mass denominator, so the declared and historical residual Class-II owners are not interchangeable. This does not close the full A1 variation, A13, Sector-A or Pre-A |
@@ -336,6 +337,35 @@ A13, Nelson, a measure, physical-empty comparison, removal, continuum limits,
 Sector-A or Pre-A. No tier change, gate closure, new negative or PDF follows.
 
 **Proven in:** [R-179 certificate](strategy/pre-a-a13-future-variance-forest-owner-half-ledger-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R179.lean), [primary script](verification/scripts/lean_a13_future_variance_forest_owner_half_ledger.py), [independent script](codes/foundations/lean_a13_future_variance_forest_owner_half_ledger_independent.py), [integrated verifier](codes/foundations/lean_a13_future_variance_forest_owner_half_ledger_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-future-variance-forest-owner-half-ledger-260821.md), and the saved run artefacts. No R-179 PDF is issued.
+
+<a id="r-180"></a>
+### R-180 -- Lean scalar triangular majorant cross-check
+
+**Result ID.** `R-180` is a T0, claim-nonbearing Lean checkpoint under
+`EXP-000895`.
+
+**Exact result.** The pinned Lean source proves the finite geometric identity
+`(1-r) sum_(i<n) r^i = 1-r^n`, nonnegativity and the finite geometric upper
+bound for `0<=r<1`, positivity of the abstract C=5 scalar majorant under
+`0<u<1`, `0<v<u`, `1<q`, and `0<rho<1`, and the exact rational fixture
+`near=8/3`, `far_high=6`, `H5=26/3`, `sum_(i<4) (1/2)^i=15/8`. It also
+checks the registered production margins
+`beta/2-gamma=7/60` and `s-gamma=1/12` for
+`beta=7/5`, `s=2/3`, and `gamma=7/12`.
+
+**Verification.** The primary SymPy lane and independent stdlib Fraction lane
+agree on every derived rational value. The pinned Lean source has no escape
+token; the integrated verifier checks package/input hashes, AST/import
+independence, eight hostile mutations, and formal topology/freshness.
+
+**Boundary.** This cross-check makes the scalar summation step auditable but
+does not construct the owner-complete R-102 mixed-Gram envelope or its
+conditional factorisation. It does not prove the production source/sextic
+one-use ledger, finite-collar headroom, matching, absolute anchor, T-050,
+A13, Nelson, a measure, physical-empty comparison, removal, continuum limits,
+Sector-A or Pre-A. No tier change, gate closure, new negative or PDF follows.
+
+**Proven in:** [R-180 certificate](strategy/pre-a-a13-scalar-triangular-majorant-crosscheck-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R180.lean), [primary script](verification/scripts/lean_a13_scalar_triangular_majorant_crosscheck.py), [independent script](codes/foundations/lean_a13_scalar_triangular_majorant_crosscheck_independent.py), [integrated verifier](codes/foundations/lean_a13_scalar_triangular_majorant_crosscheck_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-scalar-triangular-majorant-crosscheck-260821.md), and the saved run artefacts. No R-180 PDF is issued.
 
 <a id="r-175"></a>
 ### R-176 -- Actual A1 two-root principal Cholesky covariance witnesses
