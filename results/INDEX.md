@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**188 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**189 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-189`](../RESULTS-LEDGER.md#r-189) | A1 e3 two-mode production-cylinder positivity Lean cross-check | T0 |
 | [`R-188`](../RESULTS-LEDGER.md#r-188) | Signed Jensen-defect telescope Lean cross-check | T0 |
 | [`R-187`](../RESULTS-LEDGER.md#r-187) | Adapted NEAR obstruction Lean cross-check | T0 |
 | [`R-186`](../RESULTS-LEDGER.md#r-186) | Temporal packet algebra Lean cross-check | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-167`](../RESULTS-LEDGER.md#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | T0 (scoped essential-range multiplier/joint-cylinder, zero-source star/common-radius, bond-flow/shell and abstract GNS-gap transfer results; selected-tangent, categorical orbit-sm… |
 | [`R-166`](../RESULTS-LEDGER.md#r-166) | Sparse production radial-Gram decomposition and global owner bound | T4 (scoped exact finite production fibre; no promotion). |
 | [`R-165`](../RESULTS-LEDGER.md#r-165) | Sparse production owner harmonic coercivity and compact-annulus reduction | T4 (scoped exact finite production fibre; no promotion). |
-| [`R-164`](../RESULTS-LEDGER.md#r-164) | Predictable first-chaos origin-force certificate and anchor-free semiconvexity reduction | T4 |
 
 Search without loading the full ledger:
 

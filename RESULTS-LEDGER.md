@@ -33,6 +33,7 @@ policy in `governance/development-history.md`.
 | [R-186](#r-186) | Temporal packet algebra Lean cross-check | R-186 v1.0 is a T0 claim-nonbearing kernel cross-check under EXP-000901. It proves the registered temporal weighted Cauchy/Douglas fixture and the complete-packet telescope, including the retained fresh-times-future cross term `6/25`. The production map, progressive/revisit uniformity, `OVERLAP_src`, Nelson, Sector-A and Pre-A remain open |
 | [R-187](#r-187) | Adapted NEAR obstruction Lean cross-check | R-187 v1.0 is a T0 claim-nonbearing kernel cross-check under EXP-000902. It separates zero conditional first variation from nonzero root-square innovation, records the signed control-control slack, and checks a bounded Doob fixture. The production adapted operator, complete same-root bound, `OVERLAP_src`, Nelson, Sector-A and Pre-A remain open |
 | [R-188](#r-188) | Signed Jensen-defect telescope Lean cross-check | R-188 v1.0 is a T0 claim-nonbearing kernel cross-check under EXP-000903. It proves the finite quadratic signed Jensen-defect telescope, exact secant-plus-defect recombination, zero signed endpoint mean, and strict positive absolute first-defect payment. The production adapted NEAR owner, `OVERLAP_src`, Nelson, Sector-A and Pre-A remain open |
+| [R-189](#r-189) | A1 e3 two-mode production-cylinder positivity Lean cross-check | R-189 v1.0 is a T0 claim-nonbearing finite A1 F_ref slice result under EXP-000904. It derives the exact mixed t,u polynomial on the side-16 e3 n=1,2 cylinder and proves strict positivity away from zero. Arbitrary polarization, active Class-II terms, the complete A13 owner, controlled-shell one-use, progressive/revisit, Sector-A and Pre-A remain open |
 | [R-182](#r-182) | Feedback-pulled cross-Hessian margin Lean cross-check | R-182 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000897. It combines the active R-178 cross coefficient with the R-181 feedback map and proves the exact pulled Hessian `[-2,4;4,-8]` with eigenvalues -10 and 0. The diagonal production owner, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-181](#r-181) | Finite two-root feedback mixed-Gram Lean cross-check | R-181 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000896. It binds the R-177 beta=1/2 root-2 feedback map, exact Gram `[[5/4,1/2],[1/2,1]]`, and positive envelope defect. The production spatial mixed Gram, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-180](#r-180) | Lean scalar triangular majorant cross-check | R-180 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000895. It rechecks the finite geometric majorant algebra, abstract C=5 positivity, the rational fixture, and the registered exponent margins 7/60 and 1/12. The production mixed-Gram envelope, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
@@ -426,6 +427,37 @@ negative-result status changes.
 **Proven in:** [R-187 certificate](strategy/pre-a13-adapted-near-obstruction-crosscheck-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R187.lean), [primary script](verification/scripts/lean_a13_adapted_near_obstruction_crosscheck.py), [independent script](codes/foundations/lean_a13_adapted_near_obstruction_crosscheck_independent.py), [integrated verifier](codes/foundations/lean_a13_adapted_near_obstruction_crosscheck_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-adapted-near-obstruction-crosscheck-260822.md), and the saved run artefacts. No R-187 PDF is issued.
 
 <a id="r-188"></a>
+### R-189 -- A1 e3 two-mode production-cylinder positivity Lean cross-check
+
+**Result ID.** `R-189` is a T0, claim-nonbearing finite production-cylinder
+diagnostic established by EXP-000904.
+
+**Scope.** The hash-pinned standalone A1 `F_ref` is restricted to the side-16
+one-dimensional modes `n=1,2` and internal polarization `e3=(0,0,1)`, with
+`eta_shell=0`. The Class-II generators act on the first two components, so
+this slice has no Class-II current term. This is a conditional slice owner,
+not the complete A13 production owner and not the historical `F_decl`.
+
+**Exact result.** With `t=a^2`, `u=b^2`, and `s=t+u`, the normalized density is
+
+`F=q1*t+q2*u-(129/3200)(t^2+4tu+u^2)+(27/320)(t^3+(21/2)t^2u+9tu^2+u^3)`.
+
+A rational Machin enclosure gives `q1>1/10` and `q2>1/10`. The quartic is at
+most `(3/2)s^2`, the sextic is at least `s^3/4`, and the lower cubic is
+`s/10-(387/6400)s^2+(27/1280)s^3`. Its quadratic factor has discriminant
+`-195831/40960000`, so the slice is strictly positive for every nonzero
+field in the slice. The factorization and cylinder lower bound compile in
+`Tect.R189`.
+
+**Adversarial boundary.** The result does not control arbitrary internal
+polarizations, active Class-II terms, heat/forest/returned-low/source owners,
+the complete signed adapted NEAR packet, controlled-shell one-use,
+progressive/revisit uniformity, a transverse Hessian, physical-empty,
+continuum, Sector-A, Pre-A or any tier/gate conclusion. A13's two gates remain
+open. No new negative and no R-189 PDF are issued.
+
+**Proven in:** [R-189 certificate](strategy/pre-a13-a1-e3-two-mode-production-cylinder-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R189.lean), [primary script](verification/scripts/lean_a13_a1_e3_two_mode_production_cylinder.py), [independent script](codes/foundations/lean_a13_a1_e3_two_mode_production_cylinder_independent.py), [integrated verifier](codes/foundations/lean_a13_a1_e3_two_mode_production_cylinder_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-a1-e3-two-mode-production-cylinder-260822.md), and the saved run artefacts. No R-189 PDF is issued.
+
 ### R-188 -- Signed Jensen-defect telescope Lean cross-check
 
 **Result ID.** `R-188` is a T0, claim-nonbearing finite diagnostic

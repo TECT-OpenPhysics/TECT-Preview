@@ -1639,6 +1639,15 @@ the Jensen branch must remain in the signed complete packet, but does not
 identify the production adapted operator or close the complete NEAR owner,
 progressive/revisit uniformity, `OVERLAP_src`, controlled-shell one-use,
 Nelson, Sector-A, Pre-A or any limit route. No R-188 PDF is issued.
+EXP-000904 / R-189 is a T0, claim-nonbearing Lean checkpoint for an actual A1
+`F_ref` production slice: the side-16 e3-polarized n=1,2 cylinder.  Exact
+period averages and a Machin enclosure give quadratic coefficients above
+`1/10`; the mixed quartic/sextic polynomial is bounded below by a cubic with
+negative discriminant, so the slice is strictly positive away from zero.
+This is not an arbitrary-polarization or active-Class-II estimate and does not
+assemble the complete adapted heat/forest/returned-low/source owner.  A13,
+T-050, controlled-shell one-use, progressive/revisit, Sector-A, Pre-A and all
+limit routes remain open. No R-189 PDF is issued.
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7

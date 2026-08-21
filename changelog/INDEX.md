@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**684 accepted events** · latest 25 shown below · machine locator: `index.json`
+**685 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-22 | `20260822-r-189-a1-e3-two-mode-production-cylinder-positi` — [R-189 A1 e3 two-mode production-cylinder positivity Lean cross-check] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000904, R-189 | [bounded page](pages/000669-000718.md#20260822-r-189-a1-e3-two-mode-production-cylinder-positi) |
 | 2026-08-22 | `20260822-r-188-signed-jensen-defect-telescope-lean-cross` — [R-188 signed Jensen-defect telescope Lean cross-check] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000903, R-188 | [bounded page](pages/000669-000718.md#20260822-r-188-signed-jensen-defect-telescope-lean-cross) |
 | 2026-08-22 | `20260822-r-187-adapted-near-obstruction-lean-cross-check` — [R-187 adapted NEAR obstruction Lean cross-check] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000902, R-187 | [bounded page](pages/000669-000718.md#20260822-r-187-adapted-near-obstruction-lean-cross-check) |
 | 2026-08-22 | `20260822-r-186-r-081-temporal-packet-algebra-lean-cross` — [R-186 R-081 temporal packet algebra Lean cross-check] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000901, R-186 | [bounded page](pages/000669-000718.md#20260822-r-186-r-081-temporal-packet-algebra-lean-cross) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-21 | `20260821-a13-r-058-authority-repair-and-lean-budget-cros` — [A13 R-058 authority repair and Lean budget cross-check] - 2026-08-21 | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A12-CLASSII-SOURCE-SQUARE-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000883, R-058 | [bounded page](pages/000619-000668.md#20260821-a13-r-058-authority-repair-and-lean-budget-cros) |
 | 2026-08-21 | `20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0` — [R-057 Lean kernel arithmetic cross-check] - 2026-08-21 | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A12-CLASSII-SOURCE-SQUARE-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000882, R-057 | [bounded page](pages/000619-000668.md#20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0) |
 | 2026-08-21 | `20260821-r-171-lean-runner-offline-bootstrap-repair-2026` — [R-171 Lean runner offline bootstrap repair] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000881, R-171 | [bounded page](pages/000619-000668.md#20260821-r-171-lean-runner-offline-bootstrap-repair-2026) |
-| 2026-08-21 | `20260821-a11-source-square-gate-split-after-r-056-r-058` — [A11 source-square gate split after R-056-R-058] - 2026-08-21 | A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A12-CLASSII-SOURCE-SQUARE-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, A9-CLASSII-SMART-PATH-CANCELLATION, EXP-000880, R-055, R-056, R-057, R-058 | [bounded page](pages/000619-000668.md#20260821-a11-source-square-gate-split-after-r-056-r-058) |
 
 ## Post-cutover pages
 
@@ -49,6 +49,6 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 669–684 | 16 | [000669-000718.md](pages/000669-000718.md) |
+| 669–685 | 17 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |
