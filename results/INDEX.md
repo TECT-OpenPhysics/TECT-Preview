@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**170 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**171 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-171`](../RESULTS-LEDGER.md#r-171) | Actual A7 plane-wave endpoint secant sign witness | T4 scoped analytic/exact/executed result; no claim tier or lifecycle change. |
 | [`R-170`](../RESULTS-LEDGER.md#r-170) | Initial QFT/GR/Reading-H literature-applicability audit | T0 (claim-nonbearing applicability classification and quarantine audit). |
 | [`R-169`](../RESULTS-LEDGER.md#r-169) | Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction | T0 (claim-nonbearing scoped exact geometry, conditional sign/stability transfer and exact logical obstructions only). |
 | [`R-168`](../RESULTS-LEDGER.md#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | T0 (claim-nonbearing scoped schema, current-version admission, Gaussian fingerprint, finite-regulator nonidentifiability and exact v1.3 mathematical transport children only; no ac… |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-149`](../RESULTS-LEDGER.md#r-149) | Cross-synthesis Stein owner, radial-slice boundary, and full-internal companion positivity | T4 |
 | [`R-148`](../RESULTS-LEDGER.md#r-148) | Canonical fresh-prefix rank obstruction, active-spectator lift boundary, and coefficient-parameter Hessian correction | T4 |
 | [`R-147`](../RESULTS-LEDGER.md#r-147) | Canonical signed common terminal, predictable trace-bracket defect, and affine-collinear production boundary | T4 |
-| [`R-146`](../RESULTS-LEDGER.md#r-146) | Relative zero-control anchor, endpoint-first anisotropic payment, and canonical-covariance scalar-sign boundary | T4 |
 
 Search without loading the full ledger:
 

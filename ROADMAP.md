@@ -1555,6 +1555,15 @@ Reading-H interface, physical-empty, `SCHEME-2LOOP`, `GAP-3`,
 new negative, physical Sector-A result, or Pre-A closure follows. No R-170
 v1.0 PDF is issued.
 
+EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
+A1/A7 model. The registered dual-lattice plane wave
+`Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7
+Class-II component energy, while zero has energy zero, so the endpoint secant
+to zero is strictly negative. The exact Pauli/current reduction, positive
+bracket polynomial and integral lower bound are independently reproduced.
+This is not a full A1 action, random composite, physical-empty comparison or
+A13/T-050 closure. A13, T-050, Sector-A, Pre-A and the physical-vacuum routes
+remain open. No new negative result or R-171 v1.0 PDF is issued.
 EXP-000816 audits and parks an automatic complex/covariant M2 successor. The
 proposed complex field, charge/action, gauge/bundle background, covariant
 derivative, contact and winding quotient are new model choices not derived or

@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-171](#r-171) | Actual A7 plane-wave endpoint secant sign witness | R-171 v1.0 is a scoped T4 analytic/exact/executed endpoint component-energy result under EXP-000878. For the hash-pinned A1/A7 L=16 model, one real dual-lattice plane wave has strictly positive deterministic Class-II energy while zero has energy zero, so the endpoint secant to zero is strictly negative. This is not a full A1/Hartree/physical-vacuum result; A13, T-050, Sector-A and Pre-A remain open |
 | [R-170](#r-170) | Initial QFT/GR/Reading-H literature-applicability audit | R-170 v1.0 is the scoped T0 claim-nonbearing audit under EXP-000863. It completes exactly the initial four-record rollout: B1 APPLIES only to its current `C_full` Q-versus-`G_*` theorem; C4 and C5 remain NOT-YET-ASSESSED; and the present C6 BCC-premised route DOES-NOT-APPLY while alternatives remain NOT-YET-ASSESSED. The policy remains binding, no tier or lifecycle changes, and no physical, Sector-A, or Pre-A gate closes |
 | [R-169](#r-169) | Truncated-octahedron realization semantics, native Reading-H ownership, and corrected common-Bohr radial audit | R-169 v1.4 is the current scoped T0 analytic/exact/executed/audited result under EXP-000862. It retains v1.0--v1.3, reconstructs one corrected scalar common-Bohr owner from the legacy formula and exact signed moments, separates fixed intensity from radial minimization, and qualifies one off-grid-confounded historical collapse leg without reopening B3. No full-Hartree/P1 bridge, physical-empty sign, stability/limit theorem, C6 result or Pre-A closure follows |
 | [R-168](#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | R-168 v1.3 is a scoped T0 analytic/exact/executed/audited additive result under EXP-000814. It retains v1.0--v1.2 and closes five mathematical children without creating a compact action, physical response, candidate, prediction or freeze; physical-response, Round-1, Sector A and Pre-A remain open |
@@ -193,6 +194,52 @@ policy in `governance/development-history.md`.
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
+<a id="r-171"></a>
+### R-171 -- Actual A7 plane-wave endpoint secant sign witness
+
+**Result ID.** R-171 v1.0, recorded under EXP-000878.
+
+**Scope.** This is a deterministic component-energy result for the hash-pinned
+A1/A7 convention on the fixed `L=16` three-torus. It uses the registered
+embedded Pauli generators, positive A1 coefficients, fixed
+`rho_regularizer=1e-12`, real polarization `u=e1`, and the exact dual-lattice
+mode `n=(1,0,0)`, so `k=pi/8`. It is not a new claim-card tier or lifecycle
+change.
+
+**Exact witness.** For
+`Psi_amp(x)=amp*cos((pi/8)*x_1)*e1`, put
+`s=amp*cos(theta)` and `d=-amp*(pi/8)*sin(theta)`. The actual A7 Class-II
+density reduces to
+
+`e_II=(s*d)^2 [2*a+4*b*eps/(s^2+eps)+2*c*eps^2/(s^2+eps)^2]`,
+
+where the positive coefficients `a,b,c` are derived from the A1 manifest.
+With `r=s^2`, the bracket numerator is
+`2*a*r^2+4*eps*(a+b)*r+2*eps^2*(a+2*b+c)`, whose coefficients are all
+strictly positive. Hence the component energy is strictly positive for every
+nonzero amplitude, while `E_II[0]=0`, and the endpoint secant
+`E_II[0]-E_II[Psi_amp]` is strictly negative. The exact integral lower bound
+is `E_II[Psi_amp]/(amp^4*pi^2) >= 16*a > 0`.
+
+**Reproduction and adversarial review.** The SymPy primary and non-importing
+stdlib Fraction independent scripts derive the same coefficients, Pauli current
+identities, mode commensurability, point witness and lower bound. The integrated
+verifier executes eight hostile mutations covering sign, mode, coefficients,
+Pauli identities, owner substitution, route closure and physical overclaim.
+
+**Boundary.** This blocks only the inference that a positive endpoint component
+energy automatically gives a positive relative secant to zero. It does not
+close the complete A13/T-050 joint owner, the full A1 action, the covariance-
+normal random composite, a Nelson estimate, a Gibbs measure, a phase or
+morphology, a physical-empty comparison, Sector-A or Pre-A. No new negative
+result is registered and no R-171 v1.0 PDF is issued.
+
+**Proven in:** [R-171 certificate](strategy/pre-a-a7-actual-plane-wave-endpoint-secant-sign-witness-certificate-260821.md),
+[primary script](codes/foundations/pre-a-a7_actual_plane_wave_endpoint_secant_sign_witness.py),
+[independent script](codes/foundations/pre-a-a7_actual_plane_wave_endpoint_secant_sign_witness_independent.py),
+and [integrated verifier](codes/foundations/pre-a-a7_actual_plane_wave_endpoint_secant_sign_witness_verify.py).
+
+**Tier.** T4 scoped analytic/exact/executed result; no claim tier or lifecycle change.
 <a id="r-170"></a>
 ### R-170 -- Initial QFT/GR/Reading-H literature-applicability audit
 
