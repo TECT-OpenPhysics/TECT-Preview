@@ -6,7 +6,7 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-08-14.
+exist here. Last updated: 2026-08-21.
 
 ## Current Sector-A frontier (R-113)
 
