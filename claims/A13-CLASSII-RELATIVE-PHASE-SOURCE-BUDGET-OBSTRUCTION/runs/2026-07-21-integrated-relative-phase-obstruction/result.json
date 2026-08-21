@@ -1,6 +1,10 @@
 {
   "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
   "consequence": {
+    "current_open_gates": [
+      "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+      "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+    ],
     "forbidden_successor": "standalone deterministic exact-B source-square absorption, with or without resolvent-only repair",
     "negative_result": "NG-2026-07-21-A13-RELATIVE-PHASE-SOURCE-BUDGET",
     "next_gate": "A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE",
@@ -21,8 +25,8 @@
       "status": "PASS"
     },
     {
-      "actual": "d0463c2cc67506b115c4e3c0cd6eceffab03c975f405dad9aab94e93d27c05a7",
-      "expected": "d0463c2cc67506b115c4e3c0cd6eceffab03c975f405dad9aab94e93d27c05a7",
+      "actual": "2542292f409bdfa91b86ae17d9db0a951f8582e956c28b7c735439e9283121ba",
+      "expected": "2542292f409bdfa91b86ae17d9db0a951f8582e956c28b7c735439e9283121ba",
       "name": "integrated_source_verifier_hash",
       "status": "PASS"
     },
@@ -39,8 +43,8 @@
       "status": "PASS"
     },
     {
-      "actual": "e2bfaa8bc00b72a95a2fa7890d8550ff5486e9599f3c485c4e8c552f8bf0047c",
-      "expected": "e2bfaa8bc00b72a95a2fa7890d8550ff5486e9599f3c485c4e8c552f8bf0047c",
+      "actual": "fb3aa80bf84999c776f59e542f03c3f2769c97ada8106210ffb71260bd9b21b3",
+      "expected": "fb3aa80bf84999c776f59e542f03c3f2769c97ada8106210ffb71260bd9b21b3",
       "name": "integrated_authority_a12_status_hash",
       "status": "PASS"
     },
@@ -101,7 +105,7 @@
     },
     {
       "actual": [
-        2022.5787400615045,
+        2022.5787400615038,
         2022.5787400615052
       ],
       "expected": "routes agree",
@@ -110,7 +114,7 @@
     },
     {
       "actual": [
-        19670.459449911596,
+        19670.459449911592,
         19670.459449911603
       ],
       "expected": "routes agree",
@@ -175,7 +179,10 @@
       "status": "PASS"
     },
     {
-      "actual": true,
+      "actual": {
+        "negative_marker": true,
+        "t049": true
+      },
       "expected": true,
       "name": "claim_records_negative_t049",
       "status": "PASS"
@@ -193,19 +200,21 @@
       "status": "PASS"
     },
     {
-      "actual": "This claim does not prove that the exact source is unbounded, rule out a joint source-potential estimate or different true increment, prove the A11 stabilised log-Laplace theorem or A7 Nelson bound, construct an interacting measure, remove the floor or regulator, take infinite volume, prove a phase transition or BCC selection, or justify T5, T6, or T7.",
+      "actual": "R-166 proves K_owner > -4I/5 for every whitened past amplitude on only the fixed side-16 exact nonaliased R-153 p:2p strict-past and fresh-4p twelve-dimensional conditional fibre with unit retained regulator multipliers and positive floor, allowing the scoped R-164 choice rho=3/20. It closes the R-165 annulus on that fibre. The coefficient-one direct harmonic lemma does not tensorize uniformly to simultaneous fresh-4p and fresh-8p support. This does not refute the original single-pair result and does not prove the complete multi-root production owner, other harmonics or cross blocks, random/nonlinear/revisit feedback, shifted low variables, removal, T-050, A13, Nelson or an interacting measure, any physical phase, morphology or PDE, or Sector A. It does not establish T5, T6, or T7.",
       "expected": "explicit T5 exclusion",
       "name": "status_no_t5_overclaim",
       "status": "PASS"
     },
     {
       "actual": [
-        "A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE"
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
       ],
       "expected": [
-        "A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE"
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
       ],
-      "name": "next_gate_joint_source_potential",
+      "name": "current_open_gates_match_status",
       "status": "PASS"
     },
     {
@@ -227,8 +236,8 @@
       "status": "PASS"
     }
   ],
-  "generated_at_utc": "2026-07-21T13:25:17.258714+00:00",
-  "git_commit": "7ba30c69bbdf20e4472b3e084da77d5b6edd9a84",
+  "generated_at_utc": "2026-08-21T08:28:13.394850+00:00",
+  "git_commit": "f17d792a8a1befa51e7c834e59866b16d817ab19",
   "independent": {
     "assertions": [
       {
@@ -238,8 +247,8 @@
         "status": "PASS"
       },
       {
-        "actual": "e2bfaa8bc00b72a95a2fa7890d8550ff5486e9599f3c485c4e8c552f8bf0047c",
-        "expected": "e2bfaa8bc00b72a95a2fa7890d8550ff5486e9599f3c485c4e8c552f8bf0047c",
+        "actual": "fb3aa80bf84999c776f59e542f03c3f2769c97ada8106210ffb71260bd9b21b3",
+        "expected": "fb3aa80bf84999c776f59e542f03c3f2769c97ada8106210ffb71260bd9b21b3",
         "name": "authority_a12_status_hash_independent",
         "status": "PASS"
       },
@@ -262,13 +271,13 @@
         "status": "PASS"
       },
       {
-        "actual": 4.116994083107172e-16,
+        "actual": 3.8028685216484055e-16,
         "expected": "<1e-10",
         "name": "relative_su2_carrier_direct_currents",
         "status": "PASS"
       },
       {
-        "actual": 0.0,
+        "actual": 1.1094516249413113e-16,
         "expected": "<1e-10",
         "name": "three_phase_null_checks_direct",
         "status": "PASS"
@@ -366,12 +375,12 @@
         "spin_functional": 510.1537108883858
       },
       "floor_invariance_error": 2.7194799110210365e-16,
-      "phase_null_error": 0.0,
-      "relative_carrier_error": 4.116994083107172e-16,
+      "phase_null_error": 1.1094516249413113e-16,
+      "relative_carrier_error": 3.8028685216484055e-16,
       "resolvent_svd_error": 8.881784197001252e-15
     },
-    "generated_at_utc": "2026-07-21T13:25:15.893293+00:00",
-    "git_commit": "7ba30c69bbdf20e4472b3e084da77d5b6edd9a84",
+    "generated_at_utc": "2026-08-21T08:28:13.251058+00:00",
+    "git_commit": "f17d792a8a1befa51e7c834e59866b16d817ab19",
     "manifest": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_relative_phase_source_obstruction_manifest.json",
     "method": [
       "direct complex-current algebra",
@@ -399,8 +408,8 @@
         "status": "PASS"
       },
       {
-        "actual": "e2bfaa8bc00b72a95a2fa7890d8550ff5486e9599f3c485c4e8c552f8bf0047c",
-        "expected": "e2bfaa8bc00b72a95a2fa7890d8550ff5486e9599f3c485c4e8c552f8bf0047c",
+        "actual": "fb3aa80bf84999c776f59e542f03c3f2769c97ada8106210ffb71260bd9b21b3",
+        "expected": "fb3aa80bf84999c776f59e542f03c3f2769c97ada8106210ffb71260bd9b21b3",
         "name": "authority_a12_status_hash",
         "status": "PASS"
       },
@@ -423,8 +432,8 @@
         "status": "PASS"
       },
       {
-        "actual": "d0463c2cc67506b115c4e3c0cd6eceffab03c975f405dad9aab94e93d27c05a7",
-        "expected": "d0463c2cc67506b115c4e3c0cd6eceffab03c975f405dad9aab94e93d27c05a7",
+        "actual": "2542292f409bdfa91b86ae17d9db0a951f8582e956c28b7c735439e9283121ba",
+        "expected": "2542292f409bdfa91b86ae17d9db0a951f8582e956c28b7c735439e9283121ba",
         "name": "source_verifier_hash",
         "status": "PASS"
       },
@@ -452,13 +461,13 @@
         "status": "PASS"
       },
       {
-        "actual": 2.616060658130821e-16,
+        "actual": 2.837752188883472e-16,
         "expected": "<1e-10",
         "name": "exact_fierz_matrix_identity",
         "status": "PASS"
       },
       {
-        "actual": 1.2544045825834559e-16,
+        "actual": 1.4333308911082425e-16,
         "expected": "<1e-10",
         "name": "doublet_phase_null",
         "status": "PASS"
@@ -482,7 +491,7 @@
         "status": "PASS"
       },
       {
-        "actual": 4.440892098500626e-16,
+        "actual": 5.551115123125783e-16,
         "expected": "<1e-10",
         "name": "sharp_B_upper_uses_doublet_density",
         "status": "PASS"
@@ -500,13 +509,13 @@
         "status": "PASS"
       },
       {
-        "actual": 271.1212624063305,
+        "actual": 271.1212624063306,
         "expected": ">0",
         "name": "nontrivial_shell_source_fixture",
         "status": "PASS"
       },
       {
-        "actual": 6.217248937900877e-15,
+        "actual": 7.105427357601002e-15,
         "expected": "<1e-10",
         "name": "exact_resolvent_rebate_identity",
         "status": "PASS"
@@ -542,7 +551,7 @@
         "status": "PASS"
       },
       {
-        "actual": 1.0000000298023228,
+        "actual": 1.000000029802323,
         "expected": 1.0,
         "name": "q4_covariance_limit_uses_Y",
         "status": "PASS"
@@ -552,7 +561,7 @@
           2.061388690130845e-06,
           5.153464353233469e-07,
           1.2883656275528552e-07,
-          3.220913780909997e-08
+          3.220913780909996e-08
         ],
         "expected": "strictly decreasing",
         "name": "derivative_covariance_decays",
@@ -562,7 +571,7 @@
         "actual": [
           0.24999964237246092,
           0.2499999105930534,
-          0.24999997764825954
+          0.24999997764825949
         ],
         "expected": "dyadic ratio -> 1/4",
         "name": "resolvent_operator_is_order_minus_two",
@@ -590,9 +599,9 @@
     "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
     "derived": {
       "algebra": {
-        "doublet_phase_null_error": 1.2544045825834559e-16,
+        "doublet_phase_null_error": 1.4333308911082425e-16,
         "local_phase_covariance_error": 5.86195379144768e-16,
-        "matrix_error": 2.616060658130821e-16,
+        "matrix_error": 2.837752188883472e-16,
         "singlet_phase_null_error": 1.048037175585077e-17,
         "su2_carrier_error": 3.7575277893146546e-16
       },
@@ -604,11 +613,11 @@
       "certificate": {
         "coefficient_exponent": 0.8333333333333334,
         "degree": 65536,
-        "full_l6_sixth": 2022.5787400615045,
+        "full_l6_sixth": 2022.5787400615038,
         "nonpositive_cubic_energy": 15022.206839284121,
-        "nonpositive_over_full": 7.427254396448027,
-        "past_l6_sixth": 19670.459449911596,
-        "past_over_full": 9.725435682822138,
+        "nonpositive_over_full": 7.4272543964480295,
+        "past_l6_sixth": 19670.459449911592,
+        "past_over_full": 9.72543568282214,
         "source_ratio": 0.9160527282652334,
         "spin_functional": 510.1537108883865
       },
@@ -620,11 +629,11 @@
         "c": 0.002343749999999414,
         "d": 0.01059374999999735
       },
-      "resolvent_identity_error": 6.217248937900877e-15,
+      "resolvent_identity_error": 7.105427357601002e-15,
       "shell_commutator": {
         "commutator_identity_error": 6.949028393163421e-13,
         "past_derivative_shell_norm": 2.970138152530431e-13,
-        "shell_source_norm": 271.1212624063305
+        "shell_source_norm": 271.1212624063306
       },
       "spectral_asymptotic": [
         {
@@ -646,15 +655,15 @@
           "scale": 4096
         },
         {
-          "derivative_covariance_norm": 3.220913780909997e-08,
+          "derivative_covariance_norm": 3.220913780909996e-08,
           "k_norm": 5571.991646927517,
-          "q4_inverse": 1.0000000298023228,
+          "q4_inverse": 1.000000029802323,
           "scale": 8192
         }
       ]
     },
-    "generated_at_utc": "2026-07-21T13:25:12.684038+00:00",
-    "git_commit": "7ba30c69bbdf20e4472b3e084da77d5b6edd9a84",
+    "generated_at_utc": "2026-08-21T08:28:12.913080+00:00",
+    "git_commit": "f17d792a8a1befa51e7c834e59866b16d817ab19",
     "honesty_boundary": {
       "closed": [
         "the exact compact Fierz form of B",

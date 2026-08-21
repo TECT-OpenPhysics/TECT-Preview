@@ -1,0 +1,245 @@
+{
+  "schema": "tect/lean-kernel-crosscheck/1.0",
+  "run_kind": "lean-kernel-crosscheck",
+  "result_id": "R-058-LEAN-KERNEL-CROSSCHECK",
+  "claim_ids": [
+    "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-058"
+    ],
+    "negatives": [
+      "NG-2026-07-21-A13-RELATIVE-PHASE-SOURCE-BUDGET"
+    ],
+    "events": []
+  },
+  "verdict": "PASS",
+  "assertion_count": 31,
+  "assertions": [
+    {
+      "name": "Lean entrypoint exists",
+      "pass": true,
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R058.lean",
+      "expected": true
+    },
+    {
+      "name": "Lean toolchain pin exists",
+      "pass": true,
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\lean-toolchain",
+      "expected": true
+    },
+    {
+      "name": "Lakefile exists",
+      "pass": true,
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\lakefile.toml",
+      "expected": true
+    },
+    {
+      "name": "Lake dependency lock exists",
+      "pass": true,
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\lake-manifest.json",
+      "expected": true
+    },
+    {
+      "name": "lake executable is available",
+      "pass": true,
+      "actual": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+      "expected": "PATH or pinned local toolchain"
+    },
+    {
+      "name": "R-058 manifest hash",
+      "pass": true,
+      "actual": "fb64119fcc65f73643d8fd3f9beb64f6c07fd72d373b613c6cbcc8463dbd62bb",
+      "expected": "fb64119fcc65f73643d8fd3f9beb64f6c07fd72d373b613c6cbcc8463dbd62bb"
+    },
+    {
+      "name": "R-058 status hash",
+      "pass": true,
+      "actual": "1f18f688c5f9dfa5ecaeb4bec8072c7cc67d751b6b4cc5ea938ebd879947c1b1",
+      "expected": "1f18f688c5f9dfa5ecaeb4bec8072c7cc67d751b6b4cc5ea938ebd879947c1b1"
+    },
+    {
+      "name": "R-058 authority schema",
+      "pass": true,
+      "actual": "tect/a13-classii-relative-phase-source-obstruction/1.0",
+      "expected": "tect/a13-classii-relative-phase-source-obstruction/1.0"
+    },
+    {
+      "name": "R-058 claim identity",
+      "pass": true,
+      "actual": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "expected": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+    },
+    {
+      "name": "authority hash a1_manifest",
+      "pass": true,
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "authority hash a12_status",
+      "pass": true,
+      "actual": "fb3aa80bf84999c776f59e542f03c3f2769c97ada8106210ffb71260bd9b21b3",
+      "expected": "fb3aa80bf84999c776f59e542f03c3f2769c97ada8106210ffb71260bd9b21b3"
+    },
+    {
+      "name": "authority hash a12_obstruction_manifest",
+      "pass": true,
+      "actual": "e16ad41f192505ca17a7c249705e30ec51771877505a9e833cd900e863580213",
+      "expected": "e16ad41f192505ca17a7c249705e30ec51771877505a9e833cd900e863580213"
+    },
+    {
+      "name": "source hash primary",
+      "pass": true,
+      "actual": "fec920dc12faa4b5f1922807b9933fa736c679785ca2ad9b6130b6823891fb0e",
+      "expected": "fec920dc12faa4b5f1922807b9933fa736c679785ca2ad9b6130b6823891fb0e"
+    },
+    {
+      "name": "source hash independent",
+      "pass": true,
+      "actual": "bbacd5b53999502cf7f89b330655ccde198947c49acd0056a6c2cb79bfa0432a",
+      "expected": "bbacd5b53999502cf7f89b330655ccde198947c49acd0056a6c2cb79bfa0432a"
+    },
+    {
+      "name": "source hash verifier",
+      "pass": true,
+      "actual": "2542292f409bdfa91b86ae17d9db0a951f8582e956c28b7c735439e9283121ba",
+      "expected": "2542292f409bdfa91b86ae17d9db0a951f8582e956c28b7c735439e9283121ba"
+    },
+    {
+      "name": "source hash proof_note",
+      "pass": true,
+      "actual": "f4bd628f4836bcfde79021361ee5db5c1514c4288d9a421f2f7392d88ddcf495",
+      "expected": "f4bd628f4836bcfde79021361ee5db5c1514c4288d9a421f2f7392d88ddcf495"
+    },
+    {
+      "name": "Lean theorem markers present",
+      "pass": true,
+      "actual": [
+        "allowance_le_gamma_third",
+        "budget_gap",
+        "gamma_third_exact"
+      ],
+      "expected": [
+        "allowance_le_gamma_third",
+        "budget_gap",
+        "gamma_third_exact"
+      ]
+    },
+    {
+      "name": "Lean escape tokens absent",
+      "pass": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "primary and independent source ratios agree",
+      "pass": true,
+      "actual": "4580263641326167/5000000000000000",
+      "expected": "4580263641326167/5000000000000000"
+    },
+    {
+      "name": "registered certificate clears decision floor",
+      "pass": true,
+      "actual": "4580263641326167/5000000000000000",
+      "expected": "> 9/10"
+    },
+    {
+      "name": "reference p is in all-p domain",
+      "pass": true,
+      "actual": "11/10",
+      "expected": ">= 1"
+    },
+    {
+      "name": "all-p allowance is at most gamma/3",
+      "pass": true,
+      "actual": "27/55",
+      "expected": "<= 27/50"
+    },
+    {
+      "name": "certificate clears reference allowance",
+      "pass": true,
+      "actual": "4580263641326167/5000000000000000",
+      "expected": "> 27/55"
+    },
+    {
+      "name": "certificate clears required margin",
+      "pass": true,
+      "actual": "1880263641326167/5000000000000000",
+      "expected": "> 3/10"
+    },
+    {
+      "name": "Lean decision-floor marker",
+      "pass": true,
+      "actual": "(9 : ℚ) / 10",
+      "expected": true
+    },
+    {
+      "name": "Lean gamma marker",
+      "pass": true,
+      "actual": "(81 : ℚ) / (50 * (3 * p))",
+      "expected": true
+    },
+    {
+      "name": "Lean margin marker",
+      "pass": true,
+      "actual": "(3 : ℚ) / 10",
+      "expected": true
+    },
+    {
+      "name": "Lean allowance denominator marker",
+      "pass": true,
+      "actual": "50 * (3 * p)",
+      "expected": true
+    },
+    {
+      "name": "Lean kernel compile",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Lean stdout is clean",
+      "pass": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "Lean stderr is clean",
+      "pass": true,
+      "actual": "",
+      "expected": ""
+    }
+  ],
+  "command": [
+    "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+    "env",
+    "lean",
+    "Tect\\R058.lean"
+  ],
+  "toolchain": "leanprover/lean4:v4.32.1",
+  "source_hashes": {
+    "toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "lakefile": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+    "lake_manifest": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+    "entrypoint": "3c76bb524870f5a40db971040188004dc67ec50838d9846200621172d5e3ea68",
+    "a13_manifest": "fb64119fcc65f73643d8fd3f9beb64f6c07fd72d373b613c6cbcc8463dbd62bb",
+    "a13_status": "1f18f688c5f9dfa5ecaeb4bec8072c7cc67d751b6b4cc5ea938ebd879947c1b1"
+  },
+  "registered_certificate": {
+    "primary_source_ratio": "4580263641326167/5000000000000000",
+    "decision_floor": "9/10",
+    "gamma": "81/50",
+    "gamma_over_three": "27/50",
+    "reference_p": "11/10",
+    "reference_allowance": "27/55",
+    "required_margin": "3/10"
+  },
+  "lean_stdout": "",
+  "lean_stderr": "",
+  "recorded_at": "2026-08-21T08:27:29.066207Z",
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "boundary": "Kernel-checks only the exact ordered-field budget implication from the registered executed lower-bound certificate. It does not reprove the degree-65536 source ratio, Fierz/resolvent estimates, joint-source cancellation, A11/A13 one-use, Nelson/measure, physical-empty, Sector-A, Pre-A, or any regulator/thermodynamic/continuum limit.",
+  "artifact": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r058-budget-crosscheck/result.json"
+}

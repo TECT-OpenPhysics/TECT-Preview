@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**662 accepted events** · latest 25 shown below · machine locator: `index.json`
+**663 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-21 | `20260821-a13-r-058-authority-repair-and-lean-budget-cros` — [A13 R-058 authority repair and Lean budget cross-check] - 2026-08-21 | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A12-CLASSII-SOURCE-SQUARE-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000883, R-058 | [bounded page](pages/000619-000668.md#20260821-a13-r-058-authority-repair-and-lean-budget-cros) |
 | 2026-08-21 | `20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0` — [R-057 Lean kernel arithmetic cross-check] - 2026-08-21 | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A12-CLASSII-SOURCE-SQUARE-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000882, R-057 | [bounded page](pages/000619-000668.md#20260821-r-057-lean-kernel-arithmetic-cross-check-2026-0) |
 | 2026-08-21 | `20260821-r-171-lean-runner-offline-bootstrap-repair-2026` — [R-171 Lean runner offline bootstrap repair] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000881, R-171 | [bounded page](pages/000619-000668.md#20260821-r-171-lean-runner-offline-bootstrap-repair-2026) |
 | 2026-08-21 | `20260821-a11-source-square-gate-split-after-r-056-r-058` — [A11 source-square gate split after R-056-R-058] - 2026-08-21 | A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, A12-CLASSII-SOURCE-SQUARE-REDUCTION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, A9-CLASSII-SMART-PATH-CANCELLATION, EXP-000880, R-055, R-056, R-057, R-058 | [bounded page](pages/000619-000668.md#20260821-a11-source-square-gate-split-after-r-056-r-058) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-14 | `20260814-r-169-v1-2-reading-h-covariance-to-p1-interface` — [R-169 v1.2 Reading-H covariance-to-P1 interface route split] - 2026-08-14 | A1-PRODUCTION-FUNCTIONAL-REALISATION, A2-FULL-PRODUCTION-WELLPOSED, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, B1-RH-ENUM, B3-RH-TESTED-STRUCTURE-RANKING, C6-BCC-PREMISE-BLOCKED, C6-SPACETIME-SIGNATURE, EXP-000858, R-169 | [bounded page](pages/000619-000668.md#20260814-r-169-v1-2-reading-h-covariance-to-p1-interface) |
 | 2026-08-14 | `20260814-r-169-v1-1-pinned-p1-bcc-periodic-realization-e` — [R-169 v1.1 pinned P1 BCC periodic realization empty-reference exclusion route split] - 2026-08-14 | A2-FULL-PRODUCTION-WELLPOSED, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, B1-RH-ENUM, B3-RH-TESTED-STRUCTURE-RANKING, C6-BCC-PREMISE-BLOCKED, C6-SPACETIME-SIGNATURE, EXP-000852, R-169 | [bounded page](pages/000619-000668.md#20260814-r-169-v1-1-pinned-p1-bcc-periodic-realization-e) |
 | 2026-08-14 | `20260814-r-169-v1-0-truncated-octahedron-realization-and` — [R-169 v1.0 truncated-octahedron realization and empty-reference sign route split] - 2026-08-14 | B3-BCC-STRUCT, B3-RH-TESTED-STRUCTURE-RANKING, C6-BCC-PREMISE-BLOCKED, C6-SPACETIME-SIGNATURE, EXP-000851, R-169 | [bounded page](pages/000619-000668.md#20260814-r-169-v1-0-truncated-octahedron-realization-and) |
-| 2026-08-14 | `20260814-r-167-v4-2-integrated-orbit-smear-spatial-quoti` — [R-167 v4.2 integrated orbit-smear spatial quotient ground transfer route split] - 2026-08-14 | C6-SPACETIME-SIGNATURE, EXP-000846, R-167 | [bounded page](pages/000619-000668.md#20260814-r-167-v4-2-integrated-orbit-smear-spatial-quoti) |
 
 ## Post-cutover pages
 
@@ -49,5 +49,5 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 619–662 | 44 | [000619-000668.md](pages/000619-000668.md) |
+| 619–663 | 45 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

@@ -9794,6 +9794,16 @@ alias-free physical-grid route gives 18/18 PASS, and the integrated verifier
 gives 77/77 PASS.  The six-page PDF passes form, zero-overfull, and full visual
 QA.
 
+**Kernel cross-check.** EXP-000883 repairs the R-058 authority bridge after the
+R-057 A12 status update and adds a pinned Lean 4.32.1 check of the ordered-field
+budget implication.  From the registered executed certificate
+`C_rel>0.9`, with `gamma=81/50` and `p>=1`, `Tect/R058.lean` proves
+`C_rel>gamma/(3p)` and `C_rel-gamma/3>0.3`; the artifact records
+`LEAN R-058 PASS 31/31`.  This checks only the arithmetic consequence and does
+not reprove the degree-65536 source ratio, Fierz/resolvent estimates,
+joint-source cancellation, A11/A13 one-use, Nelson/measure, physical-empty,
+Sector-A, Pre-A, or any regulator/thermodynamic/continuum limit.
+
 **Reuse.**  Derivative internal-current Gibbs constructions with matrix-valued
 field metrics and sharp spectral filtrations.  The result separates genuine
 gauge/common-phase cancellation from active relative internal phases and shows

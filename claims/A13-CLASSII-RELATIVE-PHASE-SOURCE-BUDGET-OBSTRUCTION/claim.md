@@ -8,6 +8,11 @@ endpoint theorem. For the hash-pinned A1 production coefficients, the A7
 covariance-normal convention, and the A10--A13 strict sharp-cube filtration,
 the following structural results and proof-architecture boundaries hold.
 
+The historical T-049 standalone deterministic source/sextic route is closed
+negatively by the registered R-058 relative-phase carrier. That correction is
+retained as a scoped route boundary; it does not close the current progressive
+revisit or controlled-shell one-use gates.
+
 1. Exact Fierz algebra gives separate doublet and singlet phase nulls and an
    output-shell commutator, but the registered opposite-corner carrier makes
    standalone deterministic source absorption fail.
@@ -1653,6 +1658,21 @@ Expected output:
   root-shell estimate, stationary-baseline sum bound, `OVERLAP_src`, Nelson,
   removal, measure, and Sector-A targets;
 - exit code zero.
+
+For the R-058 budget boundary, the pinned Lean 4.32.1 kernel cross-check is:
+
+```powershell
+E:\Dev\TECT.venv\Scripts\python.exe -B -X utf8 verification/scripts/lean_r058_budget_crosscheck.py
+```
+
+Expected output is `LEAN R-058 PASS`; the artifact is
+`runs/2026-08-21-lean-r058-budget-crosscheck/result.json`.  This cross-check
+formalizes only the ordered-field implication from the registered executed
+certificate `c>0.9`, with `gamma=81/50` and `p>=1`: `c>gamma/(3p)` and
+`c-gamma/3>0.3`.  It does not reprove the degree-65536 source ratio,
+Fierz/resolvent estimates, joint-source cancellation, A11/A13 one-use,
+Nelson, physical-empty, Sector-A, Pre-A, or any regulator/thermodynamic/
+continuum limit.
 
 The current proof note must pass the standard form check, zero-overfull gate,
 extracted-text debris check, and all-page Poppler visual QA.
@@ -3510,6 +3530,13 @@ source/sextic aggregation.
 T5--T7 promotion remain open. Tier stays T4.
 
 ## History
+
+- 2026-08-21: Repaired the R-058 authority bridge after the R-057 A12 status
+  update changed its pinned hash and the live A13 card advanced to two
+  residual gates.  The package now binds the current A12 hash and current
+  A13 open-gate list, and the Lean kernel cross-check records the exact
+  ordered-field budget implication without changing the tier or closing any
+  A11/A13/T-050 or Sector-A route.
 
 - 2026-07-21: Registered the relative-phase source-budget obstruction at
   scoped T4.

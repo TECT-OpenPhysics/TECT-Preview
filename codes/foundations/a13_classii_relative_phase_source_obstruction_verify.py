@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import platform
 import subprocess
 import sys
@@ -112,10 +113,12 @@ def run(manifest_path: Path, output_path: Path, reuse: bool) -> int:
     add(rows, "proof_pdf_hash", proof_pdf_hash == proof_pdf_spec["sha256"], proof_pdf_hash, proof_pdf_spec["sha256"])
     pdf_signature = proof_pdf_path.read_bytes()[:5]
     add(rows, "proof_pdf_signature", pdf_signature == b"%PDF-", pdf_signature.decode("ascii", errors="replace"), "%PDF-")
-    add(rows, "claim_records_negative_t049", "T-049" in claim_text and "closed negatively" in claim_text.lower(), "T-049" in claim_text, True)
+    claim_lower = re.sub(r"\s+", " ", claim_text.lower())
+    claim_negative_marker = any(marker in claim_lower for marker in ("closed negatively", "closed-negative", "closed negative"))
+    add(rows, "claim_records_negative_t049", "T-049" in claim_text and claim_negative_marker, {"t049": "T-049" in claim_text, "negative_marker": claim_negative_marker}, True)
     add(rows, "status_tier_t4", status.get("tier") == "T4" and status.get("lifecycle") == "ACTIVE", [status.get("tier"), status.get("lifecycle")], ["T4", "ACTIVE"])
     add(rows, "status_no_t5_overclaim", "T5" in status.get("no_overclaim", "") and "does not" in status.get("no_overclaim", "").lower(), status.get("no_overclaim"), "explicit T5 exclusion")
-    add(rows, "next_gate_joint_source_potential", status.get("open_gates") == [manifest["consequence"]["next_gate"]], status.get("open_gates"), [manifest["consequence"]["next_gate"]])
+    add(rows, "current_open_gates_match_status", status.get("open_gates") == manifest["consequence"]["current_open_gates"], status.get("open_gates"), manifest["consequence"]["current_open_gates"])
 
     independent_source = independent_script.read_text(encoding="utf-8")
     add(rows, "independent_does_not_import_primary", "a13_classii_relative_phase_source_obstruction import" not in independent_source, "primary import" in independent_source, False)
