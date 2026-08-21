@@ -109,6 +109,32 @@ two-of-three rule. A Lean PASS proves only the proposition encoded in the
 Lean file; it never promotes a claim tier, closes a physical gate, or proves
 that two differently normalised functionals are the same.
 
+### 5.2 Repository-wide Lean registry and toolchain gate
+
+The canonical repository-wide Lean inventory is
+`verification/lean/registry.json`. Every file under `verification/lean/Tect/`
+MUST appear there with its LF-normalised SHA-256 and named theorem/lemma
+markers. The registry also pins the toolchain file, Lake file, and locked
+Mathlib revision. Adding or changing a Lean entrypoint without updating the
+registry is a verification failure, not an optional housekeeping omission.
+
+`verification/scripts/lean_toolchain_check.py --metadata` is a release and
+workspace gate. It checks registry completeness, source hashes, UTF-8/LF
+format, theorem declarations, forbidden escape tokens, the Lake dependency
+lock, and every strategy-manifest bridge to a Lean entrypoint. A local machine
+with the pinned elan toolchain can run the stronger compile gate:
+
+```powershell
+python -X utf8 verification/scripts/lean_toolchain_check.py --compile
+```
+
+The compile gate resolves only the directory encoded by `lean-toolchain` and
+runs `lake env lean` for every registered entrypoint. The metadata gate does
+not require Lean to be installed, so publication checks remain reproducible on
+Python-only CI images; result-specific primary/independent/integrated scripts
+still supply the stored theorem bridge and exact result artefact. Neither gate
+promotes a claim or closes a physical/limit hypothesis.
+
 ## 6. Quantitative sanity checks (mandatory with any numerical claim)
 
 At least one explicit check from: dimensional analysis; order-of-magnitude;

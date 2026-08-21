@@ -95,11 +95,14 @@ checked formulation rather than a decorative annotation.
 
 - These rules are part of the §3 claim-first / numerical-claim discipline
   (`AGENTS.md` §3, §6).
-- A future automated check (`verification/scripts/check_code_discipline.py`,
-  tracked as task T-006) will scan `codes/` for (a) suspect hardcoded literals
-  outside the permitted classes, (b) scripts lacking self-test asserts or a JSON
-  artefact, and run in `release_check.py`. Until then the rules are enforced at
-  review time and via the supporting note's devil's-advocate section.
+- The repository-wide Lean registry gate is automated by
+  `verification/scripts/lean_toolchain_check.py --metadata`, while `--compile`
+  runs every pinned entrypoint through the exact local toolchain. The separate
+  future check (`verification/scripts/check_code_discipline.py`, tracked as
+  task T-006) will scan `codes/` for (a) suspect hardcoded literals outside the
+  permitted classes and (b) scripts lacking self-test asserts or a JSON
+  artefact. Both checks are release-gated when their respective policy scope
+  applies; the supporting note's devil's-advocate section remains mandatory.
 
 ## History
 

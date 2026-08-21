@@ -32,6 +32,7 @@ SYNC_GATES = [
     ("management-indexes", ["build_management_indexes.py", "--check"]),
     ("aggregate-consumers", ["check_aggregate_consumers.py"]),
     ("protocol-single-source", ["check_protocol_single_source.py"]),
+    ("lean-toolchain", ["lean_toolchain_check.py", "--metadata"]),
     ("website-smoke", ["check_website.py"]),
 ]
 
