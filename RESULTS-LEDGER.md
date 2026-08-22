@@ -36,6 +36,7 @@ policy in `governance/development-history.md`.
 | [R-189](#r-189) | A1 e3 two-mode production-cylinder positivity Lean cross-check | R-189 v1.0 is a T0 claim-nonbearing finite A1 F_ref slice result under EXP-000904. It derives the exact mixed t,u polynomial on the side-16 e3 n=1,2 cylinder and proves strict positivity away from zero. Arbitrary polarization, active Class-II terms, the complete A13 owner, controlled-shell one-use, progressive/revisit, Sector-A and Pre-A remain open |
 | [R-190](#r-190) | A1 arbitrary-polarization two-mode positivity Lean cross-check | R-190 v1.0 is a T0 claim-nonbearing finite A1 F_ref field-space result under EXP-000905. It extends the side-16 n=1,2 cylinder to arbitrary complex internal polarization, retains the positive actual Class-II form, and proves a strict cubic lower bound. The complete production owner, controlled-shell one-use, progressive/revisit, Sector-A and Pre-A remain open |
 | [R-191](#r-191) | Complete finite two-root A1 scalar owner telescope | R-191 v1.0 is a T0 claim-nonbearing Lean cross-check under EXP-000906. It binds the corrected A1 two-mode moments, the R-177 common-heat/root-1/root-2/future incidence, the exact signed endpoint telescope, and the feedback chain-rule coordinates; a finite fixture has negative intermediate stages but positive total increment. The production raw-current q-ledger, forest/source/sextic owner, A13, Sector-A and Pre-A remain open |
+| [R-192](#r-192) | Bounded complete finite production-cylinder integration trial | R-192 v1.0 is a T0 claim-nonbearing T-058 integration audit under EXP-000909. Lean and both exact lanes confirm the R-183 reserve fixtures, R-184 temporal identity and R-191 telescope, then stop at the first missing production heat/root raw-current map. The audit does not close the q-ledger, either A13 gate, Sector-A or Pre-A |
 | [R-182](#r-182) | Feedback-pulled cross-Hessian margin Lean cross-check | R-182 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000897. It combines the active R-178 cross coefficient with the R-181 feedback map and proves the exact pulled Hessian `[-2,4;4,-8]` with eigenvalues -10 and 0. The diagonal production owner, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-181](#r-181) | Finite two-root feedback mixed-Gram Lean cross-check | R-181 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000896. It binds the R-177 beta=1/2 root-2 feedback map, exact Gram `[[5/4,1/2],[1/2,1]]`, and positive envelope defect. The production spatial mixed Gram, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-180](#r-180) | Lean scalar triangular majorant cross-check | R-180 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000895. It rechecks the finite geometric majorant algebra, abstract C=5 positivity, the rational fixture, and the registered exponent margins 7/60 and 1/12. The production mixed-Gram envelope, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
@@ -530,6 +531,33 @@ or a tier change. A13's two gates remain open. No new negative. No R-191 PDF is 
 
 **Proven in:** R-191 certificate, Lean entrypoint, primary script, independent
 script, integrated verifier, scope note, and the saved run artefacts. No R-191 PDF is issued.
+
+<a id="r-192"></a>
+### R-192 -- Bounded complete finite production-cylinder integration trial
+
+**Result ID.** R-192 is a T0, claim-nonbearing T-058 finite integration audit
+established by EXP-000909.
+
+**Exact finite checks.** Lean, the primary Fraction-only lane, and the
+stdlib-only independent lane confirm the R-183 reserve fixtures (d=16 gives
+0; d=15 gives -2), the R-184 Douglas identity/gap 676, and the R-191 endpoint
+telescope. The owner-slot order is
+heat_root_incidence -> covariance_bases -> complement -> historical_low ->
+forest -> returned_mean -> source -> sextic.
+
+**First failure.** The trial stops at `heat_root_incidence`: R-177 supplies
+structural order/feedback only and R-136 explicitly leaves the production
+raw-current map and q-ledger unproved. Endpoint-only complement, historical
+low, forest, returned mean, source and sextic are not silently treated as zero.
+The audit stops at the first missing production map; the verdict is
+`FAIL_FIRST_MISSING_PRODUCTION_MAP`.
+
+**Boundary.** This finite integration failure is not a new negative result or
+counterexample to the complete action. It closes no A13/T-050/OVERLAP_src/
+Nelson/measure/Sector-A/Pre-A/physical-empty/removal/continuum route, and no
+tier/lifecycle change follows. A13 gates remain open. No R-192 PDF is issued.
+
+**Proven in:** [R-192 certificate](strategy/pre-a13-t058-bounded-complete-production-cylinder-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R192.lean), [primary script](verification/scripts/lean_a13_t058_bounded_complete_production_cylinder.py), [independent script](codes/foundations/lean_a13_t058_bounded_complete_production_cylinder_independent.py), [integrated verifier](verification/scripts/lean_a13_t058_bounded_complete_production_cylinder_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-t058-bounded-complete-production-cylinder-260822.md), and saved run artefacts. No R-192 PDF is issued.
 
 ---
 

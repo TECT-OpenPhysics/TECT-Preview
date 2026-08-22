@@ -12,7 +12,7 @@ Usage:
     python verification/scripts/build_proof_evidence_map.py --self-test
 """
 
-__version__ = "1.2.0"
+__version__ = "1.3.0"
 
 import argparse
 import hashlib
@@ -46,6 +46,7 @@ NEGATIVES = REPO / "negative-results" / "registry.md"
 CHANGELOG = REPO / "changelog" / "log.jsonl"
 TODO = REPO / "todo" / "todo.json"
 GATES = REPO / "claims" / "GATES.md"
+INTERFACE_POINTERS = REPO / "theory" / "proof-evidence" / "interface-pointers.json"
 
 SECTOR_ORDER = tuple("ABCDEF")
 TIER_ORDER = ("T7", "T6", "T5", "T4", "T3", "T2", "T1", "T0")
@@ -117,6 +118,77 @@ def pipe_full(text: object) -> str:
 
 def normalize_status(value: object) -> str:
     return collapse(value).lower()
+
+
+INTERFACE_POINTER_REQUIRED_FIELDS = (
+    "title",
+    "interface_id",
+    "full_matrix",
+    "version",
+    "status",
+    "claim_bearing",
+    "tect_claim_authority",
+    "ym_obligation_authority",
+    "relevant_tect_gates",
+    "relevant_ym_obligations",
+    "last_verified",
+    "revalidation_rule",
+    "non_claim",
+)
+
+
+def validate_interface_pointer(value: object) -> dict[str, object]:
+    if not isinstance(value, dict):
+        raise ValueError("interface pointer entry must be an object")
+    missing = [
+        field for field in INTERFACE_POINTER_REQUIRED_FIELDS if field not in value
+    ]
+    if missing:
+        raise ValueError(f"interface pointer missing fields: {', '.join(missing)}")
+    pointer = dict(value)
+    if collapse(pointer["status"]) != "reference_only":
+        raise ValueError("interface pointer status must be reference_only")
+    if pointer["claim_bearing"] is not False:
+        raise ValueError("interface pointer claim_bearing must be false")
+    if not re.fullmatch(r"[A-Z0-9-]+", collapse(pointer["interface_id"])):
+        raise ValueError("interface pointer ID is malformed")
+    if not re.fullmatch(r"[A-Za-z]:\\.+", str(pointer["full_matrix"])):
+        raise ValueError("interface pointer full_matrix must be an absolute Windows path")
+    for field in ("relevant_tect_gates", "relevant_ym_obligations"):
+        values = pointer[field]
+        if not isinstance(values, list) or not values or not all(
+            collapse(item) for item in values
+        ):
+            raise ValueError(f"interface pointer {field} must be a non-empty list")
+    try:
+        date.fromisoformat(collapse(pointer["last_verified"]))
+    except ValueError as exc:
+        raise ValueError("interface pointer last_verified must be ISO date") from exc
+    for field in (
+        "title",
+        "version",
+        "tect_claim_authority",
+        "ym_obligation_authority",
+        "revalidation_rule",
+        "non_claim",
+    ):
+        if not collapse(pointer[field]):
+            raise ValueError(f"interface pointer {field} must be non-empty")
+    return pointer
+
+
+def load_interface_pointers() -> list[dict[str, object]]:
+    raw = json.loads(INTERFACE_POINTERS.read_text(encoding="utf-8"))
+    if raw.get("schema") != "tect/interface-pointer-registry/1.0":
+        raise ValueError("unknown interface pointer registry schema")
+    entries = raw.get("pointers")
+    if not isinstance(entries, list):
+        raise ValueError("interface pointer registry pointers must be a list")
+    pointers = [validate_interface_pointer(entry) for entry in entries]
+    identifiers = [collapse(pointer["interface_id"]) for pointer in pointers]
+    if len(identifiers) != len(set(identifiers)):
+        raise ValueError("duplicate interface pointer IDs")
+    return sorted(pointers, key=lambda pointer: collapse(pointer["interface_id"]))
 
 
 def audit_note_footer(path: Path) -> dict[str, object]:
@@ -934,6 +1006,7 @@ def build_data() -> dict[str, object]:
     events = load_events()
     tasks = load_tasks()
     gate_definitions = parse_gate_definitions()
+    interface_pointers = load_interface_pointers()
     attach_event_references(events, cards, results)
     attach_result_claim_references(results, cards)
     attach_negative_claim_references(negatives, cards, events)
@@ -1104,6 +1177,7 @@ def build_data() -> dict[str, object]:
         "status_cards": len(cards),
         "active_claims": sum(card.get("lifecycle") == "ACTIVE" for card in cards),
         "refuted_claims": sum(card.get("lifecycle") == "REFUTED" for card in cards),
+        "interface_pointers": len(interface_pointers),
         "reusable_results": len(results),
         "negative_records": len(negatives),
         "proof_explorations": len(explorations),
@@ -1212,7 +1286,7 @@ def build_data() -> dict[str, object]:
         ),
     }
     return {
-        "schema": "tect/proof-evidence-map/1.2",
+        "schema": "tect/proof-evidence-map/1.3",
         "generator": {
             "path": "verification/scripts/build_proof_evidence_map.py",
             "version": __version__,
@@ -1221,11 +1295,14 @@ def build_data() -> dict[str, object]:
             "This projection is complete by reference but is not a tier or proof "
             "authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, "
             "negative-results/registry.md, explorations/log.jsonl, "
-            "changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical."
+            "changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical. "
+            "theory/proof-evidence/interface-pointers.json owns only reference-only "
+            "external locators and never a claim or obligation status."
         ),
-        "source_hashes": source_hashes(status_paths),
+        "source_hashes": source_hashes(status_paths + [INTERFACE_POINTERS]),
         "coverage": coverage,
         "coverage_diagnostics": diagnostics,
+        "interface_pointers": interface_pointers,
         "sectors": sector_rows,
         "live_tasks": live_tasks,
         "open_gate_index": gate_index,
@@ -1338,6 +1415,37 @@ def render_mermaid(live_tasks: list[dict[str, object]]) -> list[str]:
     return lines
 
 
+def render_interface_pointers(pointers: list[dict[str, object]]) -> list[str]:
+    lines = [
+        "## Reference-only interface pointers",
+        "",
+        "These locators are non-claiming cross-project references. Their external",
+        "targets do not override either project's canonical claims, gates, or obligations.",
+        "",
+    ]
+    for pointer in pointers:
+        lines += [
+            f"### {collapse(pointer['title'])}",
+            "",
+            f"- interface_id: {collapse(pointer['interface_id'])}",
+            f"- full_matrix: {pointer['full_matrix']}",
+            f"- version: {collapse(pointer['version'])}",
+            f"- status: {collapse(pointer['status'])}",
+            "- claim_bearing: false",
+            f"- TECT claim authority: {collapse(pointer['tect_claim_authority'])}",
+            f"- Yang–Mills obligation authority: {pointer['ym_obligation_authority']}",
+            "- relevant TECT gates: "
+            + ", ".join(collapse(value) for value in pointer["relevant_tect_gates"]),
+            "- relevant Yang–Mills obligations: "
+            + ", ".join(collapse(value) for value in pointer["relevant_ym_obligations"]),
+            f"- last_verified: {collapse(pointer['last_verified'])}",
+            f"- revalidation_rule: {collapse(pointer['revalidation_rule'])}",
+            f"- non_claim: {collapse(pointer['non_claim'])}",
+            "",
+        ]
+    return lines
+
+
 def render_markdown(data: dict[str, object]) -> str:
     coverage = data["coverage"]
     cards = data["claims"]
@@ -1366,6 +1474,9 @@ def render_markdown(data: dict[str, object]) -> str:
         "result ledger, exploration record, negative-result entry, gate definition, task ledger, or changelog entry",
         "always remains authoritative.",
         "",
+    ]
+    lines += render_interface_pointers(data["interface_pointers"])
+    lines += [
         "## One-glance record flow",
         "",
         "```mermaid",
@@ -1392,6 +1503,7 @@ def render_markdown(data: dict[str, object]) -> str:
         "| Record class | Count | Meaning |",
         "|---|---:|---|",
         f"| Status cards | {coverage['status_cards']} | {coverage['active_claims']} active; {coverage['refuted_claims']} refuted |",
+        f"| Reference-only interface pointers | {coverage['interface_pointers']} | External locators only; no claim, gate, obligation, or theorem authority |",
         f"| Reusable result records | {coverage['reusable_results']} | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |",
         f"| Negative/audit records | {coverage['negative_records']} indexed + {coverage['process_grade_lessons']} legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |",
         f"| Proof explorations | {coverage['proof_explorations']} | Route decisions: "
@@ -1720,6 +1832,7 @@ def render_markdown(data: dict[str, object]) -> str:
         "| `changelog/log.jsonl` | Every accepted chronological event, note, script, claim, and negative-result link |",
         "| `todo/todo.json` | Live route order, ownership, blockers, and completed-work coverage |",
         "| `claims/GATES.md` | Definitions and registered status of every claim-card or live-task current route gate |",
+        "| `theory/proof-evidence/interface-pointers.json` | Reference-only external matrix locators, versions, revalidation rules, and non-claims; never project-owned theorem status |",
         "",
         "The generator fails on duplicate IDs, missing result/negative detail or index entries,",
         "unknown task claims, undefined live-task/current route gates, rewritten or",
@@ -1756,6 +1869,10 @@ def self_test() -> None:
     assert markdown_anchor("A13-CLASSII-GATE") == "a13-classii-gate"
     assert normalize_status("BLOCKED") == "blocked"
     assert pipe("a|b") == "a\\|b"
+    pointers = load_interface_pointers()
+    assert pointers
+    assert all(pointer["status"] == "reference_only" for pointer in pointers)
+    assert all(pointer["claim_bearing"] is False for pointer in pointers)
 
 
 def build_outputs() -> tuple[str, str, dict[str, object]]:

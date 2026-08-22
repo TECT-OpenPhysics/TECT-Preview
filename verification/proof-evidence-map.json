@@ -1,13 +1,13 @@
 {
-  "schema": "tect/proof-evidence-map/1.2",
+  "schema": "tect/proof-evidence-map/1.3",
   "generator": {
     "path": "verification/scripts/build_proof_evidence_map.py",
-    "version": "1.2.0"
+    "version": "1.3.0"
   },
-  "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
+  "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical. theory/proof-evidence/interface-pointers.json owns only reference-only external locators and never a claim or obligation status.",
   "source_hashes": {
-    "RESULTS-LEDGER.md": "6f02ea68123bdba3338865d92d58579865f8559350e8668c0eeb01247b8d4992",
-    "changelog/log.jsonl": "4ca7b781b1c1964b759e3aac651a0e31d1c0f8fb25a0584560e140ad432ad5fe",
+    "RESULTS-LEDGER.md": "d6b1f987f759558dace01b3e17866508cfd938b579451c9ac3cbdd510d18a78f",
+    "changelog/log.jsonl": "802a1412c7f58fe51ddad07a48b1784011d820f5730830b2b7fd82e653d66b8e",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,25 +58,27 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "397fdee07e1dd42bc29a1c4121345d36d28aab78961a14d8684b93f9e3c7b820",
+    "explorations/log.jsonl": "6a58f4b24f133b29604c0f2ac013d5ee72335e937b36c4887f369b1bddb83298",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
+    "theory/proof-evidence/interface-pointers.json": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
     "todo/todo.json": "076d8bca62b1f43cbda03d4d2f9558fe6870d1a48c32a14f2acb9f37259c6f52"
   },
   "coverage": {
     "status_cards": 49,
     "active_claims": 48,
     "refuted_claims": 1,
-    "reusable_results": 191,
+    "interface_pointers": 1,
+    "reusable_results": 192,
     "negative_records": 372,
-    "proof_explorations": 908,
+    "proof_explorations": 909,
     "exploration_verdicts": {
       "advanced": 563,
-      "failed": 235,
+      "failed": 236,
       "inconclusive": 80,
       "parked": 30
     },
     "process_grade_lessons": 3,
-    "accepted_events": 688,
+    "accepted_events": 689,
     "tasks": 58,
     "live_tasks": 12,
     "completed_tasks": 46,
@@ -89,7 +91,7 @@
     "unordered_root_pdfs": 9,
     "proof_notes_without_sibling_pdf": 19,
     "proof_notes_with_incomplete_historical_footer": 118,
-    "run_json": 857,
+    "run_json": 860,
     "claim_manifests": 124,
     "bundle_manifests": 40,
     "bundle_embedded_manifests": 45
@@ -2946,6 +2948,13 @@
           "EXP-000906",
           "R-191"
         ]
+      },
+      {
+        "event": "20260822-r-192-t-058-bounded-complete-finite-production",
+        "claim_ids": [
+          "EXP-000909",
+          "R-192"
+        ]
       }
     ],
     "event_unregistered_negative_tags": [
@@ -2972,6 +2981,34 @@
     "exploration_prospective_coverage_from": "2026-07-24",
     "historical_backfill_explorations": 13
   },
+  "interface_pointers": [
+    {
+      "title": "TECT–Yang–Mills Interface Baseline v0.1",
+      "interface_id": "TYM-IF-BASELINE-0001",
+      "full_matrix": "E:\\Dev\\YangMills\\research_db\\notes\\tect-yangmills-interface-baseline-v0.1.md",
+      "version": "v0.1",
+      "status": "reference_only",
+      "claim_bearing": false,
+      "tect_claim_authority": "current TECT claim/gate records",
+      "ym_obligation_authority": "E:\\Dev\\YangMills\\research_db\\records\\obligations.jsonl",
+      "relevant_tect_gates": [
+        "Reading-H physical-vacuum comparison",
+        "common normalization",
+        "stationarity",
+        "transverse stability",
+        "continuum/thermodynamic limits"
+      ],
+      "relevant_ym_obligations": [
+        "OBL-060",
+        "OBL-080",
+        "OBL-090",
+        "OBL-100"
+      ],
+      "last_verified": "2026-08-22",
+      "revalidation_rule": "If either project's canonical claim or obligation status changes, mark this pointer stale and require a new crosswalk version.",
+      "non_claim": "This pointer is not a TECT or Yang–Mills theorem."
+    }
+  ],
   "sectors": [
     {
       "sector": "A",
@@ -5351,7 +5388,10 @@
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r190-a1-arbitrary-polarization-two-mode/primary.json",
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r191-two-root-complete-scalar-owner/independent.json",
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r191-two-root-complete-scalar-owner/integrated.json",
-          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r191-two-root-complete-scalar-owner/primary.json"
+          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r191-two-root-complete-scalar-owner/primary.json",
+          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r192-t058-bounded-complete-production-cylinder/independent.json",
+          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r192-t058-bounded-complete-production-cylinder/integrated.json",
+          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r192-t058-bounded-complete-production-cylinder/primary.json"
         ],
         "manifests": [
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_affine_gaussian_score_feedback_collar_boundary_manifest.json",
@@ -5466,6 +5506,7 @@
       },
       "evidence_links": {
         "result_ids": [
+          "R-192",
           "R-190",
           "R-189",
           "R-188",
@@ -6521,9 +6562,10 @@
           "EXP-000904",
           "EXP-000905",
           "EXP-000906",
-          "EXP-000908"
+          "EXP-000908",
+          "EXP-000909"
         ],
-        "latest_exploration_id": "EXP-000908",
+        "latest_exploration_id": "EXP-000909",
         "accepted_event_ids": [
           "20260721-close-t-049-negatively-with-the-a13-relative-ph",
           "20260721-complete-a13-gate-record-synchronization-and-re",
@@ -6720,9 +6762,10 @@
           "20260822-r-188-signed-jensen-defect-telescope-lean-cross",
           "20260822-r-189-a1-e3-two-mode-production-cylinder-positi",
           "20260822-r-190-a1-arbitrary-polarization-two-mode-positi",
-          "20260822-r-191-complete-finite-two-root-a1-scalar-owner"
+          "20260822-r-191-complete-finite-two-root-a1-scalar-owner",
+          "20260822-r-192-t-058-bounded-complete-finite-production"
         ],
-        "latest_event_id": "20260822-r-191-complete-finite-two-root-a1-scalar-owner",
+        "latest_event_id": "20260822-r-192-t-058-bounded-complete-finite-production",
         "live_task_gate_ids": [
           "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
         ],
@@ -12470,6 +12513,38 @@
   ],
   "reusable_results": [
     {
+      "id": "R-192",
+      "anchor": "r-192",
+      "title": "Bounded complete finite production-cylinder integration trial",
+      "summary": "R-192 v1.0 is a T0 claim-nonbearing T-058 integration audit under EXP-000909. Lean and both exact lanes confirm the R-183 reserve fixtures, R-184 temporal identity and R-191 telescope, then stop at the first missing production heat/root raw-current map. The audit does not close the q-ledger, either A13 gate, Sector-A or Pre-A",
+      "detail_title": "Bounded complete finite production-cylinder integration trial",
+      "detail": {
+        "result_id": "R-192 is a T0, claim-nonbearing T-058 finite integration audit established by EXP-000909.",
+        "exact_finite_checks": "Lean, the primary Fraction-only lane, and the stdlib-only independent lane confirm the R-183 reserve fixtures (d=16 gives 0; d=15 gives -2), the R-184 Douglas identity/gap 676, and the R-191 endpoint telescope. The owner-slot order is heat_root_incidence -> covariance_bases -> complement -> historical_low -> forest -> returned_mean -> source -> sextic.",
+        "first_failure": "The trial stops at `heat_root_incidence`: R-177 supplies structural order/feedback only and R-136 explicitly leaves the production raw-current map and q-ledger unproved. Endpoint-only complement, historical low, forest, returned mean, source and sextic are not silently treated as zero. The audit stops at the first missing production map; the verdict is `FAIL_FIRST_MISSING_PRODUCTION_MAP`.",
+        "boundary": "This finite integration failure is not a new negative result or counterexample to the complete action. It closes no A13/T-050/OVERLAP_src/ Nelson/measure/Sector-A/Pre-A/physical-empty/removal/continuum route, and no tier/lifecycle change follows. A13 gates remain open. No R-192 PDF is issued.",
+        "proven_in": "[R-192 certificate](strategy/pre-a13-t058-bounded-complete-production-cylinder-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R192.lean), [primary script](verification/scripts/lean_a13_t058_bounded_complete_production_cylinder.py), [independent script](codes/foundations/lean_a13_t058_bounded_complete_production_cylinder_independent.py), [integrated verifier](verification/scripts/lean_a13_t058_bounded_complete_production_cylinder_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-t058-bounded-complete-production-cylinder-260822.md), and saved run artefacts. No R-192 PDF is issued."
+      },
+      "normalized_detail": {
+        "statement": "",
+        "proof_anchor": "[R-192 certificate](strategy/pre-a13-t058-bounded-complete-production-cylinder-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R192.lean), [primary script](verification/scripts/lean_a13_t058_bounded_complete_production_cylinder.py), [independent script](codes/foundations/lean_a13_t058_bounded_complete_production_cylinder_independent.py), [integrated verifier](verification/scripts/lean_a13_t058_bounded_complete_production_cylinder_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-t058-bounded-complete-production-cylinder-260822.md), and saved run artefacts. No R-192 PDF is issued.",
+        "reuse": "",
+        "boundary": "This finite integration failure is not a new negative result or counterexample to the complete action. It closes no A13/T-050/OVERLAP_src/ Nelson/measure/Sector-A/Pre-A/physical-empty/removal/continuum route, and no tier/lifecycle change follows. A13 gates remain open. No R-192 PDF is issued.",
+        "publication_target": ""
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "proof_anchor_exact"
+      },
+      "family_refs": [],
+      "accepted_event_ids": [
+        "20260822-r-192-t-058-bounded-complete-finite-production"
+      ],
+      "co_recorded_negative_tags": []
+    },
+    {
       "id": "R-191",
       "anchor": "r-191",
       "title": "Complete finite two-root A1 scalar owner telescope",
@@ -12493,7 +12568,8 @@
       "claim_ref_basis": {},
       "family_refs": [],
       "accepted_event_ids": [
-        "20260822-r-191-complete-finite-two-root-a1-scalar-owner"
+        "20260822-r-191-complete-finite-two-root-a1-scalar-owner",
+        "20260822-r-192-t-058-bounded-complete-finite-production"
       ],
       "co_recorded_negative_tags": []
     },
@@ -12718,7 +12794,8 @@
       },
       "family_refs": [],
       "accepted_event_ids": [
-        "20260822-r-184-two-block-douglas-identity-lean-cross-che"
+        "20260822-r-184-two-block-douglas-identity-lean-cross-che",
+        "20260822-r-192-t-058-bounded-complete-finite-production"
       ],
       "co_recorded_negative_tags": []
     },
@@ -12749,7 +12826,8 @@
       },
       "family_refs": [],
       "accepted_event_ids": [
-        "20260822-r-183-diagonal-reserve-margin-cross-hessian-thr"
+        "20260822-r-183-diagonal-reserve-margin-cross-hessian-thr",
+        "20260822-r-192-t-058-bounded-complete-finite-production"
       ],
       "co_recorded_negative_tags": []
     },
@@ -12948,7 +13026,8 @@
       "accepted_event_ids": [
         "20260821-r-177-two-root-heat-incidence-ledger-2026-08-21",
         "20260821-r-181-two-root-feedback-mixed-gram-cross-check",
-        "20260822-r-191-complete-finite-two-root-a1-scalar-owner"
+        "20260822-r-191-complete-finite-two-root-a1-scalar-owner",
+        "20260822-r-192-t-058-bounded-complete-finite-production"
       ],
       "co_recorded_negative_tags": []
     },
@@ -73017,6 +73096,57 @@
       "task_id": "T-058",
       "title": "Register the bounded complete finite production-cylinder integration trial",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "This is a T0 claim-nonbearing finite integration audit. It is not a new negative result and does not close either A13 gate, T-050, OVERLAP_src, Nelson, an interacting measure, Sector-A, Pre-A, physical-empty, removal, a thermodynamic/continuum limit or any tier/lifecycle route.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "A finite endpoint or structural incidence identity cannot be promoted to a complete production cylinder without an identified raw-current/q-ledger map and uniform slot estimates. Stopping at the first missing owner preserves the sign and dependency boundaries for the next constructive attempt.",
+      "evidence_refs": [
+        "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json#registered_inputs",
+        "strategy/pre-a13-t058-bounded-complete-production-cylinder-certificate-260822.md#first-missing-production-map",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-t058-bounded-complete-production-cylinder-260822.md#verdict",
+        "strategy/pre-a-a13-two-root-heat-incidence-ledger-manifest.json#registered_inputs",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_common_heat_replica_raw_sequential_owner_boundary_manifest.json#boundary",
+        "strategy/pre-a13-diagonal-reserve-margin-cross-hessian-manifest.json#registered_inputs",
+        "strategy/pre-a13-two-block-douglas-crosscheck-manifest.json#registered_inputs",
+        "strategy/pre-a13-two-root-complete-scalar-owner-manifest.json#formal_integration"
+      ],
+      "finding": "The Lean and two exact lanes pass the R-183 d=16/d=15 reserve fixtures, the R-184 gap-676 Douglas fixture and the R-191 endpoint telescope. The first missing production owner slot is heat_root_incidence: R-177 supplies structural order and feedback only, while R-136 leaves the production raw-current map and q-ledger open. The endpoint-only complement, historical low, forest, returned mean, source and sextic slots therefore remain unresolved and are not treated as zero. The bounded trial verdict is FAIL_FIRST_MISSING_PRODUCTION_MAP.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-192"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "id": "EXP-000909",
+      "method": [
+        "Pin the A1, R-176, R-177, R-178, R-183, R-184, R-125, R-136, R-150 and R-191 authorities and their saved integrated runs.",
+        "Check the exact R-183 reserve fixtures, the R-184 Douglas identity and the R-191 signed endpoint telescope in Lean and two independent exact arithmetic lanes.",
+        "Traverse the owner slots in the declared order heat_root_incidence, covariance_bases, complement, historical_low, forest, returned_mean, source, sextic and stop at the first slot without a production map."
+      ],
+      "next_action": "Supply and hash-pin the actual production heat/root raw-current and q-ledger map, then rerun the same owner-slot traversal with explicit complement, historical-low, forest, returned-mean, source and sextic estimates.",
+      "provenance": "contemporaneous",
+      "question": "Can the finite R-176/R-177/R-183/R-184/R-191 owner coordinates be mapped completely into one bounded A1 production cylinder without inventing missing heat, forest, returned-low, source or sextic terms?",
+      "recorded_at": "2026-08-22T02:00:02Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000908",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-058",
+      "title": "T-058 bounded complete finite production-cylinder integration trial",
+      "verdict": "failed"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -100224,6 +100354,72 @@
       "result_ids": [],
       "linked_result_ids": [],
       "result_link_basis": {}
+    },
+    {
+      "id": "20260822-r-192-t-058-bounded-complete-finite-production",
+      "date": "2026-08-22",
+      "header": "[R-192 T-058 bounded complete finite production-cylinder integration trial] - 2026-08-22",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "EXP-000909",
+        "R-192"
+      ],
+      "keywords": [
+        "A13-open",
+        "EXP-000909",
+        "Lean",
+        "R-192",
+        "T-058",
+        "bounded-cylinder",
+        "first-missing-map",
+        "production-owner"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json",
+        "strategy/pre-a13-t058-bounded-complete-production-cylinder-certificate-260822.md",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-t058-bounded-complete-production-cylinder-260822.md",
+        "RESULTS-LEDGER.md",
+        "ROADMAP.md",
+        "strategy/INDEX.md"
+      ],
+      "scripts": [
+        "verification/scripts/lean_a13_t058_bounded_complete_production_cylinder.py",
+        "codes/foundations/lean_a13_t058_bounded_complete_production_cylinder_independent.py",
+        "verification/scripts/lean_a13_t058_bounded_complete_production_cylinder_verify.py"
+      ],
+      "raw": "## [R-192 T-058 bounded complete finite production-cylinder integration trial] - 2026-08-22\n\nEXP-000909 records R-192 as a T0, claim-nonbearing T-058 integration audit. Lean and both exact lanes confirm the R-183 reserve fixtures, R-184 temporal identity and R-191 telescope, then stop at the first missing production heat/root raw-current map.\n\nThe owner-slot contract records the structural-only R-177 incidence, endpoint-only complement, unclosed historical-low/forest/returned-mean/source/sextic slots, and the exact trial verdict FAIL_FIRST_MISSING_PRODUCTION_MAP. A13 gates remain open, no new negative result is registered, and no production q-ledger or physical conclusion follows.\n\nNo R-192 PDF is issued.\n\n",
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000909",
+        "R-192"
+      ],
+      "result_ids": [
+        "R-177",
+        "R-183",
+        "R-184",
+        "R-191",
+        "R-192"
+      ],
+      "linked_result_ids": [
+        "R-177",
+        "R-183",
+        "R-184",
+        "R-191",
+        "R-192"
+      ],
+      "result_link_basis": {
+        "R-177": "explicit_result_id",
+        "R-183": "explicit_result_id",
+        "R-184": "explicit_result_id",
+        "R-191": "explicit_result_id",
+        "R-192": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -105414,6 +105610,12 @@
         "id": "event:20260822-r-191-complete-finite-two-root-a1-scalar-owner",
         "kind": "accepted_event",
         "label": "[R-191 complete finite two-root A1 scalar owner telescope] - 2026-08-22",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260822-r-192-t-058-bounded-complete-finite-production",
+        "kind": "accepted_event",
+        "label": "[R-192 T-058 bounded complete finite production-cylinder integration trial] - 2026-08-22",
         "authority": "CHANGELOG.md"
       },
       {
@@ -110865,6 +111067,12 @@
         "authority": "explorations/log.jsonl"
       },
       {
+        "id": "exploration:EXP-000909",
+        "kind": "proof_exploration",
+        "label": "T-058 bounded complete finite production-cylinder integration trial",
+        "authority": "explorations/log.jsonl"
+      },
+      {
         "id": "gate:A1-KERNEL-CONV",
         "kind": "hypothesis",
         "label": "A1-KERNEL-CONV",
@@ -115303,6 +115511,12 @@
         "kind": "accepted_result",
         "label": "Complete finite two-root A1 scalar owner telescope",
         "authority": "RESULTS-LEDGER.md#r-191"
+      },
+      {
+        "id": "result:R-192",
+        "kind": "accepted_result",
+        "label": "Bounded complete finite production-cylinder integration trial",
+        "authority": "RESULTS-LEDGER.md#r-192"
       },
       {
         "id": "task:T-001",
@@ -127772,6 +127986,42 @@
         "from": "event:20260822-r-191-complete-finite-two-root-a1-scalar-owner",
         "relation": "records_result",
         "to": "result:R-191",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260822-r-192-t-058-bounded-complete-finite-production",
+        "relation": "records",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-r-192-t-058-bounded-complete-finite-production",
+        "relation": "records_result",
+        "to": "result:R-177",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260822-r-192-t-058-bounded-complete-finite-production",
+        "relation": "records_result",
+        "to": "result:R-183",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260822-r-192-t-058-bounded-complete-finite-production",
+        "relation": "records_result",
+        "to": "result:R-184",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260822-r-192-t-058-bounded-complete-finite-production",
+        "relation": "records_result",
+        "to": "result:R-191",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260822-r-192-t-058-bounded-complete-finite-production",
+        "relation": "records_result",
+        "to": "result:R-192",
         "basis": "explicit_result_id"
       },
       {
@@ -169139,6 +169389,42 @@
         "basis": "structured_task_id"
       },
       {
+        "from": "exploration:EXP-000909",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000909",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000909",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000909",
+        "relation": "continues",
+        "to": "exploration:EXP-000908",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000909",
+        "relation": "records_task",
+        "to": "task:T-058",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000909",
+        "relation": "references_result",
+        "to": "result:R-192",
+        "basis": "structured_formal_ref"
+      },
+      {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
         "relation": "bears_on",
         "to": "claim:B1-RH-ENUM",
@@ -172512,6 +172798,12 @@
       },
       {
         "from": "result:R-190",
+        "relation": "bears_on",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "proof_anchor_exact"
+      },
+      {
+        "from": "result:R-192",
         "relation": "bears_on",
         "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
         "basis": "proof_anchor_exact"

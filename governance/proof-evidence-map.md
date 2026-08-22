@@ -27,7 +27,10 @@ gate, verdict, reproduction contract, or proof boundary. Authority remains:
 6. `negative-results/registry.md` for failed, retracted, and audit routes;
 7. `explorations/log.jsonl` for non-tier-bearing route assessments;
 8. `changelog/log.jsonl` for accepted chronology;
-9. `catalog/INDEX.md` / `verification/catalog/index.json` for file inventory and hashes.
+9. `catalog/INDEX.md` / `verification/catalog/index.json` for file inventory and hashes;
+10. `theory/proof-evidence/interface-pointers.json` for reference-only external
+    matrix locators and revalidation metadata, never for either project's claim,
+    gate, theorem, or obligation status.
 
 If map prose conflicts with an authority, the authority wins and the generated
 map is stale or defective.
@@ -36,7 +39,8 @@ map is stale or defective.
 
 Every real claim status card (excluding scaffolds), reusable-result index/detail
 pair, negative-result index/detail pair, proof-exploration record, accepted
-changelog event, task, and current claim-card/live-task route gate is projected.
+changelog event, task, current claim-card/live-task route gate, and registered
+reference-only interface pointer is projected.
 Per-claim lineage-note,
 legacy unordered root-note, PDF, run-JSON, claim-level manifest, top-level
 bundle manifest, and frozen embedded-manifest paths are inventoried in disjoint
@@ -136,6 +140,10 @@ This preserves the full record while minimizing repeated context loading.
 
 ## 7. History
 
+- 2026-08-22: v1.3 added a fail-closed, reference-only cross-project pointer
+  registry. The generated Markdown and JSON project only locator/version/
+  revalidation/non-claim metadata; canonical claims, gates, and obligations
+  remain owned by their projects.
 - 2026-08-10: v1.2 removed the materialized `lookup.event_by_id` copy. Event
   objects remain once in `accepted_events`; consumers build an in-memory ID map
   when needed. This removes an exact generated duplicate without changing any

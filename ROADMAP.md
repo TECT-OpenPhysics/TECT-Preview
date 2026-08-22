@@ -1669,6 +1669,14 @@ production raw-current q-ledger, forest/source/sextic owner, arbitrary
 progressive/revisit control, A13/T-050, Sector-A, Pre-A, physical-empty or
 continuum closure. A13 and all residual routes remain open. No R-191 PDF is
 issued.
+EXP-000909 / R-192 is a T0, claim-nonbearing T-058 bounded complete
+finite production-cylinder integration trial. Lean and two exact lanes confirm
+the R-183 reserve fixtures, R-184 Douglas identity and R-191 endpoint
+telescope, then stop at the first missing production heat/root raw-current map.
+The owner-slot contract does not infer complement, historical low, forest,
+returned mean, source or sextic terms from endpoint data. A13 gates, T-050,
+Sector-A, Pre-A, physical-empty, removal, continuum and all production
+q-ledger routes remain open. No new negative or R-192 PDF is issued.
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7

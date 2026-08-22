@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Fail-closed project path-length audit for Windows compatibility.
+"""Fail-closed project path-length audit for Windows/GitHub compatibility.
 
 The public checkout must keep every file and directory path at or below the
-Windows-compatible 256-character budget, counting the absolute checkout path.
-The Git metadata directory is excluded because it is not part of the project
-surface.
+Windows-compatible 256-character budget.  Both the repository-relative path
+(the form used by GitHub Pages and archive consumers) and the absolute path
+(the form used by Windows filesystem APIs) are checked.  The Git metadata
+directory is excluded because it is not part of the project surface.
 """
 from __future__ import annotations
 
@@ -25,9 +26,14 @@ def scan(repo: Path, max_chars: int = MAX_PATH_CHARS) -> list[tuple[int, str]]:
             continue
         if ".git" in rel.parts:
             continue
-        length = len(str(path))
-        if length > max_chars:
-            offenders.append((length, str(rel)))
+        relative_text = str(rel)
+        absolute_text = str(path)
+        relative_length = len(relative_text)
+        absolute_length = len(absolute_text)
+        if relative_length > max_chars:
+            offenders.append((relative_length, f"relative: {relative_text}"))
+        if absolute_length > max_chars:
+            offenders.append((absolute_length, f"absolute: {relative_text}"))
     offenders.sort(reverse=True)
     return offenders
 
