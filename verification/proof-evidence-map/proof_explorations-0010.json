@@ -1839,6 +1839,61 @@
       "task_id": "T-058",
       "title": "Audit remaining proof-evidence-map direct readers after shard migration",
       "verdict": "parked"
+    },
+    {
+      "boundary": "This is a T0 claim-nonbearing provenance revalidation. It does not close A6-CLASSII-COUNTERTERM-CLOSURE or A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION, and it does not establish A7, A13, Sector-A, Pre-A, physical-empty or continuum closure.",
+      "claim_ids": [
+        "A6-CLASSII-K-COMPOSITE-DEFINITION"
+      ],
+      "decision_reason": "The failures were stale authority pins, not mathematical counterexamples. Refreshing the registry chain restores reproducibility without changing the witness or promoting the A6 route.",
+      "evidence_refs": [
+        "verification/lean/registry.json#append-only-registry-hash",
+        "strategy/pre-a6-sharp-running-mass-counterterm-boundary-manifest.json#inputs.lean_registry",
+        "strategy/pre-a6-spatial-constant-field-lift-boundary-manifest.json#inputs.r194_manifest",
+        "codes/foundations/lean_a6_sharp_running_mass_verify.py#assertion_summary",
+        "codes/foundations/lean_a6_spatial_constant_field_lift_verify.py#assertion_summary",
+        "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-08-22-lean-r194-sharp-running-mass/integrated.json#assertion_summary",
+        "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-08-22-lean-r195-spatial-constant-field-lift/integrated.json#assertion_summary"
+      ],
+      "finding": "R-194 and R-195 each pass 35/35 after the two append-only provenance hash refreshes. R-194 still proves only the sharp local running coefficient and the noncoercive third-component escape; R-195 still proves that the same escape survives on the constant-field spatial subspace. Neither supplies a full renormalised action, partition/tightness estimate, full-field concentration, or removal limit.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-194",
+          "R-195"
+        ]
+      },
+      "gate_ids": [
+        "A6-CLASSII-COUNTERTERM-CLOSURE",
+        "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION"
+      ],
+      "id": "EXP-000937",
+      "method": [
+        "Run the pinned R-194 integrated verifier against the current registry and generated catalog.",
+        "Refresh only the R-194 registry hash and the R-195 parent-manifest hash, preserving the mathematical inputs and scope.",
+        "Run both integrated lanes in no-store mode and compare their exact boundary assertions and no-overclaim clauses."
+      ],
+      "next_action": "Freeze a complete coefficient trajectory and prove a spatially correlated partition/tightness estimate controlling nonconstant and branch directions before any A6 counterterm promotion.",
+      "provenance": "contemporaneous",
+      "question": "Do the R-194 sharp running-mass boundary and R-195 spatial constant-field lift remain reproducible after append-only Lean registry and manifest growth?",
+      "recorded_at": "2026-08-22T23:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000932",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000933",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Revalidate the A6 running-mass boundaries after Lean registry growth",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
