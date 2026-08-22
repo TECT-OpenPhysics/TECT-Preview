@@ -25,7 +25,22 @@ jobs:
         with:
           python-version: '3.12'
       - name: Verify tracked publication snapshot
-        run: python -X utf8 verification/scripts/release_check.py
+        id: release-check
+        shell: bash
+        run: |
+          set -o pipefail
+          python -X utf8 verification/scripts/release_check.py 2>&1 | tee "$RUNNER_TEMP/release-check.log"
+      - name: Annotate release gate errors
+        if: failure()
+        shell: bash
+        run: |
+          while IFS= read -r line; do
+            case "$line" in
+              "  ERR "*|"RELEASE-CHECK: FAIL"*)
+                printf '::error file=verification/scripts/release_check.py::%s\n' "$line"
+                ;;
+            esac
+          done < "$RUNNER_TEMP/release-check.log"
       - name: Parse website JavaScript
         run: node --check publish/website/app.js
       - uses: actions/configure-pages@v5
