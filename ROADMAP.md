@@ -1,4 +1,4 @@
-# TECT 6-Stage Roadmap — v2
+ TECT 6-Stage Roadmap — v2
 
 > **Reader route:** use [`management/INDEX.md`](management/INDEX.md) for live
 > tasks and priority. This file preserves the detailed staged narrative and
@@ -1688,6 +1688,8 @@ with reversed relative decay order. This sharpens the first-missing-map
 obligation without promoting either illustrative map to A1 dynamics. A13,
 T-050, Sector-A, Pre-A, physical-empty, removal and continuum routes remain
 open. No new negative or R-193 PDF is issued.
+EXP-000932 / R-194 adds a T0, claim-nonbearing Lean and independent exact boundary for the A6 running-mass route. The sharp local coefficient h_min=9*(a+2*b+c) gives a nonnegative endpoint correction, but the fixed-s third-component escape drives the ratio to zero, so no uniform coercivity or counterterm closure follows. A6 full-field concentration, A7 self-coupling, A13/T-050, physical-empty, Sector-A and Pre-A remain open. No new negative or R-194 PDF is issued.
+
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7

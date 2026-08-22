@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**695 accepted events** · latest 25 shown below · machine locator: `index.json`
+**696 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-22 | `20260822-r-194-sharp-running-mass-counterterm-boundary-2` — [R-194 sharp running-mass counterterm boundary] - 2026-08-22 | A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-K-COMPOSITE-DEFINITION, EXP-000932, R-194 | [bounded page](pages/000669-000718.md#20260822-r-194-sharp-running-mass-counterterm-boundary-2) |
 | 2026-08-22 | `20260822-r-171-authority-hash-repair-and-append-only-rea` — [R-171 authority hash repair and append-only reader revalidation] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE, EXP-000923, EXP-000924, R-171 | [bounded page](pages/000669-000718.md#20260822-r-171-authority-hash-repair-and-append-only-rea) |
 | 2026-08-22 | `20260822-a5-t6-path-hygiene-resolver-and-compact-digest` — [A5 T6 path-hygiene resolver and compact digest repair] - 2026-08-22 | A5-SECTOR-A-SYNTHESIS, EXP-000921 | [bounded page](pages/000669-000718.md#20260822-a5-t6-path-hygiene-resolver-and-compact-digest) |
 | 2026-08-22 | `20260822-reconcile-b3-estimator-gate-pointer-after-r-019` — [Reconcile B3 estimator-gate pointer after R-019] - 2026-08-22 | B3-RH-TESTED-STRUCTURE-RANKING, EXP-000919, R-019 | [bounded page](pages/000669-000718.md#20260822-reconcile-b3-estimator-gate-pointer-after-r-019) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-21 | `20260821-r-178-event-673-script-path-correction-2026-08` — [R-178 event 673 script path correction] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, R-178 | [bounded page](pages/000669-000718.md#20260821-r-178-event-673-script-path-correction-2026-08) |
 | 2026-08-21 | `20260821-r-178-complete-cross-owner-phase-differentiatio` — [R-178 complete cross-owner phase differentiation] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000893, R-178 | [bounded page](pages/000669-000718.md#20260821-r-178-complete-cross-owner-phase-differentiatio) |
 | 2026-08-21 | `20260821-r-177-two-root-heat-incidence-ledger-2026-08-21` — [R-177 two-root heat incidence ledger] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000892, R-177 | [bounded page](pages/000669-000718.md#20260821-r-177-two-root-heat-incidence-ledger-2026-08-21) |
-| 2026-08-21 | `20260821-r-176-a1-two-root-cholesky-covariance-witnesses` — [R-176 A1 two-root Cholesky covariance witnesses] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000891, R-176 | [bounded page](pages/000669-000718.md#20260821-r-176-a1-two-root-cholesky-covariance-witnesses) |
 
 ## Post-cutover pages
 
@@ -49,6 +49,6 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 669–695 | 27 | [000669-000718.md](pages/000669-000718.md) |
+| 669–696 | 28 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

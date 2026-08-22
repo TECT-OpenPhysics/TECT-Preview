@@ -1,0 +1,110 @@
+{
+  "schema": "tect/a6-r194-sharp-running-mass-counterterm-boundary/1.0",
+  "audit_id": "A6-R194-SHARP-RUNNING-MASS-COUNTERTERM-BOUNDARY",
+  "result_id": "R-194",
+  "claim_id": "A6-CLASSII-COUNTERTERM-CLOSURE",
+  "exploration_id": "EXP-000932",
+  "prior_exploration_id": "EXP-000931",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Sharp running-mass counterterm boundary",
+  "purpose": "Formalize the exact sharp local coefficient boundary for the A6 leading W_epsilon contraction and expose the residual third-component escape that prevents uniform coercivity.",
+  "inputs": {
+    "a1_production": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a6_composite": {
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/classii_k_composite_manifest.json",
+      "sha256": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d"
+    },
+    "a6_claim": {
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/claim.md",
+      "sha256": "2c138ab9886760e7553a2e6c64922dbe53043840796607f9f9d4a1015b1eea32"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    },
+    "lean_registry": {
+      "path": "verification/lean/registry.json",
+      "sha256": "281930a9093ec7031e67a07f9d0afde64cdc09995718f918df61ca55ec54c447"
+    }
+  },
+  "registered_inputs": {
+    "formula": "W_eps=9*(a+2*b+c)*s-6*b*s^2/(rho+eps)-3*c*s^2*(rho+2*eps)/(rho+eps)^2, with s=|Psi_1|^2+|Psi_2|^2 and rho=s+|Psi_3|^2",
+    "coefficient_rule": "a,b,c are derived at runtime from the hash-pinned A1 production parameters; the declared production scope has b>0 and c>0",
+    "running_mass": "D_h=h*s-W_eps",
+    "test_oracles": {
+      "subsharp_gap": "1/1000",
+      "subsharp_s": "1",
+      "subsharp_r": "100",
+      "escape_r_values": ["1", "10", "100", "1000", "10000"],
+      "endpoint_samples": [["1/3", "0"], ["1", "2"], ["2", "10"], ["5/2", "100"]]
+    }
+  },
+  "theorem_markers": [
+    "fierz_identity",
+    "h_min_definition",
+    "endpoint_identity",
+    "endpoint_nonnegative",
+    "subsharp_witness",
+    "escape_ratio_decreases",
+    "no_uniform_coercivity"
+  ],
+  "files": {
+    "lean_entrypoint": {"path": "verification/lean/Tect/R194.lean", "sha256": "90912e1e785348997b67af27878068114a1b7ec8a6ad5b16118df6f25155408a"},
+    "primary": {"path": "verification/scripts/lean_a6_sharp_running_mass.py", "sha256": "12d399761775c84a4cc00526c2cd4e2311fb18ee1b747a5f58402f0d01f59c4b"},
+    "independent": {"path": "codes/foundations/lean_a6_sharp_running_mass_independent.py", "sha256": "0296af2ee96b7c1f7ab68bbafe6421dc334f728b48523ee9fba8f33194a47b20"},
+    "verifier": {"path": "codes/foundations/lean_a6_sharp_running_mass_verify.py", "sha256": "0ea7b141620d4fb06a9963a4246263a009037499d378b37e4c8817e7f7f6fcfe"},
+    "certificate": {"path": "strategy/pre-a6-sharp-running-mass-counterterm-boundary-certificate-260822.md", "sha256": "e84a6742cbc8cb39fcda500abac097e6acd8f301493445a563ffc52f08871c45"},
+    "note": {"path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/a6-sharp-running-mass-counterterm-boundary-260822.md", "sha256": "bfc400122e5ad796473145cb3474d5f1d01b1d10a0e114d79a3833d751205eea"}
+  },
+  "hostile_mutations": [
+    "replace h_min by a smaller coefficient",
+    "reverse the sign of either rational correction",
+    "allow b or c to be negative while claiming the pinned production scope",
+    "replace rho=s+|Psi_3|^2 by rho=s",
+    "claim h_min gives a uniform kappa*s coercivity",
+    "identify the local leading correction with the full spatial Gibbs measure",
+    "replace the A6 running family by a state-independent vacuum scalar",
+    "insert Lean sorry, admit, axiom or unsafe escape"
+  ],
+  "boundary": "This T0 claim-nonbearing result proves only the sharp spatially local running-mass domination identity and the residual noncoercive third-component escape in the pinned fixed-floor A6 algebra. It does not define a full renormalised Class-II energy, prove partition-density convergence, tightness, full-field bare concentration, a Gibbs measure, rho-floor removal, infinite volume, a phase transition, BCC, Sector-A, Pre-A, or any physical-empty or vacuum comparison. The h_min direction is not uniformly coercive. No new negative result or gate closure follows.",
+  "next_action": "Freeze a complete coefficient trajectory including all relevant and third-component terms, then prove a spatially correlated partition/tightness estimate that controls the h=h_min escape before promoting any running-mass repair.",
+  "formal_integration": {
+    "event_id": "20260822-r-194-sharp-running-mass-counterterm-boundary-2",
+    "event_ordinal": 696,
+    "exploration_ordinal": 932,
+    "event_claim_ids": ["A6-CLASSII-COUNTERTERM-CLOSURE", "A6-CLASSII-K-COMPOSITE-DEFINITION", "EXP-000932", "R-194"],
+    "event_keywords": ["A6", "EXP-000932", "R-194", "Lean", "running-mass", "sharp-boundary", "third-component-escape", "counterterm-open"],
+    "event_notes": [
+      "strategy/pre-a6-sharp-running-mass-counterterm-boundary-manifest.json",
+      "strategy/pre-a6-sharp-running-mass-counterterm-boundary-certificate-260822.md",
+      "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/a6-sharp-running-mass-counterterm-boundary-260822.md",
+      "RESULTS-LEDGER.md",
+      "ROADMAP.md",
+      "strategy/INDEX.md"
+    ],
+    "event_scripts": [
+      "verification/scripts/lean_a6_sharp_running_mass.py",
+      "codes/foundations/lean_a6_sharp_running_mass_independent.py",
+      "codes/foundations/lean_a6_sharp_running_mass_verify.py"
+    ],
+    "event_raw_tokens": ["EXP-000932", "R-194", "sharp running-mass", "third-component escape", "No R-194 PDF"],
+    "expected_counts": {"claims": 49, "results": 194, "gates": 206, "negatives": 372, "explorations": 932, "events": 696, "tasks": 58, "catalog": 4660},
+    "no_new_negative_ids": [],
+    "reused_negative_ids": ["NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM"],
+    "no_pdf": true
+  },
+  "no_overclaim": "T0 claim-nonbearing Lean and independent Fraction boundary only. The sharp coefficient is a local algebraic threshold; the h_min direction remains noncoercive at large third-component background, so no counterterm closure, full-field measure, tightness, Sector-A or Pre-A result is claimed."
+}

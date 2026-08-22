@@ -1573,6 +1573,57 @@
       "task_id": "T-050",
       "title": "Sharp running-mass domination leaves a noncoercive third-component escape",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "The result remains T0 and claim-nonbearing. It supplies no full renormalised Class-II energy, spatially correlated partition or tightness estimate, full-field Gibbs measure, rho-floor removal, infinite-volume limit, physical-empty comparison, BCC, Sector-A, Pre-A, or gate closure. The existing A6 fixed-subtraction negative is reused and no new negative is registered.",
+      "claim_ids": [
+        "A6-CLASSII-K-COMPOSITE-DEFINITION"
+      ],
+      "decision_reason": "The result is a formalization and independent reproducibility upgrade of EXP-000931, not a new physical theorem. The exact boundary is useful because it blocks both an unjustified smaller running coefficient and an unjustified inference from pointwise nonnegativity to uniform field control.",
+      "evidence_refs": [
+        "strategy/pre-a6-sharp-running-mass-counterterm-boundary-manifest.json#boundary",
+        "strategy/pre-a6-sharp-running-mass-counterterm-boundary-certificate-260822.md#sharp-boundary",
+        "verification/lean/Tect/R194.lean#endpoint_identity",
+        "verification/scripts/lean_a6_sharp_running_mass.py#derive",
+        "codes/foundations/lean_a6_sharp_running_mass_independent.py#derive",
+        "codes/foundations/lean_a6_sharp_running_mass_verify.py#hostile-mutations",
+        "explorations/log.jsonl#EXP-000931"
+      ],
+      "finding": "The Lean kernel and independent Fraction lanes agree that h_min=9*(a+2*b+c) is the sharp local coefficient on the pinned b,c>0 scope. At h_min the exact difference is the sum of two nonnegative rational corrections, while h_min-1/1000 has a negative registered witness. The endpoint ratio decreases to zero along fixed-s positive third-component escape, so h_min does not yield a uniform kappa*s coercivity. The package therefore certifies a route boundary only; it does not close A6-CLASSII-COUNTERTERM-CLOSURE.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM"
+        ],
+        "results": [
+          "R-194"
+        ]
+      },
+      "gate_ids": [
+        "A6-CLASSII-COUNTERTERM-CLOSURE"
+      ],
+      "id": "EXP-000932",
+      "method": [
+        "Compile the hash-pinned R194 Lean entrypoint and verify the endpoint identity, nonnegative correction, and pinned subsharp witness.",
+        "Recompute the same coefficient threshold, endpoint samples, subsharp witness, and third-component escape ratios with a non-importing Fraction-only lane.",
+        "Run the integrated hash and hostile-mutation firewall, preserving the distinction between local algebraic domination and a full spatial renormalised measure."
+      ],
+      "next_action": "Freeze the complete coefficient trajectory and prove a spatially correlated partition/tightness estimate that controls the h=h_min third-component escape before any counterterm promotion.",
+      "provenance": "contemporaneous",
+      "question": "Can the sharp local running-mass threshold for the A6 leading W_epsilon contraction be certified by Lean and an independent exact lane without overstating it as counterterm closure?",
+      "recorded_at": "2026-08-22T18:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000931",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Lean cross-check of the sharp A6 running-mass counterterm boundary",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

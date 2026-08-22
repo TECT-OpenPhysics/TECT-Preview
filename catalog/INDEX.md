@@ -5,30 +5,30 @@ Compact generated reader surface. The complete current machine inventory is
 `../CATALOG.md` is a frozen compatibility volume at commit `4db22f4e`
 for historical verifiers and no longer grows.
 
-**4650 artefacts** · **49 live claim cards** ·
+**4660 artefacts** · **49 live claim cards** ·
 130 superseded artefacts retained
 
 ## By kind
 
 | Kind | Artefacts | Canonical bytes |
 |---|---:|---:|
-| Claim cards (registry layer) (`claim-card`) | 604 | 5,070,308 |
-| Working proof notes (on claim cards) (`proof-note`) | 925 | 107,196,430 |
+| Claim cards (registry layer) (`claim-card`) | 604 | 5,070,358 |
+| Working proof notes (on claim cards) (`proof-note`) | 926 | 107,198,607 |
 | Theory synthesis documents (Layer 2) (`synthesis`) | 345 | 7,746,888 |
 | Migrated legacy notes (immutable) (`archive-note`) | 72 | 1,509,315 |
 | Migrated legacy scripts (runnable) (`archive-script`) | 22 | 319,000 |
 | Migrated legacy run artefacts (immutable) (`archive-artefact`) | 21 | 302,036 |
 | Reviewed legacy research records (`legacy-research-record`) | 140 | 164,393 |
 | Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
-| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1076 | 29,965,334 |
-| Domain codes (`code`) | 785 | 17,029,516 |
-| Verification harness (`verification`) | 254 | 11,290,684 |
+| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1079 | 30,015,504 |
+| Domain codes (`code`) | 787 | 17,043,439 |
+| Verification harness (`verification`) | 256 | 11,315,135 |
 | Papers (publication layer) (`paper`) | 1 | 546 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
-| Registries and ledgers (`registry`) | 42 | 1,547,935 |
+| Registries and ledgers (`registry`) | 42 | 1,548,389 |
 | Governance policies (`policy`) | 21 | 198,378 |
-| Root documents (`root-doc`) | 14 | 1,720,648 |
-| Other tracked files (`other`) | 308 | 11,947,115 |
+| Root documents (`root-doc`) | 14 | 1,723,436 |
+| Other tracked files (`other`) | 310 | 11,966,994 |
 
 ## Use
 
