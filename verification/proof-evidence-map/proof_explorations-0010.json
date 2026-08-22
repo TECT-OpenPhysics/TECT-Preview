@@ -2194,6 +2194,52 @@
       "task_id": "T-058",
       "title": "R-189 e3-slice reader passes after proof-evidence-map shard migration",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "No R-189 mathematics changes. The finite e3 slice, both A13 gates, complete production owner, Sector-A, Pre-A, physical-empty, removal and continuum routes remain exactly as previously scoped and open.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "This is an append-only provenance correction, not a new analytic result or gate decision. The R-189 historical package must continue to distinguish its EXP-000904 identity from current global counts.",
+      "evidence_refs": [
+        "explorations/log.jsonl#EXP-000943",
+        "verification/proof-evidence-map.json#index",
+        "strategy/pre-a13-a1-e3-two-mode-production-cylinder-manifest.json#formal_integration.expected_counts",
+        "codes/foundations/lean_a13_a1_e3_two_mode_production_cylinder_verify.py#exploration-ordinal"
+      ],
+      "finding": "EXP-000943 correctly records the R-189 lane results, but its prose retained the pre-append exploration total 942 as the current sentinel. The post-append total was 943; this correction is EXP-000944, so the current total after this record is 944. The historical EXP-000904 identity and ordinal remain unchanged.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-189"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+      ],
+      "id": "EXP-000944",
+      "method": [
+        "Compare EXP-000943 recorded finding with the append-only exploration ordinal and regenerated proof-evidence-map coverage.",
+        "Do not edit EXP-000943; append a correction and update only the R-189 package current-global sentinel before rerunning its integrated lane."
+      ],
+      "next_action": "Keep the historical/current sentinel separation in every later package-specific revalidation; return to the missing hash-pinned production-owner contract.",
+      "provenance": "contemporaneous",
+      "question": "Does the EXP-000943 R-189 revalidation record state the post-append global exploration sentinel correctly?",
+      "recorded_at": "2026-08-23T00:45:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000943",
+          "relation": "corrects"
+        }
+      ],
+      "reviewed_on": "2026-08-23",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-058",
+      "title": "Correction of R-189 global exploration sentinel in EXP-000943",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
