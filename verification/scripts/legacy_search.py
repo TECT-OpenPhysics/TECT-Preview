@@ -24,7 +24,11 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-import numpy as np
+try:
+    import numpy as np
+except ImportError:  # release self-test remains stdlib-only
+    np = None
+from array import array
 
 
 REPO = Path(__file__).resolve().parents[2]
@@ -127,17 +131,18 @@ def hash_bucket(token: str, dimension: int):
 
 
 def vectorize(tokens: list[str], df: dict[str, int], n_docs: int, dimension: int):
-    vector = np.zeros(dimension, dtype=np.float32)
+    values = [0.0] * dimension
     counts = Counter(tokens)
     for token, count in counts.items():
         index, sign = hash_bucket(token, dimension)
         idf = math.log((1.0 + n_docs) / (1.0 + df.get(token, 0))) + 1.0
-        vector[index] += sign * (1.0 + math.log(count)) * idf
-    norm = float(np.linalg.norm(vector))
+        values[index] += sign * (1.0 + math.log(count)) * idf
+    norm = math.sqrt(sum(value * value for value in values))
     if norm:
-        vector /= norm
-    return vector
-
+        values = [value / norm for value in values]
+    if np is not None:
+        return np.asarray(values, dtype=np.float32)
+    return array("f", values)
 
 def selected_source_root(explicit: Path | None = None) -> Path | None:
     if explicit is not None:
@@ -324,6 +329,17 @@ def matches(row, args):
     return True
 
 
+def vector_dot(left, right):
+    return sum(float(a) * float(b) for a, b in zip(left, right))
+
+
+def vector_blob_dot(vector, blob):
+    if np is not None:
+        return float(np.dot(vector, np.frombuffer(blob, dtype=np.float32)))
+    values = struct.unpack(f"{len(vector)}f", blob)
+    return vector_dot(vector, values)
+
+
 def query(args):
     ensure_index(args.source_root)
     config = load_json(CONFIG_PATH)
@@ -342,7 +358,7 @@ def query(args):
         qvec = vectorize(tokens, df, n_docs, config["vector_dimension"])
         vector_ranked = sorted(
             eligible,
-            key=lambda row: float(np.dot(qvec, np.frombuffer(row["vector"], dtype=np.float32))),
+            key=lambda row: vector_blob_dot(qvec, row["vector"]),
             reverse=True,
         )
         fts_tokens = sorted(set(tokens))
@@ -407,7 +423,7 @@ def selftest():
     a = vectorize(["alpha", "beta"], df, 2, 64)
     b = vectorize(["alpha"], df, 2, 64)
     c = vectorize(["gamma"], df, 2, 64)
-    assert float(np.dot(a, b)) > float(np.dot(a, c))
+    assert vector_dot(a, b) > vector_dot(a, c)
     print("LEGACY-SEARCH-SELFTEST: PASS (chunking, Korean alias, vector ordering)")
     return 0
 
